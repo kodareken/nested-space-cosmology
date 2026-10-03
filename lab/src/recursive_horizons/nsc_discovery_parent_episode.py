@@ -1105,7 +1105,6 @@ def execute_case(directory, case_id, *, cpu_allowance, forecast_factor=FORECAST_
         work_ledger=ledger, channel_sample=record.get("channel_sample"),
         channel_time=record.get("channel_time"), **kwargs,
     )
-    elapsed = time.process_time() - started
     episode.append_observations(directory, case_id, result["observations"])
     chunk = None
     pins_before = record.get("source_pins")
@@ -1129,12 +1128,19 @@ def execute_case(directory, case_id, *, cpu_allowance, forecast_factor=FORECAST_
         updated["source_pins_before"] = pins_before
         updated["source_pins_after"] = parent_pins(values, snapshot["state"])
         pins_unchanged(pins_before, updated["source_pins_after"])
-        if diagnostics and at_end:
-            updated["observation"] = scalar_observation(pair, snapshot["state"], snapshot["time"], mode)
+        # The arrays above are this snapshot. The preceding record's observation
+        # belongs to an earlier state and is not kept for intermediate or terminal writes.
+        observed = leading.State(
+            np.array(values["Q"], copy=True), np.array(values["r"], copy=True),
+            np.array(values["pi_Q"], copy=True), np.array(values["pi_r"], copy=True),
+            np.array(values["phi0"], copy=True), np.array(values["phi1"], copy=True),
+        )
+        updated["observation"] = scalar_observation(pair, observed, float(snapshot["time"]), mode)
         committed = commit_parent_checkpoint(directory, updated, values)
         pins_before = updated["source_pins_after"]
         chunk = committed["npz"]
         record, arrays, state = updated, values, snapshot["state"]
+    elapsed = time.process_time() - started
     return {"case_id": case_id, "status": result["status"], "coordinate_time": result["time"],
             "steps": result["steps"], "stations_reached": result["stations_reached"],
             "stop": result["stop"], "child_cpu_seconds": elapsed, "chunk": chunk,
@@ -1312,6 +1318,13 @@ def continue_parent(source, output, *, stations=(1.25, 2.25, 3.), cpu_budget=Non
             for key in ("work_ledger","channel_sample","channel_time"):
                 if record.get(key) != old_record.get(key):
                     raise ValueError("continuation changed clock/work channel stock: "+key)
+            # The enriched successor is a new record. Its diagnostic describes
+            # the copied arrays, even if the old producer's metadata was stale.
+            # Neither the old record nor its generic exact-copy handoff is healed.
+            copied_pair = reconstruct_parent_pair(arrays,record)
+            copied_state = state_from_arrays(arrays)
+            record["observation"] = scalar_observation(
+                copied_pair,copied_state,float(record["coordinate_time"]),mode)
             committed = commit_parent_checkpoint(destination,record,arrays)
             if committed["array_sha256"] != link["array_sha256"]:
                 raise ValueError("parent continuation changed full-state array identity")

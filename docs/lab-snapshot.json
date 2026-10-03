@@ -12338,22 +12338,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 172898,
+      "bytes": 173297,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "98afc11b99c6f20e2d320b6a8587cc8695dce8fec2c5631be86dea65c316f7cc"
+      "sha256": "00bc4f5dabc260963ec2eb1b19aa9567367ad5032099d63021655dbeaabf69be"
     },
     {
-      "bytes": 93507,
+      "bytes": 93851,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "5c693f5f722fd12a9693eb525821e3144bc53ad236a6abb6308cde8189bca1de"
+      "sha256": "8f7c3edd1600dee8de568119269014f9b9044aee34e95241c38305e2f25573fe"
     },
     {
       "bytes": 16589,
@@ -12890,11 +12890,11 @@
       "sha256": "1cf493db6bd7196dc030423893b277ba3ca123fe403400a461f9a290877f31f2"
     },
     {
-      "bytes": 3096,
+      "bytes": 5970,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "path": "lab/docs/nsc-discovery-parent-assessment.md",
-      "sha256": "f609ae63165b458640f7552248f0e8f6e1260d5a21e10a8a39e6a2aa783ce1ae"
+      "sha256": "d19cfd367cdf50a3d6e3a6d60c73ab3f575f5087b250b378f4164aadd6a34c03"
     },
     {
       "bytes": 2849,
@@ -12904,11 +12904,11 @@
       "sha256": "860920306bee15a4549789b808dafbbbf425d0b36e2b20c89d03246117dbba55"
     },
     {
-      "bytes": 11127,
+      "bytes": 11998,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "path": "lab/docs/nsc-discovery-parent-episode.md",
-      "sha256": "fab0802957354f83c72e7516c1b3b101c015130b4d355d4866136017d5d8f620"
+      "sha256": "7f784337cd9ea6e1798e35abf6189216bce6f6f76edcb6433862b2efb6e0cba7"
     },
     {
       "bytes": 7617,
@@ -78715,6 +78715,13 @@
       "sha256": "6c5c4c46891a0b59b43907070a10b06f529a3b6521592cb19b230e2be87fd404"
     },
     {
+      "bytes": 181226,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-episode-assessment-v2.json",
+      "sha256": "9ef53b26aa8c1ca23560f9f98260c8f56bc03682273e986e4cb24aae157bed96"
+    },
+    {
       "bytes": 110,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
@@ -79205,6 +79212,13 @@
       "sha256": "594dfedfb5be3e72bb5f6a72e0526e6fe715d6c8bab6630d0954fe5115aa76de"
     },
     {
+      "bytes": 227881,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-responsive-assessment-v1.json",
+      "sha256": "36034c8a64781a8afd82ebe82a45ed7e3e864abb789d860ac8c100c87e257d79"
+    },
+    {
       "bytes": 108,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
@@ -79350,6 +79364,209 @@
       "changed_from_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
       "path": "lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-observations.jsonl",
       "sha256": "0bac9a8e10424d3aeaffc98cb4f2bd7e78370c32a9318d837ee0c10cbdae38a1"
+    },
+    {
+      "bytes": 110,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/cpu-ledger.json",
+      "sha256": "b161dae65fb02915cc19b92252b7a0ec7d0d097c0ae913895e9ed734c3a45447"
+    },
+    {
+      "bytes": 0,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/cpu-ledger.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 10773,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/manifest.json",
+      "sha256": "1a46d7b58b3e219b463d6039d5f5e737aaf28749b7072e3af3c6af567d4bfddf"
+    },
+    {
+      "bytes": 89896,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000000.json",
+      "sha256": "69d9de8fbcf544188e3b0aa1c893e1e0cabcceef774ef2ab620d1898b5f2e352"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000000.npz",
+      "sha256": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00"
+    },
+    {
+      "bytes": 93023,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000001.json",
+      "sha256": "25e0995302f709d7b5c98cbf6a70549b1580a694c8931de6fabbb204aeb97cc3"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000001.npz",
+      "sha256": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00"
+    },
+    {
+      "bytes": 92528,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000002.json",
+      "sha256": "1ee3894db60298681e58fb4dad1321de3186dffe60641042cd6ede35b93b4e1f"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000002.npz",
+      "sha256": "e78c5ef3eccaba1c9bf978ab03ca370c60bc6355c28913dbcba6f47a4d548f34"
+    },
+    {
+      "bytes": 92499,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000003.json",
+      "sha256": "c5e04c34cc649be01eb439eea09d1a0a8ac6dd987689fde01c463eb28bc42112"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000003.npz",
+      "sha256": "94cb4a6c481567a23107a7a45d2c13709f066e50b7ac9f7e9b50ff985c857efa"
+    },
+    {
+      "bytes": 90962,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000004.json",
+      "sha256": "f1cf59cfc26d8fb1ab72968815621fff12d96037d123979eea88b2b6aac2802e"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000004.npz",
+      "sha256": "b00dc1d4af7aa8bcf5a8aa562babaf6ac645684b35c0c1c10bb4e37a182c181c"
+    },
+    {
+      "bytes": 89007,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000005.json",
+      "sha256": "7d729f930a43b80727fa5067561f7bc23e29ea97659752bfebc6f34b567ba5af"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000005.npz",
+      "sha256": "1b2d770b5d84497f5bdd8cf572994708db2996d445364648dc4ca151ed6385d7"
+    },
+    {
+      "bytes": 896517,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-observations.jsonl",
+      "sha256": "a463443e0974c94e5b10f4559652d64510403466f1a2a4fd1803daaf525781b8"
+    },
+    {
+      "bytes": 89493,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000000.json",
+      "sha256": "a983ea88962816d6ceac11e996f96497dd9680b9db2d81ba7ed14e1f80acf52e"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000000.npz",
+      "sha256": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232"
+    },
+    {
+      "bytes": 92619,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000001.json",
+      "sha256": "acb5cfbb68839df809de7539a5c64701c729c25901bbfbc89cbc9ad3431f3a24"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000001.npz",
+      "sha256": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232"
+    },
+    {
+      "bytes": 92098,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000002.json",
+      "sha256": "ee2f57190fc6dada552c3e4b8cb8315ca7f46ff35257af063fc892da32e2bc26"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000002.npz",
+      "sha256": "97f0765fba3c321387a6de5a7151aa7a35d56b9aeab930e0d71e36fab76c95e5"
+    },
+    {
+      "bytes": 92053,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000003.json",
+      "sha256": "1775dad98f771d1d22baa05a70c991094328890118865e9d46f11b6b6d770370"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000003.npz",
+      "sha256": "cfed557718aed08229536b18c51b93c1fff661c6c254789f321039f5de94cca3"
+    },
+    {
+      "bytes": 92113,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000004.json",
+      "sha256": "f6f80dfb19e12742194c682323aeca3a5a6b072a08f05abdbadd574795c90f44"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000004.npz",
+      "sha256": "c896d86b3e90c7cc375b9d9ab42cef89a1a73aa13b90056360992e12bcc83b10"
+    },
+    {
+      "bytes": 90842,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000005.json",
+      "sha256": "d89685f977586aed6234640bcb5ce9cad36f0e7f1b81f05a74764c42af32c912"
+    },
+    {
+      "bytes": 161060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000005.npz",
+      "sha256": "cc6699f4429b37df6527666f1ae6603110311dcf4b30fc79674b9e5e593776f8"
+    },
+    {
+      "bytes": 905961,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-observations.jsonl",
+      "sha256": "a6cb8f329a5d4eab55012754f83410ff4ab71b5049fe8901675db4354dc6dfe9"
     },
     {
       "bytes": 18011,
@@ -85148,11 +85365,11 @@
       "sha256": "7afbe8e26de9e3083237509deafc8deacc85c5490b11971a6f2a83497ddfcf4b"
     },
     {
-      "bytes": 18878,
+      "bytes": 35768,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "path": "lab/scripts/assess_nsc_discovery_parent_episode.py",
-      "sha256": "ec5036362816dbe0b76263dfae203175c14714e39e4bcee58248852100002eee"
+      "sha256": "6a61e0e174c8bb28b8809f301930970c137d566b7f0003af3eee7c3cca717c31"
     },
     {
       "bytes": 18935,
@@ -88732,11 +88949,11 @@
       "sha256": "f25506b117b2aa1777c80c1d463c4e3642fbe2bcfe499fda1e1ddebcab023b4c"
     },
     {
-      "bytes": 79854,
+      "bytes": 80777,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "path": "lab/src/recursive_horizons/nsc_discovery_parent_episode.py",
-      "sha256": "02a68101e2d9f83ddaa09e80f55855cd727708638cae18ba9d47a110eaa729e3"
+      "sha256": "035da7dcfc9d76fd45f2a3d4890364b05a51db3bde70e0a7a4244ed4ff9c25e6"
     },
     {
       "bytes": 28924,
@@ -91107,11 +91324,18 @@
       "sha256": "73dd30ff2045e9850d4a61b68968635460ae2c789b46eed7c59df7c3684e4213"
     },
     {
-      "bytes": 33181,
+      "bytes": 3018,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+      "path": "lab/tests/test_nsc_discovery_parent_assessment.py",
+      "sha256": "4d0b240b39169822b8ea05e2757af5f603c4e0956c5d03467997c75a30bc5435"
+    },
+    {
+      "bytes": 41934,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "path": "lab/tests/test_nsc_discovery_parent_episode.py",
-      "sha256": "ed219e5d9a79d28293a70117e9ec67f31cbbf725f5217d48df1abc9470f9a98a"
+      "sha256": "9d9d88e606f9cadf1e9c17e428dcd22f1c122045ed018a488458615a65168304"
     },
     {
       "bytes": 19098,

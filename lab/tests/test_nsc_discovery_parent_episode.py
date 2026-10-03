@@ -583,3 +583,175 @@ def test_continuation_requires_explicit_remaining_budget_and_cli_binding(capsys,
     with pytest.raises(SystemExit):
         main(["--continue-from",str(tmp_path),"--output",str(tmp_path/"new"),
               "--cpu-budget","20","--producer-commit","future","--step-cap",".0005"])
+
+
+def _varied_state(state, q_scale, momentum_shift):
+    varied = state.copy()
+    varied.Q = np.array(state.Q, dtype=float) * float(q_scale)
+    varied.p_Q = np.array(state.p_Q, dtype=float) + float(momentum_shift)
+    return varied
+
+
+def _simulated_advance(pair, state, samples, status):
+    """Distinct station snapshots. No RK4 campaign and no stored-result replay."""
+    snapshots = []
+    reached = []
+    for index, (instant, q_scale, momentum_shift) in enumerate(samples, start=1):
+        varied = _varied_state(state, q_scale, momentum_shift)
+        rates = np.array(leading.clock_rates(pair, varied), dtype=float, copy=True)
+        reached.append(float(instant))
+        snapshots.append({
+            "kind": "station",
+            "time": float(instant),
+            "state": varied,
+            "clocks": rates * float(instant),
+            "clock_rates": rates,
+            "ledger": {
+                "coordinate_fieldwork": float(index), "pressure_work": 0.0, "lapse_work": 0.0,
+                "boundary_child": 0.0, "boundary_parent": 0.0,
+                "quadrature": "trapezoid_coordinate_time", "control_mode": "coupled",
+                "dense_propagator_stored": False, "stocks_are_coordinate_trapezoid": True,
+            },
+            "channel_sample": {"time": float(instant)},
+            "channel_time": float(instant),
+            "steps": index,
+            "stations_reached": list(reached),
+        })
+    last = snapshots[-1]
+    return {
+        "time": last["time"], "steps": last["steps"], "status": status,
+        "stations_reached": list(last["stations_reached"]),
+        "stop": {"stop_class": status}, "snapshots": snapshots, "observations": [],
+    }
+
+
+def _assert_observation_matches_checkpoint(record, arrays):
+    observation = record["observation"]
+    assert observation["time"] == pytest.approx(float(record["coordinate_time"]), abs=1e-12)
+    assert observation["control_mode"] == record["control_mode"]
+    assert observation["energy"]["total"] != pytest.approx(123456.0)
+    with parent.runtime_adapter():
+        pair = parent.reconstruct_parent_pair(arrays, record)
+        state = parent.state_from_arrays(arrays)
+        pair, state, info = discovery.resolve_pair(pair, state, backend="fft")
+        assert info["state_changed"] is False and info["W_changed"] is False
+        fine = leading.fine_state(pair, state)
+        anchor = float(np.mean(fine.p_Q ** 2 / fine.r ** 3))
+        rates = leading.clock_rates(pair, state)
+        energy = leading.energy(pair, state)
+    assert observation["actual_kinetic_anchor_mean"] == pytest.approx(anchor, rel=1e-12, abs=1e-12)
+    np.testing.assert_allclose(observation["normal_clock_rates"], rates, rtol=1e-12, atol=1e-12)
+    for key, value in energy.items():
+        assert observation["energy"][key] == pytest.approx(value, rel=1e-10, abs=1e-10)
+    return anchor
+
+
+def _chunk_sha256(directory, case_id, ordinal):
+    stem = f"{case_id}-{ordinal:06d}"
+    directory = Path(directory)
+    return (
+        discovery.file_sha256(directory / (stem + ".json")),
+        discovery.file_sha256(directory / (stem + ".npz")),
+    )
+
+
+def _handoff_with_stale_observation(directory):
+    """Commit the predecessor row inside the immutable handoff. Do not patch it later."""
+    prepared, pair, state = fixture_case(rank=2)
+    spec = parent.case_specs(prepared, confirm=False)[0]
+    with parent.runtime_adapter():
+        record, arrays = parent.build_case_record(
+            spec, pair, state, producer_commit=None, source_binding=parent.source_hashes(), input_binding={},
+        )
+        record["observation"] = {
+            "time": -1.0, "control_mode": record["control_mode"],
+            "normal_clock_rates": [0.0, 0.0, 0.0],
+            "energy": {"gravity": 0.0, "field": 0.0, "total": 123456.0},
+            "actual_kinetic_anchor_mean": -1.0,
+        }
+        parent.commit_parent_checkpoint(directory, record, arrays)
+    manifest = {
+        "schema": parent.SCHEMA,
+        "cases": [{"case_id": spec["case_id"]}],
+        "numerical_binding": parent.numerical_binding(),
+        "source_hashes": parent.source_hashes(),
+        "stations": list(parent.STATIONS),
+        "producing_commit": "manufactured-current-test-identity",
+    }
+    discovery._write_json(discovery._manifest_path(directory), manifest)
+    return spec["case_id"]
+
+
+def test_snapshot_observations_match_their_own_state_time_and_continuation(tmp_path, monkeypatch):
+    source = tmp_path / "predecessor"
+    source.mkdir()
+    case_id = _handoff_with_stale_observation(source)
+    original_chunk = _chunk_sha256(source, case_id, 0)
+    original_advance = discovery.advance_case
+    first_samples = ((0.25, 1.02, 0.004), (0.5, 0.97, -0.003), (1.0, 1.05, 0.008))
+
+    def first_advance(*args, **kwargs):
+        return _simulated_advance(args[0], args[1], first_samples, "station_reached")
+
+    monkeypatch.setattr(discovery, "advance_case", first_advance)
+    with parent.runtime_adapter():
+        parent.execute_case(source, case_id, cpu_allowance=30.0, diagnostics=False)
+    assert _chunk_sha256(source, case_id, 0) == original_chunk
+    anchors = []
+    for ordinal, sample in enumerate(first_samples, start=1):
+        record, arrays = discovery.load_checkpoint(source, case_id, ordinal)
+        assert record["coordinate_time"] == sample[0]
+        assert record["status"] == ("station_reached" if ordinal == len(first_samples) else "station_retained")
+        assert record["observation"]["time"] != -1.0
+        anchors.append(_assert_observation_matches_checkpoint(record, arrays))
+    assert len(set(np.round(anchors, decimals=12))) == len(anchors)
+    checked = parent.check(source)
+    assert checked["ok"] and checked["bytes_written"] == 0 and not checked["pool_launched"]
+
+    # Emulate an older producer attaching an earlier summary to a later state,
+    # by publishing a separate immutable TEMP checkpoint. No prior chunk changes.
+    terminal, terminal_arrays = discovery.load_checkpoint(source, case_id)
+    terminal["observation"] = {"time": -1.0, "control_mode": "frozen_geometry",
+        "energy": {"gravity": 0., "field": 0., "total": 123456.}}
+    with parent.runtime_adapter():
+        parent.commit_parent_checkpoint(source, terminal, terminal_arrays)
+    assert _chunk_sha256(source, case_id, 0) == original_chunk
+    discovery._ledger_update(source, pilot=1.0, budget=100.0)
+    before = parent._directory_files(source)
+    monkeypatch.setattr(discovery, "advance_case", original_advance)
+    monkeypatch.setattr(leading.preparation, "_git_hashes", lambda commit, pins: commit)
+    destination = tmp_path / "continued"
+    report = parent.continue_parent(
+        source, destination, stations=(1.25, 2.25, 3.0), cpu_budget=20.0,
+        producer_commit="test-future-freeze")
+    assert parent._directory_files(source) == before
+    assert report["bytes_written"] > 0 and report["pool_launched"] is False
+    copied, copied_arrays = discovery.load_checkpoint(destination, case_id)
+    previous, previous_arrays = discovery.load_checkpoint(source, case_id)
+    assert copied["snapshot_kind"] == "parent_continuation_handoff"
+    assert copied["coordinate_time"] == previous["coordinate_time"] == 1.0
+    assert previous["observation"]["time"] == -1.0
+    assert copied["observation"]["time"] == pytest.approx(1.0)
+    for name, value in previous_arrays.items():
+        np.testing.assert_array_equal(copied_arrays[name], value)
+    copied_anchor = _assert_observation_matches_checkpoint(copied, copied_arrays)
+    assert copied_anchor == pytest.approx(anchors[-1], rel=1e-12, abs=1e-12)
+    continuation_ordinal = int(copied["ordinal"])
+    continuation_chunk = _chunk_sha256(destination, case_id, continuation_ordinal)
+    later_samples = ((1.25, 1.01, 0.002), (1.5, 0.94, -0.006), (2.0, 1.08, 0.01))
+
+    def later_advance(*args, **kwargs):
+        return _simulated_advance(args[0], args[1], later_samples, "step_limit")
+
+    monkeypatch.setattr(discovery, "advance_case", later_advance)
+    with parent.runtime_adapter():
+        parent.execute_case(destination, case_id, cpu_allowance=30.0, diagnostics=True)
+    assert _chunk_sha256(destination, case_id, continuation_ordinal) == continuation_chunk
+    later_anchors = []
+    for ordinal, sample in enumerate(later_samples, start=continuation_ordinal+1):
+        record, arrays = discovery.load_checkpoint(destination, case_id, ordinal)
+        assert record["coordinate_time"] == sample[0]
+        assert abs(float(record["observation"]["time"]) - 1.0) > 1e-8
+        later_anchors.append(_assert_observation_matches_checkpoint(record, arrays))
+    assert len(set(np.round(later_anchors, decimals=12))) == len(later_anchors)
+    assert parent._directory_files(source) == before

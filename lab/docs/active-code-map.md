@@ -17,17 +17,18 @@ end of this file are not the active queue.
 
 ## Responsive parent, approved from `eb4798c`
 
-Current cursor: the magnetic initial-radius branch. Primary finite
-preparation is achieved. The renewal programme is not complete. The six-case
-episode reaches $T=3$; frozen-geometry and source-free controls have not
-been run. Earlier hard-anchor records stay in place. The incoming-gate
-campaign stays paused. Status:
+Magnetic preparation is achieved. Frozen parent-heavy, weak-$k$ empty
+source, and strong-offset episodes are recorded. Renewal is not complete.
+The cursor is an independent array assessment and the strong-$k$
+empty-prepared-source control. That result is not claimed until saved.
+Earlier hard-anchor records stay in place. The incoming-gate campaign
+stays paused. Status:
 [current result](../../docs/current-result.md#responsive-parent-3-october-2026).
 
 | Responsibility | Owner |
 |---|---|
 | Parent preparation | [Note](nsc-discovery-parent.md); `src/recursive_horizons/nsc_discovery_parent.py`; `scripts/derive_nsc_discovery_parent.py`; [magnetic feasibility](../results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json); [six preparations](../results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json); [original pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json) |
-| Episode adapter | [Note](nsc-discovery-parent-episode.md); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`; [$T=3$ batch](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json); [$n_f=256$ confirmation](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json). Frozen and source-free controls are not run. |
+| Episode adapter | [Note](nsc-discovery-parent-episode.md); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`; [$T=3$ batch](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json); [$n_f=256$ confirmation](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json); [frozen parent-heavy](../results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json); [empty source](../results/development/nsc-discovery-parent-empty-source-v1/manifest.json); [strong $T=1$](../results/development/nsc-discovery-parent-strong-t1-v1/manifest.json); [strong $T=3$](../results/development/nsc-discovery-parent-strong-t3-v1/manifest.json), pinned `cc238577`. |
 | Parent observer | [Leading parent observer](nsc-discovery-regions.md#leading-parent-observer); `src/recursive_horizons/nsc_discovery_parent_observer.py`; [contour binding](../results/development/nsc-discovery-regions-v2-binding.json) pinned `4f3d5fc`. Actual projected leading rates. Corrected moving-energy rates lose the former refinement agreement. Endpoints and fixed windows stay at roundoff. Sealed v1 speeds stay unhealed. |
 | Response adapter | [Note](nsc-discovery-parent-response.md); `src/recursive_horizons/nsc_discovery_parent_response.py`; `scripts/derive_nsc_discovery_parent_response.py`. Implemented one-step stage, not a long held result. |
 | Step control | [Note](nsc-discovery-parent-step-control.md); `src/recursive_horizons/nsc_discovery_parent_step_control.py` |

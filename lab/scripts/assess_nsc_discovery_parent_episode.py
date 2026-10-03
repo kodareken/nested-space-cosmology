@@ -26,10 +26,20 @@ from recursive_horizons import nsc_discovery_tidal as tidal
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
 from recursive_horizons import provenance
 
-SCHEMA, COMMIT, LIMIT = "NSC-DISCOVERY-PARENT-EPISODE-ASSESSMENT-v1", "8c47d0c17fa5962f1d2210f55db3a96c6457a82e", 64*1024*1024
+SCHEMA = "NSC-DISCOVERY-PARENT-EPISODE-ASSESSMENT-v2"
+V1_SCHEMA = "NSC-DISCOVERY-PARENT-EPISODE-ASSESSMENT-v1"
+V1_DIGEST = "79dbc6a7bca6010c160a92784dd5d46f57e56ba29b79e6e9d77eb5b79f992bdf"
+V1_RECORD = "results/development/nsc-discovery-parent-episode-assessment-v1.json"
+COMMIT, LIMIT = "8c47d0c17fa5962f1d2210f55db3a96c6457a82e", 64*1024*1024
+RESPONSIVE_SCHEMA = "NSC-DISCOVERY-PARENT-RESPONSIVE-CONTROL-ASSESSMENT-v1"
 REGIONS = observer.REGION_ORDER
 DEFAULTS = ("results/development/nsc-discovery-parent-episode-magnetic-t3-v1",
             "results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1")
+RESPONSIVE = ("results/development/nsc-discovery-parent-strong-t1-v1",
+              "results/development/nsc-discovery-parent-strong-t3-v1",
+              "results/development/nsc-discovery-parent-frozen-parent-heavy-v1",
+              "results/development/nsc-discovery-parent-empty-source-v1")
+MAGNETIC = "results/development/nsc-discovery-parent-episode-magnetic-t3-v1"
 _SEEN = {}
 
 def file_hash(path):
@@ -43,10 +53,12 @@ def summary(values):
     rms = 0. if scale == 0 else scale*float(np.sqrt(np.mean((array/scale)**2)))
     return {"min": float(np.min(array)), "max": float(np.max(array)), "max_abs": scale, "rms": rms}
 
-def authenticate_producers(record):
+def authenticate_producers(record, pinned=COMMIT):
     commit, hashes = record.get("producing_commit"), record.get("source_hashes") or {}
-    if commit != COMMIT or not hashes:
+    if pinned is not None and commit != pinned or not hashes:
         raise ValueError("snapshot is not bound to the frozen parent producer commit")
+    if not isinstance(commit, str) or len(commit) != 40:
+        raise ValueError("full producer commit required")
     for path, digest in hashes.items():
         key = (commit, path, digest)
         if key not in _SEEN:
@@ -103,11 +115,16 @@ def reconstruct(record, arrays):
         column_rank=2, common_k=float(record["common_k"]))
     return pair, state
 
-def measure(record, arrays, producers):
+def _share(part, total):
+    return 0.0 if total == 0.0 else part/total
+
+def measure(record, arrays, producers, detail=False):
     pair, state = reconstruct(record, arrays)
     mode = record.get("control_mode", "coupled")
-    rate, bundle = leading.rates(pair, state, return_bundle=True, control_mode=mode)
-    curvature, velocity, acceleration = leading.metric_jets(pair, state, rate, bundle, control_mode=mode)
+    # Source-free columns already carry the empty source. Their geometry rate stays the coupled rate.
+    rate_mode = "coupled" if mode in ("source_free", "source-free") else mode
+    rate, bundle = leading.rates(pair, state, return_bundle=True, control_mode=rate_mode)
+    curvature, velocity, acceleration = leading.metric_jets(pair, state, rate, bundle, control_mode=rate_mode)
     row = observer.observe(pair, state, float(record["coordinate_time"]), control_mode=mode,
                            bundle=dict(bundle, leading_rate=rate, metric_jets=(curvature, velocity, acceleration)))
     fine, system, grid = bundle["fine_state"], bundle["fine_system"], pair.grid
@@ -129,11 +146,11 @@ def measure(record, arrays, producers):
         raw_velocity.r, dx(fine.r), raw_acceleration.r, dx(raw_velocity.r), dx(dx(fine.r)))
     euler = -8*np.pi*float(system.A)*fine.r**3*fine.Q**2*curvature["tides"]["R4"]
     channels = row["channels"]
-    return {"case_id": record["case_id"], "nf": int(record["nf"]), "population_id": record["population_id"],
+    result = {"case_id": record["case_id"], "nf": int(record["nf"]), "population_id": record["population_id"],
         "sign_name": record["sign_name"], "time": float(record["coordinate_time"]), "ordinal": int(record["ordinal"]),
         "snapshot_kind": record["snapshot_kind"], "producers": producers,
-        "child_fraction": probability["child"]/total,
-        "disjoint_fractions": {name: probability[name]/total for name in REGIONS},
+        "child_fraction": _share(probability["child"], total),
+        "disjoint_fractions": {name: _share(probability[name], total) for name in REGIONS},
         "disjoint_probability": {name: float(probability[name]) for name in REGIONS}, "probability_total": total,
         "proper_lengths": {name: observer._piece_integral(grid, proper, partition[name]) for name in REGIONS},
         "areal_r": {name: summary(fine.r[masks[name]]) for name in REGIONS},
@@ -158,6 +175,26 @@ def measure(record, arrays, producers):
                 "coordinate_fieldwork", "pressure_work", "lapse_work", "boundary_child", "boundary_parent", "quadrature")},
             "quadrature_is_a_bound": False},
         "continuum_certified": False, "physical_R4_claimed": False, "renewal_asserted": False}
+    if detail:
+        header = record.get("observation") if isinstance(record.get("observation"), dict) else {}
+        header_time = header.get("time")
+        instant = float(record["coordinate_time"])
+        stale = header_time is not None and abs(float(header_time)-instant) > 1e-8
+        peak = row["child_peak"]
+        result["child_peak"] = {"value": peak["value"], "x": peak["x"], "signed_distance": peak["signed_distance"],
+            "is_global_peak": peak["is_global_peak"], "global_peak_region": row["flags"]["global_peak_region"]}
+        result["common_k"] = float(record["common_k"])
+        result["parent_k"] = None if record.get("parent_k") is None else float(record["parent_k"])
+        result["control_mode"] = mode
+        result["checkpoint_header_audit"] = {
+            "present": bool(header), "time": None if header_time is None else float(header_time), "stale": stale,
+            "used_as_measurement": False,
+            "stored_child_proper_length": header.get("child_proper_length"),
+            "stored_child_probability": header.get("child_probability"),
+            "recomputed_child_proper_length": result["proper_lengths"]["child"],
+            "length_header_minus_recomputed": None if header.get("child_proper_length") is None else
+                float(header["child_proper_length"])-result["proper_lengths"]["child"]}
+    return result
 
 def series_report(directory, case_id, population):
     path = directory/f"{case_id}-observations.jsonl"
@@ -233,15 +270,43 @@ def comparison(stations):
             "nf512_measured": False, "global_conservation_spans": drifts,
             "late_curvature_is_a_continuum_value": False, "autonomous_renewal": False}
 
+def _canon(value):
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False)
+
+def _measurement_sha256(campaigns, compared):
+    return hashlib.sha256(_canon({"campaigns": campaigns, "comparison": compared}).encode()).hexdigest()
+
+def _sealed_v1():
+    path = episode.LAB/V1_RECORD
+    sealed = json.loads(path.read_text())
+    predecessor = {key: value for key, value in sealed.items() if key not in ("content_sha256", "cpu_seconds")}
+    if sealed.get("schema") != V1_SCHEMA or hashlib.sha256(_canon(predecessor).encode()).hexdigest() != sealed.get("content_sha256"):
+        raise ValueError("sealed v1 assessment record failed its own content digest")
+    if sealed["content_sha256"] != V1_DIGEST:
+        raise ValueError("sealed v1 assessment digest is not the accepted predecessor")
+    return path, sealed
+
 def report(directories):
     started = time.process_time()
     modules = (backend, episode, extent, leading, observer, tidal, galerkin, provenance)
     sources = {str(Path(module.__file__).resolve()): file_hash(module.__file__) for module in modules}
-    sources[str(Path(__file__).resolve())] = file_hash(__file__)
+    script = str(Path(__file__).resolve())
+    sources[script] = file_hash(script)
     with threadpool_limits(limits=1), backend.fft_thread_limit(1):
         campaigns = [campaign(path if Path(path).is_absolute() else episode.LAB/path) for path in directories]
     stations = [row for item in campaigns for row in item["stations"]]
-    body = {"schema": SCHEMA, "campaigns": campaigns, "comparison": comparison(stations),
+    compared = comparison(stations)
+    measurement = _measurement_sha256(campaigns, compared)
+    sealed_path, sealed = _sealed_v1()
+    predecessor_measurement = _measurement_sha256(sealed["campaigns"], sealed["comparison"])
+    if measurement != predecessor_measurement:
+        raise ValueError("default measurement diverged from the sealed v1 campaigns and comparison")
+    body = {"schema": SCHEMA, "predecessor": {
+            "schema": V1_SCHEMA, "content_sha256": V1_DIGEST,
+            "sealed_record": V1_RECORD, "sealed_record_sha256": file_hash(sealed_path),
+            "measurement_sha256": predecessor_measurement},
+        "campaigns": campaigns, "comparison": compared, "measurement_sha256": measurement,
+        "measurement_unchanged_from_predecessor": True,
         "measurement_source_hashes": sources, "evolved": False, "reprepared": False, "resigned": False, "healed": False,
         "trajectory_rewritten": False, "input_source_clock_bytes_unchanged": True,
         "unmeasured": {"nf512": "no completed NF512 parent episode in these directories",
@@ -250,27 +315,188 @@ def report(directories):
             "raw_hamiltonian_jets": "diagnostic only; projected leading jets remain the metric",
             "work_ledger_quadrature": "trapezoid coordinate-time indicator, not an error bound",
             "continuum_or_physical_R4": "not claimed", "autonomous_renewal": "not claimed"}}
+    encoded = _canon(body).encode()
+    body["content_sha256"] = hashlib.sha256(encoded).hexdigest()
+    body["cpu_seconds"] = time.process_time()-started
+    for path, digest in sources.items():
+        if episode.file_sha256(path) != digest:
+            raise ValueError("evaluator changed during the read")
+    return body
+
+def _gap(left, right):
+    return float(np.max(np.abs(np.asarray(left)-np.asarray(right))))
+
+def _reference_arrays(directory, case_id):
+    directory = episode.LAB/directory if not Path(directory).is_absolute() else Path(directory)
+    record, arrays = authenticate_snapshot(directory, directory/f"{case_id}-000000.json")
+    authenticate_producers(record)
+    return record, arrays
+
+def responsive_report(directories):
+    """Recompute control stations from saved arrays. Checkpoint observation headers are not the measurement."""
+    started = time.process_time()
+    modules = (backend, episode, extent, leading, observer, tidal, galerkin, provenance)
+    sources = {str(Path(module.__file__).resolve()): file_hash(module.__file__) for module in modules}
+    script = str(Path(__file__).resolve())
+    sources[script] = file_hash(script)
+    magnetic_balanced, magnetic_balanced_arrays = _reference_arrays(MAGNETIC, "nf128_plus_balanced_dt0.001")
+    magnetic_parent, magnetic_parent_arrays = _reference_arrays(MAGNETIC, "nf128_plus_parent_heavy_dt0.001")
+    campaigns, seen = [], {}
+    with threadpool_limits(limits=1), backend.fft_thread_limit(1):
+        for directory in directories:
+            directory = Path(directory).expanduser().resolve() if Path(directory).is_absolute() else (episode.LAB/directory).resolve()
+            manifest = json.loads((directory/"manifest.json").read_text())
+            producers = authenticate_producers(manifest, pinned=None)
+            if manifest.get("predecessor_source_hashes") and manifest.get("predecessor_producing_commit"):
+                authenticate_producers({"producing_commit": manifest["predecessor_producing_commit"],
+                                        "source_hashes": manifest["predecessor_source_hashes"]}, pinned=None)
+            measured, audits = [], []
+            for case in manifest["cases"]:
+                case_id = case["case_id"]
+                chunks = sorted(directory.glob(case_id+"-*.json"))
+                if not chunks:
+                    raise ValueError("completed case has no snapshot: "+case_id)
+                handoff = None
+                for json_path in chunks:
+                    record, arrays = authenticate_snapshot(directory, json_path)
+                    authenticate_producers(record, pinned=None)
+                    digest = record["arrays_sha256"]
+                    prior = seen.get((case_id, digest))
+                    header = record.get("observation") if isinstance(record.get("observation"), dict) else {}
+                    header_time = None if header.get("time") is None else float(header["time"])
+                    audit = {"case_id": case_id, "ordinal": int(record["ordinal"]), "snapshot_kind": record["snapshot_kind"],
+                             "coordinate_time": float(record["coordinate_time"]), "header_time": header_time,
+                             "header_stale": header_time is not None and abs(header_time-float(record["coordinate_time"])) > 1e-8,
+                             "header_used_as_measurement": False, "duplicate_of": prior}
+                    audits.append(audit)
+                    if handoff is None:
+                        handoff = {name: np.array(arrays[name], copy=True) for name in ("Q", "r")}
+                    if prior is not None:
+                        continue
+                    row = measure(record, arrays, producers, detail=True)
+                    row["geometry_change_from_case_handoff"] = {"Q": _gap(arrays["Q"], handoff["Q"]), "r": _gap(arrays["r"], handoff["r"])}
+                    measured.append(row)
+                    seen[(case_id, digest)] = {"directory": directory.name, "ordinal": int(record["ordinal"])}
+            campaigns.append({"directory": directory.relative_to(episode.LAB).as_posix(), "manifest_status": manifest.get("status"),
+                "producing_commit": manifest.get("producing_commit"), "control_mode": manifest.get("control_mode"),
+                "stations_declared": manifest.get("stations"), "stations": measured, "header_audits": audits})
+    strong = [row for item in campaigns for row in item["stations"] if item["directory"].endswith("strong-t1-v1") or item["directory"].endswith("strong-t3-v1")]
+    strong_handoff = next(row for row in strong if row["time"] == 0.0 and row["sign_name"] == "plus")
+    frozen = [row for item in campaigns for row in item["stations"] if "frozen-parent-heavy" in item["directory"]]
+    empty = [row for item in campaigns for row in item["stations"] if "empty-source" in item["directory"]]
+    selected_times = (1.0, 1.25, 1.5, 2.25, 3.0)
+    selected = [row for row in strong if any(abs(row["time"]-mark) < 1e-8 for mark in selected_times) and row["snapshot_kind"] in ("station", "handoff")]
+    # T=1 is the completed strong-source station. Later duplicate handoffs are array copies and stay in the audit.
+    selected = [row for row in selected if not (abs(row["time"]-1.0) < 1e-8 and row["snapshot_kind"] != "station")]
+    selected = sorted(selected, key=lambda row: (row["sign_name"], row["time"]))
+    def anchor(row):
+        return {"case_id": row["case_id"], "time": row["time"], "sign_name": row["sign_name"], "control_mode": row["control_mode"],
+                "parent_k": row["parent_k"], "legacy_common_k": row["common_k"],
+                "child_fraction": row["child_fraction"], "child_proper_length": row["proper_lengths"]["child"],
+                "child_peak": row["child_peak"], "centre_tau": row["clocks"]["centre_tau"], "Nmin": row["Nmin"],
+                "projected_R4_max_abs": row["tides"]["R4"]["max_abs"], "raw_R4_max_abs": row["raw_same_point_hamiltonian_R4"]["max_abs"],
+                "euler_max_abs": row["euler_trace_residual"]["max_abs"], "energy_total": row["energy"]["total"],
+                "CAR": row["CAR_eigenvalues"], "ancestry_sum_minus_actual": row["ancestry"]["sum_minus_actual"],
+                "header_stale": row["checkpoint_header_audit"]["stale"]}
+    weight_ratio = (np.asarray(strong_handoff["ancestry"]["weights"])/magnetic_balanced_arrays["source_weights"]).tolist()
+    strong_dir = next(Path(item) for item in directories if "strong-t1-v1" in str(item))
+    strong_dir = strong_dir if strong_dir.is_absolute() else episode.LAB/strong_dir
+    strong_record, strong_arrays = authenticate_snapshot(strong_dir, strong_dir/"nf128_plus_balanced_dt0.001-000000.json")
+    attribution = {
+        "strong_versus_magnetic_plus_balanced_handoff": {
+            "weight_ratio": weight_ratio,
+            "k": {"authoritative": "parent_k",
+                  "weak": float(magnetic_balanced["parent_k"]), "strong": float(strong_record["parent_k"]),
+                  "legacy_common_k": {"authoritative": False,
+                                      "weak_episode": float(magnetic_balanced["common_k"]),
+                                      "strong_episode": float(strong_record["common_k"]),
+                                      "qualification": "weak episode common_k is a legacy label and is not the parent-record k"}},
+            "initial_Q_gap": _gap(strong_arrays["Q"], magnetic_balanced_arrays["Q"]),
+            "initial_r_gap": _gap(strong_arrays["r"], magnetic_balanced_arrays["r"]),
+            "initial_phi_gap": max(_gap(strong_arrays["phi0"], magnetic_balanced_arrays["phi0"]),
+                                   _gap(strong_arrays["phi1"], magnetic_balanced_arrays["phi1"])),
+            "initial_pi_Q_gap": _gap(strong_arrays["pi_Q"], magnetic_balanced_arrays["pi_Q"]),
+            "initial_pi_r_gap": _gap(strong_arrays["pi_r"], magnetic_balanced_arrays["pi_r"]),
+            "initial_weight_gap": _gap(strong_arrays["source_weights"], magnetic_balanced_arrays["source_weights"]),
+            "source_force_alone": False,
+            "reason": "strong occupations and the solved canonical momenta both differ from the magnetic balanced handoff; authoritative parent_k also differs. The legacy weak common_k is not that comparison"},
+        "frozen_versus_magnetic_plus_parent_heavy_handoff": {
+            "same_canonical_handoff": True, "control": "frozen_geometry",
+            "isolates_prescribed_geometry": True},
+        "empty_versus_magnetic_plus_balanced_handoff": {
+            "phi_deleted": True, "weights_retained": True, "momenta_re_solved": True,
+            "force_deleted_from_the_coupled_trajectory": False}}
+    # Fill numeric gaps from the actual handoff arrays stored on the first measured strong/frozen/empty rows by reloading is already done.
+    body = {"schema": RESPONSIVE_SCHEMA, "selected_strong_observations": [anchor(row) for row in selected],
+            "campaigns": campaigns, "attribution": attribution,
+            "magnetic_reference_commits": magnetic_balanced["producing_commit"],
+            "measurement_source_hashes": sources, "evolved": False, "reprepared": False, "resigned": False,
+            "header_copied_into_measurement": False, "instability_claimed": False, "new_threshold": None,
+            "late_curvature_is_an_instability": False, "physical_R4_claimed": False, "renewal_asserted": False,
+            "unmeasured": {"source_force_isolated_from_k": "no completed episode changes only the source weights or only k",
+                           "nf512": "not in these directories",
+                           "stale_headers": "strong T3 intermediate observation headers remain the T=1 text; measurements use the arrays",
+                           "ledger_quadrature": "trapezoid indicator, not a bound"}}
+    return _responsive_finish(body, sources, script, started, magnetic_balanced, magnetic_balanced_arrays,
+                              magnetic_parent, magnetic_parent_arrays, strong, frozen, empty, directories)
+
+def _responsive_finish(body, sources, script, started, magnetic_balanced, magnetic_balanced_arrays,
+                       magnetic_parent, magnetic_parent_arrays, strong, frozen, empty, directories):
+    frozen_dir = next(Path(d) for d in directories if "frozen-parent-heavy" in str(d))
+    frozen_dir = frozen_dir if frozen_dir.is_absolute() else episode.LAB/frozen_dir
+    _, frozen_arrays = authenticate_snapshot(frozen_dir, next(frozen_dir.glob("*-000000.json")))
+    empty_dir = next(Path(d) for d in directories if "empty-source" in str(d))
+    empty_dir = empty_dir if empty_dir.is_absolute() else episode.LAB/empty_dir
+    _, empty_arrays = authenticate_snapshot(empty_dir, next(empty_dir.glob("*-000000.json")))
+    frozen_gap = max(_gap(frozen_arrays[name], magnetic_parent_arrays[name]) for name in ("Q", "r", "pi_Q", "pi_r", "phi0", "phi1", "source_weights"))
+    body["attribution"]["frozen_versus_magnetic_plus_parent_heavy_handoff"].update(
+        same_canonical_handoff=frozen_gap == 0.0, initial_state_gap=frozen_gap,
+        geometry_change_at_T3=next(row["geometry_change_from_case_handoff"] for row in frozen if abs(row["time"]-3) < 1e-8))
+    body["attribution"]["empty_versus_magnetic_plus_balanced_handoff"].update(
+        initial_Q_gap=_gap(empty_arrays["Q"], magnetic_balanced_arrays["Q"]),
+        initial_weight_gap=_gap(empty_arrays["source_weights"], magnetic_balanced_arrays["source_weights"]),
+        initial_phi_max=float(max(np.max(np.abs(empty_arrays["phi0"])), np.max(np.abs(empty_arrays["phi1"])))),
+        initial_pi_r_gap=_gap(empty_arrays["pi_r"], magnetic_balanced_arrays["pi_r"]))
+    spans = []
+    for item in body["campaigns"]:
+        for case_id in sorted({row["case_id"] for row in item["stations"]}):
+            group = [row for row in item["stations"] if row["case_id"] == case_id]
+            first = np.asarray(group[0]["CAR_eigenvalues"])
+            spans.append({"directory": item["directory"], "case_id": case_id,
+                "energy_total_span": max(row["energy"]["total"] for row in group)-min(row["energy"]["total"] for row in group),
+                "gram_distance_span": max(row["gram_distance_from_identity"] for row in group)-min(row["gram_distance_from_identity"] for row in group),
+                "CAR_span_max": float(np.max(np.abs(np.asarray([row["CAR_eigenvalues"] for row in group])-first))),
+                "field_energy_scale": max(abs(row["energy"]["field"]) for row in group)})
+    body["conservation"] = spans
     encoded = json.dumps(body, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
     body["content_sha256"] = hashlib.sha256(encoded).hexdigest()
     body["cpu_seconds"] = time.process_time()-started
-    if any(episode.file_sha256(path) != digest for path, digest in sources.items()):
-        raise ValueError("evaluator changed during the read")
+    for path, digest in sources.items():
+        if episode.file_sha256(path) != digest:
+            raise ValueError("evaluator changed during the read")
     return body
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--records", nargs="+", type=Path, default=[episode.LAB/path for path in DEFAULTS])
+    parser.add_argument("--records", nargs="+", type=Path)
+    parser.add_argument("--responsive-controls", action="store_true")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
     try:
         if args.output and args.output.exists():
             raise FileExistsError("refusing to overwrite assessment output")
-        payload = json.dumps(episode.jsonable(report(args.records)), indent=2, allow_nan=False)+"\n"
+        if args.responsive_controls:
+            directories = args.records or [episode.LAB/path for path in RESPONSIVE]
+            result = responsive_report(directories)
+        else:
+            directories = args.records or [episode.LAB/path for path in DEFAULTS]
+            result = report(directories)
+        payload = json.dumps(episode.jsonable(result), indent=2, allow_nan=False)+"\n"
         if len(payload.encode()) > LIMIT:
             raise ValueError("assessment output exceeds 64 MiB")
         if args.output:
             resolved = args.output.expanduser().resolve()
-            if any(resolved.is_relative_to(Path(path).expanduser().resolve()) for path in args.records):
+            if any(resolved.is_relative_to(Path(path).expanduser().resolve()) for path in directories):
                 raise ValueError("assessment output must stay outside the episode directories")
             args.output.parent.mkdir(parents=True, exist_ok=True)
             with args.output.open("x") as stream:

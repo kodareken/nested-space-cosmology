@@ -105,6 +105,18 @@ is importable, its result is attached and a hook refusal is recorded on the
 row. No held-out population or gradient measurement is evaluated before a
 later prediction.
 
+Each newly written checkpoint stores `scalar_observation` of the state arrays,
+coordinate time and control being committed. That row replaces any observation
+copied from the preceding record, whether or not the snapshot is the terminal
+one. The additional diagnostic and publication CPU are included in the case's
+reported child CPU. The generic continuation handoff preserves the predecessor
+metadata; the new enriched parent handoff recomputes its observation from the
+unchanged copied arrays/time/control. A stale old summary is not a new admission
+gate and does not cause a state reset.
+Published JSON and NPZ bytes stay as stored. An old intermediate observation
+that still describes an earlier state is not migrated, and read-only check
+does not replay it.
+
 Every scalar row also stores weighted probability in child, parent, protected
 collar, parent annulus and the full carrier for each original column index.
 The tags use evolved columns with their original weights; no observer or
@@ -152,8 +164,9 @@ from that byte counter. Older records are not rewritten to add these fields.
 
 When the live source closure differs, read-only check authenticates the original
 producer at its frozen commit and qualifies the result as historical source and
-stored-array structural authentication. It does not replay current dynamics or
-claim current producer compatibility.
+stored-array structural authentication. It does not replay current dynamics,
+rewrite stored JSON or NPZ, or claim current producer compatibility. Prior
+source hashes remain the Git blobs named by the frozen producer commit.
 
 `continue_parent` is the thin parent wrapper of the generic station-resume
 helper. It first authenticates the completed predecessor and its historical
