@@ -99,9 +99,10 @@ Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
 and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
 The magnetic branch has its primary finite preparation, its $T=3$
 episode, and the completed frozen, empty-source and strong-offset
-controls. Renewal is not complete. The current cursor is the independent
-array assessment and the strong-$k$ empty-prepared-source attribution
-control. That control's result is not claimed until its record is saved.
+controls. Renewal is not complete. The matched-offset controls and their
+array assessment are complete in their recorded domain. The current
+cursor is the coupled exterior-to-cut response, using the existing
+state and geometry tangent rather than a prescribed traction profile.
 The recorded outcome is in
 [current result](current-result.md#responsive-parent-3-october-2026).
 Regular black-hole interiors remain prior foundations; do not start a
