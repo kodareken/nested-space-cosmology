@@ -138,3 +138,38 @@ pilot with `--transition-end 1.4` and a new prefix. The protected inner collar,
 actual source continuation, finite constraints and hard anchor are unchanged
 in their definition. This option does not launch an additional solver or fit
 the source to the constraints.
+
+The explicit initial-radius alternative `--initial-radius magnetic` replaces
+only the retained initial radius by the action-derived
+`rmag=sqrt(mag/g)`. The default remains `collar`. The original continuous
+collar/blend table, continued real canonical columns, their normalization,
+population weights, observer and `Q` are unchanged. Radius changes do not
+renormalize the source. Geometry-budget targets remain the original collar
+candidate, and actual core movement is reported; this branch does not claim
+to preserve the sealed collar exactly. At uniform magnetic radius,
+`r_x=0,J=0` in the continuum seed, with
+`P=±sqrt(rmag³ k)` and `p_r=3QP/(2rmag)+2g rmag rho/P`.
+The actual finite source current is retained, and the existing analytic
+finite-momentum Jacobian/hard-anchor solve performs the correction. No radius
+force or new evolution is introduced. Later bounded geometry fallback, if
+used, is identified separately from this initial branch.
+
+An explicit `--k` is accepted for both single preparations and the bounded
+pilot. It must exceed every actual population/resolution `kmin`; otherwise
+preparation is obstructed. Without an override, the default common seed
+suggestion is retained. The uniform-radius initial-condition criterion
+
+```text
+k*=4g/(3rmag) sqrt[ integral rho²/Q dx / integral Q dx ]
+```
+
+minimizes the declared proper-volume extrinsic-deformation measure in that
+uniform-radius domain with the actual source density. It is an initial-data
+choice, not a dynamics law, and is not refitted for each population/sign or
+resolution. Root's independently selected balanced width-1.4 value is
+`.002621213673327129`; the caller records this explicit provenance and the
+actual projected kinetic anchor. For example, after producer freezing:
+
+```sh
+.venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_parent.py --pilot --population 1 --sign 1 --cpu-limit 30 --initial-radius magnetic --transition-end 1.4 --k .002621213673327129 --output results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5
+```

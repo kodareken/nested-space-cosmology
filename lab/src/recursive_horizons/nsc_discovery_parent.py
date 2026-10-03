@@ -169,6 +169,7 @@ def _profile(profile):
         "exterior_Q": EXTERIOR_Q,
         "k_margin": K_MARGIN,
         "exterior_radius": None,
+        "initial_radius":"collar",
     }
     if profile is not None:
         if not isinstance(profile, dict):
@@ -187,6 +188,7 @@ def _profile(profile):
         raise ValueError("exterior lapse and k margin must be positive")
     if selected["exterior_radius"] is not None and float(selected["exterior_radius"]) <= 0:
         raise ValueError("exterior radius must be positive")
+    if selected['initial_radius'] not in ('collar','magnetic'):raise ValueError('initial radius must be collar or magnetic')
     selected["transition_end"] = end
     selected["envelope_zero"] = zero
     selected["exterior_Q"] = float(selected["exterior_Q"])
@@ -524,6 +526,8 @@ def _band_geometry(grid, table):
     even, _odd = _parity_basis(grid.ng)
     radius = even @ (even.T @ radius)
     lapse = even @ (even.T @ lapse)
+    if table['profile'].get('initial_radius','collar')=='magnetic':
+        radius=np.full(grid.ng,np.sqrt(table['constants']['mag']/table['constants']['g']))
     if min(float(np.min(grid.A_g @ radius)), float(np.min(grid.A_g @ lapse))) <= 0:
         raise ValueError("band-limited parent geometry left the positive chart")
     return radius, lapse
@@ -642,8 +646,8 @@ def common_k(nf=64, profile=None, *, cpu_limit=CPU_LIMIT):
     table = parent_continuum(selected, cpu_limit=cpu_limit)
     with threadpool_limits(limits=1), backend.fft_thread_limit(1):
         grid = backend.make_fft_grid(galerkin.build_grid(nf, gauge="conformal"))
-        radius, lapse = _band_geometry(grid, table)
         columns = _source_columns(grid, table)
+        radius, lapse = _band_geometry(grid, table)
         gram = columns["phi0"].conj().T @ columns["phi0"] + columns["phi1"].conj().T @ columns["phi1"]
         populations = []
         kmins = []
@@ -680,6 +684,9 @@ def _holder(grid, weights, columns, meta, table, population):
         "transition_before_pi_over_2": True, "exterior_Q": table["profile"]["exterior_Q"],
         "exterior_radius": table["exterior_radius"], "collar_radius_gap": table["collar_radius_gap"],
         "collar_Q_gap": table["collar_Q_gap"],
+        "initial_radius_branch":table['profile'].get('initial_radius','collar'),
+        "magnetic_radius":float(np.sqrt(table['constants']['mag']/table['constants']['g'])),
+        "radius_branch_does_not_change_source_or_Q":True,
     }
     source = {
         "layout": "collar-standing-plus-even-annulus-packet", "rank": 2, "orthogonalized": False,
@@ -1179,9 +1186,15 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         if not k > kmin:
             raise ValueError("k must be strictly above the common kmin")
         grid = backend.make_fft_grid(galerkin.build_grid(nf, gauge="conformal"))
+        columns = _source_columns(grid, table)
         radius, lapse = _band_geometry(grid, table)
         targets=_geometry_targets(grid,table);initial_geometry_changes=_geometry_changes(grid,radius,lapse,targets)
-        columns = _source_columns(grid, table)
+        rmag=float(np.sqrt(table['constants']['mag']/table['constants']['g']))
+        initial_radius_identity={'branch':selected['initial_radius'],'action_magnetic_radius':rmag,
+            'definition':'rmag^2=mag/g from unchanged action coefficients',
+            'mag':table['constants']['mag'],'g':table['constants']['g'],
+            'initial_r_squared_action_gap':_maximum((grid.A_g@radius)**2-rmag*rmag),
+            'source_Q_weights_changed_by_radius_branch':False,'exact_sealed_collar_claimed':False}
         gram = columns["phi0"].conj().T @ columns["phi0"] + columns["phi1"].conj().T @ columns["phi1"]
         weights, meta = population_weights(columns["probabilities"], columns["raw_norms"], gram, population)
         from dataclasses import replace as replace_dataclass
@@ -1237,6 +1250,8 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         "clock_locations": list(CLOCK_LOCATIONS), "correction": correction, "fallback": fallback,
         "profile":selected,"geometry_budget":{"targets":targets,"initial":initial_geometry_changes,"final":final_geometry_changes,
             "scope":"declared physical preparation alteration budget, not a universal numerical error tolerance"},
+        "initial_radius":initial_radius_identity,
+        "k_selection":"declared explicit override" if override is not None else "default common population seed offset",
         "observer_Gram_gap":columns['observer_Gram_gap'],"observer_is_source_frame":False,
         "source_field_sha256":{"phi0":_sha_array(state.phi0),"phi1":_sha_array(state.phi1)},
         "seed_removal": seed["removal"], "continuum_kmin": seed["kmin"],
@@ -1366,7 +1381,7 @@ def prepare(directory, *, nf=64, population=0, sign=+1, k_override=None, profile
     return _write(directory, report, arrays)
 
 
-def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=None,profile=None):
+def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=None,profile=None,k_override=None):
     """Root-only explicit two-resolution feasibility, one aggregate CPU allowance."""
     _require_case(64,population,sign,cpu_limit);directory=Path(directory)
     ledger=directory/'pilot.json'
@@ -1380,7 +1395,11 @@ def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=Non
     for nf in (64,128):
         if remaining()<=0:raise RuntimeError('aggregate pilot budget exhausted during seed comparison')
         families[nf]=common_k(nf,profile=profile,cpu_limit=remaining())
-    common=max(families[nf]['k'] for nf in families);records=[]
+    suggested=max(families[nf]['k'] for nf in families)
+    common=suggested if k_override is None else float(k_override)
+    if not np.isfinite(common) or common<=max(families[nf]['kmin'] for nf in families):
+        raise ValueError('pilot k must exceed every actual population/resolution kmin')
+    records=[]
     for index,nf in enumerate((64,128)):
         allowance=(remaining()-.1)/(2-index)
         if allowance<=0:break
@@ -1392,6 +1411,8 @@ def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=Non
     elapsed=_cpu_time()-started
     result={'schema':SCHEMA+'-PILOT','mode':'bounded_preparation_pilot','producing_commit':commit,'producers':pins,
             'population':population,'sign':sign,'common_k':common,'same_declared_offset':True,
+            'suggested_common_k':suggested,'k_override':k_override,
+            'k_selection':'declared caller initial-condition override; not a dynamics law' if k_override is not None else 'maximum default seed-family suggestion',
             'profile':_profile(profile),
             'seed_families':{str(nf):families[nf] for nf in families},'records':records,
             'aggregate_CPU_seconds':elapsed,'CPU_limit_seconds':float(cpu_limit),'complete':len(records)==2,
@@ -1456,6 +1477,14 @@ def check(directory):
     grid = backend.make_fft_grid(galerkin.build_grid(int(record["nf"]), gauge="conformal"))
     from dataclasses import replace as replace_dataclass
     grid.fine = replace_dataclass(grid.fine, occupations=np.array(weights, float, copy=True))
+    if 'initial_radius' in record:
+        declared=record['initial_radius'];branch=record['profile'].get('initial_radius','collar')
+        a,_Z,mag=leading.coefficients(grid.fine);rmag=np.sqrt(mag/abs(a))
+        if declared['branch']!=branch or abs(declared['action_magnetic_radius']-rmag)>1e-14:
+            raise ValueError('initial-radius branch/action identity replay differs')
+        if branch=='magnetic':
+            action_gap=_maximum((grid.A_g@np.full(grid.ng,rmag))**2-rmag*rmag)
+            if abs(action_gap-declared['initial_r_squared_action_gap'])>1e-14:raise ValueError('magnetic initial-radius replay differs')
     pair = ParentPair(grid, arrays["W"], weights, arrays["reference_columns"], arrays["source_columns"],
                       record["weight_metadata"], {"map": "identity"}, tuple(record["intervals"]["child"]),
                       tuple(record["intervals"]["parent"]), tuple(record["clock_locations"]))

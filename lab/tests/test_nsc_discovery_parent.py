@@ -204,8 +204,39 @@ def test_transition_option_is_forwarded_without_new_constructor_run(monkeypatch,
     calls=[]
     monkeypatch.setattr(parent,'pilot',lambda *args,**kwargs:calls.append(kwargs) or {'unit':True})
     cli.main(['--pilot','--transition-end','1.4','--output',str(parent.OUTPUT/'unit-unwritten')])
-    assert calls[0]['profile']=={'transition_end':1.4}
+    assert calls[0]['profile']=={'initial_radius':'collar','transition_end':1.4}
     assert parent._profile(calls[0]['profile'])['transition_end']<np.pi/2
+
+
+def test_magnetic_initial_radius_preserves_original_source_weights_Q_and_observer(setup):
+    with threadpool_limits(limits=1),parent.backend.fft_thread_limit(1):
+        table,pair,r,Q,columns=setup
+        magnetic=dict(table,profile=dict(table['profile'],initial_radius='magnetic'))
+        mr,mQ=parent._band_geometry(pair.grid,magnetic)
+        copied=parent._source_columns(pair.grid,magnetic)
+        assert mQ.tobytes()==Q.tobytes()
+        assert np.array_equal(mr,np.full(pair.grid.ng,np.sqrt(table['constants']['mag']/table['constants']['g'])))
+        for key in ('phi0','phi1','source_columns','reference_columns','raw_norms','probabilities'):
+            assert copied[key].tobytes()==columns[key].tobytes()
+        gram=columns['source_columns'].conj().T@columns['source_columns']
+        for population in parent.POPULATIONS:
+            first,_=parent.population_weights(columns['probabilities'],columns['raw_norms'],gram,population)
+            second,_=parent.population_weights(copied['probabilities'],copied['raw_norms'],gram,population)
+            assert first.tobytes()==second.tobytes()
+        targets=parent._geometry_targets(pair.grid,magnetic)
+        np.testing.assert_array_equal(targets['radius'],parent._sample_circle(pair.grid,table,'radius'))
+        changes=parent._geometry_changes(pair.grid,mr,mQ,targets)
+        assert changes['protected_core_radius_relative_max']>0 and changes['protected_core_exactly_preserved'] is False
+
+
+def test_pilot_explicit_k_and_magnetic_profile_forwarding(tmp_path,monkeypatch):
+    import derive_nsc_discovery_parent as cli
+    calls=[]
+    monkeypatch.setattr(parent,'pilot',lambda *args,**kwargs:calls.append(kwargs) or {'unit':True})
+    cli.main(['--pilot','--initial-radius','magnetic','--transition-end','1.4','--k','.002621213673327129',
+              '--output',str(parent.OUTPUT/'unit-magnetic-unwritten')])
+    assert calls[0]['profile']=={'initial_radius':'magnetic','transition_end':1.4}
+    assert calls[0]['k_override']==.002621213673327129
 
 
 def test_physical_fallback_budget_uses_original_candidate_clock_and_lengths(setup):
