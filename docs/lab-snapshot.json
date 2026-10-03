@@ -12338,13 +12338,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 173531,
+      "bytes": 173736,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "5ce6bd02e84c37764bb3df57d405b7c3839cbfd3",
+      "changed_from_commit": "7656eec34141ceca22c073bca997acefb317be05",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "ea72463e02f8d894c5d705cede368c472214d9e35232eacff0a0446274ffcce5"
+      "sha256": "a0d24d5f131fb69aace79621112813bfc1becf1c44fdceebabf69dc78fbecec0"
     },
     {
       "bytes": 93859,
@@ -12902,6 +12902,13 @@
       "changed_from_commit": "b7aa5f5e0f87607e16c22bd8b5955993ce42608d",
       "path": "lab/docs/nsc-discovery-parent-continuation.md",
       "sha256": "860920306bee15a4549789b808dafbbbf425d0b36e2b20c89d03246117dbba55"
+    },
+    {
+      "bytes": 4293,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "7656eec34141ceca22c073bca997acefb317be05",
+      "path": "lab/docs/nsc-discovery-parent-cut-response.md",
+      "sha256": "8a8ceedd0936f7e1fb64b7a802b4c2f88409db667a3be5b4d12c636aecda05e8"
     },
     {
       "bytes": 11998,
@@ -86408,6 +86415,13 @@
       "sha256": "d35241f441b31788c00b719fe651d3a4f007e969b37da52a5cb06e4ff38aa304"
     },
     {
+      "bytes": 1400,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "7656eec34141ceca22c073bca997acefb317be05",
+      "path": "lab/scripts/derive_nsc_discovery_parent_cut_response.py",
+      "sha256": "fbbd66e918b6320d4c2e73dc0757798fbeb4fee7daef0e715083cc63b0d7e00c"
+    },
+    {
       "bytes": 3926,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
@@ -89229,6 +89243,13 @@
       "sha256": "f25506b117b2aa1777c80c1d463c4e3642fbe2bcfe499fda1e1ddebcab023b4c"
     },
     {
+      "bytes": 18711,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "7656eec34141ceca22c073bca997acefb317be05",
+      "path": "lab/src/recursive_horizons/nsc_discovery_parent_cut_response.py",
+      "sha256": "3fe8ad56e5c0b5aa335e45f980c750bef8cee1f4897fb316179e89598ceaed09"
+    },
+    {
       "bytes": 80777,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
@@ -91609,6 +91630,13 @@
       "changed_from_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
       "path": "lab/tests/test_nsc_discovery_parent_assessment.py",
       "sha256": "4d0b240b39169822b8ea05e2757af5f603c4e0956c5d03467997c75a30bc5435"
+    },
+    {
+      "bytes": 5830,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "7656eec34141ceca22c073bca997acefb317be05",
+      "path": "lab/tests/test_nsc_discovery_parent_cut_response.py",
+      "sha256": "dae2e2eb4c4d370bfc2886bb7cb3d82cd42063b339e281c7bca46d58279baeea"
     },
     {
       "bytes": 41934,
