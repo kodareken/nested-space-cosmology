@@ -50,6 +50,9 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Constrained proper-flat curvature pole and action-domain distinction | [Curvature sector](nsc-discovery-curvature-sector.md); `src/recursive_horizons/nsc_discovery_curvature_sector.py`; `scripts/assess_nsc_discovery_curvature_sector.py` |
 | Actual-unit curvature approximation assessment | [Domain](nsc-discovery-eft-domain.md); `scripts/assess_nsc_discovery_eft_domain.py` |
 | Locked work forecast and prescribed finite pulse | [Spectral work](nsc-discovery-spectral-work.md); `src/recursive_horizons/nsc_discovery_spectral_work.py`; `scripts/derive_nsc_discovery_spectral_work.py` |
+| Leading canonical comparison and unchanged quantum source | [Leading model](nsc-discovery-leading-einstein.md); `src/recursive_horizons/nsc_discovery_leading_einstein.py` |
+| Exact-state numerical successor and scaled reaction indicator | [Step control](nsc-discovery-leading-step-control.md); `src/recursive_horizons/nsc_discovery_leading_step_control.py` |
+| Static positive-energy periodic class and exterior boundary charge | [Virial](nsc-discovery-leading-virial.md); `scripts/assess_nsc_discovery_leading_virial.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before
