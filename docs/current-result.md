@@ -403,6 +403,39 @@ instead supplies an explicit exterior gradient/traction term. This identifies
 the parent response required for holding; it does not exclude dynamic or
 oscillatory sectors, negative-energy states, or different boundary domains.
 
+### Source-history-selected turn and independent forecast
+
+The [homogeneous record](../lab/results/development/nsc-discovery-homogeneous-turn-v1/prediction.json)
+derives an invariant 16-real-state sector of the same leading equations;
+it adds no force or law. Three momentum pairs and their spinors reproduce
+the stored uniform full-field trajectory. Field energy crosses zero at
+T=2.61301056, before the rooted areal minimum at T=2.61410338. The minimum
+radius is 0.282440638. The constraint selects it through
+
+$$
+r_{\rm turn}^2=\frac{\mu}{8\pi A}
++\frac{E_f}{8\pi A\,\ell Q_{\rm turn}^2}.
+$$
+
+The scale depends on the actual transported state and geometry, as well as
+couplings, flux and preparation. The T=2.6 sampled minimum is not substituted
+for this event. Instantaneous energy-sector transfer is not identified with
+antimatter or a physical filled-sea vacuum.
+
+A locked tangent forecast changes the paired occupations from
+(.75,.5,.25) to (.752,.5,.248), preserving trace three. The
+[independent full-NF32 measurement](../lab/results/development/nsc-discovery-homogeneous-turn-v1/measurement.json)
+finds radius 0.2827044098 against the forecast 0.2827040102, an error of
+0.152 percent of the predicted radius change. The original fine arm remains recorded at its CPU stop. The
+[exact-state confirmation](../lab/results/development/nsc-discovery-homogeneous-turn-confirmation-v1/confirmation.json)
+resumes it without a source or radius reset, using 24.26 CPU seconds in a
+separate 35-second allowance. Its radius is 0.2827044110; timestep movement
+is $1.12\times10^{-9}$, or 0.00043 percent of the measured change. The
+original record and its 30-second allowance remain unchanged. This is
+a conditional finite-model scale prediction, not a new bounce mechanism,
+regular-spacetime proof or completed regeneration. Strong-curvature EFT
+validity and physical vacuum matching remain open.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
