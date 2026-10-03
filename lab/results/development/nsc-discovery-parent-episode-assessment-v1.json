@@ -1,0 +1,5241 @@
+{
+  "schema": "NSC-DISCOVERY-PARENT-EPISODE-ASSESSMENT-v1",
+  "campaigns": [
+    {
+      "directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1",
+      "manifest_status": "STATION_REACHED",
+      "measured_cases": [
+        "nf128_minus_balanced_dt0.001",
+        "nf128_minus_child_heavy_dt0.001",
+        "nf128_minus_parent_heavy_dt0.001",
+        "nf128_plus_balanced_dt0.001",
+        "nf128_plus_child_heavy_dt0.001",
+        "nf128_plus_parent_heavy_dt0.001"
+      ],
+      "confirmation_cases_without_snapshots": [
+        "nf256_plus_child_heavy_dt0.0005",
+        "nf256_plus_balanced_dt0.0005",
+        "nf256_plus_parent_heavy_dt0.0005",
+        "nf256_minus_child_heavy_dt0.0005",
+        "nf256_minus_balanced_dt0.0005",
+        "nf256_minus_parent_heavy_dt0.0005"
+      ],
+      "stations": [
+        {
+          "case_id": "nf128_minus_child_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "child_heavy",
+          "sign_name": "minus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.49845045104948377,
+          "disjoint_fractions": {
+            "child": 0.49845045104948377,
+            "inner": 0.3339156322273993,
+            "parent": 0.16763391672076755,
+            "ambient": 2.3494206055116577e-12
+          },
+          "disjoint_probability": {
+            "child": 0.0013399595751495967,
+            "inner": 0.0008976487988990021,
+            "parent": 0.00045064192711006916,
+            "ambient": 6.315830650329932e-15
+          },
+          "probability_total": 0.0026882503011649837,
+          "proper_lengths": {
+            "child": 1.0449078098426008,
+            "inner": 2.287693722748121,
+            "parent": 7.26394753938712,
+            "ambient": 4.000007209540343
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999998,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "inner": {
+              "min": 0.9999999999999999,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "parent": {
+              "min": 0.9999999999999996,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 0.9999999999999999
+            },
+            "ambient": {
+              "min": 0.9999999999999998,
+              "max": 1.0000000000000004,
+              "max_abs": 1.0000000000000004,
+              "rms": 0.9999999999999998
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.9998423090981752,
+              "max": 1.1407210722596095,
+              "max_abs": 1.1407210722596095,
+              "rms": 1.047278914402145
+            },
+            "inner": {
+              "min": 1.1505872178321264,
+              "max": 2.402698777453576,
+              "max_abs": 2.402698777453576,
+              "rms": 1.6815607962543277
+            },
+            "parent": {
+              "min": 1.9946031190382087,
+              "max": 2.403045193459375,
+              "max_abs": 2.403045193459375,
+              "rms": 2.02003392614814
+            },
+            "ambient": {
+              "min": 1.9995749702914574,
+              "max": 2.0004278561581788,
+              "max_abs": 2.0004278561581788,
+              "rms": 2.0000068584789723
+            }
+          },
+          "Nmin": 0.9998423090981752,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              1.999568985998907,
+              2.4040460740249396,
+              1.8641065731427564,
+              1.1407210722595864,
+              0.999842309098166,
+              1.1407210722595544,
+              1.8641065731427409,
+              2.404046074024945,
+              1.9995689859989167
+            ],
+            "recomputed_rates": [
+              1.9995689859989074,
+              2.404046074024954,
+              1.8641065731427138,
+              1.1407210722596095,
+              0.9998423090981752,
+              1.140721072259609,
+              1.8641065731427138,
+              2.404046074024955,
+              1.9995689859989083
+            ],
+            "saved_rate_gap_max": 5.46229728115577e-14,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0791760796963368,
+              "max": -0.9165021374937355,
+              "max_abs": 1.0791760796963368,
+              "rms": 1.0004896964512457
+            },
+            "R_0202": {
+              "min": -0.001542738338306479,
+              "max": -0.00025592871449772845,
+              "max_abs": 0.001542738338306479,
+              "rms": 0.0005870488334952781
+            },
+            "R4": {
+              "min": -0.1660814176659271,
+              "max": 0.15931531257909562,
+              "max_abs": 0.1660814176659271,
+              "rms": 0.03860603083216103
+            },
+            "owned_W": {
+              "min": 7.152210719697796e-14,
+              "max": 0.00951903817626646,
+              "max_abs": 0.00951903817626646,
+              "rms": 0.0014177698548459435
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.8943238889059026,
+            "max": 0.9053831807888875,
+            "max_abs": 0.9053831807888875,
+            "rms": 0.17839894331968043
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -2.3081514787578333e-08,
+            "max": 2.3425971362386888e-08,
+            "max_abs": 2.3425971362386888e-08,
+            "rms": 5.313188293785737e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.002363616564165972,
+              0.00032463373699901087
+            ],
+            "child_probability": [
+              0.0013399595751494944,
+              1.0224832144612801e-16
+            ],
+            "sum": 0.0013399595751495967,
+            "actual_child_probability": 0.0013399595751495967,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.016778749428571736,
+            "field": 0.01677874942857176,
+            "total": 2.42861286636753e-17
+          },
+          "gram_distance_from_identity": 0.0857749920967254,
+          "CAR_eigenvalues": [
+            0.0003218687699863375,
+            0.002366381531178645
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.0004844845288702756,
+            "pressure": -0.0004844845288702787,
+            "lapse": -2.4918493519611283e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_child_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "child_heavy",
+          "sign_name": "minus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.45746589900764867,
+          "disjoint_fractions": {
+            "child": 0.45746589900764867,
+            "inner": 0.3321543756379176,
+            "parent": 0.17813524076964243,
+            "ambient": 0.03224448458479126
+          },
+          "disjoint_probability": {
+            "child": 0.0012297828407796343,
+            "inner": 0.0008929141003416179,
+            "parent": 0.0004788721146469373,
+            "ambient": 8.668124539594748e-05
+          },
+          "probability_total": 0.002688250301164137,
+          "proper_lengths": {
+            "child": 0.9499786315411156,
+            "inner": 0.8654846294928662,
+            "parent": 1.903638343504114,
+            "ambient": 1.1132706157023409
+          },
+          "areal_r": {
+            "child": {
+              "min": 1.0191491858122572,
+              "max": 1.020123722652692,
+              "max_abs": 1.020123722652692,
+              "rms": 1.0196033256400128
+            },
+            "inner": {
+              "min": 1.0201554116099456,
+              "max": 1.0213333563484723,
+              "max_abs": 1.0213333563484723,
+              "rms": 1.0207838384271894
+            },
+            "parent": {
+              "min": 1.0213542090537893,
+              "max": 1.0219436697944666,
+              "max_abs": 1.0219436697944666,
+              "rms": 1.0218322601209295
+            },
+            "ambient": {
+              "min": 1.0219441900348614,
+              "max": 1.021949055436424,
+              "max_abs": 1.021949055436424,
+              "rms": 1.0219484253248705
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.7538953494084567,
+              "max": 1.0909238938340886,
+              "max_abs": 1.0909238938340886,
+              "rms": 0.9553205086693775
+            },
+            "inner": {
+              "min": 0.5191512673417631,
+              "max": 0.7465566172216729,
+              "max_abs": 0.7465566172216729,
+              "rms": 0.6210292474659397
+            },
+            "parent": {
+              "min": 0.46841447763902927,
+              "max": 0.6029603490198295,
+              "max_abs": 0.6029603490198295,
+              "rms": 0.5305478334594067
+            },
+            "ambient": {
+              "min": 0.5561004081273573,
+              "max": 0.5580797415761208,
+              "max_abs": 0.5580797415761208,
+              "rms": 0.5566252704709375
+            }
+          },
+          "Nmin": 0.46841447763902927,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.3110008388733736,
+              1.2223754733677823,
+              1.1732962986561053,
+              1.0964595965671202,
+              1.0599480010826767,
+              1.09645959656712,
+              1.1732962986561055,
+              1.222375473367783,
+              1.3110008388733743
+            ],
+            "saved_rates": [
+              0.5579455390981304,
+              0.5165983244048762,
+              0.5637695939374101,
+              0.7538953494084579,
+              1.0873137595975102,
+              0.7538953494084569,
+              0.5637695939374108,
+              0.5165983244048763,
+              0.5579455390981293
+            ],
+            "recomputed_rates": [
+              0.5579455390981304,
+              0.5165983244048762,
+              0.5637695939374101,
+              0.7538953494084579,
+              1.0873137595975102,
+              0.7538953494084569,
+              0.5637695939374108,
+              0.5165983244048763,
+              0.5579455390981293
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.0599480010826767,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0265564146990955,
+              "max": -0.7313079540318458,
+              "max_abs": 1.0265564146990955,
+              "rms": 0.8825432617167207
+            },
+            "R_0202": {
+              "min": -0.02285792907026043,
+              "max": -0.018835803135653036,
+              "max_abs": 0.02285792907026043,
+              "rms": 0.02091520108633717
+            },
+            "R4": {
+              "min": -0.2968833941755127,
+              "max": 0.2927747980201473,
+              "max_abs": 0.2968833941755127,
+              "rms": 0.13260986423312984
+            },
+            "owned_W": {
+              "min": 4.105088633104151e-07,
+              "max": 0.09488566410364982,
+              "max_abs": 0.09488566410364982,
+              "rms": 0.03289979616456127
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.21396556401812586,
+            "max": 0.17998167149692507,
+            "max_abs": 0.21396556401812586,
+            "rms": 0.057826160031711565
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -5.814571157891635e-09,
+            "max": 5.846042538948382e-09,
+            "max_abs": 5.846042538948382e-09,
+            "rms": 1.7120693182070363e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.002363616564165972,
+              0.00032463373699901087
+            ],
+            "child_probability": [
+              0.0012297761849738788,
+              6.655805755362254e-09
+            ],
+            "sum": 0.001229782840779634,
+            "actual_child_probability": 0.0012297828407796343,
+            "sum_minus_actual": -2.168404344971009e-19,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.013580694281651099,
+            "field": 0.013580694282068921,
+            "total": 4.178220269768218e-13
+          },
+          "gram_distance_from_identity": 0.08577499209676949,
+          "CAR_eigenvalues": [
+            0.0003218687699862456,
+            0.0023663815311778915
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.0010963474166577598,
+            "pressure": 0.0018000945721809698,
+            "lapse": 0.0014189919620637226,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.0031951500295584294,
+              "pressure_work": 0.005144191769579105,
+              "lapse_work": 0.0006736622296528033,
+              "boundary_child": -0.0011406885692427577,
+              "boundary_parent": -0.00043996543414093426,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_child_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "child_heavy",
+          "sign_name": "minus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.023142198103008344,
+          "disjoint_fractions": {
+            "child": 0.023142198103008344,
+            "inner": 0.08889020484490234,
+            "parent": 0.7025895887816248,
+            "ambient": 0.18537800827046458
+          },
+          "disjoint_probability": {
+            "child": 6.22120210199927e-05,
+            "inner": 0.00023895911994477526,
+            "parent": 0.001888736673636395,
+            "ambient": 0.0004983424865621273
+          },
+          "probability_total": 0.00268825030116329,
+          "proper_lengths": {
+            "child": 0.02432043103611216,
+            "inner": 0.03413802182633351,
+            "parent": 0.07632313866244744,
+            "ambient": 0.022423910743789743
+          },
+          "areal_r": {
+            "child": {
+              "min": 1.021445125557572,
+              "max": 1.0214892675782479,
+              "max_abs": 1.0214892675782479,
+              "rms": 1.0214606061988445
+            },
+            "inner": {
+              "min": 1.0214918101727017,
+              "max": 1.0216425242726,
+              "max_abs": 1.0216425242726,
+              "rms": 1.0215594770390934
+            },
+            "parent": {
+              "min": 1.0216474305574732,
+              "max": 1.0226650606859535,
+              "max_abs": 1.0226650606859535,
+              "rms": 1.0221870189083393
+            },
+            "ambient": {
+              "min": 1.022667881301603,
+              "max": 1.0226945266548988,
+              "max_abs": 1.0226945266548988,
+              "rms": 1.0226853777160412
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.024302235102481834,
+              "max": 0.024349411371463195,
+              "max_abs": 0.024349411371463195,
+              "rms": 0.02432088837576159
+            },
+            "inner": {
+              "min": 0.02435294966220372,
+              "max": 0.024417760663054882,
+              "max_abs": 0.024417760663054882,
+              "rms": 0.024384447493366598
+            },
+            "parent": {
+              "min": 0.012780751498305988,
+              "max": 0.02775116640852427,
+              "max_abs": 0.02775116640852427,
+              "rms": 0.02168208725597948
+            },
+            "ambient": {
+              "min": 0.010445352064767117,
+              "max": 0.012673285326860694,
+              "max_abs": 0.012673285326860694,
+              "rms": 0.01121481683101514
+            }
+          },
+          "Nmin": 0.010445352064767117,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.5969260555176457,
+              1.5840047185930934,
+              1.574843764749038,
+              1.609738198687248,
+              1.6723268366899782,
+              1.6097381986872479,
+              1.5748437647490385,
+              1.5840047185930943,
+              1.5969260555176465
+            ],
+            "saved_rates": [
+              0.012780751498306014,
+              0.02442068295270519,
+              0.024383710985722142,
+              0.02434941137146319,
+              0.02430223510248183,
+              0.024349411371463115,
+              0.024383710985722118,
+              0.02442068295270533,
+              0.01278075149830599
+            ],
+            "recomputed_rates": [
+              0.012780751498306014,
+              0.02442068295270519,
+              0.024383710985722142,
+              0.02434941137146319,
+              0.02430223510248183,
+              0.024349411371463115,
+              0.024383710985722118,
+              0.02442068295270533,
+              0.01278075149830599
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.6723268366899782,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -832.2941000274598,
+              "max": 709.5598556088444,
+              "max_abs": 832.2941000274598,
+              "rms": 206.03516846555303
+            },
+            "R_0202": {
+              "min": -6.88897001197117,
+              "max": 0.0215896410275912,
+              "max_abs": 6.88897001197117,
+              "rms": 2.8669735454661502
+            },
+            "R4": {
+              "min": -1420.6895446820279,
+              "max": 1662.810053807743,
+              "max_abs": 1662.810053807743,
+              "rms": 412.02870719067045
+            },
+            "owned_W": {
+              "min": 0.08611329025371303,
+              "max": 921422.2518841419,
+              "max_abs": 921422.2518841419,
+              "rms": 135570.88062123567
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.2439786225733254,
+            "max": 0.1964717622235851,
+            "max_abs": 0.2439786225733254,
+            "rms": 0.07884572041292887
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -0.00012973738473298635,
+            "max": 0.0001311971270790413,
+            "max_abs": 0.0001311971270790413,
+            "rms": 2.861453058809109e-05
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.002363616564165972,
+              0.00032463373699901087
+            ],
+            "child_probability": [
+              6.942506046096774e-06,
+              5.526951497389591e-05
+            ],
+            "sum": 6.221202101999269e-05,
+            "actual_child_probability": 6.22120210199927e-05,
+            "sum_minus_actual": -1.3552527156068805e-20,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.00987645355058776,
+            "field": 0.009876453551149621,
+            "total": 5.61861321357604e-13
+          },
+          "gram_distance_from_identity": 0.08577499209684811,
+          "CAR_eigenvalues": [
+            0.00032186876998614944,
+            0.00236638153117714
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.03789468947377744,
+            "pressure": 0.014137264458775682,
+            "lapse": -4.09499781493881e-05,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.006898790306399362,
+              "pressure_work": 0.46999028873884735,
+              "lapse_work": 0.10678892546452846,
+              "boundary_child": -0.029621162065195623,
+              "boundary_parent": -0.05711525548435557,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_child_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "child_heavy",
+          "sign_name": "plus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.49845045104948377,
+          "disjoint_fractions": {
+            "child": 0.49845045104948377,
+            "inner": 0.3339156322273993,
+            "parent": 0.16763391672076755,
+            "ambient": 2.3494206055116577e-12
+          },
+          "disjoint_probability": {
+            "child": 0.0013399595751495967,
+            "inner": 0.0008976487988990021,
+            "parent": 0.00045064192711006916,
+            "ambient": 6.315830650329932e-15
+          },
+          "probability_total": 0.0026882503011649837,
+          "proper_lengths": {
+            "child": 1.0449078098426008,
+            "inner": 2.287693722748121,
+            "parent": 7.26394753938712,
+            "ambient": 4.000007209540343
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999998,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "inner": {
+              "min": 0.9999999999999999,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "parent": {
+              "min": 0.9999999999999996,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 0.9999999999999999
+            },
+            "ambient": {
+              "min": 0.9999999999999998,
+              "max": 1.0000000000000004,
+              "max_abs": 1.0000000000000004,
+              "rms": 0.9999999999999998
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.9998423090981752,
+              "max": 1.1407210722596095,
+              "max_abs": 1.1407210722596095,
+              "rms": 1.047278914402145
+            },
+            "inner": {
+              "min": 1.1505872178321264,
+              "max": 2.402698777453576,
+              "max_abs": 2.402698777453576,
+              "rms": 1.6815607962543277
+            },
+            "parent": {
+              "min": 1.9946031190382087,
+              "max": 2.403045193459375,
+              "max_abs": 2.403045193459375,
+              "rms": 2.02003392614814
+            },
+            "ambient": {
+              "min": 1.9995749702914574,
+              "max": 2.0004278561581788,
+              "max_abs": 2.0004278561581788,
+              "rms": 2.0000068584789723
+            }
+          },
+          "Nmin": 0.9998423090981752,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              1.999568985998907,
+              2.4040460740249396,
+              1.8641065731427564,
+              1.1407210722595864,
+              0.999842309098166,
+              1.1407210722595544,
+              1.8641065731427409,
+              2.404046074024945,
+              1.9995689859989167
+            ],
+            "recomputed_rates": [
+              1.9995689859989074,
+              2.404046074024954,
+              1.8641065731427138,
+              1.1407210722596095,
+              0.9998423090981752,
+              1.140721072259609,
+              1.8641065731427138,
+              2.404046074024955,
+              1.9995689859989083
+            ],
+            "saved_rate_gap_max": 5.46229728115577e-14,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0791760796963368,
+              "max": -0.9165021374937344,
+              "max_abs": 1.0791760796963368,
+              "rms": 1.0004896964512462
+            },
+            "R_0202": {
+              "min": -0.0015427383383064808,
+              "max": -0.0002559287144977289,
+              "max_abs": 0.0015427383383064808,
+              "rms": 0.0005870488334952787
+            },
+            "R4": {
+              "min": -0.16608141766592932,
+              "max": 0.15931531257909562,
+              "max_abs": 0.16608141766592932,
+              "rms": 0.038606030832161194
+            },
+            "owned_W": {
+              "min": 7.152210719697796e-14,
+              "max": 0.00951903817626671,
+              "max_abs": 0.00951903817626671,
+              "rms": 0.0014177698548459518
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.8943238889059251,
+            "max": 0.9053831807888996,
+            "max_abs": 0.9053831807888996,
+            "rms": 0.17839894331968073
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -2.3081514787578333e-08,
+            "max": 2.3425971362386888e-08,
+            "max_abs": 2.3425971362386888e-08,
+            "rms": 5.313188294977403e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.002363616564165972,
+              0.00032463373699901087
+            ],
+            "child_probability": [
+              0.0013399595751494944,
+              1.0224832144612801e-16
+            ],
+            "sum": 0.0013399595751495967,
+            "actual_child_probability": 0.0013399595751495967,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.016778749428571736,
+            "field": 0.01677874942857176,
+            "total": 2.42861286636753e-17
+          },
+          "gram_distance_from_identity": 0.0857749920967254,
+          "CAR_eigenvalues": [
+            0.0003218687699863375,
+            0.002366381531178645
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": 0.0004844845288702818,
+            "pressure": 0.00048448452887027866,
+            "lapse": -2.4918493519611283e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_child_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "child_heavy",
+          "sign_name": "plus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.4535706512800176,
+          "disjoint_fractions": {
+            "child": 0.4535706512800176,
+            "inner": 0.3351527148363089,
+            "parent": 0.17939975847239734,
+            "ambient": 0.03187687541127616
+          },
+          "disjoint_probability": {
+            "child": 0.0012193114399027345,
+            "inner": 0.0009009743865946954,
+            "parent": 0.00048227145474220086,
+            "ambient": 8.569301992453576e-05
+          },
+          "probability_total": 0.0026882503011641666,
+          "proper_lengths": {
+            "child": 0.8072069385637547,
+            "inner": 0.7418077833109572,
+            "parent": 1.7092034720885825,
+            "ambient": 1.0120869073087548
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9799655937039523,
+              "max": 0.981040868721645,
+              "max_abs": 0.981040868721645,
+              "rms": 0.9805275313265008
+            },
+            "inner": {
+              "min": 0.978780633380759,
+              "max": 0.9799328217158145,
+              "max_abs": 0.9799328217158145,
+              "rms": 0.9793054309245418
+            },
+            "parent": {
+              "min": 0.9782128657623425,
+              "max": 0.9787617682575626,
+              "max_abs": 0.9787617682575626,
+              "rms": 0.9783451170429541
+            },
+            "ambient": {
+              "min": 0.9783293678011623,
+              "max": 0.9783349484615247,
+              "max_abs": 0.9783349484615247,
+              "rms": 0.9783342118358656
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.6398139313146033,
+              "max": 0.9280726605065859,
+              "max_abs": 0.9280726605065859,
+              "rms": 0.8118467587583608
+            },
+            "inner": {
+              "min": 0.45199441368341564,
+              "max": 0.6336834471431382,
+              "max_abs": 0.6336834471431382,
+              "rms": 0.5318887284103685
+            },
+            "parent": {
+              "min": 0.4179218805013029,
+              "max": 0.5452235664110999,
+              "max_abs": 0.5452235664110999,
+              "rms": 0.4766366404400049
+            },
+            "ambient": {
+              "min": 0.5047452663964815,
+              "max": 0.5065240567624687,
+              "max_abs": 0.5065240567624687,
+              "rms": 0.5060549286193022
+            }
+          },
+          "Nmin": 0.4179218805013029,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.2919977634724595,
+              1.1929663298106963,
+              1.133070159457517,
+              1.0070837089460143,
+              0.9457222583293935,
+              1.007083708946015,
+              1.133070159457517,
+              1.1929663298106963,
+              1.2919977634724598
+            ],
+            "saved_rates": [
+              0.5045990951430359,
+              0.4500768249115739,
+              0.4862685345711731,
+              0.6398139313146033,
+              0.925080622558041,
+              0.6398139313146037,
+              0.486268534571173,
+              0.4500768249115734,
+              0.504599095143035
+            ],
+            "recomputed_rates": [
+              0.5045990951430359,
+              0.4500768249115739,
+              0.4862685345711731,
+              0.6398139313146033,
+              0.925080622558041,
+              0.6398139313146037,
+              0.486268534571173,
+              0.4500768249115734,
+              0.504599095143035
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 0.9457222583293935,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.3101269969075322,
+              "max": -0.9608427595095953,
+              "max_abs": 1.3101269969075322,
+              "rms": 1.139280404657818
+            },
+            "R_0202": {
+              "min": 0.018446249692127797,
+              "max": 0.023680834271765983,
+              "max_abs": 0.023680834271765983,
+              "rms": 0.02150335915878779
+            },
+            "R4": {
+              "min": -0.3492835818242582,
+              "max": 0.3485377427052679,
+              "max_abs": 0.3492835818242582,
+              "rms": 0.1575102133301215
+            },
+            "owned_W": {
+              "min": 1.4209361672647164e-07,
+              "max": 0.1300661992510122,
+              "max_abs": 0.1300661992510122,
+              "rms": 0.04602970716325563
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.19730683219515813,
+            "max": 0.16483601011895785,
+            "max_abs": 0.19730683219515813,
+            "rms": 0.051625435797000685
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -7.093221399134819e-09,
+            "max": 7.092245568607325e-09,
+            "max_abs": 7.093221399134819e-09,
+            "rms": 2.172466937275947e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.002363616564165972,
+              0.00032463373699901087
+            ],
+            "child_probability": [
+              0.0012193047820514417,
+              6.657851292721945e-09
+            ],
+            "sum": 0.0012193114399027343,
+            "actual_child_probability": 0.0012193114399027345,
+            "sum_minus_actual": -2.168404344971009e-19,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.012839737330245442,
+            "field": 0.01283973733004628,
+            "total": -1.9916186755342125e-13
+          },
+          "gram_distance_from_identity": 0.08577499209676981,
+          "CAR_eigenvalues": [
+            0.0003218687699862438,
+            0.0023663815311779227
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.0006607123737780965,
+            "pressure": 0.002535555179534302,
+            "lapse": 0.0016176156096167516,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.003935745842518728,
+              "pressure_work": 0.006986061536376701,
+              "lapse_work": 0.0006442221093219312,
+              "boundary_child": -0.0011303330252674909,
+              "boundary_parent": -0.00047500166292796183,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_child_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "child_heavy",
+          "sign_name": "plus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.022138375973060214,
+          "disjoint_fractions": {
+            "child": 0.022138375973060214,
+            "inner": 0.08456212912151372,
+            "parent": 0.7045489039832911,
+            "ambient": 0.18875059092213498
+          },
+          "disjoint_probability": {
+            "child": 5.951349587684718e-05,
+            "inner": 0.0002273241690779256,
+            "parent": 0.001894003803317409,
+            "ambient": 0.0005074088328911946
+          },
+          "probability_total": 0.0026882503011633765,
+          "proper_lengths": {
+            "child": 0.016249527577050237,
+            "inner": 0.02268915576172251,
+            "parent": 0.048087270483483734,
+            "ambient": 0.013780582060172025
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9762565012553331,
+              "max": 0.9762982210839022,
+              "max_abs": 0.9762982210839022,
+              "rms": 0.9762711719238795
+            },
+            "inner": {
+              "min": 0.97630060091056,
+              "max": 0.9764436716437469,
+              "max_abs": 0.9764436716437469,
+              "rms": 0.9763641930087037
+            },
+            "parent": {
+              "min": 0.9764484677177101,
+              "max": 0.9774235756274914,
+              "max_abs": 0.9774235756274914,
+              "rms": 0.9769745047215879
+            },
+            "ambient": {
+              "min": 0.9774259290862933,
+              "max": 0.9774469110135667,
+              "max_abs": 0.9774469110135667,
+              "rms": 0.9774375187397949
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.01622607422468421,
+              "max": 0.016261315673663814,
+              "max_abs": 0.016261315673663814,
+              "rms": 0.016249165504265268
+            },
+            "inner": {
+              "min": 0.016192682380308288,
+              "max": 0.01622478893700378,
+              "max_abs": 0.01622478893700378,
+              "rms": 0.01620642964714985
+            },
+            "parent": {
+              "min": 0.007673072007286741,
+              "max": 0.017787845890049125,
+              "max_abs": 0.017787845890049125,
+              "rms": 0.013750527347688115
+            },
+            "ambient": {
+              "min": 0.006483967716848446,
+              "max": 0.007612915476106002,
+              "max_abs": 0.007612915476106002,
+              "rms": 0.0068907470946557295
+            }
+          },
+          "Nmin": 0.006483967716848446,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.5298086900057255,
+              1.4771196499789856,
+              1.449564053165926,
+              1.4229700193065822,
+              1.4540905740860426,
+              1.422970019306582,
+              1.4495640531659264,
+              1.4771196499789856,
+              1.5298086900057257
+            ],
+            "saved_rates": [
+              0.007673072007286741,
+              0.016190813956222825,
+              0.016201208059173064,
+              0.016226074224684243,
+              0.016259181810798932,
+              0.016226074224684205,
+              0.016201208059173057,
+              0.016190813956222877,
+              0.007673072007286753
+            ],
+            "recomputed_rates": [
+              0.007673072007286741,
+              0.016190813956222825,
+              0.016201208059173064,
+              0.016226074224684243,
+              0.016259181810798932,
+              0.016226074224684205,
+              0.016201208059173057,
+              0.016190813956222877,
+              0.007673072007286753
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.4540905740860426,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -2313.951053491514,
+              "max": 2029.3304457794231,
+              "max_abs": 2313.951053491514,
+              "rms": 609.7584784909753
+            },
+            "R_0202": {
+              "min": -19.506741061582858,
+              "max": 0.07427639663983676,
+              "max_abs": 19.506741061582858,
+              "rms": 8.125530316908371
+            },
+            "R4": {
+              "min": -4061.307318943476,
+              "max": 4626.115398203698,
+              "max_abs": 4626.115398203698,
+              "rms": 1219.6924000089962
+            },
+            "owned_W": {
+              "min": 1.8631943292276332,
+              "max": 7132225.466453323,
+              "max_abs": 7132225.466453323,
+              "rms": 1144477.7911364508
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.25121061480289986,
+            "max": 0.20085083805659854,
+            "max_abs": 0.25121061480289986,
+            "rms": 0.08350285620424774
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -0.00032457633087112914,
+            "max": 0.00033015117395335247,
+            "max_abs": 0.00033015117395335247,
+            "rms": 7.264969309634737e-05
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.002363616564165972,
+              0.00032463373699901087
+            ],
+            "child_probability": [
+              4.055422280261694e-06,
+              5.5458073596585494e-05
+            ],
+            "sum": 5.951349587684719e-05,
+            "actual_child_probability": 5.951349587684718e-05,
+            "sum_minus_actual": 1.3552527156068805e-20,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.009569088799815644,
+            "field": 0.00956908879942759,
+            "total": -3.880541721290598e-13
+          },
+          "gram_distance_from_identity": 0.0857749920968423,
+          "CAR_eigenvalues": [
+            0.0003218687699861473,
+            0.002366381531177228
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.053591714377029344,
+            "pressure": 0.022339193807511853,
+            "lapse": 7.909284891005948e-05,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.007206159237708468,
+              "pressure_work": 0.7497654134985847,
+              "lapse_work": 0.16285835725078263,
+              "boundary_child": -0.03888722709092733,
+              "boundary_parent": -0.0793279585172516,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_balanced_dt0.001",
+          "nf": 128,
+          "population_id": "balanced",
+          "sign_name": "minus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.37291559973011185,
+          "disjoint_fractions": {
+            "child": 0.37291559973011185,
+            "inner": 0.24981890976202004,
+            "parent": 0.37726549050584157,
+            "ambient": 2.026603407324957e-12
+          },
+          "disjoint_probability": {
+            "child": 0.0010024904732835935,
+            "inner": 0.0006715757594044581,
+            "parent": 0.0010141840684714837,
+            "ambient": 5.448017220083298e-15
+          },
+          "probability_total": 0.0026882503011649832,
+          "proper_lengths": {
+            "child": 1.0449078098426008,
+            "inner": 2.287693722748121,
+            "parent": 7.26394753938712,
+            "ambient": 4.000007209540343
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999998,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "inner": {
+              "min": 0.9999999999999999,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "parent": {
+              "min": 0.9999999999999996,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 0.9999999999999999
+            },
+            "ambient": {
+              "min": 0.9999999999999998,
+              "max": 1.0000000000000004,
+              "max_abs": 1.0000000000000004,
+              "rms": 0.9999999999999998
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.9998423090981752,
+              "max": 1.1407210722596095,
+              "max_abs": 1.1407210722596095,
+              "rms": 1.047278914402145
+            },
+            "inner": {
+              "min": 1.1505872178321264,
+              "max": 2.402698777453576,
+              "max_abs": 2.402698777453576,
+              "rms": 1.6815607962543277
+            },
+            "parent": {
+              "min": 1.9946031190382087,
+              "max": 2.403045193459375,
+              "max_abs": 2.403045193459375,
+              "rms": 2.02003392614814
+            },
+            "ambient": {
+              "min": 1.9995749702914574,
+              "max": 2.0004278561581788,
+              "max_abs": 2.0004278561581788,
+              "rms": 2.0000068584789723
+            }
+          },
+          "Nmin": 0.9998423090981752,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              1.999568985998907,
+              2.4040460740249396,
+              1.8641065731427564,
+              1.1407210722595864,
+              0.999842309098166,
+              1.1407210722595544,
+              1.8641065731427409,
+              2.404046074024945,
+              1.9995689859989167
+            ],
+            "recomputed_rates": [
+              1.9995689859989074,
+              2.404046074024954,
+              1.8641065731427138,
+              1.1407210722596095,
+              0.9998423090981752,
+              1.140721072259609,
+              1.8641065731427138,
+              2.404046074024955,
+              1.9995689859989083
+            ],
+            "saved_rate_gap_max": 5.46229728115577e-14,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.079168366807832,
+              "max": -0.9164882759217862,
+              "max_abs": 1.079168366807832,
+              "rms": 1.0004309936376565
+            },
+            "R_0202": {
+              "min": -0.0012186714190004153,
+              "max": -0.0002559298166135978,
+              "max_abs": 0.0012186714190004153,
+              "rms": 0.0004908446657941624
+            },
+            "R4": {
+              "min": -0.16608136162430118,
+              "max": 0.15931506399391115,
+              "max_abs": 0.16608136162430118,
+              "rms": 0.038606293567414275
+            },
+            "owned_W": {
+              "min": 6.481511343702804e-10,
+              "max": 0.009523726802887142,
+              "max_abs": 0.009523726802887142,
+              "rms": 0.0014168676362610049
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.8943243023840063,
+            "max": 0.905382875281226,
+            "max_abs": 0.905382875281226,
+            "rms": 0.17839903359016368
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -2.3081513830444655e-08,
+            "max": 2.3425970053538026e-08,
+            "max_abs": 2.3425970053538026e-08,
+            "rms": 5.313188305206805e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0017683392335225072,
+              0.0009199110676424754
+            ],
+            "child_probability": [
+              0.0010024904732833036,
+              2.897597752910048e-16
+            ],
+            "sum": 0.0010024904732835933,
+            "actual_child_probability": 0.0010024904732835935,
+            "sum_minus_actual": -2.168404344971009e-19,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.017969309093745015,
+            "field": 0.017969309093745018,
+            "total": 3.469446951953614e-18
+          },
+          "gram_distance_from_identity": 0.0857749920967254,
+          "CAR_eigenvalues": [
+            0.0009060316704358668,
+            0.0017822186307291155
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.00028833002629062175,
+            "pressure": -0.0002883300262906241,
+            "lapse": -1.8644992638013939e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_balanced_dt0.001",
+          "nf": 128,
+          "population_id": "balanced",
+          "sign_name": "minus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.341468799926939,
+          "disjoint_fractions": {
+            "child": 0.341468799926939,
+            "inner": 0.3094355426317631,
+            "parent": 0.2657171162835275,
+            "ambient": 0.0833785411577704
+          },
+          "disjoint_probability": {
+            "child": 0.0009179536042417612,
+            "inner": 0.0008318401906707353,
+            "parent": 0.0007143141178736674,
+            "ambient": 0.00022414238837800536
+          },
+          "probability_total": 0.0026882503011641692,
+          "proper_lengths": {
+            "child": 0.9351744998776794,
+            "inner": 0.8564837752446811,
+            "parent": 1.91044587758795,
+            "ambient": 1.1146576240642818
+          },
+          "areal_r": {
+            "child": {
+              "min": 1.0191274287697618,
+              "max": 1.0201222697853713,
+              "max_abs": 1.0201222697853713,
+              "rms": 1.0195925532905554
+            },
+            "inner": {
+              "min": 1.0201543722971955,
+              "max": 1.0213378408495781,
+              "max_abs": 1.0213378408495781,
+              "rms": 1.020788926685677
+            },
+            "parent": {
+              "min": 1.0213579794764585,
+              "max": 1.0219351625563888,
+              "max_abs": 1.0219351625563888,
+              "rms": 1.0217848352315784
+            },
+            "ambient": {
+              "min": 1.0219364894574765,
+              "max": 1.0219490564433227,
+              "max_abs": 1.0219490564433227,
+              "rms": 1.0219474306778094
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.7427008024238869,
+              "max": 1.0735130076151174,
+              "max_abs": 1.0735130076151174,
+              "rms": 0.9404017010195029
+            },
+            "inner": {
+              "min": 0.5180535728084439,
+              "max": 0.735527507947326,
+              "max_abs": 0.735527507947326,
+              "rms": 0.6143337452385792
+            },
+            "parent": {
+              "min": 0.46963601635960256,
+              "max": 0.6049773271146757,
+              "max_abs": 0.6049773271146757,
+              "rms": 0.5324872634277054
+            },
+            "ambient": {
+              "min": 0.5560995380639198,
+              "max": 0.5610719515669234,
+              "max_abs": 0.5610719515669234,
+              "rms": 0.5573011680741456
+            }
+          },
+          "Nmin": 0.46963601635960256,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.3119368187738965,
+              1.220946960593357,
+              1.169503109167783,
+              1.0853306250681267,
+              1.0451139940312864,
+              1.085330625068127,
+              1.1695031091677832,
+              1.220946960593357,
+              1.3119368187738965
+            ],
+            "saved_rates": [
+              0.561116931505597,
+              0.51566266689297,
+              0.5596522524655053,
+              0.7427008024238868,
+              1.0698957301962235,
+              0.742700802423888,
+              0.5596522524655058,
+              0.515662666892968,
+              0.5611169315055965
+            ],
+            "recomputed_rates": [
+              0.561116931505597,
+              0.51566266689297,
+              0.5596522524655053,
+              0.7427008024238868,
+              1.0698957301962235,
+              0.742700802423888,
+              0.5596522524655058,
+              0.515662666892968,
+              0.5611169315055965
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.0451139940312864,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.019862039847949,
+              "max": -0.7386909362250632,
+              "max_abs": 1.019862039847949,
+              "rms": 0.8824344781005028
+            },
+            "R_0202": {
+              "min": -0.024825545069977438,
+              "max": -0.018657522482095096,
+              "max_abs": 0.024825545069977438,
+              "rms": 0.021327803459183985
+            },
+            "R4": {
+              "min": -0.28199101502966006,
+              "max": 0.2794358205752353,
+              "max_abs": 0.28199101502966006,
+              "rms": 0.12863996213348378
+            },
+            "owned_W": {
+              "min": 1.9447845169011426e-09,
+              "max": 0.08972220268246145,
+              "max_abs": 0.08972220268246145,
+              "rms": 0.03209250821984056
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.21171009707536742,
+            "max": 0.17763616036999955,
+            "max_abs": 0.21171009707536742,
+            "rms": 0.056375761885439
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -5.770637051538685e-09,
+            "max": 5.798626967479237e-09,
+            "max_abs": 5.798626967479237e-09,
+            "rms": 1.7141208188311063e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0017683392335225072,
+              0.0009199110676424754
+            ],
+            "child_probability": [
+              0.0009179347375499469,
+              1.8866691814293327e-08
+            ],
+            "sum": 0.0009179536042417612,
+            "actual_child_probability": 0.0009179536042417612,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.01399553219412177,
+            "field": 0.013995532194478369,
+            "total": 3.5659843133917235e-13
+          },
+          "gram_distance_from_identity": 0.08577499209676974,
+          "CAR_eigenvalues": [
+            0.0009060316704355956,
+            0.0017822186307285726
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.00081400169975414,
+            "pressure": 0.0013670312884063243,
+            "lapse": 0.0010678784359797234,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.0039665090994147915,
+              "pressure_work": 0.008412784890677975,
+              "lapse_work": 0.0006074741274930117,
+              "boundary_child": -0.0008509862264990072,
+              "boundary_parent": -0.001132685503518602,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_balanced_dt0.001",
+          "nf": 128,
+          "population_id": "balanced",
+          "sign_name": "minus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.06049630226114266,
+          "disjoint_fractions": {
+            "child": 0.06049630226114266,
+            "inner": 0.14226209545746354,
+            "parent": 0.5956284576630149,
+            "ambient": 0.20161314461837895
+          },
+          "disjoint_probability": {
+            "child": 0.00016262920277278602,
+            "inner": 0.0003824361209576561,
+            "parent": 0.0016011983806940634,
+            "ambient": 0.000541986596738848
+          },
+          "probability_total": 0.0026882503011633535,
+          "proper_lengths": {
+            "child": 0.024460966669127886,
+            "inner": 0.03429984932209747,
+            "parent": 0.07583410138605023,
+            "ambient": 0.02243783099302024
+          },
+          "areal_r": {
+            "child": {
+              "min": 1.021530324997683,
+              "max": 1.021611086236696,
+              "max_abs": 1.021611086236696,
+              "rms": 1.0215594070557132
+            },
+            "inner": {
+              "min": 1.0216152452464542,
+              "max": 1.0217637918511864,
+              "max_abs": 1.0217637918511864,
+              "rms": 1.0216932116537094
+            },
+            "parent": {
+              "min": 1.0217672882434337,
+              "max": 1.0225109849035687,
+              "max_abs": 1.0225109849035687,
+              "rms": 1.0221691040701588
+            },
+            "ambient": {
+              "min": 1.0223945079295957,
+              "max": 1.022512240352314,
+              "max_abs": 1.022512240352314,
+              "rms": 1.0224542783898687
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.024428091206740405,
+              "max": 0.02451796145297758,
+              "max_abs": 0.02451796145297758,
+              "rms": 0.024461871917258703
+            },
+            "inner": {
+              "min": 0.024414804037689135,
+              "max": 0.02455725855816351,
+              "max_abs": 0.02455725855816351,
+              "rms": 0.024500271776255883
+            },
+            "parent": {
+              "min": 0.012736245587230985,
+              "max": 0.027600601723568957,
+              "max_abs": 0.027600601723568957,
+              "rms": 0.02155245187610346
+            },
+            "ambient": {
+              "min": 0.01046183765497314,
+              "max": 0.012633345340022783,
+              "max_abs": 0.012633345340022783,
+              "rms": 0.011221538746689451
+            }
+          },
+          "Nmin": 0.01046183765497314,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.5990555744005845,
+              1.5804436351214708,
+              1.5685554863609845,
+              1.5950695569467803,
+              1.6532064585762358,
+              1.5950695569467803,
+              1.5685554863609847,
+              1.5804436351214706,
+              1.5990555744005845
+            ],
+            "saved_rates": [
+              0.012736245587230986,
+              0.024420081438861416,
+              0.02445636236071119,
+              0.024517961452977514,
+              0.02442809120674041,
+              0.024517961452977577,
+              0.024456362360711113,
+              0.02442008143886156,
+              0.0127362455872311
+            ],
+            "recomputed_rates": [
+              0.012736245587230986,
+              0.024420081438861416,
+              0.02445636236071119,
+              0.024517961452977514,
+              0.02442809120674041,
+              0.024517961452977577,
+              0.024456362360711113,
+              0.02442008143886156,
+              0.0127362455872311
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.6532064585762358,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -807.0628376642949,
+              "max": 685.4569678286178,
+              "max_abs": 807.0628376642949,
+              "rms": 198.02925748379002
+            },
+            "R_0202": {
+              "min": -9.637561065240995,
+              "max": 0.007267341042620945,
+              "max_abs": 9.637561065240995,
+              "rms": 3.496877882387207
+            },
+            "R4": {
+              "min": -1372.4661285466984,
+              "max": 1612.3671785837191,
+              "max_abs": 1612.3671785837191,
+              "rms": 396.01714021619546
+            },
+            "owned_W": {
+              "min": 0.43320437194503914,
+              "max": 866324.9956926072,
+              "max_abs": 866324.9956926072,
+              "rms": 125579.20664690965
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.23739370776091462,
+            "max": 0.19201132866811704,
+            "max_abs": 0.23739370776091462,
+            "rms": 0.0759206141460803
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -0.00012601048385696423,
+            "max": 0.00012772394796639608,
+            "max_abs": 0.00012772394796639608,
+            "rms": 2.791052305505998e-05
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0017683392335225072,
+              0.0009199110676424754
+            ],
+            "child_probability": [
+              5.19823295379023e-06,
+              0.0001574309698189958
+            ],
+            "sum": 0.00016262920277278602,
+            "actual_child_probability": 0.00016262920277278602,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.010893147975905123,
+            "field": 0.010893147976398891,
+            "total": 4.937682207550864e-13
+          },
+          "gram_distance_from_identity": 0.08577499209684701,
+          "CAR_eigenvalues": [
+            0.0009060316704353102,
+            0.0017822186307280428
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.1077912522685081,
+            "pressure": 0.04027799257505455,
+            "lapse": -0.00022909357156307628,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.007068995580903063,
+              "pressure_work": 0.5709409137847392,
+              "lapse_work": 0.0752789063509614,
+              "boundary_child": -0.04919004025462076,
+              "boundary_parent": -0.006893157619478948,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_balanced_dt0.001",
+          "nf": 128,
+          "population_id": "balanced",
+          "sign_name": "plus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.37291559973011185,
+          "disjoint_fractions": {
+            "child": 0.37291559973011185,
+            "inner": 0.24981890976202004,
+            "parent": 0.37726549050584157,
+            "ambient": 2.026603407324957e-12
+          },
+          "disjoint_probability": {
+            "child": 0.0010024904732835935,
+            "inner": 0.0006715757594044581,
+            "parent": 0.0010141840684714837,
+            "ambient": 5.448017220083298e-15
+          },
+          "probability_total": 0.0026882503011649832,
+          "proper_lengths": {
+            "child": 1.0449078098426008,
+            "inner": 2.287693722748121,
+            "parent": 7.26394753938712,
+            "ambient": 4.000007209540343
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999998,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "inner": {
+              "min": 0.9999999999999999,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "parent": {
+              "min": 0.9999999999999996,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 0.9999999999999999
+            },
+            "ambient": {
+              "min": 0.9999999999999998,
+              "max": 1.0000000000000004,
+              "max_abs": 1.0000000000000004,
+              "rms": 0.9999999999999998
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.9998423090981752,
+              "max": 1.1407210722596095,
+              "max_abs": 1.1407210722596095,
+              "rms": 1.047278914402145
+            },
+            "inner": {
+              "min": 1.1505872178321264,
+              "max": 2.402698777453576,
+              "max_abs": 2.402698777453576,
+              "rms": 1.6815607962543277
+            },
+            "parent": {
+              "min": 1.9946031190382087,
+              "max": 2.403045193459375,
+              "max_abs": 2.403045193459375,
+              "rms": 2.02003392614814
+            },
+            "ambient": {
+              "min": 1.9995749702914574,
+              "max": 2.0004278561581788,
+              "max_abs": 2.0004278561581788,
+              "rms": 2.0000068584789723
+            }
+          },
+          "Nmin": 0.9998423090981752,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              1.999568985998907,
+              2.4040460740249396,
+              1.8641065731427564,
+              1.1407210722595864,
+              0.999842309098166,
+              1.1407210722595544,
+              1.8641065731427409,
+              2.404046074024945,
+              1.9995689859989167
+            ],
+            "recomputed_rates": [
+              1.9995689859989074,
+              2.404046074024954,
+              1.8641065731427138,
+              1.1407210722596095,
+              0.9998423090981752,
+              1.140721072259609,
+              1.8641065731427138,
+              2.404046074024955,
+              1.9995689859989083
+            ],
+            "saved_rate_gap_max": 5.46229728115577e-14,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.079168366807832,
+              "max": -0.9164882759217869,
+              "max_abs": 1.079168366807832,
+              "rms": 1.0004309936376565
+            },
+            "R_0202": {
+              "min": -0.0012186714190004161,
+              "max": -0.0002559298166135987,
+              "max_abs": 0.0012186714190004161,
+              "rms": 0.0004908446657941629
+            },
+            "R4": {
+              "min": -0.16608136162429984,
+              "max": 0.15931506399391115,
+              "max_abs": 0.16608136162429984,
+              "rms": 0.038606293567414206
+            },
+            "owned_W": {
+              "min": 6.481511343572254e-10,
+              "max": 0.009523726802886993,
+              "max_abs": 0.009523726802886993,
+              "rms": 0.0014168676362610118
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.8943243023840063,
+            "max": 0.9053828752812186,
+            "max_abs": 0.9053828752812186,
+            "rms": 0.17839903359016437
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -2.3081513830444655e-08,
+            "max": 2.3425970053538026e-08,
+            "max_abs": 2.3425970053538026e-08,
+            "rms": 5.31318830609892e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0017683392335225072,
+              0.0009199110676424754
+            ],
+            "child_probability": [
+              0.0010024904732833036,
+              2.897597752910048e-16
+            ],
+            "sum": 0.0010024904732835933,
+            "actual_child_probability": 0.0010024904732835935,
+            "sum_minus_actual": -2.168404344971009e-19,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.017969309093745015,
+            "field": 0.017969309093745018,
+            "total": 3.469446951953614e-18
+          },
+          "gram_distance_from_identity": 0.0857749920967254,
+          "CAR_eigenvalues": [
+            0.0009060316704358668,
+            0.0017822186307291155
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": 0.00028833002629062647,
+            "pressure": 0.00028833002629062414,
+            "lapse": -1.8644992638013939e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_balanced_dt0.001",
+          "nf": 128,
+          "population_id": "balanced",
+          "sign_name": "plus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.34022766892700734,
+          "disjoint_fractions": {
+            "child": 0.34022766892700734,
+            "inner": 0.3103252818511394,
+            "parent": 0.26670835643264074,
+            "ambient": 0.08273869278921261
+          },
+          "disjoint_probability": {
+            "child": 0.0009146171334574141,
+            "inner": 0.0008342320323951843,
+            "parent": 0.0007169788195030497,
+            "ambient": 0.0002224223158085313
+          },
+          "probability_total": 0.002688250301164179,
+          "proper_lengths": {
+            "child": 0.8209128684529188,
+            "inner": 0.7498455832810939,
+            "parent": 1.7036949586682009,
+            "ambient": 1.0108500368983129
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9799614123351791,
+              "max": 0.9810138612860398,
+              "max_abs": 0.9810138612860398,
+              "rms": 0.980512346451633
+            },
+            "inner": {
+              "min": 0.9787846210611642,
+              "max": 0.9799291834543502,
+              "max_abs": 0.9799291834543502,
+              "rms": 0.9793096798086542
+            },
+            "parent": {
+              "min": 0.978124661169396,
+              "max": 0.9787649813325878,
+              "max_abs": 0.9787649813325878,
+              "rms": 0.9782945581945122
+            },
+            "ambient": {
+              "min": 0.9783207572790216,
+              "max": 0.9783349472582201,
+              "max_abs": 0.9783349472582201,
+              "rms": 0.9783330682672319
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.6499528386072898,
+              "max": 0.9443502952975024,
+              "max_abs": 0.9443502952975024,
+              "rms": 0.8256736425154764
+            },
+            "inner": {
+              "min": 0.45298953026097394,
+              "max": 0.6436593961483219,
+              "max_abs": 0.6436593961483219,
+              "rms": 0.5378617328364073
+            },
+            "parent": {
+              "min": 0.41699310681091906,
+              "max": 0.5436734092011686,
+              "max_abs": 0.5436734092011686,
+              "rms": 0.4750585152576014
+            },
+            "ambient": {
+              "min": 0.5020227833064516,
+              "max": 0.5065228816433793,
+              "max_abs": 0.5065228816433793,
+              "rms": 0.5054551163571738
+            }
+          },
+          "Nmin": 0.41699310681091906,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.2911344137762544,
+              1.194337794274562,
+              1.1366674160158843,
+              1.0174638863184962,
+              0.9593658632776677,
+              1.017463886318496,
+              1.1366674160158847,
+              1.1943377942745623,
+              1.2911344137762544
+            ],
+            "saved_rates": [
+              0.501798572666509,
+              0.450931056368127,
+              0.4899108383203308,
+              0.6499528386072898,
+              0.9413785421079102,
+              0.6499528386072906,
+              0.4899108383203309,
+              0.4509310563681277,
+              0.5017985726665083
+            ],
+            "recomputed_rates": [
+              0.501798572666509,
+              0.450931056368127,
+              0.4899108383203308,
+              0.6499528386072898,
+              0.9413785421079102,
+              0.6499528386072906,
+              0.4899108383203309,
+              0.4509310563681277,
+              0.5017985726665083
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 0.9593658632776677,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.3193034753183255,
+              "max": -0.9515751646558086,
+              "max_abs": 1.3193034753183255,
+              "rms": 1.1395086169557658
+            },
+            "R_0202": {
+              "min": 0.01619792134279871,
+              "max": 0.023952154042689737,
+              "max_abs": 0.023952154042689737,
+              "rms": 0.021034448152892442
+            },
+            "R4": {
+              "min": -0.36927299073663555,
+              "max": 0.3672146296079754,
+              "max_abs": 0.36927299073663555,
+              "rms": 0.16265824575953672
+            },
+            "owned_W": {
+              "min": 3.788231591793777e-06,
+              "max": 0.13776746525995756,
+              "max_abs": 0.13776746525995756,
+              "rms": 0.04725420649851722
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.19991628285909638,
+            "max": 0.16762741941315884,
+            "max_abs": 0.19991628285909638,
+            "rms": 0.05313594017447991
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -7.138781343840606e-09,
+            "max": 7.145484537396385e-09,
+            "max_abs": 7.145484537396385e-09,
+            "rms": 2.1670383247319235e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0017683392335225072,
+              0.0009199110676424754
+            ],
+            "child_probability": [
+              0.0009145982729389251,
+              1.886051848901766e-08
+            ],
+            "sum": 0.0009146171334574141,
+            "actual_child_probability": 0.0009146171334574141,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.013542202273801807,
+            "field": 0.013542202273576422,
+            "total": -2.2538568233976264e-13
+          },
+          "gram_distance_from_identity": 0.08577499209676959,
+          "CAR_eigenvalues": [
+            0.0009060316704355949,
+            0.001782218630728584
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.000504020041141036,
+            "pressure": 0.001865812413631552,
+            "lapse": 0.0012039070813892666,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.004419588128258417,
+              "pressure_work": 0.01058416349343607,
+              "lapse_work": 0.0005872171961798646,
+              "boundary_child": -0.0008475898664627357,
+              "boundary_parent": -0.0012196780277047138,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_balanced_dt0.001",
+          "nf": 128,
+          "population_id": "balanced",
+          "sign_name": "plus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.05927818093570254,
+          "disjoint_fractions": {
+            "child": 0.05927818093570254,
+            "inner": 0.1400929795941257,
+            "parent": 0.5965327852530496,
+            "ambient": 0.20409605421712212
+          },
+          "disjoint_probability": {
+            "child": 0.00015935458775282049,
+            "inner": 0.0003766049945847855,
+            "parent": 0.0016036294396103486,
+            "ambient": 0.0005486612792154388
+          },
+          "probability_total": 0.0026882503011633934,
+          "proper_lengths": {
+            "child": 0.016201315640225335,
+            "inner": 0.022637289648398853,
+            "parent": 0.048482115813679776,
+            "ambient": 0.013784443033065166
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.976326427948308,
+              "max": 0.9764076403575007,
+              "max_abs": 0.9764076403575007,
+              "rms": 0.9763557422294333
+            },
+            "inner": {
+              "min": 0.9764117721778156,
+              "max": 0.976554967185261,
+              "max_abs": 0.976554967185261,
+              "rms": 0.9764873400910905
+            },
+            "parent": {
+              "min": 0.9765583256101843,
+              "max": 0.9772710785129378,
+              "max_abs": 0.9772710785129378,
+              "rms": 0.9769478289507658
+            },
+            "ambient": {
+              "min": 0.977148426381501,
+              "max": 0.977271541739844,
+              "max_abs": 0.977271541739844,
+              "rms": 0.9772095396481888
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.016157017470559292,
+              "max": 0.01622369015360626,
+              "max_abs": 0.01622369015360626,
+              "rms": 0.016200638526189085
+            },
+            "inner": {
+              "min": 0.01613422736377625,
+              "max": 0.01622890307601697,
+              "max_abs": 0.01622890307601697,
+              "rms": 0.016169267380689363
+            },
+            "parent": {
+              "min": 0.0077056370303935145,
+              "max": 0.017919804093898952,
+              "max_abs": 0.017919804093898952,
+              "rms": 0.013857530194958025
+            },
+            "ambient": {
+              "min": 0.006480565645425148,
+              "max": 0.007642672597139812,
+              "max_abs": 0.007642672597139812,
+              "rms": 0.006892710610922671
+            }
+          },
+          "Nmin": 0.006480565645425148,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.5279922875441503,
+              1.4804206566549905,
+              1.4554999965579942,
+              1.4369625308756184,
+              1.4723227744435468,
+              1.4369625308756182,
+              1.4554999965579944,
+              1.4804206566549902,
+              1.5279922875441505
+            ],
+            "saved_rates": [
+              0.007705637030393546,
+              0.01622881543271089,
+              0.016191306458488118,
+              0.016157017470559292,
+              0.016221946661665012,
+              0.0161570174705593,
+              0.016191306458488076,
+              0.01622881543271086,
+              0.007705637030393517
+            ],
+            "recomputed_rates": [
+              0.007705637030393546,
+              0.01622881543271089,
+              0.016191306458488118,
+              0.016157017470559292,
+              0.016221946661665012,
+              0.0161570174705593,
+              0.016191306458488076,
+              0.01622881543271086,
+              0.007705637030393517
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.4723227744435468,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -2371.4925419892147,
+              "max": 2084.8687212187606,
+              "max_abs": 2371.4925419892147,
+              "rms": 629.0488330462274
+            },
+            "R_0202": {
+              "min": -28.647964028692417,
+              "max": 0.11911523259396839,
+              "max_abs": 28.647964028692417,
+              "rms": 10.058852090217613
+            },
+            "R4": {
+              "min": -4172.344384248474,
+              "max": 4741.232970990615,
+              "max_abs": 4741.232970990615,
+              "rms": 1258.2712156023315
+            },
+            "owned_W": {
+              "min": 1.9396478608838599,
+              "max": 7491462.454835624,
+              "max_abs": 7491462.454835624,
+              "rms": 1218528.2774460458
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.2569766223365894,
+            "max": 0.20464618603540252,
+            "max_abs": 0.2569766223365894,
+            "rms": 0.08612277413480908
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -0.00033176589279837465,
+            "max": 0.00033694596516269104,
+            "max_abs": 0.00033694596516269104,
+            "rms": 7.394879637543872e-05
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0017683392335225072,
+              0.0009199110676424754
+            ],
+            "child_probability": [
+              2.9988833671865066e-06,
+              0.00015635570438563394
+            ],
+            "sum": 0.00015935458775282046,
+            "actual_child_probability": 0.00015935458775282049,
+            "sum_minus_actual": -2.710505431213761e-20,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.010699400086154793,
+            "field": 0.010699400085730068,
+            "total": -4.247244916877335e-13
+          },
+          "gram_distance_from_identity": 0.08577499209684349,
+          "CAR_eigenvalues": [
+            0.0009060316704353094,
+            0.0017822186307280836
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.1600271797423619,
+            "pressure": 0.06460268111106217,
+            "lapse": 0.0004252585265656292,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.007262746466681558,
+              "pressure_work": 0.9125885151130779,
+              "lapse_work": 0.11354119195979603,
+              "boundary_child": -0.0711012743240405,
+              "boundary_parent": -0.0028414999470349903,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_parent_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "parent_heavy",
+          "sign_name": "minus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.21242087391665956,
+          "disjoint_fractions": {
+            "child": 0.21242087391665956,
+            "inner": 0.1423023096144383,
+            "parent": 0.6452768164672882,
+            "ambient": 1.613921529373776e-12
+          },
+          "disjoint_probability": {
+            "child": 0.000571040478280189,
+            "inner": 0.0003825442266774864,
+            "parent": 0.0017346655962029692,
+            "ambient": 4.338625037395704e-15
+          },
+          "probability_total": 0.0026882503011649832,
+          "proper_lengths": {
+            "child": 1.0449078098426008,
+            "inner": 2.287693722748121,
+            "parent": 7.26394753938712,
+            "ambient": 4.000007209540343
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999998,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "inner": {
+              "min": 0.9999999999999999,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "parent": {
+              "min": 0.9999999999999996,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 0.9999999999999999
+            },
+            "ambient": {
+              "min": 0.9999999999999998,
+              "max": 1.0000000000000004,
+              "max_abs": 1.0000000000000004,
+              "rms": 0.9999999999999998
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.9998423090981752,
+              "max": 1.1407210722596095,
+              "max_abs": 1.1407210722596095,
+              "rms": 1.047278914402145
+            },
+            "inner": {
+              "min": 1.1505872178321264,
+              "max": 2.402698777453576,
+              "max_abs": 2.402698777453576,
+              "rms": 1.6815607962543277
+            },
+            "parent": {
+              "min": 1.9946031190382087,
+              "max": 2.403045193459375,
+              "max_abs": 2.403045193459375,
+              "rms": 2.02003392614814
+            },
+            "ambient": {
+              "min": 1.9995749702914574,
+              "max": 2.0004278561581788,
+              "max_abs": 2.0004278561581788,
+              "rms": 2.0000068584789723
+            }
+          },
+          "Nmin": 0.9998423090981752,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              1.999568985998907,
+              2.4040460740249396,
+              1.8641065731427564,
+              1.1407210722595864,
+              0.999842309098166,
+              1.1407210722595544,
+              1.8641065731427409,
+              2.404046074024945,
+              1.9995689859989167
+            ],
+            "recomputed_rates": [
+              1.9995689859989074,
+              2.404046074024954,
+              1.8641065731427138,
+              1.1407210722596095,
+              0.9998423090981752,
+              1.140721072259609,
+              1.8641065731427138,
+              2.404046074024955,
+              1.9995689859989083
+            ],
+            "saved_rate_gap_max": 5.46229728115577e-14,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0791585366579612,
+              "max": -0.9164705519835493,
+              "max_abs": 1.0791585366579612,
+              "rms": 1.0003563439137915
+            },
+            "R_0202": {
+              "min": -0.0008043559455474267,
+              "max": -0.00025593097069746655,
+              "max_abs": 0.0008043559455474267,
+              "rms": 0.0003756398995967501
+            },
+            "R4": {
+              "min": -0.16608129416206924,
+              "max": 0.15931480754270055,
+              "max_abs": 0.16608129416206924,
+              "rms": 0.038606540033676355
+            },
+            "owned_W": {
+              "min": 1.0235111311346544e-09,
+              "max": 0.009529723306250017,
+              "max_abs": 0.009529723306250017,
+              "rms": 0.0014165739401710863
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.8943246258111944,
+            "max": 0.9053825075147954,
+            "max_abs": 0.9053825075147954,
+            "rms": 0.1783990816910395
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -2.3081514235068906e-08,
+            "max": 2.34259710288863e-08,
+            "max_abs": 2.34259710288863e-08,
+            "rms": 5.31318837378346e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0010072846661217216,
+              0.0016809656350432612
+            ],
+            "child_probability": [
+              0.0005710404782796596,
+              5.29467072769545e-16
+            ],
+            "sum": 0.000571040478280189,
+            "actual_child_probability": 0.000571040478280189,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.019491424625952235,
+            "field": 0.01949142462595222,
+            "total": -1.3877787807814457e-17
+          },
+          "gram_distance_from_identity": 0.0857749920967254,
+          "CAR_eigenvalues": [
+            0.0009892743988407348,
+            0.0016989759023242471
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.00011024851025765519,
+            "pressure": -0.00011024851025765649,
+            "lapse": -1.0624400799968373e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_parent_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "parent_heavy",
+          "sign_name": "minus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.19392862679376882,
+          "disjoint_fractions": {
+            "child": 0.19392862679376882,
+            "inner": 0.2796966442859676,
+            "parent": 0.3779306994370802,
+            "ambient": 0.14844402948318344
+          },
+          "disjoint_probability": {
+            "child": 0.0005213286893827086,
+            "inner": 0.0007518945882363683,
+            "parent": 0.0010159723165809272,
+            "ambient": 0.00039905470696419517
+          },
+          "probability_total": 0.002688250301164199,
+          "proper_lengths": {
+            "child": 0.9162646945534108,
+            "inner": 0.8450193937106036,
+            "parent": 1.9190256590359975,
+            "ambient": 1.1164355745210588
+          },
+          "areal_r": {
+            "child": {
+              "min": 1.0190969778719112,
+              "max": 1.0201186447943378,
+              "max_abs": 1.0201186447943378,
+              "rms": 1.0195764088725974
+            },
+            "inner": {
+              "min": 1.020151326605299,
+              "max": 1.0213432919475463,
+              "max_abs": 1.0213432919475463,
+              "rms": 1.0207946152627754
+            },
+            "parent": {
+              "min": 1.0213625078443553,
+              "max": 1.0219240224286434,
+              "max_abs": 1.0219240224286434,
+              "rms": 1.0217232749703784
+            },
+            "ambient": {
+              "min": 1.0219264095374032,
+              "max": 1.0219490578699677,
+              "max_abs": 1.0219490578699677,
+              "rms": 1.0219461339451843
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.7284443467767148,
+              "max": 1.0512525884929647,
+              "max_abs": 1.0512525884929647,
+              "rms": 0.9213433738931369
+            },
+            "inner": {
+              "min": 0.5166279091258164,
+              "max": 0.7214844547877632,
+              "max_abs": 0.7214844547877632,
+              "rms": 0.6058206782643061
+            },
+            "parent": {
+              "min": 0.4711583308888028,
+              "max": 0.6075044440461459,
+              "max_abs": 0.6075044440461459,
+              "rms": 0.5349355161786106
+            },
+            "ambient": {
+              "min": 0.5560984358224131,
+              "max": 0.5650218865625148,
+              "max_abs": 0.5650218865625148,
+              "rms": 0.5581699483987183
+            }
+          },
+          "Nmin": 0.4711583308888028,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.313136477969989,
+              1.2191197685091677,
+              1.1646716761505773,
+              1.0712394620054475,
+              1.0263920375882853,
+              1.0712394620054475,
+              1.1646716761505773,
+              1.2191197685091677,
+              1.3131364779699892
+            ],
+            "saved_rates": [
+              0.5651843419761158,
+              0.514443372931214,
+              0.5543925536315344,
+              0.7284443467767158,
+              1.047626518988647,
+              0.728444346776715,
+              0.5543925536315333,
+              0.5144433729312139,
+              0.5651843419761162
+            ],
+            "recomputed_rates": [
+              0.5651843419761158,
+              0.514443372931214,
+              0.5543925536315344,
+              0.7284443467767158,
+              1.047626518988647,
+              0.728444346776715,
+              0.5543925536315333,
+              0.5144433729312139,
+              0.5651843419761162
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.0263920375882853,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0112183505911787,
+              "max": -0.7481370386965713,
+              "max_abs": 1.0112183505911787,
+              "rms": 0.8823058619768709
+            },
+            "R_0202": {
+              "min": -0.027367852578419116,
+              "max": -0.018360487002779334,
+              "max_abs": 0.027367852578419116,
+              "rms": 0.021883622439935423
+            },
+            "R4": {
+              "min": -0.26369533709151405,
+              "max": 0.2624712144669406,
+              "max_abs": 0.26369533709151405,
+              "rms": 0.1237302010705048
+            },
+            "owned_W": {
+              "min": 8.920652256734587e-08,
+              "max": 0.08332734977140914,
+              "max_abs": 0.08332734977140914,
+              "rms": 0.03114104560058006
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.20867881605019875,
+            "max": 0.17445893310091015,
+            "max_abs": 0.20867881605019875,
+            "rms": 0.05451881068692646
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -5.723079704589296e-09,
+            "max": 5.744186265532747e-09,
+            "max_abs": 5.744186265532747e-09,
+            "rms": 1.719518911290835e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0010072846661217216,
+              0.0016809656350432612
+            ],
+            "child_probability": [
+              0.0005212941997740641,
+              3.448960864449866e-08
+            ],
+            "sum": 0.0005213286893827086,
+            "actual_child_probability": 0.0005213286893827086,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.014630602656792467,
+            "field": 0.014630602657219357,
+            "total": 4.2688942658575257e-13
+          },
+          "gram_distance_from_identity": 0.08577499209676998,
+          "CAR_eigenvalues": [
+            0.0009892743988403965,
+            0.0016989759023238022
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.0004585038222591826,
+            "pressure": 0.0007939269686227203,
+            "lapse": 0.0006128079091805844,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.004847981887887171,
+              "pressure_work": 0.012512779138012582,
+              "lapse_work": 0.0005992155305164076,
+              "boundary_child": -0.00048308417716092194,
+              "boundary_parent": -0.0020216329674932203,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_minus_parent_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "parent_heavy",
+          "sign_name": "minus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.10881647994954936,
+          "disjoint_fractions": {
+            "child": 0.10881647994954936,
+            "inner": 0.2101989768117842,
+            "parent": 0.4589115804345147,
+            "ambient": 0.22207296280415162
+          },
+          "disjoint_probability": {
+            "child": 0.000292525934995919,
+            "inner": 0.000565067462718521,
+            "parent": 0.0012336691943104637,
+            "ambient": 0.0005969877091385129
+          },
+          "probability_total": 0.002688250301163417,
+          "proper_lengths": {
+            "child": 0.024620536208664594,
+            "inner": 0.034480349122556916,
+            "parent": 0.07516923989685301,
+            "ambient": 0.02245050169056348
+          },
+          "areal_r": {
+            "child": {
+              "min": 1.021638547833917,
+              "max": 1.021766362583567,
+              "max_abs": 1.021766362583567,
+              "rms": 1.0216850754022953
+            },
+            "inner": {
+              "min": 1.0217726122854107,
+              "max": 1.0219178953415504,
+              "max_abs": 1.0219178953415504,
+              "rms": 1.0218638331068028
+            },
+            "parent": {
+              "min": 1.0219195396576446,
+              "max": 1.022322411980063,
+              "max_abs": 1.022322411980063,
+              "rms": 1.022143775381083
+            },
+            "ambient": {
+              "min": 1.022033955433779,
+              "max": 1.0223107371254758,
+              "max_abs": 1.0223107371254758,
+              "rms": 1.022157416362093
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.024568523514955826,
+              "max": 0.02471423705571581,
+              "max_abs": 0.02471423705571581,
+              "rms": 0.024622039347398973
+            },
+            "inner": {
+              "min": 0.02440480431590316,
+              "max": 0.02476252821790156,
+              "max_abs": 0.02476252821790156,
+              "rms": 0.024629714474111407
+            },
+            "parent": {
+              "min": 0.012676849309471303,
+              "max": 0.02738928210677063,
+              "max_abs": 0.02738928210677063,
+              "rms": 0.021374944112209117
+            },
+            "ambient": {
+              "min": 0.010480418647425683,
+              "max": 0.012579784073681575,
+              "max_abs": 0.012579784073681575,
+              "rms": 0.011227606508659263
+            }
+          },
+          "Nmin": 0.010480418647425683,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.6017665827410097,
+              1.5757966471211504,
+              1.5604086953399128,
+              1.5762586887550545,
+              1.6287370115847315,
+              1.5762586887550547,
+              1.5604086953399128,
+              1.5757966471211506,
+              1.6017665827410106
+            ],
+            "saved_rates": [
+              0.012676849309471373,
+              0.024400013418404753,
+              0.024530154064686976,
+              0.024714237055715817,
+              0.024568523514955833,
+              0.024714237055715745,
+              0.024530154064687067,
+              0.024400013418404764,
+              0.012676849309471314
+            ],
+            "recomputed_rates": [
+              0.012676849309471373,
+              0.024400013418404753,
+              0.024530154064686976,
+              0.024714237055715817,
+              0.024568523514955833,
+              0.024714237055715745,
+              0.024530154064687067,
+              0.024400013418404764,
+              0.012676849309471314
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.6287370115847315,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -774.540588610815,
+              "max": 654.0665746576199,
+              "max_abs": 774.540588610815,
+              "rms": 187.72683076828895
+            },
+            "R_0202": {
+              "min": -13.212926790015857,
+              "max": -0.011120484283305698,
+              "max_abs": 13.212926790015857,
+              "rms": 4.485157034481963
+            },
+            "R4": {
+              "min": -1309.6644192667918,
+              "max": 1547.3497387358375,
+              "max_abs": 1547.3497387358375,
+              "rms": 375.4132865246342
+            },
+            "owned_W": {
+              "min": 0.3575408106891467,
+              "max": 797810.6293296441,
+              "max_abs": 797810.6293296441,
+              "rms": 113371.04318523471
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.22871385583294004,
+            "max": 0.18609839054769767,
+            "max_abs": 0.22871385583294004,
+            "rms": 0.0720675309537642
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -0.00012120574673324391,
+            "max": 0.00012322259240599154,
+            "max_abs": 0.00012322259240599154,
+            "rms": 2.7003836801440795e-05
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0010072846661217216,
+              0.0016809656350432612
+            ],
+            "child_probability": [
+              2.966050145096057e-06,
+              0.0002895598848508229
+            ],
+            "sum": 0.000292525934995919,
+            "actual_child_probability": 0.000292525934995919,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.012243905575802409,
+            "field": 0.012243905576379806,
+            "total": 5.773975048084523e-13
+          },
+          "gram_distance_from_identity": 0.08577499209684587,
+          "CAR_eigenvalues": [
+            0.0009892743988400457,
+            0.0016989759023233705
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.19618664775643882,
+            "pressure": 0.0736924888723792,
+            "lapse": -0.0006833945803317393,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.007235672839149047,
+              "pressure_work": 0.6996748692936023,
+              "lapse_work": 0.0369378171232051,
+              "boundary_child": -0.074038317520575,
+              "boundary_parent": 0.0578103024927106,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_parent_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "parent_heavy",
+          "sign_name": "plus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.21242087391665956,
+          "disjoint_fractions": {
+            "child": 0.21242087391665956,
+            "inner": 0.1423023096144383,
+            "parent": 0.6452768164672882,
+            "ambient": 1.613921529373776e-12
+          },
+          "disjoint_probability": {
+            "child": 0.000571040478280189,
+            "inner": 0.0003825442266774864,
+            "parent": 0.0017346655962029692,
+            "ambient": 4.338625037395704e-15
+          },
+          "probability_total": 0.0026882503011649832,
+          "proper_lengths": {
+            "child": 1.0449078098426008,
+            "inner": 2.287693722748121,
+            "parent": 7.26394753938712,
+            "ambient": 4.000007209540343
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999998,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "inner": {
+              "min": 0.9999999999999999,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 1.0
+            },
+            "parent": {
+              "min": 0.9999999999999996,
+              "max": 1.0,
+              "max_abs": 1.0,
+              "rms": 0.9999999999999999
+            },
+            "ambient": {
+              "min": 0.9999999999999998,
+              "max": 1.0000000000000004,
+              "max_abs": 1.0000000000000004,
+              "rms": 0.9999999999999998
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.9998423090981752,
+              "max": 1.1407210722596095,
+              "max_abs": 1.1407210722596095,
+              "rms": 1.047278914402145
+            },
+            "inner": {
+              "min": 1.1505872178321264,
+              "max": 2.402698777453576,
+              "max_abs": 2.402698777453576,
+              "rms": 1.6815607962543277
+            },
+            "parent": {
+              "min": 1.9946031190382087,
+              "max": 2.403045193459375,
+              "max_abs": 2.403045193459375,
+              "rms": 2.02003392614814
+            },
+            "ambient": {
+              "min": 1.9995749702914574,
+              "max": 2.0004278561581788,
+              "max_abs": 2.0004278561581788,
+              "rms": 2.0000068584789723
+            }
+          },
+          "Nmin": 0.9998423090981752,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              1.999568985998907,
+              2.4040460740249396,
+              1.8641065731427564,
+              1.1407210722595864,
+              0.999842309098166,
+              1.1407210722595544,
+              1.8641065731427409,
+              2.404046074024945,
+              1.9995689859989167
+            ],
+            "recomputed_rates": [
+              1.9995689859989074,
+              2.404046074024954,
+              1.8641065731427138,
+              1.1407210722596095,
+              0.9998423090981752,
+              1.140721072259609,
+              1.8641065731427138,
+              2.404046074024955,
+              1.9995689859989083
+            ],
+            "saved_rate_gap_max": 5.46229728115577e-14,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0791585366579612,
+              "max": -0.9164705519835493,
+              "max_abs": 1.0791585366579612,
+              "rms": 1.000356343913791
+            },
+            "R_0202": {
+              "min": -0.000804355945547428,
+              "max": -0.00025593097069746644,
+              "max_abs": 0.000804355945547428,
+              "rms": 0.00037563989959674983
+            },
+            "R4": {
+              "min": -0.16608129416206924,
+              "max": 0.15931480754270055,
+              "max_abs": 0.16608129416206924,
+              "rms": 0.038606540033676064
+            },
+            "owned_W": {
+              "min": 1.023511131069033e-09,
+              "max": 0.009529723306250017,
+              "max_abs": 0.009529723306250017,
+              "rms": 0.001416573940171075
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.8943246258111832,
+            "max": 0.9053825075147954,
+            "max_abs": 0.9053825075147954,
+            "rms": 0.17839908169103907
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -2.3081514235068906e-08,
+            "max": 2.34259710288863e-08,
+            "max_abs": 2.34259710288863e-08,
+            "rms": 5.31318837295066e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0010072846661217216,
+              0.0016809656350432612
+            ],
+            "child_probability": [
+              0.0005710404782796596,
+              5.29467072769545e-16
+            ],
+            "sum": 0.000571040478280189,
+            "actual_child_probability": 0.000571040478280189,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.019491424625952235,
+            "field": 0.01949142462595222,
+            "total": -1.3877787807814457e-17
+          },
+          "gram_distance_from_identity": 0.0857749920967254,
+          "CAR_eigenvalues": [
+            0.0009892743988407348,
+            0.0016989759023242471
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": 0.00011024851025765776,
+            "pressure": 0.00011024851025765645,
+            "lapse": -1.0624400799968373e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_parent_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "parent_heavy",
+          "sign_name": "plus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.1944422835274801,
+          "disjoint_fractions": {
+            "child": 0.1944422835274801,
+            "inner": 0.2793940459554019,
+            "parent": 0.3780857949037202,
+            "ambient": 0.14807787561339786
+          },
+          "disjoint_probability": {
+            "child": 0.0005227095272518042,
+            "inner": 0.000751081128183095,
+            "parent": 0.0010163892520158337,
+            "ambient": 0.0003980703937134725
+          },
+          "probability_total": 0.0026882503011642052,
+          "proper_lengths": {
+            "child": 0.8384913128841177,
+            "inner": 0.7601671924209026,
+            "parent": 1.69652695916887,
+            "ambient": 1.0092725527606352
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9799576658187171,
+              "max": 0.9809816353527213,
+              "max_abs": 0.9809816353527213,
+              "rms": 0.9804950398768896
+            },
+            "inner": {
+              "min": 0.9787900206611788,
+              "max": 0.9799260876059764,
+              "max_abs": 0.9799260876059764,
+              "rms": 0.9793158760847138
+            },
+            "parent": {
+              "min": 0.9780128495462433,
+              "max": 0.9787694025369696,
+              "max_abs": 0.9787694025369696,
+              "rms": 0.978230856234822
+            },
+            "ambient": {
+              "min": 0.978309992596609,
+              "max": 0.9783349458122397,
+              "max_abs": 0.9783349458122397,
+              "rms": 0.9783316325143547
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.6629838424257839,
+              "max": 0.9652158898193286,
+              "max_abs": 0.9652158898193286,
+              "rms": 0.843406152653783
+            },
+            "inner": {
+              "min": 0.4542414357802347,
+              "max": 0.6564827136995617,
+              "max_abs": 0.6564827136995617,
+              "rms": 0.5455461772249988
+            },
+            "parent": {
+              "min": 0.4157678830153119,
+              "max": 0.5416332064453705,
+              "max_abs": 0.5416332064453705,
+              "rms": 0.47300865796623426
+            },
+            "ambient": {
+              "min": 0.49855203548578847,
+              "max": 0.5065217224513122,
+              "max_abs": 0.5065217224513122,
+              "rms": 0.5046921936261799
+            }
+          },
+          "Nmin": 0.4157678830153119,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.2900331996001257,
+              1.196090372333394,
+              1.1412835346481778,
+              1.0308711435242774,
+              0.9770552707780917,
+              1.0308711435242772,
+              1.141283534648178,
+              1.196090372333394,
+              1.2900331996001262
+            ],
+            "saved_rates": [
+              0.4982279855668151,
+              0.4520020585890973,
+              0.49457171098611696,
+              0.6629838424257845,
+              0.9622714079582233,
+              0.6629838424257839,
+              0.494571710986116,
+              0.4520020585890977,
+              0.4982279855668148
+            ],
+            "recomputed_rates": [
+              0.4982279855668151,
+              0.4520020585890973,
+              0.49457171098611696,
+              0.6629838424257845,
+              0.9622714079582233,
+              0.6629838424257839,
+              0.494571710986116,
+              0.4520020585890977,
+              0.4982279855668148
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 0.9770552707780917,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.3310118831228255,
+              "max": -0.9381087775555506,
+              "max_abs": 1.3310118831228255,
+              "rms": 1.1398232604003196
+            },
+            "R_0202": {
+              "min": 0.012478377418018806,
+              "max": 0.024350751229604374,
+              "max_abs": 0.024350751229604374,
+              "rms": 0.020508492660925186
+            },
+            "R4": {
+              "min": -0.39598170517866893,
+              "max": 0.3910424586101879,
+              "max_abs": 0.39598170517866893,
+              "rms": 0.16950148972496154
+            },
+            "owned_W": {
+              "min": 5.269540918768486e-07,
+              "max": 0.14791669667628662,
+              "max_abs": 0.14791669667628662,
+              "rms": 0.04897034135844852
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.2031402685114243,
+            "max": 0.17104487967305354,
+            "max_abs": 0.2031402685114243,
+            "rms": 0.05508237921961023
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -7.202109575388249e-09,
+            "max": 7.2144124563244816e-09,
+            "max_abs": 7.2144124563244816e-09,
+            "rms": 2.1635207907106073e-09
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0010072846661217216,
+              0.0016809656350432612
+            ],
+            "child_probability": [
+              0.00052267507687665,
+              3.445037515413739e-08
+            ],
+            "sum": 0.0005227095272518042,
+            "actual_child_probability": 0.0005227095272518042,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.014339617665733322,
+            "field": 0.01433961766552996,
+            "total": -2.033616330887611e-13
+          },
+          "gram_distance_from_identity": 0.08577499209676925,
+          "CAR_eigenvalues": [
+            0.0009892743988403954,
+            0.0016989759023238102
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.000293457870525431,
+            "pressure": 0.0010407298902199295,
+            "lapse": 0.0006811371905573053,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.005138842279158648,
+              "pressure_work": 0.015275097932933218,
+              "lapse_work": 0.0004365678635603572,
+              "boundary_child": -0.00048434062211488336,
+              "boundary_parent": -0.0021678395007448535,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf128_plus_parent_heavy_dt0.001",
+          "nf": 128,
+          "population_id": "parent_heavy",
+          "sign_name": "plus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.10621151332522277,
+          "disjoint_fractions": {
+            "child": 0.10621151332522277,
+            "inner": 0.2113833357358454,
+            "parent": 0.45838045482538337,
+            "ambient": 0.22402469611354853
+          },
+          "disjoint_probability": {
+            "child": 0.00028552313268355374,
+            "inner": 0.0005682513159528167,
+            "parent": 0.0012322413957317668,
+            "ambient": 0.0006022344567952927
+          },
+          "probability_total": 0.00268825030116343,
+          "proper_lengths": {
+            "child": 0.016125779883268836,
+            "inner": 0.022553117203742645,
+            "parent": 0.04896261074001909,
+            "ambient": 0.01378614705149314
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9764176718021256,
+              "max": 0.9765490757272125,
+              "max_abs": 0.9765490757272125,
+              "rms": 0.9764656350130019
+            },
+            "inner": {
+              "min": 0.9765554176351993,
+              "max": 0.976698943198573,
+              "max_abs": 0.976698943198573,
+              "rms": 0.9766460506785569
+            },
+            "parent": {
+              "min": 0.9767005060052718,
+              "max": 0.9770871826123761,
+              "max_abs": 0.9770871826123761,
+              "rms": 0.976916310089215
+            },
+            "ambient": {
+              "min": 0.976794703271967,
+              "max": 0.9770747964173231,
+              "max_abs": 0.9770747964173231,
+              "rms": 0.9769192860397508
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.016055447793294132,
+              "max": 0.016161617466716866,
+              "max_abs": 0.016161617466716866,
+              "rms": 0.016124718357144463
+            },
+            "inner": {
+              "min": 0.016024401588226496,
+              "max": 0.016261929871008295,
+              "max_abs": 0.016261929871008295,
+              "rms": 0.01610913332826562
+            },
+            "parent": {
+              "min": 0.007745784564291975,
+              "max": 0.018077179284574155,
+              "max_abs": 0.018077179284574155,
+              "rms": 0.013986954801034733
+            },
+            "ambient": {
+              "min": 0.006474619722215957,
+              "max": 0.0076792228467465005,
+              "max_abs": 0.0076792228467465005,
+              "rms": 0.00689362373934582
+            }
+          },
+          "Nmin": 0.006474619722215957,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.525659896184256,
+              1.4845731059513727,
+              1.4630146892819371,
+              1.4548434571454976,
+              1.4956723473254094,
+              1.4548434571454965,
+              1.4630146892819373,
+              1.4845731059513725,
+              1.5256598961842562
+            ],
+            "saved_rates": [
+              0.007745784564292011,
+              0.01626468657113638,
+              0.016165885934872767,
+              0.016055447793294136,
+              0.016160195245047,
+              0.016055447793294243,
+              0.016165885934872747,
+              0.016264686571136406,
+              0.007745784564291978
+            ],
+            "recomputed_rates": [
+              0.007745784564292011,
+              0.01626468657113638,
+              0.016165885934872767,
+              0.016055447793294136,
+              0.016160195245047,
+              0.016055447793294243,
+              0.016165885934872747,
+              0.016264686571136406,
+              0.007745784564291978
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.4956723473254094,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -2443.027628510533,
+              "max": 2152.8885314152594,
+              "max_abs": 2443.027628510533,
+              "rms": 652.9114508835426
+            },
+            "R_0202": {
+              "min": -40.328791009800796,
+              "max": 0.17586390390333406,
+              "max_abs": 40.328791009800796,
+              "rms": 12.975997454082448
+            },
+            "R4": {
+              "min": -4308.325624498593,
+              "max": 4884.3426168884525,
+              "max_abs": 4884.3426168884525,
+              "rms": 1305.9913927361933
+            },
+            "owned_W": {
+              "min": 2.0288827042250315,
+              "max": 7950370.221579506,
+              "max_abs": 7950370.221579506,
+              "rms": 1314040.8271006972
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.2639637413173238,
+            "max": 0.20920007474583888,
+            "max_abs": 0.2639637413173238,
+            "rms": 0.08929233345238058
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -0.0003413246475373055,
+            "max": 0.00034581870662258544,
+            "max_abs": 0.00034581870662258544,
+            "rms": 7.577521902672151e-05
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.0010072846661217216,
+              0.0016809656350432612
+            ],
+            "child_probability": [
+              1.6848322491445465e-06,
+              0.00028383830043440925
+            ],
+            "sum": 0.0002855231326835538,
+            "actual_child_probability": 0.00028552313268355374,
+            "sum_minus_actual": 5.421010862427522e-20,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.012093916633639023,
+            "field": 0.01209391663324133,
+            "total": -3.9769229576158693e-13
+          },
+          "gram_distance_from_identity": 0.08577499209684475,
+          "CAR_eigenvalues": [
+            0.0009892743988400567,
+            0.001698975902323373
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.2972588068268799,
+            "pressure": 0.11856110157032126,
+            "lapse": 0.0012384363716039914,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.007385663707940576,
+              "pressure_work": 1.121423122519193,
+              "lapse_work": 0.04777136983850038,
+              "boundary_child": -0.11244993235654271,
+              "boundary_parent": 0.09399011277675132,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        }
+      ],
+      "scalar_series": {
+        "nf128_minus_child_heavy_dt0.001": {
+          "available": true,
+          "population_id": "child_heavy",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.023142198103008344,
+            "child_normal_energy_rate": -0.03789468947377744
+          },
+          "maximum": {
+            "time": 0.6000000000000001,
+            "child_fraction": 0.49985139450725546,
+            "child_normal_energy_rate": -0.0005855645838766174
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.49845045104948377,
+              "child_normal_energy_rate": -0.0004844845288702756
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.45746589900764867,
+              "child_normal_energy_rate": -0.0010963474166577598
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.39235220722537084,
+              "child_normal_energy_rate": -0.0017399853211425972
+            },
+            "2.25": {
+              "time": 2.2499999999998623,
+              "child_fraction": 0.10559032665834492,
+              "child_normal_energy_rate": 0.010603703554525406
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.023142198103008344,
+              "child_normal_energy_rate": -0.03789468947377744
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        },
+        "nf128_plus_child_heavy_dt0.001": {
+          "available": true,
+          "population_id": "child_heavy",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.022138375973060214,
+            "child_normal_energy_rate": -0.053591714377029344
+          },
+          "maximum": {
+            "time": 0.0,
+            "child_fraction": 0.49845045104948377,
+            "child_normal_energy_rate": 0.0004844845288702818
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.49845045104948377,
+              "child_normal_energy_rate": 0.0004844845288702818
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.4535706512800176,
+              "child_normal_energy_rate": -0.0006607123737780965
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.3891718710424659,
+              "child_normal_energy_rate": -0.0014744034672816363
+            },
+            "2.25": {
+              "time": 2.2499999999998623,
+              "child_fraction": 0.10077633425640417,
+              "child_normal_energy_rate": 0.015222195787785843
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.022138375973060214,
+              "child_normal_energy_rate": -0.053591714377029344
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        },
+        "nf128_minus_balanced_dt0.001": {
+          "available": true,
+          "population_id": "balanced",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.06049630226114266,
+            "child_normal_energy_rate": -0.1077912522685081
+          },
+          "maximum": {
+            "time": 0.6000000000000001,
+            "child_fraction": 0.37350688041636065,
+            "child_normal_energy_rate": -0.0004073159128453864
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.37291559973011185,
+              "child_normal_energy_rate": -0.00028833002629062175
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.341468799926939,
+              "child_normal_energy_rate": -0.00081400169975414
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.2962386362555657,
+              "child_normal_energy_rate": -0.0009273660737086204
+            },
+            "2.25": {
+              "time": 2.2499999999998623,
+              "child_fraction": 0.1692690182707016,
+              "child_normal_energy_rate": 0.04230797039313523
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.06049630226114266,
+              "child_normal_energy_rate": -0.1077912522685081
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        },
+        "nf128_plus_balanced_dt0.001": {
+          "available": true,
+          "population_id": "balanced",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.05927818093570254,
+            "child_normal_energy_rate": -0.1600271797423619
+          },
+          "maximum": {
+            "time": 0.0,
+            "child_fraction": 0.37291559973011185,
+            "child_normal_energy_rate": 0.00028833002629062647
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.37291559973011185,
+              "child_normal_energy_rate": 0.00028833002629062647
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.34022766892700734,
+              "child_normal_energy_rate": -0.000504020041141036
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.29524789170146276,
+              "child_normal_energy_rate": -0.0006569153908582393
+            },
+            "2.25": {
+              "time": 2.2499999999998623,
+              "child_fraction": 0.16655967093304996,
+              "child_normal_energy_rate": 0.062441437927667695
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.05927818093570254,
+              "child_normal_energy_rate": -0.1600271797423619
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        },
+        "nf128_minus_parent_heavy_dt0.001": {
+          "available": true,
+          "population_id": "parent_heavy",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.10881647994954936,
+            "child_normal_energy_rate": -0.19618664775643882
+          },
+          "maximum": {
+            "time": 2.2499999999998623,
+            "child_fraction": 0.25069617434481895,
+            "child_normal_energy_rate": 0.081871912911789
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.21242087391665956,
+              "child_normal_energy_rate": -0.00011024851025765519
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.19392862679376882,
+              "child_normal_energy_rate": -0.0004585038222591826
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.17394116827013445,
+              "child_normal_energy_rate": 0.0001312455690002134
+            },
+            "2.25": {
+              "time": 2.2499999999998623,
+              "child_fraction": 0.25069617434481895,
+              "child_normal_energy_rate": 0.081871912911789
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.10881647994954936,
+              "child_normal_energy_rate": -0.19618664775643882
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        },
+        "nf128_plus_parent_heavy_dt0.001": {
+          "available": true,
+          "population_id": "parent_heavy",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.10621151332522277,
+            "child_normal_energy_rate": -0.2972588068268799
+          },
+          "maximum": {
+            "time": 2.2499999999998623,
+            "child_fraction": 0.25064987446458525,
+            "child_normal_energy_rate": 0.12410873518313872
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.21242087391665956,
+              "child_normal_energy_rate": 0.00011024851025765776
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.1944422835274801,
+              "child_normal_energy_rate": -0.000293457870525431
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.17437327824527735,
+              "child_normal_energy_rate": 0.0003711136890503889
+            },
+            "2.25": {
+              "time": 2.2499999999998623,
+              "child_fraction": 0.25064987446458525,
+              "child_normal_energy_rate": 0.12410873518313872
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.10621151332522277,
+              "child_normal_energy_rate": -0.2972588068268799
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        }
+      },
+      "sidecar_sha256": {
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json": "5aff71384ef6c386e2781893fc429618389b7ba12eff2454830741015471053f",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/nf128_minus_child_heavy_dt0.001-observations.jsonl": "3401e015ceb066a523c1764f3643f6bf1496e8ecf04a7bd1bde367a055906c73",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/nf128_plus_child_heavy_dt0.001-observations.jsonl": "8b63e45b20e5391398f0a0f752ad92e459b07fdb748f6e6434e80e6f1573c184",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/nf128_minus_balanced_dt0.001-observations.jsonl": "09dc46295216342e26fb4ec68a7316529c260d855e1032437065ebf213b1748d",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/nf128_plus_balanced_dt0.001-observations.jsonl": "cb0a504582b45a1020977eb55bca0f2d4b2a591b06e45d0caf43d00c0848c5fc",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/nf128_minus_parent_heavy_dt0.001-observations.jsonl": "b1b80afb7ffa6586ed91e6171b2ef842ab5096dc7d9ac3ce156e37ff03648f05",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/nf128_plus_parent_heavy_dt0.001-observations.jsonl": "8045a5386df1d801888e94011e54a44e26bd53c8ccb544bd1a8db2322bb33957"
+      }
+    },
+    {
+      "directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1",
+      "manifest_status": "STATION_REACHED",
+      "measured_cases": [
+        "nf256_plus_balanced_dt0.0005"
+      ],
+      "confirmation_cases_without_snapshots": [
+        "nf256_plus_child_heavy_dt0.0005",
+        "nf256_plus_parent_heavy_dt0.0005",
+        "nf256_minus_child_heavy_dt0.0005",
+        "nf256_minus_balanced_dt0.0005",
+        "nf256_minus_parent_heavy_dt0.0005"
+      ],
+      "stations": [
+        {
+          "case_id": "nf256_plus_balanced_dt0.0005",
+          "nf": 256,
+          "population_id": "balanced",
+          "sign_name": "plus",
+          "time": 0.0,
+          "ordinal": 0,
+          "snapshot_kind": "handoff",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.37366311087230664,
+          "disjoint_fractions": {
+            "child": 0.37366311087230664,
+            "inner": 0.25031954493279496,
+            "parent": 0.376017344194898,
+            "ambient": 3.838349708206574e-16
+          },
+          "disjoint_probability": {
+            "child": 0.0010044999440735163,
+            "inner": 0.000672921574459161,
+            "parent": 0.001010828712346516,
+            "ambient": 1.031844448928141e-18
+          },
+          "probability_total": 0.0026882502308791943,
+          "proper_lengths": {
+            "child": 1.0448949540419674,
+            "inner": 2.287744913907172,
+            "parent": 7.2639128266935025,
+            "ambient": 4.000000054663349
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9999999999999991,
+              "max": 0.9999999999999992,
+              "max_abs": 0.9999999999999992,
+              "rms": 0.9999999999999992
+            },
+            "inner": {
+              "min": 0.9999999999999991,
+              "max": 0.9999999999999992,
+              "max_abs": 0.9999999999999992,
+              "rms": 0.9999999999999992
+            },
+            "parent": {
+              "min": 0.999999999999999,
+              "max": 0.9999999999999991,
+              "max_abs": 0.9999999999999991,
+              "rms": 0.9999999999999991
+            },
+            "ambient": {
+              "min": 0.999999999999999,
+              "max": 0.9999999999999993,
+              "max_abs": 0.9999999999999993,
+              "rms": 0.9999999999999992
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.999977166585234,
+              "max": 1.1408435335201688,
+              "max_abs": 1.1408435335201688,
+              "rms": 1.0464891265083003
+            },
+            "inner": {
+              "min": 1.145822788004362,
+              "max": 2.403065222748124,
+              "max_abs": 2.403065222748124,
+              "rms": 1.6840025589576004
+            },
+            "parent": {
+              "min": 1.9997774845749146,
+              "max": 2.400988950659529,
+              "max_abs": 2.400988950659529,
+              "rms": 2.0191542395401396
+            },
+            "ambient": {
+              "min": 1.9999955007684254,
+              "max": 2.000004653924265,
+              "max_abs": 2.000004653924265,
+              "rms": 2.0000000106552513
+            }
+          },
+          "Nmin": 0.999977166585234,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "saved_rates": [
+              2.0000039265293212,
+              2.402202569035719,
+              1.864560101465538,
+              1.1408435335201301,
+              0.9999771665852346,
+              1.1408435335202307,
+              1.8645601014653723,
+              2.402202569035672,
+              2.0000039265293457
+            ],
+            "recomputed_rates": [
+              2.0000039265292466,
+              2.4022025690356648,
+              1.8645601014654074,
+              1.1408435335201683,
+              0.9999771665852341,
+              1.1408435335201688,
+              1.8645601014654072,
+              2.4022025690356656,
+              2.0000039265292475
+            ],
+            "saved_rate_gap_max": 1.305622276959184e-13,
+            "centre_index": 4,
+            "centre_tau": 0.0,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.0188024234634385,
+              "max": -0.9867396882148587,
+              "max_abs": 1.0188024234634385,
+              "rms": 1.0002670301302918
+            },
+            "R_0202": {
+              "min": -0.0012202185892870076,
+              "max": -0.00025593735954125986,
+              "max_abs": 0.0012202185892870076,
+              "rms": 0.0004914054499220138
+            },
+            "R4": {
+              "min": -0.0309620349673186,
+              "max": 0.030930169354539502,
+              "max_abs": 0.0309620349673186,
+              "rms": 0.009443754715031009
+            },
+            "owned_W": {
+              "min": 6.395616625842656e-10,
+              "max": 0.0005176256640199801,
+              "max_abs": 0.0005176256640199801,
+              "rms": 8.163658513209039e-05
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.13378421419162492,
+            "max": 0.127667371504267,
+            "max_abs": 0.13378421419162492,
+            "rms": 0.025574531953595356
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -4.053410385118639e-11,
+            "max": 3.5673115503231934e-11,
+            "max_abs": 4.053410385118639e-11,
+            "rms": 5.285620994112094e-12
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.001771883762092171,
+              0.0009163664687870224
+            ],
+            "child_probability": [
+              0.001004499944073516,
+              -2.309954671111537e-20
+            ],
+            "sum": 0.001004499944073516,
+            "actual_child_probability": 0.0010044999440735163,
+            "sum_minus_actual": -2.168404344971009e-19,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.017962215706445413,
+            "field": 0.017962215706445406,
+            "total": -6.938893903907228e-18
+          },
+          "gram_distance_from_identity": 0.0857740886565799,
+          "CAR_eigenvalues": [
+            0.0009026239281526408,
+            0.0017856263027265517
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": 0.00028935253918802674,
+            "pressure": 0.0002893525391879889,
+            "lapse": -1.9670844183752232e-19,
+            "work_ledger": {
+              "coordinate_fieldwork": 0.0,
+              "pressure_work": 0.0,
+              "lapse_work": 0.0,
+              "boundary_child": 0.0,
+              "boundary_parent": 0.0,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf256_plus_balanced_dt0.0005",
+          "nf": 256,
+          "population_id": "balanced",
+          "sign_name": "plus",
+          "time": 1.0,
+          "ordinal": 1,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.3409069140478117,
+          "disjoint_fractions": {
+            "child": 0.3409069140478117,
+            "inner": 0.3104687059435421,
+            "parent": 0.2661893330421286,
+            "ambient": 0.08243504696651754
+          },
+          "disjoint_probability": {
+            "child": 0.000916443090397327,
+            "inner": 0.0008346175704334767,
+            "parent": 0.000715583536008068,
+            "ambient": 0.000221606034040274
+          },
+          "probability_total": 0.0026882502308791458,
+          "proper_lengths": {
+            "child": 0.8208411427997828,
+            "inner": 0.7497856311148202,
+            "parent": 1.7037336407010477,
+            "ambient": 1.0108543570804622
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9799613612064328,
+              "max": 0.9810141489882571,
+              "max_abs": 0.9810141489882571,
+              "rms": 0.9805167721986509
+            },
+            "inner": {
+              "min": 0.9787747891710049,
+              "max": 0.9799452242053834,
+              "max_abs": 0.9799452242053834,
+              "rms": 0.9793102389649324
+            },
+            "parent": {
+              "min": 0.9781251685579545,
+              "max": 0.9787650133608781,
+              "max_abs": 0.9787650133608781,
+              "rms": 0.9782937770799955
+            },
+            "ambient": {
+              "min": 0.9783201104065367,
+              "max": 0.9783349291352041,
+              "max_abs": 0.9783349291352041,
+              "rms": 0.9783330228304485
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.6502817963857686,
+              "max": 0.9440340088617598,
+              "max_abs": 0.9440340088617598,
+              "rms": 0.826826988445368
+            },
+            "inner": {
+              "min": 0.45160986171150036,
+              "max": 0.6469548384285583,
+              "max_abs": 0.6469548384285583,
+              "rms": 0.5380500100742924
+            },
+            "parent": {
+              "min": 0.4170062154764533,
+              "max": 0.5436078018480103,
+              "max_abs": 0.5436078018480103,
+              "rms": 0.4750608784961178
+            },
+            "ambient": {
+              "min": 0.5020244026010231,
+              "max": 0.5064038943991197,
+              "max_abs": 0.5064038943991197,
+              "rms": 0.5054425452282144
+            }
+          },
+          "Nmin": 0.4170062154764533,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.2911374796615591,
+              1.194331620455032,
+              1.1366473888257322,
+              1.017404582326943,
+              0.9592731401628278,
+              1.0174045823269429,
+              1.1366473888257327,
+              1.1943316204550327,
+              1.2911374796615582
+            ],
+            "saved_rates": [
+              0.5019626770725439,
+              0.4508533780253891,
+              0.49001198113837774,
+              0.6502817963857684,
+              0.9416519463333236,
+              0.6502817963857702,
+              0.49001198113837774,
+              0.45085337802539005,
+              0.5019626770725414
+            ],
+            "recomputed_rates": [
+              0.5019626770725439,
+              0.4508533780253891,
+              0.49001198113837774,
+              0.6502817963857684,
+              0.9416519463333236,
+              0.6502817963857702,
+              0.49001198113837774,
+              0.45085337802539005,
+              0.5019626770725414
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 0.9592731401628278,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -1.1856851111309648,
+              "max": -1.0894598077565456,
+              "max_abs": 1.1856851111309648,
+              "rms": 1.1368270063771857
+            },
+            "R_0202": {
+              "min": 0.01666332165563522,
+              "max": 0.023736462771144808,
+              "max_abs": 0.023736462771144808,
+              "rms": 0.02103604518281124
+            },
+            "R4": {
+              "min": -0.09378016108586013,
+              "max": 0.0936656550397908,
+              "max_abs": 0.09378016108586013,
+              "rms": 0.03945634566035048
+            },
+            "owned_W": {
+              "min": 0.01118838611847618,
+              "max": 0.04722146609360315,
+              "max_abs": 0.04722146609360315,
+              "rms": 0.027363042346754064
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.037811736822030935,
+            "max": 0.037717451487988024,
+            "max_abs": 0.037811736822030935,
+            "rms": 0.012796494032485924
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -1.0257034110949803e-10,
+            "max": 1.0084316715008868e-10,
+            "max_abs": 1.0257034110949803e-10,
+            "rms": 2.8867239948311515e-11
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.001771883762092171,
+              0.0009163664687870224
+            ],
+            "child_probability": [
+              0.0009164242974355568,
+              1.8792961770172154e-08
+            ],
+            "sum": 0.000916443090397327,
+            "actual_child_probability": 0.000916443090397327,
+            "sum_minus_actual": 0.0,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.013538206758752652,
+            "field": 0.01353820675874194,
+            "total": -1.0711917464156784e-14
+          },
+          "gram_distance_from_identity": 0.08577408865658287,
+          "CAR_eigenvalues": [
+            0.0009026239281526264,
+            0.0017856263027265175
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.0005399691323987942,
+            "pressure": 0.0018676702227582056,
+            "lapse": 0.001204638637251677,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.0044165184364262245,
+              "pressure_work": 0.010562381026464616,
+              "lapse_work": 0.0005878853978993832,
+              "boundary_child": -0.0008495334181527965,
+              "boundary_parent": -0.0012154281250812032,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        },
+        {
+          "case_id": "nf256_plus_balanced_dt0.0005",
+          "nf": 256,
+          "population_id": "balanced",
+          "sign_name": "plus",
+          "time": 3.0,
+          "ordinal": 2,
+          "snapshot_kind": "station",
+          "producers": {
+            "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+            "producer_count": 15,
+            "historical_producers_authenticated": true,
+            "current_parent_episode_bytes_used": false
+          },
+          "child_fraction": 0.05905818617171409,
+          "disjoint_fractions": {
+            "child": 0.05905818617171409,
+            "inner": 0.1397615994436074,
+            "parent": 0.597176175036623,
+            "ambient": 0.20400403934805547
+          },
+          "disjoint_probability": {
+            "child": 0.00015876318261141175,
+            "inner": 0.00037571415197231096,
+            "parent": 0.0016053589904177045,
+            "ambient": 0.0005484139058776808
+          },
+          "probability_total": 0.002688250230879108,
+          "proper_lengths": {
+            "child": 0.01620166713871447,
+            "inner": 0.022637585698957997,
+            "parent": 0.048479757303985946,
+            "ambient": 0.013784624408382243
+          },
+          "areal_r": {
+            "child": {
+              "min": 0.9763260178294182,
+              "max": 0.9764069949494371,
+              "max_abs": 0.9764069949494371,
+              "rms": 0.9763548301632681
+            },
+            "inner": {
+              "min": 0.9764090571624661,
+              "max": 0.9765559779529223,
+              "max_abs": 0.9765559779529223,
+              "rms": 0.9764865607957729
+            },
+            "parent": {
+              "min": 0.9765576702153655,
+              "max": 0.9772719554605573,
+              "max_abs": 0.9772719554605573,
+              "rms": 0.9769481274670015
+            },
+            "ambient": {
+              "min": 0.9771500789458103,
+              "max": 0.9772725095613568,
+              "max_abs": 0.9772725095613568,
+              "rms": 0.9772111366928277
+            }
+          },
+          "N": {
+            "child": {
+              "min": 0.016159034716161907,
+              "max": 0.016223505551818933,
+              "max_abs": 0.016223505551818933,
+              "rms": 0.01620134671033697
+            },
+            "inner": {
+              "min": 0.016134565324823737,
+              "max": 0.01622472307644839,
+              "max_abs": 0.01622472307644839,
+              "rms": 0.016169735143798967
+            },
+            "parent": {
+              "min": 0.007706144006874405,
+              "max": 0.01791696348829294,
+              "max_abs": 0.01791696348829294,
+              "rms": 0.013861725556405174
+            },
+            "ambient": {
+              "min": 0.006486423860576699,
+              "max": 0.00767591117052272,
+              "max_abs": 0.00767591117052272,
+              "rms": 0.006896111384036966
+            }
+          },
+          "Nmin": 0.006486423860576699,
+          "clocks": {
+            "locations": [
+              1.0,
+              2.8,
+              3.0,
+              3.5,
+              4.0,
+              4.5,
+              5.0,
+              5.2,
+              7.0
+            ],
+            "integrated_tau": [
+              1.5280022193706186,
+              1.480405301186493,
+              1.455464583184319,
+              1.4368803246984914,
+              1.4722193192261122,
+              1.4368803246984916,
+              1.4554645831843194,
+              1.480405301186494,
+              1.5280022193706169
+            ],
+            "saved_rates": [
+              0.0077061440068744045,
+              0.016224765209542656,
+              0.016194255068947283,
+              0.01615903471616195,
+              0.01622349711683395,
+              0.01615903471616191,
+              0.016194255068947238,
+              0.016224765209542562,
+              0.00770614400687449
+            ],
+            "recomputed_rates": [
+              0.0077061440068744045,
+              0.016224765209542656,
+              0.016194255068947283,
+              0.01615903471616195,
+              0.01622349711683395,
+              0.01615903471616191,
+              0.016194255068947238,
+              0.016224765209542562,
+              0.00770614400687449
+            ],
+            "saved_rate_gap_max": 0.0,
+            "centre_index": 4,
+            "centre_tau": 1.4722193192261122,
+            "definition": "d\u03c4/dT=rQ; integrated \u03c4 is the saved clock"
+          },
+          "tides": {
+            "R_0101": {
+              "min": -492.3686985215748,
+              "max": 489.99640528155066,
+              "max_abs": 492.3686985215748,
+              "rms": 171.9861901987878
+            },
+            "R_0202": {
+              "min": -27.039562362595557,
+              "max": 0.06406949772180104,
+              "max_abs": 27.039562362595557,
+              "rms": 10.024721136643803
+            },
+            "R4": {
+              "min": -982.1680114339265,
+              "max": 982.5820052213844,
+              "max_abs": 982.5820052213844,
+              "rms": 343.96962873488866
+            },
+            "owned_W": {
+              "min": 0.0002255453568204453,
+              "max": 321878.969349702,
+              "max_abs": 321878.969349702,
+              "rms": 86084.53265300616
+            }
+          },
+          "euler_trace_residual": {
+            "min": -0.049939196977493265,
+            "max": 0.04995355423582565,
+            "max_abs": 0.04995355423582565,
+            "rms": 0.02382922533934321
+          },
+          "euler_definition": "-8*pi*A*r^3*Q^2*R4 on projected leading jets",
+          "raw_same_point_hamiltonian_R4": {
+            "min": -1.5141421138981093e-06,
+            "max": 1.5546618573891724e-06,
+            "max_abs": 1.5546618573891724e-06,
+            "rms": 3.3094321172889194e-07
+          },
+          "raw_jets_replace_projected_metric": false,
+          "ancestry": {
+            "column_indices": [
+              0,
+              1
+            ],
+            "weights": [
+              0.001771883762092171,
+              0.0009163664687870224
+            ],
+            "child_probability": [
+              3.005053992086449e-06,
+              0.00015575812861932524
+            ],
+            "sum": 0.0001587631826114117,
+            "actual_child_probability": 0.00015876318261141175,
+            "sum_minus_actual": -5.421010862427522e-20,
+            "observer_rebased": false,
+            "particles": false,
+            "tag": "original_source_column_order; evolved Phi with original occupations"
+          },
+          "energy": {
+            "gravity": -0.010692758387339433,
+            "field": 0.010692758387318453,
+            "total": -2.0979745718463505e-14
+          },
+          "gram_distance_from_identity": 0.08577408865658706,
+          "CAR_eigenvalues": [
+            0.0009026239281526155,
+            0.0017856263027264912
+          ],
+          "child_normal_accounting": {
+            "normal_energy_rate": -0.15935547660647734,
+            "pressure": 0.06434394003114088,
+            "lapse": 0.0004008365323503797,
+            "work_ledger": {
+              "coordinate_fieldwork": -0.007262317016467064,
+              "pressure_work": 0.9115986976261515,
+              "lapse_work": 0.11385658935369714,
+              "boundary_child": -0.07090944028646287,
+              "boundary_parent": -0.0033032216013198718,
+              "quadrature": "trapezoid_coordinate_time"
+            },
+            "quadrature_is_a_bound": false
+          },
+          "continuum_certified": false,
+          "physical_R4_claimed": false,
+          "renewal_asserted": false
+        }
+      ],
+      "scalar_series": {
+        "nf256_plus_balanced_dt0.0005": {
+          "available": true,
+          "population_id": "balanced",
+          "samples": 61,
+          "minimum": {
+            "time": 3.0,
+            "child_fraction": 0.05905818617171409,
+            "child_normal_energy_rate": -0.15935547660647734
+          },
+          "maximum": {
+            "time": 0.0,
+            "child_fraction": 0.37366311087230664,
+            "child_normal_energy_rate": 0.00028935253918802674
+          },
+          "nearest": {
+            "0.0": {
+              "time": 0.0,
+              "child_fraction": 0.37366311087230664,
+              "child_normal_energy_rate": 0.00028935253918802674
+            },
+            "1.0": {
+              "time": 1.0,
+              "child_fraction": 0.3409069140478117,
+              "child_normal_energy_rate": -0.0005399691323987942
+            },
+            "1.25": {
+              "time": 1.2499999999999725,
+              "child_fraction": 0.2958114168267429,
+              "child_normal_energy_rate": -0.0007205525005931973
+            },
+            "2.25": {
+              "time": 2.2499999999999734,
+              "child_fraction": 0.16616688047302244,
+              "child_normal_energy_rate": 0.06216402758707192
+            },
+            "3.0": {
+              "time": 3.0,
+              "child_fraction": 0.05905818617171409,
+              "child_normal_energy_rate": -0.15935547660647734
+            }
+          },
+          "column_ancestry_at_series_only_times": false,
+          "full_snapshot_times": [
+            0.0,
+            1.0,
+            3.0
+          ],
+          "ancestry_absent_because": "full snapshots exist only at T=0,1,3; T=1.25 and T=2.25 are scalar samples"
+        }
+      },
+      "sidecar_sha256": {
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json": "5d8e2a9b072147bb9a6afdecbbc68fab916d06693aea2f9b35ea970d5110487b",
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/nf256_plus_balanced_dt0.0005-observations.jsonl": "d658691e589de836f1462db2eca4d360ab450446986b174e79d8ff739bd5c456"
+      }
+    }
+  ],
+  "comparison": {
+    "nf_pair": [
+      128,
+      256
+    ],
+    "population_id": "balanced",
+    "sign_name": "plus",
+    "time": 3.0,
+    "values_nf128_then_nf256": {
+      "child_fraction": [
+        0.05927818093570254,
+        0.05905818617171409
+      ],
+      "child_proper_length": [
+        0.016201315640225335,
+        0.01620166713871447
+      ],
+      "centre_tau": [
+        1.4723227744435468,
+        1.4722193192261122
+      ],
+      "R4_global_max_abs": [
+        4741.232970990615,
+        982.5820052213844
+      ],
+      "euler_trace_residual_max_abs": [
+        0.2569766223365894,
+        0.04995355423582565
+      ]
+    },
+    "nf512_measured": false,
+    "global_conservation_spans": [
+      {
+        "case_id": "nf128_minus_balanced_dt0.001",
+        "energy_total_span": 4.937647513081345e-13,
+        "gram_distance_span": 1.2161105455987808e-13,
+        "CAR_span_max": 1.072709629457158e-15,
+        "field_energy_scale": 0.017969309093745018
+      },
+      {
+        "case_id": "nf128_minus_child_heavy_dt0.001",
+        "energy_total_span": 5.618370352289404e-13,
+        "gram_distance_span": 1.2270739979669543e-13,
+        "CAR_span_max": 1.5053062962788744e-15,
+        "field_energy_scale": 0.01677874942857176
+      },
+      {
+        "case_id": "nf128_minus_parent_heavy_dt0.001",
+        "energy_total_span": 5.774113825962601e-13,
+        "gram_distance_span": 1.204730759596373e-13,
+        "CAR_span_max": 8.766858766717789e-16,
+        "field_energy_scale": 0.01949142462595222
+      },
+      {
+        "case_id": "nf128_plus_balanced_dt0.001",
+        "energy_total_span": 4.2472796113468547e-13,
+        "gram_distance_span": 1.180860964566932e-13,
+        "CAR_span_max": 1.0319436277717031e-15,
+        "field_energy_scale": 0.017969309093745018
+      },
+      {
+        "case_id": "nf128_plus_child_heavy_dt0.001",
+        "energy_total_span": 3.8807845825772347e-13,
+        "gram_distance_span": 1.1690648449302898e-13,
+        "CAR_span_max": 1.4172690798730514e-15,
+        "field_energy_scale": 0.01677874942857176
+      },
+      {
+        "case_id": "nf128_plus_parent_heavy_dt0.001",
+        "energy_total_span": 3.976784179737791e-13,
+        "gram_distance_span": 1.1934897514720433e-13,
+        "CAR_span_max": 8.740837914578137e-16,
+        "field_energy_scale": 0.01949142462595222
+      },
+      {
+        "case_id": "nf256_plus_balanced_dt0.0005",
+        "energy_total_span": 2.0972806824559598e-14,
+        "gram_distance_span": 7.16093850883226e-15,
+        "CAR_span_max": 6.049848122469115e-17,
+        "field_energy_scale": 0.017962215706445406
+      }
+    ],
+    "late_curvature_is_a_continuum_value": false,
+    "autonomous_renewal": false
+  },
+  "measurement_source_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_parent_observer.py": "4f4afe2eb76a92f5495a174a5b9503da3aa9596ae64fbac3dd0802544322b32c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/assess_nsc_discovery_parent_episode.py": "ec5036362816dbe0b76263dfae203175c14714e39e4bcee58248852100002eee"
+  },
+  "evolved": false,
+  "reprepared": false,
+  "resigned": false,
+  "healed": false,
+  "trajectory_rewritten": false,
+  "input_source_clock_bytes_unchanged": true,
+  "unmeasured": {
+    "nf512": "no completed NF512 parent episode in these directories",
+    "nf256_other_populations": "only nf256 plus balanced reached T=3",
+    "column_ancestry_outside_0_1_3": "scalar samples, including T=1.25 and T=2.25, have no full state",
+    "raw_hamiltonian_jets": "diagnostic only; projected leading jets remain the metric",
+    "work_ledger_quadrature": "trapezoid coordinate-time indicator, not an error bound",
+    "continuum_or_physical_R4": "not claimed",
+    "autonomous_renewal": "not claimed"
+  },
+  "content_sha256": "79dbc6a7bca6010c160a92784dd5d46f57e56ba29b79e6e9d77eb5b79f992bdf",
+  "cpu_seconds": 1.8425629999999997
+}
