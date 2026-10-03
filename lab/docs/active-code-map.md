@@ -20,15 +20,21 @@ end of this file are not the active queue.
 Magnetic preparation is achieved. Frozen parent-heavy, weak-$k$ empty
 source, and strong-offset episodes are recorded. Renewal is not complete.
 The matched-offset controls are complete in their recorded domain. The
-next relationship is the coupled exterior-to-cut response.
+NF128 exterior-to-cut response is measured. The current relationship is
+one bounded $n_f=256$ confirmation, then a source-selected inner boundary
+and repeatable hand-off from the actual coupled exterior feedback.
 Earlier hard-anchor records stay in place. The incoming-gate campaign
-stays paused. Status:
+stays paused. The ancestry share $\eta$ is not a new gate, and a
+fixed-$J$ Schur reduction is not a substitute for the full
+state–geometry force. Status:
 [current result](../../docs/current-result.md#responsive-parent-3-october-2026).
 
 | Responsibility | Owner |
 |---|---|
 | Matched-offset and reweighted frozen controls | [Method](nsc-discovery-parent-strong-controls.md); `scripts/assess_nsc_discovery_parent_strong_controls.py`; [record](../results/development/nsc-discovery-parent-strong-controls-v1.json). |
-| Coupled exterior-to-cut forecast | [Method](nsc-discovery-parent-cut-response.md); `src/recursive_horizons/nsc_discovery_parent_cut_response.py`; `scripts/derive_nsc_discovery_parent_cut_response.py`. |
+| Coupled exterior-to-cut response | [Method](nsc-discovery-parent-cut-response.md); `src/recursive_horizons/nsc_discovery_parent_cut_response.py`; `scripts/derive_nsc_discovery_parent_cut_response.py`; [completed batch](../results/development/nsc-discovery-parent-cut-response-v1/prepare.json). |
+| Completed cut assessment | [Note](nsc-discovery-parent-cut-assessment.md); `scripts/assess_nsc_discovery_parent_cut_response.py`; [record](../results/development/nsc-discovery-parent-cut-assessment-v1.json); `tests/test_nsc_discovery_parent_cut_assessment.py`. |
+| One bounded NF256 confirmation | [Note](nsc-discovery-parent-cut-confirmation.md); `scripts/derive_nsc_discovery_parent_cut_confirmation.py`; `tests/test_nsc_discovery_parent_cut_confirmation.py`. Root runs the physical confirmation. |
 | Parent preparation | [Note](nsc-discovery-parent.md); `src/recursive_horizons/nsc_discovery_parent.py`; `scripts/derive_nsc_discovery_parent.py`; [magnetic feasibility](../results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json); [six preparations](../results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json); [original pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json) |
 | Episode adapter | [Note](nsc-discovery-parent-episode.md); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`; [$T=3$ batch](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json); [$n_f=256$ confirmation](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json); [frozen parent-heavy](../results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json); [empty source](../results/development/nsc-discovery-parent-empty-source-v1/manifest.json); [strong $T=1$](../results/development/nsc-discovery-parent-strong-t1-v1/manifest.json); [strong $T=3$](../results/development/nsc-discovery-parent-strong-t3-v1/manifest.json), pinned `cc238577`. |
 | Parent observer | [Leading parent observer](nsc-discovery-regions.md#leading-parent-observer); `src/recursive_horizons/nsc_discovery_parent_observer.py`; [contour binding](../results/development/nsc-discovery-regions-v2-binding.json) pinned `4f3d5fc`. Actual projected leading rates. Corrected moving-energy rates lose the former refinement agreement. Endpoints and fixed windows stay at roundoff. Sealed v1 speeds stay unhealed. |

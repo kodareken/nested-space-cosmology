@@ -100,10 +100,21 @@ and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
 The magnetic branch has its primary finite preparation, its $T=3$
 episode, and the completed frozen, empty-source and strong-offset
 controls. Renewal is not complete. The matched-offset controls and their
-array assessment are complete in their recorded domain. The current
-cursor is the coupled exterior-to-cut response, using the existing
-state and geometry tangent rather than a prescribed traction profile.
-The recorded outcome is in
+array assessment are complete in their recorded domain. The NF128
+exterior-to-cut response is measured. A $+5\%$ parent occupation at the
+same $k$, with $c_0$ and the initial $Q$, $r$ and $\Phi$ fixed, changes
+the original child-column content by $1.114\%$ of its baseline. The held
+$\pm$ forecasts for that column match within $0.36$–$0.37\%$ of the
+predicted effect. No autonomous renewal is asserted. The current cursor
+is one bounded $n_f=256$ confirmation of that response. After that
+measurement, the actual coupled exterior feedback is the input for a
+source-selected inner boundary and a repeatable hand-off and invariant
+family. The same inheritance law covers states whose physical frequencies
+may differ. A thermal compression reading is conditional, and the recorded
+state is non-thermal. The ancestry share $\eta$ is not a new gate. The
+full state–geometry force stays the force in this comparison; a fixed-$J$
+Schur reduction is not a substitute for it. Earlier papers and the paused
+incoming gate stay preserved. The recorded outcome is in
 [current result](current-result.md#responsive-parent-3-october-2026).
 Regular black-hole interiors remain prior foundations; do not start a
 bounce-rediscovery campaign. The incoming gate stays paused. Keep the
