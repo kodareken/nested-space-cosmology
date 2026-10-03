@@ -1,0 +1,219 @@
+{
+  "CPU_seconds": 0.12601599999999996,
+  "array_sha256": {
+    "frame_coefficients": "1f542c3d619971ccac9e41a627a30211aed4a1ecb88fd1518ff68480e5bfba0c",
+    "initial_spinors": "888fd436d3e59ad3b1b1182afe8b76c00a0fd27d5bec904b7eb675a2c96c24c5",
+    "initial_state": "ee90cc1f63624eaffc140929076ae082441613e7cbe9f1a9875a75826f0e67de",
+    "momenta": "dec03e420378e3d2dbd123dada81684a4cb05e9e6c6553b6052a69e0f990e0b0"
+  },
+  "closure": {
+    "actual_stored_input_agrees_up_to_recorded_roundoff": true,
+    "cross_momentum_covariance_max": 2.418161708144078e-15,
+    "exact_invariance_is_symmetry_statement": true,
+    "frame_Gram_gap": 8.671119018262734e-16,
+    "geometry_spreads": [
+      4.3298697960381105e-15,
+      2.5757174171303632e-14,
+      0.0,
+      0.0
+    ],
+    "inactive_modal_amplitude_tail": 3.6758892533421607e-14,
+    "standing_column_reconstruction_max": 4.336808689942018e-15
+  },
+  "fullband_reference": {
+    "energy": {
+      "field": -0.5437015172245956,
+      "gravity": 0.543701479088794,
+      "total": -3.813580162770336e-08
+    },
+    "geometry": [
+      6.121206713020563e-07,
+      0.28372863484229305,
+      -3822.6962071286657,
+      18.635792175256856
+    ],
+    "sampled_minimum_field_energy": 0.25264707137192854,
+    "sampled_minimum_is_not_rooted_event": true,
+    "sampled_minimum_radius": 0.2824534804961624,
+    "sampled_minimum_time": 2.6,
+    "time": 3.0
+  },
+  "held_data_generated": false,
+  "historical_sources": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1": {
+      "producing_commit": "e6e784b32213ea2368b7fc863c37c72fba6aa4e3",
+      "source_hashes": {
+        "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+        "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+        "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+        "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+        "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+        "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+        "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+        "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+        "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+        "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+        "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+        "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+        "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+        "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+        "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+        "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+        "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+        "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40"
+      }
+    },
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2": {
+      "producing_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "source_hashes": {
+        "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+        "lab/docs/nsc-discovery-leading-step-control.md": "1c5e05d4998c37e9744f972a163d105dc411949879a55abe4d038a5b6d2a21b3",
+        "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+        "lab/scripts/derive_nsc_discovery_leading_step_control.py": "b219c21c6a9be9e4ba127d2483b3938079568397539ffc0a0dac16a316f823b5",
+        "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+        "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+        "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+        "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+        "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+        "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+        "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+        "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+        "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+        "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+        "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+        "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+        "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+        "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+        "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+        "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+        "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+        "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40",
+        "lab/tests/test_nsc_discovery_leading_step_control.py": "725b0635dc4ecb54a00fc737f53f0a5aa4a0e83658281c42e68c9a620531837a"
+      }
+    }
+  },
+  "input_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/manifest.json": "37bf85f2bb2794265021afcfc0ceee2b8d69386801c275277d1052dab829f11c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.json": "e51b1d8ded0cb326163603224077e4db082d32ae1701390b9d8a20528fc3dde9",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.npz": "198ddb8808eb7e1a9cad99d13151c5730e9f863106d1ddd3eb4e506dd34d79ca",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/manifest.json": "1ba93a6aef113a2f2cda43d48404afec3fa972145b43ce2dc7b5ad96f7c95541",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000001.json": "be71e10ebf4e3e5657fac1231b121420739a89bca66ae45e802682bc1254ac14",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000001.npz": "cc20ac8506fd8686f5660279f8b11512212c800efcd532e092dc605287442809",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-observations.jsonl": "4fff323109eb17330a4e2a31f40118b3421560fbe1ffef09e0a78a6bb8b61eb6"
+  },
+  "mode": "prepared_invariant_source",
+  "payload_sha256": "8920f53bc202cdb84eb718ddb1fc511f4554deeac44b8864654b1359fb325303",
+  "preparation": {
+    "Q0": 0.4639447144311826,
+    "baseline_pair_occupations": [
+      0.75,
+      0.75,
+      0.5,
+      0.5,
+      0.25,
+      0.25
+    ],
+    "constants": {
+      "A": 0.04501936182826115,
+      "C_F": 0.01125484045706527,
+      "M": 4,
+      "Z": -3.3943799133351837,
+      "a": -1.131459971111728,
+      "flux": 4.0,
+      "kappa": 1.0,
+      "mag": 1.1314599711117261,
+      "momenta": [
+        0.39269908169872414,
+        1.1780972450961724,
+        1.9634954084936207
+      ],
+      "period": 8.0
+    },
+    "direction_per_pair": [
+      1.0,
+      0.0,
+      -1.0
+    ],
+    "frame_coefficients_key": "frame_coefficients",
+    "frame_mode_order": [
+      0.5,
+      -0.5,
+      1.5,
+      -1.5,
+      2.5,
+      -2.5
+    ],
+    "held_pair_occupations": [
+      0.752,
+      0.752,
+      0.5,
+      0.5,
+      0.248,
+      0.248
+    ],
+    "initial_momenta_zero": true,
+    "initial_spinors_key": "initial_spinors",
+    "input_hashes": {
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/manifest.json": "37bf85f2bb2794265021afcfc0ceee2b8d69386801c275277d1052dab829f11c",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.json": "e51b1d8ded0cb326163603224077e4db082d32ae1701390b9d8a20528fc3dde9",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.npz": "198ddb8808eb7e1a9cad99d13151c5730e9f863106d1ddd3eb4e506dd34d79ca",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/manifest.json": "1ba93a6aef113a2f2cda43d48404afec3fa972145b43ce2dc7b5ad96f7c95541",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000001.json": "be71e10ebf4e3e5657fac1231b121420739a89bca66ae45e802682bc1254ac14",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000001.npz": "cc20ac8506fd8686f5660279f8b11512212c800efcd532e092dc605287442809",
+      "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-observations.jsonl": "4fff323109eb17330a4e2a31f40118b3421560fbe1ffef09e0a78a6bb8b61eb6"
+    },
+    "input_payload": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.npz",
+    "input_record": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.json",
+    "kappa": 1.0,
+    "leading_initial_payload": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.npz",
+    "leading_initial_record": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.json",
+    "momenta_key": "momenta",
+    "multiplicity": 4,
+    "period": 8.0,
+    "prepared_payload": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-homogeneous-turn-v1/prepare.npz",
+    "source_case": "uniform"
+  },
+  "preparation_binding": {
+    "external_post_run_observation": false,
+    "old_record_modified": false,
+    "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+    "record_sha256": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056"
+  },
+  "producers": {
+    "lab/docs/nsc-discovery-homogeneous-turn.md": "fb98bfc03626e7c09929afebdbe814a56ccea7f6ba7fbaa9e6f1f9316ea1500c",
+    "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+    "lab/scripts/derive_nsc_discovery_homogeneous_turn.py": "eced690a2a047f0be1a72f4348a0411bb068ade047819169f9e0619b11c6a64a",
+    "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_homogeneous_turn.py": "221fc3b207954b6c07c7bf9e92d50baccece579364710617ee7e60e9931983c2",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_discovery_turn_fullfield.py": "cdaf21fe872c0fad2e8cb0e571999da1cae804e79e3c6d6f3e89476f314bd11c",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_homogeneous_turn.py": "cc3c19eccae1a96cae53cd091484afec99f0e8b52eb10ddfedbe06fdb002a44f",
+    "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40",
+    "lab/tests/test_nsc_discovery_turn_fullfield.py": "ea6881c84d39248279e637de15ebabdf7a465ce33de77f28102db798b46978b7"
+  },
+  "producing_commit": "8ef2da55af68be2eec10502f45d06638c16aafa8",
+  "schema": "NSC-DISCOVERY-HOMOGENEOUS-TURN-v1"
+}
