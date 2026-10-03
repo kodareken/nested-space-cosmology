@@ -53,6 +53,7 @@ response. The incoming-gate campaign stays paused. Initial owners:
 | Leading canonical comparison and unchanged quantum source | [Leading model](nsc-discovery-leading-einstein.md); `src/recursive_horizons/nsc_discovery_leading_einstein.py` |
 | Exact-state numerical successor and scaled reaction indicator | [Step control](nsc-discovery-leading-step-control.md); `src/recursive_horizons/nsc_discovery_leading_step_control.py` |
 | Static positive-energy periodic class and exterior boundary charge | [Virial](nsc-discovery-leading-virial.md); `scripts/assess_nsc_discovery_leading_virial.py` |
+| Source-responsive local collars and required parent traction | [Collar](nsc-discovery-parent-traction.md); `src/recursive_horizons/nsc_discovery_parent_traction.py`; `scripts/derive_nsc_discovery_parent_traction.py`; [parent-data criterion](nsc-discovery-parent-continuation.md) |
 | Exact homogeneous sector and source-selected event prediction | [Turn](nsc-discovery-homogeneous-turn.md); `src/recursive_horizons/nsc_discovery_homogeneous_turn.py`; `src/recursive_horizons/nsc_discovery_turn_fullfield.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 

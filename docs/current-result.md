@@ -436,6 +436,47 @@ a conditional finite-model scale prediction, not a new bounce mechanism,
 regular-spacetime proof or completed regeneration. Strong-curvature EFT
 validity and physical vacuum matching remain open.
 
+### Source-responsive collars and required parent gradients, 3 October 2026
+
+The [local collar calculation](../lab/docs/nsc-discovery-parent-traction.md)
+uses the unchanged leading action with a real standing Dirac source on
+$|x|\le1$, with an inner measurement at $|x|\le0.5$. Its center constraint
+selects $r_0^2=\mathfrak m/g-Mw/(g\pi)$, $g=8\pi A$; the surrounding
+radius, log-lapse and field are then solved together in space. The source
+weight is a local amplitude parameter, not an assumed globally normalized
+occupation. The actual collar covariance eigenvalue is measured.
+
+Producer `b7aa5f5` seals the analytic first-order response before the new
+nonlinear weight $w=0.0013$ is evaluated. The
+[withheld measurement](../lab/results/development/nsc-discovery-parent-traction-v1/measurement.json)
+records:
+
+| Source-induced change | Measurement | First-order prediction remainder / effect |
+|---|---:|---:|
+| Inner proper radial length | $-0.0004816671743$ | $0.0180\%$ |
+| Larger-collar proper radial length | $+0.002264195085$ | $0.7933\%$ |
+| Larger-collar boundary gradient charge | $+0.02671635197$ | $0.6256\%$ |
+
+These are changes between static preparations, not temporal contraction or
+expansion. The same geometry supports both length responses. The boundary
+charge equals partial field energy plus the magnetic integral, including
+its induced change. Tighter numerical settings move the length results by
+about $2\times10^{-12}$ and $3\times10^{-12}$; the tighter static identity
+residuals are below $4\times10^{-15}$. These remain numerical indicators.
+The smaller raw inner-lapse effect has a 1.24 percent first-order remainder
+and is preserved rather than retuned. Reported stage CPU is 0.089 seconds
+within a 30-second allowance; read-only payload replay passes.
+
+The exterior must supply the derived metric gradients and a compatible
+continuation of the actual Dirac field. A globally normalized spectrum,
+complete physical parent and autonomous renewal are not established by this
+local branch. The [constraint continuation criterion](../lab/docs/nsc-discovery-parent-continuation.md)
+derives when a smooth dynamical exterior can carry real, regular momenta
+without changing the leading action. Its nonnegative primitive and zero
+regularity conditions must be checked on a proposed extended source; an
+arbitrary smoothly glued parent is insufficient. No new parent simulation
+or replacement roadmap is introduced.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)

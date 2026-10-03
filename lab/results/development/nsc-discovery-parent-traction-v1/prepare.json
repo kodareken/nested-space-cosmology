@@ -1,0 +1,72 @@
+{
+  "CPU_seconds": 0.042681000000000024,
+  "array_sha256": {
+    "baseline_center_state": "42dc2a746bfc9741937b38062bff31d4a1d827832881b86f1135d577fb441e9d",
+    "held_center_state": "baf37458fff6e3eca342c360e40d3186edb01ae695082fd8921c816f68293c56"
+  },
+  "autonomous_renewal_claimed": false,
+  "bound_spectrum_completed": false,
+  "constants": {
+    "A": 0.04501936182826115,
+    "C_F": 0.01125484045706527,
+    "M": 4.0,
+    "epsilon": 1.5,
+    "flux": 4.0,
+    "g": 1.131459971111728,
+    "kappa": 1.0,
+    "mag": 1.1314599711117261
+  },
+  "cuts": {
+    "child": 0.5,
+    "parent": 1.0
+  },
+  "global_parent_completed": false,
+  "held_w": 0.0013,
+  "input_binding": {
+    "external_post_run_observation": false,
+    "old_record_modified": false,
+    "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+    "record_sha256": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056"
+  },
+  "input_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81"
+  },
+  "mode": "prepared_local_collar",
+  "nonlinear_held_generated": false,
+  "payload_sha256": "e43db6ee625338a5db8397b0524d989efee008984f02f97e48c89a3fa2284912",
+  "physical_domain": "unchanged leading Einstein/Dirac local static finite BR collar",
+  "physical_vacuum_Gamma_matching": "unresolved",
+  "preparation": {
+    "M": 4.0,
+    "center_Q": 1.0,
+    "center_constraint_applied_for_each_w": true,
+    "center_h_x": 0.0,
+    "center_r_x": 0.0,
+    "center_u": 0.5641895835477563,
+    "center_v": 0.5641895835477563,
+    "epsilon": 1.5,
+    "kappa": 1.0
+  },
+  "prior_w_0p002_scratch_scope": "development calculation observed before lock; not held-out evidence",
+  "producers": {
+    "lab/docs/nsc-discovery-parent-traction.md": "18c358ce1bba1e1d4461c3afbf94552793e0b58e1011694e0984d14d1595978e",
+    "lab/scripts/derive_nsc_discovery_parent_traction.py": "d1e561553ca030e7b69fad4fd7ed023a3b7bb419a7bc3efe86984a6fde5a8148",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_parent_traction.py": "5f00bba69962665d2c3e38e307b21cfb4c7db7fd2695d637ceb471835a3643a5",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_parent_traction.py": "3316e55554b3442a785635e304d8cecbd785c151da28298e7e9e210ec5536e14"
+  },
+  "producing_commit": "b7aa5f5e0f87607e16c22bd8b5955993ce42608d",
+  "rank_one_source_normalization": "w is local amplitude weight; eigenvalue on collar = w integral n dx",
+  "required_exterior_data": [
+    "endpoint r,Q and their outward gradients",
+    "Dirac continuation with compatible phase/frequency",
+    "global mode normalization and CAR state",
+    "matching exterior boundary charge without an imposed wall"
+  ],
+  "schema": "NSC-DISCOVERY-PARENT-TRACTION-v1",
+  "strong_curvature_EFT_validity": "unresolved"
+}
