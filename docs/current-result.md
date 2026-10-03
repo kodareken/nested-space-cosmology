@@ -370,6 +370,39 @@ Dirac source remains a separate derivation; the scalar specialization is
 not copied into it. Earlier exact-branch measurements remain preserved in
 their declared numerical domain.
 
+### Completed leading comparison and source-dependent energy transfer
+
+The [leading comparison](../lab/results/development/nsc-discovery-leading-einstein-v2/manifest.json)
+reaches T=3 in all eight cases. The original raw reaction norm mixed canonical
+coordinate scales; the [numerical successor](../lab/docs/nsc-discovery-leading-step-control.md)
+changes only its timestep indicator, preserving the exact saved states and
+all equations. Parent and successor ledgers charge 470.46 CPU seconds together,
+within the original 600-second allowance.
+
+At nf256 with half steps, the coherent case ends with child proper length
+$4.91\times10^{-9}$, mean areal radius 0.274979, and child probability
+0.798248. Its matched frozen control retains length 2.608961, radius 2.811734
+and probability 0.769027. These are coordinate-time comparisons with separate
+carried clocks. Spatial movement of the final angular tide is about 0.00098
+percent; radial tide movement is 1.08 percent. The large contraction is
+resolved, but no maintained regional size or regular continuation is inferred.
+Late curvature is outside the established local-EFT separation.
+
+The finite field's coordinate energy changes from +12.74674 to -0.543702
+in the uniform case, and from +13.44904 to -0.910152 in the coherent case.
+Geometry carries the opposite change. CAR admissibility remains intact;
+negative instantaneous energy in this finite prepared model is not identified
+with antimatter or a physical vacuum. The areal scale turns slightly while
+proper radial length continues to contract. Its source-history relation is
+the next locked prediction, rather than another bounce-rediscovery target.
+
+The [exact static virial](../lab/results/development/nsc-discovery-leading-virial-v1.json)
+excludes only the static positive-energy periodic leading class: source energy
+plus magnetic energy would have to vanish. On a finite region, the same action
+instead supplies an explicit exterior gradient/traction term. This identifies
+the parent response required for holding; it does not exclude dynamic or
+oscillatory sectors, negative-energy states, or different boundary domains.
+
 ### Coupled reduction with the same generated geometry
 
 The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
