@@ -43,9 +43,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 20594,
+      "bytes": 20653,
       "path": "AGENTS.md",
-      "sha256": "70245e7f9711400e8d4dc5b74ff13a653ef4c1d544d2f90c206cfeab6bc2e14b"
+      "sha256": "66d21e9614bebdffd9f335c60b962b9706f772b79b4184a79abf4fe1792c40f3"
     },
     {
       "bytes": 1073,
@@ -93,14 +93,14 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 9252,
+      "bytes": 9543,
       "path": "docs/README.md",
-      "sha256": "dd97b6f5a4d55cc92f397cd896b326dbc0df4ce4a7a68c0ff4d01e1f217c09b3"
+      "sha256": "7caf200a557358d084f323d7ba32f98877888bab0de166a4ce777e57784fedbf"
     },
     {
-      "bytes": 139263,
+      "bytes": 141115,
       "path": "docs/current-result.md",
-      "sha256": "82559ba9a0eea5fb37453e97cb80ad2f7c175c501ca65e301d9c442e7b9162b0"
+      "sha256": "8915fef0b75d466b4c4822acd20505c1c1055e205ea36c689decedd8993f9701"
     },
     {
       "bytes": 14497,
@@ -108,14 +108,14 @@
       "sha256": "856427404582a3a6a42fc1448fdcb932d1330d88a83f04bcf323acfdeab39642"
     },
     {
-      "bytes": 15357,
+      "bytes": 15436,
       "path": "docs/instructions.md",
-      "sha256": "9aaa5c2ddd7de1cb2d8ac3f75bd361a2b01526904279bc63c72ee1929a9f70ff"
+      "sha256": "34d9a17ce835be3caa7127c35c9c3df08834f40182b9c2f213a0ffe836c1880f"
     },
     {
-      "bytes": 5248588,
+      "bytes": 5261177,
       "path": "docs/lab-snapshot.json",
-      "sha256": "bb215e53e07806372bc0255b54748bd5028fa63d97264e08fa931252ce712be0"
+      "sha256": "1636c0ce931f6d42726f2d6bbc67dcb3a81f4df53c7201b89e593fad5a652507"
     },
     {
       "bytes": 5006,
@@ -3463,7 +3463,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "bb215e53e07806372bc0255b54748bd5028fa63d97264e08fa931252ce712be0",
+  "lab_snapshot_sha256": "1636c0ce931f6d42726f2d6bbc67dcb3a81f4df53c7201b89e593fad5a652507",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

@@ -19,10 +19,12 @@ remains a separate historical choice.
 
 ## Responsive parent, 3 October 2026
 
-The approved programme starts at `eb4798c`. The current cursor is the
-magnetic initial-radius branch and its $T=3$ episode. Primary finite
-preparation for that branch is achieved. The renewal programme is not
-complete. The [2 October discovery programme](#active-discovery-programme-2-october-2026)
+The approved programme starts at `eb4798c`. Primary finite preparation
+of the magnetic branch is achieved, and the frozen, empty-source and
+strong-offset controls below are recorded. The current cursor is an
+independent array assessment and the same strong-$k$ empty-prepared-source
+attribution control. The renewal programme is not complete. The
+[2 October discovery programme](#active-discovery-programme-2-october-2026)
 remains preserved from `ea6c699`. The incoming gate stays paused.
 
 Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
@@ -85,10 +87,36 @@ balanced child, the exchange against the normal ledger is
 $\Delta E=+0.01565$, with boundary $-0.04919$, pressure $+0.06382$ and
 lapse $+0.00099$. The time-quadrature indicator is $0.19\%$.
 
-Frozen-geometry and source-free controls are the next discriminating
-comparison. The native interface is pending, and no control has been run.
-The open question is whether the depletion is background transport or
-geometry feedback. A stronger admissible source balance is under review.
+Completed controls, measured from the saved arrays, are
+[frozen parent-heavy](../lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json),
+[weak-$k$ empty source](../lab/results/development/nsc-discovery-parent-empty-source-v1/manifest.json),
+[strong $T=1$](../lab/results/development/nsc-discovery-parent-strong-t1-v1/manifest.json)
+and [strong $T=3$](../lab/results/development/nsc-discovery-parent-strong-t3-v1/manifest.json).
+The strong-$T=3$ record is pinned at `cc238577`. The authoritative weak
+offset is $k=0.002621213673327129$ and the strong offset is
+$k=0.45388971484879426$. The legacy episode label `common_k` near
+$10^{-8}$ is not the weak offset.
+
+On the strong branch the minus case moves from child length $1.76097$ and
+fraction $0.34039$ at $T=1$ to length $0.14933276$ and fraction $0.090496$
+at $T=3$. The plus case at $T=3$ has length $0.00053105$ and fraction
+$0.059670$. The early length is an expansion transient. Renewal is not
+demonstrated. Intermediate strong-$T=3$ observation headers still carry
+the $T=1$ text, so these values are the array measurements. The
+[array-authenticated assessment](../lab/results/development/nsc-discovery-parent-responsive-assessment-v1.json)
+reconstructs the measurements without rewriting those headers. The
+[assessment successor](../lab/results/development/nsc-discovery-parent-episode-assessment-v2.json)
+preserves the earlier measurements and binds the current consumer bytes.
+
+Frozen parent-heavy child fraction at $T=2.25$ is $0.33464$, against
+$0.25065$ for the coupled parent-heavy case. Empty-source evolution at the
+weak $k$ has child length $0.01633475$ at $T=3$, against $0.0162013$ for
+the coupled balanced case. These comparisons separate transport, geometric
+clocks and background. They are not a universal verdict.
+
+The root campaign executor will prepare the strong-$k$ empty-prepared-source
+control. That result is not claimed until its record is saved. A production
+metadata correction remains with its owner.
 
 Earlier preparations stay in their own records:
 [first pilot](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json),
