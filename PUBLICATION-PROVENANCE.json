@@ -43,9 +43,9 @@
       "sha256": "f5e147fc9dea455315d6e20072c046568a769a99aa37e3dbbd4ddd5f2232349e"
     },
     {
-      "bytes": 19628,
+      "bytes": 19998,
       "path": "AGENTS.md",
-      "sha256": "96b144ee31e005b6012980ca619e8093c0c116d9c96350d0bb9674899ef42a68"
+      "sha256": "1f46227fa487ea19e6ca3de26008e2cc648c58e93521c1cf4d9763da2c1af8d0"
     },
     {
       "bytes": 1073,
@@ -73,9 +73,9 @@
       "sha256": "91da8804befe8a2cd31c40f511a43114cbdaa4e46283b474b98786663a06d246"
     },
     {
-      "bytes": 25611,
+      "bytes": 26199,
       "path": "README.md",
-      "sha256": "6bae57e395d17f74bc60dc727f3198ed4bf9369a26fa9dc34c3f3b6d383889f9"
+      "sha256": "e7cba299afad20d37e9909e32f36e8431d5129f09345619be6d7fbb08ac3d132"
     },
     {
       "bytes": 629,
@@ -98,9 +98,9 @@
       "sha256": "1e18c1d3b6a8ea21b27574c3509e47c4c32ff7b54420ced2ae6ac839ffccedf6"
     },
     {
-      "bytes": 131789,
+      "bytes": 134228,
       "path": "docs/current-result.md",
-      "sha256": "d7c8bce0d5df105768f8e0597b5ec4c1a82b1f59e1dffd34de3f96a984d7de6e"
+      "sha256": "979466a0bcbc60b07981a97d0a5bb7abba74d4f6c797e04740bd15fe08f58a97"
     },
     {
       "bytes": 14497,
@@ -113,9 +113,9 @@
       "sha256": "3b7790ea6c33cbffdb39fa74f56d2a5277fa62f512d29be993acea38e37393c2"
     },
     {
-      "bytes": 5178628,
+      "bytes": 5181200,
       "path": "docs/lab-snapshot.json",
-      "sha256": "737538167a3907ec89d79fa0f7190cba07d231b35c88d219c7d73dbf9a2fc3f5"
+      "sha256": "4c27a9d529e0944ea1709be899ae5d504c9a37d675f4fa2dd9744256b7885d05"
     },
     {
       "bytes": 5006,
@@ -3463,7 +3463,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "737538167a3907ec89d79fa0f7190cba07d231b35c88d219c7d73dbf9a2fc3f5",
+  "lab_snapshot_sha256": "4c27a9d529e0944ea1709be899ae5d504c9a37d675f4fa2dd9744256b7885d05",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

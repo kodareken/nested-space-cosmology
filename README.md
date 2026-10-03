@@ -21,6 +21,15 @@ withheld full-field result to 0.152 percent of its change. Timestep confirmation
 is much smaller than that prediction remainder. Sustained regeneration remains
 an open research target; the completed records preserve their model domains. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
 
+A [source-responsive finite collar](lab/docs/nsc-discovery-parent-traction.md)
+now derives changes in its radius, clock field and required exterior gradients
+from the same leading action. Increasing its weak standing source contracts
+the inner collar's proper length and expands the larger collar's length;
+withheld first-order forecast errors are 0.018 and 0.793 percent. These compare
+static preparations, rather than temporal renewal. The
+[parent-data criterion](lab/docs/nsc-discovery-parent-continuation.md) states
+what a smooth dynamical exterior must satisfy before a larger run.
+
 **Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
 presents the measured finite spherical realization, source controls, actual
 metric curvature, and a local response on the same generated trajectory.
