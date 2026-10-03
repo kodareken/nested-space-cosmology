@@ -1,0 +1,628 @@
+{
+  "CPU_limit_seconds": 28.942573999999997,
+  "CPU_seconds": 0.04953699999999994,
+  "alpha": 0.5,
+  "array_sha256": {
+    "Q": "bb25d63ab23e166c47552730f0da26e01fe65c58268589d74cc7c68cfaac549d",
+    "W": "f7f618d7be143ef02d6843286d2210195489d5bf9ccd80ba535001cf6797d03e",
+    "phi0": "c6429f038a24e1ce9b38ca64fd6e8dcdb49832b4c2bd443affa551c818d38fe4",
+    "phi1": "a8393822452c83620be969c940a72666bb18df97400da3cc992546df35565ea8",
+    "pi_Q": "56b9a159d7a1c4f7e9fd9cff5f956775aa0f12f9655d5f6085bca9b4c9b419d6",
+    "pi_r": "ad2dae77666fcafc629563de1ba0f5b0648ef8f5ca7a2fa3a2f2ec3fc7b126bb",
+    "r": "83f9ab6ce9b39ea7699b291d0405b86245fd028677f627da5ada80ba05ee1b90",
+    "reference_columns": "2d3adafb91178130d780d118b2307b190cf32a781d9462ee77acdf84c37d0195",
+    "source_columns": "f16424c0a41309192463e7a3175f8ddac0928b8cee1ef322329aca83ec1e42ea",
+    "weights": "e269f08999fc59865018f18ec788a5c454d6b72ed27a90e738f78e070f4939e8"
+  },
+  "authentication": {
+    "center_proper_frequency": 1.5010983793432477,
+    "center_radius": 0.9992682829064619,
+    "input_binding": {
+      "external_post_run_observation": false,
+      "old_record_modified": false,
+      "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+      "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+      "record_sha256": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056"
+    },
+    "input_hashes": {
+      "lab/results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+      "lab/results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81"
+    },
+    "measurement_sha256": "6820d433e10b3607f7ab34dcefabd816b9f708812e6423734a69843c374c1bf9",
+    "payload_sha256": "e7d306105830662ff83f8bbbc4bcb363a49a15a9734a8d6ab0e05b55e669a5b8",
+    "prediction_sha256": "2acf5650e6d1168de0d32bfb4bc71d61ba5bd9bbc8ba3cff43b30ab79a088fb5",
+    "prepare_sha256": "35bfe719e3740d9b25e77a8cfcc9dfe0ca5b58ac107938c96c31635decc6d807",
+    "producing_commit": "b7aa5f5e0f87607e16c22bd8b5955993ce42608d",
+    "sealed_child_covariance": 0.0007619989716767631,
+    "sealed_collar_covariance": 0.001203701755010927
+  },
+  "base_child_normalization_identity_gap": -1.0842021724855044e-19,
+  "blocker": null,
+  "centre_proper_frequency_sealed": 1.5010983793432477,
+  "child_column_covariance": 0.0010162077706830223,
+  "child_column_preserved": false,
+  "child_covariance_target": 0.0007719289650532854,
+  "child_region_covariance": 0.0010162077706833232,
+  "clock_locations": [
+    1.0,
+    2.8,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.2,
+    7.0
+  ],
+  "collar_Q_gap": 0.0,
+  "collar_radius_gap": 0.0,
+  "column_norms": [
+    0.9999999999999998,
+    1.0
+  ],
+  "continuous_constraint_certificate": false,
+  "continuum_kmin": 6.0779598345194384e-05,
+  "converged": true,
+  "correction": {
+    "accepted": 4,
+    "actual_residual_max": 1.9390053071990693e-05,
+    "backtracks": 4,
+    "best_residual": 4.1334342562345066e-09,
+    "blocker": null,
+    "converged": true,
+    "history": [
+      {
+        "accepted": 0,
+        "correction": 0.07009480015631958,
+        "floor": 1e-11,
+        "numerical_rank": 127,
+        "residual": 0.9575226298829214,
+        "scaled_residual": 0.12821779912291753,
+        "sign_margin": 0.008562874483489129
+      },
+      {
+        "accepted": 1,
+        "correction": 0.0023102726627652836,
+        "floor": 1e-11,
+        "numerical_rank": 127,
+        "residual": 0.011096328330336191,
+        "scaled_residual": 0.0022117033657374284,
+        "sign_margin": 0.005927195413714035
+      },
+      {
+        "accepted": 2,
+        "correction": 8.719018081643794e-05,
+        "floor": 1e-11,
+        "numerical_rank": 127,
+        "residual": 0.0002207240449635609,
+        "scaled_residual": 4.3823352214083125e-05,
+        "sign_margin": 0.005880573567579338
+      },
+      {
+        "accepted": 3,
+        "correction": 3.5986947487221705e-08,
+        "floor": 1e-11,
+        "numerical_rank": 127,
+        "residual": 1.939051443312974e-05,
+        "scaled_residual": 2.691094750515571e-08,
+        "sign_margin": 0.005881184823778138
+      },
+      {
+        "accepted": 4,
+        "correction": 1.3255003348396379e-15,
+        "floor": 1e-11,
+        "numerical_rank": 127,
+        "residual": 1.9390053072003798e-05,
+        "scaled_residual": 4.1334342562345066e-09,
+        "sign_margin": 0.0058811853047106505
+      }
+    ],
+    "max_accepted": 12,
+    "max_backtracks": 8,
+    "physical_metric": "dxq Bfine.T diag(SP^-2,SR^-2) Bfine; Cholesky-whitened SVD",
+    "row_scales": [
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      5.017083180968906,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      118.60034045297374,
+      4691.027337198127
+    ],
+    "stationary_correction_is_not_continuous_constraint_certificate": true,
+    "universal_1e-8_veto": false
+  },
+  "declared_margin_fraction": 0.05,
+  "diagnosis": {
+    "CAR_eigenvalues": [
+      0.0009075779256476538,
+      0.0017831719572389336
+    ],
+    "anchor": 0.0001352346096640201,
+    "anchor_residual": 1.9390053071990693e-05,
+    "coordinate_angular_rate": {
+      "max": -0.004863282046359524,
+      "max_abs": 0.03293541604447094,
+      "min": -0.03293541604447094,
+      "scope": "projected rdot/r; coordinate T"
+    },
+    "current_deleted": false,
+    "current_max": 1.3261161079446086e-16,
+    "current_mean": 3.116070688237892e-19,
+    "curvature": {
+      "K": {
+        "max": 38414.90440201686,
+        "max_abs": 38414.90440201686,
+        "min": 4.000305698982884
+      },
+      "Ricci2": {
+        "max": 19208.85156122543,
+        "max_abs": 19208.85156122543,
+        "min": 1.9999303267719655
+      }
+    },
+    "energy": {
+      "field": 0.01798373677328877,
+      "gravity": -0.017983736773284686,
+      "total": 4.083539062449404e-15
+    },
+    "excluded_even_D_max": 1.2425249018243376e-13,
+    "excluded_odd_h_max": 4.855847401524473e-13,
+    "excluded_parity_retained_in_report": true,
+    "expansion": {
+      "centre": -0.005355366604899242,
+      "max": -0.002551108730445902,
+      "max_abs": 0.015674350150094326,
+      "min": -0.015674350150094326,
+      "scope": "normal angular H=projected rdot/(r^2 Q)"
+    },
+    "full_D_max": 0.5155010799260408,
+    "full_h_max": 0.4886376884795547,
+    "leading_constraints": {
+      "D_max": 0.5155010799260408,
+      "h_c_max": 0.4886376884795547,
+      "held_out_h_c_max": 0.48863768847958533,
+      "mean_current": 3.116070688237892e-19,
+      "observable_error_bound": null,
+      "physical_instability_inferred": false,
+      "projected_h_c_max": 3.435362024795296e-13,
+      "raw_C_max": 0.23305307047061763,
+      "source_Q_rho_max": 0.007295109552751122,
+      "source_current_max": 1.3261161079446086e-16
+    },
+    "momentum_includes_current": true,
+    "normal_radial_rate": {
+      "max": 13.369535642567726,
+      "max_abs": 20.006971140382984,
+      "min": -20.006971140382984,
+      "scope": "(projected rdot/r+projected Qdot/Q)/(r Q)"
+    },
+    "proper_clocks": [
+      {
+        "N": 2.000226052226649,
+        "x": 1.0
+      },
+      {
+        "N": 1.9930412507279258,
+        "x": 2.8
+      },
+      {
+        "N": 1.8559629696662912,
+        "x": 3.0
+      },
+      {
+        "N": 1.1383153906105261,
+        "x": 3.5
+      },
+      {
+        "N": 0.9982416838810303,
+        "x": 4.0
+      },
+      {
+        "N": 1.1383153906105266,
+        "x": 4.5
+      },
+      {
+        "N": 1.855962969666291,
+        "x": 5.0
+      },
+      {
+        "N": 1.9930412507279263,
+        "x": 5.2
+      },
+      {
+        "N": 2.0002260522266497,
+        "x": 7.0
+      }
+    ],
+    "rates": {
+      "Q": {
+        "max": 55.043081933684064,
+        "max_abs": 81.34631972228095,
+        "min": -81.34631972228095
+      },
+      "p_Q": {
+        "max": 0.021968349844358845,
+        "max_abs": 0.03441231760515651,
+        "min": -0.03441231760515651
+      },
+      "p_r": {
+        "max": 94.45495637822737,
+        "max_abs": 94.45495637822737,
+        "min": -31.39275188465468
+      },
+      "r": {
+        "max": -0.004849511673931568,
+        "max_abs": 0.03288939753084147,
+        "min": -0.03288939753084147
+      }
+    },
+    "rates_scope": "actual decoded and prolonged projected rates; coordinate T",
+    "raw_unprojected_rates": {
+      "Q": {
+        "max": 54.324103792908,
+        "max_abs": 82.02051213107562,
+        "min": -82.02051213107562
+      },
+      "p_Q": {
+        "max": 0.2018939395929621,
+        "max_abs": 0.21574241834907068,
+        "min": -0.21574241834907068
+      },
+      "p_r": {
+        "max": 90.7541305963413,
+        "max_abs": 90.7541305963413,
+        "min": -31.69799429382848
+      },
+      "r": {
+        "max": -0.004982634813956078,
+        "max_abs": 0.033302694987593646,
+        "min": -0.033302694987593646
+      }
+    },
+    "raw_unprojected_rates_used_for_acceptance": false,
+    "retained_D_max": 9.141475935660511e-12,
+    "retained_even_h_max": 2.2542650767856045e-14,
+    "retained_h_max": 3.435362024795296e-13,
+    "retained_odd_D_max": 1.2864682584852093e-11,
+    "source_plateau_is_maintained_wall": false,
+    "tail_D_max": 0.5155010799189057,
+    "tail_h_max": 0.48863768847958533,
+    "tides": {
+      "R4": {
+        "max": 183.15720752992272,
+        "max_abs": 198.01197095662064,
+        "min": -198.01197095662064
+      },
+      "R_0101": {
+        "max": 97.99344064070661,
+        "max_abs": 97.99344064070661,
+        "min": -92.59630844474631
+      },
+      "R_0202": {
+        "max": 0.04558597687975266,
+        "max_abs": 0.04558597687975266,
+        "min": -0.04285815626556656
+      },
+      "owned_W": {
+        "max": 13066.781493607854,
+        "max_abs": 13066.781493607854,
+        "min": 0.0003822742673084313
+      }
+    },
+    "timestep": {
+      "absolute_moving_scale_rate": 40.27939402166338,
+      "actual_geometry_band_k": 49.480084294039244,
+      "column_rank": 2,
+      "combined_omega": 524.7821128233621,
+      "control_mode": "coupled",
+      "dt": 0.0026677738546916326,
+      "field_cfl_alone": false,
+      "field_k": 49.87278337573797,
+      "frozen_scaled_reaction_norm": 280.65195369294497,
+      "gradient_majorant": 3.5742334424044193,
+      "local_real_variables": 12,
+      "moving_scale_sign_cancellation_used": false,
+      "numerical_mode": "rank_general_physically_scaled_local_reaction",
+      "physical_growth_removed": false,
+      "principal_coordinate_speed": 1.0,
+      "quadrature_k": 200.2765316663493,
+      "raw_coordinate_norm_used": false,
+      "reaction_majorant": 320.93134771460836,
+      "restriction_owner": "nsc_discovery_parent_step_control.scaled_step_admission",
+      "scale_frequency": 49.87278337573797,
+      "scales": "Q,r,2|a|r^2 omega*/Q,2|a|r omega*; psi=Phi/sqrt(dx_q)",
+      "scope": "all source-rank local weighted components plus moving-scale triangle, principal and gradient terms; not a global stability certificate",
+      "source_rank": 2,
+      "stability_certificate": false,
+      "step_cap": 1.0
+    },
+    "velocity_r": {
+      "max": -0.004849511673931568,
+      "max_abs": 0.03288939753084147,
+      "min": -0.03288939753084147
+    }
+  },
+  "dirac_extension": {
+    "core_uses_sealed_spinor": true,
+    "follows_blended_Q_outside_core": true,
+    "rhs_gap_max": 7.445971617059399e-10
+  },
+  "evidence_written": true,
+  "evolved": false,
+  "fallback": {
+    "max_steps": 8,
+    "steps": 0,
+    "used": false
+  },
+  "geometry_map": "identity",
+  "global_static_parent_claimed": false,
+  "gram_offdiag_max": 0.07992864897002169,
+  "held_nonlinear_remeasured": false,
+  "imbalance": 1.6003649112372859e-16,
+  "imbalance_cap": 0.5,
+  "input_hashes": {
+    "lab/results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "lab/results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "lab/results/development/nsc-discovery-parent-traction-v1/measurement.json": "6820d433e10b3607f7ab34dcefabd816b9f708812e6423734a69843c374c1bf9",
+    "lab/results/development/nsc-discovery-parent-traction-v1/measurement.npz": "e7d306105830662ff83f8bbbc4bcb363a49a15a9734a8d6ab0e05b55e669a5b8",
+    "lab/results/development/nsc-discovery-parent-traction-v1/prediction.json": "2acf5650e6d1168de0d32bfb4bc71d61ba5bd9bbc8ba3cff43b30ab79a088fb5",
+    "lab/results/development/nsc-discovery-parent-traction-v1/prediction.npz": "322d400c9985eaa4d8938a61d2df6de59ccb1f3ae7f40ee2193df4b5fc72dbbb",
+    "lab/results/development/nsc-discovery-parent-traction-v1/prepare.json": "35bfe719e3740d9b25e77a8cfcc9dfe0ca5b58ac107938c96c31635decc6d807",
+    "lab/results/development/nsc-discovery-parent-traction-v1/prepare.npz": "e43db6ee625338a5db8397b0524d989efee008984f02f97e48c89a3fa2284912"
+  },
+  "intervals": {
+    "annulus": [
+      1.2,
+      3.0
+    ],
+    "child": [
+      3.5,
+      4.5
+    ],
+    "collar_radius": 1.0,
+    "parent": [
+      1.0,
+      7.0
+    ]
+  },
+  "k": 0.00012646205026566864,
+  "k_common": 0.00012646205026566864,
+  "k_offset": 5.857176945134436e-05,
+  "kmin": 6.789028081432428e-05,
+  "kmin_by_population": [
+    6.789028081432428e-05,
+    6.0779598345194384e-05,
+    5.1686683182290734e-05
+  ],
+  "mode": "prepared_parent",
+  "new_force": false,
+  "nf": 128,
+  "observer_Gram_gap": 3.3306690738754696e-16,
+  "observer_is_source_frame": false,
+  "occupations_match_weights": true,
+  "old_build_pair_used": false,
+  "payload_sha256": "f0bd0bb8c3793b3f599aa1115a2f4c2ee061c2704602929bb5509522edcb38ad",
+  "population": 1,
+  "population_changes_child_covariance": true,
+  "probabilities": [
+    [
+      0.5737649344242833,
+      3.272796555407792e-13
+    ],
+    [
+      0.0545304091194465,
+      0.9999999999967968
+    ]
+  ],
+  "producers": {
+    "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+    "lab/docs/nsc-discovery-parent.md": "1a4df317b2165e4976e08e2cc8c1f0ea5abb7fa7b3cd7288dd48639facf0cd8f",
+    "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+    "lab/scripts/derive_nsc_discovery_parent.py": "24cacb1e51f9115af33298604cf15afd98e318aa1a8632aa8d784f34b40001c7",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "b4ca4cf0abb06f87f1d7f919e1a04be3b024303a0c6257754e45c8f66cd18019",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/src/recursive_horizons/nsc_discovery_parent_traction.py": "5f00bba69962665d2c3e38e307b21cfb4c7db7fd2695d637ceb471835a3643a5",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40",
+    "lab/tests/test_nsc_discovery_parent.py": "f02195a16afac8ac115bdb57adf7fe9a1b4ca59361de244a5595d78f178d7c93"
+  },
+  "producing_commit": "45297679b53196237b0ed991eb8cd1234607822d",
+  "raw_norms": [
+    1.0349038011102258,
+    0.1282475617442873
+  ],
+  "reference_extension": {
+    "CPU_seconds": 0.0010270000000001112,
+    "extension": "sealed endpoint to the blend point; not a new held measurement",
+    "first_integral_max": 1.0114945556485844e-11
+  },
+  "schema": "NSC-DISCOVERY-PARENT-v1",
+  "sealed_child_covariance": 0.0007619989716767631,
+  "seed_removal": {
+    "integrand_mean_removed": -2.5519000844818212e-17,
+    "integrand_reproduction_gap": 8.933825901280557e-16,
+    "nyquist_cosine_removed": -4.600265739955402e-16,
+    "removed_modes_reported": true
+  },
+  "sign": 1,
+  "source_field_sha256": {
+    "phi0": "5f6f62fe695fa979ce28c3ccf48a25dbef319acd55b9ed28aa7576db124c3322",
+    "phi1": "f6921098979f43f283dfea37d5712dd2a1b7dece3cd11739dbd35a3ba18d876d"
+  },
+  "static_not_forced": true,
+  "status": "NUMERICAL_STATIONARY_CANDIDATE",
+  "trace": 0.002690749882886587,
+  "trajectory": false,
+  "universal_1e-8_veto": false,
+  "unresolved": [
+    "finite SBP residual and band-limit gaps are indicators, not a continuum certificate",
+    "physical vacuum identification and strong-curvature EFT validity remain open",
+    "no trajectory or autonomous renewal is claimed"
+  ],
+  "weight_metadata": {
+    "alpha": 0.5,
+    "base_c_equals_wZ": true,
+    "base_child_normalization_weight": 0.0013453749414432934,
+    "child_weight": 0.0017711221263507274,
+    "delta_star": 0.5,
+    "endpoint_imbalances": [
+      0.8264179110038203,
+      -0.9999999999993454
+    ],
+    "imbalance": 1.6003649112372859e-16,
+    "imbalance_cap": 0.5,
+    "lowdin_applied": false,
+    "population": 1,
+    "population_intervention_changes_base_weights": true,
+    "population_name": "balanced",
+    "rank": 2,
+    "reversed_probabilities_substituted": false,
+    "target_imbalance": 0.0,
+    "trace": 0.002690749882886587,
+    "trace_rule": "2*w0*projected_raw_child_norm_squared",
+    "uniform_weights_substituted": false
+  },
+  "weights": [
+    0.0017711221263507274,
+    0.0009196277565358596
+  ]
+}

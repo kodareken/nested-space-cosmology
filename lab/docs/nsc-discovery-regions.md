@@ -59,18 +59,96 @@ contain more than one peak while another component remains elsewhere.
 
 ## Contour velocity
 
-On a contour, the implicit level motion is
+The peak is the maximum of the current nodal samples. It is not moved off a
+node to raise the Fourier interpolant. The contour level is that peak times
+one quarter, one half, or three quarters. Differentiating
+`ρ(x(t), t) = fraction * peak(t)` gives
 
 ```
-xdot = -ρ_t / ρ_x
+xdot = (fraction * peak_rate - ρ_t) / ρ_x
 ```
 
-when `|ρ_x|` is at least `10^{-3}` times the dominant peak divided by the
-node spacing. `ρ` is the total probability per proper length. `ρ_t` is the
-nodal derivative of that density along the actual carrier rate, including
-`∂t(rQ)`. `ρ_x` is the owned periodic derivative, whose Nyquist symbol is
-zero, evaluated with the same Fourier interpolant. A shallower slope is
-reported as `ambiguous` and is not divided.
+`peak_rate` is `ρ_t` at the first argmax. Samples within roundoff of that
+maximum are the same peak when their rates also agree within roundoff, and
+that same nodal rate is used. Incompatible tied rates stay `ambiguous` and
+are not divided. A slope shallower than `10^{-3}` times the peak divided by
+the node spacing is still refused before the division. `ρ` is the total
+probability per proper length. `ρ_t` is the nodal derivative of that density
+along the actual carrier rate, including `∂t(rQ)`. `ρ_x` is the owned
+periodic derivative, whose Nyquist symbol is zero. Off-node samples and the
+moving-ledger integrals use the real Fourier evaluator, with the Nyquist mode
+kept as a cosine.
+
+The row records the peak rate, the level rate `fraction * peak_rate`, the
+status, and this convention. `continuum_optimized_peak` stays false.
+
+## Sealed v1 speeds
+
+`results/development/nsc-discovery-regions-nf256-v1.json` and
+`results/development/nsc-discovery-regions-nf512-v1.json` keep the speeds and
+moving half-maximum ledgers produced with `xdot = -ρ_t / ρ_x`. Those bytes
+are qualified and are not healed. Fixed windows still use zero boundary
+velocity and the same Reynolds identity. A creation-only successor replays
+original station chunks with the nodal peak rate:
+
+```sh
+python scripts/lab.py scripts/derive_nsc_discovery_regions_successor.py --check
+python scripts/lab.py scripts/derive_nsc_discovery_regions_successor.py --read <episode-directory> --case <case-id> --output <new.json>
+```
+
+`--check` hashes the current source closure and those two sealed records. It
+does not parse them and it does not write. `--output` is exclusive, stays
+outside the episode directory, and refuses a file above 64 MiB. Before that
+file is created, a case and ordinal that appears in either sealed record must
+match the stored chunk hash. A mismatch raises and writes nothing. The stored
+v1 speeds are not copied or healed. Root freezes the producer bytes before a
+production replay. This note does not run that replay.
+
+## Leading parent observer
+
+`observe(pair, state, time, control_mode="coupled", bundle=None)` in
+[nsc_discovery_parent_observer.py](../src/recursive_horizons/nsc_discovery_parent_observer.py)
+is the variable-rank adapter for the leading Einstein diagnostic. A passed
+bundle must carry that owner's `leading_rate`, source, fine state, and fine
+system. The quadrature state flow is `prolong(decode(leading_rate))` for the
+geometry and the AP columns. Raw `unprojected_rates` remain a projection
+diagnostic. Probability rate, pressure, the analytic normal-energy slope, and
+contour speeds use the projected flow. Passed `metric_jets` must match that
+same prolonged rate. Nothing in this adapter calls the auxiliary chi carrier.
+
+`control_mode="source_free"` keeps that label. The geometry rate is the
+coupled leading rate, so the metric still moves. Occupation weights may be
+zero. Zero total occupation reports flat matter curves and does not invent a
+packet. A nonfinite column is refused. The episode control-mode normalizer
+is not patched.
+
+The holder exposes `.grid`, `.geometry_map`, `.weights`,
+`.reference_columns`, `.source_columns`, `.source_metadata`,
+`.geometry_metadata`, `.child_interval`, `.parent_interval`, and
+`.clock_locations`. `W` may be the identity. Fine occupations are the
+holder's actual weights. The centre is `L/2`. Signed distance `s` from that
+centre splits the carrier into disjoint measurement cuts:
+
+| Region | Signed distance | Accounted |
+|---|---|---|
+| child | `|s| <= 0.5` | one interval |
+| inner | `0.5 < |s| <= 1.2` | two intervals |
+| parent annulus | `1.2 < |s| <= 3` | two intervals |
+| ambient | `3 < |s| <= L/2` | wrapped across the branch cut |
+
+The protected collar `|s| <= 1` overlaps child and inner, so it is not a
+fifth window and it is not given piston work. The declared parent interval
+`|s| <= 3` contains the child; the accounted parent channel is only the
+annulus. If the global nodal peak lies in that annulus, the child nodal peak
+is still reported on its own and `dominance_forced` stays false. Global
+contours keep the global peak.
+
+The returned row is JSON. Its channels reuse the fixed and wrapped region
+ledgers: flux, pressure, lapse, and the finite projection defect, each
+divided by `dx` once. Metric channels are the passed leading jets: normal
+4D tides, `R`, and `W`, with positive proper probability. Proper clocks are
+`rQ` at the holder locations and at the cuts. Null rays use coordinate speed
+`±1` on the conformal chart. Column ancestry is not an energy parcel.
 
 ## Moving normal energy
 

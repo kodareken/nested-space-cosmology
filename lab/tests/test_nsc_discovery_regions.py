@@ -278,14 +278,31 @@ def test_contour_velocity_follows_translation_and_refuses_a_shallow_slope():
         assert level["resolution_status"] == "compared"
         assert level["contour_certified"] is False
     peak_slope = float((grid.derivative @ profile["density"])[int(np.argmax(profile["density"]))])
-    ambiguous = regions.implicit_level_velocity(1.0, peak_slope, peak=float(np.max(profile["density"])), spacing=float(grid.dx_q))
+    ambiguous = regions.implicit_level_velocity(
+        1.0, peak_slope, peak=float(np.max(profile["density"])), spacing=float(grid.dx_q),
+        peak_rate=0.0, level_fraction=0.5,
+    )
     assert ambiguous["status"] == "ambiguous"
     assert ambiguous["velocity"] is None
     assert ambiguous["division"] is False
-    shallow = regions.implicit_level_velocity(1.0, 1.0e-8, peak=2.0, spacing=float(grid.dx_q))
+    assert ambiguous["reason"] == "shallow_slope"
+    shallow = regions.implicit_level_velocity(
+        1.0, 1.0e-8, peak=2.0, spacing=float(grid.dx_q), peak_rate=5.0, level_fraction=0.5,
+    )
     assert shallow["status"] == "ambiguous"
-    measured = regions.implicit_level_velocity(-speed * 0.5, 0.5, peak=2.0, spacing=float(grid.dx_q))
+    assert shallow["division"] is False
+    assert shallow["velocity"] is None
+    assert shallow["level_rate"] == pytest.approx(2.5)
+    measured = regions.implicit_level_velocity(
+        -speed * 0.5, 0.5, peak=2.0, spacing=float(grid.dx_q), peak_rate=0.0, level_fraction=0.5,
+    )
     assert measured["velocity"] == pytest.approx(speed)
+    corrected = regions.implicit_level_velocity(
+        -0.2, 0.5, peak=2.0, spacing=float(grid.dx_q), peak_rate=0.4, level_fraction=0.5,
+    )
+    assert corrected["level_rate"] == pytest.approx(0.2)
+    assert corrected["velocity"] == pytest.approx(0.8)
+    assert corrected["continuum_optimized_peak"] is False
 
     length = float(grid.length)
     coordinate = np.asarray(grid.xi_q)
@@ -336,7 +353,7 @@ def test_contour_flags_distinguish_flat_split_and_merged_peaks():
     assert merged["flags"]["split"] is False
 
 
-def _station_directory(directory, pair, state):
+def _station_directory(directory, pair, state, case_id="manufactured"):
     clocks = np.asarray(nested.metrics(pair, state)["clock_rates"], dtype=float)
     arrays = {
         "Q": state.Q, "r": state.r, "chi": state.chi,
@@ -350,7 +367,7 @@ def _station_directory(directory, pair, state):
         "clock_rates": clocks, "normal_clocks": np.zeros(3),
     }
     record = {
-        "case_id": "manufactured", "nf": pair.grid.nf, "control_mode": "coupled",
+        "case_id": case_id, "nf": pair.grid.nf, "control_mode": "coupled",
         "step_cap": 0.001, "stations": [1.0, 3.0], "coordinate_time": 1.0,
         "steps": 4, "stations_reached": [1.0], "snapshot_kind": "station",
         "momentum_representation": episode.CANONICAL_PI, "verify_external_pins": False,
@@ -446,3 +463,275 @@ def test_cli_check_and_read_are_creation_only_and_leave_sealed_inputs_unchanged(
     assert inside.returncode != 0
     assert _sealed_stat() == before
     assert not (LAB / "results/development/nsc-discovery-regions-v1.json").exists()
+
+
+def _cosine(grid, center, amplitude=0.8, offset=1.2):
+    length = float(grid.length)
+    wave = 2.0 * math.pi / length
+    coordinate = np.asarray(grid.xi_q, dtype=float)
+    density = offset + amplitude * np.cos(wave * (coordinate - center))
+    return {
+        "offset": offset,
+        "amplitude": amplitude,
+        "wave": wave,
+        "center": float(center),
+        "density": density,
+    }
+
+
+def _endpoint_value(profile, coordinate):
+    return profile["offset"] + profile["amplitude"] * math.cos(
+        profile["wave"] * (float(coordinate) - profile["center"])
+    )
+
+
+def test_amplitude_only_contours_stay_put_and_the_ledger_is_independent():
+    grid = galerkin.build_grid(32, gauge="conformal")
+    profile = _cosine(grid, 0.5 * float(grid.length))
+    adot = 0.2
+    density_rate = adot * profile["density"]
+    contours = regions.density_contours(grid, profile["density"], density_rate)
+    assert contours["continuum_optimized_peak"] is False
+    assert contours["peak_rate_status"] == "unique_argmax"
+    assert contours["peak_rate"] == pytest.approx(adot * contours["peak_value"])
+    assert "not a continuum-optimized peak" in contours["convention"]
+    spacing = float(grid.dx_q)
+    slope = np.asarray(grid.derivative @ profile["density"], dtype=float)
+    zeros = np.zeros(grid.nq)
+    for level in contours["levels"]:
+        fraction = level["fraction"]
+        assert level["level_rate"] == pytest.approx(fraction * contours["peak_rate"])
+        for side in ("backward", "forward"):
+            report = level["velocity_" + side]
+            assert report["status"] == "measured"
+            assert report["velocity"] == pytest.approx(0.0, abs=1.0e-8)
+            rho_t = regions._sample(grid, density_rate, level[side])
+            rho_x = regions._sample(grid, slope, level[side])
+            old = -rho_t / rho_x
+            assert abs(old) > 1.0e-3
+        left, right = level["backward"], level["forward"]
+        left_dot = level["velocity_backward"]["velocity"]
+        right_dot = level["velocity_forward"]["velocity"]
+
+        def antiderivative(coordinate):
+            return profile["offset"] * coordinate + profile["amplitude"] / profile["wave"] * math.sin(
+                profile["wave"] * (coordinate - profile["center"])
+            )
+
+        expected = adot * (antiderivative(right) - antiderivative(left))
+        expected += _endpoint_value(profile, right) * right_dot - _endpoint_value(profile, left) * left_dot
+        ledger = regions.moving_normal_energy_on_cut(
+            grid, profile["density"] * spacing, zeros, zeros, zeros, density_rate * spacing,
+            left, right, left_dot, right_dot, wrapped=level["wrapped"],
+        )
+        assert ledger["piston_work_included"] is False
+        assert ledger["surface_work"] == 0.0
+        assert ledger["rate"] == pytest.approx(expected, abs=1.0e-8)
+        assert abs(ledger["closure_residual"]) < 1.0e-8
+        stationary = adot * (antiderivative(right) - antiderivative(left))
+        assert ledger["rate"] == pytest.approx(stationary, abs=1.0e-8)
+
+
+def test_off_grid_and_changing_shape_use_the_nodal_peak_rate():
+    grid = galerkin.build_grid(32, gauge="conformal")
+    nodes = np.asarray(grid.xi_q, dtype=float)
+    spacing = float(grid.dx_q)
+    center = float(nodes[nodes.size // 2] + 0.35 * spacing)
+    profile = _cosine(grid, center)
+    speed = 0.41
+    density_rate = -speed * np.asarray(grid.derivative @ profile["density"], dtype=float)
+    selected = regions.nodal_peak(profile["density"], density_rate)
+    assert selected["peak_rate_status"] == "unique_argmax"
+    assert abs(selected["peak_rate"]) > 1.0e-4
+    assert abs(float((grid.derivative @ profile["density"])[selected["peak_index"]])) > 1.0e-4
+    contours = regions.density_contours(grid, profile["density"], density_rate)
+    slope = np.asarray(grid.derivative @ profile["density"], dtype=float)
+    for level in contours["levels"]:
+        for side in ("backward", "forward"):
+            rho_t = regions._sample(grid, density_rate, level[side])
+            rho_x = regions._sample(grid, slope, level[side])
+            expected = (level["fraction"] * selected["peak_rate"] - rho_t) / rho_x
+            assert level["velocity_" + side]["velocity"] == pytest.approx(expected, rel=0.0, abs=1.0e-8)
+            assert abs(level["velocity_" + side]["velocity"] - (-rho_t / rho_x)) > 1.0e-4
+
+    length = float(grid.length)
+    coordinate = nodes
+    wave = 2.0 * math.pi / length
+    origin = 0.5 * length
+
+    def field(instant):
+        return (
+            1.05
+            + (0.9 + 0.25 * instant) * np.cos(wave * (coordinate - origin))
+            + (0.05 + 0.2 * instant) * np.cos(2.0 * wave * (coordinate - origin))
+        )
+
+    step = 1.0e-6
+    rate = (field(step) - field(-step)) / (2.0 * step)
+    current = regions.density_contours(grid, field(0.0), rate)
+    later = regions.density_contours(grid, field(step), None)
+    assert current["flags"]["flat"] is False
+    assert current["peak_rate_status"] == "unique_argmax"
+    compared = 0
+    for left, right in zip(current["levels"], later["levels"]):
+        assert left["fraction"] == right["fraction"]
+        assert left["backward"] is not None and right["backward"] is not None
+        for side in ("backward", "forward"):
+            moved = ((right[side] - left[side] + 0.5 * length) % length - 0.5 * length) / step
+            assert left["velocity_" + side]["status"] == "measured"
+            assert left["velocity_" + side]["velocity"] == pytest.approx(moved, abs=2.0e-4)
+            compared += 1
+    assert compared == 6
+
+
+def test_tied_peaks_are_ambiguous_unless_their_rates_agree_within_roundoff():
+    grid = galerkin.build_grid(32, gauge="conformal")
+    nodes = np.asarray(grid.xi_q, dtype=float)
+    center = 0.5 * (float(nodes[10]) + float(nodes[11]))
+    profile = _cosine(grid, center)
+    speed = 0.33
+    density_rate = -speed * np.asarray(grid.derivative @ profile["density"], dtype=float)
+    tied = regions.density_contours(grid, profile["density"], density_rate)
+    assert tied["tied_peak_count"] >= 2
+    assert tied["peak_rate_status"] == "tied_incompatible_rates"
+    assert tied["peak_rate"] is None
+    assert tied["continuum_optimized_peak"] is False
+    for level in tied["levels"]:
+        for side in ("backward", "forward"):
+            report = level["velocity_" + side]
+            assert report["status"] == "ambiguous"
+            assert report["velocity"] is None
+            assert report["division"] is False
+            assert report["reason"] == "tied_incompatible_rates"
+    samples = np.array(profile["density"], copy=True)
+    peak = float(np.max(samples))
+    first, second = 4, 19
+    samples[first] = peak + 1.0
+    samples[second] = samples[first]
+    agreed = np.zeros(grid.nq)
+    agreed[first] = 0.25
+    agreed[second] = agreed[first] + 0.25 * np.spacing(1.0)
+    compatible = regions.nodal_peak(samples, agreed)
+    assert compatible["peak_rate_status"] == "tied_roundoff_compatible"
+    assert compatible["peak_rate"] == pytest.approx(float(agreed[compatible["peak_index"]]))
+    disagreed = np.array(agreed, copy=True)
+    disagreed[second] = -0.4
+    incompatible = regions.nodal_peak(samples, disagreed)
+    assert incompatible["peak_rate_status"] == "tied_incompatible_rates"
+    assert incompatible["peak_rate"] is None
+    unique = np.array(samples, copy=True)
+    unique[second] = samples[first] - 1.0e-6
+    selected = regions.nodal_peak(unique, disagreed)
+    assert selected["peak_rate_status"] == "unique_argmax"
+    assert selected["peak_index"] == first
+    assert selected["peak_rate"] == pytest.approx(0.25)
+
+
+def test_successor_replays_station_chunks_and_leaves_sealed_v1_unhealed(prepared, tmp_path):
+    qualified = tuple(LAB / relative for relative in regions.QUALIFIED_V1_RECORDS)
+    before = tuple((path.stat().st_mtime_ns, path.stat().st_size, path.stat().st_mode) for path in qualified)
+    sealed_before = _sealed_stat()
+    check = subprocess.run(
+        [str(PYTHON), str(ROOT / "scripts/lab.py"), "scripts/derive_nsc_discovery_regions_successor.py", "--check"],
+        check=True, capture_output=True, text=True,
+    )
+    record = json.loads(check.stdout)
+    assert record["schema"] == regions.SUCCESSOR_CHECK_SCHEMA
+    assert record["arrays_loaded"] is False
+    assert record["sealed_v1_parsed"] is False
+    assert record["sealed_v1_healed"] is False
+    assert record["speeds_healed"] is False
+    assert record["moving_ledger_healed"] is False
+    assert record["output_written"] is False
+    assert record["production_campaign"] is False
+    assert record["frozen_by_root"] is False
+    assert record["continuum_optimized_peak"] is False
+    assert record["output_byte_limit"] == 64 * 1024 * 1024
+    assert {item["path"] for item in record["sealed_v1_qualification"]} == set(regions.QUALIFIED_V1_RECORDS)
+    assert all(item["healed"] is False and item["parsed"] is False and item["rewritten"] is False
+               for item in record["sealed_v1_qualification"])
+    produced = record["producer_hashes"]["scripts/derive_nsc_discovery_regions_successor.py"]
+    assert produced == regions.sha256_file(LAB / "scripts/derive_nsc_discovery_regions_successor.py")
+    directory = _station_directory(tmp_path / "episode", prepared["pair"], prepared["live_state"])
+    output = tmp_path / "regions-successor.json"
+    read = subprocess.run(
+        [str(PYTHON), str(ROOT / "scripts/lab.py"), "scripts/derive_nsc_discovery_regions_successor.py",
+         "--read", str(directory), "--case", "manufactured", "--output", str(output)],
+        check=True, capture_output=True, text=True,
+    )
+    written = json.loads(output.read_text())
+    assert written["schema"] == regions.SUCCESSOR_SCHEMA
+    assert written["sealed_v1_healed"] is False
+    assert written["production_campaign"] is False
+    station = written["stations"][0]
+    assert station["input_array_hashes"]["phi0"]["sha256"]
+    assert station["regions"]["normal_energy"]["child_fixed"]["boundary_velocity"] == [0.0, 0.0]
+    assert station["regions"]["contours"]["continuum_optimized_peak"] is False
+    assert "continuum-optimized peak" in station["regions"]["contours"]["convention"]
+    assert "peak_rate" in station["regions"]["contours"]["convention"]
+    assert written["sealed_v1_speeds_used"] is False
+    assert written["sealed_v1_rewritten"] is False
+    binding = station["v1_chunk_binding"]
+    assert binding["verified"] is True
+    assert binding["bound"] is False
+    assert binding["rewritten"] is False
+    digest = hashlib.sha256(output.read_bytes()).hexdigest()
+    refused = subprocess.run(
+        [str(PYTHON), str(ROOT / "scripts/lab.py"), "scripts/derive_nsc_discovery_regions_successor.py",
+         "--read", str(directory), "--case", "manufactured", "--output", str(output)],
+        capture_output=True, text=True,
+    )
+    assert refused.returncode != 0
+    assert "refusing to replace" in refused.stderr
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == digest
+    assert json.loads(read.stdout)["stations"][0]["chunk_sha256"] == station["chunk_sha256"]
+    assert before == tuple((path.stat().st_mtime_ns, path.stat().st_size, path.stat().st_mode) for path in qualified)
+    assert _sealed_stat() == sealed_before
+    assert not (LAB / "results/development/nsc-discovery-regions-successor-v2.json").exists()
+
+
+def test_v1_chunk_binding_matches_the_original_station_and_blocks_creation(prepared, tmp_path):
+    qualified = tuple(LAB / relative for relative in regions.QUALIFIED_V1_RECORDS)
+    stations = (
+        LAB / "results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000001.npz",
+        LAB / "results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000001.json",
+        LAB / "results/development/nsc-discovery-confirmation-v1/nf512_coupled_dt0.0005-000001.npz",
+        LAB / "results/development/nsc-discovery-confirmation-v1/nf512_coupled_dt0.0005-000001.json",
+    )
+    before = tuple((path.stat().st_mtime_ns, path.stat().st_size) for path in qualified + stations)
+    index = regions.sealed_v1_chunk_index()
+    nf256 = {
+        "npz": hashlib.sha256(stations[0].read_bytes()).hexdigest(),
+        "json": hashlib.sha256(stations[1].read_bytes()).hexdigest(),
+    }
+    nf512 = {
+        "npz": hashlib.sha256(stations[2].read_bytes()).hexdigest(),
+        "json": hashlib.sha256(stations[3].read_bytes()).hexdigest(),
+    }
+    bound = regions.verify_station_chunk_binding("nf256_coupled_dt0.0005", 1, nf256, index)
+    assert bound["verified"] is True and bound["bound"] is True and bound["rewritten"] is False
+    assert bound["speeds_healed"] is False
+    other = regions.verify_station_chunk_binding("nf512_coupled_dt0.0005", 1, nf512, index)
+    assert other["bound"] is True and other["sealed_record"].endswith("nsc-discovery-regions-nf512-v1.json")
+    with pytest.raises(ValueError, match="does not match"):
+        regions.verify_station_chunk_binding(
+            "nf256_coupled_dt0.0005", 1, {"npz": "0" * 64, "json": nf256["json"]}, index,
+        )
+    with pytest.raises(ValueError, match="not verified"):
+        regions.assert_creation_bindings({
+            "sealed_v1_chunk_binding": [{"verified": False, "rewritten": False, "speeds_healed": False}],
+            "sealed_v1_rewritten": False,
+            "sealed_v1_healed": False,
+            "speeds_healed": False,
+        })
+    directory = _station_directory(tmp_path / "episode", prepared["pair"], prepared["live_state"], "nf256_coupled_dt0.0005")
+    output = tmp_path / "would-be-successor.json"
+    refused = subprocess.run(
+        [str(PYTHON), str(ROOT / "scripts/lab.py"), "scripts/derive_nsc_discovery_regions_successor.py",
+         "--read", str(directory), "--case", "nf256_coupled_dt0.0005", "--output", str(output)],
+        capture_output=True, text=True,
+    )
+    assert refused.returncode != 0
+    assert "not in the sealed v1 record" in refused.stderr
+    assert not output.exists()
+    assert before == tuple((path.stat().st_mtime_ns, path.stat().st_size) for path in qualified + stations)

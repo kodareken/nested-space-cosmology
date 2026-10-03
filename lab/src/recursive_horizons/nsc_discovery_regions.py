@@ -11,8 +11,10 @@ same state:
 - connected gradient contours of the total proper-length density at one
   quarter, one half, and three quarters of the dominant peak.
 
-A gradient contour is a measurement cut. The moving normal-energy rate on a
-cut is the Leibniz--Reynolds identity
+A gradient contour is a measurement cut. Its level is a fraction of the
+maximum current nodal sample, not a continuum-optimized peak. The implicit
+speed is ``(fraction * peak_rate - ρ_t) / ρ_x``. The moving normal-energy
+rate on a cut is the Leibniz--Reynolds identity
 
 ```
 d/dt ∫_a^b η dx = η(b) ḃ − η(a) ȧ + F(a) − F(b) + pressure + lapse
@@ -28,11 +30,13 @@ energy parcels. Modal complement columns are not the spatial exterior.
 from __future__ import annotations
 
 import hashlib
+import json
 import math
 from pathlib import Path
 
 import numpy as np
 
+from . import nsc_discovery_extent as extent
 from . import nsc_nested_parent_child as nested
 from . import nsc_regional_energy_exchange as regional
 from . import nsc_spherical_episode_assessment as metric
@@ -53,6 +57,15 @@ CHILD_SOURCE_COLUMNS = (2, 3)
 COLUMN_PAIRS = ((0, 1), (2, 3), (4, 5))
 CONTOUR_FRACTIONS = (0.25, 0.5, 0.75)
 SHALLOW_SLOPE_FRACTION = 1.0e-3
+PEAK_ROUNDOFF_ULPS = 8.0
+CONTOUR_VELOCITY_CONVENTION = (
+    "peak = maximum current nodal sample, not a continuum-optimized peak; "
+    "level = fraction * peak; unique argmax uses density_rate at that index; "
+    "ties within roundoff with compatible rates use that same rate; "
+    "incompatible tied rates stay ambiguous; "
+    "velocity = (fraction * peak_rate - rho_t) / rho_x; "
+    "a shallow slope is not divided; Fourier interpolant; zero-Nyquist derivative"
+)
 DOMINANT_PEAK_FRACTION = 0.5
 FLAT_CONTRAST = 1.0e-4
 RESOLUTION_MODE_KEEP = 0.25
@@ -100,6 +113,9 @@ SETTINGS = {
     "dx_convention": "divide each nodal summand by dx once",
     "derivative": "owned periodic Fourier derivative; Nyquist symbol is zero",
     "evaluation": "Fourier interpolant through the nodes",
+    "contour_velocity_convention": CONTOUR_VELOCITY_CONVENTION,
+    "contour_velocity_formula": "v=(fraction*nodal_peak_rate - rho_t)/rho_x",
+    "continuum_optimized_peak": False,
     "normal_energy_slope": "analytic polarization of F_L/r",
     "piston_work_on_measurement_cut": False,
     "renewal_asserted": False,
@@ -262,7 +278,8 @@ def _freeze_geometry(lifted):
 
 
 def _sample(grid, values, coordinate):
-    return float(nested._periodic_values(grid, values, (float(coordinate),))[0])
+    """Real Fourier sample, including the Nyquist cosine."""
+    return float(extent.real_periodic_values(grid, values, (float(coordinate),))[0])
 
 
 def _circular_distance(left, right, length):
@@ -297,19 +314,19 @@ def moving_normal_energy_rate(grid, energy_summand, flux_summand, pressure_summa
     densities = {name: values / spacing for name, values in fields.items()}
     divergence = np.asarray(grid.derivative @ fields["flux"], dtype=float)
     pointwise = fields["slope"] + divergence - fields["pressure"] - fields["lapse"]
-    flux_ends = nested._periodic_values(grid, fields["flux"], (left, right))
-    energy_ends = nested._periodic_values(grid, fields["energy"], (left, right))
+    flux_ends = extent.real_periodic_values(grid, fields["flux"], (left, right))
+    energy_ends = extent.real_periodic_values(grid, fields["energy"], (left, right))
     fixed_boundary_flux = float((flux_ends[0] - flux_ends[1]) / spacing)
-    derivative_flux = nested.interval_integral(grid, divergence / spacing, (left, right))
+    derivative_flux = extent.real_interval_integral(grid, divergence / spacing, (left, right))
     # Collocation inflow minus the derivative-matrix divergence, with the sign
     # that makes flux + pressure + lapse + defect reproduce ∫ slope/dx.
     endpoint_gap = float(-derivative_flux - fixed_boundary_flux)
-    pointwise_defect = nested.interval_integral(grid, pointwise / spacing, (left, right))
+    pointwise_defect = extent.real_interval_integral(grid, pointwise / spacing, (left, right))
     finite_defect = float(pointwise_defect + endpoint_gap)
-    pressure = nested.interval_integral(grid, densities["pressure"], (left, right))
-    lapse = nested.interval_integral(grid, densities["lapse"], (left, right))
+    pressure = extent.real_interval_integral(grid, densities["pressure"], (left, right))
+    lapse = extent.real_interval_integral(grid, densities["lapse"], (left, right))
     reynolds = float(energy_ends[1] / spacing * right_dot - energy_ends[0] / spacing * left_dot)
-    slope_integral = nested.interval_integral(grid, densities["slope"], (left, right))
+    slope_integral = extent.real_interval_integral(grid, densities["slope"], (left, right))
     rate = float(reynolds + fixed_boundary_flux + pressure + lapse + finite_defect)
     return {
         "interval": [left, right],
@@ -399,25 +416,105 @@ def moving_normal_energy_on_cut(grid, energy_summand, flux_summand, pressure_sum
     return combined
 
 
-def implicit_level_velocity(time_rate, space_slope, *, peak, spacing):
-    """Level-set speed ``-ρ_t / ρ_x``. A shallow slope stays ambiguous."""
+def _roundoff_tolerance(scale, count):
+    """Pointwise gap that is still the same floating-point sample on this grid."""
+    magnitude = max(abs(float(scale)), 1.0)
+    return float(PEAK_ROUNDOFF_ULPS * np.spacing(magnitude) * max(int(count), 1))
+
+
+def nodal_peak(samples, rate=None):
+    """Maximum current nodal sample and its rate.
+
+    The peak is not moved off a node to raise the Fourier interpolant.
+    A unique argmax uses ``rate[index]``. Several samples within roundoff of
+    that maximum are one peak when their rates also agree within roundoff;
+    incompatible rates stay unresolved.
+    """
+    values = np.asarray(samples, dtype=float)
+    if values.ndim != 1 or values.size == 0 or not np.isfinite(values).all():
+        raise ValueError("nodal peak needs a nonempty finite sample vector")
+    peak = float(np.max(values))
+    count = int(values.size)
+    tolerance = _roundoff_tolerance(peak, count)
+    tied = np.flatnonzero(peak - values <= tolerance)
+    index = int(np.argmax(values))
+    report = {
+        "peak_index": index,
+        "peak_value": peak,
+        "tied_indices": [int(item) for item in tied],
+        "tied_peak_count": int(tied.size),
+        "roundoff_tolerance": tolerance,
+        "continuum_optimized_peak": False,
+        "peak_definition": "maximum current nodal sample",
+    }
+    if rate is None:
+        report["peak_rate"] = None
+        report["peak_rate_status"] = "unique_argmax" if tied.size == 1 else "tied_without_rate"
+        return report
+    rates = np.asarray(rate, dtype=float)
+    if rates.shape != values.shape or not np.isfinite(rates).all():
+        raise ValueError("nodal peak rate must be a finite sample vector")
+    chosen = float(rates[index])
+    if tied.size == 1:
+        report["peak_rate"] = chosen
+        report["peak_rate_status"] = "unique_argmax"
+        return report
+    tied_rates = rates[tied]
+    span = float(np.max(tied_rates) - np.min(tied_rates))
+    rate_tolerance = _roundoff_tolerance(float(np.max(np.abs(tied_rates))), count)
+    report["peak_rate_span"] = span
+    report["peak_rate_roundoff_tolerance"] = rate_tolerance
+    if span <= rate_tolerance:
+        report["peak_rate"] = chosen
+        report["peak_rate_status"] = "tied_roundoff_compatible"
+        return report
+    report["peak_rate"] = None
+    report["peak_rate_status"] = "tied_incompatible_rates"
+    return report
+
+
+def implicit_level_velocity(time_rate, space_slope, *, peak, spacing, peak_rate, level_fraction):
+    """Speed of the level ``fraction * nodal peak``.
+
+    Differentiating ``ρ(x(t), t) = fraction * peak(t)`` gives
+    ``v = (fraction * peak_rate - ρ_t) / ρ_x``. A shallow ``ρ_x`` is refused
+    before that division. ``peak_rate`` is the nodal sample rate, not the
+    derivative of a continuum-optimized peak.
+    """
     time_rate = float(time_rate)
     space_slope = float(space_slope)
     peak = float(peak)
     spacing = float(spacing)
-    if not all(math.isfinite(value) for value in (time_rate, space_slope, peak, spacing)) or spacing <= 0.0:
+    peak_rate = float(peak_rate)
+    level_fraction = float(level_fraction)
+    values = (time_rate, space_slope, peak, spacing, peak_rate, level_fraction)
+    if not all(math.isfinite(value) for value in values) or spacing <= 0.0:
         raise ValueError("level velocity needs finite rates and a positive spacing")
+    if not 0.0 < level_fraction <= 1.0:
+        raise ValueError("contour fraction must lie in (0, 1]")
+    level_rate = float(level_fraction * peak_rate)
     threshold = SHALLOW_SLOPE_FRACTION * abs(peak) / spacing
     report = {
         "time_rate": time_rate,
         "space_slope": space_slope,
+        "peak": peak,
+        "peak_rate": peak_rate,
+        "level_fraction": level_fraction,
+        "level_rate": level_rate,
         "threshold": float(threshold),
+        "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+        "continuum_optimized_peak": False,
         "physical_wall": False,
     }
     if abs(space_slope) < threshold or peak == 0.0:
-        report.update(status="ambiguous", velocity=None, division=False)
+        report.update(status="ambiguous", velocity=None, division=False, reason="shallow_slope")
         return report
-    report.update(status="measured", velocity=float(-time_rate / space_slope), division=True)
+    report.update(
+        status="measured",
+        velocity=float((level_rate - time_rate) / space_slope),
+        division=True,
+        reason="nodal_peak_level_rate",
+    )
     return report
 
 
@@ -494,10 +591,34 @@ def _refine_crossing(grid, values, level, outside, inside):
     return float((float(outside) + 0.5 * (lo + hi) * delta) % length)
 
 
-def _contour_level(grid, density, density_rate, space_slope, level, peak_index, peak):
+def _unresolved_velocity(reason, *, peak, peak_rate, level_fraction):
+    level_rate = None if peak_rate is None or level_fraction is None else float(level_fraction * peak_rate)
+    return {
+        "time_rate": None,
+        "space_slope": None,
+        "peak": None if peak is None else float(peak),
+        "peak_rate": None if peak_rate is None else float(peak_rate),
+        "level_fraction": None if level_fraction is None else float(level_fraction),
+        "level_rate": level_rate,
+        "threshold": None,
+        "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+        "continuum_optimized_peak": False,
+        "physical_wall": False,
+        "status": "ambiguous",
+        "velocity": None,
+        "division": False,
+        "reason": reason,
+    }
+
+
+def _contour_level(grid, density, density_rate, space_slope, level, peak_index, peak,
+                   peak_rate=None, level_fraction=None):
     component = _dominant_component(density, level, peak_index)
     report = {
         "level": float(level),
+        "level_fraction": None if level_fraction is None else float(level_fraction),
+        "peak_rate": None if peak_rate is None else float(peak_rate),
+        "level_rate": None if peak_rate is None or level_fraction is None else float(level_fraction * peak_rate),
         "filled": bool(component["filled"]),
         "empty": bool(component.get("empty", False)),
         "component_count": _component_count(density, level),
@@ -510,6 +631,7 @@ def _contour_level(grid, density, density_rate, space_slope, level, peak_index, 
         "resolution_gap_forward": None,
         "resolution_status": "unresolved",
         "contour_certified": False,
+        "continuum_optimized_peak": False,
         "physical_wall": False,
         "kind": "measurement_gradient_cut",
     }
@@ -527,14 +649,23 @@ def _contour_level(grid, density, density_rate, space_slope, level, peak_index, 
     # order is the wrap test. The nodal index order misses that one cell.
     report["wrapped"] = bool(backward > forward)
     if density_rate is not None:
-        report["velocity_backward"] = implicit_level_velocity(
-            _sample(grid, density_rate, backward), _sample(grid, space_slope, backward),
-            peak=peak, spacing=float(grid.dx_q),
-        )
-        report["velocity_forward"] = implicit_level_velocity(
-            _sample(grid, density_rate, forward), _sample(grid, space_slope, forward),
-            peak=peak, spacing=float(grid.dx_q),
-        )
+        if peak_rate is None or level_fraction is None:
+            reason = "tied_incompatible_rates" if peak_rate is None else "peak_rate_unavailable"
+            report["velocity_backward"] = _unresolved_velocity(
+                reason, peak=peak, peak_rate=peak_rate, level_fraction=level_fraction,
+            )
+            report["velocity_forward"] = _unresolved_velocity(
+                reason, peak=peak, peak_rate=peak_rate, level_fraction=level_fraction,
+            )
+        else:
+            report["velocity_backward"] = implicit_level_velocity(
+                _sample(grid, density_rate, backward), _sample(grid, space_slope, backward),
+                peak=peak, spacing=float(grid.dx_q), peak_rate=peak_rate, level_fraction=level_fraction,
+            )
+            report["velocity_forward"] = implicit_level_velocity(
+                _sample(grid, density_rate, forward), _sample(grid, space_slope, forward),
+                peak=peak, spacing=float(grid.dx_q), peak_rate=peak_rate, level_fraction=level_fraction,
+            )
     return report, component
 
 
@@ -561,11 +692,12 @@ def density_contours(grid, density, density_rate=None):
     """Dominant-peak contours of one nodal density. Certification stays false."""
     samples = _nodal(grid, density, "density")
     rate = None if density_rate is None else _nodal(grid, density_rate, "density_rate")
-    peak = float(np.max(samples))
+    selected = nodal_peak(samples, rate)
+    peak = float(selected["peak_value"])
+    peak_index = int(selected["peak_index"])
     floor = float(np.min(samples))
     contrast = (peak - floor) / max(abs(peak), 1.0e-30)
     flat = bool(peak <= 0.0 or contrast < FLAT_CONTRAST)
-    peak_index = int(np.argmax(samples))
     slope = np.asarray(grid.derivative @ samples, dtype=float)
     maxima = _local_maxima(samples)
     dominant = [int(index) for index in maxima if samples[index] >= DOMINANT_PEAK_FRACTION * peak] if peak > 0.0 else []
@@ -592,6 +724,7 @@ def density_contours(grid, density, density_rate=None):
         for fraction in CONTOUR_FRACTIONS:
             level, _component = _contour_level(
                 grid, samples, rate, slope, fraction * peak, peak_index, peak,
+                peak_rate=selected["peak_rate"], level_fraction=float(fraction),
             )
             gap_backward, gap_forward, status = _resolution_gaps(grid, samples, fraction, level)
             level.update({
@@ -605,14 +738,19 @@ def density_contours(grid, density, density_rate=None):
         "peak_x": float(grid.xi_q[peak_index]),
         "peak_value": peak,
         "peak_index": peak_index,
+        "peak_rate": selected["peak_rate"],
+        "peak_rate_status": selected["peak_rate_status"],
+        "tied_peak_count": selected["tied_peak_count"],
+        "peak_roundoff_tolerance": selected["roundoff_tolerance"],
         "contrast": float(contrast),
         "minimum": floor,
         "flags": flags,
         "dominant_peak_count": 0 if flat else len(dominant),
         "levels": levels,
         "contour_certified": False,
+        "continuum_optimized_peak": False,
         "physical_wall": False,
-        "convention": "nodal samples, Fourier interpolant, zero-Nyquist derivative",
+        "convention": CONTOUR_VELOCITY_CONVENTION,
     }
 
 
@@ -850,11 +988,16 @@ def analyze(pair, state, time, *, bundle=None, nodal_rate=None, control_mode="co
         "contours": {
             "peak_x": contours["peak_x"],
             "peak_value": contours["peak_value"],
+            "peak_index": contours["peak_index"],
+            "peak_rate": contours["peak_rate"],
+            "peak_rate_status": contours["peak_rate_status"],
+            "tied_peak_count": contours["tied_peak_count"],
             "contrast": contours["contrast"],
             "flags": contours["flags"],
             "dominant_peak_count": contours["dominant_peak_count"],
             "levels": public_contours,
             "contour_certified": False,
+            "continuum_optimized_peak": False,
             "physical_wall": False,
             "convention": contours["convention"],
         },
@@ -953,4 +1096,219 @@ def check_record(lab=LAB):
         "output_written": False,
         "renewal_asserted": False,
         "contour_certified": False,
+    }
+
+
+SUCCESSOR_SCHEMA = "NSC-DISCOVERY-REGIONS-SUCCESSOR-v2"
+SUCCESSOR_CHECK_SCHEMA = "NSC-DISCOVERY-REGIONS-SUCCESSOR-CHECK-v2"
+QUALIFIED_V1_RECORDS = (
+    "results/development/nsc-discovery-regions-nf256-v1.json",
+    "results/development/nsc-discovery-regions-nf512-v1.json",
+)
+V1_QUALIFICATION = (
+    "Sealed nf256 and nf512 v1 contour speeds and moving half-maximum ledgers "
+    "used v = -rho_t/rho_x and omitted the nodal peak rate. Those bytes are "
+    "not rewritten, recalculated, or healed. Static endpoints and fixed windows "
+    "keep the same zero-velocity Reynolds identity."
+)
+SUCCESSOR_PRODUCERS = PRODUCERS + (
+    "scripts/derive_nsc_discovery_regions_successor.py",
+)
+MAX_OUTPUT_BYTES = 64 * 1024 * 1024
+
+
+def successor_producer_hashes(lab=LAB):
+    lab = Path(lab)
+    rows = {}
+    for relative in SUCCESSOR_PRODUCERS:
+        path = lab / relative
+        rows[relative] = sha256_file(path)
+    return rows
+
+
+def qualify_sealed_region_records(lab=LAB):
+    """Hash the sealed v1 region records. Do not parse or rewrite them."""
+    lab = Path(lab)
+    rows = []
+    for relative in QUALIFIED_V1_RECORDS:
+        path = lab / relative
+        if not path.is_file():
+            raise FileNotFoundError("missing sealed region record " + relative)
+        stat = path.stat()
+        rows.append({
+            "path": relative,
+            "sha256": sha256_file(path),
+            "bytes": int(stat.st_size),
+            "healed": False,
+            "speeds_healed": False,
+            "moving_ledger_healed": False,
+            "parsed": False,
+            "rewritten": False,
+            "qualification": V1_QUALIFICATION,
+        })
+    return rows
+
+
+def _array_hashes(arrays):
+    rows = {}
+    for key, value in arrays.items():
+        array = np.ascontiguousarray(np.asarray(value))
+        rows[str(key)] = {
+            "sha256": hashlib.sha256(array.tobytes()).hexdigest(),
+            "shape": [int(axis) for axis in array.shape],
+            "dtype": str(array.dtype),
+        }
+    return rows
+
+
+def sealed_v1_chunk_index(lab=LAB):
+    """Read case, ordinal, and chunk hashes from the sealed v1 records.
+
+    The stored contour speeds and moving ledgers are not copied into a
+    successor and the files are not rewritten.
+    """
+    lab = Path(lab)
+    index = {}
+    for relative in QUALIFIED_V1_RECORDS:
+        path = lab / relative
+        if not path.is_file():
+            raise FileNotFoundError("missing sealed region record " + relative)
+        record = json.loads(path.read_text())
+        case = str(record["case_id"])
+        for station in record["stations"]:
+            hashes = station["chunk_sha256"]
+            index[(case, int(station["ordinal"]))] = {
+                "record": relative,
+                "chunk_sha256": {"npz": str(hashes["npz"]), "json": str(hashes["json"])},
+            }
+    return index
+
+
+def verify_station_chunk_binding(case_id, ordinal, chunk_sha256, index=None, *, lab=LAB):
+    """Require a historical case/ordinal to match its sealed v1 chunk hash."""
+    if index is None:
+        index = sealed_v1_chunk_index(lab)
+    key = (str(case_id), int(ordinal))
+    actual = {"npz": str(chunk_sha256["npz"]), "json": str(chunk_sha256["json"])}
+    known_cases = {case for case, _ordinal in index}
+    if str(case_id) in known_cases and key not in index:
+        raise ValueError(
+            "ordinal " + str(int(ordinal)) + " is not in the sealed v1 record for " + str(case_id)
+        )
+    if key not in index:
+        return {
+            "verified": True,
+            "bound": False,
+            "case_id": str(case_id),
+            "ordinal": int(ordinal),
+            "reason": "case/ordinal is absent from the sealed v1 chunk index",
+            "rewritten": False,
+            "speeds_healed": False,
+        }
+    expected = index[key]["chunk_sha256"]
+    if actual != expected:
+        raise ValueError(
+            "station chunk hash does not match the sealed v1 record for "
+            + str(case_id) + " ordinal " + str(int(ordinal))
+        )
+    return {
+        "verified": True,
+        "bound": True,
+        "case_id": str(case_id),
+        "ordinal": int(ordinal),
+        "sealed_record": index[key]["record"],
+        "chunk_sha256": actual,
+        "rewritten": False,
+        "speeds_healed": False,
+        "moving_ledger_healed": False,
+    }
+
+
+def assert_creation_bindings(record):
+    """Refuse creation unless every station consulted the sealed v1 index."""
+    if record.get("sealed_v1_rewritten") or record.get("sealed_v1_healed") or record.get("speeds_healed"):
+        raise ValueError("refusing to create a successor that rewrites or heals a sealed v1 record")
+    bindings = record.get("sealed_v1_chunk_binding")
+    if not isinstance(bindings, list) or not bindings:
+        raise ValueError("successor creation requires an explicit sealed v1 chunk binding")
+    for item in bindings:
+        if item.get("rewritten") or item.get("speeds_healed"):
+            raise ValueError("refusing a station binding that rewrites or heals sealed v1 speeds")
+        if item.get("verified") is not True:
+            raise ValueError("station chunk binding was not verified against the sealed v1 index")
+    return record
+
+
+def successor_from_stations(directory, case_id, *, ordinal=None):
+    """Replay corrected contours from original station chunks.
+
+    The fixed child and parent windows stay on the zero-velocity identity.
+    A historical case and ordinal must match the sealed v1 chunk hash before
+    this record can be created. This function does not write a file and does
+    not replace a sealed record.
+    """
+    from . import nsc_discovery_episode as episode
+
+    directory = Path(directory)
+    report = read_station_regions(directory, case_id, ordinal=ordinal)
+    index = sealed_v1_chunk_index()
+    bindings = []
+    for station in report["stations"]:
+        stem = f"{case_id}-{int(station['ordinal']):06d}"
+        _record, arrays = episode.load_checkpoint(directory, case_id, station["ordinal"])
+        station["input_array_hashes"] = _array_hashes(arrays)
+        station["input_npz"] = stem + ".npz"
+        station["sealed_v1_healed"] = False
+        binding = verify_station_chunk_binding(
+            case_id, station["ordinal"], station["chunk_sha256"], index,
+        )
+        station["v1_chunk_binding"] = binding
+        bindings.append(binding)
+    report.update({
+        "schema": SUCCESSOR_SCHEMA,
+        "contour_velocity_convention": CONTOUR_VELOCITY_CONVENTION,
+        "continuum_optimized_peak": False,
+        "sealed_v1_qualification": qualify_sealed_region_records(),
+        "sealed_v1_chunk_binding": bindings,
+        "sealed_v1_speeds_used": False,
+        "sealed_v1_healed": False,
+        "sealed_v1_rewritten": False,
+        "speeds_healed": False,
+        "moving_ledger_healed": False,
+        "static_endpoints_and_fixed_ledgers": (
+            "child_fixed and parent_fixed keep boundary velocity 0 and the same Reynolds identity"
+        ),
+        "producer_hashes": successor_producer_hashes(),
+        "production_campaign": False,
+        "frozen_by_root": False,
+        "output_policy": "creation_only",
+        "output_byte_limit": MAX_OUTPUT_BYTES,
+    })
+    return assert_creation_bindings(report)
+
+
+def successor_check(lab=LAB):
+    """Hash the successor closure and the sealed v1 records. Write nothing."""
+    return {
+        "schema": SUCCESSOR_CHECK_SCHEMA,
+        "contour_velocity_convention": CONTOUR_VELOCITY_CONVENTION,
+        "continuum_optimized_peak": False,
+        "settings": dict(SETTINGS),
+        "domain_limits": dict(DOMAIN_LIMITS),
+        "producer_hashes": successor_producer_hashes(lab),
+        "sealed_inputs": sealed_input_hashes(lab),
+        "sealed_v1_qualification": qualify_sealed_region_records(lab),
+        "sealed_v1_healed": False,
+        "speeds_healed": False,
+        "moving_ledger_healed": False,
+        "sealed_preparations_parsed": False,
+        "sealed_v1_parsed": False,
+        "arrays_loaded": False,
+        "evolved": False,
+        "output_written": False,
+        "production_campaign": False,
+        "frozen_by_root": False,
+        "renewal_asserted": False,
+        "contour_certified": False,
+        "output_byte_limit": MAX_OUTPUT_BYTES,
     }

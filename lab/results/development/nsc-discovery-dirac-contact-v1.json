@@ -1,0 +1,369 @@
+{
+  "angular_completion": {
+    "U": "sigma2 tensor I_spatial",
+    "alternate_conjugation_gap": 1.7763568394002505e-15,
+    "completed_covariance_shape": [
+      48,
+      48
+    ],
+    "completed_energy_over_one_block": 2.0,
+    "completed_states_differ_by": 0.27063658925318274,
+    "conjugation_gap": 0.0,
+    "degeneracy_2_abs_kappa_state_constructed": false,
+    "four_dimensional_angular_vertex": null,
+    "map": "C plus U C U dagger",
+    "multiplied_again_by_M": false,
+    "nonuniqueness_witness": "U exp(i H/||H||) conjugates the same Hamiltonian and changes the state",
+    "owned_mean_multiplicity": 4,
+    "sigma1_is_not_this_map_gap": 6.651845433382257,
+    "sign_pair_factor": 2,
+    "unique": false
+  },
+  "array_sha256": {
+    "alternate_sign_map": "f12ea8b1d1b01be62af2f302442ccf9e9dd3a56cdac46112e6ff81e0fffe9d29",
+    "analytic_Q": "be606b6faa962c8b73ef2cba645abfadf58e63677276b5a055e9fda24653eca9",
+    "analytic_lapse": "a58e2f8894c0b0e587cc6ebf901a320b816e887e70845a73f4f8815192a3a983",
+    "analytic_r": "6ebbcc3378572d4910edfebb9a67b07645a7d9bcba0382c5bb4c094cc5c80044",
+    "analytic_shift": "3c4f42c70bed5dab1c45d38df682bc48f9bcf9e2f13a757a5874fdbe3b20affb",
+    "completed_covariance": "955d9b1aec2497b0037cf0a4db023eab47fbd72b6f03a0e882107933e7e8b71a",
+    "covariance": "d229fb146dbd2693933117e3ae9d9095e82c7d97289c88cef80db57543bff7ea",
+    "current": "8770fe3f13bd91ac62bc6ee3ea204141efb91625b7ac52bd4c8841f5a3eaab86",
+    "finite_difference_gap_Q": "df2f7ddfb7853243e26038d241e50af040737e12c6b47b3f00ca38b6094ad9f1",
+    "finite_difference_gap_lapse": "29c8f10af89e884ffbe9ed7f10f29fcc774c11c84883eb54176eb7bab7380d7f",
+    "finite_difference_gap_r": "8940fb1901ef04d33989ccf871e33463de58e3a682a91539d0ac80bc7246484f",
+    "finite_difference_gap_shift": "94d9692fb2e139318287b60b092ba589eef2964735cd0caebff068db827f1aca",
+    "hamiltonian": "aa2da3154730669e99a1af4fa493be41c47b08bdd0daed3fe8e424860881cef5",
+    "kernel_Q": "0dfbef6fb46ba5551cb668d50f26bc85ab78bb9ba47cb556daa9738b61658e38",
+    "kernel_lapse": "71cbcccaa2c1d6e3322b71cc8b0a49561f9843e48cb9a17f3629a475b8061e43",
+    "kernel_r": "e003e16d510641d084b742c333241a6e6f54cc08c9d68f843cd5960503474eb7",
+    "kernel_shift": "cb069375875ea6d1bcf323c5f81553ae44ba714ddaaa36eb6759632e3dbf2dc8",
+    "lapse": "20bfeb68fabf970f21b4a21ce95682bfade716026dc82bf1f2b7b71c7c71eac0",
+    "p_angular": "2d1c39f9197575fc15d7f16599376c31f911b397ddd83ea2acba83096f38b9de",
+    "p_radial": "a970206c635ae67b52b310b988e217820847d58b7240eac827e661514a9f02ab",
+    "radial_scale": "84c2136927b90493cfe3bfd087739979150bc85aa029b8cee45e522d279b6fcc",
+    "rho": "c1a52938769e941cc46ae660daa081df87c5c3187a0491830fd9da4f6a22a4a7",
+    "shift": "5cdb8672abf5ed6585a8004c55afc6edd1ba810066a75630b71e7d5c64f033f0",
+    "sign_map": "e283d24bcc0ee10672fbbd8b9640cf538908ebc91db1aeeb86b25ac378ed8934",
+    "sphere_radius": "155dd58595467076026decc92ff98a0aaeedfb69f6e473ceaa5e8b0dd4837493",
+    "trace": "ec7a8a1a16449059938662199697ceb4b21f08a9d2424abf6f1620353763b3ca",
+    "trace_structure": "b00b8816280108aeaf7ffdf2d3a244e0d16bb80f72d059ec8d292f4754ab8688",
+    "two_mode_covariance": "2d1e48a9e65e860fc6ffdf536b193da190a562acf69d57e0afefd944ed2522ad",
+    "two_mode_left": "679878554d8baa56b5fa6894f51d2b9f4159ce5c4fd6ecf439c5a4e21f6674c1",
+    "two_mode_right": "661aa2d41a887e2cca6ef174b2bec9bf0dd04537bcb12764c8e8b2f5f1e06656",
+    "weyl_structure": "872620405486981f57b90efa41f58446613150cd537f7a0f3bf7819176e4c268"
+  },
+  "blocks_parent_construction": false,
+  "contact_polynomial": {
+    "contact": "-(12*cR*p_angular**2 + 12*cR*p_angular*p_radial - 12*cR*p_angular*rho + 3*cR*p_radial**2 - 6*cR*p_radial*rho + 3*cR*rho**2 - 12*cW*current**2 + 4*cW*p_angular**2 - 8*cW*p_angular*p_radial + 8*cW*p_angular*rho + 4*cW*p_radial**2 + 4*cW*p_radial*rho + 4*cW*rho**2)/(12*A**2)",
+    "formula_split_gap": "0",
+    "scalar_collective_relations_imposed": false,
+    "trace": "-2*p_angular - p_radial + rho",
+    "trace_equals_rho_minus_p_radial_minus_two_p_angular": "0"
+  },
+  "cpu_limit_seconds": 20.0,
+  "cpu_seconds": 0.19196699999999994,
+  "evolution_ran": false,
+  "frozen_git": {
+    "all_declared_bytes_authenticated": true,
+    "blob_ids": {
+      "lab/scripts/derive_nsc_discovery_dirac_contact.py": "a3af0fd6693ce182d99526d544ded653cd5e6252",
+      "lab/src/recursive_horizons/nsc_adm_source.py": "4a18b10dc4d1ee77687a2a5f5c4e63f1294b7bf3",
+      "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "09f5bba76dbe97badeee6afdac33c32ee1ad1e1e",
+      "lab/src/recursive_horizons/nsc_covariant_operator.py": "75d45101dba6f41042fe6963fc7b4ff0bd35c300",
+      "lab/src/recursive_horizons/nsc_curvature_eft.py": "6e30f9b0a2328fc076a178ae9bbcc29ddde9cd9d",
+      "lab/src/recursive_horizons/nsc_discovery_dirac_contact.py": "80cb389050b6733e924f4faa89f9e7649844ae3e",
+      "lab/src/recursive_horizons/nsc_finite_terms.py": "25775559e282a270da20984eb7053ac7424b90d9",
+      "lab/src/recursive_horizons/nsc_influence.py": "576330398206e4b84ca25df7ec9bfcd4e05bfa17",
+      "lab/src/recursive_horizons/nsc_regulated.py": "bd5e08e7f275ad7c2bef91abdffa46eb03eb65e4",
+      "lab/src/recursive_horizons/nsc_shape_response.py": "b4b3ec9d08083f565486d15ffe6b590b9aa576bb",
+      "lab/src/recursive_horizons/nsc_spherical_action.py": "d9ae939b75b0614cf56152c92d91566a8581c6cc"
+    },
+    "commit": "369a983737b112ff045e82e8c8ebc790949711ee"
+  },
+  "geometric_variation": {
+    "angular_label": 1,
+    "directions": {
+      "Q": {
+        "kernel_antisymmetry": 0.0,
+        "max_abs_gap": 1.7000176266712685e-10
+      },
+      "lapse": {
+        "kernel_antisymmetry": 0.0,
+        "max_abs_gap": 1.7151888243027713e-10
+      },
+      "r": {
+        "kernel_antisymmetry": 0.0,
+        "max_abs_gap": 1.1279168571354248e-10
+      },
+      "shift": {
+        "kernel_antisymmetry": 0.0,
+        "max_abs_gap": 1.3339757076735737e-10
+      }
+    },
+    "finite_difference_step": 1e-06,
+    "grid_points": 12,
+    "mass_radius_disagreement_max_abs": 1.474514954580286e-17,
+    "massless_ward_max_abs": 1.1275702593849246e-16,
+    "mean_multiplicity": 4,
+    "multiplicity_applied_to_noise": false,
+    "multiplied_energy_over_one_block": 4.0,
+    "owned_function": "block_source",
+    "shift_amplitude": 0.08
+  },
+  "geometric_wick": {
+    "Q": {
+      "connected": {
+        "imag": 1.3877787807814457e-17,
+        "real": 19.14613523400962
+      },
+      "mean": {
+        "imag": 4.163336342344337e-17,
+        "real": 0.5838072437560404
+      },
+      "means_added_into_connected": false,
+      "node": 2,
+      "product_of_means": {
+        "imag": 0.0,
+        "real": 0.3408308978620248
+      }
+    },
+    "lapse": {
+      "connected": {
+        "imag": 1.734723475976807e-17,
+        "real": 8.379520749585923
+      },
+      "mean": {
+        "imag": -2.7755575615628914e-17,
+        "real": -0.395932861336103
+      },
+      "means_added_into_connected": false,
+      "node": 2,
+      "product_of_means": {
+        "imag": 0.0,
+        "real": 0.15676283068579377
+      }
+    },
+    "lapse_shift_cross": {
+      "connected": {
+        "imag": 0.005229385361229664,
+        "real": -0.07862992473871283
+      },
+      "cross_contraction_required_to_be_real": false,
+      "note": "each kernel is taken at its own largest analytic node",
+      "product_of_means": {
+        "imag": 1.4662421054517635e-17,
+        "real": 0.1307777965799485
+      },
+      "same_node": true
+    },
+    "r": {
+      "connected": {
+        "imag": 0.0,
+        "real": 0.602427209983494
+      },
+      "mean": {
+        "imag": 0.0,
+        "real": -0.01852093784227966
+      },
+      "means_added_into_connected": false,
+      "node": 6,
+      "product_of_means": {
+        "imag": 0.0,
+        "real": 0.00034302513855758674
+      }
+    },
+    "shift": {
+      "connected": {
+        "imag": 2.0816681711721685e-17,
+        "real": 7.516404045536948
+      },
+      "mean": {
+        "imag": -1.3877787807814457e-17,
+        "real": -0.33030296131174797
+      },
+      "means_added_into_connected": false,
+      "node": 2,
+      "product_of_means": {
+        "imag": 0.0,
+        "real": 0.10910004625131008
+      }
+    }
+  },
+  "missing": {
+    "angular_current_map": null,
+    "four_dimensional_angular_vertex": null,
+    "renormalized_contact_expectation": null,
+    "spherical_harmonic_product_state": null,
+    "vacuum_branch_variation": null
+  },
+  "missing_relationship": "The curvature-EFT contact is the scalar of the Hilbert stress in the convention T_mu_nu = 2/sqrt|g| delta S_m/delta g^{mu nu}. The owned orthonormal map is rho = F_N/(4 pi q r^2), T_01 = F_beta/(4 pi q^2 r^2), p_r = -F_q/(4 pi N r^2), p_perp = -F_r/(8 pi N q r), where F_A = -delta Gamma/delta A after angular integration. The owned canonical object is the nodal partial of Tr(C H) on one direct-ordering block, with M=4 kappa multiplying that mean once. Identifying the partial with F_A requires partial_A B for B = Gamma_heat - Gamma_canonical_sea, counted once, and the heat-kernel subtraction of the composite :T T:. Neither is evaluated. The 2|kappa| angular vertex and the angular current beyond this radial block are not operators here. Until those relations are fixed, the renormalized contact expectation is not a number.",
+  "multiplicity_noise": {
+    "copies": 4,
+    "declared_default": "independent-copy sum scales by M; M^2 is a different state",
+    "independent_product_sum_connected": {
+      "imag": 0.0,
+      "real": 2.7744
+    },
+    "noise_set_to_M_squared_without_a_declared_state": false,
+    "one_copy_connected": {
+      "imag": 0.0,
+      "real": 0.6936
+    },
+    "product_sum_over_one": 4.0,
+    "scaled_over_one": 16.0,
+    "single_observable_scaled_by_M_connected": {
+      "imag": 0.0,
+      "real": 11.0976
+    }
+  },
+  "new_action_coefficient_selected": false,
+  "npz_bytes": 33210,
+  "npz_sha256": "9b7411df723168f7818e5bdcef046c7f5615c76c8bdb4f410c9cbc10ac4f5cb7",
+  "off_shell_identity": {
+    "boundary_variation_discarded": false,
+    "boundary_variation_evaluated": false,
+    "euler_box_and_boundary_counted_again": false,
+    "euler_shift": "cEuler -> cEuler+cW once, in the inherited static-energy convention",
+    "gap": "0",
+    "ghost_initial_data_added": false,
+    "jacobian_set_to_one": false,
+    "metric_map": "inverse_metric_shift"
+  },
+  "one_mode_oracle": {
+    "connected": {
+      "imag": 0.0,
+      "real": -0.24480000000000002
+    },
+    "full_second_moment": {
+      "imag": 0.0,
+      "real": -0.40800000000000003
+    },
+    "means_entered_the_connected_piece": false,
+    "occupation": 0.4,
+    "product_of_means": {
+      "imag": 0.0,
+      "real": -0.1632
+    },
+    "trace_gap": 0.0
+  },
+  "parent_use": "The parent canonical mean force remains M Tr(C H). This benchmark does not replace it and is not a prerequisite for that evolution.",
+  "projection_identity": {
+    "convention": "F_A = -sqrt|g|/(2) T_mu_nu partial g^{mu nu}/partial A",
+    "gaps": {
+      "N": "0",
+      "beta": "0",
+      "q": "0",
+      "r": "0"
+    },
+    "solved": {
+      "current": "F_beta/(4*pi*q^2*r^2)",
+      "p_angular": "-F_r/(8*pi*N*q*r)",
+      "p_radial": "-F_q/(4*pi*N*r^2)",
+      "rho": "F_N/(4*pi*q*r^2)"
+    },
+    "source": "lab/docs/nsc-adm-source-constraints.md and lab/scripts/derive_nsc_adm_source.py"
+  },
+  "quartic_witness": {
+    "P_minus_used": false,
+    "epsilon": 0.35,
+    "exact_state_minus_gaussian_rebuild": 0.022670667247026786,
+    "exact_state_minus_initial": 0.09959551994227199,
+    "four_fermion_installed_as_gaussian_mean_force": false,
+    "gaussian_preserved_by_the_quartic": false,
+    "generator": "(psi dagger V psi)^2",
+    "hartree_covariance_minus_exact": 0.12521392611749335,
+    "hartree_state_minus_its_gaussian": 3.2933555219447487e-16,
+    "mean_field_generator": "<psi dagger V psi> (psi dagger V psi)",
+    "modes": 3,
+    "scalar_expectation_moves_state": 3.2880974658874494e-17,
+    "scalar_generator": "<quartic> I"
+  },
+  "raw_projection": {
+    "algebraic_trace_gap": 3.469446951953614e-18,
+    "coefficients_chosen": false,
+    "composite_subtracted": false,
+    "extractor_note": "weyl_structure and trace_structure are the two scalars multiplied by -cW/(2 A^2) and -cR/(4 A^2); no physical cW or cR is selected",
+    "identified_with_minus_delta_Gamma": false,
+    "input": "one-block nodal partial divided by spacing",
+    "raw_trace_is_not_the_renormalized_dirac_trace": true,
+    "raw_trace_is_the_massless_ward_identity": true,
+    "renormalized": false,
+    "trace": {
+      "max_abs": 6.938893903907228e-18,
+      "node0": -2.6020852139652106e-18
+    },
+    "trace_structure": {
+      "max_abs": 4.81482486096809e-35,
+      "node0": 6.770847460736376e-36
+    },
+    "ward_trace_gap": 6.938893903907228e-18,
+    "weyl_structure": {
+      "max_abs": 0.0015297839478720639,
+      "node0": -4.601438689938514e-05
+    }
+  },
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.12.14",
+    "sympy": "1.14.0"
+  },
+  "schema": "NSC-DISCOVERY-DIRAC-CONTACT-v1",
+  "scope_open": true,
+  "sea_comparison": {
+    "P_minus_frobenius_distance": 2.5729858893400643,
+    "P_minus_installed_as_physical_vacuum": false,
+    "vacuum_branch_definition": "B=Gamma_heat-Gamma_canonical_sea",
+    "vacuum_branch_evaluated": false,
+    "vacuum_branch_owner": "lab/docs/nsc-vacuum-matched-ctp.md"
+  },
+  "source_bindings_after": {
+    "lab/scripts/derive_nsc_discovery_dirac_contact.py": "6b96f4f370908bfc9f5e006a24c7c892faa2e9f61012a8f834018c25d017cdc0",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_curvature_eft.py": "6440e8411e59792020a003d5ab12f9046c12d3e0b598fd06f278247b345c97fc",
+    "lab/src/recursive_horizons/nsc_discovery_dirac_contact.py": "937c9187741469d34e3c155fac286bbb7cf08eb6114e0ed81c9f9929b24ab0ad",
+    "lab/src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "lab/src/recursive_horizons/nsc_spherical_action.py": "66b11798bf42ca758eebdf7479b10d5dedb0094db0c8f4ef8d18bc2f2fe13512"
+  },
+  "source_bindings_before": {
+    "lab/scripts/derive_nsc_discovery_dirac_contact.py": "6b96f4f370908bfc9f5e006a24c7c892faa2e9f61012a8f834018c25d017cdc0",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_curvature_eft.py": "6440e8411e59792020a003d5ab12f9046c12d3e0b598fd06f278247b345c97fc",
+    "lab/src/recursive_horizons/nsc_discovery_dirac_contact.py": "937c9187741469d34e3c155fac286bbb7cf08eb6114e0ed81c9f9929b24ab0ad",
+    "lab/src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "lab/src/recursive_horizons/nsc_spherical_action.py": "66b11798bf42ca758eebdf7479b10d5dedb0094db0c8f4ef8d18bc2f2fe13512"
+  },
+  "specialization_witness": {
+    "difference": "1.00000000000000",
+    "pure_radial_current_contact": "1.00000000000000",
+    "reason": "T_01 can be nonzero while the collective kinetic, charge and vacuum scalars vanish",
+    "scalar_collective_specialization_used_as_dirac_stress": false,
+    "zero_collective_source_contact": "0"
+  },
+  "status": "FINITE_BENCHMARK_CALCULATED_PHYSICAL_DIRAC_CONTACT_OPEN",
+  "two_mode_wick_oracle": {
+    "connected": {
+      "imag": -0.01815,
+      "real": -0.060196000000000006
+    },
+    "full_second_moment": {
+      "imag": -0.018150000000000006,
+      "real": -0.052174000000000005
+    },
+    "gap": 9.813077866773595e-18,
+    "product_of_means": {
+      "imag": 0.0,
+      "real": 0.008022000000000007
+    }
+  },
+  "ultraviolet_campaign_ran": false
+}
