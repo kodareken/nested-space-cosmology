@@ -17,11 +17,92 @@ The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
 same-spectrum local induced term, counted once. The vacuum-matched CTP branch
 remains a separate historical choice.
 
-## Active discovery programme, 2 October 2026
+## Responsive parent, 3 October 2026
+
+The approved programme starts at `eb4798c`. This is the current cursor.
+The [2 October discovery programme](#active-discovery-programme-2-october-2026)
+remains a preserved domain that started at `ea6c699`.
+
+Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
+[episode adapter](../lab/docs/nsc-discovery-parent-episode.md),
+[observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
+[response adapter](../lab/docs/nsc-discovery-parent-response.md),
+[step control](../lab/docs/nsc-discovery-parent-step-control.md)
+and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
+The episode runner and the response adapter are implemented. The response
+advances one admitted step. It is not a long held result. No production
+evolution has been run. Preparation is not accepted, and renewal is not
+claimed. These preparations are not a resolved input for production.
+The incoming gate stays paused. This is not a bounce search.
+
+The first immutable pilot is
+[pilot.json](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json).
+Its original `nf64` and `nf128` records stay unchanged. Finite CAR
+admissibility holds, and the balanced case uses the actual solved
+population mix. On \(n_f=128\) the relative SVD discards the kinetic-anchor
+row. The realized fine anchor is \(0.000154624662736\); the recorded target
+is \(0.000135234609664\). That stored convergence flag remains invalid for
+the anchored solve. The later hard-anchor repair does not heal this record.
+
+From \(n_f=64\) to \(n_f=128\), the absolute maxima move from \(0.182\) to
+\(0.489\) in the full Hamilton residual, from \(0.347\) to \(0.516\) in the
+full momentum residual, from \(10.23\) to \(20.01\) in the physical normal
+radial rate, and from \(85.34\) to \(198.01\) in \(R_4\). The parent is not
+resolved. This pilot is not a resolved input for production evolution or
+renewal. Its stored label is `NUMERICAL_PREPARATIONS_RETAINED`, with
+`global_parent_PASS` false. Both parent files still store `converged` true
+and status `NUMERICAL_STATIONARY_CANDIDATE`. On \(n_f=128\) that flag does
+not accept the anchored solve. Neither label is an accepted stationary parent.
+
+The hard-anchor repair, producer `f1dd2f1`, wrote two immutable successors.
+Neither contains a trajectory, and neither resolves the parent. The
+[default successor](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json)
+and the [width-1.4 transition](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json)
+both keep `NUMERICAL_PREPARATIONS_RETAINED`, with `evolved` false,
+`trajectory` false and `global_parent_PASS` false. Their kinetic anchors
+meet the hard-anchor test at roundoff. Each successor parent file still
+stores `converged` true and `NUMERICAL_STATIONARY_CANDIDATE`. That stored
+label does not accept the fallback geometries. The original \(n_f=128\)
+false convergence stays invalid in its own record.
+
+On the default profile the \(n_f=128\) fallback moves the centre clock from
+the original record's \(0.998\) to \(17.288\). On the width-1.4 profile the
+\(n_f=64\) fallback centre clock is \(7.374\). Those excessive fallback
+geometries are not accepted. The native owner now bounds a later fallback
+by five percent in relative \(Q\), \(r\), clock and proper length. That
+bound does not rewrite these records.
+
+The wider \(n_f=128\) preparation keeps its geometry unchanged. Its physical
+normal radial rate is \(17.208\), \(R_4\) is about \(113.797\), and the full
+Hamilton and momentum maxima are \(0.1234\) and \(0.15794\). Broadening the
+profile does not resolve the parent. Root is assessing a bounded open parent
+and an offset alternative before further production.
+
+The [Dirac contact record](../lab/results/development/nsc-discovery-dirac-contact-v1.json)
+has status `FINITE_BENCHMARK_CALCULATED_PHYSICAL_DIRAC_CONTACT_OPEN`.
+It is an off-shell finite algebra and a mean-versus-connected reference.
+The physical correction is not installed, and the parent mean force stays
+the existing canonical term.
+
+Contour successors are now produced. The root binding
+[nsc-discovery-regions-v2-binding.json](../lab/results/development/nsc-discovery-regions-v2-binding.json)
+is pinned at `4f3d5fc` and verifies 11 producer hashes and 15 input-array
+hashes. The sealed v1 speeds stay unhealed. At \(T=1\) the corrected
+moving-energy rate is \(1.322754\) at \(n_f=256\) and \(2.435297\) at
+\(n_f=512\), so the former refinement agreement is lost. Endpoints and
+fixed windows remain unchanged at roundoff. The parent observer reads
+actual projected leading rates.
+
+<a id="active-discovery-programme-2-october-2026"></a>
+
+## Discovery programme, 2 October 2026
+
+Preserved domain, started at `ea6c699`. Not the active cursor.
 
 Douglas approved the **NSC Discovery Programme: Source-Selected Regions,
 Regeneration and Inherited Local Response**, starting from `ea6c699`.
-The accepted plan in the conversation is the task authority. The first
+The accepted plan in that conversation was the task authority for this
+preserved programme. The first
 implementation wave repairs evidence-writing, supplies an equivalent FFT
 backend and resumable episode runner, and adds regional observables,
 stability diagnostics and a coupled-response specification. Its first
