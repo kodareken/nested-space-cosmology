@@ -12778,6 +12778,13 @@
       "sha256": "302d5d8a0ec0bea580002843b184cf06d38bb96ff94943ee9779bc6b121d940d"
     },
     {
+      "bytes": 9198,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/docs/nsc-discovery-dirac-contact.md",
+      "sha256": "125bd6176711f3036864b7b8535c72d1eee88c4f05ab459ce7b6b89b6a4c8288"
+    },
+    {
       "bytes": 10340,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
@@ -12888,6 +12895,13 @@
       "changed_from_commit": "b7aa5f5e0f87607e16c22bd8b5955993ce42608d",
       "path": "lab/docs/nsc-discovery-parent-continuation.md",
       "sha256": "860920306bee15a4549789b808dafbbbf425d0b36e2b20c89d03246117dbba55"
+    },
+    {
+      "bytes": 3610,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/docs/nsc-discovery-parent-step-control.md",
+      "sha256": "66505a1a0f80a8e48562a2eae7f40398c41942fa6f6bab584845ecf90446ac3a"
     },
     {
       "bytes": 5147,
@@ -84742,6 +84756,13 @@
       "sha256": "c1e5d1e0597889eeab2fd2fc30f695f1e86d5b7814a7e34839a551f06f91078c"
     },
     {
+      "bytes": 1309,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/scripts/derive_nsc_discovery_dirac_contact.py",
+      "sha256": "6b96f4f370908bfc9f5e006a24c7c892faa2e9f61012a8f834018c25d017cdc0"
+    },
+    {
       "bytes": 4460,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
@@ -87521,6 +87542,13 @@
       "sha256": "1b1da243ea75713bc22749e5fd1283f9712d9b82bb7bfc1d9ce5dcf8dc05d91b"
     },
     {
+      "bytes": 42788,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/src/recursive_horizons/nsc_discovery_dirac_contact.py",
+      "sha256": "937c9187741469d34e3c155fac286bbb7cf08eb6114e0ed81c9f9929b24ab0ad"
+    },
+    {
       "bytes": 48899,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
@@ -87603,6 +87631,13 @@
       "changed_from_commit": "ea6c699ea6c6bdcff003314b17d078d9b04d7e16",
       "path": "lab/src/recursive_horizons/nsc_discovery_observables.py",
       "sha256": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea"
+    },
+    {
+      "bytes": 6353,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py",
+      "sha256": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f"
     },
     {
       "bytes": 22505,
@@ -89833,6 +89868,13 @@
       "sha256": "9ca8c499ee2a5984e365a61441b11fc10cd08c268237946d2bcaf77e0956f286"
     },
     {
+      "bytes": 10834,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/tests/test_nsc_discovery_dirac_contact.py",
+      "sha256": "07599b32d2b0017290906d66d6ec4f411e0de6ccb8b9ddf15ad200f8730cf3be"
+    },
+    {
       "bytes": 11192,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "5d2a93b949e3c192fcd06068ef8acd7d0477dd7c",
@@ -89936,6 +89978,13 @@
       "changed_from_commit": "ea6c699ea6c6bdcff003314b17d078d9b04d7e16",
       "path": "lab/tests/test_nsc_discovery_observables.py",
       "sha256": "25b7d9d6eb1010baf8c18c495ce04c8758b231603d352828951300635eaaf60a"
+    },
+    {
+      "bytes": 8475,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "eb4798c974781481d2774a91cdf745b5d647db72",
+      "path": "lab/tests/test_nsc_discovery_parent_step_control.py",
+      "sha256": "83782c2a8c6538ea7b39289079e639b2287f356219147429abb3e34e6af69704"
     },
     {
       "bytes": 9770,
