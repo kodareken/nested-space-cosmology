@@ -1,0 +1,304 @@
+{
+  "CPU_limit_seconds": 30.0,
+  "aggregate_CPU_seconds": 4.8817,
+  "budget_exceeded": false,
+  "common_k": 9.697025592327884e-05,
+  "complete": true,
+  "evolved": false,
+  "global_parent_PASS": false,
+  "mode": "bounded_preparation_pilot",
+  "population": 1,
+  "producers": {
+    "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+    "lab/docs/nsc-discovery-parent.md": "3b317c15e763edd5b0dc1f44616348a14450401cf17b19e3659e41f5188100dd",
+    "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+    "lab/scripts/derive_nsc_discovery_parent.py": "ef94268e5b3aba4f80a5f2195557e9b75feaa2d9cf79e58a1570f8cd7ffaad5a",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "75a06b66a4456cdfc69f7494c89f7eec9a35b81ebc67805d9d1fb8044835bffc",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/src/recursive_horizons/nsc_discovery_parent_traction.py": "5f00bba69962665d2c3e38e307b21cfb4c7db7fd2695d637ceb471835a3643a5",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40",
+    "lab/tests/test_nsc_discovery_parent.py": "169ba0188ea72cc4c8bf1ff303f0081730dca618c052be79010067543ad3342d"
+  },
+  "producing_commit": "f1dd2f1f3fda38efd121b7865b772560d61395cc",
+  "profile": {
+    "envelope_zero": 2.8,
+    "exterior_Q": 2.0,
+    "exterior_radius": null,
+    "k_margin": 0.05,
+    "transition_end": 1.4
+  },
+  "records": [
+    {
+      "CPU_seconds": 0.611313,
+      "blocker": null,
+      "converged": true,
+      "directory": "nf64",
+      "k": 9.697025592327884e-05,
+      "kinetic_anchor": 9.32202868173201e-05,
+      "kmin": 7.803815423496085e-05,
+      "nf": 64,
+      "parent_json_sha256": "da25100fabd12dc453573f1f0ed9813080d9b7283ac2d7066b2e347b6469de0d"
+    },
+    {
+      "CPU_seconds": 0.18132600000000032,
+      "blocker": null,
+      "converged": true,
+      "directory": "nf128",
+      "k": 9.697025592327884e-05,
+      "kinetic_anchor": 9.391986829584667e-05,
+      "kmin": 7.857597035953225e-05,
+      "nf": 128,
+      "parent_json_sha256": "4744113ff70423a517643d4a462f66a3ec13236ff53508064d749ee0ea5a91c0"
+    }
+  ],
+  "refinement_scope": "same declared k; actual projected kinetic anchors and source/projection readouts are reported separately",
+  "same_declared_offset": true,
+  "schema": "NSC-DISCOVERY-PARENT-v1-PILOT",
+  "seed_families": {
+    "128": {
+      "CPU_seconds": 0.09735599999999955,
+      "alpha": 0.5,
+      "k": 9.697025592327884e-05,
+      "kmin": 7.857597035953225e-05,
+      "kmin_by_population": [
+        7.857597035953225e-05,
+        7.127453714382156e-05,
+        6.19397467674069e-05
+      ],
+      "margin": 1.8394285563746586e-05,
+      "margin_fraction": 0.05,
+      "populations": [
+        {
+          "J_abs_max": 0.00036788571127493167,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "child_weight": 0.002363616564165972,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": 0.49999999999999994,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -1.0702952718418444e-18,
+          "kmin": 7.857597035953225e-05,
+          "lowdin_applied": false,
+          "population": 0,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "child_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.5,
+          "trace": 0.002688250301164983,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.002363616564165972,
+            0.00032463373699901087
+          ]
+        },
+        {
+          "J_abs_max": 0.00037466065002630694,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "child_weight": 0.0017683392335225072,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": -5.337980661710677e-17,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -1.5172143995727033e-18,
+          "kmin": 7.127453714382156e-05,
+          "lowdin_applied": false,
+          "population": 1,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "balanced",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.0,
+          "trace": 0.002688250301164983,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0017683392335225072,
+            0.0009199110676424754
+          ]
+        },
+        {
+          "J_abs_max": 0.0003833223238633086,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "child_weight": 0.0010072846661217216,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": -0.4999999999999999,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -2.0768281155690746e-18,
+          "kmin": 6.19397467674069e-05,
+          "lowdin_applied": false,
+          "population": 2,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "parent_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": -0.5,
+          "trace": 0.002688250301164983,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0010072846661217216,
+            0.0016809656350432612
+          ]
+        }
+      ],
+      "sign_independent": true,
+      "signs": [
+        1,
+        -1
+      ],
+      "static_not_forced": true,
+      "trace": 0.002688250301164983
+    },
+    "64": {
+      "CPU_seconds": 1.0482189999999996,
+      "alpha": 0.5,
+      "k": 9.307894311749447e-05,
+      "kmin": 7.803815423496085e-05,
+      "kmin_by_population": [
+        7.803815423496085e-05,
+        7.066294352189279e-05,
+        6.128469679763477e-05
+      ],
+      "margin": 1.5040788882533617e-05,
+      "margin_fraction": 0.05,
+      "populations": [
+        {
+          "J_abs_max": 0.0003008157776506724,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441252394327775,
+          "child_weight": 0.002355829566632937,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8336260068871236,
+            -0.9999999985121231
+          ],
+          "imbalance": 0.5000000000000001,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -9.690137794445035e-19,
+          "kmin": 7.803815423496085e-05,
+          "lowdin_applied": false,
+          "population": 0,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "child_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.5,
+          "trace": 0.002688250478865555,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.002355829566632937,
+            0.0003324209122326178
+          ]
+        },
+        {
+          "J_abs_max": 0.00030772027919116605,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441252394327775,
+          "child_weight": 0.0017583276755761452,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8336260068871236,
+            -0.9999999985121231
+          ],
+          "imbalance": 5.300585938817266e-17,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -1.2344256381316145e-18,
+          "kmin": 7.066294352189279e-05,
+          "lowdin_applied": false,
+          "population": 1,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "balanced",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": 0.0,
+          "trace": 0.002688250478865555,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0017583276755761452,
+            0.0009299228032894096
+          ]
+        },
+        {
+          "J_abs_max": 0.00031649997667696595,
+          "alpha": 0.5,
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441252394327775,
+          "child_weight": 0.0009985500406656553,
+          "delta_star": 0.5,
+          "endpoint_imbalances": [
+            0.8336260068871236,
+            -0.9999999985121231
+          ],
+          "imbalance": -0.5,
+          "imbalance_cap": 0.5,
+          "integrand_mean_removed": -1.5610005089868854e-18,
+          "kmin": 6.128469679763477e-05,
+          "lowdin_applied": false,
+          "population": 2,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "parent_heavy",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "target_imbalance": -0.5,
+          "trace": 0.002688250478865555,
+          "trace_rule": "2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "weights": [
+            0.0009985500406656553,
+            0.0016897004381998997
+          ]
+        }
+      ],
+      "sign_independent": true,
+      "signs": [
+        1,
+        -1
+      ],
+      "static_not_forced": true,
+      "trace": 0.002688250478865555
+    }
+  },
+  "sign": 1,
+  "status": "NUMERICAL_PREPARATIONS_RETAINED",
+  "trajectory": false
+}

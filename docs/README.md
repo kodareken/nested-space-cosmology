@@ -8,7 +8,8 @@ constrained calculation into a settled theory.
 |---|---|
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
-| Active discovery programme | Accepted conversation plan; [execution status](current-result.md#active-discovery-programme-2-october-2026), [episode](../lab/docs/nsc-discovery-episode.md), [observer](../lab/docs/nsc-discovery-observables.md), [response](../lab/docs/nsc-discovery-response.md) |
+| Responsive parent | Approved from `eb4798c`; successors remain unresolved; [status](current-result.md#responsive-parent-3-october-2026), [preparation](../lab/docs/nsc-discovery-parent.md), [episode](../lab/docs/nsc-discovery-parent-episode.md), [observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer), [response](../lab/docs/nsc-discovery-parent-response.md), [step control](../lab/docs/nsc-discovery-parent-step-control.md), [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md), [default successor](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json), [width-1.4 successor](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json), [contour binding](../lab/results/development/nsc-discovery-regions-v2-binding.json) |
+| Earlier discovery programme | Preserved from `ea6c699`; [record](current-result.md#active-discovery-programme-2-october-2026), [episode](../lab/docs/nsc-discovery-episode.md), [observer](../lab/docs/nsc-discovery-observables.md), [response](../lab/docs/nsc-discovery-response.md) |
 | Completed finite parent–child pair | [Owning note](../lab/docs/nsc-nested-parent-child.md), [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json), [driver](../lab/scripts/derive_nsc_nested_parent_child_confirmation.py), [preserved v1](../lab/results/development/nsc-nested-parent-child-v1.json) |
 | Parent–child replay and figure | [Portable basis](../lab/results/development/nsc-nested-parent-child-replay-basis-v1.json), [independent consumer](../lab/scripts/check_nsc_nested_parent_child_confirmation.py), [figure](../lab/results/development/nsc-nested-parent-child-figure.png) |
 | Same-action conformal gauge and episode | [Proof and scope](../lab/docs/nsc-spherical-conformal-gauge.md), [record](../lab/results/development/nsc-spherical-conformal-episode-v1.json) |
@@ -67,6 +68,15 @@ series, and the saved consumers
 [nsc-spherical-null-expansion.md](../lab/docs/nsc-spherical-null-expansion.md),
 and
 [nsc-geometry-graded-window.md](../lab/docs/nsc-geometry-graded-window.md).
+The responsive-parent notes
+[nsc-discovery-parent.md](../lab/docs/nsc-discovery-parent.md),
+[nsc-discovery-parent-episode.md](../lab/docs/nsc-discovery-parent-episode.md),
+[nsc-discovery-parent-response.md](../lab/docs/nsc-discovery-parent-response.md),
+[nsc-discovery-parent-step-control.md](../lab/docs/nsc-discovery-parent-step-control.md)
+and [nsc-discovery-dirac-contact.md](../lab/docs/nsc-discovery-dirac-contact.md),
+and the parent observer in
+[nsc-discovery-regions.md](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
+also have no `docs/` copy.
 The maintained successor and its assessment live in
 [nsc-regeneration-episode.md](../lab/docs/nsc-regeneration-episode.md),
 [nsc-spherical-episode-assessment.md](../lab/docs/nsc-spherical-episode-assessment.md),

@@ -90,22 +90,30 @@ claim, name the region, scale, observer, state, and compared quantity.
 
 ## Present regeneration programme
 
-Douglas's accepted **NSC Discovery Programme: Source-Selected Regions,
-Regeneration and Inherited Local Response** starts from `ea6c699`. It
-continues past the short episode toward physical regime classification,
-source-selected boundaries and scales, repeated transfer, coupled local
-response and a held-out prediction. A completed identity is a building
-block, not the programme's publication checkpoint. Regular black-hole
-interiors are prior foundations; do not start a bounce-rediscovery campaign.
+The approved programme is the responsive parent, starting at `eb4798c`.
+Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
+[episode adapter](../lab/docs/nsc-discovery-parent-episode.md),
+[observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
+[response adapter](../lab/docs/nsc-discovery-parent-response.md),
+[step control](../lab/docs/nsc-discovery-parent-step-control.md)
+and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
+The episode runner and the response adapter are implemented. The response
+is one admitted step, not a long held result. The bounded pilots do not
+resolve the parent. They are not a resolved input for production evolution
+or autonomous renewal. Preparation is not accepted. The recorded blocker is
+in [current result](current-result.md#responsive-parent-3-october-2026).
+Regular black-hole interiors remain prior foundations; do not start a
+bounce-rediscovery campaign. The incoming gate stays paused. Keep the
+accepted plan in the task, not another repository plan or handover.
 
-Use six Mac Grok workers initially with non-overlapping ownership, one Git
-integration owner and one scientific campaign executor. The aggregate
-numerical budget is six CPU-hours per batch, with checkpointing and a named
-next experiment before spending again. Independent cases use the Mac's
-cores; never launch duplicate campaigns. Freeze numerical inputs before
-production. Keep the accepted plan in the task, not another repository plan
-or handover. One unified article is the publication target; preserve earlier
-manuscripts and releases while the new findings are developed.
+Six Mac Grok workers share the work with one integration owner and one
+scientific executor. The aggregate numerical budget is six CPU-hours per
+batch. One unified article is the publication target; earlier manuscripts
+and releases stay preserved.
+
+The earlier **NSC Discovery Programme: Source-Selected Regions,
+Regeneration and Inherited Local Response** started at `ea6c699`.
+Its measured chain remains preserved input and is not the active cursor.
 
 The [finite parent–child construction](../lab/docs/nsc-nested-parent-child.md),
 confirmed on 2 October 2026, completes its declared reciprocal state/geometry
@@ -118,8 +126,8 @@ incoming-gate campaign.
 The earlier finite-regeneration investigation started at `9a9090a` and
 established the short coupled loop. Its chain was a regional difference,
 exchange, state–geometry feedback, maintained structure, and a local
-measurement. Those results are inputs to the active discovery programme
-above, which starts at `ea6c699`. The code owner is
+measurement. Those results are inputs to the responsive parent and to the preserved
+discovery programme that started at `ea6c699`. The code owner is
 `lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py`.
 The v5 replay,
 `lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py`,

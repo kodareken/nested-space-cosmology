@@ -1,0 +1,53 @@
+{
+  "schema": "NSC-DISCOVERY-REGIONS-v2-ROOT-BINDING",
+  "producer_commit": "4f3d5fc55117905d8fc65c011b4ab21fd1cb1cd5",
+  "records": [
+    {
+      "path": "lab/results/development/nsc-discovery-regions-nf256-v2.json",
+      "sha256": "ac297939c93333c2a0db20c57e2f234de53837c9ae1a654806e37908d848d741",
+      "producer_hashes_verified_against_commit": true,
+      "input_binding": [
+        {
+          "verified": true,
+          "bound": true,
+          "case_id": "nf256_coupled_dt0.0005",
+          "ordinal": 1,
+          "sealed_record": "results/development/nsc-discovery-regions-nf256-v1.json",
+          "chunk_sha256": {
+            "npz": "12cf7f8c98353018dce68dfae1b2e92f810754e17bda7e3000b9a75f15f49c2c",
+            "json": "09e075f60149c94dcb596b4b44b6617ce353e45d5f03f28e0b2ca24fa246d215"
+          },
+          "rewritten": false,
+          "speeds_healed": false,
+          "moving_ledger_healed": false
+        }
+      ]
+    },
+    {
+      "path": "lab/results/development/nsc-discovery-regions-nf512-v2.json",
+      "sha256": "8d56d3c69d8fc44ed421edea20c4d364d930819e696c86aab6c5674f5221cc80",
+      "producer_hashes_verified_against_commit": true,
+      "input_binding": [
+        {
+          "verified": true,
+          "bound": true,
+          "case_id": "nf512_coupled_dt0.0005",
+          "ordinal": 1,
+          "sealed_record": "results/development/nsc-discovery-regions-nf512-v1.json",
+          "chunk_sha256": {
+            "npz": "1991fcc88b46d55ecf2c356305cf0068d4bc4e92e844d1f3cea61672d63e25f0",
+            "json": "777279ed9d4a0a24c91d9775f3d664ad9fbcd750492672a3c6c0c70e12aad7ce"
+          },
+          "rewritten": false,
+          "speeds_healed": false,
+          "moving_ledger_healed": false
+        }
+      ]
+    }
+  ],
+  "frozen_by_root": true,
+  "historical_bytes_changed": false,
+  "scope": "Corrected nodal-peak contour velocity on the original T=1 station chunks; fixed-window ledgers unchanged.",
+  "scientific_result": "The corrected moving-energy rates do not support the former nf256/nf512 refinement-agreement claim.",
+  "filesystem_policy": "Tracked content hashes and producing commit establish immutable evidence; files are regular nonexecutable Git files."
+}

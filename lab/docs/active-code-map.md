@@ -15,11 +15,36 @@ or an older cursor. It does not resume the campaign. Do not drop recorded
 error gaps. The [archived candidate notes](#archived-candidate-notes) at the
 end of this file are not the active queue.
 
-## Active discovery implementation, 2026-10-02
+## Responsive parent, approved from `eb4798c`
 
-The accepted conversation programme starts at `ea6c699`; it continues
+Current programme. Not a roadmap and not a resolved parent. The original
+feasibility pilot remains unresolved, and its fine convergence flag stays
+invalid. Hard-anchor successors from `f1dd2f1` keep roundoff-correct anchors,
+remain unresolved, and contain no trajectories. Excessive fallback geometries
+are not accepted, and the native fallback bound does not heal those records.
+These preparations are not a resolved input for production. Renewal is not
+claimed. The blocker is the
+[status](../../docs/current-result.md#responsive-parent-3-october-2026).
+The incoming-gate campaign stays paused. No bounce search is opened.
+Root is assessing a bounded open parent and an offset alternative before
+further production.
+
+| Responsibility | Owner |
+|---|---|
+| Parent preparation | [Note](nsc-discovery-parent.md); `src/recursive_horizons/nsc_discovery_parent.py`; `scripts/derive_nsc_discovery_parent.py`; [original pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json); [default successor](../results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json); [width-1.4 successor](../results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json) |
+| Episode adapter | [Note](nsc-discovery-parent-episode.md); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`. Implemented. No production episode is recorded. |
+| Parent observer | [Leading parent observer](nsc-discovery-regions.md#leading-parent-observer); `src/recursive_horizons/nsc_discovery_parent_observer.py`; [contour binding](../results/development/nsc-discovery-regions-v2-binding.json) pinned `4f3d5fc`. Actual projected leading rates. Corrected moving-energy rates lose the former refinement agreement. Endpoints and fixed windows stay at roundoff. Sealed v1 speeds stay unhealed. |
+| Response adapter | [Note](nsc-discovery-parent-response.md); `src/recursive_horizons/nsc_discovery_parent_response.py`; `scripts/derive_nsc_discovery_parent_response.py`. Implemented one-step stage, not a long held result. |
+| Step control | [Note](nsc-discovery-parent-step-control.md); `src/recursive_horizons/nsc_discovery_parent_step_control.py` |
+| Dirac contact | [Note](nsc-discovery-dirac-contact.md); `src/recursive_horizons/nsc_discovery_dirac_contact.py`; [record](../results/development/nsc-discovery-dirac-contact-v1.json). Off-shell reference; physical correction not installed. |
+
+<a id="active-discovery-implementation-2026-10-02"></a>
+
+## Discovery implementation, 2026-10-02
+
+Preserved wave, started at `ea6c699`. Not the active cursor. It continues
 past the short episode to source-selected regions and a predictive local
-response. The incoming-gate campaign stays paused. Initial owners:
+response. The incoming-gate campaign stays paused. Owners of that wave:
 
 | Responsibility | Owner |
 |---|---|
