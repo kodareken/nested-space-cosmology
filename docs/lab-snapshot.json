@@ -12862,6 +12862,13 @@
       "sha256": "1c5e05d4998c37e9744f972a163d105dc411949879a55abe4d038a5b6d2a21b3"
     },
     {
+      "bytes": 5169,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/docs/nsc-discovery-leading-virial.md",
+      "sha256": "a3e042dc5b6c614e49f7976b898af8c2ed7a4625cf29a3a1e5c1308f6bb9bf54"
+    },
+    {
       "bytes": 7829,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "ea6c699ea6c6bdcff003314b17d078d9b04d7e16",
@@ -78218,6 +78225,279 @@
       "sha256": "fdc7c80164e323a570456c75ab4d831bb5b1d77e2ce2ed8563a0651c0f7cabd8"
     },
     {
+      "bytes": 108,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/cpu-ledger.json",
+      "sha256": "06258c21d58b8a4a1fb88b277bbb06efc63a10f28992c9daa866c214f8b1a47f"
+    },
+    {
+      "bytes": 0,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/cpu-ledger.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 55611,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/manifest.json",
+      "sha256": "1ba93a6aef113a2f2cda43d48404afec3fa972145b43ce2dc7b5ad96f7c95541"
+    },
+    {
+      "bytes": 13009,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.0005-000000.json",
+      "sha256": "a5d5d39584a9ed416ba41d409fdefbe5f346f13f461eb8fba7ae322283bc4b57"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.0005-000000.npz",
+      "sha256": "6efe0ce93f42e3db0385e99f0ac091dca800421fb80089ce2ea4875ffc4d06c7"
+    },
+    {
+      "bytes": 12879,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.0005-000001.json",
+      "sha256": "0fc4177bd3444b0948a8e064b46e021efe7b9186528308827c316d2981a547c9"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.0005-000001.npz",
+      "sha256": "1bfa2efe43ab0b717576c81e7cd330bff5bcff77a080497622de1030285369a6"
+    },
+    {
+      "bytes": 167791,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.0005-observations.jsonl",
+      "sha256": "a2926f6ddb5f295507b5424707a18c7fb9d2a5938b0abf4f76749dd377520b10"
+    },
+    {
+      "bytes": 13027,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.001-000000.json",
+      "sha256": "5467b052bf74620fd5c2c02ac462a5e0251708f967b956c493f8d70011090c62"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.001-000000.npz",
+      "sha256": "c67f6b707c92b70dfa4256174aca0238ae7d967248c1d46e5ea3a4a478dbbb51"
+    },
+    {
+      "bytes": 12867,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.001-000001.json",
+      "sha256": "618c52829f1d936a6124b7bc0c5fba6cb1f2136d6a76a493af666db33f40bd4a"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.001-000001.npz",
+      "sha256": "bb4314123c46e2e0be1405e63365096548bce14b6d9dbc3ae2d5f0e667007989"
+    },
+    {
+      "bytes": 167955,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_dt0.001-observations.jsonl",
+      "sha256": "795c12011f81e823e979dc6cebe0ad5b44654bd6788749c79bd1f063db0bc556"
+    },
+    {
+      "bytes": 13299,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_frozen_geometry_dt0.0005-000000.json",
+      "sha256": "33f250c2019db75628ab59c32d76c6d15b3b77acfa924059fb5a9de18b482a5c"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_frozen_geometry_dt0.0005-000000.npz",
+      "sha256": "f307cd31d692eb04dba4d502c9b03d9591741ae9ece125c1f1b0bd271bc341e4"
+    },
+    {
+      "bytes": 181190,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_frozen_geometry_dt0.0005-observations.jsonl",
+      "sha256": "2a116bc724fbc8a94912dac018c994cb22208585abfaa8612baf817a79cdd3c5"
+    },
+    {
+      "bytes": 13293,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_frozen_geometry_dt0.001-000000.json",
+      "sha256": "6302300288106843570c1fd015c7cd3d2adcf6ff555dad359aeca365206f2bbf"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_frozen_geometry_dt0.001-000000.npz",
+      "sha256": "52af87ee5637d818de32ac8c0378a005fe38a8b69987478a03fa01bb4a25cf67"
+    },
+    {
+      "bytes": 181163,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_coherent_frozen_geometry_dt0.001-observations.jsonl",
+      "sha256": "136b3813a9a76117ce61103bf4dba68457dfcb089208b0cf8672f0a99d0637f1"
+    },
+    {
+      "bytes": 13039,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000000.json",
+      "sha256": "4c3d6b3868a95ee14fe1598f086cc88c059338c94bd823dc8ad0a736140a394c"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000000.npz",
+      "sha256": "9cbde0a38bf9ece18c8e738bbff56fe83e348d40369aa7e770bf843fa715ae99"
+    },
+    {
+      "bytes": 12881,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000001.json",
+      "sha256": "be71e10ebf4e3e5657fac1231b121420739a89bca66ae45e802682bc1254ac14"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-000001.npz",
+      "sha256": "cc20ac8506fd8686f5660279f8b11512212c800efcd532e092dc605287442809"
+    },
+    {
+      "bytes": 168101,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.0005-observations.jsonl",
+      "sha256": "4fff323109eb17330a4e2a31f40118b3421560fbe1ffef09e0a78a6bb8b61eb6"
+    },
+    {
+      "bytes": 13034,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.001-000000.json",
+      "sha256": "f3f02710eba62bebd37ee5bc36ccfcc46360ab0c09e464078b7a6e573947e822"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.001-000000.npz",
+      "sha256": "35f7a4616109e98cad502d1153f9b5448b0a590b1762f87014f0fa0b62cfa799"
+    },
+    {
+      "bytes": 12872,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.001-000001.json",
+      "sha256": "5285be62eb587eb8fd5d950abdf43e48538de7a30e7a991eeafcb2d5112a62b4"
+    },
+    {
+      "bytes": 210148,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.001-000001.npz",
+      "sha256": "6af001be3d0b8e6b11d9a99d81bf00d223b65c18f47b05e49235de9d714c4af0"
+    },
+    {
+      "bytes": 168099,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf128_uniform_dt0.001-observations.jsonl",
+      "sha256": "69e352adb676319b60baf445dcb869aa992755a2b558b2f2d44c57116133b758"
+    },
+    {
+      "bytes": 14178,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.0005-000000.json",
+      "sha256": "f577ed770fdf5e4ef0dad4820bdad3b98e4686493f87cf41c0b86faabb4c7a0f"
+    },
+    {
+      "bytes": 679140,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.0005-000000.npz",
+      "sha256": "ab6696788361b926113be90d9b4c082588e001fb44dc7f7ac82e76f4cc5668c1"
+    },
+    {
+      "bytes": 14024,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.0005-000001.json",
+      "sha256": "1ccb0d1a0548a09930a32a0e64ea611b480730daee0780112885d7bd8c57d6e9"
+    },
+    {
+      "bytes": 679140,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.0005-000001.npz",
+      "sha256": "c837145c42204ae8022abe7c7e7ccca147330d6802dae4b5474f63fb7e14014a"
+    },
+    {
+      "bytes": 167631,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.0005-observations.jsonl",
+      "sha256": "d0b3987919880a0a371d8fe9d7bcc4bfc70971f7429b41fc8899048db90c82cf"
+    },
+    {
+      "bytes": 14186,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.001-000000.json",
+      "sha256": "f28c0f674dc915eda9273080fa944405c61725ad2043ec0ca5d5ab1ca02c5b05"
+    },
+    {
+      "bytes": 679140,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.001-000000.npz",
+      "sha256": "c4f2cd3b7f08987091b624db9e3ce3513d5f1c43b1a7e949236f25125deb9e83"
+    },
+    {
+      "bytes": 14011,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.001-000001.json",
+      "sha256": "1285a5ee2eb6879f537cbe504e6878ae54d46b40603e438806aa6b883d885a5e"
+    },
+    {
+      "bytes": 679140,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.001-000001.npz",
+      "sha256": "c81ce0995b45809e5b3fabc0f7a457da4f26bac21aef1366b31fc5adb85764a3"
+    },
+    {
+      "bytes": 167883,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/results/development/nsc-discovery-leading-einstein-v2/nf256_coherent_dt0.001-observations.jsonl",
+      "sha256": "5355e6149bb8ad2ed6a2a134c5346980d1a571ade0282a9296db952a62325aff"
+    },
+    {
       "bytes": 71132,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "528efc700ded6e9bce0d80f78d6d537fba75f627",
@@ -83669,6 +83949,13 @@
       "changed_from_commit": "528efc700ded6e9bce0d80f78d6d537fba75f627",
       "path": "lab/scripts/assess_nsc_discovery_episode.py",
       "sha256": "a93c86c834fb4b353ca55e92783333dac88b9c40f23277cb8f18f2c303e5cb24"
+    },
+    {
+      "bytes": 12288,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/scripts/assess_nsc_discovery_leading_virial.py",
+      "sha256": "7afbe8e26de9e3083237509deafc8deacc85c5490b11971a6f2a83497ddfcf4b"
     },
     {
       "bytes": 23319,
@@ -89460,6 +89747,13 @@
       "changed_from_commit": "0249704dcf909597912c1dd7fd04324b4ecaea38",
       "path": "lab/tests/test_nsc_discovery_leading_step_control.py",
       "sha256": "725b0635dc4ecb54a00fc737f53f0a5aa4a0e83658281c42e68c9a620531837a"
+    },
+    {
+      "bytes": 2737,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+      "path": "lab/tests/test_nsc_discovery_leading_virial.py",
+      "sha256": "7dacf41c967aed18bca396ec0413f75510c9ad19bb46af4268d275eb88efd2d1"
     },
     {
       "bytes": 19031,

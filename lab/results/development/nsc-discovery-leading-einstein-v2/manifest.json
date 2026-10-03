@@ -1,0 +1,1286 @@
+{
+  "schema": "NSC-DISCOVERY-LEADING-STEP-CONTROL-v2",
+  "status": "STATION_REACHED",
+  "cases": [
+    {
+      "case_id": "nf128_uniform_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_uniform_dt0.001-000000.npz",
+      "json": "nf128_uniform_dt0.001-000000.json",
+      "coordinate_time": 2.8723272456041675,
+      "steps": 4783,
+      "already_complete": false,
+      "prefix_bytes": 159164,
+      "prefix_sha256": "5957dd739016432cc41e3ca8fc573b6b76d4dc7107d34ce9a3a920ce82f9c50a"
+    },
+    {
+      "case_id": "nf128_uniform_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_uniform_dt0.0005-000000.npz",
+      "json": "nf128_uniform_dt0.0005-000000.json",
+      "coordinate_time": 2.8831159871076606,
+      "steps": 9207,
+      "already_complete": false,
+      "prefix_bytes": 159158,
+      "prefix_sha256": "0934f6dd11ec0a8bdd5a1181c1ee89b1e53c33ef409c481bdc977ba3332f6b89"
+    },
+    {
+      "case_id": "nf128_coherent_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_coherent_dt0.001-000000.npz",
+      "json": "nf128_coherent_dt0.001-000000.json",
+      "coordinate_time": 2.6669066622634543,
+      "steps": 5181,
+      "already_complete": false,
+      "prefix_bytes": 147165,
+      "prefix_sha256": "2729b2b23f88d94bed81003644de1ae5887cbbdbbf8031a34baec20759b7021e"
+    },
+    {
+      "case_id": "nf128_coherent_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_coherent_dt0.0005-000000.npz",
+      "json": "nf128_coherent_dt0.0005-000000.json",
+      "coordinate_time": 2.6766654286126084,
+      "steps": 10337,
+      "already_complete": false,
+      "prefix_bytes": 147130,
+      "prefix_sha256": "a90784b8fd7d044338e01ee30ae7987b6e9d042d9c2e3f55f2e9305185fa24c6"
+    },
+    {
+      "case_id": "nf256_coherent_dt0.001",
+      "ordinal": 0,
+      "npz": "nf256_coherent_dt0.001-000000.npz",
+      "json": "nf256_coherent_dt0.001-000000.json",
+      "coordinate_time": 2.6578250953166838,
+      "steps": 3983,
+      "already_complete": false,
+      "prefix_bytes": 147132,
+      "prefix_sha256": "fdc7c80164e323a570456c75ab4d831bb5b1d77e2ce2ed8563a0651c0f7cabd8"
+    },
+    {
+      "case_id": "nf256_coherent_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf256_coherent_dt0.0005-000000.npz",
+      "json": "nf256_coherent_dt0.0005-000000.json",
+      "coordinate_time": 2.6861188499464372,
+      "steps": 15293,
+      "already_complete": false,
+      "prefix_bytes": 146994,
+      "prefix_sha256": "24716c0fffdbaa8cd5e564efd01e9866530e94f399364f84403d5dec6e765632"
+    },
+    {
+      "case_id": "nf128_coherent_frozen_geometry_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_coherent_frozen_geometry_dt0.001-000000.npz",
+      "json": "nf128_coherent_frozen_geometry_dt0.001-000000.json",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "already_complete": true,
+      "prefix_bytes": 181163,
+      "prefix_sha256": "136b3813a9a76117ce61103bf4dba68457dfcb089208b0cf8672f0a99d0637f1"
+    },
+    {
+      "case_id": "nf128_coherent_frozen_geometry_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_coherent_frozen_geometry_dt0.0005-000000.npz",
+      "json": "nf128_coherent_frozen_geometry_dt0.0005-000000.json",
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "already_complete": true,
+      "prefix_bytes": 181190,
+      "prefix_sha256": "2a116bc724fbc8a94912dac018c994cb22208585abfaa8612baf817a79cdd3c5"
+    }
+  ],
+  "stations": [
+    0.3,
+    1.0,
+    3.0
+  ],
+  "scope": "leading Einstein diagnostic of curvature EFT; full first-CW correction and completed theory not claimed",
+  "active_geometry_variables": [
+    "Q",
+    "r",
+    "p_Q",
+    "p_r"
+  ],
+  "independent_chi_or_p_chi": false,
+  "C_W_retained_only_in_input_history": true,
+  "cpu_budget_seconds": 165.0,
+  "workers": 4,
+  "numerical_threads_per_worker": 1,
+  "chunk_limit_bytes": 67108864,
+  "evolved": true,
+  "source_hashes": {
+    "lab/docs/nsc-discovery-leading-einstein.md": "8264afabc3a13d4a02332401946535ec13caa72ddaed0777e6f53b66386b7d8a",
+    "lab/scripts/derive_nsc_discovery_leading_einstein.py": "667c07259279feaa9d3233cfffbcd842c82def3580a39aedd5c6700f8e52749f",
+    "lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/tests/test_nsc_discovery_leading_einstein.py": "34f1f0e88720c51aa7c4ce678e02fad5164671c573a9cae660f46aa10ed99f40",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/scripts/derive_nsc_discovery_leading_step_control.py": "b219c21c6a9be9e4ba127d2483b3938079568397539ffc0a0dac16a316f823b5",
+    "lab/tests/test_nsc_discovery_leading_step_control.py": "725b0635dc4ecb54a00fc737f53f0a5aa4a0e83658281c42e68c9a620531837a",
+    "lab/docs/nsc-discovery-leading-step-control.md": "1c5e05d4998c37e9744f972a163d105dc411949879a55abe4d038a5b6d2a21b3"
+  },
+  "producing_commit": "589ebd89462c4dedb3f5660d1a484a1b821e99ae",
+  "initial_binding": {
+    "record_sha256": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "payload_sha256": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81",
+    "producing_commit": "67ab5700229216612e7383dc23d0ae1ce6e479c0",
+    "external_post_run_observation": false,
+    "old_record_modified": false
+  },
+  "input_hashes": {
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000000.json": "2a4f4aca201ff464697b5059a137e67536e28309dc8d6e140b6516e3e84ede9d",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000002.npz": "9f254f117b861eb32235781a78c4618676627f9989934a441ffae41908a8ae92",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-observations.jsonl": "5957dd739016432cc41e3ca8fc573b6b76d4dc7107d34ce9a3a920ce82f9c50a",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000003.json": "ce337fcd2270555195a05a1d7920d5cf3717218a7d1c6a005db64e63e397d49b",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000003.npz": "b8e4de8c5b1c3a305e9218c6be5ad22b58eb3d9d4d54e85ad71e647804928293",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000001.json": "84000743be2dc697a2905260a7f52b224386bffbda078e4c8e63026830a26547",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-observations.jsonl": "a90784b8fd7d044338e01ee30ae7987b6e9d042d9c2e3f55f2e9305185fa24c6",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000000.json": "a4ca23404e0ca7b0138418a3c9d10b390a91edcf862fbd009e74ec6b47e1e37d",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000001.npz": "60eb7137a2ad006935ad0547df09efedd7b062c855ca67d277dc6bc0bac9bff6",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000003.json": "7a35babfd9018abdda3c9bfb3a5c7b35520f612ac4346510eb7156bfa5f5a199",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000004.json": "f32c55c65763ed5653694263d7b589ff73b9a8403babdb30458504c0b7d611c6",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000000.npz": "160ef688bde93bc5fd26473d78c8fa92d578cb15819afb95dbec2fb19fd56236",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-observations.jsonl": "2a116bc724fbc8a94912dac018c994cb22208585abfaa8612baf817a79cdd3c5",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000004.json": "c331fc504318c9a98145e3d5b625052aabde19e80719adba721f832fcf235cf1",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000004.npz": "ab6696788361b926113be90d9b4c082588e001fb44dc7f7ac82e76f4cc5668c1",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000002.json": "c115af447e0df377a4d8c23eef12df6023a8d8482d747e27b8d5b48b53584560",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000001.json": "800255acf39f19535394c513ef3f471837a752550906f66fbe66853294331b4f",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000000.json": "fc2ee5e09a0efe75362b069242d7e6be4c2dcf10a4c9d13a337ae86fcc7ead38",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000002.json": "add7d9da962399183cd93246517bc796fab6ee5c57d6112162f393c3948e088f",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000001.json": "31f1e8a9d4bbb1792a900c59b74997f39e52c21a36e66d9e054dc56086d1a4b3",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000001.json": "10cb6bfb28748b1f718636936d34551f293ac7a5732b4a71edc8e5260b1caf5c",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/cpu-ledger.json": "6515a40906cebafe39db83153afefe1795c616d269723ae93b712894b59ec41c",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000002.json": "76fc68249870beb32ba3c3f5169a389de0a51b9b2cca0ded5b9814fdcffc3a30",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000002.json": "4a90ede3cc65ec6c3de0118f48854f6e7fb34281734b9f6d4c28fc631b8a5178",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-observations.jsonl": "fdc7c80164e323a570456c75ab4d831bb5b1d77e2ce2ed8563a0651c0f7cabd8",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000004.json": "4ede4c1e6686f271f23508ed4f88f6d6d917d6071d3f9fc9acc5c6320db49959",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000003.json": "5244a713b878203536a167c20864eda29234c2594a914fa383e0b34e487873f5",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000003.json": "ca7c0efc43449fbd5fbc07ac4f470abd03c382d589b348bfeea8a3a1310699bd",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000004.json": "5c0cda900b24d313dc412aa27cd7add2811df1501c337988c94db1ad303e4cc9",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000000.json": "7ec65505c605228a4af650ad26f02a53cea53bfa1e965863a19b31d089592bca",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000001.npz": "07d6602709e1a79bfef2ee588b2473c387e1b8cf00ace837c72c85d1451da8fc",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000000.json": "c23315b469862fce0396a4440f6436ff11b1afe8dbe477b3b001418f433ab3bc",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000000.npz": "160ef688bde93bc5fd26473d78c8fa92d578cb15819afb95dbec2fb19fd56236",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000001.npz": "95d11a1de4e32c51ad81494e54b76d26b5b0f22b76d377aca14bbe1245f73244",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000003.npz": "52af87ee5637d818de32ac8c0378a005fe38a8b69987478a03fa01bb4a25cf67",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000000.json": "20c120b0c44dcec7fb03c20a7ea95dc71384bf8e8f3d8d040123dbcec63cfdd8",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000002.npz": "833f74696fbe9d9559109cc64e3f4f5bbacf0d80925441c4f854cb9e956652d8",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000000.npz": "6ff4b8b6e94f74360be800cb1aebfa315c9e41ca3f71252f644349ce1a6689c0",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000003.json": "699f30586bba2ecd8e7985ee43d42337345db90a799216b72f4dc74cdcabc00e",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000001.npz": "e762cbfa0b0e5781858af34c9814d305fdbe51efd9c7152286d06c4a55d4e843",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.npz": "198ddb8808eb7e1a9cad99d13151c5730e9f863106d1ddd3eb4e506dd34d79ca",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000004.json": "6131c9d0663affbc0c9ebfa8bba71443d9a8175cec953dcee4b6fe014c1738ca",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-observations.jsonl": "136b3813a9a76117ce61103bf4dba68457dfcb089208b0cf8672f0a99d0637f1",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000002.npz": "6d650ea0521efb28ee8afcbaca5288a45e1ecf3739977571a934ec7944eda883",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000003.npz": "583e6fbfe9eed5a0ef84331e156c42555d36aaf9718ac571caec236a37333030",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000002.npz": "df2984015a48dc9a3d9f23a41327327d261e318a00bf885b11713506b7af2e46",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000000.npz": "6ff4b8b6e94f74360be800cb1aebfa315c9e41ca3f71252f644349ce1a6689c0",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000001.npz": "ae88d4a1d9a40efdef5982239da927770c77ccfae085ea20b353813398cd31d7",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000003.npz": "60ea92d86d462a4b61bdfe6d15ca5c01a3827de0243b1f0089037ea7df93265c",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000002.npz": "19f9ea1d6dc87bdbe59875ce1e3c082da70be3cbdf9643bc218170e4597acb4a",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000003.npz": "519325db1c4b34570b24be733b49985bdb45d54797705bdb1af6d4e76de59b6d",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000001.npz": "511a0d4d1636d6d543d76ba22a9aae17c63331badeda8a1f1daab8c3f8365d4c",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000000.npz": "6ff4b8b6e94f74360be800cb1aebfa315c9e41ca3f71252f644349ce1a6689c0",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/manifest.json": "37bf85f2bb2794265021afcfc0ceee2b8d69386801c275277d1052dab829f11c",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000004.npz": "9cbde0a38bf9ece18c8e738bbff56fe83e348d40369aa7e770bf843fa715ae99",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000002.json": "ed10a501283af171cf159c942ad1fd9119684f048eb63483479871931e3ec989",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000004.npz": "c67f6b707c92b70dfa4256174aca0238ae7d967248c1d46e5ea3a4a478dbbb51",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000002.npz": "900da6f50b90551fd7a6582833ae9f091aadff6a8111ed69e99780613710d84b",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-observations.jsonl": "24716c0fffdbaa8cd5e564efd01e9866530e94f399364f84403d5dec6e765632",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000001.json": "9371a10e8f0ad95692acf0f23d79f17484c8ff932becee1836474ebaf8a59d16",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000003.npz": "f307cd31d692eb04dba4d502c9b03d9591741ae9ece125c1f1b0bd271bc341e4",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.001-000004.npz": "c4f2cd3b7f08987091b624db9e3ce3513d5f1c43b1a7e949236f25125deb9e83",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000001.json": "20c85c64b8662bac53e7ee3f80010e5d8108744874404de8557449d37ef6db23",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-observations.jsonl": "2729b2b23f88d94bed81003644de1ae5887cbbdbbf8031a34baec20759b7021e",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000003.json": "503e2483b9eb0626fb8118344196593c1e72b99b2764376cd3d73f3ce3246725",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000004.npz": "35f7a4616109e98cad502d1153f9b5448b0a590b1762f87014f0fa0b62cfa799",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000001.json": "83e529b1e256969da966ca2ec96c0154d2fffed56d0861daed329c9e55bc7ee8",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000002.json": "cd5fd9e30a95ef8ce2a8e2e1baab335137096fe280d1d1130f07d59725b4b6dc",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000001.json": "e2ce38cb7c337277d2e4819948db11657833f0723aa4810b0e10c6453fce4a6b",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000004.npz": "6efe0ce93f42e3db0385e99f0ac091dca800421fb80089ce2ea4875ffc4d06c7",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-observations.jsonl": "0934f6dd11ec0a8bdd5a1181c1ee89b1e53c33ef409c481bdc977ba3332f6b89",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000002.json": "ec06d7e4dbc4fcac5b55a4376a2aacd772ba4176ed331125b2ffcddff04d5b96",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000003.json": "371e931448945ce4d1ee6434dccb61016c4f9f768464baf24668a4bf2e5ad2e5",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.001-000004.json": "a7d87f4bab922092f44a87a8c83d1ca200d9ca03626af7414e4d843e60e93a71",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000000.npz": "6ff4b8b6e94f74360be800cb1aebfa315c9e41ca3f71252f644349ce1a6689c0",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000002.npz": "b04ef5a73ef8d06b89d495ad4fdb9829c5be81dee85c4afdbe63453f63d53edd",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf256_coherent_dt0.0005-000000.json": "61e5b047e61bfdbaf0dbcd503decf8c28b3bfe2dd8605b59f02ce80d0b54a6fa",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000003.npz": "b67da208757d67e9c620ded69e131d55866b27034dd9c403e90e0d26eb435079",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000001.npz": "6e3b545bf33889ad7ae3904e26092c87c516737a3c4196e946060e255a914238",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.0005-000003.json": "692040b4f889a87afe6090b3a3810a2493c2da8665c1e215022c6be392cb8d41",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000003.npz": "c7f1e3f4941ce5fcde34ca062f2f8b72e574c5e54ca77c7fd90ac6fcee3be8f9",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000001.npz": "8bf3c02a83d0585d7cb00abf4be984bd3357e203bc2e6a910c8dffcf0f7ad495",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.001-000000.npz": "198ddb8808eb7e1a9cad99d13151c5730e9f863106d1ddd3eb4e506dd34d79ca",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_uniform_dt0.0005-000000.json": "e51b1d8ded0cb326163603224077e4db082d32ae1701390b9d8a20528fc3dde9",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_dt0.0005-000002.npz": "7e2c883e61ee72cecd195c2e2c0ac099b99d861fca3edd21762620383c6bfde7",
+    "lab/results/development/nsc-discovery-leading-einstein-v1/nf128_coherent_frozen_geometry_dt0.001-000002.json": "30bddcc9c9dc15af919e2a6074cce68658c26a851bc2a66ad75383a9d6ca20f7"
+  },
+  "stage": 2,
+  "preparation_cpu_seconds": 0.289808,
+  "child_cpu_seconds": 32.135482,
+  "forecast_factor": 1.5,
+  "results": [
+    {
+      "case_id": "nf128_uniform_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 4911,
+      "stations_reached": [
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 1.5467829999999998,
+      "chunk": "nf128_uniform_dt0.001-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 2.1037994999999965
+    },
+    {
+      "case_id": "nf128_uniform_dt0.0005",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 9441,
+      "stations_reached": [
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 2.718022,
+      "chunk": "nf128_uniform_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 3.687431999999996
+    },
+    {
+      "case_id": "nf128_coherent_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 5515,
+      "stations_reached": [
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 4.028021,
+      "chunk": "nf128_coherent_dt0.001-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 5.391021000000005
+    },
+    {
+      "case_id": "nf128_coherent_frozen_geometry_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_coherent_frozen_geometry_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 0.0,
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        0.3,
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": null,
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false
+    },
+    {
+      "case_id": "nf128_coherent_dt0.0005",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 10984,
+      "stations_reached": [
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 7.250437000000001,
+      "chunk": "nf128_coherent_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 10.138111499999999
+    },
+    {
+      "case_id": "nf256_coherent_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 4326,
+      "stations_reached": [
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 6.263952,
+      "chunk": "nf256_coherent_dt0.001-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 9.075946499999935
+    },
+    {
+      "case_id": "nf256_coherent_dt0.0005",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 15921,
+      "stations_reached": [
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          0.3,
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 10.328267,
+      "chunk": "nf256_coherent_dt0.0005-000001.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 17.622135000000235
+    }
+  ],
+  "memory_limit_bytes": 8589934592,
+  "cpu_accounting": "sum_of_child_process_time",
+  "executor_pools": 1,
+  "stability_certificate": false,
+  "max_T_forced": false,
+  "zero_residual_gate": false,
+  "comparisons": {
+    "nf128_uniform_dt0.001__nf128_uniform_dt0.0005": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": 7.105427357601002e-15,
+          "relative_to_second": 2.7739431764391005e-15
+        },
+        "child_r_proper_mean": {
+          "difference": 8.881784197001252e-16,
+          "relative_to_second": 3.258293764243219e-16
+        },
+        "child_probability": {
+          "difference": 0.0,
+          "relative_to_second": 0.0
+        },
+        "probability_contrast": {
+          "difference": 5.687650071000441e-16,
+          "relative_to_second": 0.00815217391304596
+        },
+        "radial_tide": {
+          "difference": -3.140820936664568e-13,
+          "relative_to_second": -4.351100651104986e-12
+        },
+        "angular_tide": {
+          "difference": -9.572898029830412e-14,
+          "relative_to_second": -9.285870726018965e-13
+        },
+        "clock_rate_x2": {
+          "difference": 3.3306690738754696e-15,
+          "relative_to_second": 2.6005717279116557e-15
+        },
+        "energy_total": {
+          "difference": -5.861977570020827e-14,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": 4.3336064060648286e-16,
+          "relative_to_second": 0.3252804699253993
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": 1.9539925233402755e-14,
+          "relative_to_second": 7.210881469908953e-15
+        },
+        "child_r_proper_mean": {
+          "difference": -1.3322676295501878e-15,
+          "relative_to_second": -5.314698064407116e-16
+        },
+        "child_probability": {
+          "difference": 6.661338147750939e-16,
+          "relative_to_second": 8.881784197001254e-16
+        },
+        "probability_contrast": {
+          "difference": -2.4067709318592364e-15,
+          "relative_to_second": -0.03761755485892771
+        },
+        "radial_tide": {
+          "difference": -1.9796664307847323e-13,
+          "relative_to_second": -2.0536686427371253e-12
+        },
+        "angular_tide": {
+          "difference": -3.7192471324942744e-14,
+          "relative_to_second": -2.991975008787938e-13
+        },
+        "clock_rate_x2": {
+          "difference": 8.659739592076221e-15,
+          "relative_to_second": 6.3914631210556735e-15
+        },
+        "energy_total": {
+          "difference": -1.2967404927621828e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -1.7763568394002505e-15,
+          "relative_to_second": -1.3333333333333333
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": -2.937743412190601e-14,
+          "relative_to_second": -8.457532027231016e-08
+        },
+        "child_r_proper_mean": {
+          "difference": 2.674568289062762e-09,
+          "relative_to_second": 9.426501102186543e-09
+        },
+        "child_probability": {
+          "difference": 5.883071807488705e-13,
+          "relative_to_second": 7.84409574331847e-13
+        },
+        "probability_contrast": {
+          "difference": -1.0783753765851845e-15,
+          "relative_to_second": -0.0017625098220990616
+        },
+        "radial_tide": {
+          "difference": 12441.569348335266,
+          "relative_to_second": 2.3641838511227365e-06
+        },
+        "angular_tide": {
+          "difference": 15197838.986328125,
+          "relative_to_second": 1.2290220318703553e-06
+        },
+        "clock_rate_x2": {
+          "difference": -1.4688713858109674e-14,
+          "relative_to_second": -8.457530183084575e-08
+        },
+        "energy_total": {
+          "difference": 5.865176037067599e-07,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -7.939204849094494e-13,
+          "relative_to_second": -29.187755102040818
+        }
+      }
+    },
+    "nf128_coherent_dt0.001__nf128_coherent_dt0.0005": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": 7.323031070427533e-13,
+          "relative_to_second": 2.805903165824359e-13
+        },
+        "child_r_proper_mean": {
+          "difference": -6.217248937900877e-15,
+          "relative_to_second": -2.227208779698419e-15
+        },
+        "child_probability": {
+          "difference": -5.440092820663267e-15,
+          "relative_to_second": -8.248911858912279e-15
+        },
+        "probability_contrast": {
+          "difference": 5.437428285404167e-12,
+          "relative_to_second": 1.3050307245985139e-11
+        },
+        "radial_tide": {
+          "difference": -1.5556583798925772e-12,
+          "relative_to_second": -1.9082684427471795e-11
+        },
+        "angular_tide": {
+          "difference": -6.654399253847032e-14,
+          "relative_to_second": -6.083941120733112e-13
+        },
+        "clock_rate_x2": {
+          "difference": -2.325029058170003e-12,
+          "relative_to_second": -1.8771364727457565e-12
+        },
+        "energy_total": {
+          "difference": -1.397637561240117e-11,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -1.9984014443252818e-15,
+          "relative_to_second": -1.125
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": 5.933031843596837e-13,
+          "relative_to_second": 2.1138136733079179e-13
+        },
+        "child_r_proper_mean": {
+          "difference": -3.206324095117452e-13,
+          "relative_to_second": -1.2479204191911153e-13
+        },
+        "child_probability": {
+          "difference": 1.8096635301390052e-14,
+          "relative_to_second": 2.5146420306663123e-14
+        },
+        "probability_contrast": {
+          "difference": 2.1915247394588278e-12,
+          "relative_to_second": 5.442056041569218e-12
+        },
+        "radial_tide": {
+          "difference": 1.3541251453474956e-12,
+          "relative_to_second": 1.2903623549195523e-11
+        },
+        "angular_tide": {
+          "difference": -9.23960907783794e-12,
+          "relative_to_second": -6.460061448279993e-11
+        },
+        "clock_rate_x2": {
+          "difference": 2.3652191316614335e-12,
+          "relative_to_second": 1.4379041326420233e-12
+        },
+        "energy_total": {
+          "difference": 4.387601393318619e-12,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -2.1538326677728037e-14,
+          "relative_to_second": -6.466666666666667
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": -1.218721368255382e-15,
+          "relative_to_second": -2.4818230835489944e-07
+        },
+        "child_r_proper_mean": {
+          "difference": 5.963206206605065e-09,
+          "relative_to_second": 2.168603112536416e-08
+        },
+        "child_probability": {
+          "difference": -4.924438634645867e-11,
+          "relative_to_second": -6.16905613872649e-11
+        },
+        "probability_contrast": {
+          "difference": 1.2267808768839927e-07,
+          "relative_to_second": 1.074127996109222e-07
+        },
+        "radial_tide": {
+          "difference": 1984408710.5,
+          "relative_to_second": 4.873219793412537e-07
+        },
+        "angular_tide": {
+          "difference": 1306481270528.0,
+          "relative_to_second": 1.0600094925913333e-06
+        },
+        "clock_rate_x2": {
+          "difference": -1.2466267772992172e-15,
+          "relative_to_second": -3.9430868476916667e-07
+        },
+        "energy_total": {
+          "difference": 1.3282472066666884e-06,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -6.392908424857069e-11,
+          "relative_to_second": -536.147113594041
+        }
+      }
+    },
+    "nf256_coherent_dt0.001__nf256_coherent_dt0.0005": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": 7.291944825738028e-13,
+          "relative_to_second": 2.7939921153933317e-13
+        },
+        "child_r_proper_mean": {
+          "difference": -7.105427357601002e-15,
+          "relative_to_second": -2.54538146251248e-15
+        },
+        "child_probability": {
+          "difference": -5.551115123125783e-15,
+          "relative_to_second": -8.417256998890078e-15
+        },
+        "probability_contrast": {
+          "difference": 5.4365401069844665e-12,
+          "relative_to_second": 1.3048175539474364e-11
+        },
+        "radial_tide": {
+          "difference": -5.2223225743830426e-12,
+          "relative_to_second": -6.406029431922267e-11
+        },
+        "angular_tide": {
+          "difference": -6.819544928760024e-13,
+          "relative_to_second": -6.234678393889311e-12
+        },
+        "clock_rate_x2": {
+          "difference": -2.327249504219253e-12,
+          "relative_to_second": -1.8789291730347864e-12
+        },
+        "energy_total": {
+          "difference": -1.3953282973488967e-11,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -1.7857655359985455e-15,
+          "relative_to_second": -1.0784091246697924
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": 5.901945598907332e-13,
+          "relative_to_second": 2.1027383022651377e-13
+        },
+        "child_r_proper_mean": {
+          "difference": -3.26405569239796e-13,
+          "relative_to_second": -1.270389900423091e-13
+        },
+        "child_probability": {
+          "difference": 1.865174681370263e-14,
+          "relative_to_second": 2.591778289275707e-14
+        },
+        "probability_contrast": {
+          "difference": 2.1987411891188913e-12,
+          "relative_to_second": 5.4599761328948425e-12
+        },
+        "radial_tide": {
+          "difference": 1.489729173353993e-11,
+          "relative_to_second": 1.4195810832841008e-10
+        },
+        "angular_tide": {
+          "difference": -1.085861955907319e-11,
+          "relative_to_second": -7.592019051566787e-11
+        },
+        "clock_rate_x2": {
+          "difference": 2.3649970870565085e-12,
+          "relative_to_second": 1.4377691435195332e-12
+        },
+        "energy_total": {
+          "difference": 4.481748305806832e-12,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -2.1538326677728037e-14,
+          "relative_to_second": -8.818181818181818
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": -1.211909937093605e-15,
+          "relative_to_second": -2.4679521950742624e-07
+        },
+        "child_r_proper_mean": {
+          "difference": 5.068204467217896e-09,
+          "relative_to_second": 1.843123246707538e-08
+        },
+        "child_probability": {
+          "difference": -6.080524972418289e-11,
+          "relative_to_second": -7.617335231949606e-11
+        },
+        "probability_contrast": {
+          "difference": 1.1670722255274768e-07,
+          "relative_to_second": 1.0216596790495672e-07
+        },
+        "radial_tide": {
+          "difference": 1266758015.0,
+          "relative_to_second": 3.144447608579242e-07
+        },
+        "angular_tide": {
+          "difference": 1101561291776.0,
+          "relative_to_second": 8.937570965503553e-07
+        },
+        "clock_rate_x2": {
+          "difference": -1.245136992342375e-15,
+          "relative_to_second": -3.9383751979121934e-07
+        },
+        "energy_total": {
+          "difference": 1.0972382140650438e-06,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -7.936851176282289e-11,
+          "relative_to_second": -670.626641651032
+        }
+      }
+    },
+    "nf128_coherent_dt0.001__nf256_coherent_dt0.001": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": -4.440892098500626e-16,
+          "relative_to_second": -1.7015786330049404e-16
+        },
+        "child_r_proper_mean": {
+          "difference": -4.440892098500626e-16,
+          "relative_to_second": -1.5908634140702957e-16
+        },
+        "child_probability": {
+          "difference": 3.3306690738754696e-16,
+          "relative_to_second": 5.050354199334004e-16
+        },
+        "probability_contrast": {
+          "difference": 6.855627177060342e-14,
+          "relative_to_second": 1.6454109613891833e-13
+        },
+        "radial_tide": {
+          "difference": -5.06168718050759e-12,
+          "relative_to_second": -6.208983951028487e-11
+        },
+        "angular_tide": {
+          "difference": 4.404171779465171e-06,
+          "relative_to_second": 4.026455566035849e-05
+        },
+        "clock_rate_x2": {
+          "difference": 6.705747068735946e-14,
+          "relative_to_second": 5.4139548731556076e-14
+        },
+        "energy_total": {
+          "difference": -1.580957587066223e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -3.3306690738754696e-16,
+          "relative_to_second": -0.0967741935483871
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": 1.7763568394002505e-15,
+          "relative_to_second": 6.328783453019052e-16
+        },
+        "child_r_proper_mean": {
+          "difference": 0.0,
+          "relative_to_second": 0.0
+        },
+        "child_probability": {
+          "difference": -2.220446049250313e-16,
+          "relative_to_second": -3.085450344375922e-16
+        },
+        "probability_contrast": {
+          "difference": -8.254508188088039e-14,
+          "relative_to_second": -2.0497827538334623e-13
+        },
+        "radial_tide": {
+          "difference": 1.8226582743086084e-10,
+          "relative_to_second": 1.736833280939059e-09
+        },
+        "angular_tide": {
+          "difference": 1.2528910195430676e-07,
+          "relative_to_second": 8.759835849703187e-07
+        },
+        "clock_rate_x2": {
+          "difference": 1.3322676295501878e-14,
+          "relative_to_second": 8.099347348727447e-15
+        },
+        "energy_total": {
+          "difference": -2.0250467969162855e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -8.881784197001252e-16,
+          "relative_to_second": -0.037037037037037035
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": -3.768228228802463e-17,
+          "relative_to_second": -7.673676524155911e-09
+        },
+        "child_r_proper_mean": {
+          "difference": 8.518501459775507e-10,
+          "relative_to_second": 3.0978719304955816e-09
+        },
+        "child_probability": {
+          "difference": -2.0040746839811163e-11,
+          "relative_to_second": -2.5105905766082987e-11
+        },
+        "probability_contrast": {
+          "difference": 0.00021177506658132117,
+          "relative_to_second": 0.00018538875651952493
+        },
+        "radial_tide": {
+          "difference": -43513247879358.0,
+          "relative_to_second": -0.0108012082528423
+        },
+        "angular_tide": {
+          "difference": -11913720282112.0,
+          "relative_to_second": -9.666263370597658e-06
+        },
+        "clock_rate_x2": {
+          "difference": -4.411016340688196e-16,
+          "relative_to_second": -1.3952063603246299e-07
+        },
+        "energy_total": {
+          "difference": 2.3106031632469382e-07,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": 1.5438539335832502e-11,
+          "relative_to_second": 0.19422756210594536
+        }
+      }
+    },
+    "nf128_coherent_dt0.0005__nf256_coherent_dt0.0005": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": -3.552713678800501e-15,
+          "relative_to_second": -1.3612629064035721e-15
+        },
+        "child_r_proper_mean": {
+          "difference": -1.3322676295501878e-15,
+          "relative_to_second": -4.7725902422108995e-16
+        },
+        "child_probability": {
+          "difference": 2.220446049250313e-16,
+          "relative_to_second": 3.366902799556031e-16
+        },
+        "probability_contrast": {
+          "difference": 6.766809335090329e-14,
+          "relative_to_second": 1.6240938962811684e-13
+        },
+        "radial_tide": {
+          "difference": -8.728351374998056e-12,
+          "relative_to_second": -1.0706744940397011e-10
+        },
+        "angular_tide": {
+          "difference": 4.404171164054671e-06,
+          "relative_to_second": 4.0264550034300745e-05
+        },
+        "clock_rate_x2": {
+          "difference": 6.483702463810914e-14,
+          "relative_to_second": 5.234684844253006e-14
+        },
+        "energy_total": {
+          "difference": -1.3500311979441904e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -1.2043099906081089e-16,
+          "relative_to_second": -0.072727290152151
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": -1.3322676295501878e-15,
+          "relative_to_second": -4.746587589763291e-16
+        },
+        "child_r_proper_mean": {
+          "difference": -5.773159728050814e-15,
+          "relative_to_second": -2.246948123197304e-15
+        },
+        "child_probability": {
+          "difference": 3.3306690738754696e-16,
+          "relative_to_second": 4.628175516563763e-16
+        },
+        "probability_contrast": {
+          "difference": -7.532863222081687e-14,
+          "relative_to_second": -1.8705818405762078e-13
+        },
+        "radial_tide": {
+          "difference": 1.9580899401905327e-10,
+          "relative_to_second": 1.865887765495793e-09
+        },
+        "angular_tide": {
+          "difference": 1.2528748294382552e-07,
+          "relative_to_second": 8.759722654042024e-07
+        },
+        "clock_rate_x2": {
+          "difference": 1.3100631690576847e-14,
+          "relative_to_second": 7.964358226237204e-15
+        },
+        "energy_total": {
+          "difference": -1.0835776720341528e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -8.881784197001252e-16,
+          "relative_to_second": -0.36363636363636365
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": -3.0870851126247535e-17,
+          "relative_to_second": -6.286588010289482e-09
+        },
+        "child_r_proper_mean": {
+          "difference": -4.315159340961827e-11,
+          "relative_to_second": -1.56926788293918e-10
+        },
+        "child_probability": {
+          "difference": -3.160161021753538e-11,
+          "relative_to_second": -3.958869669778431e-11
+        },
+        "probability_contrast": {
+          "difference": 0.00021176909571618552,
+          "relative_to_second": 0.0001853835106599591
+        },
+        "radial_tide": {
+          "difference": -43513965530053.5,
+          "relative_to_second": -0.01080138299742878
+        },
+        "angular_tide": {
+          "difference": -12118640260864.0,
+          "relative_to_second": -9.832517549909091e-06
+        },
+        "clock_rate_x2": {
+          "difference": -4.3961184911197743e-16,
+          "relative_to_second": -1.3904947117456283e-07
+        },
+        "energy_total": {
+          "difference": 5.1323723049279124e-11,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -8.881784197001252e-16,
+          "relative_to_second": -0.0075046904315197
+        }
+      }
+    },
+    "nf128_coherent_dt0.001__nf128_coherent_frozen_geometry_dt0.001": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": -0.0009049547565318505,
+          "relative_to_second": -0.000346864045008536
+        },
+        "child_r_proper_mean": {
+          "difference": 0.02023592502090077,
+          "relative_to_second": 0.007196955789475024
+        },
+        "child_probability": {
+          "difference": -0.00018393989664156063,
+          "relative_to_second": -0.0002789892298237497
+        },
+        "probability_contrast": {
+          "difference": 0.24539641378195765,
+          "relative_to_second": 0.37066269663652696
+        },
+        "radial_tide": {
+          "difference": 5.281411706662821,
+          "relative_to_second": 0.9847989937771321
+        },
+        "angular_tide": {
+          "difference": -0.09951546308640045,
+          "relative_to_second": -10.09182870358474
+        },
+        "clock_rate_x2": {
+          "difference": 0.2829876126863482,
+          "relative_to_second": 0.18598129693184123
+        },
+        "energy_total": {
+          "difference": -1.4853895891064894e-11,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -2.3281582995714133e-15,
+          "relative_to_second": -1.6094001970646876
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": -0.19782938770818426,
+          "relative_to_second": -0.07582688653408677
+        },
+        "child_r_proper_mean": {
+          "difference": 0.24240017676165104,
+          "relative_to_second": 0.08621021049013938
+        },
+        "child_probability": {
+          "difference": -0.0005140444542873768,
+          "relative_to_second": -0.0007148078946919919
+        },
+        "probability_contrast": {
+          "difference": 0.01325729525188346,
+          "relative_to_second": 0.031871646518735815
+        },
+        "radial_tide": {
+          "difference": 5.257992231199527,
+          "relative_to_second": 0.980432078802118
+        },
+        "angular_tide": {
+          "difference": -0.13316564974546172,
+          "relative_to_second": -13.50428249794694
+        },
+        "clock_rate_x2": {
+          "difference": -0.12331560822360621,
+          "relative_to_second": -0.08104381860270558
+        },
+        "energy_total": {
+          "difference": 4.75175454539567e-12,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -2.3314683517128287e-14,
+          "relative_to_second": -15.0
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": 2.608960968572782,
+          "relative_to_second": 0.9999999981177984
+        },
+        "child_r_proper_mean": {
+          "difference": 2.536754827787327,
+          "relative_to_second": 0.9022030040863456
+        },
+        "child_probability": {
+          "difference": -0.029221606933906075,
+          "relative_to_second": -0.03799816941367026
+        },
+        "probability_contrast": {
+          "difference": -0.614797480485048,
+          "relative_to_second": -1.1658899020749252
+        },
+        "radial_tide": {
+          "difference": -4072066985643610.5,
+          "relative_to_second": -759298402166950.5
+        },
+        "angular_tide": {
+          "difference": -1.232517156475258e+18,
+          "relative_to_second": -1.2498913868871349e+20
+        },
+        "clock_rate_x2": {
+          "difference": 1.5215917770595424,
+          "relative_to_second": 0.9999999979222077
+        },
+        "energy_total": {
+          "difference": 1.4430499056805601e-06,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -6.404476948773663e-11,
+          "relative_to_second": -18027.0
+        }
+      }
+    },
+    "nf128_coherent_dt0.0005__nf128_coherent_frozen_geometry_dt0.0005": {
+      "0.3": {
+        "child_proper_length": {
+          "difference": -0.0009049547572641536,
+          "relative_to_second": -0.00034686404528922366
+        },
+        "child_r_proper_mean": {
+          "difference": 0.020235925020906986,
+          "relative_to_second": 0.007196955789477235
+        },
+        "child_probability": {
+          "difference": -0.00018393989663356702,
+          "relative_to_second": -0.00027898922981162437
+        },
+        "probability_contrast": {
+          "difference": 0.2453964137765089,
+          "relative_to_second": 0.37066269662830315
+        },
+        "radial_tide": {
+          "difference": 5.281411706664377,
+          "relative_to_second": 0.9847989937774222
+        },
+        "angular_tide": {
+          "difference": -0.09951546308633391,
+          "relative_to_second": -10.091828703577992
+        },
+        "clock_rate_x2": {
+          "difference": 0.28298761268867323,
+          "relative_to_second": 0.18598129693336926
+        },
+        "energy_total": {
+          "difference": -8.79296635503124e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -4.1823373725031844e-16,
+          "relative_to_second": -0.30794979968181624
+        }
+      },
+      "1.0": {
+        "child_proper_length": {
+          "difference": -0.19782938770877756,
+          "relative_to_second": -0.07582688653431417
+        },
+        "child_r_proper_mean": {
+          "difference": 0.24240017676197168,
+          "relative_to_second": 0.08621021049025342
+        },
+        "child_probability": {
+          "difference": -0.0005140444542853784,
+          "relative_to_second": -0.000714807894689193
+        },
+        "probability_contrast": {
+          "difference": 0.01325729524960867,
+          "relative_to_second": 0.031871646513273406
+        },
+        "radial_tide": {
+          "difference": 5.257992231198172,
+          "relative_to_second": 0.9804320788018654
+        },
+        "angular_tide": {
+          "difference": -0.1331656497362221,
+          "relative_to_second": -13.504282497009955
+        },
+        "clock_rate_x2": {
+          "difference": -0.12331560822597143,
+          "relative_to_second": -0.08104381860426002
+        },
+        "energy_total": {
+          "difference": 3.552713678800501e-13,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -2.1054383624901034e-15,
+          "relative_to_second": -1.7184015572948608
+        }
+      },
+      "3.0": {
+        "child_proper_length": {
+          "difference": 2.6089609685727835,
+          "relative_to_second": 0.9999999981177988
+        },
+        "child_r_proper_mean": {
+          "difference": 2.536754821824121,
+          "relative_to_second": 0.902203001965517
+        },
+        "child_probability": {
+          "difference": -0.029221606884693774,
+          "relative_to_second": -0.03799816934967888
+        },
+        "probability_contrast": {
+          "difference": -0.614797603163257,
+          "relative_to_second": -1.1658901347197466
+        },
+        "radial_tide": {
+          "difference": -4072068970052321.0,
+          "relative_to_second": -759298772189931.0
+        },
+        "angular_tide": {
+          "difference": -1.2325184629565286e+18,
+          "relative_to_second": -1.249892711785274e+20
+        },
+        "clock_rate_x2": {
+          "difference": 1.5215917770595437,
+          "relative_to_second": 0.9999999979222086
+        },
+        "energy_total": {
+          "difference": 1.1480271144836962e-07,
+          "relative_to_second": null
+        },
+        "Gram_max": {
+          "difference": -1.177946629127291e-13,
+          "relative_to_second": -81.61538461538461
+        }
+      }
+    }
+  },
+  "comparison_time_domain": "Matched coordinate times with separate checkpoint-carried normal clocks. Frozen/coupled readouts are coordinate-controlled; equal proper times are not asserted.",
+  "cumulative_cpu_seconds": 32.425290000000004,
+  "physical_scope": "generated leading-Einstein feedback comparison; exact auxiliary histories remain preserved",
+  "numerical_mode": "full28_physically_scaled_reaction_with_absolute_moving_scale_rate",
+  "old_action_RHS_unchanged": true,
+  "no_interpolation_resolve_reeigenframe_or_reset": true,
+  "fresh_CPU_budget": 165.0,
+  "total_parent_successor_limit": 600.0,
+  "one_existing_pool": true,
+  "regeneration_proof": false,
+  "source_directory": "lab/results/development/nsc-discovery-leading-einstein-v1",
+  "source_producing_commit": "e6e784b32213ea2368b7fc863c37c72fba6aa4e3",
+  "parent_CPU_seconds": 434.981363,
+  "numerical_admission_review": {
+    "scope": "coordinator-relayed independent constrained review",
+    "raw_local_norm_range": [
+      100000.0,
+      1000000.0
+    ],
+    "scaled_local_norm_range": [
+      228.0,
+      438.0
+    ],
+    "full_local_geometry_field_eigen_magnitude_below": 123.0,
+    "true_local_growth_range": [
+      29.0,
+      38.0
+    ],
+    "growth_not_removed": true,
+    "whole_finite_weighted_norm_reference": [
+      3435.0,
+      7799.0
+    ],
+    "global_norm_computed_per_step": false,
+    "global_certificate": false
+  },
+  "successor_CPU_seconds": 35.477062,
+  "parent_and_successor_CPU_seconds": 470.458425,
+  "CPU_accounting_includes_reader_and_process_overhead": true,
+  "primitive_bottleneck_removed_is_regeneration_proof": false
+}
