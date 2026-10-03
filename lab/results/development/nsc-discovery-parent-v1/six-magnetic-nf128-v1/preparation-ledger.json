@@ -1,0 +1,113 @@
+{
+  "schema": "NSC-DISCOVERY-MAGNETIC-SIX-CASE-PREPARATION-v1",
+  "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+  "k": 0.002621213673327129,
+  "k_definition": "4g/(3rmag) sqrt(integral rho^2/Q dx / integral Q dx)",
+  "criterion": "minimum proper-volume integral of Hrad^2+2 Hang^2, uniform magnetic initial radius",
+  "selection_is_declared_initial_condition": true,
+  "k_held_common_across_population_sign_resolution": true,
+  "selection_source": {
+    "directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/nf128",
+    "record_sha256": "4744113ff70423a517643d4a462f66a3ec13236ff53508064d749ee0ea5a91c0",
+    "payload_sha256": "5b342a58fffa7bf777e5abeefb202303d93f82f15865aedb53fee1f585806db1",
+    "producing_commit": "f1dd2f1f3fda38efd121b7865b772560d61395cc",
+    "historical_producers_authenticated": true,
+    "current_preparation_required": false,
+    "declared_profile": {
+      "envelope_zero": 2.8,
+      "exterior_Q": 2.0,
+      "exterior_radius": null,
+      "k_margin": 0.05,
+      "transition_end": 1.4
+    },
+    "profile_binding": {
+      "path": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json",
+      "sha256": "6461d09a2ad365a316f890ffbe8b9b439651991a7dd2523ae0600df5b89a9835",
+      "source": "pilot.profile"
+    }
+  },
+  "initial_radius_branch": "magnetic",
+  "source_covariance_Q_observer_preserved": true,
+  "cases": [
+    {
+      "case": "nf128_pop0_signplus",
+      "population": 0,
+      "sign": 1,
+      "record_sha256": "260219ed81023d1fd3489dda78d09f7e57b5a2aa757ae2d174a0571db2905533",
+      "CPU_seconds": 0.40542900000000004,
+      "full_h_max": 5.292550259255719e-07,
+      "full_D_max": 4.589601542934797e-15,
+      "CAR": [
+        0.0003218687699863375,
+        0.002366381531178645
+      ]
+    },
+    {
+      "case": "nf128_pop0_signminus",
+      "population": 0,
+      "sign": -1,
+      "record_sha256": "70033ab353ff50ac8df103541c3d7ce345a3a1853fd2160d483039114089437a",
+      "CPU_seconds": 0.047404000000000224,
+      "full_h_max": 5.292550259251879e-07,
+      "full_D_max": 5.0861323774273456e-15,
+      "CAR": [
+        0.0003218687699863375,
+        0.002366381531178645
+      ]
+    },
+    {
+      "case": "nf128_pop1_signplus",
+      "population": 1,
+      "sign": 1,
+      "record_sha256": "abe9292143bf08f9e17fcb76b37b5bd47937b3f4dff5c08a587b38c43e05aff9",
+      "CPU_seconds": 0.04582400000000009,
+      "full_h_max": 3.95337410882948e-07,
+      "full_D_max": 4.761845256054441e-15,
+      "CAR": [
+        0.0009060316704358668,
+        0.0017822186307291155
+      ]
+    },
+    {
+      "case": "nf128_pop1_signminus",
+      "population": 1,
+      "sign": -1,
+      "record_sha256": "5d2205864ad782cc705a6232733196c5061165343af707a139429f2171ad793c",
+      "CPU_seconds": 0.04502000000000006,
+      "full_h_max": 3.95337410882948e-07,
+      "full_D_max": 4.152065134142585e-15,
+      "CAR": [
+        0.0009060316704358668,
+        0.0017822186307291155
+      ]
+    },
+    {
+      "case": "nf128_pop2_signplus",
+      "population": 2,
+      "sign": 1,
+      "record_sha256": "c290bca32330e4549ae3ded3c858e850e67efe15690d6375d84d16f6ffab52f1",
+      "CPU_seconds": 0.04506600000000027,
+      "full_h_max": 2.2412542725718034e-07,
+      "full_D_max": 4.250030602980848e-15,
+      "CAR": [
+        0.0009892743988407348,
+        0.0016989759023242471
+      ]
+    },
+    {
+      "case": "nf128_pop2_signminus",
+      "population": 2,
+      "sign": -1,
+      "record_sha256": "4c45e7a85e5e277c489ad9fe7f771f8fc127d5759826c259e016118e231e15af",
+      "CPU_seconds": 0.04427699999999968,
+      "full_h_max": 2.2412542725756402e-07,
+      "full_D_max": 4.346581787726506e-15,
+      "CAR": [
+        0.0009892743988407348,
+        0.0016989759023242471
+      ]
+    }
+  ],
+  "aggregate_CPU_seconds": 0.8948339999999999,
+  "evolved": false
+}

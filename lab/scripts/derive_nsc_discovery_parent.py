@@ -24,9 +24,10 @@ def main(argv=None):
     parser.add_argument('--producer-commit',default=None)
     parser.add_argument('--transition-end',type=float,default=None)
     parser.add_argument('--initial-radius',choices=('collar','magnetic'),default='collar')
+    parser.add_argument('--source-strength',type=float,default=1.)
     args=parser.parse_args(argv);destination=args.output.resolve()
     if args.prepare or args.pilot:
-        profile={'initial_radius':args.initial_radius}
+        profile={'initial_radius':args.initial_radius,'source_strength':args.source_strength}
         if args.transition_end is not None:profile['transition_end']=args.transition_end
         if destination!=parent.OUTPUT.resolve() and parent.OUTPUT.resolve() not in destination.parents:
             raise PermissionError('new parent evidence belongs under '+str(parent.OUTPUT))

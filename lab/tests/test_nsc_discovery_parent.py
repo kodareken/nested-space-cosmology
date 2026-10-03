@@ -204,7 +204,7 @@ def test_transition_option_is_forwarded_without_new_constructor_run(monkeypatch,
     calls=[]
     monkeypatch.setattr(parent,'pilot',lambda *args,**kwargs:calls.append(kwargs) or {'unit':True})
     cli.main(['--pilot','--transition-end','1.4','--output',str(parent.OUTPUT/'unit-unwritten')])
-    assert calls[0]['profile']=={'initial_radius':'collar','transition_end':1.4}
+    assert calls[0]['profile']=={'initial_radius':'collar','source_strength':1.,'transition_end':1.4}
     assert parent._profile(calls[0]['profile'])['transition_end']<np.pi/2
 
 
@@ -235,7 +235,7 @@ def test_pilot_explicit_k_and_magnetic_profile_forwarding(tmp_path,monkeypatch):
     monkeypatch.setattr(parent,'pilot',lambda *args,**kwargs:calls.append(kwargs) or {'unit':True})
     cli.main(['--pilot','--initial-radius','magnetic','--transition-end','1.4','--k','.002621213673327129',
               '--output',str(parent.OUTPUT/'unit-magnetic-unwritten')])
-    assert calls[0]['profile']=={'initial_radius':'magnetic','transition_end':1.4}
+    assert calls[0]['profile']=={'initial_radius':'magnetic','source_strength':1.,'transition_end':1.4}
     assert calls[0]['k_override']==.002621213673327129
 
 
@@ -275,3 +275,49 @@ def test_fallback_refuses_large_geometry_moves_and_preserves_source(setup,monkey
         assert report['actual_parameter_changes']==[0.,0.,0.,0.]
         assert any(row['kind']=='backtrack' and not row['changes']['within_budget'] for row in report['refused_moves'])
         assert before==(col['phi0'].tobytes(),col['phi1'].tobytes(),pair.weights.tobytes())
+
+
+def test_source_strength_changes_actual_CAR_and_constraints_without_changing_fields(setup):
+    # Only instantaneous unit-fixture kernels; no strengthened constructor/trajectory.
+    with threadpool_limits(limits=1),parent.backend.fft_thread_limit(1):
+        table,pair,r,Q,col=setup;s=2.5
+        gram=col['source_columns'].conj().T@col['source_columns']
+        base,meta=parent.population_weights(col['probabilities'],col['raw_norms'],gram,1)
+        actual,scaled=parent.population_weights(col['probabilities'],col['raw_norms'],gram,1,source_strength=s)
+        assert actual.tobytes()==(s*base).tobytes()
+        assert scaled['trace']==pytest.approx(s*meta['trace']) and scaled['base_trace']==meta['base_trace']
+        assert scaled['source_covariance_changed'] and not scaled['source_weight_clipping_applied']
+        assert scaled['effective_shape_weight']==s*parent.SEED_WEIGHT
+        raw=np.vstack((col['phi0'],col['phi1']))
+        dense=(raw*actual)@raw.conj().T
+        eig=np.linalg.eigvalsh(dense)
+        np.testing.assert_allclose(eig[-2:],parent._weighted_eigenvalues(gram,actual),atol=1e-17)
+        assert np.max(eig)<1
+        shape=dict(table,profile=dict(table['profile'],initial_radius='magnetic',source_strength=s))
+        mr,mQ=parent._band_geometry(pair.grid,shape);new=parent._source_columns(pair.grid,shape)
+        for key in ('phi0','phi1','source_columns','reference_columns'):
+            assert col[key].tobytes()==new[key].tobytes()
+        assert mQ.tobytes()==Q.tobytes()
+        grid=replace(pair.grid,fine=replace(pair.grid.fine,occupations=actual))
+        changed=parent._holder(grid,actual,col,scaled,shape,1)
+        _,_,source,C,D=parent._zero_constraint(pair,mr,Q,col['phi0'],col['phi1'])
+        _,_,after,scaledC,scaledD=parent._zero_constraint(changed,mr,Q,col['phi0'],col['phi1'])
+        for key in ('image0','image1'):assert source[key].tobytes()==after[key].tobytes()
+        for key in ('force_L','force_Q','force_beta'):
+            np.testing.assert_allclose(after[key],s*source[key],rtol=1e-13,atol=1e-28)
+        np.testing.assert_allclose(scaledC-C,(s-1)*source['force_L']/grid.dx_q,atol=2e-16)
+        np.testing.assert_allclose(scaledD-D,(s-1)*source['force_beta']/grid.dx_q,atol=1e-28)
+        overflow=1.01/np.max(parent._weighted_eigenvalues(gram,base))
+        with pytest.raises(ValueError,match='CAR interval'):
+            parent.population_weights(col['probabilities'],col['raw_norms'],gram,1,source_strength=overflow)
+        with pytest.raises(ValueError,match='finite and positive'):parent._profile({'source_strength':0.})
+
+
+def test_source_strength_cli_is_an_explicit_new_covariance_profile(monkeypatch):
+    import derive_nsc_discovery_parent as cli
+    calls=[]
+    monkeypatch.setattr(parent,'prepare',lambda *args,**kwargs:calls.append(kwargs) or {'unit':True})
+    cli.main(['--prepare','--initial-radius','magnetic','--source-strength','173.16013550038755',
+              '--k','.45388971485','--output',str(parent.OUTPUT/'unit-strength-unwritten')])
+    assert calls[0]['profile']['source_strength']==173.16013550038755
+    assert calls[0]['k_override']==.45388971485

@@ -1,0 +1,418 @@
+{
+  "schema": "NSC-DISCOVERY-PARENT-EPISODE-v1",
+  "status": "STATION_REACHED",
+  "pure": true,
+  "evolved": true,
+  "bytes_written": 0,
+  "pool_launched": false,
+  "cases": [
+    {
+      "case_id": "nf128_minus_child_heavy_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_minus_child_heavy_dt0.001-000000.npz",
+      "json": "nf128_minus_child_heavy_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_plus_child_heavy_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_plus_child_heavy_dt0.001-000000.npz",
+      "json": "nf128_plus_child_heavy_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_minus_balanced_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_minus_balanced_dt0.001-000000.npz",
+      "json": "nf128_minus_balanced_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_plus_balanced_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_plus_balanced_dt0.001-000000.npz",
+      "json": "nf128_plus_balanced_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_minus_parent_heavy_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_minus_parent_heavy_dt0.001-000000.npz",
+      "json": "nf128_minus_parent_heavy_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_plus_parent_heavy_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_plus_parent_heavy_dt0.001-000000.npz",
+      "json": "nf128_plus_parent_heavy_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    }
+  ],
+  "confirmation_cases": [
+    {
+      "case_id": "nf256_plus_child_heavy_dt0.0005",
+      "nf": 256,
+      "population": 0,
+      "population_id": "child_heavy",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_plus_balanced_dt0.0005",
+      "nf": 256,
+      "population": 1,
+      "population_id": "balanced",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_plus_parent_heavy_dt0.0005",
+      "nf": 256,
+      "population": 2,
+      "population_id": "parent_heavy",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_child_heavy_dt0.0005",
+      "nf": 256,
+      "population": 0,
+      "population_id": "child_heavy",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_balanced_dt0.0005",
+      "nf": 256,
+      "population": 1,
+      "population_id": "balanced",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_parent_heavy_dt0.0005",
+      "nf": 256,
+      "population": 2,
+      "population_id": "parent_heavy",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "numerical_binding": {
+    "mode": "rank_general_physically_scaled_local_reaction",
+    "rates": "nsc_discovery_leading_einstein.rates",
+    "jvp": "nsc_discovery_leading_einstein.jvp",
+    "integrator": "nsc_discovery_leading_einstein.rk4_step",
+    "step_restriction": "nsc_discovery_parent_step_control.step_restriction",
+    "raw_coordinate_norm_used": false,
+    "fft": "native_one_thread",
+    "workers_max": 6,
+    "forecast_factor": 1.5,
+    "memory_limit_bytes": 8589934592,
+    "chunk_limit_bytes": 67108864,
+    "cpu_budget_seconds": 21600.0,
+    "stations": [
+      1.0,
+      3.0
+    ],
+    "source_recomputed_on_every_rk4_stage": true,
+    "projector_source_reset": false
+  },
+  "owner1_prepare_parent_importable": true,
+  "prepare_parent_api": "prepare_parent(nf, population=0|1|2, sign=+1|-1, k_override=None, profile=None, cpu_limit=30) -> (pair, State, report)",
+  "accepted_parent_record": {
+    "schema": "NSC-DISCOVERY-PARENT-v1",
+    "files": [
+      "parent.json",
+      "parent.npz"
+    ],
+    "arrays": [
+      "Q",
+      "r",
+      "pi_Q",
+      "pi_r",
+      "phi0",
+      "phi1",
+      "W",
+      "weights",
+      "source_columns",
+      "reference_columns"
+    ],
+    "one_record_per": [
+      "nf",
+      "population",
+      "sign"
+    ],
+    "population_names": {
+      "0": "child_heavy",
+      "1": "balanced",
+      "2": "parent_heavy"
+    },
+    "momentum_sign": "geometric sign of both p_Q and p_r; phi is not conjugated"
+  },
+  "held_out_nonlinear_measurement_before_prediction": false,
+  "production_campaign": false,
+  "cpu_budget_seconds": 21000.0,
+  "confirm": false,
+  "output": "results/development/nsc-discovery-parent-episode-magnetic-t3-v1",
+  "execute": false,
+  "stage": 2,
+  "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+  "source_hashes": {
+    "lab/src/recursive_horizons/nsc_discovery_parent_episode.py": "e274d449f7d98e93568260e1dd8b4d48686a855385168aede3ea77b2f883db66",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "5289b32909c87f7345a7b1c2f6f2c571be8fe1971ac6b3f814afc9ca178645b2",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/scripts/derive_nsc_discovery_parent_episode.py": "943de2a718aa5b6a8d6df14dd85e56d2b9203bb849f795af0042eca3eb5abf91",
+    "lab/tests/test_nsc_discovery_parent_episode.py": "72a9e2c6927d15f0b9cc971c245c435f0cb26fae4190177986f0feecd3b7d2a2",
+    "lab/docs/nsc-discovery-parent-episode.md": "ee4d1ad3f6f3e81af648f249beb4201044b1f55f745e651546023ad45a70a867",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d"
+  },
+  "input_hashes": {
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop0_signminus/parent.json": "70033ab353ff50ac8df103541c3d7ce345a3a1853fd2160d483039114089437a",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop0_signminus/parent.npz": "ddb7d340384d4abca782a23bd60eb00f0a46adea5eff2b03d5ff548f6561af84",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop0_signplus/parent.json": "260219ed81023d1fd3489dda78d09f7e57b5a2aa757ae2d174a0571db2905533",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop0_signplus/parent.npz": "59eb08e3b25734a90d75c2694b9e47bbb4e3222a35484bee0a911c6917ca81de",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signminus/parent.json": "5d2205864ad782cc705a6232733196c5061165343af707a139429f2171ad793c",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signminus/parent.npz": "4b17cba2d126429110d7a136a2cd694503f348037d22f0b7725feba2396ed693",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signplus/parent.json": "abe9292143bf08f9e17fcb76b37b5bd47937b3f4dff5c08a587b38c43e05aff9",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signplus/parent.npz": "a517dc81bcf78b725ef129e9c64d8284e97d6d77a839f0dcfbe6ed788246dacf",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop2_signminus/parent.json": "4c45e7a85e5e277c489ad9fe7f771f8fc127d5759826c259e016118e231e15af",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop2_signminus/parent.npz": "fc363349c0cf59677577f4525066321492ee41d42e9a4d2c788a3afdbc9ebcde",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop2_signplus/parent.json": "c290bca32330e4549ae3ded3c858e850e67efe15690d6375d84d16f6ffab52f1",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop2_signplus/parent.npz": "16d4c61f8a17d0ce72ae698271708d927e42070ba5666e1835d1b96adee9413c"
+  },
+  "preparation_cpu_seconds": 0.149308,
+  "child_cpu_seconds": 186.505376,
+  "forecast_factor": 1.5,
+  "memory_limit_bytes": 8589934592,
+  "chunk_limit_bytes": 67108864,
+  "workers_max": 6,
+  "results": [
+    {
+      "case_id": "nf128_minus_child_heavy_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 30.962994,
+      "chunk": "nf128_minus_child_heavy_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 37.172911499999756
+    },
+    {
+      "case_id": "nf128_minus_parent_heavy_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 30.962483,
+      "chunk": "nf128_minus_parent_heavy_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 36.46516050000014
+    },
+    {
+      "case_id": "nf128_minus_balanced_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 31.061977000000002,
+      "chunk": "nf128_minus_balanced_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 32.88743549999968
+    },
+    {
+      "case_id": "nf128_plus_balanced_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 31.114896,
+      "chunk": "nf128_plus_balanced_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 31.96660049999973
+    },
+    {
+      "case_id": "nf128_plus_parent_heavy_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 31.098616,
+      "chunk": "nf128_plus_parent_heavy_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 34.60364549999967
+    },
+    {
+      "case_id": "nf128_plus_child_heavy_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 31.30441,
+      "chunk": "nf128_plus_child_heavy_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 34.67963249999996
+    }
+  ],
+  "workers": 6,
+  "cpu_accounting": "parent_process_time_plus_children_rusage",
+  "executor_pools": 1,
+  "stability_certificate": false,
+  "max_T_forced": false,
+  "zero_residual_gate": false,
+  "cpu_seconds_including_children": 192.91382900000002,
+  "fft": "native_one_thread",
+  "projector_source_reset": false
+}

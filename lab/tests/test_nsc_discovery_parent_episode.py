@@ -218,6 +218,9 @@ def test_source_free_reprepare_keeps_the_caller_field():
     assert new_pair.column_rank == pair.column_rank and new_pair.covariance_rank == 0
     assert report["covariance_rank"] == 0
     assert report["source_column_Gram_distance_from_identity"] == 1
+    assert new_pair.common_k == report["control_k"] == report["original_common_k"] == pair.common_k
+    assert report["common_k_preserved"] and report["momentum_correction"]["converged"]
+    assert new_pair.source_metadata["kinetic_anchor"] == report["kinetic_anchor"]
     arrays = parent.arrays_from_parent(new_pair, new_state, clocks=np.zeros(3), clock_rates=np.zeros(3))
     record = {"nf": new_pair.grid.nf, "column_rank": new_pair.column_rank,
               "covariance_rank": 0, "k_common": new_pair.common_k}
@@ -341,7 +344,8 @@ def test_station_selection_rejects_invalid_configuration(stations):
         parent.prepare(stations=stations)
 
 
-def test_selected_stations_are_stored_and_bound_forecast_horizon(tmp_path, monkeypatch):
+@pytest.mark.parametrize("control_mode", ["coupled", "frozen_geometry", "source_free"])
+def test_selected_stations_are_stored_and_bound_forecast_horizon(tmp_path, monkeypatch, control_mode):
     _fixture, pair, state = fixture_case()
     source=tmp_path/"source";source.mkdir()
     source_arrays={"Q":state.Q,"r":state.r,"pi_Q":state.p_Q,"pi_r":state.p_r,
@@ -358,15 +362,25 @@ def test_selected_stations_are_stored_and_bound_forecast_horizon(tmp_path, monke
     monkeypatch.setattr(leading.preparation,"_git_hashes",lambda commit,pins:commit)
     destination=tmp_path/"campaign"
     report=parent.prepare(source,destination,execute=True,producer_commit="test-oracle",
-                          cpu_budget=10.,stations=(1.,3.))
+                          cpu_budget=10.,stations=(1.,3.),control_mode=control_mode,step_cap=.00025)
     assert parent.STATIONS==(1.,3.,8.,16.,24.)
     manifest=discovery.read_manifest(destination)
     assert report["stations"]==manifest["stations"]==[1.,3.]
     assert manifest["numerical_binding"]["stations"]==[1.,3.]
     saved,arrays=discovery.load_checkpoint(destination,report["cases"][0]["case_id"])
     assert saved["stations"]==saved["numerical_binding"]["stations"]==[1.,3.]
-    np.testing.assert_array_equal(arrays["phi0"],state.phi0)
-    np.testing.assert_array_equal(arrays["pi_Q"],state.p_Q)
+    assert manifest["control_mode"]==saved["control_mode"]==saved["numerical_binding"]["control_mode"]==control_mode
+    assert manifest["step_cap_override"]==saved["step_cap"]==saved["numerical_binding"]["step_cap"]==.00025
+    if control_mode == "source_free":
+        assert np.all(arrays["phi0"]==0) and saved["covariance_rank"]==0
+        assert saved["control_preparation"]["control_k"]==pair.common_k
+        assert saved["control_preparation"]["constraint_solved"]
+    else:
+        np.testing.assert_array_equal(arrays["phi0"],state.phi0)
+        np.testing.assert_array_equal(arrays["pi_Q"],state.p_Q)
+        np.testing.assert_array_equal(arrays["r"],state.r)
+        assert saved["prescribed_geometry_control"] == (control_mode=="frozen_geometry")
+    np.testing.assert_array_equal(source_arrays["phi0"],state.phi0)
     estimate=parent.estimate_case_cpu(pair,state,step_cap=.001,stations=saved["stations"],
         current_time=0.,probe_step_cpu=.002,probe_diag_cpu=.001)
     assert estimate["estimated_steps"]==int(np.ceil(3./estimate["dt"]))
@@ -384,3 +398,136 @@ def test_cli_station_selection_is_prepare_config_not_resume_override(capsys):
         main(["--run","--stations","1,3"])
     with pytest.raises(SystemExit):
         main(["--stations","3,1"])
+
+
+@pytest.mark.parametrize("cap", [0.,-1.,float("nan"),float("inf")])
+def test_cap_override_is_positive_finite(cap):
+    with pytest.raises(ValueError,match="positive and finite"):
+        parent.prepare(step_cap=cap)
+
+
+def test_source_free_refuses_inadmissible_common_k_without_new_motion():
+    from dataclasses import replace
+    _prepared,pair,state=fixture_case()
+    before=state.copy()
+    with pytest.raises(ValueError,match="OPEN.*refusing"):
+        parent.source_free_reprepare(replace(pair,common_k=-1.),state)
+    for name in leading.FIELDS:
+        np.testing.assert_array_equal(getattr(state,name),getattr(before,name))
+
+
+def test_tagged_column_regional_content_sums_to_total_without_rebasing():
+    _prepared,pair,state=fixture_case()
+    row=parent.scalar_observation(pair,state,0.)
+    tags=row["tagged_column_probability"]
+    assert tags["column_indices"]==list(range(pair.column_rank))
+    assert not tags["observer_rebased"] and not tags["independent_particle_or_energy_claim"]
+    assert sum(tags["child"])==pytest.approx(row["child_probability"],abs=1e-12)
+    assert sum(tags["parent"])==pytest.approx(row["parent_probability"],abs=1e-12)
+    fine=leading.fine_state(pair,state)
+    density=(abs(fine.phi0[:,0])**2+abs(fine.phi1[:,0])**2)*pair.weights[0]/pair.grid.dx_q
+    expected=parent.extent.real_interval_integral(pair.grid,density,pair.child_interval)
+    assert tags["child"][0]==pytest.approx(expected,abs=1e-12)
+    sample=parent.scalar_observation_row(pair,state,0.)
+    assert sample["tagged_column_probability"]==tags
+
+
+def test_run_metadata_reports_real_pool_and_manifest_bytes(tmp_path,monkeypatch):
+    write_handoff(tmp_path)
+    def fake_pool(workers):
+        assert workers==1
+        return object()
+    monkeypatch.setattr(parent,"pool",fake_pool)
+    def no_trajectory_run(output,**kwargs):
+        kwargs["executor"](kwargs["workers"])
+        return dict(discovery.read_manifest(output),status="STEP_LIMIT",evolved=True)
+    monkeypatch.setattr(discovery,"run",no_trajectory_run)
+    result=parent.run(tmp_path,workers=1,cpu_budget=10.)
+    assert result["pure"] is False and result["pool_launched"] is True
+    assert result["executor_pools"]==1
+    assert result["bytes_written"]==discovery._manifest_path(tmp_path).stat().st_size
+    assert "final manifest" in result["bytes_written_scope"]
+    assert discovery.read_manifest(tmp_path)["bytes_written"]==result["bytes_written"]
+
+
+def test_historical_check_qualifies_current_mismatch_without_writing(tmp_path,monkeypatch):
+    write_handoff(tmp_path)
+    manifest=discovery.read_manifest(tmp_path)
+    path=next(iter(manifest["source_hashes"]))
+    manifest["source_hashes"]={path:"0"*64}
+    manifest["producing_commit"]="1"*40
+    discovery._write_json(discovery._manifest_path(tmp_path),manifest)
+    seen=[]
+    monkeypatch.setattr(prepared_parent.provenance,"resolve_pinned_source_bytes",
+        lambda root,name,digest,commit:seen.append((name,digest,commit)))
+    before=parent._directory_files(tmp_path)
+    report=parent.check(tmp_path)
+    assert report["ok"] and not report["current_producer_match"]
+    assert report["historical_sources_authenticated"] and "not replayed" in report["check_scope"]
+    assert seen==[(path,"0"*64,"1"*40)]
+    assert parent._directory_files(tmp_path)==before
+
+
+def test_completed_run_is_noop_without_healing_old_manifest(tmp_path):
+    write_handoff(tmp_path)
+    manifest=discovery.read_manifest(tmp_path)
+    manifest.update(status="STATION_REACHED",evolved=True,pure=True,bytes_written=0)
+    discovery._write_json(discovery._manifest_path(tmp_path),manifest)
+    before=parent._directory_files(tmp_path)
+    result=parent.run(tmp_path,workers=1,cpu_budget=10.)
+    assert result["run_noop"] and not result["pool_launched"] and result["bytes_written"]==0
+    assert parent._directory_files(tmp_path)==before
+
+
+def test_cli_control_cap_and_ancestry_station_preview(capsys):
+    from derive_nsc_discovery_parent_episode import main
+    assert main(["--stations","1,1.25,2.25,3","--control-mode","frozen_geometry","--step-cap","0.0005"])==0
+    record=json.loads(capsys.readouterr().out)
+    assert record["stations"]==[1.,1.25,2.25,3.]
+    assert record["control_mode"]=="frozen_geometry" and record["step_cap_override"]==.0005
+    assert all(case["control_mode"]=="frozen_geometry" and case["step_cap"]==.0005 for case in record["cases"])
+    with pytest.raises(SystemExit):
+        main(["--run","--control-mode","source_free"])
+    with pytest.raises(SystemExit):
+        main(["--check","--step-cap","0.0005"])
+
+
+def test_real_magnetic_parent_offset_outranks_obsolete_default_without_state_change():
+    source=parent.LAB/"results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signplus"
+    before={name:discovery.file_sha256(source/name) for name in ("parent.json","parent.npz")}
+    record,arrays=parent.load_parent_record(source)
+    actual=0.002621213673327129
+    assert record["k"]==actual and record["k_common"]<2e-8
+    pair,state=parent.adopt_parent_record(dict(record,common_k=None),arrays)
+    assert pair.common_k==actual
+    fine=leading.fine_state(pair,state)
+    measured=float(np.mean(fine.p_Q**2/fine.r**3))
+    assert measured==pytest.approx(actual,rel=1e-10,abs=1e-14)
+    spec={"case_id":"real-source-readonly-regression","nf":128,"step_cap":.001,
+          "stations":[1.,3.],"parent_k":actual,"control_mode":"coupled"}
+    with parent.runtime_adapter():
+        header,_payload=parent.build_case_record(spec,pair,state,producer_commit=None,
+                                                 source_binding={},input_binding={})
+    assert header["common_k"]==header["declared_offset_k"]==header["parent_k"]==actual
+    assert header["initial_kinetic_anchor_mean"]==pytest.approx(actual,rel=1e-10)
+    assert not header["kinetic_anchor_equals_declared_offset_claim"]
+    for name,stored in (("p_Q","pi_Q"),("p_r","pi_r"),("phi0","phi0")):
+        np.testing.assert_array_equal(getattr(state,name),arrays[stored])
+    old_directory=parent.LAB/"results/development/nsc-discovery-parent-episode-magnetic-t3-v1"
+    old,old_arrays=discovery.load_checkpoint(old_directory,"nf128_plus_balanced_dt0.001",0)
+    assert old["common_k"]<2e-8 and old["parent_k"]==actual
+    restored=parent.reconstruct_parent_pair(old_arrays,dict(old,common_k=None))
+    assert restored.common_k==actual
+    assert old["common_k"]<2e-8  # The historical record itself is not healed.
+    assert before=={name:discovery.file_sha256(source/name) for name in before}
+
+
+def test_declared_offset_is_not_fitted_to_general_collar_kinetic_mean():
+    _prepared,pair,state=fixture_case()
+    arrays=parent.arrays_from_parent(pair,state,clocks=np.zeros(3),clock_rates=np.zeros(3))
+    record={"nf":16,"parent_k":.002621213673327129,"common_k":None,"k_common":1e-8}
+    reconstructed=parent.reconstruct_parent_pair(arrays,record)
+    assert reconstructed.common_k==record["parent_k"]
+    fine=leading.fine_state(reconstructed,state)
+    assert not np.isclose(float(np.mean(fine.p_Q**2/fine.r**3)),reconstructed.common_k)
+    assert parent.declared_parent_offset({"common_k":None,"k_common":.25})==(.25,"k_common")

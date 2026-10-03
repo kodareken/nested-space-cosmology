@@ -170,6 +170,7 @@ def _profile(profile):
         "k_margin": K_MARGIN,
         "exterior_radius": None,
         "initial_radius":"collar",
+        "source_strength":1.,
     }
     if profile is not None:
         if not isinstance(profile, dict):
@@ -189,6 +190,9 @@ def _profile(profile):
     if selected["exterior_radius"] is not None and float(selected["exterior_radius"]) <= 0:
         raise ValueError("exterior radius must be positive")
     if selected['initial_radius'] not in ('collar','magnetic'):raise ValueError('initial radius must be collar or magnetic')
+    strength=float(selected['source_strength'])
+    if not np.isfinite(strength) or strength<=0:raise ValueError('source strength must be finite and positive')
+    selected['source_strength']=strength
     selected["transition_end"] = end
     selected["envelope_zero"] = zero
     selected["exterior_Q"] = float(selected["exterior_Q"])
@@ -475,13 +479,15 @@ def _weighted_eigenvalues(gram, weights):
     return np.linalg.eigvalsh(hermitian).real
 
 
-def population_weights(probabilities, raw_norms, gram, population, *, seed_weight=SEED_WEIGHT):
+def population_weights(probabilities, raw_norms, gram, population, *, seed_weight=SEED_WEIGHT,source_strength=1.):
     """Actual regional imbalance at fixed trace T=2*w0*ZC; no weight reversal."""
     regional=np.asarray(probabilities,float);norms=np.asarray(raw_norms,float)
     if regional.shape!=(2,2) or norms.shape!=(2,) or not np.isfinite(regional).all() or np.any(regional<0) or np.any(norms<=0):
         raise ValueError("rank-two source needs actual child and annulus contents")
     if population not in POPULATIONS:raise ValueError("population must be 0, 1 or 2")
     if seed_weight!=SEED_WEIGHT:raise ValueError("the sealed source normalization weight stays fixed")
+    source_strength=float(source_strength)
+    if not np.isfinite(source_strength) or source_strength<=0:raise ValueError('source strength must be finite and positive')
     child,annulus=regional;difference=child-annulus;total=child+annulus
     if np.any(total<=0):raise ValueError("regional source column has no observed content")
     endpoints=difference/total
@@ -489,19 +495,29 @@ def population_weights(probabilities, raw_norms, gram, population, *, seed_weigh
         raise ValueError("preparation obstruction: actual regional column endpoints do not straddle zero")
     delta_star=min(IMBALANCE_CAP,float(np.max(endpoints)),float(-np.min(endpoints)))
     target=(delta_star,0.,-delta_star)[population];trace=2*seed_weight*norms[0]
-    fractions=np.linalg.solve(np.vstack((np.ones(2),difference-target*total)),np.array([1.,0.]))
-    weights=trace*fractions
-    if np.min(weights)<-1e-14:raise ValueError("regional imbalance requires negative source weight")
-    weights=np.maximum(weights,0.)
+    if target==endpoints[0]:fractions=np.array([1.,0.])
+    elif target==endpoints[1]:fractions=np.array([0.,1.])
+    else:fractions=np.linalg.solve(np.vstack((np.ones(2),difference-target*total)),np.array([1.,0.]))
+    base_weights=trace*fractions
+    if np.min(base_weights)<0:raise ValueError("regional imbalance requires negative source weight")
+    weights=source_strength*base_weights
+    if not np.isfinite(weights).all():raise ValueError('scaled source weights must be finite')
     eigenvalues=_weighted_eigenvalues(gram,weights)
     if np.max(eigenvalues)>1+1e-10 or np.min(eigenvalues)<-1e-12:raise ValueError("weighted nonorthogonal source left CAR interval")
     achieved=float(np.dot(weights,difference)/np.dot(weights,total))
-    return weights,{"trace":float(trace),"imbalance":achieved,"delta_star":delta_star,"alpha":delta_star,
+    return weights,{"trace":float(np.sum(weights)),"base_trace":float(trace),"scaled_trace":float(np.sum(weights)),
+       "source_strength":source_strength,"base_weights":base_weights.tolist(),"scaled_weights":weights.tolist(),
+       "source_covariance_changed":source_strength!=1.,"source_weight_clipping_applied":False,
+       "effective_shape_weight":source_strength*seed_weight,"old_shape_weight":seed_weight,
+       "normalization_identity":"raw shape at s*w maps to normalized child coefficient (s*w)*ZC; population mixture may change individual coefficients",
+       "base_CAR_eigenvalues":_weighted_eigenvalues(gram,base_weights).tolist(),"scaled_CAR_eigenvalues":eigenvalues.tolist(),
+       "imbalance":achieved,"delta_star":delta_star,"alpha":delta_star,
        "imbalance_cap":IMBALANCE_CAP,"endpoint_imbalances":endpoints.tolist(),"target_imbalance":target,
        "population":population,"population_name":("child_heavy","balanced","parent_heavy")[population],"rank":2,
        "child_weight":float(weights[0]),"base_child_normalization_weight":float(seed_weight*norms[0]),
+       "scaled_child_normalization_weight":float(source_strength*seed_weight*norms[0]),
        "base_c_equals_wZ":True,"population_intervention_changes_base_weights":True,
-       "trace_rule":"2*w0*projected_raw_child_norm_squared","lowdin_applied":False,
+       "trace_rule":"source_strength * 2*w0*projected_raw_child_norm_squared","lowdin_applied":False,
        "uniform_weights_substituted":False,"reversed_probabilities_substituted":False}
 
 
@@ -654,7 +670,7 @@ def common_k(nf=64, profile=None, *, cpu_limit=CPU_LIMIT):
         for population in POPULATIONS:
             if _cpu_time() > deadline:
                 raise RuntimeError("parent CPU budget exhausted while comparing population offsets")
-            weights, meta = population_weights(columns["probabilities"], columns["raw_norms"], gram, population)
+            weights, meta = population_weights(columns["probabilities"], columns["raw_norms"], gram, population,source_strength=selected["source_strength"])
             grid.fine = replace(grid.fine, occupations=np.array(weights, dtype=float, copy=True))
             pair = _holder(grid, weights, columns, meta, table, population)
             seed = _offset_seed(pair, radius, lapse, columns["phi0"], columns["phi1"], selected["k_margin"])
@@ -693,6 +709,7 @@ def _holder(grid, weights, columns, meta, table, population):
         "lowdin_applied": False, "packet_components_equal_before_projection": True,
         "packet_support": list(ANNULUS), "envelope_one_through": table["profile"]["transition_end"],
         "envelope_zero_at": table["profile"]["envelope_zero"],
+        "collar_table_is_baseline_shape_not_scaled_stationary_solution":True,
         "source_plateau_is_maintained_wall": False, "source_plateau_enters_timestep": True,
         "probabilities": columns["probabilities"].tolist(), "raw_norms": columns["raw_norms"].tolist(),
         "raw_child_mass": columns["raw_child_mass"], "unit_child_mass": columns["unit_child_mass"].tolist(),
@@ -1196,7 +1213,7 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
             'initial_r_squared_action_gap':_maximum((grid.A_g@radius)**2-rmag*rmag),
             'source_Q_weights_changed_by_radius_branch':False,'exact_sealed_collar_claimed':False}
         gram = columns["phi0"].conj().T @ columns["phi0"] + columns["phi1"].conj().T @ columns["phi1"]
-        weights, meta = population_weights(columns["probabilities"], columns["raw_norms"], gram, population)
+        weights, meta = population_weights(columns["probabilities"], columns["raw_norms"], gram, population,source_strength=selected["source_strength"])
         from dataclasses import replace as replace_dataclass
         grid.fine = replace_dataclass(grid.fine, occupations=np.array(weights, dtype=float, copy=True))
         pair = _holder(grid, weights, columns, meta, table, population)
@@ -1224,7 +1241,7 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         state = _state_from_theta(pair, problem, theta)
         diagnosis = _diagnose(pair, state, problem) if _cpu_time() < hard_deadline else None
         final_geometry_changes=_geometry_changes(grid,problem.radius,problem.lapse,targets)
-    child_target = SEED_WEIGHT * float(columns["raw_child_mass"])
+    child_target = selected["source_strength"] * SEED_WEIGHT * float(columns["raw_child_mass"])
     child_column = float(weights[0] * columns["unit_child_mass"][0])
     child_region = float(np.dot(weights, columns["unit_child_mass"]))
     report = {
@@ -1234,6 +1251,10 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         "kmin_by_population": family["kmin_by_population"], "declared_margin_fraction": selected["k_margin"],
         "static_not_forced": True, "universal_1e-8_veto": False,
         "weights": weights.tolist(), "trace": meta["trace"], "imbalance": meta["imbalance"],
+        "source_strength":selected['source_strength'],"base_trace":meta['base_trace'],"scaled_trace":meta['scaled_trace'],
+        "effective_shape_weight":meta['effective_shape_weight'],"old_shape_weight":SEED_WEIGHT,
+        "source_covariance_changed_by_strength":selected['source_strength']!=1.,
+        "collar_table_is_baseline_shape_not_scaled_stationary_solution":True,
         "alpha": meta["alpha"], "imbalance_cap": IMBALANCE_CAP, "weight_metadata": meta,
         "probabilities": columns["probabilities"].tolist(), "raw_norms": columns["raw_norms"].tolist(),
         "gram_offdiag_max": _maximum(gram - np.diag(np.diag(gram))),
@@ -1241,7 +1262,7 @@ def prepare_parent(nf=64, population=0, sign=+1, k_override=None, profile=None, 
         "child_column_covariance": child_column, "child_region_covariance": child_region,
         "child_covariance_target": child_target,
         "sealed_child_covariance": table["authentication"]["sealed_child_covariance"],
-        "base_child_normalization_identity_gap": float(SEED_WEIGHT*columns["raw_norms"][0]*columns["unit_child_mass"][0]-child_target),
+        "base_child_normalization_identity_gap": float(selected["source_strength"]*SEED_WEIGHT*columns["raw_norms"][0]*columns["unit_child_mass"][0]-child_target),
         "population_changes_child_covariance": True,
         "child_column_preserved": bool(abs(child_column-child_target)<=1e-12),
         "occupations_match_weights": True, "geometry_map": "identity",

@@ -162,6 +162,15 @@ def normalize_stations(stations=None):
     return values
 
 
+def normalize_step_cap(step_cap):
+    if step_cap is None:
+        return None
+    value = float(step_cap)
+    if not np.isfinite(value) or value <= 0:
+        raise ValueError("step cap must be positive and finite")
+    return value
+
+
 def readonly(value, dtype=None):
     result = np.array(value, dtype=dtype, copy=True)
     result.setflags(write=False)
@@ -187,7 +196,7 @@ def full_frame(ng, matrix=None):
     return matrix
 
 
-def numerical_binding(stations=None):
+def numerical_binding(stations=None, *, control_mode="coupled", step_cap=None):
     return {
         "mode": parent_step.NUMERICAL_MODE,
         "rates": "nsc_discovery_leading_einstein.rates",
@@ -202,6 +211,9 @@ def numerical_binding(stations=None):
         "chunk_limit_bytes": CHUNK_LIMIT_BYTES,
         "cpu_budget_seconds": CPU_BUDGET_SECONDS,
         "stations": list(normalize_stations(stations)),
+        "control_mode": normalize_control_mode(control_mode),
+        "step_cap": normalize_step_cap(step_cap),
+        "frozen_geometry_is_prescribed_control": normalize_control_mode(control_mode) == "frozen_geometry",
         "source_recomputed_on_every_rk4_stage": True,
         "projector_source_reset": False,
     }
@@ -476,6 +488,22 @@ def _record_windows(record, grid):
     return child, parent, clocks
 
 
+def declared_parent_offset(record):
+    """Source k/checkpoint parent_k outrank obsolete suggested defaults.
+
+    None never masks a later key. The offset is a declaration, not an
+    inference from evolved momenta or the mean of k+J on a general collar.
+    """
+    for key in ("parent_k", "k", "common_k", "k_common"):
+        value = record.get(key)
+        if value is not None:
+            value = float(value)
+            if not np.isfinite(value) or value <= 0:
+                raise ValueError("declared parent offset must be positive and finite: "+key)
+            return value, key
+    raise ValueError("parent record lacks a declared kinetic offset")
+
+
 def reconstruct_parent_pair(arrays, record):
     """Rebuild a ParentPair from cached arrays. No SVD and no source reset."""
     if record.get("projector_source_reset") or record.get("source_reset"):
@@ -501,10 +529,12 @@ def reconstruct_parent_pair(arrays, record):
     child, parent, clocks = _record_windows(record, grid)
     if "normal_clocks" in arrays and arrays["normal_clocks"].shape != (len(clocks),):
         raise ValueError("cached normal clocks do not match the clock stations")
-    common_k = record.get("common_k", record.get("k_common", record.get("k")))
+    common_k, offset_key = declared_parent_offset(record)
     pair = build_parent_pair(
         grid, geometry_map=matrix, weights=weights, source_phi0=source_phi0, source_phi1=source_phi1,
-        observer_columns=observer, source_metadata=dict(record.get("source_metadata") or record.get("weight_metadata") or {}),
+        observer_columns=observer, source_metadata=dict(
+            record.get("source_metadata") or record.get("weight_metadata") or {},
+            declared_offset_k=common_k, declared_offset_key=offset_key),
         geometry_metadata=dict(record.get("geometry_metadata") or {}), common_k=float(common_k),
         child_interval=child, parent_interval=parent, clock_locations=clocks,
     )
@@ -648,11 +678,15 @@ def source_free_reprepare(pair, state, *, sign=None, deadline=None):
     sign = int(sign if sign is not None else metadata.get("momentum_sign", 1))
     try:
         seed = prepared_parent._offset_seed(new_pair, nodal.r, nodal.Q, empty0, empty1, 0.05)
-        seed["suggested_k"] = float(seed["kmin"] + max(0.05 * float(seed["margin_scale"]), 1e-8))
+        control_k = float(pair.common_k)
+        if not np.isfinite(control_k) or float(np.min(seed["J"]+control_k)) <= 0:
+            raise ValueError("source-free control OPEN: original common_k is inadmissible; refusing a new kinetic offset")
+        seed["suggested_k"] = control_k
         problem = prepared_parent._MomentumProblem(
             new_pair, nodal.r, nodal.Q, empty0, empty1, sign, 0.0, seed["g"])
         theta = prepared_parent._seed_theta(problem, seed, sign)
-        theta, correction = prepared_parent.correct_momenta(problem, theta, deadline or time.process_time() + 15.0)
+        remaining = max(0.,float(deadline)-time.process_time()) if deadline is not None else 15.
+        theta, correction = prepared_parent.correct_momenta(problem, theta, prepared_parent._cpu_time()+remaining)
         solved = prepared_parent._state_from_theta(new_pair, problem, theta)
         measured = leading.constraints(new_pair, solved)
     finally:
@@ -667,8 +701,16 @@ def source_free_reprepare(pair, state, *, sign=None, deadline=None):
         "weights_preserved": True, "weights_deleted": False, "weights_used_as_constraint_solution": False,
         "converged": bool(correction["converged"]), "constraint_solved": solved_constraints,
         "blocker": correction.get("blocker"), "momentum_sign": sign,
+        "original_common_k": float(pair.common_k), "control_k": control_k,
+        "common_k_preserved": True, "source_free_kmin": float(seed["kmin"]),
+        "kinetic_anchor": float(problem.anchor),
+        "momentum_correction": prepared_parent._plain(correction),
+        "canonical_momentum_change_max": {name: float(np.max(abs(getattr(solved,name)-before[name])))
+                                           for name in ("p_Q", "p_r")},
         "leading_constraints": {key: measured[key] for key in ("raw_C_max", "D_max", "h_c_max", "source_current_max")},
     }
+    new_pair = replace(new_pair, source_metadata=dict(new_pair.source_metadata,
+        control_k=control_k, common_k_preserved=True, kinetic_anchor=float(problem.anchor)))
     return new_pair, solved, report
 
 
@@ -750,9 +792,23 @@ def scalar_observation(pair, state, instant, control_mode="coupled"):
     source = coupling.source_from_columns(system, fine)
     current = source["force_beta"] / pair.grid.dx_q
     density = source["force_L"] / pair.grid.dx_q
+    column_mass = (abs(fine.phi0)**2+abs(fine.phi1)**2)*pair.weights[None, :]/pair.grid.dx_q
+    column_integral = lambda interval: [extent.real_interval_integral(pair.grid, column_mass[:,j], interval)
+                                       for j in range(rank)]
+    tagged = {"column_indices": list(range(rank)), "weights": pair.weights.tolist(),
+              "child": column_integral(pair.child_interval),
+              "parent": column_integral(pair.parent_interval),
+              "protected_collar": column_integral(pair.protected_collar),
+              "parent_annulus": [sum(extent.real_interval_integral(pair.grid, column_mass[:,j], interval)
+                                     for interval in pair.parent_annulus) for j in range(rank)],
+              "ambient_total": column_integral((0.,pair.grid.length)),
+              "tag": "original_source_column_order; evolved Phi with original occupations",
+              "observer_rebased": False, "independent_particle_or_energy_claim": False}
     row.update(
         column_rank=rank, covariance_rank=source_covariance_rank(np.vstack((state.phi0, state.phi1)), pair.weights),
         common_k=float(pair.common_k),
+        actual_kinetic_anchor_mean=float(np.mean(fine.p_Q**2/fine.r**3)),
+        kinetic_anchor_equals_declared_offset_claim=False,
         source_column_Gram_distance_from_identity=float(np.max(abs(
             state.phi0.conj().T@state.phi0+state.phi1.conj().T@state.phi1-np.eye(rank)))),
         source_current=_summary(current), source_density=_summary(density),
@@ -763,6 +819,7 @@ def scalar_observation(pair, state, instant, control_mode="coupled"):
         nonlinear_measurement_before_prediction=False,
         population_gradient_held_out=None,
         dense_propagator_stored=False,
+        tagged_column_probability=tagged,
         stability_certificate=False,
     )
     hook = discover_observer_hook()
@@ -797,6 +854,7 @@ def scalar_observation_row(pair, state, time_value, control_mode="coupled"):
                nonlinear_measurement_before_prediction=False,
                population_gradient_held_out=None,
                external_observer=full["external_observer"],
+               tagged_column_probability=full["tagged_column_probability"],
                leading_observe_included=full["leading_observe_included"])
     return row
 
@@ -805,8 +863,10 @@ def episode_observe(pair, state, instant, *, control_mode="coupled"):
     return scalar_observation(pair, state, instant, control_mode)
 
 
-def case_specs(preparation=None, *, confirm=False, stations=None):
+def case_specs(preparation=None, *, confirm=False, stations=None, control_mode="coupled", step_cap=None):
     selected_stations = normalize_stations(stations)
+    mode = normalize_control_mode(control_mode)
+    override = normalize_step_cap(step_cap)
     if preparation is None:
         common_k = None
         populations = [{"population_id": name} for name in POPULATION_IDS]
@@ -824,28 +884,33 @@ def case_specs(preparation=None, *, confirm=False, stations=None):
             nf = CONFIRM_NF if confirm else PRIMARY_NF
             cap = CONFIRM_STEP_CAP if confirm else PRIMARY_STEP_CAP
             analytic = False
+    cap = override if override is not None else cap
+    suffix = "" if mode == "coupled" else "_"+mode
     specs = []
     for sign_name, sign in SIGNS:
         for population in populations:
             specs.append({
-                "case_id": f"nf{nf}_{sign_name}_{population['population_id']}_dt{cap}",
+                "case_id": f"nf{nf}_{sign_name}_{population['population_id']}{suffix}_dt{cap}",
                 "nf": int(nf), "population": int(population.get("population", POPULATION_INDEX[population["population_id"]])),
                 "population_id": population["population_id"],
                 "sign_name": sign_name, "momentum_sign": int(sign), "step_cap": float(cap),
-                "control_mode": "coupled", "common_k": common_k, "confirm": bool(confirm),
+                "control_mode": mode, "common_k": common_k, "confirm": bool(confirm),
                 "analytic_fixture": analytic, "stations": list(selected_stations),
             })
     return specs
 
 
-def plan(preparation=None, *, stations=None):
+def plan(preparation=None, *, stations=None, control_mode="coupled", step_cap=None):
     """Pure case list. No files, evolution, or process pool."""
     selected_stations = normalize_stations(stations)
+    mode = normalize_control_mode(control_mode)
+    override = normalize_step_cap(step_cap)
     return {
         "schema": SCHEMA, "status": "PLAN", "pure": True, "evolved": False, "bytes_written": 0,
-        "pool_launched": False, "cases": case_specs(preparation, confirm=False, stations=selected_stations),
-        "confirmation_cases": case_specs(preparation, confirm=True, stations=selected_stations),
-        "stations": list(selected_stations), "numerical_binding": numerical_binding(selected_stations),
+        "pool_launched": False, "cases": case_specs(preparation, confirm=False, stations=selected_stations, control_mode=mode, step_cap=override),
+        "confirmation_cases": case_specs(preparation, confirm=True, stations=selected_stations, control_mode=mode, step_cap=override),
+        "stations": list(selected_stations), "control_mode": mode, "step_cap_override": override,
+        "numerical_binding": numerical_binding(selected_stations, control_mode=mode, step_cap=override),
         "owner1_prepare_parent_importable": discover_prepare_parent() is not None,
         "prepare_parent_api": "prepare_parent(nf, population=0|1|2, sign=+1|-1, k_override=None, profile=None, cpu_limit=30) -> (pair, State, report)",
         "accepted_parent_record": {
@@ -877,16 +942,22 @@ def commit_parent_checkpoint(directory, record, arrays):
 
 def build_case_record(spec, pair, state, *, producer_commit, source_binding, input_binding):
     selected_stations = normalize_stations(spec.get("stations"))
+    mode = normalize_control_mode(spec.get("control_mode", "coupled"))
+    cap = normalize_step_cap(spec["step_cap"])
     clocks = np.zeros(len(pair.clock_locations))
     rates = leading.clock_rates(pair, state)
     arrays = arrays_from_parent(pair, state, clocks=clocks, clock_rates=rates)
+    fine = leading.fine_state(pair, state)
     record = dict(spec)
     record.update(
         schema=SCHEMA, coordinate_time=0.0, steps=0, ordinal=0, status="PREPARED",
-        stations=list(selected_stations), control_mode=spec.get("control_mode", "coupled"),
+        stations=list(selected_stations), control_mode=mode, step_cap=cap,
         momentum_representation=episode.CANONICAL_PI, snapshot_kind="handoff",
         column_rank=int(pair.column_rank), covariance_rank=int(pair.covariance_rank),
         common_k=float(pair.common_k), geometry_frame=pair.geometry_metadata.get("frame"),
+        declared_offset_k=float(pair.common_k),
+        initial_kinetic_anchor_mean=float(np.mean(fine.p_Q**2/fine.r**3)),
+        kinetic_anchor_equals_declared_offset_claim=False,
         child_interval=list(pair.child_interval), parent_interval=list(pair.parent_interval),
         protected_collar=list(pair.protected_collar),
         parent_annulus=[list(item) for item in pair.parent_annulus],
@@ -894,7 +965,7 @@ def build_case_record(spec, pair, state, *, producer_commit, source_binding, inp
         source_metadata=dict(pair.source_metadata), geometry_metadata=dict(pair.geometry_metadata),
         work_ledger=initial_ledger(spec.get("control_mode", "coupled")),
         channel_sample=None, channel_time=None, normal_clocks_initial=clocks.tolist(),
-        numerical_binding=numerical_binding(selected_stations), producing_commit=producer_commit,
+        numerical_binding=numerical_binding(selected_stations, control_mode=mode, step_cap=cap), producing_commit=producer_commit,
         source_hashes=source_binding, input_hashes=input_binding,
         projector_source_reset=False, source_reset=False, initial_state_called=False,
         evolved=False, verify_external_pins=False, stability_certificate=False,
@@ -912,11 +983,14 @@ def _directory_files(path):
 
 
 def prepare(source=None, output=OUTPUT, *, execute=False, producer_commit=None,
-            cpu_budget=CPU_BUDGET_SECONDS, confirm=False, preparation=None, stations=None):
+            cpu_budget=CPU_BUDGET_SECONDS, confirm=False, preparation=None, stations=None,
+            control_mode="coupled", step_cap=None):
     if not 0 < float(cpu_budget) <= CPU_BUDGET_SECONDS:
         raise ValueError("parent episode budget must be in (0, 21600] CPU seconds")
     selected_stations = normalize_stations(stations)
-    report = plan(preparation, stations=selected_stations)
+    mode = normalize_control_mode(control_mode)
+    override = normalize_step_cap(step_cap)
+    report = plan(preparation, stations=selected_stations, control_mode=mode, step_cap=override)
     report.update(status="PREFLIGHT", cpu_budget_seconds=float(cpu_budget), confirm=bool(confirm),
                   output=str(output), execute=False)
     if not execute:
@@ -953,14 +1027,25 @@ def prepare(source=None, output=OUTPUT, *, execute=False, producer_commit=None,
             sign = int(parent_record["sign"])
             population = int(parent_record["population"])
             nf = int(parent_record["nf"])
-            cap = CONFIRM_STEP_CAP if nf == CONFIRM_NF else PRIMARY_STEP_CAP
+            control_report = None
+            if mode == "source_free":
+                pair, state, control_report = source_free_reprepare(pair, state, sign=sign,
+                    deadline=started+min(15.,float(cpu_budget)))
+                if not control_report["constraint_solved"]:
+                    raise ValueError("source-free control OPEN: own C/D preparation is unresolved")
+            cap = override if override is not None else (CONFIRM_STEP_CAP if nf == CONFIRM_NF else PRIMARY_STEP_CAP)
             name = POPULATION_NAME[population]
+            suffix = "" if mode == "coupled" else "_"+mode
             spec = {
-                "case_id": f"nf{nf}_{'plus' if sign == 1 else 'minus'}_{name}_dt{cap}",
+                "case_id": f"nf{nf}_{'plus' if sign == 1 else 'minus'}_{name}{suffix}_dt{cap}",
                 "nf": nf, "population": population, "population_id": name,
                 "sign_name": "plus" if sign == 1 else "minus", "momentum_sign": sign,
-                "step_cap": float(cap), "control_mode": "coupled",
-                "common_k": float(parent_record.get("k_common", parent_record["k"])),
+                "step_cap": float(cap), "control_mode": mode,
+                "common_k": float(pair.common_k), "control_preparation": control_report,
+                "parent_k": float(parent_record["k"]),
+                "declared_offset_source": "authenticated parent record.k",
+                "prescribed_geometry_control": mode == "frozen_geometry",
+                "autonomy_inferred_from_control": False,
                 "stations": list(selected_stations), "parent_record": str(path),
                 "momenta_already_signed": True, "field_conjugated": False,
             }
@@ -1157,23 +1242,43 @@ def run(output=OUTPUT, *, workers=MAX_WORKERS, cpu_budget=CPU_BUDGET_SECONDS, ma
         raise ValueError("not a parent episode checkpoint")
     if manifest.get("numerical_binding", {}).get("raw_coordinate_norm_used"):
         raise ValueError("parent episode refuses the raw coordinate step norm")
+    if manifest.get("evolved") and max_steps is None and manifest.get("status") == "STATION_REACHED":
+        return dict(manifest, pure=True, pool_launched=False, executor_pools=0,
+                    bytes_written=0, run_noop=True)
     started = cpu_usage()
+    launched_pools = 0
+    def measured_pool(max_workers):
+        nonlocal launched_pools
+        result = pool(max_workers)
+        launched_pools += 1
+        return result
     result = episode.run(
         output, workers=int(workers), cpu_budget_seconds=float(cpu_budget),
         forecast_factor=FORECAST_FACTOR, memory_limit_bytes=MEMORY_LIMIT_BYTES,
-        max_steps=max_steps, backend="fft", executor=pool,
+        max_steps=max_steps, backend="fft", executor=measured_pool,
     )
     used = cpu_usage() - started
     result["cpu_seconds_including_children"] = used
     result["cpu_accounting"] = "parent_process_time_plus_children_rusage"
     result["forecast_factor"] = FORECAST_FACTOR
     result["fft"] = "native_one_thread"
-    result["executor_pools"] = 1
+    result["executor_pools"] = launched_pools
+    result["pool_launched"] = launched_pools > 0
+    result["pure"] = False
     result["projector_source_reset"] = False
     result["held_out_nonlinear_measurement_before_prediction"] = False
     if used >= float(cpu_budget) or result.get("status") == "BUDGET_STOP":
         result["status"] = "BUDGET_STOP"
         result["checkpoint_retained"] = True
+    # This counter measures the final manifest publication only; worker
+    # chunks and appended observation streams have their own retained files.
+    result["bytes_written_scope"] = "final manifest rewrite only; excludes worker chunks and observation streams"
+    result["bytes_written"] = 0
+    while True:
+        size = len((json.dumps(episode.jsonable(result),indent=2,allow_nan=False)+"\n").encode())
+        if size == result["bytes_written"]:
+            break
+        result["bytes_written"] = size
     episode._write_json(episode._manifest_path(output), result)
     return result
 
@@ -1185,13 +1290,22 @@ def check(output=OUTPUT):
     if manifest.get("schema") != SCHEMA:
         raise ValueError("not a parent episode checkpoint")
     binding = manifest.get("source_hashes") or {}
+    current_producer_match = True
     for name, digest in binding.items():
         if episode.file_sha256(ROOT / name) != digest:
-            raise ValueError("parent episode source changed: " + name)
+            current_producer_match = False
+    if not current_producer_match:
+        commit = manifest.get("producing_commit")
+        if not commit:
+            raise ValueError("parent episode source changed and no frozen producer is available")
+        for name,digest in binding.items():
+            prepared_parent.provenance.resolve_pinned_source_bytes(ROOT,name,digest,commit=commit)
     if manifest.get("numerical_binding", {}).get("raw_coordinate_norm_used"):
         raise ValueError("record used the raw coordinate step norm")
     problems = []
     checked = []
+    legacy_labels = []
+    authenticated_parents = {}
     for case in manifest["cases"]:
         ordinals = []
         prefix = case["case_id"] + "-"
@@ -1213,6 +1327,38 @@ def check(output=OUTPUT):
                 problems.append(case["case_id"] + " measured a held-out quantity before prediction")
             pair = reconstruct_parent_pair(arrays, record)
             state = state_from_arrays(arrays)
+            if record.get("parent_record"):
+                raw = Path(record["parent_record"])
+                source = raw if raw.is_absolute() else (ROOT/raw if raw.parts[:1] == ("lab",) else LAB/raw)
+                source = source.resolve()
+                if source not in authenticated_parents:
+                    original, original_arrays = load_parent_record(source)
+                    authenticated_parents[source] = (original, original_arrays)
+                original, original_arrays = authenticated_parents[source]
+                original_k = float(original["k"])
+                expected_json = None
+                for name,digest in record.get("input_hashes",{}).items():
+                    item = Path(name)
+                    resolved = item if item.is_absolute() else (ROOT/item if item.parts[:1] == ("lab",) else LAB/item)
+                    if resolved.resolve() == source/"parent.json":
+                        expected_json = digest
+                if expected_json is None or episode.file_sha256(source/"parent.json") != expected_json:
+                    problems.append(case["case_id"]+" authoritative parent record is not input-bound")
+                if pair.common_k != original_k:
+                    problems.append(case["case_id"]+" reconstructed offset differs from authoritative parent.k")
+                if ordinal == 0:
+                    fields = ("Q","r") if record.get("control_mode") == "source_free" else (
+                        "Q","r","pi_Q","pi_r","phi0","phi1")
+                    for name in fields:
+                        if not np.array_equal(arrays[name],original_arrays[name]):
+                            problems.append(case["case_id"]+" original canonical handoff differs: "+name)
+                    legacy = record.get("common_k")
+                    if legacy is None or float(legacy) != original_k:
+                        initial_fine = leading.fine_state(pair,state)
+                        legacy_labels.append({"case_id":case["case_id"],"legacy_common_k":legacy,
+                            "authoritative_parent_k":original_k,"old_record_modified":False,
+                            "initial_actual_kinetic_anchor_mean":float(np.mean(initial_fine.p_Q**2/initial_fine.r**3)),
+                            "kinetic_anchor_equals_declared_offset_claim":False})
             if state.phi0.shape[1] != pair.column_rank or pair.weights.shape != (pair.column_rank,):
                 problems.append(case["case_id"] + " rank mismatch")
             if pair.geometry_map.shape != (pair.grid.ng, pair.grid.ng):
@@ -1240,6 +1386,12 @@ def check(output=OUTPUT):
         problems.append("check wrote or changed campaign files")
     report = {"schema": SCHEMA, "ok": not problems, "checked": checked, "problems": problems,
               "evolved": False, "bytes_written": 0, "pool_launched": False,
+              "current_producer_match": current_producer_match,
+              "historical_sources_authenticated": not current_producer_match,
+              "legacy_offset_label_mismatches": legacy_labels,
+              "authoritative_parent_records_bound": len(authenticated_parents),
+              "check_scope": "current structural and binding check" if current_producer_match else
+                             "historical producer authentication and stored-array structural check; current dynamics not replayed",
               "stability_certificate": False}
     if problems:
         raise ValueError("parent episode check failed: " + "; ".join(problems))

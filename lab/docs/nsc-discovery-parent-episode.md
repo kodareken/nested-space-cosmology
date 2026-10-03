@@ -52,6 +52,20 @@ Phi is copied byte for byte. A record whose momenta were already solved at
 the minus case negates both `pi_Q` and `pi_r`. Conjugation is not a sign and
 is not an exchange reversal.
 
+The declared offset comes from the authenticated parent producer's `k`, carried
+as `parent_k` on episode checkpoints. These authoritative values precede legacy
+`common_k`/`k_common` labels, and a null label never masks an available offset.
+The six magnetic NF128 originals have chosen `k=0.002621213673327129` while the
+old suggested `k_common` was about1e-8. Old episode labels remain untouched;
+read-only checking reports the mismatch and binds the canonical initial state
+to the original authenticated parent record. New headers retain the true offset.
+
+The separately measured kinetic mean is `mean(p_Q^2/r^3)` on the actual lifted
+state. It agrees with the chosen offset in the uniform magnetic branch; a
+general collar contains `J` and can have a different mean. No equality is
+imposed outside the uniform branch. Source-free controls use the original
+chosen offset, not the obsolete suggested minimum.
+
 The primary episode cases are \(n_f=128\) with step cap \(0.001\). Confirmation
 is \(n_f=256\) with step cap \(0.0005\). The active first batch records stations
 \(1,3\) and runs each case uninterrupted through both before physical review.
@@ -75,7 +89,12 @@ source metadata, and solves both momenta against the new constraints. Zero
 weights are not treated as a solved constraint. The caller's arrays are not
 written. The source-free copy retains its column slots and weights but its
 actual covariance rank is zero; its column Gram distance from the identity
-is one. Resume reloads the stored state, normal clocks, and work-ledger
+is one. It retains the original `pair.common_k` when that offset is admissible
+for the empty-source square root. An inadmissible offset is explicitly OPEN
+and refused; the control does not select a different motion. The record stores
+the actual control offset, kinetic anchor, momentum correction and own C/D.
+Frozen geometry is a prescribed control and does not demonstrate autonomy.
+Resume reloads the stored state, normal clocks, and work-ledger
 stocks. It does not project or replace the source.
 
 Scalar rows use the leading rates, constraints, curvature jets, clocks, and
@@ -85,6 +104,13 @@ They add the source density, source current, and clock samples. When
 is importable, its result is attached and a hook refusal is recorded on the
 row. No held-out population or gradient measurement is evaluated before a
 later prediction.
+
+Every scalar row also stores weighted probability in child, parent, protected
+collar, parent annulus and the full carrier for each original column index.
+The tags use evolved columns with their original weights; no observer or
+source frame is rebased. They describe source-column ancestry, not independent
+particle energies. Explicit stations `1,1.25,2.25,3` retain full-state chunks at
+the two additional ancestry checkpoints as well as1 and3.
 
 ## Budget and commands
 
@@ -114,6 +140,20 @@ numerical binding. The last stored target controls the admission cost forecast;
 the active first batch forecasts through3, not24. Run and check read the frozen
 targets and reject a CLI station override. Source preparation and authentication
 are unchanged; there is no global station mutation.
+
+Preparation/preview also accepts `control_mode="coupled"|"frozen_geometry"|
+"source_free"` and an optional positive finite `step_cap`. CLI forms are
+`--control-mode frozen_geometry --step-cap 0.0005` or `--control-mode source_free`.
+Each output remains creation-only; root supplies the selected one- or two-record
+source directory. Run/check consume the recorded control and cap. Future run
+metadata reports whether a pool actually launched and counts the final manifest
+rewrite bytes explicitly; worker chunks and observation streams are excluded
+from that byte counter. Older records are not rewritten to add these fields.
+
+When the live source closure differs, read-only check authenticates the original
+producer at its frozen commit and qualifies the result as historical source and
+stored-array structural authentication. It does not replay current dynamics or
+claim current producer compatibility.
 
 The generic station-resume helper remains separate. It copies state, clocks and
 work stocks but creates a fresh ledger and omits the parent manifest's top-level

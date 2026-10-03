@@ -173,3 +173,24 @@ actual projected kinetic anchor. For example, after producer freezing:
 ```sh
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_discovery_parent.py --pilot --population 1 --sign 1 --cpu-limit 30 --initial-radius magnetic --transition-end 1.4 --k .002621213673327129 --output results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5
 ```
+
+`--source-strength s` is an explicit new source-state intervention, with
+finite positive `s` and default one. The original regional population mixture
+is solved first; its actual weights are then multiplied by `s`. There is no
+clipping, density fabrication, field renormalization or action-coefficient
+change. Actual weighted-Gram CAR eigenvalues are recomputed and an overflow
+rejects preparation. Fields, `Q`, observer columns and the magnetic initial
+radius retain their original construction. Reports distinguish base/scaled
+weights and traces and the shape coefficient `(s*w0)*ZC`. The covariance is
+changed; the old `.0013` collar table is only an initial SHAPE reference, not
+a newly solved stationary geometry for the stronger source. The actual
+scaled weights enter every source force and C/D constraint.
+
+Root independently selected `s=173.16013550038755` as a single force-balance
+comparison: the initial Dirac/magnetic peak ratio of the weak candidate was
+`.005775`. This amplitude is a declared experimental input, not a physical
+selection law or added pressure. The uniform-radius kinetic choice scales
+as `k=s*k0`; root supplies the explicit new value. The 5% original-geometry
+budget and hard anchor remain in force. The scientific episode owner controls
+the subsequent balanced plus/minus comparison; this constructor launches no
+trajectory or blind population scan.
