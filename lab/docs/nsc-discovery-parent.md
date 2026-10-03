@@ -52,6 +52,14 @@ Analytic finite momentum Jacobians are solved in the physical metric
 `omega*=max(kgeometry,kfield,1)`. Cholesky whitening precedes SVD, with
 physical gravity/source/kinetic row scales. Actual unscaled residuals,
 excluded parity components and projection tails remain visible.
+The scalar kinetic anchor is a hard equality: its analytic derivative defines
+a nullspace for the C/D SVD solve and is never subjected to the relative
+singular-value cutoff. Each trial retracts retained `P` to the exact quadratic
+anchor level without changing fields or weights. Convergence requires actual
+anchor relative error at most `5e-11`, and trials retain a strictly positive
+declared momentum-sign margin (at least one tenth the initial minimum and
+`1e-10` of the momentum scale). These requirements correct the discarded-anchor
+defect in the original immutable pilot; that evidence remains unchanged.
 
 Correction permits at most twelve accepted momentum updates in total, eight
 backtracking candidates per update, and one fallback with four even geometry
@@ -112,3 +120,10 @@ each actual projected kinetic anchor. Equal declared offsets do not replace
 inspection of differing anchors/source/projection readouts. Deferred
 preparations remain named numerical obstructions rather than static-force
 vetoes or evidence of a completed global solution.
+
+A successor must use a new output prefix. The thin `--transition-end` option
+forwards an existing profile parameter; for example root may repeat the bounded
+pilot with `--transition-end 1.4` and a new prefix. The protected inner collar,
+actual source continuation, finite constraints and hard anchor are unchanged
+in their definition. This option does not launch an additional solver or fit
+the source to the constraints.

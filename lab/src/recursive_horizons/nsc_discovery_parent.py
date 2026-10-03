@@ -52,6 +52,9 @@ IMBALANCE_CAP = 0.5
 K_MARGIN = 0.05
 MAX_ACCEPTED = 12
 MAX_BACKTRACKS = 8
+ANCHOR_RELATIVE_TOL = 5e-11
+SIGN_MARGIN_FRACTION = .1
+SIGN_RELATIVE_FLOOR = 1e-10
 FALLBACK_STEPS = 8
 CPU_LIMIT = 30.0
 CHUNK_LIMIT = 64 * 1024 ** 2
@@ -798,6 +801,21 @@ class _MomentumProblem:
         jscale=max(self.anchor,float(np.mean(self.momentum_scales[:,0]**2/r**3)),1e-15)
         return np.r_[np.full(self.count,hscale),np.full(self.odd.shape[1],dscale),jscale]
 
+    def anchor_status(self,theta):
+        p,_v=self.fine_momenta(theta);actual=float(np.mean(p*p/self.fine_r**3))
+        relative=abs(actual-self.anchor)/max(abs(self.anchor),np.finfo(float).tiny)
+        return {'target':self.anchor,'actual':actual,'residual':actual-self.anchor,
+                'relative_error':relative,'relative_tolerance':ANCHOR_RELATIVE_TOL,
+                'satisfied':bool(relative<=ANCHOR_RELATIVE_TOL)}
+
+    def restore_anchor(self,theta):
+        """Exact positive radial retraction of retained P onto its quadratic level."""
+        result=np.array(theta,copy=True);status=self.anchor_status(result)
+        if self.anchor<=0 or status['actual']<=0:raise ValueError('hard kinetic anchor requires nonzero target and P')
+        result[:self.count]*=np.sqrt(self.anchor/status['actual'])
+        if not self.anchor_status(result)['satisfied']:raise ValueError('hard kinetic anchor retraction failed')
+        return result
+
 
 def _svd_step(jacobian, residual):
     """Minimum-norm step in the orthonormal parity metric, which is the uniform nodal metric."""
@@ -807,6 +825,20 @@ def _svd_step(jacobian, residual):
     inverse = np.zeros_like(singular);active=singular>max(cutoff,1e-12);inverse[active]=1/singular[active]
     step = right.T @ (inverse * (left.T @ (-residual)))
     return step, int(np.count_nonzero(singular > max(cutoff, 1e-12))), singular
+
+
+def _hard_anchor_step(jacobian,residual,whitener,row_scales):
+    """Solve scalar anchor exactly; truncated SVD acts only in its nullspace."""
+    gradient=jacobian[-1]@whitener;norm=float(np.linalg.norm(gradient))
+    if not norm>np.finfo(float).tiny:raise ValueError('degenerate hard kinetic-anchor derivative')
+    unit=gradient/norm;particular=-(residual[-1]/norm)*unit
+    null=np.linalg.qr(unit[:,None],mode='complete')[0][:,1:]
+    soft=(jacobian[:-1]/row_scales[:-1,None])@whitener
+    correction,rank,singular=_svd_step(soft@null,residual[:-1]/row_scales[:-1]+soft@particular)
+    step=particular+null@correction
+    # Remove scalar roundoff after the nullspace solve without an SVD cutoff.
+    step-=unit*((gradient@step+residual[-1])/norm)
+    return step,rank+1,singular
 
 
 def _seed_theta(problem, seed, sign, *, anchor_override=None):
@@ -821,6 +853,7 @@ def _seed_theta(problem, seed, sign, *, anchor_override=None):
     theta = np.concatenate((problem.even.T @ nodal_p, problem.even.T @ nodal_v))
     prolonged, _radial_fine = problem.fine_momenta(theta)
     problem.anchor = float(np.mean(prolonged ** 2 / problem.fine_r ** 3)) if anchor_override is None else float(anchor_override)
+    if anchor_override is not None:theta=problem.restore_anchor(theta)
     return theta
 
 
@@ -831,25 +864,30 @@ def correct_momenta(problem, theta, deadline, *, max_accepted=MAX_ACCEPTED):
     history = []
     converged = False
     blocker = None
+    initial_anchor=problem.anchor_status(theta)
+    theta=problem.restore_anchor(theta)
     best = np.array(theta, copy=True)
     rows=problem.row_scales(theta)
-    best_norm = float(np.linalg.norm(problem.residual(best)/rows))
+    best_norm = float(np.linalg.norm(problem.residual(best)[:-1]/rows[:-1]))
     floor_seed, scale_seed = problem.sign_floor(best)
+    sign_required=max(SIGN_MARGIN_FRACTION*floor_seed,SIGN_RELATIVE_FLOOR*scale_seed)
+    if floor_seed<sign_required:
+        max_accepted=0;blocker='initial momentum violates nonzero declared sign margin'
     while accepted < max_accepted:
         if _cpu_time() > deadline:
             blocker = "preparation CPU cap"
             break
         residual = problem.residual(theta)
         jacobian = problem.jacobian(theta)
-        dimensionless, rank, _singular = _svd_step((jacobian/rows[:,None])@problem.whitener,residual/rows)
+        dimensionless, rank, _singular = _hard_anchor_step(jacobian,residual,problem.whitener,rows)
         step=problem.whitener@dimensionless
         correction = float(np.linalg.norm(dimensionless))
         floor = max(1e-11, 64*np.finfo(float).eps*max(1.,np.linalg.norm(np.linalg.solve(problem.whitener,theta))))
         history.append({"accepted": accepted, "residual": float(np.linalg.norm(residual)),
                         "scaled_residual":float(np.linalg.norm(residual/rows)),
                         "correction": correction, "numerical_rank": rank, "floor": floor,
-                        "sign_margin":problem.sign_floor(theta)[0]})
-        if correction <= floor:
+                        "sign_margin":problem.sign_floor(theta)[0],"hard_anchor":problem.anchor_status(theta)})
+        if correction <= floor and problem.anchor_status(theta)['satisfied']:
             converged = True
             blocker = None
             break
@@ -859,15 +897,16 @@ def correct_momenta(problem, theta, deadline, *, max_accepted=MAX_ACCEPTED):
                 blocker = "preparation CPU cap"
                 break
             backtracks += 1
-            trial = theta + step * 2.0 ** (-halving)
+            try:trial = problem.restore_anchor(theta + step * 2.0 ** (-halving))
+            except ValueError:continue
             trial_floor, trial_scale = problem.sign_floor(trial)
-            if trial_floor < min(floor_seed, 0.0) - 1e-8 * max(scale_seed, trial_scale):
+            if trial_floor < max(sign_required,SIGN_RELATIVE_FLOOR*trial_scale):
                 continue
             if not np.isfinite(trial).all():
                 continue
             trial_residual = problem.residual(trial)
-            trial_norm = float(np.linalg.norm(trial_residual/rows))
-            if trial_norm < float(np.linalg.norm(residual/rows)):
+            trial_norm = float(np.linalg.norm(trial_residual[:-1]/rows[:-1]))
+            if trial_norm < float(np.linalg.norm(residual[:-1]/rows[:-1])):
                 theta = trial
                 accepted += 1
                 improved = True
@@ -882,17 +921,24 @@ def correct_momenta(problem, theta, deadline, *, max_accepted=MAX_ACCEPTED):
             break
     else:
         residual = problem.residual(theta)
-        if max_accepted and correction <= floor:
+        if max_accepted and correction <= floor and problem.anchor_status(theta)['satisfied']:
             converged = True
         else:
             blocker = blocker or "finite momentum iteration cap"
-    if float(np.linalg.norm(problem.residual(theta)/rows)) > best_norm:
+    if float(np.linalg.norm(problem.residual(theta)[:-1]/rows[:-1])) > best_norm:
         theta = best
+    final_anchor=problem.anchor_status(theta)
+    if not final_anchor['satisfied']:
+        converged=False;blocker='hard kinetic anchor mismatch'
+    if problem.sign_floor(theta)[0]<sign_required:
+        converged=False;blocker='nonzero declared sign margin violated'
     return theta, {"converged": converged, "blocker": blocker, "accepted": accepted,
                    "backtracks": backtracks, "history": history, "best_residual": best_norm,
                    "universal_1e-8_veto": False, "max_accepted": MAX_ACCEPTED,
                    "max_backtracks": MAX_BACKTRACKS,"physical_metric":"dxq Bfine.T diag(SP^-2,SR^-2) Bfine; Cholesky-whitened SVD",
                    "row_scales":rows.tolist(),"actual_residual_max":_maximum(problem.residual(theta)),
+                   "hard_anchor":final_anchor,"initial_anchor":initial_anchor,"anchor_never_subject_to_relative_SVD_cutoff":True,
+                   "required_nonzero_sign_margin":sign_required,"final_sign_margin":problem.sign_floor(theta)[0],
                    "stationary_correction_is_not_continuous_constraint_certificate":True}
 
 
@@ -1249,7 +1295,7 @@ def prepare(directory, *, nf=64, population=0, sign=+1, k_override=None, profile
     return _write(directory, report, arrays)
 
 
-def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=None):
+def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=None,profile=None):
     """Root-only explicit two-resolution feasibility, one aggregate CPU allowance."""
     _require_case(64,population,sign,cpu_limit);directory=Path(directory)
     ledger=directory/'pilot.json'
@@ -1262,19 +1308,20 @@ def pilot(directory, *, population=0, sign=1, cpu_limit=30., producer_commit=Non
     families={}
     for nf in (64,128):
         if remaining()<=0:raise RuntimeError('aggregate pilot budget exhausted during seed comparison')
-        families[nf]=common_k(nf,cpu_limit=remaining())
+        families[nf]=common_k(nf,profile=profile,cpu_limit=remaining())
     common=max(families[nf]['k'] for nf in families);records=[]
     for index,nf in enumerate((64,128)):
         allowance=(remaining()-.1)/(2-index)
         if allowance<=0:break
         record=prepare(directory/f'nf{nf}',nf=nf,population=population,sign=sign,k_override=common,
-                       cpu_limit=allowance,producer_commit=commit)
+                       cpu_limit=allowance,producer_commit=commit,profile=profile)
         records.append({'nf':nf,'directory':f'nf{nf}','parent_json_sha256':_sha_file(directory/f'nf{nf}'/'parent.json'),
             'k':record['k'],'kmin':record['kmin'],'kinetic_anchor':None if record['diagnosis'] is None else record['diagnosis']['anchor'],
             'converged':record['converged'],'blocker':record['blocker'],'CPU_seconds':record['CPU_seconds']})
     elapsed=_cpu_time()-started
     result={'schema':SCHEMA+'-PILOT','mode':'bounded_preparation_pilot','producing_commit':commit,'producers':pins,
             'population':population,'sign':sign,'common_k':common,'same_declared_offset':True,
+            'profile':_profile(profile),
             'seed_families':{str(nf):families[nf] for nf in families},'records':records,
             'aggregate_CPU_seconds':elapsed,'CPU_limit_seconds':float(cpu_limit),'complete':len(records)==2,
             'budget_exceeded':elapsed>cpu_limit,'trajectory':False,'evolved':False,

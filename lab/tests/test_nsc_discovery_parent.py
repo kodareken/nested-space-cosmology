@@ -145,7 +145,7 @@ def test_pure_preview_and_shared_budget_common_offset_pilot(tmp_path,monkeypatch
     monkeypatch.setattr(parent,'producing_commit',lambda pins:'a'*40)
     monkeypatch.setattr(parent.provenance,'resolve_pinned_source_bytes',lambda *args,**kwargs:b'unit source')
     seed_calls=[];case_calls=[]
-    def seed(nf,*,cpu_limit):
+    def seed(nf,*,cpu_limit,profile=None):
         seed_calls.append((nf,cpu_limit));return {'k':float(nf)/100.,'kmin':.1}
     def case(path,**kwargs):
         case_calls.append(kwargs);path.mkdir(parents=True)
@@ -160,3 +160,49 @@ def test_pure_preview_and_shared_budget_common_offset_pilot(tmp_path,monkeypatch
     assert ledger['common_k']==1.28 and ledger['aggregate_CPU_seconds']<=2.
     assert ledger['complete'] and all(row['kinetic_anchor']!=row['k'] for row in ledger['records'])
     with pytest.raises(FileExistsError):parent.pilot(tmp_path,cpu_limit=2.)
+
+
+def test_scalar_anchor_cannot_be_truncated_by_reported_rank_cutoff():
+    # Reproduce the immutable pilot's singular scales without reading/writing it.
+    target=.000135234609664;actual=.000154624662736;gap=actual-target
+    jac=np.diag(np.r_[np.linspace(2922.,1.,127),.16]);rows=np.ones(128)
+    rows[-1]=.16/8.235e-8
+    residual=np.zeros(128);residual[-1]=gap
+    scaled=jac/rows[:,None];old,oldrank,singular=parent._svd_step(scaled,residual/rows)
+    assert oldrank==127 and singular[-1]<1e-10*singular[0]
+    assert (jac@old+residual)[-1]==pytest.approx(gap,abs=1e-16)
+    hard,rank,_=parent._hard_anchor_step(jac,residual,np.eye(128),rows)
+    assert rank==128 and abs((jac@hard+residual)[-1])<1e-18
+    np.testing.assert_allclose((jac@hard+residual)[:-1],0.,atol=1e-14)
+
+
+def test_hard_anchor_retraction_convergence_and_sign_margin_preserve_source(setup):
+    with threadpool_limits(limits=1),parent.backend.fft_thread_limit(1):
+        problem,seed,theta=problem_for(setup)
+        before=(problem.phi0.tobytes(),problem.phi1.tobytes(),problem.pair.weights.tobytes())
+        target=problem.anchor;theta[:problem.count]*=np.sqrt(.000154624662736/.000135234609664)
+        assert not problem.anchor_status(theta)['satisfied']
+        restored=problem.restore_anchor(theta)
+        assert problem.anchor_status(restored)['satisfied'] and problem.anchor==target
+        residual=problem.residual(theta);jac=problem.jacobian(theta)
+        step,rank,_=parent._hard_anchor_step(jac,residual,problem.whitener,problem.row_scales(theta))
+        assert abs(jac[-1]@problem.whitener@step+residual[-1])<1e-13*target
+        corrected,report=parent.correct_momenta(problem,theta,parent._cpu_time()+2.,max_accepted=1)
+        assert report['hard_anchor']['satisfied'] and report['hard_anchor']['relative_error']<=parent.ANCHOR_RELATIVE_TOL
+        assert report['initial_anchor']['relative_error']>.1
+        assert report['anchor_never_subject_to_relative_SVD_cutoff']
+        assert report['final_sign_margin']>=report['required_nonzero_sign_margin']>0
+        assert before==(problem.phi0.tobytes(),problem.phi1.tobytes(),problem.pair.weights.tobytes())
+        negative=restored.copy();negative[:problem.count]*=-1
+        stopped,blocked=parent.correct_momenta(problem,negative,parent._cpu_time()+2.,max_accepted=1)
+        assert not blocked['converged'] and blocked['accepted']==0
+        assert 'sign margin' in blocked['blocker']
+
+
+def test_transition_option_is_forwarded_without_new_constructor_run(monkeypatch,tmp_path):
+    import derive_nsc_discovery_parent as cli
+    calls=[]
+    monkeypatch.setattr(parent,'pilot',lambda *args,**kwargs:calls.append(kwargs) or {'unit':True})
+    cli.main(['--pilot','--transition-end','1.4','--output',str(parent.OUTPUT/'unit-unwritten')])
+    assert calls[0]['profile']=={'transition_end':1.4}
+    assert parent._profile(calls[0]['profile'])['transition_end']<np.pi/2

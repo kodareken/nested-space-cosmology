@@ -22,15 +22,17 @@ def main(argv=None):
     parser.add_argument('--k',type=float,default=None)
     parser.add_argument('--cpu-limit',type=float,default=parent.CPU_LIMIT)
     parser.add_argument('--producer-commit',default=None)
+    parser.add_argument('--transition-end',type=float,default=None)
     args=parser.parse_args(argv);destination=args.output.resolve()
     if args.prepare or args.pilot:
+        profile=None if args.transition_end is None else {'transition_end':args.transition_end}
         if destination!=parent.OUTPUT.resolve() and parent.OUTPUT.resolve() not in destination.parents:
             raise PermissionError('new parent evidence belongs under '+str(parent.OUTPUT))
         if args.pilot:
             if args.k is not None:raise ValueError('pilot computes conservative common k from both resolutions')
-            result=parent.pilot(destination,population=args.population,sign=args.sign,cpu_limit=args.cpu_limit,producer_commit=args.producer_commit)
+            result=parent.pilot(destination,population=args.population,sign=args.sign,cpu_limit=args.cpu_limit,producer_commit=args.producer_commit,profile=profile)
         else:result=parent.prepare(destination,nf=args.nf,population=args.population,sign=args.sign,
-                k_override=args.k,cpu_limit=args.cpu_limit,producer_commit=args.producer_commit)
+                k_override=args.k,cpu_limit=args.cpu_limit,producer_commit=args.producer_commit,profile=profile)
     elif args.check:result=parent.check(destination)
     else:result=parent.preview()
     print(json.dumps(parent._plain(result),sort_keys=True,indent=2,allow_nan=False))
