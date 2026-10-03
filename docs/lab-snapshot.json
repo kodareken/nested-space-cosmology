@@ -12338,13 +12338,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 169910,
+      "bytes": 170138,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "8a7184e0058330e52d23742c05e5af4bc28040c6",
+      "changed_from_commit": "38121aa0debe58a599228722864432964e112d9d",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "afdd39312d4501bff8dc36b1fadfa5a189b8774ae1dfb7337731c425de79b78f"
+      "sha256": "b922d8fa2dd2c617f4b45ae84ccd86a762c9d438368f70ca7b0cdfdf9886bfa8"
     },
     {
       "bytes": 90977,
@@ -84448,6 +84448,13 @@
       "sha256": "608200e64a787fa8f2bbf8e9f22ff958e8b8a0bb6c3ee47420716b1032658695"
     },
     {
+      "bytes": 14408,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "38121aa0debe58a599228722864432964e112d9d",
+      "path": "lab/scripts/confirm_nsc_discovery_homogeneous_turn.py",
+      "sha256": "c94fa830b638ea7ea41b382392c015f21934d02c2526587da4a708471a9649d2"
+    },
+    {
       "bytes": 12921,
       "original_git_blob": "125aa4272d0236ceda35f4029e8c0d808a391648",
       "original_sha256": "5c823ac4594b5777d46ef2b8d3b4117ba75c330458bc2a1482db5607fed9d884",
@@ -89908,6 +89915,13 @@
       "changed_from_commit": "9d526ec8e4f5f377f6821cc99157b35f25493a68",
       "path": "lab/tests/test_nsc_discovery_translation.py",
       "sha256": "00521f6610e5cb1b04bed1bcab98f85e7a8e09cd5d13386b87f7f6fb095f3b2d"
+    },
+    {
+      "bytes": 4485,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "38121aa0debe58a599228722864432964e112d9d",
+      "path": "lab/tests/test_nsc_discovery_turn_confirmation.py",
+      "sha256": "1e20f14aaf930eac344c19132cb84837147c4bd40abb5e808de4dbd779ba8563"
     },
     {
       "bytes": 6865,
