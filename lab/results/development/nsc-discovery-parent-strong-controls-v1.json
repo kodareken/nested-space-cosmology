@@ -1,0 +1,1451 @@
+{
+  "schema": "NSC-DISCOVERY-PARENT-STRONG-CONTROLS-v1",
+  "stations": {
+    "minus": {
+      "occupied": [
+        {
+          "time": 0.0,
+          "centre_tau": 0.0,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0449078098426008,
+          "centre_radius": 1.0,
+          "Nmin": 0.9998423090981752,
+          "child_probability": 0.17359138619163467,
+          "probability_total": 0.465497786408686,
+          "child_fraction": 0.3729155997301119,
+          "column_child": [
+            0.17359138619158448,
+            5.017103752993686e-14
+          ],
+          "energy": {
+            "gravity": -3.1115679975212345,
+            "field": 3.1115679975212336,
+            "total": -8.881784197001252e-16
+          },
+          "constraints": {
+            "raw_C_max": 2.9326748147477655e-05,
+            "D_max": 6.785170831951453e-14,
+            "projected_h_c_max": 2.0997173274451633e-15,
+            "held_out_h_c_max": 6.84566046248949e-05,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.16677107740099828,
+          "snapshot_kind": "handoff"
+        },
+        {
+          "time": 0.25,
+          "centre_tau": 0.3011654715171656,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.4163685067751386,
+          "centre_radius": 1.081073560121975,
+          "Nmin": 1.4130402646016298,
+          "child_probability": 0.17404416725322067,
+          "probability_total": 0.46549778640866224,
+          "child_fraction": 0.3738882811795514,
+          "column_child": [
+            0.17404416724208616,
+            1.1134505179909996e-11
+          ],
+          "energy": {
+            "gravity": -3.151460437953843,
+            "field": 3.151460437961938,
+            "total": 8.094858117146941e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.009160162884704864,
+            "D_max": 0.00929226027439649,
+            "projected_h_c_max": 0.0008630787797571026,
+            "held_out_h_c_max": 0.013252897681308932,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.040513166081374674,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 0.5,
+          "centre_tau": 0.704023167906722,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.7575612253664512,
+          "centre_radius": 1.1655303719551093,
+          "Nmin": 1.2172797340940555,
+          "child_probability": 0.17588360488491908,
+          "probability_total": 0.46549778640863293,
+          "child_fraction": 0.3778398308655356,
+          "column_child": [
+            0.17588360484565518,
+            3.9263898192697756e-11
+          ],
+          "energy": {
+            "gravity": -3.191312909198469,
+            "field": 3.191312909207004,
+            "total": 8.534950524108353e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.006672741534405446,
+            "D_max": 0.004651738187265775,
+            "projected_h_c_max": 0.0004909686989700528,
+            "held_out_h_c_max": 0.007896723934195996,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.03741021696116942,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.0,
+          "centre_tau": 1.6689173395855854,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.7609674585273432,
+          "centre_radius": 1.2613210481895403,
+          "Nmin": 0.7940571050404992,
+          "child_probability": 0.15845182308591968,
+          "probability_total": 0.46549778640854256,
+          "child_fraction": 0.3403922160584776,
+          "column_child": [
+            0.1584485583135584,
+            3.264772361297997e-06
+          ],
+          "energy": {
+            "gravity": -2.894184560702519,
+            "field": 2.894184560716739,
+            "total": 1.4219736499399005e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.004566826289524248,
+            "D_max": 0.003006209217176925,
+            "projected_h_c_max": 0.0012534946874807609,
+            "held_out_h_c_max": 0.0019552525299958655,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.09075452546544782,
+          "snapshot_kind": "parent_continuation_handoff"
+        },
+        {
+          "time": 1.25,
+          "centre_tau": 2.138948861165645,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.3653874187791304,
+          "centre_radius": 1.2524327311006462,
+          "Nmin": 0.6009121331860793,
+          "child_probability": 0.1345402762683544,
+          "probability_total": 0.46549778640849004,
+          "child_fraction": 0.28902452427623526,
+          "column_child": [
+            0.13245095447506283,
+            0.002089321793291568
+          ],
+          "energy": {
+            "gravity": -2.6435082044804084,
+            "field": 2.6435082044955087,
+            "total": 1.510036540253168e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.006492025421791392,
+            "D_max": 0.004463153629803998,
+            "projected_h_c_max": 0.0015713464776531915,
+            "held_out_h_c_max": 0.008670524151835607,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.22903624859379845,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.5,
+          "centre_tau": 2.4191340689530985,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.9787946761067753,
+          "centre_radius": 1.2312904145157975,
+          "Nmin": 0.4506113827360614,
+          "child_probability": 0.12031996483871735,
+          "probability_total": 0.46549778640846856,
+          "child_fraction": 0.2584759119201011,
+          "column_child": [
+            0.10237621618908087,
+            0.017943748649636486
+          ],
+          "energy": {
+            "gravity": -2.4583661844004085,
+            "field": 2.458366184415689,
+            "total": 1.5280665621730805e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.00825141595297929,
+            "D_max": 0.0070936097141768295,
+            "projected_h_c_max": 0.0021706107233196996,
+            "held_out_h_c_max": 0.006490971353552505,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.12051153037397411,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 2.25,
+          "centre_tau": 2.8568784687686573,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.38508764794780287,
+          "centre_radius": 1.158727163446358,
+          "Nmin": 0.19331598254516597,
+          "child_probability": 0.08950008212622909,
+          "probability_total": 0.4654977864084202,
+          "child_fraction": 0.1922674709514154,
+          "column_child": [
+            0.03851736865042373,
+            0.05098271347580536
+          ],
+          "energy": {
+            "gravity": -2.188823026690819,
+            "field": 2.18882302670459,
+            "total": 1.3770762308240592e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.03123181123051444,
+            "D_max": 0.010965902695782181,
+            "projected_h_c_max": 0.005269799614646116,
+            "held_out_h_c_max": 0.0049877581134524975,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 3.390223073967511,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 3.0,
+          "centre_tau": 3.0507894716701314,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.14933275750079794,
+          "centre_radius": 1.0503476850735267,
+          "Nmin": 0.09497296119679607,
+          "child_probability": 0.04212588515395282,
+          "probability_total": 0.46549778640837525,
+          "child_fraction": 0.09049642422358657,
+          "column_child": [
+            0.010900208335589707,
+            0.03122567681836311
+          ],
+          "energy": {
+            "gravity": -2.124770434737034,
+            "field": 2.1247704347482967,
+            "total": 1.1262546451007438e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.10396137505410619,
+            "D_max": 0.013109463243869357,
+            "projected_h_c_max": 0.010767922258302686,
+            "held_out_h_c_max": 0.004400170777562617,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 18.798219310835666,
+          "snapshot_kind": "station"
+        }
+      ],
+      "same_k_empty": [
+        {
+          "time": 0.0,
+          "centre_tau": 0.0,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0449078098426008,
+          "centre_radius": 1.0,
+          "Nmin": 0.9998423090981752,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.1165255150319285e-13,
+            "field": 0.0,
+            "total": 1.1165255150319285e-13
+          },
+          "constraints": {
+            "raw_C_max": 5.7001100529214774e-11,
+            "D_max": 1.411764041005675e-12,
+            "projected_h_c_max": 8.020816587683495e-11,
+            "held_out_h_c_max": 9.683627241261158e-12,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.16681823384922734,
+          "snapshot_kind": "handoff"
+        },
+        {
+          "time": 0.25,
+          "centre_tau": 0.2459104715063387,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0130997866746403,
+          "centre_radius": 1.0712767392727054,
+          "Nmin": 0.9702663323608754,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 8.342513312109556e-12,
+            "field": 0.0,
+            "total": 8.342513312109556e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.009719654851726212,
+            "D_max": 0.008835765572213177,
+            "projected_h_c_max": 0.00114246292434983,
+            "held_out_h_c_max": 0.013135358142950877,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.0379178538353111,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 0.5,
+          "centre_tau": 0.4874509754930459,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0132993553007663,
+          "centre_radius": 1.13571714739581,
+          "Nmin": 0.9675289762373459,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.0587491387076264e-11,
+            "field": 0.0,
+            "total": 1.0587491387076264e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.009600656859548584,
+            "D_max": 0.006242308317443039,
+            "projected_h_c_max": 0.0011383489221617788,
+            "held_out_h_c_max": 0.008400718931961917,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.025122981961615665,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.0,
+          "centre_tau": 0.9973719908164568,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0024155554581644,
+          "centre_radius": 1.24635204899779,
+          "Nmin": 0.6371699151077802,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.4067439921272573e-11,
+            "field": 0.0,
+            "total": 1.4067439921272573e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.006668915791715413,
+            "D_max": 0.0038852443115293678,
+            "projected_h_c_max": 0.0019748475845358885,
+            "held_out_h_c_max": 0.003622163335983266,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.15031433351012402,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.25,
+          "centre_tau": 1.2867667462541494,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.877598566602034,
+          "centre_radius": 1.291534197111215,
+          "Nmin": 0.4842115403228046,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.6973856348245775e-11,
+            "field": 0.0,
+            "total": 1.6973856348245775e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.010841246655623138,
+            "D_max": 0.006270736034040377,
+            "projected_h_c_max": 0.0023466927483113873,
+            "held_out_h_c_max": 0.005603832402375079,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.5687825177062195,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.5,
+          "centre_tau": 1.486619855052296,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.7018639447356151,
+          "centre_radius": 1.3148559274147023,
+          "Nmin": 0.36713237900181894,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.654013384588815e-11,
+            "field": 0.0,
+            "total": 1.654013384588815e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.011112069565142546,
+            "D_max": 0.00449325957311979,
+            "projected_h_c_max": 0.002501464552191353,
+            "held_out_h_c_max": 0.0022150660376734736,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.2512836926444686,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 2.25,
+          "centre_tau": 1.8299518323949457,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.29306259661940937,
+          "centre_radius": 1.3395891578212094,
+          "Nmin": 0.15921962988473293,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.7574858235391844e-11,
+            "field": 0.0,
+            "total": 1.7574858235391844e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.021018717770986198,
+            "D_max": 0.004036858629027918,
+            "projected_h_c_max": 0.004303394320997392,
+            "held_out_h_c_max": 0.00048316009220364603,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 1.3484917800896221,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 3.0,
+          "centre_tau": 1.9788561960071598,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.12688746754742602,
+          "centre_radius": 1.3442441874762616,
+          "Nmin": 0.06889950745761073,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.7826149979966247e-11,
+            "field": 0.0,
+            "total": 1.7826149979966247e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.04639856952977171,
+            "D_max": 0.0046609797822541755,
+            "projected_h_c_max": 0.0047543303837625965,
+            "held_out_h_c_max": 0.00019168748607308514,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 17.098372313111927,
+          "snapshot_kind": "station"
+        }
+      ],
+      "pi_r_initial_gap": 0.23899140464322427,
+      "force_deletion_on_same_Cauchy_state": false,
+      "empty_status": "STATION_REACHED",
+      "clock_anchor_trapezoid_indicator": {
+        "occupied": 0.0010658828217673388,
+        "empty": 0.0007229071741629567
+      }
+    },
+    "plus": {
+      "occupied": [
+        {
+          "time": 0.0,
+          "centre_tau": 0.0,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0449078098426008,
+          "centre_radius": 1.0,
+          "Nmin": 0.9998423090981752,
+          "child_probability": 0.17359138619163467,
+          "probability_total": 0.465497786408686,
+          "child_fraction": 0.3729155997301119,
+          "column_child": [
+            0.17359138619158448,
+            5.017103752993686e-14
+          ],
+          "energy": {
+            "gravity": -3.1115679975212354,
+            "field": 3.1115679975212336,
+            "total": -1.7763568394002505e-15
+          },
+          "constraints": {
+            "raw_C_max": 2.9326748147519288e-05,
+            "D_max": 5.824373430872748e-14,
+            "projected_h_c_max": 1.6031903644558493e-15,
+            "held_out_h_c_max": 6.845660462518309e-05,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.16677107740099706,
+          "snapshot_kind": "handoff"
+        },
+        {
+          "time": 0.25,
+          "centre_tau": 0.2074400075590316,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.7489120528179782,
+          "centre_radius": 0.9329246581522959,
+          "Nmin": 0.6819277460669417,
+          "child_probability": 0.17312992707539543,
+          "probability_total": 0.4654977864086653,
+          "child_fraction": 0.3719242757545637,
+          "column_child": [
+            0.17312992705950273,
+            1.589270331736791e-11
+          ],
+          "energy": {
+            "gravity": -2.8435454950372536,
+            "field": 2.8435454950588244,
+            "total": 2.157074519004709e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.007139859033124446,
+            "D_max": 0.007279578564709805,
+            "projected_h_c_max": 0.0026742376897194125,
+            "held_out_h_c_max": 0.01137878920669023,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.16687424256046546,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 0.5,
+          "centre_tau": 0.3521036407927945,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.5586543705262227,
+          "centre_radius": 0.8764768389282459,
+          "Nmin": 0.49491364259473103,
+          "child_probability": 0.17094989728132223,
+          "probability_total": 0.4654977864086079,
+          "child_fraction": 0.36724105306757493,
+          "column_child": [
+            0.1709498972240853,
+            5.723693531087244e-11
+          ],
+          "energy": {
+            "gravity": -2.5063454120692024,
+            "field": 2.5063454120748485,
+            "total": 5.646150214033696e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.013262714218680971,
+            "D_max": 0.004794334455083862,
+            "projected_h_c_max": 0.004446578802328065,
+            "held_out_h_c_max": 0.007171204177592804,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.08940593034895361,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.0,
+          "centre_tau": 0.5587679858989838,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.31386256309110416,
+          "centre_radius": 0.7596370356298086,
+          "Nmin": 0.1508190273338887,
+          "child_probability": 0.15183052664573843,
+          "probability_total": 0.46549778640856754,
+          "child_fraction": 0.3261680959154481,
+          "column_child": [
+            0.15182727816019748,
+            3.2484855409536045e-06
+          ],
+          "energy": {
+            "gravity": -1.9298307464233448,
+            "field": 1.9298307464267443,
+            "total": 3.3995029014022293e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.031087262851077657,
+            "D_max": 0.0030933939346790024,
+            "projected_h_c_max": 0.0056039025551936706,
+            "held_out_h_c_max": 0.005018985449296038,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 4.9045158232111055,
+          "snapshot_kind": "parent_continuation_handoff"
+        },
+        {
+          "time": 1.25,
+          "centre_tau": 0.6405894966947404,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.192561716406785,
+          "centre_radius": 0.6918405034245637,
+          "Nmin": 0.06794708998174623,
+          "child_probability": 0.12918024121925348,
+          "probability_total": 0.4654977864085454,
+          "child_fraction": 0.27750989369018847,
+          "column_child": [
+            0.1271251494740329,
+            0.002055091745220583
+          ],
+          "energy": {
+            "gravity": -1.7966796937031093,
+            "field": 1.7966796937018674,
+            "total": -1.2418954753457001e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.06518786983818636,
+            "D_max": 0.006070758490488326,
+            "projected_h_c_max": 0.006290603457312457,
+            "held_out_h_c_max": 0.009074281600983487,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 37.67276333721137,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.5,
+          "centre_tau": 0.6784348903972097,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.09639298169544376,
+          "centre_radius": 0.6566450029627938,
+          "Nmin": 0.027559769003412476,
+          "child_probability": 0.11145139021486883,
+          "probability_total": 0.465497786408532,
+          "child_fraction": 0.23942410354891874,
+          "column_child": [
+            0.09345447798977971,
+            0.01799691222508912
+          ],
+          "energy": {
+            "gravity": -1.7257192002040553,
+            "field": 1.7257192002030846,
+            "total": -9.707790127322369e-13
+          },
+          "constraints": {
+            "raw_C_max": 0.13897672287937524,
+            "D_max": 0.007914368555465734,
+            "projected_h_c_max": 0.00602867895519452,
+            "held_out_h_c_max": 0.004990765986401011,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 121.74443853700305,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 2.25,
+          "centre_tau": 0.7046915551777264,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.006668940942124081,
+          "centre_radius": 0.6104496359031487,
+          "Nmin": 0.0017749309557330687,
+          "child_probability": 0.07116325100496153,
+          "probability_total": 0.4654977864084948,
+          "child_fraction": 0.15287559486375868,
+          "column_child": [
+            0.01088492248058857,
+            0.060278328524372954
+          ],
+          "energy": {
+            "gravity": -1.6924469868866507,
+            "field": 1.6924469868816807,
+            "total": -4.970024392036976e-12
+          },
+          "constraints": {
+            "raw_C_max": 2.5229878872108884,
+            "D_max": 0.0077573261391292725,
+            "projected_h_c_max": 0.005100994913669876,
+            "held_out_h_c_max": 0.00335782901387246,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 31890.53466948014,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 3.0,
+          "centre_tau": 0.7064165018869848,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.0005310528974066007,
+          "centre_radius": 0.5385445337232869,
+          "Nmin": 0.00011508859747207913,
+          "child_probability": 0.02777617615396203,
+          "probability_total": 0.4654977864084568,
+          "child_fraction": 0.05966983509904273,
+          "column_child": [
+            0.0006062508591898641,
+            0.027169925294772166
+          ],
+          "energy": {
+            "gravity": -1.6923934063484543,
+            "field": 1.6923934063404293,
+            "total": -8.024914066595557e-12
+          },
+          "constraints": {
+            "raw_C_max": 46.95611172434792,
+            "D_max": 0.005294437455975243,
+            "projected_h_c_max": 0.008445311371578838,
+            "held_out_h_c_max": 0.0032315254313106147,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 53027514.25296758,
+          "snapshot_kind": "station"
+        }
+      ],
+      "same_k_empty": [
+        {
+          "time": 0.0,
+          "centre_tau": 0.0,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0449078098426008,
+          "centre_radius": 1.0,
+          "Nmin": 0.9998423090981752,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 1.1165255150319285e-13,
+            "field": 0.0,
+            "total": 1.1165255150319285e-13
+          },
+          "constraints": {
+            "raw_C_max": 5.7001100529214774e-11,
+            "D_max": 1.411764041005675e-12,
+            "projected_h_c_max": 8.020816587683495e-11,
+            "held_out_h_c_max": 9.683627241261158e-12,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.16681823384922734,
+          "snapshot_kind": "handoff"
+        },
+        {
+          "time": 0.25,
+          "centre_tau": 0.25462074656558914,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0829549814073822,
+          "centre_radius": 0.9236086990552881,
+          "Nmin": 1.0350694389089066,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 2.51100199660792e-11,
+            "field": 0.0,
+            "total": 2.51100199660792e-11
+          },
+          "constraints": {
+            "raw_C_max": 0.005978042183592547,
+            "D_max": 0.007917876618595193,
+            "projected_h_c_max": 0.0019024260450261569,
+            "held_out_h_c_max": 0.011337021527627394,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.03810643172359218,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 0.5,
+          "centre_tau": 0.5146215415911034,
+          "parent_k": 0.45388971484879426,
+          "child_length": 1.0745429667379243,
+          "centre_radius": 0.8489439748104153,
+          "Nmin": 0.9263392899585886,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 8.43156751015317e-12,
+            "field": 0.0,
+            "total": 8.43156751015317e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.006142609105062508,
+            "D_max": 0.00388039245224836,
+            "projected_h_c_max": 0.0024488375411645777,
+            "held_out_h_c_max": 0.005748395101439122,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 0.05858938020484317,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.0,
+          "centre_tau": 0.9711548088521682,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.5885246239738703,
+          "centre_radius": 0.7559378986621004,
+          "Nmin": 0.16785984906815613,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 5.036003081562712e-12,
+            "field": 0.0,
+            "total": 5.036003081562712e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.00832151727070396,
+            "D_max": 0.004083000014904119,
+            "projected_h_c_max": 0.0021689386677338726,
+            "held_out_h_c_max": 0.001498747564784604,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 5.739389531306479,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.25,
+          "centre_tau": 1.108547161406588,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.2885197305522019,
+          "centre_radius": 0.7450505047878422,
+          "Nmin": 0.0674135983900607,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 3.73905409672276e-12,
+            "field": 0.0,
+            "total": 3.73905409672276e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.010956197785768174,
+            "D_max": 0.0067564184644551654,
+            "projected_h_c_max": 0.0011064484667481628,
+            "held_out_h_c_max": 0.000693674883948424,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 24.468937880780757,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 1.5,
+          "centre_tau": 1.1570954681205883,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.12120110603342903,
+          "centre_radius": 0.7435849299870162,
+          "Nmin": 0.027007446720390824,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 4.090555951147094e-12,
+            "field": 0.0,
+            "total": 4.090555951147094e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.03120922875700482,
+            "D_max": 0.004766536532030588,
+            "projected_h_c_max": 0.0015728756322806485,
+            "held_out_h_c_max": 0.00020662006501609496,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 503.4481888375317,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 2.25,
+          "centre_tau": 1.1863567060321467,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.007357416198471418,
+          "centre_radius": 0.7433203401930216,
+          "Nmin": 0.0017371696075995568,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 4.3624987519988445e-12,
+            "field": 0.0,
+            "total": 4.3624987519988445e-12
+          },
+          "constraints": {
+            "raw_C_max": 0.69463486216809,
+            "D_max": 0.0032313144337879542,
+            "projected_h_c_max": 0.001712949875536485,
+            "held_out_h_c_max": 0.00011335369527015022,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 145724.3904177632,
+          "snapshot_kind": "station"
+        },
+        {
+          "time": 3.0,
+          "centre_tau": 1.1882379468272644,
+          "parent_k": 0.45388971484879426,
+          "child_length": 0.0004728300657119708,
+          "centre_radius": 0.7433188849583929,
+          "Nmin": 0.00010768758695947439,
+          "child_probability": 0.0,
+          "probability_total": 0.0,
+          "child_fraction": null,
+          "column_child": [
+            0.0,
+            0.0
+          ],
+          "energy": {
+            "gravity": 4.75593936926982e-12,
+            "field": 0.0,
+            "total": 4.75593936926982e-12
+          },
+          "constraints": {
+            "raw_C_max": 7.719527059870131,
+            "D_max": 0.003255743593156895,
+            "projected_h_c_max": 0.001114335394804763,
+            "held_out_h_c_max": 0.00011566598388903452,
+            "observable_error_bound": null
+          },
+          "projected_R4_max_abs": 49618040.38384385,
+          "snapshot_kind": "station"
+        }
+      ],
+      "pi_r_initial_gap": 0.23899140464322427,
+      "force_deletion_on_same_Cauchy_state": false,
+      "empty_status": "STATION_REACHED",
+      "clock_anchor_trapezoid_indicator": {
+        "occupied": 0.00019994289894394168,
+        "empty": 0.00031093072143345557
+      }
+    }
+  },
+  "frozen_reweight": {
+    "ratios": [
+      303.99138553987126,
+      94.76215444295961
+    ],
+    "stored_times": [
+      {
+        "time": 0.0,
+        "child_probability": 0.17359138619163464,
+        "probability_total": 0.4654977864086859,
+        "child_fraction": 0.3729155997301119,
+        "direct_NPZ_child_gap": 0.0,
+        "centre_tau": 0.0
+      },
+      {
+        "time": 1.0,
+        "child_probability": 0.17359424619180727,
+        "probability_total": 0.4654977864086854,
+        "child_fraction": 0.37292174369095626,
+        "direct_NPZ_child_gap": 0.0,
+        "centre_tau": 0.9998423090982065
+      },
+      {
+        "time": 1.25,
+        "child_probability": 0.17512258800523584,
+        "probability_total": 0.4654977864086853,
+        "child_fraction": 0.37620498554097614,
+        "direct_NPZ_child_gap": 0.0,
+        "centre_tau": 1.2498028863727615
+      },
+      {
+        "time": 2.25,
+        "child_probability": 0.1835173350373318,
+        "probability_total": 0.46549778640868433,
+        "child_fraction": 0.3942388995083481,
+        "direct_NPZ_child_gap": 0.0,
+        "centre_tau": 2.2496451954709804
+      },
+      {
+        "time": 3.0,
+        "child_probability": 0.1691939177649268,
+        "probability_total": 0.4654977864086838,
+        "child_fraction": 0.3634687912702188,
+        "direct_NPZ_child_gap": 0.0,
+        "centre_tau": 2.999526927294395
+      }
+    ],
+    "generator_action_equal": true,
+    "scalar_selected_times": [
+      {
+        "time": 1.0,
+        "centre_rate": 0.9998423090981752,
+        "child_probability": 0.17359424619180727,
+        "probability_total": 0.4654977864086854,
+        "child_fraction": 0.37292174369095626
+      },
+      {
+        "time": 1.25,
+        "centre_rate": 0.9998423090981752,
+        "child_probability": 0.17512258800523584,
+        "probability_total": 0.4654977864086853,
+        "child_fraction": 0.37620498554097614
+      },
+      {
+        "time": 1.4999999999999725,
+        "centre_rate": 0.9998423090981752,
+        "child_probability": 0.18169758235254874,
+        "probability_total": 0.46549778640868505,
+        "child_fraction": 0.3903296377719546
+      },
+      {
+        "time": 2.25,
+        "centre_rate": 0.9998423090981752,
+        "child_probability": 0.1835173350373318,
+        "probability_total": 0.46549778640868433,
+        "child_fraction": 0.3942388995083481
+      },
+      {
+        "time": 3.0,
+        "centre_rate": 0.9998423090981752,
+        "child_probability": 0.1691939177649268,
+        "probability_total": 0.4654977864086838,
+        "child_fraction": 0.3634687912702188
+      }
+    ],
+    "clock_anchor_trapezoid_indicator": 2.1660451210436804e-13
+  },
+  "matched_centre_clock": [
+    {
+      "sign": "minus",
+      "coordinate_time": 0.0,
+      "centre_tau": 0.0,
+      "coupled_fraction": 0.3729155997301119,
+      "coupled_child_length": 1.0449078098426008,
+      "coupled_centre_radius": 1.0,
+      "frozen_fraction": 0.3729155997301119,
+      "frozen_coordinate_time": 0.0,
+      "coupled_minus_frozen": 0.0,
+      "frozen_0_1_sampling_gap": 0.0,
+      "empty_coordinate_time": 0.0,
+      "empty_energy_total": 1.1165255150319285e-13,
+      "empty_child_length_station_interpolation": 1.0449078098426008,
+      "empty_centre_radius_station_interpolation": 1.0
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 0.25,
+      "centre_tau": 0.3011654715171656,
+      "coupled_fraction": 0.3738882811795514,
+      "coupled_child_length": 1.4163685067751386,
+      "coupled_centre_radius": 1.081073560121975,
+      "frozen_fraction": 0.37291552144918855,
+      "frozen_coordinate_time": 0.3012129700620465,
+      "coupled_minus_frozen": 0.000972759730362871,
+      "frozen_0_1_sampling_gap": 2.514395802677427e-09,
+      "empty_coordinate_time": 0.3070612439478036,
+      "empty_energy_total": 8.921010302607884e-12,
+      "empty_child_length_station_interpolation": 1.0131454401541053,
+      "empty_centre_radius_station_interpolation": 1.0860181788771197
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 0.5,
+      "centre_tau": 0.704023167906722,
+      "coupled_fraction": 0.3778398308655356,
+      "coupled_child_length": 1.7575612253664512,
+      "coupled_centre_radius": 1.1655303719551093,
+      "frozen_fraction": 0.3729153679371248,
+      "frozen_coordinate_time": 0.70413420346425,
+      "coupled_minus_frozen": 0.0049244629284107555,
+      "frozen_0_1_sampling_gap": 7.449087180422254e-09,
+      "empty_coordinate_time": 0.7207868056691868,
+      "empty_energy_total": 1.231231776269233e-11,
+      "empty_child_length_station_interpolation": 1.0086768190199094,
+      "empty_centre_radius_station_interpolation": 1.182705685772122
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 1.0,
+      "centre_tau": 1.6689173395855854,
+      "coupled_fraction": 0.3403922160584776,
+      "coupled_child_length": 1.7609674585273432,
+      "coupled_centre_radius": 1.2613210481895403,
+      "frozen_fraction": 0.3887899350723385,
+      "frozen_coordinate_time": 1.6691805541724203,
+      "coupled_minus_frozen": -0.04839771901386092,
+      "frozen_0_1_sampling_gap": -0.00037945436355829587,
+      "empty_coordinate_time": 1.821646188966817,
+      "empty_energy_total": 1.7184904994976926e-11,
+      "empty_child_length_station_interpolation": 0.4848044735724426,
+      "empty_centre_radius_station_interpolation": 1.327988423031295
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 1.25,
+      "centre_tau": 2.138948861165645,
+      "coupled_fraction": 0.28902452427623526,
+      "coupled_child_length": 1.3653874187791304,
+      "coupled_centre_radius": 1.2524327311006462,
+      "frozen_fraction": 0.3860700182340294,
+      "frozen_coordinate_time": 2.1392862071368284,
+      "coupled_minus_frozen": -0.09704549395779416,
+      "frozen_0_1_sampling_gap": -0.00022540047844554767,
+      "empty_coordinate_time": null,
+      "empty_energy_total": null,
+      "empty_child_length_station_interpolation": null,
+      "empty_centre_radius_station_interpolation": null
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 1.5,
+      "centre_tau": 2.4191340689530985,
+      "coupled_fraction": 0.2584759119201011,
+      "coupled_child_length": 0.9787946761067753,
+      "coupled_centre_radius": 1.2312904145157975,
+      "frozen_fraction": 0.39244467355913815,
+      "frozen_coordinate_time": 2.419515604550722,
+      "coupled_minus_frozen": -0.13396876163903704,
+      "frozen_0_1_sampling_gap": -3.4135586545192e-06,
+      "empty_coordinate_time": null,
+      "empty_energy_total": null,
+      "empty_child_length_station_interpolation": null,
+      "empty_centre_radius_station_interpolation": null
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 2.25,
+      "centre_tau": 2.8568784687686573,
+      "coupled_fraction": 0.1922674709514154,
+      "coupled_child_length": 0.38508764794780287,
+      "coupled_centre_radius": 1.158727163446358,
+      "frozen_fraction": 0.38024214406165247,
+      "frozen_coordinate_time": 2.8573290435624363,
+      "coupled_minus_frozen": -0.18797467311023708,
+      "frozen_0_1_sampling_gap": -0.0006956020426328591,
+      "empty_coordinate_time": null,
+      "empty_energy_total": null,
+      "empty_child_length_station_interpolation": null,
+      "empty_centre_radius_station_interpolation": null
+    },
+    {
+      "sign": "minus",
+      "coordinate_time": 3.0,
+      "centre_tau": 3.0507894716701314,
+      "coupled_fraction": 0.09049642422358657,
+      "coupled_child_length": 0.14933275750079794,
+      "coupled_centre_radius": 1.0503476850735267,
+      "frozen_fraction": null,
+      "frozen_coordinate_time": null,
+      "coupled_minus_frozen": null,
+      "frozen_0_1_sampling_gap": null,
+      "empty_coordinate_time": null,
+      "empty_energy_total": null,
+      "empty_child_length_station_interpolation": null,
+      "empty_centre_radius_station_interpolation": null
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 0.0,
+      "centre_tau": 0.0,
+      "coupled_fraction": 0.3729155997301119,
+      "coupled_child_length": 1.0449078098426008,
+      "coupled_centre_radius": 1.0,
+      "frozen_fraction": 0.3729155997301119,
+      "frozen_coordinate_time": 0.0,
+      "coupled_minus_frozen": 0.0,
+      "frozen_0_1_sampling_gap": 0.0,
+      "empty_coordinate_time": 0.0,
+      "empty_energy_total": 1.1165255150319285e-13,
+      "empty_child_length_station_interpolation": 1.0449078098426008,
+      "empty_centre_radius_station_interpolation": 1.0
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 0.25,
+      "centre_tau": 0.2074400075590316,
+      "coupled_fraction": 0.3719242757545637,
+      "coupled_child_length": 0.7489120528179782,
+      "coupled_centre_radius": 0.9329246581522959,
+      "frozen_fraction": 0.37291546011167614,
+      "frozen_coordinate_time": 0.2074727241199956,
+      "coupled_minus_frozen": -0.000991184357112429,
+      "frozen_0_1_sampling_gap": -1.4111347923506656e-08,
+      "empty_coordinate_time": 0.20429622291676997,
+      "empty_energy_total": 2.189152657996828e-11,
+      "empty_child_length_station_interpolation": 1.0759049130380585,
+      "empty_centre_radius_station_interpolation": 0.9377638615110522
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 0.5,
+      "centre_tau": 0.3521036407927945,
+      "coupled_fraction": 0.36724105306757493,
+      "coupled_child_length": 0.5586543705262227,
+      "coupled_centre_radius": 0.8764768389282459,
+      "frozen_fraction": 0.3729154652542902,
+      "frozen_coordinate_time": 0.3521591730903739,
+      "coupled_minus_frozen": -0.005674412186715272,
+      "frozen_0_1_sampling_gap": 9.91704393604742e-08,
+      "empty_coordinate_time": 0.34378984787733013,
+      "empty_energy_total": 2.2211916451281987e-11,
+      "empty_child_length_station_interpolation": 1.079801038988937,
+      "empty_centre_radius_station_interpolation": 0.8956144253633475
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 1.0,
+      "centre_tau": 0.5587679858989838,
+      "coupled_fraction": 0.3261680959154481,
+      "coupled_child_length": 0.31386256309110416,
+      "coupled_centre_radius": 0.7596370356298086,
+      "frozen_fraction": 0.3729154736620143,
+      "frozen_coordinate_time": 0.5588561124233246,
+      "coupled_minus_frozen": -0.04674737774656618,
+      "frozen_0_1_sampling_gap": -8.481233315649206e-08,
+      "empty_coordinate_time": 0.5429125059889162,
+      "empty_energy_total": 7.430299963213289e-12,
+      "empty_child_length_station_interpolation": 1.0275453364662792,
+      "empty_centre_radius_station_interpolation": 0.8399503529751238
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 1.25,
+      "centre_tau": 0.6405894966947404,
+      "coupled_fraction": 0.27750989369018847,
+      "coupled_child_length": 0.192561716406785,
+      "coupled_centre_radius": 0.6918405034245637,
+      "frozen_fraction": 0.37291541800149297,
+      "frozen_coordinate_time": 0.6406905277618337,
+      "coupled_minus_frozen": -0.0954055243113045,
+      "frozen_0_1_sampling_gap": -8.430540371362483e-08,
+      "empty_coordinate_time": 0.623742749206999,
+      "empty_energy_total": 7.071760978795344e-12,
+      "empty_child_length_station_interpolation": 0.9404394058996367,
+      "empty_centre_radius_station_interpolation": 0.8232814742550794
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 1.5,
+      "centre_tau": 0.6784348903972097,
+      "coupled_fraction": 0.23942410354891874,
+      "coupled_child_length": 0.09639298169544376,
+      "coupled_centre_radius": 0.6566450029627938,
+      "frozen_fraction": 0.37291540330563866,
+      "frozen_coordinate_time": 0.6785418902797926,
+      "coupled_minus_frozen": -0.13349129975671992,
+      "frozen_0_1_sampling_gap": -4.445837153976839e-08,
+      "empty_coordinate_time": 0.661899283322621,
+      "empty_energy_total": 7.048898003208484e-12,
+      "empty_child_length_station_interpolation": 0.9001497778537376,
+      "empty_centre_radius_station_interpolation": 0.8155715178927054
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 2.25,
+      "centre_tau": 0.7046915551777264,
+      "coupled_fraction": 0.15287559486375868,
+      "coupled_child_length": 0.006668940942124081,
+      "coupled_centre_radius": 0.6104496359031487,
+      "frozen_fraction": 0.3729153671013949,
+      "frozen_coordinate_time": 0.7048026961504689,
+      "coupled_minus_frozen": -0.2200397722376362,
+      "frozen_0_1_sampling_gap": 8.653590177765125e-09,
+      "empty_coordinate_time": 0.6887876263871492,
+      "empty_energy_total": 6.9807009777029335e-12,
+      "empty_child_length_station_interpolation": 0.8721973335998984,
+      "empty_centre_radius_station_interpolation": 0.8102224457897494
+    },
+    {
+      "sign": "plus",
+      "coordinate_time": 3.0,
+      "centre_tau": 0.7064165018869848,
+      "coupled_fraction": 0.05966983509904273,
+      "coupled_child_length": 0.0005310528974066007,
+      "coupled_centre_radius": 0.5385445337232869,
+      "frozen_fraction": 0.37291536494457717,
+      "frozen_coordinate_time": 0.7065279149110294,
+      "coupled_minus_frozen": -0.31324552984553444,
+      "frozen_0_1_sampling_gap": 1.1762122442693368e-08,
+      "empty_coordinate_time": 0.690554071564946,
+      "empty_energy_total": 6.976220734849915e-12,
+      "empty_child_length_station_interpolation": 0.870360981681845,
+      "empty_centre_radius_station_interpolation": 0.8098710354183749
+    }
+  ],
+  "input_sha256": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/manifest.json": "4b94e419e7d6be0bddf80b56fc21d4d9eaa34bef0eb0d5f634c6687f83cbfbe8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000000.json": "86ca62dc4507e6cc6d0ce4253c25b74c619f9b784ac7fea39a3a1504b761c7ad",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000000.npz": "ac39e080d07d905e7e53de950bf5ea371f4cf2c23affb9912224127406ace0fa",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/strong-balanced-v1/minus/parent.json": "56cfde3acbe7bba4dea9d647e52a4d2837f429f8ae707f070a24404be09affe4",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/strong-balanced-v1/minus/parent.npz": "3119b7fddd6dc77a4871d9b9bced31f1279f2417c73fbf771dd8e92b65ad0b0c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus/parent.json": "90aa6d4759416a5602f479fd93e6e320b5e9f19ac803576c6ecc7c3a076987a6",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus/parent.npz": "911b6be21a4b0e505788b9f6a34743a881f4d40465515843580d71ee4f86daab",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000001.json": "8b534469f20b870333656bb8b38f1a97aa40ccf50a98edcfea49495eee9db502",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000001.npz": "337094768d1a3e4463433fa8ec3002aadada8850c08614fe66133152db9ae7c5",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000002.json": "e0157402e1afa4816e0e4a9790f9df0c57a9d8cc18b547a40bca5ce37a1535ec",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000002.npz": "74d9eff7f3f76d563f1a5be0ca89244e53fd6c1fe08205fd3b3fdd4f80de7928",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.json": "75068cd6ab96b0cec5cd78e1c7b626afe315bff7cf84f459033c8d7cd6dfdc9e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.npz": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-observations.jsonl": "4431e5a26e10f6faafb5b80684c7893b6d09097a44125757b11a8c277c218161",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000000.json": "00b2b7aa8a1c0a01cea646082155268b6364243736fcd6427ec473be27913884",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000000.npz": "2dc2573718a146f6e97c938b86b05b2094ebf9689caae56fd0ba55af6a82fb16",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000001.json": "98383ab21f4c0141b25c884046a4084d9d03fceb6407ee6c1e504a4ccdbefe66",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000001.npz": "c4fc3fe2de1ec93c47686826a90cc6cda5f147162215c3c5859b1cf71027a73c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000002.json": "171e6415fc4d512ab1ceadad08b5bbae9fddbbef554e3522b27ecc51e8c80255",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000002.npz": "72a7d6e58d32c8e12afca11405b5ba3801c587417ebdcd99d5fa65f0476c4cbd",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.json": "88a69d26d2a4db1d6f72603bf8ea8edb0807ad2463e1c0b6ffa5818dc3d70fcd",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.npz": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-observations.jsonl": "0bac9a8e10424d3aeaffc98cb4f2bd7e78370c32a9318d837ee0c10cbdae38a1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/manifest.json": "1a46d7b58b3e219b463d6039d5f5e737aaf28749b7072e3af3c6af567d4bfddf",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000000.json": "69d9de8fbcf544188e3b0aa1c893e1e0cabcceef774ef2ab620d1898b5f2e352",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000000.npz": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000001.json": "25e0995302f709d7b5c98cbf6a70549b1580a694c8931de6fabbb204aeb97cc3",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000001.npz": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/cpu-ledger.json": "60f5eebd27ed0499d370aa9443e8d495a03702d01d18ec2a9d4fa0d6f027718f",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000002.json": "1ee3894db60298681e58fb4dad1321de3186dffe60641042cd6ede35b93b4e1f",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000002.npz": "e78c5ef3eccaba1c9bf978ab03ca370c60bc6355c28913dbcba6f47a4d548f34",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000003.json": "c5e04c34cc649be01eb439eea09d1a0a8ac6dd987689fde01c463eb28bc42112",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000003.npz": "94cb4a6c481567a23107a7a45d2c13709f066e50b7ac9f7e9b50ff985c857efa",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000004.json": "f1cf59cfc26d8fb1ab72968815621fff12d96037d123979eea88b2b6aac2802e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000004.npz": "b00dc1d4af7aa8bcf5a8aa562babaf6ac645684b35c0c1c10bb4e37a182c181c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000005.json": "7d729f930a43b80727fa5067561f7bc23e29ea97659752bfebc6f34b567ba5af",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-000005.npz": "1b2d770b5d84497f5bdd8cf572994708db2996d445364648dc4ca151ed6385d7",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_minus_balanced_dt0.001-observations.jsonl": "a463443e0974c94e5b10f4559652d64510403466f1a2a4fd1803daaf525781b8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000000.json": "a983ea88962816d6ceac11e996f96497dd9680b9db2d81ba7ed14e1f80acf52e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000000.npz": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000001.json": "acb5cfbb68839df809de7539a5c64701c729c25901bbfbc89cbc9ad3431f3a24",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000001.npz": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000002.json": "ee2f57190fc6dada552c3e4b8cb8315ca7f46ff35257af063fc892da32e2bc26",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000002.npz": "97f0765fba3c321387a6de5a7151aa7a35d56b9aeab930e0d71e36fab76c95e5",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000003.json": "1775dad98f771d1d22baa05a70c991094328890118865e9d46f11b6b6d770370",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000003.npz": "cfed557718aed08229536b18c51b93c1fff661c6c254789f321039f5de94cca3",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000004.json": "f6f80dfb19e12742194c682323aeca3a5a6b072a08f05abdbadd574795c90f44",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000004.npz": "c896d86b3e90c7cc375b9d9ab42cef89a1a73aa13b90056360992e12bcc83b10",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000005.json": "d89685f977586aed6234640bcb5ce9cad36f0e7f1b81f05a74764c42af32c912",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-000005.npz": "cc6699f4429b37df6527666f1ae6603110311dcf4b30fc79674b9e5e593776f8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t3-v1/nf128_plus_balanced_dt0.001-observations.jsonl": "a6cb8f329a5d4eab55012754f83410ff4ab71b5049fe8901675db4354dc6dfe9",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/manifest.json": "494fc57bad292d5d01b14e88b19d9d6d41f4bf98c3211d308b4459281ccd535f",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000000.json": "46cfb93ae3e4b1c7aa35a17c65ab794532d29fa0e854c2c5fbaf842f6f9a7be2",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000000.npz": "06fcba505bc2967ede58f00c767fc07a0cd9212e0abe71e169a8506afad7c8f7",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000001.json": "7fc982c3c5b5c568d1ce8649162b10cf3a07b22754c2169f812625dd2a78015d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000001.npz": "aafd3b662240651efef3b0f260f60f6d146241ba7c977a1a24ba39a3598ddd12",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000002.json": "cae1e18fac86a0b9a89528d6cb4fd623aea20d186c19744a5c0582a6b0516543",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000002.npz": "9fcbc0124f86527a86b9db81fc65e19d019dafdfcb56a9a1e648f8edbab873ce",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000003.json": "5c8a7b926e725c57eca69b6c0d68c6b0fc427369c77c5cd249b15087b981c547",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000003.npz": "fbae3e3d29bfa751eb36c1ccdd99307ba909f8840cba68488e2eaf214177e952",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000004.json": "adc5aa16594a614b82134152a8b7610626eef4c1c16189a0c2b5a4bed3fd0c29",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000004.npz": "971bd337e5ccceb53c41d7150dab9891beda4a5b751ba317aa6d5faaf15b9381",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000005.json": "efd6d49aa37d9489b1f748498019dcf219c6da33066338bc9f38bd479ce70e44",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000005.npz": "16fedfa1e48a1ef372dba41856c5436cfc82b4ec3f2e96c5deaea2c2e6bb3912",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000006.json": "6287340da7c1423255b6742e4e4bd6922e7b84a7cabee1c75f23c89b0e5cef01",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000006.npz": "23275cfe23fd89fc90de1f1d4cae7697fb285ee52ef804376938f3cb732275b4",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000007.json": "a2186ebbaacbe4b7f5129add99c4ad77530279df6d29ca3246a27da47cd1c69d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-000007.npz": "d1399756a00cb3b0b9c8d07f28f0a7df0a3a1e35b0118494e39e3854e824ed34",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_minus_balanced_source_free_dt0.001-observations.jsonl": "ab967689c347dffa4f8c4e6a053395eb9fc99e21637a56eb64f70ba94a41c26f",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000000.json": "10d1c0d94aeb129fe00bd0ab5d19b95fd4ee67a1280d04fabc1c0a90f6c1c815",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000000.npz": "8b60df9bb2ba03cc9c217d9efecd8ac78db640cf15339b64fe30a197d8bbcd7e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000001.json": "5b0fdf7eb90b9c0993ff9c3556cce0d6a2e106208cafdcf969d09c2d4461ac9a",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000001.npz": "857c4c9e2248aafdc5f080c4571262fc139d49cfa725034803a2f465de7d55b5",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000002.json": "41d1976db81fbc916df5432b008d157ed3b7a5629f218034537e85fb9239174a",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000002.npz": "826a8fbbfb2e717d312d5d7a03692ffa5225c08017b6a8b97571ffa68566272b",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000003.json": "c7544ab2cbe5a65a762fb6b6cba4ff173698cf2af566b401687b5a4dbbefe24b",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000003.npz": "9b73b5ad1e13b923e90ee9a8e63c5f2c07031fc553ee0aaa1d700b3f40c4499b",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000004.json": "9d5a22d5f98d8e244477e7a2f816b77ead45cf0cbcf388127d2fcc2753071489",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000004.npz": "b5d401bc053335b933ee6927001ffcd40677f7f50717dad3f63ec86d57c3fecc",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000005.json": "51b56425e73267f5a5c6c4a9e3ecca604989532a61fc35bae1c370957b851832",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000005.npz": "b22a7a9d6c427f691bf06594b034fc7b0d3e54350945c69732185fb0b488bae4",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000006.json": "1dedd29a96f81ea0719ab35505de100c2986190c48b947cbf55000d32969ebd8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000006.npz": "dee094ceaa09b0b979996bd53afa4d617339a1e561d50f925154f01a0bfa679a",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000007.json": "1052d7f3b9526e0867173f9dd8d3f546107e11712f6db4eca023759309cf6aaf",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-000007.npz": "0af72557daf59b6c3f42f2e7e3fd68a71d1a31d034dacd85815c19da6b29df27",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-empty-k-v1/nf128_plus_balanced_source_free_dt0.001-observations.jsonl": "d0e2b24215106585d2c4d2db24094eee7ef1f02545289d750fe9050babfc363a",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json": "951eb28c9ab41bef14f902d01b1826d2498061294f98d96084029904f9eacbcb",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000000.json": "faba55273fdb00d3bd5bf14d39fed4f49fcb5f1ea5bd594b34cee884d3ef6f7a",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000000.npz": "3af7800b8e18ec4ce7e7f3613cea06548148983cd9b3843c9aa854b7229e7eb6",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop2_signplus/parent.json": "c290bca32330e4549ae3ded3c858e850e67efe15690d6375d84d16f6ffab52f1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop2_signplus/parent.npz": "16d4c61f8a17d0ce72ae698271708d927e42070ba5666e1835d1b96adee9413c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000001.json": "4bb2b2678f5cf5752d58e64ae7be25490a09cf306db2783d75c0ed7b108153d9",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000001.npz": "09475c22042dfc808a424294493007563cb0d800a0bfbe8878cb5e2d7627a97d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000002.json": "f30370245e31e6daa36466dde350ad768605ce82a1cbb1e8ce7cff98effafa37",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000002.npz": "a34bfe331cb6a9e675960c1e0922bae077f13659b39a9e09db174e09bf1a58d5",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000003.json": "a1cae83c6d86b756d9e8b75021c1dcb29fa3223f2d8b6c87b97285fde06342cc",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000003.npz": "539858f122fd0839a23a5cbdfe0470f3e5488674ba019bacc0c06f29c4f12fae",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000004.json": "3003bb89227de8c69f524798f24b178f736503d5eb03fe634bf34c286483d027",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-000004.npz": "dba5c838130e466277f8fe514ef0af51a4ea5fe317cd43495e39c654aaf8da60",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/nf128_plus_parent_heavy_frozen_geometry_dt0.0005-observations.jsonl": "8a94e1fb07828711c45eee5b32c3b0d7cab9093e91589572b7e1481368c33b21"
+  },
+  "measurement_source_sha256": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/assess_nsc_discovery_parent_episode.py": "6a61e0e174c8bb28b8809f301930970c137d566b7f0003af3eee7c3cca717c31",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_parent_observer.py": "4f4afe2eb76a92f5495a174a5b9503da3aa9596ae64fbac3dd0802544322b32c",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_boundary_state.py": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_causal_common.py": "2edcd1e8acb78d2d553287ee81ddd91bbf4c0c5b2898e5411a30639d3b566b90",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_response.py": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_prediction.py": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_observables.py": "194fd855c7b964d885d3c8c0a6ce28fd7be82a2a6fcec3a94ff00101177411ea",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_regions.py": "1d8d79b73ad53d78b7a7edd3dbe0f22225323b55a5aefcea187fd8a5f57a5bc8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_family.py": "0dcdf7385bd82acec26f7a9a78e837023f60919854c5316ce9830cbf3cda82cf",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_translation.py": "7e17a7afef9618266ab5c14189e494ae65467c0bc02ebf22bbf4b8c77fd375aa",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/assess_nsc_discovery_parent_strong_controls.py": "1f9b16eb63ed1e91e5f0766bfc31fd92a155ab14405555e0929c728429988e0f"
+  },
+  "limitations": [
+    "Re-solved empty-source C/D; same initial Q,r and parent_k; canonical momenta differ.",
+    "Frozen work, aggregate energy and constraints are not reused under changed weights/momenta.",
+    "Clock interpolation and 0.1 sampling are finite indicators without an interpolation error bound.",
+    "Source-free matter fractions are undefined (null); no negative filled vacuum is inferred.",
+    "Projected leading curvature/constraints are diagnostics; no continuum instability or autonomous renewal proof."
+  ],
+  "evolved": false,
+  "extrapolated": false,
+  "renewal_asserted": false,
+  "next_physical_question": "Does source-dependent transfer persist at matched proper clocks under a resolved spatial/time refinement?",
+  "content_sha256": "6b932511a12436caa71660b0e21fbd8827998963c064984fdb54d564c8fc6e43"
+}

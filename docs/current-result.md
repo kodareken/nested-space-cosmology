@@ -22,8 +22,8 @@ remains a separate historical choice.
 The approved programme starts at `eb4798c`. Primary finite preparation
 of the magnetic branch is achieved, and the frozen, empty-source and
 strong-offset controls below are recorded. The current cursor is an
-independent array assessment and the same strong-$k$ empty-prepared-source
-attribution control. The renewal programme is not complete. The
+coupled exterior-to-cut response after the matched strong-$k$ controls.
+The renewal programme is not complete. The
 [2 October discovery programme](#active-discovery-programme-2-october-2026)
 remains preserved from `ea6c699`. The incoming gate stays paused.
 
@@ -114,9 +114,29 @@ weak $k$ has child length $0.01633475$ at $T=3$, against $0.0162013$ for
 the coupled balanced case. These comparisons separate transport, geometric
 clocks and background. They are not a universal verdict.
 
-The root campaign executor will prepare the strong-$k$ empty-prepared-source
-control. That result is not claimed until its record is saved. A production
-metadata correction remains with its owner.
+The [matched strong-$k$ empty-source control](../lab/results/development/nsc-discovery-parent-strong-empty-k-v1/manifest.json)
+reaches $T=3$ on both signs at producer `5ce6bd02`, using $33.805365$
+aggregate CPU seconds. Both preparations preserve the actual offset and
+initial $Q,r$, and solve their own empty-source momentum constraints.
+The [matched-clock assessment](../lab/results/development/nsc-discovery-parent-strong-controls-v1.json)
+authenticates those states and reuses the frozen field columns by exact
+occupation reweighting, with no additional field integration.
+
+On the minus branch, occupied and empty centre proper times reach
+$3.0507895$ and $1.9788562$. At the occupied $T=1$ proper clock,
+the coupled child fraction is $0.3403922$, compared with $0.3887899$
+in the reweighted frozen control. Its coarsened-sampling indicator is
+$0.00037945$, rather than an interpolation bound. Late minus clocks
+exceed the saved control ranges and are not extrapolated. These results
+separate geometric response from maintained child content; the source
+changes the history without establishing renewal in this preparation.
+The [owning comparison note](../lab/docs/nsc-discovery-parent-strong-controls.md)
+records the remaining constraint, curvature and interpolation limits.
+
+Checkpoint summaries are repaired for new records at `5ce6bd02`; old
+records stay unchanged. The next construction needs a causal response
+of the exterior field and geometry at the collar cuts. Static traction
+jets alone would prescribe support, rather than derive that response.
 
 Earlier preparations stay in their own records:
 [first pilot](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json),
