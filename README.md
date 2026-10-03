@@ -14,9 +14,12 @@ transport reproduces the coupled field return. Source-family controls confirm th
 loss of localization. Coupled causal reduction reproduces field forces and
 generated geometry, and locked forecasts predict withheld local responses.
 The static holding search approaches a noncompact limit without satisfying
-its local forces. Source-consistent wave and initial-curvature controls now
-expose a limitation of the exact higher-derivative branch; the next comparison
-uses the existing curvature-EFT approximation with the same feedback mechanism. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
+its local forces. Source-consistent wave and curvature controls expose a
+limitation of the exact higher-derivative branch. The leading common-action
+comparison now derives a source-history-selected turn radius and predicts a
+withheld full-field result to 0.152 percent of its change. Timestep confirmation
+is much smaller than that prediction remainder. Sustained regeneration remains
+an open research target; the completed records preserve their model domains. [Current measurements and scope](docs/current-result.md#active-discovery-programme-2-october-2026).
 
 **Current focused result:** [Regional Transfer, Geometric Feedback, and Local Memory](paper/finite-regeneration.pdf)
 presents the measured finite spherical realization, source controls, actual
