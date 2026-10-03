@@ -97,11 +97,12 @@ Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
 [response adapter](../lab/docs/nsc-discovery-parent-response.md),
 [step control](../lab/docs/nsc-discovery-parent-step-control.md)
 and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
-The episode runner and the response adapter are implemented. The response
-is one admitted step, not a long held result. The bounded pilots do not
-resolve the parent. They are not a resolved input for production evolution
-or autonomous renewal. Preparation is not accepted. The recorded blocker is
-in [current result](current-result.md#responsive-parent-3-october-2026).
+The current cursor is the magnetic initial-radius branch. Its primary
+finite preparation is achieved, and the six-case episode reaches $T=3$.
+The renewal programme is not complete. Frozen-geometry and source-free
+controls are the next comparison and have not been run. The recorded
+outcome is in
+[current result](current-result.md#responsive-parent-3-october-2026).
 Regular black-hole interiors remain prior foundations; do not start a
 bounce-rediscovery campaign. The incoming gate stays paused. Keep the
 accepted plan in the task, not another repository plan or handover.

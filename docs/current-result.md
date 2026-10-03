@@ -19,79 +19,88 @@ remains a separate historical choice.
 
 ## Responsive parent, 3 October 2026
 
-The approved programme starts at `eb4798c`. This is the current cursor.
-The [2 October discovery programme](#active-discovery-programme-2-october-2026)
-remains a preserved domain that started at `ea6c699`.
+The approved programme starts at `eb4798c`. The current cursor is the
+magnetic initial-radius branch and its $T=3$ episode. Primary finite
+preparation for that branch is achieved. The renewal programme is not
+complete. The [2 October discovery programme](#active-discovery-programme-2-october-2026)
+remains preserved from `ea6c699`. The incoming gate stays paused.
 
 Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
-[episode adapter](../lab/docs/nsc-discovery-parent-episode.md),
+[episode](../lab/docs/nsc-discovery-parent-episode.md),
 [observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
-[response adapter](../lab/docs/nsc-discovery-parent-response.md),
+[response](../lab/docs/nsc-discovery-parent-response.md),
 [step control](../lab/docs/nsc-discovery-parent-step-control.md)
 and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
-The episode runner and the response adapter are implemented. The response
-advances one admitted step. It is not a long held result. No production
-evolution has been run. Preparation is not accepted, and renewal is not
-claimed. These preparations are not a resolved input for production.
-The incoming gate stays paused. This is not a bounce search.
+The response adapter remains one admitted step.
 
-The first immutable pilot is
-[pilot.json](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json).
-Its original `nf64` and `nf128` records stay unchanged. Finite CAR
-admissibility holds, and the balanced case uses the actual solved
-population mix. On $n_f=128$ the relative SVD discards the kinetic-anchor
-row. The realized fine anchor is $0.000154624662736$; the recorded target
-is $0.000135234609664$. That stored convergence flag remains invalid for
-the anchored solve. The later hard-anchor repair does not heal this record.
+The magnetic branch replaces the retained initial radius by
+$r_{\mathrm{mag}}=\sqrt{\mathfrak m/g}$. That radius stays within $0.321\%$
+of the original collar candidate. $Q$, the canonical columns, the population
+weights and the observer are unchanged. The balanced width-$1.4$ source
+selects the common initial kinetic value
 
-From $n_f=64$ to $n_f=128$, the absolute maxima move from $0.182$ to
-$0.489$ in the full Hamilton residual, from $0.347$ to $0.516$ in the
-full momentum residual, from $10.23$ to $20.01$ in the physical normal
-radial rate, and from $85.34$ to $198.01$ in $R_4$. The parent is not
-resolved. This pilot is not a resolved input for production evolution or
-renewal. Its stored label is `NUMERICAL_PREPARATIONS_RETAINED`, with
-`global_parent_PASS` false. Both parent files still store `converged` true
-and status `NUMERICAL_STATIONARY_CANDIDATE`. On $n_f=128$ that flag does
-not accept the anchored solve. Neither label is an accepted stationary parent.
+$k^*=4g/(3r_{\mathrm{mag}})\sqrt{(\int\rho^2/Q)/(\int Q)}=0.002621213673327129$.
 
-The hard-anchor repair, producer `f1dd2f1`, wrote two immutable successors.
-Neither contains a trajectory, and neither resolves the parent. The
-[default successor](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json)
-and the [width-1.4 transition](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json)
-both keep `NUMERICAL_PREPARATIONS_RETAINED`, with `evolved` false,
-`trajectory` false and `global_parent_PASS` false. Their kinetic anchors
-meet the hard-anchor test at roundoff. Each successor parent file still
-stores `converged` true and `NUMERICAL_STATIONARY_CANDIDATE`. That stored
-label does not accept the fallback geometries. The original $n_f=128$
-false convergence stays invalid in its own record.
+That choice is an initial condition, not a dynamical law.
+Producer `4392350e` records it in
+[feasibility-magnetic-v5](../lab/results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json).
+The $n_f=64$ and $n_f=128$ solves meet the retained momentum, hard anchor
+and CAR conditions with no fallback. Their physical radial-rate maxima are
+$0.1173$ and $0.11632$. The $n_f=256$ initial confirmation is valid, and its
+curvature comparison is less settled. The six source records and selection
+ledger are
+[six-magnetic-nf128-v1](../lab/results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json).
 
-On the default profile the $n_f=128$ fallback moves the centre clock from
-the original record's $0.998$ to $17.288$. On the width-1.4 profile the
-$n_f=64$ fallback centre clock is $7.374$. Those excessive fallback
-geometries are not accepted. The native owner now bounds a later fallback
-by five percent in relative $Q$, $r$, clock and proper length. That
-bound does not rewrite these records.
+The episode
+[parent-episode-magnetic-t3-v1](../lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json)
+is pinned at `8c47d0c17fa5962f1d2210f55db3a96c6457a82e`. All six cases run
+continuously through $T=1$ and $T=3$, use $186.65$ CPU, and record no resets
+or clamps. CHECK passed on that commit. The manifest's top-level pure and
+pool flags are the inherited plan. The NPZ states, step counts and CPU
+ledger are the run. Those bytes stay as written.
 
-The wider $n_f=128$ preparation keeps its geometry unchanged. Its physical
-normal radial rate is $17.208$, $R_4$ is about $113.797$, and the full
-Hamilton and momentum maxima are $0.1234$ and $0.15794$. Broadening the
-profile does not resolve the parent. Root is assessing a bounded open parent
-and an offset alternative before further production.
+Every case loses child content. At $T=3$ the child fractions are $0.0221$
+and $0.0231$ for child-heavy, $0.0593$ and $0.0605$ for balanced, and
+$0.1062$ and $0.1088$ for parent-heavy, plus then minus. Proper child length
+contracts by $97$–$98\%$. Mean radius on the two signs stays within about
+$2\%$ of the magnetic radius. Renewal is not observed.
 
-The [Dirac contact record](../lab/results/development/nsc-discovery-dirac-contact-v1.json)
-has status `FINITE_BENCHMARK_CALCULATED_PHYSICAL_DIRAC_CONTACT_OPEN`.
-It is an off-shell finite algebra and a mean-versus-connected reference.
-The physical correction is not installed, and the parent mean force stays
-the existing canonical term.
+On the parent-heavy branch the child fraction is about $0.174$ at $T=1.25$
+and about $0.251$ at $T=2.25$. At $T=3$ that child content is $99.41\%$
+(plus) and $98.99\%$ (minus) the original annulus column, so the return is
+not shown to be outgoing child recycling.
 
-Contour successors are now produced. The root binding
+The balanced confirmation
+[nf256-balanced-v1](../lab/results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json)
+uses $49.42$ CPU. Child fraction moves from $0.059278$ to $0.059058$, child
+length from $0.016201316$ to $0.016201667$, and centre proper time from
+$1.4723228$ to $1.4722193$. Depletion and contraction remain. Global $R_4$
+at $T=3$ moves from $4741$ to $983$, and the weighted Euler defect from
+$0.257$ to $0.050$. Projection curvature stays unresolved. This is not a
+continuum instability, and the raw curvature reference is not a replacement.
+No $n_f=512$ episode is recorded.
+
+Total energy closes near $10^{-13}$, and CAR near $10^{-12}$. For the
+balanced child, the exchange against the normal ledger is
+$\Delta E=+0.01565$, with boundary $-0.04919$, pressure $+0.06382$ and
+lapse $+0.00099$. The time-quadrature indicator is $0.19\%$.
+
+Frozen-geometry and source-free controls are the next discriminating
+comparison. The native interface is pending, and no control has been run.
+The open question is whether the depletion is background transport or
+geometry feedback. A stronger admissible source balance is under review.
+
+Earlier preparations stay in their own records:
+[first pilot](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json),
+[hard-anchor v2](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json)
+and
+[width-1.4 hard anchor](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json).
+The original $n_f=128$ convergence flag remains invalid there.
+[Dirac contact](../lab/results/development/nsc-discovery-dirac-contact-v1.json)
+remains the off-shell mean-versus-connected reference.
+The contour binding
 [nsc-discovery-regions-v2-binding.json](../lab/results/development/nsc-discovery-regions-v2-binding.json)
-is pinned at `4f3d5fc` and verifies 11 producer hashes and 15 input-array
-hashes. The sealed v1 speeds stay unhealed. At $T=1$ the corrected
-moving-energy rate is $1.322754$ at $n_f=256$ and $2.435297$ at
-$n_f=512$, so the former refinement agreement is lost. Endpoints and
-fixed windows remain unchanged at roundoff. The parent observer reads
-actual projected leading rates.
+stays pinned at `4f3d5fc`.
 
 <a id="active-discovery-programme-2-october-2026"></a>
 
