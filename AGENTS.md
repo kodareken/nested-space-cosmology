@@ -31,12 +31,13 @@ AGENTS.md                 this index
 |---|---|
 | Location, branches, commands, and recovery | [Instructions](docs/instructions.md), [consolidation](docs/repository-consolidation.md) |
 | Where a document lives, and which copies match | [Docs route](docs/README.md) |
-| Task authority and scientific status | Latest user instruction, which overrides a stale plan; [scope](docs/instructions.md#scientific-framing-and-authority), [status](docs/current-result.md), [code map](lab/docs/active-code-map.md) |
+| Task authority and scientific status | Latest user instruction, which overrides a stale plan; [scope](docs/instructions.md#rn-radial-programme), [status](docs/current-result.md#rn-radial-parent-4-october-2026), [code map](lab/docs/active-code-map.md) |
 | Existing mathematics, assumptions, and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
-| Responsive parent | NF128 exterior-to-cut response measured; one bounded NF256 confirmation next, then a source-selected inner boundary from the actual coupled exterior; [status](docs/current-result.md#responsive-parent-3-october-2026), [rules](docs/instructions.md#present-regeneration-programme) |
+| RN radial parent | Scientific start `5cb775a7`. Source-free jet comparison is measured and independently confirmed. The temporary $T=10$ pilot is scratch, not a sealed run. [Status](docs/current-result.md#rn-radial-parent-4-october-2026), [rules](docs/instructions.md#rn-radial-programme), [open gaps](lab/docs/active-code-map.md#rn-pending-registration), [reference](lab/docs/nsc-rn-reference.md), [PG action](lab/docs/nsc-rn-pg-action.md), [neutral source](lab/docs/nsc-rn-neutral-source.md), [driver](lab/scripts/derive_nsc_rn_parent.py), [episode](lab/docs/nsc-rn-parent-episode.md), [charged branch, later](lab/docs/nsc-rn-charged-source.md), [MMP study, parallel](lab/docs/nsc-rn-mmp-source-study.md) |
+| Historical periodic parent | NF128 exterior-to-cut response measured; the bounded NF256 confirmation is recorded. Further periodic autonomous exchange runs stay off the active path. [Status](docs/current-result.md#responsive-parent-3-october-2026), [rules](docs/instructions.md#present-regeneration-programme) |
 | Strong source, kinetic-offset and frozen-column comparisons | [Method](lab/docs/nsc-discovery-parent-strong-controls.md), [consumer](lab/scripts/assess_nsc_discovery_parent_strong_controls.py), [record](lab/results/development/nsc-discovery-parent-strong-controls-v1.json) |
 | Coupled exterior-to-cut response | [Method](lab/docs/nsc-discovery-parent-cut-response.md), [adapter](lab/src/recursive_horizons/nsc_discovery_parent_cut_response.py), [driver](lab/scripts/derive_nsc_discovery_parent_cut_response.py), [completed batch](lab/results/development/nsc-discovery-parent-cut-response-v1/prepare.json), [assessment](lab/docs/nsc-discovery-parent-cut-assessment.md), [record](lab/results/development/nsc-discovery-parent-cut-assessment-v1.json), [consumer](lab/scripts/assess_nsc_discovery_parent_cut_response.py) |
-| One bounded NF256 cut confirmation | [Note](lab/docs/nsc-discovery-parent-cut-confirmation.md), [driver](lab/scripts/derive_nsc_discovery_parent_cut_confirmation.py), [tests](lab/tests/test_nsc_discovery_parent_cut_confirmation.py). Root runs the physical confirmation. |
+| Recorded NF256 cut confirmation | [Note](lab/docs/nsc-discovery-parent-cut-confirmation.md), [record](lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json), [payload](lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz), [driver](lab/scripts/derive_nsc_discovery_parent_cut_confirmation.py). Producer `5cb775a7`. Comparison and CPU stay on the status page. |
 | Parent preparation, episode, observer, response, step control and Dirac contact | [Preparation](lab/docs/nsc-discovery-parent.md), [episode](lab/docs/nsc-discovery-parent-episode.md), [observer](lab/docs/nsc-discovery-regions.md#leading-parent-observer), [response](lab/docs/nsc-discovery-parent-response.md), [step control](lab/docs/nsc-discovery-parent-step-control.md), [Dirac contact](lab/docs/nsc-discovery-dirac-contact.md) |
 | Earlier discovery programme | Preserved from `ea6c699`; [record](docs/current-result.md#active-discovery-programme-2-october-2026) |
 | Earlier discovery implementation | [Episode runner](lab/docs/nsc-discovery-episode.md), [observer and atlas](lab/docs/nsc-discovery-observables.md), [coupled response](lab/docs/nsc-discovery-response.md), [FFT adapter](lab/src/recursive_horizons/nsc_discovery_backend.py) |
@@ -103,9 +104,11 @@ AGENTS.md                 this index
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 
-Work on `codex/work-branch` and integrate verified changes into `main`;
-preserve existing scientific branches and publication history. Follow the
-active request for integration and publication. Scientific Python uses `lab/`
+Local `main`, `codex/work-branch` and both remotes are
+`d95175c25a9989aea681967d6089aa7b2bf27706`, the committed two-room
+import. The RN scientific start remains `5cb775a7`. Root owns Git
+integration and publication. Preserve other owners' files and existing
+scientific branches. Scientific Python uses `lab/`
 through root `scripts/lab.py`;
 root `src/`, `scripts/` and `tests/` own the curated publication chain.
 

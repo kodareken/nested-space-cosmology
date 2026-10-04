@@ -1,10 +1,15 @@
 # Nested-Space Cosmology
 
-**Active research:** the accepted discovery programme extends the completed
-parent–child example toward source-selected boundaries, repeated transfer,
-physical regime classification and a predictive local response. The target
-is one unified article. Existing papers below are preserved while this
-successor is developed. [Execution status](docs/current-result.md#active-discovery-programme-2-october-2026).
+**Active research:** the approved programme is the nonperiodic
+horizon-regular RN radial parent. Its scientific start is `5cb775a7`.
+The committed checkout and both remotes are the two-room import
+`d95175c2`, not an RN result. The source-free jet comparison is measured and independently confirmed.
+A temporary paired pilot reached $T=10$ in scratch data. It is not a
+sealed production record or a completed neutral experiment.
+The periodic parent and the earlier discovery programme stay historical
+input. The target is one unified article. Existing papers below are
+preserved.
+[Execution status](docs/current-result.md#rn-radial-parent-4-october-2026).
 
 The longer continuation reaches $T=8$. Child probability leaves and returns
 near the carrier circuit, while its proper radial length contracts severely

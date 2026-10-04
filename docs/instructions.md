@@ -88,9 +88,56 @@ closure of the paused gate. Frozen v0.26.0 remains the recorded
 foundation. Before treating two descriptions as the same
 claim, name the region, scale, observer, state, and compared quantity.
 
-## Present regeneration programme
+<a id="rn-radial-programme"></a>
 
-The approved programme is the responsive parent, starting at `eb4798c`.
+## RN radial programme
+
+The scientific starting checkpoint is `5cb775a7`, the producer of the
+recorded NF256 confirmation. Local `main`, `codex/work-branch` and
+both remotes are `d95175c25a9989aea681967d6089aa7b2bf27706`, the
+committed external two-room import. That import is not an RN result,
+and a moving checkout tip is not one either. The periodic parent
+below is historical input. Further periodic autonomous exchange runs
+stay off this programme. The active question is a nonperiodic
+horizon-regular Painlevé–Gullstrand parent exterior and a distinct
+near-throat child on its own areal radius. Exact magnetic
+Reissner–Nordström calibration comes before any sourced case. The
+working source-free jet comparison is measured and independently
+confirmed. A temporary rank-$9$ paired pilot reached $T=10$; its
+numbers and open gaps are in
+[current result](current-result.md#rn-radial-parent-4-october-2026).
+That pilot is scratch, not a sealed production record and not a
+completed neutral experiment. Dynamic curvature is null. Accounting
+and refinement remain open.
+
+The first shell is neutral massless Dirac, $\kappa=1$, a spherical
+closed Gaussian, multiplicity 4 counted once, fixed flux integer
+$q=1$, sea-free, $V_4=0$, and a positive exterior static frequency.
+The parent outer boundary is absorbing at $R_{\mathrm{out}}=32 r_m$.
+Excision between the horizons is all outflow. $N$ and $\beta$ stay
+coupled from the action. The primary readout is neutral Dirac infall,
+the mass, horizon and RN deviation, and the held local response.
+Renewal lies outside the acceptance criterion. The charged
+lowest-Landau Gauss branch is a later experiment. The MMP
+negative-Casimir study runs in parallel and leaves the classical
+throat unblocked.
+
+Six workers own `nsc_rn_reference`, `nsc_rn_pg`, `nsc_rn_source`,
+`nsc_rn_observables` and `derive_nsc_rn_parent`. Root freezes
+completed producer files at integration. The historical parent's
+bounded $n_f=256$ confirmation is recorded; its comparison, CPU and
+payload hash stay in
+[current result](current-result.md#rn-radial-parent-4-october-2026).
+That record stores no $R_4$. Source-free and matter-jet assessment is
+future Stage 0. Earlier metadata stays as written. The incoming gate
+stays paused. Keep the accepted plan in the task, not another
+repository plan or handover.
+
+<a id="present-regeneration-programme"></a>
+
+## Historical periodic parent
+
+The historical programme is the responsive parent, starting at `eb4798c`.
 Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
 [episode adapter](../lab/docs/nsc-discovery-parent-episode.md),
 [observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
@@ -105,11 +152,10 @@ exterior-to-cut response is measured. A $+5\%$ parent occupation at the
 same $k$, with $c_0$ and the initial $Q$, $r$ and $\Phi$ fixed, changes
 the original child-column content by $1.114\%$ of its baseline. The held
 $\pm$ forecasts for that column match within $0.36$–$0.37\%$ of the
-predicted effect. No autonomous renewal is asserted. The current cursor
-is one bounded $n_f=256$ confirmation of that response. After that
-measurement, the actual coupled exterior feedback is the input for a
-source-selected inner boundary and a repeatable hand-off and invariant
-family. The same inheritance law covers states whose physical frequencies
+predicted effect. No autonomous renewal is asserted. The bounded
+$n_f=256$ confirmation of that response is recorded in
+[current result](current-result.md#rn-radial-parent-4-october-2026).
+The same inheritance law covers states whose physical frequencies
 may differ. A thermal compression reading is conditional, and the recorded
 state is non-thermal. The ancestry share $\eta$ is not a new gate. The
 full state–geometry force stays the force in this comparison; a fixed-$J$
@@ -120,10 +166,11 @@ Regular black-hole interiors remain prior foundations; do not start a
 bounce-rediscovery campaign. The incoming gate stays paused. Keep the
 accepted plan in the task, not another repository plan or handover.
 
-Six Mac Grok workers share the work with one integration owner and one
-scientific executor. The aggregate numerical budget is six CPU-hours per
-batch. One unified article is the publication target; earlier manuscripts
-and releases stay preserved.
+Six workers implement the RN modules named above, with one integration
+owner. The aggregate numerical budget remains six CPU-hours per batch.
+One unified article is the publication target; earlier manuscripts
+and releases stay preserved. Calibration and physical RN runs remain
+pending with those module owners.
 
 The earlier **NSC Discovery Programme: Source-Selected Regions,
 Regeneration and Inherited Local Response** started at `ea6c699`.
