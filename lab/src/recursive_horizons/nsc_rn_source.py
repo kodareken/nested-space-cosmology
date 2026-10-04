@@ -27,6 +27,7 @@ the derivative are supplied.
 from __future__ import annotations
 
 import numpy as np
+from scipy import sparse
 from scipy.integrate import solve_ivp
 
 from . import nsc_rn_reference as reference
@@ -75,8 +76,15 @@ def characteristic_transform():
     return basis.copy()
 
 
-def radial_sbp(points, left, right):
-    """Uniform diagonal-norm SBP derivative and quadrature. Nonperiodic."""
+def radial_sbp(points, left, right, *, layout="dense"):
+    """Uniform diagonal-norm SBP derivative and quadrature. Nonperiodic.
+
+    The coefficients are the D(2,1) operator: second-order centered
+    differences on the interior and first-order one-sided ends. ``layout``
+    selects the dense reference or the CSR production matrix. Both store
+    those same coefficients. The default remains dense so a caller that
+    indexes the matrix keeps the reference.
+    """
     if isinstance(points, bool) or not isinstance(points, (int, np.integer)):
         raise ValueError("point count must be an integer")
     points = int(points)
@@ -84,6 +92,8 @@ def radial_sbp(points, left, right):
     right = float(right)
     if points < 8 or not np.isfinite(left) or not np.isfinite(right) or not left < right:
         raise ValueError("need at least eight ordered SBP nodes")
+    if layout not in ("dense", "csr"):
+        raise ValueError("SBP layout is dense or csr")
     grid = np.linspace(left, right, points)
     step = float(grid[1] - grid[0])
     weights = np.full(points, step)
@@ -102,11 +112,14 @@ def radial_sbp(points, left, right):
     expected[0, 0] = -1.0
     expected[-1, -1] = 1.0
     closure = float(np.max(np.abs(boundary - expected)))
+    stored = derivative if layout == "dense" else sparse.csr_matrix(derivative)
     return {
         "grid": grid,
         "step": step,
         "weights": weights,
-        "derivative": derivative,
+        "derivative": stored,
+        "layout": layout,
+        "family": "diagonal_norm_sbp_d21",
         "closure_residual": closure,
         "periodic": False,
     }
@@ -241,11 +254,24 @@ def _validate_metric(lapse, shift, radial_density, radius, weights, derivative):
         raise ValueError("lapse, radial density, and areal radius must be positive")
     if np.min(weights) <= 0.0:
         raise ValueError("SBP quadrature weights must be positive")
-    derivative = np.asarray(derivative, dtype=float)
     points = lapse.shape[0]
-    if derivative.shape != (points, points) or not np.isfinite(derivative).all():
-        raise ValueError("SBP derivative must be a finite square matrix on this grid")
+    derivative = _as_operator(derivative, points)
     return lapse, shift, radial_density, radius, weights, derivative
+
+
+def _as_operator(derivative, points):
+    """Keep a CSR SBP matrix. A dense square array is still accepted."""
+    if sparse.issparse(derivative):
+        operator = derivative.tocsr()
+        if operator.shape != (points, points):
+            raise ValueError("SBP derivative must be a finite square matrix on this grid")
+        if not np.isfinite(np.asarray(operator.data, dtype=float)).all():
+            raise ValueError("SBP derivative must be a finite square matrix on this grid")
+        return operator
+    operator = np.asarray(derivative, dtype=float)
+    if operator.shape != (points, points) or not np.isfinite(operator).all():
+        raise ValueError("SBP derivative must be a finite square matrix on this grid")
+    return operator
 
 
 def _hermitian_flux(left, right, derivative):
@@ -663,13 +689,11 @@ def _packet_grid(model, request, points, left, right, radii, weights, derivative
     if right is not None and abs(float(right) - float(grid[-1])) > 1e-9 * max(1.0, abs(float(grid[-1]))):
         raise ValueError("right does not match the caller grid; refusing to resample")
     weight_row = np.array(np.asarray(weights, dtype=float), dtype=float, copy=True)
-    differencing = np.array(np.asarray(derivative, dtype=float), dtype=float, copy=True)
     if grid.ndim != 1 or grid.size < 8 or np.any(np.diff(grid) <= 0.0):
         raise ValueError("caller radii must be a strictly increasing grid of at least eight nodes")
     if weight_row.shape != grid.shape or np.any(weight_row <= 0.0) or not np.isfinite(weight_row).all():
         raise ValueError("caller weights must be positive and match the radii")
-    if differencing.shape != (grid.size, grid.size) or not np.isfinite(differencing).all():
-        raise ValueError("caller derivative must be a finite square matrix on these radii")
+    differencing = _as_operator(derivative, grid.size)
     return grid, weight_row, differencing, "caller"
 
 
@@ -1076,7 +1100,7 @@ def energy_account(phi, occupations, lapse, shift, radius, weights, derivative, 
     lapse = np.asarray(lapse, dtype=float)
     shift = np.asarray(shift, dtype=float)
     radius = np.asarray(radius, dtype=float)
-    derivative = np.asarray(derivative, dtype=float)
+    derivative = _as_operator(derivative, int(radius.shape[0]))
     force_n = evaluated["forces"]["N"]
     force_beta = evaluated["forces"]["beta"]
     force_r_unit = evaluated["forces"]["r"] / lapse
@@ -1190,7 +1214,7 @@ def normal_energy_ledger(phi, occupations, lapse, shift, radius, weights, deriva
     lapse = np.asarray(lapse, dtype=float)
     shift = np.asarray(shift, dtype=float)
     radius = np.asarray(radius, dtype=float)
-    derivative = np.asarray(derivative, dtype=float)
+    derivative = _as_operator(derivative, int(radius.shape[0]))
     phi_rate = np.asarray(phi_rate, dtype=complex)
     if phi_rate.shape != phi.shape:
         raise ValueError("phi_rate must have shape (2, points, 1)")

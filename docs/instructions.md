@@ -104,11 +104,16 @@ near-throat child on its own areal radius. Exact magnetic
 Reissner–Nordström calibration comes before any sourced case. The
 working source-free jet comparison is measured and independently
 confirmed. The archived rank-$9$ frames do not store derived energies or
-curvature. `--assess-archive` reads them without a time step. No
-assessment file is saved yet. The balances and remaining limits are
-in
+curvature. `--assess-archive` reads them without a time step. The
+official writer refused the sealed directory, so the accepted
+assessment body is a creation-only record pinned to producer
+`64e2c36`. That commit is the saved-data context, not the identity
+of the current operator. The writer now allows a new development
+file and still protects existing and historical outputs. No official
+v2 assessment exists yet. A finite continuation reaches $T=20$ from
+the archived $t=10$ frame. Its scope and the open refinement are in
 [current result](current-result.md#rn-radial-parent-4-october-2026).
-The archive is not a completed neutral programme or a production seal.
+That segment is not a completed neutral programme or a production seal.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer

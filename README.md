@@ -4,9 +4,10 @@
 horizon-regular RN radial parent. Its scientific start is `5cb775a7`.
 The two-room import commit `d95175c2` is historical. It is not the
 live branch identity and not an RN result. The source-free jet comparison is measured and independently confirmed.
-The archived rank-$9$ frames are assessed by the driver's read-only
-`--assess-archive` command. No assessment file is saved yet, and the
-archive is not a production seal.
+The archived rank-$9$ frames have a creation-only assessment, and a
+finite continuation reaches $T=20$. The radial operator has a CSR
+production matrix with the same coefficients as its dense reference.
+No official v2 assessment exists yet, and this is not a production seal.
 The periodic parent and the earlier discovery programme stay historical
 input. The target is one unified article. Existing papers below are
 preserved.

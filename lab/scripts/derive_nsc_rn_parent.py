@@ -677,12 +677,78 @@ def admit(step_seconds, steps, *, remaining, factor=ADMISSION_FACTOR):
     }
 
 
-def _sealed(path):
-    resolved = Path(path).expanduser().resolve()
-    for prefix in (LAB / "results", ROOT / "results"):
-        prefix = prefix.resolve()
-        if resolved == prefix or prefix in resolved.parents:
+_LOCKED_DEVELOPMENT = (
+    "nsc-discovery-parent-cut-confirmation-v1",
+    "nsc-rn-neutral-continuation-v1",
+    "nsc-rn-pilot-assessment-v1.json",
+)
+
+
+def _under(path, root):
+    path = path.resolve()
+    root = root.resolve()
+    return path == root or root in path.parents
+
+
+def _rn_campaign_dir(directory):
+    """A directory this writer already started with a prepare stage."""
+    marker = directory / "prepare.json"
+    if not marker.is_file():
+        return False
+    try:
+        body = json.loads(marker.read_text())
+    except (OSError, json.JSONDecodeError):
+        return False
+    return body.get("schema") == SCHEMA
+
+
+def _development_locked(resolved):
+    """Existing development output stays put. A new path may be created.
+
+    An existing RN campaign directory can receive a new stage name. The
+    stage file itself is still refused when it already exists. A legacy
+    directory, a named sealed record, and any existing file are locked.
+    """
+    development = (LAB / "results" / "development").resolve()
+    for name in _LOCKED_DEVELOPMENT:
+        locked = (development / name).resolve()
+        if resolved == locked or locked in resolved.parents:
             return True
+    if resolved.exists() and resolved.is_file():
+        return True
+    if resolved == development:
+        return True
+    if resolved.exists() and resolved.is_dir():
+        return not _rn_campaign_dir(resolved)
+    current = resolved.parent
+    while current != development and _under(current, development):
+        if current.exists() and current.is_dir() and not _rn_campaign_dir(current):
+            return True
+        current = current.parent
+    return False
+
+
+def _sealed(path):
+    """True when creation must refuse this destination.
+
+    New files and new directories under ``lab/results/development`` are
+    allowed. The public results tree, the historical archive, and the
+    source-history object store are not. Replacement of an existing output
+    is also sealed; the writers still open with ``O_EXCL`` / ``xb``.
+    """
+    resolved = Path(path).expanduser().resolve()
+    if any(_under(resolved, root) for root in (
+        ROOT / "results",
+        LAB / "archive",
+        LAB / ".source-history",
+    )):
+        return True
+    results = (LAB / "results").resolve()
+    development = (results / "development").resolve()
+    if resolved == results or (_under(resolved, results) and not _under(resolved, development)):
+        return True
+    if _under(resolved, development):
+        return _development_locked(resolved)
     return False
 
 
@@ -977,6 +1043,21 @@ def station_observation(state, grid, rates, packet=None, initial_norm=None):
         "analytic_curvature_injected": False,
         "source_force_each_rk_stage": True,
         "clock_t": state["clocks"]["t"],
+    }
+    pg = _load_module("nsc_rn_pg")
+    current = pg.current_occupation_car(state["phi"], grid["weights"], state["occupations"])
+    cached = np.asarray(state["covariance"], dtype=complex)
+    cached_spectrum = np.linalg.eigvalsh(0.5 * (cached + cached.conj().T))
+    report["car"] = {
+        "current": current,
+        "cached_covariance_describes": state.get("covariance_describes", "load_time_phi"),
+        "cached_is_current_eigenvalue": False,
+        "cached_car_unreliable_as_current_eigenvalue": True,
+        "cached_min_eigenvalue": float(cached_spectrum[0]),
+        "cached_matches_current_min": bool(
+            abs(float(cached_spectrum[0]) - current["min_eigenvalue"]) <= 1.0e-12
+        ),
+        "occupations_renormalized": False,
     }
     source = _load_module("nsc_rn_source")
     account = source.energy_account(

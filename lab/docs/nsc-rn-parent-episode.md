@@ -151,3 +151,21 @@ The reference does not provide `require_exterior_killing_frequency`, and
 the calibrator does not call it or treat the scalar as a Killing-mode
 proof. `--calibrate` stores the measured source-free residuals. It does
 not substitute analytic jets.
+
+The production SBP operator is the CSR form of the same D(2,1)
+coefficients. The dense array remains available as `layout="dense"`.
+Commit `64e2c36fa2bd0688dd02a0b1bcda714c4767c294` pinned the dense
+producer that wrote the T/rm=20 archive. These backend bytes are a later
+producer and need their own root freeze before `write_assessment` will
+create a file. A new path under `lab/results/development` is not sealed.
+An existing file there, the public `results/` tree, `lab/archive`, and
+`lab/.source-history` are sealed. An existing development directory
+receives a new stage only when it is already an RN campaign with
+`prepare.json` for this schema; a legacy directory does not. Creation
+still uses exclusive open, so an existing stage is not replaced.
+
+A station observation recomputes \(\nu\) times the weighted Gram of the
+current \(\phi\). The cached covariance is labelled as the load-time
+column. That cached eigenvalue is not the current one after the field
+moves. The recomputed product remains positive semidefinite. Saved
+checkpoint arrays are not rewritten to refresh it.

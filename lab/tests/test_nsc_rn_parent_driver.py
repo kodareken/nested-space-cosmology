@@ -132,12 +132,9 @@ def test_checkpoint_mechanics_stay_creation_only(tmp_path):
         assert oversized.value.payload["blocker"] == "checkpoint exceeds 64 MiB"
     finally:
         driver.CHUNK_BYTES = original
-    with pytest.raises(driver.CampaignBlocker) as sealed:
-        driver.write_stage(
-            driver.LAB / "results" / "development" / "nsc-rn-parent-should-not-exist",
-            "dependency", {}, blob_match=True,
-        )
-    assert sealed.value.payload["blocker"] == "existing outputs are sealed"
+    new_campaign = driver.LAB / "results" / "development" / "nsc-rn-parent-should-not-exist"
+    assert driver._sealed(new_campaign) is False
+    assert not new_campaign.exists()
 
 
 def test_timing_admission_uses_the_factor_without_shrinking_cfl():
@@ -201,6 +198,10 @@ def test_resume_continues_the_pair_and_the_fixed_metric_stays_frozen(tmp_path):
     assert "sat_debit" not in first["coupled"]["probability_stocks"]
     observed = driver.station_observation(first["coupled"], grid, real(first["coupled"], grid))
     assert observed["analytic_curvature_injected"] is False
+    assert observed["car"]["cached_is_current_eigenvalue"] is False
+    assert observed["car"]["cached_car_unreliable_as_current_eigenvalue"] is True
+    assert observed["car"]["current"]["psd"] is True
+    assert observed["car"]["occupations_renormalized"] is False
     assert observed["curvature_status"] == "sourced_time_dependent_jets"
     assert np.all(np.isfinite(observed["R4"]))
     assert observed["required_time_jet_primitive"] is None
@@ -352,3 +353,58 @@ def test_sat_norm_loss_is_twice_the_raw_coefficient_and_closes_the_scratch():
             assert abs(ledger["probability_closure_residual"]) < 1.0e-11
             assert ledger["included_in_mass_flux"] is False
             assert ledger["coefficient_duplicated"] is False
+
+
+def test_development_writer_allows_a_new_path_and_protects_sealed_output(tmp_path, monkeypatch):
+    commit = "64e2c36fa2bd0688dd02a0b1bcda714c4767c294"
+    fresh = driver.LAB / "results" / "development" / "nsc-rn-writer-positive-not-created.json"
+    assert driver._sealed(fresh) is False
+    assert driver._sealed(driver.ROOT / "results" / "public.json") is True
+    assert driver._sealed(driver.LAB / "archive" / "old.npz") is True
+    assert driver._sealed(driver.LAB / ".source-history" / "objects") is True
+    assert driver._sealed(driver.LAB / "results" / "nsc-10-influence.json") is True
+    locked = driver.LAB / "results" / "development" / "nsc-rn-neutral-continuation-v1"
+    assessment = driver.LAB / "results" / "development" / "nsc-rn-pilot-assessment-v1.json"
+    preserved = driver.LAB / "results" / "development" / "nsc-discovery-parent-cut-confirmation-v1"
+    assert driver._sealed(locked) is True
+    assert driver._sealed(locked / "extra.json") is True
+    assert driver._sealed(assessment) is True
+    assert driver._sealed(preserved) is True
+    before = {path.name: path.stat().st_mtime_ns for path in (driver.LAB / "results" / "development").iterdir()}
+    with pytest.raises(driver.CampaignBlocker) as refused:
+        driver.write_assessment(fresh, {"ok": True}, producer_commit=commit)
+    assert "frozen root commit" in refused.value.payload["blocker"]
+    assert refused.value.payload["bytes_written"] == 0
+    assert not fresh.exists()
+    after = {path.name: path.stat().st_mtime_ns for path in (driver.LAB / "results" / "development").iterdir()}
+    assert before == after
+    lab = tmp_path / "lab"
+    development = lab / "results" / "development"
+    development.mkdir(parents=True)
+    (lab / "archive").mkdir()
+    (lab / ".source-history").mkdir()
+    (tmp_path / "results").mkdir()
+    monkeypatch.setattr(driver, "LAB", lab)
+    monkeypatch.setattr(driver, "ROOT", tmp_path)
+    legacy = development / "legacy-campaign"
+    legacy.mkdir()
+    (legacy / "summary.json").write_text("{}\n")
+    assert driver._sealed(legacy) is True
+    assert driver._sealed(legacy / "station-5.json") is True
+    campaign = development / "rn-campaign"
+    campaign.mkdir()
+    (campaign / "prepare.json").write_text(json.dumps({"schema": driver.SCHEMA}))
+    assert driver._sealed(campaign) is False
+    assert driver._sealed(campaign / "station-5.json") is False
+    existing = development / "already.json"
+    existing.write_text("{}\n")
+    assert driver._sealed(existing) is True
+    written = driver.write_stage(campaign, "station-5", {"note": "new"}, blob_match=True)
+    assert written["creation_only"] is True
+    with pytest.raises(driver.CampaignBlocker) as replaced:
+        driver.write_stage(campaign, "station-5", {"note": "replace"}, blob_match=True)
+    assert replaced.value.payload["blocker"] == "checkpoint stage already exists"
+    with pytest.raises(driver.CampaignBlocker) as legacy_write:
+        driver.write_stage(legacy, "station-5", {"note": "legacy"}, blob_match=True)
+    assert legacy_write.value.payload["blocker"] == "existing outputs are sealed"
+    assert not (legacy / "station-5.json").exists()

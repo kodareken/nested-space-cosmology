@@ -97,6 +97,14 @@ that column. The per-channel CAR is \(G^{1/2}CG^{1/2}\) and is exactly
 rank one for this packet. Multiplicity 4 multiplies the stress once and
 does not enter the CAR. Constructors do not write evidence files.
 
+The covariance stored on a PG state is that CAR for the \(\phi\) passed to
+the constructor. Time stepping copies it. It is not the eigenvalue of a
+later column. The current readout is \(\nu\) times the weighted Gram of
+the current \(\phi\). For one column that product is the current CAR, and
+it stays positive semidefinite when \(\nu\ge 0\) and the Gram is. The
+cached field is the wrong place to read the current eigenvalue. Occupations
+are not renormalized to refresh it.
+
 ## Source
 
 For a per-channel matrix \(C_{jk}\),

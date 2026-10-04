@@ -482,3 +482,61 @@ def test_sat_normal_density_is_the_polarized_force_not_the_probability_stock():
             phi, occupation, lapse, shift, radius, weights, derivative,
             radial_density=np.full(radius.size, 0.7),
         )
+
+
+def test_csr_d21_matches_dense_coefficients_source_and_ledger():
+    from scipy import sparse
+    from recursive_horizons.nsc_rn_source import _as_operator
+    dense = radial_sbp(24, 1.2, 6.0, layout="dense")
+    csr = radial_sbp(24, 1.2, 6.0, layout="csr")
+    assert dense["family"] == "diagonal_norm_sbp_d21"
+    assert csr["layout"] == "csr" and dense["layout"] == "dense"
+    assert sparse.isspmatrix_csr(csr["derivative"])
+    assert isinstance(dense["derivative"], np.ndarray)
+    assert np.max(np.abs(csr["derivative"].toarray() - dense["derivative"])) == 0.0
+    assert csr["closure_residual"] < 1e-12
+    assert csr["closure_residual"] == pytest.approx(dense["closure_residual"], abs=0.0)
+    assert sparse.isspmatrix_csr(_as_operator(csr["derivative"], 24))
+    assert _as_operator(dense["derivative"], 24).shape == (24, 24)
+    matrix = csr["derivative"]
+    assert set(matrix.getrow(0).indices.tolist()) == {0, 1}
+    assert set(matrix.getrow(4).indices.tolist()) == {3, 5}
+    assert set(matrix.getrow(23).indices.tolist()) == {22, 23}
+    radius = dense["grid"]
+    weights = dense["weights"]
+    lapse = np.full(radius.size, 1.1)
+    shift = np.full(radius.size, 0.15)
+    phi = np.zeros((2, radius.size, 1), dtype=complex)
+    phi[0, :, 0] = 1.0e-3 * np.exp(1j * radius)
+    phi[1, :, 0] = 4.0e-4 * np.exp(-1j * radius)
+    occupation = np.array([2.0e-4])
+    ones = np.ones(radius.size)
+    dense_source = source_evaluate(
+        phi, occupation, lapse, shift, ones, radius, weights, dense["derivative"],
+    )
+    csr_source = source_evaluate(
+        phi, occupation, lapse, shift, ones, radius, weights, csr["derivative"],
+    )
+    assert np.max(np.abs(dense_source["forces"]["N"] - csr_source["forces"]["N"])) == 0.0
+    assert np.max(np.abs(dense_source["forces"]["beta"] - csr_source["forces"]["beta"])) == 0.0
+    zeros = np.zeros(radius.size)
+    dense_energy = energy_account(
+        phi, occupation, lapse, shift, radius, weights, dense["derivative"],
+        phi_rate=phi, lapse_t=zeros, shift_t=zeros, lapse_r=zeros, shift_r=zeros,
+    )
+    csr_energy = energy_account(
+        phi, occupation, lapse, shift, radius, weights, csr["derivative"],
+        phi_rate=phi, lapse_t=zeros, shift_t=zeros, lapse_r=zeros, shift_r=zeros,
+    )
+    assert csr_energy["E_coordinate"] == pytest.approx(dense_energy["E_coordinate"], abs=0.0)
+    assert csr_energy["E_normal"] == pytest.approx(dense_energy["E_normal"], abs=0.0)
+    dense_normal = normal_energy_ledger(
+        phi, occupation, lapse, shift, radius, weights, dense["derivative"],
+        phi_rate=phi, lapse_t=zeros, shift_t=zeros, lapse_r=zeros, shift_r=zeros,
+    )
+    csr_normal = normal_energy_ledger(
+        phi, occupation, lapse, shift, radius, weights, csr["derivative"],
+        phi_rate=phi, lapse_t=zeros, shift_t=zeros, lapse_r=zeros, shift_r=zeros,
+    )
+    assert csr_normal["E_normal"] == pytest.approx(dense_normal["E_normal"], abs=0.0)
+    assert csr_normal["global_residual"] == pytest.approx(dense_normal["global_residual"], abs=0.0)

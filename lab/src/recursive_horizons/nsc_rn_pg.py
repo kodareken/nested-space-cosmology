@@ -129,17 +129,31 @@ def _load(module_name):
         return None
 
 
-def sbp_operator(points, spacing):
-    """Source-owned diagonal-norm SBP on a uniform nonperiodic interval."""
+def sbp_operator(points, spacing, *, layout="csr"):
+    """Source-owned diagonal-norm D(2,1) SBP on a uniform nonperiodic interval.
+
+    ``layout="csr"`` is the production matrix. ``layout="dense"`` is the
+    same coefficients in the reference array. The SBP adjoint is checked
+    before that choice, on the dense coefficient matrix.
+    """
     step = float(spacing)
     count = int(points)
+    if layout not in ("csr", "dense"):
+        raise ChartAdmissionError("SBP layout is csr or dense")
     if count < 8 or not math.isfinite(step) or step <= 0.0:
         raise ChartAdmissionError("SBP grid needs at least eight positive spacings")
-    pack = source.radial_sbp(count, 0.0, step * (count - 1))
+    pack = source.radial_sbp(count, 0.0, step * (count - 1), layout=layout)
     if pack["closure_residual"] > 1e-10:
         raise ChartAdmissionError("SBP quadrature failed its boundary closure")
-    derivative = np.asarray(pack["derivative"], dtype=float)
-    return np.asarray(pack["weights"], dtype=float), sparse.csr_matrix(derivative), derivative
+    operator = pack["derivative"]
+    if layout == "csr":
+        if not sparse.issparse(operator):
+            operator = sparse.csr_matrix(np.asarray(operator, dtype=float))
+        else:
+            operator = operator.tocsr()
+    else:
+        operator = np.asarray(operator, dtype=float)
+    return np.asarray(pack["weights"], dtype=float), operator, operator
 
 
 def _fornberg(width, derivative, at):
@@ -263,10 +277,12 @@ def action_model(mass, r_m=None):
     return model
 
 
-def build_grid(mass, *, r_m=1.0, points=33, r_out=None):
+def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr"):
     """Excision at the horizon midpoint and outer radius 32 r_m by default.
 
     Child and parent are disjoint areal intervals on this one chart.
+    The production derivative is the CSR D(2,1) operator. Pass
+    ``layout="dense"`` for the reference array of the same coefficients.
     """
     model = action_model(mass, r_m)
     derived_rm = math.sqrt(model.magnetic_r2)
@@ -283,12 +299,15 @@ def build_grid(mass, *, r_m=1.0, points=33, r_out=None):
     count = int(points)
     radius = np.linspace(excision, outer, count)
     spacing = float(radius[1] - radius[0])
-    weights, q_matrix, derivative = sbp_operator(count, spacing)
+    weights, q_matrix, derivative = sbp_operator(count, spacing, layout=layout)
     return {
         "radius": radius,
         "weights": weights,
         "q_matrix": q_matrix,
         "derivative": derivative,
+        "derivative_layout": layout,
+        "derivative_family": "diagonal_norm_sbp_d21",
+        "production_operator": layout == "csr",
         "spacing": spacing,
         "points": count,
         "mass": float(model.mass),
@@ -593,6 +612,7 @@ def admit_chart(grid, lapse, shift):
 
 
 def _split(grid, coeff, component):
+    """Product rule on the stored SBP operator. A CSR matrix is not densified."""
     operator = grid["derivative"]
     return 0.5 * (coeff * (operator @ component) + operator @ (coeff * component))
 
@@ -792,6 +812,9 @@ def _occupation_record(phi, weights, occupations, covariance):
         "covariance": physical,
         "covariance_kind": "physical_car" if car_defined else "coefficients_gram_singular",
         "covariance_is_physical_car": car_defined,
+        "covariance_describes": "load_time_phi",
+        "covariance_is_current_eigenvalue": False,
+        "cached_car_unreliable_as_current_eigenvalue": True,
         "multiplicity_in_covariance": False,
         "covariance_divided_by_rank": False,
         "multiplicity_over_rank_used": False,
@@ -802,10 +825,13 @@ def make_state(grid, phi=None, *, occupations=None, covariance=None, inner_mass=
                killing_frequency=1.0):
     """Canonical φ, fixed weights or weighted columns, inner mass and clocks.
 
-    The stored covariance is the physical CAR when the Gram is positive
-    definite. It is not divided by multiplicity or rank. The shell factor 4
-    is applied once later, inside the source. A positive frequency scalar is
-    metadata, not a proof that φ is an exterior Killing mode.
+    The stored covariance is the physical CAR of the φ passed to this
+    constructor when the Gram is positive definite. RK4 copies that matrix
+    and does not refresh it, so it is not the eigenvalue of a later φ.
+    The current readout is ν times the weighted Gram of the current column.
+    The stored matrix is not divided by multiplicity or rank. The shell
+    factor 4 is applied once later, inside the source. A positive frequency
+    scalar is metadata, not a proof that φ is an exterior Killing mode.
     """
     if phi is None:
         phi = np.zeros((2, grid["points"], 1), dtype=complex)
@@ -823,6 +849,9 @@ def make_state(grid, phi=None, *, occupations=None, covariance=None, inner_mass=
         "covariance": record["covariance"],
         "covariance_kind": record["covariance_kind"],
         "covariance_is_physical_car": record["covariance_is_physical_car"],
+        "covariance_describes": "load_time_phi",
+        "covariance_is_current_eigenvalue": False,
+        "cached_car_unreliable_as_current_eigenvalue": True,
         "multiplicity_in_covariance": False,
         "covariance_divided_by_rank": False,
         "multiplicity_over_rank_used": False,
@@ -846,6 +875,32 @@ def make_state(grid, phi=None, *, occupations=None, covariance=None, inner_mass=
     }
 
 
+def current_occupation_car(phi, weights, occupations):
+    """ν times the weighted Gram of this φ.
+
+    This is the current per-channel readout. It does not read or replace
+    the cached covariance, and it does not renormalize φ or the occupations.
+    For one column it is the scalar ν G. The cached covariance remains the
+    load-time matrix and is not this eigenvalue after the field moves.
+    """
+    gram = np.asarray(source.weighted_gram(phi, weights), dtype=complex)
+    nu = np.asarray(occupations, dtype=float).reshape(-1)
+    if gram.ndim != 2 or gram.shape[0] != gram.shape[1] or nu.shape[0] != gram.shape[0]:
+        raise ChartAdmissionError("occupations do not match the weighted Gram")
+    product = np.diag(nu.astype(complex)) @ gram
+    hermitian = 0.5 * (product + product.conj().T)
+    spectrum = np.linalg.eigvalsh(hermitian)
+    return {
+        "formula": "nu_times_weighted_gram_of_current_phi",
+        "min_eigenvalue": float(spectrum[0]),
+        "max_eigenvalue": float(spectrum[-1]),
+        "psd": bool(float(np.min(spectrum)) >= -1.0e-12),
+        "trace": float(np.real(np.trace(hermitian))),
+        "cached_covariance_not_used": True,
+        "occupations_renormalized": False,
+    }
+
+
 def _copy_state(state, phi, inner_mass, clocks, stocks, probability):
     matrix = state["occupation_matrix"]
     return {
@@ -855,6 +910,9 @@ def _copy_state(state, phi, inner_mass, clocks, stocks, probability):
         "covariance": np.array(state["covariance"], dtype=complex, copy=True),
         "covariance_kind": state["covariance_kind"],
         "covariance_is_physical_car": state["covariance_is_physical_car"],
+        "covariance_describes": state.get("covariance_describes", "load_time_phi"),
+        "covariance_is_current_eigenvalue": False,
+        "cached_car_unreliable_as_current_eigenvalue": True,
         "multiplicity_in_covariance": False,
         "covariance_divided_by_rank": False,
         "multiplicity_over_rank_used": False,

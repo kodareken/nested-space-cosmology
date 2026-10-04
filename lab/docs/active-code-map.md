@@ -21,10 +21,20 @@ Nonperiodic horizon-regular PG parent exterior and a distinct
 areal-radius near-throat child. Exact magnetic RN calibration comes
 before any sourced case. The source-free jet comparison is measured from reconstructed PG
 jets, meets $10^{-4}$, and is independently confirmed. The archived frames do not store derived energies or curvature.
-`--assess-archive` on
+`--assess-archive` reads
 [the rank-9 directory](../archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/)
-reads them without a time step. No assessment file is saved yet.
-There is no separate energy-consumer file. Refinement is pending.
+without a time step. The official writer refused that sealed
+directory. The accepted body is the manual creation-only
+[assessment v1](../results/development/nsc-rn-pilot-assessment-v1.json),
+pinned to producer `64e2c36`. That commit is the saved-data context,
+not the identity of the current operator. The writer now allows a
+new development file and still protects existing and historical
+outputs. No official v2 assessment exists.
+The finite continuation is
+[nsc-rn-neutral-continuation-v1](../results/development/nsc-rn-neutral-continuation-v1/summary.json).
+There is no separate energy-consumer file. The saved CAR eigenvalue
+is a load-time cache, not the recomputed current value, and the old
+JSON stays unchanged. Refinement and a held prediction are pending.
 It is not a production seal. The charged
 lowest-Landau Gauss branch is later. The MMP negative-Casimir study
 is parallel and leaves the classical throat unblocked. The historical
@@ -40,7 +50,7 @@ Rules:
 |---|---|
 | Analytic source-free sample | [Note](nsc-rn-reference.md); `src/recursive_horizons/nsc_rn_reference.py`; `tests/test_nsc_rn_reference.py`. Registered. |
 | Coupled PG state and spatial jets | [Action](nsc-rn-pg-action.md); `src/recursive_horizons/nsc_rn_pg.py`; `tests/test_nsc_rn_pg.py`. Registered. Ingoing angular coupling is $+\alpha$. |
-| Neutral source preparation | [Note](nsc-rn-neutral-source.md); `src/recursive_horizons/nsc_rn_source.py`; `tests/test_nsc_rn_source.py`. Registered. Dynamic curvature needs actual time jets. |
+| Neutral source and radial operator | [Note](nsc-rn-neutral-source.md); `src/recursive_horizons/nsc_rn_source.py`; `tests/test_nsc_rn_source.py`. Registered. Dense and CSR store the same $D(2,1)$ coefficients. The default point factor is not a continuum claim. |
 | Observers | `src/recursive_horizons/nsc_rn_observables.py`; `tests/test_nsc_rn_observables.py`. Registered. Curvature is computed from the supplied jets. |
 | Campaign driver | [Episode](nsc-rn-parent-episode.md); `scripts/derive_nsc_rn_parent.py`; `tests/test_nsc_rn_parent_driver.py`. Registered. The temporary paired run is not a sealed station. |
 | Charged lowest-Landau Gauss branch, later | [Note](nsc-rn-charged-source.md) |
@@ -52,12 +62,17 @@ The archived pilot and its receipt are
 [rn-first-infall-pilot-2026-10-04](../archive/rn-first-infall-pilot-2026-10-04/receipt.json).
 `sat_norm_ledger` uses twice the raw SAT coefficient. Probability
 closure at the saved clocks stays reconciled. Derived energy and
-curvature now come from `--assess-archive`, not from the raw frames.
-No assessment file exists yet. The frozen arm is an initial
+curvature come from `--assess-archive`, not from the raw frames. The
+official writer returned `existing outputs are sealed`; the v1 file
+remains that manual creation-only body. The writer now allows a new
+development file and still protects existing and historical outputs.
+No official v2 assessment exists. The frozen arm is an initial
 sourced-metric counterfactual. Commit `89f0fad` is the retrospective
-match of the archived inputs, not the live helper identity and not
-the commit that produced the run. The wrapper hash is in the receipt;
-the driver hash was not captured.
+match of the archived inputs, not the current operator and not the
+commit that produced the run. Producer `64e2c36` pins the saved
+assessment and continuation. It is not the identity of the current
+code. The wrapper hash is in the receipt; the launch driver hash was
+not captured.
 
 The driver reads `nsc_rn_reference.sourcefree_static_rn`,
 `nsc_rn_pg.sourcefree_rates`, its metric jets, `rk4_step` and

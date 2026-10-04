@@ -143,7 +143,10 @@ Component 0 is outgoing and component 1 is ingoing:
 \lambda_\pm=-\beta\pm N.
 \]
 
-The radial derivative is the second-order diagonal-norm SBP operator.
+The radial derivative is the second-order diagonal-norm SBP operator,
+D(2,1). The production grid stores it as CSR. `layout="dense"` keeps the
+same coefficients in the reference array. The matrix is not a new stencil
+and it is not a different mesh.
 Excision is the midpoint of \((r_-,r_+)\). Both speeds are outward there,
 and no component is set to zero. The outer boundary is nonperiodic. Only
 the incoming characteristic receives an absorbing SAT, with penalty speed

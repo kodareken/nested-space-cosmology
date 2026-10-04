@@ -1,0 +1,29 @@
+{
+  "creation_only": true,
+  "dependency_order": [
+    "nsc_rn_reference",
+    "nsc_rn_pg",
+    "nsc_rn_source",
+    "nsc_rn_observables",
+    "derive_nsc_rn_parent"
+  ],
+  "evolution_called": true,
+  "evolution_caller": "march_pair",
+  "inputs": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t10.0000.json": "4cf6b75862face55194b2ae5a6ababd5849463c96547482e2bb54438dca16a70",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t10.0000.npz": "7586472db0e6a29d2b4dea6a02429bf5c2c28cecc6812f735e02647bc134ef74",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/archive/rn-first-infall-pilot-2026-10-04/receipt.json": "e3e8226f7d748ea0a62068c4efa37a7ec9e3d5ff6bd3f4923a9536dd4d77f130"
+  },
+  "producers": {
+    "lab/docs/nsc-rn-parent-episode.md": "8abd499ab1c7325f762bdfc3019f99bd3b397c08f786d89db7103cb48d0833a1",
+    "lab/scripts/derive_nsc_rn_parent.py": "81cb305458f88b079def2c1e811fda196a96414b299a4123a8e531ce28bb04ec",
+    "lab/src/recursive_horizons/nsc_rn_observables.py": "cd2e3b58129acd92a513f7e03b4db283ff15011293c2ed0ae12091764e6a3307",
+    "lab/src/recursive_horizons/nsc_rn_pg.py": "917496b083c01bdef7a504fe3adc8c6655f1483329463195b1cf84ab01bc5b30",
+    "lab/src/recursive_horizons/nsc_rn_reference.py": "4e61faaa18ba7f82461a6e2ac7e19590786a24d7cce79cf30241079a22bbbecc",
+    "lab/src/recursive_horizons/nsc_rn_source.py": "539b9c24cd7f2535ad0f6dfbf273eed5cdcd59448857f3964a04bb8879c7a825"
+  },
+  "producing_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
+  "schema": "NSC-RN-PARENT-v2",
+  "write_dependency_manifest_blocker": "existing outputs are sealed",
+  "writer": "creation_only_record_after_write_dependency_manifest_refused_the_sealed_directory"
+}

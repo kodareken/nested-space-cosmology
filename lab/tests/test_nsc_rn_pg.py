@@ -431,3 +431,139 @@ def test_vacuum_rk4_step_does_not_move_the_inner_stock():
     assert updated["stocks"]["sat_debit"] == pytest.approx(0.0)
     with pytest.raises(pg.ChartAdmissionError, match="CFL"):
         pg.rk4_step(state, grid, 2.0 * cfl)
+
+
+def _column(grid, scale):
+    phi = np.zeros((2, grid["points"], 1), dtype=complex)
+    center = float(grid["radius"][0] + 0.35 * (grid["radius"][-1] - grid["radius"][0]))
+    width = 0.15 * (grid["radius"][-1] - grid["radius"][0])
+    envelope = np.exp(-0.5 * ((grid["radius"] - center) / width) ** 2)
+    phi[0, :, 0] = scale * envelope
+    phi[1, :, 0] = 0.25 * scale * envelope * np.exp(-1j * grid["radius"])
+    return phi
+
+
+def _compare_layouts(points, r_out, scale, steps=1):
+    from scipy import sparse
+    dense = pg.build_grid(1.04, r_m=1.0, points=points, r_out=r_out, layout="dense")
+    csr = pg.build_grid(1.04, r_m=1.0, points=points, r_out=r_out, layout="csr")
+    assert csr["derivative_layout"] == "csr" and csr["production_operator"] is True
+    assert csr["derivative_family"] == "diagonal_norm_sbp_d21"
+    assert sparse.isspmatrix_csr(csr["derivative"])
+    assert isinstance(dense["derivative"], np.ndarray)
+    assert np.array_equal(csr["radius"], dense["radius"])
+    assert np.max(np.abs(csr["derivative"].toarray() - dense["derivative"])) == 0.0
+    phi = _column(dense, scale)
+    occupation = np.array([1.0e-4])
+    left = pg.make_state(dense, phi, occupations=occupation, inner_mass=dense["mass"])
+    right = pg.make_state(csr, phi, occupations=occupation, inner_mass=csr["mass"])
+    left_rates = pg.stage_rates(left, dense)
+    right_rates = pg.stage_rates(right, csr)
+    assert np.max(np.abs(left_rates["phi_rate"] - right_rates["phi_rate"])) == 0.0
+    assert np.max(np.abs(left_rates["lapse"] - right_rates["lapse"])) == 0.0
+    assert np.max(np.abs(left_rates["shift"] - right_rates["shift"])) == 0.0
+    assert np.max(np.abs(left_rates["mass_slope"] - right_rates["mass_slope"])) == 0.0
+    dt = min(0.5 * left_rates["cfl_dt"], 0.001)
+    moved_left = left
+    moved_right = right
+    for _ in range(steps):
+        moved_left = pg.rk4_step(moved_left, dense, dt)
+        moved_right = pg.rk4_step(moved_right, csr, dt)
+    assert np.max(np.abs(moved_left["phi"] - moved_right["phi"])) == 0.0
+    assert moved_left["inner_mass"] == pytest.approx(moved_right["inner_mass"], abs=0.0)
+    assert moved_left["stocks"]["excision_flux"] == pytest.approx(
+        moved_right["stocks"]["excision_flux"], abs=0.0,
+    )
+    return dense, csr, dt
+
+
+def test_csr_matches_dense_field_source_metric_and_rk4():
+    production = pg.build_grid(1.04, r_m=1.0, points=33, r_out=16.0)
+    assert production["derivative_layout"] == "csr"
+    _compare_layouts(33, 16.0, 1.0e-4)
+
+
+def test_saved_state_agrees_and_current_car_is_not_the_cached_field():
+    from pathlib import Path
+    saved = Path(
+        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/"
+        "nsc-rn-neutral-continuation-v1/t20.0000.npz"
+    )
+    if not saved.is_file():
+        pytest.skip("saved T20 state is not on this machine")
+    stamp = saved.stat().st_mtime_ns
+    size = saved.stat().st_size
+    with np.load(saved) as payload:
+        radius = np.array(payload["radius"])
+        phi = np.array(payload["coupled_phi"])
+        occupation = np.array(payload["occupations"])
+        inner = float(payload["coupled_inner_mass"][0])
+    assert saved.stat().st_mtime_ns == stamp and saved.stat().st_size == size
+    dense = pg.build_grid(1.04, r_m=1.0, points=radius.size, r_out=float(radius[-1]), layout="dense")
+    csr = pg.build_grid(1.04, r_m=1.0, points=radius.size, r_out=float(radius[-1]), layout="csr")
+    assert np.array_equal(dense["radius"], radius)
+    state = pg.make_state(csr, phi, occupations=occupation, inner_mass=inner)
+    assert np.array_equal(state["occupations"], occupation)
+    cached = np.array(state["covariance"])
+    loaded = pg.current_occupation_car(state["phi"], csr["weights"], state["occupations"])
+    assert loaded["psd"] is True
+    assert loaded["min_eigenvalue"] == pytest.approx(float(occupation[0]) * float(np.real(
+        source.weighted_gram(phi, csr["weights"])[0, 0]
+    )))
+    rates = pg.stage_rates(state, csr)
+    dense_state = pg.make_state(dense, phi, occupations=occupation, inner_mass=inner)
+    dense_rates = pg.stage_rates(dense_state, dense)
+    assert np.max(np.abs(rates["phi_rate"] - dense_rates["phi_rate"])) == 0.0
+    assert np.max(np.abs(rates["lapse"] - dense_rates["lapse"])) == 0.0
+    dt = min(0.5 * rates["cfl_dt"], 0.001)
+    moved = pg.rk4_step(state, csr, dt)
+    assert np.array_equal(moved["occupations"], occupation)
+    assert np.array_equal(moved["covariance"], cached)
+    assert moved["covariance_describes"] == "load_time_phi"
+    assert moved["covariance_is_current_eigenvalue"] is False
+    current = pg.current_occupation_car(moved["phi"], csr["weights"], moved["occupations"])
+    assert current["psd"] is True
+    assert current["min_eigenvalue"] != pytest.approx(float(np.linalg.eigvalsh(
+        0.5 * (cached + cached.conj().T)
+    )[0]), abs=0.0)
+    assert saved.stat().st_mtime_ns == stamp and saved.stat().st_size == size
+
+
+def test_csr_full_pair_at_3921_is_at_least_one_and_a_half_times_dense():
+    import resource
+    import sys
+    import time
+    import derive_nsc_rn_parent as driver
+    from scipy import sparse
+    dense = pg.build_grid(1.04, r_m=1.0, points=3921, r_out=32.0, layout="dense")
+    csr = pg.build_grid(1.04, r_m=1.0, points=3921, r_out=32.0, layout="csr")
+    assert sparse.isspmatrix_csr(csr["derivative"])
+    assert np.max(np.abs(csr["derivative"].toarray() - dense["derivative"])) == 0.0
+    phi = _column(dense, 1.0e-4)
+    occupation = np.array([1.0e-4])
+    probe = pg.make_state(dense, phi, occupations=occupation, inner_mass=dense["mass"])
+    rates = pg.stage_rates(probe, dense)
+    metric = driver.freeze_sourced_metric(rates)
+    dt = min(0.5 * rates["cfl_dt"], 0.001)
+
+    def once(grid):
+        coupled = pg.make_state(grid, phi, occupations=occupation, inner_mass=grid["mass"])
+        fixed = pg.make_state(grid, phi, occupations=occupation, inner_mass=grid["mass"])
+        started = time.process_time()
+        marched = driver.march_pair(coupled, fixed, grid, metric, dt=dt, steps=1)
+        elapsed = time.process_time() - started
+        return marched, elapsed
+
+    left, dense_cpu = once(dense)
+    right, csr_cpu = once(csr)
+    assert np.max(np.abs(left["coupled"]["phi"] - right["coupled"]["phi"])) == 0.0
+    assert np.max(np.abs(left["fixed"]["phi"] - right["fixed"]["phi"])) == 0.0
+    assert left["coupled"]["inner_mass"] == pytest.approx(right["coupled"]["inner_mass"], abs=0.0)
+    assert csr_cpu > 0.0 and dense_cpu / csr_cpu >= 1.5
+    rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    memory = rss if sys.platform == "darwin" else rss * 1024
+    assert memory < 8 * 1024 ** 3
+    print(
+        f"N3921 dense_cpu={dense_cpu:.6f} csr_cpu={csr_cpu:.6f} "
+        f"speedup={dense_cpu / csr_cpu:.3f} rss={memory}"
+    )
