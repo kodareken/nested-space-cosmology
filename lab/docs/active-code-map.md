@@ -29,7 +29,9 @@ directory. The accepted body is the manual creation-only
 pinned to producer `64e2c36`. That commit is the saved-data context,
 not the identity of the current operator. The writer now allows a
 new development file and still protects existing and historical
-outputs. No official v2 assessment exists.
+outputs. The current reproducible assessment is
+[v2](../results/development/nsc-rn-pilot-assessment-v2.json).
+The numerical family is still running and is not claimed.
 The finite continuation is
 [nsc-rn-neutral-continuation-v1](../results/development/nsc-rn-neutral-continuation-v1/summary.json).
 There is no separate energy-consumer file. The saved CAR eigenvalue
@@ -66,7 +68,9 @@ curvature come from `--assess-archive`, not from the raw frames. The
 official writer returned `existing outputs are sealed`; the v1 file
 remains that manual creation-only body. The writer now allows a new
 development file and still protects existing and historical outputs.
-No official v2 assessment exists. The frozen arm is an initial
+The current reproducible assessment is
+[v2](../results/development/nsc-rn-pilot-assessment-v2.json).
+The frozen arm is an initial
 sourced-metric counterfactual. Commit `89f0fad` is the retrospective
 match of the archived inputs, not the current operator and not the
 commit that produced the run. Producer `64e2c36` pins the saved

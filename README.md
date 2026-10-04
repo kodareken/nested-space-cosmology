@@ -7,7 +7,9 @@ live branch identity and not an RN result. The source-free jet comparison is mea
 The archived rank-$9$ frames have a creation-only assessment, and a
 finite continuation reaches $T=20$. The radial operator has a CSR
 production matrix with the same coefficients as its dense reference.
-No official v2 assessment exists yet, and this is not a production seal.
+The current reproducible assessment is v2. The manual v1 record
+remains the historical writer failure. A numerical family is still
+running, and this is not a production seal.
 The periodic parent and the earlier discovery programme stay historical
 input. The target is one unified article. Existing papers below are
 preserved.

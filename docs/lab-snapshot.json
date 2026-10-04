@@ -12982,22 +12982,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 178885,
+      "bytes": 179077,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
+      "changed_from_commit": "ab03859ae553d197f99430146985598fdeee3382",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "2d451cb5ef259b7a1304fad734cfde3b06d76d0cf0588cf092dc633e93b2fff9"
+      "sha256": "f54c1c2222825bae6c60444d79f6f61fea16f8263bd63b9598394dffc27f9e79"
     },
     {
-      "bytes": 97213,
+      "bytes": 97482,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
+      "changed_from_commit": "ab03859ae553d197f99430146985598fdeee3382",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "5a2d6a6d1b254f8d10578212adaf6181e645018230c1fd54356ec10dbe9ff36e"
+      "sha256": "4a6e15226f62c5ff7330e240e5e96d7ba66b1228cfc666cc9b98095b22d9a003"
     },
     {
       "bytes": 16589,
@@ -85139,6 +85139,13 @@
       "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
       "path": "lab/results/development/nsc-rn-pilot-assessment-v1.json",
       "sha256": "810f0254ba3a4b88ab39c5fb2641931bbd248c399fab85a1a6b33081ed0de91c"
+    },
+    {
+      "bytes": 78054,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ab03859ae553d197f99430146985598fdeee3382",
+      "path": "lab/results/development/nsc-rn-pilot-assessment-v2.json",
+      "sha256": "a60f369f21bddacb991489848a581a4172f744eed3718d0ee5f7450109bc12e2"
     },
     {
       "bytes": 7526,

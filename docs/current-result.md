@@ -122,10 +122,18 @@ six $T=20$ forecasts fit in six CPU-hours, and the current estimate
 is about three hours. The default production point factor is one
 backend choice. It is not a continuum validation and not new physics.
 The writer now allows a new development file and still refuses the
-archive, historical results, and any existing output. No official v2
-assessment file exists yet. Producer `64e2c36` remains the pinned
-context of the saved assessment and continuation, not the identity
-of this operator.
+archive, historical results, and any existing output. The current
+reproducible assessment is
+[nsc-rn-pilot-assessment-v2.json](../lab/results/development/nsc-rn-pilot-assessment-v2.json),
+sha256 `a60f369f21bddacb991489848a581a4172f744eed3718d0ee5f7450109bc12e2`,
+$78054$ bytes, $41$ authenticated frames, CPU $1.013725$ seconds.
+Its producing commit is
+`ab03859ae553d197f99430146985598fdeee3382`, the recorded source of
+that file, not a live branch label. The manual v1 body remains the
+historical writer failure pinned to `64e2c36`. A separate numerical
+family, `nsc-rn-neutral-family-v1`, is still running within six
+CPU-hours on at most six one-thread processes. Its physical results
+are not claimed.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,
