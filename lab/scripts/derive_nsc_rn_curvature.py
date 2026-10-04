@@ -91,7 +91,12 @@ def _profile(payload, key: str) -> Dict[str, Any]:
 def main(argv: List[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run", default="nsc-rn-inner-packet-curv")
-    parser.add_argument("--out", default="nsc-rn-curvature-v2.json")
+    parser.add_argument("--out", default="nsc-rn-curvature-v3.json")
+    parser.add_argument("--shell-record", default=None,
+                        help="shell record for this same run, supplying its mass peak "
+                             "time. Reading another run's peak puts the comparison on "
+                             "the wrong clock, which is the mistake this file already "
+                             "made once.")
     args = parser.parse_args(argv)
 
     record_path = DEVELOPMENT / args.out
@@ -136,12 +141,16 @@ def main(argv: List[str] | None = None) -> int:
     # The compression window is where the mass peak sits. The edge curvature
     # is read there too, because a curvature feature tracking the compression
     # is the thing this reduction is looking for.
-    arrival = None
-    motion_path = DEVELOPMENT / "nsc-rn-inner-packet-shell-v2.json"
-    if motion_path.is_file():
-        prior = json.loads(motion_path.read_text(encoding="utf-8"))
-        arrival = prior["accumulation_after_arrival"]["peak_t"] if prior.get("accumulation_after_arrival") else None
-    at_mass_peak = min(range(len(times)), key=lambda i: abs(times[i] - arrival)) if arrival else None
+    mass_peak_t = None
+    if args.shell_record:
+        shell_path = DEVELOPMENT / args.shell_record
+        if shell_path.is_file():
+            prior = json.loads(shell_path.read_text(encoding="utf-8"))
+            block = prior.get("accumulation_after_arrival")
+            if block:
+                mass_peak_t = block["peak_t"]
+    at_mass_peak = (min(range(len(times)), key=lambda i: abs(times[i] - mass_peak_t))
+                    if mass_peak_t is not None else None)
 
     bounded = edge_overshoot is not None and edge_overshoot < 10.0
 
@@ -184,6 +193,7 @@ def main(argv: List[str] | None = None) -> int:
         "R4_edge_max_over_initial": edge_overshoot,
         "R4_edge_at_mass_peak_t": times[at_mass_peak] if at_mass_peak is not None else None,
         "R4_edge_at_mass_peak": edge_series[at_mass_peak] if at_mass_peak is not None else None,
+        "mass_peak_t": mass_peak_t,
         "R4_edge_final_over_initial": edge_growth,
         "R4_bulk_change_first_to_last": bulk_decay,
         "verdict": (
@@ -215,7 +225,7 @@ def main(argv: List[str] | None = None) -> int:
           f"   (x{edge_overshoot:.2f} of the initial value)")
     if at_mass_peak is not None:
         print(f"  R4 edge at mass peak   : {edge_series[at_mass_peak]:.4e} at t={times[at_mass_peak]}"
-              f"   (mass peak at t={arrival})")
+              f"   (this run's mass peak at t={mass_peak_t})")
     print(f"  R4 edge abs last       : {edge_series[-1]:.4e}   (x{edge_growth:.4f} of the initial value)")
     print(f"  R4 edge/neighbour      : {sharpness[0]:.2f} -> {sharpness[-1]:.2f}")
     print(f"  verdict                 : {record['verdict']}")

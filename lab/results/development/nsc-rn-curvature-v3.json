@@ -1,0 +1,966 @@
+{
+ "R4_bulk_change_first_to_last": 1.0403157606941535,
+ "R4_bulk_max_abs": [
+  9.68927100497563e-07,
+  1.0816558958792744e-06,
+  5.025193260260741e-06,
+  1.0898053526331442e-05,
+  9.14951779928952e-06,
+  7.985185056791355e-06,
+  6.714559583051449e-06,
+  5.321619576649506e-06,
+  4.142557399673674e-06,
+  3.274450366984316e-06,
+  2.5147022228166893e-06,
+  2.079644664532143e-06,
+  2.1350859448210358e-06,
+  1.7243985941939322e-06,
+  1.3456648943459965e-06,
+  1.4738176561720356e-06,
+  1.5204911256337314e-06,
+  1.4946517741610058e-06,
+  1.3546385733949687e-06,
+  1.321648780218225e-06,
+  1.1977945054810271e-06,
+  1.125283444147751e-06,
+  1.007390291019039e-06,
+  1.1842650004534327e-06,
+  1.5609245046510623e-06,
+  1.7657636685597389e-06,
+  1.619747965087015e-06,
+  1.378649312933078e-06,
+  1.1946900771719893e-06,
+  1.2841597266111116e-06,
+  1.0079901336113029e-06
+ ],
+ "R4_edge_abs": [
+  0.0003103022949874079,
+  0.0008327070438516326,
+  0.00030537057372059806,
+  6.02603368384802e-05,
+  4.640210578410464e-05,
+  8.986369917463044e-05,
+  0.00010259709155746588,
+  0.00010093284306078587,
+  9.536642363283665e-05,
+  9.28293011728254e-05,
+  9.685441424811536e-05,
+  0.00010765861313843939,
+  0.00012280324397373477,
+  0.00013847977856285,
+  0.00015108000092201035,
+  0.0001584898252452449,
+  0.00016061346824725042,
+  0.000158958536940923,
+  0.00015548435668821803,
+  0.00015132689117769438,
+  0.00014606731980926213,
+  0.00013799585371598866,
+  0.00012530813577771305,
+  0.0001075295920289765,
+  8.635007623492008e-05,
+  6.513198605062609e-05,
+  4.722563997305862e-05,
+  3.3950758812073545e-05,
+  2.3541975033625206e-05,
+  1.1983792406522475e-05,
+  4.50764818848981e-06
+ ],
+ "R4_edge_at_mass_peak": null,
+ "R4_edge_at_mass_peak_t": null,
+ "R4_edge_final_over_initial": 0.014526635030761634,
+ "R4_edge_max_abs": 0.0008327070438516326,
+ "R4_edge_max_over_initial": 2.683534918378299,
+ "R4_edge_max_t": 0.1,
+ "R4_edge_over_bulk": [
+  320.25349980206107,
+  769.8446863036122,
+  60.767926307525414,
+  5.529458695801189,
+  5.071535659257132,
+  11.253802953283076,
+  15.279794644526836,
+  18.96656489758579,
+  23.021147188050804,
+  28.349582607452614,
+  38.515261715412905,
+  51.76779234189957,
+  57.51676848026285,
+  80.30613051362535,
+  112.27163728265081,
+  107.53692940339204,
+  105.63262457734353,
+  106.35155270875809,
+  114.77921841435992,
+  114.49856682250176,
+  121.94689417998488,
+  122.63208388398687,
+  124.38886585948325,
+  90.79858983234786,
+  55.31982871536972,
+  36.88601550158271,
+  29.156165644895005,
+  24.62610215199924,
+  19.70550813425403,
+  9.332010775752654,
+  4.471916974365973
+ ],
+ "R4_edge_over_neighbour": [
+  12.153372370096696,
+  12.298488489252108,
+  14.396270339003108,
+  11.166888575351786,
+  19.251543181384946,
+  14.453621662392983,
+  12.95003876437701,
+  11.882686590241747,
+  11.112883727152884,
+  10.710537167273142,
+  10.697281113992894,
+  10.930064796397277,
+  11.199244176782145,
+  11.369023359459058,
+  11.409203901188203,
+  11.359298950015754,
+  11.281871441342773,
+  11.232069741676924,
+  11.245635400934885,
+  11.315837171013825,
+  11.397588087025762,
+  11.430296539056892,
+  11.380166602598475,
+  11.263868423828471,
+  11.161854077293214,
+  11.247608304292708,
+  11.842492471499739,
+  13.412213289570868,
+  16.64649535666805,
+  29.328424843564846,
+  5.602940644244608
+ ],
+ "creation_only": true,
+ "mass_peak_t": null,
+ "method": {
+  "bulk_margin_nodes": 10,
+  "edge_node": 0,
+  "why_three_readings": "The edge value on its own says whether the curvature at the boundary grows without bound. The edge over its neighbour says how sharply it is confined and does not move when the interior changes. The edge over the bulk is reported but is a poor verdict on its own: it moves for two reasons at once, and on this family it grows because the interior decays."
+ },
+ "producing_commit": "8694d9d0b57509ca40eff6e4077d17920a357d10",
+ "reading": "The edge curvature is finite throughout. It carries a transient maximum early, a second and lower maximum while the mass compresses, and then relaxes far below where it started. A first-versus-last comparison alone hides all three features, so the verdict is built from the maximum, the value at the mass peak, and the relaxation, not from the endpoints.",
+ "run": "nsc-rn-inner-packet-curv",
+ "schema": "NSC-RN-CURVATURE-v1",
+ "scope_note": "A construction check on one finite marched collar. It does not measure the actual universe. Regularity at the inner edge of this collar is not regularity at a horizon: the excision is the horizon midpoint of the reference chart, and nothing here extrapolates through it.",
+ "stations": [
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 9.68927100497563e-07,
+    "edge": 0.0003103022949874079,
+    "edge_abs": 0.0003103022949874079,
+    "edge_over_bulk": 320.25349980206107,
+    "edge_over_neighbour": 12.153372370096696,
+    "full_max_abs": 0.0003103022949874079,
+    "neighbour_abs": 2.553219678769203e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763502727001359,
+    "edge": 2.9241593645391246,
+    "edge_abs": 2.9241593645391246,
+    "edge_over_bulk": 10.581351470972102,
+    "edge_over_neighbour": 1.3099169765824266,
+    "full_max_abs": 2.9241593645391246,
+    "neighbour_abs": 2.2323241982619817
+   },
+   "inner_mass": 1.04,
+   "t_over_rm": 0.0
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4323502304147466,
+    "available": true,
+    "bulk_max_abs": 1.0816558958792744e-06,
+    "edge": -0.0008327070438516326,
+    "edge_abs": 0.0008327070438516326,
+    "edge_over_bulk": 769.8446863036122,
+    "edge_over_neighbour": 12.298488489252108,
+    "full_max_abs": 0.0008327070438516326,
+    "neighbour_abs": 6.77080801091412e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27636005467897506,
+    "edge": 2.9222612477742715,
+    "edge_abs": 2.9222612477742715,
+    "edge_over_bulk": 10.574108661140714,
+    "edge_over_neighbour": 1.3089360124174503,
+    "full_max_abs": 2.9222612477742715,
+    "neighbour_abs": 2.2325470611639755
+   },
+   "inner_mass": 1.040021276951487,
+   "t_over_rm": 0.1
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4323502304147466,
+    "available": true,
+    "bulk_max_abs": 5.025193260260741e-06,
+    "edge": 0.00030537057372059806,
+    "edge_abs": 0.00030537057372059806,
+    "edge_over_bulk": 60.767926307525414,
+    "edge_over_neighbour": 14.396270339003108,
+    "full_max_abs": 0.00030537057372059806,
+    "neighbour_abs": 2.1211783783559035e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763707711690471,
+    "edge": 2.924338465055559,
+    "edge_abs": 2.924338465055559,
+    "edge_over_bulk": 10.5812146946134,
+    "edge_over_neighbour": 1.3099034339178872,
+    "full_max_abs": 2.924338465055559,
+    "neighbour_abs": 2.2324840055643937
+   },
+   "inner_mass": 1.0400439929801786,
+   "t_over_rm": 0.2
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4680184331797235,
+    "available": true,
+    "bulk_max_abs": 1.0898053526331442e-05,
+    "edge": 6.02603368384802e-05,
+    "edge_abs": 6.02603368384802e-05,
+    "edge_over_bulk": 5.529458695801189,
+    "edge_over_neighbour": 11.166888575351786,
+    "full_max_abs": 6.02603368384802e-05,
+    "neighbour_abs": 5.396340836738567e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763783318150149,
+    "edge": 2.9240132429024213,
+    "edge_abs": 2.9240132429024213,
+    "edge_over_bulk": 10.579748505246485,
+    "edge_over_neighbour": 1.3096999506644964,
+    "full_max_abs": 2.9240132429024213,
+    "neighbour_abs": 2.232582540313053
+   },
+   "inner_mass": 1.0400681568294194,
+   "t_over_rm": 0.3
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.6820276497695854,
+    "available": true,
+    "bulk_max_abs": 9.14951779928952e-06,
+    "edge": -4.640210578410464e-05,
+    "edge_abs": 4.640210578410464e-05,
+    "edge_over_bulk": 5.071535659257132,
+    "edge_over_neighbour": 19.251543181384946,
+    "full_max_abs": 4.640210578410464e-05,
+    "neighbour_abs": 2.4103057789659488e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763927898493427,
+    "edge": 2.923924075254848,
+    "edge_abs": 2.923924075254848,
+    "edge_over_bulk": 10.578872469316702,
+    "edge_over_neighbour": 1.3096096577633127,
+    "full_max_abs": 2.923924075254848,
+    "neighbour_abs": 2.2326683816982755
+   },
+   "inner_mass": 1.0400937216386974,
+   "t_over_rm": 0.4
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.8247004608294932,
+    "available": true,
+    "bulk_max_abs": 7.985185056791355e-06,
+    "edge": -8.986369917463044e-05,
+    "edge_abs": 8.986369917463044e-05,
+    "edge_over_bulk": 11.253802953283076,
+    "edge_over_neighbour": 14.453621662392983,
+    "full_max_abs": 8.986369917463044e-05,
+    "neighbour_abs": 6.217382831352758e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2764009467299191,
+    "edge": 2.923942052802836,
+    "edge_abs": 2.923942052802836,
+    "edge_over_bulk": 10.57862531730009,
+    "edge_over_neighbour": 1.309571865258838,
+    "full_max_abs": 2.923942052802836,
+    "neighbour_abs": 2.232746541347631
+   },
+   "inner_mass": 1.0401206259480165,
+   "t_over_rm": 0.5
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 2.003041474654378,
+    "available": true,
+    "bulk_max_abs": 6.714559583051449e-06,
+    "edge": -0.00010259709155746588,
+    "edge_abs": 0.00010259709155746588,
+    "edge_over_bulk": 15.279794644526836,
+    "edge_over_neighbour": 12.95003876437701,
+    "full_max_abs": 0.00010259709155746588,
+    "neighbour_abs": 7.9225316174103e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27640732279464036,
+    "edge": 2.92401045064468,
+    "edge_abs": 2.92401045064468,
+    "edge_over_bulk": 10.578628746450047,
+    "edge_over_neighbour": 1.3095599805111875,
+    "full_max_abs": 2.92401045064468,
+    "neighbour_abs": 2.2328190339959004
+   },
+   "inner_mass": 1.0401487938741596,
+   "t_over_rm": 0.6
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 2.1813824884792625,
+    "available": true,
+    "bulk_max_abs": 5.321619576649506e-06,
+    "edge": -0.00010093284306078587,
+    "edge_abs": 0.00010093284306078587,
+    "edge_over_bulk": 18.96656489758579,
+    "edge_over_neighbour": 11.882686590241747,
+    "full_max_abs": 0.00010093284306078587,
+    "neighbour_abs": 8.494109669077154e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2764137721474073,
+    "edge": 2.9241001253806864,
+    "edge_abs": 2.9241001253806864,
+    "edge_over_bulk": 10.578706345432412,
+    "edge_over_neighbour": 1.3095605797022147,
+    "full_max_abs": 2.9241001253806864,
+    "neighbour_abs": 2.232886489333397
+   },
+   "inner_mass": 1.040178135495479,
+   "t_over_rm": 0.7
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 2.074377880184332,
+    "available": true,
+    "bulk_max_abs": 4.142557399673674e-06,
+    "edge": -9.536642363283665e-05,
+    "edge_abs": 9.536642363283665e-05,
+    "edge_over_bulk": 23.021147188050804,
+    "edge_over_neighbour": 11.112883727152884,
+    "full_max_abs": 9.536642363283665e-05,
+    "neighbour_abs": 8.581609056146355e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27642043990707177,
+    "edge": 2.9241918890051846,
+    "edge_abs": 2.9241918890051846,
+    "edge_over_bulk": 10.578783139149378,
+    "edge_over_neighbour": 1.3095649513420835,
+    "full_max_abs": 2.9241918890051846,
+    "neighbour_abs": 2.2329491072652643
+   },
+   "inner_mass": 1.0402085475141314,
+   "t_over_rm": 0.8
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 2.21705069124424,
+    "available": true,
+    "bulk_max_abs": 3.274450366984316e-06,
+    "edge": -9.28293011728254e-05,
+    "edge_abs": 9.28293011728254e-05,
+    "edge_over_bulk": 28.349582607452614,
+    "edge_over_neighbour": 10.710537167273142,
+    "full_max_abs": 9.28293011728254e-05,
+    "neighbour_abs": 8.667100419246232e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27642682244647476,
+    "edge": 2.9242726905139405,
+    "edge_abs": 2.9242726905139405,
+    "edge_over_bulk": 10.578831188063072,
+    "edge_over_neighbour": 1.3095672669207163,
+    "full_max_abs": 2.9242726905139405,
+    "neighbour_abs": 2.233006859884336
+   },
+   "inner_mass": 1.0402399141470013,
+   "t_over_rm": 0.9
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 2.145714285714286,
+    "available": true,
+    "bulk_max_abs": 2.5147022228166893e-06,
+    "edge": -9.685441424811536e-05,
+    "edge_abs": 9.685441424811536e-05,
+    "edge_over_bulk": 38.515261715412905,
+    "edge_over_neighbour": 10.697281113992894,
+    "full_max_abs": 9.685441424811536e-05,
+    "neighbour_abs": 9.054115079898395e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2764323201180252,
+    "edge": 2.924335352576721,
+    "edge_abs": 2.924335352576721,
+    "edge_over_bulk": 10.578847478211484,
+    "edge_over_neighbour": 1.3095644546108232,
+    "full_max_abs": 2.924335352576721,
+    "neighbour_abs": 2.2330595048456594
+   },
+   "inner_mass": 1.04027210821488,
+   "t_over_rm": 1.0
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 2.079644664532143e-06,
+    "edge": -0.00010765861313843939,
+    "edge_abs": 0.00010765861313843939,
+    "edge_over_bulk": 51.76779234189957,
+    "edge_over_neighbour": 10.930064796397277,
+    "full_max_abs": 0.00010765861313843939,
+    "neighbour_abs": 9.849768976111228e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27643651239540556,
+    "edge": 2.924378510259675,
+    "edge_abs": 2.924378510259675,
+    "edge_over_bulk": 10.578843166986355,
+    "edge_over_neighbour": 1.3095561927131998,
+    "full_max_abs": 2.924378510259675,
+    "neighbour_abs": 2.2331065490216275
+   },
+   "inner_mass": 1.0403049924081123,
+   "t_over_rm": 1.1
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 2.1350859448210358e-06,
+    "edge": -0.00012280324397373477,
+    "edge_abs": 0.00012280324397373477,
+    "edge_over_bulk": 57.51676848026285,
+    "edge_over_neighbour": 11.199244176782145,
+    "full_max_abs": 0.00012280324397373477,
+    "neighbour_abs": 1.0965315340505377e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27643924578897744,
+    "edge": 2.9244055242894227,
+    "edge_abs": 2.9244055242894227,
+    "edge_over_bulk": 10.578836286226146,
+    "edge_over_neighbour": 1.3095443990299613,
+    "full_max_abs": 2.9244055242894227,
+    "neighbour_abs": 2.2331472888247714
+   },
+   "inner_mass": 1.040338420712785,
+   "t_over_rm": 1.2
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 1.7243985941939322e-06,
+    "edge": -0.00013847977856285,
+    "edge_abs": 0.00013847977856285,
+    "edge_over_bulk": 80.30613051362535,
+    "edge_over_neighbour": 11.369023359459058,
+    "full_max_abs": 0.00013847977856285,
+    "neighbour_abs": 1.2180446304355108e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.276440592310064,
+    "edge": 2.924422271715872,
+    "edge_abs": 2.924422271715872,
+    "edge_over_bulk": 10.578845339890433,
+    "edge_over_neighbour": 1.3095321904214812,
+    "full_max_abs": 2.924422271715872,
+    "neighbour_abs": 2.233180897045859
+   },
+   "inner_mass": 1.0403722399830573,
+   "t_over_rm": 1.3
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.3941013824884796,
+    "available": true,
+    "bulk_max_abs": 1.3456648943459965e-06,
+    "edge": -0.00015108000092201035,
+    "edge_abs": 0.00015108000092201035,
+    "edge_over_bulk": 112.27163728265081,
+    "edge_over_neighbour": 11.409203901188203,
+    "full_max_abs": 0.00015108000092201035,
+    "neighbour_abs": 1.3241940649888484e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27644072891364285,
+    "edge": 2.92443445756505,
+    "edge_abs": 2.92443445756505,
+    "edge_over_bulk": 10.578884193575586,
+    "edge_over_neighbour": 1.3095225940455497,
+    "full_max_abs": 2.92443445756505,
+    "neighbour_abs": 2.233206567693118
+   },
+   "inner_mass": 1.0404062916450123,
+   "t_over_rm": 1.4
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.572442396313364,
+    "available": true,
+    "bulk_max_abs": 1.4738176561720356e-06,
+    "edge": -0.0001584898252452449,
+    "edge_abs": 0.0001584898252452449,
+    "edge_over_bulk": 107.53692940339204,
+    "edge_over_neighbour": 11.359298950015754,
+    "full_max_abs": 0.0001584898252452449,
+    "neighbour_abs": 1.3952430158115092e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27643980998395845,
+    "edge": 2.9244453584993306,
+    "edge_abs": 2.9244453584993306,
+    "edge_over_bulk": 10.578958792762277,
+    "edge_over_neighbour": 1.3095174364738047,
+    "full_max_abs": 2.9244453584993306,
+    "neighbour_abs": 2.233223687631158
+   },
+   "inner_mass": 1.0404404135165997,
+   "t_over_rm": 1.5
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.715115207373272,
+    "available": true,
+    "bulk_max_abs": 1.5204911256337314e-06,
+    "edge": -0.00016061346824725042,
+    "edge_abs": 0.00016061346824725042,
+    "edge_over_bulk": 105.63262457734353,
+    "edge_over_neighbour": 11.281871441342773,
+    "full_max_abs": 0.00016061346824725042,
+    "neighbour_abs": 1.423642071107789e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2764378918569833,
+    "edge": 2.9244548862109867,
+    "edge_abs": 2.9244548862109867,
+    "edge_over_bulk": 10.57906666327773,
+    "edge_over_neighbour": 1.3095168658558891,
+    "full_max_abs": 2.9244548862109867,
+    "neighbour_abs": 2.2332319364971203
+   },
+   "inner_mass": 1.0404744417100045,
+   "t_over_rm": 1.6
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.5011059907834103,
+    "available": true,
+    "bulk_max_abs": 1.4946517741610058e-06,
+    "edge": -0.000158958536940923,
+    "edge_abs": 0.000158958536940923,
+    "edge_over_bulk": 106.35155270875809,
+    "edge_over_neighbour": 11.232069741676924,
+    "full_max_abs": 0.000158958536940923,
+    "neighbour_abs": 1.4152203520523265e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27643493210800074,
+    "edge": 2.924460280956067,
+    "edge_abs": 2.924460280956067,
+    "edge_over_bulk": 10.579199447244626,
+    "edge_over_neighbour": 1.3095196608608919,
+    "full_max_abs": 2.924460280956067,
+    "neighbour_abs": 2.2332312895810182
+   },
+   "inner_mass": 1.04050821258486,
+   "t_over_rm": 1.7
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.3941013824884796,
+    "available": true,
+    "bulk_max_abs": 1.3546385733949687e-06,
+    "edge": -0.00015548435668821803,
+    "edge_abs": 0.00015548435668821803,
+    "edge_over_bulk": 114.77921841435992,
+    "edge_over_neighbour": 11.245635400934885,
+    "full_max_abs": 0.00015548435668821803,
+    "neighbour_abs": 1.382619577683375e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27643086083617935,
+    "edge": 2.924458094349588,
+    "edge_abs": 2.924458094349588,
+    "edge_over_bulk": 10.579347347482681,
+    "edge_over_neighbour": 1.3095241571901042,
+    "full_max_abs": 2.924458094349588,
+    "neighbour_abs": 2.2332219518765575
+   },
+   "inner_mass": 1.0405415647054899,
+   "t_over_rm": 1.8
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.5367741935483874,
+    "available": true,
+    "bulk_max_abs": 1.321648780218225e-06,
+    "edge": -0.00015132689117769438,
+    "edge_abs": 0.00015132689117769438,
+    "edge_over_bulk": 114.49856682250176,
+    "edge_over_neighbour": 11.315837171013825,
+    "full_max_abs": 0.00015132689117769438,
+    "neighbour_abs": 1.3373017735296422e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27642566097429516,
+    "edge": 2.924446432010148,
+    "edge_abs": 2.924446432010148,
+    "edge_over_bulk": 10.579504166518364,
+    "edge_over_neighbour": 1.309529337417909,
+    "full_max_abs": 2.924446432010148,
+    "neighbour_abs": 2.2332042119625095
+   },
+   "inner_mass": 1.0405743407613077,
+   "t_over_rm": 1.9
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 3.429769585253456,
+    "available": true,
+    "bulk_max_abs": 1.1977945054810271e-06,
+    "edge": -0.00014606731980926213,
+    "edge_abs": 0.00014606731980926213,
+    "edge_over_bulk": 121.94689417998488,
+    "edge_over_neighbour": 11.397588087025762,
+    "full_max_abs": 0.00014606731980926213,
+    "neighbour_abs": 1.2815634210849858e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27641942165795197,
+    "edge": 2.9244262069383513,
+    "edge_abs": 2.9244262069383513,
+    "edge_over_bulk": 10.579669798155885,
+    "edge_over_neighbour": 1.3095354532440608,
+    "full_max_abs": 2.9244262069383513,
+    "neighbour_abs": 2.23317833793181
+   },
+   "inner_mass": 1.040606389407584,
+   "t_over_rm": 2.0
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4680184331797235,
+    "available": true,
+    "bulk_max_abs": 1.125283444147751e-06,
+    "edge": -0.00013799585371598866,
+    "edge_abs": 0.00013799585371598866,
+    "edge_over_bulk": 122.63208388398687,
+    "edge_over_neighbour": 11.430296539056892,
+    "full_max_abs": 0.00013799585371598866,
+    "neighbour_abs": 1.2072814842944979e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27641231599191546,
+    "edge": 2.9244007470329763,
+    "edge_abs": 2.9244007470329763,
+    "edge_over_bulk": 10.57984965879201,
+    "edge_over_neighbour": 1.3095438741406014,
+    "full_max_abs": 2.9244007470329763,
+    "neighbour_abs": 2.233144535880585
+   },
+   "inner_mass": 1.0406375670063461,
+   "t_over_rm": 2.1
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4680184331797235,
+    "available": true,
+    "bulk_max_abs": 1.007390291019039e-06,
+    "edge": -0.00012530813577771305,
+    "edge_abs": 0.00012530813577771305,
+    "edge_over_bulk": 124.38886585948325,
+    "edge_over_neighbour": 11.380166602598475,
+    "full_max_abs": 0.00012530813577771305,
+    "neighbour_abs": 1.1011098532520691e-05
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.276404528767606,
+    "edge": 2.9243737293197984,
+    "edge_abs": 2.9243737293197984,
+    "edge_over_bulk": 10.580049980941299,
+    "edge_over_neighbour": 1.3095561132698117,
+    "full_max_abs": 2.9243737293197984,
+    "neighbour_abs": 2.233103033682132
+   },
+   "inner_mass": 1.0406677392554111,
+   "t_over_rm": 2.2
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 1.1842650004534327e-06,
+    "edge": -0.0001075295920289765,
+    "edge_abs": 0.0001075295920289765,
+    "edge_over_bulk": 90.79858983234786,
+    "edge_over_neighbour": 11.263868423828471,
+    "full_max_abs": 0.0001075295920289765,
+    "neighbour_abs": 9.546417623407244e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27639618222257933,
+    "edge": 2.9243466587742573,
+    "edge_abs": 2.9243466587742573,
+    "edge_over_bulk": 10.5802715336325,
+    "edge_over_neighbour": 1.3095726146225453,
+    "full_max_abs": 2.9243466587742573,
+    "neighbour_abs": 2.233054224043265
+   },
+   "inner_mass": 1.0406967826985118,
+   "t_over_rm": 2.3
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 1.5609245046510623e-06,
+    "edge": -8.635007623492008e-05,
+    "edge_abs": 8.635007623492008e-05,
+    "edge_over_bulk": 55.31982871536972,
+    "edge_over_neighbour": 11.161854077293214,
+    "full_max_abs": 8.635007623492008e-05,
+    "neighbour_abs": 7.736176771078185e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27638730431713143,
+    "edge": 2.9243174143973603,
+    "edge_abs": 2.9243174143973603,
+    "edge_over_bulk": 10.580505575762443,
+    "edge_over_neighbour": 1.3095920282498716,
+    "full_max_abs": 2.9243174143973603,
+    "neighbour_abs": 2.2329987899402495
+   },
+   "inner_mass": 1.0407245861000654,
+   "t_over_rm": 2.4
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 1.7657636685597389e-06,
+    "edge": -6.513198605062609e-05,
+    "edge_abs": 6.513198605062609e-05,
+    "edge_over_bulk": 36.88601550158271,
+    "edge_over_neighbour": 11.247608304292708,
+    "full_max_abs": 6.513198605062609e-05,
+    "neighbour_abs": 5.79074095474752e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763778745106523,
+    "edge": 2.9242810213468955,
+    "edge_abs": 2.9242810213468955,
+    "edge_over_bulk": 10.580734896107561,
+    "edge_over_neighbour": 1.3096115452337946,
+    "full_max_abs": 2.9242810213468955,
+    "neighbour_abs": 2.2329377226319784
+   },
+   "inner_mass": 1.04075105165691,
+   "t_over_rm": 2.5
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 1.619747965087015e-06,
+    "edge": -4.722563997305862e-05,
+    "edge_abs": 4.722563997305862e-05,
+    "edge_over_bulk": 29.156165644895005,
+    "edge_over_neighbour": 11.842492471499739,
+    "full_max_abs": 4.722563997305862e-05,
+    "neighbour_abs": 3.9878125391856756e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763679145371215,
+    "edge": 2.9242325384365637,
+    "edge_abs": 2.9242325384365637,
+    "edge_over_bulk": 10.580940784440385,
+    "edge_over_neighbour": 1.3096282685122393,
+    "full_max_abs": 2.9242325384365637,
+    "neighbour_abs": 2.2328721888070904
+   },
+   "inner_mass": 1.0407760960047037,
+   "t_over_rm": 2.6
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4323502304147466,
+    "available": true,
+    "bulk_max_abs": 1.378649312933078e-06,
+    "edge": -3.3950758812073545e-05,
+    "edge_abs": 3.3950758812073545e-05,
+    "edge_over_bulk": 24.62610215199924,
+    "edge_over_neighbour": 13.412213289570868,
+    "full_max_abs": 3.3950758812073545e-05,
+    "neighbour_abs": 2.5313315616948273e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27635755742249496,
+    "edge": 2.9241705885404667,
+    "edge_abs": 2.9241705885404667,
+    "edge_over_bulk": 10.581113163010048,
+    "edge_over_neighbour": 1.3096409427989248,
+    "full_max_abs": 2.9241705885404667,
+    "neighbour_abs": 2.232803276821064
+   },
+   "inner_mass": 1.0407996509739128,
+   "t_over_rm": 2.7
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4323502304147466,
+    "available": true,
+    "bulk_max_abs": 1.1946900771719893e-06,
+    "edge": -2.3541975033625206e-05,
+    "edge_abs": 2.3541975033625206e-05,
+    "edge_over_bulk": 19.70550813425403,
+    "edge_over_neighbour": 16.64649535666805,
+    "full_max_abs": 2.3541975033625206e-05,
+    "neighbour_abs": 1.414230114460402e-06
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.27634705065842835,
+    "edge": 2.9240992006932576,
+    "edge_abs": 2.9240992006932576,
+    "edge_over_bulk": 10.581257132023874,
+    "edge_over_neighbour": 1.3096508936120792,
+    "full_max_abs": 2.9240992006932576,
+    "neighbour_abs": 2.232731802769556
+   },
+   "inner_mass": 1.0408216640663188,
+   "t_over_rm": 2.8
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4680184331797235,
+    "available": true,
+    "bulk_max_abs": 1.2841597266111116e-06,
+    "edge": -1.1983792406522475e-05,
+    "edge_abs": 1.1983792406522475e-05,
+    "edge_over_bulk": 9.332010775752654,
+    "edge_over_neighbour": 29.328424843564846,
+    "full_max_abs": 1.1983792406522475e-05,
+    "neighbour_abs": 4.086067516562153e-07
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763366743344331,
+    "edge": 2.9240264105122034,
+    "edge_abs": 2.9240264105122034,
+    "edge_over_bulk": 10.581391042484054,
+    "edge_over_neighbour": 1.309661426636651,
+    "full_max_abs": 2.9240264105122034,
+    "neighbour_abs": 2.2326582665119887
+   },
+   "inner_mass": 1.0408420986683276,
+   "t_over_rm": 2.9
+  },
+  {
+   "R4": {
+    "argmax_bulk_radius": 1.4680184331797235,
+    "available": true,
+    "bulk_max_abs": 1.0079901336113029e-06,
+    "edge": 4.50764818848981e-06,
+    "edge_abs": 4.50764818848981e-06,
+    "edge_over_bulk": 4.471916974365973,
+    "edge_over_neighbour": 5.602940644244608,
+    "full_max_abs": 8.496007002478656e-06,
+    "neighbour_abs": 8.045147137369923e-07
+   },
+   "Ricci2": {
+    "argmax_bulk_radius": 1.3966820276497696,
+    "available": true,
+    "bulk_max_abs": 0.2763266321927593,
+    "edge": 2.9239599512948,
+    "edge_abs": 2.9239599512948,
+    "edge_over_bulk": 10.581535077136937,
+    "edge_over_neighbour": 1.3096757908697256,
+    "full_max_abs": 2.9239599512948,
+    "neighbour_abs": 2.2325830344264554
+   },
+   "inner_mass": 1.040860934045778,
+   "t_over_rm": 3.0
+  }
+ ],
+ "stations_total": 31,
+ "stations_with_curvature": 31,
+ "verdict": "edge_curvature_bounded_while_mass_compresses",
+ "what_this_does_not_establish": "A bounded edge value says the evolved geometry stays finite across the sampled collar while the mass compresses. It says nothing about the horizon behind that edge, which is outside the domain by construction, and it is not a regularity criterion for a black hole. The excision is a boundary, not an event horizon, and regularity at a boundary is a much weaker statement.",
+ "what_this_measures": "Whether the geometry stays regular while the mass compresses. The curvature is reconstructed from the evolved lapse and shift and their jets, so it is a same-state reading. The vacuum reference on the grid is not used and could not answer this, because it does not know the shell is there."
+}

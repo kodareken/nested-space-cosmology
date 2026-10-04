@@ -1,0 +1,122 @@
+{
+ "all_runs_stable": false,
+ "creation_only": true,
+ "producing_commit": "8694d9d0b57509ca40eff6e4077d17920a357d10",
+ "runs": [
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases": 1858,
+   "mass_growth_first_last": [
+    0.0010400996943209506,
+    0.00017835844460312167
+   ],
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 1.04,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-curv",
+   "stable": false,
+   "stations": 31,
+   "stop_reason": "target",
+   "worst_mass_decrease": -4.2270725364446093e-08
+  },
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases": 1832,
+   "mass_growth_first_last": [
+    0.0010400998935811145,
+    0.00021368842447855307
+   ],
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 0.85,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-exc085",
+   "stable": false,
+   "stations": 31,
+   "stop_reason": "target",
+   "worst_mass_decrease": -4.047153967512429e-08
+  },
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases": 1819,
+   "mass_growth_first_last": [
+    0.0010400999691144719,
+    0.0002247293372614756
+   ],
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 0.8,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-exc080",
+   "stable": false,
+   "stations": 31,
+   "stop_reason": "target",
+   "worst_mass_decrease": -4.0116401534007196e-08
+  },
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases": 1812,
+   "mass_growth_first_last": [
+    0.0010401000560738005,
+    0.00023368232484455298
+   ],
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 0.77,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-exc077",
+   "stable": false,
+   "stations": 31,
+   "stop_reason": "target",
+   "worst_mass_decrease": -3.925674429972048e-08
+  }
+ ],
+ "schema": "NSC-RN-EDGE-STABILITY-v1",
+ "scope_note": "Stability is not correctness. A stable march in a deeper domain says the numbers can be read, not that the domain is the right one. This does not measure the actual universe.",
+ "what_this_measures": "Whether the march stayed stable in the domain between the horizon midpoint and the inner horizon, which the recorded family never sampled. Every recorded field is checked for finiteness, the mass function for monotonicity, and the lapse for positivity."
+}

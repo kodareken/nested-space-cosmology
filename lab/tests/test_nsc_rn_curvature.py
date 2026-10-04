@@ -113,7 +113,9 @@ def test_driver_refuses_to_overwrite():
     import subprocess
     import sys
     result = subprocess.run(
-        [sys.executable, "scripts/lab.py", "scripts/derive_nsc_rn_curvature.py"],
+        [sys.executable, "scripts/lab.py", "scripts/derive_nsc_rn_curvature.py",
+         "--run", "nsc-rn-inner-packet-curv",
+         "--out", "nsc-rn-curvature-v2.json"],
         cwd=LAB.parent, capture_output=True, text=True)
     assert result.returncode != 0
     assert "refusing to overwrite" in result.stderr
