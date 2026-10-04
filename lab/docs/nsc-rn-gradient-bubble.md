@@ -192,9 +192,43 @@ not. On disk, no case has a `summary.json`. Four cases stopped on the CPU
 projection at `t = 15.98`, `16.20`, `18.83` and `19.99` with the recorded
 blocker `march_pair stopped before the chunk exceeded the CPU
 projection`. The two `mu=1.002` cases stopped at `t = 8.00` with no
-failure file at all, which is an unrecorded stop and not yet explained.
-The record reports `family_complete: false` and refuses to describe a
-family that does not exist.
+failure file at all, which is an unrecorded stop. The record reports
+`family_complete: false` and refuses to describe a family that does not
+exist.
+
+### The silent stops are probably memory, not time
+
+This is an inference from recorded evidence, not a measurement, and it is
+labelled as such.
+
+The two silent cases are the two largest grids. Calibration records
+`points` per mass: `3921` for `mu=1.002`, `1750` for `mu=1.010`, `869`
+for `mu=1.040`. The largest grid stopped *earliest* in time, which is the
+wrong direction for a budget stop and is why the recorded CPU projection
+does not explain it.
+
+The state did not fail. No array in any last station holds a non-finite
+value, in any of the six cases.
+
+The growth that does fit is memory, which goes as $N^2$. The finite
+continuation, which ran on the `869`-point grid, records
+`memory_bytes = 205504512`. The same structures at `N = 3921` need about
+twenty times that by area alone. A dense $N\times N$ float64 operator is
+`5.8` MiB at `869`, `23.4` MiB at `1750` and `117.3` MiB at `3921`,
+before the coupled, fixed and stencil copies are counted.
+
+So the reading is that the `mu=1.002` cases were terminated from outside
+the normal failure path, which is what an out-of-memory kill looks like,
+and which is why nothing was written to `station-failure.json`. That is
+consistent with everything on disk and has not been tested. The test is
+cheap: re-run `mu=1.002` on a reduced grid, or with the CSR production
+operator only, and see whether it passes `t = 8`. Until then it stays an
+inference.
+
+This matters beyond bookkeeping. A third of the family is missing, and it
+is missing at the *weak*-exterior end, which is exactly where the
+two-force wall is cleanest. The `49.7%` station figure rests on what
+survives, not on a complete run.
 
 ## The stencil blocker was misdiagnosed, and it is withdrawn
 

@@ -16124,11 +16124,11 @@
       "sha256": "0d1c55ec8ffa71514e71c362506d6dc884166643b984a8b97d61c1f7acf0a76d"
     },
     {
-      "bytes": 12862,
+      "bytes": 14485,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
+      "changed_from_commit": "ec17822f2a32ca85daeced1e9ebd7d9c84a44853",
       "path": "lab/docs/nsc-rn-gradient-bubble.md",
-      "sha256": "958bb93e8853fb16553588673836334a9c9d5e7aaf49d55be8a9c54706652624"
+      "sha256": "37d5b56d63795a7785265b880209c81d5d52d84b7b7fe93785b582e9ce21233a"
     },
     {
       "bytes": 8496,
