@@ -48,8 +48,9 @@ consistent jet, and a sample with that bias is rejected rather than doubled.
 The shell is closed and neutral: \(\kappa=1\), multiplicity \(4\) once, no
 filled sea, no electric current. Canonical \(\phi\) has shape `(2, N, rank)`.
 The Gram and the Hamiltonian sample use the reference SBP weights. The
-angular CAR inserts \(\kappa/r\) once and does not multiply by the
-multiplicity again. Ledger accounts stay separate: probability remaining,
+weighted Gram that defines the CAR does not contain \(\kappa/r\). That
+coupling enters the Hamiltonian. Multiplicity 4 enters the source energy
+once and is not applied again inside the CAR. Ledger accounts stay separate: probability remaining,
 energy remaining, outer outflow, excision outflow, SAT debit, and the
 moving-horizon Reynolds term \(\rho(r_h)\dot r_h\).
 
@@ -103,14 +104,32 @@ remaining + excision outflow + outer outflow + \(2\times\) raw SAT minus
 the initial norm. That raw number is not copied into a second energy.
 The scratch pilot, not a sealed record, had trapping radius
 \(1.325655540\) at \(t=0\) and \(1.330239387\) at \(T/r_m=10\), with
-coupled inner mass \(1.040990280\). A sourced station whose lapse or
-shift rate exceeds \(10^{-5}\) stores null \(R_4\) and Ricci². The missing
-curvature primitive is \(N_{tr}\) and \(\beta_{tr}\). A closed shell-energy
-ledger is not claimed.
+coupled inner mass \(1.040990280\). Sourced \(R_4\) and Ricci² use those rates together with \(\beta_{tr}\).
+\(N_{tr}\) is not required. \(R_4=0\) remains a diagnostic, not an inserted
+value. Coordinate energy is \(\int(N F_N+\beta F_\beta)\) and normal energy is
+\(\int F_N\). Metric power is \(\int(F_N N_t+F_\beta\beta_t)\). The raw
+probability SAT stock is not an energy. The discrete rate of the coordinate
+energy is \(4\nu\) times \(2\operatorname{Re}\langle H\phi,\dot\phi\rangle
++\operatorname{Im}(\phi^\dagger B A\dot\phi)\), plus that metric power.
+The measured sampled balance, not a continuum bound, is a full-run gap of
+\(0.0373\%\) of \(\Delta E_H\) and \(0.0584\%\) of \(\Delta E_N\) on the
+\(0.25\) partition. The largest single interval is a different and larger
+fraction and is not that full-run figure. The outer SAT node at \(t=0\),
+\(r=32\), index 868, is \(7.44\times10^{-5}\). After that forcing is removed,
+the inner endpoint reaches \(2.98\times10^{-5}\) at \(T/r_m=8.5\), and the
+\(\beta F_N\) product-rule commutator is \(3.82\times10^{-6}\) at
+\(T/r_m=7.25\), \(r=1.04\). The normal mask drops the two SBP endpoints, one at each end. The
+curvature bulk mask drops ten nodes at each end. Both full maxima are kept.
+The scratch march recorded producer hashes retrospectively. Commit 89 did
+not produce that run. Those hashes are context, distinct from the code
+that reads them.
 
 `forecast_first_pair` times one coupled step and one frozen Dirac step and
 projects each station with the factor 1.5. It does not march and does not
-write. `--run` performs the march only after the measurement binding and a
+write. `--assess-archive PATH` reconstructs each saved snapshot once and prints
+the scalar ledger. It does not step the state. `--assessment-output`
+writes a new file only after a frozen 40-character commit matches these
+bytes. `--run` performs the march only after the measurement binding and a
 frozen commit:
 
 ```

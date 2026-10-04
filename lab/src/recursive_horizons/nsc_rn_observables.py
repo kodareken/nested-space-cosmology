@@ -289,14 +289,24 @@ def curvature_from_reference(model, radius):
     }
 
 
-def _pg_christoffel(radius, theta, lapse, shift, lapse_r, shift_r):
-    """Γ^λ_μν of the ingoing PG chart at one polar angle, from radial jets."""
+def _pg_christoffel(radius, theta, lapse, shift, lapse_r, shift_r, lapse_t=None, shift_t=None):
+    """Γ^λ_μν of the ingoing PG chart at one polar angle.
+
+    Time derivatives of the metric are 2 N N_t - 2 β β_t and -β_t. Second
+    time derivatives are not supplied and are not invented.
+    """
     radius = np.asarray(radius, dtype=float)
     lapse = np.asarray(lapse, dtype=float)
     shift = np.asarray(shift, dtype=float)
     lapse_r = np.asarray(lapse_r, dtype=float)
     shift_r = np.asarray(shift_r, dtype=float)
     count = radius.size
+    if lapse_t is None:
+        lapse_t = np.zeros(count)
+    if shift_t is None:
+        shift_t = np.zeros(count)
+    lapse_t = np.asarray(lapse_t, dtype=float)
+    shift_t = np.asarray(shift_t, dtype=float)
     sine = math.sin(theta)
     cosine = math.cos(theta)
     inverse = np.zeros((count, 4, 4))
@@ -307,6 +317,8 @@ def _pg_christoffel(radius, theta, lapse, shift, lapse_r, shift_r):
     inverse[:, 2, 2] = -1.0 / radius ** 2
     inverse[:, 3, 3] = -1.0 / (radius ** 2 * sine ** 2)
     derivative = np.zeros((count, 4, 4, 4))
+    derivative[:, 0, 0, 0] = 2.0 * lapse * lapse_t - 2.0 * shift * shift_t
+    derivative[:, 0, 0, 1] = derivative[:, 0, 1, 0] = -shift_t
     derivative[:, 1, 0, 0] = 2.0 * lapse * lapse_r - 2.0 * shift * shift_r
     derivative[:, 1, 0, 1] = derivative[:, 1, 1, 0] = -shift_r
     derivative[:, 1, 2, 2] = -2.0 * radius
@@ -328,14 +340,14 @@ def _pg_christoffel(radius, theta, lapse, shift, lapse_r, shift_r):
 
 
 def curvature_from_pg_jets(radius, lapse, shift, *, lapse_r, shift_r, lapse_rr, shift_rr,
-                           lapse_t=None, shift_t=None):
-    """R₄ and Ricci² from supplied PG jets.
+                           lapse_t=None, shift_t=None, shift_tr=None):
+    """R₄ and Ricci² from the PG Riemann contraction.
 
-    A non-negligible lapse or shift rate means the slice is evolving. Those
-    time derivatives are not turned into a static curvature formula; the
-    result is marked unresolved. A stationary slice uses the radial jets,
-    including the second derivatives, and records that the supplied time
-    rates were negligible.
+    Stationary slices use the radial jets. A moving slice also uses the
+    constraint rates N_t and β_t and the radial derivative β_tr of β_t.
+    N_tr and the second time derivatives were checked against this same
+    contraction and do not enter R₄ or Ricci², so they are not invented.
+    The scalar is not replaced by a trace-free condition.
     """
     radius = _as_float_array(np.atleast_1d(radius), "radius")
     lapse = _as_float_array(np.atleast_1d(lapse), "lapse")
@@ -358,35 +370,64 @@ def curvature_from_pg_jets(radius, lapse, shift, *, lapse_r, shift_r, lapse_rr, 
         if lapse_t.shape != radius.shape or shift_t.shape != radius.shape:
             raise ObservableError("time jets do not share the radial grid")
         time_scale = float(max(np.max(np.abs(lapse_t)), np.max(np.abs(shift_t))))
-    if time_scale > 1e-5:
-        return {
-            "status": "unresolved_time_dependent_curvature",
-            "R4": None,
-            "Ricci2": None,
-            "time_rate_max": time_scale,
-            "static_formula_applied": False,
-            "jets_differentiated_here": False,
-        }
+        if shift_tr is None:
+            if np.max(np.abs(shift_t)) <= 1e-14:
+                shift_tr = np.zeros_like(shift_t)
+            else:
+                raise ObservableError("shift_tr is the radial derivative of shift_t")
+        else:
+            shift_tr = _as_float_array(np.atleast_1d(shift_tr), "shift_tr")
+            if shift_tr.shape != radius.shape:
+                raise ObservableError("shift_tr does not share the radial grid")
+    else:
+        lapse_t = np.zeros_like(radius)
+        shift_t = np.zeros_like(radius)
+        shift_tr = np.zeros_like(radius)
+    moving = time_scale > 1e-8 or float(np.max(np.abs(shift_tr))) > 1e-8
     theta = 0.5 * math.pi
     step = 1.0e-6
 
-    def at(radius_shift, lapse_value, lapse_slope, shift_value, shift_slope):
+    def christoffel_at(radius_value, lapse_value, lapse_slope, shift_value, shift_slope,
+                       lapse_time, shift_time):
         return _pg_christoffel(
-            radius + radius_shift, theta, lapse_value, shift_value, lapse_slope, shift_slope,
+            radius_value, theta, lapse_value, shift_value, lapse_slope, shift_slope,
+            lapse_time, shift_time,
         )
 
-    base = at(0.0, lapse, lapse_r, shift, shift_r)
+    base = christoffel_at(radius, lapse, lapse_r, shift, shift_r, lapse_t, shift_t)
     radial = (
-        at(step, lapse + step * lapse_r + 0.5 * step ** 2 * lapse_rr, lapse_r + step * lapse_rr,
-           shift + step * shift_r + 0.5 * step ** 2 * shift_rr, shift_r + step * shift_rr)
-        - at(-step, lapse - step * lapse_r + 0.5 * step ** 2 * lapse_rr, lapse_r - step * lapse_rr,
-             shift - step * shift_r + 0.5 * step ** 2 * shift_rr, shift_r - step * shift_rr)
+        christoffel_at(
+            radius + step,
+            lapse + step * lapse_r + 0.5 * step ** 2 * lapse_rr, lapse_r + step * lapse_rr,
+            shift + step * shift_r + 0.5 * step ** 2 * shift_rr, shift_r + step * shift_rr,
+            lapse_t, shift_t + step * shift_tr,
+        )
+        - christoffel_at(
+            radius - step,
+            lapse - step * lapse_r + 0.5 * step ** 2 * lapse_rr, lapse_r - step * lapse_rr,
+            shift - step * shift_r + 0.5 * step ** 2 * shift_rr, shift_r - step * shift_rr,
+            lapse_t, shift_t - step * shift_tr,
+        )
+    ) / (2.0 * step)
+    temporal = (
+        christoffel_at(
+            radius, lapse + step * lapse_t, lapse_r,
+            shift + step * shift_t, shift_r + step * shift_tr, lapse_t, shift_t,
+        )
+        - christoffel_at(
+            radius, lapse - step * lapse_t, lapse_r,
+            shift - step * shift_t, shift_r - step * shift_tr, lapse_t, shift_t,
+        )
     ) / (2.0 * step)
     polar = (
-        _pg_christoffel(radius, theta + step, lapse, shift, lapse_r, shift_r)
-        - _pg_christoffel(radius, theta - step, lapse, shift, lapse_r, shift_r)
+        _pg_christoffel(
+            radius, theta + step, lapse, shift, lapse_r, shift_r, lapse_t, shift_t,
+        )
+        - _pg_christoffel(
+            radius, theta - step, lapse, shift, lapse_r, shift_r, lapse_t, shift_t,
+        )
     ) / (2.0 * step)
-    partial = (None, radial, polar, None)
+    partial = (temporal, radial, polar, None)
     count = radius.size
     riemann = np.zeros((count, 4, 4, 4, 4))
     for first in range(4):
@@ -430,14 +471,24 @@ def curvature_from_pg_jets(radius, lapse, shift, *, lapse_r, shift_r, lapse_rr, 
         for fourth in range(4):
             ricci2 += ricci[:, second, fourth] * raised[:, second, fourth]
     return {
-        "status": "stationary_radial_jets",
+        "status": "sourced_time_dependent_jets" if moving else "stationary_radial_jets",
         "R4": scalar,
         "Ricci2": ricci2,
         "time_rate_max": time_scale,
+        "shift_tr_max": float(np.max(np.abs(shift_tr))),
+        "outer_lapse_rate": float(lapse_t[-1]),
         "static_formula_applied": False,
-        "time_rates_negligible": True,
+        "trace_free_condition_imposed": False,
+        "time_rates_negligible": not moving,
         "jets_differentiated_here": True,
         "naive_D_at_D": False,
+        "time_jet_provenance": (
+            "constraint_N_t_beta_t_and_nodal_beta_tr"
+            if moving else "time_rates_below_1e-8"
+        ),
+        "lapse_tr_used": False,
+        "second_time_derivatives_used": False,
+        "suggested_box_formula_imposed": False,
     }
 
 

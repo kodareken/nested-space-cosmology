@@ -20,10 +20,12 @@ end of this file are not the active queue.
 Nonperiodic horizon-regular PG parent exterior and a distinct
 areal-radius near-throat child. Exact magnetic RN calibration comes
 before any sourced case. The source-free jet comparison is measured from reconstructed PG
-jets, meets $10^{-4}$, and is independently confirmed. The archived
-pilot reconciles probability accounting and leaves shell energy open.
-Dynamic $R_4$ is null and refinement is pending. It is not a
-production seal. The charged
+jets, meets $10^{-4}$, and is independently confirmed. The archived frames do not store derived energies or curvature.
+`--assess-archive` on
+[the rank-9 directory](../archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/)
+reads them without a time step. No assessment file is saved yet.
+There is no separate energy-consumer file. Refinement is pending.
+It is not a production seal. The charged
 lowest-Landau Gauss branch is later. The MMP negative-Casimir study
 is parallel and leaves the classical throat unblocked. The historical
 parent's bounded $n_f=256$ confirmation is recorded; its comparison
@@ -49,11 +51,13 @@ Rules:
 The archived pilot and its receipt are
 [rn-first-infall-pilot-2026-10-04](../archive/rn-first-infall-pilot-2026-10-04/receipt.json).
 `sat_norm_ledger` uses twice the raw SAT coefficient. Probability
-closure is reconciled. Shell energy is not closed, dynamic $R_4$ is
-null, and refinement is pending. The frozen arm is an initial
-sourced-metric counterfactual. Commit `89f0fad` is a retrospective
-source match, not the commit that produced the run. The wrapper hash
-is in the receipt; the driver hash was not captured.
+closure at the saved clocks stays reconciled. Derived energy and
+curvature now come from `--assess-archive`, not from the raw frames.
+No assessment file exists yet. The frozen arm is an initial
+sourced-metric counterfactual. Commit `89f0fad` is the retrospective
+match of the archived inputs, not the live helper identity and not
+the commit that produced the run. The wrapper hash is in the receipt;
+the driver hash was not captured.
 
 The driver reads `nsc_rn_reference.sourcefree_static_rn`,
 `nsc_rn_pg.sourcefree_rates`, its metric jets, `rk4_step` and

@@ -22,6 +22,8 @@ from recursive_horizons.nsc_rn_source import (
     SHELL_MULTIPLICITY,
     action_reference,
     characteristic_transform,
+    energy_account,
+    normal_energy_ledger,
     future_horizon_initial,
     magnetic_radius,
     mode_quadratic_form,
@@ -363,3 +365,120 @@ def test_manufactured_cylinder_pressure_and_noether_identity():
     assert evaluated["killing_energy"] == pytest.approx(4.0 * 0.04 * formed["energy"], rel=1e-8, abs=1e-8)
     assert np.max(np.abs(evaluated["massless_trace_residual"])) < 1e-9
     assert np.max(np.abs(evaluated["angular_pressure"])) > 0.0
+
+
+def test_weighted_hamiltonian_boundary_and_sat_energy_are_distinct():
+    radius = np.linspace(4.0, 7.5, 21)
+    operator = radial_sbp(radius.size, float(radius[0]), float(radius[-1]))
+    weights = operator["weights"]
+    derivative = operator["derivative"]
+    lapse = np.full(radius.size, 1.15)
+    shift = np.full(radius.size, 0.2)
+    lapse_r = np.zeros(radius.size)
+    shift_r = np.zeros(radius.size)
+    phase = np.exp(1j * 0.7 * radius)
+    phi = np.zeros((2, radius.size, 1), dtype=complex)
+    phi[0, :, 0] = 0.3 * phase
+    phi[1, :, 0] = (0.2 + 0.05j) * np.exp(-1j * 0.4 * radius)
+    norm = np.sqrt(np.sum(weights * np.sum(np.abs(phi[:, :, 0]) ** 2, axis=0)))
+    phi /= norm
+    assert abs(phi[1, -1, 0]) > 0.0
+    occupation = np.array([0.01])
+    account = energy_account(
+        phi, occupation, lapse, shift, radius, weights, derivative,
+        lapse_r=lapse_r, shift_r=shift_r,
+    )
+    bulk_rate = account["phi_motion_rate"]  # placeholder to keep the call
+    from recursive_horizons.nsc_rn_source import _split_derivative
+    plus = phi[0, :, 0]
+    minus = phi[1, :, 0]
+    alpha = lapse / radius
+    bulk = np.zeros_like(phi)
+    bulk[0, :, 0] = -_split_derivative(lapse, plus, derivative) + _split_derivative(shift, plus, derivative) - alpha * minus
+    bulk[1, :, 0] = _split_derivative(lapse, minus, derivative) + _split_derivative(shift, minus, derivative) + alpha * plus
+    incoming = -(lapse[-1] + shift[-1])
+    sat = np.zeros_like(phi)
+    sat[1, -1, 0] = (incoming / weights[-1]) * minus[-1]
+    full = bulk + sat
+    lapse_t = np.full(radius.size, 0.01)
+    shift_t = np.full(radius.size, -0.004)
+    measured = energy_account(
+        phi, occupation, lapse, shift, radius, weights, derivative,
+        phi_rate=full, lapse_t=lapse_t, shift_t=shift_t, lapse_r=lapse_r, shift_r=shift_r,
+    )
+    assert measured["E_coordinate"] == pytest.approx(4.0 * 0.01 * measured["channel_energy"])
+    assert measured["probability_sat_is_energy"] is False
+    assert abs(measured["sat_energy_rate"]) > 1.0e-8
+    assert abs(measured["sat_energy_rate"] - 4.0 * 0.01 * measured["probability_sat_raw"]) > 1.0e-8
+    assert abs(measured["bulk_pairing_rate"]) < 1.0e-10
+    step = 1.0e-7
+
+    def shell_energy(sign):
+        moved = energy_account(
+            phi + sign * step * full, occupation,
+            lapse + sign * step * lapse_t, shift + sign * step * shift_t,
+            radius, weights, derivative,
+        )
+        return moved["E_coordinate"]
+
+    finite = (shell_energy(1.0) - shell_energy(-1.0)) / (2.0 * step)
+    assert finite == pytest.approx(measured["predicted_coordinate_rate"], rel=1.0e-6, abs=1.0e-8)
+    assert bulk_rate != 0.0 or measured["boundary_energy_flux"] != 0.0
+    assert abs(measured["boundary_energy_flux"] + measured["boundary_re_A_H"]) < 1.0e-10
+
+
+def test_sat_normal_density_is_the_polarized_force_not_the_probability_stock():
+    radius = np.linspace(4.0, 7.5, 21)
+    operator = radial_sbp(radius.size, float(radius[0]), float(radius[-1]))
+    weights = operator["weights"]
+    derivative = operator["derivative"]
+    lapse = np.full(radius.size, 1.15)
+    shift = np.full(radius.size, 0.2)
+    phi = np.zeros((2, radius.size, 1), dtype=complex)
+    phi[0, :, 0] = 0.2 * np.exp(1j * radius)
+    phi[1, :, 0] = (0.15 + 0.04j) * np.exp(-0.5j * radius)
+    occupation = np.array([0.0005729320397692806])
+    incoming = -(lapse[-1] + shift[-1])
+    sat = np.zeros_like(phi)
+    sat[1, -1, 0] = (incoming / weights[-1]) * phi[1, -1, 0]
+    assert abs(sat[1, -1, 0]) > 0.0
+    from recursive_horizons.nsc_rn_source import _polarized_force_n
+    polarized = _polarized_force_n(
+        phi, sat, lapse, radius, derivative, occupation, 1,
+    )
+    step = 1.0e-6
+
+    def force(sign):
+        return source_evaluate(
+            phi + sign * step * sat, occupation, lapse, shift, np.ones(radius.size),
+            radius, weights, derivative,
+        )["forces"]["N"]
+
+    finite = (force(1.0) - force(-1.0)) / (2.0 * step)
+    assert np.max(np.abs(finite - polarized)) < 1.0e-10
+    assert abs(polarized[-1]) > 0.0
+    ledger = normal_energy_ledger(
+        phi, occupation, lapse, shift, radius, weights, derivative,
+        phi_rate=sat, lapse_t=np.zeros(radius.size), shift_t=np.zeros(radius.size),
+        lapse_r=np.zeros(radius.size), shift_r=np.zeros(radius.size),
+    )
+    assert ledger["probability_sat_used_as_energy"] is False
+    assert ledger["shell_occupation_factor"] == pytest.approx(4.0 * occupation[0])
+    assert ledger["outer_is_endpoint"] is True
+    assert abs(ledger["full_residual_at_outer"]) > abs(ledger["bulk_residual_max_outside_stencil"])
+    wide = np.zeros((2, radius.size, 2), dtype=complex)
+    with pytest.raises(ValueError, match="2, points, 1"):
+        energy_account(
+            wide, occupation, lapse, shift, radius, weights, derivative,
+        )
+    with pytest.raises(ValueError, match="2, points, 1"):
+        normal_energy_ledger(
+            wide, occupation, lapse, shift, radius, weights, derivative,
+            phi_rate=wide, lapse_t=np.zeros(radius.size), shift_t=np.zeros(radius.size),
+            lapse_r=np.zeros(radius.size), shift_r=np.zeros(radius.size),
+        )
+    with pytest.raises(ValueError, match="q_adm"):
+        energy_account(
+            phi, occupation, lapse, shift, radius, weights, derivative,
+            radial_density=np.full(radius.size, 0.7),
+        )

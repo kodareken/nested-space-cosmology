@@ -201,8 +201,9 @@ def test_resume_continues_the_pair_and_the_fixed_metric_stays_frozen(tmp_path):
     assert "sat_debit" not in first["coupled"]["probability_stocks"]
     observed = driver.station_observation(first["coupled"], grid, real(first["coupled"], grid))
     assert observed["analytic_curvature_injected"] is False
-    assert observed["R4"] is None
-    assert observed["required_time_jet_primitive"] == driver.TIME_JET_PRIMITIVE
+    assert observed["curvature_status"] == "sourced_time_dependent_jets"
+    assert np.all(np.isfinite(observed["R4"]))
+    assert observed["required_time_jet_primitive"] is None
     assert observed["trapping_horizon"] is not None
     arrays = driver.state_arrays(first["coupled"], first["fixed"], metric)
     written = driver.write_stage(
@@ -245,6 +246,62 @@ def test_resume_continues_the_pair_and_the_fixed_metric_stays_frozen(tmp_path):
     assert admitted["center_probability_current"] < 0.0
     assert admitted["packet_mode_energy"] > 0.0
     assert admitted["killing_energy"] > 0.0
+
+
+def test_assess_archive_is_read_only_and_reports_the_full_run_gap(tmp_path, capsys):
+    archive = Path("/tmp/nsc-rn-pilot-rank9")
+    if not (archive / "t0.npz").is_file() or not (archive / "t10.0000.npz").is_file():
+        pytest.skip("rank-9 scratch archive is not on this machine")
+    before = {path.name: path.stat().st_mtime_ns for path in archive.iterdir()}
+    report = driver.assess_archive(archive)
+    after = {path.name: path.stat().st_mtime_ns for path in archive.iterdir()}
+    assert before == after
+    assert report["bytes_written"] == 0 and report["evolution_called"] is False
+    assert report["dynamics_loop"] is False
+    normal = report["balances"]["normal_dt_0.25"]
+    assert normal["full_delta"] == pytest.approx(-0.00153576756387234, abs=1.0e-15)
+    assert normal["physical_integral"] == pytest.approx(-0.00153487098034569, abs=1.0e-15)
+    assert normal["full_run_gap"] == pytest.approx(normal["full_delta"] - normal["physical_integral"])
+    assert abs(normal["full_run_gap"]) == pytest.approx(8.966e-7, rel=1.0e-3, abs=1.0e-12)
+    assert normal["interval_max_is_not_full_run_closure"] is True
+    assert report["highlights"]["normal_point_max"]["normal_point_index"] == 868
+    assert report["highlights"]["normal_point_max"]["t"] == pytest.approx(0.0)
+    coordinate = report["balances"]["coordinate_dt_0.25"]
+    assert "full_run_gap" in coordinate
+    assert report["frames"] == 41
+    assert report["context_hashes"]["summary.json"]
+    assert report["context_hashes"]["initial-packet.json"]
+    assert report["context_hashes"]["producer-hashes-before.json"]
+    assert report["context_hashes"]["original_wrapper"]
+    assert report["context_hashes"]["parent_receipt"] is None
+    assert report["lineage"]["producing_commit"] is None
+    assert report["lineage"]["old89_produced_this_run"] is False
+    assert "t0.npz" in report["lineage"]["sidecar_payloads_authenticated"]
+    assert report["masks"]["normal_continuity"]["nodes_excluded_total"] == 2
+    assert report["masks"]["curvature_bulk"]["boundary_width"] == 10
+    assert report["masks"]["normal_continuity"]["boundary_width"] == 1
+    assert report["masks"]["cells_forced_to_zero"] is False
+    assert "wall_seconds" in report and report["cpu_seconds"] >= 0.0
+    t10 = next(row for row in report["stations"] if row["tag"] == "t10.0000")
+    assert t10["R4_max_abs"] >= t10["R4_bulk_10_max_abs"]
+    assert t10["R4_bulk_10_max_abs"] == pytest.approx(9.175393e-7, rel=1.0e-4)
+    assert t10["R4_max_abs"] > t10["R4_bulk_10_max_abs"]
+    assert driver.main(["--assess-archive", str(archive)]) == 0
+    captured = capsys.readouterr().out
+    assert "full_run_gap" in captured
+    with pytest.raises(driver.CampaignBlocker):
+        driver.write_assessment(tmp_path / "assessment.json", report, producer_commit="a" * 40)
+    assert not (tmp_path / "assessment.json").exists()
+
+
+def test_assess_archive_rejects_a_sidecar_hash_mismatch(tmp_path):
+    raw = tmp_path / "t0.npz"
+    np.savez(raw, radius=np.array([1.0, 2.0]))
+    other = tmp_path / "t1.npz"
+    np.savez(other, radius=np.array([1.0, 2.0]))
+    (tmp_path / "t0.json").write_text(json.dumps({"payload_sha256": "0" * 64}))
+    with pytest.raises(driver.CampaignBlocker, match="payload_sha256"):
+        driver.assess_archive(tmp_path)
 
 
 def test_sat_norm_loss_is_twice_the_raw_coefficient_and_closes_the_scratch():

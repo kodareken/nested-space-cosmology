@@ -55,10 +55,9 @@ FIRST_PAIR = {"mass_over_rm": 1.04, "energy_fraction": 1.0e-3}
 PILOT_RANK = 9
 FIXED_CONTROL = "initial_sourced_metric_frozen"
 TIME_JET_PRIMITIVE = (
-    "spatial derivatives of the supplied lapse and shift rates, N_tr and beta_tr, "
-    "so the Christoffel time derivative can be formed; "
-    "curvature_from_pg_jets stays unresolved above a 1e-5 rate and does not "
-    "insert the analytic RN curvature"
+    "beta_tr is the nodal radial derivative of the constraint shift rate; "
+    "N_tr and second time derivatives cancel in this Riemann contraction "
+    "and are not invented"
 )
 PRESERVED_NF256 = "lab/results/development/nsc-discovery-parent-cut-confirmation-v1"
 OWNED = (
@@ -480,6 +479,7 @@ def _measure_case(pg, geometry):
         lapse_r=jets["lapse_r"], shift_r=jets["shift_r"],
         lapse_rr=jets["lapse_rr"], shift_rr=jets["shift_rr"],
         lapse_t=rates["lapse_rate"], shift_t=rates["shift_rate"],
+        shift_tr=rates["time_jets"]["shift_tr"],
     )
     analytic_invariants = analytic_sample["invariants"]
     if curvature["status"] != "stationary_radial_jets":
@@ -948,12 +948,13 @@ def station_observation(state, grid, rates, packet=None, initial_norm=None):
         lapse_r=rates["jets"]["lapse_r"], shift_r=rates["jets"]["shift_r"],
         lapse_rr=rates["jets"]["lapse_rr"], shift_rr=rates["jets"]["shift_rr"],
         lapse_t=rates["lapse_rate"], shift_t=rates["shift_rate"],
+        shift_tr=rates["time_jets"]["shift_tr"],
     )
     located = observables_mod.trapping_horizon(grid["radius"], rates["lapse"], rates["shift"])
     charged = observables_mod.charged_mass(
         grid["radius"], rates["lapse"], rates["shift"], grid["magnetic_r2"],
     )
-    unresolved = curvature["status"] != "stationary_radial_jets"
+    unresolved = curvature["R4"] is None
     if initial_norm is None:
         initial_norm = state["probability_stocks"]["remaining"]
     report = {
@@ -976,6 +977,31 @@ def station_observation(state, grid, rates, packet=None, initial_norm=None):
         "analytic_curvature_injected": False,
         "source_force_each_rk_stage": True,
         "clock_t": state["clocks"]["t"],
+    }
+    source = _load_module("nsc_rn_source")
+    account = source.energy_account(
+        state["phi"], state["occupations"], rates["lapse"], rates["shift"],
+        grid["radius"], grid["weights"], grid["derivative"],
+        phi_rate=rates["phi_rate"], lapse_t=rates["lapse_rate"], shift_t=rates["shift_rate"],
+        lapse_r=rates["jets"]["lapse_r"], shift_r=rates["jets"]["shift_r"],
+    )
+    mass_from_energy = float(grid["G_N"]) * account["e_H_density"] / rates["lapse"]
+    report["energy"] = {
+        "E_coordinate": account["E_coordinate"],
+        "E_normal": account["E_normal"],
+        "metric_power": account["metric_power"],
+        "boundary_energy_flux": account["boundary_energy_flux"],
+        "boundary_re_A_H": account["boundary_re_A_H"],
+        "sat_energy_rate": account["sat_energy_rate"],
+        "phi_motion_rate": account["phi_motion_rate"],
+        "predicted_coordinate_rate": account["predicted_coordinate_rate"],
+        "probability_sat_raw": account["probability_sat_raw"],
+        "probability_sat_is_energy": False,
+        "shell_occupation_factor": account["shell_occupation_factor"],
+        "multiplicity_applied_once": True,
+        "normal_continuity_residual": account["normal_continuity_residual"],
+        "mass_slope_residual": float(np.max(np.abs(rates["mass_slope"] - mass_from_energy))),
+        "field_energy_not_added_to_mass": True,
     }
     if packet is not None:
         report["packet"] = admit_prepared_packet(packet)
@@ -1329,6 +1355,285 @@ def forecast_first_pair():
     }
 
 
+def _assessment_context_hashes(directory):
+    """Hash retrospective context. Absence is recorded and is not a commit."""
+    found = {}
+    for name in (
+        "summary.json", "initial-packet.json", "producer-hashes-before.json", "initial-step.json",
+    ):
+        path = directory / name
+        found[name] = file_sha256(path) if path.is_file() else None
+    receipt = None
+    for candidate in (directory.parent / "receipt.json", directory.parent / "receipt", directory / "receipt.json"):
+        if candidate.is_file():
+            receipt = file_sha256(candidate)
+            found[str(candidate)] = receipt
+            break
+    found["parent_receipt"] = receipt
+    wrapper = None
+    for candidate in (
+        directory / "wrapper.py",
+        directory.parent / "nsc_rn_pilot_march.py",
+        directory.parent / "wrapper.py",
+    ):
+        if candidate.is_file():
+            wrapper = file_sha256(candidate)
+            found["original_wrapper"] = wrapper
+            found[str(candidate)] = wrapper
+            break
+    if wrapper is None:
+        found["original_wrapper"] = None
+    return found
+
+
+def _full_interval(rows, stride, value_key, rate_of):
+    """Net trapezoid over a partition of the whole record.
+
+    The largest single-interval gap is recorded and is not the full-run closure.
+    """
+    predicted = 0.0
+    gaps = []
+    for index in range(0, len(rows) - stride, stride):
+        left = rows[index]
+        right = rows[index + stride]
+        step = right["t"] - left["t"]
+        piece = 0.5 * step * (rate_of(left) + rate_of(right))
+        predicted += piece
+        gaps.append(right[value_key] - left[value_key] - piece)
+    delta = rows[-1][value_key] - rows[0][value_key]
+    return {
+        "full_delta": delta,
+        "physical_integral": predicted,
+        "full_run_gap": delta - predicted,
+        "interval_max_abs_gap": float(max(abs(item) for item in gaps)),
+        "interval_max_is_not_full_run_closure": True,
+    }
+
+
+def assess_archive(directory):
+    """Read saved states, reconstruct each once, and return scalar balances.
+
+    No time step is taken. The fixed arm uses the archived initial sourced
+    metric. The coupled arm uses one constraint reconstruction of that snapshot.
+    """
+    import platform
+    import sys
+    import time
+    directory = Path(directory).expanduser().resolve()
+    if not directory.is_dir():
+        raise CampaignBlocker("archive path is not a directory", mode="assess")
+    snapshots = sorted(directory.glob("t*.npz"), key=lambda item: float(item.stem[1:]))
+    if len(snapshots) < 2:
+        raise CampaignBlocker("archive does not contain a time sequence", mode="assess")
+    cpu_started = time.process_time()
+    wall_started = time.perf_counter()
+    pg = _load_module("nsc_rn_pg")
+    source = _load_module("nsc_rn_source")
+    observables_mod = _load_module("nsc_rn_observables")
+    geometry = case_geometry(FIRST_PAIR["mass_over_rm"])
+    grid = pg.build_grid(
+        geometry["mass"], r_m=geometry["r_m"], points=geometry["route"]["points"],
+        r_out=geometry["route"]["outer"],
+    )
+    archive_hashes = {}
+    context_hashes = _assessment_context_hashes(directory)
+    sidecar_authenticated = []
+    stations = []
+    for path in snapshots:
+        digest = file_sha256(path)
+        archive_hashes[path.name] = digest
+        sidecar = path.with_suffix(".json")
+        if sidecar.is_file():
+            archive_hashes[sidecar.name] = file_sha256(sidecar)
+            claimed = json.loads(sidecar.read_text()).get("payload_sha256")
+            if claimed is not None and claimed != digest:
+                raise CampaignBlocker(
+                    "archived npz hash does not match sidecar payload_sha256: " + path.name,
+                    mode="assess",
+                )
+            if claimed is not None:
+                sidecar_authenticated.append(path.name)
+        with np.load(path, allow_pickle=False) as payload:
+            arrays = {key: np.array(payload[key]) for key in payload.files}
+        if not np.array_equal(arrays["radius"], grid["radius"]):
+            raise CampaignBlocker("saved radius is not the first-pair route grid", mode="assess")
+        template = pg.make_state(
+            grid, arrays["coupled_phi"], occupations=arrays["occupations"],
+            inner_mass=float(arrays["coupled_inner_mass"][0]), killing_frequency=1.0,
+        )
+        coupled = apply_checkpoint(template, arrays, "coupled")
+        fixed = apply_checkpoint(template, arrays, "fixed")
+        rates = pg.stage_rates(coupled, grid)
+        frozen_lapse = arrays["frozen_lapse"]
+        frozen_shift = arrays["frozen_shift"]
+        fixed_rate, _probability_sat = pg.dirac_rates(grid, fixed["phi"], frozen_lapse, frozen_shift)
+        fixed_jets = pg.metric_jets(grid["radius"], frozen_lapse, frozen_shift)
+        coupled_energy = source.energy_account(
+            coupled["phi"], coupled["occupations"], rates["lapse"], rates["shift"],
+            grid["radius"], grid["weights"], grid["derivative"],
+            phi_rate=rates["phi_rate"], lapse_t=rates["lapse_rate"], shift_t=rates["shift_rate"],
+            lapse_r=rates["jets"]["lapse_r"], shift_r=rates["jets"]["shift_r"],
+        )
+        fixed_energy = source.energy_account(
+            fixed["phi"], fixed["occupations"], frozen_lapse, frozen_shift,
+            grid["radius"], grid["weights"], grid["derivative"],
+            phi_rate=fixed_rate, lapse_t=np.zeros(grid["points"]), shift_t=np.zeros(grid["points"]),
+            lapse_r=fixed_jets["lapse_r"], shift_r=fixed_jets["shift_r"],
+        )
+        normal = source.normal_energy_ledger(
+            coupled["phi"], coupled["occupations"], rates["lapse"], rates["shift"],
+            grid["radius"], grid["weights"], grid["derivative"],
+            phi_rate=rates["phi_rate"], lapse_t=rates["lapse_rate"], shift_t=rates["shift_rate"],
+            lapse_r=rates["jets"]["lapse_r"], shift_r=rates["jets"]["shift_r"],
+        )
+        curvature = observables_mod.curvature_from_pg_jets(
+            grid["radius"], rates["lapse"], rates["shift"],
+            lapse_r=rates["jets"]["lapse_r"], shift_r=rates["jets"]["shift_r"],
+            lapse_rr=rates["jets"]["lapse_rr"], shift_rr=rates["jets"]["shift_rr"],
+            lapse_t=rates["lapse_rate"], shift_t=rates["shift_rate"],
+            shift_tr=rates["time_jets"]["shift_tr"],
+        )
+        vacuum = np.asarray(grid["model"].invariants(grid["radius"])["Ricci2"], dtype=float)
+        ricci = np.asarray(curvature["Ricci2"], dtype=float)
+        scalar = np.asarray(curvature["R4"], dtype=float)
+        curvature_mask = np.ones(scalar.size, dtype=bool)
+        curvature_mask[:10] = False
+        curvature_mask[-10:] = False
+        mass_from_energy = float(grid["G_N"]) * coupled_energy["e_H_density"] / rates["lapse"]
+        stations.append({
+            "tag": path.stem,
+            "t": float(coupled["clocks"]["t"]),
+            "t_over_rm": float(coupled["clocks"]["t"] / grid["r_m"]),
+            "E_coordinate": coupled_energy["E_coordinate"],
+            "E_normal": normal["E_normal"],
+            "fixed_E_coordinate": fixed_energy["E_coordinate"],
+            "fixed_E_normal": fixed_energy["E_normal"],
+            "metric_power": coupled_energy["metric_power"],
+            "boundary_energy_flux": coupled_energy["boundary_energy_flux"],
+            "sat_energy_rate": coupled_energy["sat_energy_rate"],
+            "phi_motion_rate": coupled_energy["phi_motion_rate"],
+            "predicted_coordinate_rate": coupled_energy["predicted_coordinate_rate"],
+            "J_N_left": normal["J_N_left"],
+            "J_N_right": normal["J_N_right"],
+            "pressure_integral": normal["pressure_integral"],
+            "lapse_integral": normal["lapse_integral"],
+            "sat_normal_energy": normal["sat_normal_energy"],
+            "normal_global_residual": normal["global_residual"],
+            "normal_point_max": normal["full_residual_max"],
+            "normal_point_index": normal["full_residual_index"],
+            "normal_point_radius": normal["full_residual_radius"],
+            "normal_sbp_interior_max": normal["bulk_residual_max_outside_stencil"],
+            "inner_bulk_residual": normal["bulk_residual_max"],
+            "product_rule_beta": normal["product_rule_beta_max"],
+            "R4_max_abs": float(np.max(np.abs(scalar))),
+            "R4_bulk_10_max_abs": float(np.max(np.abs(scalar[curvature_mask]))),
+            "Ricci2_max": float(np.max(ricci)),
+            "Ricci2_vacuum_departure_max": float(np.max(np.abs(ricci - vacuum))),
+            "Ricci2_vacuum_bulk_10_departure_max": float(
+                np.max(np.abs(ricci[curvature_mask] - vacuum[curvature_mask]))
+            ),
+            "mass_slope_residual": float(np.max(np.abs(rates["mass_slope"] - mass_from_energy))),
+            "outer_lapse_rate": float(rates["lapse_rate"][-1]),
+            "occupation": float(coupled["occupations"][0]),
+        })
+    def normal_rate(row):
+        return row["J_N_left"] - row["J_N_right"] + row["pressure_integral"] + row["lapse_integral"] + row["sat_normal_energy"]
+    normal_quarter = _full_interval(stations, 1, "E_normal", normal_rate)
+    normal_half = _full_interval(stations, 2, "E_normal", normal_rate)
+    coordinate_quarter = _full_interval(stations, 1, "E_coordinate", lambda row: row["predicted_coordinate_rate"])
+    coordinate_half = _full_interval(stations, 2, "E_coordinate", lambda row: row["predicted_coordinate_rate"])
+    point = max(stations, key=lambda row: row["normal_point_max"])
+    inner = max(stations, key=lambda row: row["inner_bulk_residual"])
+    commutator = max(stations, key=lambda row: row["product_rule_beta"])
+    return {
+        "schema": SCHEMA,
+        "mode": "assess",
+        "ok": True,
+        "evolution_called": False,
+        "dynamics_loop": False,
+        "bytes_written": 0,
+        "production_trajectory": False,
+        "mock_physical_output": False,
+        "archive": str(directory),
+        "frames": len(stations),
+        "cpu_seconds": time.process_time() - cpu_started,
+        "wall_seconds": time.perf_counter() - wall_started,
+        "masks": {
+            "normal_continuity": {
+                "nodes_excluded_each_end": 1,
+                "nodes_excluded_total": 2,
+                "boundary_width": 1,
+                "reason": "SBP endpoints",
+            },
+            "curvature_bulk": {
+                "nodes_excluded_each_end": 10,
+                "nodes_excluded_total": 20,
+                "boundary_width": 10,
+                "reason": "ten nodes at each endpoint",
+            },
+            "full_unmasked_max_retained": True,
+            "cells_forced_to_zero": False,
+        },
+        "interval_max_is_not_full_run_closure": True,
+        "lineage": {
+            "producing_commit": None,
+            "old89_produced_this_run": False,
+            "producer_hashes_before_label": "retrospective_context_not_a_producing_commit",
+            "sidecar_payloads_authenticated": sidecar_authenticated,
+        },
+        "context_hashes": context_hashes,
+        "highlights": {
+            "normal_point_max": point,
+            "inner_bulk": inner,
+            "product_rule": commutator,
+            "R4_max_abs": float(max(row["R4_max_abs"] for row in stations)),
+            "Ricci2_vacuum_departure_max": float(max(row["Ricci2_vacuum_departure_max"] for row in stations)),
+            "mass_slope_residual_max": float(max(row["mass_slope_residual"] for row in stations)),
+        },
+        "balances": {
+            "normal_dt_0.25": normal_quarter,
+            "normal_dt_0.5": normal_half,
+            "coordinate_dt_0.25": coordinate_quarter,
+            "coordinate_dt_0.5": coordinate_half,
+        },
+        "stations": stations,
+        "archive_hashes": archive_hashes,
+        "producers": producers(),
+        "environment": {
+            "python": sys.version,
+            "numpy": np.__version__,
+            "platform": platform.platform(),
+            "omp_num_threads": os.environ.get("OMP_NUM_THREADS"),
+            "openblas_num_threads": os.environ.get("OPENBLAS_NUM_THREADS"),
+        },
+    }
+
+
+def write_assessment(destination, report, *, producer_commit):
+    """Creation-only JSON. Requires a frozen 40-character commit matching these bytes."""
+    if not producer_commit or not frozen_blob_match(producer_commit, producers()):
+        raise CampaignBlocker("creation requires a frozen root commit", mode="assess")
+    destination = Path(destination).expanduser().resolve()
+    if _sealed(destination):
+        raise CampaignBlocker("existing outputs are sealed", mode="assess")
+    if destination.exists():
+        raise CampaignBlocker("assessment output already exists", mode="assess")
+    body = dict(report)
+    body["producing_commit"] = producer_commit
+    body["creation_only"] = True
+    encoded = (json.dumps(_plain(body), indent=2, sort_keys=True, allow_nan=False) + "\n").encode()
+    if len(encoded) > CHUNK_BYTES:
+        raise CampaignBlocker("assessment exceeds 64 MiB", mode="assess")
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with destination.open("xb") as handle:
+        handle.write(encoded)
+    return {
+        "bytes_written": len(encoded),
+        "path": str(destination),
+        "sha256": hashlib.sha256(encoded).hexdigest(),
+    }
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     modes = parser.add_mutually_exclusive_group()
@@ -1336,6 +1641,7 @@ def main(argv=None):
     modes.add_argument("--prepare", action="store_true")
     modes.add_argument("--run", action="store_true")
     modes.add_argument("--resume", action="store_true")
+    modes.add_argument("--assess-archive", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--producer-commit")
     parser.add_argument("--calibration-record", type=Path)
@@ -1345,9 +1651,20 @@ def main(argv=None):
     parser.add_argument("--energy-fraction", type=float)
     parser.add_argument("--station-limit", type=float)
     parser.add_argument("--cpu-seconds", type=float)
+    parser.add_argument("--assessment-output", type=Path)
     args = parser.parse_args(argv)
     try:
-        if args.calibrate:
+        if args.assess_archive is not None:
+            report = assess_archive(args.assess_archive)
+            if args.assessment_output is not None:
+                written = write_assessment(
+                    args.assessment_output, report, producer_commit=args.producer_commit,
+                )
+                report = dict(report)
+                report["bytes_written"] = written["bytes_written"]
+                report["assessment_sha256"] = written["sha256"]
+                report["assessment_path"] = written["path"]
+        elif args.calibrate:
             report = calibrate()
         elif args.prepare or args.run or args.resume:
             if args.output is None:

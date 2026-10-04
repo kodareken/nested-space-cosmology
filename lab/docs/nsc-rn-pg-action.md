@@ -169,7 +169,11 @@ not mass flux and they are not the SAT debit.
 
 `metric_jets` is spatial only: one-sided polynomial stencils at the ends and
 a centered stencil in the interior. Provenance is
-`one_sided_eighth_and_centered_fourth_nodal_derivative`. An observer must not
+`one_sided_eighth_and_centered_fourth_nodal_derivative`. A moving slice
+adds the constraint rates \(N_t\) and \(\beta_t\), and \(\beta_{tr}\) from the
+same nodal derivative of \(\beta_t\). \(N_{tr}\) and the second time
+derivatives cancel in this contraction and are not supplied. \(R_4=0\) is
+not inserted. An observer must not
 read a dynamical \(R_4\) from those arrays. Time derivatives of \(N\),
 \(\beta\) and \(m_Q\) come from the characteristic rays and from the
 linearised constraints. A finite central difference of one stage checks that

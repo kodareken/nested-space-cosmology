@@ -73,8 +73,129 @@ def test_reference_curvature_rows_and_endpoint_jet_are_not_repaired():
         lapse_rr=np.zeros(radii.size), shift_rr=jets["beta_rr"],
         lapse_t=np.full(radii.size, 1e-3), shift_t=np.zeros(radii.size),
     )
-    assert evolving["status"] == "unresolved_time_dependent_curvature"
-    assert evolving["R4"] is None and evolving["static_formula_applied"] is False
+    assert evolving["status"] == "sourced_time_dependent_jets"
+    assert evolving["static_formula_applied"] is False
+    assert evolving["trace_free_condition_imposed"] is False
+    assert evolving["lapse_tr_used"] is False
+    assert np.all(np.isfinite(evolving["R4"]))
+    clock = 1.2
+    reparameterized = obs.curvature_from_pg_jets(
+        radii, clock * jets["N"], clock * jets["beta"],
+        lapse_r=np.zeros(radii.size), shift_r=clock * jets["beta_r"],
+        lapse_rr=np.zeros(radii.size), shift_rr=clock * jets["beta_rr"],
+        lapse_t=np.full(radii.size, 0.3), shift_t=0.3 * jets["beta"],
+        shift_tr=0.3 * jets["beta_r"],
+    )
+    assert np.max(np.abs(reparameterized["R4"] - closed["R4"])) < 1e-5
+    assert np.max(np.abs(reparameterized["Ricci2"] - closed["Ricci2"])) / np.max(closed["Ricci2"]) < 1e-4
+
+
+def test_nonstationary_metric_matches_an_independent_christoffel_scalar():
+    radius = np.array([4.0])
+    lapse = np.array([1.15])
+    lapse_r = np.array([0.03])
+    lapse_rr = np.array([-0.01])
+    shift = np.array([0.4])
+    shift_r = np.array([-0.02])
+    shift_rr = np.array([0.004])
+    lapse_t = np.array([0.05])
+    shift_t = np.array([-0.01])
+    shift_tr = np.array([0.008])
+    measured = obs.curvature_from_pg_jets(
+        radius, lapse, shift, lapse_r=lapse_r, shift_r=shift_r,
+        lapse_rr=lapse_rr, shift_rr=shift_rr, lapse_t=lapse_t, shift_t=shift_t,
+        shift_tr=shift_tr,
+    )
+    theta = 0.5 * np.pi
+    step = 1.0e-5
+
+    def metric(radius_value, theta_value, lapse_value, shift_value):
+        chart = np.zeros((4, 4))
+        chart[0, 0] = lapse_value ** 2 - shift_value ** 2
+        chart[0, 1] = chart[1, 0] = -shift_value
+        chart[1, 1] = -1.0
+        chart[2, 2] = -radius_value ** 2
+        chart[3, 3] = -radius_value ** 2 * np.sin(theta_value) ** 2
+        return chart
+
+    def state(radius_shift, time_shift):
+        radius_value = float(radius[0] + radius_shift)
+        time = time_shift
+        lapse_value = float(
+            lapse[0] + time * lapse_t[0] + radius_shift * lapse_r[0]
+            + 0.5 * radius_shift ** 2 * lapse_rr[0]
+        )
+        shift_value = float(
+            shift[0] + time * shift_t[0] + radius_shift * shift_r[0]
+            + time * radius_shift * shift_tr[0] + 0.5 * radius_shift ** 2 * shift_rr[0]
+        )
+        return radius_value, lapse_value, shift_value
+
+    def connection(radius_shift, time_shift, theta_value):
+        radius_value, lapse_value, shift_value = state(radius_shift, time_shift)
+        inverse = np.linalg.inv(metric(radius_value, theta_value, lapse_value, shift_value))
+        samples = {}
+        for label, item in (
+            ("r", state(radius_shift + step, time_shift)),
+            ("rm", state(radius_shift - step, time_shift)),
+            ("t", state(radius_shift, time_shift + step)),
+            ("tm", state(radius_shift, time_shift - step)),
+        ):
+            samples[label] = metric(item[0], theta_value, item[1], item[2])
+        up = metric(radius_value, theta_value + step, lapse_value, shift_value)
+        down = metric(radius_value, theta_value - step, lapse_value, shift_value)
+        derivative = [
+            (samples["t"] - samples["tm"]) / (2.0 * step),
+            (samples["r"] - samples["rm"]) / (2.0 * step),
+            (up - down) / (2.0 * step),
+            np.zeros((4, 4)),
+        ]
+        gamma = np.zeros((4, 4, 4))
+        for lam in range(4):
+            for mu in range(4):
+                for nu in range(4):
+                    total = 0.0
+                    for sig in range(4):
+                        total += inverse[lam, sig] * (
+                            derivative[mu][nu, sig] + derivative[nu][mu, sig]
+                            - derivative[sig][mu, nu]
+                        )
+                    gamma[lam, mu, nu] = 0.5 * total
+        return gamma
+
+    def scalar_from(gamma, partial):
+        riemann = np.zeros((4, 4, 4, 4))
+        for a in range(4):
+            for b in range(4):
+                for c in range(4):
+                    for d in range(4):
+                        quadratic = 0.0
+                        for mid in range(4):
+                            quadratic += (
+                                gamma[a, c, mid] * gamma[mid, d, b]
+                                - gamma[a, d, mid] * gamma[mid, c, b]
+                            )
+                        riemann[a, b, c, d] = (
+                            partial[c][a, d, b] - partial[d][a, c, b] + quadratic
+                        )
+        radius_value, lapse_value, shift_value = state(0.0, 0.0)
+        inverse = np.linalg.inv(metric(radius_value, theta, lapse_value, shift_value))
+        ricci = np.zeros((4, 4))
+        for b in range(4):
+            for d in range(4):
+                ricci[b, d] = sum(riemann[a, b, a, d] for a in range(4))
+        return float(sum(inverse[b, d] * ricci[b, d] for b in range(4) for d in range(4)))
+
+    gamma0 = connection(0.0, 0.0, theta)
+    partial = [
+        (connection(0.0, step, theta) - connection(0.0, -step, theta)) / (2.0 * step),
+        (connection(step, 0.0, theta) - connection(-step, 0.0, theta)) / (2.0 * step),
+        (connection(0.0, 0.0, theta + step) - connection(0.0, 0.0, theta - step)) / (2.0 * step),
+        np.zeros((4, 4, 4)),
+    ]
+    assert scalar_from(gamma0, partial) == pytest.approx(float(measured["R4"][0]), abs=1.0e-4)
+    assert measured["trace_free_condition_imposed"] is False
+    assert measured["lapse_tr_used"] is False
 
 
 def test_gram_and_car_do_not_apply_multiplicity_twice():

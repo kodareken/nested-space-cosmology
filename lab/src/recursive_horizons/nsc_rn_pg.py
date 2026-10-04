@@ -926,11 +926,16 @@ def stage_rates(state, grid, *, densities=None):
         raise ChartAdmissionError("N_t at the outer boundary is fixed by N=1")
     jets = metric_jets(grid["radius"], geometry["lapse"], geometry["shift"])
     probability = _probability_boundary(array, geometry["lapse"], geometry["shift"])
+    shift_tr, _shift_trr = _differentiate(shift_rate, grid["spacing"])
     time_jets = {
         "lapse_t": lapse_rate,
         "shift_t": shift_rate,
+        "shift_tr": shift_tr,
         "mass_t": mass_rate,
         "provenance": TIME_JET_PROVENANCE,
+        "shift_tr_provenance": JET_PROVENANCE,
+        "lapse_tr_used": False,
+        "second_time_derivatives_used": False,
         "static_R4_used": False,
         "spatial_jets_used": False,
     }

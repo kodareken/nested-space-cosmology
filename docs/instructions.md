@@ -93,21 +93,22 @@ claim, name the region, scale, observer, state, and compared quantity.
 ## RN radial programme
 
 The scientific starting checkpoint is `5cb775a7`, the producer of the
-recorded NF256 confirmation. Local `main`, `codex/work-branch` and
-both remotes are `d95175c25a9989aea681967d6089aa7b2bf27706`, the
-committed external two-room import. That import is not an RN result,
-and a moving checkout tip is not one either. The periodic parent
+recorded NF256 confirmation. The external two-room import remains
+the historical commit `d95175c25a9989aea681967d6089aa7b2bf27706`.
+It is not an RN result and not the live branch identity. Live branch
+commands are at the top of this page. The periodic parent
 below is historical input. Further periodic autonomous exchange runs
 stay off this programme. The active question is a nonperiodic
 horizon-regular Painlevé–Gullstrand parent exterior and a distinct
 near-throat child on its own areal radius. Exact magnetic
 Reissner–Nordström calibration comes before any sourced case. The
 working source-free jet comparison is measured and independently
-confirmed. The archived rank-$9$ pilot reconciles probability
-accounting and leaves the shell energy ledger open. Its record is in
+confirmed. The archived rank-$9$ frames do not store derived energies or
+curvature. `--assess-archive` reads them without a time step. No
+assessment file is saved yet. The balances and remaining limits are
+in
 [current result](current-result.md#rn-radial-parent-4-october-2026).
-Dynamic $R_4$ is null, refinement is pending, and the archive is not
-a completed neutral programme or a production seal.
+The archive is not a completed neutral programme or a production seal.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer

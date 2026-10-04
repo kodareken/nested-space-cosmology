@@ -1007,7 +1007,257 @@ def source_evaluate(phi, occupations, lapse, shift, radial_density, radius,
         },
         "killing_energy": float(np.sum(weights * coordinate_energy)),
         "sector_killing_energy": float(np.sum(weights * coordinate_energy) / multiplicity),
+        "normal_energy": float(np.sum(weights * force_n)),
         "massless_trace_residual": physical_rho - physical_pr - 2.0 * physical_pa,
         "dense_covariance": False,
         "coherent_rank_one_column": coherent_rank_one,
+    }
+
+
+def _split_derivative(coeff, component, derivative):
+    return 0.5 * (coeff * (derivative @ component) + derivative @ (coeff * component))
+
+
+def _weighted_pairing(left, right, weights):
+    return np.sum(weights * np.sum(np.conj(left) * right, axis=0))
+
+
+def _require_diagnostic_column(phi, radial_density):
+    """Energy diagnostics own one column on the areal chart.
+
+    The source holder may still store several spectral columns. These
+    ledgers do not choose one of them silently, and they do not accept a
+    radial density other than q_adm = 1.
+    """
+    array = np.asarray(phi)
+    if array.ndim != 3 or array.shape[0] != 2 or array.shape[2] != 1:
+        raise ValueError(
+            "energy diagnostics require shape (2, points, 1); "
+            "the source holder may still store several columns"
+        )
+    if radial_density is not None and float(np.max(np.abs(np.asarray(radial_density, dtype=float) - 1.0))) > 1e-12:
+        raise ValueError("energy diagnostics require q_adm = 1")
+
+
+def _polarized_force_n(phi, eta, lapse, radius, derivative, occupations, kappa):
+    """Directional derivative of F_N along eta. Shell 4 and ν enter once."""
+    _require_diagnostic_column(phi, None)
+    column = np.asarray(phi[:, :, 0], dtype=complex)
+    direction = np.asarray(eta[:, :, 0], dtype=complex)
+    plus_flux = 2.0 * np.real(_hermitian_flux(column[0], direction[0], derivative))
+    minus_flux = 2.0 * np.real(_hermitian_flux(column[1], direction[1], derivative))
+    angular = np.real(
+        _angular_bilinear(column, direction) + _angular_bilinear(direction, column)
+    )
+    density = plus_flux - minus_flux + (float(kappa) / radius) * angular
+    return float(SHELL_MULTIPLICITY * occupations[0]) * density
+
+
+def energy_account(phi, occupations, lapse, shift, radius, weights, derivative, *,
+                   phi_rate=None, lapse_t=None, shift_t=None, lapse_r=None, shift_r=None,
+                   kappa=SHELL_KAPPA, radial_density=None):
+    """Coordinate and normal energies, boundary flux, SAT energy, and metric power.
+
+    The evolved column is one rank. H is defined by the bulk characteristic
+    rate, bulk = -i H. The SBP identity is H†W - WH = i B A with
+    A = diag(N-β, -N-β) and B = diag(-1, 0, ..., 1). Shell 4 and the
+    occupation multiply that pairing once. The raw probability SAT stock is
+    not an energy.
+    """
+    if radial_density is None:
+        radial_density = np.ones_like(np.asarray(lapse, dtype=float))
+    _require_diagnostic_column(phi, radial_density)
+    evaluated = source_evaluate(
+        phi, occupations, lapse, shift, radial_density, radius, weights, derivative, kappa=kappa,
+    )
+    phi = np.asarray(phi, dtype=complex)
+    occupations = np.asarray(occupations, dtype=float)
+    weights = np.asarray(weights, dtype=float)
+    lapse = np.asarray(lapse, dtype=float)
+    shift = np.asarray(shift, dtype=float)
+    radius = np.asarray(radius, dtype=float)
+    derivative = np.asarray(derivative, dtype=float)
+    force_n = evaluated["forces"]["N"]
+    force_beta = evaluated["forces"]["beta"]
+    force_r_unit = evaluated["forces"]["r"] / lapse
+    speed_plus, speed_minus = _speeds_from_fields(lapse, shift, radial_density)
+    plus = phi[0, :, 0]
+    minus = phi[1, :, 0]
+    alpha = float(kappa) * lapse / radius
+    bulk = np.zeros_like(phi)
+    bulk[0, :, 0] = (
+        -_split_derivative(lapse, plus, derivative) + _split_derivative(shift, plus, derivative)
+        - alpha * minus
+    )
+    bulk[1, :, 0] = (
+        _split_derivative(lapse, minus, derivative) + _split_derivative(shift, minus, derivative)
+        + alpha * plus
+    )
+    incoming = float(speed_minus[-1])
+    sat = np.zeros_like(phi)
+    sat[1, -1, 0] = (incoming / weights[-1]) * minus[-1]
+    probability_sat_raw = float(-incoming * np.abs(minus[-1]) ** 2)
+    column = phi[:, :, 0]
+    hamiltonian = 1j * bulk[:, :, 0]
+    channel_energy = float(np.real(_weighted_pairing(column, hamiltonian, weights)))
+    shell = float(evaluated["multiplicity"] * occupations[0])
+    full_rate = bulk if phi_rate is None else np.asarray(phi_rate, dtype=complex)
+    if full_rate.shape != phi.shape:
+        raise ValueError("phi_rate must have the column shape")
+    full = full_rate[:, :, 0]
+    bulk_column = bulk[:, :, 0]
+    sat_column = sat[:, :, 0]
+
+    def boundary_scalar(other):
+        value = -speed_plus[0] * np.conj(column[0, 0]) * other[0, 0]
+        value += -speed_minus[0] * np.conj(column[1, 0]) * other[1, 0]
+        value += speed_plus[-1] * np.conj(column[0, -1]) * other[0, -1]
+        value += speed_minus[-1] * np.conj(column[1, -1]) * other[1, -1]
+        return value
+
+    bulk_pairing = shell * 2.0 * np.real(_weighted_pairing(hamiltonian, bulk_column, weights))
+    sat_energy_rate = shell * 2.0 * np.real(_weighted_pairing(hamiltonian, sat_column, weights))
+    phi_motion_rate = shell * (
+        2.0 * np.real(_weighted_pairing(hamiltonian, full, weights))
+        + np.imag(boundary_scalar(full))
+    )
+    boundary_energy_flux = shell * float(np.imag(boundary_scalar(bulk_column)))
+    boundary_re_A_H = shell * float(np.real(boundary_scalar(hamiltonian)))
+    if lapse_t is None:
+        lapse_t = np.zeros_like(lapse)
+    if shift_t is None:
+        shift_t = np.zeros_like(shift)
+    metric_power = float(np.sum(weights * (force_n * lapse_t + force_beta * shift_t)))
+    continuity_residual = None
+    if lapse_r is not None and shift_r is not None and phi_rate is not None:
+        # F_N does not depend on N or β at fixed r and q_adm = 1.
+        force_n_t = _polarized_force_n(
+            phi, full_rate, lapse, radius, derivative, occupations, kappa,
+        )
+        flux = -lapse * force_beta - shift * force_n
+        divergence = derivative @ flux
+        right_hand = (
+            np.asarray(shift_r, dtype=float) * (force_n + radius * force_r_unit)
+            - shift * force_r_unit
+            + np.asarray(lapse_r, dtype=float) * force_beta
+        )
+        continuity_residual = float(np.max(np.abs(force_n_t + divergence - right_hand)))
+    return {
+        "E_coordinate": float(np.sum(weights * evaluated["coordinate_energy"])),
+        "E_normal": float(evaluated["normal_energy"]),
+        "channel_energy": channel_energy,
+        "shell_occupation_factor": shell,
+        "multiplicity_applied_once": True,
+        "e_H_density": evaluated["coordinate_energy"],
+        "F_N": force_n,
+        "F_beta": force_beta,
+        "F_r_unit": force_r_unit,
+        "j_int": -force_beta,
+        "pr_int": force_n + radius * force_r_unit,
+        "pt_int": -0.5 * radius * force_r_unit,
+        "metric_power": metric_power,
+        "boundary_energy_flux": boundary_energy_flux,
+        "boundary_re_A_H": boundary_re_A_H,
+        "bulk_pairing_rate": float(np.real(bulk_pairing)),
+        "sat_energy_rate": float(np.real(sat_energy_rate)),
+        "phi_motion_rate": float(np.real(phi_motion_rate)),
+        "predicted_coordinate_rate": float(np.real(phi_motion_rate) + metric_power),
+        "probability_sat_raw": probability_sat_raw,
+        "probability_sat_is_energy": False,
+        "normal_continuity_residual": continuity_residual,
+        "field_energy_not_added_to_mass": True,
+    }
+
+
+def normal_energy_ledger(phi, occupations, lapse, shift, radius, weights, derivative, *,
+                         phi_rate, lapse_t, shift_t, lapse_r, shift_r, kappa=SHELL_KAPPA,
+                         radial_density=None):
+    """Attribute the normal-energy balance without forcing it to zero.
+
+    J_N = -N F_β - β F_N. Pressure work is β_r (F_N + r F_r/N) - β F_r/N
+    and lapse work is N_r F_β. The SAT piece is the polarized F_N along the
+    outer incoming SAT rate, not the raw probability coefficient.
+    """
+    if radial_density is None:
+        radial_density = np.ones_like(np.asarray(lapse, dtype=float))
+    _require_diagnostic_column(phi, radial_density)
+    evaluated = source_evaluate(
+        phi, occupations, lapse, shift, radial_density, radius, weights, derivative, kappa=kappa,
+    )
+    phi = np.asarray(phi, dtype=complex)
+    occupations = np.asarray(occupations, dtype=float)
+    weights = np.asarray(weights, dtype=float)
+    lapse = np.asarray(lapse, dtype=float)
+    shift = np.asarray(shift, dtype=float)
+    radius = np.asarray(radius, dtype=float)
+    derivative = np.asarray(derivative, dtype=float)
+    phi_rate = np.asarray(phi_rate, dtype=complex)
+    if phi_rate.shape != phi.shape:
+        raise ValueError("phi_rate must have shape (2, points, 1)")
+    lapse_r = np.asarray(lapse_r, dtype=float)
+    shift_r = np.asarray(shift_r, dtype=float)
+    lapse_t = np.asarray(lapse_t, dtype=float)
+    shift_t = np.asarray(shift_t, dtype=float)
+    if not np.all(np.isfinite(lapse_t)) or not np.all(np.isfinite(shift_t)):
+        raise ValueError("lapse and shift rates must be finite; they do not enter F_N")
+    force_n = evaluated["forces"]["N"]
+    force_beta = evaluated["forces"]["beta"]
+    force_r_unit = evaluated["forces"]["r"] / lapse
+    # F_N is independent of N and β on this fixed-radius, q_adm = 1 slice.
+    force_n_t = _polarized_force_n(
+        phi, phi_rate, lapse, radius, derivative, occupations, kappa,
+    )
+    speed_minus = _speeds_from_fields(lapse, shift, radial_density)[1]
+    sat = np.zeros_like(phi)
+    sat[1, -1, 0] = (float(speed_minus[-1]) / weights[-1]) * phi[1, -1, 0]
+    sat_density = _polarized_force_n(phi, sat, lapse, radius, derivative, occupations, kappa)
+    flux = -lapse * force_beta - shift * force_n
+    divergence = derivative @ flux
+    pressure = shift_r * (force_n + radius * force_r_unit) - shift * force_r_unit
+    lapse_work = lapse_r * force_beta
+    full_residual = force_n_t + divergence - pressure - lapse_work
+    bulk_residual = full_residual - sat_density
+    commutator_beta = derivative @ (shift * force_n) - (
+        shift_r * force_n + shift * (derivative @ force_n)
+    )
+    commutator_lapse = derivative @ (lapse * force_beta) - (
+        lapse_r * force_beta + lapse * (derivative @ force_beta)
+    )
+    dE_N = float(np.sum(weights * force_n_t))
+    sat_energy = float(np.sum(weights * sat_density))
+    pressure_integral = float(np.sum(weights * pressure))
+    lapse_integral = float(np.sum(weights * lapse_work))
+    global_balance = float(flux[0] - flux[-1] + pressure_integral + lapse_integral + sat_energy)
+    interior = slice(1, -1)
+    full_index = int(np.argmax(np.abs(full_residual)))
+    bulk_index = int(np.argmax(np.abs(bulk_residual)))
+    return {
+        "E_normal": float(np.sum(weights * force_n)),
+        "dE_normal": dE_N,
+        "J_N_left": float(flux[0]),
+        "J_N_right": float(flux[-1]),
+        "pressure_integral": pressure_integral,
+        "lapse_integral": lapse_integral,
+        "sat_normal_energy": sat_energy,
+        "global_residual": dE_N - global_balance,
+        "full_residual_max": float(np.max(np.abs(full_residual))),
+        "full_residual_index": full_index,
+        "full_residual_radius": float(radius[full_index]),
+        "full_residual_value": float(full_residual[full_index]),
+        "full_residual_at_outer": float(full_residual[-1]),
+        "outer_is_endpoint": full_index == radius.size - 1,
+        "sat_density_at_outer": float(sat_density[-1]),
+        "bulk_residual_max_outside_stencil": float(np.max(np.abs(bulk_residual[interior]))),
+        "sbp_nodes_excluded_total": 2,
+        "bulk_residual_max": float(np.max(np.abs(bulk_residual))),
+        "bulk_residual_index": bulk_index,
+        "bulk_residual_radius": float(radius[bulk_index]),
+        "product_rule_beta_max": float(np.max(np.abs(commutator_beta))),
+        "product_rule_beta_index": int(np.argmax(np.abs(commutator_beta))),
+        "product_rule_lapse_max": float(np.max(np.abs(commutator_lapse))),
+        "shell_occupation_factor": float(SHELL_MULTIPLICITY * occupations[0]),
+        "probability_sat_used_as_energy": False,
+        "F_N_time_derivative": "bilinear_polarization",
+        "lapse_and_shift_rates_enter_F_N": False,
+        "endpoint_stencil": "SBP endpoints, index 0 and the last node",
     }
