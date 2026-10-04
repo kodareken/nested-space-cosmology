@@ -74,7 +74,7 @@ from typing import Any, Dict
 import numpy as np
 from numba import njit
 
-API_VERSION = "nsc-rn-gradient-bubble-v3"
+API_VERSION = "nsc-rn-gradient-bubble-v5"
 
 #: A force steeper than this as r decreases is a reported collapse
 #: signature. It is a diagnostic, not a verdict. The verdict comes from
@@ -93,9 +93,12 @@ THROAT_FRACTION = 0.10
 #: "supported by finite density and pressures ... behaving as a
 #: cosmological constant at small radius". A force with logarithmic slope
 #: g behaves as r^g, so it stays finite as r -> 0 only when g >= -1.
-#: Anything steeper diverges inward and the interior is not regular.
-#: This is sourced, not chosen.
+#: Anything steeper diverges inward. Sourced, not chosen.
 REGULAR_SLOPE_LIMIT = -1.0
+#: The grid's inner edge counts as reaching the horizon only if it lies
+#: this close to the inner root. It does not, in any recorded case, so
+#: regularity is reported as a bounded extrapolation rather than decided.
+HORIZON_REACH_TOLERANCE = 1.0e-6
 #: An exact power law evaluated by a central difference lands a few ulp
 #: off its own exponent, so the boundary is compared with this slack
 #: rather than failing an exactly-regular force on round-off.
@@ -325,7 +328,44 @@ def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
     }
 
 
-def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | None = None) -> Dict[str, Any]:
+def inner_horizon(mass_over_rm: float, magnetic_r2: float = 1.0) -> float:
+    """Smaller root of r^2 - 2 M r + magnetic_r2 = 0, the RN inner horizon.
+
+    Recorded with `P^2 = magnetic_r2 = 1` for the classical flux-1
+    sector, which is the sector every family case was run in.
+    """
+    discriminant = mass_over_rm * mass_over_rm - magnetic_r2
+    if discriminant <= 0.0:
+        raise ValueError("no inner horizon: the mass is below the charge")
+    return mass_over_rm - math.sqrt(discriminant)
+
+
+def horizon_extrapolation(r_inner: float, r_minus: float, slope: float) -> Dict[str, Any]:
+    """What the fitted throat power law would do out to the horizon.
+
+    The computed domain stops at `r_inner`, the initial fixed inner mass,
+    which lies outside `r_minus`. This reports the gap the computation
+    never covers and what the fitted power law would do across it. That
+    is an extrapolation, not a measurement, and it is why regularity is
+    reported here rather than decided.
+    """
+    gap = float(r_inner - r_minus)
+    reaches = gap <= HORIZON_REACH_TOLERANCE
+    extrapolated = 0.0
+    if gap > 0.0 and not math.isnan(slope):
+        extrapolated = float(slope * math.log(r_minus / r_inner) / math.log(10.0))
+    return {
+        "r_inner": float(r_inner),
+        "r_minus": float(r_minus),
+        "gap_to_horizon": gap,
+        "domain_reaches_horizon": bool(reaches),
+        "extrapolated_log10_force_ratio": extrapolated,
+        "extrapolation_is_measurement": False,
+    }
+
+
+def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | None = None,
+                                mass_over_rm: float | None = None) -> Dict[str, Any]:
     """Balance profile plus the named dead-end flags and the verdict.
 
     ``curvature`` must carry only same-provenance entries. ``Ricci2`` is
@@ -356,11 +396,31 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
     # Regularity is the sourced criterion. A force that diverges inward is
     # not a finite-stress interior, which is exactly what the 2005
     # non-singular black-hole construction requires at small radius.
-    regular = (math.isnan(profile["throat_slope_inner"])
-               or profile["throat_slope_inner"]
-               >= REGULAR_SLOPE_LIMIT - REGULAR_SLOPE_TOLERANCE)
-    if not regular:
-        flags.append("interior_not_regular")
+    slope_ok = (math.isnan(profile["throat_slope_inner"])
+                or profile["throat_slope_inner"]
+                >= REGULAR_SLOPE_LIMIT - REGULAR_SLOPE_TOLERANCE)
+    regular = slope_ok
+
+    extrapolation: Dict[str, Any] = {
+        "r_inner": profile["r_inner"],
+        "r_minus": None,
+        "gap_to_horizon": None,
+        "domain_reaches_horizon": False,
+        "extrapolated_log10_force_ratio": None,
+        "extrapolation_is_measurement": False,
+    }
+    if mass_over_rm is not None:
+        extrapolation = horizon_extrapolation(
+            profile["r_inner"], inner_horizon(mass_over_rm), profile["throat_slope_inner"])
+
+    # The domain stops outside the horizon in every recorded case, so the
+    # regularity criterion cannot be decided here. Naming it a hard dead
+    # end over-claimed: it is a declared extrapolation limit instead.
+    if not slope_ok:
+        if extrapolation["domain_reaches_horizon"]:
+            flags.append("interior_not_regular")
+        else:
+            flags.append("throat_extrapolation_diverges")
 
     # The verdict is the measured wall structure, not a chosen slope.
     # A throat slope steeper than the limit is reported because it is a
@@ -374,7 +434,7 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
     if curvature_ratio > CURVATURE_FORCE_RATIO:
         flags.append("curvature_dominates")
 
-    hard = [f for f in flags if f != "throat_steep_reported"]
+    hard = [f for f in flags if f not in ("throat_steep_reported", "throat_extrapolation_diverges")]
 
     if profile["wall_count"] > 0:
         verdict = "two_force_wall"
@@ -389,7 +449,9 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
         "api_version": API_VERSION,
         "verdict": verdict,
         "dead_end_flags": flags,
-        "interior_regular": bool(regular),
+        "slope_meets_regularity_limit": bool(slope_ok),
+        "regularity_decidable_on_this_domain": bool(extrapolation["domain_reaches_horizon"]),
+        "regularity_extrapolation": extrapolation,
         "throat_slope_inner": float(profile["throat_slope_inner"]),
         "regularity_slope_limit": REGULAR_SLOPE_LIMIT,
         "regularity_slope_tolerance": REGULAR_SLOPE_TOLERANCE,

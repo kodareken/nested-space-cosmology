@@ -33,9 +33,10 @@ from recursive_horizons import nsc_rn_gradient_bubble as bubble  # noqa: E402
 from recursive_horizons import nsc_rn_stencil_audit as stencil  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v4.json"
-PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v3.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v5.json"
+PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v4.json"
 EARLIER_RECORDS = (
+    LAB / "results/development/nsc-rn-gradient-bubble-v3.json",
     LAB / "results/development/nsc-rn-gradient-bubble-v2.json",
     LAB / "results/development/nsc-rn-gradient-bubble-v1.json",
 )
@@ -79,7 +80,9 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
         with np.load(station) as payload:
             if points is None:
                 points = int(payload["radius"].shape[0])
-            assessment = bubble.gradient_bubble_assessment(payload, {"R4": payload["R4"]})
+            mu = float(CASE_PATTERN.match(case_dir.name).group("mu"))
+            assessment = bubble.gradient_bubble_assessment(
+                payload, {"R4": payload["R4"]}, mass_over_rm=mu)
             clock = float(payload["coupled_t"][0]) if "coupled_t" in payload.files else _station_time(station)
         profile = assessment["profile"]
         rows.append({
@@ -98,13 +101,15 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
             "throat_slope_inner": profile["throat_slope_inner"],
             "force_ratio_integrated": profile["force_ratio_integrated"],
             "curvature_force_ratio": assessment["curvature_force_ratio"],
-            "interior_regular": assessment["interior_regular"],
+            "slope_meets_regularity_limit": assessment["slope_meets_regularity_limit"],
+            "regularity_extrapolation": assessment["regularity_extrapolation"],
         })
 
     verdicts = sorted({row["verdict"] for row in rows})
     flags = sorted({flag for row in rows for flag in row["dead_end_flags"]})
     last = rows[-1] if rows else None
-    regular = bool(last["interior_regular"]) if last else False
+    regular = bool(last["slope_meets_regularity_limit"]) if last else False
+    reaches = bool(last["regularity_extrapolation"]["domain_reaches_horizon"]) if last else False
     wall_rows = [row for row in rows if row["wall_count"] > 0]
     wall_radii = [row["r_first_wall"] for row in wall_rows]
     return {
@@ -120,9 +125,9 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
         "r_wall_final": last["r_first_wall"] if last else None,
         "wall_at_final_station": bool(last["wall_count"] > 0) if last else False,
         "reached_t_over_rm": last["t_over_rm"] if last else None,
-        "interior_regular": bool(regular),
-            "verdicts": verdicts,
-            "dead_end_flags_observed": flags,
+        "slope_meets_regularity_limit": bool(regular),
+        "verdicts": verdicts,
+        "dead_end_flags_observed": flags,
         "has_summary_json": (case_dir / "summary.json").exists(),
         "failure_blocker": failure.get("blocker") if failure else None,
         "failure_clock_t": failure.get("clock_t") if failure else None,
@@ -218,6 +223,12 @@ def main() -> int:
     walls = [c["stations"][-1]["r_first_wall"] for c in cases
              if c["stations"] and c["stations"][-1]["wall_count"] > 0]
     slopes = [c["stations"][-1]["throat_slope_inner"] for c in cases if c["stations"]]
+    gaps = [c["stations"][-1]["regularity_extrapolation"]["gap_to_horizon"]
+            for c in cases if c["stations"]]
+    extrap = [c["stations"][-1]["regularity_extrapolation"]["extrapolated_log10_force_ratio"]
+              for c in cases if c["stations"]]
+    reaches = any(c["stations"][-1]["regularity_extrapolation"]["domain_reaches_horizon"]
+                  for c in cases if c["stations"])
 
     prior = None
     if PRIOR_RECORD.is_file():
@@ -243,7 +254,7 @@ def main() -> int:
     validity = _stencil_validity(cases)
 
     record = {
-        "schema": "NSC-RN-GRADIENT-BUBBLE-v4",
+        "schema": "NSC-RN-GRADIENT-BUBBLE-v5",
         "api_version": bubble.API_VERSION,
         "creation_only": True,
         "producing_commit": _producing_commit(),
@@ -268,6 +279,17 @@ def main() -> int:
                 "not settled, and the per-case presence fraction records that."
             ),
         },
+        "regularity_scope": (
+            "The computed domain starts at the current inner mass, which is at or above "
+            "mu and grows toward 1.04. That edge is OUTSIDE the RN inner horizon in every "
+            "case: r_minus is 0.9387, 0.8682 and 0.7543 for mu=1.002, 1.010 and 1.040, so "
+            "the gap left uncovered is 0.063 to 0.286 r_m. The region between the grid edge "
+            "and the horizon is never evaluated. Regularity is therefore NOT decidable on "
+            "this domain. The fitted throat power law extrapolated across that gap would "
+            "grow the force by about 1e0 to 1e4, but that is an extrapolation, not a "
+            "measurement. Versions three and four named a hard interior_not_regular dead "
+            "end here; that over-claimed and is withdrawn."
+        ),
         "regularity_criterion": (
             "Hayward, gr-qc/0506126, Formation and evaporation of non-singular "
             "black holes (2005): the static region is supported by finite density "
@@ -305,7 +327,12 @@ def main() -> int:
             "r_decouple_max": max(decouple) if decouple else None,
             "r_first_wall_min": min(walls) if walls else None,
             "r_first_wall_max": max(walls) if walls else None,
-            "cases_with_a_regular_interior": sum(1 for c in cases if c["interior_regular"]),
+            "domain_reaches_horizon_any_case": bool(reaches),
+            "cases_meeting_the_regularity_slope_limit": sum(1 for c in cases if c["slope_meets_regularity_limit"]),
+            "gap_to_horizon_min": min(gaps) if gaps else None,
+            "gap_to_horizon_max": max(gaps) if gaps else None,
+            "extrapolated_log10_ratio_min": min(extrap) if extrap else None,
+            "extrapolated_log10_ratio_max": max(extrap) if extrap else None,
             "throat_slope_min": min(slopes) if slopes else None,
             "throat_slope_max": max(slopes) if slopes else None,
         },
@@ -320,6 +347,7 @@ def main() -> int:
             "wall_min_cells": bubble.WALL_MIN_CELLS,
             "regular_slope_limit": bubble.REGULAR_SLOPE_LIMIT,
             "regular_slope_tolerance": bubble.REGULAR_SLOPE_TOLERANCE,
+            "horizon_reach_tolerance": bubble.HORIZON_REACH_TOLERANCE,
         },
         "numerical_validity": validity,
         "cases": cases,

@@ -34,8 +34,8 @@ if str(LAB / "src") not in sys.path:
 from recursive_horizons import nsc_rn_gradient_bubble as bubble  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v4.json"
-OUT = LAB / "results/development/nsc-rn-gradient-bubble-v4.png"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v5.json"
+OUT = LAB / "results/development/nsc-rn-gradient-bubble-v5.png"
 CASE_PATTERN = re.compile(r"^mu-(?P<mu>[0-9.]+)-eps-(?P<eps>[0-9.]+)$")
 STATION_PATTERN = re.compile(r"^station-(?P<t>[0-9.]+)\.npz$")
 
@@ -120,8 +120,9 @@ def panel_regularity(ax, record: Dict) -> None:
     ax.set_xticks(positions)
     ax.set_xticklabels(names, fontsize=6)
     ax.set_ylabel("$|$ throat log-slope $|$")
-    ax.set_title("Every case is far steeper than the sourced limit:\n"
-                 "no case has a regular interior", fontsize=9)
+    ax.set_title("Every case is steeper than the reference,\n"
+                 "but the grid stops outside the horizon:\n"
+                 "regularity is not decidable here", fontsize=9)
     ax.grid(alpha=0.25, axis="y")
 
 
@@ -140,7 +141,7 @@ def main() -> int:
     panel_wall(axes[1], record)
     panel_regularity(axes[2], record)
     figure.suptitle(
-        "RN radial parent: the nested geometry, the oscillating wall, and the regularity failure",
+        "RN radial parent: the nested geometry, the oscillating wall, and the regularity question left open",
         fontsize=11)
     figure.tight_layout(rect=(0, 0, 1, 0.94))
     figure.savefig(OUT, dpi=140)
@@ -148,8 +149,9 @@ def main() -> int:
     print(f"  cases plotted   : {len(case_dirs)}")
     print(f"  station fraction with a wall: "
           f"{record['coverage']['station_fraction_with_a_wall']:.3f}")
-    print(f"  cases with a regular interior: "
-          f"{record['summary']['cases_with_a_regular_interior']} of {record['coverage']['cases']}")
+    print(f"  domain reaches horizon    : {record['summary']['domain_reaches_horizon_any_case']}")
+    print(f"  gap to horizon r_m        : {record['summary']['gap_to_horizon_min']:.5f}"
+          f" .. {record['summary']['gap_to_horizon_max']:.5f}")
     return 0
 
 

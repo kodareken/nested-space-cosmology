@@ -35,14 +35,15 @@ The numerical family is not running and is not claimed. No case has
 written a `summary.json`; four stopped on the CPU projection and the two
 `mu=1.002` cases stopped silently at `t=8`. The two-force gradient
 balance over its 177 recorded stations is
-[gradient-bubble v4](../results/development/nsc-rn-gradient-bubble-v4.json),
+[gradient-bubble v5](../results/development/nsc-rn-gradient-bubble-v5.json),
 owned by
 [nsc_rn_gradient_bubble.py](../src/recursive_horizons/nsc_rn_gradient_bubble.py)
 and [its note](nsc-rn-gradient-bubble.md). It supersedes v1, whose
 verdict rested on a chosen slope limit the data straddled, and v2 by
-adding the regularity criterion sourced from Hayward gr-qc/0506126: no
-case in the family has a regular interior, throat slopes -7.37 to
--152.64 against a sourced limit of -1. The verdict is
+adding the regularity reference sourced from Hayward gr-qc/0506126,
+which v5 then corrects: the grid stops outside the inner horizon in every
+case, so regularity is not decidable on this domain and the hard
+interior_not_regular flag is withdrawn. The verdict is
 the measured balance wall; a wall is present at 49.7% of stations, its
 persistence falls from about 65% at mu=1.002 to about 31% at mu=1.040,
 and it oscillates rather than settling. Its `numerical_validity` section

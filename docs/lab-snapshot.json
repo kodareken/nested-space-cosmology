@@ -12982,13 +12982,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 183030,
+      "bytes": 183102,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "4c8c66c3c1bf9a8a0241c4dd84d2f06bb81a2e028e7e16b1b465e864cbd15cdb"
+      "sha256": "ca9c333010c83a6e19d52bcafeede816706f1ce6c45b6360df36b381c85f31fe"
     },
     {
       "bytes": 97482,
@@ -16117,11 +16117,11 @@
       "sha256": "bf8fdbaba935a90bf965bedc918b85dfbf2609b951d9b374f452f82379ce1c14"
     },
     {
-      "bytes": 11991,
+      "bytes": 12862,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
       "path": "lab/docs/nsc-rn-gradient-bubble.md",
-      "sha256": "da8ddafa4a24c45a59d135cde1d06c1a52aaeb156fc95d6ab183a181f5221258"
+      "sha256": "958bb93e8853fb16553588673836334a9c9d5e7aaf49d55be8a9c54706652624"
     },
     {
       "bytes": 8496,
@@ -84854,6 +84854,20 @@
       "sha256": "c8aebc35eb2b2eff10f2a2e6bcee846ba5922a19a0cd38748c9f1d0a5198c8fc"
     },
     {
+      "bytes": 189530,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
+      "path": "lab/results/development/nsc-rn-gradient-bubble-v5.json",
+      "sha256": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+    },
+    {
+      "bytes": 238426,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
+      "path": "lab/results/development/nsc-rn-gradient-bubble-v5.png",
+      "sha256": "db7f03e148205c29754f79de67be946e577b48c01e8865c7d5067a1a1cc2dd95"
+    },
+    {
       "bytes": 44180,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
@@ -92260,11 +92274,11 @@
       "sha256": "6a74c0734cc53cfe10e1ac5699059de9b6828737d0124a5808d96b6d8dfbe4a3"
     },
     {
-      "bytes": 17017,
+      "bytes": 19100,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
       "path": "lab/scripts/derive_nsc_rn_gradient_bubble.py",
-      "sha256": "ffbfe44b05173c7802833cbedbf5c08084f3b4428ac86f8b7b8db32882b36afc"
+      "sha256": "e72051e57c2a508cc9ecd9fde1aa5a48ef8d32a3491a953666c17342ba410121"
     },
     {
       "bytes": 74930,
@@ -92610,11 +92624,11 @@
       "sha256": "cecf6e5b9f0558c440d679515a17c4785c824c1d7131b76b9d38782183e21675"
     },
     {
-      "bytes": 6221,
+      "bytes": 6550,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "6fedc83486572672fd7407f8e986b5c247b84f18",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
       "path": "lab/scripts/plot_nsc_rn_gradient_bubble.py",
-      "sha256": "28e07c51f393ad94b924ea279d152f7c64d2546f803f885754dc19e42cc293c6"
+      "sha256": "8892a722325da7d8a0bf3b6271972c995fe99cfaa124d4f23e576b6900c7afa6"
     },
     {
       "bytes": 11695,
@@ -94682,11 +94696,11 @@
       "sha256": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35"
     },
     {
-      "bytes": 17296,
+      "bytes": 20157,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
       "path": "lab/src/recursive_horizons/nsc_rn_gradient_bubble.py",
-      "sha256": "511779219c5335b25ddc81245ff59b486d8fd093f2a62248c54105f653680682"
+      "sha256": "772263149070ab51786cc7104f30ac2ce290eccc652ae7c3accfc3ab717ae290"
     },
     {
       "bytes": 34289,
@@ -97351,11 +97365,11 @@
       "sha256": "094f73a457066165efa1a6cc88fe768c923d00e068b66bba494dcc72f3f9ff11"
     },
     {
-      "bytes": 14769,
+      "bytes": 17111,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
+      "changed_from_commit": "e7bf49e908549ca4c6281aecee5f8bd7e7afecd5",
       "path": "lab/tests/test_nsc_rn_gradient_bubble.py",
-      "sha256": "82d0da7a99c22a6e3fea32335e395206ae9cfad32f44d432aac6b1b870630f8b"
+      "sha256": "fa8bc5c96b76c7277bb503849b722014d3ce4ceb3caf298813b36a568d2bec72"
     },
     {
       "bytes": 13572,

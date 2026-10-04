@@ -54,7 +54,30 @@ is never compared with one. The module now rejects any curvature key other
 than `R4` by name, and a test pins that rejection. The same-provenance
 ratio, `max|R4|` over the peak force density, is about `12.5`.
 
-## The 2005 criterion, and the hard negative result
+## Correction to v3 and v4: the domain never reaches the horizon
+
+Versions three and four recorded a hard `interior_not_regular` dead end
+and stated that no case has a regular interior. That over-claimed, and it
+is withdrawn.
+
+The grid's inner edge is the *current* inner mass, which is at or above
+$\mu$ and grows toward $1.04$. It is **outside** the RN inner horizon in
+every case: $r_-$ is $0.9387$, $0.8682$ and $0.7543$ for $\mu=1.002$,
+$1.010$ and $1.040$, leaving an uncovered gap of $0.063$ to $0.286\,r_m$.
+The region between the grid edge and the horizon is never evaluated.
+
+So the criterion, which is about behaviour as $r\to0$, cannot be decided
+on this domain. What can be said is bounded: the fitted throat power law
+extrapolated across the uncovered gap would grow the force by about
+$10^{0.9}$ to $10^{4.3}$. That is an extrapolation and is labelled as one
+in every record. The steepness is real and severe, but "the interior is
+not regular" is not a conclusion this domain supports.
+
+The flag is now `throat_extrapolation_diverges` and it does not decide the
+verdict. The verdict returns to the measured wall structure, and no hard
+dead-end flag fires anywhere in the family.
+
+## The 2005 criterion
 
 Douglas's framing pointed at "the 2005 study of black hole". That is
 Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126), "Formation
@@ -68,16 +91,15 @@ trapped surfaces, with inner and outer boundaries". That is the two-force
 picture directly: a finite interior stress, an exterior that dies away,
 and a bounded region between them.
 
-It also supplies the regularity criterion this check was missing. A force
+It also supplies the regularity reference this check was missing. A force
 with logarithmic slope $g$ behaves as $r^g$, so it stays finite as
-$r\to0$ only when $g\geq-1$. Anything steeper diverges inward and the
-interior is not regular in the sense of that paper. The limit is sourced,
-not chosen, which matters because the previously used limit of $8$ was
-mine and the data straddled it.
+$r\to0$ only when $g\geq-1$. The limit is sourced, not chosen, which
+matters because the previously used limit of $8$ was mine and the data
+straddled it.
 
-On that criterion **no case in the family has a regular interior**:
+Every recorded case is steeper than the limit, at $-7.37$ to $-152.64$:
 
-| Case | Throat slope | Regular at $g\geq-1$ |
+| Case | Throat slope | Meets $g\geq-1$ |
 |---|---|---|
 | `mu-1.002-eps-0.001` | -121.60 | no |
 | `mu-1.002-eps-0.010` | -152.64 | no |
@@ -86,11 +108,11 @@ On that criterion **no case in the family has a regular interior**:
 | `mu-1.040-eps-0.001` | -7.37 | no |
 | `mu-1.040-eps-0.010` | -8.44 | no |
 
-The best case is still more than seven times steeper than the criterion
-allows. This is the decisive result of the step and it is negative: the
-recorded RN radial states are not the regular interior that the 2005
-construction describes. `interior_not_regular` is therefore a hard
-dead-end flag, and four of the six cases carry it at their final station.
+But the domain limit above decides what that means: the slope is
+extrapolated toward a region never computed, so the correct statement is
+that the steepness would preclude regularity if it continued, not that
+the interior is non-regular. Deciding it needs the march extended inward
+past the inner mass to the horizon, which the family has never done.
 
 This also explains the numerical symptom that started this. A throat
 slope of $-488$ sits in the regime where the existing moment check
@@ -217,11 +239,9 @@ driven by
 with tests in
 [tests/test_nsc_rn_gradient_bubble.py](../tests/test_nsc_rn_gradient_bubble.py).
 The record is
-[results/development/nsc-rn-gradient-bubble-v4.json](../results/development/nsc-rn-gradient-bubble-v4.json),
-creation only. It names
-[nsc-rn-gradient-bubble-v3.json](../results/development/nsc-rn-gradient-bubble-v3.json)
-in a `supersedes` block with the reason, and lists v2 and v1 under
-`earlier_records`. All four are preserved. The
+[results/development/nsc-rn-gradient-bubble-v5.json](../results/development/nsc-rn-gradient-bubble-v5.json),
+creation only. It names v4 in a `supersedes` block with the reason, and
+lists v3, v2 and v1 under `earlier_records`. All five are preserved. The
 input fields come from
 [nsc_rn_source.py](../src/recursive_horizons/nsc_rn_source.py) and the
 curvature provenance from
@@ -236,10 +256,9 @@ force balance, and the two are not identified here.
 
 It does not say the universe is a gradient bubble. It measures a trade
 between two recorded forces on one finite grid, and it finds the balance
-real but transient, and the interior non-regular on the 2005 criterion.
-It does not certify a continuum limit, and it does not separate the wall
-oscillation from any step-control artifact. It does not finish the family
-or explain the two silent stops at `t = 8`, and it says nothing about
-`mu` above `1.04`, which was never run. And the non-regular result is a
-statement about these recorded states, not a refutation of the 2005
-paper, which describes a different construction.
+real but transient. It does not certify a continuum limit, it does not
+separate the wall oscillation from any step-control artifact, and it does
+not decide regularity, which needs the march extended inward to the
+horizon. It does not finish the family or explain the two silent stops at
+`t = 8`, and it says nothing about `mu` above `1.04`, which was never
+run.

@@ -176,25 +176,35 @@ Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126), "Formation
 and evaporation of non-singular black holes", 28 June 2005, where the
 static region is supported by finite density and pressures and behaves as
 a cosmological constant at small radius. A force of logarithmic slope
-$g$ behaves as $r^g$ and stays finite inward only for $g\geq-1$. **No
-case in the family has a regular interior**: the throat slopes run from
-$-7.37$ to $-152.64$, every one steeper than the sourced limit.
+$g$ behaves as $r^g$ and stays finite inward only for $g\geq-1$. Every
+recorded case is steeper, at $-7.37$ to $-152.64$.
 
-The apparent numerical blocker is withdrawn. `nsc_rn_pg._fornberg` raises
-a polynomial-moment failure at width $9$ and above, which earlier
-records named as the reason the family could not be re-marched. The same
-recursion in exact rational arithmetic agrees with the recorded weights
-to $5.1\times10^{-16}$ across $120$ audited stencils, and the throat
-slope re-derived under exact weights is unchanged to
-$1.1\times10^{-13}$, at $-23.3$ to $-487.7$. The guard is ill-conditioned,
-not the weights, and no operator value or calibration hash is affected.
+That is not yet a verdict on regularity, and an earlier version of this
+page said so wrongly. The grid's inner edge is the current inner mass,
+which lies **outside** the RN inner horizon in every case: $r_-$ is
+$0.9387$, $0.8682$ and $0.7543$ for $\mu=1.002$, $1.010$ and $1.040$,
+leaving $0.063$ to $0.286\,r_m$ never evaluated. Extrapolating the fitted
+throat power law across that gap would grow the force by $10^{0.9}$ to
+$10^{4.3}$, but that is an extrapolation, not a measurement. Regularity
+is **not decidable on this domain**; deciding it needs the march extended
+inward to the horizon. The `interior_not_regular` hard flag is withdrawn
+and replaced by a reported `throat_extrapolation_diverges`.
+
+The apparent numerical blocker is also withdrawn.
+`nsc_rn_pg._fornberg` raises a polynomial-moment failure at width $9$
+and above, which earlier records named as the reason the family could not
+be re-marched. The same recursion in exact rational arithmetic agrees
+with the recorded weights to $5.1\times10^{-16}$ across $120$ audited
+stencils, and the throat slope re-derived under exact weights is
+unchanged to $1.1\times10^{-13}$. The guard is ill-conditioned, not the
+weights, and no operator value or calibration hash is affected.
 
 This is a construction check on recorded finite states, not a statement
 about the actual universe. The current record is
-[nsc-rn-gradient-bubble-v4.json](../lab/results/development/nsc-rn-gradient-bubble-v4.json),
+[nsc-rn-gradient-bubble-v5.json](../lab/results/development/nsc-rn-gradient-bubble-v5.json),
 creation only, which carries a `numerical_validity` section with the
-stencil audit, names the preserved v3 record in a `supersedes` block and
-lists v2 and v1 under `earlier_records`. Two family cases still stop
+stencil audit, names the preserved v4 record in a `supersedes` block and
+lists v3 through v1 under `earlier_records`. Two family cases still stop
 silently at $t=8.00$ with no failure file, and no case has written a
 `summary.json`.
 

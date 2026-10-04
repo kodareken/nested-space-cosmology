@@ -13,7 +13,7 @@ import numpy as np
 from recursive_horizons import nsc_rn_gradient_bubble as gb
 
 LAB = Path(__file__).resolve().parents[1]
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v3.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v5.json"
 
 
 def _payload(inner, outer, radius=None):
@@ -156,36 +156,63 @@ class WallTests(unittest.TestCase):
 
 
 class RegularityTests(unittest.TestCase):
-    """The sourced criterion, Hayward gr-qc/0506126: finite stress inward."""
+    """The sourced criterion, and the domain limit that blocks it."""
 
     def test_limit_is_the_sourced_inverse_radius_value(self):
         self.assertEqual(gb.REGULAR_SLOPE_LIMIT, -1.0)
 
-    def test_inverse_radius_force_is_regular(self):
+    def test_inner_horizon_matches_the_recorded_calibration(self):
+        for mass_over_rm, recorded in ((1.002, 0.9387228319217753),
+                                       (1.01, 0.8682255312124217),
+                                       (1.04, 0.7543428628582858)):
+            with self.subTest(mass_over_rm=mass_over_rm):
+                self.assertAlmostEqual(gb.inner_horizon(mass_over_rm), recorded, places=9)
+
+    def test_sub_charge_mass_has_no_horizon(self):
+        with self.assertRaises(ValueError):
+            gb.inner_horizon(0.5)
+
+    def test_domain_stopping_outside_the_horizon_is_reported_not_decided(self):
+        result = gb.horizon_extrapolation(1.04, gb.inner_horizon(1.04), -23.28)
+        self.assertFalse(result["domain_reaches_horizon"])
+        self.assertGreater(result["gap_to_horizon"], 0.2)
+        self.assertFalse(result["extrapolation_is_measurement"])
+
+    def test_domain_at_the_horizon_is_decidable(self):
+        r_minus = gb.inner_horizon(1.04)
+        result = gb.horizon_extrapolation(r_minus, r_minus, -23.28)
+        self.assertTrue(result["domain_reaches_horizon"])
+        self.assertAlmostEqual(result["gap_to_horizon"], 0.0)
+
+    def test_steepness_outside_the_domain_is_not_a_hard_dead_end(self):
+        """The correction: an extrapolation must not decide the verdict."""
+        radius = np.linspace(1.04, 32.0, 300)
+        inner = radius ** -30.0
+        outer = 0.5 * radius ** -30.0
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius),
+                                                mass_over_rm=1.04)
+        self.assertFalse(verdict["slope_meets_regularity_limit"])
+        self.assertIn("throat_extrapolation_diverges", verdict["dead_end_flags"])
+        self.assertNotIn("interior_not_regular", verdict["dead_end_flags"])
+        self.assertNotEqual(verdict["verdict"], "dead_end")
+
+    def test_regularity_is_decidable_when_the_domain_reaches_the_horizon(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        inner = radius ** -30.0
+        outer = 0.5 * radius ** -30.0
+        payload = _payload(inner, outer, radius)
+        payload["radius"] = np.linspace(gb.inner_horizon(1.04), 32.0, 300)
+        verdict = gb.gradient_bubble_assessment(payload, mass_over_rm=1.04)
+        self.assertTrue(verdict["regularity_decidable_on_this_domain"])
+        self.assertIn("interior_not_regular", verdict["dead_end_flags"])
+
+    def test_inverse_radius_force_meets_the_limit(self):
         radius = np.linspace(1.04, 32.0, 300)
         inner = radius ** -1.0
         outer = 0.5 * radius ** -2.0
         verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
-        self.assertTrue(verdict["interior_regular"])
+        self.assertTrue(verdict["slope_meets_regularity_limit"])
         self.assertNotIn("interior_not_regular", verdict["dead_end_flags"])
-
-    def test_force_diverging_inward_is_not_regular(self):
-        radius = np.linspace(1.04, 32.0, 300)
-        inner = radius ** -30.0
-        outer = 0.5 * radius ** -30.0
-        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
-        self.assertFalse(verdict["interior_regular"])
-        self.assertIn("interior_not_regular", verdict["dead_end_flags"])
-        self.assertEqual(verdict["verdict"], "dead_end")
-
-    def test_regularity_does_not_depend_on_the_chosen_slope_limit(self):
-        """Between -1 and -8 the two criteria disagree, so the source wins."""
-        radius = np.linspace(1.04, 32.0, 300)
-        inner = radius ** -3.0
-        outer = 0.5 * radius ** -3.0
-        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
-        self.assertNotIn("throat_steep_reported", verdict["dead_end_flags"])
-        self.assertIn("interior_not_regular", verdict["dead_end_flags"])
 
 
 class DeadEndTests(unittest.TestCase):
@@ -301,18 +328,27 @@ class RecordTests(unittest.TestCase):
         self.assertLess(coverage["cases_with_a_wall_at_the_final_station"], 6)
         self.assertGreater(coverage["station_fraction_with_a_wall"], 0.0)
 
-    def test_the_only_hard_flag_is_the_sourced_regularity_failure(self):
+    def test_the_only_hard_flag_is_absent(self):
+        """Nothing decides a dead end any more; the structure is reported."""
         flags = set(self.record["dead_end_flags_observed"])
-        self.assertEqual(
-            sorted(f for f in flags if f != "throat_steep_reported"),
-            ["interior_not_regular"],
-        )
+        self.assertEqual(sorted(f for f in flags if f in
+                                ("single_force", "curvature_dominates")), [])
 
-    def test_no_case_in_the_family_has_a_regular_interior(self):
-        """The hard negative result, on the 2005 paper's own criterion."""
-        self.assertEqual(self.record["summary"]["cases_with_a_regular_interior"], 0)
-        self.assertLess(self.record["summary"]["throat_slope_max"],
-                        self.record["limits"]["regular_slope_limit"])
+    def test_no_case_domain_reaches_the_horizon(self):
+        """Why the regularity question is not decided on this domain."""
+        summary = self.record["summary"]
+        self.assertFalse(summary["domain_reaches_horizon_any_case"])
+        self.assertGreater(summary["gap_to_horizon_min"], 0.0)
+
+    def test_the_withdrawn_hard_flag_is_absent(self):
+        flags = set(self.record["dead_end_flags_observed"])
+        self.assertNotIn("interior_not_regular", flags)
+        self.assertIn("throat_extrapolation_diverges", flags)
+
+    def test_extrapolation_is_labelled_as_such(self):
+        self.assertIn("NOT decidable", self.record["regularity_scope"])
+        for case in self.record["cases"]:
+            self.assertFalse(case["stations"][-1]["regularity_extrapolation"]["extrapolation_is_measurement"])
 
     def test_record_names_the_sourced_criterion(self):
         self.assertIn("gr-qc/0506126", self.record["regularity_criterion"])
