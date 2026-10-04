@@ -109,8 +109,10 @@ official writer refused the sealed directory, so the accepted
 assessment body is a creation-only record pinned to producer
 `64e2c36`. That commit is the saved-data context, not the identity
 of the current operator. The writer now allows a new development
-file and still protects existing and historical outputs. No official
-v2 assessment exists yet. A finite continuation reaches $T=20$ from
+file and still protects existing and historical outputs. The current
+reproducible assessment is
+[nsc-rn-pilot-assessment-v2.json](../lab/results/development/nsc-rn-pilot-assessment-v2.json).
+The manual v1 body remains the historical writer failure. A finite continuation reaches $T=20$ from
 the archived $t=10$ frame. Its scope and the open refinement are in
 [current result](current-result.md#rn-radial-parent-4-october-2026).
 That segment is not a completed neutral programme or a production seal.
