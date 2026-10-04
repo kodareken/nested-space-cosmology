@@ -18,6 +18,7 @@ Run from the repository root:
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -35,7 +36,6 @@ if str(LAB / "src") not in sys.path:
 from recursive_horizons import nsc_rn_mass_shell as shell  # noqa: E402
 
 DEVELOPMENT = LAB / "results/development"
-RECORD = DEVELOPMENT / "nsc-rn-packet-sweep-v2.json"
 STATION = re.compile(r"station-([0-9]+(?:\.[0-9]+)?)\.npz$")
 
 
@@ -126,20 +126,56 @@ def _reduce_run(directory: Path) -> Dict[str, Any]:
     }
 
 
-def main() -> int:
-    if RECORD.exists():
-        print(f"refusing to overwrite sealed record: {RECORD}", file=sys.stderr)
+def main(argv: List[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--runs", nargs="+", default=None,
+                        help="explicit run directory names under results/development. "
+                             "Preferred over --pattern: a glob will happily mix a "
+                             "different-resolution march of the same radius into a "
+                             "fixed-resolution sweep.")
+    parser.add_argument("--pattern", default=None,
+                        help="glob under results/development, used only when --runs is absent")
+    parser.add_argument("--out", default="nsc-rn-packet-sweep-v4.json",
+                        help="record name, relative to results/development")
+    args = parser.parse_args(argv)
+
+    record_path = DEVELOPMENT / args.out
+    if record_path.exists():
+        print(f"refusing to overwrite sealed record: {record_path}", file=sys.stderr)
         return 1
 
-    runs = sorted(p for p in DEVELOPMENT.glob("nsc-rn-inner-packet-*")
-                  if p.is_dir() and (p / "summary.json").is_file())
-    if len(runs) < 2:
-        print(f"need at least two completed inner-packet runs, found {len(runs)}",
-              file=sys.stderr)
+    if args.runs:
+        names = list(args.runs)
+    elif args.pattern:
+        names = [p.name for p in sorted(DEVELOPMENT.glob(args.pattern))
+                 if p.is_dir() and (p / "summary.json").is_file()]
+    else:
+        print("give --runs or --pattern", file=sys.stderr)
+        return 2
+
+    if len(names) < 2:
+        print(f"need at least two completed runs, named {names}", file=sys.stderr)
         return 1
+    runs = []
+    for name in names:
+        directory = DEVELOPMENT / name
+        if not (directory / "summary.json").is_file():
+            print(f"no completed run at {directory}", file=sys.stderr)
+            return 1
+        runs.append(directory)
 
     reduced = [_reduce_run(p) for p in runs]
     reduced.sort(key=lambda r: r["release_radius_over_rm"])
+
+    # A sweep varies the release radius and nothing else. If anything else
+    # moved between runs the comparison is not the one the record claims,
+    # so it is refused rather than reported.
+    for key in ("points", "mu", "eps", "packet_width_over_rm", "r_inner"):
+        values = [r[key] for r in reduced]
+        if len(set(values)) != 1:
+            print(f"runs differ in {key}: {values}. This is not a release-radius sweep; "
+                  f"refusing to reduce it as one.", file=sys.stderr)
+            return 2
 
     gains = [r["accumulation_after_arrival"]["amplitude_gain"]
              for r in reduced if r["accumulation_after_arrival"]]
@@ -162,11 +198,54 @@ def main() -> int:
         "r_inner": sorted({r["r_inner"] for r in reduced}),
     }
 
+    def _agrees(values, tolerance, floor=1):
+        if len([v for v in values if v is not None]) < floor:
+            return None
+        return (max(values) - min(values)) < tolerance
+
+    gain_holds = _agrees(gains, 0.05 * (sum(gains) / len(gains)))
+    rise_holds = _agrees(rises, 0.15)
+    relax_holds = _agrees(relax, 0.10)
+
+    lines_hold = []
+    if gain_holds:
+        lines_hold.append(
+            "The compression gain holds: the density peak at the inner boundary grows by "
+            "about a fifth at every release radius tried.")
+    if rise_holds:
+        lines_hold.append(
+            "The rise time holds: the peak arrives at the same lag after the shell reaches "
+            "the boundary, however far the shell fell to get there.")
+
+    lines_not = []
+    if relax_holds is False:
+        lines_not.append(
+            "The relaxation after the peak does not agree across runs: the final amplitude "
+            "as a fraction of the peak spans a range wider than a tenth of its own value, "
+            "so no single relaxed value is claimed.")
+    elif relax_holds:
+        lines_not.append(
+            "The relaxation agrees only as well as these runs put it on a common clock. "
+            "The runs were marched to different absolute times, so agreement here bounds "
+            "the relaxation at the lag actually reached rather than settling it.")
+    if len(widths) >= 2 and (max(widths) - min(widths)) > 0.05:
+        lines_not.append(
+            "The width compression is not a fixed factor; it grows with release radius, so "
+            "it is a property of how far the shell fell rather than a constant.")
+    if len(rates) < len(reduced):
+        lines_not.append(
+            "Not every run has a falling phase, so the infall rate is measured on fewer "
+            "runs than the sweep contains.")
+    if not lines_not:
+        lines_not.append("No quantity in this record was found not to hold.")
+
     record = {
         "schema": "NSC-RN-PACKET-SWEEP-v1",
         "api_version": shell.API_VERSION,
         "creation_only": True,
         "producing_commit": _git_head(),
+        "run_selection": names,
+        "run_pattern": args.pattern,
         "what_this_measures": (
             "Whether the compression measured at one release radius is a property of the "
             "construction or an accident of one run. Packet width, spectrum, chart, mass "
@@ -202,27 +281,14 @@ def main() -> int:
             "width_compression": widths,
             "width_compression_spread": (max(widths) - min(widths)) if widths else None,
             "edge_arrival_t": arrivals,
-            "what_holds": (
-                "The compression gain and the rise time both hold across the sweep: the "
-                "density peak at the inner boundary grows by about a fifth and reaches its "
-                "peak about four fifths of a time unit after arrival, at every release "
-                "radius tried. Holding a result across a change of one construction "
-                "parameter shows it is not an accident of one run."
-            ),
-            "what_does_not_hold": (
-                "The relaxation after the peak does not. The final amplitude as a fraction "
-                "of the peak runs from about 0.65 to about 0.92 and tracks how long the "
-                "march continued past the peak rather than the release radius, so the runs "
-                "do not settle it and no relaxed value is claimed. The width compression "
-                "also does not hold: it grows with release radius, so it is a property of "
-                "how far the shell fell, not a fixed factor."
-            ),
+            "what_holds": " ".join(lines_hold),
+            "what_does_not_hold": " ".join(lines_not),
         },
         "runs": reduced,
     }
 
-    RECORD.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"wrote {RECORD.relative_to(LAB)}")
+    record_path.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"wrote {record_path.relative_to(LAB)}")
     print(f"  runs            : {len(reduced)}")
     print(f"  release radii   : {record['sweep']['release_radii_over_rm']}")
     print(f"  amplitude gain  : {['%.4f' % g for g in gains]}")
@@ -232,8 +298,11 @@ def main() -> int:
     print(f"  width compress  : {['%.4f' % w for w in widths]}")
     print(f"  arrival t       : {arrivals}")
     print(f"  rise time       : {['%.3f' % r for r in rises]}")
-    print(f"  after-peak frac : {['%.3f' % r for r in relax]}  (NOT settled by these runs)")
+    print(f"  after-peak frac : {['%.3f' % r for r in relax]}"
+          f"  (spread {max(relax) - min(relax) if relax else 0:.3f})")
     print(f"  pinned at start : {record['sweep']['runs_starting_pinned']}")
+    print(f"  holds           : {len(lines_hold)} claim(s)")
+    print(f"  does not hold   : {len(lines_not)} item(s)")
     return 0
 
 

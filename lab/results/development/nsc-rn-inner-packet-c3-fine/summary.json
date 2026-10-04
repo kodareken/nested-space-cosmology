@@ -1,0 +1,182 @@
+{
+ "admission": {
+  "car_rank": 1,
+  "center_probability_current": -0.31519410857971925,
+  "filling": 0.0005905658631398441,
+  "integrated_negative_current": -1.3068571118337686,
+  "inward_at_center": true,
+  "killing_energy": 0.0023534367399123944,
+  "mean_radius": 5.023806774871716,
+  "packet_mode_energy": 0.9962634512092973,
+  "phi_shape": [
+   2,
+   1740,
+   1
+  ],
+  "requested_center": 3.0,
+  "requested_frequencies": [
+   0.10000000000000009,
+   0.3250000000000004,
+   0.5500000000000005,
+   0.7750000000000006,
+   1.0000000000000009,
+   1.2250000000000012,
+   1.450000000000001,
+   1.6750000000000014,
+   1.9000000000000017
+  ],
+  "requested_width": 1.9999999999999984,
+  "width_rms": 5.533180547296764
+ },
+ "cpu_seconds": 456.8432592999993,
+ "creation_only": true,
+ "dt": 0.001,
+ "eps": 0.001,
+ "mu": 1.04,
+ "not_a_sealed_record": true,
+ "packet_center_over_rm": 3.0,
+ "packet_width_over_rm": 2.0,
+ "points": 1740,
+ "prepare_seconds": 2.773555899999792,
+ "producer_sha256": "945566f8a5d564398e3319d733bf4fe27182df2dfe7bd353779a52411cbf257a",
+ "producing_commit": "e63edbc340ad45f8147e13f7d6bbfd0b16bca03d",
+ "r_inner": 1.04,
+ "r_minus": 0.7543428628582858,
+ "r_outer": 32.0,
+ "recorded_family_packet_center_over_rm": 12.0,
+ "recorded_stations": [
+  {
+   "shell_inner_mass": 1.04,
+   "shell_outer_mass": 1.0410400996968843,
+   "t_over_rm": 0.0
+  },
+  {
+   "shell_inner_mass": 1.0400212934010504,
+   "shell_outer_mass": 1.0410400793197327,
+   "stopped": "station",
+   "t_over_rm": 0.1
+  },
+  {
+   "shell_inner_mass": 1.0400440557051127,
+   "shell_outer_mass": 1.0410400543016018,
+   "stopped": "station",
+   "t_over_rm": 0.2
+  },
+  {
+   "shell_inner_mass": 1.040068265463392,
+   "shell_outer_mass": 1.041040028971413,
+   "stopped": "station",
+   "t_over_rm": 0.30000000000000004
+  },
+  {
+   "shell_inner_mass": 1.0400938758344607,
+   "shell_outer_mass": 1.0410400033849319,
+   "stopped": "station",
+   "t_over_rm": 0.4
+  },
+  {
+   "shell_inner_mass": 1.0401208253034768,
+   "shell_outer_mass": 1.0410399775489514,
+   "stopped": "station",
+   "t_over_rm": 0.5
+  },
+  {
+   "shell_inner_mass": 1.0401490378687488,
+   "shell_outer_mass": 1.0410399514621769,
+   "stopped": "station",
+   "t_over_rm": 0.6
+  },
+  {
+   "shell_inner_mass": 1.040178423441707,
+   "shell_outer_mass": 1.0410399251179698,
+   "stopped": "station",
+   "t_over_rm": 0.7
+  },
+  {
+   "shell_inner_mass": 1.0402088784546604,
+   "shell_outer_mass": 1.04103989851437,
+   "stopped": "station",
+   "t_over_rm": 0.7999999999999999
+  },
+  {
+   "shell_inner_mass": 1.0402402867283709,
+   "shell_outer_mass": 1.0410398716512637,
+   "stopped": "station",
+   "t_over_rm": 0.8999999999999999
+  },
+  {
+   "shell_inner_mass": 1.0402725206110208,
+   "shell_outer_mass": 1.0410398445274107,
+   "stopped": "station",
+   "t_over_rm": 0.9999999999999999
+  },
+  {
+   "shell_inner_mass": 1.0403054423251927,
+   "shell_outer_mass": 1.041039817145453,
+   "stopped": "station",
+   "t_over_rm": 1.0999999999999999
+  },
+  {
+   "shell_inner_mass": 1.0403389054397,
+   "shell_outer_mass": 1.0410397895104178,
+   "stopped": "station",
+   "t_over_rm": 1.2
+  },
+  {
+   "shell_inner_mass": 1.0403727564333236,
+   "shell_outer_mass": 1.0410397616270501,
+   "stopped": "station",
+   "t_over_rm": 1.3
+  },
+  {
+   "shell_inner_mass": 1.0404068363865162,
+   "shell_outer_mass": 1.0410397335030153,
+   "stopped": "station",
+   "t_over_rm": 1.4000000000000001
+  },
+  {
+   "shell_inner_mass": 1.040440982818433,
+   "shell_outer_mass": 1.041039705147954,
+   "stopped": "station",
+   "t_over_rm": 1.5000000000000002
+  },
+  {
+   "shell_inner_mass": 1.0404750316224636,
+   "shell_outer_mass": 1.04103967657151,
+   "stopped": "station",
+   "t_over_rm": 1.6000000000000003
+  },
+  {
+   "shell_inner_mass": 1.0405088190054936,
+   "shell_outer_mass": 1.0410396477856931,
+   "stopped": "station",
+   "t_over_rm": 1.7000000000000004
+  },
+  {
+   "shell_inner_mass": 1.0405421833977258,
+   "shell_outer_mass": 1.0410396188043296,
+   "stopped": "station",
+   "t_over_rm": 1.8000000000000005
+  },
+  {
+   "shell_inner_mass": 1.0405749673468752,
+   "shell_outer_mass": 1.041039589641376,
+   "stopped": "station",
+   "t_over_rm": 1.9000000000000006
+  },
+  {
+   "shell_inner_mass": 1.0406070194019963,
+   "shell_outer_mass": 1.0410395603126368,
+   "stopped": "station",
+   "t_over_rm": 2.0000000000000004
+  }
+ ],
+ "schema": "NSC-RN-INNER-PACKET-v1",
+ "scope_note": "A construction check on one finite marched collar. It does not measure the actual universe.",
+ "station_step_over_rm": 0.1,
+ "stations": 21,
+ "stop_reason": "target",
+ "target_over_rm": 2.0,
+ "wall_seconds": 458.0935327999996,
+ "why_this_is_a_different_construction": "The recorded family releases the packet at 12 r_m, from outside the collar it is about to cross. This one releases it at the centre above, inside. Same width, same spectrum, same chart. The mass profile left behind is a different problem and is not comparable with the recorded family except through construction-only quantities."
+}
