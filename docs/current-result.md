@@ -17,15 +17,99 @@ The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
 same-spectrum local induced term, counted once. The vacuum-matched CTP branch
 remains a separate historical choice.
 
+## RN radial parent, 4 October 2026
+
+The scientific starting checkpoint is
+`5cb775a751add5f72eb06cb681ca16c24a3527d2`, which produced the
+recorded NF256 confirmation below. Local `main`, `codex/work-branch`
+and both remotes are `d95175c25a9989aea681967d6089aa7b2bf27706`, the
+committed external two-room import. That import is not an RN result.
+The periodic parent below is historical input. Further periodic
+autonomous exchange runs stay off this programme. The active question
+is a nonperiodic horizon-regular Painlevé–Gullstrand parent exterior
+and a distinct near-throat child on its own areal radius. Exact
+magnetic Reissner–Nordström calibration comes before any sourced case.
+
+The source-free core is independently confirmed. `_measure_case`
+builds $R_4$ and Ricci squared from the reconstructed PG jets and
+compares them with the reference. `injected_analytic_jets` is false.
+At $\mu\in\{1.002,1.01,1.04\}$ the worst residuals are
+$R_4=1.2732490227040927\times10^{-5}$, Ricci squared
+$4.3332330528444984\times10^{-5}$, $\beta_{rr}=1.480009\times10^{-5}$
+and horizon gap $3.198843\times10^{-6}$. They pass $10^{-4}$. No
+calibration record is saved.
+
+The reviewed ingoing angular coupling is $+\alpha$. Classical flux
+$q=1$ uses $C_F=0.18007744731304431$ and $G_N=0.441906928009764$,
+rescaled from the audited flux-$4$ sector so $P^2=1$. That quantized
+sector stays distinct. Rank $5$ carried an outer replica of $0.435$.
+The rank-$9$ preparation has dominant-lobe peak $12.03$, mean $12.29$
+and RMS $2.94$. Its declared finite frequency is not the requested
+width $2$.
+
+The driver, episode note and driver tests are registered. They report
+$40$ focused tests and one temporary paired coupled/frozen run at
+$\mu=1.04$, $\varepsilon=0.001$ and $\Delta t=0.001$, through $T=5$
+and $T=10$, using $547$ CPU seconds. Producer bytes were unchanged
+by that run. At $T=10$ the coupled inner mass is $1.040990$ against
+the fixed value $1.04$, excision probability is $0.868$, and the
+remaining probability is $0.122$. The arrays stay in scratch outside
+this repository. This is not a sealed production record and not a
+completed neutral experiment. Dynamic curvature is null. A separate
+review is comparing a probability gap of $8\times10^{-6}$ with a SAT
+debit of $4\times10^{-6}$; accounting is not closed, and refinement
+is pending.
+
+The first shell is neutral massless Dirac, $\kappa=1$, a spherical
+closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,
+sea-free, $V_4=0$, and a positive exterior static frequency. The parent
+outer boundary is absorbing at $R_{\mathrm{out}}=32 r_m$. Excision
+between the horizons is all outflow. $N$ and $\beta$ stay coupled from
+the action. The primary readout is neutral Dirac infall, the mass,
+horizon and RN deviation, and the held local response. Renewal lies
+outside the acceptance criterion. The charged lowest-Landau Gauss
+branch is a later experiment. The MMP negative-Casimir study runs in
+parallel and leaves the classical throat unblocked.
+
+Registered owners are
+[nsc_rn_reference](../lab/docs/nsc-rn-reference.md),
+`nsc_rn_pg`, `nsc_rn_source`,
+[nsc_rn_observables](../lab/src/recursive_horizons/nsc_rn_observables.py)
+and [derive_nsc_rn_parent](../lab/scripts/derive_nsc_rn_parent.py).
+The episode note is
+[nsc-rn-parent-episode.md](../lab/docs/nsc-rn-parent-episode.md).
+The later charged branch is
+[nsc-rn-charged-source.md](../lab/docs/nsc-rn-charged-source.md).
+The parallel MMP study is
+[nsc-rn-mmp-source-study.md](../lab/docs/nsc-rn-mmp-source-study.md).
+Root freezes completed producer files at integration.
+
+The historical parent's bounded $n_f=256$ confirmation is recorded by
+that same commit. Both arms stop on the matched centre clock, target
+$\tau=2.8568786296681035$, at $2.856878629668112$ and
+$2.8568786296680826$. The column-0 child effect is
+$0.0004291836505783686$ beside the NF128 effect $0.0004292078493$.
+Total child content is $0.0028419435306693414$ beside $0.0028420021143$.
+Child proper length is $0.004767169795066806$ beside $0.0047672394727$.
+CPU time is $140.664864$ seconds. The record is
+[confirmation.json](../lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json)
+and [confirmation.npz](../lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz).
+The payload is $128332$ bytes,
+`32c2b22dd5f95ce6b9bb51c9ee865be6a4465b9c28bc6acbd0147b9d99dac1ef`.
+Eight input hashes and forty-two producer hashes match the current
+bytes. The finite-band comparison is an indicator. The record stores
+no $R_4$. Source-free and matter-jet assessment is future Stage 0.
+The written metadata stays as produced.
+
 ## Responsive parent, 3 October 2026
 
-The approved programme starts at `eb4798c`. Primary finite preparation
-of the magnetic branch is achieved, and the frozen, empty-source and
-strong-offset controls below are recorded. The NF128 exterior-to-cut
-response is measured. The current cursor is one bounded $n_f=256$
-confirmation of that response, then a source-selected inner boundary
-and repeatable hand-off from the actual coupled exterior feedback.
-The renewal programme is not complete. No autonomous renewal is asserted.
+Historical input, started at `eb4798c`. The active cursor is the
+[RN radial parent](#rn-radial-parent-4-october-2026). Primary finite
+preparation of the magnetic branch is achieved, and the frozen,
+empty-source and strong-offset controls below are recorded. The NF128
+exterior-to-cut response is measured, and its bounded $n_f=256$
+confirmation is recorded above. The renewal programme is not complete.
+No autonomous renewal is asserted.
 The
 [2 October discovery programme](#active-discovery-programme-2-october-2026)
 remains preserved from `ea6c699`. The incoming gate stays paused.
@@ -150,11 +234,9 @@ which is $1.114\%$ of that baseline. The held $\pm5\%$ forecasts for
 that column match within $0.3629\%$ and $0.3709\%$ of the predicted
 effect. Total child content on the $+5\%$ arm moves by
 $0.00284200211428$ against the locked $0.00285160805944$. Renewal is
-not asserted. One bounded $n_f=256$ confirmation is implemented in
-[derive_nsc_discovery_parent_cut_confirmation.py](../lab/scripts/derive_nsc_discovery_parent_cut_confirmation.py);
-root runs that physical confirmation. After it, the actual coupled
-exterior feedback is the input for a source-selected inner boundary
-and a repeatable hand-off and invariant family. The same inheritance
+not asserted. The bounded $n_f=256$ confirmation is the record cited
+in the [RN radial parent](#rn-radial-parent-4-october-2026) section.
+The same inheritance
 law covers states whose physical frequencies may differ. A thermal
 compression reading is conditional, and this recorded state is
 non-thermal. The ancestry share $\eta$ is not a new gate. The force

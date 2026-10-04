@@ -15,14 +15,54 @@ or an older cursor. It does not resume the campaign. Do not drop recorded
 error gaps. The [archived candidate notes](#archived-candidate-notes) at the
 end of this file are not the active queue.
 
-## Responsive parent, approved from `eb4798c`
+## RN radial parent, approved from `5cb775a7`
+
+Nonperiodic horizon-regular PG parent exterior and a distinct
+areal-radius near-throat child. Exact magnetic RN calibration comes
+before any sourced case. The source-free jet comparison is measured from reconstructed PG
+jets, meets $10^{-4}$, and is independently confirmed. A temporary
+rank-$9$ paired pilot reached $T=10$ in scratch outside this
+repository. Dynamic curvature is null. Accounting and refinement
+are open. It is not a sealed production record. The charged
+lowest-Landau Gauss branch is later. The MMP negative-Casimir study
+is parallel and leaves the classical throat unblocked. The historical
+parent's bounded $n_f=256$ confirmation is recorded; its comparison
+and CPU stay on the status page. That record stores no $R_4$.
+Source-free and matter-jet assessment of that older record is future
+Stage 0. Status:
+[current result](../../docs/current-result.md#rn-radial-parent-4-october-2026).
+Rules:
+[RN radial programme](../../docs/instructions.md#rn-radial-programme).
+
+| Responsibility | Owner |
+|---|---|
+| Analytic source-free sample | [Note](nsc-rn-reference.md); `src/recursive_horizons/nsc_rn_reference.py`; `tests/test_nsc_rn_reference.py`. Registered. |
+| Coupled PG state and spatial jets | [Action](nsc-rn-pg-action.md); `src/recursive_horizons/nsc_rn_pg.py`; `tests/test_nsc_rn_pg.py`. Registered. Ingoing angular coupling is $+\alpha$. |
+| Neutral source preparation | [Note](nsc-rn-neutral-source.md); `src/recursive_horizons/nsc_rn_source.py`; `tests/test_nsc_rn_source.py`. Registered. Dynamic curvature needs actual time jets. |
+| Observers | `src/recursive_horizons/nsc_rn_observables.py`; `tests/test_nsc_rn_observables.py`. Registered. Curvature is computed from the supplied jets. |
+| Campaign driver | [Episode](nsc-rn-parent-episode.md); `scripts/derive_nsc_rn_parent.py`; `tests/test_nsc_rn_parent_driver.py`. Registered. The temporary paired run is not a sealed station. |
+| Charged lowest-Landau Gauss branch, later | [Note](nsc-rn-charged-source.md) |
+| MMP negative-Casimir study, parallel | [Note](nsc-rn-mmp-source-study.md) |
+
+<a id="rn-pending-registration"></a>
+
+The driver, episode note and driver tests are registered. The
+temporary pilot's arrays stay outside this repository. Dynamic
+curvature is null. A review is comparing the probability gap with
+the SAT debit; that comparison does not close the accounting, and
+refinement is pending.
+
+The driver reads `nsc_rn_reference.sourcefree_static_rn`,
+`nsc_rn_pg.sourcefree_rates`, its metric jets, `rk4_step` and
+`stage_rates`, and `nsc_rn_observables.curvature_from_pg_jets`.
+
+## Historical periodic parent, from `eb4798c`
 
 Magnetic preparation is achieved. Frozen parent-heavy, weak-$k$ empty
 source, and strong-offset episodes are recorded. Renewal is not complete.
 The matched-offset controls are complete in their recorded domain. The
-NF128 exterior-to-cut response is measured. The current relationship is
-one bounded $n_f=256$ confirmation, then a source-selected inner boundary
-and repeatable hand-off from the actual coupled exterior feedback.
+NF128 exterior-to-cut response is measured, and its bounded $n_f=256$
+confirmation is recorded. This periodic parent is historical input.
 Earlier hard-anchor records stay in place. The incoming-gate campaign
 stays paused. The ancestry share $\eta$ is not a new gate, and a
 fixed-$J$ Schur reduction is not a substitute for the full
@@ -34,7 +74,7 @@ state–geometry force. Status:
 | Matched-offset and reweighted frozen controls | [Method](nsc-discovery-parent-strong-controls.md); `scripts/assess_nsc_discovery_parent_strong_controls.py`; [record](../results/development/nsc-discovery-parent-strong-controls-v1.json). |
 | Coupled exterior-to-cut response | [Method](nsc-discovery-parent-cut-response.md); `src/recursive_horizons/nsc_discovery_parent_cut_response.py`; `scripts/derive_nsc_discovery_parent_cut_response.py`; [completed batch](../results/development/nsc-discovery-parent-cut-response-v1/prepare.json). |
 | Completed cut assessment | [Note](nsc-discovery-parent-cut-assessment.md); `scripts/assess_nsc_discovery_parent_cut_response.py`; [record](../results/development/nsc-discovery-parent-cut-assessment-v1.json); `tests/test_nsc_discovery_parent_cut_assessment.py`. |
-| One bounded NF256 confirmation | [Note](nsc-discovery-parent-cut-confirmation.md); `scripts/derive_nsc_discovery_parent_cut_confirmation.py`; `tests/test_nsc_discovery_parent_cut_confirmation.py`. Root runs the physical confirmation. |
+| Recorded NF256 confirmation | [Note](nsc-discovery-parent-cut-confirmation.md); `scripts/derive_nsc_discovery_parent_cut_confirmation.py`; `tests/test_nsc_discovery_parent_cut_confirmation.py`; [record](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json); [payload](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz). Comparison and CPU stay on the status page. |
 | Parent preparation | [Note](nsc-discovery-parent.md); `src/recursive_horizons/nsc_discovery_parent.py`; `scripts/derive_nsc_discovery_parent.py`; [magnetic feasibility](../results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json); [six preparations](../results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json); [original pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json) |
 | Episode adapter | [Note](nsc-discovery-parent-episode.md); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`; [$T=3$ batch](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json); [$n_f=256$ confirmation](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json); [frozen parent-heavy](../results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json); [empty source](../results/development/nsc-discovery-parent-empty-source-v1/manifest.json); [strong $T=1$](../results/development/nsc-discovery-parent-strong-t1-v1/manifest.json); [strong $T=3$](../results/development/nsc-discovery-parent-strong-t3-v1/manifest.json), pinned `cc238577`. |
 | Parent observer | [Leading parent observer](nsc-discovery-regions.md#leading-parent-observer); `src/recursive_horizons/nsc_discovery_parent_observer.py`; [contour binding](../results/development/nsc-discovery-regions-v2-binding.json) pinned `4f3d5fc`. Actual projected leading rates. Corrected moving-energy rates lose the former refinement agreement. Endpoints and fixed windows stay at roundoff. Sealed v1 speeds stay unhealed. |
