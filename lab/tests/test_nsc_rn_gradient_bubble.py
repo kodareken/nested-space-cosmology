@@ -13,7 +13,7 @@ import numpy as np
 from recursive_horizons import nsc_rn_gradient_bubble as gb
 
 LAB = Path(__file__).resolve().parents[1]
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v2.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v3.json"
 
 
 def _payload(inner, outer, radius=None):
@@ -155,6 +155,39 @@ class WallTests(unittest.TestCase):
         self.assertNotIn("throat_steep_reported", verdict["dead_end_flags"])
 
 
+class RegularityTests(unittest.TestCase):
+    """The sourced criterion, Hayward gr-qc/0506126: finite stress inward."""
+
+    def test_limit_is_the_sourced_inverse_radius_value(self):
+        self.assertEqual(gb.REGULAR_SLOPE_LIMIT, -1.0)
+
+    def test_inverse_radius_force_is_regular(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        inner = radius ** -1.0
+        outer = 0.5 * radius ** -2.0
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
+        self.assertTrue(verdict["interior_regular"])
+        self.assertNotIn("interior_not_regular", verdict["dead_end_flags"])
+
+    def test_force_diverging_inward_is_not_regular(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        inner = radius ** -30.0
+        outer = 0.5 * radius ** -30.0
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
+        self.assertFalse(verdict["interior_regular"])
+        self.assertIn("interior_not_regular", verdict["dead_end_flags"])
+        self.assertEqual(verdict["verdict"], "dead_end")
+
+    def test_regularity_does_not_depend_on_the_chosen_slope_limit(self):
+        """Between -1 and -8 the two criteria disagree, so the source wins."""
+        radius = np.linspace(1.04, 32.0, 300)
+        inner = radius ** -3.0
+        outer = 0.5 * radius ** -3.0
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
+        self.assertNotIn("throat_steep_reported", verdict["dead_end_flags"])
+        self.assertIn("interior_not_regular", verdict["dead_end_flags"])
+
+
 class DeadEndTests(unittest.TestCase):
     def test_single_force_flag_when_outer_is_negligible(self):
         radius = np.linspace(1.04, 32.0, 401)
@@ -268,10 +301,21 @@ class RecordTests(unittest.TestCase):
         self.assertLess(coverage["cases_with_a_wall_at_the_final_station"], 6)
         self.assertGreater(coverage["station_fraction_with_a_wall"], 0.0)
 
-    def test_no_hard_dead_end_flag_fires(self):
+    def test_the_only_hard_flag_is_the_sourced_regularity_failure(self):
+        flags = set(self.record["dead_end_flags_observed"])
         self.assertEqual(
-            sorted({f for f in self.record["dead_end_flags_observed"] if f != "throat_steep_reported"}),
-            [])
+            sorted(f for f in flags if f != "throat_steep_reported"),
+            ["interior_not_regular"],
+        )
+
+    def test_no_case_in_the_family_has_a_regular_interior(self):
+        """The hard negative result, on the 2005 paper's own criterion."""
+        self.assertEqual(self.record["summary"]["cases_with_a_regular_interior"], 0)
+        self.assertLess(self.record["summary"]["throat_slope_max"],
+                        self.record["limits"]["regular_slope_limit"])
+
+    def test_record_names_the_sourced_criterion(self):
+        self.assertIn("gr-qc/0506126", self.record["regularity_criterion"])
 
 
 if __name__ == "__main__":

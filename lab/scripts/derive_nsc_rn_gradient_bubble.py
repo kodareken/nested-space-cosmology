@@ -32,8 +32,9 @@ if str(LAB / "src") not in sys.path:
 from recursive_horizons import nsc_rn_gradient_bubble as bubble  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v2.json"
-PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v1.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v3.json"
+PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v2.json"
+EARLIER_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v1.json"
 CASE_PATTERN = re.compile(r"^mu-(?P<mu>[0-9.]+)-eps-(?P<eps>[0-9.]+)$")
 STATION_PATTERN = re.compile(r"^station-(?P<t>[0-9.]+)\.npz$")
 
@@ -93,11 +94,13 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
             "throat_slope_inner": profile["throat_slope_inner"],
             "force_ratio_integrated": profile["force_ratio_integrated"],
             "curvature_force_ratio": assessment["curvature_force_ratio"],
+            "interior_regular": assessment["interior_regular"],
         })
 
     verdicts = sorted({row["verdict"] for row in rows})
     flags = sorted({flag for row in rows for flag in row["dead_end_flags"]})
     last = rows[-1] if rows else None
+    regular = bool(last["interior_regular"]) if last else False
     wall_rows = [row for row in rows if row["wall_count"] > 0]
     wall_radii = [row["r_first_wall"] for row in wall_rows]
     return {
@@ -113,8 +116,9 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
         "r_wall_final": last["r_first_wall"] if last else None,
         "wall_at_final_station": bool(last["wall_count"] > 0) if last else False,
         "reached_t_over_rm": last["t_over_rm"] if last else None,
-        "verdicts": verdicts,
-        "dead_end_flags_observed": flags,
+        "interior_regular": bool(regular),
+            "verdicts": verdicts,
+            "dead_end_flags_observed": flags,
         "has_summary_json": (case_dir / "summary.json").exists(),
         "failure_blocker": failure.get("blocker") if failure else None,
         "failure_clock_t": failure.get("clock_t") if failure else None,
@@ -140,6 +144,7 @@ def main() -> int:
     decouple = [c["stations"][-1]["r_decouple"] for c in cases if c["stations"]]
     walls = [c["stations"][-1]["r_first_wall"] for c in cases
              if c["stations"] and c["stations"][-1]["wall_count"] > 0]
+    slopes = [c["stations"][-1]["throat_slope_inner"] for c in cases if c["stations"]]
 
     prior = None
     if PRIOR_RECORD.is_file():
@@ -163,7 +168,7 @@ def main() -> int:
     ever_walls = [c for c in cases if "two_force_wall" in c["verdicts"]]
 
     record = {
-        "schema": "NSC-RN-GRADIENT-BUBBLE-v2",
+        "schema": "NSC-RN-GRADIENT-BUBBLE-v3",
         "api_version": bubble.API_VERSION,
         "creation_only": True,
         "producing_commit": _producing_commit(),
@@ -188,7 +193,16 @@ def main() -> int:
                 "not settled, and the per-case presence fraction records that."
             ),
         },
+        "regularity_criterion": (
+            "Hayward, gr-qc/0506126, Formation and evaporation of non-singular "
+            "black holes (2005): the static region is supported by finite density "
+            "and pressures, behaving as a cosmological constant at small radius. "
+            "A force with logarithmic slope g behaves as r^g and stays finite as "
+            "r -> 0 only when g >= -1. That limit is sourced from that paper, not "
+            "chosen here."
+        ),
         "supersedes": prior,
+        "earlier_records": ([EARLIER_RECORD.name] if EARLIER_RECORD.is_file() else []),
         "scope_note": (
             "A construction check on recorded finite states. It does not measure the "
             "actual universe, and a bounded balance here is not evidence about cosmology."
@@ -216,6 +230,9 @@ def main() -> int:
             "r_decouple_max": max(decouple) if decouple else None,
             "r_first_wall_min": min(walls) if walls else None,
             "r_first_wall_max": max(walls) if walls else None,
+            "cases_with_a_regular_interior": sum(1 for c in cases if c["interior_regular"]),
+            "throat_slope_min": min(slopes) if slopes else None,
+            "throat_slope_max": max(slopes) if slopes else None,
         },
         "limits": {
             "throat_slope_limit": bubble.THROAT_SLOPE_LIMIT,
@@ -226,6 +243,8 @@ def main() -> int:
             "wall_live_fraction": bubble.WALL_LIVE_FRACTION,
             "wall_hysteresis": bubble.WALL_HYSTERESIS,
             "wall_min_cells": bubble.WALL_MIN_CELLS,
+            "regular_slope_limit": bubble.REGULAR_SLOPE_LIMIT,
+            "regular_slope_tolerance": bubble.REGULAR_SLOPE_TOLERANCE,
         },
         "cases": cases,
     }

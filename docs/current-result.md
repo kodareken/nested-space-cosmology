@@ -171,11 +171,24 @@ excursion pushed from $1.04$ to $1.29$. A stronger exterior dissolves the
 wall. The balance is therefore real but transient, and a sustained
 gradient bubble is not established by this family.
 
+The hard result is on the 2005 criterion. Douglas's framing pointed at
+Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126), "Formation
+and evaporation of non-singular black holes", 28 June 2005, where the
+static region is supported by finite density and pressures and behaves as
+a cosmological constant at small radius. A force of logarithmic slope
+$g$ behaves as $r^g$ and stays finite inward only for $g\geq-1$. **No
+case in the family has a regular interior**: the throat slopes run from
+$-7.37$ to $-152.64$, every one steeper than the sourced limit. That
+same steepness is the regime in which the Fornberg recursion loses its
+polynomial moments, so the failing moment check and the failing
+regularity are the same fact seen twice.
+
 This is a construction check on recorded finite states, not a statement
 about the actual universe. The current record is
-[nsc-rn-gradient-bubble-v2.json](../lab/results/development/nsc-rn-gradient-bubble-v2.json),
-creation only, which names the preserved v1 record in a `supersedes`
-block. A named blocker stops the family from being extended:
+[nsc-rn-gradient-bubble-v3.json](../lab/results/development/nsc-rn-gradient-bubble-v3.json),
+creation only, which names the preserved v2 record in a `supersedes`
+block and lists v1 under `earlier_records`. A named blocker stops the
+family from being extended:
 `nsc_rn_pg._fornberg` fails its own $10^{-8}$ polynomial-moment check at
 width $9$ and above on this runtime, worst relative error $2.7\times10^{-5}$
 at width 11, third derivative. That is pre-existing and unrelated to this

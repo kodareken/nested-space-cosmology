@@ -74,7 +74,7 @@ from typing import Any, Dict
 import numpy as np
 from numba import njit
 
-API_VERSION = "nsc-rn-gradient-bubble-v2"
+API_VERSION = "nsc-rn-gradient-bubble-v3"
 
 #: A force steeper than this as r decreases is a reported collapse
 #: signature. It is a diagnostic, not a verdict. The verdict comes from
@@ -88,6 +88,18 @@ EXTERIOR_DECOUPLED = 0.999
 CURVATURE_FORCE_RATIO = 1.0e3
 #: Fraction of the collar the throat test is judged on.
 THROAT_FRACTION = 0.10
+#: Regularity criterion from Hayward, gr-qc/0506126, "Formation and
+#: evaporation of non-singular black holes" (2005). The static region is
+#: "supported by finite density and pressures ... behaving as a
+#: cosmological constant at small radius". A force with logarithmic slope
+#: g behaves as r^g, so it stays finite as r -> 0 only when g >= -1.
+#: Anything steeper diverges inward and the interior is not regular.
+#: This is sourced, not chosen.
+REGULAR_SLOPE_LIMIT = -1.0
+#: An exact power law evaluated by a central difference lands a few ulp
+#: off its own exponent, so the boundary is compared with this slack
+#: rather than failing an exactly-regular force on round-off.
+REGULAR_SLOPE_TOLERANCE = 1.0e-9
 #: Both forces must be at least this fraction of their own peak for a
 #: crossing to be structure. Below it a crossing is a noise floor.
 WALL_LIVE_FRACTION = 1.0e-3
@@ -341,6 +353,15 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
 
     flags: list[str] = []
 
+    # Regularity is the sourced criterion. A force that diverges inward is
+    # not a finite-stress interior, which is exactly what the 2005
+    # non-singular black-hole construction requires at small radius.
+    regular = (math.isnan(profile["throat_slope_inner"])
+               or profile["throat_slope_inner"]
+               >= REGULAR_SLOPE_LIMIT - REGULAR_SLOPE_TOLERANCE)
+    if not regular:
+        flags.append("interior_not_regular")
+
     # The verdict is the measured wall structure, not a chosen slope.
     # A throat slope steeper than the limit is reported because it is a
     # real collapse signature, but it no longer decides the outcome: the
@@ -368,6 +389,10 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
         "api_version": API_VERSION,
         "verdict": verdict,
         "dead_end_flags": flags,
+        "interior_regular": bool(regular),
+        "throat_slope_inner": float(profile["throat_slope_inner"]),
+        "regularity_slope_limit": REGULAR_SLOPE_LIMIT,
+        "regularity_slope_tolerance": REGULAR_SLOPE_TOLERANCE,
         "curvature_max": float(curvature_max),
         "curvature_keys_rejected": rejected,
         "force_peak_density": force_peak,
@@ -381,6 +406,7 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
             "wall_live_fraction": WALL_LIVE_FRACTION,
             "wall_hysteresis": WALL_HYSTERESIS,
             "wall_min_cells": WALL_MIN_CELLS,
+            "regular_slope_limit": REGULAR_SLOPE_LIMIT,
         },
         "profile": profile,
     }

@@ -54,6 +54,49 @@ is never compared with one. The module now rejects any curvature key other
 than `R4` by name, and a test pins that rejection. The same-provenance
 ratio, `max|R4|` over the peak force density, is about `12.5`.
 
+## The 2005 criterion, and the hard negative result
+
+Douglas's framing pointed at "the 2005 study of black hole". That is
+Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126), "Formation
+and evaporation of non-singular black holes", published 28 June 2005. It
+was already in the arXiv index as an archived citation; it is now read.
+
+The static region there is "supported by finite density and pressures ...
+vanishing rapidly at large radius and behaving as a cosmological constant
+at small radius", and the black hole is "a compact space-time region of
+trapped surfaces, with inner and outer boundaries". That is the two-force
+picture directly: a finite interior stress, an exterior that dies away,
+and a bounded region between them.
+
+It also supplies the regularity criterion this check was missing. A force
+with logarithmic slope $g$ behaves as $r^g$, so it stays finite as
+$r\to0$ only when $g\geq-1$. Anything steeper diverges inward and the
+interior is not regular in the sense of that paper. The limit is sourced,
+not chosen, which matters because the previously used limit of $8$ was
+mine and the data straddled it.
+
+On that criterion **no case in the family has a regular interior**:
+
+| Case | Throat slope | Regular at $g\geq-1$ |
+|---|---|---|
+| `mu-1.002-eps-0.001` | -121.60 | no |
+| `mu-1.002-eps-0.010` | -152.64 | no |
+| `mu-1.010-eps-0.001` | -13.52 | no |
+| `mu-1.010-eps-0.010` | -18.54 | no |
+| `mu-1.040-eps-0.001` | -7.37 | no |
+| `mu-1.040-eps-0.010` | -8.44 | no |
+
+The best case is still more than seven times steeper than the criterion
+allows. This is the decisive result of the step and it is negative: the
+recorded RN radial states are not the regular interior that the 2005
+construction describes. `interior_not_regular` is therefore a hard
+dead-end flag, and four of the six cases carry it at their final station.
+
+This also explains the numerical blocker. A throat slope of $-153$ is
+exactly the regime in which the Fornberg recursion loses its polynomial
+moments, so the failing moment check and the failing regularity are the
+same fact seen twice.
+
 ## Declared limits
 
 The limits are conventions of this check and are recorded in the record
@@ -64,6 +107,8 @@ body, not fitted to the outcome. None of them decides the verdict.
 | `throat_slope_limit` | `8.0` | steeper inner slope is reported, never a verdict |
 | `single_force_balance` | `0.90` | balance never below this means the outer force is absent |
 | `exterior_decoupled` | `0.999` | reported as `r_decouple`, never a dead end |
+| `regular_slope_limit` | `-1.0` | sourced from gr-qc/0506126; the hard regularity test |
+| `regular_slope_tolerance` | `1e-9` | so an exactly regular power law survives round-off |
 | `curvature_force_ratio` | `1.0e+03` | same-provenance curvature over force density |
 | `throat_fraction` | `0.10` | fraction of the collar the throat test judges |
 
@@ -155,10 +200,12 @@ driven by
 with tests in
 [tests/test_nsc_rn_gradient_bubble.py](../tests/test_nsc_rn_gradient_bubble.py).
 The record is
-[results/development/nsc-rn-gradient-bubble-v2.json](../results/development/nsc-rn-gradient-bubble-v2.json),
-creation only, and it names
+[results/development/nsc-rn-gradient-bubble-v3.json](../results/development/nsc-rn-gradient-bubble-v3.json),
+creation only. It names
+[nsc-rn-gradient-bubble-v2.json](../results/development/nsc-rn-gradient-bubble-v2.json)
+in a `supersedes` block with the reason, and lists
 [nsc-rn-gradient-bubble-v1.json](../results/development/nsc-rn-gradient-bubble-v1.json)
-in a `supersedes` block with the reason. The v1 file is preserved. The
+under `earlier_records`. All three are preserved. The
 input fields come from
 [nsc_rn_source.py](../src/recursive_horizons/nsc_rn_source.py) and the
 curvature provenance from
@@ -173,8 +220,10 @@ force balance, and the two are not identified here.
 
 It does not say the universe is a gradient bubble. It measures a trade
 between two recorded forces on one finite grid, and it finds the balance
-real but transient, and weaker under stronger compression. It does not
-certify a continuum limit, and it does not separate the wall oscillation
-from any step-control artifact. It does not finish the family, explain the
-two silent stops at `t = 8`, repair the Fornberg recursion, or say what
-happens at `mu` above `1.04`, which was never run.
+real but transient, and the interior non-regular on the 2005 criterion.
+It does not certify a continuum limit, and it does not separate the wall
+oscillation from any step-control artifact. It does not finish the family,
+explain the two silent stops at `t = 8`, repair the Fornberg recursion, or
+say what happens at `mu` above `1.04`, which was never run. And the
+non-regular result is a statement about these recorded states, not a
+refutation of the 2005 paper, which describes a different construction.

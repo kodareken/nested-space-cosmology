@@ -12982,13 +12982,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 179891,
+      "bytes": 182807,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d427225ea532f51c0ab10da428fe647ddff2c5a6",
+      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "b8b7b60d0325832caaecdd13bb3664130fe619cce11b7acca48a2af697521e44"
+      "sha256": "44c69038549cfb827c6d2ec64247b215862bb00ae2bf5f487827599be73d75b7"
     },
     {
       "bytes": 97482,
@@ -16117,11 +16117,11 @@
       "sha256": "bf8fdbaba935a90bf965bedc918b85dfbf2609b951d9b374f452f82379ce1c14"
     },
     {
-      "bytes": 8797,
+      "bytes": 11349,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d427225ea532f51c0ab10da428fe647ddff2c5a6",
+      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
       "path": "lab/docs/nsc-rn-gradient-bubble.md",
-      "sha256": "c48565ab4d530b3e7809232bec40d39f7af87807bb74129fe173d953b4091b26"
+      "sha256": "97fb89b834835a7483c20733bbe1c117da0997933f343f69505aa4a2c865d435"
     },
     {
       "bytes": 8496,
@@ -84833,6 +84833,13 @@
       "sha256": "31d857d30de1517d6ac14be58ac6b9bdfbe6985d9791716be2548ccf73b2f549"
     },
     {
+      "bytes": 127611,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
+      "path": "lab/results/development/nsc-rn-gradient-bubble-v3.json",
+      "sha256": "91aa6f12d1ae05d794cfa1d35f6e780060d1db3a0b3ed6353feb6741d56add1d"
+    },
+    {
       "bytes": 44180,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
@@ -92239,11 +92246,11 @@
       "sha256": "6a74c0734cc53cfe10e1ac5699059de9b6828737d0124a5808d96b6d8dfbe4a3"
     },
     {
-      "bytes": 11972,
+      "bytes": 13265,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d427225ea532f51c0ab10da428fe647ddff2c5a6",
+      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
       "path": "lab/scripts/derive_nsc_rn_gradient_bubble.py",
-      "sha256": "0ec0b94f99100c4eb667d3fc02960db4c4bc0c216c786ec7d0409c026d9576aa"
+      "sha256": "5cf21222f68ef5bd5b21b0819ffde93e10a560af457e3f3856c1400890c02391"
     },
     {
       "bytes": 74930,
@@ -94654,11 +94661,11 @@
       "sha256": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35"
     },
     {
-      "bytes": 15441,
+      "bytes": 17296,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d427225ea532f51c0ab10da428fe647ddff2c5a6",
+      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
       "path": "lab/src/recursive_horizons/nsc_rn_gradient_bubble.py",
-      "sha256": "591f6081b15ae2eaa40586bcebb207724fa5e12d7b7fd037a790a227ac9a4e34"
+      "sha256": "511779219c5335b25ddc81245ff59b486d8fd093f2a62248c54105f653680682"
     },
     {
       "bytes": 34289,
@@ -97316,11 +97323,11 @@
       "sha256": "094f73a457066165efa1a6cc88fe768c923d00e068b66bba494dcc72f3f9ff11"
     },
     {
-      "bytes": 12639,
+      "bytes": 14769,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d427225ea532f51c0ab10da428fe647ddff2c5a6",
+      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
       "path": "lab/tests/test_nsc_rn_gradient_bubble.py",
-      "sha256": "384b29c97b1eee4f44cb7f0810eaf89939d55748cca0c6935b77d8e7391315b6"
+      "sha256": "82d0da7a99c22a6e3fea32335e395206ae9cfad32f44d432aac6b1b870630f8b"
     },
     {
       "bytes": 13572,
