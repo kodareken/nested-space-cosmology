@@ -95,22 +95,39 @@ def _station_name(t_over_rm: float) -> str:
     return f"station-{deci // 10}.{deci % 10}"
 
 
-def _write_station(path: Path, coupled, grid, rates) -> None:
-    """Write the arrays the mass-shell reduction and its controls consume."""
+def _write_station(path: Path, coupled, fixed, grid, rates) -> Dict[str, Any]:
+    """Write the arrays the mass-shell reduction and its controls consume.
+
+    Curvature is the geometry itself, so it is recorded rather than
+    reconstructed later. It comes from the evolved lapse and shift and
+    their jets, not from the vacuum reference, which is why this is the
+    same-state quantity the curvature provenance note asks for. It stays
+    null when the required time-jet primitive is unavailable, and that is
+    recorded rather than hidden.
+    """
     phi = np.asarray(coupled["phi"], dtype=np.complex128)
-    np.savez_compressed(
-        path,
-        coupled_phi=phi,
-        coupled_mass=np.asarray(rates["mass"], dtype=np.float64),
-        coupled_inner_mass=np.asarray([float(coupled["inner_mass"])], dtype=np.float64),
-        coupled_t=np.asarray([float(coupled["clocks"]["t"])], dtype=np.float64),
-        coupled_killing=np.asarray([float(coupled["clocks"]["killing"])], dtype=np.float64),
-        coupled_normal=np.asarray([float(coupled["clocks"]["normal"])], dtype=np.float64),
-        occupations=np.asarray(coupled["occupations"], dtype=np.float64),
-        radius=np.asarray(grid["radius"], dtype=np.float64),
-        frozen_lapse=np.asarray(rates["lapse"], dtype=np.float64),
-        frozen_shift=np.asarray(rates["shift"], dtype=np.float64),
-    )
+    observation = driver.station_observation(coupled, grid, rates)
+    arrays = {
+        "coupled_phi": phi,
+        "coupled_mass": np.asarray(rates["mass"], dtype=np.float64),
+        "coupled_inner_mass": np.asarray([float(coupled["inner_mass"])], dtype=np.float64),
+        "coupled_t": np.asarray([float(coupled["clocks"]["t"])], dtype=np.float64),
+        "coupled_killing": np.asarray([float(coupled["clocks"]["killing"])], dtype=np.float64),
+        "coupled_normal": np.asarray([float(coupled["clocks"]["normal"])], dtype=np.float64),
+        "occupations": np.asarray(coupled["occupations"], dtype=np.float64),
+        "radius": np.asarray(grid["radius"], dtype=np.float64),
+        "frozen_lapse": np.asarray(rates["lapse"], dtype=np.float64),
+        "frozen_shift": np.asarray(rates["shift"], dtype=np.float64),
+    }
+    if observation.get("R4") is not None and observation.get("Ricci2") is not None:
+        arrays["R4"] = np.asarray(observation["R4"], dtype=np.float64)
+        arrays["Ricci2"] = np.asarray(observation["Ricci2"], dtype=np.float64)
+    np.savez_compressed(path, **arrays)
+    return {
+        "curvature_status": observation.get("curvature_status"),
+        "R4_recorded": observation.get("R4") is not None,
+        "trapping_horizon": observation.get("trapping_horizon"),
+    }
 
 
 def main(argv: List[str] | None = None) -> int:
@@ -195,10 +212,11 @@ def main(argv: List[str] | None = None) -> int:
         raise SystemExit("step exceeds the cap or the full CFL")
 
     stations: List[Dict[str, Any]] = []
-    _write_station(out / _station_name(0.0), coupled, grid, initial_rates)
+    first_report = _write_station(out / _station_name(0.0), coupled, fixed, grid, initial_rates)
     stations.append({"t_over_rm": 0.0,
                      "shell_inner_mass": float(initial_rates["mass"][0]),
-                     "shell_outer_mass": float(initial_rates["mass"][-1])})
+                     "shell_outer_mass": float(initial_rates["mass"][-1]),
+                     **first_report})
 
     cpu = 0.0
     wall0 = time.perf_counter()
@@ -221,12 +239,13 @@ def main(argv: List[str] | None = None) -> int:
         rates = pg.stage_rates(coupled, grid)
         mass = np.asarray(rates["mass"], dtype=float)
         t_over = float(coupled["clocks"]["t"]) / geometry["r_m"]
-        _write_station(out / _station_name(t_over), coupled, grid, rates)
+        report = _write_station(out / _station_name(t_over), coupled, fixed, grid, rates)
         stations.append({
             "t_over_rm": t_over,
             "shell_inner_mass": float(mass[0]),
             "shell_outer_mass": float(mass[-1]),
             "stopped": marched["stopped"],
+            **report,
         })
         print(f"t/rm={t_over:.4f} mass[0]={mass[0]:.7f} cpu={cpu:.1f}s "
               f"stop={marched['stopped']}", flush=True)
