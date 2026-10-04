@@ -153,7 +153,7 @@ Then check the list below. Do not repeat a derivation this file already sources.
 - [gr-qc/0404074](https://arxiv.org/abs/gr-qc/0404074) — Hollands and Wald: local covariant renormalization, used for relational vacuum normalization.
 - [gr-qc/0505065](https://arxiv.org/abs/gr-qc/0505065) — Archived: Barceló, Liberati and Visser, analogue gravity.
 - [gr-qc/0506037](https://arxiv.org/abs/gr-qc/0506037) — Archived: hyperbolicity of second-order-in-space systems of evolution equations, section III.
-- [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126) — Archived: Hayward, formation and evaporation of nonsingular black holes.
+- [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126) — Hayward, formation and evaporation of nonsingular black holes, 28 June 2005. Read as the regularity criterion for the [two-force balance](../lab/docs/nsc-rn-gradient-bubble.md): the static region is supported by finite density and pressures, behaving as a cosmological constant at small radius, so a force with logarithmic slope $g$ must have $g\geq-1$ to stay finite inward. All six recorded RN radial cases fail it, at $-7.37$ to $-152.64$.
 - [gr-qc/0511109](https://arxiv.org/abs/gr-qc/0511109) — Bronnikov and Fabris: regular phantom black holes, the fixed external two-room comparison, not a replacement for their source domain.
 - [gr-qc/0605031](https://arxiv.org/abs/gr-qc/0605031) — Dolan, Doran and Lasenby: section IV.2 and equation 72, the Schwarzschild Painlevé–Gullstrand connection and neutral flux control.
 - [gr-qc/0607039](https://arxiv.org/abs/gr-qc/0607039) — Archived: Ashtekar, Pawlowski and Singh, improved dynamics for the quantum nature of the big bang.
