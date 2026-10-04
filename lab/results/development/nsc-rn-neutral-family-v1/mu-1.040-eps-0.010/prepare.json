@@ -1,0 +1,631 @@
+{
+  "array_sha256": {},
+  "cases": [
+    {
+      "A": 0.04501936182826115,
+      "C_F": 0.1800774473130446,
+      "V4": 0.0,
+      "child": [
+        1.0731868140880028,
+        1.1285543361564494
+      ],
+      "control": {
+        "child": [
+          1.0731868140880028,
+          1.1285543361564494
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.002,
+        "horizon_gap": 0.1265543361564494,
+        "lambda_min": 1.9839341525601304,
+        "outer": 64.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.1285543361564494,
+          64.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 64,
+        "points": 7966,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.9387228319217753,
+        "r_plus": 1.0652771680782247,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.007909646009778087
+      },
+      "energy_fraction": 0.001,
+      "excision": 1.002,
+      "filled_sea": false,
+      "flux": 1.0,
+      "horizon_gap": 0.1265543361564494,
+      "launched": false,
+      "magnetic_q": 1.0,
+      "magnetic_r2": 1.0,
+      "mass": 1.002,
+      "mass_over_rm": 1.002,
+      "observers": [
+        "child_near_horizon_shell",
+        "parent_exterior",
+        "outer_absorbing_boundary",
+        "excision_outflow_boundary",
+        "trapping_horizon",
+        "outer_static_killing_clock",
+        "interior_pg_normal_clock"
+      ],
+      "observers_declared_once": true,
+      "r_m": 1.0,
+      "r_m_identified_with_r_minus": false,
+      "r_minus": 0.9387228319217753,
+      "r_plus": 1.0652771680782247,
+      "route": {
+        "child": [
+          1.0731868140880028,
+          1.1285543361564494
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.002,
+        "horizon_gap": 0.1265543361564494,
+        "lambda_min": 1.9839341525601304,
+        "outer": 32.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.1285543361564494,
+          32.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 32,
+        "points": 3921,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.9387228319217753,
+        "r_plus": 1.0652771680782247,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.007909646009778087
+      },
+      "station_times_over_rm": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "A": 0.04501936182826115,
+      "C_F": 0.1800774473130446,
+      "V4": 0.0,
+      "child": [
+        1.0731868140880028,
+        1.1285543361564494
+      ],
+      "control": {
+        "child": [
+          1.0731868140880028,
+          1.1285543361564494
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.002,
+        "horizon_gap": 0.1265543361564494,
+        "lambda_min": 1.9839341525601304,
+        "outer": 64.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.1285543361564494,
+          64.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 64,
+        "points": 7966,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.9387228319217753,
+        "r_plus": 1.0652771680782247,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.007909646009778087
+      },
+      "energy_fraction": 0.01,
+      "excision": 1.002,
+      "filled_sea": false,
+      "flux": 1.0,
+      "horizon_gap": 0.1265543361564494,
+      "launched": false,
+      "magnetic_q": 1.0,
+      "magnetic_r2": 1.0,
+      "mass": 1.002,
+      "mass_over_rm": 1.002,
+      "observers": [
+        "child_near_horizon_shell",
+        "parent_exterior",
+        "outer_absorbing_boundary",
+        "excision_outflow_boundary",
+        "trapping_horizon",
+        "outer_static_killing_clock",
+        "interior_pg_normal_clock"
+      ],
+      "observers_declared_once": true,
+      "r_m": 1.0,
+      "r_m_identified_with_r_minus": false,
+      "r_minus": 0.9387228319217753,
+      "r_plus": 1.0652771680782247,
+      "route": {
+        "child": [
+          1.0731868140880028,
+          1.1285543361564494
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.002,
+        "horizon_gap": 0.1265543361564494,
+        "lambda_min": 1.9839341525601304,
+        "outer": 32.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.1285543361564494,
+          32.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 32,
+        "points": 3921,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.9387228319217753,
+        "r_plus": 1.0652771680782247,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.007909646009778087
+      },
+      "station_times_over_rm": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "A": 0.04501936182826115,
+      "C_F": 0.1800774473130446,
+      "V4": 0.0,
+      "child": [
+        1.1694962773860254,
+        1.2935489375751563
+      ],
+      "control": {
+        "child": [
+          1.1694962773860254,
+          1.2935489375751563
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.01,
+        "horizon_gap": 0.2835489375751564,
+        "lambda_min": 1.9784349720181378,
+        "outer": 64.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.2935489375751563,
+          64.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 64,
+        "points": 3556,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.8682255312124217,
+        "r_plus": 1.1517744687875782,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.017721808598447276
+      },
+      "energy_fraction": 0.001,
+      "excision": 1.01,
+      "filled_sea": false,
+      "flux": 1.0,
+      "horizon_gap": 0.2835489375751564,
+      "launched": false,
+      "magnetic_q": 1.0,
+      "magnetic_r2": 1.0,
+      "mass": 1.01,
+      "mass_over_rm": 1.01,
+      "observers": [
+        "child_near_horizon_shell",
+        "parent_exterior",
+        "outer_absorbing_boundary",
+        "excision_outflow_boundary",
+        "trapping_horizon",
+        "outer_static_killing_clock",
+        "interior_pg_normal_clock"
+      ],
+      "observers_declared_once": true,
+      "r_m": 1.0,
+      "r_m_identified_with_r_minus": false,
+      "r_minus": 0.8682255312124217,
+      "r_plus": 1.1517744687875782,
+      "route": {
+        "child": [
+          1.1694962773860254,
+          1.2935489375751563
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.01,
+        "horizon_gap": 0.2835489375751564,
+        "lambda_min": 1.9784349720181378,
+        "outer": 32.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.2935489375751563,
+          32.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 32,
+        "points": 1750,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.8682255312124217,
+        "r_plus": 1.1517744687875782,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.017721808598447276
+      },
+      "station_times_over_rm": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "A": 0.04501936182826115,
+      "C_F": 0.1800774473130446,
+      "V4": 0.0,
+      "child": [
+        1.1694962773860254,
+        1.2935489375751563
+      ],
+      "control": {
+        "child": [
+          1.1694962773860254,
+          1.2935489375751563
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.01,
+        "horizon_gap": 0.2835489375751564,
+        "lambda_min": 1.9784349720181378,
+        "outer": 64.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.2935489375751563,
+          64.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 64,
+        "points": 3556,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.8682255312124217,
+        "r_plus": 1.1517744687875782,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.017721808598447276
+      },
+      "energy_fraction": 0.01,
+      "excision": 1.01,
+      "filled_sea": false,
+      "flux": 1.0,
+      "horizon_gap": 0.2835489375751564,
+      "launched": false,
+      "magnetic_q": 1.0,
+      "magnetic_r2": 1.0,
+      "mass": 1.01,
+      "mass_over_rm": 1.01,
+      "observers": [
+        "child_near_horizon_shell",
+        "parent_exterior",
+        "outer_absorbing_boundary",
+        "excision_outflow_boundary",
+        "trapping_horizon",
+        "outer_static_killing_clock",
+        "interior_pg_normal_clock"
+      ],
+      "observers_declared_once": true,
+      "r_m": 1.0,
+      "r_m_identified_with_r_minus": false,
+      "r_minus": 0.8682255312124217,
+      "r_plus": 1.1517744687875782,
+      "route": {
+        "child": [
+          1.1694962773860254,
+          1.2935489375751563
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.01,
+        "horizon_gap": 0.2835489375751564,
+        "lambda_min": 1.9784349720181378,
+        "outer": 32.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.2935489375751563,
+          32.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 32,
+        "points": 1750,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.8682255312124217,
+        "r_plus": 1.1517744687875782,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.017721808598447276
+      },
+      "station_times_over_rm": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "A": 0.04501936182826115,
+      "C_F": 0.1800774473130446,
+      "V4": 0.0,
+      "child": [
+        1.3613642792844285,
+        1.6113142742834285
+      ],
+      "control": {
+        "child": [
+          1.3613642792844285,
+          1.6113142742834285
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.04,
+        "horizon_gap": 0.5713142742834285,
+        "lambda_min": 1.9580126954256436,
+        "outer": 64.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.6113142742834285,
+          64.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 64,
+        "points": 1765,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.7543428628582858,
+        "r_plus": 1.3256571371417143,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.03570714214271428
+      },
+      "energy_fraction": 0.001,
+      "excision": 1.04,
+      "filled_sea": false,
+      "flux": 1.0,
+      "horizon_gap": 0.5713142742834285,
+      "launched": false,
+      "magnetic_q": 1.0,
+      "magnetic_r2": 1.0,
+      "mass": 1.04,
+      "mass_over_rm": 1.04,
+      "observers": [
+        "child_near_horizon_shell",
+        "parent_exterior",
+        "outer_absorbing_boundary",
+        "excision_outflow_boundary",
+        "trapping_horizon",
+        "outer_static_killing_clock",
+        "interior_pg_normal_clock"
+      ],
+      "observers_declared_once": true,
+      "r_m": 1.0,
+      "r_m_identified_with_r_minus": false,
+      "r_minus": 0.7543428628582858,
+      "r_plus": 1.3256571371417143,
+      "route": {
+        "child": [
+          1.3613642792844285,
+          1.6113142742834285
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.04,
+        "horizon_gap": 0.5713142742834285,
+        "lambda_min": 1.9580126954256436,
+        "outer": 32.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.6113142742834285,
+          32.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 32,
+        "points": 869,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.7543428628582858,
+        "r_plus": 1.3256571371417143,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.03570714214271428
+      },
+      "station_times_over_rm": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "A": 0.04501936182826115,
+      "C_F": 0.1800774473130446,
+      "V4": 0.0,
+      "child": [
+        1.3613642792844285,
+        1.6113142742834285
+      ],
+      "control": {
+        "child": [
+          1.3613642792844285,
+          1.6113142742834285
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.04,
+        "horizon_gap": 0.5713142742834285,
+        "lambda_min": 1.9580126954256436,
+        "outer": 64.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.6113142742834285,
+          64.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 64,
+        "points": 1765,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.7543428628582858,
+        "r_plus": 1.3256571371417143,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.03570714214271428
+      },
+      "energy_fraction": 0.01,
+      "excision": 1.04,
+      "filled_sea": false,
+      "flux": 1.0,
+      "horizon_gap": 0.5713142742834285,
+      "launched": false,
+      "magnetic_q": 1.0,
+      "magnetic_r2": 1.0,
+      "mass": 1.04,
+      "mass_over_rm": 1.04,
+      "observers": [
+        "child_near_horizon_shell",
+        "parent_exterior",
+        "outer_absorbing_boundary",
+        "excision_outflow_boundary",
+        "trapping_horizon",
+        "outer_static_killing_clock",
+        "interior_pg_normal_clock"
+      ],
+      "observers_declared_once": true,
+      "r_m": 1.0,
+      "r_m_identified_with_r_minus": false,
+      "r_minus": 0.7543428628582858,
+      "r_plus": 1.3256571371417143,
+      "route": {
+        "child": [
+          1.3613642792844285,
+          1.6113142742834285
+        ],
+        "derivative_ladder": false,
+        "e_max": 1.9,
+        "excision": 1.04,
+        "horizon_gap": 0.5713142742834285,
+        "lambda_min": 1.9580126954256436,
+        "outer": 32.0,
+        "packet_center": 12.0,
+        "packet_width": 2.0,
+        "parent": [
+          1.6113142742834285,
+          32.0
+        ],
+        "pending_scales": [],
+        "placement_supported": true,
+        "point_floor": 32,
+        "points": 869,
+        "pure_outflow": true,
+        "r_m_identified_with_r_minus": false,
+        "r_minus": 0.7543428628582858,
+        "r_plus": 1.3256571371417143,
+        "same_areal_radius": false,
+        "sigma": 2.0,
+        "spacing": 0.03570714214271428
+      },
+      "station_times_over_rm": [
+        5.0,
+        10.0,
+        20.0,
+        40.0
+      ]
+    }
+  ],
+  "creation_only": true,
+  "evolution_called": false,
+  "evolved": false,
+  "inputs": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-rn-neutral-family-v1/calibration.json": "71167e809a00dbec0dd266026984e7ca861e9d052926f5f43c1f30153b55fcf8"
+  },
+  "measured_residuals": {
+    "R4": 1.2732490227040927e-05,
+    "Ricci2": 4.3332330528444984e-05,
+    "charged_mass": 4.440892098500626e-16,
+    "rate_max": 0.0,
+    "reconstruction_lapse": 0.0,
+    "reconstruction_shift": 8.881784197001252e-16,
+    "reconstruction_shift_r": 5.780123660051317e-06,
+    "reconstruction_shift_rr": 1.480009153620454e-05,
+    "rk4_stationarity_lapse": 0.0,
+    "rk4_stationarity_shift": 8.881784197001252e-16,
+    "trapping_minus_rn_r_plus": 3.1988431428153774e-06
+  },
+  "mode": "prepare",
+  "neutral_initial_data": "not_launched",
+  "payload_bytes": 22,
+  "payload_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+  "physical_run_this_followup": false,
+  "producers": {
+    "lab/docs/nsc-rn-parent-episode.md": "afc5b7729c31967308b8e7a83f6d72e42443979c96aba1e97af95baec0b10283",
+    "lab/scripts/derive_nsc_rn_parent.py": "8207f06e83a2dc8118a3dc366706a07c2f0dbc3d987406afbd7cc92272211cdf",
+    "lab/src/recursive_horizons/nsc_rn_observables.py": "cd2e3b58129acd92a513f7e03b4db283ff15011293c2ed0ae12091764e6a3307",
+    "lab/src/recursive_horizons/nsc_rn_pg.py": "d90fd73eb951cfb03582d459723993e707617be17bda5da0383e93c8f59285ec",
+    "lab/src/recursive_horizons/nsc_rn_reference.py": "4e61faaa18ba7f82461a6e2ac7e19590786a24d7cce79cf30241079a22bbbecc",
+    "lab/src/recursive_horizons/nsc_rn_source.py": "eca21554c70d4fb0acdfef60977ff986221394927a550227b29517b0074f213b"
+  },
+  "producing_commit": "ab03859ae553d197f99430146985598fdeee3382",
+  "production_trajectory": false,
+  "root_review_overrides": false,
+  "schema": "NSC-RN-PARENT-v2",
+  "source_binding": {
+    "lab/docs/nsc-rn-parent-episode.md": "afc5b7729c31967308b8e7a83f6d72e42443979c96aba1e97af95baec0b10283",
+    "lab/scripts/derive_nsc_rn_parent.py": "8207f06e83a2dc8118a3dc366706a07c2f0dbc3d987406afbd7cc92272211cdf",
+    "lab/src/recursive_horizons/nsc_rn_observables.py": "cd2e3b58129acd92a513f7e03b4db283ff15011293c2ed0ae12091764e6a3307",
+    "lab/src/recursive_horizons/nsc_rn_pg.py": "d90fd73eb951cfb03582d459723993e707617be17bda5da0383e93c8f59285ec",
+    "lab/src/recursive_horizons/nsc_rn_reference.py": "4e61faaa18ba7f82461a6e2ac7e19590786a24d7cce79cf30241079a22bbbecc",
+    "lab/src/recursive_horizons/nsc_rn_source.py": "eca21554c70d4fb0acdfef60977ff986221394927a550227b29517b0074f213b"
+  }
+}

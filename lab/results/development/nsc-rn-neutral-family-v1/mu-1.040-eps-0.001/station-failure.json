@@ -1,0 +1,73 @@
+{
+  "array_sha256": {
+    "coupled_excision_flux": "a18a989ca98aec94b2510e745e114f5688823f5edc042de2c4d5d184f88d8f88",
+    "coupled_inner_mass": "3215d9889865dc178dc27ffe63a5988d2a7f8b5a99316b4b98f7a7d3baacc9b0",
+    "coupled_killing": "b92df07e84199faab8495f25f706c32f98541c61d6a12387d6130894b7f648c7",
+    "coupled_normal": "44da759be0f2cdbbb4b92176fcfebd1a00da6bbf773981f573628e5745ca06a7",
+    "coupled_outer_flux": "651e1af0e2117c0fa6b87868f7c2e8b610a5c4276b4e8e48a14d8a5ff6b15883",
+    "coupled_phi": "c537d92f81e56ceb992f4060321c3107eef904f73ca4d5536eb64f5cca8c7a92",
+    "coupled_prob_excision": "e4687b2857f590cecda0851ed96c63c437035d93ea156f0e7dd6ff3f5197d95b",
+    "coupled_prob_outer": "8dbf1a504dceb66c704c8a2376a47830c5b8021a0878c4055981c9a4aa305a89",
+    "coupled_prob_remaining": "3111793ac85c222672c2919dbac15d1338d3e3a4ef382d453979fd80d2ab3351",
+    "coupled_sat": "e92b96e62a9ff1f89af4ac320562612c26f85d13aedea56ef76297d658327c27",
+    "coupled_t": "b700830c3e957a0eea4b1df26213bfd86ef566bbf10e78e308f87720e9314e2a",
+    "fixed_excision_flux": "746e75607f7ce3478b54dd31aa809ce25c0435996ce87be6a05d52790547d949",
+    "fixed_inner_mass": "57901d6595f3f6f248a6a0df9d5d95a2b9e5e994f47427ceb0dacdf190f3555a",
+    "fixed_killing": "5ccdcbed781da40dc7d8e8cda59430536a9442fb89cc7b5cebe6d93f758dcd0d",
+    "fixed_normal": "b773f3a081ecc7c0e1c3747e39d03ff77db235c33c27245347ed9447609e32f5",
+    "fixed_outer_flux": "746e75607f7ce3478b54dd31aa809ce25c0435996ce87be6a05d52790547d949",
+    "fixed_phi": "649012f92f9743fe68d41065247071536cca9f152592644b2145cfbdb5ec959d",
+    "fixed_prob_excision": "7e449c94c2e66778a6335a1a3bead6cd7b1e13a2bbaad9bb881206a82da79f67",
+    "fixed_prob_outer": "edc98930400d1d4aea4484e3d9a368cf12aa78aba3c770ac69d5d8e60a9882a1",
+    "fixed_prob_remaining": "42c079d75e1c2a6bcaabe3d2b56e367e017fcd8d277e71d335fdf9700336884a",
+    "fixed_sat": "2a366e8e30c6a0d6ead1c30f5bac2dbd2f80e4c8c950cadfa5ce6dbcb1340f8b",
+    "fixed_t": "b700830c3e957a0eea4b1df26213bfd86ef566bbf10e78e308f87720e9314e2a",
+    "frozen_lapse": "e35606eefb35953d5b4b433173c2930273dc0e03f1e2280851f61160949de93d",
+    "frozen_shift": "bbede62562b5dc2ae8d84beffea845e106469fba012b0f0bdc9ad88c4b75b82d",
+    "occupations": "570ed26afefc2124bfa53c56554f1cfd368a4bf0c678f72fcd5af58ab5367b5d"
+  },
+  "blocker": "march_pair stopped before the chunk exceeded the CPU projection",
+  "clock_t": 18.83399999999986,
+  "creation_only": true,
+  "events_so_far": [
+    {
+      "delta_excision": 0.0025311717680623347,
+      "name": "peak_capture_rate",
+      "t_over_rm_left": 7.5699999999995935,
+      "t_over_rm_right": 7.579999999999593
+    },
+    {
+      "delta_outer": 1.4839792483541461e-05,
+      "name": "peak_reflection_rate",
+      "t_over_rm_left": 10.779999999999525,
+      "t_over_rm_right": 10.789999999999525
+    },
+    {
+      "name": "capture_fraction_0.5",
+      "occurred": true,
+      "t_over_rm": 7.74999999999959,
+      "threshold_times_initial_norm": 0.5,
+      "value": 0.5013401892687231
+    },
+    {
+      "name": "outer_fraction_0.01",
+      "occurred": true,
+      "t_over_rm": 10.159999999999538,
+      "threshold_times_initial_norm": 0.01,
+      "value": 0.010001486365350901
+    }
+  ],
+  "evolved": false,
+  "fixed_control": "initial_sourced_metric_frozen",
+  "marched_by_api": true,
+  "mode": "station-failure",
+  "payload_bytes": 68931,
+  "payload_sha256": "919126d501e94ca28e0ff1a6aa818ed7c98b95f1549bf9cda53d3994ec12a95b",
+  "producing_commit": "ab03859ae553d197f99430146985598fdeee3382",
+  "production_trajectory": false,
+  "schema": "NSC-RN-PARENT-v2",
+  "second_einstein_solution": false,
+  "stopped": "cpu_budget",
+  "t_over_rm": 18.83399999999986,
+  "target_over_rm": 20.0
+}
