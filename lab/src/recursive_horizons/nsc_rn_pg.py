@@ -294,12 +294,21 @@ def action_model(mass, r_m=None):
     return model
 
 
-def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr"):
+def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr", excision=None):
     """Excision at the horizon midpoint and outer radius 32 r_m by default.
 
     Child and parent are disjoint areal intervals on this one chart.
     The production derivative is the CSR D(2,1) operator. Pass
     ``layout="dense"`` for the reference array of the same coefficients.
+
+    ``excision`` moves the inner edge off the horizon midpoint and inboard
+    of it, which is how the region below the midpoint becomes visible. The
+    default is the midpoint exactly, so a recorded run that does not pass
+    this argument is bit-identical to one that predates it. The chart is
+    regular there: N^2 = f + beta^2 = 1 identically for this family, and
+    the shift and the characteristic speeds stay smooth across the whole
+    interval ``(r_minus, r_plus)``. The grid already starts below r_plus,
+    so the new region is an extension of territory the chart covers.
     """
     model = action_model(mass, r_m)
     derived_rm = math.sqrt(model.magnetic_r2)
@@ -308,7 +317,15 @@ def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr"):
     r_plus = float(horizons["r_plus"])
     gap = r_plus - r_minus
     outer = 32.0 * float(r_m) if r_out is None else float(r_out)
-    excision = 0.5 * (r_minus + r_plus)
+    if excision is None:
+        excision = 0.5 * (r_minus + r_plus)
+    else:
+        excision = float(excision)
+        if not math.isfinite(excision):
+            raise ChartAdmissionError("excision override must be finite")
+        if not r_minus < excision < r_plus:
+            raise ChartAdmissionError(
+                "excision override must lie strictly between the inner and outer horizons")
     child = (r_plus + gap / 16.0, r_plus + gap / 2.0)
     parent = (child[1], outer)
     if not (r_minus < excision < r_plus < child[0] < child[1] < outer):
@@ -340,6 +357,8 @@ def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr"):
         "integer_flux": ACTION_FLUX,
         "r_out": outer,
         "r_minus": r_minus,
+        "excision": float(excision),
+        "excision_is_default": bool(excision == 0.5 * (r_minus + r_plus)),
         "r_plus": r_plus,
         "model": model,
         "cuts": {

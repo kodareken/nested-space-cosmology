@@ -139,6 +139,9 @@ def main(argv: List[str] | None = None) -> int:
     parser.add_argument("--target", type=float, default=TARGET_OVER_RM,
                         help="march target in units of t/r_m")
     parser.add_argument("--points", type=int, default=None)
+    parser.add_argument("--excision", type=float, default=None,
+                        help="inner edge of the grid, overriding the horizon midpoint. "
+                             "Must lie strictly between r_minus and r_plus.")
     parser.add_argument("--out", default="results/development/nsc-rn-inner-packet-v1",
                         help="output directory, relative to the lab root")
     parser.add_argument("--cpu-cap", type=float, default=1800.0)
@@ -157,7 +160,7 @@ def main(argv: List[str] | None = None) -> int:
     points = int(args.points or geometry["route"]["points"])
     grid = pg.build_grid(
         geometry["mass"], r_m=geometry["r_m"], points=points,
-        r_out=geometry["route"]["outer"],
+        r_out=geometry["route"]["outer"], excision=args.excision,
     )
 
     r_inner = float(grid["radius"][0])
@@ -271,6 +274,10 @@ def main(argv: List[str] | None = None) -> int:
         "r_inner": r_inner,
         "r_outer": r_outer,
         "r_minus": r_minus,
+        "excision_default": bool(grid["excision_is_default"]),
+        "excision_requested": args.excision,
+        "horizon_midpoint": 0.5 * (r_minus + float(geometry["route"]["r_plus"]))
+        if "r_plus" in geometry else None,
         "target_over_rm": args.target,
         "station_step_over_rm": STATION_STEP,
         "dt": float(step["dt"]),

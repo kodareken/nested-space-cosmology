@@ -17,6 +17,7 @@ Run from the repository root:
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -32,10 +33,10 @@ if str(LAB / "src") not in sys.path:
     sys.path.insert(0, str(LAB / "src"))
 
 from recursive_horizons import nsc_rn_mass_shell as shell  # noqa: E402
-from recursive_horizons import nsc_rn_source as source  # noqa: E402
+
+DEVELOPMENT = LAB / "results/development"
 
 SOURCE = LAB / "results/development/nsc-rn-inner-packet-v1"
-RECORD = LAB / "results/development/nsc-rn-inner-packet-shell-v2.json"
 STATION = re.compile(r"station-([0-9]+(?:\.[0-9]+)?)\.npz$")
 
 
@@ -69,11 +70,20 @@ def _stations(directory: Path) -> List[Path]:
     return sorted(found, key=_clock)
 
 
-def main() -> int:
-    if RECORD.exists():
-        print(f"refusing to overwrite sealed record: {RECORD}", file=sys.stderr)
+def main(argv: List[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run", default="nsc-rn-inner-packet-v1",
+                        help="run directory name under results/development")
+    parser.add_argument("--out", default="nsc-rn-inner-packet-shell-v3.json",
+                        help="record name, relative to results/development")
+    args = parser.parse_args(argv)
+
+    source = DEVELOPMENT / args.run
+    record_path = DEVELOPMENT / args.out
+    if record_path.exists():
+        print(f"refusing to overwrite sealed record: {record_path}", file=sys.stderr)
         return 1
-    run_summary_path = SOURCE / "summary.json"
+    run_summary_path = source / "summary.json"
     if not run_summary_path.is_file():
         print(f"missing march summary: {run_summary_path}", file=sys.stderr)
         return 1
@@ -81,7 +91,7 @@ def main() -> int:
 
     base_mass = float(run_summary["mu"])
     rows: List[Dict[str, Any]] = []
-    for station in _stations(SOURCE):
+    for station in _stations(source):
         with np.load(station) as payload:
             state = shell.shell_state(payload, base_mass=base_mass)
             # The station name carries t/r_m at the recorded 0.1 resolution.
@@ -107,6 +117,7 @@ def main() -> int:
         "producing_commit": _git_head(),
         "march_summary_sha256": _sha256_file(run_summary_path),
         "construction": {
+            "run": args.run,
             "mu": run_summary["mu"],
             "eps": run_summary["eps"],
             "packet_center_over_rm": run_summary["packet_center_over_rm"],
@@ -156,8 +167,8 @@ def main() -> int:
         "stations": rows,
     }
 
-    RECORD.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    print(f"wrote {RECORD.relative_to(LAB)}")
+    record_path.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    print(f"wrote {record_path.relative_to(LAB)}")
     print(f"  stations         : {len(rows)}  (falling {motion['stations_falling']})")
     print(f"  shell start r    : {motion.get('radius_first', float('nan')):.4f}")
     print(f"  shell end r      : {motion.get('radius_last', float('nan')):.4f}")
