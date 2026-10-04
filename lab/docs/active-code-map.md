@@ -31,7 +31,16 @@ not the identity of the current operator. The writer now allows a
 new development file and still protects existing and historical
 outputs. The current reproducible assessment is
 [v2](../results/development/nsc-rn-pilot-assessment-v2.json).
-The numerical family is still running and is not claimed.
+The numerical family is not running and is not claimed. No case has
+written a `summary.json`; four stopped on the CPU projection and the two
+`mu=1.002` cases stopped silently at `t=8`. The two-force gradient
+balance over its 177 recorded stations is
+[gradient-bubble](../results/development/nsc-rn-gradient-bubble-v1.json),
+owned by
+[nsc_rn_gradient_bubble.py](../src/recursive_horizons/nsc_rn_gradient_bubble.py)
+and [its note](nsc-rn-gradient-bubble.md). `nsc_rn_pg._fornberg` fails
+its own polynomial-moment check at width 9 and above on this runtime and
+blocks re-marching the family.
 The finite continuation is
 [nsc-rn-neutral-continuation-v1](../results/development/nsc-rn-neutral-continuation-v1/summary.json).
 There is no separate energy-consumer file. The saved CAR eigenvalue

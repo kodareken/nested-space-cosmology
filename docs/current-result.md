@@ -131,9 +131,45 @@ Its producing commit is
 `ab03859ae553d197f99430146985598fdeee3382`, the recorded source of
 that file, not a live branch label. The manual v1 body remains the
 historical writer failure pinned to `64e2c36`. A separate numerical
-family, `nsc-rn-neutral-family-v1`, is still running within six
-CPU-hours on at most six one-thread processes. Its physical results
-are not claimed.
+family, `nsc-rn-neutral-family-v1`, was earlier recorded as still
+running within six CPU-hours on at most six one-thread processes. It
+is not running. No case has written a `summary.json`; four stopped on
+the CPU projection at $t=15.98$, $16.20$, $18.83$ and $19.99$, and the
+two $\mu=1.002$ cases stopped at $t=8.00$ with no failure file. Its
+physical results are not claimed.
+
+### Two-force gradient balance, 4 October 2026
+
+The [gradient-bubble reduction](../lab/docs/nsc-rn-gradient-bubble.md)
+asks whether the enclosing and the enclosed forces balance on the areal
+radius, or whether one runs away. Six cases and 177 recorded stations
+were reduced; no time step was taken. The inherited radial force is the
+compressive side and the generated angular force is the resisting side,
+both read from the same coupled-arm payload. Balance
+$B=|F_{in}|/(|F_{in}|+|F_{out}|)$ is scale free, and the gradient is
+$d\ln|F|/d\ln r$.
+
+The outside acts in every recorded case. The integrated outer force is
+$15.6\%$ to $82.0\%$ of the inner force and no case falls below a tenth,
+so the non-local content is present throughout. The two forces trade
+rather than settle: as the exterior weakens from $\mu=1.040$ toward
+$\mu=1.002$ the required throat gradient steepens from about $-7$ to
+about $-153$, and the outer share grows from $16\%$ to $82\%$. Five of
+six cases trip the declared `throat_runaway` limit of $8$, and only
+$\mu=1.040$, $\varepsilon=0.001$ at slope $-7.37$ reaches a
+`two_force_balance` verdict. A sustained bubble is therefore not
+established across this family; it appears at most in a narrow window
+near $\mu=1.04$. The localization radius at which the outside stops
+contributing is $3.11$ to $4.66$.
+
+This is a construction check on recorded finite states, not a statement
+about the actual universe. The record is
+[nsc-rn-gradient-bubble-v1.json](../lab/results/development/nsc-rn-gradient-bubble-v1.json),
+creation only. A named blocker stops the family from being extended:
+`nsc_rn_pg._fornberg` fails its own $10^{-8}$ polynomial-moment check at
+width $9$ and above on this runtime, worst relative error $2.7\times10^{-5}$
+at width 11, third derivative. That is pre-existing and unrelated to this
+reduction, and it is why the CPU-blocked cases cannot simply be resumed.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,
