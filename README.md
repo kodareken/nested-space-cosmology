@@ -114,8 +114,9 @@ This repository now contains the publication and active laboratory together.
 The papers stay in `paper/`; current scientific code and evidence are in `lab/`.
 Start with [AGENTS.md](AGENTS.md) and [instructions](docs/instructions.md).
 The latest user instruction controls. An older conversation plan does not
-override it, and old repository plans do not select the task. Work on `codex/work-branch`, integrate verified
-changes into `main`, and push both to this GitHub repository.
+override it, and old repository plans do not select the task. On this Windows
+checkout, work on `agent/blackholes-infinity/work` and keep
+`win11/blackholes-infinity/main` as the local main. Do not force-push.
 [Consolidation and historical data](docs/repository-consolidation.md) explains
 what was retained and why old search arrays are excluded. Published scientific
 claims remain tied to their specific evidence, not merely to GitHub availability.

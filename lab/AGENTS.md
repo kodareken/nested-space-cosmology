@@ -19,7 +19,11 @@ Root `docs/instructions.md` is the current operating note.
 | Historical search exclusions | [Consolidation](../docs/repository-consolidation.md) |
 
 Run Python through root `scripts/lab.py` so the correct source owners and pinned
-historical evidence are selected. Update the owning scientific docs and root index when relevant
+historical evidence are selected. On this Windows checkout the interpreter is
+`.venv/validation` on Python 3.14.8. Numba 0.68 uses all CPU threads, and
+HIP 7.2 reaches the Radeon. The root index section
+[Windows calculation runtime](../AGENTS.md#windows-calculation-runtime)
+owns that setup. Do not recreate a Homebrew environment from older notes. Update the owning scientific docs and root index when relevant
 work changes. Current status is the [gap map](docs/claim-ledger.md#scientific-gap-map).
 v5, `scripts/derive_nsc_spherical_galerkin_refinement_v5.py`, is the saved
 \(T=0.005\) diagnostic and preparation, not a permanent production-driver

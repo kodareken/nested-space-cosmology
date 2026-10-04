@@ -103,6 +103,30 @@ AGENTS.md                 this index
 | Evolving retained-region reduction | [Note](lab/docs/nsc-evolving-reduction.md), [module](lab/src/recursive_horizons/nsc_evolving_reduction.py) |
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
+| Windows calculation runtime | `.venv/validation` on Python 3.14.8. Numba 0.68 uses all CPU threads. HIP 7.2 reaches the Radeon. Section below. |
+
+## Windows calculation runtime
+
+This checkout's scientific interpreter is `.venv/validation`, Python 3.14.8
+from `%LOCALAPPDATA%\Programs\Python\Python314`. Numba 0.68 is the
+accelerated runtime and uses every logical core (`NUMBA_NUM_THREADS`,
+16 on this Ryzen 9 6900HX). Existing producers still import SciPy. A new
+numerical kernel uses Numba.
+
+The AMD GPU path is the installed HIP SDK 7.2. `HIP_PATH` is
+`C:\Program Files\AMD\ROCm\7.2\`. hipInfo names the device AMD Radeon
+RX 6600M, architecture `gfx1032`. Python loads `amdhip64_7.dll` and
+`hiprtc0702.dll` from that SDK's `bin`. The venv startup hook puts
+those DLLs on the process path. Recheck CPU threads and a HIP saxpy
+with `.venv/validation/Scripts/python.exe .venv/validation/Scripts/check_numba_hip.py`.
+
+Do not look for Homebrew, `/opt/homebrew`, or `/Users/admin`. A macOS
+virtual environment is not in this tree. Older notes may still name
+those paths; they are the other machine's provenance.
+
+The Windows branches are `win11/blackholes-infinity/main` and
+`agent/blackholes-infinity/work`. Work happens on the second. The
+remote branches `main` and `codex/work-branch` stay as published.
 
 Live branch commands are in the
 [instructions](docs/instructions.md). The two-room import commit
