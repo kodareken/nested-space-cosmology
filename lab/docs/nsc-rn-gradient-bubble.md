@@ -185,6 +185,35 @@ recorded time. What is missing is a settled wall: the balance is
 transient, and stronger exterior compression shortens it. A sustained
 gradient bubble is not established by this family.
 
+## Resolution of the wall, checked against the oscillation audit
+
+The wall's position is set by a crossing of the balance, so it is only
+meaningful where the forces are actually resolved. That was measured
+separately by the oscillation audit on
+`agent/blackholes-infinity/work2`, which classifies a mean half-wavelength
+of three cells or fewer as grid-scale, three to eight as marginal, and
+above eight as spatially sampled.
+
+Taking all 88 wall positions across all stations and converting to grid
+cells from the inner edge:
+
+| Regime | Wall positions | Share |
+|---|---|---|
+| sampled, more than 8 cells | 74 | 84% |
+| marginal, 3 to 8 cells | 7 | 8% |
+| grid-scale, 3 cells or fewer | 7 | 8% |
+
+So the wall sits in a sampled region for the large majority of its
+record, and the breathing between roughly 1.03 and 2.06 is not an
+artifact of grid-scale ringing. But about a sixth of the wall positions
+are in the grid-scale or marginal band, which bounds how finely the
+motion near the throat can be claimed.
+
+The audit's own caveat applies and is worth repeating here: a complex
+spinor has no invariant sign, so its real and imaginary parts cross zero
+at gauge-dependent places, and that correlation does not by itself make
+the forcing physical. It constrains resolution, not causation.
+
 ## Coverage, and why it is partial
 
 The status page previously recorded this family as still running. It was
