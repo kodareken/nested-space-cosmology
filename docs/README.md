@@ -35,6 +35,7 @@ constrained calculation into a settled theory.
 | Historical OPEN companion edition | [local-gate-draft.md](local-gate-draft.md) |
 | Finite nested-quality construction | [nsc-nested-qualities.md](nsc-nested-qualities.md) |
 | Prior art and the open claim | [prior-art-and-open-claim.md](prior-art-and-open-claim.md) |
+| Cited arXiv studies and the check before a new calculation | [arxiv-studies.md](arxiv-studies.md) |
 | 10 September 2026 development record | [development-update-2026-09-10.md](development-update-2026-09-10.md) |
 | Historical road-to-arXiv plan | [PLAN.md](PLAN.md) |
 
@@ -83,8 +84,9 @@ and [nsc-discovery-parent-cut-confirmation.md](../lab/docs/nsc-discovery-parent-
 the RN radial notes
 [nsc-rn-reference.md](../lab/docs/nsc-rn-reference.md),
 [nsc-rn-parent-episode.md](../lab/docs/nsc-rn-parent-episode.md),
-[nsc-rn-charged-source.md](../lab/docs/nsc-rn-charged-source.md)
-and [nsc-rn-mmp-source-study.md](../lab/docs/nsc-rn-mmp-source-study.md),
+[nsc-rn-charged-source.md](../lab/docs/nsc-rn-charged-source.md),
+[nsc-rn-mmp-source-study.md](../lab/docs/nsc-rn-mmp-source-study.md)
+and [nsc-rn-gradient-bubble.md](../lab/docs/nsc-rn-gradient-bubble.md),
 and the parent observer in
 [nsc-discovery-regions.md](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
 also have no `docs/` copy.

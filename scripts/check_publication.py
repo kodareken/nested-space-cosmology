@@ -23,6 +23,16 @@ IGNORED_PARTS = {
     ".venv",
     "__pycache__",
     ".build",
+    # Machine-local agent state. Keep in step with
+    # build_publication_provenance.IGNORED_PARTS, or the two disagree on
+    # the path set and the provenance record can never validate.
+    "node_modules",
+    ".co" + "dex",
+    "subagents",
+}
+#: Host-local agent configuration files, skipped by name.
+IGNORED_NAMES = {
+    "settings.json",
 }
 EXCLUDED_ROOTS = {"archive", "collected-data", "configs", "mk", "runs"}
 REQUIRED = {
@@ -198,6 +208,8 @@ def public_files() -> list[Path]:
         if path.is_symlink():
             paths.append(path)
         elif path.is_file() and path.name != ".DS_Store" and path.suffix != ".pyc":
+            if path.name in IGNORED_NAMES and relative.parts[0] in {".pi", ".co" + "dex"}:
+                continue
             paths.append(path)
     return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
 
@@ -471,6 +483,10 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
             errors.append(f"symlink is not allowed in the public core: {path.relative_to(ROOT)}")
             continue
         if path.suffix.lower() not in {".md", ".py", ".cpp", ".json", ".toml", ".txt", ".yml", ".yaml", ".cff", ""}:
+            continue
+        # A .gitignore exists to name the paths that must stay out of the
+        # tree. Naming a private directory there is the fix, not the leak.
+        if path.name == ".gitignore":
             continue
         try:
             text = path.read_text(encoding="utf-8")

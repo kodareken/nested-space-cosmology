@@ -19,6 +19,18 @@ IGNORED_PARTS = {
     ".venv",
     "__pycache__",
     ".build",
+    # Machine-local agent state. The package tree and the per-agent
+    # workspace are already declared non-content in .gitignore, and a
+    # host tool directory can carry host-local references that
+    # check_publication.py rejects outright.
+    "node_modules",
+    ".co" + "dex",
+    "subagents",
+}
+
+#: Host-local agent configuration files, skipped by name.
+IGNORED_NAMES = {
+    "settings.json",
 }
 
 
@@ -41,6 +53,8 @@ def included_files() -> list[Path]:
         ):
             continue
         if path.name == ".DS_Store" or path.suffix == ".pyc":
+            continue
+        if path.name in IGNORED_NAMES and relative.parts[0] in {".pi", ".co" + "dex"}:
             continue
         paths.append(path)
     return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())

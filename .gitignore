@@ -11,3 +11,6 @@ paper/.build/
 .DS_Store
 ._*
 .pi/subagents/
+.pi/npm/node_modules/
+.codex/
+.pi/settings.json
