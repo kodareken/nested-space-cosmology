@@ -214,10 +214,11 @@ other masses. The grid-scale region is `r >= 16`, and it is not primarily
 an inner-boundary train.
 
 The wall never gets near it. The outermost recorded wall is at
-`r = 2.055`, which is about cell 133 on the `869`-point grid and well
-inside `r < 6`. The eight percent of wall positions that fall in the
-grid-scale or marginal band are isolated inner reversals, whose median
-spacings are `0.83` to `1.92` cells. So the breathing between roughly
+`r = 2.055`, which is about cell 133 on the `3921`-point `mu = 1.002`
+grid and well inside `r < 6`. The eight percent of wall positions that
+fall in the grid-scale or marginal band are isolated inner reversals,
+whose median spacings are `0.83` to `1.92` cells. So the breathing
+between roughly
 `1.03` and `2.06` sits in a well-sampled region and the outer ringing
 does not drive it.
 
