@@ -111,8 +111,11 @@ Every recorded case is steeper than the limit, at $-7.37$ to $-152.64$:
 But the domain limit above decides what that means: the slope is
 extrapolated toward a region never computed, so the correct statement is
 that the steepness would preclude regularity if it continued, not that
-the interior is non-regular. Deciding it needs the march extended inward
-past the inner mass to the horizon, which the family has never done.
+the interior is non-regular. Steepness is real and severe, and the balance wall is a sound
+measurement, but the regularity reference is not decisive on this domain
+and the near-throat radial structure is the least physically-driven part
+of the record. Deciding it needs the march extended inward past the inner
+mass to the horizon, which the family has never done.
 
 This also explains the numerical symptom that started this. A throat
 slope of $-488$ sits in the regime where the existing moment check
@@ -188,11 +191,10 @@ gradient bubble is not established by this family.
 ## Resolution of the wall, checked against the oscillation audit
 
 The wall's position is set by a crossing of the balance, so it is only
-meaningful where the forces are actually resolved. That was measured
-separately by the oscillation audit on
-`agent/blackholes-infinity/work2`, which classifies a mean half-wavelength
-of three cells or fewer as grid-scale, three to eight as marginal, and
-above eight as spatially sampled.
+meaningful where the forces are resolved. That was measured separately by
+the oscillation audit on `agent/blackholes-infinity/work2`, which
+classifies a mean half-wavelength of three cells or fewer as grid-scale,
+three to eight as marginal, and above eight as spatially sampled.
 
 Taking all 88 wall positions across all stations and converting to grid
 cells from the inner edge:
@@ -203,16 +205,46 @@ cells from the inner edge:
 | marginal, 3 to 8 cells | 7 | 8% |
 | grid-scale, 3 cells or fewer | 7 | 8% |
 
-So the wall sits in a sampled region for the large majority of its
-record, and the breathing between roughly 1.03 and 2.06 is not an
-artifact of grid-scale ringing. But about a sixth of the wall positions
-are in the grid-scale or marginal band, which bounds how finely the
-motion near the throat can be claimed.
+The radial split matters more than the count. The audit bins crossings by
+radius and finds the rapid ringing concentrated far out: for
+`mu=1.002` the radial pressure has `10, 0, 7, 1, 270` crossings across
+`[r_in,r_in+1)`, `[r_in+1,4)`, `[4,8)`, `[8,16)`, `[16,32]`, and the
+angular pressure `6, 8, 17, 59, 1029`. The same pattern holds at the
+other masses. The grid-scale region is `r >= 16`, and it is not primarily
+an inner-boundary train.
 
-The audit's own caveat applies and is worth repeating here: a complex
+The wall never gets near it. The outermost recorded wall is at
+`r = 2.055`, which is about cell 133 on the `869`-point grid and well
+inside `r < 6`. The eight percent of wall positions that fall in the
+grid-scale or marginal band are isolated inner reversals, whose median
+spacings are `0.83` to `1.92` cells. So the breathing between roughly
+`1.03` and `2.06` sits in a well-sampled region and the outer ringing
+does not drive it.
+
+One caveat from the audit applies here and is worth repeating: a complex
 spinor has no invariant sign, so its real and imaginary parts cross zero
-at gauge-dependent places, and that correlation does not by itself make
-the forcing physical. It constrains resolution, not causation.
+at gauge-dependent places. That constrains resolution, not causation.
+
+### The throat quantity has no spinor association
+
+The audit also measures crossing correlation against the Dirac spinor,
+and the split is sharp:
+
+| Pair | Correlation across cases | Uniform-edge null |
+|---|---|---|
+| angular pressure with `phi1_imag` | 0.46 to 0.70 | 0.08 to 0.12 |
+| radial pressure with `phi1_imag` | 0.000 to 0.021 | 0.018 to 0.037 |
+
+The angular force is strongly associated with the spinor. The radial
+force is not, at all: its correlation sits at or below its own null.
+
+That bears on this note. The throat slope, the regularity reference, and
+the horizon extrapolation are all read from the **radial** pressure. That
+is the component with no spinor association, so it is the least
+physically-driven quantity in the record, and the near-throat steepness
+should be treated as the weakest of the results here rather than the
+strongest. The angular half of the two-force picture is the better
+supported one.
 
 ## Coverage, and why it is partial
 
@@ -319,9 +351,10 @@ force balance, and the two are not identified here.
 
 It does not say the universe is a gradient bubble. It measures a trade
 between two recorded forces on one finite grid, and it finds the balance
-real but transient. It does not certify a continuum limit, it does not
-separate the wall oscillation from any step-control artifact, and it does
+real but transient. It does not certify a continuum limit, and it does
 not decide regularity, which needs the march extended inward to the
-horizon. It does not finish the family or explain the two silent stops at
-`t = 8`, and it says nothing about `mu` above `1.04`, which was never
-run.
+horizon. The oscillation audit bounds the claim further: the outer
+ringing at $r \geq 16$ is grid-scale, and the radial pressure carries no
+spinor association, so the throat steepness is the weakest result here.
+It does not finish the family or explain the two silent stops at `t = 8`,
+and it says nothing about `mu` above `1.04`, which was never run.
