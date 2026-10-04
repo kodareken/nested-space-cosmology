@@ -10,3 +10,4 @@ paper/.build/
 .build/
 .DS_Store
 ._*
+.pi/subagents/
