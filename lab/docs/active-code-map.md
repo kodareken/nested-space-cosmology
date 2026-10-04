@@ -35,7 +35,7 @@ The numerical family is not running and is not claimed. No case has
 written a `summary.json`; four stopped on the CPU projection and the two
 `mu=1.002` cases stopped silently at `t=8`. The two-force gradient
 balance over its 177 recorded stations is
-[gradient-bubble v3](../results/development/nsc-rn-gradient-bubble-v3.json),
+[gradient-bubble v4](../results/development/nsc-rn-gradient-bubble-v4.json),
 owned by
 [nsc_rn_gradient_bubble.py](../src/recursive_horizons/nsc_rn_gradient_bubble.py)
 and [its note](nsc-rn-gradient-bubble.md). It supersedes v1, whose
@@ -45,9 +45,12 @@ case in the family has a regular interior, throat slopes -7.37 to
 -152.64 against a sourced limit of -1. The verdict is
 the measured balance wall; a wall is present at 49.7% of stations, its
 persistence falls from about 65% at mu=1.002 to about 31% at mu=1.040,
-and it oscillates rather than settling. `nsc_rn_pg._fornberg` fails
-its own polynomial-moment check at width 9 and above on this runtime and
-blocks re-marching the family.
+and it oscillates rather than settling. Its `numerical_validity` section
+carries the stencil audit in
+[nsc_rn_stencil_audit.py](../src/recursive_horizons/nsc_rn_stencil_audit.py),
+which withdraws the earlier Fornberg blocker: the recorded weights agree
+with exact rational arithmetic to 5.1e-16 across 120 stencils, so the
+moment guard is ill-conditioned rather than the weights being wrong.
 The finite continuation is
 [nsc-rn-neutral-continuation-v1](../results/development/nsc-rn-neutral-continuation-v1/summary.json).
 There is no separate energy-consumer file. The saved CAR eigenvalue

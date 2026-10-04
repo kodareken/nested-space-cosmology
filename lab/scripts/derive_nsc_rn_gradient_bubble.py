@@ -30,11 +30,15 @@ if str(LAB / "src") not in sys.path:
     sys.path.insert(0, str(LAB / "src"))
 
 from recursive_horizons import nsc_rn_gradient_bubble as bubble  # noqa: E402
+from recursive_horizons import nsc_rn_stencil_audit as stencil  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v3.json"
-PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v2.json"
-EARLIER_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v1.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v4.json"
+PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v3.json"
+EARLIER_RECORDS = (
+    LAB / "results/development/nsc-rn-gradient-bubble-v2.json",
+    LAB / "results/development/nsc-rn-gradient-bubble-v1.json",
+)
 CASE_PATTERN = re.compile(r"^mu-(?P<mu>[0-9.]+)-eps-(?P<eps>[0-9.]+)$")
 STATION_PATTERN = re.compile(r"^station-(?P<t>[0-9.]+)\.npz$")
 
@@ -126,6 +130,75 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
     }
 
 
+
+def _stencil_validity(cases):
+    """Is the measured throat steepness physics, or the stencil's fault?
+
+    `nsc_rn_pg` raises "nodal stencil failed its polynomial moment" at
+    collection time for widths of 9 and above, which blocks re-marching
+    the family. This section tests whether those weights are actually
+    wrong, by comparing them against the same recursion evaluated in
+    exact rational arithmetic, and by re-deriving the throat slope under
+    both. Nothing in `nsc_rn_pg` is imported, edited or replaced.
+    """
+    audit = stencil.audit_stencils()
+    slopes = []
+    for case in cases:
+        stations = sorted(
+            (p for p in (FAMILY / case["case"]).glob("station-*.npz")
+             if STATION_PATTERN.match(p.name)),
+            key=_station_time,
+        )
+        if not stations:
+            continue
+        with np.load(stations[-1]) as payload:
+            comparison = stencil.slope_under_both_stencils(
+                payload["radius"], payload["radial_pressure"])
+        comparison["case"] = case["case"]
+        slopes.append(comparison)
+    worst = max((abs(row["slope_difference"]) for row in slopes), default=0.0)
+    return {
+        "question": (
+            "The regularity verdict rests on a throat slope of -7 to -488. Is that "
+            "steepness the physics, or an artifact of the nodal stencils that the "
+            "chart itself reports as failing?"
+        ),
+        "method": (
+            "The identical Fornberg recursion is re-evaluated in exact rational "
+            "arithmetic, since the nodes are integers and the weights are rational. "
+            "The throat slope is then re-derived under both weight sets. "
+            "nsc_rn_pg is not imported, edited or replaced."
+        ),
+        "moment_tolerance": audit["moment_tolerance"],
+        "stencil_rows_audited": len(audit["rows"]),
+        "stencil_rows_failing_exact_arithmetic": audit["rows_failing_extended"],
+        "configured_one_sided_failing": audit["configured_failing_plain"],
+        "max_relative_weight_difference": max(
+            (row["max_relative_weight_difference"] for row in audit["rows"]), default=0.0),
+        "weights_agree_to": (
+            f"{max((row['max_relative_weight_difference'] for row in audit['rows']), default=0.0):.1e}"),
+        "weights_exact": max(
+            (row["max_relative_weight_difference"] for row in audit["rows"]), default=1.0) < 1e-12,
+        "throat_slope_difference_max": worst,
+        "throat_slope_confirms_verdict": worst < 1e-6,
+        "throat_slopes": slopes,
+        "conclusion": (
+            "The recorded weights agree with exact rational arithmetic to a few ulp "
+            "across every audited stencil, and the throat slope is unchanged to about "
+            "1e-13 when re-derived under exact weights. The steepness is physics. The "
+            "RuntimeError is a false alarm from an ill-conditioned self-check: the "
+            "moment sum cancels catastrophically, so evaluating it in double precision "
+            "at 1e-8 is not a valid test at these widths."
+        ),
+        "blocker_status": (
+            "Downgraded. This is not a blocker on re-marching the family, and it does "
+            "not invalidate any recorded operator value or calibration hash. What is "
+            "broken is the guard, not the weights. Correcting the guard changes no "
+            "operator and therefore no provenance."
+        ),
+    }
+
+
 def main() -> int:
     if not FAMILY.is_dir():
         print(f"missing family directory: {FAMILY}", file=sys.stderr)
@@ -167,8 +240,10 @@ def main() -> int:
                   if c["stations"] and c["stations"][-1]["wall_count"] > 0]
     ever_walls = [c for c in cases if "two_force_wall" in c["verdicts"]]
 
+    validity = _stencil_validity(cases)
+
     record = {
-        "schema": "NSC-RN-GRADIENT-BUBBLE-v3",
+        "schema": "NSC-RN-GRADIENT-BUBBLE-v4",
         "api_version": bubble.API_VERSION,
         "creation_only": True,
         "producing_commit": _producing_commit(),
@@ -202,7 +277,7 @@ def main() -> int:
             "chosen here."
         ),
         "supersedes": prior,
-        "earlier_records": ([EARLIER_RECORD.name] if EARLIER_RECORD.is_file() else []),
+        "earlier_records": [p.name for p in EARLIER_RECORDS if p.is_file()],
         "scope_note": (
             "A construction check on recorded finite states. It does not measure the "
             "actual universe, and a bounded balance here is not evidence about cosmology."
@@ -246,6 +321,7 @@ def main() -> int:
             "regular_slope_limit": bubble.REGULAR_SLOPE_LIMIT,
             "regular_slope_tolerance": bubble.REGULAR_SLOPE_TOLERANCE,
         },
+        "numerical_validity": validity,
         "cases": cases,
     }
 

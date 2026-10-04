@@ -12982,13 +12982,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 182807,
+      "bytes": 183030,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
+      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "44c69038549cfb827c6d2ec64247b215862bb00ae2bf5f487827599be73d75b7"
+      "sha256": "4c8c66c3c1bf9a8a0241c4dd84d2f06bb81a2e028e7e16b1b465e864cbd15cdb"
     },
     {
       "bytes": 97482,
@@ -16117,11 +16117,11 @@
       "sha256": "bf8fdbaba935a90bf965bedc918b85dfbf2609b951d9b374f452f82379ce1c14"
     },
     {
-      "bytes": 11349,
+      "bytes": 11991,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
+      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
       "path": "lab/docs/nsc-rn-gradient-bubble.md",
-      "sha256": "97fb89b834835a7483c20733bbe1c117da0997933f343f69505aa4a2c865d435"
+      "sha256": "da8ddafa4a24c45a59d135cde1d06c1a52aaeb156fc95d6ab183a181f5221258"
     },
     {
       "bytes": 8496,
@@ -84840,6 +84840,13 @@
       "sha256": "91aa6f12d1ae05d794cfa1d35f6e780060d1db3a0b3ed6353feb6741d56add1d"
     },
     {
+      "bytes": 130690,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
+      "path": "lab/results/development/nsc-rn-gradient-bubble-v4.json",
+      "sha256": "e4e1f35fecae8cd7b57529e60ed52fb54ca855db12abfc8ab7435ca7872e42c8"
+    },
+    {
       "bytes": 44180,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
@@ -92246,11 +92253,11 @@
       "sha256": "6a74c0734cc53cfe10e1ac5699059de9b6828737d0124a5808d96b6d8dfbe4a3"
     },
     {
-      "bytes": 13265,
+      "bytes": 17017,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "863f3b1590c36beb5845c2d1855d0de08bad30cc",
+      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
       "path": "lab/scripts/derive_nsc_rn_gradient_bubble.py",
-      "sha256": "5cf21222f68ef5bd5b21b0819ffde93e10a560af457e3f3856c1400890c02391"
+      "sha256": "ffbfe44b05173c7802833cbedbf5c08084f3b4428ac86f8b7b8db32882b36afc"
     },
     {
       "bytes": 74930,
@@ -94708,6 +94715,13 @@
       "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
       "path": "lab/src/recursive_horizons/nsc_rn_source.py",
       "sha256": "eca21554c70d4fb0acdfef60977ff986221394927a550227b29517b0074f213b"
+    },
+    {
+      "bytes": 10256,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
+      "path": "lab/src/recursive_horizons/nsc_rn_stencil_audit.py",
+      "sha256": "33a2ebb785096b435151a317a72bcec9565aa1ef2765b621f992db512bd85229"
     },
     {
       "bytes": 7503,
@@ -97377,6 +97391,13 @@
       "changed_from_commit": "64e2c36fa2bd0688dd02a0b1bcda714c4767c294",
       "path": "lab/tests/test_nsc_rn_source.py",
       "sha256": "9dfcb54c72f4ba4513c19d4cc3414458f6499c628af75009a3488a1fa1ce21a3"
+    },
+    {
+      "bytes": 4574,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
+      "path": "lab/tests/test_nsc_rn_stencil_audit.py",
+      "sha256": "b8aeccf73845b49f49bdcd3392e32690900bd9d19653938c39f6a32f7ee4c30a"
     },
     {
       "bytes": 1108,

@@ -178,21 +178,25 @@ static region is supported by finite density and pressures and behaves as
 a cosmological constant at small radius. A force of logarithmic slope
 $g$ behaves as $r^g$ and stays finite inward only for $g\geq-1$. **No
 case in the family has a regular interior**: the throat slopes run from
-$-7.37$ to $-152.64$, every one steeper than the sourced limit. That
-same steepness is the regime in which the Fornberg recursion loses its
-polynomial moments, so the failing moment check and the failing
-regularity are the same fact seen twice.
+$-7.37$ to $-152.64$, every one steeper than the sourced limit.
+
+The apparent numerical blocker is withdrawn. `nsc_rn_pg._fornberg` raises
+a polynomial-moment failure at width $9$ and above, which earlier
+records named as the reason the family could not be re-marched. The same
+recursion in exact rational arithmetic agrees with the recorded weights
+to $5.1\times10^{-16}$ across $120$ audited stencils, and the throat
+slope re-derived under exact weights is unchanged to
+$1.1\times10^{-13}$, at $-23.3$ to $-487.7$. The guard is ill-conditioned,
+not the weights, and no operator value or calibration hash is affected.
 
 This is a construction check on recorded finite states, not a statement
 about the actual universe. The current record is
-[nsc-rn-gradient-bubble-v3.json](../lab/results/development/nsc-rn-gradient-bubble-v3.json),
-creation only, which names the preserved v2 record in a `supersedes`
-block and lists v1 under `earlier_records`. A named blocker stops the
-family from being extended:
-`nsc_rn_pg._fornberg` fails its own $10^{-8}$ polynomial-moment check at
-width $9$ and above on this runtime, worst relative error $2.7\times10^{-5}$
-at width 11, third derivative. That is pre-existing and unrelated to this
-reduction, and it is why the CPU-blocked cases cannot simply be resumed.
+[nsc-rn-gradient-bubble-v4.json](../lab/results/development/nsc-rn-gradient-bubble-v4.json),
+creation only, which carries a `numerical_validity` section with the
+stencil audit, names the preserved v3 record in a `supersedes` block and
+lists v2 and v1 under `earlier_records`. Two family cases still stop
+silently at $t=8.00$ with no failure file, and no case has written a
+`summary.json`.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,

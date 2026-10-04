@@ -92,10 +92,9 @@ recorded RN radial states are not the regular interior that the 2005
 construction describes. `interior_not_regular` is therefore a hard
 dead-end flag, and four of the six cases carry it at their final station.
 
-This also explains the numerical blocker. A throat slope of $-153$ is
-exactly the regime in which the Fornberg recursion loses its polynomial
-moments, so the failing moment check and the failing regularity are the
-same fact seen twice.
+This also explains the numerical symptom that started this. A throat
+slope of $-488$ sits in the regime where the existing moment check
+misreports itself; the audit below shows the weights themselves are exact.
 
 ## Declared limits
 
@@ -175,21 +174,39 @@ failure file at all, which is an unrecorded stop and not yet explained.
 The record reports `family_complete: false` and refuses to describe a
 family that does not exist.
 
-## Named blocker: the family cannot currently be re-marched
+## The stencil blocker was misdiagnosed, and it is withdrawn
 
-`nsc_rn_pg._fornberg` builds finite-difference weights by the standard
-Fornberg recursion and then verifies them against the polynomial moments
-with a `1e-8` relative tolerance. On this runtime that verification fails
-at collection time for every width of 9 or more. The worst relative moment
-error is `2.7e-5` at width 11, third derivative. This is round-off
-accumulating in the recursion, not a wrong formula, but `2.7e-5` is too
-large to accept for a third derivative, so the guard is right to raise.
+Versions one to three recorded a named blocker: `nsc_rn_pg._fornberg`
+fails its own $10^{-8}$ polynomial-moment check at width $9$ and above,
+so the family cannot be re-marched. That was read as bad weights. It is
+not.
 
-This is pre-existing and unrelated to this note: `tests/test_nsc_rn_pg.py`
-fails collection with or without the new module present. It is also the
-reason the CPU-blocked cases cannot simply be finished. Restoring the
-family needs a stabilized weight construction, which belongs to the
-`nsc_rn_pg` owner and is not attempted here.
+The identical Fornberg recursion evaluated in exact rational arithmetic
+gives weights that agree with the recorded ones to $5.1\times10^{-16}$
+relative across all $120$ audited stencil configurations, and not one row
+differs by more than $10^{-12}$. The throat slope re-derived under exact
+weights is unchanged to $1.1\times10^{-13}$, at $-23.3$, $-64.7$,
+$-70.9$, $-84.3$, $-169.8$ and $-487.7$. The measured steepness is
+physics.
+
+The `RuntimeError` is a false alarm. The moment sum
+$\sum_i w_i(i-x)^k$ cancels catastrophically, so evaluating it in double
+precision at $10^{-8}$ is not a valid test at these widths: the exact
+weights fail the same check. The guard is wrong, the weights are right.
+
+Two consequences. The regularity verdict above is not contaminated, and
+this does **not** block re-marching the family or invalidate any
+recorded operator value or calibration hash. Correcting the guard would
+change no operator and therefore no provenance.
+
+The audit lives in
+[src/recursive_horizons/nsc_rn_stencil_audit.py](../src/recursive_horizons/nsc_rn_stencil_audit.py)
+with
+[tests/test_nsc_rn_stencil_audit.py](../tests/test_nsc_rn_stencil_audit.py).
+It does not import, edit or replace `nsc_rn_pg`. One platform note fell
+out of it: `np.longdouble` is 64-bit on Windows, so widening the
+accumulator is not a stabilization here and exact rationals are the only
+genuine option.
 
 ## Owners
 
@@ -200,12 +217,11 @@ driven by
 with tests in
 [tests/test_nsc_rn_gradient_bubble.py](../tests/test_nsc_rn_gradient_bubble.py).
 The record is
-[results/development/nsc-rn-gradient-bubble-v3.json](../results/development/nsc-rn-gradient-bubble-v3.json),
+[results/development/nsc-rn-gradient-bubble-v4.json](../results/development/nsc-rn-gradient-bubble-v4.json),
 creation only. It names
-[nsc-rn-gradient-bubble-v2.json](../results/development/nsc-rn-gradient-bubble-v2.json)
-in a `supersedes` block with the reason, and lists
-[nsc-rn-gradient-bubble-v1.json](../results/development/nsc-rn-gradient-bubble-v1.json)
-under `earlier_records`. All three are preserved. The
+[nsc-rn-gradient-bubble-v3.json](../results/development/nsc-rn-gradient-bubble-v3.json)
+in a `supersedes` block with the reason, and lists v2 and v1 under
+`earlier_records`. All four are preserved. The
 input fields come from
 [nsc_rn_source.py](../src/recursive_horizons/nsc_rn_source.py) and the
 curvature provenance from
@@ -222,8 +238,8 @@ It does not say the universe is a gradient bubble. It measures a trade
 between two recorded forces on one finite grid, and it finds the balance
 real but transient, and the interior non-regular on the 2005 criterion.
 It does not certify a continuum limit, and it does not separate the wall
-oscillation from any step-control artifact. It does not finish the family,
-explain the two silent stops at `t = 8`, repair the Fornberg recursion, or
-say what happens at `mu` above `1.04`, which was never run. And the
-non-regular result is a statement about these recorded states, not a
-refutation of the 2005 paper, which describes a different construction.
+oscillation from any step-control artifact. It does not finish the family
+or explain the two silent stops at `t = 8`, and it says nothing about
+`mu` above `1.04`, which was never run. And the non-regular result is a
+statement about these recorded states, not a refutation of the 2005
+paper, which describes a different construction.
