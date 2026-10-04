@@ -47,18 +47,26 @@ The rank-$9$ preparation has dominant-lobe peak $12.03$, mean $12.29$
 and RMS $2.94$. Its declared finite frequency is not the requested
 width $2$.
 
-The driver, episode note and driver tests are registered. They report
-$40$ focused tests and one temporary paired coupled/frozen run at
-$\mu=1.04$, $\varepsilon=0.001$ and $\Delta t=0.001$, through $T=5$
-and $T=10$, using $547$ CPU seconds. Producer bytes were unchanged
-by that run. At $T=10$ the coupled inner mass is $1.040990$ against
-the fixed value $1.04$, excision probability is $0.868$, and the
-remaining probability is $0.122$. The arrays stay in scratch outside
-this repository. This is not a sealed production record and not a
-completed neutral experiment. Dynamic curvature is null. A separate
-review is comparing a probability gap of $8\times10^{-6}$ with a SAT
-debit of $4\times10^{-6}$; accounting is not closed, and refinement
-is pending.
+The driver, episode note and driver tests now include
+`sat_norm_ledger` with twice the raw SAT coefficient. The saved
+paired run is archived at
+[rn-first-infall-pilot-2026-10-04](../lab/archive/rn-first-infall-pilot-2026-10-04/)
+with [receipt.json](../lab/archive/rn-first-infall-pilot-2026-10-04/receipt.json),
+sha256 `e3e8226f7d748ea0a62068c4efa37a7ec9e3d5ff6bd3f4923a9536dd4d77f130`.
+The wrapper `nsc_rn_pilot_march.py` is
+`ef45c5eba4c66f922be0ec04159f208861e5e5e7299d319ce8dd10ea8483ee47`.
+The receipt states that the driver hash was not captured. Commit
+`89f0fadfb886ab73077c6c39d1ac7cd6613c8979` matches the executable PG,
+source, observables and reference retrospectively. It is not a commit
+that produced the run. Those four module bytes still match that commit.
+At $T=5$ and $T=10$ both arms have corrected probability closure below
+$9.6\times10^{-13}$. At $T=10$ the coupled inner mass is
+$1.040990280$ against the fixed value $1.04$, and the horizon moves
+from $1.325655540$ to $1.330239387$. The frozen arm is an initial
+sourced-metric counterfactual. Probability accounting is reconciled.
+The shell energy ledger is not closed, dynamic $R_4$ is null, and
+refinement is pending. This archive is not a completed neutral
+programme and not a production seal.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,
