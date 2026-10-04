@@ -19,7 +19,7 @@ import pytest
 from recursive_horizons import nsc_rn_mass_shell as shell
 
 LAB = Path(__file__).resolve().parents[1]
-RECORD = LAB / "results/development/nsc-rn-mass-shell-v4.json"
+RECORD = LAB / "results/development/nsc-rn-mass-shell-v6.json"
 
 
 def _payload(radius: np.ndarray, mass: np.ndarray) -> dict:
@@ -87,7 +87,23 @@ class TestShellEstimator:
         density = np.exp(-0.5 * ((radius - 1.04) / 0.3) ** 2)
         state = shell.shell_state(_payload_from_density(radius, density, 1.04))
         assert state["shell_radius"] == pytest.approx(radius[0], abs=1e-6)
+        assert state["at_inner_edge"]
         assert not state["off_inner_edge"]
+
+    def test_a_shell_near_the_edge_stays_coherent(self):
+        """A shell at r=2 is not pinned, however sharp it looks.
+
+        This is the case that broke the earlier edge-relative prominence
+        test. A shell approaching the inner boundary has a genuinely sharp
+        density peak and a high background prominence, so an amplitude test
+        rejects exactly the stations where the shell is still in flight.
+        """
+        radius = _grid()
+        density = np.exp(-0.5 * ((radius - 2.0) / 0.4) ** 2)
+        state = shell.shell_state(_payload_from_density(radius, density, 1.04))
+        assert state["shell_radius"] == pytest.approx(2.0, abs=0.15)
+        assert not state["at_inner_edge"]
+        assert state["off_inner_edge"]
 
     def test_rejects_a_descending_grid(self):
         radius = _grid()
@@ -108,12 +124,14 @@ class TestShellEstimator:
 class TestPhaseLabelling:
     def _series(self):
         rows = []
-        for t, radius, amplitude, off in [
-            (0.0, 12.0, 1.0, True), (1.0, 10.5, 0.99, True), (2.0, 9.0, 0.98, True),
-            (3.0, 7.0, 0.97, False), (4.0, 4.0, 0.05, True),
+        # The pinned station genuinely sits at the inner edge, so the
+        # arrival search and the phase label agree.
+        for t, radius, amplitude, edge in [
+            (0.0, 12.0, 1.0, False), (1.0, 10.5, 0.99, False), (2.0, 9.0, 0.98, False),
+            (3.0, 1.04, 0.97, True), (4.0, 4.0, 0.05, False),
         ]:
             rows.append({"t_over_rm": t, "shell_radius": radius,
-                         "shell_amplitude": amplitude, "off_inner_edge": off,
+                         "shell_amplitude": amplitude, "at_inner_edge": edge,
                          "r_inner": 1.04})
         return rows
 
@@ -128,29 +146,26 @@ class TestPhaseLabelling:
         motion = shell.shell_motion(self._series())
         assert motion["stations_falling"] == 3
         assert motion["radius_last"] == pytest.approx(9.0)
-        assert motion["inner_edge_arrival_t"] is None
 
     def test_weak_late_feature_is_not_counted_as_the_shell(self):
         motion = shell.shell_motion(self._series())
         assert motion["stations_late_weak_feature"] == 1
         assert motion["late_to_falling_amplitude_ratio"] == pytest.approx(0.05)
 
-    def test_arrival_is_found_even_after_prominence_is_lost(self):
-        rows = self._series()
-        rows[3]["shell_radius"] = 1.04
-        motion = shell.shell_motion(rows)
+    def test_arrival_is_found_even_though_it_is_edge_pinned(self):
+        motion = shell.shell_motion(self._series())
         assert motion["inner_edge_arrival_t"] == pytest.approx(3.0)
 
     def test_too_short_a_falling_phase_declines_the_fit(self):
-        rows = [{"t_over_rm": 0.0, "shell_radius": 12.0, "shell_amplitude": 1.0,
-                 "off_inner_edge": False, "r_inner": 1.04}]
+        rows = [{"t_over_rm": 0.0, "shell_radius": 1.04, "shell_amplitude": 1.0,
+                 "at_inner_edge": True, "r_inner": 1.04}]
         motion = shell.shell_motion(rows)
         assert not motion["fit_available"]
         assert "reason" in motion
 
     def test_linear_trajectory_is_recovered(self):
         rows = [{"t_over_rm": float(t), "shell_radius": 12.0 - 1.4 * t,
-                 "shell_amplitude": 1.0, "off_inner_edge": True, "r_inner": 1.04}
+                 "shell_amplitude": 1.0, "at_inner_edge": False, "r_inner": 1.04}
                 for t in range(6)]
         motion = shell.shell_motion(rows)
         assert motion["infall_rate_mean"] == pytest.approx(-1.4, rel=1e-9)
@@ -171,6 +186,19 @@ class TestRecord:
     def test_every_case_has_a_falling_phase(self):
         record = json.loads(RECORD.read_text(encoding="utf-8"))
         assert all(case["motion"]["fit_available"] for case in record["cases"])
+
+    def test_the_falling_phase_runs_all_the_way_to_arrival(self):
+        """Guards the regression that truncated the fit at t=5.0.
+
+        The falling phase is 14 stations of 0.5 spacing, ending at t=6.5
+        with the shell at about 2.1, and arrival is t=7.0.
+        """
+        record = json.loads(RECORD.read_text(encoding="utf-8"))
+        for case in record["cases"]:
+            motion = case["motion"]
+            assert motion["stations_falling"] == 14
+            assert motion["radius_last"] < 2.4
+            assert motion["inner_edge_arrival_t"] == pytest.approx(7.0)
 
     def test_infall_rate_is_nearly_parameter_independent(self):
         record = json.loads(RECORD.read_text(encoding="utf-8"))

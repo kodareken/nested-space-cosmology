@@ -41,9 +41,13 @@ API_VERSION = "nsc-rn-mass-shell-v1"
 #: the peak. Chosen far above the few-cell ringing the oscillation audit
 #: measured, and well below the shell's own width.
 SMOOTH_WINDOW = 15
-#: The shell peak must stand this far above the value at the inner edge
-#: to count as off the edge rather than pinned to it.
-EDGE_PROMINENCE = 3.0
+#: Radius within which the located peak counts as pinned to the inner
+#: boundary rather than a moving feature.
+EDGE_TOLERANCE = 1.0e-9
+#: A later excursion must reach at least this fraction of the shell's
+#: first-station amplitude to count as the same feature. The recorded
+#: family's late excursions reach 1.7% to 3.3%.
+FEATURE_CONTINUITY = 0.5
 #: Radius beyond which the audit found the ringing lives. The peak is
 #: never sought there.
 SEARCH_LIMIT = 16.0
@@ -72,6 +76,20 @@ def _mass_shell_density(radius: np.ndarray, mass: np.ndarray) -> np.ndarray:
         hi = i + 1 if i < n - 1 else n - 1
         out[i] = (mass[hi] - mass[lo]) / (radius[hi] - radius[lo])
     return out
+
+
+@njit(cache=True)
+def _median_magnitude(values: np.ndarray) -> float:
+    """Median of |values|, the background level the shell is read against."""
+    n = values.shape[0]
+    magnitudes = np.empty(n)
+    for i in range(n):
+        magnitudes[i] = abs(values[i])
+    magnitudes.sort()
+    mid = n // 2
+    if n % 2 == 1:
+        return float(magnitudes[mid])
+    return 0.5 * (float(magnitudes[mid - 1]) + float(magnitudes[mid]))
 
 
 @njit(cache=True)
@@ -126,7 +144,17 @@ def shell_state(payload: Any, base_mass: float = 1.04) -> Dict[str, Any]:
     peak_radius, peak_value, edge_value = _shell_peak(radius, smoothed, SEARCH_LIMIT)
     index = int(np.searchsorted(radius, peak_radius))
     prominence = peak_value / edge_value if edge_value > 0.0 else math.inf
-    off_edge = prominence >= EDGE_PROMINENCE and peak_radius > radius[0]
+
+    # Coherence is decided by position, not by magnitude. Once a shell piles
+    # up against the inner boundary its density peak is genuinely sharp and
+    # stands further above the background than the falling shell ever does,
+    # so any amplitude test accepts the pinned state and rejects the moving
+    # one. The recorded family shows this directly: the pinned stations
+    # carry background prominence up to 112 against 46 for the shell still
+    # in flight two stations earlier.
+    at_inner_edge = abs(peak_radius - float(radius[0])) <= EDGE_TOLERANCE
+    background = _median_magnitude(smoothed)
+    background_prominence = peak_value / background if background > 0.0 else math.inf
 
     return {
         "api_version": API_VERSION,
@@ -135,28 +163,31 @@ def shell_state(payload: Any, base_mass: float = 1.04) -> Dict[str, Any]:
         "shell_radius": float(peak_radius),
         "shell_amplitude": float(peak_value),
         "edge_amplitude": float(edge_value),
-        "prominence": float(prominence),
-        "off_inner_edge": bool(off_edge),
+        "edge_prominence": float(prominence),
+        "background_prominence": float(background_prominence),
+        "at_inner_edge": bool(at_inner_edge),
+        "off_inner_edge": bool(not at_inner_edge),
         "shell_width_half_max": float(
-            _shell_width(radius, smoothed, index, peak_value, SEARCH_LIMIT)) if off_edge else float("nan"),
+            _shell_width(radius, smoothed, index, peak_value, SEARCH_LIMIT)
+            if not at_inner_edge else float("nan")),
         "total_gain": float(mass[-1] - base_mass),
         "gain_below_inner_edge": float(mass[0] - base_mass),
         "search_limit": SEARCH_LIMIT,
         "smooth_window": SMOOTH_WINDOW,
+        "feature_continuity": FEATURE_CONTINUITY,
     }
 
 
 def shell_phase(state: Dict[str, Any], first_amplitude: float | None) -> str:
     """Label a station by which feature the peak is actually tracking.
 
-    Once the shell reaches the inner edge the peak of dM/dr is pinned to
-    the boundary and no longer measures a moving object. Later, weaker
-    excursions in and out of the search window are a different feature
-    again, not the shell returning.
+    Pinned to the inner boundary, the peak is no longer a moving object.
+    Later, weaker excursions in and out of the search window are a
+    different feature again, not the shell returning.
     """
-    if not state["off_inner_edge"]:
+    if state["at_inner_edge"]:
         return "edge_pinned"
-    if first_amplitude is not None and state["shell_amplitude"] < 0.5 * first_amplitude:
+    if first_amplitude is not None and state["shell_amplitude"] < FEATURE_CONTINUITY * first_amplitude:
         return "late_weak_feature"
     return "falling"
 
@@ -185,17 +216,14 @@ def shell_motion(series: list[Dict[str, Any]]) -> Dict[str, Any]:
 
     late = [row for row in series if row["phase"] == "late_weak_feature"]
 
-    # The shell loses prominence well before it reaches the inner edge, so
-    # the two are tracked separately and neither is called the other.
-    prominence_loss_t = (series[len(falling)]["t_over_rm"]
-                         if len(falling) < len(series) else None)
-    # Arrival at the inner edge is searched over the whole series, because
-    # by the time the shell gets there it has already lost prominence and
-    # so sits in the edge-pinned phase rather than the falling one.
+    # With coherence decided by position, the falling phase ends exactly
+    # where the shell reaches the inner edge, so there is no separate
+    # prominence-loss time to report. Arrival is searched over the whole
+    # series because by then the shell sits in the edge-pinned phase.
     r_inner = series[0].get("r_inner")
     arrival = None
     for row in series:
-        if r_inner is not None and abs(row["shell_radius"] - r_inner) < 1e-9:
+        if r_inner is not None and abs(row["shell_radius"] - r_inner) <= EDGE_TOLERANCE:
             arrival = row["t_over_rm"]
             break
 
@@ -204,8 +232,6 @@ def shell_motion(series: list[Dict[str, Any]]) -> Dict[str, Any]:
         "stations_falling": len(falling),
         "stations_edge_pinned": sum(1 for row in series if row["phase"] == "edge_pinned"),
         "stations_late_weak_feature": len(late),
-        "prominence_loss_t": prominence_loss_t,
-        "prominence_loss_radius": (falling[-1]["shell_radius"] if falling else None),
         "inner_edge_arrival_t": arrival,
         "late_peak_amplitude_max": (max(row["shell_amplitude"] for row in late)
                                    if late else None),

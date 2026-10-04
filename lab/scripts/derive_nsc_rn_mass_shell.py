@@ -28,7 +28,7 @@ if str(LAB / "src") not in sys.path:
 from recursive_horizons import nsc_rn_mass_shell as shell  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-mass-shell-v4.json"
+RECORD = LAB / "results/development/nsc-rn-mass-shell-v6.json"
 CASE_PATTERN = re.compile(r"^mu-(?P<mu>[0-9.]+)-eps-(?P<eps>[0-9.]+)$")
 STATION_PATTERN = re.compile(r"^station-(?P<t>[0-9.]+)\.npz$")
 
@@ -156,7 +156,7 @@ def main() -> int:
             "shell_density": "centred dM/dr of the recorded coupled_mass",
             "smooth_window": shell.SMOOTH_WINDOW,
             "search_limit": shell.SEARCH_LIMIT,
-            "edge_prominence": shell.EDGE_PROMINENCE,
+            "feature_continuity": shell.FEATURE_CONTINUITY,
             "why_smoothed": (
                 "The oscillation audit measured ringing of one to three cells over much "
                 "of this profile. A median window of fifteen cells sits far above that and "
@@ -201,8 +201,6 @@ def main() -> int:
     print(f"  stations         : {record['coverage']['total_stations']}")
     print(f"  falling phase    : {sum(c['motion']['stations_falling'] for c in cases)} of"
           f" {record['coverage']['total_stations']} stations")
-    print(f"  prominence loss t: "
-          f"{sorted({c['motion']['prominence_loss_t'] for c in cases})}")
     print(f"  edge arrival t   : "
           f"{sorted({c['motion']['inner_edge_arrival_t'] for c in cases})}")
     print(f"  shell start r    : {record['separation']['shell_start_radius_min']:.3f}"
