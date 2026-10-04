@@ -92,10 +92,14 @@ def check_snapshot(root=ROOT):
     for row in manifest["intentionally_omitted"]:
         if safe_path(root / "lab", row).exists():
             raise ValueError("historical payload unexpectedly imported: " + row)
+    # An editable install writes .egg-info into the lab source tree. It is a
+    # local build artifact, never imported evidence, and the publication
+    # path set already excludes it. Keep the two in step.
     ignored = {"__pycache__", ".pytest_cache", ".ruff_cache", ".venv", ".build"}
     actual = {
         p.relative_to(root).as_posix() for p in (root / "lab").rglob("*")
         if p.is_file() and not (set(p.relative_to(root / "lab").parts) & ignored)
+        and not any(part.endswith(".egg-info") for part in p.relative_to(root / "lab").parts)
         and p.name != ".DS_Store" and p.suffix != ".pyc"
     }
     if actual != seen:

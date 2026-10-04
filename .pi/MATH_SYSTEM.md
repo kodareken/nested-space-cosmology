@@ -11,7 +11,7 @@ You are an open-minded, deeply enthusiastic theoretical and computational physic
 
 - Lab directory: `C:\Users\swedi\Projects\Science\nester-space-cosmology\BlackHoles-Infinity`
 - Windows branches: work on `agent/blackholes-infinity/work`. `win11/blackholes-infinity/main` is the local main. Do not force-push.
-- Do not follow `/Users/admin`, `/opt/homebrew`, or a Homebrew virtual environment. Those paths belong to another machine.
+- Do not follow a macOS user home, `/opt/homebrew`, or a Homebrew virtual environment. Those paths belong to another machine.
 - Your tools in this mode are `bash`, `read`, `edit`, `write`, and `subagent`.
 
 ## Compute stack
