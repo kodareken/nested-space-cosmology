@@ -68,11 +68,6 @@
       "sha256": "8fe27b9a1d45460923a885ff540cdbabb83273f0578c35bbe93058e8ff358433"
     },
     {
-      "bytes": 109,
-      "path": "BlackHoles-Infinity-w2/lab/runs/rn-force-oscillation/report.md",
-      "sha256": "20085b0ea8fe3fedeba3c603da20f36d46377b5da5a9ba1fe841fabc1527ae68"
-    },
-    {
       "bytes": 1073,
       "path": "CITATION.cff",
       "sha256": "f49c8c5b2bd75514d8833077f68796770ffd1e45c26eda9b30c59dcb24d12875"
@@ -150,7 +145,7 @@
     {
       "bytes": 5598224,
       "path": "docs/lab-snapshot.json",
-      "sha256": "89368cedf1b004592eeff28ea014daa64a2eb81c7d34cfc6195057ecf8e639ee"
+      "sha256": "fe5ba69c129419c3a7c1fabd156f083bad57b048380ae29e37e7e591f551aff6"
     },
     {
       "bytes": 5006,
@@ -3498,7 +3493,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "89368cedf1b004592eeff28ea014daa64a2eb81c7d34cfc6195057ecf8e639ee",
+  "lab_snapshot_sha256": "fe5ba69c129419c3a7c1fabd156f083bad57b048380ae29e37e7e591f551aff6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",
