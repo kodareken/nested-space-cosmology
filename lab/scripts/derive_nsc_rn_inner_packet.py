@@ -93,25 +93,8 @@ def main() -> int:
 
     motion = shell.shell_motion(rows)
 
-    # What happens after the shell reaches the inner edge. In the recorded
-    # family this never happened inside the domain, so it is the part of the
-    # picture that reduction could not deliver.
-    arrival_t = motion["inner_edge_arrival_t"]
-    post = [row for row in rows if arrival_t is not None and row["t_over_rm"] >= arrival_t]
-    accumulation = None
-    if post:
-        amps = [row["shell_amplitude"] for row in post]
-        best = max(range(len(amps)), key=lambda i: amps[i])
-        accumulation = {
-            "arrival_t": arrival_t,
-            "amplitude_at_arrival": amps[0],
-            "peak_amplitude": amps[best],
-            "peak_t": post[best]["t_over_rm"],
-            "amplitude_gain": amps[best] / amps[0] if amps[0] else None,
-            "final_amplitude": amps[-1],
-            "amplitude_after_peak_fraction": amps[-1] / amps[best] if amps[best] else None,
-            "stations_after_arrival": len(post),
-        }
+    motion = shell.shell_motion(rows)
+    accumulation = shell.accumulation_after_arrival(rows, motion)
 
     # The quantity the recorded family could not deliver: how much mass is
     # actually inside the collar, and what profile it leaves behind.

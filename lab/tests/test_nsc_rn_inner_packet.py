@@ -64,8 +64,9 @@ class TestShellGuardsInTheScript:
     def test_it_refuses_a_centre_outside_the_collar(self, source):
         assert "is not strictly inside the collar" in source
 
-    def test_it_refuses_a_centre_too_close_to_the_inner_edge(self, source):
-        assert "too close to the inner edge" in source
+    def test_it_refuses_a_packet_whose_left_edge_is_outside_the_collar(self, source):
+        """The centre alone is not enough: the packet is two r_m wide."""
+        assert "is at or below the inner edge" in source
 
     def test_it_refuses_a_centre_inside_the_inner_horizon(self, source):
         assert "inside the inner horizon" in source

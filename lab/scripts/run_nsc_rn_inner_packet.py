@@ -146,20 +146,28 @@ def main(argv: List[str] | None = None) -> int:
     r_inner = float(grid["radius"][0])
     r_outer = float(grid["radius"][-1])
     r_minus = float(geometry["r_minus"]) if "r_minus" in geometry else None
+    if r_minus is not None and not r_minus < r_inner:
+        raise SystemExit("the grid's inner edge is not above the inner horizon")
 
     # The whole point of this construction is that the packet forms inside
     # the collar. Refuse anything that would put it back outside, and refuse
-    # a centre so close to the inner edge that the fall is not resolved.
-    if r_minus is not None and not r_minus < r_inner:
-        raise SystemExit("the grid's inner edge is not above the inner horizon")
+    # a centre whose *left edge* already sits below the inner boundary. The
+    # left edge is the binding condition, not the centre: the packet is two
+    # r_m wide, so a centre of 2.0 puts half of it outside the collar and
+    # the shell is born pinned to the boundary with no fall at all. That
+    # case was run once and is kept in the record as a boundary, but it is
+    # not a measurement of a shell falling.
+    width = float(source.PACKET_WIDTH_OVER_RM)
+    left_edge = args.center - 0.5 * width
     if not r_inner < args.center < r_outer:
         raise SystemExit(f"packet centre {args.center} is not strictly inside the collar "
                          f"[{r_inner}, {r_outer}]")
-    if args.center <= 1.5 * r_inner:
-        raise SystemExit(f"packet centre {args.center} is too close to the inner edge "
-                         f"{r_inner}; the fall would not be resolved")
-    if r_minus is not None and args.center <= r_minus:
-        raise SystemExit("packet centre is at or inside the inner horizon")
+    if left_edge <= r_inner:
+        raise SystemExit(f"packet left edge {left_edge:.4f} is at or below the inner edge "
+                         f"{r_inner}; with a width of {width} r_m the shell would be born "
+                         f"pinned to the boundary and no fall would be measured")
+    if r_minus is not None and left_edge <= r_minus:
+        raise SystemExit("packet left edge is at or inside the inner horizon")
 
     started = time.perf_counter()
     packet = source.prepare_radial_packet(

@@ -192,6 +192,42 @@ def shell_phase(state: Dict[str, Any], first_amplitude: float | None) -> str:
     return "falling"
 
 
+def accumulation_after_arrival(series: list[Dict[str, Any]],
+                               motion: Dict[str, Any]) -> Dict[str, Any] | None:
+    """How the density peak grows once the shell reaches the inner edge.
+
+    This is the part the recorded family could not deliver. There the shell
+    crosses the grid's inner edge at t = 7.0 and between 61% and 99% of the
+    accreted mass leaves the domain, so the pile-up is never seen forming.
+
+    The peak is pinned to the boundary here, so it is read as a growth
+    rather than as a position: a value that stays at the inner radius while
+    its amplitude climbs is a boundary layer thickening, not a body moving.
+    """
+    arrival = motion.get("inner_edge_arrival_t")
+    if arrival is None:
+        return None
+    post = [row for row in series if row["t_over_rm"] >= arrival]
+    if len(post) < 3:
+        return None
+    amplitudes = [row["shell_amplitude"] for row in post]
+    best = max(range(len(amplitudes)), key=lambda i: amplitudes[i])
+    first, peak, final = amplitudes[0], amplitudes[best], amplitudes[-1]
+    if first <= 0.0 or peak <= 0.0:
+        return None
+    return {
+        "arrival_t": arrival,
+        "stations_after_arrival": len(post),
+        "amplitude_at_arrival": first,
+        "peak_amplitude": peak,
+        "peak_t": post[best]["t_over_rm"],
+        "amplitude_gain": peak / first,
+        "final_amplitude": final,
+        "amplitude_after_peak_fraction": final / peak,
+        "rise_time": post[best]["t_over_rm"] - arrival,
+    }
+
+
 def shell_motion(series: list[Dict[str, Any]]) -> Dict[str, Any]:
     """Fit the shell's initial radius and inward speed.
 
