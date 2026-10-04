@@ -916,7 +916,31 @@ def admit_prepared_packet(packet):
     }
 
 
-def station_observation(state, grid, rates, packet=None):
+def sat_norm_ledger(raw_sat, probability, initial_norm):
+    """Raw SAT stock versus the probability loss.
+
+    The historical field stocks.sat_debit stores -a_minus |chi_minus|^2.
+    The SBP identity 2 Re(chi, rate) makes the norm loss twice that coefficient.
+    The raw number is not copied into a second energy or into the mass flux.
+    """
+    raw = float(raw_sat)
+    actual = 2.0 * raw
+    remaining = float(probability["remaining"])
+    excision = float(probability["excision_outflow"])
+    outer = float(probability["outer_outflow"])
+    return {
+        "historical_field": "stocks.sat_debit",
+        "raw_coefficient": "-a_minus |chi_minus|^2",
+        "raw_sat_coefficient": raw,
+        "norm_factor": 2.0,
+        "actual_probability_loss": actual,
+        "probability_closure_residual": remaining + excision + outer + actual - float(initial_norm),
+        "coefficient_duplicated": False,
+        "included_in_mass_flux": False,
+    }
+
+
+def station_observation(state, grid, rates, packet=None, initial_norm=None):
     """Stocks, trapping radius and charge-corrected mass. Sourced curvature stays null."""
     observables_mod = _load_module("nsc_rn_observables")
     curvature = observables_mod.curvature_from_pg_jets(
@@ -930,13 +954,17 @@ def station_observation(state, grid, rates, packet=None):
         grid["radius"], rates["lapse"], rates["shift"], grid["magnetic_r2"],
     )
     unresolved = curvature["status"] != "stationary_radial_jets"
+    if initial_norm is None:
+        initial_norm = state["probability_stocks"]["remaining"]
     report = {
         "probability_stocks": dict(state["probability_stocks"]),
-        "mass_stocks": {
+        "mass_flux_stocks": {
             "excision_flux": state["stocks"]["excision_flux"],
             "outer_flux": state["stocks"]["outer_flux"],
         },
-        "sat_debit": state["stocks"]["sat_debit"],
+        "sat_norm_stock": sat_norm_ledger(
+            state["stocks"]["sat_debit"], state["probability_stocks"], initial_norm,
+        ),
         "stocks_are_separate": True,
         "trapping_horizon": located["trapping_horizon"],
         "charged_mass_inner": float(np.asarray(charged).reshape(-1)[0]),
@@ -1052,6 +1080,7 @@ def run(directory, *, producer_commit, calibration_record, probe_step_seconds=No
         initial = pg.stage_rates(coupled, grid)
         metric = freeze_sourced_metric(initial)
         fixed = _clone_state(coupled)
+        initial_norm = float(coupled["probability_stocks"]["remaining"])
         step = matched_step(initial["cfl_dt"], geometry["r_m"])
         if probe_step_seconds is None:
             import time
@@ -1081,7 +1110,9 @@ def run(directory, *, producer_commit, calibration_record, probe_step_seconds=No
             if marched["stopped"] == "cpu_budget":
                 break
             rates = pg.stage_rates(coupled, grid)
-            observation = station_observation(coupled, grid, rates, packet)
+            observation = station_observation(
+                coupled, grid, rates, packet, initial_norm=initial_norm,
+            )
             record = {
                 "station_over_rm": station,
                 "fixed_control": FIXED_CONTROL,

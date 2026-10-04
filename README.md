@@ -4,8 +4,8 @@
 horizon-regular RN radial parent. Its scientific start is `5cb775a7`.
 The committed checkout and both remotes are the two-room import
 `d95175c2`, not an RN result. The source-free jet comparison is measured and independently confirmed.
-A temporary paired pilot reached $T=10$ in scratch data. It is not a
-sealed production record or a completed neutral experiment.
+The archived rank-$9$ pilot reconciles probability accounting. Its
+shell energy ledger stays open, and the archive is not a production seal.
 The periodic parent and the earlier discovery programme stay historical
 input. The target is one unified article. Existing papers below are
 preserved.

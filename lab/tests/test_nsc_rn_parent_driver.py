@@ -245,3 +245,53 @@ def test_resume_continues_the_pair_and_the_fixed_metric_stays_frozen(tmp_path):
     assert admitted["center_probability_current"] < 0.0
     assert admitted["packet_mode_energy"] > 0.0
     assert admitted["killing_energy"] > 0.0
+
+
+def test_sat_norm_loss_is_twice_the_raw_coefficient_and_closes_the_scratch():
+    import json
+    from pathlib import Path
+    from recursive_horizons import nsc_rn_pg as pg
+    from recursive_horizons import nsc_rn_source as source
+    radius = np.linspace(4.0, 8.0, 17)
+    pack = source.radial_sbp(radius.size, float(radius[0]), float(radius[-1]))
+    grid = {
+        "radius": radius, "weights": pack["weights"], "derivative": pack["derivative"],
+        "spacing": pack["step"], "points": radius.size,
+    }
+    phi = np.zeros((2, radius.size, 1), dtype=complex)
+    phi[1, -1, 0] = 0.4 + 0.15j
+    lapse = np.ones(radius.size)
+    shift = np.full(radius.size, 0.2)
+    _rates, raw = pg.dirac_rates(grid, phi, lapse, shift, kappa=1)
+    incoming = -float(shift[-1] + lapse[-1])
+    assert raw == pytest.approx(-incoming * abs(phi[1, -1, 0]) ** 2)
+    sat_only = np.zeros_like(phi)
+    sat_only[1, -1, 0] = (incoming / pack["weights"][-1]) * phi[1, -1, 0]
+    norm_rate = 2.0 * np.real(np.sum(
+        pack["weights"] * np.conj(phi[:, :, 0]) * sat_only[:, :, 0]
+    ))
+    assert norm_rate == pytest.approx(-2.0 * raw, abs=1.0e-12)
+    step = 1.0e-8
+    moved = phi + step * sat_only
+    before = pg._probability_norm(phi, pack["weights"])
+    after = pg._probability_norm(moved, pack["weights"])
+    assert (after - before) / step == pytest.approx(-2.0 * raw, rel=1.0e-5, abs=1.0e-6)
+    scratch = Path("/tmp/nsc-rn-pilot-rank9")
+    if not (scratch / "t5.0000.json").is_file() or not (scratch / "t10.0000.json").is_file():
+        pytest.skip("scratch T5/T10 ledger is not on this machine")
+    t0 = json.loads((scratch / "t0.json").read_text())["accounting"]
+    initial = t0["coupled_probability"]["remaining"]
+    for name in ("t5.0000", "t10.0000"):
+        accounting = json.loads((scratch / f"{name}.json").read_text())["accounting"]
+        for arm in ("coupled", "fixed"):
+            probability = accounting[arm + "_probability"]
+            raw_sat = accounting[arm + "_mass_stocks"]["sat_debit"]
+            ledger = driver.sat_norm_ledger(raw_sat, probability, initial)
+            gap = initial - (
+                probability["remaining"] + probability["excision_outflow"]
+                + probability["outer_outflow"]
+            )
+            assert abs(gap - 2.0 * raw_sat) < 9.6e-13
+            assert abs(ledger["probability_closure_residual"]) < 1.0e-11
+            assert ledger["included_in_mass_flux"] is False
+            assert ledger["coefficient_duplicated"] is False

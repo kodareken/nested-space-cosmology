@@ -95,11 +95,18 @@ The matched pair shares one prepared column and the metric reconstructed
 from that column at \(t=0\). The coupled arm calls `rk4_step`, so the source
 is rebuilt at every stage. The fixed arm is that same initial lapse and
 shift held frozen, advanced only by `dirac_rates`. It is not a second
-coupled evolution and it is not the vacuum RN. Probability stocks, mass-flux
-stocks and the SAT debit stay separate. A sourced station whose lapse or
+coupled evolution and it is not the vacuum RN. Probability outflow and mass flux stay in different fields. The historical
+stock `sat_debit` remains the raw coefficient \(-a_-|\chi_-|^2\). The SBP
+identity \(2\operatorname{Re}\) makes the probability loss twice that
+coefficient, and the closure residual is
+remaining + excision outflow + outer outflow + \(2\times\) raw SAT minus
+the initial norm. That raw number is not copied into a second energy.
+The scratch pilot, not a sealed record, had trapping radius
+\(1.325655540\) at \(t=0\) and \(1.330239387\) at \(T/r_m=10\), with
+coupled inner mass \(1.040990280\). A sourced station whose lapse or
 shift rate exceeds \(10^{-5}\) stores null \(R_4\) and Ricci². The missing
-primitive is the radial derivative of those time rates, \(N_{tr}\) and
-\(\beta_{tr}\).
+curvature primitive is \(N_{tr}\) and \(\beta_{tr}\). A closed shell-energy
+ledger is not claimed.
 
 `forecast_first_pair` times one coupled step and one frozen Dirac step and
 projects each station with the factor 1.5. It does not march and does not

@@ -103,12 +103,11 @@ horizon-regular Painlevé–Gullstrand parent exterior and a distinct
 near-throat child on its own areal radius. Exact magnetic
 Reissner–Nordström calibration comes before any sourced case. The
 working source-free jet comparison is measured and independently
-confirmed. A temporary rank-$9$ paired pilot reached $T=10$; its
-numbers and open gaps are in
+confirmed. The archived rank-$9$ pilot reconciles probability
+accounting and leaves the shell energy ledger open. Its record is in
 [current result](current-result.md#rn-radial-parent-4-october-2026).
-That pilot is scratch, not a sealed production record and not a
-completed neutral experiment. Dynamic curvature is null. Accounting
-and refinement remain open.
+Dynamic $R_4$ is null, refinement is pending, and the archive is not
+a completed neutral programme or a production seal.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer

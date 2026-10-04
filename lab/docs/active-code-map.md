@@ -20,10 +20,10 @@ end of this file are not the active queue.
 Nonperiodic horizon-regular PG parent exterior and a distinct
 areal-radius near-throat child. Exact magnetic RN calibration comes
 before any sourced case. The source-free jet comparison is measured from reconstructed PG
-jets, meets $10^{-4}$, and is independently confirmed. A temporary
-rank-$9$ paired pilot reached $T=10$ in scratch outside this
-repository. Dynamic curvature is null. Accounting and refinement
-are open. It is not a sealed production record. The charged
+jets, meets $10^{-4}$, and is independently confirmed. The archived
+pilot reconciles probability accounting and leaves shell energy open.
+Dynamic $R_4$ is null and refinement is pending. It is not a
+production seal. The charged
 lowest-Landau Gauss branch is later. The MMP negative-Casimir study
 is parallel and leaves the classical throat unblocked. The historical
 parent's bounded $n_f=256$ confirmation is recorded; its comparison
@@ -46,11 +46,14 @@ Rules:
 
 <a id="rn-pending-registration"></a>
 
-The driver, episode note and driver tests are registered. The
-temporary pilot's arrays stay outside this repository. Dynamic
-curvature is null. A review is comparing the probability gap with
-the SAT debit; that comparison does not close the accounting, and
-refinement is pending.
+The archived pilot and its receipt are
+[rn-first-infall-pilot-2026-10-04](../archive/rn-first-infall-pilot-2026-10-04/receipt.json).
+`sat_norm_ledger` uses twice the raw SAT coefficient. Probability
+closure is reconciled. Shell energy is not closed, dynamic $R_4$ is
+null, and refinement is pending. The frozen arm is an initial
+sourced-metric counterfactual. Commit `89f0fad` is a retrospective
+source match, not the commit that produced the run. The wrapper hash
+is in the receipt; the driver hash was not captured.
 
 The driver reads `nsc_rn_reference.sourcefree_static_rn`,
 `nsc_rn_pg.sourcefree_rates`, its metric jets, `rk4_step` and

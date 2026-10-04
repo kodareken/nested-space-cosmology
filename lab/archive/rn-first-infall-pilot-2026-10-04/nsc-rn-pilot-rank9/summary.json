@@ -1,0 +1,358 @@
+{
+  "cpu_seconds": 546.8691660963814,
+  "dt": 0.001,
+  "fixed_control": "initial_sourced_metric_frozen",
+  "hashes_after": {
+    "lab/src/recursive_horizons/nsc_rn_observables.py": "3e3711545dd39c4afdc9fb0d75eac8fadd8f06f5d181fea0884a26630aa8a87c",
+    "lab/src/recursive_horizons/nsc_rn_pg.py": "d8302eae947356f55df73a2e148b50f3552fb5c0d6fffd725b02c63c052ccda0",
+    "lab/src/recursive_horizons/nsc_rn_reference.py": "4e61faaa18ba7f82461a6e2ac7e19590786a24d7cce79cf30241079a22bbbecc",
+    "lab/src/recursive_horizons/nsc_rn_source.py": "1d9bbe0f1f13341717535a3091bdc9577ee70078c1b601c36e7660350156e8a0"
+  },
+  "hashes_before": {
+    "lab/src/recursive_horizons/nsc_rn_observables.py": "3e3711545dd39c4afdc9fb0d75eac8fadd8f06f5d181fea0884a26630aa8a87c",
+    "lab/src/recursive_horizons/nsc_rn_pg.py": "d8302eae947356f55df73a2e148b50f3552fb5c0d6fffd725b02c63c052ccda0",
+    "lab/src/recursive_horizons/nsc_rn_reference.py": "4e61faaa18ba7f82461a6e2ac7e19590786a24d7cce79cf30241079a22bbbecc",
+    "lab/src/recursive_horizons/nsc_rn_source.py": "1d9bbe0f1f13341717535a3091bdc9577ee70078c1b601c36e7660350156e8a0"
+  },
+  "hashes_unchanged": true,
+  "history": [
+    {
+      "cpu_seconds": 13.435994167928584,
+      "path": "/tmp/nsc-rn-pilot-rank9/t0.2500.npz",
+      "sha256": "fbb2fe5a435896cf4c706f42cdd1c23230d8abce8d7a42288a9ab2789b725e1c",
+      "stopped": "station",
+      "t_over_rm": 0.2500000000000002,
+      "tag": "t0.2500"
+    },
+    {
+      "cpu_seconds": 28.543638502946123,
+      "path": "/tmp/nsc-rn-pilot-rank9/t0.5000.npz",
+      "sha256": "b20964acc3a3b993ca09d824caaa41b1ec2bdf13357a5cf8212beca03dfdcd48",
+      "stopped": "station",
+      "t_over_rm": 0.5000000000000004,
+      "tag": "t0.5000"
+    },
+    {
+      "cpu_seconds": 42.31587816684623,
+      "path": "/tmp/nsc-rn-pilot-rank9/t0.7500.npz",
+      "sha256": "26f78ac637d31f25a56fcc4f4e921ebcb34f97aa6f0870c0f632bb5a5c239ffe",
+      "stopped": "station",
+      "t_over_rm": 0.7500000000000006,
+      "tag": "t0.7500"
+    },
+    {
+      "cpu_seconds": 56.17943919787649,
+      "path": "/tmp/nsc-rn-pilot-rank9/t1.0000.npz",
+      "sha256": "a76b89c10e3803cc48f37f06ee497a50efefeb4dd109d71dd8154da766b90b21",
+      "stopped": "station",
+      "t_over_rm": 1.0000000000000009,
+      "tag": "t1.0000"
+    },
+    {
+      "cpu_seconds": 70.0361791520263,
+      "path": "/tmp/nsc-rn-pilot-rank9/t1.2500.npz",
+      "sha256": "f5c7d560635427ea2243f8c333ded11c8e3c127898f93cca7f480b0cf9118491",
+      "stopped": "station",
+      "t_over_rm": 1.2500000000000009,
+      "tag": "t1.2500"
+    },
+    {
+      "cpu_seconds": 83.41131248194142,
+      "path": "/tmp/nsc-rn-pilot-rank9/t1.5000.npz",
+      "sha256": "a5dc885290cf05ca1424de281406ff3f743c07242db566ce3a2e9ee2770a189b",
+      "stopped": "station",
+      "t_over_rm": 1.500000000000001,
+      "tag": "t1.5000"
+    },
+    {
+      "cpu_seconds": 97.35679815136245,
+      "path": "/tmp/nsc-rn-pilot-rank9/t1.7500.npz",
+      "sha256": "28936c3b3b675fff9a18def49efc52beb58d6247db7cd8b3f4dd68e289d82210",
+      "stopped": "station",
+      "t_over_rm": 1.7500000000000013,
+      "tag": "t1.7500"
+    },
+    {
+      "cpu_seconds": 111.61876244624727,
+      "path": "/tmp/nsc-rn-pilot-rank9/t2.0000.npz",
+      "sha256": "736bf37f955020d71e09c2caf65c1a7b8114c926c795580e2e369b4ca1ac4ea8",
+      "stopped": "station",
+      "t_over_rm": 2.0000000000000018,
+      "tag": "t2.0000"
+    },
+    {
+      "cpu_seconds": 125.2995874050539,
+      "path": "/tmp/nsc-rn-pilot-rank9/t2.2500.npz",
+      "sha256": "77365d7a3c9d3d3c3d7e2068516e51083e61bef25f25b6d7b3d263af5803c731",
+      "stopped": "station",
+      "t_over_rm": 2.2500000000000018,
+      "tag": "t2.2500"
+    },
+    {
+      "cpu_seconds": 138.5302501048427,
+      "path": "/tmp/nsc-rn-pilot-rank9/t2.5000.npz",
+      "sha256": "cbfa62983f52ef42d150912ec9fa059af1ce6a323241b010634c467b562a0461",
+      "stopped": "station",
+      "t_over_rm": 2.5000000000000018,
+      "tag": "t2.5000"
+    },
+    {
+      "cpu_seconds": 151.7693250607117,
+      "path": "/tmp/nsc-rn-pilot-rank9/t2.7500.npz",
+      "sha256": "aa1e39b9147e60acfc4711266dc7b6505efbd353cd8e872fa6d49313145e545c",
+      "stopped": "station",
+      "t_over_rm": 2.750000000000002,
+      "tag": "t2.7500"
+    },
+    {
+      "cpu_seconds": 165.39816269263974,
+      "path": "/tmp/nsc-rn-pilot-rank9/t3.0000.npz",
+      "sha256": "a64230f7bbbac8387b3abec050d916d38f14aa2900ecad169855c901287e8690",
+      "stopped": "station",
+      "t_over_rm": 3.000000000000002,
+      "tag": "t3.0000"
+    },
+    {
+      "cpu_seconds": 179.13753443857422,
+      "path": "/tmp/nsc-rn-pilot-rank9/t3.2500.npz",
+      "sha256": "8defd0f0e8623d53452a86f3f114b41020aabcd7b196445d8ae3e9e87aafe45d",
+      "stopped": "station",
+      "t_over_rm": 3.2500000000000027,
+      "tag": "t3.2500"
+    },
+    {
+      "cpu_seconds": 192.6599538596056,
+      "path": "/tmp/nsc-rn-pilot-rank9/t3.5000.npz",
+      "sha256": "8f10b004983a141c95c6ce12bd0eb077bd02722ccfb3670da63a6db6e7b25285",
+      "stopped": "station",
+      "t_over_rm": 3.5000000000000027,
+      "tag": "t3.5000"
+    },
+    {
+      "cpu_seconds": 206.3919573557214,
+      "path": "/tmp/nsc-rn-pilot-rank9/t3.7500.npz",
+      "sha256": "6f2557622fa58b3d720cb1db8e9611ceb5c020c2018c20ded0287babfeee35d5",
+      "stopped": "station",
+      "t_over_rm": 3.750000000000003,
+      "tag": "t3.7500"
+    },
+    {
+      "cpu_seconds": 220.36665456165792,
+      "path": "/tmp/nsc-rn-pilot-rank9/t4.0000.npz",
+      "sha256": "a805c1e22d3805f0f6518a4b5bec204686370932c7b0215407550d6d244f72c3",
+      "stopped": "station",
+      "t_over_rm": 4.0000000000000036,
+      "tag": "t4.0000"
+    },
+    {
+      "cpu_seconds": 234.09786606160924,
+      "path": "/tmp/nsc-rn-pilot-rank9/t4.2500.npz",
+      "sha256": "39f3e059d1a981411969c98234d12b850485de915a06a73d8959ada25607fc52",
+      "stopped": "station",
+      "t_over_rm": 4.2500000000000036,
+      "tag": "t4.2500"
+    },
+    {
+      "cpu_seconds": 247.1458830127376,
+      "path": "/tmp/nsc-rn-pilot-rank9/t4.5000.npz",
+      "sha256": "54907a8e66b3c95ab3dc76cbf2726de929985da98564a0677790a4135b2bf62a",
+      "stopped": "station",
+      "t_over_rm": 4.5000000000000036,
+      "tag": "t4.5000"
+    },
+    {
+      "cpu_seconds": 260.4329874179675,
+      "path": "/tmp/nsc-rn-pilot-rank9/t4.7500.npz",
+      "sha256": "f0fe1bfb98ae0f89005a773987d36f17031f72089df2ad87a128c43f337e1b3f",
+      "stopped": "station",
+      "t_over_rm": 4.7500000000000036,
+      "tag": "t4.7500"
+    },
+    {
+      "cpu_seconds": 273.71527208568295,
+      "path": "/tmp/nsc-rn-pilot-rank9/t5.0000.npz",
+      "sha256": "a523d1ff0191019de8facc08deef57506fc8e376b2ad91cf4b2c1b607608d01d",
+      "stopped": "station",
+      "t_over_rm": 5.0000000000000036,
+      "tag": "t5.0000"
+    },
+    {
+      "cpu_seconds": 287.1616802990029,
+      "path": "/tmp/nsc-rn-pilot-rank9/t5.2500.npz",
+      "sha256": "8d963a0dd5565a6fdd32c79781d6e3997e353016d7871df2134944140ddb0365",
+      "stopped": "station",
+      "t_over_rm": 5.250000000000004,
+      "tag": "t5.2500"
+    },
+    {
+      "cpu_seconds": 300.23561888566473,
+      "path": "/tmp/nsc-rn-pilot-rank9/t5.5000.npz",
+      "sha256": "3f8e19ed83935da16cd89c215dab64a86caf8e97cbf4878ad4b004d26d1d903d",
+      "stopped": "station",
+      "t_over_rm": 5.500000000000004,
+      "tag": "t5.5000"
+    },
+    {
+      "cpu_seconds": 313.6424072595546,
+      "path": "/tmp/nsc-rn-pilot-rank9/t5.7500.npz",
+      "sha256": "0521268e5074c6f885f0685a59ce9981be02d1fc66bc85b34bd3d7e762244b95",
+      "stopped": "station",
+      "t_over_rm": 5.750000000000004,
+      "tag": "t5.7500"
+    },
+    {
+      "cpu_seconds": 327.22470726052416,
+      "path": "/tmp/nsc-rn-pilot-rank9/t6.0000.npz",
+      "sha256": "27fef92ba636b829c54da66fab3a66a2d57092fc6009b96b11976715dc166863",
+      "stopped": "station",
+      "t_over_rm": 6.000000000000004,
+      "tag": "t6.0000"
+    },
+    {
+      "cpu_seconds": 341.0823937187379,
+      "path": "/tmp/nsc-rn-pilot-rank9/t6.2500.npz",
+      "sha256": "116cc58a2b7249be8465e03f380e35e15bf2d610931bb6d36e4c88211045c28a",
+      "stopped": "station",
+      "t_over_rm": 6.250000000000004,
+      "tag": "t6.2500"
+    },
+    {
+      "cpu_seconds": 354.5096058487543,
+      "path": "/tmp/nsc-rn-pilot-rank9/t6.5000.npz",
+      "sha256": "e9c6364573bc429af299472c63fdb27e94d86ed4c1ce86ccd5887b010a410932",
+      "stopped": "station",
+      "t_over_rm": 6.500000000000005,
+      "tag": "t6.5000"
+    },
+    {
+      "cpu_seconds": 368.46173645809176,
+      "path": "/tmp/nsc-rn-pilot-rank9/t6.7500.npz",
+      "sha256": "9b4f922d36ed5b7845cad0cb4850f6b56fa223a4eeccdc2b702e7a38c608c324",
+      "stopped": "station",
+      "t_over_rm": 6.750000000000005,
+      "tag": "t6.7500"
+    },
+    {
+      "cpu_seconds": 381.40175738491234,
+      "path": "/tmp/nsc-rn-pilot-rank9/t7.0000.npz",
+      "sha256": "1ecdb11a79ad704550abb45438d6f193f4baf3b6ecb8b8f09dd5822e5d8fe582",
+      "stopped": "station",
+      "t_over_rm": 7.000000000000005,
+      "tag": "t7.0000"
+    },
+    {
+      "cpu_seconds": 394.3702864703955,
+      "path": "/tmp/nsc-rn-pilot-rank9/t7.2500.npz",
+      "sha256": "627d76bf7363ed5a43f43f83c27d3159a076e57f581a6605360a8ba443cb33ac",
+      "stopped": "station",
+      "t_over_rm": 7.250000000000005,
+      "tag": "t7.2500"
+    },
+    {
+      "cpu_seconds": 407.4931397504988,
+      "path": "/tmp/nsc-rn-pilot-rank9/t7.5000.npz",
+      "sha256": "a662c579ed49ce85eda097a7e3ff2f65716831639d5ef1cdb506cd999a2cc228",
+      "stopped": "station",
+      "t_over_rm": 7.500000000000006,
+      "tag": "t7.5000"
+    },
+    {
+      "cpu_seconds": 421.5375611753843,
+      "path": "/tmp/nsc-rn-pilot-rank9/t7.7500.npz",
+      "sha256": "7218837ab8ad986d184ae4536a6f368d9b8330ce78285fd563f043056c38f832",
+      "stopped": "station",
+      "t_over_rm": 7.750000000000006,
+      "tag": "t7.7500"
+    },
+    {
+      "cpu_seconds": 434.7909408385458,
+      "path": "/tmp/nsc-rn-pilot-rank9/t8.0000.npz",
+      "sha256": "a2814116851899f3e094416eefd419cc4f1e14dac78214d74c951249bad41be9",
+      "stopped": "station",
+      "t_over_rm": 8.000000000000007,
+      "tag": "t8.0000"
+    },
+    {
+      "cpu_seconds": 448.4176214985491,
+      "path": "/tmp/nsc-rn-pilot-rank9/t8.2500.npz",
+      "sha256": "dcb30efdf35a4dbfc47cbf3ce5991f9f8a86401f568fcc35a0a3aa1a7e87390b",
+      "stopped": "station",
+      "t_over_rm": 8.250000000000007,
+      "tag": "t8.2500"
+    },
+    {
+      "cpu_seconds": 463.16681575524854,
+      "path": "/tmp/nsc-rn-pilot-rank9/t8.5000.npz",
+      "sha256": "031543ddb3bfbea9e47458d973ec195f0325c490a9a2d687b011722e8a44398b",
+      "stopped": "station",
+      "t_over_rm": 8.500000000000007,
+      "tag": "t8.5000"
+    },
+    {
+      "cpu_seconds": 478.4542640915606,
+      "path": "/tmp/nsc-rn-pilot-rank9/t8.7500.npz",
+      "sha256": "254ecb3ffd6b60cfbab75d80207a7205461e4ee8c35d1d4b19ad176dde9cdb1b",
+      "stopped": "station",
+      "t_over_rm": 8.750000000000007,
+      "tag": "t8.7500"
+    },
+    {
+      "cpu_seconds": 492.8080220054253,
+      "path": "/tmp/nsc-rn-pilot-rank9/t9.0000.npz",
+      "sha256": "b0398f1981d37117e89ae3e37bd30e1f67576ad38325fc60092860ee6605c5b6",
+      "stopped": "station",
+      "t_over_rm": 9.000000000000007,
+      "tag": "t9.0000"
+    },
+    {
+      "cpu_seconds": 506.638168632373,
+      "path": "/tmp/nsc-rn-pilot-rank9/t9.2500.npz",
+      "sha256": "711f882aaf16cb305dade534e72b32cf959680e51e257336eb2e15e0bbc2902d",
+      "stopped": "station",
+      "t_over_rm": 9.250000000000007,
+      "tag": "t9.2500"
+    },
+    {
+      "cpu_seconds": 520.6370810452499,
+      "path": "/tmp/nsc-rn-pilot-rank9/t9.5000.npz",
+      "sha256": "190e18de9e3d81e906afd8d3f7bdf0470141ecd057546c5fe5fc17bfa6db492d",
+      "stopped": "station",
+      "t_over_rm": 9.500000000000007,
+      "tag": "t9.5000"
+    },
+    {
+      "cpu_seconds": 533.7283326254692,
+      "path": "/tmp/nsc-rn-pilot-rank9/t9.7500.npz",
+      "sha256": "281e755fa85311b3c3bcf694147004d4da67b89101c6bf4ba4d791e4b397714d",
+      "stopped": "station",
+      "t_over_rm": 9.750000000000007,
+      "tag": "t9.7500"
+    },
+    {
+      "cpu_seconds": 546.8691660963814,
+      "path": "/tmp/nsc-rn-pilot-rank9/t10.0000.npz",
+      "sha256": "7586472db0e6a29d2b4dea6a02429bf5c2c28cecc6812f735e02647bc134ef74",
+      "stopped": "station",
+      "t_over_rm": 10.000000000000007,
+      "tag": "t10.0000"
+    }
+  ],
+  "points": 869,
+  "prepare_seconds": 0.7119692089909222,
+  "rank": 9,
+  "reached_stations": [
+    5.0,
+    10.0
+  ],
+  "sealed_lab_results_written": false,
+  "step": {
+    "cfl_dt": 0.0175072677917729,
+    "cfl_half_step": 0.00875363389588645,
+    "dt": 0.001,
+    "limited_by": "step_cap",
+    "step_cap": 0.001,
+    "step_cap_over_rm": 0.001
+  },
+  "stop_reason": "station",
+  "wall_seconds": 547.4613800829975
+}

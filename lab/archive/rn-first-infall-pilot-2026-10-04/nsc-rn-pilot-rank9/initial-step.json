@@ -1,0 +1,8 @@
+{
+  "cfl_dt": 0.0175072677917729,
+  "cfl_half_step": 0.00875363389588645,
+  "dt": 0.001,
+  "limited_by": "step_cap",
+  "step_cap": 0.001,
+  "step_cap_over_rm": 0.001
+}

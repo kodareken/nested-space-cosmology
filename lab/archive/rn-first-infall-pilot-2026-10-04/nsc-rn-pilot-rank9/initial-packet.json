@@ -1,0 +1,39 @@
+{
+  "car_rank": 1,
+  "center_probability_current": -0.29640440842378263,
+  "filling": 0.0005729320397692806,
+  "grid_points": 869,
+  "initial_partition": {
+    "norm": 1.0000000000000002,
+    "prob_abs_r_minus_12_le_2": 0.7227038417432888,
+    "prob_r_gt_20": 0.026728460579444422,
+    "prob_r_lt_8": 0.018629823749863255
+  },
+  "integrated_negative_current": -1.31245540695221,
+  "inward_at_center": true,
+  "killing_energy": 0.0023534367399123944,
+  "mean_radius": 12.29214199213277,
+  "measured_width_rms": 2.9428162224151837,
+  "packet_mode_energy": 1.0269266582037033,
+  "phi_shape": [
+    2,
+    869,
+    1
+  ],
+  "prepare_seconds": 0.7119692089909222,
+  "requested_center": 11.999999999999991,
+  "requested_frequencies": [
+    0.10000000000000009,
+    0.3250000000000003,
+    0.5500000000000005,
+    0.7750000000000006,
+    1.0000000000000009,
+    1.2250000000000012,
+    1.4500000000000013,
+    1.6750000000000016,
+    1.9000000000000017
+  ],
+  "requested_width": 1.9999999999999984,
+  "width_is_fit": false,
+  "width_rms": 2.9428162224151837
+}

@@ -1,0 +1,121 @@
+{
+  "accounting": {
+    "R4": null,
+    "Ricci2": null,
+    "analytic_curvature_injected": false,
+    "charged_mass_inner": 1.0400114629776962,
+    "charged_mass_outer": 1.0410398773590952,
+    "chunk_steps": 251,
+    "chunk_stopped": "station",
+    "coupled_clocks": {
+      "killing": 3.144131976597208,
+      "normal": 3.2505208466810105,
+      "t": 3.25
+    },
+    "coupled_flux_sum": 0.9999919654081517,
+    "coupled_inner_mass": 1.0400114629776962,
+    "coupled_mass_stocks": {
+      "excision_flux": 1.1462977692514123e-05,
+      "outer_flux": -1.7358853477432315e-07,
+      "sat_debit": 4.017296415729351e-06
+    },
+    "coupled_moments": {
+      "center": 7.9518887745695945,
+      "norm": 0.9922052039481626,
+      "width_rms": 3.5862488552534684
+    },
+    "coupled_partition": {
+      "norm": 0.9922052039481626,
+      "prob_abs_r_minus_12_le_2": 0.07528409929692899,
+      "prob_r_gt_20": 0.025201528004277177,
+      "prob_r_lt_8": 0.5961273168824308
+    },
+    "coupled_probability": {
+      "excision_outflow": 0.005967794869771701,
+      "outer_outflow": 0.00181896659021737,
+      "remaining": 0.9922052039481626
+    },
+    "cpu_seconds": 179.13753443857422,
+    "curvature_status": "unresolved_time_dependent_curvature",
+    "fixed_clocks": {
+      "killing": 3.1441319676448463,
+      "normal": 3.2504799856979707,
+      "t": 3.25
+    },
+    "fixed_flux_sum": 0.9999919654081523,
+    "fixed_inner_mass": 1.04,
+    "fixed_mass_stocks": {
+      "excision_flux": 0.0,
+      "outer_flux": 0.0,
+      "sat_debit": 4.017296415523098e-06
+    },
+    "fixed_moments": {
+      "center": 7.951938388062375,
+      "norm": 0.9922053263877645,
+      "width_rms": 3.5862412464094544
+    },
+    "fixed_partition": {
+      "norm": 0.9922053263877645,
+      "prob_abs_r_minus_12_le_2": 0.07528718852413674,
+      "prob_r_gt_20": 0.02520152814903381,
+      "prob_r_lt_8": 0.5961191434856701
+    },
+    "fixed_probability": {
+      "excision_outflow": 0.005967672237400585,
+      "outer_outflow": 0.0018189667829872195,
+      "remaining": 0.9922053263877645
+    },
+    "fixed_t": 3.25,
+    "initial_packet": {
+      "car_rank": 1,
+      "center_probability_current": -0.29640440842378263,
+      "filling": 0.0005729320397692806,
+      "grid_points": 869,
+      "initial_partition": {
+        "norm": 1.0000000000000002,
+        "prob_abs_r_minus_12_le_2": 0.7227038417432888,
+        "prob_r_gt_20": 0.026728460579444422,
+        "prob_r_lt_8": 0.018629823749863255
+      },
+      "integrated_negative_current": -1.31245540695221,
+      "inward_at_center": true,
+      "killing_energy": 0.0023534367399123944,
+      "mean_radius": 12.29214199213277,
+      "measured_width_rms": 2.9428162224151837,
+      "packet_mode_energy": 1.0269266582037033,
+      "phi_shape": [
+        2,
+        869,
+        1
+      ],
+      "prepare_seconds": 0.7119692089909222,
+      "requested_center": 11.999999999999991,
+      "requested_frequencies": [
+        0.10000000000000009,
+        0.3250000000000003,
+        0.5500000000000005,
+        0.7750000000000006,
+        1.0000000000000009,
+        1.2250000000000012,
+        1.4500000000000013,
+        1.6750000000000016,
+        1.9000000000000017
+      ],
+      "requested_width": 1.9999999999999984,
+      "width_is_fit": false,
+      "width_rms": 2.9428162224151837
+    },
+    "lapse_difference_max": 0.00011555524095729908,
+    "lapse_rate_max": 4.812204534567948e-05,
+    "required_time_jet_primitive": "spatial derivatives of the supplied lapse and shift rates, N_tr and beta_tr, so the Christoffel time derivative can be formed; curvature_from_pg_jets stays unresolved above a 1e-5 rate and does not insert the analytic RN curvature",
+    "shift_difference_max": 0.00013441969623451122,
+    "shift_rate_max": 5.712398078545634e-05,
+    "t": 3.25,
+    "t_over_rm": 3.2500000000000027,
+    "trapping_horizon": 1.325710456052282,
+    "wall_seconds": 179.32957912501297
+  },
+  "payload_bytes": 75682,
+  "payload_sha256": "8defd0f0e8623d53452a86f3f114b41020aabcd7b196445d8ae3e9e87aafe45d",
+  "tag": "t3.2500"
+}

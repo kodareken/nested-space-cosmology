@@ -1,0 +1,121 @@
+{
+  "accounting": {
+    "R4": null,
+    "Ricci2": null,
+    "analytic_curvature_injected": false,
+    "charged_mass_inner": 1.0407939047082662,
+    "charged_mass_outer": 1.0410391213358494,
+    "chunk_steps": 251,
+    "chunk_stopped": "station",
+    "coupled_clocks": {
+      "killing": 8.223114473363866,
+      "normal": 8.501276243613907,
+      "t": 8.5
+    },
+    "coupled_flux_sum": 0.99999196458731,
+    "coupled_inner_mass": 1.0407939047082662,
+    "coupled_mass_stocks": {
+      "excision_flux": 0.0007939047082589822,
+      "outer_flux": -1.0530431492522973e-06,
+      "sat_debit": 4.01770681257705e-06
+    },
+    "coupled_moments": {
+      "center": 4.733631685802496,
+      "norm": 0.3157434427439609,
+      "width_rms": 6.638720493091276
+    },
+    "coupled_partition": {
+      "norm": 0.3157434427439609,
+      "prob_abs_r_minus_12_le_2": 0.04191887805903341,
+      "prob_r_gt_20": 0.05575995938037015,
+      "prob_r_lt_8": 0.842499927045863
+    },
+    "coupled_probability": {
+      "excision_outflow": 0.6766442999718966,
+      "outer_outflow": 0.00760422187145265,
+      "remaining": 0.3157434427439609
+    },
+    "cpu_seconds": 463.16681575524854,
+    "curvature_status": "unresolved_time_dependent_curvature",
+    "fixed_clocks": {
+      "killing": 8.223114376914806,
+      "normal": 8.501255347207872,
+      "t": 8.5
+    },
+    "fixed_flux_sum": 0.9999919645873144,
+    "fixed_inner_mass": 1.04,
+    "fixed_mass_stocks": {
+      "excision_flux": 0.0,
+      "outer_flux": 0.0,
+      "sat_debit": 4.017706811883878e-06
+    },
+    "fixed_moments": {
+      "center": 4.732039923666791,
+      "norm": 0.31594177140720237,
+      "width_rms": 6.637146686098387
+    },
+    "fixed_partition": {
+      "norm": 0.31594177140720237,
+      "prob_abs_r_minus_12_le_2": 0.0418964260046724,
+      "prob_r_gt_20": 0.055725036094133984,
+      "prob_r_lt_8": 0.8425884444657715
+    },
+    "fixed_probability": {
+      "excision_outflow": 0.6764459672117863,
+      "outer_outflow": 0.007604225968325773,
+      "remaining": 0.31594177140720237
+    },
+    "fixed_t": 8.5,
+    "initial_packet": {
+      "car_rank": 1,
+      "center_probability_current": -0.29640440842378263,
+      "filling": 0.0005729320397692806,
+      "grid_points": 869,
+      "initial_partition": {
+        "norm": 1.0000000000000002,
+        "prob_abs_r_minus_12_le_2": 0.7227038417432888,
+        "prob_r_gt_20": 0.026728460579444422,
+        "prob_r_lt_8": 0.018629823749863255
+      },
+      "integrated_negative_current": -1.31245540695221,
+      "inward_at_center": true,
+      "killing_energy": 0.0023534367399123944,
+      "mean_radius": 12.29214199213277,
+      "measured_width_rms": 2.9428162224151837,
+      "packet_mode_energy": 1.0269266582037033,
+      "phi_shape": [
+        2,
+        869,
+        1
+      ],
+      "prepare_seconds": 0.7119692089909222,
+      "requested_center": 11.999999999999991,
+      "requested_frequencies": [
+        0.10000000000000009,
+        0.3250000000000003,
+        0.5500000000000005,
+        0.7750000000000006,
+        1.0000000000000009,
+        1.2250000000000012,
+        1.4500000000000013,
+        1.6750000000000016,
+        1.9000000000000017
+      ],
+      "requested_width": 1.9999999999999984,
+      "width_is_fit": false,
+      "width_rms": 2.9428162224151837
+    },
+    "lapse_difference_max": 0.00014542939842376867,
+    "lapse_rate_max": 4.663168546013636e-05,
+    "required_time_jet_primitive": "spatial derivatives of the supplied lapse and shift rates, N_tr and beta_tr, so the Christoffel time derivative can be formed; curvature_from_pg_jets stays unresolved above a 1e-5 rate and does not insert the analytic RN curvature",
+    "shift_difference_max": 0.0006024610039381262,
+    "shift_rate_max": 0.00015908593501686642,
+    "t": 8.5,
+    "t_over_rm": 8.500000000000007,
+    "trapping_horizon": 1.3295438189917919,
+    "wall_seconds": 463.66726387501694
+  },
+  "payload_bytes": 75658,
+  "payload_sha256": "031543ddb3bfbea9e47458d973ec195f0325c490a9a2d687b011722e8a44398b",
+  "tag": "t8.5000"
+}

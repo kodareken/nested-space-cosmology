@@ -12268,6 +12268,622 @@
       "sha256": "073b21d415cc6bcaf6bfa15857329ff78ef8a4c72a0b2766092cb99eb276cbde"
     },
     {
+      "bytes": 1053,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/initial-packet.json",
+      "sha256": "981ef65fa1d1a41d41479b4a217836ba5f5ee00fc7e15747d3521b4d0830714d"
+    },
+    {
+      "bytes": 168,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/initial-step.json",
+      "sha256": "0f5b6455b9be3739b00a0a857f2e4642812c8347fffe50cc9568167e486361a0"
+    },
+    {
+      "bytes": 475,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/producer-hashes-before.json",
+      "sha256": "4466c3239d9427bc7bfaf2be484466e1e2c5beb5bf15d0181d487e0e06ad4ae7"
+    },
+    {
+      "bytes": 12767,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/summary.json",
+      "sha256": "9b58255316f10b342accd3eff00d56f82b6c41f9eaefbe58f7ce5956c2a6a89d"
+    },
+    {
+      "bytes": 4051,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.2500.json",
+      "sha256": "6e08440a5b141f242a6ea6df4bcc87de3dc42da8132690f4d8d3508372c13840"
+    },
+    {
+      "bytes": 75790,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.2500.npz",
+      "sha256": "fbb2fe5a435896cf4c706f42cdd1c23230d8abce8d7a42288a9ab2789b725e1c"
+    },
+    {
+      "bytes": 4050,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.5000.json",
+      "sha256": "1b6d57efd1caf1c52a4ca42be5e32aecbd07598811efe3354ec75c5d5f690a7b"
+    },
+    {
+      "bytes": 75755,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.5000.npz",
+      "sha256": "b20964acc3a3b993ca09d824caaa41b1ec2bdf13357a5cf8212beca03dfdcd48"
+    },
+    {
+      "bytes": 4051,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.7500.json",
+      "sha256": "d65d44101695fff1a54ed89c148b90ab9c591f563783bbea20fe4ae2e3b0263d"
+    },
+    {
+      "bytes": 75748,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.7500.npz",
+      "sha256": "26f78ac637d31f25a56fcc4f4e921ebcb34f97aa6f0870c0f632bb5a5c239ffe"
+    },
+    {
+      "bytes": 3626,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.json",
+      "sha256": "88312bd0202097726ad9275e8e15e3bbd2da123c9fe1490bc8c59430ec2d1ebb"
+    },
+    {
+      "bytes": 75681,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.npz",
+      "sha256": "092ce50a862231bda8dc998c445a59bbb360401b475f8f696917abf97858757a"
+    },
+    {
+      "bytes": 4041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.0000.json",
+      "sha256": "badf0e7c42c6bc31b45e0df50a81b204b3856acb82afb3a4125a6ccb0222d2b6"
+    },
+    {
+      "bytes": 75738,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.0000.npz",
+      "sha256": "a76b89c10e3803cc48f37f06ee497a50efefeb4dd109d71dd8154da766b90b21"
+    },
+    {
+      "bytes": 4042,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.2500.json",
+      "sha256": "8bc396bd069910b81778c81e6f09d6bf8f0f396cdf68582635d11e1355903732"
+    },
+    {
+      "bytes": 75730,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.2500.npz",
+      "sha256": "f5c7d560635427ea2243f8c333ded11c8e3c127898f93cca7f480b0cf9118491"
+    },
+    {
+      "bytes": 4043,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.5000.json",
+      "sha256": "5ff17e7440160ba1f247880f5ca462f4757918a563faf0744f41a101915f36b5"
+    },
+    {
+      "bytes": 75726,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.5000.npz",
+      "sha256": "a5dc885290cf05ca1424de281406ff3f743c07242db566ce3a2e9ee2770a189b"
+    },
+    {
+      "bytes": 4047,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.7500.json",
+      "sha256": "ace7aae7669f3e88a57c2c03f8b1f0202a34d89c515969c86b5689af43ed482b"
+    },
+    {
+      "bytes": 75714,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t1.7500.npz",
+      "sha256": "28936c3b3b675fff9a18def49efc52beb58d6247db7cd8b3f4dd68e289d82210"
+    },
+    {
+      "bytes": 4033,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t10.0000.json",
+      "sha256": "4cf6b75862face55194b2ae5a6ababd5849463c96547482e2bb54438dca16a70"
+    },
+    {
+      "bytes": 75644,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t10.0000.npz",
+      "sha256": "7586472db0e6a29d2b4dea6a02429bf5c2c28cecc6812f735e02647bc134ef74"
+    },
+    {
+      "bytes": 4039,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.0000.json",
+      "sha256": "b2d0b80da75164cf443f365c1c289447b1f6b7c45547088e7ba0130fdd25ec54"
+    },
+    {
+      "bytes": 75773,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.0000.npz",
+      "sha256": "736bf37f955020d71e09c2caf65c1a7b8114c926c795580e2e369b4ca1ac4ea8"
+    },
+    {
+      "bytes": 4043,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.2500.json",
+      "sha256": "c756cf911dde1d3d6c84f4dbfbbc1d0d67af894a7cca3ec705031ce8a97005f4"
+    },
+    {
+      "bytes": 75721,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.2500.npz",
+      "sha256": "77365d7a3c9d3d3c3d7e2068516e51083e61bef25f25b6d7b3d263af5803c731"
+    },
+    {
+      "bytes": 4038,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.5000.json",
+      "sha256": "020967a27b3cf3529a461b5f002637f2b8ebc80260ca94bfdbf328b680f1d608"
+    },
+    {
+      "bytes": 75714,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.5000.npz",
+      "sha256": "cbfa62983f52ef42d150912ec9fa059af1ce6a323241b010634c467b562a0461"
+    },
+    {
+      "bytes": 4040,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.7500.json",
+      "sha256": "c6ec9528dec55a06090f228a1463b2386ee2c3023bb773670a89f7d9cc488a89"
+    },
+    {
+      "bytes": 75676,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t2.7500.npz",
+      "sha256": "aa1e39b9147e60acfc4711266dc7b6505efbd353cd8e872fa6d49313145e545c"
+    },
+    {
+      "bytes": 4041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.0000.json",
+      "sha256": "f19834e479959b908d7f6c6d64d95b0cdf76fca2fe868207190692142dc5f909"
+    },
+    {
+      "bytes": 75687,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.0000.npz",
+      "sha256": "a64230f7bbbac8387b3abec050d916d38f14aa2900ecad169855c901287e8690"
+    },
+    {
+      "bytes": 4050,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.2500.json",
+      "sha256": "838a84088a3eaf384a1d730ffd3588d87e6d7b05bd3c73c4954ff5847fcb3af4"
+    },
+    {
+      "bytes": 75682,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.2500.npz",
+      "sha256": "8defd0f0e8623d53452a86f3f114b41020aabcd7b196445d8ae3e9e87aafe45d"
+    },
+    {
+      "bytes": 4037,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.5000.json",
+      "sha256": "1af61d5fe3fdbb5fdbc6940ee095766ebb10d6307c709a9aca839520db57e145"
+    },
+    {
+      "bytes": 75666,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.5000.npz",
+      "sha256": "8f10b004983a141c95c6ce12bd0eb077bd02722ccfb3670da63a6db6e7b25285"
+    },
+    {
+      "bytes": 4049,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.7500.json",
+      "sha256": "775c4f7dbee2ecae5ecbff1d517f216c6fa6d0b954eaa0be45e016be5bd6a3c9"
+    },
+    {
+      "bytes": 75697,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t3.7500.npz",
+      "sha256": "6f2557622fa58b3d720cb1db8e9611ceb5c020c2018c20ded0287babfeee35d5"
+    },
+    {
+      "bytes": 4041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.0000.json",
+      "sha256": "3ca9649dee8c64a1f00a83b7a166fead29a4b4cf2971c7b73a41521cf37f51d3"
+    },
+    {
+      "bytes": 75730,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.0000.npz",
+      "sha256": "a805c1e22d3805f0f6518a4b5bec204686370932c7b0215407550d6d244f72c3"
+    },
+    {
+      "bytes": 4042,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.2500.json",
+      "sha256": "dbd81465f4ef060c1ebfb67461e8b41d9e72210e10d4a5bd28e0fd98c4ffc5df"
+    },
+    {
+      "bytes": 75739,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.2500.npz",
+      "sha256": "39f3e059d1a981411969c98234d12b850485de915a06a73d8959ada25607fc52"
+    },
+    {
+      "bytes": 4041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.5000.json",
+      "sha256": "f396fb770db506fd3a7e03953c378548b8cbcd193769bf8ea8ac9c9eab6695a2"
+    },
+    {
+      "bytes": 75723,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.5000.npz",
+      "sha256": "54907a8e66b3c95ab3dc76cbf2726de929985da98564a0677790a4135b2bf62a"
+    },
+    {
+      "bytes": 4035,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.7500.json",
+      "sha256": "6caa88b90456f193ffc33631853803a69b629c5a52609c614c80b6b29bee7a49"
+    },
+    {
+      "bytes": 75712,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t4.7500.npz",
+      "sha256": "f0fe1bfb98ae0f89005a773987d36f17031f72089df2ad87a128c43f337e1b3f"
+    },
+    {
+      "bytes": 4039,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.0000.json",
+      "sha256": "5e3acecc663ad2bbd176ee26cb3bd67d05c825d788f929f28881ee5f356484aa"
+    },
+    {
+      "bytes": 75709,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.0000.npz",
+      "sha256": "a523d1ff0191019de8facc08deef57506fc8e376b2ad91cf4b2c1b607608d01d"
+    },
+    {
+      "bytes": 4037,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.2500.json",
+      "sha256": "ab7870e259c6ea439a928a4fdd0a19b9126069171674732998d3115e3a92354c"
+    },
+    {
+      "bytes": 75710,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.2500.npz",
+      "sha256": "8d963a0dd5565a6fdd32c79781d6e3997e353016d7871df2134944140ddb0365"
+    },
+    {
+      "bytes": 4036,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.5000.json",
+      "sha256": "e5f8ba294cb7d2e8fa526584efc209fa759c2b880c992ce9f8435f448e9bb42d"
+    },
+    {
+      "bytes": 75719,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.5000.npz",
+      "sha256": "3f8e19ed83935da16cd89c215dab64a86caf8e97cbf4878ad4b004d26d1d903d"
+    },
+    {
+      "bytes": 4042,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.7500.json",
+      "sha256": "949b27e08442aa2c82762ea2bf39718332ab2356d901b11b3b0b79fe325d9f98"
+    },
+    {
+      "bytes": 75713,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t5.7500.npz",
+      "sha256": "0521268e5074c6f885f0685a59ce9981be02d1fc66bc85b34bd3d7e762244b95"
+    },
+    {
+      "bytes": 4033,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.0000.json",
+      "sha256": "fcc67c5f7a5100519a0d1a09a34ef525cb3a7c1836d63f3fc2c831bfe68fae4c"
+    },
+    {
+      "bytes": 75672,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.0000.npz",
+      "sha256": "27fef92ba636b829c54da66fab3a66a2d57092fc6009b96b11976715dc166863"
+    },
+    {
+      "bytes": 4041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.2500.json",
+      "sha256": "6195ccb42d3960cbd847403cff108276b0d29abc873b77fa987d423544a97008"
+    },
+    {
+      "bytes": 75663,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.2500.npz",
+      "sha256": "116cc58a2b7249be8465e03f380e35e15bf2d610931bb6d36e4c88211045c28a"
+    },
+    {
+      "bytes": 4032,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.5000.json",
+      "sha256": "c07adf9fefcc78680b20166bdd0dfbc5be865436e9e3bcfa313b8e69b3e0ed87"
+    },
+    {
+      "bytes": 75637,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.5000.npz",
+      "sha256": "e9c6364573bc429af299472c63fdb27e94d86ed4c1ce86ccd5887b010a410932"
+    },
+    {
+      "bytes": 4036,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.7500.json",
+      "sha256": "eaea9a7d57003e550101c7a2dbb18769d4b4134d08cd1ae864317a9fcac560c3"
+    },
+    {
+      "bytes": 75681,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t6.7500.npz",
+      "sha256": "9b4f922d36ed5b7845cad0cb4850f6b56fa223a4eeccdc2b702e7a38c608c324"
+    },
+    {
+      "bytes": 4033,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.0000.json",
+      "sha256": "bbab6bd1966c03c2e02d5707292aead7b20c5ec9bc29ee8e473b6044d213a8fc"
+    },
+    {
+      "bytes": 75664,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.0000.npz",
+      "sha256": "1ecdb11a79ad704550abb45438d6f193f4baf3b6ecb8b8f09dd5822e5d8fe582"
+    },
+    {
+      "bytes": 4039,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.2500.json",
+      "sha256": "55ca6fc1d42cdb9359499daea614660dfecf9fbe5822739d16cf3f7f3fdba61a"
+    },
+    {
+      "bytes": 75657,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.2500.npz",
+      "sha256": "627d76bf7363ed5a43f43f83c27d3159a076e57f581a6605360a8ba443cb33ac"
+    },
+    {
+      "bytes": 4032,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.5000.json",
+      "sha256": "749bab0d07b3bed9e499fef4b136387345693a194114ff372814235d6c92139c"
+    },
+    {
+      "bytes": 75662,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.5000.npz",
+      "sha256": "a662c579ed49ce85eda097a7e3ff2f65716831639d5ef1cdb506cd999a2cc228"
+    },
+    {
+      "bytes": 4023,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.7500.json",
+      "sha256": "4cd55c47c5f4ad7fca0c3f942fa913ca6d47f9ac53d74bf132dfa850b05d660c"
+    },
+    {
+      "bytes": 75678,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t7.7500.npz",
+      "sha256": "7218837ab8ad986d184ae4536a6f368d9b8330ce78285fd563f043056c38f832"
+    },
+    {
+      "bytes": 4029,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.0000.json",
+      "sha256": "c1ad5056dc00f346157218640746f5754469f1c3fe87d7b1a49f3456a20d3638"
+    },
+    {
+      "bytes": 75657,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.0000.npz",
+      "sha256": "a2814116851899f3e094416eefd419cc4f1e14dac78214d74c951249bad41be9"
+    },
+    {
+      "bytes": 4041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.2500.json",
+      "sha256": "4c1bba07ab8d88cace88f6c454ac7907fc51052b0ce3217dcb5c79f3cbb52ddc"
+    },
+    {
+      "bytes": 75682,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.2500.npz",
+      "sha256": "dcb30efdf35a4dbfc47cbf3ce5991f9f8a86401f568fcc35a0a3aa1a7e87390b"
+    },
+    {
+      "bytes": 4032,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.5000.json",
+      "sha256": "8665b98aaba92543f6f9aea0f9e9c64b74e1fe3e091322e1285b115c9b003ba5"
+    },
+    {
+      "bytes": 75658,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.5000.npz",
+      "sha256": "031543ddb3bfbea9e47458d973ec195f0325c490a9a2d687b011722e8a44398b"
+    },
+    {
+      "bytes": 4035,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.7500.json",
+      "sha256": "786ca4bc1b4c8235d5de0bf073b08fc3b83045721eeae9541ebd899f94db08e8"
+    },
+    {
+      "bytes": 75664,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t8.7500.npz",
+      "sha256": "254ecb3ffd6b60cfbab75d80207a7205461e4ee8c35d1d4b19ad176dde9cdb1b"
+    },
+    {
+      "bytes": 4040,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.0000.json",
+      "sha256": "9ecfbfbe662c8cf48a8bbb60a983d6b23a8d1b8599dec35ff50ce491467bff8a"
+    },
+    {
+      "bytes": 75664,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.0000.npz",
+      "sha256": "b0398f1981d37117e89ae3e37bd30e1f67576ad38325fc60092860ee6605c5b6"
+    },
+    {
+      "bytes": 4038,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.2500.json",
+      "sha256": "c565483d41822a4f87bc334c457e82b2c307a8a3a15e7a255b091282643e3d05"
+    },
+    {
+      "bytes": 75681,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.2500.npz",
+      "sha256": "711f882aaf16cb305dade534e72b32cf959680e51e257336eb2e15e0bbc2902d"
+    },
+    {
+      "bytes": 4028,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.5000.json",
+      "sha256": "39bdb9777e9a37f156bb141c4543437b51a7df10cc915a4df46e7fd362b84d45"
+    },
+    {
+      "bytes": 75679,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.5000.npz",
+      "sha256": "190e18de9e3d81e906afd8d3f7bdf0470141ecd057546c5fe5fc17bfa6db492d"
+    },
+    {
+      "bytes": 4038,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.7500.json",
+      "sha256": "cb76f5c4358e2e2c7e6ef21336ee40af39a4143c410355891c0ab3a99f68af9c"
+    },
+    {
+      "bytes": 75660,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t9.7500.npz",
+      "sha256": "281e755fa85311b3c3bcf694147004d4da67b89101c6bf4ba4d791e4b397714d"
+    },
+    {
+      "bytes": 9844,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/nsc_rn_pilot_march.py",
+      "sha256": "ef45c5eba4c66f922be0ec04159f208861e5e5e7299d319ce8dd10ea8483ee47"
+    },
+    {
+      "bytes": 25191,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
+      "path": "lab/archive/rn-first-infall-pilot-2026-10-04/receipt.json",
+      "sha256": "e3e8226f7d748ea0a62068c4efa37a7ec9e3d5ff6bd3f4923a9536dd4d77f130"
+    },
+    {
       "bytes": 4359,
       "original_git_blob": "3d6aca4c5623cb6ab6887dd6c3a9c6a1f0f638c7",
       "original_sha256": "6649d0a2c2f64a153821cff8becccff4b776d6444192ebc240c1b0c7492b6af8",
@@ -12366,22 +12982,22 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 177359,
+      "bytes": 177572,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d95175c25a9989aea681967d6089aa7b2bf27706",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "e53ff54231b46f182b347e5452f8759940a804995b6c76848a2adf2ef368cf56"
+      "sha256": "ff33625ebe7567e786f07b8ee768534115990e0a76f1fecfc380da3aa177ddc7"
     },
     {
-      "bytes": 96454,
+      "bytes": 96473,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d95175c25a9989aea681967d6089aa7b2bf27706",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "0118808cbf635986cad0c4168a885410723a8af9c56c559e146d9f5e2f5c31e6"
+      "sha256": "bd21ea6c5e5f431754a36d897f60dc19332b660a8fd283693b0d3e5ef60510a1"
     },
     {
       "bytes": 16589,
@@ -15515,11 +16131,11 @@
       "sha256": "efa8cc666c783f0067f7b32912beee4d55dc3d48775cb27355d7770552f0322a"
     },
     {
-      "bytes": 5996,
+      "bytes": 6506,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d95175c25a9989aea681967d6089aa7b2bf27706",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
       "path": "lab/docs/nsc-rn-parent-episode.md",
-      "sha256": "468cbba94905fc25e5fdb0854a868c00d12d189b22a4e54e419a3dcd80350adf"
+      "sha256": "27af754630110a31e0f528e549ec144b98510ab722e9b43ac818d1485cbbc4f3"
     },
     {
       "bytes": 7409,
@@ -88585,11 +89201,11 @@
       "sha256": "6a74c0734cc53cfe10e1ac5699059de9b6828737d0124a5808d96b6d8dfbe4a3"
     },
     {
-      "bytes": 55182,
+      "bytes": 56474,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d95175c25a9989aea681967d6089aa7b2bf27706",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
       "path": "lab/scripts/derive_nsc_rn_parent.py",
-      "sha256": "3488368f3951b285410fd55519dac006e81a6844437b4b6c3f15dab80d566c87"
+      "sha256": "0fa80245f8fad145d5d337d07e188b99861b4fe0f89d8ab7ad669c18e217e266"
     },
     {
       "bytes": 7743,
@@ -93641,11 +94257,11 @@
       "sha256": "0c629baeaa0045bcfbe1c6dc7bfb4a70a1d5270d72c78c64d8412d654f2af99c"
     },
     {
-      "bytes": 12590,
+      "bytes": 15096,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "d95175c25a9989aea681967d6089aa7b2bf27706",
+      "changed_from_commit": "89f0fadfb886ab73077c6c39d1ac7cd6613c8979",
       "path": "lab/tests/test_nsc_rn_parent_driver.py",
-      "sha256": "5b53ecb16189c51470e12d352c8204fb5d0aea7e6f77ef0e4bf73c9b357f93dc"
+      "sha256": "517add87bddbfd1608c5e28c6cee69b73a36677919797a0170ac47cfb4dcba4e"
     },
     {
       "bytes": 18896,
