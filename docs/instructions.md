@@ -1,9 +1,11 @@
 # Instructions for the unified NSC repository
 
 The laboratory and publication now belong to **one checkout and one Git history**.
-The maintained branches are `main` and `codex/work-branch` at
-`kodareken/nested-space-cosmology`. Work on `codex/work-branch`, test the relevant
-changes, fast-forward `main`, and push both. No force-push is needed.
+On this Windows checkout the branches are `win11/blackholes-infinity/main`
+and `agent/blackholes-infinity/work`. Do the work on
+`agent/blackholes-infinity/work`. The published remote
+`kodareken/nested-space-cosmology` still has `main` and
+`codex/work-branch` at the same recorded commit. Do not force-push.
 
 ## Establish context after compaction
 
@@ -35,7 +37,9 @@ These examples show the launcher. They are not an order to continue the paused
 gate campaign. The launcher uses the caller's interpreter, sets the lab source path and working
 directory, and provides the four pinned historical sources needed by the active
 evidence closure. Use the existing validation environment for scientific work;
-its requirements remain in `lab/pyproject.toml`. The root publication environment
+its requirements remain in `lab/pyproject.toml`. On this Windows checkout
+that environment is `.venv/validation` on Python 3.14.8 with Numba, as
+recorded in the root index. Do not recreate a Homebrew environment. The root publication environment
 has its own pinned requirements. Neither launcher starts a campaign by itself.
 
 [Consolidation and recovery](repository-consolidation.md) explains the old paths,
