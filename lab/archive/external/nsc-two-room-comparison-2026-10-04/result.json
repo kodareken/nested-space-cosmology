@@ -1,0 +1,461 @@
+{
+  "title": "Two-room frequency transport on the inherited NSC black-universe benchmark",
+  "scope": "Fixed-background ray and free Dirac-mode calculation, generated separately from repository evidence",
+  "reference_commit": "7656eec34141ceca22c073bca997acefb317be05",
+  "reference_files": [
+    "https://github.com/kodareken/nested-space-cosmology/blob/7656eec34141ceca22c073bca997acefb317be05/docs/nsc-clock-horizon.md",
+    "https://github.com/kodareken/nested-space-cosmology/blob/7656eec34141ceca22c073bca997acefb317be05/docs/nsc-dirac-tetrad.md",
+    "https://github.com/kodareken/nested-space-cosmology/blob/7656eec34141ceca22c073bca997acefb317be05/results/nsc-5-clock-horizon.json"
+  ],
+  "primary_reference": "https://arxiv.org/html/gr-qc/0511109v1",
+  "units": "c=hbar=L_throat=1; retained benchmark mass m=1",
+  "model": {
+    "A": "1+3rho+3(1+rho^2)(atan(rho)-pi/2)",
+    "r": "sqrt(1+rho^2)",
+    "beta": "sqrt(1-A)",
+    "ray_observer": "u=partial_tau-beta*partial_rho; unit freely falling PG normal",
+    "ray_transfer": "nu_child/nu_parent=(1+beta_parent)/(1+beta_child)",
+    "child_clock": "dT=-drho/sqrt(-A)",
+    "child_Hamiltonian": "H_(k,kappa)=(k/sqrt(-A))*sigma3+(kappa/r)*sigma1",
+    "child_norm_rescaling": "canonical spinor = r*sqrt(a_parallel)*covariant spinor",
+    "child_eigenfrequency_squared": "k^2/(-A)+kappa^2/r^2",
+    "child_time_evolution": "i dpsi/dT=H psi; no reset after the initial neck state"
+  },
+  "horizon_rho": 1.9006916054701521,
+  "ray_stations": [
+    {
+      "region": "parent exterior",
+      "rho": 8.0,
+      "radius": 8.06225774829855,
+      "A": 0.7507760633815188,
+      "beta": 0.49922333340748526,
+      "angular_frequency_kappa1": 0.12403473458920847,
+      "angular_frequency_over_parent_angular_frequency": 1.0,
+      "nu_over_Killing_frequency": 0.6670120306406693,
+      "nu_over_parent_station_frequency": 1.0,
+      "ingoing_characteristic_speed": -1.4992233334074854
+    },
+    {
+      "region": "event horizon",
+      "rho": 1.9006916054701521,
+      "radius": 2.1477030937968835,
+      "A": 8.881784197001252e-16,
+      "beta": 0.9999999999999996,
+      "angular_frequency_kappa1": 0.46561370744785724,
+      "angular_frequency_over_parent_angular_frequency": 3.753897720585501,
+      "nu_over_Killing_frequency": 0.5000000000000001,
+      "nu_over_parent_station_frequency": 0.7496116667037429,
+      "ingoing_characteristic_speed": -1.9999999999999996
+    },
+    {
+      "region": "minimum sphere",
+      "rho": 0.0,
+      "radius": 1.0,
+      "A": -3.7123889803846897,
+      "beta": 2.1708037636748028,
+      "angular_frequency_kappa1": 1.0,
+      "angular_frequency_over_parent_angular_frequency": 8.06225774829855,
+      "nu_over_Killing_frequency": 0.31537744828492636,
+      "nu_over_parent_station_frequency": 0.47282122929927417,
+      "ingoing_characteristic_speed": -3.1708037636748028
+    },
+    {
+      "region": "expanding child",
+      "rho": -1.0,
+      "radius": 1.4142135623730951,
+      "A": -16.13716694115407,
+      "beta": 4.139706141884236,
+      "angular_frequency_kappa1": 0.7071067811865475,
+      "angular_frequency_over_parent_angular_frequency": 5.700877125495689,
+      "nu_over_Killing_frequency": 0.19456365255025965,
+      "nu_over_parent_station_frequency": 0.29169436773633606,
+      "ingoing_characteristic_speed": -5.139706141884236
+    },
+    {
+      "region": "expanding child",
+      "rho": -4.0,
+      "radius": 4.123105625617661,
+      "A": -158.72731351360937,
+      "beta": 12.638327164368288,
+      "angular_frequency_kappa1": 0.24253562503633297,
+      "angular_frequency_over_parent_angular_frequency": 1.955384722187607,
+      "nu_over_Killing_frequency": 0.07332277543631714,
+      "nu_over_parent_station_frequency": 0.10992721580432388,
+      "ingoing_characteristic_speed": -13.638327164368288
+    },
+    {
+      "region": "expanding child",
+      "rho": -16.0,
+      "radius": 16.0312195418814,
+      "A": -2421.043033410848,
+      "beta": 49.21425640412387,
+      "angular_frequency_kappa1": 0.06237828615518053,
+      "angular_frequency_over_parent_angular_frequency": 0.5029098208801883,
+      "nu_over_Killing_frequency": 0.01991466311782075,
+      "nu_over_parent_station_frequency": 0.02985652762318633,
+      "ingoing_characteristic_speed": -50.21425640412387
+    },
+    {
+      "region": "expanding child",
+      "rho": -64.0,
+      "radius": 64.00781202322104,
+      "A": -38612.28405679787,
+      "beta": 196.50263117016493,
+      "angular_frequency_kappa1": 0.015623093000542114,
+      "angular_frequency_over_parent_angular_frequency": 0.1259574025960095,
+      "nu_over_Killing_frequency": 0.005063223685047602,
+      "nu_over_parent_station_frequency": 0.007590903090884798,
+      "ingoing_characteristic_speed": -197.50263117016493
+    }
+  ],
+  "child_stations": [
+    {
+      "rho": 0.0,
+      "proper_time_from_neck": 0.0,
+      "proper_time_quadrature_indicator": 0.0,
+      "a_parallel": 1.9267560770332839,
+      "sphere_radius": 1.0,
+      "H_parallel": 1.557021169290531,
+      "H_sphere": -0.0,
+      "shear_squared": 0.8081049738729508,
+      "angular_frequency_k0_kappa1": 1.0,
+      "frequency_k1_kappa1": 1.126662471472409,
+      "frequency_ratio_k1_to_k0_kappa1": 1.126662471472409,
+      "normalized_longitudinal_coefficient_r_over_a": 0.519007056430177
+    },
+    {
+      "rho": -1.0,
+      "proper_time_from_neck": 0.3618458306601814,
+      "proper_time_quadrature_indicator": 4.017295725635488e-15,
+      "a_parallel": 4.0171092767255,
+      "sphere_radius": 1.4142135623730951,
+      "H_parallel": 2.506425087540642,
+      "H_sphere": 2.0085546383627495,
+      "shear_squared": 0.08262499472153213,
+      "angular_frequency_k0_kappa1": 0.7071067811865475,
+      "frequency_k1_kappa1": 0.749645747030655,
+      "frequency_ratio_k1_to_k0_kappa1": 1.0601591824260628,
+      "normalized_longitudinal_coefficient_r_over_a": 0.35204757076607957
+    },
+    {
+      "rho": -4.0,
+      "proper_time_from_neck": 0.7675953595855484,
+      "proper_time_quadrature_indicator": 3.70850673594609e-14,
+      "a_parallel": 12.598702850437,
+      "sphere_radius": 4.123105625617661,
+      "H_parallel": 2.997083773925617,
+      "H_sphere": 2.964400670691059,
+      "shear_squared": 0.0003560617456802543,
+      "angular_frequency_k0_kappa1": 0.24253562503633297,
+      "frequency_k1_kappa1": 0.25519334305665925,
+      "frequency_ratio_k1_to_k0_kappa1": 1.0521891083770893,
+      "normalized_longitudinal_coefficient_r_over_a": 0.32726429653626177
+    },
+    {
+      "rho": -16.0,
+      "proper_time_from_neck": 1.215154352569261,
+      "proper_time_quadrature_indicator": 4.2053964048601734e-14,
+      "a_parallel": 49.20409569752144,
+      "sphere_radius": 16.0312195418814,
+      "H_parallel": 3.0647925209222047,
+      "H_sphere": 3.0632900045149527,
+      "shear_squared": 7.525185180204495e-07,
+      "angular_frequency_k0_kappa1": 0.06237828615518053,
+      "frequency_k1_kappa1": 0.06560560722544682,
+      "frequency_ratio_k1_to_k0_kappa1": 1.0517378926095786,
+      "normalized_longitudinal_coefficient_r_over_a": 0.32581067316900086
+    },
+    {
+      "rho": -64.0,
+      "proper_time_from_neck": 1.6664555088112492,
+      "proper_time_quadrature_indicator": 4.6988954182158316e-14,
+      "a_parallel": 196.50008665849964,
+      "sphere_radius": 64.00781202322104,
+      "H_parallel": 3.0696476721783563,
+      "H_sphere": 3.069564448656085,
+      "shear_squared": 2.3087182197535107e-09,
+      "angular_frequency_k0_kappa1": 0.015623093000542114,
+      "frequency_k1_kappa1": 0.01643105379222655,
+      "frequency_ratio_k1_to_k0_kappa1": 1.0517158024762703,
+      "normalized_longitudinal_coefficient_r_over_a": 0.32573935773606627
+    }
+  ],
+  "ray_integration": {
+    "coarse": {
+      "rho_start": 8.0,
+      "rho_end": -63.99999999999996,
+      "pg_coordinate_arrival_time": 5.956835088185495,
+      "final_local_frequency_over_E": 0.005063223685047709,
+      "maximum_relative_momentum_vs_analytic": 7.688299113712999e-12,
+      "maximum_Killing_energy_defect": 7.688405467831672e-12,
+      "maximum_null_condition_roundoff": 2.842170943040401e-14,
+      "rhs_evaluations": 1802,
+      "rtol": 1e-09,
+      "atol": 1e-11,
+      "max_step": 0.05
+    },
+    "fine": {
+      "rho_start": 8.0,
+      "rho_end": -64.00000000000009,
+      "pg_coordinate_arrival_time": 5.956835088185481,
+      "final_local_frequency_over_E": 0.005063223685047597,
+      "maximum_relative_momentum_vs_analytic": 2.96603201727091e-14,
+      "maximum_Killing_energy_defect": 2.964295475749168e-14,
+      "maximum_null_condition_roundoff": 1.4210854715202004e-14,
+      "rhs_evaluations": 3587,
+      "rtol": 1e-12,
+      "atol": 1e-14,
+      "max_step": 0.025
+    },
+    "arrival_time_refinement_difference": 1.4210854715202004e-14
+  },
+  "child_mode_integrations": [
+    {
+      "fine": {
+        "k": 0.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 7.6512696116674235e-34,
+        "positive_instantaneous_projection": 0.9999999999999998,
+        "final_instantaneous_eigenvalues": [
+          -0.06237828615518053,
+          0.06237828615518053
+        ],
+        "sampled_norm_defect": 1.1102230246251565e-15,
+        "rhs_evaluations": 4817,
+        "spinor_real": [
+          0.5963686991533884,
+          0.5963686991533884
+        ],
+        "spinor_imag": [
+          -0.37992680172645793,
+          -0.37992680172645793
+        ],
+        "rtol": 1e-12,
+        "atol": 1e-14,
+        "max_step": 0.05
+      },
+      "coarse": {
+        "k": 0.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 3.141818307807587e-34,
+        "positive_instantaneous_projection": 1.0000000000000075,
+        "final_instantaneous_eigenvalues": [
+          -0.06237828615518053,
+          0.06237828615518053
+        ],
+        "sampled_norm_defect": 1.3145040611561853e-13,
+        "rhs_evaluations": 2417,
+        "spinor_real": [
+          0.5963686991533927,
+          0.5963686991533927
+        ],
+        "spinor_imag": [
+          -0.3799268017264564,
+          -0.3799268017264564
+        ],
+        "rtol": 1e-09,
+        "atol": 1e-11,
+        "max_step": 0.1
+      },
+      "absolute_projection_refinement_difference": 4.509451303859837e-34,
+      "endpoint_spinor_l2_refinement_difference": 6.505944815763881e-15
+    },
+    {
+      "fine": {
+        "k": 1.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 0.006208084144693428,
+        "positive_instantaneous_projection": 0.993791915855307,
+        "final_instantaneous_eigenvalues": [
+          -0.06560560722544682,
+          0.06560560722544682
+        ],
+        "sampled_norm_defect": 1.3322676295501878e-15,
+        "rhs_evaluations": 4817,
+        "spinor_real": [
+          -0.7066690767528375,
+          -0.4181760404152317
+        ],
+        "spinor_imag": [
+          0.45112695453125945,
+          0.34961705633347223
+        ],
+        "rtol": 1e-12,
+        "atol": 1e-14,
+        "max_step": 0.05
+      },
+      "coarse": {
+        "k": 1.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 0.006208084144693393,
+        "positive_instantaneous_projection": 0.993791915855317,
+        "final_instantaneous_eigenvalues": [
+          -0.06560560722544682,
+          0.06560560722544682
+        ],
+        "sampled_norm_defect": 1.3322676295501878e-13,
+        "rhs_evaluations": 2417,
+        "spinor_real": [
+          -0.7066690767528436,
+          -0.4181760404152354
+        ],
+        "spinor_imag": [
+          0.4511269545312606,
+          0.34961705633346846
+        ],
+        "rtol": 1e-09,
+        "atol": 1e-11,
+        "max_step": 0.1
+      },
+      "absolute_projection_refinement_difference": 3.5561831257524545e-17,
+      "endpoint_spinor_l2_refinement_difference": 8.143506697550652e-15
+    },
+    {
+      "fine": {
+        "k": 4.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 0.008273923996503355,
+        "positive_instantaneous_projection": 0.991726076003497,
+        "final_instantaneous_eigenvalues": [
+          -0.10246839725422567,
+          0.10246839725422567
+        ],
+        "sampled_norm_defect": 6.8833827526759706e-15,
+        "rhs_evaluations": 4817,
+        "spinor_real": [
+          -0.5026228082798312,
+          -0.07802364026532707
+        ],
+        "spinor_imag": [
+          0.8071799526274407,
+          0.29957160785529324
+        ],
+        "rtol": 1e-12,
+        "atol": 1e-14,
+        "max_step": 0.05
+      },
+      "coarse": {
+        "k": 4.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 0.008273923996504328,
+        "positive_instantaneous_projection": 0.9917260760035798,
+        "final_instantaneous_eigenvalues": [
+          -0.10246839725422567,
+          0.10246839725422567
+        ],
+        "sampled_norm_defect": 2.074007632302255e-12,
+        "rhs_evaluations": 2417,
+        "spinor_real": [
+          -0.5026228082798504,
+          -0.07802364026531064
+        ],
+        "spinor_imag": [
+          0.807179952627498,
+          0.2995716078552509
+        ],
+        "rtol": 1e-09,
+        "atol": 1e-11,
+        "max_step": 0.1
+      },
+      "absolute_projection_refinement_difference": 9.731798700229888e-16,
+      "endpoint_spinor_l2_refinement_difference": 7.559561077326898e-14
+    },
+    {
+      "fine": {
+        "k": 16.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 2.874005304118906e-05,
+        "positive_instantaneous_projection": 0.9999712599469852,
+        "final_instantaneous_eigenvalues": [
+          -0.3311051195900375,
+          0.3311051195900375
+        ],
+        "sampled_norm_defect": 7.549516567451064e-13,
+        "rhs_evaluations": 4862,
+        "spinor_real": [
+          0.9217883433208742,
+          0.0897199253805185
+        ],
+        "spinor_imag": [
+          -0.37591167674236076,
+          -0.030773306553657984
+        ],
+        "rtol": 1e-12,
+        "atol": 1e-14,
+        "max_step": 0.05
+      },
+      "coarse": {
+        "k": 16.0,
+        "kappa": 1,
+        "rho_start": 0.0,
+        "rho_end": -16.0,
+        "initial_state": "positive instantaneous eigenstate at the minimum sphere",
+        "negative_instantaneous_projection": 2.8740053051881514e-05,
+        "positive_instantaneous_projection": 0.9999712599591107,
+        "final_instantaneous_eigenvalues": [
+          -0.3311051195900375,
+          0.3311051195900375
+        ],
+        "sampled_norm_defect": 5.21451104518178e-10,
+        "rhs_evaluations": 2432,
+        "spinor_real": [
+          0.9217883433254405,
+          0.08971992538078578
+        ],
+        "spinor_imag": [
+          -0.37591167674729853,
+          -0.030773306552968078
+        ],
+        "rtol": 1e-09,
+        "atol": 1e-11,
+        "max_step": 0.1
+      },
+      "absolute_projection_refinement_difference": 1.0692456035160669e-14,
+      "endpoint_spinor_l2_refinement_difference": 6.766056679524586e-12
+    }
+  ],
+  "checks": {
+    "high_precision_ray_frequency_absolute_difference": 6.661338147750939e-16,
+    "Hamiltonian_hermiticity_maximum": 0.0,
+    "Hamiltonian_squared_identity_maximum": 3.552713678800501e-15,
+    "geometric_commutator_identity_maximum": 8.881784197001252e-16,
+    "k0_no_mixing_control": 7.6512696116674235e-34,
+    "scope": "Finite arithmetic, solver and sampled-norm checks; not a propagated physical-model error bound"
+  },
+  "not_computed": [
+    "self-consistent state--geometry backreaction",
+    "full parent-to-child quantum scattering and transported state",
+    "observational fitting or quantum-gravity completion",
+    "particle creation for a specified in-vacuum and out-detector",
+    "a global ancestry clock or conserved global cosmological energy",
+    "necessity of nesting or a universal scale factor"
+  ],
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "mpmath": "1.3.0"
+  },
+  "script_sha256": "8b301708cee1818b7d3c10308abeda3d99b81c2f724fa616d0f17faeb7af4a2a"
+}

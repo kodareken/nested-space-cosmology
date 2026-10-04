@@ -1,0 +1,25 @@
+{
+  "bundle": "nsc_two_room_comparison",
+  "copied_on": "2026-10-04",
+  "files": [
+    {
+      "bytes": 14935,
+      "name": "compare_two_rooms.py",
+      "sha256": "8b301708cee1818b7d3c10308abeda3d99b81c2f724fa616d0f17faeb7af4a2a"
+    },
+    {
+      "bytes": 12586,
+      "name": "forskningsanteckning.md",
+      "sha256": "b06d6541d7e231eefe8fdd76f9a5868f8b2ca388893bf4257ec98adb4c2f9a9b"
+    },
+    {
+      "bytes": 16895,
+      "name": "result.json",
+      "sha256": "8f95b61427f586e2f8dd7ddf51cfa072d7c1c13681e515a7b79f836e95388f24"
+    }
+  ],
+  "owning_note": "lab/docs/nsc-two-room-comparison.md",
+  "scope": "Byte copy of the external fixed Bronnikov-Fabris two-room comparison. The Swedish note, script, and result.json are original bytes. README.txt and sha256sums.txt from the same bundle were not copied. This package is not a repository campaign, not the magnetic RN common-action branch, and not a paper.",
+  "script_sha256_in_result_json": "8b301708cee1818b7d3c10308abeda3d99b81c2f724fa616d0f17faeb7af4a2a"
+}
+

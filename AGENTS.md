@@ -98,6 +98,7 @@ AGENTS.md                 this index
 | Spherical Cauchy data | [Note](lab/docs/nsc-spherical-cauchy-data.md), [module](lab/src/recursive_horizons/nsc_spherical_cauchy_data.py), [record](lab/results/development/nsc-spherical-cauchy-data-v1.json) |
 | Regional coordinate and normal-observer ledger | [Note](lab/docs/nsc-regional-energy-exchange.md), [module](lab/src/recursive_horizons/nsc_regional_energy_exchange.py), [record](lab/results/development/nsc-regional-energy-exchange-v1.json) |
 | Archived nf256 probes | [Receipt](lab/archive/probes/README.md) |
+| Archived external two-room comparison | Fixed Bronnikov–Fabris phantom black-universe bytes, 4 October 2026; [owning note](lab/docs/nsc-two-room-comparison.md). Separate from the magnetic RN programme and from the papers. |
 | Evolving retained-region reduction | [Note](lab/docs/nsc-evolving-reduction.md), [module](lab/src/recursive_horizons/nsc_evolving_reduction.py) |
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |

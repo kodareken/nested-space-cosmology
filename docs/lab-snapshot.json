@@ -263,6 +263,34 @@
       "sha256": "1304d186b2f5b5da2b8ffc315a703883411cf61842ea6feed0f8e43a944751aa"
     },
     {
+      "bytes": 14935,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5cb775a751add5f72eb06cb681ca16c24a3527d2",
+      "path": "lab/archive/external/nsc-two-room-comparison-2026-10-04/compare_two_rooms.py",
+      "sha256": "8b301708cee1818b7d3c10308abeda3d99b81c2f724fa616d0f17faeb7af4a2a"
+    },
+    {
+      "bytes": 12586,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5cb775a751add5f72eb06cb681ca16c24a3527d2",
+      "path": "lab/archive/external/nsc-two-room-comparison-2026-10-04/forskningsanteckning.md",
+      "sha256": "b06d6541d7e231eefe8fdd76f9a5868f8b2ca388893bf4257ec98adb4c2f9a9b"
+    },
+    {
+      "bytes": 1025,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5cb775a751add5f72eb06cb681ca16c24a3527d2",
+      "path": "lab/archive/external/nsc-two-room-comparison-2026-10-04/receipt.json",
+      "sha256": "9e1d7caae28d843fddc11f516b218181366f134d7c0de2626ed7950f4c223a9a"
+    },
+    {
+      "bytes": 16895,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5cb775a751add5f72eb06cb681ca16c24a3527d2",
+      "path": "lab/archive/external/nsc-two-room-comparison-2026-10-04/result.json",
+      "sha256": "8f95b61427f586e2f8dd7ddf51cfa072d7c1c13681e515a7b79f836e95388f24"
+    },
+    {
       "bytes": 998,
       "original_git_blob": "401329fb99b11f14f92c733065315791c263f19b",
       "original_sha256": "681997d55e78e75d5aca390e525491e82000272c05ba2d8456e90208517377d5",
@@ -15807,6 +15835,13 @@
       "original_sha256": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72",
       "path": "lab/docs/nsc-transmitting-metric-pullback.md",
       "sha256": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72"
+    },
+    {
+      "bytes": 5807,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "5cb775a751add5f72eb06cb681ca16c24a3527d2",
+      "path": "lab/docs/nsc-two-room-comparison.md",
+      "sha256": "4b011a5b8df938b06de45438d3a7e7ecd173e36fd09bf8cbd1ec40e5ea1cf455"
     },
     {
       "bytes": 9148,

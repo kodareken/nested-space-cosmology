@@ -30,6 +30,7 @@ constrained calculation into a settled theory.
 | Current paper and preserved foundation | [papers.md](papers.md), [current PDF](../paper/finite-regeneration.pdf), [build/evidence](../paper/finite-regeneration-manifest.json) |
 | Reproduction | [reproducing.md](reproducing.md) |
 | How the laboratory was imported | [repository-consolidation.md](repository-consolidation.md) |
+| External two-room comparison, 4 October 2026 | [Owning note](../lab/docs/nsc-two-room-comparison.md). Byte copy under [nsc-two-room-comparison-2026-10-04](../lab/archive/external/nsc-two-room-comparison-2026-10-04/). Fixed Bronnikov–Fabris background. The active programme is unchanged. |
 | Historical OPEN companion edition | [local-gate-draft.md](local-gate-draft.md) |
 | Finite nested-quality construction | [nsc-nested-qualities.md](nsc-nested-qualities.md) |
 | Prior art and the open claim | [prior-art-and-open-claim.md](prior-art-and-open-claim.md) |
