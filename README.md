@@ -2,10 +2,11 @@
 
 **Active research:** the approved programme is the nonperiodic
 horizon-regular RN radial parent. Its scientific start is `5cb775a7`.
-The committed checkout and both remotes are the two-room import
-`d95175c2`, not an RN result. The source-free jet comparison is measured and independently confirmed.
-The archived rank-$9$ pilot reconciles probability accounting. Its
-shell energy ledger stays open, and the archive is not a production seal.
+The two-room import commit `d95175c2` is historical. It is not the
+live branch identity and not an RN result. The source-free jet comparison is measured and independently confirmed.
+The archived rank-$9$ frames are assessed by the driver's read-only
+`--assess-archive` command. No assessment file is saved yet, and the
+archive is not a production seal.
 The periodic parent and the earlier discovery programme stay historical
 input. The target is one unified article. Existing papers below are
 preserved.

@@ -21,9 +21,11 @@ remains a separate historical choice.
 
 The scientific starting checkpoint is
 `5cb775a751add5f72eb06cb681ca16c24a3527d2`, which produced the
-recorded NF256 confirmation below. Local `main`, `codex/work-branch`
-and both remotes are `d95175c25a9989aea681967d6089aa7b2bf27706`, the
-committed external two-room import. That import is not an RN result.
+recorded NF256 confirmation below. The external two-room import
+is the historical commit
+`d95175c25a9989aea681967d6089aa7b2bf27706`. It is not an RN result
+and not the live branch identity. Live branch commands are in the
+[instructions](instructions.md).
 The periodic parent below is historical input. Further periodic
 autonomous exchange runs stay off this programme. The active question
 is a nonperiodic horizon-regular Painlevé–Gullstrand parent exterior
@@ -56,16 +58,33 @@ sha256 `e3e8226f7d748ea0a62068c4efa37a7ec9e3d5ff6bd3f4923a9536dd4d77f130`.
 The wrapper `nsc_rn_pilot_march.py` is
 `ef45c5eba4c66f922be0ec04159f208861e5e5e7299d319ce8dd10ea8483ee47`.
 The receipt states that the driver hash was not captured. Commit
-`89f0fadfb886ab73077c6c39d1ac7cd6613c8979` matches the executable PG,
-source, observables and reference retrospectively. It is not a commit
-that produced the run. Those four module bytes still match that commit.
+`89f0fadfb886ab73077c6c39d1ac7cd6613c8979` is the retrospective source
+match for the archived PG, source, observables and reference inputs.
+The archived inputs match those recorded source objects. That commit
+did not produce the run, and it is not the live branch identity.
 At $T=5$ and $T=10$ both arms have corrected probability closure below
 $9.6\times10^{-13}$. At $T=10$ the coupled inner mass is
 $1.040990280$ against the fixed value $1.04$, and the horizon moves
 from $1.325655540$ to $1.330239387$. The frozen arm is an initial
 sourced-metric counterfactual. Probability accounting is reconciled.
-The shell energy ledger is not closed, dynamic $R_4$ is null, and
-refinement is pending. This archive is not a completed neutral
+The saved frames do not store derived energies or curvature. The
+driver command `--assess-archive` reads the rank-$9$ directory, takes
+no time step, and returns those balances. A saved assessment file
+has not been created. Over $41$ frames,
+$\Delta E_H=-0.0022440861341528895$ with quarter-step gap
+$-8.364479832214181\times10^{-7}$ ($0.0373\%$ of the change) and
+$\Delta E_N=-0.0015357675638723422$ with quarter-step gap
+$-8.965835266506236\times10^{-7}$ ($0.0584\%$). The weighted SBP
+boundary-plus-SAT identity matches the direct derivative to
+$1.5\times10^{-12}$. The outer normal spike $7.44\times10^{-5}$ is
+the outer SAT. The measured inner bulk residual is $2.98\times10^{-5}$
+at $t=8.5$, and the retained commutator is $3.82\times10^{-6}$. These
+are not continuous bounds. Dynamic $R_4$ reaches
+$7.688\times10^{-5}$, with $3.69\times10^{-5}$ on the full $t=10$
+sample and $9.18\times10^{-7}$ in the ten-point curvature bulk. The
+source Ricci-squared stress check is about $2.04\times10^{-6}$ in the
+bulk, and the full source vacuum departure peaks at $0.001525$ at
+$t=7.75$. Refinement remains pending. This is not a completed neutral
 programme and not a production seal.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
