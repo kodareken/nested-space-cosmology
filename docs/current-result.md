@@ -68,9 +68,14 @@ $1.040990280$ against the fixed value $1.04$, and the horizon moves
 from $1.325655540$ to $1.330239387$. The frozen arm is an initial
 sourced-metric counterfactual. Probability accounting is reconciled.
 The saved frames do not store derived energies or curvature. The
-driver command `--assess-archive` reads the rank-$9$ directory, takes
-no time step, and returns those balances. A saved assessment file
-has not been created. Over $41$ frames,
+driver command `--assess-archive` reads the rank-$9$ directory and
+takes no time step. The official writer then returned `existing
+outputs are sealed` and wrote no bytes. The accepted body is the
+creation-only file
+[nsc-rn-pilot-assessment-v1.json](../lab/results/development/nsc-rn-pilot-assessment-v1.json),
+bound to frozen producer `64e2c36fa2bd0688dd02a0b1bcda714c4767c294`
+after the prior code commit. That commit is not the live source now
+being edited, and the raw JSON is left as written. Over $41$ frames,
 $\Delta E_H=-0.0022440861341528895$ with quarter-step gap
 $-8.364479832214181\times10^{-7}$ ($0.0373\%$ of the change) and
 $\Delta E_N=-0.0015357675638723422$ with quarter-step gap
@@ -84,8 +89,43 @@ $7.688\times10^{-5}$, with $3.69\times10^{-5}$ on the full $t=10$
 sample and $9.18\times10^{-7}$ in the ten-point curvature bulk. The
 source Ricci-squared stress check is about $2.04\times10^{-6}$ in the
 bulk, and the full source vacuum departure peaks at $0.001525$ at
-$t=7.75$. Refinement remains pending. This is not a completed neutral
-programme and not a production seal.
+$t=7.75$.
+
+The finite continuation from that archived $t=10$ frame is
+[nsc-rn-neutral-continuation-v1](../lab/results/development/nsc-rn-neutral-continuation-v1/summary.json).
+Its handoff payload is `t10.0000.npz`, sha256
+`7586472db0e6a29d2b4dea6a02429bf5c2c28cecc6812f735e02647bc134ef74`.
+The run uses $\mu=1.04$, $\varepsilon=0.001$, rank $9$ and
+$\Delta t=0.001$, with no reset. It records $564.993$ CPU seconds
+and $205504512$ bytes of memory. At $T=20$ the coupled excision
+capture is $0.9318536299678606$, the outer outflow is
+$0.021424558047058832$, and the remainder is
+$0.04671377650607762$. The coupled inner mass is
+$1.0410282460948723$, the horizon is $1.3303665716496194$, and
+$E_{\mathrm{coordinate}}=2.0207173180768176\times10^{-5}$. The norm
+interval closure is $-1.539302149964174\times10^{-13}$. The saved
+CAR eigenvalue $6.999561444355473\times10^{-5}$ is the load-time
+coupled $t=10$ cache on both arms. The recomputed current values
+are $2.6763819258953356\times10^{-5}$ coupled and
+$2.681557087002335\times10^{-5}$ fixed. The states are valid PSD
+matrices. The cached number is not the current CAR, and the old JSON
+is not rewritten. The current code computes a fresh CAR and leaves that saved JSON
+unchanged. Refinement and a held prediction remain pending. This
+finite segment is not a completed neutral programme and not a
+production seal.
+
+The finished radial operator stores the same $D(2,1)$ coefficients
+in a dense reference and a CSR production matrix. Their step-$0$
+difference is zero. The recorded speedups are $2.055\times$ at $869$
+points, $10.744\times$ at $1750$, and $30.308\times$ at $3921$. All
+six $T=20$ forecasts fit in six CPU-hours, and the current estimate
+is about three hours. The default production point factor is one
+backend choice. It is not a continuum validation and not new physics.
+The writer now allows a new development file and still refuses the
+archive, historical results, and any existing output. No official v2
+assessment file exists yet. Producer `64e2c36` remains the pinned
+context of the saved assessment and continuation, not the identity
+of this operator.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,
