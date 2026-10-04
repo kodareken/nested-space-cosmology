@@ -35,10 +35,14 @@ The numerical family is not running and is not claimed. No case has
 written a `summary.json`; four stopped on the CPU projection and the two
 `mu=1.002` cases stopped silently at `t=8`. The two-force gradient
 balance over its 177 recorded stations is
-[gradient-bubble](../results/development/nsc-rn-gradient-bubble-v1.json),
+[gradient-bubble v2](../results/development/nsc-rn-gradient-bubble-v2.json),
 owned by
 [nsc_rn_gradient_bubble.py](../src/recursive_horizons/nsc_rn_gradient_bubble.py)
-and [its note](nsc-rn-gradient-bubble.md). `nsc_rn_pg._fornberg` fails
+and [its note](nsc-rn-gradient-bubble.md). It supersedes v1, whose
+verdict rested on a chosen slope limit the data straddled. The verdict is
+the measured balance wall; a wall is present at 49.7% of stations, its
+persistence falls from about 65% at mu=1.002 to about 31% at mu=1.040,
+and it oscillates rather than settling. `nsc_rn_pg._fornberg` fails
 its own polynomial-moment check at width 9 and above on this runtime and
 blocks re-marching the family.
 The finite continuation is

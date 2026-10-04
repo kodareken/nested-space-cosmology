@@ -57,19 +57,20 @@ ratio, `max|R4|` over the peak force density, is about `12.5`.
 ## Declared limits
 
 The limits are conventions of this check and are recorded in the record
-body, not fitted to the outcome.
+body, not fitted to the outcome. None of them decides the verdict.
 
 | Limit | Value | Meaning |
 |---|---|---|
-| `throat_slope_limit` | `8.0` | steeper inner slope is a collapse signature |
+| `throat_slope_limit` | `8.0` | steeper inner slope is reported, never a verdict |
 | `single_force_balance` | `0.90` | balance never below this means the outer force is absent |
 | `exterior_decoupled` | `0.999` | reported as `r_decouple`, never a dead end |
 | `curvature_force_ratio` | `1.0e+03` | same-provenance curvature over force density |
 | `throat_fraction` | `0.10` | fraction of the collar the throat test judges |
 
-The throat limit sits close to the data: `mu=1.040, eps=0.001` passes at
-`-7.37` and `mu=1.040, eps=0.010` fails at `-8.44`. The slopes are in the
-record so the reader can apply a different convention without re-running.
+The throat limit sits close to the data: `mu=1.040, eps=0.001` reports at
+`-7.37` and `mu=1.040, eps=0.010` at `-8.44`. This is exactly why it was
+demoted. The slopes stay in the record so a reader can apply a different
+convention without re-running.
 
 ## Measured outcome
 
@@ -89,16 +90,34 @@ Two relations fall out of the table.
 The outside always acts. The integrated outer force is `15.6%` to `82.0%`
 of the inner force, and no case falls below a tenth. The non-local content
 is present in every recorded state, which is the part of the picture that
-a local-only computation would miss.
+a local-only computation would miss. No hard dead-end flag fires anywhere
+in the family.
 
-The two forces trade rather than settle. Where the exterior compression
-weakens from `mu=1.040` toward `mu=1.002`, the required throat gradient
-steepens from about `-7` to about `-153`, and the outer force grows from
-`16%` to `82%` of the total. Balance is a trade along the family, not a
-fixed point. Five of six cases then trip `throat_runaway`, and only
-`mu=1.040, eps=0.001` reaches a balance verdict. A sustained bubble is not
-established across this family; it appears at most in a narrow window near
-`mu = 1.04`.
+The balance wall exists but does not settle. A wall is present at
+`49.7%` of all stations and appears in all six cases at some station, so
+the two forces genuinely become equal somewhere in the collar. But the
+wall oscillates rather than holding a fixed radius, and its persistence
+falls as the exterior compression strengthens:
+
+| Case | Wall present | $r_{\mathrm{wall}}$ range |
+|---|---|---|
+| `mu-1.002-eps-0.001` | 65% | 1.073 to 2.054 |
+| `mu-1.002-eps-0.010` | 65% | 1.073 to 2.054 |
+| `mu-1.010-eps-0.001` | 69% | 1.045 to 2.055 |
+| `mu-1.010-eps-0.010` | 61% | 1.038 to 2.055 |
+| `mu-1.040-eps-0.001` | 32% | 1.290 to 2.039 |
+| `mu-1.040-eps-0.010` | 30% | 1.290 to 2.039 |
+
+A stronger exterior dissolves the wall. Persistence drops from about
+`65%` to about `31%`, and the inner excursion of the wall is pushed away
+from the throat, from `1.04` to `1.29`. Only the two `mu=1.002` cases
+still hold a wall at their final station.
+
+So the honest reading is not that the bubble exists or that it does not.
+The inside and outside do reach equality, for roughly half of the
+recorded time. What is missing is a settled wall: the balance is
+transient, and stronger exterior compression shortens it. A sustained
+gradient bubble is not established by this family.
 
 ## Coverage, and why it is partial
 
@@ -136,9 +155,11 @@ driven by
 with tests in
 [tests/test_nsc_rn_gradient_bubble.py](../tests/test_nsc_rn_gradient_bubble.py).
 The record is
-[results/development/nsc-rn-gradient-bubble-v1.json](../results/development/nsc-rn-gradient-bubble-v1.json),
-creation only, `89438` bytes, sha256 prefix `5e7220601b8dd0b2`, produced
-against `12d56e23`. The input fields come from
+[results/development/nsc-rn-gradient-bubble-v2.json](../results/development/nsc-rn-gradient-bubble-v2.json),
+creation only, and it names
+[nsc-rn-gradient-bubble-v1.json](../results/development/nsc-rn-gradient-bubble-v1.json)
+in a `supersedes` block with the reason. The v1 file is preserved. The
+input fields come from
 [nsc_rn_source.py](../src/recursive_horizons/nsc_rn_source.py) and the
 curvature provenance from
 [nsc_rn_reference.py](../src/recursive_horizons/nsc_rn_reference.py).
@@ -151,7 +172,9 @@ force balance, and the two are not identified here.
 ## What this does not say
 
 It does not say the universe is a gradient bubble. It measures a trade
-between two recorded forces on one finite grid, and it finds that the
-balance is narrow rather than general. It does not finish the family,
-explain the two silent stops at `t = 8`, repair the Fornberg recursion, or
-certify a continuum limit.
+between two recorded forces on one finite grid, and it finds the balance
+real but transient, and weaker under stronger compression. It does not
+certify a continuum limit, and it does not separate the wall oscillation
+from any step-control artifact. It does not finish the family, explain the
+two silent stops at `t = 8`, repair the Fornberg recursion, or say what
+happens at `mu` above `1.04`, which was never run.

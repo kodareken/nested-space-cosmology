@@ -1,0 +1,3547 @@
+{
+ "api_version": "nsc-rn-gradient-bubble-v2",
+ "cases": [
+  {
+   "case": "mu-1.002-eps-0.001",
+   "dead_end_flags_observed": [
+    "throat_steep_reported"
+   ],
+   "epsilon": 0.001,
+   "failure_blocker": null,
+   "failure_clock_t": null,
+   "has_summary_json": false,
+   "mass_over_rm": 1.002,
+   "points": 3921,
+   "r_wall_final": 2.053717857142857,
+   "r_wall_max": 2.053717857142857,
+   "r_wall_min": 1.0731688775510204,
+   "reached_t_over_rm": 7.999999999999584,
+   "station_count": 17,
+   "stations": [
+    {
+     "balance_at_mid": 0.9753347139179327,
+     "balance_at_throat": 0.19601168575957742,
+     "balance_min": 0.03035523255517038,
+     "curvature_force_ratio": 137.0653977312611,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.014423659954969218,
+     "r_decouple": 2.733776020408163,
+     "r_first_wall": 1.0731688775510204,
+     "r_last_wall": 1.0731688775510204,
+     "station": "station-0",
+     "t_over_rm": 0.0,
+     "throat_slope_inner": -158.80071214085564,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0731688775510204
+     ]
+    },
+    {
+     "balance_at_mid": 0.974705127477404,
+     "balance_at_throat": 0.9372669163458507,
+     "balance_min": 0.8005407239600689,
+     "curvature_force_ratio": 0.7436492628410609,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.015533356127227834,
+     "r_decouple": 2.2355938775510205,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0.5",
+     "t_over_rm": 0.5,
+     "throat_slope_inner": -2.617186505946955,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9728173340911767,
+     "balance_at_throat": 0.6621997124883866,
+     "balance_min": 0.6427731339472759,
+     "curvature_force_ratio": 4.2029839742167265,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.016720028641349444,
+     "r_decouple": 1.697873469387755,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1",
+     "t_over_rm": 1.0,
+     "throat_slope_inner": -5.129052780000303,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9946488956021934,
+     "balance_at_throat": 0.8803371703195875,
+     "balance_min": 0.6703573890124396,
+     "curvature_force_ratio": 4.2497891866904665,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.01791173832101036,
+     "r_decouple": 4.0464464285714286,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945,
+     "throat_slope_inner": -5.042597532742505,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9844467426236673,
+     "balance_at_throat": 0.02234238315839583,
+     "balance_min": 0.02234238315839583,
+     "curvature_force_ratio": 4.61421201749007,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.02071009951330001,
+     "r_decouple": 3.3268500000000003,
+     "r_first_wall": 1.713688775510204,
+     "r_last_wall": 1.713688775510204,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899,
+     "throat_slope_inner": -3.226321199560973,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.713688775510204
+     ]
+    },
+    {
+     "balance_at_mid": 0.9690391919561202,
+     "balance_at_throat": 0.21867737517071115,
+     "balance_min": 0.029846744498896165,
+     "curvature_force_ratio": 15.121822311751915,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.024270265620666826,
+     "r_decouple": 3.78549387755102,
+     "r_first_wall": 1.6187969387755103,
+     "r_last_wall": 1.6187969387755103,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835,
+     "throat_slope_inner": -127.82805847525171,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6187969387755103
+     ]
+    },
+    {
+     "balance_at_mid": 0.9825229323109693,
+     "balance_at_throat": 0.04858448414018715,
+     "balance_min": 0.039973132999516194,
+     "curvature_force_ratio": 13.616705775242732,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.02869374470717866,
+     "r_decouple": 1.7848576530612243,
+     "r_first_wall": 1.1759683673469388,
+     "r_last_wall": 1.1759683673469388,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797,
+     "throat_slope_inner": -1.5644070507642307,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1759683673469388
+     ]
+    },
+    {
+     "balance_at_mid": 0.9681662609096103,
+     "balance_at_throat": 0.930703571035608,
+     "balance_min": 0.5469393269099099,
+     "curvature_force_ratio": 4.175852164803931,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.036026792812713544,
+     "r_decouple": 2.702145408163265,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247,
+     "throat_slope_inner": -13.261007286644107,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9518215083728754,
+     "balance_at_throat": 0.7357203507295546,
+     "balance_min": 0.7214882872044187,
+     "curvature_force_ratio": 16.655857912634158,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.04769352859395715,
+     "r_decouple": 10.238138775510205,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696,
+     "throat_slope_inner": -1.784721383629402,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9717538478747287,
+     "balance_at_throat": 0.910066770548674,
+     "balance_min": 0.48150670371117155,
+     "curvature_force_ratio": 12.976915169914387,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.06611901855191393,
+     "r_decouple": 1.1601530612244897,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659,
+     "throat_slope_inner": -2.080517633803893,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9865885318658282,
+     "balance_at_throat": 0.4812252172378176,
+     "balance_min": 0.1251668938482771,
+     "curvature_force_ratio": 7.932165350455952,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.10307669543491133,
+     "r_decouple": 9.289220408163265,
+     "r_first_wall": 1.0968918367346938,
+     "r_last_wall": 1.0968918367346938,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648,
+     "throat_slope_inner": -0.924742549336016,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0968918367346938
+     ]
+    },
+    {
+     "balance_at_mid": 0.9552106267610871,
+     "balance_at_throat": 0.06044920995531503,
+     "balance_min": 0.06044920995531503,
+     "curvature_force_ratio": 44.511139064010784,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.16085824442127955,
+     "r_decouple": 8.82266887755102,
+     "r_first_wall": 1.6029816326530613,
+     "r_last_wall": 1.6029816326530613,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638,
+     "throat_slope_inner": -1.5648391235190404,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6029816326530613
+     ]
+    },
+    {
+     "balance_at_mid": 0.9862463032192665,
+     "balance_at_throat": 0.1379483371920425,
+     "balance_min": 0.000495784713017703,
+     "curvature_force_ratio": 79.64118129059513,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.24418747444796898,
+     "r_decouple": 8.403563265306122,
+     "r_first_wall": 1.808580612244898,
+     "r_last_wall": 1.808580612244898,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627,
+     "throat_slope_inner": -123.8056381329032,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.808580612244898
+     ]
+    },
+    {
+     "balance_at_mid": 0.9606300398575621,
+     "balance_at_throat": 0.20202350623285847,
+     "balance_min": 0.0001823198011358266,
+     "curvature_force_ratio": 59.06069587117103,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.35635405942109616,
+     "r_decouple": 11.036811734693877,
+     "r_first_wall": 1.9271954081632652,
+     "r_last_wall": 1.9271954081632652,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616,
+     "throat_slope_inner": -371.5813455531057,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.9271954081632652
+     ]
+    },
+    {
+     "balance_at_mid": 0.937443761350517,
+     "balance_at_throat": 0.22994636925199613,
+     "balance_min": 0.0007259450119701306,
+     "curvature_force_ratio": 40.05021638735118,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.497473315439291,
+     "r_decouple": 10.53072193877551,
+     "r_first_wall": 2.00627193877551,
+     "r_last_wall": 2.00627193877551,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606,
+     "throat_slope_inner": -272.310485370354,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.00627193877551
+     ]
+    },
+    {
+     "balance_at_mid": 0.9379665407449312,
+     "balance_at_throat": 0.24278755307574498,
+     "balance_min": 0.0001995749325310835,
+     "curvature_force_ratio": 25.33492194296414,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.659904458832101,
+     "r_decouple": 5.667515306122449,
+     "r_first_wall": 2.045810204081633,
+     "r_last_wall": 2.045810204081633,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595,
+     "throat_slope_inner": -367.99284343658746,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.045810204081633
+     ]
+    },
+    {
+     "balance_at_mid": 0.9632137246247193,
+     "balance_at_throat": 0.24674175371681065,
+     "balance_min": 0.00780191959285507,
+     "curvature_force_ratio": 11.181812576284546,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8188720451938034,
+     "r_decouple": 4.655335714285714,
+     "r_first_wall": 2.053717857142857,
+     "r_last_wall": 2.053717857142857,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584,
+     "throat_slope_inner": -121.60289378527322,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.053717857142857
+     ]
+    }
+   ],
+   "stations_with_a_wall": 11,
+   "verdicts": [
+    "single_force_collar",
+    "two_force_wall"
+   ],
+   "wall_at_final_station": true,
+   "wall_presence_fraction": 0.6470588235294118
+  },
+  {
+   "case": "mu-1.002-eps-0.010",
+   "dead_end_flags_observed": [
+    "throat_steep_reported"
+   ],
+   "epsilon": 0.01,
+   "failure_blocker": null,
+   "failure_clock_t": null,
+   "has_summary_json": false,
+   "mass_over_rm": 1.002,
+   "points": 3921,
+   "r_wall_final": 2.053717857142857,
+   "r_wall_max": 2.053717857142857,
+   "r_wall_min": 1.0731688775510204,
+   "reached_t_over_rm": 7.999999999999584,
+   "station_count": 17,
+   "stations": [
+    {
+     "balance_at_mid": 0.9753347139179325,
+     "balance_at_throat": 0.19601168575957742,
+     "balance_min": 0.030355232555170465,
+     "curvature_force_ratio": 136.57078183183432,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.014423659954969319,
+     "r_decouple": 2.733776020408163,
+     "r_first_wall": 1.0731688775510204,
+     "r_last_wall": 1.0731688775510204,
+     "station": "station-0",
+     "t_over_rm": 0.0,
+     "throat_slope_inner": -158.80071214085564,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0731688775510204
+     ]
+    },
+    {
+     "balance_at_mid": 0.9746386861789,
+     "balance_at_throat": 0.9356868528053872,
+     "balance_min": 0.8004871885264954,
+     "curvature_force_ratio": 0.7598819444353396,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.015536336073065692,
+     "r_decouple": 2.2355938775510205,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0.5",
+     "t_over_rm": 0.5,
+     "throat_slope_inner": -2.620058613710461,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9728629916479313,
+     "balance_at_throat": 0.6622283809798899,
+     "balance_min": 0.6427727325256462,
+     "curvature_force_ratio": 4.229146374594892,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.016724952327540527,
+     "r_decouple": 4.631612755102041,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1",
+     "t_over_rm": 1.0,
+     "throat_slope_inner": -5.136092119478129,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9947155905818665,
+     "balance_at_throat": 0.8835836321142554,
+     "balance_min": 0.6699253187587461,
+     "curvature_force_ratio": 4.23818696604411,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.017922237690489926,
+     "r_decouple": 4.0464464285714286,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945,
+     "throat_slope_inner": -5.035227620247889,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9843661355923623,
+     "balance_at_throat": 0.018747191350912174,
+     "balance_min": 0.018747191350912174,
+     "curvature_force_ratio": 4.6582691757343,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.0207334148324694,
+     "r_decouple": 4.236230102040817,
+     "r_first_wall": 1.713688775510204,
+     "r_last_wall": 1.713688775510204,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899,
+     "throat_slope_inner": -3.2116089938566335,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.713688775510204
+     ]
+    },
+    {
+     "balance_at_mid": 0.9690124213067622,
+     "balance_at_throat": 0.21844280101278418,
+     "balance_min": 0.029904559617210627,
+     "curvature_force_ratio": 15.087958453019422,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.024302502215004435,
+     "r_decouple": 2.5519,
+     "r_first_wall": 1.6187969387755103,
+     "r_last_wall": 1.6187969387755103,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835,
+     "throat_slope_inner": -127.69805155030251,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6187969387755103
+     ]
+    },
+    {
+     "balance_at_mid": 0.9827936734535483,
+     "balance_at_throat": 0.04363917662763117,
+     "balance_min": 0.04363917662763117,
+     "curvature_force_ratio": 13.46706734261657,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.028747705330483077,
+     "r_decouple": 1.77695,
+     "r_first_wall": 1.1680607142857142,
+     "r_last_wall": 1.1680607142857142,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797,
+     "throat_slope_inner": -5.00715405374608,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1680607142857142
+     ]
+    },
+    {
+     "balance_at_mid": 0.9678754826754055,
+     "balance_at_throat": 0.9416187708292759,
+     "balance_min": 0.8037822744404708,
+     "curvature_force_ratio": 4.467259597243364,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.036137258564345694,
+     "r_decouple": 2.6942377551020407,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247,
+     "throat_slope_inner": -12.920736765849053,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9518999921799249,
+     "balance_at_throat": 0.7358077345813708,
+     "balance_min": 0.6884385782231531,
+     "curvature_force_ratio": 16.956391282009516,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.04786778738445999,
+     "r_decouple": 2.0141795918367347,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696,
+     "throat_slope_inner": -1.7916643317801155,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9721072487639988,
+     "balance_at_throat": 0.9165671786500355,
+     "balance_min": 0.39019417366374193,
+     "curvature_force_ratio": 13.344376622647374,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.06649780393816612,
+     "r_decouple": 9.75577193877551,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659,
+     "throat_slope_inner": -2.1199746089210056,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9860509926137696,
+     "balance_at_throat": 0.4745433011446085,
+     "balance_min": 0.3970848764395665,
+     "curvature_force_ratio": 8.436451086689178,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.10382115748339335,
+     "r_decouple": 9.281312755102041,
+     "r_first_wall": 1.112707142857143,
+     "r_last_wall": 1.112707142857143,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648,
+     "throat_slope_inner": -0.9312885813231682,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.112707142857143
+     ]
+    },
+    {
+     "balance_at_mid": 0.9551394041926862,
+     "balance_at_throat": 0.0556741163854946,
+     "balance_min": 0.0556741163854946,
+     "curvature_force_ratio": 47.191893950492116,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.16210025085457858,
+     "r_decouple": 8.806853571428572,
+     "r_first_wall": 1.6029816326530613,
+     "r_last_wall": 1.6029816326530613,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638,
+     "throat_slope_inner": -1.5779390511469977,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6029816326530613
+     ]
+    },
+    {
+     "balance_at_mid": 0.9870772284483944,
+     "balance_at_throat": 0.1434045074080593,
+     "balance_min": 0.009923758262734894,
+     "curvature_force_ratio": 85.24035914978033,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.24608172432042383,
+     "r_decouple": 8.395655612244898,
+     "r_first_wall": 1.808580612244898,
+     "r_last_wall": 1.808580612244898,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627,
+     "throat_slope_inner": -118.22511271278368,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.808580612244898
+     ]
+    },
+    {
+     "balance_at_mid": 0.9600305590629817,
+     "balance_at_throat": 0.21240287586906506,
+     "balance_min": 0.0010439687754642654,
+     "curvature_force_ratio": 67.82872043185594,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.35898599762748196,
+     "r_decouple": 11.028904081632653,
+     "r_first_wall": 1.9351030612244897,
+     "r_last_wall": 1.9351030612244897,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616,
+     "throat_slope_inner": -246.48046584288835,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.9351030612244897
+     ]
+    },
+    {
+     "balance_at_mid": 0.9372874535022307,
+     "balance_at_throat": 0.24896734324449118,
+     "balance_min": 0.004243708112747181,
+     "curvature_force_ratio": 50.013170678400364,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.5006946112375442,
+     "r_decouple": 10.522814285714286,
+     "r_first_wall": 2.00627193877551,
+     "r_last_wall": 2.00627193877551,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606,
+     "throat_slope_inner": -136.37099249122562,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.00627193877551
+     ]
+    },
+    {
+     "balance_at_mid": 0.9381931104409786,
+     "balance_at_throat": 0.2736829034700864,
+     "balance_min": 0.005863636092540313,
+     "curvature_force_ratio": 35.245938735758884,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.6630472447350698,
+     "r_decouple": 5.643792346938775,
+     "r_first_wall": 2.045810204081633,
+     "r_last_wall": 2.045810204081633,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595,
+     "throat_slope_inner": -117.19906781030116,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.045810204081633
+     ]
+    },
+    {
+     "balance_at_mid": 0.9640346635007736,
+     "balance_at_throat": 0.29169496197664135,
+     "balance_min": 0.0037371775172644756,
+     "curvature_force_ratio": 17.935830089743565,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8203977871099011,
+     "r_decouple": 4.639520408163265,
+     "r_first_wall": 2.053717857142857,
+     "r_last_wall": 2.053717857142857,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584,
+     "throat_slope_inner": -152.64206219794644,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.053717857142857
+     ]
+    }
+   ],
+   "stations_with_a_wall": 11,
+   "verdicts": [
+    "single_force_collar",
+    "two_force_wall"
+   ],
+   "wall_at_final_station": true,
+   "wall_presence_fraction": 0.6470588235294118
+  },
+  {
+   "case": "mu-1.010-eps-0.001",
+   "dead_end_flags_observed": [
+    "throat_steep_reported"
+   ],
+   "epsilon": 0.001,
+   "failure_blocker": "march_pair stopped before the chunk exceeded the CPU projection",
+   "failure_clock_t": 15.984999999999411,
+   "has_summary_json": false,
+   "mass_over_rm": 1.01,
+   "points": 1750,
+   "r_wall_final": NaN,
+   "r_wall_max": 2.055403087478559,
+   "r_wall_min": 1.0454373927958833,
+   "reached_t_over_rm": 15.499999999999424,
+   "station_count": 32,
+   "stations": [
+    {
+     "balance_at_mid": 0.9747497955829543,
+     "balance_at_throat": 0.4631518453207414,
+     "balance_min": 0.4055891909599857,
+     "curvature_force_ratio": 60.349802647191666,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.014385405138775459,
+     "r_decouple": 2.710994854202401,
+     "r_first_wall": 1.0454373927958833,
+     "r_last_wall": 1.0454373927958833,
+     "station": "station-0",
+     "t_over_rm": 0.0,
+     "throat_slope_inner": -2.4040187992864492,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0454373927958833
+     ]
+    },
+    {
+     "balance_at_mid": 0.9725670707415831,
+     "balance_at_throat": 0.9466948241303448,
+     "balance_min": 0.7998294955043269,
+     "curvature_force_ratio": 5.217361049291363,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.01551725431121474,
+     "r_decouple": 5.014425385934819,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0.5",
+     "t_over_rm": 0.5,
+     "throat_slope_inner": -2.6875118704795113,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9727576595392494,
+     "balance_at_throat": 0.7565529425894985,
+     "balance_min": 0.7441062764607574,
+     "curvature_force_ratio": 4.227701515034303,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.016684223475293105,
+     "r_decouple": 1.6655917667238422,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1",
+     "t_over_rm": 1.0,
+     "throat_slope_inner": -5.2598211234952466,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9947133511981612,
+     "balance_at_throat": 0.9622061260590478,
+     "balance_min": 0.664977930093919,
+     "curvature_force_ratio": 4.13917580576532,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.01793564473706494,
+     "r_decouple": 6.9457632933104625,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945,
+     "throat_slope_inner": -5.085669452837969,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9842009075270589,
+     "balance_at_throat": 0.4737270699862867,
+     "balance_min": 0.4483661041688389,
+     "curvature_force_ratio": 3.766975999904269,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.02080100822289969,
+     "r_decouple": 4.2348027444253855,
+     "r_first_wall": 1.7364665523156089,
+     "r_last_wall": 1.7364665523156089,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899,
+     "throat_slope_inner": -3.2390126540757014,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.7364665523156089
+     ]
+    },
+    {
+     "balance_at_mid": 0.9685331292835303,
+     "balance_at_throat": 0.22038054711636365,
+     "balance_min": 0.19753208493890934,
+     "curvature_force_ratio": 10.830831394931582,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.024343022561617845,
+     "r_decouple": 3.774116638078902,
+     "r_first_wall": 1.612435677530017,
+     "r_last_wall": 1.612435677530017,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835,
+     "throat_slope_inner": -1.9720625896884807,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.612435677530017
+     ]
+    },
+    {
+     "balance_at_mid": 0.9824260030431557,
+     "balance_at_throat": 0.3614056178205246,
+     "balance_min": 0.3584944111415686,
+     "curvature_force_ratio": 10.555799388365857,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.028812274145108962,
+     "r_decouple": 3.260274442538593,
+     "r_first_wall": 1.1340308747855918,
+     "r_last_wall": 1.1340308747855918,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797,
+     "throat_slope_inner": -1.6103565075502007,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1340308747855918
+     ]
+    },
+    {
+     "balance_at_mid": 0.9673146838143976,
+     "balance_at_throat": 0.9804176527233283,
+     "balance_min": 0.8027700506484113,
+     "curvature_force_ratio": 2.3951618276385833,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.03630859051727473,
+     "r_decouple": 2.675557461406518,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247,
+     "throat_slope_inner": -2.287243031489678,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9516023192750722,
+     "balance_at_throat": 0.7611122938012495,
+     "balance_min": 0.757077366851457,
+     "curvature_force_ratio": 12.2889687128985,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.048075869273690695,
+     "r_decouple": 10.241440823327615,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696,
+     "throat_slope_inner": -2.103570135104482,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9721825276492992,
+     "balance_at_throat": 0.9448661039933041,
+     "balance_min": 0.8265414012244476,
+     "curvature_force_ratio": 8.907379049430553,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.06701013581975052,
+     "r_decouple": 9.76303602058319,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659,
+     "throat_slope_inner": -2.634024658928469,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9861024268177422,
+     "balance_at_throat": 0.5311631732558569,
+     "balance_min": 0.5162657410568995,
+     "curvature_force_ratio": 7.268970981461085,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.10446540723079459,
+     "r_decouple": 9.284631217838763,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648,
+     "throat_slope_inner": -1.5925450756845607,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9550492909454386,
+     "balance_at_throat": 0.17744004392487092,
+     "balance_min": 0.17412839769329258,
+     "curvature_force_ratio": 35.90817653956128,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.1624892566664629,
+     "r_decouple": 8.806226415094338,
+     "r_first_wall": 1.612435677530017,
+     "r_last_wall": 1.612435677530017,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638,
+     "throat_slope_inner": -1.5899773623126507,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.612435677530017
+     ]
+    },
+    {
+     "balance_at_mid": 0.9859203098944407,
+     "balance_at_throat": 0.03773945497732497,
+     "balance_min": 0.008662192094170318,
+     "curvature_force_ratio": 63.23173193081969,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.24597680431419938,
+     "r_decouple": 8.380977701543738,
+     "r_first_wall": 1.8073413379073755,
+     "r_last_wall": 1.8073413379073755,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627,
+     "throat_slope_inner": -7.038879502216434,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.8073413379073755
+     ]
+    },
+    {
+     "balance_at_mid": 0.9606922888800343,
+     "balance_at_throat": 0.13057508721391842,
+     "balance_min": 0.0023790054882783626,
+     "curvature_force_ratio": 80.4061906539159,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.35821634306447303,
+     "r_decouple": 11.03878216123499,
+     "r_first_wall": 1.9313722126929673,
+     "r_last_wall": 1.9313722126929673,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616,
+     "throat_slope_inner": -104.5715689097853,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.9313722126929673
+     ]
+    },
+    {
+     "balance_at_mid": 0.9373702022974348,
+     "balance_at_throat": 0.1710866867814315,
+     "balance_min": 0.010191106950635591,
+     "curvature_force_ratio": 58.059105357637414,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.49944753035297756,
+     "r_decouple": 10.524939965694681,
+     "r_first_wall": 2.002246998284734,
+     "r_last_wall": 2.002246998284734,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606,
+     "throat_slope_inner": -70.50680362758453,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.002246998284734
+     ]
+    },
+    {
+     "balance_at_mid": 0.9382947694085859,
+     "balance_at_throat": 0.18989844645885656,
+     "balance_min": 0.00977738934234947,
+     "curvature_force_ratio": 36.571810807583276,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.662243426065614,
+     "r_decouple": 5.670017152658661,
+     "r_first_wall": 2.0376843910806173,
+     "r_last_wall": 2.0376843910806173,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595,
+     "throat_slope_inner": -59.72402156762374,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.0376843910806173
+     ]
+    },
+    {
+     "balance_at_mid": 0.9647312577537632,
+     "balance_at_throat": 0.19603569421535735,
+     "balance_min": 0.016844813093430742,
+     "curvature_force_ratio": 18.724055976981745,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8214875517757856,
+     "r_decouple": 4.677770154373928,
+     "r_first_wall": 2.055403087478559,
+     "r_last_wall": 2.055403087478559,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584,
+     "throat_slope_inner": -60.97768942279663,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.055403087478559
+     ]
+    },
+    {
+     "balance_at_mid": 0.9818925539136454,
+     "balance_at_throat": 0.19183380145041964,
+     "balance_min": 0.0007961541838713734,
+     "curvature_force_ratio": 0.6200644115491641,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.9199404403504828,
+     "r_decouple": 8.877101200686106,
+     "r_first_wall": 2.019965694682676,
+     "r_last_wall": 2.019965694682676,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574,
+     "throat_slope_inner": -58.98125714337698,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.019965694682676
+     ]
+    },
+    {
+     "balance_at_mid": 0.9825319411292334,
+     "balance_at_throat": 0.17536409503269157,
+     "balance_min": 0.006013169544915771,
+     "curvature_force_ratio": 23.068786378305745,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8808917403326095,
+     "r_decouple": 8.239228130360205,
+     "r_first_wall": 1.895934819897084,
+     "r_last_wall": 1.895934819897084,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563,
+     "throat_slope_inner": -568.9680114060228,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.895934819897084
+     ]
+    },
+    {
+     "balance_at_mid": 0.9694757369663173,
+     "balance_at_throat": 0.13785094738351783,
+     "balance_min": 0.03204504056396201,
+     "curvature_force_ratio": 50.7651762650482,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.6827622021967493,
+     "r_decouple": 7.495042881646654,
+     "r_first_wall": 1.6833104631217837,
+     "r_last_wall": 1.6833104631217837,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552,
+     "throat_slope_inner": -51.13115714505727,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6833104631217837
+     ]
+    },
+    {
+     "balance_at_mid": 0.9406056360806726,
+     "balance_at_throat": 0.050098291457190774,
+     "balance_min": 0.03165820345021911,
+     "curvature_force_ratio": 47.935297731488355,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.4375391684230854,
+     "r_decouple": 6.449639794168095,
+     "r_first_wall": 1.346655231560892,
+     "r_last_wall": 1.346655231560892,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542,
+     "throat_slope_inner": -35.2174997638773,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.346655231560892
+     ]
+    },
+    {
+     "balance_at_mid": 0.9293512847609946,
+     "balance_at_throat": 0.14216707832923922,
+     "balance_min": 0.06853927335639838,
+     "curvature_force_ratio": 25.556604965169665,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.29330708734071126,
+     "r_decouple": 5.510548885077186,
+     "r_first_wall": 1.1340308747855918,
+     "r_last_wall": 1.1340308747855918,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531,
+     "throat_slope_inner": -70.29236075791253,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1340308747855918
+     ]
+    },
+    {
+     "balance_at_mid": 0.9345330426169263,
+     "balance_at_throat": 0.30644590025138924,
+     "balance_min": 0.0025492881435709067,
+     "curvature_force_ratio": 8.041812108215478,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.2736024842678139,
+     "r_decouple": 4.854957118353345,
+     "r_first_wall": 1.0568567938218547,
+     "r_last_wall": 1.0568567938218547,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952,
+     "throat_slope_inner": -41.608251431739916,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0568567938218547
+     ]
+    },
+    {
+     "balance_at_mid": 0.9697206398786805,
+     "balance_at_throat": 0.20543303439281238,
+     "balance_min": 0.12498375854646218,
+     "curvature_force_ratio": 8.905882978600454,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.3208134977713008,
+     "r_decouple": 4.323396226415094,
+     "r_first_wall": 1.0577712052325503,
+     "r_last_wall": 1.0577712052325503,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951,
+     "throat_slope_inner": -38.5178620813553,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0577712052325503
+     ]
+    },
+    {
+     "balance_at_mid": 0.9961456367338345,
+     "balance_at_throat": 0.028794889970913645,
+     "balance_min": 0.028794889970913645,
+     "curvature_force_ratio": 19.372271731629848,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.3628183905266436,
+     "r_decouple": 3.8804288164665524,
+     "r_first_wall": 1.2226243567753001,
+     "r_last_wall": 1.2226243567753001,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499,
+     "throat_slope_inner": -48.1434611014425,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.2226243567753001
+     ]
+    },
+    {
+     "balance_at_mid": 0.9454126670338632,
+     "balance_at_throat": 0.11815726061060679,
+     "balance_min": 0.0168127491725319,
+     "curvature_force_ratio": 12.731849897561423,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.35460784982868165,
+     "r_decouple": 7.140668953687821,
+     "r_first_wall": 1.399811320754717,
+     "r_last_wall": 1.399811320754717,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488,
+     "throat_slope_inner": -71.73868180739872,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.399811320754717
+     ]
+    },
+    {
+     "balance_at_mid": 0.942910983983738,
+     "balance_at_throat": 0.11783332178663453,
+     "balance_min": 0.0001317558211719101,
+     "curvature_force_ratio": 4.4515391673453575,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.2973838627158244,
+     "r_decouple": 6.325608919382503,
+     "r_first_wall": 1.2580617495711834,
+     "r_last_wall": 1.2580617495711834,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478,
+     "throat_slope_inner": -62.74721611367202,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.2580617495711834
+     ]
+    },
+    {
+     "balance_at_mid": 0.9344510714833304,
+     "balance_at_throat": 0.04615386174850136,
+     "balance_min": 0.013889701365818923,
+     "curvature_force_ratio": 17.607014812522976,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.22399444526938833,
+     "r_decouple": 5.687735849056603,
+     "r_first_wall": 1.1163121783876502,
+     "r_last_wall": 1.1163121783876502,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467,
+     "throat_slope_inner": -36.19853960941643,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1163121783876502
+     ]
+    },
+    {
+     "balance_at_mid": 0.930022888091586,
+     "balance_at_throat": 0.15468304869601607,
+     "balance_min": 0.10549335788591646,
+     "curvature_force_ratio": 18.54785802042087,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.17462183106474244,
+     "r_decouple": 6.60910806174957,
+     "r_first_wall": 1.0520114864904404,
+     "r_last_wall": 1.0520114864904404,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456,
+     "throat_slope_inner": -21.16337944942794,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0520114864904404
+     ]
+    },
+    {
+     "balance_at_mid": 0.9302534961633172,
+     "balance_at_throat": 0.3965821957481922,
+     "balance_min": 0.014322241480705296,
+     "curvature_force_ratio": 7.813466587428333,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.16889095226685147,
+     "r_decouple": 8.82394511149228,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446,
+     "throat_slope_inner": -11.836300908320904,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9426951675641331,
+     "balance_at_throat": 0.38934112371321217,
+     "balance_min": 0.06370727303219421,
+     "curvature_force_ratio": 8.550711749470343,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.19608015866761955,
+     "r_decouple": 5.227049742710119,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435,
+     "throat_slope_inner": -12.006332400419192,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9220524006253322,
+     "balance_at_throat": 0.0843483099126611,
+     "balance_min": 0.022136420810091685,
+     "curvature_force_ratio": 20.07913919937635,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.22585816178016455,
+     "r_decouple": 3.7209605488850768,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424,
+     "throat_slope_inner": -13.5152874314443,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    }
+   ],
+   "stations_with_a_wall": 22,
+   "verdicts": [
+    "single_force_collar",
+    "two_force_wall"
+   ],
+   "wall_at_final_station": false,
+   "wall_presence_fraction": 0.6875
+  },
+  {
+   "case": "mu-1.010-eps-0.010",
+   "dead_end_flags_observed": [
+    "throat_steep_reported"
+   ],
+   "epsilon": 0.01,
+   "failure_blocker": "march_pair stopped before the chunk exceeded the CPU projection",
+   "failure_clock_t": 16.197999999999453,
+   "has_summary_json": false,
+   "mass_over_rm": 1.01,
+   "points": 1750,
+   "r_wall_final": NaN,
+   "r_wall_max": 2.055403087478559,
+   "r_wall_min": 1.0379877315163315,
+   "reached_t_over_rm": 15.999999999999414,
+   "station_count": 33,
+   "stations": [
+    {
+     "balance_at_mid": 0.9747497955829542,
+     "balance_at_throat": 0.4631518453207415,
+     "balance_min": 0.40558919095998563,
+     "curvature_force_ratio": 60.12967964936892,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.014385405138775441,
+     "r_decouple": 2.710994854202401,
+     "r_first_wall": 1.0454373927958833,
+     "r_last_wall": 1.0454373927958833,
+     "station": "station-0",
+     "t_over_rm": 0.0,
+     "throat_slope_inner": -2.404018799286604,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0454373927958833
+     ]
+    },
+    {
+     "balance_at_mid": 0.9725045075676536,
+     "balance_at_throat": 0.9459682255871824,
+     "balance_min": 0.7997754769381826,
+     "curvature_force_ratio": 0.9044496135703908,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.015520199223751478,
+     "r_decouple": 5.014425385934819,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0.5",
+     "t_over_rm": 0.5,
+     "throat_slope_inner": -2.690459423365381,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.972804438230442,
+     "balance_at_throat": 0.7565842002659624,
+     "balance_min": 0.74411876580951,
+     "curvature_force_ratio": 2.243446591003891,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.016689208065455173,
+     "r_decouple": 1.6655917667238422,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1",
+     "t_over_rm": 1.0,
+     "throat_slope_inner": -5.266993335741378,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9947815290235976,
+     "balance_at_throat": 0.9644872788468879,
+     "balance_min": 0.6645271531444386,
+     "curvature_force_ratio": 3.3875212582480594,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.017946567948215007,
+     "r_decouple": 6.9457632933104625,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945,
+     "throat_slope_inner": -5.078485093053829,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9841175738797572,
+     "balance_at_throat": 0.471403374940478,
+     "balance_min": 0.4459267300869234,
+     "curvature_force_ratio": 2.355170220595083,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.0208243258499656,
+     "r_decouple": 4.2348027444253855,
+     "r_first_wall": 1.7364665523156089,
+     "r_last_wall": 1.7364665523156089,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899,
+     "throat_slope_inner": -3.2258691528447865,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.7364665523156089
+     ]
+    },
+    {
+     "balance_at_mid": 0.9685040489986569,
+     "balance_at_throat": 0.22000475626263016,
+     "balance_min": 0.19729645433124945,
+     "curvature_force_ratio": 10.32795871799086,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.024375323275505914,
+     "r_decouple": 2.5338078902229846,
+     "r_first_wall": 1.612435677530017,
+     "r_last_wall": 1.612435677530017,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835,
+     "throat_slope_inner": -1.9649830972210265,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.612435677530017
+     ]
+    },
+    {
+     "balance_at_mid": 0.9827054021533194,
+     "balance_at_throat": 0.3648021802310963,
+     "balance_min": 0.36186470071260085,
+     "curvature_force_ratio": 9.920604802207862,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.028867380220593677,
+     "r_decouple": 11.198250428816465,
+     "r_first_wall": 1.1340308747855918,
+     "r_last_wall": 1.1340308747855918,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797,
+     "throat_slope_inner": -1.6110312205524058,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1340308747855918
+     ]
+    },
+    {
+     "balance_at_mid": 0.9670219017122672,
+     "balance_at_throat": 0.9882603171524189,
+     "balance_min": 0.8024015360897451,
+     "curvature_force_ratio": 2.8460985829577896,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.03642185425267625,
+     "r_decouple": 10.702126929674098,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247,
+     "throat_slope_inner": -2.273367578653359,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9516862829992895,
+     "balance_at_throat": 0.7612020245514622,
+     "balance_min": 0.756979510752957,
+     "curvature_force_ratio": 12.544538557134386,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.04825310234265987,
+     "r_decouple": 10.223722126929673,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696,
+     "throat_slope_inner": -2.1181995662724193,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9725390408201797,
+     "balance_at_throat": 0.9513229545388129,
+     "balance_min": 0.8252151876740137,
+     "curvature_force_ratio": 9.258619877973281,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.06740439446649908,
+     "r_decouple": 9.745317324185248,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659,
+     "throat_slope_inner": -2.6257246131370704,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9855688864913991,
+     "balance_at_throat": 0.5243799763809854,
+     "balance_min": 0.5095024553596172,
+     "curvature_force_ratio": 7.55451471934898,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.1052183712248596,
+     "r_decouple": 9.266912521440823,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648,
+     "throat_slope_inner": -1.57842400944847,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9549805152423271,
+     "balance_at_throat": 0.1728096375316614,
+     "balance_min": 0.16989396843145924,
+     "curvature_force_ratio": 37.04362074401092,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.16373773091428714,
+     "r_decouple": 8.788507718696398,
+     "r_first_wall": 1.612435677530017,
+     "r_last_wall": 1.612435677530017,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638,
+     "throat_slope_inner": -1.6009533066428683,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.612435677530017
+     ]
+    },
+    {
+     "balance_at_mid": 0.9867504533716035,
+     "balance_at_throat": 0.04072247794168228,
+     "balance_min": 0.012485182782203442,
+     "curvature_force_ratio": 64.53467938567715,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.2478776786679425,
+     "r_decouple": 8.363259005145796,
+     "r_first_wall": 1.8073413379073755,
+     "r_last_wall": 1.8073413379073755,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627,
+     "throat_slope_inner": -10.39258738563369,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.8073413379073755
+     ]
+    },
+    {
+     "balance_at_mid": 0.9600888561627554,
+     "balance_at_throat": 0.13264775246786922,
+     "balance_min": 0.003648339454109284,
+     "curvature_force_ratio": 80.30211977291687,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.36085010556128516,
+     "r_decouple": 11.021063464837049,
+     "r_first_wall": 1.9313722126929673,
+     "r_last_wall": 1.9313722126929673,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616,
+     "throat_slope_inner": -90.44824691549479,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.9313722126929673
+     ]
+    },
+    {
+     "balance_at_mid": 0.9372155883363831,
+     "balance_at_throat": 0.17358457631510305,
+     "balance_min": 0.0069359756834921245,
+     "curvature_force_ratio": 56.26432238193118,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.5026756771029329,
+     "r_decouple": 10.524939965694681,
+     "r_first_wall": 2.002246998284734,
+     "r_last_wall": 2.002246998284734,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606,
+     "throat_slope_inner": -81.25148747000297,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.002246998284734
+     ]
+    },
+    {
+     "balance_at_mid": 0.9385330500266478,
+     "balance_at_throat": 0.19351143630904297,
+     "balance_min": 0.01611619202230781,
+     "curvature_force_ratio": 34.720018183374854,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.665345721601604,
+     "r_decouple": 5.65229845626072,
+     "r_first_wall": 2.0376843910806173,
+     "r_last_wall": 2.0376843910806173,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595,
+     "throat_slope_inner": -56.96646176304476,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.0376843910806173
+     ]
+    },
+    {
+     "balance_at_mid": 0.9655818770380252,
+     "balance_at_throat": 0.20133018713317058,
+     "balance_min": 0.005489244325710548,
+     "curvature_force_ratio": 16.95325547215799,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.822835496082476,
+     "r_decouple": 4.660051457975986,
+     "r_first_wall": 2.055403087478559,
+     "r_last_wall": 2.055403087478559,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584,
+     "throat_slope_inner": -92.19620328182917,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.055403087478559
+     ]
+    },
+    {
+     "balance_at_mid": 0.980920236425668,
+     "balance_at_throat": 0.19951194111932793,
+     "balance_min": 0.0007791655383880863,
+     "curvature_force_ratio": 0.6138627299456073,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.9164526011740531,
+     "r_decouple": 4.022178387650086,
+     "r_first_wall": 2.019965694682676,
+     "r_last_wall": 2.019965694682676,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574,
+     "throat_slope_inner": -143.89706921077973,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.019965694682676
+     ]
+    },
+    {
+     "balance_at_mid": 0.9834729250881394,
+     "balance_at_throat": 0.18673703371681738,
+     "balance_min": 0.001851252632535591,
+     "curvature_force_ratio": 16.70421347898465,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8700203058720402,
+     "r_decouple": 8.221509433962263,
+     "r_first_wall": 1.895934819897084,
+     "r_last_wall": 1.895934819897084,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563,
+     "throat_slope_inner": -296.0071440184924,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.895934819897084
+     ]
+    },
+    {
+     "balance_at_mid": 0.9683986606973388,
+     "balance_at_throat": 0.15555838441163064,
+     "balance_min": 0.014752217225565164,
+     "curvature_force_ratio": 38.28667524854821,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.6666043405938743,
+     "r_decouple": 7.477324185248713,
+     "r_first_wall": 1.6655917667238422,
+     "r_last_wall": 1.6655917667238422,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552,
+     "throat_slope_inner": -17.422700584807025,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6655917667238422
+     ]
+    },
+    {
+     "balance_at_mid": 0.9400479270401919,
+     "balance_at_throat": 0.07841968960772061,
+     "balance_min": 0.014028421588311477,
+     "curvature_force_ratio": 40.78298592840301,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.4244664232843137,
+     "r_decouple": 6.449639794168095,
+     "r_first_wall": 1.3289365351629503,
+     "r_last_wall": 1.3289365351629503,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542,
+     "throat_slope_inner": -13.851157209967239,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.3289365351629503
+     ]
+    },
+    {
+     "balance_at_mid": 0.9292187552209455,
+     "balance_at_throat": 0.12768248542011576,
+     "balance_min": 0.011017552391257618,
+     "curvature_force_ratio": 36.88856182520357,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.2857072894319198,
+     "r_decouple": 5.492830188679244,
+     "r_first_wall": 1.0985934819897083,
+     "r_last_wall": 1.0985934819897083,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531,
+     "throat_slope_inner": -4.91620835404385,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0985934819897083
+     ]
+    },
+    {
+     "balance_at_mid": 0.9349805775724485,
+     "balance_at_throat": 0.3552248200256999,
+     "balance_min": 0.0011229009160455493,
+     "curvature_force_ratio": 32.72966163101906,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.26959186636604704,
+     "r_decouple": 4.837238421955402,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952,
+     "throat_slope_inner": -4.391320435454548,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9711711264748493,
+     "balance_at_throat": 0.3592611795852841,
+     "balance_min": 0.14009013796904954,
+     "curvature_force_ratio": 28.183028004987587,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3161864549924342,
+     "r_decouple": 4.305677530017152,
+     "r_first_wall": 1.0379877315163315,
+     "r_last_wall": 1.0379877315163315,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951,
+     "throat_slope_inner": -7.571811099169509,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0379877315163315
+     ]
+    },
+    {
+     "balance_at_mid": 0.9932475645840668,
+     "balance_at_throat": 0.24441281924963992,
+     "balance_min": 0.007223864808769806,
+     "curvature_force_ratio": 24.099238935240717,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.3549512932349688,
+     "r_decouple": 3.86271012006861,
+     "r_first_wall": 1.1694682675814752,
+     "r_last_wall": 1.1694682675814752,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499,
+     "throat_slope_inner": -12.992837225574215,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.1694682675814752
+     ]
+    },
+    {
+     "balance_at_mid": 0.943078726966225,
+     "balance_at_throat": 0.19458225545797614,
+     "balance_min": 0.04540892631205313,
+     "curvature_force_ratio": 26.893275032954627,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.34440966309575743,
+     "r_decouple": 7.122950257289879,
+     "r_first_wall": 1.3820926243567753,
+     "r_last_wall": 1.3820926243567753,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488,
+     "throat_slope_inner": -16.923055782728678,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.3820926243567753
+     ]
+    },
+    {
+     "balance_at_mid": 0.9408058815875909,
+     "balance_at_throat": 0.2361792605350122,
+     "balance_min": 0.006379486652508183,
+     "curvature_force_ratio": 43.72521780243361,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.28675325144915864,
+     "r_decouple": 6.307890222984562,
+     "r_first_wall": 1.2226243567753001,
+     "r_last_wall": 1.2226243567753001,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478,
+     "throat_slope_inner": -18.19137308051247,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.2226243567753001
+     ]
+    },
+    {
+     "balance_at_mid": 0.9368644518837741,
+     "balance_at_throat": 0.36598881964272184,
+     "balance_min": 0.07390201989028604,
+     "curvature_force_ratio": 65.74971766731798,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.21523128729231922,
+     "r_decouple": 11.977873070325899,
+     "r_first_wall": 1.0403166883258648,
+     "r_last_wall": 1.0403166883258648,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467,
+     "throat_slope_inner": -17.231936176437067,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.0403166883258648
+     ]
+    },
+    {
+     "balance_at_mid": 0.9312073267991824,
+     "balance_at_throat": 0.5694955511496921,
+     "balance_min": 0.016181390378799634,
+     "curvature_force_ratio": 82.75589888602245,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.16905396865939512,
+     "r_decouple": 5.103018867924527,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456,
+     "throat_slope_inner": -15.406374740975375,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9345914690321445,
+     "balance_at_throat": 0.7592075212080336,
+     "balance_min": 0.1319033694849912,
+     "curvature_force_ratio": 91.57422460245597,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.16576959875496056,
+     "r_decouple": 5.882641509433961,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446,
+     "throat_slope_inner": -13.344724282069471,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9417136600680919,
+     "balance_at_throat": 0.7902731508863864,
+     "balance_min": 0.03925605535574513,
+     "curvature_force_ratio": 93.87528038867944,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.19338341141252008,
+     "r_decouple": 4.128490566037735,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435,
+     "throat_slope_inner": -10.857169016598249,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9285039855864199,
+     "balance_at_throat": 0.6761586655950651,
+     "balance_min": 0.01666082808762431,
+     "curvature_force_ratio": 90.62498267983202,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.22163676450870942,
+     "r_decouple": 4.518301886792452,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424,
+     "throat_slope_inner": -14.8797029042983,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9183070195489541,
+     "balance_at_throat": 0.5564534960929551,
+     "balance_min": 0.06368728846093027,
+     "curvature_force_ratio": 76.91183355531209,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.2239513992594781,
+     "r_decouple": 3.3134305317324184,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-16",
+     "t_over_rm": 15.999999999999414,
+     "throat_slope_inner": -18.54284686783053,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    }
+   ],
+   "stations_with_a_wall": 20,
+   "verdicts": [
+    "single_force_collar",
+    "two_force_wall"
+   ],
+   "wall_at_final_station": false,
+   "wall_presence_fraction": 0.6060606060606061
+  },
+  {
+   "case": "mu-1.040-eps-0.001",
+   "dead_end_flags_observed": [
+    "throat_steep_reported"
+   ],
+   "epsilon": 0.001,
+   "failure_blocker": "march_pair stopped before the chunk exceeded the CPU projection",
+   "failure_clock_t": 18.83399999999986,
+   "has_summary_json": false,
+   "mass_over_rm": 1.04,
+   "points": 869,
+   "r_wall_final": NaN,
+   "r_wall_max": 2.038709677419355,
+   "r_wall_min": 1.2896774193548388,
+   "reached_t_over_rm": 18.499999999999805,
+   "station_count": 38,
+   "stations": [
+    {
+     "balance_at_mid": 0.9727726050720972,
+     "balance_at_throat": 0.7129464772471076,
+     "balance_min": 0.6842114614340292,
+     "curvature_force_ratio": 43.410850627223645,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.014251457258367755,
+     "r_decouple": 5.284516129032259,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0",
+     "t_over_rm": 0.0,
+     "throat_slope_inner": -2.524880618702264,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.969574635928561,
+     "balance_at_throat": 0.8975644597589919,
+     "balance_min": 0.7984810828558767,
+     "curvature_force_ratio": 49.496569215586895,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.015444080485641073,
+     "r_decouple": 4.999170506912442,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0.5",
+     "t_over_rm": 0.5,
+     "throat_slope_inner": -2.986177394136401,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9710036946199517,
+     "balance_at_throat": 0.8001086648719686,
+     "balance_min": 0.7416274765766291,
+     "curvature_force_ratio": 48.173843345084016,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.016561351805426384,
+     "r_decouple": 4.606820276497697,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1",
+     "t_over_rm": 1.0,
+     "throat_slope_inner": -5.689181793240449,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9935091250201713,
+     "balance_at_throat": 0.8809294295038645,
+     "balance_min": 0.6453287953418454,
+     "curvature_force_ratio": 49.11912835237078,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.018040379967065506,
+     "r_decouple": 6.925253456221198,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945,
+     "throat_slope_inner": -5.210967424505235,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9846429060899666,
+     "balance_at_throat": 0.4656568491190179,
+     "balance_min": 0.4471361183947669,
+     "curvature_force_ratio": 49.17050919248786,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.021039693939476314,
+     "r_decouple": 4.214470046082949,
+     "r_first_wall": 1.7890322580645162,
+     "r_last_wall": 1.7890322580645162,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899,
+     "throat_slope_inner": -4.4033924221914535,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.7890322580645162
+     ]
+    },
+    {
+     "balance_at_mid": 0.9671656054562638,
+     "balance_at_throat": 0.35401334504146686,
+     "balance_min": 0.35269815812936284,
+     "curvature_force_ratio": 44.71610602696158,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.024508604254922666,
+     "r_decouple": 11.70479262672811,
+     "r_first_wall": 1.5750230414746544,
+     "r_last_wall": 1.5750230414746544,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835,
+     "throat_slope_inner": -4.389786139840373,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.5750230414746544
+     ]
+    },
+    {
+     "balance_at_mid": 0.9789188610935039,
+     "balance_at_throat": 0.5454748257101295,
+     "balance_min": 0.5424856856999374,
+     "curvature_force_ratio": 32.25535181960331,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.029124387918621156,
+     "r_decouple": 3.2157603686635947,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797,
+     "throat_slope_inner": -3.3749389295968926,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9671923441023492,
+     "balance_at_throat": 0.9256238754868934,
+     "balance_min": 0.7980670323279965,
+     "curvature_force_ratio": 19.586838130623445,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.03712209774019294,
+     "r_decouple": 2.6094009216589864,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247,
+     "throat_slope_inner": -2.528840363804517,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9499412562694522,
+     "balance_at_throat": 0.7748200175911971,
+     "balance_min": 0.771054569723864,
+     "curvature_force_ratio": 11.758153178881749,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.049166035068490835,
+     "r_decouple": 10.20672811059908,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696,
+     "throat_slope_inner": -1.9759022508283908,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9707049258701247,
+     "balance_at_throat": 0.9424089840871527,
+     "balance_min": 0.8138808533551604,
+     "curvature_force_ratio": 17.202131842017227,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.06988501876143371,
+     "r_decouple": 10.77741935483871,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659,
+     "throat_slope_inner": -1.3806105603207701,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9882706774052024,
+     "balance_at_throat": 0.4794032647336702,
+     "balance_min": 0.4715326871322315,
+     "curvature_force_ratio": 27.58914839670585,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.10851351716861171,
+     "r_decouple": 9.243686635944702,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648,
+     "throat_slope_inner": -1.006456632582356,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9551283516134272,
+     "balance_at_throat": 0.22326092376486467,
+     "balance_min": 0.21170075018672566,
+     "curvature_force_ratio": 31.377429583424643,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.16696811884858495,
+     "r_decouple": 8.744331797235024,
+     "r_first_wall": 1.6106912442396313,
+     "r_last_wall": 1.6106912442396313,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638,
+     "throat_slope_inner": -1.644722548937184,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6106912442396313
+     ]
+    },
+    {
+     "balance_at_mid": 0.9800590399191069,
+     "balance_at_throat": 0.0897164266458101,
+     "balance_min": 0.08355869114208295,
+     "curvature_force_ratio": 31.652151453797597,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.24954954076612312,
+     "r_decouple": 11.526451612903227,
+     "r_first_wall": 1.8247004608294932,
+     "r_last_wall": 1.8247004608294932,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627,
+     "throat_slope_inner": -2.329209616899598,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.8247004608294932
+     ]
+    },
+    {
+     "balance_at_mid": 0.9642177051267464,
+     "balance_at_throat": 0.021188853811208542,
+     "balance_min": 0.021188853811208542,
+     "curvature_force_ratio": 29.055444312892543,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3595104867452212,
+     "r_decouple": 11.027096774193549,
+     "r_first_wall": 1.931705069124424,
+     "r_last_wall": 1.931705069124424,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616,
+     "throat_slope_inner": -3.105683231848921,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.931705069124424
+     ]
+    },
+    {
+     "balance_at_mid": 0.9377055504372891,
+     "balance_at_throat": 0.009498773722274518,
+     "balance_min": 0.0012517794144781276,
+     "curvature_force_ratio": 25.171135940492277,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.4967966677785508,
+     "r_decouple": 14.05889400921659,
+     "r_first_wall": 2.003041474654378,
+     "r_last_wall": 2.003041474654378,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606,
+     "throat_slope_inner": -4.06127168032597,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.003041474654378
+     ]
+    },
+    {
+     "balance_at_mid": 0.938027307453299,
+     "balance_at_throat": 0.014806650614083476,
+     "balance_min": 0.0003272112335080428,
+     "curvature_force_ratio": 22.34047064394388,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.6527909790353391,
+     "r_decouple": 5.712534562211982,
+     "r_first_wall": 2.038709677419355,
+     "r_last_wall": 2.038709677419355,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595,
+     "throat_slope_inner": -5.418078838541359,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.038709677419355
+     ]
+    },
+    {
+     "balance_at_mid": 0.9658068332182902,
+     "balance_at_throat": 0.00021315224465353464,
+     "balance_min": 0.00021315224465353464,
+     "curvature_force_ratio": 17.522058995492394,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.799923139514728,
+     "r_decouple": 9.422027649769586,
+     "r_first_wall": 2.038709677419355,
+     "r_last_wall": 2.038709677419355,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584,
+     "throat_slope_inner": -7.811363748127975,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.038709677419355
+     ]
+    },
+    {
+     "balance_at_mid": 0.978446684684396,
+     "balance_at_throat": 0.03584207130176511,
+     "balance_min": 0.03584207130176511,
+     "curvature_force_ratio": 10.620359807519005,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8757130806113032,
+     "r_decouple": 13.773548387096774,
+     "r_first_wall": 2.003041474654378,
+     "r_last_wall": 2.003041474654378,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574,
+     "throat_slope_inner": -15.60252153681893,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.003041474654378
+     ]
+    },
+    {
+     "balance_at_mid": 0.9761551600735676,
+     "balance_at_throat": 0.09816250850868712,
+     "balance_min": 0.021046685866863965,
+     "curvature_force_ratio": 3.275919230146755,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8113701916776019,
+     "r_decouple": 9.136682027649769,
+     "r_first_wall": 1.8960368663594471,
+     "r_last_wall": 1.8960368663594471,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563,
+     "throat_slope_inner": -96.05654579344994,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.8960368663594471
+     ]
+    },
+    {
+     "balance_at_mid": 0.9744016439488067,
+     "balance_at_throat": 0.1978750988118786,
+     "balance_min": 0.1978750988118786,
+     "curvature_force_ratio": 6.713706156715237,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.610508861964582,
+     "r_decouple": 7.460276497695853,
+     "r_first_wall": 1.6463594470046083,
+     "r_last_wall": 1.6463594470046083,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552,
+     "throat_slope_inner": -18.768729461284515,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6463594470046083
+     ]
+    },
+    {
+     "balance_at_mid": 0.9424848622783812,
+     "balance_at_throat": 0.3500193353388059,
+     "balance_min": 0.18093177301306784,
+     "curvature_force_ratio": 11.73244851766718,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3888351893412393,
+     "r_decouple": 6.532903225806452,
+     "r_first_wall": 1.2896774193548388,
+     "r_last_wall": 1.2896774193548388,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542,
+     "throat_slope_inner": -6.851781882848429,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.2896774193548388
+     ]
+    },
+    {
+     "balance_at_mid": 0.9293051328272791,
+     "balance_at_throat": 0.5479331212239685,
+     "balance_min": 0.09524249325502436,
+     "curvature_force_ratio": 12.531080674010486,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.27153542599277486,
+     "r_decouple": 10.171059907834103,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531,
+     "throat_slope_inner": -4.875027705417858,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9339270530228287,
+     "balance_at_throat": 0.69148497284986,
+     "balance_min": 0.11759694234577318,
+     "curvature_force_ratio": 10.90788275843946,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.26694055158652735,
+     "r_decouple": 14.62958525345622,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952,
+     "throat_slope_inner": -4.883528849129751,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9713605635195622,
+     "balance_at_throat": 0.6577140670350717,
+     "balance_min": 0.18465028288811017,
+     "curvature_force_ratio": 7.944571879717247,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3152551005602368,
+     "r_decouple": 8.88700460829493,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951,
+     "throat_slope_inner": -6.884269671472533,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9887387509497186,
+     "balance_at_throat": 0.5429682168568547,
+     "balance_min": 0.0013856848947019253,
+     "curvature_force_ratio": 5.925709293902759,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.3497379654421174,
+     "r_decouple": 12.204147465437789,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499,
+     "throat_slope_inner": -8.294570845220756,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.935638316788823,
+     "balance_at_throat": 0.47877030201082627,
+     "balance_min": 0.04554790876002373,
+     "curvature_force_ratio": 7.960601744964022,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3347442324849615,
+     "r_decouple": 8.994009216589863,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488,
+     "throat_slope_inner": -6.781595094835062,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9366479150684669,
+     "balance_at_throat": 0.49266945861450856,
+     "balance_min": 0.08076385617991891,
+     "curvature_force_ratio": 13.010840551340538,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.27567726231161527,
+     "r_decouple": 6.425898617511521,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478,
+     "throat_slope_inner": -6.747074739292183,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9427546111740651,
+     "balance_at_throat": 0.5783402066560899,
+     "balance_min": 0.029827225326634527,
+     "curvature_force_ratio": 18.55534453704558,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.20776662390969855,
+     "r_decouple": 5.748202764976959,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467,
+     "throat_slope_inner": -6.750387008796312,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9235149099068141,
+     "balance_at_throat": 0.7165101041891433,
+     "balance_min": 6.230963538765907e-05,
+     "curvature_force_ratio": 22.092589462853553,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.16809495838508737,
+     "r_decouple": 5.177511520737327,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456,
+     "throat_slope_inner": -6.887399522985159,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9401358349532428,
+     "balance_at_throat": 0.8375670296339068,
+     "balance_min": 0.01845371635409865,
+     "curvature_force_ratio": 22.399912995593773,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.17102154433228978,
+     "r_decouple": 8.851336405529954,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446,
+     "throat_slope_inner": -7.093680731859177,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9324375719737225,
+     "balance_at_throat": 0.8328766091042439,
+     "balance_min": 0.09743781206206495,
+     "curvature_force_ratio": 19.85035691327195,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.20155723481942658,
+     "r_decouple": 4.178801843317972,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435,
+     "throat_slope_inner": -7.207128977964677,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9186144746344959,
+     "balance_at_throat": 0.7199850100072288,
+     "balance_min": 0.14471395710154836,
+     "curvature_force_ratio": 15.87976592899694,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.22847382917158401,
+     "r_decouple": 3.750783410138249,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424,
+     "throat_slope_inner": -7.053611357043492,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9133202469646055,
+     "balance_at_throat": 0.6208383437505693,
+     "balance_min": 0.026697865087905986,
+     "curvature_force_ratio": 12.943327487689244,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.22728297151591495,
+     "r_decouple": 3.3941013824884796,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-16",
+     "t_over_rm": 15.999999999999414,
+     "throat_slope_inner": -6.794583337831709,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9110655409806814,
+     "balance_at_throat": 0.5941303872745628,
+     "balance_min": 0.03810810670002045,
+     "curvature_force_ratio": 12.778484655873728,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.19756349180904711,
+     "r_decouple": 6.033548387096775,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-16.5",
+     "t_over_rm": 16.499999999999492,
+     "throat_slope_inner": -6.754694164526416,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.905610171147681,
+     "balance_at_throat": 0.6448670339629586,
+     "balance_min": 0.037644197269514436,
+     "curvature_force_ratio": 14.606439818367978,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.15727459341311834,
+     "r_decouple": 7.032258064516129,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-17",
+     "t_over_rm": 16.99999999999957,
+     "throat_slope_inner": -6.720972521684752,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.8994582666422031,
+     "balance_at_throat": 0.7622029626156602,
+     "balance_min": 0.03853779003940091,
+     "curvature_force_ratio": 16.42576226042302,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.13070020720075587,
+     "r_decouple": 32.0,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-17.5",
+     "t_over_rm": 17.49999999999965,
+     "throat_slope_inner": -6.804263545818351,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9051136902449797,
+     "balance_at_throat": 0.8943670971263157,
+     "balance_min": 0.05414072816480667,
+     "curvature_force_ratio": 16.14111559823728,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.13176361249138802,
+     "r_decouple": 4.499815668202765,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-18",
+     "t_over_rm": 17.999999999999726,
+     "throat_slope_inner": -7.038753041980692,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9227812586476575,
+     "balance_at_throat": 0.9146338140196408,
+     "balance_min": 0.05720795144387486,
+     "curvature_force_ratio": 13.587462534427436,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.15625418048532352,
+     "r_decouple": 4.0361290322580645,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-18.5",
+     "t_over_rm": 18.499999999999805,
+     "throat_slope_inner": -7.373308153738186,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    }
+   ],
+   "stations_with_a_wall": 12,
+   "verdicts": [
+    "single_force_collar",
+    "two_force_wall"
+   ],
+   "wall_at_final_station": false,
+   "wall_presence_fraction": 0.3157894736842105
+  },
+  {
+   "case": "mu-1.040-eps-0.010",
+   "dead_end_flags_observed": [
+    "throat_steep_reported"
+   ],
+   "epsilon": 0.01,
+   "failure_blocker": "march_pair stopped before the chunk exceeded the CPU projection",
+   "failure_clock_t": 19.988000000000046,
+   "has_summary_json": false,
+   "mass_over_rm": 1.04,
+   "points": 869,
+   "r_wall_final": NaN,
+   "r_wall_max": 2.038709677419355,
+   "r_wall_min": 1.2896774193548388,
+   "reached_t_over_rm": 19.49999999999996,
+   "station_count": 40,
+   "stations": [
+    {
+     "balance_at_mid": 0.9727726050720971,
+     "balance_at_throat": 0.7129464772471076,
+     "balance_min": 0.6842114614340292,
+     "curvature_force_ratio": 26.009801669098508,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.014251457258367739,
+     "r_decouple": 5.284516129032259,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0",
+     "t_over_rm": 0.0,
+     "throat_slope_inner": -2.524880618702233,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.969510682350193,
+     "balance_at_throat": 0.8971859857926606,
+     "balance_min": 0.7984228474037666,
+     "curvature_force_ratio": 6.057558988215719,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.015447054103812152,
+     "r_decouple": 4.999170506912442,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-0.5",
+     "t_over_rm": 0.5,
+     "throat_slope_inner": -2.986900017334482,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9710543567832954,
+     "balance_at_throat": 0.8002805549172788,
+     "balance_min": 0.741429974606816,
+     "curvature_force_ratio": 6.482816640944259,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.016566648280025603,
+     "r_decouple": 4.606820276497697,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1",
+     "t_over_rm": 1.0,
+     "throat_slope_inner": -5.696832927729659,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9935831392240697,
+     "balance_at_throat": 0.878652641071461,
+     "balance_min": 0.6447881897259072,
+     "curvature_force_ratio": 9.177416481632283,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.01805266624013473,
+     "r_decouple": 6.925253456221198,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945,
+     "throat_slope_inner": -5.2016013960431735,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9845487601995201,
+     "balance_at_throat": 0.4641851780329515,
+     "balance_min": 0.4457692242091644,
+     "curvature_force_ratio": 14.205003627978645,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.02106266012284657,
+     "r_decouple": 4.214470046082949,
+     "r_first_wall": 1.7890322580645162,
+     "r_last_wall": 1.7890322580645162,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899,
+     "throat_slope_inner": -4.405596899574872,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.7890322580645162
+     ]
+    },
+    {
+     "balance_at_mid": 0.9671172917758827,
+     "balance_at_throat": 0.35422752285640935,
+     "balance_min": 0.3530709543377275,
+     "curvature_force_ratio": 14.519824132236046,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.02454151909015395,
+     "r_decouple": 11.70479262672811,
+     "r_first_wall": 1.5750230414746544,
+     "r_last_wall": 1.5750230414746544,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835,
+     "throat_slope_inner": -4.382484300375361,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.5750230414746544
+     ]
+    },
+    {
+     "balance_at_mid": 0.9792052020201139,
+     "balance_at_throat": 0.5486845784137074,
+     "balance_min": 0.5453863388971489,
+     "curvature_force_ratio": 6.641346483777904,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.029182908490163105,
+     "r_decouple": 11.205437788018433,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797,
+     "throat_slope_inner": -3.3626565916393467,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9668572884060624,
+     "balance_at_throat": 0.9209231648556485,
+     "balance_min": 0.7977542598917075,
+     "curvature_force_ratio": 1.6825467671465144,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.037239813140285544,
+     "r_decouple": 10.706082949308755,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247,
+     "throat_slope_inner": -2.520059667897719,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9500215928146108,
+     "balance_at_throat": 0.7754222241871691,
+     "balance_min": 0.7714090314467192,
+     "curvature_force_ratio": 1.0946284650596798,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.04935265603542341,
+     "r_decouple": 1.8960368663594471,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696,
+     "throat_slope_inner": -1.9688166629665849,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9710598750150482,
+     "balance_at_throat": 0.9345664561332906,
+     "balance_min": 0.8122047155738181,
+     "curvature_force_ratio": 7.674839059279707,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.07032126028572139,
+     "r_decouple": 9.707373271889402,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659,
+     "throat_slope_inner": -1.3706615590886362,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9877364602444622,
+     "balance_at_throat": 0.47394528792371937,
+     "balance_min": 0.4658532321080024,
+     "curvature_force_ratio": 18.985147321616665,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.10928864818971555,
+     "r_decouple": 16.341658986175116,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648,
+     "throat_slope_inner": -1.0173358503073082,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9549889160494252,
+     "balance_at_throat": 0.22015794253355084,
+     "balance_min": 0.20848286343743833,
+     "curvature_force_ratio": 24.936663733717026,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.1682287539817391,
+     "r_decouple": 12.025806451612905,
+     "r_first_wall": 1.6106912442396313,
+     "r_last_wall": 1.6106912442396313,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638,
+     "throat_slope_inner": -1.657876011972048,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6106912442396313
+     ]
+    },
+    {
+     "balance_at_mid": 0.980852008690022,
+     "balance_at_throat": 0.08822774006023378,
+     "balance_min": 0.08166949328389293,
+     "curvature_force_ratio": 25.788706686195987,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.25144343098535016,
+     "r_decouple": 11.526451612903227,
+     "r_first_wall": 1.8247004608294932,
+     "r_last_wall": 1.8247004608294932,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627,
+     "throat_slope_inner": -2.341083554871087,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.8247004608294932
+     ]
+    },
+    {
+     "balance_at_mid": 0.9635446906842688,
+     "balance_at_throat": 0.021045980010803288,
+     "balance_min": 0.021045980010803288,
+     "curvature_force_ratio": 22.637182018314412,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.36210275610495235,
+     "r_decouple": 12.311152073732718,
+     "r_first_wall": 1.931705069124424,
+     "r_last_wall": 1.931705069124424,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616,
+     "throat_slope_inner": -3.121367458888638,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.931705069124424
+     ]
+    },
+    {
+     "balance_at_mid": 0.9375160137220243,
+     "balance_at_throat": 0.008218093113225421,
+     "balance_min": 0.0023311066506028827,
+     "curvature_force_ratio": 18.680464047332485,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.4998775511745449,
+     "r_decouple": 10.492073732718893,
+     "r_first_wall": 2.003041474654378,
+     "r_last_wall": 2.003041474654378,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606,
+     "throat_slope_inner": -4.082252135878505,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.003041474654378
+     ]
+    },
+    {
+     "balance_at_mid": 0.9382675779854943,
+     "balance_at_throat": 0.011701032375991459,
+     "balance_min": 0.0014880753378916233,
+     "curvature_force_ratio": 14.778475693377493,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.6555002263860523,
+     "r_decouple": 5.712534562211982,
+     "r_first_wall": 2.038709677419355,
+     "r_last_wall": 2.038709677419355,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595,
+     "throat_slope_inner": -5.452783003074091,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.038709677419355
+     ]
+    },
+    {
+     "balance_at_mid": 0.9666959739195782,
+     "balance_at_throat": 0.0057991980845285215,
+     "balance_min": 0.0057991980845285215,
+     "curvature_force_ratio": 9.304729979275068,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.7999966645456412,
+     "r_decouple": 4.713824884792627,
+     "r_first_wall": 2.038709677419355,
+     "r_last_wall": 2.038709677419355,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584,
+     "throat_slope_inner": -7.8989030484457405,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.038709677419355
+     ]
+    },
+    {
+     "balance_at_mid": 0.9774212264158754,
+     "balance_at_throat": 0.045678889076187904,
+     "balance_min": 0.019397422609606522,
+     "curvature_force_ratio": 1.9368092300678155,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.8702998136271014,
+     "r_decouple": 4.071797235023041,
+     "r_first_wall": 2.003041474654378,
+     "r_last_wall": 2.003041474654378,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574,
+     "throat_slope_inner": -16.079616954603175,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      2.003041474654378
+     ]
+    },
+    {
+     "balance_at_mid": 0.9770430550191539,
+     "balance_at_throat": 0.11307052813159915,
+     "balance_min": 0.0592977173690955,
+     "curvature_force_ratio": 6.571981379098669,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.7997283882435139,
+     "r_decouple": 11.883133640552995,
+     "r_first_wall": 1.8960368663594471,
+     "r_last_wall": 1.8960368663594471,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563,
+     "throat_slope_inner": -125.40947932351655,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.8960368663594471
+     ]
+    },
+    {
+     "balance_at_mid": 0.9732568486571308,
+     "balance_at_throat": 0.21898465237715223,
+     "balance_min": 0.15547364165509475,
+     "curvature_force_ratio": 14.3072398176856,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.596618849866882,
+     "r_decouple": 11.312442396313365,
+     "r_first_wall": 1.6463594470046083,
+     "r_last_wall": 1.6463594470046083,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552,
+     "throat_slope_inner": -17.835278906165893,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.6463594470046083
+     ]
+    },
+    {
+     "balance_at_mid": 0.9418697809726954,
+     "balance_at_throat": 0.3773413617908008,
+     "balance_min": 0.04766956932505488,
+     "curvature_force_ratio": 21.086128853647285,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3787522031352902,
+     "r_decouple": 6.497235023041475,
+     "r_first_wall": 1.2896774193548388,
+     "r_last_wall": 1.2896774193548388,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542,
+     "throat_slope_inner": -6.772434151110877,
+     "verdict": "two_force_wall",
+     "wall_count": 1,
+     "walls": [
+      1.2896774193548388
+     ]
+    },
+    {
+     "balance_at_mid": 0.9291276594745982,
+     "balance_at_throat": 0.5775892398770168,
+     "balance_min": 0.06659026709875283,
+     "curvature_force_ratio": 23.704608500272933,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.266910073019713,
+     "r_decouple": 11.490783410138249,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531,
+     "throat_slope_inner": -4.875856383601181,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9343797276716169,
+     "balance_at_throat": 0.7164545664864116,
+     "balance_min": 0.0641692580081321,
+     "curvature_force_ratio": 24.863504203305965,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.2657431034204829,
+     "r_decouple": 9.529032258064518,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952,
+     "throat_slope_inner": -5.980783025498105,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9728798995136386,
+     "balance_at_throat": 0.682555797315604,
+     "balance_min": 0.07277717103828298,
+     "curvature_force_ratio": 24.59874623861167,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.3142962880018016,
+     "r_decouple": 10.313732718894009,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951,
+     "throat_slope_inner": -6.959799286175121,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9860836062123789,
+     "balance_at_throat": 0.5754260391713824,
+     "balance_min": 0.10110553130014048,
+     "curvature_force_ratio": 23.666521883736877,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.3466176381937496,
+     "r_decouple": 8.10230414746544,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499,
+     "throat_slope_inner": -8.305702084620034,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9373306261896528,
+     "balance_at_throat": 0.5169235733756198,
+     "balance_min": 0.0009801606904592637,
+     "curvature_force_ratio": 23.652082085233882,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.32917677616351265,
+     "r_decouple": 32.0,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488,
+     "throat_slope_inner": -6.3035826726407,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9383279730036624,
+     "balance_at_throat": 0.5319654929665213,
+     "balance_min": 0.05861154588759314,
+     "curvature_force_ratio": 25.01111736723966,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.2692411936090988,
+     "r_decouple": 8.173640552995392,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478,
+     "throat_slope_inner": -5.542923582916508,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9420426552298657,
+     "balance_at_throat": 0.6141076663945929,
+     "balance_min": 0.07421114289712058,
+     "curvature_force_ratio": 27.00658977015733,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.20260110121142716,
+     "r_decouple": 11.95447004608295,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467,
+     "throat_slope_inner": -5.490110874430363,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9242788624244319,
+     "balance_at_throat": 0.7435928915610308,
+     "balance_min": 0.0308588379619619,
+     "curvature_force_ratio": 28.438777599058177,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.16553140673291966,
+     "r_decouple": 9.60036866359447,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456,
+     "throat_slope_inner": -5.6452817762000755,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9387552191805194,
+     "balance_at_throat": 0.8522173348697409,
+     "balance_min": 0.011887198266502686,
+     "curvature_force_ratio": 28.09118581808617,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.17089834909157256,
+     "r_decouple": 4.642488479262672,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446,
+     "throat_slope_inner": -5.990469711213755,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9352770308736247,
+     "balance_at_throat": 0.834961790730775,
+     "balance_min": 0.03424731708138952,
+     "curvature_force_ratio": 25.613181795376306,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.2023499844679911,
+     "r_decouple": 5.177511520737327,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435,
+     "throat_slope_inner": -6.319050926777607,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9219365181397726,
+     "balance_at_throat": 0.7120541676675786,
+     "balance_min": 0.0629784459245714,
+     "curvature_force_ratio": 21.307360186685308,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.22820775387337053,
+     "r_decouple": 7.246267281105991,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424,
+     "throat_slope_inner": -7.267329619386637,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9137454692313566,
+     "balance_at_throat": 0.6079374824244544,
+     "balance_min": 0.0015453960118059354,
+     "curvature_force_ratio": 16.63588828659561,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.22492170439951947,
+     "r_decouple": 3.3584331797235025,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-16",
+     "t_over_rm": 15.999999999999414,
+     "throat_slope_inner": -7.801212885229626,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9094462983719678,
+     "balance_at_throat": 0.5804966127602351,
+     "balance_min": 0.08213386545277099,
+     "curvature_force_ratio": 12.670090097617857,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.19379178594657018,
+     "r_decouple": 7.674285714285714,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-16.5",
+     "t_over_rm": 16.499999999999492,
+     "throat_slope_inner": -7.916885132718476,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9050500220413844,
+     "balance_at_throat": 0.6334558112554733,
+     "balance_min": 0.09915292320994384,
+     "curvature_force_ratio": 10.321988299189849,
+     "dead_end_flags": [],
+     "force_ratio_integrated": 0.15379215529545545,
+     "r_decouple": 5.462857142857143,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-17",
+     "t_over_rm": 16.99999999999957,
+     "throat_slope_inner": -7.925290970497209,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9045421340234722,
+     "balance_at_throat": 0.756871440289523,
+     "balance_min": 0.008626648511876988,
+     "curvature_force_ratio": 8.807374567364793,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.129094087573454,
+     "r_decouple": 32.0,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-17.5",
+     "t_over_rm": 17.49999999999965,
+     "throat_slope_inner": -8.052242548986362,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9154204907113717,
+     "balance_at_throat": 0.8955207145906233,
+     "balance_min": 0.0027046650150889073,
+     "curvature_force_ratio": 7.765470267696249,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.1324028739480597,
+     "r_decouple": 4.464147465437788,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-18",
+     "t_over_rm": 17.999999999999726,
+     "throat_slope_inner": -8.352418668119915,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9290035989870694,
+     "balance_at_throat": 0.904231063509843,
+     "balance_min": 0.07193053633151808,
+     "curvature_force_ratio": 5.725050037805011,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.15798345882479667,
+     "r_decouple": 4.000460829493088,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-18.5",
+     "t_over_rm": 18.499999999999805,
+     "throat_slope_inner": -8.697117805657884,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.9244166829783552,
+     "balance_at_throat": 0.7508916472900672,
+     "balance_min": 0.055640972010210156,
+     "curvature_force_ratio": 2.497817572991724,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.18665893760077004,
+     "r_decouple": 32.0,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-19",
+     "t_over_rm": 18.999999999999883,
+     "throat_slope_inner": -8.797737710199431,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    },
+    {
+     "balance_at_mid": 0.8773771972317124,
+     "balance_at_throat": 0.6067100473030324,
+     "balance_min": 0.0758888059131486,
+     "curvature_force_ratio": 1.7688354972252578,
+     "dead_end_flags": [
+      "throat_steep_reported"
+     ],
+     "force_ratio_integrated": 0.19739764500750998,
+     "r_decouple": 3.1087557603686635,
+     "r_first_wall": NaN,
+     "r_last_wall": NaN,
+     "station": "station-19.5",
+     "t_over_rm": 19.49999999999996,
+     "throat_slope_inner": -8.437732323563404,
+     "verdict": "single_force_collar",
+     "wall_count": 0,
+     "walls": []
+    }
+   ],
+   "stations_with_a_wall": 12,
+   "verdicts": [
+    "single_force_collar",
+    "two_force_wall"
+   ],
+   "wall_at_final_station": false,
+   "wall_presence_fraction": 0.3
+  }
+ ],
+ "coverage": {
+  "cases": 6,
+  "cases_showing_a_wall_at_any_station": 6,
+  "cases_with_a_wall_at_the_final_station": 2,
+  "cases_with_summary_json": 0,
+  "family_complete": false,
+  "station_fraction_with_a_wall": 0.4971751412429379,
+  "total_stations": 177
+ },
+ "creation_only": true,
+ "dead_end_flags_observed": [
+  "throat_steep_reported"
+ ],
+ "domain": {
+  "chart": "areal radius",
+  "compared_quantity": "balance of inherited radial and generated angular pressure",
+  "observer": "areal chart of the recorded coupled arm",
+  "r_inner": "fixed inner mass at grid[0]",
+  "r_outer": 32.0,
+  "state": "recorded station payload, no time step taken",
+  "verdict_basis": "measured balance-wall structure. A wall is an areal radius where the radial and angular forces are equal, surviving a hysteresis band and a minimum persistence on both sides while both forces stay above their own live floor. No chosen slope limit decides the verdict.",
+  "wall_dynamics": "The wall is tracked across every station of a case, not read at the last one. A wall that appears at some stations and not others is oscillating, not settled, and the per-case presence fraction records that."
+ },
+ "family_source": "nsc-rn-neutral-family-v1",
+ "family_source_sha256": "2548efd700a265121f080a27cc25e5b7022bb687100f6933139aebb424fe379d",
+ "limits": {
+  "curvature_force_ratio": 1000.0,
+  "exterior_decoupled": 0.999,
+  "single_force_balance": 0.9,
+  "throat_fraction": 0.1,
+  "throat_slope_limit": 8.0,
+  "wall_hysteresis": 0.05,
+  "wall_live_fraction": 0.001,
+  "wall_min_cells": 2
+ },
+ "producing_commit": "d427225ea532f51c0ab10da428fe647ddff2c5a6",
+ "schema": "NSC-RN-GRADIENT-BUBBLE-v2",
+ "scope_note": "A construction check on recorded finite states. It does not measure the actual universe, and a bounded balance here is not evidence about cosmology.",
+ "summary": {
+  "balance_at_throat_max": 0.9146338140196408,
+  "balance_at_throat_min": 0.0843483099126611,
+  "integrated_outer_over_inner_max": 0.8203977871099011,
+  "integrated_outer_over_inner_min": 0.15625418048532352,
+  "r_decouple_max": 4.655335714285714,
+  "r_decouple_min": 3.1087557603686635,
+  "r_first_wall_max": 2.053717857142857,
+  "r_first_wall_min": 2.053717857142857
+ },
+ "supersedes": {
+  "case_verdicts": {
+   "mu-1.002-eps-0.001": "dead_end",
+   "mu-1.002-eps-0.010": "dead_end",
+   "mu-1.010-eps-0.001": "dead_end",
+   "mu-1.010-eps-0.010": "dead_end",
+   "mu-1.040-eps-0.001": "two_force_balance",
+   "mu-1.040-eps-0.010": "dead_end"
+  },
+  "record": "nsc-rn-gradient-bubble-v1.json",
+  "sha256": "5e7220601b8dd0b2ad296faceefebadf8e15fdfc7de70c5233b1458f0b0f4290",
+  "superseded_reason": "The v1 verdict was decided by a chosen throat-slope limit of 8. The measured slopes straddled it at -7.37 and -8.44, so the verdict pointed the wrong way: mu=1.040 eps=0.001 passed as two_force_balance but has no balance wall inside its collar at all. The limit is now a reported diagnostic only.",
+  "verdicts": [
+   "dead_end",
+   "two_force_balance"
+  ]
+ },
+ "verdicts": [
+  "single_force_collar",
+  "two_force_wall"
+ ]
+}

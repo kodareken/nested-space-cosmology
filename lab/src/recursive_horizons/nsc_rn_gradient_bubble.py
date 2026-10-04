@@ -74,9 +74,11 @@ from typing import Any, Dict
 import numpy as np
 from numba import njit
 
-API_VERSION = "nsc-rn-gradient-bubble-v1"
+API_VERSION = "nsc-rn-gradient-bubble-v2"
 
-#: A force steeper than this as r decreases is a collapse signature.
+#: A force steeper than this as r decreases is a reported collapse
+#: signature. It is a diagnostic, not a verdict. The verdict comes from
+#: the measured balance-wall structure, which needs no chosen limit.
 THROAT_SLOPE_LIMIT = 8.0
 #: Balance below this means the angular force is under a tenth of radial.
 SINGLE_FORCE_BALANCE = 0.90
@@ -86,6 +88,14 @@ EXTERIOR_DECOUPLED = 0.999
 CURVATURE_FORCE_RATIO = 1.0e3
 #: Fraction of the collar the throat test is judged on.
 THROAT_FRACTION = 0.10
+#: Both forces must be at least this fraction of their own peak for a
+#: crossing to be structure. Below it a crossing is a noise floor.
+WALL_LIVE_FRACTION = 1.0e-3
+#: A wall must hold the balance this far past one half before the next
+#: crossing is believed, so a single-cell wobble is not a wall.
+WALL_HYSTERESIS = 0.05
+#: Minimum cells a wall must persist on each side.
+WALL_MIN_CELLS = 2
 
 
 @njit(cache=True)
@@ -155,6 +165,60 @@ def _balance_profile(radius: np.ndarray, inner: np.ndarray, outer: np.ndarray) -
 
 
 @njit(cache=True)
+def _balance_walls(radius: np.ndarray, balance: np.ndarray, live: np.ndarray) -> np.ndarray:
+    """Areal radii where the two forces are equal, inside the live collar.
+
+    A crossing counts only when the balance genuinely holds beyond the
+    hysteresis band on both sides and both forces are still above their
+    own live floor. A single-cell wobble is not a wall, and a crossing
+    out where one force has already died is not a wall either. The wall
+    radius is interpolated where the balance passes one half, not taken
+    at a grid node.
+    """
+    walls = []
+    side = 0
+    run = 0
+    previous = -1
+    candidate = -1.0
+    for i in range(radius.shape[0]):
+        if not live[i]:
+            continue
+        value = balance[i]
+        if side == 0:
+            if value >= 0.5 + WALL_HYSTERESIS:
+                side = 1
+                run = 1
+                previous = i
+            elif value <= 0.5 - WALL_HYSTERESIS:
+                side = -1
+                run = 1
+                previous = i
+            continue
+        flipped = (side == 1 and value <= 0.5 - WALL_HYSTERESIS) or (
+            side == -1 and value >= 0.5 + WALL_HYSTERESIS)
+        if flipped:
+            # The old side persisted; the new side still has to. Hold the
+            # crossing as a candidate and only keep it if it survives.
+            candidate = -1.0
+            if run >= WALL_MIN_CELLS and previous >= 0 and previous < i:
+                before = balance[previous]
+                if value != before:
+                    weight = (0.5 - before) / (value - before)
+                    weight = min(max(weight, 0.0), 1.0)
+                    candidate = radius[previous] + weight * (radius[i] - radius[previous])
+            side = -side
+            run = 1
+            previous = i
+        else:
+            run += 1
+            previous = i
+            if run >= WALL_MIN_CELLS and candidate >= 0.0:
+                walls.append(candidate)
+                candidate = -1.0
+    return np.array(walls, dtype=np.float64)
+
+
+@njit(cache=True)
 def _finite_extreme(values: np.ndarray, want_max: bool) -> float:
     """Largest or smallest finite entry, ignoring ``nan`` stencils."""
     best = math.nan
@@ -194,6 +258,12 @@ def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
     balance = _balance_profile(radius, inner, outer)
     slope_inner = _log_slope(radius, inner)
     slope_outer = _log_slope(radius, outer)
+
+    inner_peak = float(np.max(np.abs(inner)))
+    outer_peak = float(np.max(np.abs(outer)))
+    live = (np.abs(inner) >= WALL_LIVE_FRACTION * inner_peak) & (
+        np.abs(outer) >= WALL_LIVE_FRACTION * outer_peak)
+    walls = _balance_walls(radius, balance, live)
 
     throat = max(1, int(round(THROAT_FRACTION * radius.shape[0])))
     throat_slice = slice(1, throat + 1)
@@ -235,6 +305,11 @@ def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
         "sign_changes_outer": int(_sign_changes(outer)),
         "exterior_decoupled_index": int(decoupled_at),
         "r_decouple": float(radius[decoupled_at]) if decoupled_at >= 0 else float(radius[-1]),
+        "walls": walls,
+        "wall_count": int(walls.size),
+        "r_first_wall": float(walls[0]) if walls.size else float("nan"),
+        "r_last_wall": float(walls[-1]) if walls.size else float("nan"),
+        "balance_side_at_throat": int(np.sign(balance[1] - 0.5)) if balance[1] != 0.5 else 0,
     }
 
 
@@ -266,19 +341,28 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
 
     flags: list[str] = []
 
+    # The verdict is the measured wall structure, not a chosen slope.
+    # A throat slope steeper than the limit is reported because it is a
+    # real collapse signature, but it no longer decides the outcome: the
+    # v1 verdict rested on that number and the data straddled it at -7.37
+    # and -8.44, so the verdict pointed the wrong way.
+    if (not math.isnan(profile["throat_slope_inner"])) and profile["throat_slope_inner"] < -THROAT_SLOPE_LIMIT:
+        flags.append("throat_steep_reported")
     if profile["balance_min"] >= SINGLE_FORCE_BALANCE:
         flags.append("single_force")
-    if (not math.isnan(profile["throat_slope_inner"])) and profile["throat_slope_inner"] < -THROAT_SLOPE_LIMIT:
-        flags.append("throat_runaway")
     if curvature_ratio > CURVATURE_FORCE_RATIO:
         flags.append("curvature_dominates")
 
-    if flags:
+    hard = [f for f in flags if f != "throat_steep_reported"]
+
+    if profile["wall_count"] > 0:
+        verdict = "two_force_wall"
+    elif hard:
         verdict = "dead_end"
     elif profile["balance_min"] <= 0.0 or profile["balance_max"] >= 1.0:
         verdict = "unresolved"
     else:
-        verdict = "two_force_balance"
+        verdict = "single_force_collar"
 
     return {
         "api_version": API_VERSION,
@@ -294,6 +378,9 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
             "exterior_decoupled": EXTERIOR_DECOUPLED,
             "curvature_force_ratio": CURVATURE_FORCE_RATIO,
             "throat_fraction": THROAT_FRACTION,
+            "wall_live_fraction": WALL_LIVE_FRACTION,
+            "wall_hysteresis": WALL_HYSTERESIS,
+            "wall_min_cells": WALL_MIN_CELLS,
         },
         "profile": profile,
     }

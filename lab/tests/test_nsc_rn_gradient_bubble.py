@@ -13,7 +13,7 @@ import numpy as np
 from recursive_horizons import nsc_rn_gradient_bubble as gb
 
 LAB = Path(__file__).resolve().parents[1]
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v1.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v2.json"
 
 
 def _payload(inner, outer, radius=None):
@@ -80,6 +80,81 @@ class BalanceTests(unittest.TestCase):
         self.assertEqual(gb._sign_changes(np.array([1.0, 2.0, 3.0])), 0)
 
 
+class WallTests(unittest.TestCase):
+    """The verdict basis: a measured wall, not a chosen slope limit."""
+
+    def _profile(self, balance_values, radius=None):
+        balance = np.asarray(balance_values, dtype=float)
+        if radius is None:
+            radius = np.linspace(1.04, 32.0, balance.size)
+        return gb._balance_walls(radius, balance, np.ones(balance.size, dtype=bool))
+
+    def test_single_wall_is_located(self):
+        # Radial above one half for the first third, angular below after.
+        radius = np.linspace(1.04, 32.0, 300)
+        balance = np.where(radius < 10.0, 0.8, 0.2)
+        walls = gb._balance_walls(radius, balance, np.ones(radius.size, dtype=bool))
+        self.assertEqual(walls.size, 1)
+        self.assertAlmostEqual(float(walls[0]), 10.0, delta=0.2)
+
+    def test_single_cell_wobble_is_not_a_wall(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        balance = np.full(radius.size, 0.8)
+        balance[100] = 0.2
+        walls = gb._balance_walls(radius, balance, np.ones(radius.size, dtype=bool))
+        self.assertEqual(walls.size, 0)
+
+    def test_crossing_outside_the_live_region_is_ignored(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        balance = np.where(radius < 10.0, 0.8, 0.2)
+        # Live only below the crossing, so the wall cannot be believed.
+        live = np.zeros(radius.size, dtype=bool)
+        live[:25] = True
+        walls = gb._balance_walls(radius, balance, live)
+        self.assertEqual(walls.size, 0)
+
+    def test_verdict_is_two_force_wall_when_a_wall_exists(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        # Constant magnitudes keep both forces live out to the crossing.
+        inner = np.where(radius < 10.0, 2.0, 0.2)
+        outer = np.full(radius.size, 0.5)
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
+        self.assertEqual(verdict["verdict"], "two_force_wall")
+        self.assertEqual(verdict["profile"]["wall_count"], 1)
+        self.assertAlmostEqual(verdict["profile"]["r_first_wall"], 10.0, delta=0.2)
+
+    def test_verdict_is_single_force_collar_without_a_wall(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        # The outer force is present but never catches the radial one, so
+        # there is no wall and yet this is not a missing-force dead end.
+        inner = np.full(radius.size, 2.0)
+        outer = np.full(radius.size, 1.0)
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
+        self.assertEqual(verdict["profile"]["wall_count"], 0)
+        self.assertEqual(verdict["dead_end_flags"], [])
+        self.assertEqual(verdict["verdict"], "single_force_collar")
+
+    def test_negligible_outer_force_is_a_hard_dead_end(self):
+        radius = np.linspace(1.04, 32.0, 300)
+        inner = np.full(radius.size, 2.0)
+        outer = np.full(radius.size, 0.01)
+        verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
+        self.assertIn("single_force", verdict["dead_end_flags"])
+        self.assertEqual(verdict["verdict"], "dead_end")
+
+    def test_steep_throat_is_reported_but_does_not_decide(self):
+        """The v1 mistake: a steep slope used to override the structure."""
+        radius = np.linspace(1.04, 32.0, 300)
+        steep = radius ** -30.0
+        paired = np.where(radius < 10.0, radius ** -3.0, radius ** -9.0)
+        # A steep radial force with a genuine wall crossing it.
+        verdict = gb.gradient_bubble_assessment(_payload(steep * 0 + paired, paired, radius))
+        steep_only = gb.gradient_bubble_assessment(
+            _payload(steep, 0.6 * steep, radius))
+        self.assertIn("throat_steep_reported", steep_only["dead_end_flags"])
+        self.assertNotIn("throat_steep_reported", verdict["dead_end_flags"])
+
+
 class DeadEndTests(unittest.TestCase):
     def test_single_force_flag_when_outer_is_negligible(self):
         radius = np.linspace(1.04, 32.0, 401)
@@ -94,15 +169,16 @@ class DeadEndTests(unittest.TestCase):
         inner = radius ** -30.0
         outer = 0.5 * radius ** -30.0
         verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
-        self.assertIn("throat_runaway", verdict["dead_end_flags"])
+        self.assertIn("throat_steep_reported", verdict["dead_end_flags"])
+        self.assertNotEqual(verdict["verdict"], "two_force_wall")
 
     def test_balanced_verdict_when_both_forces_act(self):
         radius = np.linspace(1.04, 32.0, 401)
-        inner = radius ** -5.0
-        outer = 0.6 * radius ** -6.0
+        inner = np.where(radius < 10.0, 2.0, 0.2)
+        outer = np.full(radius.size, 0.5)
         verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
         self.assertEqual(verdict["dead_end_flags"], [])
-        self.assertEqual(verdict["verdict"], "two_force_balance")
+        self.assertEqual(verdict["verdict"], "two_force_wall")
 
     def test_curvature_dominates_uses_same_provenance(self):
         radius = np.linspace(1.04, 32.0, 401)
@@ -166,6 +242,36 @@ class RecordTests(unittest.TestCase):
     def test_outer_force_is_never_negligible_in_any_case(self):
         ratios = [c["stations"][-1]["force_ratio_integrated"] for c in self.record["cases"]]
         self.assertTrue(all(r > 0.1 for r in ratios), ratios)
+
+    def test_record_supersedes_the_threshold_verdict(self):
+        self.assertIsNotNone(self.record["supersedes"])
+        self.assertIn("straddled", self.record["supersedes"]["superseded_reason"])
+
+    def test_wall_persistence_falls_as_the_exterior_strengthens(self):
+        """The derived relation: a stronger exterior dissolves the wall."""
+        by_mu = {}
+        for case in self.record["cases"]:
+            by_mu.setdefault(case["mass_over_rm"], []).append(
+                case["wall_presence_fraction"])
+        weak = max(by_mu[1.002])
+        strong = max(by_mu[1.04])
+        self.assertGreater(weak, strong)
+        self.assertGreater(weak, 0.5)
+        self.assertLess(strong, 0.5)
+
+    def test_wall_appears_in_every_case_at_some_station(self):
+        self.assertEqual(self.record["coverage"]["cases_showing_a_wall_at_any_station"], 6)
+
+    def test_wall_is_never_read_only_at_the_final_station(self):
+        """The wall oscillates, so a single snapshot would misreport it."""
+        coverage = self.record["coverage"]
+        self.assertLess(coverage["cases_with_a_wall_at_the_final_station"], 6)
+        self.assertGreater(coverage["station_fraction_with_a_wall"], 0.0)
+
+    def test_no_hard_dead_end_flag_fires(self):
+        self.assertEqual(
+            sorted({f for f in self.record["dead_end_flags_observed"] if f != "throat_steep_reported"}),
+            [])
 
 
 if __name__ == "__main__":

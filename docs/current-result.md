@@ -151,21 +151,31 @@ $d\ln|F|/d\ln r$.
 
 The outside acts in every recorded case. The integrated outer force is
 $15.6\%$ to $82.0\%$ of the inner force and no case falls below a tenth,
-so the non-local content is present throughout. The two forces trade
-rather than settle: as the exterior weakens from $\mu=1.040$ toward
-$\mu=1.002$ the required throat gradient steepens from about $-7$ to
-about $-153$, and the outer share grows from $16\%$ to $82\%$. Five of
-six cases trip the declared `throat_runaway` limit of $8$, and only
-$\mu=1.040$, $\varepsilon=0.001$ at slope $-7.37$ reaches a
-`two_force_balance` verdict. A sustained bubble is therefore not
-established across this family; it appears at most in a narrow window
-near $\mu=1.04$. The localization radius at which the outside stops
-contributing is $3.11$ to $4.66$.
+so the non-local content is present throughout. No hard dead-end flag
+fires anywhere in the family.
+
+Version one of this reduction judged the outcome with a chosen
+throat-slope limit of $8$, and the measured slopes straddled it at
+$-7.37$ and $-8.44$, so the verdict pointed the wrong way. It is
+superseded. The verdict is now the measured balance wall, the areal
+radius where the two forces are equal, accepted only where the balance
+holds past a hysteresis band on both sides and both forces stay above
+their own live floor.
+
+A wall is present at $49.7\%$ of all stations and appears in all six
+cases at some station, so the two forces genuinely reach equality. But
+the wall oscillates instead of holding a radius, and its persistence
+falls as the exterior compression strengthens, from about $65\%$ of
+stations at $\mu=1.002$ to about $31\%$ at $\mu=1.040$, with the inner
+excursion pushed from $1.04$ to $1.29$. A stronger exterior dissolves the
+wall. The balance is therefore real but transient, and a sustained
+gradient bubble is not established by this family.
 
 This is a construction check on recorded finite states, not a statement
-about the actual universe. The record is
-[nsc-rn-gradient-bubble-v1.json](../lab/results/development/nsc-rn-gradient-bubble-v1.json),
-creation only. A named blocker stops the family from being extended:
+about the actual universe. The current record is
+[nsc-rn-gradient-bubble-v2.json](../lab/results/development/nsc-rn-gradient-bubble-v2.json),
+creation only, which names the preserved v1 record in a `supersedes`
+block. A named blocker stops the family from being extended:
 `nsc_rn_pg._fornberg` fails its own $10^{-8}$ polynomial-moment check at
 width $9$ and above on this runtime, worst relative error $2.7\times10^{-5}$
 at width 11, third derivative. That is pre-existing and unrelated to this

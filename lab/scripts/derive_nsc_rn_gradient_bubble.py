@@ -32,7 +32,8 @@ if str(LAB / "src") not in sys.path:
 from recursive_horizons import nsc_rn_gradient_bubble as bubble  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v1.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v2.json"
+PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v1.json"
 CASE_PATTERN = re.compile(r"^mu-(?P<mu>[0-9.]+)-eps-(?P<eps>[0-9.]+)$")
 STATION_PATTERN = re.compile(r"^station-(?P<t>[0-9.]+)\.npz$")
 
@@ -85,6 +86,10 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
             "balance_min": profile["balance_min"],
             "balance_at_mid": profile["balance_at_mid"],
             "r_decouple": profile["r_decouple"],
+            "wall_count": profile["wall_count"],
+            "r_first_wall": profile["r_first_wall"],
+            "r_last_wall": profile["r_last_wall"],
+            "walls": [float(w) for w in profile["walls"]],
             "throat_slope_inner": profile["throat_slope_inner"],
             "force_ratio_integrated": profile["force_ratio_integrated"],
             "curvature_force_ratio": assessment["curvature_force_ratio"],
@@ -93,12 +98,20 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
     verdicts = sorted({row["verdict"] for row in rows})
     flags = sorted({flag for row in rows for flag in row["dead_end_flags"]})
     last = rows[-1] if rows else None
+    wall_rows = [row for row in rows if row["wall_count"] > 0]
+    wall_radii = [row["r_first_wall"] for row in wall_rows]
     return {
         "case": case_dir.name,
         "mass_over_rm": float(match.group("mu")) if match else None,
         "epsilon": float(match.group("eps")) if match else None,
         "points": points,
         "station_count": len(rows),
+        "stations_with_a_wall": len(wall_rows),
+        "wall_presence_fraction": (len(wall_rows) / len(rows)) if rows else None,
+        "r_wall_min": min(wall_radii) if wall_radii else None,
+        "r_wall_max": max(wall_radii) if wall_radii else None,
+        "r_wall_final": last["r_first_wall"] if last else None,
+        "wall_at_final_station": bool(last["wall_count"] > 0) if last else False,
         "reached_t_over_rm": last["t_over_rm"] if last else None,
         "verdicts": verdicts,
         "dead_end_flags_observed": flags,
@@ -121,13 +134,36 @@ def main() -> int:
 
     all_flags = sorted({flag for case in cases for flag in case["dead_end_flags_observed"]})
     verdicts = sorted({v for case in cases for v in case["verdicts"]})
-    balanced = [c for c in cases if "two_force_balance" in c["verdicts"]]
+    balanced = [c for c in cases if "two_force_wall" in c["verdicts"]]
     throats = [c["stations"][-1]["balance_at_throat"] for c in cases if c["stations"]]
     ratios = [c["stations"][-1]["force_ratio_integrated"] for c in cases if c["stations"]]
     decouple = [c["stations"][-1]["r_decouple"] for c in cases if c["stations"]]
+    walls = [c["stations"][-1]["r_first_wall"] for c in cases
+             if c["stations"] and c["stations"][-1]["wall_count"] > 0]
+
+    prior = None
+    if PRIOR_RECORD.is_file():
+        prior_doc = json.loads(PRIOR_RECORD.read_text(encoding="utf-8"))
+        prior = {
+            "record": PRIOR_RECORD.name,
+            "sha256": _sha256_file(PRIOR_RECORD),
+            "verdicts": prior_doc.get("verdicts"),
+            "superseded_reason": (
+                "The v1 verdict was decided by a chosen throat-slope limit of 8. "
+                "The measured slopes straddled it at -7.37 and -8.44, so the verdict "
+                "pointed the wrong way: mu=1.040 eps=0.001 passed as two_force_balance "
+                "but has no balance wall inside its collar at all. The limit is now a "
+                "reported diagnostic only."
+            ),
+            "case_verdicts": {c["case"]: c["stations"][-1]["verdict"] for c in prior_doc["cases"]},
+        }
+
+    final_walls = [c for c in cases
+                  if c["stations"] and c["stations"][-1]["wall_count"] > 0]
+    ever_walls = [c for c in cases if "two_force_wall" in c["verdicts"]]
 
     record = {
-        "schema": "NSC-RN-GRADIENT-BUBBLE-v1",
+        "schema": "NSC-RN-GRADIENT-BUBBLE-v2",
         "api_version": bubble.API_VERSION,
         "creation_only": True,
         "producing_commit": _producing_commit(),
@@ -140,7 +176,19 @@ def main() -> int:
             "observer": "areal chart of the recorded coupled arm",
             "state": "recorded station payload, no time step taken",
             "compared_quantity": "balance of inherited radial and generated angular pressure",
+            "verdict_basis": (
+                "measured balance-wall structure. A wall is an areal radius where the "
+                "radial and angular forces are equal, surviving a hysteresis band and a "
+                "minimum persistence on both sides while both forces stay above their own "
+                "live floor. No chosen slope limit decides the verdict."
+            ),
+            "wall_dynamics": (
+                "The wall is tracked across every station of a case, not read at the last "
+                "one. A wall that appears at some stations and not others is oscillating, "
+                "not settled, and the per-case presence fraction records that."
+            ),
         },
+        "supersedes": prior,
         "scope_note": (
             "A construction check on recorded finite states. It does not measure the "
             "actual universe, and a bounded balance here is not evidence about cosmology."
@@ -148,8 +196,13 @@ def main() -> int:
         "coverage": {
             "cases": len(cases),
             "cases_with_summary_json": sum(1 for c in cases if c["has_summary_json"]),
-            "cases_showing_two_force_balance": len(balanced),
+            "cases_with_a_wall_at_the_final_station": sum(1 for c in cases if c["wall_at_final_station"]),
+            "cases_showing_a_wall_at_any_station": sum(1 for c in cases if c["stations_with_a_wall"] > 0),
             "total_stations": sum(c["station_count"] for c in cases),
+            "station_fraction_with_a_wall": (
+                sum(c["stations_with_a_wall"] for c in cases) / sum(c["station_count"] for c in cases)
+                if sum(c["station_count"] for c in cases) else None
+            ),
             "family_complete": all(c["has_summary_json"] for c in cases),
         },
         "verdicts": verdicts,
@@ -161,6 +214,8 @@ def main() -> int:
             "integrated_outer_over_inner_max": max(ratios) if ratios else None,
             "r_decouple_min": min(decouple) if decouple else None,
             "r_decouple_max": max(decouple) if decouple else None,
+            "r_first_wall_min": min(walls) if walls else None,
+            "r_first_wall_max": max(walls) if walls else None,
         },
         "limits": {
             "throat_slope_limit": bubble.THROAT_SLOPE_LIMIT,
@@ -168,6 +223,9 @@ def main() -> int:
             "exterior_decoupled": bubble.EXTERIOR_DECOUPLED,
             "curvature_force_ratio": bubble.CURVATURE_FORCE_RATIO,
             "throat_fraction": bubble.THROAT_FRACTION,
+            "wall_live_fraction": bubble.WALL_LIVE_FRACTION,
+            "wall_hysteresis": bubble.WALL_HYSTERESIS,
+            "wall_min_cells": bubble.WALL_MIN_CELLS,
         },
         "cases": cases,
     }
@@ -185,6 +243,10 @@ def main() -> int:
           f" .. {record['summary']['integrated_outer_over_inner_max']:.4f}")
     print(f"  r_decouple       : {record['summary']['r_decouple_min']:.3f}"
           f" .. {record['summary']['r_decouple_max']:.3f}")
+    if walls:
+        print(f"  r_first_wall     : {min(walls):.3f} .. {max(walls):.3f}")
+    else:
+        print("  r_first_wall     : none in any case")
     return 0
 
 
