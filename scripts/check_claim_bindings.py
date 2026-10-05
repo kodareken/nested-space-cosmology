@@ -108,12 +108,14 @@ def main(argv: list[str] | None = None) -> int:
     by_status: dict[str, int] = {}
     no_record: list[str] = []
     record_count = 0
+    unlinked_rows: list[tuple[str, str]] = []
     for claim_id, row in sorted(claims.items()):
-        status = declared.get(claim_id, {}).get("status", "<absent>")
+        entry = declared.get(claim_id, {})
+        status = entry.get("status", "<absent>")
         by_status[status] = by_status.get(status, 0) + 1
         if status not in allowed:
             errors.append(f"invalid status for {claim_id}: {status!r}")
-        if not row["records"]:
+        if not row["records"] and status != "proposal":
             no_record.append(claim_id)
         for link in row["records"]:
             record_count += 1
@@ -122,6 +124,11 @@ def main(argv: list[str] | None = None) -> int:
         for link in row["notes"]:
             if not resolve(root, link).is_file():
                 errors.append(f"{claim_id}: note does not exist: {link}")
+        unlinked = entry.get("unlinked_record")
+        if unlinked:
+            if not (root / unlinked).is_file():
+                errors.append(f"{claim_id}: unlinked_record does not exist: {unlinked}")
+            unlinked_rows.append((claim_id, unlinked))
 
     findings = binding.get("findings", [])
     post_preprint: list[str] = []
@@ -158,6 +165,11 @@ def main(argv: list[str] | None = None) -> int:
     print(f"claims with no record link  {len(no_record)}")
     for claim_id in no_record:
         print(f"    {claim_id}")
+    if unlinked_rows:
+        print()
+        print(f"claims whose record is not linked by the paper  {len(unlinked_rows)}")
+        for claim_id, record in unlinked_rows:
+            print(f"    {claim_id} -> {record}")
     print()
     print(f"findings registered   {len(findings)}")
     print(f"    in a paper section  {len(in_paper)}")
