@@ -75,9 +75,10 @@ class TestTheNumbersMatchTheirRecords:
         assert record["never_reaches_zero_everywhere"]
         assert "turns over" in doc and "grows again" in doc
 
-    def test_the_shell_sides(self, doc):
+    def test_the_withdrawn_three_sided_claim_is_marked(self, doc):
         assert _load(LAYER)["shell_sides"] == [2, 2, 2, 2, 2, 3]
-        assert "three sides appear" in doc
+        assert "three sides appear" not in doc
+        assert "withdrawn" in doc and "0.296` cells" in doc
 
     def test_the_outward_exponent(self, doc):
         value = _load(OUTWARD)["exponents"]["1.04"]

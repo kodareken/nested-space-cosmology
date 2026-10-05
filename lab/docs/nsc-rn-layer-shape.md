@@ -47,28 +47,31 @@ the trajectory comparison that matched stations by file name, and now this.
 For five of the six the density falls monotonically from the boundary with no
 interface and no second maximum. That is a gradient, in the literal sense.
 
-## And at the deepest boundary it stops being one
+## And at the deepest boundary: WITHDRAWN
 
-At `0.7555` the half-width turns back up to `0.8279` and the density at the
-boundary falls from `4.592e-04` to `4.410e-04`. The same place where the
-compression gain turned over.
+A third side was claimed here at the deepest edge, and it is withdrawn.
 
-More sharply: the **matter density maximum leaves the boundary**. At every
-other edge the maximum sits exactly on node `0`. At `0.7555` it sits one cell
-in, at `r = 0.7915`, standing **`22%` above** the boundary value.
+Its interior is the material between the boundary and `r_minus`, which at
+`r_inner = 0.7555` spans `0.00116` in `r_m`. That is **`0.032` cells at 869
+points and `0.296` cells at 8000** — smaller than one cell at every
+resolution this line has run. The matter peak that was read as the
+"surface" sits `0.00391` above the edge, exactly one cell at 8000 points.
 
-That is a real, resolved feature and not a tie. The margin is stated because
-the companion quantity is marginal: the **mass gradient** at that same node is
-only `0.6%` above the boundary value, which is not a resolved detachment. The
-record reports the two maxima separately and claims the detachment only for
-the matter density.
+It appears only where the excision is nearly on `r_minus` and the outgoing
+speed is nearly null. That is the configuration in which a boundary layer
+produces a one-cell dip at the boundary node and a one-cell maximum just
+beyond it, which is what the numbers show.
 
-So the picture has three stages, not one:
+The side counts `[2, 2, 2, 2, 2, 3]` stand as a statement about the recorded
+arrays and nothing more. See `nsc-rn-three-sided-withdrawn.md`.
 
-- from `1.04` to `0.76`: a monotone gradient against the boundary, tightening
-  as the boundary deepens;
-- at `0.76`: the tightest layer, still attached;
-- at `0.7555`: the maximum detaches and becomes an interior peak at `r = 0.79`.
+## What survives
+
+The layer narrows from `1.680` to `0.586`, about `2.87` times, and the
+amplitude rises by `1.57`, over regions tens of cells wide at both
+resolutions. Those are thick features measured over many cells, not boundary
+artefacts, and they are what the wave reading rests on: the layer is louder
+and shorter, and it is one-dimensional and radial.
 
 ## What this does not establish
 

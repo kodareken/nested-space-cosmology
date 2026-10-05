@@ -68,8 +68,9 @@ line says:
 - a coherent shell falls at `-1.49` per unit `t/r_m`;
 - it **compresses by `x2.05`** against a deep boundary, saturating there;
 - the layer **narrows by `2.87`** while the amplitude rises;
-- **three sides appear** at the deepest edge only: interior, surface,
-  exterior, against two sides everywhere else;
+- a third side was claimed at the deepest edge and is **withdrawn**: its
+  interior is `0.296` cells wide at 8000 points, smaller than one cell at
+  every resolution tried;
 - it then **relaxes to `2.5%`** of its peak, turns over, and **grows again**;
 - it **retains `94%`** of its accreted mass.
 

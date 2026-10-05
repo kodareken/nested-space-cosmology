@@ -93,40 +93,50 @@ class TestItIsAGradientAndNotAnInterface:
             assert shape["normalised_profile"][0] == pytest.approx(1.0)
 
 
-class TestTheShellHasThreeSidesOnlyAtTheDeepestEdge:
-    """A sphere has an interior, a surface and an exterior.
+class TestTheThreeSidedClaimIsWithdrawn:
+    """The interior is 0.032 cells wide at 869 points and 0.296 at 8000.
 
-    A boundary-attached gradient has only two. The third appears when the
-    profile turns back up inside the layer, which is the same event as the
-    detachment, seen from the other side.
+    It is smaller than one cell at every resolution this line has run, so
+    the side counts stand as a statement about the arrays and not as
+    evidence of an interior.
     """
 
-    def test_five_of_six_layers_are_two_sided(self, record):
-        assert record["edges_with_a_two_sided_layer"] == [1.04, 0.85, 0.80, 0.77, 0.76]
-
-    def test_only_the_deepest_edge_has_an_interior(self, record):
-        assert record["edges_with_a_three_sided_shell"] == [0.7555]
-
-    def test_the_side_count_is_recorded_per_run(self, record):
-        assert record["shell_sides"] == [2, 2, 2, 2, 2, 3]
-
-    def test_the_interior_is_a_turn_back_upward(self, record):
-        deepest = [s for s in record["runs"] if s["r_inner"] == 0.7555][0]
-        assert deepest["matter_has_interior"]
-        assert deepest["matter_rising_into_peak"]
-        assert deepest["matter_at_inner_edge"] < deepest["matter_peak_value"]
-
-    def test_the_others_are_monotone_from_their_boundary(self, record):
-        for shape in record["runs"]:
-            if shape["r_inner"] == 0.7555:
+    def test_the_interior_is_sub_cell_at_every_resolution(self, record):
+        for run in record["runs"]:
+            if run["shell_sides"] != 3:
                 continue
-            assert not shape["matter_has_interior"]
-            assert shape["matter_rising_into_peak"] is None
+            gap = run["r_inner"] - 0.7543428628582858
+            assert gap / 0.035987 < 1.0
+            assert gap / 0.003906 < 1.0
 
-    def test_the_interior_is_thin(self, record):
-        """One node wide here, so the interior is detected, not characterised."""
-        deepest = [s for s in record["runs"] if s["r_inner"] == 0.7555][0]
-        assert deepest["matter_max_cells_in"] == pytest.approx(1.0)
+    @pytest.mark.parametrize("record_path,spacing", [
+        ("nsc-rn-layer-shape-v5.json", 0.035987),
+        ("nsc-rn-layer-shape-n8000-v1.json", 0.003906),
+    ])
+    def test_the_surface_peak_is_one_cell_out_at_both_resolutions(
+            self, record_path, spacing):
+        """One grid cell out, and the cell is nine times smaller at 8000."""
+        runs = _load(DEVELOPMENT / record_path)["runs"]
+        run = [r for r in runs if r["shell_sides"] == 3][0]
+        offset = run["matter_max_radius"] - run["r_inner"]
+        assert offset / spacing == pytest.approx(1.0, abs=0.15)
+
+    def test_the_three_sided_run_is_the_one_nearest_r_minus(self, record):
+        three = [r for r in record["runs"] if r["shell_sides"] == 3]
+        assert len(three) == 1
+        assert three[0]["r_inner"] == min(r["r_inner"] for r in record["runs"])
+
+    def test_the_withdrawal_is_recorded(self):
+        flat = (LAB / "docs/nsc-rn-three-sided-withdrawn.md").read_text(
+            encoding="utf-8").replace(chr(10), " ")
+        assert "smaller than one cell at every resolution" in flat
+        assert "boundary-layer effect" in flat
+
+    def test_the_layer_shape_note_points_at_the_withdrawal(self):
+        flat = (LAB / "docs/nsc-rn-layer-shape.md").read_text(
+            encoding="utf-8").replace(chr(10), " ")
+        assert "WITHDRAWN" in flat
+        assert "nsc-rn-three-sided-withdrawn.md" in flat
 
 
 class TestTheDetachmentIsClaimedOnlyWhereItIsResolved:
