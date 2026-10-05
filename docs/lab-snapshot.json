@@ -305,6 +305,580 @@
       "sha256": "9567044b11571fb44fa5bc139f647b2746a53f4f06d2a114a0221ef47da626da"
     },
     {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._COMMIT_EDITMSG",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._FETCH_HEAD",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._HEAD",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._config",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._index",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._info",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._logs",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._objects",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/._refs",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 545,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/COMMIT_EDITMSG",
+      "sha256": "c77b9fb2aa98e6f1b1a7722861d0550a188e12e62ebcc6d5a15a33581071ea15"
+    },
+    {
+      "bytes": 114,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/FETCH_HEAD",
+      "sha256": "3cdf228e76e088350a3941c2eab33b0bddcca6eeb3f4d8bb9c810f268290d070"
+    },
+    {
+      "bytes": 41,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/HEAD",
+      "sha256": "30cc8747e125a0b3bcbecafefbe1525e05ae579173bc60c47c97d7e8ac376560"
+    },
+    {
+      "bytes": 323,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/config",
+      "sha256": "ec816850839efd680db68ffa574773c6d0142c15a4d02a6f77e4649b8b6f1d0f"
+    },
+    {
+      "bytes": 323,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/config.original",
+      "sha256": "ec816850839efd680db68ffa574773c6d0142c15a4d02a6f77e4649b8b6f1d0f"
+    },
+    {
+      "bytes": 1957898,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/index",
+      "sha256": "a96399f46ffb24f35d21b2cde87e3da760b1e53ab21241b94bdd384d07ceb546"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/info/._exclude",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/info/._sparse-checkout",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 41,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/info/exclude",
+      "sha256": "561791c47dc00e68611e77ba80d30e3dbe970bd3ddd691bda44ffee016e9b5eb"
+    },
+    {
+      "bytes": 436,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/info/sparse-checkout",
+      "sha256": "59f2710906e14eb38dc368c643921e6a7d33b0a3b75ae100cfef2c2dca8484f4"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/._HEAD",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/._refs",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 500,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/HEAD",
+      "sha256": "57e31de30e04f226645c30326655706fc532ed5405f20251fa4cc0b12cbae04d"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/refs/._heads",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/refs/heads/._codex",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/refs/heads/codex/._nsc-current-uv-mac",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/refs/heads/codex/._review-uv-5fda9f7c",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 269,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/refs/heads/codex/nsc-current-uv-mac",
+      "sha256": "530dcc338ef399b360dd4277a4a1fca39a87a2cb4a7be983f9839ae1197d5b3a"
+    },
+    {
+      "bytes": 283,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/logs/refs/heads/codex/review-uv-5fda9f7c",
+      "sha256": "3c7892b4493d993341755946402ddf8847d3d24126f45c5889cd183e79e36ff3"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._33",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._38",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._4f",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._51",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._5c",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._64",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._7a",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._ad",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._d8",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._d9",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._dc",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._ea",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._eb",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._ed",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/._info",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/33/._21f517c6a99e0a64c21800d929a88fe57914f4",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 19912,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/33/21f517c6a99e0a64c21800d929a88fe57914f4",
+      "sha256": "1c87c714548cdfbc635c85840e39892eeed28e68b534eb8f804a12dd6d9c2111"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/38/._0ce39a5c665d2cbbcfeee83c1ed3a8a41eb894",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 2245,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/38/0ce39a5c665d2cbbcfeee83c1ed3a8a41eb894",
+      "sha256": "af0f5368c21277f57e6a8c6e74a70a2d14402b2d5857cc7a139232c18085f690"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/4f/._fef33094d383e5d831c5f81f832f52614b7e25",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 13060,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/4f/fef33094d383e5d831c5f81f832f52614b7e25",
+      "sha256": "d1c5f1630082052b3b4334080514da2427d0355b13a73ac4f52eafbcebcb94b0"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/51/._13dd6d9f8d7ef1102a0914e71f7032e1ca0090",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 60,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/51/13dd6d9f8d7ef1102a0914e71f7032e1ca0090",
+      "sha256": "06d93b329cb9ac9cddc302095431cb68bf8ee9f70cc843fb58ca5f4e99bf6c28"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/5c/._a77fe958d78140b22f07dcf7e1d7ec94173448",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 6728,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/5c/a77fe958d78140b22f07dcf7e1d7ec94173448",
+      "sha256": "96731b4f722b6d118da6daf436f3e4ba3429f0878a82649718b0db4dec902d08"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/64/._064775d58cefe573b1fcce3e9bc433b9b95cf2",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/64/._c183e0c2dc929132e2facf8f14049e327b18c4",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 8056,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/64/064775d58cefe573b1fcce3e9bc433b9b95cf2",
+      "sha256": "78de9144e4cff67a47d3d024750eae32026400555689d9bd041a1bf43fa587a2"
+    },
+    {
+      "bytes": 846,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/64/c183e0c2dc929132e2facf8f14049e327b18c4",
+      "sha256": "bd2495abeffa91ac2a7f32062fe22f77811af72e7805c9b107138f17f73bfa46"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/7a/._be1fc7f8e6c26ec9d8911f44a1a62c19a70997",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 14200,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/7a/be1fc7f8e6c26ec9d8911f44a1a62c19a70997",
+      "sha256": "a46e64fe55a249250040565271496e30e2401261c87d77544538ea59e932a688"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/ad/._ec987b0ede76baebaff01b0c0e9b43bcd5ca37",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 494,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/ad/ec987b0ede76baebaff01b0c0e9b43bcd5ca37",
+      "sha256": "589cfb59446571acad140ff3a7880fa0fd393404ff579fe97eff02a157e3675c"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/d8/._683f5243dbff8647d1ad5d5aad6659ae1cede4",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 7832,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/d8/683f5243dbff8647d1ad5d5aad6659ae1cede4",
+      "sha256": "820efde812e3e559923d87b0c8e32209ac512f09612119f950ad3e8db63d4df9"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/d9/._30a904721bb2623a3634e3b0fca6bb086a0fd9",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 1041,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/d9/30a904721bb2623a3634e3b0fca6bb086a0fd9",
+      "sha256": "83d1f1531677887e20b8509331d0f73a14168d1f21a699066b0648b87686d9cc"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/dc/._0602d320ad97e02545b74cbb565ca5d896beed",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 1646,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/dc/0602d320ad97e02545b74cbb565ca5d896beed",
+      "sha256": "51fd7bbbf0f9a092dfc4cef55397a51d8568264427f6681b1b1b313764204980"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/ea/._c449e0d1ae7a4a12e60109c1a333f0360eb45f",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 2426,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/ea/c449e0d1ae7a4a12e60109c1a333f0360eb45f",
+      "sha256": "8135a23c26de781238c8f4e1b2a596b7182e4aa27956595a33a9257cea810f86"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/eb/._bb022da9f9f7a4ea38d69de788210af7b7aa86",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 1979,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/eb/bb022da9f9f7a4ea38d69de788210af7b7aa86",
+      "sha256": "ee7a0b3b085eb4e1824e29d307e1773c19c1b5f0386c88a7fe01c085f7f6a3b2"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/ed/._d8bbc3d3b5fa523a9d0adf1d9ecdf0394d749c",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 11480,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/ed/d8bbc3d3b5fa523a9d0adf1d9ecdf0394d749c",
+      "sha256": "de0b43f4eec5632bc87cd12271602a80ccb1cb6ce0708b57964f4c7376ff9295"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/info/._alternates",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 55,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/objects/info/alternates",
+      "sha256": "5a44c8efcec1242145227729e3896b2bdbec8b7dd96a233cfd7173767d6f961f"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/refs/._heads",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/refs/heads/._codex",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/refs/heads/codex/._nsc-current-uv-mac",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 4096,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/refs/heads/codex/._review-uv-5fda9f7c",
+      "sha256": "12dd345f33bb0efb541c0a3af3d013b29b64902c08c5181a69aef625e9bb0793"
+    },
+    {
+      "bytes": 41,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/refs/heads/codex/nsc-current-uv-mac",
+      "sha256": "73c6396312aaef22f68c52bdfba7136b54a8a55c09c7d2764638bd1e692d8b78"
+    },
+    {
+      "bytes": 41,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/git-nsc-raw/refs/heads/codex/review-uv-5fda9f7c",
+      "sha256": "a83458549d8a9406b75edc863274c253ba34351c75ba16824dc92a0a2f5de5ea"
+    },
+    {
+      "bytes": 2182,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "dbdc3c01c641a9c0225e8c31292bd4646f93b142",
+      "path": "lab/archive/external/nsc-external-orphan-commit-20260929/receipt.json",
+      "sha256": "91d4675058b6cc002d80ce3743744791a0d1ebc35dae2d299dbf3679a53f78fb"
+    },
+    {
       "bytes": 18355,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "a90b9d9f1068978963ac0050e52407252f98f2a8",

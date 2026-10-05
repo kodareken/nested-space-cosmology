@@ -1,0 +1,37 @@
+{
+  "bundle": "nsc_external_orphan_commit_20260929",
+  "recorded_on": "2026-10-05",
+  "source_tree": "extra/BlackHoles-Infinity-Worktrees/nsc-current-uv-core",
+  "owner": "nsc-current-uv-core worktree (macOS origin)",
+  "scope": "Raw copy of the private git directory of one retired worktree, kept because it carries a commit that is absent from the canonical repository and cannot be exported as a patch. Nothing here is active code and nothing here is imported by the package.",
+
+  "orphan_commit": {
+    "sha": "adec987b0ede76baebaff01b0c0e9b43bcd5ca37",
+    "subject": "Represent changed-history UV remainder quantities and bind them",
+    "author": "Kodareken Douglas <douglas@swedishsoftwareengineers.com>",
+    "committed_epoch": 1790337006,
+    "tree_present": true,
+    "parent": "46f257f4dd6738b697b541c7d277adb5cbaf00cf",
+    "parent_present": false,
+    "why_no_patch": "format-patch needs the parent to compute a diff, and the parent object was stored only in the macOS repository that this machine does not have."
+  },
+
+  "second_ref": {
+    "sha": "5fda9f7c9dfca51429e7329abc592b9afe47f20a",
+    "branch": "codex/review-uv-5fda9f7c",
+    "state": "ref only; its objects were reached through a macOS alternate path and are not in this directory"
+  },
+
+  "branches": ["codex/nsc-current-uv-mac", "codex/review-uv-5fda9f7c"],
+
+  "layout": {
+    "git-nsc-raw/": "byte copy of the .git-nsc directory, 80 files, about 2.3 MB",
+    "git-nsc-raw/config.original": "the config as found; it names worktree /Users/admin/Projects/BlackHoles-Infinity-Worktrees/nsc-current-uv-core and an alternate object path under /Users/admin, neither of which exists here"
+  },
+
+  "recovery_attempt": "git --git-dir=git-nsc-raw --work-tree=. cat-file -p adec987b0ede76baebaff01b0c0e9b43bcd5ca37 reads the commit header and its tree. Traversing to a diff fails on the absent parent.",
+
+  "relation_to_the_live_campaign": "The worktree held no working file that the canonical checkout or the pre-closure archive lacks. This commit is a snapshot in the paused local incoming gate campaign, not a new result, and it does not reopen the gate.",
+
+  "nonclaim": "Preservation for provenance only."
+}

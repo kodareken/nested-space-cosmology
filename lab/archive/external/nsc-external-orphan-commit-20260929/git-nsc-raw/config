@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+	sparsecheckout = true
+	worktree = /Users/admin/Projects/BlackHoles-Infinity-Worktrees/nsc-current-uv-core
+[user]
+	name = Kodareken Douglas
+	email = douglas@swedishsoftwareengineers.com
