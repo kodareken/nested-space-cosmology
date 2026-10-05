@@ -34,6 +34,35 @@ The causal membrane sits on `r_plus` at every value, agreeing to within
 outer horizon, and it is there for classical reasons: that is where the
 outgoing characteristic speed changes sign.
 
+## Three regions, not two
+
+The shift equals one at **both** horizons, so the outgoing speed vanishes at
+both and the chart divides in three. For `mu = 1.04`:
+
+| region | interval | outgoing speed | trapped |
+|---|---|---|---|
+| parent | `[1.3257, 32]` | positive | no |
+| **trapped** | `[0.7543, 1.3257]` | **negative** | **yes** |
+| below the inner horizon | `[0, 0.7543]` | positive | no |
+
+Only the outermost zero is a sign change *inside the chart's own domain*,
+because the chart stops at `r_minus`.
+
+**Every inner edge this programme has ever used lies inside the trapped
+region** — `1.04`, `0.85`, `0.80`, `0.77`, `0.76`, `0.7555`, all of them
+between `0.7543` and `1.3257`. So the whole compression story is the
+dynamics of matter that is already behind the membrane: the `x2.05`, the
+three-sided shell, the `94%` retention. That is not an accident of where the
+grid was placed; it is where the trapped region is.
+
+And the third region — the one that would be the next nest — is **not
+describable by this chart at all**. Sampling below `r_minus` is refused by
+the chart's own guard: *"static modes stay strictly above the inner horizon"*.
+
+That is the sharpest limit found so far, and it is a limit in the
+construction rather than in the resolution. The metric has a third region;
+the chart cannot describe it.
+
 ## The one structural fact the map exposes
 
 **The shift has a maximum at `r = Q²/M`, and the default excision always

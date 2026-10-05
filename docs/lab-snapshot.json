@@ -16173,11 +16173,11 @@
       "sha256": "7b9dcf70908d147632a5ac45a420fcd89dff9852f641ddf91608cf9ae523be10"
     },
     {
-      "bytes": 3327,
+      "bytes": 4763,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ed87c91d51fdfc41d5cc8adaf15290121e88cd7e",
+      "changed_from_commit": "4516840d61344c9825719cb0848831363c211c65",
       "path": "lab/docs/nsc-rn-geometry-map.md",
-      "sha256": "554bb3b093bef1c625cb16021f15056cef68cfb107b2b9c6dfd480bb1ccc288b"
+      "sha256": "110a67efb4f39441e634fd2381e6f28ecc8f6ecf4117a807f5fb21e51159803b"
     },
     {
       "bytes": 17564,
@@ -85134,6 +85134,20 @@
       "sha256": "9c6765ff3456659587fd189b34144eea39e17207a2f95793f452649935dbd585"
     },
     {
+      "bytes": 22013,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "4516840d61344c9825719cb0848831363c211c65",
+      "path": "lab/results/development/nsc-rn-geometry-map-v5.json",
+      "sha256": "731eadb86af20cd5da7853f12e2cc2f35547a52c2cbe8e9e76d29bee7377b40d"
+    },
+    {
+      "bytes": 22470,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "4516840d61344c9825719cb0848831363c211c65",
+      "path": "lab/results/development/nsc-rn-geometry-map-v6.json",
+      "sha256": "bcf780ed294ad9ed8ea817f7321a5a3f3b98d6850756159d62253bf5b886911a"
+    },
+    {
       "bytes": 89438,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "12d56e234ed69d3e9fb4cefe21ea5e20e0f09928",
@@ -99974,11 +99988,11 @@
       "sha256": "ecfb442e229680fd61cc33befcb32122bf038d1dd9f5d6bd476e4b585da3eb99"
     },
     {
-      "bytes": 8981,
+      "bytes": 11826,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ed87c91d51fdfc41d5cc8adaf15290121e88cd7e",
+      "changed_from_commit": "4516840d61344c9825719cb0848831363c211c65",
       "path": "lab/scripts/derive_nsc_rn_geometry_map.py",
-      "sha256": "025115a9330d29ebb183f1e660799f8e784685dd088870e452bed53855a0dd6e"
+      "sha256": "6e242cead4908f47b3576e01c970f83c940de06bf328fac46d3882af2eced4c1"
     },
     {
       "bytes": 19100,
@@ -105226,11 +105240,11 @@
       "sha256": "7b60befa7ea15eb56e6982a4c6257dea73e8a0724a27f407baa3a93ecb5c7f08"
     },
     {
-      "bytes": 4330,
+      "bytes": 5780,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "ed87c91d51fdfc41d5cc8adaf15290121e88cd7e",
+      "changed_from_commit": "4516840d61344c9825719cb0848831363c211c65",
       "path": "lab/tests/test_nsc_rn_geometry_map.py",
-      "sha256": "9023d0247080d94c83f05045de25a7237acda37c09870d68ab51d069af142c4c"
+      "sha256": "887bab0f9dbe6c547207396baf34c7db4ac5b38e159e2419806f9e56c37d44ab"
     },
     {
       "bytes": 17111,

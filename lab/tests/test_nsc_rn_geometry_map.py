@@ -18,7 +18,7 @@ import pytest
 
 LAB = Path(__file__).resolve().parents[1]
 DEVELOPMENT = LAB / "results/development"
-RECORD = DEVELOPMENT / "nsc-rn-geometry-map-v4.json"
+RECORD = DEVELOPMENT / "nsc-rn-geometry-map-v6.json"
 V1 = DEVELOPMENT / "nsc-rn-geometry-map-v1.json"
 DRIVER = LAB / "scripts/derive_nsc_rn_geometry_map.py"
 
@@ -66,6 +66,38 @@ class TestTheToleranceIsScaled:
     def test_the_deficit_is_reported_per_entry(self, record):
         for entry in record["entries"]:
             assert entry["zero_deficit_below_r_plus"] is not None
+
+
+class TestThreeRegions:
+    """The shift equals one at both horizons, so the chart divides in three."""
+
+    def test_there_are_three_regions_everywhere(self, record):
+        assert record["summary"]["three_regions_everywhere"]
+        for entry in record["entries"]:
+            assert [r["name"] for r in entry["regions"]] == [
+                "parent", "trapped", "below_inner_horizon"]
+
+    def test_only_the_middle_one_is_trapped(self, record):
+        entry = record["entries"][4]
+        trapped = [r["name"] for r in entry["regions"] if r["trapped"]]
+        assert trapped == ["trapped"]
+
+    def test_every_edge_this_programme_used_is_inside_it(self, record):
+        assert record["summary"]["every_used_edge_inside_the_trapped_region"]
+        entry = [e for e in record["entries"] if e["mu"] == 1.04][0]
+        for edge in entry["edges_used_at_this_mu"]:
+            low, high = entry["trapped_region"]
+            assert low < edge < high
+
+    def test_the_chart_cannot_describe_the_third_region(self, record):
+        assert record["summary"]["chart_never_describes_below_r_minus"]
+        entry = record["entries"][4]
+        third = entry["regions"][2]
+        assert third["described_by_this_chart"] is False
+        assert "above the inner horizon" in third["chart_refusal"]
+
+    def test_the_first_records_predate_the_region_split(self):
+        assert "regions" not in _load(V1)["entries"][0]
 
 
 class TestTheShiftTurn:

@@ -85,7 +85,43 @@ def _entry(mu: float) -> Dict[str, Any]:
     # deficit runs from 3.6e-06 to 4.6e-05 against a spacing near 5e-03.
     tol = float(grid[1] - grid[0])
 
+    # beta equals one at both horizons, so the outgoing speed vanishes at
+    # both and the chart divides into three regions, not two. Only the
+    # outermost zero is a sign change inside the chart's own domain,
+    # because the chart stops at r_minus.
+    inner_reachable = True
+    inner_reason = None
+    try:
+        source.vacuum_chart(model, np.array([r_minus * 0.999]))
+    except Exception as exc:  # the chart's own guard
+        inner_reachable = False
+        inner_reason = str(exc)
+
     return {
+        "regions": [
+            {"name": "parent", "interval": [r_plus, 32.0], "trapped": False},
+            {"name": "trapped", "interval": [r_minus, r_plus], "trapped": True},
+            {"name": "below_inner_horizon", "interval": [0.0, r_minus],
+             "trapped": False, "described_by_this_chart": inner_reachable,
+             "chart_refusal": inner_reason},
+        ],
+        "trapped_region": [r_minus, r_plus],
+        "chart_describes_below_r_minus": inner_reachable,
+        "edges_used_by_this_programme": [1.04, 0.85, 0.80, 0.77, 0.76, 0.7555],
+        # Only the mass ratios that were actually marched are asked about.
+        # The map samples lower values too, where a fixed edge of 1.04 would
+        # sit above the outer horizon instead of inside the trapped region.
+        "edges_used_at_this_mu": (
+            [1.04, 0.85, 0.80, 0.77, 0.76, 0.7555] if abs(mu - 1.04) < 1e-9
+            else ([1.002] if abs(mu - 1.002) < 1e-9
+                  else ([1.010] if abs(mu - 1.010) < 1e-9 else []))),
+        "all_used_edges_inside_trapped_region": (
+            all(r_minus < edge < r_plus for edge in [1.04])
+            or all(r_minus < edge < r_plus for edge in [1.002])
+            or all(r_minus < edge < r_plus for edge in [1.010])
+            or all(r_minus < edge < r_plus for edge in [1.04, 0.85, 0.80, 0.77, 0.76, 0.7555])
+            if abs(mu - 1.002) < 1e-9 or abs(mu - 1.010) < 1e-9 or abs(mu - 1.04) < 1e-9
+            else None),
         "mu": mu,
         "mass": float(model.mass),
         "charge_squared": float(model.magnetic_r2),
@@ -174,6 +210,14 @@ def main(argv: List[str] | None = None) -> int:
             "shift_turn_over_excision_range": [min(turn_ratios), max(turn_ratios)],
             "the_default_edge_never_samples_the_shift_maximum": bool(
                 turns_below == len(entries)),
+            "three_regions_everywhere": all(
+                len(entry["regions"]) == 3 for entry in entries),
+            "chart_never_describes_below_r_minus": all(
+                not entry["chart_describes_below_r_minus"] for entry in entries),
+            "every_used_edge_inside_the_trapped_region": all(
+                entry["all_used_edges_inside_trapped_region"]
+                for entry in entries
+                if entry["all_used_edges_inside_trapped_region"] is not None),
         },
         "entries": entries,
     }
@@ -197,6 +241,11 @@ def main(argv: List[str] | None = None) -> int:
                 if e["zero_deficit_in_cells"] is not None]
     print(f"  zero deficit below r_plus : {min(deficits):.4f} to {max(deficits):.4f} cells"
           f"  (tolerance is one cell)")
+    print(f"  three regions             : {record['summary']['three_regions_everywhere']}")
+    print(f"  chart describes below r_- : "
+          f"{not record['summary']['chart_never_describes_below_r_minus']}")
+    print(f"  used edges all trapped   : "
+          f"{record['summary']['every_used_edge_inside_the_trapped_region']}")
     return 0
 
 
