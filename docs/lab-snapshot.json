@@ -16180,6 +16180,13 @@
       "sha256": "b6091798afdee050dbe51d073ed055094915944ec596730ce72b46021a919061"
     },
     {
+      "bytes": 4176,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "31de0f6e0db58027abc75f626f0aad6358fec6cc",
+      "path": "lab/docs/nsc-rn-layer-shape.md",
+      "sha256": "58a7144805ca61723ba346d5609a2077382d5b0367c823f00e65f2793dfd263e"
+    },
+    {
       "bytes": 5797,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "99d77bcc7ef8af081276c400e22dea1cc48a6374",
@@ -91588,6 +91595,27 @@
       "sha256": "06057777416f83dd4327290534a614a2621aae5843e1b6a0dea2fd77792f8599"
     },
     {
+      "bytes": 21666,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "31de0f6e0db58027abc75f626f0aad6358fec6cc",
+      "path": "lab/results/development/nsc-rn-layer-shape-v1.json",
+      "sha256": "099ea722c74c09d4686be742e6c2622feeeee2b8f099bc248d82586635b9f8be"
+    },
+    {
+      "bytes": 32561,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "31de0f6e0db58027abc75f626f0aad6358fec6cc",
+      "path": "lab/results/development/nsc-rn-layer-shape-v2.json",
+      "sha256": "780dd2f6d75fe2a2413b29fb2dbf09c3138f25a26b3c9c6ebfad57b08f4cbb7d"
+    },
+    {
+      "bytes": 32581,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "31de0f6e0db58027abc75f626f0aad6358fec6cc",
+      "path": "lab/results/development/nsc-rn-layer-shape-v3.json",
+      "sha256": "25b0ad66677cdd999bcc053ecd90011d3c2830324cacba0782f05147a08f3276"
+    },
+    {
       "bytes": 100364,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "99d77bcc7ef8af081276c400e22dea1cc48a6374",
@@ -99155,6 +99183,13 @@
       "sha256": "02b7fa6f2f274dcf314412c0785700c11fc042d4b2594a86237716487bdbb235"
     },
     {
+      "bytes": 10819,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "31de0f6e0db58027abc75f626f0aad6358fec6cc",
+      "path": "lab/scripts/derive_nsc_rn_layer_shape.py",
+      "sha256": "bc5224856a45ed877b6aded47247f7d385499c6c9c864be3d92b21b4964142bd"
+    },
+    {
       "bytes": 9623,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "5fa2934bfe8023e6f095a483fb958286979bc915",
@@ -104370,6 +104405,13 @@
       "changed_from_commit": "c23efddede35ebb996df1c2f339ebc2091557827",
       "path": "lab/tests/test_nsc_rn_inner_packet.py",
       "sha256": "3b8c89f50e9f8bc99658fc4f17bef538328ab00ea1a5d5f905f40b9b1ca0197d"
+    },
+    {
+      "bytes": 5599,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "31de0f6e0db58027abc75f626f0aad6358fec6cc",
+      "path": "lab/tests/test_nsc_rn_layer_shape.py",
+      "sha256": "a05ba559270bdda8e3adbfcb2c931b0dc6762d1916ebc13cf8e9bf2c6efd3e25"
     },
     {
       "bytes": 9573,
