@@ -231,8 +231,11 @@ def vacuum_chart(model, radius, *, allow_below_inner_horizon=False):
     }
 
 
-def _point_chart(model, radius):
-    chart = vacuum_chart(model, np.asarray([float(radius)], dtype=float))
+def _point_chart(model, radius, *, allow_below_inner_horizon=False):
+    # Defaulted off, so every existing caller, including the solver's
+    # right-hand side, behaves exactly as before.
+    chart = vacuum_chart(model, np.asarray([float(radius)], dtype=float),
+                         allow_below_inner_horizon=allow_below_inner_horizon)
     return {name: (float(value[0]) if isinstance(value, np.ndarray) else value)
             for name, value in chart.items() if name != "reference"}
 
@@ -340,20 +343,25 @@ def _rhs_characteristic(model, radius, plus, minus, energy):
     return d_plus, d_minus
 
 
-def _horizon_jet(model, energy):
-    """Value and radial derivative of the future-horizon regular spinor at r+.
+def _horizon_jet(model, energy, radius=None):
+    """Value and radial derivative of the horizon-regular spinor at a horizon.
 
     a+ vanishes at r+. Differentiating a+ χ+' = (iE − a+'/2) χ+ − α χ− and
     then setting a+ = 0 fixes χ+' without dividing by the outgoing speed.
+
+    The outgoing speed also vanishes at r-, so the same construction applies
+    there and ``radius`` selects which horizon. That is what lets an inward
+    branch start from the inner horizon instead of integrating into the pole.
     """
     shell_multiplicity(SHELL_KAPPA)
     energy = float(energy)
     if energy <= 0.0 or not np.isfinite(energy):
         raise ValueError("exterior Killing frequency must be positive")
-    horizon = float(model.horizons["r_plus"])
-    chart = _point_chart(model, horizon)
+    horizon = float(model.horizons["r_plus"] if radius is None else radius)
+    chart = _point_chart(model, horizon,
+                         allow_below_inner_horizon=radius is not None)
     if abs(chart["speed_plus"]) > 1e-8:
-        raise RuntimeError("future horizon is not a root of the outgoing speed")
+        raise RuntimeError("horizon is not a root of the outgoing speed")
     angular = chart["lapse"] * float(np.asarray(reference.angular_coupling(horizon)))
     angular_derivative = -chart["lapse"] * float(SHELL_KAPPA) / horizon**2
     a_plus_derivative = chart["speed_plus_derivative"]

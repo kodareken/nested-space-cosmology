@@ -133,6 +133,28 @@ class TestTheRealObstructionIsNumerical:
         assert "It is a stiff boundary, not a choice" in flat
 
 
+class TestTheHorizonJetIsGeneralised:
+    """The clearing construction applies at both horizons; only r+ was built."""
+
+    def test_it_still_builds_at_the_default_horizon(self, geometry):
+        model = pg.action_model(geometry["mass"], geometry["r_m"])
+        jet = source._horizon_jet(model, 1.0e-3)
+        assert jet["radius"] == pytest.approx(float(model.horizons["r_plus"]))
+
+    def test_it_can_build_at_the_inner_horizon(self, geometry):
+        model = pg.action_model(geometry["mass"], geometry["r_m"])
+        inner = float(model.horizons["r_minus"])
+        jet = source._horizon_jet(model, 1.0e-3, inner)
+        assert jet["radius"] == pytest.approx(inner)
+        assert np.isfinite(jet["plus"]) and np.isfinite(jet["minus"])
+
+    def test_the_split_is_not_half_applied(self):
+        """A reverted change must leave no residue in the solver."""
+        text = SOURCE.read_text(encoding="utf-8")
+        body = text.split("def scattering_mode")[1]
+        assert "inner_jet" not in body
+
+
 class TestTheGuardsRemainInTheSource:
     """A later change must not quietly remove them."""
 
