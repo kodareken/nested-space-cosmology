@@ -126,6 +126,7 @@ def main(argv: list[str] | None = None) -> int:
     findings = binding.get("findings", [])
     post_preprint: list[str] = []
     in_paper: list[str] = []
+    pending: list[str] = []
     for item in findings:
         fid = item.get("id", "<unnamed>")
         if item.get("status") not in allowed:
@@ -136,6 +137,11 @@ def main(argv: list[str] | None = None) -> int:
         record = item.get("record")
         if record and not (root / record).is_file():
             errors.append(f"finding {fid}: record does not exist: {record}")
+        draft = item.get("pending_section")
+        if draft:
+            if not (root / draft).is_file():
+                errors.append(f"finding {fid}: pending section does not exist: {draft}")
+            pending.append(fid)
         if item.get("paper_section"):
             in_paper.append(fid)
         else:
@@ -157,7 +163,8 @@ def main(argv: list[str] | None = None) -> int:
     print(f"    in a paper section  {len(in_paper)}")
     print(f"    post-preprint       {len(post_preprint)}")
     for fid in post_preprint:
-        print(f"        {fid}")
+        mark = " (draft written)" if fid in pending else ""
+        print(f"        {fid}{mark}")
 
     if errors:
         print()
