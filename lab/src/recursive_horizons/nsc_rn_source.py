@@ -175,11 +175,18 @@ def packet_request(r_m, *, center=None, width=None, omega=None):
     return requested
 
 
-def vacuum_chart(model, radius):
+def vacuum_chart(model, radius, *, allow_below_inner_horizon=False):
     """Sample the reference areal chart. q_ADM = 1, so the shift is dr + β dt.
 
     Conformal Q = q_ADM/r equals 1/r on this chart. That gauge is not
     substituted into the force derivatives.
+
+    The default refuses radii at or below the inner horizon. That refusal is
+    a convention of this function, not a property of the geometry: the
+    shift is real wherever ``r > Q^2/(2M)``, which for this family is well
+    below ``r_minus``. ``allow_below_inner_horizon`` extends the domain to
+    that limit instead, and is off by default so a call that does not ask
+    for it behaves exactly as before.
     """
     radius = np.asarray(radius, dtype=float)
     if radius.ndim != 1 or radius.size < 1 or not np.isfinite(radius).all():
@@ -189,7 +196,7 @@ def vacuum_chart(model, radius):
         raise ValueError("static modes need a non-extremal horizon pair")
     outer = float(horizons["r_plus"])
     inner = float(horizons["r_minus"])
-    if np.min(radius) <= inner:
+    if np.min(radius) <= inner and not allow_below_inner_horizon:
         raise ValueError("static modes stay strictly above the inner horizon")
     jets = model.pg_metric_jets(radius)
     outgoing, ingoing = model.characteristic_speeds(radius)
@@ -436,7 +443,8 @@ def _integrate_branch(model, energy, jet, grid, indices, t_start, t_end, mode, r
     return int(solution.nfev)
 
 
-def scattering_mode(grid, energy, model, *, rtol=1.0e-7, atol=1.0e-9):
+def scattering_mode(grid, energy, model, *, rtol=1.0e-7, atol=1.0e-9,
+                    allow_below_inner_horizon=False):
     """E > 0 mode from the future horizon onto every supplied node.
 
     The grid may start at an excision radius between the horizons. Nodes
@@ -449,8 +457,12 @@ def scattering_mode(grid, energy, model, *, rtol=1.0e-7, atol=1.0e-9):
     if grid.ndim != 1 or grid.size < 8 or np.any(np.diff(grid) <= 0.0):
         raise ValueError("increasing radial grid required")
     inner = float(model.horizons["r_minus"])
+    if allow_below_inner_horizon:
+        inner = float(model.magnetic_r2) / (2.0 * float(model.mass))
     if grid[0] <= inner:
-        raise ValueError("grid must stay strictly above the inner horizon")
+        raise ValueError("grid must stay strictly above the inner horizon"
+                         + ("" if allow_below_inner_horizon
+                            else "; pass allow_below_inner_horizon to reach past it"))
     jet = _horizon_jet(model, energy)
     horizon = jet["radius"]
     gap = _continuation_gap(horizon, inner, grid)
@@ -700,7 +712,8 @@ def _packet_grid(model, request, points, left, right, radii, weights, derivative
 def prepare_radial_packet(*, mass_over_rm=1.01, energy_target=1.0e-3, points=None, rank=5,
                           A=None, C_F=None, flux=None, model=None, center=None, width=None,
                           omega=None, left=None, right=None, radii=None, weights=None,
-                          derivative=None, rtol=1.0e-7, atol=1.0e-9):
+                          derivative=None, rtol=1.0e-7, atol=1.0e-9,
+                          allow_below_inner_horizon=False):
     """Pure ingoing packet column for nsc_rn_pg.make_state.
 
     phi has shape (2, points, 1) and occupations is [ν]. Spectral modes and
@@ -720,11 +733,14 @@ def prepare_radial_packet(*, mass_over_rm=1.01, energy_target=1.0e-3, points=Non
     )
     outer = float(model.horizons["r_plus"])
     inner = float(model.horizons["r_minus"])
+    if allow_below_inner_horizon:
+        inner = float(model.magnetic_r2) / (2.0 * float(model.mass))
     if not inner < float(grid[0]) < request["center"] < float(grid[-1]):
         raise ValueError("packet center must lie strictly inside a grid above the inner horizon")
     if request["center"] <= outer:
         raise ValueError("packet center must lie outside the outer horizon")
-    chart = vacuum_chart(model, grid)
+    chart = vacuum_chart(model, grid,
+                        allow_below_inner_horizon=allow_below_inner_horizon)
     ingoing_speed = float(np.interp(request["center"], grid, chart["speed_minus"]))
     if ingoing_speed >= 0.0:
         raise ValueError("packet center is not on the ingoing exterior characteristic")
@@ -736,7 +752,8 @@ def prepare_radial_packet(*, mass_over_rm=1.01, energy_target=1.0e-3, points=Non
     horizon_ratios = []
     evaluations = 0
     for energy in requested_energies:
-        solved = scattering_mode(grid, float(energy), model)
+        solved = scattering_mode(grid, float(energy), model,
+                                allow_below_inner_horizon=allow_below_inner_horizon)
         normalized, _raw_norm = _normalize_mode(solved["mode"], weights)
         aligned, _center_index = _phase_align_ingoing(normalized, grid, request["center"])
         modes.append(aligned)

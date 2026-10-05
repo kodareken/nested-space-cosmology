@@ -294,7 +294,8 @@ def action_model(mass, r_m=None):
     return model
 
 
-def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr", excision=None):
+def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr",
+               excision=None, allow_below_inner_horizon=False):
     """Excision at the horizon midpoint and outer radius 32 r_m by default.
 
     Child and parent are disjoint areal intervals on this one chart.
@@ -304,7 +305,11 @@ def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr", excision=N
     ``excision`` moves the inner edge off the horizon midpoint and inboard
     of it, which is how the region below the midpoint becomes visible. The
     default is the midpoint exactly, so a recorded run that does not pass
-    this argument is bit-identical to one that predates it. The chart is
+    this argument is bit-identical to one that predates it.
+
+    ``allow_below_inner_horizon`` lets the edge sit below ``r_minus``,
+    inside the second trapped boundary. It is off by default, so nothing
+    changes unless it is asked for. The chart is
     regular there: N^2 = f + beta^2 = 1 identically for this family, and
     the shift and the characteristic speeds stay smooth across the whole
     interval ``(r_minus, r_plus)``. The grid already starts below r_plus,
@@ -317,18 +322,26 @@ def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr", excision=N
     r_plus = float(horizons["r_plus"])
     gap = r_plus - r_minus
     outer = 32.0 * float(r_m) if r_out is None else float(r_out)
+    # Below r_minus the shift is still real until Q^2/(2M), so an edge that
+    # far in is admissible for the chart even though it is inside the
+    # trapped region. The default keeps the original bound, so nothing moves
+    # unless the flag is asked for.
+    lower_bound = (float(model.magnetic_r2) / (2.0 * float(model.mass))
+                   if allow_below_inner_horizon else r_minus)
     if excision is None:
         excision = 0.5 * (r_minus + r_plus)
     else:
         excision = float(excision)
         if not math.isfinite(excision):
             raise ChartAdmissionError("excision override must be finite")
-        if not r_minus < excision < r_plus:
+        if not lower_bound < excision < r_plus:
             raise ChartAdmissionError(
-                "excision override must lie strictly between the inner and outer horizons")
+                "excision override must lie strictly between the inner and outer horizons"
+                + ("" if lower_bound == r_minus
+                   else f", or above the shift's real limit {lower_bound:.6f}"))
     child = (r_plus + gap / 16.0, r_plus + gap / 2.0)
     parent = (child[1], outer)
-    if not (r_minus < excision < r_plus < child[0] < child[1] < outer):
+    if not (lower_bound < excision < r_plus < child[0] < child[1] < outer):
         raise ChartAdmissionError("child and parent cuts are not ordered")
     count = int(points)
     radius = np.linspace(excision, outer, count)
@@ -359,6 +372,8 @@ def build_grid(mass, *, r_m=1.0, points=33, r_out=None, layout="csr", excision=N
         "r_minus": r_minus,
         "excision": float(excision),
         "excision_is_default": bool(excision == 0.5 * (r_minus + r_plus)),
+        "below_inner_horizon": bool(excision < r_minus),
+        "allow_below_inner_horizon": bool(allow_below_inner_horizon),
         "r_plus": r_plus,
         "model": model,
         "cuts": {
