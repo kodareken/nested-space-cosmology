@@ -54,8 +54,6 @@ def _git_head() -> str | None:
         return None
 
 
-r_outer = 32.0
-
 
 def _clock(path: Path) -> float:
     return float(STATION.search(path.name).group(1))
@@ -84,7 +82,10 @@ def _reduce(directory: Path) -> Dict[str, Any]:
     is_default = bool(summary.get("excision_default", requested is None))
     r_inner = summary["r_inner"]
     r_minus = summary["r_minus"]
+    r_outer = summary["r_outer"]
     points = summary["points"]
+    # The extent is read from the run, never assumed. Assuming 32 made the
+    # narrow runs report the wide grid's spacing and cell counts.
     spacing = (r_outer - r_inner) / (points - 1)
     gap = r_inner - r_minus
     gap_cells = gap / spacing if spacing > 0.0 else float("inf")

@@ -1,0 +1,246 @@
+{
+ "api_version": "nsc-rn-mass-shell-v1",
+ "creation_only": true,
+ "held_fixed": {
+  "eps": [
+   0.001
+  ],
+  "mu": [
+   1.04
+  ],
+  "points": [
+   869
+  ],
+  "target_over_rm": [
+   6.0
+  ]
+ },
+ "producing_commit": "647c482fb11449425749d27d111e153483717e7d",
+ "run_selection": [
+  "nsc-rn-inner-packet-n6-def1040-long",
+  "nsc-rn-inner-packet-n6-exc085-long",
+  "nsc-rn-inner-packet-n6-exc080-long"
+ ],
+ "runs": [
+  {
+   "R4_edge_final_over_initial": 297.3129084223067,
+   "R4_edge_first": 0.0003835578747336532,
+   "R4_edge_last": 0.11403670728534121,
+   "R4_edge_max": 0.36026694739003484,
+   "R4_edge_max_over_initial": 939.2766284363427,
+   "accumulation_after_arrival": {
+    "amplitude_after_peak_fraction": 0.02085529426364411,
+    "amplitude_at_arrival": 0.0002783226500879803,
+    "amplitude_gain": 2.4010866216535125,
+    "arrival_t": 0.6,
+    "final_amplitude": 1.3937109138995144e-05,
+    "peak_amplitude": 0.0006682767916294013,
+    "peak_t": 2.8,
+    "rise_time": 2.1999999999999997,
+    "stations_after_arrival": 55
+   },
+   "edge_resolvable_from_horizon": true,
+   "eps": 0.001,
+   "excision_requested": null,
+   "fraction_below_inner_edge": 0.9919776319271487,
+   "gap_in_cells": 8.008733689890438,
+   "gap_to_inner_horizon": 0.28565713714171426,
+   "grid_spacing": 0.03566820276497696,
+   "is_default_edge": true,
+   "motion": {
+    "fit_available": true,
+    "infall_rate_mean": -1.918367346938774,
+    "inner_edge_arrival_t": 0.6,
+    "intercept_radius": 3.0653061224489786,
+    "late_peak_amplitude_max": 0.00012397462751667494,
+    "late_to_falling_amplitude_ratio": 0.47485403415678906,
+    "local_speed_first": -1.7142857142857126,
+    "local_speed_last": -2.285714285714287,
+    "local_speed_max": -1.7142857142857126,
+    "local_speed_min": -2.285714285714287,
+    "max_abs_residual": 0.026122448979591262,
+    "mean_radius_drop": 0.9657142857142857,
+    "r_squared": 0.9972551781425502,
+    "radius_first": 3.045714285714286,
+    "radius_last": 2.08,
+    "stations_edge_pinned": 21,
+    "stations_falling": 6,
+    "stations_late_weak_feature": 26,
+    "stations_total": 61,
+    "t_first": 0.0,
+    "t_last": 0.5
+   },
+   "mu": 1.04,
+   "points": 869,
+   "r_inner": 1.04,
+   "r_minus": 0.7543428628582858,
+   "r_outer": 32.0,
+   "run": "nsc-rn-inner-packet-n6-def1040-long",
+   "stations": 61,
+   "stop_reason": "target",
+   "target_over_rm": 6.0
+  },
+  {
+   "R4_edge_final_over_initial": 127.58959742633508,
+   "R4_edge_first": 0.0009107933617520381,
+   "R4_edge_last": 0.11620775836452091,
+   "R4_edge_max": 0.4651073284506244,
+   "R4_edge_max_over_initial": 510.6617461022395,
+   "accumulation_after_arrival": {
+    "amplitude_after_peak_fraction": 0.02591887270716945,
+    "amplitude_at_arrival": 0.0002639006268365838,
+    "amplitude_gain": 2.926108894300107,
+    "arrival_t": 0.4,
+    "final_amplitude": 2.001460460088751e-05,
+    "peak_amplitude": 0.0007722019713979014,
+    "peak_t": 2.9,
+    "rise_time": 2.5,
+    "stations_after_arrival": 57
+   },
+   "edge_resolvable_from_horizon": true,
+   "eps": 0.001,
+   "excision_requested": 0.85,
+   "fraction_below_inner_edge": 0.9904383983248476,
+   "gap_in_cells": 2.6655022484432718,
+   "gap_to_inner_horizon": 0.0956571371417142,
+   "grid_spacing": 0.03588709677419355,
+   "is_default_edge": false,
+   "motion": {
+    "fit_available": true,
+    "infall_rate_mean": -1.7740207373271955,
+    "inner_edge_arrival_t": 0.4,
+    "intercept_radius": 3.048836405529955,
+    "late_peak_amplitude_max": 0.0001174584039167639,
+    "late_to_falling_amplitude_ratio": 0.4659007333848072,
+    "local_speed_first": -1.720622119815669,
+    "local_speed_last": -1.8986175115207398,
+    "local_speed_max": -1.720622119815669,
+    "local_speed_min": -1.8986175115207398,
+    "max_abs_residual": 0.007119815668203078,
+    "mean_radius_drop": 0.5339861751152077,
+    "r_squared": 0.9993963445307696,
+    "radius_first": 3.045276497695853,
+    "radius_last": 2.511290322580645,
+    "stations_edge_pinned": 23,
+    "stations_falling": 4,
+    "stations_late_weak_feature": 24,
+    "stations_total": 61,
+    "t_first": 0.0,
+    "t_last": 0.3
+   },
+   "mu": 1.04,
+   "points": 869,
+   "r_inner": 0.85,
+   "r_minus": 0.7543428628582858,
+   "r_outer": 32.0,
+   "run": "nsc-rn-inner-packet-n6-exc085-long",
+   "stations": 61,
+   "stop_reason": "target",
+   "target_over_rm": 6.0
+  },
+  {
+   "R4_edge_final_over_initial": 79.86808418655274,
+   "R4_edge_first": 0.00163975536464811,
+   "R4_edge_last": 0.13096411950906672,
+   "R4_edge_max": 0.5076612047040157,
+   "R4_edge_max_over_initial": 309.5956968025894,
+   "accumulation_after_arrival": {
+    "amplitude_after_peak_fraction": 0.023583593974323656,
+    "amplitude_at_arrival": 0.0002570333014207262,
+    "amplitude_gain": 3.6167045679558645,
+    "arrival_t": 0.3,
+    "final_amplitude": 2.1923627699414605e-05,
+    "peak_amplitude": 0.000929613515365117,
+    "peak_t": 3.0,
+    "rise_time": 2.7,
+    "stations_after_arrival": 58
+   },
+   "edge_resolvable_from_horizon": true,
+   "eps": 0.001,
+   "excision_requested": 0.8,
+   "fraction_below_inner_edge": 0.9896950166957684,
+   "gap_in_cells": 1.2702049691989736,
+   "gap_to_inner_horizon": 0.045657137141714266,
+   "grid_spacing": 0.035944700460829496,
+   "is_default_edge": false,
+   "motion": {
+    "fit_available": true,
+    "infall_rate_mean": -1.7373271889400923,
+    "inner_edge_arrival_t": 0.3,
+    "intercept_radius": 3.052534562211981,
+    "late_peak_amplitude_max": 0.0001184247154612387,
+    "late_to_falling_amplitude_ratio": 0.47438969781339574,
+    "local_speed_first": -1.7373271889400854,
+    "local_speed_last": -1.7373271889400943,
+    "local_speed_max": -1.7373271889400854,
+    "local_speed_min": -1.7373271889400943,
+    "max_abs_residual": 1.3322676295501878e-15,
+    "mean_radius_drop": 0.347465437788018,
+    "r_squared": 1.0,
+    "radius_first": 3.0525345622119815,
+    "radius_last": 2.7050691244239635,
+    "stations_edge_pinned": 29,
+    "stations_falling": 3,
+    "stations_late_weak_feature": 20,
+    "stations_total": 61,
+    "t_first": 0.0,
+    "t_last": 0.2
+   },
+   "mu": 1.04,
+   "points": 869,
+   "r_inner": 0.8,
+   "r_minus": 0.7543428628582858,
+   "r_outer": 32.0,
+   "run": "nsc-rn-inner-packet-n6-exc080-long",
+   "stations": 61,
+   "stop_reason": "target",
+   "target_over_rm": 6.0
+  }
+ ],
+ "schema": "NSC-RN-EDGE-SWEEP-v1",
+ "scope_note": "A construction check on finite marched collars. It does not measure the actual universe. Every edge in this sweep is still a boundary and none is the inner horizon, so none of these readings is a statement about regularity at a horizon.",
+ "sweep": {
+  "R4_edge_final_over_initial": [
+   297.3129084223067,
+   127.58959742633508,
+   79.86808418655274
+  ],
+  "amplitude_gain": [
+   2.4010866216535125,
+   2.926108894300107,
+   3.6167045679558645
+  ],
+  "deepest_resolvable_edge": 1.04,
+  "edge_resolvable_from_horizon": [
+   true,
+   true,
+   true
+  ],
+  "fraction_below_inner_edge": [
+   0.9919776319271487,
+   0.9904383983248476,
+   0.9896950166957684
+  ],
+  "gain_increases_with_depth": true,
+  "gain_increases_with_depth_where_resolvable": true,
+  "gap_in_cells": [
+   8.008733689890438,
+   2.6655022484432718,
+   1.2702049691989736
+  ],
+  "gap_to_inner_horizon": [
+   0.28565713714171426,
+   0.0956571371417142,
+   0.045657137141714266
+  ],
+  "r_inner": [
+   1.04,
+   0.85,
+   0.8
+  ],
+  "relaxation_weakens_with_depth": false,
+  "resolution_limit": "The sweep is resolution-limited before it is depth-limited. Edges below about one grid cell from the inner horizon are not distinguishable from the horizon on this grid, so the deepest runs measure the same place. Depth in r_m alone overstates how far the sweep has actually gone, and the trend cannot be pushed further without more points near the edge.",
+  "verdict": "effect_does_not_continue_monotonically"
+ },
+ "what_this_measures": "Whether the effect of moving the grid's inner edge inboard continues as the edge approaches the inner horizon, or turns over because the chart stops supporting the region well before r_minus."
+}

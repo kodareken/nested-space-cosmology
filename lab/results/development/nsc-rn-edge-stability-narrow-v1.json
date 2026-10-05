@@ -1,0 +1,106 @@
+{
+ "all_runs_stable": false,
+ "creation_only": true,
+ "producing_commit": "647c482fb11449425749d27d111e153483717e7d",
+ "runs": [
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "far_field_reversals_are_known_ringing": false,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases_below_limit": 15268,
+   "mass_growth_first_last": [
+    0.0010401087607778692,
+    8.335972713657824e-06
+   ],
+   "mass_reversals_far_field": 0,
+   "monotonic_below_radius": 16.0,
+   "nearest_far_field_reversal_radius": null,
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 1.04,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-n6-def1040-long",
+   "stable": false,
+   "stations": 61,
+   "stop_reason": "target",
+   "worst_mass_decrease_below_limit": -2.9699651133974214e-06
+  },
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "far_field_reversals_are_known_ringing": false,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases_below_limit": 15095,
+   "mass_growth_first_last": [
+    0.0010401090911014155,
+    9.935818612971659e-06
+   ],
+   "mass_reversals_far_field": 0,
+   "monotonic_below_radius": 16.0,
+   "nearest_far_field_reversal_radius": null,
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 0.85,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-n6-exc085-long",
+   "stable": false,
+   "stations": 61,
+   "stop_reason": "target",
+   "worst_mass_decrease_below_limit": -3.4379335966949753e-06
+  },
+  {
+   "all_fields_finite": true,
+   "dt": 0.001,
+   "far_field_reversals_are_known_ringing": false,
+   "fields_audited": [
+    "coupled_phi",
+    "coupled_mass",
+    "radius",
+    "frozen_lapse",
+    "frozen_shift"
+   ],
+   "lapse_always_positive": true,
+   "lapse_nodes_at_or_below_zero": 0,
+   "mass_decreases_below_limit": 15036,
+   "mass_growth_first_last": [
+    0.0010401092385712296,
+    1.0709420146914894e-05
+   ],
+   "mass_reversals_far_field": 0,
+   "monotonic_below_radius": 16.0,
+   "nearest_far_field_reversal_radius": null,
+   "non_finite_counts": {},
+   "points": 869,
+   "r_inner": 0.8,
+   "r_minus": 0.7543428628582858,
+   "radius_increasing": true,
+   "run": "nsc-rn-inner-packet-n6-exc080-long",
+   "stable": false,
+   "stations": 61,
+   "stop_reason": "target",
+   "worst_mass_decrease_below_limit": -3.3987159007153878e-06
+  }
+ ],
+ "schema": "NSC-RN-EDGE-STABILITY-v1",
+ "scope_note": "Stability is not correctness. A stable march in a deeper domain says the numbers can be read, not that the domain is the right one. This does not measure the actual universe.",
+ "what_this_measures": "Whether the march stayed stable in the domain between the horizon midpoint and the inner horizon, which the recorded family never sampled. Every recorded field is checked for finiteness, the mass function for monotonicity, and the lapse for positivity."
+}

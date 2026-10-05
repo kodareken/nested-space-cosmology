@@ -143,9 +143,9 @@
       "sha256": "0d551dedcef5d55f8085450ba4f7935e372db624762333399bcfc8eca6fae336"
     },
     {
-      "bytes": 5876462,
+      "bytes": 5950796,
       "path": "docs/lab-snapshot.json",
-      "sha256": "8d1db3ba556f2259670a5a41a6d2d05827c1a6a4a39d41c378ec40960ca1a544"
+      "sha256": "eaeb881ce013cbc0efbbfef10e0b4724592c1f276c7c67efba25a05be654741c"
     },
     {
       "bytes": 5006,
@@ -3493,7 +3493,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "8d1db3ba556f2259670a5a41a6d2d05827c1a6a4a39d41c378ec40960ca1a544",
+  "lab_snapshot_sha256": "eaeb881ce013cbc0efbbfef10e0b4724592c1f276c7c67efba25a05be654741c",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

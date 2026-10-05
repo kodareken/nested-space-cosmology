@@ -1,0 +1,612 @@
+{
+ "admission": {
+  "car_rank": 1,
+  "center_probability_current": -0.35724869141288357,
+  "filling": 0.0005509711237223486,
+  "integrated_negative_current": -1.4112003420156747,
+  "inward_at_center": true,
+  "killing_energy": 0.0023534367399123944,
+  "mean_radius": 3.204126304347287,
+  "packet_mode_energy": 1.0678584768710873,
+  "phi_shape": [
+   2,
+   869,
+   1
+  ],
+  "requested_center": 3.0,
+  "requested_frequencies": [
+   0.1000000000000002,
+   0.3250000000000003,
+   0.5500000000000005,
+   0.7750000000000008,
+   1.0000000000000009,
+   1.225000000000001,
+   1.4500000000000013,
+   1.6750000000000016,
+   1.9000000000000017
+  ],
+  "requested_width": 1.9999999999999984,
+  "width_rms": 1.3525815996841326
+ },
+ "cpu_seconds": 769.9921883000188,
+ "creation_only": true,
+ "dt": 0.001,
+ "eps": 0.001,
+ "excision_default": false,
+ "excision_requested": 0.8,
+ "gap_in_cells": 7.621229815193834,
+ "gap_to_inner_horizon": 0.045657137141714266,
+ "grid_spacing": 0.005990783410138256,
+ "horizon_midpoint": 1.04,
+ "mu": 1.04,
+ "not_a_sealed_record": true,
+ "packet_center_over_rm": 3.0,
+ "packet_width_over_rm": 2.0,
+ "points": 869,
+ "prepare_seconds": 2.192098999999871,
+ "producer_sha256": "31e7867a8d578161512213b8c3743e3eaea0a786aa7c8539d5b15fc8a116a3c6",
+ "producing_commit": "647c482fb11449425749d27d111e153483717e7d",
+ "r_inner": 0.8,
+ "r_minus": 0.7543428628582858,
+ "r_outer": 6.0,
+ "r_outer_requested": 6.0,
+ "recorded_family_packet_center_over_rm": 12.0,
+ "recorded_stations": [
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.04,
+   "shell_outer_mass": 1.0410401092385713,
+   "t_over_rm": 0.0,
+   "trapping_horizon": 1.3261126937799101
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.040020134908676,
+   "shell_outer_mass": 1.0410397605524797,
+   "stopped": "station",
+   "t_over_rm": 0.1,
+   "trapping_horizon": 1.326242530804565
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0400417344979436,
+   "shell_outer_mass": 1.0410397520265613,
+   "stopped": "station",
+   "t_over_rm": 0.2,
+   "trapping_horizon": 1.3263790091964704
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0400647995897323,
+   "shell_outer_mass": 1.041039744600675,
+   "stopped": "station",
+   "t_over_rm": 0.30000000000000004,
+   "trapping_horizon": 1.3265217627975558
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0400893154281903,
+   "shell_outer_mass": 1.0410397378160743,
+   "stopped": "station",
+   "t_over_rm": 0.4,
+   "trapping_horizon": 1.3266703579802048
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0401152543259893,
+   "shell_outer_mass": 1.041039731617334,
+   "stopped": "station",
+   "t_over_rm": 0.5,
+   "trapping_horizon": 1.326824293717404
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0401425751781104,
+   "shell_outer_mass": 1.0410397259855393,
+   "stopped": "station",
+   "t_over_rm": 0.6,
+   "trapping_horizon": 1.3269830105180738
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0401712233991516,
+   "shell_outer_mass": 1.0410397209044724,
+   "stopped": "station",
+   "t_over_rm": 0.7,
+   "trapping_horizon": 1.327145890782413
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0402011309626804,
+   "shell_outer_mass": 1.0410397163547482,
+   "stopped": "station",
+   "t_over_rm": 0.7999999999999999,
+   "trapping_horizon": 1.327311798431317
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0402322166516222,
+   "shell_outer_mass": 1.0410397123118982,
+   "stopped": "station",
+   "t_over_rm": 0.8999999999999999,
+   "trapping_horizon": 1.3274803196349452
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0402643865172543,
+   "shell_outer_mass": 1.0410397087451018,
+   "stopped": "station",
+   "t_over_rm": 0.9999999999999999,
+   "trapping_horizon": 1.3276508769020436
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0402975345065426,
+   "shell_outer_mass": 1.0410397056165412,
+   "stopped": "station",
+   "t_over_rm": 1.0999999999999999,
+   "trapping_horizon": 1.327822702001222
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.040331543295311,
+   "shell_outer_mass": 1.0410397028815783,
+   "stopped": "station",
+   "t_over_rm": 1.2,
+   "trapping_horizon": 1.327995008504994
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0403662852912705,
+   "shell_outer_mass": 1.0410397004897483,
+   "stopped": "station",
+   "t_over_rm": 1.3,
+   "trapping_horizon": 1.3281670008594273
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0404016238076237,
+   "shell_outer_mass": 1.0410396983859942,
+   "stopped": "station",
+   "t_over_rm": 1.4000000000000001,
+   "trapping_horizon": 1.3283378839553284
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0404374143920714,
+   "shell_outer_mass": 1.0410396965114614,
+   "stopped": "station",
+   "t_over_rm": 1.5000000000000002,
+   "trapping_horizon": 1.328506872204797
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0404735062895314,
+   "shell_outer_mass": 1.0410396948039013,
+   "stopped": "station",
+   "t_over_rm": 1.6000000000000003,
+   "trapping_horizon": 1.3286731986270028
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0405097440224411,
+   "shell_outer_mass": 1.041039693197893,
+   "stopped": "station",
+   "t_over_rm": 1.7000000000000004,
+   "trapping_horizon": 1.3288361240311295
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0405459690602228,
+   "shell_outer_mass": 1.0410396916254623,
+   "stopped": "station",
+   "t_over_rm": 1.8000000000000005,
+   "trapping_horizon": 1.328994945141434
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0405820215590524,
+   "shell_outer_mass": 1.0410396900170589,
+   "stopped": "station",
+   "t_over_rm": 1.9000000000000006,
+   "trapping_horizon": 1.3291490026155892
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0406177421420624,
+   "shell_outer_mass": 1.0410396883028281,
+   "stopped": "station",
+   "t_over_rm": 2.0000000000000004,
+   "trapping_horizon": 1.3292976888185057
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0406529736909016,
+   "shell_outer_mass": 1.041039686413797,
+   "stopped": "station",
+   "t_over_rm": 2.1000000000000005,
+   "trapping_horizon": 1.3294404535282105
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0406875631231667,
+   "shell_outer_mass": 1.041039684282715,
+   "stopped": "station",
+   "t_over_rm": 2.2000000000000006,
+   "trapping_horizon": 1.329576809639938
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0407213631273389,
+   "shell_outer_mass": 1.0410396818447074,
+   "stopped": "station",
+   "t_over_rm": 2.3000000000000007,
+   "trapping_horizon": 1.3297063385945638
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0407542338274471,
+   "shell_outer_mass": 1.0410396790380674,
+   "stopped": "station",
+   "t_over_rm": 2.400000000000001,
+   "trapping_horizon": 1.3298286929787946
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0407860443494739,
+   "shell_outer_mass": 1.0410396758052047,
+   "stopped": "station",
+   "t_over_rm": 2.500000000000001,
+   "trapping_horizon": 1.3299435989527104
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.040816674264483,
+   "shell_outer_mass": 1.041039672093708,
+   "stopped": "station",
+   "t_over_rm": 2.600000000000001,
+   "trapping_horizon": 1.3300508797659478
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0408460148923264,
+   "shell_outer_mass": 1.0410396678572178,
+   "stopped": "station",
+   "t_over_rm": 2.700000000000001,
+   "trapping_horizon": 1.3301852394975797
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0408739704676988,
+   "shell_outer_mass": 1.041039663056002,
+   "stopped": "station",
+   "t_over_rm": 2.800000000000001,
+   "trapping_horizon": 1.3304010048690238
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.040900784724819,
+   "shell_outer_mass": 1.041039657500613,
+   "stopped": "station",
+   "t_over_rm": 2.9000000000000012,
+   "trapping_horizon": 1.3303860774367477
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0409905127217594,
+   "shell_outer_mass": 1.0410396191819669,
+   "stopped": "station",
+   "t_over_rm": 3.0000000000000013,
+   "trapping_horizon": 1.3303882090753765
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410088805890576,
+   "shell_outer_mass": 1.041039602109368,
+   "stopped": "station",
+   "t_over_rm": 3.1000000000000014,
+   "trapping_horizon": 1.3303913113028527
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410177283856494,
+   "shell_outer_mass": 1.0410395892159297,
+   "stopped": "station",
+   "t_over_rm": 3.2000000000000015,
+   "trapping_horizon": 1.330410266241889
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410225073994517,
+   "shell_outer_mass": 1.0410395784011932,
+   "stopped": "station",
+   "t_over_rm": 3.3000000000000016,
+   "trapping_horizon": 1.3304073891461419
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410196523519224,
+   "shell_outer_mass": 1.0410395707560893,
+   "stopped": "station",
+   "t_over_rm": 3.4000000000000017,
+   "trapping_horizon": 1.3304176567974824
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410129052681631,
+   "shell_outer_mass": 1.0410395647317012,
+   "stopped": "station",
+   "t_over_rm": 3.5000000000000018,
+   "trapping_horizon": 1.3304085890805675
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410216883735917,
+   "shell_outer_mass": 1.0410395513375243,
+   "stopped": "station",
+   "t_over_rm": 3.600000000000002,
+   "trapping_horizon": 1.3304062497861284
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410163727159194,
+   "shell_outer_mass": 1.0410395441803797,
+   "stopped": "station",
+   "t_over_rm": 3.700000000000002,
+   "trapping_horizon": 1.3304081354602386
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410169608602753,
+   "shell_outer_mass": 1.041039534046728,
+   "stopped": "station",
+   "t_over_rm": 3.800000000000002,
+   "trapping_horizon": 1.330413037533282
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410190057473798,
+   "shell_outer_mass": 1.0410395230269962,
+   "stopped": "station",
+   "t_over_rm": 3.900000000000002,
+   "trapping_horizon": 1.330418296764496
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041019629785045,
+   "shell_outer_mass": 1.0410395124221548,
+   "stopped": "station",
+   "t_over_rm": 4.000000000000002,
+   "trapping_horizon": 1.3304146081243984
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410194040868181,
+   "shell_outer_mass": 1.04103950196292,
+   "stopped": "station",
+   "t_over_rm": 4.100000000000001,
+   "trapping_horizon": 1.3304110892433598
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410200890138623,
+   "shell_outer_mass": 1.0410394908381373,
+   "stopped": "station",
+   "t_over_rm": 4.200000000000001,
+   "trapping_horizon": 1.330419232829805
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041022863082323,
+   "shell_outer_mass": 1.0410394784902828,
+   "stopped": "station",
+   "t_over_rm": 4.300000000000001,
+   "trapping_horizon": 1.3304127593548438
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410232118704523,
+   "shell_outer_mass": 1.0410394669843526,
+   "stopped": "station",
+   "t_over_rm": 4.4,
+   "trapping_horizon": 1.330419800609197
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041021830133635,
+   "shell_outer_mass": 1.0410394560291916,
+   "stopped": "station",
+   "t_over_rm": 4.5,
+   "trapping_horizon": 1.3304143482728135
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041024553316802,
+   "shell_outer_mass": 1.0410394429160494,
+   "stopped": "station",
+   "t_over_rm": 4.6,
+   "trapping_horizon": 1.3304197943609382
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410228936255272,
+   "shell_outer_mass": 1.0410394315495017,
+   "stopped": "station",
+   "t_over_rm": 4.699999999999999,
+   "trapping_horizon": 1.330418706616087
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410252098961736,
+   "shell_outer_mass": 1.0410394180887763,
+   "stopped": "station",
+   "t_over_rm": 4.799999999999999,
+   "trapping_horizon": 1.330416765732237
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410240636140577,
+   "shell_outer_mass": 1.0410394059507715,
+   "stopped": "station",
+   "t_over_rm": 4.899999999999999,
+   "trapping_horizon": 1.330420634407858
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410252126483566,
+   "shell_outer_mass": 1.0410393924817174,
+   "stopped": "station",
+   "t_over_rm": 4.999999999999998,
+   "trapping_horizon": 1.330421756891065
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410260056713256,
+   "shell_outer_mass": 1.0410393789121781,
+   "stopped": "station",
+   "t_over_rm": 5.099999999999998,
+   "trapping_horizon": 1.3304197918905103
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410253086616927,
+   "shell_outer_mass": 1.0410393657516444,
+   "stopped": "station",
+   "t_over_rm": 5.1999999999999975,
+   "trapping_horizon": 1.3304193453130346
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410259931962367,
+   "shell_outer_mass": 1.0410393516831011,
+   "stopped": "station",
+   "t_over_rm": 5.299999999999997,
+   "trapping_horizon": 1.330420929853373
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041027009536614,
+   "shell_outer_mass": 1.0410393371934954,
+   "stopped": "station",
+   "t_over_rm": 5.399999999999997,
+   "trapping_horizon": 1.330422858860924
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.04102713224495,
+   "shell_outer_mass": 1.041039322844409,
+   "stopped": "station",
+   "t_over_rm": 5.4999999999999964,
+   "trapping_horizon": 1.3304238861881832
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041026935666962,
+   "shell_outer_mass": 1.0410393083719127,
+   "stopped": "station",
+   "t_over_rm": 5.599999999999996,
+   "trapping_horizon": 1.3304240827796856
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041027083643864,
+   "shell_outer_mass": 1.0410392934734969,
+   "stopped": "station",
+   "t_over_rm": 5.699999999999996,
+   "trapping_horizon": 1.3304239828628273
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.041027565937571,
+   "shell_outer_mass": 1.041039278156432,
+   "stopped": "station",
+   "t_over_rm": 5.799999999999995,
+   "trapping_horizon": 1.3304238918703302
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410281067481606,
+   "shell_outer_mass": 1.0410392625496176,
+   "stopped": "station",
+   "t_over_rm": 5.899999999999995,
+   "trapping_horizon": 1.3304239201280947
+  },
+  {
+   "R4_recorded": true,
+   "curvature_status": "sourced_time_dependent_jets",
+   "shell_inner_mass": 1.0410285373045438,
+   "shell_outer_mass": 1.0410392467246907,
+   "stopped": "station",
+   "t_over_rm": 5.999999999999995,
+   "trapping_horizon": 1.3304240988647051
+  }
+ ],
+ "schema": "NSC-RN-INNER-PACKET-v1",
+ "scope_note": "A construction check on one finite marched collar. It does not measure the actual universe.",
+ "station_step_over_rm": 0.1,
+ "stations": 61,
+ "stop_reason": "target",
+ "target_over_rm": 6.0,
+ "wall_seconds": 774.2093604999991,
+ "why_this_is_a_different_construction": "The recorded family releases the packet at 12 r_m, from outside the collar it is about to cross. This one releases it at the centre above, inside. Same width, same spectrum, same chart. The mass profile left behind is a different problem and is not comparable with the recorded family except through construction-only quantities."
+}
