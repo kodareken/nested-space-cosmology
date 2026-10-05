@@ -1,0 +1,125 @@
+{
+ "all_converged": false,
+ "api_version": "nsc-rn-claim-convergence-v1",
+ "comparisons": [
+  {
+   "coarse": "nsc-rn-inner-packet-exc077-long",
+   "converged": true,
+   "fine": "nsc-rn-inner-packet-n8000d-exc077",
+   "rows": [
+    {
+     "absolute_difference": 0.0002824935158856623,
+     "coarse_retained": 0.32485955137890293,
+     "coarse_t": 1.4000000000000001,
+     "fine_retained": 0.32457705786301727,
+     "fine_t": 1.4000000000000001,
+     "matched": true,
+     "relative_difference": 0.0008695866096181773,
+     "requested_t": 1.4
+    },
+    {
+     "absolute_difference": 0.00030847554414875633,
+     "coarse_retained": 0.4473016068521063,
+     "coarse_t": 1.8000000000000005,
+     "fine_retained": 0.44699313130795754,
+     "fine_t": 1.8000000000000005,
+     "matched": true,
+     "relative_difference": 0.0006896365660737482,
+     "requested_t": 1.8
+    },
+    {
+     "absolute_difference": 0.00030704570208550663,
+     "coarse_retained": 0.5088115854191136,
+     "coarse_t": 2.0000000000000004,
+     "fine_retained": 0.5085045397170281,
+     "fine_t": 2.0000000000000004,
+     "matched": true,
+     "relative_difference": 0.000603456585668327,
+     "requested_t": 2.0
+    }
+   ],
+   "worst_relative_difference": 0.0008695866096181773
+  },
+  {
+   "coarse": "nsc-rn-inner-packet-exc0760-long",
+   "converged": false,
+   "fine": "nsc-rn-inner-packet-n8000d-exc076",
+   "rows": [
+    {
+     "absolute_difference": 0.002277055480213619,
+     "coarse_retained": 0.32333826600494936,
+     "coarse_t": 1.4000000000000001,
+     "fine_retained": 0.32106121052473574,
+     "fine_t": 1.4000000000000001,
+     "matched": true,
+     "relative_difference": 0.00704233219392215,
+     "requested_t": 1.4
+    },
+    {
+     "absolute_difference": 0.002564463075002521,
+     "coarse_retained": 0.44561500779781743,
+     "coarse_t": 1.8000000000000005,
+     "fine_retained": 0.4430505447228149,
+     "fine_t": 1.8000000000000005,
+     "matched": true,
+     "relative_difference": 0.005754884889707436,
+     "requested_t": 1.8
+    },
+    {
+     "absolute_difference": 0.0026069695473245336,
+     "coarse_retained": 0.5071172222571527,
+     "coarse_t": 2.0000000000000004,
+     "fine_retained": 0.5045102527098282,
+     "fine_t": 2.0000000000000004,
+     "matched": true,
+     "relative_difference": 0.00514076318631232,
+     "requested_t": 2.0
+    }
+   ],
+   "worst_relative_difference": 0.00704233219392215
+  },
+  {
+   "coarse": "nsc-rn-inner-packet-exc07555-long",
+   "converged": false,
+   "fine": "nsc-rn-inner-packet-n8000d-exc07555",
+   "rows": [
+    {
+     "absolute_difference": 0.004208053797581879,
+     "coarse_retained": 0.32395458096474,
+     "coarse_t": 1.4000000000000001,
+     "fine_retained": 0.3197465271671581,
+     "fine_t": 1.4000000000000001,
+     "matched": true,
+     "relative_difference": 0.012989641279497428,
+     "requested_t": 1.4
+    },
+    {
+     "absolute_difference": 0.004577075458413904,
+     "coarse_retained": 0.44618464303772815,
+     "coarse_t": 1.8000000000000005,
+     "fine_retained": 0.44160756757931424,
+     "fine_t": 1.8000000000000005,
+     "matched": true,
+     "relative_difference": 0.010258254132755705,
+     "requested_t": 1.8
+    },
+    {
+     "absolute_difference": 0.004570908030069543,
+     "coarse_retained": 0.5076378045764123,
+     "coarse_t": 2.0000000000000004,
+     "fine_retained": 0.5030668965463427,
+     "fine_t": 2.0000000000000004,
+     "matched": true,
+     "relative_difference": 0.00900427034563283,
+     "requested_t": 2.0
+    }
+   ],
+   "worst_relative_difference": 0.012989641279497428
+  }
+ ],
+ "creation_only": true,
+ "producing_commit": "74183d91d6cd776089124a7a096203839bf12375",
+ "schema": "NSC-RN-CLAIM-CONVERGENCE-v1",
+ "scope_note": "A numerical convergence check on one quantity. It does not measure the actual universe, and it says nothing about the late-time floor or the relaxation fraction, which need a longer run than is currently recorded at fine resolution.",
+ "what_this_measures": "Whether the retained fraction, which had only ever been read off a coarse grid, survives refinement. It is compared at matched times, because it grows with time and a mismatched comparison would measure the clock."
+}
