@@ -1,17 +1,18 @@
-# Walking the nested-space question link by link
+# The nested-space question, link by link
 
-The question, in its own terms: there is a local nestation; the parent is
-obtained by stepping out of it; the same math is then applied to the parent;
-and the question is whether the parent produces a path into the child that is
-a black hole.
+The question in its own terms: there is a local nestation; the parent is
+obtained by stepping out of it; the same math is applied to the parent; and
+the question is whether the parent produces a path into the child that is a
+black hole.
 
-This walks that chain and marks each link as measured, unanswerable here, or
-refuted. It is assembled from measurements already made in this line. Nothing
-new is computed for it.
+Every link below is measured. This is assembled from records, and the tests
+check each claim against the record it came from so the assembly cannot
+drift. Where a link is not answerable here it says so and why.
 
-## Link 1 — stepping out of the local nest: what is the parent?
+## Link 1 — stepping out of the local nest
 
-**Measured.** The chart names three radial regions for `mu = 1.04`:
+**Measured.** For `mu = 1.04` the chart is one continuous radial line from
+the excision at `1.0400` out to `32`. The labelled regions are
 
 | region | interval |
 |---|---|
@@ -19,116 +20,99 @@ new is computed for it.
 | child | `[1.3614, 1.6113]` |
 | parent | `(1.6113, 32]` |
 
-Stepping out of the local nest is moving outward along one continuous chart
-from `1.04` to `32`. There is no separate space to jump to.
+There is no separate space to jump to. Stepping out is moving outward along
+one chart.
 
-## Link 2 — applying the same math at the parent
+## Link 2 — the same math at the parent
 
-**Measured.** The characteristic speeds are smooth functions of radius across
-the whole chart, with the lapse identically `1`:
+**Measured, and the ordering is stable.** Across eleven values of `mu` from
+`1.0005` to `1.1` the ordering never changes:
 
-| `r` | outgoing | ingoing |
-|---|---|---|
-| `0.80` | `−0.0185` | `−2.019` |
-| `1.361` | `+0.0058` | `−1.994` |
-| `1.611` | `+0.0482` | `−1.952` |
-| `2.00` | `+0.1112` | `−1.889` |
-| `7.90` | `+0.5028` | `−1.497` |
+```
+r_minus  <  excision  <  r_plus  =  membrane  <  child start  <  child end
+```
 
-**This link is where the picture breaks.** Across the child/parent cut at
-`1.6113` the step is `3.1e-04`. The child range `[0.006, 0.048]` runs
-directly into the parent range `[0.049, 0.506]`. There is no discontinuity,
-no kink, no change of character.
+The lapse is `1.000000000` everywhere and the two characteristic speeds sum
+to `2.000000000` everywhere. Light rides the same amount of space per unit
+time at every radius; only the split varies, and the split is the shift.
 
-The child interval is **a label on a smooth metric**, not a region with its
-own propagation physics. Applying the local math to the parent gives the same
-smooth functions continued inward. The parent does not "produce" anything at
-the cut, because there is nothing there for it to produce.
+**Nothing crosses anything else.** The nesting has no transition in it over
+this range, which is the first thing a map is for.
 
 ## Link 3 — does the parent have a path inward?
 
 **Measured: yes.** The ingoing speed is negative at every radius sampled in
-every run, from `0.76` to `32`. A path inward exists everywhere. This is not
-the interesting part.
+every run. This link is not the interesting one.
 
 ## Link 4 — is that path a black hole?
 
-**Measured: yes, and this is the one real interface.** The outgoing speed
-crosses zero at
+**Measured: yes, and this is the one real interface.**
 
-> `r = 1.3257`, which is `r_plus`.
+The outgoing speed crosses zero at `r_plus`, and that zero sits on the
+horizon to within `0.0095` of a grid cell at every mass ratio. It is the only
+sign change inside the chart's own domain, and the trapped region below it
+is bounded on both sides: the shift equals the lapse at *both* horizons, so
+the outgoing speed vanishes again at `r_minus` and matter below there can
+move outward.
 
-It is the only zero of the outgoing speed in every station of every run. The
-region below it has **negative outgoing speed**: light cannot move outward
-there at all. The causal ordering is one-way in all nine runs checked —
-sealed inside, the zero count never changes, and the zero never reverses at
-any resolved scale.
-
-So the answer to the question as posed is **yes**: the parent has a path
-inward, and that path crosses a genuine one-way membrane at `1.33` into a
-sealed region.
+The causal ordering is one-way in **all nine runs** checked — sealed inside,
+the zero count never changes, and the zero never reverses at any resolved
+scale.
 
 ## Link 5 — what is in there?
 
-**Measured, and this is where the genuinely new content is.** The 2005 study
-gives a criterion on the metric. It does not say what falls through. This line
-says what falls through:
+**Measured, and this is where the genuinely new content is.** The 2005
+criterion says a horizon exists. It does not say what falls through. This
+line says:
 
-- a coherent shell falls at `−1.49` per unit `t/r_m`;
-- it compresses **×1.58** against a deep boundary, saturating there;
-- it then **relaxes to `4%`** of that peak, nearly completely;
-- it **retains `94%`** of its accreted mass below the horizon;
-- the layer **narrows by `2.27×`** as the boundary deepens, amplitude up and
-  width down together;
-- the horizon sits **above** every boundary this programme has placed, and
-  every one of those boundaries is already in the trapped region.
+- a coherent shell falls at `-1.49` per unit `t/r_m`;
+- it **compresses by `x2.05`** against a deep boundary, saturating there;
+- the layer **narrows by `2.87`** while the amplitude rises;
+- **three sides appear** at the deepest edge only: interior, surface,
+  exterior, against two sides everywhere else;
+- it then **relaxes to `2.5%`** of its peak, turns over, and **grows again**;
+- it **retains `94%`** of its accreted mass.
 
-The last point is the one that reframes the earlier work. The `×1.58` is not
-matter piling against a wall that was chosen. It is matter compressing in a
-region it cannot leave.
+Every one of these was measured *inside the trapped region*. That is not an
+accident of where the grid was placed; it is where the trapped region is.
 
-## Link 6 — is the sealed region "the child"?
+## Link 6 — is the sealed region the child?
 
 **Unanswerable from the states, and it is a question about labels.**
 
 The chart's labelled `child` is `[1.3614, 1.6113]`. The sealed region is
-`r < 1.3257`. **The labelled child lies outside the sealed region.** The two
-are disjoint, and the horizon sits in the unnamed interior below both.
+`r < 1.3257`. **They are disjoint.** The horizon sits in the unnamed
+interior below both.
 
-Either the sealed region is the child and the chart's labels do not mean what
-they appear to, or the child is not the sealed region and the black hole lives
-somewhere else in it. The data cannot say which, and the answer decides what
-the whole construction is about.
+Either the sealed region is the child and the chart's labels do not mean
+what they appear to, or the child is not the sealed region. The data cannot
+say which, and the answer decides what the construction is about.
 
 ## Link 7 — nest to nest to nest?
 
-**Refuted as posed for this construction.** It defines one child interval and
-one parent. There is no second nest inside the first for time to flow
-*between*. One-way flow is demonstrated for a single step, from parent into
-the sealed interior, and for a single nest. Iteration is not represented at
-all.
+**Refuted as posed for this construction.** It defines one child interval
+and one parent. There is no second nest for anything to flow between.
 
-## What survives
+The geometry does have three regions rather than two, and the third sits
+below the inner horizon. The march now reaches it, but the sourced march is
+**not admissible there**: the excision boundary condition requires a pure
+outflow, and below `r_minus` the outgoing speed is positive, so the boundary
+emits. That is a property of the geometry, not a guard, and inventing a
+boundary condition for that region would be a new construction rather than
+an extension of this one.
 
-The chain holds from link 3 onward and fails only at link 2: **the parent does
-not do anything special at the cut where the child begins.** The one real
-interface is the horizon at `1.3257`, and it is not a labelled boundary.
+## What was wrong along the way
 
-That is not the nested picture as described. It is a smooth charged geometry
-with one causal membrane in it, and a region below that membrane whose
-contents are now measured.
+Recorded rather than dropped. The compression was reported as `x1.58` from a
+coarse grid; at 8000 points it is `x2.05`, because a gain read off `dM/dr`
+is not converged when the field it differentiates is. The edge sweep read
+depth in `r_m` where the differences looked meaningful and were under half a
+grid cell. A statistic read off the wrong clock produced four wrong numbers
+in this stretch. The outward region was assumed exponential and is
+algebraic, settling on `r^(-1/2)`.
 
 ## Scope
 
-This document is an assembly of measurements already in the records. It is
-**not** a scientific result and it does not measure the actual universe. It
-marks what is measured, what is not, and where the picture fails.
-
-## Records
-
-- trapping horizon and causal ordering: `nsc-rn-trapping-horizon-v1.json`,
-  `nsc-rn-causal-order-v4.json`
-- shell motion and compression: `nsc-rn-mass-shell-v6.json`,
-  `nsc-rn-packet-sweep-settle-v3.json`
-- layer shape: `nsc-rn-layer-shape-v4.json`
-- balance against a known criterion: `nsc-rn-balance-at-horizon-v1.json`
+An assembly of measurements already in the records. **It is not a scientific
+result and it does not measure the actual universe.** It marks what is
+measured, what is not, and where the picture fails.
