@@ -748,9 +748,9 @@
       "sha256": "d637851d70c795eedccc60106115dbce9394ecd564a15c1be9356cf0726dd615"
     },
     {
-      "bytes": 8179,
+      "bytes": 8251,
       "path": "paper/claim-bindings.json",
-      "sha256": "cdfdf83e665fdea1ce739abd6c86100e95e54b343034c12601c7a6b0a86be63a"
+      "sha256": "5b889c46e4aa032c18d4f1a311eb6367dc6844862ceaaefc6e04af3d04ea32bd"
     },
     {
       "bytes": 105847,
@@ -951,6 +951,11 @@
       "bytes": 2076644,
       "path": "paper/nested-space-cosmology.pdf",
       "sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf"
+    },
+    {
+      "bytes": 5498,
+      "path": "paper/pending/two-force-gradient-balance.md",
+      "sha256": "4e25caa661261514908b79719bad80d2c1874c2d323cecec964cd9cbb12cffea"
     },
     {
       "bytes": 1188,
@@ -1878,9 +1883,9 @@
       "sha256": "6565c9ff68bd23703f9ebb287a341c1d21e8e15720403941d9750312f4e67053"
     },
     {
-      "bytes": 6627,
+      "bytes": 6949,
       "path": "scripts/check_claim_bindings.py",
-      "sha256": "5e3c82c8ca830877459099a8c437b97cce180e27674c2355d5b57db476d8b52b"
+      "sha256": "6da2577c2bd4e7d1d3f71ed3d0c6a3dadb3d508431f2d4bc4003511614e5de1c"
     },
     {
       "bytes": 4856,
