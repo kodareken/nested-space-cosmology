@@ -27,6 +27,7 @@ install:
 check:
 	$(PYTHON) scripts/check_publication.py
 	$(PYTHON) scripts/check_lab_snapshot.py
+	$(PYTHON) scripts/check_claim_bindings.py
 
 test:
 	$(PYTHON) -m pytest -q
