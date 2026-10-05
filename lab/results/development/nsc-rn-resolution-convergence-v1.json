@@ -1,0 +1,158 @@
+{
+ "comparisons": [
+  {
+   "coarse_run": "nsc-rn-inner-packet-curv",
+   "fine_run": "nsc-rn-inner-packet-n8000-def1040",
+   "first_relative_difference": 0.0,
+   "first_t": 0.0,
+   "last_t": 0.5,
+   "matched_stations": 6,
+   "rows": [
+    {
+     "coarse": 1.04,
+     "fine": 1.04,
+     "relative_difference": 0.0,
+     "t_over_rm": 0.0
+    },
+    {
+     "coarse": 1.040021276951487,
+     "fine": 1.04002128308665,
+     "relative_difference": 5.899074548019236e-09,
+     "t_over_rm": 0.1
+    },
+    {
+     "coarse": 1.0400439929801786,
+     "fine": 1.0400440445526056,
+     "relative_difference": 4.9586774543861194e-08,
+     "t_over_rm": 0.2
+    },
+    {
+     "coarse": 1.0400681568294194,
+     "fine": 1.0400682533381256,
+     "relative_difference": 9.279075174453478e-08,
+     "t_over_rm": 0.3
+    },
+    {
+     "coarse": 1.0400937216386974,
+     "fine": 1.0400938629596872,
+     "relative_difference": 1.3587332262394458e-07,
+     "t_over_rm": 0.4
+    },
+    {
+     "coarse": 1.0401206259480165,
+     "fine": 1.040120812068315,
+     "relative_difference": 1.7894107074058844e-07,
+     "t_over_rm": 0.5
+    }
+   ],
+   "worst_relative_difference": 1.7894107074058844e-07
+  },
+  {
+   "coarse_run": "nsc-rn-inner-packet-exc085",
+   "fine_run": "nsc-rn-inner-packet-n8000-exc085",
+   "first_relative_difference": 0.0,
+   "first_t": 0.0,
+   "last_t": 0.5,
+   "matched_stations": 6,
+   "rows": [
+    {
+     "coarse": 1.04,
+     "fine": 1.04,
+     "relative_difference": 0.0,
+     "t_over_rm": 0.0
+    },
+    {
+     "coarse": 1.0400176662814298,
+     "fine": 1.040017661216475,
+     "relative_difference": 4.870066001860379e-09,
+     "t_over_rm": 0.1
+    },
+    {
+     "coarse": 1.0400366823435774,
+     "fine": 1.040036728525888,
+     "relative_difference": 4.4404501712656434e-08,
+     "t_over_rm": 0.2
+    },
+    {
+     "coarse": 1.040057107321789,
+     "fine": 1.0400572014149587,
+     "relative_difference": 9.046923388900379e-08,
+     "t_over_rm": 0.3
+    },
+    {
+     "coarse": 1.0400789246119293,
+     "fine": 1.0400790653374608,
+     "relative_difference": 1.353027430130515e-07,
+     "t_over_rm": 0.4
+    },
+    {
+     "coarse": 1.0401021054116537,
+     "fine": 1.0401022921617338,
+     "relative_difference": 1.7954975679318715e-07,
+     "t_over_rm": 0.5
+    }
+   ],
+   "worst_relative_difference": 1.7954975679318715e-07
+  },
+  {
+   "coarse_run": "nsc-rn-inner-packet-exc080",
+   "fine_run": "nsc-rn-inner-packet-n8000-exc080",
+   "first_relative_difference": 0.0,
+   "first_t": 0.0,
+   "last_t": 0.5,
+   "matched_stations": 6,
+   "rows": [
+    {
+     "coarse": 1.04,
+     "fine": 1.04,
+     "relative_difference": 0.0,
+     "t_over_rm": 0.0
+    },
+    {
+     "coarse": 1.0400167368398316,
+     "fine": 1.0400165904275136,
+     "relative_difference": 1.4077880947582114e-07,
+     "t_over_rm": 0.1
+    },
+    {
+     "coarse": 1.0400347736233482,
+     "fine": 1.0400345540643448,
+     "relative_difference": 2.111073677447494e-07,
+     "t_over_rm": 0.2
+    },
+    {
+     "coarse": 1.0400542006539422,
+     "fine": 1.0400538994401143,
+     "relative_difference": 2.8961358714842474e-07,
+     "t_over_rm": 0.3
+    },
+    {
+     "coarse": 1.0400750087121742,
+     "fine": 1.040074621372657,
+     "relative_difference": 3.724149834220343e-07,
+     "t_over_rm": 0.4
+    },
+    {
+     "coarse": 1.0400971775876628,
+     "fine": 1.0400967016676177,
+     "relative_difference": 4.575726724446812e-07,
+     "t_over_rm": 0.5
+    }
+   ],
+   "worst_relative_difference": 4.575726724446812e-07
+  }
+ ],
+ "creation_only": true,
+ "pairs": [
+  "nsc-rn-inner-packet-n8000-def1040:nsc-rn-inner-packet-curv",
+  "nsc-rn-inner-packet-n8000-exc085:nsc-rn-inner-packet-exc085",
+  "nsc-rn-inner-packet-n8000-exc080:nsc-rn-inner-packet-exc080"
+ ],
+ "producing_commit": "f579cc02e99b945378d050f37c392ffcc9f216d0",
+ "reading": "The differences grow roughly linearly in time, so they are accumulated integration differences rather than a per-step noise floor. Extrapolating that growth to the compression peak gives the order of magnitude to expect there.",
+ "schema": "NSC-RN-RESOLUTION-CONVERGENCE-v1",
+ "scope_note": "A numerical convergence check on two resolutions, not three. Two points bound nothing and no convergence order is claimed. Agreement is evidence against a resolution artefact at these two sizes, not evidence of physics, and it does not measure the actual universe.",
+ "verdict": "trajectories_agree_between_resolutions",
+ "what_this_measures": "Whether the trajectory the gain is read from depends on the grid. The gain is a ratio of two amplitudes, so if the inner mass stock agrees between two resolutions at every matched station, the gain agrees and the question of whether the saturation is a grid artefact is settled for these runs.",
+ "worst_relative_difference": 4.575726724446812e-07
+}
