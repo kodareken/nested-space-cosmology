@@ -748,9 +748,9 @@
       "sha256": "d637851d70c795eedccc60106115dbce9394ecd564a15c1be9356cf0726dd615"
     },
     {
-      "bytes": 8251,
+      "bytes": 11176,
       "path": "paper/claim-bindings.json",
-      "sha256": "5b889c46e4aa032c18d4f1a311eb6367dc6844862ceaaefc6e04af3d04ea32bd"
+      "sha256": "41721e0127e51d5ad0a74b71cf36fdfea46b13bdee7c0b19c0a2e0901369e6ea"
     },
     {
       "bytes": 105847,
@@ -1883,9 +1883,9 @@
       "sha256": "6565c9ff68bd23703f9ebb287a341c1d21e8e15720403941d9750312f4e67053"
     },
     {
-      "bytes": 6949,
+      "bytes": 7524,
       "path": "scripts/check_claim_bindings.py",
-      "sha256": "6da2577c2bd4e7d1d3f71ed3d0c6a3dadb3d508431f2d4bc4003511614e5de1c"
+      "sha256": "4a872384bd178ee497184b2a75b3eb644a8808653ff372b94001388782b3ace6"
     },
     {
       "bytes": 4856,

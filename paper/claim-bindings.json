@@ -27,31 +27,54 @@
     "target-antimatter": {"section": "2.4", "status": "proposal", "owner": null},
     "target-recursion": {"section": "2.5", "status": "proposal", "owner": null},
 
-    "compact-mode-overlaps": {"section": "3", "status": "unspecified", "owner": null},
-    "charged-sector-parity": {"section": "3", "status": "unspecified", "owner": null},
-    "torsion-uv-finite-matching": {"section": "4", "status": "unspecified", "owner": null},
-    "published-flow-compatibility": {"section": "4", "status": "unspecified", "owner": null},
+    "compact-mode-overlaps": {"section": "3", "status": "derived", "owner": null},
+    "charged-sector-parity": {"section": "3", "status": "derived", "owner": null},
+    "torsion-uv-finite-matching": {"section": "4", "status": "derived", "owner": null},
+    "published-flow-compatibility": {"section": "4", "status": "derived", "owner": null},
 
-    "compact-boundary-adjoint": {"section": "4.1", "status": "unspecified", "owner": null},
-    "curved-compact-source": {"section": "4.2", "status": "unspecified", "owner": null},
-    "conditional-holonomy-saddle": {"section": "4.3", "status": "unspecified", "owner": null},
+    "compact-boundary-adjoint": {"section": "4.1", "status": "derived", "owner": null},
+    "curved-compact-source": {"section": "4.2", "status": "measured", "owner": null},
+    "conditional-holonomy-saddle": {"section": "4.3", "status": "derived", "owner": null, "unlinked_record": "lab/results/development/compact-casimir.json", "unlinked_note": "The paper prints the recorded values, the AP-minus-P energy about -0.16995535 and second variation 3.19343937, but does not link the record they came from. Found by this check on 2026-10-05."},
 
     "derived-horizon-source": {"section": "4.4", "status": "derived", "owner": "nsc_horizon_source"},
     "derived-warped-source": {"section": "4.5", "status": "derived", "owner": null},
     "derived-compact-matching": {"section": "4.6", "status": "derived", "owner": null},
     "derived-gauge-source": {"section": "4.7", "status": "derived", "owner": null},
 
-    "canonical-spherical-action": {"section": "4.7", "status": "unspecified", "owner": null},
-    "curvature-eft-source": {"section": "4.7", "status": "unspecified", "owner": null},
-    "full-spectral-endpoint": {"section": "4.7", "status": "unspecified", "owner": null},
+    "canonical-spherical-action": {"section": "4.7", "status": "derived", "owner": null},
+    "curvature-eft-source": {"section": "4.7", "status": "derived", "owner": null},
+    "full-spectral-endpoint": {"section": "4.7", "status": "measured", "owner": null},
 
-    "child-state-decay": {"section": "4.8", "status": "unspecified", "owner": null},
-    "absolute-massless-reference": {"section": "4.8", "status": "unspecified", "owner": null},
-    "finite-angular-reference": {"section": "4.8", "status": "unspecified", "owner": null},
-    "parent-matched-source": {"section": "4.8", "status": "unspecified", "owner": null},
+    "child-state-decay": {"section": "4.8", "status": "derived", "owner": null},
+    "absolute-massless-reference": {"section": "4.8", "status": "derived", "owner": null},
+    "finite-angular-reference": {"section": "4.8", "status": "measured", "owner": null},
+    "parent-matched-source": {"section": "4.8", "status": "measured", "owner": null},
 
-    "state-regulator-conversion": {"section": "4.9", "status": "unspecified", "owner": null},
-    "vacuum-charge-coefficients": {"section": "C.1", "status": "unspecified", "owner": null}
+    "state-regulator-conversion": {"section": "4.9", "status": "measured", "owner": null},
+    "vacuum-charge-coefficients": {"section": "C.1", "status": "measured", "owner": null}
+  },
+
+    "status_basis": {
+    "rule": "Taken from the lead-in label the paper itself prints at the head of each claim paragraph. 'Imported result / repository derivation' and 'repository derivation' are recorded as derived. A paragraph that states a recorded finite comparison with a number and a refinement check is recorded as measured. A claim about a target or a proposal the paper has not carried out is recorded as proposal, and an unlinked_record field names a record that holds the claim's numbers even though the paper does not link it.",
+    "evidence": {
+      "compact-mode-overlaps": "Imported result / repository derivation: compact mass identification",
+      "charged-sector-parity": "Imported result / repository derivation: charged parity and anomaly compatibility",
+      "torsion-uv-finite-matching": "five-dimensional ultraviolet matching",
+      "published-flow-compatibility": "Imported result / repository derivation: quantum-flow limits",
+      "compact-boundary-adjoint": "Repository derivation using established boundary calculus",
+      "curved-compact-source": "finite endpoint interaction with a recorded value -8.9162e-04 and independent Bessel, spatial, angular and frequency refinements agreeing",
+      "conditional-holonomy-saddle": "one-loop minimum of the real potential for a freely varying holonomy on the stated closed cell",
+      "canonical-spherical-action": "explicit first-order owner of the local two-derivative spherical sector",
+      "curvature-eft-source": "retained curvature-squared contact; the paper states the small-curvature regime is not established at the imposed neck",
+      "full-spectral-endpoint": "Imported spectrum / repository composition; child-radius full derivative 0.001239600 against local truncation -0.164273768",
+      "child-state-decay": "Repository derivation using established Dirac stress differences; a stated bound",
+      "absolute-massless-reference": "Imported Hadamard / conformal construction, repository application",
+      "finite-angular-reference": "neck values rho 0.7101684, p_parallel 0.5026775, p_perp 0.0376558",
+      "parent-matched-source": "Imported characteristic-state prescription / repository calculation; neck stress table with angular refinement below 4e-06",
+      "state-regulator-conversion": "Imported thermal determinant / repository compatibility check; agreement near 1e-16",
+      "vacuum-charge-coefficients": "stated inequality comparison excluding the retained coefficients alone as a near-extremal seed"
+    },
+    "review": "These are assignments read off the paper's own labels, not independent scientific judgements. They can be overridden per claim without touching anything else."
   },
 
   "findings": [
