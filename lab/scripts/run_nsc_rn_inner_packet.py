@@ -139,6 +139,9 @@ def main(argv: List[str] | None = None) -> int:
     parser.add_argument("--target", type=float, default=TARGET_OVER_RM,
                         help="march target in units of t/r_m")
     parser.add_argument("--points", type=int, default=None)
+    parser.add_argument("--below-horizon", action="store_true",
+                        help="allow the inner edge below r_minus, inside the third "
+                             "region. Requires --excision to be set below r_minus.")
     parser.add_argument("--excision", type=float, default=None,
                         help="inner edge of the grid, overriding the horizon midpoint. "
                              "Must lie strictly between r_minus and r_plus.")
@@ -168,13 +171,15 @@ def main(argv: List[str] | None = None) -> int:
     grid = pg.build_grid(
         geometry["mass"], r_m=geometry["r_m"], points=points,
         r_out=outer, excision=args.excision,
+        allow_below_inner_horizon=args.below_horizon,
     )
 
     r_inner = float(grid["radius"][0])
     r_outer = float(grid["radius"][-1])
     r_minus = float(geometry["r_minus"]) if "r_minus" in geometry else None
-    if r_minus is not None and not r_minus < r_inner:
-        raise SystemExit("the grid's inner edge is not above the inner horizon")
+    if r_minus is not None and not r_minus < r_inner and not args.below_horizon:
+        raise SystemExit("the grid's inner edge is not above the inner horizon;"
+                         " pass --below-horizon to go there deliberately")
 
     # The whole point of this construction is that the packet forms inside
     # the collar. Refuse anything that would put it back outside, and refuse
@@ -201,6 +206,7 @@ def main(argv: List[str] | None = None) -> int:
         mass_over_rm=args.mu, energy_target=args.eps, rank=driver.PILOT_RANK,
         model=grid["model"], radii=grid["radius"], weights=grid["weights"],
         derivative=grid["derivative"], center=args.center * geometry["r_m"],
+        allow_below_inner_horizon=args.below_horizon,
     )
     prepare_seconds = time.perf_counter() - started
     admission = driver.admit_prepared_packet(packet)
@@ -286,6 +292,8 @@ def main(argv: List[str] | None = None) -> int:
         "gap_in_cells": (r_inner - r_minus) / float(grid["spacing"]),
         "r_minus": r_minus,
         "excision_default": bool(grid["excision_is_default"]),
+        "below_inner_horizon": bool(args.below_horizon),
+        "edge_below_r_minus": bool(r_inner < r_minus),
         "excision_requested": args.excision,
         "horizon_midpoint": 0.5 * (r_minus + float(geometry["route"]["r_plus"]))
         if "r_plus" in geometry else None,

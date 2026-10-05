@@ -16166,6 +16166,13 @@
       "sha256": "a6a1b339c66785f843430a06350efde4ae57b0689847ddc1643d142c5fea45f0"
     },
     {
+      "bytes": 2817,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ba11db54e7557fa91c00dbc872ed89971044b27f",
+      "path": "lab/docs/nsc-rn-excision-domain.md",
+      "sha256": "30bc785d9874b4a96d3b569250d2f652333f3070e6f389174af115bfac868f03"
+    },
+    {
       "bytes": 4630,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "c23efddede35ebb996df1c2f339ebc2091557827",
@@ -100527,11 +100534,11 @@
       "sha256": "d33f20421d5d6388b59ce4409236e3d26710e088de08e7c9110b7e70e37454fc"
     },
     {
-      "bytes": 14515,
+      "bytes": 15399,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "647c482fb11449425749d27d111e153483717e7d",
+      "changed_from_commit": "ba11db54e7557fa91c00dbc872ed89971044b27f",
       "path": "lab/scripts/run_nsc_rn_inner_packet.py",
-      "sha256": "31e7867a8d578161512213b8c3743e3eaea0a786aa7c8539d5b15fc8a116a3c6"
+      "sha256": "184de71d68b917916edeb0ae15ddde78117f09b1f41586a58588a3f8c5b012fc"
     },
     {
       "bytes": 16948,
@@ -105301,6 +105308,13 @@
       "changed_from_commit": "a5e2512c477c510a2af80042c50cd8fa1a63c0de",
       "path": "lab/tests/test_nsc_rn_edge_sweep.py",
       "sha256": "85ad00804110af59fef4aca7a0408189fc47eeedf43c6bea82652630926763c2"
+    },
+    {
+      "bytes": 4704,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "ba11db54e7557fa91c00dbc872ed89971044b27f",
+      "path": "lab/tests/test_nsc_rn_excision_domain.py",
+      "sha256": "8b8e1a6cd482c91d976d74d04d93c988dfa9d59879066b9da40fbd1697af93f5"
     },
     {
       "bytes": 6905,
