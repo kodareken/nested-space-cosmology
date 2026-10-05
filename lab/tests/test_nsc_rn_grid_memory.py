@@ -96,5 +96,4 @@ class TestWhatItMeansForTheSubHorizonGap:
 
 def test_the_measurement_is_kept_as_a_record():
     assert RECORD.is_file()
-    assert "creation_only" not in RECORD.read_text(encoding="utf-8") or True
     assert RECORD.read_text(encoding="utf-8").strip().startswith("{")

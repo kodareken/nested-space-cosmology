@@ -172,46 +172,44 @@ class TestPhaseLabelling:
         assert motion["r_squared"] == pytest.approx(1.0, abs=1e-12)
 
 
+@pytest.fixture(scope="module")
+def record():
+    return json.loads(RECORD.read_text(encoding="utf-8"))
+
+
 class TestRecord:
-    def test_record_exists_and_is_creation_only(self):
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
+    def test_record_exists_and_is_creation_only(self, record):
         assert record["creation_only"] is True
         assert record["api_version"] == shell.API_VERSION
 
-    def test_record_covers_the_whole_family(self):
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
+    def test_record_covers_the_whole_family(self, record):
         assert record["coverage"]["cases"] == 6
         assert record["coverage"]["total_stations"] == 177
 
-    def test_every_case_has_a_falling_phase(self):
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
+    def test_every_case_has_a_falling_phase(self, record):
         assert all(case["motion"]["fit_available"] for case in record["cases"])
 
-    def test_the_falling_phase_runs_all_the_way_to_arrival(self):
+    def test_the_falling_phase_runs_all_the_way_to_arrival(self, record):
         """Guards the regression that truncated the fit at t=5.0.
 
         The falling phase is 14 stations of 0.5 spacing, ending at t=6.5
         with the shell at about 2.1, and arrival is t=7.0.
         """
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
         for case in record["cases"]:
             motion = case["motion"]
             assert motion["stations_falling"] == 14
             assert motion["radius_last"] < 2.4
             assert motion["inner_edge_arrival_t"] == pytest.approx(7.0)
 
-    def test_infall_rate_is_nearly_parameter_independent(self):
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
+    def test_infall_rate_is_nearly_parameter_independent(self, record):
         separation = record["separation"]
         assert separation["infall_rate_spread_relative"] < 0.01
 
-    def test_source_scaling_is_linear(self):
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
+    def test_source_scaling_is_linear(self, record):
         ratio = record["separation"]["source_scaling_ratio_between_largest_and_smallest_epsilon"]
         assert ratio == pytest.approx(10.0, rel=0.01)
 
-    def test_record_states_it_is_not_the_universe(self):
-        record = json.loads(RECORD.read_text(encoding="utf-8"))
+    def test_record_states_it_is_not_the_universe(self, record):
         assert "does not measure the actual universe" in record["scope_note"]
 
 

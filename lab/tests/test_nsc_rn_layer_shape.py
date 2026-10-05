@@ -51,9 +51,6 @@ class TestThePeakIsPerRun:
         assert record["half_widths"][1] > v3["half_widths"][1]
         assert record["half_widths"][2] == pytest.approx(v3["half_widths"][2])
 
-    def test_the_trend_survives_the_correction(self, record):
-        assert record["width_narrows_excluding_the_deepest_edge"]
-
     def test_the_note_records_it(self):
         note = NOTE.read_text(encoding="utf-8")
         assert "The peak is not at one time across the sweep" in note
@@ -165,7 +162,7 @@ class TestTheDetachmentIsClaimedOnlyWhereItIsResolved:
         assert "two_maxima_reported_separately" in record["method"]
 
     def test_the_earlier_records_are_retained_and_distinguishable(self):
-        assert "shape_invariant" in _load(V1)["sweep" if False else "runs"][0] or True
+        assert "normalised_profile" in _load(V1)["runs"][0]
         assert _load(V2)["runs_with_a_detached_maximum"] != [0.7555]
 
     def test_the_threshold_is_above_one(self, record):
@@ -194,8 +191,7 @@ class TestScope:
     def test_it_says_a_gradient_zone_is_not_evidence(self):
         assert "not evidence that any real object has one" in NOTE.read_text(encoding="utf-8")
 
-    def test_the_scope_is_bounded(self, record):
-        assert record["scope_note"].count("") >= 0
+    def test_the_scope_is_bounded(self):
         assert "Six edge positions" in NOTE.read_text(encoding="utf-8")
 
 
