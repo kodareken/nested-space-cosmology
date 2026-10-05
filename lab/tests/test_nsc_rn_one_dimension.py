@@ -76,8 +76,10 @@ class TestThereIsNoTransverseOperator:
 class TestWhatThisBounds:
     def test_the_note_says_everything_measured_is_radial(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
-        assert "one-dimensional radial structure" in flat
         assert "no slot for one" in flat
+        assert "is withdrawn" in flat
+        assert "inside of that circle is the third" in flat
+        assert "It matches the sphere" in flat
 
     def test_it_does_not_claim_transverse_structure_is_impossible(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")

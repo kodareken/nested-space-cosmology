@@ -41,8 +41,9 @@ class TestTheOneDegreeOfFreedomLimit:
                 assert payload[key].ndim == 1
 
     def test_the_document_binds_it_correctly(self, flat):
-        assert "every result here is radial structure" in flat
-        assert "carries a sphere and supplies a radius" in flat
+        assert "every stored array is radial" in flat
+        assert "carries a sphere and supplies a radius\" is withdrawn" in flat
+        assert "it matches the sphere" in flat
 
 
 class TestTheChildCutLimit:

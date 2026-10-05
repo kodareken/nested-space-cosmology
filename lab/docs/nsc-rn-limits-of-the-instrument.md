@@ -14,11 +14,16 @@ tangent raises unless the state is `(2, points, 1)`; the connection is
 evaluated at a hardcoded `theta = 0.5 * math.pi`; and every recorded array
 is one-dimensional in radius, `coupled_phi` being `(2, 869, 1)`.
 
-The angles enter only as the passive factor `r^2 dOmega^2`. The construction
-carries a sphere and supplies a radius.
+The angles enter as `r^2 dOmega^2`. That factor is the circle at areal
+radius `r`. Smaller `r` is the inside of that circle, and that inside is the
+third dimension. The circle plus the inside is the ball. The sentence
+"carries a sphere and supplies a radius" is withdrawn: it called the interior
+a missing dimension.
 
-**Bounded:** every result here is radial structure. A transverse claim cannot
-be made from this chart at all.
+**Bounded:** every stored array is radial. A claim that the front of the
+circle differs from the back cannot be made from this chart. A claim about
+the ball can, because the ball is this reduction. The gradient balance is
+that claim, and it matches the sphere.
 
 ## The parent/child cut carries nothing
 

@@ -59,8 +59,9 @@ The amplitude rises by `1.57` over the same range. Those are measured over
 many cells and are not boundary artefacts.
 
 The wave reading survives with that correction: the layer is **louder and
-shorter**, and it is a one-dimensional radial layer. It is not a sphere with
-an interior, and this commit is why that can be said rather than assumed.
+shorter**. The sentence "it is not a sphere with an interior" is withdrawn
+here too. The layer is the interior of the circle, and that interior is the
+third dimension. The three-sided shell stays withdrawn. The ball does not.
 
 ## What would settle it
 

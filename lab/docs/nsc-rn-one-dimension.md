@@ -40,30 +40,42 @@ dynamics are radial: `lambda_pm = -beta +- N` along `partial_r`, and the
 angles enter only through the passive factor `r^2 dOmega^2` in the line
 element.
 
-So everything measured in this line — the shell, its amplitude, its
-wavelength, the factor-of-two compression, the three-sided structure, the
-floor — is **one-dimensional radial structure**. The three sides are a radial
-interior, surface and exterior. They are not a sphere with an interior, and
-the picture cannot be made one by moving a wave to the side, because there is
-no side to move it into.
+The arrays are radial. That is a fact about the state vector. It is not a
+fact about the geometry.
+
+## Withdrawn: "this is not a sphere"
+
+The sentence that the radial interior, surface and exterior "are not a sphere
+with an interior", and that the chart "asserts a sphere through `r^2 dOmega^2`
+and supplies only a radius", is withdrawn. It read a symmetry reduction as a
+missing dimension.
+
+Two dimensions give the circle. The inside of that circle is the third
+dimension. The circle plus that inside is the ball. In this chart the circle
+at areal radius `r` is the factor `4 pi r^2` already in the force integral,
+and the inside is smaller `r`. Front and back are the same circle, because
+the symmetry sets them equal. They are not two calculations that were never
+run.
+
+The gradient balance `B(r)` is that walk into the ball. It matches the
+sphere. The earlier reading that it fails to match the sphere is the
+withdrawn sentence.
+
+What the missing angular slot still forbids is a front that differs from the
+back. That is a different object. It is not required for the ball.
 
 ## What this does not say
 
 It does not say transverse structure is impossible in the physics being
-modelled. It says this state vector, this operator and this chart have one
-degree of freedom, and a construction with more would be a different one
-rather than a wider version of this one.
-
-That is the same kind of boundary as the parent/child cut: the construction
-asserts a nesting and does not supply the physics for it. Here it asserts a
-sphere through `r^2 dOmega^2` and supplies only a radius.
+modelled. It says this state vector has one radial degree of freedom, and
+that this degree of freedom is the interior of the circle.
 
 ## Scope
 
-A construction check on the code as written. **It does not measure the
-actual universe** and it does not test the idea of transverse propagation.
-It establishes what the instrument can and cannot do, which is what any
-result read off it has to be bounded by.
+A construction check on the code as written, with one withdrawn reading.
+**It does not measure the actual universe.** The arrays are radial. The
+geometry they reduce is the ball: circle, plus the inside as the third
+dimension.
 
 ## Provenance
 
