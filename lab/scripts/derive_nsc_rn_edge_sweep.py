@@ -54,6 +54,9 @@ def _git_head() -> str | None:
         return None
 
 
+r_outer = 32.0
+
+
 def _clock(path: Path) -> float:
     return float(STATION.search(path.name).group(1))
 
@@ -79,11 +82,26 @@ def _reduce(directory: Path) -> Dict[str, Any]:
     # Runs made before the override existed carry no request, and the edge
     # they used was the default midpoint. That is read, not assumed.
     is_default = bool(summary.get("excision_default", requested is None))
+    r_inner = summary["r_inner"]
+    r_minus = summary["r_minus"]
+    points = summary["points"]
+    spacing = (r_outer - r_inner) / (points - 1)
+    gap = r_inner - r_minus
+    gap_cells = gap / spacing if spacing > 0.0 else float("inf")
     return {
         "run": directory.name,
-        "r_inner": summary["r_inner"],
-        "r_minus": summary["r_minus"],
-        "gap_to_inner_horizon": summary["r_inner"] - summary["r_minus"],
+        "r_inner": r_inner,
+        "r_minus": r_minus,
+        "r_outer": r_outer,
+        "points": points,
+        "grid_spacing": spacing,
+        "gap_to_inner_horizon": gap,
+        "gap_in_cells": gap_cells,
+        # A boundary less than one cell from the horizon is not
+        # distinguishable from the horizon on this grid. Reporting depth in
+        # r_m alone would hide that, because the gaps look meaningfully
+        # different there and are not.
+        "edge_resolvable_from_horizon": bool(gap_cells >= 1.0),
         "is_default_edge": is_default,
         "excision_requested": requested,
         "mu": summary["mu"],
@@ -147,6 +165,12 @@ def main(argv: List[str] | None = None) -> int:
 
     monotonic_gain = all(b >= a for a, b in zip(gains, gains[1:]))
     monotonic_relax = all(b >= a for a, b in zip(relax, relax[1:]))
+    gaps = [r["gap_in_cells"] for r in reduced]
+    resolvable = [r["edge_resolvable_from_horizon"] for r in reduced]
+    resolvable_gains = [g for g, ok in zip(gains, resolvable) if ok]
+
+    monotonic_where_resolvable = all(
+        b >= a for a, b in zip(resolvable_gains, resolvable_gains[1:]))
 
     record = {
         "schema": "NSC-RN-EDGE-SWEEP-v1",
@@ -170,14 +194,27 @@ def main(argv: List[str] | None = None) -> int:
         "sweep": {
             "r_inner": edges,
             "gap_to_inner_horizon": [r["gap_to_inner_horizon"] for r in reduced],
+            "gap_in_cells": gaps,
+            "edge_resolvable_from_horizon": resolvable,
+            "deepest_resolvable_edge": max(
+                (r["r_inner"] for r in reduced if r["edge_resolvable_from_horizon"]),
+                default=None),
             "amplitude_gain": gains,
             "gain_increases_with_depth": monotonic_gain,
+            "gain_increases_with_depth_where_resolvable": monotonic_where_resolvable,
             "fraction_below_inner_edge": retained,
             "R4_edge_final_over_initial": relax,
             "relaxation_weakens_with_depth": monotonic_relax,
             "verdict": (
                 "effect_continues_to_the_deepest_edge" if monotonic_gain and monotonic_relax
                 else "effect_does_not_continue_monotonically"
+            ),
+            "resolution_limit": (
+                "The sweep is resolution-limited before it is depth-limited. Edges below "
+                "about one grid cell from the inner horizon are not distinguishable from "
+                "the horizon on this grid, so the deepest runs measure the same place. "
+                "Depth in r_m alone overstates how far the sweep has actually gone, and "
+                "the trend cannot be pushed further without more points near the edge."
             ),
         },
         "runs": reduced,
@@ -187,7 +224,11 @@ def main(argv: List[str] | None = None) -> int:
     print(f"wrote {record_path.relative_to(LAB)}")
     print(f"  r_inner      : {edges}")
     print(f"  gap to r_-   : {['%.4f' % g for g in record['sweep']['gap_to_inner_horizon']]}")
-    print(f"  gain         : {['%.4f' % g for g in gains]}  monotone={monotonic_gain}")
+    print(f"  gap in CELLS : {['%.3f' % g for g in gaps]}")
+    print(f"  resolvable   : {resolvable}   deepest resolvable edge: "
+          f"{record['sweep']['deepest_resolvable_edge']}")
+    print(f"  gain         : {['%.4f' % g for g in gains]}  monotone={monotonic_gain}"
+          f"  monotone_where_resolvable={monotonic_where_resolvable}")
     print(f"  gain below   : {['%.4f' % g for g in retained]}")
     print(f"  relax (final/initial): {['%.4f' % g for g in relax]}  monotone={monotonic_relax}")
     print(f"  verdict      : {record['sweep']['verdict']}")
