@@ -65,7 +65,10 @@ def _shape(directory: Path, peak_t: float, tolerance: float) -> Dict[str, Any]:
             best = path
             break
     if best is None:
-        raise SystemExit(f"no station near t={peak_t} in {directory}")
+        raise SystemExit(
+            f"no station near t={peak_t} in {directory}; its last station is at "
+            f"{clock:.3f}. The compression peak moves with the edge, so each run "
+            f"needs its own peak time.")
 
     with np.load(best) as payload:
         radius = np.asarray(payload["radius"], dtype=float)
@@ -100,6 +103,13 @@ def _shape(directory: Path, peak_t: float, tolerance: float) -> Dict[str, Any]:
     # gradient has not, and the record must not merge them.
     density_peak = int(np.argmax(density[:stop]))
     matter_peak = int(np.argmax(matter[:stop]))
+    # A sphere has three sides and a boundary-attached gradient has two. The
+    # third appears when the profile turns back up inside, so the test is
+    # whether the boundary node sits below the peak: below it and the layer
+    # has a genuine interior, on it and the layer is one-sided.
+    matter_interior = bool(matter_peak > 0 and float(matter[0]) < float(matter[matter_peak]))
+    matter_rising_into_peak = (
+        bool(np.all(np.diff(matter[:matter_peak + 1]) > 0.0)) if matter_peak > 0 else None)
     spacing = float(radius[1] - radius[0]) if radius.size > 1 else float("inf")
 
     return {
@@ -119,6 +129,11 @@ def _shape(directory: Path, peak_t: float, tolerance: float) -> Dict[str, Any]:
         "matter_overshoot_at_max": float(normalised_matter[matter_peak]),
         "density_overshoot_at_max": float(normalised[density_peak]),
         "both_peaks_at_edge": bool(density_peak == 0 and matter_peak == 0),
+        "matter_has_interior": matter_interior,
+        "matter_rising_into_peak": matter_rising_into_peak,
+        "shell_sides": 3 if matter_interior else 2,
+        "matter_at_inner_edge": edge_matter,
+        "matter_peak_value": float(matter[matter_peak]),
         "monotone_decreasing": rising == 0,
         "rising_steps": rising,
         "monotone_decreasing_matter": rising_matter == 0,
@@ -135,9 +150,10 @@ def _shape(directory: Path, peak_t: float, tolerance: float) -> Dict[str, Any]:
 def main(argv: List[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--runs", nargs="+", required=True,
-                        help="run directory names under results/development")
-    parser.add_argument("--peak-t", type=float, default=1.7,
-                        help="the compression peak, in units of t/r_m")
+                        help="RUN:PEAK_T pairs, each naming a run directory under "
+                             "results/development and the compression peak to sample "
+                             "there. The peak moves with the edge, so one shared time "
+                             "would mis-time most of the sweep.")
     parser.add_argument("--out", default="nsc-rn-layer-shape-v3.json")
     args = parser.parse_args(argv)
 
@@ -147,12 +163,13 @@ def main(argv: List[str] | None = None) -> int:
         return 1
 
     shapes = []
-    for name in args.runs:
+    for pair in args.runs:
+        name, _, peak = pair.partition(":")
         directory = DEVELOPMENT / name
         if not directory.is_dir():
             print(f"no run at {directory}", file=sys.stderr)
             return 1
-        shapes.append(_shape(directory, args.peak_t, 0.06))
+        shapes.append(_shape(directory, float(peak or 1.7), 0.06))
     shapes.sort(key=lambda s: -s["r_inner"])
 
     widths = [s["half_width"] for s in shapes if s["half_width"] is not None]
@@ -198,7 +215,7 @@ def main(argv: List[str] | None = None) -> int:
             ),
             "detachment_margin_above_boundary": DETACHMENT_MARGIN,
         },
-        "peak_t": args.peak_t,
+        "peaks_by_run": {s["run"]: s["t_over_rm"] for s in shapes},
         "all_monotone": all(s["monotone_decreasing"] for s in shapes),
         "all_peak_at_edge": all(s["both_peaks_at_edge"] for s in shapes),
         "half_widths": widths,
@@ -213,12 +230,18 @@ def main(argv: List[str] | None = None) -> int:
             all(b <= a for a, b in zip(widths[:-1], widths[1:-1]))
             if len(widths) > 2 else None),
         "runs_with_a_detached_maximum": [s["r_inner"] for s in detached],
+        "shell_sides": [s["shell_sides"] for s in shapes],
+        "edges_with_a_three_sided_shell": [s["r_inner"] for s in shapes
+                                           if s["shell_sides"] == 3],
+        "edges_with_a_two_sided_layer": [s["r_inner"] for s in shapes
+                                         if s["shell_sides"] == 2],
         "runs": shapes,
     }
 
     record_path.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(f"wrote {record_path.relative_to(LAB)}")
-    print(f"  peak t            : {args.peak_t}")
+    print(f"  peaks sampled     : "
+          f"{[(s['run'].split('-')[-1], round(s['t_over_rm'], 2)) for s in shapes]}")
     print(f"  all monotone      : {record['all_monotone']}")
     print(f"  both peaks at edge: {record['all_peak_at_edge']}")
     print(f"  r_inner           : {edges}")
@@ -230,6 +253,8 @@ def main(argv: List[str] | None = None) -> int:
     print(f"  matter overshoot at its maximum: "
           f"{['%.4f' % s['matter_overshoot_at_max'] for s in shapes]}")
     print(f"  runs with a detached maximum: {record['runs_with_a_detached_maximum']}")
+    print(f"  shell sides                : {record['shell_sides']}")
+    print(f"  three-sided at             : {record['edges_with_a_three_sided_shell']}")
     return 0
 
 

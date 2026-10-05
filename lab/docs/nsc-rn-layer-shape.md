@@ -11,19 +11,38 @@ amplitude does.
 
 ## The layer narrows as the boundary deepens
 
-| `r_inner` | edge density | half-width | cells to the horizon |
-|---|---|---|---|
-| `1.0400` | `3.138e-04` | `1.3554` | `8.009` |
-| `0.8500` | `3.817e-04` | `1.1125` | `2.666` |
-| `0.8000` | `4.202e-04` | `0.9346` | `1.270` |
-| `0.7700` | `4.504e-04` | `0.7915` | `0.435` |
-| `0.7600` | `4.592e-04` | `0.7558` | `0.157` |
-| `0.7555` | `4.410e-04` | `0.8279` | `0.032` |
+| `r_inner` | peak sampled | edge density | half-width | cells to the horizon |
+|---|---|---|---|---|
+| `1.0400` | `1.4` | `3.144e-04` | `1.7121` | `8.009` |
+| `0.8500` | `1.5` | `3.761e-04` | `1.3637` | `2.666` |
+| `0.8000` | `1.7` | `4.202e-04` | `0.9346` | `1.270` |
+| `0.7700` | `1.7` | `4.504e-04` | `0.7915` | `0.435` |
+| `0.7600` | `1.7` | `4.592e-04` | `0.7558` | `0.157` |
+| `0.7555` | `1.7` | `4.410e-04` | `0.8279` | `0.032` |
 
 The density at the boundary rises by `46%` from the midpoint to `0.76`, and
-the layer **narrows monotonically** over the same range, from `1.355` to
-`0.756` in units of `r_m`. Amplitude up, width down: the layer is genuinely
-compressing, not merely scaling.
+the layer **narrows monotonically** over the same range, from `1.712` to
+`0.756` in units of `r_m`, a factor of `2.27`. Amplitude up, width down: the
+layer is genuinely compressing, not merely scaling.
+
+### The peak is not at one time across the sweep
+
+The compression peak **moves with the edge**: `1.4` at the midpoint, `1.5` at
+`0.85`, `1.7` from `0.80` down. The first version of this reduction took a
+single shared peak time and sampled every run at `1.7`, which put the two
+shallowest edges *past* their peak. Their half-widths came out at `1.3554`
+and `1.1125` instead of `1.7121` and `1.3637`.
+
+The trend survives — it still narrows monotonically and by a larger factor
+than reported — but the first two numbers in the table above were wrong and
+are corrected here. The driver now takes a peak time per run and refuses a
+run with no station near its own peak rather than falling back to a
+neighbouring run's.
+
+That is the fourth time in this line that a statistic read off the wrong
+clock has produced a wrong number: the shell fit that ran through a phase
+change, the curvature reading that took its mass peak from a different march,
+the trajectory comparison that matched stations by file name, and now this.
 
 For five of the six the density falls monotonically from the boundary with no
 interface and no second maximum. That is a gradient, in the literal sense.
