@@ -1,0 +1,41 @@
+{
+  "bundle": "nsc_external_public_polish_20260929",
+  "recorded_on": "2026-10-05",
+  "source_tree": "extra/nsc-public-polish",
+  "owner": "nsc-public-polish clone (separate Git history, macOS origin)",
+  "scope": "Portable copy of the one commit in this clone that is absent from the canonical repository, as a git-format patch, so the clone can be retired without losing the commit. This is the publication-side cleanup commit; it touches only the three files the public repository carries, because that clone has no lab/ tree.",
+
+  "commit": {
+    "sha": "510d5e81c25f2faecc1837f4107c09a5ec188f98",
+    "subject": "Clarify research ownership and separate instructions from publication evidence",
+    "author": "Kodareken Douglas <douglas@swedishsoftwareengineers.com>",
+    "date": "2026-10-01",
+    "parent": "8332f83e7477ed0f77d0ef65ed1bf30667451c9f",
+    "parent_present_in_canonical": true,
+    "files": ["AGENTS.md", "PUBLICATION-PROVENANCE.json", "docs/README.md"]
+  },
+
+  "clone_refs": {
+    "main": "8332f83e7477ed0f77d0ef65ed1bf30667451c9f",
+    "codex/nsc-publication-polish": "510d5e81c25f2faecc1837f4107c09a5ec188f98",
+    "agents/work": "510d5e81c25f2faecc1837f4107c09a5ec188f98"
+  },
+
+  "coverage_check": {
+    "commits_in_clone": 65,
+    "commits_present_in_canonical": 64,
+    "files_unique_by_path_after_filter": 0,
+    "rule": "A file counts as unique when its path exists neither in the canonical checkout nor in lab/archive/pre-closure-2026-09-08, after discarding macOS metadata (names beginning ._ and .DS_Store) and version-control internals."
+  },
+
+  "patch_state": {
+    "path": "510d5e81-public-index.patch",
+    "lines": 341,
+    "applies_cleanly_to_current_head": false,
+    "detail": "A three-way check against the 2026-10-05 head applies all three files with conflicts, because HEAD has moved well past this commit. The patch is kept as a portable record of the commit, not as something to apply unreviewed."
+  },
+
+  "why_this_clone_was_kept_until_now": "docs/README.md describes it as a separate Git history rather than a worktree, with no lab/ tree and matched docs. That description was checked here rather than assumed.",
+
+  "nonclaim": "Preservation of a commit for provenance. It makes no scientific claim and does not assert that the public index text should be adopted."
+}
