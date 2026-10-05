@@ -93,9 +93,9 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 3370,
+      "bytes": 3413,
       "path": "Makefile",
-      "sha256": "91da8804befe8a2cd31c40f511a43114cbdaa4e46283b474b98786663a06d246"
+      "sha256": "b18a7be2c4dc67bdfa0d63a6e8306ff32da78670ac6e58e5a5ad2a02208dc349"
     },
     {
       "bytes": 26747,
@@ -143,9 +143,9 @@
       "sha256": "0d551dedcef5d55f8085450ba4f7935e372db624762333399bcfc8eca6fae336"
     },
     {
-      "bytes": 6081200,
+      "bytes": 6081537,
       "path": "docs/lab-snapshot.json",
-      "sha256": "d38f4805a7a26b97a49a08565fd03e55a853ca17ea371d77ac45d676a1eb6c1a"
+      "sha256": "5523a48819e9d64c7576aff26a51b5670f10b9e5cbd71873775ea0e772271c3c"
     },
     {
       "bytes": 5006,
@@ -746,6 +746,11 @@
       "bytes": 2385,
       "path": "paper/catalog.json",
       "sha256": "d637851d70c795eedccc60106115dbce9394ecd564a15c1be9356cf0726dd615"
+    },
+    {
+      "bytes": 8179,
+      "path": "paper/claim-bindings.json",
+      "sha256": "cdfdf83e665fdea1ce739abd6c86100e95e54b343034c12601c7a6b0a86be63a"
     },
     {
       "bytes": 105847,
@@ -1871,6 +1876,11 @@
       "bytes": 17236,
       "path": "scripts/build_result_manifest.py",
       "sha256": "6565c9ff68bd23703f9ebb287a341c1d21e8e15720403941d9750312f4e67053"
+    },
+    {
+      "bytes": 6627,
+      "path": "scripts/check_claim_bindings.py",
+      "sha256": "5e3c82c8ca830877459099a8c437b97cce180e27674c2355d5b57db476d8b52b"
     },
     {
       "bytes": 4856,
@@ -3493,7 +3503,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "d38f4805a7a26b97a49a08565fd03e55a853ca17ea371d77ac45d676a1eb6c1a",
+  "lab_snapshot_sha256": "5523a48819e9d64c7576aff26a51b5670f10b9e5cbd71873775ea0e772271c3c",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",
