@@ -1,0 +1,99 @@
+{
+  "bundle": "nsc_external_mac_worktrees_20260929",
+  "recorded_on": "2026-10-05",
+  "machine": "win11 host, canonical checkout C:/Users/swedi/Projects/Science/nester-space-cosmology/BlackHoles-Infinity",
+  "scope": "Manifest of the worktrees that were retired because their .git pointers name macOS paths absent from this machine. Records the pointers, the orphaned commit identities, and the check that established what unique payload each tree held. No content is claimed here; the two bundles that hold copied payload are nsc-external-grok-full-interval-uv-20260929 and nsc-external-rho1-source-bound-v2-20260929.",
+
+  "counting_rule": "A file counts as unique when its path exists neither in the canonical checkout nor in lab/archive/pre-closure-2026-09-08, after discarding macOS metadata (names beginning ._ and .DS_Store) and version-control internals (.git, .git-nsc, .venv, __pycache__, .pytest_cache).",
+
+  "retired": [
+    {
+      "path": "BlackHoles-Infinity-Worktrees/grok-uv-residual-20260929",
+      "git_pointer": "/Users/admin/Documents/BlackHoles-Infinity/.git/worktrees/grok-uv-residual-20260929",
+      "files_after_filter": 12485,
+      "unique_by_path": 4,
+      "unique_payload": "copied to nsc-external-grok-full-interval-uv-20260929"
+    },
+    {
+      "path": "extra/BlackHoles-Infinity-Worktrees/nsc-current-uv-core",
+      "git_pointer": "/Users/admin/Projects/BlackHoles-Infinity-Worktrees/nsc-current-uv-core/.git-nsc",
+      "files_after_filter": 1707,
+      "unique_by_path": 29,
+      "unique_payload": "all 29 are .git-nsc internals; no working file is unique",
+      "orphaned_commits": [
+        {
+          "sha": "adec987b0ede76baebaff01b0c0e9b43bcd5ca37",
+          "subject": "Represent changed-history UV remainder quantities and bind them",
+          "author": "Kodareken Douglas <douglas@swedishsoftwareengineers.com>",
+          "parent": "46f257f4dd6738b697b541c7d277adb5cbaf00cf",
+          "state": "present in .git-nsc, absent from the canonical repository"
+        },
+        {
+          "sha": "5fda9f7c9dfca51429e7329abc592b9afe47f20a",
+          "subject": null,
+          "state": "unresolvable: .git-nsc stored an alternate object path under /Users/admin that is not on this machine"
+        }
+      ],
+      "orphaned_branches": ["codex/nsc-current-uv-mac", "codex/review-uv-5fda9f7c"]
+    },
+    {
+      "path": "extra/BlackHoles-Infinity-Worktrees/nsc-field-review-core",
+      "git_pointer": "/Users/admin/Projects/BlackHoles-Infinity/.git/worktrees/nsc-field-review-core",
+      "files_after_filter": 1680,
+      "unique_by_path": 0
+    },
+    {
+      "path": "extra/BlackHoles-Infinity-Worktrees/nsc-field-runner-core",
+      "git_pointer": "/Users/admin/Projects/BlackHoles-Infinity/.git/worktrees/nsc-field-runner-core",
+      "files_after_filter": 1697,
+      "unique_by_path": 0
+    },
+    {
+      "path": "extra/BlackHoles-Infinity-Worktrees/nsc-rho1-core",
+      "git_pointer": "/Users/admin/Projects/BlackHoles-Infinity/.git/worktrees/nsc-rho1-core",
+      "files_after_filter": 1680,
+      "unique_by_path": 0
+    },
+    {
+      "path": "extra/BlackHoles-Infinity-Worktrees/nsc-rho1-production-core",
+      "git_pointer": "/Users/admin/Projects/BlackHoles-Infinity/.git/worktrees/nsc-rho1-production-core",
+      "files_after_filter": 1712,
+      "unique_by_path": 6,
+      "unique_payload": "copied to nsc-external-rho1-source-bound-v2-20260929"
+    },
+    {
+      "path": "extra/BlackHoles-Infinity-Worktrees/nsc-uv-production-core",
+      "git_pointer": "/Users/admin/Projects/BlackHoles-Infinity/.git/worktrees/nsc-uv-production-core",
+      "files_after_filter": 1699,
+      "unique_by_path": 0
+    }
+  ],
+
+  "not_retired": [
+    {
+      "path": "extra/nsc-public-polish",
+      "reason": "Separate Git history, not a worktree of the canonical checkout. 65 commits on codex/nsc-publication-polish; 64 are already present in the canonical repository and the 65th is the publication-side twin of a cleanup commit already present as 5ac2d46b. Its AGENTS.md is a distinct public index. Reference: docs/README.md records it as a separate history with no lab/ tree.",
+      "unique_by_path_after_filter": 0
+    },
+    {
+      "path": "BlackHoles-Infinity-w2",
+      "reason": "Live second worktree on agent/blackholes-infinity/work2. Its HEAD is an ancestor of the canonical branch.",
+      "untracked_files": [
+        "lab/docs/nsc-rn-force-oscillation.md",
+        "lab/results/development/nsc-rn-force-oscillation-v1.json",
+        "lab/runs/rn-force-oscillation/report.md",
+        "lab/scripts/derive_nsc_rn_force_oscillation.py",
+        "lab/src/recursive_horizons/nsc_rn_force_oscillation.py",
+        "lab/tests/test_nsc_rn_force_oscillation.py"
+      ],
+      "action": "the six untracked files are the only content in w2 not present in the canonical checkout"
+    },
+    {
+      "path": "nested-space-cosmology",
+      "reason": "Not a directory. A 1067-byte macOS alias file beginning XSym, resolving to /Users/admin/Documents/BlackHoles-Infinity. A dangling pointer to the original Mac checkout."
+    }
+  ],
+
+  "method": "ported from scripts written during the 2026-10-05 sweep; the comparison discarded macOS metadata and version-control internals before counting paths, then searched the canonical history for each remaining path",
+  "nonclaim": "A path-level comparison. It says nothing about whether two files at different paths hold the same content, and it makes no scientific claim."
+}

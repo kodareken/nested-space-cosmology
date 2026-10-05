@@ -1,0 +1,30 @@
+{
+  "bundle": "nsc_external_grok_full_interval_uv_20260929",
+  "copied_on": "2026-10-05",
+  "files": [
+    {
+      "bytes": 5923,
+      "name": "lab/docs/nsc-ks-full-interval-uv.md",
+      "sha256": "64ed995090b9ce3304335168db581cb3969972b37cfc13e6bad21bd39619ab39"
+    },
+    {
+      "bytes": 2352,
+      "name": "lab/scripts/derive_nsc_ks_full_interval_uv.py",
+      "sha256": "92831c25e745e632cceccfed1ace89fcd4492602329894bcbbfc6a60d7187504"
+    },
+    {
+      "bytes": 21075,
+      "name": "lab/src/recursive_horizons/nsc_ks_full_interval_uv.py",
+      "sha256": "a83a9c28712897e7abab2fca4eb1f889d47bb4607bb5322026c9e2ee1357e548"
+    },
+    {
+      "bytes": 4808,
+      "name": "lab/tests/test_nsc_ks_full_interval_uv.py",
+      "sha256": "6d6c9c7c52f13a5b20bf66edecb5ddf9c87f611ad2274ba91591b6876b7ae7c7"
+    }
+  ],
+  "note": "Copied before retiring a worktree whose .git pointer names a macOS path that is not present on this machine.",
+  "owner": "grok-uv-residual-20260929 worktree (macOS origin, git pointer to /Users/admin)",
+  "scope": "Byte copy of the only files present in the Grok worktree and absent from the canonical repository and its pre-closure archive. The worktree is otherwise a strict subset by path. This is the paused local incoming gate campaign: one full-interval attempt at the history-minus-reference L0 A4 remainder. It is not a new result and does not reopen the gate.",
+  "source_tree": "BlackHoles-Infinity-Worktrees/grok-uv-residual-20260929"
+}

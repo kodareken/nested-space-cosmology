@@ -1,0 +1,6860 @@
+{
+  "accountable_author": "Douglas Ek",
+  "coverage": {
+    "angular_families_with_columns": 62,
+    "at_or_above_joined_uncovered_rows": 1528,
+    "baseline_ell0_allocations_retained": true,
+    "below_joined_rows": 27828,
+    "construction_census": {
+      "low_mode_reconstruction": {
+        "panels": 64,
+        "rows": 29052,
+        "straddling_panels": 59
+      },
+      "middle_mode_columns": {
+        "panels": 62,
+        "rows": 20016,
+        "straddling_panels": 0
+      },
+      "subgap_rows": {
+        "panels": 38,
+        "rows": 304,
+        "straddling_panels": 0
+      }
+    },
+    "construction_owners": {
+      "low_mode_reconstruction": {
+        "method": "accepted physical low-mode reconstruction",
+        "owner": "src/recursive_horizons/nsc_pg_mode_recovery.py",
+        "reconstruction_enclosure": null,
+        "restriction_owner": "src/recursive_horizons/nsc_common_ks_trace.py",
+        "stored_field": "recovery mode_at_one, then restrict_resolved_modes at rho=1",
+        "why_open": "packet-observation SVD amplification is a numerical sensitivity diagnostic, not a directed a-posteriori enclosure of the stored three-column fiber against the exact physical incoming mode"
+      },
+      "middle_mode_columns": {
+        "method": "same original middle producer as the incoming baseline",
+        "owner": "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py",
+        "reconstruction_enclosure": null,
+        "restriction_owner": "src/recursive_horizons/nsc_common_ks_trace.py",
+        "stored_field": "archived_middle_boundary_modes.mode_at_one, then restrict_resolved_modes at rho=1",
+        "why_open": "the archived order-16 middle producer matches the incoming baseline and carries a V5 action certificate; that action bound is not a column-reconstruction enclosure, and no middle-Riccati defect majorant is bound here"
+      },
+      "subgap_rows": {
+        "method": "eight inherited real subgap rows; accuracy OPEN",
+        "owner": "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py",
+        "reconstruction_enclosure": null,
+        "restriction_owner": "src/recursive_horizons/nsc_common_ks_trace.py",
+        "stored_field": "mode-resolved Cauchy interior at rho=1, eight rows per signed channel",
+        "why_open": "the eight inherited real subgap rows are stored without a directed construction enclosure; Pauli covariance reconstruction is an identity, not that enclosure"
+      }
+    },
+    "directed_N_beta_contribution_bound": {
+      "N": null,
+      "beta": null,
+      "declared_universe_size": 49372,
+      "gate_2_closed": false,
+      "identity_digest": "58277abb3a3b07759c0a62e6812497eed18710c10cb417850f84e36382394698",
+      "independent_column_max_used": false,
+      "propagation_coefficients_bound": 49372,
+      "reconstruction_enclosures_bound": 0,
+      "status": "OPEN: directed N,beta requires an enclosure payload on every authenticated inventory identity"
+    },
+    "double_counted": false,
+    "ell0_remaining_reconstruction_panels": 4,
+    "ell0_remaining_reconstruction_rows": 532,
+    "ell0_zero_response_groups": [
+      0,
+      13,
+      23
+    ],
+    "identities_that_are_not_error_bounds": [
+      "Pauli 4-component subgap covariance reconstruction",
+      "negative-source complement I-conj(C_src)",
+      "ell=0 Dirac r-independence of the radius-history response",
+      "nested-node / nested-gradient algebraic identities",
+      "quadrature-node or refinement movement"
+    ],
+    "inventory_positive_panels": 164,
+    "inventory_positive_rows": 49372,
+    "remaining_low_subgap_source_error_bound": null,
+    "remaining_physical_rho1_source_error_bound": null,
+    "remaining_reconstruction_panels": 102,
+    "remaining_reconstruction_rows": 29356,
+    "row_identity_digest": "58277abb3a3b07759c0a62e6812497eed18710c10cb417850f84e36382394698",
+    "split_window_count": 223,
+    "straddling_panels_were_split": true,
+    "straddling_remaining_panels": 59,
+    "v5_action_covered_panels": 62,
+    "v5_action_covered_rows": 20016,
+    "v5_action_is_not_column_reconstruction": true,
+    "v5_action_rows": 20016,
+    "window_identity_digest": "bbe0e392bed3b04cee8b02ba200d0f59694fab95c8744d0364d355b725d44114"
+  },
+  "directed_N_beta_contribution_bound": {
+    "N": null,
+    "beta": null,
+    "declared_universe_size": 49372,
+    "gate_2_closed": false,
+    "identity_digest": "58277abb3a3b07759c0a62e6812497eed18710c10cb417850f84e36382394698",
+    "independent_column_max_used": false,
+    "propagation_coefficients_bound": 49372,
+    "reconstruction_enclosures_bound": 0,
+    "status": "OPEN: directed N,beta requires an enclosure payload on every authenticated inventory identity"
+  },
+  "gate_2_closed": false,
+  "historical_coarse_4p998e_minus9_is_current_remaining_bound": false,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-group32-order24-bound.json": "0747f2469afd2126ccdb5df86b125c15ac334fe2f631ce249b00c2235f788b04",
+    "results/development/nsc-incoming-retained-order24-bound.json": "e2dd066d67c582e059a6cba19002d18a1156ea0429a2b3847aadbb8798852754",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-ks-low-subgap-decision-v2.json": "63098d718b4481c93b6c1db27e69a1b257cd8cefc6cfd432bccaf409ee3841f7",
+    "results/development/nsc-ks-rho1-source-bound-v1.json": "997253e3996c6b3ef7d347c80d1e83e6ecb4772ca1eea1282495f2d760a5dc6e",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-ks-upstream-error-pilot.json": "59729ca21f1de6870af30494a1609300ed919b97eb0e39b30f89d8b6a187e62f",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+  },
+  "missing_primitive": "directed a-posteriori enclosure of stored rho=1 three-column fibers and their PDE axial restriction G(1)F against the exact physical incoming modes, for each construction method: accepted physical low-mode SVD recovery from packet observations, the archived middle Riccati producer, and the eight inherited real subgap rows. Stored SVD amplification, ODE tolerances and V5 action certificates are not that enclosure.",
+  "next_method": "directed a-posteriori enclosure of stored rho=1 three-column fibers and their PDE axial restriction G(1)F against the exact physical incoming modes, for each construction method: accepted physical low-mode SVD recovery from packet observations, the archived middle Riccati producer, and the eight inherited real subgap rows. Stored SVD amplification, ODE tolerances and V5 action certificates are not that enclosure.",
+  "owners_used": {
+    "channel_ledger": "results/development/nsc-mode-resolved-cauchy-state.json",
+    "group12_order24_action": "results/development/nsc-incoming-retained-order24-bound.json",
+    "group32_order24_action": "results/development/nsc-incoming-group32-order24-bound.json",
+    "low_subgap_decision": "results/development/nsc-ks-low-subgap-decision-v2.json",
+    "source_inventory": "results/development/nsc-ks-source-inventory.json",
+    "source_inventory_payload": "results/development/artifacts/nsc-ks-source-inventory.npz",
+    "upstream_continuation_pilot": "results/development/nsc-ks-upstream-error-pilot.json",
+    "v1_source_bound": "results/development/nsc-ks-rho1-source-bound-v1.json",
+    "v5_source_update": "results/development/nsc-incoming-source-update-v5.json"
+  },
+  "payload": {
+    "bytes": 16853652,
+    "path": "results/development/artifacts/nsc-ks-rho1-source-bound-v2.npz",
+    "sha256": "22eaf265a3cff2fb5a4cb6f8c972e31352a0ee4a12612631f0ac9cb480c662d6"
+  },
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "propagation": {
+    "axial_restriction": "F_z = G(rho=1) F with homogeneous ks_generator; source energy is a label",
+    "coherence_retained": true,
+    "documented_remaining_N_after_known_components": 1.1000847019829912e-11,
+    "independent_column_max_used": false,
+    "linear_indicator_is_not_a_certificate": true,
+    "linear_indicator_uniform_weighted_fiber_threshold": {
+      "exponent": -143,
+      "mantissa": "682910337991850817874179"
+    },
+    "minus_energy_factor": 2,
+    "minus_energy_retained": true,
+    "propagation_coefficients_evaluated_rows": 49372,
+    "reconstruction_enclosures_evaluated_rows": 0,
+    "sums": {
+      "linear_N_by_side": {
+        "at_or_above_joined_uncovered": {
+          "exponent": -57,
+          "mantissa": "449954301040353229732987"
+        },
+        "below_joined": {
+          "exponent": -57,
+          "mantissa": "1196041786883451410788099"
+        },
+        "v5_action_covered": {
+          "exponent": -52,
+          "mantissa": "757493834182246522024409"
+        }
+      },
+      "linear_N_upper": {
+        "exponent": -51,
+        "mantissa": "404465605964932708520727"
+      },
+      "linear_beta_upper": {
+        "exponent": -52,
+        "mantissa": "651054744009516289851701"
+      },
+      "quadratic_N_upper": {
+        "exponent": -49,
+        "mantissa": "453898136744941288680423"
+      },
+      "quadratic_beta_upper": {
+        "exponent": -50,
+        "mantissa": "713136343840222688040423"
+      },
+      "weighted_fiber_norm_sum_upper": {
+        "exponent": -64,
+        "mantissa": "199861594513624487911185"
+      }
+    },
+    "v5_action_is_not_column_reconstruction": true,
+    "weights_retained": true
+  },
+  "redo_group12_or_group32_order24_middle_bounds": false,
+  "remaining_low_subgap_source_error_bound": null,
+  "remaining_physical_rho1_source_error_bound": null,
+  "reproducer": "python3 scripts/derive_nsc_ks_rho1_source_bound_v2.py --check",
+  "resource_forecast": {
+    "analogous_existing_tool": "continue_columns Bernstein/defect majorant in nsc_ks_upstream_error, which treats stored binary64 rho=1 columns as exact only for the numerical-continuation sub-bound",
+    "construction_row_counts": {
+      "low_mode_reconstruction": {
+        "panels": 64,
+        "rows": 29052
+      },
+      "middle_mode_columns": {
+        "panels": 62,
+        "rows": 20016
+      },
+      "subgap_rows": {
+        "panels": 38,
+        "rows": 304
+      }
+    },
+    "forecast": {
+      "low_mode_observation_map_defect_enclosure": "one 6-packet observation ODE on [-1,1] plus a directed SVD/defect enclosure per stored low-mode energy; 29052 rows; not launched",
+      "middle_riccati_defect_enclosure": "a-posteriori defect majorant of the archived order-16 middle producer at rho=1; 20016 rows; not launched",
+      "subgap_construction_enclosure": "directed construction enclosure of the eight inherited real subgap rows; 304 rows; not launched"
+    },
+    "generators_launched": 0,
+    "measured_rows_processed": 49372,
+    "measured_unique_generator_keys": 25288,
+    "missing_primitive": "directed a-posteriori enclosure of stored rho=1 three-column fibers and their PDE axial restriction G(1)F against the exact physical incoming modes, for each construction method: accepted physical low-mode SVD recovery from packet observations, the archived middle Riccati producer, and the eight inherited real subgap rows. Stored SVD amplification, ODE tolerances and V5 action certificates are not that enclosure.",
+    "partial_or_resource_stop_cannot_close_gate_2": true
+  },
+  "reused_successors": {
+    "action_bounds_are_not_column_reconstruction": true,
+    "group12_order24_lapse_error_upper": 1.3252914401867609e-14,
+    "group32_combined_action_error_upper": [
+      2.1336305732738716e-13,
+      1.6425601865381046e-90
+    ],
+    "group32_validated_lower_window": [
+      24,
+      32
+    ],
+    "v5_covered_action_bound_N_beta": [
+      8.916253820835393e-12,
+      3.882373567206641e-18
+    ]
+  },
+  "row_threshold_partition": {
+    "physical_column_accuracy_universe_panels": 164,
+    "physical_column_accuracy_universe_rows": 49372,
+    "remaining_panel_campaign_is_not_complete_physical_source_universe": true,
+    "remaining_panel_campaign_panels": 102,
+    "remaining_panel_campaign_rows": 29356,
+    "row_partition_digest": "bdac0da2702268d69b0cc27a6ac73c6a908f5893a2f881186e6e477ab7895070",
+    "rows_at_or_above_joined_in_remaining_panels": 1528,
+    "rows_below_joined_in_remaining_panels": 27828,
+    "straddling_remaining_panels": 59,
+    "v5_action_is_not_column_reconstruction": true
+  },
+  "runtime": {
+    "CPU_seconds": 0.8976250000000001,
+    "rss_source": "resource.ru_maxrss",
+    "rss_units": "bytes",
+    "ru_maxrss": 227131392,
+    "ru_maxrss_at_start": 141033472,
+    "wall_seconds": 0.8976815409987466
+  },
+  "sample": {
+    "full_reconstruction_enclosure_run": false,
+    "full_remaining_campaign_run": false,
+    "inspected_sample_panels": 2,
+    "inspected_sample_rows": 3,
+    "panels": [
+      {
+        "baseline_retained": true,
+        "coherence_retained": true,
+        "energies": [
+          0.25102605180644444,
+          0.2553956831705244
+        ],
+        "energy_folding_factor": 1,
+        "group": 14,
+        "hermitian_residual": 0.0,
+        "minus_energy_residual": 0.0,
+        "n_rows": 2,
+        "offdiag_max": 0.03650370166341877,
+        "panel": "group14/low32_1",
+        "panel_rows": 96,
+        "radius_history_response": "nontrivial",
+        "reconstruction_error_upper": null,
+        "remaining_panel": true,
+        "row_indices": [
+          0,
+          1
+        ],
+        "sign": 1,
+        "weights": [
+          0.0026319787535513854,
+          0.006102898024089932
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "coherence_retained": true,
+        "energies": [
+          0.00034201726881480377
+        ],
+        "energy_folding_factor": 1,
+        "group": 13,
+        "hermitian_residual": 0.0,
+        "minus_energy_residual": 0.0,
+        "n_rows": 1,
+        "offdiag_max": 0.4999949185222599,
+        "panel": "group13/low",
+        "panel_rows": 192,
+        "radius_history_response": "exact_zero",
+        "reconstruction_error_upper": null,
+        "remaining_panel": true,
+        "row_indices": [
+          0
+        ],
+        "sign": 1,
+        "weights": [
+          0.0008773262511837952
+        ]
+      }
+    ],
+    "payload_sha256": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "propagation_coefficients_evaluated_rows": 49372,
+    "reconstruction_bounds_evaluated_panels": 0,
+    "reconstruction_bounds_evaluated_rows": 0
+  },
+  "schema": "NSC-KS-RHO1-SOURCE-BOUND-v2",
+  "source_hashes": {
+    "docs/nsc-ks-rho1-source-bound-v2.md": "29f59805e2907853acc2381df420536d7ca473fdf2abff85260fdf4d3f1959f1",
+    "scripts/derive_nsc_ks_rho1_source_bound_v2.py": "c5c6bb5642f0f3a2c5313693a4fd064cc09bbb4f29bbaba464622adecfc2d635",
+    "src/recursive_horizons/nsc_ks_rho1_source_bound_v2.py": "ebc78d71bcc9388979e460154cbf0723e17dab124f2d1b6af35a0553f8210658",
+    "tests/test_nsc_ks_rho1_source_bound_v2.py": "88028cf4ed07c664ad45f771dd0599ff131fd78f89ebdcfd0249d74ada4b0aab"
+  },
+  "split": {
+    "at_or_above_joined_uncovered_rows": 1528,
+    "below_joined_rows": 27828,
+    "nonstraddling_remaining_windows": 43,
+    "split_window_count": 223,
+    "straddling_above_uncovered_windows": 59,
+    "straddling_below_windows": 59,
+    "straddling_panels_were_split": true,
+    "straddling_remaining_panels": 59,
+    "v5_action_is_not_column_reconstruction": true,
+    "v5_action_rows": 20016,
+    "v5_action_windows": 62,
+    "window_identities": [
+      [
+        1,
+        -1,
+        "low/1_-1",
+        "below_joined",
+        504
+      ],
+      [
+        1,
+        -1,
+        "low/1_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        1,
+        1,
+        "low/1_1",
+        "below_joined",
+        504
+      ],
+      [
+        1,
+        1,
+        "low/1_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        2,
+        -1,
+        "low/2_-1",
+        "below_joined",
+        504
+      ],
+      [
+        2,
+        -1,
+        "low/2_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        2,
+        1,
+        "low/2_1",
+        "below_joined",
+        504
+      ],
+      [
+        2,
+        1,
+        "low/2_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        3,
+        -1,
+        "low/3_-1",
+        "below_joined",
+        504
+      ],
+      [
+        3,
+        -1,
+        "low/3_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        3,
+        1,
+        "low/3_1",
+        "below_joined",
+        504
+      ],
+      [
+        3,
+        1,
+        "low/3_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        4,
+        -1,
+        "low/4_-1",
+        "below_joined",
+        504
+      ],
+      [
+        4,
+        -1,
+        "low/4_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        4,
+        1,
+        "low/4_1",
+        "below_joined",
+        504
+      ],
+      [
+        4,
+        1,
+        "low/4_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        5,
+        -1,
+        "low/5_-1",
+        "below_joined",
+        504
+      ],
+      [
+        5,
+        -1,
+        "low/5_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        5,
+        1,
+        "low/5_1",
+        "below_joined",
+        504
+      ],
+      [
+        5,
+        1,
+        "low/5_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        6,
+        -1,
+        "low_ref/6_-1",
+        "below_joined",
+        928
+      ],
+      [
+        6,
+        -1,
+        "low_ref/6_-1",
+        "at_or_above_joined_uncovered",
+        32
+      ],
+      [
+        6,
+        1,
+        "low_ref/6_1",
+        "below_joined",
+        928
+      ],
+      [
+        6,
+        1,
+        "low_ref/6_1",
+        "at_or_above_joined_uncovered",
+        32
+      ],
+      [
+        7,
+        -1,
+        "low/7_-1",
+        "below_joined",
+        504
+      ],
+      [
+        7,
+        -1,
+        "low/7_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        7,
+        1,
+        "low/7_1",
+        "below_joined",
+        504
+      ],
+      [
+        7,
+        1,
+        "low/7_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        8,
+        -1,
+        "low/8_-1",
+        "below_joined",
+        504
+      ],
+      [
+        8,
+        -1,
+        "low/8_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        8,
+        1,
+        "low/8_1",
+        "below_joined",
+        504
+      ],
+      [
+        8,
+        1,
+        "low/8_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        9,
+        -1,
+        "low/9_-1",
+        "below_joined",
+        504
+      ],
+      [
+        9,
+        -1,
+        "low/9_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        9,
+        1,
+        "low/9_1",
+        "below_joined",
+        504
+      ],
+      [
+        9,
+        1,
+        "low/9_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        10,
+        -1,
+        "low/10_-1",
+        "below_joined",
+        504
+      ],
+      [
+        10,
+        -1,
+        "low/10_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        10,
+        1,
+        "low/10_1",
+        "below_joined",
+        504
+      ],
+      [
+        10,
+        1,
+        "low/10_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        11,
+        -1,
+        "low/11_-1",
+        "below_joined",
+        504
+      ],
+      [
+        11,
+        -1,
+        "low/11_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        11,
+        1,
+        "low/11_1",
+        "below_joined",
+        504
+      ],
+      [
+        11,
+        1,
+        "low/11_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        12,
+        -1,
+        "low/12_-1",
+        "below_joined",
+        504
+      ],
+      [
+        12,
+        -1,
+        "low/12_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        12,
+        1,
+        "low/12_1",
+        "below_joined",
+        504
+      ],
+      [
+        12,
+        1,
+        "low/12_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        13,
+        1,
+        "group13/low",
+        "below_joined",
+        192
+      ],
+      [
+        13,
+        1,
+        "subgap8/13_1",
+        "below_joined",
+        8
+      ],
+      [
+        14,
+        -1,
+        "group14/low16_-1",
+        "below_joined",
+        48
+      ],
+      [
+        14,
+        -1,
+        "group14/low32_-1",
+        "below_joined",
+        96
+      ],
+      [
+        14,
+        -1,
+        "subgap8/14_-1",
+        "below_joined",
+        8
+      ],
+      [
+        14,
+        1,
+        "group14/low16_1",
+        "below_joined",
+        48
+      ],
+      [
+        14,
+        1,
+        "group14/low32_1",
+        "below_joined",
+        96
+      ],
+      [
+        14,
+        1,
+        "subgap8/14_1",
+        "below_joined",
+        8
+      ],
+      [
+        15,
+        -1,
+        "low/15_-1",
+        "below_joined",
+        456
+      ],
+      [
+        15,
+        -1,
+        "low/15_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        15,
+        -1,
+        "subgap8/15_-1",
+        "below_joined",
+        8
+      ],
+      [
+        15,
+        1,
+        "low/15_1",
+        "below_joined",
+        456
+      ],
+      [
+        15,
+        1,
+        "low/15_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        15,
+        1,
+        "subgap8/15_1",
+        "below_joined",
+        8
+      ],
+      [
+        16,
+        -1,
+        "low/16_-1",
+        "below_joined",
+        456
+      ],
+      [
+        16,
+        -1,
+        "low/16_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        16,
+        -1,
+        "subgap8/16_-1",
+        "below_joined",
+        8
+      ],
+      [
+        16,
+        1,
+        "low/16_1",
+        "below_joined",
+        456
+      ],
+      [
+        16,
+        1,
+        "low/16_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        16,
+        1,
+        "subgap8/16_1",
+        "below_joined",
+        8
+      ],
+      [
+        17,
+        -1,
+        "low/17_-1",
+        "below_joined",
+        456
+      ],
+      [
+        17,
+        -1,
+        "low/17_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        17,
+        -1,
+        "subgap8/17_-1",
+        "below_joined",
+        8
+      ],
+      [
+        17,
+        1,
+        "low/17_1",
+        "below_joined",
+        456
+      ],
+      [
+        17,
+        1,
+        "low/17_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        17,
+        1,
+        "subgap8/17_1",
+        "below_joined",
+        8
+      ],
+      [
+        18,
+        -1,
+        "low/18_-1",
+        "below_joined",
+        456
+      ],
+      [
+        18,
+        -1,
+        "low/18_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        18,
+        -1,
+        "subgap8/18_-1",
+        "below_joined",
+        8
+      ],
+      [
+        18,
+        1,
+        "low/18_1",
+        "below_joined",
+        456
+      ],
+      [
+        18,
+        1,
+        "low/18_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        18,
+        1,
+        "subgap8/18_1",
+        "below_joined",
+        8
+      ],
+      [
+        19,
+        -1,
+        "low/19_-1",
+        "below_joined",
+        456
+      ],
+      [
+        19,
+        -1,
+        "low/19_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        19,
+        -1,
+        "subgap8/19_-1",
+        "below_joined",
+        8
+      ],
+      [
+        19,
+        1,
+        "low/19_1",
+        "below_joined",
+        456
+      ],
+      [
+        19,
+        1,
+        "low/19_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        19,
+        1,
+        "subgap8/19_1",
+        "below_joined",
+        8
+      ],
+      [
+        20,
+        -1,
+        "low/20_-1",
+        "below_joined",
+        456
+      ],
+      [
+        20,
+        -1,
+        "low/20_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        20,
+        -1,
+        "subgap8/20_-1",
+        "below_joined",
+        8
+      ],
+      [
+        20,
+        1,
+        "low/20_1",
+        "below_joined",
+        456
+      ],
+      [
+        20,
+        1,
+        "low/20_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        20,
+        1,
+        "subgap8/20_1",
+        "below_joined",
+        8
+      ],
+      [
+        21,
+        -1,
+        "low/21_-1",
+        "below_joined",
+        456
+      ],
+      [
+        21,
+        -1,
+        "low/21_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        21,
+        -1,
+        "subgap8/21_-1",
+        "below_joined",
+        8
+      ],
+      [
+        21,
+        1,
+        "low/21_1",
+        "below_joined",
+        456
+      ],
+      [
+        21,
+        1,
+        "low/21_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        21,
+        1,
+        "subgap8/21_1",
+        "below_joined",
+        8
+      ],
+      [
+        22,
+        -1,
+        "low_ref/22_-1",
+        "below_joined",
+        820
+      ],
+      [
+        22,
+        -1,
+        "low_ref/22_-1",
+        "at_or_above_joined_uncovered",
+        32
+      ],
+      [
+        22,
+        -1,
+        "subgap8/22_-1",
+        "below_joined",
+        8
+      ],
+      [
+        22,
+        1,
+        "low_ref/22_1",
+        "below_joined",
+        820
+      ],
+      [
+        22,
+        1,
+        "low_ref/22_1",
+        "at_or_above_joined_uncovered",
+        32
+      ],
+      [
+        22,
+        1,
+        "subgap8/22_1",
+        "below_joined",
+        8
+      ],
+      [
+        23,
+        1,
+        "low/23_1",
+        "below_joined",
+        300
+      ],
+      [
+        23,
+        1,
+        "low/23_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        23,
+        1,
+        "subgap8/23_1",
+        "below_joined",
+        8
+      ],
+      [
+        24,
+        -1,
+        "low/24_-1",
+        "below_joined",
+        300
+      ],
+      [
+        24,
+        -1,
+        "low/24_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        24,
+        -1,
+        "subgap8/24_-1",
+        "below_joined",
+        8
+      ],
+      [
+        24,
+        1,
+        "low/24_1",
+        "below_joined",
+        300
+      ],
+      [
+        24,
+        1,
+        "low/24_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        24,
+        1,
+        "subgap8/24_1",
+        "below_joined",
+        8
+      ],
+      [
+        25,
+        -1,
+        "low/25_-1",
+        "below_joined",
+        300
+      ],
+      [
+        25,
+        -1,
+        "low/25_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        25,
+        -1,
+        "subgap8/25_-1",
+        "below_joined",
+        8
+      ],
+      [
+        25,
+        1,
+        "low/25_1",
+        "below_joined",
+        300
+      ],
+      [
+        25,
+        1,
+        "low/25_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        25,
+        1,
+        "subgap8/25_1",
+        "below_joined",
+        8
+      ],
+      [
+        26,
+        -1,
+        "low/26_-1",
+        "below_joined",
+        300
+      ],
+      [
+        26,
+        -1,
+        "low/26_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        26,
+        -1,
+        "subgap8/26_-1",
+        "below_joined",
+        8
+      ],
+      [
+        26,
+        1,
+        "low/26_1",
+        "below_joined",
+        300
+      ],
+      [
+        26,
+        1,
+        "low/26_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        26,
+        1,
+        "subgap8/26_1",
+        "below_joined",
+        8
+      ],
+      [
+        27,
+        -1,
+        "low/27_-1",
+        "below_joined",
+        300
+      ],
+      [
+        27,
+        -1,
+        "low/27_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        27,
+        -1,
+        "subgap8/27_-1",
+        "below_joined",
+        8
+      ],
+      [
+        27,
+        1,
+        "low/27_1",
+        "below_joined",
+        300
+      ],
+      [
+        27,
+        1,
+        "low/27_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        27,
+        1,
+        "subgap8/27_1",
+        "below_joined",
+        8
+      ],
+      [
+        28,
+        -1,
+        "low/28_-1",
+        "below_joined",
+        300
+      ],
+      [
+        28,
+        -1,
+        "low/28_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        28,
+        -1,
+        "subgap8/28_-1",
+        "below_joined",
+        8
+      ],
+      [
+        28,
+        1,
+        "low/28_1",
+        "below_joined",
+        300
+      ],
+      [
+        28,
+        1,
+        "low/28_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        28,
+        1,
+        "subgap8/28_1",
+        "below_joined",
+        8
+      ],
+      [
+        29,
+        -1,
+        "low/29_-1",
+        "below_joined",
+        300
+      ],
+      [
+        29,
+        -1,
+        "low/29_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        29,
+        -1,
+        "subgap8/29_-1",
+        "below_joined",
+        8
+      ],
+      [
+        29,
+        1,
+        "low/29_1",
+        "below_joined",
+        300
+      ],
+      [
+        29,
+        1,
+        "low/29_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        29,
+        1,
+        "subgap8/29_1",
+        "below_joined",
+        8
+      ],
+      [
+        30,
+        -1,
+        "low/30_-1",
+        "below_joined",
+        300
+      ],
+      [
+        30,
+        -1,
+        "low/30_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        30,
+        -1,
+        "subgap8/30_-1",
+        "below_joined",
+        8
+      ],
+      [
+        30,
+        1,
+        "low/30_1",
+        "below_joined",
+        300
+      ],
+      [
+        30,
+        1,
+        "low/30_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        30,
+        1,
+        "subgap8/30_1",
+        "below_joined",
+        8
+      ],
+      [
+        31,
+        -1,
+        "low/31_-1",
+        "below_joined",
+        300
+      ],
+      [
+        31,
+        -1,
+        "low/31_-1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        31,
+        -1,
+        "subgap8/31_-1",
+        "below_joined",
+        8
+      ],
+      [
+        31,
+        1,
+        "low/31_1",
+        "below_joined",
+        300
+      ],
+      [
+        31,
+        1,
+        "low/31_1",
+        "at_or_above_joined_uncovered",
+        24
+      ],
+      [
+        31,
+        1,
+        "subgap8/31_1",
+        "below_joined",
+        8
+      ],
+      [
+        32,
+        -1,
+        "low_ref/32_-1",
+        "below_joined",
+        488
+      ],
+      [
+        32,
+        -1,
+        "low_ref/32_-1",
+        "at_or_above_joined_uncovered",
+        64
+      ],
+      [
+        32,
+        -1,
+        "subgap8/32_-1",
+        "below_joined",
+        8
+      ],
+      [
+        32,
+        1,
+        "low_ref/32_1",
+        "below_joined",
+        488
+      ],
+      [
+        32,
+        1,
+        "low_ref/32_1",
+        "at_or_above_joined_uncovered",
+        64
+      ],
+      [
+        32,
+        1,
+        "subgap8/32_1",
+        "below_joined",
+        8
+      ],
+      [
+        1,
+        -1,
+        "mid/1_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        1,
+        1,
+        "mid/1_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        2,
+        -1,
+        "mid/2_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        2,
+        1,
+        "mid/2_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        3,
+        -1,
+        "mid/3_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        3,
+        1,
+        "mid/3_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        4,
+        -1,
+        "mid/4_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        4,
+        1,
+        "mid/4_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        5,
+        -1,
+        "mid/5_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        5,
+        1,
+        "mid/5_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        6,
+        -1,
+        "mid/6_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        6,
+        1,
+        "mid/6_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        7,
+        -1,
+        "mid/7_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        7,
+        1,
+        "mid/7_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        8,
+        -1,
+        "mid/8_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        8,
+        1,
+        "mid/8_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        9,
+        -1,
+        "mid/9_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        9,
+        1,
+        "mid/9_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        10,
+        -1,
+        "mid/10_-1",
+        "v5_action_covered",
+        560
+      ],
+      [
+        10,
+        1,
+        "mid/10_1",
+        "v5_action_covered",
+        560
+      ],
+      [
+        11,
+        -1,
+        "mid/11_-1",
+        "v5_action_covered",
+        560
+      ],
+      [
+        11,
+        1,
+        "mid/11_1",
+        "v5_action_covered",
+        560
+      ],
+      [
+        12,
+        -1,
+        "mid_ref/12_-1",
+        "v5_action_covered",
+        840
+      ],
+      [
+        12,
+        1,
+        "mid_ref/12_1",
+        "v5_action_covered",
+        840
+      ],
+      [
+        13,
+        1,
+        "group13/mid",
+        "v5_action_covered",
+        432
+      ],
+      [
+        14,
+        -1,
+        "group14/mid24_-1",
+        "v5_action_covered",
+        432
+      ],
+      [
+        14,
+        1,
+        "group14/mid24_1",
+        "v5_action_covered",
+        432
+      ],
+      [
+        15,
+        -1,
+        "mid/15_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        15,
+        1,
+        "mid/15_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        16,
+        -1,
+        "mid/16_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        16,
+        1,
+        "mid/16_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        17,
+        -1,
+        "mid/17_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        17,
+        1,
+        "mid/17_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        18,
+        -1,
+        "mid/18_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        18,
+        1,
+        "mid/18_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        19,
+        -1,
+        "mid/19_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        19,
+        1,
+        "mid/19_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        20,
+        -1,
+        "mid/20_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        20,
+        1,
+        "mid/20_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        21,
+        -1,
+        "mid/21_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        21,
+        1,
+        "mid/21_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        22,
+        -1,
+        "mid_ref/22_-1",
+        "v5_action_covered",
+        360
+      ],
+      [
+        22,
+        1,
+        "mid_ref/22_1",
+        "v5_action_covered",
+        360
+      ],
+      [
+        23,
+        1,
+        "mid/23_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        24,
+        -1,
+        "mid/24_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        24,
+        1,
+        "mid/24_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        25,
+        -1,
+        "mid/25_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        25,
+        1,
+        "mid/25_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        26,
+        -1,
+        "mid/26_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        26,
+        1,
+        "mid/26_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        27,
+        -1,
+        "mid/27_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        27,
+        1,
+        "mid/27_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        28,
+        -1,
+        "mid/28_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        28,
+        1,
+        "mid/28_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        29,
+        -1,
+        "mid/29_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        29,
+        1,
+        "mid/29_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        30,
+        -1,
+        "mid/30_-1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        30,
+        1,
+        "mid/30_1",
+        "v5_action_covered",
+        240
+      ],
+      [
+        31,
+        -1,
+        "mid/31_-1",
+        "v5_action_covered",
+        560
+      ],
+      [
+        31,
+        1,
+        "mid/31_1",
+        "v5_action_covered",
+        560
+      ],
+      [
+        32,
+        -1,
+        "mid_ref/32_-1",
+        "v5_action_covered",
+        840
+      ],
+      [
+        32,
+        1,
+        "mid_ref/32_1",
+        "v5_action_covered",
+        840
+      ]
+    ],
+    "window_identity_digest": "bbe0e392bed3b04cee8b02ba200d0f59694fab95c8744d0364d355b725d44114",
+    "windows": [
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 1,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/1_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 1,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/1_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 1,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/1_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 1,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/1_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 2,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/2_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 2,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/2_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 2,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/2_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 2,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/2_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 3,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/3_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 3,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/3_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 3,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/3_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 3,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/3_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 4,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/4_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 4,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/4_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 4,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/4_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 4,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/4_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 5,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/5_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 5,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/5_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 5,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/5_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 5,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/5_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0005762301797900236,
+          31.989055447397927
+        ],
+        "error_bound": null,
+        "group": 6,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 928,
+        "panel": "low_ref/6_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.010944552602076,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 6,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 32,
+        "panel": "low_ref/6_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0005762301797900236,
+          31.989055447397927
+        ],
+        "error_bound": null,
+        "group": 6,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 928,
+        "panel": "low_ref/6_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.010944552602076,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 6,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 32,
+        "panel": "low_ref/6_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 7,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/7_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 7,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/7_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 7,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/7_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 7,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/7_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 8,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/8_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 8,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/8_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 8,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/8_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 8,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/8_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 9,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/9_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 9,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/9_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 9,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/9_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 9,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/9_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 10,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/10_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 10,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/10_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 10,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/10_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 10,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/10_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 11,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/11_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 11,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/11_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 11,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/11_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 11,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/11_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 12,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/12_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 12,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/12_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 12,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 504,
+        "panel": "low/12_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 12,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/12_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.00034201726881480377,
+          15.994527723698964
+        ],
+        "error_bound": null,
+        "group": 13,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 192,
+        "panel": "group13/low",
+        "radius_history_response": "exact_zero",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 13,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/13_1",
+        "radius_history_response": "exact_zero",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0013248831260437577,
+          15.9788018699833
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 48,
+        "panel": "group14/low16_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.25102605180644444,
+          7.994527723698964
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 96,
+        "panel": "group14/low32_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/14_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0013248831260437577,
+          15.9788018699833
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 48,
+        "panel": "group14/low16_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.25102605180644444,
+          7.994527723698964
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 96,
+        "panel": "group14/low32_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/14_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/15_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/15_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/15_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/15_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/15_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/15_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/16_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/16_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/16_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/16_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/16_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/16_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/17_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/17_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/17_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/17_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/17_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/17_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/18_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/18_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/18_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/18_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/18_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/18_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/19_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/19_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/19_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/19_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/19_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/19_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/20_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/20_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/20_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/20_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/20_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/20_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/21_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/21_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/21_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 456,
+        "panel": "low/21_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/21_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/21_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0005762301797900236,
+          31.989055447397927
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 820,
+        "panel": "low_ref/22_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.010944552602076,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 32,
+        "panel": "low_ref/22_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/22_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0005762301797900236,
+          31.989055447397927
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 820,
+        "panel": "low_ref/22_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.010944552602076,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 32,
+        "panel": "low_ref/22_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0113332020238524,
+          1.5594631247710442
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/22_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 23,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/23_1",
+        "radius_history_response": "exact_zero",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 23,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/23_1",
+        "radius_history_response": "exact_zero",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 23,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/23_1",
+        "radius_history_response": "exact_zero",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/24_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/24_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/24_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/24_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/24_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/24_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/25_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/25_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/25_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/25_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/25_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/25_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/26_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/26_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/26_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/26_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/26_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/26_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/27_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/27_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/27_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/27_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/27_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/27_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/28_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/28_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/28_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/28_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/28_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/28_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/29_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/29_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/29_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/29_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/29_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/29_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/30_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/30_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/30_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/30_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/30_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/30_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/31_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/31_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/31_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0011524603595800473,
+          31.980748879988084
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 300,
+        "panel": "low/31_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          32.019251120011916,
+          39.980748879988084
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 24,
+        "panel": "low/31_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/31_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0005762301797900236,
+          23.989055447397927
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 488,
+        "panel": "low_ref/32_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          24.010944552602073,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 64,
+        "panel": "low_ref/32_-1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/32_-1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          0.0005762301797900236,
+          23.989055447397927
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 488,
+        "panel": "low_ref/32_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          24.010944552602073,
+          39.989055447397924
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "low_mode_reconstruction",
+        "n_rows": 64,
+        "panel": "low_ref/32_1",
+        "radius_history_response": "nontrivial",
+        "side": "at_or_above_joined_uncovered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": true,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          1.0425214757989365,
+          3.0990711777908566
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "subgap_rows",
+        "n_rows": 8,
+        "panel": "subgap8/32_1",
+        "radius_history_response": "nontrivial",
+        "side": "below_joined",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 1,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/1_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 1,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/1_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 2,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/2_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 2,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/2_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 3,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/3_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 3,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/3_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 4,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/4_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 4,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/4_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 5,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/5_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 5,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/5_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 6,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/6_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 6,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/6_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 7,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/7_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 7,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/7_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 8,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/8_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 8,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/8_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 9,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/9_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 9,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/9_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 10,
+        "kind": "middle_mode_columns",
+        "n_rows": 560,
+        "panel": "mid/10_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 10,
+        "kind": "middle_mode_columns",
+        "n_rows": 560,
+        "panel": "mid/10_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 11,
+        "kind": "middle_mode_columns",
+        "n_rows": 560,
+        "panel": "mid/11_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 11,
+        "kind": "middle_mode_columns",
+        "n_rows": 560,
+        "panel": "mid/11_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 12,
+        "kind": "middle_mode_columns",
+        "n_rows": 840,
+        "panel": "mid_ref/12_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 12,
+        "kind": "middle_mode_columns",
+        "n_rows": 840,
+        "panel": "mid_ref/12_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          16.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 13,
+        "kind": "middle_mode_columns",
+        "n_rows": 432,
+        "panel": "group13/mid",
+        "radius_history_response": "exact_zero",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          16.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "middle_mode_columns",
+        "n_rows": 432,
+        "panel": "group14/mid24_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          16.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 14,
+        "kind": "middle_mode_columns",
+        "n_rows": 432,
+        "panel": "group14/mid24_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          16,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/15_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 15,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/15_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/16_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 16,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/16_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/17_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 17,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/17_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/18_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 18,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/18_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/19_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 19,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/19_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/20_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 20,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/20_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/21_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 21,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/21_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "middle_mode_columns",
+        "n_rows": 360,
+        "panel": "mid_ref/22_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.019251120011916,
+          159.98074887998808
+        ],
+        "error_bound": null,
+        "group": 22,
+        "kind": "middle_mode_columns",
+        "n_rows": 360,
+        "panel": "mid_ref/22_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 23,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/23_1",
+        "radius_history_response": "exact_zero",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/24_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 24,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/24_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/25_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 25,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/25_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/26_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 26,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/26_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/27_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 27,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/27_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/28_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 28,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/28_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/29_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 29,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/29_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/30_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          159.9576037399666
+        ],
+        "error_bound": null,
+        "group": 30,
+        "kind": "middle_mode_columns",
+        "n_rows": 240,
+        "panel": "mid/30_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "middle_mode_columns",
+        "n_rows": 560,
+        "panel": "mid/31_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.0423962600334,
+          319.9576037399666
+        ],
+        "error_bound": null,
+        "group": 31,
+        "kind": "middle_mode_columns",
+        "n_rows": 560,
+        "panel": "mid/31_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          32.0,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "middle_mode_columns",
+        "n_rows": 840,
+        "panel": "mid_ref/32_-1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": -1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      },
+      {
+        "baseline_retained": true,
+        "energy_interval": [
+          40.019251120011916,
+          319.9807488799881
+        ],
+        "error_bound": null,
+        "group": 32,
+        "kind": "middle_mode_columns",
+        "n_rows": 840,
+        "panel": "mid_ref/32_1",
+        "radius_history_response": "nontrivial",
+        "side": "v5_action_covered",
+        "sign": 1,
+        "source_reconstruction": "unbounded",
+        "straddling_parent": false,
+        "v5_action_is_not_column_reconstruction": true,
+        "v5_joined": [
+          24,
+          "infinity"
+        ]
+      }
+    ]
+  },
+  "status": "OPEN: authenticated 164-panel/49372-row manifests with 59 explicit V5-threshold splits; directed generator/axial Lipschitz and N,beta propagation represented; reconstruction enclosure of stored rho=1 fibers against exact physical incoming modes remains missing; V5 action is not column error; directed N,beta budget not filled; Gate 2 not closed",
+  "supersedes_record_only": "results/development/nsc-ks-rho1-source-bound-v1.json",
+  "supersedes_schema_only": "NSC-KS-RHO1-SOURCE-BOUND-v1",
+  "upstream_physical_slot": {
+    "at_or_above_joined_uncovered_N_beta": null,
+    "baseline_low_subgap_N_beta": null,
+    "baseline_low_subgap_status": "OPEN: below-joined reconstruction enclosure missing",
+    "covered_regions_not_fed_from_column_error": true,
+    "enclosure_payload_sha256": null,
+    "gate_2_closed": false,
+    "nine_component_feed": {
+      "allocation_per_component": 2e-12,
+      "budget_slot": "upstream",
+      "combined_status": "OPEN: physical rho=1 source error remains an explicit missing input",
+      "combined_upstream_bound_N_beta": null,
+      "continuation_fits_upstream_allocation": null,
+      "continuation_sub_bound_N_beta": null,
+      "gate_budget_v4_edited": false,
+      "known_partial_error_sum_N": 8.999152980170087e-12,
+      "nine_component_order": [
+        "field_space_time",
+        "changed_history_UV_tail",
+        "baseline_low_subgap",
+        "upstream",
+        "between_node",
+        "arithmetic",
+        "covered_regions",
+        "energy_interpolation",
+        "phase_value"
+      ],
+      "physical_source_error_bound_N_beta": null,
+      "remaining_N_after_known_components": 1.1000847019829912e-11
+    },
+    "physical_upstream_N_beta": null,
+    "universe_digest": null,
+    "upstream_row_error": {
+      "combined_row_error_upper": null,
+      "combined_status": "OPEN: physical rho=1 source error remains an explicit missing input",
+      "continuation_row_error_upper": null,
+      "physical_source_row_error_upper": null
+    },
+    "v5_action_column_N_beta": null,
+    "v5_action_is_not_column_reconstruction": true
+  },
+  "v1_record_sha256": "997253e3996c6b3ef7d347c80d1e83e6ecb4772ca1eea1282495f2d760a5dc6e",
+  "v1_rewritten": false
+}

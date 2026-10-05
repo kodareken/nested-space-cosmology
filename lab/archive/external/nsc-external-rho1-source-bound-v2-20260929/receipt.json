@@ -1,0 +1,40 @@
+{
+  "bundle": "nsc_external_rho1_source_bound_v2_20260929",
+  "copied_on": "2026-10-05",
+  "files": [
+    {
+      "bytes": 2131,
+      "name": "docs/nsc-ks-rho1-source-bound-v2.md",
+      "sha256": "29f59805e2907853acc2381df420536d7ca473fdf2abff85260fdf4d3f1959f1"
+    },
+    {
+      "bytes": 16853652,
+      "name": "results/development/artifacts/nsc-ks-rho1-source-bound-v2.npz",
+      "sha256": "22eaf265a3cff2fb5a4cb6f8c972e31352a0ee4a12612631f0ac9cb480c662d6"
+    },
+    {
+      "bytes": 176246,
+      "name": "results/development/nsc-ks-rho1-source-bound-v2.json",
+      "sha256": "508d12acffe33d80849f5a07fa73f0fc3750dd5f2400beed4064901747224b57"
+    },
+    {
+      "bytes": 19443,
+      "name": "scripts/derive_nsc_ks_rho1_source_bound_v2.py",
+      "sha256": "c5c6bb5642f0f3a2c5313693a4fd064cc09bbb4f29bbaba464622adecfc2d635"
+    },
+    {
+      "bytes": 50764,
+      "name": "src/recursive_horizons/nsc_ks_rho1_source_bound_v2.py",
+      "sha256": "ebc78d71bcc9388979e460154cbf0723e17dab124f2d1b6af35a0553f8210658"
+    },
+    {
+      "bytes": 17701,
+      "name": "tests/test_nsc_ks_rho1_source_bound_v2.py",
+      "sha256": "88028cf4ed07c664ad45f771dd0599ff131fd78f89ebdcfd0249d74ada4b0aab"
+    }
+  ],
+  "note": "Copied before retiring a worktree whose .git pointer names a macOS path that is not present on this machine.",
+  "owner": "nsc-rho1-production-core worktree (macOS origin, git pointer to /Users/admin)",
+  "scope": "Byte copy of the only files present in this worktree and absent from the canonical repository and its pre-closure archive. The canonical repository carries v1 of the same quantity; this is a v2 successor recorded only in the mac worktree. Same paused gate campaign.",
+  "source_tree": "extra/BlackHoles-Infinity-Worktrees/nsc-rho1-production-core"
+}
