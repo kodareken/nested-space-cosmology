@@ -1,81 +1,82 @@
-# What the inner-horizon fix actually requires
+# The march crosses the inner horizon
 
-The pole structure is measured and the fix is identified. This records what
-the fix costs, because the cost is the thing that decides whether it is
-worth doing.
+The last commit recorded what the fix would cost. It has been done.
 
-## The fix
+## What changed
 
-The outgoing speed vanishes at both horizons. The code clears the pole at
-`r_plus` by evaluating the spinor jet on the horizon rather than dividing
-by the vanishing speed. **The same construction applies at `r_minus`**, and
-`_horizon_jet` has been generalised to take a radius so it can be built
-there. That part is done and is harmless: the default still builds it at
-`r_plus` and the curated suite is unchanged.
+The outgoing speed vanishes at both horizons, so the characteristic
+right-hand side carries a simple pole at each. The code cleared the one at
+`r_plus` by evaluating the spinor jet on the horizon rather than dividing by
+the vanishing speed. The same construction now runs at `r_minus`.
 
-Cutting the inward branch at `r_minus` and restarting it from that jet is
-the part that is not done.
+Three things, all defaulted off:
 
-## Why it was not done
+1. `allow_below_inner_horizon` threaded through `_rhs_characteristic`,
+   `_point_chart` and `vacuum_chart`, so the solver's right-hand side stops
+   refusing radii below the inner horizon when it is asked to.
+2. `_horizon_jet` takes a radius, defaulting to `r_plus`, and builds a
+   finite jet at the inner horizon.
+3. The inward branch is cut at `r_minus` and restarted from that jet, with
+   nodes near each horizon filled by Taylor so no branch starts at its own
+   singular point.
 
-Implementing the split surfaced a second requirement that the first hides.
-The characteristic right-hand side calls `_point_chart`, and `_point_chart`
-calls `vacuum_chart` **without the flag**. So even with a correct branch
-split, the integrator's right-hand side still refuses radii below
-`r_minus`, and it does so from inside the solver's step loop.
+## It works
 
-The chain that has to be threaded is:
+| lower edge | before | after |
+|---|---|---|
+| `1.0400` | ok | ok |
+| `0.7550` | ok | ok |
+| `0.7000` | step-size failure | **ok** |
+| `0.6000` | step-size failure | **ok** |
+| `0.5000` | step-size failure | **ok** |
 
-```
-scattering_mode  ->  _integrate_branch  ->  rhs closure
-                                           ->  _rhs_characteristic
-                                           ->  _point_chart
-                                           ->  vacuum_chart
-```
+`0.50` is well below the inner horizon at `0.754343`, and close to the shift's
+real limit at `Q^2/(2M) = 0.4808`, which the grid still refuses correctly.
 
-Four functions, the last two of them on the hot path of an adaptive ODE
-solver. That is a real refactor of core numerical code rather than a local
-edit.
+## Nothing moved for anyone who did not ask
 
-An earlier attempt at the split was **reverted** rather than left in place.
-It had a wrong filled-node count and still failed for want of the flag, and
-half-applied changes to the solver that produces every recorded family are
-not worth carrying. The curated suite confirms the revert: `368 passed,
-1 skipped`.
+The prepared packets for three configurations — `mu = 1.002` at centre
+`12`, `mu = 1.040` at centre `12`, and `mu = 1.040` at centre `3` — hash
+identically before and after the change. The combined digest is
+`91b4e51dc5504dc5934feed86b63bb0f` on both sides.
 
-## What is left, precisely
+The curated suite is unchanged at `368 passed, 1 skipped`.
 
-1. Thread `allow_below_inner_horizon` through `_point_chart` and
-   `_rhs_characteristic`, defaulting to off so the solver's behaviour is
-   unchanged for every caller that does not ask.
-2. Cut the inward branch at `r_minus` and restart it from the inner jet.
-3. Fill the nodes near `r_minus` by Taylor, as is already done near
-   `r_plus`, so no branch integrates into its own starting point.
-
-Steps 1 and 3 are mechanical. Step 2 is where the work is, and it is where a
-bug would be expensive, because every recorded family in this programme was
-produced by the path being changed.
+That check is the reason this was done as its own piece of work. The
+failure mode of a change to this path is not a loud crash; it is a recorded
+family that differs from the last one in the eighth digit and nobody
+notices for months. Two default-off flags and a branch split are only
+defensible with a bit-identity check attached.
 
 ## What this does not establish
 
-That the fix works. That the third region can be marched. That anything in
-it is a nest. None of that is claimed here, and the failure mode if the
-refactor goes wrong is a silently corrupted recorded family rather than a
-loud error.
+**That the third region contains anything.** The march now reaches it. That
+is not the same as there being something there to find.
 
-That is the argument for doing it as its own piece of work, with its own
-record, rather than folded into the end of a session.
+**That a march in it is meaningful.** The region below `r_minus` is static
+again in this geometry, which is a claim about the reference solution and not
+about what a sourced packet does in it. Nothing here tests that.
+
+**That the nesting iterates.** Still one chart, one child interval.
+
+The obvious next step is to march a packet with its edge below the inner
+horizon and look at what the mass function does there, which is the first
+thing in this line that would be a direct measurement in the third region
+rather than a reading of the reference chart. That has not been done and is
+not claimed.
 
 ## Scope
 
-A design note. **It does not measure the actual universe** and it changes
-no physics. One production function was generalised in a backward-compatible
-way and nothing else was altered.
+A production change to the horizon continuation. It does not measure the
+actual universe.
+
+The three threading changes are keyword-only and default to the previous
+behaviour. The branch split runs only when the grid actually reaches below
+`r_minus`, so the recorded family never takes it.
 
 ## Provenance
 
-- `lab/src/recursive_horizons/nsc_rn_source.py`: `_horizon_jet` takes an
-  optional radius, defaulting to `r_plus`
-- the reverted split is described here rather than committed
-- tests: `lab/tests/test_nsc_rn_third_region_reach.py` continues to pin that
-  the defaults still refuse
+- `lab/src/recursive_horizons/nsc_rn_source.py`
+- `lab/docs/nsc-rn-pole-structure.md` located the pole this clears
+- `lab/tests/test_nsc_rn_third_region_reach.py`, `23` passing, including the
+  default still refusing and no node being dropped by the split

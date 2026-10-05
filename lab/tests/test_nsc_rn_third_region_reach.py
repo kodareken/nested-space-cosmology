@@ -115,17 +115,26 @@ class TestTheRealObstructionIsNumerical:
     def test_it_integrates_down_to_the_inner_horizon(self, geometry, lower):
         self._packet(geometry, lower)
 
-    @pytest.mark.parametrize("lower", [0.70, 0.60])
-    def test_it_fails_below_it_on_stiffness(self, geometry, lower):
-        with pytest.raises(RuntimeError, match="step size"):
-            self._packet(geometry, lower)
+    @pytest.mark.parametrize("lower", [0.70, 0.60, 0.50])
+    def test_it_now_crosses_the_inner_horizon(self, geometry, lower):
+        """The branch is cut at r- and restarted from a jet there."""
+        self._packet(geometry, lower)
 
-    def test_the_boundary_is_the_horizon_itself(self, geometry):
-        r_minus = float(pg.action_model(geometry["mass"],
-                                         geometry["r_m"]).horizons["r_minus"])
-        self._packet(geometry, r_minus + 0.0007)
-        with pytest.raises(RuntimeError):
-            self._packet(geometry, r_minus - 0.05)
+    def test_the_split_starts_a_second_jet_at_the_inner_horizon(self):
+        assert "inner_jet" in SOURCE.read_text(encoding="utf-8")
+
+    def test_no_node_is_dropped_by_the_split(self, geometry):
+        """A silently dropped node is the failure mode this change risks."""
+        grid = pg.build_grid(geometry["mass"], r_m=geometry["r_m"], points=201,
+                             r_out=geometry["route"]["outer"], excision=0.60,
+                             allow_below_inner_horizon=True)
+        mode = source.scattering_mode(
+            np.asarray(grid["radius"], dtype=float), 1.0e-3,
+            pg.action_model(geometry["mass"], geometry["r_m"]),
+            allow_below_inner_horizon=True)
+        assert mode["nodes_dropped"] == 0
+        assert np.all(np.isfinite(mode["mode"]))
+        assert mode["mode"].shape == (2, grid["radius"].size)
 
     def test_the_note_says_this_one_is_real(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
@@ -148,11 +157,15 @@ class TestTheHorizonJetIsGeneralised:
         assert jet["radius"] == pytest.approx(inner)
         assert np.isfinite(jet["plus"]) and np.isfinite(jet["minus"])
 
-    def test_the_split_is_not_half_applied(self):
-        """A reverted change must leave no residue in the solver."""
-        text = SOURCE.read_text(encoding="utf-8")
-        body = text.split("def scattering_mode")[1]
-        assert "inner_jet" not in body
+    def test_the_default_still_refuses_inside_the_solver_loop(self, geometry):
+        """The flag is defaulted off even on the hot path."""
+        grid = pg.build_grid(geometry["mass"], r_m=geometry["r_m"], points=201,
+                             r_out=geometry["route"]["outer"], excision=0.60,
+                             allow_below_inner_horizon=True)
+        model = pg.action_model(geometry["mass"], geometry["r_m"])
+        with pytest.raises(ValueError, match="above the inner horizon"):
+            source.scattering_mode(np.asarray(grid["radius"], dtype=float),
+                                   1.0e-3, model)
 
 
 class TestTheGuardsRemainInTheSource:

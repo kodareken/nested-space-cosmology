@@ -329,8 +329,10 @@ def _pair_integrand(left, right, lapse, shift, radial_density, radius, derivativ
     return density, flux_plus, flux_minus, angular_scalar
 
 
-def _rhs_characteristic(model, radius, plus, minus, energy):
-    chart = _point_chart(model, radius)
+def _rhs_characteristic(model, radius, plus, minus, energy, *,
+                        allow_below_inner_horizon=False):
+    chart = _point_chart(model, radius,
+                         allow_below_inner_horizon=allow_below_inner_horizon)
     angular = chart["lapse"] * float(np.asarray(reference.angular_coupling(radius)))
     if abs(chart["speed_plus"]) < 1e-14 or abs(chart["speed_minus"]) < 1e-14:
         raise RuntimeError("characteristic speed vanished; step off the horizon before dividing")
@@ -426,7 +428,8 @@ def _continuation_gap(horizon, inner, grid):
     return gap
 
 
-def _integrate_branch(model, energy, jet, grid, indices, t_start, t_end, mode, rtol, atol):
+def _integrate_branch(model, energy, jet, grid, indices, t_start, t_end, mode, rtol, atol,
+                      *, allow_below_inner_horizon=False):
     if indices.size == 0:
         return 0
     plus0, minus0 = _spinor_taylor(jet, t_start)
@@ -434,7 +437,9 @@ def _integrate_branch(model, energy, jet, grid, indices, t_start, t_end, mode, r
     def rhs(radius, state):
         plus = state[0] + 1j * state[1]
         minus = state[2] + 1j * state[3]
-        d_plus, d_minus = _rhs_characteristic(model, radius, plus, minus, energy)
+        d_plus, d_minus = _rhs_characteristic(
+            model, radius, plus, minus, energy,
+            allow_below_inner_horizon=allow_below_inner_horizon)
         return [float(np.real(d_plus)), float(np.imag(d_plus)),
                 float(np.real(d_minus)), float(np.imag(d_minus))]
 
@@ -476,19 +481,52 @@ def scattering_mode(grid, energy, model, *, rtol=1.0e-7, atol=1.0e-9,
     gap = _continuation_gap(horizon, inner, grid)
     mode = np.empty((2, grid.size), dtype=complex)
     near = np.abs(grid - horizon) <= gap
+    outward_mask = grid > horizon + gap
+    inward_mask = grid < horizon - gap
     for index in np.flatnonzero(near):
         plus, minus = _spinor_taylor(jet, grid[index])
         mode[0, index] = plus
         mode[1, index] = minus
-    outward = np.flatnonzero(grid > horizon + gap)
-    inward = np.flatnonzero(grid < horizon - gap)
-    evaluations = _integrate_branch(
-        model, energy, jet, grid, outward, horizon + gap, float(grid[-1]), mode, rtol, atol,
-    )
+
+    inner_horizon = float(model.horizons["r_minus"])
+    covered = near | outward_mask | inward_mask
+    evaluations = 0
+
+    if float(grid[0]) < inner_horizon:
+        # The outgoing speed vanishes at r- as well, so the inward branch is
+        # cut there and restarted from a jet rather than integrated into the
+        # pole. Nodes near each horizon are filled by Taylor, as at r+, so no
+        # branch starts at its own singular point.
+        inner_gap = _continuation_gap(inner_horizon, float(grid[0]), grid)
+        inner_jet = _horizon_jet(model, energy, inner_horizon)
+        near_inner = np.abs(grid - inner_horizon) <= inner_gap
+        below = inward_mask & (grid < inner_horizon - inner_gap)
+        middle = inward_mask & ~near_inner & ~below
+        for index in np.flatnonzero(near_inner):
+            plus, minus = _spinor_taylor(inner_jet, grid[index])
+            mode[0, index] = plus
+            mode[1, index] = minus
+        evaluations += _integrate_branch(
+            model, energy, jet, grid, np.flatnonzero(middle), horizon - gap,
+            inner_horizon + inner_gap, mode, rtol, atol,
+        )
+        evaluations += _integrate_branch(
+            model, energy, inner_jet, grid, np.flatnonzero(below),
+            inner_horizon - inner_gap, float(grid[0]), mode, rtol, atol,
+            allow_below_inner_horizon=True,
+        )
+    else:
+        evaluations += _integrate_branch(
+            model, energy, jet, grid, np.flatnonzero(inward_mask),
+            horizon - gap, float(grid[0]), mode, rtol, atol,
+        )
+
     evaluations += _integrate_branch(
-        model, energy, jet, grid, inward, horizon - gap, float(grid[0]), mode, rtol, atol,
+        model, energy, jet, grid, np.flatnonzero(outward_mask),
+        horizon + gap, float(grid[-1]), mode, rtol, atol,
+        allow_below_inner_horizon=allow_below_inner_horizon,
     )
-    filled = int(np.count_nonzero(near) + outward.size + inward.size)
+    filled = int(np.count_nonzero(covered))
     if filled != grid.size or not np.isfinite(mode).all():
         raise RuntimeError("radial nodes were dropped during horizon continuation")
     initial = np.array([jet["plus"], jet["minus"]], dtype=complex)
