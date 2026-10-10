@@ -85,6 +85,43 @@ examined elsewhere. The source record states the exact equations and reading
 boundaries. A moving boundary, a physical exchange law for the old composite,
 and nonspherical parent matching remain different open connections.
 
+### Moving boundaries and a parent with spherical collars
+
+The [third atlas](../lab/docs/nsc-cosmological-atlas-v3.md) extends that reading
+before admitting another evolution. Lobo-Crawford's **general** equation (8)
+requires zero flux jump for a fixed pure-tension wall. Its contraction with a
+perfect radiation fluid and a vacuum exterior forces zero relative speed;
+the static-fluid equation (26) is not applied to FLRW. The distinct published
+de Sitter wall avoids this particular flux obstruction. The
+[moving-boundary owner](../lab/docs/nsc-atlas-moving-boundaries.md) records
+signs, fixed inputs, finite domain and independent checks.
+
+| Source/version and reading depth | Borrowed mathematics | Repository use and unresolved connection |
+|---|---|---|
+| [Aguirre-Johnson, gr-qc/0508093v2](https://arxiv.org/html/gr-qc/0508093v2), sections II.1-II.3, equations 12-13 and causal-patch discussion; introduction/perturbation conclusions | Signed vacuum-wall junction and classification of allowed patches | Independent check on 0711.2198's wall model. The finite segment is not a formation trajectory or a stability calculation; its chart time is not an observer age. |
+| [Chrusciel-Corvino-Isenberg, 0909.1101v1](https://arxiv.org/html/0909.1101v1), sections 1-3, Theorems 1.1/2.1 and obstruction balance; section 4 propositions inspected | Many positive-mass scalar-flat AE bodies with retained compact interiors, sufficiently large separation and one shared Schwarzschild outer end | Unequal Schwarzschild bodies supply a separate parent family with exact spherical collars. No numerical threshold certifies BL separation 12; the theorem does not attach a moving wall. |
+| [Chrusciel-Corvino-Isenberg, 1004.1355v1](https://arxiv.org/html/1004.1355v1), Theorem 1/Corollary 1.1 and section 3.1 balance | Non-time-symmetric many-body construction preserving smooth interior metric/extrinsic-curvature data, with vacuum AE gluing ends and timelike ADM four-momenta | Removes a needless permanent time-symmetry restriction. Complete source-supported body data must be supplied; an ideal delta-layer does not automatically satisfy the smooth-data assumptions. |
+| [Pook-Kolb-Giulini, 1809.00935v1](https://arxiv.org/html/1809.00935v1), sections 2/2.1 equations 1-10 and section 3.2 equations 11-13 | Numerical Corvino-type annular constraint correction and mass compatibility | Existing method available if an observable needs transition geometry. Modifying the outer end does not make the individual BL throats spherical; plain cutoff interpolation does not solve the constraints. |
+| [Chrusciel-Delay, gr-qc/0301073v2](https://arxiv.org/pdf/gr-qc/0301073v2), Theorem 8.6, section 8.7 Theorem 8.15 and section 8.9; full proof analysis not audited | Distinct end replacement, localized no-KID gluing and charge-balanced many-Kerr constructions | Retain each theorem's decay, parity and kernel assumptions. Their weighted estimates have not been certified for a selected project annulus. |
+| [Chrusciel-Isenberg-Pollack, gr-qc/0403066v2](https://arxiv.org/html/gr-qc/0403066v2), equations 1.1-1.6 and Theorem 1.1 | Localized vacuum neck construction when both selected regions have trivial KID kernel | Exact axisymmetric BL has a rotational KID and fails this sufficient hypothesis. This is not a general obstruction to gluing; the balanced N-body route remains available. |
+| [Hintz, 2210.13960v1](https://arxiv.org/pdf/2210.13960v1), introduction/Theorems 1.1-1.2 and adjacent qualification; detailed proof/section 6.2 unread | Small-body insertion into a no-KID background, with controlled limiting behaviour | Separate scale-dependent route; convergence to an inserted geometry is not automatically exact collar preservation. The cited Kerr exception permits deep-interior constraint violation and is not imported as an everywhere-vacuum result. |
+
+The [parent-gluing note](../lab/docs/nsc-atlas-parent-gluing.md) also records
+[gr-qc/0203053v3](https://arxiv.org/html/gr-qc/0203053v3), sections 2 and 4,
+and the full [one-page erratum](https://homepage.univie.ac.at/piotr.chrusciel/papers/cs/erratum_proof.pdf).
+The erratum withdraws section 5's generic positive-mass bridge-addition argument;
+it does not withdraw the separate symmetric many-Schwarzschild construction.
+The later N-body theorem is the atlas route. Original Corvino and
+Blau-Guendelman-Guth papers remain attributed through the inspected primary
+sources, without a claim to have independently read their complete proofs.
+
+The focused search covered moving radiation walls and flux, signed vacuum
+shells, BL and N-body gluing, local KID restrictions, successors and errata.
+No global shell evolution, gluing PDE or matter-layer regularity theorem was
+computed or verified. The remaining interface is complete Cauchy data on the
+correct retained side with a suitable source class and finite domain of
+dependence. The bounded search does not establish priority.
+
 ### Successor and challenge search
 
 The atlas also uses [Ansoldi–Merali–Guendelman, 1801.04539v1](https://arxiv.org/html/1801.04539v1),

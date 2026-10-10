@@ -13661,13 +13661,13 @@
       "sha256": "0411bdfd4994e02e216bf1318bb722e74caa11e8389e91fd074ce6062c9189f1"
     },
     {
-      "bytes": 183663,
+      "bytes": 183964,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
       "original_git_blob": "5dee4ac6c9fb48e2a7bda86e78c54acb0fe416f3",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "lab/docs/active-code-map.md",
-      "sha256": "4329cf9b2a228d4f9741ff362ca63c0ef7012c7b903f7c6dc262fb1c04df0b2a"
+      "sha256": "b74e267d6b71b46e03aa53570ac72ee2d04c3cec0cdea8a93bb2110639648262"
     },
     {
       "bytes": 9911,
@@ -13803,13 +13803,13 @@
       "sha256": "dc2fcb054f8a19e7795f816f160ba913a46e08660fc54a9bac523772f2be804a"
     },
     {
-      "bytes": 99140,
+      "bytes": 99775,
       "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
       "original_git_blob": "2989149fe7cc341d210af756730bb9f3ba4ebbec",
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "lab/docs/claim-ledger.md",
-      "sha256": "e65187a65397eea1d25583cb6ac4d27e13883d6be25c2f703df0ff3dc721d05a"
+      "sha256": "25e149bd382ba1249f47e721741951eb176eacce3742e73e00e4fc7a3a648176"
     },
     {
       "bytes": 16589,
@@ -13903,6 +13903,20 @@
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
       "path": "lab/docs/nsc-atlas-junction-sources.md",
       "sha256": "629f3b18e49f436060fde1e72359e9ec4c271f5e64d5a60da41eb50dd4f027db"
+    },
+    {
+      "bytes": 8899,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/docs/nsc-atlas-moving-boundaries.md",
+      "sha256": "fbc8dfa5c85a20e224ecc1d592a97da6e02befdbead927c5681efe74762c1ae8"
+    },
+    {
+      "bytes": 12355,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/docs/nsc-atlas-parent-gluing.md",
+      "sha256": "da2d9f84537918d2466cf4dbd6145f6cf9f34f08b56b52c10d48e50620bfe435"
     },
     {
       "bytes": 6003,
@@ -14141,6 +14155,13 @@
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
       "path": "lab/docs/nsc-cosmological-atlas-v2.md",
       "sha256": "ef947af8c678535fd63efef8fbb26bf09a0b8136dbe96bde665cb0d981261de1"
+    },
+    {
+      "bytes": 6154,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/docs/nsc-cosmological-atlas-v3.md",
+      "sha256": "da7869cac76529426819a059db12e5aee4af173181a0d2d02d77b1f484f2a309"
     },
     {
       "bytes": 8633,
@@ -74846,6 +74867,69 @@
       "sha256": "0ece42ceba02cc77e3ba86e419f803dc4aec8dbf544b8293e2f7a81b5d9b53b6"
     },
     {
+      "bytes": 41817,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/atlas.json",
+      "sha256": "08786b76e9ca199abc3aee914a2f004a93abe3f64285e7ca1774febfb82e9bdc"
+    },
+    {
+      "bytes": 5410,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/manifest.json",
+      "sha256": "0a84ac8f186f07b980655c38e485d76ab0fb5b6111bd02a14664cf24d03fd95e"
+    },
+    {
+      "bytes": 210922,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/map.png",
+      "sha256": "5745acb655b20186c6fa3fea80e5f5f50e995d846cf240db46536de1c729a2a0"
+    },
+    {
+      "bytes": 9012,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/map.svg",
+      "sha256": "5a8eca25b0d21156106d1fc5f1c365459a9659b9a40f22b2a7207feb0b93d97a"
+    },
+    {
+      "bytes": 17854,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/moving-boundary.json",
+      "sha256": "caa87bf96883be75e861380047cf6a37ae0dbe3daaf13e8a8f8aeef1f50cd488"
+    },
+    {
+      "bytes": 116197,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/moving-boundary.png",
+      "sha256": "85afea8767d08e2080a36175294f3b342c0514b56af3abc3b3dc889f869fe475"
+    },
+    {
+      "bytes": 81544,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/moving-boundary.svg",
+      "sha256": "6884d2bb75eb56866256bb7f6df7089a2287e93c331e2b0110e5d14eef50a629"
+    },
+    {
+      "bytes": 2138,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/narrative.md",
+      "sha256": "44c0cc27b4625b21983068355288334e82690af62b71711a24dfa18d1aae4eca"
+    },
+    {
+      "bytes": 2660,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/results/development/nsc-cosmological-atlas-v3/parent-gluing.json",
+      "sha256": "074c3e2fbf28d331824b97d769802f03be076e2b00a24201fdab34fd4f9cdcad"
+    },
+    {
       "bytes": 5889,
       "original_git_blob": "e7036ffa16c60868e81d9d8fd531ff9ba24c81ed",
       "original_sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622",
@@ -99446,6 +99530,13 @@
       "sha256": "1e4f80f21d1a43a18f7d0a661e957a2e4db2d7ffb8df957f71694ffac681dc28"
     },
     {
+      "bytes": 21028,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/scripts/derive_nsc_cosmological_atlas_v3.py",
+      "sha256": "02fdbd9a00b40813e69f25513c37d81cd7818551b028b23665aaf30de3e0c925"
+    },
+    {
       "bytes": 10406,
       "original_git_blob": "1eafd5b05453459f3f394a9af2c6f05605a72bfe",
       "original_sha256": "428571488a9295230a2345cc12cc6963bb3b9764decf9ea4bc5ea565cb3f6897",
@@ -102253,6 +102344,13 @@
       "sha256": "b53a875b0e3cb437adaca57fbf09dcb2c67146e01d21f0854fb7202aa4c368c4"
     },
     {
+      "bytes": 14598,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/src/recursive_horizons/nsc_atlas_moving_boundaries.py",
+      "sha256": "d5b14a73696da602f98b2f8fa734d54bfd3d7fa2e335d6fb8af539d0bb19d734"
+    },
+    {
       "bytes": 11824,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
@@ -104684,6 +104782,13 @@
       "sha256": "a42be224ca8a5d33089e7c9b1593858d0a72283093575a6844b984055fd1529e"
     },
     {
+      "bytes": 6817,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/tests/test_nsc_atlas_moving_boundaries.py",
+      "sha256": "001f3dda89f8e343992415d0ddf83c85496de897f950d2efc5b7b873506b94ad"
+    },
+    {
       "bytes": 7216,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
@@ -104836,6 +104941,13 @@
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
       "path": "lab/tests/test_nsc_cosmological_atlas_v2.py",
       "sha256": "f3ac4ec198d48a4dc337ee17c302d8a2e06d0e1a01764b79ca819091b80789a9"
+    },
+    {
+      "bytes": 3379,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "3a1b436a00968406906b45b653d97d36cfcce861",
+      "path": "lab/tests/test_nsc_cosmological_atlas_v3.py",
+      "sha256": "10c58397795f94439c234d6ecc7ebc9a73dde39decf3ff264efd34a0915a1751"
     },
     {
       "bytes": 22417,

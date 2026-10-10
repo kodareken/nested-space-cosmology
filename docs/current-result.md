@@ -2,15 +2,22 @@
 
 ## Exterior-first atlas, 10 October 2026
 
-The [second atlas](../lab/docs/nsc-cosmological-atlas-v2.md) now supplies a
-shared Brill–Lindquist spatial parent for two unequal holes. It also decides
-one separate spherical compatibility question: a constant-tension wall cannot
-join a comoving closed-radiation region to fixed-mass Schwarzschild over an
-open interval of changing radius. This is an application of known junction
-laws, with an algebraic obstruction and independent checks. It neither glues
-that child into the nonspherical parent nor excludes moving walls or other
-interiors. The [illustrated manuscript draft](../paper/atlas-working-draft.md)
-develops this argument; existing released papers and atlas v1 remain frozen.
+The [third atlas](../lab/docs/nsc-cosmological-atlas-v3.md) extends the source
+screen: conservation forces a pure constant-tension wall to remain comoving
+with positive-density radiation when the exterior is vacuum. Motion alone
+therefore cannot evade v2's incompatibility. A separate published de Sitter /
+Schwarzschild wall supplies a finite expanding segment, with signed normals
+and local proper time retained. This imports known dynamics, not a new mechanism.
+
+A published many-body gluing theorem supplies an alternative shared-parent
+family with two unequal, exactly spherical Schwarzschild body regions at
+sufficiently large separation. No numerical separation threshold or replacement
+metric for the [v2 Brill-Lindquist slice](../lab/docs/nsc-cosmological-atlas-v2.md)
+is claimed. The remaining connection is the wall's complete source-supported
+Cauchy data, correct retained side and regularity appropriate to the chosen
+gluing theorem. The [illustrated manuscript v3](../paper/atlas-working-draft-v3.md)
+develops this argument. Prior atlas bundles, their sources and released papers
+remain frozen; formation, stability and a shared observer response remain open.
 
 The active objective is to map possible parent regions, black-hole transitions,
 children, siblings and descendants, then investigate their local consequences.
