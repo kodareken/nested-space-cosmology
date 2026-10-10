@@ -100,7 +100,7 @@ signs, fixed inputs, finite domain and independent checks.
 |---|---|---|
 | [Aguirre-Johnson, gr-qc/0508093v2](https://arxiv.org/html/gr-qc/0508093v2), sections II.1-II.3, equations 12-13 and causal-patch discussion; introduction/perturbation conclusions | Signed vacuum-wall junction and classification of allowed patches | Independent check on 0711.2198's wall model. The finite segment is not a formation trajectory or a stability calculation; its chart time is not an observer age. |
 | [Chrusciel-Corvino-Isenberg, 0909.1101v1](https://arxiv.org/html/0909.1101v1), sections 1-3, Theorems 1.1/2.1 and obstruction balance; section 4 propositions inspected | Many positive-mass scalar-flat AE bodies with retained compact interiors, sufficiently large separation and one shared Schwarzschild outer end | Unequal Schwarzschild bodies supply a separate parent family with exact spherical collars. No numerical threshold certifies BL separation 12; the theorem does not attach a moving wall. |
-| [Chrusciel-Corvino-Isenberg, 1004.1355v1](https://arxiv.org/html/1004.1355v1), Theorem 1/Corollary 1.1 and section 3.1 balance | Non-time-symmetric many-body construction preserving smooth interior metric/extrinsic-curvature data, with vacuum AE gluing ends and timelike ADM four-momenta | Removes a needless permanent time-symmetry restriction. Complete source-supported body data must be supplied; an ideal delta-layer does not automatically satisfy the smooth-data assumptions. |
+| [Chrusciel-Corvino-Isenberg, 1004.1355v1](https://arxiv.org/html/1004.1355v1), Theorem 1/Corollary 1.1 and section 3.1 balance; v4 rereads Theorem 1's end inputs, following multiple-end paragraph and deformation support | Non-time-symmetric many-body construction for smooth vacuum AE ends with timelike ADM four-momenta | V3 correctly withheld direct use of the global smooth-body corollary for a delta-layer. V4 instead applies Theorem 1 only to smooth vacuum ends, then reattaches checked piecewise-smooth bodies over identical open overlaps. The source constraints remain local and unchanged; no global shell evolution theorem is imported. |
 | [Pook-Kolb-Giulini, 1809.00935v1](https://arxiv.org/html/1809.00935v1), sections 2/2.1 equations 1-10 and section 3.2 equations 11-13 | Numerical Corvino-type annular constraint correction and mass compatibility | Existing method available if an observable needs transition geometry. Modifying the outer end does not make the individual BL throats spherical; plain cutoff interpolation does not solve the constraints. |
 | [Chrusciel-Delay, gr-qc/0301073v2](https://arxiv.org/pdf/gr-qc/0301073v2), Theorem 8.6, section 8.7 Theorem 8.15 and section 8.9; full proof analysis not audited | Distinct end replacement, localized no-KID gluing and charge-balanced many-Kerr constructions | Retain each theorem's decay, parity and kernel assumptions. Their weighted estimates have not been certified for a selected project annulus. |
 | [Chrusciel-Isenberg-Pollack, gr-qc/0403066v2](https://arxiv.org/html/gr-qc/0403066v2), equations 1.1-1.6 and Theorem 1.1 | Localized vacuum neck construction when both selected regions have trivial KID kernel | Exact axisymmetric BL has a rotational KID and fails this sufficient hypothesis. This is not a general obstruction to gluing; the balanced N-body route remains available. |
@@ -117,10 +117,50 @@ sources, without a claim to have independently read their complete proofs.
 
 The focused search covered moving radiation walls and flux, signed vacuum
 shells, BL and N-body gluing, local KID restrictions, successors and errata.
-No global shell evolution, gluing PDE or matter-layer regularity theorem was
-computed or verified. The remaining interface is complete Cauchy data on the
-correct retained side with a suitable source class and finite domain of
-dependence. The bounded search does not establish priority.
+No global shell evolution, gluing PDE or matter-layer evolution theorem was
+computed or verified. V3 left complete Cauchy data on the correct retained side
+and a justified source class open; the scoped v4 application below supplies one
+initial-data interface and its finite vacuum observer domain. The bounded
+search does not establish priority.
+
+### First sourced interior and observer domain, atlas v4
+
+The [fourth atlas](../lab/docs/nsc-cosmological-atlas-v4.md) connects the fixed
+v3 wall to a regular cap and a smooth vacuum AE end. The new reading supplies
+the spherical initial-data equations, the shell projection and the locality
+argument needed to use gluing outside the sourced body.
+
+| Source/version and reading depth | Reusable result | Repository use and remaining boundary |
+| --- | --- | --- |
+| [Kuchar, gr-qc/9403003v1](https://arxiv.org/html/gr-qc/9403003v1), section 2.1 equations 11–13; sections 2.2, 3.1–3.2 and 4.1 equations 14–18, 23, 27–33, 81–82 | Spherical spatial metric, extrinsic curvature, constraints, Schwarzschild mass identity, tortoise and null coordinates | Explicit spacelike vacuum transition and regular bridge; independent radial null observer check. The full canonical reduction is not re-derived or claimed. |
+| [Hajicek, gr-qc/9708008v2](https://arxiv.org/html/gr-qc/9708008v2), section 2 stress/constraint definitions and section 4.1 frame boosts | Shell-frame projection and boost conventions | Project the fixed wall onto the chosen initial slice, including the delta-function Jacobian. Its vacuum-only reduced shell system is not imported for the de Sitter bulk. |
+| [Miao, math-ph/0212025v1](https://arxiv.org/html/math-ph/0212025v1), section 2 equation 3 | Scalar-curvature corner term expressed through the normal derivative jump | Independent check on the Hamiltonian delta coefficient. No smoothing theorem or positive-mass conclusion for our non-time-symmetric shell is inferred. |
+| [Mars-Senovilla, gr-qc/0201054v1](https://arxiv.org/html/gr-qc/0201054v1), sections 4–5, equations 54, 67, 70–71 and 79 | Distributional curvature and matching relations | Piecewise-smooth source constraint interpretation and absence of a new layer across identical open overlaps. Not a global Einstein–matter evolution theorem. |
+| [Sbierski, 1309.7591v2](https://arxiv.org/html/1309.7591v2), definitions and section 2 Theorems 2.6–2.8; full proofs not rederived | Smooth vacuum local existence, common developments and geometric uniqueness | A finite right-parent observer domain has identical vacuum geometry for identical retained initial data. Application stays in the smooth vacuum region, away from the wall; independent fields/states require their own matching. |
+
+The [slice owner](../lab/docs/nsc-atlas-connection-slice.md) supplies fixed
+inputs, analytic expressions and independent constraint checks. The
+[gluing owner](../lab/docs/nsc-atlas-connection-gluing.md) distinguishes end-only
+gluing from a global smooth-body assumption and counts the retained ends.
+The [observer owner](../lab/docs/nsc-atlas-connection-observer.md) fixes the
+static worldline, retained radius and open proper-time window before calculation.
+
+The reading of [Aguirre-Johnson, gr-qc/0508093v2](https://arxiv.org/html/gr-qc/0508093v2)
+was extended through section II.3, figures 9–10 and footnote 6 for the
+anti-trapped/past-incompleteness caution. A regular spatial centre does not
+show that the inflating body formed from a nonsingular parent past. The
+earlier [0711.2198v1](https://arxiv.org/html/0711.2198v1) formation discussion
+provides the same distinction; no new formation or perturbation result is imported.
+
+Search coverage for this step included spherical Cauchy data for vacuum shells,
+boosted surface sources, distributional junction constraints, vacuum-end gluing,
+Schwarzschild domains of dependence and the cited formation obstructions.
+This is a bounded equation/theorem-level integration search. It does not
+certify priority or survey every successor. The closed project interface is
+one sourced initial slice with a justified parent existence application;
+the remaining physical questions are causal completion, stability, formation,
+and an observable or independently specified field state that separates the
+locally equivalent far assemblies.
 
 ### Successor and challenge search
 

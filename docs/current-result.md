@@ -2,22 +2,36 @@
 
 ## Exterior-first atlas, 10 October 2026
 
-The [third atlas](../lab/docs/nsc-cosmological-atlas-v3.md) extends the source
-screen: conservation forces a pure constant-tension wall to remain comoving
-with positive-density radiation when the exterior is vacuum. Motion alone
-therefore cannot evade v2's incompatibility. A separate published de Sitter /
-Schwarzschild wall supplies a finite expanding segment, with signed normals
-and local proper time retained. This imports known dynamics, not a new mechanism.
+The [fourth atlas](../lab/docs/nsc-cosmological-atlas-v4.md) supplies one explicit
+sourced initial slice: a regular flat de Sitter cap, the fixed-tension v3 wall,
+a vacuum Schwarzschild slicing transition, a regular bridge and an exact AE
+end. Bulk constraints and shell energy/momentum jumps pass; independent metric
+derivatives check the vacuum calculation. The source is held fixed. The cap is
+a finite spatial ball, not an assumed closed S3 universe.
 
-A published many-body gluing theorem supplies an alternative shared-parent
-family with two unequal, exactly spherical Schwarzschild body regions at
-sufficiently large separation. No numerical separation threshold or replacement
-metric for the [v2 Brill-Lindquist slice](../lab/docs/nsc-cosmological-atlas-v2.md)
-is claimed. The remaining connection is the wall's complete source-supported
-Cauchy data, correct retained side and regularity appropriate to the chosen
-gluing theorem. The [illustrated manuscript v3](../paper/atlas-working-draft-v3.md)
-develops this argument. Prior atlas bundles, their sources and released papers
-remain frozen; formation, stability and a shared observer response remain open.
+The published many-body theorem acts only on the smooth vacuum end. Exact open
+overlaps preserve the sourced remainder. This justifies a common-parent
+initial-data existence family for body A, M_A/ell=0.4, and an ordinary vacuum
+Schwarzschild body B, M_B/ell=0.6. B's other end remains: two total AE ends, one
+designated common parent end. B has no established cosmological child. The
+connector metric and numerical separation threshold are not supplied, and the
+[v2 Brill-Lindquist slice](../lab/docs/nsc-cosmological-atlas-v2.md) is unchanged.
+
+For an assembly retaining A's right vacuum data through R_cut/ell=4 and an open
+overlap, a static observer at R_obs/ell=1.6 sees the same local vacuum geometry
+as any other assembly with those retained data for
+0 <= tau_obs/ell < 2.4812627896. This is an open local proper-time window and a
+demonstrated geometric degeneracy, not an arrival prediction or shared cosmic
+age. Field and quantum states require their own initial data.
+
+The [illustrated manuscript v4](../paper/atlas-working-draft-v4.md) and
+[source-bound records](../lab/results/development/nsc-cosmological-atlas-v4/narrative.md)
+develop the connection and its limits. Formation, global shell evolution and
+stability remain open. The v3 conservation obstruction for a moving
+radiation/fixed-tension/vacuum pairing and the independent branching, mouth and
+response routes remain in the map. All earlier atlas bundles and sources stay
+frozen. This closes one project interface using borrowed mathematics, without
+a new-to-world mechanism claim.
 
 The active objective is to map possible parent regions, black-hole transitions,
 children, siblings and descendants, then investigate their local consequences.

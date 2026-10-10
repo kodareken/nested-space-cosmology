@@ -126,7 +126,18 @@ The [v3 application](../lab/docs/nsc-cosmological-atlas-v3.md) closes that
 motion-only question through imported conservation, and imports a distinct
 signed de Sitter wall as a finite control. Published N-body gluing now supplies
 a separate parent family with spherical collars; recreating its existence
-proof or elliptic solver is not the next research target. The missing connection
-is complete wall-body Cauchy data, the chosen Schwarzschild side, and a source
+proof or elliptic solver is not the next research target. Its missing connection
+was complete wall-body Cauchy data, the chosen Schwarzschild side, and a source
 regularity class covered by the theorem. Neither matching a mass parameter nor
 passing a local shell check closes that interface.
+
+The [v4 application](../lab/docs/nsc-cosmological-atlas-v4.md) supplies that
+interface in one model: a regular cap, fixed wall, correct vacuum bridge and
+AE end with bulk and distributional constraints checked. The gluing theorem
+acts on smooth vacuum ends only; identical open overlaps preserve the sourced
+body. This is an application of published mathematics plus local constraint
+matching, not a new existence theorem. A finite observer domain demonstrates
+geometric degeneracy for assemblies sharing the retained vacuum initial data.
+Global shell evolution, formation, stability and an observable that breaks
+that equivalence remain separate admission questions. No global smoothness
+requirement is imposed on the wall merely to use the end-only theorem.

@@ -21,16 +21,18 @@ background/perturbation matching remains subsequent work.
 ## Foundational manuscript
 
 The current working extension is
-[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v3](../paper/atlas-working-draft-v3.md).
+[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v4](../paper/atlas-working-draft-v4.md).
 It is an illustrated, unpublished draft in the companion research direction,
 not a new release or a replacement for either frozen edition below. It combines
-published two-hole spatial data, source conservation, a signed moving vacuum
-wall and a separate parent existence theorem. The wall-parent Cauchy interface
-and physical observer response stay open. The
-[atlas v3 owner](../lab/docs/nsc-cosmological-atlas-v3.md) routes its figures,
+published two-hole spatial data, source conservation and a signed moving wall
+with an explicit sourced initial slice. End-only gluing supplies a justified
+common-parent existence family; a finite vacuum observer domain supplies a
+geometric degeneracy. Formation, global shell evolution and stability stay
+open. The [atlas v4 owner](../lab/docs/nsc-cosmological-atlas-v4.md) routes its figures,
 records, source bindings and independent checks. The
-[v2 working manuscript](../paper/atlas-working-draft.md) remains sealed with
-its own evidence. The catalog retains its two
+[v2 working manuscript](../paper/atlas-working-draft.md) and
+[v3 manuscript](../paper/atlas-working-draft-v3.md) remain sealed with
+their own evidence. The catalog retains its two
 released document roles until an intentional manuscript release is ready.
 
 [Nested-Space Cosmology, v0.26.0 (43-page PDF)](../paper/nested-space-cosmology.pdf) ·

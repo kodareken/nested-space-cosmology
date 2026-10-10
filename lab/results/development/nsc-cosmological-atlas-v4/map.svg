@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1460" viewBox="0 0 1440 1460" role="img" aria-label="The first interior-to-parent connection">
+<title>The first interior-to-parent connection</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1440" height="1460" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">The first interior-to-parent connection</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Atlas v4 | A verified sourced body, a borrowed parent construction and a finite observer domain</text>
+<rect x="45" y="135" width="1350" height="250" rx="18" fill="#112d42" stroke="#6397b1"/>
+<text x="78" y="181" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#a2e0f4" font-weight="600">COMMON OUTER PARENT</text>
+<text x="78" y="219" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#dce8f3" font-weight="normal">Two selected vacuum ends joined by the published many-body existence theorem.</text>
+<text x="78" y="254" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#b9cedc" font-weight="normal">No global spherical symmetry; no numerical separation threshold or explicit connector metric.</text>
+<text x="78" y="313" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#92dfc4" font-weight="600">A: sourced body   M / ell = 0.4</text>
+<text x="810" y="313" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#efca89" font-weight="600">B: vacuum body   M / ell = 0.6</text>
+<text x="78" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">End-only gluing leaves the verified wall untouched.</text>
+<text x="810" y="350" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Its other end stays; child still unresolved.</text>
+<rect x="45" y="425" width="1350" height="335" rx="18" fill="#163730" stroke="#6fb59a"/>
+<text x="78" y="468" font-family="Segoe UI,Arial,sans-serif" font-size="24" fill="#92dfc4" font-weight="600">A: AN EXPLICIT SPACELIKE CONNECTION</text>
+<circle cx="200" cy="560" r="51" fill="#0b2421" stroke="#92dfc4" stroke-width="3"/>
+<text x="90" y="652" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#edf6f1" font-weight="600">Regular cap</text>
+<text x="90" y="686" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#b9dace" font-weight="normal">flat de Sitter ball</text>
+<path d="M 265 560 L 460 560" stroke="#86c5ad" stroke-width="3"/>
+<circle cx="525" cy="560" r="43" fill="#0b2421" stroke="#92dfc4" stroke-width="3"/>
+<text x="415" y="652" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#edf6f1" font-weight="600">Moving wall</text>
+<text x="415" y="686" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#b9dace" font-weight="normal">fixed positive tension</text>
+<path d="M 590 560 L 785 560" stroke="#86c5ad" stroke-width="3"/>
+<circle cx="850" cy="560" r="26" fill="#0b2421" stroke="#92dfc4" stroke-width="3"/>
+<text x="740" y="652" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#edf6f1" font-weight="600">Vacuum bridge</text>
+<text x="740" y="686" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#b9dace" font-weight="normal">minimum R / ell = 0.8</text>
+<path d="M 915 560 L 1110 560" stroke="#86c5ad" stroke-width="3"/>
+<circle cx="1175" cy="560" r="60" fill="#0b2421" stroke="#92dfc4" stroke-width="3"/>
+<text x="1065" y="652" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#edf6f1" font-weight="600">Parent end</text>
+<text x="1065" y="686" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#b9dace" font-weight="normal">exact Schwarzschild</text>
+<text x="78" y="729" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Bulk constraints + shell energy and momentum jumps checked. Diagrammatic circles are not an embedding.</text>
+<rect x="45" y="800" width="650" height="253" rx="18" fill="#162f49" stroke="#70a8d0"/>
+<text x="72" y="843" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#a2d9ff" font-weight="600">WHAT A PARENT OBSERVER CAN INFER</text>
+<text x="72" y="883" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">Retain 2M &lt; R &lt; 10M; observe at R = 4M.</text>
+<text x="72" y="923" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">Same local vacuum metric for 0 &lt;= tau / ell &lt; 2.481263.</text>
+<text x="72" y="964" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Different distant assemblies are indistinguishable</text>
+<text x="72" y="997" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">inside this domain. This does not predict an arrival.</text>
+<rect x="735" y="800" width="660" height="253" rx="18" fill="#352d23" stroke="#c6a16c"/>
+<text x="762" y="843" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#f0ca8c" font-weight="600">WHAT REMAINS A RESEARCH QUESTION</text>
+<text x="762" y="884" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#dce8f3" font-weight="normal">Formation, causal completion and stability</text>
+<text x="762" y="924" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">Second child, descendants and state inheritance</text>
+<text x="762" y="964" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">A distinguishing observable beyond this window</text>
+<text x="762" y="1004" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">No new descent or sibling signal is asserted.</text>
+<text x="55" y="1110" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#a2e0f4" font-weight="600">OTHER ROUTES STAY OPEN</text>
+<rect x="45" y="1143" width="430" height="156" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="67" y="1182" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#c9aeea" font-weight="600">Multiple daughters</text>
+<text x="67" y="1222" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">One-hole branching geometry</text>
+<text x="67" y="1258" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#afbfca" font-weight="normal">formation microphysics unresolved</text>
+<rect x="505" y="1143" width="430" height="156" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="527" y="1182" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#c9aeea" font-weight="600">Communicating mouths</text>
+<text x="527" y="1222" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Charged semiclassical constructions</text>
+<text x="527" y="1258" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#afbfca" font-weight="normal">separate states and assumptions</text>
+<rect x="965" y="1143" width="430" height="156" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="987" y="1182" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#c9aeea" font-weight="600">Exterior response</text>
+<text x="987" y="1222" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Finite memory and equivalence maps</text>
+<text x="987" y="1258" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#afbfca" font-weight="normal">physical coupling still required</text>
+<text x="55" y="1353" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#a2e0f4" font-weight="normal">Attachment / descent / causal influence / correlation are different relations.</text>
+<text x="55" y="1394" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#b8cbd8" font-weight="normal">An initial-data connection is established in one model. It is not a formation history or a cosmic matter budget.</text>
+</svg>
