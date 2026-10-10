@@ -162,6 +162,35 @@ the remaining physical questions are causal completion, stability, formation,
 and an observable or independently specified field state that separates the
 locally equivalent far assemblies.
 
+### Interior causal map, atlas v5
+
+The [fifth atlas](../lab/docs/nsc-cosmological-atlas-v5.md) imports the known
+isolated completion before drawing causal arrows. The source and the v4 slice
+remain fixed. It locates the observers in that history; it does not solve the
+glued many-body evolution or select a new formation mechanism.
+
+| Source/version and reading depth | Reusable mathematics | Use, assumptions and unresolved connection |
+| --- | --- | --- |
+| [Aguirre-Johnson, gr-qc/0508093v2](https://arxiv.org/html/gr-qc/0508093v2), section II equations 12-20, figures 7 and 9-10 inspected, section II.3 and footnote 6 | Signed shell classification and global patch assembly | Our fixed parameters select Figure 10 solution 13 in the exterior cosmological-constant-to-zero limit. The Schwarzschild sequence is IV to III, with a singular past and no turning point. This does not establish stable or regular formation. |
+| [Ansoldi-Guendelman-Shilon, 0711.2198v1](https://arxiv.org/html/0711.2198v1), sections 2-3 and formation discussion reread | Signed de Sitter/Schwarzschild wall and distinctions among classical histories | Cross-check the fixed positive-tension route and its formation limits. Original Blau-Guendelman-Guth and Farhi-Guth papers are credited through these references; full original proofs were not independently reread here. |
+| [Spradlin-Strominger-Volovich, hep-th/0110007v2](https://arxiv.org/html/hep-th/0110007v2), section 2.1 equations 15-21 and causal-diamond discussion; previously catalogued as archived | Conformal and planar de Sitter charts, radial null lines and observer horizons | Explicit time reversal of the displayed contracting planar chart gives our expanding chart. Central proper time and wall proper time remain separate. Quantum fields, vacuum selection and entropy are not imported by this coordinate calculation. |
+| [Kuchar, gr-qc/9403003v1](https://arxiv.org/html/gr-qc/9403003v1), section 2.1 equations 9-13 reread with quadrant and time-orientation conventions | Regular Schwarzschild null coordinates and radial characteristics | Match the v4 slice, continue early rays to the right static observer, and distinguish the retained regions from the excised chart background. No global many-body causal verdict follows. |
+
+The [classification note](../lab/docs/nsc-atlas-causal-classification.md) owns
+the branch and endpoint argument; the
+[observer note](../lab/docs/nsc-atlas-causal-observers.md) owns finite historical
+coverage and analytic future exclusions. Earlier emissions can arrive after
+the chosen slice. The parent escape horizon and central de Sitter horizon
+are separate null surfaces, matched through different wall events.
+
+Coverage for this milestone was a focused rereading of signed shell histories,
+their published diagrams, de Sitter observer charts and Schwarzschild null
+coordinates, with reference tracing through the two shell sources. It was
+not a complete successor census or a priority search. Remaining questions are
+an emitted field/state and its wall transmission law, regular formation,
+perturbation stability, and a justified causal completion of the glued parent.
+The alternative communicating-mouth and multiple-daughter routes stay open.
+
 ### Successor and challenge search
 
 The atlas also uses [Ansoldi–Merali–Guendelman, 1801.04539v1](https://arxiv.org/html/1801.04539v1),

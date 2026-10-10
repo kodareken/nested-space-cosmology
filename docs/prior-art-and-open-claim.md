@@ -141,3 +141,14 @@ geometric degeneracy for assemblies sharing the retained vacuum initial data.
 Global shell evolution, formation, stability and an observable that breaks
 that equivalence remain separate admission questions. No global smoothness
 requirement is imposed on the wall merely to use the end-only theorem.
+
+The [v5 application](../lab/docs/nsc-cosmological-atlas-v5.md) borrows the
+isolated wall's causal classification and null coordinates, locates the v4
+slice, and records access for named interior, wall and parent observers. It
+distinguishes early geometric paths from excluded new emissions after the
+slice, and the parent's escape horizon from the central de Sitter horizon.
+This closes a project integration question, not a new causal-classification
+theorem. The reference's singular past and the glued parent's unknown global
+future remain explicit. A response calculation must next specify the field,
+state and wall transmission law, or justify another communicating attachment;
+an available null path alone does not supply an observable imprint.

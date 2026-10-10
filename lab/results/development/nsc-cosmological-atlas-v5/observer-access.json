@@ -1,0 +1,150 @@
+{
+  "centre_escape_threshold": {
+    "centre_emission_t_over_ell": -1.231294452473952,
+    "companion_condition": "wall U_K<0 before R=.8ell, U_K=0 at crossing, U_K>0 afterwards",
+    "eta_minus_r_over_ell": -3.4256610228824873,
+    "matched_path_retained": true,
+    "parent_interpretation_requires_companion_reference": true,
+    "radial_null_segment": "r=eta-eta_escape from centre to wall horizon",
+    "scope": "isolated Schwarzschild completion; not the glued many-body future",
+    "status": "CENTRAL_NULL_RAY_TO_SCHWARZSCHILD_HORIZON",
+    "strict_early_emission_interval_t_over_ell": [
+      -1.5439442061259618,
+      -1.231294452473952
+    ],
+    "upper_endpoint_admits_finite_parent_reception": false,
+    "wall_crossing_R_over_ell": 0.8
+  },
+  "clock_conventions": {
+    "clock_origins_do_not_establish_universe_ages": true,
+    "conformal_time": "eta=-ell exp(-t_flat/ell), eta<0",
+    "flat_chart": "expanding planar chart; time reverse of hep-th/0110007v2 Eq21",
+    "null_paths": "radial eta+r=constant inward; eta-r=constant outward",
+    "time_origin": "W0 at R/ell=1.5 has t_flat=tau_wall=0 and scale factor1"
+  },
+  "field_boundary_condition": "a causal geometric path does not select a material transmission or quantum state",
+  "initial_fields_or_messages_prescribed": false,
+  "many_body_scope": "only the prior v4 smooth-vacuum protected-domain statement is transferred; no global reference causal verdict is transferred",
+  "observers": [
+    {
+      "clock": "proper time t_flat",
+      "id": "C",
+      "worldline": "de Sitter flat-chart centre r=0"
+    },
+    {
+      "clock": "proper shell time tau_wall",
+      "id": "W",
+      "worldline": "fixed signed expanding shell"
+    },
+    {
+      "access_owner": "companion Schwarzschild causal-reference record",
+      "clock": "separate parent proper time",
+      "id": "P",
+      "worldline": "right Schwarzschild static R=4M"
+    }
+  ],
+  "rows": [
+    {
+      "basis": "outgoing de Sitter null intercept and retained-history coverage",
+      "emission": "C proper time t/ell=-1.5242168241",
+      "from": "C",
+      "id": "early-C-W",
+      "reception": "W at R/ell=0.5",
+      "scope": "isolated fixed spherical reference",
+      "to": "W",
+      "verdict": "allowed geometric ray"
+    },
+    {
+      "basis": "ingoing eta+r constant and negative",
+      "emission": "W at R/ell=0.5",
+      "from": "W",
+      "id": "early-W-C",
+      "reception": "C proper time t/ell=-0.4256045355",
+      "scope": "isolated fixed spherical reference",
+      "to": "C",
+      "verdict": "allowed geometric ray"
+    },
+    {
+      "basis": "outgoing cap ray followed by constant U<0 from white-hole sector to right exterior; transmission law unspecified",
+      "emission": "C proper time t/ell=-1.5242168241, via W at R/ell=0.5",
+      "from": "C",
+      "id": "early-C-P",
+      "reception": "P proper time/ell=2.5311656510 on its own clock",
+      "scope": "isolated fixed spherical reference",
+      "to": "P",
+      "verdict": "allowed geometric path"
+    },
+    {
+      "basis": "eta-r=-2.5ell; emission is within the retained matched history",
+      "emission": "C proper time t/ell=-log(2.5)",
+      "from": "C",
+      "id": "historical-C-W0",
+      "reception": "W0 at the chosen initial slice",
+      "scope": "isolated fixed spherical reference",
+      "to": "W",
+      "verdict": "allowed geometric ray"
+    },
+    {
+      "basis": "remaining outgoing conformal radius<=ell; future wall comoving radius>=1.5ell",
+      "emission": "C0 or later, t>=0",
+      "from": "C",
+      "id": "C0-W",
+      "reception": "no future wall event",
+      "scope": "isolated fixed spherical reference",
+      "to": "W",
+      "verdict": "excluded in reference"
+    },
+    {
+      "basis": "inward null intercept eta+r>0 lies beyond future de Sitter boundary",
+      "emission": "W0 or later, R>=1.5ell",
+      "from": "W",
+      "id": "W0-C",
+      "reception": "no finite future central event",
+      "scope": "isolated fixed spherical reference",
+      "to": "C",
+      "verdict": "excluded in reference"
+    },
+    {
+      "basis": "no future exit through the enclosing wall; late wall also has U>0",
+      "emission": "C0 or later, t>=0",
+      "from": "C",
+      "id": "C0-P",
+      "reception": "no future right-parent event",
+      "scope": "isolated fixed spherical reference",
+      "to": "P",
+      "verdict": "excluded in reference"
+    },
+    {
+      "basis": "parent V>0; wall V<0; future-directed causal V cannot decrease",
+      "emission": "any event on the right static parent worldline",
+      "from": "P",
+      "id": "P-C",
+      "reception": "no central event via this attachment",
+      "scope": "isolated fixed spherical reference",
+      "to": "C",
+      "verdict": "excluded in reference"
+    },
+    {
+      "basis": "outgoing cap ray meets W at R=2M and continues as U=0; finite parent access requires earlier emission",
+      "emission": "threshold t/ell=-1.2312944525",
+      "from": "C",
+      "id": "last-C-P",
+      "reception": "horizon generator; equality is excluded",
+      "scope": "isolated fixed spherical reference",
+      "to": "P",
+      "verdict": "boundary, not finite reception"
+    },
+    {
+      "basis": "initial-data gluing alone gives no inter-body causal completion",
+      "emission": "unspecified",
+      "from": "A interior",
+      "id": "siblings",
+      "reception": "no global many-body future supplied",
+      "scope": "glued multi-body geometry",
+      "to": "B or descendants",
+      "verdict": "unresolved"
+    }
+  ],
+  "schema": "nsc-atlas-observer-access-v1",
+  "signal_amplitudes_calculated": false
+}

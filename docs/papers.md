@@ -21,17 +21,22 @@ background/perturbation matching remains subsequent work.
 ## Foundational manuscript
 
 The current working extension is
-[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v4](../paper/atlas-working-draft-v4.md).
+[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v5](../paper/atlas-working-draft-v5.md).
 It is an illustrated, unpublished draft in the companion research direction,
 not a new release or a replacement for either frozen edition below. It combines
 published two-hole spatial data, source conservation and a signed moving wall
 with an explicit sourced initial slice. End-only gluing supplies a justified
 common-parent existence family; a finite vacuum observer domain supplies a
-geometric degeneracy. Formation, global shell evolution and stability stay
-open. The [atlas v4 owner](../lab/docs/nsc-cosmological-atlas-v4.md) routes its figures,
+geometric degeneracy. The new causal section locates centre, wall and parent
+observers in the borrowed isolated history, with matched spacetime charts,
+an emission-specific access table and two distinct horizons. Earlier signals
+may arrive after the chosen slice. Regular formation, the glued parent's
+global future and stability stay open. The
+[atlas v5 owner](../lab/docs/nsc-cosmological-atlas-v5.md) routes its figures,
 records, source bindings and independent checks. The
 [v2 working manuscript](../paper/atlas-working-draft.md) and
-[v3 manuscript](../paper/atlas-working-draft-v3.md) remain sealed with
+[v3 manuscript](../paper/atlas-working-draft-v3.md) and
+[v4 manuscript](../paper/atlas-working-draft-v4.md) remain sealed with
 their own evidence. The catalog retains its two
 released document roles until an intentional manuscript release is ready.
 
