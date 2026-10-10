@@ -43,9 +43,9 @@
       "sha256": "9ca3edd95470adf8cdcc1afbbf123ed06ffabff957a3dbfaa3372cededbdd1cc"
     },
     {
-      "bytes": 26876,
+      "bytes": 27207,
       "path": "AGENTS.md",
-      "sha256": "72f277204e23096359e7e56a65583f3ae532dc123609167c42c85d7e4b4542a7"
+      "sha256": "4aec473ebe996486a1489d1096b6b2c643aab4410af6498e5afd41c647e7477e"
     },
     {
       "bytes": 1073,
@@ -78,9 +78,9 @@
       "sha256": "b18a7be2c4dc67bdfa0d63a6e8306ff32da78670ac6e58e5a5ad2a02208dc349"
     },
     {
-      "bytes": 27798,
+      "bytes": 27887,
       "path": "README.md",
-      "sha256": "1f613243e34285052703838f7d0cf818c46e3df1f178f5a3b8450efa28709f4c"
+      "sha256": "337746fae95db3199c6c19aeeb486afa32274a48f8a91e4f0ee040c05a121ffd"
     },
     {
       "bytes": 629,
@@ -98,19 +98,19 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 12832,
+      "bytes": 13023,
       "path": "docs/README.md",
-      "sha256": "2b0834e9534b2a0613c66f5e95d0dbcd8608a091fce7694ccc0d382a84533fcc"
+      "sha256": "c3532947ee790b00fc29ff102849e9820b45381b3768227272a91701c45f2f2d"
     },
     {
-      "bytes": 48491,
+      "bytes": 53423,
       "path": "docs/arxiv-studies.md",
-      "sha256": "fa906d16232f463d9f03106b3d50e8d2cd2ba751eed8f043a56b47226a7b4ef5"
+      "sha256": "b42c9493673c029db2380c54042b8e6eab164c2f2abd794d67dfbb5daab6a904"
     },
     {
-      "bytes": 157696,
+      "bytes": 158178,
       "path": "docs/current-result.md",
-      "sha256": "0eac41c7c54885818d3a09eeb2a7aaa300944d7699693630d491e1c5fb64aef8"
+      "sha256": "ec36aeb46ff3dce52b1d7f1bd626ddb9886988af05ee476a2018370c65af2e47"
     },
     {
       "bytes": 14497,
@@ -123,9 +123,9 @@
       "sha256": "a6edf7aff8f185fd05565f8733ce48e668fa7de7b1a7de4076ebb8aecbe1929a"
     },
     {
-      "bytes": 6014198,
+      "bytes": 6019886,
       "path": "docs/lab-snapshot.json",
-      "sha256": "616ff96dc984b7a09888037ec9e61f82fa9c87cd96d0f6f94a827b74b16dc32d"
+      "sha256": "60863a84ac9bf1d10cfa09e8782673f9412db9e2873dc0d899361143269b29e7"
     },
     {
       "bytes": 5006,
@@ -698,14 +698,14 @@
       "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
     },
     {
-      "bytes": 5685,
+      "bytes": 5841,
       "path": "docs/papers.md",
-      "sha256": "afa03c3758953e53a036c4ee7671debfc23ce38c09f75e8c08d9a963a8034625"
+      "sha256": "0fbb1ebbad3380792473d0c562e4a8ac87195176e7d314c1d1eb45df994f9951"
     },
     {
-      "bytes": 15763,
+      "bytes": 16358,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "75aa1982aa4504829b36769e5b0a4b77f4c485ab5f1d00fe2e1f6af6930ade6b"
+      "sha256": "532fe1b9b56580038f1f7b08e0f0ee426c5706afb50318e9967e87ab5492ba1c"
     },
     {
       "bytes": 7066,
@@ -716,6 +716,11 @@
       "bytes": 16461,
       "path": "docs/reproducing.md",
       "sha256": "ba94a2541c9cdad5b72aeedc35f21dc511277a02babc448c3ce8920303213deb"
+    },
+    {
+      "bytes": 30973,
+      "path": "paper/atlas-working-draft-v3.md",
+      "sha256": "4099accb9291bec15d1c74c075631d5f9ac30f044a25cd72360878c110ae51dd"
     },
     {
       "bytes": 20587,
@@ -3508,7 +3513,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "616ff96dc984b7a09888037ec9e61f82fa9c87cd96d0f6f94a827b74b16dc32d",
+  "lab_snapshot_sha256": "60863a84ac9bf1d10cfa09e8782673f9412db9e2873dc0d899361143269b29e7",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

@@ -121,3 +121,12 @@ to supply a common parent, and stop the constant-tension/comoving-radiation
 attachment after its scoped incompatibility check. Neither is claimed as
 new-to-world mathematics. Moving-boundary dynamics and matching to the
 nonspherical parent require their own source/domain admission.
+
+The [v3 application](../lab/docs/nsc-cosmological-atlas-v3.md) closes that
+motion-only question through imported conservation, and imports a distinct
+signed de Sitter wall as a finite control. Published N-body gluing now supplies
+a separate parent family with spherical collars; recreating its existence
+proof or elliptic solver is not the next research target. The missing connection
+is complete wall-body Cauchy data, the chosen Schwarzschild side, and a source
+regularity class covered by the theorem. Neither matching a mass parameter nor
+passing a local shell check closes that interface.
