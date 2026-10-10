@@ -36,6 +36,7 @@ constrained calculation into a settled theory.
 | Finite nested-quality construction | [nsc-nested-qualities.md](nsc-nested-qualities.md) |
 | Prior art and the open claim | [prior-art-and-open-claim.md](prior-art-and-open-claim.md) |
 | Cited arXiv studies and the check before a new calculation | [arxiv-studies.md](arxiv-studies.md) |
+| Child and neck chain, exploratory | [README](../lab/docs/child-neck/README.md), [status note](../lab/docs/child-neck/child-and-neck-status-note.md) |
 | 10 September 2026 development record | [development-update-2026-09-10.md](development-update-2026-09-10.md) |
 | Historical road-to-arXiv plan | [PLAN.md](PLAN.md) |
 

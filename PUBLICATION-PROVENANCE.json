@@ -63,9 +63,9 @@
       "sha256": "9132b066065f4cba46f84408a9aa6e4276876b145a1bde3c11a4ecedf35622e7"
     },
     {
-      "bytes": 26185,
+      "bytes": 26485,
       "path": "AGENTS.md",
-      "sha256": "8fe27b9a1d45460923a885ff540cdbabb83273f0578c35bbe93058e8ff358433"
+      "sha256": "0d2e967455824cbc6b85c62439e380cbddf2c25bb45aa5b2d4b668947c271e1f"
     },
     {
       "bytes": 1073,
@@ -118,14 +118,14 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 11634,
+      "bytes": 11786,
       "path": "docs/README.md",
-      "sha256": "6645810b0011fefbab3682cc0fe90ea0befc2aff122bb783d0c33a4178323706"
+      "sha256": "536b2c262fe844118b85c0d513afda829a24d1df9cc5fb7b33ad5f609a7db0ee"
     },
     {
-      "bytes": 32840,
+      "bytes": 36471,
       "path": "docs/arxiv-studies.md",
-      "sha256": "95cd90c439d38313c54916bdb580ab000f1303cd668fa5baa528d229393a1bab"
+      "sha256": "50a6b0fd21318f42b696458403155774c1a55bd94ebdf35d09b5fc24d97a9fe3"
     },
     {
       "bytes": 157156,
@@ -143,9 +143,9 @@
       "sha256": "0d551dedcef5d55f8085450ba4f7935e372db624762333399bcfc8eca6fae336"
     },
     {
-      "bytes": 6081537,
+      "bytes": 6106807,
       "path": "docs/lab-snapshot.json",
-      "sha256": "5523a48819e9d64c7576aff26a51b5670f10b9e5cbd71873775ea0e772271c3c"
+      "sha256": "50e1749ce81004bc96bd446de8aabcd6e41dc87007361c1c982e0fcf86129a93"
     },
     {
       "bytes": 5006,
@@ -3508,7 +3508,7 @@
       "sha256": "7812e4dc7a24723c0a48fd25b4404c5ce37de9e843bbab2b651885f39d1255c0"
     }
   ],
-  "lab_snapshot_sha256": "5523a48819e9d64c7576aff26a51b5670f10b9e5cbd71873775ea0e772271c3c",
+  "lab_snapshot_sha256": "50e1749ce81004bc96bd446de8aabcd6e41dc87007361c1c982e0fcf86129a93",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

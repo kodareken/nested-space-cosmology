@@ -117,6 +117,7 @@ AGENTS.md                 this index
 | Archived nf256 probes | [Receipt](lab/archive/probes/README.md) |
 | Archived external two-room comparison | Fixed Bronnikov–Fabris phantom black-universe bytes, 4 October 2026; [owning note](lab/docs/nsc-two-room-comparison.md). Separate from the magnetic RN programme and from the papers. |
 | Evolving retained-region reduction | [Note](lab/docs/nsc-evolving-reduction.md), [module](lab/src/recursive_horizons/nsc_evolving_reduction.py) |
+| Child and neck chain, exploratory (7–9 October 2026) | [Index](lab/docs/child-neck/README.md), [status note](lab/docs/child-neck/child-and-neck-status-note.md). Hypothesis-first, one Dirac field, order of magnitude, not in the claim ledger. Separate from the RN programme and from the papers. |
 | Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
 | Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
 | Cited arXiv studies, and whether a step is already sourced | [arXiv studies](docs/arxiv-studies.md). Check it before a new paper or a repeated derivation. |

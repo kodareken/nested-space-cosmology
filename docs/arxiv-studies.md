@@ -31,6 +31,7 @@ Then check the list below. Do not repeat a derivation this file already sources.
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.
 - [0711.1178](https://arxiv.org/abs/0711.1178) — Dunne, functional determinants: equations 18–20 and the periodic examples.
+- [0711.2198](https://arxiv.org/abs/0711.2198) — Ansoldi, Guendelman and Shilon: survey of child-universe creation by a thin-shell junction to a Schwarzschild exterior, including the critical parent-mass threshold. Its references carry Farhi–Guth (1987), Farhi–Guth–Guven (1990) and Blau–Guendelman–Guth (1987), which have no arXiv identifier. Imported prior art for the junction and neck notes in the [child and neck chain](../lab/docs/child-neck/README.md); abstract and introduction only.
 - [0805.2909](https://arxiv.org/abs/0805.2909) — Codello, Percacci and Rahmede: Appendix A trace and Mellin identities used in source matching.
 - [0806.2683](https://arxiv.org/abs/0806.2683) — Dabrowski, Garecki and Blaschke: five-dimensional conformal-curvature transformation reviewed for the warp term.
 - [0901.0944](https://arxiv.org/abs/0901.0944) — Boonserm and Visser: analytic bounds on transmission probabilities, applied to omitted potential tails.
@@ -43,9 +44,11 @@ Then check the list below. Do not repeat a derivation this file already sources.
 - [1008.3980](https://arxiv.org/abs/1008.3980) — Chamseddine and Connes: spectral action on a space with boundary, used for the extrinsic-curvature coefficient required by the gravitational Hamiltonian.
 - [1009.5179](https://arxiv.org/abs/1009.5179) — Dappiaggi, Hack and Pinamonti: spinor boundary construction for the child state.
 - [1101.1424](https://arxiv.org/abs/1101.1424) — Pfäffle and Stephan: torsionful spectral action, including Proposition 5.4, Theorem 5.7 and the Bochner and heat-kernel formulae.
+- [1101.4012](https://arxiv.org/abs/1101.4012) — Popławski: matter–antimatter asymmetry and dark matter from torsion; the classical spin-torsion splitting between particles and antiparticles at the bounce, used as the starting estimate in the [child and neck chain](../lab/docs/child-neck/torsion-splitting-and-inherited-spin-note.md).
 - [1106.3263](https://arxiv.org/abs/1106.3263) — Andrianov, Kurkov and Lizzi: spectral action, Weyl anomaly and Higgs-dilaton potential, including the anomaly factorization and scale-versus-cutoff distinction.
 - [1109.2524](https://arxiv.org/abs/1109.2524) — Chung et al.: gravitational Dirac production in inflation, cited as different from the anisotropic radius-pulse benchmark.
 - [1109.6234](https://arxiv.org/abs/1109.6234) — Clemson et al.: primary analysis that different momentum-transfer completions can alter growth.
+- [1110.5019](https://arxiv.org/abs/1110.5019) — Popławski: mass of the universe in a black hole; the closed spin-torsion bounce (equations 1–4), its density and its scaling with the parent mass, used for the child energy floor in the [child and neck chain](../lab/docs/child-neck/child-energy-floor-and-thread-length-note.md) and checked for self-consistency in [its collapse note](../lab/docs/child-neck/eck-collapse-pair-production-note.md).
 - [1111.3328](https://arxiv.org/abs/1111.3328) — Pusey, Barrett and Rudolph: on the reality of the quantum state.
 - [1112.0475](https://arxiv.org/abs/1112.0475) — Archived: Olmo and Rubiera-Garcia, a regular-core comparator for Ricci-based gravity, not evidence for the proposed phase transition.
 - [1210.2663](https://arxiv.org/abs/1210.2663) — Kurkov and Lizzi: Higgs-dilaton Lagrangian from spectral regularization, including the common local Weyl anomaly.
@@ -88,6 +91,8 @@ Then check the list below. Do not repeat a derivation this file already sources.
 - [1711.02080](https://arxiv.org/abs/1711.02080) — Archived: Silva et al., curvature-triggered spontaneous scalarization, cited as a comparator that does not replace an independent collapsing source.
 - [1712.03876](https://arxiv.org/abs/1712.03876) — Archived: Ben Achour et al., an extended-mimetic limiting-curvature comparator, not the healthy default.
 - [1803.08827](https://arxiv.org/abs/1803.08827) — Briscese and Modesto: introductory assumptions of their Euclidean-continuation unitarity result, which is not imported for the decreasing kinetic profile.
+- [1803.08928](https://arxiv.org/abs/1803.08928) — Boyle, Finn and Turok: the universe after the big bang as the CPT image of the universe before it, a universe/anti-universe pair, with CPT fixing a unique vacuum and a reading of the baryon asymmetry and of dark matter. Lead for the matter–antimatter and dark-sector reading; abstract only.
+- [1803.08930](https://arxiv.org/abs/1803.08930) — Boyle, Finn and Turok: The Big Bang, CPT, and Neutrino Dark Matter, companion to 1803.08928. Title only, from a reference list; not read.
 - [1805.05107](https://arxiv.org/abs/1805.05107) — Barbero, Ferreiro, Navarro-Salas and Villaseñor: section IV, the Dirac adiabatic expansion as a unitary spinor expansion.
 - [1807.04726](https://arxiv.org/abs/1807.04726) — Maldacena, Milekhin and Popov: traversable wormholes, including Appendix A, section 2.3 and the charged massless-Dirac vacuum throat.
 - [1807.06209](https://arxiv.org/abs/1807.06209) — Archived: Planck 2018 results VI, cosmological parameters.
@@ -101,6 +106,7 @@ Then check the list below. Do not repeat a derivation this file already sources.
 - [1908.08050](https://arxiv.org/abs/1908.08050) — Ruhdorfer, Serra and Weiler: section III.1, removing redundant curvature operators by metric redefinition.
 - [1910.01648](https://arxiv.org/abs/1910.01648) — Montero, Van Riet and Venken: section 2, charged de Sitter geometry used before importing a near-extremal seed.
 - [2003.08398](https://arxiv.org/abs/2003.08398) — Archived: Kovács and Reall, well-posed formulation of Lovelock and Horndeski theories.
+- [2007.11556](https://arxiv.org/abs/2007.11556) — Popławski: a nonsingular anisotropic Kantowski–Sachs universe in a black hole with torsion and particle production, where the bounce survives if particle production dominates over shear. Prior art for the shear and pair-production notes in the [child and neck chain](../lab/docs/child-neck/kasner-shear-production-note.md); abstract only.
 - [2008.02136](https://arxiv.org/abs/2008.02136) — Popławski: equations 1, 29 and 32–34, a spin-fluid Einstein–Cartan collapse and bounce, not the present vacuum control.
 - [2008.10995](https://arxiv.org/abs/2008.10995) — Gérard, Häfner and Wrochna: Theorem 1.1, the Unruh state for massless fermions on Kerr and its Hadamard property, on its stated domain.
 - [2011.03547](https://arxiv.org/abs/2011.03547) — Archived: East and Ripley, evolution of Einstein-scalar-Gauss–Bonnet gravity in a modified harmonic formulation.
@@ -121,10 +127,12 @@ Then check the list below. Do not repeat a derivation this file already sources.
 - [2401.05483](https://arxiv.org/abs/2401.05483) — Arkani-Hamed, Cao, Dong, Figueiredo and He: the nonlinear sigma model sits inside Tr(Φ³) to all loop orders.
 - [2403.08705](https://arxiv.org/abs/2403.08705) — Archived: Lara et al., a fixing-the-equations approach whose equation 6 is recorded as not used for coefficient authority.
 - [2405.14056](https://arxiv.org/abs/2405.14056) — Briscese et al.: sections 3.2 and 4.2, the nonlocal diagrammatic inverse is not the time-ordered correlator of physical states.
+- [2406.14982](https://arxiv.org/abs/2406.14982) — Inagaki and Yoshioka (PRD 110, 103537): non-thermal fermionic particle production in Einstein–Cartan gravity with a modified Holst term and non-minimal couplings, with the mass and helicity dependence of the produced number density. Lead for the helicity-asymmetry question; abstract only.
 - [2406.19108](https://arxiv.org/abs/2406.19108) — Agüera y Arcas and collaborators, Computational Life: self-replicating programs in random computational systems, cited as related motivation only.
 - [2407.06790](https://arxiv.org/abs/2407.06790) — Archived comparison source for a quoted NICER chiral-effective-field-theory maximum neutron-star mass.
 - [2409.11398](https://arxiv.org/abs/2409.11398) — Archived: Thaalba et al., horizon-penetrating Painlevé–Gullstrand comparator and characteristic diagnostic for gravity with a Ricci coupling.
 - [2410.16264](https://arxiv.org/abs/2410.16264) — Archived: gauge-invariant hyperbolicity study of spherical evolution in scalar-Gauss–Bonnet gravity.
+- [2412.09558](https://arxiv.org/abs/2412.09558) — Tzanavaris, Boyle and Turok: the black mirror, in which the horizon joins the exterior to its own CPT mirror image; a particle falling in from one side meets its CPT-mirror antiparticle, and the PT isometry keeps a hole's charge while CPT reverses it. Prior art for the [swap-symmetry note](../lab/docs/child-neck/swap-symmetry-note.md); the Dirac lifts and the V·A term were not found in the abstract and appendix text read.
 - [2412.19881](https://arxiv.org/abs/2412.19881) — Arkani-Hamed, Figueiredo and Vazão: the cosmohedron, the polytope proposed for the Tr(Φ³) cosmological wavefunction by blowing up and shaving an associahedron.
 - [2503.14738](https://arxiv.org/abs/2503.14738) — DESI Collaboration: DR2 baryon-acoustic-oscillation measurements and cosmological constraints, not a DR2 full-shape analysis.
 - [2503.14744](https://arxiv.org/abs/2503.14744) — DESI Collaboration: neutrino constraints from DR2 BAO and DR1 full shape, including the stated absence of a joint 2025 full-shape plus DR2 analysis.
@@ -182,8 +190,10 @@ Then check the list below. Do not repeat a derivation this file already sources.
 - [hep-th/0206054](https://arxiv.org/abs/hep-th/0206054) — Borokhov, Kapustin and Wu: section 4.1 and the appendix, the magnetic angular spectrum and degeneracies.
 - [hep-th/0207060](https://arxiv.org/abs/hep-th/0207060) — Kiritsis et al.: bulk-boundary energy exchange that modifies cosmological evolution, cited as prior art still requiring the same NSC quantum state.
 - [hep-th/0306138](https://arxiv.org/abs/hep-th/0306138) — Vassilevich: heat-kernel expansion, including sections 3.3 and 7.1 and equations 3.34, 4.26–4.28 and 5.30–5.32.
+- [hep-th/0507253](https://arxiv.org/abs/hep-th/0507253) — Freidel, Minic and Takeuchi: effective four-fermion action from torsion with the Holst and non-minimal couplings, equation 23, used to check that the particle–antiparticle splitting survives second quantisation through the vector–axial term in the [child and neck chain](../lab/docs/child-neck/second-quantised-splitting-note.md).
 - [hep-th/0602146](https://arxiv.org/abs/hep-th/0602146) — Iso, Umetsu and Wilczek: equations 25–28, Hawking radiation from charged black holes and the free fermionic flux normalization.
 - [hep-th/9502109](https://arxiv.org/abs/hep-th/9502109) — Mottola: section III, a configuration-space measure built from metric deformations and divided by diffeomorphism orbits.
+- [hep-th/9511136](https://arxiv.org/abs/hep-th/9511136) — Barrabès and Frolov: How many new worlds are inside a black hole? Title only, from a reference list; not read.
 - [hep-th/9606001](https://arxiv.org/abs/hep-th/9606001) — Chamseddine and Connes: the spectral action principle, imported as the reduction of gravity and gauge fields from one Dirac operator.
 - [hep-th/9807038](https://arxiv.org/abs/hep-th/9807038) — Gusev and Zelnikov: equations 83–89, fermionic thermal images and the canonical free energy on a finite proper-time endpoint.
 - [hep-th/9905177](https://arxiv.org/abs/hep-th/9905177) — Archived: Bousso, a covariant entropy conjecture.
