@@ -191,6 +191,37 @@ an emitted field/state and its wall transmission law, regular formation,
 perturbation stability, and a justified causal completion of the glued parent.
 The alternative communicating-mouth and multiple-daughter routes stay open.
 
+### Early field transfer, atlas v6
+
+The [sixth atlas](../lab/docs/nsc-cosmological-atlas-v6.md) chooses a classical
+massless conformal scalar and an explicit early incoming characteristic. The
+new interface is its conditional transmission to the central observer. The
+source of the incident state, a global exterior solution and a quantum vacuum
+are not supplied by this choice.
+
+| Source/version and reading depth | Reusable mathematics | Repository use and boundary |
+| --- | --- | --- |
+| [Santiago et al., 1512.02120v2](https://arxiv.org/html/1512.02120v2), section III equations 8, 26-34 | Scalar equation, shell curvature distribution, continuous field and normal derivative jump; regular centre | Translate the generic distributional matching into the existing moving pure-tension wall. Static charged-shell parameters, mode instabilities and quantum-vacuum results are not imported. |
+| [Tomasini-Rubin de Celis-Simeone, 1901.07524v1](https://arxiv.org/html/1901.07524v1), sections 2-3 equations 1, 4 and 15 | Arbitrary-curvature-coupling scalar action and integrated shell jump | Independent sign/normalization check. Its cylindrical reduction and special coupling 1/4 are not the spherical conformal cancellation used here. |
+| [Huguet-Queva-Renaud, gr-qc/0603031v1](https://arxiv.org/html/gr-qc/0603031v1), sections 4-5 equations 21, 24, 30 and 36 | Exact conformal field weight and mapping of massless solutions | In four dimensions a phi is the flat-chart field, giving a free radial equation for R phi in the cap. Signature, curvature and symbol conventions are translated explicitly. No vacuum or quantum particle-production claim is imported. |
+| [Dolan-Ottewill, 1106.4318v1](https://arxiv.org/html/1106.4318v1), section II equations 4 and 6, section III equations 10-12 | Schwarzschild scalar radial potential and retarded operator | The nonzero smooth exterior potential survives conformal shell cancellation. Standard black-hole Green-function boundary conditions do not automatically apply to our white-hole wall history. Full exterior propagation remains open. |
+| [Chu, 1305.6933v2](https://arxiv.org/html/1305.6933v2), section IV equations 80, 82, 85 and 87-89 | Direct and interior-tail parts of the minimally coupled de Sitter Green function | A separate field candidate for later memory comparisons. Its moving-wall response must also satisfy the different scalar jump; the conformal result cannot be relabelled as a minimal-field result. |
+
+The [field matching owner](../lab/docs/nsc-atlas-field-matching.md) derives the
+project's reduced-field jump by substituting its already fixed wall trace into
+the borrowed relation. The [transfer owner](../lab/docs/nsc-atlas-field-transfer.md)
+specifies the classical initial-boundary data and finite observer window.
+Only one incoming characteristic is prescribed; the outgoing component follows
+from the initial field and regular centre. Zero later incoming trace is an
+input assumption, not a conclusion that exterior scattering has no tail.
+
+Search coverage included arXiv scalar thin-shell junctions, conformal fields
+on de Sitter, expanding-wall transmission, and the cited radial-wave and tail
+references. The search established a reusable finite transfer route, not a
+priority claim or exhaustive literature survey. Global preparation of a
+compatible incident state, finite wall thickness, nonspherical modes, quantum
+state choice, backreaction and observational identification remain unresolved.
+
 ### Successor and challenge search
 
 The atlas also uses [Ansoldi–Merali–Guendelman, 1801.04539v1](https://arxiv.org/html/1801.04539v1),
