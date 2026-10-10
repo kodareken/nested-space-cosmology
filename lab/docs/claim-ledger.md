@@ -30,6 +30,7 @@ they are not instructions to restart their campaigns.
 | Piece | Status | Where it lives |
 |---|---|---|
 | Exterior-first atlas | Reproducible finite candidate graph and imported compatibility controls. Physical junctions, formation, inheritance and multi-region Hamiltonian remain unresolved. Software validation is not a discovery claim. | [Owner](nsc-cosmological-atlas.md) |
+| Shared-parent atlas v2 | Imported Brill–Lindquist spatial initial data for two unequal holes. A separate comoving closed-radiation/Schwarzschild/constant-wall pairing is incompatible on a varying-radius interval. This does not exclude moving walls or supply an attachment to the nonspherical parent. | [Owner and evidence](nsc-cosmological-atlas-v2.md), [source screen](nsc-atlas-junction-sources.md) |
 | Uncommitted and second-worktree investigations | Preserved and inventoried, including child/neck, charged, constants, influence and clocks. Toy infinite-chain and preset-fraction conclusions are retired from physical inference. Distinct variants are not silently merged. | [Inventory and dispositions](research-inventory.md), [child/neck status](child-neck/child-and-neck-status-note.md) |
 | RN pressure interpretation | Pressure equality is not mechanical equilibrium; the unsupported Hayward threshold and inference from inner horizon to centre regularity are withdrawn. Original records remain evidence of the former reduction. | [Corrected owner](nsc-rn-gradient-bubble.md) |
 |---|---|---|

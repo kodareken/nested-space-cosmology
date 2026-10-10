@@ -1,6 +1,7 @@
 # The NSC papers and their relationship
 
-These documents belong to one research programme organized by
+These documents belong to the exterior-first research programme. One retained
+operator-inheritance approach is organized by
 
 $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
@@ -18,6 +19,16 @@ archived execution notes do not override that scope. Cosmological
 background/perturbation matching remains subsequent work.
 
 ## Foundational manuscript
+
+The current working extension is
+[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response](../paper/atlas-working-draft.md).
+It is an illustrated, unpublished draft in the companion research direction,
+not a new release or a replacement for either frozen edition below. It combines
+published two-hole spatial data with a separate fixed-source junction screen;
+the missing nonspherical attachment and physical observer response stay open.
+The [atlas v2 owner](../lab/docs/nsc-cosmological-atlas-v2.md) routes its figures,
+records, source bindings and independent checks. The catalog retains its two
+released document roles until an intentional manuscript release is ready.
 
 [Nested-Space Cosmology, v0.26.0 (43-page PDF)](../paper/nested-space-cosmology.pdf) ·
 [Markdown source](../paper/nested-space-cosmology.md) ·

@@ -12,6 +12,7 @@ and [claim ledger](claim-ledger.md).
 |---|---|
 | Finite candidate regions and four connection kinds | [nsc_cosmological_atlas](../src/recursive_horizons/nsc_cosmological_atlas.py), [note](nsc-cosmological-atlas.md) |
 | Reproducible diagrams and source-bound inputs | [Producer](../scripts/derive_nsc_cosmological_atlas.py), [tests](../tests/test_nsc_cosmological_atlas.py) |
+| Shared spatial parent and fixed-source junction screen | [Parent adapter](../src/recursive_horizons/nsc_atlas_parent_initial_data.py), [junction adapter](../src/recursive_horizons/nsc_atlas_junction_sources.py), [v2 producer](../scripts/derive_nsc_cosmological_atlas_v2.py), [scope](nsc-cosmological-atlas-v2.md) |
 | Both-worktree family census, dispositions and reading boundaries | [Inventory](research-inventory.md), [producer](../../scripts/research_inventory.py) |
 | Existing supplied-H(t) finite memory/drive reducer | [nsc_evolving_reduction](../src/recursive_horizons/nsc_evolving_reduction.py); a physically justified multi-region Hamiltonian is still missing |
 | Borrowed results and admission before compute | [Existing owner](../../docs/prior-art-and-open-claim.md), [arXiv reuse library](../../docs/arxiv-studies.md) |

@@ -49,6 +49,7 @@ AGENTS.md                 this index
 | Where a document lives, and which copies match | [Docs route](docs/README.md) |
 | Task authority and scientific status | Latest user instruction; [exterior-first scope](docs/instructions.md#exterior-first-atlas), [status](docs/current-result.md), [code map](lab/docs/active-code-map.md) |
 | Finite cosmological atlas | [Mathematics, assumptions and reproducible map](lab/docs/nsc-cosmological-atlas.md), [producer](lab/scripts/derive_nsc_cosmological_atlas.py) |
+| Shared parent and fixed-source attachment screen | [Atlas v2](lab/docs/nsc-cosmological-atlas-v2.md), [successor producer](lab/scripts/derive_nsc_cosmological_atlas_v2.py), [working manuscript](paper/atlas-working-draft.md); v1 stays frozen |
 | Discovery across both worktrees and retirement decisions | [Research inventory](lab/docs/research-inventory.md); unopened derivations and unmapped evidence remain explicit |
 | Existing mathematics, assumptions, and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
 | RN pressure diagnostics; equilibrium and centre regularity unresolved | [Semantic correction](lab/docs/nsc-rn-gradient-bubble.md), [module](lab/src/recursive_horizons/nsc_rn_gradient_bubble.py), [driver](lab/scripts/derive_nsc_rn_gradient_bubble.py), [historical record v5](lab/results/development/nsc-rn-gradient-bubble-v5.json), [stencil audit](lab/src/recursive_horizons/nsc_rn_stencil_audit.py), [tests](lab/tests/test_nsc_rn_gradient_bubble.py) |

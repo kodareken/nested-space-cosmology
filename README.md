@@ -5,18 +5,25 @@ exterior regions, black-hole transitions, children, siblings and descendants.
 Borrow known geometry and response mathematics, identify compatible
 connections, and only then investigate consequences for our local cosmos.
 
-Start with the [illustrated cosmological atlas](lab/docs/nsc-cosmological-atlas.md),
+Start with the [shared-parent atlas and source test](lab/docs/nsc-cosmological-atlas-v2.md),
+the [illustrated manuscript draft](paper/atlas-working-draft.md),
 the [research inventory and dispositions](lab/docs/research-inventory.md),
 and the [arXiv reuse library](docs/arxiv-studies.md#atlas-reuse-library-10-october-2026).
 The [calculation admission rule](docs/prior-art-and-open-claim.md#compute-admission-rule)
 keeps new work attached to a missing connection. A common universal action is
 one longer-term candidate, not an entry requirement for every atlas result.
 
-The first atlas distinguishes descent, geometric attachment, causal influence
+The atlas distinguishes descent, geometric attachment, causal influence
 and correlation. Its diagrams describe conditional constructions and open
 interfaces; they do not report observed universes beyond ours. The saved
 finite parent–child result below consists of collars within one evolving
 periodic geometry, not demonstrated creation of a separate spacetime.
+
+The latest map imports one two-hole spatial initial-data set. A separate
+source test excludes a constant-tension wall on a comoving radiation boundary
+over an expanding interval. The actual child attachment to the nonspherical
+parent remains open; alternative sources and geometries retain their own
+domains. These are scoped applications of borrowed mathematics.
 
 The RN programme remains a scoped reusable strand. Its numerical family has
 stopped without completed summaries and its physical results are not claimed.

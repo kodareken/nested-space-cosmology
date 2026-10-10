@@ -1,6 +1,15 @@
 # The child glued to the parent's exterior: the neck, its opening, and what caps the mass ratio
 
-**Corrected 7 Oct 2026 (own error): the neck-at-the-bounce number below (3.57e-23 m) is superseded. See `israel-matching-note.md`, section 0.** It used the bare density; with the geometric (torsion-included) mass the child has no effective mass at the bounce, and the mass-matched neck is a spacelike surface until t_exit/27 (R = r_g/9). The exit time, exit size and hidden-child limits below are unchanged.
+**Correction carried forward, 10 October 2026:** the neck-at-the-bounce number
+below (`3.57e-23 m`) used the bare density and is superseded. The replacement
+claim of zero geometric mass at a real closed-FLRW bounce was also incorrect:
+at a turning point `adot=0`, so `m=a*sin(chi)^3/2` in geometric units.
+Density cancellation would give `adot^2=-1`, outside the real trajectory.
+See the [owning correction](israel-matching-note.md), section 0.
+The near-cancellation onset and minimum below are historical approximation
+outputs pending a consistent curvature treatment. Later radiation-era exit
+and hidden-child estimates retain their original approximations; this
+correction does not independently verify them or establish a physical neck.
 
 7 Oct 2026. Script `junction_neck.py`, data `junction_neck.json`, figure `junction_neck.png`. Needs the restored `child_*` scripts and JSON files.
 Source status: Frolov, Markov, Mukhanov, PRD 41, 383 (1990) and PLB 216, 272 (1989) were located by search but could not be read here (no open copy). Everything below is derived from the standard
@@ -14,7 +23,10 @@ This is the equal-mass condition. The full thin-shell (Israel) matching is in `i
 
 ## Results, 10 solar-mass parent (`r_gp = 29.5 km`, `G M_p / c^3 = 49 microseconds`)
 
-- **Neck at the bounce (superseded).** The value `3.57e-23 m` came from the bare density `eps_b`. Corrected: the smallest mass-matched neck is `6.7e-23 m` at `a = 1.22 a_b`, and it is not a timelike surface (see the correction above).
+- **Neck near the approximate density-cancellation scale (unverified).** The
+  original `3.57e-23 m` used bare density. The later `6.7e-23 m` at
+  `a=1.22 a_b` is a historical approximation output, not a corrected exact
+  bounce result. Its physical domain needs the curvature treatment above.
 - **Neck growth.** For a radiation child `R_j = 2^(2/3) r_gp^(1/3) (c t)^(2/3) = 1.59 r_g^(1/3) (ct)^(2/3)` from `t_exit/27` on, the same `2/3` power as the parent's sphere radius near the crunch, `r = 1.31 r_g^(1/3) (c tau)^(2/3)` (exact Schwarzschild interior), read backward in time. The coefficients differ by 21%, from different clocks.
   For the neck that follows the parent's thread exactly, the radius is the parent's sphere radius read in reverse (`israel-matching-note.md`, section 3).
 - **Opening.** The neck reaches the parent's horizon radius at `t = G M_p / c^3 = 49 microseconds` (analytic for radiation, numerical `1.000000000000017`), at a child size `a = sqrt(r_gp r_rad) = 1.1e11 m`, which is `2.7e-7` of the child's maximum size. For an all-matter child `t = 1.22 G M_p / c^3`, `a = 1.7e11 m`.

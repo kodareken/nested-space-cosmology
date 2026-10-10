@@ -2,6 +2,16 @@
 
 ## Exterior-first atlas, 10 October 2026
 
+The [second atlas](../lab/docs/nsc-cosmological-atlas-v2.md) now supplies a
+shared Brill–Lindquist spatial parent for two unequal holes. It also decides
+one separate spherical compatibility question: a constant-tension wall cannot
+join a comoving closed-radiation region to fixed-mass Schwarzschild over an
+open interval of changing radius. This is an application of known junction
+laws, with an algebraic obstruction and independent checks. It neither glues
+that child into the nonspherical parent nor excludes moving walls or other
+interiors. The [illustrated manuscript draft](../paper/atlas-working-draft.md)
+develops this argument; existing released papers and atlas v1 remain frozen.
+
 The active objective is to map possible parent regions, black-hole transitions,
 children, siblings and descendants, then investigate their local consequences.
 The [finite atlas](../lab/docs/nsc-cosmological-atlas.md) records four distinct
