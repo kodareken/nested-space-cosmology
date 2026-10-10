@@ -21,13 +21,22 @@ The [focused article](paper/finite-regeneration.pdf) presents this result;
 human author review and the actual arXiv processor check remain pending.
 Earlier prescribed-gauge diagnostics keep their dated evidence below.
 
-The active [discovery programme](docs/current-result.md#active-discovery-programme-2-october-2026)
-continues the confirmed parent–child preparation beyond this short interval.
-It asks whether the coupled process selects regional boundaries and scales,
-supports repeated transfer, and predicts a withheld local response. The
-finite spectral theorem, coordinate pullback and a physical scaling law
-are distinct statements. Their relationship is investigated through the
-same constructed dynamics. One unified successor article is the target.
+The active [exterior atlas](lab/docs/nsc-cosmological-atlas.md), adopted on
+10 October 2026, compares possible parent regions, multiple children and
+descendants before asking which local phenomena their mathematics could
+explain. Geometry, ancestry, communication and correlation have separate
+maps. A spherical boundary is not automatically a closed three-sphere, and
+two off-centre black holes need not share one globally spherical chart.
+The earlier [discovery programme](docs/current-result.md#active-discovery-programme-2-october-2026)
+is retained evidence, not the compulsory next calculation.
+
+The one-spectrum story below is a candidate interpretation. The finite
+spectral theorem, coordinate pullback and physical inheritance law remain
+distinct. Universal particle/nuclear closure is a longer-term conjecture;
+each atlas branch can instead use its own explicitly declared source and
+domain. A failure in one branch does not invalidate all exterior structures.
+No fixed dark-sector fraction, scale ratio, antimatter identification or
+clock interpretation selects the map in advance.
 
 The sphere's inside and surrounding region are the organizing motivation:
 consider their coupled fields, stresses and geometry together. The present model
@@ -511,7 +520,8 @@ contains the technical derivations and references.
 
 ## 10. What would complete the picture
 
-One solved state must supply, with the same $\Theta$:
+For the longer-term universal-action candidate, one solved state would need
+to supply, with the same $\Theta$:
 
 1. the recursive boundary response and inherited scale;
 2. a finite self-sourced parent-to-child geometry;
@@ -519,8 +529,10 @@ One solved state must supply, with the same $\Theta$:
 4. background expansion, clustering, and lensing;
 5. one dimensionless relation connecting particle and cosmological scales.
 
-These five items remain the longer chain, inside the domains already stated
-on this page. The current finite realization is the conformal spherical
+These five items are not prerequisites for the exterior-first atlas. An
+admissible attachment, causal response, inheritance relation or discriminating
+observable can advance the map before that ambitious closure. They remain a
+longer chain within this candidate. A retained finite realization is the conformal spherical
 dynamics through $T=0.3$ in [the current result](docs/current-result.md#present-spherical-loop).
 It connects source differences, resolved regional transfer, generated
 geometry, maintained structure, and local memory on the same realization.

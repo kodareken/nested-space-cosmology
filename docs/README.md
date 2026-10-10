@@ -8,6 +8,8 @@ constrained calculation into a settled theory.
 |---|---|
 | Commands, branches, and scientific framing | [instructions.md](instructions.md) |
 | Current calculations and verdicts | [current-result.md](current-result.md) |
+| Exterior-first cosmological atlas | [Mathematics, finite maps and regeneration](../lab/docs/nsc-cosmological-atlas.md) |
+| Both worktrees: discoveries, owners, dispositions and reading boundaries | [Research inventory](../lab/docs/research-inventory.md) |
 | RN radial parent | Scientific start `5cb775a7`. Current assessment is official v2. Manual v1 remains the historical writer failure. The numerical family is not claimed. [Status](current-result.md#rn-radial-parent-4-october-2026), [v2 assessment](../lab/results/development/nsc-rn-pilot-assessment-v2.json), [v1 record](../lab/results/development/nsc-rn-pilot-assessment-v1.json), [continuation](../lab/results/development/nsc-rn-neutral-continuation-v1/summary.json), [rules](instructions.md#rn-radial-programme) |
 | Historical periodic parent | NF128 exterior-to-cut response measured; the bounded NF256 confirmation is recorded. [Status](current-result.md#responsive-parent-3-october-2026), [preparation](../lab/docs/nsc-discovery-parent.md), [episode](../lab/docs/nsc-discovery-parent-episode.md), [observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer), [response](../lab/docs/nsc-discovery-parent-response.md), [step control](../lab/docs/nsc-discovery-parent-step-control.md), [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md), [magnetic feasibility](../lab/results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json), [six preparations](../lab/results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json), [$T=3$ episode](../lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json), [frozen parent-heavy](../lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json), [empty source](../lab/results/development/nsc-discovery-parent-empty-source-v1/manifest.json), [strong $T=1$](../lab/results/development/nsc-discovery-parent-strong-t1-v1/manifest.json), [strong $T=3$](../lab/results/development/nsc-discovery-parent-strong-t3-v1/manifest.json), [cut batch](../lab/results/development/nsc-discovery-parent-cut-response-v1/prepare.json), [cut assessment](../lab/docs/nsc-discovery-parent-cut-assessment.md), [cut record](../lab/results/development/nsc-discovery-parent-cut-assessment-v1.json), [NF256 confirmation](../lab/docs/nsc-discovery-parent-cut-confirmation.md), [record](../lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json), [payload](../lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz) |
 | Earlier discovery programme | Preserved from `ea6c699`; [record](current-result.md#active-discovery-programme-2-october-2026), [episode](../lab/docs/nsc-discovery-episode.md), [observer](../lab/docs/nsc-discovery-observables.md), [response](../lab/docs/nsc-discovery-response.md) |
@@ -43,11 +45,16 @@ constrained calculation into a settled theory.
 `PLAN.md` is retained historical input, not a work queue. `lab/PLAN.md` is
 the same plan except one claim-ledger link: this copy is repository-relative,
 and the laboratory copy uses an absolute path plus a handover link.
-`lab/scripts/check_current.py` still raises if `lab/PLAN.md` exists. That
-checker and the retention sentence in [instructions](instructions.md)
-disagree. Both copies stayed, because the plan still carries its historical
-claim contract and removing the laboratory copy would change a hash-locked
-import for a reason the current instructions do not ask.
+The current-entrypoint checker now preserves this authenticated historical
+input. The obsolete rule that rejected its mere existence is retired; it
+confused retention with active task authority. No frozen plan was deleted.
+Its default now delegates to the existing consolidated snapshot and publication
+checkers. The former full-archive check needs `--historical-archive` and the
+retired laboratory Git database; those intentionally omitted objects are not
+restored to satisfy an obsolete active maintenance obligation.
+The publication envelope also excludes `.pi/` execution configuration, as it
+already excludes other local agent state. Scientific files keep their existing
+owners; unrelated local routing edits no longer change scientific provenance.
 
 `lab/handover.md` stays as a historical checkpoint. The active code map cites
 it for dated measurements. It does not assign the next task.
@@ -55,11 +62,13 @@ it for dated measurements. It does not assign the next task.
 ## Copies and separate strands
 
 Most `nsc-*.md` names also exist under `lab/docs/` with identical bytes.
-Those pairs are one imported strand stored twice, so publication links and
+The baseline inventory found 108 identical documentation pairs. Those pairs
+are one imported strand stored twice, so publication links and
 the laboratory import receipt each have a path. They are not two results.
 
 Same name, different bytes:
 
+- `nsc-local-observer-correspondence.md` — the October reset has matching gate-scope corrections with links relative to each consumer.
 - `nsc-closure-verification-2026-09-07.md` — the `docs/` copy adds that the note is the 59th public record and that the original 58 JSON records stay byte-for-byte. The laboratory copy omits those two sentences.
 - `nsc-prior-art-reuse.md` — the laboratory copy is the longer procedure, including literature boundaries and incoming-gate delivery wording. The `docs/` copy is the shorter public procedure.
 - `nsc-quantum-measure-reuse.md` — the laboratory copy adds a paragraph on the canonical spherical action map. The `docs/` copy does not.

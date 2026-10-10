@@ -1,6 +1,13 @@
-# Prior art and the one open claim
+# Prior art and admission of new research
 
-This file prevents Nested-Space Cosmology from spending compute on an already known component and then presenting the reproduction as project novelty. Binding an imported result to the one operator is bookkeeping unless a previously missing arrow is closed with the same \(S_{\mathrm{one}}\), \(\Theta\), boundary kernel, and transition map.
+This file prevents Nested-Space Cosmology from spending compute on an already known component and then presenting the reproduction as project novelty. Import a result with its assumptions and attribution. The research contribution must close a previously missing connection, distinguish candidate exteriors, or establish why a proposed connection is unavailable in a named domain.
+
+The research direction adopted on 10 October 2026 is exterior first: build a
+finite mathematical map of possible parent regions, children and descendants;
+then investigate its consequences for an observer inside a region. The
+[cosmological atlas](../lab/docs/nsc-cosmological-atlas.md) compares geometric,
+exterior-response and connected-mouth candidates. Each test fixes its own
+theory, state and domain. No candidate's action is compulsory for the others.
 
 The labeled theory is [THEORY.md](../THEORY.md). The live checkpoint is
 [docs/current-result.md](current-result.md). Primary literature is cited in
@@ -53,9 +60,9 @@ Exact black-universe solutions show that a black-hole exterior and expanding int
 
 The spectral action unifies known local particles, gauge fields, Higgs, and gravity as spectral data of one Dirac operator. Its finite Dirac/Yukawa matrix still contains measured fermion masses and mixings as input in the imported construction. Nested-Space completion is stronger: the combined functional flow and recursive fixed point must determine that finite spectrum with the same \(\Theta\). Until it does, the spectral action is an imported unifying scaffold, not the completed derivation of all particle masses from the room.
 
-## The only project-level open claim
+## Longer-term universal-action conjecture
 
-The project must construct and test one frozen object
+One retained candidate programme seeks to construct and test one object
 
 $$
 (S_{\mathrm{one}},\Theta,\mathcal{T})
@@ -70,17 +77,40 @@ such that the same fields, operator coefficients, boundary kernel, and scale map
 5. a stable trapped-to-defocusing-to-expanding transition; and
 6. a non-tunable dimensionless prediction identifying our cosmology with the child side of that transition.
 
-The individual ingredients have prior work. A completed and independently tested invariant closure would be a candidate project contribution; a priority claim would still require comparison with that literature.
+The individual ingredients have prior work. A completed and independently tested invariant closure would be a candidate project contribution; a priority claim would still require comparison with that literature. This is a longer-term conjecture, not the sole project-level target or an admission prerequisite for the exterior atlas. Particle and nuclear closure must not block a finite geometric, causal or inheritance question.
 
 ## Compute admission rule
 
-A scientific calculation belongs in this repository only when its compact record contains at least one of:
+A new scientific calculation must identify at least one of:
 
 - a coefficient shared by two previously separate scales;
-- a stationary configuration of the frozen universal action;
+- a stationary configuration of a declared candidate action that closes a missing connection;
 - a prediction whose datum was not used to determine \(\Theta\);
-- a stable parent/child solution sourced by that same action; or
+- a parent/child attachment or response with a compatible source, state and conservation law, including a scoped stability result; or
 - a dimensionless discriminator against ordinary cosmology; or
-- a new operator, domain or state compatibility condition that changes which physical calculation is admissible.
+- a new operator, domain or state compatibility condition that changes which physical calculation is admissible; or
+- a causal, inheritance or observer map that distinguishes candidate exteriors, or a demonstrated observational degeneracy with a named possible discriminator.
+
+Before execution, its compact record names:
+
+1. **Borrowed result:** version, equation/theorem, assumptions and existing implementation or evidence.
+2. **Missing connection:** the question the source did not answer and why it matters to the atlas.
+3. **Decision and unlock:** which outcomes change a connection or enable a subsequent question.
+4. **Finite domain:** regions, observer, state, time/scale window and cutoff. An infinite limit may be imported as a theorem; it is not an unbounded numerical work queue.
+5. **Budget and stop:** explicit compute bound and outcomes that stop or redirect this branch.
+6. **Verification and attribution:** independent comparison, error statement and focused prior-art search before claiming novelty.
+
+Evaluating imported formulas to assemble the atlas and checking adapters are
+permitted integration work, labelled as such. They do not become scientific
+discoveries because tests pass. Hold a candidate's theory and coefficients
+fixed during perturbation tests; changing them starts a different candidate.
+Do not insert a target dark-sector fraction, an inherited scale ratio, or a
+desired antimatter/time interpretation to select the exterior. Compare with
+local observations only after the candidate has supplied an observable.
+
+An incompatible junction or a null response is useful only within the stated
+assumptions. It retires that attempted connection, not every nested geometry.
+Search coverage and unread sources stay explicit: a bounded literature search
+does not establish worldwide priority.
 
 Standalone repetitions of interference, a known soliton, a published nuclear table, a black-universe metric, or a generic test suite are not project results.

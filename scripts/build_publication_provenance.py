@@ -19,6 +19,9 @@ IGNORED_PARTS = {
     ".venv",
     "__pycache__",
     ".build",
+    # Agent execution configuration is not publication evidence. Keeping it
+    # outside this envelope avoids binding unrelated local routing edits.
+    ".pi",
     # Machine-local agent state. The package tree and the per-agent
     # workspace are already declared non-content in .gitignore, and a
     # host tool directory can carry host-local references that

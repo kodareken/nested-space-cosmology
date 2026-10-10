@@ -119,13 +119,20 @@ not selected a sector.
 
 ## Missing common-action evidence
 
-A stronger, cosmological result is blocked by the absence of:
+For the historical vacuum-matched common-action candidate, the following
+stronger claims remain open:
 
 1. the absolute covariantly renormalized continuum stress on the varying throat;
 2. same-action metric backreaction of an evolving geometry (the vacuum-work
    pulse is a prescribed drive);
 3. a full continuum CTP coefficient match;
-4. a complete \(\Lambda\)CDM background and perturbation comparison;
-5. a closed local incoming gate on \(I=S(1)+[0.12,0.18]\).
+4. a derived local observable with an appropriate background/perturbation comparison;
+5. a closed local incoming gate on \(I=S(1)+[0.12,0.18]\), only for the
+   source-fixed application that requires that particular incoming state.
 
-Those gaps are recorded, not filled. No scientific campaign is started here.
+Those gaps are recorded, not filled. The finite common-metric successors
+have their own [status](current-result.md); they do not establish the
+continuum vacuum-matched claims above. The incoming campaign remains paused.
+Its closure and a cosmological fit are not prerequisites for the
+[exterior atlas](../lab/docs/nsc-cosmological-atlas.md). Each candidate names
+its actual dependencies; this historical list does not start a campaign.

@@ -18,7 +18,8 @@ a finished citation at that stage stops the search. A reported result is a
 different moment: name what was checked. Do not refuse the lead because the
 wording is not yet a bibliography entry.
 
-Before a calculation, read [arXiv studies](docs/arxiv-studies.md). Check
+Before a calculation, read [arXiv studies](docs/arxiv-studies.md) and the existing
+[reuse and compute admission rule](docs/prior-art-and-open-claim.md). Check
 work already cited. Document a study there when it helps, clues, constrains,
 or blocks a step. Decide first whether the question is a finite test in a
 named domain or an infinite construction. An infinite construction without a
@@ -46,9 +47,11 @@ AGENTS.md                 this index
 |---|---|
 | Location, branches, commands, and recovery | [Instructions](docs/instructions.md), [consolidation](docs/repository-consolidation.md) |
 | Where a document lives, and which copies match | [Docs route](docs/README.md) |
-| Task authority and scientific status | Latest user instruction, which overrides a stale plan; [scope](docs/instructions.md#rn-radial-programme), [status](docs/current-result.md#rn-radial-parent-4-october-2026), [code map](lab/docs/active-code-map.md) |
+| Task authority and scientific status | Latest user instruction; [exterior-first scope](docs/instructions.md#exterior-first-atlas), [status](docs/current-result.md), [code map](lab/docs/active-code-map.md) |
+| Finite cosmological atlas | [Mathematics, assumptions and reproducible map](lab/docs/nsc-cosmological-atlas.md), [producer](lab/scripts/derive_nsc_cosmological_atlas.py) |
+| Discovery across both worktrees and retirement decisions | [Research inventory](lab/docs/research-inventory.md); unopened derivations and unmapped evidence remain explicit |
 | Existing mathematics, assumptions, and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
-| Two-force gradient balance on the RN radial parent | [Note](lab/docs/nsc-rn-gradient-bubble.md), [module](lab/src/recursive_horizons/nsc_rn_gradient_bubble.py), [driver](lab/scripts/derive_nsc_rn_gradient_bubble.py), [record v5](lab/results/development/nsc-rn-gradient-bubble-v5.json), [stencil audit](lab/src/recursive_horizons/nsc_rn_stencil_audit.py), [v3](lab/results/development/nsc-rn-gradient-bubble-v3.json), [v2](lab/results/development/nsc-rn-gradient-bubble-v2.json), [tests](lab/tests/test_nsc_rn_gradient_bubble.py) |
+| RN pressure diagnostics; equilibrium and centre regularity unresolved | [Semantic correction](lab/docs/nsc-rn-gradient-bubble.md), [module](lab/src/recursive_horizons/nsc_rn_gradient_bubble.py), [driver](lab/scripts/derive_nsc_rn_gradient_bubble.py), [historical record v5](lab/results/development/nsc-rn-gradient-bubble-v5.json), [stencil audit](lab/src/recursive_horizons/nsc_rn_stencil_audit.py), [tests](lab/tests/test_nsc_rn_gradient_bubble.py) |
 | RN radial parent | Scientific start `5cb775a7`. Current reproducible assessment is v2. Manual v1 remains the historical writer failure. Finite continuation to $T=20$. The numerical family stopped without a summary in any case and is not claimed. The recorded stencils are exact; the moment guard that reported them wrong is withdrawn. [Status](docs/current-result.md#rn-radial-parent-4-october-2026), [rules](docs/instructions.md#rn-radial-programme), [v2 assessment](lab/results/development/nsc-rn-pilot-assessment-v2.json), [v1 record](lab/results/development/nsc-rn-pilot-assessment-v1.json), [continuation](lab/results/development/nsc-rn-neutral-continuation-v1/summary.json) |
 | Historical periodic parent | NF128 exterior-to-cut response measured; the bounded NF256 confirmation is recorded. Further periodic autonomous exchange runs stay off the active path. [Status](docs/current-result.md#responsive-parent-3-october-2026), [rules](docs/instructions.md#present-regeneration-programme) |
 | Strong source, kinetic-offset and frozen-column comparisons | [Method](lab/docs/nsc-discovery-parent-strong-controls.md), [consumer](lab/scripts/assess_nsc_discovery_parent_strong_controls.py), [record](lab/results/development/nsc-discovery-parent-strong-controls-v1.json) |
