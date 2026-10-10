@@ -18,25 +18,54 @@ the local response that structure leaves. Dated manuscript wording and
 archived execution notes do not override that scope. Cosmological
 background/perturbation matching remains subsequent work.
 
+## The common research thread
+
+The shared question is how a region's boundaries, surrounding structure and
+state shape what an observer inside can measure. The papers develop different
+parts of that question; they do not yet supply a single closed cosmological
+derivation.
+
+| Document | Role in that question | Remaining connection |
+| --- | --- | --- |
+| Foundation | Proposes spectrum inheritance and relates boundary operators, state, stress and local response | Physical inheritance and the universal-action closure remain hypotheses |
+| Finite companion | Calculates finite transport, geometric feedback and memory for its declared realization | Its unresolved complement is a mode space, not an established spacetime parent |
+| Current atlas | Supplies candidate geometry, causal access and a conditional field transmission to an interior observer | Exterior preparation, state selection and a discriminating cosmological observable remain open |
+
+The spherical idea supplies round boundary surfaces, areal radius, radial
+propagation and tractable junction laws. A periodic radial realization, a
+regular three-ball and a closed three-sphere have different topologies. A
+parent containing separated holes need not be globally spherical. The atlas
+uses local spherical charts where justified without identifying those
+different constructions.
+
+The new scalar calculation is a concrete geometry-to-field interface, but
+its incoming characteristic is supplied data. It does not yet identify the
+companion's reduced memory operator with a cosmological parent's field
+response. A later use of that machinery must name the physical operator,
+regional projection, state and clock before equating the two descriptions.
+
 ## Foundational manuscript
 
 The current working extension is
-[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v5](../paper/atlas-working-draft-v5.md).
+[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v6](../paper/atlas-working-draft-v6.md).
 It is an illustrated, unpublished draft in the companion research direction,
 not a new release or a replacement for either frozen edition below. It combines
 published two-hole spatial data, source conservation and a signed moving wall
 with an explicit sourced initial slice. End-only gluing supplies a justified
 common-parent existence family; a finite vacuum observer domain supplies a
-geometric degeneracy. The new causal section locates centre, wall and parent
+geometric degeneracy. The causal section locates centre, wall and parent
 observers in the borrowed isolated history, with matched spacetime charts,
 an emission-specific access table and two distinct horizons. Earlier signals
-may arrive after the chosen slice. Regular formation, the glued parent's
-global future and stability stay open. The
-[atlas v5 owner](../lab/docs/nsc-cosmological-atlas-v5.md) routes its figures,
+may arrive after the chosen slice. The new field section supplies a classical
+conformal scalar, its initial-boundary state and a calculated central waveform.
+Remote preparation and smooth exterior scattering remain open, alongside
+regular formation, the glued parent's global future and stability. The
+[atlas v6 owner](../lab/docs/nsc-cosmological-atlas-v6.md) routes its figures,
 records, source bindings and independent checks. The
 [v2 working manuscript](../paper/atlas-working-draft.md) and
 [v3 manuscript](../paper/atlas-working-draft-v3.md) and
-[v4 manuscript](../paper/atlas-working-draft-v4.md) remain sealed with
+[v4 manuscript](../paper/atlas-working-draft-v4.md) and
+[v5 manuscript](../paper/atlas-working-draft-v5.md) remain sealed with
 their own evidence. The catalog retains its two
 released document roles until an intentional manuscript release is ready.
 

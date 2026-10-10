@@ -2,6 +2,34 @@
 
 ## Exterior-first atlas, 10 October 2026
 
+The [sixth atlas](../lab/docs/nsc-cosmological-atlas-v6.md) adds an explicit
+classical field and initial-boundary state to the earlier causal map. A
+massless conformal scalar in the spherical mode crosses the fixed wall with
+its curvature-induced jump included. For the reduced field R phi the shell
+jump cancels, while the smooth exterior scattering problem remains open.
+The cap begins with zero field and time derivative; one early incoming
+characteristic is prescribed on the exterior wall side. Its remote source
+and global quantum state are not supplied.
+
+The exact conditional relation phi_C[T(tau_W)]=I(tau_W)/T'(tau_W) gives a
+finite central waveform, with the same clock map controlling duration and
+amplitude. The compact pulse is fixed in wall proper time around R/ell=0.5,
+with half-width 0.03ell. The
+[waveform figure](../lab/results/development/nsc-cosmological-atlas-v6/field-response.png)
+and [field record](../lab/results/development/nsc-cosmological-atlas-v6/field-transfer.json)
+record its input, received support and independent checks. The central field
+returns to zero after this pulse through the chosen t_C=0 observation limit.
+Zero incoming trace outside the pulse is part of the state specification;
+this does not rule out uncomputed exterior tails or memory in another field.
+
+The [v6 paper](../paper/atlas-working-draft-v6.md) connects this calculation to
+the [common research thread](papers.md#the-common-research-thread): boundaries,
+geometry and state shape local measurements. The focused companion's
+mode-space complement has not become a geometric parent merely by analogy.
+Local spherical regions need not form a globally spherical multi-hole parent.
+All v1-v5 evidence stays frozen, with the multiple-daughter, communicating-mouth,
+minimally coupled scalar and exterior-state routes still open.
+
 The [fifth atlas](../lab/docs/nsc-cosmological-atlas-v5.md) supplies a causal map
 around the central interior observer, using the published isolated completion
 of the fixed de Sitter/Schwarzschild wall. Its
@@ -18,16 +46,18 @@ horizon crossing from below. The central escape threshold to the right parent
 is t_C/ell=-1.2312944525 in the recorded clock convention; equality follows a
 horizon generator and has no finite parent reception. The parent escape
 horizon continues through the interior and differs from the centre's de Sitter
-horizon. Actual field transmission and amplitudes remain unspecified.
+horizon. The frozen v5 record left field transmission and amplitudes
+unspecified; v6 supplies the conditional scalar connection above.
 
 This reference has a singular past. It supplies neither regular formation nor
 the global future of the glued two-body parent. The
 [illustrated manuscript v5](../paper/atlas-working-draft-v5.md) preserves those
 limits and the independent multiple-daughter, communicating-mouth and
-exterior-response routes. The next physical connection needs a specified early
-field/state imprint or an alternative attachment with its own causal channel.
-All v1-v4 evidence stays frozen; the new calculation applies known junction and
-causality mathematics rather than claiming a new spacetime classification.
+exterior-response routes. That edition identified an early field/state imprint
+as the next connection, supplied conditionally in v6. Alternative attachments
+still need their own causal channels. All v1-v4 evidence stays frozen; the v5
+calculation applies known junction and causality mathematics rather than
+claiming a new spacetime classification.
 
 The [fourth atlas](../lab/docs/nsc-cosmological-atlas-v4.md) supplies one explicit
 sourced initial slice: a regular flat de Sitter cap, the fixed-tension v3 wall,

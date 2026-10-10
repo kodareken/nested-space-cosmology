@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1360" viewBox="0 0 1440 1360" role="img" aria-label="What an early signal leaves inside">
+<title>What an early signal leaves inside</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1440" height="1360" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">What an early signal leaves inside</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Atlas v6 | Fixed geometry + explicit classical state + borrowed field transmission</text>
+<rect x="45" y="130" width="1350" height="118" rx="18" fill="#153329" stroke="#70ac94"/>
+<text x="75" y="174" font-family="Segoe UI,Arial,sans-serif" font-size="27" fill="#a5e6c9" font-weight="600">A causal path now carries a calculated field waveform.</text>
+<text x="75" y="216" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">The signal is an input at the early wall. Its remote preparation remains an open connection.</text>
+<rect x="45" y="300" width="430" height="210" rx="18" fill="#152c40" stroke="#567f96"/>
+<text x="65" y="343" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#a1d9f3" font-weight="600">1  PREPARED INPUT</text>
+<text x="65" y="391" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Initially zero scalar field in cap</text>
+<text x="65" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Compact incoming scalar pulse</text>
+<text x="65" y="469" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Profile fixed in wall proper time</text>
+<rect x="505" y="300" width="430" height="210" rx="18" fill="#152c40" stroke="#567f96"/>
+<text x="525" y="343" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#a1d9f3" font-weight="600">2  MATCHED WALL</text>
+<text x="525" y="391" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Classical conformal scalar</text>
+<text x="525" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Curvature jump included</text>
+<text x="525" y="469" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">One incoming characteristic</text>
+<rect x="965" y="300" width="430" height="210" rx="18" fill="#152c40" stroke="#567f96"/>
+<text x="985" y="343" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#a1d9f3" font-weight="600">3  CENTRAL OBSERVER</text>
+<text x="985" y="391" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Exact arrival and amplitude map</text>
+<text x="985" y="430" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">A finite, distorted transient</text>
+<text x="985" y="469" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Zero after pulse through t_C=0</text>
+<text x="480" y="415" font-family="Segoe UI,Arial,sans-serif" font-size="26" fill="#92dfc4" font-weight="normal">&gt;</text>
+<text x="940" y="415" font-family="Segoe UI,Arial,sans-serif" font-size="26" fill="#92dfc4" font-weight="normal">&gt;</text>
+<rect x="45" y="555" width="1350" height="156" rx="18" fill="#2a2637" stroke="#9c82b7"/>
+<text x="75" y="602" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#d0b5f0" font-weight="600">THE TRANSFER LAW</text>
+<text x="75" y="649" font-family="Segoe UI,Arial,sans-serif" font-size="26" fill="#dce8f3" font-weight="normal">central field at arrival = incoming characteristic / proper-time stretch</text>
+<text x="75" y="686" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">The clock map and amplitude factor come from the same fixed wall trajectory.</text>
+<text x="55" y="771" font-family="Segoe UI,Arial,sans-serif" font-size="24" fill="#a1d9f3" font-weight="600">THE COMMON THREAD THROUGH THE PAPERS</text>
+<rect x="45" y="804" width="430" height="110" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="65" y="844" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#c9b2ec" font-weight="600">Foundation</text>
+<text x="65" y="882" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Boundary, spectrum and inherited state</text>
+<rect x="505" y="804" width="430" height="110" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="525" y="844" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#c9b2ec" font-weight="600">Finite companion</text>
+<text x="525" y="882" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Measured transfer, feedback and memory</text>
+<rect x="965" y="804" width="430" height="110" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="985" y="844" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#c9b2ec" font-weight="600">Cosmological atlas</text>
+<text x="985" y="882" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Geometric access and observer response</text>
+<text x="55" y="957" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#dce8f3" font-weight="normal">Shared question: how do boundaries and surroundings shape a measurement inside a region?</text>
+<text x="55" y="993" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Local round spheres supply areal radius and radial propagation; the many-body parent may be nonspherical.</text>
+<rect x="45" y="1040" width="1350" height="197" rx="18" fill="#302c26" stroke="#b49363"/>
+<text x="75" y="1086" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#edbf8d" font-weight="600">OPEN CONNECTIONS AND ALTERNATIVE ROUTES</text>
+<text x="75" y="1130" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Exterior preparation and scattering  |  A minimally coupled field with a tail  |  Quantum state and backreaction</text>
+<text x="75" y="1172" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">Multiple daughters  |  Communicating mouths  |  The glued parent&#x27;s global future</text>
+<text x="75" y="1210" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">A transient here does not rule out memory in another field, state or geometry.</text>
+<text x="55" y="1300" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#b7c9d5" font-weight="normal">Conditional classical response. No global parent signal, persistent dark component or cosmic age is inferred.</text>
+</svg>

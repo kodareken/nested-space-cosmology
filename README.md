@@ -5,8 +5,8 @@ exterior regions, black-hole transitions, children, siblings and descendants.
 Borrow known geometry and response mathematics, identify compatible
 connections, and only then investigate consequences for our local cosmos.
 
-Start with the [interior observer's causal atlas](lab/docs/nsc-cosmological-atlas-v5.md),
-the [illustrated manuscript draft](paper/atlas-working-draft-v5.md),
+Start with the [interior field-response atlas](lab/docs/nsc-cosmological-atlas-v6.md),
+the [illustrated manuscript draft](paper/atlas-working-draft-v6.md),
 the [research inventory and dispositions](lab/docs/research-inventory.md),
 and the [arXiv reuse library](docs/arxiv-studies.md#atlas-reuse-library-10-october-2026).
 The [calculation admission rule](docs/prior-art-and-open-claim.md#compute-admission-rule)
@@ -19,15 +19,19 @@ interfaces; they do not report observed universes beyond ours. The saved
 finite parent–child result below consists of collars within one evolving
 periodic geometry, not demonstrated creation of a separate spacetime.
 
-The latest map places the sourced interior in its published isolated causal
-history, with centre, wall and parent observers. Earlier geometric light paths
-can connect them; new emissions after the chosen slice face explicit horizons.
-Earlier signals may still arrive later. The map distinguishes the centre's
-de Sitter horizon from the escape horizon to the parent. The v4 sourced initial
-slice, common-parent existence family and finite vacuum observer degeneracy
-remain valid in their stated domains. Regular formation, the glued parent's
-global future and stability remain open. Other atlas routes stay visible;
-v1 through v4 evidence remain frozen.
+The latest map adds a specified classical conformal scalar and an early
+incoming state to the observer atlas. Its borrowed wall law and exact interior
+propagation give a conditional central waveform. The incident characteristic
+is an input; remote preparation, smooth exterior scattering and backreaction
+remain unresolved. The v5 causal exclusions still hold, including the absence
+of a right-parent signal into this cap. Other fields and atlas routes stay
+visible; v1 through v5 evidence remain frozen.
+
+The [thread through the papers](docs/papers.md#the-common-research-thread) is
+how boundaries, surrounding structure and state shape an interior measurement.
+Local spheres supply areal radius and radial matching; they do not require a
+globally spherical multi-hole parent. The finite companion's unresolved
+mode-space complement is not yet a geometric parent universe.
 
 The RN programme remains a scoped reusable strand. Its numerical family has
 stopped without completed summaries and its physical results are not claimed.

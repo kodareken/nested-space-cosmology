@@ -152,3 +152,14 @@ theorem. The reference's singular past and the glued parent's unknown global
 future remain explicit. A response calculation must next specify the field,
 state and wall transmission law, or justify another communicating attachment;
 an available null path alone does not supply an observable imprint.
+
+The [v6 application](../lab/docs/nsc-cosmological-atlas-v6.md) specifies a
+classical conformal scalar, zero earlier interior data and one incoming
+characteristic on the exterior wall side. Borrowed distributional matching
+and conformal propagation give a conditional central waveform. This closes
+the state-to-observer interface for the declared input, not its remote
+preparation or a global quantum state. The shell cancellation does not remove
+smooth Schwarzschild scattering. A later persistent-response comparison must
+use its own field equation and wall law; a global exterior calculation needs
+admissible initial data and the correct causal branch. A waveform alone cannot
+identify geometry while its incident state remains freely adjustable.
