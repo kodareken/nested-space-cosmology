@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="910" viewBox="0 0 1400 910" role="img" aria-label="Three different ways the exterior could matter">
+<title>Three different ways the exterior could matter</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1400" height="910" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">Three different ways the exterior could matter</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Compare mathematical possibilities before committing to a source theory</text>
+<rect x="50" y="140" width="415" height="665" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="75" y="190" font-family="Segoe UI,Arial,sans-serif" font-size="30" fill="#d9ae67" font-weight="600">01</text>
+<text x="75" y="231" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#dce8f3" font-weight="600">One hole, several daughters</text>
+<text x="75" y="263" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#86d6f0" font-weight="normal">Null-shell construction</text>
+<circle cx="257" cy="355" r="67" fill="#061320" stroke="#e6be7a" stroke-width="2"/>
+<circle cx="227" cy="358" r="24" fill="#17445c" stroke="#86d6f0"/>
+<circle cx="287" cy="358" r="24" fill="#17445c" stroke="#86d6f0"/>
+<text x="75" y="485" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">R0^3 = 2 m a^2</text>
+<text x="75" y="527" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">f_A f_B = f_C f_D at a collision</text>
+<text x="75" y="569" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">l &gt; a: disconnected bubble boundaries</text>
+<text x="75" y="639" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">Near singularity; equal R0; a &lt;&lt; R0 &lt;&lt; 2m.</text>
+<text x="75" y="671" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">Borrowed kinematics, fixed limiting curvature.</text>
+<text x="75" y="703" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">Nucleation and layer microphysics remain open.</text>
+<text x="75" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">hep-th/9511136v1</text>
+<rect x="500" y="140" width="415" height="665" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="525" y="190" font-family="Segoe UI,Arial,sans-serif" font-size="30" fill="#d9ae67" font-weight="600">02</text>
+<text x="525" y="231" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#dce8f3" font-weight="600">Three connected mouths</text>
+<text x="525" y="263" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#86d6f0" font-weight="normal">Conditional causal network</text>
+<path d="M 590 330 Q 700 380 823 330 M 706 358 L 706 405" fill="none" stroke="#86d6f0" stroke-width="9"/>
+<circle cx="590" cy="330" r="19" fill="#061320" stroke="#e6be7a" stroke-width="2"/>
+<circle cx="823" cy="330" r="19" fill="#061320" stroke="#e6be7a" stroke-width="2"/>
+<circle cx="706" cy="405" r="19" fill="#061320" stroke="#e6be7a" stroke-width="2"/>
+<text x="525" y="485" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">E_small &lt; |E_binding|</text>
+<text x="525" y="527" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">G m_small &lt; r_e</text>
+<text x="525" y="569" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">m_small &lt; N_f Q / (8 r_e)</text>
+<text x="525" y="639" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">Magnetic, near-extremal, many-species domain.</text>
+<text x="525" y="671" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">Not the one-field neutral-child construction.</text>
+<text x="525" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">2012.07821v2</text>
+<rect x="950" y="140" width="415" height="665" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="975" y="190" font-family="Segoe UI,Arial,sans-serif" font-size="30" fill="#d9ae67" font-weight="600">03</text>
+<text x="975" y="231" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#dce8f3" font-weight="600">Different, yet locally identical</text>
+<text x="975" y="263" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#86d6f0" font-weight="normal">Response-equivalence control</text>
+<path d="M 1038 355 L 1160 355" stroke="#86d6f0" stroke-width="3"/>
+<circle cx="1038" cy="355" r="25" fill="#061320" stroke="#86d6f0" stroke-width="2"/>
+<circle cx="1160" cy="355" r="25" fill="#061320" stroke="#86d6f0" stroke-width="2"/>
+<circle cx="1281" cy="355" r="25" fill="#061320" stroke="#b497dc" stroke-width="2"/>
+<text x="1260" y="402" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#b497dc" font-weight="normal">hidden</text>
+<text x="975" y="485" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Visible exterior spectrum: {2}</text>
+<text x="975" y="527" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Hidden spectrum: {3} or {5}</text>
+<text x="975" y="569" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Same local resolvent; hidden link = 0</text>
+<text x="975" y="639" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">A matrix control, not a spacetime solution.</text>
+<text x="975" y="671" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#e6be7a" font-weight="normal">Local data need not identify an entire exterior.</text>
+<text x="975" y="755" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">Known finite Schur algebra</text>
+<text x="55" y="858" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#adc0cd" font-weight="normal">A published candidate stays inside its source domain. An untested bridge remains visible as an open connection.</text>
+</svg>

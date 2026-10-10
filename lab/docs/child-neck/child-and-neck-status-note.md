@@ -3,7 +3,7 @@
 7 Oct 2026. One page of record for the chain that began with the shear-production test and ended with the neck-layer notes. Every number is taken from the note named in the last column.
 Setting: parent of 10 solar masses (`r_g = 29.5 km`, `G M_p/c^3 = 49 microseconds`), one Dirac field, `u_c = 1` unless a range is given. The working assumption throughout is the user's picture: a stretched collapse that turns inward, with the child's space joined to the parent's through a neck. Nothing here grades that picture; mismatches are listed as pieces not yet accounted for.
 
-## 1. Computed results (current versions)
+## 1. Recorded exploratory results (read with the corrections below)
 
 | Step | Result | Depends on | Note |
 |---|---|---|---|
@@ -31,6 +31,13 @@ Setting: parent of 10 solar masses (`r_g = 29.5 km`, `G M_p/c^3 = 49 microsecond
 4. The neck at the bounce, `3.57e-23 m` independent of `N`, used the bare density; the geometric mass includes the negative torsion piece.
 5. The lifetime ratios of the torsion layer (`3e33 .. 3.7e40`) held for the thread path only.
 6. The composite layer's 125-field floor and `1e7 .. 1e41` cancellation came from leaving the normal stress unbalanced.
+
+7. **10 October reset:** the Israel note conflated the high-density cancellation
+   scale `eps=alpha*n^2` with the exact closed-FLRW bounce. The full equation
+   has `adot=0` and `1+adot^2=1` at a real turning point, not zero. The claimed
+   zero geometric mass there is withdrawn. Tiny near-cancellation neck-onset
+   values require a consistent curvature treatment; the saved JSON is unchanged.
+   See [the corrected owner](israel-matching-note.md).
 
 ## 3. Named missing ingredients (sized where possible)
 

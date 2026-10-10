@@ -1,12 +1,20 @@
 # Active code and evidence map
 
-Routing index. This map names laboratory owners. It is not an order to run
-them. The finite question connects regional differences, transfer,
-geometric response, maintained or renewed structure, and local response,
-reusing inherited-law and conservation results. Time as registration of spatial change, and a
-matter–antimatter reading, stay active questions. Full statement:
-[scientific framing](../../docs/instructions.md#scientific-framing-and-authority).
-The claim status is the [gap map](claim-ledger.md#scientific-gap-map).
+Routing index for retained laboratory owners. The active work is the finite
+exterior-first atlas: compatible geometry and state, causal paths, inheritance,
+clocks and only then local consequences. The universal-action and regeneration
+strands remain reusable candidates. See the [active scope](../../docs/instructions.md#exterior-first-atlas)
+and [claim ledger](claim-ledger.md).
+
+## Atlas and discovery owners
+
+| Need | Owner |
+|---|---|
+| Finite candidate regions and four connection kinds | [nsc_cosmological_atlas](../src/recursive_horizons/nsc_cosmological_atlas.py), [note](nsc-cosmological-atlas.md) |
+| Reproducible diagrams and source-bound inputs | [Producer](../scripts/derive_nsc_cosmological_atlas.py), [tests](../tests/test_nsc_cosmological_atlas.py) |
+| Both-worktree family census, dispositions and reading boundaries | [Inventory](research-inventory.md), [producer](../../scripts/research_inventory.py) |
+| Existing supplied-H(t) finite memory/drive reducer | [nsc_evolving_reduction](../src/recursive_horizons/nsc_evolving_reduction.py); a physically justified multi-region Hamiltonian is still missing |
+| Borrowed results and admission before compute | [Existing owner](../../docs/prior-art-and-open-claim.md), [arXiv reuse library](../../docs/arxiv-studies.md) |
 
 The source-fixed incoming gate remains OPEN and its campaign is paused. Its
 threshold, source, and history belong to that application. A later "next",
@@ -33,25 +41,15 @@ outputs. The current reproducible assessment is
 [v2](../results/development/nsc-rn-pilot-assessment-v2.json).
 The numerical family is not running and is not claimed. No case has
 written a `summary.json`; four stopped on the CPU projection and the two
-`mu=1.002` cases stopped silently at `t=8`. The two-force gradient
-balance over its 177 recorded stations is
-[gradient-bubble v5](../results/development/nsc-rn-gradient-bubble-v5.json),
-owned by
-[nsc_rn_gradient_bubble.py](../src/recursive_horizons/nsc_rn_gradient_bubble.py)
-and [its note](nsc-rn-gradient-bubble.md). It supersedes v1, whose
-verdict rested on a chosen slope limit the data straddled, and v2 by
-adding the regularity reference sourced from Hayward gr-qc/0506126,
-which v5 then corrects: the grid stops outside the inner horizon in every
-case, so regularity is not decidable on this domain and the hard
-interior_not_regular flag is withdrawn. The verdict is
-the measured balance wall; a wall is present at 49.7% of stations, its
-persistence falls from about 65% at mu=1.002 to about 31% at mu=1.040,
-and it oscillates rather than settling. Its `numerical_validity` section
-carries the stencil audit in
-[nsc_rn_stencil_audit.py](../src/recursive_horizons/nsc_rn_stencil_audit.py),
-which withdraws the earlier Fornberg blocker: the recorded weights agree
-with exact rational arithmetic to 5.1e-16 across 120 stencils, so the
-moment guard is ill-conditioned rather than the weights being wrong.
+`mu=1.002` cases stopped silently at `t=8`. The historical pressure reduction over 177 recorded stations is
+[gradient-bubble v5](../results/development/nsc-rn-gradient-bubble-v5.json).
+Its [live consumer](../src/recursive_horizons/nsc_rn_gradient_bubble.py) and
+[corrected owner](nsc-rn-gradient-bubble.md) now withdraw the interpretation
+as opposing forces or mechanical balance, the unsupported Hayward slope
+threshold, and any inference from inner-horizon reach to centre regularity.
+Saved equality crossings and slopes remain diagnostics. No v6 family
+reduction was run. The retained stencil audit corrects the ill-conditioned
+moment guard, independently of those physical interpretation errors.
 The finite continuation is
 [nsc-rn-neutral-continuation-v1](../results/development/nsc-rn-neutral-continuation-v1/summary.json).
 There is no separate energy-consumer file. The saved CAR eigenvalue

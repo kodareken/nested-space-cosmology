@@ -1,0 +1,56 @@
+{
+  "admission": {
+    "borrowed": "published matching or existing finite reduction; see source records",
+    "decision_and_unlock": "Reject incompatible attachments; expose which response connections still need sourcing",
+    "finite_budget": {
+      "maximum_descent_depth": 2,
+      "scenarios": 4,
+      "symbolic_matrix_dimension": 3
+    },
+    "missing_connection": "Physical interface source, joint state and complete geometry remain absent",
+    "question": "Do the imported patch and graph constraints agree with the proposed motif?",
+    "stop": "Stop on invalid radius, causal clock, lineage, source binding or changed theory; no PDE continuation"
+  },
+  "bubble_matching": {
+    "R0": 2,
+    "a": 1,
+    "deep_interior_hierarchy_asserted": false,
+    "exact_f_jump": "0",
+    "m": 4
+  },
+  "default_sibling_numeric_arrival": null,
+  "response_equivalence": {
+    "additional_discriminator": "A direct hidden-mode spectral probe distinguishes energy 3 from 5; adding a link is a separate model",
+    "assumptions": [
+      "no coupling to the hidden mode",
+      "identical visible state"
+    ],
+    "claim": "imported algebra; distinct exteriors need not be identifiable locally",
+    "equivalent_for_declared_local_probe": true,
+    "exact_difference": "0",
+    "exterior_eigenvalues": [
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "local_resolvent": "9*(z - 2)/(9*z**2 - 27*z + 17)",
+    "resolvent_domain": "Im(z)>0; boundary values exclude full-system eigenvalue poles"
+  },
+  "same_theory_after_state_perturbation": true,
+  "small_neck_angular_constraint": {
+    "beta_minus": -0.8660254037844386,
+    "beta_plus": 0.7071067811865476,
+    "four_pi_R_sigma": -1.5731321849709863,
+    "full_junction_solved": false,
+    "missing": [
+      "temporal extrinsic curvature",
+      "shell source and conservation"
+    ],
+    "sigma_geometric": -0.03129647042188579
+  }
+}

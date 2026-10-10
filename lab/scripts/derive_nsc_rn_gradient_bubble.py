@@ -1,10 +1,10 @@
-"""Drive the two-force gradient balance across the recorded RN neutral family.
+"""Reduce radial/transverse pressures across the recorded RN neutral family.
 
 Reads every station already written by ``nsc-rn-neutral-family-v1`` and
-reduces each one to a finite two-force balance record. No time step is
+reduces each one to a finite pressure-diagnostic record. No time step is
 taken, no station is re-run, and no existing file is rewritten.
 
-The family is incomplete on disk: three cases stopped on the CPU
+The family is incomplete on disk: four cases stopped on the CPU
 projection and two stopped early, and no case wrote a ``summary.json``.
 This driver therefore reports coverage honestly per case instead of
 describing a family that does not exist.
@@ -33,9 +33,10 @@ from recursive_horizons import nsc_rn_gradient_bubble as bubble  # noqa: E402
 from recursive_horizons import nsc_rn_stencil_audit as stencil  # noqa: E402
 
 FAMILY = LAB / "results/development/nsc-rn-neutral-family-v1"
-RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v5.json"
-PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v4.json"
+RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v6.json"
+PRIOR_RECORD = LAB / "results/development/nsc-rn-gradient-bubble-v5.json"
 EARLIER_RECORDS = (
+    LAB / "results/development/nsc-rn-gradient-bubble-v4.json",
     LAB / "results/development/nsc-rn-gradient-bubble-v3.json",
     LAB / "results/development/nsc-rn-gradient-bubble-v2.json",
     LAB / "results/development/nsc-rn-gradient-bubble-v1.json",
@@ -108,8 +109,6 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
     verdicts = sorted({row["verdict"] for row in rows})
     flags = sorted({flag for row in rows for flag in row["dead_end_flags"]})
     last = rows[-1] if rows else None
-    regular = bool(last["slope_meets_regularity_limit"]) if last else False
-    reaches = bool(last["regularity_extrapolation"]["domain_reaches_horizon"]) if last else False
     wall_rows = [row for row in rows if row["wall_count"] > 0]
     wall_radii = [row["r_first_wall"] for row in wall_rows]
     return {
@@ -125,7 +124,7 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
         "r_wall_final": last["r_first_wall"] if last else None,
         "wall_at_final_station": bool(last["wall_count"] > 0) if last else False,
         "reached_t_over_rm": last["t_over_rm"] if last else None,
-        "slope_meets_regularity_limit": bool(regular),
+        "slope_meets_regularity_limit": None,
         "verdicts": verdicts,
         "dead_end_flags_observed": flags,
         "has_summary_json": (case_dir / "summary.json").exists(),
@@ -164,8 +163,8 @@ def _stencil_validity(cases):
     worst = max((abs(row["slope_difference"]) for row in slopes), default=0.0)
     return {
         "question": (
-            "The regularity verdict rests on a throat slope of -7 to -488. Is that "
-            "steepness the physics, or an artifact of the nodal stencils that the "
+            "The recorded local pressure slope ranges from -7 to -488. Is that "
+            "steepness changed by exact stencil weights rather than the nodal weights the "
             "chart itself reports as failing?"
         ),
         "method": (
@@ -185,12 +184,14 @@ def _stencil_validity(cases):
         "weights_exact": max(
             (row["max_relative_weight_difference"] for row in audit["rows"]), default=1.0) < 1e-12,
         "throat_slope_difference_max": worst,
-        "throat_slope_confirms_verdict": worst < 1e-6,
+        "throat_slope_confirms_verdict": None,
+        "pressure_slope_consistent_across_weight_sets": worst < 1e-6,
         "throat_slopes": slopes,
         "conclusion": (
             "The recorded weights agree with exact rational arithmetic to a few ulp "
             "across every audited stencil, and the throat slope is unchanged to about "
-            "1e-13 when re-derived under exact weights. The steepness is physics. The "
+            "1e-13 when re-derived under exact weights. This checks stencil agreement, "
+            "not the physical interpretation of the pressure slope. The "
             "RuntimeError is a false alarm from an ill-conditioned self-check: the "
             "moment sum cancels catastrophically, so evaluating it in double precision "
             "at 1e-8 is not a valid test at these widths."
@@ -238,11 +239,10 @@ def main() -> int:
             "sha256": _sha256_file(PRIOR_RECORD),
             "verdicts": prior_doc.get("verdicts"),
             "superseded_reason": (
-                "The v1 verdict was decided by a chosen throat-slope limit of 8. "
-                "The measured slopes straddled it at -7.37 and -8.44, so the verdict "
-                "pointed the wrong way: mu=1.040 eps=0.001 passed as two_force_balance "
-                "but has no balance wall inside its collar at all. The limit is now a "
-                "reported diagnostic only."
+                "The g >= -1 regularity test and its Hayward attribution are unsupported. "
+                "Inputs are orthonormal pressure components, not opposing forces. "
+                "Crossings and slopes remain finite diagnostics; reaching the inner "
+                "horizon does not determine centre regularity. Historical bytes remain intact."
             ),
             "case_verdicts": {c["case"]: c["stations"][-1]["verdict"] for c in prior_doc["cases"]},
         }
@@ -254,8 +254,9 @@ def main() -> int:
     validity = _stencil_validity(cases)
 
     record = {
-        "schema": "NSC-RN-GRADIENT-BUBBLE-v5",
+        "schema": "NSC-RN-GRADIENT-BUBBLE-v6",
         "api_version": bubble.API_VERSION,
+        "diagnostic_semantics": bubble.diagnostic_semantics(),
         "creation_only": True,
         "producing_commit": _producing_commit(),
         "family_source": FAMILY.name,
@@ -266,12 +267,11 @@ def main() -> int:
             "r_outer": 32.0,
             "observer": "areal chart of the recorded coupled arm",
             "state": "recorded station payload, no time step taken",
-            "compared_quantity": "balance of inherited radial and generated angular pressure",
+            "compared_quantity": "relative magnitudes of radial and transverse orthonormal pressures",
             "verdict_basis": (
-                "measured balance-wall structure. A wall is an areal radius where the "
-                "radial and angular forces are equal, surviving a hysteresis band and a "
-                "minimum persistence on both sides while both forces stay above their own "
-                "live floor. No chosen slope limit decides the verdict."
+                "A legacy wall label denotes an equal-magnitude pressure crossing "
+                "surviving the declared hysteresis, persistence and live floors. "
+                "It does not establish mechanical equilibrium or a cosmological boundary."
             ),
             "wall_dynamics": (
                 "The wall is tracked across every station of a case, not read at the last "
@@ -280,23 +280,15 @@ def main() -> int:
             ),
         },
         "regularity_scope": (
-            "The computed domain starts at the current inner mass, which is at or above "
-            "mu and grows toward 1.04. That edge is OUTSIDE the RN inner horizon in every "
-            "case: r_minus is 0.9387, 0.8682 and 0.7543 for mu=1.002, 1.010 and 1.040, so "
-            "the gap left uncovered is 0.063 to 0.286 r_m. The region between the grid edge "
-            "and the horizon is never evaluated. Regularity is therefore NOT decidable on "
-            "this domain. The fitted throat power law extrapolated across that gap would "
-            "grow the force by about 1e0 to 1e4, but that is an extrapolation, not a "
-            "measurement. Versions three and four named a hard interior_not_regular dead "
-            "end here; that over-claimed and is withdrawn."
+            "Regularity is NOT decidable from this positive-radius pressure diagnostic. "
+            "An assumed power law extrapolated to the inner horizon remains an "
+            "extrapolation. Even reaching that horizon does not establish centre "
+            "regularity. No inward continuation is required or selected by this record."
         ),
-        "regularity_criterion": (
-            "Hayward, gr-qc/0506126, Formation and evaporation of non-singular "
-            "black holes (2005): the static region is supported by finite density "
-            "and pressures, behaving as a cosmological constant at small radius. "
-            "A force with logarithmic slope g behaves as r^g and stays finite as "
-            "r -> 0 only when g >= -1. That limit is sourced from that paper, not "
-            "chosen here."
+        "regularity_criterion": None,
+        "regularity_attribution_correction": (
+            "Hayward gr-qc/0506126 gives a finite-stress regular-core example; "
+            "it does not supply the v5 g >= -1 criterion for these pressure components."
         ),
         "supersedes": prior,
         "earlier_records": [p.name for p in EARLIER_RECORDS if p.is_file()],
@@ -328,7 +320,7 @@ def main() -> int:
             "r_first_wall_min": min(walls) if walls else None,
             "r_first_wall_max": max(walls) if walls else None,
             "domain_reaches_horizon_any_case": bool(reaches),
-            "cases_meeting_the_regularity_slope_limit": sum(1 for c in cases if c["slope_meets_regularity_limit"]),
+            "cases_meeting_the_regularity_slope_limit": None,
             "gap_to_horizon_min": min(gaps) if gaps else None,
             "gap_to_horizon_max": max(gaps) if gaps else None,
             "extrapolated_log10_ratio_min": min(extrap) if extrap else None,
@@ -345,15 +337,16 @@ def main() -> int:
             "wall_live_fraction": bubble.WALL_LIVE_FRACTION,
             "wall_hysteresis": bubble.WALL_HYSTERESIS,
             "wall_min_cells": bubble.WALL_MIN_CELLS,
-            "regular_slope_limit": bubble.REGULAR_SLOPE_LIMIT,
-            "regular_slope_tolerance": bubble.REGULAR_SLOPE_TOLERANCE,
+            "regular_slope_limit": None,
+            "regular_slope_tolerance": None,
             "horizon_reach_tolerance": bubble.HORIZON_REACH_TOLERANCE,
         },
         "numerical_validity": validity,
         "cases": cases,
     }
 
-    RECORD.write_text(json.dumps(record, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    with RECORD.open("x", encoding="utf-8") as handle:
+        handle.write(json.dumps(record, indent=1, sort_keys=True) + "\n")
     print(f"wrote {RECORD.relative_to(LAB)}")
     print(f"  cases            : {record['coverage']['cases']}")
     print(f"  stations reduced : {record['coverage']['total_stations']}")

@@ -94,7 +94,36 @@ claim, name the region, scale, observer, state, and compared quantity.
 
 <a id="rn-radial-programme"></a>
 
-## RN radial programme
+## Exterior-first atlas
+
+The active objective, 10 October 2026, is a finite mathematical atlas of
+possible parent regions, transitions, children, siblings and descendants.
+Borrow established mathematics, connect compatible regions, investigate
+branching and inheritance, derive local consequences, then compare with
+observations. The [atlas owner](../lab/docs/nsc-cosmological-atlas.md) and
+[two-worktree inventory](../lab/docs/research-inventory.md) route the work.
+
+Geometric attachments, exterior response and communicating mouths are
+separate candidate approaches. A failed candidate does not remove the others.
+Descent, attachment, causal influence and correlation are distinct edges.
+Local spherical charts do not assert a globally spherical multi-hole geometry;
+a spherical boundary does not determine global spatial topology.
+
+Use the existing [compute admission rule](prior-art-and-open-claim.md) and
+[arXiv reuse library](arxiv-studies.md). Every new scientific calculation names
+borrowed mathematics, its missing connection, the decision and next question,
+a finite domain and budget, and an outcome that stops or redirects it. Hold
+the theory and state assumptions fixed within each comparison. Unit changes
+cannot select a physical coupling. Deriving every particle and nuclear mass
+is a longer-term candidate ambition, not an admission condition for the atlas.
+
+The imported finite reducers are reusable; a multi-region physical Hamiltonian
+must still be justified. Coordinate clocks, finite periodic collars and toy
+branch weights do not establish cross-universe ages, new universes or cosmic
+matter fractions. Local lensing/clustering, expansion, antimatter and time
+are separate later questions. No preset dark fraction selects an attachment.
+
+## Retained RN radial programme
 
 The scientific starting checkpoint is `5cb775a7`, the producer of the
 recorded NF256 confirmation. The external two-room import remains
@@ -102,7 +131,7 @@ the historical commit `d95175c25a9989aea681967d6089aa7b2bf27706`.
 It is not an RN result and not the live branch identity. Live branch
 commands are at the top of this page. The periodic parent
 below is historical input. Further periodic autonomous exchange runs
-stay off this programme. The active question is a nonperiodic
+stay off this programme. This candidate's question is a nonperiodic
 horizon-regular Painlevé–Gullstrand parent exterior and a distinct
 near-throat child on its own areal radius. Exact magnetic
 Reissner–Nordström calibration comes before any sourced case. The
@@ -133,9 +162,11 @@ lowest-Landau Gauss branch is a later experiment. The MMP
 negative-Casimir study runs in parallel and leaves the classical
 throat unblocked.
 
-Six workers own `nsc_rn_reference`, `nsc_rn_pg`, `nsc_rn_source`,
-`nsc_rn_observables` and `derive_nsc_rn_parent`. Root freezes
-completed producer files at integration. The historical parent's
+The retained owners are `nsc_rn_reference`, `nsc_rn_pg`, `nsc_rn_source`,
+`nsc_rn_observables` and `derive_nsc_rn_parent`. The old worker allocation
+is retired. The six-case numerical family stopped without any case summary;
+its physical results are not claimed. A new run needs its own admission
+record, not the old six-worker execution instruction. The historical parent's
 bounded $n_f=256$ confirmation is recorded; its comparison, CPU and
 payload hash stay in
 [current result](current-result.md#rn-radial-parent-4-october-2026).
@@ -177,11 +208,8 @@ Regular black-hole interiors remain prior foundations; do not start a
 bounce-rediscovery campaign. The incoming gate stays paused. Keep the
 accepted plan in the task, not another repository plan or handover.
 
-Six workers implement the RN modules named above, with one integration
-owner. The aggregate numerical budget remains six CPU-hours per batch.
-One unified article is the publication target; earlier manuscripts
-and releases stay preserved. Calibration and physical RN runs remain
-pending with those module owners.
+The earlier six-CPU-hour RN batch allocation is historical, not an active
+authorization to restart it. Earlier manuscripts and releases stay preserved.
 
 The earlier **NSC Discovery Programme: Source-Selected Regions,
 Regeneration and Inherited Local Response** started at `ea6c699`.
@@ -233,7 +261,7 @@ $$
 \mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
 $$
 
-The active action is \(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus
+This retained realization's action is \(\Gamma_{\mathrm{one}}\): the canonical Gaussian plus
 the same-spectrum local induced term, counted once. The vacuum-matched CTP
 branch remains a separate historical choice.
 
@@ -269,7 +297,7 @@ source bindings. Numbers, verdicts, and the next physical gap stay in
 notes. A cosmological fit or a proof of infinite physical time is outside
 this finite chain.
 
-This loop is the present finite realization because its geometry and its
+This loop is a reusable finite realization because its geometry and its
 state forces already come from the same action. An extra invented rule for
 the radius as a function of energy is unnecessary. The historical hand-set
 \(H\) and \(B\) fractions, and the historical strong tolerance \(10^{-8}\),

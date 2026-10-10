@@ -23,6 +23,8 @@ IGNORED_PARTS = {
     ".venv",
     "__pycache__",
     ".build",
+    # Match the publication producer: agent routing is not scientific evidence.
+    ".pi",
     # Machine-local agent state. Keep in step with
     # build_publication_provenance.IGNORED_PARTS, or the two disagree on
     # the path set and the provenance record can never validate.

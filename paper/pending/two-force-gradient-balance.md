@@ -1,3 +1,11 @@
+> **Withdrawn from publication, 10 October 2026.** This historical draft is
+> retained to document the interpretation error. Pressure equality does not
+> establish mechanical balance, Hayward does not supply its claimed slope
+> threshold, and reaching a positive inner horizon cannot determine centre
+> regularity. Use the [corrected owner](../../lab/docs/nsc-rn-gradient-bubble.md).
+> The text below is not an active publication proposal and must not be merged
+> into a paper as a measured force-balance result.
+
 # Pending section: two-force gradient balance on the RN radial parent
 
 Status: draft for review. Not merged into `paper/nested-space-cosmology.md`,

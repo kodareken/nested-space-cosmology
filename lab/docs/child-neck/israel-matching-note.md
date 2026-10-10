@@ -1,4 +1,4 @@
-# Full Israel matching of the closed child to the parent's Schwarzschild exterior
+# Exploratory Israel matching of the closed child to the parent's Schwarzschild exterior
 
 7 Oct 2026. Script `israel_matching.py`, data `israel_matching.json`, figure `israel_matching.png`. Needs the restored `child_*` scripts and `junction_neck.py`.
 Units G = c = 1 in formulas; the example is a 10 solar-mass parent (r_g = 29.5 km, G M_p/c^3 = 49.3 microseconds) and the child with N_need = 1.82e78 fermions (bare mass 7.9e40 solar masses, a_b = 7.1e-10 m, radiation radius r_rad = 4.08e17 m).
@@ -7,7 +7,24 @@ The torsion contact term is treated as an effective fluid in the metric (the Ein
 ## 0. Correction to the earlier neck note (own error)
 
 The earlier note gave the neck at the bounce as `R_b = (3 M_p/(4 pi eps_b))^(1/3) = 3.57e-23 m`, independent of N. That used the bare density. The Misner-Sharp mass is geometric, so it contains the negative torsion piece:
-`1 + adot^2 = 0` at `a = a_b` in the model (the contact term cancels the radiation term), so the child's effective mass is zero there and rises from zero as the child leaves `a_b`.
+**10 October correction:** `a_b` below is the density-cancellation scale,
+where `eps = alpha*n^2`, used as a high-density approximation in
+[child_expansion_ladder.py](../../scripts/child_neck/child_expansion_ladder.py).
+It is not the exact real turning point of the closed model. The full equation
+is `adot^2 = (kappa/3)(eps-alpha*n^2)a^2 - 1`. At a real bounce `adot=0`,
+so `1+adot^2=1`, not zero. Exact density cancellation instead gives
+`adot^2=-1`, outside the real closed-FLRW trajectory. The former claim of
+zero geometric child mass at a real bounce is withdrawn. In the stated
+mass identity its value at an actual turning point is
+`m = a*sin(chi)^3/2` in geometric units.
+
+The following near-cancellation neck onset and its tiny `x^2-1` estimates
+remain historical approximation outputs, not established exact-bounce
+predictions. Retaining a small curvature correction may be essential in that
+limit. A consistent near-turning-point treatment is missing; no replacement
+trajectory or corrected numerical result is claimed here. The standard angular
+junction identities in section 1 can still be reused in their own domains.
+
 With the geometric mass `R_j^3 = a_b^3 (M_p/M_b) x^6/(x^2-1)`, `x = a/a_b`. A neck with mass M_p first exists at `x^2 - 1 = M_p/M_b = 1.3e-40`, where it sits at the equator (`R_j = a_b`). Its smallest value is `R_min = 1.89 a_b (M_p/M_b)^(1/3) = 6.7e-23 m` at `a = 1.22 a_b` (the old number times 1.89).
 The larger consequence: this mass-matched surface is spacelike (`|a chi'| >> 1`) everywhere before `t_exit/27` (`|a chi'| = 6.8e45` at `x^2 - 1 = 1e-39`, `6.1e15` at `1e-3`, `6.8e12` at `x^2 = 2`). So the earlier "neck grows as t^(2/3) from the bounce" holds only as a timelike surface from `t_exit/27` on.
 Unchanged and rechecked: the exit at `t = G M_p/c^3` (49 microseconds), `a_exit = 1.10e11 m`, and the hidden-child limits `N_max = 3.5e58` (radiation) and `9.7e57` (all matter).

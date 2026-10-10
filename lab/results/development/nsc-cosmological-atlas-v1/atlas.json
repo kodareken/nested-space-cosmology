@@ -1,0 +1,929 @@
+{
+  "admission": {
+    "borrowed": "matching, causal geometry and finite elimination",
+    "category": "operator/domain/state compatibility map",
+    "missing_arrow": "physically sourced exterior-to-child interfaces and response",
+    "new_physics_result": false
+  },
+  "fitted_observations": [],
+  "local_questions_later": [
+    "dark-sector response after a causal/source map exists",
+    "matter-antimatter symmetry selected by an actual attachment",
+    "clock and entropy behavior in a named observer domain"
+  ],
+  "purpose": "exterior-first finite cosmological candidate map",
+  "scenarios": [
+    {
+      "assumptions": [
+        "each distinct black hole may host a child",
+        "one further generation only",
+        "no sibling signaling assumed",
+        "local spherical patches do not make the common parent spherical"
+      ],
+      "id": "separate_holes",
+      "links": [
+        {
+          "clock": null,
+          "evidence": "A separate local Schwarzschild chart is available",
+          "from": "parent",
+          "id": "parent-hole-a",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "shared nonspherical parent metric and patch matching"
+          ],
+          "source_refs": [
+            "causal_review"
+          ],
+          "status": "unresolved",
+          "to": "hole_a",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Published black-hole offspring hypothesis class",
+          "from": "hole_a",
+          "id": "descent-a",
+          "kind": "descent",
+          "minimum_delay": null,
+          "missing": [
+            "formation mechanism",
+            "state and dimensionless-parameter transfer"
+          ],
+          "source_refs": [
+            "smolin",
+            "poplawski"
+          ],
+          "status": "unresolved",
+          "to": "child_a",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Known junction equations can constrain a proposed neck",
+          "from": "hole_a",
+          "id": "neck-a",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "induced metric",
+            "physical layer source",
+            "complete matching"
+          ],
+          "source_refs": [
+            "israel_note"
+          ],
+          "status": "unresolved",
+          "to": "child_a",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Inward causal access is possible in appropriate collapse geometries",
+          "from": "parent",
+          "id": "infall-a",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "actual collapse geometry",
+            "arrival kernel",
+            "clock conversion"
+          ],
+          "source_refs": [
+            "causal_review"
+          ],
+          "status": "unresolved",
+          "to": "child_a",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "A separate local Schwarzschild chart is available",
+          "from": "parent",
+          "id": "parent-hole-b",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "shared nonspherical parent metric and patch matching"
+          ],
+          "source_refs": [
+            "causal_review"
+          ],
+          "status": "unresolved",
+          "to": "hole_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Published black-hole offspring hypothesis class",
+          "from": "hole_b",
+          "id": "descent-b",
+          "kind": "descent",
+          "minimum_delay": null,
+          "missing": [
+            "formation mechanism",
+            "state and dimensionless-parameter transfer"
+          ],
+          "source_refs": [
+            "smolin",
+            "poplawski"
+          ],
+          "status": "unresolved",
+          "to": "child_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Known junction equations can constrain a proposed neck",
+          "from": "hole_b",
+          "id": "neck-b",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "induced metric",
+            "physical layer source",
+            "complete matching"
+          ],
+          "source_refs": [
+            "israel_note"
+          ],
+          "status": "unresolved",
+          "to": "child_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Inward causal access is possible in appropriate collapse geometries",
+          "from": "parent",
+          "id": "infall-b",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "actual collapse geometry",
+            "arrival kernel",
+            "clock conversion"
+          ],
+          "source_refs": [
+            "causal_review"
+          ],
+          "status": "unresolved",
+          "to": "child_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Common history can correlate unequal regional states",
+          "from": "child_a",
+          "id": "siblings",
+          "kind": "correlation",
+          "minimum_delay": null,
+          "missing": [
+            "joint initial state"
+          ],
+          "source_refs": [
+            "nested_qualities"
+          ],
+          "status": "hypothesis",
+          "to": "child_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "One further possible black-hole formation; finite cutoff",
+          "from": "child_a",
+          "id": "grandchild-descent",
+          "kind": "descent",
+          "minimum_delay": null,
+          "missing": [
+            "child A black-hole interface",
+            "transition and state transfer"
+          ],
+          "source_refs": [
+            "smolin"
+          ],
+          "status": "unresolved",
+          "to": "grandchild",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "A further interface requires its own junction",
+          "from": "child_a",
+          "id": "grandchild-neck",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "child A black-hole interface",
+            "geometry and layer source"
+          ],
+          "source_refs": [
+            "israel_note"
+          ],
+          "status": "unresolved",
+          "to": "grandchild",
+          "valid_interval": null
+        }
+      ],
+      "max_descent_depth": 2,
+      "regions": [
+        {
+          "clock": {
+            "kind": "no common clock supplied"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": null,
+            "embedding": "none; drawings are patch diagrams",
+            "globally_spherical": false,
+            "metric": "g_parent(x), not supplied",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "parent",
+          "role": "parent",
+          "source": "parent stress tensor and field equation not supplied",
+          "state": "not supplied",
+          "title": "Unresolved parent cosmos",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "local exterior Killing coordinate; no parent synchronization"
+          },
+          "contained_in": "parent",
+          "dimensionless_parameters": {
+            "mu_over_reference_length": 1.0
+          },
+          "generation": 0,
+          "geometry": {
+            "chart": "static Schwarzschild exterior, separate local chart",
+            "domain": "R>2mu",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "ds2=-f dt2+f^-1 dR2+R2 dOmega2; f=1-2mu/R",
+            "placement_is_solution": false,
+            "schematic_parent_position": [
+              -3.0,
+              0.0
+            ],
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "hole_a",
+          "role": "interface",
+          "source": "vacuum Einstein exterior only",
+          "state": "quantum state not supplied",
+          "title": "Black-hole interface A",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "child comoving proper time; interpatch conversion missing"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {
+            "inherited_law": "unspecified",
+            "state_is_shared": false
+          },
+          "generation": 1,
+          "geometry": {
+            "areal_radius": "R=a(τ) sin(χ)",
+            "chart": "closed FLRW ansatz, not solved",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "ds2=-dτ2+a(τ)^2[dχ2+sin(χ)^2 dOmega2]",
+            "spatial_topology": "S3 candidate; not the horizon S2",
+            "symmetry_orbits": "S2"
+          },
+          "id": "child_a",
+          "role": "child",
+          "source": "transition and child source not supplied",
+          "state": "may differ from sibling",
+          "title": "Potential child A",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "local exterior Killing coordinate; no parent synchronization"
+          },
+          "contained_in": "parent",
+          "dimensionless_parameters": {
+            "mu_over_reference_length": 1.5
+          },
+          "generation": 0,
+          "geometry": {
+            "chart": "static Schwarzschild exterior, separate local chart",
+            "domain": "R>2mu",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "ds2=-f dt2+f^-1 dR2+R2 dOmega2; f=1-2mu/R",
+            "placement_is_solution": false,
+            "schematic_parent_position": [
+              3.0,
+              0.0
+            ],
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "hole_b",
+          "role": "interface",
+          "source": "vacuum Einstein exterior only",
+          "state": "quantum state not supplied",
+          "title": "Black-hole interface B",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "child comoving proper time; interpatch conversion missing"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {
+            "inherited_law": "unspecified",
+            "state_is_shared": false
+          },
+          "generation": 1,
+          "geometry": {
+            "areal_radius": "R=a(τ) sin(χ)",
+            "chart": "closed FLRW ansatz, not solved",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "ds2=-dτ2+a(τ)^2[dχ2+sin(χ)^2 dOmega2]",
+            "spatial_topology": "S3 candidate; not the horizon S2",
+            "symmetry_orbits": "S2"
+          },
+          "id": "child_b",
+          "role": "child",
+          "source": "transition and child source not supplied",
+          "state": "may differ from sibling",
+          "title": "Potential child B",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "not supplied"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 2,
+          "geometry": {
+            "chart": null,
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "unresolved; finite depth stops here",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "grandchild",
+          "role": "grandchild",
+          "source": "formation source not supplied",
+          "state": "not supplied",
+          "title": "Potential grandchild",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        }
+      ],
+      "solution_status": "candidate atlas with unresolved physical interfaces",
+      "theory": {
+        "couplings": {},
+        "family": "unselected source theory",
+        "rule": "no coupling inferred from a drawing or retuned between states"
+      },
+      "title": "One parent, two different black holes"
+    },
+    {
+      "assumptions": [
+        "fixed limiting de Sitter radius a",
+        "thin null shells",
+        "spherical toy model",
+        "l>a disconnection uses near-singularity approximation and equal nucleation radius with a<<R0<<2m"
+      ],
+      "constraints": {
+        "collision": "f_A*f_B=f_C*f_D",
+        "disconnection": "l>a prevents shell intersections in the near-singularity, equal-R0 approximation, a<<R0<<2m",
+        "nucleation": "R0^3=2*m*a^2"
+      },
+      "fixed_parameter_bindings": [
+        {
+          "parameter": "a_over_reference_length",
+          "region": "bubble_a",
+          "theory_key": "a"
+        },
+        {
+          "parameter": "a_over_reference_length",
+          "region": "bubble_b",
+          "theory_key": "a"
+        }
+      ],
+      "id": "one_hole_multiple_daughters",
+      "links": [
+        {
+          "clock": null,
+          "evidence": "Independent nucleation sites in a single interior",
+          "from": "hole",
+          "id": "bubble-descent-a",
+          "kind": "descent",
+          "minimum_delay": null,
+          "missing": [
+            "nucleation microphysics and probability"
+          ],
+          "source_refs": [
+            "barrabes_frolov"
+          ],
+          "status": "imported_conditional",
+          "to": "bubble_a",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Equations 3, 6, 7: null-shell angular matching",
+          "from": "hole",
+          "id": "bubble-shell-a",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "physical transition source"
+          ],
+          "source_refs": [
+            "barrabes_frolov"
+          ],
+          "status": "imported_conditional",
+          "to": "bubble_a",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Independent nucleation sites in a single interior",
+          "from": "hole",
+          "id": "bubble-descent-b",
+          "kind": "descent",
+          "minimum_delay": null,
+          "missing": [
+            "nucleation microphysics and probability"
+          ],
+          "source_refs": [
+            "barrabes_frolov"
+          ],
+          "status": "imported_conditional",
+          "to": "bubble_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Equations 3, 6, 7: null-shell angular matching",
+          "from": "hole",
+          "id": "bubble-shell-b",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [
+            "physical transition source"
+          ],
+          "source_refs": [
+            "barrabes_frolov"
+          ],
+          "status": "imported_conditional",
+          "to": "bubble_b",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Section 3, equations 9-12: near-singularity approximation with equal nucleation radius and a<<R0<<2m permits intersections for l<a",
+          "from": "bubble_a",
+          "id": "bubble-collision",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "choose collision continuation and common clock"
+          ],
+          "source_refs": [
+            "barrabes_frolov"
+          ],
+          "status": "imported_conditional",
+          "to": "bubble_b",
+          "valid_interval": null
+        }
+      ],
+      "max_descent_depth": 1,
+      "regions": [
+        {
+          "clock": {
+            "kind": "interior time; exterior t becomes spatial"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {
+            "m_over_a": 1000.0
+          },
+          "generation": 0,
+          "geometry": {
+            "chart": "Schwarzschild trapped region",
+            "domain": "0<R<2m",
+            "embedding": "none; drawings are patch diagrams",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "hole",
+          "role": "interface",
+          "source": "limiting-curvature thin-shell model",
+          "state": "not a specified quantum state",
+          "title": "One Schwarzschild interior",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "local de Sitter chart"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {
+            "a_over_reference_length": 1.0
+          },
+          "generation": 1,
+          "geometry": {
+            "chart": "de Sitter patch",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "f=1-R2/a2",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "bubble_a",
+          "role": "child",
+          "source": "false-vacuum interior plus negative-energy null shells",
+          "state": "not supplied",
+          "title": "de Sitter daughter A",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "local de Sitter chart"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {
+            "a_over_reference_length": 1.0
+          },
+          "generation": 1,
+          "geometry": {
+            "chart": "de Sitter patch",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "f=1-R2/a2",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "bubble_b",
+          "role": "child",
+          "source": "false-vacuum interior plus negative-energy null shells",
+          "state": "not supplied",
+          "title": "de Sitter daughter B",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        }
+      ],
+      "solution_status": "borrowed kinematic candidate; no NSC formation claim",
+      "theory": {
+        "couplings": {
+          "a": 1.0
+        },
+        "family": "Barrabes-Frolov limiting-curvature toy model"
+      },
+      "title": "Several daughters inside one hole"
+    },
+    {
+      "assumptions": [
+        "near-extremal magnetic mouths",
+        "large enough fermion species count",
+        "small third mouth",
+        "supporting structure and controlled backreaction"
+      ],
+      "constraints": {
+        "energy": "E_small < |E_binding|",
+        "size": "G*m_small < r_e",
+        "source": "m_small < N_f*Q/(8*r_e)",
+        "topology": "F2, not three independent pairwise handles F3"
+      },
+      "id": "connected_mouths",
+      "links": [
+        {
+          "clock": null,
+          "evidence": "Section 3 establishes conditional traversability; numeric transit time not assigned",
+          "from": "A",
+          "id": "mouth-A-B",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "NSC coefficient/state identification",
+            "numerical clock map"
+          ],
+          "source_refs": [
+            "multimouth"
+          ],
+          "status": "imported_conditional",
+          "to": "B",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Section 3 establishes conditional traversability; numeric transit time not assigned",
+          "from": "B",
+          "id": "mouth-B-A",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "NSC coefficient/state identification",
+            "numerical clock map"
+          ],
+          "source_refs": [
+            "multimouth"
+          ],
+          "status": "imported_conditional",
+          "to": "A",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Section 3 establishes conditional traversability; numeric transit time not assigned",
+          "from": "A",
+          "id": "mouth-A-C",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "NSC coefficient/state identification",
+            "numerical clock map"
+          ],
+          "source_refs": [
+            "multimouth"
+          ],
+          "status": "imported_conditional",
+          "to": "C",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Section 3 establishes conditional traversability; numeric transit time not assigned",
+          "from": "C",
+          "id": "mouth-C-A",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "NSC coefficient/state identification",
+            "numerical clock map"
+          ],
+          "source_refs": [
+            "multimouth"
+          ],
+          "status": "imported_conditional",
+          "to": "A",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Section 3 establishes conditional traversability; numeric transit time not assigned",
+          "from": "B",
+          "id": "mouth-B-C",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "NSC coefficient/state identification",
+            "numerical clock map"
+          ],
+          "source_refs": [
+            "multimouth"
+          ],
+          "status": "imported_conditional",
+          "to": "C",
+          "valid_interval": null
+        },
+        {
+          "clock": null,
+          "evidence": "Section 3 establishes conditional traversability; numeric transit time not assigned",
+          "from": "C",
+          "id": "mouth-C-B",
+          "kind": "causal",
+          "minimum_delay": null,
+          "missing": [
+            "NSC coefficient/state identification",
+            "numerical clock map"
+          ],
+          "source_refs": [
+            "multimouth"
+          ],
+          "status": "imported_conditional",
+          "to": "B",
+          "valid_interval": null
+        }
+      ],
+      "max_descent_depth": 0,
+      "regions": [
+        {
+          "clock": {
+            "kind": "coordinate conversion follows matched geometry"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": "matched near-extremal throat patch",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "near-throat AdS2 x S2 with controlled perturbations",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "A",
+          "role": "mouth",
+          "source": "charged fermion Casimir energy; magnetic flux and supporting structure",
+          "state": "state of imported construction, not the NSC child state",
+          "title": "Mouth A",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "coordinate conversion follows matched geometry"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": "matched near-extremal throat patch",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "near-throat AdS2 x S2 with controlled perturbations",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "B",
+          "role": "mouth",
+          "source": "charged fermion Casimir energy; magnetic flux and supporting structure",
+          "state": "state of imported construction, not the NSC child state",
+          "title": "Mouth B",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "coordinate conversion follows matched geometry"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": "matched near-extremal throat patch",
+            "embedding": "none; drawings are patch diagrams",
+            "metric": "near-throat AdS2 x S2 with controlled perturbations",
+            "spatial_topology": "unspecified",
+            "symmetry_orbits": "S2"
+          },
+          "id": "C",
+          "role": "mouth",
+          "source": "charged fermion Casimir energy; magnetic flux and supporting structure",
+          "state": "state of imported construction, not the NSC child state",
+          "title": "Mouth C",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        }
+      ],
+      "solution_status": "published conditional causal candidate; no astrophysical identification",
+      "theory": {
+        "couplings": {
+          "g": "fixed per comparison"
+        },
+        "family": "MMP plus Emparan et al."
+      },
+      "title": "A connected three-mouth candidate"
+    },
+    {
+      "assumptions": [
+        "hidden mode is exactly uncoupled",
+        "same visible state",
+        "finite dimension 3"
+      ],
+      "id": "response_equivalence",
+      "links": [
+        {
+          "clock": null,
+          "evidence": "Declared matrix coupling, not geometric gluing",
+          "from": "local",
+          "id": "operator-link",
+          "kind": "attachment",
+          "minimum_delay": null,
+          "missing": [],
+          "source_refs": [
+            "nested_qualities"
+          ],
+          "status": "algebra_control",
+          "to": "visible",
+          "valid_interval": null
+        }
+      ],
+      "max_descent_depth": 0,
+      "regions": [
+        {
+          "clock": {
+            "kind": "dimensionless model time"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": null,
+            "spatial_topology": "none: finite Hilbert space"
+          },
+          "id": "local",
+          "role": "operator_block",
+          "source": "explicitly supplied matrix",
+          "state": "Gaussian covariance",
+          "title": "Local mode",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "dimensionless model time"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": null,
+            "spatial_topology": "none: finite Hilbert space"
+          },
+          "id": "visible",
+          "role": "operator_block",
+          "source": "explicitly supplied matrix",
+          "state": "Gaussian covariance",
+          "title": "Visible exterior",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        },
+        {
+          "clock": {
+            "kind": "dimensionless model time"
+          },
+          "contained_in": null,
+          "dimensionless_parameters": {},
+          "generation": 0,
+          "geometry": {
+            "chart": null,
+            "spatial_topology": "none: finite Hilbert space"
+          },
+          "id": "hidden",
+          "role": "operator_block",
+          "source": "explicitly supplied matrix",
+          "state": "Gaussian covariance",
+          "title": "Hidden exterior",
+          "validity": "finite candidate patch; no global spacetime completion asserted"
+        }
+      ],
+      "solution_status": "known algebraic control; no spacetime claim",
+      "theory": {
+        "couplings": {
+          "visible_link": "1/3"
+        },
+        "family": "finite Hermitian operator control"
+      },
+      "title": "Different exteriors, the same local response"
+    }
+  ],
+  "schema": "nsc-cosmological-atlas-v1",
+  "sources": {
+    "barrabes_frolov": {
+      "limit": "Kinematic toy model; l>a condition uses near-singularity approximation, equal nucleation radius and a<<R0<<2m; nucleation probability absent",
+      "read": "Introduction and sections 2-4, equations 3, 6, 7, 12-22",
+      "url": "https://arxiv.org/html/hep-th/9511136v1",
+      "use": "Multiple daughters in ONE hole; null-shell matching and collisions"
+    },
+    "causal_review": {
+      "limit": "Review, not proof that astrophysical black holes host children",
+      "read": "Introduction and causal-structure discussion",
+      "url": "https://arxiv.org/html/1801.04539v1",
+      "use": "Causal diagrams distinguish connection from signal access"
+    },
+    "finite_reduction": {
+      "limit": "Finite matrix control; no inferred geometry or relativistic signal cone",
+      "path": "lab/src/recursive_horizons/nsc_evolving_reduction.py",
+      "read": "evolve_retained_region and fixed-observer interface",
+      "use": "Imported finite retarded elimination with an explicitly supplied H(t)"
+    },
+    "fixed_theory": {
+      "limit": "Idealized null shells; not a nonlinear stability proof",
+      "read": "Sections II.2.1, III matching/domain passages, IV",
+      "url": "https://arxiv.org/html/2604.27897v1",
+      "use": "Hold the effective theory fixed when perturbing a state"
+    },
+    "israel_note": {
+      "limit": "Pressure, conservation and a physical shell source still needed",
+      "path": "lab/docs/child-neck/israel-matching-note.md",
+      "read": "Angular junction formula and ball versus small-neck orientation",
+      "use": "Imported angular thin-shell matching, not complete surface dynamics"
+    },
+    "multimouth": {
+      "limit": "Charged near-extremal semiclassical domain with many fermion species",
+      "read": "Sections 1-3.4 and discussion; Appendix A not fully checked",
+      "url": "https://arxiv.org/html/2012.07821v2",
+      "use": "Controlled three-mouth candidate, energy/size limits and signaling"
+    },
+    "nested_qualities": {
+      "limit": "Finite operators; no determination of physical constants",
+      "path": "docs/nsc-nested-qualities.md",
+      "read": "Sections 1-4",
+      "use": "Known Schur reduction; inherited law differs from regional state"
+    },
+    "poplawski": {
+      "limit": "Exact Kantowski-Sachs geometry is not reached; S3 continuation missing",
+      "read": "Sections 1-8 through equation 33; v2, 23 June 2026",
+      "url": "https://arxiv.org/html/2007.11556v2",
+      "use": "Spin-fluid source, shear and conditional bounce"
+    },
+    "smolin": {
+      "limit": "Hypothesis; no physical transition kernel imported",
+      "read": "Introduction and dimensionless-parameter hypothesis",
+      "url": "https://arxiv.org/html/gr-qc/9404011v1",
+      "use": "Descent with potentially inherited or changed dimensionless parameters"
+    }
+  }
+}

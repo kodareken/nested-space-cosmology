@@ -1,4 +1,4 @@
-"""Bounded checks for the two-force gradient balance on RN radial states.
+"""Bounded pressure diagnostics and their interpretation on RN radial states.
 
 The synthetic cases pin the numerics on inputs whose answer is known in
 closed form, and the recorded-case checks confirm the provenance guard
@@ -74,6 +74,20 @@ class BalanceTests(unittest.TestCase):
         radius = np.linspace(1.0, 2.0, 200001)
         value = gb._integrated_force(radius, np.ones_like(radius))
         self.assertAlmostEqual(value, 4.0 * np.pi * 7.0 / 3.0, places=4)
+
+    def test_pressure_integral_aliases_preserve_the_legacy_values(self):
+        radius = np.linspace(1.0, 2.0, 100)
+        profile = gb.gradient_bubble_profile(_payload(radius ** -2, -radius, radius))
+        self.assertEqual(profile["radial_pressure_volume_integral"],
+                         profile["force_inner_integrated"])
+        self.assertEqual(profile["transverse_pressure_volume_integral"],
+                         profile["force_outer_integrated"])
+
+    def test_equal_magnitudes_do_not_require_equal_signed_stresses(self):
+        pressure = np.linspace(1.0, 2.0, 64)
+        profile = gb.gradient_bubble_profile(_payload(pressure, -pressure))
+        self.assertTrue(np.allclose(profile["balance"], 0.5))
+        self.assertIn("not mechanical equilibrium", profile["diagnostic_semantics"]["wall"])
 
     def test_sign_change_counter(self):
         self.assertEqual(gb._sign_changes(np.array([1.0, 2.0, -1.0, -2.0, 5.0])), 2)
@@ -156,10 +170,13 @@ class WallTests(unittest.TestCase):
 
 
 class RegularityTests(unittest.TestCase):
-    """The sourced criterion, and the domain limit that blocks it."""
+    """No finite pressure-slope or horizon-reach regularity verdict."""
 
-    def test_limit_is_the_sourced_inverse_radius_value(self):
+    def test_legacy_constant_is_importable_but_criterion_is_unsupported(self):
         self.assertEqual(gb.REGULAR_SLOPE_LIMIT, -1.0)
+        self.assertIsNone(gb.diagnostic_semantics()["regularity_criterion"])
+        self.assertEqual(gb.diagnostic_semantics()["regularity_status"],
+                         "unsupported_by_this_diagnostic")
 
     def test_inner_horizon_matches_the_recorded_calibration(self):
         for mass_over_rm, recorded in ((1.002, 0.9387228319217753),
@@ -178,10 +195,11 @@ class RegularityTests(unittest.TestCase):
         self.assertGreater(result["gap_to_horizon"], 0.2)
         self.assertFalse(result["extrapolation_is_measurement"])
 
-    def test_domain_at_the_horizon_is_decidable(self):
+    def test_horizon_reach_does_not_determine_the_centre(self):
         r_minus = gb.inner_horizon(1.04)
         result = gb.horizon_extrapolation(r_minus, r_minus, -23.28)
         self.assertTrue(result["domain_reaches_horizon"])
+        self.assertFalse(result["centre_regularity_determined"])
         self.assertAlmostEqual(result["gap_to_horizon"], 0.0)
 
     def test_steepness_outside_the_domain_is_not_a_hard_dead_end(self):
@@ -191,28 +209,40 @@ class RegularityTests(unittest.TestCase):
         outer = 0.5 * radius ** -30.0
         verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius),
                                                 mass_over_rm=1.04)
-        self.assertFalse(verdict["slope_meets_regularity_limit"])
-        self.assertIn("throat_extrapolation_diverges", verdict["dead_end_flags"])
+        self.assertIsNone(verdict["slope_meets_regularity_limit"])
+        self.assertNotIn("throat_extrapolation_diverges", verdict["dead_end_flags"])
         self.assertNotIn("interior_not_regular", verdict["dead_end_flags"])
         self.assertNotEqual(verdict["verdict"], "dead_end")
 
-    def test_regularity_is_decidable_when_the_domain_reaches_the_horizon(self):
-        radius = np.linspace(1.04, 32.0, 300)
+    def test_steep_pressure_at_inner_horizon_is_not_a_centre_verdict(self):
+        radius = np.linspace(gb.inner_horizon(1.04), 32.0, 300)
         inner = radius ** -30.0
         outer = 0.5 * radius ** -30.0
         payload = _payload(inner, outer, radius)
-        payload["radius"] = np.linspace(gb.inner_horizon(1.04), 32.0, 300)
         verdict = gb.gradient_bubble_assessment(payload, mass_over_rm=1.04)
-        self.assertTrue(verdict["regularity_decidable_on_this_domain"])
-        self.assertIn("interior_not_regular", verdict["dead_end_flags"])
+        self.assertTrue(verdict["regularity_extrapolation"]["domain_reaches_horizon"])
+        self.assertFalse(verdict["regularity_decidable_on_this_domain"])
+        self.assertNotIn("interior_not_regular", verdict["dead_end_flags"])
+        self.assertNotEqual(verdict["verdict"], "dead_end")
 
-    def test_inverse_radius_force_meets_the_limit(self):
+    def test_inverse_radius_pressure_is_not_certified_regular(self):
         radius = np.linspace(1.04, 32.0, 300)
         inner = radius ** -1.0
         outer = 0.5 * radius ** -2.0
         verdict = gb.gradient_bubble_assessment(_payload(inner, outer, radius))
-        self.assertTrue(verdict["slope_meets_regularity_limit"])
+        self.assertIsNone(verdict["slope_meets_regularity_limit"])
+        self.assertIsNone(verdict["regularity_slope_limit"])
+        self.assertIsNone(verdict["regularity_slope_tolerance"])
+        self.assertFalse(verdict["regularity_decidable_on_this_domain"])
         self.assertNotIn("interior_not_regular", verdict["dead_end_flags"])
+
+    def test_undefined_throat_slopes_do_not_certify_a_regular_interior(self):
+        radius = np.linspace(1.0, 2.0, 20)
+        radial = np.concatenate((np.zeros(5), np.ones(15)))
+        verdict = gb.gradient_bubble_assessment(_payload(radial, np.ones(20), radius))
+        self.assertTrue(np.isnan(verdict["throat_slope_inner"]))
+        self.assertIsNone(verdict["slope_meets_regularity_limit"])
+        self.assertFalse(verdict["regularity_decidable_on_this_domain"])
 
 
 class DeadEndTests(unittest.TestCase):
@@ -265,6 +295,11 @@ class DeadEndTests(unittest.TestCase):
 
 
 class InputGuardTests(unittest.TestCase):
+    def test_centre_or_negative_radius_cannot_enter_a_log_slope(self):
+        for radius in (np.linspace(0.0, 2.0, 10), np.linspace(-1.0, 2.0, 10)):
+            with self.subTest(inner=float(radius[0])), self.assertRaises(ValueError):
+                gb.gradient_bubble_profile(_payload(np.ones(10), np.ones(10), radius))
+
     def test_non_increasing_grid_refused(self):
         radius = np.array([1.04, 1.02, 1.0])
         with self.assertRaises(ValueError):
@@ -308,7 +343,7 @@ class RecordTests(unittest.TestCase):
         self.assertIn("straddled", self.record["supersedes"]["superseded_reason"])
 
     def test_wall_persistence_falls_as_the_exterior_strengthens(self):
-        """The derived relation: a stronger exterior dissolves the wall."""
+        """Historical crossing frequencies, without the old causal interpretation."""
         by_mu = {}
         for case in self.record["cases"]:
             by_mu.setdefault(case["mass_over_rm"], []).append(
@@ -350,8 +385,9 @@ class RecordTests(unittest.TestCase):
         for case in self.record["cases"]:
             self.assertFalse(case["stations"][-1]["regularity_extrapolation"]["extrapolation_is_measurement"])
 
-    def test_record_names_the_sourced_criterion(self):
+    def test_historical_attribution_is_preserved_but_not_endorsed(self):
         self.assertIn("gr-qc/0506126", self.record["regularity_criterion"])
+        self.assertIsNone(gb.diagnostic_semantics()["regularity_criterion"])
 
 
 if __name__ == "__main__":

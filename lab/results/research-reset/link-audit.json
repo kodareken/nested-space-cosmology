@@ -1,0 +1,523 @@
+{
+  "baseline": "20261010T112227Z",
+  "issues": [
+    {
+      "repository": "BlackHoles-Infinity",
+      "source": "lab/PLAN.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/claim-ledger.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "source": "lab/PLAN.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/handover.md:8"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/docs/review-summary.md",
+      "source": "lab/archive/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../docs/review-summary.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/paper/recursive-horizons.md",
+      "source": "lab/archive/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../paper/recursive-horizons.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/LICENSE",
+      "source": "lab/archive/pre-closure-2026-09-08/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "LICENSE"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/README.md",
+      "source": "lab/archive/pre-closure-2026-09-08/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "archive/README.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/collected-data/manifest.csv",
+      "source": "lab/archive/pre-closure-2026-09-08/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "collected-data/manifest.csv"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/README.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/README.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/reviews/review-summary-2026-08-21.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/reviews/review-summary-2026-08-21.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/src/recursive_horizons/evidence_io.py",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../src/recursive_horizons/evidence_io.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/collected-data/manifest.csv",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/data-provenance.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../collected-data/manifest.csv"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/reviews/review-summary-2026-08-21.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/epistemic-status.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/reviews/review-summary-2026-08-21.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-def1-stab1-frz1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-def1-stab1-pref1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-def1-stab1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-hlt17-mon17.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-hlt17-srcq1-frz1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-hlt17-srcq1-rec1-frz1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/AGENTS.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-tdg11-imp1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../AGENTS.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-tdg11-imp1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/collected-data/published-constraints.json",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/gw170817-relative-cone-data.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../collected-data/published-constraints.json"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/reviews/review-summary-2026-08-21.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/review-summary.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/reviews/review-summary-2026-08-21.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/docs/finite-gradient-closure.md",
+      "source": "lab/archive/reviews/review-summary-2026-08-21.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../docs/finite-gradient-closure.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/docs/nested-gradient-spectrum.md",
+      "source": "lab/archive/reviews/review-summary-2026-08-21.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../docs/nested-gradient-spectrum.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/active-code-map.md:3"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/nsc-evolved-incoming-constraints.md:1"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/docs/nsc-compatible-history-plan.md",
+      "source": "lab/docs/nsc-compatible-prepared-history.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-compatible-history-plan.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/docs/b",
+      "source": "lab/docs/nsc-discovery-parent-traction.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "b"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "lab/docs/nsc-rn_force_oscillation.md",
+      "source": "lab/docs/nsc-rn-force-reach.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-rn_force_oscillation.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "/tau",
+      "source": "lab/docs/nsc-transmitting-history-modes.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "/tau"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "/tau",
+      "source": "lab/docs/nsc-transmitting-history-modes.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "/tau"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "/tau,/tau_i",
+      "source": "lab/docs/nsc-transmitting-history-modes.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "/tau,/tau_i"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "paper/nested-quality-evidence/docs/nsc-energy-transfer.md",
+      "source": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-energy-transfer.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "paper/nested-quality-evidence/docs/nsc-local-observer-correspondence.md",
+      "source": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-local-observer-correspondence.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity",
+      "resolved": "paper/nested-quality-evidence/docs/nsc-regulated-recursion.md",
+      "source": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-regulated-recursion.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "source": "lab/PLAN.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/claim-ledger.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "source": "lab/PLAN.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/handover.md:8"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/docs/review-summary.md",
+      "source": "lab/archive/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../docs/review-summary.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/paper/recursive-horizons.md",
+      "source": "lab/archive/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../paper/recursive-horizons.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/LICENSE",
+      "source": "lab/archive/pre-closure-2026-09-08/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "LICENSE"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/README.md",
+      "source": "lab/archive/pre-closure-2026-09-08/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "archive/README.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/collected-data/manifest.csv",
+      "source": "lab/archive/pre-closure-2026-09-08/README.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "collected-data/manifest.csv"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/README.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/README.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/reviews/review-summary-2026-08-21.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/reviews/review-summary-2026-08-21.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/src/recursive_horizons/evidence_io.py",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../src/recursive_horizons/evidence_io.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/collected-data/manifest.csv",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/data-provenance.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../collected-data/manifest.csv"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/reviews/review-summary-2026-08-21.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/epistemic-status.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/reviews/review-summary-2026-08-21.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-def1-stab1-frz1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-def1-stab1-pref1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-def1-stab1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-hlt17-mon17.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-hlt17-srcq1-frz1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-hlt17-srcq1-rec1-frz1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/AGENTS.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-tdg11-imp1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../AGENTS.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/PLAN.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/fgc-tdg11-imp1.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../PLAN.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/collected-data/published-constraints.json",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/gw170817-relative-cone-data.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../collected-data/published-constraints.json"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/archive/pre-closure-2026-09-08/archive/reviews/review-summary-2026-08-21.md",
+      "source": "lab/archive/pre-closure-2026-09-08/docs/review-summary.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../archive/reviews/review-summary-2026-08-21.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/docs/finite-gradient-closure.md",
+      "source": "lab/archive/reviews/review-summary-2026-08-21.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../docs/finite-gradient-closure.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/docs/nested-gradient-spectrum.md",
+      "source": "lab/archive/reviews/review-summary-2026-08-21.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../docs/nested-gradient-spectrum.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "scripts/assess_nsc_rn_inward_march.py",
+      "source": "lab/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../scripts/assess_nsc_rn_inward_march.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "scripts/derive_nsc_matryoshka.py",
+      "source": "lab/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../scripts/derive_nsc_matryoshka.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "scripts/derive_nsc_rn_cone_map.py",
+      "source": "lab/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../scripts/derive_nsc_rn_cone_map.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "scripts/derive_nsc_rn_inward_march.py",
+      "source": "lab/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../scripts/derive_nsc_rn_inward_march.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "scripts/derive_nsc_rn_oneway.py",
+      "source": "lab/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../scripts/derive_nsc_rn_oneway.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "scripts/derive_nsc_rn_two_ends.py",
+      "source": "lab/docs/active-code-map.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "../../scripts/derive_nsc_rn_two_ends.py"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/active-code-map.md:3"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
+      "status": "historical_or_host_absolute",
+      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/nsc-evolved-incoming-constraints.md:1"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/docs/nsc-compatible-history-plan.md",
+      "source": "lab/docs/nsc-compatible-prepared-history.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-compatible-history-plan.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "lab/docs/b",
+      "source": "lab/docs/nsc-discovery-parent-traction.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "b"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "/tau",
+      "source": "lab/docs/nsc-transmitting-history-modes.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "/tau"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "/tau",
+      "source": "lab/docs/nsc-transmitting-history-modes.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "/tau"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "/tau,/tau_i",
+      "source": "lab/docs/nsc-transmitting-history-modes.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "/tau,/tau_i"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "paper/nested-quality-evidence/docs/nsc-energy-transfer.md",
+      "source": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-energy-transfer.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "paper/nested-quality-evidence/docs/nsc-local-observer-correspondence.md",
+      "source": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-local-observer-correspondence.md"
+    },
+    {
+      "repository": "BlackHoles-Infinity-w2",
+      "resolved": "paper/nested-quality-evidence/docs/nsc-regulated-recursion.md",
+      "source": "paper/nested-quality-evidence/docs/nsc-nested-qualities.md",
+      "status": "missing_in_preserved_baseline",
+      "target": "nsc-regulated-recursion.md"
+    }
+  ],
+  "schema": "NSC-RESEARCH-INVENTORY-v1"
+}

@@ -1,0 +1,65 @@
+{
+  "input_sha256": "1775e784ea2c44f5aaf5b4342c0aa8dace0cd738f96d8adbf24e4ca0c6db7f3b",
+  "numerical_replay_tolerance": {
+    "absolute": 1e-12,
+    "relative": 1e-10
+  },
+  "outputs": {
+    "atlas.json": {
+      "bytes": 31633,
+      "sha256": "1775e784ea2c44f5aaf5b4342c0aa8dace0cd738f96d8adbf24e4ca0c6db7f3b"
+    },
+    "candidates.png": {
+      "bytes": 111247,
+      "sha256": "92e4f46d8a8b87bfc90aa6354506e496134d5e2dfdcd57257e5c9d43cc2b73b2"
+    },
+    "candidates.svg": {
+      "bytes": 6609,
+      "sha256": "5546db7ff13feebdd16d95cd04bea37f3e142213aa4ec177d8fe26862ea2fcc2"
+    },
+    "controls.json": {
+      "bytes": 1923,
+      "sha256": "ed6a56538aef610a911353df76d7f704c5be8e22b307c65ddd20fb219e9a5598"
+    },
+    "integration.json": {
+      "bytes": 2096,
+      "sha256": "c83fc632c73187fa61bac12d669135017aaf5fa883251d0cc38cbc8fbbf09fb3"
+    },
+    "map.png": {
+      "bytes": 133863,
+      "sha256": "1dbe40e6ab6c8b152bd3ace9502d7ce59c69e2c8dd900ac6c640c566bd1a2d2f"
+    },
+    "map.svg": {
+      "bytes": 7054,
+      "sha256": "d55d5968ef0fb36ef65fcad293db19a4aa42064bc062608265e2a423212587b1"
+    },
+    "narrative.md": {
+      "bytes": 3025,
+      "sha256": "ae3ebb86651374ddfa0d7b5d55d238d32221d56028df67cf6e1dc4c4545dbca1"
+    }
+  },
+  "provenance": "repository-relative byte hashes; no historical producer revision claimed",
+  "runtime": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  },
+  "schema": "nsc-cosmological-atlas-v1",
+  "source_bindings": {
+    "docs/nsc-nested-qualities.md": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
+    "lab/docs/child-neck/israel-matching-note.md": "97b81878f90eab41cb992b95f88259b72b21b2bd59e46654b1ae25092bee9299",
+    "lab/docs/nsc-cosmological-atlas.md": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
+    "lab/scripts/derive_nsc_cosmological_atlas.py": "7189675b5898278d48dd8b2e54d6bc5aae04dfcb263f80d728248aac283b493b",
+    "lab/src/recursive_horizons/nsc_cosmological_atlas.py": "8ab49dc2c144f9502c728b39c8979225972d48bf5cb5668de4279fa2838abc37",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "lab/tests/test_nsc_cosmological_atlas.py": "390e283535865bb704abecdfe2970d3140ae2388fc514ca41458eecdc3da856b"
+  }
+}

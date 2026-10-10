@@ -1,21 +1,36 @@
 #!/usr/bin/env python3
-"""Verify archive preservation and portable current research entrypoints."""
+"""Route current integrity checks; retain explicit old-archive verification."""
 import argparse
 import hashlib
 import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "archive/pre-closure-2026-09-08/manifest.json"
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--local-evidence", action="store_true")
-    args = parser.parse_args()
+    parser.add_argument("--historical-archive", action="store_true",
+                        help="requires the retired full laboratory Git history")
+    args = parser.parse_args(argv)
+    if not args.historical_archive:
+        if args.local_evidence:
+            parser.error("--local-evidence belongs to --historical-archive")
+        # The consolidated repository deliberately excludes the old full object
+        # database. Its existing owners check all resident import/source hashes
+        # and publication links; do not maintain a second conflicting checker.
+        for name in ("check_lab_snapshot.py", "check_publication.py"):
+            result = subprocess.call([sys.executable, str(ROOT.parent / "scripts" / name)],
+                                     cwd=ROOT.parent)
+            if result:
+                return result
+        return 0
     manifest = json.loads(MANIFEST.read_text())
     for row in manifest["entries"]:
         if row["disposition"] == "retained":
@@ -37,8 +52,9 @@ def main():
                 digest = hashlib.file_digest(stream, "sha256").hexdigest()
             if digest != row["sha256"] or path.stat().st_size != row["bytes"]:
                 raise RuntimeError(f"local evidence changed: {path}")
-    if (ROOT / "PLAN.md").exists():
-        raise RuntimeError("the execution plan belongs to the active Codex task, not the repository")
+    # PLAN.md is an authenticated historical import. Its existence does not
+    # make it the active execution authority; root docs/instructions.md and
+    # the user's current task own that. Preserve it like other frozen input.
     for name in ("README.md", "docs/active-code-map.md", "docs/claim-ledger.md", "results/README.md"):
         if not (ROOT / name).is_file():
             raise RuntimeError(f"missing current entrypoint: {name}")

@@ -1,5 +1,10 @@
 # Child and neck: an exploratory chain, 7 to 9 October 2026
 
+The [10 October scope correction](israel-matching-note.md) distinguishes the
+approximate density-cancellation scale from a real closed-FLRW turning point.
+The original records remain unchanged and exploratory. Review the
+[status and corrections](child-and-neck-status-note.md) before reuse.
+
 Status: exploratory and hypothesis-first. The working picture is a space that makes black holes, each hosting a space that makes more, with the two sides of a throat treated as one space. The notes assume that picture and compute what follows, with one Dirac field, a 10 solar-mass parent and order-of-magnitude accuracy unless a note says otherwise. Nothing here is entered in the [claim ledger](../claim-ledger.md), and none of it is a measured repository result or a verdict on the picture. Each note names its own unaccounted pieces. A proposal is not an observation.
 
 Drafted with AI assistance under Douglas Ek's direction. Human review has not been done.

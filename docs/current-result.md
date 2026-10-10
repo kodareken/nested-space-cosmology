@@ -1,21 +1,30 @@
 # What the calculations show
 
-Starting checkpoint `9a9090a`. The current question is the nested mechanism
-and what stays common across regional gradients.
-[Scientific framing](instructions.md#scientific-framing-and-authority).
-Time, antimatter, and gradient readings remain open research. Rooms, coins,
-fountains, and clocks are motivation for that question.
+## Exterior-first atlas, 10 October 2026
 
-The inheritance relation
+The active objective is to map possible parent regions, black-hole transitions,
+children, siblings and descendants, then investigate their local consequences.
+The [finite atlas](../lab/docs/nsc-cosmological-atlas.md) records four distinct
+connections: descent, attachment, causal influence and correlation. Its first
+map has two separated black-hole interfaces, unequal possible children and a
+further generation. A separate scenario imports multiple daughters from one
+hole. These are conditional constructions; the missing physical junctions,
+sources and clock conversions stay visible.
 
-$$
-\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta
-$$
+The [research inventory](../lab/docs/research-inventory.md) includes both
+worktrees, child-and-neck research and charged, influence, constants and clock
+investigations. File discovery is distinguished from verification of a
+derivation. Saved evidence and stopped campaigns retain their historical roles.
 
-is reused inside its stated domain. It is not expanded into an infinite nest.
-The active action is $\Gamma_{\mathrm{one}}$: the canonical Gaussian plus the
-same-spectrum local induced term, counted once. The vacuum-matched CTP branch
-remains a separate historical choice.
+The [reuse/admission owner](prior-art-and-open-claim.md) now admits finite
+compatibility, response and inheritance questions. The universal-action
+programme is one longer-term candidate. The existing relation
+$\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta$ and
+$\Gamma_{\mathrm{one}}$ realization are reused within their domains. They
+are not compulsory assumptions for every atlas branch. No cosmological dark
+fraction, antimatter identification or cross-universe age is a result of the
+map. The [literature cards](arxiv-studies.md#atlas-reuse-library-10-october-2026)
+state what was actually read and what each source supplies.
 
 ## RN radial parent, 4 October 2026
 
@@ -27,8 +36,8 @@ is the historical commit
 and not the live branch identity. Live branch commands are in the
 [instructions](instructions.md).
 The periodic parent below is historical input. Further periodic
-autonomous exchange runs stay off this programme. The active question
-is a nonperiodic horizon-regular Painlevé–Gullstrand parent exterior
+autonomous exchange runs stay off this programme. This retained candidate
+asks for a nonperiodic horizon-regular Painlevé–Gullstrand parent exterior
 and a distinct near-throat child on its own areal radius. Exact
 magnetic Reissner–Nordström calibration comes before any sourced case.
 
@@ -138,75 +147,53 @@ the CPU projection at $t=15.98$, $16.20$, $18.83$ and $19.99$, and the
 two $\mu=1.002$ cases stopped at $t=8.00$ with no failure file. Its
 physical results are not claimed.
 
-### Two-force gradient balance, 4 October 2026
+<a id="two-force-gradient-balance-4-october-2026"></a>
 
-The [gradient-bubble reduction](../lab/docs/nsc-rn-gradient-bubble.md)
-asks whether the enclosing and the enclosed forces balance on the areal
-radius, or whether one runs away. Six cases and 177 recorded stations
-were reduced; no time step was taken. The inherited radial force is the
-compressive side and the generated angular force is the resisting side,
-both read from the same coupled-arm payload. Balance
-$B=|F_{in}|/(|F_{in}|+|F_{out}|)$ is scale free, and the gradient is
-$d\ln|F|/d\ln r$.
+### RN pressure diagnostics: semantic correction, 10 October 2026
 
-The outside acts in every recorded case. The integrated outer force is
-$15.6\%$ to $82.0\%$ of the inner force and no case falls below a tenth,
-so the non-local content is present throughout. No hard dead-end flag
-fires anywhere in the family.
+The [owning note](../lab/docs/nsc-rn-gradient-bubble.md) corrects the
+interpretation of the recorded radial and transverse orthonormal pressures.
+Their equal-magnitude crossings and local logarithmic slopes remain finite
+state diagnostics. They do not establish opposing parent/child forces,
+mechanical equilibrium or a regular centre. The live v6 consumer withdraws
+those interpretations; the v1–v5 records remain unchanged. No new family
+reduction or evolution was run for this correction.
 
-Version one of this reduction judged the outcome with a chosen
-throat-slope limit of $8$, and the measured slopes straddled it at
-$-7.37$ and $-8.44$, so the verdict pointed the wrong way. It is
-superseded. The verdict is now the measured balance wall, the areal
-radius where the two forces are equal, accepted only where the balance
-holds past a hysteresis band on both sides and both forces stay above
-their own live floor.
+The historical v5 reduction used six cases and 177 recorded stations.
+Equal-magnitude crossings occurred at 49.7% of stations, with the recorded
+frequency falling from about 65% to 31% across its parameter choices. Those
+counts do not measure the persistence of a mechanically balanced surface.
+Its $4\pi\int |p|r^2dr$ is a coordinate radial pressure integral, not a
+surface force or an invariant proper-volume integral.
 
-A wall is present at $49.7\%$ of all stations and appears in all six
-cases at some station, so the two forces genuinely reach equality. But
-the wall oscillates instead of holding a radius, and its persistence
-falls as the exterior compression strengthens, from about $65\%$ of
-stations at $\mu=1.002$ to about $31\%$ at $\mu=1.040$, with the inner
-excursion pushed from $1.04$ to $1.29$. A stronger exterior dissolves the
-wall. The balance is therefore real but transient, and a sustained
-gradient bubble is not established by this family.
+The attributed Hayward condition $g\geq-1$ was unsupported. For an actual
+power law $r^g$, pointwise finiteness at zero requires $g\geq0$; convergence
+of an integral is a different question with a different measure. Hayward's
+regular-core metric and finite stress are imported examples, not a universal
+slope test. Fitting pressure slopes on a positive-radius interval cannot
+establish the centre's limit. Even reaching an RN inner horizon $r_->0$
+would not establish regularity at $r=0$; curvature, stress and extendibility
+of the proposed central geometry require their own checks.
 
-The hard result is on the 2005 criterion. Douglas's framing pointed at
-Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126), "Formation
-and evaporation of non-singular black holes", 28 June 2005, where the
-static region is supported by finite density and pressures and behaves as
-a cosmological constant at small radius. A force of logarithmic slope
-$g$ behaves as $r^g$ and stays finite inward only for $g\geq-1$. Every
-recorded case is steeper, at $-7.37$ to $-152.64$.
+The retained [v5 record](../lab/results/development/nsc-rn-gradient-bubble-v5.json)
+also contains the stencil audit. Exact rational weights agree with the
+recorded coefficients to $5.1\times10^{-16}$ across 120 audited stencils;
+the earlier polynomial-moment guard was ill-conditioned. That numerical
+correction does not validate the withdrawn physical interpretations. The
+six-case numerical family stopped without a summary in any case; two cases
+stopped at $t=8$ without a failure record.
 
-That is not yet a verdict on regularity, and an earlier version of this
-page said so wrongly. The grid's inner edge is the current inner mass,
-which lies **outside** the RN inner horizon in every case: $r_-$ is
-$0.9387$, $0.8682$ and $0.7543$ for $\mu=1.002$, $1.010$ and $1.040$,
-leaving $0.063$ to $0.286\,r_m$ never evaluated. Extrapolating the fitted
-throat power law across that gap would grow the force by $10^{0.9}$ to
-$10^{4.3}$, but that is an extrapolation, not a measurement. Regularity
-is **not decidable on this domain**; deciding it needs the march extended
-inward to the horizon. The `interior_not_regular` hard flag is withdrawn
-and replaced by a reported `throat_extrapolation_diverges`.
-
-The apparent numerical blocker is also withdrawn.
-`nsc_rn_pg._fornberg` raises a polynomial-moment failure at width $9$
-and above, which earlier records named as the reason the family could not
-be re-marched. The same recursion in exact rational arithmetic agrees
-with the recorded weights to $5.1\times10^{-16}$ across $120$ audited
-stencils, and the throat slope re-derived under exact weights is
-unchanged to $1.1\times10^{-13}$. The guard is ill-conditioned, not the
-weights, and no operator value or calibration hash is affected.
-
-This is a construction check on recorded finite states, not a statement
-about the actual universe. The current record is
-[nsc-rn-gradient-bubble-v5.json](../lab/results/development/nsc-rn-gradient-bubble-v5.json),
-creation only, which carries a `numerical_validity` section with the
-stencil audit, names the preserved v4 record in a `supersedes` block and
-lists v3 through v1 under `earlier_records`. Two family cases still stop
-silently at $t=8.00$ with no failure file, and no case has written a
-`summary.json`.
+The [two-worktree audit](../lab/docs/research-inventory.md) also identifies a
+different clock error in the unmerged charged/influence extensions. Their
+claimed radial infall quadrature uses $1/(1+\sqrt f)$, while their own PG
+reference uses $\beta=\sqrt{1-f}$ and inward radial null coordinate speed
+$dr/dt=-(1+\beta)$. Thus those saved quadratures and downstream ratios cannot
+currently be imported as physical infall times. A coordinate transit time
+would still not be an observer's proper age. The source paths and exact
+reading boundaries are recorded in the inventory; the second worktree and
+its raw evidence remain unchanged. Its empirical constants table is not a
+derivation of universal constants, and the toy influence closure does not
+eliminate all possible exterior explanations of local gravitational effects.
 
 The first shell is neutral massless Dirac, $\kappa=1$, a spherical
 closed Gaussian, multiplicity 4 counted once, fixed flux integer $q=1$,
@@ -251,8 +238,8 @@ The written metadata stays as produced.
 
 ## Responsive parent, 3 October 2026
 
-Historical input, started at `eb4798c`. The active cursor is the
-[RN radial parent](#rn-radial-parent-4-october-2026). Primary finite
+Historical input, started at `eb4798c`. Current routing is the
+[exterior-first atlas](#exterior-first-atlas-10-october-2026). Primary finite
 preparation of the magnetic branch is achieved, and the frozen,
 empty-source and strong-offset controls below are recorded. The NF128
 exterior-to-cut response is measured, and its bounded $n_f=256$

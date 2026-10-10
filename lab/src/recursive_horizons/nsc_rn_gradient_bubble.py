@@ -1,70 +1,26 @@
-"""Two-force gradient balance on recorded RN radial parent states.
+"""Radial/transverse pressure diagnostics on recorded finite RN states.
 
-This module asks one finite question in one named domain: on the areal
-radius of the recorded nonperiodic horizon-regular PG parent, does the
-enclosing and the enclosed form a balanced pair, or does one of the two
-forces run away and leave the other as decoration?
+The input entries are orthonormal pressures from ``nsc_rn_source``, not
+opposing forces from two regions. ``B = |p_r| / (|p_r| + |p_Omega|)``
+locates equal-magnitude pressure crossings. It does not establish mechanical
+equilibrium, a child boundary, exterior decoupling or a regular centre.
+Slopes are local ``d ln|p| / d ln r`` measurements on a positive-radius
+grid. A power-law extrapolation is an assumption, never a centre test.
 
-Domain. Areal radius ``r`` on the recorded radial grid, from the fixed
-inner mass at ``grid[0]`` to the absorbing outer boundary at ``32 r_m``.
-Observer is the areal chart of the same state. No coordinate change, no
-time slice, no second geometry.
+Hayward gr-qc/0506126 supplies a finite-stress regular-core example, not
+the former ``g >= -1`` test. Reaching an inner horizon does not reach the
+centre. This consumer returns no regularity verdict.
 
-The two forces. Both are read from the same recorded station payload and
-are not fitted, blended, or reassembled:
+Legacy force/wall names and diagnostic verdict strings remain for readers
+of v1--v5. ``diagnostic_semantics`` and pressure-named aliases explain their
+limited meaning. Old regularity fields are retained as unsupported/null.
+The conventional flags concern only this diagnostic; they do not reject a
+physical model. Frozen historical records are not rewritten.
 
-* ``radial_pressure`` is the inherited radial contribution. It is the
-  compressive side that pushes matter toward the excision boundary.
-* ``angular_pressure`` is the generated angular contribution. It is the
-  resisting side that a compressed interior pushes back against.
-
-Balance. ``B(r) = |F_in| / (|F_in| + |F_out|)`` is scale free. ``B = 1/2``
-is two equal forces. ``B -> 1`` means the inside acts alone and the
-outside has stopped being part of the object.
-
-Gradient. ``d ln|F| / d ln r`` is a scale-free logarithmic slope. A value
-of ``-1`` is inverse-radius decay. A magnitude above one means the force
-grows without bound as ``r`` decreases, which is the collapse signature.
-
-Dead ends. This module is built to fail loudly instead of producing a
-comfortable label. Each named flag below is a reason to stop, not a
-rounding remark:
-
-* ``single_force`` -- the balance never drops below
-  ``SINGLE_FORCE_BALANCE`` anywhere in the collar. Two forces were
-  declared; one is absent. This is the "computed the interior only" dead
-  end.
-* ``throat_runaway`` -- the radial logarithmic slope inside the throat
-  collar is steeper than ``-THROAT_SLOPE_LIMIT``. The compressive force
-  diverges inward and the bubble does not hold.
-* ``curvature_dominates`` -- the reconstructed curvature density exceeds
-  the force density by more than ``CURVATURE_FORCE_RATIO``. Both are
-  densities of the same evolved state on the same areal grid, so the
-  ratio is dimensionless and the gradient being measured is no longer
-  the leading structure.
-
-Provenance matters for that check. The station payload carries two
-curvature entries with different origins. ``R4`` is reconstructed from
-the evolved PG jets and belongs to the same state as the pressures.
-``Ricci2`` is the analytic source-free RN reference ``4 Q^2 / r^8``. The
-two are never divided into one ratio here: an exact reference curvature
-set against an evolved matter stress is not a comparison of two forces,
-and mixing them would manufacture a false dead end.
-
-Localization is reported, never used as a dead end. The radius
-``r_decouple`` at which the balance first reaches ``EXTERIOR_DECOUPLED``
-is a measured scale: the outside stops contributing beyond that areal
-radius. Reporting it is what turns "the forces balance somewhere" into a
-statement about how far the balance reaches.
-
-Scope. This is a construction check on a recorded finite state. It does
-not measure the actual universe, and a bounded balance here is not
-evidence about cosmology.
-
-The traction concept in ``nsc-discovery-parent-traction`` is a lead about
-the same question in a different domain, the discovery collar
-``|x| <= 1``. That boundary gradient charge is not this areal-radius
-force balance and the two are not identified here.
+``R4`` is reconstructed from the same recorded PG state. Analytic ``Ricci2``
+is rejected as a different-provenance reference. The historical R4/pressure
+ratio remains a reported convention in the record's units, not a new
+invariant regularity or force-balance criterion.
 """
 from __future__ import annotations
 
@@ -74,36 +30,28 @@ from typing import Any, Dict
 import numpy as np
 from numba import njit
 
-API_VERSION = "nsc-rn-gradient-bubble-v5"
+API_VERSION = "nsc-rn-gradient-bubble-v6"
 
-#: A force steeper than this as r decreases is a reported collapse
-#: signature. It is a diagnostic, not a verdict. The verdict comes from
-#: the measured balance-wall structure, which needs no chosen limit.
+#: A local pressure slope steeper than this is reported, not interpreted
+#: as collapse or central divergence.
 THROAT_SLOPE_LIMIT = 8.0
-#: Balance below this means the angular force is under a tenth of radial.
+#: Legacy threshold for a small transverse pressure relative to radial.
 SINGLE_FORCE_BALANCE = 0.90
-#: Balance at or above this before mid collar ends the non-local content.
+#: Legacy radius label: balance reaches this pressure-magnitude ratio.
 EXTERIOR_DECOUPLED = 0.999
-#: Curvature density may not exceed the force density by more than this.
+#: Conventional R4/pressure diagnostic threshold in the recorded units.
 CURVATURE_FORCE_RATIO = 1.0e3
 #: Fraction of the collar the throat test is judged on.
 THROAT_FRACTION = 0.10
-#: Regularity criterion from Hayward, gr-qc/0506126, "Formation and
-#: evaporation of non-singular black holes" (2005). The static region is
-#: "supported by finite density and pressures ... behaving as a
-#: cosmological constant at small radius". A force with logarithmic slope
-#: g behaves as r^g, so it stays finite as r -> 0 only when g >= -1.
-#: Anything steeper diverges inward. Sourced, not chosen.
+#: Deprecated v1--v5 value, retained only for import compatibility.
+#: Unsupported by Hayward and never used in a v6 scientific assessment.
 REGULAR_SLOPE_LIMIT = -1.0
 #: The grid's inner edge counts as reaching the horizon only if it lies
-#: this close to the inner root. It does not, in any recorded case, so
-#: regularity is reported as a bounded extrapolation rather than decided.
+#: this close to the inner root. This says nothing about the centre.
 HORIZON_REACH_TOLERANCE = 1.0e-6
-#: An exact power law evaluated by a central difference lands a few ulp
-#: off its own exponent, so the boundary is compared with this slack
-#: rather than failing an exactly-regular force on round-off.
+#: Deprecated companion to REGULAR_SLOPE_LIMIT; no longer used.
 REGULAR_SLOPE_TOLERANCE = 1.0e-9
-#: Both forces must be at least this fraction of their own peak for a
+#: Both pressures must be at least this fraction of their own peak for a
 #: crossing to be structure. Below it a crossing is a noise floor.
 WALL_LIVE_FRACTION = 1.0e-3
 #: A wall must hold the balance this far past one half before the next
@@ -111,6 +59,24 @@ WALL_LIVE_FRACTION = 1.0e-3
 WALL_HYSTERESIS = 0.05
 #: Minimum cells a wall must persist on each side.
 WALL_MIN_CELLS = 2
+
+
+def diagnostic_semantics() -> Dict[str, Any]:
+    """Interpretation contract for live consumers and successor records."""
+    return {
+        "quantity": "orthonormal radial and transverse pressures",
+        "balance": "abs(p_r) / (abs(p_r) + abs(p_Omega))",
+        "wall": "equal-magnitude pressure crossing, not mechanical equilibrium",
+        "integral": "4 pi integral abs(p) r^2 dr; volume-weighted pressure",
+        "regularity_status": "unsupported_by_this_diagnostic",
+        "regularity_criterion": None,
+        "horizon_reach_determines_centre_regularity": False,
+        "legacy_verdicts": "diagnostic labels only, not physical dead-end verdicts",
+        "deprecated_fields": [
+            "slope_meets_regularity_limit", "regularity_slope_limit",
+            "regularity_slope_tolerance", "regularity_decidable_on_this_domain",
+        ],
+    }
 
 
 @njit(cache=True)
@@ -154,7 +120,7 @@ def _sign_changes(force: np.ndarray) -> int:
 
 @njit(cache=True)
 def _integrated_force(radius: np.ndarray, force: np.ndarray) -> float:
-    """Trapezoidal surface integral ``4 pi int |force| r^2 dr``."""
+    """Legacy name: volume-weighted pressure ``4 pi int |p| r^2 dr``."""
     total = 0.0
     for i in range(radius.shape[0] - 1):
         r0 = radius[i]
@@ -253,7 +219,7 @@ def _finite_extreme(values: np.ndarray, want_max: bool) -> float:
 
 
 def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
-    """Two-force balance and gradient on one recorded station payload.
+    """Relative pressure magnitudes and slopes on a recorded station.
 
     ``payload`` is a mapping with ``radius``, ``radial_pressure`` and
     ``angular_pressure``. Nothing is rescaled and no value is fitted.
@@ -269,6 +235,8 @@ def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
     dr = np.diff(radius)
     if not np.all(dr > 0.0):
         raise ValueError("the areal grid must be strictly increasing")
+    if not np.all(np.isfinite(radius)) or np.any(radius <= 0.0):
+        raise ValueError("logarithmic pressure slopes require finite positive radii")
 
     balance = _balance_profile(radius, inner, outer)
     slope_inner = _log_slope(radius, inner)
@@ -296,6 +264,7 @@ def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
 
     return {
         "api_version": API_VERSION,
+        "diagnostic_semantics": diagnostic_semantics(),
         "points": int(radius.shape[0]),
         "r_inner": float(radius[0]),
         "r_outer": float(radius[-1]),
@@ -313,6 +282,8 @@ def gradient_bubble_profile(payload: Any) -> Dict[str, Any]:
         "slope_outer_at_mid": float(slope_outer[mid]),
         "force_inner_integrated": float(_integrated_force(radius, inner)),
         "force_outer_integrated": float(_integrated_force(radius, outer)),
+        "radial_pressure_volume_integral": float(_integrated_force(radius, inner)),
+        "transverse_pressure_volume_integral": float(_integrated_force(radius, outer)),
         "force_ratio_integrated": float(
             _integrated_force(radius, outer) / _integrated_force(radius, inner)
         ),
@@ -341,13 +312,13 @@ def inner_horizon(mass_over_rm: float, magnetic_r2: float = 1.0) -> float:
 
 
 def horizon_extrapolation(r_inner: float, r_minus: float, slope: float) -> Dict[str, Any]:
-    """What the fitted throat power law would do out to the horizon.
+    """What an assumed constant pressure power law does to the horizon.
 
     The computed domain stops at `r_inner`, the initial fixed inner mass,
     which lies outside `r_minus`. This reports the gap the computation
-    never covers and what the fitted power law would do across it. That
-    is an extrapolation, not a measurement, and it is why regularity is
-    reported here rather than decided.
+    never covers and what that power law would do across it. This is an
+    extrapolation, not a measurement or a regularity test. Reaching the
+    inner horizon does not establish the limit toward the centre.
     """
     gap = float(r_inner - r_minus)
     reaches = gap <= HORIZON_REACH_TOLERANCE
@@ -361,12 +332,13 @@ def horizon_extrapolation(r_inner: float, r_minus: float, slope: float) -> Dict[
         "domain_reaches_horizon": bool(reaches),
         "extrapolated_log10_force_ratio": extrapolated,
         "extrapolation_is_measurement": False,
+        "centre_regularity_determined": False,
     }
 
 
 def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | None = None,
                                 mass_over_rm: float | None = None) -> Dict[str, Any]:
-    """Balance profile plus the named dead-end flags and the verdict.
+    """Pressure profile with legacy diagnostic flags and scoped semantics.
 
     ``curvature`` must carry only same-provenance entries. ``Ricci2`` is
     the analytic source-free reference and is rejected by name rather
@@ -386,20 +358,11 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
             values = np.asarray(block, dtype=np.float64)
             curvature_max = max(curvature_max, float(np.max(np.abs(values))))
 
-    # Both sides are densities of the same evolved state on the same
-    # areal grid, so the ratio is dimensionless. Dividing an integrated
-    # force by r^3 would not be.
+    # Preserve the historical diagnostic in the record's fixed units.
+    # Same provenance alone does not establish force or regularity meaning.
     curvature_ratio = curvature_max / force_peak if force_peak > 0.0 else math.inf
 
     flags: list[str] = []
-
-    # Regularity is the sourced criterion. A force that diverges inward is
-    # not a finite-stress interior, which is exactly what the 2005
-    # non-singular black-hole construction requires at small radius.
-    slope_ok = (math.isnan(profile["throat_slope_inner"])
-                or profile["throat_slope_inner"]
-                >= REGULAR_SLOPE_LIMIT - REGULAR_SLOPE_TOLERANCE)
-    regular = slope_ok
 
     extrapolation: Dict[str, Any] = {
         "r_inner": profile["r_inner"],
@@ -408,25 +371,13 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
         "domain_reaches_horizon": False,
         "extrapolated_log10_force_ratio": None,
         "extrapolation_is_measurement": False,
+        "centre_regularity_determined": False,
     }
     if mass_over_rm is not None:
         extrapolation = horizon_extrapolation(
             profile["r_inner"], inner_horizon(mass_over_rm), profile["throat_slope_inner"])
 
-    # The domain stops outside the horizon in every recorded case, so the
-    # regularity criterion cannot be decided here. Naming it a hard dead
-    # end over-claimed: it is a declared extrapolation limit instead.
-    if not slope_ok:
-        if extrapolation["domain_reaches_horizon"]:
-            flags.append("interior_not_regular")
-        else:
-            flags.append("throat_extrapolation_diverges")
-
-    # The verdict is the measured wall structure, not a chosen slope.
-    # A throat slope steeper than the limit is reported because it is a
-    # real collapse signature, but it no longer decides the outcome: the
-    # v1 verdict rested on that number and the data straddled it at -7.37
-    # and -8.44, so the verdict pointed the wrong way.
+    # Local slope is reported without extrapolating a centre singularity.
     if (not math.isnan(profile["throat_slope_inner"])) and profile["throat_slope_inner"] < -THROAT_SLOPE_LIMIT:
         flags.append("throat_steep_reported")
     if profile["balance_min"] >= SINGLE_FORCE_BALANCE:
@@ -434,7 +385,7 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
     if curvature_ratio > CURVATURE_FORCE_RATIO:
         flags.append("curvature_dominates")
 
-    hard = [f for f in flags if f not in ("throat_steep_reported", "throat_extrapolation_diverges")]
+    hard = [f for f in flags if f != "throat_steep_reported"]
 
     if profile["wall_count"] > 0:
         verdict = "two_force_wall"
@@ -447,14 +398,15 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
 
     return {
         "api_version": API_VERSION,
+        "diagnostic_semantics": diagnostic_semantics(),
         "verdict": verdict,
         "dead_end_flags": flags,
-        "slope_meets_regularity_limit": bool(slope_ok),
-        "regularity_decidable_on_this_domain": bool(extrapolation["domain_reaches_horizon"]),
+        "slope_meets_regularity_limit": None,
+        "regularity_decidable_on_this_domain": False,
         "regularity_extrapolation": extrapolation,
         "throat_slope_inner": float(profile["throat_slope_inner"]),
-        "regularity_slope_limit": REGULAR_SLOPE_LIMIT,
-        "regularity_slope_tolerance": REGULAR_SLOPE_TOLERANCE,
+        "regularity_slope_limit": None,
+        "regularity_slope_tolerance": None,
         "curvature_max": float(curvature_max),
         "curvature_keys_rejected": rejected,
         "force_peak_density": force_peak,
@@ -468,7 +420,7 @@ def gradient_bubble_assessment(payload: Any, curvature: Dict[str, np.ndarray] | 
             "wall_live_fraction": WALL_LIVE_FRACTION,
             "wall_hysteresis": WALL_HYSTERESIS,
             "wall_min_cells": WALL_MIN_CELLS,
-            "regular_slope_limit": REGULAR_SLOPE_LIMIT,
+            "regular_slope_limit": None,
         },
         "profile": profile,
     }

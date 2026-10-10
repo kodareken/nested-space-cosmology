@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v1",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-05",
+  "recorded_on": "2026-10-10",
 
   "purpose": "Make two questions checkable instead of remembered. First, does every claim marker in the foundation paper have a status and a backing record, and does every record it links exist. Second, does every finding the laboratory records have a home in a paper, or an explicit note saying it is post-preprint.",
 
@@ -90,11 +90,12 @@
     {
       "id": "two-force-gradient-balance",
       "status": "measured",
-      "summary": "The enclosing and enclosed forces reach equality in all six cases, but the crossing moves instead of holding a radius, and a stronger exterior dissolves it. A sustained gradient bubble is not established.",
+      "summary": "Historical finite pressure-magnitude crossings and slopes are recorded. Their interpretation as opposing parent-child forces, mechanical balance or a centre-regularity test is withdrawn. The corrected owner defines the remaining diagnostic scope.",
       "note": "lab/docs/nsc-rn-gradient-bubble.md",
       "record": "lab/results/development/nsc-rn-gradient-bubble-v5.json",
       "paper_section": null,
-      "pending_section": "paper/pending/two-force-gradient-balance.md",
+      "retired_draft": "paper/pending/two-force-gradient-balance.md",
+      "interpretation_corrected_on": "2026-10-10",
       "post_preprint": true
     },
     {

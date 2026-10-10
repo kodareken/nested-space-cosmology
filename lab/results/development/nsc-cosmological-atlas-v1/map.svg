@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1160" viewBox="0 0 1400 1160" role="img" aria-label="A cosmos seen from its possible exterior">
+<title>A cosmos seen from its possible exterior</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1400" height="1160" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">A cosmos seen from its possible exterior</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Finite candidate atlas | Two distinct black-hole interfaces | No completed global solution</text>
+<rect x="50" y="130" width="1300" height="410" rx="18" fill="url(#sea)" stroke="#47758e"/>
+<text x="85" y="177" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#86d6f0" font-weight="600">PARENT REGION</text>
+<text x="85" y="210" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#dce8f3" font-weight="normal">Its full geometry and state remain unknown.</text>
+<text x="85" y="243" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#adc0cd" font-weight="normal">Separate local spherical charts can sit off centre in a nonspherical parent.</text>
+<circle cx="410" cy="355" r="68" fill="none" stroke="#d9ae67" stroke-width="2" opacity=".7"/>
+<circle cx="410" cy="355" r="56" fill="#020810" stroke="#f4ce8c" stroke-width="3"/>
+<text x="375" y="361" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#f4ce8c" font-weight="600">BH A</text>
+<text x="295" y="459" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Local chart: f = 1 - 2mu/R</text>
+<text x="295" y="487" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#adc0cd" font-weight="normal">Illustrative mu/L = 1; R &gt; 2mu</text>
+<circle cx="990" cy="355" r="82" fill="none" stroke="#d9ae67" stroke-width="2" opacity=".7"/>
+<circle cx="990" cy="355" r="70" fill="#020810" stroke="#f4ce8c" stroke-width="3"/>
+<text x="955" y="361" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#f4ce8c" font-weight="600">BH B</text>
+<text x="875" y="459" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Local chart: f = 1 - 2mu/R</text>
+<text x="875" y="487" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#adc0cd" font-weight="normal">Illustrative mu/L = 1.5; R &gt; 2mu</text>
+<text x="495" y="296" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">No exact two-hole parent metric has been supplied.</text>
+<path d="M 410 540 L 410 599" stroke="#86d6f0" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<text x="425" y="575" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#86d6f0" font-weight="normal">descent + unresolved neck</text>
+<rect x="60" y="605" width="590" height="230" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="88" y="645" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#86d6f0" font-weight="600">POTENTIAL CHILD A</text>
+<text x="88" y="684" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Closed FLRW is one candidate chart, not a result.</text>
+<text x="88" y="718" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#adc0cd" font-weight="normal">S3 describes a possible spatial slice; S2 a symmetry orbit.</text>
+<text x="88" y="752" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Its source, state and clock can differ from its sibling.</text>
+<text x="88" y="792" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">Needed: matching + physical layer + transition state</text>
+<path d="M 990 540 L 990 599" stroke="#86d6f0" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<text x="1005" y="575" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#86d6f0" font-weight="normal">descent + unresolved neck</text>
+<rect x="750" y="605" width="590" height="230" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="778" y="645" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#86d6f0" font-weight="600">POTENTIAL CHILD B</text>
+<text x="778" y="684" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Closed FLRW is one candidate chart, not a result.</text>
+<text x="778" y="718" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#adc0cd" font-weight="normal">S3 describes a possible spatial slice; S2 a symmetry orbit.</text>
+<text x="778" y="752" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Its source, state and clock can differ from its sibling.</text>
+<text x="778" y="792" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">Needed: matching + physical layer + transition state</text>
+<path d="M 650 740 C 687 695 714 695 750 740" fill="none" stroke="#b497dc" stroke-width="2" stroke-dasharray="3 6"/>
+<text x="558" y="870" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#cbb6e7" font-weight="normal">Shared history may correlate children; no sibling signal route is supplied.</text>
+<path d="M 280 835 L 280 920" stroke="#86d6f0" stroke-width="2" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<rect x="60" y="925" width="430" height="100" rx="18" fill="#172838" stroke="#466178"/>
+<text x="83" y="961" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#86d6f0" font-weight="600">POTENTIAL GRANDCHILD</text>
+<text x="83" y="993" font-family="Segoe UI,Arial,sans-serif" font-size="15" fill="#dce8f3" font-weight="normal">Formation interface missing. Depth stops at 2.</text>
+<text x="558" y="925" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#86d6f0" font-weight="600">FOUR RELATIONS, FOUR DIFFERENT QUESTIONS</text>
+<text x="558" y="963" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Descent: origin   /   Attachment: geometric matching</text>
+<text x="558" y="999" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Causal: allowed influence   /   Correlation: shared state</text>
+<text x="55" y="1085" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">Circles and panel sizes are schematic. This is a patch diagram, not an embedding of one universe inside a 3D ball.</text>
+<text x="55" y="1118" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">No dark-sector fractions are fitted. The next value is a justified connection from an exterior to a local observer.</text>
+</svg>

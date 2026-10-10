@@ -1,21 +1,30 @@
 # Nested-Space Cosmology
 
-**Active research:** the approved programme is the nonperiodic
-horizon-regular RN radial parent. Its scientific start is `5cb775a7`.
-The two-room import commit `d95175c2` is historical. It is not the
-live branch identity and not an RN result. The source-free jet comparison is measured and independently confirmed.
-The archived rank-$9$ frames have a creation-only assessment, and a
-finite continuation reaches $T=20$. The radial operator has a CSR
-production matrix with the same coefficients as its dense reference.
-The current reproducible assessment is v2. The manual v1 record
-remains the historical writer failure. A numerical family is still
-running, and this is not a production seal.
-The periodic parent and the earlier discovery programme stay historical
-input. The target is one unified article. Existing papers below are
-preserved.
-[Execution status](docs/current-result.md#rn-radial-parent-4-october-2026).
+**Active research, 10 October 2026:** build a mathematical map of possible
+exterior regions, black-hole transitions, children, siblings and descendants.
+Borrow known geometry and response mathematics, identify compatible
+connections, and only then investigate consequences for our local cosmos.
 
-The longer continuation reaches $T=8$. Child probability leaves and returns
+Start with the [illustrated cosmological atlas](lab/docs/nsc-cosmological-atlas.md),
+the [research inventory and dispositions](lab/docs/research-inventory.md),
+and the [arXiv reuse library](docs/arxiv-studies.md#atlas-reuse-library-10-october-2026).
+The [calculation admission rule](docs/prior-art-and-open-claim.md#compute-admission-rule)
+keeps new work attached to a missing connection. A common universal action is
+one longer-term candidate, not an entry requirement for every atlas result.
+
+The first atlas distinguishes descent, geometric attachment, causal influence
+and correlation. Its diagrams describe conditional constructions and open
+interfaces; they do not report observed universes beyond ours. The saved
+finite parent–child result below consists of collars within one evolving
+periodic geometry, not demonstrated creation of a separate spacetime.
+
+The RN programme remains a scoped reusable strand. Its numerical family has
+stopped without completed summaries and its physical results are not claimed.
+[Recorded RN status](docs/current-result.md#rn-radial-parent-4-october-2026).
+The periodic parent and earlier discovery programme remain evidence in their
+stated domains. Existing papers below are preserved.
+
+The historical discovery continuation reaches $T=8$. Child probability leaves and returns
 near the carrier circuit, while its proper radial length contracts severely
 and actual tidal components grow. The ambient-size comparison shifts the
 return from the eight-unit to the twelve-unit circuit, and exact free

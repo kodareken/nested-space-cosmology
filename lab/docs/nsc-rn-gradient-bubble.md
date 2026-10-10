@@ -1,174 +1,71 @@
-# Two-force gradient balance on the RN radial parent
+# RN radial and transverse pressure diagnostics
 
-This note owns one finite question asked on recorded states: on the areal
-radius of the nonperiodic horizon-regular PG parent, do the enclosing and
-the enclosed form a balanced pair, or does one force run away and leave
-the other as decoration?
+## Semantic correction, 10 October 2026
 
-It is a construction check. It does not measure the actual universe, and a
-bounded balance here is not evidence about cosmology.
+The historical “two-force gradient balance” measures radial and transverse
+orthonormal **pressures in one recorded state**. It does not identify forces
+from separate parent and child regions. Their equal-magnitude crossings are
+retained finite diagnostics, not a mechanical-equilibrium condition or a
+cosmological boundary. This correction changes the interpretation and live
+consumer, without evolving a state or altering a historical result file.
 
-## Domain
+The v1–v5 criterion `g >= -1` and its attribution to Hayward are withdrawn.
+[Hayward, gr-qc/0506126](https://arxiv.org/html/gr-qc/0506126v2), equations
+3, 7 and 8, supplies a regular-core metric and finite stress components.
+It does not supply that generic pressure-slope criterion. For an assumed
+nonzero pure power `p ~ r^g`, pointwise finiteness at zero would require
+`g >= 0`; finiteness of `integral p dr` instead requires `g > -1` (the
+endpoint is logarithmically divergent). Neither is the finite-grid
+measurement performed here. No replacement centre-regularity test is imposed.
 
-Areal radius `r` on the recorded radial grid, from the fixed inner mass at
-`grid[0]` to the absorbing outer boundary at `32 r_m`. Observer is the
-areal chart of the recorded coupled arm. No coordinate change, no time
-slice, no second geometry. The state is a station payload already written
-by `nsc-rn-neutral-family-v1`; this step takes no time step and re-runs
-nothing.
+Reaching the positive RN inner-horizon radius does not reach the centre.
+A slope sampled outside or at that horizon cannot establish the behaviour
+as `r -> 0`. The v6 consumer therefore never emits `interior_not_regular`
+or `throat_extrapolation_diverges`. An inward continuation is not selected
+as a prerequisite by this diagnostic.
 
-The two forces are read from the same payload and are not fitted or
-reassembled. `radial_pressure` is the inherited radial contribution, the
-compressive side. `angular_pressure` is the generated angular
-contribution, the resisting side. In `nsc_rn_source` they are
+## Quantities and domain
+
+Inputs are saved station payloads of `nsc-rn-neutral-family-v1`: the areal
+grid, `radial_pressure`, `angular_pressure` and same-state reconstructed
+`R4`. The grid runs from the recorded inner edge to `32 r_m` and has
+strictly positive radius. No second geometry, new evolution or fit is used.
+
+`nsc_rn_source.source_evaluate` defines the pressures as
 
 ```text
 physical_pr = (force_N - angular_force) / (4 pi volume)
 physical_pa = -force_r / (2 lapse radial_density r 4 pi)
+volume = radial_density r^2
 ```
 
-so the radial entry is the matter density with the circulating term
-removed, and the angular entry is the transverse pressure.
+The diagnostic preserves `B = |p_r| / (|p_r| + |p_Omega|)` and the central
+log-log differences `d ln|p| / d ln r`. A crossing of `B = 1/2` equates
+pressure magnitudes; it does not include stress gradients or the metric
+terms needed for a mechanical balance equation. Magnitudes also discard
+the signs, so equal signed stresses are not implied.
 
-## Balance and gradient
+The old “integrated force” is `4 pi integral |p| r^2 dr`, a
+volume-weighted pressure integral, not a surface integral. The new
+`radial_pressure_volume_integral` and `transverse_pressure_volume_integral`
+aliases give the same values. This chart has flat spatial radial measure;
+the expression must not silently be reused as a general proper-volume rule.
 
-`B(r) = |F_in| / (|F_in| + |F_out|)` is scale free. `B = 1/2` is two equal
-forces and `B -> 1` means the inside acts alone. The gradient is the
-logarithmic slope `d ln|F| / d ln r`, which is `-1` for inverse-radius
-decay and steeper than that for a force growing without bound inward.
+`R4` and pressures share state provenance. `Ricci2` in these payloads is an
+analytic source-free reference and remains rejected by the consumer.
+The old `max|R4| / max|p_r|` diagnostic is retained in the recorded units;
+common provenance alone is not a new force or regularity criterion.
 
-The integrated forces are `4 pi int |F| r^2 dr` on the recorded grid.
+## Retained historical measurements
 
-## Provenance, and one mistake that was caught
+The immutable [v5 record](../results/development/nsc-rn-gradient-bubble-v5.json)
+covers six cases and 177 stations. It reports volume-weighted transverse to
+radial pressure ratios of `0.156` to `0.820`, local radial log-slopes of
+`-7.37` to `-152.64`, and pressure crossings at 49.7 percent of stations.
+These numbers are retained, while their former exterior-force, collapse
+and regularity interpretations are withdrawn.
 
-The station payload carries two curvature entries with different origins.
-`R4` is reconstructed from the evolved PG jets and belongs to the same
-state as the pressures. `Ricci2` is the analytic source-free RN reference
-`4 magnetic_r2^2 / r^8`, matching that closed form to about `1.7e-2`
-relative on this grid.
-
-An earlier version of the curvature test divided `Ricci2` by the force
-density. That manufactured a ratio of about `9.4e+05` and a false
-`curvature_dominates` dead end. The reference curvature is not a force and
-is never compared with one. The module now rejects any curvature key other
-than `R4` by name, and a test pins that rejection. The same-provenance
-ratio, `max|R4|` over the peak force density, is about `12.5`.
-
-## Correction to v3 and v4: the domain never reaches the horizon
-
-Versions three and four recorded a hard `interior_not_regular` dead end
-and stated that no case has a regular interior. That over-claimed, and it
-is withdrawn.
-
-The grid's inner edge is the *current* inner mass, which is at or above
-$\mu$ and grows toward $1.04$. It is **outside** the RN inner horizon in
-every case: $r_-$ is $0.9387$, $0.8682$ and $0.7543$ for $\mu=1.002$,
-$1.010$ and $1.040$, leaving an uncovered gap of $0.063$ to $0.286\,r_m$.
-The region between the grid edge and the horizon is never evaluated.
-
-So the criterion, which is about behaviour as $r\to0$, cannot be decided
-on this domain. What can be said is bounded: the fitted throat power law
-extrapolated across the uncovered gap would grow the force by about
-$10^{0.9}$ to $10^{4.3}$. That is an extrapolation and is labelled as one
-in every record. The steepness is real and severe, but "the interior is
-not regular" is not a conclusion this domain supports.
-
-The flag is now `throat_extrapolation_diverges` and it does not decide the
-verdict. The verdict returns to the measured wall structure, and no hard
-dead-end flag fires anywhere in the family.
-
-## The 2005 criterion
-
-Douglas's framing pointed at "the 2005 study of black hole". That is
-Hayward, [gr-qc/0506126](https://arxiv.org/abs/gr-qc/0506126), "Formation
-and evaporation of non-singular black holes", published 28 June 2005. It
-was already in the arXiv index as an archived citation; it is now read.
-
-The static region there is "supported by finite density and pressures ...
-vanishing rapidly at large radius and behaving as a cosmological constant
-at small radius", and the black hole is "a compact space-time region of
-trapped surfaces, with inner and outer boundaries". That is the two-force
-picture directly: a finite interior stress, an exterior that dies away,
-and a bounded region between them.
-
-It also supplies the regularity reference this check was missing. A force
-with logarithmic slope $g$ behaves as $r^g$, so it stays finite as
-$r\to0$ only when $g\geq-1$. The limit is sourced, not chosen, which
-matters because the previously used limit of $8$ was mine and the data
-straddled it.
-
-Every recorded case is steeper than the limit, at $-7.37$ to $-152.64$:
-
-| Case | Throat slope | Meets $g\geq-1$ |
-|---|---|---|
-| `mu-1.002-eps-0.001` | -121.60 | no |
-| `mu-1.002-eps-0.010` | -152.64 | no |
-| `mu-1.010-eps-0.001` | -13.52 | no |
-| `mu-1.010-eps-0.010` | -18.54 | no |
-| `mu-1.040-eps-0.001` | -7.37 | no |
-| `mu-1.040-eps-0.010` | -8.44 | no |
-
-But the domain limit above decides what that means: the slope is
-extrapolated toward a region never computed, so the correct statement is
-that the steepness would preclude regularity if it continued, not that
-the interior is non-regular. Steepness is real and severe, and the balance wall is a sound
-measurement, but the regularity reference is not decisive on this domain
-and the near-throat radial structure is the least physically-driven part
-of the record. Deciding it needs the march extended inward past the inner
-mass to the horizon, which the family has never done.
-
-This also explains the numerical symptom that started this. A throat
-slope of $-488$ sits in the regime where the existing moment check
-misreports itself; the audit below shows the weights themselves are exact.
-
-## Declared limits
-
-The limits are conventions of this check and are recorded in the record
-body, not fitted to the outcome. None of them decides the verdict.
-
-| Limit | Value | Meaning |
-|---|---|---|
-| `throat_slope_limit` | `8.0` | steeper inner slope is reported, never a verdict |
-| `single_force_balance` | `0.90` | balance never below this means the outer force is absent |
-| `exterior_decoupled` | `0.999` | reported as `r_decouple`, never a dead end |
-| `regular_slope_limit` | `-1.0` | sourced from gr-qc/0506126; the hard regularity test |
-| `regular_slope_tolerance` | `1e-9` | so an exactly regular power law survives round-off |
-| `curvature_force_ratio` | `1.0e+03` | same-provenance curvature over force density |
-| `throat_fraction` | `0.10` | fraction of the collar the throat test judges |
-
-The throat limit sits close to the data: `mu=1.040, eps=0.001` reports at
-`-7.37` and `mu=1.040, eps=0.010` at `-8.44`. This is exactly why it was
-demoted. The slopes stay in the record so a reader can apply a different
-convention without re-running.
-
-## Measured outcome
-
-Six cases, 177 stations, reduced from what is actually on disk.
-
-| Case | Reached | Balance at throat | Throat slope | `F_out/F_in` | `r_decouple` | Verdict |
-|---|---|---|---|---|---|---|
-| `mu-1.002-eps-0.001` | 8.00 | 0.247 | -121.60 | 0.819 | 4.66 | `throat_runaway` |
-| `mu-1.002-eps-0.010` | 8.00 | 0.292 | -152.64 | 0.820 | 4.64 | `throat_runaway` |
-| `mu-1.010-eps-0.001` | 15.50 | 0.084 | -13.52 | 0.226 | 3.72 | `throat_runaway` |
-| `mu-1.010-eps-0.010` | 16.00 | 0.557 | -18.54 | 0.224 | 3.31 | `throat_runaway` |
-| `mu-1.040-eps-0.001` | 18.50 | 0.915 | -7.37 | 0.156 | 4.04 | `two_force_balance` |
-| `mu-1.040-eps-0.010` | 19.50 | 0.607 | -8.44 | 0.197 | 3.11 | `throat_runaway` |
-
-Two relations fall out of the table.
-
-The outside always acts. The integrated outer force is `15.6%` to `82.0%`
-of the inner force, and no case falls below a tenth. The non-local content
-is present in every recorded state, which is the part of the picture that
-a local-only computation would miss. No hard dead-end flag fires anywhere
-in the family.
-
-The balance wall exists but does not settle. A wall is present at
-`49.7%` of all stations and appears in all six cases at some station, so
-the two forces genuinely become equal somewhere in the collar. But the
-wall oscillates rather than holding a fixed radius, and its persistence
-falls as the exterior compression strengthens:
-
-| Case | Wall present | $r_{\mathrm{wall}}$ range |
+| Case | Stations with a crossing | Recorded crossing-radius range |
 |---|---|---|
 | `mu-1.002-eps-0.001` | 65% | 1.073 to 2.054 |
 | `mu-1.002-eps-0.010` | 65% | 1.073 to 2.054 |
@@ -177,185 +74,42 @@ falls as the exterior compression strengthens:
 | `mu-1.040-eps-0.001` | 32% | 1.290 to 2.039 |
 | `mu-1.040-eps-0.010` | 30% | 1.290 to 2.039 |
 
-A stronger exterior dissolves the wall. Persistence drops from about
-`65%` to about `31%`, and the inner excursion of the wall is pushed away
-from the throat, from `1.04` to `1.29`. Only the two `mu=1.002` cases
-still hold a wall at their final station.
+No case wrote a `summary.json`. Four stopped on CPU projection; two
+`mu=1.002` cases stopped at `t=8` without a failure record. Their cause
+remains unknown. The observed station fractions describe this incomplete
+family, not a completed evolution or sustained cosmological structure.
 
-So the honest reading is not that the bubble exists or that it does not.
-The inside and outside do reach equality, for roughly half of the
-recorded time. What is missing is a settled wall: the balance is
-transient, and stronger exterior compression shortens it. A sustained
-gradient bubble is not established by this family.
+The saved stencil audit agrees with exact-rational weights and reproduces
+the sampled slopes. This supports the numerical stencil comparison only;
+it does not establish physical central divergence. A gauge-dependent
+spinor crossing correlation likewise cannot establish which stress is
+“physically driven.” No new numerical audit was run for this correction.
 
-## Resolution of the wall, checked against the oscillation audit
+## Compatibility and owners
 
-The wall's position is set by a crossing of the balance, so it is only
-meaningful where the forces are resolved. That was measured separately by
-the oscillation audit on `agent/blackholes-infinity/work2`, which
-classifies a mean half-wavelength of three cells or fewer as grid-scale,
-three to eight as marginal, and above eight as spatially sampled.
+The [consumer](../src/recursive_horizons/nsc_rn_gradient_bubble.py) now has
+API version `nsc-rn-gradient-bubble-v6`. `diagnostic_semantics` travels with
+its outputs. Force/wall field names and legacy verdict strings remain
+available to existing readers, but describe finite pressure diagnostics.
+`single_force` means the declared small-transverse-pressure threshold;
+`curvature_dominates` remains a conventional diagnostic threshold. Neither
+is a physical exclusion theorem. The steep-slope flag is reporting only.
 
-Taking all 88 wall positions across all stations and converting to grid
-cells from the inner edge:
+`slope_meets_regularity_limit`, `regularity_slope_limit` and
+`regularity_slope_tolerance` are deprecated and return `None`.
+`regularity_decidable_on_this_domain` is deprecated and always `False`.
+The old module constants remain importable but are unused. Consumers must
+not coerce a missing criterion into a failed physical test. Horizon reach
+and an explicitly assumed power-law extrapolation remain separately reported.
 
-| Regime | Wall positions | Share |
-|---|---|---|
-| sampled, more than 8 cells | 74 | 84% |
-| marginal, 3 to 8 cells | 7 | 8% |
-| grid-scale, 3 cells or fewer | 7 | 8% |
+The [driver](../scripts/derive_nsc_rn_gradient_bubble.py) targets a new,
+creation-only `nsc-rn-gradient-bubble-v6.json` and links v5 as its predecessor.
+It was not run for this correction; no v6 family result is claimed. All
+v1–v5 records remain intact. The [tests](../tests/test_nsc_rn_gradient_bubble.py)
+check unchanged finite pressure numerics, unsupported-criterion handling,
+horizon/centre separation and historical-record provenance separately.
 
-The radial split matters more than the count. The audit bins crossings by
-radius and finds the rapid ringing concentrated far out: for
-`mu=1.002` the radial pressure has `10, 0, 7, 1, 270` crossings across
-`[r_in,r_in+1)`, `[r_in+1,4)`, `[4,8)`, `[8,16)`, `[16,32]`, and the
-angular pressure `6, 8, 17, 59, 1029`. The same pattern holds at the
-other masses. The grid-scale region is `r >= 16`, and it is not primarily
-an inner-boundary train.
-
-The wall never gets near it. The outermost recorded wall is at
-`r = 2.055`, which is about cell 133 on the `3921`-point `mu = 1.002`
-grid and well inside `r < 6`. The eight percent of wall positions that
-fall in the grid-scale or marginal band are isolated inner reversals,
-whose median spacings are `0.83` to `1.92` cells. So the breathing
-between roughly
-`1.03` and `2.06` sits in a well-sampled region and the outer ringing
-does not drive it.
-
-One caveat from the audit applies here and is worth repeating: a complex
-spinor has no invariant sign, so its real and imaginary parts cross zero
-at gauge-dependent places. That constrains resolution, not causation.
-
-### The throat quantity has no spinor association
-
-The audit also measures crossing correlation against the Dirac spinor,
-and the split is sharp:
-
-| Pair | Correlation across cases | Uniform-edge null |
-|---|---|---|
-| angular pressure with `phi1_imag` | 0.46 to 0.70 | 0.08 to 0.12 |
-| radial pressure with `phi1_imag` | 0.000 to 0.021 | 0.018 to 0.037 |
-
-The angular force is strongly associated with the spinor. The radial
-force is not, at all: its correlation sits at or below its own null.
-
-That bears on this note. The throat slope, the regularity reference, and
-the horizon extrapolation are all read from the **radial** pressure. That
-is the component with no spinor association, so it is the least
-physically-driven quantity in the record, and the near-throat steepness
-should be treated as the weakest of the results here rather than the
-strongest. The angular half of the two-force picture is the better
-supported one.
-
-## Coverage, and why it is partial
-
-The status page previously recorded this family as still running. It was
-not. On disk, no case has a `summary.json`. Four cases stopped on the CPU
-projection at `t = 15.98`, `16.20`, `18.83` and `19.99` with the recorded
-blocker `march_pair stopped before the chunk exceeded the CPU
-projection`. The two `mu=1.002` cases stopped at `t = 8.00` with no
-failure file at all, which is an unrecorded stop. The record reports
-`family_complete: false` and refuses to describe a family that does not
-exist.
-
-### The silent stops are probably memory, not time
-
-This is an inference from recorded evidence, not a measurement, and it is
-labelled as such.
-
-The two silent cases are the two largest grids. Calibration records
-`points` per mass: `3921` for `mu=1.002`, `1750` for `mu=1.010`, `869`
-for `mu=1.040`. The largest grid stopped *earliest* in time, which is the
-wrong direction for a budget stop and is why the recorded CPU projection
-does not explain it.
-
-The state did not fail. No array in any last station holds a non-finite
-value, in any of the six cases.
-
-The growth that does fit is memory, which goes as $N^2$. The finite
-continuation, which ran on the `869`-point grid, records
-`memory_bytes = 205504512`. The same structures at `N = 3921` need about
-twenty times that by area alone. A dense $N\times N$ float64 operator is
-`5.8` MiB at `869`, `23.4` MiB at `1750` and `117.3` MiB at `3921`,
-before the coupled, fixed and stencil copies are counted.
-
-So the reading is that the `mu=1.002` cases were terminated from outside
-the normal failure path, which is what an out-of-memory kill looks like,
-and which is why nothing was written to `station-failure.json`. That is
-consistent with everything on disk and has not been tested. The test is
-cheap: re-run `mu=1.002` on a reduced grid, or with the CSR production
-operator only, and see whether it passes `t = 8`. Until then it stays an
-inference.
-
-This matters beyond bookkeeping. A third of the family is missing, and it
-is missing at the *weak*-exterior end, which is exactly where the
-two-force wall is cleanest. The `49.7%` station figure rests on what
-survives, not on a complete run.
-
-## The stencil blocker was misdiagnosed, and it is withdrawn
-
-Versions one to three recorded a named blocker: `nsc_rn_pg._fornberg`
-fails its own $10^{-8}$ polynomial-moment check at width $9$ and above,
-so the family cannot be re-marched. That was read as bad weights. It is
-not.
-
-The identical Fornberg recursion evaluated in exact rational arithmetic
-gives weights that agree with the recorded ones to $5.1\times10^{-16}$
-relative across all $120$ audited stencil configurations, and not one row
-differs by more than $10^{-12}$. The throat slope re-derived under exact
-weights is unchanged to $1.1\times10^{-13}$, at $-23.3$, $-64.7$,
-$-70.9$, $-84.3$, $-169.8$ and $-487.7$. The measured steepness is
-physics.
-
-The `RuntimeError` is a false alarm. The moment sum
-$\sum_i w_i(i-x)^k$ cancels catastrophically, so evaluating it in double
-precision at $10^{-8}$ is not a valid test at these widths: the exact
-weights fail the same check. The guard is wrong, the weights are right.
-
-Two consequences. The regularity verdict above is not contaminated, and
-this does **not** block re-marching the family or invalidate any
-recorded operator value or calibration hash. Correcting the guard would
-change no operator and therefore no provenance.
-
-The audit lives in
-[src/recursive_horizons/nsc_rn_stencil_audit.py](../src/recursive_horizons/nsc_rn_stencil_audit.py)
-with
-[tests/test_nsc_rn_stencil_audit.py](../tests/test_nsc_rn_stencil_audit.py).
-It does not import, edit or replace `nsc_rn_pg`. One platform note fell
-out of it: `np.longdouble` is 64-bit on Windows, so widening the
-accumulator is not a stabilization here and exact rationals are the only
-genuine option.
-
-## Owners
-
-The reduction is
-[src/recursive_horizons/nsc_rn_gradient_bubble.py](../src/recursive_horizons/nsc_rn_gradient_bubble.py),
-driven by
-[scripts/derive_nsc_rn_gradient_bubble.py](../scripts/derive_nsc_rn_gradient_bubble.py),
-with tests in
-[tests/test_nsc_rn_gradient_bubble.py](../tests/test_nsc_rn_gradient_bubble.py).
-The record is
-[results/development/nsc-rn-gradient-bubble-v5.json](../results/development/nsc-rn-gradient-bubble-v5.json),
-creation only. It names v4 in a `supersedes` block with the reason, and
-lists v3, v2 and v1 under `earlier_records`. All five are preserved. The
-input fields come from
-[nsc_rn_source.py](../src/recursive_horizons/nsc_rn_source.py) and the
-curvature provenance from
-[nsc_rn_reference.py](../src/recursive_horizons/nsc_rn_reference.py).
-
-The traction concept in [nsc-discovery-parent-traction.md](nsc-discovery-parent-traction.md)
-is a lead about the same question in a different domain, the discovery
-collar `|x| <= 1`. That boundary gradient charge is not this areal-radius
-force balance, and the two are not identified here.
-
-## What this does not say
-
-It does not say the universe is a gradient bubble. It measures a trade
-between two recorded forces on one finite grid, and it finds the balance
-real but transient. It does not certify a continuum limit, and it does
-not decide regularity, which needs the march extended inward to the
-horizon. The oscillation audit bounds the claim further: the outer
-ringing at $r \geq 16$ is grid-scale, and the radial pressure carries no
-spinor association, so the throat steepness is the weakest result here.
-It does not finish the family or explain the two silent stops at `t = 8`,
-and it says nothing about `mu` above `1.04`, which was never run.
+The distinct boundary-traction calculation in
+[nsc-discovery-parent-traction.md](nsc-discovery-parent-traction.md) is not
+identified with this pressure-component comparison. Neither diagnostic
+requires becoming the atlas's sole geometric model.
