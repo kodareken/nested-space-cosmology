@@ -61,6 +61,30 @@ read, not a claim that every later revision was reviewed.
 | [Bronnikov–Donskoy, 0910.4930v1](https://arxiv.org/html/0910.4930v1), introduction and effective-equation discussion (13–16) | Projected exterior Weyl stress in a brane black-universe construction | The equations retain an undetermined function without a bulk metric. A regular local candidate does not supply its bulk completion or stability. |
 | [Hayward, gr-qc/0506126v2](https://arxiv.org/html/gr-qc/0506126v2), regular-centre and stress equations 1–8 | Regular-centre metric asymptotic and bounded density/pressures | Does **not** supply the repository's former generic pressure-slope threshold $g\geq-1$. A finite-radius sample, including an inner horizon, cannot decide the centre limit. See the [corrected diagnostic](../lab/docs/nsc-rn-gradient-bubble.md). |
 
+### Shared parent and fixed-source attachment, 10 October 2026
+
+The [second atlas](../lab/docs/nsc-cosmological-atlas-v2.md) adds a shared
+spatial parent and tests one separate spherical source pairing. The following
+reading supplies those components, without importing their full simulation
+programmes or claiming a new junction theorem.
+
+| Source and reading depth | Borrowed mathematics | Atlas use and unresolved connection |
+|---|---|---|
+| [Pook-Kolb et al., 2308.10906v1](https://arxiv.org/html/2308.10906v1), section III, equations 17–21 and surrounding initial-data/MOTS paragraphs | Brill–Lindquist conformal vacuum initial data, three asymptotic ends and their ADM masses | One shared spatial metric for two unequal holes; evolution, horizons and attachment to a cosmological child remain open. Original [Brill–Lindquist, 1963](https://doi.org/10.1103/PhysRev.131.471) is bibliographic attribution, not a separately completed reading. |
+| [Lobo–Crawford, gr-qc/0507063v2](https://arxiv.org/html/gr-qc/0507063v2), sections 2, 3.1 and 3.2, equations 3, 4, 9, 10 and 24 | General extrinsic-curvature definition, surface stress and conservation with bulk flux | Full angular and temporal junction checks; the FLRW side is time dependent and is evaluated from its own metric, not inserted into static-interior formulas. No stability result is imported for an unmatched background. |
+| [Ansoldi–Guendelman–Shilon, 0711.2198v1](https://arxiv.org/html/0711.2198v1), sections 2–3 and formation discussion; deeper than the earlier abstract/introduction entry | Fixed vacuum-wall equation of state and classical de Sitter/Schwarzschild child-universe model, following Blau–Guendelman–Guth | Supplies an independently specified trial wall law. Replacing de Sitter by a comoving radiation region is a separate compatibility question; a rejected combination does not reject the published model. |
+| [Guendelman–Sakai, 0803.0268v2](https://arxiv.org/html/0803.0268v2), sections II, IV and V; complete one-page [2009 erratum](https://doi.org/10.1103/PhysRevD.80.049901) | Distinct domain-wall and dust contributions, proposed material origins and limitations | A source-hypothesis comparison for the earlier adjusted composite layer. No breathing-bubble numerical result or stability claim is adopted. The erratum corrects potential equations 9 and 15; neither is used in this source screen. |
+
+The finite source screen combines the exact closed-radiation trajectory with
+the borrowed junction laws. Its constant-tension/comoving-boundary obstruction
+is a scoped application, not a priority claim. Tests of an existing identity
+remain integration checks. Search coverage included binary initial data,
+comoving radiation/Schwarzschild walls, constant-tension child universes and
+composite-wall sources; it does not establish that this combination was never
+examined elsewhere. The source record states the exact equations and reading
+boundaries. A moving boundary, a physical exchange law for the old composite,
+and nonspherical parent matching remain different open connections.
+
 ### Successor and challenge search
 
 The atlas also uses [Ansoldi–Merali–Guendelman, 1801.04539v1](https://arxiv.org/html/1801.04539v1),
@@ -105,7 +129,7 @@ ratio is inserted to fill one of those arrows.
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.
 - [0711.1178](https://arxiv.org/abs/0711.1178) — Dunne, functional determinants: equations 18–20 and the periodic examples.
-- [0711.2198](https://arxiv.org/abs/0711.2198) — Ansoldi, Guendelman and Shilon: survey of child-universe creation by a thin-shell junction to a Schwarzschild exterior, including the critical parent-mass threshold. Its references carry Farhi–Guth (1987), Farhi–Guth–Guven (1990) and Blau–Guendelman–Guth (1987), which have no arXiv identifier. Imported prior art for the junction and neck notes in the [child and neck chain](../lab/docs/child-neck/README.md); abstract and introduction only.
+- [0711.2198](https://arxiv.org/abs/0711.2198) — Ansoldi, Guendelman and Shilon: survey of child-universe creation by a thin-shell junction to a Schwarzschild exterior, including the critical parent-mass threshold. Its references carry Farhi–Guth (1987), Farhi–Guth–Guven (1990) and Blau–Guendelman–Guth (1987), which have no arXiv identifier. Imported prior art for the [child and neck chain](../lab/docs/child-neck/README.md). Reading extended from abstract/introduction to v1 sections 2–3 and formation discussion for the atlas v2 source screen; see its detailed card above.
 - [0805.2909](https://arxiv.org/abs/0805.2909) — Codello, Percacci and Rahmede: Appendix A trace and Mellin identities used in source matching.
 - [0806.2683](https://arxiv.org/abs/0806.2683) — Dabrowski, Garecki and Blaschke: five-dimensional conformal-curvature transformation reviewed for the warp term.
 - [0901.0944](https://arxiv.org/abs/0901.0944) — Boonserm and Visser: analytic bounds on transmission probabilities, applied to omitted potential tails.

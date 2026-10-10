@@ -114,3 +114,10 @@ Search coverage and unread sources stay explicit: a bounded literature search
 does not establish worldwide priority.
 
 Standalone repetitions of interference, a known soliton, a published nuclear table, a black-universe metric, or a generic test suite are not project results.
+
+The [atlas v2 application](../lab/docs/nsc-cosmological-atlas-v2.md) records
+the first two decisions under this rule: import Brill–Lindquist spatial data
+to supply a common parent, and stop the constant-tension/comoving-radiation
+attachment after its scoped incompatibility check. Neither is claimed as
+new-to-world mathematics. Moving-boundary dynamics and matching to the
+nonspherical parent require their own source/domain admission.
