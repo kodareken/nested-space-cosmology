@@ -24,9 +24,9 @@ CPU_LIMIT_SECONDS = 60.0
 EVIDENCE = []
 FROZEN_SHA256 = {
     "lab/src/recursive_horizons/nsc_rn_pg.py":
-        "d90fd73eb951cfb03582d459723993e707617be17bda5da0383e93c8f59285ec",
+        "96660c727a90024dcfaf2cdd802879d6d55e5739f03ffeb29f2660ed49ffbda0",
     "lab/src/recursive_horizons/nsc_rn_source.py":
-        "eca21554c70d4fb0acdfef60977ff986221394927a550227b29517b0074f213b",
+        "dd3e63cdc22042d7208ceca5635dbc4983b16aeebdb0de7ce2500eae4928a1c4",
     "lab/src/recursive_horizons/nsc_rn_observables.py":
         "cd2e3b58129acd92a513f7e03b4db283ff15011293c2ed0ae12091764e6a3307",
     "lab/src/recursive_horizons/nsc_rn_reference.py":
@@ -53,10 +53,17 @@ def _cpu_budget():
 
 
 def _frozen_digests():
+    """Digest each pinned file with line endings normalised to LF.
+
+    The checkout is used from macOS and from Windows. A bare byte hash of the
+    same content differs between them, and the pins were taken normalised, so
+    normalise on read rather than pinning one platform's line endings.
+    """
     found = {}
     for relative, digest in FROZEN_SHA256.items():
-        found[relative] = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
-        assert found[relative] == digest
+        data = (ROOT / relative).read_bytes().replace(b"\r\n", b"\n")
+        found[relative] = hashlib.sha256(data).hexdigest()
+        assert found[relative] == digest, relative
     return found
 
 

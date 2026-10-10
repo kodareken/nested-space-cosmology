@@ -1,0 +1,59 @@
+{
+ "baseline_10_solar": {
+  "N": 1.1871976548238654e+58,
+  "a_b_m": 1.3307572382212185e-16,
+  "a_max_m": 30334.53982561986,
+  "a_max_over_a_b": 2.279494633158418e+20,
+  "M_turn_solar": 10.271267843382903,
+  "M_turn_over_N_mn": 1.0271267843382903,
+  "per_fermion_at_bounce_J": 7800894964.325734,
+  "per_fermion_at_turn_J": 1.5461850630526235e-10,
+  "a_over_a_b_at_paper_1p67J": 4665607036.080103,
+  "a_m_at_paper_1p67J": 6.208790333959442e-07,
+  "a_over_a_b_at_two_rest_energies": 3.02517714662456e+19,
+  "a_m_at_two_rest_energies": 4025.7763847720453
+ },
+ "shear_u_c_1_L_1": {
+  "N": 1.3272739434424588e+78,
+  "a_b_m": 6.410787034213094e-10,
+  "a_max_m": 3.3018010034237954e+24,
+  "a_max_over_a_b": 5.1503832303315346e+33,
+  "M_turn_solar": 1.117989020656694e+21,
+  "M_turn_over_N_mn": 0.9999999999999987,
+  "per_fermion_at_bounce_J": 7800894964.325734,
+  "per_fermion_at_turn_J": 1.5053497646337115e-10,
+  "a_over_a_b_at_paper_1p67J": 4665607036.080101,
+  "a_m_at_paper_1p67J": 2.9910213093635694,
+  "a_over_a_b_at_two_rest_energies": 3.025177146624672e+19,
+  "a_m_at_two_rest_energies": 19393766427.779213
+ },
+ "N_need": {
+  "N": 1.8174817097603842e+78,
+  "a_b_m": 7.118926516467376e-10,
+  "a_max_m": 4.5212692998605566e+24,
+  "a_max_over_a_b": 6.351054880819511e+33,
+  "M_turn_solar": 1.530900690694197e+21,
+  "M_turn_over_N_mn": 1.000000000000001,
+  "per_fermion_at_bounce_J": 7800894964.325734,
+  "per_fermion_at_turn_J": 1.5053497646337112e-10,
+  "a_over_a_b_at_paper_1p67J": 4665607036.0801,
+  "a_m_at_paper_1p67J": 3.3214113644567385,
+  "a_over_a_b_at_two_rest_energies": 3.0251771466246746e+19,
+  "a_m_at_two_rest_energies": 21536013806.11751,
+  "a_max_massless_analytic_m": 4.08404904189375e+17
+ },
+ "shear_u_c_1_L_150": {
+  "N": 1.990910915163688e+80,
+  "a_b_m": 3.40623888855566e-09,
+  "a_max_m": 4.9527015051357536e+26,
+  "a_max_over_a_b": 1.4540088546860073e+35,
+  "M_turn_solar": 1.6769835309850617e+23,
+  "M_turn_over_N_mn": 1.0000000000000109,
+  "per_fermion_at_bounce_J": 7800894964.325734,
+  "per_fermion_at_turn_J": 1.5053497646337112e-10,
+  "a_over_a_b_at_paper_1p67J": 4665607036.081305,
+  "a_m_at_paper_1p67J": 15.892172125019052,
+  "a_over_a_b_at_two_rest_energies": 3.025177146624674e+19,
+  "a_m_at_two_rest_energies": 103044760416.02814
+ }
+}

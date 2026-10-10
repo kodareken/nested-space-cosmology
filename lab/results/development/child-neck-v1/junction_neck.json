@@ -1,0 +1,54 @@
+{
+ "r_gp_m": 29533.393820668785,
+ "GMp_over_c3_s": 4.925639893961039e-05,
+ "SUPERSEDED_neck_at_bounce_note": "bare-density value; see israel_matching.json (timelike only from t_exit/27, R = r_g/9)",
+ "neck_at_bounce_m": 3.569410525307267e-23,
+ "neck_at_bounce_over_lP": 2208445123116.326,
+ "neck_at_bounce_for_N": {
+  "N_f_L1": 3.569410525307267e-23,
+  "N_need": 3.569410525307267e-23
+ },
+ "parent_sphere_radius_coefficient": 1.3103706971044482,
+ "neck_radius_coefficient": 1.5874010519681994,
+ "exit": {
+  "radiation": {
+   "hidden_to_turnaround": false,
+   "a_exit_m": 109825237872.34567,
+   "a_exit_over_a_max": 2.6891263240419005e-07,
+   "t_exit_s": 4.925639893961123e-05,
+   "t_exit_over_GMp_c3": 1.000000000000017,
+   "a_max_m": 4.0840490418937434e+17,
+   "r_gp_m": 29533.393820668785
+  },
+  "eta_6e-10_with_hidden_antimatter": {
+   "hidden_to_turnaround": false,
+   "a_exit_m": 109825238156.3025,
+   "a_exit_over_a_max": 2.637912767924755e-07,
+   "t_exit_s": 4.925639902451399e-05,
+   "t_exit_over_GMp_c3": 1.000000001723707,
+   "a_max_m": 4.1633385111025485e+17,
+   "r_gp_m": 29533.393820668785
+  },
+  "eta_1e-6": {
+   "hidden_to_turnaround": false,
+   "a_exit_m": 109825711133.02226,
+   "a_exit_over_a_max": 4.194299319839631e-09,
+   "t_exit_s": 4.925654044331127e-05,
+   "t_exit_over_GMp_c3": 1.0000028727983354,
+   "a_max_m": 2.6184519214814036e+19,
+   "r_gp_m": 29533.393820668785
+  },
+  "all_matter": {
+   "hidden_to_turnaround": false,
+   "a_exit_m": 168752672343.3233,
+   "a_exit_over_a_max": 3.732418070043444e-14,
+   "t_exit_s": 5.9861360553122496e-05,
+   "t_exit_over_GMp_c3": 1.215301196226587,
+   "a_max_m": 4.521269299860588e+24,
+   "r_gp_m": 29533.393820668785
+  }
+ },
+ "N_max_hidden_radiation": 3.5343020386206904e+58,
+ "N_max_hidden_all_matter": 9.742224696890317e+57,
+ "N0_parent_baryons": 1.1871976548238654e+58
+}

@@ -1,0 +1,70 @@
+{
+ "n_b_per_m3": 1.2026462725287736e+105,
+ "n_b_per_lP3": 5.077706251929497,
+ "eps_b_over_epsP": 20.249999999997524,
+ "E_per_fermion_over_EP": 3.988021164537167,
+ "baseline": {
+  "3": {
+   "N": 3.561592964471596e+57,
+   "a0_over_rg": 1.110291933586292,
+   "a_b_m": 8.908527438256308e-17,
+   "adot2_min": 1.1867602456305804e-09,
+   "E_b_solar": 1.5546343742028484e+20,
+   "child_over_parent": 5.182114580676161e+19
+  },
+  "10": {
+   "N": 1.1871976548238654e+58,
+   "a0_over_rg": 1.027126784338314,
+   "a_b_m": 1.3307572382212185e-16,
+   "adot2_min": 1.0519751736381977e-09,
+   "E_b_solar": 5.1821145806761604e+20,
+   "child_over_parent": 5.182114580676161e+19
+  },
+  "30": {
+   "N": 3.561592964471596e+58,
+   "a0_over_rg": 1.0066069162784668,
+   "a_b_m": 1.9192840550080256e-16,
+   "adot2_min": 1.0132266137219403e-09,
+   "E_b_solar": 1.5546343742028477e+21,
+   "child_over_parent": 5.182114580676159e+19
+  }
+ },
+ "N_need": 1.8174817097603842e+78,
+ "N_need_energy_paper_stage1_solar": 1.530900690694195e+21,
+ "floor_energy_at_N_need_solar": 7.933302790813546e+40,
+ "paper_M_b_solar": 1.7e+31,
+ "paper_energy_per_fermion_J": 1.6716267850900726,
+ "light_crossing_2GM_over_c3_s": 9.851279787922078e-05,
+ "shear_stage2": {
+  "0.5": {
+   "pairs_br": 9.699241695284634e+77,
+   "fermions_br": 1.9398483390569268e+78,
+   "fermions_over_N_need": 1.0673275712428905,
+   "thread_length_needed": 0.9369194865223164,
+   "delta_v_needed_ms": 0.09229856000487628,
+   "E_b_solar_L1": 3.561326240182131e+41,
+   "E_per_fermion_over_EP": 16.773259092471527,
+   "fermions_per_second_of_infall": 1.9691333317273463e+82
+  },
+  "1.0": {
+   "pairs_br": 6.636369717212294e+77,
+   "fermions_br": 1.3272739434424588e+78,
+   "fermions_over_N_need": 0.7302818709616868,
+   "thread_length_needed": 1.3693342800405675,
+   "delta_v_needed_ms": 0.13489695115872474,
+   "E_b_solar_L1": 2.152709207378148e+41,
+   "E_per_fermion_over_EP": 14.818296246446831,
+   "fermions_per_second_of_infall": 1.3473111839435632e+82
+  },
+  "2.0": {
+   "pairs_br": 3.7289373637269287e+77,
+   "fermions_br": 7.457874727453857e+77,
+   "fermions_over_N_need": 0.4103411158089233,
+   "thread_length_needed": 2.4369968337895083,
+   "delta_v_needed_ms": 0.24007537651940683,
+   "E_b_solar_L1": 1.4359129587532295e+41,
+   "E_per_fermion_over_EP": 17.590836983880184,
+   "fermions_per_second_of_infall": 7.570462810930823e+81
+  }
+ }
+}

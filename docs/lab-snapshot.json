@@ -13670,6 +13670,139 @@
       "sha256": "ca9c333010c83a6e19d52bcafeede816706f1ce6c45b6360df36b381c85f31fe"
     },
     {
+      "bytes": 9619,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/README.md",
+      "sha256": "0de1ff093ad27a7910efb6dafc754549247241f1e8847906014e982cd376786b"
+    },
+    {
+      "bytes": 4561,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/balanced-layers-note.md",
+      "sha256": "355a62b66518daf4f82986ec53583112538f45385f8e8aa0bf2322aecf86259a"
+    },
+    {
+      "bytes": 4665,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/casimir-layer-note.md",
+      "sha256": "0a87eb9ac9a148359786395060cfab82319c80e3c6a4dba92d11e40ba6828b18"
+    },
+    {
+      "bytes": 8600,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/child-and-neck-status-note.md",
+      "sha256": "ac1f3b608adb52a199733cb35b3af2aa0a0c47e16cbd887bc60bd550f41f4520"
+    },
+    {
+      "bytes": 4490,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/child-energy-floor-and-thread-length-note.md",
+      "sha256": "2455b76649d3ca10932b8e3fb053134bef6baa0d5644a2732f0f42038d2cbba6"
+    },
+    {
+      "bytes": 5181,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/child-expansion-and-matter-fraction-note.md",
+      "sha256": "504f488e49fbc20ec1fb80df98262e2a5f2f7893e48f28a61da0e5367e08eee2"
+    },
+    {
+      "bytes": 2489,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/collapse-threshold-and-expansion-note.md",
+      "sha256": "8eff99a18387234f03311ca75f30a35b462118ef8327724096500af42bc5f09f"
+    },
+    {
+      "bytes": 4214,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/composite-layer-note.md",
+      "sha256": "22fa3c02fe6d621485e819d1c2208d4618876542c81b3c802c493e82afbb8b61"
+    },
+    {
+      "bytes": 3703,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/eck-collapse-pair-production-note.md",
+      "sha256": "70f4fcfe5b6588597a76a55203800e53d5b89c1ef8c238ebb04390347189075e"
+    },
+    {
+      "bytes": 6981,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/israel-matching-note.md",
+      "sha256": "190289726b00f469681733dc73d81a264a850327bb6f079335a925988bd06969"
+    },
+    {
+      "bytes": 4220,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/junction-neck-note.md",
+      "sha256": "5972cac7bde9cdee0b49b633a88c40a62312cdc044e8694df9d823f44d6701f8"
+    },
+    {
+      "bytes": 6779,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/kasner-shear-production-note.md",
+      "sha256": "2c3e1da219adf6d47b025a5e0a75281f556968071a3a04a0282b4c736687b1a6"
+    },
+    {
+      "bytes": 4534,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/matter-antimatter-and-time-note.md",
+      "sha256": "8930779648da8dec99c72f163de27252119f5cbd422295243e3bf6b699516d69"
+    },
+    {
+      "bytes": 3487,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/neck-flux-note.md",
+      "sha256": "0fceb6949fdd44365d4027ceb36fdc2f6b35c77cc91008336586348a98a8d648"
+    },
+    {
+      "bytes": 3621,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/nesting-thread-length-note.md",
+      "sha256": "fe0886c9e0ac0712ea9c6c92b0a06720b0d44d01f8a6d3b33559094815ba57f9"
+    },
+    {
+      "bytes": 4600,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/second-quantised-splitting-note.md",
+      "sha256": "6f040afb70b3fbb1ed7f6301ed76f7abb59692dbe8f70155ce057f4a504f36fd"
+    },
+    {
+      "bytes": 5428,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/swap-symmetry-note.md",
+      "sha256": "153e3b72dcbe8b75e4749e6aff18011f1af37f8d332a2f68be8e2457c9ac51fe"
+    },
+    {
+      "bytes": 4239,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/torsion-layer-note.md",
+      "sha256": "a850da367439eb9cc80c65a6e80dd5780ccc7d3bf9d1227fbed9af87d8dbad7b"
+    },
+    {
+      "bytes": 5524,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/docs/child-neck/torsion-splitting-and-inherited-spin-note.md",
+      "sha256": "dc2fcb054f8a19e7795f816f160ba913a46e08660fc54a9bac523772f2be804a"
+    },
+    {
       "bytes": 97482,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "ab03859ae553d197f99430146985598fdeee3382",
@@ -74060,6 +74193,230 @@
       "sha256": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be"
     },
     {
+      "bytes": 3664,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/balanced_layers.json",
+      "sha256": "2294978db510b200849f3f4d4aeda63d9994cc7049d289d6a3dc6b0129286a00"
+    },
+    {
+      "bytes": 167969,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/balanced_layers.png",
+      "sha256": "7ed390e9d45e44cd19e02652541041c9fb5abe9c4687d0f9923aff8e8aa9144b"
+    },
+    {
+      "bytes": 2466,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/casimir_layer_check.json",
+      "sha256": "e13e92785a7e46f62675dbbf16034a7287c161d5a870266f03cef56307a131ff"
+    },
+    {
+      "bytes": 204479,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/casimir_layer_check.png",
+      "sha256": "b9773495013652a0ed5e65726a5bba8718185e9cbdc2579888ce9be86ce2f3b0"
+    },
+    {
+      "bytes": 2373,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_energy_floor.json",
+      "sha256": "c6bfe9c724f8173dbc9bd5450f004954ced1516c9c9d4ee992302b1b21a15165"
+    },
+    {
+      "bytes": 202467,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_energy_floor.png",
+      "sha256": "cbbcad11ed933cb92ac6d42a193ed1696446df3f548a932ad6c1f1a836209739"
+    },
+    {
+      "bytes": 2267,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_expansion_ladder.json",
+      "sha256": "6cad537530b384be26ed4806ca065bdc61fbdc44d1572873d8ec8dc29d910dc0"
+    },
+    {
+      "bytes": 189287,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_expansion_ladder.png",
+      "sha256": "4296b1a8a58ec798cd5a6b7b6fc9c1a09fdc7b55dfe31982f9e61be03effdf4d"
+    },
+    {
+      "bytes": 959,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_lifetime_entropy.json",
+      "sha256": "6f9a4ec5770c60e1226b9e10f7c3f6bf23dd48ccb6a112adb622cdb9454b6162"
+    },
+    {
+      "bytes": 151075,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_lifetime_entropy.png",
+      "sha256": "8985f1ec1e45cdf1ba8da17ad44f0989fea740ec064d740cc231425c280c6862"
+    },
+    {
+      "bytes": 1194,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/child_matter_fraction.json",
+      "sha256": "2a599c0adf8d616a67aada0c3c9e13d78a9c65397cf29385c7042ceb1d4cc022"
+    },
+    {
+      "bytes": 14029,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/composite_layer.json",
+      "sha256": "ba18f9f7ddc72e1a55d14947196982c46958960bde30357ed4bacbda3fab86cd"
+    },
+    {
+      "bytes": 168243,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/composite_layer.png",
+      "sha256": "f53115e1a4b9b4130dedb7f9d76b36dbc148ec50188a05688e18980f7721a482"
+    },
+    {
+      "bytes": 2165,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/eck_collapse_consistency_check.json",
+      "sha256": "ffc5f35d3446263870c4bf38cfb3909f2f0e7dab8acec640c45c7b3a980fb858"
+    },
+    {
+      "bytes": 7636,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/israel_matching.json",
+      "sha256": "d5e96fd9f4909a64295e4b6d6209befd098ce8c51d30b1c24775fcd578be21ad"
+    },
+    {
+      "bytes": 187973,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/israel_matching.png",
+      "sha256": "f368e33a44dd01b31a8ad414375d5a6835da660a3eed0831642ae3bd63609767"
+    },
+    {
+      "bytes": 1839,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/junction_neck.json",
+      "sha256": "01bd05eabf51ec99d9ea7ec76b1f63b772e58148a79bc84e14c1396161cd2063"
+    },
+    {
+      "bytes": 226860,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/junction_neck.png",
+      "sha256": "163f0cfa506e51aa82e9b42eecc11fe1b85bc926915466a937935c6e680ed921"
+    },
+    {
+      "bytes": 4996,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/kasner_shear_production.json",
+      "sha256": "68d43c9ead64756e300fa9a30f11ea7c3f7e4caa9d82a11817a72aee60a122a2"
+    },
+    {
+      "bytes": 249349,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/kasner_shear_production.png",
+      "sha256": "35a12c3cb061738abdc36565149561290a58611c5bd79ad005005f28acbb31d0"
+    },
+    {
+      "bytes": 9010,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/kasner_stopping_scales.json",
+      "sha256": "def568d1e14731d6ad073b9071f1eec3c6a0ce7be9fac67c1fbe8e4e25e2c877"
+    },
+    {
+      "bytes": 231556,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/kasner_stopping_scales.png",
+      "sha256": "78fe416db94a4eb1203fbb6a993c9374637b011b0d7d3b8dbbc4e32f4d56396d"
+    },
+    {
+      "bytes": 4472,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/neck_flux.json",
+      "sha256": "a5518ba5edae7f45f5b5abe26705dfb75ba035ce18e1fb4ad8aa6fb2eb992a8f"
+    },
+    {
+      "bytes": 169094,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/neck_flux.png",
+      "sha256": "af01672c9b6ed85fd547055de8994c7ef74b062d308d2d35ebd52d7169f8da46"
+    },
+    {
+      "bytes": 3991,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/nesting_thread_length.json",
+      "sha256": "e8dc0fe96dae8ce272a1772d1c56fd457235375ef39174e990b5f32686f00ac8"
+    },
+    {
+      "bytes": 190746,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/nesting_thread_length.png",
+      "sha256": "fc5225b8a8ec3396944daed8db0fed2c23d065f8fffdb2a50a0912a05068af7c"
+    },
+    {
+      "bytes": 1742,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/second_quantised_splitting.json",
+      "sha256": "4a81c7cf079d54584d793df8eb6b901cc00e371ec6a9503409ae9aa2a991bdfe"
+    },
+    {
+      "bytes": 5319,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/swap_symmetry.json",
+      "sha256": "f29325aaeb168b3a6d972f12ac51dcb46a76ca56bb59b60035cfcb3b49e154b9"
+    },
+    {
+      "bytes": 127576,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/swap_symmetry.png",
+      "sha256": "c9cf885fdd2a56de46e0af84ffd99598448270fba6b08d5a814f31ae1686a9cf"
+    },
+    {
+      "bytes": 2594,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/torsion_layer_eos.json",
+      "sha256": "c2f24e3f26d7a0821c93348454ee91d69d38e3df0ba00b97cbb66aa5f0bb0a33"
+    },
+    {
+      "bytes": 154705,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/torsion_layer_eos.png",
+      "sha256": "daf9d465866ea61f77754db80ef7bb909ac539668033f8c7842123d155a096d5"
+    },
+    {
+      "bytes": 1444,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/results/development/child-neck-v1/torsion_splitting_asymmetry.json",
+      "sha256": "5bbdaf7c537b36db8e4e1ed7b046106cadbc5307f8ca0f1cf9e14b6da81fba14"
+    },
+    {
       "bytes": 11855,
       "original_git_blob": "7d81c3116fd170b5b98e4699fb5234f85749117d",
       "original_sha256": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060",
@@ -98516,6 +98873,139 @@
       "original_sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48",
       "path": "lab/scripts/check_nsc_weyl_cocycle.py",
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
+    },
+    {
+      "bytes": 7898,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/balanced_layers.py",
+      "sha256": "e641d19933cc15e75685ae0f5e69b613f199c03f1b806f2143d86619612de494"
+    },
+    {
+      "bytes": 10982,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/casimir_layer_check.py",
+      "sha256": "0cb51910833103c64b41c4f3d9abe997a4fc0d878e1449b4b14e46d1d77ba338"
+    },
+    {
+      "bytes": 3831,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/child_energy_floor.py",
+      "sha256": "fc7fa0201d8037527cc57091e485ae7283f65c437f8f8f22dff23c37853f66f8"
+    },
+    {
+      "bytes": 3324,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/child_expansion_ladder.py",
+      "sha256": "a8a05a65a2d3d00bef016703bcccc55d1abca0bbc23cfcea607cab4a59fad584"
+    },
+    {
+      "bytes": 4432,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/child_lifetime_entropy.py",
+      "sha256": "33d69a46fc98503adeb6813e00e07ff14eba15b71212e9c149a6f4408703443b"
+    },
+    {
+      "bytes": 4590,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/child_matter_fraction.py",
+      "sha256": "a6b40e6bf42da70942cb9da639efa19e711bac65d5556a357167dd82846f681a"
+    },
+    {
+      "bytes": 8107,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/composite_layer.py",
+      "sha256": "03f518e5d2fc1ba6bb268a2d76aecf3b43c7a1e41bb569b62e1f63ac0f25b67e"
+    },
+    {
+      "bytes": 3251,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/eck_collapse_consistency_check.py",
+      "sha256": "eb599c0e988075bfa7ac31a298be3801b49fe493d5e2694fea03602ae7a64318"
+    },
+    {
+      "bytes": 16601,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/israel_matching.py",
+      "sha256": "1fabc7e1cbf33e2185f1d2591bd2e264086acc50da8329fdedb80b3ee64599b6"
+    },
+    {
+      "bytes": 7031,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/junction_neck.py",
+      "sha256": "37e058d09ce78bba1b1979f2b9741e7ded85761176f763d8b78f2e376945f146"
+    },
+    {
+      "bytes": 6105,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/kasner_shear_production.py",
+      "sha256": "3ba0daea65af5f08a392ec13ec87b66e60f2ac38ea58d97d7e899561f8373eba"
+    },
+    {
+      "bytes": 3895,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/kasner_shear_production_figure.py",
+      "sha256": "207d6562f3254ebdf1051083d9e116a045a34bf7ffa4a95b69736506ecfbe7f6"
+    },
+    {
+      "bytes": 4178,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/kasner_stopping_scales.py",
+      "sha256": "f77d17fb04f822919d0fe5e683eba6e43497d3b710960440b1023ae9689f3751"
+    },
+    {
+      "bytes": 8654,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/neck_flux.py",
+      "sha256": "6eca3b7d52b8186775520131884697e370ebfd99a404dd2904716f99a809d73f"
+    },
+    {
+      "bytes": 6676,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/nesting_thread_length.py",
+      "sha256": "e89d736ab9d81be9b4396ea7132cc58f8959fca49025adc7fb4a20eb9d6fb9e2"
+    },
+    {
+      "bytes": 4405,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/second_quantised_splitting.py",
+      "sha256": "7e3a4be9a652bd951817db8bb1528ea9880ab7e03564b6bc9a5428df71af9250"
+    },
+    {
+      "bytes": 11275,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/swap_symmetry.py",
+      "sha256": "81ded734723e7d9ca7fae4eda22bb6832b8579939a159f168bfcd0fa06c3bac1"
+    },
+    {
+      "bytes": 8323,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/torsion_layer_eos.py",
+      "sha256": "150a6fc0f2d1cdb2b8532020991651564f0664f666631821e2a07e966dda770a"
+    },
+    {
+      "bytes": 3824,
+      "change": "explicit successor after consolidation; original import fields preserved",
+      "changed_from_commit": "cdb60ef6c40afae680bec7321a96484f45751cd5",
+      "path": "lab/scripts/child_neck/torsion_splitting_asymmetry.py",
+      "sha256": "be7d5a6ccf0f97f9fd773199ef6d461326f8cad9e858cc17d909b09db3b34def"
     },
     {
       "bytes": 1316,

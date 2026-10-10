@@ -1,0 +1,374 @@
+{
+ "flat_validation": {
+  "P": {
+   "lift": "0",
+   "antilinear": false,
+   "classification": {
+    "E_flip": false,
+    "V_signs": [
+     1,
+     -1,
+     -1,
+     -1
+    ],
+    "A_signs": [
+     -1,
+     1,
+     1,
+     1
+    ],
+    "S_sign": 1,
+    "P_sign": -1,
+    "chirality_preserved": false,
+    "VA_sign": [
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "matches_standard_table": true
+  },
+  "T": {
+   "lift": "13",
+   "antilinear": true,
+   "classification": {
+    "E_flip": false,
+    "V_signs": [
+     1,
+     -1,
+     -1,
+     -1
+    ],
+    "A_signs": [
+     1,
+     -1,
+     -1,
+     -1
+    ],
+    "S_sign": 1,
+    "P_sign": -1,
+    "chirality_preserved": true,
+    "VA_sign": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "matches_standard_table": true
+  },
+  "C": {
+   "lift": "2",
+   "antilinear": true,
+   "classification": {
+    "E_flip": true,
+    "V_signs": [
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "A_signs": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "S_sign": 1,
+    "P_sign": 1,
+    "chirality_preserved": false,
+    "VA_sign": [
+     -1,
+     -1,
+     -1,
+     -1
+    ]
+   },
+   "matches_standard_table": true
+  },
+  "CPT": {
+   "lift": "0123",
+   "antilinear": false,
+   "classification": {
+    "E_flip": true,
+    "V_signs": [
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "A_signs": [
+     -1,
+     -1,
+     -1,
+     -1
+    ],
+    "S_sign": 1,
+    "P_sign": 1,
+    "chirality_preserved": true,
+    "VA_sign": [
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "matches_standard_table": true
+  }
+ },
+ "kruskal": {
+  "Sigma_X": {
+   "r": [
+    1,
+    -1,
+    1,
+    1
+   ],
+   "lifts": [
+    {
+     "lift": "1",
+     "antilinear": false,
+     "kappa": -1.0,
+     "residual": 0.0
+    },
+    {
+     "lift": "03",
+     "antilinear": true,
+     "kappa": 1.0,
+     "residual": 0.0,
+     "E_flip": true,
+     "V_signs": [
+      -1,
+      1,
+      -1,
+      -1
+     ],
+     "A_signs": [
+      -1,
+      1,
+      -1,
+      -1
+     ],
+     "S_sign": 1,
+     "P_sign": -1,
+     "chirality_preserved": true,
+     "VA_sign": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "preserves_VA": true
+    },
+    {
+     "lift": "12",
+     "antilinear": true,
+     "kappa": -1.0,
+     "residual": 0.0
+    },
+    {
+     "lift": "023",
+     "antilinear": false,
+     "kappa": 1.0,
+     "residual": 0.0,
+     "E_flip": false,
+     "V_signs": [
+      1,
+      -1,
+      1,
+      1
+     ],
+     "A_signs": [
+      -1,
+      1,
+      -1,
+      -1
+     ],
+     "S_sign": 1,
+     "P_sign": -1,
+     "chirality_preserved": false,
+     "VA_sign": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "preserves_VA": false
+    }
+   ]
+  },
+  "Sigma_T": {
+   "r": [
+    -1,
+    1,
+    1,
+    1
+   ],
+   "lifts": [
+    {
+     "lift": "0",
+     "antilinear": false,
+     "kappa": -1.0,
+     "residual": 0.0
+    },
+    {
+     "lift": "02",
+     "antilinear": true,
+     "kappa": -1.0,
+     "residual": 0.0
+    },
+    {
+     "lift": "13",
+     "antilinear": true,
+     "kappa": 1.0,
+     "residual": 0.0,
+     "E_flip": false,
+     "V_signs": [
+      1,
+      -1,
+      -1,
+      -1
+     ],
+     "A_signs": [
+      1,
+      -1,
+      -1,
+      -1
+     ],
+     "S_sign": 1,
+     "P_sign": -1,
+     "chirality_preserved": true,
+     "VA_sign": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "preserves_VA": true
+    },
+    {
+     "lift": "123",
+     "antilinear": false,
+     "kappa": 1.0,
+     "residual": 0.0,
+     "E_flip": true,
+     "V_signs": [
+      -1,
+      1,
+      1,
+      1
+     ],
+     "A_signs": [
+      1,
+      -1,
+      -1,
+      -1
+     ],
+     "S_sign": 1,
+     "P_sign": -1,
+     "chirality_preserved": false,
+     "VA_sign": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "preserves_VA": false
+    }
+   ]
+  },
+  "Sigma_XT": {
+   "r": [
+    -1,
+    -1,
+    1,
+    1
+   ],
+   "lifts": [
+    {
+     "lift": "3",
+     "antilinear": true,
+     "kappa": -1.0,
+     "residual": 0.0
+    },
+    {
+     "lift": "01",
+     "antilinear": false,
+     "kappa": 1.0,
+     "residual": 0.0,
+     "E_flip": true,
+     "V_signs": [
+      -1,
+      -1,
+      1,
+      1
+     ],
+     "A_signs": [
+      -1,
+      -1,
+      1,
+      1
+     ],
+     "S_sign": 1,
+     "P_sign": 1,
+     "chirality_preserved": true,
+     "VA_sign": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "preserves_VA": true
+    },
+    {
+     "lift": "23",
+     "antilinear": false,
+     "kappa": -1.0,
+     "residual": 0.0
+    },
+    {
+     "lift": "012",
+     "antilinear": true,
+     "kappa": 1.0,
+     "residual": 0.0,
+     "E_flip": false,
+     "V_signs": [
+      1,
+      1,
+      -1,
+      -1
+     ],
+     "A_signs": [
+      -1,
+      -1,
+      1,
+      1
+     ],
+     "S_sign": 1,
+     "P_sign": 1,
+     "chirality_preserved": false,
+     "VA_sign": [
+      -1,
+      -1,
+      -1,
+      -1
+     ],
+     "preserves_VA": false
+    }
+   ]
+  }
+ },
+ "negative_control": {
+  "Sigma_X": 0,
+  "Sigma_T": 0,
+  "Sigma_XT": 0
+ },
+ "derived": {
+  "N0_parent_baryons": 1.1871976548238654e+58,
+  "N_need_child_quanta": 1.8174817097603842e+78,
+  "eta_if_child_holds_only_parent_baryons": 6.532102350457133e-21,
+  "shortfall_factor_for_eta_6e_minus_10": 91854041441.6517,
+  "note": "eta = N0/N_need is the net baryon number per quantum if the child carries only the image of the parent's N0 baryons; sign + (T-type) or - (CP/CRT-type)"
+ }
+}

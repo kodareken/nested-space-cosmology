@@ -1,0 +1,42 @@
+{
+ "symbolic": {
+  "shifts": {
+   "helicity+ particle": "-2*kappa_p*(alpha*(N_L - N_R) - alpha*(N_L + N_R) + gamma*(N_L - N_R + alpha**2*(N_L + N_R)))/gamma",
+   "helicity+ antiparticle": "2*kappa_p*(alpha*(N_L - N_R) + alpha*(N_L + N_R) + gamma*(-N_L + N_R + alpha**2*(N_L + N_R)))/gamma",
+   "helicity- particle": "-2*kappa_p*(alpha*(N_L - N_R) + alpha*(N_L + N_R) + gamma*(-N_L + N_R + alpha**2*(N_L + N_R)))/gamma",
+   "helicity- antiparticle": "2*kappa_p*(alpha*(N_L - N_R) - alpha*(N_L + N_R) + gamma*(N_L - N_R + alpha**2*(N_L + N_R)))/gamma"
+  },
+  "splitting_helicity_plus": "-4*N_L*alpha**2*kappa_p - 4*N_L*alpha*kappa_p/gamma - 4*N_R*alpha**2*kappa_p + 4*N_R*alpha*kappa_p/gamma",
+  "splitting_helicity_minus": "-4*N_L*alpha**2*kappa_p - 4*N_L*alpha*kappa_p/gamma - 4*N_R*alpha**2*kappa_p + 4*N_R*alpha*kappa_p/gamma",
+  "splitting_helicity_plus_at_nV0": "8*N_R*alpha*kappa_p/gamma",
+  "A.A only: splitting_helicity_plus": "0"
+ },
+ "eta_per_effective_polarisation": 34.49954211184107,
+ "chi_h_needed_for_beta_1": {
+  "6e-10": 3.478307034075479e-11,
+  "9e-8": 5.217460551113218e-09
+ },
+ "inheritance_bound_chi_h": {
+  "3": 2.981543889738173e-20,
+  "10": 8.944631669214518e-21,
+  "30": 2.9815438897381727e-21
+ },
+ "beta_needed_from_inherited_helicity": {
+  "eta=6e-10": {
+   "3": 1166612722.3708017,
+   "10": 3888709074.569339,
+   "30": 11666127223.708015
+  },
+  "eta=9e-8": {
+   "3": 174991908355.62024,
+   "10": 583306361185.4008,
+   "30": 1749919083556.2024
+  }
+ },
+ "parent_mass_kg_for_beta_1": {
+  "6e-10": 5.113445006734571e+21,
+  "9e-8": 3.4089633378230473e+19
+ },
+ "FMT_experimental_bound_on_beta": 1e+30,
+ "VV_over_AA": "6 (gamma^2/(gamma^2+1)) alpha^2 eta^2: about 1e-18 at eta = 1e-9, order one only for eta ~ 0.4/alpha"
+}

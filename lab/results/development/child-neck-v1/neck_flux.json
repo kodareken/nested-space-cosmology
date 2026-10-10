@@ -1,0 +1,154 @@
+{
+ "thread": {
+  "label": "thread",
+  "R_end_over_rg": 1.0,
+  "E_abs_over_Mp": 1.290931269499157,
+  "N_abs": 7.691846883222086e+57,
+  "N_abs_over_N0": 0.6478994337605276,
+  "net_baryon_over_N0": {
+   "eta=6e-10": 3.887396602563165e-10,
+   "eta=9e-08": 5.831094903844748e-08,
+   "eta=1": 0.6478994337605276
+  },
+  "R_where_half_of_quanta_absorbed_over_rg": 0.4332596156344576,
+  "R_where_half_of_energy_absorbed_over_rg": 0.11501724888385645,
+  "layer_energy_end_over_Mp": -1.908078439411011,
+  "cumulative": {
+   "R/rg=1e-09": {
+    "E_abs_over_Mp": 6.324659833185899e-05,
+    "N_abs_over_N0": 5.818284250797921e-14
+   },
+   "R/rg=1e-06": {
+    "E_abs_over_Mp": 0.0020000272231392806,
+    "N_abs_over_N0": 1.8399149721165479e-09
+   },
+   "R/rg=0.001": {
+    "E_abs_over_Mp": 0.0632216178517708,
+    "N_abs_over_N0": 5.812572127712294e-05
+   },
+   "R/rg=0.1": {
+    "E_abs_over_Mp": 0.6076943641659911,
+    "N_abs_over_N0": 0.052538533290096855
+   },
+   "R/rg=0.5": {
+    "E_abs_over_Mp": 1.132473056066273,
+    "N_abs_over_N0": 0.3709945602563253
+   }
+  },
+  "T_MeV_at_R_equals_rg": 88.71840597496414
+ },
+ "mass_matched": {
+  "label": "mass-matched (from the timelike onset, R = r_g/9)",
+  "R_end_over_rg": 1.0000000000000009,
+  "E_abs_over_Mp": 3.149606026980655,
+  "N_abs": 1.7457442604349305e+58,
+  "N_abs_over_N0": 1.4704748222349984,
+  "net_baryon_over_N0": {
+   "eta=6e-10": 8.822848933409991e-10,
+   "eta=9e-08": 1.3234273400114987e-07,
+   "eta=1": 1.4704748222349984
+  },
+  "R_where_half_of_quanta_absorbed_over_rg": 0.5063170165837361,
+  "R_where_half_of_energy_absorbed_over_rg": 0.2535582049994888,
+  "cumulative": {
+   "R/rg=1e-09": {
+    "E_abs_over_Mp": 0.0,
+    "N_abs_over_N0": 0.0
+   },
+   "R/rg=1e-06": {
+    "E_abs_over_Mp": 0.0,
+    "N_abs_over_N0": 0.0
+   },
+   "R/rg=0.001": {
+    "E_abs_over_Mp": 0.0,
+    "N_abs_over_N0": 0.0
+   },
+   "R/rg=0.1": {
+    "E_abs_over_Mp": 0.0,
+    "N_abs_over_N0": 0.0
+   },
+   "R/rg=0.5": {
+    "E_abs_over_Mp": 2.3945812777247473,
+    "N_abs_over_N0": 0.7257848499929234
+   }
+  }
+ },
+ "layer_minus_half": {
+  "label": "intrinsic P = -sigma/2 layer",
+  "R_end_over_rg": 0.8999999999999996,
+  "E_abs_over_Mp": 2.351426641054868,
+  "N_abs": 1.3532326208196132e+58,
+  "N_abs_over_N0": 1.139854526599769,
+  "net_baryon_over_N0": {
+   "eta=6e-10": 6.839127159598615e-10,
+   "eta=9e-08": 1.0258690739397921e-07,
+   "eta=1": 1.139854526599769
+  },
+  "R_where_half_of_quanta_absorbed_over_rg": 0.5724681357554342,
+  "R_where_half_of_energy_absorbed_over_rg": 0.2904119826125639,
+  "layer_energy_end_over_Mp": -6.833080624872639,
+  "cumulative": {
+   "R/rg=1e-09": {
+    "E_abs_over_Mp": 6.327561318470155e-05,
+    "N_abs_over_N0": 5.822304716742923e-14
+   },
+   "R/rg=1e-06": {
+    "E_abs_over_Mp": 0.0020010723836978196,
+    "N_abs_over_N0": 1.8408511423593855e-09
+   },
+   "R/rg=0.001": {
+    "E_abs_over_Mp": 0.06344440794438465,
+    "N_abs_over_N0": 5.814221167125462e-05
+   },
+   "R/rg=0.1": {
+    "E_abs_over_Mp": 0.6867183315628116,
+    "N_abs_over_N0": 0.054218154470088216
+   },
+   "R/rg=0.5": {
+    "E_abs_over_Mp": 1.6833201513030989,
+    "N_abs_over_N0": 0.5189877733206967
+   }
+  },
+  "child_time_end_over_GMp": 1.114369555651234
+ },
+ "layer_minus_one": {
+  "label": "intrinsic P = -sigma layer",
+  "R_end_over_rg": 0.9900000000000003,
+  "E_abs_over_Mp": 1.7283961747290115e+36,
+  "N_abs": 2.151071655499067e+58,
+  "N_abs_over_N0": 1.8118900814525307,
+  "net_baryon_over_N0": {
+   "eta=6e-10": 1.0871340488715184e-09,
+   "eta=9e-08": 1.6307010733072775e-07,
+   "eta=1": 1.8118900814525307
+  },
+  "R_where_half_of_quanta_absorbed_over_rg": 0.629314287231267,
+  "R_where_half_of_energy_absorbed_over_rg": 0.7047896087835828,
+  "layer_energy_end_over_Mp": -1.2101196343089558e+37,
+  "cumulative": {
+   "R/rg=1e-09": {
+    "E_abs_over_Mp": 3.131228270448583e+20,
+    "N_abs_over_N0": 5.820024307068658e-14
+   },
+   "R/rg=1e-06": {
+    "E_abs_over_Mp": 5.567683094865877e+25,
+    "N_abs_over_N0": 1.840356273210351e-09
+   },
+   "R/rg=0.001": {
+    "E_abs_over_Mp": 9.899941069832266e+30,
+    "N_abs_over_N0": 5.819398201385306e-05
+   },
+   "R/rg=0.1": {
+    "E_abs_over_Mp": 3.1327933642064226e+34,
+    "N_abs_over_N0": 0.05821734520411779
+   },
+   "R/rg=0.5": {
+    "E_abs_over_Mp": 5.230986078911059e+35,
+    "N_abs_over_N0": 0.650420488651775
+   }
+  },
+  "child_time_end_over_GMp": 0.9900000000000214
+ },
+ "N0_parent_baryons": 1.1871976548238654e+58,
+ "quanta_energy_note": "one Dirac field g=3.5, <E>=3.151 kT"
+}

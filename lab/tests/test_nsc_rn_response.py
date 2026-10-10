@@ -29,9 +29,9 @@ EVIDENCE = []
 CPU_LIMIT_SECONDS = 60.0
 FROZEN_SHA256 = {
     "lab/src/recursive_horizons/nsc_rn_pg.py":
-        "d90fd73eb951cfb03582d459723993e707617be17bda5da0383e93c8f59285ec",
+        "96660c727a90024dcfaf2cdd802879d6d55e5739f03ffeb29f2660ed49ffbda0",
     "lab/src/recursive_horizons/nsc_rn_source.py":
-        "eca21554c70d4fb0acdfef60977ff986221394927a550227b29517b0074f213b",
+        "dd3e63cdc22042d7208ceca5635dbc4983b16aeebdb0de7ce2500eae4928a1c4",
     "lab/src/recursive_horizons/nsc_rn_observables.py":
         "cd2e3b58129acd92a513f7e03b4db283ff15011293c2ed0ae12091764e6a3307",
     "lab/src/recursive_horizons/nsc_rn_reference.py":
@@ -104,9 +104,13 @@ def _within_signal(error, signal, *, relative=1.0e-5, absolute=1.0e-9, signal_fl
 
 
 def test_frozen_producer_files_are_untouched():
+    # Line endings are normalised to LF before hashing. The checkout is used
+    # from macOS and from Windows, and a bare byte hash of the same content
+    # differs between them. The pins were taken normalised.
     for relative, digest in FROZEN_SHA256.items():
-        found = hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
-        assert found == digest
+        data = (ROOT / relative).read_bytes().replace(b"\r\n", b"\n")
+        found = hashlib.sha256(data).hexdigest()
+        assert found == digest, relative
 
 
 def test_baseline_window_multiplicity_and_production_step():
