@@ -2,6 +2,33 @@
 
 ## Exterior-first atlas, 10 October 2026
 
+The [fifth atlas](../lab/docs/nsc-cosmological-atlas-v5.md) supplies a causal map
+around the central interior observer, using the published isolated completion
+of the fixed de Sitter/Schwarzschild wall. Its
+[spacetime diagram](../lab/results/development/nsc-cosmological-atlas-v5/spacetime.png)
+matches interior and parent charts through the same wall events. The
+[observer access table](../lab/results/development/nsc-cosmological-atlas-v5/observer-access.md)
+uses separate central, wall and static-parent proper clocks.
+
+Earlier centre-to-wall, wall-to-centre and centre-to-parent geometric light
+paths exist. Emissions at or after the chosen slice cannot follow those paths
+in this reference. Earlier signals can still arrive later, including
+arbitrarily late central reception of wall emissions approaching its de Sitter
+horizon crossing from below. The central escape threshold to the right parent
+is t_C/ell=-1.2312944525 in the recorded clock convention; equality follows a
+horizon generator and has no finite parent reception. The parent escape
+horizon continues through the interior and differs from the centre's de Sitter
+horizon. Actual field transmission and amplitudes remain unspecified.
+
+This reference has a singular past. It supplies neither regular formation nor
+the global future of the glued two-body parent. The
+[illustrated manuscript v5](../paper/atlas-working-draft-v5.md) preserves those
+limits and the independent multiple-daughter, communicating-mouth and
+exterior-response routes. The next physical connection needs a specified early
+field/state imprint or an alternative attachment with its own causal channel.
+All v1-v4 evidence stays frozen; the new calculation applies known junction and
+causality mathematics rather than claiming a new spacetime classification.
+
 The [fourth atlas](../lab/docs/nsc-cosmological-atlas-v4.md) supplies one explicit
 sourced initial slice: a regular flat de Sitter cap, the fixed-tension v3 wall,
 a vacuum Schwarzschild slicing transition, a regular bridge and an exact AE
