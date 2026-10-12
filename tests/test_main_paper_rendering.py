@@ -59,3 +59,38 @@ def test_illustrated_math_and_table_render_identically_twice(illustrated_source,
     # ReportLab emits a PDF image XObject for the map and for display math.
     assert first.read_bytes().count(b"/Subtype /Image") >= 2
 
+
+@pytest.mark.parametrize("second_bytes,reason", [
+    (b"%PDF fresh first", "tracked_pdf_differs"),
+    (b"%PDF different second", "nondeterministic_clean_builds"),
+])
+def test_failed_check_preserves_diagnostics_without_accepting_or_replacing_evidence(
+    tmp_path, monkeypatch, second_bytes, reason
+):
+    monkeypatch.setattr(paper, "REPOSITORY", tmp_path)
+    manifest = tmp_path / "build-manifest.json"
+    manifest.write_bytes(b"{}")
+    monkeypatch.setattr(paper, "BUILD_MANIFEST", manifest)
+    tracked = tmp_path / "tracked.pdf"
+    tracked.write_bytes(b"%PDF original evidence")
+    first_bytes = b"%PDF fresh first"
+
+    def build(source, output, metadata):
+        data = first_bytes if output.name == "first.pdf" else second_bytes
+        output.write_bytes(data)
+        return 1, len(data), hashlib.sha256(data).hexdigest()
+
+    monkeypatch.setattr(paper, "build_pdf", build)
+    assert paper.check_build(tmp_path / "source.md", tracked, {}) == 1
+    diagnostic = tmp_path / ".build/paper-check"
+    record = json.loads((diagnostic / "diagnostics.json").read_text())
+    assert record["reason"] == reason
+    for label, data in (("first", first_bytes), ("second", second_bytes),
+                        ("tracked", b"%PDF original evidence")):
+        assert (diagnostic / f"{label}.pdf").read_bytes() == data
+        assert record["pdfs"][label]["sha256"] == hashlib.sha256(data).hexdigest()
+    assert record["bundled_fonts"]
+    assert record["zlib"]["runtime"]
+    assert tracked.read_bytes() == b"%PDF original evidence"
+    assert manifest.read_bytes() == b"{}"
+
