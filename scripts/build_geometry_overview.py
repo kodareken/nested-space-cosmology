@@ -29,6 +29,7 @@ INPUTS = {
     "prepared_response": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
     "observer_inference": "results/development/nsc-atlas-observer-inference-v1/inference.json",
     "scalar_wall_consistency": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
+    "characteristic_initialization": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -84,6 +85,13 @@ def load_evidence() -> tuple[dict, dict]:
                 "physical_preparation_law_established",
             ))):
         raise ValueError("The stress record no longer supports local shell compatibility with bulk response open.")
+    initial = records["characteristic_initialization"]
+    if (initial["status"] != "QUADRATIC_SOURCE_LEG_NULL_CONSTRAINT_INITIALIZED"
+            or initial["inputs"] != response["inputs"]
+            or any(value is not False for value in initial["knowledge_boundary"].values())
+            or not initial["calculation"]["last"]["h"] < 0
+            or not initial["calculation"]["last"]["h_prime"] < 0):
+        raise ValueError("The initialization record no longer supports the initial null constraint with evolution open.")
     return records, provenance
 
 
@@ -191,7 +199,7 @@ def render(output: Path) -> dict:
         "Analytic inverse: signal + fixed geometry → source\n"
         "Permitted preparation still needs a physical law",
         color="causal", size=13)
-    label(4.5, 0.64, "Probe stress: shell compatible; bulk response open", 13, color="muted")
+    label(4.5, 0.64, "Initial null geometry responds; bulk evolution open", 13, color="muted")
 
     for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
                           (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
@@ -266,6 +274,19 @@ def render(output: Path) -> dict:
                     "No quantitative amplitude bound, stability result or physical preparation law is established.",
                 ],
             },
+            "characteristic_initialization": {
+                "status": records["characteristic_initialization"]["status"],
+                "initial_data": records["characteristic_initialization"]["initial_data"],
+                "analytic_consequences": records["characteristic_initialization"]["analytic_consequences"],
+                "knowledge_boundary": records["characteristic_initialization"]["knowledge_boundary"],
+                "last": records["characteristic_initialization"]["calculation"]["last"],
+                "interpretation": "The original probe requires a quadratic initial source-leg radius correction with fixed corner geometry and affine normalization.",
+                "limits": [
+                    "The radial-slope correction is not a null expansion or a mass change.",
+                    "Zero source-tangent stress after input does not establish a vacuum future.",
+                    "No coupled bulk/wall evolution, interior observer correction or finite-amplitude error bound is established.",
+                ],
+            },
             "displayed_connections": [
                 {"from": "cap", "to": "wall", "kind": "attachment", "status": "checked initial slice"},
                 {"from": "wall", "to": "bridge", "kind": "attachment", "status": "checked initial slice"},
@@ -286,6 +307,7 @@ def render(output: Path) -> dict:
             "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
             "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
             "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
+            "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],

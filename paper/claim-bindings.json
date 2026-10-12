@@ -93,6 +93,11 @@
       "section": "13.4",
       "status": "derived",
       "owner": "docs/nsc-atlas-scalar-wall-consistency.md"
+    },
+    "atlas-characteristic-initialization": {
+      "section": "13.5",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-characteristic-initialization.md"
     }
   },
   "findings": [
@@ -245,6 +250,14 @@
       "note": "docs/nsc-atlas-scalar-wall-consistency.md",
       "record": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
       "paper_section": "13.4"
+    },
+    {
+      "id": "atlas-characteristic-initialization",
+      "status": "derived",
+      "summary": "The original compact conformal probe forces a quadratic source-leg radius correction at fixed corner geometry and affine normalization. The post-input coefficient and slope are negative, with independent integrated and smooth-exterior frame checks. No mass shift, coupled wall evolution or finite-amplitude error bound is established.",
+      "note": "docs/nsc-atlas-characteristic-initialization.md",
+      "record": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
+      "paper_section": "13.5"
     }
   ]
 }

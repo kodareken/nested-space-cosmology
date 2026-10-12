@@ -1,0 +1,24 @@
+{
+  "inputs": [
+    {
+      "path": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
+      "sha256": "ca5abcf0c235b315006d91c57b9d1f2974d26a4fb49c971e668c07fedf66c578"
+    }
+  ],
+  "outputs": {
+    "characteristic-initialization.png": "e6f1d484e7afdf5c101265983ab06e1da28932de9f37478f1322217892518e14",
+    "characteristic-initialization.svg": "67cc5c8a7084e620dfaea31121655de1341dc3651379f8e2213c19508e1b368e"
+  },
+  "producer": "scripts/build_characteristic_initialization_figure.py",
+  "producer_sha256": "b934d2509496a05c754e8d377e25ae371aa2c810f8eb14b42799b9701aeca116",
+  "schema": "nsc.characteristic-initialization-figure.v1",
+  "semantics": {
+    "corrections": "Quadratic coefficients at equal corner-anchored affine parameter",
+    "finite_amplitude_selected": false,
+    "full_coupled_evolution": false,
+    "mass_or_wall_response": false,
+    "no_new_scientific_calculation": true,
+    "source": "Original C3 characteristic preparation; shaded interval is its support",
+    "zero_trace_is_not_vacuum_region": true
+  }
+}
