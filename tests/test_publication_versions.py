@@ -13,9 +13,12 @@ spec.loader.exec_module(provenance)
 def test_current_package_version_and_frozen_foundation_have_distinct_owners(tmp_path):
     (tmp_path / "paper").mkdir()
     (tmp_path / "pyproject.toml").write_text('[project]\nversion = "0.27.0"\n')
-    (tmp_path / "paper/metadata.json").write_text(json.dumps({"version": "0.26.0"}))
+    (tmp_path / "paper/metadata.json").write_text(json.dumps({"version": "working-2026-10-12", "revision": "2026-10-12"}))
+    (tmp_path / "paper/foundation-metadata.json").write_text(json.dumps({"version": "0.26.0"}))
+    (tmp_path / "paper/catalog.json").write_text(json.dumps({"documents": [
+        {"id": "foundation", "metadata": "paper/foundation-metadata.json"}]}))
     assert provenance.publication_versions(tmp_path) == {
-        "public_version": "0.27.0", "foundation_version": "0.26.0"}
+        "public_version": "0.27.0", "foundation_version": "0.26.0", "manuscript_revision": "2026-10-12"}
 
 
 def test_public_import_version_matches_the_current_project_version():

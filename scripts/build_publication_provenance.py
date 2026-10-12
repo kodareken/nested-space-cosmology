@@ -29,6 +29,11 @@ IGNORED_PARTS = {
     "node_modules",
     ".co" + "dex",
     "subagents",
+    ".claude",
+    ".cursor",
+    ".research-reset-preservation",
+    "BlackHoles-Infinity",
+    "BlackHoles-Infinity-w2",
 }
 
 #: Host-local agent configuration files, skipped by name.
@@ -47,8 +52,8 @@ def included_files() -> list[Path]:
         if not path.is_file() or path == OUTPUT:
             continue
         relative = path.relative_to(ROOT)
-        # The active lab is authenticated separately by check_lab_snapshot.py.
-        if relative.parts[0] == "lab":
+        # Historical source contexts have their own authenticated receipts.
+        if relative.parts[0] in {"archive", "lab"}:
             continue
         if any(
             part in IGNORED_PARTS or part.endswith(".egg-info")
@@ -64,11 +69,15 @@ def included_files() -> list[Path]:
 
 
 def publication_versions(root: Path = ROOT) -> dict[str, str]:
-    """The current package version and frozen foundation version have distinct owners."""
+    """Released package, living manuscript and archived foundation are distinct."""
     project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
     metadata = json.loads((root / "paper/metadata.json").read_text())
+    catalog = json.loads((root / "paper/catalog.json").read_text())
+    foundation = next(row for row in catalog["documents"] if row["id"] == "foundation")
+    archived = json.loads((root / foundation["metadata"]).read_text())
     return {"public_version": project["project"]["version"],
-            "foundation_version": metadata["version"]}
+            "foundation_version": archived["version"],
+            "manuscript_revision": metadata["revision"]}
 
 
 def main() -> int:

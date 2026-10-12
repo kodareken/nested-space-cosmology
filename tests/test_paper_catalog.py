@@ -1,124 +1,135 @@
-"""Prevent either manuscript disappearing or being silently relabelled."""
-import importlib.util
-import copy
+"""One current manuscript and authenticated historical editions."""
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
-import shutil
-import tempfile
-import unittest
-from unittest.mock import patch
 
-ROOT=Path(__file__).resolve().parents[1]
-spec=importlib.util.spec_from_file_location('publication_catalog_check',ROOT/'scripts/check_publication.py')
-checker=importlib.util.module_from_spec(spec)
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+spec = importlib.util.spec_from_file_location("publication_catalog_check", ROOT / "scripts/check_publication.py")
+checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
 
 
-class PaperCatalogTests(unittest.TestCase):
-    def setUp(self):
-        self.temp=tempfile.TemporaryDirectory()
-        self.addCleanup(self.temp.cleanup)
-        self.root=Path(self.temp.name)
-        self.catalog=json.loads((ROOT/'paper/catalog.json').read_text())
-        files={'paper/catalog.json'}
-        for row in self.catalog['documents']:
-            files.update(row[k] for k in ['source','pdf','manifest'])
-            if 'source_archive' in row:
-                files.add(row['source_archive'])
-            for prior in row.get('historical_editions', []):
-                files.update(prior[k] for k in ['source', 'pdf', 'manifest', 'source_archive'])
-        for name in files:
-            p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True)
-            shutil.copyfile(ROOT/name,p)
-        self.patch=patch.object(checker,'ROOT',self.root)
-        self.patch.start();self.addCleanup(self.patch.stop)
+@pytest.fixture
+def catalog_tree(tmp_path, monkeypatch):
+    def put(path, data):
+        target = tmp_path / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(data if isinstance(data, bytes) else json.dumps(data).encode())
+        return hashlib.sha256(target.read_bytes()).hexdigest()
 
-    def errors(self):
-        errors=[];checker.check_paper_catalog(errors);return errors
+    main = {"id": "main", "role": "main_manuscript", "active": True,
+            "version": "working-2026-10-12", "date": "2026-10-12",
+            "status": "WORKING_DRAFT", "submission_ready": False, "author_review": "pending",
+            "source": "paper/nested-space-cosmology.md", "pdf": "paper/nested-space-cosmology.pdf",
+            "metadata": "paper/metadata.json", "manifest": "paper/build-manifest.json"}
+    source_hash = put(main["source"], b"current scientific argument")
+    pdf_hash = put(main["pdf"], b"current rendered paper")
+    metadata_hash = put(main["metadata"], {"version": main["version"], "date_iso": main["date"]})
+    put(main["manifest"], {"source": main["source"], "output": main["pdf"], "metadata": main["metadata"],
+                          "version": main["version"], "source_sha256": source_hash,
+                          "pdf_sha256": pdf_hash, "metadata_sha256": metadata_hash})
+    prefix = "paper/archive/foundation-v0.26.0/"
+    files = []
+    old = {}
+    for original, content in [
+        ("paper/nested-space-cosmology.md", b"old argument"),
+        ("paper/nested-space-cosmology.pdf", b"old rendered paper"),
+        ("paper/metadata.json", {"version": "0.26.0"}),
+        ("paper/claim-bindings.json", {"claims": {}}),
+        ("scripts/build_paper.py", b"old renderer"),
+    ]:
+        digest = put(prefix + original, content)
+        old[original] = digest
+        files.append({"original_path": original, "storage_path": prefix + original, "sha256": digest})
+    old_build = {"source": "paper/nested-space-cosmology.md", "output": "paper/nested-space-cosmology.pdf",
+                 "metadata": "paper/metadata.json", "source_sha256": old["paper/nested-space-cosmology.md"],
+                 "pdf_sha256": old["paper/nested-space-cosmology.pdf"], "metadata_sha256": old["paper/metadata.json"],
+                 "scientific_build_inputs": [{"path": "scripts/build_paper.py", "sha256": old["scripts/build_paper.py"]}]}
+    digest = put(prefix + "paper/build-manifest.json", old_build)
+    files.append({"original_path": "paper/build-manifest.json",
+                  "storage_path": prefix + "paper/build-manifest.json", "sha256": digest})
+    receipt = prefix + "archive-manifest.json"
+    put(receipt, {"schema": "NSC-PAPER-ARCHIVE-v1", "id": "foundation", "version": "0.26.0",
+                  "source_commit": "1" * 40, "files": files})
+    foundation = {"id": "foundation", "role": "archived_foundation", "active": False,
+                  "version": "0.26.0", "archive_manifest": receipt,
+                  "source": prefix + "paper/nested-space-cosmology.md",
+                  "pdf": prefix + "paper/nested-space-cosmology.pdf",
+                  "metadata": prefix + "paper/metadata.json", "manifest": prefix + "paper/build-manifest.json"}
 
-    def save_catalog(self):
-        (self.root/'paper/catalog.json').write_text(json.dumps(self.catalog))
+    def companion(name):
+        source, pdf, manifest, archive = [f"paper/{name}{suffix}" for suffix in (".tex", ".pdf", ".json", ".tar.gz")]
+        source_hash, pdf_hash, archive_hash = put(source, b"source"), put(pdf, b"pdf"), put(archive, b"archive")
+        put(manifest, {"inputs": {source: source_hash}, "pdf_sha256": pdf_hash, "source_archive_sha256": archive_hash})
+        return {"source": source, "pdf": pdf, "manifest": manifest, "source_archive": archive}
 
-    def test_both_papers_and_builds_are_bound(self):
-        self.assertEqual(self.errors(),[])
-
-    def test_missing_companion_is_detected(self):
-        (self.root/self.catalog['documents'][1]['pdf']).unlink()
-        self.assertTrue(self.errors())
-
-    def test_replaced_foundation_is_detected(self):
-        (self.root/self.catalog['documents'][0]['pdf']).write_bytes(b'new unrelated PDF')
-        self.assertTrue(self.errors())
-
-    def test_swapped_or_duplicate_roles_are_detected(self):
-        self.catalog['documents'][1]['role']='foundational_manuscript';self.save_catalog()
-        self.assertTrue(self.errors())
-        self.catalog['documents'][1]=self.catalog['documents'][0];self.save_catalog()
-        self.assertTrue(self.errors())
-
-    def test_false_closed_companion_is_detected(self):
-        self.catalog['documents'][1]['status']='EXISTENCE';self.save_catalog()
-        self.assertTrue(self.errors())
-
-    def test_changed_source_requires_a_rebuilt_manifest(self):
-        p=self.root/self.catalog['documents'][1]['source'];p.write_bytes(p.read_bytes()+b'\nchanged')
-        self.assertTrue(self.errors())
-
-    def measured_catalog(self):
-        """A fixture for an edition transition, retaining the historical bound artifact."""
-        active = self.catalog['documents'][1]
-        prior = copy.deepcopy(active.get('historical_editions', [active])[0])
-        archive = prior.get('source_archive', 'paper/local-incoming-gate-draft-source.tar.gz')
-        shutil.copyfile(ROOT / archive, self.root / archive)
-        source, pdf, manifest = ('paper/new-edition/main.tex', 'paper/new-edition.pdf',
-                                 'paper/new-edition-manifest.json')
-        (self.root / source).parent.mkdir(parents=True)
-        (self.root / source).write_bytes(b'new measured edition source')
-        (self.root / pdf).write_bytes(b'new measured edition PDF')
-        current_archive = 'paper/new-edition-source.tar.gz'
-        (self.root / current_archive).write_bytes(b'new measured edition source archive')
-        digest = lambda path: hashlib.sha256((self.root / path).read_bytes()).hexdigest()
-        (self.root / manifest).write_text(json.dumps({
-            'schema': 'NSC-FINITE-REGENERATION-MANIFEST-v1',
-            'status': 'MEASURED_FINITE_REALIZATION', 'submission_ready': False,
-            'author_review': 'pending', 'science_commit': '1' * 40,
-            'pdf_sha256': digest(pdf), 'source_archive_sha256': digest(current_archive),
-            'inputs': {source: digest(source)},
-        }))
-        prior['source_archive'] = archive
-        active.update(role='focused_companion', status='MEASURED_FINITE_REALIZATION',
-                      author_review='pending', source=source, pdf=pdf, manifest=manifest,
-                      source_archive=current_archive, historical_editions=[prior])
-        self.catalog.update(schema='NSC-PAPER-CATALOG-v2',
-                            current_status='MEASURED_FINITE_REALIZATION',
-                            finite_result_status='MEASURED_FINITE_REALIZATION',
-                            physical_local_gate_status='OPEN')
-        self.save_catalog()
-
-    def test_measured_edition_keeps_two_roles_and_separate_open_application(self):
-        self.measured_catalog()
-        self.assertEqual(self.errors(), [])
-        self.catalog['physical_local_gate_status'] = 'CLOSED'
-        self.save_catalog()
-        self.assertTrue(self.errors())
-
-    def test_measured_edition_cannot_drop_or_overwrite_its_history(self):
-        self.measured_catalog()
-        active = self.catalog['documents'][1]
-        history = active.pop('historical_editions')
-        self.save_catalog()
-        self.assertTrue(self.errors())
-        active['historical_editions'] = history
-        self.save_catalog()
-        (self.root / history[0]['pdf']).write_bytes(b'overwritten historical edition')
-        self.assertTrue(self.errors())
-
-    def test_measured_label_requires_its_own_built_source_and_review_domain(self):
-        self.measured_catalog()
-        self.catalog['documents'][1]['author_review'] = 'approved'
-        self.save_catalog()
-        self.assertTrue(self.errors())
+    finite = dict(companion("finite"), id="local-gate", role="archived_supporting_result", active=False,
+                  status="MEASURED_FINITE_REALIZATION", submission_ready=False,
+                  historical_editions=[companion("gate")])
+    catalog = {"schema": "NSC-PAPER-CATALOG-v3", "current_document": "main", "current_status": "WORKING_DRAFT",
+               "documents": [main, foundation, finite], "finite_result_status": "MEASURED_FINITE_REALIZATION",
+               "physical_local_gate_status": "OPEN"}
+    put("paper/catalog.json", catalog)
+    monkeypatch.setattr(checker, "ROOT", tmp_path)
+    return tmp_path, catalog, put
 
 
-if __name__=='__main__':unittest.main()
+def errors():
+    found = []
+    checker.check_paper_catalog(found)
+    return found
+
+
+def test_one_main_and_historical_evidence_authenticate(catalog_tree):
+    assert errors() == []
+
+
+@pytest.mark.parametrize("field", ["source", "pdf", "metadata"])
+def test_changed_current_content_requires_rebuild(catalog_tree, field):
+    root, catalog, _ = catalog_tree
+    (root / catalog["documents"][0][field]).write_bytes(b"changed")
+    assert errors()
+
+
+def test_archived_original_cannot_resolve_to_current_pdf(catalog_tree):
+    _, catalog, put = catalog_tree
+    catalog["documents"][1]["pdf"] = catalog["documents"][0]["pdf"]
+    put("paper/catalog.json", catalog)
+    assert errors()
+
+
+def test_archived_source_tampering_is_rejected(catalog_tree):
+    root, catalog, _ = catalog_tree
+    (root / catalog["documents"][1]["source"]).write_bytes(b"changed history")
+    assert errors()
+
+
+def test_second_active_paper_is_rejected(catalog_tree):
+    _, catalog, put = catalog_tree
+    catalog["documents"][2]["active"] = True
+    put("paper/catalog.json", catalog)
+    assert errors()
+
+
+def test_old_finite_result_does_not_close_physical_application(catalog_tree):
+    _, catalog, put = catalog_tree
+    catalog["physical_local_gate_status"] = "CLOSED"
+    put("paper/catalog.json", catalog)
+    assert errors()
+
+
+def test_historical_companion_cannot_disappear(catalog_tree):
+    _, catalog, put = catalog_tree
+    catalog["documents"][2]["historical_editions"] = []
+    put("paper/catalog.json", catalog)
+    assert errors()
+
+
+def test_unsubmitted_working_draft_cannot_claim_submission(catalog_tree):
+    _, catalog, put = catalog_tree
+    catalog["documents"][0]["submission_ready"] = True
+    put("paper/catalog.json", catalog)
+    assert errors()

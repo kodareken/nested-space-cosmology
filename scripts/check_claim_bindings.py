@@ -2,15 +2,15 @@
 
 Two questions, both made mechanical instead of remembered.
 
-First, structure. Every <!-- nsc-claim:ID --> marker in the foundation paper
+First, structure. Every <!-- nsc-claim:ID --> marker in the living main paper
 must have an entry in paper/claim-bindings.json, and every entry must name a
 marker that exists. Every record and note the paper links from a claim must
 resolve to a file. Every status must be one the binding file declares.
 
-Second, coverage. Every finding the laboratory registers must name a status,
+Second, coverage. Every finding the research inventory registers must name a status,
 a note, and either a record or an explicit null with the reason carried by
-post_preprint. Findings whose paper_section is null are reported as
-post-preprint, which is the answer to "is this in the paper".
+post_preprint. Findings whose paper_section is null remain explicitly outside
+the current manuscript; their owning notes and evidence remain available.
 
 Exit status is non-zero only for a structural failure. An unassigned status
 or a post-preprint finding is reported as a count, not as an error, because
@@ -84,14 +84,16 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     root = pathlib.Path(args.root).resolve() if args.root else repo_root()
-    paper_path = root / "paper/nested-space-cosmology.md"
     binding_path = root / "paper/claim-bindings.json"
-    if not paper_path.is_file():
-        raise SystemExit(f"paper not found: {paper_path}")
     if not binding_path.is_file():
         raise SystemExit(f"binding file not found: {binding_path}")
 
     binding = json.loads(binding_path.read_text(encoding="utf-8"))
+    paper_path = root / binding["paper"]
+    if paper_path.resolve() != (root / "paper/nested-space-cosmology.md").resolve():
+        raise SystemExit("current bindings must identify the canonical living paper")
+    if not paper_path.is_file():
+        raise SystemExit(f"paper not found: {paper_path}")
     allowed = set(binding["status_values"])
     claims = read_paper(paper_path)
     declared = binding["claims"]
@@ -115,8 +117,15 @@ def main(argv: list[str] | None = None) -> int:
         by_status[status] = by_status.get(status, 0) + 1
         if status not in allowed:
             errors.append(f"invalid status for {claim_id}: {status!r}")
+        section = entry.get("section")
+        if section and not re.match(rf"^{re.escape(str(section))}(?:[. ]|$)", row["heading"]):
+            errors.append(f"{claim_id}: declared section {section} differs from its manuscript heading")
+        if entry.get("owner") and not (root / entry["owner"]).is_file():
+            errors.append(f"{claim_id}: scientific owner is absent: {entry['owner']}")
         if not row["records"] and status != "proposal":
             no_record.append(claim_id)
+        if status in {"derived", "measured"} and not row["records"]:
+            errors.append(f"{claim_id}: a reported result needs a directly linked evidence record")
         for link in row["records"]:
             record_count += 1
             if not resolve(root, link).is_file():
@@ -173,7 +182,7 @@ def main(argv: list[str] | None = None) -> int:
     print()
     print(f"findings registered   {len(findings)}")
     print(f"    in a paper section  {len(in_paper)}")
-    print(f"    post-preprint       {len(post_preprint)}")
+    print(f"    outside main paper  {len(post_preprint)}")
     for fid in post_preprint:
         mark = " (draft written)" if fid in pending else ""
         print(f"        {fid}{mark}")

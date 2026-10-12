@@ -15,13 +15,13 @@ through $T=0.3$ in [the current result](docs/current-result.md#present-spherical
 It measures source-dependent regional transfer, generated geometry, maintained
 localization, and a local response on that same trajectory. The same-action
 choice $L=Q$, $\beta=0$ includes the lapse chain-rule force and
-$F_L\dot L$ work. The [owning note](lab/docs/nsc-spherical-conformal-continuation.md)
+$F_L\dot L$ work. The [owning note](docs/nsc-spherical-conformal-continuation.md)
 states the source controls, numerical indicators, and finite constraint domain.
 The [focused article](paper/finite-regeneration.pdf) presents this result;
 human author review and the actual arXiv processor check remain pending.
 Earlier prescribed-gauge diagnostics keep their dated evidence below.
 
-The active [exterior atlas](lab/docs/nsc-cosmological-atlas.md), adopted on
+The active [exterior atlas](docs/nsc-cosmological-atlas.md), adopted on
 10 October 2026, compares possible parent regions, multiple children and
 descendants before asking which local phenomena their mathematics could
 explain. Geometry, ancestry, communication and correlation have separate
@@ -422,7 +422,7 @@ $\pm5.04\%$ in the recorded exploratory control domain. The actual metric
 curvature and the local memory, drive, and cross controls are measured from
 this realization. Numerical movements are below one percent of their own
 claimed effects. They remain indicators; renewal and continuum conclusions
-are separate claims. The [continuation note](lab/docs/nsc-spherical-conformal-continuation.md)
+are separate claims. The [continuation note](docs/nsc-spherical-conformal-continuation.md)
 owns the domains and the [current article](paper/finite-regeneration.pdf)
 connects the finite chain.
 
@@ -454,12 +454,12 @@ veto, and a weak residual alone would not decide the window.
 
 Three historical saved consumers sit on that same prescribed loop and do not replace the
 broader stationarity question above. The
-[regeneration controls](lab/docs/nsc-regeneration-controls.md) continue
+[regeneration controls](docs/nsc-regeneration-controls.md) continue
 the saved state to $T=0.10$. The leader's shell content rises by about
 $0.117$, packet and reservoir fluxes end opposite near $5.534$, and the
 field and gravitational energies exchange about $0.396$. The record's
 conclusion is maintained localization of one drift. Renewal is false.
-The [conditional local response](lab/docs/nsc-coupled-local-response.md)
+The [conditional local response](docs/nsc-coupled-local-response.md)
 uses all eleven stored frames. The fixed region-0 occupation changes by
 about $0.33059$. The reduced and full series differ by about
 $7.353\times 10^{-4}$, and the conditional full endpoint differs from
@@ -468,7 +468,7 @@ memory separates the occupation from the conditional full series by
 about $0.367$; omitting the exterior drive separates it by about
 $0.02876$. Autonomous spinors are stored at the
 endpoints only. No $\dot Q$ series and no stress are derived. The
-[spherical null expansion](lab/docs/nsc-spherical-null-expansion.md)
+[spherical null expansion](docs/nsc-spherical-null-expansion.md)
 finds the initial areal extrema marginal, then one both-negative arc and
 one both-positive arc. Refinement agrees on the sampled signs. That is
 local trapping character, not a global horizon or a child region. The
@@ -537,7 +537,7 @@ dynamics through $T=0.3$ in [the current result](docs/current-result.md#present-
 It connects source differences, resolved regional transfer, generated
 geometry, maintained structure, and local memory on the same realization.
 The maintained branch is measured; renewal is not claimed. The
-[owning note](lab/docs/nsc-spherical-conformal-continuation.md) and
+[owning note](docs/nsc-spherical-conformal-continuation.md) and
 [focused article](paper/finite-regeneration.pdf) state the finite evidence
 and its numerical domains. The earlier prescribed episodes remain historical
 results, and further constructions stay finite.
