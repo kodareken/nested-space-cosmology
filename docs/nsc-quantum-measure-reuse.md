@@ -32,6 +32,14 @@ trapped region itself establishes geodesic focusing or rules out a global
 proper-time gauge is not accepted: the actual congruence and domain must be
 checked. A PG shift alone is not an obstruction to changing gauge.
 
+The [canonical spherical action map](nsc-spherical-action.md) now identifies
+another applicable owner at local two-derivative order. Its Liouville
+variables and ghost/Jacobian operator come from that matched action. The
+charged area-dependent potential has been checked in its classical
+constraint algebra. This construction retains the matter measure and
+requires boundary/zero-mode prescriptions; it is not a substitute for the
+full nonlocal or five-dimensional measure described above.
+
 The current five-dimensional carrier also has a compact endpoint problem
 and a scale-field interpretation to resolve. Its metric conformal mode,
 common Dirac compensator and relative-sheet resolution must not be silently

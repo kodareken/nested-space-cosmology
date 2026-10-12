@@ -5,7 +5,7 @@ This file prevents Nested-Space Cosmology from spending compute on an already kn
 The research direction adopted on 10 October 2026 is exterior first: build a
 finite mathematical map of possible parent regions, children and descendants;
 then investigate its consequences for an observer inside a region. The
-[cosmological atlas](../lab/docs/nsc-cosmological-atlas.md) compares geometric,
+[cosmological atlas](nsc-cosmological-atlas.md) compares geometric,
 exterior-response and connected-mouth candidates. Each test fixes its own
 theory, state and domain. No candidate's action is compulsory for the others.
 
@@ -115,14 +115,14 @@ does not establish worldwide priority.
 
 Standalone repetitions of interference, a known soliton, a published nuclear table, a black-universe metric, or a generic test suite are not project results.
 
-The [atlas v2 application](../lab/docs/nsc-cosmological-atlas-v2.md) records
+The [atlas v2 application](nsc-cosmological-atlas-v2.md) records
 the first two decisions under this rule: import Brill–Lindquist spatial data
 to supply a common parent, and stop the constant-tension/comoving-radiation
 attachment after its scoped incompatibility check. Neither is claimed as
 new-to-world mathematics. Moving-boundary dynamics and matching to the
 nonspherical parent require their own source/domain admission.
 
-The [v3 application](../lab/docs/nsc-cosmological-atlas-v3.md) closes that
+The [v3 application](nsc-cosmological-atlas-v3.md) closes that
 motion-only question through imported conservation, and imports a distinct
 signed de Sitter wall as a finite control. Published N-body gluing now supplies
 a separate parent family with spherical collars; recreating its existence
@@ -131,7 +131,7 @@ was complete wall-body Cauchy data, the chosen Schwarzschild side, and a source
 regularity class covered by the theorem. Neither matching a mass parameter nor
 passing a local shell check closes that interface.
 
-The [v4 application](../lab/docs/nsc-cosmological-atlas-v4.md) supplies that
+The [v4 application](nsc-cosmological-atlas-v4.md) supplies that
 interface in one model: a regular cap, fixed wall, correct vacuum bridge and
 AE end with bulk and distributional constraints checked. The gluing theorem
 acts on smooth vacuum ends only; identical open overlaps preserve the sourced
@@ -142,7 +142,7 @@ Global shell evolution, formation, stability and an observable that breaks
 that equivalence remain separate admission questions. No global smoothness
 requirement is imposed on the wall merely to use the end-only theorem.
 
-The [v5 application](../lab/docs/nsc-cosmological-atlas-v5.md) borrows the
+The [v5 application](nsc-cosmological-atlas-v5.md) borrows the
 isolated wall's causal classification and null coordinates, locates the v4
 slice, and records access for named interior, wall and parent observers. It
 distinguishes early geometric paths from excluded new emissions after the
@@ -153,7 +153,7 @@ future remain explicit. A response calculation must next specify the field,
 state and wall transmission law, or justify another communicating attachment;
 an available null path alone does not supply an observable imprint.
 
-The [v6 application](../lab/docs/nsc-cosmological-atlas-v6.md) specifies a
+The [v6 application](nsc-cosmological-atlas-v6.md) specifies a
 classical conformal scalar, zero earlier interior data and one incoming
 characteristic on the exterior wall side. Borrowed distributional matching
 and conformal propagation give a conditional central waveform. This closes

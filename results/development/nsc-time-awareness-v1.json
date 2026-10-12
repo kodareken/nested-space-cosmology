@@ -1,0 +1,65 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "fairness_seam": null,
+  "input_sha256": {
+    "lab/results/development/nsc-cosmic-band-location-v1.json": "c75d8700063d656271a328a63c76b5a4acac5392b4b36de1793165eed9fb5826",
+    "lab/results/development/nsc-seam-invariance-v1.json": "f5f65ed56b9a7306d06c94354ac5a4485bbbf92664703e82340665fddfeee386"
+  },
+  "notes": [
+    "profile f(s) is the round-33 mean across the three charts; the clock is the vacuum infall quadrature of mu=1.040"
+  ],
+  "production_trajectory": false,
+  "reading": "beta = lapse weight outside per clock weight outside; beta<1 is interior awareness of the lapse channel relative to the clock",
+  "rows": [
+    {
+      "T_above_clock": 0.8932709165208639,
+      "T_below_clock": 0.10672908347913611,
+      "beta": 0.9950771131887926,
+      "f_lapse_inside": 0.11112655509291196,
+      "seam": 4.0
+    },
+    {
+      "T_above_clock": 0.7581474753471631,
+      "T_below_clock": 0.24185252465283685,
+      "beta": 0.9749740089609049,
+      "f_lapse_inside": 0.26082591657718757,
+      "seam": 8.0
+    },
+    {
+      "T_above_clock": 0.5015529785535207,
+      "T_below_clock": 0.4984470214464794,
+      "beta": 0.878693662448358,
+      "f_lapse_inside": 0.5592885763629242,
+      "seam": 16.0
+    },
+    {
+      "T_above_clock": 0.24993944966261372,
+      "T_below_clock": 0.7500605503373863,
+      "beta": 0.5683799487928728,
+      "f_lapse_inside": 0.8579394283994448,
+      "seam": 24.0
+    },
+    {
+      "T_above_clock": 0.11956106225708996,
+      "T_below_clock": 0.88043893774291,
+      "beta": 0.40983242432754774,
+      "f_lapse_inside": 0.951,
+      "seam": 28.168002354985997
+    },
+    {
+      "T_above_clock": 0.06243697640466783,
+      "T_below_clock": 0.9375630235953322,
+      "beta": 0.07951898627743113,
+      "f_lapse_inside": 0.9950350749300729,
+      "seam": 30.0
+    }
+  ],
+  "schema": "NSC-TIME-AWARENESS-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_time_awareness.py": "ee6c6cbbfad8d724e0c5f9949e5aea6d4d3bf4c2591770503877969e9946ec4f",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "target_seam": 28.168002354985997
+}

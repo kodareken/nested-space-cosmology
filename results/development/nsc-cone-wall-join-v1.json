@@ -1,0 +1,77 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-cone-map-v2.json": "2079420d29ad151c033bdd7969f6a36f10eaa547ed62f58e17e260fe179da813",
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "notes": [
+    "the property that the trap sits above r_+ is the recorded offset trap_minus_reference of the v2 family",
+    "redshift uniformity is the sixth mu-blind scaffold quantity"
+  ],
+  "production_trajectory": false,
+  "reading": "three recorded locations nested on one r_+ unit table: the cone trap inside the breathing wall, the window shell bounding the wall, all per case",
+  "redshift_at_excision_spread": 7.970143458149783e-07,
+  "rows": [
+    {
+      "case": "mu-1.002-eps-0.001",
+      "r_plus": 1.065277168078237,
+      "redshift_at_excision_last": 1.0000045278840426,
+      "trap_in_r_plus_units": 1.01413948863936,
+      "trap_last_r_m": 1.0803396424940488,
+      "wall_contains_trap": true,
+      "wall_envelope_r_plus_units": [
+        1.0055427199718212,
+        1.9243020211680988
+      ],
+      "window_bounds_wall": true,
+      "window_contains_trap": true,
+      "window_shell": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "case": "mu-1.010-eps-0.001",
+      "r_plus": 1.1517744687875837,
+      "redshift_at_excision_last": 1.0000033759183655,
+      "trap_in_r_plus_units": 1.0067798693612457,
+      "trap_last_r_m": 1.1595833492195817,
+      "wall_contains_trap": true,
+      "wall_envelope_r_plus_units": [
+        0.9044835021535105,
+        1.77827787269775
+      ],
+      "window_bounds_wall": true,
+      "window_contains_trap": true,
+      "window_shell": [
+        1.0,
+        2.0
+      ]
+    },
+    {
+      "case": "mu-1.040-eps-0.001",
+      "r_plus": 1.325657137141717,
+      "redshift_at_excision_last": 1.0000025868756715,
+      "trap_in_r_plus_units": 1.003557776505816,
+      "trap_last_r_m": 1.330373528959007,
+      "wall_contains_trap": true,
+      "wall_envelope_r_plus_units": [
+        0.9707725235796543,
+        1.5345878811964522
+      ],
+      "window_bounds_wall": true,
+      "window_contains_trap": true,
+      "window_shell": [
+        1.0,
+        2.0
+      ]
+    }
+  ],
+  "schema": "NSC-CONE-WALL-JOIN-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_cone_wall_join.py": "9460bce93d4d3d650a42dd5e6186feac77dfe4c20268cc8998a2e759e48a3352",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-inward-march-t30-v1/": null
+  },
+  "notes": [
+    "run only after the t30 campaign has landed both stations"
+  ],
+  "production_trajectory": false,
+  "reading": "the light wall's extinction window on the deep grid, settled from the freshly marched stations",
+  "rows": [
+    {
+      "balance_at_throat": 0.7061211943241013,
+      "r_first_wall": 1.0059089030208097,
+      "t_over_rm": 25.0,
+      "wall_count": 2
+    },
+    {
+      "balance_at_throat": 0.7674030376750347,
+      "r_first_wall": 1.033630612244898,
+      "t_over_rm": 30.0,
+      "wall_count": 2
+    }
+  ],
+  "schema": "NSC-T30-EXTINCTION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_extinction.py": "6e2e78ec4b4f5ba0153fa7c3ea01ae18deeecfd0d9fc8a360684d3cd12c3130a",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "WALL_SURVIVES_TO_30",
+  "wall_at_25": true,
+  "wall_at_30": true
+}

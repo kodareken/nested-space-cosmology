@@ -1,0 +1,41 @@
+{
+  "all": {
+    "correlation": -0.07076258674053594,
+    "mean_dB": 0.005451009101960357,
+    "mean_dM": 2.7869607575833673e-05,
+    "pairs": 37,
+    "slope": -258.1465803972328
+  },
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-interior-station-balance-v1.json": "dcc64b64536b45e42713a2448d5d770158b94832dad49d97c40fce45263d26d1"
+  },
+  "notes": [
+    "response law, not a conversion-efficiency claim; the pairing is pre-registered in this file's schema before the numbers",
+    "abs(dM) enters the x axis: the response measures magnitude"
+  ],
+  "pairing": "dB_i = B_i - B_(i-1) with the mass over [t_(i-1), t_i]",
+  "production_trajectory": false,
+  "quiet": {
+    "correlation": -0.3672103110400785,
+    "mean_dB": 0.03431949402519181,
+    "mean_dM": 3.510309562981817e-06,
+    "pairs": 25,
+    "slope": -11688.086931862485
+  },
+  "residual_medians": null,
+  "schema": "NSC-WALL-INFLOW-RESPONSE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_inflow_response.py": "92bf5aa28dc13b94516cd0e43c0b856344ec4ea85ab698f0732326078df074b7",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "wall": {
+    "correlation": 0.48796291842135225,
+    "mean_dB": -0.0546916678214385,
+    "mean_dM": 7.861814510260838e-05,
+    "pairs": 12,
+    "slope": 1543.3302722495957
+  }
+}

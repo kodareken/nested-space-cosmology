@@ -1,0 +1,300 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "book_reading": "the family runner's coupled_excision/coupled_outer partition probability (with coupled_remaining); the geometric mass book is coupled_inner_mass, whose intervals feed this junction",
+  "closure_intervals": 37,
+  "creation_only": true,
+  "evolved": false,
+  "first_t": 0.0,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "junction": {
+    "overlap_stations": 38,
+    "quiet_stations": 26,
+    "rows": [
+      {
+        "balance_at_throat": 0.7129464772471076,
+        "interval_geometric_mass_inflow": 9.139315899631129e-07,
+        "t_over_rm": 0.0,
+        "throat_slope_inner": -2.524880618702264,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8975644597589919,
+        "interval_geometric_mass_inflow": 8.612727382395491e-07,
+        "t_over_rm": 0.5,
+        "throat_slope_inner": -2.986177394136401,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8001086648719686,
+        "interval_geometric_mass_inflow": 1.2446562598356081e-06,
+        "t_over_rm": 1.0,
+        "throat_slope_inner": -5.689181793240449,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8809294295038645,
+        "interval_geometric_mass_inflow": 1.9316506876254635e-06,
+        "t_over_rm": 1.5,
+        "throat_slope_inner": -5.210967424505235,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.4656568491190179,
+        "interval_geometric_mass_inflow": 2.4997928700365435e-06,
+        "t_over_rm": 2.0,
+        "throat_slope_inner": -4.4033924221914535,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.35401334504146686,
+        "interval_geometric_mass_inflow": 2.6592672097702774e-06,
+        "t_over_rm": 2.5,
+        "throat_slope_inner": -4.389786139840373,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.5454748257101295,
+        "interval_geometric_mass_inflow": 2.8525574118365427e-06,
+        "t_over_rm": 3.0,
+        "throat_slope_inner": -3.3749389295968926,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.9256238754868934,
+        "interval_geometric_mass_inflow": 4.6496489658487405e-06,
+        "t_over_rm": 3.5,
+        "throat_slope_inner": -2.528840363804517,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.7748200175911971,
+        "interval_geometric_mass_inflow": 1.0559025913181586e-05,
+        "t_over_rm": 4.0,
+        "throat_slope_inner": -1.9759022508283908,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.9424089840871527,
+        "interval_geometric_mass_inflow": 2.312222578937373e-05,
+        "t_over_rm": 4.5,
+        "throat_slope_inner": -1.3806105603207701,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.4794032647336702,
+        "interval_geometric_mass_inflow": 4.355440951431255e-05,
+        "t_over_rm": 5.0,
+        "throat_slope_inner": -1.006456632582356,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.22326092376486467,
+        "interval_geometric_mass_inflow": 7.053418949243273e-05,
+        "t_over_rm": 5.5,
+        "throat_slope_inner": -1.644722548937184,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.0897164266458101,
+        "interval_geometric_mass_inflow": 9.981895328547985e-05,
+        "t_over_rm": 6.0,
+        "throat_slope_inner": -2.329209616899598,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.021188853811208542,
+        "interval_geometric_mass_inflow": 0.0001250811710153954,
+        "t_over_rm": 6.5,
+        "throat_slope_inner": -3.105683231848921,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.009498773722274518,
+        "interval_geometric_mass_inflow": 0.00013982201262141558,
+        "t_over_rm": 7.0,
+        "throat_slope_inner": -4.06127168032597,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.014806650614083476,
+        "interval_geometric_mass_inflow": 0.00013967387793445418,
+        "t_over_rm": 7.5,
+        "throat_slope_inner": -5.418078838541359,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.00021315224465353464,
+        "interval_geometric_mass_inflow": 0.00012412606496714496,
+        "t_over_rm": 8.0,
+        "throat_slope_inner": -7.811363748127975,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.03584207130176511,
+        "interval_geometric_mass_inflow": 9.688783410544133e-05,
+        "t_over_rm": 8.5,
+        "throat_slope_inner": -15.60252153681893,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.09816250850868712,
+        "interval_geometric_mass_inflow": 6.466394016779731e-05,
+        "t_over_rm": 9.0,
+        "throat_slope_inner": -96.05654579344994,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.1978750988118786,
+        "interval_geometric_mass_inflow": 3.482384456976462e-05,
+        "t_over_rm": 9.5,
+        "throat_slope_inner": -18.768729461284515,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.3500193353388059,
+        "interval_geometric_mass_inflow": 1.2935749863274282e-05,
+        "t_over_rm": 10.0,
+        "throat_slope_inner": -6.851781882848429,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.5479331212239685,
+        "interval_geometric_mass_inflow": 1.1789366829439984e-06,
+        "t_over_rm": 10.5,
+        "throat_slope_inner": -4.875027705417858,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.69148497284986,
+        "interval_geometric_mass_inflow": -1.7852667359985475e-06,
+        "t_over_rm": 11.0,
+        "throat_slope_inner": -4.883528849129751,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.6577140670350717,
+        "interval_geometric_mass_inflow": 4.144356493540613e-07,
+        "t_over_rm": 11.5,
+        "throat_slope_inner": -6.884269671472533,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.5429682168568547,
+        "interval_geometric_mass_inflow": 3.7542368185317088e-06,
+        "t_over_rm": 12.0,
+        "throat_slope_inner": -8.294570845220756,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.47877030201082627,
+        "interval_geometric_mass_inflow": 5.469260864865433e-06,
+        "t_over_rm": 12.5,
+        "throat_slope_inner": -6.781595094835062,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.49266945861450856,
+        "interval_geometric_mass_inflow": 4.7906198481495466e-06,
+        "t_over_rm": 13.0,
+        "throat_slope_inner": -6.747074739292183,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.5783402066560899,
+        "interval_geometric_mass_inflow": 2.6163004029911008e-06,
+        "t_over_rm": 13.5,
+        "throat_slope_inner": -6.750387008796312,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.7165101041891433,
+        "interval_geometric_mass_inflow": 4.946953586770775e-07,
+        "t_over_rm": 14.0,
+        "throat_slope_inner": -6.887399522985159,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8375670296339068,
+        "interval_geometric_mass_inflow": -4.35123614028754e-07,
+        "t_over_rm": 14.5,
+        "throat_slope_inner": -7.093680731859177,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8328766091042439,
+        "interval_geometric_mass_inflow": -2.03529570974581e-09,
+        "t_over_rm": 15.0,
+        "throat_slope_inner": -7.207128977964677,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.7199850100072288,
+        "interval_geometric_mass_inflow": 1.1191264792653755e-06,
+        "t_over_rm": 15.5,
+        "throat_slope_inner": -7.053611357043492,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.6208383437505693,
+        "interval_geometric_mass_inflow": 1.993181341086725e-06,
+        "t_over_rm": 16.0,
+        "throat_slope_inner": -6.794583337831709,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.5941303872745628,
+        "interval_geometric_mass_inflow": 2.0435261491869028e-06,
+        "t_over_rm": 16.5,
+        "throat_slope_inner": -6.754694164526416,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.6448670339629586,
+        "interval_geometric_mass_inflow": 1.335921108402971e-06,
+        "t_over_rm": 17.0,
+        "throat_slope_inner": -6.720972521684752,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.7622029626156602,
+        "interval_geometric_mass_inflow": 4.187374991193593e-07,
+        "t_over_rm": 17.5,
+        "throat_slope_inner": -6.804263545818351,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8943670971263157,
+        "interval_geometric_mass_inflow": -1.0799948491069244e-07,
+        "t_over_rm": 18.0,
+        "throat_slope_inner": -7.038753041980692,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.9146338140196408,
+        "interval_geometric_mass_inflow": null,
+        "t_over_rm": 18.5,
+        "throat_slope_inner": -7.373308153738186,
+        "wall_count": 0
+      }
+    ],
+    "slope_mass_inflow_correlation": -0.13536173089316222,
+    "wall_quiet_mass_inflow_ratio": 16.17679830935854,
+    "wall_stations": 12
+  },
+  "last_t": 18.499999999999805,
+  "notes": [
+    "the family's own delta_* fields are coupled-minus-fixed backreaction and are recorded only for provenance",
+    "the junction covers the family/bubble overlap stations; the correlation is an indicator over these stations, not a fit",
+    "wall_count comes from the recorded bubble v5 flags"
+  ],
+  "probability_partition_max_gap": 8.035477953222125e-06,
+  "production_trajectory": false,
+  "schema": "NSC-INTERIOR-STATION-BALANCE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_interior_station_balance.py": "56ff821c3a9faedb3ab29c02b92db9c778f4917c961fd20dfd49286c5d2b5075",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "station_files": 38
+}

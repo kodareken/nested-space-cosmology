@@ -1,0 +1,342 @@
+{
+ "api_version": "nsc-rn-oneway-v1",
+ "cases": [
+  {
+   "case": "mu-1.002-eps-0.001",
+   "epsilon": 0.001,
+   "final_station": {
+    "blocker": "dense spectrum exceeded 240s",
+    "flags": [
+     "eigen_timeout"
+    ],
+    "station": "station-8",
+    "t_over_rm": 8.0,
+    "verdict": "eigen_timeout"
+   },
+   "mass_over_rm": 1.002,
+   "state_witness": {
+    "api_version": "nsc-rn-oneway-v1",
+    "interior_weight": 0.04805917800420315,
+    "signed_current": -0.8401828211394329,
+    "trap_radius": 1.0752063008845658,
+    "witness_is_eig_free": true
+   }
+  },
+  {
+   "case": "mu-1.002-eps-0.010",
+   "epsilon": 0.01,
+   "final_station": {
+    "blocker": "dense spectrum exceeded 240s",
+    "flags": [
+     "eigen_timeout"
+    ],
+    "station": "station-8",
+    "t_over_rm": 8.0,
+    "verdict": "eigen_timeout"
+   },
+   "mass_over_rm": 1.002,
+   "state_witness": {
+    "api_version": "nsc-rn-oneway-v1",
+    "interior_weight": 0.08416291128189196,
+    "signed_current": -0.8414413321636268,
+    "trap_radius": 1.1395003063742195,
+    "witness_is_eig_free": true
+   }
+  },
+  {
+   "case": "mu-1.010-eps-0.001",
+   "epsilon": 0.001,
+   "final_station": {
+    "bands": [
+     {
+      "band_high": 0.5,
+      "band_low": 0.0,
+      "exterior_min_direction": -0.34254145670958774,
+      "interior_max_direction": 0.8464914830186833
+     },
+     {
+      "band_high": 1.0,
+      "band_low": 0.5,
+      "exterior_min_direction": -0.5204181398128279,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 2.0,
+      "band_low": 1.0,
+      "exterior_min_direction": -0.9942902869339878,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 4.0,
+      "band_low": 2.0,
+      "exterior_min_direction": -0.929432515830173,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 8.0,
+      "band_low": 4.0,
+      "exterior_min_direction": -0.9872577873485838,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": Infinity,
+      "band_low": 8.0,
+      "exterior_min_direction": -0.9999995836248343,
+      "interior_max_direction": null
+     }
+    ],
+    "exterior_min_direction": -0.9999995836248343,
+    "flags": [
+     "interior_cardinal_outward"
+    ],
+    "interior_max_direction": 0.8464914830186833,
+    "interior_mode_count": 10,
+    "max_real_eigenvalue": -0.003923537012205491,
+    "mode_count": 3500,
+    "spectral_radius": 111.6525428721755,
+    "station": "station-15.5",
+    "t_over_rm": 15.499999999999424,
+    "trap_radius": 1.159517532580143,
+    "verdict": "oneway_measured"
+   },
+   "mass_over_rm": 1.01,
+   "state_witness": {
+    "api_version": "nsc-rn-oneway-v1",
+    "interior_weight": 0.029024213962920188,
+    "signed_current": 0.27799132624607076,
+    "trap_radius": 1.159517532580143,
+    "witness_is_eig_free": true
+   }
+  },
+  {
+   "case": "mu-1.010-eps-0.010",
+   "epsilon": 0.01,
+   "final_station": {
+    "bands": [
+     {
+      "band_high": 0.5,
+      "band_low": 0.0,
+      "exterior_min_direction": -0.6362801221142376,
+      "interior_max_direction": -0.798172639709
+     },
+     {
+      "band_high": 1.0,
+      "band_low": 0.5,
+      "exterior_min_direction": -0.5276642517241351,
+      "interior_max_direction": 0.8232207581845482
+     },
+     {
+      "band_high": 2.0,
+      "band_low": 1.0,
+      "exterior_min_direction": -0.9947116128002579,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 4.0,
+      "band_low": 2.0,
+      "exterior_min_direction": -0.9302049178653212,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 8.0,
+      "band_low": 4.0,
+      "exterior_min_direction": -0.9875664633223311,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": Infinity,
+      "band_low": 8.0,
+      "exterior_min_direction": -0.9999992413850405,
+      "interior_max_direction": -0.9999997910024906
+     }
+    ],
+    "exterior_min_direction": -0.9999992413850405,
+    "flags": [
+     "interior_cardinal_outward"
+    ],
+    "interior_max_direction": 0.8232207581845482,
+    "interior_mode_count": 10,
+    "max_real_eigenvalue": -0.003941768749559316,
+    "mode_count": 3500,
+    "spectral_radius": 112.06220921224242,
+    "station": "station-16",
+    "t_over_rm": 15.999999999999414,
+    "trap_radius": 1.2204694585046083,
+    "verdict": "oneway_measured"
+   },
+   "mass_over_rm": 1.01,
+   "state_witness": {
+    "api_version": "nsc-rn-oneway-v1",
+    "interior_weight": 0.040628727275050056,
+    "signed_current": 0.3013037385512403,
+    "trap_radius": 1.2204694585046083,
+    "witness_is_eig_free": true
+   }
+  },
+  {
+   "case": "mu-1.040-eps-0.001",
+   "epsilon": 0.001,
+   "final_station": {
+    "bands": [
+     {
+      "band_high": 0.5,
+      "band_low": 0.0,
+      "exterior_min_direction": -0.6548360900896956,
+      "interior_max_direction": -0.25730923924336035
+     },
+     {
+      "band_high": 1.0,
+      "band_low": 0.5,
+      "exterior_min_direction": -0.4846491717837974,
+      "interior_max_direction": 0.11102382825023466
+     },
+     {
+      "band_high": 2.0,
+      "band_low": 1.0,
+      "exterior_min_direction": -0.9951753327099967,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 4.0,
+      "band_low": 2.0,
+      "exterior_min_direction": -0.9436415536172535,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 8.0,
+      "band_low": 4.0,
+      "exterior_min_direction": -0.9991854322616271,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": Infinity,
+      "band_low": 8.0,
+      "exterior_min_direction": -0.9999970078320312,
+      "interior_max_direction": -0.9999985886275273
+     }
+    ],
+    "exterior_min_direction": -0.9999970078320312,
+    "flags": [
+     "interior_cardinal_outward"
+    ],
+    "interior_max_direction": 0.11102382825023466,
+    "interior_mode_count": 10,
+    "max_real_eigenvalue": -0.004037108334175699,
+    "mode_count": 1738,
+    "spectral_radius": 55.26725935761645,
+    "station": "station-18.5",
+    "t_over_rm": 18.499999999999805,
+    "trap_radius": 1.330355102056339,
+    "verdict": "oneway_measured"
+   },
+   "mass_over_rm": 1.04,
+   "state_witness": {
+    "api_version": "nsc-rn-oneway-v1",
+    "interior_weight": 0.021526609881488402,
+    "signed_current": 0.42339976255692613,
+    "trap_radius": 1.330355102056339,
+    "witness_is_eig_free": true
+   }
+  },
+  {
+   "case": "mu-1.040-eps-0.010",
+   "epsilon": 0.01,
+   "final_station": {
+    "bands": [
+     {
+      "band_high": 0.5,
+      "band_low": 0.0,
+      "exterior_min_direction": -0.3968025378125548,
+      "interior_max_direction": -0.798358827288081
+     },
+     {
+      "band_high": 1.0,
+      "band_low": 0.5,
+      "exterior_min_direction": -0.49251318546896156,
+      "interior_max_direction": -0.17147767954603613
+     },
+     {
+      "band_high": 2.0,
+      "band_low": 1.0,
+      "exterior_min_direction": -0.9954869590434066,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 4.0,
+      "band_low": 2.0,
+      "exterior_min_direction": -0.9450865388594583,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": 8.0,
+      "band_low": 4.0,
+      "exterior_min_direction": -0.9992069109823518,
+      "interior_max_direction": null
+     },
+     {
+      "band_high": Infinity,
+      "band_low": 8.0,
+      "exterior_min_direction": -0.9999970538379152,
+      "interior_max_direction": -0.9999990385668912
+     }
+    ],
+    "exterior_min_direction": -0.9999970538379152,
+    "flags": [],
+    "interior_max_direction": -0.17147767954603613,
+    "interior_mode_count": 12,
+    "max_real_eigenvalue": -0.004055740637548766,
+    "mode_count": 1738,
+    "spectral_radius": 55.457177702450096,
+    "station": "station-19.5",
+    "t_over_rm": 19.49999999999996,
+    "trap_radius": 1.3713456861906081,
+    "verdict": "oneway_measured"
+   },
+   "mass_over_rm": 1.04,
+   "state_witness": {
+    "api_version": "nsc-rn-oneway-v1",
+    "interior_weight": 0.03346341658270165,
+    "signed_current": 0.4325869722823263,
+    "trap_radius": 1.3713456861906081,
+    "witness_is_eig_free": true
+   }
+  }
+ ],
+ "coverage": {
+  "cases": 6,
+  "final_station_sample": true
+ },
+ "creation_only": true,
+ "domain": {
+  "chart": "areal radius",
+  "compared_quantity": "transport-direction statistic S of every eigenmode, split at the state's own measured trap radius (nsc-rn-cone-map)",
+  "one_way_definition": "no interior-supported mode carries outward probability weight above the direction floor, while exterior modes fall inward",
+  "operator": "instantaneous Dirac rate matrix of nsc_rn_pg.dirac_rates on the reconstructed coupled lapse and shift; identical to the march route",
+  "state": "recorded station payload, no time step taken"
+ },
+ "family_source": "nsc-rn-neutral-family-v1",
+ "family_source_sha256": "2548efd700a265121f080a27cc25e5b7022bb687100f6933139aebb424fe379d",
+ "flags_observed": [
+  "eigen_timeout",
+  "interior_cardinal_outward"
+ ],
+ "limits": {
+  "direction_floor": 0.05,
+  "interior_fraction": 0.5
+ },
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "reading": "If no interior mode carries outward weight, the recorded operator's instantaneous passage across the measured trap is one way in the direction set by the 2005 reading. This is a spectral statement about the recorded state, not the actual universe.",
+ "sample": "final recorded station of each case",
+ "schema": "NSC-RN-ONEWAY-v1",
+ "summary": {
+  "cases_strictly_oneway": 1,
+  "stations_with_eigen_timeout": 2,
+  "stations_with_interior_cardinal_outward": 3
+ },
+ "supersedes": {
+  "record": "nsc-rn-oneway-v1.json",
+  "sha256": "5f3cf44e9ad1d45f15beace895bcc1c49f9e62d04fe7dd19304e4b2422ad9a02",
+  "superseded_reason": "v1 measured channel weight with speed magnitudes, which counts the chi_plus content of a trapped mode as outward weight even though both characteristics are negative inside the trap. v2 uses the signed probability current, which is the statistic that reads 'does the inside emit outward'; the eigen data are recomputed."
+ },
+ "worker_timeout_seconds": 240.0
+}

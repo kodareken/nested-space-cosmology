@@ -1,0 +1,36 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "calibration": {
+    "channels": 12,
+    "executed_dry": true,
+    "passed": true,
+    "tolerance": 0.0001,
+    "worst_residual": 4.3332367456461185e-05
+  },
+  "ceremony_remaining": [
+    "run the campaign CLI --calibrate output through admission (already passed in the dry run)",
+    "--prepare a new directory nsc-rn-neutral-continuation-v2 with the pinned producer commit and the calibration record",
+    "--run --station-limit 40 --cpu-seconds 900 --mass-over-rm 1.04 --energy-fraction 0.001",
+    "assess the archive; the wall's post-20 morphology is then readable from the new station payloads"
+  ],
+  "cost_basis": {
+    "admission_slot_seconds": 900.0,
+    "projected_calibration_plus_run_wall_minutes": 12.0,
+    "projected_t20_to_t40_cpu_seconds": 570.0,
+    "recorded_t10_to_t20_cpu_seconds": 564.993419,
+    "recorded_wall_seconds": 565.8643766250461
+  },
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "the calibration dry run wrote nothing and changed nothing",
+    "costs are projections of the recorded continuation ledger at the same march"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-PRODUCTION-PREFLIGHT-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_production_preflight.py": "ba0912fe8e673be65ba24cb8cee54ed1b28c91c5f5b7938a1a112dcc78cbd5b7",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "status": "preflight passed; the wall's t>20 territory is launch-ready and is the named production door, priced from recorded bytes"
+}

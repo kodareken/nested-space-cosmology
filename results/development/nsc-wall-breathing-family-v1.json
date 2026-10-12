@@ -1,0 +1,56 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "asymmetry_fall_over_rise": 1.1646017699115043,
+      "epochs": 11,
+      "fall_epochs": 3,
+      "mean_fall_rate": -0.34823941255020197,
+      "mean_rise_rate": 0.29902016427183,
+      "radial_range": [
+        1.0055427199718212,
+        1.9243020211680988
+      ],
+      "rise_epochs": 7
+    },
+    "mu-1.010-eps-0.001": {
+      "asymmetry_fall_over_rise": 1.6802795140215339,
+      "epochs": 22,
+      "fall_epochs": 11,
+      "mean_fall_rate": -0.3065512890887465,
+      "mean_rise_rate": 0.18244065140986887,
+      "radial_range": [
+        0.9044835021535105,
+        1.77827787269775
+      ],
+      "rise_epochs": 10
+    },
+    "mu-1.040-eps-0.001": {
+      "asymmetry_fall_over_rise": 1.8493150684931492,
+      "epochs": 12,
+      "fall_epochs": 6,
+      "mean_fall_rate": -0.24163515326434193,
+      "mean_rise_rate": 0.13066197176516278,
+      "radial_range": [
+        0.9707725235796543,
+        1.5345878811964522
+      ],
+      "rise_epochs": 5
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "notes": [
+    "same definition as nsc-wall-breathing-v1, applied per case",
+    "wall epochs come from the recorded bubble v5 flags"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-WALL-BREATHING-FAMILY-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_breathing_family.py": "d00ea94102f0bd0ad74a80d946b861f948947778a9b7a771a3a49191ee749ade",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cells_now": {
+    "exponent_provenance_fourth_gap": "still blocked: source.prepare_radial_packet accepts only mass 1.002/1.01/1.04; no fourth gap point possible from recorded bytes or the march runner",
+    "paper_level_coupling": "unchanged, out of lab domain",
+    "t_extensions_on_recorded_masses": "now operational: derive_nsc_rn_inward_march.py marches any station list on the legal masses; the t30 campaign for mu=1.002 was launched in round 88 and is integrating"
+  },
+  "creation_only": true,
+  "evolved": false,
+  "launch_trail": {
+    "campaign": "nsc-rn-inward-march-t30-v1",
+    "prepare_exists": true,
+    "stations": [
+      25.0,
+      30.0
+    ]
+  },
+  "notes": [
+    "the freeze-gate refusal of round 71 applies to the campaign CLI; the march runner is a separate operating corridor"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-FRONTIER-SUPPLEMENT-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_frontier_supplement.py": "54378380b1da9bce1e72fa9fd60ab238f10b9ebfffed73e315a98427ce774344",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "supplements": [
+    "nsc-frontier-amendment-v1.json"
+  ]
+}

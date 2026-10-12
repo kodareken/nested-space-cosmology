@@ -1,0 +1,113 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "crossing_mean_delta_fee": 0.0006595392485397172,
+  "evolved": false,
+  "hypothesis_pre_registered": "the fringe staircase steps when the gap crosses an integer multiple of the grid cell",
+  "notes": [
+    "integer range 1..39 covers the gap/h ratio band",
+    "crossing label built from the mean cell size of the pair"
+  ],
+  "pairs": [
+    {
+      "delta_fee": 0.0013103347669524146,
+      "eta_pair": [
+        1.015,
+        1.02
+      ],
+      "gap_crosses_integer_cells": true
+    },
+    {
+      "delta_fee": 8.1901310842597e-06,
+      "eta_pair": [
+        1.02,
+        1.025
+      ],
+      "gap_crosses_integer_cells": true
+    },
+    {
+      "delta_fee": 0.001312251541013526,
+      "eta_pair": [
+        1.025,
+        1.03
+      ],
+      "gap_crosses_integer_cells": true
+    },
+    {
+      "delta_fee": 6.677074202862676e-06,
+      "eta_pair": [
+        1.03,
+        1.035
+      ],
+      "gap_crosses_integer_cells": true
+    },
+    {
+      "delta_fee": 6.130623077374442e-06,
+      "eta_pair": [
+        1.035,
+        1.04
+      ],
+      "gap_crosses_integer_cells": true
+    },
+    {
+      "delta_fee": 0.001313651354907866,
+      "eta_pair": [
+        1.04,
+        1.045
+      ],
+      "gap_crosses_integer_cells": true
+    }
+  ],
+  "production_trajectory": false,
+  "quiet_mean_delta_fee": null,
+  "rows": [
+    {
+      "eta": 1.015,
+      "fee": 0.11680367783230879,
+      "gap": 1.2323019871115033,
+      "h": 0.1262052475553101
+    },
+    {
+      "eta": 1.02,
+      "fee": 0.1181140125992612,
+      "gap": 1.4247041080930996,
+      "h": 0.12629493971626246
+    },
+    {
+      "eta": 1.025,
+      "fee": 0.11810582246817694,
+      "gap": 1.5948377691722846,
+      "h": 0.12637190704298487
+    },
+    {
+      "eta": 1.03,
+      "fee": 0.11941807400919047,
+      "gap": 1.749212774513781,
+      "h": 0.12643986942357147
+    },
+    {
+      "eta": 1.035,
+      "fee": 0.1194113969349876,
+      "gap": 1.8916911104217475,
+      "h": 0.12650103370733892
+    },
+    {
+      "eta": 1.04,
+      "fee": 0.11940526631191023,
+      "gap": 2.024785739321036,
+      "h": 0.1265568358728157
+    },
+    {
+      "eta": 1.045,
+      "fee": 0.1207189176668181,
+      "gap": 2.1502398538883223,
+      "h": 0.12660827203010275
+    }
+  ],
+  "schema": "NSC-TILT-CELL-CROSSINGS-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_tilt_cell_crossings.py": "b04ce4261a41c3870a34acd8633f3a062a6b29e555b17d334b4ce07d2e8d3602",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "NOT_QUANTIZED"
+}

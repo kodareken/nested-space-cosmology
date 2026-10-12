@@ -1,0 +1,28 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "checklist": [
+    "detect station-25/30 files in the campaign directory",
+    "run scripts/derive_nsc_t30_extinction.py once",
+    "read the verdict from nsc-t30-extinction-v1.json",
+    "adopt the reading per nsc-t30-expectations-v1.json (no new framing)",
+    "update the code-map corridor row with the landed verdict",
+    "extend the owning-note part 15 with the closing sentence",
+    "re-run both suites (conditional test must now pass, not skip)"
+  ],
+  "creation_only": true,
+  "evolved": false,
+  "guardrails": [
+    "never edit the campaign files; they are the campaign's sealed writes",
+    "never re-run the extinction reducer if the record exists",
+    "never let a verdict enter the synthesis before its record exists"
+  ],
+  "notes": [
+    "written at round 114 while the march integrating continues"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-T30-ADOPTION-CHECKLIST-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_adoption_checklist.py": "8fa6bf8b20509d2f3ccb07485871c483d187a956eb8afccbe40b76a3571495ca",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

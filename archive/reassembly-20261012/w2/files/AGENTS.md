@@ -1,0 +1,173 @@
+# NSC — one repository, active index
+
+Read [instructions](docs/instructions.md), the [docs route](docs/README.md),
+and the latest user instruction in the conversation. That instruction
+overrides a stale plan. Repository plan and handover copies are historical,
+not task authority. Do not recreate the deleted handover or another plan
+file. Keep this index current when ownership changes. Prefer the owning
+note and live evidence over a remembered continuation point.
+
+Scientific notes are constrained research. The method, domain, and evidence
+stay with the owning file. A proposal is not an observation, and an
+observation is not a settled theory. This index routes those strands. It
+does not merge them, and it does not restate their numbers.
+
+Explore a lead before its citation is finished. A news item, a name, or a
+rough geometric picture is enough to look it up and record the clue. Demanding
+a finished citation at that stage stops the search. A reported result is a
+different moment: name what was checked. Do not refuse the lead because the
+wording is not yet a bibliography entry.
+
+Before a calculation, read [arXiv studies](docs/arxiv-studies.md). Check
+work already cited. Document a study there when it helps, clues, constrains,
+or blocks a step. Decide first whether the question is a finite test in a
+named domain or an infinite construction. An infinite construction without a
+stated cutoff is a dead end; do not run it. Do not open by defending
+LambdaCDM. Local equations are what an interior observer already uses. The
+question is the unresolved exterior and the nested spherical response.
+
+```text
+AGENTS.md                 this index
+ docs/                    framing, status, paper guides, and one note per public strand
+   README.md              docs route, including which copies are duplicates
+   arxiv-studies.md       cited studies and the finite-test check before a calculation
+ paper/                   both manuscripts, PDFs, and frozen paper evidence
+ src/, scripts/, tests/   curated publication and replay owners
+ results/                 published evidence and release manifests
+ lab/                     scientific workspace in this same Git repository
+   src/, scripts/, tests/ current numerical and proof owners
+   docs/                  derivations, claim ledger, and scientific code map
+   results/               retained source, calibration, and numerical evidence
+   archive/               historical material inside its recorded domain
+   .source-history/       exact historical source objects, plus one content carrier for two recovered local-boundary sources
+```
+
+| Need | Owner |
+|---|---|
+| Location, branches, commands, and recovery | [Instructions](docs/instructions.md), [consolidation](docs/repository-consolidation.md) |
+| Where a document lives, and which copies match | [Docs route](docs/README.md) |
+| Working programme statement | [Nested Cosmology: The Geometric Shape of a Universe](paper/nested-cosmology.md): geometric thesis (the enclosure is prior; the sphere is the least demanding equilibrium) with a claim-to-record ledger. Working draft — no version assigned, not a submission, adds no release artifact. [Paper guide](docs/papers.md#working-programme-statement) |
+| Working method (not a manuscript) | [nsc-programme-method.md](docs/nsc-programme-method.md): the two-way street, the view changelog, and the exit conditions currently in force. Working material only; papers carry the science, this page carries how the work is steered |
+| Task authority and scientific status | Latest user instruction, which overrides a stale plan; [scope](docs/instructions.md#rn-radial-programme), [status](docs/current-result.md#rn-radial-parent-4-october-2026), [code map](lab/docs/active-code-map.md) |
+| Existing mathematics, assumptions, and gaps | [Lab claim ledger](lab/docs/claim-ledger.md), [code map](lab/docs/active-code-map.md) |
+| Two-force gradient balance on the RN radial parent | [Note](lab/docs/nsc-rn-gradient-bubble.md), [module](lab/src/recursive_horizons/nsc_rn_gradient_bubble.py), [driver](lab/scripts/derive_nsc_rn_gradient_bubble.py), [record v5](lab/results/development/nsc-rn-gradient-bubble-v5.json), [stencil audit](lab/src/recursive_horizons/nsc_rn_stencil_audit.py), [v3](lab/results/development/nsc-rn-gradient-bubble-v3.json), [v2](lab/results/development/nsc-rn-gradient-bubble-v2.json), [tests](lab/tests/test_nsc_rn_gradient_bubble.py) |
+| RN cone map | The chart's one-way interface sits at `r_plus + 0.005..0.074 r_m`; the shift carries it while the lapse reading stays within `6e-4` of 1. Horizon-reaching domain (v2, one cell above r_minus): offsets unchanged within a cell. [Note](lab/docs/nsc-rn-cone-map.md), [module](lab/src/recursive_horizons/nsc_rn_cone_map.py), [driver](lab/scripts/derive_nsc_rn_cone_map.py), [record v1](lab/results/development/nsc-rn-cone-map-v1.json), [record v2](lab/results/development/nsc-rn-cone-map-v2.json), [tests](lab/tests/test_nsc_rn_cone_map.py) |
+| One-way enclosure | Signed-current split at the measured trap. Family: strict for μ=1.04 ε=0.010. Horizon-reaching domain (v3, t=20 finals): μ=1.010 strictly one-way (−0.356), μ=1.040 keeps a +0.283 low-band transient, μ=1.002 records an eigen timeout. [Note](lab/docs/nsc-rn-oneway.md), [module](lab/src/recursive_horizons/nsc_rn_oneway.py), [driver](lab/scripts/derive_nsc_rn_oneway.py), [v2](lab/results/development/nsc-rn-oneway-v2.json), [v3](lab/results/development/nsc-rn-oneway-v3.json), [v1 preserved](lab/results/development/nsc-rn-oneway-v1.json), [tests](lab/tests/test_nsc_rn_oneway.py) |
+| Two ends of a room | Per-room bottom/top ratio `Q`; inner room about nineteen times sharper than outer on the family, **21.1–25.2×** on the horizon-reaching domain (v2). [Note](lab/docs/nsc-rn-two-ends.md), [module](lab/src/recursive_horizons/nsc_rn_two_ends.py), [driver](lab/scripts/derive_nsc_rn_two_ends.py), [record v1](lab/results/development/nsc-rn-two-ends-v1.json), [record v2](lab/results/development/nsc-rn-two-ends-v2.json), [tests](lab/tests/test_nsc_rn_two_ends.py) |
+| Isotropy trajectory | `I = <|B − 1/2|>` falls monotonically in all nine recorded cases of the driven window (10–18%), and 22.3% on the relaxation campaign but **not monotonically** (a rise to 0.4191 at t=40), so both read `no_relaxation_observed`; thresholds were registered before the run. [Note](lab/docs/nsc-rn-isotropy.md), [module](lab/src/recursive_horizons/nsc_rn_isotropy.py), [driver](lab/scripts/derive_nsc_rn_isotropy.py), [driven-window record](lab/results/development/nsc-rn-isotropy-v1.json), [campaign record](lab/results/development/nsc-rn-isotropy-v2.json), [campaign arm control](lab/results/development/nsc-rn-isotropy-arm-control-v2.json), [tests](lab/tests/test_nsc_rn_isotropy.py) |
+| Matryoshka comparison | Polygon count `1,2,10,72` vs chain Schroeder `1,1,3,11,45,197`; skeleton matches, weight type does not. [Note](lab/docs/nsc-matryoshka-comparison.md), [module](lab/src/recursive_horizons/nsc_matryoshka.py), [driver](lab/scripts/derive_nsc_matryoshka.py), [record](lab/results/development/nsc-matryoshka-comparison-v1.json), [tests](lab/tests/test_nsc_matryoshka.py) |
+| Inward march to r_minus | Extends the areal grid one cell above the inner horizon and decides the Hayward g ≥ −1 criterion on evaluated cells: false in all three ε=0.001 cases (slopes −171.6 / −80.2 / −62.3). [Runner](lab/scripts/derive_nsc_rn_inward_march.py), [decision helper](lab/src/recursive_horizons/nsc_rn_inward.py), [assessor](lab/scripts/assess_nsc_rn_inward_march.py), [campaign](lab/results/development/nsc-rn-inward-march-v1/), [assessment](lab/results/development/nsc-rn-inward-march-assessment-v1.json), [tests](lab/tests/test_nsc_rn_inward.py) |
+| Nested influence chain and wall organism | First-principles per-level propagation fees close outside the pre-registered 0.03–0.10 band in every exterior channel (exterior nesting refuted as the carrier of missing structure); interior/excision closure exact to 3.2e-15; wall stations concentrate inflow 16–22×, respond one station later, breathe on the Δ^−1/2 horizon clock (rise·√Δ const to 4%), and live a complete measured lifecycle (death at the driven phase's end, single-force tombstone); frontier amendment leaves two open cells (4th-gap exponent, paper-level coupling). [Note](lab/docs/nsc-influence-chain.md), [module](lab/src/recursive_horizons/nsc_influence_chain.py), [code map](lab/docs/active-code-map.md), [seam profile](lab/results/development/nsc-influence-seam-v1.json), [atlas](lab/results/development/nsc-influence-atlas-v1.json), [charged atlas](lab/results/development/nsc-influence-atlas-charged-v1.json), [interior balance](lab/results/development/nsc-interior-balance-v1.json), [wall clock](lab/results/development/nsc-wall-clock-horizon-v1.json), [frontier amendment](lab/results/development/nsc-frontier-amendment-v1.json) |
+| RN radial parent | Scientific start `5cb775a7`. Current reproducible assessment is v2. Manual v1 remains the historical writer failure. Finite continuation to $T=20$. The numerical family stopped without a summary in any case and is not claimed. The recorded stencils are exact; the moment guard that reported them wrong is withdrawn. [Status](docs/current-result.md#rn-radial-parent-4-october-2026), [rules](docs/instructions.md#rn-radial-programme), [v2 assessment](lab/results/development/nsc-rn-pilot-assessment-v2.json), [v1 record](lab/results/development/nsc-rn-pilot-assessment-v1.json), [continuation](lab/results/development/nsc-rn-neutral-continuation-v1/summary.json) |
+| Historical periodic parent | NF128 exterior-to-cut response measured; the bounded NF256 confirmation is recorded. Further periodic autonomous exchange runs stay off the active path. [Status](docs/current-result.md#responsive-parent-3-october-2026), [rules](docs/instructions.md#present-regeneration-programme) |
+| Strong source, kinetic-offset and frozen-column comparisons | [Method](lab/docs/nsc-discovery-parent-strong-controls.md), [consumer](lab/scripts/assess_nsc_discovery_parent_strong_controls.py), [record](lab/results/development/nsc-discovery-parent-strong-controls-v1.json) |
+| Coupled exterior-to-cut response | [Method](lab/docs/nsc-discovery-parent-cut-response.md), [adapter](lab/src/recursive_horizons/nsc_discovery_parent_cut_response.py), [driver](lab/scripts/derive_nsc_discovery_parent_cut_response.py), [completed batch](lab/results/development/nsc-discovery-parent-cut-response-v1/prepare.json), [assessment](lab/docs/nsc-discovery-parent-cut-assessment.md), [record](lab/results/development/nsc-discovery-parent-cut-assessment-v1.json), [consumer](lab/scripts/assess_nsc_discovery_parent_cut_response.py) |
+| Recorded NF256 cut confirmation | [Note](lab/docs/nsc-discovery-parent-cut-confirmation.md), [record](lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json), [payload](lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz), [driver](lab/scripts/derive_nsc_discovery_parent_cut_confirmation.py). Producer `5cb775a7`. Comparison and CPU stay on the status page. |
+| Parent preparation, episode, observer, response, step control and Dirac contact | [Preparation](lab/docs/nsc-discovery-parent.md), [episode](lab/docs/nsc-discovery-parent-episode.md), [observer](lab/docs/nsc-discovery-regions.md#leading-parent-observer), [response](lab/docs/nsc-discovery-parent-response.md), [step control](lab/docs/nsc-discovery-parent-step-control.md), [Dirac contact](lab/docs/nsc-discovery-dirac-contact.md) |
+| Earlier discovery programme | Preserved from `ea6c699`; [record](docs/current-result.md#active-discovery-programme-2-october-2026) |
+| Earlier discovery implementation | [Episode runner](lab/docs/nsc-discovery-episode.md), [observer and atlas](lab/docs/nsc-discovery-observables.md), [coupled response](lab/docs/nsc-discovery-response.md), [FFT adapter](lab/src/recursive_horizons/nsc_discovery_backend.py) |
+| Discovery prediction and source-selected regions | [Matched-clock prediction](lab/docs/nsc-discovery-prediction.md), [gradient cuts and moving ledger](lab/docs/nsc-discovery-regions.md), [initial source scale](lab/docs/nsc-discovery-scale.md) |
+| Discovery physical assessment and coupled reduction | [Batch assessment](lab/docs/nsc-discovery-episode-assessment.md), [four-metric tides](lab/docs/nsc-discovery-tidal.md), [causal coupled memory](lab/docs/nsc-discovery-coupled-memory.md) |
+| Discovery regime family and energy accounting | [Source family](lab/docs/nsc-discovery-family.md), [disjoint RK-stage balance](lab/docs/nsc-discovery-balance.md) |
+| Discovery holding balance and geometric controls | [Static spectral source](lab/docs/nsc-discovery-stationary.md), [same-action source-free solution](lab/docs/nsc-discovery-vacuum-control.md), [whole-state translation](lab/docs/nsc-discovery-translation.md) |
+| Deeper inherited hand-off and future prediction | [Grandchild response](lab/docs/nsc-discovery-grandchild.md), [producer](lab/src/recursive_horizons/nsc_discovery_grandchild.py), [driver](lab/scripts/derive_nsc_discovery_grandchild.py) |
+| Physical source-width response | [Width prediction](lab/docs/nsc-discovery-width-response.md), [producer](lab/src/recursive_horizons/nsc_discovery_width_response.py), [driver](lab/scripts/derive_nsc_discovery_width_response.py) |
+| Ambient extent and source-consistent boundary controls | [Extent intervention](lab/docs/nsc-discovery-extent.md), [producer](lab/src/recursive_horizons/nsc_discovery_extent.py), [driver](lab/scripts/derive_nsc_discovery_extent.py) |
+| General positive initial radius on a declared nonconstant geometry | [Dynamic preparation](lab/docs/nsc-discovery-dynamic-preparation.md), [constructor](lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py), [driver](lab/scripts/derive_nsc_discovery_dynamic_preparation.py) |
+| Exact free-transport comparison of the saved return | [Free return](lab/docs/nsc-discovery-free-return.md), [consumer](lab/src/recursive_horizons/nsc_discovery_free_return.py), [driver](lab/scripts/derive_nsc_discovery_free_return.py) |
+| Connected geometric influence of the Gaussian field | [Geometric vertices](lab/docs/nsc-discovery-geometric-vertices.md), [consumer](lab/src/recursive_horizons/nsc_discovery_geometric_vertices.py), [driver](lab/scripts/derive_nsc_discovery_geometric_vertices.py) |
+| Analytic noncompact limit and conditioned static-query assessment | [Limit note](lab/docs/nsc-discovery-stationary-limit.md), [independent consumer](lab/scripts/assess_nsc_discovery_stationary_limit.py) |
+| Initial geometric rate and curvature controls | [Initial sectors](lab/docs/nsc-discovery-initial-sector.md), [producer](lab/src/recursive_horizons/nsc_discovery_initial_sector.py), [driver](lab/scripts/derive_nsc_discovery_initial_sector.py) |
+| Constrained curvature mode of the local action | [Assessment](lab/docs/nsc-discovery-curvature-sector.md), [symbolic owner](lab/src/recursive_horizons/nsc_discovery_curvature_sector.py), [consumer](lab/scripts/assess_nsc_discovery_curvature_sector.py) |
+| Physical domain of the local curvature approximation | [Units and scope](lab/docs/nsc-discovery-eft-domain.md), [saved-state assessment](lab/scripts/assess_nsc_discovery_eft_domain.py) |
+| Prepared-state geometric work and influence reference | [Pulse control](lab/docs/nsc-discovery-spectral-work.md), [producer](lab/src/recursive_horizons/nsc_discovery_spectral_work.py), [driver](lab/scripts/derive_nsc_discovery_spectral_work.py) |
+| Leading common-action field–geometry comparison | [Method](lab/docs/nsc-discovery-leading-einstein.md), [model](lab/src/recursive_horizons/nsc_discovery_leading_einstein.py), [completed v2](lab/results/development/nsc-discovery-leading-einstein-v2/manifest.json) |
+| Physically scaled numerical continuation | [Step control](lab/docs/nsc-discovery-leading-step-control.md), [numerical owner](lab/src/recursive_horizons/nsc_discovery_leading_step_control.py) |
+| Static periodic obstruction and required exterior traction | [Virial](lab/docs/nsc-discovery-leading-virial.md), [assessment](lab/scripts/assess_nsc_discovery_leading_virial.py) |
+| Source-responsive nested collars and parent continuation criterion | [Collar](lab/docs/nsc-discovery-parent-traction.md), [producer](lab/src/recursive_horizons/nsc_discovery_parent_traction.py), [withheld measurement](lab/results/development/nsc-discovery-parent-traction-v1/measurement.json), [continuation criterion](lab/docs/nsc-discovery-parent-continuation.md) |
+| Source-history-selected turn and withheld full-field prediction | [Turn](lab/docs/nsc-discovery-homogeneous-turn.md), [reduction](lab/src/recursive_horizons/nsc_discovery_homogeneous_turn.py), [independent field backend](lab/src/recursive_horizons/nsc_discovery_turn_fullfield.py) |
+| Completed finite parent–child pair | [Owning note](lab/docs/nsc-nested-parent-child.md), [model](lab/src/recursive_horizons/nsc_nested_parent_child.py), [response](lab/src/recursive_horizons/nsc_nested_parent_child_response.py), [confirmation driver](lab/scripts/derive_nsc_nested_parent_child_confirmation.py), [v2 evidence](lab/results/development/nsc-nested-parent-child-confirmation-v2.json), [preserved v1](lab/results/development/nsc-nested-parent-child-v1.json) |
+| Parent–child replay and figure | [Portable basis](lab/results/development/nsc-nested-parent-child-replay-basis-v1.json), [independent consumer](lab/scripts/check_nsc_nested_parent_child_confirmation.py), [figure](lab/results/development/nsc-nested-parent-child-figure.png) |
+| Present regeneration loop | [Status](docs/current-result.md#present-spherical-loop), [code owner](lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py), [saved v5 diagnostic](lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py) |
+| Same-action conformal gauge and episode | [Status](docs/current-result.md#same-action-conformal-episode-1-october-2026), [proof](lab/docs/nsc-spherical-conformal-gauge.md), [driver](lab/scripts/derive_nsc_spherical_conformal_episode.py), [record](lab/results/development/nsc-spherical-conformal-episode-v1.json), [payload](lab/results/development/nsc-spherical-conformal-episode-v1.npz), [gauge tests](lab/tests/test_nsc_spherical_conformal_gauge.py), [episode tests](lab/tests/test_nsc_spherical_conformal_episode.py) |
+| Finite conformal chain through $T=0.3$ | [Owning note](lab/docs/nsc-spherical-conformal-continuation.md), [continuation](lab/results/development/nsc-spherical-conformal-episode-v2.json), [surface flow](lab/results/development/nsc-spherical-conformal-transport-v2.json), [clock](lab/results/development/nsc-spherical-conformal-clock-v2.json), [tests](lab/tests/test_nsc_spherical_conformal_continuation.py), [preservation tests](lab/tests/test_nsc_spherical_conformal_preservation.py) |
+| Same-realization conformal local response | [Note](lab/docs/nsc-conformal-local-response-successor.md), [module](lab/src/recursive_horizons/nsc_conformal_local_response_successor.py), [driver](lab/scripts/derive_nsc_conformal_local_response_successor.py), [record](lab/results/development/nsc-conformal-local-response-v2.json), [tests](lab/tests/test_nsc_conformal_local_response_successor.py) |
+| Independent conformal memory control | [Owning local note](lab/docs/nsc-conformal-local-response-successor.md), [module](lab/src/recursive_horizons/nsc_conformal_memory_control.py), [record](lab/results/development/nsc-conformal-memory-control-v1.json), [tests](lab/tests/test_nsc_conformal_memory_control.py) |
+| Conformal source controls and actual metric curvature | [Source controls](lab/docs/nsc-spherical-conformal-source-controls.md), [source record](lab/results/development/nsc-spherical-conformal-source-controls-v1.json), [curvature](lab/docs/nsc-spherical-conformal-curvature.md), [curvature record](lab/results/development/nsc-spherical-conformal-curvature-v1.json), [curvature tests](lab/tests/test_nsc_spherical_conformal_curvature.py) |
+| Spherical feedback episode, $T=0.05$ | [Status](docs/current-result.md#recorded-t005-feedback-episode), [driver](lab/scripts/derive_nsc_spherical_feedback_episode.py), [record](lab/results/development/nsc-spherical-feedback-episode-v1.json), [payload](lab/results/development/nsc-spherical-feedback-episode-v1.npz), [tests](lab/tests/test_nsc_spherical_feedback_episode.py), [independent tests](lab/tests/test_nsc_spherical_feedback_episode_independent.py) |
+| Maintained continuation, $T=0.05$ to $0.085$ | [Status](docs/current-result.md#regeneration-episode-1-october-2026), [note](lab/docs/nsc-regeneration-episode.md), [driver](lab/scripts/derive_nsc_regeneration_episode.py), [record](lab/results/development/nsc-regeneration-episode-v1.json), [payload](lab/results/development/nsc-regeneration-episode-v1.npz), [tests](lab/tests/test_nsc_regeneration_episode.py) |
+| Saved episode assessment and independent audit | [Assessment](lab/docs/nsc-spherical-episode-assessment.md), [module](lab/src/recursive_horizons/nsc_spherical_episode_assessment.py), [tests](lab/tests/test_nsc_spherical_episode_assessment.py), [audit](lab/docs/nsc-regeneration-realization-audit.md), [independent tests](lab/tests/test_nsc_regeneration_realization_independent.py) |
+| Regeneration controls | [Status](docs/current-result.md#regeneration-controls-1-october-2026), [note](lab/docs/nsc-regeneration-controls.md), [module](lab/src/recursive_horizons/nsc_regeneration_controls.py), [driver](lab/scripts/derive_nsc_regeneration_controls.py), [record](lab/results/development/nsc-regeneration-controls-v1.json), [payload](lab/results/development/nsc-regeneration-controls-v1.npz) |
+| Regeneration-controls successor | [Status](docs/current-result.md#regeneration-controls-successor-1-october-2026), [record](lab/results/development/nsc-regeneration-controls-v2.json), [independent tests](lab/tests/test_nsc_regeneration_uniform_independent.py) |
+| Conditional local response | [Status](docs/current-result.md#conditional-local-response-1-october-2026), [note](lab/docs/nsc-coupled-local-response.md), [module](lab/src/recursive_horizons/nsc_coupled_local_response.py), [driver](lab/scripts/derive_nsc_coupled_local_response.py), [record](lab/results/development/nsc-coupled-local-response-v1.json), [series](lab/results/development/nsc-coupled-local-response-v1.npz) |
+| Same-trajectory local-response successor | [Status](docs/current-result.md#same-trajectory-local-response-successor-1-october-2026), [note](lab/docs/nsc-coupled-local-response.md), [record](lab/results/development/nsc-coupled-local-response-v2.json), [series](lab/results/development/nsc-coupled-local-response-v2.npz) |
+| Independent local-response controls | [Note](lab/docs/nsc-coupled-local-response.md#independent-control-replay), [driver](lab/scripts/derive_nsc_coupled_local_response_audit.py), [record](lab/results/development/nsc-coupled-local-response-audit-v1.json), [tests](lab/tests/test_nsc_coupled_local_response_independent.py) |
+| Spherical null expansion | [Status](docs/current-result.md#spherical-null-expansion-1-october-2026), [note](lab/docs/nsc-spherical-null-expansion.md), [module](lab/src/recursive_horizons/nsc_spherical_null_expansion.py), [driver](lab/scripts/derive_nsc_spherical_null_expansion.py), [record](lab/results/development/nsc-spherical-null-expansion-v1.json) |
+| Local-boundary review | [Status](docs/current-result.md#local-boundary-review-1-october-2026), [v1 record](lab/results/development/nsc-local-boundary-review-v1.json), [v2 binding](lab/results/development/nsc-local-boundary-review-v2.json), [independent tests](lab/tests/test_nsc_local_boundary_independent.py) |
+| Initial geometry-graded window | [Status](docs/current-result.md#initial-geometry-graded-window-1-october-2026), [note](lab/docs/nsc-geometry-graded-window.md), [module](lab/src/recursive_horizons/nsc_geometry_graded_window.py), [driver](lab/scripts/derive_nsc_geometry_graded_window.py), [record](lab/results/development/nsc-geometry-graded-window-v1.json), [tests](lab/tests/test_nsc_geometry_graded_window.py) |
+| Weak spherical Cauchy residual | [Note](lab/docs/nsc-spherical-cauchy-weak.md), [module](lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py), [driver](lab/scripts/derive_nsc_spherical_cauchy_weak.py), [record](lab/results/development/nsc-spherical-cauchy-weak-v1.json), [tests](lab/tests/test_nsc_spherical_cauchy_weak.py) |
+| Initial lapse bound and nearby initial-state proof | [Note](lab/docs/nsc-spherical-cauchy-weak.md#initial-lapse-component), [certificate](lab/results/development/nsc-spherical-cauchy-error-v1.json), [tests](lab/tests/test_nsc_spherical_cauchy_weak_bound.py) |
+| Source and UV certification methods | [Continuous source-error insertion](lab/docs/nsc-ks-source-operator-majorant.md), [family 14_1 completion](lab/docs/nsc-ks-source-operator-majorant-v7.md), [preparation correction](lab/docs/nsc-vacuum-source-correction.md), [high-energy remainder](lab/docs/nsc-vacuum-source-remainder.md), [full method map](lab/docs/active-code-map.md) |
+| Field method owners | [Whole cone](lab/docs/nsc-ks-whole-cone-field-v1.md), [radius coupling](lab/docs/nsc-ks-radius-coupling-bounds.md), [endpoint contraction](lab/docs/nsc-ks-endpoint-contraction.md) |
+| Current finite article and preserved papers | [Paper guide](docs/papers.md), [current PDF](paper/finite-regeneration.pdf), [source](paper/finite-regeneration/main.tex), [build/evidence](paper/finite-regeneration-manifest.json), [catalog](paper/catalog.json) |
+| Finite nested-quality theorem | [Proof](docs/nsc-nested-qualities.md), [frozen evidence](paper/nested-quality-evidence/snapshot.json) |
+| Finite circulation and local response | [Note](lab/docs/nsc-finite-turnover.md), [record](lab/results/development/nsc-finite-turnover-v1.json) |
+| Incoherent imbalance mean circulation | [Note](lab/docs/nsc-imbalance-turnover.md), [record](lab/results/development/nsc-imbalance-turnover-v1.json) |
+| Spherical feedback action | [Note](lab/docs/nsc-spherical-feedback-action.md), [module](lab/src/recursive_horizons/nsc_spherical_feedback_action.py) |
+| Direct conformal ADM source | [Note](lab/docs/nsc-conformal-adm-source.md), [module](lab/src/recursive_horizons/nsc_conformal_adm_source.py) |
+| Provisional spherical coupling v1 | [Note](lab/docs/nsc-spherical-coupling.md), [module](lab/src/recursive_horizons/nsc_spherical_coupling.py), [record](lab/results/development/nsc-spherical-coupling-control-v1.json) |
+| Variational spherical Galerkin coupling v2 | [Note](lab/docs/nsc-spherical-galerkin-coupling.md), [module](lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py), [record](lab/results/development/nsc-spherical-coupling-control-v2.json) |
+| Matched Galerkin refinement v3 | [Note](lab/docs/nsc-spherical-galerkin-coupling.md#matched-refinement-v3), [driver](lab/scripts/derive_nsc_spherical_galerkin_refinement.py), [record](lab/results/development/nsc-spherical-coupling-refinement-v3.json) |
+| Galerkin refinement v5 | [Driver](lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py), [record](lab/results/development/nsc-spherical-coupling-refinement-v5.json), [payload](lab/results/development/nsc-spherical-coupling-refinement-v5.npz), [independent tests](lab/tests/test_nsc_spherical_galerkin_independent.py) |
+| Finite-window embedding v1 | [Note](lab/docs/nsc-finite-window-embedding.md), [module](lab/src/recursive_horizons/nsc_finite_window_embedding.py), [record](lab/results/development/nsc-finite-window-embedding-v1.json) |
+| Seam-regular embedding v2 | [Note](lab/docs/nsc-finite-window-embedding-smooth.md), [module](lab/src/recursive_horizons/nsc_finite_window_embedding_smooth.py), [record](lab/results/development/nsc-finite-window-embedding-v2.json) |
+| Spherical Cauchy data | [Note](lab/docs/nsc-spherical-cauchy-data.md), [module](lab/src/recursive_horizons/nsc_spherical_cauchy_data.py), [record](lab/results/development/nsc-spherical-cauchy-data-v1.json) |
+| Regional coordinate and normal-observer ledger | [Note](lab/docs/nsc-regional-energy-exchange.md), [module](lab/src/recursive_horizons/nsc_regional_energy_exchange.py), [record](lab/results/development/nsc-regional-energy-exchange-v1.json) |
+| Archived nf256 probes | [Receipt](lab/archive/probes/README.md) |
+| Archived external two-room comparison | Fixed Bronnikov–Fabris phantom black-universe bytes, 4 October 2026; [owning note](lab/docs/nsc-two-room-comparison.md). Separate from the magnetic RN programme and from the papers. |
+| Evolving retained-region reduction | [Note](lab/docs/nsc-evolving-reduction.md), [module](lab/src/recursive_horizons/nsc_evolving_reduction.py) |
+| Original source snapshot and large-data exclusions | [Import receipt](docs/lab-snapshot.json), [consolidation](docs/repository-consolidation.md) |
+| Public verification and builds | [Reproducing](docs/reproducing.md), [draft](docs/local-gate-draft.md) |
+| Cited arXiv studies, and whether a step is already sourced | [arXiv studies](docs/arxiv-studies.md). Check it before a new paper or a repeated derivation. |
+| Windows calculation runtime | `.venv/validation` on Python 3.14.8. Numba 0.68 uses all CPU threads. HIP 7.2 reaches the Radeon. Section below. |
+
+## Windows calculation runtime
+
+This checkout's scientific interpreter is `.venv/validation`, Python 3.14.8
+from `%LOCALAPPDATA%\Programs\Python\Python314`. Numba 0.68 is the
+accelerated runtime and uses every logical core (`NUMBA_NUM_THREADS`,
+16 on this Ryzen 9 6900HX). Existing producers still import SciPy. A new
+numerical kernel uses Numba.
+
+The AMD GPU path is the installed HIP SDK 7.2. `HIP_PATH` is
+`C:\Program Files\AMD\ROCm\7.2\`. hipInfo names the device AMD Radeon
+RX 6600M, architecture `gfx1032`. Python loads `amdhip64_7.dll` and
+`hiprtc0702.dll` from that SDK's `bin`. The venv startup hook puts
+those DLLs on the process path. Recheck CPU threads and a HIP saxpy
+with `.venv/validation/Scripts/python.exe .venv/validation/Scripts/check_numba_hip.py`.
+
+Do not look for Homebrew, `/opt/homebrew`, or a macOS user home. A macOS
+virtual environment is not in this tree. Older notes may still name
+those paths; they are the other machine's provenance.
+
+The Windows branches are `win11/blackholes-infinity/main` and
+`agent/blackholes-infinity/work`. Work happens on the second. The
+remote branches `main` and `codex/work-branch` stay as published.
+
+Live branch commands are in the
+[instructions](docs/instructions.md). The two-room import commit
+`d95175c25a9989aea681967d6089aa7b2bf27706` is historical. The RN
+scientific start remains `5cb775a7`. Root owns Git
+integration and publication. Preserve other owners' files and existing
+scientific branches. Scientific Python uses `lab/`
+through root `scripts/lab.py`;
+root `src/`, `scripts/` and `tests/` own the curated publication chain.
+
+Verdicts and the working diagnostic are in
+[current result](docs/current-result.md).
+Framing: [instructions](docs/instructions.md#scientific-framing-and-authority).
+
+How a calculation should start, and the studies already opened, are in
+[arXiv studies](docs/arxiv-studies.md).
+
+@HYPA.md

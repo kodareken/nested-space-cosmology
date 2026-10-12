@@ -1,0 +1,191 @@
+{
+  "Phi_H": 1.7321254676087483,
+  "api_version": "nsc-rn-charged-lll-v1",
+  "creation_only": true,
+  "evolved": false,
+  "kappa": 3.4641016151377544,
+  "notes": [
+    "finer grid for the n=3 multiplet to rule out an undersampled crossing"
+  ],
+  "production_trajectory": false,
+  "result": {
+    "kappa": 3.4641016151377544,
+    "peak": {
+      "omega": 0.1155,
+      "reflection_ratio": 0.9977776596702717
+    },
+    "radiative": false,
+    "rows": [
+      {
+        "omega": 0.104,
+        "reflection_ratio": 0.9972781223830803
+      },
+      {
+        "omega": 0.1045,
+        "reflection_ratio": 0.9973226532211833
+      },
+      {
+        "omega": 0.105,
+        "reflection_ratio": 0.9973647236252006
+      },
+      {
+        "omega": 0.1055,
+        "reflection_ratio": 0.9974044224766572
+      },
+      {
+        "omega": 0.106,
+        "reflection_ratio": 0.997441813891761
+      },
+      {
+        "omega": 0.1065,
+        "reflection_ratio": 0.9974769868684199
+      },
+      {
+        "omega": 0.107,
+        "reflection_ratio": 0.9975099502995406
+      },
+      {
+        "omega": 0.1075,
+        "reflection_ratio": 0.9975408180794499
+      },
+      {
+        "omega": 0.108,
+        "reflection_ratio": 0.997569624295803
+      },
+      {
+        "omega": 0.1085,
+        "reflection_ratio": 0.997596414856396
+      },
+      {
+        "omega": 0.109,
+        "reflection_ratio": 0.9976212542071524
+      },
+      {
+        "omega": 0.1095,
+        "reflection_ratio": 0.9976441339856609
+      },
+      {
+        "omega": 0.11,
+        "reflection_ratio": 0.997665142546052
+      },
+      {
+        "omega": 0.1105,
+        "reflection_ratio": 0.9976842958534239
+      },
+      {
+        "omega": 0.111,
+        "reflection_ratio": 0.9977016130697232
+      },
+      {
+        "omega": 0.1115,
+        "reflection_ratio": 0.9977170993281138
+      },
+      {
+        "omega": 0.112,
+        "reflection_ratio": 0.9977308258717215
+      },
+      {
+        "omega": 0.1125,
+        "reflection_ratio": 0.9977427683334256
+      },
+      {
+        "omega": 0.113,
+        "reflection_ratio": 0.9977529647683838
+      },
+      {
+        "omega": 0.1135,
+        "reflection_ratio": 0.9977613938376287
+      },
+      {
+        "omega": 0.114,
+        "reflection_ratio": 0.9977680733816054
+      },
+      {
+        "omega": 0.1145,
+        "reflection_ratio": 0.997773030503217
+      },
+      {
+        "omega": 0.115,
+        "reflection_ratio": 0.997776223934329
+      },
+      {
+        "omega": 0.1155,
+        "reflection_ratio": 0.9977776596702717
+      },
+      {
+        "omega": 0.116,
+        "reflection_ratio": 0.9977773111147796
+      },
+      {
+        "omega": 0.1165,
+        "reflection_ratio": 0.9977751838982115
+      },
+      {
+        "omega": 0.117,
+        "reflection_ratio": 0.997771267283746
+      },
+      {
+        "omega": 0.1175,
+        "reflection_ratio": 0.9977655123156018
+      },
+      {
+        "omega": 0.118,
+        "reflection_ratio": 0.9977579064480352
+      },
+      {
+        "omega": 0.1185,
+        "reflection_ratio": 0.9977484147555202
+      },
+      {
+        "omega": 0.119,
+        "reflection_ratio": 0.9977369622263172
+      },
+      {
+        "omega": 0.1195,
+        "reflection_ratio": 0.9977235630087004
+      },
+      {
+        "omega": 0.12,
+        "reflection_ratio": 0.9977081351870551
+      },
+      {
+        "omega": 0.1205,
+        "reflection_ratio": 0.9976906293296214
+      },
+      {
+        "omega": 0.121,
+        "reflection_ratio": 0.9976709883834821
+      },
+      {
+        "omega": 0.1215,
+        "reflection_ratio": 0.9976491759190816
+      },
+      {
+        "omega": 0.122,
+        "reflection_ratio": 0.997625094149255
+      },
+      {
+        "omega": 0.1225,
+        "reflection_ratio": 0.9975986938373869
+      },
+      {
+        "omega": 0.123,
+        "reflection_ratio": 0.9975698847526594
+      },
+      {
+        "omega": 0.1235,
+        "reflection_ratio": 0.9975385712501896
+      },
+      {
+        "omega": 0.124,
+        "reflection_ratio": 0.9975047084011502
+      }
+    ]
+  },
+  "schema": "NSC-RN-CHARGED-TWIST-CLIFF-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist_cliff.py": "ea8b45d4c94fb9bf4932f8ad554594aea5b81d2e5ff2452f37639da7b561eb78",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "81d2602af55549c7ea50a24d4a84e0838dd419c0cd951886a5227a76d549e472"
+  },
+  "supersedes_grid_only": "cliff-v1 kappa=sqrt(12) 0.005 grid"
+}

@@ -1,0 +1,80 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "pooled": {
+        "count": 16,
+        "mean": 6.558758244504474,
+        "relative_scatter": 0.8402125988849809,
+        "std": 5.510751310073399
+      },
+      "quiet_destined": {
+        "count": 6,
+        "mean": 10.90660159691037,
+        "relative_scatter": 0.4492467110312663,
+        "std": 4.89975489594034
+      },
+      "wall_destined": {
+        "count": 10,
+        "mean": 3.9500522330609362,
+        "relative_scatter": 1.01382315599613,
+        "std": 4.004654421271399
+      }
+    },
+    "mu-1.010-eps-0.001": {
+      "pooled": {
+        "count": 31,
+        "mean": 3.9344605534962116,
+        "relative_scatter": 1.3302596587342261,
+        "std": 5.233854153197145
+      },
+      "quiet_destined": {
+        "count": 10,
+        "mean": 6.9022876435874565,
+        "relative_scatter": 0.9569198646206787,
+        "std": 6.604936157474692
+      },
+      "wall_destined": {
+        "count": 21,
+        "mean": 2.5212095582146667,
+        "relative_scatter": 1.455826951474906,
+        "std": 3.670444825165053
+      }
+    },
+    "mu-1.040-eps-0.001": {
+      "pooled": {
+        "count": 37,
+        "mean": -6.697651228173054,
+        "relative_scatter": 9.883032417910195,
+        "std": 66.19310421189033
+      },
+      "quiet_destined": {
+        "count": 25,
+        "mean": -11.22657600819933,
+        "relative_scatter": 7.135527693337486,
+        "std": 80.10754400786453
+      },
+      "wall_destined": {
+        "count": 12,
+        "mean": 2.737608730215024,
+        "relative_scatter": 1.0803494874251725,
+        "std": 2.9575741884584783
+      }
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "notes": [
+    "no parameter is moved; the split is the recorded bubble wall"
+  ],
+  "production_trajectory": false,
+  "reading": "regime = wall flag of the interval's end station; a collapse of within-regime scatter below the pooled value means the converter has two settings",
+  "schema": "NSC-WALL-RATIO-REGIMES-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_ratio_regimes.py": "ca6dc677f830becfa6bf9f3b89b39cb0fa4bfeb3fa14fa1d8eb7a785ce76117b",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

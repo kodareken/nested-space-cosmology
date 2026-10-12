@@ -1,0 +1,75 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "band": [
+    26.0,
+    29.0
+  ],
+  "band_length_fraction_of_span": 0.09780160616358369,
+  "concentration": {
+    "a_band_over_length": 0.654198803481529,
+    "b_band_over_length": 0.9552129575130192
+  },
+  "creation_only": true,
+  "evolved": false,
+  "instrument_a_lapse_shares": [
+    {
+      "interval": [
+        1.04,
+        26.0
+      ],
+      "l1_share": 0.9202804228923273
+    },
+    {
+      "interval": [
+        26.0,
+        29.0
+      ],
+      "l1_share": 0.06398169373078819
+    },
+    {
+      "interval": [
+        29.0,
+        32.0
+      ],
+      "l1_share": 0.01573788337688454
+    }
+  ],
+  "instrument_a_mass_shares": [
+    {
+      "interval": [
+        1.04,
+        26.0
+      ],
+      "l1_share": 0.08120042399573277
+    },
+    {
+      "interval": [
+        26.0,
+        29.0
+      ],
+      "l1_share": 0.34168083896136
+    },
+    {
+      "interval": [
+        29.0,
+        32.0
+      ],
+      "l1_share": 0.5771187370429073
+    }
+  ],
+  "instrument_b": {
+    "above_band_share": 0.09404182991168919,
+    "band_share": 0.0934213614730403,
+    "below_band_share": 0.8125368086152706
+  },
+  "notes": [
+    "instrument A localizes the source above 24 as in the seam records; B is the vacuum infall quadrature of the same chart"
+  ],
+  "production_trajectory": false,
+  "reading": "the cosmic-shell band's causal weight in both instruments, normalized by its length fraction of the route",
+  "schema": "NSC-COSMIC-SHELL-WEIGHT-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_cosmic_shell_weight.py": "15b592ee6c985f0750e60ab4bb1c6778b7a4b1602611e1c002bc905edcebe5a5",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

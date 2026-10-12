@@ -1,0 +1,53 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "mtimes are the recorded write times of the campaign files"
+  ],
+  "production_trajectory": false,
+  "reading": "the march's cost varies with the mass; the heaviest case costs the longest to the same stations",
+  "rows": [
+    {
+      "case": "mu-1.002-eps-0.001",
+      "interval_minutes": [
+        56.506710847218834,
+        39.765962255001064,
+        38.77741628090541,
+        38.69471078713735
+      ],
+      "mass_over_rm": 1.002,
+      "minutes_to_first_station": 56.506710847218834,
+      "total_to_station_20_minutes": 173.74480017026266
+    },
+    {
+      "case": "mu-1.010-eps-0.001",
+      "interval_minutes": [
+        30.359929835796358,
+        22.445515191555025,
+        18.95676027933756,
+        18.057852276166287
+      ],
+      "mass_over_rm": 1.01,
+      "minutes_to_first_station": 30.359929835796358,
+      "total_to_station_20_minutes": 89.82005758285523
+    },
+    {
+      "case": "mu-1.040-eps-0.001",
+      "interval_minutes": [
+        16.212163909276327,
+        15.0552091439565,
+        12.859708011150364,
+        9.873800492286684
+      ],
+      "mass_over_rm": 1.04,
+      "minutes_to_first_station": 16.212163909276327,
+      "total_to_station_20_minutes": 54.000881556669874
+    }
+  ],
+  "schema": "NSC-MARCH-DURATION-TABLE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_march_duration_table.py": "c971aadb540f9c4173022f4e4e1edad27c225c11ca97227f22688b5fd9fa8ef9",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

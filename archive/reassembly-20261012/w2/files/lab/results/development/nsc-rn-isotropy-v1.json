@@ -1,0 +1,1624 @@
+{
+ "api_version": "nsc-rn-isotropy-v1",
+ "cases": [
+  {
+   "case": "mu-1.002-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.4467406088366858,
+   "isotropy_index_last": 0.4059940445369783,
+   "isotropy_index_max": 0.4467406088366858,
+   "layout": "nsc-rn-inward-march-v1",
+   "mass_over_rm": 1.002,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.4467406088366858,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.4059940445369783,
+    "tail_time": 20.0,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 4,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4467406088366858,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 5.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4149019122542888,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 10.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4127488585450226,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 15.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4059940445369783,
+     "refinement_indicator": null,
+     "station": "station-20",
+     "t_over_rm": 20.0
+    }
+   ]
+  },
+  {
+   "case": "mu-1.010-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.446606687552673,
+   "isotropy_index_last": 0.39530638844139154,
+   "isotropy_index_max": 0.446606687552673,
+   "layout": "nsc-rn-inward-march-v1",
+   "mass_over_rm": 1.01,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.446606687552673,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.39530638844139154,
+    "tail_time": 20.0,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 4,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.446606687552673,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 5.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4082718881359987,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 10.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40928610753349054,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 15.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39530638844139154,
+     "refinement_indicator": null,
+     "station": "station-20",
+     "t_over_rm": 20.0
+    }
+   ]
+  },
+  {
+   "case": "mu-1.040-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.44467481164986866,
+   "isotropy_index_last": 0.3839067457409247,
+   "isotropy_index_max": 0.44467481164986866,
+   "layout": "nsc-rn-inward-march-v1",
+   "mass_over_rm": 1.04,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.44467481164986866,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.3839067457409247,
+    "tail_time": 20.0,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 4,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.44467481164986866,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 5.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3965526372459381,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 10.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39336613680833715,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 15.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3839067457409247,
+     "refinement_indicator": null,
+     "station": "station-20",
+     "t_over_rm": 20.0
+    }
+   ]
+  },
+  {
+   "case": "mu-1.002-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.4674812375587237,
+   "isotropy_index_last": 0.42896709324368093,
+   "isotropy_index_max": 0.4674812375587237,
+   "layout": "nsc-rn-neutral-family-v1",
+   "mass_over_rm": 1.002,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.4674812375587237,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.42896709324368093,
+    "tail_time": 7.999999999999584,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 17,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4674812375587237,
+     "refinement_indicator": null,
+     "station": "station-0",
+     "t_over_rm": 0.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4667877222439897,
+     "refinement_indicator": null,
+     "station": "station-0.5",
+     "t_over_rm": 0.5
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46362245360846627,
+     "refinement_indicator": null,
+     "station": "station-1",
+     "t_over_rm": 1.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46006019302774503,
+     "refinement_indicator": null,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4547830871099689,
+     "refinement_indicator": null,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4611692414500889,
+     "refinement_indicator": null,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4658363216614171,
+     "refinement_indicator": null,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4668623530674062,
+     "refinement_indicator": null,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46409532517363594,
+     "refinement_indicator": null,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46006941205514656,
+     "refinement_indicator": null,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4474384648526369,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4430234790604196,
+     "refinement_indicator": null,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4392823289831009,
+     "refinement_indicator": null,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43424438984078345,
+     "refinement_indicator": null,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43364200925528223,
+     "refinement_indicator": null,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4335390257415919,
+     "refinement_indicator": null,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.42896709324368093,
+     "refinement_indicator": null,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584
+    }
+   ]
+  },
+  {
+   "case": "mu-1.002-eps-0.010",
+   "epsilon": 0.01,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.4674812375587237,
+   "isotropy_index_last": 0.4292686501410007,
+   "isotropy_index_max": 0.4674812375587237,
+   "layout": "nsc-rn-neutral-family-v1",
+   "mass_over_rm": 1.002,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.4674812375587237,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.4292686501410007,
+    "tail_time": 7.999999999999584,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 17,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4674812375587237,
+     "refinement_indicator": null,
+     "station": "station-0",
+     "t_over_rm": 0.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4667796590421243,
+     "refinement_indicator": null,
+     "station": "station-0.5",
+     "t_over_rm": 0.5
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46361547995662206,
+     "refinement_indicator": null,
+     "station": "station-1",
+     "t_over_rm": 1.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4600310720809964,
+     "refinement_indicator": null,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4548060892717812,
+     "refinement_indicator": null,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4612048661720253,
+     "refinement_indicator": null,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4658670761257865,
+     "refinement_indicator": null,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46689297349632536,
+     "refinement_indicator": null,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4640453349273382,
+     "refinement_indicator": null,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4599929837206464,
+     "refinement_indicator": null,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4474127884838761,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4427925942941077,
+     "refinement_indicator": null,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4393081281238178,
+     "refinement_indicator": null,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4341101481002081,
+     "refinement_indicator": null,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43335923260443215,
+     "refinement_indicator": null,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43318588636157923,
+     "refinement_indicator": null,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4292686501410007,
+     "refinement_indicator": null,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584
+    }
+   ]
+  },
+  {
+   "case": "mu-1.010-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.4674740049550471,
+   "isotropy_index_last": 0.40910005082179124,
+   "isotropy_index_max": 0.4674740049550471,
+   "layout": "nsc-rn-neutral-family-v1",
+   "mass_over_rm": 1.01,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.4674740049550471,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.40910005082179124,
+    "tail_time": 15.499999999999424,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 32,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4674740049550471,
+     "refinement_indicator": null,
+     "station": "station-0",
+     "t_over_rm": 0.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46669330439488593,
+     "refinement_indicator": null,
+     "station": "station-0.5",
+     "t_over_rm": 0.5
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4636619867678184,
+     "refinement_indicator": null,
+     "station": "station-1",
+     "t_over_rm": 1.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4595712190867505,
+     "refinement_indicator": null,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4541294174171596,
+     "refinement_indicator": null,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46075890041122763,
+     "refinement_indicator": null,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4654912193480849,
+     "refinement_indicator": null,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4669652883573723,
+     "refinement_indicator": null,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46442239980762406,
+     "refinement_indicator": null,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46027116672042734,
+     "refinement_indicator": null,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4480001790023996,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4431088756508083,
+     "refinement_indicator": null,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4391906622742607,
+     "refinement_indicator": null,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4345165568405631,
+     "refinement_indicator": null,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.433795830111427,
+     "refinement_indicator": null,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4322993815881309,
+     "refinement_indicator": null,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.42812778851989364,
+     "refinement_indicator": null,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.42341039923244794,
+     "refinement_indicator": null,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41947831434853444,
+     "refinement_indicator": null,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41208844455328136,
+     "refinement_indicator": null,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4095151188365152,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4043700604784642,
+     "refinement_indicator": null,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40102199142552614,
+     "refinement_indicator": null,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3991558795881721,
+     "refinement_indicator": null,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40054538763843806,
+     "refinement_indicator": null,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4041076211713415,
+     "refinement_indicator": null,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40567089004153917,
+     "refinement_indicator": null,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40832951719662036,
+     "refinement_indicator": null,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4106701364386438,
+     "refinement_indicator": null,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4105030599119477,
+     "refinement_indicator": null,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41004137956824416,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40910005082179124,
+     "refinement_indicator": null,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424
+    }
+   ]
+  },
+  {
+   "case": "mu-1.010-eps-0.010",
+   "epsilon": 0.01,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.4674740049550471,
+   "isotropy_index_last": 0.4105340840221622,
+   "isotropy_index_max": 0.4674740049550471,
+   "layout": "nsc-rn-neutral-family-v1",
+   "mass_over_rm": 1.01,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.4674740049550471,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.4105340840221622,
+    "tail_time": 15.999999999999414,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 33,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4674740049550471,
+     "refinement_indicator": null,
+     "station": "station-0",
+     "t_over_rm": 0.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46668618032689313,
+     "refinement_indicator": null,
+     "station": "station-0.5",
+     "t_over_rm": 0.5
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4636557827012218,
+     "refinement_indicator": null,
+     "station": "station-1",
+     "t_over_rm": 1.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4595392399740464,
+     "refinement_indicator": null,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4541560488665175,
+     "refinement_indicator": null,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46079958652441944,
+     "refinement_indicator": null,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4655254220305999,
+     "refinement_indicator": null,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4669181425334518,
+     "refinement_indicator": null,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4644097004840218,
+     "refinement_indicator": null,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4601272757212278,
+     "refinement_indicator": null,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4478485927137134,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.44297266188048423,
+     "refinement_indicator": null,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4393167080338691,
+     "refinement_indicator": null,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4347807082602087,
+     "refinement_indicator": null,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4333359934345764,
+     "refinement_indicator": null,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43248699340674557,
+     "refinement_indicator": null,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.42763057260504034,
+     "refinement_indicator": null,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.42309595772706937,
+     "refinement_indicator": null,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4197157588592804,
+     "refinement_indicator": null,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41229701563638343,
+     "refinement_indicator": null,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40842200203974627,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40445300592645395,
+     "refinement_indicator": null,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4015860396906916,
+     "refinement_indicator": null,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39895095337097025,
+     "refinement_indicator": null,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40012724809323674,
+     "refinement_indicator": null,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40248277377653824,
+     "refinement_indicator": null,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40503764277102805,
+     "refinement_indicator": null,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40837885369476046,
+     "refinement_indicator": null,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4107240509116413,
+     "refinement_indicator": null,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41032313211224547,
+     "refinement_indicator": null,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4100215199629753,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40954998680965077,
+     "refinement_indicator": null,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4105340840221622,
+     "refinement_indicator": null,
+     "station": "station-16",
+     "t_over_rm": 15.999999999999414
+    }
+   ]
+  },
+  {
+   "case": "mu-1.040-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.46861469906556114,
+   "isotropy_index_last": 0.393882515528083,
+   "isotropy_index_max": 0.46861469906556114,
+   "layout": "nsc-rn-neutral-family-v1",
+   "mass_over_rm": 1.04,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.46861469906556114,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.393882515528083,
+    "tail_time": 18.499999999999805,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 38,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46861469906556114,
+     "refinement_indicator": null,
+     "station": "station-0",
+     "t_over_rm": 0.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4664474601341035,
+     "refinement_indicator": null,
+     "station": "station-0.5",
+     "t_over_rm": 0.5
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4635291465553283,
+     "refinement_indicator": null,
+     "station": "station-1",
+     "t_over_rm": 1.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4575146408686227,
+     "refinement_indicator": null,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.45453209767186903,
+     "refinement_indicator": null,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46070742268530124,
+     "refinement_indicator": null,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.465984452923476,
+     "refinement_indicator": null,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4663583730841948,
+     "refinement_indicator": null,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.464371335460277,
+     "refinement_indicator": null,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.45859502137220204,
+     "refinement_indicator": null,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4472346856367125,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.44329470889102923,
+     "refinement_indicator": null,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4378487924485754,
+     "refinement_indicator": null,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.435547503512906,
+     "refinement_indicator": null,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43342831902132567,
+     "refinement_indicator": null,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43117169633880154,
+     "refinement_indicator": null,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4258461907252063,
+     "refinement_indicator": null,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41928185383457584,
+     "refinement_indicator": null,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.41243470381593733,
+     "refinement_indicator": null,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.40434434177568335,
+     "refinement_indicator": null,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39730434229631467,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3939347062542931,
+     "refinement_indicator": null,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.38999491494397676,
+     "refinement_indicator": null,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.38967376617813726,
+     "refinement_indicator": null,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39117917412482245,
+     "refinement_indicator": null,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3933059455488627,
+     "refinement_indicator": null,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.395503643749466,
+     "refinement_indicator": null,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3972243573524878,
+     "refinement_indicator": null,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39962736749604866,
+     "refinement_indicator": null,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3968997164065761,
+     "refinement_indicator": null,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39570146812082835,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39471030117504075,
+     "refinement_indicator": null,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3968669015873432,
+     "refinement_indicator": null,
+     "station": "station-16",
+     "t_over_rm": 15.999999999999414
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39689308205295903,
+     "refinement_indicator": null,
+     "station": "station-16.5",
+     "t_over_rm": 16.499999999999492
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39988190409084856,
+     "refinement_indicator": null,
+     "station": "station-17",
+     "t_over_rm": 16.99999999999957
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3996308212679681,
+     "refinement_indicator": null,
+     "station": "station-17.5",
+     "t_over_rm": 17.49999999999965
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39757464488178157,
+     "refinement_indicator": null,
+     "station": "station-18",
+     "t_over_rm": 17.999999999999726
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.393882515528083,
+     "refinement_indicator": null,
+     "station": "station-18.5",
+     "t_over_rm": 18.499999999999805
+    }
+   ]
+  },
+  {
+   "case": "mu-1.040-eps-0.010",
+   "epsilon": 0.01,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.46861469906556114,
+   "isotropy_index_last": 0.3822182052053714,
+   "isotropy_index_max": 0.46861469906556114,
+   "layout": "nsc-rn-neutral-family-v1",
+   "mass_over_rm": 1.04,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.46861469906556114,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.3822182052053714,
+    "tail_time": 19.49999999999996,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 40,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46861469906556114,
+     "refinement_indicator": null,
+     "station": "station-0",
+     "t_over_rm": 0.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46644191870816537,
+     "refinement_indicator": null,
+     "station": "station-0.5",
+     "t_over_rm": 0.5
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46351992242044243,
+     "refinement_indicator": null,
+     "station": "station-1",
+     "t_over_rm": 1.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.45747935453412275,
+     "refinement_indicator": null,
+     "station": "station-1.5",
+     "t_over_rm": 1.499999999999945
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4545679461722323,
+     "refinement_indicator": null,
+     "station": "station-2",
+     "t_over_rm": 1.9999999999998899
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4607457258310575,
+     "refinement_indicator": null,
+     "station": "station-2.5",
+     "t_over_rm": 2.499999999999835
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4660318614882958,
+     "refinement_indicator": null,
+     "station": "station-3",
+     "t_over_rm": 2.9999999999997797
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.46631031104481613,
+     "refinement_indicator": null,
+     "station": "station-3.5",
+     "t_over_rm": 3.4999999999997247
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4643552075964248,
+     "refinement_indicator": null,
+     "station": "station-4",
+     "t_over_rm": 3.9999999999996696
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4584065365661151,
+     "refinement_indicator": null,
+     "station": "station-4.5",
+     "t_over_rm": 4.499999999999659
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4471296684675688,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 4.999999999999648
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4432610224746312,
+     "refinement_indicator": null,
+     "station": "station-5.5",
+     "t_over_rm": 5.499999999999638
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4377833992888752,
+     "refinement_indicator": null,
+     "station": "station-6",
+     "t_over_rm": 5.999999999999627
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4353504396728436,
+     "refinement_indicator": null,
+     "station": "station-6.5",
+     "t_over_rm": 6.499999999999616
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.43288979359201923,
+     "refinement_indicator": null,
+     "station": "station-7",
+     "t_over_rm": 6.999999999999606
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4309891777996198,
+     "refinement_indicator": null,
+     "station": "station-7.5",
+     "t_over_rm": 7.499999999999595
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.42543931109758304,
+     "refinement_indicator": null,
+     "station": "station-8",
+     "t_over_rm": 7.999999999999584
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4204297686712373,
+     "refinement_indicator": null,
+     "station": "station-8.5",
+     "t_over_rm": 8.499999999999574
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4109810943207038,
+     "refinement_indicator": null,
+     "station": "station-9",
+     "t_over_rm": 8.999999999999563
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4040652877850657,
+     "refinement_indicator": null,
+     "station": "station-9.5",
+     "t_over_rm": 9.499999999999552
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3983770116144612,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 9.999999999999542
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39480306031285084,
+     "refinement_indicator": null,
+     "station": "station-10.5",
+     "t_over_rm": 10.499999999999531
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.391235259378834,
+     "refinement_indicator": null,
+     "station": "station-11",
+     "t_over_rm": 10.99999999999952
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39059671369101684,
+     "refinement_indicator": null,
+     "station": "station-11.5",
+     "t_over_rm": 11.49999999999951
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3918434354300717,
+     "refinement_indicator": null,
+     "station": "station-12",
+     "t_over_rm": 11.999999999999499
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3931569289424835,
+     "refinement_indicator": null,
+     "station": "station-12.5",
+     "t_over_rm": 12.499999999999488
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3965916367300763,
+     "refinement_indicator": null,
+     "station": "station-13",
+     "t_over_rm": 12.999999999999478
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3967570385886156,
+     "refinement_indicator": null,
+     "station": "station-13.5",
+     "t_over_rm": 13.499999999999467
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3988320876284277,
+     "refinement_indicator": null,
+     "station": "station-14",
+     "t_over_rm": 13.999999999999456
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3967300906647922,
+     "refinement_indicator": null,
+     "station": "station-14.5",
+     "t_over_rm": 14.499999999999446
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39532358267314543,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 14.999999999999435
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.393608443484522,
+     "refinement_indicator": null,
+     "station": "station-15.5",
+     "t_over_rm": 15.499999999999424
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3942641007482581,
+     "refinement_indicator": null,
+     "station": "station-16",
+     "t_over_rm": 15.999999999999414
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39779506228132444,
+     "refinement_indicator": null,
+     "station": "station-16.5",
+     "t_over_rm": 16.499999999999492
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3992778071914725,
+     "refinement_indicator": null,
+     "station": "station-17",
+     "t_over_rm": 16.99999999999957
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4001812993005409,
+     "refinement_indicator": null,
+     "station": "station-17.5",
+     "t_over_rm": 17.49999999999965
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3970241398432938,
+     "refinement_indicator": null,
+     "station": "station-18",
+     "t_over_rm": 17.999999999999726
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3919909575762472,
+     "refinement_indicator": null,
+     "station": "station-18.5",
+     "t_over_rm": 18.499999999999805
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3881852444767139,
+     "refinement_indicator": null,
+     "station": "station-19",
+     "t_over_rm": 18.999999999999883
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3822182052053714,
+     "refinement_indicator": null,
+     "station": "station-19.5",
+     "t_over_rm": 19.49999999999996
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "cases": 9,
+  "layouts": [
+   "nsc-rn-neutral-family-v1",
+   "nsc-rn-inward-march-v1"
+  ],
+  "total_stations": 189
+ },
+ "creation_only": true,
+ "limits": [
+  "the index measures the matter balance, not the metric anisotropy",
+  "every recorded station is driven: the shell is still falling, so a trend here is a statement about the driven phase only"
+ ],
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "registration": {
+  "decay_fraction": 0.5,
+  "isotropic_band": 0.05,
+  "refinement_multiple": 3.0,
+  "written": "before the relaxation run exists"
+ },
+ "schema": "NSC-RN-ISOTROPY-v1",
+ "sources": [
+  {
+   "kind": "prepare.json",
+   "layout": "nsc-rn-neutral-family-v1",
+   "sha256": "2548efd700a265121f080a27cc25e5b7022bb687100f6933139aebb424fe379d"
+  },
+  {
+   "kind": "case prepare.json set",
+   "layout": "nsc-rn-inward-march-v1",
+   "sha256": "89fe434eee179391dcf80a54ec36f1d719e66c664f6f27ebf3cb02db857f856a"
+  }
+ ],
+ "summary": {
+  "nsc-rn-inward-march-v1/mu-1.002-eps-0.001": {
+   "first": 0.4467406088366858,
+   "last": 0.4059940445369783,
+   "max": 0.4467406088366858,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-inward-march-v1/mu-1.010-eps-0.001": {
+   "first": 0.446606687552673,
+   "last": 0.39530638844139154,
+   "max": 0.446606687552673,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-inward-march-v1/mu-1.040-eps-0.001": {
+   "first": 0.44467481164986866,
+   "last": 0.3839067457409247,
+   "max": 0.44467481164986866,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-neutral-family-v1/mu-1.002-eps-0.001": {
+   "first": 0.4674812375587237,
+   "last": 0.42896709324368093,
+   "max": 0.4674812375587237,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-neutral-family-v1/mu-1.002-eps-0.010": {
+   "first": 0.4674812375587237,
+   "last": 0.4292686501410007,
+   "max": 0.4674812375587237,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-neutral-family-v1/mu-1.010-eps-0.001": {
+   "first": 0.4674740049550471,
+   "last": 0.40910005082179124,
+   "max": 0.4674740049550471,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-neutral-family-v1/mu-1.010-eps-0.010": {
+   "first": 0.4674740049550471,
+   "last": 0.4105340840221622,
+   "max": 0.4674740049550471,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-neutral-family-v1/mu-1.040-eps-0.001": {
+   "first": 0.46861469906556114,
+   "last": 0.393882515528083,
+   "max": 0.46861469906556114,
+   "registered_verdict": "no_relaxation_observed"
+  },
+  "nsc-rn-neutral-family-v1/mu-1.040-eps-0.010": {
+   "first": 0.46861469906556114,
+   "last": 0.3822182052053714,
+   "max": 0.46861469906556114,
+   "registered_verdict": "no_relaxation_observed"
+  }
+ }
+}

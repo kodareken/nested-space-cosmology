@@ -1,0 +1,215 @@
+{
+ "api_version": "nsc-rn-two-ends-v1",
+ "cases": [
+  {
+   "case": "mu-1.002-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "mass_over_rm": 1.002,
+   "quality_ratio_inner_over_outer_last": 21.083927847693616,
+   "room_quality_inner_last": 0.004173395825915883,
+   "room_quality_outer_last": 0.00019794204647557707,
+   "station_count": 4,
+   "stations": [
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.12500488132493,
+     "quality_ratio_inner_over_outer": 21.094444321097136,
+     "room_quality_at_r_plus": 0.0037115183899812374,
+     "room_quality_inner": 0.004175476305856137,
+     "room_quality_mid": 0.00035718486454847163,
+     "room_quality_outer": 0.0001979419909004253,
+     "station": "station-5",
+     "t_over_rm": 5.0,
+     "trap_radius": 1.0660402128256534
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.1249477627148374,
+     "quality_ratio_inner_over_outer": 21.084436474524065,
+     "room_quality_at_r_plus": 0.003709946341688362,
+     "room_quality_inner": 0.004173495836874419,
+     "room_quality_mid": 0.00035718463292680556,
+     "room_quality_outer": 0.00019794201480875134,
+     "station": "station-10",
+     "t_over_rm": 10.0,
+     "trap_radius": 1.0797995113267693
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.1249413165137578,
+     "quality_ratio_inner_over_outer": 21.08401387727803,
+     "room_quality_at_r_plus": 0.0037098936713819745,
+     "room_quality_inner": 0.004173412670810497,
+     "room_quality_mid": 0.0003571845897384997,
+     "room_quality_outer": 0.00019794203774965878,
+     "station": "station-15",
+     "t_over_rm": 15.0,
+     "trap_radius": 1.080224737908815
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.1249409641009924,
+     "quality_ratio_inner_over_outer": 21.083927847693616,
+     "room_quality_at_r_plus": 0.0037098798595632024,
+     "room_quality_inner": 0.004173395825915883,
+     "room_quality_mid": 0.00035718463911617397,
+     "room_quality_outer": 0.00019794204647557707,
+     "station": "station-20",
+     "t_over_rm": 20.0,
+     "trap_radius": 1.0803396424940488
+    }
+   ]
+  },
+  {
+   "case": "mu-1.010-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "mass_over_rm": 1.01,
+   "quality_ratio_inner_over_outer_last": 22.517318627976667,
+   "room_quality_inner_last": 0.009979051939853332,
+   "room_quality_outer_last": 0.0004431723023830576,
+   "station_count": 4,
+   "stations": [
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.2980415654837665,
+     "quality_ratio_inner_over_outer": 22.529386939901915,
+     "room_quality_at_r_plus": 0.0076918937001836385,
+     "room_quality_inner": 0.009984397740121092,
+     "room_quality_mid": 0.0008009649120855135,
+     "room_quality_outer": 0.00044317218958309394,
+     "station": "station-5",
+     "t_over_rm": 5.0,
+     "trap_radius": 1.1521856469592069
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.2978957398720652,
+     "quality_ratio_inner_over_outer": 22.51794660122192,
+     "room_quality_at_r_plus": 0.007688852368562962,
+     "room_quality_inner": 0.009979328733663107,
+     "room_quality_mid": 0.0008009643761467211,
+     "room_quality_outer": 0.0004431722354791261,
+     "station": "station-10",
+     "t_over_rm": 10.0,
+     "trap_radius": 1.1593220791391126
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.297879716134595,
+     "quality_ratio_inner_over_outer": 22.517416113207876,
+     "room_quality_at_r_plus": 0.007688766984102493,
+     "room_quality_inner": 0.00997909471075199,
+     "room_quality_mid": 0.0008009642659953869,
+     "room_quality_outer": 0.000443172283204316,
+     "station": "station-15",
+     "t_over_rm": 15.0,
+     "trap_radius": 1.159518878674978
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.29787880849105,
+     "quality_ratio_inner_over_outer": 22.517318627976667,
+     "room_quality_at_r_plus": 0.007688739406613207,
+     "room_quality_inner": 0.009979051939853332,
+     "room_quality_mid": 0.0008009643710168728,
+     "room_quality_outer": 0.0004431723023830576,
+     "station": "station-20",
+     "t_over_rm": 20.0,
+     "trap_radius": 1.1595833492195817
+    }
+   ]
+  },
+  {
+   "case": "mu-1.040-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "mass_over_rm": 1.04,
+   "quality_ratio_inner_over_outer_last": 25.161408625040064,
+   "room_quality_inner_last": 0.022380036566193553,
+   "room_quality_outer_last": 0.0008894588097075554,
+   "station_count": 4,
+   "stations": [
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.6642741197823003,
+     "quality_ratio_inner_over_outer": 25.17673715466259,
+     "room_quality_at_r_plus": 0.013455516988434942,
+     "room_quality_inner": 0.02239366869214335,
+     "room_quality_mid": 0.0016086627954259942,
+     "room_quality_outer": 0.0008894587314701408,
+     "station": "station-5",
+     "t_over_rm": 5.0,
+     "trap_radius": 1.3259540521885276
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.6639069820745693,
+     "quality_ratio_inner_over_outer": 25.162293533425903,
+     "room_quality_at_r_plus": 0.013450764521082346,
+     "room_quality_inner": 0.022380821000869817,
+     "room_quality_mid": 0.001608661435163937,
+     "room_quality_outer": 0.0008894587041971693,
+     "station": "station-10",
+     "t_over_rm": 10.0,
+     "trap_radius": 1.3302449395286438
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.6638689000919664,
+     "quality_ratio_inner_over_outer": 25.1615335765368,
+     "room_quality_at_r_plus": 0.013450667179570152,
+     "room_quality_inner": 0.0223801468055745,
+     "room_quality_mid": 0.0016086611406595855,
+     "room_quality_outer": 0.0008894587739454819,
+     "station": "station-15",
+     "t_over_rm": 15.0,
+     "trap_radius": 1.3303321030546327
+    },
+    {
+     "dimensionless_invariant_is_per_room": true,
+     "quality_ratio_inner_over_at_r_plus": 1.6638663895574415,
+     "quality_ratio_inner_over_outer": 25.161408625040064,
+     "room_quality_at_r_plus": 0.01345062121974003,
+     "room_quality_inner": 0.022380036566193553,
+     "room_quality_mid": 0.0016086613162047858,
+     "room_quality_outer": 0.0008894588097075554,
+     "station": "station-20",
+     "t_over_rm": 20.0,
+     "trap_radius": 1.330373528959007
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "cases": 3,
+  "family_complete": false,
+  "total_stations": 12
+ },
+ "creation_only": true,
+ "definitions": {
+  "omega_cutoff": "(N + |beta|)/spacing, the CFL resolution of the room",
+  "omega_zero": "N/r, the angular ground of the room",
+  "room_quality": "omega_zero / omega_cutoff, dimensionless per-room number",
+  "scale_invariant_expression": "N^2 spacing / (r (N + |beta|))"
+ },
+ "family_source": "nsc-rn-inward-march-v1",
+ "family_source_kind": "case prepare.json set",
+ "family_source_sha256": "89fe434eee179391dcf80a54ec36f1d719e66c664f6f27ebf3cb02db857f856a",
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "reading": "The bottom and top ends of a room are both set by the local space. For the recorded states the room quality is many orders of magnitude larger at the inner edge than at the outer boundary in this flat-slice gauge, so the recorded states hold a sharper room at the bottom than at the top. This is a reading of measured numbers, not a derivation of Planck's constant or of absolute zero.",
+ "schema": "NSC-RN-TWO-ENDS-v1",
+ "summary": {
+  "quality_ratio_inner_over_outer_last": {
+   "mu-1.002-eps-0.001": 21.083927847693616,
+   "mu-1.010-eps-0.001": 22.517318627976667,
+   "mu-1.040-eps-0.001": 25.161408625040064
+  },
+  "room_quality_inner_last": {
+   "mu-1.002-eps-0.001": 0.004173395825915883,
+   "mu-1.010-eps-0.001": 0.009979051939853332,
+   "mu-1.040-eps-0.001": 0.022380036566193553
+  }
+ }
+}

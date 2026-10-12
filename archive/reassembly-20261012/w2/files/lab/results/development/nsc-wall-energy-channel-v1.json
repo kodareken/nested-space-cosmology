@@ -1,0 +1,161 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "energy_balance_lag": {
+        "-1": {
+          "correlation": 0.40290064976860496,
+          "pairs": 16
+        },
+        "-2": {
+          "correlation": 0.4112776761554767,
+          "pairs": 15
+        },
+        "0": {
+          "correlation": 0.41223196982975313,
+          "pairs": 16
+        },
+        "1": {
+          "correlation": 0.3192754379972431,
+          "pairs": 15
+        },
+        "2": {
+          "correlation": 0.25445656949932816,
+          "pairs": 14
+        }
+      },
+      "mass_energy_at_wall_stations": {
+        "correlation": -0.9902059186772755,
+        "pairs": 10
+      },
+      "mass_energy_cross_lag": {
+        "-1": {
+          "correlation": -0.9621476762265931,
+          "pairs": 15
+        },
+        "0": {
+          "correlation": -0.9912715126593471,
+          "pairs": 16
+        },
+        "1": {
+          "correlation": -0.9973931118415466,
+          "pairs": 15
+        }
+      },
+      "mass_energy_same_station": {
+        "correlation": -0.9912715126593471,
+        "pairs": 16
+      },
+      "stations": 17
+    },
+    "mu-1.010-eps-0.001": {
+      "energy_balance_lag": {
+        "-1": {
+          "correlation": 0.28880744491944366,
+          "pairs": 31
+        },
+        "-2": {
+          "correlation": 0.2292249226059542,
+          "pairs": 30
+        },
+        "0": {
+          "correlation": 0.28523964109599736,
+          "pairs": 31
+        },
+        "1": {
+          "correlation": 0.28428180501958716,
+          "pairs": 30
+        },
+        "2": {
+          "correlation": 0.28115635687512985,
+          "pairs": 29
+        }
+      },
+      "mass_energy_at_wall_stations": {
+        "correlation": -0.9845797582944146,
+        "pairs": 21
+      },
+      "mass_energy_cross_lag": {
+        "-1": {
+          "correlation": -0.8965987066519915,
+          "pairs": 30
+        },
+        "0": {
+          "correlation": -0.9840742661331967,
+          "pairs": 31
+        },
+        "1": {
+          "correlation": -0.9763061974599856,
+          "pairs": 30
+        }
+      },
+      "mass_energy_same_station": {
+        "correlation": -0.9840742661331967,
+        "pairs": 31
+      },
+      "stations": 32
+    },
+    "mu-1.040-eps-0.001": {
+      "energy_balance_lag": {
+        "-1": {
+          "correlation": 0.8437842247477401,
+          "pairs": 37
+        },
+        "-2": {
+          "correlation": 0.7727849624465745,
+          "pairs": 36
+        },
+        "0": {
+          "correlation": 0.8434666123879729,
+          "pairs": 37
+        },
+        "1": {
+          "correlation": 0.7843834815129204,
+          "pairs": 36
+        },
+        "2": {
+          "correlation": 0.6728071136540787,
+          "pairs": 35
+        }
+      },
+      "mass_energy_at_wall_stations": {
+        "correlation": -0.9732530116569954,
+        "pairs": 12
+      },
+      "mass_energy_cross_lag": {
+        "-1": {
+          "correlation": -0.905789606788263,
+          "pairs": 36
+        },
+        "0": {
+          "correlation": -0.9843188013560799,
+          "pairs": 37
+        },
+        "1": {
+          "correlation": -0.9766626460351288,
+          "pairs": 36
+        }
+      },
+      "mass_energy_same_station": {
+        "correlation": -0.9843188013560799,
+        "pairs": 37
+      },
+      "stations": 38
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "notes": [
+    "e' = consecutive difference of the recorded coupled_E_normal",
+    "the energy_balance lag index reuses the round-18 alignment convention; correlation is alignment evidence, not causality"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-WALL-ENERGY-CHANNEL-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_energy_channel.py": "d5105271dfcbf53803bede752e18ace095420e358671cee5f048262c402a3422",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

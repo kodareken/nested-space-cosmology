@@ -1,0 +1,22 @@
+{
+  "adjudicates": "nsc-t30-dual-forecast-v1.json",
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "the watch record is a snapshot at the moment of writing; later landings supersede its verdicts"
+  ],
+  "observation": {
+    "forecast_a_still_live": true,
+    "forecast_b_passed": true,
+    "minutes_elapsed": 57.3,
+    "station_25_present": false
+  },
+  "production_trajectory": false,
+  "reading": "the relaxation-rate forecast required a landing near fifty minutes; none came, so the v1-derived cost law governs the run until the directory says otherwise",
+  "schema": "NSC-T30-WATCH-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_watch.py": "ac1c3f4f8f2ec896797e0f78cb7305af815c662761efc817e7476bb44f264604",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

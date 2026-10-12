@@ -1,0 +1,52 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-march-wall-radii-v1.json": "d954141385475f0ea49ae7c05cfd0dd3440282373bb6f262f811b4b2e8868eb8",
+    "lab/results/development/nsc-q-decomposition-v1.json": "b1ddda0d9829b5913dd3b535fb3129bdf5cf84354d5a2cce2f8670546878ce9f",
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "notes": [
+    "inner edges are the march grid's edges from the Q-decomposition record; offsets are in r_m"
+  ],
+  "production_trajectory": false,
+  "reading": "the wall breathes wide on the shallow grid and hugs its deepest cell on the horizon-reaching grid; both effects are mu-ordered",
+  "rows": [
+    {
+      "amplitude_ratio_shallow_over_deep": 7.063986025169349,
+      "case": "mu-1.002-eps-0.001",
+      "deep_amplitude_r_plus": 0.1300624460358062,
+      "family_amplitude_r_plus": 0.9187593011962776,
+      "inner_edge_rm": 0.9466464285714281,
+      "r_plus": 1.065277168078237,
+      "wall_min_offset_above_inner_edge": 0.011692853976913664,
+      "wall_min_rm": 0.9583392825483418
+    },
+    {
+      "amplitude_ratio_shallow_over_deep": 17.35309520433508,
+      "case": "mu-1.010-eps-0.001",
+      "deep_amplitude_r_plus": 0.050353804912333544,
+      "family_amplitude_r_plus": 0.8737943705442395,
+      "inner_edge_rm": 0.8859691252144084,
+      "r_plus": 1.1517744687875837,
+      "wall_min_offset_above_inner_edge": 0.08859348198970829,
+      "wall_min_rm": 0.9745626072041167
+    },
+    {
+      "amplitude_ratio_shallow_over_deep": 40.11970664280441,
+      "case": "mu-1.040-eps-0.001",
+      "deep_amplitude_r_plus": 0.014053327025458695,
+      "family_amplitude_r_plus": 0.5638153576167979,
+      "inner_edge_rm": 0.7903225806451606,
+      "r_plus": 1.325657137141717,
+      "wall_min_offset_above_inner_edge": 0.07300034040687642,
+      "wall_min_rm": 0.863322921052037
+    }
+  ],
+  "schema": "NSC-WALL-DOMAIN-LAW-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_domain_law.py": "05e7623ddd39aa4baee43143775128806214907e5f926bd48086ea55cec1f3bf",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

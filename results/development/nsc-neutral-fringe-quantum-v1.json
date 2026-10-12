@@ -1,0 +1,74 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "charged_reference": {
+    "points": 876,
+    "quantum": 0.00131,
+    "quantum_times_points": 1.14756
+  },
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "fixed 1.04 probe across the fine-mu grids; seam 4 is the 12.5%-cap partner of the charged scan"
+  ],
+  "production_trajectory": false,
+  "reading": "chart-free quantization compares quantum * points: the seam node's magnitude in units of the mean node",
+  "schema": "NSC-NEUTRAL-FRINGE-QUANTUM-v1",
+  "seams": {
+    "4.0": {
+      "active_steps": [
+        -0.0002932800427338095,
+        -0.0002932938989436418,
+        -0.00029331545377328516
+      ],
+      "quantum": 0.00029331545377328516,
+      "quantum_times_points": 1.150089894245051,
+      "series": [
+        0.11158498453819393,
+        0.11158730761293766,
+        0.11129402757020385,
+        0.1110007336712602,
+        0.1110030397738722,
+        0.11070972432009892,
+        0.11071202114898086
+      ],
+      "steps": [
+        2.3230747437236188e-06,
+        -0.0002932800427338095,
+        -0.0002932938989436418,
+        2.3061026119958195e-06,
+        -0.00029331545377328516,
+        2.296828881948043e-06
+      ]
+    },
+    "8.0": {
+      "active_steps": [
+        -0.00029016695734690456,
+        -0.00029019273981095717,
+        -0.0002902185464508933
+      ],
+      "quantum": 0.0002902185464508933,
+      "quantum_times_points": 1.1379469206339525,
+      "series": [
+        0.2611530049893517,
+        0.26115844254086773,
+        0.2608682755835208,
+        0.2608736996766288,
+        0.26058350693681787,
+        0.2605889175288061,
+        0.2602986989823552
+      ],
+      "steps": [
+        5.437551516052075e-06,
+        -0.00029016695734690456,
+        5.4240931079974075e-06,
+        -0.00029019273981095717,
+        5.410591988219693e-06,
+        -0.0002902185464508933
+      ]
+    }
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_neutral_fringe_quantum.py": "9b133f7f0b4ea6bc5bd5842aeb09bc2ee19916e1c9bff4fbbbcc2b91e5bcfe3d",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

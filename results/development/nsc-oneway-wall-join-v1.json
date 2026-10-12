@@ -1,0 +1,41 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-continuation-station-closure-v1.json": "6997865c60ddbf3fea354de1b7bb208cda4b84fbe4bc5e53f1d8339653402b34",
+    "lab/results/development/nsc-rn-oneway-v3.json": "61d02204bc67f05379767860e0c133114e8f3e5510a9d605ef7107b3a8b59533",
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "mass_book": {
+    "outer_intervals": 20,
+    "positive_outer_ticks": 0,
+    "verdict_from_closure": "LATE_CLOSURE_HOLDS"
+  },
+  "notes": [
+    "frequency bands and kinetic rates share 1/t units but are different instruments; the containment reading is hypothesis-labeled",
+    "the mass book shows no positive tick in any of the recorded continuation intervals"
+  ],
+  "oneway_positive_cells_at_mu_1040": [
+    {
+      "band": [
+        0.0,
+        0.5
+      ],
+      "exterior_min_direction": 0.015565465043151587,
+      "interior_max_direction": 0.2827610518916909
+    }
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-ONEWAY-WALL-JOIN-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_oneway_wall_join.py": "650baaf5be27365af5df89687eb5f40a9c6d3b894c2aefcb0eff60cce2750a39",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "TRANSIENT_BAND_CONTAINS_WALL_CLOCK",
+  "wall_rates": {
+    "fall": 0.24163515326434193,
+    "rise": 0.13066197176516278
+  },
+  "wall_rates_inside_low_band": true
+}

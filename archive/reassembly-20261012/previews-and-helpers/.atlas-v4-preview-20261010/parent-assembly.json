@@ -1,0 +1,68 @@
+{
+  "admission": {
+    "borrowed": "smooth vacuum AE-end gluing plus locality of constraints",
+    "budget": "theorem application only, no new elliptic solve",
+    "decides": "the theorem acts only on its smooth vacuum end; the body is reattached on an identical open overlap",
+    "finite_domain": "two selected ends and prescribed retained regions",
+    "missing": "how to preserve a verified distributional body while using smooth gluing inputs",
+    "stop": "no smooth vacuum end or no identical open overlap",
+    "unlocks": "a shared initial-data parent containing the first sourced interior"
+  },
+  "bodies": [
+    {
+      "id": "A",
+      "mass_over_ell": 0.4,
+      "open_overlap_beyond_cut_required": true,
+      "other_AE_ends": 0,
+      "record": "connection-slice.json",
+      "retained_right_R_cut_over_ell": 4.0,
+      "selected_end": "right Schwarzschild AE end",
+      "source": "verified fixed-tension wall and de Sitter cap"
+    },
+    {
+      "cosmological_child_attached": false,
+      "id": "B",
+      "mass_over_ell": 0.6,
+      "other_AE_ends": 1,
+      "selected_end": "one chosen AE end",
+      "source": "complete time-symmetric vacuum Schwarzschild bridge"
+    }
+  ],
+  "conclusions": {
+    "explicit_connector_metric": false,
+    "formation_history": false,
+    "global_shell_evolution": false,
+    "new_to_world_claim": false,
+    "one_sourced_interior_connected": true,
+    "perturbation_stability": false,
+    "shared_initial_data_existence": true,
+    "sibling_signalling": false,
+    "unchanged_BL_parent": false
+  },
+  "hypotheses": {
+    "ADM_four_momenta": "(M_A,0,0,0), (M_B,0,0,0): future timelike",
+    "end_deformations_only": true,
+    "open_overlap": "identical h,K, hence no extra jump or matter layer at reattachment",
+    "selected_inputs_smooth_vacuum_AE": true,
+    "source_remainder_class": "piecewise smooth h,K satisfying distributional constraints at A wall",
+    "whole_body_smooth_corollary_used": false
+  },
+  "schema": "nsc-atlas-parent-assembly-v1",
+  "separation": {
+    "BL_d12_certified": false,
+    "domain": "sufficiently large under the published existence theorem",
+    "numeric_threshold": null
+  },
+  "source": {
+    "owner": "lab/docs/nsc-atlas-connection-gluing.md",
+    "read": "Theorem1, following multiple-end discussion and proof support of deformations",
+    "url": "https://arxiv.org/html/1004.1355v1"
+  },
+  "status": "END_ONLY_GLUING_WITH_VERIFIED_SOURCED_BODY",
+  "topology": {
+    "designated_common_outer_AE_ends": 1,
+    "retained_other_AE_ends": 1,
+    "second_cosmological_child_established": false,
+    "total_AE_ends": 2
+  }
+}

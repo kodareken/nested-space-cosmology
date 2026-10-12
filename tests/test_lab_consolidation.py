@@ -50,19 +50,19 @@ RECOVERED_CONTENT_PINS = (
 
 def isolated_cache(tmp_path):
     subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
-    shutil.copytree(ROOT / "lab/.source-history", tmp_path / "lab/.source-history")
+    shutil.copytree(ROOT / "archive/source-history", tmp_path / "archive/source-history")
     return tmp_path
 
 
 def test_source_replay_without_old_repository(tmp_path):
     root = isolated_cache(tmp_path)
-    manifest = json.loads((root / "lab/.source-history/manifest.json").read_text())
+    manifest = json.loads((root / "archive/source-history/manifest.json").read_text())
     objects = manifest["objects"]
     pins = manifest["pins"]
     count = snapshot.check_objects(root)
     disk = {
         path.parent.name + path.name
-        for path in (root / "lab/.source-history/objects").glob("*/*")
+        for path in (root / "archive/source-history/objects").glob("*/*")
         if path.is_file()
     }
     assert count == len(objects)
@@ -88,7 +88,7 @@ def test_source_replay_without_old_repository(tmp_path):
 
 def test_corrupt_source_object_rejected(tmp_path):
     root = isolated_cache(tmp_path)
-    path = next((root / "lab/.source-history/objects").glob("*/*"))
+    path = next((root / "archive/source-history/objects").glob("*/*"))
     path.write_bytes(b"corrupt")
     with pytest.raises(Exception):
         snapshot.check_objects(root)
@@ -96,29 +96,31 @@ def test_corrupt_source_object_rejected(tmp_path):
 
 def test_missing_source_object_rejected(tmp_path):
     root = isolated_cache(tmp_path)
-    next((root / "lab/.source-history/objects").glob("*/*")).unlink()
+    next((root / "archive/source-history/objects").glob("*/*")).unlink()
     with pytest.raises(FileNotFoundError):
         snapshot.check_objects(root)
 
 
-def test_environment_selects_lab_only():
+def test_environment_selects_one_root_package():
     env = launcher.environment()
-    assert env["PYTHONPATH"].split(__import__("os").pathsep) == [
-        str(ROOT / "lab/src"), str(ROOT / "lab/scripts")]
-    assert env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] == str(ROOT / "lab/.source-history/objects")
+    assert env["PYTHONPATH"].split(__import__("os").pathsep)[:2] == [
+        str(ROOT / "src"), str(ROOT / "scripts")]
+    assert env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] == str(ROOT / "archive/source-history/objects")
 
 
 def test_snapshot_rejects_modified_payload(tmp_path):
-    (tmp_path / "lab").mkdir()
+    (tmp_path / "results/reassembly").mkdir(parents=True)
     (tmp_path / "docs").mkdir()
-    (tmp_path / "lab/data.json").write_bytes(b"modified")
-    manifest = {"schema": "NSC-CONSOLIDATED-LAB-v1", "files": [
-        {"path": "lab/data.json", "bytes": 8, "sha256": hashlib.sha256(b"original").hexdigest()}],
-        "intentionally_omitted": []}
-    (tmp_path / "docs/lab-snapshot.json").write_text(json.dumps(manifest))
-    with pytest.raises(ValueError, match="snapshot mismatch"):
+    (tmp_path / "data.json").write_bytes(b"modified")
+    sha = hashlib.sha256(b"original").hexdigest()
+    imported = {"schema": "NSC-CONSOLIDATED-LAB-v1", "files": [
+        {"path": "lab/data.json", "bytes": 8, "sha256": sha}], "intentionally_omitted": []}
+    migration = {"schema": "NSC-REASSEMBLY-v1", "rows": [
+        {"origin": "lab", "original_path": "lab/data.json", "destination": "data.json", "bytes": 8, "sha256": sha}]}
+    (tmp_path / "docs/lab-snapshot.json").write_text(json.dumps(imported))
+    (tmp_path / "results/reassembly/manifest.json").write_text(json.dumps(migration))
+    with pytest.raises(ValueError, match="original bytes unavailable"):
         snapshot.check_snapshot(tmp_path)
-
 
 def test_snapshot_rejects_escaping_path(tmp_path):
     with pytest.raises(ValueError, match="invalid snapshot path"):
@@ -149,3 +151,14 @@ def test_successor_cannot_silently_import_omitted_payload(tmp_path):
     with pytest.raises(ValueError, match="current lab files"):
         updater.update(tmp_path, ["lab/old.npz"], "parent")
     assert target.read_bytes() == before
+
+
+def test_old_update_cli_is_retired_with_current_guidance(capsys):
+    with pytest.raises(SystemExit) as exc:
+        updater.main(["lab/value.txt"])
+    assert exc.value.code == 2
+    assert "reassemble_repository.py --record-successors" in capsys.readouterr().err
+    with pytest.raises(SystemExit) as help_exit:
+        updater.main(["--help"])
+    assert help_exit.value.code == 0
+    assert "cannot rewrite" in capsys.readouterr().out

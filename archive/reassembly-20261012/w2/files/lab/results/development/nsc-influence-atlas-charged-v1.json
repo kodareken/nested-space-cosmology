@@ -1,0 +1,130 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "instrument_a_tangent_lapse": [
+    {
+      "interval": [
+        3.083368932462969,
+        28.352671451951736
+      ],
+      "l1_share": 0.26464866367391654
+    },
+    {
+      "interval": [
+        28.352671451951736,
+        56.70534290390347
+      ],
+      "l1_share": 0.2969658146604675
+    },
+    {
+      "interval": [
+        56.70534290390347,
+        85.0580143558552
+      ],
+      "l1_share": 0.29694265245134027
+    },
+    {
+      "interval": [
+        85.0580143558552,
+        113.41068580780694
+      ],
+      "l1_share": 0.14144286921427568
+    }
+  ],
+  "instrument_a_tangent_mass": [
+    {
+      "interval": [
+        3.083368932462969,
+        28.352671451951736
+      ],
+      "l1_share": 0.0
+    },
+    {
+      "interval": [
+        28.352671451951736,
+        56.70534290390347
+      ],
+      "l1_share": 0.0
+    },
+    {
+      "interval": [
+        56.70534290390347,
+        85.0580143558552
+      ],
+      "l1_share": 2.3606205522344054e-05
+    },
+    {
+      "interval": [
+        85.0580143558552,
+        113.41068580780694
+      ],
+      "l1_share": 0.9999763937944777
+    }
+  ],
+  "instrument_b_infall_time": [
+    {
+      "interval": [
+        4.081985387535055,
+        28.352671451951736
+      ],
+      "l1_share": 0.24676020829997147
+    },
+    {
+      "interval": [
+        28.352671451951736,
+        56.70534290390347
+      ],
+      "l1_share": 0.2543485925419582
+    },
+    {
+      "interval": [
+        56.70534290390347,
+        85.0580143558552
+      ],
+      "l1_share": 0.249582256620093
+    },
+    {
+      "interval": [
+        85.0580143558552,
+        113.41068580780694
+      ],
+      "l1_share": 0.24768860897752856
+    }
+  ],
+  "neutral_round12_reference": {
+    "infall_shares": [
+      0.2415,
+      0.2564,
+      0.2514,
+      0.2491
+    ],
+    "lapse_shares": [
+      0.261,
+      0.2991,
+      0.299,
+      0.1409
+    ]
+  },
+  "notes": [
+    "the tangent runs the neutral kappa=1 state on the dyonic chart; its ownership of the chart response is unchanged",
+    "cap-fraction edges make the comparison scale-free across charts"
+  ],
+  "plateau_variation_below_source": 0.0016063816728395346,
+  "production_trajectory": false,
+  "schema": "NSC-INFLUENCE-ATLAS-CHARGED-v1",
+  "slice": {
+    "A": 0.04501936182826115,
+    "C_F": 0.01125484045706527,
+    "Q_E": 4.0,
+    "cap": 113.41068580780694,
+    "mass_over_total_radius": 1.01,
+    "q_mag": 1.0,
+    "r_m_tot": 3.544083931493967,
+    "r_plus": 4.081985387535055
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_influence_atlas_charged.py": "80d6a9b14632662ba993fce21e78fb5623fe23f71a4561c08c1e108ac247f629",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

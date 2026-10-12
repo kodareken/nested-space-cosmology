@@ -1,0 +1,54 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "fall_rate": -0.34823941255020197,
+      "fall_times_sqrt_gap": -0.12388434716479386,
+      "horizon_gap": 0.12655433615647382,
+      "mass_over_rm": 1.002,
+      "r_minus": 0.9387228319217631,
+      "r_plus": 1.065277168078237,
+      "rise_rate": 0.29902016427183,
+      "rise_times_sqrt_gap": 0.10637485736794611
+    },
+    "mu-1.010-eps-0.001": {
+      "fall_rate": -0.3065512890887465,
+      "fall_times_sqrt_gap": -0.16323645660622613,
+      "horizon_gap": 0.2835489375751674,
+      "mass_over_rm": 1.01,
+      "r_minus": 0.8682255312124163,
+      "r_plus": 1.1517744687875837,
+      "rise_rate": 0.18244065140986887,
+      "rise_times_sqrt_gap": 0.0971483942070689
+    },
+    "mu-1.040-eps-0.001": {
+      "fall_rate": -0.24163515326434193,
+      "fall_times_sqrt_gap": -0.18264073808692524,
+      "horizon_gap": 0.5713142742834338,
+      "mass_over_rm": 1.04,
+      "r_minus": 0.7543428628582831,
+      "r_plus": 1.325657137141717,
+      "rise_rate": 0.13066197176516278,
+      "rise_times_sqrt_gap": 0.09876128800255965
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "fall_sqrt_gap_spread": 0.15610249628446357,
+  "input_sha256": {
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "notes": [
+    "Delta = r_+ - r_- of the vacuum chart at each mu; parameter-free"
+  ],
+  "production_trajectory": false,
+  "raw_fall_spread": 0.14679637755762537,
+  "raw_rise_spread": 0.34507079669107243,
+  "reading": "if rate ~ Delta^-1/2 the gapped spread collapses below the raw spread; if not, the near-horizon clock is refuted too",
+  "rise_sqrt_gap_spread": 0.039930717560075574,
+  "schema": "NSC-WALL-CLOCK-HORIZON-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_clock_horizon.py": "fa6af7971524b0df8ea0dedbe1c76d67ee4ef7371cbf331d151f36e70c4d11d0",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

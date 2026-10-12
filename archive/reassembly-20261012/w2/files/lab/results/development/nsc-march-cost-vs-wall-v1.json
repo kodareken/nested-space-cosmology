@@ -1,0 +1,44 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-march-duration-table-v1.json": "866d281f221b2e720c49a93c6ca51ea8725a60ca0e620bf6f0fd57b445affeaf",
+    "lab/results/development/nsc-wall-extinction-v1.json": "f42ccd779d74276b84e4d2fb70d13e956ce545f5a564e35d384a45844a3800a4"
+  },
+  "notes": [
+    "interval shrink is the first minus the last station interval"
+  ],
+  "production_trajectory": false,
+  "reading": "the march accelerates after the wall dies, and the amount of acceleration ranks with the earliness of the death where the death is inside the coverage; the light cases are unresolved",
+  "rows": [
+    {
+      "case": "mu-1.002-eps-0.001",
+      "death_rank": 2,
+      "interval_shrink_minutes": 1.0712514678637106,
+      "shrink_rank": 3,
+      "wall_extinction_t": 20.0
+    },
+    {
+      "case": "mu-1.010-eps-0.001",
+      "death_rank": 3,
+      "interval_shrink_minutes": 4.387662915388738,
+      "shrink_rank": 2,
+      "wall_extinction_t": 20.0
+    },
+    {
+      "case": "mu-1.040-eps-0.001",
+      "death_rank": 1,
+      "interval_shrink_minutes": 5.181408651669816,
+      "shrink_rank": 1,
+      "wall_extinction_t": 10.0
+    }
+  ],
+  "schema": "NSC-MARCH-COST-VS-WALL-v1",
+  "shrink_ranks_equal_death_ranks": false,
+  "source_sha256": {
+    "lab/scripts/derive_nsc_march_cost_vs_wall.py": "781a2a14bca09d98e3bc29ceb2f392f34fcc877cbb87a451d23b18ba5b51d5b9",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "PARTIAL: the only case whose wall dies inside the coverage (mu=1.040 at t=10) also shows the largest interval shrink; the two light cases both reach the coverage end and their shrinks do not rank by death - no full ordering is claimed"
+}

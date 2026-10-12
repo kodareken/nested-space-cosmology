@@ -1,0 +1,261 @@
+{
+  "all_intervals_close": true,
+  "api_version": "nsc-influence-chain-v1",
+  "beyond_family_coverage": {
+    "family_last_station": 18.5,
+    "max_residual_beyond": 1.5955119170296683e-15,
+    "new_intervals": [
+      {
+        "delta_excision": 1.369347941656586e-08,
+        "delta_mass": 1.3693480571674854e-08,
+        "delta_outer": -3.038147147039125e-08,
+        "interval": [
+          18.5,
+          19.0
+        ],
+        "residual": 1.1551089945660564e-15
+      },
+      {
+        "delta_excision": 5.830451886147496e-07,
+        "delta_mass": 5.830451890176391e-07,
+        "delta_outer": -2.4657389856839328e-08,
+        "interval": [
+          19.0,
+          19.5
+        ],
+        "residual": 4.0288952729561345e-16
+      },
+      {
+        "delta_excision": 1.1347261597428708e-06,
+        "delta_mass": 1.1347261581473589e-06,
+        "delta_outer": -1.935288576020472e-08,
+        "interval": [
+          19.5,
+          20.0
+        ],
+        "residual": -1.5955119170296683e-15
+      }
+    ]
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-neutral-continuation-v1/summary.json": "4542fd0aa2354404dd3a00911d5e8ebf2d9df708709469708b970eadfb0d437c"
+  },
+  "intervals": [
+    {
+      "delta_excision": 1.2935749862844287e-05,
+      "delta_mass": 1.2935749863274282e-05,
+      "delta_outer": -1.1737864937145749e-07,
+      "interval": [
+        10.0,
+        10.5
+      ],
+      "residual": 4.2999458160775106e-16
+    },
+    {
+      "delta_excision": 1.1789366814059492e-06,
+      "delta_mass": 1.1789366829439984e-06,
+      "delta_outer": -1.1672840089858526e-07,
+      "interval": [
+        10.5,
+        11.0
+      ],
+      "residual": 1.5380492018879366e-15
+    },
+    {
+      "delta_excision": -1.785266738370565e-06,
+      "delta_mass": -1.7852667357765029e-06,
+      "delta_outer": -1.1514637806525718e-07,
+      "interval": [
+        11.0,
+        11.5
+      ],
+      "residual": 2.594062117888818e-15
+    },
+    {
+      "delta_excision": 4.1443564666285466e-07,
+      "delta_mass": 4.144356491320167e-07,
+      "delta_outer": -1.1267542976799791e-07,
+      "interval": [
+        11.5,
+        12.0
+      ],
+      "residual": 2.4691620276184878e-15
+    },
+    {
+      "delta_excision": 3.754236818292317e-06,
+      "delta_mass": 3.7542368187537534e-06,
+      "delta_outer": -1.0937366551601039e-07,
+      "interval": [
+        12.0,
+        12.5
+      ],
+      "residual": 4.614364446098307e-16
+    },
+    {
+      "delta_excision": 5.469260865088562e-06,
+      "delta_mass": 5.469260864865433e-06,
+      "delta_outer": -1.0531171918160759e-07,
+      "interval": [
+        12.5,
+        13.0
+      ],
+      "residual": -2.231288070975168e-16
+    },
+    {
+      "delta_excision": 4.7906198504706066e-06,
+      "delta_mass": 4.790619847927502e-06,
+      "delta_outer": -1.0057105750010972e-07,
+      "interval": [
+        13.0,
+        13.5
+      ],
+      "residual": -2.5431046157819992e-15
+    },
+    {
+      "delta_excision": 2.6163004018604948e-06,
+      "delta_mass": 2.616300402769056e-06,
+      "delta_outer": -9.524003727933646e-08,
+      "interval": [
+        13.5,
+        14.0
+      ],
+      "residual": 9.085614205428527e-16
+    },
+    {
+      "delta_excision": 4.946953573491467e-07,
+      "delta_mass": 4.946953586770775e-07,
+      "delta_outer": -8.94129965962867e-08,
+      "interval": [
+        14.0,
+        14.5
+      ],
+      "residual": 1.3279308208602458e-15
+    },
+    {
+      "delta_excision": -4.3512361404089706e-07,
+      "delta_mass": -4.351236138067094e-07,
+      "delta_outer": -8.318711584605786e-08,
+      "interval": [
+        14.5,
+        15.0
+      ],
+      "residual": 2.3418766925686896e-16
+    },
+    {
+      "delta_excision": -2.035292979291059e-09,
+      "delta_mass": -2.03529570974581e-09,
+      "delta_outer": -7.66610371839735e-08,
+      "interval": [
+        15.0,
+        15.5
+      ],
+      "residual": -2.7304547511874944e-15
+    },
+    {
+      "delta_excision": 1.1191264772966811e-06,
+      "delta_mass": 1.1191264790433308e-06,
+      "delta_outer": -6.993267758607037e-08,
+      "interval": [
+        15.5,
+        16.0
+      ],
+      "residual": 1.7466496998741476e-15
+    },
+    {
+      "delta_excision": 1.993181340645238e-06,
+      "delta_mass": 1.9931813413087696e-06,
+      "delta_outer": -6.309816762806106e-08,
+      "interval": [
+        16.0,
+        16.5
+      ],
+      "residual": 6.635317295611287e-16
+    },
+    {
+      "delta_excision": 2.0435261501674552e-06,
+      "delta_mass": 2.0435261491869028e-06,
+      "delta_outer": -5.624976933298136e-08,
+      "interval": [
+        16.5,
+        17.0
+      ],
+      "residual": -9.805524447958902e-16
+    },
+    {
+      "delta_excision": 1.335921109791617e-06,
+      "delta_mass": 1.335921108402971e-06,
+      "delta_outer": -4.9475118693562716e-08,
+      "interval": [
+        17.0,
+        17.5
+      ],
+      "residual": -1.388646142519434e-15
+    },
+    {
+      "delta_excision": 4.187374993017221e-07,
+      "delta_mass": 4.187374991193593e-07,
+      "delta_outer": -4.285618392044659e-08,
+      "interval": [
+        17.5,
+        18.0
+      ],
+      "residual": -1.8236280541206185e-16
+    },
+    {
+      "delta_excision": -1.0799948359468785e-07,
+      "delta_mass": -1.0799948468864784e-07,
+      "delta_outer": -3.646855061570829e-08,
+      "interval": [
+        18.0,
+        18.5
+      ],
+      "residual": -1.093959992037874e-15
+    },
+    {
+      "delta_excision": 1.369347941656586e-08,
+      "delta_mass": 1.3693480571674854e-08,
+      "delta_outer": -3.038147147039125e-08,
+      "interval": [
+        18.5,
+        19.0
+      ],
+      "residual": 1.1551089945660564e-15
+    },
+    {
+      "delta_excision": 5.830451886147496e-07,
+      "delta_mass": 5.830451890176391e-07,
+      "delta_outer": -2.4657389856839328e-08,
+      "interval": [
+        19.0,
+        19.5
+      ],
+      "residual": 4.0288952729561345e-16
+    },
+    {
+      "delta_excision": 1.1347261597428708e-06,
+      "delta_mass": 1.1347261581473589e-06,
+      "delta_outer": -1.935288576020472e-08,
+      "interval": [
+        19.5,
+        20.0
+      ],
+      "residual": -1.5955119170296683e-15
+    }
+  ],
+  "maximum_residual": 2.7304547511874944e-15,
+  "notes": [
+    "the continuation snapshots are 0.5-station resolved; the identity is the round-14 one applied interval by interval",
+    "outer boundary sign per interval retests the leak-only reading"
+  ],
+  "outer_leaks_every_interval": true,
+  "production_trajectory": false,
+  "schema": "NSC-CONTINUATION-STATION-CLOSURE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_continuation_station_closure.py": "fbaef05e089e49fe9500c58b4a3d2ed7c729b8b0145133533c90e16cd0506672",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "stations": 21,
+  "verdict": "LATE_CLOSURE_HOLDS"
+}

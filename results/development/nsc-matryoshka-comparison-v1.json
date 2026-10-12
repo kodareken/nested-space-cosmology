@@ -1,0 +1,88 @@
+{
+ "api_version": "nsc-matryoshka-v1",
+ "comparison": {
+  "api_version": "nsc-matryoshka-v1",
+  "chain_count_growth_ratios": [
+   1.0,
+   3.0,
+   3.6666666666666665,
+   4.090909090909091,
+   4.377777777777778
+  ],
+  "diverging_part": "polygons versus spheres, and therefore an additive perimeter energy weight versus the multiplicative scale inheritance of the recorded NSC response",
+  "matryoshka_computed": [
+   1,
+   2,
+   10,
+   72
+  ],
+  "matryoshka_growth_ratios": [
+   2.0,
+   5.0,
+   7.2,
+   8.944444444444445,
+   10.409937888198758,
+   11.695704057279237
+  ],
+  "matryoshka_prefix": [
+   1,
+   2,
+   10,
+   72
+  ],
+  "matryoshka_prefix_matches_paper": true,
+  "resolvent_levels_omega_4": [
+   {
+    "argument_rescale": 0.25,
+    "coefficient_scale_per_link": 0.25,
+    "level": 1,
+    "own_inverse_factors": 1,
+    "weight_type": "multiplicative_scale_inheritance"
+   },
+   {
+    "argument_rescale": 0.0625,
+    "coefficient_scale_per_link": 0.25,
+    "level": 2,
+    "own_inverse_factors": 1,
+    "weight_type": "multiplicative_scale_inheritance"
+   },
+   {
+    "argument_rescale": 0.015625,
+    "coefficient_scale_per_link": 0.25,
+    "level": 3,
+    "own_inverse_factors": 1,
+    "weight_type": "multiplicative_scale_inheritance"
+   }
+  ],
+  "schroder_computed": [
+   1,
+   1,
+   3,
+   11,
+   45,
+   197
+  ],
+  "schroder_prefix": [
+   1,
+   1,
+   3,
+   11,
+   45,
+   197
+  ],
+  "schroder_prefix_matches_reference": true,
+  "scope": "combinatorics and recursion structure only; no wavefunction, no amplitude, no measurement of the actual universe",
+  "structural_claim": "both families are nested wrappings of contiguous blocks; the NSC spherical chain is the small-Schroeder (path bracketing) skeleton, and the cosmohedron polygon Matryoshka is that skeleton raised by the triangulation freedom, which is why its count is factorial",
+  "weight_comparison": {
+   "cosmohedron_per_bracket": "inverse of the sum of the entering energies",
+   "no_cosmohedron_equivalence_identified": true,
+   "nsc_per_level": "one inverse factor, argument rescaled by 1/Omega",
+   "skeleton_matches": true,
+   "weight_type_matches": false
+  }
+ },
+ "creation_only": true,
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "schema": "NSC-MATRYOSHKA-v1",
+ "source_paper": "arXiv:2603.03425 (Ardila-Mantilla, Arkani-Hamed, Figueiredo, Vazao)"
+}

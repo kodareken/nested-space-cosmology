@@ -1,300 +1,72 @@
-# Reproducing the compact results
+# Reproducing the root project
 
-This repository publishes the original 58 v0.1.0 compact JSON records, preserved byte-for-byte, plus scoped follow-ups 59–81 and nineteen nested development records 82–100. Regeneration checks those records. It does not create a final \(\zeta\), a particle spectrum, a dark-sector fit, or a proof that our universe is inside a black hole.
+There is one package, `nested-space-cosmology`, importing `recursive_horizons`
+from root `src`. Use the pinned versions in [pyproject.toml](../pyproject.toml).
+Scientific conclusions retain the domains in their owning notes.
 
-The live scientific status is [docs/current-result.md](current-result.md#present-spherical-loop). The v5 replay `lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py` remains the self-contained $T=0.005$ seed. The saved $T=0.05$ measurement is `lab/scripts/derive_nsc_spherical_feedback_episode.py`. Both are outside `make reproduce`. Claim labels are in [THEORY.md](../THEORY.md). Contribution rules are in [CONTRIBUTING.md](../CONTRIBUTING.md).
-
-The [maintained continuation](../lab/docs/nsc-regeneration-episode.md) and
-[same-trajectory response](../lab/docs/nsc-coupled-local-response.md) are
-saved laboratory evidence, also outside `make reproduce`. Read-only
-binding and payload checks use the lab launcher:
+## Current work
 
 ```sh
-python scripts/lab.py scripts/derive_nsc_coupled_local_response.py --check
-python scripts/lab.py scripts/derive_nsc_spherical_cauchy_weak.py --check
-python scripts/lab.py -m pytest tests/test_provenance.py tests/test_nsc_spherical_null_expansion.py -q
-python scripts/lab.py -m pytest tests/test_nsc_spherical_conformal_episode.py -q
+python -m pip install -e '.[paper,dev]'
+python scripts/check_lab_snapshot.py
+python scripts/check_publication.py
+python scripts/check_claim_bindings.py
+python scripts/test_reassembly.py
+python scripts/build_geometry_overview.py
+python scripts/build_paper.py --check
 ```
 
-For the completed conformal chain, use its read-only checks:
+The affected test suite covers atlas attachment incompatibility, disconnected
+siblings, causal delays, unequal children, clock-domain exits, unit rescaling,
+finite-depth dependence, field transfer, preservation failures and publication
+contracts. `make verify` adds explicit historical replay. Running every historical
+simulation is neither required nor authorized by these convenience commands.
 
-~~~sh
-python scripts/lab.py scripts/derive_nsc_spherical_conformal_continuation.py --check
-python scripts/lab.py scripts/derive_nsc_spherical_conformal_transport.py --check
-python scripts/lab.py scripts/derive_nsc_spherical_conformal_clock.py --check
-python scripts/lab.py scripts/derive_nsc_conformal_local_response_successor.py --check
-~~~
+The paper builder renders local figures, authenticates their bytes and compares
+two builds in check mode. Visual inspection is still required for a manuscript
+change. The software release version and the manuscript revision are independent.
 
-The thin conformal producers refuse existing output before compute. Their
-historical source verification explicitly names full checkpoint
-c2d5fb6f02722d9f69ec70a7145ea3f2287266df, authenticates resident numerical
-inputs, and recomputes saved derived fields without a new trajectory.
-Scientific owners and comparison domains are in
-[the continuation note](../lab/docs/nsc-spherical-conformal-continuation.md).
+## Preserved editions and source contexts
 
-The weak and null-expansion replays explicitly name the sealed formula
-domain at full commit `5f10ecd365843d1616e50eb16a20d7acd8377e2c`. Their
-current/new-request binding paths remain strict. Sealed numerical payloads
-and the original source-cache pins keep their hashes. Independent local
-omission controls and episode-assessment commands are in their owning
-notes; routine verification does not open another evolution campaign.
-The conformal-episode test reads the saved four-case arrays and independently
-checks the frozen group, initial-data identity, sampled forcing integrals,
-energy changes, and clock protocol. Running its driver writes a new
-evolution record and is outside that read-only check.
-
-The nested records live under `results/development/`:
-[compact interaction](nsc-compact-interaction.md),
-[five-dimensional UV matching](nsc-torsion-uv-map.md),
-[published-flow compatibility](nsc-flow-compatibility.md),
-[charged-sector parity](nsc-charged-self-sourcing-route.md),
-[vacuum/charge coefficients](nsc-vacuum-charge-matching.md),
-[compact boundary action](nsc-compact-boundary-action.md), and
-[curved compact source](nsc-compact-casimir.md).
-Records 82–85 remain the v0.4.0 nested set. Records 86–88 are the v0.5.0
-follow-ups. Records 89–91 add the [horizon source](nsc-horizon-source.md),
-[warped quantum source](nsc-warped-source.md), and
-[compact/light matching](nsc-compact-matching.md) in v0.6.0. Their JSON still lacks `artifact_id`; manifest identities are
-assigned outside those files. Internal status strings that mention v0.3.0
-remain historically true. The compact-mass check is an explanatory application
-note, not a separate record. The later generators recursively authenticate
-input records; isolated reproduction retains those raw dependency files and
-normalizes only result input digests after authentication. Run
-`make reproduce-development` to recompute the nineteen nested records with
-their recorded all-field policies. `make reproduce` recomputes
-the complete 100-record graph; `make reproduce-exact` requires byte identity.
-
-Records 92–100 add the gauge source, spherical action, curvature EFT,
-full spectral endpoint, child-state bound, absolute massless reference,
-finite angular reference, parent-matched source and state/regulator conversion.
-All nine retain their laboratory JSON, generator bytes and all-field tolerances.
-The original 91 manifest step objects remain unchanged.
-
-The angular-stress record authenticates the laboratory `pyproject.toml`.
-Its immutable copy is kept under `tests/fixtures/source-checkpoints/` and
-restored to its original path only inside an isolated reproduction workspace.
-The public installation configuration is separate. The C++17 angular
-transport source is included in both the source closure and the package.
-Its large angular integration and the parent-state calculation dominate the
-new runtime; the Linux reproduction job has a 120-minute ceiling. This is
-an execution limit, not a claimed measured runtime.
-
-## Current finite article
-
-The [14-page current companion](../paper/finite-regeneration.pdf) has a
-[build manifest](../paper/finite-regeneration-manifest.json),
-[arXiv source archive](../paper/finite-regeneration-arxiv.tar.gz), and
-[declared evidence graph](../paper/finite-regeneration/evidence/snapshot.json).
-Its complete declared graph pins science commit
-8a52257fc2829c73d485c7b4c6e310baadfe3c38. Numerical bytes belong to that
-snapshot; older source bytes are authenticated in their recorded contexts.
-The current publication is v0.27.0; both historical PDFs and foundation
-v0.26.0 metadata remain unchanged.
-
-~~~sh
-make finite-check
-~~~
-
-This is a read-only graph, source-archive and PDF check. It does not run a
-trajectory or need TeX. make finite-paper is the explicit reproducible project
-build, with the existing Tectonic 0.17.0 runtime, two clean builds, cached
-resources and disabled unsafe TeX execution. Its deterministic local build
-does not claim verification by arXiv's actual processor. The package includes
-only the used manuscript/bibliography/figure sources; the scientific data and
-code remain in their pinned repository graph.
-
-## Routine verification and deliberate recomputation
-
-`make verify` authenticates locked records, runs focused tests, and checks the
-notebook and focused draft. It does not rerun historical scientific campaigns.
-Those remain available through `make reproduce` or the manually dispatched
-GitHub workflow with `reproduce_history` enabled. The historical OPEN edition has its
-own [reproduction guide](local-gate-draft.md). `make reproduce` does not
-replay the laboratory finite-turnover witness, the incoherent-imbalance
-mean circulation, or the spherical Galerkin v5 record. Their owners are
-[finite turnover](../lab/docs/nsc-finite-turnover.md),
-[imbalance mean circulation](../lab/docs/nsc-imbalance-turnover.md), and
-[the present loop](current-result.md#present-spherical-loop).
-
-`make test` uses pytest to run both pytest functions and unittest classes.
-On Windows, the historical retained-tail exact JSON test is replaced by an
-all-field replay that normalizes only its native payload path separators.
-The original test, producer, record and authenticated hashes remain unchanged;
-Linux CI runs the original exact test. Numerical values are never normalized
-by this portability adapter.
-
-## Requirements
-
-- Python 3.12 or newer
-- A C++17 compiler with thread support for angular-stress
-- the pinned dependencies in `requirements.txt`:
-  - `mpmath==1.3.0`
-  - `numpy==2.5.1`
-  - `scipy==1.17.1`
-  - `sympy==1.14.0`
-
-Optional paper rendering uses `matplotlib==3.11.1` and `reportlab==4.4.9`
-from `requirements-paper.txt`.
-
-From the repository root:
-
-```bash
-python3 -m pip install -e ".[paper]"
+```sh
+python scripts/replay_history.py prepare
+python scripts/replay_history.py atlas
+python scripts/replay_history.py finite
+python scripts/replay_history.py companion
+python scripts/replay_history.py all
 ```
 
-or:
+These commands select the pre-reassembly source commit explicitly, materialize its
+original layout in ignored `.build/replay`, check current preserved artifacts
+against those bytes, and run the original checkers. All six atlas bundles are
+recomputed within their finite domains. Supporting-paper authentication checks
+their frozen source, evidence and archives; it does not rerun their full campaigns.
+The original context contains the former foundation paper at its historical path.
 
-```bash
-make install
-```
+Current atlas producers use root sources. Their source bindings differ from the
+historical bundles, so passing an old bundle to a current producer must fail.
+To create a new bundle, supply a fresh `--output` directory; creation is exclusive.
+A changed historical context, changed retained evidence, missing Git object or
+corrupt archive is an error, never a reason to silently select alternative bytes.
 
-## Public commands
+The [migration checker](../scripts/reassemble_repository.py) authenticates every
+destination and explicit successor. [Preservation and recovery](repository-consolidation.md)
+describe the original-path manifest and the named implementation variants.
 
-The Makefile is the declared public gate:
+## Windows runtime
 
-```bash
-make check
-make test
-make reproduce
-make paper
-make verify
-```
+The existing validation environment uses Python 3.14.8 and the project's pinned
+scientific stack. If its moved Windows redirector cannot locate `pyvenv.cfg`, use
+`python scripts/run_python.py <script-or-python-arguments>` with the base interpreter;
+for example, `python scripts/run_python.py scripts/test_reassembly.py`. Do not install a
+second project package or restore the old directory. Normal installations use
+their activated interpreter. Root `scripts/lab.py` is only a compatibility launcher:
+it now runs in this root and does not switch scientific packages.
 
-- `make check` validates manifests, claims, paths, and links.
-- `make test` runs the focused publication tests.
-- `make reproduce` recomputes the historical 58-artifact chain portably and follow-ups 59–100 by comparing every recorded field. Nested development paths are copied and compared explicitly.
-- `make reproduce-exact` requires byte-identical recomputation.
-- `make paper` rebuilds the tracked paper PDF.
-- `make verify` runs check, test, reproduce, and the paper byte check.
+## Scope
 
-Portable mode requires the generator hashes, graph, schemas, classifications,
-symbolic expressions, gates, nonclaims, and declared headline observables to
-agree. Headline numerics use only the tolerances recorded in the manifest.
-Incidental coordinates of a numerically flat diagnostic argmin are not public
-observables and may vary between LAPACK implementations. Exact mode remains
-the stronger same-environment check and compares every output byte.
-
-The spectral-endpoint record also contains the numerical residual
-`independent_derivative_error = extrapolated_log_derivative - analytic_derivative`.
-At radius4, it subtracts derivatives near4754.59 to obtain a value near1e-7.
-Linux CI exposed a change from -1.40e-7 to +1.56e-7, although both estimates
-satisfy the generator's original accuracy requirement. Portable mode now
-checks the Richardson extrapolation and subtraction identities within eight
-ULPs, enforces the original `3e-8*max(1,abs(analytic_derivative))` accuracy,
-and propagates the two operands' original comparison budgets to their
-difference. Every raw derivative retains its original tolerance. Only the
-four named residual fields receive this declared derived-quantity policy;
-the scientific JSON, generator, comparator and exact mode remain unchanged.
-This is a portable acceptance rule, not a new physical error estimate.
-The generator's direct `--check` retains its original comparison; use the
-public portable route for this cross-runtime comparison. If CI reproduction
-fails, it retains generated public result JSON as a short-lived diagnostic
-artifact. Private laboratory raw stores and credentials are not part of
-that isolated result directory.
-
-For the smooth-geometry convergence diagnostic, the release specification
-also declares a conditioned comparison of `observed_orders`. These values
-are derived from small differences between independently computed band edges:
-
-\[
-e_j=|\lambda_j^{\mathrm{lattice}}-\lambda^{\mathrm{continuum}}|,
-\qquad p_j=\log_2(e_j/e_{j+1}).
-\]
-
-The checker recomputes both identities within **each** expected and regenerated
-record, allowing at most 16 binary64 ULPs for arithmetic/library rounding.
-Every error must be finite and larger than the absolute comparison budget
-\(b=2\times10^{-12}\), and each regenerated error must differ from its frozen
-value by at most \(b\), with no additional relative tolerance. This tightens
-the ordinary \(10^{-8}\) absolute error comparison by a factor of 5,000.
-The admissible interval for each regenerated order is then calculated from
-the frozen errors, rather than chosen as a blanket order tolerance:
-
-\[
-\log_2\frac{e_j-b}{e_{j+1}+b}
-\;\le p_j^{\mathrm{regenerated}}\le\;
-\log_2\frac{e_j+b}{e_{j+1}-b}.
-\]
-
-Only a 32-ULP cushion is added when evaluating these interval endpoints; it
-covers the permitted identity rounding and endpoint arithmetic. An order
-inconsistent with its own errors still fails even when it lies inside the
-interval. The policy affects exactly nine `absolute_errors` and six
-`observed_orders` values. Raw continuum and lattice spectra, every other
-numeric field, keys, conventions, gates, nonclaims, and source hashes retain
-their existing comparisons. Exact mode still compares every byte.
-
-The \(2\times10^{-12}\) budget is an explicit portability acceptance threshold,
-not a certified total solver uncertainty. The immutable
-[smooth-geometry implementation](../src/recursive_horizons/nsc_smooth_geometry.py)
-uses a band-root `xtol=1e-12`, an ODE discriminant with `rtol=2e-11` and
-`atol=2e-12`, and floating-point eigensolutions. These distinct numerical
-errors cannot be bounded from root `xtol` alone. The ratio interval accounts
-for how accepted small raw-error differences are amplified in the derived
-order; it does not weaken or replace the underlying calculations.
-
-Committed JSON can be inspected without regeneration. The original 58 generators in `scripts/run_*.py` are the historical per-artifact writers; their bytes are frozen. Scoped follow-up checkers are `scripts/check_nsc_scale_closure.py`, `scripts/check_nsc_regulated_recursion.py`, `scripts/check_nsc_radial_spectrum.py`, and `scripts/check_nsc_geometric_chain.py`. Use an individual writer only to create a *new* compact record; they refuse to overwrite a file that already exists.
-
-The unit-closure follow-up authenticates selected v0.1.0 scripts and JSON by SHA-256. Isolated reproduction copies those committed files as auxiliary provenance inputs; it does not add them as extra steps of the historical 58-record chain and does not repin the original laboratory import commit. Direct all-field verification is:
-
-```bash
-python3 scripts/check_nsc_scale_closure.py --check
-python3 scripts/check_nsc_regulated_recursion.py --check
-python3 scripts/check_nsc_radial_spectrum.py --check
-python3 scripts/check_nsc_geometric_chain.py --check
-python3 scripts/check_nsc_covariant_source.py --check
-python3 scripts/check_nsc_measure_normalization.py --check
-python3 scripts/check_nsc_influence.py --check
-python3 scripts/check_nsc_response_matching.py --check
-python3 scripts/check_nsc_compact_interaction.py --check
-python3 scripts/check_nsc_torsion_uv_map.py --check
-python3 scripts/check_nsc_flow_compatibility.py --check
-python3 scripts/check_nsc_charged_sector.py --check
-python3 scripts/check_nsc_vacuum_charge_matching.py --check
-python3 scripts/check_nsc_compact_boundary_action.py --check
-python3 scripts/check_nsc_compact_casimir.py --check
-```
-
-## Committed JSON is the public result
-
-Each compact record under `results/` is the scientific object. Typical runners refuse to overwrite an existing file. Do not edit committed JSON by hand. Do not delete a committed record to manufacture a “fresh” success.
-
-To inspect the live frontier record:
-
-```bash
-python3 - <<'PY'
-import json
-from pathlib import Path
-p = Path("results/nsc-2-zeta1-recursion-map.json")
-d = json.loads(p.read_text())
-print(d["artifact_id"])
-print(d["classification"])
-print(d["nonclaims"])
-print(d["gate"]["mode_resolved_tail_solved"], d["gate"]["zeta_derived"])
-print(d["next_result"])
-PY
-```
-
-The expected nonclaims are all `false`: \(\Omega\) is not selected, the functional tail is not computed, the scale root is not restored, and physical \(\zeta\) is not promoted.
-
-## Individual runners
-
-The historical 58 generators live in `scripts/` and write a single named file in `results/`. They authenticate declared input JSON by SHA-256, enforce their gates, and write canonical JSON. A representative frontier runner:
-
-```bash
-python3 scripts/run_nsc_zeta1_recursion_map.py
-```
-
-If the output file already exists, that command exits with an error rather than rewriting history. Use `make reproduce` for the portable public chain. Use an individual runner only when adding a *new* compact record that does not yet exist.
-
-## What regeneration does not mean
-
-Passing `make reproduce` means the committed chain can be recomputed from the published scripts and pins. It does not promote a numerical diagnostic, close the energy-resolved child tail, or convert an imported black-universe, Skyrme, spectral-action, or shadow-matter result into Nested-Space novelty.
-
-The manuscript source and generated preprint are
-[paper/nested-space-cosmology.md](../paper/nested-space-cosmology.md) and
-[paper/nested-space-cosmology.pdf](../paper/nested-space-cosmology.pdf).
-
-## Short demonstration
-
-Run `make demonstrate` to inspect authenticated stored results and their physical scope. It checks the release specification, record hashes and source/input closure, then displays concise results. It does not launch scientific generators by default. To rerun the selected checks, use `make demonstrate-recompute` or `python3 scripts/demonstrate.py --recompute`. Neither route fits observations or creates a new theory claim.
+The main [paper](../paper/nested-space-cosmology.md) is a living atlas manuscript.
+The [paper guide](papers.md) routes archived and supporting editions. Spherical
+symmetry, specified states and fixed parameters are assumptions of individual
+tests. No new constants, propagation or recurrence campaign was admitted during
+repository reassembly. New calculations use the [existing admission rule](prior-art-and-open-claim.md).

@@ -1,0 +1,313 @@
+{
+  "api_version": "nsc-rn-charged-lll-v1",
+  "creation_only": true,
+  "entries": [
+    {
+      "Phi_H": 1.7321254676087483,
+      "eta": 1.01,
+      "kappa": 1.4142135623730951,
+      "omega_star": 0.23712465735804109,
+      "omega_star_half": 0.11856232867902054,
+      "peak": {
+        "omega": 0.105,
+        "reflection_ratio": 0.6679119291980332
+      },
+      "peak_over_omega_star": 0.4428050678907575,
+      "rows": [
+        {
+          "omega": 0.05,
+          "reflection_ratio": 0.11759948106836204
+        },
+        {
+          "omega": 0.055,
+          "reflection_ratio": 0.1608750962650979
+        },
+        {
+          "omega": 0.06,
+          "reflection_ratio": 0.21597371668789186
+        },
+        {
+          "omega": 0.065,
+          "reflection_ratio": 0.2816079601592971
+        },
+        {
+          "omega": 0.07,
+          "reflection_ratio": 0.35401239033260207
+        },
+        {
+          "omega": 0.075,
+          "reflection_ratio": 0.4276254954972439
+        },
+        {
+          "omega": 0.08,
+          "reflection_ratio": 0.49662447352663835
+        },
+        {
+          "omega": 0.085,
+          "reflection_ratio": 0.5564022542889244
+        },
+        {
+          "omega": 0.09,
+          "reflection_ratio": 0.6042054282169131
+        },
+        {
+          "omega": 0.095,
+          "reflection_ratio": 0.6388742934230495
+        },
+        {
+          "omega": 0.1,
+          "reflection_ratio": 0.6601351073852695
+        },
+        {
+          "omega": 0.105,
+          "reflection_ratio": 0.6679119291980332
+        },
+        {
+          "omega": 0.11,
+          "reflection_ratio": 0.6619658976755977
+        },
+        {
+          "omega": 0.115,
+          "reflection_ratio": 0.642184012508312
+        },
+        {
+          "omega": 0.12,
+          "reflection_ratio": 0.6101222007145829
+        },
+        {
+          "omega": 0.125,
+          "reflection_ratio": 0.5723144168070023
+        },
+        {
+          "omega": 0.13,
+          "reflection_ratio": 0.5429815835482226
+        },
+        {
+          "omega": 0.135,
+          "reflection_ratio": 0.5379838711790998
+        },
+        {
+          "omega": 0.14,
+          "reflection_ratio": 0.5593427527733739
+        },
+        {
+          "omega": 0.145,
+          "reflection_ratio": 0.592039089988669
+        },
+        {
+          "omega": 0.15,
+          "reflection_ratio": 0.6188039644818125
+        }
+      ]
+    },
+    {
+      "Phi_H": 0.7620290259413774,
+      "eta": 1.5,
+      "kappa": 1.4142135623730951,
+      "omega_star": 0.18189887765107238,
+      "omega_star_half": 0.09094943882553619,
+      "peak": {
+        "omega": 0.105,
+        "reflection_ratio": 0.6678849376105616
+      },
+      "peak_over_omega_star": 0.577243803567696,
+      "rows": [
+        {
+          "omega": 0.05,
+          "reflection_ratio": 0.11541106982653104
+        },
+        {
+          "omega": 0.055,
+          "reflection_ratio": 0.15879635163815664
+        },
+        {
+          "omega": 0.06,
+          "reflection_ratio": 0.21446353073484364
+        },
+        {
+          "omega": 0.065,
+          "reflection_ratio": 0.2811892645187021
+        },
+        {
+          "omega": 0.07,
+          "reflection_ratio": 0.35507321454418606
+        },
+        {
+          "omega": 0.075,
+          "reflection_ratio": 0.43023293064391954
+        },
+        {
+          "omega": 0.08,
+          "reflection_ratio": 0.5004760754851985
+        },
+        {
+          "omega": 0.085,
+          "reflection_ratio": 0.5609273114702967
+        },
+        {
+          "omega": 0.09,
+          "reflection_ratio": 0.6087138292913936
+        },
+        {
+          "omega": 0.095,
+          "reflection_ratio": 0.6426479537456464
+        },
+        {
+          "omega": 0.1,
+          "reflection_ratio": 0.6624271936639742
+        },
+        {
+          "omega": 0.105,
+          "reflection_ratio": 0.6678849376105616
+        },
+        {
+          "omega": 0.11,
+          "reflection_ratio": 0.6586590533161302
+        },
+        {
+          "omega": 0.115,
+          "reflection_ratio": 0.6347325919607639
+        },
+        {
+          "omega": 0.12,
+          "reflection_ratio": 0.5986925155306432
+        },
+        {
+          "omega": 0.125,
+          "reflection_ratio": 0.5600150603110702
+        },
+        {
+          "omega": 0.13,
+          "reflection_ratio": 0.536557270391779
+        },
+        {
+          "omega": 0.135,
+          "reflection_ratio": 0.5426927133528131
+        },
+        {
+          "omega": 0.14,
+          "reflection_ratio": 0.5724928373113337
+        },
+        {
+          "omega": 0.145,
+          "reflection_ratio": 0.6058104658175789
+        },
+        {
+          "omega": 0.15,
+          "reflection_ratio": 0.6265706556592393
+        }
+      ]
+    },
+    {
+      "Phi_H": 1.7321254676087483,
+      "eta": 1.01,
+      "kappa": 2.449489742783178,
+      "omega_star": 0.23712465735804109,
+      "omega_star_half": 0.11856232867902054,
+      "peak": {
+        "omega": 0.11,
+        "reflection_ratio": 0.9566593485181253
+      },
+      "peak_over_omega_star": 0.46389102350460315,
+      "rows": [
+        {
+          "omega": 0.05,
+          "reflection_ratio": 0.3931003919008302
+        },
+        {
+          "omega": 0.055,
+          "reflection_ratio": 0.5025092594619137
+        },
+        {
+          "omega": 0.06,
+          "reflection_ratio": 0.6114243828538809
+        },
+        {
+          "omega": 0.065,
+          "reflection_ratio": 0.7079249080266308
+        },
+        {
+          "omega": 0.07,
+          "reflection_ratio": 0.7853478700654791
+        },
+        {
+          "omega": 0.075,
+          "reflection_ratio": 0.8430263796954177
+        },
+        {
+          "omega": 0.08,
+          "reflection_ratio": 0.8839256865479843
+        },
+        {
+          "omega": 0.085,
+          "reflection_ratio": 0.9120532217908579
+        },
+        {
+          "omega": 0.09,
+          "reflection_ratio": 0.9309957742826811
+        },
+        {
+          "omega": 0.095,
+          "reflection_ratio": 0.9434490573519801
+        },
+        {
+          "omega": 0.1,
+          "reflection_ratio": 0.9512359522729655
+        },
+        {
+          "omega": 0.105,
+          "reflection_ratio": 0.9554630610604194
+        },
+        {
+          "omega": 0.11,
+          "reflection_ratio": 0.9566593485181253
+        },
+        {
+          "omega": 0.115,
+          "reflection_ratio": 0.9548502255910601
+        },
+        {
+          "omega": 0.12,
+          "reflection_ratio": 0.9496060547113458
+        },
+        {
+          "omega": 0.125,
+          "reflection_ratio": 0.9403145570881193
+        },
+        {
+          "omega": 0.13,
+          "reflection_ratio": 0.9275101988079192
+        },
+        {
+          "omega": 0.135,
+          "reflection_ratio": 0.9160574620707997
+        },
+        {
+          "omega": 0.14,
+          "reflection_ratio": 0.9146475977087556
+        },
+        {
+          "omega": 0.145,
+          "reflection_ratio": 0.9240762417394003
+        },
+        {
+          "omega": 0.15,
+          "reflection_ratio": 0.9356697285721433
+        }
+      ]
+    }
+  ],
+  "evolved": false,
+  "notes": [
+    "the omega_star/2 comparison is a recorded relation test, not a fit",
+    "kappa = sqrt(6) is the n = 2 multiplet of the same lowest shell"
+  ],
+  "production_trajectory": false,
+  "scan_omega_max": 0.15,
+  "scan_omega_min": 0.05,
+  "schema": "NSC-RN-CHARGED-TWIST-LADDER-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist_ladder.py": "18a5092785d88cddc1ad1de8f60706e8ff3571446316ebc34c0b15250643c6d0",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "81d2602af55549c7ea50a24d4a84e0838dd419c0cd951886a5227a76d549e472"
+  }
+}

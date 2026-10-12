@@ -1,0 +1,108 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "late_windows_t40_t80": [
+    {
+      "minutes": 39.533292190233865,
+      "minutes_per_t": 1.9766646095116933,
+      "window": [
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "minutes": 78.47895339727401,
+      "minutes_per_t": 1.9619738349318503,
+      "window": [
+        40.0,
+        80.0
+      ]
+    }
+  ],
+  "notes": [
+    "mtimes from the recorded campaign directory"
+  ],
+  "per_unit": [
+    {
+      "minutes": 10.055055189132691,
+      "minutes_per_t": 2.0110110378265382,
+      "window": [
+        5.0,
+        10.0
+      ]
+    },
+    {
+      "minutes": 9.844485727945964,
+      "minutes_per_t": 1.9688971455891928,
+      "window": [
+        10.0,
+        15.0
+      ]
+    },
+    {
+      "minutes": 9.846413318316142,
+      "minutes_per_t": 1.9692826636632283,
+      "window": [
+        15.0,
+        20.0
+      ]
+    },
+    {
+      "minutes": 39.533292190233865,
+      "minutes_per_t": 1.9766646095116933,
+      "window": [
+        20.0,
+        40.0
+      ]
+    },
+    {
+      "minutes": 78.47895339727401,
+      "minutes_per_t": 1.9619738349318503,
+      "window": [
+        40.0,
+        80.0
+      ]
+    }
+  ],
+  "production_trajectory": false,
+  "reading": "the t80-era march cost per unit of t, measured from the relaxation campaign's own mtimes",
+  "rows": [
+    {
+      "interval_minutes_plus": 9.705194318294526,
+      "minutes_from_prepare": 9.705194318294526,
+      "t_over_rm": 5.0
+    },
+    {
+      "interval_minutes_plus": 10.055055189132691,
+      "minutes_from_prepare": 19.760249507427215,
+      "t_over_rm": 10.0
+    },
+    {
+      "interval_minutes_plus": 9.844485727945964,
+      "minutes_from_prepare": 29.60473523537318,
+      "t_over_rm": 15.0
+    },
+    {
+      "interval_minutes_plus": 9.846413318316142,
+      "minutes_from_prepare": 39.45114855368932,
+      "t_over_rm": 20.0
+    },
+    {
+      "interval_minutes_plus": 39.533292190233865,
+      "minutes_from_prepare": 78.98444074392319,
+      "t_over_rm": 40.0
+    },
+    {
+      "interval_minutes_plus": 78.47895339727401,
+      "minutes_from_prepare": 157.4633941411972,
+      "t_over_rm": 80.0
+    }
+  ],
+  "schema": "NSC-RELAXATION-DURATION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_relaxation_duration.py": "23c42ede1140f3069c3d705ef04202b9f01206cb7a3036898e3f2b066de9d155",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "total_prepare_to_t80_minutes": 157.4633941411972
+}

@@ -1,0 +1,36 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-neutral-continuation-v1/scalars.jsonl": "6d6d170f0d7269b0062ecd7525a5d29f0415b990e3f76744853af1a1f911407f"
+  },
+  "lag_profile": {
+    "-1": {
+      "correlation": 0.33996761597140196,
+      "pairs": 39
+    },
+    "0": {
+      "correlation": 0.8350971588595357,
+      "pairs": 40
+    },
+    "1": {
+      "correlation": 0.9986318661466894,
+      "pairs": 39
+    }
+  },
+  "notes": [
+    "interval cadence is the ledger's own half-station split",
+    "slope units: trap drift in r_m per t over mass in r_m per t"
+  ],
+  "peak_lag": 1,
+  "production_trajectory": false,
+  "reading": "the trap margin moves with the same-interval feed if the profile peaks at lag 0; the wall's balance lags one station",
+  "schema": "NSC-TRAP-TIMING-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_trap_timing.py": "37148852182bf3e16a5028c7ee437e752c9aa871481d9e1b0155a6fddada9bbe",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "trap_displacement_per_unit_mass": 9.577659511396345,
+  "verdict": "TRAP_LAGGED"
+}

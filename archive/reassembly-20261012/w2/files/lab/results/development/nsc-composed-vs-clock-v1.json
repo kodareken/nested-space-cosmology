@@ -1,0 +1,41 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-ladder-covariance-test-v1.json": "82d77102920362a9d6f4e08e10d1200a97d9051f95acb78004d1530d9913077a",
+    "lab/results/development/nsc-wall-breathing-timescale-v1.json": "b7c9cf0017d30b7596504b55d0eab0dd7a6a23f797d3221b77c75283cfe1ff06"
+  },
+  "mean_ratio": 0.948349207218741,
+  "notes": [
+    "T_total is the mu-blind cap clock of round 25; the composed values are the ladder-implied covariance constants"
+  ],
+  "production_trajectory": false,
+  "ratio_spread": 0.020063287109196557,
+  "rows": [
+    {
+      "T_total": 16.47877335401308,
+      "case": "mu-1.002-eps-0.001",
+      "composed": 15.903039226450563,
+      "ratio_composed_over_clock": 0.9650620762119829
+    },
+    {
+      "T_total": 16.417924345326952,
+      "case": "mu-1.010-eps-0.001",
+      "composed": 15.13288380048908,
+      "ratio_composed_over_clock": 0.921729414887721
+    },
+    {
+      "T_total": 16.322782384279847,
+      "case": "mu-1.040-eps-0.001",
+      "composed": 15.64140628747612,
+      "ratio_composed_over_clock": 0.9582561305565191
+    }
+  ],
+  "schema": "NSC-COMPOSED-VS-CLOCK-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_composed_vs_clock.py": "72c7e542d3afff58e02a6207b0bacb8c4536b919c48a6830d5b3adb286747320",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "status": "observation-level scale proximity; flagged, not claimed"
+}

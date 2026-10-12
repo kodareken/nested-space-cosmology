@@ -1,0 +1,78 @@
+{
+  "api_version": "nsc-rn-charged-lll-v1",
+  "assessment_sha256": "fe67f5ca66c1e8f6baeac90c7b427a2bac5eedf4c97d177dea524a5a74de8ef6",
+  "band_centre_below_omega_star": false,
+  "creation_only": true,
+  "evolved": false,
+  "infall_winding_at_band_centre": {
+    "I_one": 13.797515931627506,
+    "Phi_mean": 0.23712465735804109,
+    "T_total": 58.186761703125015,
+    "horizon_potential": 1.7321254676087476,
+    "negative_window_fraction": -0.027227977349927556,
+    "negative_window_phase": -1.0254139878185085,
+    "net_winding": "positive",
+    "omega_star": 0.23712465735804109,
+    "points": 2400,
+    "r_outer": 113.41068580780694,
+    "sign": 1,
+    "total_phase_at_omega": 37.660307067253996
+  },
+  "infall_winding_at_neutral_frequency": {
+    "I_one": 13.797515931627506,
+    "Phi_mean": 0.23712465735804109,
+    "T_total": 58.186761703125015,
+    "horizon_potential": 1.7321254676087476,
+    "negative_window_fraction": -1.792430060086568,
+    "negative_window_phase": -4.697030226401047,
+    "net_winding": "positive",
+    "omega_star": 0.23712465735804109,
+    "points": 2400,
+    "r_outer": 113.41068580780694,
+    "sign": 1,
+    "total_phase_at_omega": 2.6204817309157367
+  },
+  "mode": {
+    "canonical_charge": 1.0,
+    "kappa": 0,
+    "nodes": 876,
+    "norm": 1.0,
+    "ode_evaluations": 1300,
+    "plus_identically_zero": true,
+    "response_energy": 0.6801434779193217,
+    "window_edge_over_r_plus": 1.9586287555510256,
+    "window_edge_radius": 7.9950939597652555,
+    "window_entered": true
+  },
+  "neutral_frequency_below_omega_star": false,
+  "notes": [
+    "phi_mean is a phase integral along the throughgoing characteristic; it is not the horizon potential and not a fit.",
+    "below omega_star the infall phase winds opposite to the exterior Killing phase everywhere along the fall."
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-RN-CHARGED-INFALL-v1",
+  "slice": {
+    "A": 0.04501936182826115,
+    "C_F": 0.01125484045706527,
+    "Phi_H": 1.7321254676087483,
+    "Q_E": 4.0,
+    "cap_room": 109.32870042027189,
+    "fermion_sign": 1,
+    "gate_admitted": true,
+    "mass_over_total_radius": 1.01,
+    "neutral_frequency": 0.28216036056980787,
+    "neutral_frequency_in_window": true,
+    "omega": 0.8843561919019439,
+    "omega_min": 0.0365869161951395,
+    "omega_source": "admitted band centre from the window assessment",
+    "q_mag": 1.0,
+    "r_m_tot": 3.544083931493967,
+    "r_minus": 3.0770641540827577,
+    "r_plus": 4.081985387535055,
+    "window_upper": 1.7321254676087483
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_infall.py": "57a6a556aed518866907bb1da8e6f4b0aefb3999b6608853bed179e229b9f5d9",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "9f1d1835610c6182c8b3972a4a3c63735e0f22f093c08fbb2ed0d5d5883ce3f3"
+  }
+}

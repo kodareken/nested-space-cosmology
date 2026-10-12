@@ -1,0 +1,31 @@
+{
+  "adoption_steps_when_landed": [
+    "run scripts/derive_nsc_t30_extinction.py",
+    "read the verdict from nsc-t30-extinction-v1.json",
+    "summarise per this pre-registration; no new framing"
+  ],
+  "allowed_verdicts": [
+    "DIES_IN_20_25",
+    "DIES_IN_25_30",
+    "WALL_SURVIVES_TO_30"
+  ],
+  "api_version": "nsc-influence-chain-v1",
+  "campaign": "nsc-rn-inward-march-t30-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "written at round 98 while the march integrating continues"
+  ],
+  "pre_registered_before_landing": true,
+  "production_trajectory": false,
+  "schema": "NSC-T30-EXPECTATIONS-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_expectations.py": "5418903a12fbda96a839bdf7afc59a5e3a84cb50be0a1bcb5f3f615c3d9ff0b8",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict_map": {
+    "DIES_IN_20_25": "the light wall's first death window is pinned between the march v1 coverage and t=25: the extinction ledger gains its light-side endpoint, the lifespan's mu-ordering gains its light pole, and the two-domain comparison becomes complete",
+    "DIES_IN_25_30": "the light wall survives past t=25 but dies before t=30: lifespan exceeds all march-v1 coverage and the death window tightens to a five-unit band",
+    "WALL_SURVIVES_TO_30": "the light wall lives at least to t=30: the light-side lifespan extends beyond every recorded era, the deep-domain amplitude law's quiet breathing gains its longest recorded member, and a longer campaign becomes the named next question"
+  }
+}

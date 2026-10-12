@@ -1,0 +1,247 @@
+{
+  "Phi_H": 1.7321254676087483,
+  "any_radiative": false,
+  "api_version": "nsc-rn-charged-lll-v1",
+  "creation_only": true,
+  "entries": [
+    {
+      "kappa": 2.449489742783178,
+      "peak": {
+        "omega": 0.11,
+        "reflection_ratio": 0.9566593485181253
+      },
+      "radiative": false,
+      "rows": [
+        {
+          "omega": 0.095,
+          "reflection_ratio": 0.9434490573519801
+        },
+        {
+          "omega": 0.096,
+          "reflection_ratio": 0.9453350713991008
+        },
+        {
+          "omega": 0.097,
+          "reflection_ratio": 0.947047530829198
+        },
+        {
+          "omega": 0.098,
+          "reflection_ratio": 0.9485961752882479
+        },
+        {
+          "omega": 0.099,
+          "reflection_ratio": 0.9499897347150582
+        },
+        {
+          "omega": 0.1,
+          "reflection_ratio": 0.9512359522729655
+        },
+        {
+          "omega": 0.101,
+          "reflection_ratio": 0.9523415594275667
+        },
+        {
+          "omega": 0.102,
+          "reflection_ratio": 0.953312517346246
+        },
+        {
+          "omega": 0.103,
+          "reflection_ratio": 0.9541537514348544
+        },
+        {
+          "omega": 0.104,
+          "reflection_ratio": 0.9548695175661795
+        },
+        {
+          "omega": 0.105,
+          "reflection_ratio": 0.9554630610604194
+        },
+        {
+          "omega": 0.106,
+          "reflection_ratio": 0.9559369658184247
+        },
+        {
+          "omega": 0.107,
+          "reflection_ratio": 0.9562929834993141
+        },
+        {
+          "omega": 0.108,
+          "reflection_ratio": 0.9565320589120674
+        },
+        {
+          "omega": 0.109,
+          "reflection_ratio": 0.9566543867538034
+        },
+        {
+          "omega": 0.11,
+          "reflection_ratio": 0.9566593485181253
+        },
+        {
+          "omega": 0.111,
+          "reflection_ratio": 0.956545619083082
+        },
+        {
+          "omega": 0.112,
+          "reflection_ratio": 0.9563110454436696
+        },
+        {
+          "omega": 0.113,
+          "reflection_ratio": 0.9559527902257473
+        },
+        {
+          "omega": 0.114,
+          "reflection_ratio": 0.9554672641730582
+        },
+        {
+          "omega": 0.115,
+          "reflection_ratio": 0.9548502255910601
+        },
+        {
+          "omega": 0.116,
+          "reflection_ratio": 0.9540967170052117
+        },
+        {
+          "omega": 0.117,
+          "reflection_ratio": 0.9532014033426512
+        },
+        {
+          "omega": 0.118,
+          "reflection_ratio": 0.9521583518383843
+        },
+        {
+          "omega": 0.119,
+          "reflection_ratio": 0.9509619284256116
+        },
+        {
+          "omega": 0.12,
+          "reflection_ratio": 0.9496060547113458
+        },
+        {
+          "omega": 0.121,
+          "reflection_ratio": 0.9480857980898925
+        },
+        {
+          "omega": 0.122,
+          "reflection_ratio": 0.9463971257489151
+        },
+        {
+          "omega": 0.123,
+          "reflection_ratio": 0.9445377484936719
+        },
+        {
+          "omega": 0.124,
+          "reflection_ratio": 0.9425086299182092
+        },
+        {
+          "omega": 0.125,
+          "reflection_ratio": 0.9403145570881193
+        }
+      ]
+    },
+    {
+      "kappa": 3.4641016151377544,
+      "peak": {
+        "omega": 0.115,
+        "reflection_ratio": 0.997776223934329
+      },
+      "radiative": false,
+      "rows": [
+        {
+          "omega": 0.05,
+          "reflection_ratio": 0.7732599173146737
+        },
+        {
+          "omega": 0.055,
+          "reflection_ratio": 0.8598210743010194
+        },
+        {
+          "omega": 0.06,
+          "reflection_ratio": 0.9162137325693575
+        },
+        {
+          "omega": 0.065,
+          "reflection_ratio": 0.9502655190753091
+        },
+        {
+          "omega": 0.07,
+          "reflection_ratio": 0.9700931353343002
+        },
+        {
+          "omega": 0.075,
+          "reflection_ratio": 0.9815324131382372
+        },
+        {
+          "omega": 0.08,
+          "reflection_ratio": 0.9881810994588647
+        },
+        {
+          "omega": 0.085,
+          "reflection_ratio": 0.9921091234174024
+        },
+        {
+          "omega": 0.09,
+          "reflection_ratio": 0.9944756414248083
+        },
+        {
+          "omega": 0.095,
+          "reflection_ratio": 0.9959262379727701
+        },
+        {
+          "omega": 0.1,
+          "reflection_ratio": 0.9968219035444255
+        },
+        {
+          "omega": 0.105,
+          "reflection_ratio": 0.9973647236252006
+        },
+        {
+          "omega": 0.11,
+          "reflection_ratio": 0.997665142546052
+        },
+        {
+          "omega": 0.115,
+          "reflection_ratio": 0.997776223934329
+        },
+        {
+          "omega": 0.12,
+          "reflection_ratio": 0.9977081351870551
+        },
+        {
+          "omega": 0.125,
+          "reflection_ratio": 0.9974289047268545
+        },
+        {
+          "omega": 0.13,
+          "reflection_ratio": 0.9968603836515978
+        },
+        {
+          "omega": 0.135,
+          "reflection_ratio": 0.9959145567772825
+        },
+        {
+          "omega": 0.14,
+          "reflection_ratio": 0.994750431401965
+        },
+        {
+          "omega": 0.145,
+          "reflection_ratio": 0.9942167365143688
+        },
+        {
+          "omega": 0.15,
+          "reflection_ratio": 0.994890046368328
+        }
+      ]
+    }
+  ],
+  "evolved": false,
+  "notes": [
+    "crossing pre-registered: reflection above unity means the channel emits more through the plus characteristic than it ingests",
+    "n=1 never crossed (rounds 5-7 records)"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-RN-CHARGED-TWIST-CLIFF-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist_cliff.py": "2585f5d5a438e1644099cb7346083270699f6a48a2974a793690d78887bacb9b",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "81d2602af55549c7ea50a24d4a84e0838dd419c0cd951886a5227a76d549e472"
+  }
+}

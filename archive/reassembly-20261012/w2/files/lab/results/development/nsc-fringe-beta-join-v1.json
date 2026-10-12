@@ -1,0 +1,59 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "count_over_beta_mean": 2.5271995616359133,
+  "count_over_beta_spread": 0.21563088727369284,
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-charged-seam-invariance-v1.json": "2dc6fe8f266e2f42ab12298389f69919833c65d090b8b0a3c4f38f4a937815df",
+    "lab/results/development/nsc-tilt-quantum-ladder-v1.json": "a864c58602ffc182d463fac59f92f3d7e021c3281c26ae3673af755600d85a0b"
+  },
+  "notes": [
+    "lapse fees are the round-43 eta=1.01 baseline; the clock is the dyonic vacuum quadrature at eta=1.01"
+  ],
+  "production_trajectory": false,
+  "reading": "the ladder's per-seam quanta laid against the charged chart's own beta; no law pre-asserted",
+  "rows": [
+    {
+      "beta": 0.9975181914911985,
+      "cap_fraction": 0.125,
+      "count_over_beta": 3.007463949620081,
+      "lapse_fee": 0.11549512351935919,
+      "quantum_count": 3,
+      "seam_rm_tot": 14.176335725975868,
+      "t_above": 0.8867055097595633
+    },
+    {
+      "beta": 0.9764893686882383,
+      "cap_fraction": 0.25,
+      "count_over_beta": 3.0722300684440973,
+      "lapse_fee": 0.26464866367391654,
+      "quantum_count": 3,
+      "seam_rm_tot": 28.352671451951736,
+      "t_above": 0.7530561621105141
+    },
+    {
+      "beta": 0.8795466118307407,
+      "cap_fraction": 0.5,
+      "count_over_beta": 2.273898816842783,
+      "lapse_fee": 0.561614478334384,
+      "quantum_count": 2,
+      "seam_rm_tot": 56.70534290390347,
+      "t_above": 0.4984221595182252
+    },
+    {
+      "beta": 0.569733886056972,
+      "cap_fraction": 0.75,
+      "count_over_beta": 1.7552054116366926,
+      "lapse_fee": 0.8585571307857244,
+      "quantum_count": 1,
+      "seam_rm_tot": 85.0580143558552,
+      "t_above": 0.24826128948231752
+    }
+  ],
+  "schema": "NSC-FRINGE-BETA-JOIN-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_fringe_beta_join.py": "dfdf3218d6ade684370e057f9754c77301bc50dc89a155d2eaa68e659022ce43",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

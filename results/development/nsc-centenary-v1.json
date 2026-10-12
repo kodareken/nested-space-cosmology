@@ -1,0 +1,39 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "ladder": [
+    "exterior channels refuted as the missing-structure carrier",
+    "interior/excision funnel exact to 3e-15",
+    "wall converter organism: concentration, lag, breathing",
+    "gap-clock powers rise d^-1/2 fall d^-1/4; omega=0.386",
+    "seven-quantity mu-blind scaffold",
+    "fringe quantum 0.00131 and its ladder",
+    "lifecycle: death at the driven phase's end, single-force tombstone",
+    "domain law: grid-relative radius, amplitude ratio 7/17/40",
+    "cross-arm bit-identity; ledger audit clean",
+    "t30 campaign live: the light wall's fate beyond t=20 in flight"
+  ],
+  "ledger_at_hundred": {
+    "index": "v2 complete, 14 parts plus 6 additions",
+    "open_cells": 2,
+    "production_jobs": 1,
+    "suite": "101 passed, 1 conditional skip"
+  },
+  "notes": [
+    "the annals are a benchmark, not a summary of record; the records themselves remain the papers of record"
+  ],
+  "production_trajectory": false,
+  "round": 100,
+  "schema": "NSC-CENTENARY-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_centenary.py": "695261de5597493ba5a54f4ee0e7f94fe7be056577d8a3f5cf1a798d246088ba",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "standing_t30": {
+    "campaign": "nsc-rn-inward-march-t30-v1",
+    "diagnosis": "the visibility pipe buffers all print output, and the launch shared the machine with a long suite run before round 96 killed the deadlock; both facts are recorded, the process accrues CPU, and no failure trail exists",
+    "first_station_landed": false,
+    "launch": "2026-10-06T23:55:41"
+  }
+}

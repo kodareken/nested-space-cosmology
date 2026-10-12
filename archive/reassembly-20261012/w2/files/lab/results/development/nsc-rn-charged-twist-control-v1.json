@@ -1,0 +1,163 @@
+{
+  "api_version": "nsc-rn-charged-lll-v1",
+  "arms": {
+    "s_minus_1": [
+      {
+        "effective_frequency_at_horizon": 3.2321254676087476,
+        "ingoing_flux": 2.0000295450719237,
+        "omega": 1.5,
+        "omega_over_Phi_H": 0.865988075373544,
+        "outgoing_flux": 2.9873441944253254e-05,
+        "radiative": false,
+        "reflection_ratio": 1.4936500322138475e-05
+      },
+      {
+        "effective_frequency_at_horizon": 2.9321254676087474,
+        "ingoing_flux": 2.0000455556196957,
+        "omega": 1.2,
+        "omega_over_Phi_H": 0.6927904602988353,
+        "outgoing_flux": 4.5760437640864495e-05,
+        "radiative": false,
+        "reflection_ratio": 2.2879697671029322e-05
+      },
+      {
+        "effective_frequency_at_horizon": 2.6164816595106917,
+        "ingoing_flux": 2.0000812079217387,
+        "omega": 0.8843561919019439,
+        "omega_over_Phi_H": 0.5105612777132273,
+        "outgoing_flux": 8.136456698504344e-05,
+        "radiative": false,
+        "reflection_ratio": 4.0680631697744125e-05
+      },
+      {
+        "effective_frequency_at_horizon": 2.2321254676087476,
+        "ingoing_flux": 2.0002306301538817,
+        "omega": 0.5,
+        "omega_over_Phi_H": 0.28866269179118137,
+        "outgoing_flux": 0.00023063634831002516,
+        "radiative": false,
+        "reflection_ratio": 0.00011530487776416155
+      },
+      {
+        "effective_frequency_at_horizon": 1.9821254676087476,
+        "ingoing_flux": 2.000748216050755,
+        "omega": 0.25,
+        "omega_over_Phi_H": 0.14433134589559068,
+        "outgoing_flux": 0.0007480736616048306,
+        "radiative": false,
+        "reflection_ratio": 0.00037389695295165197
+      },
+      {
+        "effective_frequency_at_horizon": 1.8321254676087477,
+        "ingoing_flux": 2.002777600218719,
+        "omega": 0.1,
+        "omega_over_Phi_H": 0.057732538358236274,
+        "outgoing_flux": 0.002777345691360538,
+        "radiative": false,
+        "reflection_ratio": 0.0013867469313903
+      }
+    ],
+    "s_plus_1": [
+      {
+        "effective_frequency_at_horizon": -0.23212546760874764,
+        "ingoing_flux": 4.876266508303861,
+        "omega": 1.5,
+        "omega_over_Phi_H": 0.865988075373544,
+        "outgoing_flux": 2.876263570279987,
+        "radiative": false,
+        "reflection_ratio": 0.5898495427561143
+      },
+      {
+        "effective_frequency_at_horizon": -0.5321254676087477,
+        "ingoing_flux": 4.866388713121371,
+        "omega": 1.2,
+        "omega_over_Phi_H": 0.6927904602988353,
+        "outgoing_flux": 2.8663861908748,
+        "radiative": false,
+        "reflection_ratio": 0.5890171048494519
+      },
+      {
+        "effective_frequency_at_horizon": -0.8477692757068037,
+        "ingoing_flux": 4.78583919562362,
+        "omega": 0.8843561919019439,
+        "omega_over_Phi_H": 0.5105612777132273,
+        "outgoing_flux": 2.785837202876992,
+        "radiative": false,
+        "reflection_ratio": 0.5821000432744341
+      },
+      {
+        "effective_frequency_at_horizon": -1.2321254676087476,
+        "ingoing_flux": 4.873113098016124,
+        "omega": 0.5,
+        "omega_over_Phi_H": 0.28866269179118137,
+        "outgoing_flux": 2.873111899202119,
+        "radiative": false,
+        "reflection_ratio": 0.5895844897118808
+      },
+      {
+        "effective_frequency_at_horizon": -1.4821254676087476,
+        "ingoing_flux": 4.693013433153716,
+        "omega": 0.25,
+        "omega_over_Phi_H": 0.14433134589559068,
+        "outgoing_flux": 2.6930126871407403,
+        "radiative": false,
+        "reflection_ratio": 0.5738344297325033
+      },
+      {
+        "effective_frequency_at_horizon": -1.6321254676087475,
+        "ingoing_flux": 5.884692956898644,
+        "omega": 0.1,
+        "omega_over_Phi_H": 0.057732538358236274,
+        "outgoing_flux": 3.8846924170316255,
+        "radiative": false,
+        "reflection_ratio": 0.6601351073852695
+      },
+      {
+        "effective_frequency_at_horizon": -1.6821254676087476,
+        "ingoing_flux": 2.266544695269019,
+        "omega": 0.05,
+        "omega_over_Phi_H": 0.028866269179118137,
+        "outgoing_flux": 0.2665444799818854,
+        "radiative": false,
+        "reflection_ratio": 0.11759948106836204
+      },
+      {
+        "effective_frequency_at_horizon": -1.6955254676087477,
+        "ingoing_flux": 2.1062792577051335,
+        "omega": 0.0366,
+        "omega_over_Phi_H": 0.021130109039114477,
+        "outgoing_flux": 0.10627904056198188,
+        "radiative": false,
+        "reflection_ratio": 0.05045819075186483
+      }
+    ]
+  },
+  "creation_only": true,
+  "evolved": false,
+  "floor_points_included_only_for_s_plus_1": [
+    0.05,
+    0.0366
+  ],
+  "notes": [
+    "s = -1 keeps E_eff = omega + Phi(r) positive everywhere, so its arm is the no-window control",
+    "radiative = reflection above unity at the outer node; the floor extension asks whether the round-5 rising trend ever crosses it"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-RN-CHARGED-TWIST-CONTROL-v1",
+  "slice": {
+    "A": 0.04501936182826115,
+    "C_F": 0.01125484045706527,
+    "Phi_H": 1.7321254676087483,
+    "Q_E": 4.0,
+    "kappa": 1.4142135623730951,
+    "mass_over_total_radius": 1.01,
+    "omega_min": 0.0365869161951395,
+    "omega_min_source": "window assessment record",
+    "q_mag": 1.0,
+    "r_plus": 4.081985387535055
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist_control.py": "5178f2c8a28b7f4e6b8181878f4a2280b9468b281c817dea1dfa4de406ec6787",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "05abe32e85e01de3d4586c99d5262244a41714bc52ba4d3d45ee57345c0695a1"
+  }
+}

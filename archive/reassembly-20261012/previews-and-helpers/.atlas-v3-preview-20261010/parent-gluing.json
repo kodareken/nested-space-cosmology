@@ -1,0 +1,52 @@
+{
+  "admission": {
+    "borrowed": "0909.1101v1 Theorem 1.1 and 1004.1355v1 Theorem 1 / Corollary 1.1",
+    "budget": "literature import only; no PDE solve or inferred numerical threshold",
+    "decides": "exact local spherical geometry is available in a separate many-body family",
+    "finite_domain": "two bodies with specified compact retained regions",
+    "kind": "imported theorem, no new elliptic solve",
+    "missing": "wall-body initial data satisfying the gluing hypotheses",
+    "stop": "leave the wall attachment unresolved until its full data are supplied",
+    "unlocks": "a Cauchy-interface check, not a new gluing-theorem derivation"
+  },
+  "body_masses": {
+    "m_A": "positive",
+    "m_B": "positive, need not equal m_A"
+  },
+  "constraints": "K_ij=0 and R[h]=0 on the vacuum construction",
+  "construction": "deform distant transition regions and balance mass/centre obstruction moments",
+  "explicit_metric_constructed_here": false,
+  "formation_established": false,
+  "globally_spherical": false,
+  "missing_conditions": [
+    "select a spacelike Cauchy slice through the moving wall and retained Schwarzschild side",
+    "match induced spatial metric, extrinsic curvature and source constraints on overlap",
+    "supply smooth source data or justify a gluing theorem for the distributional shell",
+    "specify retained collar extent and its finite domain of dependence",
+    "verify theorem hypotheses before choosing a numerical separation"
+  ],
+  "moving_wall_attached": false,
+  "non_time_symmetric_successor": {
+    "missing": "an ideal delta-layer is not automatically in the theorem's smooth-data class",
+    "read": "Theorem 1 and Corollary 1.1, introduction and regularity assumptions",
+    "url": "https://arxiv.org/html/1004.1355v1",
+    "use": "preserve selected smooth (h,K) bodies with vacuum AE ends and timelike ADM four-momenta"
+  },
+  "number_of_bodies": 2,
+  "outer_mass": "arbitrarily close to m_A+m_B; not stipulated exactly equal",
+  "parent": "one shared outer asymptotically Schwarzschild end; body inner ends may remain",
+  "preserved": "chosen compact Schwarzschild body regions, including selected throat collars",
+  "schema": "nsc-atlas-parent-gluing-v1",
+  "separation": {
+    "BL_d12_certified": false,
+    "condition": "sufficiently large, depending on the chosen bodies",
+    "numeric_threshold": null
+  },
+  "source": {
+    "owner": "lab/docs/nsc-atlas-parent-gluing.md",
+    "read": "Theorem 1.1, ensuing interior-preservation discussion and proof obstruction balance",
+    "url": "https://arxiv.org/html/0909.1101v1"
+  },
+  "status": "IMPORTED_EXISTENCE_FAMILY",
+  "unchanged_brill_lindquist": false
+}

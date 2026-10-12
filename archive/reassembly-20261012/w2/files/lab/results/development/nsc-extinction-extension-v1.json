@@ -1,0 +1,39 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "extends": "nsc-wall-extinction-v1.json",
+  "input_sha256": {
+    "lab/results/development/nsc-t30-extinction-v1.json": "00648d141f432db4b17c6a12a7fbf85ef989c76387e64a2318c4a6884a87a98a"
+  },
+  "landing": {
+    "campaign": "nsc-rn-inward-march-t30-v1",
+    "rows_t25_t30": [
+      {
+        "balance_at_throat": 0.7061211943241013,
+        "r_first_wall": 1.0059089030208097,
+        "t_over_rm": 25.0,
+        "wall_count": 2
+      },
+      {
+        "balance_at_throat": 0.7674030376750347,
+        "r_first_wall": 1.033630612244898,
+        "t_over_rm": 30.0,
+        "wall_count": 2
+      }
+    ],
+    "verdict": "WALL_SURVIVES_TO_30"
+  },
+  "light_case_extinction_now": {
+    "next_named_question": "a longer campaign (t=35/40 or beyond)",
+    "status": "alive through t=30"
+  },
+  "notes": [],
+  "production_trajectory": false,
+  "reading": "the light wall's extinction, updated by the landed stations; the sealed round-77 table remains untouched and this record stands beside it",
+  "schema": "NSC-EXTINCTION-EXTENSION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_extinction_extension.py": "f69eba952ed51b33e812df57cbd932e2c9fc982c64b8d358da67684218d3a9df",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

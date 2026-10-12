@@ -1,0 +1,47 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "omega_star = phase-averaged window potential at sign +1, the round-4 definition with the same quadrature",
+    "the dyonic gap is 2 sqrt(M^2 - P_tot^2) with fixed A, C_F, q_mag=1, Q_E=4 as eta varies"
+  ],
+  "omega_star_raw_spread": 0.019238999346140366,
+  "omega_star_sqrt_gap_spread": 0.12326985513069828,
+  "production_trajectory": false,
+  "reading": "if the charged spectroscopy is gap-clocked like the wall rise phase, the gapped spread collapses below the raw spread",
+  "rows": [
+    {
+      "T_total": 58.186591700688396,
+      "eta": 1.01,
+      "horizon_gap": 1.0049212334522974,
+      "omega_star": 0.2371197476988707,
+      "omega_star_times_sqrt_gap": 0.23770249244034256,
+      "r_minus": 3.0770641540827577,
+      "r_plus": 4.081985387535055
+    },
+    {
+      "T_total": 58.04049569721798,
+      "eta": 1.02,
+      "horizon_gap": 1.4247041080930996,
+      "omega_star": 0.23245250478354915,
+      "omega_star_times_sqrt_gap": 0.277457563735434,
+      "r_minus": 2.9026135560772963,
+      "r_plus": 4.327317664170396
+    },
+    {
+      "T_total": 57.84941989997151,
+      "eta": 1.04,
+      "horizon_gap": 2.024785739321036,
+      "omega_star": 0.22622683124317547,
+      "omega_star_times_sqrt_gap": 0.32190939295225957,
+      "r_minus": 2.6734544190932077,
+      "r_plus": 4.698240158414244
+    }
+  ],
+  "schema": "NSC-CHARGED-CLOCK-HORIZON-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_charged_clock_horizon.py": "4a3318a4feb3fd849f94243113ced751f9a93cf641f3a3136ae549b5b39d71c1",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

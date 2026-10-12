@@ -1,0 +1,23 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "consequence": "the v1-derived linear CPU forecast (~12.9k CPU-seconds to station-25) is structurally sound; there is no hidden budget-truncation to confuse the meter",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [],
+  "production_trajectory": false,
+  "schema": "NSC-T30-SEMANTIC-AUDIT-v1",
+  "semantics": [
+    "dt is fixed for the whole segment (no CFL adaptation mid-march)",
+    "cpu_seconds=None leaves the budget check inert: no early stop can happen",
+    "writes happen only at listed station times",
+    "step count per unit of t is therefore fixed and cost is linear in t"
+  ],
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_semantic_audit.py": "6c0d5352481d74256d986191532aec90927286199e0a7dddf980e75ad08f2f57",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verified_from": {
+    "march_pair": "derive_nsc_rn_parent.py lines 1092-1131",
+    "station loop": "derive_nsc_rn_inward_march.py lines 270-306"
+  }
+}

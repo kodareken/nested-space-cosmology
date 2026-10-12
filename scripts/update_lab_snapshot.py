@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Explicitly register intended lab edits while preserving import provenance."""
+"""Retired import updater; current successor registration has one root owner.
+
+The original update function is retained for isolated historical fixture tests.
+The active command cannot rewrite docs/lab-snapshot.json after reassembly.
+Use scripts/reassemble_repository.py --record-successors with explicit current
+repository-relative paths instead.
+"""
 import argparse
 import json
-import subprocess
 
-from check_lab_snapshot import ROOT, digest, safe_path
+from check_lab_snapshot import digest, safe_path
 
 
 def update(root, names, parent_commit):
@@ -33,13 +38,12 @@ def update(root, names, parent_commit):
     target.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("paths", nargs="+", help="explicit repository-relative lab file paths")
-    args = parser.parse_args()
-    parent = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip()
-    update(ROOT, args.paths, parent)
-    print("Updated explicit lab file bindings. Rebuild publication provenance and run relevant checks.")
+    parser.add_argument("paths", nargs="*", help="legacy arguments; no files will be changed")
+    parser.parse_args(argv)
+    parser.error("retired: use python scripts/reassemble_repository.py --record-successors PATH [PATH ...]; "
+                 "the original laboratory import receipt is preserved")
 
 
 if __name__ == "__main__":

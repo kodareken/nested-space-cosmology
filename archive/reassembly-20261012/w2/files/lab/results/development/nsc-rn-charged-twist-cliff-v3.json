@@ -1,0 +1,165 @@
+{
+  "Phi_H": 1.7321254676087483,
+  "api_version": "nsc-rn-charged-lll-v1",
+  "creation_only": true,
+  "deficit_sequence": {
+    "n1_deficit": 0.33208800000000005,
+    "n2_deficit": 0.04334099999999996,
+    "n3_deficit": 0.0022219999999999462,
+    "n4_deficit": 4.0125170306493096e-05
+  },
+  "evolved": false,
+  "grid": "0.0005 steps over 0.110..0.126",
+  "kappa": 4.47213595499958,
+  "notes": [
+    "n=4 multiplet; if the deficit collapses to ~1e-4 the ladder approaches a reflective asymptote from below"
+  ],
+  "production_trajectory": false,
+  "result": {
+    "kappa": 4.47213595499958,
+    "peak": {
+      "omega": 0.1225,
+      "reflection_ratio": 0.9999598748296935
+    },
+    "radiative": false,
+    "rows": [
+      {
+        "omega": 0.11,
+        "reflection_ratio": 0.9999486097715468
+      },
+      {
+        "omega": 0.1105,
+        "reflection_ratio": 0.9999495578341545
+      },
+      {
+        "omega": 0.111,
+        "reflection_ratio": 0.999950458612173
+      },
+      {
+        "omega": 0.1115,
+        "reflection_ratio": 0.9999513145437673
+      },
+      {
+        "omega": 0.112,
+        "reflection_ratio": 0.9999520753581479
+      },
+      {
+        "omega": 0.1125,
+        "reflection_ratio": 0.9999528735912424
+      },
+      {
+        "omega": 0.113,
+        "reflection_ratio": 0.9999535625995833
+      },
+      {
+        "omega": 0.1135,
+        "reflection_ratio": 0.999954252709066
+      },
+      {
+        "omega": 0.114,
+        "reflection_ratio": 0.9999548775602194
+      },
+      {
+        "omega": 0.1145,
+        "reflection_ratio": 0.9999554636523956
+      },
+      {
+        "omega": 0.115,
+        "reflection_ratio": 0.9999560158163858
+      },
+      {
+        "omega": 0.1155,
+        "reflection_ratio": 0.9999565218195717
+      },
+      {
+        "omega": 0.116,
+        "reflection_ratio": 0.9999569812734603
+      },
+      {
+        "omega": 0.1165,
+        "reflection_ratio": 0.9999574214491643
+      },
+      {
+        "omega": 0.117,
+        "reflection_ratio": 0.9999578067371193
+      },
+      {
+        "omega": 0.1175,
+        "reflection_ratio": 0.9999581432924827
+      },
+      {
+        "omega": 0.118,
+        "reflection_ratio": 0.9999584718621862
+      },
+      {
+        "omega": 0.1185,
+        "reflection_ratio": 0.9999587702242367
+      },
+      {
+        "omega": 0.119,
+        "reflection_ratio": 0.9999590241862872
+      },
+      {
+        "omega": 0.1195,
+        "reflection_ratio": 0.9999592627560657
+      },
+      {
+        "omega": 0.12,
+        "reflection_ratio": 0.9999594483946569
+      },
+      {
+        "omega": 0.1205,
+        "reflection_ratio": 0.9999596036393021
+      },
+      {
+        "omega": 0.121,
+        "reflection_ratio": 0.9999597239001021
+      },
+      {
+        "omega": 0.1215,
+        "reflection_ratio": 0.9999598104739857
+      },
+      {
+        "omega": 0.122,
+        "reflection_ratio": 0.9999598534460461
+      },
+      {
+        "omega": 0.1225,
+        "reflection_ratio": 0.9999598748296935
+      },
+      {
+        "omega": 0.123,
+        "reflection_ratio": 0.9999598393992415
+      },
+      {
+        "omega": 0.1235,
+        "reflection_ratio": 0.9999598099737
+      },
+      {
+        "omega": 0.124,
+        "reflection_ratio": 0.9999597221825939
+      },
+      {
+        "omega": 0.1245,
+        "reflection_ratio": 0.999959578901367
+      },
+      {
+        "omega": 0.125,
+        "reflection_ratio": 0.9999594452408301
+      },
+      {
+        "omega": 0.1255,
+        "reflection_ratio": 0.9999592490441306
+      },
+      {
+        "omega": 0.126,
+        "reflection_ratio": 0.9999590197026444
+      }
+    ]
+  },
+  "schema": "NSC-RN-CHARGED-TWIST-CLIFF-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist_cliff.py": "f9036980e131396006da57457a20603c03e99f3450338ab3735c92e35f978ce0",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "81d2602af55549c7ea50a24d4a84e0838dd419c0cd951886a5227a76d549e472"
+  }
+}

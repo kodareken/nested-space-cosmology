@@ -1,0 +1,37 @@
+{
+  "additional_records_cited": 6,
+  "additions": {
+    "domain law deep rates": [
+      "nsc-march-wall-rates-v1.json"
+    ],
+    "frontier supplements": [
+      "nsc-frontier-supplement-v1.json"
+    ],
+    "ledger and governance": [
+      "nsc-ledger-audit-v1.json",
+      "nsc-programme-index-v1.json"
+    ],
+    "t30 campaign instruments": [
+      "nsc-t30-launch-log-v1.json",
+      "nsc-t30-expectations-v1.json"
+    ]
+  },
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "index_complete": true,
+  "missing_records": [],
+  "notes": [
+    "v1 remains on disk untouched; this v2 stands beside it"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-PROGRAMME-INDEX-v2",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_programme_index_v2.py": "fecff97dfeeb1ab5ea757ea0930ce637edbf477d2c2e9153f490bfd0962dc293",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "supersedes": "nsc-programme-index-v1.json",
+  "supersedes_reason": "v1 was sealed at round 84; v2 carries the round-85..99 records",
+  "v1_cited_records": 46,
+  "v1_parts_kept": 14
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1460" viewBox="0 0 1400 1460" role="img" aria-label="Which boundaries can become part of the map?">
+<title>Which boundaries can become part of the map?</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1400" height="1460" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">Which boundaries can become part of the map?</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Atlas v3 | Two parent families, a source constraint and one moving local junction</text>
+<rect x="50" y="135" width="625" height="300" rx="18" fill="#102c41" stroke="#47758e"/>
+<text x="75" y="177" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#86d6f0" font-weight="600">EXPLICIT SHARED PARENT</text>
+<text x="75" y="218" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#e5eef3" font-weight="normal">Brill-Lindquist: two unequal punctures</text>
+<text x="75" y="252" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#e5eef3" font-weight="normal">One vacuum initial slice, with companion tides.</text>
+<text x="75" y="286" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#e5eef3" font-weight="normal">Local spheres are generally distorted.</text>
+<text x="75" y="320" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#e5eef3" font-weight="normal">The v2 metric and evidence remain unchanged.</text>
+<circle cx="265" cy="393" r="26" fill="#020810" stroke="#e6be7a" stroke-width="2"/>
+<circle cx="430" cy="393" r="35" fill="#020810" stroke="#e6be7a" stroke-width="2"/>
+<rect x="725" y="135" width="625" height="300" rx="18" fill="#102c41" stroke="#47758e"/>
+<text x="750" y="177" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#86d6f0" font-weight="600">EXISTENCE-BACKED ALTERNATIVE</text>
+<text x="750" y="218" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#e5eef3" font-weight="normal">Two retained Schwarzschild body regions</text>
+<text x="750" y="252" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#e5eef3" font-weight="normal">A many-body theorem supplies a shared parent.</text>
+<text x="750" y="286" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#e5eef3" font-weight="normal">Exact spherical collars; sufficiently far apart.</text>
+<text x="750" y="320" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#e5eef3" font-weight="normal">No explicit separation threshold or new metric.</text>
+<circle cx="940" cy="393" r="26" fill="#020810" stroke="#e6be7a" stroke-width="2"/>
+<circle cx="1105" cy="393" r="35" fill="#020810" stroke="#e6be7a" stroke-width="2"/>
+<rect x="50" y="475" width="1300" height="152" rx="18" fill="#302d28" stroke="#c69f62"/>
+<text x="80" y="516" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#f4ce8c" font-weight="600">MISSING INTERFACE: PUT THE WALL AND PARENT ON ONE SPACELIKE SLICE</text>
+<text x="80" y="553" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">Match the spatial metric, extrinsic curvature, retained side and source constraints.</text>
+<text x="80" y="590" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#c7c9c9" font-weight="normal">Smooth-data gluing does not automatically include an ideal delta-layer. A shared mass is insufficient.</text>
+<path d="M 360 437 L 360 472" stroke="#e6be7a" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 1040 437 L 1040 472" stroke="#e6be7a" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="50" y="669" width="625" height="270" rx="18" fill="#382633" stroke="#bf7881"/>
+<text x="75" y="711" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#f0b1b8" font-weight="600">RADIATION + PURE FIXED TENSION</text>
+<text x="75" y="751" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Vacuum outside: no compensating bulk flux.</text>
+<text x="75" y="789" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Conservation forces zero relative fluid speed.</text>
+<text x="75" y="827" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Motion alone does not evade the v2 obstruction.</text>
+<text x="75" y="869" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#e0b6bf" font-weight="normal">Change the source or bulk assumptions to proceed.</text>
+<text x="75" y="907" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#c7c9c9" font-weight="normal">Scoped exclusion; other child models remain open.</text>
+<rect x="725" y="669" width="625" height="270" rx="18" fill="#153630" stroke="#61aa91"/>
+<text x="750" y="711" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#8fe0bc" font-weight="600">DE SITTER + PURE FIXED TENSION</text>
+<text x="750" y="751" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Imported expanding shell with a fixed source.</text>
+<text x="750" y="789" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Signed normals: beta-minus &gt; 0, beta-plus &lt; 0.</text>
+<text x="750" y="827" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Local proper time and both junction stresses checked.</text>
+<text x="750" y="869" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#a9cfc1" font-weight="normal">A separate spherical patch; parent embedding open.</text>
+<text x="750" y="907" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#c7c9c9" font-weight="normal">No formation history or stability result assigned.</text>
+<text x="60" y="987" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#86d6f0" font-weight="600">THE FINITE BRANCHING QUESTION REMAINS</text>
+<rect x="80" y="1015" width="425" height="95" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="108" y="1055" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#e5eef3" font-weight="600">Possible child A</text>
+<text x="108" y="1090" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#e6be7a" font-weight="normal">Formation and state transfer unresolved</text>
+<rect x="880" y="1015" width="425" height="95" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="908" y="1055" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#e5eef3" font-weight="600">Possible child B</text>
+<text x="908" y="1090" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#e6be7a" font-weight="normal">Formation and state transfer unresolved</text>
+<path d="M 505 1060 L 877 1060" stroke="#ab8bda" stroke-width="2" stroke-dasharray="3 8"/>
+<text x="560" y="1040" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#c9aaf0" font-weight="normal">possible correlation</text>
+<text x="550" y="1095" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">no sibling signal path</text>
+<path d="M 290 1111 L 290 1160" stroke="#e6be7a" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+<rect x="80" y="1170" width="425" height="83" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="105" y="1205" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#86d6f0" font-weight="600">Possible grandchild</text>
+<text x="105" y="1236" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Another transition; depth cutoff two</text>
+<text x="570" y="1175" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#86d6f0" font-weight="normal">One-hole multiple daughters</text>
+<text x="570" y="1210" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Communicating mouths / indistinguishable exteriors</text>
+<text x="570" y="1245" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">Independent candidates retain their own sources and domains.</text>
+<text x="60" y="1320" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#86d6f0" font-weight="normal">Descent / attachment / causal influence / correlation remain distinct relations.</text>
+<text x="60" y="1360" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#adc0cd" font-weight="normal">Known mathematics changes which connection to test next. It is not a new cosmological discovery.</text>
+<text x="60" y="1400" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#adc0cd" font-weight="normal">Schematic candidate map. Sizes are not distances; no global spacetime embedding is drawn.</text>
+</svg>

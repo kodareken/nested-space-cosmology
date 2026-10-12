@@ -1,0 +1,59 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "family_chart_extinction": {
+    "mu-1.002-eps-0.001": {
+      "covered_until": 7.999999999999584,
+      "last_wall": 7.999999999999584
+    },
+    "mu-1.010-eps-0.001": {
+      "covered_until": 15.499999999999424,
+      "last_wall": 13.999999999999456
+    },
+    "mu-1.040-eps-0.001": {
+      "covered_until": 18.499999999999805,
+      "last_wall": 9.999999999999542
+    }
+  },
+  "input_sha256": {
+    "lab/results/development/nsc-march-balance-trajectory-v1.json": "56f0fc90c9f9cdb5a0b32d0ed6227d596a80d4e2c87dd931bc98b944b3adbb3a",
+    "lab/results/development/nsc-relaxation-wall-v1.json": "4296e7b71d467b20edf1b1ebd8b682da11722a763d4953d5aba850da5bc51a67",
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "march_chart_extinction": {
+    "mu-1.002-eps-0.001": {
+      "covered_until": 20.0,
+      "last_wall": 20.0
+    },
+    "mu-1.010-eps-0.001": {
+      "covered_until": 20.0,
+      "last_wall": 20.0
+    },
+    "mu-1.040-eps-0.001": {
+      "covered_until": 20.0,
+      "last_wall": 10.0
+    }
+  },
+  "notes": [
+    "last_wall = final station with wall_count > 0 inside each domain's own station coverage"
+  ],
+  "ordering_family": [
+    "mu-1.002-eps-0.001",
+    "mu-1.040-eps-0.001",
+    "mu-1.010-eps-0.001"
+  ],
+  "ordering_inverts_with_domain_depth": true,
+  "ordering_march": [
+    "mu-1.040-eps-0.001",
+    "mu-1.002-eps-0.001",
+    "mu-1.010-eps-0.001"
+  ],
+  "production_trajectory": false,
+  "reading": "the wall's lifespan ordering across cases flips when the grid reaches r_minus; the lightest case lives longest on the deep grid and shortest on the shallow one",
+  "schema": "NSC-WALL-EXTINCTION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_extinction.py": "6daee2165e3d7e4323755357d710d2de889f039d706c9d08f30160996fda0952",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

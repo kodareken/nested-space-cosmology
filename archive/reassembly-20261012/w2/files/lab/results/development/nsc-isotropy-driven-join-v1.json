@@ -1,0 +1,82 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "correlations": {
+    "isotropy_fall_vs_fall_rate": -0.9645639327041718,
+    "isotropy_fall_vs_rise": -0.9616503974779359,
+    "isotropy_fall_vs_wall_presence": -0.8655795182230547
+  },
+  "creation_only": true,
+  "evolved": false,
+  "i_first_mu_blindness": 0.0024381273994023467,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf",
+    "lab/results/development/nsc-rn-isotropy-v1.json": "4437a77512241e8433f540332437645ff7ea964691444c205cb73e690476c472",
+    "lab/results/development/nsc-wall-clock-epscross-v1.json": "d5d91c9e17721b97db100e2b0ed5e85806173021d2a5079ca1a4a5f700e6b664"
+  },
+  "notes": [
+    "n = 6; the two epsilon arms of each mu are separate rows",
+    "I_first is nearly mu-blind and epsilon-blind: the seventh mu-blind scaffold quantity"
+  ],
+  "production_trajectory": false,
+  "rows": [
+    {
+      "case": "mu-1.002-eps-0.001",
+      "fall_rate": -0.34823941255020197,
+      "isotropy_fall": 0.03851414431504274,
+      "isotropy_first": 0.4674812375587237,
+      "isotropy_last": 0.42896709324368093,
+      "rise_rate": 0.29902016427183,
+      "wall_presence_fraction": 0.6470588235294118
+    },
+    {
+      "case": "mu-1.002-eps-0.010",
+      "fall_rate": -0.34486202894050494,
+      "isotropy_fall": 0.03821258741772299,
+      "isotropy_first": 0.4674812375587237,
+      "isotropy_last": 0.4292686501410007,
+      "rise_rate": 0.2908957346590529,
+      "wall_presence_fraction": 0.6470588235294118
+    },
+    {
+      "case": "mu-1.010-eps-0.001",
+      "fall_rate": -0.3065512890887465,
+      "isotropy_fall": 0.058373954133255856,
+      "isotropy_first": 0.4674740049550471,
+      "isotropy_last": 0.40910005082179124,
+      "rise_rate": 0.18244065140986887,
+      "wall_presence_fraction": 0.6875
+    },
+    {
+      "case": "mu-1.010-eps-0.010",
+      "fall_rate": -0.3247550990359468,
+      "isotropy_fall": 0.05693992093288491,
+      "isotropy_first": 0.4674740049550471,
+      "isotropy_last": 0.4105340840221622,
+      "rise_rate": 0.19720634797063427,
+      "wall_presence_fraction": 0.6060606060606061
+    },
+    {
+      "case": "mu-1.040-eps-0.001",
+      "fall_rate": -0.24163515326434193,
+      "isotropy_fall": 0.07473218353747813,
+      "isotropy_first": 0.46861469906556114,
+      "isotropy_last": 0.393882515528083,
+      "rise_rate": 0.13066197176516278,
+      "wall_presence_fraction": 0.3157894736842105
+    },
+    {
+      "case": "mu-1.040-eps-0.010",
+      "fall_rate": -0.23701967016221367,
+      "isotropy_fall": 0.08639649386018972,
+      "isotropy_first": 0.46861469906556114,
+      "isotropy_last": 0.3822182052053714,
+      "rise_rate": 0.1281661920136416,
+      "wall_presence_fraction": 0.3
+    }
+  ],
+  "schema": "NSC-ISOTROPY-DRIVEN-JOIN-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_isotropy_driven_join.py": "50038dc872e248122d99b76c78141df603b256f1889b801b2d9c7c55cdbd6945",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "branching": 3.0,
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-matryoshka-comparison-v1.json": "d88327a36bdec1d657779281e020c3265fbca93b3929274a5f4f81b1b7d9fd40"
+  },
+  "notes": [
+    "branching 3 is the recorded Schroeder asymptotic, not a fit",
+    "the lapse tangent fee 0.2610 and the transfer fee 0.0446 are recorded first-principles measurements"
+  ],
+  "production_trajectory": false,
+  "reading": "with the recorded Schroeder branching b=3, a per-level fee f sums to 1/(1-3f); the Omega=4 resolvent anchor of the matryoshka record is the reference",
+  "schema": "NSC-MATRYOSHKA-FEE-JOIN-v1",
+  "schroder_counts": [
+    1,
+    1,
+    3,
+    11,
+    45,
+    197
+  ],
+  "sites": {
+    "lapse_tangent_f": {
+      "fee": 0.261,
+      "per_level_growth": 0.783,
+      "sigma": 4.6082949308755765,
+      "sigma_distance_to_omega4": 0.6082949308755765,
+      "sigma_relative": 1.1520737327188941
+    },
+    "resolvent_1_over_omega": {
+      "fee": 0.2517,
+      "per_level_growth": 0.7550999999999999,
+      "sigma": 4.083299305839116,
+      "sigma_distance_to_omega4": 0.08329930583911604,
+      "sigma_relative": 1.020824826459779
+    },
+    "transfer_fee": {
+      "fee": 0.0446,
+      "per_level_growth": 0.1338,
+      "sigma": 1.1544677903486493,
+      "sigma_distance_to_omega4": -2.845532209651351,
+      "sigma_relative": 0.28861694758716233
+    }
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_matryoshka_fee_join.py": "c694019961b696bc64835dcc1ee0d3085c6d99bccfd150104872e8185ae09444",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

@@ -1,0 +1,2007 @@
+{
+  "repository": "BlackHoles-Infinity-w2",
+  "head": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+  "branch": "agent/blackholes-infinity/work2",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 31167,
+      "sha256": "a7b54d13daa602d63bf48c603febbe48e75882e3d3344413d25e43b44211b574"
+    },
+    {
+      "path": "README.md",
+      "bytes": 27463,
+      "sha256": "59a06d15c56edc1a7020afa92a1521e0d1c5dd919c21d01c3f5885c57e262e23"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 12940,
+      "sha256": "d393c54aece74014e507839c3032137b60c3ee8e68458ab511966c863dd557bf"
+    },
+    {
+      "path": "docs/arxiv-studies.md",
+      "bytes": 33081,
+      "sha256": "54778586fec2c42fdcffaa0a9ddd9841cc255bba8fc7d1a76e3b1453c8160a8f"
+    },
+    {
+      "path": "docs/current-result.md",
+      "bytes": 164257,
+      "sha256": "151c118c19fa89bdb9512dd3e766a7cf37b0211372135b7344fd27486e3a6e33"
+    },
+    {
+      "path": "docs/nsc-programme-method.md",
+      "bytes": 2180,
+      "sha256": "de1b9332af25c32f63026633fbc892f4d64d28057aee9253dfa3291bcdd2767e"
+    },
+    {
+      "path": "docs/papers.md",
+      "bytes": 5923,
+      "sha256": "ba688fc1d73203d5f4d53923b7c53c065bcdb452cd1123516525d00e943b91b8"
+    },
+    {
+      "path": "lab/docs/active-code-map.md",
+      "bytes": 215388,
+      "sha256": "fdfe5bff42d768ccd4da52a7fff8955d2e655b5dc6fbb375e063519adb86bf6a"
+    },
+    {
+      "path": "lab/docs/claim-ledger.md",
+      "bytes": 103172,
+      "sha256": "cde94973a6603e17c718010fce0efb1ae456579e7efa85769708cc297853a817"
+    },
+    {
+      "path": "lab/docs/nsc-influence-chain.md",
+      "bytes": 19413,
+      "sha256": "f03d13e6d4a99625db01407be997a345bfe7dcdea451f74731b81c75cfc70154"
+    },
+    {
+      "path": "lab/docs/nsc-matryoshka-comparison.md",
+      "bytes": 2535,
+      "sha256": "bf598f4a62b0f9f14f18ba0c9257583889aca1cefbaf1aec71a056cd4aad20af"
+    },
+    {
+      "path": "lab/docs/nsc-rn-cone-map.md",
+      "bytes": 5209,
+      "sha256": "e68ca5c714a04d6fc2cb05df2df60cd380f269da9ae752df06e70ac922d21e5c"
+    },
+    {
+      "path": "lab/docs/nsc-rn-force-oscillation.md",
+      "bytes": 22217,
+      "sha256": "cd366e625a3f8c970191dcab9fb08031c993f3ef85b4a547b4d32cac2f714643"
+    },
+    {
+      "path": "lab/docs/nsc-rn-inward-march.md",
+      "bytes": 3660,
+      "sha256": "ad2c1a5a267b12410d079ab6f408521ac5d2e23036d6e86898bdeaed1cd57aee"
+    },
+    {
+      "path": "lab/docs/nsc-rn-isotropy.md",
+      "bytes": 6828,
+      "sha256": "31dc18d0ec16ce66829a991cf7a7c66bc0eead90fd99f261515ca0084ef6bbbb"
+    },
+    {
+      "path": "lab/docs/nsc-rn-oneway.md",
+      "bytes": 4935,
+      "sha256": "6dafcc75a2aabdec999edc52c8579222484f506ebade092ebebbfa43ab9c6213"
+    },
+    {
+      "path": "lab/docs/nsc-rn-two-ends.md",
+      "bytes": 2938,
+      "sha256": "ae9e423df2a51bf97a9651449b19acee446543141d96f25e60b61b531f9a2fd8"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/.lock",
+      "bytes": 5,
+      "sha256": "5d8413031fd8646135dcf3090965bcac42a9868cf99b84c1c4e54203247c7c0f"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_actual_family_writer_outp0/results/development/artifacts/nsc-ks-gate-value-writer-roundtrip/binding.json",
+      "bytes": 26543,
+      "sha256": "30bf4aaa715ed0496c55efbe8d1ead4595a69062956cc0ddbdde7d3bf61e8aee"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_actual_family_writer_outp0/results/development/artifacts/nsc-ks-gate-value-writer-roundtrip/family-14-+1.json",
+      "bytes": 2366,
+      "sha256": "e5f466828dc286d043f95746522e94fe1be3d7680315d949532efaf35fbc28bb"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_actual_family_writer_outp0/results/development/artifacts/nsc-ks-gate-value-writer-roundtrip/family-14-+1.npz",
+      "bytes": 3754,
+      "sha256": "f8f6020a8bfd58b8597890e78c43698492aa3cd4868adba305ef703b4e7e6dbc"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_atlas_writer_creates_only0/nsc-discovery-atlas-v1.json",
+      "bytes": 4727,
+      "sha256": "e8312fb6bbf747029ae79be20a4b502bb8264251d7e1127ade68b9eb67e5f5a2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_atlas_writer_creates_only0/nsc-discovery-atlas-v1.npz",
+      "bytes": 24500,
+      "sha256": "536e389e449b4fbc63e9e900dea9ee385ae969d8d0ae5da8718286d5380eed0f"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_check_replays_and_rejects0/art/binding.json",
+      "bytes": 3491,
+      "sha256": "795b841bc5e270693efc7c3ccc3290c85900603eca9c6d37fdc7c0b800f39a93"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_checkpoint_binding_mismat0/artifacts/binding.json",
+      "bytes": 1070,
+      "sha256": "bcc6e248efcfa2beaad23ad7f9c720854abc1e3c2a5ffa86843d3a45f5f07475"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_checkpoint_rejects_radius0/art/binding.json",
+      "bytes": 1546,
+      "sha256": "b438d3399922cef6f8613a88826ff97d2cf65d661bd7d92a1fc5bac039bea128"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_checkpoint_rejects_radius0/art/node-000.json",
+      "bytes": 1549,
+      "sha256": "9a474b7b6ed17bfdc8e842a854310f650695837bb33e943fcf8f692fb0d837f5"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_cpu_budget_stops_dispatch0/results/development/artifacts/nsc-ks-gate-value-budget/binding.json",
+      "bytes": 29721,
+      "sha256": "a07e00b585dcfd22372d336fd62d94fdc6d1722cadd582c9b9c4f7cd48fced6b"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_cpu_budget_stops_dispatch0/results/development/artifacts/nsc-ks-gate-value-budget/family-14-+1.json",
+      "bytes": 2190,
+      "sha256": "6b49ff1e53a391f6c081c5bfbb7c88a5fd40060a0a9146a65fb761b91c9165f7"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_cpu_budget_stops_dispatch0/results/development/artifacts/nsc-ks-gate-value-budget/family-14-+1.npz",
+      "bytes": 2213,
+      "sha256": "450c35b8b3cdfeab302e9878b02fb95edbbfd81f0c05f914005aba467fe7727d"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_cpu_budget_stops_dispatch0/results/development/artifacts/nsc-ks-gate-value-budget/family-15-+1.json",
+      "bytes": 2190,
+      "sha256": "855da43825f31e847fb382ecf9c199b788e51f702c3b917de3e653b409b9ad09"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_cpu_budget_stops_dispatch0/results/development/artifacts/nsc-ks-gate-value-budget/family-15-+1.npz",
+      "bytes": 2213,
+      "sha256": "108448198786bafc405c5d8a9b302978ea5e9ed24321d1ab33aeb8b5363d52ed"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in0/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3d0b820cd44c967f0d7a13a983a46ebd098d0dedcff62423eeab4ae0bb8632ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in0/family-14-+1.npz",
+      "bytes": 2227,
+      "sha256": "3120dfd10874ad51590e4580336cb1139f197513c4bd8ac6ba0b28cc0ed48b10"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in1/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3d0b820cd44c967f0d7a13a983a46ebd098d0dedcff62423eeab4ae0bb8632ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in1/family-14-+1.npz",
+      "bytes": 2227,
+      "sha256": "3120dfd10874ad51590e4580336cb1139f197513c4bd8ac6ba0b28cc0ed48b10"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in2/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3d0b820cd44c967f0d7a13a983a46ebd098d0dedcff62423eeab4ae0bb8632ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in2/family-14-+1.npz",
+      "bytes": 2227,
+      "sha256": "3120dfd10874ad51590e4580336cb1139f197513c4bd8ac6ba0b28cc0ed48b10"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in3/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3d0b820cd44c967f0d7a13a983a46ebd098d0dedcff62423eeab4ae0bb8632ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in3/family-14-+1.npz",
+      "bytes": 2227,
+      "sha256": "3120dfd10874ad51590e4580336cb1139f197513c4bd8ac6ba0b28cc0ed48b10"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in4/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3d0b820cd44c967f0d7a13a983a46ebd098d0dedcff62423eeab4ae0bb8632ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in4/family-14-+1.npz",
+      "bytes": 2227,
+      "sha256": "3120dfd10874ad51590e4580336cb1139f197513c4bd8ac6ba0b28cc0ed48b10"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in5/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3d0b820cd44c967f0d7a13a983a46ebd098d0dedcff62423eeab4ae0bb8632ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_each_binding_dimension_in5/family-14-+1.npz",
+      "bytes": 2227,
+      "sha256": "3120dfd10874ad51590e4580336cb1139f197513c4bd8ac6ba0b28cc0ed48b10"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_exclusive_record_preserve0/record.json",
+      "bytes": 24,
+      "sha256": "d907e2ab981fddb7da0d479d9e401a87d353e1e84f78a9580dd4f27f48e6900a"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_exclusive_record_preserve0/record.json.21984.tmp",
+      "bytes": 18,
+      "sha256": "97f7b34ddffbf945d9e5b0945258f8ba6d5f97b6f8b533d0ca6f19d6e542f2b7"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_existing_v2_register_is_n0/results/development/nsc-ks-gate-value-v2-47.json",
+      "bytes": 72,
+      "sha256": "925bf1003a65240498b44035724f71351f008867c5aa3443fcbeee8a99db03e4"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_explicit_legacy_replay_ac0/family-14-+1.json",
+      "bytes": 1487,
+      "sha256": "3123dd8daa577ff7caa667f74353b03ce07703d168242e2cdf6b91bac28f49ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_explicit_legacy_replay_ac0/family-14-+1.npz",
+      "bytes": 1862,
+      "sha256": "d1b9a8cd784dcee0cd0d961e95e38fd96c6f906ac484e9e459480700fae8a3a2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_family_json_write_is_excl0/family-14-+1.json",
+      "bytes": 35,
+      "sha256": "3dede2e3572fc22b294648ba0973b724dd2ff651b32634842e8b6afe941e1616"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_history_identity_mismatch0/results/development/nsc-ks-gate-history-lm-broyden.json",
+      "bytes": 2117,
+      "sha256": "a76eb81f3f22889efcf978e23e8cb4d0adc929438e08edfacf2166a54b3ce8ed"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_implementation_hashes_fol0/scripts/owner.py",
+      "bytes": 42,
+      "sha256": "ce20e2c1198f78486683cfcf3d70c6997c12f1044b424350ad3eb4105f16b859"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_implementation_hashes_fol0/src/recursive_horizons/__init__.py",
+      "bytes": 24,
+      "sha256": "f191a4969285c6f6fbcfb37e5c13cb3f90a8d74d0cd43236b49a0451f9ddb71c"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_implementation_hashes_fol0/src/recursive_horizons/bar.py",
+      "bytes": 11,
+      "sha256": "cafb05d947fb92e41aad13ac40936a7dee4a3068ae2033f54bc777d8fed2d2e8"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_implementation_hashes_fol0/src/recursive_horizons/foo.py",
+      "bytes": 38,
+      "sha256": "81c1baf36fcb45324b3358c592c87cfef53db764ae75d77d6c561fbc8d17e9ae"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_implementation_hashes_fol0/src/recursive_horizons/unrelated.py",
+      "bytes": 13,
+      "sha256": "f15da3f21c219707b2cb865313d02bb7da283b410577ad520b52963191bdac92"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_legacy_replay_does_not_wa0/results/development/nsc-incoming-source-update-v5.json",
+      "bytes": 16,
+      "sha256": "3994c785fed5bf675c2e514e5066f699769dbde82a1a21c8868458687d2ff721"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_legacy_replay_resolves_gi0/scripts/derive_nsc_ks_gate_value.py",
+      "bytes": 21,
+      "sha256": "c8f309eb75ebaebad986160329b804fa9d370af52bfd821ebd449aef56ffd984"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del0/family-05-+1.npz",
+      "bytes": 64,
+      "sha256": "663523614e48987375f4b3cf70b1a20bd8dd6001e59b029b68bfde55db787140"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del1/family-05-+1.npz",
+      "bytes": 64,
+      "sha256": "663523614e48987375f4b3cf70b1a20bd8dd6001e59b029b68bfde55db787140"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del10/family-03-+1.npz",
+      "bytes": 62,
+      "sha256": "7ef18149af2f006dc6f5e6c01ccd3b7e84c084307a374a2f918ace3eaf7a24f2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del11/family-03-+1.npz",
+      "bytes": 62,
+      "sha256": "7ef18149af2f006dc6f5e6c01ccd3b7e84c084307a374a2f918ace3eaf7a24f2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del12/family-14-+1.npz",
+      "bytes": 49,
+      "sha256": "cb8cacf5a9117cbbc1b6f6055972ccf28f14142741bd9411919897930a74b544"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del13/family-14-+1.npz",
+      "bytes": 49,
+      "sha256": "cb8cacf5a9117cbbc1b6f6055972ccf28f14142741bd9411919897930a74b544"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del2/family-12-+1.npz",
+      "bytes": 68,
+      "sha256": "38286a7ac78e46fa12724ca6cb60f309477b580ae62c9fe1a2c63a0babc26ade"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del3/family-12-+1.npz",
+      "bytes": 68,
+      "sha256": "38286a7ac78e46fa12724ca6cb60f309477b580ae62c9fe1a2c63a0babc26ade"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del4/family-11-+1.npz",
+      "bytes": 70,
+      "sha256": "1ba45e96455649fdee89336b4421c71cd9b027649e17bddc0d14e6144c6b7a4b"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del5/family-11-+1.npz",
+      "bytes": 70,
+      "sha256": "1ba45e96455649fdee89336b4421c71cd9b027649e17bddc0d14e6144c6b7a4b"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del6/family-09-+1.npz",
+      "bytes": 62,
+      "sha256": "350fa1b55ff3fe996f40f35a6eb7c4af3efc7845be320aa06b93785ffd1fd603"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del7/family-09-+1.npz",
+      "bytes": 62,
+      "sha256": "350fa1b55ff3fe996f40f35a6eb7c4af3efc7845be320aa06b93785ffd1fd603"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del8/family-07-+1.npz",
+      "bytes": 61,
+      "sha256": "e71ecf2879a1d44520129189144ff8d3c700aea02e385f21fc15d56421beabcd"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_missing_receipt_never_del9/family-07-+1.npz",
+      "bytes": 61,
+      "sha256": "e71ecf2879a1d44520129189144ff8d3c700aea02e385f21fc15d56421beabcd"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_mixed_v1_cache_is_rejecte0/family-14-+1.json",
+      "bytes": 1487,
+      "sha256": "3123dd8daa577ff7caa667f74353b03ce07703d168242e2cdf6b91bac28f49ec"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_mixed_v1_cache_is_rejecte0/family-14-+1.npz",
+      "bytes": 1862,
+      "sha256": "d1b9a8cd784dcee0cd0d961e95e38fd96c6f906ac484e9e459480700fae8a3a2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_payload_identity_is_check0/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "3eba6c9686d737ec909e3aec4c614556ee44b6ed6b85e1c9c79a6ee4fb80d4bb"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_payload_identity_is_check0/family-14-+1.npz",
+      "bytes": 2213,
+      "sha256": "f42b3ead92b5b1901ece602b6a245075bd0c6fcb62fe70bc3a1b687994771ed9"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_publish_is_exclusive_and_0/benchmark.json",
+      "bytes": 46,
+      "sha256": "9d37b1bd19307c371a2894c2f78272f206a95520514f3433b97791206f19a39f"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_publish_is_exclusive_and_0/benchmark.npz",
+      "bytes": 3,
+      "sha256": "207040fa141238a4f7268fe56968eb205c799bd18b71ff34169713e15f1a00c2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_recursive_payload_descrip0/results/development/artifacts/tree/binding.json",
+      "bytes": 51,
+      "sha256": "9632d5e63b1532fc3f8d7142d4f7608b535529a35116f63138a4daea7990aa72"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_recursive_payload_descrip0/results/development/artifacts/tree/node-000.json",
+      "bytes": 16,
+      "sha256": "0981bcf6ccdfce46c41296e23162ec74d28e9e9fd84eb4e0a40ef23b4cda3955"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_recursive_payload_descrip0/results/development/artifacts/tree/node-001.json",
+      "bytes": 16,
+      "sha256": "2109a2c3f974c374f961bb3a143b2606822dbefa31b5eb13073677bdbce439e5"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_authenticates_sour0/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/binding.json",
+      "bytes": 395,
+      "sha256": "69ffc87a83f277d3f71324d6a0a2360fe2fd4eb802ff6bec9f75f8225063f3ab"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_authenticates_sour0/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/family.npz",
+      "bytes": 312,
+      "sha256": "f1634dce14676382162a7290a31b6f6e39e61b920cc07cfff0926a2e8223cde2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_authenticates_sour0/results/development/nsc-ks-evaluator-accuracy-v2-control.json",
+      "bytes": 1158,
+      "sha256": "2439a0966de323a7fd14e0dc4c5f14f3676e2b3663bee8d8bceb422ea35abbe7"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_authenticates_sour0/source.py",
+      "bytes": 19,
+      "sha256": "003edde49401e6e2c1398e3da8ebee87296572290bc6f09aa6249f98d0b81a85"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de0/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/binding.json",
+      "bytes": 396,
+      "sha256": "2116187cd79e829ff4a55c781ad7fef903bc6ac57d05efe781bf07c24d5e8155"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de0/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/family.npz",
+      "bytes": 312,
+      "sha256": "f1634dce14676382162a7290a31b6f6e39e61b920cc07cfff0926a2e8223cde2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de0/results/development/nsc-ks-evaluator-accuracy-v2-control.json",
+      "bytes": 1158,
+      "sha256": "2439a0966de323a7fd14e0dc4c5f14f3676e2b3663bee8d8bceb422ea35abbe7"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de0/source.py",
+      "bytes": 19,
+      "sha256": "81b2d9d7e7d91d11ca8be980d7b31370d7e26aae89db56d0cf8a400410f4cdc4"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de1/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/binding.json",
+      "bytes": 395,
+      "sha256": "69ffc87a83f277d3f71324d6a0a2360fe2fd4eb802ff6bec9f75f8225063f3ab"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de1/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/family.npz",
+      "bytes": 313,
+      "sha256": "3efd37de5ced840affd0f048f94ebecc8ce55f5fddc81794e7ba649bb4a525d3"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de1/results/development/nsc-ks-evaluator-accuracy-v2-control.json",
+      "bytes": 1158,
+      "sha256": "2439a0966de323a7fd14e0dc4c5f14f3676e2b3663bee8d8bceb422ea35abbe7"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_changed_de1/source.py",
+      "bytes": 19,
+      "sha256": "81b2d9d7e7d91d11ca8be980d7b31370d7e26aae89db56d0cf8a400410f4cdc4"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_header_and0/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/binding.json",
+      "bytes": 395,
+      "sha256": "69ffc87a83f277d3f71324d6a0a2360fe2fd4eb802ff6bec9f75f8225063f3ab"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_header_and0/results/development/artifacts/nsc-ks-evaluator-accuracy-v2-control/family.npz",
+      "bytes": 312,
+      "sha256": "f1634dce14676382162a7290a31b6f6e39e61b920cc07cfff0926a2e8223cde2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_header_and0/results/development/nsc-ks-evaluator-accuracy-v2-control.json",
+      "bytes": 944,
+      "sha256": "23656a64106d29210945600bed7b641737857c569c076859be0b475ab6afb4d2"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_replay_rejects_header_and0/source.py",
+      "bytes": 19,
+      "sha256": "81b2d9d7e7d91d11ca8be980d7b31370d7e26aae89db56d0cf8a400410f4cdc4"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_resume_skips_existing_nod0/art/binding.json",
+      "bytes": 1156,
+      "sha256": "62631447eb51964c775357f8cae057e8f4bec29fe2f61176017e9cd4ff1cdc05"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_resume_skips_existing_nod0/art/node-000.json",
+      "bytes": 465,
+      "sha256": "63418abbabc2059b9e9a40c0e01c4d374a2cb2dfec115c9c7b4bc64d092b075f"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_resume_skips_existing_nod1/art/binding.json",
+      "bytes": 3491,
+      "sha256": "795b841bc5e270693efc7c3ccc3290c85900603eca9c6d37fdc7c0b800f39a93"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_resume_skips_existing_nod1/art/node-000.json",
+      "bytes": 3969,
+      "sha256": "3c15ee89b6f266e4fe3e9b9c8038dba44b1b6509b14cae36b7d75fdd6f95a3a6"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_tampered_payload_and_desc0/family-14-+1.json",
+      "bytes": 2131,
+      "sha256": "9d3dace0d60196c1e5314f5fb55de4e04b4231a1461d5a949b57fb222c7d39ba"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_tampered_payload_and_desc0/family-14-+1.npz",
+      "bytes": 1876,
+      "sha256": "885d2b3340bcfad6d46031825292aa1ccf3c0b0f08ac9187125e655821125652"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_v1_top_register_is_immuta0/results/development/nsc-ks-gate-value-iterate6-47.json",
+      "bytes": 181,
+      "sha256": "7f27aa5c6c1dea7357530e6fa63cb9b79c895b63fb2f770ccdbbc140987d787d"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_write_is_creation_only_an0/record/assessment.json",
+      "bytes": 195034,
+      "sha256": "c293752379f604fe0eac8b52b876352246f986890090d9a996b9c9ce8cd769d1"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_write_once_refuses_overwr0/record.json",
+      "bytes": 24,
+      "sha256": "d907e2ab981fddb7da0d479d9e401a87d353e1e84f78a9580dd4f27f48e6900a"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_write_once_refuses_overwr0/record.json.21984.tmp",
+      "bytes": 18,
+      "sha256": "97f7b34ddffbf945d9e5b0945258f8ba6d5f97b6f8b533d0ca6f19d6e542f2b7"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_write_once_refuses_overwr1/record.json",
+      "bytes": 24,
+      "sha256": "d907e2ab981fddb7da0d479d9e401a87d353e1e84f78a9580dd4f27f48e6900a"
+    },
+    {
+      "path": "lab/pytest-of-swedi/pytest-0/test_write_once_refuses_overwr1/record.json.21984.tmp",
+      "bytes": 18,
+      "sha256": "97f7b34ddffbf945d9e5b0945258f8ba6d5f97b6f8b533d0ca6f19d6e542f2b7"
+    },
+    {
+      "path": "lab/results/development/nsc-centenary-v1.json",
+      "bytes": 1756,
+      "sha256": "38491a9ebed13a63ed5cf3cb5b5670cc363dd9d1aaa676e50e85d5435cf16af7"
+    },
+    {
+      "path": "lab/results/development/nsc-charged-clock-horizon-v1.json",
+      "bytes": 1793,
+      "sha256": "70b6a71576218d2be2f33585cf7ec30b390766351cdac0e5e4aae3672c976d59"
+    },
+    {
+      "path": "lab/results/development/nsc-charged-ladder-deficit-law-v1.json",
+      "bytes": 1819,
+      "sha256": "b01bd1e9b1dffdb1b1688f64e5f3bd9f2b0a7d44be201a3cba26e8e55c25d720"
+    },
+    {
+      "path": "lab/results/development/nsc-charged-seam-invariance-v1.json",
+      "bytes": 1861,
+      "sha256": "2dc6fe8f266e2f42ab12298389f69919833c65d090b8b0a3c4f38f4a937815df"
+    },
+    {
+      "path": "lab/results/development/nsc-charged-tilt-resolution-v1.json",
+      "bytes": 1695,
+      "sha256": "7718eac7c3ac1d7380506ea8ef327867c1668cd531e5657c662653d2df22cac4"
+    },
+    {
+      "path": "lab/results/development/nsc-composed-vs-clock-v1.json",
+      "bytes": 1596,
+      "sha256": "9595f7de223843c62775ac91f0f131c36721955740327a0db9f0de1aeacc65a5"
+    },
+    {
+      "path": "lab/results/development/nsc-cone-wall-join-v1.json",
+      "bytes": 2692,
+      "sha256": "c73f2d4d4f1bdef6ef127ccd10126fe30bf1a041e52b4e775bca61c6dce3085e"
+    },
+    {
+      "path": "lab/results/development/nsc-constant-table-v1.json",
+      "bytes": 2104,
+      "sha256": "ff6318b0e2cc439d61a78116a080fcb0336373ec959f5c2ba55ed3e8c3016821"
+    },
+    {
+      "path": "lab/results/development/nsc-continuation-station-closure-v1.json",
+      "bytes": 7163,
+      "sha256": "6997865c60ddbf3fea354de1b7bb208cda4b84fbe4bc5e53f1d8339653402b34"
+    },
+    {
+      "path": "lab/results/development/nsc-continuation-trap-v1.json",
+      "bytes": 1330,
+      "sha256": "b711808f3f8fb25e2ee22bd1929030778dd33606cd4ecd8c54d417947cb08dea"
+    },
+    {
+      "path": "lab/results/development/nsc-cosmic-band-location-v1.json",
+      "bytes": 1983,
+      "sha256": "c75d8700063d656271a328a63c76b5a4acac5392b4b36de1793165eed9fb5826"
+    },
+    {
+      "path": "lab/results/development/nsc-cosmic-shell-weight-v1.json",
+      "bytes": 1846,
+      "sha256": "72fb497b146ac62667f1c8fba3a8bc1994debaa8a2c7d7ad2e43fe12de185b69"
+    },
+    {
+      "path": "lab/results/development/nsc-cross-arm-identity-v1.json",
+      "bytes": 2013,
+      "sha256": "d29804fcf7d2d21474301825a7bbb5c742be5eb94f42be0b79f34021699ca6b0"
+    },
+    {
+      "path": "lab/results/development/nsc-extinction-extension-v1.json",
+      "bytes": 1435,
+      "sha256": "9065006b5894580e010150108ae66de75270377e39eebbf8c268947c56f5989d"
+    },
+    {
+      "path": "lab/results/development/nsc-fee-convergence-v1.json",
+      "bytes": 1391,
+      "sha256": "a2abf8ed9d928c320c47c6df0c957f6d542e3015bfd37c54fdeb60b4ee73db48"
+    },
+    {
+      "path": "lab/results/development/nsc-fringe-beta-join-v1.json",
+      "bytes": 2169,
+      "sha256": "4323cee7d12e10457d45444095b9c7dd6cbed5accfe493e88a3aa9ba39a881f1"
+    },
+    {
+      "path": "lab/results/development/nsc-frontier-amendment-v1.json",
+      "bytes": 2307,
+      "sha256": "cf26ce4a6aa3d8301fb018e6b7c402dee29155e0677c25c9bf40d1a0b5db7e05"
+    },
+    {
+      "path": "lab/results/development/nsc-frontier-assessment-v1.json",
+      "bytes": 4961,
+      "sha256": "7dd7205dc5a4c3cc6f955796e3d6fc4c3ce61f5e8861a040088c4051c893b9a4"
+    },
+    {
+      "path": "lab/results/development/nsc-frontier-supplement-v1.json",
+      "bytes": 1293,
+      "sha256": "554e8fb94e42db0dc10f23624d1f845f6631b1ef10563901327295f730615e37"
+    },
+    {
+      "path": "lab/results/development/nsc-influence-atlas-charged-v1.json",
+      "bytes": 2970,
+      "sha256": "3ed2fa68c6f8166dfc32fbb855ce014b421bf612b55478fea959af3d7c6961c4"
+    },
+    {
+      "path": "lab/results/development/nsc-influence-atlas-v1.json",
+      "bytes": 2475,
+      "sha256": "a739504a8cbbb595633b65e28e25d4f132c5f721207854d71622cf4de82ac706"
+    },
+    {
+      "path": "lab/results/development/nsc-influence-chain-v1.json",
+      "bytes": 3590,
+      "sha256": "1b7052bf0bbe94d07b53a4e458eefa2b071d40d9e94828ac26eebe7a932a3eb7"
+    },
+    {
+      "path": "lab/results/development/nsc-influence-response-v1.json",
+      "bytes": 1706,
+      "sha256": "8da36eef09bb8cee09cc31a3ee5fe65df3df4f7232db6115c2a4cb7352764003"
+    },
+    {
+      "path": "lab/results/development/nsc-influence-seam-v1.json",
+      "bytes": 1815,
+      "sha256": "27cf45238821ea459a54fa5370fe1eb59de91e41eeaf28f2dd349a48b92ac0d3"
+    },
+    {
+      "path": "lab/results/development/nsc-influence-shallow-power-v1.json",
+      "bytes": 3132,
+      "sha256": "dfa30de61bbdfac75ebf6e56d6f47bce54a82a7b55b27ae8cefec084f3e56d85"
+    },
+    {
+      "path": "lab/results/development/nsc-interior-balance-v1.json",
+      "bytes": 1714,
+      "sha256": "721a9d55251ca2480ecdbbf0b6e7a0481a099166b92b18068e7b1d0962b30802"
+    },
+    {
+      "path": "lab/results/development/nsc-interior-station-balance-v1.json",
+      "bytes": 10627,
+      "sha256": "dcc64b64536b45e42713a2448d5d770158b94832dad49d97c40fce45263d26d1"
+    },
+    {
+      "path": "lab/results/development/nsc-isotropy-driven-join-v1.json",
+      "bytes": 3198,
+      "sha256": "1865664db4489dc7923bfd9231050092de5f68c0d06e5ef5d8d391e18850cefb"
+    },
+    {
+      "path": "lab/results/development/nsc-isotropy-wall-join-v1.json",
+      "bytes": 1823,
+      "sha256": "1db4500a2e1d8ed447c6f5e91e212a245ce8a16b7cc748be0733229989e11833"
+    },
+    {
+      "path": "lab/results/development/nsc-ladder-covariance-test-v1.json",
+      "bytes": 1904,
+      "sha256": "82d77102920362a9d6f4e08e10d1200a97d9051f95acb78004d1530d9913077a"
+    },
+    {
+      "path": "lab/results/development/nsc-ledger-audit-v1.json",
+      "bytes": 7308,
+      "sha256": "2f61a110c0273032c590c99a222ab51663853e8ce5f015d0643fe534ee1f9ad1"
+    },
+    {
+      "path": "lab/results/development/nsc-lowband-placement-v1.json",
+      "bytes": 2216,
+      "sha256": "fdec093ffdc36a160d7de568435e6a3fd4283596a5e2c1fd45f34b6fbd0c5082"
+    },
+    {
+      "path": "lab/results/development/nsc-march-balance-trajectory-v1.json",
+      "bytes": 2768,
+      "sha256": "56f0fc90c9f9cdb5a0b32d0ed6227d596a80d4e2c87dd931bc98b944b3adbb3a"
+    },
+    {
+      "path": "lab/results/development/nsc-march-cost-vs-wall-v1.json",
+      "bytes": 1898,
+      "sha256": "3b46a64d626388006c0b01dd2efbc2252d254f065506665653e7d5cdc2f46e98"
+    },
+    {
+      "path": "lab/results/development/nsc-march-duration-table-v1.json",
+      "bytes": 1702,
+      "sha256": "866d281f221b2e720c49a93c6ca51ea8725a60ca0e620bf6f0fd57b445affeaf"
+    },
+    {
+      "path": "lab/results/development/nsc-march-learn-rate-v1.json",
+      "bytes": 1807,
+      "sha256": "daf11b1dc60dc065ddea440acb16df42bf1ac3714528c9f9cef9c56438e554c6"
+    },
+    {
+      "path": "lab/results/development/nsc-march-slope-trajectory-v1.json",
+      "bytes": 2662,
+      "sha256": "5d90c1294594ec4caa6db61e0a7a7d30885a7debce07cbe233e0be0345b9aa3a"
+    },
+    {
+      "path": "lab/results/development/nsc-march-wall-join-v1.json",
+      "bytes": 1715,
+      "sha256": "dad5c9e00e248947eddaaf58aeaab6461170bf747d970b1f37c72f6bc1d69c03"
+    },
+    {
+      "path": "lab/results/development/nsc-march-wall-radii-v1.json",
+      "bytes": 3266,
+      "sha256": "d954141385475f0ea49ae7c05cfd0dd3440282373bb6f262f811b4b2e8868eb8"
+    },
+    {
+      "path": "lab/results/development/nsc-march-wall-rates-v1.json",
+      "bytes": 2407,
+      "sha256": "39abcec498efa0db1f9031f1ba0d6fbc11513f11bd403f270b939e65c11e28f8"
+    },
+    {
+      "path": "lab/results/development/nsc-matryoshka-comparison-v1.json",
+      "bytes": 2438,
+      "sha256": "d88327a36bdec1d657779281e020c3265fbca93b3929274a5f4f81b1b7d9fd40"
+    },
+    {
+      "path": "lab/results/development/nsc-matryoshka-fee-join-v1.json",
+      "bytes": 1784,
+      "sha256": "ad7908127c9555507adaedd778d447b6d570fde155bd744aebe7b33457a5039c"
+    },
+    {
+      "path": "lab/results/development/nsc-neutral-fringe-quantum-v1.json",
+      "bytes": 2244,
+      "sha256": "e6b44c0c1e9336d8341b8ab86a4fc7c5a3152dda0c762635522749eaae7344f0"
+    },
+    {
+      "path": "lab/results/development/nsc-omega-star-identity-v1.json",
+      "bytes": 1587,
+      "sha256": "f193087abb88fd93aa3ffc6b5a904c43040261e9313153674943464f905e4a84"
+    },
+    {
+      "path": "lab/results/development/nsc-oneway-wall-join-v1.json",
+      "bytes": 1650,
+      "sha256": "26cd9989eb4a2b1152d6de4f24905dd89d4706c87465b13f15ae76de6dd3159a"
+    },
+    {
+      "path": "lab/results/development/nsc-production-gate-v1.json",
+      "bytes": 1367,
+      "sha256": "0b44fb6d5d70357457178b675a266735302ef3847042a25ec8a4ef6c8451c0a6"
+    },
+    {
+      "path": "lab/results/development/nsc-production-preflight-v1.json",
+      "bytes": 1647,
+      "sha256": "33d33f85378cb89a8a81dfaca7898570be94d28d23338b5b290c64842687aeef"
+    },
+    {
+      "path": "lab/results/development/nsc-programme-index-v1.json",
+      "bytes": 7783,
+      "sha256": "7c4286bcb3c3d326b954eb4987791e3e6cfc840d8e2aa92c439399419c14ac8c"
+    },
+    {
+      "path": "lab/results/development/nsc-programme-index-v2.json",
+      "bytes": 1213,
+      "sha256": "26028df9bad95c6b55291607f23958bc1d13342ab8aa7b27f6ae608e64b6b964"
+    },
+    {
+      "path": "lab/results/development/nsc-q-analytic-envelope-v1.json",
+      "bytes": 1912,
+      "sha256": "7d3a0a9be5416a089d9701d99ebbe5120bf82ab46a0f765e97fa7b74b80bb6c8"
+    },
+    {
+      "path": "lab/results/development/nsc-q-decomposition-v1.json",
+      "bytes": 1988,
+      "sha256": "b1ddda0d9829b5913dd3b535fb3129bdf5cf84354d5a2cce2f8670546878ce9f"
+    },
+    {
+      "path": "lab/results/development/nsc-relaxation-duration-v1.json",
+      "bytes": 2675,
+      "sha256": "15934515fb9f67a3186b37fe3eb45c49367794af276f15dfac31117f2029adb9"
+    },
+    {
+      "path": "lab/results/development/nsc-relaxation-wall-v1.json",
+      "bytes": 2606,
+      "sha256": "4296e7b71d467b20edf1b1ebd8b682da11722a763d4953d5aba850da5bc51a67"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-calibration-t40-v1.json",
+      "bytes": 5310,
+      "sha256": "44b65d878c637887939524e6546b64b0b341b055ee95c14ae96274e2f006f959"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-infall-v1.json",
+      "bytes": 2877,
+      "sha256": "c24ca6d0bb10de955529472be847f5c68d38fcb07081148931b0501923940d07"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-lll-preflight-v1.json",
+      "bytes": 87333,
+      "sha256": "e51f39e0876b7acb371a4cfe21b1711ac835460151706cbc55bcd73b6308510e"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-cliff-v1.json",
+      "bytes": 6312,
+      "sha256": "c139922d2364980a6e6fe766a656b9e1c1fa2623a4e75ecaecde68b416563247"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-cliff-v2.json",
+      "bytes": 4655,
+      "sha256": "134a301b4bad001c49bf86346e602233dae7667e563476a9ffb02e9b0bda0d1d"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-cliff-v3.json",
+      "bytes": 4123,
+      "sha256": "f670c3b7f4b3ab1d490643cce279977d2218cd33a4fcb1d76ee5c9090b696bd5"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-control-v1.json",
+      "bytes": 5800,
+      "sha256": "74f469ab2065d6dce81e3fbbf861cf3a8b55a767a0b3f224afaf6500e7dbd31a"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-ladder-v1.json",
+      "bytes": 8079,
+      "sha256": "3e65687071a58f7d0cafc5437f4a86671ebe3944ba1a510a0af573e8690cac1d"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-resonance-v1.json",
+      "bytes": 3979,
+      "sha256": "26812252b11ad4f12a35e3032bfaed3f4e3c8b3279a2d7ad479e2229d549a99a"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-twist-v1.json",
+      "bytes": 4120,
+      "sha256": "5c74aa1b4162a9d995a0f849fdf36e4dfdb832c1936006be6f81812f3ff56d3a"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-charged-window-assessment-v1.json",
+      "bytes": 45928,
+      "sha256": "fe67f5ca66c1e8f6baeac90c7b427a2bac5eedf4c97d177dea524a5a74de8ef6"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-cone-map-v1.json",
+      "bytes": 2196388,
+      "sha256": "e4f75a85a886ebe033c5f426ff568dec0c52c909882426bdd6ed682acde31581"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-cone-map-v2.json",
+      "bytes": 1043458,
+      "sha256": "2079420d29ad151c033bdd7969f6a36f10eaa547ed62f58e17e260fe179da813"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-force-oscillation-v1.json",
+      "bytes": 6797620,
+      "sha256": "cfc76d52bc7b5ba55dfa960ab663d94b186e4c7da87aab0550dc0b1cc489a4de"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-assessment-v1.json",
+      "bytes": 6643,
+      "sha256": "9861cc10125f21dbca675cd2e03861a829489597cf62fdbf3cee8e73a71568dc"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-t30-v1/mu-1.002-eps-0.001/prepare.json",
+      "bytes": 638,
+      "sha256": "5bdb1c7e5a4f663f29c23c07daaeb6025e871ee53081bcfe563d66d84b3ef7ae"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-t30-v1/mu-1.002-eps-0.001/station-25.json",
+      "bytes": 735,
+      "sha256": "6ad985e5aba21304effa4292b6b15235f2a447fb0d619e45d7b3110236ccd649"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-t30-v1/mu-1.002-eps-0.001/station-25.npz",
+      "bytes": 542680,
+      "sha256": "37c4d2e42b4a09c6e1e2cbc7ed7d44a2992fd80cfb9d0b6ced1baeff62c3405e"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-t30-v1/mu-1.002-eps-0.001/station-30.json",
+      "bytes": 735,
+      "sha256": "d4ac9059c9d2d52b9dd49c1b044e2327ea4ae74aa058b8a498e115af8e6b9ad1"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-t30-v1/mu-1.002-eps-0.001/station-30.npz",
+      "bytes": 542680,
+      "sha256": "060c6e5e8133eb726dec36c34e2be1c1ea1a06afb1868e00216f02c9cdf048b8"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/prepare.json",
+      "bytes": 599,
+      "sha256": "94f0ab9cca67c60b980d15439bd3e8e6f64c2188383056d3c3d86ebc41b9458f"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-10.json",
+      "bytes": 735,
+      "sha256": "3b647b7ce97c5ee4e0661e23aa57ff71391c31e3758fb46a2594d0cc0bfd77a7"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-10.npz",
+      "bytes": 542680,
+      "sha256": "0212efd30538f106835b921b4fd8c2ceabd0c2824d150f01247f6e004a4a71b4"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-15.json",
+      "bytes": 736,
+      "sha256": "224a9a337cb884abb5050730078be5eb10cf26ef88985a15bb9278cf42e0aca5"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-15.npz",
+      "bytes": 542680,
+      "sha256": "a92b712ab68b7acc35a734fe314bd9c84f0dc794e1cd0ea00a966a4a741134ef"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-20.json",
+      "bytes": 732,
+      "sha256": "fd96184511ffcf93b8833701d9976ab5625797c5b8c1f6ba0ab9de3a2e6e0ef6"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-20.npz",
+      "bytes": 542680,
+      "sha256": "a32aecbb03dfd7858b65c96beeee1aec22f5e85d71093dedd2d7c816e7430671"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-5.json",
+      "bytes": 733,
+      "sha256": "311c739141c00ba008228ab0154c8c7324d09b6a0f54e879f9b3b3bef51eea5a"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.002-eps-0.001/station-5.npz",
+      "bytes": 542680,
+      "sha256": "015733ce1aa0e49230a055a5cd245c5ddcc34ae1e49dda850b9910ce05cfa2cd"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/prepare.json",
+      "bytes": 600,
+      "sha256": "a8f6775c220b88a5463fb1fca5285d2d2eca69033b04eaf5a464c2b7eebf993f"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-10.json",
+      "bytes": 733,
+      "sha256": "692369343bbf273ef269686e7f85592088818a54fa1e8933dead8d10c6312bbc"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-10.npz",
+      "bytes": 247424,
+      "sha256": "2b809413ae8a7ca93de28c82876a2fa6d1a6369a01cbb2702bfe29dffb1d2a2a"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-15.json",
+      "bytes": 734,
+      "sha256": "0e095e5bc650a95cc605d6d53ae5340bba50d7b11b2a30f224ebcd3f672e3480"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-15.npz",
+      "bytes": 247424,
+      "sha256": "fe59b02507fb79b90d4b9c6bac41e791be7a4cdff5496153085e67838c399c60"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-20.json",
+      "bytes": 734,
+      "sha256": "64a41441cc14555dd5210f8507640906d92915dea20765b6746dd55ae04594c8"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-20.npz",
+      "bytes": 247424,
+      "sha256": "792e0401802c7ed8c5de5674e4055944793a2e3834266c58e61f17816ef4a8fd"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-5.json",
+      "bytes": 732,
+      "sha256": "480713c476c88ba033373505aa216b01266df6c0e1a881e6ab1afa986328e940"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.010-eps-0.001/station-5.npz",
+      "bytes": 247424,
+      "sha256": "74237310f2f093d691701e3daa602c29d5b9dc214d17dd74faf2a1126f0d75ee"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/prepare.json",
+      "bytes": 599,
+      "sha256": "2ac4d2e7bfb230e08c5d133558d520a499e5fc40bce55ad77795e69939fcc758"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-10.json",
+      "bytes": 732,
+      "sha256": "c134bd7632f5e7945aecf92f9bb461084ce86629a9a619ccc1a3d5fda38118d6"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-10.npz",
+      "bytes": 127608,
+      "sha256": "f56df88263bddcc6556b0b3427afa91c9e042c1187109c6c9832c75290a6cf1d"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-15.json",
+      "bytes": 731,
+      "sha256": "67b68d49f54152ce8bbbe0b6ea5eb0af8a4544167e3b064eb561e908b9c82f84"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-15.npz",
+      "bytes": 127608,
+      "sha256": "561bdf850db0c08e6b8b31cd9ecf858fd42fe96b6eaeee65d8975e1d2147e621"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-20.json",
+      "bytes": 731,
+      "sha256": "beb368416491c09290c4e38ab4f1fe0e6bca547dd7077f1c72a927562b5e9296"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-20.npz",
+      "bytes": 127608,
+      "sha256": "365422bb526e70b5f5587b4ae5d0afba5359f0589f6e78afa4d01a4950966ef4"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-5.json",
+      "bytes": 727,
+      "sha256": "dc3dc4e50205d9cd6c0944232c3edb1929a504a85b0e135a099027f3afe684f5"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-inward-march-v1/mu-1.040-eps-0.001/station-5.npz",
+      "bytes": 127608,
+      "sha256": "d29ccaa2a8f48f91b2d35557363ee501752f5059c3f84a4ea261993862fe8966"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-isotropy-arm-control-v1.json",
+      "bytes": 49515,
+      "sha256": "d176dbd1846cddd039287ec335a1141d2bd4631756ccff1522493c4402d16248"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-isotropy-arm-control-v2.json",
+      "bytes": 3355,
+      "sha256": "ebb0ede4ee3583483154ecd53d3c1f56b176ef18162b4b48212729b5872aef10"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-isotropy-v1.json",
+      "bytes": 49313,
+      "sha256": "4437a77512241e8433f540332437645ff7ea964691444c205cb73e690476c472"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-isotropy-v2.json",
+      "bytes": 3285,
+      "sha256": "6d8a5788c79a1a6e4c3f8e4526d7f78c80c02ca63f2ca5569624ec2de6c1adfb"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-oneway-v1.json",
+      "bytes": 8530,
+      "sha256": "5f3cf44e9ad1d45f15beace895bcc1c49f9e62d04fe7dd19304e4b2422ad9a02"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-oneway-v2.json",
+      "bytes": 10379,
+      "sha256": "549505578fd5ae0efd21219e3dffc57c346a4160aa634870c95e559759389dd8"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-oneway-v3.json",
+      "bytes": 6078,
+      "sha256": "61d02204bc67f05379767860e0c133114e8f3e5510a9d605ef7107b3a8b59533"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/prepare.json",
+      "bytes": 669,
+      "sha256": "96d5b3d3d5667e0df83bd13a616a8d6e1e2c0c0ee9f29acd39128ea73fcb97e1"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-10.json",
+      "bytes": 732,
+      "sha256": "d0175801af91966baf26d142e1f857b675a24d163efae2709dfc8d8fa1f827d7"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-10.npz",
+      "bytes": 127608,
+      "sha256": "f56df88263bddcc6556b0b3427afa91c9e042c1187109c6c9832c75290a6cf1d"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-15.json",
+      "bytes": 731,
+      "sha256": "eb7fd32c08cbcecb8c4856a904b05869ccd8806a735e5b2145b9b8722bc3fb5b"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-15.npz",
+      "bytes": 127608,
+      "sha256": "561bdf850db0c08e6b8b31cd9ecf858fd42fe96b6eaeee65d8975e1d2147e621"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-20.json",
+      "bytes": 731,
+      "sha256": "351c61c72a6e57d508572fa8bed1ed6d5df919fee6f47f448d43443a858663e5"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-20.npz",
+      "bytes": 127608,
+      "sha256": "365422bb526e70b5f5587b4ae5d0afba5359f0589f6e78afa4d01a4950966ef4"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-40.json",
+      "bytes": 732,
+      "sha256": "7e945895f458e200a83267eb7a58021d0dbc270a669242c38d5f04696fbe9497"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-40.npz",
+      "bytes": 127608,
+      "sha256": "7ad721bccd8845f507826eb430a483b4b24b73cc5a95e890e5092d47b5f93afb"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-5.json",
+      "bytes": 727,
+      "sha256": "8e329a017e882fb6af45a860a974def571ac7fb7d6f97d7e7e90e01b96fe2ae2"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-5.npz",
+      "bytes": 127608,
+      "sha256": "d29ccaa2a8f48f91b2d35557363ee501752f5059c3f84a4ea261993862fe8966"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-80.json",
+      "bytes": 732,
+      "sha256": "bfc3dff033e0cbce04ecc640eeaf542ef0ed70911ed648da76bd534b11ef77db"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-relaxation-v1/mu-1.040-eps-0.001/station-80.npz",
+      "bytes": 127608,
+      "sha256": "2743338126305a5a101765d5a848d26345fc26f328800226ee5abfd342b214e8"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-two-ends-v1.json",
+      "bytes": 92603,
+      "sha256": "f06a9d414dd2ccdcc36c6c8dfe8ddf582c61bc6cb223ddf0f562c390c6c033bf"
+    },
+    {
+      "path": "lab/results/development/nsc-rn-two-ends-v2.json",
+      "bytes": 8442,
+      "sha256": "6f4024541b82fbdf153d54645ba3bf00a1386648660124bce6a9c5e7634a6b80"
+    },
+    {
+      "path": "lab/results/development/nsc-seam-invariance-v1.json",
+      "bytes": 2517,
+      "sha256": "f5f65ed56b9a7306d06c94354ac5a4485bbbf92664703e82340665fddfeee386"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-adoption-checklist-v1.json",
+      "bytes": 1251,
+      "sha256": "41f7f6a874bb66373b1961dc6260cf54fa4d72f25306cea8eb3a6da0aae97360"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-contention-correction-v1.json",
+      "bytes": 1214,
+      "sha256": "35e6455b90e4db7f03d125c5a88e0b2c837906b9e30dd74ee88e1b782e101468"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-dual-forecast-v1.json",
+      "bytes": 1244,
+      "sha256": "7034498fbef038fe66ee463b014b91ffa844c7396aed836f0f31e8502a64108b"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-expectations-v1.json",
+      "bytes": 1644,
+      "sha256": "96dec2a62bb2b114ff2cbc02f2c2fef800b854f56cba3c2130ea027be2f7a172"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-extinction-v1.json",
+      "bytes": 1137,
+      "sha256": "00648d141f432db4b17c6a12a7fbf85ef989c76387e64a2318c4a6884a87a98a"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-launch-log-v1.json",
+      "bytes": 1595,
+      "sha256": "8d1c352db63aa69c93c79cc437489facb678aeb2ed5ee54e21604b79b6671a31"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-semantic-audit-v1.json",
+      "bytes": 1095,
+      "sha256": "3ab5d08aba3d9c6ed1bd7554df61f293396099cf173782b2bb34e93b2009100e"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-standing-state-v1.json",
+      "bytes": 1610,
+      "sha256": "56a96306fd25f1c0cc790d04692300e15b1a2605b868bad022f3eb5af18de6b0"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-timing-correction-v1.json",
+      "bytes": 1297,
+      "sha256": "5fe8dade3854df7d340f901b37bd076d57095ac794f4ba6e4fcaca42a3ffd860"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-timing-resolution-v1.json",
+      "bytes": 1366,
+      "sha256": "19d2121fbefa3e024e2cf923c57bf08c72c74ef8ee51f6efe34d2e726d02db5e"
+    },
+    {
+      "path": "lab/results/development/nsc-t30-watch-v1.json",
+      "bytes": 933,
+      "sha256": "9387fe247400e6e1d6cc5f1168d59080e237a2a5c2e81174599c29a82ae78d3b"
+    },
+    {
+      "path": "lab/results/development/nsc-tilt-cell-crossings-v1.json",
+      "bytes": 2768,
+      "sha256": "fe89705a0abe232987e0166bb99d71b541bb9c6789190ebbcad994b7f9e5505e"
+    },
+    {
+      "path": "lab/results/development/nsc-tilt-organism-clock-v1.json",
+      "bytes": 2323,
+      "sha256": "af03a1d3e0988322547340641ae8054d974e5c83c02155e708fcb46d12c22cb8"
+    },
+    {
+      "path": "lab/results/development/nsc-tilt-quantum-ladder-v1.json",
+      "bytes": 3798,
+      "sha256": "a864c58602ffc182d463fac59f92f3d7e021c3281c26ae3673af755600d85a0b"
+    },
+    {
+      "path": "lab/results/development/nsc-tilt-quantum-v1.json",
+      "bytes": 2581,
+      "sha256": "383f53f2a29b8d5e4f4f4db69d686b975ad81baed28c45987349008510c6b117"
+    },
+    {
+      "path": "lab/results/development/nsc-time-awareness-v1.json",
+      "bytes": 2314,
+      "sha256": "97a0d10d3a1746a721ccbb6e70a8753d8fa45822a57ff13ede4499173c9b41fd"
+    },
+    {
+      "path": "lab/results/development/nsc-trap-timing-v1.json",
+      "bytes": 1263,
+      "sha256": "f972e5b9df8ec3ac99050898f5e97c5c3e7b45ccf311106edf0c13e74f1b3b67"
+    },
+    {
+      "path": "lab/results/development/nsc-two-ends-covariance-v1.json",
+      "bytes": 1842,
+      "sha256": "9766b84cc70d5952f3fb48dea3816ffebe056672988267e25092628dec710d30"
+    },
+    {
+      "path": "lab/results/development/nsc-two-ends-join-v1.json",
+      "bytes": 1937,
+      "sha256": "396f81ab844f2c592acb5bbd844ad4cb102a5488fa98748d868e00518c081fdc"
+    },
+    {
+      "path": "lab/results/development/nsc-two-ends-power-stability-v1.json",
+      "bytes": 1522,
+      "sha256": "191b30081a5fb5ae55f5c20f54972375899af390e52087607fc11c16e0b9bb25"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-afterlife-v1.json",
+      "bytes": 1564,
+      "sha256": "20415e4798368e7386db3672c62916e4d0ab40cd3fd685b3801944015ca2c6fa"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-asymmetry-derived-v1.json",
+      "bytes": 2133,
+      "sha256": "fa37257e9bb388c27443cbf9dc76388240c5bea6feaff48784daa612589d6cf0"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-breathing-family-v1.json",
+      "bytes": 1811,
+      "sha256": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-breathing-timescale-v1.json",
+      "bytes": 2148,
+      "sha256": "b7c9cf0017d30b7596504b55d0eab0dd7a6a23f797d3221b77c75283cfe1ff06"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-breathing-v1.json",
+      "bytes": 2987,
+      "sha256": "912088527f409924825a7b8b225a1bed6f95423df2b3d2df275637917e2cb0f9"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-clock-derivation-v1.json",
+      "bytes": 2122,
+      "sha256": "b5ce507aed45a3465daaebc47c2de8fc0ec603065e15cdf1443fe19d3f631978"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-clock-epscross-v1.json",
+      "bytes": 2686,
+      "sha256": "d5d91c9e17721b97db100e2b0ed5e85806173021d2a5079ca1a4a5f700e6b664"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-clock-fall-v1.json",
+      "bytes": 2117,
+      "sha256": "7d843a16d1261b05f18be9c5a83c34cdee1d9e9fdd7cb5066a2a026237a0a246"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-clock-horizon-v1.json",
+      "bytes": 2134,
+      "sha256": "e9ac1d4f79f7041cfbdfb6256d1fd440dd81d5d0a114bd6be81ff556c2995429"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-domain-law-v1.json",
+      "bytes": 2361,
+      "sha256": "b53b98f31cef38b329b8235f45caf2c676b781a3b74a45e86f8706cd4ce436d3"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-energy-channel-v1.json",
+      "bytes": 4309,
+      "sha256": "24e55f6288d9ca2e90945322c6c4fbb695e1e36840c2d87e84fb26488cd0b873"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-energy-mass-ratio-v1.json",
+      "bytes": 20325,
+      "sha256": "d539695a49cd43a608861e0b7fae2305f5fb741b546b245e090b71d3d0f76da5"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-extinction-v1.json",
+      "bytes": 2127,
+      "sha256": "f42ccd779d74276b84e4d2fb70d13e956ce545f5a564e35d384a45844a3800a4"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-inflow-response-v1.json",
+      "bytes": 1494,
+      "sha256": "f0bcfcfc07e196e5a7161523ca7657ed3f220dfbc30be09bfdda71b39b45c5b1"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-junction-family-v1.json",
+      "bytes": 2880,
+      "sha256": "e02d7175ea82d66b0ac701d177ab8481eac8021c14ebb32cc22491fea9b42199"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-lead-lag-v1.json",
+      "bytes": 3322,
+      "sha256": "a637d3cef4b92bfd93da4593c02da7457e13d2810aaccc2aaf9f6dd933078334"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-ratio-regimes-v1.json",
+      "bytes": 2557,
+      "sha256": "cc655e967f26795b2f38c07138f7945b59f6462d1e0b909286a3bcf230f438c5"
+    },
+    {
+      "path": "lab/results/development/nsc-wall-window-join-v1.json",
+      "bytes": 7181,
+      "sha256": "a7c1c9660454d7e74e862e4436fbbd80a45502abb903d64db74d97615cd6dcd4"
+    },
+    {
+      "path": "lab/results/development/nsc-window-shell-share-v1.json",
+      "bytes": 1783,
+      "sha256": "28ca855eee3c0f8c5f04a9f50a2765a2c3002b4aeda84a5d2576154728110e08"
+    },
+    {
+      "path": "lab/scripts/assess_nsc_rn_charged_window.py",
+      "bytes": 7521,
+      "sha256": "bc2d433abce5aa53cd0f80b1c6278223e391603ef506177141bd66ed546920b0"
+    },
+    {
+      "path": "lab/scripts/assess_nsc_rn_inward_march.py",
+      "bytes": 5722,
+      "sha256": "a0e12c0ecbefdce5463baf0de3b03ea0a46bc040d58884df12170e690500493c"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_centenary.py",
+      "bytes": 3418,
+      "sha256": "695261de5597493ba5a54f4ee0e7f94fe7be056577d8a3f5cf1a798d246088ba"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_charged_clock_horizon.py",
+      "bytes": 4537,
+      "sha256": "4a3318a4feb3fd849f94243113ced751f9a93cf641f3a3136ae549b5b39d71c1"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_charged_ladder_deficit_law.py",
+      "bytes": 4140,
+      "sha256": "1d292937d5f6dccba9acf63eac4df1fc5691028513f7d6015320788d77999f37"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_charged_seam_invariance.py",
+      "bytes": 6196,
+      "sha256": "48e7ca382c657df95e18c4eb5e2456e1d6d54b0e9bca3dc0556d1057dfcfe8ff"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_charged_tilt_resolution.py",
+      "bytes": 6989,
+      "sha256": "759604f29952d6db80421c5d2a09b5089745c318f9fa7d92b6ce4cf774c5b744"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_composed_vs_clock.py",
+      "bytes": 3806,
+      "sha256": "72c7e542d3afff58e02a6207b0bacb8c4536b919c48a6830d5b3adb286747320"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_cone_wall_join.py",
+      "bytes": 4795,
+      "sha256": "9460bce93d4d3d650a42dd5e6186feac77dfe4c20268cc8998a2e759e48a3352"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_constant_table.py",
+      "bytes": 4624,
+      "sha256": "c3dd9a140cfe2b2584e84011b828f6e7d9d96b9f33cb7e7e859d34ad250189b1"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_continuation_station_closure.py",
+      "bytes": 5022,
+      "sha256": "fbaef05e089e49fe9500c58b4a3d2ed7c729b8b0145133533c90e16cd0506672"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_continuation_trap.py",
+      "bytes": 4945,
+      "sha256": "86bcc25d360569e18c44b3196d965d5c6c5b50b7e227833ffcfb7414aad6e32f"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_cosmic_band_location.py",
+      "bytes": 5572,
+      "sha256": "d3a66de516ffbe153a271c939264455dde9c2792695cbdbc84e697b00c06ba88"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_cosmic_shell_weight.py",
+      "bytes": 6038,
+      "sha256": "15b592ee6c985f0750e60ab4bb1c6778b7a4b1602611e1c002bc905edcebe5a5"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_cross_arm_identity.py",
+      "bytes": 4291,
+      "sha256": "832615de25e9d07e5286ff2ed8543d5205244a5983ea84785f1b88da8a996dd7"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_extinction_extension.py",
+      "bytes": 3674,
+      "sha256": "f69eba952ed51b33e812df57cbd932e2c9fc982c64b8d358da67684218d3a9df"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_fee_convergence.py",
+      "bytes": 5018,
+      "sha256": "40841af783624fab0b2d353b145ca9d0e7b6d9cd8dcd36667f23954dda927e9f"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_fringe_beta_join.py",
+      "bytes": 4928,
+      "sha256": "dfdf3218d6ade684370e057f9754c77301bc50dc89a155d2eaa68e659022ce43"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_frontier_amendment.py",
+      "bytes": 3784,
+      "sha256": "a2c3720844148175c7e7131702a80cb854fd462887116a4c6dd593c87b653de2"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_frontier_assessment.py",
+      "bytes": 8013,
+      "sha256": "47d46b87c438063b6f11bcb72cfb4606c688b2f6ae1b861a3b061b8409e2c400"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_frontier_supplement.py",
+      "bytes": 3415,
+      "sha256": "54378380b1da9bce1e72fa9fd60ab238f10b9ebfffed73e315a98427ce774344"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_influence_atlas.py",
+      "bytes": 6047,
+      "sha256": "bc7cf56047b7240083185f70819c23ff8b5c92b82230b608ced99d01f101ba42"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_influence_atlas_charged.py",
+      "bytes": 7106,
+      "sha256": "80d6a9b14632662ba993fce21e78fb5623fe23f71a4561c08c1e108ac247f629"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_influence_chain.py",
+      "bytes": 4727,
+      "sha256": "598489ef1c0b3d0d291b9a421da87e5f7eaeca135e2401e38565ac4898e8e3ff"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_influence_response.py",
+      "bytes": 6605,
+      "sha256": "f59cb7f9bfe85e9c2d2c1841685fe05bf423e3e829edff7b593cc1019d5d4312"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_influence_seam.py",
+      "bytes": 5116,
+      "sha256": "1ff8e699b000998248d93537a53591bf0922ff758b9517e33e33dab853e532a3"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_influence_shallow_power.py",
+      "bytes": 6663,
+      "sha256": "b8f8665c59bbee23bc85c04336d822130b3e914841c16eeadb3b3591a84cb813"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_interior_balance.py",
+      "bytes": 4548,
+      "sha256": "306b516dcae70bf2156704f47b11c5c8c382ffa3079b532ff4a2915253eb7ab2"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_interior_station_balance.py",
+      "bytes": 7694,
+      "sha256": "56ff821c3a9faedb3ab29c02b92db9c778f4917c961fd20dfd49286c5d2b5075"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_isotropy_driven_join.py",
+      "bytes": 5430,
+      "sha256": "50038dc872e248122d99b76c78141df603b256f1889b801b2d9c7c55cdbd6945"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_isotropy_wall_join.py",
+      "bytes": 5100,
+      "sha256": "3f2887eebdb364b2e4c0511b582482a1a79fe512bb1e83c521d884ccfc6e39f5"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_ladder_covariance_test.py",
+      "bytes": 4728,
+      "sha256": "968e46858edd610d23ca8fa0f7c2873918368fa906c5183a9480c91c088eca6b"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_ledger_audit.py",
+      "bytes": 6132,
+      "sha256": "b6f2c3614c7411b8f9291df2d8f07b103f6cc84c61ed35df578010c5ef6658bd"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_lowband_placement.py",
+      "bytes": 4328,
+      "sha256": "143d4b665b9c86e9dfc21497dc0ac2b8ddf4fe2c147773a6058c1f9a5427887e"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_balance_trajectory.py",
+      "bytes": 3646,
+      "sha256": "42b23dbdca96d0081155af5fc37c491562a1cdd1bc6535814ac39b3c044a5db8"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_cost_vs_wall.py",
+      "bytes": 4406,
+      "sha256": "781a2a14bca09d98e3bc29ceb2f392f34fcc877cbb87a451d23b18ba5b51d5b9"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_duration_table.py",
+      "bytes": 3393,
+      "sha256": "c971aadb540f9c4173022f4e4e1edad27c225c11ca97227f22688b5fd9fa8ef9"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_learn_rate.py",
+      "bytes": 3106,
+      "sha256": "b245645094241fd8b920e61736dff3380308996c6b0b7e4f3c8727c9149d9dd7"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_slope_trajectory.py",
+      "bytes": 3940,
+      "sha256": "b309dc322b06df2e54d0a281eb17f02503e9333b0b2dfccd5e73fad6bd6faf81"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_wall_join.py",
+      "bytes": 4028,
+      "sha256": "3380f2c1400578ed499e357d3c4092ff736be69e514df02edae10d5e71369fb0"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_wall_radii.py",
+      "bytes": 4575,
+      "sha256": "ccba43e604faee9b2eb7a6b2eb1e50d74986b84cfe963b0abf6d84f79096ff02"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_march_wall_rates.py",
+      "bytes": 5055,
+      "sha256": "f6a91706af95dc4ca5a083f4d1fff97073ee97f1b5d96f13bb20fb2d68778a62"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_matryoshka.py",
+      "bytes": 2155,
+      "sha256": "d2f76b3c92ada4fb3365c0ba856238362c4f4b7925d95ff1888b02296b005db8"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_matryoshka_fee_join.py",
+      "bytes": 4215,
+      "sha256": "c694019961b696bc64835dcc1ee0d3085c6d99bccfd150104872e8185ae09444"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_neutral_fringe_quantum.py",
+      "bytes": 5352,
+      "sha256": "9b133f7f0b4ea6bc5bd5842aeb09bc2ee19916e1c9bff4fbbbcc2b91e5bcfe3d"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_omega_star_identity.py",
+      "bytes": 4387,
+      "sha256": "959b8df0886b34fec7e364d3e5035ee9b47777cb5f508a72e9d90b5cb80e1c01"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_oneway_wall_join.py",
+      "bytes": 5116,
+      "sha256": "650baaf5be27365af5df89687eb5f40a9c6d3b894c2aefcb0eff60cce2750a39"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_production_gate.py",
+      "bytes": 3286,
+      "sha256": "f36fa6dfc31eb21e6801d458632f9ee5f09e943794b90de1d07537025db5dd23"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_production_preflight.py",
+      "bytes": 3772,
+      "sha256": "ba0912fe8e673be65ba24cb8cee54ed1b28c91c5f5b7938a1a112dcc78cbd5b7"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_programme_index.py",
+      "bytes": 5775,
+      "sha256": "83db259a920aedfc166f7fe2a16da6a0bc2fe66f12f98c1722922b4b5d5606ad"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_programme_index_v2.py",
+      "bytes": 3349,
+      "sha256": "fecff97dfeeb1ab5ea757ea0930ce637edbf477d2c2e9153f490bfd0962dc293"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_q_analytic_envelope.py",
+      "bytes": 4592,
+      "sha256": "2d18c7b8e3f1f1f69e6306f8856cd521fc5045b0c35db1f6bb307ed1d06a8206"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_q_decomposition.py",
+      "bytes": 5848,
+      "sha256": "63135a7897757fd80bb367c32b45ab6b0c578a77c48e80a592be2c32d5c39eee"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_relaxation_duration.py",
+      "bytes": 3825,
+      "sha256": "23c42ede1140f3069c3d705ef04202b9f01206cb7a3036898e3f2b066de9d155"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_relaxation_wall.py",
+      "bytes": 4077,
+      "sha256": "669dc9721eaa072c1ab427f4808dacd3b799c2b6938c2c03b3f5fac3a4bf1412"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_infall.py",
+      "bytes": 7825,
+      "sha256": "57a6a556aed518866907bb1da8e6f4b0aefb3999b6608853bed179e229b9f5d9"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_lll.py",
+      "bytes": 8623,
+      "sha256": "05c62f2f1a31604c5e227b0107c21ad8949eb3bdbdcf03bbce1943e3f2e82438"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_twist.py",
+      "bytes": 5396,
+      "sha256": "5b934ce0947aaca498dbeebbae74f4a5552b492eaa341f9a0ff0b342f80ae79c"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_twist_cliff.py",
+      "bytes": 7297,
+      "sha256": "f9036980e131396006da57457a20603c03e99f3450338ab3735c92e35f978ce0"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_twist_control.py",
+      "bytes": 5411,
+      "sha256": "5178f2c8a28b7f4e6b8181878f4a2280b9468b281c817dea1dfa4de406ec6787"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_twist_ladder.py",
+      "bytes": 4569,
+      "sha256": "18a5092785d88cddc1ad1de8f60706e8ff3571446316ebc34c0b15250643c6d0"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_charged_twist_resonance.py",
+      "bytes": 6759,
+      "sha256": "55e7a8d93d2776f039bb7ec7a6978f98cd426fd8bbdcaab1252a04c84ee9e57c"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_cone_map.py",
+      "bytes": 11625,
+      "sha256": "25d31c90d0241185b85b24ac5b43d1ddd14ba1bdee3f8d9b1bf0b3ac9c782916"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_force_oscillation.py",
+      "bytes": 1170,
+      "sha256": "b387583ac778d53983c28d4ec002ba5db8acbab673f8612c6ce14b911c725159"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_inward_march.py",
+      "bytes": 14486,
+      "sha256": "ef68308d3056802c6f6cd90c0af5ef80d6e5dd864faea9f46cb40615905510af"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_isotropy.py",
+      "bytes": 8762,
+      "sha256": "08e85fe2662864b3b3a579bdadcc5c394966da4d29444c9acba52d2f70db5d52"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_oneway.py",
+      "bytes": 10940,
+      "sha256": "f64afa9fe54ea6797a99c384dfe0a18afe72e888b29b283c19d6a97bfe3c1d49"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_rn_two_ends.py",
+      "bytes": 7236,
+      "sha256": "0b5e302ec89fc9b97df62271a75eda54003ae6f0e19bc89ea9efbbc92cc5a3af"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_seam_invariance.py",
+      "bytes": 5229,
+      "sha256": "70efe31eb8777856420ac57c312e1b8728825cf36db321484517b9508dfa5c3b"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_adoption_checklist.py",
+      "bytes": 2731,
+      "sha256": "8fa6bf8b20509d2f3ccb07485871c483d187a956eb8afccbe40b76a3571495ca"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_contention_correction.py",
+      "bytes": 3163,
+      "sha256": "4a83a3ed2fdf4ff451cf7dd5de975ace7899545486a446ff03a7d63090fcbcbe"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_dual_forecast.py",
+      "bytes": 3095,
+      "sha256": "a0dbb7e4e94a16254effdd6770efa8c2164b33d909b563f9777eb2dfdad0b7aa"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_expectations.py",
+      "bytes": 3213,
+      "sha256": "5418903a12fbda96a839bdf7afc59a5e3a84cb50be0a1bcb5f3f615c3d9ff0b8"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_extinction.py",
+      "bytes": 4072,
+      "sha256": "6e2e78ec4b4f5ba0153fa7c3ea01ae18deeecfd0d9fc8a360684d3cd12c3130a"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_launch_log.py",
+      "bytes": 3466,
+      "sha256": "2780bb464afb3bd6098b4eafd833851cf186ec303254f172b3633496aa053f2f"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_semantic_audit.py",
+      "bytes": 2718,
+      "sha256": "6c0d5352481d74256d986191532aec90927286199e0a7dddf980e75ad08f2f57"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_standing_state.py",
+      "bytes": 3521,
+      "sha256": "2f7d61ee4c9ebcb969fa071e5ee34a53bd7eff9591ba89b498a841156b8670a4"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_timing_correction.py",
+      "bytes": 3227,
+      "sha256": "ed638386c6fef626e7a56f1c10c9b6477a5ef34b186b5d133066e7498f330ea8"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_timing_resolution.py",
+      "bytes": 3901,
+      "sha256": "16bbb9d3254253b717c73aef2a5887b0aa6c058d210d1cf838edc38e2ff319df"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_t30_watch.py",
+      "bytes": 2746,
+      "sha256": "ac1c3f4f8f2ec896797e0f78cb7305af815c662761efc817e7476bb44f264604"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_tilt_cell_crossings.py",
+      "bytes": 6659,
+      "sha256": "b04ce4261a41c3870a34acd8633f3a062a6b29e555b17d334b4ce07d2e8d3602"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_tilt_organism_clock.py",
+      "bytes": 6522,
+      "sha256": "f2f341350f157b89bdf88798117f7ddb92bb921baa29969a34744a8ad82588b2"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_tilt_quantum.py",
+      "bytes": 6358,
+      "sha256": "768d8a5e999c0edbef8bb775836476bf215990f878ef56cd82a82c8c9bfa0f77"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_tilt_quantum_ladder.py",
+      "bytes": 6692,
+      "sha256": "67235934be969991920b8aac3489bdbce6b6102a48abca1e8f94c3797783f46a"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_time_awareness.py",
+      "bytes": 5704,
+      "sha256": "ee6c6cbbfad8d724e0c5f9949e5aea6d4d3bf4c2591770503877969e9946ec4f"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_trap_timing.py",
+      "bytes": 4701,
+      "sha256": "37148852182bf3e16a5028c7ee437e752c9aa871481d9e1b0155a6fddada9bbe"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_two_ends_covariance.py",
+      "bytes": 5094,
+      "sha256": "7d1759ba0a5966edfe3fbf0a9656ac82f45e901bb43e27237044b901414baf4b"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_two_ends_join.py",
+      "bytes": 4972,
+      "sha256": "c80491743e1a7243d207a59d83b3becfb026791d5d01253c14e2e18b86af1e58"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_two_ends_power_stability.py",
+      "bytes": 4404,
+      "sha256": "70986f37edc4315f63a526edbe0309d21315e529e5fb6c1fecd7579a45a2c4ea"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_afterlife.py",
+      "bytes": 4658,
+      "sha256": "00cbf511672dc06f6879335796c57e7212162767a74afa12f5d4c4665fe04758"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_asymmetry_derived.py",
+      "bytes": 4661,
+      "sha256": "dd125965d4d2e2617a76ed34b531dc031a31c51cfebba668e5c7ef71ea2bb2fb"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_breathing.py",
+      "bytes": 5802,
+      "sha256": "0e928733769f3a9f533aa5c6a6db1b8c4913362710adc921fe46dd044fd8d7c9"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_breathing_family.py",
+      "bytes": 5501,
+      "sha256": "d00ea94102f0bd0ad74a80d946b861f948947778a9b7a771a3a49191ee749ade"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_breathing_timescale.py",
+      "bytes": 4878,
+      "sha256": "91d1c5666ebd6463e2dce1e73dd84d7de082e1eae9c3344f13226e5bcd3149d2"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_clock_derivation.py",
+      "bytes": 4862,
+      "sha256": "1c194be9bac52b95265d878a7139f1a7b0ac9e5a942b69d48d3cf9515e09dd20"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_clock_epscross.py",
+      "bytes": 6506,
+      "sha256": "7c90b9feec4d194fa3584d41659a709d1c89f1c6424978790afad50761c5089e"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_clock_fall.py",
+      "bytes": 4766,
+      "sha256": "9b8b63b30d082fca5aa8ac1bde258c7780e8896960952b773e578ea6a630d529"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_clock_horizon.py",
+      "bytes": 4675,
+      "sha256": "fa6af7971524b0df8ea0dedbe1c76d67ee4ef7371cbf331d151f36e70c4d11d0"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_domain_law.py",
+      "bytes": 4881,
+      "sha256": "05e7623ddd39aa4baee43143775128806214907e5f926bd48086ea55cec1f3bf"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_energy_channel.py",
+      "bytes": 7896,
+      "sha256": "d5105271dfcbf53803bede752e18ace095420e358671cee5f048262c402a3422"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_energy_mass_ratio.py",
+      "bytes": 4676,
+      "sha256": "18e6af9ea5684ebc5226f85c1381c180b195e41cb4a6528cb96ea6b28269a590"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_extinction.py",
+      "bytes": 4822,
+      "sha256": "6daee2165e3d7e4323755357d710d2de889f039d706c9d08f30160996fda0952"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_inflow_response.py",
+      "bytes": 4389,
+      "sha256": "92bf5aa28dc13b94516cd0e43c0b856344ec4ea85ab698f0732326078df074b7"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_junction_family.py",
+      "bytes": 7367,
+      "sha256": "9f8504aae31711f1d8e94a85936fb599526490140e514d7a6588c1d7ad17f3f9"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_lead_lag.py",
+      "bytes": 6398,
+      "sha256": "42540d3059fc7abb05c6390682cafd7fa45287e79a0b044273eb9f157276c6dc"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_ratio_regimes.py",
+      "bytes": 5181,
+      "sha256": "ca6dc677f830becfa6bf9f3b89b39cb0fa4bfeb3fa14fa1d8eb7a785ce76117b"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_wall_window_join.py",
+      "bytes": 5785,
+      "sha256": "80eeee67cfa2dadd8e4fb1b40bdac9dc74de115cfd2eed8a88ae85dcbfcb78e6"
+    },
+    {
+      "path": "lab/scripts/derive_nsc_window_shell_share.py",
+      "bytes": 7629,
+      "sha256": "5606351b18020693333a5325e3337221e73d89ed705a8de588f75d686e08c8e9"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_influence_chain.py",
+      "bytes": 12013,
+      "sha256": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_matryoshka.py",
+      "bytes": 7065,
+      "sha256": "579baa8bb57e00765970702c641d2cdd54a26e2c67f308dba2c05bd4771aa335"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_charged_lll.py",
+      "bytes": 24548,
+      "sha256": "81d2602af55549c7ea50a24d4a84e0838dd419c0cd951886a5227a76d549e472"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_charged_window.py",
+      "bytes": 7011,
+      "sha256": "db695641cc854c9e6d46019c3df4a2847fe081dd8abfc89e30d444f476ab681f"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_cone_map.py",
+      "bytes": 11698,
+      "sha256": "da53bc3a605c324133a384ee42ef3bd7aa1c451857db4c3d2d1c7a34b7393298"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_force_oscillation.py",
+      "bytes": 9116,
+      "sha256": "a792f06a489dcbd7cc3bee75e2acf2d48efc045deee1a8d61a10a58fb43cf3dc"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_inward.py",
+      "bytes": 3326,
+      "sha256": "77631b6416da1ff8d52a815258da6433653008e174df401cc7a24725241bb8c1"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_isotropy.py",
+      "bytes": 6283,
+      "sha256": "f4e422eb12d0717ef9111f62e7fd68207a0802bf3a7decb85c8c57f114d18a1d"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_oneway.py",
+      "bytes": 9721,
+      "sha256": "aac4516652fba6d6df735f86a008ca3005b578cbc6fdd78397eb1d3752dd50f8"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_pg.py",
+      "bytes": 54536,
+      "sha256": "df8c391e3f4da914eee55d53b330ea4a46e22a38478724451d219a7e0871c9d6"
+    },
+    {
+      "path": "lab/src/recursive_horizons/nsc_rn_two_ends.py",
+      "bytes": 5217,
+      "sha256": "63e394aa8d038d96142fddafcf17f7e711d6b4b5f65a18f134f63d77d9dbfe6d"
+    },
+    {
+      "path": "lab/tests/test_nsc_influence_chain.py",
+      "bytes": 47920,
+      "sha256": "d7397ca6177159fab434164d4dff79afb319e298a1ae2a5c7e57c311627d65de"
+    },
+    {
+      "path": "lab/tests/test_nsc_matryoshka.py",
+      "bytes": 3176,
+      "sha256": "7e673c228bef80ff6d2c3b2070e679c2c71d469d86a0029f9de90394fa48eb46"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_charged_lll.py",
+      "bytes": 15603,
+      "sha256": "f6e7d1e0268a33ce17767063f65db1ce39468cefa80d4adc745dcd66e1357422"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_cone_map.py",
+      "bytes": 6525,
+      "sha256": "86a1d0f894550ea447d59d806bbb8f594c615d2b73bfb707a7190ec48c3f7a3c"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_force_oscillation.py",
+      "bytes": 3508,
+      "sha256": "cfcab97b0c7bb235c7f2f48cd2f75f72d12fe7d83ee3be9b2a93e65fb6fcd8d7"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_inward.py",
+      "bytes": 1952,
+      "sha256": "b448a3a601db4d53b9a317be0f4f3645df0f22d59eefded3847b34afee05ed9e"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_isotropy.py",
+      "bytes": 5106,
+      "sha256": "b526be59b82804d0930fa8ff21f4fd99f1c15f4932c306147e56a96e366402ac"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_oneway.py",
+      "bytes": 5112,
+      "sha256": "3063b9daa29d60fb4efe3c1ea3e15907ee92db3ea3985a649717b6124b6bb2b9"
+    },
+    {
+      "path": "lab/tests/test_nsc_rn_two_ends.py",
+      "bytes": 2921,
+      "sha256": "4ae0cd57d3b247d1cb6f87ab2a85bc0b451e988af54eefd4b2997391a0aef8b0"
+    },
+    {
+      "path": "paper/nested-cosmology.md",
+      "bytes": 29875,
+      "sha256": "52f23534455cef57dfc85aff13b4db2d2527426788c8cfb6fc39df5c286351c2"
+    }
+  ]
+}

@@ -14,3 +14,6 @@ paper/.build/
 .pi/npm/node_modules/
 .codex/
 .pi/settings.json
+
+# Original test-fixture bytes are authenticated in the portable recovery ZIP.
+/archive/reassembly-20261012/w2/files/lab/pytest-of-swedi/

@@ -1,0 +1,57 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "component_powers": {
+    "p_N_single": 1.287761600635959e-06,
+    "p_beta_factor": -0.0024455064232130927,
+    "p_r": 0.11974281138672042,
+    "p_sum": 0.1172985927251079
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-two-ends-covariance-v1.json": "9766b84cc70d5952f3fb48dea3816ffebe056672988267e25092628dec710d30"
+  },
+  "measured_p_Q_reference": 0.1172985927251079,
+  "notes": [
+    "powers are two-point logs between the light and heavy cases",
+    "the sum power is the full ratio's power: it must reconcile with p_Q measured in round 52"
+  ],
+  "production_trajectory": false,
+  "reconciliation": {
+    "sum_minus_measured": 0.0
+  },
+  "rows": [
+    {
+      "beta_factor": 0.6237223552946134,
+      "case": "mu-1.002-eps-0.001",
+      "n_factor_squared": 0.9999909442934196,
+      "q_inner": 0.004173395825915883,
+      "q_outer": 0.00019794204647557707,
+      "q_ratio": 21.083927847693616,
+      "r_factor": 33.80353956259127
+    },
+    {
+      "beta_factor": 0.6234286386059166,
+      "case": "mu-1.010-eps-0.001",
+      "n_factor_squared": 0.9999932481974593,
+      "q_inner": 0.009979051939853332,
+      "q_outer": 0.0004431723023830576,
+      "q_ratio": 22.517318627976667,
+      "r_factor": 36.11864013010144
+    },
+    {
+      "beta_factor": 0.6214275262143738,
+      "case": "mu-1.040-eps-0.001",
+      "n_factor_squared": 0.9999948262687327,
+      "q_inner": 0.022380036566193553,
+      "q_outer": 0.0008894588097075554,
+      "q_ratio": 25.161408625040064,
+      "r_factor": 40.489795918367385
+    }
+  ],
+  "schema": "NSC-Q-DECOMPOSITION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_q_decomposition.py": "63135a7897757fd80bb367c32b45ab6b0c578a77c48e80a592be2c32d5c39eee",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

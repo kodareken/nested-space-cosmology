@@ -1,0 +1,81 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "epochs": 11,
+      "fall_epochs": 3,
+      "fall_rate": -0.34823941255020197,
+      "gap": 0.12655433615647382,
+      "rise_epochs": 7,
+      "rise_rate": 0.29902016427183
+    },
+    "mu-1.002-eps-0.010": {
+      "epochs": 11,
+      "fall_epochs": 3,
+      "fall_rate": -0.34486202894050494,
+      "gap": 0.12655433615647382,
+      "rise_epochs": 7,
+      "rise_rate": 0.2908957346590529
+    },
+    "mu-1.010-eps-0.001": {
+      "epochs": 22,
+      "fall_epochs": 11,
+      "fall_rate": -0.3065512890887465,
+      "gap": 0.2835489375751674,
+      "rise_epochs": 10,
+      "rise_rate": 0.18244065140986887
+    },
+    "mu-1.010-eps-0.010": {
+      "epochs": 20,
+      "fall_epochs": 10,
+      "fall_rate": -0.3247550990359468,
+      "gap": 0.2835489375751674,
+      "rise_epochs": 9,
+      "rise_rate": 0.19720634797063427
+    },
+    "mu-1.040-eps-0.001": {
+      "epochs": 12,
+      "fall_epochs": 6,
+      "fall_rate": -0.24163515326434193,
+      "gap": 0.5713142742834338,
+      "rise_epochs": 5,
+      "rise_rate": 0.13066197176516278
+    },
+    "mu-1.040-eps-0.010": {
+      "epochs": 12,
+      "fall_epochs": 6,
+      "fall_rate": -0.23701967016221367,
+      "gap": 0.5713142742834338,
+      "rise_epochs": 5,
+      "rise_rate": 0.1281661920136416
+    }
+  },
+  "creation_only": true,
+  "eps_0001": {
+    "fall_quarter_spread": 0.032953858366728324,
+    "raw_fall_spread": 0.14679637755762537,
+    "raw_rise_spread": 0.34507079669107243,
+    "rise_half_spread": 0.039930717560075574
+  },
+  "eps_0010": {
+    "fall_quarter_spread": 0.06780698948963938,
+    "raw_fall_spread": 0.1549350452325336,
+    "raw_rise_spread": 0.32463598932222043,
+    "rise_half_spread": 0.03468978037825272
+  },
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "notes": [
+    "epsilon multiplies the packet energy target tenfold; the wall flags and station files are the recorded ones"
+  ],
+  "production_trajectory": false,
+  "reading": "the same pre-registered power pair is evaluated on the strong packet trio; gapped spreads below 8% mean the laws recur",
+  "schema": "NSC-WALL-CLOCK-EPSCROSS-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_clock_epscross.py": "7c90b9feec4d194fa3584d41659a709d1c89f1c6424978790afad50761c5089e",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "EPS_CROSS_HOLDS"
+}

@@ -1,0 +1,107 @@
+{
+ "api_version": "nsc-rn-isotropy-v1",
+ "arm": "coupled",
+ "arm_meaning": "the recorded coupled arm: pressures as written by the march, with the coupled lapse and shift",
+ "cases": [
+  {
+   "case": "mu-1.040-eps-0.001",
+   "epsilon": 0.001,
+   "has_summary_json": false,
+   "isotropy_index_first": 0.44467481164986866,
+   "isotropy_index_last": 0.3454265563336741,
+   "isotropy_index_max": 0.44467481164986866,
+   "layout": "nsc-rn-relaxation-v1",
+   "mass_over_rm": 1.04,
+   "relaxation_registration": {
+    "decay_fraction_registered": 0.5,
+    "driven_phase_max_departure": 0.44467481164986866,
+    "largest_recorded_refinement": 0.0,
+    "refinement_multiple_registered": 3.0,
+    "registration": "written before the relaxation run: pass requires the tail index at or below the registered fraction of the driven maximum AND a fall larger than the registered multiple of the refinement indicator; anything else is inconclusive on this domain",
+    "tail_departure": 0.3454265563336741,
+    "tail_time": 80.0,
+    "verdict": "no_relaxation_observed"
+   },
+   "station_count": 6,
+   "stations": [
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.44467481164986866,
+     "refinement_indicator": null,
+     "station": "station-5",
+     "t_over_rm": 5.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3965526372459381,
+     "refinement_indicator": null,
+     "station": "station-10",
+     "t_over_rm": 10.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.39336613680833715,
+     "refinement_indicator": null,
+     "station": "station-15",
+     "t_over_rm": 15.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3839067457409247,
+     "refinement_indicator": null,
+     "station": "station-20",
+     "t_over_rm": 20.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.4190896965409282,
+     "refinement_indicator": null,
+     "station": "station-40",
+     "t_over_rm": 40.0
+    },
+    {
+     "isotropic_within_band": false,
+     "isotropy_index": 0.3454265563336741,
+     "refinement_indicator": null,
+     "station": "station-80",
+     "t_over_rm": 80.0
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "cases": 1,
+  "layouts": [
+   "nsc-rn-relaxation-v1"
+  ],
+  "total_stations": 6
+ },
+ "creation_only": true,
+ "limits": [
+  "the index measures the matter balance, not the metric anisotropy",
+  "every recorded station is driven: the shell is still falling, so a trend here is a statement about the driven phase only"
+ ],
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "registration": {
+  "decay_fraction": 0.5,
+  "isotropic_band": 0.05,
+  "refinement_multiple": 3.0,
+  "written": "before the relaxation run exists"
+ },
+ "schema": "NSC-RN-ISOTROPY-v1",
+ "sources": [
+  {
+   "kind": "case prepare.json set",
+   "layout": "nsc-rn-relaxation-v1",
+   "sha256": "285635261163bc5185d39e3143014c6f84423496be80502c3ef60db9d821fbe7"
+  }
+ ],
+ "summary": {
+  "nsc-rn-relaxation-v1/mu-1.040-eps-0.001": {
+   "first": 0.44467481164986866,
+   "last": 0.3454265563336741,
+   "max": 0.44467481164986866,
+   "registered_verdict": "no_relaxation_observed"
+  }
+ }
+}

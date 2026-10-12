@@ -1,0 +1,41 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "death_window": [
+    [
+      10.0,
+      15.0
+    ]
+  ],
+  "deficit_halving_time": 7.7112549534184565,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-isotropy-wall-join-v1.json": "1db4500a2e1d8ed447c6f5e91e212a245ce8a16b7cc748be0733229989e11833",
+    "lab/results/development/nsc-relaxation-wall-v1.json": "4296e7b71d467b20edf1b1ebd8b682da11722a763d4953d5aba850da5bc51a67"
+  },
+  "notes": [
+    "the relaxation rate is two-point over t=40..80"
+  ],
+  "production_trajectory": false,
+  "reading": "the wall dies once, in the window [10, 15]; the t=40 event is a balance dip/wiggle missing from a pure relaxation, and the t=80 state sits inside a percent of the single-force limit",
+  "schema": "NSC-WALL-AFTERLIFE-v1",
+  "single_force_deficits": {
+    "t40": 0.09267638623723617,
+    "t80": 0.002543661617103843
+  },
+  "single_force_relaxation_rate_per_t": 0.0898877270622038,
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_afterlife.py": "00cbf511672dc06f6879335796c57e7212162767a74afa12f5d4c4665fe04758",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "t40_event": {
+    "balance_40": 0.09267638623723617,
+    "isotropy_40": 0.4190896965409282,
+    "slope_wiggle": {
+      "balance_40": 0.9073236137627638,
+      "slope_15": -46.79224657742324,
+      "slope_20": -62.26430685332472,
+      "slope_40": -58.74108808606848
+    }
+  }
+}

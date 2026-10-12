@@ -1,0 +1,199 @@
+{
+ "api_version": "nsc-rn-inward-v1",
+ "campaign": "nsc-rn-inward-march-v1",
+ "cases": [
+  {
+   "case": "mu-1.002-eps-0.001",
+   "inner_edge": 0.9466464285714282,
+   "inner_region_slope_min_last": -171.5831205647959,
+   "mass_over_rm": 1.002,
+   "meets_at_last_station": false,
+   "r_minus": 0.9387228319217753,
+   "station_count": 4,
+   "stations": [
+    {
+     "gap_to_horizon_cells": 1.002016222551108,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -26.51099357348095,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-5",
+     "t_over_rm": 5.0,
+     "throat_slope_inner": -26.51099357348095,
+     "trap_radius": 1.0660402128256534,
+     "wall_count": 1
+    },
+    {
+     "gap_to_horizon_cells": 1.002016222551108,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -224.3094239441929,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-10",
+     "t_over_rm": 10.0,
+     "throat_slope_inner": 180.83222871070836,
+     "trap_radius": 1.0797995113267693,
+     "wall_count": 3
+    },
+    {
+     "gap_to_horizon_cells": 1.002016222551108,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -157.99780318800438,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-15",
+     "t_over_rm": 15.0,
+     "throat_slope_inner": 29.331033485242624,
+     "trap_radius": 1.080224737908815,
+     "wall_count": 2
+    },
+    {
+     "gap_to_horizon_cells": 1.002016222551108,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -171.5831205647959,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-20",
+     "t_over_rm": 20.0,
+     "throat_slope_inner": 36.628252057715805,
+     "trap_radius": 1.0803396424940488,
+     "wall_count": 2
+    }
+   ],
+   "throat_slope_last": 36.628252057715805
+  },
+  {
+   "case": "mu-1.010-eps-0.001",
+   "inner_edge": 0.8859691252144084,
+   "inner_region_slope_min_last": -80.19369341882948,
+   "mass_over_rm": 1.01,
+   "meets_at_last_station": false,
+   "r_minus": 0.8682255312124217,
+   "station_count": 4,
+   "stations": [
+    {
+     "gap_to_horizon_cells": 1.0014051600346794,
+     "gradient_bubble_verdict": "single_force_collar",
+     "inner_region_slope_min": -47.684653918370486,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-5",
+     "t_over_rm": 5.0,
+     "throat_slope_inner": -47.684653918370486,
+     "trap_radius": 1.1521856469592069,
+     "wall_count": 0
+    },
+    {
+     "gap_to_horizon_cells": 1.0014051600346794,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -60.31993985363621,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-10",
+     "t_over_rm": 10.0,
+     "throat_slope_inner": 32.93138953206546,
+     "trap_radius": 1.1593220791391126,
+     "wall_count": 2
+    },
+    {
+     "gap_to_horizon_cells": 1.0014051600346794,
+     "gradient_bubble_verdict": "single_force_collar",
+     "inner_region_slope_min": -138.56924453178496,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-15",
+     "t_over_rm": 15.0,
+     "throat_slope_inner": 35.995742622475746,
+     "trap_radius": 1.159518878674978,
+     "wall_count": 0
+    },
+    {
+     "gap_to_horizon_cells": 1.0014051600346794,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -80.19369341882948,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-20",
+     "t_over_rm": 20.0,
+     "throat_slope_inner": 48.34599997257941,
+     "trap_radius": 1.1595833492195817,
+     "wall_count": 2
+    }
+   ],
+   "throat_slope_last": 48.34599997257941
+  },
+  {
+   "case": "mu-1.040-eps-0.001",
+   "inner_edge": 0.7903225806451606,
+   "inner_region_slope_min_last": -62.26430685332472,
+   "mass_over_rm": 1.04,
+   "meets_at_last_station": false,
+   "r_minus": 0.7543428628582858,
+   "station_count": 4,
+   "stations": [
+    {
+     "gap_to_horizon_cells": 1.008733689890415,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -16.30414021701954,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-5",
+     "t_over_rm": 5.0,
+     "throat_slope_inner": -12.18443500175628,
+     "trap_radius": 1.3259540521885276,
+     "wall_count": 2
+    },
+    {
+     "gap_to_horizon_cells": 1.008733689890415,
+     "gradient_bubble_verdict": "two_force_wall",
+     "inner_region_slope_min": -35.32793079173005,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-10",
+     "t_over_rm": 10.0,
+     "throat_slope_inner": -8.480164602588681,
+     "trap_radius": 1.3302449395286438,
+     "wall_count": 2
+    },
+    {
+     "gap_to_horizon_cells": 1.008733689890415,
+     "gradient_bubble_verdict": "single_force_collar",
+     "inner_region_slope_min": -46.79224657742324,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-15",
+     "t_over_rm": 15.0,
+     "throat_slope_inner": -27.71384099058436,
+     "trap_radius": 1.3303321030546327,
+     "wall_count": 0
+    },
+    {
+     "gap_to_horizon_cells": 1.008733689890415,
+     "gradient_bubble_verdict": "single_force_collar",
+     "inner_region_slope_min": -62.26430685332472,
+     "meets_hayward_on_evaluated_domain": false,
+     "station": "station-20",
+     "t_over_rm": 20.0,
+     "throat_slope_inner": -23.33424159629296,
+     "trap_radius": 1.330373528959007,
+     "wall_count": 0
+    }
+   ],
+   "throat_slope_last": -23.33424159629296
+  }
+ ],
+ "coverage": {
+  "cases": 3,
+  "total_stations": 12
+ },
+ "creation_only": true,
+ "criterion": "Hayward gr-qc/0506126 (2005): a static region supported by finite density and pressure behaves as r^g with g >= -1 inward. Decided on the evaluated cells one cell above r_minus, no further extrapolation.",
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "schema": "NSC-RN-INWARD-MARCH-ASSESSMENT-v1",
+ "summary": {
+  "inner_region_slope_min_last": {
+   "mu-1.002-eps-0.001": -171.5831205647959,
+   "mu-1.010-eps-0.001": -80.19369341882948,
+   "mu-1.040-eps-0.001": -62.26430685332472
+  },
+  "meets_hayward_at_last_station": {
+   "mu-1.002-eps-0.001": false,
+   "mu-1.010-eps-0.001": false,
+   "mu-1.040-eps-0.001": false
+  },
+  "throat_slope_last_station": {
+   "mu-1.002-eps-0.001": 36.628252057715805,
+   "mu-1.010-eps-0.001": 48.34599997257941,
+   "mu-1.040-eps-0.001": -23.33424159629296
+  }
+ }
+}

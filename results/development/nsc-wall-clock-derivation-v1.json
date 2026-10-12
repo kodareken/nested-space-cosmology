@@ -1,0 +1,48 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "decomposition": "fall = omega * amplitude, omega treated as family-constant",
+  "decomposition_holds": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884",
+    "lab/results/development/nsc-wall-clock-horizon-v1.json": "e9ac1d4f79f7041cfbdfb6256d1fd440dd81d5d0a114bd6be81ff556c2995429"
+  },
+  "omega_mean": 0.38614380309772606,
+  "omega_spread": 0.08321932935991226,
+  "production_trajectory": false,
+  "reading": "the one parameter-free decomposition in the recorded numbers; not a claim about the origin of the exponents",
+  "scale_counting": {
+    "fall_power": -0.25,
+    "fall_reading": "enters only through the breathing amplitude; the fall is a constant-frequency relaxation sampled by A",
+    "gap": "Delta = r_+ - r_- = 2 sqrt(M^2 - P^2)",
+    "rise_power": -0.5,
+    "rise_reading": "reciprocal proper throat-crossing scale",
+    "underdetermined": "three gap points cannot fix origin exponents; the powers are measured, their provenance is flagged"
+  },
+  "schema": "NSC-WALL-CLOCK-DERIVATION-v1",
+  "sites": {
+    "mu-1.002-eps-0.001": {
+      "amplitude": 0.9187593011962776,
+      "fall": -0.34823941255020197,
+      "fall_over_amplitude": 0.3790322580645161,
+      "rise": 0.29902016427183
+    },
+    "mu-1.010-eps-0.001": {
+      "amplitude": 0.8737943705442395,
+      "fall": -0.3065512890887465,
+      "fall_over_amplitude": 0.35082772265723366,
+      "rise": 0.18244065140986887
+    },
+    "mu-1.040-eps-0.001": {
+      "amplitude": 0.5638153576167979,
+      "fall": -0.24163515326434193,
+      "fall_over_amplitude": 0.4285714285714285,
+      "rise": 0.13066197176516278
+    }
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_clock_derivation.py": "1c194be9bac52b95265d878a7139f1a7b0ac9e5a942b69d48d3cf9515e09dd20",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "beyond_t20": [
+    {
+      "balance_at_throat": 0.9073236137627638,
+      "balance_min": 0.09990868647059843,
+      "r_first_wall": null,
+      "t_over_rm": 40.0,
+      "throat_slope_inner": -58.74108808606848,
+      "wall_count": 0
+    },
+    {
+      "balance_at_throat": 0.9974563383828962,
+      "balance_min": 0.015446341709212911,
+      "r_first_wall": null,
+      "t_over_rm": 80.0,
+      "throat_slope_inner": -70.43289501936162,
+      "wall_count": 0
+    }
+  ],
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {},
+  "notes": [
+    "the payloads are the recorded relaxation campaign bytes; the wall reducer is the same one the bubble record used"
+  ],
+  "production_trajectory": false,
+  "rows": [
+    {
+      "balance_at_throat": 0.7014151442354447,
+      "balance_min": 0.39394403453627536,
+      "r_first_wall": 0.863322921052037,
+      "t_over_rm": 5.0,
+      "throat_slope_inner": -16.30414021701954,
+      "wall_count": 2
+    },
+    {
+      "balance_at_throat": 0.8444241844490741,
+      "balance_min": 0.06827112337223017,
+      "r_first_wall": 0.8819528143239229,
+      "t_over_rm": 10.0,
+      "throat_slope_inner": -35.32793079173005,
+      "wall_count": 2
+    },
+    {
+      "balance_at_throat": 0.9715069403995601,
+      "balance_min": 0.08561966818176232,
+      "r_first_wall": null,
+      "t_over_rm": 15.0,
+      "throat_slope_inner": -46.79224657742324,
+      "wall_count": 0
+    },
+    {
+      "balance_at_throat": 0.7705968717457008,
+      "balance_min": 0.05877472859120661,
+      "r_first_wall": null,
+      "t_over_rm": 20.0,
+      "throat_slope_inner": -62.26430685332472,
+      "wall_count": 0
+    },
+    {
+      "balance_at_throat": 0.9073236137627638,
+      "balance_min": 0.09990868647059843,
+      "r_first_wall": null,
+      "t_over_rm": 40.0,
+      "throat_slope_inner": -58.74108808606848,
+      "wall_count": 0
+    },
+    {
+      "balance_at_throat": 0.9974563383828962,
+      "balance_min": 0.015446341709212911,
+      "r_first_wall": null,
+      "t_over_rm": 80.0,
+      "throat_slope_inner": -70.43289501936162,
+      "wall_count": 0
+    }
+  ],
+  "schema": "NSC-RELAXATION-WALL-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_relaxation_wall.py": "c3f0fa20230da49214739cda82d11f84a5f8b28e663d65aca3b709516c43eda6",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "wall_survives_to_t40": false,
+  "wall_survives_to_t80": false
+}

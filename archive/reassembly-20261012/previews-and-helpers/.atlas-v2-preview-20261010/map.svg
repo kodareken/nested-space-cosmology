@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1130" viewBox="0 0 1400 1130" role="img" aria-label="A shared parent, and one attachment decided">
+<title>A shared parent, and one attachment decided</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1400" height="1130" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">A shared parent, and one attachment decided</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Atlas v2 | Published spatial geometry + a separate finite source test</text>
+<rect x="50" y="130" width="1300" height="345" rx="18" fill="#102c41" stroke="#47758e"/>
+<text x="80" y="175" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#86d6f0" font-weight="600">SHARED PARENT INITIAL SLICE</text>
+<text x="80" y="210" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Brill-Lindquist: h = psi^4 delta, K = 0; both holes contribute to the same geometry.</text>
+<text x="80" y="242" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">Vacuum constraints satisfied away from punctures. No spacetime evolution or horizon map supplied.</text>
+<circle cx="365" cy="335" r="44" fill="#020810" stroke="#f4ce8c" stroke-width="2"/>
+<text x="349" y="343" font-family="Segoe UI,Arial,sans-serif" font-size="24" fill="#f4ce8c" font-weight="600">A</text>
+<text x="185" y="407" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Bare parameter 1; end ADM 1.0625</text>
+<text x="185" y="439" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">Asymptotic end; offspring not established</text>
+<circle cx="970" cy="335" r="44" fill="#020810" stroke="#f4ce8c" stroke-width="2"/>
+<text x="954" y="343" font-family="Segoe UI,Arial,sans-serif" font-size="24" fill="#f4ce8c" font-weight="600">B</text>
+<text x="790" y="407" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Bare parameter 1.5; end ADM 1.5625</text>
+<text x="790" y="439" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">Asymptotic end; offspring not established</text>
+<text x="580" y="337" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#adc0cd" font-weight="normal">coordinate d/L = 12</text>
+<path d="M 365 475 L 365 555" stroke="#e6be7a" stroke-width="2" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<text x="380" y="515" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">formation + matching open</text>
+<rect x="50" y="565" width="615" height="160" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="75" y="608" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#86d6f0" font-weight="600">POTENTIAL CHILD A</text>
+<text x="75" y="646" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Its geometry, source and state require an attachment law.</text>
+<text x="75" y="684" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">No causal path or cross-universe age is assigned.</text>
+<path d="M 970 475 L 970 555" stroke="#e6be7a" stroke-width="2" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+<text x="985" y="515" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">formation + matching open</text>
+<rect x="735" y="565" width="615" height="160" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="760" y="608" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#86d6f0" font-weight="600">POTENTIAL CHILD B</text>
+<text x="760" y="646" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Its geometry, source and state require an attachment law.</text>
+<text x="760" y="684" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">No causal path or cross-universe age is assigned.</text>
+<text x="80" y="767" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#dce8f3" font-weight="normal">Further generation remains possible; the recorded descent cutoff is two.</text>
+<rect x="50" y="800" width="1300" height="172" rx="18" fill="#382633" stroke="#bf7881"/>
+<text x="80" y="842" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#f0b1b8" font-weight="600">SEPARATE SOURCE SCREEN: THIS COMBINATION IS INCOMPATIBLE</text>
+<text x="80" y="880" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#dce8f3" font-weight="normal">Comoving radiation-filled child + fixed Schwarzschild mass + constant-tension wall</text>
+<text x="80" y="916" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Excluded on an expanding interval by the junction equation. Moving walls and other interiors remain open.</text>
+<text x="80" y="948" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#e6be7a" font-weight="normal">This spherical test has not been embedded in the two-hole parent above.</text>
+<text x="55" y="1020" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#86d6f0" font-weight="normal">Relations remain separate: descent / geometric attachment / causal influence / correlation.</text>
+<text x="55" y="1057" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#adc0cd" font-weight="normal">One-hole multiple daughters, communicating mouths and indistinguishable exteriors retain their own assumptions.</text>
+<text x="55" y="1094" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#adc0cd" font-weight="normal">Patch sizes are schematic. The separate parent-slice figure plots conformal coordinates, not a physical embedding.</text>
+</svg>

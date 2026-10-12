@@ -1,0 +1,103 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-march-balance-trajectory-v1.json": "56f0fc90c9f9cdb5a0b32d0ed6227d596a80d4e2c87dd931bc98b944b3adbb3a",
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "notes": [
+    "the heavy case has no walls after t=10 on this domain; its radii appear only where walls exist"
+  ],
+  "production_trajectory": false,
+  "radii": {
+    "mu-1.002-eps-0.001": {
+      "family_envelope": [
+        1.0055427199718212,
+        1.9243020211680988
+      ],
+      "inside_family_envelope": false,
+      "points": [
+        {
+          "r_first_in_r_plus_units": 1.0296774112914575,
+          "r_first_wall": 1.0968918367346938,
+          "t_over_rm": 5.0
+        },
+        {
+          "r_first_in_r_plus_units": 0.8996149652556513,
+          "r_first_wall": 0.9583392825483418,
+          "t_over_rm": 10.0
+        },
+        {
+          "r_first_in_r_plus_units": 0.9359029930920725,
+          "r_first_wall": 0.9969960900770687,
+          "t_over_rm": 15.0
+        },
+        {
+          "r_first_in_r_plus_units": 0.9406002775856079,
+          "r_first_wall": 1.002,
+          "t_over_rm": 20.0
+        }
+      ],
+      "r_plus": 1.065277168078237,
+      "range_r_plus_units": [
+        0.8996149652556513,
+        1.0296774112914575
+      ]
+    },
+    "mu-1.010-eps-0.001": {
+      "family_envelope": [
+        0.9044835021535105,
+        1.77827787269775
+      ],
+      "inside_family_envelope": false,
+      "points": [
+        {
+          "r_first_in_r_plus_units": 0.846140137339553,
+          "r_first_wall": 0.9745626072041167,
+          "t_over_rm": 10.0
+        },
+        {
+          "r_first_in_r_plus_units": 0.8964939422518865,
+          "r_first_wall": 1.0325588341084533,
+          "t_over_rm": 20.0
+        }
+      ],
+      "r_plus": 1.1517744687875837,
+      "range_r_plus_units": [
+        0.846140137339553,
+        0.8964939422518865
+      ]
+    },
+    "mu-1.040-eps-0.001": {
+      "family_envelope": [
+        0.9707725235796543,
+        1.5345878811964522
+      ],
+      "inside_family_envelope": false,
+      "points": [
+        {
+          "r_first_in_r_plus_units": 0.6512414838375702,
+          "r_first_wall": 0.863322921052037,
+          "t_over_rm": 5.0
+        },
+        {
+          "r_first_in_r_plus_units": 0.6652948108630289,
+          "r_first_wall": 0.8819528143239229,
+          "t_over_rm": 10.0
+        }
+      ],
+      "r_plus": 1.325657137141717,
+      "range_r_plus_units": [
+        0.6512414838375702,
+        0.6652948108630289
+      ]
+    }
+  },
+  "reading": "the deep-grid wall radii of the light cases, held against the family-chart breathing envelope - the wall radius law's second domain",
+  "schema": "NSC-MARCH-WALL-RADII-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_march_wall_radii.py": "ccba43e604faee9b2eb7a6b2eb1e50d74986b84cfe963b0abf6d84f79096ff02",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

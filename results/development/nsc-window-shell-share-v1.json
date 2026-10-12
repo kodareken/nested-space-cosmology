@@ -1,0 +1,62 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "charged_chart": {
+    "cap": 113.41068580780694,
+    "instrument_a": [
+      {
+        "interval": [
+          3.083368932462969,
+          8.16397077507011
+        ],
+        "l1_share": 0.05345774130413807
+      },
+      {
+        "interval": [
+          8.16397077507011,
+          28.352671451951736
+        ],
+        "l1_share": 0.946542258695862
+      }
+    ],
+    "instrument_b": {
+      "next_band_share": 0.1950708424790364,
+      "window_shell_share": 0.05118665572168239
+    },
+    "r_plus": 4.081985387535055
+  },
+  "creation_only": true,
+  "evolved": false,
+  "neutral_chart": {
+    "instrument_a": [
+      {
+        "interval": [
+          1.04,
+          2.651314274283434
+        ],
+        "l1_share": 0.060753580358133906
+      },
+      {
+        "interval": [
+          2.651314274283434,
+          8.0
+        ],
+        "l1_share": 0.9392464196418662
+      }
+    ],
+    "instrument_b": {
+      "next_band_share": 0.18355623228843862,
+      "window_shell_share": 0.05741242963180751
+    },
+    "r_plus": 1.325657137141717
+  },
+  "notes": [
+    "instrument A localizes the source in the outer band (>=24 r_m neutral, >=75% cap charged); B is the vacuum quadrature"
+  ],
+  "production_trajectory": false,
+  "reading": "window shell [r_+, 2 r_+] share of each instrument below the next atlas edge; the containment chain becomes quantitative",
+  "schema": "NSC-WINDOW-SHELL-SHARE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_window_shell_share.py": "5606351b18020693333a5325e3337221e73d89ed705a8de588f75d686e08c8e9",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

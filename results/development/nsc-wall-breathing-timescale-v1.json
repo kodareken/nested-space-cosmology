@@ -1,0 +1,53 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "T_total": 16.47877335401308,
+      "fall_rate": -0.34823941255020197,
+      "fall_times_T": -5.738558352349436,
+      "mass_over_rm": 1.002,
+      "r_plus": 1.065277168078237,
+      "rise_per_horizon_free_fall": 4.625543157190202,
+      "rise_rate": 0.29902016427183,
+      "rise_times_T": 4.9274855153152455
+    },
+    "mu-1.010-eps-0.001": {
+      "T_total": 16.417924345326952,
+      "fall_rate": -0.3065512890887465,
+      "fall_times_T": -5.032935872221492,
+      "mass_over_rm": 1.01,
+      "r_plus": 1.1517744687875837,
+      "rise_per_horizon_free_fall": 2.6005931660495962,
+      "rise_rate": 0.18244065140986887,
+      "rise_times_T": 2.995296812359394
+    },
+    "mu-1.040-eps-0.001": {
+      "T_total": 16.322782384279847,
+      "fall_rate": -0.24163515326434193,
+      "fall_times_T": -3.9441580231259614,
+      "mass_over_rm": 1.04,
+      "r_plus": 1.325657137141717,
+      "rise_per_horizon_free_fall": 1.608837512557872,
+      "rise_rate": 0.13066197176516278,
+      "rise_times_T": 2.13276693102367
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "fall_times_T_relative_spread": 0.15047378875231654,
+  "input_sha256": {
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "notes": [
+    "T_total is the vacuum-chart infall time of instrument B, omega = 0 quadrature from r_+ to 32 r_m",
+    "parameter-free prediction; nothing is fitted"
+  ],
+  "production_trajectory": false,
+  "reading": "if the breathing is infall-clocked, rate*T_total is a family constant; the measured spread quantifies the departure",
+  "rise_times_T_relative_spread": 0.34860259396570614,
+  "schema": "NSC-WALL-BREATHING-TIMESCALE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_breathing_timescale.py": "91d1c5666ebd6463e2dce1e73dd84d7de082e1eae9c3344f13226e5bcd3149d2",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

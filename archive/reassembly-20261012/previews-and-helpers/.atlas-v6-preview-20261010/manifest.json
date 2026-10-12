@@ -1,0 +1,109 @@
+{
+  "input_sha256": "20423bf596a95b55df39dcfbb6a2ad9b5d7d037e2ea9f66051bcae32a5d6675a",
+  "numerical_replay_tolerance": {
+    "absolute": 1e-12,
+    "relative": 1e-10
+  },
+  "outputs": {
+    "atlas.json": {
+      "bytes": 59410,
+      "sha256": "20423bf596a95b55df39dcfbb6a2ad9b5d7d037e2ea9f66051bcae32a5d6675a"
+    },
+    "field-response.png": {
+      "bytes": 278842,
+      "sha256": "959f8053eec295fec6300211b4d19a2a8236f1c958f1da8c2c4ee711c60f7be8"
+    },
+    "field-response.svg": {
+      "bytes": 164592,
+      "sha256": "b4f48d9de0bef9a8d5491b4aad3bf996651c961e7036f184cc5b54fa9811c128"
+    },
+    "field-transfer.json": {
+      "bytes": 55425,
+      "sha256": "c5a0fc9641b76a260a30137b495838ba020162f611b5cafb4a1f5c58ddd688df"
+    },
+    "map.png": {
+      "bytes": 166065,
+      "sha256": "e67fb19c802541ab964c3b8977280d25c1238611c8887a8bcda3be559ca29a57"
+    },
+    "map.svg": {
+      "bytes": 7092,
+      "sha256": "788cd71ba02a6c4e6ddb060035051fad9f4fe82132c8e129767623b85581441c"
+    },
+    "narrative.md": {
+      "bytes": 2114,
+      "sha256": "d31542ac5df35c08b013d8f7038868b187608f27d846350f4875fc6ebcb23ca0"
+    }
+  },
+  "runtime": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  },
+  "schema": "nsc-cosmological-atlas-v6",
+  "scope": "conditional classical field transfer on the isolated reference; incident history is input",
+  "source_bindings": {
+    "docs/nsc-nested-qualities.md": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d",
+    "lab/docs/child-neck/balanced-layers-note.md": "355a62b66518daf4f82986ec53583112538f45385f8e8aa0bf2322aecf86259a",
+    "lab/docs/child-neck/israel-matching-note.md": "97b81878f90eab41cb992b95f88259b72b21b2bd59e46654b1ae25092bee9299",
+    "lab/docs/nsc-atlas-causal-classification.md": "2ab9ca2a8787413e44974e2fefd41821a4cfdcc1540fb214581b9d9e5673803c",
+    "lab/docs/nsc-atlas-causal-observers.md": "18991d22749bf8dd5b26c2ebafe080eec2fbc18bbe5ec45777e03ce2d138f65b",
+    "lab/docs/nsc-atlas-connection-gluing.md": "50a680760f8cd3f9051bc29c1b387b5211695e0c3adce62b598a02ccd1fcb26b",
+    "lab/docs/nsc-atlas-connection-observer.md": "87c7d61c27e6373816aa79a0ee8f2a560565cdab742d5f79cd024ad6b2feef68",
+    "lab/docs/nsc-atlas-connection-slice.md": "e739c1c6513cb58b2ff56a24c9e91cab93db8724ddac1a588be31ec9678f3433",
+    "lab/docs/nsc-atlas-field-matching.md": "ab417d8503d035ac728108c3b98e7a6499fb9f9407de2e03932a4e6cb21d13c2",
+    "lab/docs/nsc-atlas-field-transfer.md": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219",
+    "lab/docs/nsc-atlas-junction-sources.md": "629f3b18e49f436060fde1e72359e9ec4c271f5e64d5a60da41eb50dd4f027db",
+    "lab/docs/nsc-atlas-moving-boundaries.md": "fbc8dfa5c85a20e224ecc1d592a97da6e02befdbead927c5681efe74762c1ae8",
+    "lab/docs/nsc-atlas-parent-gluing.md": "da2d9f84537918d2466cf4dbd6145f6cf9f34f08b56b52c10d48e50620bfe435",
+    "lab/docs/nsc-atlas-parent-initial-data.md": "684d9e9850f60dcc239953ecd853b875260b4a0db6129b59bda25c34bb826c2a",
+    "lab/docs/nsc-cosmological-atlas-v2.md": "ef947af8c678535fd63efef8fbb26bf09a0b8136dbe96bde665cb0d981261de1",
+    "lab/docs/nsc-cosmological-atlas-v3.md": "da7869cac76529426819a059db12e5aee4af173181a0d2d02d77b1f484f2a309",
+    "lab/docs/nsc-cosmological-atlas-v4.md": "284b4bba7dd0e7948256b8968d79ee4610012a3396c704e0eb4b82544e6e974c",
+    "lab/docs/nsc-cosmological-atlas-v5.md": "4ef831a0123556aebc1090d58352b5d927cbe2589a12023487074221fb62f6f2",
+    "lab/docs/nsc-cosmological-atlas-v6.md": "0fbd59bf94473888f67b3bd78bdb7f87c7a8d5c8060bd9fd26d242eede8e28c1",
+    "lab/docs/nsc-cosmological-atlas.md": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
+    "lab/scripts/derive_nsc_cosmological_atlas.py": "7189675b5898278d48dd8b2e54d6bc5aae04dfcb263f80d728248aac283b493b",
+    "lab/scripts/derive_nsc_cosmological_atlas_v2.py": "1e4f80f21d1a43a18f7d0a661e957a2e4db2d7ffb8df957f71694ffac681dc28",
+    "lab/scripts/derive_nsc_cosmological_atlas_v3.py": "02fdbd9a00b40813e69f25513c37d81cd7818551b028b23665aaf30de3e0c925",
+    "lab/scripts/derive_nsc_cosmological_atlas_v4.py": "24acb31d25c96372aefaa2f2a5019f2d01a74f76224cafec644c403b2d649baf",
+    "lab/scripts/derive_nsc_cosmological_atlas_v5.py": "54b426e7234f0b7d01edf7344164355b8376370b00d784976d6f3bf2d957de73",
+    "lab/scripts/derive_nsc_cosmological_atlas_v6.py": "e4b4bbbe10f53474cb7da966537698f54b0e5859220873456753b85853b7cc77",
+    "lab/src/recursive_horizons/nsc_atlas_causal_observers.py": "e409e6b4fdbc149ed3153383659eac7b29e350c333c788074bce5739d55960f2",
+    "lab/src/recursive_horizons/nsc_atlas_causal_reference.py": "521f255a5af5207664ad2563fe3700c6389618958a871793ea7d1682f11b30bd",
+    "lab/src/recursive_horizons/nsc_atlas_connection_observer.py": "44b811a40578fe3c2a07c558e16eb370408c4de425c0d8abdccf6e9621763902",
+    "lab/src/recursive_horizons/nsc_atlas_connection_slice.py": "880b8b004f338bf8153ff707737ffa767363869b4405df8e78145ac70472bf5a",
+    "lab/src/recursive_horizons/nsc_atlas_field_transfer.py": "3ab315573e55c94bf78832734c889839e8321085cdc14d7388d6fdfc050086c0",
+    "lab/src/recursive_horizons/nsc_atlas_junction_sources.py": "b53a875b0e3cb437adaca57fbf09dcb2c67146e01d21f0854fb7202aa4c368c4",
+    "lab/src/recursive_horizons/nsc_atlas_moving_boundaries.py": "d5b14a73696da602f98b2f8fa734d54bfd3d7fa2e335d6fb8af539d0bb19d734",
+    "lab/src/recursive_horizons/nsc_atlas_parent_initial_data.py": "6e78dbb2ce83865f68218b181c8b06259569b899b1c8e6d472c5815d1d03e3f7",
+    "lab/src/recursive_horizons/nsc_cosmological_atlas.py": "8ab49dc2c144f9502c728b39c8979225972d48bf5cb5668de4279fa2838abc37",
+    "lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "lab/src/recursive_horizons/nsc_evolving_reduction.py": "17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d",
+    "lab/src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "lab/src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "lab/src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "lab/src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "lab/tests/test_nsc_atlas_causal_observers.py": "b11513f2d1f0b4205f5f25f07980ced9f2495289f6a65dec3c631b99cd802672",
+    "lab/tests/test_nsc_atlas_causal_reference.py": "4f94f338c177fd4bc83104a7f37339dcfedc39adc77d9f5e3ca72e5ee2ee170c",
+    "lab/tests/test_nsc_atlas_connection_observer.py": "0052df2b3821e20997296aa6820930880059077b19ec1cdb3cba7698d1d90e26",
+    "lab/tests/test_nsc_atlas_connection_slice.py": "b5263d05e67cadabf9395eae4fbe9a84b30ae025e92a7d05918a3b603f83a7b8",
+    "lab/tests/test_nsc_atlas_field_transfer.py": "1238ec27efeeba6106a3b638fc799ba88ac82a62f2d8acbbee64feb40658118d",
+    "lab/tests/test_nsc_atlas_junction_sources.py": "a42be224ca8a5d33089e7c9b1593858d0a72283093575a6844b984055fd1529e",
+    "lab/tests/test_nsc_atlas_moving_boundaries.py": "001f3dda89f8e343992415d0ddf83c85496de897f950d2efc5b7b873506b94ad",
+    "lab/tests/test_nsc_atlas_parent_initial_data.py": "fefc8946529c61b7ca53bd55aa15ef8a1d0640e9c3ebbc4ed2cbb7f32a5b893c",
+    "lab/tests/test_nsc_cosmological_atlas.py": "390e283535865bb704abecdfe2970d3140ae2388fc514ca41458eecdc3da856b",
+    "lab/tests/test_nsc_cosmological_atlas_v2.py": "f3ac4ec198d48a4dc337ee17c302d8a2e06d0e1a01764b79ca819091b80789a9",
+    "lab/tests/test_nsc_cosmological_atlas_v3.py": "10c58397795f94439c234d6ecc7ebc9a73dde39decf3ff264efd34a0915a1751",
+    "lab/tests/test_nsc_cosmological_atlas_v4.py": "55d3038a3f422823c45eda6608ae65184124589ba727a0d0c0b9200f1476ac10",
+    "lab/tests/test_nsc_cosmological_atlas_v5.py": "8d7779d3b2dcc00f460cacb7758f93250eb3aa72409a27cf5f76a67958d18b42",
+    "lab/tests/test_nsc_cosmological_atlas_v6.py": "2b139f101fa59554130d119a2bc2dbf3f39ec1c95719b846040b89d4085463b2",
+    "paper/atlas-working-draft-v3.md": "4099accb9291bec15d1c74c075631d5f9ac30f044a25cd72360878c110ae51dd",
+    "paper/atlas-working-draft-v4.md": "31d89b1a16107ea0b9e5dbc59f7baa342c80054a4556293dff08c35f48a770ba",
+    "paper/atlas-working-draft-v5.md": "bcc05002ec5c58d7ea7478d1a771833637e0d33bb4ab8269ee074b8c884babbf",
+    "paper/atlas-working-draft-v6.md": "b4cb9a368656977ee11c626c6059f6a4586ef043598409ff5652cf2c8458c063",
+    "paper/atlas-working-draft.md": "bb0d8a62bc4f90a8fc1c37625ebadd621c929006dc476d8db975c10a468db8ae"
+  }
+}

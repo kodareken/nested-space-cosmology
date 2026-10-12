@@ -1,0 +1,144 @@
+{
+  "api_version": "nsc-rn-charged-lll-v1",
+  "chirality_symmetry": {
+    "kappa_minus_sqrt2": {
+      "omega": 0.105,
+      "reflection_ratio": 0.6679119291980332
+    },
+    "kappa_plus_sqrt2": {
+      "omega": 0.105,
+      "reflection_ratio": 0.6679119291980332
+    }
+  },
+  "creation_only": true,
+  "eta_1_5_points": [
+    {
+      "eta": 1.5,
+      "omega": 0.1,
+      "omega_over_Phi_H_15": 0.1312285970688116,
+      "reflection_ratio": 0.6624271936639742
+    },
+    {
+      "eta": 1.5,
+      "omega": 0.046193563468762494,
+      "omega_over_Phi_H_15": 0.06061916527614808,
+      "reflection_ratio": 0.09007038384989496
+    }
+  ],
+  "evolved": false,
+  "notes": [
+    "kappa and -kappa are the two signs of the same multiplet; reflection is a flux ratio and must agree to integration error",
+    "the eta = 1.5 points probe resonance migration away from extremality"
+  ],
+  "production_trajectory": false,
+  "resonance": {
+    "omega": 0.105,
+    "omega_over_Phi_H": 0.060619165276148086,
+    "position": "grid",
+    "reflection_ratio": 0.6679119291980332
+  },
+  "scan": [
+    {
+      "omega": 0.06,
+      "omega_over_Phi_H": 0.03463952301494176,
+      "reflection_ratio": 0.21597371668789186
+    },
+    {
+      "omega": 0.065,
+      "omega_over_Phi_H": 0.03752614993285358,
+      "reflection_ratio": 0.2816079601592971
+    },
+    {
+      "omega": 0.07,
+      "omega_over_Phi_H": 0.04041277685076539,
+      "reflection_ratio": 0.35401239033260207
+    },
+    {
+      "omega": 0.075,
+      "omega_over_Phi_H": 0.043299403768677205,
+      "reflection_ratio": 0.4276254954972439
+    },
+    {
+      "omega": 0.08,
+      "omega_over_Phi_H": 0.04618603068658902,
+      "reflection_ratio": 0.49662447352663835
+    },
+    {
+      "omega": 0.085,
+      "omega_over_Phi_H": 0.04907265760450084,
+      "reflection_ratio": 0.5564022542889244
+    },
+    {
+      "omega": 0.09,
+      "omega_over_Phi_H": 0.05195928452241264,
+      "reflection_ratio": 0.6042054282169131
+    },
+    {
+      "omega": 0.095,
+      "omega_over_Phi_H": 0.05484591144032446,
+      "reflection_ratio": 0.6388742934230495
+    },
+    {
+      "omega": 0.1,
+      "omega_over_Phi_H": 0.057732538358236274,
+      "reflection_ratio": 0.6601351073852695
+    },
+    {
+      "omega": 0.105,
+      "omega_over_Phi_H": 0.060619165276148086,
+      "reflection_ratio": 0.6679119291980332
+    },
+    {
+      "omega": 0.11,
+      "omega_over_Phi_H": 0.0635057921940599,
+      "reflection_ratio": 0.6619658976755977
+    },
+    {
+      "omega": 0.115,
+      "omega_over_Phi_H": 0.06639241911197172,
+      "reflection_ratio": 0.642184012508312
+    },
+    {
+      "omega": 0.12,
+      "omega_over_Phi_H": 0.06927904602988352,
+      "reflection_ratio": 0.6101222007145829
+    },
+    {
+      "omega": 0.125,
+      "omega_over_Phi_H": 0.07216567294779534,
+      "reflection_ratio": 0.5723144168070023
+    },
+    {
+      "omega": 0.13,
+      "omega_over_Phi_H": 0.07505229986570716,
+      "reflection_ratio": 0.5429815835482226
+    },
+    {
+      "omega": 0.135,
+      "omega_over_Phi_H": 0.07793892678361897,
+      "reflection_ratio": 0.5379838711790998
+    },
+    {
+      "omega": 0.14,
+      "omega_over_Phi_H": 0.08082555370153079,
+      "reflection_ratio": 0.5593427527733739
+    }
+  ],
+  "schema": "NSC-RN-CHARGED-TWIST-RESONANCE-v1",
+  "slice": {
+    "A": 0.04501936182826115,
+    "C_F": 0.01125484045706527,
+    "Phi_H": 1.7321254676087483,
+    "Q_E": 4.0,
+    "eta_admitted": 1.01,
+    "eta_far": 1.5,
+    "fermion_sign": 1,
+    "kappa": 1.4142135623730951,
+    "q_mag": 1.0
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist_resonance.py": "55e7a8d93d2776f039bb7ec7a6978f98cd426fd8bbdcaab1252a04c84ee9e57c",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "81d2602af55549c7ea50a24d4a84e0838dd419c0cd951886a5227a76d549e472"
+  },
+  "symmetry_offset": 0.0
+}

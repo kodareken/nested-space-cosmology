@@ -1,0 +1,100 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "band": [
+    0.03,
+    0.1
+  ],
+  "candidates": [
+    {
+      "band": [
+        0.03,
+        0.1
+      ],
+      "candidate": "structural_resolvent_one_over_omega",
+      "exterior_fraction": 0.2516942566855419,
+      "f": 0.2516942566855419,
+      "local_fraction": 0.7483057433144581,
+      "target": 0.049,
+      "total_multiplier": 1.3363521647859025,
+      "verdict": "NOT_NEAR"
+    },
+    {
+      "band": [
+        0.03,
+        0.1
+      ],
+      "candidate": "recorded_transfer",
+      "exterior_fraction": 0.04463272337593094,
+      "f": 0.0446327233759311,
+      "local_fraction": 0.9553672766240691,
+      "target": 0.049,
+      "total_multiplier": 1.0467178691043797,
+      "verdict": "NOT_NEAR"
+    },
+    {
+      "band": [
+        0.03,
+        0.1
+      ],
+      "candidate": "measured_mass_fee",
+      "exterior_fraction": 0.0009886981681463958,
+      "f": 0.0009886981681464298,
+      "local_fraction": 0.9990113018318536,
+      "target": 0.049,
+      "total_multiplier": 1.0009896766596469,
+      "verdict": "NOT_NEAR"
+    }
+  ],
+  "creation_only": true,
+  "evolved": false,
+  "implied_layer_ratio": {
+    "from_measured_mass_fee": {
+      "f": 0.0009886981681464298,
+      "implied_layer_ratio": 31.80300337008237
+    },
+    "from_recorded_transfer": {
+      "f": 0.0446327233759311,
+      "implied_layer_ratio": 4.733401089424776
+    }
+  },
+  "input_sha256": {
+    "results\\development\\nsc-rn-neutral-continuation-v1\\summary.json": "4542fd0aa2354404dd3a00911d5e8ebf2d9df708709469708b970eadfb0d437c",
+    "results\\development\\scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "measured_mass_fee_detail": {
+    "fee_over_one_over_ratio_squared": 1.0124269241819441,
+    "measured_relative_mass_renormalisation": 0.0009886981681464298,
+    "one_over_ratio_squared": 0.0009765625,
+    "route_ratio": 32.0
+  },
+  "notes": [
+    "No coefficient is fitted anywhere; the three candidate fees are extracted from frozen recorded bytes and the band is pre-registered.",
+    "Proposal, not observation: the chain closure is a model comparison, not a cosmology measurement.",
+    "The recorded-transfer proximity to 0.049 is an observation about two fixed numbers and is flagged as possible numerology."
+  ],
+  "production_trajectory": false,
+  "route_ratio": 32.0,
+  "route_ratio_source": "ROUTE_OUTER_OVER_RM = 32.0 in lab/scripts/derive_nsc_rn_parent.py",
+  "scale_fee_detail": {
+    "endpoint_condition_omega_q_le_one": true,
+    "omega": 3.973074368754331,
+    "recorded_transfer": 0.0446327233759311,
+    "structural_one_over_omega": 0.2516942566855419,
+    "zeta": 15.785319939652627,
+    "zeta_minus_omega_squared": 0.0
+  },
+  "schema": "NSC-INFLUENCE-CHAIN-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_influence_chain.py": "598489ef1c0b3d0d291b9a421da87e5f7eaeca135e2401e38565ac4898e8e3ff",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "7309b169ebfefd63742116071e0d47871fa41f0f5754817c731a81c409b6c025"
+  },
+  "target_anchor": "BBN-anchored baryon share Omega_b ~ 0.049, Planck 2018 frame",
+  "target_local_fraction": 0.049,
+  "transfer_baryon_proximity": {
+    "absolute_offset": -0.004367276624068904,
+    "baryon_target": 0.049,
+    "numerology_caveat": "proximity is a recorded observation about two fixed numbers; no coefficient was moved to produce it",
+    "recorded_transfer": 0.0446327233759311,
+    "relative_offset": -0.08912809436875314
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "attempted": {
+    "calibration_path": "nsc-rn-calibration-t40-v1.json",
+    "calibration_written": true,
+    "no_directory_created": true,
+    "prepare_refused": true,
+    "refusal_text": "producer bytes are not the frozen root commit"
+  },
+  "creation_only": true,
+  "diagnosis": {
+    "modification_pre_existing": true,
+    "modified_producer": "lab/src/recursive_horizons/nsc_rn_pg.py",
+    "no_producer_edit_made_here": true,
+    "tree_was_dirty_before_this_programme": true
+  },
+  "evolved": false,
+  "meaning": "the freeze gate is working as designed: no production run on a tree whose producer bytes differ from the frozen commit. Launching the priced t=40 campaign is now a root-owner act (tree reconciliation), not a discovery-side task.",
+  "notes": [
+    "the calibration file remains as a legitimate dry artifact",
+    "the preflight record (round 70) stays valid: the price and ceremony are unchanged; the gate is the missing step"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-PRODUCTION-GATE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_production_gate.py": "f36fa6dfc31eb21e6801d458632f9ee5f09e943794b90de1d07537025db5dd23",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

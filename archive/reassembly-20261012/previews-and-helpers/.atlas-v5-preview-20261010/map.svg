@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1240" viewBox="0 0 1440 1240" role="img" aria-label="What can an interior observer know?">
+<title>What can an interior observer know?</title>
+<defs><radialGradient id="sea"><stop stop-color="#123a54"/><stop offset="1" stop-color="#071424"/></radialGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#86d6f0"/></marker></defs>
+<rect width="1440" height="1240" fill="#07111e"/>
+<text x="55" y="64" font-family="Segoe UI,Arial,sans-serif" font-size="34" fill="#dce8f3" font-weight="600">What can an interior observer know?</text>
+<text x="55" y="100" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#9fb7c9" font-weight="normal">Atlas v5 | Event-specific causal access in one borrowed reference history</text>
+<rect x="45" y="130" width="1350" height="118" rx="18" fill="#153329" stroke="#70ac94"/>
+<text x="75" y="173" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#a5e6c9" font-weight="600">The same connection has different causal meanings at different times.</text>
+<text x="75" y="216" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Fixed source and initial slice. The isolated reference has a singular past; regular formation remains open.</text>
+<rect x="45" y="285" width="650" height="305" rx="18" fill="#152c40" stroke="#567f96"/>
+<text x="70" y="332" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#92dfc4" font-weight="600">EARLIER REFERENCE HISTORY</text>
+<text x="70" y="376" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Interior centre -&gt; wall: allowed null paths</text>
+<text x="70" y="419" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Early wall -&gt; centre: allowed null paths</text>
+<text x="70" y="462" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Early centre -&gt; parent: a geometric escape path</text>
+<text x="70" y="505" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Last central escape threshold: t / ell = -1.231294</text>
+<text x="70" y="548" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">The threshold itself has no finite parent reception.</text>
+<rect x="745" y="285" width="650" height="305" rx="18" fill="#152c40" stroke="#567f96"/>
+<text x="770" y="332" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#edbf8d" font-weight="600">AT / AFTER THE CHOSEN SLICE</text>
+<text x="770" y="376" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Centre -&gt; future wall: excluded in this branch</text>
+<text x="770" y="419" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Wall -&gt; future centre: excluded in this branch</text>
+<text x="770" y="462" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">Centre -&gt; right parent: excluded in this branch</text>
+<text x="770" y="505" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">Right parent -&gt; centre: excluded throughout reference</text>
+<text x="770" y="548" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#dce8f3" font-weight="normal">These are observer/event statements, not generic sibling rules.</text>
+<rect x="45" y="635" width="1350" height="180" rx="18" fill="#2a2637" stroke="#9c82b7"/>
+<text x="75" y="680" font-family="Segoe UI,Arial,sans-serif" font-size="24" fill="#d0b5f0" font-weight="600">TWO DIFFERENT HORIZONS</text>
+<text x="75" y="722" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#dce8f3" font-weight="normal">The right-parent escape horizon crosses the wall at R = 2M and continues through the cap.</text>
+<text x="75" y="763" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#dce8f3" font-weight="normal">The central observer&#x27;s de Sitter horizon limits incoming light. They are different null surfaces.</text>
+<text x="55" y="880" font-family="Segoe UI,Arial,sans-serif" font-size="25" fill="#a1d9f3" font-weight="600">WHAT THIS UNLOCKS</text>
+<text x="55" y="922" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">An early imprint needs a specified field, state and wall transmission law before its local response can be calculated.</text>
+<text x="55" y="965" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#dce8f3" font-weight="normal">The new causal map removes late signal paths from this reference without removing other candidate geometries.</text>
+<rect x="45" y="1010" width="430" height="112" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="65" y="1050" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#c9b2ec" font-weight="600">Multiple daughters</text>
+<text x="65" y="1090" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#dce8f3" font-weight="normal">One-hole branching: distinct source assumptions</text>
+<rect x="505" y="1010" width="430" height="112" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="525" y="1050" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#c9b2ec" font-weight="600">Communicating mouths</text>
+<text x="525" y="1090" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#dce8f3" font-weight="normal">Separate charged, semiclassical route</text>
+<rect x="965" y="1010" width="430" height="112" rx="18" fill="#18394d" stroke="#36576b"/>
+<text x="985" y="1050" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#c9b2ec" font-weight="600">Shared many-body future</text>
+<text x="985" y="1090" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#dce8f3" font-weight="normal">Still undetermined beyond certified domains</text>
+<text x="55" y="1181" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#b7c9d5" font-weight="normal">Spatial attachment, descent, causal influence and correlation remain distinct. No inherited constants or cosmic ages inferred.</text>
+</svg>

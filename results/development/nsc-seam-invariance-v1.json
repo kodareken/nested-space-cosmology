@@ -1,0 +1,84 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "max_pairwise_deviation": 0.002085555799619887,
+  "notes": [
+    "the round-11 recorded profile for mu=1.040 is recomputed here with the same code path, not imported"
+  ],
+  "pairwise": [
+    {
+      "max_abs_deviation": 0.0005393589785582797,
+      "pair": [
+        "mu-1.002",
+        "mu-1.010"
+      ],
+      "per_seam": {
+        "16.0": 4.9812470632737416e-06,
+        "24.0": 0.0005393589785582797,
+        "30.0": 6.592307339281511e-05,
+        "4.0": 0.0004565305130670161,
+        "8.0": 0.00011082396039657771
+      }
+    },
+    {
+      "max_abs_deviation": 0.002085555799619887,
+      "pair": [
+        "mu-1.002",
+        "mu-1.040"
+      ],
+      "per_seam": {
+        "16.0": 0.0012322178610095769,
+        "24.0": 0.002085555799619887,
+        "30.0": 0.00013160584264415576,
+        "4.0": 0.001681717772917743,
+        "8.0": 0.00037639266926803305
+      }
+    },
+    {
+      "max_abs_deviation": 0.0015461968210616073,
+      "pair": [
+        "mu-1.010",
+        "mu-1.040"
+      ],
+      "per_seam": {
+        "16.0": 0.0012371991080728506,
+        "24.0": 0.0015461968210616073,
+        "30.0": 6.568276925134064e-05,
+        "4.0": 0.0012251872598507269,
+        "8.0": 0.00026556870887145534
+      }
+    }
+  ],
+  "production_trajectory": false,
+  "profiles": {
+    "mu-1.002": {
+      "4.0": 0.11183930452157355,
+      "8.0": 0.260663511033966,
+      "16.0": 0.5588794974916087,
+      "24.0": 0.8570644568067187,
+      "30.0": 0.9949692319580606
+    },
+    "mu-1.010": {
+      "4.0": 0.11138277400850653,
+      "8.0": 0.2607743349943626,
+      "16.0": 0.5588745162445454,
+      "24.0": 0.857603815785277,
+      "30.0": 0.9950351550314535
+    },
+    "mu-1.040": {
+      "4.0": 0.1101575867486558,
+      "8.0": 0.26103990370323404,
+      "16.0": 0.5601117153526183,
+      "24.0": 0.8591500126063386,
+      "30.0": 0.9951008378007048
+    }
+  },
+  "reading": "identical probe, three charts; the inverted mass direction and the identical outside scaffold both predict coincidence",
+  "schema": "NSC-SEAM-INVARIANCE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_seam_invariance.py": "6f73c900fbcb8465aba5f0546056d8be91096220e1a2960770cd31a5ed2a34a2",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "PROFILES_COINCIDE"
+}

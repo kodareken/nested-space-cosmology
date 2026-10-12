@@ -1,0 +1,37 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "armed_pipeline": [
+    "nsc-t30-extinction reducer (fires on station files)",
+    "nsc-t30-expectations verdict map (pre-registered)",
+    "nsc-extinction-extension merge (refuses before landing)",
+    "conditional test (skips until the record lands)",
+    "nsc-t30-adoption-checklist (seven steps, three guardrails)"
+  ],
+  "continuation_for_a_later_session": [
+    "check the campaign directory for station-25/30 files",
+    "run scripts/derive_nsc_t30_extinction.py once",
+    "run scripts/derive_nsc_extinction_extension.py once",
+    "follow the adoption checklist record",
+    "run the suites: the conditional test then passes instead of skipping"
+  ],
+  "creation_only": true,
+  "evolved": false,
+  "march": {
+    "campaign": "nsc-rn-inward-march-t30-v1",
+    "failure_trail": false,
+    "health": "alive, steady CPU accrual",
+    "launch": "derive_nsc_rn_inward_march.py --mu 1.002 --eps 0.001 --campaign ... --stations 25.0 30.0",
+    "prepare_trail_intact": true
+  },
+  "notes": [
+    "all corridor records are creation-only; none may be edited",
+    "the launch log, forecasts, watch and checklist hold the wait's whole story"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-T30-STANDING-STATE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_standing_state.py": "b07fe0e581410d0eb866e0b9b9e102a1bda100451d4d0ad806496981a4dcbbb0",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "written_at_wall_minutes": 191.0
+}

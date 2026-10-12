@@ -1,0 +1,67 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "max_pairwise_deviation": 0.003910142792551044,
+  "notes": [
+    "cap-fraction seams make the comparison scale-free across eta",
+    "the source band is the outer quarter of each cap",
+    "single fixed 1.01 probe field in fractional node coordinates on every chart (the packet preparer is family-pinned); the charts themselves differ"
+  ],
+  "pairwise": [
+    {
+      "max_abs_deviation": 0.002618889079902015,
+      "pair": [
+        "eta-1.010",
+        "eta-1.020"
+      ]
+    },
+    {
+      "max_abs_deviation": 0.003910142792551044,
+      "pair": [
+        "eta-1.010",
+        "eta-1.040"
+      ]
+    },
+    {
+      "max_abs_deviation": 0.0012912537126490292,
+      "pair": [
+        "eta-1.020",
+        "eta-1.040"
+      ]
+    }
+  ],
+  "production_trajectory": false,
+  "profiles": {
+    "eta-1.010": {
+      "0.125": 0.11549512351935919,
+      "0.25": 0.26464866367391654,
+      "0.5": 0.561614478334384,
+      "0.75": 0.8585571307857244
+    },
+    "eta-1.020": {
+      "0.125": 0.1181140125992612,
+      "0.25": 0.2659213283577435,
+      "0.5": 0.561514722922702,
+      "0.75": 0.8584056993520256
+    },
+    "eta-1.040": {
+      "0.125": 0.11940526631191023,
+      "0.25": 0.2671773641675719,
+      "0.5": 0.562700316793997,
+      "0.75": 0.8582024974858422
+    }
+  },
+  "schema": "NSC-CHARGED-SEAM-INVARIANCE-v1",
+  "seam_fractions": [
+    0.125,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "source_sha256": {
+    "lab/scripts/derive_nsc_charged_seam_invariance.py": "48e7ca382c657df95e18c4eb5e2456e1d6d54b0e9bca3dc0556d1057dfcfe8ff",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "PROFILES_COINCIDE"
+}

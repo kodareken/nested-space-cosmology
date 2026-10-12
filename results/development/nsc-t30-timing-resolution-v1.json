@@ -1,0 +1,35 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {},
+  "notes": [
+    "mtimes are recorded bytes of the v1 campaign, not narration"
+  ],
+  "per_stretch_after_first_minutes": 39.079363107681274,
+  "production_trajectory": false,
+  "reading": "the v1 march needed 56.5 minutes to its first recorded station and about 39 minutes per further stretch; the t30 campaign's stations are expected near 3.5 and 4.2 hours after launch",
+  "resolves": "nsc-t30-timing-correction-v1.json",
+  "schema": "NSC-T30-TIMING-RESOLUTION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_timing_resolution.py": "16bbb9d3254253b717c73aef2a5887b0aa6c058d210d1cf838edc38e2ff319df",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "t30_forecast_minutes_from_launch": {
+    "station_25": 212.82416327794394,
+    "station_30": 251.9035263856252
+  },
+  "v1_intervals_minutes": [
+    56.506710847218834,
+    39.765962255001064,
+    38.77741628090541,
+    38.69471078713735
+  ],
+  "v1_minutes_from_prepare": {
+    "station_10": 96.2726731022199,
+    "station_15": 135.0500893831253,
+    "station_20": 173.74480017026266,
+    "station_5": 56.506710847218834
+  },
+  "v1_total_prefix_minutes": 173.74480017026266
+}

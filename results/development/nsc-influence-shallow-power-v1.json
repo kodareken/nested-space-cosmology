@@ -1,0 +1,81 @@
+{
+  "actual_closure_at_matched_coupling": {
+    "depth": null,
+    "exterior_fraction": 0.005520358071667952,
+    "f": 0.005520358071667973,
+    "local_fraction": 0.994479641928332,
+    "power": 1.5002044871742881,
+    "ratio": 32.0,
+    "total_multiplier": 1.0055510015880906,
+    "verdict": "NOT_NEAR"
+  },
+  "api_version": "nsc-influence-chain-v1",
+  "band": [
+    0.03,
+    0.1
+  ],
+  "band_required_power": {
+    "nu_max": 0.030400618689009992,
+    "nu_min": 0.008788669517519412,
+    "ratio": 32.0
+  },
+  "boundary_channel": {
+    "final_inner_mass": 1.0410282460948723,
+    "final_lapse_integral": -1.4224507649609099e-11,
+    "final_metric_power": -1.0444891236211348e-11,
+    "final_outer_flux": -2.913664643009293e-06,
+    "final_outer_lapse_rate": 0.0,
+    "final_pressure_integral": 2.4389939540082007e-06,
+    "leak_over_target_decay": 2.9430424992702663e-06,
+    "per_level_boundary_mass_leak": 2.7988334168060233e-06,
+    "structural": "N_t = 0 at the absorbing outer boundary in this run: the lapse channel cannot carry a uniform term into the vacuum chart"
+  },
+  "charged_screen": {
+    "flux": 4.0,
+    "g4": 4.713031395789186,
+    "nu": 1.5002044871742881
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "results\\development\\nsc-rn-neutral-continuation-v1\\summary.json": "4542fd0aa2354404dd3a00911d5e8ebf2d9df708709469708b970eadfb0d437c",
+    "results\\development\\scale-binding.json": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+  },
+  "needed_ratio": {
+    "per_level_decay": 0.951,
+    "ratio_with_matched_nu": 1.0340566675914629,
+    "reading": "the layer ratio R such that R^-nu(matched) = f_target; R > 1 means nearly degenerate nesting is required at the matched coupling",
+    "target_local": 0.049
+  },
+  "notes": [
+    "The LLL screen power is derived from mu^2 = |q| g4^2 / (4 pi^2 r^2), the bosonization scale already in the papers; nothing is fitted.",
+    "All numbers are read from frozen records except the required-power inversion, which is pure algebra closed on recorded constants."
+  ],
+  "production_trajectory": false,
+  "recorded_scale_binding": {
+    "g4": 4.713031395789186,
+    "g_squared": 22.212664937694566,
+    "magnetic_flux": 4.0,
+    "omega": 3.973074368754331,
+    "zeta": 15.785319939652627
+  },
+  "required_g4_for_target": {
+    "flux": 4.0,
+    "g4": 0.045542257370964886,
+    "nu": 0.014496550760304735
+  },
+  "required_power_at_route_ratio": {
+    "local_fraction": 0.049,
+    "per_level_decay": 0.951,
+    "ratio": 32.0,
+    "required_nu": 0.014496550760304735
+  },
+  "route_ratio": 32.0,
+  "route_ratio_source": "ROUTE_OUTER_OVER_RM = 32.0 in lab/scripts/derive_nsc_rn_parent.py",
+  "schema": "NSC-INFLUENCE-SHALLOW-POWER-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_influence_shallow_power.py": "b8f8665c59bbee23bc85c04336d822130b3e914841c16eeadb3b3591a84cb813",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "a03bbe3686768b6b01df80a70d5dee4db7baa8e9de911fd95580cc3701323aac"
+  },
+  "target_local_fraction": 0.049
+}

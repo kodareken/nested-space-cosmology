@@ -1,0 +1,23 @@
+{
+ "creation_only": true,
+ "energy_fraction": 0.001,
+ "evolution_called": false,
+ "grid_points": 3928,
+ "inner_edge": 0.9466464285714282,
+ "inner_edge_gap": 0.00792359664965292,
+ "mass_over_rm": 1.002,
+ "mode": "inward_march",
+ "outer": 32.0,
+ "packet_center": 12.320005889188822,
+ "packet_width": 3.026445396700693,
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "r_minus": 0.9387228319217753,
+ "runner_sha256": "ef68308d3056802c6f6cd90c0af5ef80d6e5dd864faea9f46cb40615905510af",
+ "schema": "NSC-RN-INWARD-MARCH-v1",
+ "spacing": 0.00790765306122454,
+ "station_times": [
+  25.0,
+  30.0
+ ],
+ "step_cap_over_rm": 0.001
+}

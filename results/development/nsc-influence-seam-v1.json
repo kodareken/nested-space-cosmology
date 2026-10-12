@@ -1,0 +1,53 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "the forward profile is the inward influence of one outer level; the backward profile is the mirrored locality margin",
+    "fractions are L1 lapse-response fractions, same definition as the single-seam probe record"
+  ],
+  "outer_level": [
+    24.0,
+    32.0
+  ],
+  "production_trajectory": false,
+  "resolvent_ladder_scale": 0.2516942566855419,
+  "resolvent_ladder_scale_source": "round-1 scale binding Omega",
+  "schema": "NSC-INFLUENCE-SEAM-v1",
+  "seams": [
+    {
+      "backward_inward_fraction": 0.5811836815844797,
+      "forward_inward_fraction": 0.1101575867486558,
+      "inner_fraction_of_cap": 0.125,
+      "seam_over_rm": 4.0
+    },
+    {
+      "backward_inward_fraction": 0.9989518546691187,
+      "forward_inward_fraction": 0.26103990370323404,
+      "inner_fraction_of_cap": 0.25,
+      "seam_over_rm": 8.0
+    },
+    {
+      "backward_inward_fraction": 0.9999922738372844,
+      "forward_inward_fraction": 0.5601117153526183,
+      "inner_fraction_of_cap": 0.5,
+      "seam_over_rm": 16.0
+    },
+    {
+      "backward_inward_fraction": 0.9999987544517327,
+      "forward_inward_fraction": 0.8591500126063386,
+      "inner_fraction_of_cap": 0.75,
+      "seam_over_rm": 24.0
+    },
+    {
+      "backward_inward_fraction": 0.9999999542677039,
+      "forward_inward_fraction": 0.9951008378007048,
+      "inner_fraction_of_cap": 0.9375,
+      "seam_over_rm": 30.0
+    }
+  ],
+  "source_sha256": {
+    "lab/scripts/derive_nsc_influence_seam.py": "1ff8e699b000998248d93537a53591bf0922ff758b9517e33e33dab853e532a3",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "21ce726e12efb94969c17ec4c6bda86e58509fe6faaa6a6143357fd03fb0c224"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "index_complete": true,
+  "missing_records": [],
+  "notes": [
+    "headlines are summaries; the papers of record are the individual creation-only records and the owning note"
+  ],
+  "part_count": 14,
+  "parts": [
+    {
+      "headline": "fees 0.0446/0.2517/0.2610 mass 0; LLL 103x; boundary blocked",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-influence-chain-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-influence-shallow-power-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-influence-response-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-influence-seam-v1.json"
+        }
+      ],
+      "title": "exterior channels closed"
+    },
+    {
+      "headline": "dM = d(excision) 3.2e-15; outer leak-only every interval",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-interior-balance-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-continuation-station-closure-v1.json"
+        }
+      ],
+      "title": "interior funnel exact"
+    },
+    {
+      "headline": "16-22x concentration; lag +1; E/M conjugate -0.99; mu=1.040 lock",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-interior-station-balance-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-lead-lag-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-energy-channel-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-ratio-regimes-v1.json"
+        }
+      ],
+      "title": "wall converter"
+    },
+    {
+      "headline": "rise d^-1/2 4.0%, fall d^-1/4 3.3%; eps-cross 3.5/6.8%; omega 0.386",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-wall-clock-horizon-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-clock-fall-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-clock-epscross-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-clock-derivation-v1.json"
+        }
+      ],
+      "title": "gap-clock organism"
+    },
+    {
+      "headline": "seven mu-blind quantities incl. redshift 8e-7, I_first 0.24%",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-seam-invariance-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-charged-seam-invariance-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-cone-wall-join-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-isotropy-driven-join-v1.json"
+        }
+      ],
+      "title": "universal scaffold"
+    },
+    {
+      "headline": "band at seams [25.9, 29.0]; target 0.049 at 28.17; shell weights",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-cosmic-band-location-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-cosmic-shell-weight-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-time-awareness-v1.json"
+        }
+      ],
+      "title": "founding riddle positives"
+    },
+    {
+      "headline": "omega=4 join; omega_star identity 2.2e-16; two clocks",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-matryoshka-fee-join-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-omega-star-identity-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-charged-clock-horizon-v1.json"
+        }
+      ],
+      "title": "cross-instrument anchors"
+    },
+    {
+      "headline": "quantum 0.00131; ladder {3,3,2,1}; q*N 1.149; beta threshold",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-tilt-quantum-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-tilt-quantum-ladder-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-neutral-fringe-quantum-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-fringe-beta-join-v1.json"
+        }
+      ],
+      "title": "fringe staircase"
+    },
+    {
+      "headline": "two-ends corr -0.93; one-way band placement; cone nesting; isotropy locality",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-two-ends-join-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-oneway-wall-join-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-cone-wall-join-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-isotropy-wall-join-v1.json"
+        }
+      ],
+      "title": "the joins"
+    },
+    {
+      "headline": "identity predictive 2.06 vs 2.07%; composed 0.948 of clock; trap r=0.835/0.999",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-ladder-covariance-test-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-composed-vs-clock-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-continuation-trap-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-trap-timing-v1.json"
+        }
+      ],
+      "title": "late harvest"
+    },
+    {
+      "headline": "preflight passed; freeze gate refused (pre-existing dirty producer)",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-production-preflight-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-production-gate-v1.json"
+        }
+      ],
+      "title": "production door"
+    },
+    {
+      "headline": "death [10,15]; t=40 event 3 witnesses; halving 7.7 t; single force 0.9975",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-relaxation-wall-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-afterlife-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-march-balance-trajectory-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-extinction-v1.json"
+        }
+      ],
+      "title": "wall lifecycle"
+    },
+    {
+      "headline": "cross-arm bit-identity; frontier amendment 2 cells left",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-cross-arm-identity-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-frontier-amendment-v1.json"
+        }
+      ],
+      "title": "calibration standard"
+    },
+    {
+      "headline": "deep-grid radii inside horizons; amplitude ratio 7/17/40; standoff law",
+      "records": [
+        {
+          "exists": true,
+          "record": "nsc-march-wall-radii-v1.json"
+        },
+        {
+          "exists": true,
+          "record": "nsc-wall-domain-law-v1.json"
+        }
+      ],
+      "title": "domain law"
+    }
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-PROGRAMME-INDEX-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_programme_index.py": "83db259a920aedfc166f7fe2a16da6a0bc2fe66f12f98c1722922b4b5d5606ad",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

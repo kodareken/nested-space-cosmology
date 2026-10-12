@@ -1,0 +1,39 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "campaign": "nsc-rn-inward-march-t30-v1",
+  "creation_only": true,
+  "evolved": false,
+  "instruments_armed": [
+    "nsc-t30-extinction reducer (round 89)",
+    "conditional test test_t30_extinction_once_the_march_lands (round 92)"
+  ],
+  "launch_time": "2026-10-06T23:55:41",
+  "launched_by": "derive_nsc_rn_inward_march.py --mu 1.002 --eps 0.001 --stations 25.0 30.0",
+  "notes": [
+    "the launch pre-dates this record; the record is the launch's official ledger entry and is written before the landing"
+  ],
+  "period": [
+    {
+      "event": "prepare.json written (creation-only trail audited)",
+      "round": 90
+    },
+    {
+      "event": "cadence law established: the runner writes only at listed stations; silence before t=25 is healthy",
+      "round": 93
+    },
+    {
+      "event": "a concurrent full-suite pytest family diagnosed as deadlocked (CPU frozen on repeated audits) and killed; the march family was left untouched",
+      "round": 96
+    },
+    {
+      "event": "throughput recalibrated: the historical four-station marches landed within about an hour, so the first station is expected near that envelope, not hours",
+      "round": 96
+    }
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-T30-LAUNCH-LOG-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_launch_log.py": "2780bb464afb3bd6098b4eafd833851cf186ec303254f172b3633496aa053f2f",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}
