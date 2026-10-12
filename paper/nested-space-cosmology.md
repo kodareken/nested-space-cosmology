@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 12 October 2026
+Working research manuscript, 13 October 2026
 
 ## Abstract
 
@@ -36,6 +36,8 @@ For this fixed geometry, a complete compatible signed central history also
 determines a unique preparation. Positivity and a prescribed source cutoff
 exclude some histories; geometry comparison requires those input restrictions
 to be justified independently.
+The canonically normalized probe adds no singular surface stress or
+tangential flux jump; its bulk gravitational response remains open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -377,8 +379,8 @@ On the tested expanding segment $1.2\leq R/\ell\leq1.8$,
 $\beta_->0$ and $\beta_+<0$. The wall proper duration is
 $0.3718706103\ell$. Direct unsquared and pressure checks, including a
 separate Christoffel-based calculation, agree within the recorded numerical
-residuals. The large value of $\dot R$ is an areal-radius rate, not a
-local three-speed. This published wall family is classified more fully in
+residuals. The wall's areal-radius rate is not a local three-speed.
+This published wall family is classified more fully in
 Section 11; the source has not been retuned to make the segment work.
 
 ### 10. A sourced initial slice and a conditional common parent
@@ -1019,9 +1021,81 @@ lies in both physically allowed response ranges. No second geometry is
 constructed here. Controlled nonlinear source-response maps can carry much
 richer geometric information, even with one receiver, as illustrated by
 [Tzou, 2102.01841v3](https://arxiv.org/html/2102.01841v3); those assumptions
-are absent from this passive linear experiment. The next useful calculation
-must fix an independent preparation restriction or a source-linked additional
-channel before comparing candidate exteriors.
+are absent from this passive linear experiment. Comparing candidate exteriors
+needs an independent preparation restriction or a source-linked additional
+channel. The next section tests a prerequisite for a physical preparation:
+whether its stress is compatible with the existing wall.
+
+### 13.4. The transmitted probe and the wall's stress
+
+<!-- nsc-claim:atlas-scalar-wall-consistency -->
+
+Evidence: [analytic stress record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json),
+[derivation and independent junction check](../docs/nsc-atlas-scalar-wall-consistency.md).
+
+The normalized waveform leaves its absolute gravitational stress unspecified.
+Fix the scalar kinetic coefficient to one, zero scalar potential and no direct
+scalar-wall interaction. In the same Jordan frame the curvature coefficient is
+
+$$
+f(\phi)=\frac{1}{2\kappa_4}-\frac{\xi\phi^2}{2},
+\qquad \kappa_4=8\pi G,\quad \xi=\frac16,\quad \phi=\varepsilon\Phi.
+$$
+
+Background vacuum stress remains independent of the scalar. The material
+tension, geometry and original $C^3$ compact preparation remain fixed on the
+finite domain of Section 13.2. This regularity supplies the one-sided
+derivatives needed here; the broader inverse class alone does not establish
+full four-dimensional stress regularity at the center. Assume $f>0$ for the
+weak-field interpretation, without inferring a backreaction bound.
+
+The borrowed nonminimal action gives the full improved Hilbert stress:
+
+$$
+T^{\mathrm{can}}_{\mu\nu}=\nabla_\mu\phi\nabla_\nu\phi
+-\frac12g_{\mu\nu}(\nabla\phi)^2,
+\qquad
+T^\phi_{\mu\nu}=T^{\mathrm{can}}_{\mu\nu}
++\xi\left[G_{\mu\nu}\phi^2+
+(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)\phi^2\right].
+$$
+
+The Einstein-tensor term is counted once. With the same common normal,
+write $d=[n\phi]=k\phi$ and
+$C_{ab}=[K_{ab}]-\gamma_{ab}[K]=2k\gamma_{ab}$.
+The distributional curvature and second derivatives then give the singular
+scalar surface coefficient
+
+$$
+S^\phi_{ab}=\xi\{2\phi d\gamma_{ab}-\phi^2C_{ab}\}
+=2\xi\phi(d-k\phi)\gamma_{ab}=0.
+$$
+
+An independent substitution into the coupled variational junction law of
+[Aviles, Maeda and Martinez, 1910.07534v2, Eqs. (3.43)-(3.46)](https://arxiv.org/html/1910.07534v2)
+recovers the unchanged material tensor $t_{ab}=-\sigma\gamma_{ab}$.
+Continuous scalar coefficients make the delta terms well defined; products
+with discontinuous normal derivatives are avoided.
+
+The regular tangential flux must also be checked. Using one-sided traces,
+constant $k$, the original curvature jump and the vanishing mixed Einstein
+components of both vacuum backgrounds gives
+
+$$
+[T^\phi_{na}]=(1-6\xi)k\phi D_a\phi=0.
+$$
+
+The canonical kinetic term alone would give a nonzero jump; the improvement
+terms cancel it. Equality of the two fluxes does not mean either flux vanishes.
+Thus these two local conditions require no additional scalar surface source
+or tangential exchange from the material wall at quadratic order.
+
+The smooth bulk stress remains an order-$\varepsilon^2$ gravitational source.
+No bulk metric response, normal-force balance, quantitative amplitude bound
+or stability result follows from the surface cancellation. The next physical
+connection is to identify a controlled bulk stress or geometric response from
+the normalized preparation. This can constrain source selection for observer
+inference; it has not yet supplied that selection law.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1302,6 +1376,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
+| Probe stress to geometry | What controlled bulk stress or geometric correction follows from the normalized preparation after the local shell checks? | A physical preparation constraint or a sourced geometric response |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1335,6 +1410,8 @@ degrees of freedom can retain memory in another fully stated model.
 The new inverse shows how a complete finite signal selects its preparation
 within a fixed geometry, and why physical source restrictions must accompany
 any comparison of maps.
+The quadratic stress check now connects that preparation to compatible local
+wall conditions; its bulk gravitational response remains to be established.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1357,6 +1434,7 @@ and renders their relationships without launching a new physics calculation.
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |
 | Evaluated exterior preparation and finite tail | [Response](../docs/nsc-atlas-prepared-response.md); [v8 manifest](../results/development/nsc-cosmological-atlas-v8/manifest.json) |
 | Fixed-model source inverse and preparation exclusions | [Proof](../docs/nsc-atlas-observer-inference.md); [record](../results/development/nsc-atlas-observer-inference-v1/inference.json) |
+| Conformal probe surface stress and tangential flux | [Derivation](../docs/nsc-atlas-scalar-wall-consistency.md); [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 
