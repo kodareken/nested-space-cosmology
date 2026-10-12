@@ -2,6 +2,27 @@
 
 Current presentation, 12 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed-model observer inverse and preparation exclusions, 12 October 2026
+
+The [proof](nsc-atlas-observer-inference.md) and
+[record](../results/development/nsc-atlas-observer-inference-v1/inference.json)
+connect a complete compatible signed central history to its unique source
+on the same retained v7/v8 wedge. The result borrows resolvent mathematics;
+direct differentiation and an independent analytic review check the PDE,
+wall, initial data, regularity at the corner and central normalization.
+There is no numerical inverse solve or new waveform in this cycle.
+
+The inverse covers initially quiet C2 signed preparations, with unrestricted
+later shape. Requiring a nonzero nonnegative source to end at the original
+cutoff imposes a positive post-input field and negative accumulated signed
+field. A smooth entirely positive observer pulse requires continuing late
+input and is excluded by that restricted class. This is a conditional
+within-model test; no second physical geometry has been shown equivalent.
+
+The next unlock is an independently justified source restriction or a
+source-linked additional observable before comparing geometries. Formation,
+remote preparation, quantum state and the other atlas routes remain open.
+
 ## Prepared interior response and finite positive tail, 12 October 2026
 
 The eighth atlas evaluates the v7 finite exterior preparation operator with
@@ -33,8 +54,8 @@ IV, not driven from the ordinary right exterior.
 The next named unlock is
 [observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability):
 which exterior features can an interior signal distinguish when different
-input preparations are allowed? No new comparison or physical claim is
-admitted yet. Remote generation, quantum state, backreaction, formation and
+input preparations are allowed? The analytic successor above resolves the
+fixed-model inverse and source-class restrictions. Remote generation, quantum state, backreaction, formation and
 the many-body future remain open. All other atlas routes and historical
 records below are retained.
 

@@ -83,6 +83,11 @@
       "section": "13.2",
       "status": "measured",
       "owner": "docs/nsc-atlas-prepared-response.md"
+    },
+    "atlas-observer-inverse": {
+      "section": "13.3",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-observer-inference.md"
     }
   },
   "findings": [
@@ -219,6 +224,14 @@
       "note": "docs/nsc-atlas-prepared-response.md",
       "record": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
       "paper_section": "13.2"
+    },
+    {
+      "id": "atlas-observer-inverse",
+      "status": "derived",
+      "summary": "Complete compatible signed central traces determine a unique preparation in the fixed finite model. Positive compact sources impose additional range restrictions; no second-geometry equivalence or numerical inverse is claimed.",
+      "note": "docs/nsc-atlas-observer-inference.md",
+      "record": "results/development/nsc-atlas-observer-inference-v1/inference.json",
+      "paper_section": "13.3"
     }
   ]
 }

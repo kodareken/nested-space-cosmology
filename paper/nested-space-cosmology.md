@@ -24,14 +24,18 @@ multi-body initial-data family preserving that body. In the isolated spherical
 reference, the center, moving wall and right exterior have different causal
 access: selected early signals connect them, while new emissions after the
 chosen initial slice do not. A prescribed early conformal scalar pulse crosses
-the wall and produces a calculable transient at the center. Its waveform does
-not uniquely identify the exterior because the incident state is an independent
+the wall and produces a calculable transient at the center. Its waveform alone
+does not establish a unique exterior: the incident state is an independent
 input. We now identify a finite characteristic preparation in the retained
 white-hole sector and a bounded exterior-to-wall transfer operator. Its
 existence is certified analytically. Evaluating it predicts a central pulse
 followed by a small positive scattering tail within the declared finite
 window. An independent positive-kernel argument fixes the tail's sign;
 spatial and clock refinements test its numerical magnitude.
+For this fixed geometry, a complete compatible signed central history also
+determines a unique preparation. Positivity and a prescribed source cutoff
+exclude some histories; geometry comparison requires those input restrictions
+to be justified independently.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -705,12 +709,13 @@ cap round trip in this interval. It does not exclude an uncomputed exterior
 tail under different incoming data, erase an observer's record, or imply
 that the whole field vanishes everywhere.
 
-There is an explicit degeneracy. On any admissible monotone arrival interval,
+There is explicit freedom in this wall-input calibration. On an admissible monotone arrival interval,
 a desired central trace $Y(T)$ can be produced by
 $I(\tau)=T'(\tau)Y[T(\tau)]$, subject to the same regularity and state
 restrictions. Within the zero-area pulse family, the corresponding trace
-must also have zero area. Thus this freely specified pulse does not infer
-a unique exterior. The right parent observer cannot prepare it through
+must also have zero area. This inverse fixes a wall input under the stated
+transfer law; it does not construct two compatible exteriors with the same
+observation. The right parent observer cannot prepare it through
 a causal channel in this reference. The following construction supplies
 independent finite data elsewhere in the retained geometry; their remote
 physical origin remains unspecified.
@@ -927,6 +932,96 @@ backreaction, a signal from $P$, or an observation identifying a unique
 exterior. The useful next question is which response features survive
 freedom in the preparation. Remote generation and continuation beyond this
 window remain separate open problems.
+
+### 13.3. What the signal determines when preparation is unknown
+
+<!-- nsc-claim:atlas-observer-inverse -->
+
+Evidence: [analytic inverse record](../results/development/nsc-atlas-observer-inference-v1/inference.json),
+[proof and preparation restrictions](../docs/nsc-atlas-observer-inference.md).
+
+The forward response now permits a sharper inference question. Hold the
+geometry, scalar law, zero cap and no-return window fixed. Write
+$f=\chi/\varepsilon$, $g=f(U_0,V)$, $h=f(U_W(V),V)$,
+$\theta=T/\ell$ and $Y=\ell\phi_C/\varepsilon$. These are signed
+classical fields, rather than particle counts or intensity-only measurements.
+The inherited central map can be inverted by integration:
+
+$$
+h(V)=\frac12\int_{\theta_a}^{\theta(V)}Y(s)\,ds.
+$$
+
+The zero initial cap fixes its integration constant. To recover the exterior
+preparation, subtract the forward wedge equation at the wall from its value
+at $U$. With $E$ extending a function of $V$ constantly in $U$, this yields
+
+$$
+f=Eh+\mathsf{B}f,\qquad
+(\mathsf{B}f)(U,V)=\int_U^{U_W(V)}dp
+\int_{L(p)}^Vdq\,K(p,q)f(p,q).
+$$
+
+Every integration point stays in the retained exterior. The existing
+operator-norm bound is $q_*<1$, so the standard resolvent supplies
+
+$$
+f=(I-\mathsf{B})^{-1}Eh,\qquad g(V)=f(U_0,V).
+$$
+
+Direct differentiation recovers $f_{UV}=-Kf$ and the zero outgoing wall
+characteristic; restriction recovers the source, prescribed wall trace and
+zero bottom. The inverse and forward constructions are mutual inverses.
+The change in the derivative of $L$ at $U_a=U_W(V_a)$ requires a corner
+check, supplied explicitly in the owning proof.
+
+More precisely, take $C^2$ source traces that vanish on the initial interval
+$[V_a,V_s]$, where $V_s=V_a+(V_b-V_a)/4$. They correspond bijectively
+to $C^1$ central histories vanishing on $[\theta_a,\theta(V_s)]$.
+The initial zero interval removes corner mismatches. This enlarged class
+allows signed inputs with arbitrary later shape; it does not require the
+original middle-half support, positivity or polynomial profile. The result
+uses the exact smooth geometry and known strictly increasing proper-time map.
+It concerns the reduced exterior field and regular-centre trace; higher
+regularity of the full scalar at the centre requires stronger input regularity.
+For two histories in this same model,
+
+$$
+\|g_1-g_2\|_\infty\leq
+\frac{\theta_b-\theta_a}{2(1-q_*)}\|Y_1-Y_2\|_\infty.
+$$
+
+This controls source amplitude under errors in complete compatible field
+histories. It supplies no bound on source energy, derivatives, backreaction,
+or uncertainty in the geometry. Numerical reconstruction from sampled data
+has not been performed.
+
+Physical restrictions on the preparation change the allowed response range.
+For any nonzero nonnegative source supported in the original
+$[V_s,V_e]$, the positive-kernel argument of Section 13.2 implies, for
+$V_e\leq V\leq V_b$,
+
+$$
+h(V)<0,\qquad Y(\theta(V))>0,\qquad
+\int_{\theta_a}^{\theta(V)}Y(s)\,ds=2h(V)<0.
+$$
+
+A smooth, nonzero, nonnegative observer pulse supported strictly inside
+$(\theta(V_s),\theta(V_e))$ violates this condition. Its integrated $h$
+instead has a positive plateau;
+positivity of the inverse resolvent forces $g\geq h>0$ after $V_e$.
+Such a trace has a preparation in the enlarged class, but that preparation
+cannot obey the original cutoff. This is an exact exclusion within the
+fixed model, rather than another numerical waveform.
+
+The result therefore separates reconstructing a source from identifying
+geometry. Two geometries are observationally degenerate only when a trace
+lies in both physically allowed response ranges. No second geometry is
+constructed here. Controlled nonlinear source-response maps can carry much
+richer geometric information, even with one receiver, as illustrated by
+[Tzou, 2102.01841v3](https://arxiv.org/html/2102.01841v3); those assumptions
+are absent from this passive linear experiment. The next useful calculation
+must fix an independent preparation restriction or a source-linked additional
+channel before comparing candidate exteriors.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1197,15 +1292,17 @@ with black-hole offspring or communicating mouths by a scale analogy.
 
 **Open physical target.** A discriminating prediction must survive changes
 of units, chart labels and unspecified initial data. The protected vacuum
-interval proves a finite geometric degeneracy. The scalar transfer proves
-a second, input-versus-geometry degeneracy. Both identify information an
-observer would need beyond the currently selected measurement.
+interval proves a finite geometric degeneracy. The scalar inverse in
+Section 13.3 determines the preparation for a fixed geometry and supplies
+preparation-class exclusions. It does not establish equivalence between
+two physical exterior models. Both results identify what information the
+next observer comparison must supply.
 
 The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Observer inference with preparation freedom | Which measured pulse or tail features require this exterior when independent data are not known? | A discriminating observable or an explicit equivalence class |
+| Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
 | Stability or formation of an attachment | Do fixed-source disturbances or collapse data remain in the claimed domain? | A stronger cosmological interpretation |
@@ -1235,6 +1332,9 @@ completion determines observer access; a specified field state gives an
 interior waveform; independent finite exterior data now predict a pulse
 and a positive finite scattering tail; and finite regional reduction explains how unresolved
 degrees of freedom can retain memory in another fully stated model.
+The new inverse shows how a complete finite signal selects its preparation
+within a fixed geometry, and why physical source restrictions must accompany
+any comparison of maps.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1256,6 +1356,7 @@ and renders their relationships without launching a new physics calculation.
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-cosmological-atlas-v6.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |
 | Evaluated exterior preparation and finite tail | [Response](../docs/nsc-atlas-prepared-response.md); [v8 manifest](../results/development/nsc-cosmological-atlas-v8/manifest.json) |
+| Fixed-model source inverse and preparation exclusions | [Proof](../docs/nsc-atlas-observer-inference.md); [record](../results/development/nsc-atlas-observer-inference-v1/inference.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

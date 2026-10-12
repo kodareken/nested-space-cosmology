@@ -19,6 +19,11 @@ and finite transfer/memory results retain their different domains. A mode-space
 complement is not automatically an exterior spacetime. Descent, attachment,
 influence and correlation remain distinct.
 
+The [observer-inverse proof](nsc-atlas-observer-inference.md) connects the
+calculated signal back to a preparation within the fixed geometry. Its
+positive compact-source exclusions explain why the next comparison must
+state what preparations are physically allowed before inferring an exterior.
+
 ## Supporting and historical editions
 
 - [Foundation v0.26.0 PDF](../paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf),

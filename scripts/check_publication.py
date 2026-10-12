@@ -634,6 +634,13 @@ def main() -> int:
     check_manifest(errors)
     check_paper(errors)
     check_paper_catalog(errors)
+    # A compact analytic successor authenticates its stored prerequisites;
+    # publication checks never rerun the predecessor field integrations.
+    try:
+        from record_nsc_atlas_observer_inference import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("observer inference evidence: " + str(error))
     check_provenance(errors, files)
     if errors:
         for error in errors:

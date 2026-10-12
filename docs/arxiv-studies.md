@@ -318,6 +318,70 @@ preparation, quantum state and exterior identifiability remain missing
 connections; neither a generic solver invention nor permanent cosmic memory
 is claimed. See the [v8 evidence guide](nsc-cosmological-atlas-v8.md).
 
+<a id="observer-inverse-library"></a>
+
+### Observer inference: borrowed inverse methods and contrasting data
+
+This bounded reading supports the [observer-inference owner](nsc-atlas-observer-inference.md).
+It separates fixed-model source recovery, overlapping observation ranges with
+different preparations, and equality of response operators under the same
+identified inputs. Only the first is addressed by the present finite inverse.
+These sources neither certify priority nor supply a second compatible exterior.
+
+**Brunner, [*Volterra Integral Equations*, publisher excerpt](https://assets.cambridge.org/97811070/98725/excerpt/9781107098725_excerpt.pdf).**
+Read section 1.2.1, equations (1.2.4)-(1.2.10), Theorem 1.2.3 and
+Remark 1.2.4; Theorem 1.2.6 inspected for regularity context. Later chapters
+and higher-smoothness applications remain unaudited. Borrow standard
+Neumann/resolvent existence and uniqueness mathematics. The book's
+one-dimensional triangular-kernel theorem does not automatically cover our
+two-variable moving wedge: the owner checks its retained domain, contraction
+bound and corner separately. This is an application of established methods,
+not a new general inverse theorem.
+
+**Hu-Kian-Zhao, [1907.02619v1](https://arxiv.org/html/1907.02619v1), 4 July 2019.**
+Read section 1, setup (2.1)-(2.5), Theorems 2.1/2.5 statements,
+Remark 2.2(ii), and setup (2.21)-(2.24). Uniqueness proofs and section 3
+remain unaudited. Their compact bulk forcing
+$F=(c^{-2}\partial_t^2-\Delta)\chi$ can produce zero enclosing-surface data.
+Uniqueness instead uses a known temporal factor or controlled background-media
+families, with infinite-time surface observations and support/connectivity
+hypotheses. Transmission remains open in Remark 2.2(ii). Borrow the
+source-class distinction: this bulk-forcing nullspace does not contradict
+inversion of our single characteristic trace for a homogeneous equation.
+
+**Kurylev-Lassas-Uhlmann, [1405.3386v4](https://arxiv.org/html/1405.3386v4), 20 September 2017.**
+Read introductory sections 1-1.2.3, Definitions 1.1/1.4, Theorems 1.2/1.5,
+Corollary 1.3 and introductory proof outlines/Remark 1.2. Proofs in sections
+2-5 remain unaudited. On smooth globally hyperbolic manifolds, a family of
+earliest light-observation sets in an open observation neighborhood determines
+conformal geometry under the stated hypotheses. Their 3+1-dimensional active
+result instead uses the entire small controlled-source map, a nowhere-zero
+quadratic nonlinearity and open-set measurements. These are reconstruction
+benchmarks with richer data; neither dataset nor smooth global assumptions
+are supplied by our linear spherical field, thin wall and single central trace.
+
+**Tzou, [2102.01841v3](https://arxiv.org/html/2102.01841v3), 22 June 2021.**
+Read section 1, equations (1.1)-(1.5), Theorem 1.1, Remark 1.2 and introductory
+mechanism; detailed proofs in sections 2-4 remain unaudited. For
+$\Box_g u+u^3=f$ on a 3+1-dimensional ultrastatic spacetime with zero past
+field, the entire map from small controlled $C_0^4$ sources in a cylinder to
+one receiver's trace through $2T+1$ determines radius-$T$ metric balls up to
+isometry. Nonlinear interactions supply returning information. Borrow the
+experimental distinction: one receiver need not mean one unknown input.
+The atlas lacks this nonlinearity and controlled input family.
+
+**Blåsten et al., [2503.18515v3](https://arxiv.org/html/2503.18515v3), 16 January 2026.**
+Read section 1/Theorem 1.3, Definition 3.5, Definition 4.2/(4.19), Proposition
+4.6 with proof and opening main-proof steps. Supporting estimates,
+direct-problem proofs and appendices remain unaudited. Their half-line wave
+operator has smooth positive $A$, normalized near the boundary and constant
+far away. Both the switched-on white-noise Neumann realization and Dirichlet
+response are recorded. For each distinct coefficient pair the same realization
+separates responses almost surely; correlation reconstruction takes
+$T\to\infty$. Borrow the need for independently identified input information:
+known statistics alone are not this dataset, and the finite moving-wall
+experiment does not inherit its recovery theorem.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.
