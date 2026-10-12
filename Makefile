@@ -10,9 +10,7 @@ help:
 	@echo "  make test             run affected atlas, preservation and publication tests"
 	@echo "  make demonstrate      display authenticated results without recomputing"
 	@echo "  make demonstrate-recompute  explicitly rerun the selected demonstrations"
-	@echo "  make reproduce        recompute the released chain and development evidence"
-	@echo "  make reproduce-development  check subsequent development records"
-	@echo "  make reproduce-exact  require byte-identical recomputation"
+	@echo "  make reproduce*       retired campaign routes; select an explicit historical context"
 	@echo "  make paper            rebuild the tracked paper PDF"
 	@echo "  make paper-check      rebuild twice and verify deterministic bytes"
 	@echo "  make draft-check      authenticate the focused OPEN draft and its evidence"
@@ -31,14 +29,12 @@ check:
 test:
 	$(PYTHON) scripts/test_reassembly.py
 
-reproduce-development:
-	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS) --only results/development/compact-interaction.json,results/development/torsion-uv-map.json,results/development/flow-compatibility.json,results/development/charged-sector.json,results/development/vacuum-charge-matching.json,results/development/compact-boundary-action.json,results/development/compact-casimir.json,results/development/horizon-source.json,results/development/warped-source.json,results/development/compact-matching.json,results/development/gauge-source.json,results/development/spherical-action.json,results/development/curvature-eft.json,results/development/spectral-endpoint.json,results/development/child-state.json,results/development/massless-reference.json,results/development/angular-stress.json,results/development/unruh-state.json,results/development/state-regulator.json
-
-reproduce:
-	$(PYTHON) scripts/reproduce_public_results.py --mode portable --jobs $(JOBS)
-
-reproduce-exact:
-	$(PYTHON) scripts/reproduce_public_results.py --mode exact --jobs $(JOBS)
+reproduce reproduce-development reproduce-exact:
+	@echo "This campaign route is retired: merged current sources are not the frozen release context."
+	@echo "Use make history-check to authenticate preserved results without restarting the campaigns."
+	@echo "A campaign rerun needs a fresh admission and budget, then an explicitly selected context from scripts/replay_history.py prepare."
+	@echo "See docs/reproducing.md for the historical source boundary."
+	@$(PYTHON) -c "raise SystemExit(2)"
 
 paper:
 	$(PYTHON) scripts/build_paper.py

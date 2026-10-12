@@ -28,19 +28,19 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 1530,
-      "path": ".github/workflows/draft-pdf.yml",
-      "sha256": "489e42c56d3d1dc265578156b310cd7724626446bcc029154d808f0c5f137a3a"
+      "bytes": 2240,
+      "path": ".github/workflows/paper-pdf.yml",
+      "sha256": "36dcd73fd6e3c691f7e2b890eceeb598154481856848d8734417af34087124ad"
     },
     {
-      "bytes": 1793,
+      "bytes": 693,
       "path": ".github/workflows/verify.yml",
-      "sha256": "887e5b3a13f13dd68a37adf3a39894327f669e771ba9eadd28ecad1f84cc65b4"
+      "sha256": "1873eed89179a3d1c19688fd79239d715b9babc7995b97c27b8b84fbade33d6c"
     },
     {
-      "bytes": 316,
+      "bytes": 356,
       "path": ".gitignore",
-      "sha256": "bfe26eb14af893d6f6600a920898e3977aad60f5921568e725df7a5db6457d53"
+      "sha256": "577a3493000ac59e11d320d1b58b367e40292a8a80a184c3cffb842fcf2ec59c"
     },
     {
       "bytes": 2172,
@@ -48,9 +48,9 @@
       "sha256": "5a942c9163f900eed76fe8d0f8c2a16ba764e4a22f60729ab38032aeeeed1542"
     },
     {
-      "bytes": 1073,
+      "bytes": 1264,
       "path": "CITATION.cff",
-      "sha256": "f49c8c5b2bd75514d8833077f68796770ffd1e45c26eda9b30c59dcb24d12875"
+      "sha256": "3908bdb83bdb0c136732f134fc94cb1b1e8144a8e264368c1c3408e2a01b7eb6"
     },
     {
       "bytes": 606,
@@ -73,9 +73,9 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 3537,
+      "bytes": 2813,
       "path": "Makefile",
-      "sha256": "908fd83994118f96466219fc879af7a787563dd4955780be445ebbf6db07c611"
+      "sha256": "72b29433d160fb1715f048047cacae8575d6704b3cdb36cb68eef2cc3deb8a80"
     },
     {
       "bytes": 2708,
@@ -3158,9 +3158,9 @@
       "sha256": "3bf11e41feb6a597b94817ea01abd6384f0ce1c1873a4feb6853abc9c6a436d1"
     },
     {
-      "bytes": 3607,
+      "bytes": 4389,
       "path": "docs/reproducing.md",
-      "sha256": "fd0173b2e5cbdaae2bbbb61afba3b81ffc4e31c7f43c6fe321a9d3af717329e9"
+      "sha256": "88cc0a5e2b86585253a09ade291e3d6b92e85e56017f8599ea40470e74a356d6"
     },
     {
       "bytes": 23007,
@@ -3498,9 +3498,9 @@
       "sha256": "fe677c42489e9f2ac4fed3eab5fee969a9c12c25ea02fee713d0d8626ba18236"
     },
     {
-      "bytes": 1188,
+      "bytes": 1212,
       "path": "pyproject.toml",
-      "sha256": "7d83e5100901e26663114fb556a94720bbd4075d7d926fa5e015541b56b5b00d"
+      "sha256": "657909dda9aa7126f9867a4426f3dd1a6a0b2514a3d1daf80b1462bddebfb143"
     },
     {
       "bytes": 36,

@@ -1,0 +1,71 @@
+name: Living paper PDF
+
+on:
+  pull_request:
+    paths:
+      - 'paper/nested-space-cosmology.*'
+      - 'paper/metadata.json'
+      - 'paper/build-manifest.json'
+      - 'paper/claim-bindings.json'
+      - 'paper/catalog.json'
+      - 'paper/figures/**'
+      - 'scripts/build_paper.py'
+      - 'scripts/build_geometry_overview.py'
+      - 'scripts/check_claim_bindings.py'
+      - 'scripts/check_publication.py'
+      - 'scripts/replay_history.py'
+      - 'CITATION.cff'
+      - 'PUBLICATION-PROVENANCE.json'
+      - 'pyproject.toml'
+      - '.github/workflows/paper-pdf.yml'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: living-paper-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install PDF inspection tools and fonts
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils fonts-dejavu-core
+      - name: Install pinned paper and test dependencies
+        run: python -m pip install -e '.[paper,dev]'
+      - name: Authenticate the living paper and compare two clean builds
+        run: |
+          python scripts/check_publication.py
+          python scripts/check_claim_bindings.py
+          python scripts/build_paper.py --check
+      - name: Render the authenticated PDF for visual review
+        run: |
+          mkdir -p paper/.build/main-pages
+          pdftoppm -r 120 -png paper/nested-space-cosmology.pdf paper/.build/main-pages/page
+          pdfinfo paper/nested-space-cosmology.pdf
+      - uses: actions/upload-artifact@v7.0.1
+        with:
+          name: nested-space-cosmology-working-manuscript
+          path: |
+            paper/nested-space-cosmology.md
+            paper/nested-space-cosmology.pdf
+            paper/metadata.json
+            paper/build-manifest.json
+            paper/claim-bindings.json
+            paper/figures/*
+            paper/.build/main-pages/*.png
+          if-no-files-found: error
+          retention-days: 14

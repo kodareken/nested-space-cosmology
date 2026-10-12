@@ -49,6 +49,17 @@ To create a new bundle, supply a fresh `--output` directory; creation is exclusi
 A changed historical context, changed retained evidence, missing Git object or
 corrupt archive is an error, never a reason to silently select alternative bytes.
 
+The former `make reproduce`, `make reproduce-development` and `make reproduce-exact`
+campaign routes now stop with guidance. Their frozen release inputs differ from
+the merged current sources; running the old producer against the current package
+would fail authentication. Full campaign recomputation is no longer a GitHub Actions
+option. A deliberate rerun first needs a named question, a fresh admission and a
+finite budget, then selection of the source context produced by
+`python scripts/replay_history.py prepare`. Run its historical producer with that
+context's isolated source environment; never change pinned hashes or substitute
+the current package to make an old record pass. Routine authentication remains
+`make history-check` or `python scripts/replay_history.py all`.
+
 The [migration checker](../scripts/reassemble_repository.py) authenticates every
 destination and explicit successor. [Preservation and recovery](repository-consolidation.md)
 describe the original-path manifest and the named implementation variants.
