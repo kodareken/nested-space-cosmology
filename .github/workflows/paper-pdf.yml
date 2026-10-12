@@ -46,11 +46,22 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils fonts-dejavu-core
       - name: Install pinned paper and test dependencies
         run: python -m pip install -e '.[paper,dev]'
-      - name: Authenticate the living paper and compare two clean builds
+      - name: Authenticate the living paper
         run: |
           python scripts/check_publication.py
           python scripts/check_claim_bindings.py
-          python scripts/build_paper.py --check
+      - name: Compare two clean builds with the tracked PDF
+        if: ${{ !cancelled() }}
+        run: python scripts/build_paper.py --check
+      - name: Preserve failed build diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: paper-build-diagnostics-${{ github.run_id }}
+          path: .build/paper-check/**
+          if-no-files-found: ignore
+          include-hidden-files: true
+          retention-days: 7
       - name: Render the authenticated PDF for visual review
         run: |
           mkdir -p paper/.build/main-pages

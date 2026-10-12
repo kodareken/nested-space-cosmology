@@ -28,9 +28,9 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 2240,
+      "bytes": 2635,
       "path": ".github/workflows/paper-pdf.yml",
-      "sha256": "36dcd73fd6e3c691f7e2b890eceeb598154481856848d8734417af34087124ad"
+      "sha256": "24872aaeacb412342eabdc8b763d76e1fd7b1400971fcce9180002f6adefd5a3"
     },
     {
       "bytes": 693,
@@ -3260,7 +3260,7 @@
     {
       "bytes": 5411,
       "path": "paper/build-manifest.json",
-      "sha256": "36b3aaff6e3bf8b0410cd425560f77b2c9fee0d8adcb553753bac9feb35913de"
+      "sha256": "1c3b0ce70dec68ff0b26cf4d74dc67581bedf1f8f2557fadd6577af64d92a7e9"
     },
     {
       "bytes": 3204,
@@ -62648,9 +62648,9 @@
       "sha256": "8eafb9080a5dd6ac005e9575af780280cef4413d91792b06af106cd1f8219e6a"
     },
     {
-      "bytes": 59848,
+      "bytes": 62098,
       "path": "scripts/build_paper.py",
-      "sha256": "91168904e69324e309b838a2d0b4e6d60680e893094b7108f6990fcb1d39b165"
+      "sha256": "7ad52639e56ce1371c00822ea02986b9a0ab2db24bf23b56a0c68e0f89148735"
     },
     {
       "bytes": 5479,
@@ -67963,9 +67963,9 @@
       "sha256": "156e985ba293cbaec0f9da2bc107b71a673fb0d57e0284d036d4963ad3c75048"
     },
     {
-      "bytes": 2909,
+      "bytes": 4493,
       "path": "tests/test_main_paper_rendering.py",
-      "sha256": "43f180c23f54661112d0a9d69172df2cc9ca50a42fe91829cf239c5ecf60f8bb"
+      "sha256": "bf60caccd481ab48a77cf48df2e6fe326a29ba61421b495d2bfa23c30d4388dc"
     },
     {
       "bytes": 2905,

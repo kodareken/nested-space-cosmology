@@ -1378,6 +1378,49 @@ def write_build_manifest(
     )
 
 
+def preserve_check_diagnostics(first: Path, second: Path, output: Path, reason: str) -> None:
+    """Keep failed build bytes and runtime identity without changing evidence."""
+    import platform
+    import zlib
+
+    import matplotlib
+    import numpy
+    import PIL
+    import reportlab
+    from matplotlib import ft2font
+
+    destination = REPOSITORY / ".build" / "paper-check"
+    destination.mkdir(parents=True, exist_ok=True)
+    files = {}
+    for label, path in (("first", first), ("second", second), ("tracked", output)):
+        data = path.read_bytes()
+        copy = destination / f"{label}.pdf"
+        copy.write_bytes(data)
+        files[label] = {"file": copy.name, "bytes": len(data),
+                        "sha256": hashlib.sha256(data).hexdigest()}
+    fonts = Path(matplotlib.get_data_path()) / "fonts" / "ttf"
+    record = {
+        "schema": "NSC-PAPER-CHECK-DIAGNOSTIC-v1",
+        "reason": reason,
+        "python": {"version": sys.version, "implementation": platform.python_implementation()},
+        "platform": platform.platform(),
+        "zlib": {"compile": zlib.ZLIB_VERSION, "runtime": zlib.ZLIB_RUNTIME_VERSION},
+        "packages": {"matplotlib": matplotlib.__version__, "reportlab": reportlab.Version,
+                     "Pillow": PIL.__version__, "numpy": numpy.__version__},
+        "freetype": {"version": ft2font.__freetype_version__,
+                     "build_type": getattr(ft2font, "__freetype_build_type__", "unknown")},
+        "bundled_fonts": [{"name": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+                          for path in sorted(fonts.glob("*.ttf"))],
+        "matplotlib_settings": {key: matplotlib.rcParams[key] for key in
+                                ("font.family", "mathtext.fontset", "text.hinting", "text.hinting_factor")},
+        "pdfs": files,
+    }
+    (destination / "diagnostics.json").write_text(
+        json.dumps(record, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    print(f"failed-build diagnostics retained in {destination}", file=sys.stderr)
+
+
 def check_build(source: Path, output: Path, metadata: dict[str, object]) -> int:
     if not output.is_file() or not BUILD_MANIFEST.is_file():
         print("tracked PDF or build manifest is absent", file=sys.stderr)
@@ -1388,9 +1431,11 @@ def check_build(source: Path, output: Path, metadata: dict[str, object]) -> int:
         first_result = build_pdf(source, first, metadata)
         second_result = build_pdf(source, second, metadata)
         if first.read_bytes() != second.read_bytes():
+            preserve_check_diagnostics(first, second, output, "nondeterministic_clean_builds")
             print("two identical paper builds produced different bytes", file=sys.stderr)
             return 1
         if first.read_bytes() != output.read_bytes():
+            preserve_check_diagnostics(first, second, output, "tracked_pdf_differs")
             print("tracked PDF does not match a fresh deterministic build", file=sys.stderr)
             return 1
         manifest = json.loads(BUILD_MANIFEST.read_text(encoding="utf-8"))
