@@ -73,6 +73,11 @@
       "section": "21",
       "status": "proposal",
       "owner": null
+    },
+    "atlas-field-preparation": {
+      "section": "13.1",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-field-preparation.md"
     }
   },
   "findings": [
@@ -135,7 +140,7 @@
     {
       "id": "rn-radial-parent",
       "status": "open",
-      "summary": "Nonperiodic horizon-regular PG exterior with a distinct areal-radius near-throat child. The numerical family is still described as running and its physical results are not claimed.",
+      "summary": "Nonperiodic horizon-regular PG exterior with a distinct areal-radius near-throat child. The six-case numerical family stopped without completed case summaries; its physical results are not claimed.",
       "note": "docs/nsc-rn-reference.md",
       "record": "results/development/nsc-rn-pilot-assessment-v2.json",
       "paper_section": null,
@@ -193,7 +198,14 @@
       "note": "paper/finite-regeneration/main.tex",
       "record": "paper/finite-regeneration/evidence/snapshot.json",
       "paper_section": "14"
+    },
+    {
+      "id": "atlas-field-preparation",
+      "status": "derived",
+      "summary": "A finite retained IV characteristic preparation defines a unique conditional transfer operator; numerical observer waveform and remote generation remain open.",
+      "note": "docs/nsc-atlas-field-preparation.md",
+      "record": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
+      "paper_section": "13.1"
     }
   ]
 }
-

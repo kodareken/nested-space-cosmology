@@ -1,9 +1,18 @@
 # Scientific strand index
 
+The [atlas programme](nsc-cosmological-atlas.md) owns the eight linked research
+questions and their [prerequisites, decisions and unlocks](nsc-cosmological-atlas.md#programme-dependencies).
+The current bounded cycle asks [where the early signal can originate](nsc-cosmological-atlas.md#signal-origin-cycle).
+Its known right-parent exclusion, computed conditional wall-to-centre waveform
+and derived finite region-IV preparation operator retain different evidence
+statuses. The new operator's numerical waveform remains open.
+
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
 |---|---|
+| Active programme and eight theme questions | [Programme owner](nsc-cosmological-atlas.md#eight-linked-research-questions), [dependency map](nsc-cosmological-atlas.md#programme-dependencies); the inventory supplies prior dispositions, not new verification. |
+| Current signal-origin question | [Bounded cycle](nsc-cosmological-atlas.md#signal-origin-cycle), [finite preparation certificate](nsc-atlas-field-preparation.md), [causal access](nsc-atlas-causal-observers.md), [conditional field response](nsc-atlas-field-transfer.md); the finite operator is derived, while its numerical waveform and remote source remain open. |
 | Location, branches, commands, and recovery | [Instructions](instructions.md), [consolidation](repository-consolidation.md) |
 | Where a document lives, and which copies match | [Docs route](README.md) |
 | Task authority and scientific status | Latest user instruction; [exterior-first scope](instructions.md#exterior-first-atlas), [status](current-result.md), [code map](active-code-map.md) |
@@ -67,7 +76,7 @@ Preserved owner routes from the pre-reassembly index, updated to root paths. Dat
 | Initial lapse bound and nearby initial-state proof | [Note](nsc-spherical-cauchy-weak.md#initial-lapse-component), [certificate](../results/development/nsc-spherical-cauchy-error-v1.json), [tests](../tests/test_nsc_spherical_cauchy_weak_bound.py) |
 | Source and UV certification methods | [Continuous source-error insertion](nsc-ks-source-operator-majorant.md), [family 14_1 completion](nsc-ks-source-operator-majorant-v7.md), [preparation correction](nsc-vacuum-source-correction.md), [high-energy remainder](nsc-vacuum-source-remainder.md), [full method map](active-code-map.md) |
 | Field method owners | [Whole cone](nsc-ks-whole-cone-field-v1.md), [radius coupling](nsc-ks-radius-coupling-bounds.md), [endpoint contraction](nsc-ks-endpoint-contraction.md) |
-| Current finite article and preserved papers | [Paper guide](papers.md), [current PDF](../paper/finite-regeneration.pdf), [source](../paper/finite-regeneration/main.tex), [build/evidence](../paper/finite-regeneration-manifest.json), [catalog](../paper/catalog.json) |
+| Living atlas paper and preserved supporting editions | [Main manuscript](../paper/nested-space-cosmology.md), [current PDF](../paper/nested-space-cosmology.pdf), [paper guide](papers.md), [supporting finite realization](../paper/finite-regeneration.pdf), [catalog](../paper/catalog.json) |
 | Finite nested-quality theorem | [Proof](nsc-nested-qualities.md), [frozen evidence](../paper/nested-quality-evidence/snapshot.json) |
 | Finite circulation and local response | [Note](nsc-finite-turnover.md), [record](../results/development/nsc-finite-turnover-v1.json) |
 | Incoherent imbalance mean circulation | [Note](nsc-imbalance-turnover.md), [record](../results/development/nsc-imbalance-turnover-v1.json) |

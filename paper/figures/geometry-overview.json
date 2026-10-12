@@ -16,6 +16,14 @@
       "path": "results/development/nsc-cosmological-atlas-v1/atlas.json",
       "sha256": "1775e784ea2c44f5aaf5b4342c0aa8dace0cd738f96d8adbf24e4ca0c6db7f3b"
     },
+    "preparation": {
+      "path": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
+      "sha256": "7f2129c2a1b661b77900e6c713838789ba92399d2ee32c771317079509c01033"
+    },
+    "programme": {
+      "path": "results/development/nsc-cosmological-atlas-v7/programme.json",
+      "sha256": "c5f4532bc55bb26dbac5a48084d96ab3c42404283f5d720a1b25eb54f596ccec"
+    },
     "slice": {
       "path": "results/development/nsc-cosmological-atlas-v4/connection-slice.json",
       "sha256": "62f12562be6c3a918dfe03a98d2af789ccfddde2c12e1aee024949017f0d1394"
@@ -201,15 +209,16 @@
   "limits": [
     "No spatial embedding, global topology or relative physical scales are depicted.",
     "No parent observer prepares the early scalar trace in the isolated reference.",
+    "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "4be1e2a721c08599c8476cc41722d48da9c01b7b81803a8ba25dc51ffc1cd9ed",
-    "geometry-overview.svg": "0078ffbbd83a1c20a0b6ce0753c5c22a7c6285af67dd2cbb2507ce8d32b4e030"
+    "geometry-overview.png": "3cff8d1e6f6d9af4dfd6b08c1e67bdcfbdf542f989173ffd05e3cc59d7082274",
+    "geometry-overview.svg": "8e3d1734cbab50858ae44d9bcff8dff15ac4c0b4156db131bbd131d1addfea1e"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "749d4aa355a839be1eae3d35c85309d06a82fd295ddc5aac05cca68f1c82e556",
+  "producer_sha256": "ec5f5bb2535b276b0e34fd5884180bd931a6254868c28cc83cefd946cb6e3fda",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -255,6 +264,12 @@
         "kind": "causal",
         "status": "conditional classical scalar response; exterior origin uncomputed",
         "to": "C"
+      },
+      {
+        "from": "independent finite IV data",
+        "kind": "causal",
+        "status": "finite conditional transfer operator; waveform not evaluated",
+        "to": "wall and centre"
       }
     ],
     "field_metrics": {
@@ -384,6 +399,43 @@
         "verdict": "unresolved"
       }
     ],
+    "preparation": {
+      "geometry": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Ub": -0.2747468030926288,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105,
+        "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+        "radius_lower_bound_over_ell": 0.4,
+        "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+        "radius_upper_bound_over_ell": 0.55,
+        "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+        "wall_radius_window_over_ell": [
+          0.45,
+          0.55
+        ]
+      },
+      "operator": {
+        "analytic_norm_bound": 0.13882099234357653,
+        "bound_proof": "DeltaU DeltaV=Fc+Fb-Fc r-Fb/r <= (sqrt(Fc)-sqrt(Fb))^2, r=Vb/Va>0",
+        "bound_scope": "uniform reduced field chi; not a central phi peak or energy flux",
+        "central_map": "phi_C[T(tau)]=I(tau)/T'(tau), T=t_flat-ell log(1-R/ell)",
+        "coefficient_max": 9.704490555402135,
+        "equation": "chi_UV+K chi=0; K=16 M^4 exp(-R/(2M))/R^4=-R_UV/R",
+        "incoming_trace": "I=2 Vdot (g'(V)-integral[U0,U_W(V)]du K(u,V)chi(u,V))",
+        "integral_equation": "chi(U,V)=g(V)-integral[U0,U]du integral[L(u),V]dv K(u,v)chi(u,v)",
+        "lower_limit": "L(u)=Va for u<=Ua; L(u)=inverse wall V(u) otherwise",
+        "midpoint_wall_reduced_field_min_over_epsilon": 0.8388012351562562,
+        "new_waveform_evaluated": false,
+        "rectangle_norm_bound": 0.1371998626214334,
+        "reduced_field_relative_deviation_bound": 0.1611987648437439,
+        "solution_iteration_performed": false,
+        "wall_condition": "chi_U=0 from conformal matching and zero outgoing cap characteristic"
+      },
+      "remote_generation_established": false,
+      "waveform_evaluated": false
+    },
     "slice_status": "CONNECTED_SOURCED_INITIAL_SLICE"
   },
   "schema": "nsc.geometry-overview.v1"
