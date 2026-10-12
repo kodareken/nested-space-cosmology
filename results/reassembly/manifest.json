@@ -21,8 +21,8 @@
   "historical_replay": "Original commit paths materialize under ignored .build/replay; records are not rebound.",
   "merges": {
     ".github/workflows/verify.yml": {
-      "current_bytes": 3281,
-      "current_sha256": "a7352c591109229363699c203433dd1c2722c6d466df2487d0f2d3cc30ecddfb",
+      "current_bytes": 3928,
+      "current_sha256": "236c73ebc3c2f234bbe9d1082e42ea63f19674d1cbadbfd314fda62352ece27b",
       "destination": ".github/workflows/verify.yml",
       "original_root_path": ".github/workflows/verify.yml",
       "original_root_sha256": "524ffd865d1126ad1d5e489eaf3519008f8ecf7d7628db8e8681904388134d95",
