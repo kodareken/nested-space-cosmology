@@ -1,19 +1,19 @@
 {
-  "bytes": 2529944,
+  "bytes": 2618128,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "492cfa0be73d4df03c67871279f341b9ad3281581089229fba0b7a8c9726ce7c",
+  "metadata_sha256": "bdb304166d6fb2360072f0165637b4c3ad27cd2322f73212a150b13c4c324580",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 25,
-  "pdf_sha256": "deae0d2cf3a2a982b8b378d1099afd49a5d20db011f44dc175fd6dec379ad06e",
+  "pages": 27,
+  "pdf_sha256": "2bfd1164c847977ad44540ad2ba668da330eb58130acbbcdf4e63b5432f4e123",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
       "path": "paper/figures/geometry-overview.json",
-      "sha256": "7b34450ff83e2b2dcf09daa27e0236a7d24ff6dd2fbcf94fb69f61c7c096fa91"
+      "sha256": "78127dc1b738126a5821279444ace03661215556ff8aa54743531de2c86b6336"
     },
     {
       "path": "paper/figures/geometry-overview.png",
-      "sha256": "43d5278d78e55d1108d401f469982fb15d0ddf8be5f14ad21f6cb246ff1521e9"
+      "sha256": "c2b15266fa08174addb01629605f712e5380971e3f9210bdb69a107f09cc272e"
     },
     {
       "path": "paper/finite-regeneration-manifest.json",
@@ -26,6 +26,10 @@
     {
       "path": "paper/nested-quality-evidence/snapshot.json",
       "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f"
+    },
+    {
+      "path": "results/development/nsc-atlas-observer-inference-v1/inference.json",
+      "sha256": "8c42d143c8e6bd7f1fdcc9b4b0b1c453fc39efbe3ded8d0face008709252a217"
     },
     {
       "path": "results/development/nsc-conformal-local-response-v2.json",
@@ -153,6 +157,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "7a4a954032b53e05513f0fbf5cd39da1cbf74d80652c549dd57cb35f091b0852",
-  "version": "working-2026-10-12.3"
+  "source_sha256": "7c4e191388210102f1294b3ac9d23b77b8acc19ec5abf77f9546283c478de197",
+  "version": "working-2026-10-12.4"
 }

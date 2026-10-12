@@ -24,21 +24,28 @@ also adds explicit historical replay and requires the separate `HISTORY_PYTHON`
 profile described below. Running every historical simulation is neither required
 nor authorized by these convenience commands.
 
-The current atlas v8 evaluates the admitted finite exterior preparation through
-the moving wall to the interior observer:
+The compact analytic successor authenticates the original v7/v8 evidence and
+the proof of the fixed-model preparation inverse. Its checker records no new
+waveform or numerical inverse:
 
 ```sh
-python scripts/derive_nsc_cosmological_atlas_v8.py --output .build/atlas-v8-review
-python scripts/derive_nsc_cosmological_atlas_v8.py --output .build/atlas-v8-review --check
+python scripts/record_nsc_atlas_observer_inference.py --check
 ```
 
-Creation requires a fresh output directory; `--check` authenticates the bound
-sources and outputs before regeneration. Omit `--output` with `--check` to check
-the canonical v8 bundle. The fixed input, finite numerical budget, refinement
-diagnostics and independent analytic tail bound are recorded in the
+The [inference owner](nsc-atlas-observer-inference.md) supplies the mathematical
+argument. The checker authenticates that argument's bytes and declaration;
+passing the checker is not a machine proof. Creation requires a fresh output
+directory, for example `--output .build/observer-inference-review`, and refuses
+an existing directory. Its source bindings cover the proof, producer and tests.
+Its pinned predecessor manifests and all stored output hashes are checked
+without importing historical producers or substituting current source bytes.
+
+Atlas v8 remains the finite exterior-to-interior waveform result. Its original
+replay is explicitly selected below. The fixed input, numerical budget,
+refinement diagnostics and independent analytic tail bound remain in the
 [response owner](nsc-atlas-prepared-response.md). Refinement diagnostics are not
 a rigorous numerical enclosure. The [v8 guide](nsc-cosmological-atlas-v8.md)
-describes the outputs and the unchanged causal limits.
+describes the outputs and causal limits.
 
 The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
@@ -98,9 +105,11 @@ make verify PYTHON=python HISTORY_PYTHON=.venv/history/Scripts/python.exe
 
 `HISTORY_PYTHON` defaults to `PYTHON` for an already selected historical environment;
 it never chooses another interpreter after a failed check. GitHub Actions runs the
-current paper checks on Ubuntu and the exact historical replay in a separate Windows
-job with Python 3.14.8. Both jobs retain their original evidence comparisons. Other
-historical rendering profiles have not been established as byte-identical.
+current paper checks on Ubuntu, the legacy historical replay in a Windows job
+with Matplotlib 3.11.2, and the explicit v7/v8 replays in a separate Windows job
+with Matplotlib 3.11.1. Both Windows jobs use Python 3.14.8 and retain the original
+evidence comparisons. Other historical rendering profiles have not been
+established as byte-identical.
 
 Current atlas producers use root sources. Their source bindings differ from the
 historical bundles, so passing an old bundle to a current producer must fail.
@@ -132,6 +141,30 @@ Neither v7 selector changes the legacy `all` selector or v1–v6 replay.
 An incompatible runtime, modified preserved output or missing source object
 fails explicitly. Current changes to scientific owners are not substituted
 for v7's original source bytes.
+
+### Atlas v8: original prepared-response context
+
+Atlas v8 predates the analytic inverse and the updated literature/atlas owners.
+Use its original commit explicitly to authenticate or replay that result:
+
+```sh
+python scripts/replay_history.py prepare-v8
+python scripts/replay_history.py atlas-v8
+```
+
+These selectors use commit `1154baf290d901e73058392e143d0acb37d22951` under
+`.build/replay/1154baf290d9`. `prepare-v8` authenticates retained evidence and
+source bindings against that commit without running a field solve. `atlas-v8`
+runs the unchanged original checker and its finite numerical budget, including
+exact figure comparisons, in the same Windows/Python 3.14.8/Matplotlib 3.11.1
+profile specified for v7 above. The Windows fallback invocation is
+`python scripts/run_python.py scripts/replay_history.py atlas-v8`.
+
+These commands do not add v8 to legacy `all`, loosen numerical/image checks,
+or silently recover from a current-source mismatch. Calling the current v8
+producer's `--check` on the frozen canonical bundle after a bound owner changes
+must fail. Neither the historical result nor its hash is rewritten to make the
+current source fit. Use the explicit context to replay the original result.
 
 The former `make reproduce`, `make reproduce-development` and `make reproduce-exact`
 campaign routes now stop with guidance. Their frozen release inputs differ from

@@ -13,7 +13,7 @@ PLAN.md or handover task authorities. Preserve historical evidence and unrelated
 | Borrowing and admission | [Prior art](docs/prior-art-and-open-claim.md), [arXiv library](docs/arxiv-studies.md) |
 | Programme and calculation dependencies | [Atlas owner](docs/nsc-cosmological-atlas.md), [admission](docs/prior-art-and-open-claim.md#compute-admission-rule) |
 | Geometry, causality and fields | [Prepared response and finite tail](docs/nsc-atlas-prepared-response.md), [preparation certificate](docs/nsc-atlas-field-preparation.md), [overview](paper/figures/geometry-overview.png) |
-| Next research connection | [Observer identifiability under preparation freedom](docs/nsc-cosmological-atlas.md#observer-identifiability); a named question, not an admitted calculation |
+| Observer inference and next connection | [Fixed-model inverse](docs/nsc-atlas-observer-inference.md); [preparation-restricted comparisons](docs/nsc-cosmological-atlas.md#observer-identifiability) remain the next question |
 | One package and commands | `src/recursive_horizons`, `scripts`, `tests`; [reproducing](docs/reproducing.md) |
 | Preservation and recovery | [Consolidation](docs/repository-consolidation.md), [manifest](results/reassembly/manifest.json) |
 

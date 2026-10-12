@@ -25,7 +25,7 @@ the preserved scientific families and dispositions below.
 | Theme ID | Existing family and reusable material | Remaining disposition |
 |---|---|---|
 | `sphere` | [Spherical regions](nsc-cosmological-atlas.md#question-spheres), RN charts and sourced cap/neck geometry. | Reusable geometry under stated sources; shape selection and stability remain unresolved. |
-| `insideoutside` | [Attachment and access](nsc-cosmological-atlas.md#question-inside-outside), atlas v4-v8 and retained observer machinery. | Reusable fixed-reference results, including a finite IV preparation and resolved response; common future, remote source and observer identifiability remain unresolved. |
+| `insideoutside` | [Attachment and access](nsc-cosmological-atlas.md#question-inside-outside), atlas v4-v8 and retained observer machinery. | Reusable fixed-reference results, including a finite IV preparation and resolved response; a [fixed-model inverse](nsc-atlas-observer-inference.md) now constrains preparation freedom; common future, remote generation and second-geometry identification remain unresolved. |
 | `quantum` | [Field and localized descriptions](nsc-cosmological-atlas.md#question-particle-wave), spectral/Dirac and finite local-observer strands. | Reusable finite models; literal particle/interior identity remains exploratory. |
 | `barriers` | [Boundary classification](nsc-cosmological-atlas.md#question-gradient-boundaries), junctions, scalar matching and corrected RN diagnostics. | Reuse the appropriate equations; pressure-equality-to-balance interpretation is withdrawn. |
 | `scales` | [Regional scales](nsc-cosmological-atlas.md#question-regional-scales), finite inheritance, spectral endpoint and w2 constants. | Finite algebra is reusable; physical constants and empirical w2 fits remain separate unresolved/exploratory claims. |
@@ -68,6 +68,8 @@ re-evaluated. The [document corpus](../results/research-reset/document-corpus.js
 keeps path aliases and same-path variants separate. In each worktree, 108
 root/lab Markdown pairs are byte-identical; four pairs differ, including
 instructions and three scientific/procedure variants.
+
+The [observer-inverse proof](nsc-atlas-observer-inference.md) is a reusable conditional analytic result: complete signed traces determine a preparation in the fixed geometry, and positivity/support restrictions exclude some traces. The PDE, corner, boundary and clock identities received independent analytic review. No numerical reconstruction or second physical geometry is verified; external inverse-problem theorem proofs remain outside the recorded reading boundary.
 
 **Scientific reading has an explicit boundary.** Named current owners,
 supersession notes and all 17 child/neck scientific notes received a scope
