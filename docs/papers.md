@@ -24,6 +24,11 @@ calculated signal back to a preparation within the fixed geometry. Its
 positive compact-source exclusions explain why the next comparison must
 state what preparations are physically allowed before inferring an exterior.
 
+The [conformal stress check](nsc-atlas-scalar-wall-consistency.md) connects
+the same prepared probe to the wall's quadratic stress conditions. Its
+surface coefficient and tangential flux jump vanish; the smooth bulk
+gravitational response remains the next physical connection to establish.
+
 ## Supporting and historical editions
 
 - [Foundation v0.26.0 PDF](../paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf),

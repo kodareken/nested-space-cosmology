@@ -32,6 +32,10 @@
       "path": "results/development/nsc-cosmological-atlas-v8/programme.json",
       "sha256": "7575154623a590949e044aabe2a56ff796f878cb2ac0537b70abf56a5c822618"
     },
+    "scalar_wall_consistency": {
+      "path": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
+      "sha256": "3037d2b6e01fc75643171766db6c3d5d333a8c55133078212bbd92ba10715d3b"
+    },
     "slice": {
       "path": "results/development/nsc-cosmological-atlas-v4/connection-slice.json",
       "sha256": "62f12562be6c3a918dfe03a98d2af789ccfddde2c12e1aee024949017f0d1394"
@@ -231,15 +235,16 @@
     "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
     "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
     "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
+    "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "c2b15266fa08174addb01629605f712e5380971e3f9210bdb69a107f09cc272e",
-    "geometry-overview.svg": "b4d268d06effd757efd87b5c16e8152816e9cadd606281c6502247d8f4a87d8d"
+    "geometry-overview.png": "60ba2fc731413d0eb2d8ee2dcb59e4dcf32c471e32ba879f09f18f660c5894df",
+    "geometry-overview.svg": "8ce44868dd522b051299a9feb571f59ff2d729f08e0cb6d46d6eee60213ae59e"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "be85a04f770e00a6112c662b9490a4c3a09a5f6933b0556c9d3dbd472bcc8a08",
+  "producer_sha256": "471e913b1d667c5da2bca87f05fc38f54e010bb188fe027cc23fcfc7e8f9da70",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -596,6 +601,45 @@
       "remote_generation_established": false,
       "status": "FINITE_PREPARED_CLASSICAL_RESPONSE_WITH_POSITIVE_TAIL",
       "waveform_evaluated": true
+    },
+    "scalar_wall_consistency": {
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Ub": -0.2747468030926288,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105,
+        "arrival_window_over_ell": [
+          -0.5817589515953444,
+          -0.25023070056069985
+        ],
+        "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+        "radius_lower_bound_over_ell": 0.4,
+        "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+        "radius_upper_bound_over_ell": 0.55,
+        "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+        "wall_radius_window_over_ell": [
+          0.45,
+          0.55
+        ]
+      },
+      "interpretation": "The canonically normalized conformal probe requires no additional singular scalar surface source or tangential flux jump at quadratic order on the fixed wall.",
+      "knowledge_boundary": {
+        "additional_singular_scalar_surface_source_required_at_conformal_coupling": false,
+        "bulk_einstein_response_solved": false,
+        "fixed_background_with_nonzero_probe_claimed_exact": false,
+        "nonzero_tangential_scalar_flux_jump_at_conformal_coupling": false,
+        "normal_force_condition_computed": false,
+        "physical_preparation_law_established": false,
+        "quantitative_amplitude_bound_established": false,
+        "stability_established": false
+      },
+      "limits": [
+        "The original C3 preparation supplies the regularity; the full C2 inverse class is not covered automatically.",
+        "The bulk metric response and normal-force condition remain unresolved.",
+        "No quantitative amplitude bound, stability result or physical preparation law is established."
+      ],
+      "status": "CONDITIONAL_CONFORMAL_SCALAR_SURFACE_AND_TANGENTIAL_FLUX_COMPATIBILITY"
     },
     "slice_status": "CONNECTED_SOURCED_INITIAL_SLICE"
   },
