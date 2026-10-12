@@ -1,0 +1,390 @@
+{
+  "inputs": {
+    "access": {
+      "path": "results/development/nsc-cosmological-atlas-v5/observer-access.json",
+      "sha256": "d9f184ebea354e035cc98c6d871ab236f12909ee4be5d01fc81effd5a159455d"
+    },
+    "assembly": {
+      "path": "results/development/nsc-cosmological-atlas-v4/parent-assembly.json",
+      "sha256": "ea0316a5afaa61978a2ba85cf8728f9a303beb14cafde77bdae9b0375ce7fe7a"
+    },
+    "field": {
+      "path": "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
+      "sha256": "c5a0fc9641b76a260a30137b495838ba020162f611b5cafb4a1f5c58ddd688df"
+    },
+    "motif": {
+      "path": "results/development/nsc-cosmological-atlas-v1/atlas.json",
+      "sha256": "1775e784ea2c44f5aaf5b4342c0aa8dace0cd738f96d8adbf24e4ca0c6db7f3b"
+    },
+    "slice": {
+      "path": "results/development/nsc-cosmological-atlas-v4/connection-slice.json",
+      "sha256": "62f12562be6c3a918dfe03a98d2af789ccfddde2c12e1aee024949017f0d1394"
+    }
+  },
+  "left_panel": {
+    "connections": [
+      {
+        "clock": null,
+        "evidence": "A separate local Schwarzschild chart is available",
+        "from": "parent",
+        "id": "parent-hole-a",
+        "kind": "attachment",
+        "minimum_delay": null,
+        "missing": [
+          "shared nonspherical parent metric and patch matching"
+        ],
+        "source_refs": [
+          "causal_review"
+        ],
+        "status": "unresolved",
+        "to": "hole_a",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "Published black-hole offspring hypothesis class",
+        "from": "hole_a",
+        "id": "descent-a",
+        "kind": "descent",
+        "minimum_delay": null,
+        "missing": [
+          "formation mechanism",
+          "state and dimensionless-parameter transfer"
+        ],
+        "source_refs": [
+          "smolin",
+          "poplawski"
+        ],
+        "status": "unresolved",
+        "to": "child_a",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "Known junction equations can constrain a proposed neck",
+        "from": "hole_a",
+        "id": "neck-a",
+        "kind": "attachment",
+        "minimum_delay": null,
+        "missing": [
+          "induced metric",
+          "physical layer source",
+          "complete matching"
+        ],
+        "source_refs": [
+          "israel_note"
+        ],
+        "status": "unresolved",
+        "to": "child_a",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "A separate local Schwarzschild chart is available",
+        "from": "parent",
+        "id": "parent-hole-b",
+        "kind": "attachment",
+        "minimum_delay": null,
+        "missing": [
+          "shared nonspherical parent metric and patch matching"
+        ],
+        "source_refs": [
+          "causal_review"
+        ],
+        "status": "unresolved",
+        "to": "hole_b",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "Published black-hole offspring hypothesis class",
+        "from": "hole_b",
+        "id": "descent-b",
+        "kind": "descent",
+        "minimum_delay": null,
+        "missing": [
+          "formation mechanism",
+          "state and dimensionless-parameter transfer"
+        ],
+        "source_refs": [
+          "smolin",
+          "poplawski"
+        ],
+        "status": "unresolved",
+        "to": "child_b",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "Known junction equations can constrain a proposed neck",
+        "from": "hole_b",
+        "id": "neck-b",
+        "kind": "attachment",
+        "minimum_delay": null,
+        "missing": [
+          "induced metric",
+          "physical layer source",
+          "complete matching"
+        ],
+        "source_refs": [
+          "israel_note"
+        ],
+        "status": "unresolved",
+        "to": "child_b",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "Common history can correlate unequal regional states",
+        "from": "child_a",
+        "id": "siblings",
+        "kind": "correlation",
+        "minimum_delay": null,
+        "missing": [
+          "joint initial state"
+        ],
+        "source_refs": [
+          "nested_qualities"
+        ],
+        "status": "hypothesis",
+        "to": "child_b",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "One further possible black-hole formation; finite cutoff",
+        "from": "child_a",
+        "id": "grandchild-descent",
+        "kind": "descent",
+        "minimum_delay": null,
+        "missing": [
+          "child A black-hole interface",
+          "transition and state transfer"
+        ],
+        "source_refs": [
+          "smolin"
+        ],
+        "status": "unresolved",
+        "to": "grandchild",
+        "valid_interval": null
+      },
+      {
+        "clock": null,
+        "evidence": "A further interface requires its own junction",
+        "from": "child_a",
+        "id": "grandchild-neck",
+        "kind": "attachment",
+        "minimum_delay": null,
+        "missing": [
+          "child A black-hole interface",
+          "geometry and layer source"
+        ],
+        "source_refs": [
+          "israel_note"
+        ],
+        "status": "unresolved",
+        "to": "grandchild",
+        "valid_interval": null
+      }
+    ],
+    "region_ids": [
+      "parent",
+      "hole_a",
+      "child_a",
+      "hole_b",
+      "child_b",
+      "grandchild"
+    ],
+    "scenario": "separate_holes",
+    "status": "Open motif; v1 links are not promoted by later separate models"
+  },
+  "limits": [
+    "No spatial embedding, global topology or relative physical scales are depicted.",
+    "No parent observer prepares the early scalar trace in the isolated reference.",
+    "Early reception after the anchor is compatible with exclusions on new emissions.",
+    "No second cosmological child, regular formation, stability or dark component is established."
+  ],
+  "outputs": {
+    "geometry-overview.png": "4be1e2a721c08599c8476cc41722d48da9c01b7b81803a8ba25dc51ffc1cd9ed",
+    "geometry-overview.svg": "0078ffbbd83a1c20a0b6ce0753c5c22a7c6285af67dd2cbb2507ce8d32b4e030"
+  },
+  "producer": "scripts/build_geometry_overview.py",
+  "producer_sha256": "749d4aa355a839be1eae3d35c85309d06a82fd295ddc5aac05cca68f1c82e556",
+  "purpose": "Living-manuscript narrative figure; no new scientific solve",
+  "right_panel": {
+    "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
+    "displayed_connections": [
+      {
+        "from": "cap",
+        "kind": "attachment",
+        "status": "checked initial slice",
+        "to": "wall"
+      },
+      {
+        "from": "wall",
+        "kind": "attachment",
+        "status": "checked initial slice",
+        "to": "bridge"
+      },
+      {
+        "from": "bridge",
+        "kind": "attachment",
+        "status": "checked initial slice",
+        "to": "right end"
+      },
+      {
+        "from": "C",
+        "kind": "causal",
+        "status": "selected early emissions only",
+        "to": "W"
+      },
+      {
+        "from": "W",
+        "kind": "causal",
+        "status": "selected early emissions only",
+        "to": "C"
+      },
+      {
+        "from": "W",
+        "kind": "causal",
+        "status": "early white-hole escape only",
+        "to": "P"
+      },
+      {
+        "from": "prescribed incoming trace",
+        "kind": "causal",
+        "status": "conditional classical scalar response; exterior origin uncomputed",
+        "to": "C"
+      }
+    ],
+    "field_metrics": {
+      "input_squared_amplitude_integral_ell_over_epsilon2": 96.99337699337738,
+      "late_central_field_through_t0": "exactly zero for the stipulated state",
+      "negative_to_positive_peak_magnitude": 1.026168158141245,
+      "output_squared_amplitude_integral_ell_over_epsilon2": 36.900213672886075,
+      "signed_output_area_over_epsilon": -8.793955044173783e-16,
+      "squared_amplitude_is_energy": false,
+      "squared_amplitude_ratio": 0.3804405498264648,
+      "support_stretch_ratio": 2.632302188204873
+    },
+    "field_status": "CONDITIONAL_EARLY_CLASSICAL_SCALAR_RESPONSE",
+    "incoming_state": {
+      "characteristic": "I=(d_tau_wall+n)(R phi), n from cap to exterior",
+      "initial_interior": "phi=0 and d_t phi=0 on flat cap at wall R/ell=.05",
+      "input": "I=epsilon B'(z)/delta",
+      "outgoing_characteristic_independently_prescribed": false,
+      "outside_support": "incoming trace stipulated zero throughout retained response window",
+      "prescribed_characteristics": 1,
+      "primitive": "B(z)=(1-z^2)^4 for abs(z)<1; zero otherwise; z=(tau-tau_c)/delta",
+      "regularity": "B is C3; I is C2",
+      "remote_source_or_global_exterior_state_solved": false,
+      "side": "exterior limit at the moving wall",
+      "wall_clock_centre_over_ell": -1.1138558046117852,
+      "wall_clock_half_width_over_ell": 0.03
+    },
+    "observer_access_rows": [
+      {
+        "basis": "outgoing de Sitter null intercept and retained-history coverage",
+        "emission": "C proper time t/ell=-1.5242168241",
+        "from": "C",
+        "id": "early-C-W",
+        "reception": "W at R/ell=0.5",
+        "scope": "isolated fixed spherical reference",
+        "to": "W",
+        "verdict": "allowed geometric ray"
+      },
+      {
+        "basis": "ingoing eta+r constant and negative",
+        "emission": "W at R/ell=0.5",
+        "from": "W",
+        "id": "early-W-C",
+        "reception": "C proper time t/ell=-0.4256045355",
+        "scope": "isolated fixed spherical reference",
+        "to": "C",
+        "verdict": "allowed geometric ray"
+      },
+      {
+        "basis": "outgoing cap ray followed by constant U<0 from white-hole sector to right exterior; transmission law unspecified",
+        "emission": "C proper time t/ell=-1.5242168241, via W at R/ell=0.5",
+        "from": "C",
+        "id": "early-C-P",
+        "reception": "P proper time/ell=2.5311656510 on its own clock",
+        "scope": "isolated fixed spherical reference",
+        "to": "P",
+        "verdict": "allowed geometric path"
+      },
+      {
+        "basis": "eta-r=-2.5ell; emission is within the retained matched history",
+        "emission": "C proper time t/ell=-log(2.5)",
+        "from": "C",
+        "id": "historical-C-W0",
+        "reception": "W0 at the chosen initial slice",
+        "scope": "isolated fixed spherical reference",
+        "to": "W",
+        "verdict": "allowed geometric ray"
+      },
+      {
+        "basis": "remaining outgoing conformal radius<=ell; future wall comoving radius>=1.5ell",
+        "emission": "C0 or later, t>=0",
+        "from": "C",
+        "id": "C0-W",
+        "reception": "no future wall event",
+        "scope": "isolated fixed spherical reference",
+        "to": "W",
+        "verdict": "excluded in reference"
+      },
+      {
+        "basis": "inward null intercept eta+r>0 lies beyond future de Sitter boundary",
+        "emission": "W0 or later, R>=1.5ell",
+        "from": "W",
+        "id": "W0-C",
+        "reception": "no finite future central event",
+        "scope": "isolated fixed spherical reference",
+        "to": "C",
+        "verdict": "excluded in reference"
+      },
+      {
+        "basis": "no future exit through the enclosing wall; late wall also has U>0",
+        "emission": "C0 or later, t>=0",
+        "from": "C",
+        "id": "C0-P",
+        "reception": "no future right-parent event",
+        "scope": "isolated fixed spherical reference",
+        "to": "P",
+        "verdict": "excluded in reference"
+      },
+      {
+        "basis": "parent V>0; wall V<0; future-directed causal V cannot decrease",
+        "emission": "any event on the right static parent worldline",
+        "from": "P",
+        "id": "P-C",
+        "reception": "no central event via this attachment",
+        "scope": "isolated fixed spherical reference",
+        "to": "C",
+        "verdict": "excluded in reference"
+      },
+      {
+        "basis": "outgoing cap ray meets W at R=2M and continues as U=0; finite parent access requires earlier emission",
+        "emission": "threshold t/ell=-1.2312944525",
+        "from": "C",
+        "id": "last-C-P",
+        "reception": "horizon generator; equality is excluded",
+        "scope": "isolated fixed spherical reference",
+        "to": "P",
+        "verdict": "boundary, not finite reception"
+      },
+      {
+        "basis": "initial-data gluing alone gives no inter-body causal completion",
+        "emission": "unspecified",
+        "from": "A interior",
+        "id": "siblings",
+        "reception": "no global many-body future supplied",
+        "scope": "glued multi-body geometry",
+        "to": "B or descendants",
+        "verdict": "unresolved"
+      }
+    ],
+    "slice_status": "CONNECTED_SOURCED_INITIAL_SLICE"
+  },
+  "schema": "nsc.geometry-overview.v1"
+}

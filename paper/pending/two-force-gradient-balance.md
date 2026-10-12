@@ -2,7 +2,7 @@
 > retained to document the interpretation error. Pressure equality does not
 > establish mechanical balance, Hayward does not supply its claimed slope
 > threshold, and reaching a positive inner horizon cannot determine centre
-> regularity. Use the [corrected owner](../../lab/docs/nsc-rn-gradient-bubble.md).
+> regularity. Use the [corrected owner](../../docs/nsc-rn-gradient-bubble.md).
 > The text below is not an active publication proposal and must not be merged
 > into a paper as a measured force-balance result.
 
@@ -100,8 +100,8 @@ that `scripts/check_claim_bindings.py` covers it:
 <!-- nsc-claim:two-force-gradient-balance -->
 ```
 
-with the record `../lab/results/development/nsc-rn-gradient-bubble-v5.json`
-and the note `../lab/docs/nsc-rn-gradient-bubble.md` linked from the
+with the record `../results/development/nsc-rn-gradient-bubble-v5.json`
+and the note `nsc-rn-gradient-bubble.md` linked from the
 paragraph, matching how the existing markers carry their backing.
 
 ## A number that did not survive checking

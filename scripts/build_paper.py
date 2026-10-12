@@ -16,6 +16,7 @@ import sys
 import tempfile
 import time
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 REPOSITORY = Path(__file__).resolve().parents[1]
 SOURCE = REPOSITORY / "paper" / "nested-space-cosmology.md"
@@ -24,11 +25,42 @@ METADATA = REPOSITORY / "paper" / "metadata.json"
 BUILD_MANIFEST = REPOSITORY / "paper" / "build-manifest.json"
 BUILD_DIRECTORY = REPOSITORY / "paper" / ".build"
 
+IMAGE_LINK = re.compile(r"!\[([^\]]*)\]\((<[^>]+>|[^)]+)\)")
+
+
+def local_image_path(source: Path, target: str) -> Path:
+    """Resolve manuscript assets locally; never fetch a figure during a build."""
+    target = target.strip()
+    if target.startswith("<"):
+        target = target[1:target.index(">")]
+    else:
+        target = re.sub(r'\s+[\"\'][^\"\']*[\"\']$', '', target)
+    parsed = urlsplit(target)
+    if parsed.scheme or parsed.netloc or parsed.query or parsed.fragment:
+        raise ValueError("paper images must name a local repository file: " + target)
+    path = (source.parent / unquote(target)).resolve()
+    if not path.is_relative_to(REPOSITORY.resolve()) or not path.is_file():
+        raise ValueError("missing or escaping paper image: " + target)
+    return path
+
 
 def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
     """Authenticate the renderer and every dataset used by a manuscript figure."""
     paths = ["scripts/build_paper.py"]
     text = source.read_text(encoding="utf-8")
+    for match in IMAGE_LINK.finditer(text):
+        path = local_image_path(source, match.group(2))
+        paths.append(path.relative_to(REPOSITORY).as_posix())
+    # The manuscript links its evidence directly. Bind those records and the
+    # manifests alongside the rendered assets, without running their producers.
+    for target in re.findall(r"(?<!!)\[[^\]]*\]\(([^)]+)\)", text):
+        target = target.strip().strip("<>").split("#", 1)[0]
+        if urlsplit(target).scheme or not target.endswith((".json", ".npz")):
+            continue
+        path = (source.parent / unquote(target)).resolve()
+        if not path.is_relative_to(REPOSITORY.resolve()) or not path.is_file():
+            raise ValueError("missing or escaping manuscript evidence: " + target)
+        paths.append(path.relative_to(REPOSITORY).as_posix())
     for marker, path in (
         ("geometric-gap", "results/nsc-3-geometric-chain.json"),
         ("vacuum-work", "results/nsc-6-vacuum-work.json"),
@@ -83,7 +115,7 @@ def scientific_build_inputs(source: Path) -> list[dict[str, str]]:
         if path in text:
             paths.append(path)
     return [{"path": path, "sha256": hashlib.sha256((REPOSITORY/path).read_bytes()).hexdigest()}
-            for path in sorted(paths)]
+            for path in sorted(set(paths))]
 
 
 def parse_args() -> argparse.Namespace:
@@ -567,6 +599,7 @@ def build_pdf(
         value = re.sub(r"\\oint(?![A-Za-z])", "∮", value)
         value = value.replace(r"\ell", "ℓ").replace(r"\odot", "⊙")
         value = value.replace(r"\ddots", "⋱").replace(r"\cdots", "⋯")
+        value = value.replace(r"\ldots", "…")
         value = value.replace(r"\otimes", "⊗").replace(r"\cdot", "·")
         value = value.replace(r"\partial", "∂").replace(r"\infty", "∞")
         value = value.replace(r"\hbar", "ℏ").replace(r"\pm", "±").replace(r"\mp", "∓")
@@ -764,6 +797,8 @@ def build_pdf(
 
     def equation_flowable(source: str) -> object:
         expression = " ".join(line.strip() for line in source.splitlines()).strip()
+        expression = re.sub(r"\\frac([0-9])([0-9])", r"\\frac{\1}{\2}", expression)
+        expression = expression.replace(r"\Box", "□")
         if r"\begin{pmatrix}" in expression:
             return code_flowable(matrix_plaintext(source))
         if expression.startswith(r"\boxed{") and expression.endswith("}"):
@@ -1000,6 +1035,30 @@ def build_pdf(
                 index += 1
                 continue
 
+            image_match = IMAGE_LINK.fullmatch(stripped)
+            if image_match:
+                flush_paragraph()
+                path = local_image_path(source, image_match.group(2))
+                if path.suffix.lower() == ".svg":
+                    from svglib.svglib import svg2rlg
+                    rendered = svg2rlg(str(path))
+                    if rendered is None:
+                        raise ValueError("cannot render manuscript SVG: " + str(path))
+                    width, height = rendered.width, rendered.height
+                    scale = min(body_width / width, 530 / height, 1)
+                    rendered.scale(scale, scale)
+                    rendered.width, rendered.height = width * scale, height * scale
+                else:
+                    rendered = Image(str(path))
+                    scale = min(body_width / rendered.drawWidth,
+                                530 / rendered.drawHeight, 1)
+                    rendered.drawWidth *= scale
+                    rendered.drawHeight *= scale
+                rendered.hAlign = "CENTER"
+                story.extend([Spacer(1, 5), rendered, Spacer(1, 5)])
+                index += 1
+                continue
+
             if stripped == "<!-- nsc-figure:geometric-gap -->":
                 flush_paragraph()
                 story.append(geometric_gap_figure())
@@ -1144,13 +1203,13 @@ def build_pdf(
 
     def draw_cover(canvas: object, document: object) -> None:
         canvas.saveState()
-        canvas.setTitle(str(metadata["title"]))
+        canvas.setTitle(str(metadata["title"]) + ": " + str(metadata["subtitle"]))
         canvas.setAuthor(str(metadata["author"]))
         canvas.setSubject(
-            "One inherited spectrum connecting matter, geometry, dark response, and nested space"
+            "Spherical regions, boundary attachments, causal access and interior observer response"
         )
         canvas.setKeywords(
-            "nested-space cosmology, frequency spectrum, black holes, antimatter, dark matter, dark energy, spectral geometry"
+            "nested-space cosmology, spherical geometry, black holes, causal structure, junction conditions, observer response"
         )
         canvas.setFillColor(navy)
         canvas.rect(0, 0, page_width, page_height, fill=1, stroke=0)
@@ -1168,7 +1227,7 @@ def build_pdf(
         canvas.setFont("RHRegular", 6.8)
         canvas.setFillColor(muted)
         canvas.drawString(left_margin, page_height - 11 * mm, str(metadata["project"]).upper())
-        right = f"WORKING PREPRINT  ·  VERSION {metadata['version']}"
+        right = f"{metadata['status']}  ·  {metadata.get('revision', metadata['version'])}"
         canvas.drawRightString(page_width - right_margin, page_height - 11 * mm, right)
         canvas.setStrokeColor(line)
         canvas.setLineWidth(0.5)
@@ -1262,7 +1321,7 @@ def build_pdf(
             styles["CoverDeck"],
         ),
         Paragraph(
-            "What if one inherited spectrum is enough?",
+            "Regions, boundaries and what an interior observer can learn",
             styles["CoverSubtitle"],
         ),
         Spacer(1, 18 * mm),
@@ -1303,11 +1362,11 @@ def write_build_manifest(
 ) -> None:
     record = {
         "schema": "NSC-PAPER-BUILD-v1",
-        "source": str(source.relative_to(REPOSITORY)),
+        "source": source.relative_to(REPOSITORY).as_posix(),
         "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
-        "metadata": str(METADATA.relative_to(REPOSITORY)),
+        "metadata": METADATA.relative_to(REPOSITORY).as_posix(),
         "metadata_sha256": hashlib.sha256(METADATA.read_bytes()).hexdigest(),
-        "output": str(output.relative_to(REPOSITORY)),
+        "output": output.relative_to(REPOSITORY).as_posix(),
         "pdf_sha256": digest,
         "pages": pages,
         "bytes": size,

@@ -12,6 +12,9 @@ tests/** -text
 docs/** -text
 results/** -text
 
+# Paper sources, figure manifests and rendered assets are authenticated as bytes.
+paper/** -text
+
 # Archived scientific contexts preserve their original byte identities.
 archive/** -text
 paper/archive/** -text

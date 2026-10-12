@@ -45,13 +45,14 @@ class V070ReleaseTests(unittest.TestCase):
         build=json.loads((ROOT/'paper/build-manifest.json').read_text())
         catalog=json.loads((ROOT/'paper/catalog.json').read_text())
         documents={item['id']:item for item in catalog['documents']}
-        foundation=documents['foundation']
+        current=documents['main']
         self.assertEqual(metadata['version'],build['version'])
-        self.assertEqual(metadata['version'],foundation['version'])
-        self.assertEqual(metadata['date_iso'],foundation['date'])
+        self.assertEqual(metadata['version'],current['version'])
+        self.assertEqual(metadata['date_iso'],current['date'])
         self.assertEqual(hashlib.sha256(metadata_bytes).hexdigest(),build['metadata_sha256'])
-        self.assertEqual(foundation['source'],build['source'])
-        self.assertEqual(foundation['pdf'],build['output'])
+        self.assertEqual(current['source'],build['source'])
+        self.assertEqual(current['pdf'],build['output'])
+        self.assertEqual('0.26.0',documents['foundation']['version'])
 
         current_version=tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version']
         self.assertEqual(current_version,catalog['publication_version'])

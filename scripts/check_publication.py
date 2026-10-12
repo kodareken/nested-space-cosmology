@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 import tomllib
 from urllib.parse import unquote
@@ -31,12 +33,17 @@ IGNORED_PARTS = {
     "node_modules",
     ".co" + "dex",
     "subagents",
+    ".claude",
+    ".cursor",
+    ".research-reset-preservation",
+    "BlackHoles-Infinity",
+    "BlackHoles-Infinity-w2",
 }
 #: Host-local agent configuration files, skipped by name.
 IGNORED_NAMES = {
     "settings.json",
 }
-EXCLUDED_ROOTS = {"archive", "collected-data", "configs", "mk", "runs"}
+EXCLUDED_ROOTS = {"collected-data", "configs", "mk", "runs"}
 REQUIRED = {
     "README.md",
     "THEORY.md",
@@ -199,8 +206,8 @@ def public_files() -> list[Path]:
     paths = []
     for path in ROOT.rglob("*"):
         relative = path.relative_to(ROOT)
-        # The active lab is authenticated separately by check_lab_snapshot.py.
-        if relative.parts[0] == "lab":
+        # Historical source contexts have their own authenticated receipts.
+        if relative.parts[0] in {"archive", "lab"}:
             continue
         if any(
             part in IGNORED_PARTS or part.endswith(".egg-info")
@@ -229,9 +236,8 @@ def check_manifest(errors: list[str]) -> None:
     expected_count = 58 + len(release["scoped_follow_ups"])
     if len(steps) != expected_count or manifest.get("result_count") != expected_count:
         errors.append("result manifest count differs from release specification")
-    from reproduce_public_results import validate_checkout
     try:
-        validate_checkout(manifest)
+        validate_historical_release(manifest)
     except Exception as exc:
         errors.append(f"result closure validation failed: {exc}")
     if manifest.get("historical_result_count") != 58:
@@ -316,8 +322,32 @@ def check_manifest(errors: list[str]) -> None:
     except Exception as exc:
         errors.append(f"development snapshot validation failed: {exc}")
         development_outputs = set()
-    if result_files != outputs | development_outputs:
+    migrated_outputs = set()
+    migration = ROOT / "results/reassembly/manifest.json"
+    if migration.is_file():
+        for row in json.loads(migration.read_text(encoding="utf-8"))["rows"]:
+            relative = row["destination"]
+            if row["origin"] in {"lab", "w2"} and relative in result_files:
+                if sha256(ROOT / relative) != row["sha256"]:
+                    errors.append("migrated result differs from its recorded evidence: " + relative)
+                migrated_outputs.add(relative)
+    if result_files != outputs | development_outputs | migrated_outputs:
         errors.append("tracked NSC result files differ from the manifest closure")
+
+
+def validate_historical_release(manifest: dict) -> None:
+    """Run the frozen release contract in an explicit, authenticated context."""
+    from replay_history import CONTEXT, prepare
+
+    prepare(CONTEXT)
+    historical_manifest = CONTEXT / "results/manifest.json"
+    if sha256(RESULT_MANIFEST) != sha256(historical_manifest):
+        raise ValueError("current legacy release manifest differs from its preserved edition")
+    spec = importlib.util.spec_from_file_location(
+        "nsc_preserved_release_checker", CONTEXT / "scripts/reproduce_public_results.py")
+    legacy = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(legacy)
+    legacy.validate_checkout(manifest)
 
 
 def check_provenance(errors: list[str], files: list[Path]) -> None:
@@ -331,10 +361,15 @@ def check_provenance(errors: list[str], files: list[Path]) -> None:
     try:
         project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
         metadata = json.loads((ROOT / "paper/metadata.json").read_text())
+        catalog = json.loads((ROOT / "paper/catalog.json").read_text())
+        foundation = next(row for row in catalog["documents"] if row["id"] == "foundation")
+        archived = json.loads((ROOT / foundation["metadata"]).read_text())
         if value.get("public_version") != project["project"]["version"]:
             errors.append("publication provenance has the wrong current package version")
-        if value.get("foundation_version", metadata["version"]) != metadata["version"]:
+        if value.get("foundation_version") != archived["version"]:
             errors.append("publication provenance has the wrong frozen foundation version")
+        if value.get("manuscript_revision") != metadata["revision"]:
+            errors.append("publication provenance has the wrong manuscript revision")
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("publication version routing: " + str(error))
     declared = {entry["path"]: entry for entry in value.get("included_paths", [])}
@@ -367,90 +402,135 @@ def check_paper(errors: list[str]) -> None:
         path = ROOT / str(value.get(path_field, ""))
         if not path.is_file() or sha256(path) != value.get(hash_field):
             errors.append(f"paper build manifest mismatch: {path_field}")
+    for item in value.get("scientific_build_inputs", []):
+        try:
+            path = checked_path(item["path"])
+            if sha256(path) != item["sha256"]:
+                errors.append("paper scientific input mismatch: " + item["path"])
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            errors.append("paper scientific input: " + str(error))
+
+
+def checked_path(relative: str) -> Path:
+    path = Path(relative)
+    candidate = ROOT / path
+    if (path.is_absolute() or ".." in path.parts
+            or not candidate.resolve().is_relative_to(ROOT.resolve())
+            or not candidate.is_file()):
+        raise ValueError("missing or unsafe publication path: " + str(relative))
+    return candidate
+
+
+def archive_context(row: dict) -> dict[str, Path]:
+    """Authenticate exact historical bytes while retaining their logical paths."""
+    receipt = json.loads(checked_path(row["archive_manifest"]).read_text(encoding="utf-8"))
+    if (receipt.get("schema") != "NSC-PAPER-ARCHIVE-v1"
+            or receipt.get("id") != row["id"]
+            or receipt.get("version") != row["version"]
+            or not re.fullmatch("[0-9a-f]{40}", receipt.get("source_commit", ""))):
+        raise ValueError("invalid foundation archive identity")
+    context = {}
+    for item in receipt.get("files", []):
+        original = item["original_path"]
+        logical = Path(original)
+        if logical.is_absolute() or ".." in logical.parts or original in context:
+            raise ValueError("invalid or repeated archive logical path")
+        stored = checked_path(item["storage_path"])
+        if sha256(stored) != item["sha256"]:
+            raise ValueError("archived bytes differ: " + original)
+        context[original] = stored
+    for original in ("paper/nested-space-cosmology.md", "paper/nested-space-cosmology.pdf",
+                     "paper/metadata.json", "paper/build-manifest.json",
+                     "paper/claim-bindings.json", "scripts/build_paper.py"):
+        if original not in context:
+            raise ValueError("incomplete foundation archive: " + original)
+    build = json.loads(context["paper/build-manifest.json"].read_text(encoding="utf-8"))
+    for path_key, hash_key in (("source", "source_sha256"), ("metadata", "metadata_sha256"),
+                               ("output", "pdf_sha256")):
+        if build[path_key] not in context or sha256(context[build[path_key]]) != build[hash_key]:
+            raise ValueError("historical build binding differs: " + path_key)
+    for item in build.get("scientific_build_inputs", []):
+        path = context.get(item["path"])
+        if path is None:
+            path = checked_path(item["path"])
+        if sha256(path) != item["sha256"]:
+            raise ValueError("historical scientific build input differs: " + item["path"])
+    return context
 
 
 def check_paper_catalog(errors: list[str]) -> None:
-    """Bind two active roles and preserve historical companion editions."""
+    """One living main manuscript; prior science remains an authenticated archive."""
     try:
-        catalog = json.loads((ROOT / 'paper/catalog.json').read_text(encoding='utf-8'))
-        schema = catalog.get('schema')
-        measured = schema == 'NSC-PAPER-CATALOG-v2'
-        if schema not in {'NSC-PAPER-CATALOG-v1', 'NSC-PAPER-CATALOG-v2'}:
-            raise ValueError('unexpected catalog schema')
-        status = 'MEASURED_FINITE_REALIZATION' if measured else 'OPEN'
-        if catalog.get('current_status') != status:
-            raise ValueError('unexpected active scientific status')
-        if measured and (catalog.get('finite_result_status') != status
-                         or catalog.get('physical_local_gate_status') != 'OPEN'):
-            raise ValueError('finite result and retained application must have separate statuses')
-        rows = catalog.get('documents', [])
-        documents = {row['id']: row for row in rows}
-        if len(rows) != 2 or set(documents) != {'foundation', 'local-gate'}:
-            raise ValueError('both unique paper roles are required')
-        roles = {'foundation': 'foundational_manuscript',
-                 'local-gate': 'focused_companion' if measured else 'focused_open_companion'}
-
-        def paths_for(row):
-            paths = {}
-            for field in ('source', 'pdf', 'manifest'):
-                relative = Path(row[field])
-                candidate = ROOT / relative
-                if relative.is_absolute() or not candidate.resolve().is_relative_to(ROOT.resolve()) or not candidate.is_file():
-                    raise ValueError('missing or invalid paper path: ' + row[field])
-                paths[field] = candidate
-            return paths
-
-        for name, row in documents.items():
-            if row['role'] != roles[name]:
-                raise ValueError('paper role differs')
-            paths = paths_for(row)
-            record = json.loads(paths['manifest'].read_text(encoding='utf-8'))
-            if sha256(paths['pdf']) != record['pdf_sha256']:
-                raise ValueError('paper PDF differs from build manifest')
-            if name == 'foundation':
-                if (record['version'] != row['version']
-                        or sha256(paths['source']) != row['source_sha256']
-                        or record['source_sha256'] != row['source_sha256']
-                        or record['pdf_sha256'] != row['pdf_sha256']):
-                    raise ValueError('preserved foundation differs')
-                continue
-            if (row.get('status') != status or row.get('submission_ready') is not False
-                    or record.get('status') != status or record.get('submission_ready') is not False
-                    or record['inputs'].get(row['source']) != sha256(paths['source'])):
-                raise ValueError('companion status/source differs from its build')
-            if measured:
-                if (record.get('schema') != 'NSC-FINITE-REGENERATION-MANIFEST-v1'
-                        or row.get('author_review') != 'pending'
-                        or record.get('author_review') != 'pending'
-                        or not re.fullmatch('[0-9a-f]{40}', record.get('science_commit', ''))):
-                    raise ValueError('finite companion needs its pinned science and pending author review')
-                active_archive = ROOT / row['source_archive']
-                if (not active_archive.resolve().is_relative_to(ROOT.resolve()) or not active_archive.is_file()
-                        or sha256(active_archive) != record['source_archive_sha256']):
-                    raise ValueError('active companion source archive differs')
-                history = row.get('historical_editions')
-                if not isinstance(history, list) or not history:
-                    raise ValueError('historical companion edition must remain available')
-                for edition in history:
-                    historical_paths = paths_for(edition)
-                    if historical_paths['pdf'] == paths['pdf']:
-                        raise ValueError('new edition must not overwrite the historical PDF')
-                    prior = json.loads(historical_paths['manifest'].read_text(encoding='utf-8'))
-                    if (sha256(historical_paths['pdf']) != prior['pdf_sha256']
-                            or prior['inputs'].get(edition['source']) != sha256(historical_paths['source'])):
-                        raise ValueError('historical companion bytes differ')
-                    archive = ROOT / edition['source_archive']
-                    if (not archive.resolve().is_relative_to(ROOT.resolve()) or not archive.is_file()
-                            or sha256(archive) != prior['source_archive_sha256']):
-                        raise ValueError('historical source archive differs')
-        if documents['foundation']['pdf'] == documents['local-gate']['pdf']:
-            raise ValueError('companion cannot replace the foundational PDF')
+        catalog = json.loads((ROOT / "paper/catalog.json").read_text(encoding="utf-8"))
+        if catalog.get("schema") != "NSC-PAPER-CATALOG-v3":
+            raise ValueError("unexpected catalog schema")
+        rows = catalog["documents"]
+        documents = {row["id"]: row for row in rows}
+        if len(rows) != 3 or set(documents) != {"main", "foundation", "local-gate"}:
+            raise ValueError("main manuscript and both historical science roles are required")
+        if (catalog.get("current_document") != "main"
+                or catalog.get("current_status") != "WORKING_DRAFT"
+                or [row["id"] for row in rows if row.get("active")] != ["main"]):
+            raise ValueError("exactly one active main manuscript is required")
+        main = documents["main"]
+        if (main.get("role") != "main_manuscript" or main.get("status") != "WORKING_DRAFT"
+                or main.get("submission_ready") is not False
+                or main.get("author_review") != "pending"):
+            raise ValueError("main manuscript must remain an unsubmitted working draft")
+        if (main["source"] != "paper/nested-space-cosmology.md"
+                or main["pdf"] != "paper/nested-space-cosmology.pdf"
+                or main["manifest"] != "paper/build-manifest.json"):
+            raise ValueError("canonical main manuscript paths differ")
+        build = json.loads(checked_path(main["manifest"]).read_text(encoding="utf-8"))
+        metadata = json.loads(checked_path(main["metadata"]).read_text(encoding="utf-8"))
+        for field, build_field, hash_field in (("source", "source", "source_sha256"),
+                                              ("pdf", "output", "pdf_sha256"),
+                                              ("metadata", "metadata", "metadata_sha256")):
+            if main[field] != build[build_field] or sha256(checked_path(main[field])) != build[hash_field]:
+                raise ValueError("current manuscript requires a matching build: " + field)
+        if (main["version"] != build["version"] or main["version"] != metadata["version"]
+                or main["date"] != metadata["date_iso"]):
+            raise ValueError("current manuscript revision metadata differs")
+        foundation = documents["foundation"]
+        if foundation.get("role") != "archived_foundation" or foundation.get("active") is not False:
+            raise ValueError("foundation is a historical edition")
+        context = archive_context(foundation)
+        for field, logical in (("source", "paper/nested-space-cosmology.md"),
+                               ("pdf", "paper/nested-space-cosmology.pdf"),
+                               ("manifest", "paper/build-manifest.json"),
+                               ("metadata", "paper/metadata.json")):
+            if checked_path(foundation[field]) != context[logical]:
+                raise ValueError("foundation catalog differs from archive: " + field)
+        companion = documents["local-gate"]
+        if (companion.get("role") != "archived_supporting_result"
+                or companion.get("active") is not False
+                or companion.get("status") != "MEASURED_FINITE_REALIZATION"
+                or companion.get("submission_ready") is not False):
+            raise ValueError("finite companion is a scoped historical result")
+        for edition in [companion, *companion.get("historical_editions", [])]:
+            prior = json.loads(checked_path(edition["manifest"]).read_text(encoding="utf-8"))
+            if (sha256(checked_path(edition["source"])) != prior["inputs"][edition["source"]]
+                    or sha256(checked_path(edition["pdf"])) != prior["pdf_sha256"]
+                    or sha256(checked_path(edition["source_archive"])) != prior["source_archive_sha256"]):
+                raise ValueError("historical companion source, archive or PDF differs")
+        if not companion.get("historical_editions"):
+            raise ValueError("historical companion edition must remain available")
+        if (catalog.get("finite_result_status") != "MEASURED_FINITE_REALIZATION"
+                or catalog.get("physical_local_gate_status") != "OPEN"):
+            raise ValueError("finite evidence and open physical application are distinct")
     except (OSError, ValueError, KeyError, TypeError) as error:
-        errors.append(f'paper catalog: {error}')
+        errors.append(f"paper catalog: {error}")
 
 
 def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
-    for raw_target in LINK_RE.findall(text):
+    for match in LINK_RE.finditer(text):
+        raw_target = match.group(1)
+        # Plain-text arXiv extractions can join a set notation and equation
+        # number as ``\subseteq[n](14)``. This is not a Markdown hyperlink.
+        if (raw_target.isdecimal()
+                and re.search(r"\\subseteq\s*$", text[:match.start()])
+                and re.match(r"[ \t]*(?:\r?\n|$)", text[match.end():])):
+            continue
         target = raw_target.strip().strip("<>").split()[0]
         if target.startswith(("http://", "https://", "mailto:", "#")):
             continue
@@ -470,7 +550,40 @@ def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
             errors.append(f"broken Markdown link in {path.relative_to(ROOT)}: {target}")
 
 
+def historical_content() -> set[str]:
+    """Recognize exact migrated provenance, never exempt current entrypoints."""
+    candidates = {}
+    migration = ROOT / "results/reassembly/manifest.json"
+    if migration.is_file():
+        record = json.loads(migration.read_text(encoding="utf-8"))
+        candidates.update({row["destination"]: row["sha256"] for row in record["rows"]
+                           if row["origin"] in {"lab", "w2"}
+                           and Path(row["destination"]).suffix.lower()
+                           in {".md", ".json", ".py", ".cpp", ".txt", ".toml", ".yml", ".yaml"}
+                           and not row["destination"].startswith(("archive/", "."))})
+    for manifest in (ROOT / "results/development").glob("nsc-cosmological-atlas*/manifest.json"):
+        record = json.loads(manifest.read_text(encoding="utf-8"))
+        candidates.update({path: digest for path, digest in record.get("source_bindings", {}).items()
+                           if path.startswith("paper/atlas-working-draft") and path.endswith(".md")})
+    for manifest in (ROOT / "paper/archive").glob("*/archive-manifest.json"):
+        record = json.loads(manifest.read_text(encoding="utf-8"))
+        candidates.update({row["storage_path"]: row["sha256"] for row in record["files"]
+                           if row["storage_path"].endswith(".md")})
+    # These pre-existing historical notes were already in the publication root,
+    # rather than imported by the layout migration. Bind their original bytes.
+    from replay_history import BASELINE
+    for relative in ("docs/PLAN.md", "lit/cosmo_v3.md"):
+        preserved = subprocess.run(["git", "show", f"{BASELINE}:{relative}"], cwd=ROOT,
+                                   capture_output=True)
+        if preserved.returncode == 0:
+            candidates[relative] = hashlib.sha256(preserved.stdout).hexdigest()
+    return {path for path, digest in candidates.items()
+            if path not in GITHUB_MARKDOWN_ENTRYPOINTS
+            and (ROOT / path).is_file() and sha256(ROOT / path) == digest}
+
+
 def check_public_boundary(errors: list[str], files: list[Path]) -> None:
+    historical = historical_content()
     relative_files = {path.relative_to(ROOT).as_posix() for path in files}
     for required in sorted(REQUIRED - relative_files):
         errors.append(f"required public file is absent: {required}")
@@ -494,13 +607,13 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
             continue
+        relative = path.relative_to(ROOT).as_posix()
         for literal, label in FORBIDDEN_LITERAL.items():
-            if literal in text:
+            if literal in text and relative not in historical:
                 errors.append(f"{label} appears in {path.relative_to(ROOT)}")
         for label, pattern in SECRET_PATTERNS.items():
             if pattern.search(text):
                 errors.append(f"possible {label} appears in {path.relative_to(ROOT)}")
-        relative = path.relative_to(ROOT).as_posix()
         if relative in GITHUB_MARKDOWN_ENTRYPOINTS:
             for label, pattern in UNSUPPORTED_GITHUB_MATH.items():
                 if pattern.search(text):
@@ -508,7 +621,9 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
         # Immutable laboratory source copies retain their original relative
         # citation paths. Their bytes/inventory are checked by the nested
         # snapshot verifier; the reader-facing proof in docs/ is link-checked.
-        if path.suffix.lower() == ".md" and not relative.startswith("paper/nested-quality-evidence/"):
+        if (path.suffix.lower() == ".md"
+                and not relative.startswith("paper/nested-quality-evidence/")
+                and relative not in historical):
             check_markdown_links(errors, path, text)
 
 
