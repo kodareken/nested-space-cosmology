@@ -32,9 +32,9 @@
       "sha256": "210bef4360b7cdfec7c443068d69ec538c8706b9f507a3f0b9ae0ccd7350dac0"
     },
     {
-      "bytes": 2613,
+      "bytes": 3044,
       "path": ".github/workflows/verify.yml",
-      "sha256": "2d63987be892532726f3db2e5be665ab90b41baf743d156949205294215b79b0"
+      "sha256": "359c25a76ab357485f0d908be5bbcbfbcc9d46648e391ae66a27a5c1fd9b2252"
     },
     {
       "bytes": 356,
@@ -62614,7 +62614,7 @@
     {
       "bytes": 9695031,
       "path": "results/reassembly/manifest.json",
-      "sha256": "029b325308e2413996dd2f942fc9c5254a108f9aa13a6b2e3d6e3275a3a70ded"
+      "sha256": "c0968fef97749327752ba60ed5163f1db04f6bc03525a802d46e2832b5a86ad5"
     },
     {
       "bytes": 1859,
@@ -65757,9 +65757,9 @@
       "sha256": "5606351b18020693333a5325e3337221e73d89ed705a8de588f75d686e08c8e9"
     },
     {
-      "bytes": 2351,
+      "bytes": 9080,
       "path": "scripts/diagnose_history_replay.py",
-      "sha256": "ea654d49f7b9d4c5c4c40704d0984a387e6f516cc732fb8b61a07cace8a54b8a"
+      "sha256": "bd2c4356232183896844646ec8375051b5e2cdf17ebff2dc3cad74e7e9c1e182"
     },
     {
       "bytes": 25859,
@@ -68160,6 +68160,11 @@
       "bytes": 10121,
       "path": "tests/test_nsc_atlas_field_transfer.py",
       "sha256": "1238ec27efeeba6106a3b638fc799ba88ac82a62f2d8acbbee64feb40658118d"
+    },
+    {
+      "bytes": 6249,
+      "path": "tests/test_nsc_atlas_history_diagnostics.py",
+      "sha256": "2acfdd9cb9b9da01283e577609125580963fece83a74e61c258d5890349ac455"
     },
     {
       "bytes": 5871,
