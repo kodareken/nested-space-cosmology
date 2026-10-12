@@ -1,0 +1,55 @@
+{
+  "schema": "NSC-PDF-PORTABILITY-VALIDATION-v1",
+  "date": "2026-10-12",
+  "scope": "Representation-only PDF compression correction; no manuscript, geometry, figure pixels or scientific result changed.",
+  "baseline_commit": "8fe483a76e53e4565b240fea17ba6963f0745dee",
+  "previous_pdf_sha256": "6f02657d03d92ff6e34905c74724429b3c0cda5fd3b08d89fd5d60887b366455",
+  "canonical_pdf": {
+    "path": "paper/nested-space-cosmology.pdf",
+    "sha256": "0dee46b523f65313d16221f1a6a9c1c3bf54e12ee9e1c58f7cc9ef37b5903c1a",
+    "bytes": 1678635,
+    "pages": 19
+  },
+  "compressor": {
+    "package": "zopfli",
+    "version": "0.4.3",
+    "scope": "ReportLab pdfdoc module during multiBuild; restored on exit",
+    "options": {
+      "numiterations": 1,
+      "blocksplitting": true,
+      "blocksplittinglast": false,
+      "blocksplittingmax": 15
+    }
+  },
+  "independent_windows_builds": {
+    "python_versions": [
+      "3.12.13",
+      "3.14.8"
+    ],
+    "matplotlib": "3.11.1",
+    "reportlab": "4.4.9",
+    "byte_identical": true
+  },
+  "decoded_comparison": {
+    "objects": 256,
+    "streams": 155,
+    "changed_decoded_streams": 0,
+    "changed_dictionaries_or_other_objects": 0,
+    "page_text_equal": true,
+    "trailer_equal": true
+  },
+  "linux_before_fix": {
+    "workflow_run": "https://github.com/kodareken/nested-space-cosmology/actions/runs/38285694159",
+    "pdf_sha256": "a35350d4d7d1a5a1925958220abd963f7b526dcfce7c8638fc47830e4f685709",
+    "decoded_content_identical_to_corrected_pdf": true,
+    "boundary": "This is a pre-fix diagnostic, not a claim that post-fix Linux CI has passed."
+  },
+  "visual_equivalence": {
+    "renderer": "Poppler pdftoppm",
+    "dpi": 90,
+    "pages": 19,
+    "all_pixels_identical_to_previously_inspected_edition": true
+  },
+  "focused_renderer_tests_passed": 13,
+  "strict_byte_equality_check_retained": true
+}

@@ -33,8 +33,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-paper = ["matplotlib==3.11.1", "reportlab==4.4.9"]
-dev = ["pytest==9.1.1", "matplotlib==3.11.1", "reportlab==4.4.9"]
+paper = ["matplotlib==3.11.1", "reportlab==4.4.9", "zopfli==0.4.3"]
+dev = ["pytest==9.1.1", "matplotlib==3.11.1", "reportlab==4.4.9", "zopfli==0.4.3"]
 
 [tool.setuptools]
 package-dir = { "" = "src" }

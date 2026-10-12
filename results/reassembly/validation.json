@@ -2,13 +2,33 @@
   "schema": "NSC-REASSEMBLY-VALIDATION-v1",
   "date": "2026-10-12",
   "scope": "Repository preservation, affected implementation tests and manuscript presentation; not verification of every historical derivation.",
-  "current_affected_suite": {"command": "python scripts/run_python.py scripts/test_reassembly.py", "passed": 254},
-  "publication_followup_suite": {"passed": 31, "overlaps_current_affected_suite": true},
+  "current_affected_suite": {
+    "command": "python scripts/run_python.py scripts/test_reassembly.py",
+    "passed": 254
+  },
+  "publication_followup_suite": {
+    "passed": 31,
+    "overlaps_current_affected_suite": true
+  },
   "historical_replay": {
     "command": "python scripts/run_python.py scripts/replay_history.py all",
     "source_commit": "04a0cb9378977772243ebf7c9be3c74182b030f2",
-    "atlas_versions_passed": [1, 2, 3, 4, 5, 6],
-    "atlas_output_counts": [8, 12, 8, 9, 9, 7],
+    "atlas_versions_passed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "atlas_output_counts": [
+      8,
+      12,
+      8,
+      9,
+      9,
+      7
+    ],
     "preserved_companions_authenticated": 2,
     "historical_release_tests_passed": 19,
     "checked_after_old_containers_retired": true
@@ -33,13 +53,41 @@
     "two_builds_byte_identical": true,
     "visual_inspection": {
       "renderer": "Poppler pdftoppm",
-      "pages_inspected": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-      "checks": ["equations", "tables and repeated headers", "all figures and captions", "readable typography", "no clipped or overlapping content"],
+      "pages_inspected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "checks": [
+        "equations",
+        "tables and repeated headers",
+        "all figures and captions",
+        "readable typography",
+        "no clipped or overlapping content"
+      ],
       "local_rasters": ".build/pdf-accepted"
     },
     "submission_ready": false,
     "published": false
   },
   "scientific_review": "Independent comparison of wall, slice, causal clocks, field transfer and finite-memory claims with existing evidence found one incorrect section reference, corrected before final build. No new physics campaign was run.",
-  "runtime_boundary": "The moved Windows venv redirector reports AccessDenied. scripts/run_python.py uses its configured base interpreter and local validation packages; canonical editable import is version0.27.0 from root src. POSIX resource/lock stand-ins remain the existing Windows limitation."
+  "runtime_boundary": "The moved Windows venv redirector reports AccessDenied. scripts/run_python.py uses its configured base interpreter and local validation packages; canonical editable import is version0.27.0 from root src. POSIX resource/lock stand-ins remain the existing Windows limitation.",
+  "checkpoint_commit": "c342eceb49b52a189a69b45d3c0448c1e7c61e2e",
+  "later_pdf_representation_check": "results/reassembly/pdf-portability.json"
 }
