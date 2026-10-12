@@ -3,13 +3,15 @@
 Routing index for retained laboratory owners. The active work is the finite
 exterior-first atlas: compatible geometry and state, causal paths, inheritance,
 clocks and only then local consequences. The universal-action and regeneration
-strands remain reusable candidates. See the [active scope](../../docs/instructions.md#exterior-first-atlas)
+strands remain reusable candidates. See the [active scope](instructions.md#exterior-first-atlas)
 and [claim ledger](claim-ledger.md).
 
 ## Atlas and discovery owners
 
 | Need | Owner |
 |---|---|
+| Programme questions, dependencies and evidence status | [Atlas owner](nsc-cosmological-atlas.md#programme-dependencies), [eight themes](nsc-cosmological-atlas.md#eight-linked-research-questions), additive `programme_record()` in [the atlas model](../src/recursive_horizons/nsc_cosmological_atlas.py); these records organize research and do not add physical causal edges. |
+| First bounded cycle: signal origin | [Question owner](nsc-cosmological-atlas.md#signal-origin-cycle), [finite preparation certificate](nsc-atlas-field-preparation.md), [preparation model](../src/recursive_horizons/nsc_atlas_field_preparation.py), [independent checks](../tests/test_nsc_atlas_field_preparation.py); right-parent exclusion remains known, the finite region-IV operator is derived, and its numerical waveform and remote source remain open. |
 | Finite candidate regions and four connection kinds | [nsc_cosmological_atlas](../src/recursive_horizons/nsc_cosmological_atlas.py), [note](nsc-cosmological-atlas.md) |
 | Reproducible diagrams and source-bound inputs | [Producer](../scripts/derive_nsc_cosmological_atlas.py), [tests](../tests/test_nsc_cosmological_atlas.py) |
 | Shared spatial parent and fixed-source junction screen | [Parent adapter](../src/recursive_horizons/nsc_atlas_parent_initial_data.py), [junction adapter](../src/recursive_horizons/nsc_atlas_junction_sources.py), [v2 producer](../scripts/derive_nsc_cosmological_atlas_v2.py), [scope](nsc-cosmological-atlas-v2.md) |
@@ -17,9 +19,9 @@ and [claim ledger](claim-ledger.md).
 | First sourced interior, vacuum end and finite observer degeneracy | [Slice adapter](../src/recursive_horizons/nsc_atlas_connection_slice.py), [observer adapter](../src/recursive_horizons/nsc_atlas_connection_observer.py), [v4 producer](../scripts/derive_nsc_cosmological_atlas_v4.py), [scope](nsc-cosmological-atlas-v4.md), [end-only gluing](nsc-atlas-connection-gluing.md) |
 | Interior causal reference, matched charts and observer access | [Reference adapter](../src/recursive_horizons/nsc_atlas_causal_reference.py), [interior observers](../src/recursive_horizons/nsc_atlas_causal_observers.py), [v5 producer](../scripts/derive_nsc_cosmological_atlas_v5.py), [scope](nsc-cosmological-atlas-v5.md), [classification](nsc-atlas-causal-classification.md); known mathematics applied to the isolated reference, with the glued global future still open |
 | Early field state, wall transmission and central waveform | [Field adapter](../src/recursive_horizons/nsc_atlas_field_transfer.py), [state and transfer](nsc-atlas-field-transfer.md), [matching sources](nsc-atlas-field-matching.md), [v6 producer](../scripts/derive_nsc_cosmological_atlas_v6.py), [scope](nsc-cosmological-atlas-v6.md); exact conditional classical response, with global incident-state preparation unresolved |
-| Both-worktree family census, dispositions and reading boundaries | [Inventory](research-inventory.md), [producer](../../scripts/research_inventory.py) |
+| Both-worktree family census, dispositions and reading boundaries | [Inventory](research-inventory.md), [producer](../scripts/research_inventory.py) |
 | Existing supplied-H(t) finite memory/drive reducer | [nsc_evolving_reduction](../src/recursive_horizons/nsc_evolving_reduction.py); a physically justified multi-region Hamiltonian is still missing |
-| Borrowed results and admission before compute | [Existing owner](../../docs/prior-art-and-open-claim.md), [arXiv reuse library](../../docs/arxiv-studies.md) |
+| Borrowed results and admission before compute | [Existing owner](prior-art-and-open-claim.md), [arXiv reuse library](arxiv-studies.md) |
 
 The source-fixed incoming gate remains OPEN and its campaign is paused. Its
 threshold, source, and history belong to that application. A later "next",
@@ -35,7 +37,7 @@ areal-radius near-throat child. Exact magnetic RN calibration comes
 before any sourced case. The source-free jet comparison is measured from reconstructed PG
 jets, meets $10^{-4}$, and is independently confirmed. The archived frames do not store derived energies or curvature.
 `--assess-archive` reads
-[the rank-9 directory](../archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/)
+[the rank-9 directory](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/)
 without a time step. The official writer refused that sealed
 directory. The accepted body is the manual creation-only
 [assessment v1](../results/development/nsc-rn-pilot-assessment-v1.json),
@@ -67,9 +69,9 @@ parent's bounded $n_f=256$ confirmation is recorded; its comparison
 and CPU stay on the status page. That record stores no $R_4$.
 Source-free and matter-jet assessment of that older record is future
 Stage 0. Status:
-[current result](../../docs/current-result.md#rn-radial-parent-4-october-2026).
+[current result](current-result.md#rn-radial-parent-4-october-2026).
 Rules:
-[RN radial programme](../../docs/instructions.md#rn-radial-programme).
+[RN radial programme](instructions.md#rn-radial-programme).
 
 | Responsibility | Owner |
 |---|---|
@@ -84,7 +86,7 @@ Rules:
 <a id="rn-pending-registration"></a>
 
 The archived pilot and its receipt are
-[rn-first-infall-pilot-2026-10-04](../archive/rn-first-infall-pilot-2026-10-04/receipt.json).
+[rn-first-infall-pilot-2026-10-04](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/receipt.json).
 `sat_norm_ledger` uses twice the raw SAT coefficient. Probability
 closure at the saved clocks stays reconciled. Derived energy and
 curvature come from `--assess-archive`, not from the raw frames. The
@@ -116,7 +118,7 @@ Earlier hard-anchor records stay in place. The incoming-gate campaign
 stays paused. The ancestry share $\eta$ is not a new gate, and a
 fixed-$J$ Schur reduction is not a substitute for the full
 state–geometry force. Status:
-[current result](../../docs/current-result.md#responsive-parent-3-october-2026).
+[current result](current-result.md#responsive-parent-3-october-2026).
 
 | Responsibility | Owner |
 |---|---|
@@ -710,7 +712,7 @@ contain $T=0.05$. The episode section above owns that saved measurement.
 The initial $10^{-8}$ flag is false and did not veto the
 measurement. The stored radius is the retained Newton best, not the last
 accepted trial. Archived probe bytes are mapped in
-[probes/README.md](../archive/probes/README.md); v4 only reprints its
+[probes/README.md](../archive/reassembly-20261012/lab-context/archive/probes/README.md); v4 only reprints its
 partial archive.
 
 ## Finite-window embedding v1, 2026-10-01
@@ -1172,7 +1174,7 @@ roadmap or an order to resume.
 
 ## Evaluator repair and calibration, 2026-09-25
 
-The [historical handover](../handover.md#aktuell-fortsättning-2026-09-25) recorded
+The [historical handover](../archive/reassembly-20261012/lab-context/handover.md#aktuell-fortsättning-2026-09-25) recorded
 that dated checkpoint; it does not own the current task, and it does not
 resume the paused gate campaign. The [claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation)
 connects the inherited operator law and regenerative interpretation to the
@@ -1207,7 +1209,7 @@ primal-control values quoted in the historical account below.
 The following account preserves the earlier search state. It is not the
 current run-driver assignment or instruction to resume a high-mode campaign.
 
-The [historical handover](../handover.md) recorded the interruption
+The [historical handover](../archive/reassembly-20261012/lab-context/handover.md) recorded the interruption
 point at that time. One Cursor session then drove Dirac runs. Value-only iterate6 at 47
 nodes measures `(8.02778773e-4, 3.61431642e-6)` in 105.3 wall seconds.
 The numerical-floor ladder did not declare loop or certificate
@@ -2643,7 +2645,7 @@ collapse calculation.
 - `src/recursive_horizons/evidence_io.py`: shared neutral evidence I/O.
 - `src/recursive_horizons/unified_action.py`: retained finite reduction/scalar recursion fixtures, not a complete covariant quantum action.
 
-Boundary and regulated-matrix calculations extend this map when verified. Historical FGC code, authority and prospectus are in the [frozen archive](../archive/pre-closure-2026-09-08/INDEX.md). Raw stores remain intact; no current command resumes them. The curated preprint is a separate repository.
+Boundary and regulated-matrix calculations extend this map when verified. Historical FGC code, authority and prospectus are in the [frozen archive](../archive/reassembly-20261012/lab-context/archive/pre-closure-2026-09-08/INDEX.md). Raw stores remain intact; no current command resumes them. The curated preprint is a separate repository.
 
 ## Archived candidate notes
 

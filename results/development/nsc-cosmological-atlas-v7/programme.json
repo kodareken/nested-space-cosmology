@@ -1,0 +1,648 @@
+{
+  "calculation_graph": [
+    {
+      "borrowed": "Local rotational symmetry and Euclidean isotropic surface-energy results are reusable.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Reuse local spherical charts and the nonspherical parent initial-data family.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v6/atlas.json"
+      ],
+      "gap_kind": "reusable_result",
+      "id": "geometry-baseline",
+      "missing": [
+        "No new geometry calculation is required to index these established inputs."
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-parent-initial-data.md",
+        "docs/nsc-cosmological-atlas.md#question-spheres"
+      ],
+      "prerequisite_ids": [],
+      "status": "reusable",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "sphere"
+      ],
+      "unlock_ids": [
+        "boundary-classification"
+      ]
+    },
+    {
+      "borrowed": "Geometric attachment, descent, causal influence and correlation are distinct relations. The fixed wall transmission law and smooth exterior scalar potential are borrowed.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Identify the boundary type, source, state and clock domain before matching.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v5/observer-access.json",
+        "results/development/nsc-cosmological-atlas-v6/field-transfer.json"
+      ],
+      "gap_kind": "known_equations_missing_compatibility",
+      "id": "boundary-classification",
+      "missing": [
+        "A selected source and mutually compatible region data are required."
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-causal-observers.md",
+        "docs/nsc-atlas-field-matching.md",
+        "docs/nsc-atlas-field-transfer.md",
+        "docs/nsc-cosmological-atlas.md#question-gradient-boundaries",
+        "docs/nsc-cosmological-atlas.md#question-inside-outside"
+      ],
+      "prerequisite_ids": [
+        "geometry-baseline"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "insideoutside",
+        "barriers"
+      ],
+      "unlock_ids": [
+        "wall-transmission",
+        "parent-preparation",
+        "inheritance-map"
+      ]
+    },
+    {
+      "borrowed": "The fixed wall transmission law and smooth exterior scalar potential are borrowed. Finite Gaussian states, field matching and classical conditional transfer are available.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Reuse the existing fixed conformal-scalar wall law without deriving it again.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
+        "results/development/nsc-nested-qualities-v1.json"
+      ],
+      "gap_kind": "reusable_result",
+      "id": "wall-transmission",
+      "missing": [
+        "Its conditional validity does not supply remote incident data or quantum-state selection."
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-field-matching.md",
+        "docs/nsc-atlas-field-transfer.md",
+        "docs/nsc-cosmological-atlas.md#question-gradient-boundaries",
+        "docs/nsc-cosmological-atlas.md#question-particle-wave",
+        "docs/nsc-quantum-measure-reuse.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification"
+      ],
+      "status": "reusable",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "barriers",
+        "quantum"
+      ],
+      "unlock_ids": [
+        "wall-trace"
+      ]
+    },
+    {
+      "borrowed": "Finite Gaussian states, field matching and classical conditional transfer are available. The fixed wall transmission law and smooth exterior scalar potential are borrowed.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Reuse the finite transfer-operator proof; do not mistake it for preparation by the excluded right parent.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
+        "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
+        "results/development/nsc-nested-qualities-v1.json"
+      ],
+      "gap_kind": "known_equations_missing_data",
+      "id": "parent-preparation",
+      "missing": [
+        "physical generation of the independent IV data",
+        "extension beyond this finite IV wedge"
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-field-matching.md",
+        "docs/nsc-atlas-field-preparation.md",
+        "docs/nsc-atlas-field-transfer.md",
+        "docs/nsc-cosmological-atlas.md#question-gradient-boundaries",
+        "docs/nsc-cosmological-atlas.md#question-particle-wave",
+        "docs/nsc-quantum-measure-reuse.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification"
+      ],
+      "status": "finite_IV_operator_certified",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "quantum",
+        "barriers"
+      ],
+      "unlock_ids": [
+        "wall-trace"
+      ]
+    },
+    {
+      "borrowed": "The fixed wall transmission law and smooth exterior scalar potential are borrowed.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Use the certified operator for a later admitted wall trace; no waveform is computed in this bundle.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v6/field-transfer.json"
+      ],
+      "gap_kind": "known_equations_missing_data",
+      "id": "wall-trace",
+      "missing": [
+        "evaluation of the justified operator on the independent g(V), if admitted for a named new observable"
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-field-matching.md",
+        "docs/nsc-atlas-field-transfer.md",
+        "docs/nsc-cosmological-atlas.md#question-gradient-boundaries"
+      ],
+      "prerequisite_ids": [
+        "parent-preparation",
+        "wall-transmission"
+      ],
+      "status": "operator_available_waveform_not_evaluated",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "barriers"
+      ],
+      "unlock_ids": [
+        "observer-response"
+      ]
+    },
+    {
+      "borrowed": "Proper-time maps and finite clock-domain exits have an explicit reference geometry. Geometric attachment, descent, causal influence and correlation are distinct relations.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Apply the existing observer transfer only to a newly justified trace.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v5/observer-access.json"
+      ],
+      "gap_kind": "known_equations_missing_data",
+      "id": "observer-response",
+      "missing": [
+        "Remote preparation must be supplied before interpreting the conditional waveform as a parent signal."
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-causal-observers.md",
+        "docs/nsc-clock-horizon.md",
+        "docs/nsc-cosmological-atlas.md#question-inside-outside",
+        "docs/nsc-cosmological-atlas.md#question-time"
+      ],
+      "prerequisite_ids": [
+        "wall-trace"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "time",
+        "insideoutside"
+      ],
+      "unlock_ids": [
+        "observer-inference",
+        "clock-entropy"
+      ]
+    },
+    {
+      "borrowed": "Geometric attachment, descent, causal influence and correlation are distinct relations.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Compare fixed candidate responses and identify a distinguishing observable or a degeneracy.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v5/observer-access.json"
+      ],
+      "gap_kind": "known_equations_missing_compatibility",
+      "id": "observer-inference",
+      "missing": [
+        "A physically compatible set of preparations and a declared observer measurement are required."
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-causal-observers.md",
+        "docs/nsc-cosmological-atlas.md#question-inside-outside"
+      ],
+      "prerequisite_ids": [
+        "observer-response"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "insideoutside"
+      ],
+      "unlock_ids": []
+    },
+    {
+      "borrowed": "Published multiple-daughter geometries and branching mathematics may be borrowed. Unit rescaling, finite normalized inheritance and model-specific scale matching are available.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Specify what the transition transfers: law, state, charge or dimensionless parameters.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v1/atlas.json",
+        "results/development/nsc-cosmological-atlas-v1/controls.json",
+        "results/development/scale-binding.json"
+      ],
+      "gap_kind": "missing_physical_mechanism",
+      "id": "inheritance-map",
+      "missing": [
+        "The finite normalized operator construction does not supply a cosmological transition kernel."
+      ],
+      "owner_refs": [
+        "docs/arxiv-studies.md",
+        "docs/nsc-cosmological-atlas.md#question-branching",
+        "docs/nsc-cosmological-atlas.md#question-regional-scales",
+        "docs/nsc-nested-qualities.md",
+        "docs/nsc-scale-binding.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "branching",
+        "scales"
+      ],
+      "unlock_ids": [
+        "regional-scales",
+        "field-orientation",
+        "clock-entropy",
+        "branching-recurrence"
+      ]
+    },
+    {
+      "borrowed": "Unit rescaling, finite normalized inheritance and model-specific scale matching are available.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Separate a changed dimensionless prediction from changed units or environmental state.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/scale-binding.json"
+      ],
+      "gap_kind": "missing_physical_mechanism",
+      "id": "regional-scales",
+      "missing": [
+        "A physical parameter-transfer mechanism must be identified."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-regional-scales",
+        "docs/nsc-nested-qualities.md",
+        "docs/nsc-scale-binding.md"
+      ],
+      "prerequisite_ids": [
+        "inheritance-map"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "scales"
+      ],
+      "unlock_ids": []
+    },
+    {
+      "borrowed": "Charge matching and distinct published CPT or torsion constructions supply conditional mathematics.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Compare explicit charge/CPT identifications on an admissible attachment.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/vacuum-charge-matching.json"
+      ],
+      "gap_kind": "missing_physical_mechanism",
+      "id": "field-orientation",
+      "missing": [
+        "No field transformation is selected by inside/outside geometry alone."
+      ],
+      "owner_refs": [
+        "docs/arxiv-studies.md",
+        "docs/nsc-cosmological-atlas.md#question-charge",
+        "docs/nsc-vacuum-charge-matching.md"
+      ],
+      "prerequisite_ids": [
+        "inheritance-map"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "charge"
+      ],
+      "unlock_ids": []
+    },
+    {
+      "borrowed": "Proper-time maps and finite clock-domain exits have an explicit reference geometry.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Connect a proper-time observable and entropy evolution under a fixed law and state.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v5/observer-access.json"
+      ],
+      "gap_kind": "missing_physical_mechanism",
+      "id": "clock-entropy",
+      "missing": [
+        "Cross-region clock identification and entropy dynamics remain unsupplied."
+      ],
+      "owner_refs": [
+        "docs/nsc-atlas-causal-observers.md",
+        "docs/nsc-clock-horizon.md",
+        "docs/nsc-cosmological-atlas.md#question-time"
+      ],
+      "prerequisite_ids": [
+        "observer-response",
+        "inheritance-map"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "time"
+      ],
+      "unlock_ids": [
+        "branching-recurrence"
+      ]
+    },
+    {
+      "borrowed": "Published multiple-daughter geometries and branching mathematics may be borrowed.",
+      "budget": {
+        "new_propagation_runs": 0,
+        "separate_compute_admission_required": true
+      },
+      "decision": "Use borrowed branching mathematics to test a declared finite offspring law.",
+      "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v1/atlas.json",
+        "results/development/nsc-cosmological-atlas-v1/controls.json"
+      ],
+      "gap_kind": "missing_physical_mechanism",
+      "id": "branching-recurrence",
+      "missing": [
+        "Formation, lifetime and recycling rules are needed; an infinite recurrence conclusion is not assumed."
+      ],
+      "owner_refs": [
+        "docs/arxiv-studies.md",
+        "docs/nsc-cosmological-atlas.md#question-branching",
+        "docs/nsc-nested-qualities.md"
+      ],
+      "prerequisite_ids": [
+        "inheritance-map",
+        "clock-entropy"
+      ],
+      "status": "open",
+      "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+      "theme_ids": [
+        "branching"
+      ],
+      "unlock_ids": []
+    }
+  ],
+  "graph_meaning": "Research prerequisites only; no new spacetime, causal or inheritance connections.",
+  "new_compute_admitted": false,
+  "physical_recurrence_established": false,
+  "questions": [
+    {
+      "borrowed": "Local rotational symmetry and Euclidean isotropic surface-energy results are reusable.",
+      "decision": "Compare admitted nonspherical boundary data with the spherical approximation.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v6/atlas.json"
+      ],
+      "id": "sphere",
+      "missing": [
+        "Global multi-hole symmetry, shape selection and stability require their own dynamics."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-spheres",
+        "docs/nsc-atlas-parent-initial-data.md"
+      ],
+      "prerequisite_ids": [],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Spherical regions and departures from symmetry",
+      "unlock_ids": [
+        "boundary-classification"
+      ]
+    },
+    {
+      "borrowed": "Geometric attachment, descent, causal influence and correlation are distinct relations.",
+      "decision": "Identify which distinct exterior histories this observer could distinguish.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v5/observer-access.json"
+      ],
+      "id": "insideoutside",
+      "missing": [
+        "An operator complement or diagram is not automatically an exterior spacetime."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-inside-outside",
+        "docs/nsc-atlas-causal-observers.md"
+      ],
+      "prerequisite_ids": [
+        "geometry-baseline",
+        "observer-response",
+        "wall-trace"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Inside, outside and the observer",
+      "unlock_ids": [
+        "clock-entropy",
+        "inheritance-map",
+        "observer-inference",
+        "parent-preparation",
+        "wall-transmission"
+      ]
+    },
+    {
+      "borrowed": "Finite Gaussian states, field matching and classical conditional transfer are available.",
+      "decision": "Specify a compatible state and its observables before interpreting a particle-wave analogy.",
+      "evidence_refs": [
+        "results/development/nsc-nested-qualities-v1.json",
+        "results/development/nsc-cosmological-atlas-v6/field-transfer.json"
+      ],
+      "id": "quantum",
+      "missing": [
+        "The scalar pulse is classical; a joined quantum state and literal particle interiors are not established."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-particle-wave",
+        "docs/nsc-quantum-measure-reuse.md",
+        "docs/nsc-atlas-field-matching.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Fields, quantum states and particle descriptions",
+      "unlock_ids": [
+        "wall-trace"
+      ]
+    },
+    {
+      "borrowed": "The fixed wall transmission law and smooth exterior scalar potential are borrowed.",
+      "decision": "Determine which admissible exterior preparation supplies the required wall characteristic.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v6/field-transfer.json"
+      ],
+      "id": "barriers",
+      "missing": [
+        "A material wall, propagation potential, observer horizon and gluing surface have different equations."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-gradient-boundaries",
+        "docs/nsc-atlas-field-matching.md",
+        "docs/nsc-atlas-field-transfer.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification",
+        "geometry-baseline",
+        "parent-preparation",
+        "wall-transmission"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Gradient zones, interfaces and propagation",
+      "unlock_ids": [
+        "inheritance-map",
+        "observer-response",
+        "parent-preparation",
+        "wall-trace",
+        "wall-transmission"
+      ]
+    },
+    {
+      "borrowed": "Unit rescaling, finite normalized inheritance and model-specific scale matching are available.",
+      "decision": "Find an inherited dimensionless observable that unit rescaling cannot reproduce.",
+      "evidence_refs": [
+        "results/development/scale-binding.json"
+      ],
+      "id": "scales",
+      "missing": [
+        "Planck length is a derived scale; minimum wavelength, temperature and changed laws are separate hypotheses."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-regional-scales",
+        "docs/nsc-scale-binding.md",
+        "docs/nsc-nested-qualities.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification",
+        "inheritance-map"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Regional scales and dimensionless laws",
+      "unlock_ids": [
+        "branching-recurrence",
+        "clock-entropy",
+        "field-orientation",
+        "regional-scales"
+      ]
+    },
+    {
+      "borrowed": "Charge matching and distinct published CPT or torsion constructions supply conditional mathematics.",
+      "decision": "Attach an explicit field transformation to a compatible junction and identify a discriminator.",
+      "evidence_refs": [
+        "results/development/vacuum-charge-matching.json"
+      ],
+      "id": "charge",
+      "missing": [
+        "Geometric inside/outside orientation alone does not select charge conjugation or an antimatter abundance."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-charge",
+        "docs/nsc-vacuum-charge-matching.md",
+        "docs/arxiv-studies.md"
+      ],
+      "prerequisite_ids": [
+        "inheritance-map"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Charge, orientation and antimatter",
+      "unlock_ids": []
+    },
+    {
+      "borrowed": "Proper-time maps and finite clock-domain exits have an explicit reference geometry.",
+      "decision": "Compare proper-time and entropy observables for the same fixed state and attachment.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v5/observer-access.json"
+      ],
+      "id": "time",
+      "missing": [
+        "Coordinate clocks do not establish cross-universe ages; entropy and an ancestral clock law remain open."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-time",
+        "docs/nsc-atlas-causal-observers.md",
+        "docs/nsc-clock-horizon.md"
+      ],
+      "prerequisite_ids": [
+        "inheritance-map",
+        "observer-response",
+        "wall-trace"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Observer clocks and the arrow of time",
+      "unlock_ids": [
+        "branching-recurrence",
+        "clock-entropy",
+        "observer-inference"
+      ]
+    },
+    {
+      "borrowed": "Published multiple-daughter geometries and branching mathematics may be borrowed.",
+      "decision": "Specify a transition law and determine what it predicts for unequal offspring within a finite depth.",
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v1/atlas.json",
+        "results/development/nsc-cosmological-atlas-v1/controls.json"
+      ],
+      "id": "branching",
+      "missing": [
+        "Offspring formation, a physical transition law and recurrence are not established by finite nesting or our existence."
+      ],
+      "owner_refs": [
+        "docs/nsc-cosmological-atlas.md#question-branching",
+        "docs/arxiv-studies.md",
+        "docs/nsc-nested-qualities.md"
+      ],
+      "prerequisite_ids": [
+        "boundary-classification",
+        "clock-entropy",
+        "inheritance-map"
+      ],
+      "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+      "status": "open",
+      "title": "Unequal children, inheritance and recycling",
+      "unlock_ids": [
+        "branching-recurrence",
+        "clock-entropy",
+        "field-orientation",
+        "regional-scales"
+      ]
+    }
+  ],
+  "schema": "nsc-atlas-programme-v1"
+}

@@ -12,6 +12,7 @@ import hashlib
 import heapq
 import json
 import math
+from pathlib import PurePosixPath
 
 import numpy as np
 import sympy as sp
@@ -20,6 +21,9 @@ from .nsc_evolving_reduction import evolve_retained_region
 
 SCHEMA = "nsc-cosmological-atlas-v1"
 LINK_KINDS = frozenset(("descent", "attachment", "causal", "correlation"))
+PROGRAMME_SCHEMA = "nsc-atlas-programme-v1"
+PROGRAMME_THEMES = ("sphere", "insideoutside", "quantum", "barriers", "scales", "charge", "time", "branching")
+CONNECTION_RECORD_KINDS = frozenset(("preparation", "transition_inheritance", "observer_equivalence"))
 SOURCES = {
     "barrabes_frolov": {
         "url": "https://arxiv.org/html/hep-th/9511136v1",
@@ -312,9 +316,277 @@ def build_atlas():
     return atlas
 
 
+def programme_record():
+    """Research dependencies and questions; neither new physics nor new edges.
+
+    Owner references describe the reading boundary rather than certifying all
+    linked derivations. Future numerical work still needs a separate admission.
+    The DAG orders research prerequisites, not physical descent or recurrence.
+    """
+    v1 = "results/development/nsc-cosmological-atlas-v1/"
+    v5 = "results/development/nsc-cosmological-atlas-v5/"
+    v6 = "results/development/nsc-cosmological-atlas-v6/"
+    rows = [
+        ("sphere", "Spherical regions and departures from symmetry", "question-spheres",
+         ["docs/nsc-atlas-parent-initial-data.md"], [v6 + "atlas.json"],
+         "Local rotational symmetry and Euclidean isotropic surface-energy results are reusable.",
+         "Global multi-hole symmetry, shape selection and stability require their own dynamics.",
+         "Compare admitted nonspherical boundary data with the spherical approximation."),
+        ("insideoutside", "Inside, outside and the observer", "question-inside-outside",
+         ["docs/nsc-atlas-causal-observers.md"], [v5 + "observer-access.json"],
+         "Geometric attachment, descent, causal influence and correlation are distinct relations.",
+         "An operator complement or diagram is not automatically an exterior spacetime.",
+         "Identify which distinct exterior histories this observer could distinguish."),
+        ("quantum", "Fields, quantum states and particle descriptions", "question-particle-wave",
+         ["docs/nsc-quantum-measure-reuse.md", "docs/nsc-atlas-field-matching.md"],
+         ["results/development/nsc-nested-qualities-v1.json", v6 + "field-transfer.json"],
+         "Finite Gaussian states, field matching and classical conditional transfer are available.",
+         "The scalar pulse is classical; a joined quantum state and literal particle interiors are not established.",
+         "Specify a compatible state and its observables before interpreting a particle-wave analogy."),
+        ("barriers", "Gradient zones, interfaces and propagation", "question-gradient-boundaries",
+         ["docs/nsc-atlas-field-matching.md", "docs/nsc-atlas-field-transfer.md"], [v6 + "field-transfer.json"],
+         "The fixed wall transmission law and smooth exterior scalar potential are borrowed.",
+         "A material wall, propagation potential, observer horizon and gluing surface have different equations.",
+         "Determine which admissible exterior preparation supplies the required wall characteristic."),
+        ("scales", "Regional scales and dimensionless laws", "question-regional-scales",
+         ["docs/nsc-scale-binding.md", "docs/nsc-nested-qualities.md"], ["results/development/scale-binding.json"],
+         "Unit rescaling, finite normalized inheritance and model-specific scale matching are available.",
+         "Planck length is a derived scale; minimum wavelength, temperature and changed laws are separate hypotheses.",
+         "Find an inherited dimensionless observable that unit rescaling cannot reproduce."),
+        ("charge", "Charge, orientation and antimatter", "question-charge",
+         ["docs/nsc-vacuum-charge-matching.md", "docs/arxiv-studies.md"],
+         ["results/development/vacuum-charge-matching.json"],
+         "Charge matching and distinct published CPT or torsion constructions supply conditional mathematics.",
+         "Geometric inside/outside orientation alone does not select charge conjugation or an antimatter abundance.",
+         "Attach an explicit field transformation to a compatible junction and identify a discriminator."),
+        ("time", "Observer clocks and the arrow of time", "question-time",
+         ["docs/nsc-atlas-causal-observers.md", "docs/nsc-clock-horizon.md"], [v5 + "observer-access.json"],
+         "Proper-time maps and finite clock-domain exits have an explicit reference geometry.",
+         "Coordinate clocks do not establish cross-universe ages; entropy and an ancestral clock law remain open.",
+         "Compare proper-time and entropy observables for the same fixed state and attachment."),
+        ("branching", "Unequal children, inheritance and recycling", "question-branching",
+         ["docs/arxiv-studies.md", "docs/nsc-nested-qualities.md"], [v1 + "atlas.json", v1 + "controls.json"],
+         "Published multiple-daughter geometries and branching mathematics may be borrowed.",
+         "Offspring formation, a physical transition law and recurrence are not established by finite nesting or our existence.",
+         "Specify a transition law and determine what it predicts for unequal offspring within a finite depth."),
+    ]
+    questions = []
+    for key, title, anchor, owners, evidence, borrowed, missing, decision in rows:
+        questions.append({"id": key, "title": title, "status": "open",
+            "owner_refs": ["docs/nsc-cosmological-atlas.md#" + anchor, *owners],
+            "evidence_refs": evidence, "borrowed": borrowed, "missing": [missing],
+            "decision": decision,
+            "reading_boundary": "Index of named owners and finite evidence; not independent verification of every linked derivation.",
+            "prerequisite_ids": [], "unlock_ids": []})
+    definitions = [
+        ("geometry-baseline", ["sphere"], [], "reusable_result",
+         "Reuse local spherical charts and the nonspherical parent initial-data family.",
+         "No new geometry calculation is required to index these established inputs."),
+        ("boundary-classification", ["insideoutside", "barriers"], ["geometry-baseline"], "known_equations_missing_compatibility",
+         "Identify the boundary type, source, state and clock domain before matching.",
+         "A selected source and mutually compatible region data are required."),
+        ("wall-transmission", ["barriers", "quantum"], ["boundary-classification"], "reusable_result",
+         "Reuse the existing fixed conformal-scalar wall law without deriving it again.",
+         "Its conditional validity does not supply remote incident data or quantum-state selection."),
+        ("parent-preparation", ["quantum", "barriers"], ["boundary-classification"], "known_equations_missing_data",
+         "Specify admissible exterior data and decide whether they prepare an incoming wall trace.",
+         "Global exterior initial data, source placement and boundary conditions are not yet supplied."),
+        ("wall-trace", ["barriers"], ["parent-preparation", "wall-transmission"], "known_equations_missing_data",
+         "Determine the characteristic delivered to the wall by that fixed preparation.",
+         "The existing compact pulse is prescribed at the wall, not remotely derived."),
+        ("observer-response", ["time", "insideoutside"], ["wall-trace"], "known_equations_missing_data",
+         "Apply the existing observer transfer only to a newly justified trace.",
+         "Remote preparation must be supplied before interpreting the conditional waveform as a parent signal."),
+        ("observer-inference", ["insideoutside"], ["observer-response"], "known_equations_missing_compatibility",
+         "Compare fixed candidate responses and identify a distinguishing observable or a degeneracy.",
+         "A physically compatible set of preparations and a declared observer measurement are required."),
+        ("inheritance-map", ["branching", "scales"], ["boundary-classification"], "missing_physical_mechanism",
+         "Specify what the transition transfers: law, state, charge or dimensionless parameters.",
+         "The finite normalized operator construction does not supply a cosmological transition kernel."),
+        ("regional-scales", ["scales"], ["inheritance-map"], "missing_physical_mechanism",
+         "Separate a changed dimensionless prediction from changed units or environmental state.",
+         "A physical parameter-transfer mechanism must be identified."),
+        ("field-orientation", ["charge"], ["inheritance-map"], "missing_physical_mechanism",
+         "Compare explicit charge/CPT identifications on an admissible attachment.",
+         "No field transformation is selected by inside/outside geometry alone."),
+        ("clock-entropy", ["time"], ["observer-response", "inheritance-map"], "missing_physical_mechanism",
+         "Connect a proper-time observable and entropy evolution under a fixed law and state.",
+         "Cross-region clock identification and entropy dynamics remain unsupplied."),
+        ("branching-recurrence", ["branching"], ["inheritance-map", "clock-entropy"], "missing_physical_mechanism",
+         "Use borrowed branching mathematics to test a declared finite offspring law.",
+         "Formation, lifetime and recycling rules are needed; an infinite recurrence conclusion is not assumed."),
+    ]
+    lookup = {question["id"]: question for question in questions}
+    nodes = []
+    for key, themes, prerequisites, gap, decision, missing in definitions:
+        nodes.append({"id": key, "theme_ids": themes, "prerequisite_ids": prerequisites,
+            "unlock_ids": [], "gap_kind": gap, "status": "reusable" if gap == "reusable_result" else "open",
+            "borrowed": " ".join(lookup[theme]["borrowed"] for theme in themes),
+            "missing": [missing], "decision": decision,
+            "domain": "Named finite candidates and observer domains; no global cosmological inference.",
+            "budget": {"new_propagation_runs": 0, "separate_compute_admission_required": True},
+            "stop": "Stop or redirect when preparation, compatibility or a named new discriminator is absent; do not repeat an already solved calculation.",
+            "owner_refs": sorted({ref for theme in themes for ref in lookup[theme]["owner_refs"]}),
+            "evidence_refs": sorted({ref for theme in themes for ref in lookup[theme]["evidence_refs"]})})
+    by_id = {node["id"]: node for node in nodes}
+    for node in nodes:
+        for prerequisite in node["prerequisite_ids"]:
+            by_id[prerequisite]["unlock_ids"].append(node["id"])
+    for question in questions:
+        related = [node for node in nodes if question["id"] in node["theme_ids"]]
+        question["prerequisite_ids"] = sorted({ref for node in related for ref in node["prerequisite_ids"]})
+        question["unlock_ids"] = sorted({ref for node in related for ref in node["unlock_ids"]})
+    result = {"schema": PROGRAMME_SCHEMA, "questions": questions, "calculation_graph": nodes,
+        "graph_meaning": "Research prerequisites only; no new spacetime, causal or inheritance connections.",
+        "new_compute_admitted": False, "physical_recurrence_established": False}
+    validate_programme(result)
+    return result
+
+
+def _strings(value, label, *, allow_empty=False):
+    if (not isinstance(value, list) or (not value and not allow_empty)
+            or any(not isinstance(item, str) or not item.strip() for item in value)
+            or len(value) != len(set(value))):
+        raise ValueError(label + " must contain distinct nonempty strings")
+    return value
+
+
+def _references(record, field, *, allow_empty=False):
+    for ref in _strings(record.get(field), field, allow_empty=allow_empty):
+        path = ref.split("#", 1)[0]
+        if (not path or "\\" in path or ":" in path or PurePosixPath(path).is_absolute()
+                or ".." in PurePosixPath(path).parts):
+            raise ValueError(field + " must name repository-relative evidence or owners")
+
+
+def _dependency_refs(record, known):
+    for field in ("prerequisite_ids", "unlock_ids"):
+        refs = _strings(record.get(field), field, allow_empty=True)
+        if set(refs) - known:
+            raise ValueError("unknown research dependency reference in " + field)
+
+
+def _record_rows(value, label):
+    if not isinstance(value, list) or any(not isinstance(row, dict) for row in value):
+        raise ValueError(label + " must be a list of records")
+    return value
+
+
+def validate_programme(record):
+    """Validate the finite research DAG independently of physical atlas edges."""
+    if not isinstance(record, dict) or record.get("schema") != PROGRAMME_SCHEMA:
+        raise ValueError("unsupported programme schema")
+    questions = _record_rows(record.get("questions"), "programme questions")
+    nodes = _record_rows(record.get("calculation_graph"), "research dependencies")
+    if not nodes:
+        raise ValueError("programme requires question and research dependency records")
+    themes = _strings([row.get("id") for row in questions], "question IDs")
+    if set(themes) != set(PROGRAMME_THEMES):
+        raise ValueError("programme must retain all eight question themes")
+    ids = set(_strings([row.get("id") for row in nodes], "research dependency IDs"))
+    for row in questions + nodes:
+        _references(row, "owner_refs")
+        _references(row, "evidence_refs", allow_empty=True)
+        _dependency_refs(row, ids)
+        _strings(row.get("missing"), "explicit missing connections")
+        if not isinstance(row.get("decision"), str) or not row["decision"].strip():
+            raise ValueError("a research record needs a decision")
+    for question in questions:
+        if not isinstance(question.get("reading_boundary"), str) or not question["reading_boundary"].strip():
+            raise ValueError("question needs an explicit reading boundary")
+    by_id = {row["id"]: row for row in nodes}
+    for row in nodes:
+        if set(_strings(row.get("theme_ids"), "theme IDs")) - set(themes):
+            raise ValueError("unknown question theme")
+        if row.get("gap_kind") not in {"reusable_result", "known_equations_missing_data",
+                "known_equations_missing_compatibility", "missing_physical_mechanism"}:
+            raise ValueError("research gap must distinguish missing data, compatibility and mechanism")
+        expected = {other["id"] for other in nodes if row["id"] in other["prerequisite_ids"]}
+        if set(row["unlock_ids"]) != expected:
+            raise ValueError("research unlock IDs must agree with prerequisite IDs")
+        for field in ("borrowed", "domain", "stop"):
+            if not isinstance(row.get(field), str) or not row[field].strip():
+                raise ValueError("research record needs " + field)
+        if not isinstance(row.get("budget"), dict) or not row["budget"]:
+            raise ValueError("research record needs an explicit finite budget")
+    visited, active = set(), set()
+    def visit(key):
+        if key in active:
+            raise ValueError("research prerequisites cannot contain a cycle")
+        if key in visited:
+            return
+        active.add(key)
+        for previous in by_id[key]["prerequisite_ids"]:
+            visit(previous)
+        active.remove(key)
+        visited.add(key)
+    for key in ids:
+        visit(key)
+    return True
+
+
+def _validate_connection_records(scenario, programme):
+    """Optional annotations cannot fill a missing physical edge implicitly."""
+    records = _record_rows(scenario.get("connection_records", []), "connection_records")
+    _strings([row.get("id") for row in records], "connection record IDs", allow_empty=True)
+    regions = {row["id"] for row in scenario["regions"]}
+    links = {row["id"] for row in scenario["links"]}
+    nodes = {row["id"] for row in programme["calculation_graph"]} if programme else set()
+    for row in records:
+        if row.get("kind") not in CONNECTION_RECORD_KINDS:
+            raise ValueError("unknown optional connection record kind")
+        if row.get("status") not in {"unresolved", "conditional", "established_in_domain"}:
+            raise ValueError("connection record needs an explicit status")
+        for field in ("domain",):
+            if not isinstance(row.get(field), str) or not row[field].strip():
+                raise ValueError("connection record needs a finite domain")
+        _strings(row.get("assumptions"), "connection assumptions")
+        _strings(row.get("missing"), "connection missing conditions",
+                 allow_empty=row["status"] == "established_in_domain")
+        _references(row, "owner_refs")
+        _references(row, "evidence_refs", allow_empty=row["status"] == "unresolved")
+        _dependency_refs(row, nodes)
+        for field, known in (("region_refs", regions), ("link_refs", links)):
+            if set(_strings(row.get(field), field, allow_empty=True)) - known:
+                raise ValueError("unknown atlas reference in " + field)
+        if row["status"] == "established_in_domain":
+            _references(row, "independent_check_refs")
+        if row["kind"] == "preparation":
+            if row.get("origin") not in {"prescribed_at_boundary", "derived_from_exterior", "unresolved"}:
+                raise ValueError("preparation needs an explicit origin")
+            _optional_physical_claim(row, "remote_preparation_established")
+            if row["remote_preparation_established"] and row["origin"] != "derived_from_exterior":
+                raise ValueError("prescribed boundary data cannot establish remote preparation")
+        elif row["kind"] == "transition_inheritance":
+            _optional_physical_claim(row, "physical_inheritance_established")
+            _strings(row.get("transferred_quantities"), "transferred quantities", allow_empty=True)
+            if row.get("map_ref") is not None:
+                _references({"map": [row["map_ref"]]}, "map")
+            if row["physical_inheritance_established"] and (not row.get("map_ref") or not row["transferred_quantities"]):
+                raise ValueError("physical inheritance requires a declared transition map and quantities")
+        else:
+            _optional_physical_claim(row, "equivalence_established")
+            if row.get("observer_region") not in regions:
+                raise ValueError("observer equivalence needs a known observer region")
+            _strings(row.get("observables"), "observer observables")
+            if len(_strings(row.get("alternatives"), "observer alternatives")) < 2:
+                raise ValueError("observer equivalence compares at least two alternatives")
+            if not isinstance(row.get("discriminator"), str) or not row["discriminator"].strip():
+                raise ValueError("observer equivalence needs a possible additional discriminator")
+
+
+def _optional_physical_claim(record, field):
+    if not isinstance(record.get(field), bool):
+        raise ValueError(field + " must be explicit; absence is not evidence")
+    if record[field] and record["status"] != "established_in_domain":
+        raise ValueError(field + " requires evidence and independent checks in a declared domain")
+
+
 def validate_atlas(atlas):
     if atlas.get("schema") != SCHEMA:
         raise ValueError("unsupported atlas schema")
+    if "programme" in atlas:
+        validate_programme(atlas["programme"])
     for scenario in atlas["scenarios"]:
         ids = [r["id"] for r in scenario["regions"]]
         if not ids or len(ids) != len(set(ids)):
@@ -363,6 +635,7 @@ def validate_atlas(atlas):
         for link in scenario["links"]:
             if link["kind"] == "descent" and regions[link["to"]]["generation"] != regions[link["from"]]["generation"] + 1:
                 raise ValueError("descent must advance exactly one declared generation")
+        _validate_connection_records(scenario, atlas.get("programme"))
     return True
 
 
@@ -419,6 +692,11 @@ def require_fixed_theory(reference, perturbed):
         raise ValueError("theory changed during a fixed-theory comparison")
     if reference.get("fixed_parameter_bindings", []) != perturbed.get("fixed_parameter_bindings", []):
         raise ValueError("fixed theory parameter bindings changed")
+    def transitions(scenario):
+        return sorted((row for row in scenario.get("connection_records", [])
+                       if row.get("kind") == "transition_inheritance"), key=lambda row: row["id"])
+    if fingerprint(transitions(reference)) != fingerprint(transitions(perturbed)):
+        raise ValueError("transition law changed during a fixed-theory comparison")
     _validate_fixed_bindings(reference)
     _validate_fixed_bindings(perturbed)
     return True

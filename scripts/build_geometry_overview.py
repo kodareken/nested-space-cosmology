@@ -24,6 +24,8 @@ INPUTS = {
     "assembly": "results/development/nsc-cosmological-atlas-v4/parent-assembly.json",
     "access": "results/development/nsc-cosmological-atlas-v5/observer-access.json",
     "field": "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
+    "preparation": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
+    "programme": "results/development/nsc-cosmological-atlas-v7/programme.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -146,9 +148,9 @@ def render(output: Path) -> dict:
     label(13.18, 4.75, "early escape", 9, color="causal")
     label(12.0, 3.30, "After the anchor: no new cross-observer emission\nreaches another of these three worldlines.", 10, color="muted")
     box(12.0, 2.34, 6.13, 0.78,
-        "Prescribed early scalar input → transient at C\nInterior law + wall matching + clocks → waveform",
+        "Wall-input calibration → transient at C\nFinite IV data → admitted transfer operator",
         color="causal", size=10)
-    label(12.0, 1.73, "No solved exterior preparation or many-body future", 10, color="muted")
+    label(12.0, 1.73, "IV waveform and remote generation remain open", 10, color="muted")
 
     for x, kind, name in ((0.66, "attachment", "Attachment"), (4.32, "descent", "Descent"),
                           (7.83, "causal", "Causal influence"), (12.00, "correlation", "Correlation")):
@@ -181,6 +183,12 @@ def render(output: Path) -> dict:
             "field_status": records["field"]["status"],
             "incoming_state": records["field"]["incoming_state"],
             "field_metrics": records["field"]["metrics"],
+            "preparation": {
+                "geometry": records["preparation"]["geometry"],
+                "operator": records["preparation"]["operator"],
+                "waveform_evaluated": False,
+                "remote_generation_established": False,
+            },
             "displayed_connections": [
                 {"from": "cap", "to": "wall", "kind": "attachment", "status": "checked initial slice"},
                 {"from": "wall", "to": "bridge", "kind": "attachment", "status": "checked initial slice"},
@@ -190,11 +198,14 @@ def render(output: Path) -> dict:
                 {"from": "W", "to": "P", "kind": "causal", "status": "early white-hole escape only"},
                 {"from": "prescribed incoming trace", "to": "C", "kind": "causal",
                  "status": "conditional classical scalar response; exterior origin uncomputed"},
+                {"from": "independent finite IV data", "to": "wall and centre", "kind": "causal",
+                 "status": "finite conditional transfer operator; waveform not evaluated"},
             ],
         },
         "limits": [
             "No spatial embedding, global topology or relative physical scales are depicted.",
             "No parent observer prepares the early scalar trace in the isolated reference.",
+            "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],
