@@ -1,0 +1,76 @@
+{
+  "accountable_author": "Douglas Ek",
+  "control": {
+    "degree": 48,
+    "fixed_preparation_digest": "d97ebc2ade5bcc153ac375d7e934072344d58d19766fd7a81f86a948e7782bac",
+    "history_amplitude": 0.001,
+    "local_interval": "S(1)+[.12,.18]",
+    "operator_digest": "667398ba6dc63ac8c4feacc79c725bcf131db5a45c7bcd228dfca73f42daaf3e",
+    "operator_energy_interval": [
+      -320.0,
+      320.0
+    ],
+    "original_source_energy_labels": [
+      -0.5562120090641313,
+      -0.19069155123954112,
+      0.19069155123954112,
+      0.5562120090641313
+    ],
+    "source_family": "14_1"
+  },
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-difference-control.npz": "fb11d703d1291f2d93225904e8e1e7f1ab4c1ff16c44779346ea6b9cc26bd5e4",
+    "results/development/nsc-ks-difference-control.json": "01ac13653c8b787567de920d66c13e11dd6cc343d4c1ff4df6f991df1c463bb0"
+  },
+  "measurements": {
+    "field_comparison": {
+      "F": 1.1102230246251565e-15,
+      "Fz": 5.900916318210353e-16,
+      "dF": 6.457391658443516e-19,
+      "dFz": 2.40474163865632e-15
+    },
+    "matter_N_beta_comparison": [
+      1.9984014443252818e-15,
+      2.706168622523819e-16
+    ],
+    "matter_indicator_tolerance": 1e-11,
+    "numerical_indicator_pass": true,
+    "tangent_N_beta_comparison": [
+      7.666596849552343e-16,
+      5.002508823848117e-16
+    ],
+    "tangent_indicator_tolerance": 3e-08
+  },
+  "payload": {
+    "bytes": 268738,
+    "path": "results/development/artifacts/nsc-ks-energy-propagator-control.npz",
+    "sha256": "3c65e9b3d8dacbd82620e5e48f10a0a4b62c19642b526f499d3cf0dbcfaee71b"
+  },
+  "reproducer": "python3 scripts/derive_nsc_ks_energy_propagator_control.py --check",
+  "runtime": {
+    "CPU_cap": 60.0,
+    "CPU_seconds": 11.229768,
+    "function_evaluations": 1442,
+    "new_operator_solves": 1
+  },
+  "schema": "NSC-KS-ENERGY-PROPAGATOR-CONTROL-v1",
+  "scope": {
+    "changed_history_UV_bound": null,
+    "full_source_accuracy": null,
+    "identity_is_operator_basis": true,
+    "indicators_are_error_bounds": false,
+    "metric_timestep": false,
+    "physical_local_gate": "OPEN",
+    "source_interpolated": false,
+    "stress_drift_subtracted": false
+  },
+  "source_hashes": {
+    "docs/nsc-ks-energy-propagator.md": "4f619ee5a3e9975bb2d7453ab262e643e790eae87995bd3a2e6c70239bc507f9",
+    "scripts/derive_nsc_ks_energy_propagator_control.py": "2b359dace9b353909860f5ef6d0606093daa955facaf3fb3e06ed015e166695c",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196",
+    "src/recursive_horizons/nsc_ks_energy_propagator.py": "5f75023efc8c2b637fc4983b414cab50f15f90f8abc1a24dbc1d23ecef9ecf94",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa"
+  },
+  "status": "PASS: actual-source operator comparison; physical gate OPEN"
+}

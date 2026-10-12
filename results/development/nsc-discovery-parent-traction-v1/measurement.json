@@ -1,0 +1,410 @@
+{
+  "CPU_limit_seconds": 30.0,
+  "aggregate_CPU_seconds": 0.08874200000000004,
+  "array_sha256": {
+    "fine_first_integral": "60834e731575eccf4445d207e39bd53da4d7a48c63bb77a06a8c95431650346d",
+    "fine_state": "656bb75078c6f5798af4d9305e8777119fb78ab005472de62834328174987f66",
+    "fine_x": "742b0585cbb2f39ea6b6d362bcc719a6e861b27e0d5a1ba117ed3f24fabce8dc",
+    "first_integral": "824a1b6682c37e35fd35ac131fbf3ebabe4f82feb85246049105003bdc1bb5ed",
+    "state": "21330b39dc06b080941c8c7ddf6460a7b06cb52e28eef2655b6196103551e3b2",
+    "x": "69b4f2ef4e2543b75b00553cff7f4b6fc0b48a8802210e396537971060058f69"
+  },
+  "autonomous_renewal_claimed": false,
+  "bound_spectrum_completed": false,
+  "comparisons": {
+    "child": {
+      "Q": {
+        "measured": 1.140869437818261,
+        "measured_change": 0.0013755104937118734,
+        "predicted": 1.140865772988347,
+        "predicted_change": 0.0013718456637978882,
+        "prediction_residual": 3.6648299139852014e-06,
+        "residual_over_effect": 0.0026643416613242278
+      },
+      "boundary_gradient_Q_x": {
+        "measured": 0.6293352092776969,
+        "measured_change": 0.006826839618416569,
+        "predicted": 0.6293095529845957,
+        "predicted_change": 0.006801183325315319,
+        "prediction_residual": 2.5656293101250505e-05,
+        "residual_over_effect": 0.003758150848020255
+      },
+      "boundary_gradient_h_x": {
+        "measured": 0.551627722170562,
+        "measured_change": 0.005325232326771512,
+        "predicted": 0.5516133918840588,
+        "predicted_change": 0.005310902040268295,
+        "prediction_residual": 1.4330286503216882e-05,
+        "residual_over_effect": 0.002691016208095619
+      },
+      "boundary_gradient_r_x": {
+        "measured": -0.0016224272762433273,
+        "measured_change": -0.0016224272762433273,
+        "predicted": -0.0016194465266958292,
+        "predicted_change": -0.0016194465266958292,
+        "prediction_residual": -2.980749547498154e-06,
+        "residual_over_effect": 0.0018372161212673727
+      },
+      "center_clock_lapse_ratio": {
+        "measured": 1.1404307492970103,
+        "measured_change": 0.0009368219724612548,
+        "predicted": 1.1404284855095095,
+        "predicted_change": 0.0009345581849604656,
+        "prediction_residual": 2.2637875007891495e-06,
+        "residual_over_effect": 0.002416454318253915
+      },
+      "finite_collar_covariance_eigenvalue": {
+        "measured": 0.0007619989716759164,
+        "measured_change": 0.0007619989716759164,
+        "predicted": 0.0007620059454604408,
+        "predicted_change": 0.0007620059454604408,
+        "prediction_residual": -6.973784524356465e-09,
+        "residual_over_effect": 9.151960545325334e-06
+      },
+      "full_collar_boundary_charge": {
+        "measured": 1.2418375274255722,
+        "measured_change": 0.005598728671731834,
+        "predicted": 1.2418349470428478,
+        "predicted_change": 0.005596148289007452,
+        "prediction_residual": 2.580382724381991e-06,
+        "residual_over_effect": 0.0004608872613188827
+      },
+      "magnetic_integral": {
+        "measured": 1.2372655335954716,
+        "measured_change": 0.0010267348416330702,
+        "predicted": 1.2372629113700835,
+        "predicted_change": 0.00102411261624491,
+        "prediction_residual": 2.6222253881602597e-06,
+        "residual_over_effect": 0.0025539460451049724
+      },
+      "partial_source_energy": {
+        "measured": 0.004571993830055498,
+        "measured_change": 0.004571993830055498,
+        "predicted": 0.004572035672762645,
+        "predicted_change": 0.004572035672762645,
+        "prediction_residual": -4.184270714722299e-08,
+        "residual_over_effect": 9.151960545562477e-06
+      },
+      "proper_lapse_N": {
+        "measured": 1.139596276623753,
+        "measured_change": 0.000102349299204052,
+        "predicted": 1.1395950033730717,
+        "predicted_change": 0.00010107604852271912,
+        "prediction_residual": 1.2732506813328826e-06,
+        "residual_over_effect": 0.01244024816227051
+      },
+      "proper_radial_length": {
+        "measured": 1.0439945393825965,
+        "measured_change": -0.00048166717428377304,
+        "predicted": 1.0439944526448237,
+        "predicted_change": -0.0004817539120565151,
+        "prediction_residual": 8.673777274204042e-08,
+        "residual_over_effect": 0.00018007823113754285
+      },
+      "radius": {
+        "measured": 0.9988840430356846,
+        "measured_change": -0.0011159569643154343,
+        "predicted": 0.9988847947454546,
+        "predicted_change": -0.0011152052545454483,
+        "prediction_residual": -7.517097699860642e-07,
+        "residual_over_effect": 0.0006736010384120756
+      },
+      "right_endpoint_charge": {
+        "measured": 0.6209187637127861,
+        "measured_change": 0.002799364335865917,
+        "predicted": 0.6209174735214239,
+        "predicted_change": 0.002798074144503726,
+        "prediction_residual": 1.2901913621909955e-06,
+        "residual_over_effect": 0.0004608872613188827
+      }
+    },
+    "parent": {
+      "Q": {
+        "measured": 1.86457872683872,
+        "measured_change": 0.013763009157794492,
+        "predicted": 1.8644490326532472,
+        "predicted_change": 0.013633314972321786,
+        "prediction_residual": 0.00012969418547270628,
+        "residual_over_effect": 0.009423388736122125
+      },
+      "boundary_gradient_Q_x": {
+        "measured": 2.9527863596896595,
+        "measured_change": 0.07031166406068001,
+        "predicted": 2.951716282214865,
+        "predicted_change": 0.06924158658588553,
+        "prediction_residual": 0.0010700774747944841,
+        "residual_over_effect": 0.01521906057963571
+      },
+      "boundary_gradient_h_x": {
+        "measured": 1.5836211779032412,
+        "measured_change": 0.026213453248339125,
+        "predicted": 1.5833470745732685,
+        "predicted_change": 0.02593934991836644,
+        "prediction_residual": 0.00027410332997268583,
+        "residual_over_effect": 0.010456589880619904
+      },
+      "boundary_gradient_r_x": {
+        "measured": -0.0058565542656431714,
+        "measured_change": -0.0058565542656431714,
+        "predicted": -0.005799690386016867,
+        "predicted_change": -0.005799690386016867,
+        "prediction_residual": -5.6863879626304834e-05,
+        "residual_over_effect": 0.009709442967153998
+      },
+      "center_clock_lapse_ratio": {
+        "measured": 1.8608903014050637,
+        "measured_change": 0.010074583724138275,
+        "predicted": 1.8608071690057526,
+        "predicted_change": 0.00999145132482715,
+        "prediction_residual": 8.313239931112548e-05,
+        "residual_over_effect": 0.008251695711450964
+      },
+      "finite_collar_covariance_eigenvalue": {
+        "measured": 0.0012037017550095255,
+        "measured_change": 0.0012037017550095255,
+        "predicted": 0.0012038755726499811,
+        "predicted_change": 0.0012038755726499811,
+        "prediction_residual": -1.7381764045557198e-07,
+        "residual_over_effect": 0.00014440258123092663
+      },
+      "full_collar_boundary_charge": {
+        "measured": 3.551005350265532,
+        "measured_change": 0.02671635197109712,
+        "predicted": 3.550838218849201,
+        "predicted_change": 0.026549220554766162,
+        "prediction_residual": 0.00016713141633095674,
+        "residual_over_effect": 0.006255772364122414
+      },
+      "magnetic_integral": {
+        "measured": 3.543783139735242,
+        "measured_change": 0.01949414144081274,
+        "predicted": 3.5436149654132945,
+        "predicted_change": 0.01932596711886525,
+        "prediction_residual": 0.0001681743219474896,
+        "residual_over_effect": 0.00862691606388992
+      },
+      "partial_source_energy": {
+        "measured": 0.007222210530057153,
+        "measured_change": 0.007222210530057153,
+        "predicted": 0.007223253435899887,
+        "predicted_change": 0.007223253435899887,
+        "prediction_residual": -1.0429058427338656e-06,
+        "residual_over_effect": 0.0001444025812309867
+      },
+      "proper_lapse_N": {
+        "measured": 1.8595286561623263,
+        "measured_change": 0.008712938481400867,
+        "predicted": 1.8594533909806719,
+        "predicted_change": 0.008637673299746407,
+        "prediction_residual": 7.526518165446028e-05,
+        "residual_over_effect": 0.008638323547804866
+      },
+      "proper_radial_length": {
+        "measured": 2.454646536852489,
+        "measured_change": 0.002264195085453835,
+        "predicted": 2.45462857410343,
+        "predicted_change": 0.002246232336394982,
+        "prediction_residual": 1.7962749058852978e-05,
+        "residual_over_effect": 0.007933392830968241
+      },
+      "radius": {
+        "measured": 0.9972915755158509,
+        "measured_change": -0.0027084244841490968,
+        "predicted": 0.9973008432850164,
+        "predicted_change": -0.0026991567149835527,
+        "prediction_residual": -9.26776916554406e-06,
+        "residual_over_effect": 0.0034218303739990395
+      },
+      "right_endpoint_charge": {
+        "measured": 1.775502675132766,
+        "measured_change": 0.01335817598554856,
+        "predicted": 1.7754191094246006,
+        "predicted_change": 0.013274610277383081,
+        "prediction_residual": 8.356570816547837e-05,
+        "residual_over_effect": 0.006255772364122414
+      }
+    }
+  },
+  "global_parent_completed": false,
+  "indicator_not_continuous_error_bound": true,
+  "input_hashes": {
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.json": "b40e45400ae3736566dd5723a80869540cfb1bcfb64b1476854066993705c056",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-dynamic-preparation-v2.npz": "63e3bce8c7a052b3086e852f0c7369916a58b0aa6b3d69dea8c55b89ebef4a81"
+  },
+  "measurement": {
+    "CPU_seconds": 0.0020910000000000095,
+    "Q_min": 1.0,
+    "center_proper_frequency": 1.5010983793432477,
+    "center_proper_lapse_N": 0.9992682829064619,
+    "center_radius": 0.9992682829064619,
+    "epsilon_scope": "fixed center-coordinate frequency; center-proper frequency epsilon/N(0)",
+    "first_integral_center": -1.5135462327897642e-16,
+    "first_integral_max": 4.512937332862288e-13,
+    "r_min": 0.9972915755158509,
+    "readouts": {
+      "child": {
+        "Q": 1.140869437818261,
+        "boundary_gradient_Q_x": 0.6293352092776969,
+        "boundary_gradient_h_x": 0.551627722170562,
+        "boundary_gradient_r_x": -0.0016224272762433273,
+        "center_clock_lapse_ratio": 1.1404307492970103,
+        "covariance_admissible_on_this_collar": true,
+        "cut": 0.5,
+        "finite_collar_covariance_eigenvalue": 0.0007619989716759164,
+        "finite_collar_mode_norm": 0.5861530551353203,
+        "full_collar_boundary_charge": 1.2418375274255722,
+        "left_endpoint_charge": -0.6209187637127861,
+        "magnetic_integral": 1.2372655335954716,
+        "magnetic_quadrature_gap": 4.4996006920428044e-11,
+        "mode_norm_quadrature_gap": 5.8544280534533755e-12,
+        "partial_source_energy": 0.004571993830055498,
+        "proper_lapse_N": 1.139596276623753,
+        "proper_radial_length": 1.0439945393825965,
+        "radius": 0.9988840430356846,
+        "right_endpoint_charge": 0.6209187637127861,
+        "static_boundary_identity_residual": 4.5075054799781356e-14
+      },
+      "parent": {
+        "Q": 1.86457872683872,
+        "boundary_gradient_Q_x": 2.9527863596896595,
+        "boundary_gradient_h_x": 1.5836211779032412,
+        "boundary_gradient_r_x": -0.0058565542656431714,
+        "center_clock_lapse_ratio": 1.8608903014050637,
+        "covariance_admissible_on_this_collar": true,
+        "cut": 1.0,
+        "finite_collar_covariance_eigenvalue": 0.0012037017550095255,
+        "finite_collar_mode_norm": 0.9259244269304043,
+        "full_collar_boundary_charge": 3.551005350265532,
+        "left_endpoint_charge": -1.775502675132766,
+        "magnetic_integral": 3.543783139735242,
+        "magnetic_quadrature_gap": 1.2281340389108664e-09,
+        "mode_norm_quadrature_gap": 6.114220241215662e-12,
+        "partial_source_energy": 0.007222210530057153,
+        "proper_lapse_N": 1.8595286561623263,
+        "proper_radial_length": 2.454646536852489,
+        "radius": 0.9972915755158509,
+        "right_endpoint_charge": 1.775502675132766,
+        "static_boundary_identity_residual": 2.3314683517128287e-13
+      }
+    },
+    "real_standing_current_zero": true,
+    "solver": {
+      "atol": 2e-13,
+      "method": "DOP853",
+      "nfev": 230,
+      "points": 257,
+      "rtol": 2e-11
+    },
+    "source_amplitude_globally_normalized": false,
+    "w": 0.0013
+  },
+  "mode": "held_nonlinear_measurement",
+  "payload_sha256": "e7d306105830662ff83f8bbbc4bcb363a49a15a9734a8d6ab0e05b55e669a5b8",
+  "physical_domain": "unchanged leading Einstein/Dirac local static finite BR collar",
+  "physical_vacuum_Gamma_matching": "unresolved",
+  "prediction_json_sha256": "2acf5650e6d1168de0d32bfb4bc71d61ba5bd9bbc8ba3cff43b30ab79a088fb5",
+  "prediction_not_fit": true,
+  "prior_w_0p002_scratch_scope": "development calculation observed before lock; not held-out evidence",
+  "producers": {
+    "lab/docs/nsc-discovery-parent-traction.md": "18c358ce1bba1e1d4461c3afbf94552793e0b58e1011694e0984d14d1595978e",
+    "lab/scripts/derive_nsc_discovery_parent_traction.py": "d1e561553ca030e7b69fad4fd7ed023a3b7bb419a7bc3efe86984a6fde5a8148",
+    "lab/src/recursive_horizons/nsc_discovery_dynamic_preparation.py": "117f10658d1ea24cbfad7793aa42d20d22b9fc4e93b77f3ee8d0588c7a63fdf1",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_parent_traction.py": "5f00bba69962665d2c3e38e307b21cfb4c7db7fd2695d637ceb471835a3643a5",
+    "lab/src/recursive_horizons/provenance.py": "cdafddf265f1f5b19db573749eebac51595dd7aafd2c7a91bcce04e497a9fee4",
+    "lab/tests/test_nsc_discovery_parent_traction.py": "3316e55554b3442a785635e304d8cecbd785c151da28298e7e9e210ec5536e14"
+  },
+  "producing_commit": "b7aa5f5e0f87607e16c22bd8b5955993ce42608d",
+  "rank_one_source_normalization": "w is local amplitude weight; eigenvalue on collar = w integral n dx",
+  "required_exterior_data": [
+    "endpoint r,Q and their outward gradients",
+    "Dirac continuation with compatible phase/frequency",
+    "global mode normalization and CAR state",
+    "matching exterior boundary charge without an imposed wall"
+  ],
+  "schema": "NSC-DISCOVERY-PARENT-TRACTION-v1",
+  "strong_curvature_EFT_validity": "unresolved",
+  "tighter_measurement": {
+    "CPU_seconds": 0.002489000000000019,
+    "Q_min": 1.0,
+    "center_proper_frequency": 1.5010983793432477,
+    "center_proper_lapse_N": 0.9992682829064619,
+    "center_radius": 0.9992682829064619,
+    "epsilon_scope": "fixed center-coordinate frequency; center-proper frequency epsilon/N(0)",
+    "first_integral_center": -1.5135462327897642e-16,
+    "first_integral_max": 8.94249951866044e-15,
+    "r_min": 0.9972915755158034,
+    "readouts": {
+      "child": {
+        "Q": 1.140869437816993,
+        "boundary_gradient_Q_x": 0.6293352092753507,
+        "boundary_gradient_h_x": 0.5516277221691186,
+        "boundary_gradient_r_x": -0.0016224272762257372,
+        "center_clock_lapse_ratio": 1.1404307492957584,
+        "covariance_admissible_on_this_collar": true,
+        "cut": 0.5,
+        "finite_collar_covariance_eigenvalue": 0.0007619989716767631,
+        "finite_collar_mode_norm": 0.5861530551359716,
+        "full_collar_boundary_charge": 1.2418375274223867,
+        "left_endpoint_charge": -0.6209187637111934,
+        "magnetic_integral": 1.2372655335923253,
+        "magnetic_quadrature_gap": 2.9591884498358922e-12,
+        "mode_norm_quadrature_gap": 3.5138558729386205e-13,
+        "partial_source_energy": 0.004571993830060578,
+        "proper_lapse_N": 1.139596276622502,
+        "proper_radial_length": 1.043994539380681,
+        "radius": 0.9988840430356982,
+        "right_endpoint_charge": 0.6209187637111934,
+        "static_boundary_identity_residual": 8.881784197001252e-16
+      },
+      "parent": {
+        "Q": 1.8645787268445835,
+        "boundary_gradient_Q_x": 2.9527863597027015,
+        "boundary_gradient_h_x": 1.5836211779052558,
+        "boundary_gradient_r_x": -0.005856554265674851,
+        "center_clock_lapse_ratio": 1.8608903014108271,
+        "covariance_admissible_on_this_collar": true,
+        "cut": 1.0,
+        "finite_collar_covariance_eigenvalue": 0.001203701755010927,
+        "finite_collar_mode_norm": 0.9259244269314824,
+        "full_collar_boundary_charge": 3.551005350269656,
+        "left_endpoint_charge": -1.775502675134828,
+        "magnetic_integral": 3.543783139739587,
+        "magnetic_quadrature_gap": 7.722666950371604e-11,
+        "mode_norm_quadrature_gap": 3.7625458304546555e-13,
+        "partial_source_energy": 0.007222210530065562,
+        "proper_lapse_N": 1.8595286561680855,
+        "proper_radial_length": 2.4546465368554093,
+        "radius": 0.9972915755158034,
+        "right_endpoint_charge": 1.775502675134828,
+        "static_boundary_identity_residual": 3.552713678800501e-15
+      }
+    },
+    "real_standing_current_zero": true,
+    "solver": {
+      "atol": 2e-15,
+      "method": "DOP853",
+      "nfev": 302,
+      "points": 513,
+      "rtol": 2e-13
+    },
+    "source_amplitude_globally_normalized": false,
+    "w": 0.0013
+  },
+  "tolerance_and_grid_indicators": {
+    "child": {
+      "Q": -1.2678746941219288e-12,
+      "full_collar_boundary_charge": -3.185451902254499e-12,
+      "partial_source_energy": 5.0801376993980796e-15,
+      "proper_radial_length": -1.91535676208332e-12,
+      "radius": 1.3655743202889425e-14
+    },
+    "parent": {
+      "Q": 5.863531882255302e-12,
+      "full_collar_boundary_charge": 4.1238124026676815e-12,
+      "partial_source_energy": 8.409072049797572e-15,
+      "proper_radial_length": 2.9203306439740118e-12,
+      "radius": -4.75175454539567e-14
+    }
+  }
+}

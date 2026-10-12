@@ -1,0 +1,146 @@
+{
+  "accountable_author": "Douglas Ek",
+  "control": {
+    "amplitude": 0.001,
+    "derivative_tolerance": 3e-08,
+    "family": "14_1",
+    "finite_difference_step": 0.0001,
+    "local_interval": "S(1)+[.12,.18]",
+    "points": 7601,
+    "profile": "w=alpha*Chebyshev_T1*flat axial cutoff, U=0; normal .007/.03",
+    "runs_max": 4,
+    "temporal_indicator_tolerance": 1e-11
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-local-reference-accuracy.json": "dfa96689f269bc950c76c92aa3e5f4e9c95ac6009068d0f82606eff6f07f0eec",
+    "scripts/derive_nsc_evolved_incoming_constraints.py": "ce53587f3077cf4a8de7f8042a5e532319fac9635757b8a48205683e34b4710c",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "measurements": {
+    "checks": {
+      "complete_local_constraint_derivative": 2.439399704456946e-08,
+      "derivative_passed": true,
+      "dropped_deltaC_effect": 0.00249672288651176,
+      "local_matter_derivative": 2.4390324962237243e-08,
+      "local_tangent_time_change": [
+        0.00016612453786160478,
+        0.00014088416973434553
+      ],
+      "local_time_change": [
+        1.6612962339124238e-07,
+        1.4088834642683734e-07
+      ],
+      "same_fixed_preparation": true,
+      "time_indicator_passed": false,
+      "time_indicator_target": 1e-11
+    },
+    "per_case": {
+      "center": {
+        "flux_residual": 8.881784197001252e-16,
+        "phase_residual": 8.993877252678161e-15,
+        "sampled_local_constraint_approximant_max": [
+          0.7077609731879684,
+          0.21914685870801504
+        ],
+        "sampled_local_matter_correction_max": [
+          2.4967146254883943e-06,
+          1.4452420627336648e-06
+        ]
+      },
+      "minus": {
+        "flux_residual": 8.881784197001252e-16,
+        "phase_residual": 1.421492158548512e-14,
+        "sampled_local_constraint_approximant_max": [
+          0.7065809233166729,
+          0.1915200569656227
+        ],
+        "sampled_local_matter_correction_max": [
+          2.247038240810184e-06,
+          1.3007182380654625e-06
+        ]
+      },
+      "plus": {
+        "flux_residual": 8.881784197001252e-16,
+        "phase_residual": 1.421492158548512e-14,
+        "sampled_local_constraint_approximant_max": [
+          0.7089403585463102,
+          0.24677366426541394
+        ],
+        "sampled_local_matter_correction_max": [
+          2.74638476560618e-06,
+          1.589766866410408e-06
+        ]
+      },
+      "time_fine": {
+        "flux_residual": 8.881784197001252e-16,
+        "phase_residual": 1.0662919489796583e-14,
+        "sampled_local_constraint_approximant_max": [
+          0.707760807058345,
+          0.21914689583305555
+        ],
+        "sampled_local_matter_correction_max": [
+          2.37254809265508e-06,
+          1.480516288466724e-06
+        ]
+      }
+    }
+  },
+  "payload": {
+    "bytes": 391002,
+    "path": "results/development/artifacts/nsc-local-prepared-response.npz",
+    "sha256": "37fc842c9b49691ad9dbcb910ef2d7aa6d4b2fb5e20119ac7be3596d77bba603"
+  },
+  "reproducer": "python3 scripts/derive_nsc_local_prepared_response.py --check",
+  "reused_artifacts": [
+    {
+      "bytes": 3365007,
+      "path": "results/development/artifacts/nsc-local-reference-accuracy.npz",
+      "sha256": "e2a73c45f594cdf9a5b0d6664be91ea73f2f8620bcf67ac84731d2e0d51b94f5"
+    }
+  ],
+  "runtime": {
+    "CPU_cap": 300.0,
+    "CPU_seconds": 172.12175,
+    "attempted": [
+      "center",
+      "plus",
+      "minus",
+      "time_fine"
+    ],
+    "cap_reached": false,
+    "completed": [
+      "center",
+      "plus",
+      "minus",
+      "time_fine"
+    ],
+    "wall_seconds": 172.20952287500404
+  },
+  "schema": "NSC-LOCAL-PREPARED-RESPONSE-v1",
+  "scope": {
+    "all_channel_coverage": false,
+    "between_node_error": null,
+    "field_and_derivative_error": null,
+    "frozen_C0_imposed": false,
+    "full_source_error": null,
+    "metric_timestep": false,
+    "physical_local_gate": "OPEN",
+    "source_changed": false,
+    "stress_drift_subtracted": false
+  },
+  "source_hashes": {
+    "docs/nsc-local-prepared-response.md": "3f68d0d4df92e193bb8292d3af6796e82b88c001bd1c5fc2b998587df6ea081c",
+    "scripts/derive_nsc_local_prepared_response.py": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1"
+  },
+  "status": "OPEN: source-fixed nonzero-history control; full-source local gate uncertified"
+}

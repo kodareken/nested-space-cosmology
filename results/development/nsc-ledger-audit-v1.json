@@ -1,0 +1,284 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "audit_clean": true,
+  "checked_records": 45,
+  "creation_only": true,
+  "evolved": false,
+  "mismatches": [],
+  "missing_records": [],
+  "notes": [
+    "expectations were written from the records' own published results; the audit re-reads every file fresh"
+  ],
+  "production_trajectory": false,
+  "rows": [
+    {
+      "actual": "EXCISION_CLOSED outer_leaks_only",
+      "check": "verdict",
+      "expected": "EXCISION_CLOSED outer_leaks_only",
+      "ok": true,
+      "record": "nsc-interior-balance-v1.json"
+    },
+    {
+      "actual": "LATE_CLOSURE_HOLDS",
+      "check": "verdict",
+      "expected": "LATE_CLOSURE_HOLDS",
+      "ok": true,
+      "record": "nsc-continuation-station-closure-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-clock-horizon-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-clock-fall-v1.json"
+    },
+    {
+      "actual": "EPS_CROSS_HOLDS",
+      "check": "verdict",
+      "expected": "EPS_CROSS_HOLDS",
+      "ok": true,
+      "record": "nsc-wall-clock-epscross-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-asymmetry-derived-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-clock-derivation-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-cosmic-band-location-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-time-awareness-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-matryoshka-fee-join-v1.json"
+    },
+    {
+      "actual": "OMEGA_STAR_IDENTITY_HOLDS",
+      "check": "verdict",
+      "expected": "OMEGA_STAR_IDENTITY_HOLDS",
+      "ok": true,
+      "record": "nsc-omega-star-identity-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-charged-clock-horizon-v1.json"
+    },
+    {
+      "actual": "GAUSSIAN_APPROACH_HOLDS",
+      "check": "verdict",
+      "expected": "GAUSSIAN_APPROACH_HOLDS",
+      "ok": true,
+      "record": "nsc-charged-ladder-deficit-law-v1.json"
+    },
+    {
+      "actual": "FRINGE_PHYSICS",
+      "check": "verdict",
+      "expected": "FRINGE_PHYSICS",
+      "ok": true,
+      "record": "nsc-charged-tilt-resolution-v1.json"
+    },
+    {
+      "actual": "ORGANISM_CLOCK_REJECTED",
+      "check": "verdict",
+      "expected": "ORGANISM_CLOCK_REJECTED",
+      "ok": true,
+      "record": "nsc-tilt-organism-clock-v1.json"
+    },
+    {
+      "actual": "QUANTUM_IS_SINGLE_NODE",
+      "check": "verdict",
+      "expected": "QUANTUM_IS_SINGLE_NODE",
+      "ok": true,
+      "record": "nsc-tilt-quantum-v1.json"
+    },
+    {
+      "actual": "QUANTUM_LADDER_HOLDS",
+      "check": "verdict",
+      "expected": "QUANTUM_LADDER_HOLDS",
+      "ok": true,
+      "record": "nsc-tilt-quantum-ladder-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-fringe-beta-join-v1.json"
+    },
+    {
+      "actual": "SHARPER_ROOM_SLOWER_RISE",
+      "check": "verdict",
+      "expected": "SHARPER_ROOM_SLOWER_RISE",
+      "ok": true,
+      "record": "nsc-two-ends-join-v1.json"
+    },
+    {
+      "actual": "COVARIANCE_CLOSED_BY_GAP",
+      "check": "verdict",
+      "expected": "COVARIANCE_CLOSED_BY_GAP",
+      "ok": true,
+      "record": "nsc-two-ends-covariance-v1.json"
+    },
+    {
+      "actual": "POWER_STABLE",
+      "check": "verdict",
+      "expected": "POWER_STABLE",
+      "ok": true,
+      "record": "nsc-two-ends-power-stability-v1.json"
+    },
+    {
+      "actual": "TRANSIENT_BAND_CONTAINS_WALL_CLOCK",
+      "check": "verdict",
+      "expected": "TRANSIENT_BAND_CONTAINS_WALL_CLOCK",
+      "ok": true,
+      "record": "nsc-oneway-wall-join-v1.json"
+    },
+    {
+      "actual": "NO_TRACK",
+      "check": "verdict",
+      "expected": "NO_TRACK",
+      "ok": true,
+      "record": "nsc-isotropy-wall-join-v1.json"
+    },
+    {
+      "actual": "PREDICTIVE_PASS",
+      "check": "verdict",
+      "expected": "PREDICTIVE_PASS",
+      "ok": true,
+      "record": "nsc-ladder-covariance-test-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-continuation-trap-v1.json"
+    },
+    {
+      "actual": "TRAP_LAGGED",
+      "check": "verdict",
+      "expected": "TRAP_LAGGED",
+      "ok": true,
+      "record": "nsc-trap-timing-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-production-preflight-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-production-gate-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-relaxation-wall-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-march-balance-trajectory-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-extinction-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-cross-arm-identity-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-march-wall-radii-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-domain-law-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-frontier-amendment-v1.json"
+    },
+    {
+      "actual": "PROFILES_COINCIDE",
+      "check": "verdict",
+      "expected": "PROFILES_COINCIDE",
+      "ok": true,
+      "record": "nsc-seam-invariance-v1.json"
+    },
+    {
+      "actual": "PROFILES_COINCIDE",
+      "check": "verdict",
+      "expected": "PROFILES_COINCIDE",
+      "ok": true,
+      "record": "nsc-charged-seam-invariance-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-interior-station-balance-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-energy-channel-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-wall-ratio-regimes-v1.json"
+    },
+    {
+      "actual": "ALL_WALL_KINEMATICS_INSIDE_OUTWARD_CELL",
+      "check": "verdict",
+      "expected": "ALL_WALL_KINEMATICS_INSIDE_OUTWARD_CELL",
+      "ok": true,
+      "record": "nsc-lowband-placement-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-constant-table-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-q-decomposition-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-q-analytic-envelope-v1.json"
+    },
+    {
+      "check": "exists",
+      "ok": true,
+      "record": "nsc-programme-index-v1.json"
+    }
+  ],
+  "schema": "NSC-LEDGER-AUDIT-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_ledger_audit.py": "b6f2c3614c7411b8f9291df2d8f07b103f6cc84c61ed35df578010c5ef6658bd",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict_checks": 19
+}

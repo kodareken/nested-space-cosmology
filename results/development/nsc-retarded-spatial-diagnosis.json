@@ -1,0 +1,477 @@
+{
+  "accountable_author": "Douglas Ek",
+  "conditional_causal_support": {
+    "PG_time_window": [
+      0.05404795482456391,
+      0.24595204517543606
+    ],
+    "X": 0.035952045175436084,
+    "conditions": [
+      "initial tangent zero before the source",
+      "source compact with z-S1 in[0.09,0.21]",
+      "both characteristic velocities left-going; only upstream rho>1 can influence Sigma",
+      "radius-only variation leaves principal cones fixed; lower-order spin coupling stays inside those cones"
+    ],
+    "directed_edge_certificate": false,
+    "discrete_finite_propagation_claimed": false,
+    "fast_arrival_identity": "integral[1/(beta+1)-beta/(beta\u00b2-1)] = -X",
+    "formula": "X=integral_1^rho_plus d_rho/(beta\u00b2-1); tau in [0.09-X,0.21+X]",
+    "interpretation": "outside-window saved response is numerical leakage under these continuum assumptions",
+    "per_case": {
+      "401_64": {
+        "location": {
+          "PG_time": 0.253125,
+          "canonical_spin": 0,
+          "energy": -0.5562120090641313,
+          "source_column": 0
+        },
+        "nearest_sample_distance_from_estimated_window_edge": 0.002202045175436068,
+        "outside_trapezoidal_time_norm_fraction": 0.06304908829990986,
+        "outside_unweighted_squared_norm_fraction": 0.06509498546073754,
+        "outside_window_maximum": 0.00010419026695663825
+      },
+      "801_128": {
+        "location": {
+          "PG_time": 0.24609375,
+          "canonical_spin": 0,
+          "energy": -0.5562120090641313,
+          "source_column": 0
+        },
+        "nearest_sample_distance_from_estimated_window_edge": 0.0001417048245639166,
+        "outside_trapezoidal_time_norm_fraction": 0.00046581597569574,
+        "outside_unweighted_squared_norm_fraction": 0.0004734379618334482,
+        "outside_window_maximum": 8.277764725533817e-06
+      },
+      "801_64": {
+        "location": {
+          "PG_time": 0.26718749999999997,
+          "canonical_spin": 0,
+          "energy": -0.5562120090641313,
+          "source_column": 0
+        },
+        "nearest_sample_distance_from_estimated_window_edge": 0.002202045175436068,
+        "outside_trapezoidal_time_norm_fraction": 0.00042686832323946184,
+        "outside_unweighted_squared_norm_fraction": 0.0004419548198718477,
+        "outside_window_maximum": 7.695968445672051e-06
+      }
+    },
+    "quadrature_error_estimate_not_bound": 3.9914788336132914e-16,
+    "slow_arrival_identity": "integral[1/(beta-1)-beta/(beta\u00b2-1)] = +X"
+  },
+  "decision": {
+    "existing_three_solve_response_status": "OPEN: bounded sampled response unresolved or checkpointed",
+    "new_resolution_or_field_run_selected": false,
+    "next_uncertainty": "spatial representation of the same narrow forcing and slow characteristic transport",
+    "pulse_widening_or_source_alteration_selected": false,
+    "selected_comparison": "finer spatial evaluation of SAME pulse, with sufficiently accurate reference columns and temporal control"
+  },
+  "input_hashes": {
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "local_discriminator": {
+    "forcing": "F=dL*phi_archive*exp(-iE*t); LF applies one owned spatial generator, no time step",
+    "geometry_spectrum": "DFT of the same full-grid delta_r/r^2; finite-domain diagnostic, not new periodic boundary data",
+    "interior_group_factor": "(4*cos(theta)-cos(2*theta))/3",
+    "interpretation": "local frozen-coefficient dispersion discriminator; not a continuum/global causal proof",
+    "times": [
+      {
+        "F_common_node_difference": 0.0,
+        "LF_common_node_difference": 2.6383501082452185,
+        "LF_fine_common_norm": 5.03534604040846,
+        "LF_relative_difference": 0.5239659969886,
+        "PG_time": 0.11,
+        "grids": {
+          "401": {
+            "F_maximum": 0.013556906422050551,
+            "LF_maximum": 2.6057546138271848,
+            "generator_flux_algebra_residual": 1.7763568394002505e-15,
+            "generator_tangent_flux_algebra_residual": 0.0,
+            "geometry_power_fraction_group_error_above_0_25": 0.3371253835272255,
+            "geometry_power_fraction_reversed_group_factor": 0.11785083176558318
+          },
+          "801": {
+            "F_maximum": 0.017894125901464854,
+            "LF_maximum": 5.03534604040846,
+            "generator_flux_algebra_residual": 2.6645352591003757e-15,
+            "generator_tangent_flux_algebra_residual": 0.0,
+            "geometry_power_fraction_group_error_above_0_25": 0.050146445243705706,
+            "geometry_power_fraction_reversed_group_factor": 0.0045777789541160754
+          }
+        }
+      },
+      {
+        "F_common_node_difference": 0.0,
+        "LF_common_node_difference": 2.3005279383404558,
+        "LF_fine_common_norm": 5.088394334702675,
+        "LF_relative_difference": 0.45211274657919764,
+        "PG_time": 0.15,
+        "grids": {
+          "401": {
+            "F_maximum": 0.01456116503275194,
+            "LF_maximum": 5.089766082433758,
+            "generator_flux_algebra_residual": 1.7763568394002505e-15,
+            "generator_tangent_flux_algebra_residual": 0.0,
+            "geometry_power_fraction_group_error_above_0_25": 0.365063415422514,
+            "geometry_power_fraction_reversed_group_factor": 0.0320690261581515
+          },
+          "801": {
+            "F_maximum": 0.0169734143282821,
+            "LF_maximum": 5.088394334702675,
+            "generator_flux_algebra_residual": 2.6645352591003757e-15,
+            "generator_tangent_flux_algebra_residual": 0.0,
+            "geometry_power_fraction_group_error_above_0_25": 0.023409666420374512,
+            "geometry_power_fraction_reversed_group_factor": 0.0013595333379311173
+          }
+        }
+      },
+      {
+        "F_common_node_difference": 0.0,
+        "LF_common_node_difference": 2.342555933307999,
+        "LF_fine_common_norm": 4.746338411202678,
+        "LF_relative_difference": 0.4935501286168124,
+        "PG_time": 0.19,
+        "grids": {
+          "401": {
+            "F_maximum": 0.014058752490095281,
+            "LF_maximum": 2.7017720970277224,
+            "generator_flux_algebra_residual": 1.7763568394002505e-15,
+            "generator_tangent_flux_algebra_residual": 0.0,
+            "geometry_power_fraction_group_error_above_0_25": 0.3386758253347509,
+            "geometry_power_fraction_reversed_group_factor": 0.11998531066034575
+          },
+          "801": {
+            "F_maximum": 0.017884990613698522,
+            "LF_maximum": 4.746338411202678,
+            "generator_flux_algebra_residual": 2.6645352591003757e-15,
+            "generator_tangent_flux_algebra_residual": 0.0,
+            "geometry_power_fraction_group_error_above_0_25": 0.044180012167184785,
+            "geometry_power_fraction_reversed_group_factor": 0.0034297676159674257
+          }
+        }
+      }
+    ]
+  },
+  "localization": {
+    "baseline_discriminator": {
+      "baseline_drift_difference_at_tangent_maximum": [
+        1.0290478122398916e-08,
+        2.0040235693130626e-08
+      ],
+      "baseline_drift_difference_norm_at_tangent_maximum": 2.25278713291735e-08,
+      "baseline_field_discrepancy_squared_norm_fraction_by_spin": [
+        0.1419701604204412,
+        0.8580298395795586
+      ],
+      "baseline_trace_discrepancy_squared_norm_fraction_by_spin": [
+        6.342103529690638e-06,
+        0.9999936578964701
+      ],
+      "field_discrepancy_normalized_correlation": 0.0005293432862879833,
+      "temporal_baseline_field_max_difference": 0.0005594572415937447,
+      "temporal_field_tangent_max_difference": 3.5154550440162315e-07,
+      "trace_discrepancy_normalized_correlation": 9.587164491269117e-05
+    },
+    "norm_scope": "finite unweighted source-column norms; SBP spatial and trapezoidal time norms are descriptive diagnostics, not physical state norms or error bounds",
+    "per_case": {
+      "401_64": {
+        "field_tangent": {
+          "SBP_L2": 0.00012353099627574797,
+          "location": {
+            "characteristic_spin": 0,
+            "energy": -0.5562120090641313,
+            "rho": 0.968,
+            "source_column": 0
+          },
+          "maximum": 0.00024045583013060126
+        },
+        "final_boundary_tangents": {
+          "left": 6.829489432002486e-136,
+          "right": 2.186324318890422e-06
+        },
+        "spin_shape": [
+          {
+            "characteristic_spin": 0,
+            "squared_column_norm_peak_rho": 0.968,
+            "unweighted_squared_norm_centroid": 0.9758674905250674
+          },
+          {
+            "characteristic_spin": 1,
+            "squared_column_norm_peak_rho": 0.7360000000000002,
+            "unweighted_squared_norm_centroid": 0.6434901141128435
+          }
+        ],
+        "stationary_field_drift": {
+          "SBP_L2": 4.6092800893317105e-05,
+          "location": {
+            "characteristic_spin": 1,
+            "energy": -0.5562120090641313,
+            "rho": 1.2,
+            "source_column": 0
+          },
+          "maximum": 0.00043100573269687207
+        },
+        "stationary_trace_drift": {
+          "location": {
+            "PG_time": 0.0890625,
+            "canonical_spin": 1,
+            "energy": -0.5562120090641313,
+            "source_column": 0
+          },
+          "maximum": 7.34598383440137e-05
+        },
+        "trace_tangent": {
+          "location": {
+            "PG_time": 0.178125,
+            "canonical_spin": 0,
+            "energy": -0.5562120090641313,
+            "source_column": 0
+          },
+          "maximum": 0.00020722743032347828
+        }
+      },
+      "801_128": {
+        "field_tangent": {
+          "SBP_L2": 0.00010455639429475004,
+          "location": {
+            "characteristic_spin": 0,
+            "energy": -0.5562120090641313,
+            "rho": 0.94,
+            "source_column": 0
+          },
+          "maximum": 0.00019108248032067185
+        },
+        "final_boundary_tangents": {
+          "left": 5.9056763959470596e-257,
+          "right": 1.298690945201671e-07
+        },
+        "spin_shape": [
+          {
+            "characteristic_spin": 0,
+            "squared_column_norm_peak_rho": 0.94,
+            "unweighted_squared_norm_centroid": 0.9485949434148646
+          },
+          {
+            "characteristic_spin": 1,
+            "squared_column_norm_peak_rho": 0.7320000000000002,
+            "unweighted_squared_norm_centroid": 0.6444145561636738
+          }
+        ],
+        "stationary_field_drift": {
+          "SBP_L2": 1.6421019258452896e-05,
+          "location": {
+            "characteristic_spin": 1,
+            "energy": -0.5562120090641313,
+            "rho": 1.2,
+            "source_column": 0
+          },
+          "maximum": 0.00021538457306451695
+        },
+        "stationary_trace_drift": {
+          "location": {
+            "PG_time": 0.0890625,
+            "canonical_spin": 1,
+            "energy": -0.5562120090641313,
+            "source_column": 0
+          },
+          "maximum": 3.293977951335401e-05
+        },
+        "trace_tangent": {
+          "location": {
+            "PG_time": 0.16171875,
+            "canonical_spin": 0,
+            "energy": -0.5562120090641313,
+            "source_column": 0
+          },
+          "maximum": 0.00016884774443598222
+        }
+      },
+      "801_64": {
+        "field_tangent": {
+          "SBP_L2": 0.00010442189034301605,
+          "location": {
+            "characteristic_spin": 0,
+            "energy": -0.5562120090641313,
+            "rho": 0.94,
+            "source_column": 0
+          },
+          "maximum": 0.0001908164579790247
+        },
+        "final_boundary_tangents": {
+          "left": 6.433470884543337e-256,
+          "right": 1.2977719718786723e-07
+        },
+        "spin_shape": [
+          {
+            "characteristic_spin": 0,
+            "squared_column_norm_peak_rho": 0.94,
+            "unweighted_squared_norm_centroid": 0.9485825741179325
+          },
+          {
+            "characteristic_spin": 1,
+            "squared_column_norm_peak_rho": 0.7360000000000002,
+            "unweighted_squared_norm_centroid": 0.6444282035465825
+          }
+        ],
+        "stationary_field_drift": {
+          "SBP_L2": 6.197100228219064e-05,
+          "location": {
+            "characteristic_spin": 1,
+            "energy": -0.5562120090641313,
+            "rho": 1.2,
+            "source_column": 0
+          },
+          "maximum": 0.0007748417815600928
+        },
+        "stationary_trace_drift": {
+          "location": {
+            "PG_time": 0.0890625,
+            "canonical_spin": 1,
+            "energy": -0.5562120090641313,
+            "source_column": 0
+          },
+          "maximum": 0.0001344036826539704
+        },
+        "trace_tangent": {
+          "location": {
+            "PG_time": 0.159375,
+            "canonical_spin": 0,
+            "energy": -0.5562120090641313,
+            "source_column": 0
+          },
+          "maximum": 0.00016852536486859743
+        }
+      }
+    },
+    "spatial_covariance": {
+      "Frobenius_relative": 0.46101588933900584,
+      "canonical_spin1": 0,
+      "canonical_spin2": 0,
+      "maximum": 4.881602607390929e-06,
+      "time1": 0.253125,
+      "time2": 0.253125
+    },
+    "spatial_field": {
+      "SBP_L2_difference": 7.162745882659576e-05,
+      "SBP_L2_fine": 0.00010423833236347129,
+      "SBP_L2_relative": 0.6871508513474309,
+      "coarse_at_maximum": [
+        -8.862876386272217e-05,
+        -7.680539220985667e-05
+      ],
+      "fine_at_maximum": [
+        1.1086503524725936e-05,
+        8.16411428889511e-06
+      ],
+      "location": {
+        "characteristic_spin": 0,
+        "energy": -0.5562120090641313,
+        "rho": 0.992,
+        "source_column": 0
+      },
+      "maximum": 0.0001310074485851537,
+      "spin0_error_fraction_in_rho_0_95_to_1_05": 0.9029289333317407,
+      "unweighted_error_fraction_by_energy": [
+        0.25007265879681967,
+        0.24992678918847125,
+        0.24992707095299924,
+        0.25007348106170985
+      ],
+      "unweighted_error_fraction_by_source": [
+        0.5571900211901977,
+        0.4428099788098007,
+        0.0
+      ],
+      "unweighted_error_squared_norm_fraction_by_spin": [
+        0.9994359548562598,
+        0.0005640451437400257
+      ]
+    },
+    "spatial_trace": {
+      "coarse_norm_at_maximum_time": 0.00010419026695663825,
+      "fine_norm_at_maximum_time": 1.247427188148424e-06,
+      "location": {
+        "PG_time": 0.253125,
+        "canonical_spin": 0,
+        "energy": -0.5562120090641313,
+        "source_column": 0
+      },
+      "maximum": 0.00010307449175190086,
+      "squared_time_norm_fraction_after_0_21": 0.7213267637968134,
+      "time_L2_difference": 5.521572396276911e-05,
+      "time_L2_fine": 0.00013363453173549124,
+      "time_L2_relative": 0.41318455077210164,
+      "unweighted_error_fraction_by_spin": [
+        0.9614188406544081,
+        0.038581159345591816
+      ]
+    },
+    "translation_discriminator": {
+      "best_integer_shift": {
+        "coarse_index_shift": 1,
+        "relative_shape_difference": 0.9657570624184774
+      },
+      "interpretation": "diagnostic index comparison only; no output, coordinate or physical profile adjusted",
+      "unshifted": {
+        "coarse_index_shift": 0,
+        "relative_shape_difference": 0.9691024529438508
+      }
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_retarded_spatial_diagnosis.py --check",
+  "residuals": {
+    "common_node_forcing_identity": 0.0,
+    "local_generator_flux_algebra": 2.6645352591003757e-15
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 5889941,
+      "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
+      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+    },
+    {
+      "bytes": 40006859,
+      "path": "results/development/artifacts/nsc-transmitting-history-modes.9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a.npz",
+      "sha256": "9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a"
+    },
+    {
+      "bytes": 9829760,
+      "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+      "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+    }
+  ],
+  "schema": "NSC-RETARDED-SPATIAL-DIAGNOSIS-v1",
+  "scope": {
+    "continuum_error_bound": null,
+    "field_propagations": 0,
+    "global_causality_proof": false,
+    "old_producer_reruns": 0,
+    "physical_C0_change_proved": false,
+    "physical_profile_or_metric_evolution": false,
+    "radial_solves": 0,
+    "sampled_CAR_response_subtracted": false,
+    "saved_data_only_plus_local_matrix_algebra": true,
+    "stress_or_counterforce_added": false
+  },
+  "source_hashes": {
+    "docs/nsc-retarded-spatial-diagnosis.md": "034dc7619cca89c5173e131d11bdaf8edf08e88a2fe6d25d8f444f9b39398572",
+    "scripts/derive_nsc_retarded_spatial_diagnosis.py": "6a74c0734cc53cfe10e1ac5699059de9b6828737d0124a5808d96b6d8dfbe4a3",
+    "tests/test_nsc_retarded_spatial_diagnosis.py": "094f73a457066165efa1a6cc88fe768c923d00e068b66bba494dcc72f3f9ff11"
+  },
+  "status": "PASS: bounded diagnosis; inherited retarded response remains spatially OPEN",
+  "verification_tolerances": {
+    "common_node_forcing_identity": 0.0,
+    "local_generator_flux_algebra": 3e-11
+  }
+}

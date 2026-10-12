@@ -1,0 +1,41 @@
+{
+  "accountable_author": "Douglas Ek",
+  "clipped_all_node_leftover": [
+    0.003956410359,
+    0.00558605161
+  ],
+  "clipped_step_norm": 1.0,
+  "current_profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "forbidden_identities": [
+    "2d2588c3c9b1c83fe1a3f291314b8030300c4f14d3b12c24eadd2664eb20231b",
+    "949a188181bd9ba0df43bc8ea00db2c89ce35a458017052b7af928059f819680"
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-n16-leftover-identification.json": "3e1489c51763b379ad16d451227c77d6016f2edf05ec4fbc40e3a336181d4e37"
+  },
+  "named_search_stall": "n16_freed_jet_leftover_cannot_reach_existence",
+  "schema": "NSC-KS-N16-FREED-JET-PROPOSAL-v1",
+  "scope": {
+    "full_scale_n16_not_evolved": true,
+    "metric_timestep": false,
+    "n8_next_not_evolved": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "source_hashes": {
+    "docs/nsc-ks-n16-freed-jet-proposal.md": "0811a77afe987700361ffed5b5b3f015ea332628c51866fa081551574e9effc1",
+    "scripts/derive_nsc_ks_n16_freed_jet_proposal.py": "4445933a04d538a7fadefcf63cb5b7355f802e61dfb987509b3a2b1df88696c9",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "status": "OPEN: freed-jet linear leftover stays about 1e-4; no family evolved",
+  "unclipped_all_node_leftover": [
+    0.000151976924,
+    7.770624e-06
+  ],
+  "unclipped_step_norm": 28.247049066335
+}

@@ -1,0 +1,258 @@
+{
+  "accountable_author": "Douglas Ek",
+  "control": {
+    "direction": [
+      [
+        0.25,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.75,
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "energy_interpolant_degree": 8,
+    "energy_interpolant_interval": [
+      0.0,
+      0.25
+    ],
+    "grid_nodes": 64,
+    "group": 14,
+    "history": {
+      "axial_support": [
+        1.1468780671724792,
+        1.2668780671724793
+      ],
+      "class": "local source-fixed pure-radius compatible histories",
+      "coefficient_order": "w then U; increasing Chebyshev degree",
+      "coefficients": [
+        [
+          0.0,
+          0.001,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "duration_selected": false,
+      "interval": [
+        1.1768780671724792,
+        1.2368780671724793
+      ],
+      "normal_window": [
+        0.007,
+        0.03
+      ],
+      "physical_gate": "OPEN; actual evolved full source and error enclosure required",
+      "radius_lower_bound": 0.9999699999999999,
+      "state_supplied_by_family": false
+    },
+    "operators": [
+      {
+        "diagnostics": {
+          "accepted_steps": 17,
+          "function_evaluations": 230,
+          "identity_is_operator_basis": true,
+          "physical_constraint_status": "OPEN",
+          "physical_source_supplied": false
+        },
+        "digest": "31b272a2a1ade5e3660fa9dd062f8ec46051dbc091541f8ece8ef049ea92982a",
+        "history_identity": "772b2af5e007350eee279d6b77eaf0ab7b8de252f5f9ccacb6a72f1d067e9466"
+      },
+      {
+        "diagnostics": {
+          "accepted_steps": 17,
+          "function_evaluations": 230,
+          "identity_is_operator_basis": true,
+          "physical_constraint_status": "OPEN",
+          "physical_source_supplied": false
+        },
+        "digest": "7ca80402cd80cd4e8fd329046217146d9c2cb016d7bc9de4aafb710afc0099cc",
+        "history_identity": "62da4328012d02d780a00729990790bdad51b28c08961357cb90cc5482c1e378"
+      },
+      {
+        "diagnostics": {
+          "accepted_steps": 17,
+          "function_evaluations": 230,
+          "identity_is_operator_basis": true,
+          "physical_constraint_status": "OPEN",
+          "physical_source_supplied": false
+        },
+        "digest": "d1d456edfbc6ba961055e1f9752d1b2384e40f80cbebc327b8ecb3700c7fce42",
+        "history_identity": "8048a0501ee4e2ff215affee7d1790fede3da6038530d5aabf1f19720e386d6a"
+      }
+    ],
+    "options": {
+      "atol": 2e-13,
+      "max_step": 0.002,
+      "rtol": 2e-11
+    },
+    "retarded_directions": 16,
+    "solve_nodes": [
+      1.1768780671724792,
+      1.1798490011354066,
+      1.1881733731167172,
+      1.2002024391537898,
+      1.2135536951911687,
+      1.2255827612282413,
+      1.233907133209552,
+      1.2368780671724793
+    ],
+    "source_energies_positive": [
+      0.0013248831260437577,
+      0.006928122115845925,
+      0.016796099701521044,
+      0.03057444895562461,
+      0.04776546944966953,
+      0.06774790279284658,
+      0.08979955615259264,
+      0.11312343627029532,
+      0.1368765637297047,
+      0.16020044384740736,
+      0.1822520972071534,
+      0.20223453055033047,
+      0.2194255510443754,
+      0.23320390029847896,
+      0.24307187788415408,
+      0.24867511687395624
+    ],
+    "source_panel": "group14/low16_1/rows0:16",
+    "source_rows_per_energy_sign": 16,
+    "step": 1e-05,
+    "target_union": [
+      1.1768780671724792,
+      1.1774545087603823,
+      1.1791616811971406,
+      1.1798490011354066,
+      1.181933978803403,
+      1.1856648637368827,
+      1.1881733731167172,
+      1.190210960181891,
+      1.1953975642015267,
+      1.2002024391537898,
+      1.2010253575119954,
+      1.2068780671724793,
+      1.2127307768329632,
+      1.2135536951911687,
+      1.2183585701434319,
+      1.2235451741630674,
+      1.2255827612282413,
+      1.2280912706080758,
+      1.2318221555415556,
+      1.233907133209552,
+      1.234594453147818,
+      1.2363016255845762,
+      1.2368780671724793
+    ],
+    "verification_nodes": [
+      1.1768780671724792,
+      1.1774545087603823,
+      1.1791616811971406,
+      1.181933978803403,
+      1.1856648637368827,
+      1.190210960181891,
+      1.1953975642015267,
+      1.2010253575119954,
+      1.2068780671724793,
+      1.2127307768329632,
+      1.2183585701434319,
+      1.2235451741630674,
+      1.2280912706080758,
+      1.2318221555415556,
+      1.234594453147818,
+      1.2363016255845762,
+      1.2368780671724793
+    ]
+  },
+  "derivative_control_tolerance": 3e-08,
+  "derivative_residual_N_beta": [
+    7.5396355825319e-12,
+    3.751665644813329e-12
+  ],
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.json": "6a545864f0d0a0ce8a5f6c4083abfadb6ad4dd5b124b000583c8f15aa2d37b34",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.npz": "c0f024907f1351ee0ab998a871818555ea2f8b27dc8931636e6f91039875455e",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-retained-response-sum.json": "a2300f2badea68344b041451f70a56affc5a10b795ae4d6fab6f8476b3580407",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "payload": {
+    "bytes": 1382232,
+    "path": "results/development/artifacts/nsc-ks-history-evaluator-control.npz",
+    "sha256": "3e3425ee1367caf9d55930b268c46d229ab438304af04be511ef5b4ad69a783f"
+  },
+  "raw_control_constraint_maxima": [
+    0.7077618954682939,
+    0.21914755490392737
+  ],
+  "retarded_matter_tangent_maxima": [
+    0.004320714931349556,
+    0.0021588910940977257
+  ],
+  "runtime": {
+    "CPU_cap": 30.0,
+    "CPU_seconds": 1.069221,
+    "new_operator_solves": 3
+  },
+  "schema": "NSC-KS-HISTORY-EVALUATOR-CONTROL-v1",
+  "scope": {
+    "full_error_budget": null,
+    "metric_timestep": false,
+    "physical_local_gate": "OPEN",
+    "physical_optimizer_run": false,
+    "positive_energy_result_doubled": false,
+    "removed_state_derivative": false,
+    "seeds_are_solver_controls": true,
+    "source_cutoff_coincidence_bridge": "OPEN",
+    "source_preparation_repeated": false
+  },
+  "source_hashes": {
+    "docs/nsc-ks-history-evaluator-control.md": "8b92ab8b3c71d1152789d60f1f757adb1a09e5ebf580c08b692f7d8344512163",
+    "scripts/derive_nsc_ks_history_evaluator_control.py": "5ab5b105457905c108336d8b9af413f9e394571b71000b6716667c1e9942e2ec",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196",
+    "src/recursive_horizons/nsc_ks_energy_propagator.py": "5f75023efc8c2b637fc4983b414cab50f15f90f8abc1a24dbc1d23ecef9ecf94",
+    "src/recursive_horizons/nsc_ks_history_evaluator.py": "86ed312db133f201a3cce11cacc96b62dc89d6c3fe434bdac0f77ca54d023cd6",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_local_history_newton.py": "1b55fac1ef1217556e04c9b2231dd15fd9eb30e81039c84fa09223434fc76495",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "source_identity": {
+    "negative_preparation": "b068abee1f898f04cd41ed5612a774bbd470834f3a6650e30ddd98552e14828b",
+    "negative_source": "0fbcd8e56f15746d293160f18f40f40959f9e423d2ed48d6dcf59d5aab67c320",
+    "positive_preparation": "d892b1f31840b619f5a485d74fa6938c48d08d7cdbbbc517fa2b7c5d68c95faf",
+    "positive_source": "859c0f06fa9c1ad742e1f2387643d201d2c1f5e0e562f6bd17f0adf9f490710c"
+  },
+  "status": "PASS: fixed-source evaluator derivative control; physical gate OPEN"
+}

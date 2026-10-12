@@ -1,0 +1,23 @@
+{
+  "accountable_author": "Douglas Ek",
+  "campaign_best_merit": 0.0005881485884118953,
+  "campaign_best_name": "trial",
+  "families_evolved": 0,
+  "fas_c_cause": "numerical error",
+  "input_hashes": {
+    "results/development/nsc-ks-gate-numerical-floor.json": "946349481bd43e850e31b0af078431aeb7d3221fab6f0db7633457a86084f48d",
+    "results/development/nsc-ks-gate-reanchor.json": "d89ab134c33aead5660eeeeb49762a0086d279a3e2e02d8660a80b5ff139e58a"
+  },
+  "largest_one_knob_movement": 0.0008123556564981829,
+  "named_gap": "value_only_indicator_floor_above_1e-10",
+  "next_owner": "the same declared (w, U) class on I, after the ruler is fixed",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "schema": "NSC-KS-GATE-SEARCH-STALL-v1",
+  "source_hashes": {
+    "docs/nsc-ks-gate-search-stall.md": "9a73becf7fc74a4f7737a30513174ffc63919c822b58a389809dd3d07a5bb81b",
+    "scripts/derive_nsc_ks_gate_search_stall.py": "5012610f6da9389d38deefa1c1e7d398d3aba88c2a2b9fbba3b5092e9ee2113b"
+  },
+  "stall_name": "value_only_indicator_floor_above_1e-10",
+  "status": "OPEN: value-only floor tracks the solver; search is not authorized"
+}

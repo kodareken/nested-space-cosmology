@@ -1,0 +1,134 @@
+{
+  "schema": "NSC-CONFORMAL-LOCAL-RESPONSE-FEASIBILITY-v1",
+  "status": "MEASURED_REDUCTION_FEASIBILITY",
+  "case": "nf512_dt_0.0005",
+  "gauge": "conformal",
+  "time_window": [
+    0.025,
+    0.035
+  ],
+  "substeps": 2,
+  "observer": "original T=0 region-0 pair; no phase or basis reset",
+  "weights": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "initial_state": "actual transported Phi(0.025)",
+  "initial_blocks": {
+    "C_AA_real": [
+      [
+        0.7280397322997052,
+        -1.4558045251609421e-05
+      ],
+      [
+        -1.4558045251609336e-05,
+        0.7280397322997021
+      ]
+    ],
+    "C_AA_imag": [
+      [
+        3.469446951953614e-18,
+        0.00014202276661337467
+      ],
+      [
+        -0.00014202276661337467,
+        3.469446951953614e-18
+      ]
+    ],
+    "C_AA_eigenvalues": [
+      0.7278969653465316,
+      0.7281824992528759
+    ],
+    "C_AE_frobenius": 0.176498626520663,
+    "exterior_column_norm": 2.0140414949669463,
+    "covariance_eigenvalues": [
+      0.24999999999999648,
+      0.2499999999999966,
+      0.4999999999999926,
+      0.4999999999999929,
+      0.749999999999989,
+      0.7499999999999896
+    ],
+    "covariance_admissible": true,
+    "observer_gram_gap": 2.220446049250313e-16
+  },
+  "occupation_change": 0.02051180779146944,
+  "occupation_error": {
+    "max_abs": 5.915941789003121e-06,
+    "signal_max_abs": 0.7280397322997056,
+    "relative_to_signal": 8.125850178967646e-06,
+    "change_from_initial_max_abs": 0.020511807788611724,
+    "relative_to_change": 0.0002884164014196587
+  },
+  "conditional_versus_autonomous": {
+    "max_abs": 2.858824288409778e-12,
+    "signal_max_abs": 0.7280397322997056,
+    "relative_to_signal": 3.926742129003629e-12,
+    "change_from_initial_max_abs": 0.02051180779146944,
+    "relative_to_change": 1.3937456500536835e-10
+  },
+  "controls": {
+    "memory": {
+      "movement": 0.003654370068278623,
+      "history_norm": 0.0
+    },
+    "outside_drive": {
+      "movement": 0.016803736908439615,
+      "history_norm": 0.11125976750144526,
+      "occupation_error_against_full_drive_off": 1.7964660790070752e-06
+    },
+    "initial_cross": {
+      "movement": 0.017170317079074918,
+      "occupation_error_against_full_split": 4.25038609645767e-06,
+      "algebraic_superposition_error": 1.1108442452891062e-15,
+      "synthetic_cross_substituted": false
+    }
+  },
+  "allocation": {
+    "backend": "streamed",
+    "time_indexed_exterior_propagator_bytes": 0,
+    "stores_dense_exterior_propagator": false,
+    "history_shape": [
+      3,
+      1022,
+      6
+    ],
+    "history_bytes": 294336,
+    "frame_bytes": 16777216,
+    "frame_completion": "dense-null-space-once",
+    "current_exterior_block_bytes": 16711744,
+    "peak_column_workspace_bytes": 228928,
+    "avoided_dense_propagator_bytes": 50135232,
+    "propagator_storage": "none",
+    "output_times": 3,
+    "exterior_dimension": 1022,
+    "retained_dimension": 2
+  },
+  "operator_action_relative": 4.2102274004345813e-13,
+  "pilot_cpu_seconds": 2.456365,
+  "five_step_comparison_forecast_seconds": 15.352281249999999,
+  "full_segment_comparison_executed": false,
+  "production_reduction_executed": false,
+  "regional_throughflow_resolved": false,
+  "programme_complete": false,
+  "source_bindings": {
+    "nsc-spherical-conformal-episode-v1.json": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "nsc-spherical-conformal-episode-v1.npz": "5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+    "nsc-spherical-coupling-refinement-v5.npz": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d"
+  },
+  "geometry_reintegrated": false,
+  "observer_id": "bba69e38ced833e60f22eeab1ce14eee5e3f987565d2abe53375dd89aa8d6c22",
+  "initial_state_id": "3e2ddaef245f0eb68a57ca4d7f819f48cde58c48050a81d6c8b4b439adeb0d69",
+  "cpu_seconds": 13.461717,
+  "cpu_budget_seconds": 60.0,
+  "source_code_sha256": "b4acada6e82d9994fc58f8810d62a9c53c07697d41e172534fecc964c079b855",
+  "stress_claimed": false,
+  "renewal_claimed": false,
+  "scope": "initial-episode reduction feasibility only; production waits for finalized resolved regional exchange",
+  "payload_sha256": "0b631c899f75209a943b1b1ccc5a82cb223ace42fe42a18f3a709c489e2cd289",
+  "payload_bytes": 7545
+}

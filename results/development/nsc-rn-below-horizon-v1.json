@@ -1,0 +1,158 @@
+{
+ "api_version": "nsc-rn-below-horizon-v1",
+ "chart_guard_message": "static modes stay strictly above the inner horizon",
+ "creation_only": true,
+ "entries": [
+  {
+   "charge_squared": 0.9999999999999984,
+   "chart_guard_limit": 0.9387228319217631,
+   "guard_is_beyond_the_real_domain": true,
+   "guard_reaches_beyond_the_geometry": true,
+   "lapse_is_one_throughout": true,
+   "mass": 1.002,
+   "model_evaluates_below_inner_horizon": true,
+   "model_probes": {
+    "0.523952": {
+     "all_finite": true,
+     "ingoing": -1.42676954541996,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.5732304545800398,
+     "shift": 0.42676954541996015
+    },
+    "0.657106": {
+     "all_finite": true,
+     "ingoing": -1.8566133680662005,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.1433866319337994,
+     "shift": 0.8566133680662006
+    },
+    "0.844851": {
+     "all_finite": true,
+     "ingoing": -1.9853986192957782,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.0146013807042219,
+     "shift": 0.9853986192957781
+    }
+   },
+   "mu": 1.002,
+   "outgoing_zeroes": [
+    0.9387231634224786,
+    1.065277026332158
+   ],
+   "positive_below_inner_horizon": true,
+   "r_minus": 0.9387228319217631,
+   "r_plus": 1.065277168078237,
+   "samples": 20000,
+   "shift_real_domain_limit": 0.49900199600798323,
+   "trapped_between_the_two_zeroes": true,
+   "zero_count": 2
+  },
+  {
+   "charge_squared": 0.9999999999999984,
+   "chart_guard_limit": 0.8682255312124163,
+   "guard_is_beyond_the_real_domain": true,
+   "guard_reaches_beyond_the_geometry": true,
+   "lapse_is_one_throughout": true,
+   "mass": 1.01,
+   "model_evaluates_below_inner_horizon": true,
+   "model_probes": {
+    "0.519802": {
+     "all_finite": true,
+     "ingoing": -1.4301768870999598,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.5698231129000402,
+     "shift": 0.4301768870999599
+    },
+    "0.607758": {
+     "all_finite": true,
+     "ingoing": -1.7850967338224115,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.2149032661775886,
+     "shift": 0.7850967338224114
+    },
+    "0.781403": {
+     "all_finite": true,
+     "ingoing": -1.9733114896742898,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.02668851032571029,
+     "shift": 0.9733114896742897
+    }
+   },
+   "mu": 1.01,
+   "outgoing_zeroes": [
+    0.8682257355805147,
+    1.1517744630423945
+   ],
+   "positive_below_inner_horizon": true,
+   "r_minus": 0.8682255312124163,
+   "r_plus": 1.1517744687875837,
+   "samples": 20000,
+   "shift_real_domain_limit": 0.49504950495049427,
+   "trapped_between_the_two_zeroes": true,
+   "zero_count": 2
+  },
+  {
+   "charge_squared": 0.9999999999999984,
+   "chart_guard_limit": 0.7543428628582831,
+   "guard_is_beyond_the_real_domain": true,
+   "guard_reaches_beyond_the_geometry": true,
+   "lapse_is_one_throughout": true,
+   "mass": 1.04,
+   "model_evaluates_below_inner_horizon": true,
+   "model_probes": {
+    "0.504808": {
+     "all_finite": true,
+     "ingoing": -1.4429544183999587,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.5570455816000413,
+     "shift": 0.4429544183999587
+    },
+    "0.528040": {
+     "all_finite": true,
+     "ingoing": -1.5938287158108513,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.4061712841891486,
+     "shift": 0.5938287158108514
+    },
+    "0.678909": {
+     "all_finite": true,
+     "ingoing": -1.9455962358885377,
+     "jets_ok": true,
+     "lapse": 1.0,
+     "outgoing": 0.054403764111462416,
+     "shift": 0.9455962358885376
+    }
+   },
+   "mu": 1.04,
+   "outgoing_zeroes": [
+    0.7543430167695828,
+    1.3256571310519891
+   ],
+   "positive_below_inner_horizon": true,
+   "r_minus": 0.7543428628582831,
+   "r_plus": 1.325657137141717,
+   "samples": 20000,
+   "shift_real_domain_limit": 0.48076923076923,
+   "trapped_between_the_two_zeroes": true,
+   "zero_count": 2
+  }
+ ],
+ "guard_is_beyond_the_real_domain_everywhere": true,
+ "lapse_is_one_everywhere": true,
+ "model_evaluates_below_inner_horizon_everywhere": true,
+ "producing_commit": "8e08123c028d6bee8b1bd3a778b1cb974e10686b",
+ "production_guard_changed": false,
+ "schema": "NSC-RN-BELOW-HORIZON-v1",
+ "scope_note": "A construction check on the reference model. It does not measure the actual universe. Showing the third region is describable says nothing about whether it contains anything, and nothing about whether the nesting iterates.",
+ "two_zeroes_everywhere": true,
+ "what_this_measures": "Whether the region below the inner horizon, which the chart refuses to sample, is actually describable by the model. The shift is real wherever r > Q^2/(2M), which is further in than r_minus, so the guard may be a convention rather than a property of the geometry.",
+ "why_no_guard_was_relaxed": "Nothing here relaxes a production guard. Whether the third region is reachable in a march is a separate question with a separate answer, and changing vacuum_chart on the strength of a reading would be the wrong order of operations."
+}

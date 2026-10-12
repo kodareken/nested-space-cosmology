@@ -1,0 +1,40 @@
+{
+  "all_history_cells": false,
+  "bounds": {
+    "numerical_reference_only": true,
+    "physical_source_error_included": false,
+    "weighted_frobenius_defect_sup": {
+      "exponent": -158,
+      "mantissa": "864017673795929327202097116281321529"
+    },
+    "weighted_row_residual_integral": {
+      "exponent": -171,
+      "mantissa": "864017673795929327202097116281321529"
+    }
+  },
+  "cell_index": 122,
+  "family": [
+    14,
+    1
+  ],
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-current-trajectory-pilot-v2.npz": "c51701d2304c8567d50b5def155b55377a3d25baff2a88096899f2c08cd8f473",
+    "results/development/nsc-ks-current-trajectory-pilot-v2.json": "cf452980bb43cce9b4fa8d7edbcce7e01f7039dc2c8d6ad6daf4040c2fc34cc5"
+  },
+  "physical_local_gate": "OPEN",
+  "physical_source_error_included": false,
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "schema": "NSC-KS-REFERENCE-RESIDUAL-PILOT-v1",
+  "source_hashes": {
+    "scripts/derive_nsc_ks_reference_residual_pilot.py": "0d171b060b76128657a17ff70fcbcb69f7412e101cfe14e479f16d75494925de",
+    "scripts/validate_nsc_ks_current_field_pilot_v3.py": "65186ed02f1b0a3e4a7fc144e9161a471e93fd429425e04178e4dff913e42ccf",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_reference_residual.py": "6a40ff94d90b7c1acb18e80865fd6c037d247db7e3267b3a953cf0f3fee70943",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_ks_upstream_error.py": "61de8daf45106357571a0056df4f3542455f7844dc5188d3a282f819fde2e425",
+    "tests/test_nsc_ks_reference_residual.py": "9e33dd70ee8cfa77f0e520d84507a08b9b116cc92e5e35e6aa44046a23162d2a"
+  },
+  "source_preparation_digest": "d48a07ada2749c6f408f28d3a633e18747e2b3775e2a6cdd88807cf910ccf785",
+  "status": "ENCLOSED: numerical homogeneous reference defect on one saved cell"
+}

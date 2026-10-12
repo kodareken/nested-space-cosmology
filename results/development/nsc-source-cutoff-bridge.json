@@ -1,0 +1,77 @@
+{
+  "accountable_author": "Douglas Ek",
+  "bridge": {
+    "N_edge": "mu*(f_z_plus-f_z_minus)/(2*pi*a_Sigma)",
+    "beta_edge": "-mu*(f_z_plus+f_z_minus)/(2*pi)",
+    "finite_panel_tail_error_bound": null,
+    "kernel_derivative": "off-diagonal distributional derivative; equivalently Abel-regularized oscillatory integral",
+    "omitted_raw_tail_order": "O(1/Lambda)",
+    "outgoing_Weyl_momentum_identified_with_source_E": false,
+    "raw_plus_edge_plus_tail": true
+  },
+  "exact_algebra_residuals": {
+    "integrable_current_error_M3": "0",
+    "integrable_current_error_M4": "0",
+    "s+1/N_vertex_sign": "0",
+    "s+1/beta_vertex_sign": "0",
+    "s+1/coincidence_first_current": "0",
+    "s+1/finite_recurrence_M3": [
+      "0",
+      "0"
+    ],
+    "s+1/finite_recurrence_M4": [
+      "0",
+      "0"
+    ],
+    "s+1/kernel_primitive": "0",
+    "s+1/ordered_current_edge": "0",
+    "s-1/N_vertex_sign": "0",
+    "s-1/beta_vertex_sign": "0",
+    "s-1/coincidence_first_current": "0",
+    "s-1/finite_recurrence_M3": [
+      "0",
+      "0"
+    ],
+    "s-1/finite_recurrence_M4": [
+      "0",
+      "0"
+    ],
+    "s-1/kernel_primitive": "0",
+    "s-1/ordered_current_edge": "0"
+  },
+  "history_class": "smooth compact pure-radius histories, a=a_ref>0, r_g>0, intrinsic Sigma fields fixed, reference near rho_up, owned local embedding",
+  "input_hashes": {
+    "docs/nsc-incoming-fixed-transfer.md": "959793133c32bf08a5e82b4b743d0d6ff2884a0ca2ccc6fe77e91dc97b1993f5",
+    "docs/nsc-reference-band-bulk.md": "77741a7aed69cd505851ac84ce2eeac9ecfefa2c74dc9c1f3fb542c78bcd32ff",
+    "results/development/nsc-dirac-source-phase-transport.json": "0c43e06174755ed655434f6127e51d0d9833b6a9a6cc982c6ae2f7b6a00780e9",
+    "results/development/nsc-ks-local-embedding.json": "8417b11ad9e08b1fa166fdb5ddbf11e85ff653a99342e767f114146b0a4fe3d5"
+  },
+  "schema": "NSC-SOURCE-CUTOFF-BRIDGE-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "band_bulk_reopened": false,
+    "constraint_assembly_changed_by_this_record": false,
+    "local_reference_coefficients_changed": false,
+    "metric_timestep": false,
+    "new_action_term": false,
+    "new_field_or_source_evolutions": 0,
+    "physical_local_gate": "OPEN",
+    "physical_root_selected": false
+  },
+  "source_hashes": {
+    "docs/nsc-source-cutoff-bridge.md": "4464afb826d57314657771d49d3ae5b6515fe4a3cd7e03e6372383c0560a9a33",
+    "scripts/check_nsc_source_cutoff_bridge.py": "9250d97d20817606e08af8e28062aff44064cc0d919a56d11225a9e350f0bdc3",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_ks_residual_error.py": "3733dfe52a38a076ff368ff90082b29f12bda27351204eec6dea20fcc98c1243"
+  },
+  "source_scope": "original coherent source; affine-vacuum initial expansion with exponential coherent remainder",
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; C_up unchanged",
+  "status": "PASS: scoped analytic source-cutoff identity; finite-cutoff error and local gate OPEN",
+  "uniform_remainder": {
+    "differentiated_kernel_error": "O(e^(1-M)), integrable",
+    "envelope_H2_error": "C_M/e^M, finite uniform C_M from initial expansion and smooth compact coefficient transport",
+    "finite_expansion_order": "M>=3",
+    "numerical_C_M": null
+  }
+}

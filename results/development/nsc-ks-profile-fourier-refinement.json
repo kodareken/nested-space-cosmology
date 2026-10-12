@@ -1,0 +1,139 @@
+{
+  "accountable_author": "Douglas Ek",
+  "input_hashes": {
+    "docs/nsc-ks-ball-geometry.md": "b3e61566f89e694c662edcb132224bb4a5eda5a0b19d86df154b7d0c4b004447",
+    "docs/nsc-ks-difference-control.md": "dd6df5b94cc2b2fc6c5c6176d0a7428c53f345e7afff35a666964f2f2d5117a4",
+    "docs/nsc-ks-difference-envelope.md": "fd726a6b6d1392dc569301be7e43aad2d14b105d70f4b4fe2bccdeac88d302a7",
+    "docs/nsc-ks-envelope-comparison.md": "61634a18a42fc0539b1ef578ed3cfcd3f9492bf72785dade5e3294489a94c779",
+    "docs/nsc-ks-envelope-resolution.md": "6d83407ca58e2e069a3e77bf8378e4896ee53d305c15f8c776461c437b0b3c70",
+    "docs/nsc-ks-profile-fourier-bound.md": "4b255fa65366edab8df528a786ed219cb622de635d0a2fd11d91d4986172ef81",
+    "docs/nsc-ks-trajectory-control.md": "e7457d940fc53fe41a7e6ba9b222bf17984ebd748bab3f6ec046c306b1718c41",
+    "docs/nsc-ks-trajectory.md": "a00db30d734e898f5da80a9183722c946c8d4fd37196ec5e4517657b28273863",
+    "docs/nsc-local-prepared-response.md": "3f68d0d4df92e193bb8292d3af6796e82b88c001bd1c5fc2b998587df6ea081c",
+    "requirements-validation.txt": "f52f64eea410f540f2c325e55cfc2f609465094e9caec8533931345cee2a91e5",
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-difference-control.json": "01ac13653c8b787567de920d66c13e11dd6cc343d4c1ff4df6f991df1c463bb0",
+    "results/development/nsc-ks-envelope-comparison.json": "4d33411c46710b40df219d7119d2fa102ed2ddec184b88f1a572d7fe5c5c360e",
+    "results/development/nsc-ks-envelope-resolution.json": "3632c2b49e21fccdea8653aaececf786b9bd8a84e7f97c67396266c3e9c3d1af",
+    "results/development/nsc-ks-profile-fourier-bound.json": "e67f39221c22256fdab86c15913c43604067d5f1b08525b2a6e9bb5fb97098b5",
+    "results/development/nsc-ks-trajectory-control.json": "aeb393ed20d36471d9537a2fd63ba6e84e7422005779732af267d5264395e715",
+    "results/development/nsc-local-cf4-response.json": "2f551fc9dd74caf9dabac6f061bbccd53851692fdc3729ff8cd6005a8449afbc",
+    "results/development/nsc-local-reference-accuracy.json": "dfa96689f269bc950c76c92aa3e5f4e9c95ac6009068d0f82606eff6f07f0eec",
+    "scripts/derive_nsc_evolved_incoming_constraints.py": "ce53587f3077cf4a8de7f8042a5e532319fac9635757b8a48205683e34b4710c",
+    "scripts/derive_nsc_ks_difference_control.py": "956ae178458f309201999af6fdac2ba75452a1185cedc9b085471a4e08a4d2a3",
+    "scripts/derive_nsc_ks_envelope_comparison.py": "f521cf383942ae3adddf01dee4db82da88753ec42c9050ba0ba6de2593cb8629",
+    "scripts/derive_nsc_ks_envelope_resolution.py": "aba1582136b6e645b09d954d74a1d719b917013b01811a6474b12ee9f18c25e8",
+    "scripts/derive_nsc_ks_profile_fourier_bound.py": "558c36377c7cab8ba4f91da28bf5004407a7440d82f24bee7f6a76eec4a76644",
+    "scripts/derive_nsc_ks_trajectory_control.py": "e8e147a716abb377702d03607f65da901c7c21c134afc0539caf60e24b1a1a02",
+    "scripts/derive_nsc_local_prepared_response.py": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_operator.py": "9b42c4a175a417f51bb955acfd7f4f8c6680a8034e2e351758c48d1e07ccc442",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196",
+    "src/recursive_horizons/nsc_ks_profile_fourier_bound.py": "4189d40faf66f157056a2aee7cc06f51d7203e26ee2fced58dff98a647d76087",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "measurements": {
+    "profile_1_0": {
+      "alias_error_upper": 1.2831814842109162e-39,
+      "derivative_cells": 2052,
+      "previous_coefficients_compatible": true,
+      "retained_coefficients": 16385,
+      "tail_sup_orders_0_1_2": [
+        2.1833667160565218e-23,
+        3.0102303459865394e-18,
+        4.171519072662577e-13
+      ]
+    },
+    "profile_2_0": {
+      "alias_error_upper": 4.655539393581331e-43,
+      "derivative_cells": 2052,
+      "previous_coefficients_compatible": true,
+      "retained_coefficients": 16385,
+      "tail_sup_orders_0_1_2": [
+        7.921521532463653e-27,
+        1.0921483930320474e-21,
+        1.5134781488683266e-16
+      ]
+    },
+    "profile_3_0": {
+      "alias_error_upper": 3.656798026794386e-46,
+      "derivative_cells": 2052,
+      "previous_coefficients_compatible": true,
+      "retained_coefficients": 16385,
+      "tail_sup_orders_0_1_2": [
+        6.222137084493402e-30,
+        8.5785249591326e-25,
+        1.188795419926765e-19
+      ]
+    },
+    "profile_4_0": {
+      "alias_error_upper": 2.5534685961978073e-49,
+      "derivative_cells": 2052,
+      "previous_coefficients_compatible": true,
+      "retained_coefficients": 16385,
+      "tail_sup_orders_0_1_2": [
+        4.344793321937831e-33,
+        5.99021163442447e-28,
+        8.301119585616815e-23
+      ]
+    }
+  },
+  "payload": {
+    "bytes": 99634661,
+    "path": "results/development/artifacts/nsc-ks-profile-fourier-refinement.npz",
+    "sha256": "763885df258646403efb548c6f4f31c394ccb556d74e5ee924edd42cf12a4d36"
+  },
+  "reproducer": "python scripts/derive_nsc_ks_profile_fourier_refinement.py --check",
+  "reused_artifacts": [
+    {
+      "bytes": 19936386,
+      "path": "results/development/artifacts/nsc-ks-profile-fourier-bound.npz",
+      "sha256": "1c25a88c6707195a0f071e3d6bb13009a9131e946e6788b3a49502732e4ed280"
+    },
+    {
+      "bytes": 10732325,
+      "path": "results/development/artifacts/nsc-ks-trajectory-control.npz",
+      "sha256": "4dd0e956bb68db0b116b756da62420a225d90bd56301314235f84570385927a2"
+    }
+  ],
+  "runtime": {
+    "CPU_cap": 120.0,
+    "CPU_seconds": 0.787419,
+    "wall_seconds": 0.7886592499999097
+  },
+  "schema": "NSC-KS-PROFILE-FOURIER-REFINEMENT-v1",
+  "scope": {
+    "continuous_state_error_bound": null,
+    "field_runs": 0,
+    "geometric_profile_only": true,
+    "metric_timestep": false,
+    "physical_local_gate": "OPEN",
+    "source_energy_UV_certificate": false,
+    "source_runs": 0
+  },
+  "settings": {
+    "bits": 120,
+    "derivative_order": 16,
+    "max_derivative": 2,
+    "quadrature_points": 65536,
+    "retained_index": 8192,
+    "transition_panels": 1024
+  },
+  "source_hashes": {
+    "docs/nsc-ks-profile-fourier-refinement.md": "309c6d7b14623d3f80f6334fee2cc7b261ca66a4ff60b8f6a83338d93f21c2fa",
+    "scripts/derive_nsc_ks_profile_fourier_refinement.py": "ca84207e5c4b4e854ae3c1dbce4a881ebc0e00ad3bc022afabab6d9c14557e67"
+  },
+  "status": "PASS: tighter certified axial-profile enclosure; physical local gate OPEN"
+}

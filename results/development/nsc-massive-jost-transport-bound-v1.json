@@ -1,0 +1,690 @@
+{
+  "angular_hex": "0x1.1e3779b97f4a8p+1",
+  "captured_trace_columns": [
+    "y_start",
+    "y_end",
+    "theta_start",
+    "theta_end",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6"
+  ],
+  "cases": [
+    {
+      "name": "outer_control",
+      "proof": {
+        "actual_initializer_phase_hex": "-0x1.7489304602ef5p-6",
+        "actual_outer_radius_interval": {
+          "lower": {
+            "exponent": -186,
+            "mantissa": "5884782876925014072021468323846621394069916909651290355211"
+          },
+          "upper": {
+            "exponent": -186,
+            "mantissa": "5884782876925014072021468323846621394069916909651290355215"
+          }
+        },
+        "all_exterior_radii": false,
+        "bits": 192,
+        "cells": 726,
+        "certified_finite_band": true,
+        "contraction": "k=-h*f_y,theta; exp(-k)*ein+eps*(1-exp(-k))/k",
+        "defect_subdivisions": 1,
+        "f_y": "2*exp(y)/A*(sqrt(A)*(ell/sqrt(1+r^2)*cos(theta)+m*sin(theta))-E)",
+        "horizon_sewing_error": null,
+        "independent_variable": "y=log(r-horizon_rho)",
+        "initializer": {
+          "all_exterior_radii": true,
+          "asymptotic_branch_gap_upper": {
+            "exponent": -201,
+            "mantissa": "87285356943584933510330871754491068150597"
+          },
+          "asymptotic_phase_error_upper": {
+            "exponent": -240,
+            "mantissa": "2412982845257237673754897308554897949948500743903556332785"
+          },
+          "bits": 192,
+          "combined_phase_initial_error_upper": {
+            "exponent": -240,
+            "mantissa": "2421010107113110332242736776660531800674839596753922682097"
+          },
+          "horizon_sewing_error": null,
+          "initializer_rounding_upper": {
+            "exponent": -224,
+            "mantissa": "122486295408213172727042665186063396092816968541967"
+          },
+          "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+          "metric_lower": {
+            "exponent": -191,
+            "mantissa": "3033928143177844289670194322791377530348546917974193884665"
+          },
+          "metric_terms": 12,
+          "parameter_intervals": {
+            "angular": {
+              "lower": {
+                "exponent": -190,
+                "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+              },
+              "upper": {
+                "exponent": -190,
+                "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+              }
+            },
+            "energy": {
+              "lower": {
+                "exponent": -55,
+                "mantissa": "47733945222081"
+              },
+              "upper": {
+                "exponent": -55,
+                "mantissa": "47733945222081"
+              }
+            },
+            "mass": {
+              "lower": {
+                "exponent": -190,
+                "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+              },
+              "upper": {
+                "exponent": -190,
+                "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+              }
+            },
+            "radius": {
+              "lower": {
+                "exponent": -186,
+                "mantissa": "5884782876925014072021468323846621394069916909651290355211"
+              },
+              "upper": {
+                "exponent": -186,
+                "mantissa": "5884782876925014072021468323846621394069916909651290355215"
+              }
+            }
+          },
+          "phase_defect_upper": {
+            "exponent": -234,
+            "mantissa": "118302758968996264136265843972528490217186375521548485807"
+          },
+          "phase_derivative_lower": {
+            "exponent": -190,
+            "mantissa": "4924019779650963576860427287197385601798103058812657544415"
+          },
+          "phase_tube_upper": {
+            "exponent": -208,
+            "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+          },
+          "physical_rho1_source_error": null,
+          "radial_transport_error": null,
+          "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+          "taylor_degree": 12
+        },
+        "initializer_phase_error_upper": {
+          "exponent": -240,
+          "mantissa": "2421010107113110332242736776660531800674839596753922682097"
+        },
+        "inner_offset_certified_lower": {
+          "exponent": -188,
+          "mantissa": "2405535178461813141039956841844375458762143070239637674133"
+        },
+        "inner_radius_certified_lower": {
+          "exponent": -188,
+          "mantissa": "3151212339407534019049060591363690579335875641092860844181"
+        },
+        "inner_y_node_hex": "0x1.d03e70afffb18p+0",
+        "interpolant": "degree-7 Hairer form from y_old, next interpolant y_old, and F[1:]",
+        "max_cell_defect_upper": {
+          "exponent": -214,
+          "mantissa": "2573557659256647536877629675909645936925339945859563"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_terms": 12,
+        "missing_step": "near-horizon collar below the certified inner radius, matched horizon sewing, and interior transport to rho=1",
+        "normalized_defect": "theta_x-h*f_y on the DOP853 cell fraction x",
+        "outer_radius": 60.0,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "inner_radius": {
+            "lower": {
+              "exponent": -188,
+              "mantissa": "3151212339407534019049060591363690579335875641092860844181"
+            },
+            "upper": {
+              "exponent": -188,
+              "mantissa": "3151212339407534019049060591363690579335875641092860844185"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "outer_radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_error_inner_upper": {
+          "exponent": -232,
+          "mantissa": "2770099209186118936371560905413645838130532928793779867767"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "scope": "decaying subgap phase transport on a finite exterior band",
+        "taylor_center": "subinterval midpoint",
+        "taylor_degree": 12
+      },
+      "requested_inner_radius_hex": "0x1.0000000000000p+3"
+    },
+    {
+      "name": "near_single_interval",
+      "proof": {
+        "actual_initializer_phase_hex": "-0x1.7489304602ef5p-6",
+        "actual_outer_radius_interval": {
+          "lower": {
+            "exponent": -186,
+            "mantissa": "5884782876925014072021468323846621394069916909651290355211"
+          },
+          "upper": {
+            "exponent": -186,
+            "mantissa": "5884782876925014072021468323846621394069916909651290355215"
+          }
+        },
+        "all_exterior_radii": false,
+        "bits": 192,
+        "cells": 906,
+        "certified_finite_band": true,
+        "contraction": "k=-h*f_y,theta; exp(-k)*ein+eps*(1-exp(-k))/k",
+        "defect_subdivisions": 1,
+        "f_y": "2*exp(y)/A*(sqrt(A)*(ell/sqrt(1+r^2)*cos(theta)+m*sin(theta))-E)",
+        "horizon_sewing_error": null,
+        "independent_variable": "y=log(r-horizon_rho)",
+        "initializer": {
+          "all_exterior_radii": true,
+          "asymptotic_branch_gap_upper": {
+            "exponent": -201,
+            "mantissa": "87285356943584933510330871754491068150597"
+          },
+          "asymptotic_phase_error_upper": {
+            "exponent": -241,
+            "mantissa": "4737542603556773143632265154522037256013015491843092395653"
+          },
+          "bits": 192,
+          "combined_phase_initial_error_upper": {
+            "exponent": -241,
+            "mantissa": "4753597127268518460607944090733304957465693197543825094277"
+          },
+          "horizon_sewing_error": null,
+          "initializer_rounding_upper": {
+            "exponent": -224,
+            "mantissa": "122486295408213172727042665186063396092816968541967"
+          },
+          "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+          "metric_lower": {
+            "exponent": -189,
+            "mantissa": "758482034150271730420282797718698945781318332380624359585"
+          },
+          "metric_terms": 48,
+          "parameter_intervals": {
+            "angular": {
+              "lower": {
+                "exponent": -190,
+                "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+              },
+              "upper": {
+                "exponent": -190,
+                "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+              }
+            },
+            "energy": {
+              "lower": {
+                "exponent": -55,
+                "mantissa": "47733945222081"
+              },
+              "upper": {
+                "exponent": -55,
+                "mantissa": "47733945222081"
+              }
+            },
+            "mass": {
+              "lower": {
+                "exponent": -190,
+                "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+              },
+              "upper": {
+                "exponent": -190,
+                "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+              }
+            },
+            "radius": {
+              "lower": {
+                "exponent": -186,
+                "mantissa": "5884782876925014072021468323846621394069916909651290355211"
+              },
+              "upper": {
+                "exponent": -186,
+                "mantissa": "5884782876925014072021468323846621394069916909651290355215"
+              }
+            }
+          },
+          "phase_defect_upper": {
+            "exponent": -236,
+            "mantissa": "464540691823244695833865455540590063976468194504444981795"
+          },
+          "phase_derivative_lower": {
+            "exponent": -189,
+            "mantissa": "2462009887245945508979235242155540844146411416398375006473"
+          },
+          "phase_tube_upper": {
+            "exponent": -208,
+            "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+          },
+          "physical_rho1_source_error": null,
+          "radial_transport_error": null,
+          "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+          "taylor_degree": 16
+        },
+        "initializer_phase_error_upper": {
+          "exponent": -241,
+          "mantissa": "4753597127268518460607944090733304957465693197543825094277"
+        },
+        "inner_offset_certified_lower": {
+          "exponent": -204,
+          "mantissa": "2627164469383988161919859780922893657243251571935596486655"
+        },
+        "inner_radius_certified_lower": {
+          "exponent": -189,
+          "mantissa": "1491434496588383406047562963509483600939251129608421913719"
+        },
+        "inner_y_node_hex": "-0x1.260a662957bd1p+3",
+        "interpolant": "degree-7 Hairer form from y_old, next interpolant y_old, and F[1:]",
+        "max_cell_defect_upper": {
+          "exponent": -220,
+          "mantissa": "45278578569406615431396300778599135926093033433266313255"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_terms": 48,
+        "missing_step": "near-horizon collar below the certified inner radius, matched horizon sewing, and interior transport to rho=1",
+        "normalized_defect": "theta_x-h*f_y on the DOP853 cell fraction x",
+        "outer_radius": 60.0,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "inner_radius": {
+            "lower": {
+              "exponent": -189,
+              "mantissa": "1491434496588383406047562963509483600939251129608421913719"
+            },
+            "upper": {
+              "exponent": -186,
+              "mantissa": "186429312073547925755945370438685450117406391201052739215"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "outer_radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_error_inner_upper": {
+          "exponent": -225,
+          "mantissa": "3450772118478822382147023294433840215651533694494531127899"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "scope": "decaying subgap phase transport on a finite exterior band",
+        "taylor_center": "subinterval midpoint",
+        "taylor_degree": 16
+      },
+      "requested_inner_radius_hex": "0x1.e69a581cf90fcp+0"
+    },
+    {
+      "name": "near_four_subintervals",
+      "proof": {
+        "actual_initializer_phase_hex": "-0x1.7489304602ef5p-6",
+        "actual_outer_radius_interval": {
+          "lower": {
+            "exponent": -186,
+            "mantissa": "5884782876925014072021468323846621394069916909651290355211"
+          },
+          "upper": {
+            "exponent": -186,
+            "mantissa": "5884782876925014072021468323846621394069916909651290355215"
+          }
+        },
+        "all_exterior_radii": false,
+        "bits": 192,
+        "cells": 906,
+        "certified_finite_band": true,
+        "contraction": "k=-h*f_y,theta; exp(-k)*ein+eps*(1-exp(-k))/k",
+        "defect_subdivisions": 4,
+        "f_y": "2*exp(y)/A*(sqrt(A)*(ell/sqrt(1+r^2)*cos(theta)+m*sin(theta))-E)",
+        "horizon_sewing_error": null,
+        "independent_variable": "y=log(r-horizon_rho)",
+        "initializer": {
+          "all_exterior_radii": true,
+          "asymptotic_branch_gap_upper": {
+            "exponent": -201,
+            "mantissa": "87285356943584933510330871754491068150597"
+          },
+          "asymptotic_phase_error_upper": {
+            "exponent": -241,
+            "mantissa": "4737542603556773143632265154522037256013015491843092395653"
+          },
+          "bits": 192,
+          "combined_phase_initial_error_upper": {
+            "exponent": -241,
+            "mantissa": "4753597127268518460607944090733304957465693197543825094277"
+          },
+          "horizon_sewing_error": null,
+          "initializer_rounding_upper": {
+            "exponent": -224,
+            "mantissa": "122486295408213172727042665186063396092816968541967"
+          },
+          "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+          "metric_lower": {
+            "exponent": -189,
+            "mantissa": "758482034150271730420282797718698945781318332380624359585"
+          },
+          "metric_terms": 48,
+          "parameter_intervals": {
+            "angular": {
+              "lower": {
+                "exponent": -190,
+                "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+              },
+              "upper": {
+                "exponent": -190,
+                "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+              }
+            },
+            "energy": {
+              "lower": {
+                "exponent": -55,
+                "mantissa": "47733945222081"
+              },
+              "upper": {
+                "exponent": -55,
+                "mantissa": "47733945222081"
+              }
+            },
+            "mass": {
+              "lower": {
+                "exponent": -190,
+                "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+              },
+              "upper": {
+                "exponent": -190,
+                "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+              }
+            },
+            "radius": {
+              "lower": {
+                "exponent": -186,
+                "mantissa": "5884782876925014072021468323846621394069916909651290355211"
+              },
+              "upper": {
+                "exponent": -186,
+                "mantissa": "5884782876925014072021468323846621394069916909651290355215"
+              }
+            }
+          },
+          "phase_defect_upper": {
+            "exponent": -236,
+            "mantissa": "464540691823244695833865455540590063976468194504444981795"
+          },
+          "phase_derivative_lower": {
+            "exponent": -189,
+            "mantissa": "2462009887245945508979235242155540844146411416398375006473"
+          },
+          "phase_tube_upper": {
+            "exponent": -208,
+            "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+          },
+          "physical_rho1_source_error": null,
+          "radial_transport_error": null,
+          "scope": "decaying subgap phase at R; entire exterior half-line controlled",
+          "taylor_degree": 16
+        },
+        "initializer_phase_error_upper": {
+          "exponent": -241,
+          "mantissa": "4753597127268518460607944090733304957465693197543825094277"
+        },
+        "inner_offset_certified_lower": {
+          "exponent": -204,
+          "mantissa": "2627164469383988161919859780922893657243251571935596486655"
+        },
+        "inner_radius_certified_lower": {
+          "exponent": -189,
+          "mantissa": "1491434496588383406047562963509483600939251129608421913719"
+        },
+        "inner_y_node_hex": "-0x1.260a662957bd1p+3",
+        "interpolant": "degree-7 Hairer form from y_old, next interpolant y_old, and F[1:]",
+        "max_cell_defect_upper": {
+          "exponent": -228,
+          "mantissa": "1050105483402383217190438472215263522652108411467488297319"
+        },
+        "metric": "A=1-3*((1+r^2)*atan(1/r)-r)",
+        "metric_terms": 48,
+        "missing_step": "near-horizon collar below the certified inner radius, matched horizon sewing, and interior transport to rho=1",
+        "normalized_defect": "theta_x-h*f_y on the DOP853 cell fraction x",
+        "outer_radius": 60.0,
+        "parameter_intervals": {
+          "angular": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "3509006545501628834748378531638089594181381512844588653715"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "3509006545501629005238077719253127733817275287558502784147"
+            }
+          },
+          "energy": {
+            "lower": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            },
+            "upper": {
+              "exponent": -55,
+              "mantissa": "47733945222081"
+            }
+          },
+          "inner_radius": {
+            "lower": {
+              "exponent": -189,
+              "mantissa": "1491434496588383406047562963509483600939251129608421913719"
+            },
+            "upper": {
+              "exponent": -186,
+              "mantissa": "186429312073547925755945370438685450117406391201052739215"
+            }
+          },
+          "mass": {
+            "lower": {
+              "exponent": -190,
+              "mantissa": "2465012087215817224209109587999040497729239713893037241117"
+            },
+            "upper": {
+              "exponent": -190,
+              "mantissa": "2465012087215817320299516901013095360800947144897832022813"
+            }
+          },
+          "outer_radius": {
+            "lower": {
+              "exponent": 2,
+              "mantissa": "15"
+            },
+            "upper": {
+              "exponent": 2,
+              "mantissa": "15"
+            }
+          }
+        },
+        "phase_error_inner_upper": {
+          "exponent": -227,
+          "mantissa": "1949445879137884458788980397206866094255859418428148068739"
+        },
+        "phase_tube_upper": {
+          "exponent": -208,
+          "mantissa": "4113761393303015105387422956393376262456839664083949658373"
+        },
+        "physical_rho1_source_error": null,
+        "scope": "decaying subgap phase transport on a finite exterior band",
+        "taylor_center": "subinterval midpoint",
+        "taylor_degree": 16
+      },
+      "requested_inner_radius_hex": "0x1.e69a581cf90fcp+0"
+    }
+  ],
+  "energy_hex": "0x1.5b4f66ca1e080p-10",
+  "family": [
+    14,
+    1
+  ],
+  "full_source_coverage": false,
+  "horizon_coordinate_origin_hex": "0x1.e693b99d46a80p+0",
+  "horizon_sewing_error": null,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "mass_hex": "0x1.921fb54442d18p+0",
+  "payload": {
+    "bytes": 72742,
+    "path": "results/development/artifacts/nsc-massive-jost-transport-bound-v1.npz",
+    "sha256": "3cf18ba5a346aaa9cf5f7ccf1c4f864e6e098d495ea5e184df04ee023650e467"
+  },
+  "physical_local_gate": "OPEN",
+  "physical_rho1_source_error": null,
+  "physical_source_columns_replaced": false,
+  "same_trajectory_for_all_enclosures": true,
+  "schema": "NSC-MASSIVE-JOST-TRANSPORT-BOUND-v1",
+  "solver_outer_radius": 60.0,
+  "solver_settings": {
+    "atol": 2e-15,
+    "order": 8,
+    "radial_collar": 1e-10,
+    "rtol": 2e-13
+  },
+  "source_hashes": {
+    "docs/nsc-massive-jost-transport-bound.md": "4239ed8b1a2435dba1706061bfc8c69cc3888d0102e859a0f161eea9eab9a6fc",
+    "scripts/derive_nsc_massive_jost_transport_bound.py": "47f850670ff4de36fdf91d63efd1da75fa10f39c3b360980262b789d0cb1304b",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_charged_ctp_neck.py": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_massive_jost_modes.py": "b027182d2aebfa407a2abf7dd7bafb717dfbd1b455490af74390442bc1060ea6",
+    "src/recursive_horizons/nsc_massive_jost_phase_bound.py": "4dfd7dce2ce4030b95882cb2d6e2605a32c2e8d058f6a6067e3c686d49c5e78b",
+    "src/recursive_horizons/nsc_massive_jost_transport_bound.py": "7a6759a638a2da788bf71df22580e7595e5d0e2918f34c623564708d6f72a37d",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+    "tests/test_nsc_massive_jost_transport_bound.py": "1e9b1887e1ec819311e17c50dda891d580d20ba609541a45b03f7530980da586"
+  },
+  "source_inventory_unchanged": true,
+  "source_panel": "group14/low16_1",
+  "source_row": 0,
+  "status": "ENCLOSED: exterior finite-band phase transport; horizon sewing and physical source error OPEN"
+}

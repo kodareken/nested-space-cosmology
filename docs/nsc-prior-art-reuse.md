@@ -1,16 +1,53 @@
 # Reuse existing formulations; compute the missing connections
 
-The full six-part objective remains. Execution starts from published
+The current objective is the nested geometry atlas and its interior-observer consequences. The incoming-gate application is preserved and paused. Execution starts from published
 formulations and existing project evidence. Established results are reusable
 inputs with stated assumptions, not a checklist of derivations to repeat.
+The broader regenerative interpretation is traced in the
+[claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation).
+
+## Reuse the inheritance and transfer foundations
+
+The organizing condition
+$\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta$ and its existing
+operator/block calculations remain inputs. Reuse the exact Schur reduction,
+the [normalized finite recursion](nsc-regulated-recursion.md), the
+[state-dependent transfer identities](nsc-energy-transfer.md), and the
+[same-action source connection](nsc-common-source-derivation.md) within their
+recorded domains. Do not repeat these calculations to restore confidence in
+an unchanged mathematical result. Those incoming constraints belong to the paused application. The active decision is owned by the [map-first admission rule](prior-art-and-open-claim.md); route-specific next steps below are conditional, not compulsory campaigns.
+
+For the physical interpretation, retain these literature connections:
+
+| Source | Reusable result | Application boundary |
+|---|---|---|
+| [Dai, Pajer and Schmidt, 1504.00351](https://arxiv.org/abs/1504.00351) | Local density/curvature response to a long perturbation, with an isotropic/tidal split | Its matter content, scale and sound-horizon conditions must hold. It does not derive a generic nested spherical structure or a black-universe transition. |
+| [Buchert, gr-qc/9906015](https://arxiv.org/abs/gr-qc/9906015) | Averaged expansion, curvature and backreaction for irrotational dust | Specify the averaging domain, slicing and matter model. The formalism does not supply this repository's quantum state or establish a replacement for all dark-sector observations. |
+| [Bronnikov, Dehnen and Melnikov, gr-qc/0611022](https://arxiv.org/abs/gr-qc/0611022) | Particular regular black-universe geometries and their causal extensions | Their supporting source is not automatically the selected Dirac/CTP source. The local gate tests two necessary source/geometry relations; full global self-sourcing is a further question. |
+
+These imports add no new sprint gate. The original source, locked parameters
+and local history class stay fixed. New global recurrence, entropy or
+observational claims require their own carrying relations.
 
 ## Before allocating scientific compute
 
-1. Identify the closest primary-source equation or existing implementation.
-2. State what can be reused, including its action, state, units and domain.
-3. Name the exact NSC quantity or connection that remains unevaluated.
-4. Run the smallest calculation that can resolve it. Check a convention or
-   implementation only when that check can change the next decision.
+Keep one short decision entry in the existing plan, work note or delegation
+brief. It must identify:
+
+1. **Reuse:** the primary-source equation or stored artifact and the action,
+   state, units and domain under which it applies.
+2. **Gap and decision:** the exact NSC connection still missing, and what
+   will be done differently depending on the result.
+3. **Bounded work:** the smallest calculation or assumption check that can
+   resolve that decision, its output and its stopping condition.
+4. **Rerun reason, when applicable:** the changed dependency, failed check
+   or specific unresolved error. A new chat, more available compute or an
+   unchanged milestone is not a rerun reason.
+
+Use a directly applicable result by citation and authenticated stored evidence.
+If applicability is uncertain, check only the disputed assumption or mapping.
+Derive or simulate anew when that named connection is absent or invalidated.
+Do not treat a worker's unchecked literature summary as established evidence.
 
 If the proposed work only adds confidence in an unchanged known result,
 stop and return to the missing physical connection. More tests, records,
@@ -23,7 +60,37 @@ Delegated work follows the same rule. Each brief identifies the prior result,
 the new gap, owned files and bounded verification. Parallel workers must not
 repeat the same literature survey, baseline derivation or full test suite.
 
+This also limits reasoning and context consumption: once a question is
+settled, retain its reference and conclusion instead of reloading its full
+derivation on each continuation. Adding another control must answer a new
+question that matters to the active decision. Documentation and navigation
+changes use link/command checks; they do not trigger scientific reproduction.
+Keep this procedure in the existing work entry rather than adding another
+tracking system.
+
 ## Compact geometry to mass: reuse the dimensional reduction
+
+The [compact/light matching map](nsc-compact-matching.md) now applies the
+standard trace/Mellin formula to h(D4^2), using the proper compact length
+for its infrared limit. Reuse its finite Dirac coefficients, normalization
+and scale cancellation. The remaining Gamma_completion is a different
+common-functional contribution; further raw determinant coefficient scans
+cannot determine it.
+
+The [warped-source application](nsc-warped-source.md) now matches the same
+compact domain to a covariant finite-cutoff spectral weight h(D4^2). Reuse
+its measure, adjoint mapping, dual-heat identity and observed convergence.
+The remaining common-functional/state contribution is the next source
+dependency; another KK scan, product-only potential or generic conformal
+derivation will not supply it.
+
+The [curved Casimir/source application](nsc-compact-casimir.md) reuses
+Flachi–Moss–Toms's interval determinant, the existing covariant D4 and
+general boundary-determinant formulas. Its new work is the curved metric
+source and the holonomy match to the radial partners. Reuse its convergence
+and phase result. The decompactified curved bulk determinant is not a
+scaleless flat term, and a real physical return loop must be established
+before using the conditional phase saddle in the recursive geometry.
 
 The [compact mass map](nsc-compact-mass-map.md) applies conformal Dirac
 covariance and the established KK reduction to the actual free carrier.
@@ -59,6 +126,80 @@ the paper's d=4 fixed-point numbers into the five-dimensional carrier.
 
 ## Black-hole interiors and child expansion
 
+For the next parent-state binding, use
+[Gérard–Häfner–Wrochna, Theorem 1.1](https://arxiv.org/html/2008.10995):
+the massless fermionic Unruh construction combines incoming-vacuum data
+at past null infinity with affine-frequency horizon data. Its Kerr–Kruskal
+Hadamard theorem must be matched to this geometry's characteristic traces,
+past extension and spin/current normalization. A global negative-Killing-
+energy projector is not a replacement where that Killing field is spacelike.
+The stored horizon surface gravity is an input; do not rederive the Hawking
+temperature or luminosity to repeat this state prescription.
+
+The [full angular reference calculation](nsc-angular-stress.md) binds
+existing Dirac mode evolution, adiabatic subtraction, spectral zeta
+normalization and conformal-stress methods. Reuse its finite-radius tensor
+and source-budget result. The next new connection is the parent-state and
+finite-cutoff kernel; repeating the reference integral is not that work.
+
+The [massless-reference application](nsc-massless-reference.md) imports
+Hollands' Hadamard construction and the general conformal-stress law.
+Reuse its actual-tail tensor and exact normalization conversion. The next
+source work is the finite-radius angular tensor with parent/state matching;
+repeating the asymptotic anomaly or sphere normalization cannot replace it.
+
+The [child-state application](nsc-child-state.md) uses canonical Dirac
+evolution, trace-norm bounds and the standard difference of renormalized
+stresses. Its finite-moment estimate replaces arbitrary state-evolution
+catalogues. Reuse the existing spinor Hadamard constructions with their
+actual geometry assumptions; a flat-FRW or scalar theorem is not a result
+for the anisotropic child. The remaining target is the absolute reference.
+
+The [spectral endpoint application](nsc-spectral-endpoint.md) imports
+Camporesi–Higuchi's sphere spectrum directly. Reuse its evaluated compact
+composition and scale comparison. The remaining work is the global-state
+and complete-source match; do not recalculate the sphere spectrum or pursue
+the rejected local-truncation radius with more precision.
+
+The [curvature EFT application](nsc-curvature-eft.md) reuses Parker–Simon
+order reduction and the standard gravitational field-redefinition method.
+The new source/contact normalization and constraint corrections are checked.
+Reuse that map; do not re-solve a fourth-order truncation as though its extra
+branches were established physical modes. The quantum Jacobian, boundary
+and state transformations are not supplied by a classical EOM substitution.
+
+The [canonical spherical interface](nsc-spherical-action.md) now maps the
+local action to Grumiller–Kummer–Vassilevich's first-order gravity. Reuse
+that quantization method and the checked coupling/domain conversion. The
+new charge potential closes the classical brackets; the matter measure,
+boundary state and nonlocal completion still require their own matching.
+Do not repeat spherical GR or interpret pure-geometry ghost cancellation
+as cancellation of every quantum source.
+
+The [projected gauge-source application](nsc-gauge-source.md) now uses
+MMP Appendix A and curved Schwinger-model bosonization as its interaction
+owner. Reuse that mass/count/action map, the Maxwell pressure identity and
+the new scattering/current result. The collective mode's scale is not a
+four-dimensional fermion mass, and its radial profile has no nonzero
+asymptotic mass threshold. The remaining high-mode, state and absolute-source
+matching must not be replaced by another free-field or constant-mass guess.
+
+The [horizon/state map](nsc-horizon-source.md) now separates the unwrapped
+PG domain from the cyclic development cell. Reuse the recorded horizon,
+MMP's magnetic angular zero-mode reduction, the conformal stress/Schwarzian
+relations and the standard Unruh-state flux. Do not repeat those derivations.
+The new source projection and reduced metric equations keep the missing
+potential and global state/domain matching explicit.
+
+The exact parent exterior also matches the M=a=1 metric in
+[Heidari et al.](https://arxiv.org/html/2608.23861v1), equation6. Their
+small-core expansions are not controlled there, and their scalar partial
+waves are not Dirac transmission data. The inspected Dirac trail supplies
+QNMs and WKB estimates; no exact neutral transmission at this point was
+identified. If that branch is needed, calculate only the missing
+transmission, with the correct one-Dirac multiplicity, rather than repeating
+black-universe existence or Hawking's derivation. The neutral multiplicity is checked against [Dolan–Doran–Lasenby, equation72](https://arxiv.org/html/gr-qc/0605031v2) and the particle-plus-antiparticle flux in [Iso–Umetsu–Wilczek, equation28](https://arxiv.org/html/hep-th/0602146v2); the signs of kappa are angular labels, not antiparticles.
+
 | Existing formulation | Reuse | NSC interface |
 |---|---|---|
 | [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3), sections2 and5–6 | Charged-fermion vacuum stress and its semiclassical Einstein–Maxwell throat matching | [Charged operator/state, mass and coefficient matching](nsc-charged-self-sourcing-route.md); this is not a generic black-hole-to-child formation result. |
@@ -75,6 +216,23 @@ For metric integration, use the [full measure construction](nsc-quantum-measure-
 including gauge Jacobians and zero modes. Do not insert a one-dimensional
 weight to produce a desired scale or equate Lorentzian proper-time gauge with
 the heat-kernel regulator.
+
+The [new coefficient-matching condition](nsc-vacuum-charge-matching.md) uses
+the published heat and charged-horizon equations directly. It excludes a
+controlled MMP seed built from the retained positive bulk contribution alone.
+The next owner is the complete vacuum/gravity/gauge contribution, not another
+positive profile, copy-count variation or neutral/magnetic throat scan.
+
+The [compact-boundary application](nsc-compact-boundary-action.md) now
+matches the declared chiral domain to the known mixed heat formulas. Its
+determinant magnitude fixes the Einstein/GHY ratio and leading boundary
+terms. Reuse this domain map and the stored warp integrals. A physical
+transmitting interface and the determinant phase remain different inputs.
+
+The same note records why the Chamseddine–Connes–Mukhanov volume constraint
+is not an automatic NSC vacuum closure: it adds coordinate-map relations
+and leaves a cosmological integration constant. No repeat of its derivation
+or scan over its integers will supply the missing NSC matching equation.
 
 ## The next useful compatibility comparison
 

@@ -1,0 +1,46 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "composed_exponent": 0.23359050596059905,
+  "creation_only": true,
+  "evolved": false,
+  "hypothesis_pre_registered": "4*p_Q = b taken as identity; the covariance closed with the ladder-implied exponent",
+  "input_sha256": {
+    "lab/results/development/nsc-charged-ladder-deficit-law-v1.json": "b01bd1e9b1dffdb1b1688f64e5f3bd9f2b0a7d44be201a3cba26e8e55c25d720",
+    "lab/results/development/nsc-two-ends-covariance-v1.json": "9766b84cc70d5952f3fb48dea3816ffebe056672988267e25092628dec710d30",
+    "lab/results/development/nsc-wall-breathing-family-v1.json": "3eb52f84228f8af6c251611cb9503280761abd57ac20734b4badf6a08407b884"
+  },
+  "ladder_b": 0.4671810119211981,
+  "notes": [
+    "three gap points: the pass is weak by construction and the record says so; nothing beyond the identity is claimed"
+  ],
+  "p_Q_predicted": 0.11679525298029952,
+  "predicted_composed_spread": 0.020550948964817736,
+  "production_trajectory": false,
+  "recorded_composed_spread_reference": 0.020705464816212223,
+  "rows": [
+    {
+      "case": "mu-1.002-eps-0.001",
+      "composed": 15.903039226450563,
+      "q": 21.083927847693616,
+      "rise": 0.29902016427183
+    },
+    {
+      "case": "mu-1.010-eps-0.001",
+      "composed": 15.13288380048908,
+      "q": 22.517318627976667,
+      "rise": 0.18244065140986887
+    },
+    {
+      "case": "mu-1.040-eps-0.001",
+      "composed": 15.64140628747612,
+      "q": 25.161408625040064,
+      "rise": 0.13066197176516278
+    }
+  ],
+  "schema": "NSC-LADDER-COVARIANCE-TEST-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_ladder_covariance_test.py": "968e46858edd610d23ca8fa0f7c2873918368fa906c5183a9480c91c088eca6b",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "PREDICTIVE_PASS"
+}

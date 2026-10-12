@@ -1,0 +1,56 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "bit_identical_balances": true,
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-march-balance-trajectory-v1.json": "56f0fc90c9f9cdb5a0b32d0ed6227d596a80d4e2c87dd931bc98b944b3adbb3a",
+    "lab/results/development/nsc-relaxation-wall-v1.json": "4296e7b71d467b20edf1b1ebd8b682da11722a763d4953d5aba850da5bc51a67"
+  },
+  "notes": [
+    "the shared stations are t = 5, 10, 15, 20 at mu=1.040",
+    "the wall reducer ran identically on both payload families"
+  ],
+  "production_trajectory": false,
+  "reading": "the two payload families carry the same trajectory byte for byte at every shared station; all cross-arm comparisons in the wall programme are exact by construction",
+  "schema": "NSC-CROSS-ARM-IDENTITY-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_cross_arm_identity.py": "832615de25e9d07e5286ff2ed8543d5205244a5983ea84785f1b88da8a996dd7",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "table": [
+    {
+      "balance_diff": 0.0,
+      "march_balance": 0.7014151442354447,
+      "march_walls": 2,
+      "relaxation_balance": 0.7014151442354447,
+      "relaxation_walls": 2,
+      "t_over_rm": 5.0
+    },
+    {
+      "balance_diff": 0.0,
+      "march_balance": 0.8444241844490741,
+      "march_walls": 2,
+      "relaxation_balance": 0.8444241844490741,
+      "relaxation_walls": 2,
+      "t_over_rm": 10.0
+    },
+    {
+      "balance_diff": 0.0,
+      "march_balance": 0.9715069403995601,
+      "march_walls": 0,
+      "relaxation_balance": 0.9715069403995601,
+      "relaxation_walls": 0,
+      "t_over_rm": 15.0
+    },
+    {
+      "balance_diff": 0.0,
+      "march_balance": 0.7705968717457008,
+      "march_walls": 0,
+      "relaxation_balance": 0.7705968717457008,
+      "relaxation_walls": 0,
+      "t_over_rm": 20.0
+    }
+  ],
+  "wall_counts_agree": true
+}

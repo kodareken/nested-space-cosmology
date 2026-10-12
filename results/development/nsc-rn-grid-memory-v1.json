@@ -1,0 +1,79 @@
+{
+ "excision": 0.7555,
+ "machine": {
+  "available_gb": 52.749290466308594,
+  "logical_cores": 16,
+  "measurement": "GlobalMemoryStatusEx; psutil is not installed here",
+  "total_gb": 63.28105163574219
+ },
+ "r_out": 32.0,
+ "rows": [
+  {
+   "available_after_bytes": 56765296640,
+   "build_seconds": 3.279021800000919,
+   "commit_delta_bytes": -77201408,
+   "commit_total_bytes": 12755374080,
+   "gap_in_cells": 0.03214629899695029,
+   "mass_finite": true,
+   "operator_bytes": 13904,
+   "operator_nnz": 1738,
+   "points": 869,
+   "r_inner": 0.7555,
+   "spacing": 0.035995967741935475
+  },
+  {
+   "available_after_bytes": 56766373888,
+   "build_seconds": 3.646900999998252,
+   "commit_delta_bytes": -30912512,
+   "commit_total_bytes": 12720406528,
+   "gap_in_cells": 0.07403277845034961,
+   "mass_finite": true,
+   "operator_bytes": 32000,
+   "operator_nnz": 4000,
+   "points": 2000,
+   "r_inner": 0.7555,
+   "spacing": 0.015630065032516294
+  },
+  {
+   "available_after_bytes": 56807653376,
+   "build_seconds": 4.0108517999997275,
+   "commit_delta_bytes": -130588672,
+   "commit_total_bytes": 12588695552,
+   "gap_in_cells": 0.14810259180737903,
+   "mass_finite": true,
+   "operator_bytes": 64000,
+   "operator_nnz": 8000,
+   "points": 4000,
+   "r_inner": 0.7555,
+   "spacing": 0.007813078269567342
+  },
+  {
+   "available_after_bytes": 56761208832,
+   "build_seconds": 4.630448399999295,
+   "commit_delta_bytes": 35733504,
+   "commit_total_bytes": 12623077376,
+   "gap_in_cells": 0.22217240516440512,
+   "mass_finite": true,
+   "operator_bytes": 96000,
+   "operator_nnz": 12000,
+   "points": 6000,
+   "r_inner": 0.7555,
+   "spacing": 0.005208284714119049
+  },
+  {
+   "available_after_bytes": 56801800192,
+   "build_seconds": 5.284985199999937,
+   "commit_delta_bytes": 31092736,
+   "commit_total_bytes": 12647780352,
+   "gap_in_cells": 0.2962422185214351,
+   "mass_finite": true,
+   "operator_bytes": 128000,
+   "operator_nnz": 16000,
+   "points": 8000,
+   "r_inner": 0.7555,
+   "spacing": 0.003906050756344537
+  }
+ ],
+ "schema": "NSC-RN-GRID-MEMORY-v1",
+ "what_this_measures": "What a grid of N points costs on this machine, at a fixed inner edge of 0.7555 and outer radius 32. Nothing is marched. The point is to choose the next step from a measurement rather than from an inference about a resource ceiling that was never tested."
+}

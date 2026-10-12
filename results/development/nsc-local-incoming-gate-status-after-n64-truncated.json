@@ -1,0 +1,107 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.6269966908396003e-07,
+    3.615304013840359e-06
+  ],
+  "best_profile_identity": "b4b53f0bba7290cfde14af741c82fda9af1b49a13f7a3b207a7230f39ea106e9",
+  "enclosed_error": null,
+  "evolved_steps": [
+    {
+      "N_shift_mean": -0.0003855242895345293,
+      "N_shift_std": 2.8724701502753054e-05,
+      "kept_modes": 80,
+      "measured_maxima": [
+        0.0004127139981390249,
+        2.479490202045298e-06
+      ],
+      "path": "results/development/nsc-ks-coupled-newton-n64-truncated-iterate7.json",
+      "predicted_maxima": [
+        2.3010841127511783e-10,
+        5.687215974634757e-09
+      ],
+      "prediction_minus_measured": [
+        -0.0004127137680306136,
+        -2.4738029860706633e-06
+      ],
+      "profile_identity": "e0fca7679b148a331a4e1c9ea4373954cc3ccabfb9ab9cbc1edba270db72becb",
+      "residual_improved_on_all_components": false,
+      "step_norm": 0.7767769619014676,
+      "step_scale": 1.0
+    },
+    {
+      "N_shift_mean": -0.00031714984798441887,
+      "N_shift_std": 1.459388311398246e-07,
+      "kept_modes": 64,
+      "measured_maxima": [
+        0.00031715559756089265,
+        8.72501580928553e-07
+      ],
+      "path": "results/development/nsc-ks-coupled-newton-n64-truncated-iterate8.json",
+      "predicted_maxima": [
+        6.616984421882607e-09,
+        8.722634529686839e-07
+      ],
+      "prediction_minus_measured": [
+        -0.0003171489805764708,
+        -2.3812795986910724e-10
+      ],
+      "profile_identity": "46d410ad0678edd5177f721ee48172d87e0c3e87ac1b5e41d37c49424936e867",
+      "residual_improved_on_all_components": false,
+      "step_norm": 0.015797237806808796,
+      "step_scale": 1.0
+    },
+    {
+      "N_shift_mean": -0.0003171390033172441,
+      "N_shift_std": 4.556999026462842e-09,
+      "kept_modes": 64,
+      "measured_maxima": [
+        0.00031739335219253817,
+        3.508746647121891e-06
+      ],
+      "path": "results/development/nsc-ks-coupled-newton-n64-truncated-iterate9.json",
+      "predicted_maxima": [
+        2.5453670508758073e-07,
+        3.508797623542933e-06
+      ],
+      "prediction_minus_measured": [
+        -0.0003171388154874506,
+        5.097642104212881e-11
+      ],
+      "profile_identity": "6f2e5ed4324598fecf74f6551df1bdb180955622588d901a3bf96b7cec54a702",
+      "residual_improved_on_all_components": false,
+      "step_norm": 0.0004936636814627749,
+      "step_scale": 0.03125
+    }
+  ],
+  "existence_tolerance": 3e-11,
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n32-truncated-iterate6.json": "9b2ab9ca447488b406e029bfd3b5b0528d3125b9c84f72b432250fd557983758",
+    "results/development/nsc-ks-coupled-newton-n64-truncated-iterate7.json": "d4a6015cf15437b4ffecee9fd92f183c185642bc46cbe1c4cd058a63bb2473d9",
+    "results/development/nsc-ks-coupled-newton-n64-truncated-iterate8.json": "c2041693a0c2691004e54a29dbd49c51f7cc7997751710f80e1a394c5379a074",
+    "results/development/nsc-ks-coupled-newton-n64-truncated-iterate9.json": "d46f1468f9587d5d44994c6b6db20ae9eed54876a6e98ea8ea6d3ea6390b1560"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "n64_truncated_N_offset_independent_of_step",
+  "next_named_owner": "same declared (w,U) class on I; remove the N offset before another damped step",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-N64-TRUNCATED-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "failed_optimization_is_not_nonexistence": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "no_class_rewrite": true,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-n64-truncated.md": "02705175fdd9af568d1595bb4b16889081b83996ded881fd6a7cd91d5a780050",
+    "scripts/derive_nsc_local_incoming_gate_status_after_n64_truncated.py": "9933a0c777234b96137ea19a6bf8f6aa8adf39325c3ec97d7dcbbda99ee83923"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: n=64 truncated steps leave an N offset and do not beat iterate6"
+}

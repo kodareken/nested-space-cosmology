@@ -1,0 +1,52 @@
+{
+  "accountable_author": "Douglas Ek",
+  "campaign_best_merit": 0.0005881485884118953,
+  "campaign_best_name": "trial",
+  "campaign_best_profile_identity": "a9572341fe01e157cb0d9e2176e022e49277304f560a40ec73231ae3825e4508",
+  "components": {
+    "between_node_on_I": {
+      "method": "not piloted on the value-only campaign best",
+      "pilot_bound": null,
+      "projected_cost": "withheld until the value-only floor is below the allocation",
+      "verdict": "ESCALATE"
+    },
+    "changed_history_UV_tail": {
+      "method": "not piloted on the value-only campaign best",
+      "pilot_bound": null,
+      "projected_cost": "withheld until the value-only floor is below the allocation",
+      "verdict": "ESCALATE"
+    },
+    "energy_interpolation": {
+      "method": "not piloted on the value-only campaign best",
+      "pilot_bound": null,
+      "projected_cost": "withheld until the value-only floor is below the allocation",
+      "verdict": "ESCALATE"
+    },
+    "finite_energy_field": {
+      "method": "not piloted on the value-only campaign best",
+      "pilot_bound": null,
+      "projected_cost": "withheld until the value-only floor is below the allocation",
+      "verdict": "ESCALATE"
+    },
+    "phase_value": {
+      "method": "not piloted on the value-only campaign best",
+      "pilot_bound": null,
+      "projected_cost": "withheld until the value-only floor is below the allocation",
+      "verdict": "ESCALATE"
+    }
+  },
+  "infeasible_components": [],
+  "input_hashes": {
+    "results/development/nsc-ks-gate-budget-independent.json": "285595b4b6c6db6af0cb0b37f2e1d1ead4c2cd6382121002754c2deda2f982d2",
+    "results/development/nsc-ks-gate-reanchor.json": "d89ab134c33aead5660eeeeb49762a0086d279a3e2e02d8660a80b5ff139e58a"
+  },
+  "named_gap": "value_only_indicator_floor_above_1e-10",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "schema": "NSC-KS-GATE-BUDGET-FEASIBILITY-v1",
+  "source_hashes": {
+    "docs/nsc-ks-gate-budget-feasibility.md": "1c78115e2cf1e7b20d1cd95828dacf59cd524fc9b26e337621eb496f4b99bd6e",
+    "scripts/derive_nsc_ks_gate_budget_feasibility.py": "62a29dfc2d09683b3760375fd0dade6c091c152c603f3f499c9893f8b5cedf8a"
+  },
+  "status": "OPEN: history-dependent bounds are ESCALATE; the value-only campaign best is above 1e-4"
+}

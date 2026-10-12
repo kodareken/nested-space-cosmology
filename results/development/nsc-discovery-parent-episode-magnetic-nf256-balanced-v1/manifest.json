@@ -1,0 +1,248 @@
+{
+  "schema": "NSC-DISCOVERY-PARENT-EPISODE-v1",
+  "status": "STATION_REACHED",
+  "pure": true,
+  "evolved": true,
+  "bytes_written": 0,
+  "pool_launched": false,
+  "cases": [
+    {
+      "case_id": "nf256_plus_balanced_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf256_plus_balanced_dt0.0005-000000.npz",
+      "json": "nf256_plus_balanced_dt0.0005-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    }
+  ],
+  "confirmation_cases": [
+    {
+      "case_id": "nf256_plus_child_heavy_dt0.0005",
+      "nf": 256,
+      "population": 0,
+      "population_id": "child_heavy",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_plus_balanced_dt0.0005",
+      "nf": 256,
+      "population": 1,
+      "population_id": "balanced",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_plus_parent_heavy_dt0.0005",
+      "nf": 256,
+      "population": 2,
+      "population_id": "parent_heavy",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_child_heavy_dt0.0005",
+      "nf": 256,
+      "population": 0,
+      "population_id": "child_heavy",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_balanced_dt0.0005",
+      "nf": 256,
+      "population": 1,
+      "population_id": "balanced",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_parent_heavy_dt0.0005",
+      "nf": 256,
+      "population": 2,
+      "population_id": "parent_heavy",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.0005,
+      "control_mode": "coupled",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "numerical_binding": {
+    "mode": "rank_general_physically_scaled_local_reaction",
+    "rates": "nsc_discovery_leading_einstein.rates",
+    "jvp": "nsc_discovery_leading_einstein.jvp",
+    "integrator": "nsc_discovery_leading_einstein.rk4_step",
+    "step_restriction": "nsc_discovery_parent_step_control.step_restriction",
+    "raw_coordinate_norm_used": false,
+    "fft": "native_one_thread",
+    "workers_max": 6,
+    "forecast_factor": 1.5,
+    "memory_limit_bytes": 8589934592,
+    "chunk_limit_bytes": 67108864,
+    "cpu_budget_seconds": 21600.0,
+    "stations": [
+      1.0,
+      3.0
+    ],
+    "source_recomputed_on_every_rk4_stage": true,
+    "projector_source_reset": false
+  },
+  "owner1_prepare_parent_importable": true,
+  "prepare_parent_api": "prepare_parent(nf, population=0|1|2, sign=+1|-1, k_override=None, profile=None, cpu_limit=30) -> (pair, State, report)",
+  "accepted_parent_record": {
+    "schema": "NSC-DISCOVERY-PARENT-v1",
+    "files": [
+      "parent.json",
+      "parent.npz"
+    ],
+    "arrays": [
+      "Q",
+      "r",
+      "pi_Q",
+      "pi_r",
+      "phi0",
+      "phi1",
+      "W",
+      "weights",
+      "source_columns",
+      "reference_columns"
+    ],
+    "one_record_per": [
+      "nf",
+      "population",
+      "sign"
+    ],
+    "population_names": {
+      "0": "child_heavy",
+      "1": "balanced",
+      "2": "parent_heavy"
+    },
+    "momentum_sign": "geometric sign of both p_Q and p_r; phi is not conjugated"
+  },
+  "held_out_nonlinear_measurement_before_prediction": false,
+  "production_campaign": false,
+  "cpu_budget_seconds": 20800.0,
+  "confirm": true,
+  "output": "results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1",
+  "execute": false,
+  "stage": 2,
+  "producing_commit": "8c47d0c17fa5962f1d2210f55db3a96c6457a82e",
+  "source_hashes": {
+    "lab/src/recursive_horizons/nsc_discovery_parent_episode.py": "e274d449f7d98e93568260e1dd8b4d48686a855385168aede3ea77b2f883db66",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "5289b32909c87f7345a7b1c2f6f2c571be8fe1971ac6b3f814afc9ca178645b2",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/scripts/derive_nsc_discovery_parent_episode.py": "943de2a718aa5b6a8d6df14dd85e56d2b9203bb849f795af0042eca3eb5abf91",
+    "lab/tests/test_nsc_discovery_parent_episode.py": "72a9e2c6927d15f0b9cc971c245c435f0cb26fae4190177986f0feecd3b7d2a2",
+    "lab/docs/nsc-discovery-parent-episode.md": "ee4d1ad3f6f3e81af648f249beb4201044b1f55f745e651546023ad45a70a867",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d"
+  },
+  "input_hashes": {
+    "results/development/nsc-discovery-parent-v1/magnetic-curvature-nf256-v1/parent.json": "f6628bad86c7f4e5205061da5058c54627a10ff7553d312ea2833c4d1a8273ff",
+    "results/development/nsc-discovery-parent-v1/magnetic-curvature-nf256-v1/parent.npz": "6ef023ce33548e933a0ea133fe754cd6881314a35ae1878cb5204576d60a92d6"
+  },
+  "preparation_cpu_seconds": 0.12769599999999992,
+  "child_cpu_seconds": 49.297226,
+  "forecast_factor": 1.5,
+  "memory_limit_bytes": 8589934592,
+  "chunk_limit_bytes": 67108864,
+  "workers_max": 6,
+  "results": [
+    {
+      "case_id": "nf256_plus_balanced_dt0.0005",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 6000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 49.297226,
+      "chunk": "nf256_plus_balanced_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 81.51061050000007
+    }
+  ],
+  "workers": 1,
+  "cpu_accounting": "parent_process_time_plus_children_rusage",
+  "executor_pools": 1,
+  "stability_certificate": false,
+  "max_T_forced": false,
+  "zero_residual_gate": false,
+  "cpu_seconds_including_children": 50.341287,
+  "fft": "native_one_thread",
+  "projector_source_reset": false
+}

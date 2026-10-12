@@ -1,0 +1,77 @@
+{
+ "n_b_per_m3": 1.2026462725287736e+105,
+ "eps_b_J_per_m3": 9.381717251235037e+114,
+ "eps_b_over_eps_P": 20.249999999997524,
+ "torsion_dynamical_time_s": 4.139209123733204e-45,
+ "pressure_formula_rel_error": 5.85444871155172e-10,
+ "fluid_eps_eff_negative_means": {
+  "max_p_eff_over_eps_b": -0.6668222314814753,
+  "min_w": 1.006734006734007,
+  "w_at_2nb": 2.1349429226129457,
+  "w_at_5nb": 1.3464971519887994,
+  "w_at_1p01nb": 101.16620600463753,
+  "w_at_100nb": 1.0324501270301436,
+  "eps_eff_over_eb_at_2nb": -1.4801579002101637,
+  "p_eff_over_eb_at_2nb": -3.1600526334033274
+ },
+ "NEC_eps_plus_p_over_eb": {
+  "1.0nb": -0.6666666666666216,
+  "1.5nb": -2.210571514893235,
+  "2.0nb": -4.640210533613491,
+  "5.0nb": -38.60016035548755
+ },
+ "w_minus_half_at_n_over_nb": 0.4140866624999736,
+ "thickness": [
+  {
+   "n_over_nb": 1.5,
+   "thickness_at_1e_minus_23_m": 1.0528950949466449e-35,
+   "thickness_at_1m": 3.340497802432266e-70,
+   "thickness_at_r_g": 6.222554354938901e-77,
+   "R_where_thickness_equals_R_m": 1.6141689988343272e-28,
+   "R_where_thickness_equals_lP_m": 7.48581837603663e-24
+  },
+  {
+   "n_over_nb": 2.0,
+   "thickness_at_1e_minus_23_m": 3.790933027484942e-36,
+   "thickness_at_1m": 1.2027412330307292e-70,
+   "thickness_at_r_g": 2.2404213803136303e-77,
+   "R_where_thickness_equals_R_m": 1.0727373599991643e-28,
+   "R_where_thickness_equals_lP_m": 3.788610262969687e-24
+  },
+  {
+   "n_over_nb": 5.0,
+   "thickness_at_1e_minus_23_m": 3.4110264112699877e-37,
+   "thickness_at_1m": 1.082209071499495e-71,
+   "thickness_at_r_g": 2.0158985783227772e-78,
+   "R_where_thickness_equals_R_m": 4.0940108943511625e-29,
+   "R_where_thickness_equals_lP_m": 7.607473558987686e-25
+  }
+ ],
+ "eps_eff_slope_per_unit_delta": 0.666744444708633,
+ "thick_fill_delta": {
+  "R=1e-20": 7.936171694294201e-20,
+  "R=1": 7.932943602334914e-70,
+  "R=29533.4": 5.0522664686165555e-81
+ },
+ "lifetime_ratio": {
+  "R=1e-22": 3.1262313072054004,
+  "R=1e-18": 3126206.257832552,
+  "R=1": 3.12627874302414e+33,
+  "R=1000": 9.988316628326368e+37,
+  "R=29238.1": 3.2641389245225854e+40
+ },
+ "thread_total_proper_time_s": 0.000154743540741481,
+ "lifetime_ratio_total": 3.7384808574715325e+40,
+ "R_reached_in_one_dynamical_time_m": 4.6772441748270844e-23,
+ "mass_matched_window_w_ge_1": {
+  "a_over_aexit_start": 0.1935,
+  "a_over_aexit_w_equals_1": 0.21751052671848237,
+  "R_over_rg_w_equals_1": 0.13080994325614795,
+  "window_duration_s": 5.060500070443275e-07,
+  "duration_over_torsion_time": 1.2225765645489172e+38,
+  "n_over_nb_for_w": {
+   "w=2.0": 2.15165741455975,
+   "w=4.0": 1.3512175071818766
+  }
+ }
+}

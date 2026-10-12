@@ -1,0 +1,337 @@
+{
+  "adm_masses": {
+    "energy_convention": "Difference of asymptotic-end ADM charges; not a horizon-mass binding-energy measurement",
+    "outer_end": 2.5,
+    "outer_minus_sum_puncture_ends": -0.125,
+    "puncture_ends": [
+      1.0625,
+      1.5625
+    ]
+  },
+  "admission": {
+    "borrowed": "Brill-Lindquist equations and ADM charges, arXiv:2308.10906v1 (17)-(21)",
+    "budget": "At most one CPU minute for adapter evaluation and focused tests; no PDE evolution or horizon solver",
+    "decision": "Supply one common nonspherical spatial metric; display the finite angular correction lost by separate spherical approximations",
+    "finite_domain": "One time-symmetric slice, two positive masses, finite coordinate separation, four off-puncture points and two 17-point local-sphere profiles",
+    "independent_verification": "Finite-difference derivatives, asymptotic flux/inverted-end mass checks, sphere mean-value identity and unit rescaling in focused tests",
+    "kind": "Imported integration control, not a new scientific result",
+    "missing": "The v1 diagram had no consistent common spatial parent for its two local holes",
+    "novelty_claim": false,
+    "stop_or_redirect": "Reject puncture samples or intersecting local expansion domains; any failed vacuum/unit control blocks this adapter; exact spherical gluing requires a separate compatibility calculation",
+    "unlocks": "A named initial-data candidate for a later interface/domain test; no direct child gluing is admitted"
+  },
+  "axisymmetric": true,
+  "causal_channels": [],
+  "child_formation_established": false,
+  "clock": {
+    "lapse": null,
+    "proper_time_elapsed": null,
+    "status": "Initial slice only; K=0 does not specify lapse or elapsed time"
+  },
+  "dimensionless_parameters": {
+    "mass_b_over_mass_a": 1.5,
+    "separation_over_mass_a": 12.0
+  },
+  "direct_spherical_child_attachment_established": false,
+  "equations": {
+    "constraint": "R[h]=-8 psi^-5 Delta_flat psi=0 away from punctures",
+    "extrinsic_curvature": "K_ij=0",
+    "metric": "h_ij=psi^4 delta_ij",
+    "psi": "1+sum_i m_i/(2 |x-x_i|)"
+  },
+  "geometry": "Brill-Lindquist time-symmetric vacuum initial slice",
+  "globally_spherical": false,
+  "horizons": {
+    "common_horizon_excluded": false,
+    "computed": false,
+    "note": "No MOTS search performed; coordinate punctures and probe spheres do not locate horizons"
+  },
+  "inputs": {
+    "bare_masses": [
+      1.0,
+      1.5
+    ],
+    "coordinate_separation": 12.0,
+    "positions": [
+      [
+        0.0,
+        0.0,
+        -6.0
+      ],
+      [
+        0.0,
+        0.0,
+        6.0
+      ]
+    ]
+  },
+  "local_sphere_diagnostics": [
+    {
+      "centre_index": 0,
+      "coordinate_radius": 1.0,
+      "coordinate_radius_over_separation": 0.08333333333333333,
+      "cos_theta": [
+        -1.0,
+        -0.875,
+        -0.75,
+        -0.625,
+        -0.5,
+        -0.375,
+        -0.25,
+        -0.125,
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75,
+        0.875,
+        1.0
+      ],
+      "diagnostic_scope": "Spatial chart angular distortion; no lapse, observer, or four-dimensional tidal tensor supplied",
+      "gaussian_curvature_times_coordinate_radius_squared": [
+        0.16806627901396304,
+        0.1679775617198937,
+        0.1678952115402552,
+        0.16782012160543783,
+        0.16775329639275507,
+        0.16769586702973138,
+        0.16764910898475255,
+        0.1676144625681333,
+        0.16759355675134188,
+        0.16758823691582214,
+        0.16760059727034432,
+        0.1676330188331614,
+        0.16768821407028262,
+        0.1677692795239469,
+        0.1678797580689835,
+        0.16802371281620135,
+        0.1682058151636192
+      ],
+      "horizon_status": "Not computed; this coordinate sphere is not identified as a horizon or junction",
+      "is_exactly_round": false,
+      "maximum_absolute_relative_psi_error": 0.0036363636363636598,
+      "monopole_psi": 1.5625,
+      "psi": [
+        1.5576923076923077,
+        1.558211289427975,
+        1.5587445337490968,
+        1.5592927061281572,
+        1.5598565163350717,
+        1.5604367223019036,
+        1.561034134407837,
+        1.561649620239509,
+        1.5622841098903049,
+        1.5629386018722518,
+        1.5636141697259978,
+        1.5643119694284409,
+        1.565033247714309,
+        1.5657793514480272,
+        1.5665517382062086,
+        1.5673519882600406,
+        1.5681818181818181
+      ],
+      "quadrupole_coefficient_in_psi": 0.00043402777777777775,
+      "quadrupole_over_monopole": 0.0002777777777777778,
+      "relative_angular_metric_error": [
+        -0.01225100400686252,
+        -0.010933978990737003,
+        -0.00957938827973348,
+        -0.008185426211960833,
+        -0.006750163820764876,
+        -0.005271537828890782,
+        -0.0037473384206336835,
+        -0.0021751956286263363,
+        -0.0005525641462236219,
+        0.0011232936538940752,
+        0.0028553267502806623,
+        0.00464671685065543,
+        0.006500902466518577,
+        0.00842160609510012,
+        0.01041286499300198,
+        0.012479066115033577,
+        0.01462498589987038
+      ],
+      "relative_psi_error": [
+        -0.003076923076923088,
+        -0.0027447747660960253,
+        -0.0024034984005780746,
+        -0.002052668077979436,
+        -0.0016918295455541354,
+        -0.0013204977267817775,
+        -0.0009381539789843352,
+        -0.0005442430467142989,
+        -0.00013816967020485738,
+        0.00028070519824119344,
+        0.000713068624638602,
+        0.0011596604342021255,
+        0.0016212785371576555,
+        0.002098784926737318,
+        0.002593112451973578,
+        0.003105272486426003,
+        0.0036363636363636598
+      ]
+    },
+    {
+      "centre_index": 1,
+      "coordinate_radius": 1.5,
+      "coordinate_radius_over_separation": 0.125,
+      "cos_theta": [
+        -1.0,
+        -0.875,
+        -0.75,
+        -0.625,
+        -0.5,
+        -0.375,
+        -0.25,
+        -0.125,
+        0.0,
+        0.125,
+        0.25,
+        0.375,
+        0.5,
+        0.625,
+        0.75,
+        0.875,
+        1.0
+      ],
+      "diagnostic_scope": "Spatial chart angular distortion; no lapse, observer, or four-dimensional tidal tensor supplied",
+      "gaussian_curvature_times_coordinate_radius_squared": [
+        0.17746330829113005,
+        0.1773423217966278,
+        0.17722676107089635,
+        0.17711800259499136,
+        0.17701768520397126,
+        0.1769277641465038,
+        0.1768505777786184,
+        0.17678893026195333,
+        0.17674619466000355,
+        0.17672644220067302,
+        0.1767346053359375,
+        0.176776684774725,
+        0.1768600141758622,
+        0.17699360107823653,
+        0.17718856952920306,
+        0.1774587396718053,
+        0.1778213936702281
+      ],
+      "horizon_status": "Not computed; this coordinate sphere is not identified as a horizon or junction",
+      "is_exactly_round": false,
+      "maximum_absolute_relative_psi_error": 0.0038610038610038533,
+      "monopole_psi": 1.5416666666666667,
+      "psi": [
+        1.537037037037037,
+        1.5375029300308674,
+        1.5379868588198793,
+        1.538490017945975,
+        1.5390137157320436,
+        1.5395593886064618,
+        1.5401286176952564,
+        1.5407231481187684,
+        1.5413449115297362,
+        1.5419960525565808,
+        1.542678959977632,
+        1.5433963036602747,
+        1.5441510785688348,
+        1.5449466574975494,
+        1.545786854649563,
+        1.5466760028009336,
+        1.5476190476190477
+      ],
+      "quadrupole_coefficient_in_psi": 0.0006510416666666666,
+      "quadrupole_over_monopole": 0.0004222972972972973,
+      "relative_angular_metric_error": [
+        -0.011958012093120196,
+        -0.01075952132427982,
+        -0.00951348009355335,
+        -0.008216675899726078,
+        -0.006865584931226576,
+        -0.005456332260296293,
+        -0.003984645644677154,
+        -0.0024458016887172196,
+        -0.0008345628261708926,
+        0.0008548967811017327,
+        0.0026290788055087777,
+        0.004495264761676054,
+        0.006461640234066923,
+        0.008537444133087435,
+        0.010733149156607835,
+        0.01306068146002648,
+        0.015533690000488765
+      ],
+      "relative_psi_error": [
+        -0.0030030030030030463,
+        -0.0027008021421401907,
+        -0.002386902387105372,
+        -0.002060528899908154,
+        -0.0017208330386744297,
+        -0.0013668830660789055,
+        -0.0009976533868607529,
+        -0.0006120120310691979,
+        -0.00020870603476574878,
+        0.00021365571237663694,
+        0.0006566226881936643,
+        0.0011219266985564857,
+        0.0016115104230278732,
+        0.0021275616200320258,
+        0.0026725543672840857,
+        0.0032492991141190863,
+        0.0038610038610038533
+      ]
+    }
+  ],
+  "missing_conditions": [
+    "Four-dimensional evolution and observer choice",
+    "Actual horizon and candidate interface geometry",
+    "Compatible induced metric, extrinsic curvature and physical source for any child attachment",
+    "A physical transition identifying an expanding child instead of an existing asymptotic end"
+  ],
+  "sample_controls": {
+    "points": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        0.0,
+        -6.0
+      ],
+      [
+        0.0,
+        1.5,
+        6.0
+      ],
+      [
+        3.0,
+        4.0,
+        2.0
+      ]
+    ],
+    "psi": [
+      1.2083333333333333,
+      1.311649620239509,
+      1.5413449115297362,
+      1.1701302154167725
+    ],
+    "scalar_curvature": [
+      -0.0,
+      1.429851860865095e-17,
+      -2.552354890232247e-17,
+      -5.535506002532684e-18
+    ]
+  },
+  "schema": "nsc-atlas-parent-initial-data-v1",
+  "source": {
+    "borrowed": "Conformal vacuum initial data and outer/puncture-end ADM masses",
+    "original": "Brill and Lindquist, Phys. Rev. 131, 471 (1963)",
+    "original_reading_depth": "Bibliographic attribution; original article not read in this adapter review",
+    "original_url": "https://doi.org/10.1103/PhysRev.131.471",
+    "reading_depth": "Section III, equations (17)-(21), initial-data and MOTS paragraphs",
+    "url": "https://arxiv.org/html/2308.10906v1"
+  },
+  "spatial_topology": "R^3 minus two punctures; three asymptotically flat ends",
+  "units": "G=c=1; lengths and geometric masses relative to one arbitrary length unit"
+}

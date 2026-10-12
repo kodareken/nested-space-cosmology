@@ -1,0 +1,62 @@
+{
+  "schema": "NSC-COUPLED-LOCAL-RESPONSE-AUDIT-v1",
+  "status": "MEASURED_INDEPENDENT_CONTROLS",
+  "case": "nf512_dtmax_0_00025",
+  "time_window": [
+    0.05,
+    0.085
+  ],
+  "stored_frames": 8,
+  "observer": "original T=0 region-0 pair, columns 0 and 1, no QR or phase reset",
+  "preparation": "bitwise transported Phi(0.05); original Gaussian weights",
+  "weights": [
+    0.75,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25
+  ],
+  "geometry": "same stored piecewise-linear quadrature Q with static lapse and shift",
+  "midpoint_substeps": 2,
+  "memoryless_method": "independent projected-space exterior transport and local trapezoid",
+  "reused_owner": "checked Fourier-Galerkin matrix representation only",
+  "temporal_consumer_helpers_called": false,
+  "production_rk4_rerun": false,
+  "source_bindings": {
+    "results/development/nsc-spherical-feedback-episode-v1.npz": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77",
+    "results/development/nsc-regeneration-episode-v1.npz": "17364df24efead5814c3ab2a2ab5f82d9e09bf412c8c82e68d57a3b38498d7a1",
+    "results/development/nsc-coupled-local-response-v2.npz": "84c09302413d48c2f5dfaba32090b8169d0a4c1dbbe9dfc7a971debaaa525d14",
+    "results/development/nsc-coupled-local-response-v2.json": "5330ccef1ba2fc4d80e0e0bdc0a98b1117e851f3873a46a0e057d63aae7457bb"
+  },
+  "saved_consistency_errors": [],
+  "metrics": {
+    "independent_full_versus_saved_full_occupation": 7.771561172376096e-16,
+    "streamed_cross_versus_independent_full_cross_occupation": 0.00011957683234331551,
+    "streamed_cross_versus_independent_full_cross_frobenius": 0.00012160312363621512,
+    "streamed_drive_off_versus_independent_full_drive_off": 0.00028569735815653363,
+    "independent_memoryless_versus_saved_memoryless": 4.440892098500626e-16,
+    "independent_full_cross_occupation_movement": 0.20437297122219308,
+    "saved_full_cross_occupation_movement": 0.2043417632796783,
+    "saved_probe_cross_occupation_movement": 0.08797142267734728,
+    "independent_full_drive_occupation_movement": 0.1549746431210934,
+    "independent_memory_occupation_movement": 0.06952775462900784
+  },
+  "error_scope": "cross superposition roundoff is an algebraic check; cross reduction error is measured against independent full split in occupation or covariance units",
+  "pilot_cpu_seconds": 2.489138,
+  "full_forecast_seconds": 11.201121,
+  "cpu_seconds": 9.104239999999999,
+  "cpu_budget_seconds": 300.0,
+  "allocation": {
+    "exterior_projection_defect": 1.9360571188451947e-16,
+    "column_width": 12,
+    "free_exterior_width": 6,
+    "dense_propagator_history_bytes": 0,
+    "full_column_workspace_bytes": 196608
+  },
+  "code_sha256": "7d0e39c8e0afd4d147d7cc06668e167ceda8acd32ec1daacd9068b09284b852f",
+  "renewal_claimed": false,
+  "stress_claimed": false,
+  "payload_npz_sha256": "34e651c223a3f36b286a49ed82a168368301ff51aca57425216ebabefe71ccc6",
+  "payload_bytes": 6561
+}

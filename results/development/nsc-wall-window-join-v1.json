@@ -1,0 +1,260 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "notes": [
+    "no fit: the numbers land or they do not"
+  ],
+  "production_trajectory": false,
+  "r_plus_mean": 1.328506306090376,
+  "reading": "the wall radii are read where the bubble flag placed them; the comparison is in units of the measured trapping horizon",
+  "rows": [
+    {
+      "r_first_wall": null,
+      "t_over_rm": 0.0,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 0.5,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 1.0,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 1.499999999999945,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": 1.7890322580645162,
+      "t_over_rm": 1.9999999999998899,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.3466494286575192
+    },
+    {
+      "r_first_wall": 1.5750230414746544,
+      "t_over_rm": 2.499999999999835,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.1855593264812914
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 2.9999999999997797,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 3.4999999999997247,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 3.9999999999996696,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 4.499999999999659,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 4.999999999999648,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": 1.6106912442396313,
+      "t_over_rm": 5.499999999999638,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.212407676843996
+    },
+    {
+      "r_first_wall": 1.8247004608294932,
+      "t_over_rm": 5.999999999999627,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.373497779020224
+    },
+    {
+      "r_first_wall": 1.931705069124424,
+      "t_over_rm": 6.499999999999616,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.454042830108338
+    },
+    {
+      "r_first_wall": 2.003041474654378,
+      "t_over_rm": 6.999999999999606,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.5077395308337473
+    },
+    {
+      "r_first_wall": 2.038709677419355,
+      "t_over_rm": 7.499999999999595,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.5345878811964522
+    },
+    {
+      "r_first_wall": 2.038709677419355,
+      "t_over_rm": 7.999999999999584,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.5345878811964522
+    },
+    {
+      "r_first_wall": 2.003041474654378,
+      "t_over_rm": 8.499999999999574,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.5077395308337473
+    },
+    {
+      "r_first_wall": 1.8960368663594471,
+      "t_over_rm": 8.999999999999563,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.4271944797456333
+    },
+    {
+      "r_first_wall": 1.6463594470046083,
+      "t_over_rm": 9.499999999999552,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 1.2392560272067008
+    },
+    {
+      "r_first_wall": 1.2896774193548388,
+      "t_over_rm": 9.999999999999542,
+      "wall_count": 1,
+      "wall_ratio_to_horizon": 0.9707725235796543
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 10.499999999999531,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 10.99999999999952,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 11.49999999999951,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 11.999999999999499,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 12.499999999999488,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 12.999999999999478,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 13.499999999999467,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 13.999999999999456,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 14.499999999999446,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 14.999999999999435,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 15.499999999999424,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 15.999999999999414,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 16.499999999999492,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 16.99999999999957,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 17.49999999999965,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 17.999999999999726,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    },
+    {
+      "r_first_wall": null,
+      "t_over_rm": 18.499999999999805,
+      "wall_count": 0,
+      "wall_ratio_to_horizon": null
+    }
+  ],
+  "schema": "NSC-WALL-WINDOW-JOIN-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_window_join.py": "80eeee67cfa2dadd8e4fb1b40bdac9dc74de115cfd2eed8a88ae85dcbfcb78e6",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "WALL_INSIDE_WINDOW_SHELL",
+  "verdict_reading": "the neutral wall lives strictly inside the charged window shell [r_+, 2 r_+] with median radius ~1.40 r_+ and never reaches the 2 r_+ edge; the window shell bounds the wall, it does not mark it",
+  "wall_ratios": {
+    "count": 12,
+    "max": 1.5345878811964522,
+    "median": 1.4003461293829287,
+    "min": 0.9707725235796543,
+    "near_two": 12
+  },
+  "window_edge_reference_horizon_units": 2.0,
+  "window_edge_source": "charged program: edge = 2 r_+ at omega = Phi_H/2"
+}

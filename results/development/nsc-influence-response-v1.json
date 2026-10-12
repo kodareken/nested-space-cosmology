@@ -1,0 +1,46 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "backward_fee_lapse": 0.9989518546691187,
+  "chain_read": {
+    "band": [
+      0.03,
+      0.1
+    ],
+    "f": 0.26103990370323404,
+    "local_fraction": 0.738960096296766,
+    "target": 0.049
+  },
+  "creation_only": true,
+  "edge_rates_forward": {
+    "d_excision_flux_rate": 1.8877627935785178e-12,
+    "d_inner_mass_rate": 1.8877627935785178e-12,
+    "d_outer_flux_rate": 7.783983373934967e-07
+  },
+  "evolved": false,
+  "forward_fee_lapse": 0.26103990370323404,
+  "inner_level": [
+    0.0,
+    8.0
+  ],
+  "mass_channel_fraction": 0.0,
+  "mass_channel_reading": "the mass function is causal: an outer-level source changes d_mass only above its own radius, so the inner-level fraction is exactly zero. The chart channels (lapse/shift) are the nonlocal influence.",
+  "notes": [
+    "the forward fee is the fraction of an outer-level perturbation's mass response that lands inside the inner quarter of the cap",
+    "the backward probe is the reciprocity control; exact reciprocity is not asserted, the two numbers are reported side by side"
+  ],
+  "outer_level": [
+    24.0,
+    32.0
+  ],
+  "production_trajectory": false,
+  "round_1_reference": {
+    "measured_mass_fee": 0.0009886981681464422,
+    "source": "neutral continuation summary, coupled vs fixed inner mass"
+  },
+  "schema": "NSC-INFLUENCE-RESPONSE-v1",
+  "seam_over_rm": 8.0,
+  "source_sha256": {
+    "lab/scripts/derive_nsc_influence_response.py": "f59cb7f9bfe85e9c2d2c1841685fe05bf423e3e829edff7b593cc1019d5d4312",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "21ce726e12efb94969c17ec4c6bda86e58509fe6faaa6a6143357fd03fb0c224"
+  }
+}

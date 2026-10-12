@@ -1,0 +1,36 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline_low_subgap": null,
+  "bounds_spent": false,
+  "changed_history_UV_tail": null,
+  "field_error_bound": null,
+  "full_between_node_remainder": null,
+  "geometry_between_node_remainder": [
+    1e-13,
+    1e-13
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-error-budget.json": "59cd4d166ba6161d0dc0e663884dc0dc09115c7e6cd7d0cedd77a60ab0e474e4",
+    "results/development/nsc-ks-flux-first-integral.json": "46d14532c31824ea709f49d26fef632d2d8c5f16a6b1d694ba7cec8b660e3d9d",
+    "results/development/nsc-ks-fourier-wu-evolve-refusal.json": "696ee858fb6bf7d3504ec39e063754cd85453fe01977055e2ea0799206b2b3b4"
+  },
+  "schema": "NSC-KS-DECIDING-BOUNDS-AFTER-FOURIER-v1",
+  "scope": {
+    "metric_timestep": false,
+    "missing_bounds_cannot_create_EXISTENCE_against_residual_scale_leftover": true,
+    "missing_bounds_left_none": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-ks-deciding-bounds-after-fourier.md": "86a392d4d958e613d2cd25e3567018c2c4deed2bca684871b80e697e01db75ba",
+    "scripts/derive_nsc_ks_deciding_bounds_after_fourier.py": "5f0eac2243b17881bd040d6313b9a53c9934ef04dbc615d7dfe2d124f22670e7"
+  },
+  "status": "OPEN: leftover stays on the residual scale; UV, full between-node, field and low/subgap remain None",
+  "unclipped_all_node_leftover": [
+    0.000409198777,
+    0.003811452608
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.6269966908396003e-07,
+    3.615304013840359e-06
+  ],
+  "best_prediction_minus_measured": [
+    -1.1264574667740456e-09,
+    7.700410980789139e-12
+  ],
+  "existence_tolerance": 3e-11,
+  "gap_above_existence_tolerance": [
+    2.6266966908396005e-07,
+    3.615274013840359e-06
+  ],
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n32-truncated-iterate6.json": "9b2ab9ca447488b406e029bfd3b5b0528d3125b9c84f72b432250fd557983758"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "finite_wu_n32_truncated_image_above_existence",
+  "next_named_owner": "same declared (w,U) class on I; no class rewrite",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "b4b53f0bba7290cfde14af741c82fda9af1b49a13f7a3b207a7230f39ea106e9",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-N32-TRUNCATED-ITERATE6-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "no_class_rewrite": true,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-n32-truncated-iterate6.md": "afb7fc6a0f15bdf5a9c38bfb50fc2cda568d21269ffe118da7e6cda892c13674",
+    "scripts/derive_nsc_local_incoming_gate_status_after_n32_truncated_iterate6.py": "c4d7c434e655c4969a26d2bc9245f82d3b2ac531a1a834f2d6b42077dcdef071"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: iterate6 measured residual is the campaign best and stays above 3e-11"
+}

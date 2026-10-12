@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def test_current_checks_use_existing_owners_and_propagate_failure(monkeypatch):
-    path = Path(__file__).resolve().parents[1] / "lab/scripts/check_current.py"
+    path = Path(__file__).resolve().parents[1] / "scripts/check_current.py"
     spec = importlib.util.spec_from_file_location("current_check_routing", path)
     checker = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(checker)

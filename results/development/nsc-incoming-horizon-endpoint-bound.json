@@ -1,0 +1,536 @@
+{
+  "accountable_author": "Douglas Ek",
+  "certificate": {
+    "Frobenius_terms": 10,
+    "actual_angular_signs": [
+      1,
+      -1
+    ],
+    "aligned_coordinate_budget_pass": false,
+    "bounds": {
+      "aligned_coordinate_lapse_error_upper": {
+        "binary_interval": [
+          [
+            0,
+            618353428055669171025397691868665177658234538790059081407401499316798749099395419,
+            -297,
+            269
+          ],
+          [
+            0,
+            154588357013917294324173353961582617331594570205387413789550208406649873385416091,
+            -295,
+            267
+          ]
+        ],
+        "float_enclosure": [
+          2.428443818330026e-09,
+          2.428443818330027e-09
+        ]
+      },
+      "aligned_coordinate_projector_error_upper": {
+        "binary_interval": [
+          [
+            0,
+            582535265238557779502494958931613222770013991353565467097708241121443191449582609,
+            -311,
+            269
+          ],
+          [
+            0,
+            582535265238557783530345252858789649610948450656111514799143815236106433157060083,
+            -311,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          1.3963476874453523e-13,
+          1.3963476874453528e-13
+        ]
+      },
+      "coordinate_bridge_lapse_error_upper": {
+        "binary_interval": [
+          [
+            0,
+            472693221113224120520840244496730625655663862908919412788042693103201736996116225,
+            -289,
+            268
+          ],
+          [
+            0,
+            945386442226448244092992555093349862197218377618048645930648724168920811361526511,
+            -290,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          4.752374175452081e-07,
+          4.7523741754520823e-07
+        ]
+      },
+      "coordinate_bridge_projector_error_upper": {
+        "binary_interval": [
+          [
+            0,
+            890624870645562521713494781751081340834943468475597502866768546194643130067730899,
+            -304,
+            269
+          ],
+          [
+            0,
+            445312435322781260856747390875540670417471734237798751433384273097321565033865477,
+            -303,
+            268
+          ]
+        ],
+        "float_enclosure": [
+          2.732600457823602e-11,
+          2.7326004578236027e-11
+        ]
+      },
+      "exact_geometric_kappa": {
+        "binary_interval": [
+          [
+            0,
+            28258552072987560292176581192210267016836893749522377924825929524415608771667087,
+            -266,
+            264
+          ],
+          [
+            0,
+            28258552072987560292176581192210272291900494340320952888992930487455934585703725,
+            -266,
+            264
+          ]
+        ],
+        "float_enclosure": [
+          0.23832579963401765,
+          0.2383257996340177
+        ]
+      },
+      "exact_horizon_q": {
+        "binary_interval": [
+          [
+            0,
+            630149594749750530367862220216041815265683787328030621702720417365550880793934899,
+            -267,
+            269
+          ],
+          [
+            0,
+            630149594749750530367862220216041816116215868404057589244545910229075753737454777,
+            -267,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          2.6572647046793465,
+          2.6572647046793474
+        ]
+      },
+      "exact_horizon_rho": {
+        "binary_interval": [
+          [
+            0,
+            571373462037428520882721927850177986052628357898880969066218147116207448612313963424691748535398205734341523489,
+            -367,
+            368
+          ],
+          [
+            0,
+            1142746924074857041765443855700355982051721443993494781240081257168831699233750942796337845880075949331872987229,
+            -368,
+            369
+          ]
+        ],
+        "float_enclosure": [
+          1.90069160547015,
+          1.9006916054701504
+        ]
+      },
+      "exact_profile_degree4_W_relative_remainder_upper": {
+        "binary_interval": [
+          [
+            0,
+            364560028798855891918726364419061105110900864157052832222110941629126700935984547,
+            -401,
+            268
+          ],
+          [
+            0,
+            364560028798855891918726364419061173163833440077615574642448907760348469015443809,
+            -401,
+            268
+          ]
+        ],
+        "float_enclosure": [
+          7.058961100018419e-41,
+          7.058961100018421e-41
+        ]
+      },
+      "exact_profile_degree4_W_remainder_upper": {
+        "binary_interval": [
+          [
+            0,
+            597071614141929236826783588714917601126795656374112212310364924055756457113439267,
+            -436,
+            269
+          ],
+          [
+            0,
+            298535807070964618413391794357458800563397828187056106155182462027878228556719635,
+            -435,
+            268
+          ]
+        ],
+        "float_enclosure": [
+          3.3647152384394816e-51,
+          3.364715238439483e-51
+        ]
+      },
+      "finite_series_covariance_residual_integral_upper": {
+        "binary_interval": [
+          [
+            0,
+            89134267884138335988126708918458955757219873383096367068802773141060964628390191,
+            -601,
+            266
+          ],
+          [
+            0,
+            713074143073106687905013671347671646057758987064770936550422185128487717027121643,
+            -604,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          1.0740322141769348e-101,
+          1.0740322141769352e-101
+        ]
+      },
+      "finite_series_norm_defect_upper": {
+        "binary_interval": [
+          [
+            0,
+            89134267884138335988126708918458955757219873383096367068802773141060964628390191,
+            -601,
+            266
+          ],
+          [
+            0,
+            713074143073106687905013671347671646057758987064770936550422185128487717027121643,
+            -604,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          1.0740322141769348e-101,
+          1.0740322141769352e-101
+        ]
+      },
+      "frozen_source_kappa": {
+        "binary_interval": [
+          [
+            0,
+            536661991212273,
+            -51,
+            49
+          ],
+          [
+            0,
+            536661991212273,
+            -51,
+            49
+          ]
+        ],
+        "float_enclosure": [
+          0.23832579963401954,
+          0.2383257996340196
+        ]
+      },
+      "geometric_minus_source_kappa": {
+        "binary_interval": [
+          [
+            1,
+            223707834940799509155926455487499188845637663969491040585383582577,
+            -266,
+            218
+          ],
+          [
+            1,
+            223707834940799509150651391886908390270673496968528000259569545939,
+            -266,
+            218
+          ]
+        ],
+        "float_enclosure": [
+          -1.8866978219179603e-15,
+          -1.8866978219179596e-15
+        ]
+      },
+      "geometry_diagonal_residual_integral_upper": {
+        "binary_interval": [
+          [
+            0,
+            547658802563900773047440287192623353332396600081541075695112202861619221869083921,
+            -312,
+            269
+          ],
+          [
+            0,
+            136914700640975193261860071798155889446182318391388337445987248974623582917878115,
+            -310,
+            267
+          ]
+        ],
+        "float_enclosure": [
+          6.56374084199029e-14,
+          6.563740841990292e-14
+        ]
+      },
+      "geometry_transverse_residual_integral_upper": {
+        "binary_interval": [
+          [
+            0,
+            617411727913214785957549630670603092207631382625589858500304279381267161030081297,
+            -312,
+            269
+          ],
+          [
+            0,
+            617411727913214794013250218524955741437167627746669679814338634573718534642607703,
+            -312,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          7.399736032463233e-14,
+          7.399736032463235e-14
+        ]
+      },
+      "q_coordinate_shift": {
+        "binary_interval": [
+          [
+            0,
+            353403760258285725690559188264246913117264003936626597874749258803,
+            -267,
+            218
+          ],
+          [
+            0,
+            353403760258285725691409720345322940084805829429490122747692778681,
+            -267,
+            218
+          ]
+        ],
+        "float_enclosure": [
+          1.490260957809933e-15,
+          1.4902609578099333e-15
+        ]
+      },
+      "relative_W_correction_upper": {
+        "binary_interval": [
+          [
+            0,
+            407276785397943829557747252729173277224788943741687449342237743829691587076123869,
+            -299,
+            268
+          ],
+          [
+            0,
+            814553570795887659115494505458346706503436872848474596471056971606874444591990599,
+            -300,
+            269
+          ]
+        ],
+        "float_enclosure": [
+          3.998719611529021e-10,
+          3.998719611529022e-10
+        ]
+      },
+      "stored_delta": {
+        "binary_interval": [
+          [
+            0,
+            967140655691703,
+            -83,
+            50
+          ],
+          [
+            0,
+            967140655691703,
+            -83,
+            50
+          ]
+        ],
+        "float_enclosure": [
+          9.999999999999995e-11,
+          9.999999999999998e-11
+        ]
+      },
+      "stored_horizon_q": {
+        "binary_interval": [
+          [
+            0,
+            747953520863667,
+            -48,
+            50
+          ],
+          [
+            0,
+            747953520863667,
+            -48,
+            50
+          ]
+        ],
+        "float_enclosure": [
+          2.657264704679345,
+          2.657264704679346
+        ]
+      },
+      "total_mathematical_initializer_error_upper": {
+        "binary_interval": [
+          [
+            0,
+            895175927405238754365858023617734569137834202783047233078469391828404405000930763,
+            -304,
+            269
+          ],
+          [
+            0,
+            447587963702619377198662802019520317486264501623174187038068428625587605788385243,
+            -303,
+            268
+          ]
+        ],
+        "float_enclosure": [
+          2.7465639346980556e-11,
+          2.7465639346980563e-11
+        ]
+      },
+      "total_mathematical_initializer_lapse_error_upper": {
+        "binary_interval": [
+          [
+            0,
+            237554332095783289110079102115296299502945670788034040537395177604953991054892869,
+            -288,
+            268
+          ],
+          [
+            0,
+            237554332095783289885155743101162329747207676984241750652893042045407154976205191,
+            -288,
+            268
+          ]
+        ],
+        "float_enclosure": [
+          4.776658613635381e-07,
+          4.776658613635383e-07
+        ]
+      },
+      "true_distance_at_stored_endpoint": {
+        "binary_interval": [
+          [
+            0,
+            23714573279562606777460920791964208583209004274234444559203146044390451,
+            -267,
+            234
+          ],
+          [
+            0,
+            23714573279562606777460921642496289659235971816059937422728018987910329,
+            -267,
+            234
+          ]
+        ],
+        "float_enclosure": [
+          1.0000149026095776e-10,
+          1.0000149026095779e-10
+        ]
+      }
+    },
+    "contextual_remaining_lapse_budget": 2.10969e-11,
+    "energy_interval": [
+      24,
+      32
+    ],
+    "group": 32,
+    "input_interpretation": {
+      "frame": "mathematical ten-term working_frame formula with inherited scalar arguments; floating evaluation error is separate",
+      "geometric_kappa": "derivative of the existing exact profile at its enclosed root; no refit",
+      "mass_angular": "exact defining labels and stored binary labels enclosed together",
+      "point_comparison": "q=q_h_stored-delta_stored, hence true delta=delta_stored+q_h_exact-q_h_stored",
+      "source_kappa": "unchanged binary input in frame and physical state; never replaced by profile derivative"
+    },
+    "mathematical_endpoint_budget_pass": false,
+    "precision": 80,
+    "scope": {
+      "actual_source_quadrature_certified": false,
+      "archived_DOP853_propagation_error_bound": null,
+      "archived_floating_initializer_error_bound": null,
+      "both_signs_included_once": true,
+      "endpoint_formula_bias_enclosed": true,
+      "finite_frame_normalized": false,
+      "metric_timestep": false,
+      "physical_thermal_error_included": false,
+      "radial_or_mode_solves": 0,
+      "source_covariance_modified": false
+    }
+  },
+  "identity": {
+    "coefficient_residuals": [
+      "0",
+      "0"
+    ],
+    "covariance_residual": "R*v^dagger+v*R^dagger; norm <=2*norm(v)*norm(R)",
+    "normalization_policy": "finite column outer product retained; no normalization or clipping",
+    "only_finite_series_residual": "R_a=i*z*b_last/2; terms0..9 imply R_a=O(delta^10)",
+    "phase_free_equations": "a_y+i*z*b/2=R_a; b_y+i*z*a/2+i*nu*b=0",
+    "unitary_bound_owner": "docs/nsc-incoming-vacuum-tail-bound.md",
+    "vacuum_phase_identity": "(exp(i*E*x)*v)(exp(i*E*x)*v)^dagger=v*v^dagger"
+  },
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
+  },
+  "interpretation": "upper bounds are not measured stress errors or a non-existence certificate; ten-term truncation is negligible, geometric/chart mismatch requires a better representation",
+  "next_connection": "same frozen source input, exact-profile coordinate and geometric Frobenius exponent; include first omitted delta^(3/2) profile correction before any validated propagation",
+  "numerical_control_tolerance": 3e-14,
+  "numerical_controls": {
+    "interpretation": "arithmetic/convention indicators only; not uniform error bounds",
+    "sampled_raw_frame_norm_residual": 4.440892098500626e-16,
+    "sampled_working_frame_covariance_difference": 4.441832886736267e-16,
+    "samples": 6
+  },
+  "payload": {
+    "path": "results/development/artifacts/nsc-incoming-horizon-endpoint-bound.8a6fe3de52968afbc993736a04b4f48fec33621bdf0a2cfd8b8ba198eac4d81a.json",
+    "sha256": "8a6fe3de52968afbc993736a04b4f48fec33621bdf0a2cfd8b8ba198eac4d81a"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_horizon_endpoint_bound.py --check",
+  "schema": "NSC-INCOMING-HORIZON-ENDPOINT-BOUND-v1",
+  "scope": {
+    "archived_initial_modes_changed": false,
+    "constraint_solution": false,
+    "metric_timestep": false,
+    "physical_initial_data_selected": false,
+    "push_or_PDF": false,
+    "radial_mode_or_source_solves": 0,
+    "source_kappa_changed": false,
+    "source_occupation_or_coherence_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-horizon-endpoint-bound.md": "751faba1cb3554f3cb5d948d56d884fe5a2f3b17f3e2f5e596488435b41241ac",
+    "scripts/derive_nsc_incoming_horizon_endpoint_bound.py": "1ed2a8c65f3e4a2329c25b0e1f0cfe12699251eae83c2c6b8ffd7443704dae88",
+    "src/recursive_horizons/nsc_incoming_horizon_endpoint_bound.py": "1ee95387b50b38cdd36933b18b9443ba6936efcef1c309e949608f796fa08fb4",
+    "tests/test_nsc_incoming_horizon_endpoint_bound.py": "8008e5453c6bfa961f27b7d1d749e9f050d22fde34dc30251854c9ebea1bd2ca"
+  },
+  "status": "OPEN: finite-collar endpoint enclosure exceeds remaining lapse budget"
+}

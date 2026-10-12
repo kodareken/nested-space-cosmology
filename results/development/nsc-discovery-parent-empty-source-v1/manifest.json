@@ -1,0 +1,254 @@
+{
+  "schema": "NSC-DISCOVERY-PARENT-EPISODE-v1",
+  "status": "STATION_REACHED",
+  "pure": false,
+  "evolved": true,
+  "bytes_written": 8526,
+  "pool_launched": true,
+  "cases": [
+    {
+      "case_id": "nf128_plus_balanced_source_free_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_plus_balanced_source_free_dt0.001-000000.npz",
+      "json": "nf128_plus_balanced_source_free_dt0.001-000000.json",
+      "coordinate_time": 0.0,
+      "steps": 0
+    }
+  ],
+  "confirmation_cases": [
+    {
+      "case_id": "nf256_plus_child_heavy_source_free_dt0.001",
+      "nf": 256,
+      "population": 0,
+      "population_id": "child_heavy",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.001,
+      "control_mode": "source_free",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_plus_balanced_source_free_dt0.001",
+      "nf": 256,
+      "population": 1,
+      "population_id": "balanced",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.001,
+      "control_mode": "source_free",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_plus_parent_heavy_source_free_dt0.001",
+      "nf": 256,
+      "population": 2,
+      "population_id": "parent_heavy",
+      "sign_name": "plus",
+      "momentum_sign": 1,
+      "step_cap": 0.001,
+      "control_mode": "source_free",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_child_heavy_source_free_dt0.001",
+      "nf": 256,
+      "population": 0,
+      "population_id": "child_heavy",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.001,
+      "control_mode": "source_free",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_balanced_source_free_dt0.001",
+      "nf": 256,
+      "population": 1,
+      "population_id": "balanced",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.001,
+      "control_mode": "source_free",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    },
+    {
+      "case_id": "nf256_minus_parent_heavy_source_free_dt0.001",
+      "nf": 256,
+      "population": 2,
+      "population_id": "parent_heavy",
+      "sign_name": "minus",
+      "momentum_sign": -1,
+      "step_cap": 0.001,
+      "control_mode": "source_free",
+      "common_k": null,
+      "confirm": true,
+      "analytic_fixture": false,
+      "stations": [
+        1.0,
+        3.0
+      ]
+    }
+  ],
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "control_mode": "source_free",
+  "step_cap_override": 0.001,
+  "numerical_binding": {
+    "mode": "rank_general_physically_scaled_local_reaction",
+    "rates": "nsc_discovery_leading_einstein.rates",
+    "jvp": "nsc_discovery_leading_einstein.jvp",
+    "integrator": "nsc_discovery_leading_einstein.rk4_step",
+    "step_restriction": "nsc_discovery_parent_step_control.step_restriction",
+    "raw_coordinate_norm_used": false,
+    "fft": "native_one_thread",
+    "workers_max": 6,
+    "forecast_factor": 1.5,
+    "memory_limit_bytes": 8589934592,
+    "chunk_limit_bytes": 67108864,
+    "cpu_budget_seconds": 21600.0,
+    "stations": [
+      1.0,
+      3.0
+    ],
+    "control_mode": "source_free",
+    "step_cap": 0.001,
+    "frozen_geometry_is_prescribed_control": false,
+    "source_recomputed_on_every_rk4_stage": true,
+    "projector_source_reset": false
+  },
+  "owner1_prepare_parent_importable": true,
+  "prepare_parent_api": "prepare_parent(nf, population=0|1|2, sign=+1|-1, k_override=None, profile=None, cpu_limit=30) -> (pair, State, report)",
+  "accepted_parent_record": {
+    "schema": "NSC-DISCOVERY-PARENT-v1",
+    "files": [
+      "parent.json",
+      "parent.npz"
+    ],
+    "arrays": [
+      "Q",
+      "r",
+      "pi_Q",
+      "pi_r",
+      "phi0",
+      "phi1",
+      "W",
+      "weights",
+      "source_columns",
+      "reference_columns"
+    ],
+    "one_record_per": [
+      "nf",
+      "population",
+      "sign"
+    ],
+    "population_names": {
+      "0": "child_heavy",
+      "1": "balanced",
+      "2": "parent_heavy"
+    },
+    "momentum_sign": "geometric sign of both p_Q and p_r; phi is not conjugated"
+  },
+  "held_out_nonlinear_measurement_before_prediction": false,
+  "production_campaign": false,
+  "cpu_budget_seconds": 20700.0,
+  "confirm": false,
+  "output": "results/development/nsc-discovery-parent-empty-source-v1",
+  "execute": false,
+  "stage": 2,
+  "producing_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
+  "source_hashes": {
+    "lab/src/recursive_horizons/nsc_discovery_parent_episode.py": "0d064277801db591a4e9c0f43ba23cdc65fc2fdcec9f3fa6b87f87450ffcee2f",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "f25506b117b2aa1777c80c1d463c4e3642fbe2bcfe499fda1e1ddebcab023b4c",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/scripts/derive_nsc_discovery_parent_episode.py": "6ecfc8be412d89ae25212e3bf0e0f6aee31faee96a2fbfada9d466e2148f25fb",
+    "lab/tests/test_nsc_discovery_parent_episode.py": "ba6676fb2a281debb73b0e2842bc928b971ac539088c51855de93c925478f7da",
+    "lab/docs/nsc-discovery-parent-episode.md": "d346a308d25cd08877c709ac78edea8cd2bc62294459076f20d21210bb053f15",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d"
+  },
+  "input_hashes": {
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signplus/parent.json": "abe9292143bf08f9e17fcb76b37b5bd47937b3f4dff5c08a587b38c43e05aff9",
+    "results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/nf128_pop1_signplus/parent.npz": "a517dc81bcf78b725ef129e9c64d8284e97d6d77a839f0dcfbe6ed788246dacf"
+  },
+  "preparation_cpu_seconds": 0.09917199999999993,
+  "child_cpu_seconds": 19.344093,
+  "forecast_factor": 1.5,
+  "memory_limit_bytes": 8589934592,
+  "chunk_limit_bytes": 67108864,
+  "workers_max": 6,
+  "results": [
+    {
+      "case_id": "nf128_plus_balanced_source_free_dt0.001",
+      "status": "station_reached",
+      "coordinate_time": 3.0,
+      "steps": 3000,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "child_cpu_seconds": 19.344093,
+      "chunk": "nf128_plus_balanced_source_free_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "projector_source_reset": false,
+      "forecast_cpu_seconds": 28.965586500000235
+    }
+  ],
+  "workers": 1,
+  "cpu_accounting": "parent_process_time_plus_children_rusage",
+  "executor_pools": 1,
+  "stability_certificate": false,
+  "max_T_forced": false,
+  "zero_residual_gate": false,
+  "cpu_seconds_including_children": 20.031032999999997,
+  "fft": "native_one_thread",
+  "projector_source_reset": false,
+  "bytes_written_scope": "final manifest rewrite only; excludes worker chunks and observation streams"
+}

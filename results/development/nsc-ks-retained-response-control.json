@@ -1,0 +1,92 @@
+{
+  "accountable_author": "Douglas Ek",
+  "control": {
+    "baseline_and_geometry_counted_once": true,
+    "energy_folding_factor": 1,
+    "history_amplitude": 0.001,
+    "local_interval": "S(1)+[.12,.18]",
+    "operator_digest": "667398ba6dc63ac8c4feacc79c725bcf131db5a45c7bcd228dfca73f42daaf3e",
+    "upstream_fixed_before_history": true
+  },
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-energy-propagator-control.npz": "3c65e9b3d8dacbd82620e5e48f10a0a4b62c19642b526f499d3cf0dbcfaee71b",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-energy-propagator-control.json": "c04c8e3d0315e6ce83d228c72ff63a7e96fd866474c57e547a9ff20647d03162",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "measurements": {
+    "batches": 74,
+    "certified_constraint_residual": null,
+    "family_matter_change_maxima": {
+      "14_-1_E-1": [
+        4.153763672215905e-05,
+        2.390389835963726e-05
+      ],
+      "14_1_E+1": [
+        4.1537060301383663e-05,
+        2.3903481584303585e-05
+      ]
+    },
+    "full_source_error_bound": null,
+    "paired_matter_change_maxima": [
+      5.665633202841428e-05,
+      2.2888775558874577e-05
+    ],
+    "partial_constraint_maxima": [
+      0.7078151328053713,
+      0.21916719498941512
+    ],
+    "positive_panels": 4,
+    "positive_rows": 584,
+    "retained_quadrature_measure": 160.0,
+    "sampled_signed_families": [
+      "14_-1_E-1",
+      "14_1_E+1"
+    ],
+    "signed_rows": 1168
+  },
+  "payload": {
+    "bytes": 159076,
+    "path": "results/development/artifacts/nsc-ks-retained-response-control.npz",
+    "sha256": "7b34d5ddf8fec8d4005280e294db68f6a3c3b21c584376210c44296dc0687cf5"
+  },
+  "reproducer": "python3 scripts/derive_nsc_ks_retained_response_control.py --check",
+  "runtime": {
+    "CPU_cap": 120.0,
+    "CPU_seconds": 2.371466,
+    "new_field_operator_solves": 0,
+    "source_upstream_continuations": 37
+  },
+  "schema": "NSC-KS-RETAINED-RESPONSE-CONTROL-v1",
+  "scope": {
+    "between_node_error_bound": null,
+    "changed_history_UV_bound": null,
+    "complete_changed_history_source_sum": false,
+    "constraint_root_claimed": false,
+    "ell0_baseline_retained": true,
+    "low_subgap_error_bound": null,
+    "metric_timestep": false,
+    "node_evolution_and_interpolation_error_bound": null,
+    "physical_local_gate": "OPEN",
+    "source_preparation_error_bound": null,
+    "stress_drift_subtracted": false,
+    "zero_radius_response_groups": [
+      0,
+      13,
+      23
+    ]
+  },
+  "source_hashes": {
+    "docs/nsc-ks-retained-response-control.md": "9b5269390c087c1c167c152cd7dbb0165c334d379e6c214314574a05897d9f9e",
+    "scripts/derive_nsc_ks_retained_response_control.py": "55cc045ee407dcd86b482f02bd140466e08cc233fb54441ea1a2b1bba1f3caba",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_local_constraints.py": "ef09afe2ff77a76dba5fb1580c47efc82cd9e4c11f288144d64d98457232d56a",
+    "src/recursive_horizons/nsc_ks_matter_difference.py": "81b87ad8f903c9495b9a8c29825cfa9c1edb18f60677dab55939de43d537750c",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_gdagger; original fixed source",
+  "status": "OPEN: two signed finite-source family responses; incomplete physical gate"
+}

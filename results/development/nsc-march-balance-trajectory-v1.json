@@ -1,0 +1,95 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "same reducer as the bubble record; the march payloads carry the pressures and were written by the march campaign"
+  ],
+  "production_trajectory": false,
+  "reading": "the march grid reaches one cell above r_minus; these are the first wall flags on that domain",
+  "schema": "NSC-MARCH-BALANCE-TRAJECTORY-v1",
+  "series": {
+    "mu-1.002-eps-0.001": [
+      {
+        "balance_at_throat": 0.4464926799117715,
+        "r_first_wall": 1.0968918367346938,
+        "t_over_rm": 5.0,
+        "wall_count": 1
+      },
+      {
+        "balance_at_throat": 0.4319743890154855,
+        "r_first_wall": 0.9583392825483418,
+        "t_over_rm": 10.0,
+        "wall_count": 3
+      },
+      {
+        "balance_at_throat": 0.6346428067534748,
+        "r_first_wall": 0.9969960900770687,
+        "t_over_rm": 15.0,
+        "wall_count": 2
+      },
+      {
+        "balance_at_throat": 0.49952424152432906,
+        "r_first_wall": 1.002,
+        "t_over_rm": 20.0,
+        "wall_count": 2
+      }
+    ],
+    "mu-1.010-eps-0.001": [
+      {
+        "balance_at_throat": 0.6778260924747782,
+        "r_first_wall": null,
+        "t_over_rm": 5.0,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.574270754688708,
+        "r_first_wall": 0.9745626072041167,
+        "t_over_rm": 10.0,
+        "wall_count": 2
+      },
+      {
+        "balance_at_throat": 0.9164505212181512,
+        "r_first_wall": null,
+        "t_over_rm": 15.0,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.8979021489024014,
+        "r_first_wall": 1.0325588341084533,
+        "t_over_rm": 20.0,
+        "wall_count": 2
+      }
+    ],
+    "mu-1.040-eps-0.001": [
+      {
+        "balance_at_throat": 0.7014151442354447,
+        "r_first_wall": 0.863322921052037,
+        "t_over_rm": 5.0,
+        "wall_count": 2
+      },
+      {
+        "balance_at_throat": 0.8444241844490741,
+        "r_first_wall": 0.8819528143239229,
+        "t_over_rm": 10.0,
+        "wall_count": 2
+      },
+      {
+        "balance_at_throat": 0.9715069403995601,
+        "r_first_wall": null,
+        "t_over_rm": 15.0,
+        "wall_count": 0
+      },
+      {
+        "balance_at_throat": 0.7705968717457008,
+        "r_first_wall": null,
+        "t_over_rm": 20.0,
+        "wall_count": 0
+      }
+    ]
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_march_balance_trajectory.py": "42b23dbdca96d0081155af5fc37c491562a1cdd1bc6535814ac39b3c044a5db8",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

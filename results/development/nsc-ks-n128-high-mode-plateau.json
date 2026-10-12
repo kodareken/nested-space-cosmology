@@ -1,0 +1,71 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.6195212665669487e-09,
+    7.292716100448793e-08
+  ],
+  "higher_n_authorized": false,
+  "higher_n_note": "n=256 is the same subclass pattern and is not authorized by this plateau",
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust03.json": "fcadd08f2f80ff4c4fa4866aab4571fe31a42a93835b4286a7c7f3c6baefa7c5",
+    "results/development/nsc-ks-n128-high-modes.json": "1e189fbcca2c77f3d482cbf615f0fda97ab6905ca85c47a4c5a0a7192d7f43f4"
+  },
+  "parent_profile_identity": "ad75942438dad1de599ee260e5d9aa7f17d60af26b533bee2b0691f2a6dec777",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "plateau_beta_gain": -3.4558944247975454e-17,
+  "plateau_n_gain": 9.899342730470359e-11,
+  "probe_authorized": false,
+  "profile_identity": "3af275b0ee0d0d0237799290e7a76639513d47cc5f1bc6da1d4d33593392f888",
+  "prune_bar_on_n_gain": 1e-10,
+  "quad_coeff_measured": false,
+  "rows": [
+    {
+      "beta_gain": -9.215718466126788e-19,
+      "clears_bar_with_beta_moving": false,
+      "h": 1e-06,
+      "n_gain": 2.206789831960436e-11
+    },
+    {
+      "beta_gain": -1.6398557858843255e-18,
+      "clears_bar_with_beta_moving": false,
+      "h": 3e-06,
+      "n_gain": 3.3498431991227814e-11
+    },
+    {
+      "beta_gain": -3.6591823321385775e-18,
+      "clears_bar_with_beta_moving": false,
+      "h": 1e-05,
+      "n_gain": 5.882004079974694e-11
+    },
+    {
+      "beta_gain": -3.3068166260807885e-18,
+      "clears_bar_with_beta_moving": false,
+      "h": 3e-05,
+      "n_gain": 7.835760502542392e-11
+    },
+    {
+      "beta_gain": -4.887041292478411e-17,
+      "clears_bar_with_beta_moving": false,
+      "h": 0.0001,
+      "n_gain": 9.899342730470359e-11
+    },
+    {
+      "beta_gain": -3.4558944247975454e-17,
+      "clears_bar_with_beta_moving": false,
+      "h": 0.0002,
+      "n_gain": 9.899342730470359e-11
+    }
+  ],
+  "schema": "NSC-KS-N128-HIGH-MODE-PLATEAU-v1",
+  "singular_ratio_cut": 1000000.0,
+  "source_hashes": {
+    "docs/nsc-ks-n128-high-mode-plateau.md": "098350283203fe2d5acad11b0f3ad8f940acba99cb06ccca57fbccd734b113ca",
+    "scripts/derive_nsc_ks_n128_high_mode_plateau.py": "d5e5ed662fd176f067872404ea8bd1b67d398e42660a25c10cfa443ae94d23ae",
+    "scripts/derive_nsc_ks_n128_high_modes.py": "f96e9600cf19ce88b91dd0918c048ce30dac8d651430d1c06ced885cabccb064"
+  },
+  "stable_rank": 83,
+  "stall": "n128_high_mode_linear_gain_below_1e-10",
+  "status": "OPEN: stable-rank n=128 N gain plateaus at 9.899343e-11 with beta flat",
+  "uv_field_low_subgap_between_node": null
+}

@@ -1,0 +1,145 @@
+{
+  "assumptions": [
+    "Finite coherent channel currents are evaluated on one fixed six-dimensional nested window.",
+    "Geometry, Omega=3/2 and the path of three regions are prescribed inputs.",
+    "The stationary state is the prescribed covariance C=I/2-J^3/2048, with M=8.",
+    "Mode observables are the spectral projectors of the declared onsite H, embedded in each region.",
+    "Mean-current activity is not particle production, heat, entropy production, dynamic-radius stabilization, an antimatter identification, or an eternity proof.",
+    "The filtered matrix F C F^dagger is a resolvent-weighted covariance/response, not an equal-time occupation or a stress tensor.",
+    "Operator self-energy is not identified with C. Probes keep J_AA, V and the baseline C fixed.",
+    "The local incoming gate remains OPEN."
+  ],
+  "checks": {
+    "commutator_zero": true,
+    "corner_currents_zero": true,
+    "cubic_denominator_is_2048": true,
+    "currents_antisymmetric": true,
+    "cut_net_current_zero": true,
+    "dimension_six": true,
+    "dropped_cross_changes_response": true,
+    "energy_rational": true,
+    "far_probe_changes_response": true,
+    "far_probe_preserves_jaa_v": true,
+    "full_filter_matches_reduced": true,
+    "half_identity_changes_response": true,
+    "hermitian_window": true,
+    "interregion_exchange_positive": true,
+    "intraregion_mode_currents_zero": true,
+    "inventory_rational": true,
+    "link_j02_is_one_quarter": true,
+    "mode_divergence_zero": true,
+    "near_probe_changes_response": true,
+    "near_probe_preserves_jaa_v": true,
+    "no_corner_block": true,
+    "normalized_resolvent_scales": true,
+    "omitted_drive_changes_response": true,
+    "omitted_memory_changes_response": true,
+    "one_way_exchange_is_half_cut": true,
+    "onsite_projectors_match_eigenvalues": true,
+    "onsite_projectors_resolve_identity": true,
+    "probes_keep_baseline_covariance": true,
+    "row_sum_bound_M8": true,
+    "shifted_bound_is_12": true,
+    "shifted_covariance_matches_base": true,
+    "shifted_currents_scale_by_omega": true,
+    "shifted_window_is_omega_times_base": true,
+    "sign_control_is_one_quarter": true,
+    "sign_derivative_matches_incoming_mode_sum": true,
+    "sign_derivative_matches_regional_current": true,
+    "spectrum_inside_quarter_and_three_quarters": true
+  },
+  "inputs": {
+    "B": [
+      [
+        "1/4",
+        "0"
+      ],
+      [
+        "0",
+        "1/7"
+      ],
+      [
+        "1/9",
+        "0"
+      ],
+      [
+        "1/6",
+        "0"
+      ]
+    ],
+    "H": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "1/5"
+      ],
+      [
+        "0",
+        "-1/5"
+      ],
+      [
+        "2",
+        "0"
+      ]
+    ],
+    "bound_M": "8",
+    "covariance_formula": "I/2 - J**3/(4*M**3)",
+    "cubic_denominator": "2048",
+    "depth": 3,
+    "dimension": 6,
+    "far_probe": {
+      "delta": "1/10",
+      "index": [
+        5,
+        5
+      ]
+    },
+    "first": 0,
+    "near_probe": {
+      "delta": "1/8",
+      "index": [
+        2,
+        2
+      ]
+    },
+    "omega": "3/2",
+    "row_sums": [
+      "223/140",
+      "223/90",
+      "6931/2520",
+      "1691/420",
+      "389/120",
+      "379/70"
+    ],
+    "shifted_bound_M": "12",
+    "sign_control": "(e0+I*e2)/sqrt(2)",
+    "spectral_parameter": "1+2*I"
+  },
+  "metrics": {
+    "G_cut_exact": "8986745/950450651136",
+    "G_one_way_exact": "8986745/1900901302272",
+    "covariance_eigenvalue_max": 0.49970219882931927,
+    "covariance_eigenvalue_min": 0.4506017858360438,
+    "dropped_cross_covariance_error_fro": 6.466030258617878e-05,
+    "far_probe_response_change_fro": 2.8630169396700523e-07,
+    "half_identity_response_change_fro": 0.0008264985280403248,
+    "max_row_sum_exact": "379/70",
+    "omitted_drive_error_fro": 0.002200419858678546,
+    "omitted_memory_error_fro": 0.004095740313033223,
+    "probe_response_change_fro": 6.879146355717442e-05,
+    "sign_control_value_exact": "1/4",
+    "total_energy_exact": "281959622988199487/41295442083840000",
+    "total_inventory_exact": "7246127239/2477260800"
+  },
+  "physical_local_gate": "OPEN",
+  "schema": "NSC-FINITE-CHANNEL-TURNOVER-v1",
+  "source_bindings": {
+    "scripts/derive_nsc_finite_turnover.py": "d4515127d2462c73507c26f26264700809a1eebbfc8b5bf6979341ce012665d4",
+    "src/recursive_horizons/nsc_finite_turnover.py": "778fd15a46dc421aa625e12aa27d16868f29b7d85430ed4c5555db4f5d744308",
+    "src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1"
+  },
+  "verdict": "PASS_FINITE_CHANNEL_TURNOVER"
+}

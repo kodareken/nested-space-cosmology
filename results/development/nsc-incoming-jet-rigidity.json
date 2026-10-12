@@ -1,0 +1,719 @@
+{
+  "accountable_author": "Douglas Ek",
+  "analytic_induction": {
+    "endpoint": "q0,...,q(k-1) vanish exactly; qk=-f^(k)/lambda^(k+1); higher q terms contribute O(E^-k-2)",
+    "finite_energy_threshold": null,
+    "frames": "Vo,Vi=I+O(E^-1), so endpoint frame corrections are O(E^-k-2) after lower endpoint terms vanish",
+    "higher_derivatives": "needed for the finite remainder estimate but neither required to vanish nor classified by this result",
+    "hypotheses": {
+      "family": "first derivative at the fixed reference of a C-infinity real metric history, energy independent, with compact axial support and a fixed compact radial slab away from horizon",
+      "intrinsic": "deltaN=deltabeta=deltaa=deltar=0 AS FUNCTIONS of z on Sigma",
+      "lapse_shift": "delta partial_T^j N(z)=delta partial_T^j beta(z)=0 for j=1,...,4 AS FUNCTIONS on Sigma",
+      "nondegenerate_block": "reuse authenticated group14 with nonzero m and ell",
+      "regularity": "bounded forcing derivatives through six, with the corresponding smooth background-frame and gap derivatives, uniformly at each fixed finite omega; a bare twenty-number germ is insufficient",
+      "spectrum": "existing unbounded signed-real-energy continuum; Eo=E+omega/2,Ei=E-omega/2 go to positive infinity at each fixed real omega",
+      "upstream": "all variations vanish on an open upstream neighborhood; unchanged original past, source law and physical affine component"
+    },
+    "induction": "if lower normal a/r functions vanish, all lower radial metric derivatives vanish; fixed lapse/shift jets give f^(j)(Sigma)=0 for j<k",
+    "injectivity": "full matching makes BOTH complex entries vanish for every fixed omega; nonzero determinant gives A_k=R_k=0; Fourier injectivity yields normal functions zero for k=1,...,4",
+    "physical_pair_error": "exact unitary left/right transport and zero upstream approximate data give Qphysical-Vo Z Vi^dagger=O(E^-6)",
+    "remaining_errors": {
+      "full_coherent_source_minus_vacuum": "O(E exp(-cE)), c>0, including occupations and coherence",
+      "offdiagonal_frame_generator": "O(E^-16)*O(E^-1)=O(E^-17)",
+      "physical_source_projector_replacement": "O(E)*O(E^-16)=O(E^-15)"
+    },
+    "reused_physical_bridge": "Paff-P16=O(E^-16) uniformly on compact slab, from positive full-collar bound; no derivative of a numerical error inequality",
+    "scope": "first-order tangent necessity in the stated functional class; no finite-amplitude exclusion, noncompact-class result, new boundary prescription or global stationarity claim",
+    "six_term_residual": "f and required derivatives O(1), cross-band gap lambda=+/-2iE/a0^2+O(E^-1); q5_prime=O(E^-6)",
+    "sufficiency_for_C0_matching": false,
+    "twenty_slots": "then all partial_z^j delta partial_T^k a,r vanish for k>=1,k+j<=4",
+    "uniform_large_transfer_bound": null
+  },
+  "assumptions": {
+    "family": "first derivative at the fixed reference of a C-infinity real metric history, energy independent, with compact axial support and a fixed compact radial slab away from horizon",
+    "intrinsic": "deltaN=deltabeta=deltaa=deltar=0 AS FUNCTIONS of z on Sigma",
+    "lapse_shift": "delta partial_T^j N(z)=delta partial_T^j beta(z)=0 for j=1,...,4 AS FUNCTIONS on Sigma",
+    "nondegenerate_block": "reuse authenticated group14 with nonzero m and ell",
+    "regularity": "bounded forcing derivatives through six, with the corresponding smooth background-frame and gap derivatives, uniformly at each fixed finite omega; a bare twenty-number germ is insufficient",
+    "spectrum": "existing unbounded signed-real-energy continuum; Eo=E+omega/2,Ei=E-omega/2 go to positive infinity at each fixed real omega",
+    "upstream": "all variations vanish on an open upstream neighborhood; unchanged original past, source law and physical affine component"
+  },
+  "checked_finite_algebra": {
+    "endpoint_maps": {
+      "complex_Fourier_amplitudes": true,
+      "imported_Q1": [
+        [
+          "0",
+          "(-I*a1*deltar*ell + I*deltaa*ell*r1 + deltaa*m*r1**2)/(2*r1**2)"
+        ],
+        [
+          "(I*a1*deltar*ell - I*deltaa*ell*r1 + deltaa*m*r1**2)/(2*r1**2)",
+          "0"
+        ]
+      ],
+      "leading_forcing_from_owned_Q1": "f0_entry=-(lambda_entry/E)*Q1_entry",
+      "nondegeneracy": "a1,r1>0 and m*ell!=0",
+      "orders": [
+        {
+          "coefficient_identity_residuals": [
+            "0",
+            "0"
+          ],
+          "coefficient_map_determinant": "I*a1**3*ell*m/(8*r1**2)",
+          "complex_kernel": [
+            {
+              "A_k": "0",
+              "R_k": "0"
+            }
+          ],
+          "determinant_identity_residual": "0",
+          "limit01": "-I*a1*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(4*r1**2)",
+          "limit10": "I*a1*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(4*r1**2)",
+          "next_endpoint_order": "O(E^-3)",
+          "normal_order": 1,
+          "opposite_transfer_adjoint_residual": "0",
+          "physical_bridge_remainder": "O(E^-6)",
+          "scaled_physical_limit": "E^2 Q01,Q10"
+        },
+        {
+          "coefficient_identity_residuals": [
+            "0",
+            "0"
+          ],
+          "coefficient_map_determinant": "I*a1**5*ell*m/(32*r1**2)",
+          "complex_kernel": [
+            {
+              "A_k": "0",
+              "R_k": "0"
+            }
+          ],
+          "determinant_identity_residual": "0",
+          "limit01": "-a1**2*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(8*r1**2)",
+          "limit10": "-a1**2*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(8*r1**2)",
+          "next_endpoint_order": "O(E^-4)",
+          "normal_order": 2,
+          "opposite_transfer_adjoint_residual": "0",
+          "physical_bridge_remainder": "O(E^-6)",
+          "scaled_physical_limit": "E^3 Q01,Q10"
+        },
+        {
+          "coefficient_identity_residuals": [
+            "0",
+            "0"
+          ],
+          "coefficient_map_determinant": "I*a1**7*ell*m/(128*r1**2)",
+          "complex_kernel": [
+            {
+              "A_k": "0",
+              "R_k": "0"
+            }
+          ],
+          "determinant_identity_residual": "0",
+          "limit01": "I*a1**3*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(16*r1**2)",
+          "limit10": "-I*a1**3*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(16*r1**2)",
+          "next_endpoint_order": "O(E^-5)",
+          "normal_order": 3,
+          "opposite_transfer_adjoint_residual": "0",
+          "physical_bridge_remainder": "O(E^-6)",
+          "scaled_physical_limit": "E^4 Q01,Q10"
+        },
+        {
+          "coefficient_identity_residuals": [
+            "0",
+            "0"
+          ],
+          "coefficient_map_determinant": "I*a1**9*ell*m/(512*r1**2)",
+          "complex_kernel": [
+            {
+              "A_k": "0",
+              "R_k": "0"
+            }
+          ],
+          "determinant_identity_residual": "0",
+          "limit01": "a1**4*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(32*r1**2)",
+          "limit10": "a1**4*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(32*r1**2)",
+          "next_endpoint_order": "O(E^-6)",
+          "normal_order": 4,
+          "opposite_transfer_adjoint_residual": "0",
+          "physical_bridge_remainder": "O(E^-6)",
+          "scaled_physical_limit": "E^5 Q01,Q10"
+        }
+      ]
+    },
+    "exact_scalar_residual_count": 36,
+    "normal_chain": {
+      "fixed_axial_Fourier_coordinate": "z; radial derivative is at fixed z after the owned clock-phase cancellation",
+      "lower_normal_functions_zero": "all g_T^j(z)=0 for j<k, so all their spatial derivatives vanish",
+      "operator": "d_rho=(-1/a0)*d_T on the transformed metric Fourier functions",
+      "orders": [
+        {
+          "normal_chain_residual": "0",
+          "normal_order": 1,
+          "rho_derivative_at_Sigma": "-g_k/a1"
+        },
+        {
+          "normal_chain_residual": "0",
+          "normal_order": 2,
+          "rho_derivative_at_Sigma": "g_k/a1**2"
+        },
+        {
+          "normal_chain_residual": "0",
+          "normal_order": 3,
+          "rho_derivative_at_Sigma": "-g_k/a1**3"
+        },
+        {
+          "normal_chain_residual": "0",
+          "normal_order": 4,
+          "rho_derivative_at_Sigma": "g_k/a1**4"
+        }
+      ]
+    },
+    "normal_slot_inventory": {
+      "count": 20,
+      "justification": "each normal function vanishes for all z; differentiate in z only afterward",
+      "mixed_slot_count_residual": "0",
+      "per_field_count": 10,
+      "per_normal_order_per_field": [
+        4,
+        3,
+        2,
+        1
+      ],
+      "slots": [
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 0
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 1
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 2
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 3
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 2,
+          "spatial_order": 0
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 2,
+          "spatial_order": 1
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 2,
+          "spatial_order": 2
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 3,
+          "spatial_order": 0
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 3,
+          "spatial_order": 1
+        },
+        {
+          "field": "a",
+          "necessary_tangent_change": 0,
+          "normal_order": 4,
+          "spatial_order": 0
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 0
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 1
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 2
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 1,
+          "spatial_order": 3
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 2,
+          "spatial_order": 0
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 2,
+          "spatial_order": 1
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 2,
+          "spatial_order": 2
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 3,
+          "spatial_order": 0
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 3,
+          "spatial_order": 1
+        },
+        {
+          "field": "r",
+          "necessary_tangent_change": 0,
+          "normal_order": 4,
+          "spatial_order": 0
+        }
+      ]
+    },
+    "six_inverse_gap": {
+      "endpoint_assumption": "f^(j)(Sigma)=0 exactly for j<k; lambda(Sigma)!=0",
+      "endpoints": [
+        {
+          "endpoint_qk": "-f_k/lambda_0**2",
+          "lower_q_endpoint_residuals": [
+            "0"
+          ],
+          "normal_order": 1,
+          "qk_endpoint_residual": "0"
+        },
+        {
+          "endpoint_qk": "-f_k/lambda_0**3",
+          "lower_q_endpoint_residuals": [
+            "0",
+            "0"
+          ],
+          "normal_order": 2,
+          "qk_endpoint_residual": "0"
+        },
+        {
+          "endpoint_qk": "-f_k/lambda_0**4",
+          "lower_q_endpoint_residuals": [
+            "0",
+            "0",
+            "0"
+          ],
+          "normal_order": 3,
+          "qk_endpoint_residual": "0"
+        },
+        {
+          "endpoint_qk": "-f_k/lambda_0**5",
+          "lower_q_endpoint_residuals": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "normal_order": 4,
+          "qk_endpoint_residual": "0"
+        }
+      ],
+      "recurrence": "q0=-f/lambda; q(j+1)=qj_prime/lambda for j=0,...,4",
+      "residual_equation": "(sum(q0,...,q5))_prime-lambda*sum(q0,...,q5)-f=q5_prime",
+      "telescoping_residual": "0",
+      "term_count": 6,
+      "uniform_orders": [
+        "qj=O(E^(-j-1)), j=0,...,5",
+        "q5_prime=O(E^-6)"
+      ]
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_jet_rigidity.py --check",
+  "residuals": {
+    "exact_symbolic_identities": 0
+  },
+  "result": {
+    "endpoint_maps": [
+      {
+        "coefficient_identity_residuals": [
+          "0",
+          "0"
+        ],
+        "coefficient_map_determinant": "I*a1**3*ell*m/(8*r1**2)",
+        "complex_kernel": [
+          {
+            "A_k": "0",
+            "R_k": "0"
+          }
+        ],
+        "determinant_identity_residual": "0",
+        "limit01": "-I*a1*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(4*r1**2)",
+        "limit10": "I*a1*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(4*r1**2)",
+        "next_endpoint_order": "O(E^-3)",
+        "normal_order": 1,
+        "opposite_transfer_adjoint_residual": "0",
+        "physical_bridge_remainder": "O(E^-6)",
+        "scaled_physical_limit": "E^2 Q01,Q10"
+      },
+      {
+        "coefficient_identity_residuals": [
+          "0",
+          "0"
+        ],
+        "coefficient_map_determinant": "I*a1**5*ell*m/(32*r1**2)",
+        "complex_kernel": [
+          {
+            "A_k": "0",
+            "R_k": "0"
+          }
+        ],
+        "determinant_identity_residual": "0",
+        "limit01": "-a1**2*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(8*r1**2)",
+        "limit10": "-a1**2*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(8*r1**2)",
+        "next_endpoint_order": "O(E^-4)",
+        "normal_order": 2,
+        "opposite_transfer_adjoint_residual": "0",
+        "physical_bridge_remainder": "O(E^-6)",
+        "scaled_physical_limit": "E^3 Q01,Q10"
+      },
+      {
+        "coefficient_identity_residuals": [
+          "0",
+          "0"
+        ],
+        "coefficient_map_determinant": "I*a1**7*ell*m/(128*r1**2)",
+        "complex_kernel": [
+          {
+            "A_k": "0",
+            "R_k": "0"
+          }
+        ],
+        "determinant_identity_residual": "0",
+        "limit01": "I*a1**3*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(16*r1**2)",
+        "limit10": "-I*a1**3*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(16*r1**2)",
+        "next_endpoint_order": "O(E^-5)",
+        "normal_order": 3,
+        "opposite_transfer_adjoint_residual": "0",
+        "physical_bridge_remainder": "O(E^-6)",
+        "scaled_physical_limit": "E^4 Q01,Q10"
+      },
+      {
+        "coefficient_identity_residuals": [
+          "0",
+          "0"
+        ],
+        "coefficient_map_determinant": "I*a1**9*ell*m/(512*r1**2)",
+        "complex_kernel": [
+          {
+            "A_k": "0",
+            "R_k": "0"
+          }
+        ],
+        "determinant_identity_residual": "0",
+        "limit01": "a1**4*(I*A_k*ell*r1 + A_k*m*r1**2 - I*R_k*a1*ell)/(32*r1**2)",
+        "limit10": "a1**4*(-I*A_k*ell*r1 + A_k*m*r1**2 + I*R_k*a1*ell)/(32*r1**2)",
+        "next_endpoint_order": "O(E^-6)",
+        "normal_order": 4,
+        "opposite_transfer_adjoint_residual": "0",
+        "physical_bridge_remainder": "O(E^-6)",
+        "scaled_physical_limit": "E^5 Q01,Q10"
+      }
+    ],
+    "finite_energy_threshold": null,
+    "mixed_slots": [
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 0
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 1
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 2
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 3
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 2,
+        "spatial_order": 0
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 2,
+        "spatial_order": 1
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 2,
+        "spatial_order": 2
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 3,
+        "spatial_order": 0
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 3,
+        "spatial_order": 1
+      },
+      {
+        "field": "a",
+        "necessary_tangent_change": 0,
+        "normal_order": 4,
+        "spatial_order": 0
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 0
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 1
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 2
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 1,
+        "spatial_order": 3
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 2,
+        "spatial_order": 0
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 2,
+        "spatial_order": 1
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 2,
+        "spatial_order": 2
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 3,
+        "spatial_order": 0
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 3,
+        "spatial_order": 1
+      },
+      {
+        "field": "r",
+        "necessary_tangent_change": 0,
+        "normal_order": 4,
+        "spatial_order": 0
+      }
+    ],
+    "normal_functions": [
+      "delta partial_T^k a(z)=0",
+      "delta partial_T^k r(z)=0"
+    ],
+    "normal_orders": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "physical_pair_remainder": "O(E^-6) for six inverse-gap terms",
+    "slot_count": 20,
+    "sufficient_for_full_matching": false,
+    "uniform_large_transfer_bound": null
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 92552,
+      "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+      "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+    }
+  ],
+  "reused_physical_evidence": {
+    "background": {
+      "background_bound_original_energy_split": 160.0,
+      "full_collar_I16_to_I32_upper": [
+        1.2829501037224872e+17,
+        5.0414788619716184e+16,
+        5.433790590110849e+16,
+        3.301698681452116e+17,
+        1.6419448058122076e+18,
+        1.1915543391062108e+19,
+        1.0281107167132869e+20,
+        1.0799939642095521e+21,
+        1.343036043306108e+22,
+        1.9313777359608018e+23,
+        3.120563385600728e+24,
+        5.516113106482915e+25,
+        1.0391820941823585e+27,
+        2.0321169693756413e+28,
+        3.989211750432136e+29,
+        7.397278704660649e+30,
+        1.0878129469371801e+32
+      ],
+      "group": 14,
+      "needed_local_defect_derivatives": "finite background Riccati coefficient functions are smooth on compact slab, so their required rho derivatives are bounded",
+      "new_coefficients_or_bound_producer_run": false,
+      "record": "results/development/nsc-incoming-vacuum-tail-bound.json",
+      "sign": 1,
+      "uniform_partial_interval_bound": "positive horizon-to-rho majorants on the slab are dominated by the existing full-collar integral"
+    },
+    "fixed_transfer_record": "results/development/nsc-incoming-fixed-transfer.json",
+    "parent_physical_bridge": {
+      "Fourier_injectivity": "if matching holds at all pairs, both checked entries vanish for every fixed omega; m*ell!=0 implies Ahat=Rhat=0, hence deltaa_T=deltar_T=0 pointwise for smooth compact axial tangents",
+      "analytic_not_numerical": "uniform orders and injectivity are analytic deductions; finite algebra checks do not supply constants or an energy threshold",
+      "background": "Paff(E\u00b1omega/2)-P16(E\u00b1omega/2)=O(E^-16) uniformly on the compact slab by the positive full-collar bound",
+      "coherent_source_error": "exact full-minus-vacuum source in the pair equation is D(Ci-Pi)-(Co-Po)D; source occupations and coherence give O(E*exp(-cE)), c>0",
+      "cross_band_gaps": "lambda01=(Lo)00-(Li)11=-2iE/a0\u00b2+O(E^-1); lambda10=+2iE/a0\u00b2+O(E^-1), uniformly separated from0 eventually",
+      "endpoint": "intrinsic delta g is identically0 in z on Sigma, so F(Sigma)=0; Qapprox starts at E^-2 with the checked pair coefficients",
+      "finite_energy_threshold": null,
+      "fixed_transfer": "Eo=E+omega/2, Ei=E-omega/2; omega fixed finite real, E\u2192+infinity",
+      "four_terms": "q0=-f/lambda; q(n+1)=q(n)_prime/lambda for n=0,1,2; residual=q3_prime=O(E^-4)",
+      "frame_coupling_error": "ignored offdiagonal L times q=O(E^-16)*O(E^-1)=O(E^-17)",
+      "mathematical_frames": "V16 unitary, P16=V16 P0 V16^dagger; V16=I+O(E^-1), needed positive-order rho derivatives=O(E^-1), V_o-V_i and its needed rho derivatives=O(E^-2) for fixed omega",
+      "physical_forcing_error": "D times physical-minus-P16 projectors=O(E)*O(E^-16)=O(E^-15)",
+      "physical_pair_error": "unitary left/right propagation bounds Qexact-Vo*q*Vi^dagger=O(E^-4)",
+      "transformed_forcing": "F=Dtilde P0-P0 Dtilde is offdiagonal; D=E D1+D0 with D1 diagonal and D0=O(1), hence F and required rho derivatives O(1)",
+      "transformed_generators": "L=V^dagger G V-V^dagger V_prime; offdiagonal norm equals projector-defect norm=O(E^-16)",
+      "uniform_large_transfer_estimate": null,
+      "uniformity_hypotheses": [
+        "fixed compact slab away from horizon, positive background a,r",
+        "smooth real energy-independent retarded metric directions, with sufficient bounded rho derivatives through q3_prime",
+        "smooth compact axial first-normal tangents, and unchanged original upstream/past source law",
+        "all intrinsic metric directions, including shift, vanish as functions of z on Sigma"
+      ],
+      "upstream": "all metric directions vanish in an open upstream neighborhood, so F and q0..q3 vanish there"
+    },
+    "physical_generators_rerun": false,
+    "source_bindings": {
+      "channel": {
+        "angular_eigenvalue": 2.23606797749979,
+        "angular_level": 1,
+        "compact_level": 1,
+        "compact_mass": 1.5707963267948966,
+        "copy_count": 2,
+        "degeneracy": 12,
+        "factor": 0.3155184556573868,
+        "family": 2,
+        "index": 14,
+        "reference_scheme": "positive-compact fourth-order superadiabatic Bloch projector",
+        "sample_count": 64,
+        "sample_offset": 688
+      },
+      "intrinsic_geometry": "rho1; a1\u00b2=3*pi/2-4, r1\u00b2=2",
+      "source_config": {
+        "angular_levels": 9,
+        "compact_levels": [
+          1,
+          2
+        ],
+        "cutoff": 3.973074368754331,
+        "evolution_steps": 6000,
+        "frequency_max": 40.0,
+        "frequency_points": 8,
+        "horizon_offset": 1e-10,
+        "horizon_rho": 1.9006916054701435,
+        "magnetic_flux": 4,
+        "omega": 3.973074368754331,
+        "outer_floor": 60.0,
+        "scattering_tolerance": 1e-09,
+        "surface_gravity": 0.23832579963401956
+      }
+    }
+  },
+  "schema": "NSC-INCOMING-JET-RIGIDITY-v1",
+  "scope": {
+    "N_beta_normal_jets_fixed_as_functions_through_four": true,
+    "actual_prepared_covariance_tangent": true,
+    "bare_point_germ_sufficient": false,
+    "broader_NSC_architecture_excluded": false,
+    "complex_Fourier_amplitudes_retained": true,
+    "constraint_intersection_computed": false,
+    "finite_amplitude_exclusion": false,
+    "finite_set_of_pairs_sufficient": false,
+    "full_global_constraints_or_stationarity": "OPEN",
+    "full_matching_required_at_all_fixed_transfers": true,
+    "higher_normal_jets_classified": false,
+    "mathematical_P16_frames_not_state_normalization": true,
+    "metric_evolution_or_publication": false,
+    "new_Hadamard_gate_or_cutoff": false,
+    "other_preparations_or_noncompact_classes_excluded": false,
+    "physical_field_source_radial_producer_or_energy_scan_runs": 0,
+    "source_law_or_boundary_prescription_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-jet-rigidity.md": "41b847b23a203295a9d317fd51438334b2c625474dc770f15ac909c870a1846b",
+    "scripts/derive_nsc_incoming_jet_rigidity.py": "5944deec11618b362a10ed7776e5f9a872bbfe187129ffc21cd7e3f15e110c68",
+    "src/recursive_horizons/nsc_incoming_jet_rigidity.py": "51bca5a9afbb5ce5ac8a0d5b9e8316587620cf68537ee704142dd88c053e67fc",
+    "tests/test_nsc_incoming_jet_rigidity.py": "fff9c7f3b130d5d8511ac371ac947971d2c89130ed39e1b575ce3ae524544b58"
+  },
+  "status": "PASS: necessary prepared fixed-C0 tangent conditions on all twenty incoming normal slots",
+  "verification_tolerances": {
+    "exact_symbolic_identities": 0
+  }
+}

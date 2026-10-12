@@ -1,0 +1,274 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, structure, symbolic identities and scope",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-11
+  },
+  "domain": {
+    "CTP": "same allocation S[g_plus]-S[g_minus]; relative-branch variation",
+    "PG_time_support": [
+      0.0,
+      0.05
+    ],
+    "action": "c/(24*pi) integral(-N*a*Ha^2 + 2*N_z*L_z/a - N*L_z^2/a) dT dz",
+    "allocation": "T_covariant - T_canonical; state functions and null maps cancel",
+    "amplitudes": [
+      0.002,
+      0.001,
+      0.003,
+      0.001
+    ],
+    "baseline": "fixed baseline used only to report action differences, not a vacuum subtraction",
+    "boundary": "compact boundary-identical variations; smooth fixed rho=0 cut, no new endpoint force",
+    "central_charge": 4,
+    "double_count_guard": "replaces stationary geometric LLL evaluation; do not add its old tensor again",
+    "fields": [
+      "N_K",
+      "beta_K",
+      "a_K=q_ADM",
+      "r_K"
+    ],
+    "force_convention": "minus action gradient",
+    "history": "existing supplied compact harmonic raw-KS metric, fixed PG chart",
+    "history_selected": false,
+    "metric": "physical radial g2; canonical half-density chi=sqrt(a*r^2)*psi",
+    "multiplicity": "one factor abs(q_mag); no further copy/partner factor",
+    "normal_order": "spatial canonical LLL chiral vacuum, with Schwarzian state transformation",
+    "omega": 0.4,
+    "radial_support": [
+      -1.0,
+      1.0
+    ],
+    "sphere_projection": "radial allocation divided by 4*pi*r^2; zero sphere pressure in this sector",
+    "state_changed": false,
+    "stress_order": [
+      "rho",
+      "covariant_orthonormal_T01",
+      "p_parallel",
+      "p_perp"
+    ],
+    "trace_measure": "dT dz = dPGtime drho/a0; fixed chart, not 1/a_actual"
+  },
+  "evaluations": {
+    "64_64": {
+      "action": -0.015023327028482247,
+      "action_force": [
+        -0.012306821158104204,
+        -0.010995604778079817,
+        0.002286991604913306,
+        -0.0
+      ],
+      "action_gradient": [
+        0.012306821158104204,
+        0.010995604778079817,
+        -0.002286991604913306,
+        0.0
+      ],
+      "action_minus_fixed_baseline": 2.884626835654089e-05,
+      "allocation_2D_ranges": {
+        "delta_T01": [
+          -0.7862317206660426,
+          3.908597988775969
+        ],
+        "delta_p_parallel": [
+          -1.2485044061605428,
+          6.991361046060711
+        ],
+        "delta_rho": [
+          -0.7821425550729788,
+          3.5508470733540864
+        ]
+      },
+      "residuals": {
+        "action_vs_stress_pairing": 1.4903182854464347e-12,
+        "inherited_stationary_allocation": 3.785860513971784e-14,
+        "raw_metric_reconstruction": 4.6629367034256575e-15,
+        "trace_identity": 8.881784197001252e-16
+      },
+      "stress_pairing_gradient": [
+        0.012306821157127371,
+        0.010995604776589498,
+        -0.002286991606032415,
+        0.0
+      ]
+    },
+    "96_64": {
+      "action": -0.015023327028482199,
+      "action_force": [
+        -0.012306821157766639,
+        -0.010995604777577762,
+        0.0022869916045035136,
+        -0.0
+      ],
+      "action_gradient": [
+        0.012306821157766639,
+        0.010995604777577762,
+        -0.0022869916045035136,
+        0.0
+      ],
+      "action_minus_fixed_baseline": 2.8846268356591195e-05,
+      "allocation_2D_ranges": {
+        "delta_T01": [
+          -0.7855997784329753,
+          3.8957230370255584
+        ],
+        "delta_p_parallel": [
+          -1.2477082486592095,
+          6.966084303550213
+        ],
+        "delta_rho": [
+          -0.7815729417463743,
+          3.54196364226386
+        ]
+      },
+      "residuals": {
+        "action_vs_stress_pairing": 2.3069640815720494e-12,
+        "inherited_stationary_allocation": 3.785860513971784e-14,
+        "raw_metric_reconstruction": 3.552713678800501e-15,
+        "trace_identity": 8.881784197001252e-16
+      },
+      "stress_pairing_gradient": [
+        0.01230682115776642,
+        0.010995604777577436,
+        -0.0022869916068104777,
+        0.0
+      ]
+    },
+    "96_96": {
+      "action": -0.015023327028489165,
+      "action_force": [
+        -0.012306821157753127,
+        -0.010995604777577465,
+        0.0022869916068165895,
+        -0.0
+      ],
+      "action_gradient": [
+        0.012306821157753127,
+        0.010995604777577465,
+        -0.0022869916068165895,
+        0.0
+      ],
+      "action_minus_fixed_baseline": 2.8846268349619342e-05,
+      "allocation_2D_ranges": {
+        "delta_T01": [
+          -0.7853461267525933,
+          3.8974179440520014
+        ],
+        "delta_p_parallel": [
+          -1.2496992208451987,
+          6.9758369956853965
+        ],
+        "delta_rho": [
+          -0.7823498545027687,
+          3.5440034129748015
+        ]
+      },
+      "residuals": {
+        "action_vs_stress_pairing": 2.3670301829703533e-15,
+        "inherited_stationary_allocation": 2.6645352591003757e-14,
+        "raw_metric_reconstruction": 4.218847493575595e-15,
+        "trace_identity": 8.881784197001252e-16
+      },
+      "stress_pairing_gradient": [
+        0.012306821157752902,
+        0.010995604777577135,
+        -0.0022869916068189566,
+        0.0
+      ]
+    }
+  },
+  "exact_nullmap_cancellation": {
+    "density": "0",
+    "momentum": "0"
+  },
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "LLL_geometric_allocation": "PASS",
+    "PDF_bumped": false,
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "common_subtracted_spectral_trace": "OPEN: state and ad4/band connection terms require common-kernel pairing and convergence",
+    "extended_stationarity": "OPEN",
+    "extra_Gamma_rest": "none introduced",
+    "full_renormalized_stress": null,
+    "homogeneous_nonexistence": "preserved in original scope; not rerun",
+    "metric_timestep": false,
+    "nulls": null,
+    "updated_constraints": null
+  },
+  "inherited_neck_allocation_2D": {
+    "delta_T01": 0.0,
+    "delta_p_parallel": 0.3713860988709729,
+    "delta_p_perp": 0.0,
+    "delta_rho": -0.12861390112902704
+  },
+  "input_hashes": {
+    "docs/nsc-common-ks-trace.md": "367b3a918e4ce099cbf079ff2a1a0588dcf5c36c2b0c29641f19bf3e35517733",
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "docs/nsc-horizon-source.md": "f77031e2ee09109e27cc351bf4a6b87027b758e98e4b9243062575aa538bdf28",
+    "docs/nsc-mode-resolved-cauchy-state.md": "877fe100b399d2a0493d9ee9fe28a02df5e087a461e2ac19b9819275b2df4ec9",
+    "results/development/nsc-nonlinear-ks-source.json": "4127a56cbb1934b7925bd517bc117fb09a8ef2c3c7d2f1f0dfd64a4bda619655",
+    "results/development/nsc-reference-band-action.json": "f00ab1c59ddfc391071972f3e6beb23ad93c4db4a2e747b1057eb34f6abdeb3e",
+    "results/development/nsc-spherical-local-history.json": "306e6b6f2370e7c4f5e608dccfc2ebd4d3f968d99e4785b7ed9215b1b865fddc",
+    "src/recursive_horizons/nsc_charged_ctp_neck.py": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "action_vs_stress_pairing": 2.3069640815720494e-12,
+    "complex_step_vs_real_action_difference": 1.5255505192435237e-13,
+    "inherited_stationary_allocation": 3.785860513971784e-14,
+    "radial_quadrature": 2.3130759460587846e-12,
+    "raw_metric_reconstruction": 4.6629367034256575e-15,
+    "time_quadrature": 9.879371626331235e-13,
+    "trace_identity": 8.881784197001252e-16
+  },
+  "real_action_difference": {
+    "residuals": [
+      1.5255505192435237e-13,
+      8.111046556624757e-14,
+      3.2566397495381594e-14,
+      5.782411586589356e-14
+    ],
+    "stencil_order": 4,
+    "step": 1e-05
+  },
+  "reproducer": "python3 scripts/derive_nsc_lll_geometric_history.py --check",
+  "schema": "NSC-LLL-GEOMETRIC-HISTORY-v1",
+  "source_hashes": {
+    "docs/nsc-lll-geometric-history.md": "2e2047f589db787f1ffde0d0dcabed9885f6fad2575bbd40952cb246cc67a258",
+    "scripts/derive_nsc_lll_geometric_history.py": "ce5204dad7f7c1578dfaf226e5fcf8ee10768800e747a9a3fab053a5995e5e56",
+    "src/recursive_horizons/nsc_lll_geometric_history.py": "4b8cfc9888879ac502cc9f307e541bfa32bd7dacec6ef58bd62d8ce2e8b5eb8d",
+    "tests/test_nsc_lll_geometric_history.py": "0214de16bab613d05e5bb8edf14d8724b6c90a6d1658a82739ea02035281c31c"
+  },
+  "status": "PASS: inherited LLL geometric allocation on the supplied KS history",
+  "tolerances": {
+    "action_vs_stress_pairing": 3e-11,
+    "complex_step_vs_real_action_difference": 3e-11,
+    "inherited_stationary_allocation": 3e-11,
+    "radial_quadrature": 3e-11,
+    "raw_metric_reconstruction": 3e-11,
+    "time_quadrature": 3e-11,
+    "trace_identity": 3e-11
+  }
+}

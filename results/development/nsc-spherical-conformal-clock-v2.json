@@ -1,0 +1,142 @@
+{
+  "schema": "NSC-SPHERICAL-CONFORMAL-CLOCK-v2",
+  "gauge": "conformal",
+  "source_bindings": {
+    "episode_v2": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "payload_v2": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+    "episode_v1": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "analytic_frozen_producer": "22af5a2a8e885c48ff83dc5e26568b7661a0bc3811507bf64686008affca0514",
+    "driver": "a2b527ba47ee4820cbbe96cc46f566fe9251dfbad35d90f4f6f0626bd754474c"
+  },
+  "protocol": "saved coupled endpoint clock tau(x=1), exact analytic frozen group at coordinate time tau/N0(x=1), original T0 mode observer",
+  "trajectory_evolved": false,
+  "frozen_time_interpolation_used": false,
+  "coupled_time_interpolation_used": false,
+  "results": {
+    "nf256_dt_0.0010": {
+      "proper_clock": 0.3616114026999576,
+      "original_clock_rate": 1.2063828731022972,
+      "frozen_coordinate_time": 0.29974845528936334,
+      "coupled_coordinate_time": 0.3,
+      "coupled_occupation": [
+        0.03214495833275093,
+        0.03226899858977643
+      ],
+      "frozen_occupation": [
+        0.03215686931514639,
+        0.032279683254665494
+      ],
+      "difference": [
+        -1.1910982395460512e-05,
+        -1.0684664889064333e-05
+      ],
+      "interpolated_control_difference": [
+        -1.2252549519524425e-05,
+        -1.1041070541090159e-05
+      ],
+      "interpolated_minus_exact": [
+        -3.415671240639129e-07,
+        -3.564056520258263e-07
+      ]
+    },
+    "nf256_dt_0.0005": {
+      "proper_clock": 0.3616114056659359,
+      "original_clock_rate": 1.2063828731022972,
+      "frozen_coordinate_time": 0.2997484577479346,
+      "coupled_coordinate_time": 0.3,
+      "coupled_occupation": [
+        0.032144958322233914,
+        0.03226899858012002
+      ],
+      "frozen_occupation": [
+        0.03215686921098721,
+        0.03227968316277223
+      ],
+      "difference": [
+        -1.1910888753297044e-05,
+        -1.0684582652208119e-05
+      ],
+      "interpolated_control_difference": [
+        -1.2023057565827e-05,
+        -1.080169384908014e-05
+      ],
+      "interpolated_minus_exact": [
+        -1.1216881252995581e-07,
+        -1.1711119687202176e-07
+      ]
+    },
+    "nf512_dt_0.0010": {
+      "proper_clock": 0.36161140274587694,
+      "original_clock_rate": 1.2063828733417277,
+      "frozen_coordinate_time": 0.299748455267936,
+      "coupled_coordinate_time": 0.3,
+      "coupled_occupation": [
+        0.03214495759583592,
+        0.03226899863093966
+      ],
+      "frozen_occupation": [
+        0.0321568685944884,
+        0.032279683300355314
+      ],
+      "difference": [
+        -1.1910998652484017e-05,
+        -1.068466941565177e-05
+      ],
+      "interpolated_control_difference": [
+        -1.2252566057524561e-05,
+        -1.104107530824211e-05
+      ],
+      "interpolated_minus_exact": [
+        -3.415674050405437e-07,
+        -3.5640589259033906e-07
+      ]
+    },
+    "nf512_dt_0.0005": {
+      "proper_clock": 0.361611405711853,
+      "original_clock_rate": 1.2063828733417277,
+      "frozen_coordinate_time": 0.29974845772650544,
+      "coupled_coordinate_time": 0.3,
+      "coupled_occupation": [
+        0.03214495758531895,
+        0.03226899862128299
+      ],
+      "frozen_occupation": [
+        0.03215686849032918,
+        0.032279683208462126
+      ],
+      "difference": [
+        -1.1910905010230344e-05,
+        -1.0684587179135563e-05
+      ],
+      "interpolated_control_difference": [
+        -1.2023073909461779e-05,
+        -1.0801698449011687e-05
+      ],
+      "interpolated_minus_exact": [
+        -1.1216889923143514e-07,
+        -1.1711126987612452e-07
+      ]
+    }
+  },
+  "time_indicator": [
+    9.3642253673476e-11,
+    8.223651620786754e-11
+  ],
+  "space_indicator": [
+    1.6256933299541032e-11,
+    4.526927444015172e-12
+  ],
+  "time_fraction_of_effect": [
+    7.861892408095451e-06,
+    7.69674249731012e-06
+  ],
+  "space_fraction_of_effect": [
+    1.364878091595715e-06,
+    4.236876322985296e-07
+  ],
+  "one_percent_indicators": true,
+  "clock_quadrature_certified": false,
+  "observable_error_certified": false,
+  "renewal": false,
+  "source_unchanged": true
+}

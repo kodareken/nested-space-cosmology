@@ -1,0 +1,150 @@
+{
+  "accountable_author": "Douglas Ek",
+  "action_gradient_correction": [
+    -3.3187012298080922e-12,
+    -0.0,
+    1.2748041372631803e-09,
+    -7.584823325381256e-10
+  ],
+  "corrected_middle_approximant": [
+    2.899005097643331e-09,
+    -1.757475289639254e-08,
+    3.2151765209165004e-115,
+    1.0236878997017951e-08
+  ],
+  "failures": {},
+  "group": 12,
+  "input_hashes": {
+    "results/development/nsc-incoming-middle-bound.json": "ec2f7c265fe7368f166f56a4ae8f28d5ca1ef79511755f8fd53f7307b9ed4ab4",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_joint_constraints.py": "3fa6a90601d2217a8e13220d0cbad70ab2a2d568ddbf4bbdd686dd67a59f45a0",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_middle_order_correction.py": "b3890553083eac25473abf399ec840126087fb4c9503c2beb3d4b05b4b437620",
+    "src/recursive_horizons/nsc_incoming_source_tail.py": "38d4add4f497f7e5bd3736a4d90c3edef93abb7c983315abc76c9b533fbd585e",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377"
+  },
+  "input_payloads": [
+    {
+      "bytes": 92552,
+      "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+      "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+    },
+    {
+      "bytes": 14789190,
+      "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+      "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+    },
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+    },
+    {
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    }
+  ],
+  "interval": {
+    "group": 12,
+    "left": 40.0,
+    "right": 320.0,
+    "signed_selected_panels": [
+      {
+        "endpoint_measure_residual": 0.0,
+        "left": 40.0,
+        "panel": "mid_ref/12_1",
+        "right": 320.0,
+        "rows": 840,
+        "sign": 1
+      },
+      {
+        "endpoint_measure_residual": 0.0,
+        "left": 40.0,
+        "panel": "mid_ref/12_-1",
+        "right": 320.0,
+        "rows": 840,
+        "sign": -1
+      }
+    ]
+  },
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "maxima": {
+    "artifact_contraction": 6.623907248959792e-26,
+    "precision": 1.3770267194757507e-60,
+    "prefix16": 0.0,
+    "quadrature": 5.062252536548915e-26,
+    "source16_convention": 1.3477923061709752e-13,
+    "source16_decomposition": 2.2741741774401383e-114
+  },
+  "new_order": 24,
+  "old16_middle_approximant": [
+    2.898848649756975e-09,
+    -1.7625475741372396e-08,
+    3.2151765209165004e-115,
+    1.0262162195564702e-08
+  ],
+  "old_order": 16,
+  "payload": {
+    "path": "results/development/artifacts/nsc-incoming-retained-order-correction.e112ad0fa37148bf87eb179a01e310ed3ad8fde1280db9a1f848a4f47ded37fa.npz",
+    "sha256": "e112ad0fa37148bf87eb179a01e310ed3ad8fde1280db9a1f848a4f47ded37fa"
+  },
+  "physical_error_status": "separate order24 defect certificate required",
+  "physical_order24_error_bound": null,
+  "reproducer": "python3 scripts/derive_nsc_incoming_retained_order_correction.py --check",
+  "retained_thermal_insertion": [
+    3.282658378546729e-115,
+    3.1491007484918083e-115,
+    3.2151765209165004e-115,
+    6.677881502746019e-117
+  ],
+  "schema": "NSC-INCOMING-GROUP12-ORDER-CORRECTION-v1",
+  "scope": {
+    "adiabatic_reference_changed": false,
+    "constraints_solved": false,
+    "metric_evolution": false,
+    "numerical_indicators_are_rigorous_bounds": false,
+    "old_mode_generators_rerun": false,
+    "original_source_replaced": false,
+    "physical_state_action_scales_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-retained-order-correction.md": "93670bcff0b7275a1eb0b2c153ed13d706900779d6d885f704c58f25c5470bc0",
+    "scripts/derive_nsc_incoming_retained_order_correction.py": "d98f00d8ea0dbaebb14b6a792c4f4df80890e1d272065edea1a836022be73429",
+    "src/recursive_horizons/nsc_incoming_retained_order_correction.py": "4f441b530161d2265944b566b3822446fd212f52e23a7e5b3e226140d4bc89df",
+    "tests/test_nsc_incoming_retained_order_correction.py": "454581c4d625fb33da8716233c223050555a23bc6da3367a6757ea79377e7df9"
+  },
+  "status": "PASS: explicit group12 numerical-order correction; physical remainder separate",
+  "thermal_scattering_bound": [
+    7.754804029980386e-115,
+    6.430353041832958e-115,
+    6.430353041832958e-115,
+    6.62225494073714e-116
+  ],
+  "tolerances": {
+    "artifact_contraction": 3e-24,
+    "precision": 3e-35,
+    "prefix16": 3e-40,
+    "quadrature": 3e-20,
+    "source16_convention": 3e-11,
+    "source16_decomposition": 3e-11
+  },
+  "vacuum_order24_minus16": [
+    1.5644788635606947e-13,
+    5.072284497985854e-11,
+    0.0,
+    -2.528319854675114e-11
+  ]
+}

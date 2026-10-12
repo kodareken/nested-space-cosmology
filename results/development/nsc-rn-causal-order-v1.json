@@ -1,0 +1,211 @@
+{
+ "all_one_way": true,
+ "api_version": "nsc-rn-causal-order-v1",
+ "creation_only": true,
+ "producing_commit": "ed87c91d51fdfc41d5cc8adaf15290121e88cd7e",
+ "question": "Does the causal ordering run one way, nest to nest, and never back? Answered from the characteristic speeds in the evolved metric rather than from a profile, because one-way flow is a claim about causal structure.",
+ "runs": [
+  {
+   "mu": 1.002,
+   "r_minus": 0.9387228319217631,
+   "r_plus": 1.065277168078237,
+   "rows": [
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 0.0,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 0.5,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 1.0,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 1.499999999999945,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 1.9999999999998899,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 2.499999999999835,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 2.9999999999997797,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 3.4999999999997247,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 3.9999999999996696,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 4.499999999999659,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 4.999999999999648,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 5.499999999999638,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 5.999999999999627,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 6.499999999999616,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 6.999999999999606,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 7.499999999999595,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    },
+    {
+     "ingoing_at_inner_edge": -2.002282905212714,
+     "ingoing_non_zero": true,
+     "inner_edge_sealed": true,
+     "outgoing_at_inner_edge": -0.0019923212908374843,
+     "r_inner": 1.002,
+     "t_over_rm": 7.999999999999584,
+     "trapping_horizon": 1.0652784346232327,
+     "zeros": 1
+    }
+   ],
+   "run": "nsc-rn-neutral-family-v1/mu-1.002-eps-0.001",
+   "stations": 17,
+   "verdict": {
+    "assessable": true,
+    "horizon_drifts_outward": false,
+    "horizon_moves_outward_only": true,
+    "horizon_static": true,
+    "ingoing_never_vanishes": true,
+    "one_way": true,
+    "sealed_everywhere": true,
+    "zero_count": 1,
+    "zero_count_constant": true
+   }
+  }
+ ],
+ "runs_one_way": [
+  "nsc-rn-neutral-family-v1/mu-1.002-eps-0.001"
+ ],
+ "runs_total": 1,
+ "schema": "NSC-RN-CAUSAL-ORDER-v1",
+ "scope_note": "A construction check on recorded finite states. It does not measure the actual universe. A simple zero of the outgoing characteristic on a sampled slice is the standard numerical proxy for a trapping surface; a sequence of such slices is not a proof of a global event horizon.",
+ "the_three_tests": {
+  "one_way_in_time": "the located zero does not reverse",
+  "sealed": "the outgoing speed is strictly negative inside the innermost zero",
+  "stable": "the number of zeros does not change over time"
+ },
+ "what_this_cannot_answer": "Whether the nesting iterates. This construction defines one child interval and one parent, so nest-to-nest-to-nest can be tested here only as a single step. A hierarchy is a property of the construction, not of these states, and no claim about one is made."
+}

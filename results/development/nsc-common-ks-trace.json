@@ -1,0 +1,2495 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, domains, structure",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-10
+  },
+  "domain": {
+    "Fourier_normalization": "k=-E, dk/(2*pi)=dE/(2*pi)",
+    "covariance_scope": "physical Fourier-symbol samples; source-complement correlations are not an exterior joint-state reconstruction",
+    "incoming_slice": {
+      "KS_time": -0.8017223766635779,
+      "axial_scale": 0.844031385900246,
+      "clock_shift": 1.0568780671724793,
+      "rho": 1.0
+    },
+    "old_generators_rerun": false,
+    "region": "future interior trapped collar, unwrapped z line; both radial characteristics point downstream",
+    "source_frames": "same-event frame applied to global solution restriction; not U_L0",
+    "spacetime_measure": "dT dz=d tau d rho/a0",
+    "spectrum": "same global source fibers and their inherited derivative-control frequencies; continuum not replaced by a finite closed system",
+    "state": "restriction of resolved global modes with C_H and inherited incoming occupation, not copied seed covariance",
+    "weak_vertex": "all four raw KS directions, midpoint k=-(Ei+Ej)/2, phase and canonical-normal factors retained"
+  },
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_independent_term": "none introduced",
+    "V_c": null,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "extended_stationarity": "OPEN",
+    "history_selected": false,
+    "homogeneous_nonexistence": "preserved in its original scope, not rerun",
+    "incoming_KS_state_restriction": "PASS",
+    "metric_timestep": false,
+    "nonlinear_combined_source": "OPEN: common evolution/subtraction trace and spectral convergence required",
+    "nulls": null,
+    "physical_EndpointBranchJets": "OPEN",
+    "reference_geometry_common_trace": "PASS",
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "docs/nsc-causal-common-functional.md": "6fabac75f603d2d1a3873d27396020d3bcad22c90774bedddbb1c00a3153e385",
+    "docs/nsc-compact-ctp-completion.md": "5aa6244df5b09e2aeaf2fdab1a9f8157446e3391d11947604bb3be4aa92c06ad",
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "results/development/nsc-ks-spacetime-variation.json": "f52a2438e2e8eda39acbcdd7c1d06329941b06c5c8cee761d03a1fe3f7000f40",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "CAR_lower": 2.9502558643663945e-16,
+    "CAR_upper": 6.73683331342545e-13,
+    "Hermiticity": 2.220446049250313e-16,
+    "PG_KS_full_vertex": 5.3705425095741715e-15,
+    "closed_source_projection": 0.0,
+    "covariance_spectrum_transport": 8.095746295566641e-13,
+    "source_coisometry": 1.158961815406201e-12,
+    "source_complement_projector": 1.4719336860458624e-12
+  },
+  "payload": {
+    "bytes": 867077,
+    "path": "results/development/artifacts/nsc-common-ks-trace.ebbb6d36ddc3f17f54a9cb72ec12a2cb760a806cf0ebe57a2be06ab4094fb435.npz",
+    "sha256": "ebbb6d36ddc3f17f54a9cb72ec12a2cb760a806cf0ebe57a2be06ab4094fb435"
+  },
+  "per_family": {
+    "0_1": {
+      "covariance_eigenvalues": [
+        [
+          2.408015582489024e-07,
+          0.9788687043957105
+        ],
+        [
+          0.005319849129954646,
+          0.7886165938111055
+        ],
+        [
+          0.21138340618889137,
+          0.9946801508700662
+        ],
+        [
+          0.02113129560428662,
+          0.999999759198434
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.734723475976807e-18,
+        "PG_KS_full_vertex": 4.443059973708341e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.0317081350640365e-14,
+        "source_coisometry": 2.0872192862952943e-14,
+        "source_complement_correlation_norm": 0.10287651954347464,
+        "source_complement_projector": 2.0872192862953378e-14,
+        "state_change_from_unit_radius": 2.0317081350640365e-14
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "10_-1": {
+      "covariance_eigenvalues": [
+        [
+          7.117721602179006e-17,
+          0.9999999999993845
+        ],
+        [
+          -2.5397782149033992e-18,
+          0.9999999999996538
+        ],
+        [
+          -3.0097062989492565e-17,
+          0.999999999999515
+        ],
+        [
+          8.428714030134919e-17,
+          0.9999999999986728
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 3.0097062989492565e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 2.220446049250313e-16,
+        "PG_KS_full_vertex": 5.3705425095741715e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.311928840181281e-13,
+        "source_coisometry": 9.880984919163893e-13,
+        "source_complement_correlation_norm": 1.584592550238366e-12,
+        "source_complement_projector": 1.3272716259376088e-12,
+        "state_change_from_unit_radius": 0.028021413006648843
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "10_1": {
+      "covariance_eigenvalues": [
+        [
+          2.1446349948337033e-16,
+          0.9999999999993839
+        ],
+        [
+          -2.2535800339082082e-17,
+          0.9999999999996555
+        ],
+        [
+          -2.6993241592843206e-17,
+          0.9999999999995144
+        ],
+        [
+          9.851749976668248e-17,
+          0.9999999999986727
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.6993241592843206e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 5.551115123125783e-17,
+        "PG_KS_full_vertex": 3.722145839155691e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.313039063205906e-13,
+        "source_coisometry": 9.880984919163893e-13,
+        "source_complement_correlation_norm": 1.584762500846318e-12,
+        "source_complement_projector": 1.3272716259376088e-12,
+        "state_change_from_unit_radius": 0.028021413006648954
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "11_-1": {
+      "covariance_eigenvalues": [
+        [
+          -3.1630737078581715e-17,
+          0.9999999999993072
+        ],
+        [
+          -7.365251111716111e-18,
+          0.9999999999997666
+        ],
+        [
+          5.829089518577211e-17,
+          0.9999999999997619
+        ],
+        [
+          1.2275975267898547e-17,
+          0.9999999999990896
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 3.1630737078581715e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 4.441239029644354e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.9806378759312793e-13,
+        "source_coisometry": 8.177902799388903e-13,
+        "source_complement_correlation_norm": 1.1916296877786594e-12,
+        "source_complement_projector": 9.103828801917996e-13,
+        "state_change_from_unit_radius": 0.025842439952136698
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "11_1": {
+      "covariance_eigenvalues": [
+        [
+          -3.7980307219355833e-17,
+          0.9999999999993052
+        ],
+        [
+          1.371350058736323e-16,
+          0.9999999999997663
+        ],
+        [
+          3.053531957010469e-17,
+          0.9999999999997633
+        ],
+        [
+          -3.4806763749276265e-17,
+          0.9999999999990888
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 3.7980307219355833e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 5.551115123125783e-17,
+        "PG_KS_full_vertex": 3.5596458096434965e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.9884094371036554e-13,
+        "source_coisometry": 8.173461907290402e-13,
+        "source_complement_correlation_norm": 1.193282986738522e-12,
+        "source_complement_projector": 9.111600363090358e-13,
+        "state_change_from_unit_radius": 0.025842439952137808
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "12_-1": {
+      "covariance_eigenvalues": [
+        [
+          -7.822932453886629e-17,
+          0.9999999999991851
+        ],
+        [
+          6.132587720446002e-17,
+          0.999999999999354
+        ],
+        [
+          -1.0358503354042873e-16,
+          0.9999999999992146
+        ],
+        [
+          -1.772716984291158e-17,
+          0.9999999999985281
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.0358503354042873e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 3.972054645195637e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.095746295566641e-13,
+        "source_coisometry": 1.158961815406201e-12,
+        "source_complement_correlation_norm": 1.96932537976825e-12,
+        "source_complement_projector": 1.4719336860458624e-12,
+        "state_change_from_unit_radius": 0.023979429407199326
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "12_1": {
+      "covariance_eigenvalues": [
+        [
+          1.6070680343830001e-18,
+          0.9999999999991886
+        ],
+        [
+          -7.9331325022285e-17,
+          0.999999999999355
+        ],
+        [
+          -8.578186233524847e-17,
+          0.9999999999992142
+        ],
+        [
+          3.392614309434681e-17,
+          0.9999999999985334
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 8.578186233524847e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 4.528839093602941e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.042455590384634e-13,
+        "source_coisometry": 1.158961815406201e-12,
+        "source_complement_correlation_norm": 1.9636660494654652e-12,
+        "source_complement_projector": 1.4719336860458624e-12,
+        "state_change_from_unit_radius": 0.023979429407198327
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "13_1": {
+      "covariance_eigenvalues": [
+        [
+          -9.071589756429574e-17,
+          1.0000000000000357
+        ],
+        [
+          -1.8238510590419134e-17,
+          0.9999999999999547
+        ],
+        [
+          -7.051672475580427e-17,
+          0.9999999999999309
+        ],
+        [
+          1.9425092986405513e-17,
+          0.9999999999999651
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 9.071589756429574e-17,
+        "CAR_upper": 3.574918139293004e-14,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 6.66169953867201e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.527312106958561e-14,
+        "source_coisometry": 5.717648576819556e-14,
+        "source_complement_correlation_norm": 9.832372354653791e-14,
+        "source_complement_projector": 6.994405055137994e-14,
+        "state_change_from_unit_radius": 0.0979525176950028
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "14_-1": {
+      "covariance_eigenvalues": [
+        [
+          2.0795865487563748e-16,
+          0.9999999999999933
+        ],
+        [
+          7.602889339147876e-17,
+          1.0000000000002678
+        ],
+        [
+          -4.45585151172024e-17,
+          0.9999999999995055
+        ],
+        [
+          4.626442373509074e-17,
+          1.0000000000002314
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 4.45585151172024e-17,
+        "CAR_upper": 2.6778579353958776e-13,
+        "Hermiticity": 5.551115123125783e-17,
+        "PG_KS_full_vertex": 1.1123893155135927e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 9.681144774731365e-14,
+        "source_coisometry": 4.984901380566953e-13,
+        "source_complement_correlation_norm": 6.109316815062299e-13,
+        "source_complement_projector": 4.953815135874988e-13,
+        "state_change_from_unit_radius": 0.11828421420778668
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "14_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.2724461991790744e-17,
+          1.0000000000003233
+        ],
+        [
+          4.341190160944674e-17,
+          0.9999999999995126
+        ],
+        [
+          9.508931116006738e-17,
+          1.0000000000002731
+        ],
+        [
+          -3.5690259939404836e-17,
+          0.9999999999999241
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 3.5690259939404836e-17,
+        "CAR_upper": 3.232969447708456e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.1102230246251565e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.283063041541027e-14,
+        "source_coisometry": 4.984901380566953e-13,
+        "source_complement_correlation_norm": 6.522375813811171e-13,
+        "source_complement_projector": 4.953815135874988e-13,
+        "state_change_from_unit_radius": 0.1182842142077971
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "15_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.030635253108113e-16,
+          1.0000000000005045
+        ],
+        [
+          -1.006124407331633e-16,
+          0.9999999999999941
+        ],
+        [
+          -6.753417331817828e-17,
+          1.0000000000006253
+        ],
+        [
+          1.1543300057656733e-16,
+          1.0000000000003575
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.006124407331633e-16,
+        "CAR_upper": 6.252776074688882e-13,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 1.3368855554576669e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.383337888682945e-13,
+        "source_coisometry": 6.628031457012185e-13,
+        "source_complement_correlation_norm": 8.854370605230235e-13,
+        "source_complement_projector": 6.736833313430024e-13,
+        "state_change_from_unit_radius": 0.09383286550200329
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "15_1": {
+      "covariance_eigenvalues": [
+        [
+          -2.1138379395276017e-17,
+          1.0000000000002103
+        ],
+        [
+          1.1890390938421102e-16,
+          1.000000000000615
+        ],
+        [
+          2.076854711809698e-16,
+          0.9999999999999993
+        ],
+        [
+          -1.5982538597556884e-16,
+          1.0000000000006737
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.5982538597556884e-16,
+        "CAR_upper": 6.73683331342545e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.3506446028928517e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.6298074001497298e-13,
+        "source_coisometry": 6.628031457012185e-13,
+        "source_complement_correlation_norm": 9.41954686566175e-13,
+        "source_complement_projector": 6.736833313430024e-13,
+        "state_change_from_unit_radius": 0.09383286550199776
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "16_-1": {
+      "covariance_eigenvalues": [
+        [
+          -2.9502558643663945e-16,
+          0.9999999999997778
+        ],
+        [
+          -5.712430492599698e-17,
+          0.9999999999999372
+        ],
+        [
+          6.516259570061717e-17,
+          1.0000000000002185
+        ],
+        [
+          2.0743142043534124e-17,
+          0.9999999999989391
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.9502558643663945e-16,
+        "CAR_upper": 2.184918912462308e-13,
+        "Hermiticity": 5.551115123125783e-17,
+        "PG_KS_full_vertex": 1.4043333874306805e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.561284517810236e-13,
+        "source_coisometry": 1.021849271864994e-12,
+        "source_complement_correlation_norm": 1.1120324076609214e-12,
+        "source_complement_projector": 1.0609291223306703e-12,
+        "state_change_from_unit_radius": 0.07435148758198248
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "16_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.7280653337031883e-16,
+          0.9999999999991847
+        ],
+        [
+          -5.927327056485955e-17,
+          1.000000000000274
+        ],
+        [
+          -1.6925863882739567e-16,
+          0.9999999999998853
+        ],
+        [
+          9.617283551628757e-17,
+          0.9999999999995328
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.7280653337031883e-16,
+        "CAR_upper": 2.7400304247748863e-13,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 1.4217791915866692e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.5512925105886097e-13,
+        "source_coisometry": 1.021849271864994e-12,
+        "source_complement_correlation_norm": 9.904815439522224e-13,
+        "source_complement_projector": 1.0609291223306703e-12,
+        "state_change_from_unit_radius": 0.0743514875819698
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "17_-1": {
+      "covariance_eigenvalues": [
+        [
+          -2.9678961923577677e-17,
+          1.0000000000000158
+        ],
+        [
+          -8.44200229126004e-17,
+          0.9999999999998715
+        ],
+        [
+          -1.8955908950900946e-17,
+          0.9999999999998319
+        ],
+        [
+          1.1309286227878576e-18,
+          0.9999999999996455
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 8.44200229126004e-17,
+        "CAR_upper": 1.5765166949677223e-14,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 1.831026719408895e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.1390888232654106e-13,
+        "source_coisometry": 3.270717030545711e-13,
+        "source_complement_correlation_norm": 4.154040875310969e-13,
+        "source_complement_projector": 3.5449421176268616e-13,
+        "state_change_from_unit_radius": 0.061131340236880036
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "17_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.4129751056055894e-16,
+          0.9999999999997355
+        ],
+        [
+          4.35756813097321e-18,
+          0.9999999999998617
+        ],
+        [
+          -1.8060780713719596e-16,
+          0.9999999999998417
+        ],
+        [
+          3.6716823530933524e-17,
+          0.9999999999999363
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.8060780713719596e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.790180836524724e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.0325074129013956e-13,
+        "source_coisometry": 3.270717030545711e-13,
+        "source_complement_correlation_norm": 3.4654026932604593e-13,
+        "source_complement_projector": 3.5449421176268616e-13,
+        "state_change_from_unit_radius": 0.061131340236885434
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "18_-1": {
+      "covariance_eigenvalues": [
+        [
+          -3.1602753086102756e-17,
+          0.9999999999998764
+        ],
+        [
+          1.446670950231493e-16,
+          1.0000000000000897
+        ],
+        [
+          -6.402781763304714e-17,
+          1.0000000000001585
+        ],
+        [
+          2.1758510115438258e-16,
+          1.0000000000000884
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 6.402781763304714e-17,
+        "CAR_upper": 1.5853984791647235e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.790180836524724e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.0702549957386509e-13,
+        "source_coisometry": 2.1249668691325496e-13,
+        "source_complement_correlation_norm": 2.485566998332409e-13,
+        "source_complement_projector": 2.176037128264815e-13,
+        "state_change_from_unit_radius": 0.05175742450076393
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "18_1": {
+      "covariance_eigenvalues": [
+        [
+          1.6262269290510904e-17,
+          1.0000000000001814
+        ],
+        [
+          -3.0980930155308734e-17,
+          1.0000000000001847
+        ],
+        [
+          -1.2893268256597889e-17,
+          1.0000000000000662
+        ],
+        [
+          6.190078162281935e-17,
+          0.9999999999997824
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 3.0980930155308734e-17,
+        "CAR_upper": 1.8474111129762605e-13,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 2.2315206618374916e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.0835776720341528e-13,
+        "source_coisometry": 2.1249668691325496e-13,
+        "source_complement_correlation_norm": 3.525830235154952e-13,
+        "source_complement_projector": 2.176037128264815e-13,
+        "state_change_from_unit_radius": 0.05175742450074115
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "19_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.1276875170352366e-16,
+          0.9999999999998014
+        ],
+        [
+          -9.10809626631576e-17,
+          0.9999999999997411
+        ],
+        [
+          -2.851149633195075e-17,
+          0.9999999999996179
+        ],
+        [
+          8.505984523340439e-17,
+          0.9999999999997573
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 9.10809626631576e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.3877787807814457e-16,
+        "PG_KS_full_vertex": 1.7772239894833365e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 4.0256686872908176e-13,
+        "source_coisometry": 4.1455727739503345e-13,
+        "source_complement_correlation_norm": 5.78064895784422e-13,
+        "source_complement_projector": 5.234701561104806e-13,
+        "state_change_from_unit_radius": 0.044811482848646646
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "19_1": {
+      "covariance_eigenvalues": [
+        [
+          -2.9524700040059726e-17,
+          1.00000000000009
+        ],
+        [
+          8.017970351332627e-17,
+          0.999999999999724
+        ],
+        [
+          -1.0313951289677078e-16,
+          0.9999999999996412
+        ],
+        [
+          -2.9901631862710686e-17,
+          0.9999999999994766
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.0313951289677078e-16,
+        "CAR_upper": 8.992806499463768e-14,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 2.6651134375294657e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 3.9612757518625585e-13,
+        "source_coisometry": 4.1455727739503345e-13,
+        "source_complement_correlation_norm": 7.13997932656537e-13,
+        "source_complement_projector": 5.234701561104806e-13,
+        "state_change_from_unit_radius": 0.04481148284868988
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "1_-1": {
+      "covariance_eigenvalues": [
+        [
+          2.395276406466355e-07,
+          0.978978145692522
+        ],
+        [
+          1.1576792192016424e-06,
+          0.9999419833484335
+        ],
+        [
+          5.8016651530603816e-05,
+          0.9999988423207594
+        ],
+        [
+          0.021021854307469678,
+          0.9999997604724477
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1188630228279524e-16,
+        "PG_KS_full_vertex": 6.662783593823664e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.837375276016246e-14,
+        "source_coisometry": 4.907659299168336e-14,
+        "source_complement_correlation_norm": 0.00560599370629084,
+        "source_complement_projector": 8.837375276017041e-14,
+        "state_change_from_unit_radius": 0.13083465807213024
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "1_1": {
+      "covariance_eigenvalues": [
+        [
+          2.39527640705437e-07,
+          0.9789781456925223
+        ],
+        [
+          1.1576792192162406e-06,
+          0.9999419833484331
+        ],
+        [
+          5.8016651530683444e-05,
+          0.9999988423207599
+        ],
+        [
+          0.02102185430746987,
+          0.9999997604724478
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 7.108895957933346e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.848477506262498e-14,
+        "source_coisometry": 4.907659299168336e-14,
+        "source_complement_correlation_norm": 0.005605993706290838,
+        "source_complement_projector": 8.837375276017041e-14,
+        "state_change_from_unit_radius": 0.13083465807213002
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "20_-1": {
+      "covariance_eigenvalues": [
+        [
+          2.5066628174689538e-17,
+          0.9999999999998106
+        ],
+        [
+          2.961100759211499e-16,
+          0.9999999999997699
+        ],
+        [
+          4.035375293536984e-17,
+          0.9999999999997229
+        ],
+        [
+          6.48701883865937e-17,
+          0.999999999999905
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 3.552713678800501e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.0117241206207837e-13,
+        "source_coisometry": 2.7489122089718876e-13,
+        "source_complement_correlation_norm": 4.181226333605218e-13,
+        "source_complement_projector": 3.488320743371025e-13,
+        "state_change_from_unit_radius": 0.03947692078628839
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "20_1": {
+      "covariance_eigenvalues": [
+        [
+          1.0783820165360113e-16,
+          1.0000000000000657
+        ],
+        [
+          1.5624380394261213e-16,
+          0.9999999999997708
+        ],
+        [
+          -1.052543243522091e-16,
+          0.9999999999997167
+        ],
+        [
+          7.483245843638758e-17,
+          0.9999999999996511
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.052543243522091e-16,
+        "CAR_upper": 6.572520305780927e-14,
+        "Hermiticity": 1.6653345369377348e-16,
+        "PG_KS_full_vertex": 3.554447978966673e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.020605904817785e-13,
+        "source_coisometry": 2.7489122089718876e-13,
+        "source_complement_correlation_norm": 5.088346363450692e-13,
+        "source_complement_projector": 3.488320743371025e-13,
+        "state_change_from_unit_radius": 0.039476920786288325
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "21_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.4212449652913118e-17,
+          0.999999999999919
+        ],
+        [
+          6.663528306886956e-17,
+          0.9999999999997384
+        ],
+        [
+          9.72958515662577e-18,
+          0.9999999999996976
+        ],
+        [
+          -6.814808512762403e-17,
+          0.9999999999991441
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 6.814808512762403e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 3.5596458096434965e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.9328982858723975e-13,
+        "source_coisometry": 7.915890165577366e-13,
+        "source_complement_correlation_norm": 9.48382312625447e-13,
+        "source_complement_projector": 8.559819519852629e-13,
+        "state_change_from_unit_radius": 0.03525986941520393
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "21_1": {
+      "covariance_eigenvalues": [
+        [
+          7.47158811925854e-17,
+          0.9999999999992901
+        ],
+        [
+          2.323167614163124e-16,
+          0.9999999999997389
+        ],
+        [
+          1.259191202659996e-17,
+          0.9999999999996934
+        ],
+        [
+          1.4235935124344795e-17,
+          0.9999999999997735
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 6.938893903907228e-17,
+        "PG_KS_full_vertex": 3.5596458096434965e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.9206858326015208e-13,
+        "source_coisometry": 7.911449273478866e-13,
+        "source_complement_correlation_norm": 8.472437772426869e-13,
+        "source_complement_projector": 8.548717289606397e-13,
+        "state_change_from_unit_radius": 0.035259869415194746
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "22_-1": {
+      "covariance_eigenvalues": [
+        [
+          -1.6449951670462143e-16,
+          0.9999999999997531
+        ],
+        [
+          2.4839581693526834e-17,
+          1.0000000000000075
+        ],
+        [
+          -2.1737707542694486e-16,
+          0.9999999999999718
+        ],
+        [
+          -2.0224239509088888e-17,
+          0.9999999999996174
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.1737707542694486e-16,
+        "CAR_upper": 7.549516567451064e-15,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 4.528839093602941e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.262634524186069e-13,
+        "source_coisometry": 3.3595348725157237e-13,
+        "source_complement_correlation_norm": 4.567535893844052e-13,
+        "source_complement_projector": 4.134470543702373e-13,
+        "state_change_from_unit_radius": 0.03184681654054119
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "22_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.633768889664144e-16,
+          0.9999999999997823
+        ],
+        [
+          3.990836181049512e-17,
+          1.0000000000000202
+        ],
+        [
+          5.544005972683308e-17,
+          0.9999999999999565
+        ],
+        [
+          -1.0125606216977956e-17,
+          0.9999999999995879
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.633768889664144e-16,
+        "CAR_upper": 2.020605904817785e-14,
+        "Hermiticity": 5.721958498152797e-17,
+        "PG_KS_full_vertex": 2.808666774861361e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.2359891715950653e-13,
+        "source_coisometry": 3.390621117205228e-13,
+        "source_complement_correlation_norm": 4.684443323111362e-13,
+        "source_complement_projector": 4.118927421357634e-13,
+        "state_change_from_unit_radius": 0.03184681654053589
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "23_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.8359234567055076e-16,
+          1.0000000000001168
+        ],
+        [
+          -1.405760721187309e-16,
+          0.9999999999999754
+        ],
+        [
+          -8.863611685822683e-17,
+          0.999999999999899
+        ],
+        [
+          -5.5357666375385795e-18,
+          0.9999999999997647
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.8359234567055076e-16,
+        "CAR_upper": 1.1679546219056647e-13,
+        "Hermiticity": 1.6883057536160646e-16,
+        "PG_KS_full_vertex": 8.005932084973443e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 3.573807916268379e-13,
+        "source_coisometry": 1.6265116915947494e-13,
+        "source_complement_correlation_norm": 3.0053832063099113e-13,
+        "source_complement_projector": 2.3525625891801195e-13,
+        "state_change_from_unit_radius": 0.05604541821856518
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "24_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.562135133773534e-16,
+          1.0000000000000373
+        ],
+        [
+          -1.0257489558208534e-16,
+          0.9999999999996971
+        ],
+        [
+          4.6090944925777905e-17,
+          0.9999999999999152
+        ],
+        [
+          -1.9987226670178897e-17,
+          0.9999999999998916
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.0257489558208534e-16,
+        "CAR_upper": 3.730349362740526e-14,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 1.3506446028928517e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.260858581048524e-14,
+        "source_coisometry": 3.0886404545071855e-13,
+        "source_complement_correlation_norm": 3.3471239421713184e-13,
+        "source_complement_projector": 3.144151605737455e-13,
+        "state_change_from_unit_radius": 0.09054539512408463
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "24_1": {
+      "covariance_eigenvalues": [
+        [
+          -2.0156619573651262e-16,
+          0.9999999999999591
+        ],
+        [
+          2.3781198268925715e-16,
+          0.9999999999999388
+        ],
+        [
+          -1.9236917091421192e-16,
+          0.9999999999996855
+        ],
+        [
+          7.067223115505274e-17,
+          0.9999999999999833
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.0156619573651262e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.3877787807814457e-16,
+        "PG_KS_full_vertex": 1.3368855554576669e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 5.839773109528323e-14,
+        "source_coisometry": 3.0886404545071855e-13,
+        "source_complement_correlation_norm": 3.233989184251461e-13,
+        "source_complement_projector": 3.144151605737455e-13,
+        "state_change_from_unit_radius": 0.09054539512408294
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "25_-1": {
+      "covariance_eigenvalues": [
+        [
+          -7.698621028449109e-17,
+          1.0000000000000784
+        ],
+        [
+          5.802186746114781e-17,
+          1.0000000000004006
+        ],
+        [
+          -1.5864630282353441e-16,
+          0.9999999999997277
+        ],
+        [
+          5.867106973409787e-17,
+          0.9999999999998934
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.5864630282353441e-16,
+        "CAR_upper": 4.005684672847565e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.790180836524724e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 9.792167077193881e-14,
+        "source_coisometry": 3.930189507173054e-13,
+        "source_complement_correlation_norm": 5.020061631613263e-13,
+        "source_complement_projector": 4.001243780750665e-13,
+        "state_change_from_unit_radius": 0.09935465643858984
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "25_1": {
+      "covariance_eigenvalues": [
+        [
+          1.5726270012155516e-16,
+          0.9999999999999813
+        ],
+        [
+          -1.109204852825578e-16,
+          0.9999999999997551
+        ],
+        [
+          -1.280673930649525e-16,
+          1.000000000000385
+        ],
+        [
+          -1.539310291046201e-17,
+          1.000000000000002
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.280673930649525e-16,
+        "CAR_upper": 3.850253449400043e-13,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 1.4043333874306805e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.637535131583718e-14,
+        "source_coisometry": 3.930189507173054e-13,
+        "source_complement_correlation_norm": 4.56612181292488e-13,
+        "source_complement_projector": 4.001243780750665e-13,
+        "state_change_from_unit_radius": 0.0993546564385849
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "26_-1": {
+      "covariance_eigenvalues": [
+        [
+          -1.149085753333912e-16,
+          0.9999999999999352
+        ],
+        [
+          1.7708308467052524e-16,
+          0.9999999999999296
+        ],
+        [
+          6.144806261416893e-17,
+          1.000000000000482
+        ],
+        [
+          -7.661097991050168e-17,
+          0.999999999999575
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.149085753333912e-16,
+        "CAR_upper": 4.82058837292243e-13,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 2.2315206618374916e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.353672812205332e-14,
+        "source_coisometry": 5.437872374614017e-13,
+        "source_complement_correlation_norm": 6.633098852761632e-13,
+        "source_complement_projector": 4.898303984648626e-13,
+        "state_change_from_unit_radius": 0.09495483758557524
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "26_1": {
+      "covariance_eigenvalues": [
+        [
+          -5.219899980462738e-17,
+          0.9999999999995706
+        ],
+        [
+          -9.922136852298369e-17,
+          1.000000000000489
+        ],
+        [
+          -7.70025622056748e-17,
+          0.9999999999999296
+        ],
+        [
+          -1.5420272541930045e-16,
+          0.9999999999999558
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.5420272541930045e-16,
+        "CAR_upper": 4.889422200449189e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 2.2266822963392197e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.7763568394002505e-14,
+        "source_coisometry": 5.437872374614017e-13,
+        "source_complement_correlation_norm": 6.694749341682409e-13,
+        "source_complement_projector": 4.898303984648626e-13,
+        "state_change_from_unit_radius": 0.09495483758558686
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "27_-1": {
+      "covariance_eigenvalues": [
+        [
+          -2.5777735103519466e-17,
+          1.0000000000002371
+        ],
+        [
+          1.2341218731067656e-16,
+          1.0000000000002367
+        ],
+        [
+          -2.117250626505356e-17,
+          0.9999999999999527
+        ],
+        [
+          -3.028417369552751e-17,
+          0.9999999999997399
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 3.028417369552751e-17,
+        "CAR_upper": 2.3714363805993344e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 3.1086244689504383e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.6331380692236053e-13,
+        "source_coisometry": 2.5779378631796135e-13,
+        "source_complement_correlation_norm": 4.3758758373494616e-13,
+        "source_complement_projector": 2.60014232367141e-13,
+        "state_change_from_unit_radius": 0.08741825126761972
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "27_1": {
+      "covariance_eigenvalues": [
+        [
+          1.612941018278177e-18,
+          0.9999999999998824
+        ],
+        [
+          -1.093322871893066e-16,
+          0.9999999999999966
+        ],
+        [
+          -1.1849865987393554e-16,
+          1.0000000000001945
+        ],
+        [
+          -1.0578515315668065e-17,
+          1.0000000000000913
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.1849865987393554e-16,
+        "CAR_upper": 1.9451107391432743e-13,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 3.1106063782808442e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.63202784619898e-13,
+        "source_coisometry": 2.5779378631796135e-13,
+        "source_complement_correlation_norm": 2.637813201612877e-13,
+        "source_complement_projector": 2.60014232367141e-13,
+        "state_change_from_unit_radius": 0.08741825126759685
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "28_-1": {
+      "covariance_eigenvalues": [
+        [
+          -1.583584874482401e-18,
+          0.9999999999995274
+        ],
+        [
+          6.982993024362984e-17,
+          1.000000000000147
+        ],
+        [
+          -1.2985286837162425e-16,
+          0.9999999999999809
+        ],
+        [
+          -1.0263976335668526e-16,
+          0.9999999999998163
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.2985286837162425e-16,
+        "CAR_upper": 1.4699352846037073e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.831026719408895e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.79296635503124e-14,
+        "source_coisometry": 5.589972928987663e-13,
+        "source_complement_correlation_norm": 5.372277589213789e-13,
+        "source_complement_projector": 5.443423489734151e-13,
+        "state_change_from_unit_radius": 0.07969021000777733
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "28_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.4197834159737987e-16,
+          0.9999999999998932
+        ],
+        [
+          1.4485584363817688e-16,
+          1.000000000000008
+        ],
+        [
+          -6.903065346316016e-18,
+          1.0000000000001312
+        ],
+        [
+          -1.0785354769458269e-16,
+          0.9999999999994558
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.4197834159737987e-16,
+        "CAR_upper": 1.312283615106935e-13,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 1.831026719408895e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.859579736508749e-14,
+        "source_coisometry": 5.589972928987663e-13,
+        "source_complement_correlation_norm": 5.784653537422937e-13,
+        "source_complement_projector": 5.443423489734151e-13,
+        "state_change_from_unit_radius": 0.07969021000774895
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "29_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.4187580499750853e-17,
+          1.0000000000001212
+        ],
+        [
+          1.9847319275314134e-16,
+          0.9999999999998281
+        ],
+        [
+          8.919697842512164e-17,
+          0.9999999999998263
+        ],
+        [
+          1.4534876470917298e-16,
+          0.9999999999994773
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 1.212363542890671e-13,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 3.5566146649215975e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 3.008704396734174e-14,
+        "source_coisometry": 5.588862705963038e-13,
+        "source_complement_correlation_norm": 5.963122796378041e-13,
+        "source_complement_projector": 5.226929999932482e-13,
+        "state_change_from_unit_radius": 0.07261272281487519
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "29_1": {
+      "covariance_eigenvalues": [
+        [
+          1.3359366871759823e-16,
+          0.9999999999994942
+        ],
+        [
+          -2.2270396490303137e-16,
+          0.9999999999998328
+        ],
+        [
+          -3.074758835891291e-17,
+          0.9999999999998206
+        ],
+        [
+          -1.381848840777607e-16,
+          1.000000000000103
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.2270396490303137e-16,
+        "CAR_upper": 1.0302869668521453e-13,
+        "Hermiticity": 1.7554167342883506e-16,
+        "PG_KS_full_vertex": 3.552713678800501e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 3.064215547965432e-14,
+        "source_coisometry": 5.588862705963038e-13,
+        "source_complement_correlation_norm": 5.783048420296435e-13,
+        "source_complement_projector": 5.226929999932482e-13,
+        "state_change_from_unit_radius": 0.0726127228148425
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "2_-1": {
+      "covariance_eigenvalues": [
+        [
+          2.176570286561301e-08,
+          0.998052540692121
+        ],
+        [
+          5.567704601104884e-11,
+          0.9999999972092228
+        ],
+        [
+          2.7903980473246444e-09,
+          0.9999999999439381
+        ],
+        [
+          0.0019474593078813206,
+          0.9999999782343841
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 9.036560719766055e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.460698725481052e-14,
+        "source_coisometry": 4.092282068768327e-13,
+        "source_complement_correlation_norm": 0.008646585737812797,
+        "source_complement_projector": 3.9124259387775067e-13,
+        "state_change_from_unit_radius": 0.08950885223143668
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "2_1": {
+      "covariance_eigenvalues": [
+        [
+          2.1765702801489103e-08,
+          0.9980525406921212
+        ],
+        [
+          5.5677159613587486e-11,
+          0.9999999972092242
+        ],
+        [
+          2.7903979186122536e-09,
+          0.9999999999439346
+        ],
+        [
+          0.0019474593078811714,
+          0.9999999782343842
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 9.155133597044475e-16,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.793765632868599e-14,
+        "source_coisometry": 4.083400284571326e-13,
+        "source_complement_correlation_norm": 0.008646585737812795,
+        "source_complement_projector": 3.930189507171496e-13,
+        "state_change_from_unit_radius": 0.08950885223143545
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "30_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.5402380046211686e-17,
+          1.0000000000001013
+        ],
+        [
+          -1.4806904058211322e-16,
+          0.9999999999996951
+        ],
+        [
+          1.0706898960859852e-16,
+          0.9999999999997601
+        ],
+        [
+          -1.0326011585806472e-16,
+          0.999999999999577
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.4806904058211322e-16,
+        "CAR_upper": 1.0125233984581428e-13,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 2.6651134375294657e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.2778667013435552e-13,
+        "source_coisometry": 3.951283744640932e-13,
+        "source_complement_correlation_norm": 5.840176118984128e-13,
+        "source_complement_projector": 4.228839500795429e-13,
+        "state_change_from_unit_radius": 0.0663698082940144
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "30_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.2349152030905318e-16,
+          0.9999999999996741
+        ],
+        [
+          -6.489121280734019e-17,
+          0.9999999999997891
+        ],
+        [
+          -1.6973249719338933e-17,
+          0.9999999999996658
+        ],
+        [
+          2.1356981905720874e-17,
+          1.000000000000007
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.2349152030905318e-16,
+        "CAR_upper": 7.105427357601002e-15,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 2.6668472207145996e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.283417816466681e-13,
+        "source_coisometry": 3.951283744640932e-13,
+        "source_complement_correlation_norm": 5.136470580136258e-13,
+        "source_complement_projector": 4.228839500795429e-13,
+        "state_change_from_unit_radius": 0.06636980829399321
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "31_-1": {
+      "covariance_eigenvalues": [
+        [
+          5.687950391835188e-17,
+          0.9999999999996256
+        ],
+        [
+          -1.4970320951766733e-16,
+          0.999999999999606
+        ],
+        [
+          -2.434926464530797e-16,
+          0.9999999999996276
+        ],
+        [
+          1.0719554010364978e-16,
+          0.9999999999993114
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.434926464530797e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 3.614624287906422e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 5.950795411990839e-13,
+        "source_coisometry": 6.403766406037903e-13,
+        "source_complement_correlation_norm": 9.609071393837542e-13,
+        "source_complement_projector": 8.333334022829439e-13,
+        "state_change_from_unit_radius": 0.06093143248810396
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "31_1": {
+      "covariance_eigenvalues": [
+        [
+          6.8530178778392306e-18,
+          0.9999999999997797
+        ],
+        [
+          -5.989916792823975e-17,
+          0.9999999999997704
+        ],
+        [
+          -9.806658397889707e-18,
+          0.9999999999994609
+        ],
+        [
+          -2.0934401850391e-18,
+          0.9999999999991667
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 5.989916792823975e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 5.551115123125783e-17,
+        "PG_KS_full_vertex": 3.614624287906422e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 5.930811397547586e-13,
+        "source_coisometry": 6.403766406037903e-13,
+        "source_complement_correlation_norm": 1.0494792330142458e-12,
+        "source_complement_projector": 8.333334022829439e-13,
+        "state_change_from_unit_radius": 0.06093143248812997
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "32_-1": {
+      "covariance_eigenvalues": [
+        [
+          -2.491213522902294e-17,
+          0.9999999999997167
+        ],
+        [
+          -1.3041344152023695e-16,
+          0.9999999999991791
+        ],
+        [
+          3.1773151505791695e-17,
+          0.9999999999993758
+        ],
+        [
+          -2.1586787640597e-17,
+          0.9999999999994962
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.3041344152023695e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 3.5596458096434965e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.395861287141088e-13,
+        "source_coisometry": 8.504308368628699e-13,
+        "source_complement_correlation_norm": 1.1821578124584407e-12,
+        "source_complement_projector": 8.785194793851145e-13,
+        "state_change_from_unit_radius": 0.05620455517084631
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "32_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.7041196547666186e-16,
+          0.999999999999667
+        ],
+        [
+          -4.2207971946723253e-17,
+          0.9999999999994292
+        ],
+        [
+          -3.300643997544678e-17,
+          0.9999999999991187
+        ],
+        [
+          -8.258656496456866e-18,
+          0.9999999999995524
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.7041196547666186e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 4.446439748506845e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.3658852654762086e-13,
+        "source_coisometry": 8.536504836342829e-13,
+        "source_complement_correlation_norm": 1.1891132084180933e-12,
+        "source_complement_projector": 8.812950369466726e-13,
+        "state_change_from_unit_radius": 0.05620455517084463
+      },
+      "momenta": [
+        0.5562120090641313,
+        0.19069155123954112,
+        -0.19069155123954112,
+        -0.5562120090641313
+      ]
+    },
+    "3_-1": {
+      "covariance_eigenvalues": [
+        [
+          1.2613249588848905e-11,
+          0.9999988692516035
+        ],
+        [
+          2.9378699378197357e-15,
+          0.9999999999998019
+        ],
+        [
+          1.5439237318622634e-13,
+          0.999999999999941
+        ],
+        [
+          1.1307480669212029e-06,
+          0.999999999987068
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.3325567187647329e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.549516567451064e-14,
+        "source_coisometry": 3.9401815143946806e-13,
+        "source_complement_correlation_norm": 0.00021865623607433628,
+        "source_complement_projector": 3.303187598121572e-13,
+        "state_change_from_unit_radius": 0.06960901081362925
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "3_1": {
+      "covariance_eigenvalues": [
+        [
+          1.2613222731359832e-11,
+          0.9999988692516028
+        ],
+        [
+          2.9144700699601067e-15,
+          0.9999999999998015
+        ],
+        [
+          1.5431943920397118e-13,
+          0.9999999999999438
+        ],
+        [
+          1.1307480670420702e-06,
+          0.9999999999870659
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 0.0,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 1.3348671786163112e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 7.338574192772285e-14,
+        "source_coisometry": 3.9401815143946806e-13,
+        "source_complement_correlation_norm": 0.0002186562360743374,
+        "source_complement_projector": 3.303187598121572e-13,
+        "state_change_from_unit_radius": 0.06960901081362836
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "4_-1": {
+      "covariance_eigenvalues": [
+        [
+          5.472836136491504e-15,
+          0.9999999994987598
+        ],
+        [
+          -2.565129959768311e-16,
+          0.9999999999995535
+        ],
+        [
+          -1.732977618201235e-16,
+          0.9999999999995381
+        ],
+        [
+          5.012307611123443e-10,
+          0.9999999999998229
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.565129959768311e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 1.790180836524724e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 8.959499808725013e-14,
+        "source_coisometry": 4.917177776064818e-13,
+        "source_complement_correlation_norm": 4.603721632824584e-06,
+        "source_complement_projector": 4.670708264595838e-13,
+        "state_change_from_unit_radius": 0.057203884364079416
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "4_1": {
+      "covariance_eigenvalues": [
+        [
+          5.44953788734104e-15,
+          0.9999999994987606
+        ],
+        [
+          -7.941488786849971e-17,
+          0.9999999999995542
+        ],
+        [
+          -1.669110568151236e-16,
+          0.999999999999539
+        ],
+        [
+          5.01230807997876e-10,
+          0.9999999999998208
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.669110568151236e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 7.850462293418876e-17,
+        "PG_KS_full_vertex": 1.831026719408895e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 9.170442183403793e-14,
+        "source_coisometry": 4.920508445138694e-13,
+        "source_complement_correlation_norm": 4.603721632824585e-06,
+        "source_complement_projector": 4.659606034349597e-13,
+        "state_change_from_unit_radius": 0.057203884364080526
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "5_-1": {
+      "covariance_eigenvalues": [
+        [
+          -2.4554492985132076e-16,
+          1.0000000000000218
+        ],
+        [
+          -5.0191182943509845e-17,
+          1.0000000000001101
+        ],
+        [
+          -4.2187756137818665e-17,
+          1.0000000000001346
+        ],
+        [
+          1.8110605854023862e-13,
+          1.0000000000000924
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.4554492985132076e-16,
+        "CAR_upper": 1.3455903058456897e-13,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 1.79383492860469e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.270095140171179e-13,
+        "source_coisometry": 1.8252066524837574e-13,
+        "source_complement_correlation_norm": 8.751103252147004e-08,
+        "source_complement_projector": 2.034488301435444e-13,
+        "state_change_from_unit_radius": 0.048655146681081396
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "5_1": {
+      "covariance_eigenvalues": [
+        [
+          -1.531839774489849e-17,
+          1.0000000000000226
+        ],
+        [
+          -1.0244309167790616e-17,
+          1.000000000000112
+        ],
+        [
+          -1.578676920664964e-17,
+          1.0000000000001332
+        ],
+        [
+          1.8116939915084362e-13,
+          1.0000000000000933
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.578676920664964e-17,
+        "CAR_upper": 1.3322676295501878e-13,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 1.831026719408895e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.2612133559741778e-13,
+        "source_coisometry": 1.8252066524837574e-13,
+        "source_complement_correlation_norm": 8.751103252147362e-08,
+        "source_complement_projector": 2.034488301435444e-13,
+        "state_change_from_unit_radius": 0.048655146681081174
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "6_-1": {
+      "covariance_eigenvalues": [
+        [
+          2.396877540564222e-17,
+          0.9999999999999594
+        ],
+        [
+          -5.736586880121343e-17,
+          0.9999999999997945
+        ],
+        [
+          5.734687849851115e-17,
+          0.9999999999997801
+        ],
+        [
+          1.1743094620254015e-16,
+          0.9999999999996264
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 5.736586880121343e-17,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 2.6645352591003757e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.1682655670929307e-13,
+        "source_coisometry": 2.2148949341271873e-13,
+        "source_complement_correlation_norm": 1.502627978980211e-09,
+        "source_complement_projector": 3.737010700886879e-13,
+        "state_change_from_unit_radius": 0.04237215406278255
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "6_1": {
+      "covariance_eigenvalues": [
+        [
+          1.40327312209627e-16,
+          0.9999999999999567
+        ],
+        [
+          -2.1397372035544191e-16,
+          0.9999999999997928
+        ],
+        [
+          8.140292229623432e-17,
+          0.9999999999997791
+        ],
+        [
+          7.459320381821847e-17,
+          0.9999999999996264
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 2.1397372035544191e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 2.220446049250313e-16,
+        "PG_KS_full_vertex": 2.6668472207145996e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 2.1682655670929307e-13,
+        "source_coisometry": 2.2148949341271873e-13,
+        "source_complement_correlation_norm": 1.5026279794119272e-09,
+        "source_complement_projector": 3.737010700886879e-13,
+        "state_change_from_unit_radius": 0.042372154062782
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "7_-1": {
+      "covariance_eigenvalues": [
+        [
+          -5.660254538169593e-17,
+          1.0000000000000848
+        ],
+        [
+          -4.886274084397506e-18,
+          0.9999999999995828
+        ],
+        [
+          -6.752588763505707e-17,
+          0.9999999999995952
+        ],
+        [
+          -6.380374700551685e-17,
+          1.0000000000000782
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 6.752588763505707e-17,
+        "CAR_upper": 8.482103908136196e-14,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 2.9790409838967277e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.709743457922741e-14,
+        "source_coisometry": 4.440892098500626e-13,
+        "source_complement_correlation_norm": 2.3429294925966796e-11,
+        "source_complement_projector": 4.1988634791305634e-13,
+        "state_change_from_unit_radius": 0.03754663480087206
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "7_1": {
+      "covariance_eigenvalues": [
+        [
+          -8.908249504653104e-17,
+          1.0000000000000853
+        ],
+        [
+          -1.311592500747127e-16,
+          0.999999999999584
+        ],
+        [
+          1.2231367396847176e-16,
+          0.9999999999995948
+        ],
+        [
+          9.555231102476045e-17,
+          1.0000000000000777
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.311592500747127e-16,
+        "CAR_upper": 8.526512829121202e-14,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 2.6852712547870858e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.6653345369377348e-14,
+        "source_coisometry": 4.440892098500626e-13,
+        "source_complement_correlation_norm": 2.3429279573383077e-11,
+        "source_complement_projector": 4.1988634791305634e-13,
+        "state_change_from_unit_radius": 0.037546634800871836
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "8_-1": {
+      "covariance_eigenvalues": [
+        [
+          5.822119421415683e-17,
+          0.9999999999998115
+        ],
+        [
+          -1.4639224601549215e-16,
+          0.9999999999997746
+        ],
+        [
+          1.0153258238101899e-16,
+          0.9999999999997236
+        ],
+        [
+          1.027961458351413e-17,
+          0.9999999999994262
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.4639224601549215e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1102230246251565e-16,
+        "PG_KS_full_vertex": 3.66205343881779e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 4.213296378452469e-13,
+        "source_coisometry": 3.9612757518625585e-13,
+        "source_complement_correlation_norm": 7.800090768635475e-13,
+        "source_complement_projector": 5.746514375456494e-13,
+        "state_change_from_unit_radius": 0.03371856031380582
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "8_1": {
+      "covariance_eigenvalues": [
+        [
+          -6.684487376188667e-18,
+          0.9999999999998094
+        ],
+        [
+          -9.05888151434846e-17,
+          0.9999999999997738
+        ],
+        [
+          1.762320666633423e-17,
+          0.9999999999997252
+        ],
+        [
+          -1.168190061927296e-16,
+          0.9999999999994255
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.168190061927296e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 5.551115123125783e-17,
+        "PG_KS_full_vertex": 3.794299872214038e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 4.221067939624845e-13,
+        "source_coisometry": 3.9612757518625585e-13,
+        "source_complement_correlation_norm": 7.806986632117132e-13,
+        "source_complement_projector": 5.746514375456494e-13,
+        "state_change_from_unit_radius": 0.03371856031380499
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "9_-1": {
+      "covariance_eigenvalues": [
+        [
+          -8.24921998976846e-17,
+          0.9999999999999102
+        ],
+        [
+          -6.470988769325509e-17,
+          0.9999999999995732
+        ],
+        [
+          -1.0389901551316564e-16,
+          0.9999999999995783
+        ],
+        [
+          -5.721216918727486e-17,
+          0.999999999999824
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.0389901551316564e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.2412670766236366e-16,
+        "PG_KS_full_vertex": 3.972054645195637e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.5654144647214707e-14,
+        "source_coisometry": 4.4853010194856324e-13,
+        "source_complement_correlation_norm": 6.358569758683431e-13,
+        "source_complement_projector": 4.314326673691486e-13,
+        "state_change_from_unit_radius": 0.03060493805607961
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    },
+    "9_1": {
+      "covariance_eigenvalues": [
+        [
+          -4.821841914459622e-18,
+          0.9999999999999107
+        ],
+        [
+          9.079987458797981e-17,
+          0.9999999999995749
+        ],
+        [
+          -1.1893494719136472e-16,
+          0.9999999999995783
+        ],
+        [
+          -1.7852883997782872e-16,
+          0.9999999999998215
+        ]
+      ],
+      "diagnostics": {
+        "CAR_lower": 1.7852883997782872e-16,
+        "CAR_upper": 0.0,
+        "Hermiticity": 1.1443916996305594e-16,
+        "PG_KS_full_vertex": 3.794299872214038e-15,
+        "closed_source_projection": 0.0,
+        "covariance_spectrum_transport": 1.3322676295501878e-14,
+        "source_coisometry": 4.4853010194856324e-13,
+        "source_complement_correlation_norm": 6.354382999641441e-13,
+        "source_complement_projector": 4.314326673691486e-13,
+        "state_change_from_unit_radius": 0.030604938056079334
+      },
+      "momenta": [
+        0.5780374718081991,
+        0.19841474428582717,
+        -0.19841474428582717,
+        -0.5780374718081991
+      ]
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_common_ks_trace.py --check",
+  "schema": "NSC-COMMON-KS-TRACE-v1",
+  "selected_action": {
+    "finite_trace_requirement": "common regulated pairing with cutoff/boundary terms and convergent spectral tails remains required",
+    "full_raw_heat_equivalence": "separate UV interpretation, not a required execution gate",
+    "inventory": "Gamma_G[C0]+Gamma_sub,ad4+local locked branch difference",
+    "new_prescription_or_coefficient": false
+  },
+  "source_hashes": {
+    "docs/nsc-common-ks-trace.md": "367b3a918e4ce099cbf079ff2a1a0588dcf5c36c2b0c29641f19bf3e35517733",
+    "scripts/derive_nsc_common_ks_trace.py": "5e0acd4599f4e71b8c48f736c0261d2b82e67f4f979644fbf0f0460755aac15a",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "tests/test_nsc_common_ks_trace.py": "1f07527ceb29f2bb702f4508dc8b8122e93c3cd5329d4f84b8e6f9eef7ca87fa"
+  },
+  "status": "PASS: incoming interior KS Cauchy restriction and common reference trace",
+  "tolerance": 3e-11
+}

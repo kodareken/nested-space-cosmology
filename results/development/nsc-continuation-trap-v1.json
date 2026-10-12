@@ -1,0 +1,34 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cfl_dt": {
+    "max": 0.017502206042461235,
+    "mean": 0.017501882186811875,
+    "min": 0.017501738389681783
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-neutral-continuation-v1/scalars.jsonl": "6d6d170f0d7269b0062ecd7525a5d29f0415b990e3f76744853af1a1f911407f"
+  },
+  "notes": [
+    "all values are recorded ledger bytes; no recomputation",
+    "the trap lives above the reference horizon throughout"
+  ],
+  "production_trajectory": false,
+  "reading": "the trap moves at the half-station cadence of the march; its drift is the trap-side witness of the wall era",
+  "schema": "NSC-CONTINUATION-TRAP-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_continuation_trap.py": "86bcc25d360569e18c44b3196d965d5c6c5b50b7e227833ffcfb7414aad6e32f",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "station_count": 41,
+  "trap_drift_corr_with_mass_steps": 0.8350971588595357,
+  "trap_end": 1.3303665716496194,
+  "trap_mean_drift_rate": 1.271843779653281e-05,
+  "trap_range": [
+    1.330239387271654,
+    1.3303665716496194
+  ],
+  "trap_start": 1.330239387271654,
+  "trap_total_drift": 0.0001271843779653281
+}

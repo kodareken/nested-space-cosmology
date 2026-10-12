@@ -1,0 +1,1710 @@
+{
+  "cases": [
+    {
+      "actual_tidal_scalars": {
+        "R4": {
+          "original_abs_max": 4.3978710562164736e-08,
+          "translated_abs_max": 4.397573472036953e-08
+        },
+        "R_0101": {
+          "original_abs_max": 0.23621053173345882,
+          "translated_abs_max": 0.2362105317340797
+        },
+        "R_0202": {
+          "original_abs_max": 0.1304023893796487,
+          "translated_abs_max": 0.130402389380012
+        },
+        "R_h": {
+          "original_abs_max": 15.521570448782235,
+          "translated_abs_max": 15.521570448721091
+        },
+        "owned_W": {
+          "original_abs_max": 0.11211295531281068,
+          "translated_abs_max": 0.11211295531474716
+        }
+      },
+      "basis_interpretation": "W columns translated; canonical coefficients and parent/detail indices preserved",
+      "case_id": "nf128_coupled_dt0.0005",
+      "checks": {
+        "AP_prolongation_phi0": {
+          "absolute_gap": 1.1168440202394181e-16,
+          "relative_to_scale": 1.1168440202394181e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "AP_prolongation_phi1": {
+          "absolute_gap": 8.777083671441753e-17,
+          "relative_to_scale": 8.777083671441753e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_t": {
+          "absolute_gap": 3.9898639947466563e-17,
+          "relative_to_scale": 3.9898639947466563e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_tt": {
+          "absolute_gap": 3.815836535636663e-13,
+          "relative_to_scale": 3.815836535636663e-13,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R4": {
+          "absolute_gap": 5.45216094481e-11,
+          "relative_to_scale": 5.45216094481e-11,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0101": {
+          "absolute_gap": 1.3629625206235119e-11,
+          "relative_to_scale": 1.3629625206235119e-11,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0202": {
+          "absolute_gap": 1.0402373407103482e-12,
+          "relative_to_scale": 1.0402373407103482e-12,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_h": {
+          "absolute_gap": 5.960956173112208e-10,
+          "relative_to_scale": 3.8404336679603727e-11,
+          "scale": 15.521570448782235,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_owned_W": {
+          "absolute_gap": 1.0414447082496281e-11,
+          "relative_to_scale": 1.0414447082496281e-11,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "basis_orthogonality": {
+          "absolute_gap": 1.7470089939870104e-15,
+          "relative_to_scale": 1.7470089939870104e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_Q": {
+          "absolute_gap": 1.6653345369377348e-16,
+          "relative_to_scale": 1.6653345369377348e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_chi": {
+          "absolute_gap": 4.547473508864641e-13,
+          "relative_to_scale": 4.266394951502776e-16,
+          "scale": 1065.881982459889,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_Q": {
+          "absolute_gap": 1.6039031214276633e-11,
+          "relative_to_scale": 2.039297456126404e-12,
+          "scale": 7.864978777908342,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_chi": {
+          "absolute_gap": 1.306477170372189e-15,
+          "relative_to_scale": 1.306477170372189e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_r": {
+          "absolute_gap": 2.9417197844328058e-12,
+          "relative_to_scale": 2.9417197844328058e-12,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_r": {
+          "absolute_gap": 3.3306690738754696e-16,
+          "relative_to_scale": 3.3306690738754696e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "child_normal_energy": {
+          "absolute_gap": 2.6645352591003757e-15,
+          "relative_to_scale": 6.199620312320848e-16,
+          "scale": 4.297900717895574,
+          "within_roundoff_tolerance": true
+        },
+        "child_probability": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 3.475948709741506e-16,
+          "scale": 1.2776057615737604,
+          "within_roundoff_tolerance": true
+        },
+        "child_proper_length": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 1.8697584361048656e-16,
+          "scale": 2.3751154227986904,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_current": {
+          "absolute_gap": 1.723066134218243e-13,
+          "relative_to_scale": 2.2819936172305523e-15,
+          "scale": 75.50705318402123,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_hamilton": {
+          "absolute_gap": 2.3377906832600104e-09,
+          "relative_to_scale": 3.096122262330233e-11,
+          "scale": 75.50705318402123,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_momentum": {
+          "absolute_gap": 3.2918459624831087e-13,
+          "relative_to_scale": 4.359653600121859e-15,
+          "scale": 75.50705318402123,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_rho": {
+          "absolute_gap": 5.222489107836736e-13,
+          "relative_to_scale": 6.9165579738740305e-15,
+          "scale": 75.50705318402139,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_clock_rates": {
+          "absolute_gap": 2.220446049250313e-15,
+          "relative_to_scale": 1.837109947753523e-15,
+          "scale": 1.2086625800298703,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_reference_amplitudes": {
+          "absolute_gap": 1.1102230246251565e-16,
+          "relative_to_scale": 1.1102230246251565e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_source_amplitudes": {
+          "absolute_gap": 1.0203949608775759e-16,
+          "relative_to_scale": 1.0203949608775759e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_weighted_trace": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 1.480297366173806e-16,
+          "scale": 2.9999999999859543,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi0": {
+          "absolute_gap": 2.710399819191012e-15,
+          "relative_to_scale": 4.528353408257132e-16,
+          "scale": 5.985398167574091,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi1": {
+          "absolute_gap": 2.9546328455357126e-15,
+          "relative_to_scale": 4.926182379883666e-16,
+          "scale": 5.997814570571153,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_Q": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 4.440892098500626e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_chi": {
+          "absolute_gap": 1.7763568394002505e-14,
+          "relative_to_scale": 1.3137208005485518e-15,
+          "scale": 13.521570478738878,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_Q": {
+          "absolute_gap": 1.0658141036401503e-14,
+          "relative_to_scale": 1.0042161832691631e-15,
+          "scale": 10.613393026294986,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_chi": {
+          "absolute_gap": 1.0842021724855044e-18,
+          "relative_to_scale": 1.0842021724855044e-18,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_r": {
+          "absolute_gap": 1.3322676295501878e-15,
+          "relative_to_scale": 1.0321841428983933e-15,
+          "scale": 1.290726697088326,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_r": {
+          "absolute_gap": 6.217248937900877e-15,
+          "relative_to_scale": 1.2855863365079549e-15,
+          "scale": 4.836119334302217,
+          "within_roundoff_tolerance": true
+        },
+        "force_L": {
+          "absolute_gap": 8.1601392309949e-15,
+          "relative_to_scale": 6.9165579738740305e-15,
+          "scale": 1.1797977060003342,
+          "within_roundoff_tolerance": true
+        },
+        "force_Q": {
+          "absolute_gap": 8.215650382226158e-15,
+          "relative_to_scale": 6.971300878233923e-15,
+          "scale": 1.1784960261688595,
+          "within_roundoff_tolerance": true
+        },
+        "force_beta": {
+          "absolute_gap": 2.6922908347160046e-15,
+          "relative_to_scale": 2.6922908347160046e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 6.028922657315253e-16,
+          "scale": 8.839175456554697,
+          "within_roundoff_tolerance": true
+        },
+        "parent_probability": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 1.693288986586336e-16,
+          "scale": 2.622642758371356,
+          "within_roundoff_tolerance": true
+        },
+        "parent_proper_length": {
+          "absolute_gap": 8.881784197001252e-16,
+          "relative_to_scale": 1.8860466361270154e-16,
+          "scale": 4.709207093224343,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_Q": {
+          "absolute_gap": 3.3306690738754696e-16,
+          "relative_to_scale": 3.3306690738754696e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_chi": {
+          "absolute_gap": 8.881784197001252e-15,
+          "relative_to_scale": 6.568569472505764e-16,
+          "scale": 13.521641560126557,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_Q": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 5.049305380464119e-16,
+          "scale": 10.55406658274037,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_chi": {
+          "absolute_gap": 5.421010862427522e-19,
+          "relative_to_scale": 5.421010862427522e-19,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_r": {
+          "absolute_gap": 3.3306690738754696e-16,
+          "relative_to_scale": 2.595260141553598e-16,
+          "scale": 1.2833661722564869,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_r": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 1.1019349779623638e-15,
+          "scale": 4.836102514918774,
+          "within_roundoff_tolerance": true
+        },
+        "r_t": {
+          "absolute_gap": 2.42861286636753e-16,
+          "relative_to_scale": 2.42861286636753e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "r_tt": {
+          "absolute_gap": 6.248113137985456e-12,
+          "relative_to_scale": 6.248113137985456e-12,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        }
+      },
+      "clock_history_scope": "same saved accumulated proper clocks assigned to the translated physical worldlines; no new clock integration",
+      "clock_worldlines_shifted": true,
+      "input_state_basis_source_preserved": true,
+      "nf": 128,
+      "ok": true,
+      "optional_RK4_step": null,
+      "original": {
+        "clock_locations": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "clock_rates": [
+          1.2086625800298703,
+          1.1898519623878892,
+          1.1579839807259649
+        ],
+        "weighted_trace": 2.9999999999859543,
+        "windows": {
+          "child": {
+            "normal_energy": 4.297900717895574,
+            "pieces": [
+              [
+                1.0,
+                3.0
+              ]
+            ],
+            "probability": 1.2776057615737604,
+            "proper_length": 2.3751154227986904
+          },
+          "parent": {
+            "normal_energy": 8.839175456554697,
+            "pieces": [
+              [
+                0.0,
+                4.0
+              ]
+            ],
+            "probability": 2.622642758371356,
+            "proper_length": 4.709207093224343
+          }
+        }
+      },
+      "saved_proper_clocks_at_shifted_worldlines": [
+        0.3640204627270903,
+        0.35784007084171243,
+        0.34838396078245215
+      ],
+      "shift": 5.5,
+      "spinor_boundary": "antiperiodic half-integer Fourier shift",
+      "time": 0.3,
+      "translated": {
+        "clock_locations": [
+          6.5,
+          7.5,
+          0.5
+        ],
+        "clock_rates": [
+          1.2086625800298723,
+          1.189851962387887,
+          1.157983980725967
+        ],
+        "weighted_trace": 2.999999999985954,
+        "windows": {
+          "child": {
+            "normal_energy": 4.297900717895572,
+            "pieces": [
+              [
+                6.5,
+                8.0
+              ],
+              [
+                0.0,
+                0.5
+              ]
+            ],
+            "probability": 1.27760576157376,
+            "proper_length": 2.375115422798691
+          },
+          "parent": {
+            "normal_energy": 8.839175456554692,
+            "pieces": [
+              [
+                5.5,
+                8.0
+              ],
+              [
+                0.0,
+                1.5
+              ]
+            ],
+            "probability": 2.6226427583713563,
+            "proper_length": 4.709207093224344
+          }
+        }
+      }
+    },
+    {
+      "actual_tidal_scalars": {
+        "R4": {
+          "original_abs_max": 2.439405314191845e-06,
+          "translated_abs_max": 2.439459763081686e-06
+        },
+        "R_0101": {
+          "original_abs_max": 10.079167431614664,
+          "translated_abs_max": 10.079167431610225
+        },
+        "R_0202": {
+          "original_abs_max": 7.604820771937237,
+          "translated_abs_max": 7.604820771938864
+        },
+        "R_h": {
+          "original_abs_max": 907.3172337895378,
+          "translated_abs_max": 907.317233789113
+        },
+        "owned_W": {
+          "original_abs_max": 232.14225865139346,
+          "translated_abs_max": 232.1422586513383
+        }
+      },
+      "basis_interpretation": "W columns translated; canonical coefficients and parent/detail indices preserved",
+      "case_id": "nf128_coupled_dt0.0005",
+      "checks": {
+        "AP_prolongation_phi0": {
+          "absolute_gap": 1.0591761858187546e-16,
+          "relative_to_scale": 1.0591761858187546e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "AP_prolongation_phi1": {
+          "absolute_gap": 1.0007415106216804e-16,
+          "relative_to_scale": 1.0007415106216804e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_t": {
+          "absolute_gap": 1.2212453270876722e-15,
+          "relative_to_scale": 1.2212453270876722e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_tt": {
+          "absolute_gap": 1.6753959330984003e-13,
+          "relative_to_scale": 1.6753959330984003e-13,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R4": {
+          "absolute_gap": 1.0004086442130985e-10,
+          "relative_to_scale": 1.0004086442130985e-10,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0101": {
+          "absolute_gap": 2.7176483285984432e-11,
+          "relative_to_scale": 2.6963023950511766e-12,
+          "scale": 10.079167431614662,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0202": {
+          "absolute_gap": 2.729372283738485e-12,
+          "relative_to_scale": 3.589002772833541e-13,
+          "scale": 7.604820771937236,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_h": {
+          "absolute_gap": 1.1184511095052585e-09,
+          "relative_to_scale": 1.2327012734387177e-12,
+          "scale": 907.3172337895381,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_owned_W": {
+          "absolute_gap": 5.838955985382199e-10,
+          "relative_to_scale": 2.515249062925041e-12,
+          "scale": 232.1422586513935,
+          "within_roundoff_tolerance": true
+        },
+        "basis_orthogonality": {
+          "absolute_gap": 1.7470089939870104e-15,
+          "relative_to_scale": 1.7470089939870104e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_Q": {
+          "absolute_gap": 2.6645352591003757e-15,
+          "relative_to_scale": 6.681270694081866e-16,
+          "scale": 3.988066613526925,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_chi": {
+          "absolute_gap": 1.1141310096718371e-11,
+          "relative_to_scale": 3.326989221994076e-16,
+          "scale": 33487.66513298373,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_Q": {
+          "absolute_gap": 3.68842734133068e-11,
+          "relative_to_scale": 7.886719789599409e-14,
+          "scale": 467.67571813503304,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_chi": {
+          "absolute_gap": 1.0460382560140147e-15,
+          "relative_to_scale": 1.0460382560140147e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_r": {
+          "absolute_gap": 3.532285575147398e-12,
+          "relative_to_scale": 2.0577143968861084e-13,
+          "scale": 17.166063378342127,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_r": {
+          "absolute_gap": 1.1324274851176597e-14,
+          "relative_to_scale": 2.4466201701332276e-16,
+          "scale": 46.28538172543533,
+          "within_roundoff_tolerance": true
+        },
+        "child_normal_energy": {
+          "absolute_gap": 1.0658141036401503e-14,
+          "relative_to_scale": 1.3203060640292383e-15,
+          "scale": 8.072477531365392,
+          "within_roundoff_tolerance": true
+        },
+        "child_probability": {
+          "absolute_gap": 2.220446049250313e-16,
+          "relative_to_scale": 1.480368533827741e-16,
+          "scale": 1.4999278885704073,
+          "within_roundoff_tolerance": true
+        },
+        "child_proper_length": {
+          "absolute_gap": 2.6645352591003757e-15,
+          "relative_to_scale": 1.7895661045437875e-15,
+          "scale": 1.488928099573971,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_current": {
+          "absolute_gap": 1.7852386235972517e-13,
+          "relative_to_scale": 1.856090422877007e-15,
+          "scale": 96.18273989206126,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_hamilton": {
+          "absolute_gap": 4.336739828358915e-09,
+          "relative_to_scale": 4.508854533802755e-11,
+          "scale": 96.18273989206126,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_momentum": {
+          "absolute_gap": 3.0211944057612072e-12,
+          "relative_to_scale": 3.141098298043567e-14,
+          "scale": 96.18273989206126,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_rho": {
+          "absolute_gap": 1.1084466677857563e-12,
+          "relative_to_scale": 1.15243823271169e-14,
+          "scale": 96.18273989206159,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_clock_rates": {
+          "absolute_gap": 1.5543122344752192e-15,
+          "relative_to_scale": 1.5543122344752192e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_reference_amplitudes": {
+          "absolute_gap": 3.2368285245694683e-16,
+          "relative_to_scale": 3.2368285245694683e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_source_amplitudes": {
+          "absolute_gap": 1.2412670766236366e-16,
+          "relative_to_scale": 1.2412670766236366e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_weighted_trace": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 1.480297366189979e-16,
+          "scale": 2.9999999999531775,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi0": {
+          "absolute_gap": 3.2652638748082427e-15,
+          "relative_to_scale": 5.277796437292198e-16,
+          "scale": 6.186793889465552,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi1": {
+          "absolute_gap": 3.911961060401928e-15,
+          "relative_to_scale": 6.326129842147465e-16,
+          "scale": 6.183814050636014,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_Q": {
+          "absolute_gap": 3.0531133177191805e-16,
+          "relative_to_scale": 3.0531133177191805e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_chi": {
+          "absolute_gap": 1.2505552149377763e-12,
+          "relative_to_scale": 1.3813447182231604e-15,
+          "scale": 905.3172596528836,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_Q": {
+          "absolute_gap": 1.2789769243681803e-13,
+          "relative_to_scale": 1.3239177904324632e-15,
+          "scale": 96.60546399564562,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_chi": {
+          "absolute_gap": 8.326672684688674e-17,
+          "relative_to_scale": 8.326672684688674e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_r": {
+          "absolute_gap": 6.661338147750939e-15,
+          "relative_to_scale": 1.0419104201800631e-15,
+          "scale": 6.393388547356812,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_r": {
+          "absolute_gap": 8.881784197001252e-15,
+          "relative_to_scale": 1.5127596352713615e-15,
+          "scale": 5.871246158288737,
+          "within_roundoff_tolerance": true
+        },
+        "force_L": {
+          "absolute_gap": 1.7319479184152442e-14,
+          "relative_to_scale": 1.15243823271169e-14,
+          "scale": 1.5028553108134624,
+          "within_roundoff_tolerance": true
+        },
+        "force_Q": {
+          "absolute_gap": 1.7319479184152442e-14,
+          "relative_to_scale": 1.1512471859948746e-14,
+          "scale": 1.5044101210276095,
+          "within_roundoff_tolerance": true
+        },
+        "force_beta": {
+          "absolute_gap": 2.789435349370706e-15,
+          "relative_to_scale": 2.789435349370706e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 1.4210854715202004e-14,
+          "relative_to_scale": 1.3227131597392481e-15,
+          "scale": 10.743716134194543,
+          "within_roundoff_tolerance": true
+        },
+        "parent_probability": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 2.2189534478704854e-16,
+          "scale": 2.0013453201384284,
+          "within_roundoff_tolerance": true
+        },
+        "parent_proper_length": {
+          "absolute_gap": 4.884981308350689e-15,
+          "relative_to_scale": 1.6349204774934296e-15,
+          "scale": 2.987901476309156,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_Q": {
+          "absolute_gap": 1.6653345369377348e-16,
+          "relative_to_scale": 1.6653345369377348e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_chi": {
+          "absolute_gap": 6.821210263296962e-13,
+          "relative_to_scale": 7.53511269644519e-16,
+          "scale": 905.2565685600133,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_Q": {
+          "absolute_gap": 7.815970093361102e-14,
+          "relative_to_scale": 8.117602780293185e-16,
+          "scale": 96.284214747926,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_chi": {
+          "absolute_gap": 4.163336342344337e-17,
+          "relative_to_scale": 4.163336342344337e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_r": {
+          "absolute_gap": 4.440892098500626e-15,
+          "relative_to_scale": 6.948115257469877e-16,
+          "scale": 6.391506090412432,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_r": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 9.076597107338488e-16,
+          "scale": 5.871220739644997,
+          "within_roundoff_tolerance": true
+        },
+        "r_t": {
+          "absolute_gap": 1.3322676295501878e-14,
+          "relative_to_scale": 2.7082713056502067e-15,
+          "scale": 4.919254680174425,
+          "within_roundoff_tolerance": true
+        },
+        "r_tt": {
+          "absolute_gap": 8.499867476530198e-12,
+          "relative_to_scale": 6.090615172474908e-13,
+          "scale": 13.955679739779546,
+          "within_roundoff_tolerance": true
+        }
+      },
+      "clock_history_scope": "same saved accumulated proper clocks assigned to the translated physical worldlines; no new clock integration",
+      "clock_worldlines_shifted": true,
+      "input_state_basis_source_preserved": true,
+      "nf": 128,
+      "ok": true,
+      "optional_RK4_step": null,
+      "original": {
+        "clock_locations": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "clock_rates": [
+          0.7311780563569754,
+          0.7448618262226528,
+          0.7540877899390066
+        ],
+        "weighted_trace": 2.9999999999531775,
+        "windows": {
+          "child": {
+            "normal_energy": 8.072477531365392,
+            "pieces": [
+              [
+                1.0,
+                3.0
+              ]
+            ],
+            "probability": 1.4999278885704073,
+            "proper_length": 1.488928099573971
+          },
+          "parent": {
+            "normal_energy": 10.743716134194543,
+            "pieces": [
+              [
+                0.0,
+                4.0
+              ]
+            ],
+            "probability": 2.0013453201384284,
+            "proper_length": 2.987901476309156
+          }
+        }
+      },
+      "saved_proper_clocks_at_shifted_worldlines": [
+        1.1123310015500916,
+        1.1025090562895725,
+        1.0789051165828316
+      ],
+      "shift": 5.5,
+      "spinor_boundary": "antiperiodic half-integer Fourier shift",
+      "time": 1.0,
+      "translated": {
+        "clock_locations": [
+          6.5,
+          7.5,
+          0.5
+        ],
+        "clock_rates": [
+          0.7311780563569763,
+          0.7448618262226532,
+          0.7540877899390082
+        ],
+        "weighted_trace": 2.999999999953178,
+        "windows": {
+          "child": {
+            "normal_energy": 8.072477531365381,
+            "pieces": [
+              [
+                6.5,
+                8.0
+              ],
+              [
+                0.0,
+                0.5
+              ]
+            ],
+            "probability": 1.499927888570407,
+            "proper_length": 1.4889280995739738
+          },
+          "parent": {
+            "normal_energy": 10.743716134194528,
+            "pieces": [
+              [
+                5.5,
+                8.0
+              ],
+              [
+                0.0,
+                1.5
+              ]
+            ],
+            "probability": 2.001345320138428,
+            "proper_length": 2.987901476309161
+          }
+        }
+      }
+    },
+    {
+      "actual_tidal_scalars": {
+        "R4": {
+          "original_abs_max": 2.2759649720427433e-10,
+          "translated_abs_max": 2.533523391079484e-10
+        },
+        "R_0101": {
+          "original_abs_max": 0.23621772555420878,
+          "translated_abs_max": 0.2362177255435453
+        },
+        "R_0202": {
+          "original_abs_max": 0.13558566837122607,
+          "translated_abs_max": 0.1355856683720867
+        },
+        "R_h": {
+          "original_abs_max": 15.52337812886481,
+          "translated_abs_max": 15.523378128976624
+        },
+        "owned_W": {
+          "original_abs_max": 0.11212460507184759,
+          "translated_abs_max": 0.11212460507893611
+        }
+      },
+      "basis_interpretation": "W columns translated; canonical coefficients and parent/detail indices preserved",
+      "case_id": "nf256_coupled_dt0.0005",
+      "checks": {
+        "AP_prolongation_phi0": {
+          "absolute_gap": 6.952433221959954e-17,
+          "relative_to_scale": 6.952433221959954e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "AP_prolongation_phi1": {
+          "absolute_gap": 7.016522229951154e-17,
+          "relative_to_scale": 7.016522229951154e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_t": {
+          "absolute_gap": 2.7755575615628914e-17,
+          "relative_to_scale": 2.7755575615628914e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_tt": {
+          "absolute_gap": 1.4168805018144326e-12,
+          "relative_to_scale": 1.4168805018144326e-12,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R4": {
+          "absolute_gap": 2.516761243853738e-10,
+          "relative_to_scale": 2.516761243853738e-10,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0101": {
+          "absolute_gap": 5.5886240080127436e-11,
+          "relative_to_scale": 5.5886240080127436e-11,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0202": {
+          "absolute_gap": 6.470157742910487e-12,
+          "relative_to_scale": 6.470157742910487e-12,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_h": {
+          "absolute_gap": 1.615815037325774e-09,
+          "relative_to_scale": 1.0408913729423755e-10,
+          "scale": 15.523378128864813,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_owned_W": {
+          "absolute_gap": 2.998004622334349e-11,
+          "relative_to_scale": 2.998004622334349e-11,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "basis_orthogonality": {
+          "absolute_gap": 4.674060032894525e-15,
+          "relative_to_scale": 4.674060032894525e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_Q": {
+          "absolute_gap": 5.811323644522304e-17,
+          "relative_to_scale": 5.811323644522304e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_chi": {
+          "absolute_gap": 3.268496584496461e-13,
+          "relative_to_scale": 2.1637605935753568e-16,
+          "scale": 1510.5629496171105,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_Q": {
+          "absolute_gap": 3.768435563600292e-11,
+          "relative_to_scale": 6.78873387026612e-12,
+          "scale": 5.551013835003328,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_chi": {
+          "absolute_gap": 2.2569565574087624e-15,
+          "relative_to_scale": 2.2569565574087624e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_r": {
+          "absolute_gap": 6.096879945349798e-12,
+          "relative_to_scale": 6.096879945349798e-12,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_r": {
+          "absolute_gap": 2.220446049250313e-16,
+          "relative_to_scale": 2.220446049250313e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "child_normal_energy": {
+          "absolute_gap": 3.552713678800501e-15,
+          "relative_to_scale": 8.272716803327816e-16,
+          "scale": 4.294494497105681,
+          "within_roundoff_tolerance": true
+        },
+        "child_probability": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 3.478165595800718e-16,
+          "scale": 1.2767914511782399,
+          "within_roundoff_tolerance": true
+        },
+        "child_proper_length": {
+          "absolute_gap": 0.0,
+          "relative_to_scale": 0.0,
+          "scale": 2.375218143368551,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_current": {
+          "absolute_gap": 4.840572387365683e-13,
+          "relative_to_scale": 6.357049606873549e-15,
+          "scale": 76.14495224532811,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_hamilton": {
+          "absolute_gap": 9.69327389362118e-09,
+          "relative_to_scale": 1.2730028199887554e-10,
+          "scale": 76.14495224532811,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_momentum": {
+          "absolute_gap": 6.823007870498943e-13,
+          "relative_to_scale": 8.96055177566622e-15,
+          "scale": 76.14495224532811,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_rho": {
+          "absolute_gap": 1.3145040611561853e-12,
+          "relative_to_scale": 1.7263180583803366e-14,
+          "scale": 76.14495224532826,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_clock_rates": {
+          "absolute_gap": 1.7763568394002505e-15,
+          "relative_to_scale": 1.4696126492239052e-15,
+          "scale": 1.208724516857102,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_reference_amplitudes": {
+          "absolute_gap": 1.6883057536160646e-16,
+          "relative_to_scale": 1.6883057536160646e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_source_amplitudes": {
+          "absolute_gap": 8.582937747229195e-17,
+          "relative_to_scale": 8.582937747229195e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_weighted_trace": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 1.4802973661764087e-16,
+          "scale": 2.9999999999806795,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi0": {
+          "absolute_gap": 3.730415446859024e-15,
+          "relative_to_scale": 8.94521397449163e-16,
+          "scale": 4.170292021517606,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi1": {
+          "absolute_gap": 4.170731261746016e-15,
+          "relative_to_scale": 9.978606082602182e-16,
+          "scale": 4.179673220108103,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_Q": {
+          "absolute_gap": 3.885780586188048e-16,
+          "relative_to_scale": 3.885780586188048e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_chi": {
+          "absolute_gap": 1.7763568394002505e-14,
+          "relative_to_scale": 1.3135451973862089e-15,
+          "scale": 13.523378129165094,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_Q": {
+          "absolute_gap": 8.881784197001252e-15,
+          "relative_to_scale": 8.356925408275195e-16,
+          "scale": 10.628052499076192,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_chi": {
+          "absolute_gap": 1.0842021724855044e-18,
+          "relative_to_scale": 1.0842021724855044e-18,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_r": {
+          "absolute_gap": 1.7763568394002505e-15,
+          "relative_to_scale": 1.3731562278224107e-15,
+          "scale": 1.2936305450234504,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_r": {
+          "absolute_gap": 9.769962616701378e-15,
+          "relative_to_scale": 2.0201075190611266e-15,
+          "scale": 4.836357730722226,
+          "within_roundoff_tolerance": true
+        },
+        "force_L": {
+          "absolute_gap": 1.0269562977782698e-14,
+          "relative_to_scale": 1.0269562977782698e-14,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "force_Q": {
+          "absolute_gap": 1.021405182655144e-14,
+          "relative_to_scale": 1.021405182655144e-14,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "force_beta": {
+          "absolute_gap": 3.7816971776294395e-15,
+          "relative_to_scale": 3.7816971776294395e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 1.7763568394002505e-15,
+          "relative_to_scale": 2.0083426327986025e-16,
+          "scale": 8.84488936494326,
+          "within_roundoff_tolerance": true
+        },
+        "parent_probability": {
+          "absolute_gap": 8.881784197001252e-16,
+          "relative_to_scale": 3.385607295193427e-16,
+          "scale": 2.623394688926501,
+          "within_roundoff_tolerance": true
+        },
+        "parent_proper_length": {
+          "absolute_gap": 8.881784197001252e-16,
+          "relative_to_scale": 1.8859586254208413e-16,
+          "scale": 4.709426854483263,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_Q": {
+          "absolute_gap": 2.7755575615628914e-16,
+          "relative_to_scale": 2.7755575615628914e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_chi": {
+          "absolute_gap": 1.5987211554602254e-14,
+          "relative_to_scale": 1.1821914200886594e-15,
+          "scale": 13.523369636199254,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_Q": {
+          "absolute_gap": 3.552713678800501e-15,
+          "relative_to_scale": 3.34327283172229e-16,
+          "scale": 10.626454548043323,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_chi": {
+          "absolute_gap": 6.505213034913027e-19,
+          "relative_to_scale": 6.505213034913027e-19,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_r": {
+          "absolute_gap": 6.661338147750939e-16,
+          "relative_to_scale": 5.149698425424098e-16,
+          "scale": 1.2935394653139036,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_r": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 1.101882220653683e-15,
+          "scale": 4.83633406394317,
+          "within_roundoff_tolerance": true
+        },
+        "r_t": {
+          "absolute_gap": 2.7755575615628914e-16,
+          "relative_to_scale": 2.7755575615628914e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "r_tt": {
+          "absolute_gap": 3.303768369988802e-11,
+          "relative_to_scale": 3.303768369988802e-11,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        }
+      },
+      "clock_history_scope": "same saved accumulated proper clocks assigned to the translated physical worldlines; no new clock integration",
+      "clock_worldlines_shifted": true,
+      "input_state_basis_source_preserved": true,
+      "nf": 256,
+      "ok": true,
+      "optional_RK4_step": null,
+      "original": {
+        "clock_locations": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "clock_rates": [
+          1.208724516857102,
+          1.1899023938076683,
+          1.158037021675512
+        ],
+        "weighted_trace": 2.9999999999806795,
+        "windows": {
+          "child": {
+            "normal_energy": 4.294494497105681,
+            "pieces": [
+              [
+                1.0,
+                3.0
+              ]
+            ],
+            "probability": 1.2767914511782399,
+            "proper_length": 2.375218143368551
+          },
+          "parent": {
+            "normal_energy": 8.84488936494326,
+            "pieces": [
+              [
+                0.0,
+                4.0
+              ]
+            ],
+            "probability": 2.623394688926501,
+            "proper_length": 4.709426854483263
+          }
+        }
+      },
+      "saved_proper_clocks_at_shifted_worldlines": [
+        0.3640376801697352,
+        0.35785509393362364,
+        0.34839966501412295
+      ],
+      "shift": 5.5,
+      "spinor_boundary": "antiperiodic half-integer Fourier shift",
+      "time": 0.3,
+      "translated": {
+        "clock_locations": [
+          6.5,
+          7.5,
+          0.5
+        ],
+        "clock_rates": [
+          1.2087245168571001,
+          1.18990239380767,
+          1.1580370216755131
+        ],
+        "weighted_trace": 2.99999999998068,
+        "windows": {
+          "child": {
+            "normal_energy": 4.294494497105678,
+            "pieces": [
+              [
+                6.5,
+                8.0
+              ],
+              [
+                0.0,
+                0.5
+              ]
+            ],
+            "probability": 1.2767914511782394,
+            "proper_length": 2.375218143368551
+          },
+          "parent": {
+            "normal_energy": 8.844889364943258,
+            "pieces": [
+              [
+                5.5,
+                8.0
+              ],
+              [
+                0.0,
+                1.5
+              ]
+            ],
+            "probability": 2.623394688926502,
+            "proper_length": 4.7094268544832625
+          }
+        }
+      }
+    },
+    {
+      "actual_tidal_scalars": {
+        "R4": {
+          "original_abs_max": 4.015866750251007e-09,
+          "translated_abs_max": 3.930715308797517e-09
+        },
+        "R_0101": {
+          "original_abs_max": 10.080378615539768,
+          "translated_abs_max": 10.080378615490384
+        },
+        "R_0202": {
+          "original_abs_max": 7.602048072902067,
+          "translated_abs_max": 7.602048072906337
+        },
+        "R_h": {
+          "original_abs_max": 907.5282431080054,
+          "translated_abs_max": 907.5282431088169
+        },
+        "owned_W": {
+          "original_abs_max": 232.18065106235974,
+          "translated_abs_max": 232.1806510621243
+        }
+      },
+      "basis_interpretation": "W columns translated; canonical coefficients and parent/detail indices preserved",
+      "case_id": "nf256_coupled_dt0.0005",
+      "checks": {
+        "AP_prolongation_phi0": {
+          "absolute_gap": 6.206335383118183e-17,
+          "relative_to_scale": 6.206335383118183e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "AP_prolongation_phi1": {
+          "absolute_gap": 6.206335383118183e-17,
+          "relative_to_scale": 6.206335383118183e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_t": {
+          "absolute_gap": 7.771561172376096e-16,
+          "relative_to_scale": 7.771561172376096e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "Q_tt": {
+          "absolute_gap": 9.213185769851862e-13,
+          "relative_to_scale": 9.213185769851862e-13,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R4": {
+          "absolute_gap": 4.785292162523493e-10,
+          "relative_to_scale": 4.785292162523493e-10,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0101": {
+          "absolute_gap": 1.1751666306736297e-10,
+          "relative_to_scale": 1.1657961228380946e-11,
+          "scale": 10.080378615539765,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_0202": {
+          "absolute_gap": 8.895995051716454e-12,
+          "relative_to_scale": 1.1702103125901997e-12,
+          "scale": 7.602048072902068,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_R_h": {
+          "absolute_gap": 5.413085091277026e-09,
+          "relative_to_scale": 5.964646425480787e-12,
+          "scale": 907.5282431080059,
+          "within_roundoff_tolerance": true
+        },
+        "actual_curvature_owned_W": {
+          "absolute_gap": 2.74363287644519e-09,
+          "relative_to_scale": 1.1816802407485269e-11,
+          "scale": 232.18065106235977,
+          "within_roundoff_tolerance": true
+        },
+        "basis_orthogonality": {
+          "absolute_gap": 4.674060032894525e-15,
+          "relative_to_scale": 4.674060032894525e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_Q": {
+          "absolute_gap": 8.881784197001252e-16,
+          "relative_to_scale": 1.57162298662067e-16,
+          "scale": 5.651345311574382,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_chi": {
+          "absolute_gap": 2.9103830456733704e-11,
+          "relative_to_scale": 6.131877901613309e-16,
+          "scale": 47463.16042769936,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_Q": {
+          "absolute_gap": 8.260059303211165e-11,
+          "relative_to_scale": 2.5015750266742795e-13,
+          "scale": 330.1943461672827,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_chi": {
+          "absolute_gap": 2.6055546609171643e-15,
+          "relative_to_scale": 2.6055546609171643e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_p_r": {
+          "absolute_gap": 5.865252727943471e-12,
+          "relative_to_scale": 4.839988518074241e-13,
+          "scale": 12.118319508487527,
+          "within_roundoff_tolerance": true
+        },
+        "canonical_rate_r": {
+          "absolute_gap": 1.0658141036401503e-14,
+          "relative_to_scale": 1.6247447316250056e-16,
+          "scale": 65.59886503365763,
+          "within_roundoff_tolerance": true
+        },
+        "child_normal_energy": {
+          "absolute_gap": 0.0,
+          "relative_to_scale": 0.0,
+          "scale": 8.073553885797626,
+          "within_roundoff_tolerance": true
+        },
+        "child_probability": {
+          "absolute_gap": 2.220446049250313e-16,
+          "relative_to_scale": 1.4803567997693696e-16,
+          "scale": 1.4999397777591488,
+          "within_roundoff_tolerance": true
+        },
+        "child_proper_length": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 2.982656427123267e-16,
+          "scale": 1.488905010351396,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_current": {
+          "absolute_gap": 4.973799150320701e-13,
+          "relative_to_scale": 5.201449059113315e-15,
+          "scale": 95.62333676240172,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_hamilton": {
+          "absolute_gap": 2.5280127824434118e-08,
+          "relative_to_scale": 2.6437194810769297e-10,
+          "scale": 95.62333676240172,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_momentum": {
+          "absolute_gap": 5.046575136946618e-12,
+          "relative_to_scale": 5.2775559897956716e-14,
+          "scale": 95.62333676240172,
+          "within_roundoff_tolerance": true
+        },
+        "constraint_rho": {
+          "absolute_gap": 3.495870259939693e-12,
+          "relative_to_scale": 3.655875624405357e-14,
+          "scale": 95.62333676240176,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_clock_rates": {
+          "absolute_gap": 3.3306690738754696e-16,
+          "relative_to_scale": 3.3306690738754696e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_reference_amplitudes": {
+          "absolute_gap": 3.397396942383085e-16,
+          "relative_to_scale": 3.397396942383085e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_source_amplitudes": {
+          "absolute_gap": 9.639819490876587e-17,
+          "relative_to_scale": 9.639819490876587e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "diagnostic_weighted_trace": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 1.480297366198651e-16,
+          "scale": 2.9999999999356026,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi0": {
+          "absolute_gap": 3.528343968566428e-15,
+          "relative_to_scale": 8.203335788106154e-16,
+          "scale": 4.301108792452578,
+          "within_roundoff_tolerance": true
+        },
+        "field_rate_phi1": {
+          "absolute_gap": 3.897657681393598e-15,
+          "relative_to_scale": 9.06642602843964e-16,
+          "scale": 4.299001248305995,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_Q": {
+          "absolute_gap": 2.220446049250313e-16,
+          "relative_to_scale": 2.220446049250313e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_chi": {
+          "absolute_gap": 9.094947017729282e-13,
+          "relative_to_scale": 1.0043802705627165e-15,
+          "scale": 905.5282430661174,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_Q": {
+          "absolute_gap": 9.947598300641403e-14,
+          "relative_to_scale": 1.029467604967286e-15,
+          "scale": 96.62857046344371,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_chi": {
+          "absolute_gap": 4.85722573273506e-17,
+          "relative_to_scale": 4.85722573273506e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_p_r": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 8.334122363342075e-16,
+          "scale": 6.394279188461225,
+          "within_roundoff_tolerance": true
+        },
+        "fine_prolongation_r": {
+          "absolute_gap": 7.105427357601002e-15,
+          "relative_to_scale": 1.2101131109970905e-15,
+          "scale": 5.871705126594637,
+          "within_roundoff_tolerance": true
+        },
+        "force_L": {
+          "absolute_gap": 2.731148640577885e-14,
+          "relative_to_scale": 2.731148640577885e-14,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "force_Q": {
+          "absolute_gap": 2.7200464103316335e-14,
+          "relative_to_scale": 2.7200464103316335e-14,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "force_beta": {
+          "absolute_gap": 3.885780586188048e-15,
+          "relative_to_scale": 3.885780586188048e-15,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "parent_normal_energy": {
+          "absolute_gap": 5.329070518200751e-15,
+          "relative_to_scale": 4.959773390824182e-16,
+          "scale": 10.744584678122163,
+          "within_roundoff_tolerance": true
+        },
+        "parent_probability": {
+          "absolute_gap": 4.440892098500626e-16,
+          "relative_to_scale": 2.2189830525517156e-16,
+          "scale": 2.0013186190826606,
+          "within_roundoff_tolerance": true
+        },
+        "parent_proper_length": {
+          "absolute_gap": 1.3322676295501878e-15,
+          "relative_to_scale": 4.458948871421255e-16,
+          "scale": 2.9878513254302868,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_Q": {
+          "absolute_gap": 1.3877787807814457e-16,
+          "relative_to_scale": 1.3877787807814457e-16,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_chi": {
+          "absolute_gap": 7.958078640513122e-13,
+          "relative_to_scale": 8.7883641246242e-16,
+          "scale": 905.5244557078953,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_Q": {
+          "absolute_gap": 8.526512829121202e-14,
+          "relative_to_scale": 8.826743764894764e-16,
+          "scale": 96.59862182736488,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_chi": {
+          "absolute_gap": 4.163336342344337e-17,
+          "relative_to_scale": 4.163336342344337e-17,
+          "scale": 1.0,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_p_r": {
+          "absolute_gap": 4.440892098500626e-15,
+          "relative_to_scale": 6.945996641121618e-16,
+          "scale": 6.393455580167865,
+          "within_roundoff_tolerance": true
+        },
+        "physical_state_r": {
+          "absolute_gap": 7.105427357601002e-15,
+          "relative_to_scale": 1.2101251604545003e-15,
+          "scale": 5.871646660856416,
+          "within_roundoff_tolerance": true
+        },
+        "r_t": {
+          "absolute_gap": 1.1546319456101628e-14,
+          "relative_to_scale": 2.3468579994603075e-15,
+          "scale": 4.9199054475204145,
+          "within_roundoff_tolerance": true
+        },
+        "r_tt": {
+          "absolute_gap": 2.7425173243500467e-11,
+          "relative_to_scale": 1.964361761116194e-12,
+          "scale": 13.961365867719229,
+          "within_roundoff_tolerance": true
+        }
+      },
+      "clock_history_scope": "same saved accumulated proper clocks assigned to the translated physical worldlines; no new clock integration",
+      "clock_worldlines_shifted": true,
+      "input_state_basis_source_preserved": true,
+      "nf": 256,
+      "ok": true,
+      "optional_RK4_step": null,
+      "original": {
+        "clock_locations": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "clock_rates": [
+          0.7311611647899333,
+          0.7448482899439243,
+          0.7540747796134362
+        ],
+        "weighted_trace": 2.9999999999356026,
+        "windows": {
+          "child": {
+            "normal_energy": 8.073553885797626,
+            "pieces": [
+              [
+                1.0,
+                3.0
+              ]
+            ],
+            "probability": 1.4999397777591488,
+            "proper_length": 1.488905010351396
+          },
+          "parent": {
+            "normal_energy": 10.744584678122163,
+            "pieces": [
+              [
+                0.0,
+                4.0
+              ]
+            ],
+            "probability": 2.0013186190826606,
+            "proper_length": 2.9878513254302868
+          }
+        }
+      },
+      "saved_proper_clocks_at_shifted_worldlines": [
+        1.1123740058190583,
+        1.1025463020131778,
+        1.0789443878147331
+      ],
+      "shift": 5.5,
+      "spinor_boundary": "antiperiodic half-integer Fourier shift",
+      "time": 1.0,
+      "translated": {
+        "clock_locations": [
+          6.5,
+          7.5,
+          0.5
+        ],
+        "clock_rates": [
+          0.731161164789933,
+          0.7448482899439242,
+          0.754074779613436
+        ],
+        "weighted_trace": 2.999999999935603,
+        "windows": {
+          "child": {
+            "normal_energy": 8.073553885797626,
+            "pieces": [
+              [
+                6.5,
+                8.0
+              ],
+              [
+                0.0,
+                0.5
+              ]
+            ],
+            "probability": 1.499939777759149,
+            "proper_length": 1.4889050103513957
+          },
+          "parent": {
+            "normal_energy": 10.744584678122157,
+            "pieces": [
+              [
+                5.5,
+                8.0
+              ],
+              [
+                0.0,
+                1.5
+              ]
+            ],
+            "probability": 2.00131861908266,
+            "proper_length": 2.9878513254302854
+          }
+        }
+      }
+    }
+  ],
+  "continuum_certified": false,
+  "cpu_limit_seconds": 30.0,
+  "cpu_seconds": 0.4111949999999999,
+  "hashes_unchanged": true,
+  "input_hashes": {
+    "results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000000.json": "5eb0648f9fdebceb8dc4a7a14a935b2c2fd84c4272383dab4947ba167b63402c",
+    "results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000000.npz": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+    "results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000001.json": "2797f4c85183df77d38f9e2bd94f860da4558317746cb2273e13d7a90ae24a8b",
+    "results/development/nsc-discovery-episode-v1/nf128_coupled_dt0.0005-000001.npz": "9de034a4524345513eb408386344ff46c9ec303ae4b28b76e73227b87815f3ea",
+    "results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000000.json": "72848cb5dfb8dad8d88456066c415f0c4b1076cb45ec79fd6081a3ecfb7a37c5",
+    "results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000000.npz": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+    "results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000001.json": "09e075f60149c94dcb596b4b44b6617ce353e45d5f03f28e0b2ca24fa246d215",
+    "results/development/nsc-discovery-episode-v1/nf256_coupled_dt0.0005-000001.npz": "12cf7f8c98353018dce68dfae1b2e92f810754e17bda7e3000b9a75f15f49c2c"
+  },
+  "ok": true,
+  "physical_mechanism_claimed_from_identity": false,
+  "producer_hashes": {
+    "scripts/derive_nsc_discovery_translation.py": "a400102e41ab386a4b65cf70dcba6d51e6490f9affa40602cfda3ca776acd122",
+    "src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "src/recursive_horizons/nsc_discovery_translation.py": "7e17a7afef9618266ab5c14189e494ae65467c0bc02ebf22bbf4b8c77fd375aa",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911"
+  },
+  "schema": "NSC-DISCOVERY-TRANSLATION-v1",
+  "scope": "whole-state coordinate/seam covariance on the existing periodic carrier; not an ambient-extent or echo control",
+  "trajectory_evolved": false
+}

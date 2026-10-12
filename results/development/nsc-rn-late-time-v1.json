@@ -1,0 +1,49 @@
+{
+ "answer": "The shell does not empty. It decays to a floor a few percent of its peak, the decay turns over, and the amplitude then grows again for the rest of the recorded run.",
+ "api_version": "nsc-rn-late-time-v1",
+ "creation_only": true,
+ "entries": [
+  {
+   "decay_factor_peak_to_trough": 0.024751752153542073,
+   "decay_steps": 32,
+   "final_amplitude": 1.559705424687425e-05,
+   "final_over_peak": 0.043109687822856166,
+   "final_time": 6.0,
+   "never_reaches_zero": true,
+   "peak_amplitude": 0.0003617992853709533,
+   "peak_time": 1.7,
+   "record": "nsc-rn-inner-packet-shell-exc077-long-v1.json",
+   "rise_is_monotone": true,
+   "rise_steps": 11,
+   "rises_after_the_trough": true,
+   "trough_after_peak": true,
+   "trough_amplitude": 8.955166240830477e-06,
+   "trough_over_peak": 0.024751752153542073,
+   "trough_time": 4.9
+  },
+  {
+   "decay_factor_peak_to_trough": 0.0242270171733538,
+   "decay_steps": 32,
+   "final_amplitude": 1.6298311199360012e-05,
+   "final_over_peak": 0.04437466164423413,
+   "final_time": 6.0,
+   "never_reaches_zero": true,
+   "peak_amplitude": 0.00036728868672912464,
+   "peak_time": 1.7,
+   "record": "nsc-rn-inner-packet-shell-exc0760-long-v1.json",
+   "rise_is_monotone": true,
+   "rise_steps": 11,
+   "rises_after_the_trough": true,
+   "trough_after_peak": true,
+   "trough_amplitude": 8.898309320965067e-06,
+   "trough_over_peak": 0.0242270171733538,
+   "trough_time": 4.9
+  }
+ ],
+ "never_reaches_zero_everywhere": true,
+ "producing_commit": "10d2d189ea5989eb5ab7480e88b1d10278db2787",
+ "question": "Does the compressed shell decay to nothing, or does a remainder persist? A shell that empties and one that bottoms out and then grows again mean different things, and only one of them is observable.",
+ "schema": "NSC-RN-LATE-TIME-v1",
+ "scope_note": "A construction check on finite marched collars. It does not measure the actual universe. A remainder that persists here is a property of this construction on these grids, and nothing here says it is physical.",
+ "turns_over_everywhere": true
+}

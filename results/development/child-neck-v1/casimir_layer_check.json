@@ -1,0 +1,76 @@
+{
+ "dirac_casimir_coefficient": 0.0239886218082033,
+ "dirac_casimir_coefficient_check": {
+  "scalar_dirichlet": -0.0068538919452009435,
+  "scalar_dirichlet_expected": -0.006853891945200943,
+  "dirac_bag": -0.0239886218082033,
+  "dirac_bag_expected": -0.0239886218082033
+ },
+ "dirac_layer_on_thread_path": {
+  "R=1e-22": {
+   "d_m": 7.706030222579476e-36,
+   "d_over_R": 7.706030222579476e-14,
+   "adiabatic_parameter": 0.6647635482021668
+  },
+  "R=1e-18": {
+   "d_m": 7.708459882068591e-34,
+   "d_over_R": 7.70845988206859e-16,
+   "adiabatic_parameter": 6.632276842616121e-05
+  },
+  "R=1e-10": {
+   "d_m": 7.705299423161858e-30,
+   "d_over_R": 7.705299423161859e-20,
+   "adiabatic_parameter": 6.652865471543624e-13
+  },
+  "R=1": {
+   "d_m": 7.704933141110819e-25,
+   "d_over_R": 7.704933141110819e-25,
+   "adiabatic_parameter": 6.656545190194709e-23
+  },
+  "R=1000": {
+   "d_m": 2.45061755754461e-23,
+   "d_over_R": 2.45061755754461e-26,
+   "adiabatic_parameter": 6.564529630064834e-26
+  },
+  "R=29238.1": {
+   "d_m": 1.3406275978029533e-22,
+   "d_over_R": 4.5852139409807546e-27,
+   "adiabatic_parameter": 7.380242019108651e-29
+  },
+  "R_where_d_equals_lP_m": 4.395076226255914e-22,
+  "R_where_adiabatic_param_equals_1_m": 7.301694288479386e-23,
+  "d_coefficient_m_per_sqrtm": 7.709497755590663e-25
+ },
+ "thread_identity_rel_dev_median": 4.554453964529074e-13,
+ "thread_T_un_negative_everywhere": true,
+ "thread_path_q_and_w": {
+  "q_median": 0.49999999996077804,
+  "w_median": -0.49999999996694167,
+  "w_over_minus_q_half": 2.0000000000050444
+ },
+ "w_minus_one_run": {
+  "status": 0,
+  "R_end_m": 29238.05988246211,
+  "E_end_over_Mp": -1.2101196343089558e+37,
+  "q_late": 1.7500000010972485,
+  "b_over_B_end": 1.0,
+  "v_end": 3.055857662396352e+36,
+  "tau_total_s": 1.2806412271246786e-40,
+  "tau_total_over_torsion_time": 30939.27339360067,
+  "Rdot_over_2pi_sigma_R_end": 1.0,
+  "E_tau_over_R2_end": 8.025327193164937,
+  "sigma_start": -4.3246086664615505e+38,
+  "sigma_end": -1.6634306595950112e+31,
+  "R_where_vacuum_layer_thickness_equals_lP_m": 0.0005149339949692929,
+  "vacuum_layer_thickness_start_over_lP": 0.015083988703938785,
+  "vacuum_layer_thickness_end_over_lP": 4.468518592620259,
+  "child_time_at_end_m": 14619.029941231365,
+  "R_over_child_time_at_end": 1.9999999999999574
+ },
+ "thread_E_tau_over_R2": {
+  "R/rg=1e-12": 0.6666760053531625,
+  "R/rg=1e-06": 0.666672459370249,
+  "R/rg=0.01": 0.6653783473656757,
+  "R/rg=0.3": 0.6624281461924043
+ }
+}

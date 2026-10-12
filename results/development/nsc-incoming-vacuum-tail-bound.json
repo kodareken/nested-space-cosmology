@@ -1,0 +1,3037 @@
+{
+  "accountable_author": "Douglas Ek",
+  "aggregate": {
+    "component_budget": 9.6e-11,
+    "finite_offset_archive_accuracy_certified": false,
+    "finite_offset_initial_projector_term_bound": null,
+    "group_component_budget": 3e-12,
+    "group_count": 32,
+    "vacuum_tail_error_upper": [
+      7.645493231127499e-17,
+      7.387271499696238e-17,
+      0.0,
+      1.2337848855015194e-18
+    ],
+    "within_component_budget": true
+  },
+  "failures": [],
+  "groups": [
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 1,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.1166566423121638e+17,
+            1.273131945336553e+16,
+            1.5963701972342964e+16,
+            6.751346689570516e+16,
+            3.4511781922719597e+17,
+            2.3919980068648786e+18,
+            2.1321272384348467e+19,
+            2.3728599514992047e+20,
+            3.175637361138015e+21,
+            4.914966550034088e+22,
+            8.49400002605213e+23,
+            1.5918917500837582e+25,
+            3.15518643894839e+26,
+            6.450331463686926e+27,
+            1.3167011230769798e+29,
+            2.5286442813975568e+30,
+            3.8370260292968236e+31
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.1166566423121638e+17,
+            1.273131945336553e+16,
+            1.5963701972342964e+16,
+            6.751346689570516e+16,
+            3.4511781922719597e+17,
+            2.3919980068648786e+18,
+            2.1321272384348467e+19,
+            2.3728599514992047e+20,
+            3.175637361138015e+21,
+            4.914966550034088e+22,
+            8.49400002605213e+23,
+            1.5918917500837582e+25,
+            3.15518643894839e+26,
+            6.450331463686926e+27,
+            1.3167011230769798e+29,
+            2.5286442813975568e+30,
+            3.8370260292968236e+31
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        7.265223375530068e-21,
+        7.209102140135367e-21,
+        0.0,
+        2.8060617697350106e-23
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 2,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.1783950530199872e+17,
+            6.115812442204259e+16,
+            8.311832047930725e+16,
+            5.1085451021982944e+17,
+            2.8273834931577293e+18,
+            2.139458663749902e+19,
+            1.9369595002943557e+20,
+            2.1048244375758845e+21,
+            2.6842518292653496e+22,
+            3.927223061965759e+23,
+            6.426893320633746e+24,
+            1.1472826867014788e+26,
+            2.1803628237018288e+27,
+            4.299580361246227e+28,
+            8.507790573885614e+29,
+            1.5901026043793424e+31,
+            2.355693530212159e+32
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.1783950530199872e+17,
+            6.115812442204259e+16,
+            8.311832047930725e+16,
+            5.1085451021982944e+17,
+            2.8273834931577293e+18,
+            2.139458663749902e+19,
+            1.9369595002943557e+20,
+            2.1048244375758845e+21,
+            2.6842518292653496e+22,
+            3.927223061965759e+23,
+            6.426893320633746e+24,
+            1.1472826867014788e+26,
+            2.1803628237018288e+27,
+            4.299580361246227e+28,
+            8.507790573885614e+29,
+            1.5901026043793424e+31,
+            2.355693530212159e+32
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.8986950254028573e-20,
+        1.8760693525665542e-20,
+        0.0,
+        1.13128364181516e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 3,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            3.9181756377541734e+17,
+            1.9956531820747648e+17,
+            3.009778185822877e+17,
+            2.4753467790199025e+18,
+            1.4707213323800218e+19,
+            1.2534613210108022e+20,
+            1.191356814126874e+21,
+            1.3228455324490146e+22,
+            1.6693825525972063e+23,
+            2.367974570720209e+24,
+            3.7139037777206272e+25,
+            6.327463162746525e+26,
+            1.1481638642709342e+28,
+            2.167825043309403e+29,
+            4.1222296169360146e+30,
+            7.431856867539105e+31,
+            1.0658060407739829e+33
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            3.9181756377541734e+17,
+            1.9956531820747648e+17,
+            3.009778185822877e+17,
+            2.4753467790199025e+18,
+            1.4707213323800218e+19,
+            1.2534613210108022e+20,
+            1.191356814126874e+21,
+            1.3228455324490146e+22,
+            1.6693825525972063e+23,
+            2.367974570720209e+24,
+            3.7139037777206272e+25,
+            6.327463162746525e+26,
+            1.1481638642709342e+28,
+            2.167825043309403e+29,
+            4.1222296169360146e+30,
+            7.431856867539105e+31,
+            1.0658060407739829e+33
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        4.288159637122767e-20,
+        4.2208201525239974e-20,
+        0.0,
+        3.3669742299384805e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 4,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            7.144830769844031e+17,
+            5.809496702687117e+17,
+            9.951806556417325e+17,
+            1.0214147836030435e+19,
+            6.531218805244684e+19,
+            6.313027841381335e+20,
+            6.371420548843968e+21,
+            7.422850731084233e+22,
+            9.532311701054001e+23,
+            1.3474408772790411e+25,
+            2.0694070823724286e+26,
+            3.4126567680523525e+27,
+            5.953853633842484e+28,
+            1.0777183334880502e+30,
+            1.9642338661282281e+31,
+            3.398823307059351e+32,
+            4.6886298917500376e+33
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            7.144830769844031e+17,
+            5.809496702687117e+17,
+            9.951806556417325e+17,
+            1.0214147836030435e+19,
+            6.531218805244684e+19,
+            6.313027841381335e+20,
+            6.371420548843968e+21,
+            7.422850731084233e+22,
+            9.532311701054001e+23,
+            1.3474408772790411e+25,
+            2.0694070823724286e+26,
+            3.4126567680523525e+27,
+            5.953853633842484e+28,
+            1.0777183334880502e+30,
+            1.9642338661282281e+31,
+            3.398823307059351e+32,
+            4.6886298917500376e+33
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        9.426328406722179e-20,
+        9.24426921975511e-20,
+        0.0,
+        9.102959348353412e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 5,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.363792085162051e+18,
+            1.6461622778646308e+18,
+            3.265105886428489e+18,
+            3.955438420260922e+19,
+            2.7377288308661e+20,
+            2.982888941724459e+21,
+            3.2044824172171903e+22,
+            3.965708948336504e+23,
+            5.26374684807331e+24,
+            7.567529329618536e+25,
+            1.161633910719671e+27,
+            1.8890454293037512e+28,
+            3.215740597041605e+29,
+            5.637916589918898e+30,
+            9.906632360392288e+31,
+            1.6487278710795428e+33,
+            2.1860664568693785e+34
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.363792085162051e+18,
+            1.6461622778646308e+18,
+            3.265105886428489e+18,
+            3.955438420260922e+19,
+            2.7377288308661e+20,
+            2.982888941724459e+21,
+            3.2044824172171903e+22,
+            3.965708948336504e+23,
+            5.26374684807331e+24,
+            7.567529329618536e+25,
+            1.161633910719671e+27,
+            1.8890454293037512e+28,
+            3.215740597041605e+29,
+            5.637916589918898e+30,
+            9.906632360392288e+31,
+            1.6487278710795428e+33,
+            2.1860664568693785e+34
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.1091290986713212e-19,
+        2.060995257373593e-19,
+        0.0,
+        2.406692064886412e-21
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 6,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.75065882789652e+18,
+            4.679829677308359e+18,
+            1.0858570062079807e+19,
+            1.489973170978941e+20,
+            1.1208055717604036e+21,
+            1.360466841556645e+22,
+            1.5541995962252932e+23,
+            2.0515270707926067e+24,
+            2.835232752546879e+25,
+            4.1994006192573645e+26,
+            6.54140583943135e+27,
+            1.0668037308498021e+29,
+            1.8013644470678101e+30,
+            3.1046977538827567e+31,
+            5.324449397150164e+32,
+            8.602100679391578e+33,
+            1.1030806807934932e+35
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.75065882789652e+18,
+            4.679829677308359e+18,
+            1.0858570062079807e+19,
+            1.489973170978941e+20,
+            1.1208055717604036e+21,
+            1.360466841556645e+22,
+            1.5541995962252932e+23,
+            2.0515270707926067e+24,
+            2.835232752546879e+25,
+            4.1994006192573645e+26,
+            6.54140583943135e+27,
+            1.0668037308498021e+29,
+            1.8013644470678101e+30,
+            3.1046977538827567e+31,
+            5.324449397150164e+32,
+            8.602100679391578e+33,
+            1.1030806807934932e+35
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        4.885891503909398e-19,
+        4.757589716345829e-19,
+        0.0,
+        6.415089378178416e-21
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 7,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            5.832843726135606e+18,
+            1.3388182861866177e+19,
+            3.63253704353406e+19,
+            5.491885476397893e+20,
+            4.49087754683854e+21,
+            5.99850864434318e+22,
+            7.270772824812563e+23,
+            1.0237542071687148e+25,
+            1.4776344647842453e+26,
+            2.2722031045806426e+27,
+            3.6280957740429653e+28,
+            6.0108064137851834e+29,
+            1.0211488037602847e+31,
+            1.755908575718303e+32,
+            2.981359798176152e+33,
+            4.737254288069654e+34,
+            5.94147186914234e+35
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            5.832843726135606e+18,
+            1.3388182861866177e+19,
+            3.63253704353406e+19,
+            5.491885476397893e+20,
+            4.49087754683854e+21,
+            5.99850864434318e+22,
+            7.270772824812563e+23,
+            1.0237542071687148e+25,
+            1.4776344647842453e+26,
+            2.2722031045806426e+27,
+            3.6280957740429653e+28,
+            6.0108064137851834e+29,
+            1.0211488037602847e+31,
+            1.755908575718303e+32,
+            2.981359798176152e+33,
+            4.737254288069654e+34,
+            5.94147186914234e+35
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.1716806237222107e-18,
+        1.1369463032436434e-18,
+        0.0,
+        1.7367160239283642e-20
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 8,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.2826980892221592e+19,
+            3.819079104014006e+19,
+            1.2015733013104126e+20,
+            1.9673558702026258e+21,
+            1.743638880360646e+22,
+            2.535954829167108e+23,
+            3.252636361526896e+24,
+            4.877959147632699e+25,
+            7.36018240084418e+26,
+            1.180342564382962e+28,
+            1.9441880924621842e+29,
+            3.301991482941462e+30,
+            5.704288915440398e+31,
+            9.905798780354324e+32,
+            1.6867578549446453e+34,
+            2.6707768942139094e+35,
+            3.3180323763069735e+36
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.2826980892221592e+19,
+            3.819079104014006e+19,
+            1.2015733013104126e+20,
+            1.9673558702026258e+21,
+            1.743638880360646e+22,
+            2.535954829167108e+23,
+            3.252636361526896e+24,
+            4.877959147632699e+25,
+            7.36018240084418e+26,
+            1.180342564382962e+28,
+            1.9441880924621842e+29,
+            3.301991482941462e+30,
+            5.704288915440398e+31,
+            9.905798780354324e+32,
+            1.6867578549446453e+34,
+            2.6707768942139094e+35,
+            3.3180323763069735e+36
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.878583723897043e-18,
+        2.783627353747624e-18,
+        0.0,
+        4.7478185074709435e-20
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 9,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.8776239871496663e+19,
+            1.0735820250320867e+20,
+            3.8693291640966644e+20,
+            6.78878976548998e+21,
+            6.4911174005192485e+22,
+            1.0194338790478859e+24,
+            1.3798576578368939e+25,
+            2.1995888668286387e+26,
+            3.46922524949786e+27,
+            5.8168364078748475e+28,
+            9.92071770875829e+29,
+            1.7377896995276198e+31,
+            3.0752948943741052e+32,
+            5.441904394420295e+33,
+            9.386944023729889e+34,
+            1.4973985670712748e+36,
+            1.8638523774202477e+37
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.8776239871496663e+19,
+            1.0735820250320867e+20,
+            3.8693291640966644e+20,
+            6.78878976548998e+21,
+            6.4911174005192485e+22,
+            1.0194338790478859e+24,
+            1.3798576578368939e+25,
+            2.1995888668286387e+26,
+            3.46922524949786e+27,
+            5.8168364078748475e+28,
+            9.92071770875829e+29,
+            1.7377896995276198e+31,
+            3.0752948943741052e+32,
+            5.441904394420295e+33,
+            9.386944023729889e+34,
+            1.4973985670712748e+36,
+            1.8638523774202477e+37
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        7.143797901790059e-18,
+        6.884529896164299e-18,
+        0.0,
+        1.2963400281287994e-19
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 10,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 320.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            6.489181624079542e+19,
+            2.9456588648096494e+20,
+            1.2006355088463e+21,
+            2.2419661030358507e+22,
+            2.3010409658215445e+23,
+            3.8769381671574025e+24,
+            5.523686271247101e+25,
+            9.339009987398675e+26,
+            1.5386534257065723e+28,
+            2.7006396682932717e+29,
+            4.7787732986655165e+30,
+            8.666935851517935e+31,
+            1.5786430302280738e+33,
+            2.864334178537885e+34,
+            5.041022424857538e+35,
+            8.168447262120745e+36,
+            1.0278999978281727e+38
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            6.489181624079542e+19,
+            2.9456588648096494e+20,
+            1.2006355088463e+21,
+            2.2419661030358507e+22,
+            2.3010409658215445e+23,
+            3.8769381671574025e+24,
+            5.523686271247101e+25,
+            9.339009987398675e+26,
+            1.5386534257065723e+28,
+            2.7006396682932717e+29,
+            4.7787732986655165e+30,
+            8.666935851517935e+31,
+            1.5786430302280738e+33,
+            2.864334178537885e+34,
+            5.041022424857538e+35,
+            8.168447262120745e+36,
+            1.0278999978281727e+38
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.0504707282607568e-21,
+        1.0292706768756192e-21,
+        0.0,
+        1.0600025692568814e-23
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 11,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 320.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.4544600021480579e+20,
+            7.83960069273182e+20,
+            3.570883371430376e+21,
+            7.062707950379861e+22,
+            7.743834648295806e+23,
+            1.3924479845578247e+25,
+            2.0832993801623593e+26,
+            3.727732218005093e+27,
+            6.409104351949828e+28,
+            1.1780428865893421e+30,
+            2.1645477966411195e+31,
+            4.07403076691204e+32,
+            7.659823126411404e+33,
+            1.4309382952851396e+35,
+            2.5818457598016515e+36,
+            4.274566567149111e+37,
+            5.473743875756409e+38
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.4544600021480579e+20,
+            7.83960069273182e+20,
+            3.570883371430376e+21,
+            7.062707950379861e+22,
+            7.743834648295806e+23,
+            1.3924479845578247e+25,
+            2.0832993801623593e+26,
+            3.727732218005093e+27,
+            6.409104351949828e+28,
+            1.1780428865893421e+30,
+            2.1645477966411195e+31,
+            4.07403076691204e+32,
+            7.659823126411404e+33,
+            1.4309382952851396e+35,
+            2.5818457598016515e+36,
+            4.274566567149111e+37,
+            5.473743875756409e+38
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.5582819893599227e-21,
+        2.502327890789877e-21,
+        0.0,
+        2.79770492850228e-23
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 12,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 320.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            3.215442476740849e+20,
+            2.0171566337045913e+21,
+            1.0161092267487105e+22,
+            2.1208395366966924e+23,
+            2.4735069931652146e+24,
+            4.726258214457765e+25,
+            7.409309435361297e+26,
+            1.400113741863038e+28,
+            2.5090740169975404e+29,
+            4.8287617420660534e+30,
+            9.213675094680972e+31,
+            1.8020105246942492e+33,
+            3.50275137487648e+34,
+            6.754784944970354e+35,
+            1.253349655364887e+37,
+            2.128628828525252e+38,
+            2.786359826609753e+39
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            3.215442476740849e+20,
+            2.0171566337045913e+21,
+            1.0161092267487105e+22,
+            2.1208395366966924e+23,
+            2.4735069931652146e+24,
+            4.726258214457765e+25,
+            7.409309435361297e+26,
+            1.400113741863038e+28,
+            2.5090740169975404e+29,
+            4.8287617420660534e+30,
+            9.213675094680972e+31,
+            1.8020105246942492e+33,
+            3.50275137487648e+34,
+            6.754784944970354e+35,
+            1.253349655364887e+37,
+            2.128628828525252e+38,
+            2.786359826609753e+39
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        6.109147684204812e-21,
+        5.965258513170638e-21,
+        0.0,
+        7.194458551708718e-23
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 13,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            141824353609079.0,
+            24278608382032.984,
+            19121916160936.03,
+            79186290947731.5,
+            273252737003308.97,
+            1350403927615803.2,
+            8007768654892155.0,
+            5.736748500406148e+16,
+            4.814915429735663e+17,
+            4.614659552689129e+18,
+            4.923953896445608e+19,
+            5.715906780623025e+20,
+            7.063304517361261e+21,
+            9.07736264804223e+22,
+            1.17550094201839e+24,
+            1.4459725304004788e+25,
+            1.4194780322479796e+26
+          ],
+          "sign": 1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        6.152325320022704e-24,
+        6.105109266931166e-24,
+        0.0,
+        5e-324
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 14,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.2829501037224872e+17,
+            5.0414788619716184e+16,
+            5.433790590110849e+16,
+            3.301698681452116e+17,
+            1.6419448058122076e+18,
+            1.1915543391062108e+19,
+            1.0281107167132869e+20,
+            1.0799939642095521e+21,
+            1.343036043306108e+22,
+            1.9313777359608018e+23,
+            3.120563385600728e+24,
+            5.516113106482915e+25,
+            1.0391820941823585e+27,
+            2.0321169693756413e+28,
+            3.989211750432136e+29,
+            7.397278704660649e+30,
+            1.0878129469371801e+32
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.2829501037224872e+17,
+            5.0414788619716184e+16,
+            5.433790590110849e+16,
+            3.301698681452116e+17,
+            1.6419448058122076e+18,
+            1.1915543391062108e+19,
+            1.0281107167132869e+20,
+            1.0799939642095521e+21,
+            1.343036043306108e+22,
+            1.9313777359608018e+23,
+            3.120563385600728e+24,
+            5.516113106482915e+25,
+            1.0391820941823585e+27,
+            2.0321169693756413e+28,
+            3.989211750432136e+29,
+            7.397278704660649e+30,
+            1.0878129469371801e+32
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.6760816347038106e-20,
+        1.6578889134444643e-20,
+        0.0,
+        6.453169308050922e-23
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 15,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.708504744536733e+17,
+            1.9080656896457827e+17,
+            2.4179174383874083e+17,
+            1.9810553163596042e+18,
+            1.1002491486738391e+19,
+            9.298888867661844e+19,
+            8.661231526289057e+20,
+            9.554611892586356e+21,
+            1.1994599094839444e+23,
+            1.6989159515952735e+24,
+            2.6615844685605556e+25,
+            4.5289540605022404e+26,
+            8.190982547947507e+27,
+            1.539824826700003e+29,
+            2.908571163658192e+30,
+            5.20689767324768e+31,
+            7.398117887492563e+32
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.708504744536733e+17,
+            1.9080656896457827e+17,
+            2.4179174383874083e+17,
+            1.9810553163596042e+18,
+            1.1002491486738391e+19,
+            9.298888867661844e+19,
+            8.661231526289057e+20,
+            9.554611892586356e+21,
+            1.1994599094839444e+23,
+            1.6989159515952735e+24,
+            2.6615844685605556e+25,
+            4.5289540605022404e+26,
+            8.190982547947507e+27,
+            1.539824826700003e+29,
+            2.908571163658192e+30,
+            5.20689767324768e+31,
+            7.398117887492563e+32
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        4.737919977239996e-20,
+        4.67099870208368e-20,
+        0.0,
+        2.816662234283595e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 16,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            5.3501407164993517e+17,
+            5.824747428817471e+17,
+            8.644687223159443e+17,
+            8.867193303415911e+18,
+            5.395146463804259e+19,
+            5.238604731211972e+20,
+            5.219128140320977e+21,
+            6.1057568442406e+22,
+            7.860346785321872e+23,
+            1.1190387501596184e+25,
+            1.7309137655397807e+26,
+            2.875156552271135e+27,
+            5.040173162402667e+28,
+            9.152919547317162e+29,
+            1.6676150037132792e+31,
+            2.8806918207257304e+32,
+            3.9508887351711585e+33
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            5.3501407164993517e+17,
+            5.824747428817471e+17,
+            8.644687223159443e+17,
+            8.867193303415911e+18,
+            5.395146463804259e+19,
+            5.238604731211972e+20,
+            5.219128140320977e+21,
+            6.1057568442406e+22,
+            7.860346785321872e+23,
+            1.1190387501596184e+25,
+            1.7309137655397807e+26,
+            2.875156552271135e+27,
+            5.040173162402667e+28,
+            9.152919547317162e+29,
+            1.6676150037132792e+31,
+            2.8806918207257304e+32,
+            3.9508887351711585e+33
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.1751035628175166e-19,
+        1.1546319702108136e-19,
+        0.0,
+        9.210640081798621e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 17,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.074547368695351e+18,
+            1.6690768641660232e+18,
+            2.9144826711332424e+18,
+            3.5378071591996252e+19,
+            2.3516646967278295e+20,
+            2.5850697656065034e+21,
+            2.750405373703865e+22,
+            3.431001351686405e+23,
+            4.579008709018814e+24,
+            6.656220372735511e+25,
+            1.0336425220649506e+27,
+            1.702785997812477e+28,
+            2.9321278358626337e+29,
+            5.196511309897331e+30,
+            9.198492666683933e+31,
+            1.540209794989564e+33,
+            2.0439390071719952e+34
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.074547368695351e+18,
+            1.6690768641660232e+18,
+            2.9144826711332424e+18,
+            3.5378071591996252e+19,
+            2.3516646967278295e+20,
+            2.5850697656065034e+21,
+            2.750405373703865e+22,
+            3.431001351686405e+23,
+            4.579008709018814e+24,
+            6.656220372735511e+25,
+            1.0336425220649506e+27,
+            1.702785997812477e+28,
+            2.9321278358626337e+29,
+            5.196511309897331e+30,
+            9.198492666683933e+31,
+            1.540209794989564e+33,
+            2.0439390071719952e+34
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.845567067747999e-19,
+        2.7866063534031943e-19,
+        0.0,
+        2.7440362312729314e-21
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 18,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.2355848243521498e+18,
+            4.691857851592883e+18,
+            9.664557583898806e+18,
+            1.3331502983006457e+20,
+            9.676881465183544e+20,
+            1.186659404008439e+22,
+            1.3444824109761837e+23,
+            1.7917118729731956e+24,
+            2.4916023226717053e+25,
+            3.737258017788752e+26,
+            5.899345112273651e+27,
+            9.7737138609025e+28,
+            1.675933053554513e+30,
+            2.9350684826422675e+31,
+            5.102245858559428e+32,
+            8.352683422247358e+33,
+            1.0797628470188259e+35
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.2355848243521498e+18,
+            4.691857851592883e+18,
+            9.664557583898806e+18,
+            1.3331502983006457e+20,
+            9.676881465183544e+20,
+            1.186659404008439e+22,
+            1.3444824109761837e+23,
+            1.7917118729731956e+24,
+            2.4916023226717053e+25,
+            3.737258017788752e+26,
+            5.899345112273651e+27,
+            9.7737138609025e+28,
+            1.675933053554513e+30,
+            2.9350684826422675e+31,
+            5.102245858559428e+32,
+            8.352683422247358e+33,
+            1.0797628470188259e+35
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        6.941234909309849e-19,
+        6.774565669862602e-19,
+        0.0,
+        7.910975652637558e-21
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 19,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            4.809948627909021e+18,
+            1.3083890973757661e+19,
+            3.1694462407298884e+19,
+            4.8312011294931354e+20,
+            3.8228789195159744e+21,
+            5.160702742998448e+22,
+            6.208606071411486e+23,
+            8.831729602161939e+24,
+            1.2820453203555088e+26,
+            1.9971624870596283e+27,
+            3.231266622163045e+28,
+            5.442339566343707e+29,
+            9.401782902972585e+30,
+            1.6466943368506358e+32,
+            2.844031879107039e+33,
+            4.600484527682247e+34,
+            5.84875176515048e+35
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            4.809948627909021e+18,
+            1.3083890973757661e+19,
+            3.1694462407298884e+19,
+            4.8312011294931354e+20,
+            3.8228789195159744e+21,
+            5.160702742998448e+22,
+            6.208606071411486e+23,
+            8.831729602161939e+24,
+            1.2820453203555088e+26,
+            1.9971624870596283e+27,
+            3.231266622163045e+28,
+            5.442339566343707e+29,
+            9.401782902972585e+30,
+            1.6466943368506358e+32,
+            2.844031879107039e+33,
+            4.600484527682247e+34,
+            5.84875176515048e+35
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.715653681284242e-18,
+        1.6688340716157463e-18,
+        0.0,
+        2.2502701395005127e-20
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 20,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.060042255748061e+19,
+            3.6138966822181945e+19,
+            1.0209596392231197e+20,
+            1.6883275640260623e+21,
+            1.4512706081753783e+22,
+            2.133018906327716e+23,
+            2.716842036791111e+24,
+            4.116576849375995e+25,
+            6.242358953889555e+26,
+            1.013768624826246e+28,
+            1.6903415270502257e+29,
+            2.9169819035634155e+30,
+            5.122390009133184e+31,
+            9.062901723478983e+32,
+            1.5714315123449675e+34,
+            2.537948822561358e+35,
+            3.205615564202144e+36
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.060042255748061e+19,
+            3.6138966822181945e+19,
+            1.0209596392231197e+20,
+            1.6883275640260623e+21,
+            1.4512706081753783e+22,
+            2.133018906327716e+23,
+            2.716842036791111e+24,
+            4.116576849375995e+25,
+            6.242358953889555e+26,
+            1.013768624826246e+28,
+            1.6903415270502257e+29,
+            2.9169819035634155e+30,
+            5.122390009133184e+31,
+            9.062901723478983e+32,
+            1.5714315123449675e+34,
+            2.537948822561358e+35,
+            3.205615564202144e+36
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        4.276620387871571e-18,
+        4.145961409508347e-18,
+        0.0,
+        6.333159417715512e-20
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 21,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.364588724085668e+19,
+            9.824620407613855e+19,
+            3.200002780700135e+20,
+            5.673269090500647e+21,
+            5.272725427532836e+22,
+            8.363959598274138e+23,
+            1.1246794607366508e+25,
+            1.8106974531253816e+26,
+            2.8676622220839925e+27,
+            4.864877939309937e+28,
+            8.387626419914706e+29,
+            1.491009037081007e+31,
+            2.6787300898103107e+32,
+            4.824667709865263e+33,
+            8.469675062227683e+34,
+            1.378071729012175e+36,
+            1.745412504494667e+37
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.364588724085668e+19,
+            9.824620407613855e+19,
+            3.200002780700135e+20,
+            5.673269090500647e+21,
+            5.272725427532836e+22,
+            8.363959598274138e+23,
+            1.1246794607366508e+25,
+            1.8106974531253816e+26,
+            2.8676622220839925e+27,
+            4.864877939309937e+28,
+            8.387626419914706e+29,
+            1.491009037081007e+31,
+            2.6787300898103107e+32,
+            4.824667709865263e+33,
+            8.469675062227683e+34,
+            1.378071729012175e+36,
+            1.745412504494667e+37
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.0658497999394534e-17,
+        1.0298276949797715e-17,
+        0.0,
+        1.75652461456108e-19
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 22,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            5.281958997251633e+19,
+            2.6130607768907114e+20,
+            9.691731488077751e+20,
+            1.8278960492940353e+22,
+            1.8274939690418325e+23,
+            3.107399485031357e+24,
+            4.399544813144579e+25,
+            7.507661074171987e+26,
+            1.2409643859741806e+28,
+            2.201466364896715e+29,
+            3.9321560816677846e+30,
+            7.226420032060972e+31,
+            1.3340772806594235e+33,
+            2.4598395800158676e+34,
+            4.399662028138314e+35,
+            7.263054790964687e+36,
+            9.294698032861817e+37
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            5.281958997251633e+19,
+            2.6130607768907114e+20,
+            9.691731488077751e+20,
+            1.8278960492940353e+22,
+            1.8274939690418325e+23,
+            3.107399485031357e+24,
+            4.399544813144579e+25,
+            7.507661074171987e+26,
+            1.2409643859741806e+28,
+            2.201466364896715e+29,
+            3.9321560816677846e+30,
+            7.226420032060972e+31,
+            1.3340772806594235e+33,
+            2.4598395800158676e+34,
+            4.399662028138314e+35,
+            7.263054790964687e+36,
+            9.294698032861817e+37
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.6338418489779527e-17,
+        2.5363298311250394e-17,
+        0.0,
+        4.775922158259751e-19
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 23,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            880495434039283.0,
+            702938055315120.0,
+            845342859394503.5,
+            7078593980568627.0,
+            2.9892265532288576e+16,
+            2.1603953155926157e+17,
+            1.4671428113124964e+18,
+            1.1790652631084931e+19,
+            1.0090744419896046e+20,
+            9.418263709515714e+20,
+            9.396985377016336e+21,
+            9.955281276345357e+22,
+            1.1053829246039661e+24,
+            1.2654086524321026e+25,
+            1.4533515015344232e+26,
+            1.5832395142923664e+27,
+            1.3770314004381927e+28
+          ],
+          "sign": 1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        3.8559584130529967e-23,
+        3.797223549570458e-23,
+        0.0,
+        5e-324
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 24,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.0188639337503258e+17,
+            2.0965702687421155e+17,
+            2.646109839593719e+17,
+            2.797419408433614e+18,
+            1.3992198267891522e+19,
+            1.2887697559259737e+20,
+            1.1115711437642039e+21,
+            1.1862353222218595e+22,
+            1.3816031540501667e+23,
+            1.8201905093076264e+24,
+            2.6446281118702636e+25,
+            4.201361676829077e+26,
+            7.148420213695355e+27,
+            1.2755848329280842e+29,
+            2.3044781232028682e+30,
+            3.974303020706341e+31,
+            5.467745403235243e+32
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.0188639337503258e+17,
+            2.0965702687421155e+17,
+            2.646109839593719e+17,
+            2.797419408433614e+18,
+            1.3992198267891522e+19,
+            1.2887697559259737e+20,
+            1.1115711437642039e+21,
+            1.1862353222218595e+22,
+            1.3816031540501667e+23,
+            1.8201905093076264e+24,
+            2.6446281118702636e+25,
+            4.201361676829077e+26,
+            7.148420213695355e+27,
+            1.2755848329280842e+29,
+            2.3044781232028682e+30,
+            3.974303020706341e+31,
+            5.467745403235243e+32
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.659060216744873e-20,
+        2.6137984718362683e-20,
+        0.0,
+        1.0174038953710933e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 25,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            5.0051499139340954e+17,
+            7.889729072337964e+17,
+            1.157073582361352e+18,
+            1.351492829643099e+19,
+            7.78267677884499e+19,
+            8.098449793972879e+20,
+            7.881734634999574e+21,
+            9.302002960093091e+22,
+            1.1720725034999782e+24,
+            1.632874180727029e+25,
+            2.4495228952384798e+26,
+            3.937218725791558e+27,
+            6.666599864785465e+28,
+            1.1697413702794703e+30,
+            2.0611604950089015e+31,
+            3.4500207125272244e+32,
+            4.5929392021331765e+33
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            5.0051499139340954e+17,
+            7.889729072337964e+17,
+            1.157073582361352e+18,
+            1.351492829643099e+19,
+            7.78267677884499e+19,
+            8.098449793972879e+20,
+            7.881734634999574e+21,
+            9.302002960093091e+22,
+            1.1720725034999782e+24,
+            1.632874180727029e+25,
+            2.4495228952384798e+26,
+            3.937218725791558e+27,
+            6.666599864785465e+28,
+            1.1697413702794703e+30,
+            2.0611604950089015e+31,
+            3.4500207125272244e+32,
+            4.5929392021331765e+33
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        8.823465782539897e-20,
+        8.653731026155006e-20,
+        0.0,
+        5.218351877197594e-22
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 26,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.1334242338984804e+18,
+            2.440345071899717e+18,
+            4.120842912813256e+18,
+            5.294851218115446e+19,
+            3.446521229978086e+20,
+            3.973615819678244e+21,
+            4.234574680369443e+22,
+            5.4046435976236694e+23,
+            7.227487042922749e+24,
+            1.0534839185571605e+26,
+            1.6262991571730185e+27,
+            2.6537714695074305e+28,
+            4.506046955362332e+29,
+            7.851891091133051e+30,
+            1.3633721328867035e+32,
+            2.2361732939302583e+33,
+            2.9044011575011804e+34
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.1334242338984804e+18,
+            2.440345071899717e+18,
+            4.120842912813256e+18,
+            5.294851218115446e+19,
+            3.446521229978086e+20,
+            3.973615819678244e+21,
+            4.234574680369443e+22,
+            5.4046435976236694e+23,
+            7.227487042922749e+24,
+            1.0534839185571605e+26,
+            1.6262991571730185e+27,
+            2.6537714695074305e+28,
+            4.506046955362332e+29,
+            7.851891091133051e+30,
+            1.3633721328867035e+32,
+            2.2361732939302583e+33,
+            2.9044011575011804e+34
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        2.5082200862908293e-19,
+        2.453694616581455e-19,
+        0.0,
+        1.957369298312775e-21
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 27,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            2.5850746511425444e+18,
+            7.234223947328748e+18,
+            1.438200343174134e+19,
+            2.0539638195486497e+20,
+            1.47871515247733e+21,
+            1.8882155892364848e+22,
+            2.161168893013995e+23,
+            2.965862007401603e+24,
+            4.170343758530737e+25,
+            6.346477919608473e+26,
+            1.0080574309181396e+28,
+            1.6760156899245566e+29,
+            2.869701015463257e+30,
+            5.000472171909991e+31,
+            8.618485597133877e+32,
+            1.3947899997377634e+34,
+            1.7784337726290784e+35
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            2.5850746511425444e+18,
+            7.234223947328748e+18,
+            1.438200343174134e+19,
+            2.0539638195486497e+20,
+            1.47871515247733e+21,
+            1.8882155892364848e+22,
+            2.161168893013995e+23,
+            2.965862007401603e+24,
+            4.170343758530737e+25,
+            6.346477919608473e+26,
+            1.0080574309181396e+28,
+            1.6760156899245566e+29,
+            2.869701015463257e+30,
+            5.000472171909991e+31,
+            8.618485597133877e+32,
+            1.3947899997377634e+34,
+            1.7784337726290784e+35
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        6.896734503361768e-19,
+        6.728239281126318e-19,
+        0.0,
+        6.6255615472609585e-21
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 28,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            5.912659103131814e+18,
+            2.0719250747433935e+19,
+            4.831661463278693e+19,
+            7.558301980361093e+20,
+            5.960021690246968e+21,
+            8.336624778560996e+22,
+            1.0162184234283549e+24,
+            1.49140890662095e+25,
+            2.1985335166277127e+26,
+            3.49637776946788e+27,
+            5.732245999482209e+28,
+            9.771254951882506e+29,
+            1.7005138259048985e+31,
+            2.9912946487140708e+32,
+            5.1697467670636196e+33,
+            8.341220526060944e+34,
+            1.0547164461314034e+36
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            5.912659103131814e+18,
+            2.0719250747433935e+19,
+            4.831661463278693e+19,
+            7.558301980361093e+20,
+            5.960021690246968e+21,
+            8.336624778560996e+22,
+            1.0162184234283549e+24,
+            1.49140890662095e+25,
+            2.1985335166277127e+26,
+            3.49637776946788e+27,
+            5.732245999482209e+28,
+            9.771254951882506e+29,
+            1.7005138259048985e+31,
+            2.9912946487140708e+32,
+            5.1697467670636196e+33,
+            8.341220526060944e+34,
+            1.0547164461314034e+36
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.8494926422678028e-18,
+        1.799094114296273e-18,
+        0.0,
+        2.1009243728674197e-20
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 29,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.351179652428755e+19,
+            5.756693812907518e+19,
+            1.5585834729258707e+20,
+            2.6356792157285615e+21,
+            2.2620497471353496e+22,
+            3.433895441036865e+23,
+            4.433216262308688e+24,
+            6.93080516719144e+25,
+            1.0691773978338212e+27,
+            1.778462249781258e+28,
+            3.0165204718999607e+29,
+            5.29698066140813e+30,
+            9.426355287111832e+31,
+            1.6865736502890038e+33,
+            2.947499398507545e+34,
+            4.78457244968263e+35,
+            6.056252888452649e+36
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.351179652428755e+19,
+            5.756693812907518e+19,
+            1.5585834729258707e+20,
+            2.6356792157285615e+21,
+            2.2620497471353496e+22,
+            3.433895441036865e+23,
+            4.433216262308688e+24,
+            6.93080516719144e+25,
+            1.0691773978338212e+27,
+            1.778462249781258e+28,
+            3.0165204718999607e+29,
+            5.29698066140813e+30,
+            9.426355287111832e+31,
+            1.6865736502890038e+33,
+            2.947499398507545e+34,
+            4.78457244968263e+35,
+            6.056252888452649e+36
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        4.855488207006208e-18,
+        4.709082885322537e-18,
+        0.0,
+        6.349894819314334e-20
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 30,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 160.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            3.068488688014971e+19,
+            1.552005763293421e+20,
+            4.8230463452565045e+20,
+            8.735296518956165e+21,
+            8.110168321789146e+22,
+            1.3259938133077292e+24,
+            1.8057967678825548e+25,
+            2.9979113050634297e+26,
+            4.831908952956997e+27,
+            8.410285529049782e+28,
+            1.4778246723310147e+30,
+            2.682104082401328e+31,
+            4.901049387576301e+32,
+            8.969012991568591e+33,
+            1.5950793926123067e+35,
+            2.623728645757768e+36,
+            3.3502869716183105e+37
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            3.068488688014971e+19,
+            1.552005763293421e+20,
+            4.8230463452565045e+20,
+            8.735296518956165e+21,
+            8.110168321789146e+22,
+            1.3259938133077292e+24,
+            1.8057967678825548e+25,
+            2.9979113050634297e+26,
+            4.831908952956997e+27,
+            8.410285529049782e+28,
+            1.4778246723310147e+30,
+            2.682104082401328e+31,
+            4.901049387576301e+32,
+            8.969012991568591e+33,
+            1.5950793926123067e+35,
+            2.623728645757768e+36,
+            3.3502869716183105e+37
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.2472002412959002e-17,
+        1.2059046830277597e-17,
+        0.0,
+        1.8421179863757714e-19
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 31,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 320.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            6.885351570454175e+19,
+            4.053802654862938e+20,
+            1.42944729995177e+21,
+            2.754098577161006e+22,
+            2.7499912458270938e+23,
+            4.811688916786093e+24,
+            6.8942691340471005e+25,
+            1.2115406672082715e+27,
+            2.037752319837716e+28,
+            3.710808452573054e+29,
+            6.760039526458488e+30,
+            1.2707158212531428e+32,
+            2.39091114378014e+33,
+            4.492829541424186e+34,
+            8.168217771903875e+35,
+            1.368852151891106e+37,
+            1.7738007874748966e+38
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            6.885351570454175e+19,
+            4.053802654862938e+20,
+            1.42944729995177e+21,
+            2.754098577161006e+22,
+            2.7499912458270938e+23,
+            4.811688916786093e+24,
+            6.8942691340471005e+25,
+            1.2115406672082715e+27,
+            2.037752319837716e+28,
+            3.710808452573054e+29,
+            6.760039526458488e+30,
+            1.2707158212531428e+32,
+            2.39091114378014e+33,
+            4.492829541424186e+34,
+            8.168217771903875e+35,
+            1.368852151891106e+37,
+            1.7738007874748966e+38
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        1.8578997860294268e-21,
+        1.8237450102025933e-21,
+        0.0,
+        1.5553094310600174e-23
+      ]
+    },
+    {
+      "bound_method": "directed coefficient enclosures and positive interval upper sums, then analytic energy-power integration",
+      "component_budget": 3e-12,
+      "directed_precision": 40,
+      "endpoint_weight_upper": 2.7492708411573745,
+      "finite_offset_archive_accuracy_certified": false,
+      "finite_offset_initial_projector_term_bound": null,
+      "group": 32,
+      "horizon_enclosure": [
+        "1.900691605470150253001825084782803569673490976616944681",
+        "1.900691605470150253001825084782803586217103227677498178"
+      ],
+      "initial_projector_difference": 0.0,
+      "initial_scope": "declared affine-horizon limit; finite-delta input artifacts unchanged",
+      "intervals": 8,
+      "kappa_rounding_enclosure": [
+        "0.2383257996340176772128476855414756478363647724999341229",
+        "0.238325799634019563910669603501446545124053955078125"
+      ],
+      "lower": 320.0,
+      "lower_order_cancellation": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "per_sign": [
+        {
+          "I16_to_I32_upper": [
+            1.5202841557185217e+20,
+            1.0251635736753423e+21,
+            4.058079255297311e+21,
+            8.274834156391505e+22,
+            8.839995617865688e+23,
+            1.6467318954196546e+25,
+            2.4761948284664055e+26,
+            4.595068360171614e+27,
+            8.054637792805771e+28,
+            1.534182694017464e+30,
+            2.8978608852931858e+31,
+            5.6496083847353855e+32,
+            1.0963777168714967e+34,
+            2.121288128442828e+35,
+            3.9548019266096104e+36,
+            6.778653894568723e+37,
+            8.952826235787583e+38
+          ],
+          "sign": 1
+        },
+        {
+          "I16_to_I32_upper": [
+            1.5202841557185217e+20,
+            1.0251635736753423e+21,
+            4.058079255297311e+21,
+            8.274834156391505e+22,
+            8.839995617865688e+23,
+            1.6467318954196546e+25,
+            2.4761948284664055e+26,
+            4.595068360171614e+27,
+            8.054637792805771e+28,
+            1.534182694017464e+30,
+            2.8978608852931858e+31,
+            5.6496083847353855e+32,
+            1.0963777168714967e+34,
+            2.121288128442828e+35,
+            3.9548019266096104e+36,
+            6.778653894568723e+37,
+            8.952826235787583e+38
+          ],
+          "sign": -1
+        }
+      ],
+      "physical_scope": "vacuum projector on the fixed incoming collar, same operator and horizon state",
+      "state_or_metric_evolution": false,
+      "status": "PASS",
+      "vacuum_tail_error_upper": [
+        4.52532581430672e-21,
+        4.435045288223451e-21,
+        0.0,
+        4.175519200019899e-23
+      ]
+    }
+  ],
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-source-tail.json": "fc4b55b21dae0bd4ad97cabd46a22e27bf7f66728b420e3811ce35ef9b8bcaf0",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b"
+  },
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "paired_approximation_tail": [
+    7.213313839758272e-12,
+    -5.2994369647130365e-11,
+    0.0,
+    2.8038852444289067e-11
+  ],
+  "payload": {
+    "bytes": 92552,
+    "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+    "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+  },
+  "remaining_initial_term": {
+    "definition": "2*sum_group,sign factor * integral_Emax^infinity ||V_A(E)|| * ||P_delta(E)-P_affine(E)||op dE",
+    "minimal_missing_connection": "Bound the actual finite-offset initialization projector difference with integrable energy-weighted decay, or keep the archived-mode accuracy claim separate.",
+    "value_or_bound": null
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_vacuum_tail_bound.py --check",
+  "residuals": {
+    "coefficient_bound_replay": 0.0,
+    "lower_order_recurrence": 0.0
+  },
+  "schema": "NSC-INCOMING-VACUUM-TAIL-BOUND-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "angular_compact_complement_certified": false,
+    "changed_normal_jets_covered": false,
+    "constraints_solved": false,
+    "finite_middle_band_accuracy_certified": false,
+    "finite_offset_archive_accuracy_certified": false,
+    "finite_offset_archive_horizon_offset": 1e-10,
+    "finite_offset_initial_projector_term_bound": null,
+    "full_source_convergence_claimed": false,
+    "horizon_initial_projector_difference": 0.0,
+    "metric_evolution": false,
+    "new_field_or_scattering_solves": 0,
+    "same_fixed_incoming_surface": "rho=1; a^2=3*pi/2-4; r^2=2",
+    "seeds_stress_scales_and_archived_outputs_changed": false,
+    "stored_order16_tail_approximation_has_this_limiting_vacuum_error_bound": true,
+    "subgap_accuracy_certified": false,
+    "vacuum_definition": "declared affine-horizon occupied projector of the same stationary Dirac operator"
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-vacuum-tail-bound.md": "ae2fd1e7bb1faffc6c76945e79fb738e7cb237a673794521a175031f81804318",
+    "scripts/derive_nsc_incoming_vacuum_tail_bound.py": "486064f14899cfb45442e2478970194d63f58a65e90bc0f74846f6e675243d78",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "tests/test_nsc_incoming_vacuum_tail_bound.py": "146e2178487b0bc8165916fee5932b8053be79bdc6c6906d6695f72378250a24"
+  },
+  "status": "PASS: affine-horizon retained vacuum-tail error bounded; finite-offset archive link OPEN",
+  "thermal_source_bound": {
+    "decimal_upper_bounds": [
+      "3.97000589853294195134024e-459",
+      "3.85771688201707671100489e-459",
+      "3.85771688201707671100489e-459",
+      "5.13153831376201998569014e-461"
+    ],
+    "exact_zero_components": [],
+    "natural_log_upper_bounds": [
+      -1055.5077901037923,
+      -1055.536482157127,
+      -1055.536482157127,
+      -1059.856322389793
+    ],
+    "scope": "same horizon/incoming state correction with current-normalized compression; includes horizon coherence, not vacuum mode error",
+    "source_trace_norm": "2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))"
+  },
+  "tolerances": {
+    "all_groups_component_upper": 9.6e-11,
+    "coefficient_bound_replay": 0.0,
+    "lower_order_recurrence": 0.0,
+    "per_group_component_upper": 3e-12
+  }
+}

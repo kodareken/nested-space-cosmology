@@ -1,0 +1,592 @@
+{
+  "accountable_author": "Douglas Ek",
+  "coefficient": {
+    "input_interpretation": {
+      "geometry": "hulls contain exact owner expressions and stored incoming jet values",
+      "harmonic": "exact EulerGamma/2-H4/4 plus stored value",
+      "ledger": "unchanged declared binary A/C_Weyl coefficients",
+      "mass_angular": "existing definitions and stored labels; zero-angular reference coefficient is zero"
+    },
+    "local_channel_intervals": {
+      "compact/einstein_bulk": [
+        -2.7011131922835885,
+        -2.701113192283587
+      ],
+      "compact/weyl_bulk": [
+        -0.1297124096177879,
+        -0.12971240961778782
+      ],
+      "light/LLL_geometry_bar": [
+        0.06332460233955717,
+        0.06332460233955721
+      ],
+      "light/WZ_Euler": [
+        0.015744754077530263,
+        0.015744754077530274
+      ],
+      "light/WZ_Weyl": [
+        -0.05078057109196378,
+        -0.050780571091963746
+      ],
+      "light/WZ_boxR": [
+        -0.00715161302905144,
+        -0.007151613029051433
+      ],
+      "light/bar_radial_R2_squared": [
+        0.011299028530693636,
+        0.011299028530693644
+      ]
+    },
+    "local_total_interval": [
+      -2.7983894010746106,
+      -2.7983894010746093
+    ],
+    "per_group_reference": [
+      {
+        "group": 1,
+        "reference_order2_interval": [
+          0.18997380701867148,
+          0.18997380701867164
+        ],
+        "reference_order4_interval": [
+          0.0291932500636286,
+          0.029193250063628638
+        ]
+      },
+      {
+        "group": 2,
+        "reference_order2_interval": [
+          0.2532984093582286,
+          0.2532984093582289
+        ],
+        "reference_order4_interval": [
+          0.016218472257571444,
+          0.01621847225757147
+        ]
+      },
+      {
+        "group": 3,
+        "reference_order2_interval": [
+          0.3166230116977858,
+          0.31662301169778606
+        ],
+        "reference_order4_interval": [
+          0.01158462304112246,
+          0.011584623041122476
+        ]
+      },
+      {
+        "group": 4,
+        "reference_order2_interval": [
+          0.3799476140373429,
+          0.3799476140373433
+        ],
+        "reference_order4_interval": [
+          0.009122890644883936,
+          0.00912289064488395
+        ]
+      },
+      {
+        "group": 5,
+        "reference_order2_interval": [
+          0.4432722163769001,
+          0.4432722163769005
+        ],
+        "reference_order4_interval": [
+          0.007568620386866674,
+          0.0075686203868666835
+        ]
+      },
+      {
+        "group": 6,
+        "reference_order2_interval": [
+          0.5065968187164572,
+          0.5065968187164577
+        ],
+        "reference_order4_interval": [
+          0.0064873889030285774,
+          0.006487388903028586
+        ]
+      },
+      {
+        "group": 7,
+        "reference_order2_interval": [
+          0.5699214210560144,
+          0.569921421056015
+        ],
+        "reference_order4_interval": [
+          0.005686996765641934,
+          0.005686996765641943
+        ]
+      },
+      {
+        "group": 8,
+        "reference_order2_interval": [
+          0.6332460233955715,
+          0.6332460233955722
+        ],
+        "reference_order4_interval": [
+          0.005068272580491076,
+          0.005068272580491084
+        ]
+      },
+      {
+        "group": 9,
+        "reference_order2_interval": [
+          0.6965706257351286,
+          0.6965706257351294
+        ],
+        "reference_order4_interval": [
+          0.004574440893161175,
+          0.004574440893161183
+        ]
+      },
+      {
+        "group": 10,
+        "reference_order2_interval": [
+          0.7598952280746859,
+          0.7598952280746865
+        ],
+        "reference_order4_interval": [
+          0.004170464294804085,
+          0.004170464294804091
+        ]
+      },
+      {
+        "group": 11,
+        "reference_order2_interval": [
+          0.8232198304142431,
+          0.8232198304142437
+        ],
+        "reference_order4_interval": [
+          0.0038334570790623415,
+          0.003833457079062346
+        ]
+      },
+      {
+        "group": 12,
+        "reference_order2_interval": [
+          0.8865444327538001,
+          0.886544432753801
+        ],
+        "reference_order4_interval": [
+          0.0035477908063437534,
+          0.0035477908063437586
+        ]
+      },
+      {
+        "group": 13,
+        "reference_order2_interval": [
+          -5e-324,
+          5e-324
+        ],
+        "reference_order4_interval": [
+          -5e-324,
+          5e-324
+        ]
+      },
+      {
+        "group": 14,
+        "reference_order2_interval": [
+          0.19122052274805842,
+          0.1912205227480586
+        ],
+        "reference_order4_interval": [
+          0.009887043759024789,
+          0.00988704375902481
+        ]
+      },
+      {
+        "group": 15,
+        "reference_order2_interval": [
+          0.35897448063502985,
+          0.3589744806350302
+        ],
+        "reference_order4_interval": [
+          0.014023563496884797,
+          0.014023563496884819
+        ]
+      },
+      {
+        "group": 16,
+        "reference_order2_interval": [
+          0.5127537271530729,
+          0.5127537271530734
+        ],
+        "reference_order4_interval": [
+          0.014083416506401972,
+          0.014083416506401991
+        ]
+      },
+      {
+        "group": 17,
+        "reference_order2_interval": [
+          0.6583667936370144,
+          0.6583667936370151
+        ],
+        "reference_order4_interval": [
+          0.013090912411296285,
+          0.013090912411296304
+        ]
+      },
+      {
+        "group": 18,
+        "reference_order2_interval": [
+          0.7989317613334983,
+          0.7989317613334991
+        ],
+        "reference_order4_interval": [
+          0.011930722657486669,
+          0.011930722657486686
+        ]
+      },
+      {
+        "group": 19,
+        "reference_order2_interval": [
+          0.9361947089362959,
+          0.9361947089362966
+        ],
+        "reference_order4_interval": [
+          0.010844277481324015,
+          0.010844277481324029
+        ]
+      },
+      {
+        "group": 20,
+        "reference_order2_interval": [
+          1.0711919292586363,
+          1.0711919292586374
+        ],
+        "reference_order4_interval": [
+          0.009886312925084947,
+          0.009886312925084961
+        ]
+      },
+      {
+        "group": 21,
+        "reference_order2_interval": [
+          1.2045719993623134,
+          1.2045719993623147
+        ],
+        "reference_order4_interval": [
+          0.009056596799651985,
+          0.009056596799652001
+        ]
+      },
+      {
+        "group": 22,
+        "reference_order2_interval": [
+          1.3367596738619387,
+          1.33675967386194
+        ],
+        "reference_order4_interval": [
+          0.008340071167201717,
+          0.008340071167201731
+        ]
+      },
+      {
+        "group": 23,
+        "reference_order2_interval": [
+          -5e-324,
+          5e-324
+        ],
+        "reference_order4_interval": [
+          -5e-324,
+          5e-324
+        ]
+      },
+      {
+        "group": 24,
+        "reference_order2_interval": [
+          0.0767905750494094,
+          0.07679057504940948
+        ],
+        "reference_order4_interval": [
+          0.0005837863262631988,
+          0.0005837863262632017
+        ]
+      },
+      {
+        "group": 25,
+        "reference_order2_interval": [
+          0.19153476264916178,
+          0.19153476264916194
+        ],
+        "reference_order4_interval": [
+          0.0023777558465104777,
+          0.002377755846510484
+        ]
+      },
+      {
+        "group": 26,
+        "reference_order2_interval": [
+          0.32642181530525505,
+          0.3264218153052553
+        ],
+        "reference_order4_interval": [
+          0.0041996420659628515,
+          0.00419964206596286
+        ]
+      },
+      {
+        "group": 27,
+        "reference_order2_interval": [
+          0.4699849081837136,
+          0.46998490818371397
+        ],
+        "reference_order4_interval": [
+          0.005487079546572315,
+          0.005487079546572325
+        ]
+      },
+      {
+        "group": 28,
+        "reference_order2_interval": [
+          0.6162339672056419,
+          0.6162339672056425
+        ],
+        "reference_order4_interval": [
+          0.006222263098031289,
+          0.006222263098031299
+        ]
+      },
+      {
+        "group": 29,
+        "reference_order2_interval": [
+          0.762380504637185,
+          0.7623805046371855
+        ],
+        "reference_order4_interval": [
+          0.006552785958224701,
+          0.006552785958224711
+        ]
+      },
+      {
+        "group": 30,
+        "reference_order2_interval": [
+          0.9072629384648176,
+          0.9072629384648185
+        ],
+        "reference_order4_interval": [
+          0.006623774083616252,
+          0.006623774083616261
+        ]
+      },
+      {
+        "group": 31,
+        "reference_order2_interval": [
+          1.0504930675632975,
+          1.0504930675632986
+        ],
+        "reference_order4_interval": [
+          0.006539862447940273,
+          0.006539862447940283
+        ]
+      },
+      {
+        "group": 32,
+        "reference_order2_interval": [
+          1.1920321014715642,
+          1.1920321014715656
+        ],
+        "reference_order4_interval": [
+          0.006368812748288305,
+          0.006368812748288316
+        ]
+      }
+    ],
+    "precision": 50,
+    "reference_order_intervals": {
+      "2": [
+        19.121209676090732,
+        19.121209676090754
+      ],
+      "4": [
+        0.25315534704237286,
+        0.2531553470423733
+      ]
+    },
+    "reference_total_interval": [
+      19.374365023133105,
+      19.374365023133127
+    ],
+    "strictly_positive": true,
+    "total_coefficient_interval": [
+      16.575975622058497,
+      16.575975622058518
+    ],
+    "zero_local_channels": [
+      "compact/euler_bulk_diagnostic",
+      "compact/maxwell_bulk",
+      "light/cylinder",
+      "light/WZ_gauge"
+    ]
+  },
+  "control_tolerance": 3e-11,
+  "controls": {
+    "independent_mixed_response_residual": 1.7369439220260574e-13,
+    "local_channel_response_residuals": {
+      "compact/einstein_bulk": 1.5865087021893487e-13,
+      "compact/euler_bulk_diagnostic": 7.035082269026342e-15,
+      "compact/maxwell_bulk": 2.9764087200781755e-14,
+      "compact/weyl_bulk": 3.189722791452354e-16,
+      "light/LLL_geometry_bar": 3.317983908457389e-14,
+      "light/WZ_Euler": 1.968721409853491e-15,
+      "light/WZ_Weyl": 6.8530250918463764e-15,
+      "light/WZ_boxR": 8.144933295525791e-16,
+      "light/WZ_gauge": 3.2421242480644398e-15,
+      "light/bar_radial_R2_squared": 8.799655882435475e-17,
+      "light/cylinder": 9.7637275884093e-15
+    },
+    "new_reference_nodes_prepared": false,
+    "previous_coefficient_distance": 1.801936377887614e-11,
+    "previous_small_probe_coefficient": 16.575975622040477,
+    "reference_integrated_response_residuals": {
+      "2": 1.3877787807814457e-16,
+      "4": 2.168404344971009e-18
+    },
+    "stored_mixed_payload": {
+      "path": "results/development/artifacts/nsc-incoming-constraint-germ.7c9600576f9453d85868371b8a0bf37680f011d364337460591c824c1277c02a.json",
+      "sha256": "7c9600576f9453d85868371b8a0bf37680f011d364337460591c824c1277c02a"
+    },
+    "stored_mixed_v": -0.005,
+    "stored_node_residuals": {
+      "1": 0.0,
+      "2": 1.5856456772600502e-18,
+      "3": 1.8295911660692887e-19,
+      "4": 5.421010862427522e-19
+    },
+    "stored_probe_v": 0.01,
+    "stored_reference_payload": {
+      "path": "results/development/artifacts/nsc-incoming-reference-response.6c0ec6e285b43517119c1ce355cb6181b9fa183a4b44e59d1a1365af3798e403.npz",
+      "sha256": "6c0ec6e285b43517119c1ce355cb6181b9fa183a4b44e59d1a1365af3798e403"
+    },
+    "total_v_response_residual": 1.801891968966629e-13
+  },
+  "failures": {},
+  "input_hashes": {
+    "results/development/nsc-incoming-constraint-germ.json": "5fa766e25468781af5c13e1da5d274a6c2ad797d6e35a1919c100b429fac4f72",
+    "results/development/nsc-incoming-joint-constraints.json": "490345b115bb7243c5af6665c86f68f4c980ab81da6b72cb94d08120aa5f659a",
+    "results/development/nsc-incoming-local-constraints.json": "a0c61be6ce7a03793e0b2afe091efcd8bb12d7ee35aa727800b66986d8617f1c",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-reference-band-bulk.json": "fdbe2110608002707e8b29af07164a0287d25fc2c887f360fa0a132944a06e68",
+    "src/recursive_horizons/nsc_general_ks_reference.py": "e789fb856d3a1d76c08ee02c4c0c53746b3e8831b57ab0ac3150bc01153851f6",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_lapse_coefficient.py": "c3ba0efbf27a235dfdc025d5f0109aea0fd32955218b4eb70c4991a7092ba808",
+    "src/recursive_horizons/nsc_incoming_local_constraints.py": "820f43cbc4849074210b7298b1b9ac0c43abf22cb2b4f127ec407a0fc2519ac3",
+    "src/recursive_horizons/nsc_incoming_reference_response.py": "1db8825d0840717c360a38685a016219000359e76a582f339913dc0d5a29ba12",
+    "src/recursive_horizons/nsc_light_restoration_action.py": "68b2d11ee79a1e1b1ba42eaa71354266fe26e0341e219771a5e5f67473c12bdc",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9"
+  },
+  "payload": {
+    "bytes": 19108,
+    "path": "results/development/artifacts/nsc-incoming-shift-coefficient.cc69646003a3bfab02f3fc5f99bed85b9c0a8b4bdcbeb6b0f564695939971c38.json",
+    "sha256": "cc69646003a3bfab02f3fc5f99bed85b9c0a8b4bdcbeb6b0f564695939971c38"
+  },
+  "proof": {
+    "bloch_normalization_residuals": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "local": {
+      "closed_form_residuals": {
+        "compact/einstein_bulk": "0",
+        "compact/euler_bulk_diagnostic": "0",
+        "compact/maxwell_bulk": "0",
+        "compact/weyl_bulk": "0",
+        "light/LLL_geometry_bar": "0",
+        "light/WZ_Euler": "0",
+        "light/WZ_Weyl": "0",
+        "light/WZ_boxR": "0",
+        "light/WZ_gauge": "0",
+        "light/bar_radial_R2_squared": "0",
+        "light/cylinder": "0"
+      },
+      "coefficients": {
+        "compact/einstein_bulk": "-16*pi*A*a*r",
+        "compact/weyl_bulk": "32*pi*C_W*a*r*(A2 + 2*H_a**2 - 5*H_a*H_r + 2*H_r**2 + R2)/3",
+        "light/LLL_geometry_bar": "a*q/(12*pi*r)",
+        "light/WZ_Euler": "11*a*r*(H_r**2 + r**(-2))/(180*pi)",
+        "light/WZ_Weyl": "-a*r*(A2 - 2*H_a*H_r + 3*H_r**2 - R2 + (A2 + 2*H_a**2 - 5*H_a*H_r + 2*H_r**2 + R2)*log(r) + r**(-2))/(30*pi)",
+        "light/WZ_boxR": "a*r*(A2 - 2*H_a**2 + H_a*H_r - 2*H_r**2 + R2)/(60*pi)",
+        "light/bar_radial_R2_squared": "-a*h_q*r*(A2 + 2*H_a**2 - 5*H_a*H_r + 2*H_r**2 + R2)/(30*pi)"
+      },
+      "plane_residuals": {
+        "compact/einstein_bulk": "0",
+        "compact/euler_bulk_diagnostic": "0",
+        "compact/maxwell_bulk": "0",
+        "compact/weyl_bulk": "0",
+        "light/LLL_geometry_bar": "0",
+        "light/WZ_Euler": "0",
+        "light/WZ_Weyl": "0",
+        "light/WZ_boxR": "0",
+        "light/WZ_gauge": "0",
+        "light/bar_radial_R2_squared": "0",
+        "light/cylinder": "0"
+      }
+    },
+    "odd_reference_full_line_residual": "0",
+    "reference_coefficients": {
+      "2": "L0**2*a*d/(12*pi*r*(L0**2 + m**2))",
+      "4": "L0**2*a*d*(-20*H_r**2*m**4/(L0**2 + m**2)**4 + 2*m**2*(H_r**2 + 4*R2)/(L0**2 + m**2)**3 + (A2 + 2*H_a**2 - 5*H_a*H_r + 2*H_r**2 + R2)/(L0**2 + m**2)**2)/(120*pi*r)"
+    },
+    "reference_compact_reduction_residuals": [
+      "0",
+      "0"
+    ],
+    "reference_moments": {
+      "p2_gap11": "32/(315*M**8)",
+      "p2_gap5": "2/(3*M**2)",
+      "p4_gap11": "16/(315*M**6)",
+      "p6_gap11": "4/(63*M**4)"
+    },
+    "weyl_trace": {
+      "conditions": [
+        "formal b.dot(b)=1",
+        "first order in the spatial gradient"
+      ],
+      "first_star_order_residual": "0",
+      "higher_spatial_orders_at_linear_v": "r(T,z)=r_background(T)+v*T*z; each extra spatial derivative introduces another v",
+      "rank_one_block_residual": "0",
+      "trace_first_spatial_correction": "epsilon*b.dot(b_z.cross(b_k))/2"
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_shift_coefficient.py --check",
+  "residuals": {
+    "directed_replay": 0.0,
+    "original_density_derivatives": 2.220446049250313e-16,
+    "stored_independent_mixed_response": 1.7369439220260574e-13,
+    "stored_local_channel_responses": 1.5865087021893487e-13,
+    "stored_reference_nodes": 1.5856456772600502e-18,
+    "stored_reference_order_responses": 1.3877787807814457e-16,
+    "stored_total_v_response": 1.801891968966629e-13
+  },
+  "schema": "NSC-INCOMING-SHIFT-COEFFICIENT-v1",
+  "scope": {
+    "Cauchy_surface_solution": false,
+    "Gamma_rest_assigned": false,
+    "c_u_proof_rerun": false,
+    "c_v2_newly_certified": false,
+    "coefficient_fixed_by_existing_action": true,
+    "extended_stationarity": "OPEN",
+    "metric_evolution": false,
+    "parent_preparation_or_endpoints_completed": false,
+    "physical_initial_data_selected": false,
+    "physical_source_accuracy_certified": false,
+    "physical_source_cancels_in_response": true,
+    "probe_reference_or_mode_generators_run": false,
+    "same_full_Weyl_and_2D_local_Euler": true,
+    "source_state_or_scale_refit": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-shift-coefficient.md": "e7d35776b10a10bc81f46a209604eb66dc1b3edca2c3ce1d5afb2be5dc442e8b",
+    "scripts/derive_nsc_incoming_shift_coefficient.py": "08d445d6efd2ff4e32301438f32f17633fd8541847ad9c278346b8e36456fdbc",
+    "src/recursive_horizons/nsc_incoming_shift_coefficient.py": "a15b9118bf33e6e57217af068265bf9b7ac376e257145afbd594b04d4fd99709",
+    "tests/test_nsc_incoming_shift_coefficient.py": "aac8634f9d56e979b26da743db231b1335075f84666f321bef4a907428bf294e"
+  },
+  "status": "PASS: closed strictly positive c_v; physical initial data and stationarity OPEN"
+}

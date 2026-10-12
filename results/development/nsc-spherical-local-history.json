@@ -1,0 +1,321 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, structure, scope",
+    "fields": "all",
+    "float_atol": 3e-10,
+    "float_rtol": 3e-10
+  },
+  "coordinate_verification": {
+    "radial_difference_step": 0.001,
+    "smaller_time_step_cancellation_diagnostic": {
+      "second_relative_error": 1.4142211456756512e-07,
+      "step": 2e-05
+    },
+    "stencil": "fourth-order centered; errors normalized by max(1,max_abs(exact_jet))",
+    "time_difference_step": 8e-05
+  },
+  "domain": {
+    "Euler_BoxR": "same constant coefficients; fixed boundary derivatives zero; Euler bulk integration is a diagnostic only",
+    "GHY": "owned geometric boundary term retained; compact family has zero boundary-jet variation",
+    "action": "-4*pi*integral sqrt(-det(g2))*r^2*(A*R+C_gauge*q_mag^2/(2*r^4)+C_Weyl*C^2+C_Euler*E4+C_boxR*BoxR)",
+    "amplitudes": [
+      0.002,
+      0.001,
+      0.003,
+      0.001
+    ],
+    "baseline": "S[g(alpha)]-S[g(0)] only for reporting; fixed g(0), not a vacuum normalization or subtraction",
+    "force_convention": "force is minus action gradient; both are stored",
+    "history": "same supplied raw-KS compact harmonic family, pulled into fixed PG coordinates",
+    "history_selected": false,
+    "metric_coordinate_jets": "exact second-order Taylor products of the owned raw-KS metric and fixed chart",
+    "metric_coordinates": [
+      "N_K",
+      "beta_K",
+      "a_K=q_ADM",
+      "r_K"
+    ],
+    "multiplicity": "4*pi sphere integration only; coefficients already include their field content",
+    "omega": 0.4,
+    "radial_support": [
+      -1.0,
+      1.0
+    ],
+    "seam": "one smooth geometry across fixed rho=0; no additional oriented term",
+    "signature": "+---; same Riemann sign as nsc_finite_terms",
+    "time_support": [
+      0.0,
+      0.05
+    ]
+  },
+  "evaluations": {
+    "128_128": {
+      "Euler_bulk_residual": 8.08232980435141e-12,
+      "channel_action_gradients": {
+        "einstein_bulk": [
+          0.2159814029542979,
+          0.32254479282184156,
+          -0.0162408092902443,
+          0.42494647664393875
+        ],
+        "euler_bulk_diagnostic": [
+          -1.9819936332050127e-12,
+          -8.08232980435141e-12,
+          4.827871929731968e-12,
+          -1.2985181529854325e-12
+        ],
+        "maxwell_bulk": [
+          -0.03604932691871645,
+          -3.359675427527612e-20,
+          -0.019587058140908272,
+          0.06809315784527072
+        ],
+        "weyl_bulk": [
+          9.237457168853785,
+          83.94295448593567,
+          -30.34997895479303,
+          76.59506253807726
+        ]
+      },
+      "fixed_baseline_action_difference": {
+        "einstein_bulk": 0.0013879312570428404,
+        "euler_bulk_diagnostic": 1.1934897514720433e-15,
+        "maxwell_bulk": -6.278957767653914e-05,
+        "weyl_bulk": 0.043974575920743345
+      },
+      "fixed_boundary_derivatives": {
+        "boxR": 0.0,
+        "einstein_GHY": 0.0,
+        "euler": 0.0
+      },
+      "local_action_force": [
+        -9.417389244889367,
+        -84.26549927875752,
+        30.385806822224183,
+        -77.08810217256647
+      ],
+      "local_action_gradient": [
+        9.417389244889367,
+        84.26549927875752,
+        -30.385806822224183,
+        77.08810217256647
+      ]
+    },
+    "192_128": {
+      "Euler_bulk_residual": 3.061033089125193e-13,
+      "channel_action_gradients": {
+        "einstein_bulk": [
+          0.21598140291644655,
+          0.3225447926929617,
+          -0.016240809203070312,
+          0.42494647685132314
+        ],
+        "euler_bulk_diagnostic": [
+          5.20189265132039e-15,
+          2.0421946066056028e-14,
+          3.3142677247241165e-14,
+          3.061033089125193e-13
+        ],
+        "maxwell_bulk": [
+          -0.0360493269187165,
+          -1.5654832861225358e-19,
+          -0.01958705814090829,
+          0.06809315784527079
+        ],
+        "weyl_bulk": [
+          9.237457168853481,
+          83.94295448594788,
+          -30.349978954794633,
+          76.59506253808915
+        ]
+      },
+      "fixed_baseline_action_difference": {
+        "einstein_bulk": 0.0013879312573075175,
+        "euler_bulk_diagnostic": 4.163336342344337e-16,
+        "maxwell_bulk": -6.278957767653914e-05,
+        "weyl_bulk": 0.043974575920752906
+      },
+      "fixed_boundary_derivatives": {
+        "boxR": 0.0,
+        "einstein_GHY": 0.0,
+        "euler": 0.0
+      },
+      "local_action_force": [
+        -9.417389244851211,
+        -84.26549927864085,
+        30.385806822138612,
+        -77.08810217278575
+      ],
+      "local_action_gradient": [
+        9.417389244851211,
+        84.26549927864085,
+        -30.385806822138612,
+        77.08810217278575
+      ]
+    },
+    "192_160": {
+      "Euler_bulk_residual": 2.5276759074011994e-14,
+      "channel_action_gradients": {
+        "einstein_bulk": [
+          0.21598140291644982,
+          0.32254479269293657,
+          -0.016240809202802034,
+          0.4249464768526405
+        ],
+        "euler_bulk_diagnostic": [
+          4.752412718063003e-15,
+          2.5276759074011994e-14,
+          -1.2435040705380969e-14,
+          4.648323799226906e-15
+        ],
+        "maxwell_bulk": [
+          -0.03604932691871673,
+          -4.797820383086956e-20,
+          -0.019587058140908425,
+          0.06809315784527126
+        ],
+        "weyl_bulk": [
+          9.23745716885355,
+          83.94295448594846,
+          -30.34997895479486,
+          76.59506253808968
+        ]
+      },
+      "fixed_baseline_action_difference": {
+        "einstein_bulk": 0.0013879312573088498,
+        "euler_bulk_diagnostic": 0.0,
+        "maxwell_bulk": -6.27895776765669e-05,
+        "weyl_bulk": 0.04397457592075331
+      },
+      "fixed_boundary_derivatives": {
+        "boxR": 0.0,
+        "einstein_GHY": 0.0,
+        "euler": 0.0
+      },
+      "local_action_force": [
+        -9.417389244851284,
+        -84.2654992786414,
+        30.38580682213857,
+        -77.08810217278759
+      ],
+      "local_action_gradient": [
+        9.417389244851284,
+        84.2654992786414,
+        -30.38580682213857,
+        77.08810217278759
+      ]
+    }
+  },
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_independent_term": "none introduced",
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "extended_stationarity": "OPEN",
+    "full_renormalized_source": "OPEN",
+    "homogeneous_nonexistence": "preserved in its original scope; no rerun",
+    "metric_timestep": false,
+    "nulls": null,
+    "quantum_reference_history": "OPEN: homogeneous Bloch subtraction is not the general spatially varying reference",
+    "spatially_varying_local_action": "PASS",
+    "updated_constraints": null
+  },
+  "independent_action_variations": {
+    "einstein_bulk": [
+      5.1483539653673915e-12,
+      2.9355018416055145e-11,
+      9.48843087433815e-12,
+      3.8330172369427373e-11
+    ],
+    "euler_bulk_diagnostic": [
+      2.7708051488448277e-12,
+      4.188613101418348e-12,
+      4.150901301638955e-12,
+      2.086316494971395e-12
+    ],
+    "maxwell_bulk": [
+      5.704395289463093e-13,
+      1.156481837535833e-13,
+      7.188104278466056e-13,
+      9.26633769715579e-13
+    ],
+    "weyl_bulk": [
+      2.8066438062523957e-13,
+      2.984279490192421e-13,
+      8.881784197001252e-14,
+      2.5579538487363607e-13
+    ]
+  },
+  "inherited_curvature_limits": {
+    "homogeneous": {
+      "C2": 1.5543122344752192e-15,
+      "E4": 2.1094237467877974e-15,
+      "R": 4.440892098500626e-16
+    },
+    "static": {
+      "C2": 6.661338147750939e-16,
+      "E4": 1.915134717478395e-15,
+      "R": 0.0
+    }
+  },
+  "input_hashes": {
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "docs/nsc-smooth-seam-variation.md": "5eb9f197b6a499069a7502a8b6ac5d9ac20b87b1512fcfbd2f06d4d82926c84a",
+    "results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_general_ks_local_history.py": "533678f69c994dc5cac598bc54ca52922d58bdf5716371431306b82f73b7b866",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "Euler_bulk_variation": 2.5276759074011994e-14,
+    "action_complex_step_vs_independent_variation": 3.8330172369427373e-11,
+    "base_Ricci_identity": 8.327560863108374e-12,
+    "existing_static_homogeneous_limits": 2.1094237467877974e-15,
+    "metric_first_relative": 3.017652794312653e-11,
+    "metric_mixed_relative": 4.5945290072513245e-09,
+    "metric_second_relative": 1.9089826300676253e-08,
+    "metric_value": 1.3322676295501878e-15,
+    "spatial_quadrature": 1.3173351298689795e-12,
+    "time_quadrature": 2.0738438744061227e-10
+  },
+  "reproducer": "python3 scripts/derive_nsc_spherical_local_history.py --check",
+  "schema": "NSC-SPHERICAL-LOCAL-HISTORY-v1",
+  "source_hashes": {
+    "docs/nsc-spherical-local-history.md": "fed37dec8ae659ff5c2b512c0c3d503a2e147c4e2532f391b295c8387175ce75",
+    "scripts/derive_nsc_spherical_local_history.py": "33574b1cc634dabd8ccfc7134afbbf3e4c2a65f579c2c2f69b34bf54af0de39a",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9",
+    "tests/test_nsc_spherical_local_history.py": "dec8ad845fb387576d5d92136abbb1532ad6f368bff106ee9f8c696f70d013d7"
+  },
+  "status": "PASS: same-action local variation on the supplied spherical spacetime history",
+  "tolerances": {
+    "Euler_bulk_variation": 3e-11,
+    "action_complex_step_vs_independent_variation": 3e-08,
+    "base_Ricci_identity": 3e-11,
+    "existing_static_homogeneous_limits": 3e-11,
+    "metric_first_relative": 3e-08,
+    "metric_mixed_relative": 3e-08,
+    "metric_second_relative": 3e-08,
+    "metric_value": 3e-11,
+    "spatial_quadrature": 3e-08,
+    "time_quadrature": 3e-08
+  }
+}

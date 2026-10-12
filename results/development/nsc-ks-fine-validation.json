@@ -1,0 +1,1101 @@
+{
+  "accountable_author": "Douglas Ek",
+  "all_segments_covered": true,
+  "continuous_residual_integral_upper": [
+    {
+      "exponent": -165,
+      "mantissa": "675332779950136481083310394987515941"
+    },
+    {
+      "exponent": -160,
+      "mantissa": "104608397718720894741128086435553033"
+    }
+  ],
+  "method": {
+    "precision_bits": 120,
+    "retained_profile_index": 1024,
+    "time_Taylor_degree": 8
+  },
+  "metric_timestep": false,
+  "numerical_field_error_relative_to_saved_upstream": {
+    "growth_upper": {
+      "exponent": -119,
+      "mantissa": "748452125733630410705937182870684609"
+    },
+    "physical_local_gate": "OPEN: residual and source provenance required",
+    "requires_continuous_cone_bounds": true,
+    "row_axial_envelope_error_upper": {
+      "exponent": -162,
+      "mantissa": "471230973592385390850822750358125927"
+    },
+    "row_field_error_upper": {
+      "exponent": -164,
+      "mantissa": "380261517462855126756297131592457703"
+    },
+    "weighted_F_error_upper": {
+      "exponent": -164,
+      "mantissa": "537770995244543240915192614934779257"
+    },
+    "weighted_F_z_error_upper": {
+      "exponent": -160,
+      "mantissa": "185299976321243854158434843125720407"
+    }
+  },
+  "physical_local_gate": "OPEN",
+  "proof_CPU_seconds": 6451.743006,
+  "required_segments": 246,
+  "schema": "NSC-KS-FINE-HISTORY-VALIDATION-v1",
+  "segment_proofs": [
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000000.json",
+      "sha256": "36c9e964b4717348b365891a8b2ad7cce8ba02ae03bfb0084590b5e21f9e5ab4"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000001.json",
+      "sha256": "7ae73e0402bfcf35484cfba604573c7c17c199d4d58dea960ea4083ec8ddb524"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000002.json",
+      "sha256": "0f16887d7ec42614e6bb68f77aa808686304585e229eaa5adc18104b63a1d8b5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000003.json",
+      "sha256": "741009cd928092738fda209157e3135f87eeda8e2543000865316a5c6c888faf"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000004.json",
+      "sha256": "b4e1aee116ecab3d78fb8296e4f74a3256b643a8d9da691c9005b50fbadb2c07"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000005.json",
+      "sha256": "d591c84d4d30c7ef9454fa25ef1f9fa65aebd8e67fd9391201e4be148b2d62fa"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000006.json",
+      "sha256": "83f339ba8f923c2a077ceb12f9466b2d6c4fc9eeb15b23897d984b54f8f0c384"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000007.json",
+      "sha256": "cbe30f3ebafd565cc46cd05d3b715d7316b25be391f4e1dccf3f206915e9666e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000008.json",
+      "sha256": "da3ec52b5718420e0151e13e266168fef18be565257da36a0e04cd40858bdff7"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000009.json",
+      "sha256": "66a8ac9d2a598748de644333a7fbc1ec6813dbf1daff78693ab0f1c3a63ff4df"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000010.json",
+      "sha256": "c15b6a6eb3cecca2456b6c90dbd9e3bec6e9ad24ac8d75cd289148ab8c720d27"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000011.json",
+      "sha256": "5cacfab0f37d4fdcfb13387b56215e5669603e493284132e209b141a69630936"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000012.json",
+      "sha256": "d151a9f7933a89bd379af27be78bb1919c8b403edaa17482616e34ba26267b25"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000013.json",
+      "sha256": "33209166f1aaf2c600400a152d7489b5d417d19ecb6a8edd2adf99d15179f770"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000014.json",
+      "sha256": "fce16e40d32d2751cacdd0b3c3b65b22c7aeb26f6c7e5895a1f69e85c0186cb9"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000015.json",
+      "sha256": "a56f8fd99f5d942cf253b427328662ab30fd8b9db0de91f68aef34164beeb36c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000016.json",
+      "sha256": "7e6c935326ed12114129e208dbbfe66bb3426bef4a45be38604321780b2cf38e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000017.json",
+      "sha256": "ee8e0e1b004cb5dd66f2faae2dfafdedb62bf29c766dedb402fc971cd140a3b3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000018.json",
+      "sha256": "014d5a84f14902c2bcc83412cdd84eeb585abaf717c41a3887bb80122de8c532"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000019.json",
+      "sha256": "6118ac21c616523ab3146affb30d30339e7d835cdb30dda2c76220b2340fa8db"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000020.json",
+      "sha256": "ef907fb77de3536641730d9cc3a48ac5cacfdca142efffce01cc5a4ad6dd2ce5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000021.json",
+      "sha256": "29305bf3c17301c3ba7ba7c3d7425d6bed85a0857c70b6f533c92eaf0c69734e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000022.json",
+      "sha256": "8a5cd7efb68e026585ba919a968256c93deb666f15c606cea0ac76e4698e1847"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000023.json",
+      "sha256": "5196bce43963309a2d72657dd4752595d80a47252acccd62104d49804d8dc3a9"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000024.json",
+      "sha256": "b49c777b2adefb68b4a344ea0865b1bcd7aa2d031eebd7399b8c55bac8bcaeb5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000025.json",
+      "sha256": "f4fe170646ade1de990d228c1be5e1e33434e6b86d8458ed515271faadf0a4a3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000026.json",
+      "sha256": "a4d2b28ab5ed45c15422d373cb12b32937fe43239e1e86325c1e963dda60479e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000027.json",
+      "sha256": "3a6e96b0211cdac7e42e490a02c259f2712116092cce9ebe23ee373824a3220d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000028.json",
+      "sha256": "f89b53ab3074e6a31acab0302c80d6afe1c055c883d5a7fa8d63aa815e49a447"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000029.json",
+      "sha256": "3781a3fb24243626bf319674675e6e748dda3d5dff54134c9cdc7218c0f62205"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000030.json",
+      "sha256": "708b08287eaf79d8e8ab9ff7c1fadf18dc5677abac9e65f9b56dbdc8e7e0a0a5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000031.json",
+      "sha256": "46a6038dfa45fbe34b58b5f391ef7e7e9d752985cf2b9c12afe34b578cdb062c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000032.json",
+      "sha256": "3d816d5f107c36f1c893ede914a5a32f06e581294981a7dc1f365d4cd298ac54"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000033.json",
+      "sha256": "6a8e27e8f962f8c55f686ffbd225a28077d0011f37b1b867a0b0e7a4bc6ecb2a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000034.json",
+      "sha256": "bc726add7a76d4b7fe3bbf10ab5ef23424484545569887bfe3e1424eefab70a3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000035.json",
+      "sha256": "1fd27a3a152967429e5b38d1fdff997987258a6c7a2d7f70ff05ec0631371998"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000036.json",
+      "sha256": "05582b71d24841f076e149b920b7a1b99d3422ad2717ee0591be0cf6fe27aa92"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000037.json",
+      "sha256": "9484b60957d284dc29fa74a20db650adefac5ed6b7ec1ceade4c99ea1cfa5eeb"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000038.json",
+      "sha256": "1fd06f68b899007a10d291564f410795e22b53e838fde37cb2ea595885d8b5de"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000039.json",
+      "sha256": "9ddbeeea8e93fe797b04af421b0ae28133f11d119de0bb6b9e91079f422d8e1f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000040.json",
+      "sha256": "f8743ddb92d62fdd2a354efd7d0705665017e2a7da00acf6562bc49272f2f663"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000041.json",
+      "sha256": "10c54c7ea0232525707cebddb51af47ec98d718d0b0de28de4c4127e40eae306"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000042.json",
+      "sha256": "d7052a8fbee09d74be76ce273e752518ce603972f6c35d1112c34bdadb0192e8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000043.json",
+      "sha256": "dc50271a377500b08c210429a239ea33892314ac49150d8976aa7e48b433074a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000044.json",
+      "sha256": "7e071b041f6c4588b3037ef25a29af7b1db420732137e08d263af258d0394b00"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000045.json",
+      "sha256": "da44866dd306e7b389a2b5abf8170f624fc4ef040e532f0845a2b6a094884cd2"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000046.json",
+      "sha256": "005c36028db12f339fb0ca5bb33217fe1ebd4a5695ab11208b8824e4e5353c07"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000047.json",
+      "sha256": "1600cc59b93d7c0eddf35ec9531691dd90e5aa4b17c040d371567eda2579ea9f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000048.json",
+      "sha256": "a6a24899e69305cad0422f091a9a38999c6b9328ab4ff9f524313be3f2ad8bc3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000049.json",
+      "sha256": "34f87d1b73e54dd90b0291b4de02726c0c14080a876f3e51e33e4d0814212532"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000050.json",
+      "sha256": "3ba05925958fc0a374c37917f3ad48d4d666c99cfbb5a89e327bb5e83d4e36a6"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000051.json",
+      "sha256": "38c05ad79cc173c65ada3dcb58eb4ef4cf90a348b968944ac812f8eef6995a3e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000052.json",
+      "sha256": "e827afb75159401f3e6f91699c089b50755a628fb3ea160814a19600ed90353a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000053.json",
+      "sha256": "b6c8adf0e2a29e3c8050f0638ab5a466acc78dc33ab2d10773678f15cd8b9ec1"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000054.json",
+      "sha256": "3af8d9741a02bc3047f819a760a9114798392d7ace28f8248d58ccf473f4b96f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000055.json",
+      "sha256": "0ef4f7a67664c854e004e40b99d70fef231a4369b6b49ef4756ced42b24aeea0"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000056.json",
+      "sha256": "fbf49d1e56552a6b23c7ab78a9d5a5a9454b0b107cd0e915b1e0756bb0b315eb"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000057.json",
+      "sha256": "3af0f17180f58f8e4bee4631813d2735ff2d7301b237829a52a103df3e294bbb"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000058.json",
+      "sha256": "09ec4f6f1f772a35aa3273aa9394a6def8779234724f798a10e550543fa6b8ac"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000059.json",
+      "sha256": "9f0e0524eb09564be85580cb1ee6717ac63000e390adff7182fa9f4077ba234f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000060.json",
+      "sha256": "0ae7b4c71e48dcb0240c9f1842d41d616c08f014329453ee7fb2be9ab06b152c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000061.json",
+      "sha256": "31731b81e41020647687f82c869ee196631df69b0cf099823e0dfab4010f1932"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000062.json",
+      "sha256": "c742499d329979c562abe2fec16b8f6f9d096dc198f2cb76edf18dc35b6fec49"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000063.json",
+      "sha256": "fe2c5c56108ef6c2874ed13eee16b764217ea187385ff75cd7736800d16ea1e0"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000064.json",
+      "sha256": "570f5970029cf79ad2f3538f0390b32601d052834b2608a07bb4d12b3d89d85b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000065.json",
+      "sha256": "adeb6ef0c94396657557b9ad2dcaf7bb2b60490dc86975e85ebed736f495d16a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000066.json",
+      "sha256": "a8cf8d5f3141209c28a76a9b25e98d6de4c58cd22737cacd2fa6b22a4d78cd7c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000067.json",
+      "sha256": "aed8bda54248b2fbe07afc529d54f68716a4a4518d27f0bc4d2d932fb1bc33b6"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000068.json",
+      "sha256": "47e1224ff2c399ec3e499d6c7656fd854e79ce7d8655cae5fbe7457becf25447"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000069.json",
+      "sha256": "c63e0c266178ba8a1a93966856fc311fa8cf337f0102f209a9f081a210461b05"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000070.json",
+      "sha256": "2d838fad5cde4c6450bf3f0253d7eb2f5eb726054c5506c0eec2a5813f183649"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000071.json",
+      "sha256": "ebf108037405155336fdc5de742630dcc3bdfbf47006ac9490a4a5730a0ce6c7"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000072.json",
+      "sha256": "90e50080eb6e8e6e47a7f1528eba97f3b42507001ffd3dc2ec2d268f44bb7617"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000073.json",
+      "sha256": "eb475913ee326ebf557ffaa41749047557ee9d543dd9184372a2b6a5f49c999f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000074.json",
+      "sha256": "7b39e7d47b7b0d593c32813d973f6f66f145ffa6d7df71bf534ff31b2ba218b0"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000075.json",
+      "sha256": "0743898cdc88e0f2821fae77ac46468fa13589a2d5f08f7b7a268c0aa9b7c41c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000076.json",
+      "sha256": "20bbbc1af94f34443e9a8367093aa606213d28078093e1f18e3f6c2084b1f9c9"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000077.json",
+      "sha256": "e3d644296383628ef78c77b597a5bef4119012d1af90100dde50bd1aebebe531"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000078.json",
+      "sha256": "13b320d6181796714371fe2e39f4e9eb75c24cc347807cf658ad91a934f16108"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000079.json",
+      "sha256": "4adddfaa3e74688108aeb51a3e5a89f8e658ac0512caa9767950e0e3d4510254"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000080.json",
+      "sha256": "7227f346e1125d4bfccdc8e759bb0fb484424c8bc220fe17d58ecf8d89fcd338"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000081.json",
+      "sha256": "4c436aabaa4292e49752370fc73d38e2e77410d14b8ffe5f502720ea9b7ddbf6"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000082.json",
+      "sha256": "f4ad65304885520ba0c32596b6d85b192c681ba7b047d8f25ebaef29c78e4b9c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000083.json",
+      "sha256": "37f3ab919f06e0f6a0b0fc57da0440ddb3c84513071405668eee4a394905f70f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000084.json",
+      "sha256": "a971c3e7356f76ecf1232540ae5186b14f09ae3b28d58cf4d1b7078cfe610da9"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000085.json",
+      "sha256": "639d333d3336dbc1f666f143fec4f6478d7a6b45062dfa34888c691c5f2224f5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000086.json",
+      "sha256": "24aad4feaef319da9527b6a9c442f3e5463b6be787ff0e6d25c1f02b5baf0f90"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000087.json",
+      "sha256": "ceba76cb0ad563e66426e688f9ed12afd2f60d563bce45f4fe2e0e6f35656f39"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000088.json",
+      "sha256": "bb75ac6117d69dbb09b6bb58189e56e97bdab3fe98500fd17675ee16d0585690"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000089.json",
+      "sha256": "211dd94501c1d861a5937dfb7646d3722d6e798f944cc918b6b18c80c86ef082"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000090.json",
+      "sha256": "2d6de8fef6f33b67497fe5195a6e54a2b760c4d6b7f0fb484f583de6925ebc5f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000091.json",
+      "sha256": "9fce94105079b8525d7f1bb1e88ca697159b8fbaae8e7467c34d356a0842037b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000092.json",
+      "sha256": "8715c87a70bcae8969efe4783d806a02074cef92c693a694ab455e66c13dda6a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000093.json",
+      "sha256": "cb35c1a3c46c756dc4fb4188edc27e80d49ebb683fae5fc452dc2c3216d494cd"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000094.json",
+      "sha256": "a0865221e2189438f195ec4413d62f700ffe40132758b2ad437c1a0059b6b18a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000095.json",
+      "sha256": "00adc9bc486753b859fea4c4abfbbfdd00227ca32e750376faadbb762cd963dc"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000096.json",
+      "sha256": "4842bb32f7f0c8a3d30a768005d0ce92bb0810f5571f8fa81821d6232cf008f3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000097.json",
+      "sha256": "38fa9d6d6582980d2566775954a3a6bf93bf6466760e94f134ab79927bce93ac"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000098.json",
+      "sha256": "944ce467b53f553b48de231e84c8e99f2aaa8df774a01a2afe7b17ea3a7793e4"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000099.json",
+      "sha256": "271aec0626e259a7f56ef59b17a5f95a080f9b353aaa295daaa95e2d118e6dfe"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000100.json",
+      "sha256": "b58ca82f49de4080a8bea918fcc5d1724846e915f75153dd5e856da848ddbc0b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000101.json",
+      "sha256": "c8e1f7fab22a297ca994c626826ce0c428531b5fa7e964b7499d7cfac65dcdc3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000102.json",
+      "sha256": "52be7382a38931dd23f57e7542e00939ed887ad64a504df604116c31363160b3"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000103.json",
+      "sha256": "adfbd4e18669c8a37d26d679745e7c45edc8395fb857a445f1b9016216d3cd7b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000104.json",
+      "sha256": "b66cbf0d3179914c94390450c5da6f11a0f27342d72ef2a9be9a29521cc0c6bd"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000105.json",
+      "sha256": "6ca6e020c9d206eacf0db7677ba6d7f3e76a15a423ea277056594ffcb5b1959a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000106.json",
+      "sha256": "54f1636d731bb987dca8e1cc80cb02573e0cde296d89840b9646f9019e5145d7"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000107.json",
+      "sha256": "6ad2337fb21d90dbc93c9ffe5b32dda68bf4979a7f52b6476b065dc8dce71b69"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000108.json",
+      "sha256": "4e67f32d8b014190bd06559cabdd6e42f7acbef9d2d7724b46d6f5eae2c962bb"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000109.json",
+      "sha256": "034d40f9a7fa75e6effdd0819550069af497a732a1ee9c4cabe2b2b344ccfb3f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000110.json",
+      "sha256": "1ca521ce4f79dbd3f35077707d088915d401fc72c026897da4bd704248acc07c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000111.json",
+      "sha256": "b68b1229a2d36479c01fe8a0d802aee8a53ee4b10b286860ce821cd2279d1591"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000112.json",
+      "sha256": "3c3b6e6db66bed36ba9ae256009ede3ce1cdef37257fdc53b31a14a05acf5d44"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000113.json",
+      "sha256": "fa34c90b8a031074f4aaa7557482cb9e033eb11169c96255d8a9c399a66b20a8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000114.json",
+      "sha256": "7383f94baf2c697f80cdde50b9cdbc621e92579b07550f48962df1bc88c012ca"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000115.json",
+      "sha256": "ebb6c46c4b177d60535d6a33ed3e4acf4c39881fd579133e995c7b77c7832ab0"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000116.json",
+      "sha256": "6580620fd157288bb073e74009a838a1729f548bca2d631e58188a6d866ff867"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000117.json",
+      "sha256": "1aa3b753903f4991ab4d423f8543186256c6b0a0f2e54b1f1a2581faf89443c8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000118.json",
+      "sha256": "f18a60e2dfb62d8117e412ba63704c324498bcdf3247bafd2eca97d8110a8c15"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000119.json",
+      "sha256": "1f5b3323e9f63024a868c1f05a3d25ba45a14ab31395b2f1eb481a98d5303034"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000120.json",
+      "sha256": "552fddd4d25736267c09554fff9232e29f3e209b1584e9bf09d20af2a074b35d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000121.json",
+      "sha256": "d51ae7f6938f6bc8899a2b45a3c3148f60717dac0770a17965ac8855e4e7e8d6"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000122.json",
+      "sha256": "21dafb032d05554924bcf8701ab7c7fbb815f7a5467cb7bb633a74c56698f801"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000123.json",
+      "sha256": "8be9baa073ed14395a03669b45cec9bb6e55cea3199d0d14178989b4ebc25f5b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000124.json",
+      "sha256": "9507443ccdad5727ab6bb4dc86c52c310ca8bc2f5b48d10c4f4e3dc152f92fe5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000125.json",
+      "sha256": "6559f7e79a4f718126759fc6ae6e7a294a190fa756dc584a687a0ce2bb1b0a87"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000126.json",
+      "sha256": "7b96981e04ea6665404f28a09db122fd8091b8a75bea74104c32635fc9c4c92d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000127.json",
+      "sha256": "7bc848610392bbb5d749753adc50021c03599c57f1e1111832b1714fd53a11fe"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000128.json",
+      "sha256": "36aa0a395910b935441e9373a2998a993e64fd8851128d8b02f5bbdf0c811f9b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000129.json",
+      "sha256": "c39beba27a1e325253e0b6212f6e3af1ffeb34ebd1b4df1a90adb0cf3dd1f491"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000130.json",
+      "sha256": "3b9a89104ec122762fcfcd1776bd7797717b389b87948f8fed95af5d83a2a905"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000131.json",
+      "sha256": "31adccebc22c220f596d3b8b02565febd368b8d4109bf024fc6c828b947e6484"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000132.json",
+      "sha256": "06080ca157930d4244a79aa9f574b707319605d4718a6c4bd4e10b616294d722"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000133.json",
+      "sha256": "8a942f07fc852e7cbf02dae9473142874b4006fdf9656e64890b7a69c6cb089c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000134.json",
+      "sha256": "4ee361209b1664944e0fe6f7e7596fe762c6a3235a89394d8346cac6770510db"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000135.json",
+      "sha256": "1104fc072789c37fda9884a5928fa6dfbf0027de3be68594dac13601c8c35bb5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000136.json",
+      "sha256": "d622ee6e25462906888507b1db08bda1c6f4b67b46037776293e4de47845cb38"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000137.json",
+      "sha256": "8e30e44859d3d5a1498e5a7541fa6f131267c0a199ac2b516eb18ff7e37a016c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000138.json",
+      "sha256": "36aeb48ac310ef6ced68f3b56bbe9f5ad01279c2cfce381b895ba535a5eba59d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000139.json",
+      "sha256": "aad9b1a9eaadeb2f46c907efc173d1292eb41bb96cea4b1930e102f67a0c0ee1"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000140.json",
+      "sha256": "b0c53ef88aeb327cadcfe553c8af9ad2942a6b9fcf3261d0cb509e70caacf16d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000141.json",
+      "sha256": "88dec2cb77bbac78d621984cadd07f9becb346909a7fc23984656c63d9d1dbe8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000142.json",
+      "sha256": "86c69ba0dbb08bb54b36e423d3eb878b45335dcbbd7a122886d01bd6498109b5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000143.json",
+      "sha256": "c8d6d826abaa132997974e49dba5d9cc8dd50c36f1e2e9933225bdd1ae1b276e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000144.json",
+      "sha256": "75856593727bf9fa16153bc4ced5f6e780508528a750fc5d6b277c3609cdceec"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000145.json",
+      "sha256": "7596f4ec7e1bec35fc4bdae32897dcde969f22ee7c9b8e5e12f2e4de0baf190d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000146.json",
+      "sha256": "43d1e472239e15baef1e6b6ebff5d2a13cef330381655df12809ed7b815e4240"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000147.json",
+      "sha256": "9d5b7ec1418c990b8cb1716b2d4a84b3fffe59b245eb8cde669468aa39582f93"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000148.json",
+      "sha256": "c8afe80cb801d351ff7d0b166500b33286eae23c09dca26e95c7ee4903ec9eed"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000149.json",
+      "sha256": "38500128a6da2bd6768812d69a99b05b464ce095748062e175e2f1d29d8e521b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000150.json",
+      "sha256": "c6367a9ba50e04346cdd7df83aba5a7dae6048865c0c6a269ae6e726ecba3cc5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000151.json",
+      "sha256": "e55532be2564efb2e132c0df4b7c86e0584f4d77ae924baefe794886535bb179"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000152.json",
+      "sha256": "57ff1b57a1ef6448f434859fb3a0f8b01f49b4f7fcd167f55716dc65e35907f2"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000153.json",
+      "sha256": "4478f4387816e9b8cde8596a056f9a25b4e8260244dbff2483ca6eb712a23ef7"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000154.json",
+      "sha256": "fe6f81fdb848abca985548a84c55f2151725046de1013397b60413371415b5ec"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000155.json",
+      "sha256": "2bbbf06cbadeb998cb0cb7f026e16046b5c464fb4b635e53d40acda3892aa99a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000156.json",
+      "sha256": "6e630ac9f5e7213435a005b33a909d8ecff019b3869ad679786d527129d3dd67"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000157.json",
+      "sha256": "8867be2d3b363683bab5881b3da84394713d0d80d13698bd9e171ad504954c07"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000158.json",
+      "sha256": "aae93e04edc28599748bea47b7c380106f67c7553c26479f36f35416d2f9cc91"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000159.json",
+      "sha256": "3d0e11cb70fcbbaddb281efd536b165af6ecd808449e08629a1bee866e84d3c2"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000160.json",
+      "sha256": "a59103568e788c5b9efe696f69ec6f1b0f165b1b6620934f4f40d7085a626e15"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000161.json",
+      "sha256": "cb21486809b9c439df6076eea4fd6e983b189d9c841a4ba1f78bf326a5dc7887"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000162.json",
+      "sha256": "877e6acc8678b1d7a961320e13ca4a5dee1d729403f03d9dc42bd883448ee43d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000163.json",
+      "sha256": "cf1f3d2c8adc8911212e15bc383f24ba374990e1ff587e777d5cc97cc372cb63"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000164.json",
+      "sha256": "b30960657d1e4c1417c44693e5ea31b44af751b1e1156bfa0124545ec2f1811c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000165.json",
+      "sha256": "56db39bfd49d0c4224c9b9caeb5af3619aaf3080de47ac6f4251d5ea7b03d356"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000166.json",
+      "sha256": "7cf1f8238657d9b80f9bf4f7e0efb0b3f5ad04ee353383469b951edc7aa72437"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000167.json",
+      "sha256": "cb2c6c342a83a5849ebab2e01e6748727b0479c00d6f4880698b4b38ee6b56f8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000168.json",
+      "sha256": "ac4f6240ef0f2ebfa4b3c84813557177debc6b86c13c66c604f593824e783ad8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000169.json",
+      "sha256": "2d29451fc453a57b35c53735e840bcca90cec86d3a02b29ab8525bd70f8fae21"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000170.json",
+      "sha256": "5253a1443f558553a5bd5bad68c4172aa61bed37b0578acb25aa8d7041df69e7"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000171.json",
+      "sha256": "7377c6068f7afb4c0edb5855b6d8b78c87d769c91c9a0871664515bf4ceeb799"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000172.json",
+      "sha256": "9e96fad2ad027b999607202b15c67dc124f384b7145a1e10e89e79d9043e8ebd"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000173.json",
+      "sha256": "6ce036bd433d3ed9e091845ad776379d24be041d77d7f51f5dc6c0759ec4b533"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000174.json",
+      "sha256": "9410b94376e9c6a5d4c340878c112598a67c0dc48673e0f04285d36e877d3afa"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000175.json",
+      "sha256": "aab9661a75bdf0eb50f7db6effa2ef33e418a61ce00def9195926a77c06e4848"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000176.json",
+      "sha256": "3480dbeda71a436f8b5896271d7c6628df577e9eb2509c0d7fdd1263aeb2a89a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000177.json",
+      "sha256": "c8c0c13e633f32228298b50a43e802c917580403ea0dfc698360a1544c1e07c0"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000178.json",
+      "sha256": "dccb8f3268630fd375479858ef9aada8a1c7206ff98ce50762d404f42ba67a1b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000179.json",
+      "sha256": "e5838163464b56927c5cd6fd53a8dbe1b212fc005a2f86b089a979b7b4149f94"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000180.json",
+      "sha256": "632b844aafc2c62e739d139892d6e46f1a0d63d3ab3cb8bc1e274de76839c6a5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000181.json",
+      "sha256": "45eea544af36e6d6cf3aeb94743cbc38b184bc8e804a36f378b751f0b76a0dcf"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000182.json",
+      "sha256": "ba0e58150cd2e225abf787255dd586d5881c40c12f4c18cd27876f105c87127d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000183.json",
+      "sha256": "f073505c08ade72db01890baa2789e7cf2628c0286f58b8d76f8f967d2051f0f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000184.json",
+      "sha256": "5330b1487450981d2664ed156441b225eebf3fc7d79721660a6523cde14bea8d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000185.json",
+      "sha256": "a323f6ffb78d5433f2b8608dd82b0cfd30881755b18e4795b735b137b41ac0fd"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000186.json",
+      "sha256": "6da5cdb566ff27318fd7ec07221df3b7dbc036b8bb6b5b86b3d84d852e457626"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000187.json",
+      "sha256": "4695bf1089f430447c73e9341427aa19922d7dd881ef6483f8b568f4cb3c348f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000188.json",
+      "sha256": "ba0acc410ac6d3828d8acb5d73c14a7c5d03fef6c8752f810a0c81b6a209c450"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000189.json",
+      "sha256": "a5eb48794d47dd21d781d7470280fee0d042f5017fe7f9a49ae9ad3189275840"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000190.json",
+      "sha256": "b272ebf1ad2478b2a97b2ad4ed1017051bdfb907a207bc0d7c004dc64434422a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000191.json",
+      "sha256": "94b4459234d7cf82d50912016ed85f7fca240517ead22f4565f888b9bbdfb8ba"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000192.json",
+      "sha256": "789bbc992ce92ba620d9ae76c9529dd37d622ff7008bcfa4d8559fde836a37a0"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000193.json",
+      "sha256": "5ae9878e9aad2edf61ab664b0a5ce80aae87d5817dc5aa11bba4dd10eff259fe"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000194.json",
+      "sha256": "21f6b683da9b898c231c25d4347d7a40217cd6df48142fd61820b15e3f453ff2"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000195.json",
+      "sha256": "94898fd5193c30aef6f5c195ee00aa480be2454d824fd76bb682d381aa2e0f04"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000196.json",
+      "sha256": "015c3794f62e03279f1d956a59f5a5c15e1e574f437cb6a653012f14e67ab510"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000197.json",
+      "sha256": "d00f995002cc6b8eabc1eff2f5ba11bea13495c673267ce67d140964187deadc"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000198.json",
+      "sha256": "a043b124f95b91634d38a5ae9f2cc9a7e460701e5e6d18c41d70f0c4e578d6ad"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000199.json",
+      "sha256": "c2a2e6ce254759cde891f53f55febd504e15071bb68752cea63665f96ad24d2c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000200.json",
+      "sha256": "8e6565a6fe83555a9f7ffd36c84f58358e855c803e975f22ffb4a3dc4269a643"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000201.json",
+      "sha256": "96ec095e28e5a6d431fa29f269824292d084d85fb374c661035d763477dfd968"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000202.json",
+      "sha256": "28edb2b86efef70bae0028d39cd7ee4558e52bd75c04e237298efecccf78a0c6"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000203.json",
+      "sha256": "29f371390ebced38a576c78735f73eade616354238a334bcd20152a627c6ebe1"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000204.json",
+      "sha256": "6e71a9759d6a4f783f1c5998307ccb7d2577e07b3a69d676f8236665c70c9f8d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000205.json",
+      "sha256": "477c7747ac25b7304d7cec59f1a6c61baffe3b9ca7ca7d2662df3735eddb3b92"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000206.json",
+      "sha256": "da6858a04e95d38c964e69c64367a2ceed57997431fc517e836833d273caddd8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000207.json",
+      "sha256": "57c02343555163245474b5bf7b6f6055eb77c1471d1bce1e7b601f1739ab9b7a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000208.json",
+      "sha256": "06b0a355a33d771f0f3529727220499c7d912a72d813ec07975d1ae06b9f703f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000209.json",
+      "sha256": "f1d8fce5fbf4d837bebe67e70e4b1e3df33006fb9af03a6aaaad14c8ea73e396"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000210.json",
+      "sha256": "308e818df78907d51e68f18dd96d69525f93015a6fc081e4440596f3abf890ec"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000211.json",
+      "sha256": "498196a1a5ef5a259a3e32c000c20f7f2a4abaeb5372cea5a9a7d8f5353deda1"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000212.json",
+      "sha256": "10add01ca1f38f0a8fc6153d5caf4f5146b7f6dfe63435d88fc2912a213baef1"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000213.json",
+      "sha256": "064658bc4dcb4e1591a493f7db0fa6b757e6e20c00d2ffe286ed21364a397b2c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000214.json",
+      "sha256": "51bb4bf31276fd5cfb0ff540a5e0e39f07f5fd8455b45676f1ca4fa2a76e6e1b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000215.json",
+      "sha256": "c0e41836b2bb2a61a32bb52c7ee7d1e76bafddc38fd5dcde12ed070e5883e00b"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000216.json",
+      "sha256": "47628b2f079263504e9ec0271030e12b445d3aee1d25ac4d9132e54dec0df67d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000217.json",
+      "sha256": "c9bcd262db0b60000feea8f230d23c78f72433c69e02bf63ae8cfa1a86807e13"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000218.json",
+      "sha256": "21fd83a372842eafde9f388f0fc22aaf3ce2f2156192ddf02d27ef66a5930228"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000219.json",
+      "sha256": "0ed413ff32c0f4b9a25f4430d5d7a9ebf7aa21ae3a8c38cb72efb9d4c53a5754"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000220.json",
+      "sha256": "7a78894437e8d6ce85509a3069377565ce801e2343c3511ba857d8aa48b92f0c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000221.json",
+      "sha256": "5323eceee8cbb5c98200162250aee3292ef4f59ee15d52a2dfd6341d6a70d112"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000222.json",
+      "sha256": "c4c002fe8f775b8ade47f6b8ea43f6b3f1a75ee1cf9e0274189ccc1a0ca3c008"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000223.json",
+      "sha256": "c40047ab9b0dc44922636a9bddb053538bb9c8d90dca6a47666afc48a7e35280"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000224.json",
+      "sha256": "44f6059d39ebf79862115edb23a8481c52d28bb41d74cbe9240e47cd5df09c72"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000225.json",
+      "sha256": "930bcc1de949cfe419ea497f53ead2ba581b3712e6b29fed267887955578dbc7"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000226.json",
+      "sha256": "7967da1ab010f3065c52f863181b865e3ef9d62808ed2a4b6e73048ec46ee75c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000227.json",
+      "sha256": "ab8c0a212fe736ec58be525da68fc318da0b94f60b7a3e677515533924ea4531"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000228.json",
+      "sha256": "be4a04c85acfcf64547a9d5e129b3310e07177632ff2221c94f4a173a6ec5c82"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000229.json",
+      "sha256": "9d55739710ac28beba7df32839cf356876b2191d5f6c2acb9776fc6c9801546c"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000230.json",
+      "sha256": "6b9f5e31234e53fe3434660832d267404d0e7977f4bf24a0259c070670308ab5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000231.json",
+      "sha256": "bbe8fb70662af9bbde818bd111641740fa2bfaf87094e215ce43c008e2e60b41"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000232.json",
+      "sha256": "17da9942b5fc55ed04a877d0d8b7a7f2a6855c7478a06ce3968f1fd94e235f98"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000233.json",
+      "sha256": "45908903d3675215202e8b6bfa22c0dc23d53a5381b1b092eb5c4f8d0f186c99"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000234.json",
+      "sha256": "116d3e7efc42ad384c2f4c29e5d65b34778d664f0baf21b18620a52dfc721191"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000235.json",
+      "sha256": "9adb64d6d7c0b9ecc27a5e5326f005b693f3ab0864c9f92f37970fdd007b789d"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000236.json",
+      "sha256": "e39658696184e2e471aeb32a7906a81e488875a2c8b3bdd4ed37a68d437106bd"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000237.json",
+      "sha256": "e83b68acf773cc21314c5a9ee544139c3183f2722030bd05d4813813ba35e0ab"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000238.json",
+      "sha256": "60908cf3843952bf0c04ea3af663110de2dd68653d6ef203ac5e68a637dcd54f"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000239.json",
+      "sha256": "06f74f486c9c10c64c8c85831da6dbce9ea7a87994844aabfae34ab18bfba19a"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000240.json",
+      "sha256": "486623e6304032c4abbe38a60448369425fcdb170cb6b013627144091e9d3f72"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000241.json",
+      "sha256": "67bffb280e4372ebebe913e8865d1f4c28cd876f19a324b688147cc3870995c8"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000242.json",
+      "sha256": "92b625eb6e6320dcf0b0e8b6dcefc893e3d7dbb0d267129bb9c7ed48251c0e41"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000243.json",
+      "sha256": "4bd2eee3d815de73b4d49554c8040393bbf19dff637e0a6a9bf75a8bd6d01061"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000244.json",
+      "sha256": "3bfdc76f04ee7e2ab65023d942c26dac0796aed998b91c5390d633e52c6d794e"
+    },
+    {
+      "path": "results/development/artifacts/nsc-ks-fine-validation/segment-000245.json",
+      "sha256": "cd10aefe67e930688cd8ff5295909928e95b57ecbf26d66bc5973e1cf39d1d9d"
+    }
+  ],
+  "signature": {
+    "docs/nsc-ks-ball-geometry.md": "b3e61566f89e694c662edcb132224bb4a5eda5a0b19d86df154b7d0c4b004447",
+    "docs/nsc-ks-difference-control.md": "dd6df5b94cc2b2fc6c5c6176d0a7428c53f345e7afff35a666964f2f2d5117a4",
+    "docs/nsc-ks-difference-envelope.md": "fd726a6b6d1392dc569301be7e43aad2d14b105d70f4b4fe2bccdeac88d302a7",
+    "docs/nsc-ks-envelope-comparison.md": "61634a18a42fc0539b1ef578ed3cfcd3f9492bf72785dade5e3294489a94c779",
+    "docs/nsc-ks-envelope-resolution.md": "6d83407ca58e2e069a3e77bf8378e4896ee53d305c15f8c776461c437b0b3c70",
+    "docs/nsc-ks-fine-profile-table.md": "9f0b3cb1c8a53b246c3e28f08cf1008b7c406182e086b093ca7c51499379c6e8",
+    "docs/nsc-ks-fine-trajectory.md": "44b3f62674841dd794fb2c27b790a66b0c0acaeea6d638cfb29c552e2c8891df",
+    "docs/nsc-ks-fine-validation.md": "1ef20f78fc4c632b5a79faaa714b58eba70ec22aa1605cce194e9b9c47f540e2",
+    "docs/nsc-ks-profile-fourier-bound.md": "4b255fa65366edab8df528a786ed219cb622de635d0a2fd11d91d4986172ef81",
+    "docs/nsc-ks-profile-fourier-refinement.md": "309c6d7b14623d3f80f6334fee2cc7b261ca66a4ff60b8f6a83338d93f21c2fa",
+    "docs/nsc-ks-trajectory-control.md": "e7457d940fc53fe41a7e6ba9b222bf17984ebd748bab3f6ec046c306b1718c41",
+    "docs/nsc-ks-trajectory.md": "a00db30d734e898f5da80a9183722c946c8d4fd37196ec5e4517657b28273863",
+    "docs/nsc-local-prepared-response.md": "3f68d0d4df92e193bb8292d3af6796e82b88c001bd1c5fc2b998587df6ea081c",
+    "requirements-validation.txt": "f52f64eea410f540f2c325e55cfc2f609465094e9caec8533931345cee2a91e5",
+    "results/development/nsc-incoming-fixed-transfer.json": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-incoming-surface-coefficients.json": "c89e134c5106d98e122a8e1d45be44ae4819b35fc6378fc0e457d30540cb26a6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-difference-control.json": "01ac13653c8b787567de920d66c13e11dd6cc343d4c1ff4df6f991df1c463bb0",
+    "results/development/nsc-ks-envelope-comparison.json": "4d33411c46710b40df219d7119d2fa102ed2ddec184b88f1a572d7fe5c5c360e",
+    "results/development/nsc-ks-envelope-resolution.json": "3632c2b49e21fccdea8653aaececf786b9bd8a84e7f97c67396266c3e9c3d1af",
+    "results/development/nsc-ks-fine-profile-table.json": "23e7581d7c09a51d25299dd3c0cb6438720ccb08b7107c5d203498b452c45444",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-profile-fourier-bound.json": "e67f39221c22256fdab86c15913c43604067d5f1b08525b2a6e9bb5fb97098b5",
+    "results/development/nsc-ks-profile-fourier-refinement.json": "4c81a81e483d8da9dcc9b8537443cd325da2b692bfc1107f5837f99b6cb0be94",
+    "results/development/nsc-ks-radius-bound.json": "d351138b7522ebb3ff102f639738494c5859f2b4eb70ed0ee2afdbefdc4cb3e5",
+    "results/development/nsc-ks-trajectory-control.json": "aeb393ed20d36471d9537a2fd63ba6e84e7422005779732af267d5264395e715",
+    "results/development/nsc-local-cf4-response.json": "2f551fc9dd74caf9dabac6f061bbccd53851692fdc3729ff8cd6005a8449afbc",
+    "results/development/nsc-local-reference-accuracy.json": "dfa96689f269bc950c76c92aa3e5f4e9c95ac6009068d0f82606eff6f07f0eec",
+    "scripts/derive_nsc_evolved_incoming_constraints.py": "ce53587f3077cf4a8de7f8042a5e532319fac9635757b8a48205683e34b4710c",
+    "scripts/derive_nsc_ks_difference_control.py": "956ae178458f309201999af6fdac2ba75452a1185cedc9b085471a4e08a4d2a3",
+    "scripts/derive_nsc_ks_envelope_comparison.py": "f521cf383942ae3adddf01dee4db82da88753ec42c9050ba0ba6de2593cb8629",
+    "scripts/derive_nsc_ks_envelope_resolution.py": "aba1582136b6e645b09d954d74a1d719b917013b01811a6474b12ee9f18c25e8",
+    "scripts/derive_nsc_ks_fine_profile_table.py": "b1966ffeb1cc6be047aace1f65c03156db88c0842f810c9e52005e4debda6572",
+    "scripts/derive_nsc_ks_fine_trajectory.py": "d966209266626071b457de753041ccba4840bb4a59323528eaec5de2e294135f",
+    "scripts/derive_nsc_ks_profile_fourier_bound.py": "558c36377c7cab8ba4f91da28bf5004407a7440d82f24bee7f6a76eec4a76644",
+    "scripts/derive_nsc_ks_profile_fourier_refinement.py": "ca84207e5c4b4e854ae3c1dbce4a881ebc0e00ad3bc022afabab6d9c14557e67",
+    "scripts/derive_nsc_ks_trajectory_control.py": "e8e147a716abb377702d03607f65da901c7c21c134afc0539caf60e24b1a1a02",
+    "scripts/derive_nsc_local_prepared_response.py": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1",
+    "scripts/validate_nsc_ks_fine_history.py": "b3418487ba2ca14b8252d210cf3120632b3f75c195b9e1d08c5e3f6396aacd98",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_operator.py": "9b42c4a175a417f51bb955acfd7f4f8c6680a8034e2e351758c48d1e07ccc442",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_characteristic_error.py": "91a4336fa5fe33b0f5e841821af37658d84532c97ef05c617e508a9f569b95eb",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196",
+    "src/recursive_horizons/nsc_ks_fourier_residual_bound.py": "09b8b10add2295140db502f7be80eb5a1559fa5ee7cda43d496c520a5ecb50df",
+    "src/recursive_horizons/nsc_ks_profile_compression.py": "9484e1beffe74246ebd4e8cc28c699a322649be1baad92f240dbaf00b9aa5d23",
+    "src/recursive_horizons/nsc_ks_profile_fourier_bound.py": "4189d40faf66f157056a2aee7cc06f51d7203e26ee2fced58dff98a647d76087",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_residual_polynomial.py": "5c975cb4e5d86139a16bfd472d256155233b5e67cf6be6d95b8a7baf781059a5",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_streaming_trajectory.py": "27b61d0c23e99aa357d7ac8a82e100f164c33efc7bc2d4760e870404b896b051",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "signature_digest": "e86c29fd28f884a78dbe112332fa870b34e3d804459dfd901419de65fc6ea031",
+  "source_error_bound": null,
+  "state_law": "C_Sigma[g]=U_g C_up U_gdagger; fixed upstream source",
+  "status": "OPEN: numerical field bound completed; physical source/gate remain open",
+  "validated_segments": 246
+}

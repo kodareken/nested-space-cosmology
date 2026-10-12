@@ -1,0 +1,135 @@
+{
+ "api_version": "nsc-rn-pole-structure-v1",
+ "correction": "The previous commit called this stiffness. It is not stiffness in the solver's sense; it is a simple pole in the right-hand side at a known radius, and the solver reports it as a step-size failure because the solution is unbounded there.",
+ "creation_only": true,
+ "entries": [
+  {
+   "approach_to_r_minus": [
+    {
+     "offset_above_r_minus": 0.1,
+     "reciprocal": -813.133247553554,
+     "speed_plus_just_above": -0.0012298107389024683
+    },
+    {
+     "offset_above_r_minus": 0.01,
+     "reciprocal": -1544.9815428487868,
+     "speed_plus_just_above": -0.0006472569233132087
+    },
+    {
+     "offset_above_r_minus": 0.001,
+     "reciprocal": -14069.460072367045,
+     "speed_plus_just_above": -7.107593289695872e-05
+    },
+    {
+     "offset_above_r_minus": 0.0001,
+     "reciprocal": -139668.55839024563,
+     "speed_plus_just_above": -7.1598075581614895e-06
+    }
+   ],
+   "both_poles_are_on_the_outgoing_leg": true,
+   "first_pole_at_r_plus": true,
+   "ingoing_never_vanishes": true,
+   "ingoing_zeroes": [],
+   "mu": 1.002,
+   "outgoing_zero_count": 2,
+   "outgoing_zeroes": [
+    0.9387230044541772,
+    1.0652770452976854
+   ],
+   "r_minus": 0.9387228319217631,
+   "r_plus": 1.065277168078237,
+   "reciprocal_at_one_thousandth_above": -14069.460072367045,
+   "samples": 40000,
+   "second_pole_at_r_minus": true,
+   "shift_real_limit": 0.49900199600798323
+  },
+  {
+   "approach_to_r_minus": [
+    {
+     "offset_above_r_minus": 0.1,
+     "reciprocal": -102.64592310547405,
+     "speed_plus_just_above": -0.009742228134793505
+    },
+    {
+     "offset_above_r_minus": 0.01,
+     "reciprocal": -564.4100736913335,
+     "speed_plus_just_above": -0.0017717614312938068
+    },
+    {
+     "offset_above_r_minus": 0.001,
+     "reciprocal": -5348.879500194859,
+     "speed_plus_just_above": -0.00018695504356820342
+    },
+    {
+     "offset_above_r_minus": 0.0001,
+     "reciprocal": -53249.14104380765,
+     "speed_plus_just_above": -1.87796456505713e-05
+    }
+   ],
+   "both_poles_are_on_the_outgoing_leg": true,
+   "first_pole_at_r_plus": true,
+   "ingoing_never_vanishes": true,
+   "ingoing_zeroes": [],
+   "mu": 1.01,
+   "outgoing_zero_count": 2,
+   "outgoing_zeroes": [
+    0.8682256500233437,
+    1.1517744425642102
+   ],
+   "r_minus": 0.8682255312124163,
+   "r_plus": 1.1517744687875837,
+   "reciprocal_at_one_thousandth_above": -5348.879500194859,
+   "samples": 40000,
+   "second_pole_at_r_minus": true,
+   "shift_real_limit": 0.49504950495049427
+  },
+  {
+   "approach_to_r_minus": [
+    {
+     "offset_above_r_minus": 0.1,
+     "reciprocal": -31.465230128531903,
+     "speed_plus_just_above": -0.03178111191035671
+    },
+    {
+     "offset_above_r_minus": 0.01,
+     "reciprocal": -208.66199117417864,
+     "speed_plus_just_above": -0.004792439650234428
+    },
+    {
+     "offset_above_r_minus": 0.001,
+     "reciprocal": -2001.4889895385522,
+     "speed_plus_just_above": -0.0004996280295454197
+    },
+    {
+     "offset_above_r_minus": 0.0001,
+     "reciprocal": -19945.42301312336,
+     "speed_plus_just_above": -5.0136815816943896e-05
+    }
+   ],
+   "both_poles_are_on_the_outgoing_leg": true,
+   "first_pole_at_r_plus": true,
+   "ingoing_never_vanishes": true,
+   "ingoing_zeroes": [],
+   "mu": 1.04,
+   "outgoing_zero_count": 2,
+   "outgoing_zeroes": [
+    0.754342881826821,
+    1.3256571322697717
+   ],
+   "r_minus": 0.7543428628582831,
+   "r_plus": 1.325657137141717,
+   "reciprocal_at_one_thousandth_above": -2001.4889895385522,
+   "samples": 40000,
+   "second_pole_at_r_minus": true,
+   "shift_real_limit": 0.48076923076923
+  }
+ ],
+ "ingoing_never_vanishes": true,
+ "mechanism": "The code clears the pole at r_plus by starting the branch from a horizon jet rather than by dividing at the horizon. It does not do the same at r_minus, and that is where the inward integration stops.",
+ "producing_commit": "b75fdd22b059e07cae5f707d509452512ba1a81b",
+ "schema": "NSC-RN-POLE-STRUCTURE-v1",
+ "scope_note": "A construction check on the reference chart. It does not measure the actual universe. Locating the pole says where the obstruction is, not what is on the other side of it.",
+ "second_pole_at_r_minus_everywhere": true,
+ "two_poles_everywhere": true,
+ "what_this_measures": "Where the characteristic right-hand side is singular. It divides by the two speeds, and the outgoing speed vanishes at both horizons, so the equation carries a pole the inward branch integrates into."
+}

@@ -1,0 +1,51 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.6195212665669487e-09,
+    7.292716100448793e-08
+  ],
+  "best_prediction_minus_measured": [
+    5.795011845502008e-16,
+    -6.837701524676717e-16
+  ],
+  "best_profile_identity": "ad75942438dad1de599ee260e5d9aa7f17d60af26b533bee2b0691f2a6dec777",
+  "break_even_n_gain_can_reach_existence": false,
+  "break_even_predicted_n_gain": 7.626530680690075e-15,
+  "break_even_step_norm": 9.152911070190492e-12,
+  "direction_quadratic_n_coefficient": 91035029.26861152,
+  "enclosed_error": null,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust03.json": "fcadd08f2f80ff4c4fa4866aab4571fe31a42a93835b4286a7c7f3c6baefa7c5",
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust05.json": "e36f6d7a968fb3a277a4a8e5be3b54a2d1b89df0320bc3d2ed8172d7d4fb1b14"
+  },
+  "linear_predicted_all_node_residual_maxima": [
+    2.6185531468402648e-09,
+    7.172716100448794e-08
+  ],
+  "n_error_power_used_for_authorization": 3.610891342251305,
+  "newton_step_accepted": false,
+  "next_owner": "declared (w,U) class on I=S(1)+[0.12,0.18]",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "predicted_beta_gain": 1.1999999999999843e-09,
+  "predicted_n_gain": 9.681197266839624e-13,
+  "prediction_minus_measured": [
+    -1.228941237419665e-10,
+    -9.265984524650851e-14
+  ],
+  "rank_74_and_above": "unevolved",
+  "rejected_constraint_maxima": [
+    2.7414472705822313e-09,
+    7.172725366433319e-08
+  ],
+  "rejected_profile_identity": "baf90351307218da9661195ba963d7c85418ecf77c4c31f304301f289cc08941",
+  "schema": "NSC-KS-N64-PRIMAL-NORM-TRUST05-QUADRATIC-v1",
+  "singular_ratio": 1278.110563011974,
+  "source_hashes": {
+    "docs/nsc-ks-n64-primal-norm-trust05-quadratic.md": "3ce228b8edcca9e417a31eb17d8486fd3af8da5b176759e365dd3676516f4bc2",
+    "scripts/derive_nsc_ks_n64_primal_norm_trust05_quadratic.py": "55747d7b8d1795a40778594506f49fd19e9bfa5ed756db068231dbfa3ee2fd6d"
+  },
+  "stall": "n64_primal_norm_trust05_n_rose",
+  "status": "OPEN: beta followed the Jacobian and N rose at five times the shrink norm",
+  "step_norm": 1.1618800388584615e-09
+}

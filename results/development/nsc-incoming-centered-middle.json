@@ -1,0 +1,92 @@
+{
+  "accountable_author": "Douglas Ek",
+  "combined_group12_lapse_error_upper": 1.5027532080956757e-10,
+  "energy_interval": [
+    40.0,
+    320.0
+  ],
+  "fits_component_budget": false,
+  "group": 12,
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-energy-error-budget.json": "ca028c2e636d5598597e098c4187cde944677ed3041b298546cb2788b344ae27",
+    "results/development/nsc-incoming-middle-bound.json": "ec2f7c265fe7368f166f56a4ae8f28d5ca1ef79511755f8fd53f7307b9ed4ab4",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "src/recursive_horizons/nsc_incoming_centered_order24.py": "aafc22426efee88a83d9f2a9c26f064a2a32fb9907b1ba67f2e59121f1178396",
+    "src/recursive_horizons/nsc_incoming_defect_taylor_bound.py": "37ebb921300a7d561ba31506f62d5498129b4dd9d62472974c60f31b4cee790a",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "new128_cell_energy_bounds": {
+    "centered": {
+      "density_error_upper": 7.08417380298395e-12,
+      "lapse_action_error_upper": 1.5027532080956754e-10,
+      "linear_transverse_density_upper": 7.084173787625376e-12,
+      "physical_Riccati_order": 16,
+      "quadratic_longitudinal_density_upper": 1.5358574017536183e-20,
+      "thermal_quadrature_low_band_errors_included": false,
+      "vacuum_current_error": 0.0
+    },
+    "natural": {
+      "density_error_upper": 7.498381639071548e-12,
+      "lapse_action_error_upper": 1.590618380776337e-10,
+      "linear_transverse_density_upper": 7.498381621865353e-12,
+      "physical_Riccati_order": 16,
+      "quadratic_longitudinal_density_upper": 1.720619419973269e-20,
+      "thermal_quadrature_low_band_errors_included": false,
+      "vacuum_current_error": 0.0
+    }
+  },
+  "old8_cell_energy_bound": {
+    "density_error_upper": 7.97784779288952e-11,
+    "group": 12,
+    "lapse_action_error_upper": 1.6923266845053844e-09,
+    "linear_transverse_density_upper": 7.977847598214259e-11,
+    "physical_Riccati_order": 16,
+    "quadratic_longitudinal_density_upper": 1.946752615674277e-18,
+    "thermal_quadrature_low_band_errors_included": false,
+    "vacuum_current_error": 0.0
+  },
+  "payload": {
+    "path": "results/development/artifacts/nsc-incoming-centered-middle.319dd76b735e3cb0cbb44cb2027d4bb9f51d6bf3f3b4824810dc2ceb2e029477.json",
+    "sha256": "319dd76b735e3cb0cbb44cb2027d4bb9f51d6bf3f3b4824810dc2ceb2e029477"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_centered_middle.py --check",
+  "residuals": {
+    "centered_excess_over_natural": 0.0,
+    "energy_contraction_replay": 0.0,
+    "natural_coefficient_relative_change": 0.0
+  },
+  "same_numerical_order": 16,
+  "schema": "NSC-INCOMING-CENTERED-MIDDLE-v1",
+  "scope": {
+    "constraints_solved": false,
+    "full_source_accuracy": "OPEN",
+    "low_subgap_or_quadrature_error_covered": false,
+    "metric_evolution": false,
+    "mode_scattering_solves": 0,
+    "physical_NON_EXISTENCE_claimed": false,
+    "source_values_changed": false,
+    "state_action_scales_changed": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-centered-middle.md": "9716c0196801600a0bfb27b0a4ce374f5663d7b78a894a2e161b35cfd4246c64",
+    "scripts/derive_nsc_incoming_centered_middle.py": "f97fac1e18da7403c4c7a67f5e6c88ace4c960110a6b304eb8ea3a3cae1baef7",
+    "src/recursive_horizons/nsc_incoming_centered_middle.py": "8ea80447b117919bf906ab198c3fb8304ddd904538d096676c9d4b4c35dd9821",
+    "tests/test_nsc_incoming_centered_middle.py": "87612dd75e42e6d47cb89c1e26d6326330767a36b9d82ff829d6749d75a5632e"
+  },
+  "stationarity_tolerance": 3e-11,
+  "status": "OPEN: group12 middle energy component; full source OPEN",
+  "thermal_scattering_stress_error_upper": [
+    7.754804029980386e-115,
+    6.430353041832958e-115,
+    6.430353041832958e-115,
+    6.62225494073714e-116
+  ],
+  "verification_tolerances": {
+    "intersection_relative": 3e-14,
+    "natural_relative": 3e-14,
+    "replay": 1e-24
+  }
+}

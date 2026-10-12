@@ -1,0 +1,87 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "hypothesis_pre_registered": "the staircase quantum equals the single-node L1 share at the seam",
+  "input_sha256": {
+    "lab/results/development/nsc-tilt-cell-crossings-v1.json": "fe89705a0abe232987e0166bb99d71b541bb9c6789190ebbcad994b7f9e5505e"
+  },
+  "mean_single_node_share": 0.0013195525733018722,
+  "notes": [
+    "the quantum 0.00131 is the round-46 recorded step size; the single-node share isolates the node nearest the seam"
+  ],
+  "production_trajectory": false,
+  "ratio_share_to_quantum": 1.007292040688452,
+  "recorded_quantum": 0.00131,
+  "rows": [
+    {
+      "eta": 1.015,
+      "single_node_share": {
+        "node_index": 89,
+        "node_radius": 14.219671491710987,
+        "seam": 14.176335725975868,
+        "share": 0.001319815209086741
+      }
+    },
+    {
+      "eta": 1.02,
+      "single_node_share": {
+        "node_index": 89,
+        "node_radius": 14.149177937810467,
+        "seam": 14.176335725975868,
+        "share": 0.0013197092826278318
+      }
+    },
+    {
+      "eta": 1.025,
+      "single_node_share": {
+        "node_index": 90,
+        "node_radius": 14.215057374415961,
+        "seam": 14.176335725975868,
+        "share": 0.0013196177478003556
+      }
+    },
+    {
+      "eta": 1.03,
+      "single_node_share": {
+        "node_index": 90,
+        "node_radius": 14.161710303774505,
+        "seam": 14.176335725975868,
+        "share": 0.0013195363536736085
+      }
+    },
+    {
+      "eta": 1.035,
+      "single_node_share": {
+        "node_index": 90,
+        "node_radius": 14.113699399231251,
+        "seam": 14.176335725975868,
+        "share": 0.0013194625743183357
+      }
+    },
+    {
+      "eta": 1.04,
+      "single_node_share": {
+        "node_index": 91,
+        "node_radius": 14.196454325313077,
+        "seam": 14.176335725975868,
+        "share": 0.0013193948075130768
+      }
+    },
+    {
+      "eta": 1.045,
+      "single_node_share": {
+        "node_index": 91,
+        "node_radius": 14.156130949807888,
+        "seam": 14.176335725975868,
+        "share": 0.0013193320380931552
+      }
+    }
+  ],
+  "schema": "NSC-TILT-QUANTUM-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_tilt_quantum.py": "768d8a5e999c0edbef8bb775836476bf215990f878ef56cd82a82c8c9bfa0f77",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "QUANTUM_IS_SINGLE_NODE"
+}

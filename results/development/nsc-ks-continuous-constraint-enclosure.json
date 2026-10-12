@@ -1,0 +1,2872 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arithmetic_schema": "NSC-KS-ASSEMBLY-ARITHMETIC-v1",
+  "binding": {
+    "dependency_hashes": {
+      "docs/nsc-ks-continuous-constraint-enclosure.md": "66c869d2fefab55197cfcbb867119206b0d341f394fce31d77cac0ded1629cb2",
+      "results/development/nsc-ks-between-node-geometry.json": "473e7b41d08641cd78847d970bd655b7fa66f527491edd7c41e06f2043ba29f1",
+      "results/development/nsc-ks-current-phase-accuracy-v3-n129.json": "1e66f1f4b8828ed9cd8c4963bd1c67af130c928cccc775dd38091f779b68a857",
+      "results/development/nsc-ks-gate-budget-v4.json": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0",
+      "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+      "results/development/nsc-ks-gate-reanchor-v2.json": "f5914559d7b9570ff16bea1c50a0417a16d0bbcd2384999ce8bc98a108f9ea6f",
+      "scripts/derive_nsc_ks_continuous_constraint_enclosure.py": "87ca2169b1cdf7609ddefb0923f806c8182b659d603fcd567c120e11edd65b34",
+      "src/recursive_horizons/nsc_ks_assembly_arithmetic.py": "e09b65a46c0a368760e09f9dbe8800c85f8c4e9eae13f60f562194317305df13",
+      "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+      "src/recursive_horizons/nsc_ks_continuous_constraint_bound.py": "e56df83eeee4f3ac60331120635a10255872d69ae16ea8ce78ad038487e3cb37",
+      "src/recursive_horizons/nsc_ks_continuous_constraint_enclosure.py": "8aa7cf2fcd3d0c595d0e0c563b03bb23ac91d7945351cb27cdd01e57abd940cc",
+      "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+      "src/recursive_horizons/nsc_ks_history_evaluator.py": "446ede4f0c05b1952476d89fdef85885c3acae0d588e4f92cd3de1b1c16fb5da",
+      "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+      "src/recursive_horizons/nsc_ks_value_evaluator.py": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4",
+      "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+      "tests/test_nsc_ks_assembly_arithmetic.py": "238da30db15b7aa4d641855f5bfff0d5963c650b0099095cba821e8148dfef21",
+      "tests/test_nsc_ks_continuous_constraint_enclosure.py": "976ebaf46fbae33678d8e17d8189f860aa753f5a124f391b3bb944e02a2320f8"
+    },
+    "interval": [
+      "0x1.2d47e189e2af8p+0",
+      "0x1.3ca40a7fa53edp+0"
+    ],
+    "interval_label": "I=S(1)+[.12,.18]",
+    "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+    "source_identity": "ed6330bb7f905975c11a05696d3fff7a2763ea1fd05fdb5d0aff3b319793becf",
+    "state_law": "C_Sigma[g]=U_g C_up U_g^dagger"
+  },
+  "candidate_owner": "results/development/nsc-ks-gate-history-lm-broyden.json",
+  "cell_count": 256,
+  "dense_sampling_used_as_bound": false,
+  "diagnostic": {
+    "arithmetic": {
+      "certificate_use": false,
+      "constraints": [
+        "N",
+        "beta"
+      ],
+      "contraction": {
+        "denominator": "1",
+        "numerator": "106"
+      },
+      "family_sum": {
+        "N": {
+          "denominator": "2",
+          "numerator": "1"
+        },
+        "beta": {
+          "denominator": "4",
+          "numerator": "1"
+        }
+      },
+      "gamma_n": {
+        "denominator": "9007199254740965",
+        "numerator": "27"
+      },
+      "gamma_n_applied_last": true,
+      "observed_drift_used_as_bound": false,
+      "operation_inventory": {
+        "contractions": 7,
+        "family_summations": 4,
+        "gamma_n_applied_last": true,
+        "matrix_products": 12,
+        "phase_arithmetic_operations": 0,
+        "phase_value_excluded": true,
+        "residual_additions": 4,
+        "scope": "phase contraction arithmetic is already enclosed by phase_value; the remaining arithmetic component excludes that work",
+        "total": 27
+      },
+      "phase_value_excluded": true,
+      "physical_EXISTENCE_certificate": false,
+      "physical_NONEXISTENCE_certificate": false,
+      "product": [
+        [
+          {
+            "denominator": "1",
+            "numerator": "5"
+          },
+          {
+            "denominator": "1",
+            "numerator": "8"
+          }
+        ],
+        [
+          {
+            "denominator": "1",
+            "numerator": "1"
+          },
+          {
+            "denominator": "1",
+            "numerator": "4"
+          }
+        ]
+      ],
+      "residual_parts": {
+        "N": {
+          "denominator": "4",
+          "numerator": "5"
+        },
+        "beta": {
+          "denominator": "60",
+          "numerator": "47"
+        }
+      },
+      "rounded": {
+        "N": {
+          "denominator": "9007199254740965",
+          "numerator": "966022120070971392"
+        },
+        "beta": {
+          "denominator": "3142046251653825",
+          "numerator": "335518172239101952"
+        }
+      },
+      "schema": "NSC-KS-ASSEMBLY-ARITHMETIC-v1",
+      "scope": "synthetic exact-rational remaining-assembly control",
+      "status": "DIAGNOSTIC: exact rational matrix/contraction/family/residual control",
+      "stepwise_control_unit_1e3_N": {
+        "denominator": "333",
+        "numerator": "35750"
+      },
+      "stepwise_gamma_is_not_production": true
+    },
+    "certificate_use": false,
+    "continuous": {
+      "N": {
+        "between_node_remainder_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "cell_maximum_uppers": [
+          {
+            "denominator": "600000000000001",
+            "numerator": "22589448257"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "90354391138"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "203284623495"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "361363138448"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "564566129955"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "812862996394"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "1106216345166"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "1444581998342"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "1827908999295"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "2256139620388"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "2729209371666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "3247047010566"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "3809574552643"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "4416707283319"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "5068353770637"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "5764415879031"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "6504788784112"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "7289360988443"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "8118014338332"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "8990624041638"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "9907058686545"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "10867180261369"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "11870844175330"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "12917899280338"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "14008187893742"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "15141545822088"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "16317802385844"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "17536780445093"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "18798296426228"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "20102160349578"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "21448175858037"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "22836140246614"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "24265844492984"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "25737073288941"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "27249605072843"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "28803212062968"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "30397660291815"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "32032709641346"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "33708113879145"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "35423620695494"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "37178971741378"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "38973902667388"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "40808143163525"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "42681416999919"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "44593442068422"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "46543930425089"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "48532588333550"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "50559116309238"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "52623209164493"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "54724556054526"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "56862840524221"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "59037740555808"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "61248928617335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "63496071712019"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "65778831428372"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "68096863991178"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "70449820313263"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "72837346048056"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "75259081642962"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "77714662393513"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "80203718498278"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "82725875114560"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "85280752414856"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "87867965644035"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "90487125177308"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "93137836578881"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "95819700661364"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "98532313545894"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "101275266722948"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "104048147113867"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "106850537133063"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "109682014750908"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "112542153557285"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "115430522825813"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "118346687578703"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "121290208652270"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "124260642763068"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "127257542574646"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "130280456764918"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "133328930094118"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "136402503473388"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "139500714033871"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "142623095196459"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "145769176742035"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "148938484882286"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "152130542331066"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "155344868376264"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "158580978952201"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "161838386712530"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "165116601103618"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "168415128438442"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "171733471970917"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "175071131970710"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "178427605798504"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "181802387981687"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "185194970290475"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "188604841814448"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "192031489039504"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "195474395925171"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "198933043982335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "202406912351321"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "205895477880334"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "209398215204233"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "212914596823661"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "216444093184485"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "219986172757532"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "223540302118646"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "227105946029021"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "230682567515798"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "234269627952938"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "237866587142335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "241472903395162"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "245088033613458"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "248711433371911"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "252342556999843"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "255980857663392"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "259625787447862"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "263276797440235"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "266933337811835"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "270594857901132"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "274260806296669"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "277930630920100"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "281603779109338"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "285279697701775"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "288957833117594"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "292637631443128"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "296318538514284"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "300000000000001"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "303681461485717"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "307362368556874"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "311042166882408"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "314720302298226"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "318396220890662"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "322069369079901"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "325739193703332"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "329405142098868"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "333066662188166"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "336723202559766"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "340374212552139"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "344019142336609"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "347657443000158"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "351288566628090"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "354911966386542"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "358527096604840"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "362133412857666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "365730372047062"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "369317432484202"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "372894053970980"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "376459697881355"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "380013827242469"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "383555906815516"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "387085403176340"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "390601784795768"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "394104522119668"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "397593087648680"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "401066956017666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "404525604074830"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "407968510960498"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "411395158185553"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "414805029709527"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "418197612018314"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "421572394201498"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "424928868029291"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "428266528029085"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "431584871561559"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "434883398896382"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "438161613287474"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "441419021047800"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "444655131623738"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "447869457668935"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "451061515117715"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "454230823257966"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "457376904803542"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "460499285966130"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "463597496526613"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "466671069905882"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "469719543235086"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "472742457425355"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "475739357236933"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "478709791347731"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "481653312421298"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "484569477174188"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "487457846442716"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "490317985249094"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "493149462866938"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "495951852886134"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "498724733277052"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "501467686454108"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "504180299338638"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "506862163421120"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "509512874822693"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "512132034355966"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "514719247585145"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "517274124885441"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "519796281501723"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "522285337606488"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "524740918357038"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "527162653951945"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "529550179686738"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "531903136008822"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "534221168571629"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "536503928287982"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "538751071382666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "540962259444193"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "543137159475780"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "545275443945475"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "547376790835508"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "549440883690764"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "551467411666451"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "553456069574912"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "555406557931579"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "557318583000082"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "559191856836476"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "561026097332613"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "562821028258622"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "564576379304508"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "566291886120856"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "567967290358655"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "569602339708186"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "571196787937034"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "572750394927158"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "574262926711060"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "575734155507018"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "577163859753388"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "578551824141964"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "579897839650423"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "581201703573773"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "582463219554908"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "583682197614158"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "584858454177913"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "585991812106259"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "587082100719663"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "588129155824671"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "589132819738632"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "590092941313456"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "591009375958363"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "591881985661668"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "592710639011558"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "593495211215888"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "594235584120970"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "594931646229364"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "595583292716682"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "596190425447358"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "596752952989435"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "597270790628335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "597743860379614"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "598172091000706"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "598555418001658"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "598893783654835"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599187137003608"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599435433870046"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599638636861553"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599796715376506"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599909645608863"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599977410551744"
+          },
+          {
+            "denominator": "1",
+            "numerator": "1"
+          }
+        ],
+        "continuous_maximum_upper": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "dense_sampling_used_as_bound": false,
+        "derivative_bound_required": true,
+        "nodal_maximum_upper": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "outward_binary64": {
+          "between_node_remainder_upper": 0.0,
+          "continuous_maximum_upper": 1.0,
+          "nodal_maximum_upper": 1.0
+        }
+      },
+      "beta": {
+        "between_node_remainder_upper": {
+          "denominator": "1",
+          "numerator": "0"
+        },
+        "cell_maximum_uppers": [
+          {
+            "denominator": "1",
+            "numerator": "1"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599977410551744"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599909645608863"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599796715376506"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599638636861553"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599435433870046"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "599187137003607"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "598893783654835"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "598555418001659"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "598172091000706"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "597743860379613"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "597270790628335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "596752952989435"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "596190425447358"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "595583292716682"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "594931646229364"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "594235584120970"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "593495211215889"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "592710639011558"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "591881985661669"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "591009375958363"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "590092941313456"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "589132819738632"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "588129155824671"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "587082100719663"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "585991812106259"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "584858454177913"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "583682197614157"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "582463219554908"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "581201703573773"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "579897839650423"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "578551824141964"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "577163859753387"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "575734155507017"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "574262926711060"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "572750394927158"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "571196787937033"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "569602339708186"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "567967290358655"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "566291886120856"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "564576379304507"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "562821028258623"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "561026097332613"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "559191856836476"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "557318583000082"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "555406557931579"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "553456069574912"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "551467411666451"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "549440883690763"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "547376790835508"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "545275443945475"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "543137159475780"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "540962259444193"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "538751071382666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "536503928287982"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "534221168571629"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "531903136008823"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "529550179686738"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "527162653951945"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "524740918357039"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "522285337606488"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "519796281501723"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "517274124885441"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "514719247585145"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "512132034355966"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "509512874822693"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "506862163421120"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "504180299338637"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "501467686454107"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "498724733277053"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "495951852886134"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "493149462866938"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "490317985249093"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "487457846442716"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "484569477174188"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "481653312421298"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "478709791347731"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "475739357236933"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "472742457425355"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "469719543235083"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "466671069905883"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "463597496526613"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "460499285966130"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "457376904803542"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "454230823257966"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "451061515117715"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "447869457668935"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "444655131623737"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "441419021047800"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "438161613287471"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "434883398896383"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "431584871561559"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "428266528029084"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "424928868029291"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "421572394201497"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "418197612018314"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "414805029709526"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "411395158185553"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "407968510960497"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "404525604074830"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "401066956017666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "397593087648680"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "394104522119667"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "390601784795768"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "387085403176340"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "383555906815516"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "380013827242469"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "376459697881355"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "372894053970980"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "369317432484203"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "365730372047063"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "362133412857666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "358527096604839"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "354911966386543"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "351288566628090"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "347657443000158"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "344019142336609"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "340374212552139"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "336723202559766"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "333066662188166"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "329405142098869"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "325739193703332"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "322069369079901"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "318396220890663"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "314720302298226"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "311042166882407"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "307362368556873"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "303681461485717"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "300000000000000"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "296318538514284"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "292637631443127"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "288957833117593"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "285279697701775"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "281603779109339"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "277930630920100"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "274260806296669"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "270594857901133"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "266933337811835"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "263276797440235"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "259625787447862"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "255980857663392"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "252342556999843"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "248711433371911"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "245088033613459"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "241472903395161"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "237866587142335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "234269627952939"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "230682567515799"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "227105946029021"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "223540302118646"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "219986172757532"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "216444093184485"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "212914596823661"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "209398215204233"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "205895477880333"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "202406912351321"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "198933043982335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "195474395925171"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "192031489039503"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "188604841814448"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "185194970290474"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "181802387981687"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "178427605798503"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "175071131970710"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "171733471970916"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "168415128438442"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "165116601103619"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "161838386712527"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "158580978952201"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "155344868376263"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "152130542331066"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "148938484882286"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "145769176742035"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "142623095196459"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "139500714033871"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "136402503473388"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "133328930094119"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "130280456764915"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "127257542574646"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "124260642763068"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "121290208652270"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "118346687578703"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "115430522825813"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "112542153557285"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "109682014750907"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "106850537133063"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "104048147113867"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "101275266722949"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "98532313545893"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "95819700661363"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "93137836578881"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "90487125177308"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "87867965644035"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "85280752414856"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "82725875114560"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "80203718498278"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "77714662393513"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "75259081642963"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "72837346048056"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "70449820313263"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "68096863991179"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "65778831428372"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "63496071712019"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "61248928617335"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "59037740555808"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "56862840524221"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "54724556054526"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "52623209164493"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "50559116309237"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "48532588333550"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "46543930425089"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "44593442068422"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "42681416999919"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "40808143163525"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "38973902667388"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "37178971741379"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "35423620695493"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "33708113879145"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "32032709641346"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "30397660291815"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "28803212062967"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "27249605072843"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "25737073288941"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "24265844492983"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "22836140246613"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "21448175858037"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "20102160349578"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "18798296426228"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "17536780445093"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "16317802385843"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "15141545822088"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "14008187893742"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "12917899280338"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "11870844175330"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "10867180261369"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "9907058686545"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "8990624041638"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "8118014338333"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "7289360988443"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "6504788784113"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "5764415879031"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "5068353770637"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "4416707283319"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "3809574552643"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "3247047010566"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "2729209371666"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "2256139620387"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "1827908999295"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "1444581998343"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "1106216345166"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "812862996393"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "564566129955"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "361363138448"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "203284623495"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "90354391138"
+          },
+          {
+            "denominator": "600000000000001",
+            "numerator": "22589448257"
+          }
+        ],
+        "continuous_maximum_upper": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "dense_sampling_used_as_bound": false,
+        "derivative_bound_required": true,
+        "nodal_maximum_upper": {
+          "denominator": "1",
+          "numerator": "1"
+        },
+        "outward_binary64": {
+          "between_node_remainder_upper": 0.0,
+          "continuous_maximum_upper": 1.0,
+          "nodal_maximum_upper": 1.0
+        }
+      },
+      "cell_count": 256,
+      "certificate_use": false,
+      "dense_sampling_used_as_bound": false,
+      "grid_owner": "LocalIncomingFamily.collocation_nodes",
+      "node_count": 257,
+      "nodes_digest": "2b1e021f5c8d8c85179954f11162fd6d4d109edfd5e4253db5273887e83eb16a",
+      "nodes_hex": [
+        "0x1.2d47e189e2af7p+0",
+        "0x1.2d48076ffac9ap+0",
+        "0x1.2d487920cd0d9p+0",
+        "0x1.2d493697f769dp+0",
+        "0x1.2d4a3fce2bf15p+0",
+        "0x1.2d4b94b931238p+0",
+        "0x1.2d4d354be2515p+0",
+        "0x1.2d4f2176301ebp+0",
+        "0x1.2d51592521217p+0",
+        "0x1.2d53dc42d29c0p+0",
+        "0x1.2d56aab67955ep+0",
+        "0x1.2d59c46462904p+0",
+        "0x1.2d5d292df5173p+0",
+        "0x1.2d60d8f1b26fbp+0",
+        "0x1.2d64d38b38227p+0",
+        "0x1.2d6918d341229p+0",
+        "0x1.2d6da89fa7518p+0",
+        "0x1.2d7282c3651f0p+0",
+        "0x1.2d77a70e97453p+0",
+        "0x1.2d7d154e7ea15p+0",
+        "0x1.2d82cd4d8228ep+0",
+        "0x1.2d88ced330fa1p+0",
+        "0x1.2d8f19a444896p+0",
+        "0x1.2d95ad82a2ea2p+0",
+        "0x1.2d9c8a2d6133dp+0",
+        "0x1.2da3af60c6026p+0",
+        "0x1.2dab1cd64c130p+0",
+        "0x1.2db2d244a4fbep+0",
+        "0x1.2dbacf5fbbffbp+0",
+        "0x1.2dc313d8b8fcbp+0",
+        "0x1.2dcb9f5e03769p+0",
+        "0x1.2dd4719b45bc2p+0",
+        "0x1.2ddd8a3970272p+0",
+        "0x1.2de6e8debc782p+0",
+        "0x1.2df08d2eb14bfp+0",
+        "0x1.2dfa76ca25accp+0",
+        "0x1.2e04a54f44bd0p+0",
+        "0x1.2e0f1859917d2p+0",
+        "0x1.2e19cf81eaab2p+0",
+        "0x1.2e24ca5e8ebcbp+0",
+        "0x1.2e3008831ff29p+0",
+        "0x1.2e3b8980a8868p+0",
+        "0x1.2e474ce59ef21p+0",
+        "0x1.2e53523dea4f4p+0",
+        "0x1.2e5f9912e6d27p+0",
+        "0x1.2e6c20eb6a5d2p+0",
+        "0x1.2e78e94bc929ep+0",
+        "0x1.2e85f1b5da90dp+0",
+        "0x1.2e9339a8fde4dp+0",
+        "0x1.2ea0c0a21f690p+0",
+        "0x1.2eae861bbd5e5p+0",
+        "0x1.2ebc898ded292p+0",
+        "0x1.2ecaca6e608f0p+0",
+        "0x1.2ed948306b0b2p+0",
+        "0x1.2ee80245073b5p+0",
+        "0x1.2ef6f81adc62fp+0",
+        "0x1.2f06291e44060p+0",
+        "0x1.2f1594b94f9a0p+0",
+        "0x1.2f253a53ce4dbp+0",
+        "0x1.2f35195352e74p+0",
+        "0x1.2f45311b39b88p+0",
+        "0x1.2f55810caea88p+0",
+        "0x1.2f660886b3536p+0",
+        "0x1.2f76c6e6253f5p+0",
+        "0x1.2f87bb85c4263p+0",
+        "0x1.2f98e5be38552p+0",
+        "0x1.2faa44e6191f9p+0",
+        "0x1.2fbbd851f3676p+0",
+        "0x1.2fcd9f5450393p+0",
+        "0x1.2fdf993dbb7c3p+0",
+        "0x1.2ff1c55ccab5bp+0",
+        "0x1.300422fe23e07p+0",
+        "0x1.3016b16c84566p+0",
+        "0x1.30296ff0c7cddp+0",
+        "0x1.303c5dd1ef68ep+0",
+        "0x1.304f7a5528d75p+0",
+        "0x1.3062c4bdd58a4p+0",
+        "0x1.30763c4d91fa0p+0",
+        "0x1.3089e0443cfcdp+0",
+        "0x1.309dafdfff2f5p+0",
+        "0x1.30b1aa5d526d5p+0",
+        "0x1.30c5cef7095c2p+0",
+        "0x1.30da1ce65703dp+0",
+        "0x1.30ee9362d679fp+0",
+        "0x1.310331a2929b0p+0",
+        "0x1.3117f6da0dd3ap+0",
+        "0x1.312ce23c49f91p+0",
+        "0x1.3141f2fad0305p+0",
+        "0x1.31572845b8e3dp+0",
+        "0x1.316c814bb3c76p+0",
+        "0x1.3181fd3a0fe9dp+0",
+        "0x1.31979b3cc3d4bp+0",
+        "0x1.31ad5a7e75b8dp+0",
+        "0x1.31c33a2883a7dp+0",
+        "0x1.31d939630bdaap+0",
+        "0x1.31ef5754f5042p+0",
+        "0x1.32059323f6afap+0",
+        "0x1.321bebf4a1ab5p+0",
+        "0x1.323260ea687e2p+0",
+        "0x1.3248f127a7e82p+0",
+        "0x1.325f9bcdaf6e3p+0",
+        "0x1.32765ffcc9efdp+0",
+        "0x1.328d3cd446471p+0",
+        "0x1.32a431727ff1ep+0",
+        "0x1.32bb3cf4e7c55p+0",
+        "0x1.32d25e780ca9ap+0",
+        "0x1.32e99517a45ebp+0",
+        "0x1.3300dfee94495p+0",
+        "0x1.33183e16fa487p+0",
+        "0x1.332faeaa3591dp+0",
+        "0x1.334730c0ef963p+0",
+        "0x1.335ec37324ecap+0",
+        "0x1.337665d82e443p+0",
+        "0x1.338e1706c95c5p+0",
+        "0x1.33a5d6152202bp+0",
+        "0x1.33bda218db174p+0",
+        "0x1.33d57a2717952p+0",
+        "0x1.33ed5d5483a0bp+0",
+        "0x1.34054ab55d9a1p+0",
+        "0x1.341d415d7f33dp+0",
+        "0x1.34354060668dep+0",
+        "0x1.344d46d13f538p+0",
+        "0x1.346553c2ebdccp+0",
+        "0x1.347d66480e52dp+0",
+        "0x1.34957d7311d67p+0",
+        "0x1.34ad985633a91p+0",
+        "0x1.34c5b6038c570p+0",
+        "0x1.34ddd58d18e3dp+0",
+        "0x1.34f5f604c3f72p+0",
+        "0x1.350e167c6f0a7p+0",
+        "0x1.35263605fb974p+0",
+        "0x1.353e53b354453p+0",
+        "0x1.35566e967617dp+0",
+        "0x1.356e85c1799b7p+0",
+        "0x1.358698469c118p+0",
+        "0x1.359ea538489acp+0",
+        "0x1.35b6aba921606p+0",
+        "0x1.35ceaaac08ba7p+0",
+        "0x1.35e6a1542a543p+0",
+        "0x1.35fe8eb5044d9p+0",
+        "0x1.361671e270592p+0",
+        "0x1.362e49f0acd70p+0",
+        "0x1.364615f465eb9p+0",
+        "0x1.365dd502be91fp+0",
+        "0x1.3675863159aa1p+0",
+        "0x1.368d28966301ap+0",
+        "0x1.36a4bb4898581p+0",
+        "0x1.36bc3d5f525c7p+0",
+        "0x1.36d3adf28da5dp+0",
+        "0x1.36eb0c1af3a4fp+0",
+        "0x1.370256f1e38f9p+0",
+        "0x1.37198d917b44ap+0",
+        "0x1.3730af14a028fp+0",
+        "0x1.3747ba9707fc6p+0",
+        "0x1.375eaf3541a73p+0",
+        "0x1.37758c0cbdfe7p+0",
+        "0x1.378c503bd8801p+0",
+        "0x1.37a2fae1e0062p+0",
+        "0x1.37b98b1f1f702p+0",
+        "0x1.37d00014e642fp+0",
+        "0x1.37e658e5913eap+0",
+        "0x1.37fc94b492ea2p+0",
+        "0x1.3812b2a67c13ap+0",
+        "0x1.3828b1e104467p+0",
+        "0x1.383e918b12357p+0",
+        "0x1.385450ccc4199p+0",
+        "0x1.3869eecf78047p+0",
+        "0x1.387f6abdd426fp+0",
+        "0x1.3894c3c3cf0a7p+0",
+        "0x1.38a9f90eb7bdfp+0",
+        "0x1.38bf09cd3df53p+0",
+        "0x1.38d3f52f7a1aap+0",
+        "0x1.38e8ba66f5534p+0",
+        "0x1.38fd58a6b1745p+0",
+        "0x1.3911cf2330ea7p+0",
+        "0x1.39261d127e922p+0",
+        "0x1.393a41ac3580fp+0",
+        "0x1.394e3c2988bf0p+0",
+        "0x1.39620bc54af17p+0",
+        "0x1.3975afbbf5f44p+0",
+        "0x1.3989274bb2640p+0",
+        "0x1.399c71b45f16fp+0",
+        "0x1.39af8e3798856p+0",
+        "0x1.39c27c18c0207p+0",
+        "0x1.39d53a9d0397ep+0",
+        "0x1.39e7c90b640ddp+0",
+        "0x1.39fa26acbd389p+0",
+        "0x1.3a0c52cbcc721p+0",
+        "0x1.3a1e4cb537b51p+0",
+        "0x1.3a3013b79486ep+0",
+        "0x1.3a41a7236ecebp+0",
+        "0x1.3a53064b4f992p+0",
+        "0x1.3a643083c3c81p+0",
+        "0x1.3a75252362aefp+0",
+        "0x1.3a85e382d49aep+0",
+        "0x1.3a966afcd945cp+0",
+        "0x1.3aa6baee4e35cp+0",
+        "0x1.3ab6d2b635070p+0",
+        "0x1.3ac6b1b5b9a09p+0",
+        "0x1.3ad6575038544p+0",
+        "0x1.3ae5c2eb43e84p+0",
+        "0x1.3af4f3eeab8b5p+0",
+        "0x1.3b03e9c480b2fp+0",
+        "0x1.3b12a3d91ce32p+0",
+        "0x1.3b21219b275f4p+0",
+        "0x1.3b2f627b9ac52p+0",
+        "0x1.3b3d65edca8ffp+0",
+        "0x1.3b4b2b6768854p+0",
+        "0x1.3b58b2608a097p+0",
+        "0x1.3b65fa53ad5d7p+0",
+        "0x1.3b7302bdbec46p+0",
+        "0x1.3b7fcb1e1d912p+0",
+        "0x1.3b8c52f6a11bdp+0",
+        "0x1.3b9899cb9d9f0p+0",
+        "0x1.3ba49f23e8fc3p+0",
+        "0x1.3bb06288df67cp+0",
+        "0x1.3bbbe38667fbbp+0",
+        "0x1.3bc721aaf9319p+0",
+        "0x1.3bd21c879d432p+0",
+        "0x1.3bdcd3aff6712p+0",
+        "0x1.3be746ba43314p+0",
+        "0x1.3bf1753f62418p+0",
+        "0x1.3bfb5edad6a25p+0",
+        "0x1.3c05032acb762p+0",
+        "0x1.3c0e61d017c72p+0",
+        "0x1.3c177a6e42322p+0",
+        "0x1.3c204cab8477bp+0",
+        "0x1.3c28d830cef19p+0",
+        "0x1.3c311ca9cbee9p+0",
+        "0x1.3c3919c4e2f26p+0",
+        "0x1.3c40cf333bdb4p+0",
+        "0x1.3c483ca8c1ebep+0",
+        "0x1.3c4f61dc26ba7p+0",
+        "0x1.3c563e86e5042p+0",
+        "0x1.3c5cd2654364ep+0",
+        "0x1.3c631d3656f43p+0",
+        "0x1.3c691ebc05c56p+0",
+        "0x1.3c6ed6bb094cfp+0",
+        "0x1.3c7444faf0a91p+0",
+        "0x1.3c79694622cf4p+0",
+        "0x1.3c7e4369e09ccp+0",
+        "0x1.3c82d33646cbbp+0",
+        "0x1.3c87187e4fcbdp+0",
+        "0x1.3c8b1317d57e9p+0",
+        "0x1.3c8ec2db92d71p+0",
+        "0x1.3c9227a5255e0p+0",
+        "0x1.3c9541530e986p+0",
+        "0x1.3c980fc6b5524p+0",
+        "0x1.3c9a92e466ccdp+0",
+        "0x1.3c9cca9357cf9p+0",
+        "0x1.3c9eb6bda59cfp+0",
+        "0x1.3ca0575056cacp+0",
+        "0x1.3ca1ac3b5bfcfp+0",
+        "0x1.3ca2b57190847p+0",
+        "0x1.3ca372e8bae0bp+0",
+        "0x1.3ca3e4998d24ap+0",
+        "0x1.3ca40a7fa53edp+0"
+      ],
+      "samples_are_not_proof": true,
+      "samples_used_as_bound": false,
+      "schema": "NSC-KS-CONTINUOUS-CONSTRAINT-ENCLOSURE-v1",
+      "scope": "synthetic Lipschitz control on LocalIncomingFamily.collocation_nodes(257); not a residual enclosure and not a budget component",
+      "status": "DIAGNOSTIC: manufactured affine |f| on the owned 257-node grid"
+    },
+    "scope": "synthetic/control outputs only"
+  },
+  "error_components_not_filled": [
+    "between_node",
+    "arithmetic"
+  ],
+  "evaluator_owners": [
+    "src/recursive_horizons/nsc_ks_history_evaluator.py",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py",
+    "src/recursive_horizons/nsc_ks_value_evaluator.py",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py"
+  ],
+  "geometry_between_node_is_not_full_residual": true,
+  "geometry_record": {
+    "full_between_node_remainder": null,
+    "path": "results/development/nsc-ks-between-node-geometry.json",
+    "sha256": "473e7b41d08641cd78847d970bd655b7fa66f527491edd7c41e06f2043ba29f1"
+  },
+  "grid_owner": "LocalIncomingFamily.collocation_nodes",
+  "history": {
+    "path": "results/development/nsc-ks-gate-history-lm-broyden.json",
+    "schema": "NSC-KS-GATE-HISTORY-v1",
+    "sha256": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f"
+  },
+  "input_hashes": {
+    "results/development/nsc-ks-between-node-geometry.json": "473e7b41d08641cd78847d970bd655b7fa66f527491edd7c41e06f2043ba29f1",
+    "results/development/nsc-ks-current-phase-accuracy-v3-n129.json": "1e66f1f4b8828ed9cd8c4963bd1c67af130c928cccc775dd38091f779b68a857",
+    "results/development/nsc-ks-gate-budget-v4.json": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "results/development/nsc-ks-gate-reanchor-v2.json": "f5914559d7b9570ff16bea1c50a0417a16d0bbcd2384999ce8bc98a108f9ea6f",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+    "src/recursive_horizons/nsc_ks_history_evaluator.py": "446ede4f0c05b1952476d89fdef85885c3acae0d588e4f92cd3de1b1c16fb5da",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_value_evaluator.py": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b"
+  },
+  "interval": [
+    "0x1.2d47e189e2af7p+0",
+    "0x1.3ca40a7fa53edp+0"
+  ],
+  "interval_label": "I=S(1)+[.12,.18]",
+  "missing_scientific_inputs": [
+    "outward nodal |E_N|, |E_beta| enclosures at all 257 verification nodes",
+    "directed full-residual derivative uppers on all 256 cells for N and beta",
+    "interval/directed abs majorants of remaining contraction arrays (delta, C_src, reference columns, vertices) at the assembly nodes",
+    "family-summand interval enclosures for all 120 signed families",
+    "interval enclosures of baseline, geometry and matter terms; edge phase arithmetic is already enclosed by phase_value and is not counted again",
+    "authenticated PASS records for field_space_time, changed_history_UV_tail, baseline_low_subgap, upstream, between_node and arithmetic"
+  ],
+  "nine_component_order": [
+    "field_space_time",
+    "changed_history_UV_tail",
+    "baseline_low_subgap",
+    "upstream",
+    "energy_interpolation",
+    "covered_regions",
+    "phase_value",
+    "between_node",
+    "arithmetic"
+  ],
+  "nodes_digest": "2b1e021f5c8d8c85179954f11162fd6d4d109edfd5e4253db5273887e83eb16a",
+  "nodes_hex": [
+    "0x1.2d47e189e2af7p+0",
+    "0x1.2d48076ffac9ap+0",
+    "0x1.2d487920cd0d9p+0",
+    "0x1.2d493697f769dp+0",
+    "0x1.2d4a3fce2bf15p+0",
+    "0x1.2d4b94b931238p+0",
+    "0x1.2d4d354be2515p+0",
+    "0x1.2d4f2176301ebp+0",
+    "0x1.2d51592521217p+0",
+    "0x1.2d53dc42d29c0p+0",
+    "0x1.2d56aab67955ep+0",
+    "0x1.2d59c46462904p+0",
+    "0x1.2d5d292df5173p+0",
+    "0x1.2d60d8f1b26fbp+0",
+    "0x1.2d64d38b38227p+0",
+    "0x1.2d6918d341229p+0",
+    "0x1.2d6da89fa7518p+0",
+    "0x1.2d7282c3651f0p+0",
+    "0x1.2d77a70e97453p+0",
+    "0x1.2d7d154e7ea15p+0",
+    "0x1.2d82cd4d8228ep+0",
+    "0x1.2d88ced330fa1p+0",
+    "0x1.2d8f19a444896p+0",
+    "0x1.2d95ad82a2ea2p+0",
+    "0x1.2d9c8a2d6133dp+0",
+    "0x1.2da3af60c6026p+0",
+    "0x1.2dab1cd64c130p+0",
+    "0x1.2db2d244a4fbep+0",
+    "0x1.2dbacf5fbbffbp+0",
+    "0x1.2dc313d8b8fcbp+0",
+    "0x1.2dcb9f5e03769p+0",
+    "0x1.2dd4719b45bc2p+0",
+    "0x1.2ddd8a3970272p+0",
+    "0x1.2de6e8debc782p+0",
+    "0x1.2df08d2eb14bfp+0",
+    "0x1.2dfa76ca25accp+0",
+    "0x1.2e04a54f44bd0p+0",
+    "0x1.2e0f1859917d2p+0",
+    "0x1.2e19cf81eaab2p+0",
+    "0x1.2e24ca5e8ebcbp+0",
+    "0x1.2e3008831ff29p+0",
+    "0x1.2e3b8980a8868p+0",
+    "0x1.2e474ce59ef21p+0",
+    "0x1.2e53523dea4f4p+0",
+    "0x1.2e5f9912e6d27p+0",
+    "0x1.2e6c20eb6a5d2p+0",
+    "0x1.2e78e94bc929ep+0",
+    "0x1.2e85f1b5da90dp+0",
+    "0x1.2e9339a8fde4dp+0",
+    "0x1.2ea0c0a21f690p+0",
+    "0x1.2eae861bbd5e5p+0",
+    "0x1.2ebc898ded292p+0",
+    "0x1.2ecaca6e608f0p+0",
+    "0x1.2ed948306b0b2p+0",
+    "0x1.2ee80245073b5p+0",
+    "0x1.2ef6f81adc62fp+0",
+    "0x1.2f06291e44060p+0",
+    "0x1.2f1594b94f9a0p+0",
+    "0x1.2f253a53ce4dbp+0",
+    "0x1.2f35195352e74p+0",
+    "0x1.2f45311b39b88p+0",
+    "0x1.2f55810caea88p+0",
+    "0x1.2f660886b3536p+0",
+    "0x1.2f76c6e6253f5p+0",
+    "0x1.2f87bb85c4263p+0",
+    "0x1.2f98e5be38552p+0",
+    "0x1.2faa44e6191f9p+0",
+    "0x1.2fbbd851f3676p+0",
+    "0x1.2fcd9f5450393p+0",
+    "0x1.2fdf993dbb7c3p+0",
+    "0x1.2ff1c55ccab5bp+0",
+    "0x1.300422fe23e07p+0",
+    "0x1.3016b16c84566p+0",
+    "0x1.30296ff0c7cddp+0",
+    "0x1.303c5dd1ef68ep+0",
+    "0x1.304f7a5528d75p+0",
+    "0x1.3062c4bdd58a4p+0",
+    "0x1.30763c4d91fa0p+0",
+    "0x1.3089e0443cfcdp+0",
+    "0x1.309dafdfff2f5p+0",
+    "0x1.30b1aa5d526d5p+0",
+    "0x1.30c5cef7095c2p+0",
+    "0x1.30da1ce65703dp+0",
+    "0x1.30ee9362d679fp+0",
+    "0x1.310331a2929b0p+0",
+    "0x1.3117f6da0dd3ap+0",
+    "0x1.312ce23c49f91p+0",
+    "0x1.3141f2fad0305p+0",
+    "0x1.31572845b8e3dp+0",
+    "0x1.316c814bb3c76p+0",
+    "0x1.3181fd3a0fe9dp+0",
+    "0x1.31979b3cc3d4bp+0",
+    "0x1.31ad5a7e75b8dp+0",
+    "0x1.31c33a2883a7dp+0",
+    "0x1.31d939630bdaap+0",
+    "0x1.31ef5754f5042p+0",
+    "0x1.32059323f6afap+0",
+    "0x1.321bebf4a1ab5p+0",
+    "0x1.323260ea687e2p+0",
+    "0x1.3248f127a7e82p+0",
+    "0x1.325f9bcdaf6e3p+0",
+    "0x1.32765ffcc9efdp+0",
+    "0x1.328d3cd446471p+0",
+    "0x1.32a431727ff1ep+0",
+    "0x1.32bb3cf4e7c55p+0",
+    "0x1.32d25e780ca9ap+0",
+    "0x1.32e99517a45ebp+0",
+    "0x1.3300dfee94495p+0",
+    "0x1.33183e16fa487p+0",
+    "0x1.332faeaa3591dp+0",
+    "0x1.334730c0ef963p+0",
+    "0x1.335ec37324ecap+0",
+    "0x1.337665d82e443p+0",
+    "0x1.338e1706c95c5p+0",
+    "0x1.33a5d6152202bp+0",
+    "0x1.33bda218db174p+0",
+    "0x1.33d57a2717952p+0",
+    "0x1.33ed5d5483a0bp+0",
+    "0x1.34054ab55d9a1p+0",
+    "0x1.341d415d7f33dp+0",
+    "0x1.34354060668dep+0",
+    "0x1.344d46d13f538p+0",
+    "0x1.346553c2ebdccp+0",
+    "0x1.347d66480e52dp+0",
+    "0x1.34957d7311d67p+0",
+    "0x1.34ad985633a91p+0",
+    "0x1.34c5b6038c570p+0",
+    "0x1.34ddd58d18e3dp+0",
+    "0x1.34f5f604c3f72p+0",
+    "0x1.350e167c6f0a7p+0",
+    "0x1.35263605fb974p+0",
+    "0x1.353e53b354453p+0",
+    "0x1.35566e967617dp+0",
+    "0x1.356e85c1799b7p+0",
+    "0x1.358698469c118p+0",
+    "0x1.359ea538489acp+0",
+    "0x1.35b6aba921606p+0",
+    "0x1.35ceaaac08ba7p+0",
+    "0x1.35e6a1542a543p+0",
+    "0x1.35fe8eb5044d9p+0",
+    "0x1.361671e270592p+0",
+    "0x1.362e49f0acd70p+0",
+    "0x1.364615f465eb9p+0",
+    "0x1.365dd502be91fp+0",
+    "0x1.3675863159aa1p+0",
+    "0x1.368d28966301ap+0",
+    "0x1.36a4bb4898581p+0",
+    "0x1.36bc3d5f525c7p+0",
+    "0x1.36d3adf28da5dp+0",
+    "0x1.36eb0c1af3a4fp+0",
+    "0x1.370256f1e38f9p+0",
+    "0x1.37198d917b44ap+0",
+    "0x1.3730af14a028fp+0",
+    "0x1.3747ba9707fc6p+0",
+    "0x1.375eaf3541a73p+0",
+    "0x1.37758c0cbdfe7p+0",
+    "0x1.378c503bd8801p+0",
+    "0x1.37a2fae1e0062p+0",
+    "0x1.37b98b1f1f702p+0",
+    "0x1.37d00014e642fp+0",
+    "0x1.37e658e5913eap+0",
+    "0x1.37fc94b492ea2p+0",
+    "0x1.3812b2a67c13ap+0",
+    "0x1.3828b1e104467p+0",
+    "0x1.383e918b12357p+0",
+    "0x1.385450ccc4199p+0",
+    "0x1.3869eecf78047p+0",
+    "0x1.387f6abdd426fp+0",
+    "0x1.3894c3c3cf0a7p+0",
+    "0x1.38a9f90eb7bdfp+0",
+    "0x1.38bf09cd3df53p+0",
+    "0x1.38d3f52f7a1aap+0",
+    "0x1.38e8ba66f5534p+0",
+    "0x1.38fd58a6b1745p+0",
+    "0x1.3911cf2330ea7p+0",
+    "0x1.39261d127e922p+0",
+    "0x1.393a41ac3580fp+0",
+    "0x1.394e3c2988bf0p+0",
+    "0x1.39620bc54af17p+0",
+    "0x1.3975afbbf5f44p+0",
+    "0x1.3989274bb2640p+0",
+    "0x1.399c71b45f16fp+0",
+    "0x1.39af8e3798856p+0",
+    "0x1.39c27c18c0207p+0",
+    "0x1.39d53a9d0397ep+0",
+    "0x1.39e7c90b640ddp+0",
+    "0x1.39fa26acbd389p+0",
+    "0x1.3a0c52cbcc721p+0",
+    "0x1.3a1e4cb537b51p+0",
+    "0x1.3a3013b79486ep+0",
+    "0x1.3a41a7236ecebp+0",
+    "0x1.3a53064b4f992p+0",
+    "0x1.3a643083c3c81p+0",
+    "0x1.3a75252362aefp+0",
+    "0x1.3a85e382d49aep+0",
+    "0x1.3a966afcd945cp+0",
+    "0x1.3aa6baee4e35cp+0",
+    "0x1.3ab6d2b635070p+0",
+    "0x1.3ac6b1b5b9a09p+0",
+    "0x1.3ad6575038544p+0",
+    "0x1.3ae5c2eb43e84p+0",
+    "0x1.3af4f3eeab8b5p+0",
+    "0x1.3b03e9c480b2fp+0",
+    "0x1.3b12a3d91ce32p+0",
+    "0x1.3b21219b275f4p+0",
+    "0x1.3b2f627b9ac52p+0",
+    "0x1.3b3d65edca8ffp+0",
+    "0x1.3b4b2b6768854p+0",
+    "0x1.3b58b2608a097p+0",
+    "0x1.3b65fa53ad5d7p+0",
+    "0x1.3b7302bdbec46p+0",
+    "0x1.3b7fcb1e1d912p+0",
+    "0x1.3b8c52f6a11bdp+0",
+    "0x1.3b9899cb9d9f0p+0",
+    "0x1.3ba49f23e8fc3p+0",
+    "0x1.3bb06288df67cp+0",
+    "0x1.3bbbe38667fbbp+0",
+    "0x1.3bc721aaf9319p+0",
+    "0x1.3bd21c879d432p+0",
+    "0x1.3bdcd3aff6712p+0",
+    "0x1.3be746ba43314p+0",
+    "0x1.3bf1753f62418p+0",
+    "0x1.3bfb5edad6a25p+0",
+    "0x1.3c05032acb762p+0",
+    "0x1.3c0e61d017c72p+0",
+    "0x1.3c177a6e42322p+0",
+    "0x1.3c204cab8477bp+0",
+    "0x1.3c28d830cef19p+0",
+    "0x1.3c311ca9cbee9p+0",
+    "0x1.3c3919c4e2f26p+0",
+    "0x1.3c40cf333bdb4p+0",
+    "0x1.3c483ca8c1ebep+0",
+    "0x1.3c4f61dc26ba7p+0",
+    "0x1.3c563e86e5042p+0",
+    "0x1.3c5cd2654364ep+0",
+    "0x1.3c631d3656f43p+0",
+    "0x1.3c691ebc05c56p+0",
+    "0x1.3c6ed6bb094cfp+0",
+    "0x1.3c7444faf0a91p+0",
+    "0x1.3c79694622cf4p+0",
+    "0x1.3c7e4369e09ccp+0",
+    "0x1.3c82d33646cbbp+0",
+    "0x1.3c87187e4fcbdp+0",
+    "0x1.3c8b1317d57e9p+0",
+    "0x1.3c8ec2db92d71p+0",
+    "0x1.3c9227a5255e0p+0",
+    "0x1.3c9541530e986p+0",
+    "0x1.3c980fc6b5524p+0",
+    "0x1.3c9a92e466ccdp+0",
+    "0x1.3c9cca9357cf9p+0",
+    "0x1.3c9eb6bda59cfp+0",
+    "0x1.3ca0575056cacp+0",
+    "0x1.3ca1ac3b5bfcfp+0",
+    "0x1.3ca2b57190847p+0",
+    "0x1.3ca372e8bae0bp+0",
+    "0x1.3ca3e4998d24ap+0",
+    "0x1.3ca40a7fa53edp+0"
+  ],
+  "observed_drift_used_as_bound": false,
+  "phase_record": {
+    "history_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+    "node_count": 129,
+    "path": "results/development/nsc-ks-current-phase-accuracy-v3-n129.json",
+    "sha256": "1e66f1f4b8828ed9cd8c4963bd1c67af130c928cccc775dd38091f779b68a857"
+  },
+  "phase_value_arithmetic_excluded": true,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "predecessor_v4": {
+    "missing_components": [
+      "field_space_time",
+      "changed_history_UV_tail",
+      "baseline_low_subgap",
+      "upstream",
+      "between_node",
+      "arithmetic"
+    ],
+    "path": "results/development/nsc-ks-gate-budget-v4.json",
+    "schema": "NSC-KS-GATE-ERROR-BUDGET-v4",
+    "sha256": "faea263df3ff6b006ff17a5b962ccec4c4bb5ff3e95636e5bb7185775d1e9cf0"
+  },
+  "production": {
+    "arithmetic": null,
+    "arithmetic_status": "OPEN: remaining assembly arithmetic lacks directed interval inputs; production component stays null",
+    "between_node": null,
+    "between_node_status": "OPEN: 257-node / 256-cell between-node enclosure lacks production nodal absolute-value and derivative inputs",
+    "certificate_use": false,
+    "missing_inputs": [
+      "outward nodal |E_N|, |E_beta| enclosures at all 257 verification nodes",
+      "directed full-residual derivative uppers on all 256 cells for N and beta",
+      "interval/directed abs majorants of delta, C_src and reference columns at the assembly nodes for every contracted family",
+      "interval/directed abs majorants of the N,beta vertex tensors",
+      "family-summand N,beta abs enclosures for all 120 signed families",
+      "interval/directed abs enclosures of baseline, geometry and matter; edge/phase terms are excluded from this component"
+    ]
+  },
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "reproducer": "python3 scripts/derive_nsc_ks_continuous_constraint_enclosure.py --check",
+  "samples_are_not_proof": true,
+  "schema": "NSC-KS-CONTINUOUS-CONSTRAINT-ENCLOSURE-v1",
+  "source_hashes": {
+    "docs/nsc-ks-continuous-constraint-enclosure.md": "66c869d2fefab55197cfcbb867119206b0d341f394fce31d77cac0ded1629cb2",
+    "scripts/derive_nsc_ks_continuous_constraint_enclosure.py": "87ca2169b1cdf7609ddefb0923f806c8182b659d603fcd567c120e11edd65b34",
+    "src/recursive_horizons/nsc_ks_assembly_arithmetic.py": "e09b65a46c0a368760e09f9dbe8800c85f8c4e9eae13f60f562194317305df13",
+    "src/recursive_horizons/nsc_ks_continuous_constraint_bound.py": "e56df83eeee4f3ac60331120635a10255872d69ae16ea8ce78ad038487e3cb37",
+    "src/recursive_horizons/nsc_ks_continuous_constraint_enclosure.py": "8aa7cf2fcd3d0c595d0e0c563b03bb23ac91d7945351cb27cdd01e57abd940cc",
+    "tests/test_nsc_ks_assembly_arithmetic.py": "238da30db15b7aa4d641855f5bfff0d5963c650b0099095cba821e8148dfef21",
+    "tests/test_nsc_ks_continuous_constraint_enclosure.py": "976ebaf46fbae33678d8e17d8189f860aa753f5a124f391b3bb944e02a2320f8"
+  },
+  "source_identity": "ed6330bb7f905975c11a05696d3fff7a2763ea1fd05fdb5d0aff3b319793becf",
+  "state_law": "C_Sigma[g]=U_g C_up U_g^dagger",
+  "status": "OPEN: 257-node / 256-cell continuous enclosure and remaining assembly arithmetic defined; production bounds stay null until directed nodal, derivative and interval-array inputs exist",
+  "verification_node_count": 257
+}

@@ -1,0 +1,226 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline": {
+    "action_gradient_approximant": [
+      -0.6959307624515847,
+      -0.05712098699380451
+    ],
+    "certified_constraint_residual": null,
+    "constraint_order": [
+      "N",
+      "beta"
+    ],
+    "extended_stationarity_status": "OPEN",
+    "force_approximant": [
+      0.6959307624515847,
+      0.05712098699380451
+    ],
+    "full_source_error_bound": null,
+    "local_action_gradient": [
+      -0.563010381252666,
+      -3.9376569882053535e-13
+    ],
+    "matter_baseline_action_gradient": [
+      -0.13292038119891872,
+      -0.05712098699341074
+    ],
+    "maximum_absolute_approximant": 0.6959307624515847,
+    "metric_timestep": false,
+    "normal_data_selected_as_physical": false,
+    "physical_constraint_status": "OPEN",
+    "reference_action_gradient_change": [
+      0.0,
+      0.0
+    ],
+    "stationarity_tolerance": 3e-11
+  },
+  "certified_lapse_component_budgets": {
+    "all_group_high_tail": 1.6218249015447895e-15,
+    "low22_32_40": 1.1400443536371797e-13,
+    "middle12": 1.3252914401867612e-14,
+    "middle14": 7.641621496541935e-13
+  },
+  "composition_tolerance": 3e-13,
+  "input_hashes": {
+    "results/development/nsc-incoming-centered-order24.json": "8cc644d154620aedaed8e9c104bbe6e22b7b2222e71085bcd1b7d4a63f73be1b",
+    "results/development/nsc-incoming-energy-error-budget.json": "ca028c2e636d5598597e098c4187cde944677ed3041b298546cb2788b344ae27",
+    "results/development/nsc-incoming-joint-constraints.json": "490345b115bb7243c5af6665c86f68f4c980ab81da6b72cb94d08120aa5f659a",
+    "results/development/nsc-incoming-local-constraints.json": "a0c61be6ce7a03793e0b2afe091efcd8bb12d7ee35aa727800b66986d8617f1c",
+    "results/development/nsc-incoming-low-high-source.json": "42592b84656fb902fe64eba55c21aa34b621287b5a66076fe1165a921bff4cdd",
+    "results/development/nsc-incoming-middle-bound.json": "ec2f7c265fe7368f166f56a4ae8f28d5ca1ef79511755f8fd53f7307b9ed4ab4",
+    "results/development/nsc-incoming-middle-order-correction.json": "af5085668ed62b80beee1dae6ab481cacec40ba713e8398ba537c30d881dae33",
+    "results/development/nsc-incoming-retained-order-correction.json": "a435a516c61a980c28b30d8eac9b6082cdbadbc2abbf5773968df9b1a80d9fb7",
+    "results/development/nsc-incoming-retained-order24-bound.json": "e2dd066d67c582e059a6cba19002d18a1156ea0429a2b3847aadbb8798852754",
+    "results/development/nsc-incoming-source-tail.json": "fc4b55b21dae0bd4ad97cabd46a22e27bf7f66728b420e3811ce35ef9b8bcaf0",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-subgap-source.json": "d30681289a94e3fc205b5b0c4ff25f2e3a27fa8d2f5f3dc3d89f864210f4d251",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_joint_constraints.py": "3fa6a90601d2217a8e13220d0cbad70ab2a2d568ddbf4bbdd686dd67a59f45a0",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710"
+  },
+  "matter": {
+    "action_gradient_increment": [
+      1.5093924360448238e-08,
+      8.212800932686103e-91,
+      -1.5703493406607962e-08,
+      -1.177556294376091e-09
+    ],
+    "composition_residuals": {
+      "group12_explicit_difference": 1.0469004627624257e-24,
+      "group14_explicit_difference": 1.9645539548134407e-24,
+      "group22_explicit_difference": 0.0
+    },
+    "full_source_error_bound": null,
+    "group13_raw_current_zero_residual": 9.852373963653396e-16,
+    "parts": {
+      "LLL_state": [
+        0.0014124841070505215,
+        0.0014124841070505215,
+        0.0012441841744750626,
+        0.0
+      ],
+      "finite_nonLLL": [
+        0.0048535559727941316,
+        0.001631218069794827,
+        0.0019461681767713004,
+        0.0008210775382597894
+      ],
+      "group13_replacement": [
+        3.335050184169548e-11,
+        -7.601843965138009e-10,
+        0.0,
+        0.0
+      ],
+      "paired_approximate_tail": [
+        7.213313839758272e-12,
+        -5.2994369647130365e-11,
+        0.0,
+        2.8038852444289067e-11
+      ]
+    },
+    "previous_stress_approximant": [
+      0.006266040120408469,
+      0.0030437013636665823,
+      0.003190352351246363,
+      0.0008210775662986419
+    ],
+    "refinement_parts": {
+      "group12_middle_16_to_24": [
+        1.5644788635606947e-13,
+        5.072284497985854e-11,
+        0.0,
+        -2.528319854675114e-11
+      ],
+      "group14_middle_16_to_24": [
+        1.5573097894604642e-13,
+        1.5313227863693817e-11,
+        0.0,
+        -3.996811460962622e-12
+      ],
+      "group22_low32_40_to_direct24": [
+        -7.118593774502937e-10,
+        -6.908582227117133e-10,
+        -4.587058127853422e-92,
+        -9.972571513940482e-12
+      ]
+    },
+    "scope": {
+      "group22_thermal_remainder_explicit": true,
+      "local_light_geometry_included": false,
+      "new_thermal_term_assigned_zero": false,
+      "old_receipts_overwritten": false,
+      "same_target_C0_source_law": true,
+      "source_accuracy_complete": false
+    },
+    "stress_approximant": [
+      0.0062660394088612705,
+      0.0030437007388444326,
+      0.003190352351246363,
+      0.0008210775270460604
+    ],
+    "total_stress_increment": [
+      -7.115471985849916e-10,
+      -6.248221498681609e-10,
+      -4.587058127853422e-92,
+      -3.9252581521654245e-11
+    ],
+    "unresolved": [
+      "remaining low/subgap modal accuracy",
+      "rigorous source-quadrature error",
+      "remaining middle-group approximation budget",
+      "retained angular/compact scope versus complete physical inventory"
+    ]
+  },
+  "mixed_normal_probe": {
+    "action_gradient_approximant": [
+      -0.695919642857053,
+      0.10863876922660026
+    ],
+    "certified_constraint_residual": null,
+    "constraint_order": [
+      "N",
+      "beta"
+    ],
+    "extended_stationarity_status": "OPEN",
+    "force_approximant": [
+      0.695919642857053,
+      -0.10863876922660026
+    ],
+    "full_source_error_bound": null,
+    "local_action_gradient": [
+      -0.5630173714581604,
+      -0.02798389401132041
+    ],
+    "matter_baseline_action_gradient": [
+      -0.13292038119891872,
+      -0.05712098699341074
+    ],
+    "maximum_absolute_approximant": 0.695919642857053,
+    "metric_timestep": false,
+    "normal_data_selected_as_physical": false,
+    "physical_constraint_status": "OPEN",
+    "reference_action_gradient_change": [
+      1.810980002619019e-05,
+      0.19374365023133142
+    ],
+    "stationarity_tolerance": 3e-11
+  },
+  "partial_error_budget": {
+    "all_middle_plus_refined_low_cell_and_tail_lapse_error_upper": 3.0551407174996884e-09,
+    "certified_refined_and_tail_lapse_error_upper": 8.930413243213239e-13,
+    "full_source_error_bound": null,
+    "full_source_status": "OPEN",
+    "other_low_subgap_errors_bounded": false,
+    "remaining30_middle_lapse_error_upper": 3.0542476761753674e-09,
+    "rigorous_source_quadrature_error_included": false,
+    "stationarity_tolerance": 3e-11
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_source_update.py --check",
+  "residuals": {
+    "baseline_increment_identity": 2.78162244981413e-17,
+    "group12_explicit_difference": 1.0469004627624257e-24,
+    "group14_explicit_difference": 1.9645539548134407e-24,
+    "group22_explicit_difference": 0.0,
+    "mixed_normal_probe_increment_identity": 2.78162244981413e-17
+  },
+  "schema": "NSC-INCOMING-SOURCE-UPDATE-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "extended_stationarity": "OPEN",
+    "local_light_geometry_count": 1,
+    "metric_evolution": false,
+    "old_scientific_generators_rerun": false,
+    "old_source_records_overwritten": false,
+    "physical_initial_data_selected": false,
+    "push_or_PDF": false,
+    "same_physical_source_law": true
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-source-update.md": "b1ac8d7dc7a4fef5442777aad788658e2ae1e042a6b4a141b184d6acd866e83a",
+    "scripts/derive_nsc_incoming_source_update.py": "5b92d1ec7b3441a7fb8e164025418f0252c1cd52f7657328d261dc80be4a3d65",
+    "src/recursive_horizons/nsc_incoming_source_update.py": "b65fd9af155cbed8ba6d7a5dde0438b73361302c1f3ab13fc8725865ad20e25e",
+    "tests/test_nsc_incoming_source_update.py": "215a4a3eb8c170571a5511dc42821c95251aa5c6c5e396a0e5c017867947e852"
+  },
+  "status": "PASS: disjoint source refinements composed; physical constraints OPEN"
+}

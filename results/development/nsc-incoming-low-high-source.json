@@ -1,0 +1,388 @@
+{
+  "accountable_author": "Douglas Ek",
+  "actual_angular_signs": [
+    1,
+    -1
+  ],
+  "additive_action_gradient_correction": [
+    1.510054655527828e-08,
+    8.212800932686103e-91,
+    -1.7363160937145758e-08,
+    -2.9917177169297716e-10
+  ],
+  "archived_LOW24_source": [
+    8.07854650167181e-09,
+    -4.398008150471335e-08,
+    4.5870581278534946e-92,
+    2.548945339015578e-08
+  ],
+  "archived_LOW32_minus_LOW24": [
+    9.030925605474003e-11,
+    8.830362447747674e-11,
+    -7.289627246093954e-106,
+    7.053873183582395e-13
+  ],
+  "archived_LOW32_source": [
+    8.16885575772655e-09,
+    -4.3891777880235876e-08,
+    4.587058127853422e-92,
+    2.5490158777474138e-08
+  ],
+  "failures": {},
+  "group": 22,
+  "group_factor_per_sign": 0.6602438242725724,
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_centered_order24.py": "aafc22426efee88a83d9f2a9c26f064a2a32fb9907b1ba67f2e59121f1178396",
+    "src/recursive_horizons/nsc_incoming_defect_taylor_bound.py": "37ebb921300a7d561ba31506f62d5498129b4dd9d62472974c60f31b4cee790a",
+    "src/recursive_horizons/nsc_incoming_joint_constraints.py": "3fa6a90601d2217a8e13220d0cbad70ab2a2d568ddbf4bbdd686dd67a59f45a0",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_source_tail.py": "38d4add4f497f7e5bd3736a4d90c3edef93abb7c983315abc76c9b533fbd585e",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a"
+  },
+  "input_payloads": [
+    {
+      "bytes": 92552,
+      "path": "results/development/artifacts/nsc-incoming-vacuum-tail-bound.8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb.json",
+      "sha256": "8807fe7d84fa23f2ff570ef3ba048e6a2d68ac3fa40127bf9d3938240c274dcb"
+    },
+    {
+      "bytes": 14789190,
+      "path": "results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz",
+      "sha256": "efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73"
+    },
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+    },
+    {
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    }
+  ],
+  "interval": [
+    32.0,
+    40.0
+  ],
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "local_cross_certificate": {
+    "angular_sign_norm_symmetry": "c_n(-lambda)=(-1)^n conjugate(c_n(lambda))",
+    "c1": "L+i*m",
+    "constant_coefficient_exact": 0.0,
+    "cross_numerator_coefficient_upper": [
+      7.7150957261572835,
+      102.67233362889553,
+      1721.945800694034,
+      23939.774177600964,
+      369643.86005021905,
+      5488293.762448286,
+      86953717.11300915,
+      1395656847.997055,
+      23445674172.726654,
+      407397762285.3082,
+      7338831625184.068,
+      137609396060020.22,
+      2664867280549957.5,
+      5.373398842207861e+16,
+      1.1179595275731055e+18,
+      2.4180834665742262e+19,
+      5.3970087536083816e+20,
+      1.2499440939732908e+22,
+      2.987593362250457e+23,
+      7.396656832639919e+24,
+      1.8895614384135667e+26,
+      4.99170293983502e+27,
+      1.3598648504654542e+29,
+      1.8411740581243444e+30,
+      9.750846028509107e+29,
+      6.853776022168757e+30,
+      4.086297843858378e+31,
+      9.125710700400664e+32,
+      3.310854647064604e+33,
+      3.132729668219699e+35,
+      3.7606305454114715e+35,
+      8.023472296385419e+37,
+      5.871715397764318e+37,
+      2.1678132994439353e+40,
+      1.1981852749106598e+40,
+      6.641801769299451e+42,
+      2.958607729559796e+42,
+      2.3458302927510986e+45,
+      8.344858557651992e+44,
+      9.55581044331205e+47,
+      2.5911664049576505e+47,
+      4.476269874488524e+50,
+      8.552486637759043e+49,
+      2.4033701743347394e+53,
+      2.8237305804422415e+52,
+      1.4740022948740118e+56,
+      7.804975538959142e+54,
+      1.028669107599905e+59
+    ],
+    "first_inverse_power": 1,
+    "last_inverse_power": 48,
+    "normalization_denominator_lower": 1.0,
+    "physical_Riccati_order": 24
+  },
+  "new_order24_vacuum_source": [
+    7.456996380276256e-09,
+    -4.458263610294759e-08,
+    0.0,
+    2.5480186205960197e-08
+  ],
+  "new_source_by_positive_quadrature": {
+    "24": [
+      7.456996380276255e-09,
+      -4.458263610294758e-08,
+      0.0,
+      2.5480186205960194e-08
+    ],
+    "32": [
+      7.456996380276261e-09,
+      -4.45826361029476e-08,
+      0.0,
+      2.5480186205960204e-08
+    ],
+    "48": [
+      7.456996380276256e-09,
+      -4.458263610294759e-08,
+      0.0,
+      2.5480186205960197e-08
+    ],
+    "64": [
+      7.456996380276256e-09,
+      -4.458263610294759e-08,
+      0.0,
+      2.5480186205960197e-08
+    ]
+  },
+  "new_source_per_sign": {
+    "-1": [
+      6.808989154354601e-09,
+      -6.013533149537917e-08,
+      0.0,
+      -4.2162583488673705e-09
+    ],
+    "1": [
+      6.480072259216556e-10,
+      1.5552695392431578e-08,
+      0.0,
+      2.9696444554827567e-08
+    ]
+  },
+  "new_vacuum_minus_archived_LOW24": [
+    -6.215501213955537e-10,
+    -6.025545982342365e-10,
+    -4.5870581278534946e-92,
+    -9.267184195582242e-12
+  ],
+  "new_vacuum_minus_archived_LOW32": [
+    -7.118593774502937e-10,
+    -6.908582227117133e-10,
+    -4.587058127853422e-92,
+    -9.972571513940482e-12
+  ],
+  "numerical_Riccati_order": 24,
+  "numerical_indicators_sum_absolute_signs": {
+    "precision50_to70": [
+      2.500606910493348e-51,
+      3.078653543092876e-51,
+      0.0,
+      2.6847911062811716e-51
+    ],
+    "quadrature32_to48": [
+      3.1822222695382715e-24,
+      2.5155509299342067e-23,
+      0.0,
+      1.0846447343132181e-23
+    ],
+    "quadrature48_to64": [
+      3.71687966214481e-71,
+      3.654570281202123e-71,
+      0.0,
+      2.631656328011021e-72
+    ]
+  },
+  "numerical_tolerances": {
+    "coefficient16_prefix": 3e-40,
+    "original_cell_measure": 3e-13,
+    "precision50_to70": 3e-35,
+    "quadrature32_to48": 3e-20,
+    "quadrature48_to64": 3e-20,
+    "quadrature_contraction_replay": 3e-22,
+    "source_quadrature_measure": 3e-13
+  },
+  "omitted_thermal_stress_upper": [
+    1.105465039586062e-91,
+    9.174116255711781e-92,
+    9.174116255711781e-92,
+    9.210438740841278e-93
+  ],
+  "payload": {
+    "bytes": 56108,
+    "path": "results/development/artifacts/nsc-incoming-low-high-source.ae66802ce85089b6a52f725836761a3a33f0b5ed820e67c342fc6319fe022fa7.npz",
+    "sha256": "ae66802ce85089b6a52f725836761a3a33f0b5ed820e67c342fc6319fe022fa7"
+  },
+  "physical_error_budget": {
+    "density_error_upper": 5.374317153853041e-15,
+    "fits_stationarity_tolerance": true,
+    "lapse_action_error_upper": 1.1400443536371795e-13,
+    "rigorous_numerical_source_quadrature_error_included": false,
+    "shift_action_error_upper": 1.6425601865381046e-90,
+    "stationarity_tolerance": 3e-11
+  },
+  "physical_mode_energy_bound": {
+    "density_error_upper": 5.37431715385304e-15,
+    "lapse_action_error_upper": 1.1400443536371792e-13,
+    "linear_transverse_density_upper": 5.374317153844546e-15,
+    "physical_Riccati_order": 24,
+    "quadratic_longitudinal_density_upper": 8.494653801352962e-27,
+    "thermal_quadrature_low_band_errors_included": false,
+    "vacuum_current_error": 0.0
+  },
+  "radial_certificate": {
+    "bound_method": "frozen trimmed normalized jets, centered depth4 remainder, fixed128 cells",
+    "centered_remainder_depth": 4,
+    "directed_precision": 40,
+    "endpoint_weight_upper": 2.7492708411573745,
+    "finite_offset_archive_accuracy_certified": false,
+    "first_inverse_power": 24,
+    "group": 22,
+    "horizon_enclosure": [
+      "1.900691605470150253001825084782803569673490976616944681",
+      "1.900691605470150253001825084782803586217103227677498178"
+    ],
+    "initial_projector_difference": 0.0,
+    "initial_scope": "same declared affine-horizon vacuum; explicit local order24 projector",
+    "intervals": 128,
+    "last_inverse_power": 48,
+    "lower": 40.0,
+    "per_sign": [
+      {
+        "coefficient_integral_upper": [
+          2.1287990445287966e+29,
+          7.260789377718723e+29,
+          2.2073805542500467e+30,
+          4.115513884688986e+31,
+          3.4732826051833804e+32,
+          5.56055736606962e+33,
+          7.013339111932268e+34,
+          1.1131467191582865e+36,
+          1.7006116953858508e+37,
+          2.8388822950387234e+38,
+          4.820851513710793e+39,
+          8.558928866544138e+40,
+          1.559931424728392e+42,
+          2.928270930457431e+43,
+          5.628286398441303e+44,
+          1.1056262495199884e+46,
+          2.2115809983177403e+47,
+          4.489321668834333e+48,
+          9.206638594612167e+49,
+          1.8965638304316216e+51,
+          3.8918493462325635e+52,
+          7.850390823649716e+53,
+          1.5192688945505844e+55,
+          2.673514444898614e+56,
+          3.608339593835652e+57
+        ],
+        "sign": 1
+      },
+      {
+        "coefficient_integral_upper": [
+          2.1287990445287966e+29,
+          7.260789377718723e+29,
+          2.2073805542500467e+30,
+          4.115513884688986e+31,
+          3.4732826051833804e+32,
+          5.56055736606962e+33,
+          7.013339111932268e+34,
+          1.1131467191582865e+36,
+          1.7006116953858508e+37,
+          2.8388822950387234e+38,
+          4.820851513710793e+39,
+          8.558928866544138e+40,
+          1.559931424728392e+42,
+          2.928270930457431e+43,
+          5.628286398441303e+44,
+          1.1056262495199884e+46,
+          2.2115809983177403e+47,
+          4.489321668834333e+48,
+          9.206638594612167e+49,
+          1.8965638304316216e+51,
+          3.8918493462325635e+52,
+          7.850390823649716e+53,
+          1.5192688945505844e+55,
+          2.673514444898614e+56,
+          3.608339593835652e+57
+        ],
+        "sign": -1
+      }
+    ],
+    "physical_Riccati_order": 24,
+    "source_and_certificate_order_match": true
+  },
+  "raw_metric_order": [
+    "N",
+    "beta",
+    "a",
+    "r"
+  ],
+  "reproducer": "python3 scripts/derive_nsc_incoming_low_high_source.py --check",
+  "residuals": {
+    "coefficient16_prefix": 0.0,
+    "original_cell_measure": 0.0,
+    "precision50_to70": 3.078653543092876e-51,
+    "quadrature32_to48": 2.5155509299342067e-23,
+    "quadrature48_to64": 3.71687966214481e-71,
+    "quadrature_contraction_replay": 1.3234889800848443e-23,
+    "source_quadrature_measure": 4.0245584642661925e-16
+  },
+  "schema": "NSC-INCOMING-LOW-HIGH-SOURCE-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "full_source_convergence_claimed": false,
+    "metric_step": false,
+    "mode_or_scattering_solve": false,
+    "numerical_indicators_are_rigorous_bounds": false,
+    "old_LOW_source_artifacts_overwritten": false,
+    "old_difference_identified_as_inverse_noise": false,
+    "old_finite_offset_accuracy_certified": false,
+    "other_groups_or_intervals_changed": false,
+    "physical_state_selected_or_refitted": false,
+    "pressure_mode_error_certified": false,
+    "same_physical_operator_affine_horizon_source_and_ad4": true,
+    "seed_used_as_state": false,
+    "source_and_certificate_order_match": true,
+    "thermal_source_physically_zero": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-low-high-source.md": "75e9e1f132d626758a69a5f88c983ea238b0b87d98e23130792ab2b97627e93b",
+    "scripts/derive_nsc_incoming_low_high_source.py": "543f24d8db6feab78c271bd49d6d4cd50bf848750ae6addd1b2864390f9d19d3",
+    "src/recursive_horizons/nsc_incoming_low_high_source.py": "6024943ecb64a1fcdaef8f5085b06d1f026ca37aa4745ddd91d7bd348741538f",
+    "tests/test_nsc_incoming_low_high_source.py": "34d55c0ba75969d521dc8d935104d0fc9591426da2c2603d8318793d4a2d26c8"
+  },
+  "status": "PASS: group22 LOW[32,40] vacuum/thermal energy budget and numerical source controls; full source OPEN",
+  "thermal_interpretation": "physical contribution retained as bounded remainder, not assigned zero; conservatively uses existing2*b(E) bound"
+}

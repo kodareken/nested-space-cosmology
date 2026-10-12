@@ -1,0 +1,278 @@
+{
+  "accountable_author": "Douglas Ek",
+  "certificate_numerics": null,
+  "drift_subtracted_as_physics": false,
+  "fas_a_required_before_search": true,
+  "indicator_not_a_bound": true,
+  "input_hashes": {
+    "results/development/nsc-ks-gate-value-iterate6-47.json": "5fc03ecee81d17cc20cd5422a99b121e9921e13cb5903c08b5794407bc5648c6"
+  },
+  "knobs_within_1e-10_on_both_components": [
+    "phase-384-n47"
+  ],
+  "largest_one_knob_movement": 0.0008123556564981829,
+  "loop_numerics": null,
+  "named_gap": "value_only_indicator_floor_above_1e-10",
+  "pending_labels": [],
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "rows": [
+    {
+      "constraint_maxima": [
+        0.0008027787732239888,
+        3.614316421384628e-06
+      ],
+      "delta_max_abs_from_base": [
+        0.0,
+        0.0
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "base",
+      "label": "base-n47",
+      "merit": 0.0008027787732239888,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 105.3216654170028
+    },
+    {
+      "constraint_maxima": [
+        0.0009062151154560494,
+        3.615568884948045e-06
+      ],
+      "delta_max_abs_from_base": [
+        0.00010343634223206055,
+        1.2524635634170167e-09
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "rtol-2e-12-n47",
+      "label": "rtol-2e-12-n47",
+      "merit": 0.0009062151154560494,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-12
+      },
+      "wall_seconds": 62.10731174999819
+    },
+    {
+      "constraint_maxima": [
+        0.0009142350205983696,
+        3.6155310418409248e-06
+      ],
+      "delta_max_abs_from_base": [
+        0.00011145624737438076,
+        1.2146204562968332e-09
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "rtol-2e-13-n47",
+      "label": "rtol-2e-13-n47",
+      "merit": 0.0009142350205983696,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-13
+      },
+      "wall_seconds": 99.29419395900186
+    },
+    {
+      "constraint_maxima": [
+        0.0008251620276921723,
+        3.6153824772081067e-06
+      ],
+      "delta_max_abs_from_base": [
+        2.2383254468183456e-05,
+        1.0660558234787398e-09
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "max-step-1e-3-n47",
+      "label": "max-step-1e-3-n47",
+      "merit": 0.0008251620276921723,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.001,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 95.62306099999842
+    },
+    {
+      "constraint_maxima": [
+        0.0009153752850146468,
+        3.6154800473336968e-06
+      ],
+      "delta_max_abs_from_base": [
+        0.000112596511790658,
+        1.163625949068825e-09
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "max-step-5e-4-n47",
+      "label": "max-step-5e-4-n47",
+      "merit": 0.0009153752850146468,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.0005,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 107.25596316700103
+    },
+    {
+      "constraint_maxima": [
+        0.0016151344297221717,
+        0.0006796062258360436
+      ],
+      "delta_max_abs_from_base": [
+        0.0008123556564981829,
+        0.000675991909414659
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "grid-128-n47",
+      "label": "grid-128-n47",
+      "merit": 0.0016151344297221717,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 128,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 155.19598091600346
+    },
+    {
+      "constraint_maxima": [
+        0.0015216251682983253,
+        0.0006719235792952971
+      ],
+      "delta_max_abs_from_base": [
+        0.0007188463950743365,
+        0.0006683092628739125
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "grid-256-n47",
+      "label": "grid-256-n47",
+      "merit": 0.0015216251682983253,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 256,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 308.0787115830026
+    },
+    {
+      "constraint_maxima": [
+        0.0008027774443233326,
+        3.6143277507630356e-06
+      ],
+      "delta_max_abs_from_base": [
+        1.3289006561834071e-09,
+        1.132937840764292e-11
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "degree-48-n47",
+      "label": "degree-48-n47",
+      "merit": 0.0008027774443233326,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 48,
+        "grid_nodes": 64,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 142.9710613339994
+    },
+    {
+      "constraint_maxima": [
+        0.0008027787732235725,
+        3.6143164215615697e-06
+      ],
+      "delta_max_abs_from_base": [
+        4.163336342344337e-16,
+        1.7694179454963432e-16
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "phase-384-n47",
+      "label": "phase-384-n47",
+      "merit": 0.0008027787732235725,
+      "nodes": 47,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.002,
+        "phase_nodes": 384,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 101.1014228339991
+    },
+    {
+      "constraint_maxima": [
+        0.0008027834361817518,
+        3.998722379938702e-06
+      ],
+      "delta_max_abs_from_base": [
+        4.662957762968656e-09,
+        3.844059585540738e-07
+      ],
+      "families_evolved_for_this_row": 0,
+      "indicator_not_a_bound": true,
+      "knob": "base-n129",
+      "label": "base-n129",
+      "merit": 0.0008027834361817518,
+      "nodes": 129,
+      "solver": {
+        "atol": 2e-13,
+        "degree": 32,
+        "grid_nodes": 64,
+        "max_step": 0.002,
+        "phase_nodes": 192,
+        "rtol": 2e-11
+      },
+      "wall_seconds": 114.12982670800557
+    }
+  ],
+  "schema": "NSC-KS-GATE-NUMERICAL-FLOOR-v1",
+  "source_hashes": {
+    "docs/nsc-ks-gate-numerical-floor.md": "c093f169c2f72a1bfe7dc5721a9e6a662296b3c8224bac4dc7fc8b6d141ad6a9",
+    "scripts/derive_nsc_ks_gate_numerical_floor.py": "2e40b30dc956c36fd37ad87ac1dfc81b31a619acfa8f0a22a9ac146e2375275c",
+    "scripts/derive_nsc_ks_gate_value.py": "4ad49a53b5fb79c0ffb8e57ee7a01066483e3eba1288d893e764959d63804bbd"
+  },
+  "status": "OPEN: no one-knob setting keeps both components inside 1e-10; loop and certificate numerics are not declared"
+}

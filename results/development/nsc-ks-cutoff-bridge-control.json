@@ -1,0 +1,1387 @@
+{
+  "accountable_author": "Douglas Ek",
+  "control": {
+    "convergence_indicators_are_bounds": false,
+    "derivative_control_pass": true,
+    "derivative_control_tolerance": 3e-08,
+    "edge_tangent_residual_N_beta": [
+      2.2450374025095865e-11,
+      1.4024337247064977e-11
+    ],
+    "finite_difference_step": 1e-06,
+    "quadrature_difference_N_beta": [
+      2.1053991883235312e-13,
+      1.7765303117478481e-13
+    ],
+    "quadrature_tangent_difference_N_beta": [
+      2.1053425669492754e-10,
+      1.7764989479474025e-10
+    ]
+  },
+  "edge_maxima": [
+    0.04665937415041183,
+    0.029655512733629884
+  ],
+  "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-fine-prepared.npz": "162ad8484b6650106657fae60bf681852695fbb523048e9ed0ce1a2bfb82160c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01-+1.json": "8c1258e55b06f8cebf82c4fce679ff3fa45679bd732d58ac127d78f96c03cd1f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01-+1.npz": "fec58302970b7d9ee19129884882d0093cf4cc046bc9f76ed9e26f75a3ead5a8",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01--1.json": "83ca518a97a5c59e87cacbf578f6adfdc9cac82f238f323ac7def6bc1ba61010",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01--1.npz": "49eb3e0ad32b5d3a317833fdc3db8ee37626bb981b98476d31a45f4e17d95556",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02-+1.json": "67928a718edcf00b2e00d250039d8f8f3529a27ddabb8792cc9d805346ad22b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02-+1.npz": "1d22435370424c744557e6b36a1b0fd931c04737215413d6903812e41ba55be7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02--1.json": "a09976d0796c367660b36f869c2edb5949b7f1e85cf5f5b527ca028e307204d7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02--1.npz": "2f72bf7486f29ead0a61bcd2b710d20cd47bdd3514c9494ae5541abaea3cfd4f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03-+1.json": "ef2edecec4d348a7cc31afd25a09b874532c35cf5d8335d07384e5821aa8c160",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03-+1.npz": "22f80a99fd66323280820164ea9738acd766b77515227579a26b0c0e9e37b011",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03--1.json": "e2287e0097855ee7b28fc57bac4990a359d29ca6fbd856268c2c6410e83df7b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03--1.npz": "bbc0cd1348bbf2df0e675d52b8df1658c5b0ae4a8054bbf6a7542f2e4b34b43e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04-+1.json": "d8323b0a7de83f57d3ccbc98c2fcfc09142edef6f8f5d31adf3777bd4a564961",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04-+1.npz": "744c0e5a40f59478b68b54448086eb5afc154aef71cd5989664c307982dc5b77",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04--1.json": "8ee53a6540adbe7f07c627712ae6c349c04dbdb37ffa4f319488c756ba12f12c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04--1.npz": "92e1dd07710b676e8e8ab708c46bbeba20ebf530cd0db7da79a1fec49e19ce34",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05-+1.json": "afdc070960bf890a562cce3ab4542f96e4259d09256f5ac83a1f8eb34c9ced7c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05-+1.npz": "0444f3648413daa73d4483aefcc3dc690d03df5844fa9551ea29837cf3f1f685",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05--1.json": "24bd5ca580b6f07e314433d42a40682851032fa5ea7415d1f4d8b30cd01fd256",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05--1.npz": "9376aa078001b0e11ea671bcf27cde51ba0c74f4d1aaf12bcb31e555128fc47a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06-+1.json": "72d2bb7f8329ff93f2701e0a31a66e63e15d16292a8dd3d84056cbacc3413db0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06-+1.npz": "e3d94947c43b4d747d29eb9d27140a668b178e144041f642094442c875172d51",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06--1.json": "92b789ce874794987a57986bfdc06e2f07310f88c52a8b30d5e0de481e51187a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06--1.npz": "5e395a22d55423f7432a23881757e25af941fbe0f783ff2a243d15dec75d392f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07-+1.json": "16f285046eb5a8abb9f93c6b32cb129d21fc436a9ce49e39c3e2353ec035d20d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07-+1.npz": "28647725d54ffe869a6b6de6991400bd4ba665bec13220a353242fb3f488cd23",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07--1.json": "a2eed3af3c9715834376a6b2ec3551fd48356518af80bb97a20ef130ac793e2b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07--1.npz": "2ed680f61e176bb725060a52e1c01daba1e6e66975ba1dacaa82162b6bf36c82",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08-+1.json": "b59f28c2e91944dde7e33965010e19967533365d2bf379e6824b8ca9264f3738",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08-+1.npz": "5d1b985c59696df46ea746693c3fb9b5d740c4faddb9622fcf547070c5540cd9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08--1.json": "f33bd47c48f0c862763cbebe62b6e17217ae94cee26d1a4b8f314e4daa9cf306",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08--1.npz": "c0b7c2332a79112697ec6c8d2c60eef09e8b2892a258f5e7178b4e6d880b1c9b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09-+1.json": "2fb6ca9dd88af25c193dd328f851fcbc90e7e0e737bac17aff1cc09e29bd6f0b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09-+1.npz": "e2e8bac6b54e68fd6b4188ded61e7f926a1e0a76e58d09a9b6f6ada24b31b110",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09--1.json": "2b061b24f2c86b45dfa37295dc96c0b3aa7da317e6e9a22613aed7bd81ecca93",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09--1.npz": "ca76feaaddf842f2e75b815a135bf008bcd1b0fd75235c066d3ccbf28e2530d3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10-+1.json": "202e4d2626047e328c0cc3d173478f1b5ccae5898fdada6297bead13b86abe6d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10-+1.npz": "976334f9a4f05d91062d4eb3986986656768b40cf4dab2638be1551bef5709ee",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10--1.json": "414940ead7ba2768923dd08d2ee218d30919f1b58f1cc2be00667e7e96d16032",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10--1.npz": "192bd2d3d1dccfc8e191c446c0384c5bac49660a9d56db56a46f88851d462e74",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11-+1.json": "67edc8eadf792a13da97b41b41f17783958d3417e7ad389e62e75a5f40dfa0c1",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11-+1.npz": "4bdabc69f88fdc74cbd06adfa0bf2548bf8a4b52dcf86066bbe248a377f18032",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11--1.json": "1c1d5521bb7d9e43ec7527a51816052d605026cdabf5f96d1991064367454276",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11--1.npz": "1bc11d00e21948fcba0dc21109780d66d1aaec6734044f44315e2f30470b33d8",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12-+1.json": "83eaf342300d0b76b3656e94680958c23d59a8acb155d1ee6395417f7d33c852",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12-+1.npz": "ae04ab1e8dd596b8600741f68bc6d22795d67ab1ecab6958c5a11154299782d3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12--1.json": "62ed5fa7b5d4b840880e2dd6ad5047db73313e563fd617cbf9e8d09aee3df419",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12--1.npz": "cdaea1e23dd98df1928503bc9a1c923a39105b4a88000fabcea519d92f8677f9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.json": "6a545864f0d0a0ce8a5f6c4083abfadb6ad4dd5b124b000583c8f15aa2d37b34",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.npz": "c0f024907f1351ee0ab998a871818555ea2f8b27dc8931636e6f91039875455e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14--1.json": "97c8471c38ced6dab0cb801d07da1760d64f005af4965bdb3f198eddbc04d239",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14--1.npz": "fce9b6665ff81aea3d19f3f75053ac806aa675bf9b84b685dcce52b17f1c35a6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15-+1.json": "33dedf7d643953f171f8a1cd31cf930fa8a47b36653ce3d553c32e637108aae9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15-+1.npz": "3e97f0270963026fcb76c76c795d90d09b7c677fdbf1d1933c420ff308b908ad",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15--1.json": "04bcbdc57503773673d0f62230fc8b287c8d1389bb99db21fd46dddb11ef5b75",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15--1.npz": "b63b383322adf8e66a567c0dc85ba6391c7f47ee416b164fa034a30523c1ddf7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16-+1.json": "95bedccf1f8b1af7638660aab1a35a0e9f8316011070ac0db9dae3feb5def4e0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16-+1.npz": "59dde8f74c13f16dcc86d570ce00f754adafb87361288e142e26252d16a21476",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16--1.json": "2490ea406e4995fbfd90635b7abadd8079d19042921f1bb7683f9df079181e71",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16--1.npz": "c2ed3cb18142b71397cba14cea28a2353969ffc01d64a9e7b58e5af1d200d273",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17-+1.json": "3332b234453c13c014f9dfd915c1e0041a61e5b73f4e0ac44ddc9ca622196123",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17-+1.npz": "a028028811595d31a33d8d8086d7cec8f5b9b9cc1346b29a6c9ecc1dc7653da9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17--1.json": "adfc7d8836e6aa206138a1fd75c839649ae5180485cd04956499b5b8db9cece6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17--1.npz": "5adb0e6db6ed975ac43788ae2f8caf93408d1e6d46cc7d1645b2e8615717fa69",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18-+1.json": "1865c03586edb9affd5c11a2ac1572574dfe09c2ce2cb587fc5a0517cd853836",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18-+1.npz": "33c5d70116b81c6c578c4b2ba7d79a850ca9c90ea6096a6f0139cd907849d2ff",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18--1.json": "701357e738555ceb7784ac3dc48cc6606505607478b526ca62333c4a75e70539",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18--1.npz": "58ffaf3ce726caf8c79c637d983d056f8af9286dd5f44fb9d9ed838166006b5b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19-+1.json": "33842f6a11c5718633e6c4e43ceba19ec4196bfe9c26d4b534182772a23487c9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19-+1.npz": "a09367dd3b1f4a5ee5f1edd5772af1460ca0aee4453f5da8d6d06550df59881d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19--1.json": "9d4883da6bf7758e38d095b7c6ed1020f368d37650c92f97539200af7ef0129d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19--1.npz": "7b0e85dea4295003b14b76aa1513420461db3a75abf665da77606e62caeddc56",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20-+1.json": "fdf5ff61880aeb948ee236fde7e10ef858420b6e193975185c038f720154449b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20-+1.npz": "79c6b4aaeafae0c47667539f6a62cae182fefa23fc8fa052c0be7df8091b0cbf",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20--1.json": "481dde106ea408b2c48fbc550d5a1987e16e3f359446a6d417f342d6a11e2481",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20--1.npz": "82cf038dd0a45413da3eeca920df3374f1b0cb5a699080cec07f348b56f8662e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21-+1.json": "a49b13aea2017b9c3a51dc5837f1f466eae261b8ee2820ed59475de4cdba31a6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21-+1.npz": "de03491055654c4d2d1f3d3f267c0e22df30b603b02f24b7756ca67b5704826f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21--1.json": "98a86d8d3d83a1d2b1fb69bb35b8d537406e542505d4b0635cfadad970c3c92b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21--1.npz": "b18a20b86de173f7264a3e36c02599c2fef751424f816ad8027115d27be3190d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22-+1.json": "9cdaeac607dbf20a2425eb8cf19d7023c0d29245cbb1cc27c064daf76b356028",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22-+1.npz": "8026527d9561d7564e342106ba86aaee8e195180a8bd2f03338d5120aefce463",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22--1.json": "9cbe0bb8b37a1b387bdcb5589fd6775e89c6eb5403d73f85d42f6ee488a0ee97",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22--1.npz": "436bea0279d9edb25bb944917400ba4925ead62d717452ab170e271fd82a38c3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24-+1.json": "4bdee28cbc3891d0fb108d94981ab61289fef688fc948f988dfabad826e2dac9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24-+1.npz": "443f60dffc1165484b401339794d6d19988e4d912197726cc9ef5c26ad55547f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24--1.json": "18774a6b56b91e5939d2c74cf215ac8718b26bc36e9dcd0c802dc18ae6a23ce9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24--1.npz": "676b72dcaefde245c5322bedc376fd8c976fec2b27c2a07e89185b50e26e9a8f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25-+1.json": "cf132e9b6b530cdd0bf6bae121ae3fea38d2001d2c45a9d5adc4f96779e3cd8a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25-+1.npz": "77514d5f8b9f45a0853973bd8f5e0048a74549bee97daa275e7d2975b9999c07",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25--1.json": "6e3547d8b833150105ed5f60019ec0197fe846244ecf11cdd0a716ffe36fd7cd",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25--1.npz": "807f1877943a3bec29ce8a0db48fe0e63e89a9dcb8342de30a28fbd20f23f5eb",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26-+1.json": "c66d8b44652e8a03cbdff60e90ce300784315811d68e7f47c7ab9e3429ba4537",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26-+1.npz": "454f4b025e984d29913d6355b743af8426102a326039cfe3eb4ba9f75f8ce84c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26--1.json": "05a26bd27bd6c474779f9120c9df2742c634a4521d6600615c83e87ee6f0a883",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26--1.npz": "a42dc37e9546a632eb29939343cfc12e94fdb7bcdfdfeccd165428d17ce379e4",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27-+1.json": "4b2cc9524c0101fb93978c5bcc7f5aa45cdfb97e7ed882ae254854c7e798a72e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27-+1.npz": "a2990070d7371a2faed56f6a846e3d2023e0ae8b0746cce0f2599563159ee88e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27--1.json": "982659e6922062d3b40d5f2df5166c3542af88ea7d21d9b91d83179e64a8685d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27--1.npz": "df16099049dabc88608ba095cc5cffbe3151501e4a5d6ed110568f2ae65748b0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28-+1.json": "d30d16f957bfcada76d109bce15b8fa43e247c3af73adfc1f900f65e9f8a138b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28-+1.npz": "fde3a471a1778ced1da90ac030d1f1bf555a3e26b82dd785896a780d556ab2de",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28--1.json": "e45153643ff8293008ec90e1528e96dd3451aa280870cf4394f88dad3e9c72a7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28--1.npz": "35afe97b74e57e9a3760334cc0d0a85ae6c5292946da0c23afffa011f4a0b92f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29-+1.json": "cadef94c7e44b45a4339df2f00507087917ab70828bb3de83678db58a6d63f3f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29-+1.npz": "3f7288af229e2b50dfab9417c903a8880cb5a3904d5528e8fcde7eeb435b378f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29--1.json": "9953228558e91230bc818fd0d6a1b1d14fb8ebdd9cd41c89e7ba2bc7854236e5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29--1.npz": "0339e01bac199fa87e47281f745c3d0c4b05b8d79c85b40b7014dafc84525f98",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30-+1.json": "23b6683e4e0d26da2850521f3312d9ff564b77189034b8d4a049e44cc627fffb",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30-+1.npz": "060d5880c11d66a316d2bc914692a0730576eda7750731d2d3f3dc57bb91ee2f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30--1.json": "c349ceef1b82eb290c25fc2dbe1a4fe14a436033e56371cf533ba756a3af80b6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30--1.npz": "617acae505ffa47949d346e94643cbbe0136356b79f0d4079a6c3d1f6cf35622",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31-+1.json": "620b81efb95d615917010f87d9ae7776045faabb8b13b016dd0ca9b20bb7a7a5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31-+1.npz": "316a17c4505f4bb92a032df14749f30e134c23fc022bd51565134f5efa55b7a5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31--1.json": "eface92abd8d1e49f49985fd03c2940e236d55c51f283006923709d53fbd7ab3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31--1.npz": "14c58f82522cc7e6b985ae62790bf651ef70364639dec9a1ab1fe1fe9c3324cd",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32-+1.json": "b1d44d3e6705dc7d7130853a180e1e056361402f087e2f2d81af0c6c9a5a5554",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32-+1.npz": "92f31ea7a0574113eb2cb95c88955975371874a15963539c9df1d25a84940941",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32--1.json": "4ebf6d1cfefa8c92ff04f709f5967dba9403f1e439cef6d75a019c1860e091ac",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32--1.npz": "cbedc015f86e982f8dae6a0d610fdc46c918437a457d2d457caffaa2bcb1d88c",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-retained-response-sum.json": "a2300f2badea68344b041451f70a56affc5a10b795ae4d6fab6f8476b3580407",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-source-cutoff-bridge.json": "dcb5974f5924af830b45657d2af179e80899c30eb623a4beb41c712cf2357b48"
+  },
+  "joined_action_gradient": [
+    [
+      -0.6058607804303439,
+      0.19235655017255943
+    ],
+    [
+      -0.6127488615828898,
+      0.1918597288708377
+    ],
+    [
+      -0.6258808327643115,
+      0.19867639516910857
+    ],
+    [
+      -0.6426432917654546,
+      0.2101670362821497
+    ],
+    [
+      -0.6594687260443121,
+      0.22262089056339543
+    ],
+    [
+      -0.6738089479939487,
+      0.23319821677984592
+    ],
+    [
+      -0.6841352221062914,
+      0.2404877472376655
+    ],
+    [
+      -0.6901553916093328,
+      0.24433357533095007
+    ],
+    [
+      -0.693055208356764,
+      0.24566505448037365
+    ],
+    [
+      -0.6946048188728715,
+      0.24588614078747462
+    ],
+    [
+      -0.6958996258149004,
+      0.24589507882962786
+    ],
+    [
+      -0.697194394500373,
+      0.24588596802300616
+    ],
+    [
+      -0.6987438897869339,
+      0.24566470939054283
+    ],
+    [
+      -0.7016435147960163,
+      0.2443330580750578
+    ],
+    [
+      -0.7076634270501739,
+      0.24048704940216428
+    ],
+    [
+      -0.7179893999297499,
+      0.2331973125792112
+    ],
+    [
+      -0.7323292834123335,
+      0.22261974742198493
+    ],
+    [
+      -0.7491543165772119,
+      0.21016564634708446
+    ],
+    [
+      -0.7659162610116114,
+      0.19867480718982253
+    ],
+    [
+      -0.779047550324386,
+      0.1918580476395785
+    ],
+    [
+      -0.7859347624217665,
+      0.1923548962148016
+    ]
+  ],
+  "joined_constraint_maxima": [
+    0.7859347624217665,
+    0.24589507882962786
+  ],
+  "joined_history_jacobian": [
+    [
+      [
+        90.1025904035338,
+        249.47836440715673
+      ],
+      [
+        83.21407468116335,
+        248.98155674735898
+      ],
+      [
+        70.08176254383602,
+        255.7981764061186
+      ],
+      [
+        53.319046261091984,
+        267.2887184676255
+      ],
+      [
+        36.493411443543195,
+        279.74244931578045
+      ],
+      [
+        22.153020285831985,
+        290.3196560274374
+      ],
+      [
+        11.826595581173425,
+        297.6090832762423
+      ],
+      [
+        5.80629746986211,
+        301.4548210644698
+      ],
+      [
+        2.9063848599022166,
+        302.78621412565786
+      ],
+      [
+        1.3567167300702025,
+        303.00721426981073
+      ],
+      [
+        0.061890659577143056,
+        303.0160659300076
+      ],
+      [
+        -1.2328588979412303,
+        303.00686874075666
+      ],
+      [
+        -2.7822965714935037,
+        302.7855239433251
+      ],
+      [
+        -5.681825719136809,
+        301.45378653627506
+      ],
+      [
+        -11.701609366630736,
+        297.6076875537536
+      ],
+      [
+        -22.027431656284786,
+        290.31784751592494
+      ],
+      [
+        -36.36714593428811,
+        279.740162846666
+      ],
+      [
+        -53.19197856506783,
+        267.28593833029663
+      ],
+      [
+        -69.95366572304661,
+        255.7950001127953
+      ],
+      [
+        -83.08461408505471,
+        248.97819391482636
+      ],
+      [
+        -89.97139161780902,
+        249.4750561242311
+      ]
+    ]
+  ],
+  "joined_matter_change_maxima": [
+    0.07817628594842363,
+    0.02728665326623584
+  ],
+  "ledger": [
+    {
+      "absolute_angular": 2.23606797749979,
+      "angular_square_weight_per_energy_sign": 30.000000000000004,
+      "group": 1,
+      "multiplicity_per_signed_family": 6.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 2.23606797749979,
+      "angular_square_weight_per_energy_sign": 30.000000000000004,
+      "group": 1,
+      "multiplicity_per_signed_family": 6.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 3.4641016151377544,
+      "angular_square_weight_per_energy_sign": 95.99999999999999,
+      "group": 2,
+      "multiplicity_per_signed_family": 8.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 3.4641016151377544,
+      "angular_square_weight_per_energy_sign": 95.99999999999999,
+      "group": 2,
+      "multiplicity_per_signed_family": 8.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 4.58257569495584,
+      "angular_square_weight_per_energy_sign": 209.99999999999997,
+      "group": 3,
+      "multiplicity_per_signed_family": 10.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 4.58257569495584,
+      "angular_square_weight_per_energy_sign": 209.99999999999997,
+      "group": 3,
+      "multiplicity_per_signed_family": 10.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 5.656854249492381,
+      "angular_square_weight_per_energy_sign": 384.00000000000006,
+      "group": 4,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 5.656854249492381,
+      "angular_square_weight_per_energy_sign": 384.00000000000006,
+      "group": 4,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 6.708203932499369,
+      "angular_square_weight_per_energy_sign": 630.0,
+      "group": 5,
+      "multiplicity_per_signed_family": 14.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 6.708203932499369,
+      "angular_square_weight_per_energy_sign": 630.0,
+      "group": 5,
+      "multiplicity_per_signed_family": 14.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 7.745966692414834,
+      "angular_square_weight_per_energy_sign": 960.0000000000001,
+      "group": 6,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 7.745966692414834,
+      "angular_square_weight_per_energy_sign": 960.0000000000001,
+      "group": 6,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 8.774964387392123,
+      "angular_square_weight_per_energy_sign": 1386.0,
+      "group": 7,
+      "multiplicity_per_signed_family": 18.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 8.774964387392123,
+      "angular_square_weight_per_energy_sign": 1386.0,
+      "group": 7,
+      "multiplicity_per_signed_family": 18.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 9.797958971132712,
+      "angular_square_weight_per_energy_sign": 1919.9999999999998,
+      "group": 8,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 9.797958971132712,
+      "angular_square_weight_per_energy_sign": 1919.9999999999998,
+      "group": 8,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 10.816653826391969,
+      "angular_square_weight_per_energy_sign": 2574.0000000000005,
+      "group": 9,
+      "multiplicity_per_signed_family": 22.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 10.816653826391969,
+      "angular_square_weight_per_energy_sign": 2574.0000000000005,
+      "group": 9,
+      "multiplicity_per_signed_family": 22.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 11.832159566199232,
+      "angular_square_weight_per_energy_sign": 3360.0000000000005,
+      "group": 10,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 11.832159566199232,
+      "angular_square_weight_per_energy_sign": 3360.0000000000005,
+      "group": 10,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 12.84523257866513,
+      "angular_square_weight_per_energy_sign": 4290.0,
+      "group": 11,
+      "multiplicity_per_signed_family": 26.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 12.84523257866513,
+      "angular_square_weight_per_energy_sign": 4290.0,
+      "group": 11,
+      "multiplicity_per_signed_family": 26.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 13.856406460551018,
+      "angular_square_weight_per_energy_sign": 5376.0,
+      "group": 12,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 13.856406460551018,
+      "angular_square_weight_per_energy_sign": 5376.0,
+      "group": 12,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 2.23606797749979,
+      "angular_square_weight_per_energy_sign": 60.00000000000001,
+      "group": 14,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 2.23606797749979,
+      "angular_square_weight_per_energy_sign": 60.00000000000001,
+      "group": 14,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 3.4641016151377544,
+      "angular_square_weight_per_energy_sign": 191.99999999999997,
+      "group": 15,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 3.4641016151377544,
+      "angular_square_weight_per_energy_sign": 191.99999999999997,
+      "group": 15,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 4.58257569495584,
+      "angular_square_weight_per_energy_sign": 419.99999999999994,
+      "group": 16,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 4.58257569495584,
+      "angular_square_weight_per_energy_sign": 419.99999999999994,
+      "group": 16,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 5.656854249492381,
+      "angular_square_weight_per_energy_sign": 768.0000000000001,
+      "group": 17,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 5.656854249492381,
+      "angular_square_weight_per_energy_sign": 768.0000000000001,
+      "group": 17,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 6.708203932499369,
+      "angular_square_weight_per_energy_sign": 1260.0,
+      "group": 18,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 6.708203932499369,
+      "angular_square_weight_per_energy_sign": 1260.0,
+      "group": 18,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 7.745966692414834,
+      "angular_square_weight_per_energy_sign": 1920.0000000000002,
+      "group": 19,
+      "multiplicity_per_signed_family": 32.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 7.745966692414834,
+      "angular_square_weight_per_energy_sign": 1920.0000000000002,
+      "group": 19,
+      "multiplicity_per_signed_family": 32.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 8.774964387392123,
+      "angular_square_weight_per_energy_sign": 2772.0,
+      "group": 20,
+      "multiplicity_per_signed_family": 36.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 8.774964387392123,
+      "angular_square_weight_per_energy_sign": 2772.0,
+      "group": 20,
+      "multiplicity_per_signed_family": 36.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 9.797958971132712,
+      "angular_square_weight_per_energy_sign": 3839.9999999999995,
+      "group": 21,
+      "multiplicity_per_signed_family": 40.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 9.797958971132712,
+      "angular_square_weight_per_energy_sign": 3839.9999999999995,
+      "group": 21,
+      "multiplicity_per_signed_family": 40.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 10.816653826391969,
+      "angular_square_weight_per_energy_sign": 5148.000000000001,
+      "group": 22,
+      "multiplicity_per_signed_family": 44.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 10.816653826391969,
+      "angular_square_weight_per_energy_sign": 5148.000000000001,
+      "group": 22,
+      "multiplicity_per_signed_family": 44.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 2.23606797749979,
+      "angular_square_weight_per_energy_sign": 60.00000000000001,
+      "group": 24,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 2.23606797749979,
+      "angular_square_weight_per_energy_sign": 60.00000000000001,
+      "group": 24,
+      "multiplicity_per_signed_family": 12.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 3.4641016151377544,
+      "angular_square_weight_per_energy_sign": 191.99999999999997,
+      "group": 25,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 3.4641016151377544,
+      "angular_square_weight_per_energy_sign": 191.99999999999997,
+      "group": 25,
+      "multiplicity_per_signed_family": 16.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 4.58257569495584,
+      "angular_square_weight_per_energy_sign": 419.99999999999994,
+      "group": 26,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 4.58257569495584,
+      "angular_square_weight_per_energy_sign": 419.99999999999994,
+      "group": 26,
+      "multiplicity_per_signed_family": 20.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 5.656854249492381,
+      "angular_square_weight_per_energy_sign": 768.0000000000001,
+      "group": 27,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 5.656854249492381,
+      "angular_square_weight_per_energy_sign": 768.0000000000001,
+      "group": 27,
+      "multiplicity_per_signed_family": 24.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 6.708203932499369,
+      "angular_square_weight_per_energy_sign": 1260.0,
+      "group": 28,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 6.708203932499369,
+      "angular_square_weight_per_energy_sign": 1260.0,
+      "group": 28,
+      "multiplicity_per_signed_family": 28.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 7.745966692414834,
+      "angular_square_weight_per_energy_sign": 1920.0000000000002,
+      "group": 29,
+      "multiplicity_per_signed_family": 32.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 7.745966692414834,
+      "angular_square_weight_per_energy_sign": 1920.0000000000002,
+      "group": 29,
+      "multiplicity_per_signed_family": 32.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 8.774964387392123,
+      "angular_square_weight_per_energy_sign": 2772.0,
+      "group": 30,
+      "multiplicity_per_signed_family": 36.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 8.774964387392123,
+      "angular_square_weight_per_energy_sign": 2772.0,
+      "group": 30,
+      "multiplicity_per_signed_family": 36.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 9.797958971132712,
+      "angular_square_weight_per_energy_sign": 3839.9999999999995,
+      "group": 31,
+      "multiplicity_per_signed_family": 40.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 9.797958971132712,
+      "angular_square_weight_per_energy_sign": 3839.9999999999995,
+      "group": 31,
+      "multiplicity_per_signed_family": 40.0,
+      "positive_angular_sign": 1
+    },
+    {
+      "absolute_angular": 10.816653826391969,
+      "angular_square_weight_per_energy_sign": 5148.000000000001,
+      "group": 32,
+      "multiplicity_per_signed_family": 44.0,
+      "positive_angular_sign": -1
+    },
+    {
+      "absolute_angular": 10.816653826391969,
+      "angular_square_weight_per_energy_sign": 5148.000000000001,
+      "group": 32,
+      "multiplicity_per_signed_family": 44.0,
+      "positive_angular_sign": 1
+    }
+  ],
+  "phase": {
+    "binding": "4435902576a0b42bcb0ad88dc304d3fa5805231edfc4dafb1678d430ae6f1193",
+    "delta_f_unit_angular": [
+      [
+        [
+          -1.6353134903084726e-05,
+          -2.040760500395878e-05,
+          -2.3612484025852205e-05,
+          -2.5532200295788326e-05,
+          -2.603282639749455e-05,
+          -2.527393918478061e-05,
+          -2.3580691023047995e-05,
+          -2.1321571498440404e-05,
+          -1.880928956481285e-05,
+          -1.622834149057984e-05,
+          -1.3639478708317145e-05,
+          -1.105041894403184e-05,
+          -8.461354109067409e-06,
+          -5.872284341546285e-06,
+          -3.2832096414584217e-06,
+          -6.941300087930523e-07,
+          1.8949545564598315e-06,
+          4.484044054311015e-06,
+          7.0731384847705056e-06,
+          9.662237847849092e-06,
+          1.2251342143556778e-05
+        ]
+      ],
+      [
+        [
+          -1.2251221790680536e-05,
+          -9.662158346163033e-06,
+          -7.073089969090796e-06,
+          -4.484016659453219e-06,
+          -1.8949384172401076e-06,
+          6.94144757558762e-07,
+          3.283232864953972e-06,
+          5.872325904956092e-06,
+          8.461423877575359e-06,
+          1.1050526782821948e-05,
+          1.3639634482573278e-05,
+          1.6228555065292555e-05,
+          1.880957076921021e-05,
+          2.1321929395462474e-05,
+          2.3581129909313728e-05,
+          2.527445009984996e-05,
+          2.6033379457122597e-05,
+          2.553274571867067e-05,
+          2.3612965643443483e-05,
+          2.0407980854554312e-05,
+          1.6353391201672704e-05
+        ]
+      ]
+    ],
+    "delta_f_z_unit_angular": [
+      [
+        [
+          -0.0014291083439477701,
+          -0.0012403842879831872,
+          -0.00087096360078836,
+          -0.0004015242602012675,
+          5.806343244262769e-05,
+          0.0004291309196474086,
+          0.0006786870566640142,
+          0.0008095562925745066,
+          0.0008550684737605599,
+          0.0008627010030642455,
+          0.0008630186540705096,
+          0.0008630207895632379,
+          0.000863022433747014,
+          0.0008630240779342539,
+          0.0008630257221249595,
+          0.0008630273663191299,
+          0.0008630290105167666,
+          0.0008630306547178679,
+          0.0008630322989224355,
+          0.0008630339431304674,
+          0.0008630355873419665
+        ]
+      ],
+      [
+        [
+          0.000863020326081223,
+          0.0008630219702644077,
+          0.000863023614451057,
+          0.0008630252586411726,
+          0.0008630269028347536,
+          0.0008630285470317995,
+          0.0008630301912323109,
+          0.0008630318354362876,
+          0.0008630334796437307,
+          0.0008630351238546369,
+          0.0008630362767565548,
+          0.0008627219136984124,
+          0.0008550926252373605,
+          0.0008095830372151877,
+          0.0006787135656960419,
+          0.00042915121552076715,
+          5.8070050949847034e-05,
+          -0.000401536374345441,
+          -0.0008709931904767007,
+          -0.0012404235520974169,
+          -0.0014291471837681246
+        ]
+      ]
+    ],
+    "f_unit_angular": [
+      [
+        -1.635319897723741e-08,
+        -2.0407698965746626e-08,
+        -2.361260442901744e-08,
+        -2.5532336650042066e-08,
+        -2.6032964660926002e-08,
+        -2.5274066912258044e-08,
+        -2.3580800743598753e-08,
+        -2.1321660971949444e-08,
+        -1.8809359865389086e-08,
+        -1.6228394883907995e-08,
+        -1.3639517651659813e-08,
+        -1.1050445903599046e-08,
+        -8.461371551124573e-09,
+        -5.8722947323657345e-09,
+        -3.283215447319448e-09,
+        -6.941336959818483e-10,
+        1.894950521650126e-09,
+        4.484037205580328e-09,
+        7.073126355811856e-09,
+        9.662217972348536e-09,
+        1.2251312055193454e-08
+      ],
+      [
+        -1.2251251878755111e-08,
+        -9.66217822150529e-09,
+        -7.073102097971875e-09,
+        -4.484023508151217e-09,
+        -1.894942452040048e-09,
+        6.941410703649182e-10,
+        3.283227059067341e-09,
+        5.872315514070858e-09,
+        8.461406435378764e-09,
+        1.1050499822994316e-08,
+        1.3639595538788006e-08,
+        1.6228501671264567e-08,
+        1.8809500467588e-08,
+        2.1321839920460694e-08,
+        2.3581020186731733e-08,
+        2.52743223697929e-08,
+        2.603324119074012e-08,
+        2.5532609361483293e-08,
+        2.3612845237813144e-08,
+        2.0407886891044306e-08,
+        1.6353327126531306e-08
+      ]
+    ],
+    "f_z_unit_angular": [
+      [
+        -1.4291180537944965e-06,
+        -1.2403941038812115e-06,
+        -8.709709981018499e-07,
+        -4.015272886950971e-07,
+        5.806508703511212e-08,
+        4.2913599353273694e-07,
+        6.78693683827663e-07,
+        8.095629786516697e-07,
+        8.550745115639222e-07,
+        8.627062306728884e-07,
+        8.630230597057881e-07,
+        8.630243731112087e-07,
+        8.630251952053581e-07,
+        8.63026017300662e-07,
+        8.630268393971207e-07,
+        8.630276614947348e-07,
+        8.630284835935034e-07,
+        8.630293056934277e-07,
+        8.630301277945067e-07,
+        8.630309498967414e-07,
+        8.630317720001306e-07
+      ],
+      [
+        8.630241413697595e-07,
+        8.630249634637105e-07,
+        8.63025785558818e-07,
+        8.630266076550793e-07,
+        8.630274297524972e-07,
+        8.630282518510694e-07,
+        8.630290739507963e-07,
+        8.630298960516791e-07,
+        8.630307181537168e-07,
+        8.630315402569079e-07,
+        8.630318710488104e-07,
+        8.627166859899715e-07,
+        8.550865873023216e-07,
+        8.095763509720068e-07,
+        6.787069383436763e-07,
+        4.291461414694018e-07,
+        5.806839628870348e-08,
+        -4.0153334576720404e-07,
+        -8.709857929460244e-07,
+        -1.240413735938342e-06,
+        -1.4291374737046822e-06
+      ]
+    ],
+    "gauss_nodes_per_normal_panel": [
+      96,
+      192
+    ],
+    "source_signs": [
+      1,
+      -1
+    ]
+  },
+  "physical_interval": [
+    1.1768780671724794,
+    1.2368780671724793
+  ],
+  "raw_action_gradient": [
+    [
+      -0.559201956920464,
+      0.18263043721449568
+    ],
+    [
+      -0.5699316841679738,
+      0.1853761140393922
+    ],
+    [
+      -0.5905836116467863,
+      0.19853988772224634
+    ],
+    [
+      -0.6169020453484514,
+      0.21809609965442373
+    ],
+    [
+      -0.6430829206784027,
+      0.2384462680607989
+    ],
+    [
+      -0.6649766415402353,
+      0.2553990126816125
+    ],
+    [
+      -0.6803828927558151,
+      0.2669762315033649
+    ],
+    [
+      -0.6890670195755875,
+      0.2730705514318549
+    ],
+    [
+      -0.6928932518953087,
+      0.27518398264990335
+    ],
+    [
+      -0.6945981968742456,
+      0.2755362043682094
+    ],
+    [
+      -0.6958994464512903,
+      0.27555059156325773
+    ],
+    [
+      -0.6972006577763235,
+      0.27553608809812397
+    ],
+    [
+      -0.6989054880096983,
+      0.2751837501441769
+    ],
+    [
+      -0.7027315356671263,
+      0.27307019728587345
+    ],
+    [
+      -0.7114154411053032,
+      0.2669757230028771
+    ],
+    [
+      -0.7268214877948789,
+      0.25539827269066784
+    ],
+    [
+      -0.748715042867087,
+      0.23844519988212864
+    ],
+    [
+      -0.7748957412131556,
+      0.21809465200748232
+    ],
+    [
+      -0.8012138716833421,
+      0.198538120155707
+    ],
+    [
+      -0.8218652492290305,
+      0.18537419836137697
+    ],
+    [
+      -0.8325941365721784,
+      0.18262858070400823
+    ]
+  ],
+  "raw_constraint_maxima": [
+    0.8325941365721784,
+    0.27555059156325773
+  ],
+  "raw_history_jacobian": [
+    [
+      [
+        136.76113859589606,
+        239.75235272405376
+      ],
+      [
+        126.03099135422272,
+        242.49805913734437
+      ],
+      [
+        105.37878888667434,
+        255.66175875119046
+      ],
+      [
+        79.06020356959168,
+        275.2178106952026
+      ],
+      [
+        52.87923976438834,
+        295.56778933245073
+      ],
+      [
+        30.985436032200255,
+        312.5203698258291
+      ],
+      [
+        15.57908257749776,
+        324.0974728761365
+      ],
+      [
+        6.894845083420638,
+        330.19171561200164
+      ],
+      [
+        3.0685204396852095,
+        332.30508600453857
+      ],
+      [
+        1.3635180895245762,
+        332.65724960463876
+      ],
+      [
+        0.06224938679733273,
+        332.67157866488253
+      ],
+      [
+        -1.2389428120446715,
+        332.6570170643507
+      ],
+      [
+        -2.94371567389459,
+        332.3046209904146
+      ],
+      [
+        -6.769671007424662,
+        330.1910073036287
+      ],
+      [
+        -15.453465772260913,
+        324.0964558236746
+      ],
+      [
+        -30.85941022548351,
+        312.5188897336972
+      ],
+      [
+        -52.75288243282064,
+        295.5656527888174
+      ],
+      [
+        -78.93349231144771,
+        275.2149151341221
+      ],
+      [
+        -105.25147117429589,
+        255.6582232833607
+      ],
+      [
+        -125.90257373757038,
+        242.49422741130022
+      ],
+      [
+        -136.6310410912349,
+        239.74863933566925
+      ]
+    ]
+  ],
+  "rho_up": 1.0300000000000002,
+  "runtime": {
+    "CPU_cap": 30.0,
+    "CPU_seconds": 1.5924080000000003
+  },
+  "schema": "NSC-KS-CUTOFF-BRIDGE-CONTROL-v1",
+  "scope": {
+    "Gamma_rest_assigned": false,
+    "between_node_error_bound": null,
+    "existing_raw_record_changed": false,
+    "finite_source_tail_bound": null,
+    "full_source_and_field_error_bound": null,
+    "local_reference_coefficients_changed": false,
+    "metric_timestep": false,
+    "new_action_term": false,
+    "new_field_or_source_evolutions": 0,
+    "phase_quadrature_bound": null,
+    "physical_local_gate": "OPEN",
+    "physical_root_claimed": false,
+    "source_reprepared": false,
+    "zero_angular_baseline_retained": true
+  },
+  "signed_angular_square_weights": [
+    107952.0,
+    107952.0
+  ],
+  "source_cutoff_edge_gradient": [
+    [
+      -0.04665882350987986,
+      0.009726112958063762
+    ],
+    [
+      -0.04281717741491594,
+      0.006483614831445508
+    ],
+    [
+      -0.035297221117525236,
+      0.00013650744686223345
+    ],
+    [
+      -0.02574124641700322,
+      -0.00792906337227403
+    ],
+    [
+      -0.016385805365909435,
+      -0.01582537749740348
+    ],
+    [
+      -0.008832306453713497,
+      -0.0222007959017666
+    ],
+    [
+      -0.0037523293504763498,
+      -0.026488484265699417
+    ],
+    [
+      -0.0010883720337453134,
+      -0.028736976100904796
+    ],
+    [
+      -0.00016195646145538063,
+      -0.029518928169529692
+    ],
+    [
+      -6.621998625939036e-06,
+      -0.02965006358073479
+    ],
+    [
+      -1.7936361008960365e-07,
+      -0.029655512733629884
+    ],
+    [
+      6.263275950487165e-06,
+      -0.029650120075117792
+    ],
+    [
+      0.0001615982227644358,
+      -0.02951904075363408
+    ],
+    [
+      0.00108802087111004,
+      -0.028737139210815627
+    ],
+    [
+      0.0037520140551292836,
+      -0.026488673600712814
+    ],
+    [
+      0.008832087865129021,
+      -0.022200960111456645
+    ],
+    [
+      0.0163857594547535,
+      -0.01582545246014371
+    ],
+    [
+      0.025741424635943738,
+      -0.007929005660397875
+    ],
+    [
+      0.03529761067173079,
+      0.00013668703411552906
+    ],
+    [
+      0.04281769890464444,
+      0.006483849278201538
+    ],
+    [
+      0.04665937415041183,
+      0.009726315510793358
+    ]
+  ],
+  "source_cutoff_edge_tangent": [
+    [
+      [
+        -46.65854819236226,
+        9.726011683102955
+      ],
+      [
+        -42.81691667305937,
+        6.483497610014599
+      ],
+      [
+        -35.29702634283833,
+        0.13641765492816538
+      ],
+      [
+        -25.741157308499695,
+        -7.929092227577154
+      ],
+      [
+        -16.38582832084514,
+        -15.825340016670284
+      ],
+      [
+        -8.832415746368271,
+        -22.200713798391707
+      ],
+      [
+        -3.7524869963243344,
+        -26.488389599894244
+      ],
+      [
+        -1.0885476135585275,
+        -28.73689454753185
+      ],
+      [
+        -0.162135579782993,
+        -29.51887187888072
+      ],
+      [
+        -0.0068013594543737356,
+        -29.650035334828054
+      ],
+      [
+        -0.0003587272201896747,
+        -29.65551273487493
+      ],
+      [
+        0.0060839141034411464,
+        -29.650148323594067
+      ],
+      [
+        0.16141910240108612,
+        -29.51909704708952
+      ],
+      [
+        1.0878452882878542,
+        -28.737220767353648
+      ],
+      [
+        3.751856405630177,
+        -26.488768269921042
+      ],
+      [
+        8.831978569198725,
+        -22.201042217772294
+      ],
+      [
+        16.38573649853253,
+        -15.82548994215138
+      ],
+      [
+        25.74151374637988,
+        -7.928976803825514
+      ],
+      [
+        35.29780545124928,
+        0.1367768294345918
+      ],
+      [
+        42.817959652515675,
+        6.4839665035261556
+      ],
+      [
+        46.659649473425866,
+        9.726416788561842
+      ]
+    ]
+  ],
+  "source_hashes": {
+    "docs/nsc-ks-cutoff-bridge-control.md": "6ebafa0ebce3feabdbee6684b07baf33fa3a90f7c8263bff805f8c396408bc5a",
+    "scripts/derive_nsc_ks_cutoff_bridge_control.py": "ec4424e1a277d40713964672c3025b50a5d6b83646487bec7b5a8d16f55543b8",
+    "scripts/derive_nsc_local_prepared_response.py": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_dirac_source_phase.py": "39c36757c1fb38d200d050efc21e00f1913cac14a511a8f2b93e507267bf40fd",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020",
+  "status": "OPEN: all retained raw families plus derived edge; finite-tail and total error unbounded",
+  "z": [
+    1.1768780671724794,
+    1.1798780671724793,
+    1.1828780671724792,
+    1.1858780671724793,
+    1.1888780671724795,
+    1.1918780671724793,
+    1.1948780671724792,
+    1.1978780671724794,
+    1.2008780671724795,
+    1.2038780671724794,
+    1.2068780671724793,
+    1.2098780671724794,
+    1.2128780671724793,
+    1.2158780671724794,
+    1.2188780671724793,
+    1.2218780671724794,
+    1.2248780671724793,
+    1.2278780671724794,
+    1.2308780671724793,
+    1.2338780671724794,
+    1.2368780671724793
+  ]
+}

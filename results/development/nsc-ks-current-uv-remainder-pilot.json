@@ -1,0 +1,588 @@
+{
+  "coefficient_records": {
+    "results/development/nsc-ks-current-uv-coefficients-v2.json": {
+      "numerical_C_M": null,
+      "schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v2",
+      "sha256": "de8e67e4cd89eb0331aff4e18d577220b83ddca94c0c6bac6d0c5a0fe32585df"
+    },
+    "results/development/nsc-ks-current-uv-coefficients-v3.json": {
+      "numerical_C_M": null,
+      "schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v3",
+      "sha256": "6f1677c3b1011a4d4426eff6590b792cfafe3590f29a83ad3b236dd7ad705c53"
+    },
+    "results/development/nsc-ks-current-uv-coefficients-v4.json": {
+      "numerical_C_M": null,
+      "schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v4",
+      "sha256": "d4c35a2a8746bbb75734868556db5bb877266e2f0cb3de6109a05fcc5a90937d"
+    }
+  },
+  "current_history_pilot": {
+    "commutators": {
+      "Bz_integral": 0.0012063840260691774,
+      "Bzz_integral": 0.9555571601910049,
+      "absolute_angular": 2.23606797749979,
+      "axial_lower": 0.8,
+      "certified_L0_A4": false,
+      "normal_support": 0.03,
+      "radius_lower": 1.3997614174467379
+    },
+    "field_or_source_evolutions": 0,
+    "first_noncancelling_paired_order": 3,
+    "formulas": {
+      "C4": "equal-mu sum of the two original angular signs of those e^{-3} action densities on I",
+      "J_3": "Im(A0^dag A3_z + A1^dag A2_z + A2^dag A1_z) - s n4, with A0_z=0",
+      "action_N3": "mu/(2 pi) times the occupied contraction of V at e^{-3} and (S3/a) J_3, action minus once; still a functional of transported A2,A3",
+      "action_beta3": "-mu/(2 pi) times the occupied J_3; action minus once",
+      "n4_transport": "T_s n4 = -(s/a^2) d_z (2 |minor A2|^2 + 4 Re(conj(minor A1) minor A3)); upstream n4=0 does not remove minor A3"
+    },
+    "imag_major_A2_vanishes_for_this_massless_pair": true,
+    "majorant": {
+      "Bz_integral": 0.0012063840260691774,
+      "Bzz_integral": 0.9555571601910049,
+      "missing_inputs": [
+        "upstream affine-expansion H2 remainder for inverse-energy orders greater than 4 at rho_up, for the same mathematical vacuum column",
+        "H2 integrals of L0 A4 on the declared current-history slab, which require the characteristic integrals of major A2 (real and imaginary) and the subsequent major-A3 transport; Re(T_s major A2) also uses the transported major-A1 phase q. These are not local metric jets"
+      ],
+      "numerical_C_M": null
+    },
+    "numerical_C4": null,
+    "numerical_C_M": null,
+    "pair": {
+      "absolute_angular": 2.23606797749979,
+      "angular_level": 1,
+      "archived_splits": [
+        160.0,
+        320.0
+      ],
+      "compact_level": 0,
+      "cutoff": 160.0,
+      "group": 1,
+      "mass": 0.0,
+      "multiplicity_per_signed_family": 6.0,
+      "same_cutoff_grid": true
+    },
+    "physical_local_gate": "OPEN: first noncancelling paired vacuum order is e^{-3}; numerical C4, C_M and the local incoming gate remain unbounded pending L0 A4 / major A2-A3 transport norms",
+    "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+    "provisional_comparison": [
+      {
+        "allocation_certified": false,
+        "cutoff": 160.0,
+        "provisional_UV_allocation": 5e-12,
+        "thermal_N": null,
+        "thermal_N_decimal_upper": "4.5120703148112579314e-460",
+        "thermal_N_display": "4.5120703148112579314e-460",
+        "thermal_below_allocation": true,
+        "thermal_beta": null,
+        "thermal_beta_decimal_upper": "3.777161699261122824e-460",
+        "thermal_beta_display": "3.777161699261122824e-460",
+        "thermal_log_N": -1057.6823866792304,
+        "thermal_log_beta": -1057.8601699228873,
+        "vacuum_N": null,
+        "vacuum_below_allocation": null,
+        "vacuum_beta": null
+      },
+      {
+        "allocation_certified": false,
+        "cutoff": 320.0,
+        "provisional_UV_allocation": 5e-12,
+        "thermal_N": null,
+        "thermal_N_decimal_upper": "7.2536064984967766416e-921",
+        "thermal_N_display": "7.2536064984967766416e-921",
+        "thermal_below_allocation": true,
+        "thermal_beta": null,
+        "thermal_beta_decimal_upper": "6.0969815104043220668e-921",
+        "thermal_beta_display": "6.0969815104043220668e-921",
+        "thermal_log_N": -2118.699371854267,
+        "thermal_log_beta": -2118.8730768331675,
+        "vacuum_N": null,
+        "vacuum_below_allocation": null,
+        "vacuum_beta": null
+      }
+    ],
+    "thermal": {
+      "cutoffs": [
+        {
+          "N": null,
+          "N_decimal_upper": "4.5120703148112579314e-460",
+          "N_display": "4.5120703148112579314e-460",
+          "below_provisional_allocation": true,
+          "beta": null,
+          "beta_decimal_upper": "3.777161699261122824e-460",
+          "beta_display": "3.777161699261122824e-460",
+          "cutoff": 160.0,
+          "float64_underflow": true,
+          "log_N": -1057.6823866792304,
+          "log_beta": -1057.8601699228873,
+          "underflow_is_not_exact_zero": true
+        },
+        {
+          "N": null,
+          "N_decimal_upper": "7.2536064984967766416e-921",
+          "N_display": "7.2536064984967766416e-921",
+          "below_provisional_allocation": true,
+          "beta": null,
+          "beta_decimal_upper": "6.0969815104043220668e-921",
+          "beta_display": "6.0969815104043220668e-921",
+          "cutoff": 320.0,
+          "float64_underflow": true,
+          "log_N": -2118.699371854267,
+          "log_beta": -2118.8730768331675,
+          "underflow_is_not_exact_zero": true
+        }
+      ],
+      "source_law": "2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))",
+      "vacuum_envelope_used": false
+    },
+    "vacuum_tail": {
+      "160": null,
+      "320": null
+    },
+    "z": [
+      1.1768780671724792,
+      1.2068780671724793,
+      1.2368780671724793
+    ]
+  },
+  "first_noncancelling_paired_order": 3,
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-ks-current-uv-coefficients-v2.json": "de8e67e4cd89eb0331aff4e18d577220b83ddca94c0c6bac6d0c5a0fe32585df",
+    "results/development/nsc-ks-current-uv-coefficients-v3.json": "6f1677c3b1011a4d4426eff6590b792cfafe3590f29a83ad3b236dd7ad705c53",
+    "results/development/nsc-ks-current-uv-coefficients-v4.json": "d4c35a2a8746bbb75734868556db5bb877266e2f0cb3de6109a05fcc5a90937d",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+  },
+  "next_required_primitive": {
+    "current_history_L0_A4_H2_integrals": null,
+    "transported_major_A2_A3_and_n4": null,
+    "upstream_affine_H2_remainder_orders_gt4": null
+  },
+  "numerical_C4": null,
+  "numerical_C_M": null,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "remainder_proof": {
+    "C_M_or_physical_gate_from_leading_cancellation": false,
+    "Gamma_rest_assigned": false,
+    "certificate_from_leading_e_minus2_cancellation": false,
+    "defect": {
+      "M": 4,
+      "defect": "e^{-4} L0 A4 after the constructed recurrence and major transports",
+      "differentiated_current_error_order": "O(e^{-3}) after restoring the source carrier; M=3 alone leaves an O(e^{-2}) current remainder and does not prove the paired tail",
+      "dummy_symbol_L0_A_j": false,
+      "field_H2_error_order": "O(e^{-4}) after a finite C_M",
+      "residuals": {
+        "s+1/Im_Ts_major_A2_independent_of_q": "independent",
+        "s+1/Im_Ts_major_A2_parent": "0",
+        "s+1/L0_Aj_equals_2i_a2_Pi_minus_Ajp1": [
+          "0",
+          "0"
+        ],
+        "s+1/L0_telescope_M2": [
+          "0",
+          "0"
+        ],
+        "s+1/L0_telescope_M3": [
+          "0",
+          "0"
+        ],
+        "s+1/L0_telescope_M4": [
+          "0",
+          "0"
+        ],
+        "s+1/Pi_s_L0_Aj_is_transport_defect": "0",
+        "s+1/Re_Ts_major_A2_depends_on_q": "depends",
+        "s+1/defect_is_Pi_minus_L0_AM_over_eM": true,
+        "s+1/minor_A3_depends_on_major_A2": "depends",
+        "s+1/minor_Ajp1_depends_on_major_Aj": "depends",
+        "s-1/Im_Ts_major_A2_independent_of_q": "independent",
+        "s-1/Im_Ts_major_A2_parent": "0",
+        "s-1/L0_Aj_equals_2i_a2_Pi_minus_Ajp1": [
+          "0",
+          "0"
+        ],
+        "s-1/L0_telescope_M2": [
+          "0",
+          "0"
+        ],
+        "s-1/L0_telescope_M3": [
+          "0",
+          "0"
+        ],
+        "s-1/L0_telescope_M4": [
+          "0",
+          "0"
+        ],
+        "s-1/Pi_s_L0_Aj_is_transport_defect": "0",
+        "s-1/Re_Ts_major_A2_depends_on_q": "depends",
+        "s-1/defect_is_Pi_minus_L0_AM_over_eM": true,
+        "s-1/minor_A3_depends_on_major_A2": "depends",
+        "s-1/minor_Ajp1_depends_on_major_Aj": "depends"
+      }
+    },
+    "existing_source_ad759_evaluation_changed": false,
+    "first_noncancelling": {
+      "A3_replaced_by_local_metric_jet": false,
+      "C4_or_C_M_bounded": false,
+      "angular_pairs": [
+        {
+          "group": 1,
+          "multiplicity_per_signed_family": 6.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 2,
+          "multiplicity_per_signed_family": 8.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 3,
+          "multiplicity_per_signed_family": 10.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 4,
+          "multiplicity_per_signed_family": 12.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 5,
+          "multiplicity_per_signed_family": 14.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 6,
+          "multiplicity_per_signed_family": 16.0,
+          "positive_rows_per_angular_sign": 1200,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 7,
+          "multiplicity_per_signed_family": 18.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 8,
+          "multiplicity_per_signed_family": 20.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 9,
+          "multiplicity_per_signed_family": 22.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 10,
+          "multiplicity_per_signed_family": 24.0,
+          "positive_rows_per_angular_sign": 1088,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 11,
+          "multiplicity_per_signed_family": 26.0,
+          "positive_rows_per_angular_sign": 1088,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 12,
+          "multiplicity_per_signed_family": 28.0,
+          "positive_rows_per_angular_sign": 1368,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 14,
+          "multiplicity_per_signed_family": 12.0,
+          "positive_rows_per_angular_sign": 584,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 15,
+          "multiplicity_per_signed_family": 16.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 16,
+          "multiplicity_per_signed_family": 20.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 17,
+          "multiplicity_per_signed_family": 24.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 18,
+          "multiplicity_per_signed_family": 28.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 19,
+          "multiplicity_per_signed_family": 32.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 20,
+          "multiplicity_per_signed_family": 36.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 21,
+          "multiplicity_per_signed_family": 40.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 22,
+          "multiplicity_per_signed_family": 44.0,
+          "positive_rows_per_angular_sign": 1220,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 24,
+          "multiplicity_per_signed_family": 12.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 25,
+          "multiplicity_per_signed_family": 16.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 26,
+          "multiplicity_per_signed_family": 20.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 27,
+          "multiplicity_per_signed_family": 24.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 28,
+          "multiplicity_per_signed_family": 28.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 29,
+          "multiplicity_per_signed_family": 32.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 30,
+          "multiplicity_per_signed_family": 36.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 31,
+          "multiplicity_per_signed_family": 40.0,
+          "positive_rows_per_angular_sign": 892,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 32,
+          "multiplicity_per_signed_family": 44.0,
+          "positive_rows_per_angular_sign": 1400,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        }
+      ],
+      "complete_e_minus3_coefficient_proven_nonzero": false,
+      "continuity_residuals": {
+        "s+1/continuity_e_minus4_retains_minor_A3": "0",
+        "s+1/n4_depends_on_minor_A3": "depends",
+        "s-1/continuity_e_minus4_retains_minor_A3": "0",
+        "s-1/n4_depends_on_minor_A3": "depends"
+      },
+      "e_minus3_even_in_ell": true,
+      "e_minus4_parity_evaluated": false,
+      "first_noncancelling_paired_inverse_energy_order": 3,
+      "formulas": {
+        "C4": "equal-mu sum of the two original angular signs of those e^{-3} action densities on I",
+        "J_3": "Im(A0^dag A3_z + A1^dag A2_z + A2^dag A1_z) - s n4, with A0_z=0",
+        "action_N3": "mu/(2 pi) times the occupied contraction of V at e^{-3} and (S3/a) J_3, action minus once; still a functional of transported A2,A3",
+        "action_beta3": "-mu/(2 pi) times the occupied J_3; action minus once",
+        "n4_transport": "T_s n4 = -(s/a^2) d_z (2 |minor A2|^2 + 4 Re(conj(minor A1) minor A3)); upstream n4=0 does not remove minor A3"
+      },
+      "full_N_beta_coefficient_parity": "at e^{-p}: (-1)^{p+1}",
+      "involution_residuals": {
+        "s+1/N_parity_p2": "0",
+        "s+1/N_parity_p3": "0",
+        "s+1/beta_parity_p2": "0",
+        "s+1/beta_parity_p3": "0",
+        "s-1/N_parity_p2": "0",
+        "s-1/N_parity_p3": "0",
+        "s-1/beta_parity_p2": "0",
+        "s-1/beta_parity_p3": "0"
+      },
+      "leading_paired_e_minus2_cancels_for_equal_mu": true,
+      "n4_eliminated_without_minor_A3": false,
+      "numerical_C4": null
+    },
+    "gaps": {
+      "leading_e_minus2_cancellation_is_not_a_tail_bound": true,
+      "missing_for_C4": "pointwise e^{-3} N,beta densities on I from transported major A2, major A3 and n4; the leading E^{-2} cancellation is not that coefficient",
+      "missing_for_C_M": "H2 integrals of L0 A4 on the declared current-history slab, which require the characteristic integrals of major A2 (real and imaginary) and the subsequent major-A3 transport; Re(T_s major A2) also uses the transported major-A1 phase q. These are not local metric jets",
+      "numerical_C4": null,
+      "numerical_C_M": null,
+      "physical_local_gate": "OPEN",
+      "thermal_coherent_source_remainder": "bounded separately by Fermi occupation",
+      "upstream_affine_tail": "upstream affine-expansion H2 remainder for inverse-energy orders greater than 4 at rho_up, for the same mathematical vacuum column",
+      "vacuum_integrated_tail_160": null,
+      "vacuum_integrated_tail_320": null
+    },
+    "identities": {
+      "A3_locally_algebraic_in_metric_jets": false,
+      "defect": "e^{-4} L0 A4 after the constructed recurrence and major transports",
+      "dummy_symbol_L0_A_j": false,
+      "expansion_order": 4,
+      "major_A2_replaced_by_local_metric_jet": false,
+      "physical_source_columns_replaced": false,
+      "residuals": {
+        "s+1/Im_Ts_major_A2_independent_of_q": "independent",
+        "s+1/Im_Ts_major_A2_parent": "0",
+        "s+1/L0_Aj_equals_2i_a2_Pi_minus_Ajp1": [
+          "0",
+          "0"
+        ],
+        "s+1/L0_telescope_M2": [
+          "0",
+          "0"
+        ],
+        "s+1/L0_telescope_M3": [
+          "0",
+          "0"
+        ],
+        "s+1/L0_telescope_M4": [
+          "0",
+          "0"
+        ],
+        "s+1/Pi_s_L0_Aj_is_transport_defect": "0",
+        "s+1/Re_Ts_major_A2_depends_on_q": "depends",
+        "s+1/defect_is_Pi_minus_L0_AM_over_eM": true,
+        "s+1/minor_A3_depends_on_major_A2": "depends",
+        "s+1/minor_Ajp1_depends_on_major_Aj": "depends",
+        "s-1/Im_Ts_major_A2_independent_of_q": "independent",
+        "s-1/Im_Ts_major_A2_parent": "0",
+        "s-1/L0_Aj_equals_2i_a2_Pi_minus_Ajp1": [
+          "0",
+          "0"
+        ],
+        "s-1/L0_telescope_M2": [
+          "0",
+          "0"
+        ],
+        "s-1/L0_telescope_M3": [
+          "0",
+          "0"
+        ],
+        "s-1/L0_telescope_M4": [
+          "0",
+          "0"
+        ],
+        "s-1/Pi_s_L0_Aj_is_transport_defect": "0",
+        "s-1/Re_Ts_major_A2_depends_on_q": "depends",
+        "s-1/defect_is_Pi_minus_L0_AM_over_eM": true,
+        "s-1/minor_A3_depends_on_major_A2": "depends",
+        "s-1/minor_Ajp1_depends_on_major_Aj": "depends"
+      },
+      "telescope": "(L0 - 2 i e / a^2 Pi_{-s}) sum_{j=0}^M e^{-j} A_j = e^{-M} L0 A_M with M=4; minor A_{j+1} is the actual vacant L0 A_j, not a jet"
+    },
+    "manufactured": {
+      "current_history_C_M": null,
+      "dummy_symbol_L0_A_j": false,
+      "omitting_residual_fails_to_enclose": true,
+      "periodic_actual_h2": [
+        0.02683281572999748,
+        0.4214888838624436,
+        6.620731905560071
+      ],
+      "periodic_bound_h2": [
+        0.02683281572999748,
+        0.4214888838624436,
+        6.620731905560072
+      ],
+      "periodic_manufactured_enclosed": true,
+      "small_matrix_actual": 2.261776370019947e-05,
+      "small_matrix_bound_on_remainder": 2.264155471693585e-05,
+      "small_matrix_bound_unscaled": 0.014150971698084906,
+      "small_matrix_enclosed": true,
+      "small_matrix_energy": 5.0
+    },
+    "negative_controls": {
+      "broken_mu_cancels": false,
+      "broken_mu_e_minus2_max_abs": 3.75,
+      "equal_mu_e_minus2_max_abs": 0.0,
+      "first_noncancelling_order": 3,
+      "leading_e_minus2_cancellation_is_not_a_tail_bound": true,
+      "omitted_e_minus3_max_abs": 0.0,
+      "omitting_e_minus3_leaves_false_e_minus4_lead": true,
+      "paired_e_minus3_max_abs": 8.399999999999999
+    },
+    "new_action_term": false,
+    "physical_local_gate": "OPEN: first noncancelling paired vacuum order is e^{-3}; numerical C4, C_M and the local incoming gate remain unbounded pending L0 A4 / major A2-A3 transport norms",
+    "provisional_UV_allocation": 5e-12,
+    "schema": "NSC-KS-FINITE-HISTORY-UV-REMAINDER-v1",
+    "v2_v4_records_rewritten": false
+  },
+  "schema": "NSC-KS-CURRENT-UV-REMAINDER-PILOT-v1",
+  "source_hashes": {
+    "docs/nsc-ks-current-uv-remainder.md": "181f263aecfa944a2595734a8c76da3e7f574b157b2416c5c91132539f86a1e6",
+    "scripts/derive_nsc_ks_current_uv_remainder_pilot.py": "75e3899769a38d4d18050845b02653635650efb7e198c92b1e0f3e0a19979e49",
+    "src/recursive_horizons/nsc_ks_finite_history_uv_remainder.py": "95801ae6456af01b3c1094a617ffa47ba3f7927f851facb514939fd3944e3d05",
+    "tests/test_nsc_ks_finite_history_uv_remainder.py": "f4324ff0f2144530cb7d697c5678be0a23fc21f909d853cdc0a09881fbf97f22"
+  },
+  "status": "OPEN: first noncancelling paired order e^-3 and M=4 defect verified; thermal tail bounded; numerical C4/C_M and vacuum tail remain missing",
+  "thermal_tail_below_provisional_allocation": true,
+  "vacuum_integrated_tail_N_beta": null
+}

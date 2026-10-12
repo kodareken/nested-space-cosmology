@@ -1,0 +1,331 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "spatial": {
+      "covariance": {
+        "difference_over_fine_norm": 0.6300405553050894,
+        "fine_compared_response_norm": 7.748076796464432e-06,
+        "max_absolute_difference": 4.881602607390929e-06,
+        "passes": false,
+        "relative_indicator_limit": 0.25
+      },
+      "field": {
+        "difference_over_fine_norm": 0.7019568849746828,
+        "fine_compared_response_norm": 0.0001866317595700749,
+        "max_absolute_difference": 0.0001310074485851537,
+        "passes": false,
+        "relative_indicator_limit": 0.25
+      },
+      "trace": {
+        "difference_over_fine_norm": 0.6116259818352573,
+        "fine_compared_response_norm": 0.00016852536486859743,
+        "max_absolute_difference": 0.00010307449175190087,
+        "passes": false,
+        "relative_indicator_limit": 0.25
+      }
+    },
+    "temporal": {
+      "covariance": {
+        "difference_over_fine_norm": 0.0031634899478971763,
+        "fine_compared_response_norm": 7.753518509844781e-06,
+        "max_absolute_difference": 2.452817786672866e-08,
+        "passes": true,
+        "relative_indicator_limit": 0.1
+      },
+      "field": {
+        "difference_over_fine_norm": 0.0018397579087923947,
+        "fine_compared_response_norm": 0.00019108248032067185,
+        "max_absolute_difference": 3.5154550440162315e-07,
+        "passes": true,
+        "relative_indicator_limit": 0.1
+      },
+      "trace": {
+        "difference_over_fine_norm": 0.0031085358153204426,
+        "fine_compared_response_norm": 0.0001686455235786053,
+        "max_absolute_difference": 5.242406501375628e-07,
+        "passes": true,
+        "relative_indicator_limit": 0.1
+      }
+    }
+  },
+  "control": {
+    "algebra_tolerance": 3e-11,
+    "amplitude": 0.0,
+    "cases_completed": [
+      "401_64",
+      "801_64",
+      "801_128"
+    ],
+    "cases_requested": [
+      [
+        401,
+        64
+      ],
+      [
+        801,
+        64
+      ],
+      [
+        801,
+        128
+      ]
+    ],
+    "family": "14_1",
+    "initial_and_incident_tangents": "explicit0 by unchanged entire past/upstream support",
+    "response": "actual rho1 two-spin time trace, z=tau+S1; no stationary phase or interpolation",
+    "source_law": "unchanged original coherent source blocks; all four infinity columns closed",
+    "spatial_indicator_limit": 0.25,
+    "support": {
+      "PG_time_support": [
+        0.043175087167987014,
+        0.25620332026786774
+      ],
+      "S1": 1.0568780671724793,
+      "T1": -0.8017223766635779,
+      "axial_center": 1.2068780671724793,
+      "axial_halfwidth": 0.06,
+      "final_support_margin": 0.04379667973213225,
+      "final_time": 0.3,
+      "guard_kind": "numerical support bounds with strict margins; analytic monotonicity and fixed-radius-only principal speeds",
+      "initial_support_margin": 0.043175087167987014,
+      "initial_time": 0.0,
+      "maximum_checked_characteristic_speed": -0.21880440668708911,
+      "normal_inner": 0.007,
+      "normal_outer": 0.03,
+      "radial_support": [
+        0.9743860383229925,
+        1.0250344273443701
+      ],
+      "right_support_margin": 0.17496557265562984
+    },
+    "temporal_indicator_limit": 0.1,
+    "weights": "sqrt(w/(2*pi)) on each source column; no multiplicity factor added"
+  },
+  "execution_source_hashes": {
+    "docs/nsc-retarded-compatible-response.md": "8fbc72f7a6641069092199733a72bd474908155c69030f0e4f789a9dae0ef562",
+    "scripts/derive_nsc_retarded_compatible_response.py": "dca4026b58fd1b2aacce6c36b2d110b066a76b2f1eb1ae36f2fdd67a14c3de8c",
+    "tests/test_nsc_retarded_compatible_response.py": "5668eb08ec205b9f5f77afb98747c966e9b5815eed6e75fec6a106155ce372b5"
+  },
+  "input_hashes": {
+    "docs/nsc-retarded-compatible-preparation.md": "6970d00ef8008b9afa66aac6b4b4c4bc6fc05713de84eb6df37058b3d7108eb8",
+    "results/development/nsc-compatible-prepared-history.json": "66cb7f086bb60bc646533ed09ca565cc02fedcafbc609d68b5dcf662a2e61318",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "payload": {
+    "bytes": 5889941,
+    "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
+    "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+  },
+  "per_case": {
+    "401_64": {
+      "covariance_hermiticity_residual": 3.3881317890172014e-21,
+      "diagnostics": {
+        "auxiliary_identity_residual": 1.7430501486614958e-14,
+        "frame_map_parameter_derivative": 0.0,
+        "incident_tangent_norm": 0.0,
+        "initial_metric_change": 2.6645352591003757e-15,
+        "initial_tangent_norm": 0.0,
+        "maximum_characteristic_speed": -0.21880440668708911,
+        "metric_flux_tangent_residual": 0.0,
+        "norm_flux_residual": 1.7763568394002505e-15,
+        "source_closed_column_norm": 0.0,
+        "source_covariance_closed_column_norm": 0.0,
+        "source_covariance_hermiticity": 0.0,
+        "source_covariance_tangent_norm": 0.0,
+        "stationary_phase_reapplied": false,
+        "tangent_boundary_trace": 2.103284683237894e-05
+      },
+      "response_max_norms": {
+        "covariance": 9.561537383879758e-06,
+        "field": 0.0002404558301306013,
+        "trace": 0.00020722743032347828
+      },
+      "sampled_projector_kernel_hermiticity_residual": 0.0,
+      "sampled_projector_kernel_tangent_norm": 1.9280125992016616e-05,
+      "stationary_reference_field_drift": 0.000431005732696872,
+      "stationary_reference_trace_drift": 7.345983834401372e-05
+    },
+    "801_128": {
+      "covariance_hermiticity_residual": 3.447174346834585e-21,
+      "diagnostics": {
+        "auxiliary_identity_residual": 1.199040866595169e-14,
+        "frame_map_parameter_derivative": 0.0,
+        "incident_tangent_norm": 0.0,
+        "initial_metric_change": 2.6645352591003757e-15,
+        "initial_tangent_norm": 0.0,
+        "maximum_characteristic_speed": -0.21880440668708911,
+        "metric_flux_tangent_residual": 0.0,
+        "norm_flux_residual": 2.6645352591003757e-15,
+        "source_closed_column_norm": 0.0,
+        "source_covariance_closed_column_norm": 0.0,
+        "source_covariance_hermiticity": 0.0,
+        "source_covariance_tangent_norm": 0.0,
+        "stationary_phase_reapplied": false,
+        "tangent_boundary_trace": 2.4657285360091815e-06
+      },
+      "response_max_norms": {
+        "covariance": 7.759979080218844e-06,
+        "field": 0.00019108248032067185,
+        "trace": 0.00016884774443598225
+      },
+      "sampled_projector_kernel_hermiticity_residual": 0.0,
+      "sampled_projector_kernel_tangent_norm": 1.1803145393833382e-05,
+      "stationary_reference_field_drift": 0.00021538457306451698,
+      "stationary_reference_trace_drift": 3.2939779513354e-05
+    },
+    "801_64": {
+      "covariance_hermiticity_residual": 3.3881317890172014e-21,
+      "diagnostics": {
+        "auxiliary_identity_residual": 2.886579864025407e-15,
+        "frame_map_parameter_derivative": 0.0,
+        "incident_tangent_norm": 0.0,
+        "initial_metric_change": 2.6645352591003757e-15,
+        "initial_tangent_norm": 0.0,
+        "maximum_characteristic_speed": -0.21880440668708911,
+        "metric_flux_tangent_residual": 0.0,
+        "norm_flux_residual": 2.6645352591003757e-15,
+        "source_closed_column_norm": 0.0,
+        "source_covariance_closed_column_norm": 0.0,
+        "source_covariance_hermiticity": 0.0,
+        "source_covariance_tangent_norm": 0.0,
+        "stationary_phase_reapplied": false,
+        "tangent_boundary_trace": 2.3683523683579155e-06
+      },
+      "response_max_norms": {
+        "covariance": 7.748076796464432e-06,
+        "field": 0.0001908164579790247,
+        "trace": 0.00016852536486859743
+      },
+      "sampled_projector_kernel_hermiticity_residual": 0.0,
+      "sampled_projector_kernel_tangent_norm": 1.177496847936348e-05,
+      "stationary_reference_field_drift": 0.0007748417815600928,
+      "stationary_reference_trace_drift": 0.0001344036826539704
+    }
+  },
+  "postprocessing_correction": {
+    "corrected_call": "TransmittingDiracSeamDomain(N,q,beta,r)",
+    "current_hashes_are_verification_not_execution": true,
+    "executed_payload_sha256": "eaecdda5048a6b1b610a16940cd436a71250f3def3dc088b36dca9eb4dedfbed",
+    "executed_source_bytes": "artifact executed_sources/<owned path>",
+    "field_solves_repeated": 0,
+    "kind": "fixed-surface constructor argument order, output invariant",
+    "map_identity": {
+      "coordinate_normal_or_metric_equality_claimed": false,
+      "reason": "the used trace/inverse/Gram depend on N,r,q*beta, unchanged by this swap; the external r*sqrt(q) denominator was already correct",
+      "restriction_map_bitwise_equal": true,
+      "restriction_residual": 0.0,
+      "trace_map_triples_bitwise_equal": true
+    },
+    "previous_call": "TransmittingDiracSeamDomain(N,beta,q,r)",
+    "unchanged_array_sha256": {
+      "401_64/covariance_tangent": "afba402ba462c305d2a3b000cb363be6b205458b3b788329c08609e43a9e4b23",
+      "401_64/diagnostics_json": "9b3d0f8f84e270f7f1c4e939e7dd5b1891489edb10098a50f974fe7d55996a28",
+      "401_64/field": "9be3f79d7f126b29cffe0ba10a1ccca4db1bbcc0e1b0465a9ffd4b21aa247369",
+      "401_64/field_tangent": "45809ad3f1843371a3092c829e374c1ed2f5d1c2c4fd76d765723c29285cdd95",
+      "401_64/projector_tangent": "ff1fb92ff6b5f22441f832c9d17571bfd1565eea294032164779509ce930174f",
+      "401_64/sample_rows": "a3df1d5e12ecaa3c9f2ce094442b20c7b46f9a6efa2e2772b88d42068313cf68",
+      "401_64/stationary_field": "15dbb326a624e9e02ba8a2bec596c5ee09f60bc924b071c83af458a74aed156e",
+      "401_64/stationary_trace": "33bc638e32db36e5709305b978ba2fa904efe77adaf52089c0be28c1a5052783",
+      "401_64/times": "4d2d1f3f9144136cb702130b645b0349413e2f2ce086c2025d016a9dcf3a5457",
+      "401_64/trace": "49cc0bd58f735542bdd617c398fdd378152daa9b503211d565d58eb74c2ed64b",
+      "401_64/trace_tangent": "876ae5ed91b1845a4378a39cb76543a2a9ae66ba298a17d416ee0f3d24f15fba",
+      "401_64/x": "ad9ec38f9a6acdc6b16fe7a99ed955fb0162edb9d4e7eae1bdc8fbfd864c8fb7",
+      "801_128/covariance_tangent": "512896a0d7f4ccc4bb9927acb88439716fcf81a9e9870af194952ea89f194bb3",
+      "801_128/diagnostics_json": "d02a0408b825ee89668e88a8d6409f78c5cd16eecbe92df492351408e0139046",
+      "801_128/field": "75da2a1316ea038340de1545cfeeb77cb1dabb27cf8ed5425d80e97ad13abf0d",
+      "801_128/field_tangent": "38d7748e51337e47fef884005fe4d1112dd49c680382613e23a687fcaa9ffdec",
+      "801_128/projector_tangent": "573bcd0f69bd41261325f75d1fa74b4a431b9660e91966837747fb2d30b3f885",
+      "801_128/sample_rows": "6d384e0fbcf4c362b04f8ba49468ee914d7bd3d2411cba7d0b19268fa7627143",
+      "801_128/stationary_field": "a31903cd4f04c9698163dbf15a2b9336cb9dfbb0828dbbfedce60141b7a092a8",
+      "801_128/stationary_trace": "21af77cb158bce98c6df8721fc03de8402f6e410651275376ad6e215d7c81e6d",
+      "801_128/times": "954842cbaee817b36be9b4b1c4e19e27338d01bbab816bc236db8a363ec7f307",
+      "801_128/trace": "3f8acf19932d4202ab7dd4c139bc08a1daf19d01d927e7d4e76c6f24f6c220d6",
+      "801_128/trace_tangent": "dc7f4320c2e33d2b1f3a2216a1cff8b9f0f71f9792220ccf712a4ee60534fffd",
+      "801_128/x": "e979674a81d0865db5f47838fbbf456b702be4ff2adfff49a51916f7b29d1f3c",
+      "801_64/covariance_tangent": "568a373b9b2807d8937c1af89881d6c2f8b546c1c9aec399459ca99f2a90beaf",
+      "801_64/diagnostics_json": "c319fd06cc44e6cbfa7efbef5d591678394f317fb6af1466c58568b8ea6ebf2f",
+      "801_64/field": "359f4771ee9155a31efc848b64468bdbae93a5b154c65bdd8c59858e0d2af2c7",
+      "801_64/field_tangent": "617f3f7b7165ade34833359d45ef6e594cf77bdebf692c30df41aaf2747d4c6d",
+      "801_64/projector_tangent": "2797d8c03bb48caa5bc5b912a58eb6d0020aa1c57b49a4993f3c9cb003fa871a",
+      "801_64/sample_rows": "6d384e0fbcf4c362b04f8ba49468ee914d7bd3d2411cba7d0b19268fa7627143",
+      "801_64/stationary_field": "a31903cd4f04c9698163dbf15a2b9336cb9dfbb0828dbbfedce60141b7a092a8",
+      "801_64/stationary_trace": "33bc638e32db36e5709305b978ba2fa904efe77adaf52089c0be28c1a5052783",
+      "801_64/times": "4d2d1f3f9144136cb702130b645b0349413e2f2ce086c2025d016a9dcf3a5457",
+      "801_64/trace": "f60e26b29ef55493c64f8c25457eedf670bb9d33c67bd70132b323e4382a78fb",
+      "801_64/trace_tangent": "2b26ff854a994dda4964bf3f12783e96b9548ea1f39f7464e96d242ec5a4db1c",
+      "801_64/x": "e979674a81d0865db5f47838fbbf456b702be4ff2adfff49a51916f7b29d1f3c",
+      "source/angular": "aefe3478e900d81e79d2187ff8bd7896eead17ffe7029071ce32ba91e4305fe5",
+      "source/energies": "080f558b11ce14c95b811bf1a868291bedd6fbb4c8be50a7e120ca7766a0ae11",
+      "source/mass": "c3f113d6cbe802411220c98356d28b3c4ce2b9b769df839bd479276aff85c18e",
+      "source/projector": "cd08eca41a3aad74f35e6bef448f5dbf4218fe2a52ff640d561faa1ba335c2d2",
+      "source/source": "1623ec2c351b29ee419edea84ab65cb44ef12c8ba718803ed684540d83b098ed",
+      "source/weights": "29860d41d1129ebdbb7bf3c2c02809a51a1c00404a966e84f366dff3a47f355f"
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_retarded_compatible_response.py --check",
+  "residuals": {
+    "maximum_covariance_hermiticity": 3.447174346834585e-21,
+    "maximum_flux_and_auxiliary_algebra": 1.7430501486614958e-14
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 40006859,
+      "path": "results/development/artifacts/nsc-transmitting-history-modes.9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a.npz",
+      "sha256": "9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a"
+    },
+    {
+      "bytes": 9829760,
+      "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+      "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+    }
+  ],
+  "runtime": {
+    "CPU_seconds": 5.543995,
+    "case_CPU_seconds": {
+      "401_64": 0.829314,
+      "801_128": 2.685588,
+      "801_64": 1.976594
+    },
+    "cpu_budget_exceeded": false,
+    "cpu_budget_seconds": 120.0,
+    "wall_seconds": 5.570507333002752
+  },
+  "schema": "NSC-RETARDED-COMPATIBLE-RESPONSE-v1",
+  "scope": {
+    "causal_prepared_off_shell_family": true,
+    "complete_canonical_CAR_kernel_tangent": "zero on fixed intrinsic Sigma after full source resolution",
+    "continuum_error_bound": null,
+    "differences_are_indicators": true,
+    "four_energy_contribution_decides_C0": false,
+    "full_continuous_C0_match": "OPEN",
+    "metric_timestep": false,
+    "new_source_law_or_Gamma_term": false,
+    "old_radial_source_or_field_producers_rerun": false,
+    "parent_or_constraint_solution_selected": false,
+    "publication": false,
+    "sampled_projector_tangent": "reported without enforcing zero or subtracting a correction",
+    "stress_or_metric_equations_solved": false
+  },
+  "source_hashes": {
+    "docs/nsc-retarded-compatible-response.md": "4a25f6b7b5285ae564ca5a2f1b541dcfde073329230ef7212b7619e7b95ed3da",
+    "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
+    "tests/test_nsc_retarded_compatible_response.py": "0580dc73545977748829a4f2a8b97df751e0a78393bf7872b5898108b13dcd34"
+  },
+  "status": "OPEN: bounded sampled response unresolved or checkpointed",
+  "verification_source_hashes": {
+    "docs/nsc-retarded-compatible-response.md": "4a25f6b7b5285ae564ca5a2f1b541dcfde073329230ef7212b7619e7b95ed3da",
+    "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
+    "tests/test_nsc_retarded_compatible_response.py": "0580dc73545977748829a4f2a8b97df751e0a78393bf7872b5898108b13dcd34"
+  }
+}

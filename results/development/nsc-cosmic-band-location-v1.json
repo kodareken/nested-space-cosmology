@@ -1,0 +1,58 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-seam-invariance-v1.json": "f5f65ed56b9a7306d06c94354ac5a4485bbbf92664703e82340665fddfeee386"
+  },
+  "mapping": {
+    "band_cap_fractions": [
+      0.9052704082688754,
+      0.8105350453099079
+    ],
+    "band_seam_interval": [
+      28.968653064604013,
+      25.937121449917054
+    ],
+    "distance_from_cap": [
+      6.062878550082946,
+      3.0313469353959874
+    ],
+    "local_fraction_band": [
+      0.03,
+      0.1
+    ],
+    "seam_of_band_high_0_10": 25.937121449917054,
+    "seam_of_band_low_0_03": 28.968653064604013,
+    "seam_of_target_0_049": 28.168002354985997,
+    "target_local_fraction": 0.049
+  },
+  "notes": [
+    "the band [0.03, 0.10] is the pre-registered BBN-adjacent acceptance of the influence question, unchanged since round 1",
+    "interpolation is log-linear in f between the measured seams; no further model enters"
+  ],
+  "per_case": {
+    "mu-1.002": {
+      "local_0_03_seam": 28.977910200550042,
+      "local_0_049_seam": 28.182380046734412,
+      "local_0_10_seam": 25.965766724302505
+    },
+    "mu-1.010": {
+      "local_0_03_seam": 28.9713652363494,
+      "local_0_049_seam": 28.172822550665007,
+      "local_0_10_seam": 25.947815305963125
+    },
+    "mu-1.040": {
+      "local_0_03_seam": 28.95651821906716,
+      "local_0_049_seam": 28.148542571194596,
+      "local_0_10_seam": 25.897251936031637
+    }
+  },
+  "production_trajectory": false,
+  "schema": "NSC-COSMIC-BAND-LOCATION-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_cosmic_band_location.py": "d3a66de516ffbe153a271c939264455dde9c2792695cbdbc84e697b00c06ba88",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "status": "observation-level mapping; the cosmic location reading is a hypothesis"
+}

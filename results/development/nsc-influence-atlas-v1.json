@@ -1,0 +1,117 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "instrument_a_tangent_lapse": [
+    {
+      "interval": [
+        1.04,
+        8.0
+      ],
+      "l1_share": 0.26103990370323404
+    },
+    {
+      "interval": [
+        8.0,
+        16.0
+      ],
+      "l1_share": 0.2990718116493843
+    },
+    {
+      "interval": [
+        16.0,
+        24.0
+      ],
+      "l1_share": 0.2990382972537203
+    },
+    {
+      "interval": [
+        24.0,
+        32.0
+      ],
+      "l1_share": 0.1408499873936615
+    }
+  ],
+  "instrument_a_tangent_mass": [
+    {
+      "interval": [
+        1.04,
+        8.0
+      ],
+      "l1_share": 0.0
+    },
+    {
+      "interval": [
+        8.0,
+        16.0
+      ],
+      "l1_share": 0.0
+    },
+    {
+      "interval": [
+        16.0,
+        24.0
+      ],
+      "l1_share": 9.876078358210862e-05
+    },
+    {
+      "interval": [
+        24.0,
+        32.0
+      ],
+      "l1_share": 0.999901239216418
+    }
+  ],
+  "instrument_b_infall_time": [
+    {
+      "interval": [
+        1.325657137141717,
+        8.0
+      ],
+      "l1_share": 0.2414589358821725
+    },
+    {
+      "interval": [
+        8.0,
+        16.0
+      ],
+      "l1_share": 0.25641676583461703
+    },
+    {
+      "interval": [
+        16.0,
+        24.0
+      ],
+      "l1_share": 0.2514357575888236
+    },
+    {
+      "interval": [
+        24.0,
+        32.0
+      ],
+      "l1_share": 0.249066089490784
+    }
+  ],
+  "intervals": [
+    [
+      1.04,
+      8.0,
+      16.0,
+      24.0,
+      32.0
+    ]
+  ],
+  "mass_over_rm": 1.04,
+  "notes": [
+    "instrument A and B share edges but not code paths: A is the stage tangent of the sourced chart, B the time quadrature of the vacuum chart at the same mass",
+    "comparison is observational; no equality is asserted in advance"
+  ],
+  "plateau_reading": "round-11 linear profile requires d_lapse nearly flat below the source edge; this is the measured relative variation",
+  "plateau_variation_below_source": 0.0038061116540145314,
+  "production_trajectory": false,
+  "schema": "NSC-INFLUENCE-ATLAS-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_influence_atlas.py": "bc7cf56047b7240083185f70819c23ff8b5c92b82230b608ced99d01f101ba42",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "a1b0fe6a4f91da413b1e749b5306a16414c7ab5adf43f5dfc9e56d7826fa67ab"
+  }
+}

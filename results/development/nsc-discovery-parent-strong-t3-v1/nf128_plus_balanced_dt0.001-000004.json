@@ -1,0 +1,2617 @@
+{
+  "case_id": "nf128_plus_balanced_dt0.001",
+  "nf": 128,
+  "population": 1,
+  "population_id": "balanced",
+  "sign_name": "plus",
+  "momentum_sign": 1,
+  "step_cap": 0.001,
+  "control_mode": "coupled",
+  "common_k": 0.45388971484879426,
+  "control_preparation": null,
+  "parent_k": 0.45388971484879426,
+  "declared_offset_source": "authenticated parent record.k",
+  "prescribed_geometry_control": false,
+  "autonomy_inferred_from_control": false,
+  "stations": [
+    0.25,
+    0.5,
+    1.0,
+    1.25,
+    1.5,
+    2.25,
+    3.0
+  ],
+  "parent_record": "results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus",
+  "momenta_already_signed": true,
+  "field_conjugated": false,
+  "schema": "NSC-DISCOVERY-PARENT-EPISODE-v1",
+  "coordinate_time": 2.25,
+  "steps": 2250,
+  "ordinal": 4,
+  "status": "station_retained",
+  "momentum_representation": "canonical_pi",
+  "snapshot_kind": "station",
+  "column_rank": 2,
+  "covariance_rank": 2,
+  "geometry_frame": null,
+  "declared_offset_k": 0.45388971484879426,
+  "initial_kinetic_anchor_mean": 0.45388971484879476,
+  "kinetic_anchor_equals_declared_offset_claim": false,
+  "child_interval": [
+    3.5,
+    4.5
+  ],
+  "parent_interval": [
+    1.0,
+    7.0
+  ],
+  "protected_collar": [
+    3.0,
+    5.0
+  ],
+  "parent_annulus": [
+    [
+      1.0,
+      2.8
+    ],
+    [
+      5.2,
+      7.0
+    ]
+  ],
+  "clock_locations": [
+    1.0,
+    2.8,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.2,
+    7.0
+  ],
+  "source_metadata": {
+    "alpha": 0.5,
+    "base_CAR_eigenvalues": [
+      0.0009060316704358668,
+      0.0017822186307291155
+    ],
+    "base_c_equals_wZ": true,
+    "base_child_normalization_weight": 0.0013441251505824914,
+    "base_trace": 0.002688250301164983,
+    "base_weights": [
+      0.0017683392335225072,
+      0.0009199110676424754
+    ],
+    "child_weight": 0.3062058612874088,
+    "delta_star": 0.5,
+    "effective_shape_weight": 0.2251081761505038,
+    "endpoint_imbalances": [
+      0.8278551109468958,
+      -0.9999999999993454
+    ],
+    "imbalance": -7.891672326595488e-17,
+    "imbalance_cap": 0.5,
+    "lowdin_applied": false,
+    "normalization_identity": "raw shape at s*w maps to normalized child coefficient (s*w)*ZC; population mixture may change individual coefficients",
+    "old_shape_weight": 0.0013,
+    "population": 1,
+    "population_intervention_changes_base_weights": true,
+    "population_name": "balanced",
+    "rank": 2,
+    "reversed_probabilities_substituted": false,
+    "scaled_CAR_eigenvalues": [
+      0.15688856682031713,
+      0.30860921958836873
+    ],
+    "scaled_child_normalization_weight": 0.23274889320434303,
+    "scaled_trace": 0.465497786408686,
+    "scaled_weights": [
+      0.3062058612874088,
+      0.1592919251212772
+    ],
+    "source_covariance_changed": true,
+    "source_strength": 173.16013550038755,
+    "source_weight_clipping_applied": false,
+    "target_imbalance": 0.0,
+    "trace": 0.465497786408686,
+    "trace_rule": "source_strength * 2*w0*projected_raw_child_norm_squared",
+    "uniform_weights_substituted": false,
+    "declared_offset_k": 0.45388971484879426,
+    "declared_offset_key": "k"
+  },
+  "geometry_metadata": {},
+  "work_ledger": {
+    "coordinate_fieldwork": -1.4179490458103035,
+    "pressure_work": 505.4925004534539,
+    "lapse_work": 49.706662611435185,
+    "boundary_child": 8.04548080455446,
+    "boundary_parent": -11.355428802152584,
+    "quadrature": "trapezoid_coordinate_time",
+    "control_mode": "coupled",
+    "dense_propagator_stored": false,
+    "stocks_are_coordinate_trapezoid": true
+  },
+  "channel_sample": {
+    "coordinate_fieldwork": -0.0026566905104225694,
+    "pressure_work": 1768.3927811116232,
+    "lapse_work": 164.56885270617414,
+    "boundary_child": -13.842869035906691,
+    "boundary_parent": -46.27824262288988,
+    "time": 2.25,
+    "control_mode": "coupled",
+    "observation_cpu_seconds": 0.03540499999999902,
+    "dense_propagator_stored": false,
+    "quadrature": "trapezoid_coordinate_time",
+    "column_rank": 2,
+    "source_current": {
+      "min": -0.34159710773648816,
+      "max": 0.3415971077364721,
+      "max_abs": 0.34159710773648816
+    },
+    "source_density": {
+      "min": 3.7176520009197005,
+      "max": 305.7374536282281,
+      "max_abs": 305.7374536282281
+    },
+    "normal_clock_rates": [
+      0.001782206543906431,
+      0.0064153229160539725,
+      0.007395531754887235,
+      0.007329657728729679,
+      0.0061260753597667875,
+      0.00732965772872965,
+      0.007395531754887125,
+      0.0064153229160540505,
+      0.001782206543906407
+    ],
+    "curvature": {
+      "Ricci2": {
+        "min": -75873356.13805023,
+        "max": 342233596205.9091,
+        "max_abs": 342233596205.9091
+      },
+      "K": {
+        "min": -150566078.00641552,
+        "max": 685502495289.7098,
+        "max_abs": 685502495289.7098
+      }
+    },
+    "tides": {
+      "R_0101": {
+        "min": -13651.76693564106,
+        "max": 20953.99336077035,
+        "max_abs": 20953.99336077035
+      },
+      "R_0202": {
+        "min": -209411.42195692577,
+        "max": -1056.137453752708,
+        "max_abs": 209411.42195692577
+      },
+      "R4": {
+        "min": -31131.56697584407,
+        "max": 31890.53466948014,
+        "max_abs": 31890.53466948014
+      },
+      "owned_W": {
+        "min": 623.4063232354398,
+        "max": 1358361032.015435,
+        "max_abs": 1358361032.015435
+      }
+    },
+    "constraints": {
+      "raw_C_max": 2.5229878872108884,
+      "h_c_max": 0.006307840803640152,
+      "D_max": 0.0077573261391292725,
+      "projected_h_c_max": 0.005100994913669876,
+      "held_out_h_c_max": 0.00335782901387246,
+      "source_Q_rho_max": 0.764388602487165,
+      "source_current_max": 0.34159710773648816,
+      "mean_current": -8.326672684688674e-17,
+      "observable_error_bound": null,
+      "physical_instability_inferred": false
+    },
+    "energy": {
+      "gravity": -1.6924469868866507,
+      "field": 1.6924469868816807,
+      "total": -4.970024392036976e-12
+    },
+    "parent_annulus_probability": 0.21156793925916612,
+    "nonlinear_measurement_before_prediction": false,
+    "population_gradient_held_out": null,
+    "external_observer": {
+      "available": true,
+      "result": {
+        "api_version": "nsc-discovery-parent-observer-v1",
+        "state_flow": "prolong(decode(leading_rate))",
+        "state_flow_version": "nsc-discovery-parent-observer-projected-flow-v2",
+        "time": 2.25,
+        "control_mode": "coupled",
+        "geometry_rate_mode": "coupled",
+        "source_free": false,
+        "source_free_label_preserved": false,
+        "model": "leading_Einstein_EFT_diagnostic",
+        "passed_bundle": false,
+        "chi_rate_used": false,
+        "state_token_unchanged": true,
+        "rank": 2,
+        "weights": [
+          0.3062058612874088,
+          0.1592919251212772
+        ],
+        "reference_column_shape": [
+          256,
+          2
+        ],
+        "source_column_shape": [
+          256,
+          2
+        ],
+        "source_metadata": {
+          "alpha": 0.5,
+          "base_CAR_eigenvalues": [
+            0.0009060316704358668,
+            0.0017822186307291155
+          ],
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "base_trace": 0.002688250301164983,
+          "base_weights": [
+            0.0017683392335225072,
+            0.0009199110676424754
+          ],
+          "child_weight": 0.3062058612874088,
+          "delta_star": 0.5,
+          "effective_shape_weight": 0.2251081761505038,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": -7.891672326595488e-17,
+          "imbalance_cap": 0.5,
+          "lowdin_applied": false,
+          "normalization_identity": "raw shape at s*w maps to normalized child coefficient (s*w)*ZC; population mixture may change individual coefficients",
+          "old_shape_weight": 0.0013,
+          "population": 1,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "balanced",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "scaled_CAR_eigenvalues": [
+            0.15688856682031713,
+            0.30860921958836873
+          ],
+          "scaled_child_normalization_weight": 0.23274889320434303,
+          "scaled_trace": 0.465497786408686,
+          "scaled_weights": [
+            0.3062058612874088,
+            0.1592919251212772
+          ],
+          "source_covariance_changed": true,
+          "source_strength": 173.16013550038755,
+          "source_weight_clipping_applied": false,
+          "target_imbalance": 0.0,
+          "trace": 0.465497786408686,
+          "trace_rule": "source_strength * 2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "declared_offset_k": 0.45388971484879426,
+          "declared_offset_key": "parent_k"
+        },
+        "geometry_metadata": {},
+        "holder_intervals": {
+          "declared_child_interval": [
+            3.5,
+            4.5
+          ],
+          "declared_parent_interval": [
+            1.0,
+            7.0
+          ],
+          "signed_child_interval": [
+            3.5,
+            4.5
+          ],
+          "signed_parent_interval": [
+            1.0,
+            7.0
+          ],
+          "matches_signed_distance": true,
+          "declared_intervals_used_as_measurement_cuts": false
+        },
+        "partition": {
+          "centre": 4.0,
+          "length": 8.0,
+          "closure": "child |s|<=0.5; inner 0.5<|s|<=1.2; parent annulus 1.2<|s|<=3; ambient 3<|s|<=L/2; protected collar |s|<=1 is not a separate window",
+          "protected_collar_radius": 1.0,
+          "protected_collar_accounted_separately": false,
+          "accounted_parent_is_annulus": true,
+          "overlapping_parent_sum_used": false,
+          "pieces": {
+            "child": {
+              "wrapped": false,
+              "intervals": [
+                [
+                  3.5,
+                  4.5
+                ]
+              ]
+            },
+            "inner": {
+              "wrapped": false,
+              "intervals": [
+                [
+                  2.8,
+                  3.5
+                ],
+                [
+                  4.5,
+                  5.2
+                ]
+              ]
+            },
+            "parent": {
+              "wrapped": false,
+              "intervals": [
+                [
+                  1.0,
+                  2.8
+                ],
+                [
+                  5.2,
+                  7.0
+                ]
+              ]
+            },
+            "ambient": {
+              "wrapped": true,
+              "intervals": [
+                [
+                  7.0,
+                  9.0
+                ]
+              ]
+            }
+          }
+        },
+        "positive_proper_probability": true,
+        "proper_probability_nonnegative": true,
+        "matter_present": true,
+        "matter_curves": "occupied",
+        "per_proper_length_minimum": 7.203125110572563,
+        "probability_total_nodal": 0.4654977864084948,
+        "child_peak": {
+          "index": 256,
+          "x": 4.0,
+          "signed_distance": 0.0,
+          "value": 12.016886364756212,
+          "rate": -0.10587178825299759,
+          "rate_status": "unique_argmax",
+          "region": "child",
+          "is_global_peak": false,
+          "replaces_global_contours": false
+        },
+        "flags": {
+          "parent_peak_dominates": false,
+          "global_peak_outside_child": true,
+          "global_peak_region": "ambient",
+          "dominance_forced": false,
+          "child_peak_tracked_separately": true
+        },
+        "contours": {
+          "peak_x": 0.3125,
+          "peak_value": 36.932228757662955,
+          "peak_index": 20,
+          "peak_rate": 87.36461451285662,
+          "peak_rate_status": "tied_roundoff_compatible",
+          "flags": {
+            "flat": false,
+            "merge": true,
+            "split": true,
+            "multiple_dominant_peaks": true
+          },
+          "global_peak_region": "ambient",
+          "levels": [
+            {
+              "level": 9.233057189415739,
+              "level_fraction": 0.25,
+              "peak_rate": 87.36461451285662,
+              "level_rate": 21.841153628214155,
+              "filled": false,
+              "empty": false,
+              "component_count": 4,
+              "wrapped": true,
+              "backward": 7.229852084646662,
+              "forward": 0.7701479153533435,
+              "velocity_backward": {
+                "time_rate": 84.26653015629084,
+                "space_slope": 40.46616083226947,
+                "peak": 36.932228757662955,
+                "peak_rate": 87.36461451285662,
+                "level_fraction": 0.25,
+                "level_rate": 21.841153628214155,
+                "threshold": 2.3636626404904293,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": -1.5426562649920568,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "velocity_forward": {
+                "time_rate": 84.26653015628874,
+                "space_slope": -40.466160832256385,
+                "peak": 36.932228757662955,
+                "peak_rate": 87.36461451285662,
+                "level_fraction": 0.25,
+                "level_rate": 21.841153628214155,
+                "threshold": 2.3636626404904293,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 1.5426562649925037,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "resolution_gap_backward": 3.426325356770121e-08,
+              "resolution_gap_forward": 3.4263251791344373e-08,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "continuum_optimized_peak": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.25
+            },
+            {
+              "level": 18.466114378831477,
+              "level_fraction": 0.5,
+              "peak_rate": 87.36461451285662,
+              "level_rate": 43.68230725642831,
+              "filled": false,
+              "empty": false,
+              "component_count": 3,
+              "wrapped": true,
+              "backward": 7.376093059168342,
+              "forward": 0.6239069408316542,
+              "velocity_backward": {
+                "time_rate": 141.67856622458874,
+                "space_slope": 77.16090437768825,
+                "peak": 36.932228757662955,
+                "peak_rate": 87.36461451285662,
+                "level_fraction": 0.5,
+                "level_rate": 43.68230725642831,
+                "threshold": 2.3636626404904293,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": -1.2700247587623776,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "velocity_forward": {
+                "time_rate": 141.6785662245889,
+                "space_slope": -77.16090437766309,
+                "peak": 36.932228757662955,
+                "peak_rate": 87.36461451285662,
+                "level_fraction": 0.5,
+                "level_rate": 43.68230725642831,
+                "threshold": 2.3636626404904293,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 1.2700247587627942,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "resolution_gap_backward": 1.777019065229979e-08,
+              "resolution_gap_forward": 1.777019020821058e-08,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "continuum_optimized_peak": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.5
+            },
+            {
+              "level": 27.699171568247216,
+              "level_fraction": 0.75,
+              "peak_rate": 87.36461451285662,
+              "level_rate": 65.52346088464246,
+              "filled": false,
+              "empty": false,
+              "component_count": 4,
+              "wrapped": false,
+              "backward": 0.12663452052771423,
+              "forward": 0.5069813574944244,
+              "velocity_backward": {
+                "time_rate": 53.39718944226572,
+                "space_slope": 76.6485668318223,
+                "peak": 36.932228757662955,
+                "peak_rate": 87.36461451285662,
+                "level_fraction": 0.75,
+                "level_rate": 65.52346088464246,
+                "threshold": 2.3636626404904293,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.15820610800177753,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "velocity_forward": {
+                "time_rate": 137.688835630555,
+                "space_slope": -79.56881389637306,
+                "peak": 36.932228757662955,
+                "peak_rate": 87.36461451285662,
+                "level_fraction": 0.75,
+                "level_rate": 65.52346088464246,
+                "threshold": 2.3636626404904293,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.9069555170182323,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "resolution_gap_backward": 6.7085310639924955e-09,
+              "resolution_gap_forward": 1.8590102790483343e-08,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "continuum_optimized_peak": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.75
+            }
+          ],
+          "convention": "peak = maximum current nodal sample, not a continuum-optimized peak; level = fraction * peak; unique argmax uses density_rate at that index; ties within roundoff with compatible rates use that same rate; incompatible tied rates stay ambiguous; velocity = (fraction * peak_rate - rho_t) / rho_x; a shallow slope is not divided; Fourier interpolant; zero-Nyquist derivative",
+          "continuum_optimized_peak": false,
+          "contour_certified": false,
+          "child_peak_replaced_global": false
+        },
+        "ledgers": {
+          "child": {
+            "interval": [
+              3.5,
+              4.5
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "reynolds": 0.0,
+            "fixed_boundary_flux": -13.842869035906691,
+            "pressure": 232.82020276534425,
+            "lapse": 6.134989332298023,
+            "pointwise_projection_defect": -4.96137202006976e-06,
+            "endpoint_identity_gap": 5.861977570020827e-14,
+            "finite_projection_defect": -4.9613719614499844e-06,
+            "slope_integral": 225.11231810036358,
+            "rate": 225.11231810036364,
+            "leibniz_from_slope": 225.11231810036358,
+            "closure_residual": 5.684341886080802e-14,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "inner": {
+            "reynolds": 0.0,
+            "fixed_boundary_flux": -92.5623695941298,
+            "pressure": 63.063187993277,
+            "lapse": 12.704105989383264,
+            "pointwise_projection_defect": -1.9366079513415845e-07,
+            "endpoint_identity_gap": 4.263256414560601e-14,
+            "finite_projection_defect": -1.936607525015943e-07,
+            "slope_integral": -16.795075805130352,
+            "rate": -16.7950758051303,
+            "leibniz_from_slope": -16.795075805130352,
+            "closure_residual": 5.3290705182007514e-14,
+            "pieces": [
+              [
+                2.8,
+                3.5
+              ],
+              [
+                4.5,
+                5.2
+              ]
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "parent": {
+            "reynolds": 0.0,
+            "fixed_boundary_flux": 60.12699600714663,
+            "pressure": 611.3742218594123,
+            "lapse": 177.14428099812378,
+            "pointwise_projection_defect": 6.807335304608134e-06,
+            "endpoint_identity_gap": -2.5224267119483557e-13,
+            "finite_projection_defect": 6.807335052365463e-06,
+            "slope_integral": 848.6455056720179,
+            "rate": 848.6455056720176,
+            "leibniz_from_slope": 848.6455056720179,
+            "closure_residual": -2.8421709430404007e-13,
+            "pieces": [
+              [
+                1.0,
+                2.8
+              ],
+              [
+                5.2,
+                7.0
+              ]
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "ambient": {
+            "reynolds": 0.0,
+            "fixed_boundary_flux": 46.27824262288988,
+            "pressure": 861.1351684935888,
+            "lapse": -31.414523613630866,
+            "pointwise_projection_defect": -1.1269455040179898e-06,
+            "endpoint_identity_gap": 2.0250467969162855e-13,
+            "finite_projection_defect": -1.12694530151331e-06,
+            "slope_integral": 875.9988863759027,
+            "rate": 875.9988863759025,
+            "leibniz_from_slope": 875.9988863759027,
+            "closure_residual": -5.684341886080802e-14,
+            "pieces": [
+              [
+                0.0,
+                1.0
+              ],
+              [
+                7.0,
+                8.0
+              ]
+            ],
+            "wrapped": true,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "interval": [
+              7.0,
+              1.0
+            ],
+            "status": "measured"
+          }
+        },
+        "channels": {
+          "probability": {
+            "child": 0.07116325100496151,
+            "inner": 0.0955707487886091,
+            "parent": 0.21156793925916612,
+            "ambient": 0.08719584735575811,
+            "total": 0.4654977864084948
+          },
+          "normal_energy_rate": {
+            "child": 225.11231810036364,
+            "inner": -16.7950758051303,
+            "parent": 848.6455056720176,
+            "ambient": 875.9988863759025
+          },
+          "fixed_boundary_flux": {
+            "child": -13.842869035906691,
+            "inner": -92.5623695941298,
+            "parent": 60.12699600714663,
+            "ambient": 46.27824262288988
+          },
+          "pressure": {
+            "child": 232.82020276534425,
+            "inner": 63.063187993277,
+            "parent": 611.3742218594123,
+            "ambient": 861.1351684935888
+          },
+          "lapse": {
+            "child": 6.134989332298023,
+            "inner": 12.704105989383264,
+            "parent": 177.14428099812378,
+            "ambient": -31.414523613630866
+          },
+          "finite_projection_defect": {
+            "child": -4.9613719614499844e-06,
+            "inner": -1.936607525015943e-07,
+            "parent": 6.807335052365463e-06,
+            "ambient": -1.12694530151331e-06
+          },
+          "pointwise_projection_defect": {
+            "child": -4.96137202006976e-06,
+            "inner": -1.9366079513415845e-07,
+            "parent": 6.807335304608134e-06,
+            "ambient": -1.1269455040179898e-06
+          },
+          "flux_projection_shift": {
+            "child": 0.0,
+            "inner": 0.0,
+            "parent": 0.0,
+            "ambient": 0.0
+          },
+          "flux_projection_proper": {
+            "child": 1.1686578293780492e-15,
+            "inner": -1.6653345369377348e-16,
+            "parent": 7.216449660063518e-16,
+            "ambient": -8.743006318923108e-16
+          },
+          "flux_projection_shift_pressure": {
+            "child": 0.0,
+            "inner": 0.0,
+            "parent": 0.0,
+            "ambient": 0.0
+          },
+          "proper_clock_rates": [
+            0.001782206543906431,
+            0.0064153229160539725,
+            0.007395531754887235,
+            0.007329657728729679,
+            0.0061260753597667875,
+            0.00732965772872965,
+            0.007395531754887125,
+            0.0064153229160540505,
+            0.001782206543906407
+          ],
+          "cut_proper_clock_rates": [
+            0.001782206543906431,
+            0.006415322916053973,
+            0.00732965772872968,
+            0.007329657728729652,
+            0.0064153229160540505,
+            0.0017822065439064062
+          ],
+          "null_coordinate_speed": [
+            -1.0,
+            1.0
+          ],
+          "piston_work_included": false,
+          "dx_divisions": 1
+        },
+        "metric": {
+          "model": "leading_Einstein_EFT_diagnostic",
+          "chi_rate_used": false,
+          "chi_substituted_for_curvature": false,
+          "R": {
+            "child": {
+              "min": -1508.6010491962656,
+              "max": 1537.5782024778287,
+              "max_abs": 1537.5782024778287
+            },
+            "inner": {
+              "min": -2236.861165319721,
+              "max": 2865.309218003261,
+              "max_abs": 2865.309218003261
+            },
+            "parent": {
+              "min": -13477.413104546826,
+              "max": 13310.491834023349,
+              "max_abs": 13477.413104546826
+            },
+            "ambient": {
+              "min": -31131.56697584407,
+              "max": 31890.53466948014,
+              "max_abs": 31890.53466948014
+            }
+          },
+          "W": {
+            "child": {
+              "min": 6985.692670494963,
+              "max": 3584408.1656796993,
+              "max_abs": 3584408.1656796993
+            },
+            "inner": {
+              "min": 623.4063232354398,
+              "max": 2831774.8177504246,
+              "max_abs": 2831774.8177504246
+            },
+            "parent": {
+              "min": 1193.1327804525847,
+              "max": 63651625.96105069,
+              "max_abs": 63651625.96105069
+            },
+            "ambient": {
+              "min": 144269.0981883494,
+              "max": 1358361032.015435,
+              "max_abs": 1358361032.015435
+            }
+          },
+          "tides": {
+            "R_0101": {
+              "child": {
+                "min": -593.6639156202838,
+                "max": 960.2668754678905,
+                "max_abs": 960.2668754678905
+              },
+              "inner": {
+                "min": -1353.570685701174,
+                "max": 1226.6122784759903,
+                "max_abs": 1353.570685701174
+              },
+              "parent": {
+                "min": -6788.352766806421,
+                "max": 6846.593351030929,
+                "max_abs": 6846.593351030929
+              },
+              "ambient": {
+                "min": -13651.76693564106,
+                "max": 20953.99336077035,
+                "max_abs": 20953.99336077035
+              }
+            },
+            "R_0202": {
+              "child": {
+                "min": -19002.340046040885,
+                "max": -2189.5108977339432,
+                "max_abs": 19002.340046040885
+              },
+              "inner": {
+                "min": -8526.17592427985,
+                "max": -1056.137453752708,
+                "max_abs": 8526.17592427985
+              },
+              "parent": {
+                "min": -29580.083128719725,
+                "max": -9050.862538731213,
+                "max_abs": 29580.083128719725
+              },
+              "ambient": {
+                "min": -209411.42195692577,
+                "max": -7141.539670818842,
+                "max_abs": 209411.42195692577
+              }
+            },
+            "R4": {
+              "child": {
+                "min": -1508.6010491962656,
+                "max": 1537.5782024778287,
+                "max_abs": 1537.5782024778287
+              },
+              "inner": {
+                "min": -2236.861165319721,
+                "max": 2865.309218003261,
+                "max_abs": 2865.309218003261
+              },
+              "parent": {
+                "min": -13477.413104546826,
+                "max": 13310.491834023349,
+                "max_abs": 13477.413104546826
+              },
+              "ambient": {
+                "min": -31131.56697584407,
+                "max": 31890.53466948014,
+                "max_abs": 31890.53466948014
+              }
+            },
+            "owned_W": {
+              "child": {
+                "min": 6985.692670494963,
+                "max": 3584408.1656796993,
+                "max_abs": 3584408.1656796993
+              },
+              "inner": {
+                "min": 623.4063232354398,
+                "max": 2831774.8177504246,
+                "max_abs": 2831774.8177504246
+              },
+              "parent": {
+                "min": 1193.1327804525847,
+                "max": 63651625.96105069,
+                "max_abs": 63651625.96105069
+              },
+              "ambient": {
+                "min": 144269.0981883494,
+                "max": 1358361032.015435,
+                "max_abs": 1358361032.015435
+              }
+            }
+          },
+          "base": {
+            "Ricci2": {
+              "child": {
+                "min": 22189847.128187463,
+                "max": 2847794134.691079,
+                "max_abs": 2847794134.691079
+              },
+              "inner": {
+                "min": -16217649.95472593,
+                "max": 9772444.480861403,
+                "max_abs": 16217649.95472593
+              },
+              "parent": {
+                "min": -75873356.13805023,
+                "max": 165603689.4710098,
+                "max_abs": 165603689.4710098
+              },
+              "ambient": {
+                "min": 80877674.41731513,
+                "max": 342233596205.9091,
+                "max_abs": 342233596205.9091
+              }
+            },
+            "K": {
+              "child": {
+                "min": 44581346.93007021,
+                "max": 5694807206.165251,
+                "max_abs": 5694807206.165251
+              },
+              "inner": {
+                "min": -31646069.77208783,
+                "max": 19463540.901513908,
+                "max_abs": 31646069.77208783
+              },
+              "parent": {
+                "min": -150566078.00641552,
+                "max": 335004411.91745806,
+                "max_abs": 335004411.91745806
+              },
+              "ambient": {
+                "min": 160144885.31485474,
+                "max": 685502495289.7098,
+                "max_abs": 685502495289.7098
+              }
+            },
+            "normal_tidal_radial": {
+              "child": {
+                "min": -593.6639156202584,
+                "max": 960.2668754679495,
+                "max_abs": 960.2668754679495
+              },
+              "inner": {
+                "min": -1353.5706857012087,
+                "max": 1226.6122784760025,
+                "max_abs": 1353.5706857012087
+              },
+              "parent": {
+                "min": -6788.352766806992,
+                "max": 6846.593351031154,
+                "max_abs": 6846.593351031154
+              },
+              "ambient": {
+                "min": -13651.766935643458,
+                "max": 20953.99336076987,
+                "max_abs": 20953.99336076987
+              }
+            },
+            "normal_tidal_angular": {
+              "child": {
+                "min": -19002.340046040877,
+                "max": -2189.5108977339446,
+                "max_abs": 19002.340046040877
+              },
+              "inner": {
+                "min": -8526.175924279847,
+                "max": -1056.1374537527083,
+                "max_abs": 8526.175924279847
+              },
+              "parent": {
+                "min": -29580.083128719736,
+                "max": -9050.862538731213,
+                "max_abs": 29580.083128719736
+              },
+              "ambient": {
+                "min": -209411.42195692577,
+                "max": -7141.539670818838,
+                "max_abs": 209411.42195692577
+              }
+            }
+          }
+        },
+        "null_crossings": {
+          "coordinate_speed": [
+            -1.0,
+            1.0
+          ],
+          "coordinate_speed_abs": 1.0,
+          "beta": 0.0,
+          "chart": "conformal N=rQ, dx/dt=\u00b11",
+          "crossing_time_one_side": {
+            "child": 1.0,
+            "inner": 0.7,
+            "parent": 1.8,
+            "ambient": 1.0
+          },
+          "tracks": [
+            {
+              "signed_distance": -3.0,
+              "origin": 1.0,
+              "coordinate_speed": -1.0,
+              "coordinate": 6.75,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -3.0,
+              "origin": 1.0,
+              "coordinate_speed": 1.0,
+              "coordinate": 3.25,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -1.2,
+              "origin": 2.8,
+              "coordinate_speed": -1.0,
+              "coordinate": 0.5499999999999998,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -1.2,
+              "origin": 2.8,
+              "coordinate_speed": 1.0,
+              "coordinate": 5.05,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -0.5,
+              "origin": 3.5,
+              "coordinate_speed": -1.0,
+              "coordinate": 1.25,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -0.5,
+              "origin": 3.5,
+              "coordinate_speed": 1.0,
+              "coordinate": 5.75,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 0.5,
+              "origin": 4.5,
+              "coordinate_speed": -1.0,
+              "coordinate": 2.25,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 0.5,
+              "origin": 4.5,
+              "coordinate_speed": 1.0,
+              "coordinate": 6.75,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 1.2,
+              "origin": 5.2,
+              "coordinate_speed": -1.0,
+              "coordinate": 2.95,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 1.2,
+              "origin": 5.2,
+              "coordinate_speed": 1.0,
+              "coordinate": 7.45,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 3.0,
+              "origin": 7.0,
+              "coordinate_speed": -1.0,
+              "coordinate": 4.75,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 3.0,
+              "origin": 7.0,
+              "coordinate_speed": 1.0,
+              "coordinate": 1.25,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            }
+          ],
+          "ambiguities": [],
+          "proper_clocks_integrated": false,
+          "dispersal_time_asserted": false,
+          "packet_width_used_as_boundary": false
+        },
+        "proper_clocks": {
+          "locations": [
+            1.0,
+            2.8,
+            3.0,
+            3.5,
+            4.0,
+            4.5,
+            5.0,
+            5.2,
+            7.0
+          ],
+          "rates": [
+            0.001782206543906431,
+            0.0064153229160539725,
+            0.007395531754887235,
+            0.007329657728729679,
+            0.0061260753597667875,
+            0.00732965772872965,
+            0.007395531754887125,
+            0.0064153229160540505,
+            0.001782206543906407
+          ],
+          "cut_locations": [
+            1.0,
+            2.8,
+            3.5,
+            4.5,
+            5.2,
+            7.0
+          ],
+          "cut_rates": [
+            0.001782206543906431,
+            0.006415322916053973,
+            0.00732965772872968,
+            0.007329657728729652,
+            0.0064153229160540505,
+            0.0017822065439064062
+          ],
+          "definition": "d\u03c4/dT = rQ",
+          "integrated": false
+        },
+        "rates": {
+          "Q_dot_max": 0.048731826810461745,
+          "r_dot_max": 0.13350002920450194,
+          "state_flow": "prolong(decode(leading_rate))",
+          "unprojected_rate_is_state_flow": false,
+          "geometry_jets_zero": false
+        },
+        "rate_projection": {
+          "state_flow": "prolong(decode(leading_rate))",
+          "state_flow_version": "nsc-discovery-parent-observer-projected-flow-v2",
+          "unprojected_rate_is_state_flow": false,
+          "unprojected_rates_present": true,
+          "geometry_projection_gap_max": 1.0776831071792685,
+          "field_projection_gap_max": 6.026593628966425e-08,
+          "full_projection_gap_max": 1.0776831071792685,
+          "Q": 7.303679324085002e-05,
+          "r": 4.131470716910168e-05,
+          "p_Q": 1.0776831071792685,
+          "p_r": 0.5529339148172028,
+          "phi0": 6.026593628966425e-08,
+          "phi1": 6.026593426528814e-08
+        },
+        "renewal_asserted": false,
+        "continuum_certified": false,
+        "contour_certified": false,
+        "independent_energy_parcel": false,
+        "column_ancestry_used_as_energy": false,
+        "piston_work_included": false,
+        "physical_wall": false,
+        "held_population_measured": false,
+        "constraint_preservation_claim": false
+      }
+    },
+    "tagged_column_probability": {
+      "column_indices": [
+        0,
+        1
+      ],
+      "weights": [
+        0.3062058612874088,
+        0.1592919251212772
+      ],
+      "child": [
+        0.01088492248058857,
+        0.060278328524372954
+      ],
+      "parent": [
+        0.2959553360272654,
+        0.08234660302547131
+      ],
+      "protected_collar": [
+        0.05506189674727905,
+        0.07631616347875506
+      ],
+      "parent_annulus": [
+        0.20769138131808315,
+        0.003876557941082952
+      ],
+      "ambient_total": [
+        0.30620586128728616,
+        0.15929192512120866
+      ],
+      "tag": "original_source_column_order; evolved Phi with original occupations",
+      "observer_rebased": false,
+      "independent_particle_or_energy_claim": false
+    },
+    "leading_observe_included": false,
+    "sample_kind": "station"
+  },
+  "channel_time": 2.25,
+  "normal_clocks_initial": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "numerical_binding": {
+    "mode": "rank_general_physically_scaled_local_reaction",
+    "rates": "nsc_discovery_leading_einstein.rates",
+    "jvp": "nsc_discovery_leading_einstein.jvp",
+    "integrator": "nsc_discovery_leading_einstein.rk4_step",
+    "step_restriction": "nsc_discovery_parent_step_control.step_restriction",
+    "raw_coordinate_norm_used": false,
+    "fft": "native_one_thread",
+    "workers_max": 6,
+    "forecast_factor": 1.5,
+    "memory_limit_bytes": 8589934592,
+    "chunk_limit_bytes": 67108864,
+    "cpu_budget_seconds": 21600.0,
+    "stations": [
+      0.25,
+      0.5,
+      1.0,
+      1.25,
+      1.5,
+      2.25,
+      3.0
+    ],
+    "control_mode": "coupled",
+    "step_cap": 0.001,
+    "frozen_geometry_is_prescribed_control": false,
+    "source_recomputed_on_every_rk4_stage": true,
+    "projector_source_reset": false
+  },
+  "producing_commit": "cc238577aa45739d61d34de92c53e0bd2d02432b",
+  "source_hashes": {
+    "lab/src/recursive_horizons/nsc_discovery_parent_episode.py": "02a68101e2d9f83ddaa09e80f55855cd727708638cae18ba9d47a110eaa729e3",
+    "lab/src/recursive_horizons/nsc_discovery_parent.py": "f25506b117b2aa1777c80c1d463c4e3642fbe2bcfe499fda1e1ddebcab023b4c",
+    "lab/src/recursive_horizons/nsc_discovery_parent_step_control.py": "a5133d069f67104fb423f6f5422c4beed2aa97a68c68abb58638c7cc31e59d8f",
+    "lab/scripts/derive_nsc_discovery_parent_episode.py": "418df9971ab0ac3480bec1328689d13bd8291331d489328189d7b83382a52878",
+    "lab/tests/test_nsc_discovery_parent_episode.py": "ed219e5d9a79d28293a70117e9ec67f31cbbf725f5217d48df1abc9470f9a98a",
+    "lab/docs/nsc-discovery-parent-episode.md": "fab0802957354f83c72e7516c1b3b101c015130b4d355d4866136017d5d8f620",
+    "lab/src/recursive_horizons/nsc_discovery_leading_einstein.py": "dbcdc6992e483d6745002ef2549f7c88c95aba3878cd3766ba229ebd16d3389e",
+    "lab/src/recursive_horizons/nsc_discovery_leading_step_control.py": "aa4756e1bb60cb9375c642efd896e5d568b64c7c004d36ab1b6b8bf81d9293ef",
+    "lab/src/recursive_horizons/nsc_discovery_backend.py": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa",
+    "lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "lab/src/recursive_horizons/nsc_regional_energy_exchange.py": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7",
+    "lab/src/recursive_horizons/nsc_discovery_extent.py": "0b9adea69e33f4e1683d50f44d6961f76ab71cea4533d64c025d5c8aa7080170",
+    "lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d"
+  },
+  "input_hashes": {
+    "results/development/nsc-discovery-parent-v1/strong-balanced-v1/minus/parent.json": "56cfde3acbe7bba4dea9d647e52a4d2837f429f8ae707f070a24404be09affe4",
+    "results/development/nsc-discovery-parent-v1/strong-balanced-v1/minus/parent.npz": "3119b7fddd6dc77a4871d9b9bced31f1279f2417c73fbf771dd8e92b65ad0b0c",
+    "results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus/parent.json": "90aa6d4759416a5602f479fd93e6e320b5e9f19ac803576c6ecc7c3a076987a6",
+    "results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus/parent.npz": "911b6be21a4b0e505788b9f6a34743a881f4d40465515843580d71ee4f86daab",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.json": "75068cd6ab96b0cec5cd78e1c7b626afe315bff7cf84f459033c8d7cd6dfdc9e",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.npz": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.json": "88a69d26d2a4db1d6f72603bf8ea8edb0807ad2463e1c0b6ffa5818dc3d70fcd",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.npz": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/manifest.json": "4b94e419e7d6be0bddf80b56fc21d4d9eaa34bef0eb0d5f634c6687f83cbfbe8",
+    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/cpu-ledger.json": "60f5eebd27ed0499d370aa9443e8d495a03702d01d18ec2a9d4fa0d6f027718f"
+  },
+  "projector_source_reset": false,
+  "source_reset": false,
+  "initial_state_called": false,
+  "evolved": true,
+  "verify_external_pins": false,
+  "stability_certificate": false,
+  "held_out_nonlinear_measurement_before_prediction": false,
+  "source_pins": {
+    "source_columns_sha256": "4f32dd8c05524d32aadcc08298e7e52761cd6feaab4d929d205e190ace6c2799",
+    "observer_columns_sha256": "dcb02e0b0d0c8af191a1226e9657c1f6519df884843fb9ee5481cc38e004917c",
+    "W_sha256": "502af4514178d50ef9ccfdef9374e84f53597c29aca60c8eb7028374a89c90ff",
+    "weights_sha256": "a867dd5d558aefda8e630992830cea3872f15a63dac25bf64eccdf93dbabe698",
+    "phi_sha256": "4f32dd8c05524d32aadcc08298e7e52761cd6feaab4d929d205e190ace6c2799",
+    "state_field_sha256": [
+      "ed0b8d864e09d38fc2d3cb684151fa9c0398302f11ec1138c0296588b949b2d2",
+      "581fe4d630de1fa2bfc0c0a8d5786715b2a3668e7ee9eebee9b872789fe154d2",
+      "180a12da5a6935ec88a0a5ad7f3e210ba91b64e79c197ee5fde08f0714350e68",
+      "aeeb42153ab360f715b1bc8e957c727608bd55f295e5891d0e6e34022d9280f7",
+      "500238accd3a2a14bfdac43059bfce9f4ff0d02164d8767c2ece5f961a1b2c11",
+      "c5a0ce19b08f54d1ee43b5e4a82a14da25976af8ab169a87002d3bc3145fcb3a"
+    ],
+    "object_alias": false
+  },
+  "parent_record_schema": "NSC-DISCOVERY-PARENT-v1",
+  "parent_sign": 1,
+  "parent_population": 1,
+  "arrays_sha256": "c896d86b3e90c7cc375b9d9ab42cef89a1a73aa13b90056360992e12bcc83b10",
+  "immutable": true,
+  "array_sha256": {
+    "Q": "96dad7003404b9f2718dd3693d96c339a16c0d76a4b9d4d1c83eca3b066e5014",
+    "r": "be84aeab4e7b905e6491a1f9f66b3f9ecb0d3857e80c5985d48560c80dbd9db3",
+    "pi_Q": "56b472bcad7119161bb35979d86653e0ccb84793e517c935030d165e09f2e73a",
+    "pi_r": "c9fc9ead5277d5db255d2f5c4140edd4823c07baf44af6ddfb9045c89c960a60",
+    "source_weights": "a867dd5d558aefda8e630992830cea3872f15a63dac25bf64eccdf93dbabe698",
+    "clock_rates": "ce1c0bfb7be19e748d846535ec95dacb8ff3d649798299f308f4db68b460ed0e",
+    "normal_clocks": "d1b5db0f0ba41908edd55ba03ca887cf7ad851abd1734969523e55bc8812d96a",
+    "W": "502af4514178d50ef9ccfdef9374e84f53597c29aca60c8eb7028374a89c90ff",
+    "phi0": "e60cef9c682b19ee8421483937a5144b6eaf8d418ea21a9c3355e9ca1dd81c0b",
+    "phi1": "12c3bb711837c8b282b62b931950a5760f350453a4f12b7f5ad036d62c32e936",
+    "source_phi0": "500238accd3a2a14bfdac43059bfce9f4ff0d02164d8767c2ece5f961a1b2c11",
+    "source_phi1": "c5a0ce19b08f54d1ee43b5e4a82a14da25976af8ab169a87002d3bc3145fcb3a",
+    "observer_columns": "dcb02e0b0d0c8af191a1226e9657c1f6519df884843fb9ee5481cc38e004917c"
+  },
+  "stations_reached": [
+    1.25,
+    1.5,
+    2.25
+  ],
+  "stop": null,
+  "source_pins_before": {
+    "source_columns_sha256": "4f32dd8c05524d32aadcc08298e7e52761cd6feaab4d929d205e190ace6c2799",
+    "observer_columns_sha256": "dcb02e0b0d0c8af191a1226e9657c1f6519df884843fb9ee5481cc38e004917c",
+    "W_sha256": "502af4514178d50ef9ccfdef9374e84f53597c29aca60c8eb7028374a89c90ff",
+    "weights_sha256": "a867dd5d558aefda8e630992830cea3872f15a63dac25bf64eccdf93dbabe698",
+    "phi_sha256": "efcb7b5fbe98a383ffa0a921ec148ae1f5c8ae82a83939bfcae8b0c5de0ad7b6",
+    "state_field_sha256": [
+      "43cf26e1d3c44aedbd54f76faa4c284e18a0efa12a7ea66b87a10fe252a515bb",
+      "87fef01738a8e148f889281809a8a1e79a609abd9cde169332767463e1f6a1a7",
+      "828d9ddce16eb7f14ca60aed66d4d22c93026b211f416eade94d301618a3bc25",
+      "56a9d64a0e984a1d46ba03fc1c4e9659a2d9c3d21badc3eba9db27e31d4a5423",
+      "30a1f9e75b97e5b84a700d07c92d70350ea477a28aea62dd5d916cffe6a45e0a",
+      "d57b67b87e39a457e332be7990cb7355825f87c1b0691539a447c4ecb7432bc1"
+    ],
+    "object_alias": false
+  },
+  "source_pins_after": {
+    "source_columns_sha256": "4f32dd8c05524d32aadcc08298e7e52761cd6feaab4d929d205e190ace6c2799",
+    "observer_columns_sha256": "dcb02e0b0d0c8af191a1226e9657c1f6519df884843fb9ee5481cc38e004917c",
+    "W_sha256": "502af4514178d50ef9ccfdef9374e84f53597c29aca60c8eb7028374a89c90ff",
+    "weights_sha256": "a867dd5d558aefda8e630992830cea3872f15a63dac25bf64eccdf93dbabe698",
+    "phi_sha256": "4692f31152d766df8ba8dcaf177060aeb9e8f6a7ae0cd0387a39343ce2574a88",
+    "state_field_sha256": [
+      "96dad7003404b9f2718dd3693d96c339a16c0d76a4b9d4d1c83eca3b066e5014",
+      "be84aeab4e7b905e6491a1f9f66b3f9ecb0d3857e80c5985d48560c80dbd9db3",
+      "56b472bcad7119161bb35979d86653e0ccb84793e517c935030d165e09f2e73a",
+      "c9fc9ead5277d5db255d2f5c4140edd4823c07baf44af6ddfb9045c89c960a60",
+      "e60cef9c682b19ee8421483937a5144b6eaf8d418ea21a9c3355e9ca1dd81c0b",
+      "12c3bb711837c8b282b62b931950a5760f350453a4f12b7f5ad036d62c32e936"
+    ],
+    "object_alias": false
+  },
+  "observation": {
+    "time": 1.0,
+    "control_mode": "coupled",
+    "model": "leading_Einstein_EFT_diagnostic",
+    "column_rank": 2,
+    "child_proper_length": 0.31386256309110416,
+    "child_probability": 0.15183052664573843,
+    "parent_probability": 0.4282691383978084,
+    "coordinate_fieldwork": -0.6604740920892007,
+    "pressure_work": 24.50112313962634,
+    "lapse_work": 0.8377779022411002,
+    "boundary_child": -1.416363431816523,
+    "boundary_parent": -3.209927093092247,
+    "normal_clock_rates": [
+      0.17974628330156484,
+      0.1563044040926116,
+      0.17376268555789134,
+      0.24162452399296364,
+      0.36606733055889384,
+      0.24162452399296375,
+      0.17376268555789076,
+      0.1563044040926113,
+      0.17974628330156464
+    ],
+    "energy": {
+      "gravity": -1.9298307464233448,
+      "field": 1.9298307464267443,
+      "total": 3.3995029014022293e-12
+    },
+    "constraints": {
+      "raw_C_max": 0.031087262851077657,
+      "h_c_max": 0.014120892187871393,
+      "D_max": 0.0030933939346790024,
+      "projected_h_c_max": 0.0056039025551936706,
+      "held_out_h_c_max": 0.005018985449296038,
+      "source_Q_rho_max": 0.8668086855111132,
+      "source_current_max": 0.3909600545179533,
+      "mean_current": 2.0816681711721685e-17,
+      "observable_error_bound": null,
+      "physical_instability_inferred": false
+    },
+    "tides": {
+      "R_0101": {
+        "min": -8.583529506389095,
+        "max": -2.9815086552584025,
+        "max_abs": 8.583529506389095
+      },
+      "R_0202": {
+        "min": -15.182233780576752,
+        "max": 1.2309319907320244,
+        "max_abs": 15.182233780576752
+      },
+      "R4": {
+        "min": -4.9045158232111055,
+        "max": 4.830255632525905,
+        "max_abs": 4.9045158232111055
+      },
+      "owned_W": {
+        "min": 9.49282111628687,
+        "max": 104.75953476579558,
+        "max_abs": 104.75953476579558
+      }
+    },
+    "curvature": {
+      "Ricci2": {
+        "min": 28.722560499268848,
+        "max": 1308.5970420767874,
+        "max_abs": 1308.5970420767874
+      },
+      "K": {
+        "min": 78.81068345176773,
+        "max": 2684.5819735205478,
+        "max_abs": 2684.5819735205478
+      }
+    },
+    "leading_observe_included": false,
+    "covariance_rank": 2,
+    "common_k": 0.45388971484879426,
+    "actual_kinetic_anchor_mean": 0.45151095196451263,
+    "kinetic_anchor_equals_declared_offset_claim": false,
+    "source_column_Gram_distance_from_identity": 0.08577499209677145,
+    "source_current": {
+      "min": -0.3909600545179495,
+      "max": 0.3909600545179533,
+      "max_abs": 0.3909600545179533
+    },
+    "source_density": {
+      "min": -2.077899934453341e-06,
+      "max": 2.147471354693996,
+      "max_abs": 2.147471354693996
+    },
+    "source_current_mean": 2.0816681711721685e-17,
+    "parent_annulus_probability": 0.12707595060201682,
+    "protected_collar": [
+      3.0,
+      5.0
+    ],
+    "nonlinear_measurement_before_prediction": false,
+    "population_gradient_held_out": null,
+    "dense_propagator_stored": false,
+    "tagged_column_probability": {
+      "column_indices": [
+        0,
+        1
+      ],
+      "weights": [
+        0.3062058612874088,
+        0.1592919251212772
+      ],
+      "child": [
+        0.15182727816019748,
+        3.2484855409536045e-06
+      ],
+      "parent": [
+        0.30492717774139694,
+        0.12334196065641143
+      ],
+      "protected_collar": [
+        0.24269936071779705,
+        0.018075554031777803
+      ],
+      "parent_annulus": [
+        0.04052454755391367,
+        0.08655140304810317
+      ],
+      "ambient_total": [
+        0.3062058612873292,
+        0.1592919251212383
+      ],
+      "tag": "original_source_column_order; evolved Phi with original occupations",
+      "observer_rebased": false,
+      "independent_particle_or_energy_claim": false
+    },
+    "stability_certificate": false,
+    "external_observer": {
+      "available": true,
+      "result": {
+        "api_version": "nsc-discovery-parent-observer-v1",
+        "state_flow": "prolong(decode(leading_rate))",
+        "state_flow_version": "nsc-discovery-parent-observer-projected-flow-v2",
+        "time": 1.0,
+        "control_mode": "coupled",
+        "geometry_rate_mode": "coupled",
+        "source_free": false,
+        "source_free_label_preserved": false,
+        "model": "leading_Einstein_EFT_diagnostic",
+        "passed_bundle": false,
+        "chi_rate_used": false,
+        "state_token_unchanged": true,
+        "rank": 2,
+        "weights": [
+          0.3062058612874088,
+          0.1592919251212772
+        ],
+        "reference_column_shape": [
+          256,
+          2
+        ],
+        "source_column_shape": [
+          256,
+          2
+        ],
+        "source_metadata": {
+          "alpha": 0.5,
+          "base_CAR_eigenvalues": [
+            0.0009060316704358668,
+            0.0017822186307291155
+          ],
+          "base_c_equals_wZ": true,
+          "base_child_normalization_weight": 0.0013441251505824914,
+          "base_trace": 0.002688250301164983,
+          "base_weights": [
+            0.0017683392335225072,
+            0.0009199110676424754
+          ],
+          "child_weight": 0.3062058612874088,
+          "delta_star": 0.5,
+          "effective_shape_weight": 0.2251081761505038,
+          "endpoint_imbalances": [
+            0.8278551109468958,
+            -0.9999999999993454
+          ],
+          "imbalance": -7.891672326595488e-17,
+          "imbalance_cap": 0.5,
+          "lowdin_applied": false,
+          "normalization_identity": "raw shape at s*w maps to normalized child coefficient (s*w)*ZC; population mixture may change individual coefficients",
+          "old_shape_weight": 0.0013,
+          "population": 1,
+          "population_intervention_changes_base_weights": true,
+          "population_name": "balanced",
+          "rank": 2,
+          "reversed_probabilities_substituted": false,
+          "scaled_CAR_eigenvalues": [
+            0.15688856682031713,
+            0.30860921958836873
+          ],
+          "scaled_child_normalization_weight": 0.23274889320434303,
+          "scaled_trace": 0.465497786408686,
+          "scaled_weights": [
+            0.3062058612874088,
+            0.1592919251212772
+          ],
+          "source_covariance_changed": true,
+          "source_strength": 173.16013550038755,
+          "source_weight_clipping_applied": false,
+          "target_imbalance": 0.0,
+          "trace": 0.465497786408686,
+          "trace_rule": "source_strength * 2*w0*projected_raw_child_norm_squared",
+          "uniform_weights_substituted": false,
+          "declared_offset_k": 0.45388971484879426,
+          "declared_offset_key": "parent_k"
+        },
+        "geometry_metadata": {},
+        "holder_intervals": {
+          "declared_child_interval": [
+            3.5,
+            4.5
+          ],
+          "declared_parent_interval": [
+            1.0,
+            7.0
+          ],
+          "signed_child_interval": [
+            3.5,
+            4.5
+          ],
+          "signed_parent_interval": [
+            1.0,
+            7.0
+          ],
+          "matches_signed_distance": true,
+          "declared_intervals_used_as_measurement_cuts": false
+        },
+        "partition": {
+          "centre": 4.0,
+          "length": 8.0,
+          "closure": "child |s|<=0.5; inner 0.5<|s|<=1.2; parent annulus 1.2<|s|<=3; ambient 3<|s|<=L/2; protected collar |s|<=1 is not a separate window",
+          "protected_collar_radius": 1.0,
+          "protected_collar_accounted_separately": false,
+          "accounted_parent_is_annulus": true,
+          "overlapping_parent_sum_used": false,
+          "pieces": {
+            "child": {
+              "wrapped": false,
+              "intervals": [
+                [
+                  3.5,
+                  4.5
+                ]
+              ]
+            },
+            "inner": {
+              "wrapped": false,
+              "intervals": [
+                [
+                  2.8,
+                  3.5
+                ],
+                [
+                  4.5,
+                  5.2
+                ]
+              ]
+            },
+            "parent": {
+              "wrapped": false,
+              "intervals": [
+                [
+                  1.0,
+                  2.8
+                ],
+                [
+                  5.2,
+                  7.0
+                ]
+              ]
+            },
+            "ambient": {
+              "wrapped": true,
+              "intervals": [
+                [
+                  7.0,
+                  9.0
+                ]
+              ]
+            }
+          }
+        },
+        "positive_proper_probability": true,
+        "proper_probability_nonnegative": true,
+        "matter_present": true,
+        "matter_curves": "occupied",
+        "per_proper_length_minimum": 2.788168876954379e-10,
+        "probability_total_nodal": 0.4654977864085675,
+        "child_peak": {
+          "index": 279,
+          "x": 4.359375,
+          "signed_distance": 0.359375,
+          "value": 0.4984956323041554,
+          "rate": 0.6775124357394093,
+          "rate_status": "tied_roundoff_compatible",
+          "region": "child",
+          "is_global_peak": false,
+          "replaces_global_contours": false
+        },
+        "flags": {
+          "parent_peak_dominates": false,
+          "global_peak_outside_child": true,
+          "global_peak_region": "inner",
+          "dominance_forced": false,
+          "child_peak_tracked_separately": true
+        },
+        "contours": {
+          "peak_x": 5.03125,
+          "peak_value": 0.6377081694559747,
+          "peak_index": 322,
+          "peak_rate": 2.52418132689331,
+          "peak_rate_status": "tied_roundoff_compatible",
+          "flags": {
+            "flat": false,
+            "merge": true,
+            "split": false,
+            "multiple_dominant_peaks": true
+          },
+          "global_peak_region": "inner",
+          "levels": [
+            {
+              "level": 0.1594270423639937,
+              "level_fraction": 0.25,
+              "peak_rate": 2.52418132689331,
+              "level_rate": 0.6310453317233276,
+              "filled": false,
+              "empty": false,
+              "component_count": 3,
+              "wrapped": false,
+              "backward": 2.063913860322126,
+              "forward": 5.936086139677874,
+              "velocity_backward": {
+                "time_rate": 0.4732952244458974,
+                "space_slope": 0.3384891221744855,
+                "peak": 0.6377081694559747,
+                "peak_rate": 2.52418132689331,
+                "level_fraction": 0.25,
+                "level_rate": 0.6310453317233276,
+                "threshold": 0.04081332284518238,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.46604188123987217,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "velocity_forward": {
+                "time_rate": 0.4732952244459104,
+                "space_slope": -0.33848912217447436,
+                "peak": 0.6377081694559747,
+                "peak_rate": 2.52418132689331,
+                "level_fraction": 0.25,
+                "level_rate": 0.6310453317233276,
+                "threshold": 0.04081332284518238,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": -0.4660418812398492,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "resolution_gap_backward": 4.1469938594218547e-10,
+              "resolution_gap_forward": 4.1469938594218547e-10,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "continuum_optimized_peak": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.25
+            },
+            {
+              "level": 0.3188540847279874,
+              "level_fraction": 0.5,
+              "peak_rate": 2.52418132689331,
+              "level_rate": 1.262090663446655,
+              "filled": false,
+              "empty": false,
+              "component_count": 1,
+              "wrapped": false,
+              "backward": 2.564089666097268,
+              "forward": 5.435910333902735,
+              "velocity_backward": {
+                "time_rate": 1.1999316047484931,
+                "space_slope": 0.6136038256110746,
+                "peak": 0.6377081694559747,
+                "peak_rate": 2.52418132689331,
+                "level_fraction": 0.5,
+                "level_rate": 1.262090663446655,
+                "threshold": 0.04081332284518238,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 0.10130161531548326,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "velocity_forward": {
+                "time_rate": 1.199931604748493,
+                "space_slope": -0.6136038256110595,
+                "peak": 0.6377081694559747,
+                "peak_rate": 2.52418132689331,
+                "level_fraction": 0.5,
+                "level_rate": 1.262090663446655,
+                "threshold": 0.04081332284518238,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": -0.10130161531548612,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "resolution_gap_backward": 5.654671397792299e-09,
+              "resolution_gap_forward": 5.654671397792299e-09,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "continuum_optimized_peak": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.5
+            },
+            {
+              "level": 0.47828112709198106,
+              "level_fraction": 0.75,
+              "peak_rate": 2.52418132689331,
+              "level_rate": 1.8931359951699827,
+              "filled": false,
+              "empty": false,
+              "component_count": 2,
+              "wrapped": false,
+              "backward": 4.223260124278189,
+              "forward": 5.272368618529644,
+              "velocity_backward": {
+                "time_rate": 0.5399943587178483,
+                "space_slope": 0.10949718061135047,
+                "peak": 0.6377081694559747,
+                "peak_rate": 2.52418132689331,
+                "level_fraction": 0.75,
+                "level_rate": 1.8931359951699827,
+                "threshold": 0.04081332284518238,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": 12.357776053202487,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "velocity_forward": {
+                "time_rate": 1.1777787745820711,
+                "space_slope": -1.1489596163858518,
+                "peak": 0.6377081694559747,
+                "peak_rate": 2.52418132689331,
+                "level_fraction": 0.75,
+                "level_rate": 1.8931359951699827,
+                "threshold": 0.04081332284518238,
+                "formula": "v=(level_fraction*peak_rate - rho_t)/rho_x",
+                "continuum_optimized_peak": false,
+                "physical_wall": false,
+                "status": "measured",
+                "velocity": -0.6226130234569317,
+                "division": true,
+                "reason": "nodal_peak_level_rate"
+              },
+              "resolution_gap_backward": 2.4586346114574553e-07,
+              "resolution_gap_forward": 3.32740945907517e-09,
+              "resolution_status": "compared",
+              "contour_certified": false,
+              "continuum_optimized_peak": false,
+              "physical_wall": false,
+              "kind": "measurement_gradient_cut",
+              "fraction": 0.75
+            }
+          ],
+          "convention": "peak = maximum current nodal sample, not a continuum-optimized peak; level = fraction * peak; unique argmax uses density_rate at that index; ties within roundoff with compatible rates use that same rate; incompatible tied rates stay ambiguous; velocity = (fraction * peak_rate - rho_t) / rho_x; a shallow slope is not divided; Fourier interpolant; zero-Nyquist derivative",
+          "continuum_optimized_peak": false,
+          "contour_certified": false,
+          "child_peak_replaced_global": false
+        },
+        "ledgers": {
+          "child": {
+            "interval": [
+              3.5,
+              4.5
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "reynolds": 0.0,
+            "fixed_boundary_flux": -1.416363431816523,
+            "pressure": 2.0538342302331505,
+            "lapse": 0.530222036793769,
+            "pointwise_projection_defect": -5.421158689506067e-05,
+            "endpoint_identity_gap": 1.3322676295501878e-15,
+            "finite_projection_defect": -5.42115868937284e-05,
+            "slope_integral": 1.1676386236235023,
+            "rate": 1.1676386236235028,
+            "leibniz_from_slope": 1.1676386236235023,
+            "closure_residual": 4.440892098500626e-16,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "inner": {
+            "reynolds": 0.0,
+            "fixed_boundary_flux": 3.546036789457278,
+            "pressure": 6.252613364209941,
+            "lapse": 0.1943344599171015,
+            "pointwise_projection_defect": 8.250221762922462e-05,
+            "endpoint_identity_gap": 1.9984014443252818e-15,
+            "finite_projection_defect": 8.250221763122302e-05,
+            "slope_integral": 9.993067115801951,
+            "rate": 9.993067115801951,
+            "leibniz_from_slope": 9.993067115801951,
+            "closure_residual": 0.0,
+            "pieces": [
+              [
+                2.8,
+                3.5
+              ],
+              [
+                4.5,
+                5.2
+              ]
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "parent": {
+            "reynolds": 0.0,
+            "fixed_boundary_flux": -5.339600450733003,
+            "pressure": 13.447539355084738,
+            "lapse": 0.250730569132158,
+            "pointwise_projection_defect": -2.7895941338354562e-05,
+            "endpoint_identity_gap": -7.105427357601002e-15,
+            "finite_projection_defect": -2.789594134545999e-05,
+            "slope_integral": 8.35864157754255,
+            "rate": 8.358641577542548,
+            "leibniz_from_slope": 8.35864157754255,
+            "closure_residual": -8.881784197001252e-16,
+            "pieces": [
+              [
+                1.0,
+                2.8
+              ],
+              [
+                5.2,
+                7.0
+              ]
+            ],
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "wrapped": false,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "status": "measured"
+          },
+          "ambient": {
+            "reynolds": 0.0,
+            "fixed_boundary_flux": 3.209927093092247,
+            "pressure": 2.747136190098516,
+            "lapse": -0.1375091636019276,
+            "pointwise_projection_defect": 3.272940123229267e-08,
+            "endpoint_identity_gap": 2.6645352591003757e-15,
+            "finite_projection_defect": 3.272940389682793e-08,
+            "slope_integral": 5.81955415231824,
+            "rate": 5.81955415231824,
+            "leibniz_from_slope": 5.81955415231824,
+            "closure_residual": -4.440892098500626e-16,
+            "pieces": [
+              [
+                0.0,
+                1.0
+              ],
+              [
+                7.0,
+                8.0
+              ]
+            ],
+            "wrapped": true,
+            "surface_work": 0.0,
+            "piston_work_included": false,
+            "physical_wall": false,
+            "dx_divisions": 1,
+            "kind": "measurement_cut",
+            "boundary_velocity": [
+              0.0,
+              0.0
+            ],
+            "interval": [
+              7.0,
+              1.0
+            ],
+            "status": "measured"
+          }
+        },
+        "channels": {
+          "probability": {
+            "child": 0.15183052664573843,
+            "inner": 0.14936266115005314,
+            "parent": 0.12707595060201682,
+            "ambient": 0.037228648010759105,
+            "total": 0.4654977864085675
+          },
+          "normal_energy_rate": {
+            "child": 1.1676386236235028,
+            "inner": 9.993067115801951,
+            "parent": 8.358641577542548,
+            "ambient": 5.81955415231824
+          },
+          "fixed_boundary_flux": {
+            "child": -1.416363431816523,
+            "inner": 3.546036789457278,
+            "parent": -5.339600450733003,
+            "ambient": 3.209927093092247
+          },
+          "pressure": {
+            "child": 2.0538342302331505,
+            "inner": 6.252613364209941,
+            "parent": 13.447539355084738,
+            "ambient": 2.747136190098516
+          },
+          "lapse": {
+            "child": 0.530222036793769,
+            "inner": 0.1943344599171015,
+            "parent": 0.250730569132158,
+            "ambient": -0.1375091636019276
+          },
+          "finite_projection_defect": {
+            "child": -5.42115868937284e-05,
+            "inner": 8.250221763122302e-05,
+            "parent": -2.789594134545999e-05,
+            "ambient": 3.272940389682793e-08
+          },
+          "pointwise_projection_defect": {
+            "child": -5.421158689506067e-05,
+            "inner": 8.250221762922462e-05,
+            "parent": -2.7895941338354562e-05,
+            "ambient": 3.272940123229267e-08
+          },
+          "flux_projection_shift": {
+            "child": 0.0,
+            "inner": 0.0,
+            "parent": 0.0,
+            "ambient": 0.0
+          },
+          "flux_projection_proper": {
+            "child": -7.676652407181297e-18,
+            "inner": 2.983724378680108e-16,
+            "parent": 4.163336342344337e-17,
+            "ambient": -4.996003610813204e-16
+          },
+          "flux_projection_shift_pressure": {
+            "child": 0.0,
+            "inner": 0.0,
+            "parent": 0.0,
+            "ambient": 0.0
+          },
+          "proper_clock_rates": [
+            0.17974628330156484,
+            0.1563044040926116,
+            0.17376268555789134,
+            0.24162452399296364,
+            0.36606733055889384,
+            0.24162452399296375,
+            0.17376268555789076,
+            0.1563044040926113,
+            0.17974628330156464
+          ],
+          "cut_proper_clock_rates": [
+            0.17974628330156484,
+            0.1563044040926116,
+            0.24162452399296364,
+            0.24162452399296375,
+            0.1563044040926113,
+            0.17974628330156464
+          ],
+          "null_coordinate_speed": [
+            -1.0,
+            1.0
+          ],
+          "piston_work_included": false,
+          "dx_divisions": 1
+        },
+        "metric": {
+          "model": "leading_Einstein_EFT_diagnostic",
+          "chi_rate_used": false,
+          "chi_substituted_for_curvature": false,
+          "R": {
+            "child": {
+              "min": -2.0084973972852094,
+              "max": 1.8834536431672912,
+              "max_abs": 2.0084973972852094
+            },
+            "inner": {
+              "min": -4.4498287069817115,
+              "max": 4.7599071685208525,
+              "max_abs": 4.7599071685208525
+            },
+            "parent": {
+              "min": -4.9045158232111055,
+              "max": 4.830255632525905,
+              "max_abs": 4.9045158232111055
+            },
+            "ambient": {
+              "min": -1.1549295995155129,
+              "max": 1.1573857665092113,
+              "max_abs": 1.1573857665092113
+            }
+          },
+          "W": {
+            "child": {
+              "min": 57.65232214171293,
+              "max": 104.75953476579558,
+              "max_abs": 104.75953476579558
+            },
+            "inner": {
+              "min": 11.554005969977043,
+              "max": 104.60062576854,
+              "max_abs": 104.60062576854
+            },
+            "parent": {
+              "min": 9.49282111628687,
+              "max": 87.92062904284137,
+              "max_abs": 87.92062904284137
+            },
+            "ambient": {
+              "min": 19.756088081345787,
+              "max": 35.14521525190321,
+              "max_abs": 35.14521525190321
+            }
+          },
+          "tides": {
+            "R_0101": {
+              "child": {
+                "min": -8.583529506389095,
+                "max": -6.74191605796408,
+                "max_abs": 8.583529506389095
+              },
+              "inner": {
+                "min": -8.482115608847103,
+                "max": -3.217531312992438,
+                "max_abs": 8.482115608847103
+              },
+              "parent": {
+                "min": -7.9721577970331365,
+                "max": -2.9815086552584025,
+                "max_abs": 7.9721577970331365
+              },
+              "ambient": {
+                "min": -5.450985469295191,
+                "max": -4.1977718567616975,
+                "max_abs": 5.450985469295191
+              }
+            },
+            "R_0202": {
+              "child": {
+                "min": -3.495689959214413,
+                "max": -2.0205116005793715,
+                "max_abs": 3.495689959214413
+              },
+              "inner": {
+                "min": -11.035235228490412,
+                "max": -3.4275967252439523,
+                "max_abs": 11.035235228490412
+              },
+              "parent": {
+                "min": -15.182233780576752,
+                "max": 1.2309319907320244,
+                "max_abs": 15.182233780576752
+              },
+              "ambient": {
+                "min": -6.138320412219616,
+                "max": 0.7762979926320022,
+                "max_abs": 6.138320412219616
+              }
+            },
+            "R4": {
+              "child": {
+                "min": -2.0084973972852094,
+                "max": 1.8834536431672912,
+                "max_abs": 2.0084973972852094
+              },
+              "inner": {
+                "min": -4.4498287069817115,
+                "max": 4.7599071685208525,
+                "max_abs": 4.7599071685208525
+              },
+              "parent": {
+                "min": -4.9045158232111055,
+                "max": 4.830255632525905,
+                "max_abs": 4.9045158232111055
+              },
+              "ambient": {
+                "min": -1.1549295995155129,
+                "max": 1.1573857665092113,
+                "max_abs": 1.1573857665092113
+              }
+            },
+            "owned_W": {
+              "child": {
+                "min": 57.65232214171293,
+                "max": 104.75953476579558,
+                "max_abs": 104.75953476579558
+              },
+              "inner": {
+                "min": 11.554005969977043,
+                "max": 104.60062576854,
+                "max_abs": 104.60062576854
+              },
+              "parent": {
+                "min": 9.49282111628687,
+                "max": 87.92062904284137,
+                "max_abs": 87.92062904284137
+              },
+              "ambient": {
+                "min": 19.756088081345787,
+                "max": 35.14521525190321,
+                "max_abs": 35.14521525190321
+              }
+            }
+          },
+          "base": {
+            "Ricci2": {
+              "child": {
+                "min": 162.0014448721364,
+                "max": 258.74668454375046,
+                "max_abs": 258.74668454375046
+              },
+              "inner": {
+                "min": 205.44578171272082,
+                "max": 1000.8496585947632,
+                "max_abs": 1000.8496585947632
+              },
+              "parent": {
+                "min": 28.722560499268848,
+                "max": 1308.5970420767874,
+                "max_abs": 1308.5970420767874
+              },
+              "ambient": {
+                "min": 31.094888866714864,
+                "max": 61.81025593201932,
+                "max_abs": 61.81025593201932
+              }
+            },
+            "K": {
+              "child": {
+                "min": 384.1391511421395,
+                "max": 621.3063487997032,
+                "max_abs": 621.3063487997032
+              },
+              "inner": {
+                "min": 471.34718606664467,
+                "max": 2068.759399048453,
+                "max_abs": 2068.759399048453
+              },
+              "parent": {
+                "min": 78.81068345176773,
+                "max": 2684.5819735205478,
+                "max_abs": 2684.5819735205478
+              },
+              "ambient": {
+                "min": 82.87114625748616,
+                "max": 158.3291620185889,
+                "max_abs": 158.3291620185889
+              }
+            },
+            "normal_tidal_radial": {
+              "child": {
+                "min": -8.583529506389077,
+                "max": -6.741916057964082,
+                "max_abs": 8.583529506389077
+              },
+              "inner": {
+                "min": -8.482115608847103,
+                "max": -3.2175313129923775,
+                "max_abs": 8.482115608847103
+              },
+              "parent": {
+                "min": -7.972157797033041,
+                "max": -2.981508655258522,
+                "max_abs": 7.972157797033041
+              },
+              "ambient": {
+                "min": -5.4509854692951665,
+                "max": -4.197771856761631,
+                "max_abs": 5.4509854692951665
+              }
+            },
+            "normal_tidal_angular": {
+              "child": {
+                "min": -3.4956899592144137,
+                "max": -2.020511600579371,
+                "max_abs": 3.4956899592144137
+              },
+              "inner": {
+                "min": -11.035235228490409,
+                "max": -3.427596725243952,
+                "max_abs": 11.035235228490409
+              },
+              "parent": {
+                "min": -15.182233780576745,
+                "max": 1.2309319907320229,
+                "max_abs": 15.182233780576745
+              },
+              "ambient": {
+                "min": -6.138320412219616,
+                "max": 0.7762979926320022,
+                "max_abs": 6.138320412219616
+              }
+            }
+          }
+        },
+        "null_crossings": {
+          "coordinate_speed": [
+            -1.0,
+            1.0
+          ],
+          "coordinate_speed_abs": 1.0,
+          "beta": 0.0,
+          "chart": "conformal N=rQ, dx/dt=\u00b11",
+          "crossing_time_one_side": {
+            "child": 1.0,
+            "inner": 0.7,
+            "parent": 1.8,
+            "ambient": 1.0
+          },
+          "tracks": [
+            {
+              "signed_distance": -3.0,
+              "origin": 1.0,
+              "coordinate_speed": -1.0,
+              "coordinate": 0.0,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -3.0,
+              "origin": 1.0,
+              "coordinate_speed": 1.0,
+              "coordinate": 2.0,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -1.2,
+              "origin": 2.8,
+              "coordinate_speed": -1.0,
+              "coordinate": 1.7999999999999998,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -1.2,
+              "origin": 2.8,
+              "coordinate_speed": 1.0,
+              "coordinate": 3.8,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -0.5,
+              "origin": 3.5,
+              "coordinate_speed": -1.0,
+              "coordinate": 2.5,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": -0.5,
+              "origin": 3.5,
+              "coordinate_speed": 1.0,
+              "coordinate": 4.5,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 0.5,
+              "origin": 4.5,
+              "coordinate_speed": -1.0,
+              "coordinate": 3.5,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 0.5,
+              "origin": 4.5,
+              "coordinate_speed": 1.0,
+              "coordinate": 5.5,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 1.2,
+              "origin": 5.2,
+              "coordinate_speed": -1.0,
+              "coordinate": 4.2,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 1.2,
+              "origin": 5.2,
+              "coordinate_speed": 1.0,
+              "coordinate": 6.2,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 3.0,
+              "origin": 7.0,
+              "coordinate_speed": -1.0,
+              "coordinate": 6.0,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            },
+            {
+              "signed_distance": 3.0,
+              "origin": 7.0,
+              "coordinate_speed": 1.0,
+              "coordinate": 0.0,
+              "kind": "conformal_null_ray",
+              "measured_boundary": false,
+              "physical_wall": false
+            }
+          ],
+          "ambiguities": [
+            {
+              "origin": 3.5,
+              "coordinate_speed": 1.0,
+              "coordinate": 4.5,
+              "coincides_with": 4.5,
+              "kind": "null_image_of_another_cut"
+            },
+            {
+              "origin": 4.5,
+              "coordinate_speed": -1.0,
+              "coordinate": 3.5,
+              "coincides_with": 3.5,
+              "kind": "null_image_of_another_cut"
+            }
+          ],
+          "proper_clocks_integrated": false,
+          "dispersal_time_asserted": false,
+          "packet_width_used_as_boundary": false
+        },
+        "proper_clocks": {
+          "locations": [
+            1.0,
+            2.8,
+            3.0,
+            3.5,
+            4.0,
+            4.5,
+            5.0,
+            5.2,
+            7.0
+          ],
+          "rates": [
+            0.17974628330156484,
+            0.1563044040926116,
+            0.17376268555789134,
+            0.24162452399296364,
+            0.36606733055889384,
+            0.24162452399296375,
+            0.17376268555789076,
+            0.1563044040926113,
+            0.17974628330156464
+          ],
+          "cut_locations": [
+            1.0,
+            2.8,
+            3.5,
+            4.5,
+            5.2,
+            7.0
+          ],
+          "cut_rates": [
+            0.17974628330156484,
+            0.1563044040926116,
+            0.24162452399296364,
+            0.24162452399296375,
+            0.1563044040926113,
+            0.17974628330156464
+          ],
+          "definition": "d\u03c4/dT = rQ",
+          "integrated": false
+        },
+        "rates": {
+          "Q_dot_max": 1.2846231800935235,
+          "r_dot_max": 0.2722444633634629,
+          "state_flow": "prolong(decode(leading_rate))",
+          "unprojected_rate_is_state_flow": false,
+          "geometry_jets_zero": false
+        },
+        "rate_projection": {
+          "state_flow": "prolong(decode(leading_rate))",
+          "state_flow_version": "nsc-discovery-parent-observer-projected-flow-v2",
+          "unprojected_rate_is_state_flow": false,
+          "unprojected_rates_present": true,
+          "geometry_projection_gap_max": 0.7287287110740692,
+          "field_projection_gap_max": 3.375999082952269e-06,
+          "full_projection_gap_max": 0.7287287110740692,
+          "Q": 0.002578202222914161,
+          "r": 3.4877561242541155e-05,
+          "p_Q": 0.005462275333720595,
+          "p_r": 0.7287287110740692,
+          "phi0": 3.3759990817411465e-06,
+          "phi1": 3.375999082952269e-06
+        },
+        "renewal_asserted": false,
+        "continuum_certified": false,
+        "contour_certified": false,
+        "independent_energy_parcel": false,
+        "column_ancestry_used_as_energy": false,
+        "piston_work_included": false,
+        "physical_wall": false,
+        "held_population_measured": false,
+        "constraint_preservation_claim": false
+      }
+    }
+  },
+  "stage": 0,
+  "predecessor_chunk": {
+    "case_id": "nf128_plus_balanced_dt0.001",
+    "ordinal": 3,
+    "arrays_sha256": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "coordinate_time": 1.0
+  },
+  "continuation_predecessor": {
+    "directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1",
+    "case_id": "nf128_plus_balanced_dt0.001",
+    "ordinal": 3,
+    "json_sha256": "88a69d26d2a4db1d6f72603bf8ea8edb0807ad2463e1c0b6ffa5818dc3d70fcd",
+    "arrays_sha256": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "array_sha256": {
+      "Q": "418d50f8f809cbe1c341534f19fdef7c4211f5fcd1864a4bf61bd990b6d26e3d",
+      "r": "3a6e9b89829e5887a4890c20818997549c68b9eb8d3a784a7eb4e8a8ec62d3c9",
+      "pi_Q": "646792489b7aadecf7faa9f36066a42e6e12f43d208223213ce4c44b54d7ba7c",
+      "pi_r": "934208a7b81ebcdc437c74b2379bce7ee747420404853eaf195b22521cfe2ade",
+      "source_weights": "a867dd5d558aefda8e630992830cea3872f15a63dac25bf64eccdf93dbabe698",
+      "clock_rates": "902721ce51ae49daf7d2dd947c61ee5032b961215bfed5695b770e54dd8a56d3",
+      "normal_clocks": "a0266aa8f2a735d3b0aed38e05c176884f498ca9d111d6ca766a013ec633c75a",
+      "W": "502af4514178d50ef9ccfdef9374e84f53597c29aca60c8eb7028374a89c90ff",
+      "phi0": "22995b3cd92a837f434d54e988ac85c430d8d05e45721f21d59b84a7530a328b",
+      "phi1": "214b09e447fcdce7067efcfbaa27c65907f165fb9d93007283d4da497182038f",
+      "source_phi0": "500238accd3a2a14bfdac43059bfce9f4ff0d02164d8767c2ece5f961a1b2c11",
+      "source_phi1": "c5a0ce19b08f54d1ee43b5e4a82a14da25976af8ab169a87002d3bc3145fcb3a",
+      "observer_columns": "dcb02e0b0d0c8af191a1226e9657c1f6519df884843fb9ee5481cc38e004917c"
+    },
+    "coordinate_time": 1.0
+  },
+  "predecessor_producing_commit": "1a687d337c67c6370c0cf61c2868154b37a50781",
+  "prepare_parent_called": false,
+  "momenta_resigned": false,
+  "source_strength": 173.16013550038755,
+  "continuation_remaining_cpu_budget": 20000.0
+}

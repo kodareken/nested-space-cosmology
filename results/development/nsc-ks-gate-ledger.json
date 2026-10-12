@@ -1,0 +1,92 @@
+{
+  "accountable_author": "Douglas Ek",
+  "merit_declared_before_use": true,
+  "merit_definition": "m(g)=max over nodes of max(|E_N|, |E_beta|)",
+  "rows": [
+    {
+      "accepted": true,
+      "candidate_profile_identity": "dcb0676ee6be93d3e448e0ec330b0d79c720ecd47c71be60b3a0862838461c24",
+      "measured_constraint_maxima": [
+        0.0006324135179478028,
+        0.00010570571272476917
+      ],
+      "measured_merit": 0.0006324135179478028,
+      "parameters": {
+        "coordinates": [
+          {
+            "mode": 0,
+            "row": 1
+          },
+          {
+            "mode": 1,
+            "row": 1
+          },
+          {
+            "mode": 2,
+            "row": 1
+          },
+          {
+            "mode": 3,
+            "row": 1
+          },
+          {
+            "mode": 0,
+            "row": 0
+          },
+          {
+            "mode": 1,
+            "row": 0
+          },
+          {
+            "mode": 2,
+            "row": 0
+          },
+          {
+            "mode": 3,
+            "row": 0
+          }
+        ],
+        "loop_numerics": {
+          "atol": 2e-13,
+          "degree": 32,
+          "grid_nodes": 256,
+          "integrator": "cf4",
+          "length": 1.6,
+          "max_step": 0.0005,
+          "phase_nodes": 192,
+          "rtol": 2e-11
+        },
+        "trust_radius": 7.39303238350294e-05
+      },
+      "parent": "479633d6c86679894bdbe7bfa041530dd9ab0c001d5c38e7f3a02dc0bd18745a",
+      "predicted_merit": 0.0006324211517153833,
+      "prediction_minus_measured_merit": 7.633767580518189e-09,
+      "rule": "physical-metric LM inside the measured probe box",
+      "step_size": 0.00010332548504144942
+    },
+    {
+      "accepted": true,
+      "candidate_profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+      "measured_constraint_maxima": [
+        0.000626318580966641,
+        0.00011162212993941212
+      ],
+      "measured_merit": 0.000626318580966641,
+      "parameters": {
+        "label": "lm-broyden",
+        "trust_radius": 6.896256726415201e-05
+      },
+      "parent": "dcb0676ee6be93d3e448e0ec330b0d79c720ecd47c71be60b3a0862838461c24",
+      "predicted_merit": 0.0006263142596647325,
+      "prediction_minus_measured_merit": -4.321301908427784e-09,
+      "rule": "Broyden update inside the measured probe box",
+      "step_size": 0.00010020533558744627
+    }
+  ],
+  "schema": "NSC-KS-GATE-LEDGER-v1",
+  "source_hashes": {
+    "docs/nsc-ks-gate-step.md": "bcd32c8f9db318697a8f67366102e8d38a21571beb09ead97636472a73465b67",
+    "scripts/derive_nsc_ks_gate_step.py": "21c1268c1a048310ade8804c6548a23614f2096da9f4d13e4d212541af7f6270",
+    "src/recursive_horizons/nsc_ks_value_evaluator.py": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4"
+  }
+}

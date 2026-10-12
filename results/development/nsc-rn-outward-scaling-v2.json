@@ -1,0 +1,158 @@
+{
+ "all_outward_algebraic": true,
+ "answer": "Algebraic. The outward approach settles on a local exponent of minus one half, which is exactly the power law the closed form predicts at large radius. Nothing exponential appears in the outward direction.",
+ "api_version": "nsc-rn-outward-scaling-v1",
+ "creation_only": true,
+ "entries": [
+  {
+   "exponent_test": "An exponential approach would show the local exponent growing without bound as radius grows, because log of an exponential is linear in radius rather than in log radius. Here it settles on a constant.",
+   "inward_local_exponents": [
+    {
+     "local_exponent": 0.07981152351523828,
+     "radius": 0.9293317287917578
+    },
+    {
+     "local_exponent": 0.2214430217725908,
+     "radius": 0.8448525385630097
+    },
+    {
+     "local_exponent": 944.5981767320237,
+     "radius": 0.49900204590818287
+    }
+   ],
+   "mu": 1.002,
+   "outward_exponent_asymptote": -0.49997504201737414,
+   "outward_exponent_converged": true,
+   "outward_is_algebraic": true,
+   "outward_is_exponential": false,
+   "outward_local_exponents": [
+    {
+     "local_exponent": -0.25053681736443584,
+     "radius": 1.4999361896846075
+    },
+    {
+     "local_exponent": -0.4737274374737401,
+     "radius": 9.999804213584387
+    },
+    {
+     "local_exponent": -0.49749105778184893,
+     "radius": 99.9842212532198
+    },
+    {
+     "local_exponent": -0.49975034250246303,
+     "radius": 1000.2764803823153
+    },
+    {
+     "local_exponent": -0.49997504201737414,
+     "radius": 10001.382306373027
+    }
+   ],
+   "r_minus": 0.9387228319217631,
+   "r_plus": 1.065277168078237,
+   "samples": 20000
+  },
+  {
+   "exponent_test": "An exponential approach would show the local exponent growing without bound as radius grows, because log of an exponential is linear in radius rather than in log radius. Here it settles on a constant.",
+   "inward_local_exponents": [
+    {
+     "local_exponent": 0.17912789078590297,
+     "radius": 0.8595368924571554
+    },
+    {
+     "local_exponent": 0.3644596534919747,
+     "radius": 0.7813960964871384
+    },
+    {
+     "local_exponent": 1059.321292149154,
+     "radius": 0.4950495544554448
+    }
+   ],
+   "mu": 1.01,
+   "outward_exponent_asymptote": -0.49997523437253,
+   "outward_exponent_converged": true,
+   "outward_is_algebraic": true,
+   "outward_is_exponential": false,
+   "outward_local_exponents": [
+    {
+     "local_exponent": -0.25353491410251633,
+     "radius": 1.500121846471028
+    },
+    {
+     "local_exponent": -0.47395372086708365,
+     "radius": 10.002444500886984
+    },
+    {
+     "local_exponent": -0.49751082508681566,
+     "radius": 99.97569250559344
+    },
+    {
+     "local_exponent": -0.499752213161225,
+     "radius": 999.8379434715326
+    },
+    {
+     "local_exponent": -0.49997523437253,
+     "radius": 9999.189684527095
+    }
+   ],
+   "r_minus": 0.8682255312124163,
+   "r_plus": 1.1517744687875837,
+   "samples": 20000
+  },
+  {
+   "exponent_test": "An exponential approach would show the local exponent growing without bound as radius grows, because log of an exponential is linear in radius rather than in log radius. Here it settles on a constant.",
+   "inward_local_exponents": [
+    {
+     "local_exponent": 0.4036478993047513,
+     "radius": 0.7467940451429183
+    },
+    {
+     "local_exponent": 0.7133008788709673,
+     "radius": 0.6789020699709234
+    },
+    {
+     "local_exponent": 1313.7512285145801,
+     "radius": 0.4807692788461531
+    }
+   ],
+   "mu": 1.04,
+   "outward_exponent_asymptote": -0.4999759450051255,
+   "outward_exponent_converged": true,
+   "outward_is_algebraic": true,
+   "outward_is_exponential": false,
+   "outward_local_exponents": [
+    {
+     "local_exponent": -0.2639267719548644,
+     "radius": 1.4997840074653017
+    },
+    {
+     "local_exponent": -0.4747404873832985,
+     "radius": 10.001423764648525
+    },
+    {
+     "local_exponent": -0.4975831587936822,
+     "radius": 99.9826025402936
+    },
+    {
+     "local_exponent": -0.4997594219838087,
+     "radius": 1000.0711856987244
+    },
+    {
+     "local_exponent": -0.4999759450051255,
+     "radius": 9997.548571548763
+    }
+   ],
+   "r_minus": 0.7543428628582831,
+   "r_plus": 1.325657137141717,
+   "samples": 20000
+  }
+ ],
+ "exponents": {
+  "1.002": -0.49997504201737414,
+  "1.01": -0.49997523437253,
+  "1.04": -0.4999759450051255
+ },
+ "producing_commit": "082baea0cdc75d31b1435704481001428958ca62",
+ "schema": "NSC-RN-OUTWARD-SCALING-v1",
+ "scope_note": "A construction check on the reference chart. It does not measure the actual universe, and it does not test any claim about cosmological expansion: this chart has none. It bounds what this geometry does, and a negative result here is a negative result about this geometry only.",
+ "what_this_measures": "Whether the outward region of this geometry is exponentially sensitive or algebraic, measured as the local exponent of the outgoing speed's approach to its asymptote, and compared against the same measure taken inward."
+}

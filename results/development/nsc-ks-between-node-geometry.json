@@ -1,0 +1,60 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline_low_subgap": null,
+  "changed_history_tail": null,
+  "dense_nodes": 129,
+  "error_budget": {
+    "baseline_covered_regions": null,
+    "baseline_low_subgap": null,
+    "between_node_remainder": null,
+    "changed_history_finite_energy": null,
+    "changed_history_tail": null,
+    "coefficient_arithmetic": null,
+    "preparation_field_axial_derivative": null
+  },
+  "field_error_bound": null,
+  "full_between_node_remainder": null,
+  "geometry_between_node_remainder": [
+    1e-13,
+    1e-13
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate2.json": "c66b6aa9c3aaf064bcf2f67c8ba194e5b0b78846b72641ee83c1e331d6978ff1"
+  },
+  "interpolated_residual_maxima_on_dense_nodes": [
+    0.004642661014,
+    0.006828883053
+  ],
+  "interval": [
+    1.1768780671724792,
+    1.2368780671724793
+  ],
+  "measured_nodal_residual_maxima": [
+    0.004642661014396362,
+    0.006643047350344374
+  ],
+  "owned_nodes": 47,
+  "profile_identity": "b40c5f5228b455f61fc3d25e09c1379c5b1c95287da1aecb824bb2bb88be2922",
+  "residual_chebyshev_tail_max_last4": [
+    5.705e-09,
+    1.0617e-08
+  ],
+  "schema": "NSC-KS-BETWEEN-NODE-GEOMETRY-v1",
+  "scope": {
+    "dense_nodes_do_not_replace_a_derivative_majorant_for_matter": true,
+    "geometry_remainder_is_not_the_full_residual": true,
+    "metric_timestep": false,
+    "missing_bounds_left_none": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-ks-between-node-geometry.md": "58ed4936ea86c5736cdb548ea88492bf3b16c7ca58bc20a4b4fc16a67bfa5cfd",
+    "scripts/derive_nsc_ks_between_node_geometry.py": "d0d64a60e59e2241670d76132aa7cbe836469d86a1ab56658494a3b04b6d0943",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "status": "OPEN: geometry between-node remainder enclosed; full residual between-node bound remains None"
+}

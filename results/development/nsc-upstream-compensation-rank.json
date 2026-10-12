@@ -1,0 +1,57 @@
+{
+  "actual_response": "sigma_min > mu_b * 51/200; mu_b = w_hat(0) integral(b/a0) > 0",
+  "bounds": {
+    "G_norm_squared_strict_upper": "2273/256",
+    "V_F_squared_strict_upper": "50093/6400",
+    "V_prime_F_squared_strict_upper": "44085141/1638400",
+    "V_prime_entry_absolute_upper": [
+      "9/8",
+      "225/128",
+      "1125/256",
+      "9/5"
+    ],
+    "a_squared_strict_lower": "547699824079/812000000000",
+    "center_sigma_min_strict_lower": "3/8",
+    "inverse_F_squared_strict_upper": "24929/3600",
+    "normalized_average_deviation_strict_upper": "3/25",
+    "normalized_response_sigma_min_strict_lower": "51/200"
+  },
+  "identities": {
+    "derivative_identity": true,
+    "determinant_identity": true,
+    "inverse_identity": true
+  },
+  "input_hashes": {
+    "docs/nsc-incoming-fourier-matching.md": "1b06a749df98210d9eb276b27c9148fcf05106c100b95d0665546d72f999a289",
+    "docs/nsc-upstream-metric-compensation.md": "cb7f7904846574f6797630cb577c4692a2cdd05f261fa324f14df370f6b14b71",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-retarded-radial-response.json": "f90294b377cbbdd3e04ce93c21fa22d6f60b7443248e38727d4c49fe3045d24b",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
+  },
+  "proof_kind": "symbolic identities and exact rational inequalities; no propagation",
+  "schema": "nsc-upstream-compensation-rank/v1",
+  "scope": {
+    "amplitudes_selected": false,
+    "bump_shape_selected": false,
+    "clock": "fixed reference a0",
+    "field_solve_performed": false,
+    "full_C0_matching": "OPEN",
+    "full_action_stationarity": "OPEN",
+    "same_metric_coefficients_required_across_all_channels": true
+  },
+  "selected_channel": "14_1",
+  "selected_input": {
+    "angular": "629397181890197/281474976710656",
+    "energy": "5009912393520433/9007199254740992",
+    "mass": "884279719003555/562949953421312"
+  },
+  "status": "PASS: normalized one-energy diagonal response has full real rank",
+  "support": {
+    "bump": "any smooth common nonnegative nonzero bump supported in this interval",
+    "center": "51/50",
+    "halfwidth": "1/200",
+    "left": "203/200",
+    "right": "41/40"
+  }
+}

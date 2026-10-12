@@ -1,0 +1,141 @@
+{
+ "amplitude_gain": [
+  1.1972000412965935,
+  1.2285196273001069
+ ],
+ "amplitude_gain_relative_difference": 0.025493761196427767,
+ "api_version": "nsc-rn-mass-shell-v1",
+ "cpu_seconds": [
+  224.75959989999774,
+  456.8432592999993
+ ],
+ "creation_only": true,
+ "edge_arrival_t": [
+  0.6,
+  0.6
+ ],
+ "held_fixed": {
+  "eps": [
+   0.001,
+   0.001
+  ],
+  "mu": [
+   1.04,
+   1.04
+  ],
+  "release_radius_over_rm": [
+   3.0,
+   3.0
+  ],
+  "target_over_rm": [
+   2.0,
+   2.0
+  ]
+ },
+ "points": [
+  869,
+  1740
+ ],
+ "producing_commit": "e63edbc340ad45f8147e13f7d6bbfd0b16bca03d",
+ "rise_time": [
+  0.7999999999999999,
+  0.9
+ ],
+ "runs": [
+  {
+   "accumulation_after_arrival": {
+    "amplitude_after_peak_fraction": 0.9208916677770947,
+    "amplitude_at_arrival": 0.0002468457960652763,
+    "amplitude_gain": 1.1972000412965935,
+    "arrival_t": 0.6,
+    "final_amplitude": 0.0002721454025111466,
+    "peak_amplitude": 0.00029552379724323926,
+    "peak_t": 1.4,
+    "rise_time": 0.7999999999999999,
+    "stations_after_arrival": 15
+   },
+   "cpu_seconds": 224.75959989999774,
+   "eps": 0.001,
+   "motion": {
+    "fit_available": true,
+    "infall_rate_mean": -1.844555628703095,
+    "inner_edge_arrival_t": 0.6,
+    "intercept_radius": 2.8386965108624094,
+    "late_peak_amplitude_max": null,
+    "late_to_falling_amplitude_ratio": null,
+    "local_speed_first": -1.7834101382488488,
+    "local_speed_last": -2.1400921658986176,
+    "local_speed_max": -1.4267281105990737,
+    "local_speed_min": -2.14009216589862,
+    "max_abs_residual": 0.0326109282422653,
+    "mean_radius_drop": 0.9273732718894008,
+    "r_squared": 0.9968355393275521,
+    "radius_first": 2.823410138248848,
+    "radius_last": 1.8960368663594471,
+    "stations_edge_pinned": 15,
+    "stations_falling": 6,
+    "stations_late_weak_feature": 0,
+    "stations_total": 21,
+    "t_first": 0.0,
+    "t_last": 0.5
+   },
+   "mu": 1.04,
+   "points": 869,
+   "release_radius_over_rm": 3.0,
+   "run": "nsc-rn-inner-packet-v1",
+   "stations": 21,
+   "stop_reason": "target",
+   "target_over_rm": 2.0
+  },
+  {
+   "accumulation_after_arrival": {
+    "amplitude_after_peak_fraction": 0.9353297756616461,
+    "amplitude_at_arrival": 0.00024952251598932274,
+    "amplitude_gain": 1.2285196273001069,
+    "arrival_t": 0.6,
+    "final_amplitude": 0.00028671908382601856,
+    "peak_amplitude": 0.0003065433083461877,
+    "peak_t": 1.5,
+    "rise_time": 0.9,
+    "stations_after_arrival": 15
+   },
+   "cpu_seconds": 456.8432592999993,
+   "eps": 0.001,
+   "motion": {
+    "fit_available": true,
+    "infall_rate_mean": -1.8769802020865856,
+    "inner_edge_arrival_t": 0.6,
+    "intercept_radius": 2.906806867657931,
+    "late_peak_amplitude_max": null,
+    "late_to_falling_amplitude_ratio": null,
+    "local_speed_first": -1.7803335250143792,
+    "local_speed_last": -2.136400230017253,
+    "local_speed_max": -1.602300172512936,
+    "local_speed_min": -2.136400230017253,
+    "max_abs_residual": 0.021872669021605784,
+    "mean_radius_drop": 0.9435767682576195,
+    "r_squared": 0.9977723225735536,
+    "radius_first": 2.8915468660149513,
+    "radius_last": 1.9479700977573318,
+    "stations_edge_pinned": 15,
+    "stations_falling": 6,
+    "stations_late_weak_feature": 0,
+    "stations_total": 21,
+    "t_first": 0.0,
+    "t_last": 0.5
+   },
+   "mu": 1.04,
+   "points": 1740,
+   "release_radius_over_rm": 3.0,
+   "run": "nsc-rn-inner-packet-c3-fine",
+   "stations": 21,
+   "stop_reason": "target",
+   "target_over_rm": 2.0
+  }
+ ],
+ "schema": "NSC-RN-RESOLUTION-CHECK-v1",
+ "scope_note": "A construction check on two finite marched collars. It does not measure the actual universe. Agreement at two resolutions is evidence against a resolution artifact, not evidence of physics. Two points is not a convergence order and none is claimed.",
+ "verdict": "gain_holds_under_resolution_change",
+ "what_this_does_not_establish": "Two resolutions bracket nothing. If the gain moves by more than a few percent between them the single-resolution result is not usable; if it does not, the result is merely not obviously an artifact. A Richardson extrapolation needs a third resolution and is not attempted here.",
+ "what_this_measures": "Whether the compression gain measured at one resolution survives the same construction at another. The growing peak sits at the grid's left edge, where the one-sided SBP closure lives, so it could be closure accumulating rather than geometry."
+}

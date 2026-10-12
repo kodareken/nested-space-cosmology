@@ -1,0 +1,526 @@
+{
+  "accountable_author": "Douglas Ek",
+  "action_variations": {
+    "q0/128_128": {
+      "absolute_pairing_residual": [
+        3.622102617839573e-15,
+        1.0213746913192344e-18,
+        1.176003738834197e-13,
+        5.366818101038007e-13
+      ],
+      "action_gradient": [
+        -0.06441306578332263,
+        1.0213746913192344e-18,
+        -0.1280305503658865,
+        -0.28501630415358736
+      ],
+      "action_gradient_by_channel": {
+        "LLL_geometry_bar": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "WZ_Euler": [
+          0.007604771722658669,
+          -5.899466170643288e-19,
+          -0.012050926227557822,
+          -0.019447838390898548
+        ],
+        "WZ_Weyl": [
+          -0.01831189717978097,
+          -1.0218488982455325e-18,
+          0.020125554607490947,
+          0.012098026279929851
+        ],
+        "WZ_boxR": [
+          -0.023585320955751433,
+          6.650005646503764e-19,
+          -0.10539056583777034,
+          -0.3414591019167942
+        ],
+        "WZ_gauge": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "bar_radial_R2_squared": [
+          -0.03367096566904084,
+          1.968169641978719e-18,
+          -0.03244101500991967,
+          0.0685772323161375
+        ],
+        "cylinder": [
+          0.0035503462985919426,
+          0.0,
+          0.0017264021018703994,
+          -0.004784622441961996
+        ]
+      },
+      "grid": [
+        128,
+        128
+      ],
+      "independent_tensor_pairing": [
+        -0.06441306578332626,
+        0.0,
+        -0.1280305503660041,
+        -0.28501630415412404
+      ],
+      "reference_actions": {
+        "LLL_geometry_bar": 0.0,
+        "WZ_Euler": -0.00840817216452068,
+        "WZ_Weyl": 0.012284880818473669,
+        "WZ_boxR": -0.14049913268751596,
+        "WZ_gauge": 0.0,
+        "bar_radial_R2_squared": 0.012605777221293076,
+        "cylinder": 0.0070001906380975035
+      }
+    },
+    "q4/128_128": {
+      "absolute_pairing_residual": [
+        1.124100812432971e-14,
+        2.1260095740044455e-17,
+        1.1585177261963508e-13,
+        5.674349878859175e-13
+      ],
+      "action_gradient": [
+        -0.12732793992172478,
+        -2.1260095740044455e-17,
+        -0.1517948064179586,
+        -0.42723980153862406
+      ],
+      "action_gradient_by_channel": {
+        "LLL_geometry_bar": [
+          0.11305653951595124,
+          -2.0071614369996937e-17,
+          0.038358558538431405,
+          -0.12096173477324543
+        ],
+        "WZ_Euler": [
+          0.007604771722658669,
+          -5.899466170643288e-19,
+          -0.012050926227557822,
+          -0.019447838390898548
+        ],
+        "WZ_Weyl": [
+          -0.01831189717978097,
+          -1.0218488982455325e-18,
+          0.020125554607490947,
+          0.012098026279929851
+        ],
+        "WZ_boxR": [
+          -0.023585320955751433,
+          6.650005646503764e-19,
+          -0.10539056583777034,
+          -0.3414591019167942
+        ],
+        "WZ_gauge": [
+          -0.015192824599984011,
+          0.0,
+          -0.012939219344176496,
+          -0.19606626115841266
+        ],
+        "bar_radial_R2_squared": [
+          0.027093016850215285,
+          -2.416864193880306e-19,
+          0.026103348948794142,
+          -0.05518000668423263
+        ],
+        "cylinder": [
+          -0.21799222527503356,
+          0.0,
+          -0.10600155710317043,
+          0.2937771151050295
+        ]
+      },
+      "grid": [
+        128,
+        128
+      ],
+      "independent_tensor_pairing": [
+        -0.12732793992171354,
+        0.0,
+        -0.15179480641807444,
+        -0.4272398015391915
+      ],
+      "reference_actions": {
+        "LLL_geometry_bar": -0.21837974380016728,
+        "WZ_Euler": -0.00840817216452068,
+        "WZ_Weyl": 0.012284880818473669,
+        "WZ_boxR": -0.14049913268751596,
+        "WZ_gauge": -0.06293413519548963,
+        "bar_radial_R2_squared": -0.01014311671436783,
+        "cylinder": -0.42981360301487626
+      }
+    },
+    "q4/96_96": {
+      "absolute_pairing_residual": [
+        8.4021956059388e-12,
+        1.5544720199511968e-14,
+        8.487199831819225e-11,
+        4.16499335020859e-10
+      ],
+      "action_gradient": [
+        -0.127327939930119,
+        -1.5544720199511968e-14,
+        -0.15179480633320652,
+        -0.4272398011227029
+      ],
+      "action_gradient_by_channel": {
+        "LLL_geometry_bar": [
+          0.11305653951595405,
+          -2.1829178418345257e-14,
+          0.03835855853843846,
+          -0.12096173477334754
+        ],
+        "WZ_Euler": [
+          0.007604771721259686,
+          -9.530208971275635e-16,
+          -0.012050926222965838,
+          -0.01944783839120603
+        ],
+        "WZ_Weyl": [
+          -0.018311897177061612,
+          2.0724132722536473e-15,
+          0.02012555460163187,
+          0.012098026280787332
+        ],
+        "WZ_boxR": [
+          -0.023585320960766036,
+          8.380588028193115e-15,
+          -0.10539056575074608,
+          -0.34145910151204895
+        ],
+        "WZ_gauge": [
+          -0.015192824599984398,
+          0.0,
+          -0.012939219344176849,
+          -0.19606626115841752
+        ],
+        "bar_radial_R2_squared": [
+          0.027093016845518295,
+          -3.2155221844859106e-15,
+          0.026103348947785036,
+          -0.055180006673507004
+        ],
+        "cylinder": [
+          -0.217992225275039,
+          0.0,
+          -0.10600155710317309,
+          0.29377711510503685
+        ]
+      },
+      "grid": [
+        96,
+        96
+      ],
+      "independent_tensor_pairing": [
+        -0.12732793992171682,
+        0.0,
+        -0.15179480641807852,
+        -0.4272398015392022
+      ],
+      "reference_actions": {
+        "LLL_geometry_bar": -0.21837974380016784,
+        "WZ_Euler": -0.008408172164520538,
+        "WZ_Weyl": 0.012284880818473525,
+        "WZ_boxR": -0.14049913268751313,
+        "WZ_gauge": -0.06293413519548874,
+        "bar_radial_R2_squared": -0.01014311671436785,
+        "cylinder": -0.42981360301487626
+      }
+    }
+  },
+  "charged_spectrum": {
+    "FP_Z_one": -1.8578040070605353,
+    "H_q": "25/12",
+    "Z_minus_one": "-79/30",
+    "Z_nonzero_zero": "-13/3",
+    "Zprime_minus_one": -2.393938716650648,
+    "Zprime_series_tail_bound": 7.717105563580549e-36,
+    "Zprime_series_tail_bound_exact": "10984928036926691336712631490613416228179122027812060397568/1423451830018760553911776334430615402257481599625191705864611357549412692320348924260214776025",
+    "charge": 4,
+    "cylinder_density_R1_mu1": 0.02221005179479063,
+    "cylinder_series_error_bound": 4.886914187467821e-38,
+    "decimal_precision": 80,
+    "fourth_order_harmonic_mu1": -0.2322255008825669,
+    "last_series_index": 94,
+    "series_terms": 92
+  },
+  "comparison": {
+    "exact": "fractions, hashes, structure, scope and counting declarations",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-12
+  },
+  "dependency_hashes": {
+    "docs/nsc-angular-stress.md": "fa75bfe2c20a75688d0c37a0db29c63ebe6144a1c554587976321f6d0fb01e0a",
+    "docs/nsc-common-ks-trace.md": "367b3a918e4ce099cbf079ff2a1a0588dcf5c36c2b0c29641f19bf3e35517733",
+    "docs/nsc-compact-matching.md": "563576eef2d7a7f0f5a6723f4b1d405c3a6ff9489312f62e4b0c9a69faaaf3f5",
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "docs/nsc-horizon-source.md": "f77031e2ee09109e27cc351bf4a6b87027b758e98e4b9243062575aa538bdf28",
+    "docs/nsc-lll-geometric-history.md": "2e2047f589db787f1ffde0d0dcabed9885f6fad2575bbd40952cb246cc67a258",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_compact_matching.py": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_lll_geometric_history.py": "4b8cfc9888879ac502cc9f307e541bfa32bd7dacec6ef58bd62d8ce2e8b5eb8d",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9"
+  },
+  "domain": {
+    "LLL_counting": "action includes geometric LLL once; add LLL state only, not another geometric allocation",
+    "action_channels": [
+      "cylinder",
+      "bar_radial_R2_squared",
+      "LLL_geometry_bar",
+      "WZ_Weyl",
+      "WZ_Euler",
+      "WZ_boxR",
+      "WZ_gauge"
+    ],
+    "action_variation_fields": [
+      "N",
+      "beta",
+      "a",
+      "r"
+    ],
+    "boundary_scope": "compact boundary-identical variation controls; general boundary terms are not discarded by this record",
+    "canonical_foliation": "same KS spatial slices as C0; KS time reparameterization allowed; PG inputs rejected",
+    "compact_induced_counting": "excluded; locked compact local action is added separately once",
+    "control_coordinates": {
+      "interval": [
+        -2.4,
+        -1.3
+      ],
+      "physical_duration_selected": false,
+      "spatial_interval": [
+        -0.7,
+        0.7
+      ],
+      "time": "t=-theta on the old geometry"
+    },
+    "formal_Weyl_parameter": "s in [0,1], integrated with three Gauss nodes; not physical time or a field",
+    "metric_input": "arbitrary supplied spherical metric with analytic first/second jets",
+    "new_independently_weighted_term": false,
+    "old_scientific_outputs_modified": false,
+    "source": "existing charged massless 4D Dirac light field; existing normalization and magnetic spectrum",
+    "spectral_continuation": "Hurwitz expansion with the j=2 pole-times-zero term retained",
+    "tensor_action_identity": "nonzero angular restoration plus physical LLL geometry = full light restoration action variation"
+  },
+  "exact_matching_identities": {
+    "FP_Z_one_formula": "4*EulerGamma-2*H_q",
+    "fourth_harmonic_formula_mu1": "EulerGamma/2-H_q/4",
+    "full_angular_zero_coefficient_after_LLL": "0",
+    "gauge_a4_F_squared_coefficient": "2/3",
+    "gauge_a4_trace_matching": "0",
+    "gauge_trace_times_pi2_r4": "1/3",
+    "monopole_F_squared_times_r4": "8"
+  },
+  "failures": {},
+  "frozen_result_pointers": {
+    "results/development/angular-stress.json": {
+      "generator_rerun": false,
+      "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6"
+    },
+    "results/development/charged-ctp-neck-source.json": {
+      "generator_rerun": false,
+      "sha256": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90"
+    },
+    "results/development/nsc-compact-matched-restart.json": {
+      "generator_rerun": false,
+      "sha256": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf"
+    },
+    "results/development/nsc-lll-geometric-history.json": {
+      "generator_rerun": false,
+      "sha256": "3a4c971754219f7252467ec6ecadcbaf99ee1c6761cfa8da9a8fc9acecc58916"
+    },
+    "results/development/nsc-mode-resolved-cauchy-state.json": {
+      "generator_rerun": false,
+      "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+    },
+    "results/development/nsc-spherical-local-history.json": {
+      "generator_rerun": false,
+      "sha256": "306e6b6f2370e7c4f5e608dccfc2ebd4d3f968d99e4785b7ed9215b1b865fddc"
+    }
+  },
+  "gate": {
+    "PDF_or_public_release_changed": false,
+    "complete_incoming_stress": "OPEN: state-minus-reference source, remaining spectral error and complete same-slice ledger",
+    "complete_stress_tensor": null,
+    "constraints_solved": false,
+    "matched_light_allocation_action": "PASS",
+    "physical_Cauchy_data_selected": false,
+    "physical_metric_evolution": false,
+    "state_or_occupations_changed": false
+  },
+  "homogeneous_controls": [
+    {
+      "LLL_trace_allocation_residual": 2.7755575615628914e-17,
+      "Ward_residuals": {
+        "nonzero_angular_only": {
+          "absolute": 2.527700271315325e-13,
+          "scaled": 2.2060853645483407e-13
+        },
+        "with_physical_LLL": {
+          "absolute": 1.3936074516607277e-13,
+          "scaled": 1.2450317015507248e-13
+        }
+      },
+      "charged_light_anomaly": 0.20617577094770004,
+      "nonzero_angular_restoration_trace": 0.25313650442810276,
+      "physical_LLL_geometric_trace": -0.04696073348040278,
+      "rho_coordinate": -0.17247672583180007,
+      "sphere_radius": 1.0147651062948795,
+      "theta": 1.4,
+      "total_light_restoration_trace": 0.20617577094769995,
+      "trace_residual": 8.326672684688674e-17
+    },
+    {
+      "LLL_trace_allocation_residual": 0.0,
+      "Ward_residuals": {
+        "nonzero_angular_only": {
+          "absolute": 1.2072287614017796e-13,
+          "scaled": 1.0995569373579829e-13
+        },
+        "with_physical_LLL": {
+          "absolute": 1.1755180162609236e-13,
+          "scaled": 1.1020146953668698e-13
+        }
+      },
+      "charged_light_anomaly": 0.1659529708055358,
+      "nonzero_angular_restoration_trace": 0.20574170657850965,
+      "physical_LLL_geometric_trace": -0.039788735772973836,
+      "rho_coordinate": -6.123233995736766e-17,
+      "sphere_radius": 1.0,
+      "theta": 1.5707963267948966,
+      "total_light_restoration_trace": 0.1659529708055358,
+      "trace_residual": 0.0
+    },
+    {
+      "LLL_trace_allocation_residual": 3.469446951953614e-18,
+      "Ward_residuals": {
+        "nonzero_angular_only": {
+          "absolute": 1.0559261798270825e-14,
+          "scaled": 1.0295421507541009e-14
+        },
+        "with_physical_LLL": {
+          "absolute": 3.4228262585367375e-14,
+          "scaled": 3.4133755832964056e-14
+        }
+      },
+      "charged_light_anomaly": 0.05393687960299577,
+      "nonzero_angular_restoration_trace": 0.06992088651750311,
+      "physical_LLL_geometric_trace": -0.01598400691450734,
+      "rho_coordinate": 0.45765755436028577,
+      "sphere_radius": 1.0997501702946164,
+      "theta": 2.0,
+      "total_light_restoration_trace": 0.05393687960299578,
+      "trace_residual": 6.938893903907228e-18
+    },
+    {
+      "LLL_trace_allocation_residual": 0.0,
+      "Ward_residuals": {
+        "nonzero_angular_only": {
+          "absolute": 1.7312540290248535e-15,
+          "scaled": 1.6664104520840491e-15
+        },
+        "with_physical_LLL": {
+          "absolute": 3.361894096443052e-15,
+          "scaled": 3.2645696368112923e-15
+        }
+      },
+      "charged_light_anomaly": 0.010293890410278691,
+      "nonzero_angular_restoration_trace": 0.01390850037587604,
+      "physical_LLL_geometric_trace": -0.0036146099655973486,
+      "rho_coordinate": 0.9999999999999999,
+      "sphere_radius": 1.414213562373095,
+      "theta": 2.356194490192345,
+      "total_light_restoration_trace": 0.01029389041027869,
+      "trace_residual": 1.734723475976807e-18
+    }
+  ],
+  "locked_inputs": {
+    "magnetic_flux": 4,
+    "normalization_mu": 1.0,
+    "physical_charge_scan": false
+  },
+  "maxima": {
+    "LLL_trace_allocation": 2.7755575615628914e-17,
+    "action_quadrature_96_to_128": 4.1592118638078546e-10,
+    "action_vs_tensor_resolved": 5.674349878859175e-13,
+    "charged_trace": 8.326672684688674e-17,
+    "formal_Weyl_path_endpoints": 8.881784197001252e-16,
+    "formal_Weyl_quadrature_relative": 4.756989968538668e-15,
+    "neutral_cylinder_normalization": 5.421010862427522e-20,
+    "neutral_fourth_harmonic": 0.0,
+    "source_conservation_scaled": 2.2060853645483407e-13,
+    "spectral_off_pole_continuation": 1.4585859833559532e-30
+  },
+  "neutral_control": {
+    "FP_Z_one": 2.3088626596061315,
+    "H_q": "0",
+    "Z_minus_one": "1/30",
+    "Z_nonzero_zero": "-1/3",
+    "Zprime_minus_one": 0.04302861086219441,
+    "Zprime_series_tail_bound": 0.0,
+    "Zprime_series_tail_bound_exact": "0",
+    "charge": 0,
+    "cylinder_density_R1_mu1": -0.00036172563072689196,
+    "cylinder_series_error_bound": 0.0,
+    "decimal_precision": 70,
+    "fourth_order_harmonic_mu1": 0.28860783245076643,
+    "last_series_index": 2,
+    "series_terms": 0
+  },
+  "off_pole_spectral_residuals": {
+    "FP_Z_one": 1.187135210756673e-32,
+    "Z_minus_one": 1.249867134789033e-30,
+    "Z_nonzero_zero": 1.4585859833559532e-30,
+    "Zprime_minus_one": 3.4955042058292613e-31
+  },
+  "reproducer": "python3 scripts/check_nsc_magnetic_light_restoration.py --check",
+  "schema": "NSC-MAGNETIC-LIGHT-RESTORATION-v1",
+  "series_convergence": {
+    "Zprime_coarse_minus_resolved": 9.2120112221047e-23,
+    "bound_scope": "exact spectral-series truncation bound; not a floating-point interval certificate",
+    "coarse": {
+      "FP_Z_one": -1.8578040070605353,
+      "H_q": "25/12",
+      "Z_minus_one": "-79/30",
+      "Z_nonzero_zero": "-13/3",
+      "Zprime_minus_one": -2.393938716650648,
+      "Zprime_series_tail_bound": 9.703506413114179e-23,
+      "Zprime_series_tail_bound_exact": "4319990986300976586937372945911119872/44519896235267675826339020787629744121803491217518672167345",
+      "charge": 4,
+      "cylinder_density_R1_mu1": 0.02221005179479063,
+      "cylinder_series_error_bound": 6.144817220360899e-25,
+      "decimal_precision": 60,
+      "fourth_order_harmonic_mu1": -0.2322255008825669,
+      "last_series_index": 58,
+      "series_terms": 56
+    },
+    "positive_difference_within_analytic_tail_bound": true
+  },
+  "source_hashes": {
+    "docs/nsc-magnetic-light-restoration.md": "7ad171b45959c15eb103cbeb753421d6742bc8bc74af9ebd8d0c33e84a0a69c4",
+    "scripts/check_nsc_magnetic_light_restoration.py": "788ac3d6d8027c9bfc5ea1f3b04296490a297651504c60f19b1c2576ee2a9156",
+    "src/recursive_horizons/nsc_light_restoration_action.py": "68b2d11ee79a1e1b1ba42eaa71354266fe26e0341e219771a5e5f67473c12bdc",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "tests/test_nsc_light_restoration_action.py": "9c108e6cd8de2555420415fae3873faded26521a71f8f176a91d93c7ba7823fb",
+    "tests/test_nsc_magnetic_light_reference.py": "2baa01d087eb0285be97cafc1bf7a8dcd4fadd197c44ab8eb77a86825ba7c069"
+  },
+  "status": "PASS: charged light allocation and canonical-KS restoration action",
+  "tolerances": {
+    "LLL_trace_allocation": 3e-14,
+    "action_quadrature_96_to_128": 3e-09,
+    "action_vs_tensor_resolved": 3e-11,
+    "charged_trace": 3e-14,
+    "formal_Weyl_path_endpoints": 3e-14,
+    "formal_Weyl_quadrature_relative": 3e-12,
+    "neutral_cylinder_normalization": 3e-14,
+    "neutral_fourth_harmonic": 3e-14,
+    "source_conservation_scaled": 3e-09,
+    "spectral_off_pole_continuation": 1e-25
+  }
+}

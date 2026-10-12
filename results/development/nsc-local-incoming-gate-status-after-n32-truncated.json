@@ -1,0 +1,50 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    3.3176810525573086e-07,
+    5.478125919396171e-06
+  ],
+  "best_prediction_minus_measured": [
+    6.56009485570778e-10,
+    4.076400187454782e-12
+  ],
+  "existence_tolerance": 3e-11,
+  "families_evolved_at_best": 60,
+  "gap_above_existence_tolerance": [
+    3.317381052557309e-07,
+    5.47809591939617e-06
+  ],
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n32-truncated-iterate3.json": "2644ca10de53b283dc423139227aaf2611c38a486acf8eab6de3ca95dea58869",
+    "results/development/nsc-ks-coupled-newton-n32-truncated-iterate4.json": "3738d03cf00408cb9b69f3b0cc63aa7369b09b0178459d546138567474586b98"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "later_constraint_maxima": [
+    3.346714566691833e-07,
+    5.327855110266733e-06
+  ],
+  "later_step_improved_both_components": false,
+  "named_search_stall": "finite_wu_n32_truncated_image_above_existence",
+  "next_named_owner": "same declared (w,U) class on I; no class rewrite",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e55968b6b0890174b12efe9b8c76e886b77b07bba56633371cdc6295cbccc560",
+  "s5_retracted": true,
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-N32-TRUNCATED-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "no_class_rewrite": true,
+    "open_is_not_done": true,
+    "prediction_match_is_not_existence": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-n32-truncated.md": "413a956c84ec5a3fde313dfd10ef2cd99bc39215898455f7958e56044d5c82d1",
+    "scripts/derive_nsc_local_incoming_gate_status_after_n32_truncated.py": "05fa515406baac72275cbc703cc005b9a2d20278b6fa9e3856824fc9c576366f"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: best measured n=32 truncated residual is still above 3e-11"
+}

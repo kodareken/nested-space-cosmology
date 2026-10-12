@@ -1,0 +1,57 @@
+{
+  "admission": {
+    "borrowed": [
+      "gr-qc/9403003v1 Section2.1 Eq11-13",
+      "1309.7591v2 Theorems2.6-2.8"
+    ],
+    "cpu_seconds_max": 60,
+    "decides": "local vacuum metric cannot distinguish retained-data-equivalent far assemblies in this window",
+    "finite_domain": "static R_obs=4M; initial 2M<R<R_cut=10M; open proper-time window",
+    "missing": "finite observer domain in the retained right parent exterior",
+    "owner": "lab/docs/nsc-atlas-connection-observer.md",
+    "priority_claim": false,
+    "quadrature_nodes": [
+      32,
+      64
+    ],
+    "stop": "incompatible vacuum initial data or failed propagation check",
+    "unlocks": "identify observables or later domains that can break this degeneracy"
+  },
+  "consequence": {
+    "different_inputs_allowed": "outside the retained vacuum initial region",
+    "equivalence": "same local vacuum metric in the open protected domain",
+    "equivalent_inputs": "identical retained initial h,K modulo isometry",
+    "new_physical_mechanism": false
+  },
+  "independent_checks": {
+    "ingoing_kruskal_log_coordinate_error": 0.0,
+    "quadrature_32_64_error_over_ell": 0.0,
+    "quadrature_analytic_max_error_over_ell": 0.0,
+    "quadrature_comparison_is_rigorous_bound": false
+  },
+  "inputs": {
+    "M_over_ell": 0.4,
+    "R_cut_over_ell": 4.0,
+    "R_obs_over_ell": 1.6,
+    "gluing_requirement": "retain closure through R_cut and an identical open vacuum overlap beyond it",
+    "initial_slice": "right Schwarzschild t=0, K=0, 2M<R<R_cut",
+    "separation_threshold_supplied": false
+  },
+  "limits": [
+    "conditional on retained data and a smooth local vacuum development",
+    "no global shell evolution theorem used",
+    "no predicted arrival at the window boundary",
+    "field and quantum state data are not equated",
+    "no sibling signal or cross-universe age"
+  ],
+  "schema": "nsc-atlas-connection-observer-v1",
+  "status": "FINITE_VACUUM_GEOMETRIC_DEGENERACY",
+  "window": {
+    "coordinate_duration_over_ell": 3.509035488895912,
+    "inner_optical_endpoint": "minus infinity",
+    "observer_lapse": 0.7071067811865476,
+    "observer_proper_duration_over_ell": 2.481262789622552,
+    "time_origin": "observer crossing of the initial slice",
+    "upper_endpoint_included": false
+  }
+}

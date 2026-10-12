@@ -1,0 +1,385 @@
+{
+  "a_true": {
+    "binary64_mid": 0.844031385900246,
+    "binary64_rad": 4.763394028061413e-36,
+    "mid_exponent": -119,
+    "mid_mantissa": "560955073729874397264243822201261159",
+    "rad_exponent": -145,
+    "rad_mantissa": "212454473"
+  },
+  "bits": 120,
+  "budget_exceeded": false,
+  "complete": true,
+  "cpu_seconds": 0.8614129999999989,
+  "edge_gradient_balls_N_beta": [
+    {
+      "binary64_mid": -0.014423785303063744,
+      "binary64_rad": 5.882093067270899e-14,
+      "mid_exponent": -72,
+      "mid_mantissa": "-68114400271296010211",
+      "rad_exponent": -73,
+      "rad_mantissa": "555547983"
+    },
+    {
+      "binary64_mid": -0.018047156198710407,
+      "binary64_rad": 4.964671173879998e-14,
+      "mid_exponent": -72,
+      "mid_mantissa": "-85225285543903186989",
+      "rad_exponent": -73,
+      "rad_mantissa": "468899935"
+    }
+  ],
+  "enclosed_profile_identity": "b5cdccaf1a16533d655b89ff8a89679aefe91ba29ff921a9ef1319fca369f377",
+  "enclosure": {
+    "cells": [
+      91,
+      178
+    ],
+    "cover_cells": 25,
+    "dyadic_scale": 52,
+    "f_z_unit_angular": [
+      {
+        "binary64_mid": 1.7091544220094285e-07,
+        "binary64_rad": 1.8360742942865754e-18,
+        "mid_exponent": -142,
+        "mid_mantissa": "952885431754353577968000483773666335",
+        "rad_exponent": -88,
+        "rad_mantissa": "568237471"
+      },
+      {
+        "binary64_mid": 8.794923933566405e-07,
+        "binary64_rad": 1.0534944622623628e-18,
+        "mid_exponent": -140,
+        "mid_mantissa": "1225833485518269150686257595950106767",
+        "rad_exponent": -85,
+        "rad_mantissa": "40755093"
+      }
+    ],
+    "max_depth": [
+      8,
+      8
+    ],
+    "obstruction": null,
+    "remainder_order": 14,
+    "splits": [
+      66,
+      153
+    ],
+    "status": "PASS: directed Taylor enclosure of unit-angular f_s,z at one incoming node; physical local gate OPEN",
+    "target_radius_divisor": 16,
+    "target_radius_upper": {
+      "binary64_upper": 1.25e-17,
+      "exponent": -176,
+      "mantissa": "1197262141301475670592458614961179051"
+    },
+    "taylor_degree": 13
+  },
+  "exact_angular_square_weight": 107952,
+  "gauss_nodes_per_normal_panel": [
+    192,
+    384
+  ],
+  "history_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "node": 119,
+  "obstruction": null,
+  "one_direction_metric": true,
+  "phase_component_tolerance": 1e-12,
+  "production_axial_interval": [
+    0.8440313859002458,
+    0.8440313859002461
+  ],
+  "production_axial_scale": 0.844031385900246,
+  "quadrature": [
+    {
+      "contraction": {
+        "a_interval_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.88681429123452e-14,
+            "exponent": -89,
+            "mantissa": "36437615574783"
+          },
+          {
+            "binary64_upper": 4.972057827190365e-14,
+            "exponent": -123,
+            "mantissa": "528719876845036144557759"
+          }
+        ],
+        "float_contraction_rounding_upper_N_beta": [
+          {
+            "binary64_upper": 6.518973163885817e-19,
+            "exponent": -152,
+            "mantissa": "3721675762787241489454581949"
+          },
+          {
+            "binary64_upper": 1.312033144327752e-19,
+            "exponent": -154,
+            "mantissa": "2996154044792847349806521691"
+          }
+        ],
+        "numeric_a_weight_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.886624566442203e-14,
+            "exponent": -124,
+            "mantissa": "1251946587902435117258401"
+          },
+          {
+            "binary64_upper": 4.972057827190365e-14,
+            "exponent": -123,
+            "mantissa": "528719876845036144557759"
+          }
+        ],
+        "phase_only_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.886573282828198e-14,
+            "exponent": -122,
+            "mantissa": "312983920270990301678271"
+          },
+          {
+            "binary64_upper": 4.972057827190365e-14,
+            "exponent": -123,
+            "mantissa": "528719876845036144557759"
+          }
+        ],
+        "production_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.886559366122653e-14,
+            "exponent": -73,
+            "mantissa": "555969813"
+          },
+          {
+            "binary64_upper": 4.972044701564965e-14,
+            "exponent": -73,
+            "mantissa": "469596345"
+          }
+        ],
+        "value_error_is_direct_distance_to_true_ball": true
+      },
+      "edge_gradient": [
+        -0.014423785303063699,
+        -0.018047156198710335
+      ],
+      "gauss_nodes_per_normal_panel": 192,
+      "numeric_f_z_hex": [
+        "0x1.6f09c20e76d5dp-23",
+        "0x1.d82c839dfe05bp-21"
+      ],
+      "numeric_f_z_unit_angular": [
+        1.709154422009418e-07,
+        8.794923933566372e-07
+      ],
+      "one_direction_amplitudes": 1,
+      "phase_binding": "ccef364e30ed011000f6c93d9d9d6f142930a376754f6532ff93ec4cf84c91fb",
+      "phase_value_control_pass": true,
+      "tangent_directions": 1,
+      "value_error_upper_N_beta": [
+        {
+          "binary64_upper": 5.886559366122653e-14,
+          "exponent": -73,
+          "mantissa": "555969813"
+        },
+        {
+          "binary64_upper": 4.972044701564965e-14,
+          "exponent": -73,
+          "mantissa": "469596345"
+        }
+      ]
+    },
+    {
+      "contraction": {
+        "a_interval_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.893495641475179e-14,
+            "exponent": -85,
+            "mantissa": "2279935695605"
+          },
+          {
+            "binary64_upper": 4.973331210581434e-14,
+            "exponent": -125,
+            "mantissa": "2115421144773033272121373"
+          }
+        ],
+        "float_contraction_rounding_upper_N_beta": [
+          {
+            "binary64_upper": 1.8881584012141372e-19,
+            "exponent": -152,
+            "mantissa": "1077947888638500558229719229"
+          },
+          {
+            "binary64_upper": 1.0127505826862513e-18,
+            "exponent": -154,
+            "mantissa": "23127134918809099631784615259"
+          }
+        ],
+        "numeric_a_weight_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.893305916682863e-14,
+            "exponent": -125,
+            "mantissa": "2506735107897519075240147"
+          },
+          {
+            "binary64_upper": 4.973331210581434e-14,
+            "exponent": -125,
+            "mantissa": "2115421144773033272121373"
+          }
+        ],
+        "phase_only_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.893254633068856e-14,
+            "exponent": -126,
+            "mantissa": "5013426588521142508501115"
+          },
+          {
+            "binary64_upper": 4.973331210581434e-14,
+            "exponent": -125,
+            "mantissa": "2115421144773033272121373"
+          }
+        ],
+        "production_to_true_ball_upper_N_beta": [
+          {
+            "binary64_upper": 5.893324787678962e-14,
+            "exponent": -73,
+            "mantissa": "556608789"
+          },
+          {
+            "binary64_upper": 4.973432480345747e-14,
+            "exponent": -73,
+            "mantissa": "469727417"
+          }
+        ],
+        "value_error_is_direct_distance_to_true_ball": true
+      },
+      "edge_gradient": [
+        -0.014423785303063631,
+        -0.01804715619871032
+      ],
+      "gauss_nodes_per_normal_panel": 384,
+      "numeric_f_z_hex": [
+        "0x1.6f09c20e76d8dp-23",
+        "0x1.d82c839dfe048p-21"
+      ],
+      "numeric_f_z_unit_angular": [
+        1.7091544220094306e-07,
+        8.794923933566352e-07
+      ],
+      "one_direction_amplitudes": 1,
+      "phase_binding": "d2d8563bde6d4d902c90fd2fd86d1b2ef3b519ff4b268a1cb1cd1b0b5617868b",
+      "phase_value_control_pass": true,
+      "tangent_directions": 1,
+      "value_error_upper_N_beta": [
+        {
+          "binary64_upper": 5.893324787678962e-14,
+          "exponent": -73,
+          "mantissa": "556608789"
+        },
+        {
+          "binary64_upper": 4.973432480345747e-14,
+          "exponent": -73,
+          "mantissa": "469727417"
+        }
+      ]
+    }
+  ],
+  "rho_up": 1.0300000000000002,
+  "schema": "NSC-KS-CURRENT-PHASE-ACCURACY-v3",
+  "scope": {
+    "between_node_phase_error_bound": null,
+    "finite_source_tail_bound": null,
+    "new_field_or_source_evolutions": 0,
+    "phase_tangent_error_bound": null,
+    "physical_local_gate": "OPEN",
+    "physical_optimizer_run": false,
+    "source_and_field_error_bound": null,
+    "value_error_is_direct_distance_to_true_ball": true
+  },
+  "signed_angular_square_weights": [
+    107952.0,
+    107952.0
+  ],
+  "source_hashes": {
+    "docs/nsc-ks-current-phase-accuracy-v3.md": "6182a35c1a4a8f638d1cc651dda25adaec295a27478949475a73f9cc1c7278a3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01-+1.json": "8c1258e55b06f8cebf82c4fce679ff3fa45679bd732d58ac127d78f96c03cd1f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01--1.json": "83ca518a97a5c59e87cacbf578f6adfdc9cac82f238f323ac7def6bc1ba61010",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02-+1.json": "67928a718edcf00b2e00d250039d8f8f3529a27ddabb8792cc9d805346ad22b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02--1.json": "a09976d0796c367660b36f869c2edb5949b7f1e85cf5f5b527ca028e307204d7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03-+1.json": "ef2edecec4d348a7cc31afd25a09b874532c35cf5d8335d07384e5821aa8c160",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03--1.json": "e2287e0097855ee7b28fc57bac4990a359d29ca6fbd856268c2c6410e83df7b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04-+1.json": "d8323b0a7de83f57d3ccbc98c2fcfc09142edef6f8f5d31adf3777bd4a564961",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04--1.json": "8ee53a6540adbe7f07c627712ae6c349c04dbdb37ffa4f319488c756ba12f12c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05-+1.json": "afdc070960bf890a562cce3ab4542f96e4259d09256f5ac83a1f8eb34c9ced7c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05--1.json": "24bd5ca580b6f07e314433d42a40682851032fa5ea7415d1f4d8b30cd01fd256",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06-+1.json": "72d2bb7f8329ff93f2701e0a31a66e63e15d16292a8dd3d84056cbacc3413db0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06--1.json": "92b789ce874794987a57986bfdc06e2f07310f88c52a8b30d5e0de481e51187a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07-+1.json": "16f285046eb5a8abb9f93c6b32cb129d21fc436a9ce49e39c3e2353ec035d20d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07--1.json": "a2eed3af3c9715834376a6b2ec3551fd48356518af80bb97a20ef130ac793e2b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08-+1.json": "b59f28c2e91944dde7e33965010e19967533365d2bf379e6824b8ca9264f3738",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08--1.json": "f33bd47c48f0c862763cbebe62b6e17217ae94cee26d1a4b8f314e4daa9cf306",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09-+1.json": "2fb6ca9dd88af25c193dd328f851fcbc90e7e0e737bac17aff1cc09e29bd6f0b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09--1.json": "2b061b24f2c86b45dfa37295dc96c0b3aa7da317e6e9a22613aed7bd81ecca93",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10-+1.json": "202e4d2626047e328c0cc3d173478f1b5ccae5898fdada6297bead13b86abe6d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10--1.json": "414940ead7ba2768923dd08d2ee218d30919f1b58f1cc2be00667e7e96d16032",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11-+1.json": "67edc8eadf792a13da97b41b41f17783958d3417e7ad389e62e75a5f40dfa0c1",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11--1.json": "1c1d5521bb7d9e43ec7527a51816052d605026cdabf5f96d1991064367454276",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12-+1.json": "83eaf342300d0b76b3656e94680958c23d59a8acb155d1ee6395417f7d33c852",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12--1.json": "62ed5fa7b5d4b840880e2dd6ad5047db73313e563fd617cbf9e8d09aee3df419",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.json": "6a545864f0d0a0ce8a5f6c4083abfadb6ad4dd5b124b000583c8f15aa2d37b34",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14--1.json": "97c8471c38ced6dab0cb801d07da1760d64f005af4965bdb3f198eddbc04d239",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15-+1.json": "33dedf7d643953f171f8a1cd31cf930fa8a47b36653ce3d553c32e637108aae9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15--1.json": "04bcbdc57503773673d0f62230fc8b287c8d1389bb99db21fd46dddb11ef5b75",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16-+1.json": "95bedccf1f8b1af7638660aab1a35a0e9f8316011070ac0db9dae3feb5def4e0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16--1.json": "2490ea406e4995fbfd90635b7abadd8079d19042921f1bb7683f9df079181e71",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17-+1.json": "3332b234453c13c014f9dfd915c1e0041a61e5b73f4e0ac44ddc9ca622196123",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17--1.json": "adfc7d8836e6aa206138a1fd75c839649ae5180485cd04956499b5b8db9cece6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18-+1.json": "1865c03586edb9affd5c11a2ac1572574dfe09c2ce2cb587fc5a0517cd853836",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18--1.json": "701357e738555ceb7784ac3dc48cc6606505607478b526ca62333c4a75e70539",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19-+1.json": "33842f6a11c5718633e6c4e43ceba19ec4196bfe9c26d4b534182772a23487c9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19--1.json": "9d4883da6bf7758e38d095b7c6ed1020f368d37650c92f97539200af7ef0129d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20-+1.json": "fdf5ff61880aeb948ee236fde7e10ef858420b6e193975185c038f720154449b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20--1.json": "481dde106ea408b2c48fbc550d5a1987e16e3f359446a6d417f342d6a11e2481",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21-+1.json": "a49b13aea2017b9c3a51dc5837f1f466eae261b8ee2820ed59475de4cdba31a6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21--1.json": "98a86d8d3d83a1d2b1fb69bb35b8d537406e542505d4b0635cfadad970c3c92b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22-+1.json": "9cdaeac607dbf20a2425eb8cf19d7023c0d29245cbb1cc27c064daf76b356028",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22--1.json": "9cbe0bb8b37a1b387bdcb5589fd6775e89c6eb5403d73f85d42f6ee488a0ee97",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24-+1.json": "4bdee28cbc3891d0fb108d94981ab61289fef688fc948f988dfabad826e2dac9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24--1.json": "18774a6b56b91e5939d2c74cf215ac8718b26bc36e9dcd0c802dc18ae6a23ce9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25-+1.json": "cf132e9b6b530cdd0bf6bae121ae3fea38d2001d2c45a9d5adc4f96779e3cd8a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25--1.json": "6e3547d8b833150105ed5f60019ec0197fe846244ecf11cdd0a716ffe36fd7cd",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26-+1.json": "c66d8b44652e8a03cbdff60e90ce300784315811d68e7f47c7ab9e3429ba4537",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26--1.json": "05a26bd27bd6c474779f9120c9df2742c634a4521d6600615c83e87ee6f0a883",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27-+1.json": "4b2cc9524c0101fb93978c5bcc7f5aa45cdfb97e7ed882ae254854c7e798a72e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27--1.json": "982659e6922062d3b40d5f2df5166c3542af88ea7d21d9b91d83179e64a8685d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28-+1.json": "d30d16f957bfcada76d109bce15b8fa43e247c3af73adfc1f900f65e9f8a138b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28--1.json": "e45153643ff8293008ec90e1528e96dd3451aa280870cf4394f88dad3e9c72a7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29-+1.json": "cadef94c7e44b45a4339df2f00507087917ab70828bb3de83678db58a6d63f3f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29--1.json": "9953228558e91230bc818fd0d6a1b1d14fb8ebdd9cd41c89e7ba2bc7854236e5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30-+1.json": "23b6683e4e0d26da2850521f3312d9ff564b77189034b8d4a049e44cc627fffb",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30--1.json": "c349ceef1b82eb290c25fc2dbe1a4fe14a436033e56371cf533ba756a3af80b6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31-+1.json": "620b81efb95d615917010f87d9ae7776045faabb8b13b016dd0ca9b20bb7a7a5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31--1.json": "eface92abd8d1e49f49985fd03c2940e236d55c51f283006923709d53fbd7ab3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32-+1.json": "b1d44d3e6705dc7d7130853a180e1e056361402f087e2f2d81af0c6c9a5a5554",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32--1.json": "4ebf6d1cfefa8c92ff04f709f5967dba9403f1e439cef6d75a019c1860e091ac",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-cutoff-bridge-control.json": "04c376aa9ce588129ae7b6890a2689a586a05cc110703acb300b49699143b07e",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "results/development/nsc-ks-retained-response-sum.json": "a2300f2badea68344b041451f70a56affc5a10b795ae4d6fab6f8476b3580407",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "scripts/derive_nsc_ks_current_phase_accuracy_v2.py": "ddbd5b0bb3020fc13d5851a9a1f1e15b0968861c53ca3e9dae7e2659860f3fd1",
+    "scripts/derive_nsc_ks_current_phase_accuracy_v3.py": "1a77c8387f5cad184fae0d2fe62d479e3c319ec16f9145cb365cedc50f2da9dc",
+    "src/recursive_horizons/nsc_dirac_source_phase.py": "39c36757c1fb38d200d050efc21e00f1913cac14a511a8f2b93e507267bf40fd",
+    "src/recursive_horizons/nsc_dirac_source_phase_bound.py": "c9182d66d7544fcebbca450dadb4b141f7e8c4252b01c3afd042fafb16c814b6",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_operator.py": "9b42c4a175a417f51bb955acfd7f4f8c6680a8034e2e351758c48d1e07ccc442",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_value_evaluator.py": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b"
+  },
+  "target_radius_divisor": 16,
+  "target_radius_upper": {
+    "binary64_upper": 1.25e-17,
+    "exponent": -176,
+    "mantissa": "1197262141301475670592458614961179051"
+  },
+  "z": 1.236149131073635,
+  "z_hex": "0x1.3c7444faf0a91p+0"
+}

@@ -1,0 +1,1814 @@
+{
+  "accountable_author": "Douglas Ek",
+  "actual_angular_families": 63,
+  "geometry": {
+    "U_identically_zero": true,
+    "W_fourier_l1": [
+      {
+        "binary64_upper": 0.0008131615421349057,
+        "exponent": -167,
+        "kind": "dyadic",
+        "mantissa": "152119926431319888640502227414773035217257650049"
+      },
+      {
+        "binary64_upper": 0.07687472772501093,
+        "exponent": -163,
+        "kind": "dyadic",
+        "mantissa": "898820323515766586598351306992192197356999918981"
+      },
+      {
+        "binary64_upper": 15.439216913193107,
+        "exponent": -155,
+        "kind": "dyadic",
+        "mantissa": "705138774929334136562108201770383854363501955047"
+      },
+      {
+        "binary64_upper": 6371.602565651961,
+        "exponent": -146,
+        "kind": "dyadic",
+        "mantissa": "568365941291633446677858186902474597368993440817"
+      },
+      {
+        "binary64_upper": 4830400.599855996,
+        "exponent": -137,
+        "kind": "dyadic",
+        "mantissa": "841574476439203390106440956874773118678344015125"
+      },
+      {
+        "binary64_upper": 6004993956.464358,
+        "exponent": -127,
+        "kind": "dyadic",
+        "mantissa": "1021696778425811372149604024896437432597936390727"
+      },
+      {
+        "binary64_upper": 11365424668376.33,
+        "exponent": -115,
+        "kind": "dyadic",
+        "mantissa": "472101270412197202428695822650765129229496906999"
+      },
+      {
+        "binary64_upper": 3.0887196973723144e+16,
+        "exponent": -105,
+        "kind": "dyadic",
+        "mantissa": "1252933561059446124406207877985058904869796904797"
+      },
+      {
+        "binary64_upper": 1.1727129862176295e+20,
+        "exponent": -93,
+        "kind": "dyadic",
+        "mantissa": "1161398688182982185631173851021810070538821995379"
+      },
+      {
+        "binary64_upper": 1.0744574243114042e+24,
+        "exponent": -77,
+        "kind": "dyadic",
+        "mantissa": "162367415290835959301980445467417942241326117803"
+      }
+    ],
+    "W_sup": [
+      {
+        "binary64_upper": 0.0008131615421349057,
+        "exponent": -167,
+        "kind": "dyadic",
+        "mantissa": "152119926431319888640502227414773035217257650049"
+      },
+      {
+        "binary64_upper": 0.07687472772501093,
+        "exponent": -163,
+        "kind": "dyadic",
+        "mantissa": "898820323515766586598351306992192197356999918981"
+      },
+      {
+        "binary64_upper": 15.439216913193107,
+        "exponent": -155,
+        "kind": "dyadic",
+        "mantissa": "705138774929334136562108201770383854363501955047"
+      },
+      {
+        "binary64_upper": 6371.602565651961,
+        "exponent": -146,
+        "kind": "dyadic",
+        "mantissa": "568365941291633446677858186902474597368993440817"
+      },
+      {
+        "binary64_upper": 4830400.599855996,
+        "exponent": -137,
+        "kind": "dyadic",
+        "mantissa": "841574476439203390106440956874773118678344015125"
+      },
+      {
+        "binary64_upper": 6004993956.464358,
+        "exponent": -127,
+        "kind": "dyadic",
+        "mantissa": "1021696778425811372149604024896437432597936390727"
+      },
+      {
+        "binary64_upper": 11365424668376.33,
+        "exponent": -115,
+        "kind": "dyadic",
+        "mantissa": "472101270412197202428695822650765129229496906999"
+      },
+      {
+        "binary64_upper": 3.0887196973723144e+16,
+        "exponent": -105,
+        "kind": "dyadic",
+        "mantissa": "1252933561059446124406207877985058904869796904797"
+      },
+      {
+        "binary64_upper": 1.1727129862176295e+20,
+        "exponent": -93,
+        "kind": "dyadic",
+        "mantissa": "1161398688182982185631173851021810070538821995379"
+      },
+      {
+        "binary64_upper": 1.0744574243114042e+24,
+        "exponent": -77,
+        "kind": "dyadic",
+        "mantissa": "162367415290835959301980445467417942241326117803"
+      }
+    ],
+    "alpha_not_applied_twice": true,
+    "axial_profile_identity": "a4c061f297027bcb9934fa2338bb81fb799ca4ec26a025f6bc563384c70cd69d",
+    "axial_support_width": {
+      "binary64_upper": 0.12,
+      "exact_rational": "1080863910568919/9007199254740992",
+      "kind": "rational"
+    },
+    "delta_r_A0": {
+      "binary64_upper": 2.439484626404717e-05,
+      "exponent": -173,
+      "kind": "dyadic",
+      "mantissa": "292070258748134175380993407622843458650546579371"
+    },
+    "delta_r_sup": [
+      {
+        "binary64_upper": 2.439484626404717e-05,
+        "exponent": -173,
+        "kind": "dyadic",
+        "mantissa": "292070258748134175380993407622843458650546579371"
+      },
+      {
+        "binary64_upper": 0.002306241831750328,
+        "exponent": -166,
+        "kind": "dyadic",
+        "mantissa": "215716877643783972800476168332237364462116067327"
+      },
+      {
+        "binary64_upper": 0.4631765073957932,
+        "exponent": -159,
+        "kind": "dyadic",
+        "mantissa": "338466611966080373024031081129418674833791012653"
+      },
+      {
+        "binary64_upper": 191.14807696955882,
+        "exponent": -152,
+        "kind": "dyadic",
+        "mantissa": "1091262607279936177236658635030579283093556790381"
+      },
+      {
+        "binary64_upper": 144912.01799567987,
+        "exponent": -137,
+        "kind": "dyadic",
+        "mantissa": "25247234293176100768857868026578265445764248443"
+      },
+      {
+        "binary64_upper": 180149818.69393075,
+        "exponent": -128,
+        "kind": "dyadic",
+        "mantissa": "61301806705548680060353666306420876747530672331"
+      },
+      {
+        "binary64_upper": 340962740051.2899,
+        "exponent": -121,
+        "kind": "dyadic",
+        "mantissa": "906434439191418595118283156039324951786717507197"
+      },
+      {
+        "binary64_upper": 926615909211694.2,
+        "exponent": -109,
+        "kind": "dyadic",
+        "mantissa": "601408109308534117458408776412243787682706952735"
+      },
+      {
+        "binary64_upper": 3.518138958652888e+18,
+        "exponent": -98,
+        "kind": "dyadic",
+        "mantissa": "1114942740655662856944756836494552598066437909311"
+      },
+      {
+        "binary64_upper": 3.2233722729342127e+22,
+        "exponent": -83,
+        "kind": "dyadic",
+        "mantissa": "311745437358405030322903709392751899027714762901"
+      }
+    ],
+    "derivative_orders": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "fourier_band_sup": [
+      {
+        "binary64_upper": 0.0008131615421349057,
+        "exponent": -170,
+        "kind": "dyadic",
+        "mantissa": "1216959411450559109090860105439774221851488717993"
+      },
+      {
+        "binary64_upper": 0.07687472772501093,
+        "exponent": -162,
+        "kind": "dyadic",
+        "mantissa": "449410161757883275459220856310658232676860871275"
+      },
+      {
+        "binary64_upper": 15.439216913192684,
+        "exponent": -155,
+        "kind": "dyadic",
+        "mantissa": "705138774929314841135930764428573550213975682439"
+      },
+      {
+        "binary64_upper": 6371.6025655931235,
+        "exponent": -144,
+        "kind": "dyadic",
+        "mantissa": "142091485321596245035614828240004731179148730113"
+      },
+      {
+        "binary64_upper": 4830400.591604598,
+        "exponent": -136,
+        "kind": "dyadic",
+        "mantissa": "420787237500803548467693688675336567161494802433"
+      },
+      {
+        "binary64_upper": 6004992789.638258,
+        "exponent": -125,
+        "kind": "dyadic",
+        "mantissa": "255424144975159415030582633202890366731515374049"
+      },
+      {
+        "binary64_upper": 11365258001407.168,
+        "exponent": -115,
+        "kind": "dyadic",
+        "mantissa": "472094347337153937229308673264912854339771916123"
+      },
+      {
+        "binary64_upper": 3.0863093037353132e+16,
+        "exponent": -105,
+        "kind": "dyadic",
+        "mantissa": "1251955789238412327156952987958787638289635655647"
+      },
+      {
+        "binary64_upper": 1.1372997324863639e+20,
+        "exponent": -93,
+        "kind": "dyadic",
+        "mantissa": "1126327100410737258433538158627221197692509627251"
+      },
+      {
+        "binary64_upper": 5.433302369939485e+23,
+        "exponent": -80,
+        "kind": "dyadic",
+        "mantissa": "656845952079319868275844279676701410323137772099"
+      }
+    ],
+    "history_amplitude_included_in_W": {
+      "binary64_upper": 0.001,
+      "exact_rational": "1152921504606847/1152921504606846976",
+      "kind": "rational"
+    },
+    "measure_not_applied_twice": true,
+    "missing": {
+      "Bloch_trace_inequality": "OPEN: Bloch trace inequality is owned by a separate job",
+      "P4_remainder": "OPEN: the actual fourth-order reciprocal remainder is reviewed by root; not this owner",
+      "UV_residual": "OPEN: a covariance UV bound still needs symbol, Moyal, and time-integral inputs; P may be purely auxiliary in C=P+D without changing the action. Generating Gamma_sub is a different use",
+      "exact_Moyal_remainder": "OPEN: the exact Moyal remainder is not supplied; this is geometry input only",
+      "fourth_order_symbol_high_derivatives": "OPEN: high derivatives of the actual fourth-order reference symbol are not supplied",
+      "normal_time_derivatives": "MISSING: this owner bounds spatial supremum and Fourier-l1 moments only; mixed T/z jets through order 9 are a separate root owner, and time integrals of the remainder are not supplied here",
+      "physical_local_gate": "OPEN: spatial geometry coefficients only; not a UV residual or physical incoming-gate certificate"
+    },
+    "neumann_margin_lower": {
+      "binary64_lower": 1.3999756051537358,
+      "exponent": -157,
+      "kind": "dyadic_lower",
+      "mantissa": "255758329894438343110947259766370908391896188389"
+    },
+    "normal_support": {
+      "binary64_upper": 0.03,
+      "exact_rational": "1080863910568919/36028797018963968",
+      "kind": "rational"
+    },
+    "omitted_profile_tails": [
+      {
+        "binary64_upper": 2.215569188038716e-23,
+        "exponent": -235,
+        "kind": "dyadic",
+        "mantissa": "1223303723968635448682994954942602013192065480531"
+      },
+      {
+        "binary64_upper": 3.051648103139662e-18,
+        "exponent": -217,
+        "kind": "dyadic",
+        "mantissa": "642752110215286644125557390133408037964809802625"
+      },
+      {
+        "binary64_upper": 4.2247892298337226e-13,
+        "exponent": -191,
+        "kind": "dyadic",
+        "mantissa": "1325971590311610818630876128454955896350347655"
+      },
+      {
+        "binary64_upper": 5.8837344768917084e-08,
+        "exponent": -184,
+        "kind": "dyadic",
+        "mantissa": "1442687495916069753476716798190926139160341474679"
+      },
+      {
+        "binary64_upper": 0.008251398053640795,
+        "exponent": -165,
+        "kind": "dyadic",
+        "mantissa": "385901816501281453619984042290022427159441402211"
+      },
+      {
+        "binary64_upper": 1166.826100972507,
+        "exponent": -149,
+        "kind": "dyadic",
+        "mantissa": "832674930201050841316945563602321407557629023717"
+      },
+      {
+        "binary64_upper": 166666969.16330507,
+        "exponent": -132,
+        "kind": "dyadic",
+        "mantissa": "907421292070856214072444302429374346034004084173"
+      },
+      {
+        "binary64_upper": 24103936370009.953,
+        "exponent": -115,
+        "kind": "dyadic",
+        "mantissa": "1001238344738608383237007386901776978085119128903"
+      },
+      {
+        "binary64_upper": 3.541325373126567e+18,
+        "exponent": -97,
+        "kind": "dyadic",
+        "mantissa": "561145404355918835162171078313421965540997890043"
+      },
+      {
+        "binary64_upper": 5.311271873174557e+23,
+        "exponent": -80,
+        "kind": "dyadic",
+        "mantissa": "642093370247367806139999284062642127607471170325"
+      }
+    ],
+    "period_length_exact": "205/512",
+    "pointwise_radius_lower_is_conservative_for_neumann": true,
+    "profile_key": "profile_1_0",
+    "profile_payload_sha256": "fc20111d0c72f1ac81d56ee5ea64cdd1bb94a9bfc6e86edfa19d1f8992f0ce33",
+    "q_difference_L1": [
+      {
+        "binary64_upper": 1.4935940217523336e-06,
+        "exponent": -178,
+        "kind": "dyadic",
+        "mantissa": "572231544549850145765095127350422550629697524977"
+      },
+      {
+        "binary64_upper": 0.0001412045310528386,
+        "exponent": -172,
+        "kind": "dyadic",
+        "mantissa": "845294196048961319495277521170435230262153385431"
+      },
+      {
+        "binary64_upper": 0.02835942594859288,
+        "exponent": -165,
+        "kind": "dyadic",
+        "mantissa": "1326315118644255451708135436548987491700306109543"
+      },
+      {
+        "binary64_upper": 11.703725364029992,
+        "exponent": -156,
+        "kind": "dyadic",
+        "mantissa": "1069063361400065588926467830815195110394102035711"
+      },
+      {
+        "binary64_upper": 8872.755150075809,
+        "exponent": -146,
+        "kind": "dyadic",
+        "mantissa": "791476207243163721116142250314347952407297591873"
+      },
+      {
+        "binary64_upper": 11030277.054213969,
+        "exponent": -136,
+        "kind": "dyadic",
+        "mantissa": "960872648653221247302233802710746014602055784677"
+      },
+      {
+        "binary64_upper": 20876502554.29111,
+        "exponent": -124,
+        "kind": "dyadic",
+        "mantissa": "443994106387824804513978981493616162808710606243"
+      },
+      {
+        "binary64_upper": 56734737253446.13,
+        "exponent": -114,
+        "kind": "dyadic",
+        "mantissa": "1178334392043468747773215514409641553815868643693"
+      },
+      {
+        "binary64_upper": 2.1540760947823446e+17,
+        "exponent": -102,
+        "kind": "dyadic",
+        "mantissa": "1092246341795247741784779024573094069052863507235"
+      },
+      {
+        "binary64_upper": 1.9735863147064721e+21,
+        "exponent": -89,
+        "kind": "dyadic",
+        "mantissa": "1221590759980409447031703152503151668414825953245"
+      }
+    ],
+    "q_difference_L2_squared": [
+      {
+        "binary64_upper": 1.8590192515119254e-11,
+        "exponent": -195,
+        "kind": "dyadic",
+        "mantissa": "933540237582620359760714334867816909066742708363"
+      },
+      {
+        "binary64_upper": 1.6615599658210053e-07,
+        "exponent": -182,
+        "kind": "dyadic",
+        "mantissa": "1018533295400787689081800643538233739112014224937"
+      },
+      {
+        "binary64_upper": 0.006702142001114359,
+        "exponent": -166,
+        "kind": "dyadic",
+        "mantissa": "626892256528182306307668100734950338166978980789"
+      },
+      {
+        "binary64_upper": 1141.476561638658,
+        "exponent": -149,
+        "kind": "dyadic",
+        "mantissa": "814584894438353435386272451934043863238366135261"
+      },
+      {
+        "binary64_upper": 656048199.6099732,
+        "exponent": -129,
+        "kind": "dyadic",
+        "mantissa": "446483268355003901922593354443183892985884717723"
+      },
+      {
+        "binary64_upper": 1013891765772659.8,
+        "exponent": -109,
+        "kind": "dyadic",
+        "mantissa": "658053378789463771942907758543086250720743977513"
+      },
+      {
+        "binary64_upper": 3.6319029908276946e+21,
+        "exponent": -87,
+        "kind": "dyadic",
+        "mantissa": "562009766393240724075935957863673951761088150631"
+      },
+      {
+        "binary64_upper": 2.6823586760146404e+28,
+        "exponent": -65,
+        "kind": "dyadic",
+        "mantissa": "989615680206729209460872588046248840184094084381"
+      },
+      {
+        "binary64_upper": 3.866703185093964e+35,
+        "exponent": -41,
+        "kind": "dyadic",
+        "mantissa": "850297022633861510033875203792967993998907130019"
+      },
+      {
+        "binary64_upper": 3.2458691179972283e+43,
+        "exponent": -13,
+        "kind": "dyadic",
+        "mantissa": "265901598146332938081806035543964799989609243631"
+      }
+    ],
+    "q_difference_fourier_l1": [
+      {
+        "binary64_upper": 1.2446567014781403e-05,
+        "exponent": -176,
+        "kind": "dyadic",
+        "mantissa": "1192144278077559681041108049088264720319131424743"
+      },
+      {
+        "binary64_upper": 0.0011766950029961328,
+        "exponent": -169,
+        "kind": "dyadic",
+        "mantissa": "880507736841185126541097973386175635995420857281"
+      },
+      {
+        "binary64_upper": 0.23632665715853804,
+        "exponent": -162,
+        "kind": "dyadic",
+        "mantissa": "1381567185528569058535715400446744984181994967907"
+      },
+      {
+        "binary64_upper": 97.53026371242463,
+        "exponent": -153,
+        "kind": "dyadic",
+        "mantissa": "1113598750820494833762888505026478408074024621249"
+      },
+      {
+        "binary64_upper": 73939.03417308674,
+        "exponent": -143,
+        "kind": "dyadic",
+        "mantissa": "824447780659727766404491796288186668922730702155"
+      },
+      {
+        "binary64_upper": 91918239.40441528,
+        "exponent": -133,
+        "kind": "dyadic",
+        "mantissa": "1000900994167676911689965483045540705123136661367"
+      },
+      {
+        "binary64_upper": 173969461538.63367,
+        "exponent": -122,
+        "kind": "dyadic",
+        "mantissa": "924980314755116029816585188273873716744300275243"
+      },
+      {
+        "binary64_upper": 472785691232934.4,
+        "exponent": -111,
+        "kind": "dyadic",
+        "mantissa": "1227421829674491059821339395263280554522714686767"
+      },
+      {
+        "binary64_upper": 1.7950490383029427e+18,
+        "exponent": -98,
+        "kind": "dyadic",
+        "mantissa": "568873747710957813711300066214159571866726026099"
+      },
+      {
+        "binary64_upper": 1.6446420926730617e+22,
+        "exponent": -85,
+        "kind": "dyadic",
+        "mantissa": "636240092754399952098982021469959031403699407399"
+      }
+    ],
+    "q_difference_sup": [
+      {
+        "binary64_upper": 1.2446616847936114e-05,
+        "exponent": -172,
+        "kind": "dyadic",
+        "mantissa": "74509315696595073820562022554567449306014328153"
+      },
+      {
+        "binary64_upper": 0.0011767044254403218,
+        "exponent": -169,
+        "kind": "dyadic",
+        "mantissa": "880514787551001407059840439954200523238545229989"
+      },
+      {
+        "binary64_upper": 0.23632854957160732,
+        "exponent": -161,
+        "kind": "dyadic",
+        "mantissa": "690789124293883073328986904926533301245763523869"
+      },
+      {
+        "binary64_upper": 97.53104470024994,
+        "exponent": -153,
+        "kind": "dyadic",
+        "mantissa": "1113607668125068363010166442151859086066263929819"
+      },
+      {
+        "binary64_upper": 73939.62625063174,
+        "exponent": -143,
+        "kind": "dyadic",
+        "mantissa": "824454382544962240006922785895240570264587325761"
+      },
+      {
+        "binary64_upper": 91918975.45178308,
+        "exponent": -133,
+        "kind": "dyadic",
+        "mantissa": "1000909009013772169647567789884967404779111474101"
+      },
+      {
+        "binary64_upper": 173970854619.09262,
+        "exponent": -119,
+        "kind": "dyadic",
+        "mantissa": "115623465205162713787776468354539009496880342259"
+      },
+      {
+        "binary64_upper": 472789477112051.1,
+        "exponent": -111,
+        "kind": "dyadic",
+        "mantissa": "1227431658378613324354529103702574986891296049395"
+      },
+      {
+        "binary64_upper": 1.7950634123186207e+18,
+        "exponent": -99,
+        "kind": "dyadic",
+        "mantissa": "1137756606036716439797930831974838471830706439363"
+      },
+      {
+        "binary64_upper": 1.6446552622553935e+22,
+        "exponent": -85,
+        "kind": "dyadic",
+        "mantissa": "636245187489796610541480607199451573053355904089"
+      }
+    ],
+    "q_full_fourier_l1": [
+      {
+        "binary64_upper": 0.7142981608527291,
+        "exponent": -160,
+        "kind": "dyadic",
+        "mantissa": "1043947931628716193400248355845457322766763326599"
+      },
+      {
+        "binary64_upper": 0.0011766950029961328,
+        "exponent": -169,
+        "kind": "dyadic",
+        "mantissa": "880507736841185126541097973386175635995420857281"
+      },
+      {
+        "binary64_upper": 0.23632665715853804,
+        "exponent": -162,
+        "kind": "dyadic",
+        "mantissa": "1381567185528569058535715400446744984181994967907"
+      },
+      {
+        "binary64_upper": 97.53026371242463,
+        "exponent": -153,
+        "kind": "dyadic",
+        "mantissa": "1113598750820494833762888505026478408074024621249"
+      },
+      {
+        "binary64_upper": 73939.03417308674,
+        "exponent": -143,
+        "kind": "dyadic",
+        "mantissa": "824447780659727766404491796288186668922730702155"
+      },
+      {
+        "binary64_upper": 91918239.40441528,
+        "exponent": -133,
+        "kind": "dyadic",
+        "mantissa": "1000900994167676911689965483045540705123136661367"
+      },
+      {
+        "binary64_upper": 173969461538.63367,
+        "exponent": -122,
+        "kind": "dyadic",
+        "mantissa": "924980314755116029816585188273873716744300275243"
+      },
+      {
+        "binary64_upper": 472785691232934.4,
+        "exponent": -111,
+        "kind": "dyadic",
+        "mantissa": "1227421829674491059821339395263280554522714686767"
+      },
+      {
+        "binary64_upper": 1.7950490383029427e+18,
+        "exponent": -98,
+        "kind": "dyadic",
+        "mantissa": "568873747710957813711300066214159571866726026099"
+      },
+      {
+        "binary64_upper": 1.6446420926730617e+22,
+        "exponent": -85,
+        "kind": "dyadic",
+        "mantissa": "636240092754399952098982021469959031403699407399"
+      }
+    ],
+    "q_full_sup": [
+      {
+        "binary64_upper": 0.7143010207361586,
+        "exponent": -160,
+        "kind": "dyadic",
+        "mantissa": "1043952111353031077987932497094222172724963494785"
+      },
+      {
+        "binary64_upper": 0.0011767044254403218,
+        "exponent": -169,
+        "kind": "dyadic",
+        "mantissa": "880514787551001407059840439954200523238545229989"
+      },
+      {
+        "binary64_upper": 0.23632854957160732,
+        "exponent": -161,
+        "kind": "dyadic",
+        "mantissa": "690789124293883073328986904926533301245763523869"
+      },
+      {
+        "binary64_upper": 97.53104470024994,
+        "exponent": -153,
+        "kind": "dyadic",
+        "mantissa": "1113607668125068363010166442151859086066263929819"
+      },
+      {
+        "binary64_upper": 73939.62625063174,
+        "exponent": -143,
+        "kind": "dyadic",
+        "mantissa": "824454382544962240006922785895240570264587325761"
+      },
+      {
+        "binary64_upper": 91918975.45178308,
+        "exponent": -133,
+        "kind": "dyadic",
+        "mantissa": "1000909009013772169647567789884967404779111474101"
+      },
+      {
+        "binary64_upper": 173970854619.09262,
+        "exponent": -119,
+        "kind": "dyadic",
+        "mantissa": "115623465205162713787776468354539009496880342259"
+      },
+      {
+        "binary64_upper": 472789477112051.1,
+        "exponent": -111,
+        "kind": "dyadic",
+        "mantissa": "1227431658378613324354529103702574986891296049395"
+      },
+      {
+        "binary64_upper": 1.7950634123186207e+18,
+        "exponent": -99,
+        "kind": "dyadic",
+        "mantissa": "1137756606036716439797930831974838471830706439363"
+      },
+      {
+        "binary64_upper": 1.6446552622553935e+22,
+        "exponent": -85,
+        "kind": "dyadic",
+        "mantissa": "636245187489796610541480607199451573053355904089"
+      }
+    ],
+    "radius_lower": {
+      "binary64_lower": 1.39997,
+      "exact_rational": "1474340489672300046567348394275113541663172954685766633207016992859/1053122916685571866979180276836704323188950954005491112543109775360",
+      "kind": "rational"
+    },
+    "reference_radius_lower": {
+      "binary64_lower": 1.4,
+      "exact_rational": "7/5",
+      "kind": "rational"
+    },
+    "reused": {
+      "alias_and_tail_bounds": "nsc_ks_profile_fourier_bound.alias_and_tail_bounds",
+      "fine_profile_table": {
+        "bytes": 79707220,
+        "path": "results/development/artifacts/nsc-ks-fine-profile-table.npz",
+        "sha256": "fc20111d0c72f1ac81d56ee5ea64cdd1bb94a9bfc6e86edfa19d1f8992f0ce33"
+      },
+      "radius_bound_schema": "NSC-KS-RADIUS-BOUND-v1",
+      "two_derivative_radius_lower": true
+    },
+    "schema": "NSC-KS-HIGH-RADIUS-DERIVATIVES-v2",
+    "scope": {
+      "UV_certificate": false,
+      "band_action_required_for_covariance_UV": false,
+      "field_runs": 0,
+      "finite_history_geometry_bound": true,
+      "new_profile_fit": false,
+      "physical_local_gate": "OPEN",
+      "source_action_Gamma_rest_changed": false,
+      "source_runs": 0,
+      "spatial_supremum_and_Fourier_l1_only": true
+    },
+    "settings": {
+      "bits": 160,
+      "derivative_order": 16,
+      "max_derivative": 9,
+      "quadrature_points": 65536,
+      "retained_index": 8192,
+      "table_bits": 120
+    }
+  },
+  "groups": [
+    {
+      "actual_angular_signs": 1,
+      "angular_abs": 0.0,
+      "compact_mass": 0.0,
+      "group": 0,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": 0,
+        "mantissa": "1"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": 0,
+        "mantissa": "0"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 2.23606797749979,
+      "compact_mass": 0.0,
+      "group": 1,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730752344001770571056239992445972230721883694501"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -172,
+          "mantissa": "590662546287420692293609471071618199556743469717"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "399857346715328696895948329917323250127515445057"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -173,
+        "mantissa": "1181327558419589493781046909895601678211978698143"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 3.4641016151377544,
+      "compact_mass": 0.0,
+      "group": 2,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730753181707670422484578313937641760716192509907"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "457525240999929522481012532135959368480608876601"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -179,
+          "mantissa": "1238912675749722277118691596793815790128140799137"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -172,
+        "mantissa": "915053441015252825032646664435035251068893849163"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 4.58257569495584,
+      "compact_mass": 0.0,
+      "group": 3,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730753944678107836263709572494508532935785255531"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -172,
+          "mantissa": "1210498006220706333718335883352972545838613027131"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -176,
+          "mantissa": "204865927259960486672404136460907201400999973225"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -172,
+        "mantissa": "1210503184500348737559850300729063871525437593663"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 5.656854249492381,
+      "compact_mass": 0.0,
+      "group": 4,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365377338750592781680347113671142636765680202539"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "747135589929152718469176631112876008848046757999"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "1011567963817668844549086892873434513426004731955"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "747139535287049005129738894489743347334483160325"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 6.708203932499369,
+      "compact_mass": 0.0,
+      "group": 5,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365377697341980278218785162137300441650203347399"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "885993819431131038440414206607427299335115204575"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "599786020072993045343922494875984875191273167585"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -170,
+        "mantissa": "442999683796697625914381196851649791998547201741"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 7.745966692414834,
+      "compact_mass": 0.0,
+      "group": 6,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -157,
+        "mantissa": "182689025649761734594034507405940195535937989701"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "255764385074454090257333920344867522013844065369"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "1385146480581267249266273461160395158700597771783"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -170,
+        "mantissa": "511532468925542574450262917326984065870554477179"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 8.774964387392123,
+      "compact_mass": 0.0,
+      "group": 7,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730756804535677311249388246487130056547986967249"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "289740901260176189366279709702396864431343250811"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "784576768857297333308021116683918589634978924319"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1158973098571959267724575196175107701435790385693"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 9.797958971132712,
+      "compact_mass": 0.0,
+      "group": 8,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730757502377919574323274172479472175418976092813"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -167,
+          "mantissa": "80879800118764894257379885959118900756932713215"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -174,
+          "mantissa": "109505444290074868353007503570097176400165585037"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1294088637996804515378244395816310071537280539073"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 10.816653826391969,
+      "compact_mass": 0.0,
+      "group": 9,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365379098643868501627475564458402815583126598205"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "1428622107130652502651627256180735771039531004475"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -173,
+          "mantissa": "60445368595682971851836527908656097674598769139"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1428636532380201379620196340391092583284722034833"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 11.832159566199232,
+      "compact_mass": 0.0,
+      "group": 10,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730758890022734751579577993645432003723315706263"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -170,
+          "mantissa": "781373103118346334566437962079207651589538849371"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "1057923099310889429894834353706053984025637707093"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -166,
+        "mantissa": "48836358350851258876472081283573865722561844795"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 12.84523257866513,
+      "compact_mass": 0.0,
+      "group": 11,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730759581098883293041675863045882501277190269227"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "424137250013969523727941371270120630743757855213"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -175,
+          "mantissa": "287125697235585336005925245108020236814418406031"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -169,
+        "mantissa": "424142335843946417635079626580449127789648690865"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 13.856406460551018,
+      "compact_mass": 0.0,
+      "group": 12,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365380135440087943599976489383020313912944001565"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "457525240999929522481012532135959368480608876601"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "1238912675749722277118691596793815790128140799137"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -169,
+        "mantissa": "457531159059423010268913401836906718310499999679"
+      }
+    },
+    {
+      "actual_angular_signs": 1,
+      "angular_abs": 0.0,
+      "compact_mass": 1.5707963267948966,
+      "group": 13,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": 0,
+        "mantissa": "1"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": 0,
+        "mantissa": "0"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 2.23606797749979,
+      "compact_mass": 1.5707963267948966,
+      "group": 14,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730752344001770571056239992445972230721883694501"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -172,
+          "mantissa": "590662546287420692293609471071618199556743469717"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "399857346715328696895948329917323250127515445057"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -173,
+        "mantissa": "1181327558419589493781046909895601678211978698143"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 3.4641016151377544,
+      "compact_mass": 1.5707963267948966,
+      "group": 15,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730753181707670422484578313937641760716192509907"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "457525240999929522481012532135959368480608876601"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -179,
+          "mantissa": "1238912675749722277118691596793815790128140799137"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -172,
+        "mantissa": "915053441015252825032646664435035251068893849163"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 4.58257569495584,
+      "compact_mass": 1.5707963267948966,
+      "group": 16,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730753944678107836263709572494508532935785255531"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -172,
+          "mantissa": "1210498006220706333718335883352972545838613027131"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -176,
+          "mantissa": "204865927259960486672404136460907201400999973225"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -172,
+        "mantissa": "1210503184500348737559850300729063871525437593663"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 5.656854249492381,
+      "compact_mass": 1.5707963267948966,
+      "group": 17,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365377338750592781680347113671142636765680202539"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "747135589929152718469176631112876008848046757999"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "1011567963817668844549086892873434513426004731955"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "747139535287049005129738894489743347334483160325"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 6.708203932499369,
+      "compact_mass": 1.5707963267948966,
+      "group": 18,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365377697341980278218785162137300441650203347399"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "885993819431131038440414206607427299335115204575"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "599786020072993045343922494875984875191273167585"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -170,
+        "mantissa": "442999683796697625914381196851649791998547201741"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 7.745966692414834,
+      "compact_mass": 1.5707963267948966,
+      "group": 19,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -157,
+        "mantissa": "182689025649761734594034507405940195535937989701"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "255764385074454090257333920344867522013844065369"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "1385146480581267249266273461160395158700597771783"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -170,
+        "mantissa": "511532468925542574450262917326984065870554477179"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 8.774964387392123,
+      "compact_mass": 1.5707963267948966,
+      "group": 20,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730756804535677311249388246487130056547986967249"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "289740901260176189366279709702396864431343250811"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "784576768857297333308021116683918589634978924319"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1158973098571959267724575196175107701435790385693"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 9.797958971132712,
+      "compact_mass": 1.5707963267948966,
+      "group": 21,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730757502377919574323274172479472175418976092813"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -167,
+          "mantissa": "80879800118764894257379885959118900756932713215"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -174,
+          "mantissa": "109505444290074868353007503570097176400165585037"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1294088637996804515378244395816310071537280539073"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 10.816653826391969,
+      "compact_mass": 1.5707963267948966,
+      "group": 22,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365379098643868501627475564458402815583126598205"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "1428622107130652502651627256180735771039531004475"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -173,
+          "mantissa": "60445368595682971851836527908656097674598769139"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1428636532380201379620196340391092583284722034833"
+      }
+    },
+    {
+      "actual_angular_signs": 1,
+      "angular_abs": 0.0,
+      "compact_mass": 3.141592653589793,
+      "group": 23,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": 0,
+        "mantissa": "1"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": 0,
+          "mantissa": "0"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": 0,
+        "mantissa": "0"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 2.23606797749979,
+      "compact_mass": 3.141592653589793,
+      "group": 24,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730752344001770571056239992445972230721883694501"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -172,
+          "mantissa": "590662546287420692293609471071618199556743469717"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "399857346715328696895948329917323250127515445057"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -173,
+        "mantissa": "1181327558419589493781046909895601678211978698143"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 3.4641016151377544,
+      "compact_mass": 3.141592653589793,
+      "group": 25,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730753181707670422484578313937641760716192509907"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "457525240999929522481012532135959368480608876601"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -179,
+          "mantissa": "1238912675749722277118691596793815790128140799137"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -172,
+        "mantissa": "915053441015252825032646664435035251068893849163"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 4.58257569495584,
+      "compact_mass": 3.141592653589793,
+      "group": 26,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730753944678107836263709572494508532935785255531"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -172,
+          "mantissa": "1210498006220706333718335883352972545838613027131"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -176,
+          "mantissa": "204865927259960486672404136460907201400999973225"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -172,
+        "mantissa": "1210503184500348737559850300729063871525437593663"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 5.656854249492381,
+      "compact_mass": 3.141592653589793,
+      "group": 27,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365377338750592781680347113671142636765680202539"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "747135589929152718469176631112876008848046757999"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "1011567963817668844549086892873434513426004731955"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "747139535287049005129738894489743347334483160325"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 6.708203932499369,
+      "compact_mass": 3.141592653589793,
+      "group": 28,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365377697341980278218785162137300441650203347399"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "885993819431131038440414206607427299335115204575"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "599786020072993045343922494875984875191273167585"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -170,
+        "mantissa": "442999683796697625914381196851649791998547201741"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 7.745966692414834,
+      "compact_mass": 3.141592653589793,
+      "group": 29,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -157,
+        "mantissa": "182689025649761734594034507405940195535937989701"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "255764385074454090257333920344867522013844065369"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -178,
+          "mantissa": "1385146480581267249266273461160395158700597771783"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -170,
+        "mantissa": "511532468925542574450262917326984065870554477179"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 8.774964387392123,
+      "compact_mass": 3.141592653589793,
+      "group": 30,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730756804535677311249388246487130056547986967249"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -169,
+          "mantissa": "289740901260176189366279709702396864431343250811"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -177,
+          "mantissa": "784576768857297333308021116683918589634978924319"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1158973098571959267724575196175107701435790385693"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 9.797958971132712,
+      "compact_mass": 3.141592653589793,
+      "group": 31,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -159,
+        "mantissa": "730757502377919574323274172479472175418976092813"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -167,
+          "mantissa": "80879800118764894257379885959118900756932713215"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -174,
+          "mantissa": "109505444290074868353007503570097176400165585037"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1294088637996804515378244395816310071537280539073"
+      }
+    },
+    {
+      "actual_angular_signs": 2,
+      "angular_abs": 10.816653826391969,
+      "compact_mass": 3.141592653589793,
+      "group": 32,
+      "initial_moments": null,
+      "moment_comparison_diagonal_upper": {
+        "exponent": -158,
+        "mantissa": "365379098643868501627475564458402815583126598205"
+      },
+      "potential_integrals": {
+        "clock": "absolute d rho; H_rho potential=(-m S1+ell/r S2)/a",
+        "homogeneous_mass_counted_as_growth": false,
+        "physical_local_gate": "OPEN",
+        "potential_first_integral_upper": {
+          "exponent": -171,
+          "mantissa": "1428622107130652502651627256180735771039531004475"
+        },
+        "potential_moment_measure": "sum of cell Fourier coefficients",
+        "potential_zero_integral_upper": {
+          "exponent": -173,
+          "mantissa": "60445368595682971851836527908656097674598769139"
+        }
+      },
+      "true_defect_moments": null,
+      "zeroth_to_first_moment_upper": {
+        "exponent": -171,
+        "mantissa": "1428636532380201379620196340391092583284722034833"
+      }
+    }
+  ],
+  "history_identity": "4433729843085bfbe02af07fa58b1dd67d7e4386e98da99a6a265b995e9fbdda",
+  "input_hashes": {
+    "results/development/nsc-ks-fine-profile-table.json": "23e7581d7c09a51d25299dd3c0cb6438720ccb08b7107c5d203498b452c45444",
+    "results/development/nsc-ks-fine-trajectory.json": "698eb41958dbec9c70bfb389ae6995f2bbd55f23cebcb49b61a837b024e39cfa",
+    "results/development/nsc-ks-radius-bound.json": "d351138b7522ebb3ff102f639738494c5859f2b4eb70ed0ee2afdbefdc4cb3e5",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "maximum_moment_diagonal_upper": {
+    "exponent": -158,
+    "mantissa": "365380135440087943599976489383020313912944001565"
+  },
+  "maximum_moment_off_diagonal_upper": {
+    "exponent": -169,
+    "mantissa": "457531159059423010268913401836906718310499999679"
+  },
+  "reproducer": "python scripts/derive_nsc_ks_radius_covariance_bounds.py --check",
+  "schema": "NSC-KS-RADIUS-COVARIANCE-BOUNDS-v1",
+  "scope": {
+    "UV_error_bound": null,
+    "actual_projector_derivative_bound": null,
+    "initial_C_up_minus_P_up_moments": null,
+    "metric_timestep": false,
+    "new_field_or_source_runs": 0,
+    "new_state_or_action": false,
+    "physical_local_gate": "OPEN",
+    "source_error_bound": null,
+    "time_integrated_defect_bound": null
+  },
+  "source_hashes": {
+    "docs/nsc-ks-radius-covariance-bounds.md": "3bf738d3b8d0c33db428216e0f3bdc903e6d35633bfa94d7949efeef12d1130c",
+    "scripts/derive_nsc_ks_radius_covariance_bounds.py": "7b327472768ef13e84d7843fc505ae09416bb86b0e81c785e3e4f21cf815075c",
+    "src/recursive_horizons/nsc_bloch_trace_bound.py": "c5ae0f4571e464c124db355fe3f7d89986b677838be6dc272c342cd40746a15d",
+    "src/recursive_horizons/nsc_fourier_covariance_moments.py": "7f4c07561ad35679dc82a74946991deb732b26b5771558f2047db1d8a6960805",
+    "src/recursive_horizons/nsc_ks_high_radius_derivatives.py": "ad8a7abc96f419fa5510e1edbd96ca12245bb8ad7a5f9277c1c35a1af0c2d46b",
+    "src/recursive_horizons/nsc_ks_profile_fourier_bound.py": "4189d40faf66f157056a2aee7cc06f51d7203e26ee2fced58dff98a647d76087"
+  },
+  "source_inventory_unchanged": true,
+  "status": "PASS: nonlinear spatial geometry and covariance-growth components; UV/local gate OPEN"
+}

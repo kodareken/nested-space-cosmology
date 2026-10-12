@@ -1,0 +1,129 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "hypothesis_pre_registered": "every seam's active steps carry the same quantum, and each seam's net tilt is an integer multiple of it",
+  "notes": [
+    "one tangent per eta; all four seam fees from the same d_lapse",
+    "active steps are those above half the quantum"
+  ],
+  "production_trajectory": false,
+  "quantum": 0.00131,
+  "schema": "NSC-TILT-QUANTUM-LADDER-v1",
+  "seams": {
+    "0.125": {
+      "active_steps": [
+        0.0013103347669524146,
+        0.001312251541013526,
+        0.001313651354907866
+      ],
+      "all_active_steps_equal_quantum": true,
+      "nearest_integer": 3,
+      "net_quantum_ratio": 2.9887326980987097,
+      "net_tilt": 0.00391523983450931,
+      "series": [
+        0.11680367783230879,
+        0.1181140125992612,
+        0.11810582246817694,
+        0.11941807400919047,
+        0.1194113969349876,
+        0.11940526631191023,
+        0.1207189176668181
+      ],
+      "steps": [
+        0.0013103347669524146,
+        -8.1901310842597e-06,
+        0.001312251541013526,
+        -6.677074202862676e-06,
+        -6.130623077374442e-06,
+        0.001313651354907866
+      ]
+    },
+    "0.25": {
+      "active_steps": [
+        0.0012984682396654512,
+        0.001303132596063794,
+        0.0013066183232749995
+      ],
+      "all_active_steps_equal_quantum": true,
+      "nearest_integer": 3,
+      "net_quantum_ratio": 2.9474216586021456,
+      "net_tilt": 0.0038611223727688104,
+      "series": [
+        0.26462286011807806,
+        0.2659213283577435,
+        0.2659028892694623,
+        0.2672060218655261,
+        0.2671910816476662,
+        0.2671773641675719,
+        0.2684839824908469
+      ],
+      "steps": [
+        0.0012984682396654512,
+        -1.843908828119689e-05,
+        0.001303132596063794,
+        -1.4940217859915617e-05,
+        -1.3717480094321832e-05,
+        0.0013066183232749995
+      ]
+    },
+    "0.5": {
+      "active_steps": [
+        0.0012805376314760641,
+        0.0012924223327905882
+      ],
+      "all_active_steps_equal_quantum": true,
+      "nearest_integer": 2,
+      "net_quantum_ratio": 1.8572397464300225,
+      "net_tilt": 0.0024329840678233294,
+      "series": [
+        0.5615597550589643,
+        0.561514722922702,
+        0.5627952605541781,
+        0.5627605884667359,
+        0.5627291647590189,
+        0.562700316793997,
+        0.5639927391267876
+      ],
+      "steps": [
+        -4.503213626227964e-05,
+        0.0012805376314760641,
+        -3.467208744212247e-05,
+        -3.142370771702652e-05,
+        -2.884796502189424e-05,
+        0.0012924223327905882
+      ]
+    },
+    "0.75": {
+      "active_steps": [
+        0.0012761947418529207
+      ],
+      "all_active_steps_equal_quantum": true,
+      "nearest_integer": 1,
+      "net_quantum_ratio": 0.7668692068736191,
+      "net_tilt": 0.001004598661004441,
+      "series": [
+        0.8584740935666907,
+        0.8584056993520256,
+        0.8583465841921764,
+        0.858293984470073,
+        0.8582462933345683,
+        0.8582024974858422,
+        0.8594786922276951
+      ],
+      "steps": [
+        -6.839421466509066e-05,
+        -5.9115159849243426e-05,
+        -5.259972210336361e-05,
+        -4.7691135504734916e-05,
+        -4.3795848726047026e-05,
+        0.0012761947418529207
+      ]
+    }
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_tilt_quantum_ladder.py": "67235934be969991920b8aac3489bdbce6b6102a48abca1e8f94c3797783f46a",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "verdict": "QUANTUM_LADDER_HOLDS"
+}

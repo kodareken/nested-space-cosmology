@@ -1,0 +1,553 @@
+{
+  "coefficient_proof": {
+    "C_M_or_physical_gate_from_leading_cancellation": false,
+    "Gamma_rest_assigned": false,
+    "certificate_from_asymptotic_orders_alone": false,
+    "e_minus2_current": {
+      "angular_pair_of_Im_T_s_major_A2": "that one constructed integrand is odd in ell; this is not a finite-history UV cancellation of the full N,beta coefficient",
+      "full_versus_difference": "Im(T_s major A2) on the reference is z-independent, so its incoming z-derivative coincides with the g-minus-reference value; n3 follows that z-derivative after continuity+upstream IC",
+      "linear_fixed_transfer_e_minus2_zero": "owned separately at the reference for linear response; not a finite-history coincidence identity",
+      "source_signs": [
+        1,
+        -1
+      ],
+      "terms": {
+        "s+1": {
+          "A3_locally_algebraic_in_metric_jets": false,
+          "Im_A1dag_A1_z_residual": "0",
+          "N_density_e_minus2_uses_A2": true,
+          "N_density_vertex": "V=-m S1 + ell S2 / r; tr(V rho) starts at e^{-1}",
+          "N_momentum_vertex": "S3/a",
+          "beta_e_minus2_contains_A1_interference": true,
+          "beta_e_minus2_contains_h_z": true,
+          "beta_e_minus2_contains_n3_hence_A3": true,
+          "beta_momentum_vertex": "-I, action supplies the overall minus",
+          "carrier_lowers_C3": "d/d eta of exp(-i s e eta) at eta=0 multiplies the coincidence e^{-3} two-point coefficient and feeds e^{-2}",
+          "h_z_is_the_full_e_minus2_coefficient": false,
+          "symbolic_beta_e_minus2": "(-ell*(ell*im(Derivative(r(rho, z), z)) - m*r(rho, z)*re(Derivative(r(rho, z), z)))*a(rho)**2 + 2*(-A2_1*(I*ell + m*r(rho, z)) + (I*ell - m*r(rho, z))*conjugate(A2_1))*a(rho)*r(rho, z)**2 + 4*(I*A2_0*psi(rho, z) - A3_0 - I*psi(rho, z)*conjugate(A2_0) + psi(rho, z)*im(Derivative(psi(rho, z), z)) - conjugate(A3_0) + im(A2z_0))*r(rho, z)**3)/(4*r(rho, z)**3)"
+        },
+        "s-1": {
+          "A3_locally_algebraic_in_metric_jets": false,
+          "Im_A1dag_A1_z_residual": "0",
+          "N_density_e_minus2_uses_A2": true,
+          "N_density_vertex": "V=-m S1 + ell S2 / r; tr(V rho) starts at e^{-1}",
+          "N_momentum_vertex": "S3/a",
+          "beta_e_minus2_contains_A1_interference": true,
+          "beta_e_minus2_contains_h_z": true,
+          "beta_e_minus2_contains_n3_hence_A3": true,
+          "beta_momentum_vertex": "-I, action supplies the overall minus",
+          "carrier_lowers_C3": "d/d eta of exp(-i s e eta) at eta=0 multiplies the coincidence e^{-3} two-point coefficient and feeds e^{-2}",
+          "h_z_is_the_full_e_minus2_coefficient": false,
+          "symbolic_beta_e_minus2": "(-ell*(ell*im(Derivative(r(rho, z), z)) + m*r(rho, z)*re(Derivative(r(rho, z), z)))*a(rho)**2 + 2*(-A2_0*(I*ell - m*r(rho, z)) + (I*ell + m*r(rho, z))*conjugate(A2_0))*a(rho)*r(rho, z)**2 + 4*(-I*A2_1*psi(rho, z) + A3_1 + I*psi(rho, z)*conjugate(A2_1) + psi(rho, z)*im(Derivative(psi(rho, z), z)) + conjugate(A3_1) + im(A2z_1))*r(rho, z)**3)/(4*r(rho, z)**3)"
+        }
+      }
+    },
+    "e_minus2_sigma": {
+      "A3_solved_componentwise": false,
+      "C4_or_C_M_bounded": false,
+      "Sigma_I_momentum_e_minus2": "-h_z",
+      "Sigma_S3_momentum_e_minus2": "-s h_z + 4 Re(conj(l) b)",
+      "action_N2": "mu s delta(h_z) / (2 pi a)",
+      "action_beta2": "-mu delta(h_z) / (2 pi)",
+      "angular_pairs": [
+        {
+          "group": 1,
+          "multiplicity_per_signed_family": 6.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 2,
+          "multiplicity_per_signed_family": 8.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 3,
+          "multiplicity_per_signed_family": 10.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 4,
+          "multiplicity_per_signed_family": 12.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 5,
+          "multiplicity_per_signed_family": 14.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 6,
+          "multiplicity_per_signed_family": 16.0,
+          "positive_rows_per_angular_sign": 1200,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 7,
+          "multiplicity_per_signed_family": 18.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 8,
+          "multiplicity_per_signed_family": 20.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 9,
+          "multiplicity_per_signed_family": 22.0,
+          "positive_rows_per_angular_sign": 768,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 10,
+          "multiplicity_per_signed_family": 24.0,
+          "positive_rows_per_angular_sign": 1088,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 11,
+          "multiplicity_per_signed_family": 26.0,
+          "positive_rows_per_angular_sign": 1088,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 12,
+          "multiplicity_per_signed_family": 28.0,
+          "positive_rows_per_angular_sign": 1368,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 14,
+          "multiplicity_per_signed_family": 12.0,
+          "positive_rows_per_angular_sign": 584,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 15,
+          "multiplicity_per_signed_family": 16.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 16,
+          "multiplicity_per_signed_family": 20.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 17,
+          "multiplicity_per_signed_family": 24.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 18,
+          "multiplicity_per_signed_family": 28.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 19,
+          "multiplicity_per_signed_family": 32.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 20,
+          "multiplicity_per_signed_family": 36.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 21,
+          "multiplicity_per_signed_family": 40.0,
+          "positive_rows_per_angular_sign": 728,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 22,
+          "multiplicity_per_signed_family": 44.0,
+          "positive_rows_per_angular_sign": 1220,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 24,
+          "multiplicity_per_signed_family": 12.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 25,
+          "multiplicity_per_signed_family": 16.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 26,
+          "multiplicity_per_signed_family": 20.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 27,
+          "multiplicity_per_signed_family": 24.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 28,
+          "multiplicity_per_signed_family": 28.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 29,
+          "multiplicity_per_signed_family": 32.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 30,
+          "multiplicity_per_signed_family": 36.0,
+          "positive_rows_per_angular_sign": 572,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 31,
+          "multiplicity_per_signed_family": 40.0,
+          "positive_rows_per_angular_sign": 892,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        },
+        {
+          "group": 32,
+          "multiplicity_per_signed_family": 44.0,
+          "positive_rows_per_angular_sign": 1400,
+          "same_cutoff_grid": true,
+          "source_grid_and_weight_residual": 0.0
+        }
+      ],
+      "leading_paired_one_over_Lambda_cancels_for_equal_mu": true,
+      "local_delta_r_rho_cancels_in_N": true,
+      "n3": "2 s h_z after T_s transport and normalized z-homogeneous upstream",
+      "n3_eliminated_by_continuity_and_upstream": true,
+      "occupied_vacuum_envelope_only": true,
+      "q_channel_in_N_density_vanishes": true,
+      "residuals": {
+        "s+1/Im_Ts_major_A2_odd_ell": "0",
+        "s+1/N_density_q_channel_vanishes": "0",
+        "s+1/N_e2_bracket_is_minus_s_hz_over_a": "0",
+        "s+1/Re_conj_l_b_equals_minus_a2_over_2_Ts_h": "0",
+        "s+1/Re_conj_l_b_from_Tminus_l": "0",
+        "s+1/Sigma_I_momentum_is_minus_hz": "0",
+        "s+1/Sigma_Im_conj_l_lz": "0",
+        "s+1/Sigma_S3_momentum": "0",
+        "s+1/Ts_n3_minus_2s_Ts_hz_after_recurrence": "0",
+        "s+1/continuity_e_minus3_is_Ts_n3_plus_4s_a2_dz_Re": "0",
+        "s+1/local_delta_Re_conj_l_b": "0",
+        "s+1/trV_rho2_plus_4_a_Re_conj_l_b": "0",
+        "s-1/Im_Ts_major_A2_odd_ell": "0",
+        "s-1/N_density_q_channel_vanishes": "0",
+        "s-1/N_e2_bracket_is_minus_s_hz_over_a": "0",
+        "s-1/Re_conj_l_b_equals_minus_a2_over_2_Ts_h": "0",
+        "s-1/Re_conj_l_b_from_Tminus_l": "0",
+        "s-1/Sigma_I_momentum_is_minus_hz": "0",
+        "s-1/Sigma_Im_conj_l_lz": "0",
+        "s-1/Sigma_S3_momentum": "0",
+        "s-1/Ts_n3_minus_2s_Ts_hz_after_recurrence": "0",
+        "s-1/continuity_e_minus3_is_Ts_n3_plus_4s_a2_dz_Re": "0",
+        "s-1/local_delta_Re_conj_l_b": "0",
+        "s-1/trV_rho2_plus_4_a_Re_conj_l_b": "0"
+      },
+      "thermal_occupation_replaced_by_one": false,
+      "vertices": {
+        "N_density": "V=-m S1 + ell S2 / r",
+        "N_momentum": "S3/a",
+        "action_sign": "minus once, as in source_column_matter",
+        "beta_density": 0,
+        "beta_momentum": "-I",
+        "measure": "de/(2 pi) as in the source-cutoff edge",
+        "numerical_residuals": {
+          "N_density": 0.0,
+          "N_momentum": 0.0,
+          "beta_density": 0.0,
+          "beta_momentum": 0.0
+        }
+      }
+    },
+    "existing_source_ad759_evaluation_changed": false,
+    "gaps": {
+      "complete_e_minus2_N_beta_coefficient": null,
+      "e_minus3_paired_C4": null,
+      "finite_history_UV_cancellation": "only the leading 1/Lambda algebraic coincidence coefficient; C4, thermal remainder and upstream error stay unbounded",
+      "higher_A_j_beyond_n3": null,
+      "leading_paired_e_minus2_vacuum_coefficient": "cancels for original equal-mu same-cutoff angular pairs after n3=2 s h_z and N local delta(r_rho) cancellation; not a C_M bound",
+      "numerical_C_M": null,
+      "physical_local_gate": "OPEN",
+      "source_cutoff_tail_at_160_320": null,
+      "thermal_coherent_source_remainder": null,
+      "upstream_normalization_error": null
+    },
+    "identities": {
+      "A0": "e_s",
+      "Im_T_s_major_A2_pure_imag_major_A1": "-m ell/4 (s a^2 r_rho + r_z)/r^2",
+      "T_s": "T_s = d_rho - s/a^2 d_z",
+      "T_s_major_A1": "-i/2 (m^2 + ell^2/r^2)",
+      "V": "V=-m S1 + ell S2 / r",
+      "dummy_symbol_L0_A_j": false,
+      "minor_A1": "a/2 (m - i s ell / r)",
+      "outgoing_Weyl_identified_with_source_E": false,
+      "physical_source_columns_replaced": false,
+      "residuals": {
+        "V_definition": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "s+1/A0_is_e_s": [
+          "0",
+          "0"
+        ],
+        "s+1/Im_T_s_major_A2_odd_in_ell": "0",
+        "s+1/Im_T_s_major_A2_parent": "0",
+        "s+1/Im_T_s_major_A2_vanishes_for_ell_0": "0",
+        "s+1/Im_T_s_major_A2_vanishes_for_m_0": "0",
+        "s+1/L0_telescope_M2": [
+          "0",
+          "0"
+        ],
+        "s+1/Pi_minus_A0": [
+          "0",
+          "0"
+        ],
+        "s+1/Pi_s_L0_A1_is_transport_defect": "0",
+        "s+1/Pi_s_L0_A2_is_transport_defect": "0",
+        "s+1/Re_major_A1_normalization": "0",
+        "s+1/T_s_major_A1_parent": "0",
+        "s+1/minor_A1_from_L0_A0": "0",
+        "s+1/minor_A1_matches_P1": "0",
+        "s+1/minor_A1_parent": "0",
+        "s+1/minor_A2_recurrence": "0",
+        "s+1/minor_A3_depends_on_major_A2": "depends",
+        "s+1/order_e_minus1_density": "0",
+        "s-1/A0_is_e_s": [
+          "0",
+          "0"
+        ],
+        "s-1/Im_T_s_major_A2_odd_in_ell": "0",
+        "s-1/Im_T_s_major_A2_parent": "0",
+        "s-1/Im_T_s_major_A2_vanishes_for_ell_0": "0",
+        "s-1/Im_T_s_major_A2_vanishes_for_m_0": "0",
+        "s-1/L0_telescope_M2": [
+          "0",
+          "0"
+        ],
+        "s-1/Pi_minus_A0": [
+          "0",
+          "0"
+        ],
+        "s-1/Pi_s_L0_A1_is_transport_defect": "0",
+        "s-1/Pi_s_L0_A2_is_transport_defect": "0",
+        "s-1/Re_major_A1_normalization": "0",
+        "s-1/T_s_major_A1_parent": "0",
+        "s-1/minor_A1_from_L0_A0": "0",
+        "s-1/minor_A1_parent": "0",
+        "s-1/minor_A2_recurrence": "0",
+        "s-1/minor_A3_depends_on_major_A2": "depends",
+        "s-1/order_e_minus1_density": "0"
+      },
+      "telescope": "(L0 - 2 i e / a^2 Pi_{-s}) sum_{j=0}^2 e^{-j} A_j = e^{-2} L0 A2 on the constructed recurrence and major transports; A3 is the same recurrence applied to integrated A2, not a local jet",
+      "upstream": "normalized affine vacuum at rho_up: A0=e_s real positive, major A1=0; g equals the reference on an upstream neighborhood"
+    },
+    "leading_paired_e_minus2_cancels": true,
+    "new_action_term": false,
+    "physical_local_gate": "OPEN: leading paired e^{-2} vacuum coefficient identified under original equal-mu same-cutoff angular pairs; C_M, C4, thermal remainder, upstream error and the local gate remain unbounded",
+    "schema": "NSC-KS-FINITE-HISTORY-UV-COEFFICIENTS-v3",
+    "upstream": {
+      "A0": "e_s, real positive major",
+      "P1_match": "s=+1 minor A1 equals the off-diagonal E>0 projector coefficient P1",
+      "Re_major_A1": 0,
+      "history_flat_at_upstream": true,
+      "major_A1": 0,
+      "minor_A1": "a/2 (m - i s ell / r) at the reference radius",
+      "normalization": "positive real major (1+|v|^2)^{-1/2} at rho_up; phase is then fixed by T_s major A1 = -i/2 Q along the incoming characteristic",
+      "physical_source_renormalized": false,
+      "s_minus_uses_e_recurrence_not_positive_energy_P0": true
+    },
+    "vertices": {
+      "N_density": "V=-m S1 + ell S2 / r",
+      "N_momentum": "S3/a",
+      "action_sign": "minus once, as in source_column_matter",
+      "beta_density": 0,
+      "beta_momentum": "-I",
+      "measure": "de/(2 pi) as in the source-cutoff edge",
+      "numerical_residuals": {
+        "N_density": 0.0,
+        "N_momentum": 0.0,
+        "beta_density": 0.0,
+        "beta_momentum": 0.0
+      }
+    }
+  },
+  "finite_cutoff_error_bound": null,
+  "historical_note": "Earlier v2/v3 development records are preserved. This proof is computed directly from the stated equations and data; those development records and their working-tree HEAD are not proof inputs.",
+  "input_hashes": {
+    "docs/nsc-incoming-fixed-transfer.md": "959793133c32bf08a5e82b4b743d0d6ff2884a0ca2ccc6fe77e91dc97b1993f5",
+    "docs/nsc-source-cutoff-bridge.md": "4464afb826d57314657771d49d3ae5b6515fe4a3cd7e03e6372383c0560a9a33",
+    "requirements-validation.txt": "f52f64eea410f540f2c325e55cfc2f609465094e9caec8533931345cee2a91e5",
+    "results/development/nsc-ks-cutoff-bridge-control.json": "04c376aa9ce588129ae7b6890a2689a586a05cc110703acb300b49699143b07e",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "numerical_C_M": null,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "pilot": {
+    "angular": 2.23606797749979,
+    "certified_quadrature_error_bound": null,
+    "cpu_target_seconds": 120.0,
+    "field_or_source_evolutions": 0,
+    "gauss_48_minus_64_max_abs": 6.561845619819373e-11,
+    "gauss_nodes": 48,
+    "h_z": [
+      [
+        -3.170749408204971e-05,
+        -1.511720965392542e-05,
+        -5.364463823228336e-06
+      ],
+      [
+        -1.7529581350432642e-05,
+        -4.189567682027724e-06,
+        -2.887998242940939e-05
+      ]
+    ],
+    "is_full_e_minus2_coefficient": false,
+    "mass": 1.0,
+    "numerical_C_M": null,
+    "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+    "quadrature_n_nodes": 144,
+    "reference_h_z_max_abs": 0.0,
+    "rho_up": 1.0300000000000002,
+    "source_signs": [
+      1,
+      -1
+    ],
+    "z": [
+      1.1768780671724792,
+      1.2068780671724793,
+      1.2368780671724793
+    ]
+  },
+  "pilot_quadrature_error_enclosed": false,
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v4",
+  "source_hashes": {
+    "scripts/derive_nsc_ks_current_uv_coefficient_control_v2.py": "7a8c46476ad5e2fb36007bad6473a8c0f200a2b1702245ef83485e8d72ab70e1",
+    "scripts/derive_nsc_ks_current_uv_coefficient_control_v4.py": "c08da6cdb75dc6354baab776db639808c23f357fcdfc49b1306d1573e5f1a47a",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_complex_horizon_modes.py": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_dirac_source_phase.py": "39c36757c1fb38d200d050efc21e00f1913cac14a511a8f2b93e507267bf40fd",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_incoming_high_energy_source.py": "5c7712f9193b8374384a92f9a6bd5d631ba94012e750a7cf56ffb4f58c0d9502",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_spectral_panels.py": "f22e672a87753ea5f53c722718a726f0b44e09c418f9e4e9d449b3f79ec280d9",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_geometry.py": "fe6575a48546a7ef5baa085ebaa6254fc45f10fde3f2362f05da6e23d09dd9b0",
+    "src/recursive_horizons/nsc_ks_ball_operator.py": "9b42c4a175a417f51bb955acfd7f4f8c6680a8034e2e351758c48d1e07ccc442",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_chebyshev_jet_bound.py": "9994f3fb4e1762b58157ef0077260bddedec2ae36fea44dc84861021620be520",
+    "src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py": "be055f447c9f1455ad95a55c6a36eeeb4ef894755250c74e7d0074c1e8beedee",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_energy_propagator.py": "9630ceb91eff6b9fcecbf79eccc61470d2f60622861f5f8d21c2b54f11a4b6cf",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_finite_history_uv_coefficients.py": "cf05d38d4862280b6a9fc161ea361c771cc25d70739685337aa7b291cc45f1ff",
+    "src/recursive_horizons/nsc_ks_history_evaluator.py": "86ed312db133f201a3cce11cacc96b62dc89d6c3fe434bdac0f77ca54d023cd6",
+    "src/recursive_horizons/nsc_ks_local_constraints.py": "ef09afe2ff77a76dba5fb1580c47efc82cd9e4c11f288144d64d98457232d56a",
+    "src/recursive_horizons/nsc_ks_matter_difference.py": "81b87ad8f903c9495b9a8c29825cfa9c1edb18f60677dab55939de43d537750c",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_fourier_bound.py": "4189d40faf66f157056a2aee7cc06f51d7203e26ee2fced58dff98a647d76087",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_source_inventory.py": "e969f8a30c525a19c1abfd1bce49133484d03b10b7ebdabefcba2cb75b3bafd3",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_value_evaluator.py": "4ac68c9ff3bfe91a612542fa39bab4088cf8fe5c471f9e33648caad8973562e4",
+    "src/recursive_horizons/nsc_local_history_newton.py": "1b55fac1ef1217556e04c9b2231dd15fd9eb30e81039c84fa09223434fc76495",
+    "src/recursive_horizons/nsc_local_incoming_constraints.py": "2dc5ed9f90db240ece33441d38b94e4cc636761b26b9918bf7b5e98909573111",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py": "18624ecc149e1d3842523390b0a4ebaff135ec170f737fd2dac45f9f7d102b6b",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_pg_packet_modes.py": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+    "src/recursive_horizons/nsc_pg_retarded_packets.py": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517"
+  },
+  "status": "OPEN: leading paired vacuum coefficient verified; numerical tail remainder unbounded"
+}

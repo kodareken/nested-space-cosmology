@@ -1,0 +1,181 @@
+{
+  "A0": 0.057399277586,
+  "A1": -0.058210013401,
+  "A_interval_on_I": {
+    "max": 0.057406836125,
+    "min": 0.057396121105
+  },
+  "A_on_I": {
+    "max": 0.057406836125,
+    "min": 0.057396121105
+  },
+  "L_baseline_equals_baseline_beta": false,
+  "L_pieces": {
+    "assembled": {
+      "abs_max": 0.459157590765,
+      "abs_min": 0.014954226158,
+      "axial_range": [
+        -0.004107193193,
+        0.002805631961
+      ],
+      "beta_range": [
+        -0.005790788098,
+        0.004393918221
+      ],
+      "interval_max": 0.459157590765,
+      "interval_min": -0.432942823721,
+      "max": 0.459157590765,
+      "min": -0.432942823721,
+      "sign_stable": false
+    },
+    "baseline": {
+      "abs_max": 0.057120987046,
+      "abs_min": 0.057120986977,
+      "axial_range": [
+        -0.695930571717,
+        -0.695930571717
+      ],
+      "beta_range": [
+        -0.057120986994,
+        -0.057120986994
+      ],
+      "max": -0.057120986977,
+      "min": -0.057120987046,
+      "sign_stable": true
+    },
+    "edge": {
+      "abs_max": 0.935077622085,
+      "abs_min": 0.022842261102,
+      "axial_range": [
+        0.00271237226,
+        0.027159130651
+      ],
+      "beta_range": [
+        -0.018765029316,
+        0.019528183501
+      ],
+      "max": 0.923141064023,
+      "min": -0.935077622085,
+      "sign_stable": false
+    },
+    "geometry": {
+      "abs_max": 2.22566819973,
+      "abs_min": 0.039639835809,
+      "axial_range": [
+        0.699215311536,
+        0.739834218766
+      ],
+      "beta_range": [
+        0.030441433545,
+        0.081054245006
+      ],
+      "max": 2.22566819973,
+      "min": -2.11941874703,
+      "sign_stable": false
+    },
+    "matter": {
+      "abs_max": 2.877196754329,
+      "abs_min": 0.003854480461,
+      "axial_range": [
+        -0.071911347694,
+        -0.008035271105
+      ],
+      "beta_range": [
+        -0.044327254058,
+        0.040270576158
+      ],
+      "max": 2.877196754329,
+      "min": -2.726016947348,
+      "sign_stable": false
+    }
+  },
+  "accountable_author": "Douglas Ek",
+  "assembled_interval_contains_zero": true,
+  "baseline_N_span": 0.0,
+  "baseline_axially_constant": true,
+  "baseline_beta_span": 0.0,
+  "d": -0.029705191751,
+  "edge_can_eat_gap": true,
+  "ell0_baseline_vector": null,
+  "ell0_lives_inside_L_baseline": true,
+  "ell0_matter_change_exact": [
+    0.0,
+    0.0
+  ],
+  "existence_tolerance": 3e-11,
+  "geometry_killed": false,
+  "input_hashes": {
+    "results/development/nsc-incoming-surface-regular-branch.json": "d8eaad5e96dd93f0790bd1d0b8494633ff1c3fdb86606ff5a371905ad633d3d4",
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-n16-leftover-identification.json": "3e1489c51763b379ad16d451227c77d6016f2edf05ec4fbc40e3a336181d4e37"
+  },
+  "locked_current_identified": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "schema": "NSC-KS-N16-GEOMETRY-KILLING-CURRENT-v1",
+  "scope": {
+    "failed_optimization_is_not_NONEXISTENCE": true,
+    "leftover_v_dot_E_not_reused": true,
+    "metric_timestep": false,
+    "missing_tail_blocks_gap": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_local_gate": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-ks-n16-geometry-killing-current.md": "d4d46220ed0d6e26fe7f91b4b02930a227dd8a34670078669ea9bb0e4fa16ae0",
+    "scripts/derive_nsc_ks_n16_geometry_killing_current.py": "b1f65585bd422a6e45e4695f6d301477b0e8f8784968b865d595e6e0886c0b6a"
+  },
+  "status": "OPEN: L(E) is not a locked P_K-style current; no scoped NON-EXISTENCE certificate",
+  "unenclosed_edge_tail": null,
+  "walk": [
+    {
+      "abs_max": 0.583049365175,
+      "abs_min": 0.015279281642,
+      "max": 0.583049365175,
+      "min": -0.549720576874,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-trial.json",
+      "profile_identity": "ee033df12b7a5f91e1c97d2e0674ee6cba5a705e6a6a7aff5fed648e31cee645",
+      "sign_stable": false
+    },
+    {
+      "abs_max": 0.552076453706,
+      "abs_min": 0.01519801587,
+      "max": 0.552076453706,
+      "min": -0.520526168779,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate.json",
+      "profile_identity": "b96830024bfdb6ed982c231dbc41fb96a5c7f04d8c93673e343695f8633fa444",
+      "sign_stable": false
+    },
+    {
+      "abs_max": 0.521103514801,
+      "abs_min": 0.01511675123,
+      "max": 0.521103514801,
+      "min": -0.4913317349,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate2.json",
+      "profile_identity": "b40c5f5228b455f61fc3d25e09c1379c5b1c95287da1aecb824bb2bb88be2922",
+      "sign_stable": false
+    },
+    {
+      "abs_max": 0.490130557178,
+      "abs_min": 0.015035487922,
+      "max": 0.490130557178,
+      "min": -0.462137283431,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate3.json",
+      "profile_identity": "045a3ab26eb7ff85ca40772ca1aaeb7e0ae6a02fa4b51f25386e036521c177d0",
+      "sign_stable": false
+    },
+    {
+      "abs_max": 0.459157590765,
+      "abs_min": 0.014954226158,
+      "max": 0.459157590765,
+      "min": -0.432942823721,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json",
+      "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+      "sign_stable": false
+    }
+  ],
+  "walk_L_max": 0.583049365175,
+  "walk_L_min": -0.549720576874,
+  "walk_sign_stable": false
+}

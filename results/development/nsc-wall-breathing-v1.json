@@ -1,0 +1,93 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "fall_epochs": 6,
+  "input_sha256": {
+    "lab/results/development/nsc-interior-station-balance-v1.json": "dcc64b64536b45e42713a2448d5d770158b94832dad49d97c40fce45263d26d1",
+    "lab/results/development/nsc-wall-window-join-v1.json": "a7c1c9660454d7e74e862e4436fbbd80a45502abb903d64db74d97615cd6dcd4"
+  },
+  "mean_fall_rate": -0.24163515326435184,
+  "mean_rise_rate": 0.13066197176516564,
+  "notes": [
+    "rates use adjacent WALL epochs only; the t=2.5..5.5 gap has no wall and is not interpolated"
+  ],
+  "production_trajectory": false,
+  "radial_range": [
+    0.9707725235796543,
+    1.5345878811964522
+  ],
+  "radius_inflow_lagged_corr": [
+    0.7916052716642047,
+    12
+  ],
+  "radius_inflow_same_corr": [
+    0.7930886841036244,
+    12
+  ],
+  "reading": "the wall peaks near t=7.5-8.0 at ~1.53 r_+ and sinks toward 0.97 r_+ by t=10; rates are in horizon units per coordinate t",
+  "rise_epochs": 5,
+  "schema": "NSC-WALL-BREATHING-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_breathing.py": "0e928733769f3a9f533aa5c6a6db1b8c4913362710adc921fe46dd044fd8d7c9",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "velocities": [
+    {
+      "from_t": 1.9999999999998899,
+      "to_t": 2.499999999999835,
+      "velocity_in_horizon_units_per_t": -0.32218020435249123
+    },
+    {
+      "from_t": 2.499999999999835,
+      "to_t": 5.499999999999638,
+      "velocity_in_horizon_units_per_t": 0.008949450120902125
+    },
+    {
+      "from_t": 5.499999999999638,
+      "to_t": 5.999999999999627,
+      "velocity_in_horizon_units_per_t": 0.3221802043524631
+    },
+    {
+      "from_t": 5.999999999999627,
+      "to_t": 6.499999999999616,
+      "velocity_in_horizon_units_per_t": 0.1610901021762311
+    },
+    {
+      "from_t": 6.499999999999616,
+      "to_t": 6.999999999999606,
+      "velocity_in_horizon_units_per_t": 0.10739340145082117
+    },
+    {
+      "from_t": 6.999999999999606,
+      "to_t": 7.499999999999595,
+      "velocity_in_horizon_units_per_t": 0.05369670072541081
+    },
+    {
+      "from_t": 7.499999999999595,
+      "to_t": 7.999999999999584,
+      "velocity_in_horizon_units_per_t": 0.0
+    },
+    {
+      "from_t": 7.999999999999584,
+      "to_t": 8.499999999999574,
+      "velocity_in_horizon_units_per_t": -0.05369670072541081
+    },
+    {
+      "from_t": 8.499999999999574,
+      "to_t": 8.999999999999563,
+      "velocity_in_horizon_units_per_t": -0.16109010217623154
+    },
+    {
+      "from_t": 8.999999999999563,
+      "to_t": 9.499999999999552,
+      "velocity_in_horizon_units_per_t": -0.37587690507787297
+    },
+    {
+      "from_t": 9.499999999999552,
+      "to_t": 9.999999999999542,
+      "velocity_in_horizon_units_per_t": -0.5369670072541045
+    }
+  ],
+  "wall_epochs": 12
+}

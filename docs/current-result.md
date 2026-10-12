@@ -1,8 +1,10 @@
 # What the calculations show
 
+Current presentation, 12 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
 ## Exterior-first atlas, 10 October 2026
 
-The [sixth atlas](../lab/docs/nsc-cosmological-atlas-v6.md) adds an explicit
+The [sixth atlas](nsc-cosmological-atlas-v6.md) adds an explicit
 classical field and initial-boundary state to the earlier causal map. A
 massless conformal scalar in the spherical mode crosses the fixed wall with
 its curvature-induced jump included. For the reduced field R phi the shell
@@ -15,8 +17,8 @@ The exact conditional relation phi_C[T(tau_W)]=I(tau_W)/T'(tau_W) gives a
 finite central waveform, with the same clock map controlling duration and
 amplitude. The compact pulse is fixed in wall proper time around R/ell=0.5,
 with half-width 0.03ell. The
-[waveform figure](../lab/results/development/nsc-cosmological-atlas-v6/field-response.png)
-and [field record](../lab/results/development/nsc-cosmological-atlas-v6/field-transfer.json)
+[waveform figure](../results/development/nsc-cosmological-atlas-v6/field-response.png)
+and [field record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
 record its input, received support and independent checks. The central field
 returns to zero after this pulse through the chosen t_C=0 observation limit.
 Zero incoming trace outside the pulse is part of the state specification;
@@ -30,12 +32,12 @@ Local spherical regions need not form a globally spherical multi-hole parent.
 All v1-v5 evidence stays frozen, with the multiple-daughter, communicating-mouth,
 minimally coupled scalar and exterior-state routes still open.
 
-The [fifth atlas](../lab/docs/nsc-cosmological-atlas-v5.md) supplies a causal map
+The [fifth atlas](nsc-cosmological-atlas-v5.md) supplies a causal map
 around the central interior observer, using the published isolated completion
 of the fixed de Sitter/Schwarzschild wall. Its
-[spacetime diagram](../lab/results/development/nsc-cosmological-atlas-v5/spacetime.png)
+[spacetime diagram](../results/development/nsc-cosmological-atlas-v5/spacetime.png)
 matches interior and parent charts through the same wall events. The
-[observer access table](../lab/results/development/nsc-cosmological-atlas-v5/observer-access.md)
+[observer access table](../results/development/nsc-cosmological-atlas-v5/observer-access.md)
 uses separate central, wall and static-parent proper clocks.
 
 Earlier centre-to-wall, wall-to-centre and centre-to-parent geometric light
@@ -59,7 +61,7 @@ still need their own causal channels. All v1-v4 evidence stays frozen; the v5
 calculation applies known junction and causality mathematics rather than
 claiming a new spacetime classification.
 
-The [fourth atlas](../lab/docs/nsc-cosmological-atlas-v4.md) supplies one explicit
+The [fourth atlas](nsc-cosmological-atlas-v4.md) supplies one explicit
 sourced initial slice: a regular flat de Sitter cap, the fixed-tension v3 wall,
 a vacuum Schwarzschild slicing transition, a regular bridge and an exact AE
 end. Bulk constraints and shell energy/momentum jumps pass; independent metric
@@ -72,7 +74,7 @@ initial-data existence family for body A, M_A/ell=0.4, and an ordinary vacuum
 Schwarzschild body B, M_B/ell=0.6. B's other end remains: two total AE ends, one
 designated common parent end. B has no established cosmological child. The
 connector metric and numerical separation threshold are not supplied, and the
-[v2 Brill-Lindquist slice](../lab/docs/nsc-cosmological-atlas-v2.md) is unchanged.
+[v2 Brill-Lindquist slice](nsc-cosmological-atlas-v2.md) is unchanged.
 
 For an assembly retaining A's right vacuum data through R_cut/ell=4 and an open
 overlap, a static observer at R_obs/ell=1.6 sees the same local vacuum geometry
@@ -82,7 +84,7 @@ demonstrated geometric degeneracy, not an arrival prediction or shared cosmic
 age. Field and quantum states require their own initial data.
 
 The [illustrated manuscript v4](../paper/atlas-working-draft-v4.md) and
-[source-bound records](../lab/results/development/nsc-cosmological-atlas-v4/narrative.md)
+[source-bound records](../results/development/nsc-cosmological-atlas-v4/narrative.md)
 develop the connection and its limits. Formation, global shell evolution and
 stability remain open. The v3 conservation obstruction for a moving
 radiation/fixed-tension/vacuum pairing and the independent branching, mouth and
@@ -92,14 +94,14 @@ a new-to-world mechanism claim.
 
 The active objective is to map possible parent regions, black-hole transitions,
 children, siblings and descendants, then investigate their local consequences.
-The [finite atlas](../lab/docs/nsc-cosmological-atlas.md) records four distinct
+The [finite atlas](nsc-cosmological-atlas.md) records four distinct
 connections: descent, attachment, causal influence and correlation. Its first
 map has two separated black-hole interfaces, unequal possible children and a
 further generation. A separate scenario imports multiple daughters from one
 hole. These are conditional constructions; the missing physical junctions,
 sources and clock conversions stay visible.
 
-The [research inventory](../lab/docs/research-inventory.md) includes both
+The [research inventory](research-inventory.md) includes both
 worktrees, child-and-neck research and charged, influence, constants and clock
 investigations. File discovery is distinguished from verification of a
 derivation. Saved evidence and stopped campaigns retain their historical roles.
@@ -149,8 +151,8 @@ width $2$.
 The driver, episode note and driver tests now include
 `sat_norm_ledger` with twice the raw SAT coefficient. The saved
 paired run is archived at
-[rn-first-infall-pilot-2026-10-04](../lab/archive/rn-first-infall-pilot-2026-10-04/)
-with [receipt.json](../lab/archive/rn-first-infall-pilot-2026-10-04/receipt.json),
+[rn-first-infall-pilot-2026-10-04](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/)
+with [receipt.json](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/receipt.json),
 sha256 `e3e8226f7d748ea0a62068c4efa37a7ec9e3d5ff6bd3f4923a9536dd4d77f130`.
 The wrapper `nsc_rn_pilot_march.py` is
 `ef45c5eba4c66f922be0ec04159f208861e5e5e7299d319ce8dd10ea8483ee47`.
@@ -169,7 +171,7 @@ driver command `--assess-archive` reads the rank-$9$ directory and
 takes no time step. The official writer then returned `existing
 outputs are sealed` and wrote no bytes. The accepted body is the
 creation-only file
-[nsc-rn-pilot-assessment-v1.json](../lab/results/development/nsc-rn-pilot-assessment-v1.json),
+[nsc-rn-pilot-assessment-v1.json](../results/development/nsc-rn-pilot-assessment-v1.json),
 bound to frozen producer `64e2c36fa2bd0688dd02a0b1bcda714c4767c294`
 after the prior code commit. That commit is not the live source now
 being edited, and the raw JSON is left as written. Over $41$ frames,
@@ -189,7 +191,7 @@ bulk, and the full source vacuum departure peaks at $0.001525$ at
 $t=7.75$.
 
 The finite continuation from that archived $t=10$ frame is
-[nsc-rn-neutral-continuation-v1](../lab/results/development/nsc-rn-neutral-continuation-v1/summary.json).
+[nsc-rn-neutral-continuation-v1](../results/development/nsc-rn-neutral-continuation-v1/summary.json).
 Its handoff payload is `t10.0000.npz`, sha256
 `7586472db0e6a29d2b4dea6a02429bf5c2c28cecc6812f735e02647bc134ef74`.
 The run uses $\mu=1.04$, $\varepsilon=0.001$, rank $9$ and
@@ -221,7 +223,7 @@ backend choice. It is not a continuum validation and not new physics.
 The writer now allows a new development file and still refuses the
 archive, historical results, and any existing output. The current
 reproducible assessment is
-[nsc-rn-pilot-assessment-v2.json](../lab/results/development/nsc-rn-pilot-assessment-v2.json),
+[nsc-rn-pilot-assessment-v2.json](../results/development/nsc-rn-pilot-assessment-v2.json),
 sha256 `a60f369f21bddacb991489848a581a4172f744eed3718d0ee5f7450109bc12e2`,
 $78054$ bytes, $41$ authenticated frames, CPU $1.013725$ seconds.
 Its producing commit is
@@ -239,7 +241,7 @@ physical results are not claimed.
 
 ### RN pressure diagnostics: semantic correction, 10 October 2026
 
-The [owning note](../lab/docs/nsc-rn-gradient-bubble.md) corrects the
+The [owning note](nsc-rn-gradient-bubble.md) corrects the
 interpretation of the recorded radial and transverse orthonormal pressures.
 Their equal-magnitude crossings and local logarithmic slopes remain finite
 state diagnostics. They do not establish opposing parent/child forces,
@@ -263,7 +265,7 @@ establish the centre's limit. Even reaching an RN inner horizon $r_->0$
 would not establish regularity at $r=0$; curvature, stress and extendibility
 of the proposed central geometry require their own checks.
 
-The retained [v5 record](../lab/results/development/nsc-rn-gradient-bubble-v5.json)
+The retained [v5 record](../results/development/nsc-rn-gradient-bubble-v5.json)
 also contains the stencil audit. Exact rational weights agree with the
 recorded coefficients to $5.1\times10^{-16}$ across 120 audited stencils;
 the earlier polynomial-moment guard was ill-conditioned. That numerical
@@ -271,7 +273,7 @@ correction does not validate the withdrawn physical interpretations. The
 six-case numerical family stopped without a summary in any case; two cases
 stopped at $t=8$ without a failure record.
 
-The [two-worktree audit](../lab/docs/research-inventory.md) also identifies a
+The [two-worktree audit](research-inventory.md) also identifies a
 different clock error in the unmerged charged/influence extensions. Their
 claimed radial infall quadrature uses $1/(1+\sqrt f)$, while their own PG
 reference uses $\beta=\sqrt{1-f}$ and inward radial null coordinate speed
@@ -295,16 +297,16 @@ branch is a later experiment. The MMP negative-Casimir study runs in
 parallel and leaves the classical throat unblocked.
 
 Registered owners are
-[nsc_rn_reference](../lab/docs/nsc-rn-reference.md),
+[nsc_rn_reference](nsc-rn-reference.md),
 `nsc_rn_pg`, `nsc_rn_source`,
-[nsc_rn_observables](../lab/src/recursive_horizons/nsc_rn_observables.py)
-and [derive_nsc_rn_parent](../lab/scripts/derive_nsc_rn_parent.py).
+[nsc_rn_observables](../src/recursive_horizons/nsc_rn_observables.py)
+and [derive_nsc_rn_parent](../scripts/derive_nsc_rn_parent.py).
 The episode note is
-[nsc-rn-parent-episode.md](../lab/docs/nsc-rn-parent-episode.md).
+[nsc-rn-parent-episode.md](nsc-rn-parent-episode.md).
 The later charged branch is
-[nsc-rn-charged-source.md](../lab/docs/nsc-rn-charged-source.md).
+[nsc-rn-charged-source.md](nsc-rn-charged-source.md).
 The parallel MMP study is
-[nsc-rn-mmp-source-study.md](../lab/docs/nsc-rn-mmp-source-study.md).
+[nsc-rn-mmp-source-study.md](nsc-rn-mmp-source-study.md).
 Root freezes completed producer files at integration.
 
 The historical parent's bounded $n_f=256$ confirmation is recorded by
@@ -315,8 +317,8 @@ $0.0004291836505783686$ beside the NF128 effect $0.0004292078493$.
 Total child content is $0.0028419435306693414$ beside $0.0028420021143$.
 Child proper length is $0.004767169795066806$ beside $0.0047672394727$.
 CPU time is $140.664864$ seconds. The record is
-[confirmation.json](../lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json)
-and [confirmation.npz](../lab/results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz).
+[confirmation.json](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json)
+and [confirmation.npz](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz).
 The payload is $128332$ bytes,
 `32c2b22dd5f95ce6b9bb51c9ee865be6a4465b9c28bc6acbd0147b9d99dac1ef`.
 Eight input hashes and forty-two producer hashes match the current
@@ -337,12 +339,12 @@ The
 [2 October discovery programme](#active-discovery-programme-2-october-2026)
 remains preserved from `ea6c699`. The incoming gate stays paused.
 
-Owners are the [preparation](../lab/docs/nsc-discovery-parent.md),
-[episode](../lab/docs/nsc-discovery-parent-episode.md),
-[observer](../lab/docs/nsc-discovery-regions.md#leading-parent-observer),
-[response](../lab/docs/nsc-discovery-parent-response.md),
-[step control](../lab/docs/nsc-discovery-parent-step-control.md)
-and [Dirac contact](../lab/docs/nsc-discovery-dirac-contact.md).
+Owners are the [preparation](nsc-discovery-parent.md),
+[episode](nsc-discovery-parent-episode.md),
+[observer](nsc-discovery-regions.md#leading-parent-observer),
+[response](nsc-discovery-parent-response.md),
+[step control](nsc-discovery-parent-step-control.md)
+and [Dirac contact](nsc-discovery-dirac-contact.md).
 The response adapter remains one admitted step.
 
 The magnetic branch replaces the retained initial radius by
@@ -355,16 +357,16 @@ $k^*=4g/(3r_{\mathrm{mag}})\sqrt{(\int\rho^2/Q)/(\int Q)}=0.002621213673327129$.
 
 That choice is an initial condition, not a dynamical law.
 Producer `4392350e` records it in
-[feasibility-magnetic-v5](../lab/results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json).
+[feasibility-magnetic-v5](../results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json).
 The $n_f=64$ and $n_f=128$ solves meet the retained momentum, hard anchor
 and CAR conditions with no fallback. Their physical radial-rate maxima are
 $0.1173$ and $0.11632$. The $n_f=256$ initial confirmation is valid, and its
 curvature comparison is less settled. The six source records and selection
 ledger are
-[six-magnetic-nf128-v1](../lab/results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json).
+[six-magnetic-nf128-v1](../results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json).
 
 The episode
-[parent-episode-magnetic-t3-v1](../lab/results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json)
+[parent-episode-magnetic-t3-v1](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json)
 is pinned at `8c47d0c17fa5962f1d2210f55db3a96c6457a82e`. All six cases run
 continuously through $T=1$ and $T=3$, use $186.65$ CPU, and record no resets
 or clamps. CHECK passed on that commit. The manifest's top-level pure and
@@ -383,7 +385,7 @@ and about $0.251$ at $T=2.25$. At $T=3$ that child content is $99.41\%$
 not shown to be outgoing child recycling.
 
 The balanced confirmation
-[nf256-balanced-v1](../lab/results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json)
+[nf256-balanced-v1](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json)
 uses $49.42$ CPU. Child fraction moves from $0.059278$ to $0.059058$, child
 length from $0.016201316$ to $0.016201667$, and centre proper time from
 $1.4723228$ to $1.4722193$. Depletion and contraction remain. Global $R_4$
@@ -398,10 +400,10 @@ $\Delta E=+0.01565$, with boundary $-0.04919$, pressure $+0.06382$ and
 lapse $+0.00099$. The time-quadrature indicator is $0.19\%$.
 
 Completed controls, measured from the saved arrays, are
-[frozen parent-heavy](../lab/results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json),
-[weak-$k$ empty source](../lab/results/development/nsc-discovery-parent-empty-source-v1/manifest.json),
-[strong $T=1$](../lab/results/development/nsc-discovery-parent-strong-t1-v1/manifest.json)
-and [strong $T=3$](../lab/results/development/nsc-discovery-parent-strong-t3-v1/manifest.json).
+[frozen parent-heavy](../results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json),
+[weak-$k$ empty source](../results/development/nsc-discovery-parent-empty-source-v1/manifest.json),
+[strong $T=1$](../results/development/nsc-discovery-parent-strong-t1-v1/manifest.json)
+and [strong $T=3$](../results/development/nsc-discovery-parent-strong-t3-v1/manifest.json).
 The strong-$T=3$ record is pinned at `cc238577`. The authoritative weak
 offset is $k=0.002621213673327129$ and the strong offset is
 $k=0.45388971484879426$. The legacy episode label `common_k` near
@@ -413,9 +415,9 @@ at $T=3$. The plus case at $T=3$ has length $0.00053105$ and fraction
 $0.059670$. The early length is an expansion transient. Renewal is not
 demonstrated. Intermediate strong-$T=3$ observation headers still carry
 the $T=1$ text, so these values are the array measurements. The
-[array-authenticated assessment](../lab/results/development/nsc-discovery-parent-responsive-assessment-v1.json)
+[array-authenticated assessment](../results/development/nsc-discovery-parent-responsive-assessment-v1.json)
 reconstructs the measurements without rewriting those headers. The
-[assessment successor](../lab/results/development/nsc-discovery-parent-episode-assessment-v2.json)
+[assessment successor](../results/development/nsc-discovery-parent-episode-assessment-v2.json)
 preserves the earlier measurements and binds the current consumer bytes.
 
 Frozen parent-heavy child fraction at $T=2.25$ is $0.33464$, against
@@ -424,11 +426,11 @@ weak $k$ has child length $0.01633475$ at $T=3$, against $0.0162013$ for
 the coupled balanced case. These comparisons separate transport, geometric
 clocks and background. They are not a universal verdict.
 
-The [matched strong-$k$ empty-source control](../lab/results/development/nsc-discovery-parent-strong-empty-k-v1/manifest.json)
+The [matched strong-$k$ empty-source control](../results/development/nsc-discovery-parent-strong-empty-k-v1/manifest.json)
 reaches $T=3$ on both signs at producer `5ce6bd02`, using $33.805365$
 aggregate CPU seconds. Both preparations preserve the actual offset and
 initial $Q,r$, and solve their own empty-source momentum constraints.
-The [matched-clock assessment](../lab/results/development/nsc-discovery-parent-strong-controls-v1.json)
+The [matched-clock assessment](../results/development/nsc-discovery-parent-strong-controls-v1.json)
 authenticates those states and reuses the frozen field columns by exact
 occupation reweighting, with no additional field integration.
 
@@ -440,15 +442,15 @@ $0.00037945$, rather than an interpolation bound. Late minus clocks
 exceed the saved control ranges and are not extrapolated. These results
 separate geometric response from maintained child content; the source
 changes the history without establishing renewal in this preparation.
-The [owning comparison note](../lab/docs/nsc-discovery-parent-strong-controls.md)
+The [owning comparison note](nsc-discovery-parent-strong-controls.md)
 records the remaining constraint, curvature and interpolation limits.
 
 Checkpoint summaries are repaired for new records at `5ce6bd02`; old
 records stay unchanged. The completed exterior-population response is
-the [cut-response batch](../lab/results/development/nsc-discovery-parent-cut-response-v1/prepare.json)
+the [cut-response batch](../results/development/nsc-discovery-parent-cut-response-v1/prepare.json)
 at producer `7004a791`, assessed in
-[nsc-discovery-parent-cut-assessment-v1.json](../lab/results/development/nsc-discovery-parent-cut-assessment-v1.json)
-and [its note](../lab/docs/nsc-discovery-parent-cut-assessment.md).
+[nsc-discovery-parent-cut-assessment-v1.json](../results/development/nsc-discovery-parent-cut-assessment-v1.json)
+and [its note](nsc-discovery-parent-cut-assessment.md).
 At the matched centre clock $\tau=2.8568786296681035$, with
 $k=0.45388971484879426$, fixed $c_0$ and the authenticated initial
 $Q$, $r$ and $\Phi$, a $+5\%$ parent occupation changes original
@@ -468,15 +470,15 @@ reduction is not substituted for it. Earlier papers and the paused
 incoming gate stay preserved.
 
 Earlier preparations stay in their own records:
-[first pilot](../lab/results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json),
-[hard-anchor v2](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json)
+[first pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json),
+[hard-anchor v2](../results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-v2/pilot.json)
 and
-[width-1.4 hard anchor](../lab/results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json).
+[width-1.4 hard anchor](../results/development/nsc-discovery-parent-v1/feasibility-hard-anchor-splice1p4-v3/pilot.json).
 The original $n_f=128$ convergence flag remains invalid there.
-[Dirac contact](../lab/results/development/nsc-discovery-dirac-contact-v1.json)
+[Dirac contact](../results/development/nsc-discovery-dirac-contact-v1.json)
 remains the off-shell mean-versus-connected reference.
 The contour binding
-[nsc-discovery-regions-v2-binding.json](../lab/results/development/nsc-discovery-regions-v2-binding.json)
+[nsc-discovery-regions-v2-binding.json](../results/development/nsc-discovery-regions-v2-binding.json)
 stays pinned at `4f3d5fc`.
 
 <a id="active-discovery-programme-2-october-2026"></a>
@@ -495,10 +497,10 @@ stability diagnostics and a coupled-response specification. Its first
 scientific batch continued the saved $T=0.3$ states through $T=1,3$ with
 matched controls. Its measured outcome is recorded below.
 
-Implementation owners are the [episode runner](../lab/docs/nsc-discovery-episode.md),
-[physical observer](../lab/docs/nsc-discovery-observables.md),
-[coupled response](../lab/docs/nsc-discovery-response.md), and
-[FFT adapter](../lab/src/recursive_horizons/nsc_discovery_backend.py).
+Implementation owners are the [episode runner](nsc-discovery-episode.md),
+[physical observer](nsc-discovery-observables.md),
+[coupled response](nsc-discovery-response.md), and
+[FFT adapter](../src/recursive_horizons/nsc_discovery_backend.py).
 The integration review corrected work/flux measure and frozen-control
 jet defects in the new observer. Dense/FFT, ledger, frozen-control and
 analytic directional-response checks pass. The pinned one-thread FFT
@@ -517,7 +519,7 @@ discovery chain; the existing papers and release remain preserved.
 ### First discovery continuation
 
 All six cases reached $T=3$, using 277.186 aggregate child CPU seconds.
-The [campaign](../lab/results/development/nsc-discovery-episode-v1/manifest.json)
+The [campaign](../results/development/nsc-discovery-episode-v1/manifest.json)
 retains immutable station states and the exact $T=0.3$ hand-off. At
 $n_f=256$, half-step coupled evolution gives:
 
@@ -535,7 +537,7 @@ by about 28 percent, whereas the child length changes by about 0.046 percent.
 An independent full-rate analytic acceleration agrees with the existing
 curvature helper; the discrepancy amplifies finite-band jet differences
 when $Q$ becomes small. The selected
-[$n_f=512$ confirmation](../lab/results/development/nsc-discovery-confirmation-v1/manifest.json)
+[$n_f=512$ confirmation](../results/development/nsc-discovery-confirmation-v1/manifest.json)
 also reaches $T=3$; its Weyl maximum differs from $256$ by about 0.08 percent.
 Four-metric tidal measurements provide the observer-defined readout of this
 growth. The frozen
@@ -544,7 +546,7 @@ are not equal-proper-time comparisons.
 
 ### Withheld exterior-source prediction
 
-The [prediction record](../lab/results/development/nsc-discovery-prediction-v1/prediction-run.json)
+The [prediction record](../results/development/nsc-discovery-prediction-v1/prediction-run.json)
 propagates the full state–geometry tangent from the same source-consistent
 initial preparation and compares independent nonlinear cases at equal
 proper time. The middle occupations remain $0.5,0.5$; exterior occupations
@@ -562,7 +564,7 @@ the prediction's linear clock correction to the measured value.
 
 ### Source-family outcome and the remaining preparation assumption
 
-The [15-member source study](../lab/results/development/nsc-discovery-family-v1/source-family.json)
+The [15-member source study](../results/development/nsc-discovery-family-v1/source-family.json)
 varies five occupation imbalances and three packet widths, solving each
 member's own initial radius. Fourteen members reach $T=3$; all show radial
 contraction, areal expansion, and loss of the original child packet from
@@ -577,11 +579,11 @@ momenta. They test a family of instantaneous constraint-adjusted slices,
 not source-selected holding geometries. Width comparisons also change the
 prepared measurement window. Confirmation therefore includes a common
 fixed child window, selected finer cases and their own frozen-geometry
-controls. The [external run binding](../lab/results/development/nsc-discovery-family-v1/observed-run-binding.json)
+controls. The [external run binding](../results/development/nsc-discovery-family-v1/observed-run-binding.json)
 authenticates the frozen `c4a22e5` producer and completed artifacts without
 rewriting their original records. Total measured family CPU is 732.65 seconds.
 
-The [finer successor](../lab/results/development/nsc-discovery-family-v2/source-family.json)
+The [finer successor](../results/development/nsc-discovery-family-v2/source-family.json)
 solves all five selected sources, including that formerly unresolved member,
 and evolves them with three own-source frozen controls to $T=3$. Its total
 measured CPU is 620.11 seconds. All selected coupled preparations share the
@@ -595,22 +597,22 @@ failure remains preserved in its original record.
 
 The next balance query uses the actual retained spectrum to prepare a
 stationary source while leaving the geometric means free.
-[Static source-selected control](../lab/docs/nsc-discovery-stationary.md).
-The [source-free control](../lab/docs/nsc-discovery-vacuum-control.md) provides
+[Static source-selected control](nsc-discovery-stationary.md).
+The [source-free control](nsc-discovery-vacuum-control.md) provides
 an exact same-action comparison with constant areal radius and tidal curvature
 despite contracting radial proper lengths. The
-[translation control](../lab/docs/nsc-discovery-translation.md) moves the
+[translation control](nsc-discovery-translation.md) moves the
 complete state, geometry, observers and clocks across the periodic seam;
 it does not replace a future ambient-extent comparison.
 
-The [exact source-free record](../lab/results/development/nsc-discovery-vacuum-control-v1/record.json)
+The [exact source-free record](../results/development/nsc-discovery-vacuum-control-v1/record.json)
 reproduces constant areal radius and bounded tidal invariants while $Q$ and
 proper lengths contract. The
-[seam translation record](../lab/results/development/nsc-discovery-translation-v1/translation-shift5.5.json)
+[seam translation record](../results/development/nsc-discovery-translation-v1/translation-shift5.5.json)
 passes after moving the complete field, geometry and observer across the seam.
 Both are finite controls of the implemented action.
 
-The [first static spectral-source attempt](../lab/results/development/nsc-discovery-stationary-v1.json)
+The [first static spectral-source attempt](../results/development/nsc-discovery-stationary-v1.json)
 preserves its best finite iterate after 1,000 optimizer evaluations and
 101.68 CPU seconds. The radial seed satisfies its own equation, but the
 remaining $\dot p_Q$ and lapse residual maxima are 3.87 and 5.79.
@@ -618,7 +620,7 @@ The unsatisfied coupled balance is retained; the optimizer stop does not
 exclude the declared static class. Subsequent seed selection uses an
 integrated action balance rather than repeating that Jacobian search.
 
-The next [grandchild experiment](../lab/docs/nsc-discovery-grandchild.md)
+The next [grandchild experiment](nsc-discovery-grandchild.md)
 starts from the transported equal-proper-time state, retains nested observer
 details and the ambient response, and locks a forecast before generating
 the withheld future local measurement. Its physical regional readout is
@@ -626,7 +628,7 @@ separate from its modal observer covariance.
 
 ### First carrier circuit and the choice of the next local measurement
 
-All six unchanged [continuations](../lab/results/development/nsc-discovery-crossing-v1/manifest.json)
+All six unchanged [continuations](../results/development/nsc-discovery-crossing-v1/manifest.json)
 reach $T=8$ using 431.73 aggregate child CPU seconds. The fine half-step child
 probability returns to 0.999687; its frozen control reaches 0.994718.
 The coupled child proper length is $9.14\times10^{-13}$, while the frozen
@@ -637,36 +639,36 @@ initial constraint preparation on a longer domain.
 
 Actual radial and angular tidal components survive the spatial and timestep
 comparisons; cancellation-sensitive $R_h$ and contracted Weyl channels do
-not. The [crossing assessment](../lab/scripts/assess_nsc_discovery_crossing.py)
+not. The [crossing assessment](../scripts/assess_nsc_discovery_crossing.py)
 keeps those verdicts separate and records the cadence gap after $T=5.8$.
 The clock at $x=2$ reaches 1.3521155, advancing only about $1.27\times10^{-4}$
 between coordinate times three and eight.
 
-The [short grandchild record](../lab/results/development/nsc-discovery-grandchild-v1/nf256/measurement.json)
+The [short grandchild record](../results/development/nsc-discovery-grandchild-v1/nf256/measurement.json)
 preserves a locked forecast followed by an independent continuation. Its
 regional-content change is only $-1.68\times10^{-11}$; the linear prediction
 differs by about 5.12 percent of that tiny effect. This interval supplies
 too little regional response for a headline prediction. The successor moves
 the readout to $\Delta\tau=0.75$, near coordinate time one, rather than
 refining the early tail. The separate
-[width response](../lab/docs/nsc-discovery-width-response.md) changes the
+[width response](nsc-discovery-width-response.md) changes the
 physical preparation on the same chart and predicts a withheld width;
 it is not a coordinate rescaling or an assumed universal power law.
 
-The [later grandchild measurement](../lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.json)
+The [later grandchild measurement](../results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75/measurement.json)
 reaches the declared proper clock 1.10785546 from the transported opening
 state. Its locked linear prediction is $-0.000440453$ and the measured
 regional-content change is $-0.000450768$, a 2.29 percent remainder relative
 to the measured effect. Direct and sequential causal routes reconstruct the
 same field and covariance at numerical precision, on one shared generated
-geometry. The [numerical confirmation](../lab/results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75-confirm-v1/confirmation.json)
+geometry. The [numerical confirmation](../results/development/nsc-discovery-grandchild-v1/nf256-dtau0p75-confirm-v1/confirmation.json)
 uses 169.56 CPU seconds. Timestep halving moves the measured effect by
 0.000046 percent; the $128\to256$ spatial comparison moves it by 0.0773
 percent. Both indicators are much smaller than the prediction remainder.
 They do not bound the opening prefix or isolate finite-perturbation error.
 This is a measured inherited response, rather than a universal scaling law.
 
-The [physical width experiment](../lab/results/development/nsc-discovery-width-response-v1/measurement.json)
+The [physical width experiment](../results/development/nsc-discovery-width-response-v1/measurement.json)
 changes the source width from 1 to 1.05 with its own source-consistent radius
 and evaluates at the same proper clock. The measured change is $-0.0895641$,
 compared with the first-order forecast $-0.105968$. Their difference is about
@@ -675,14 +677,14 @@ indicators. The finite-width response needs a nonlinear prediction. The
 existing record remains a completed effect measurement and a limit of the
 linear approximation; spatial and timestep refinement remain unmeasured.
 
-The [nonlinear successor](../lab/results/development/nsc-discovery-width-response-nonlinear-v2/curvature-measurement.json)
+The [nonlinear successor](../results/development/nsc-discovery-width-response-nonlinear-v2/curvature-measurement.json)
 derives a second proper-clock response coefficient of 9.55010 from four
 neighboring preparations, without fitting the earlier width-1.05 result.
 For its new withheld width 1.03, the measured content change is
 $-0.0579681$. The linear discrepancy is 9.68 percent of that effect;
 the quadratic discrepancy is 2.27 percent. It uses 88.50 CPU seconds and
 preserves the earlier result. The subsequent
-[confirmation](../lab/results/development/nsc-discovery-width-response-confirmation-v1/confirmation-measurement.json)
+[confirmation](../results/development/nsc-discovery-width-response-confirmation-v1/confirmation-measurement.json)
 uses 53.16 CPU seconds. Timestep halving moves the effect by
 $3.83\times10^{-10}$; the spatial comparison moves it by about 0.992
 percent. The quadratic prediction remainder is about 2.27 percent; these
@@ -690,7 +692,7 @@ comparisons remain indicators rather than a continuum bound.
 
 ### Carrier dependence and an admissible dynamic preparation
 
-The [period-eight/twelve intervention](../lab/results/development/nsc-discovery-extent-v2/run.json)
+The [period-eight/twelve intervention](../results/development/nsc-discovery-extent-v2/run.json)
 continues the period-twelve state exactly after correcting a real periodic
 integration diagnostic. Tagged probability returns near time eight in the
 shorter carrier and near twelve in the longer one, in coupled and frozen
@@ -700,7 +702,7 @@ $1.80\times10^{-15}$. The changed initial radius/lapse is about twenty
 percent, so this is an ambient intervention with changed constraint
 preparation, rather than exact local Cauchy-data matching.
 
-The [saved-state free comparison](../lab/results/development/nsc-discovery-free-return-v1.json)
+The [saved-state free comparison](../results/development/nsc-discovery-free-return-v1.json)
 provides a mechanism for the coupled return. Exact antiperiodic free
 transport of the decoded $T=3$ columns reproduces the $T=8$ field to
 $2.98\times10^{-6}$ relative weighted error and the fixed-window probability
@@ -709,7 +711,7 @@ $\kappa\int\|Q\|_\infty dt$, without an exponential growth factor; that
 integral has not been bounded from the saved endpoint samples. This return
 is explained by carrier transport and does not establish renewed structure.
 
-The [general positive-radius preparation](../lab/results/development/nsc-discovery-dynamic-preparation-v1.json)
+The [general positive-radius preparation](../results/development/nsc-discovery-dynamic-preparation-v1.json)
 removes the constant-$Q$ initial-data restriction. With $\chi=0$, zero
 momenta and the actual positive standing field modes, both a patterned
 $Q$ and its uniform control solve the owned initial constraints. Retained
@@ -719,7 +721,7 @@ The calculation uses 0.139 CPU seconds. The $Q$ pattern remains a declared
 initial input; the radius is source-consistent, and subsequent motion must
 be generated by the existing coupled equations.
 
-The [Gaussian geometric influence](../lab/results/development/nsc-discovery-geometric-vertices-v1.json)
+The [Gaussian geometric influence](../results/development/nsc-discovery-geometric-vertices-v1.json)
 also has a nonzero connected third bilinear vertex,
 $\kappa_3=1.14989\times10^{-5}$, although elementary fields remain Gaussian.
 Its actual child/parent instantaneous response slope is $-0.0150914$.
@@ -729,11 +731,11 @@ it inserts no cubic interaction and identifies no cosmohedron equivalence.
 The representative-channel result does not yet determine total angular
 stress noise.
 
-The [action-balance selector](../lab/results/development/nsc-discovery-stationary-balance-seed-v2.json)
+The [action-balance selector](../results/development/nsc-discovery-stationary-balance-seed-v2.json)
 finds three curvature/source/flux-balanced shapes from 33 evaluations using
 2.16 CPU seconds. Harmonics 8, 10 and 12 select cosine amplitudes 0.16416,
 0.28722 and 0.34671. The local force and lapse equations remain unsatisfied.
-The [local-critical query](../lab/results/development/nsc-discovery-stationary-critical-v3.json)
+The [local-critical query](../results/development/nsc-discovery-stationary-critical-v3.json)
 then eliminates radial and auxiliary critical equations and tests the remaining
 shape force on a named CAR-admissible occupation branch. Its 600 evaluations
 use 31.26 CPU seconds and do not find a local critical state. The selected
@@ -743,9 +745,9 @@ the retained $p_Q$ force remains 32.96 and the full lapse residual 35.07.
 This is a noncompact, poorly conditioned search tendency, not a proof that
 all stationary or regenerative states are absent. That search stops here;
 a dynamic preparation must satisfy the initial constraints without also
-being a stationary solution. [Saved-array diagnostic](../lab/results/development/nsc-discovery-stationary-v2.json).
+being a stationary solution. [Saved-array diagnostic](../results/development/nsc-discovery-stationary-v2.json).
 
-The [independent limit assessment](../lab/results/development/nsc-discovery-stationary-limit-v1.json)
+The [independent limit assessment](../results/development/nsc-discovery-stationary-limit-v1.json)
 derives the escape analytically: the mean conformal scale is proportional to
 the vanishing shape amplitude, the areal radius is inversely proportional,
 and their product tends to 1.216734. The predicted occupation limit 1.218715
@@ -755,7 +757,7 @@ Einstein coefficient improves the affine arithmetic, while the actual local
 force remains unsatisfied. Neither numerical conditioning nor this limit
 is treated as a physical no-existence result.
 
-The [source-consistent wave episode](../lab/results/development/nsc-discovery-dynamic-episode-v1/manifest.json)
+The [source-consistent wave episode](../results/development/nsc-discovery-dynamic-episode-v1/manifest.json)
 reaches $T=3$ for all six matched cases using 159.25 CPU seconds. The coherent
 source changes child probability by 0.100012; the timestep comparison differs
 by $3.34\times10^{-14}$. Uniform and patterned stationary field preparations
@@ -763,7 +765,7 @@ retain their quarter-domain content. All three geometries contract radially
 and expand in areal radius in this initial sector; spatial confirmation has
 not been run.
 
-The [initial-sector control](../lab/docs/nsc-discovery-initial-sector.md)
+The [initial-sector control](nsc-discovery-initial-sector.md)
 tests a consequential preparation choice. Constant $Q$, $\chi=0$ and zero
 momenta force $\dot Q(0)=0$, $\ddot Q(0)=-Q^3$, regardless of the field source.
 An admissible initial expansion/contraction rate changes extrinsic data;
@@ -771,7 +773,7 @@ $\chi=-2$ instead changes the initial invariant curvature. These controls
 retain the same action, field source and observers and impose no rate after
 initial preparation.
 
-The [six initial-sector continuations](../lab/results/development/nsc-discovery-initial-sector-v1/manifest.json)
+The [six initial-sector continuations](../results/development/nsc-discovery-initial-sector-v1/manifest.json)
 reach $T=3$ using 178.86 CPU seconds. Initial radial expansion, initial
 contraction and the $\chi=-2$ control all end with smaller proper radial
 lengths and larger areal radii. The same uniform source stays uniform;
@@ -780,7 +782,7 @@ these controls do not demonstrate a localized holding region.
 The source also fixes a unique initial curvature when its initial auxiliary
 acceleration is required to vanish. This is a conditional preparation
 criterion, not a stationary-state or universal scale-selection law. The
-[balanced successor](../lab/results/development/nsc-discovery-initial-sector-balanced-v2/manifest.json)
+[balanced successor](../results/development/nsc-discovery-initial-sector-balanced-v2/manifest.json)
 tests that value and fixed $\pm1$ percent controls using 137.43 CPU seconds.
 The candidate contracts from child length 2.5497 to 0.0023929 by $T=3$.
 The lower-curvature control reaches the positive-radius chart edge near
@@ -792,7 +794,7 @@ nor exclude other action branches or nested constructions.
 
 ### Action-domain finding and the next coupled comparison
 
-The [constrained curvature assessment](../lab/results/development/nsc-discovery-curvature-sector-v1.json)
+The [constrained curvature assessment](../results/development/nsc-discovery-curvature-sector-v1.json)
 derives a nongauge extra mode from the owned local action, including both
 linearized constraints. On the proper-flat patch its dispersion is
 $\omega^2=k^2-m_*^2$, where $m_*^2=-A/(2C_W)=26.6667$.
@@ -800,14 +802,14 @@ Its extra pole has the opposite residue from the Einstein pole. The
 implementation and declared Lorentzian action agree; this is not a sign
 bug or an all-source instability theorem.
 
-The [existing curvature-EFT branch](../lab/docs/nsc-curvature-eft.md)
+The [existing curvature-EFT branch](nsc-curvature-eft.md)
 uses a perturbative local expansion without those extra initial data.
 Treating the local four-derivative truncation as an exact Cauchy theory
 therefore tests a different branch. Late tidal scales also leave the small
 curvature regime; raw two-dimensional $R_h$ must not be used as physical
 four-dimensional curvature in that check.
 
-The [physical-unit assessment](../lab/results/development/nsc-discovery-eft-domain-v1.json)
+The [physical-unit assessment](../results/development/nsc-discovery-eft-domain-v1.json)
 remeasures 24 saved checkpoints. For the uniform preparation,
 $|C_W|/A$ times the normal tidal scale rises from 0.00249 initially to
 0.4295 at $T=1$ and $4.05\times10^6$ at $T=3$. Patterned and coherent
@@ -817,7 +819,7 @@ $T=3$. Proper generator levels and the actual source-rate scale are reported
 separately; high retained field energies are not treated as a sharp cutoff
 failure by themselves.
 
-The [independent work control](../lab/results/development/nsc-discovery-spectral-work-v1/measurement.json)
+The [independent work control](../results/development/nsc-discovery-spectral-work-v1/measurement.json)
 seals an analytic forecast before imposing one uniform geometric pulse.
 The prepared full finite CAR state gives up $2.2678\times10^{-5}$ of
 energy, within 0.085 percent of the forecast. Transition-probability work
@@ -839,9 +841,9 @@ their declared numerical domain.
 
 ### Completed leading comparison and source-dependent energy transfer
 
-The [leading comparison](../lab/results/development/nsc-discovery-leading-einstein-v2/manifest.json)
+The [leading comparison](../results/development/nsc-discovery-leading-einstein-v2/manifest.json)
 reaches T=3 in all eight cases. The original raw reaction norm mixed canonical
-coordinate scales; the [numerical successor](../lab/docs/nsc-discovery-leading-step-control.md)
+coordinate scales; the [numerical successor](nsc-discovery-leading-step-control.md)
 changes only its timestep indicator, preserving the exact saved states and
 all equations. Parent and successor ledgers charge 470.46 CPU seconds together,
 within the original 600-second allowance.
@@ -863,7 +865,7 @@ with antimatter or a physical vacuum. The areal scale turns slightly while
 proper radial length continues to contract. Its source-history relation is
 the next locked prediction, rather than another bounce-rediscovery target.
 
-The [exact static virial](../lab/results/development/nsc-discovery-leading-virial-v1.json)
+The [exact static virial](../results/development/nsc-discovery-leading-virial-v1.json)
 excludes only the static positive-energy periodic leading class: source energy
 plus magnetic energy would have to vanish. On a finite region, the same action
 instead supplies an explicit exterior gradient/traction term. This identifies
@@ -872,7 +874,7 @@ oscillatory sectors, negative-energy states, or different boundary domains.
 
 ### Source-history-selected turn and independent forecast
 
-The [homogeneous record](../lab/results/development/nsc-discovery-homogeneous-turn-v1/prediction.json)
+The [homogeneous record](../results/development/nsc-discovery-homogeneous-turn-v1/prediction.json)
 derives an invariant 16-real-state sector of the same leading equations;
 it adds no force or law. Three momentum pairs and their spinors reproduce
 the stored uniform full-field trajectory. Field energy crosses zero at
@@ -891,10 +893,10 @@ antimatter or a physical filled-sea vacuum.
 
 A locked tangent forecast changes the paired occupations from
 (.75,.5,.25) to (.752,.5,.248), preserving trace three. The
-[independent full-NF32 measurement](../lab/results/development/nsc-discovery-homogeneous-turn-v1/measurement.json)
+[independent full-NF32 measurement](../results/development/nsc-discovery-homogeneous-turn-v1/measurement.json)
 finds radius 0.2827044098 against the forecast 0.2827040102, an error of
 0.152 percent of the predicted radius change. The original fine arm remains recorded at its CPU stop. The
-[exact-state confirmation](../lab/results/development/nsc-discovery-homogeneous-turn-confirmation-v1/confirmation.json)
+[exact-state confirmation](../results/development/nsc-discovery-homogeneous-turn-confirmation-v1/confirmation.json)
 resumes it without a source or radius reset, using 24.26 CPU seconds in a
 separate 35-second allowance. Its radius is 0.2827044110; timestep movement
 is $1.12\times10^{-9}$, or 0.00043 percent of the measured change. The
@@ -905,7 +907,7 @@ validity and physical vacuum matching remain open.
 
 ### Source-responsive collars and required parent gradients, 3 October 2026
 
-The [local collar calculation](../lab/docs/nsc-discovery-parent-traction.md)
+The [local collar calculation](nsc-discovery-parent-traction.md)
 uses the unchanged leading action with a real standing Dirac source on
 $|x|\le1$, with an inner measurement at $|x|\le0.5$. Its center constraint
 selects $r_0^2=\mathfrak m/g-Mw/(g\pi)$, $g=8\pi A$; the surrounding
@@ -915,7 +917,7 @@ occupation. The actual collar covariance eigenvalue is measured.
 
 Producer `b7aa5f5` seals the analytic first-order response before the new
 nonlinear weight $w=0.0013$ is evaluated. The
-[withheld measurement](../lab/results/development/nsc-discovery-parent-traction-v1/measurement.json)
+[withheld measurement](../results/development/nsc-discovery-parent-traction-v1/measurement.json)
 records:
 
 | Source-induced change | Measurement | First-order prediction remainder / effect |
@@ -937,7 +939,7 @@ within a 30-second allowance; read-only payload replay passes.
 The exterior must supply the derived metric gradients and a compatible
 continuation of the actual Dirac field. A globally normalized spectrum,
 complete physical parent and autonomous renewal are not established by this
-local branch. The [constraint continuation criterion](../lab/docs/nsc-discovery-parent-continuation.md)
+local branch. The [constraint continuation criterion](nsc-discovery-parent-continuation.md)
 derives when a smooth dynamical exterior can carry real, regular momenta
 without changing the leading action. Its nonnegative primitive and zero
 regularity conditions must be checked on a proposed extended source; an
@@ -946,7 +948,7 @@ or replacement roadmap is introduced.
 
 ### Coupled reduction with the same generated geometry
 
-The [causal reduction experiment](../lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json)
+The [causal reduction experiment](../results/development/nsc-discovery-coupled-memory-v1/manifest.json)
 continues the exact saved $T=0.3$ state to $T=1$. Its retained, exterior-drive
 and memory columns reconstruct the full field, including their cross terms,
 and supply the force that evolves the geometry. Independent full evolution
@@ -958,7 +960,7 @@ declared finite segment; the geometry is not prescribed to the reducer.
 
 ### Disjoint energy accounting and actual tidal growth
 
-The [stage-integrated ledger](../lab/results/development/nsc-discovery-balance-v1/coupled-T3.json)
+The [stage-integrated ledger](../results/development/nsc-discovery-balance-v1/coupled-T3.json)
 uses disjoint spatial regions and the actual four RK4 stages. At $n_f=512$
 on $[0.3,3]$, the child normal-energy change is $-5.42376$, comprising
 boundary transport $-1614.30749$, pressure work $+1665.94192$ and
@@ -969,7 +971,7 @@ The measured projection contribution is retained separately. Normal energy
 is signed in this sector; covariance admissibility does not establish a
 positive local-energy theorem.
 
-The [four-metric consumer](../lab/results/development/nsc-discovery-tidal-v1.json)
+The [four-metric consumer](../results/development/nsc-discovery-tidal-v1.json)
 computes tidal components from the evolved metric and its actual projected
 jets. At $x=2,T=3$, the radial and angular components are approximately
 $-5.24\times10^5$ and $5.63\times10^6$. The angular component changes by
@@ -980,13 +982,13 @@ future singularity nor a regenerative return.
 
 ## Completed finite parent–child pair, 2 October 2026
 
-The [v2 confirmation](../lab/results/development/nsc-nested-parent-child-confirmation-v2.json)
+The [v2 confirmation](../results/development/nsc-nested-parent-child-confirmation-v2.json)
 records `MEASURED_CONFIRMED_NESTED_PAIR`. A child collar $I_C=(1,3)$ lies
 inside $I_P=(0,4)$; independent parent and child canonical geometry components
 evolve as parts of one full metric under the same action. The inherited
 statement is the common functional law under the declared coordinate/clock
 pullbacks. Differing evolving profiles need not have identical instantaneous
-normalized spectra. [Method and domain](../lab/docs/nsc-nested-parent-child.md).
+normalized spectra. [Method and domain](nsc-nested-parent-child.md).
 
 All four reciprocal physical responses meet their one-percent numerical
 movement criterion through $T=0.3$:
@@ -1023,12 +1025,12 @@ source nor the generated geometry schedule.
 
 This completes the declared finite construction; numerical movements are
 refinement indicators, not continuum or total propagated state-error bounds.
-The sealed [v1 record](../lab/results/development/nsc-nested-parent-child-v1.json)
+The sealed [v1 record](../results/development/nsc-nested-parent-child-v1.json)
 keeps its original `INCOMPLETE` status and twelve trajectories. V2 closes its
-two named gaps without rewriting it. [Confirmation driver](../lab/scripts/derive_nsc_nested_parent_child_confirmation.py),
-[portable basis](../lab/results/development/nsc-nested-parent-child-replay-basis-v1.json),
-[independent replay](../lab/scripts/check_nsc_nested_parent_child_confirmation.py),
-and [figure](../lab/results/development/nsc-nested-parent-child-figure.png).
+two named gaps without rewriting it. [Confirmation driver](../scripts/derive_nsc_nested_parent_child_confirmation.py),
+[portable basis](../results/development/nsc-nested-parent-child-replay-basis-v1.json),
+[independent replay](../scripts/check_nsc_nested_parent_child_confirmation.py),
+and [figure](../results/development/nsc-nested-parent-child-figure.png).
 The completed article and release scopes below stay unchanged.
 
 ## Present spherical loop
@@ -1036,7 +1038,7 @@ The completed article and release scopes below stay unchanged.
 The conformal realization now measures the finite chain through $T=0.3$:
 source differences, surface exchange, geometric response, maintained
 localization, and a local response on the same generated trajectory.
-The [owning note](../lab/docs/nsc-spherical-conformal-continuation.md) connects
+The [owning note](nsc-spherical-conformal-continuation.md) connects
 the source controls, actual metric curvature, matched clock, and local
 reduction. Reported numerical movements meet one percent of their own
 claimed effects. They are refinement indicators, while stronger propagated
@@ -1052,11 +1054,11 @@ check remain pending. The [paper guide](papers.md) preserves the foundation
 and earlier focused edition.
 
 The code owner is
-[nsc_spherical_galerkin_coupling.py](../lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py).
+[nsc_spherical_galerkin_coupling.py](../src/recursive_horizons/nsc_spherical_galerkin_coupling.py).
 The v5 replay,
-[derive_nsc_spherical_galerkin_refinement_v5.py](../lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
+[derive_nsc_spherical_galerkin_refinement_v5.py](../scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
 remains the self-contained $T=0.005$ seed. The saved $T=0.05$ measurement
-is [derive_nsc_spherical_feedback_episode.py](../lab/scripts/derive_nsc_spherical_feedback_episode.py),
+is [derive_nsc_spherical_feedback_episode.py](../scripts/derive_nsc_spherical_feedback_episode.py),
 which reuses that preparation. The weak residual and the streamed reducer
 are separate method owners, linked below.
 
@@ -1083,10 +1085,10 @@ $F_L\dot L$ work term.
 
 ### Same-action conformal episode, 1 October 2026
 
-The [proof](../lab/docs/nsc-spherical-conformal-gauge.md) varies the same
+The [proof](nsc-spherical-conformal-gauge.md) varies the same
 action before choosing $L=Q$, $\beta=0$. The
-[record](../lab/results/development/nsc-spherical-conformal-episode-v1.json)
-and [payload](../lab/results/development/nsc-spherical-conformal-episode-v1.npz)
+[record](../results/development/nsc-spherical-conformal-episode-v1.json)
+and [payload](../results/development/nsc-spherical-conformal-episode-v1.npz)
 store four runs from the unchanged v5 initial Cauchy arrays, with
 $n_f\in\{256,512\}$ and $dt\in\{0.001,0.0005\}$. All reach $T=0.05$.
 CPU is $120.662$ s and payload size about $4.07$ MB. The source,
@@ -1116,9 +1118,9 @@ constraint budget keep their own measurement domains.
 
 ### Finite conformal chain through $T=0.3$, 1 October 2026
 
-The [continuation](../lab/results/development/nsc-spherical-conformal-episode-v2.json)
+The [continuation](../results/development/nsc-spherical-conformal-episode-v2.json)
 reuses each exact $T=0.05$ final and reaches $T=0.3$ on all four cases.
-The [surface assessment](../lab/results/development/nsc-spherical-conformal-transport-v2.json)
+The [surface assessment](../results/development/nsc-spherical-conformal-transport-v2.json)
 resolves absolute integrated flows $0.03937795$, $0.07025487$, and
 $0.06351828$ at $x=0,2,4$; their largest frame indicator is $0.095\%$.
 Flow at $x=6$ remains unresolved in its own domain. Entry and exit remain
@@ -1126,19 +1128,19 @@ separate from their net contribution. Region 0 keeps shell and probability
 shares above $0.65098$ and $0.65585$. Boundary flux, pressure and lapse work
 explain its shell change, with a $0.1641\%$ trapezoid indicator.
 
-The [source controls](../lab/docs/nsc-spherical-conformal-source-controls.md)
+The [source controls](nsc-spherical-conformal-source-controls.md)
 prepare each changed occupation source through the owned radius/shift solve.
 Reversal reverses signed $x=2$ flow and moves the maintained shell leader;
 $\pm5\%$ imbalance changes it by approximately $\pm5.04\%$. Their
 exploratory coarse and frame-comparison domains remain stated. The
-[metric measurement](../lab/docs/nsc-spherical-conformal-curvature.md)
+[metric measurement](nsc-spherical-conformal-curvature.md)
 uses the actual projected rate Jacobian, independently checked, yielding
 maximum Weyl invariant about $0.11331608$ at $T=0.3$. The
-[analytic clock comparison](../lab/results/development/nsc-spherical-conformal-clock-v2.json)
+[analytic clock comparison](../results/development/nsc-spherical-conformal-clock-v2.json)
 removes the old frozen-control interpolation: its small occupation separation
 has timestep movement below $0.00079\%$ of the effect.
 
-The [local production](../lab/docs/nsc-conformal-local-response-successor.md)
+The [local production](nsc-conformal-local-response-successor.md)
 uses actual $\Phi(0.2)$ and the original $T=0$ observer on $[0.2,0.3]$.
 Its occupation changes by $0.07342952$. Streamed/full discrepancy is
 $6.3508\times10^{-6}$, or $0.00865\%$ of that effect. Memory, drive, and
@@ -1146,14 +1148,14 @@ actual cross omission move occupation by $0.01681854$, $0.04854120$, and
 $0.09206143$, each tested against its own numerical comparison. No dense
 exterior propagator is stored. Source dependence, transport, geometry,
 maintained structure, and local response therefore coexist in one finite
-realization. The [note](../lab/docs/nsc-spherical-conformal-continuation.md)
+realization. The [note](nsc-spherical-conformal-continuation.md)
 owns its domains and read-only replays. The tracked finite forcing budget
 and initial-source bounds are reported; a certificate for an unknown
 continuum or geometric path is a stronger claim, not the finite finish line.
 
 ### Recorded $n_f=512$, $T=0.005$ diagnostic
 
-The [v5 record](../lab/results/development/nsc-spherical-coupling-refinement-v5.json)
+The [v5 record](../results/development/nsc-spherical-coupling-refinement-v5.json)
 `nf512.window_dt_0_0005` was independently replayed. The stored window maxima
 are
 
@@ -1177,8 +1179,8 @@ sufficient; these full residuals stay reported.
 
 ### Recorded $T=0.05$ feedback episode
 
-The [episode record](../lab/results/development/nsc-spherical-feedback-episode-v1.json)
-and [payload](../lab/results/development/nsc-spherical-feedback-episode-v1.npz)
+The [episode record](../results/development/nsc-spherical-feedback-episode-v1.json)
+and [payload](../results/development/nsc-spherical-feedback-episode-v1.npz)
 store four runs, $n_f\in\{256,512\}$ and $dt\in\{5\times 10^{-4},2.5\times 10^{-4}\}$.
 Each reaches $T=0.05$. Campaign CPU is $179.444027$ s. The verdict is
 `MEASURED_FEEDBACK_UNRESOLVED_CONSTRAINT_CONTROL`. Renewal is false.
@@ -1213,13 +1215,13 @@ physical effects. The historical initial tolerance $10^{-8}$ did not
 abort the run and is not an automatic veto.
 
 Owned tests are
-[test_nsc_spherical_feedback_episode.py](../lab/tests/test_nsc_spherical_feedback_episode.py).
+[test_nsc_spherical_feedback_episode.py](../tests/test_nsc_spherical_feedback_episode.py).
 Independent tests are
-[test_nsc_spherical_feedback_episode_independent.py](../lab/tests/test_nsc_spherical_feedback_episode_independent.py).
+[test_nsc_spherical_feedback_episode_independent.py](../tests/test_nsc_spherical_feedback_episode_independent.py).
 
 The historical episode's stored Galerkin pin differs from the current file.
 The current producer's strict `verify_saved` therefore refuses that replay.
-The [historical reader](../lab/scripts/check_nsc_spherical_feedback_episode_historical.py)
+The [historical reader](../scripts/check_nsc_spherical_feedback_episode_historical.py)
 authenticates the archived source bytes, frozen inputs and saved arrays;
 it does not import or re-evolve the old module because four transitive
 imports were not part of the recorded frozen set. The scientific numbers
@@ -1230,9 +1232,9 @@ a numerical replay under a complete historical execution context.
 
 ### Regeneration episode, 1 October 2026
 
-The [note](../lab/docs/nsc-regeneration-episode.md),
-[record](../lab/results/development/nsc-regeneration-episode-v1.json), and
-[payload](../lab/results/development/nsc-regeneration-episode-v1.npz) store
+The [note](nsc-regeneration-episode.md),
+[record](../results/development/nsc-regeneration-episode-v1.json), and
+[payload](../results/development/nsc-regeneration-episode-v1.npz) store
 four continuations, $n_f\in\{256,512\}$ and
 $dt_{\max}\in\{0.0005,0.00025\}$. Each begins with the predecessor's
 `dt=0.0005` final Cauchy arrays, unchanged, at $T=0.05$. Each stops at
@@ -1254,10 +1256,10 @@ accepted $dt\,\omega$ is about $1.201$, below the declared $1.4$ cap.
 `maintained_structure` is true and `renewed_structure` is false. The
 joined trajectory is one drift with no reset. It carries frame $p_\chi$,
 $\dot Q$, and a realized one-step rate increment. The
-[assessment](../lab/docs/nsc-spherical-episode-assessment.md) reads those
+[assessment](nsc-spherical-episode-assessment.md) reads those
 saved arrays for the metric/proxy comparison and proper-arc localization;
 the increments and refinement movements remain numerical indicators.
-The [independent audit](../lab/docs/nsc-regeneration-realization-audit.md)
+The [independent audit](nsc-regeneration-realization-audit.md)
 separates the handoff, covariance, ledger, geometry controls, and response.
 No propagated observable-error bound is supplied. Full, projected, and
 held-out constraints stay in the record; at $n_f=512$ the final full
@@ -1266,9 +1268,9 @@ $9.241\times10^{-3}$.
 
 ### Weak initial residual and initial-chart certificate
 
-The [weak note](../lab/docs/nsc-spherical-cauchy-weak.md),
-[helper](../lab/src/recursive_horizons/nsc_spherical_cauchy_weak.py)
-and [record](../lab/results/development/nsc-spherical-cauchy-weak-v1.json)
+The [weak note](nsc-spherical-cauchy-weak.md),
+[helper](../src/recursive_horizons/nsc_spherical_cauchy_weak.py)
+and [record](../results/development/nsc-spherical-cauchy-weak-v1.json)
 assess the saved seed. The sealed v1 status is `PARTIAL_TERMS_NO_TOTAL_BOUND`. No state
 is stepped. Declared $G>0$ with `rho_independent` exactly true exposes
 $\mu=\min(4,Q^2)=Q^2=0.0631642220827373$ without $y_*$. An omitted
@@ -1292,7 +1294,7 @@ report is not a reexecution of the original producer. `total_certified`
 stays false. The only write is an explicit `--output` path, and that path
 cannot be the sealed JSON.
 
-The separate [initial certificate](../lab/results/development/nsc-spherical-cauchy-error-v1.json)
+The separate [initial certificate](../results/development/nsc-spherical-cauchy-error-v1.json)
 has status `FINITE_CONDITIONAL_INITIAL_LAPSE_BOUND`. On the saved fine
 initial chart it encloses $G\ge0.0537330$ and a pointwise radius distance
 of at most $4.06085\times10^{-6}$. The owning note proves existence and
@@ -1306,7 +1308,7 @@ from a radius or occupation error estimate.
 
 ### Streamed retained-region reduction
 
-[nsc_evolving_reduction.py](../lab/src/recursive_horizons/nsc_evolving_reduction.py)
+[nsc_evolving_reduction.py](../src/recursive_horizons/nsc_evolving_reduction.py)
 keeps the dense prescribed-control owner and adds `backend="streamed"`.
 The streamed path matches the dense history and the independent exterior
 sample on the same prescribed controls. It does not store a time-indexed
@@ -1370,7 +1372,7 @@ through the Stage-2 notes, the text is that retained application.
 
 A six-mode inherited finite example has nonzero channel currents, constant
 regional contents, and a derived local filtered response. The
-[note](../lab/docs/nsc-finite-turnover.md) records it. The geometry and the
+[note](nsc-finite-turnover.md) records it. The geometry and the
 stationary preparation are fixed inputs. That prepared-current witness remains
 valid for that fixed window. The present evolution is the spherical loop above.
 
@@ -1380,8 +1382,8 @@ On the same frozen six-mode window,
 $C_0=I/2+(1/4)(P_0-P_2)$ starts with zero interregion channel current.
 The executed Cesaro mean still carries inflow
 $j_{(0,+),(1,+)}=0.0012511140479781876$, into $0+$ from $1+$. The
-[note](../lab/docs/nsc-imbalance-turnover.md) is the scientific owner.
-The [record](../lab/results/development/nsc-imbalance-turnover-v1.json)
+[note](nsc-imbalance-turnover.md) is the scientific owner.
+The [record](../results/development/nsc-imbalance-turnover-v1.json)
 replays 34/34 checks, with verdict `PASS_IMBALANCE_MEAN_CIRCULATION`.
 Seven focused tests and the six existing finite-turnover tests passed, and
 `--check` replayed the same four source bindings. An independent review
@@ -1394,7 +1396,7 @@ witness. The average does not by itself give autonomous regeneration.
 
 ## Spherical feedback action and direct conformal source, 30 September 2026
 
-The [spherical feedback action](../lab/docs/nsc-spherical-feedback-action.md)
+The [spherical feedback action](nsc-spherical-feedback-action.md)
 is a checked first-order chart for the spherical Einstein–Maxwell–Weyl bulk
 and boundary. Lapse and shift stay free. Seventeen tests passed. The module
 sha256 is `708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f`.
@@ -1406,7 +1408,7 @@ Conditional nonuniform initial data solve the constraints. This is not a
 coupled Cauchy problem and not a renewal. $C_W=0$ is rejected. The matter
 source is not coupled.
 
-The [direct conformal ADM source](../lab/docs/nsc-conformal-adm-source.md)
+The [direct conformal ADM source](nsc-conformal-adm-source.md)
 is a separate owner. Ten tests passed. The module sha256 is
 `7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea`.
 It fixes the finite-grid conformal Ward identity and leaves the historical
@@ -1420,13 +1422,13 @@ compression matches the onsite block $H$ and does not match the link $B$.
 The full mapping is pending. The comparison residuals are not frozen data.
 
 The vacuum-matched CTP branch remains the separate historical choice in
-[its own note](../lab/docs/nsc-vacuum-matched-ctp.md). These records are
+[its own note](nsc-vacuum-matched-ctp.md). These records are
 equations and interfaces for the loop above.
 
 ## Provisional spherical coupling v1, 30 September 2026
 
-The [note](../lab/docs/nsc-spherical-coupling.md) owns the failed v1 control.
-The [record](../lab/results/development/nsc-spherical-coupling-control-v1.json)
+The [note](nsc-spherical-coupling.md) owns the failed v1 control.
+The [record](../results/development/nsc-spherical-coupling-control-v1.json)
 sha256 is
 `88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60`.
 The checkpoint that wrote it had module sha256
@@ -1465,7 +1467,7 @@ sha256
 does not load the saved trajectory and does not certify the Galerkin
 discretization.
 
-The [evolving reduction](../lab/docs/nsc-evolving-reduction.md) is a separate
+The [evolving reduction](nsc-evolving-reduction.md) is a separate
 prescribed-control owner. The module sha256 is
 `17bd59363a25a8afba139b6cc6737f57684af5105a7ef148e68047316088e59d`.
 The dense-test sha256 is
@@ -1488,8 +1490,8 @@ remains a separate historical choice.
 
 ## Variational Fourier–Galerkin coupling v2, 1 October 2026
 
-The [note](../lab/docs/nsc-spherical-galerkin-coupling.md) and the
-[record](../lab/results/development/nsc-spherical-coupling-control-v2.json)
+The [note](nsc-spherical-galerkin-coupling.md) and the
+[record](../results/development/nsc-spherical-coupling-control-v2.json)
 own the failed subspace control. The saved verdict is
 `FAIL_HELD_OUT_CONSTRAINT`. Renewal is false. $T=0.05$ was not run.
 A projected residual is not a physical pass. This is not a filter of the
@@ -1499,10 +1501,10 @@ is not an accepted coupled trajectory.
 
 ## Matched Galerkin refinement v3, 1 October 2026
 
-The same [note](../lab/docs/nsc-spherical-galerkin-coupling.md#matched-refinement-v3)
+The same [note](nsc-spherical-galerkin-coupling.md#matched-refinement-v3)
 records the failed matched refinement. The
-[driver](../lab/scripts/derive_nsc_spherical_galerkin_refinement.py) and
-the [record](../lab/results/development/nsc-spherical-coupling-refinement-v3.json)
+[driver](../scripts/derive_nsc_spherical_galerkin_refinement.py) and
+the [record](../results/development/nsc-spherical-coupling-refinement-v3.json)
 are immutable. The verdict is `FAIL_INITIAL_SOLVE`. Internal Newton
 stopped at rho $=0.5$ with residual $1.2876060991167562\times 10^{-10}$.
 No full-source result was produced. The v1 and v2 JSON bytes are
@@ -1510,11 +1512,11 @@ unchanged. Renewal is false. $T=0.05$ was not run for this refinement.
 
 ## Galerkin refinement v5, 1 October 2026
 
-The [driver](../lab/scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
-[record](../lab/results/development/nsc-spherical-coupling-refinement-v5.json),
-[payload](../lab/results/development/nsc-spherical-coupling-refinement-v5.npz)
+The [driver](../scripts/derive_nsc_spherical_galerkin_refinement_v5.py),
+[record](../results/development/nsc-spherical-coupling-refinement-v5.json),
+[payload](../results/development/nsc-spherical-coupling-refinement-v5.npz)
 and
-[independent tests](../lab/tests/test_nsc_spherical_galerkin_independent.py)
+[independent tests](../tests/test_nsc_spherical_galerkin_independent.py)
 are the completed $n_f=512$, $T=0.005$ geometric diagnostic summarized in
 [the present loop](#present-spherical-loop). `compose_fine_hamiltonian`
 recomputes the source and the rates and feeds $F_Q$ into $\dot p_Q$.
@@ -1528,10 +1530,10 @@ $10^{-8}$ is not an automatic veto. A weak residual alone is not sufficient.
 
 ## Finite-window embedding v1, 1 October 2026
 
-The [note](../lab/docs/nsc-finite-window-embedding.md),
-[module](../lab/src/recursive_horizons/nsc_finite_window_embedding.py),
-[record](../lab/results/development/nsc-finite-window-embedding-v1.json)
-and [independent tests](../lab/tests/test_nsc_finite_window_embedding_independent.py)
+The [note](nsc-finite-window-embedding.md),
+[module](../src/recursive_horizons/nsc_finite_window_embedding.py),
+[record](../results/development/nsc-finite-window-embedding-v1.json)
+and [independent tests](../tests/test_nsc_finite_window_embedding_independent.py)
 compress the frozen window onto the existing Dirac operator. Quadrature
 matches the original $H$ and $B$ at about $4.45\times 10^{-14}$; a direct
 analytic integral agrees at about $4.9\times 10^{-14}$. Modes are supported
@@ -1542,29 +1544,29 @@ an optional witness. Geometry-derived links are the target.
 
 ## Seam-regular embedding v2, 1 October 2026
 
-The [note](../lab/docs/nsc-finite-window-embedding-smooth.md),
-[module](../lab/src/recursive_horizons/nsc_finite_window_embedding_smooth.py),
-[tests](../lab/tests/test_nsc_finite_window_embedding_smooth.py) and
-[record](../lab/results/development/nsc-finite-window-embedding-v2.json)
+The [note](nsc-finite-window-embedding-smooth.md),
+[module](../src/recursive_horizons/nsc_finite_window_embedding_smooth.py),
+[tests](../tests/test_nsc_finite_window_embedding_smooth.py) and
+[record](../results/development/nsc-finite-window-embedding-v2.json)
 are the optional seam-regular bridge. The saved status is
 `SEAM_REGULAR_COMPRESSION_NOT_INVARIANT`. Renewal is not claimed.
 
 ## Spherical Cauchy data, 1 October 2026
 
-The [module](../lab/src/recursive_horizons/nsc_spherical_cauchy_data.py),
-[note](../lab/docs/nsc-spherical-cauchy-data.md),
-[tests](../lab/tests/test_nsc_spherical_cauchy_data.py) and
-[record](../lab/results/development/nsc-spherical-cauchy-data-v1.json)
+The [module](../src/recursive_horizons/nsc_spherical_cauchy_data.py),
+[note](nsc-spherical-cauchy-data.md),
+[tests](../tests/test_nsc_spherical_cauchy_data.py) and
+[record](../results/development/nsc-spherical-cauchy-data-v1.json)
 provide a $p_Q$ antiderivative for $\chi=p_r=p_\chi=0$ and constant $Q$.
 Three tests pass. The mean and held-out current residual stay explicit.
 
 ## Regional coordinate and normal-observer ledger, 1 October 2026
 
-The [note](../lab/docs/nsc-regional-energy-exchange.md),
-[module](../lab/src/recursive_horizons/nsc_regional_energy_exchange.py),
-[record](../lab/results/development/nsc-regional-energy-exchange-v1.json),
-[tests](../lab/tests/test_nsc_regional_energy_exchange.py) and
-[independent tests](../lab/tests/test_nsc_regional_energy_exchange_independent.py)
+The [note](nsc-regional-energy-exchange.md),
+[module](../src/recursive_horizons/nsc_regional_energy_exchange.py),
+[record](../results/development/nsc-regional-energy-exchange-v1.json),
+[tests](../tests/test_nsc_regional_energy_exchange.py) and
+[independent tests](../tests/test_nsc_regional_energy_exchange_independent.py)
 are a diagnostic. Six owned tests and eight independent tests. Normal energy
 is $F_L/r=V\rho\,dx$, and the proper pressures divide by $dx$. $F_Q\dot Q$
 is coordinate metric work, not observer pressure work. Hamiltonian
@@ -1573,11 +1575,11 @@ prerequisite. Renewal is not claimed.
 
 ## Regeneration controls, 1 October 2026
 
-The [note](../lab/docs/nsc-regeneration-controls.md),
-[module](../lab/src/recursive_horizons/nsc_regeneration_controls.py),
-[driver](../lab/scripts/derive_nsc_regeneration_controls.py),
-[record](../lab/results/development/nsc-regeneration-controls-v1.json)
-and [payload](../lab/results/development/nsc-regeneration-controls-v1.npz)
+The [note](nsc-regeneration-controls.md),
+[module](../src/recursive_horizons/nsc_regeneration_controls.py),
+[driver](../scripts/derive_nsc_regeneration_controls.py),
+[record](../results/development/nsc-regeneration-controls-v1.json)
+and [payload](../results/development/nsc-regeneration-controls-v1.npz)
 are a thin consumer of the owned Galerkin step and the saved episode.
 The column source, radius Newton, shift momentum, and `rk4_step` stay
 with their owners. No radius force is added, and the episode driver is
@@ -1622,10 +1624,10 @@ continuum limit or a cosmological regeneration.
 
 ## Regeneration-controls successor, 1 October 2026
 
-[nsc-regeneration-controls-v2.json](../lab/results/development/nsc-regeneration-controls-v2.json)
+[nsc-regeneration-controls-v2.json](../results/development/nsc-regeneration-controls-v2.json)
 assesses the immutable v1 JSON and NPZ. Status `ASSESSED`.
 `dynamics_rerun` is false. The independent checks are
-[test_nsc_regeneration_uniform_independent.py](../lab/tests/test_nsc_regeneration_uniform_independent.py).
+[test_nsc_regeneration_uniform_independent.py](../tests/test_nsc_regeneration_uniform_independent.py).
 $G>0$ is the initial convex-radius ansatz for constant $Q$, vanishing
 momenta, and $r=y^2$. The dynamic chart is `chart_failure` on positive
 $r$, $Q$, and $L$. On the $n_f=14$, $n_q=64$ control the Galerkin
@@ -1643,8 +1645,8 @@ in place.
 
 ## Same-trajectory local-response successor, 1 October 2026
 
-The [v2 record](../lab/results/development/nsc-coupled-local-response-v2.json)
-and [series](../lab/results/development/nsc-coupled-local-response-v2.npz)
+The [v2 record](../results/development/nsc-coupled-local-response-v2.json)
+and [series](../results/development/nsc-coupled-local-response-v2.npz)
 consume the fine confirmation continuation from $T=0.05$ to $T=0.085$.
 Status `MEASURED_SUCCESSOR_RESPONSE`. The fixed observer remains the two
 original $T=0$ mode columns. At the handoff its retained eigenvalues are
@@ -1667,10 +1669,10 @@ error. The saved full-window retained and cross-omitted covariance arrays
 reproduce the last value directly. The local probability, proper clocks,
 and normal-energy ledger keep their separate measures. No effective-action
 kernel variation or stress is computed. The
-[owning note](../lab/docs/nsc-coupled-local-response.md) gives the source
+[owning note](nsc-coupled-local-response.md) gives the source
 bindings and the independently checked causal reduction.
 
-The [independent supplement](../lab/results/development/nsc-coupled-local-response-audit-v1.json)
+The [independent supplement](../results/development/nsc-coupled-local-response-audit-v1.json)
 propagates the same retained/exterior split with its own temporal and
 covariance assembly. Cross omission moves occupation by $0.20437297$;
 its streamed discrepancy is $0.0001195768$. Drive omission moves it by
@@ -1683,11 +1685,11 @@ missing geometric-path bound.
 
 ## Conditional local response, 1 October 2026
 
-The [note](../lab/docs/nsc-coupled-local-response.md),
-[module](../lab/src/recursive_horizons/nsc_coupled_local_response.py),
-[driver](../lab/scripts/derive_nsc_coupled_local_response.py),
-[record](../lab/results/development/nsc-coupled-local-response-v1.json)
-and [series](../lab/results/development/nsc-coupled-local-response-v1.npz)
+The [note](nsc-coupled-local-response.md),
+[module](../src/recursive_horizons/nsc_coupled_local_response.py),
+[driver](../scripts/derive_nsc_coupled_local_response.py),
+[record](../results/development/nsc-coupled-local-response-v1.json)
+and [series](../results/development/nsc-coupled-local-response-v1.npz)
 compare one streamed retained-region reduction with geometry the episode
 already stored. The reducer is called with `backend="streamed"` and is
 not edited. The episode is not run again. Record status
@@ -1726,10 +1728,10 @@ The stored v1 JSON keeps the observer string
 
 ## Spherical null expansion, 1 October 2026
 
-The [note](../lab/docs/nsc-spherical-null-expansion.md),
-[module](../lab/src/recursive_horizons/nsc_spherical_null_expansion.py),
-[driver](../lab/scripts/derive_nsc_spherical_null_expansion.py)
-and [record](../lab/results/development/nsc-spherical-null-expansion-v1.json)
+The [note](nsc-spherical-null-expansion.md),
+[module](../src/recursive_horizons/nsc_spherical_null_expansion.py),
+[driver](../scripts/derive_nsc_spherical_null_expansion.py)
+and [record](../results/development/nsc-spherical-null-expansion-v1.json)
 are kinematic postprocessing of the stored episode. The production step
 is not rerun. The measurement does not evolve a state, rebuild the
 column source, or recompute inheritance, and it does not read $\chi$.
@@ -1763,12 +1765,12 @@ identification of these expansions with $\chi$.
 
 ## Local-boundary review, 1 October 2026
 
-[nsc-local-boundary-review-v1.json](../lab/results/development/nsc-local-boundary-review-v1.json)
+[nsc-local-boundary-review-v1.json](../results/development/nsc-local-boundary-review-v1.json)
 stays the sealed correction record. Its `reference_unchanged` hash is
 `68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9`, and its
 recorded null-expansion module hash is
 `1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5`.
-[nsc-local-boundary-review-v2.json](../lab/results/development/nsc-local-boundary-review-v2.json)
+[nsc-local-boundary-review-v2.json](../results/development/nsc-local-boundary-review-v2.json)
 binds those immutable v1 payloads and the owners audited at `5f10ecd`. The
 independent test at that audit is
 `d2d6afb8471481a74b816223d58e33066f112abf1026d15eae74b291222e44fa`.
@@ -1791,12 +1793,12 @@ that correction.
 
 ## Initial geometry-graded window, 1 October 2026
 
-The [note](../lab/docs/nsc-geometry-graded-window.md),
-[module](../lab/src/recursive_horizons/nsc_geometry_graded_window.py),
-[driver](../lab/scripts/derive_nsc_geometry_graded_window.py),
-[tests](../lab/tests/test_nsc_geometry_graded_window.py),
+The [note](nsc-geometry-graded-window.md),
+[module](../src/recursive_horizons/nsc_geometry_graded_window.py),
+[driver](../scripts/derive_nsc_geometry_graded_window.py),
+[tests](../tests/test_nsc_geometry_graded_window.py),
 and
-[record](../lab/results/development/nsc-geometry-graded-window-v1.json)
+[record](../results/development/nsc-geometry-graded-window-v1.json)
 measure the initial three-packet compression. Status
 `INITIAL_GRADED_COMPRESSION_NOT_INVARIANT`. The measurement is complete.
 No trajectory is integrated, and the old rational $B$ is not a target.
@@ -1854,7 +1856,7 @@ and apply only here. Missing error bounds still block a closed claim for
 this application. Do not continue the expensive search from this page.
 
 The laboratory owners are in `lab/`, indexed in the
-[code map](../lab/docs/active-code-map.md). The
+[code map](active-code-map.md). The
 [draft evidence manifest](../paper/local-gate-evidence/snapshot.json) is a frozen
 selection supporting the existing article, not the full current lab.
 Its state law and test domain are
@@ -1890,7 +1892,7 @@ classes and do not decide this switched-state gate.
 
 ## Shared UV coefficient transport, 29 September 2026
 
-The [shared channel basis](../lab/docs/nsc-ks-cubic-channel-basis.md) now implements
+The [shared channel basis](nsc-ks-cubic-channel-basis.md) now implements
 the existing angular/mass factorization. It reuses one geometry-jet march per
 characteristic sign and assembles channel coefficients algebraically. Eleven
 tests and independent review passed; the group14 center enclosures retain the
@@ -1899,12 +1901,12 @@ and it has not been inserted into the physical residual.
 
 ## Low-energy transport method, 29 September 2026
 
-The independently reviewed [signed phase-transport successor](../lab/docs/nsc-massive-jost-mixed-transport.md)
+The independently reviewed [signed phase-transport successor](nsc-massive-jost-mixed-transport.md)
 allows bounded growth in exterior cells where the old contraction-only proof
 stopped. Original group14/low16_1 row15 completed through the existing horizon
 frame and upstream Bloch transport, with signed source covariance errors about
 1.05e-10. Fifteen tests and an independent pilot replay passed. This remains a
-one-row result. Its [saved witness](../lab/docs/nsc-subgap-row-witness.md) now
+one-row result. Its [saved witness](nsc-subgap-row-witness.md) now
 replays without either solver, with 13 structural and mutation tests passed.
 It is included in the 868-row v3 source aggregate; the full upstream budget
 remains OPEN.
@@ -1913,7 +1915,7 @@ remains OPEN.
 
 The complete middle window now contains 48 original positive rows and their
 48 actual negative partners, saved and replayed without re-evolution. The
-[v3 response bound](../lab/docs/nsc-ks-source-operator-majorant-v3.md) replaces
+[v3 response bound](nsc-ks-source-operator-majorant-v3.md) replaces
 the earlier single middle pair, rather than adding it twice. Together with
 reused high-energy evidence and both verified low-row pairs it covers 868 signed
 rows of family14_1. The continuous source-error contributions are bounded by
@@ -1921,7 +1923,7 @@ rows of family14_1. The continuous source-error contributions are bounded by
 quadrature and the other components remain missing. These are error bounds;
 the candidate residuals above have not changed.
 
-The independently reviewed [vacuum-column remainder](../lab/docs/nsc-vacuum-spinor-remainder.md)
+The independently reviewed [vacuum-column remainder](nsc-vacuum-spinor-remainder.md)
 records eight original-channel cases and supplies phase-fixed initial
 coefficients through A4 with an explicit omitted-term bound. It does not yet
 supply the propagated changed-history remainder or finite-occupation errors.
@@ -1929,7 +1931,7 @@ Neither result closes the full upstream budget or the incoming gate.
 
 ## Continuous preparation-error contribution, 29 September 2026
 
-The [source-response bound](../lab/docs/nsc-ks-source-operator-majorant.md)
+The [source-response bound](nsc-ks-source-operator-majorant.md)
 now connects 772 covered preparation rows to the actual local test: their
 combined error contributions are at most 4.064e-14 for N and 3.230e-14 for
 beta, continuously on I for the current history. These are partial error
@@ -1938,7 +1940,7 @@ quadrature and the other error components still leave the gate OPEN.
 
 ## Lower-middle source preparation, 29 September 2026
 
-The [new correction proof](../lab/docs/nsc-vacuum-source-correction.md)
+The [new correction proof](nsc-vacuum-source-correction.md)
 resolves the first retained group-14 middle-energy mode and its signed partner.
 The archived preparation's covariance error is enclosed near 1.003e-11,
 while the correction trajectory's Bloch error is below 4.076e-15. These
@@ -1947,7 +1949,7 @@ response. The original preparation remains intact and the gate remains OPEN.
 
 ## High-energy source preparation, 29 September 2026
 
-The [new preparation remainder](../lab/docs/nsc-vacuum-source-remainder.md)
+The [new preparation remainder](nsc-vacuum-source-remainder.md)
 bounds a covariance expansion using its equation defect and the exact metric.
 Its comparison with the original archived data covers 768 signed rows in one
 group-14 source family at |E|>=32. Their largest unweighted covariance error
@@ -1958,7 +1960,7 @@ remainder or any complete local-gate budget component.
 
 ## Archived upstream source bound, 29 September 2026
 
-The [upstream successor](../lab/docs/nsc-subgap-upstream-covariance.md) bounds
+The [upstream successor](nsc-subgap-upstream-covariance.md) bounds
 the original saved source on the production upstream slice, including its
 opposite-energy/opposite-angular partner. Both covariance errors are below
 6.03e-12 for this one low-energy row. No saved preparation is replaced. The
@@ -1968,7 +1970,7 @@ budget remain unfinished.
 
 ## Massive UV coefficient extension, 29 September 2026
 
-The [massive-field extension](../lab/docs/nsc-ks-massive-cubic-uv.md) adds the
+The [massive-field extension](nsc-ks-massive-cubic-uv.md) adds the
 mass terms derived from the same operator and action, with a directed pilot
 for the original group-14 pair at one incoming point. It also factors the
 formal coefficient into three shared geometric terms, offering a way to
@@ -1978,7 +1980,7 @@ entry has been replaced by the formal coefficient.
 
 ## Original source covariance bound, 29 September 2026
 
-The [source-preparation enclosure](../lab/docs/nsc-subgap-source-covariance.md)
+The [source-preparation enclosure](nsc-subgap-source-covariance.md)
 now reaches the original rho=1 data for one low-energy massive mode, with
 covariance operator error below 6.03e-12. It combines the exterior reflection,
 matched horizon conventions and continuous interior transport without changing
@@ -1988,7 +1990,7 @@ sub-bound does not fill a complete error-budget component or change either PDF.
 
 ## Directed UV coefficient pilot, 29 September 2026
 
-The [new enclosure](../lab/docs/nsc-ks-cubic-uv-enclosure.md) gives rigorous
+The [new enclosure](nsc-ks-cubic-uv-enclosure.md) gives rigorous
 intervals for one original massless pair's formal cubic coefficient at one
 incoming point. It uses analytic geometry jets and explicit integration
 remainders. The leading term's integral and its uncertainty are recorded
@@ -1998,7 +2000,7 @@ residuals and both papers are unchanged.
 
 ## Cubic UV method continuation, 29 September 2026
 
-The [massless cubic-current calculation](../lab/docs/nsc-ks-cubic-uv-current.md)
+The [massless cubic-current calculation](nsc-ks-cubic-uv-current.md)
 now evaluates the generated third-order inverse-energy coefficient for the
 original group-1 pair, retaining the linked transport terms and actual action
 signs. Its finite quadrature remains unvalidated. C4, C_M and the physical UV
@@ -2007,7 +2009,7 @@ not error bounds.
 
 ## Horizon source-method continuation, 29 September 2026
 
-The [full-profile horizon series](../lab/docs/nsc-metric-horizon-frame.md) now
+The [full-profile horizon series](nsc-metric-horizon-frame.md) now
 has an analytic remainder bound, rather than a finite-collar comparison alone.
 It connects the existing representative exterior phase enclosure to a horizon
 reflection. The series tail at that endpoint is below 2.50e-22; the reflection
@@ -2017,11 +2019,11 @@ OPEN. No completed component has been added to the nine-component budget.
 
 ## Later Stage-2 continuation, 28 September 2026
 
-A new [formal UV identity](../lab/docs/nsc-ks-uv-upstream-invariance.md) proves
+A new [formal UV identity](nsc-ks-uv-upstream-invariance.md) proves
 that common scalar upstream constants cancel from the incoming C4 difference
 when the higher coefficients are transformed consistently and the incoming
 metrics match. It does not assume a zero upstream normalization error or give
-a numerical C4. A [source phase continuation](../lab/docs/nsc-massive-jost-transport-bound.md)
+a numerical C4. A [source phase continuation](nsc-massive-jost-transport-bound.md)
 now reaches a declared near-horizon endpoint, with a bound of about 9.04e-12
 radians on one original energy label. Horizon sewing, the actual incoming
 source-column error, C_M and the complete gate remain OPEN.
@@ -2030,9 +2032,9 @@ source-column error, C_M and the complete gate remain OPEN.
 
 The active lab now has a directed exterior subgap phase bound, new massless
 minor-A3 jet bounds, and an enclosed field cell in the active cutoff transition.
-See the [source method](../lab/docs/nsc-massive-jost-phase-bound.md),
-[UV derivation](../lab/docs/nsc-ks-uv-minor-a3.md) and
-[field pilot](../lab/docs/nsc-ks-field-ramp-pilot.md).
+See the [source method](nsc-massive-jost-phase-bound.md),
+[UV derivation](nsc-ks-uv-minor-a3.md) and
+[field pilot](nsc-ks-field-ramp-pilot.md).
 These are sub-bound and method results. Radial/source transport, the remaining
 UV constants, full field coverage and the complete local certificate stay OPEN.
 The measured seed residuals and the nine-component physical budget are unchanged.

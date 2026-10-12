@@ -1,0 +1,394 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "spatial": {
+      "covariance": {
+        "difference_over_fine_norm": 0.012318680827663412,
+        "fine_compared_response_norm": 7.465773964700964e-06,
+        "max_absolute_difference": 9.196848660263043e-08,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      },
+      "field": {
+        "difference_over_fine_norm": 0.03526936772495795,
+        "fine_compared_response_norm": 0.00021266467165754924,
+        "max_absolute_difference": 7.500548506797547e-06,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      },
+      "trace": {
+        "difference_over_fine_norm": 0.011861510831884865,
+        "fine_compared_response_norm": 0.0001612362640562797,
+        "max_absolute_difference": 1.91250569259621e-06,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      }
+    },
+    "temporal": {
+      "covariance": {
+        "difference_over_fine_norm": 0.0004813320765531305,
+        "fine_compared_response_norm": 7.466722373794346e-06,
+        "max_absolute_difference": 3.5939729852241524e-09,
+        "passes": true,
+        "relative_indicator_limit": 0.1
+      },
+      "field": {
+        "difference_over_fine_norm": 0.0006198017646462491,
+        "fine_compared_response_norm": 0.0002136225541669154,
+        "max_absolute_difference": 1.324036360408931e-07,
+        "passes": true,
+        "relative_indicator_limit": 0.1
+      },
+      "trace": {
+        "difference_over_fine_norm": 0.00045860484743907013,
+        "fine_compared_response_norm": 0.00016125661970485446,
+        "max_absolute_difference": 7.395306747828493e-08,
+        "passes": true,
+        "relative_indicator_limit": 0.1
+      }
+    }
+  },
+  "control": {
+    "algebra_tolerance": 3e-11,
+    "amplitude": 0.0,
+    "cases_completed": [
+      "1601_128",
+      "3201_128",
+      "3201_256"
+    ],
+    "family": "14_1",
+    "reference_sampling_calls": 1,
+    "resampling_tolerance": 3e-11,
+    "source_law": "unchanged original signed frequencies, weights and coherent source fibers",
+    "spatial_indicator_limit": 0.25,
+    "support": {
+      "PG_time_support": [
+        0.043175087167987014,
+        0.25620332026786774
+      ],
+      "S1": 1.0568780671724793,
+      "T1": -0.8017223766635779,
+      "axial_center": 1.2068780671724793,
+      "axial_halfwidth": 0.06,
+      "final_support_margin": 0.04379667973213225,
+      "final_time": 0.3,
+      "guard_kind": "numerical support bounds with strict margins; analytic monotonicity and fixed-radius-only principal speeds",
+      "initial_support_margin": 0.043175087167987014,
+      "initial_time": 0.0,
+      "maximum_checked_characteristic_speed": -0.21880440668708911,
+      "normal_inner": 0.007,
+      "normal_outer": 0.03,
+      "radial_support": [
+        0.9743860383229925,
+        1.0250344273443701
+      ],
+      "right_support_margin": 0.17496557265562984
+    },
+    "temporal_indicator_limit": 0.1
+  },
+  "historical_context_only": {
+    "801_128_to_1601_128": {
+      "covariance": {
+        "difference_over_fine_norm": 0.07666816836220085,
+        "fine_compared_response_norm": 7.464022910915426e-06,
+        "max_absolute_difference": 5.722529651933884e-07,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      },
+      "field": {
+        "difference_over_fine_norm": 0.20186980299381774,
+        "fine_compared_response_norm": 0.00021190063860130923,
+        "max_absolute_difference": 4.2776340168710466e-05,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      },
+      "trace": {
+        "difference_over_fine_norm": 0.07856021848919946,
+        "fine_compared_response_norm": 0.00016122168332939504,
+        "max_absolute_difference": 1.26656106675538e-05,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      }
+    },
+    "801_128_to_3201_128": {
+      "covariance": {
+        "difference_over_fine_norm": 0.07698153419911935,
+        "fine_compared_response_norm": 7.465773964700964e-06,
+        "max_absolute_difference": 5.747267337865222e-07,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      },
+      "field": {
+        "difference_over_fine_norm": 0.19774358992195334,
+        "fine_compared_response_norm": 0.00021266467165754924,
+        "max_absolute_difference": 4.205307562313727e-05,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      },
+      "trace": {
+        "difference_over_fine_norm": 0.07850367639904651,
+        "fine_compared_response_norm": 0.0001612362640562797,
+        "max_absolute_difference": 1.2657639497265397e-05,
+        "passes": true,
+        "relative_indicator_limit": 0.25
+      }
+    }
+  },
+  "input_hashes": {
+    "docs/nsc-retarded-compatible-preparation.md": "6970d00ef8008b9afa66aac6b4b4c4bc6fc05713de84eb6df37058b3d7108eb8",
+    "docs/nsc-retarded-compatible-response.md": "4a25f6b7b5285ae564ca5a2f1b541dcfde073329230ef7212b7619e7b95ed3da",
+    "results/development/nsc-compatible-prepared-history.json": "66cb7f086bb60bc646533ed09ca565cc02fedcafbc609d68b5dcf662a2e61318",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "tests/test_nsc_retarded_compatible_response.py": "0580dc73545977748829a4f2a8b97df751e0a78393bf7872b5898108b13dcd34"
+  },
+  "payload": {
+    "bytes": 20796029,
+    "path": "results/development/artifacts/nsc-retarded-response-resolution.npz",
+    "sha256": "8d3a79e6c1dc5ada4bbe17e9c3450ad6576a25212b04bbe0cd6dcf76c3b997cf"
+  },
+  "per_case": {
+    "1601_128": {
+      "characteristic_trace_outside_causal_support": {
+        "acceptance_gate": false,
+        "directed_bound": false,
+        "interval_estimate": [
+          0.05404795482456391,
+          0.24595204517543606
+        ],
+        "maximum_entry": 2.523534726286423e-06,
+        "sampled_energy_fraction": 1.1384120564211375e-05
+      },
+      "covariance_hermiticity_residual": 3.394742784160134e-21,
+      "diagnostics": {
+        "auxiliary_identity_residual": 3.9968028886505635e-15,
+        "frame_map_parameter_derivative": 0.0,
+        "incident_tangent_norm": 0.0,
+        "initial_metric_change": 2.6645352591003757e-15,
+        "initial_tangent_norm": 0.0,
+        "metric_flux_tangent_residual": 0.0,
+        "norm_flux_residual": 2.6645352591003757e-15,
+        "source_closed_column_norm": 0.0,
+        "source_covariance_closed_column_norm": 0.0,
+        "source_covariance_hermiticity": 0.0,
+        "source_covariance_tangent_norm": 0.0,
+        "stationary_phase_reapplied": false,
+        "tangent_boundary_trace": 1.667833228311989e-07
+      },
+      "late_window_start": 0.25620332026786774,
+      "response_max_norms": {
+        "covariance": 7.464022910915426e-06,
+        "field": 0.00021190063860130923,
+        "trace": 0.00016122168332939504
+      },
+      "sampled_projector_kernel_hermiticity_residual": 0.0,
+      "sampled_projector_kernel_tangent_norm": 1.0967168033723727e-05,
+      "slow_characteristic_trace_after_pulse": {
+        "PG_time": 0.2625,
+        "magnitude": 1.6380408014887267e-06,
+        "source_column": 0
+      },
+      "slow_characteristic_trace_peak": {
+        "PG_time": 0.16640625,
+        "magnitude": 0.00029012362902669096,
+        "source_column": 0
+      },
+      "slow_trace_outside_causal_support": {
+        "acceptance_gate": false,
+        "directed_bound": false,
+        "interval_estimate": [
+          0.05404795482456391,
+          0.24595204517543606
+        ],
+        "maximum_entry": 2.523534726286423e-06,
+        "sampled_energy_fraction": 1.2900854737107317e-05
+      },
+      "stationary_reference_field_drift": 0.00038738469837320465,
+      "stationary_reference_trace_drift": 6.071443891328221e-05
+    },
+    "3201_128": {
+      "characteristic_trace_outside_causal_support": {
+        "acceptance_gate": false,
+        "directed_bound": false,
+        "interval_estimate": [
+          0.05404795482456391,
+          0.24595204517543606
+        ],
+        "maximum_entry": 1.0277972137698233e-07,
+        "sampled_energy_fraction": 1.687372735308722e-08
+      },
+      "covariance_hermiticity_residual": 3.0540207233327648e-21,
+      "diagnostics": {
+        "auxiliary_identity_residual": 0.0,
+        "frame_map_parameter_derivative": 0.0,
+        "incident_tangent_norm": 0.0,
+        "initial_metric_change": 2.6645352591003757e-15,
+        "initial_tangent_norm": 0.0,
+        "metric_flux_tangent_residual": 0.0,
+        "norm_flux_residual": 1.7763568394002505e-15,
+        "source_closed_column_norm": 0.0,
+        "source_covariance_closed_column_norm": 0.0,
+        "source_covariance_hermiticity": 0.0,
+        "source_covariance_tangent_norm": 0.0,
+        "stationary_phase_reapplied": false,
+        "tangent_boundary_trace": 4.602320536356196e-09
+      },
+      "late_window_start": 0.25620332026786774,
+      "response_max_norms": {
+        "covariance": 7.465773964700964e-06,
+        "field": 0.000213490367021157,
+        "trace": 0.0001612362640562797
+      },
+      "sampled_projector_kernel_hermiticity_residual": 0.0,
+      "sampled_projector_kernel_tangent_norm": 1.0846056987118843e-05,
+      "slow_characteristic_trace_after_pulse": {
+        "PG_time": 0.2578125,
+        "magnitude": 5.422940719328384e-08,
+        "source_column": 0
+      },
+      "slow_characteristic_trace_peak": {
+        "PG_time": 0.16640625,
+        "magnitude": 0.00029024467710692483,
+        "source_column": 0
+      },
+      "slow_trace_outside_causal_support": {
+        "acceptance_gate": false,
+        "directed_bound": false,
+        "interval_estimate": [
+          0.05404795482456391,
+          0.24595204517543606
+        ],
+        "maximum_entry": 1.0277972137698233e-07,
+        "sampled_energy_fraction": 1.908091884524384e-08
+      },
+      "stationary_reference_field_drift": 0.0003275484347631148,
+      "stationary_reference_trace_drift": 0.0003730127626199893
+    },
+    "3201_256": {
+      "characteristic_trace_outside_causal_support": {
+        "acceptance_gate": false,
+        "directed_bound": false,
+        "interval_estimate": [
+          0.05404795482456391,
+          0.24595204517543606
+        ],
+        "maximum_entry": 1.1144710555773783e-07,
+        "sampled_energy_fraction": 1.7726510759980416e-08
+      },
+      "covariance_hermiticity_residual": 3.46824826357114e-21,
+      "diagnostics": {
+        "auxiliary_identity_residual": 1.0325074129013956e-13,
+        "frame_map_parameter_derivative": 0.0,
+        "incident_tangent_norm": 0.0,
+        "initial_metric_change": 2.6645352591003757e-15,
+        "initial_tangent_norm": 0.0,
+        "metric_flux_tangent_residual": 0.0,
+        "norm_flux_residual": 1.7763568394002505e-15,
+        "source_closed_column_norm": 0.0,
+        "source_covariance_closed_column_norm": 0.0,
+        "source_covariance_hermiticity": 0.0,
+        "source_covariance_tangent_norm": 0.0,
+        "stationary_phase_reapplied": false,
+        "tangent_boundary_trace": 5.480641778730048e-09
+      },
+      "late_window_start": 0.25620332026786774,
+      "response_max_norms": {
+        "covariance": 7.466722373794346e-06,
+        "field": 0.0002136225541669154,
+        "trace": 0.0001612925352951591
+      },
+      "sampled_projector_kernel_hermiticity_residual": 0.0,
+      "sampled_projector_kernel_tangent_norm": 1.0847524871323214e-05,
+      "slow_characteristic_trace_after_pulse": {
+        "PG_time": 0.258984375,
+        "magnitude": 5.88883679544041e-08,
+        "source_column": 0
+      },
+      "slow_characteristic_trace_peak": {
+        "PG_time": 0.165234375,
+        "magnitude": 0.0002903253540338515,
+        "source_column": 0
+      },
+      "slow_trace_outside_causal_support": {
+        "acceptance_gate": false,
+        "directed_bound": false,
+        "interval_estimate": [
+          0.05404795482456391,
+          0.24595204517543606
+        ],
+        "maximum_entry": 1.1144710555773783e-07,
+        "sampled_energy_fraction": 2.0094948688813544e-08
+      },
+      "stationary_reference_field_drift": 0.00019369056258139566,
+      "stationary_reference_trace_drift": 2.7021139586659262e-05
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_retarded_response_resolution.py --check",
+  "residuals": {
+    "archived801_resampling": 0.0,
+    "maximum_flux_and_auxiliary_algebra": 1.0325074129013956e-13,
+    "maximum_kernel_hermiticity": 3.46824826357114e-21
+  },
+  "reused_artifacts": [
+    {
+      "bytes": 5889941,
+      "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
+      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+    },
+    {
+      "bytes": 40006859,
+      "path": "results/development/artifacts/nsc-transmitting-history-modes.9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a.npz",
+      "sha256": "9b4f7b14572697ffe4afa14653ced9eef57d02b0df561b961476322f8202786a"
+    },
+    {
+      "bytes": 9829760,
+      "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+      "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+    }
+  ],
+  "runtime": {
+    "CPU_seconds": 57.733871,
+    "case_CPU_seconds": {
+      "1601_128": 7.106904,
+      "3201_128": 22.226404,
+      "3201_256": 28.297290000000004
+    },
+    "cpu_budget_exceeded": false,
+    "cpu_budget_seconds": 120.0,
+    "resampling_CPU_seconds": 0.014497000000000038,
+    "stop_reason": "completed all three prescribed cases",
+    "wall_seconds": 57.81483662499522
+  },
+  "schema": "NSC-RETARDED-RESPONSE-RESOLUTION-v1",
+  "scope": {
+    "continuum_error_bound": null,
+    "differences_are_indicators": true,
+    "full_CAR_verified": false,
+    "full_continuous_C0_match": "OPEN",
+    "metric_evolution": false,
+    "new_horizon_scattering_source_state_solve": false,
+    "physical_constraint_solution": false,
+    "same_pulse_and_source_as_pilot": true,
+    "sampled_projector_tangent_reported": true,
+    "stationary_drift_subtracted": false
+  },
+  "source_hashes": {
+    "docs/nsc-retarded-response-resolution.md": "3179a8c6bfcf4049ee0843f228aaa2c2b939c2c82bbada724998fadab232645c",
+    "scripts/derive_nsc_retarded_response_resolution.py": "6d912796699c138d8f709a12b6e0e5508e84e6368712a3651f18907ee199f657",
+    "tests/test_nsc_retarded_response_resolution.py": "1640457d4d3c6db953fb92c00d190fb2f64094693eff678f17e9ef5cd592de84"
+  },
+  "status": "PASS: sampled resolution indicators only"
+}

@@ -134,5 +134,5 @@ Those gaps are recorded, not filled. The finite common-metric successors
 have their own [status](current-result.md); they do not establish the
 continuum vacuum-matched claims above. The incoming campaign remains paused.
 Its closure and a cosmological fit are not prerequisites for the
-[exterior atlas](../lab/docs/nsc-cosmological-atlas.md). Each candidate names
+[exterior atlas](nsc-cosmological-atlas.md). Each candidate names
 its actual dependencies; this historical list does not start a campaign.

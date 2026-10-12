@@ -1,0 +1,29 @@
+{
+  "accountable_author": "Douglas Ek",
+  "assembled_unclipped_leftover": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "changed_history_UV_bound": null,
+  "epsilon_spend_authorized": false,
+  "existence_tolerance": 3e-11,
+  "field_error_bound": null,
+  "full_between_node_bound": null,
+  "gap_above_existence_tolerance": 0.0041071931630387885,
+  "geometry_between_node_bound": 1e-13,
+  "geometry_between_node_can_move_gap": false,
+  "input_hashes": {
+    "results/development/nsc-ks-assembled-chebyshev-n32-stall.json": "22866f7aa041d928e049044f860fd245df9ced4f6dca1646027f7bbbcbe37f71",
+    "results/development/nsc-ks-deciding-bounds-after-assembled-chebyshev-gn.json": "17b17819c533aa4eac7feb957cb60683b01b367edaed49bfb7bca33ecf2ade14"
+  },
+  "low_subgap_error_bound": null,
+  "named_search_stall": "finite_wu_n32_assembled_image_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "reproducer": "python3 scripts/derive_nsc_ks_deciding_bounds_after_assembled_chebyshev_n32.py --check",
+  "schema": "NSC-KS-DECIDING-BOUNDS-AFTER-ASSEMBLED-CHEBYSHEV-N32-v1",
+  "source_hashes": {
+    "docs/nsc-ks-deciding-bounds-after-assembled-chebyshev-n32.md": "6afa6f4c9719950049a527901b33a23e96045d9712884390cb456551e4543bde",
+    "scripts/derive_nsc_ks_deciding_bounds_after_assembled_chebyshev_n32.py": "90ab3b3fa292875cef0ba901c39d73db37dfe7192b8a22269a7c60ab0f3d25bc"
+  },
+  "status": "OPEN: n=32 leftover gap stays far above 3e-11; no deciding epsilon spend"
+}

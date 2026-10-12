@@ -1,0 +1,244 @@
+{
+  "schema": "NSC-SPHERICAL-COUPLING-REFINEMENT-v3",
+  "status": "PROVISIONAL",
+  "renewal": false,
+  "global_regeneration": false,
+  "absolute_vacuum_claim": false,
+  "module_unchanged": true,
+  "filtered_v1_radius": false,
+  "post_step_filter": false,
+  "constraint_projection": false,
+  "prescribed_radius": false,
+  "threshold_relaxation": false,
+  "time_extension_T_0_05": false,
+  "v1_bytes_preserved": true,
+  "v2_bytes_preserved": true,
+  "representation": "variational Fourier-Galerkin matched spatial refinement",
+  "question": "Does matched refinement ng=nf-1, nq=4*nf bring the full quadrature constraints under the declared initial and window tolerances?",
+  "phi_dot": "U_f\u2020 (-i H_fine U_f Phi)",
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "tolerances": {
+    "initial_full": 1e-08,
+    "window_full": 0.001,
+    "energy_relative": 1e-06,
+    "newton": 1e-10,
+    "projected_residual_satisfies_full_initial_criterion": false
+  },
+  "hashes_before": {
+    "galerkin": "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+    "tests": "e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+    "coupling": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "action": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "source": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "v1": "88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+    "v2": "26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+    "driver": "2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c"
+  },
+  "v2_reference": {
+    "record": "results/development/nsc-spherical-coupling-control-v2.json",
+    "nf": 128,
+    "ng": 127,
+    "nq": 512,
+    "initial_projected_hamilton_max": 8.47342311333793e-11,
+    "initial_full_hamilton_max": 0.03413556103820986,
+    "initial_full_momentum_max": 1.5221143897700675e-13,
+    "window_full_hamilton_max": 0.0342671897617608,
+    "window_full_momentum_max": 0.0062286532518529,
+    "window_projected_hamilton_max": 0.010409885819527639,
+    "cited_window_full_hamilton": 0.03427,
+    "cited_window_full_momentum": 0.00623,
+    "projected_initial_does_not_pass_full_initial_criterion": true
+  },
+  "costs": {
+    "nf256_columns": {
+      "wall_seconds": 0.004331875003117602,
+      "cpu_seconds": 0.0039819999999999856
+    },
+    "nf256_grid": {
+      "wall_seconds": 0.12048295800195774,
+      "cpu_seconds": 0.11886799999999997
+    },
+    "nf256_newton": {
+      "wall_seconds": 1.3545949999970617,
+      "cpu_seconds": 1.349108
+    }
+  },
+  "preparation": {
+    "problems": [],
+    "phase_applied_to_odd_lobe": false,
+    "phase_on_minus_spinor_column": true,
+    "column_orthonormal_defect": 2.220446049250313e-16,
+    "complement_occupation": 0.0,
+    "vacuum_identification": false,
+    "sea_subtracted": false
+  },
+  "nf256_initial_solve": {
+    "nf": 256,
+    "ng": 255,
+    "nq": 1024,
+    "doubled_nq": 2048,
+    "converged": false,
+    "blocker": "Newton left the positive quadrature chart or stalled before full rho",
+    "newton_steps": [
+      {
+        "scale": 0.125,
+        "converged": true,
+        "residual_max": 5.196829569651103e-11
+      },
+      {
+        "scale": 0.25,
+        "converged": true,
+        "residual_max": 8.846727613202e-11
+      },
+      {
+        "scale": 0.375,
+        "converged": true,
+        "residual_max": 8.300561951354463e-11
+      },
+      {
+        "scale": 0.5,
+        "converged": false,
+        "residual_max": 1.2876060991167562e-10
+      }
+    ],
+    "rho_independent_of_r_max": 0.0,
+    "r_min_coarse": null,
+    "r_max_coarse": null,
+    "bracket_min": null,
+    "bracket_positive": null,
+    "imposed_radius": false,
+    "filtered_v1_radius": false,
+    "diagnostics": null,
+    "velocities": null,
+    "lifted_proper_max": null,
+    "chart_proper_max": null,
+    "isometry_geometry": 3.8393847960076276e-14,
+    "isometry_columns": 4.1463372052907783e-14,
+    "omega_subspace": null,
+    "omega_quadrature_nyquist": null,
+    "module_stable_dt": null,
+    "requested_dt": 0.0005,
+    "requested_dt_half": 0.00025
+  },
+  "initial_axis": {
+    "tolerance": 1e-08,
+    "counts_projected_success_as_full_pass": false,
+    "projected_within_tolerance": false,
+    "full_local_pass": false,
+    "doubled_quadrature_full_pass": false,
+    "pass": false,
+    "failures": [
+      {
+        "name": "initial_solve",
+        "value": 1.2876060991167562e-10,
+        "tolerance": 1e-10,
+        "blocker": "Newton left the positive quadrature chart or stalled before full rho"
+      },
+      {
+        "name": "full_hamilton_max",
+        "value": null,
+        "tolerance": 1e-08,
+        "ratio_to_tolerance": null
+      },
+      {
+        "name": "full_momentum_max",
+        "value": null,
+        "tolerance": 1e-08,
+        "ratio_to_tolerance": null
+      },
+      {
+        "name": "held_out_hamilton_max",
+        "value": null,
+        "tolerance": 1e-08,
+        "ratio_to_tolerance": null
+      },
+      {
+        "name": "held_out_momentum_max",
+        "value": null,
+        "tolerance": 1e-08,
+        "ratio_to_tolerance": null
+      },
+      {
+        "name": "projected_hamilton_max",
+        "value": null,
+        "tolerance": 1e-08,
+        "ratio_to_tolerance": null
+      },
+      {
+        "name": "projected_momentum_max",
+        "value": null,
+        "tolerance": 1e-08,
+        "ratio_to_tolerance": null
+      }
+    ],
+    "full_items_reported": {
+      "full_hamilton_max": null,
+      "full_momentum_max": null,
+      "held_out_hamilton_max": null,
+      "held_out_momentum_max": null
+    }
+  },
+  "verdict": "FAIL_INITIAL_SOLVE",
+  "exact_failure": [
+    {
+      "name": "initial_solve",
+      "value": 1.2876060991167562e-10,
+      "tolerance": 1e-10,
+      "blocker": "Newton left the positive quadrature chart or stalled before full rho"
+    },
+    {
+      "name": "full_hamilton_max",
+      "value": null,
+      "tolerance": 1e-08,
+      "ratio_to_tolerance": null
+    },
+    {
+      "name": "full_momentum_max",
+      "value": null,
+      "tolerance": 1e-08,
+      "ratio_to_tolerance": null
+    },
+    {
+      "name": "held_out_hamilton_max",
+      "value": null,
+      "tolerance": 1e-08,
+      "ratio_to_tolerance": null
+    },
+    {
+      "name": "held_out_momentum_max",
+      "value": null,
+      "tolerance": 1e-08,
+      "ratio_to_tolerance": null
+    },
+    {
+      "name": "projected_hamilton_max",
+      "value": null,
+      "tolerance": 1e-08,
+      "ratio_to_tolerance": null
+    },
+    {
+      "name": "projected_momentum_max",
+      "value": null,
+      "tolerance": 1e-08,
+      "ratio_to_tolerance": null
+    }
+  ],
+  "hashes_after": {
+    "galerkin": "85d1f3dbbd82a38fe14d2405ad9782af6de68095052ff522ac6602e5d50a14ab",
+    "tests": "e928b0d9b9d1162e3f665681adf1d4c9a3ff00c2941189d20bdda937c4b51a19",
+    "coupling": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "action": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "source": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "v1": "88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60",
+    "v2": "26030900805ebe27553e1b8d1cd490c6ca1a79c4631b65dad5483db3c27b370c",
+    "driver": "2033c6ec99143ccc04666717533c8f67748570f403e7d8228fda5e7e80936b3c"
+  },
+  "runtime_seconds": 1.4827550420013722,
+  "cpu_seconds": 1.475006
+}

@@ -1,0 +1,93 @@
+{
+  "accountable_author": "Douglas Ek",
+  "allocation": {
+    "arithmetic": 1e-12,
+    "baseline_low_subgap": 3e-12,
+    "between_node": 1e-12,
+    "changed_history_UV_tail": 5e-12,
+    "covered_regions": 1e-12,
+    "energy_interpolation": 1e-12,
+    "field_space_time": 5e-12,
+    "phase_value": 1e-12,
+    "upstream": 2e-12
+  },
+  "bounds_spent": false,
+  "components": {
+    "arithmetic": {
+      "allocation": 1e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "baseline_low_subgap": {
+      "allocation": 3e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "between_node": {
+      "allocation": 1e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "changed_history_UV_tail": {
+      "allocation": 5e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "covered_regions": {
+      "allocation": 1e-12,
+      "bound": null,
+      "cited_register": "results/development/nsc-incoming-source-update-v5.json",
+      "cited_status": "PASS: certified group32 lower cell composed; full numerical source and stationarity OPEN",
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "energy_interpolation": {
+      "allocation": 1e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "field_space_time": {
+      "allocation": 5e-12,
+      "bound": null,
+      "cited_registers": [
+        "results/development/nsc-incoming-boundary-buffer.json",
+        "results/development/nsc-local-cf4-response.json"
+      ],
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "phase_value": {
+      "allocation": 1e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    },
+    "upstream": {
+      "allocation": 2e-12,
+      "bound": null,
+      "reason": "value-only one-knob movement 8.124e-04 exceeds this allocation; no changed-history enclosure is claimed",
+      "verdict": "ESCALATE"
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-incoming-boundary-buffer.json": "89d0aab320d4396dddc5f82ec235640c887299b5e24e68e80ff6b88cb6084663",
+    "results/development/nsc-incoming-source-update-v5.json": "30e2a147ada46d5e4f91c8561d57051991274ed1cca7d72c6f6d3a93d28ef87d",
+    "results/development/nsc-ks-gate-numerical-floor.json": "946349481bd43e850e31b0af078431aeb7d3221fab6f0db7633457a86084f48d",
+    "results/development/nsc-local-cf4-response.json": "2f551fc9dd74caf9dabac6f061bbccd53851692fdc3729ff8cd6005a8449afbc"
+  },
+  "largest_one_knob_movement": 0.0008123556564981829,
+  "named_gap": "value_only_indicator_floor_above_1e-10",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "schema": "NSC-KS-GATE-BUDGET-INDEPENDENT-v1",
+  "source_hashes": {
+    "docs/nsc-ks-gate-budget-independent.md": "bab61494572d2ab7919a4ea0104939ba6c17961bbd52f272b2cb6fdc1013e781",
+    "scripts/derive_nsc_ks_gate_budget_independent.py": "85699d7d57984bdd9e09d4d5b09170d74612733ca80ada308752bd6cb507c5f9"
+  },
+  "status": "OPEN: every history-independent component is ESCALATE; the value-only floor exceeds the allocations"
+}

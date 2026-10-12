@@ -1,0 +1,3416 @@
+{
+  "schema": "NSC-SPHERICAL-CONFORMAL-SOURCE-CONTROLS-v1",
+  "gauge": "conformal",
+  "nf": 256,
+  "nq": 1024,
+  "target": 0.3,
+  "dt_cap": 0.0005,
+  "cpu_budget_seconds": 600.0,
+  "forecast_safety": 1.25,
+  "run_plan": [
+    [
+      "uniform_alpha0",
+      0.0
+    ],
+    [
+      "reversed_alpha_minus1",
+      -1.0
+    ],
+    [
+      "imbalance_alpha_0_95",
+      0.95
+    ],
+    [
+      "imbalance_alpha_1_05",
+      1.05
+    ]
+  ],
+  "source_parameter": "(.5+.25alpha,.5+.25alpha,.5,.5,.5-.25alpha,.5-.25alpha)",
+  "source_inventory_changed": false,
+  "prepared_columns_changed": false,
+  "total_occupation": 3.0,
+  "mean_current_deleted": false,
+  "midtrajectory_reset": false,
+  "radius_imposed": false,
+  "constructor": "nsc_regeneration_controls.prepare_population: source radius Newton plus projected periodic shift antiderivative",
+  "admission": "positive/source-derived finite chart, antiderivative accepted, unchanged columns; historical initial tolerance flags are reported, not retuned",
+  "uniform_annihilation_assumed": false,
+  "baseline_alpha1_sealed": true,
+  "source_bindings_before": {
+    "v1_source_json": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "v1_source_npz": "5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+    "v2_source_json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "v2_source_npz": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+    "driver": "ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+    "galerkin": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "source_constructor": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+    "coupling": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "action": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "conformal_source": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+  },
+  "results": {
+    "uniform_alpha0": {
+      "initial": {
+        "time": 0.0,
+        "field_energy": 11.999999996262105,
+        "gravity_energy": -11.999999996272052,
+        "energy": -9.947598300641403e-12,
+        "fieldwork_power": 0.0,
+        "constraint_norm": 0.0002740803619832312,
+        "forcing_norm": 0.00030631335437134196,
+        "quadrature_forcing_norm": 5.202614971957596e-08,
+        "projection_forcing_norm": 0.0003063108799868819,
+        "full_C_l2": 0.0010905418671283346,
+        "full_D_l2": 1.1579287870796056e-12,
+        "full_hamilton_max": 0.0013742080885421615,
+        "full_momentum_max": 3.03694793796449e-12,
+        "proper_min": 0.0,
+        "proper_max": 0.0,
+        "r_min": 4.234125354144103,
+        "r_max": 4.847039823256242,
+        "Q_min": 0.2513249332691237,
+        "Q_max": 0.2513249332691511,
+        "gram_gap": 2.220446049250313e-16,
+        "omega": 100.3895907664438,
+        "clock_rate": 1.1893171843001826,
+        "occupation": [
+          0.49999999999999967,
+          0.4999999999999998
+        ],
+        "proper_clock": 0.0
+      },
+      "final": {
+        "time": 0.3,
+        "field_energy": 11.99997589124814,
+        "gravity_energy": -11.999975891271102,
+        "energy": -2.2962964862927038e-11,
+        "fieldwork_power": 8.278969503745268e-05,
+        "constraint_norm": 0.000275661258109903,
+        "forcing_norm": 0.00028613935835894536,
+        "quadrature_forcing_norm": 6.520427980410422e-08,
+        "projection_forcing_norm": 0.00028613584860521173,
+        "full_C_l2": 0.0008184805841738922,
+        "full_D_l2": 0.0001847294704269015,
+        "full_hamilton_max": 0.001066296785520393,
+        "full_momentum_max": 0.00020277540507640524,
+        "proper_min": -0.06404316116766104,
+        "proper_max": 0.07746197724910699,
+        "r_min": 4.242620144749349,
+        "r_max": 4.851232407847168,
+        "Q_min": 0.24993381341894333,
+        "Q_max": 0.2501143225145125,
+        "gram_gap": 1.6420198534206065e-13,
+        "omega": 100.38838015568916,
+        "clock_rate": 1.1854806157509707,
+        "occupation": [
+          0.031033350168110437,
+          0.031157407153150348
+        ],
+        "proper_clock": 0.3565052143927182
+      },
+      "time": 0.3,
+      "integrals": {
+        "forcing_norm": {
+          "trapezoid": 8.969853783195116e-05,
+          "simpson": 8.969882264493163e-05,
+          "indicator": 2.8481298047810296e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "quadrature_forcing_norm": {
+          "trapezoid": 1.6074728084416534e-08,
+          "simpson": 1.6075148139909224e-08,
+          "indicator": 4.20055492690095e-13,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "projection_forcing_norm": {
+          "trapezoid": 8.969775037352505e-05,
+          "simpson": 8.969803514001441e-05,
+          "indicator": 2.847664893468457e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "fieldwork_power": {
+          "trapezoid": -2.4104849793296853e-05,
+          "simpson": -2.410500090445865e-05,
+          "indicator": 1.5111116183222709e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "clock_rate": {
+          "trapezoid": 0.3565052143927183,
+          "simpson": 0.356505215299357,
+          "indicator": 9.066387640643825e-10,
+          "uniform_steps": true,
+          "certified": false
+        }
+      },
+      "field_energy_change": -2.4105013965325384e-05,
+      "gravity_energy_change": 2.410500094995882e-05,
+      "energy_balance_change": -1.3015366562285635e-11,
+      "fieldwork_difference": -1.6417202853110302e-10,
+      "constraint_end_sampled_budget": 0.00036377889981518237,
+      "constraint_end_margin": 8.811764170527938e-05,
+      "positive_chart": true,
+      "gram_gap_max": 1.652011860642233e-13,
+      "occupation_change": [
+        -0.46896664983188924,
+        -0.4688425928468494
+      ],
+      "physical": {
+        "initial": {
+          "time": 0.0,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 5.013264739503674,
+              "coordinate_matter_energy": 5.999999997785964,
+              "coordinate_gravity_energy": -3.325699794544726,
+              "normal_boundary_flux": -2.4190073778563924e-20,
+              "normal_discrete_boundary_flux": -2.4190481132798166e-20,
+              "boundary_flux_identity_gap": 4.073542342420054e-25,
+              "normal_left_outward_flux": -6.263404876658263e-21,
+              "normal_right_outward_flux": 3.045347865522219e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -4.502215261307625e-15,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -1.930904848784609e-10,
+              "normal_balance_defect": -1.930859826390093e-10,
+              "probability": 1.499999999999078,
+              "probability_share": 0.49999999999969275,
+              "probability_boundary_flux": -1.8445899947768446e-33,
+              "probability_directional_slope": -3.8567756845781197e-17,
+              "probability_balance_defect": -3.856775684549114e-17,
+              "normal_internal_flux_l2": 7.605153125548505e-13,
+              "normal_internal_flux_max_abs": 2.1012173355929976e-12,
+              "probability_internal_flux_l2": 4.629828602640246e-16,
+              "probability_internal_flux_max_abs": 1.887379141742673e-15
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 5.015310769898928,
+              "coordinate_matter_energy": 5.999999998459136,
+              "coordinate_gravity_energy": -3.3214500624388723,
+              "normal_boundary_flux": 1.948063569185257e-20,
+              "normal_discrete_boundary_flux": 1.9480683242693198e-20,
+              "boundary_flux_identity_gap": 4.75508406296217e-26,
+              "normal_left_outward_flux": -3.045347865522219e-20,
+              "normal_right_outward_flux": 1.0972842963369619e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -9.855431170950237e-16,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -3.4212629628214745e-10,
+              "normal_balance_defect": -3.421253107585112e-10,
+              "probability": 1.499999999994429,
+              "probability_share": 0.49999999999814304,
+              "probability_boundary_flux": -2.9849779126482906e-32,
+              "probability_directional_slope": 1.4506397049583323e-15,
+              "probability_balance_defect": 1.450639704958272e-15,
+              "normal_internal_flux_l2": 8.713273041928148e-13,
+              "normal_internal_flux_max_abs": 2.473321245913452e-12,
+              "probability_internal_flux_l2": 4.210120593548662e-16,
+              "probability_internal_flux_max_abs": 1.4432899320127035e-15
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 1.4851067424437314e-11,
+              "coordinate_matter_energy": 1.6664669644228525e-11,
+              "coordinate_gravity_energy": -2.6767325994448337,
+              "normal_boundary_flux": 4.922450495953432e-21,
+              "normal_discrete_boundary_flux": 4.922384282637616e-21,
+              "boundary_flux_identity_gap": 6.621331581646993e-26,
+              "normal_left_outward_flux": -1.0972842963369619e-20,
+              "normal_right_outward_flux": 6.050392467416187e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 2.027468726002659e-18,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -4.745893484517056e-13,
+              "normal_balance_defect": -4.745913808428188e-13,
+              "probability": 5.952731580230464e-12,
+              "probability_share": 1.9842438600768215e-12,
+              "probability_boundary_flux": -7.856731520014861e-32,
+              "probability_directional_slope": -1.488920243634553e-19,
+              "probability_balance_defect": -1.488920243681646e-19,
+              "normal_internal_flux_l2": 0.0,
+              "normal_internal_flux_max_abs": 1.9548949937693755e-18,
+              "probability_internal_flux_l2": 1.261062970966444e-18,
+              "probability_internal_flux_max_abs": 1.9049872571868194e-22
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 2.9107705828979036e-13,
+              "coordinate_matter_energy": 3.386275634897906e-13,
+              "coordinate_gravity_energy": -2.676117539843618,
+              "normal_boundary_flux": -2.13012409242076e-22,
+              "normal_discrete_boundary_flux": -2.137238196771234e-22,
+              "boundary_flux_identity_gap": 7.11410435047377e-25,
+              "normal_left_outward_flux": -6.050392467416187e-21,
+              "normal_right_outward_flux": 6.263404876658263e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -3.1233806026811054e-19,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": 4.420216025478735e-14,
+              "normal_balance_defect": 4.420247280656821e-14,
+              "probability": 5.39987542527709e-13,
+              "probability_share": 1.7999584750923636e-13,
+              "probability_boundary_flux": 1.1026168432140836e-31,
+              "probability_directional_slope": 2.8877318823166584e-19,
+              "probability_balance_defect": 2.8877318825103973e-19,
+              "normal_internal_flux_l2": 5.705392448252052e-15,
+              "normal_internal_flux_max_abs": 1.6970208448864643e-19,
+              "probability_internal_flux_l2": 0.0,
+              "probability_internal_flux_max_abs": 6.839774933596815e-23
+            }
+          ],
+          "shell_leader": 1,
+          "probability_leader": 0,
+          "shell_leader_share": 0.5001020100201764,
+          "probability_leader_share": 0.49999999999969275,
+          "canonical_probability": 2.9999999999999996,
+          "circular_probability_location": 1.9984800702927747,
+          "circular_concentration": 0.7386770900979853,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.7492159982324037e-08,
+          "probability_balance_defect_l2_density": 1.4384755381512802e-13,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 7.11410435047377e-25,
+          "full_normal_energy": 10.028575509417744,
+          "source_kernel_gap_max": 6.938893903907228e-18,
+          "shell_identity_gap_max": 1.3877787807814457e-17
+        },
+        "final": {
+          "time": 0.3,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 5.03162620788447,
+              "coordinate_matter_energy": 5.9699811077838225,
+              "coordinate_gravity_energy": -3.321938379094397,
+              "normal_boundary_flux": -0.6694650910120657,
+              "normal_discrete_boundary_flux": -0.6694650910120059,
+              "boundary_flux_identity_gap": 5.984102102729594e-14,
+              "normal_left_outward_flux": 0.6689476354625183,
+              "normal_right_outward_flux": 0.0005174555495474055,
+              "proper_pressure_work": 0.2499808390184087,
+              "momentum_lapse_work": 0.03800698158813932,
+              "coordinate_metric_work": -0.00018712038525220116,
+              "normal_directional_slope": -0.381477270450411,
+              "normal_balance_defect": -4.495745542423421e-11,
+              "probability": 1.4925057664563144,
+              "probability_share": 0.497501922152186,
+              "probability_boundary_flux": -0.18820296789751287,
+              "probability_directional_slope": -0.18820296789750773,
+              "probability_balance_defect": -1.4021525301025128e-14,
+              "normal_internal_flux_l2": 3.5935435960374593,
+              "normal_internal_flux_max_abs": 3.9562507437823644,
+              "probability_internal_flux_l2": 1.0657828550107957,
+              "probability_internal_flux_max_abs": 1.1830583625700304
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 4.934678045614675,
+              "coordinate_matter_energy": 5.860172660721574,
+              "coordinate_gravity_energy": -3.318493513029147,
+              "normal_boundary_flux": -2.2891870109774373,
+              "normal_discrete_boundary_flux": -2.2891870109775088,
+              "boundary_flux_identity_gap": 7.149836278586008e-14,
+              "normal_left_outward_flux": -0.0005174555495474055,
+              "normal_right_outward_flux": 2.2897044665269846,
+              "proper_pressure_work": 0.24893068953154868,
+              "momentum_lapse_work": 0.03415641782410074,
+              "coordinate_metric_work": 0.0002712323116672899,
+              "normal_directional_slope": -2.00609990343354,
+              "normal_balance_defect": 1.8831872007707815e-10,
+              "probability": 1.465049325224921,
+              "probability_share": 0.4883497750750534,
+              "probability_boundary_flux": -0.6440237223110818,
+              "probability_directional_slope": -0.6440237223110861,
+              "probability_balance_defect": 1.5083658647604223e-14,
+              "normal_internal_flux_l2": 3.362942440019951,
+              "normal_internal_flux_max_abs": 3.9557975280328996,
+              "probability_internal_flux_l2": 0.9991328802648903,
+              "probability_internal_flux_max_abs": 1.18305818863328
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.12449655256909925,
+              "coordinate_matter_energy": 0.13984103191780078,
+              "coordinate_gravity_energy": -2.679692858179804,
+              "normal_boundary_flux": 2.2897044665269277,
+              "normal_discrete_boundary_flux": 2.289704466526941,
+              "boundary_flux_identity_gap": 1.3322676295501878e-14,
+              "normal_left_outward_flux": -2.2897044665269846,
+              "normal_right_outward_flux": 5.688713849672243e-14,
+              "proper_pressure_work": 0.0038466517620424833,
+              "momentum_lapse_work": 0.006972527058704403,
+              "coordinate_metric_work": -1.1225501178681654e-06,
+              "normal_directional_slope": 2.300523645366484,
+              "normal_balance_defect": 1.879646418676234e-11,
+              "probability": 0.03495095227533068,
+              "probability_share": 0.01165031742511213,
+              "probability_boundary_flux": 0.6440331826118607,
+              "probability_directional_slope": 0.6440331826118655,
+              "probability_balance_defect": 1.2332956198406325e-15,
+              "normal_internal_flux_l2": 0.42622850117282696,
+              "normal_internal_flux_max_abs": 2.2897044665269846,
+              "probability_internal_flux_l2": 0.11973297845194947,
+              "probability_internal_flux_max_abs": 0.6440331826119909
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.026682867251333852,
+              "coordinate_matter_energy": 0.029981090824934366,
+              "coordinate_gravity_energy": -2.679851140967756,
+              "normal_boundary_flux": 0.6689476354625752,
+              "normal_discrete_boundary_flux": 0.6689476354625234,
+              "boundary_flux_identity_gap": 5.1736392947532295e-14,
+              "normal_left_outward_flux": -5.688713849672243e-14,
+              "normal_right_outward_flux": -0.6689476354625183,
+              "proper_pressure_work": 0.0007928724563225556,
+              "momentum_lapse_work": 0.0015297675449467286,
+              "coordinate_metric_work": -1.996812597679857e-07,
+              "normal_directional_slope": 0.671270275313341,
+              "normal_balance_defect": -1.5044853463706558e-10,
+              "probability": 0.007493956042943745,
+              "probability_share": 0.0024979853476483228,
+              "probability_boundary_flux": 0.18819350759673406,
+              "probability_directional_slope": 0.18819350759672798,
+              "probability_balance_defect": 9.225058700068914e-15,
+              "normal_internal_flux_l2": 0.10112571024477285,
+              "normal_internal_flux_max_abs": 0.577896068482411,
+              "probability_internal_flux_l2": 0.028420370112160524,
+              "probability_internal_flux_max_abs": 0.16252055292671566
+            }
+          ],
+          "shell_leader": 0,
+          "probability_leader": 0,
+          "shell_leader_share": 0.4973199236439764,
+          "probability_leader_share": 0.497501922152186,
+          "canonical_probability": 2.99999999999951,
+          "circular_probability_location": 1.9984756888287942,
+          "circular_concentration": 0.7182923488309043,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.9717954360228098e-08,
+          "probability_balance_defect_l2_density": 1.2157885339214924e-11,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 7.149836278586008e-14,
+          "full_normal_energy": 10.117483673319578,
+          "source_kernel_gap_max": 3.469446951953614e-18,
+          "shell_identity_gap_max": 1.3877787807814457e-17
+        },
+        "windows": [
+          {
+            "interval": [
+              0.0,
+              2.0
+            ],
+            "normal_shell_change": 0.018361468380795998,
+            "probability_change": -0.007494233542763684,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": -0.026645811043641974,
+                "simpson": -0.026620380541913752,
+                "indicator": 2.5430501728221366e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.033590808373905476,
+                "simpson": 0.033589318459151536,
+                "indicator": 1.489914753939614e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.011391217609054096,
+                "simpson": 0.01139253599775411,
+                "indicator": 1.3183887000150357e-06
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -2.9400932047196116e-05,
+                "simpson": -2.9404890372175618e-05,
+                "indicator": 3.958324979501593e-09
+              },
+              "normal_balance_defect": {
+                "trapezoid": -4.718190567399554e-12,
+                "simpson": -1.0896993640408445e-11,
+                "indicator": 6.178803073008891e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": -0.007501342685780949,
+                "simpson": -0.00749423269140911,
+                "indicator": 7.109994371839144e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": -5.398113814464162e-15,
+                "simpson": -5.417947032674446e-15,
+                "indicator": 1.983321821028403e-17
+              }
+            },
+            "normal_shell_integrated_gap": 2.525344619658948e-05,
+            "probability_integrated_gap": 7.109143022663092e-06,
+            "min_normal_shell": 5.013264739503674,
+            "max_abs_normal_boundary_flux": 0.6694650910120657,
+            "max_internal_normal_flux": 3.9708537937231765,
+            "max_internal_probability_flux": 1.1845990266772004,
+            "max_abs_normal_throughflow": 0.6689476354625183
+          },
+          {
+            "interval": [
+              2.0,
+              4.0
+            ],
+            "normal_shell_change": -0.0806327242842535,
+            "probability_change": -0.03495067476950786,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": -0.12414347063709875,
+                "simpson": -0.12410455014510355,
+                "indicator": 3.892049199520631e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.0329155994634615,
+                "simpson": 0.03291412653722717,
+                "indicator": 1.4729262343346483e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.010556371109904936,
+                "simpson": 0.010557729140031658,
+                "indicator": 1.3580301267222122e-06
+              },
+              "coordinate_metric_work": {
+                "trapezoid": 5.3408455138046085e-06,
+                "simpson": 5.329611622364729e-06,
+                "indicator": 1.1233891439879676e-08
+              },
+              "normal_balance_defect": {
+                "trapezoid": 3.808246014275832e-12,
+                "simpson": 5.249672421988637e-12,
+                "indicator": 1.4414264077128055e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": -0.03496157630105137,
+                "simpson": -0.03495066660312903,
+                "indicator": 1.0909697922341366e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": 5.919947974373379e-15,
+                "simpson": 5.945485227895968e-15,
+                "indicator": 2.5537253522588675e-17
+              }
+            },
+            "normal_shell_integrated_gap": 3.877577567057422e-05,
+            "probability_integrated_gap": 1.090153153759238e-05,
+            "min_normal_shell": 4.934678045614675,
+            "max_abs_normal_boundary_flux": 2.2891870109774373,
+            "max_internal_normal_flux": 3.968000358527305,
+            "max_internal_probability_flux": 1.1845990311514205,
+            "max_abs_normal_throughflow": 2.2897044665269846
+          },
+          {
+            "interval": [
+              4.0,
+              6.0
+            ],
+            "normal_shell_change": 0.12449655255424819,
+            "probability_change": 0.03495095226937795,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.12415048303338462,
+                "simpson": 0.12411146131049018,
+                "indicator": 3.902172289443895e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.0001139793182832688,
+                "simpson": 0.000113759396010366,
+                "indicator": 2.1992227290280214e-07
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.0002715609654686047,
+                "simpson": 0.0002713021208061688,
+                "indicator": 2.588446624359115e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -2.5691889779602114e-08,
+                "simpson": -2.5602815307630146e-08,
+                "indicator": 8.907447197196822e-11
+              },
+              "normal_balance_defect": {
+                "trapezoid": -3.5557681736670143e-12,
+                "simpson": -4.641553259484143e-12,
+                "indicator": 1.0857850858171289e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.03496185470052509,
+                "simpson": 0.03495094410458294,
+                "indicator": 1.0910595942152657e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": -3.001812105706976e-16,
+                "simpson": -3.010595091181067e-16,
+                "indicator": 8.782985474091177e-19
+              }
+            },
+            "normal_shell_integrated_gap": -3.947075933254107e-05,
+            "probability_integrated_gap": -1.0902431146840585e-05,
+            "min_normal_shell": 1.4851067424437314e-11,
+            "max_abs_normal_boundary_flux": 2.2897044665269277,
+            "max_internal_normal_flux": 2.2897044665269846,
+            "max_internal_probability_flux": 0.6440331826119909,
+            "max_abs_normal_throughflow": 2.2897044665269846
+          },
+          {
+            "interval": [
+              6.0,
+              8.0
+            ],
+            "normal_shell_change": 0.026682867251042776,
+            "probability_change": 0.007493956042403758,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.0266387986473561,
+                "simpson": 0.026613469376527105,
+                "indicator": 2.5329270828995665e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 2.0355741621361985e-05,
+                "simpson": 2.0299931355512806e-05,
+                "indicator": 5.5810265849179147e-08
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 4.9174150390967915e-05,
+                "simpson": 4.909482374854704e-05,
+                "indicator": 7.932664242087215e-08
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -4.116381842163169e-09,
+                "simpson": -4.098214904930151e-09,
+                "indicator": 1.8166937233018158e-11
+              },
+              "normal_balance_defect": {
+                "trapezoid": 2.842833556677558e-12,
+                "simpson": 3.380822868921994e-12,
+                "indicator": 5.379893122444361e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.0075010642863072305,
+                "simpson": 0.007493955189955202,
+                "indicator": 7.109096352028721e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": 2.1310272599574385e-15,
+                "simpson": 2.1311232142317457e-15,
+                "indicator": 9.595427430721085e-20
+              }
+            },
+            "normal_shell_integrated_gap": -2.5461291168489553e-05,
+            "probability_integrated_gap": -7.108243905603641e-06,
+            "min_normal_shell": -2.049580730828504e-11,
+            "max_abs_normal_boundary_flux": 0.6689476354625752,
+            "max_internal_normal_flux": 0.577896068482411,
+            "max_internal_probability_flux": 0.16252055292671566,
+            "max_abs_normal_throughflow": 0.6689476354625183
+          }
+        ],
+        "shell_leader_unchanged": false,
+        "probability_leader_unchanged": true,
+        "normal_shell_leader_share_min": 0.4973199236439764,
+        "probability_leader_share_min": 0.497501922152186,
+        "probability_total_drift": 4.89386309254769e-13,
+        "max_dynamic_work_gap": 0.0,
+        "max_boundary_flux_identity_gap": 9.334893968926394e-14,
+        "normal_continuity_defect_l2_max": 2.088621904952999e-08,
+        "probability_continuity_defect_l2_max": 1.2742984342544364e-11,
+        "renewal": false,
+        "continuum_balance_certified": false
+      },
+      "surfaces": [
+        {
+          "interval": [
+            0.0,
+            2.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": 0.02663879864735137,
+            "absolute_integral": 0.02663879870250008,
+            "endpoint": 0.6689476354625183,
+            "quadrature": {
+              "trapezoid": 0.026638798647351455,
+              "simpson": 0.026613469376522463,
+              "indicator": 2.5329270828992195e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 7.012396290514823e-06,
+            "absolute_integral": 1.8117732389704245e-05,
+            "endpoint": 0.0005174555495474055,
+            "quadrature": {
+              "trapezoid": 7.012396290514889e-06,
+              "simpson": 6.911165391288917e-06,
+              "indicator": 1.0123089922597181e-07
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": -0.026645811043641884,
+            "absolute_integral": 0.026645821499479333,
+            "endpoint": -0.6694650910120657,
+            "quadrature": {
+              "trapezoid": -0.026645811043641974,
+              "simpson": -0.026620380541913752,
+              "indicator": 2.5430501728221366e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            2.0,
+            4.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -7.012396290514823e-06,
+            "absolute_integral": 1.8117732389704245e-05,
+            "endpoint": -0.0005174555495474055,
+            "quadrature": {
+              "trapezoid": -7.012396290514889e-06,
+              "simpson": -6.911165391288917e-06,
+              "indicator": 1.0123089922597181e-07
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 0.12415048303338899,
+            "absolute_integral": 0.12415048311304439,
+            "endpoint": 2.2897044665269846,
+            "quadrature": {
+              "trapezoid": 0.12415048303338927,
+              "simpson": 0.12411146131049483,
+              "indicator": 3.902172289443895e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": -0.12414347063709845,
+            "absolute_integral": 0.1241434706886112,
+            "endpoint": -2.2891870109774373,
+            "quadrature": {
+              "trapezoid": -0.12414347063709875,
+              "simpson": -0.12410455014510355,
+              "indicator": 3.892049199520631e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            4.0,
+            6.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -0.12415048303338899,
+            "absolute_integral": 0.12415048311304439,
+            "endpoint": -2.2897044665269846,
+            "quadrature": {
+              "trapezoid": -0.12415048303338927,
+              "simpson": -0.12411146131049483,
+              "indicator": 3.902172289443895e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 4.637077327562047e-15,
+            "absolute_integral": 4.637077327562047e-15,
+            "endpoint": 5.688713849672243e-14,
+            "quadrature": {
+              "trapezoid": 4.637077327562055e-15,
+              "simpson": 4.644970430780334e-15,
+              "indicator": 7.893103218279202e-18
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.12415048303338434,
+            "absolute_integral": 0.12415048311303993,
+            "endpoint": 2.2897044665269277,
+            "quadrature": {
+              "trapezoid": 0.12415048303338462,
+              "simpson": 0.12411146131049018,
+              "indicator": 3.902172289443895e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            6.0,
+            8.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -4.637077327562047e-15,
+            "absolute_integral": 4.637077327562047e-15,
+            "endpoint": -5.688713849672243e-14,
+            "quadrature": {
+              "trapezoid": -4.637077327562055e-15,
+              "simpson": -4.644970430780334e-15,
+              "indicator": 7.893103218279202e-18
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": -0.02663879864735137,
+            "absolute_integral": 0.02663879870250008,
+            "endpoint": -0.6689476354625183,
+            "quadrature": {
+              "trapezoid": -0.026638798647351455,
+              "simpson": -0.026613469376522463,
+              "indicator": 2.5329270828992195e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.026638798647356007,
+            "absolute_integral": 0.026638798702504372,
+            "endpoint": 0.6689476354625752,
+            "quadrature": {
+              "trapezoid": 0.0266387986473561,
+              "simpson": 0.026613469376527105,
+              "indicator": 2.5329270828995665e-05
+            }
+          }
+        }
+      ],
+      "continuum_constraint_certified": false,
+      "observable_error_certified": false,
+      "renewal": false,
+      "alpha": 0.0,
+      "weights": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "constructor": {
+        "occupations": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "columns_unchanged": true,
+        "caller_columns_unchanged": true,
+        "car": {
+          "gap": 2.220446049250313e-16,
+          "admissible": true,
+          "columns": 6,
+          "identity_is_the_mode_car": true
+        },
+        "positive_G": true,
+        "positive_r": true,
+        "positive_Q": true,
+        "G_min": 0.06316420689520463,
+        "G_max": 8.4464582703533,
+        "r_min": 4.234125354144103,
+        "r_max": 4.847039823256242,
+        "Q": 0.25132493326913924,
+        "projected_hamilton_max": 7.603362709468505e-10,
+        "full_hamilton_max": 0.001374208089067963,
+        "held_out_hamilton_max": 0.0013742073774347958,
+        "converged_to_newton_tolerance": false,
+        "solver_floor": true,
+        "physical_failure": false,
+        "source_derived": true,
+        "source_mean_subtracted": false,
+        "current_mean": -1.4092660924946666e-14,
+        "current_unchanged": true,
+        "shift_mean_gap": 4.386066633028826e-28,
+        "mean_retained_in_shift_residual": true,
+        "rho_mean": 5.968369234287,
+        "rho_independent_of_r_max": 0.0,
+        "current_independent_of_r_max": 0.0,
+        "momentum": {
+          "current_mean": -1.4092660924946666e-14,
+          "p_Q_max": 3.5756469073215223e-13,
+          "p_Q_mean": -6.335635819186793e-30,
+          "antiderivative_accepted": true,
+          "source_mean_subtracted": false,
+          "derivative_gap": 4.8972484996120413e-26
+        },
+        "chart_admissible": true,
+        "evolve": true,
+        "evolution_gate": {
+          "projected": 0.0001,
+          "full": 0.01
+        },
+        "blocker": null,
+        "accepted_steps": 65
+      },
+      "stop_reason": null,
+      "completed": true,
+      "cpu_seconds": 93.154169
+    },
+    "reversed_alpha_minus1": {
+      "initial": {
+        "time": 0.0,
+        "field_energy": 11.999999996262105,
+        "gravity_energy": -11.99999999628179,
+        "energy": -1.9685586494233576e-11,
+        "fieldwork_power": 0.0,
+        "constraint_norm": 0.00029600317531550477,
+        "forcing_norm": 0.0003357873398821562,
+        "quadrature_forcing_norm": 5.296080881641553e-08,
+        "projection_forcing_norm": 0.00033578526675272826,
+        "full_C_l2": 0.0011777708302364116,
+        "full_D_l2": 1.268582301388468e-12,
+        "full_hamilton_max": 0.0016135030825310537,
+        "full_momentum_max": 3.852033925686517e-12,
+        "proper_min": 0.0,
+        "proper_max": 0.0,
+        "r_min": 4.210718115699639,
+        "r_max": 4.879996228999367,
+        "Q_min": 0.2513249332691237,
+        "Q_max": 0.2513249332691511,
+        "gram_gap": 2.220446049250313e-16,
+        "omega": 100.3895907664438,
+        "clock_rate": 1.1630992500599269,
+        "occupation": [
+          0.24999999999999983,
+          0.2499999999999999
+        ],
+        "proper_clock": 0.0
+      },
+      "final": {
+        "time": 0.3,
+        "field_energy": 11.999975606188748,
+        "gravity_energy": -11.99997560622142,
+        "energy": -3.267253134708881e-11,
+        "fieldwork_power": 7.87078277798975e-05,
+        "constraint_norm": 0.00029760218142312517,
+        "forcing_norm": 0.00031194374544580563,
+        "quadrature_forcing_norm": 6.574412819032246e-08,
+        "projection_forcing_norm": 0.00031194087859816614,
+        "full_C_l2": 0.0008940062358750405,
+        "full_D_l2": 0.0001965263087176049,
+        "full_hamilton_max": 0.0013873267807049672,
+        "full_momentum_max": 0.0002484988412385647,
+        "proper_min": -0.0978098302749737,
+        "proper_max": 0.07849206086722887,
+        "r_min": 4.219126847983553,
+        "r_max": 4.8527367407332545,
+        "Q_min": 0.24992700413252086,
+        "Q_max": 0.2501206179038644,
+        "gram_gap": 1.645350522494482e-13,
+        "omega": 100.38838645107852,
+        "clock_rate": 1.1595682568165375,
+        "occupation": [
+          0.029921732642951473,
+          0.030045803782893815
+        ],
+        "proper_clock": 0.3486580590951716
+      },
+      "time": 0.3,
+      "integrals": {
+        "forcing_norm": {
+          "trapezoid": 9.802860531961734e-05,
+          "simpson": 9.802846845360687e-05,
+          "indicator": 1.3686601046838769e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "quadrature_forcing_norm": {
+          "trapezoid": 1.6296375160643153e-08,
+          "simpson": 1.629597649628539e-08,
+          "indicator": 3.986643577631865e-13,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "projection_forcing_norm": {
+          "trapezoid": 9.80279530164017e-05,
+          "simpson": 9.802781625208775e-05,
+          "indicator": 1.3676431395801686e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "fieldwork_power": {
+          "trapezoid": -2.4389909714852337e-05,
+          "simpson": -2.43900602999708e-05,
+          "indicator": 1.5058511849166652e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "clock_rate": {
+          "trapezoid": 0.34865805909517233,
+          "simpson": 0.3486580599017919,
+          "indicator": 8.066194934208681e-10,
+          "uniform_steps": true,
+          "certified": false
+        }
+      },
+      "field_energy_change": -2.439007335652832e-05,
+      "gravity_energy_change": 2.4390060369583466e-05,
+      "energy_balance_change": -1.2986944852855231e-11,
+      "fieldwork_difference": -1.6364167598157406e-10,
+      "constraint_end_sampled_budget": 0.0003940317806351221,
+      "constraint_end_margin": 9.642959921199695e-05,
+      "positive_chart": true,
+      "gram_gap_max": 1.645350522494482e-13,
+      "occupation_change": [
+        -0.22007826735704836,
+        -0.21995419621710607
+      ],
+      "physical": {
+        "initial": {
+          "time": 0.0,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 3.391804141627374,
+              "coordinate_matter_energy": 3.999999998417615,
+              "coordinate_gravity_energy": -3.261355224285408,
+              "normal_boundary_flux": -2.855435376107132e-20,
+              "normal_discrete_boundary_flux": -2.8554633066232385e-20,
+              "boundary_flux_identity_gap": 2.7930516106589295e-25,
+              "normal_left_outward_flux": -3.356364154066481e-21,
+              "normal_right_outward_flux": 3.19107179151378e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -4.588010745234868e-15,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -9.906696811714264e-11,
+              "normal_balance_defect": -9.90623800778434e-11,
+              "probability": 1.0000000000021525,
+              "probability_share": 0.3333333333340508,
+              "probability_boundary_flux": 8.878553030214743e-33,
+              "probability_directional_slope": -6.459189533221094e-16,
+              "probability_balance_defect": -6.459189533216542e-16,
+              "normal_internal_flux_l2": 5.475246684637124e-13,
+              "normal_internal_flux_max_abs": 1.6362145527990206e-12,
+              "probability_internal_flux_l2": 3.6535549936049133e-16,
+              "probability_internal_flux_max_abs": 1.887379141682622e-15
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 6.6204411238924825,
+              "coordinate_matter_energy": 7.999999997819412,
+              "coordinate_gravity_energy": -3.4048834533059136,
+              "normal_boundary_flux": 2.0332001219544716e-20,
+              "normal_discrete_boundary_flux": 2.0332026433841988e-20,
+              "boundary_flux_identity_gap": 2.521429727201081e-26,
+              "normal_left_outward_flux": -3.19107179151378e-20,
+              "normal_right_outward_flux": 1.157871669559308e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -1.7049844488287324e-15,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -6.490919510183307e-10,
+              "normal_balance_defect": -6.490902460542138e-10,
+              "probability": 1.9999999999888238,
+              "probability_share": 0.6666666666629412,
+              "probability_boundary_flux": -6.729717636332628e-32,
+              "probability_directional_slope": 1.5459639619044274e-15,
+              "probability_balance_defect": 1.5459639619044582e-15,
+              "normal_internal_flux_l2": 1.1474253271943272e-12,
+              "normal_internal_flux_max_abs": 3.124854016753132e-12,
+              "probability_internal_flux_l2": 5.975850636671568e-16,
+              "probability_internal_flux_max_abs": 1.9984014443252818e-15
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 2.1920582536638644e-11,
+              "coordinate_matter_energy": 2.4936563230992803e-11,
+              "coordinate_gravity_energy": -2.7935416005835134,
+              "normal_boundary_flux": 8.123295238016127e-21,
+              "normal_discrete_boundary_flux": 8.123144214691856e-21,
+              "boundary_flux_identity_gap": 1.5102332427136354e-25,
+              "normal_left_outward_flux": -1.157871669559308e-20,
+              "normal_right_outward_flux": 3.455421457576952e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 3.329245637834419e-18,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -6.960278674489931e-13,
+              "normal_balance_defect": -6.960312048177775e-13,
+              "probability": 8.563581701398482e-12,
+              "probability_share": 2.8545272337994936e-12,
+              "probability_boundary_flux": -7.668925779284389e-32,
+              "probability_directional_slope": -2.8575922978308843e-19,
+              "probability_balance_defect": -2.857592298256565e-19,
+              "normal_internal_flux_l2": 0.0,
+              "normal_internal_flux_max_abs": 2.900762177271144e-18,
+              "probability_internal_flux_l2": 4.5772822950157444e-18,
+              "probability_internal_flux_max_abs": 2.8837624494808275e-22
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 1.223587203780241e-13,
+              "coordinate_matter_energy": 1.3927270794966695e-13,
+              "coordinate_gravity_energy": -2.5402197181069526,
+              "normal_boundary_flux": 9.905730351047139e-23,
+              "normal_discrete_boundary_flux": 9.818740762262509e-23,
+              "boundary_flux_identity_gap": 8.698958878463053e-25,
+              "normal_left_outward_flux": -3.455421457576952e-21,
+              "normal_right_outward_flux": 3.356364154066481e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -3.5462977477955e-19,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -5.856078142079336e-14,
+              "normal_balance_defect": -5.856042688920494e-14,
+              "probability": 4.602964060254622e-13,
+              "probability_share": 1.534321353418207e-13,
+              "probability_boundary_flux": 1.3510788112595544e-31,
+              "probability_directional_slope": 2.376183119858989e-19,
+              "probability_balance_defect": 2.376183121921715e-19,
+              "normal_internal_flux_l2": 0.0,
+              "normal_internal_flux_max_abs": 1.1068539814788723e-19,
+              "probability_internal_flux_l2": 2.984391842249787e-18,
+              "probability_internal_flux_max_abs": 6.154185387200096e-23
+            }
+          ],
+          "shell_leader": 1,
+          "probability_leader": 1,
+          "shell_leader_share": 0.6612344132916285,
+          "probability_leader_share": 0.6666666666629412,
+          "canonical_probability": 3.0000000000000004,
+          "circular_probability_location": 2.3612567355571135,
+          "circular_concentration": 0.7697094808932925,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.867788057321064e-08,
+          "probability_balance_defect_l2_density": 1.5961949928745789e-13,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 8.698958878463053e-25,
+          "full_normal_energy": 10.012245265541898,
+          "source_kernel_gap_max": 3.469446951953614e-18,
+          "shell_identity_gap_max": 1.3877787807814457e-17
+        },
+        "final": {
+          "time": 0.3,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 3.473674443265522,
+              "coordinate_matter_energy": 4.069886747425307,
+              "coordinate_gravity_energy": -3.2594423988088,
+              "normal_boundary_flux": 1.0357589214810716,
+              "normal_discrete_boundary_flux": 1.0357589214811238,
+              "boundary_flux_identity_gap": 5.218048215738236e-14,
+              "normal_left_outward_flux": 0.3422256336447728,
+              "normal_right_outward_flux": -1.3779845551258445,
+              "proper_pressure_work": 0.15500629973039057,
+              "momentum_lapse_work": 0.020398699791322313,
+              "coordinate_metric_work": -0.00020418424725051677,
+              "normal_directional_slope": 1.2111639211880094,
+              "normal_balance_defect": 1.851674719363112e-10,
+              "probability": 1.017475201658315,
+              "probability_share": 0.33915840055282703,
+              "probability_boundary_flux": 0.32200725816334363,
+              "probability_directional_slope": 0.32200725816334685,
+              "probability_balance_defect": -1.4553182549010404e-14,
+              "normal_internal_flux_l2": 2.605343073513289,
+              "normal_internal_flux_max_abs": 3.049901035322047,
+              "probability_internal_flux_l2": 0.7647310891640973,
+              "probability_internal_flux_max_abs": 0.8902188123236909
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 6.436041137476372,
+              "coordinate_matter_energy": 7.705336765230171,
+              "coordinate_gravity_energy": -3.400580020333562,
+              "normal_boundary_flux": -4.762497150802471,
+              "normal_discrete_boundary_flux": -4.76249715080254,
+              "boundary_flux_identity_gap": 6.927791673660977e-14,
+              "normal_left_outward_flux": 1.3779845551258445,
+              "normal_right_outward_flux": 3.384512595676626,
+              "proper_pressure_work": 0.3562877128166912,
+              "momentum_lapse_work": 0.06281251951160972,
+              "coordinate_metric_work": 0.0002846892440001911,
+              "normal_directional_slope": -4.343396918003392,
+              "normal_balance_defect": 4.708392983832335e-10,
+              "probability": 1.9263513915529158,
+              "probability_share": 0.6421171305177433,
+              "probability_boundary_flux": -1.3821538002254226,
+              "probability_directional_slope": -1.3821538002254277,
+              "probability_balance_defect": 1.484250366233095e-14,
+              "normal_internal_flux_l2": 4.510176033569582,
+              "normal_internal_flux_max_abs": 4.827033562698033,
+              "probability_internal_flux_l2": 1.349370951544585,
+              "probability_internal_flux_max_abs": 1.4573670184752419
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.1840817675907569,
+              "coordinate_matter_energy": 0.20976154821744267,
+              "coordinate_gravity_energy": -2.796363685822681,
+              "normal_boundary_flux": 3.3845125956765605,
+              "normal_discrete_boundary_flux": 3.384512595676586,
+              "boundary_flux_identity_gap": 2.531308496145357e-14,
+              "normal_left_outward_flux": -3.384512595676626,
+              "normal_right_outward_flux": 6.557558635959831e-14,
+              "proper_pressure_work": 0.005836148528070535,
+              "momentum_lapse_work": 0.011838671498227654,
+              "coordinate_metric_work": -1.6995680425232482e-06,
+              "normal_directional_slope": 3.402187415699693,
+              "normal_balance_defect": -3.1888337277070346e-12,
+              "probability": 0.0524264288387222,
+              "probability_share": 0.017475476279576917,
+              "probability_boundary_flux": 0.9660497916921378,
+              "probability_directional_slope": 0.9660497916921489,
+              "probability_balance_defect": 3.6370835807355675e-15,
+              "normal_internal_flux_l2": 0.6301595162827449,
+              "normal_internal_flux_max_abs": 3.384512595676626,
+              "probability_internal_flux_l2": 0.17959947027670997,
+              "probability_internal_flux_max_abs": 0.9660497916923081
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.013646690210419782,
+              "coordinate_matter_energy": 0.01499054531582533,
+              "coordinate_gravity_energy": -2.5435895012563776,
+              "normal_boundary_flux": 0.3422256336448384,
+              "normal_discrete_boundary_flux": 0.3422256336447832,
+              "boundary_flux_identity_gap": 5.517808432387028e-14,
+              "normal_left_outward_flux": -6.557558635959831e-14,
+              "normal_right_outward_flux": -0.3422256336447728,
+              "proper_pressure_work": 0.00039570654732244654,
+              "momentum_lapse_work": 0.0006587877546339615,
+              "coordinate_metric_work": -9.760092725351887e-08,
+              "normal_directional_slope": 0.34328012797527885,
+              "normal_balance_defect": 2.8539972056770267e-11,
+              "probability": 0.0037469779495574286,
+              "probability_share": 0.00124899264985268,
+              "probability_boundary_flux": 0.09409675036994128,
+              "probability_directional_slope": 0.09409675036993709,
+              "probability_balance_defect": 1.2752886919658972e-14,
+              "normal_internal_flux_l2": 0.05172551517929531,
+              "normal_internal_flux_max_abs": 0.29562413389576625,
+              "probability_internal_flux_l2": 0.014210184603868158,
+              "probability_internal_flux_max_abs": 0.08126027366027697
+            }
+          ],
+          "shell_leader": 1,
+          "probability_leader": 1,
+          "shell_leader_share": 0.6367624804978975,
+          "probability_leader_share": 0.6421171305177433,
+          "canonical_probability": 2.9999999999995106,
+          "circular_probability_location": 2.361252353798191,
+          "circular_concentration": 0.7484683605691923,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.7892712202678988e-08,
+          "probability_balance_defect_l2_density": 1.0296036887366686e-11,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 6.927791673660977e-14,
+          "full_normal_energy": 10.107444038543074,
+          "source_kernel_gap_max": 1.734723475976807e-18,
+          "shell_identity_gap_max": 1.3877787807814457e-17
+        },
+        "windows": [
+          {
+            "interval": [
+              0.0,
+              2.0
+            ],
+            "normal_shell_change": 0.08187030163814812,
+            "probability_change": 0.017475201656162564,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.05660686328047769,
+                "simpson": 0.05658991643134247,
+                "indicator": 1.6946849135217323e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.019839389028049454,
+                "simpson": 0.019838103580949628,
+                "indicator": 1.285447099826087e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.00544184166269596,
+                "simpson": 0.005442269813348837,
+                "indicator": 4.2815065287669235e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -2.539323206677534e-05,
+                "simpson": -2.5394441653202706e-05,
+                "indicator": 1.2095864273644675e-09
+              },
+              "normal_balance_defect": {
+                "trapezoid": -5.005687027279249e-13,
+                "simpson": 1.447732178673486e-13,
+                "indicator": 6.453419205952736e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.0174806519820802,
+                "simpson": 0.017475197572599358,
+                "indicator": 5.454409480843553e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": -4.1058497791355365e-15,
+                "simpson": -4.1049988188835706e-15,
+                "indicator": 8.509602519659485e-19
+              }
+            },
+            "normal_shell_integrated_gap": -1.7792332574415037e-05,
+            "probability_integrated_gap": -5.450325913532866e-06,
+            "min_normal_shell": 3.391804141627374,
+            "max_abs_normal_boundary_flux": 1.0357589214810716,
+            "max_internal_normal_flux": 3.051573507333451,
+            "max_internal_probability_flux": 0.8917337716527413,
+            "max_abs_normal_throughflow": 1.3779845551258445
+          },
+          {
+            "interval": [
+              2.0,
+              4.0
+            ],
+            "normal_shell_change": -0.18439998641611055,
+            "probability_change": -0.07364860843590804,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": -0.2537415584614689,
+                "simpson": -0.25365396377320537,
+                "indicator": 8.75946882635259e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.04968453506231295,
+                "simpson": 0.04968323157907416,
+                "indicator": 1.3034832387903705e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.019568141173931138,
+                "simpson": 0.019570805991785574,
+                "indicator": 2.6648178544363965e-06
+              },
+              "coordinate_metric_work": {
+                "trapezoid": 1.059103766870203e-06,
+                "simpson": 1.0451371981590988e-06,
+                "indicator": 1.396656871110412e-08
+              },
+              "normal_balance_defect": {
+                "trapezoid": -1.601535417223422e-11,
+                "simpson": -1.2511335815159448e-11,
+                "indicator": 3.5040183570747713e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": -0.07367396653101853,
+                "simpson": -0.07364859167843885,
+                "indicator": 2.5374852579682083e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": 4.0187289770689714e-15,
+                "simpson": 4.040896351925143e-15,
+                "indicator": 2.216737485617153e-17
+              }
+            },
+            "normal_shell_integrated_gap": 8.889582512960903e-05,
+            "probability_integrated_gap": 2.535809510646747e-05,
+            "min_normal_shell": 6.436041137476372,
+            "max_abs_normal_boundary_flux": 4.762497150802471,
+            "max_internal_normal_flux": 4.827033562698033,
+            "max_internal_probability_flux": 1.459430144864514,
+            "max_abs_normal_throughflow": 3.384512595676626
+          },
+          {
+            "interval": [
+              4.0,
+              6.0
+            ],
+            "normal_shell_change": 0.18408176756883632,
+            "probability_change": 0.05242642883015862,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.18350635948968294,
+                "simpson": 0.18344866917810115,
+                "indicator": 5.769031158178728e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.00017165052882550544,
+                "simpson": 0.00017131350943178506,
+                "indicator": 3.3701939372037426e-07
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.00046217775219123804,
+                "simpson": 0.00046174093183217943,
+                "indicator": 4.36820359058605e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -3.8863039792067515e-08,
+                "simpson": -3.872801711997667e-08,
+                "indicator": 1.3502267209084657e-10
+              },
+              "normal_balance_defect": {
+                "trapezoid": 3.5618116180884656e-12,
+                "simpson": 3.5937061123780702e-12,
+                "indicator": 3.1894494289604636e-14
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.052442782478191896,
+                "simpson": 0.052426416582967254,
+                "indicator": 1.636589522464177e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": -5.256152472674749e-16,
+                "simpson": -5.23486448489616e-16,
+                "indicator": 2.1287987778588363e-18
+              }
+            },
+            "normal_shell_integrated_gap": -5.842020542518034e-05,
+            "probability_integrated_gap": -1.635364803274919e-05,
+            "min_normal_shell": 2.1920582536638644e-11,
+            "max_abs_normal_boundary_flux": 3.3845125956765605,
+            "max_internal_normal_flux": 3.384512595676626,
+            "max_internal_probability_flux": 0.9660497916923081,
+            "max_abs_normal_throughflow": 3.384512595676626
+          },
+          {
+            "interval": [
+              6.0,
+              8.0
+            ],
+            "normal_shell_change": 0.013646690210297423,
+            "probability_change": 0.0037469779490971323,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.013628335691308257,
+                "simpson": 0.013615378163761753,
+                "indicator": 1.295752754650395e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 1.0204529664123123e-05,
+                "simpson": 1.0176844180484928e-05,
+                "indicator": 2.7685483638194993e-08
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 2.1167807416031735e-05,
+                "simpson": 2.1133601768283782e-05,
+                "indicator": 3.4205647747952405e-08
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -2.015484263761598e-09,
+                "simpson": -2.006623032941929e-09,
+                "indicator": 8.8612308196692e-12
+              },
+              "normal_balance_defect": {
+                "trapezoid": 9.206398083342206e-13,
+                "simpson": 6.545937647063426e-13,
+                "indicator": 2.6604604362787797e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.003750532070746419,
+                "simpson": 0.003746977522872232,
+                "indicator": 3.554547874187221e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": 2.6948600331906822e-15,
+                "simpson": 2.6955426281685876e-15,
+                "indicator": 6.825949779053564e-19
+              }
+            },
+            "normal_shell_integrated_gap": -1.3017819011628198e-05,
+            "probability_integrated_gap": -3.5541216519816878e-06,
+            "min_normal_shell": -1.0512928201589222e-11,
+            "max_abs_normal_boundary_flux": 0.3422256336448384,
+            "max_internal_normal_flux": 0.29562413389576625,
+            "max_internal_probability_flux": 0.08126027366027697,
+            "max_abs_normal_throughflow": 0.3422256336447728
+          }
+        ],
+        "shell_leader_unchanged": true,
+        "probability_leader_unchanged": true,
+        "normal_shell_leader_share_min": 0.6367624804978975,
+        "probability_leader_share_min": 0.6421171305177433,
+        "probability_total_drift": 4.898303984646191e-13,
+        "max_dynamic_work_gap": 0.0,
+        "max_boundary_flux_identity_gap": 7.638334409421077e-14,
+        "normal_continuity_defect_l2_max": 2.2890126211054302e-08,
+        "probability_continuity_defect_l2_max": 1.1235442821845429e-11,
+        "renewal": false,
+        "continuum_balance_certified": false
+      },
+      "surfaces": [
+        {
+          "interval": [
+            0.0,
+            2.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": 0.013628335691302881,
+            "absolute_integral": 0.013628335719517798,
+            "endpoint": 0.3422256336447728,
+            "quadrature": {
+              "trapezoid": 0.013628335691302926,
+              "simpson": 0.013615378163756414,
+              "indicator": 1.2957527546512623e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": -0.07023519897178043,
+            "absolute_integral": 0.070235199065103,
+            "endpoint": -1.3779845551258445,
+            "quadrature": {
+              "trapezoid": -0.07023519897178061,
+              "simpson": -0.07020529459509889,
+              "indicator": 2.9904376681724743e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.05660686328047756,
+            "absolute_integral": 0.05660686337900621,
+            "endpoint": 1.0357589214810716,
+            "quadrature": {
+              "trapezoid": 0.05660686328047769,
+              "simpson": 0.05658991643134247,
+              "indicator": 1.6946849135217323e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            2.0,
+            4.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": 0.07023519897178043,
+            "absolute_integral": 0.070235199065103,
+            "endpoint": 1.3779845551258445,
+            "quadrature": {
+              "trapezoid": 0.07023519897178061,
+              "simpson": 0.07020529459509889,
+              "indicator": 2.9904376681724743e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 0.1835063594896878,
+            "absolute_integral": 0.18350635960742545,
+            "endpoint": 3.384512595676626,
+            "quadrature": {
+              "trapezoid": 0.18350635948968827,
+              "simpson": 0.1834486691781065,
+              "indicator": 5.7690311581759524e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": -0.25374155846146823,
+            "absolute_integral": 0.25374155846246343,
+            "endpoint": -4.762497150802471,
+            "quadrature": {
+              "trapezoid": -0.2537415584614689,
+              "simpson": -0.25365396377320537,
+              "indicator": 8.75946882635259e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            4.0,
+            6.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -0.1835063594896878,
+            "absolute_integral": 0.18350635960742545,
+            "endpoint": -3.384512595676626,
+            "quadrature": {
+              "trapezoid": -0.18350635948968827,
+              "simpson": -0.1834486691781065,
+              "indicator": 5.7690311581759524e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 5.3287516366910205e-15,
+            "absolute_integral": 5.3287516366910205e-15,
+            "endpoint": 6.557558635959831e-14,
+            "quadrature": {
+              "trapezoid": 5.328751636691027e-15,
+              "simpson": 5.3378440903792354e-15,
+              "indicator": 9.092453688208592e-18
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.18350635948968247,
+            "absolute_integral": 0.18350635960742034,
+            "endpoint": 3.3845125956765605,
+            "quadrature": {
+              "trapezoid": 0.18350635948968294,
+              "simpson": 0.18344866917810115,
+              "indicator": 5.769031158178728e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            6.0,
+            8.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -5.3287516366910205e-15,
+            "absolute_integral": 5.3287516366910205e-15,
+            "endpoint": -6.557558635959831e-14,
+            "quadrature": {
+              "trapezoid": -5.328751636691027e-15,
+              "simpson": -5.3378440903792354e-15,
+              "indicator": 9.092453688208592e-18
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": -0.013628335691302881,
+            "absolute_integral": 0.013628335719517798,
+            "endpoint": -0.3422256336447728,
+            "quadrature": {
+              "trapezoid": -0.013628335691302926,
+              "simpson": -0.013615378163756414,
+              "indicator": 1.2957527546512623e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.01362833569130821,
+            "absolute_integral": 0.013628335719522731,
+            "endpoint": 0.3422256336448384,
+            "quadrature": {
+              "trapezoid": 0.013628335691308257,
+              "simpson": 0.013615378163761753,
+              "indicator": 1.295752754650395e-05
+            }
+          }
+        }
+      ],
+      "continuum_constraint_certified": false,
+      "observable_error_certified": false,
+      "renewal": false,
+      "alpha": -1.0,
+      "weights": [
+        0.25,
+        0.25,
+        0.5,
+        0.5,
+        0.75,
+        0.75
+      ],
+      "constructor": {
+        "occupations": [
+          0.25,
+          0.25,
+          0.5,
+          0.5,
+          0.75,
+          0.75
+        ],
+        "columns_unchanged": true,
+        "caller_columns_unchanged": true,
+        "car": {
+          "gap": 2.220446049250313e-16,
+          "admissible": true,
+          "columns": 6,
+          "identity_is_the_mode_car": true
+        },
+        "positive_G": true,
+        "positive_r": true,
+        "positive_Q": true,
+        "G_min": 0.06316421215749178,
+        "G_max": 10.387644866432986,
+        "r_min": 4.210718115699639,
+        "r_max": 4.879996228999367,
+        "Q": 0.25132493326913924,
+        "projected_hamilton_max": 8.30794476920349e-10,
+        "full_hamilton_max": 0.0016135030748003487,
+        "held_out_hamilton_max": 0.001613502955577688,
+        "converged_to_newton_tolerance": false,
+        "solver_floor": true,
+        "physical_failure": false,
+        "source_derived": true,
+        "source_mean_subtracted": false,
+        "current_mean": -5.7714814535453075e-15,
+        "current_unchanged": true,
+        "shift_mean_gap": 6.752649348691861e-28,
+        "mean_retained_in_shift_residual": true,
+        "rho_mean": 5.9683692342870005,
+        "rho_independent_of_r_max": 0.0,
+        "current_independent_of_r_max": 0.0,
+        "momentum": {
+          "current_mean": -5.7714814535453075e-15,
+          "p_Q_max": 3.7624939246351396e-13,
+          "p_Q_mean": -6.335635819186793e-30,
+          "antiderivative_accepted": true,
+          "source_mean_subtracted": false,
+          "derivative_gap": 4.382280100683765e-26
+        },
+        "chart_admissible": true,
+        "evolve": true,
+        "evolution_gate": {
+          "projected": 0.0001,
+          "full": 0.01
+        },
+        "blocker": null,
+        "accepted_steps": 58
+      },
+      "stop_reason": null,
+      "completed": true,
+      "cpu_seconds": 92.45807500000001
+    },
+    "imbalance_alpha_0_95": {
+      "initial": {
+        "time": 0.0,
+        "field_energy": 11.999999996262105,
+        "gravity_energy": -11.999999996262112,
+        "energy": -7.105427357601002e-15,
+        "fieldwork_power": 0.0,
+        "constraint_norm": 0.0002939279535882856,
+        "forcing_norm": 0.0003362754340875339,
+        "quadrature_forcing_norm": 5.3809104083173165e-08,
+        "projection_forcing_norm": 0.00033627294023837493,
+        "full_C_l2": 0.001169513703893133,
+        "full_D_l2": 1.1695254559595065e-12,
+        "full_hamilton_max": 0.001748488304038176,
+        "full_momentum_max": 2.4259469183669215e-12,
+        "proper_min": 0.0,
+        "proper_max": 0.0,
+        "r_min": 4.212822858255825,
+        "r_max": 4.8759117975278015,
+        "Q_min": 0.2513249332691237,
+        "Q_max": 0.2513249332691511,
+        "gram_gap": 2.220446049250313e-16,
+        "omega": 100.3895907664438,
+        "clock_rate": 1.2057426897678258,
+        "occupation": [
+          0.7374999999999996,
+          0.7374999999999997
+        ],
+        "proper_clock": 0.0
+      },
+      "final": {
+        "time": 0.3,
+        "field_energy": 11.99997623802702,
+        "gravity_energy": -11.999976238040084,
+        "energy": -1.3063328196949442e-11,
+        "fieldwork_power": 8.910784125886159e-05,
+        "constraint_norm": 0.00029553792520257646,
+        "forcing_norm": 0.00031187084970701233,
+        "quadrature_forcing_norm": 6.680814646408913e-08,
+        "projection_forcing_norm": 0.00031186742047921716,
+        "full_C_l2": 0.0008869419884894545,
+        "full_D_l2": 0.00019540891935637393,
+        "full_hamilton_max": 0.0011509232562154637,
+        "full_momentum_max": 0.0002450809420455613,
+        "proper_min": -0.09585564793195712,
+        "proper_max": 0.0786461222239241,
+        "r_min": 4.221239302558599,
+        "r_max": 4.852031717432223,
+        "Q_min": 0.24992720009342384,
+        "Q_max": 0.25012005371344054,
+        "gram_gap": 1.6475709685437323e-13,
+        "omega": 100.3883858868881,
+        "clock_rate": 1.20167976462876,
+        "occupation": [
+          0.03208937800238047,
+          0.03221341915177169
+        ],
+        "proper_clock": 0.36141991372985205
+      },
+      "time": 0.3,
+      "integrals": {
+        "forcing_norm": {
+          "trapezoid": 9.809788795356389e-05,
+          "simpson": 9.809799349661239e-05,
+          "indicator": 1.0554304851688023e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "quadrature_forcing_norm": {
+          "trapezoid": 1.6560877946195117e-08,
+          "simpson": 1.656100188070202e-08,
+          "indicator": 1.2393450690610673e-13,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "projection_forcing_norm": {
+          "trapezoid": 9.809710575064704e-05,
+          "simpson": 9.809721126464528e-05,
+          "indicator": 1.055139982276878e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "fieldwork_power": {
+          "trapezoid": -2.3758069006081582e-05,
+          "simpson": -2.375822203228895e-05,
+          "indicator": 1.5302620739440559e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "clock_rate": {
+          "trapezoid": 0.36141991372985216,
+          "simpson": 0.3614199147148444,
+          "indicator": 9.849922544269418e-10,
+          "uniform_steps": true,
+          "certified": false
+        }
+      },
+      "field_energy_change": -2.3758235084159196e-05,
+      "gravity_energy_change": 2.3758222027936426e-05,
+      "energy_balance_change": -1.3056222769591841e-11,
+      "fieldwork_difference": -1.660780776140472e-10,
+      "constraint_end_sampled_budget": 0.0003920258415418495,
+      "constraint_end_margin": 9.648791633927304e-05,
+      "positive_chart": true,
+      "gram_gap_max": 1.6486811915683575e-13,
+      "occupation_change": [
+        -0.7054106219976192,
+        -0.705286580848228
+      ],
+      "physical": {
+        "initial": {
+          "time": 0.0,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 6.537921626911132,
+              "coordinate_matter_energy": 7.899999997185891,
+              "coordinate_gravity_energy": -3.404969526485223,
+              "normal_boundary_flux": -2.0313661969235738e-20,
+              "normal_discrete_boundary_flux": -2.031418654740424e-20,
+              "boundary_flux_identity_gap": 5.2457816850016785e-25,
+              "normal_left_outward_flux": -8.970060778623857e-21,
+              "normal_right_outward_flux": 2.9283722747859596e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -3.99659611539704e-15,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -3.227076438561468e-10,
+              "normal_balance_defect": -3.227036472397185e-10,
+              "probability": 1.9749999999961578,
+              "probability_share": 0.6583333333320526,
+              "probability_boundary_flux": -1.2031575868519825e-32,
+              "probability_directional_slope": 5.270001987795543e-16,
+              "probability_balance_defect": 5.27000198779659e-16,
+              "normal_internal_flux_l2": 9.790657015109828e-13,
+              "normal_internal_flux_max_abs": 2.6309308727545702e-12,
+              "probability_internal_flux_l2": 5.845797272323819e-16,
+              "probability_internal_flux_max_abs": 1.8873791417997172e-15
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 3.4758258061027703,
+              "coordinate_matter_energy": 4.099999999066876,
+              "coordinate_gravity_energy": -3.260369900583183,
+              "normal_boundary_flux": 1.8825772973163792e-20,
+              "normal_discrete_boundary_flux": 1.8825841298720226e-20,
+              "boundary_flux_identity_gap": 6.832555643425956e-26,
+              "normal_left_outward_flux": -2.9283722747859596e-20,
+              "normal_right_outward_flux": 1.0457949774695804e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -3.155461423595375e-17,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -1.5761117841495198e-10,
+              "normal_balance_defect": -1.5761114687916324e-10,
+              "probability": 1.0249999999997548,
+              "probability_share": 0.3416666666665849,
+              "probability_boundary_flux": 5.72524824851798e-33,
+              "probability_directional_slope": 1.3771411488126779e-15,
+              "probability_balance_defect": 1.3771411488125325e-15,
+              "normal_internal_flux_l2": 6.245774430993946e-13,
+              "normal_internal_flux_max_abs": 1.8860088674786067e-12,
+              "probability_internal_flux_l2": 2.716989929680189e-16,
+              "probability_internal_flux_max_abs": 9.71445146547012e-16
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 8.011791317180661e-12,
+              "coordinate_matter_energy": 8.80637576750054e-12,
+              "coordinate_gravity_energy": -2.5476979059125227,
+              "normal_boundary_flux": 1.897942138263249e-21,
+              "normal_discrete_boundary_flux": 1.8979571446147467e-21,
+              "boundary_flux_identity_gap": 1.5006351497826584e-26,
+              "normal_left_outward_flux": -1.0457949774695804e-20,
+              "normal_right_outward_flux": 8.560007636432555e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 1.0024578638124665e-18,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -2.862591297763718e-13,
+              "normal_balance_defect": -2.86260134132192e-13,
+              "probability": 3.4724241711192594e-12,
+              "probability_share": 1.1574747237064198e-12,
+              "probability_boundary_flux": -8.035146973708862e-32,
+              "probability_directional_slope": 5.701182053843261e-20,
+              "probability_balance_defect": 5.701182055511598e-20,
+              "normal_internal_flux_l2": 5.590916232097256e-15,
+              "normal_internal_flux_max_abs": 1.0426073713314209e-18,
+              "probability_internal_flux_l2": 0.0,
+              "probability_internal_flux_max_abs": 9.751522381462539e-23
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 4.460637588465932e-13,
+              "coordinate_matter_energy": 5.280212031499865e-13,
+              "coordinate_gravity_energy": -2.786962663281182,
+              "normal_boundary_flux": -4.100531421913024e-22,
+              "normal_discrete_boundary_flux": -4.106068528457003e-22,
+              "boundary_flux_identity_gap": 5.537106543978907e-25,
+              "normal_left_outward_flux": -8.560007636432555e-21,
+              "normal_right_outward_flux": 8.970060778623857e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 5.638932279213868e-20,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": 1.8618060912748233e-13,
+              "normal_balance_defect": 1.8618055314876906e-13,
+              "probability": 6.156946697269405e-13,
+              "probability_share": 2.0523155657564685e-13,
+              "probability_boundary_flux": 8.665779735709047e-32,
+              "probability_directional_slope": 3.3217095670359335e-19,
+              "probability_balance_defect": 3.3217095659023774e-19,
+              "normal_internal_flux_l2": 8.994045021771607e-15,
+              "normal_internal_flux_max_abs": 2.4448158893379276e-19,
+              "probability_internal_flux_l2": 0.0,
+              "probability_internal_flux_max_abs": 9.72354164292653e-23
+            }
+          ],
+          "shell_leader": 0,
+          "probability_leader": 0,
+          "shell_leader_share": 0.6528946002124052,
+          "probability_leader_share": 0.6583333333320526,
+          "canonical_probability": 3.0,
+          "circular_probability_location": 1.652943415769787,
+          "circular_concentration": 0.7667390839958115,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.9138563928861564e-08,
+          "probability_balance_defect_l2_density": 1.4796622070402453e-13,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 5.537106543978907e-25,
+          "full_normal_energy": 10.013747433022358,
+          "source_kernel_gap_max": 6.938893903907228e-18,
+          "shell_identity_gap_max": 2.7755575615628914e-17
+        },
+        "final": {
+          "time": 0.3,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 6.502044514345702,
+              "coordinate_matter_energy": 7.7750708845893755,
+              "coordinate_gravity_energy": -3.399736398139824,
+              "normal_boundary_flux": -2.2825816149670604,
+              "normal_discrete_boundary_flux": -2.2825816149669933,
+              "boundary_flux_identity_gap": 6.705747068735946e-14,
+              "normal_left_outward_flux": 0.9728863898715748,
+              "normal_right_outward_flux": 1.3096952250954856,
+              "proper_pressure_work": 0.3532074711094089,
+              "momentum_lapse_work": 0.06637053330148002,
+              "coordinate_metric_work": -0.00016819670758256748,
+              "normal_directional_slope": -1.8630036109661985,
+              "normal_balance_defect": -4.100927739209815e-10,
+              "probability": 1.9437848029345028,
+              "probability_share": 0.6479282676449403,
+              "probability_boundary_flux": -0.6729026863216819,
+              "probability_directional_slope": -0.6729026863216738,
+              "probability_balance_defect": -1.161839447328946e-14,
+              "normal_internal_flux_l2": 4.637203600613204,
+              "normal_internal_flux_max_abs": 5.032559955871139,
+              "probability_internal_flux_l2": 1.3846042187174736,
+              "probability_internal_flux_max_abs": 1.5197778690008763
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 3.5008449322477944,
+              "coordinate_matter_energy": 4.107266702917396,
+              "coordinate_gravity_energy": -3.2584259614718754,
+              "normal_boundary_flux": 0.08140067504393445,
+              "normal_discrete_boundary_flux": 0.08140067504386045,
+              "boundary_flux_identity_gap": 7.399636459126668e-14,
+              "normal_left_outward_flux": -1.3096952250954856,
+              "normal_right_outward_flux": 1.2282945500515512,
+              "proper_pressure_work": 0.1599033454854294,
+              "momentum_lapse_work": 0.022214449461332,
+              "coordinate_metric_work": 0.0002581786251160261,
+              "normal_directional_slope": 0.26351846936506007,
+              "normal_balance_defect": -6.255607553226224e-10,
+              "probability": 1.026812362232369,
+              "probability_share": 0.34227078741084566,
+              "probability_boundary_flux": 0.057199852526267025,
+              "probability_directional_slope": 0.05719985252627256,
+              "probability_balance_defect": 2.6332969368663506e-14,
+              "normal_internal_flux_l2": 2.3762408566147775,
+              "normal_internal_flux_max_abs": 3.27200909501691,
+              "probability_internal_flux_l2": 0.6979116101219455,
+              "probability_internal_flux_max_abs": 0.9634651353653952
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.06676485247160771,
+              "coordinate_matter_energy": 0.07341654144818688,
+              "coordinate_gravity_energy": -2.550732816096237,
+              "normal_boundary_flux": 1.2282945500515021,
+              "normal_discrete_boundary_flux": 1.228294550051504,
+              "boundary_flux_identity_gap": 1.7763568394002505e-15,
+              "normal_left_outward_flux": -1.2282945500515512,
+              "normal_right_outward_flux": 4.905899422468709e-14,
+              "proper_pressure_work": 0.001982155354176502,
+              "momentum_lapse_work": 0.00320155377237156,
+              "coordinate_metric_work": -5.768869647631476e-07,
+              "normal_directional_slope": 1.233478259113114,
+              "normal_balance_defect": -6.493667641516009e-11,
+              "probability": 0.018349249588097957,
+              "probability_share": 0.006116416529366986,
+              "probability_boundary_flux": 0.3381174061832827,
+              "probability_directional_slope": 0.33811740618328234,
+              "probability_balance_defect": -7.538675395156688e-16,
+              "normal_internal_flux_l2": 0.22860047198144362,
+              "normal_internal_flux_max_abs": 1.2282945500515512,
+              "probability_internal_flux_l2": 0.06285981150907625,
+              "probability_internal_flux_max_abs": 0.3381174061833749
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.038816725936410335,
+              "coordinate_matter_energy": 0.04422210907204975,
+              "coordinate_gravity_energy": -2.7910810623321485,
+              "normal_boundary_flux": 0.9728863898716239,
+              "normal_discrete_boundary_flux": 0.9728863898715756,
+              "boundary_flux_identity_gap": 4.829470157119431e-14,
+              "normal_left_outward_flux": -4.905899422468709e-14,
+              "normal_right_outward_flux": -0.9728863898715748,
+              "proper_pressure_work": 0.0011635895747117045,
+              "momentum_lapse_work": 0.002551230234955017,
+              "coordinate_metric_work": -2.9718930983373936e-07,
+              "normal_directional_slope": 0.9766012099302275,
+              "normal_balance_defect": 2.48988582148876e-10,
+              "probability": 0.011053585244539761,
+              "probability_share": 0.00368452841484719,
+              "probability_boundary_flux": 0.27758542761213223,
+              "probability_directional_slope": 0.2775854276121249,
+              "probability_balance_defect": 7.930336952086589e-15,
+              "normal_internal_flux_l2": 0.14709676656635862,
+              "normal_internal_flux_max_abs": 0.8405195016795557,
+              "probability_internal_flux_l2": 0.04192004642623248,
+              "probability_internal_flux_max_abs": 0.23971781874860923
+            }
+          ],
+          "shell_leader": 0,
+          "probability_leader": 0,
+          "shell_leader_share": 0.6432272989915138,
+          "probability_leader_share": 0.6479282676449403,
+          "canonical_probability": 2.9999999999995093,
+          "circular_probability_location": 1.652939035581683,
+          "circular_concentration": 0.7455799363115144,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.955800700458118e-08,
+          "probability_balance_defect_l2_density": 1.4969579213384545e-11,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 7.399636459126668e-14,
+          "full_normal_energy": 10.108471025001515,
+          "source_kernel_gap_max": 3.469446951953614e-18,
+          "shell_identity_gap_max": 1.3877787807814457e-17
+        },
+        "windows": [
+          {
+            "interval": [
+              0.0,
+              2.0
+            ],
+            "normal_shell_change": -0.035877112565430025,
+            "probability_change": -0.031215197061654987,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": -0.10545548320691998,
+                "simpson": -0.10539004047839783,
+                "indicator": 6.544272852215816e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.04953544363182497,
+                "simpson": 0.049534023763550976,
+                "indicator": 1.4198682739968715e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.019976420056704847,
+                "simpson": 0.01997892647290505,
+                "indicator": 2.506416200202116e-06
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -3.307303703411955e-05,
+                "simpson": -3.307970074813941e-05,
+                "indicator": 6.663714019860124e-09
+              },
+              "normal_balance_defect": {
+                "trapezoid": 3.3571294868302136e-11,
+                "simpson": 3.8920222911864105e-11,
+                "indicator": 5.348928043561969e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": -0.031234237700469993,
+                "simpson": -0.031215191522128174,
+                "indicator": 1.9046178341818737e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": -6.623938926972712e-15,
+                "simpson": -6.6351397725251935e-15,
+                "indicator": 1.1200845552481605e-17
+              }
+            },
+            "normal_shell_integrated_gap": 6.650691938884373e-05,
+            "probability_integrated_gap": 1.9040638821628958e-05,
+            "min_normal_shell": 6.502044514345702,
+            "max_abs_normal_boundary_flux": 2.2825816149670604,
+            "max_internal_normal_flux": 5.033221995882427,
+            "max_internal_probability_flux": 1.5205383716503613,
+            "max_abs_normal_throughflow": 1.3096952250954856
+          },
+          {
+            "interval": [
+              2.0,
+              4.0
+            ],
+            "normal_shell_change": 0.025019126145024106,
+            "probability_change": 0.001812362232614273,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.00011104548767741571,
+                "simpson": 0.00010336934347601792,
+                "indicator": 7.676144201397783e-06
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.019850558149777826,
+                "simpson": 0.019849190484180886,
+                "indicator": 1.3676655969407925e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.005066227296000733,
+                "simpson": 0.005066567244859367,
+                "indicator": 3.399488586342675e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": 9.349461187931431e-06,
+                "simpson": 9.340775808146371e-06,
+                "indicator": 8.685379785059808e-09
+              },
+              "normal_balance_defect": {
+                "trapezoid": 3.4993845662535317e-11,
+                "simpson": 3.894153043722193e-11,
+                "indicator": 3.94768477468661e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.0018151944365252645,
+                "simpson": 0.0018123622374576277,
+                "indicator": 2.832199067636862e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": 7.793898770777778e-15,
+                "simpson": 7.790826629043164e-15,
+                "indicator": 3.072141734614291e-18
+              }
+            },
+            "normal_shell_integrated_gap": -8.70482342571477e-06,
+            "probability_integrated_gap": -2.8322039187854246e-06,
+            "min_normal_shell": 3.4758258061027703,
+            "max_abs_normal_boundary_flux": 0.08140067504393445,
+            "max_internal_normal_flux": 3.293395722240355,
+            "max_internal_probability_flux": 0.963840382504684,
+            "max_abs_normal_throughflow": 1.3096952250954856
+          },
+          {
+            "interval": [
+              4.0,
+              6.0
+            ],
+            "normal_shell_change": 0.06676485246359593,
+            "probability_change": 0.018349249584625534,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.06660247151269631,
+                "simpson": 0.06658154346825816,
+                "indicator": 2.0928044438150994e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 5.924011405276377e-05,
+                "simpson": 5.912811464949944e-05,
+                "indicator": 1.1199940326432807e-07
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.00012428478027449774,
+                "simpson": 0.0001241649362679769,
+                "indicator": 1.1984400652084466e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -1.3226862302002406e-08,
+                "simpson": -1.3181190995050122e-08,
+                "indicator": 4.5671306952284623e-11
+              },
+              "normal_balance_defect": {
+                "trapezoid": 1.525739809051856e-12,
+                "simpson": 1.8597252899467476e-12,
+                "indicator": 3.339854808948916e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.01835497335991405,
+                "simpson": 0.01834924529810737,
+                "indicator": 5.728061806681284e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": -8.6378219624264e-17,
+                "simpson": -8.823525873302366e-17,
+                "indicator": 1.857039108759664e-18
+              }
+            },
+            "normal_shell_integrated_gap": -2.1143944953394556e-05,
+            "probability_integrated_gap": -5.723775288429822e-06,
+            "min_normal_shell": 8.011791317180661e-12,
+            "max_abs_normal_boundary_flux": 1.2282945500515021,
+            "max_internal_normal_flux": 1.2282945500515512,
+            "max_internal_probability_flux": 0.3381174061833749,
+            "max_abs_normal_throughflow": 1.2282945500515512
+          },
+          {
+            "interval": [
+              6.0,
+              8.0
+            ],
+            "normal_shell_change": 0.03881672593596427,
+            "probability_change": 0.011053585243924066,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.038741966206546234,
+                "simpson": 0.03870512766666365,
+                "indicator": 3.6838539882587396e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 2.9779099280483154e-05,
+                "simpson": 2.969683576863563e-05,
+                "indicator": 8.226351184752542e-08
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 8.202909500764275e-05,
+                "simpson": 8.189690608596708e-05,
+                "indicator": 1.3218892167567154e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -6.121743079399765e-09,
+                "simpson": -6.094678868270451e-09,
+                "indicator": 2.7064211129313755e-11
+              },
+              "normal_balance_defect": {
+                "trapezoid": 3.699367717888776e-12,
+                "simpson": 3.2681420670227803e-12,
+                "indicator": 4.312256508659958e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.011064069904030676,
+                "simpson": 0.01105358398656318,
+                "indicator": 1.0485917467495387e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": 1.6034082572995314e-15,
+                "simpson": 1.60431277455641e-15,
+                "indicator": 9.045172568786404e-19
+              }
+            },
+            "normal_shell_integrated_gap": -3.704846856945887e-05,
+            "probability_integrated_gap": -1.0484660108212723e-05,
+            "min_normal_shell": -2.978423540786479e-11,
+            "max_abs_normal_boundary_flux": 0.9728863898716239,
+            "max_internal_normal_flux": 0.8405195016795557,
+            "max_internal_probability_flux": 0.23971781874860923,
+            "max_abs_normal_throughflow": 0.9728863898715748
+          }
+        ],
+        "shell_leader_unchanged": true,
+        "probability_leader_unchanged": true,
+        "normal_shell_leader_share_min": 0.6432272989915138,
+        "probability_leader_share_min": 0.6479282676449403,
+        "probability_total_drift": 4.907185768843192e-13,
+        "max_dynamic_work_gap": 0.0,
+        "max_boundary_flux_identity_gap": 1.207840386952333e-13,
+        "normal_continuity_defect_l2_max": 2.270229999179239e-08,
+        "probability_continuity_defect_l2_max": 1.5676230663367114e-11,
+        "renewal": false,
+        "continuum_balance_certified": false
+      },
+      "surfaces": [
+        {
+          "interval": [
+            0.0,
+            2.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": 0.03874196620654209,
+            "absolute_integral": 0.038741966286747045,
+            "endpoint": 0.9728863898715748,
+            "quadrature": {
+              "trapezoid": 0.03874196620654222,
+              "simpson": 0.03870512766665962,
+              "indicator": 3.6838539882594334e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 0.06671351700037757,
+            "absolute_integral": 0.066713520196143,
+            "endpoint": 1.3096952250954856,
+            "quadrature": {
+              "trapezoid": 0.06671351700037774,
+              "simpson": 0.06668491281173822,
+              "indicator": 2.8604188639522188e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": -0.10545548320691966,
+            "absolute_integral": 0.10545548606592964,
+            "endpoint": -2.2825816149670604,
+            "quadrature": {
+              "trapezoid": -0.10545548320691998,
+              "simpson": -0.10539004047839783,
+              "indicator": 6.544272852215816e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            2.0,
+            4.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -0.06671351700037757,
+            "absolute_integral": 0.066713520196143,
+            "endpoint": -1.3096952250954856,
+            "quadrature": {
+              "trapezoid": -0.06671351700037774,
+              "simpson": -0.06668491281173822,
+              "indicator": 2.8604188639522188e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 0.06660247151270017,
+            "absolute_integral": 0.06660247155543295,
+            "endpoint": 1.2282945500515512,
+            "quadrature": {
+              "trapezoid": 0.06660247151270034,
+              "simpson": 0.0665815434682622,
+              "indicator": 2.0928044438137117e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.00011104548767740404,
+            "absolute_integral": 0.00220843965340209,
+            "endpoint": 0.08140067504393445,
+            "quadrature": {
+              "trapezoid": 0.00011104548767741571,
+              "simpson": 0.00010336934347601792,
+              "indicator": 7.676144201397783e-06
+            }
+          }
+        },
+        {
+          "interval": [
+            4.0,
+            6.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -0.06660247151270017,
+            "absolute_integral": 0.06660247155543295,
+            "endpoint": -1.2282945500515512,
+            "quadrature": {
+              "trapezoid": -0.06660247151270034,
+              "simpson": -0.0665815434682622,
+              "indicator": 2.0928044438137117e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 4.014790876091139e-15,
+            "absolute_integral": 4.014790876091139e-15,
+            "endpoint": 4.905899422468709e-14,
+            "quadrature": {
+              "trapezoid": 4.014790876091144e-15,
+              "simpson": 4.021603835307983e-15,
+              "indicator": 6.81295921683868e-18
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.06660247151269616,
+            "absolute_integral": 0.0666024715554291,
+            "endpoint": 1.2282945500515021,
+            "quadrature": {
+              "trapezoid": 0.06660247151269631,
+              "simpson": 0.06658154346825816,
+              "indicator": 2.0928044438150994e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            6.0,
+            8.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -4.014790876091139e-15,
+            "absolute_integral": 4.014790876091139e-15,
+            "endpoint": -4.905899422468709e-14,
+            "quadrature": {
+              "trapezoid": -4.014790876091144e-15,
+              "simpson": -4.021603835307983e-15,
+              "indicator": 6.81295921683868e-18
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": -0.03874196620654209,
+            "absolute_integral": 0.038741966286747045,
+            "endpoint": -0.9728863898715748,
+            "quadrature": {
+              "trapezoid": -0.03874196620654222,
+              "simpson": -0.03870512766665962,
+              "indicator": 3.6838539882594334e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.0387419662065461,
+            "absolute_integral": 0.038741966286750765,
+            "endpoint": 0.9728863898716239,
+            "quadrature": {
+              "trapezoid": 0.038741966206546234,
+              "simpson": 0.03870512766666365,
+              "indicator": 3.6838539882587396e-05
+            }
+          }
+        }
+      ],
+      "continuum_constraint_certified": false,
+      "observable_error_certified": false,
+      "renewal": false,
+      "alpha": 0.95,
+      "weights": [
+        0.7375,
+        0.7375,
+        0.5,
+        0.5,
+        0.2625,
+        0.2625
+      ],
+      "constructor": {
+        "occupations": [
+          0.7375,
+          0.7375,
+          0.5,
+          0.5,
+          0.2625,
+          0.2625
+        ],
+        "columns_unchanged": true,
+        "caller_columns_unchanged": true,
+        "car": {
+          "gap": 2.220446049250313e-16,
+          "admissible": true,
+          "columns": 6,
+          "identity_is_the_mode_car": true
+        },
+        "positive_G": true,
+        "positive_r": true,
+        "positive_Q": true,
+        "G_min": 0.06316419967987194,
+        "G_max": 10.815028674479656,
+        "r_min": 4.212822858255825,
+        "r_max": 4.8759117975278015,
+        "Q": 0.25132493326913924,
+        "projected_hamilton_max": 2.6827759789412584e-10,
+        "full_hamilton_max": 0.0017484883014660113,
+        "held_out_hamilton_max": 0.001748488076910876,
+        "converged_to_newton_tolerance": false,
+        "solver_floor": true,
+        "physical_failure": false,
+        "source_derived": true,
+        "source_mean_subtracted": false,
+        "current_mean": -2.1998859977556432e-14,
+        "current_unchanged": true,
+        "shift_mean_gap": 1.3883951931889808e-28,
+        "mean_retained_in_shift_residual": true,
+        "rho_mean": 5.968369234286999,
+        "rho_independent_of_r_max": 0.0,
+        "current_independent_of_r_max": 0.0,
+        "momentum": {
+          "current_mean": -2.1998859977556432e-14,
+          "p_Q_max": 4.03535726111788e-13,
+          "p_Q_mean": 0.0,
+          "antiderivative_accepted": true,
+          "source_mean_subtracted": false,
+          "derivative_gap": 7.159070487061726e-26
+        },
+        "chart_admissible": true,
+        "evolve": true,
+        "evolution_gate": {
+          "projected": 0.0001,
+          "full": 0.01
+        },
+        "blocker": null,
+        "accepted_steps": 64
+      },
+      "stop_reason": null,
+      "completed": true,
+      "cpu_seconds": 94.10578900000002
+    },
+    "imbalance_alpha_1_05": {
+      "initial": {
+        "time": 0.0,
+        "field_energy": 11.999999996262103,
+        "gravity_energy": -11.999999996262105,
+        "energy": -1.7763568394002505e-15,
+        "fieldwork_power": 0.0,
+        "constraint_norm": 0.0002981484281325905,
+        "forcing_norm": 0.0003426766501309352,
+        "quadrature_forcing_norm": 5.410595438049856e-08,
+        "projection_forcing_norm": 0.00034267418959046866,
+        "full_C_l2": 0.0011863066041812446,
+        "full_D_l2": 1.1775391038621474e-12,
+        "full_hamilton_max": 0.0017878290903539096,
+        "full_momentum_max": 2.506464515521554e-12,
+        "proper_min": 0.0,
+        "proper_max": 0.0,
+        "r_min": 4.208061598748689,
+        "r_max": 4.877665288924738,
+        "Q_min": 0.2513249332691237,
+        "Q_max": 0.2513249332691511,
+        "gram_gap": 2.220446049250313e-16,
+        "omega": 100.3895907664438,
+        "clock_rate": 1.2070003862623861,
+        "occupation": [
+          0.7624999999999994,
+          0.7624999999999996
+        ],
+        "proper_clock": 0.0
+      },
+      "final": {
+        "time": 0.3,
+        "field_energy": 11.999976265043035,
+        "gravity_energy": -11.999976265056073,
+        "energy": -1.3038459201197838e-11,
+        "fieldwork_power": 8.9675339693957e-05,
+        "constraint_norm": 0.0002997642072682317,
+        "forcing_norm": 0.0003175284452527912,
+        "quadrature_forcing_norm": 6.724601866577992e-08,
+        "projection_forcing_norm": 0.00031752504227691746,
+        "full_C_l2": 0.0009014073079301601,
+        "full_D_l2": 0.00019769740867709264,
+        "full_hamilton_max": 0.0011851378055993678,
+        "full_momentum_max": 0.00025083678255910513,
+        "proper_min": -0.09935109665362522,
+        "proper_max": 0.07872762686146714,
+        "r_min": 4.216460603844676,
+        "r_max": 4.852234539356339,
+        "Q_min": 0.2499267080688879,
+        "Q_max": 0.2501213293981537,
+        "gram_gap": 1.6442402994698568e-13,
+        "omega": 100.38838716257281,
+        "clock_rate": 1.2029173199539214,
+        "occupation": [
+          0.03220053864091962,
+          0.03232457800190036
+        ],
+        "proper_clock": 0.3617961086553279
+      },
+      "time": 0.3,
+      "integrals": {
+        "forcing_norm": {
+          "trapezoid": 9.99103734576782e-05,
+          "simpson": 9.991050842176822e-05,
+          "indicator": 1.3496409002054007e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "quadrature_forcing_norm": {
+          "trapezoid": 1.6653126346055176e-08,
+          "simpson": 1.6653001214264902e-08,
+          "indicator": 1.251317902766128e-13,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "projection_forcing_norm": {
+          "trapezoid": 9.990959933363129e-05,
+          "simpson": 9.990973434321844e-05,
+          "indicator": 1.3500958714169307e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "fieldwork_power": {
+          "trapezoid": -2.3731052763314246e-05,
+          "simpson": -2.3731206011545605e-05,
+          "indicator": 1.532482313859368e-10,
+          "uniform_steps": true,
+          "certified": false
+        },
+        "clock_rate": {
+          "trapezoid": 0.3617961086553283,
+          "simpson": 0.3617961096476064,
+          "indicator": 9.922780930260444e-10,
+          "uniform_steps": true,
+          "certified": false
+        }
+      },
+      "field_energy_change": -2.37312190680683e-05,
+      "gravity_energy_change": 2.3731206031385454e-05,
+      "energy_balance_change": -1.3036682844358438e-11,
+      "fieldwork_difference": -1.6630475405262583e-10,
+      "constraint_end_sampled_budget": 0.00039805880159026873,
+      "constraint_end_margin": 9.829459432203702e-05,
+      "positive_chart": true,
+      "gram_gap_max": 1.645350522494482e-13,
+      "occupation_change": [
+        -0.7302994613590797,
+        -0.7301754219980993
+      ],
+      "physical": {
+        "initial": {
+          "time": 0.0,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 6.69884370104534,
+              "coordinate_matter_energy": 8.099999997122726,
+              "coordinate_gravity_energy": -3.4143322429831104,
+              "normal_boundary_flux": -1.991768305060741e-20,
+              "normal_discrete_boundary_flux": -1.9918219824371888e-20,
+              "boundary_flux_identity_gap": 5.3677376447874e-25,
+              "normal_left_outward_flux": -9.254291123644795e-21,
+              "normal_right_outward_flux": 2.9171974174252205e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": -3.917237471032943e-15,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -2.9241682289590453e-10,
+              "normal_balance_defect": -2.924129056385167e-10,
+              "probability": 2.024999999995849,
+              "probability_share": 0.6749999999986164,
+              "probability_boundary_flux": -1.310389017101879e-32,
+              "probability_directional_slope": 6.086334118931145e-16,
+              "probability_balance_defect": 6.086334118933107e-16,
+              "normal_internal_flux_l2": 1.0026038604103693e-12,
+              "normal_internal_flux_max_abs": 2.687283293359624e-12,
+              "probability_internal_flux_l2": 6.009850759358312e-16,
+              "probability_internal_flux_max_abs": 1.9984014418843237e-15
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 3.311599582458876,
+              "coordinate_matter_energy": 3.8999999991308467,
+              "coordinate_gravity_energy": -3.2550114428347285,
+              "normal_boundary_flux": 1.87648606359033e-20,
+              "normal_discrete_boundary_flux": 1.876493102699536e-20,
+              "boundary_flux_identity_gap": 7.039109205998096e-26,
+              "normal_left_outward_flux": -2.9171974174252205e-20,
+              "normal_right_outward_flux": 1.0407113538348906e-20,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 8.700043340902962e-17,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -1.4064440518774696e-10,
+              "normal_balance_defect": -1.4064449220694552e-10,
+              "probability": 0.9750000000003152,
+              "probability_share": 0.32500000000010504,
+              "probability_boundary_flux": 9.469987972202616e-33,
+              "probability_directional_slope": 1.3611909823792879e-15,
+              "probability_balance_defect": 1.3611909823791297e-15,
+              "normal_internal_flux_l2": 6.002932560071722e-13,
+              "normal_internal_flux_max_abs": 1.8351564243439165e-12,
+              "probability_internal_flux_l2": 2.588308737969973e-16,
+              "probability_internal_flux_max_abs": 9.71445146547012e-16
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 7.27851719867223e-12,
+              "coordinate_matter_energy": 7.979186322087939e-12,
+              "coordinate_gravity_energy": -2.5330596268446435,
+              "normal_boundary_flux": 1.578051109756844e-21,
+              "normal_discrete_boundary_flux": 1.5780747380525965e-21,
+              "boundary_flux_identity_gap": 2.36282957525686e-26,
+              "normal_left_outward_flux": -1.0407113538348906e-20,
+              "normal_right_outward_flux": 8.829062428592062e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 9.049983919959133e-19,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": -2.6465141150380105e-13,
+              "normal_balance_defect": -2.6465231808026847e-13,
+              "probability": 3.211338313324763e-12,
+              "probability_share": 1.0704461044415876e-12,
+              "probability_boundary_flux": -8.05392754778198e-32,
+              "probability_directional_slope": 6.469045184244948e-20,
+              "probability_balance_defect": 6.469045189087256e-20,
+              "normal_internal_flux_l2": 5.8764482134192196e-15,
+              "normal_internal_flux_max_abs": 9.449569943916585e-19,
+              "probability_internal_flux_l2": 0.0,
+              "probability_internal_flux_max_abs": 8.928623074814326e-23
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 4.622196722592342e-13,
+              "coordinate_matter_energy": 5.479579463785189e-13,
+              "coordinate_gravity_energy": -2.7975966835996213,
+              "normal_boundary_flux": -4.252286950527334e-22,
+              "normal_discrete_boundary_flux": -4.257650067369007e-22,
+              "boundary_flux_identity_gap": 5.363116841673128e-25,
+              "normal_left_outward_flux": -8.829062428592062e-21,
+              "normal_right_outward_flux": 9.254291123644795e-21,
+              "proper_pressure_work": 0.0,
+              "momentum_lapse_work": 1.1407590607238024e-19,
+              "coordinate_metric_work": 0.0,
+              "normal_directional_slope": 1.2906945458527384e-13,
+              "normal_balance_defect": 1.2906934093513245e-13,
+              "probability": 6.236634472744917e-13,
+              "probability_share": 2.0788781575816392e-13,
+              "probability_boundary_flux": 8.417317767663597e-32,
+              "probability_directional_slope": 3.7877198004805165e-19,
+              "probability_balance_defect": 3.7877197995966167e-19,
+              "normal_internal_flux_l2": 9.30201658576426e-15,
+              "normal_internal_flux_max_abs": 2.5269423242973175e-19,
+              "probability_internal_flux_l2": 0.0,
+              "probability_internal_flux_max_abs": 1.0064998192485273e-22
+            }
+          ],
+          "shell_leader": 0,
+          "probability_leader": 0,
+          "shell_leader_share": 0.6691855206930647,
+          "probability_leader_share": 0.6749999999986164,
+          "canonical_probability": 3.0,
+          "circular_probability_location": 1.6185990527916019,
+          "circular_concentration": 0.7728198957292799,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 1.9327429459387197e-08,
+          "probability_balance_defect_l2_density": 1.5169815930333397e-13,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 5.3677376447874e-25,
+          "full_normal_energy": 10.010443283511954,
+          "source_kernel_gap_max": 3.469446951953614e-18,
+          "shell_identity_gap_max": 2.7755575615628914e-17
+        },
+        "final": {
+          "time": 0.3,
+          "windows": [
+            {
+              "interval": [
+                0.0,
+                2.0
+              ],
+              "width": 2.0,
+              "normal_shell": 6.657552615398873,
+              "coordinate_matter_energy": 7.965080340165482,
+              "coordinate_gravity_energy": -3.408947104122957,
+              "normal_boundary_flux": -2.453390865848556,
+              "normal_discrete_boundary_flux": -2.453390865848489,
+              "boundary_flux_identity_gap": 6.705747068735946e-14,
+              "normal_left_outward_flux": 1.004787959118251,
+              "normal_right_outward_flux": 1.4486029067303055,
+              "proper_pressure_work": 0.3647976996386556,
+              "momentum_lapse_work": 0.07006067286117368,
+              "coordinate_metric_work": -0.00016617372664746435,
+              "normal_directional_slope": -2.0185324934310254,
+              "normal_balance_defect": -8.237641338076472e-11,
+              "probability": 1.9912878594772483,
+              "probability_share": 0.6637626198258578,
+              "probability_boundary_flux": -0.7239237063207853,
+              "probability_directional_slope": -0.72392370632078,
+              "probability_balance_defect": -1.5473138288274778e-14,
+              "normal_internal_flux_l2": 4.750798848128449,
+              "normal_internal_flux_max_abs": 5.149061510052987,
+              "probability_internal_flux_l2": 1.4191445443605797,
+              "probability_internal_flux_max_abs": 1.555903698320083
+            },
+            {
+              "interval": [
+                2.0,
+                4.0
+              ],
+              "width": 2.0,
+              "normal_shell": 3.3482484996413437,
+              "coordinate_matter_energy": 3.922750271416958,
+              "coordinate_gravity_energy": -3.2531721320501212,
+              "normal_boundary_flux": 0.33423448578650206,
+              "normal_discrete_boundary_flux": 0.3342344857864279,
+              "boundary_flux_identity_gap": 7.416289804496046e-14,
+              "normal_left_outward_flux": -1.4486029067303055,
+              "normal_right_outward_flux": 1.1143684209438034,
+              "proper_pressure_work": 0.15131199236515047,
+              "momentum_lapse_work": 0.021818095749585112,
+              "coordinate_metric_work": 0.00025667679208456423,
+              "normal_directional_slope": 0.5073645742636532,
+              "normal_balance_defect": 3.6249048853439934e-10,
+              "probability": 0.9806821555079257,
+              "probability_share": 0.3268940518360286,
+              "probability_boundary_flux": 0.131012856512293,
+              "probability_directional_slope": 0.1310128565122977,
+              "probability_balance_defect": 2.5557545244992745e-14,
+              "normal_internal_flux_l2": 2.2837585578843322,
+              "normal_internal_flux_max_abs": 3.207774373971127,
+              "probability_internal_flux_l2": 0.6697670124207431,
+              "probability_internal_flux_max_abs": 0.9425612932178754
+            },
+            {
+              "interval": [
+                4.0,
+                6.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.060570312735120334,
+              "coordinate_matter_energy": 0.06642448984217514,
+              "coordinate_gravity_energy": -2.536099058064139,
+              "normal_boundary_flux": 1.1143684209437552,
+              "normal_discrete_boundary_flux": 1.1143684209437559,
+              "boundary_flux_identity_gap": 6.661338147750939e-16,
+              "normal_left_outward_flux": -1.1143684209438034,
+              "normal_right_outward_flux": 4.8252385842301595e-14,
+              "proper_pressure_work": 0.0017889614124394252,
+              "momentum_lapse_work": 0.0028516826151635984,
+              "coordinate_metric_work": -5.20391636011331e-07,
+              "normal_directional_slope": 1.1190090650859985,
+              "normal_balance_defect": 1.1464042617967684e-10,
+              "probability": 0.01660170196330581,
+              "probability_share": 0.005533900654436173,
+              "probability_boundary_flux": 0.3059157466017422,
+              "probability_directional_slope": 0.30591574660174203,
+              "probability_balance_defect": -4.1250734594163857e-16,
+              "normal_internal_flux_l2": 0.20739286848132604,
+              "normal_internal_flux_max_abs": 1.1143684209438034,
+              "probability_internal_flux_l2": 0.05687316251896156,
+              "probability_internal_flux_max_abs": 0.3059157466018304
+            },
+            {
+              "interval": [
+                6.0,
+                8.0
+              ],
+              "width": 2.0,
+              "normal_shell": 0.04009068716205797,
+              "coordinate_matter_energy": 0.04572116361840912,
+              "coordinate_gravity_energy": -2.8017579708188567,
+              "normal_boundary_flux": 1.004787959118299,
+              "normal_discrete_boundary_flux": 1.0047879591182511,
+              "boundary_flux_identity_gap": 4.796163466380676e-14,
+              "normal_left_outward_flux": -4.8252385842301595e-14,
+              "normal_right_outward_flux": -1.004787959118251,
+              "proper_pressure_work": 0.0012018969932663525,
+              "momentum_lapse_work": 0.0026705297046188525,
+              "coordinate_metric_work": -3.07334107131512e-07,
+              "normal_directional_slope": 1.0086603857106229,
+              "normal_balance_defect": -1.0551152671108861e-10,
+              "probability": 0.011428283051030049,
+              "probability_share": 0.003809427683677305,
+              "probability_boundary_flux": 0.28699510320675015,
+              "probability_directional_slope": 0.28699510320674265,
+              "probability_balance_defect": 7.187489033660161e-15,
+              "normal_internal_flux_l2": 0.15192280933965505,
+              "normal_internal_flux_max_abs": 0.8680866017789709,
+              "probability_internal_flux_l2": 0.043341064959256936,
+              "probability_internal_flux_max_abs": 0.24784384656800795
+            }
+          ],
+          "shell_leader": 0,
+          "probability_leader": 0,
+          "shell_leader_share": 0.6587421532564774,
+          "probability_leader_share": 0.6637626198258578,
+          "canonical_probability": 2.99999999999951,
+          "circular_probability_location": 1.6185946727287284,
+          "circular_concentration": 0.7514929402663643,
+          "dynamic_work_gap": 0.0,
+          "normal_balance_defect_l2_density": 2.1081167831779775e-08,
+          "probability_balance_defect_l2_density": 1.5299064614469907e-11,
+          "partition_gap": 4.1522341120980855e-14,
+          "boundary_flux_identity_gap_max": 7.416289804496046e-14,
+          "full_normal_energy": 10.106462114937395,
+          "source_kernel_gap_max": 3.469446951953614e-18,
+          "shell_identity_gap_max": 1.3877787807814457e-17
+        },
+        "windows": [
+          {
+            "interval": [
+              0.0,
+              2.0
+            ],
+            "normal_shell_change": -0.041291085646466996,
+            "probability_change": -0.03371214051860072,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": -0.11380368278295017,
+                "simpson": -0.11373400781595777,
+                "indicator": 6.967496699239462e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.05138329818362924,
+                "simpson": 0.05138190275921177,
+                "indicator": 1.3954244174677055e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.021058391145542213,
+                "simpson": 0.021061043533169458,
+                "indicator": 2.6523876272450952e-06
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -3.345428089534636e-05,
+                "simpson": -3.346122811820826e-05,
+                "indicator": 6.947222861900361e-09
+              },
+              "normal_balance_defect": {
+                "trapezoid": 2.6108409400019055e-11,
+                "simpson": 2.36138910000833e-11,
+                "indicator": 2.4945183999357546e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": -0.03373243710411998,
+                "simpson": -0.03371213448558344,
+                "indicator": 2.030261853654125e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": -6.6862095654738375e-15,
+                "simpson": -6.708745370845871e-15,
+                "indicator": 2.253580537203364e-17
+              }
+            },
+            "normal_shell_integrated_gap": 7.090778120331237e-05,
+            "probability_integrated_gap": 2.029658552595015e-05,
+            "min_normal_shell": 6.657552615398873,
+            "max_abs_normal_boundary_flux": 2.453390865848556,
+            "max_internal_normal_flux": 5.149061510052987,
+            "max_internal_probability_flux": 1.5570043468015673,
+            "max_abs_normal_throughflow": 1.4486029067303055
+          },
+          {
+            "interval": [
+              2.0,
+              4.0
+            ],
+            "normal_shell_change": 0.036648917182467766,
+            "probability_change": 0.005682155507610531,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.013366031270832177,
+                "simpson": 0.013353389246578607,
+                "indicator": 1.2642024253569847e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 0.018638608122846588,
+                "simpson": 0.018637265414299532,
+                "indicator": 1.3427085470557598e-06
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.004658015765912538,
+                "simpson": 0.00465826038278729,
+                "indicator": 2.446168747517394e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": 9.756659609871004e-06,
+                "simpson": 9.748239120674415e-06,
+                "indicator": 8.42048919658861e-09
+              },
+              "normal_balance_defect": {
+                "trapezoid": -3.7387290582990615e-12,
+                "simpson": -6.652105951457089e-12,
+                "indicator": 2.9133768931580277e-12
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.005686433367598558,
+                "simpson": 0.005682154653344279,
+                "indicator": 4.278714254278906e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": 8.024663562101334e-15,
+                "simpson": 8.038924212688715e-15,
+                "indicator": 1.4260650587380545e-17
+              }
+            },
+            "normal_shell_integrated_gap": -1.3737973384810032e-05,
+            "probability_integrated_gap": -4.277859996051382e-06,
+            "min_normal_shell": 3.311599582458876,
+            "max_abs_normal_boundary_flux": 0.33423448578650206,
+            "max_internal_normal_flux": 3.229070389704154,
+            "max_internal_probability_flux": 0.9427526708660783,
+            "max_abs_normal_throughflow": 1.4486029067303055
+          },
+          {
+            "interval": [
+              4.0,
+              6.0
+            ],
+            "normal_shell_change": 0.060570312727841816,
+            "probability_change": 0.016601701960094473,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.06042531663516382,
+                "simpson": 0.060406330229543934,
+                "indicator": 1.8986405619883517e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 5.352100512646922e-05,
+                "simpson": 5.3420064849584314e-05,
+                "indicator": 1.0094027688490649e-07
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 0.00011065483179441617,
+                "simpson": 0.00011054796809882579,
+                "indicator": 1.0686369559037763e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -1.1934443188414353e-08,
+                "simpson": -1.1893257310677043e-08,
+                "indicator": 4.1185877737310496e-11
+              },
+              "normal_balance_defect": {
+                "trapezoid": 9.98506816439914e-14,
+                "simpson": -5.048789571249867e-14,
+                "indicator": 1.5033857735649007e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.01660688061379346,
+                "simpson": 0.01660169808181604,
+                "indicator": 5.1825319774198575e-06
+              },
+              "probability_balance_defect": {
+                "trapezoid": -6.469268825357776e-17,
+                "simpson": -6.554512703583346e-17,
+                "indicator": 8.524387822556929e-19
+              }
+            },
+            "normal_shell_integrated_gap": -1.9179744342734395e-05,
+            "probability_integrated_gap": -5.178653698922897e-06,
+            "min_normal_shell": 7.27851719867223e-12,
+            "max_abs_normal_boundary_flux": 1.1143684209437552,
+            "max_internal_normal_flux": 1.1143684209438034,
+            "max_internal_probability_flux": 0.3059157466018304,
+            "max_abs_normal_throughflow": 1.1143684209438034
+          },
+          {
+            "interval": [
+              6.0,
+              8.0
+            ],
+            "normal_shell_change": 0.04009068716159575,
+            "probability_change": 0.011428283050406385,
+            "integrals": {
+              "normal_boundary_flux": {
+                "trapezoid": 0.040012334876954186,
+                "simpson": 0.039974288339835226,
+                "indicator": 3.804653711896033e-05
+              },
+              "proper_pressure_work": {
+                "trapezoid": 3.075087503917247e-05,
+                "simpson": 3.066586980730213e-05,
+                "indicator": 8.500523187033996e-08
+              },
+              "momentum_lapse_work": {
+                "trapezoid": 8.586663764023547e-05,
+                "simpson": 8.572827685801652e-05,
+                "indicator": 1.3836078221895088e-07
+              },
+              "coordinate_metric_work": {
+                "trapezoid": -6.330504332749872e-09,
+                "simpson": -6.302515029115154e-09,
+                "indicator": 2.7989303634717853e-11
+              },
+              "normal_balance_defect": {
+                "trapezoid": -3.1303125911930425e-12,
+                "simpson": -2.2940701574313097e-12,
+                "indicator": 8.362424337617328e-13
+              },
+              "probability_boundary_flux": {
+                "trapezoid": 0.011439123122727966,
+                "simpson": 0.011428281750423118,
+                "indicator": 1.084137230484769e-05
+              },
+              "probability_balance_defect": {
+                "trapezoid": 1.5564084715693911e-15,
+                "simpson": 1.5577856876680577e-15,
+                "indicator": 1.3772160986666427e-18
+              }
+            },
+            "normal_shell_integrated_gap": -3.82652249075327e-05,
+            "probability_integrated_gap": -1.084007232313687e-05,
+            "min_normal_shell": -3.075928097298619e-11,
+            "max_abs_normal_boundary_flux": 1.004787959118299,
+            "max_internal_normal_flux": 0.8680866017789709,
+            "max_internal_probability_flux": 0.24784384656800795,
+            "max_abs_normal_throughflow": 1.004787959118251
+          }
+        ],
+        "shell_leader_unchanged": true,
+        "probability_leader_unchanged": true,
+        "normal_shell_leader_share_min": 0.6587421532564774,
+        "probability_leader_share_min": 0.6637626198258578,
+        "probability_total_drift": 4.898303984646191e-13,
+        "max_dynamic_work_gap": 0.0,
+        "max_boundary_flux_identity_gap": 1.238483464003834e-13,
+        "normal_continuity_defect_l2_max": 2.3658454485881165e-08,
+        "probability_continuity_defect_l2_max": 1.6049089210287496e-11,
+        "renewal": false,
+        "continuum_balance_certified": false
+      },
+      "surfaces": [
+        {
+          "interval": [
+            0.0,
+            2.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": 0.0400123348769501,
+            "absolute_integral": 0.0400123349597851,
+            "endpoint": 1.004787959118251,
+            "quadrature": {
+              "trapezoid": 0.04001233487695023,
+              "simpson": 0.03997428833983127,
+              "indicator": 3.804653711896033e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 0.07379134790599977,
+            "absolute_integral": 0.07379135075364467,
+            "endpoint": 1.4486029067303055,
+            "quadrature": {
+              "trapezoid": 0.07379134790599993,
+              "simpson": 0.0737597194761265,
+              "indicator": 3.162842987343428e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": -0.11380368278294986,
+            "absolute_integral": 0.11380368528279639,
+            "endpoint": -2.453390865848556,
+            "quadrature": {
+              "trapezoid": -0.11380368278295017,
+              "simpson": -0.11373400781595777,
+              "indicator": 6.967496699239462e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            2.0,
+            4.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -0.07379134790599977,
+            "absolute_integral": 0.07379135075364467,
+            "endpoint": -1.4486029067303055,
+            "quadrature": {
+              "trapezoid": -0.07379134790599993,
+              "simpson": -0.0737597194761265,
+              "indicator": 3.162842987343428e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 0.060425316635167634,
+            "absolute_integral": 0.06042531667393705,
+            "endpoint": 1.1143684209438034,
+            "quadrature": {
+              "trapezoid": 0.06042531663516778,
+              "simpson": 0.0604063302295479,
+              "indicator": 1.898640561987658e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.013366031270832135,
+            "absolute_integral": 0.013366045784106537,
+            "endpoint": 0.33423448578650206,
+            "quadrature": {
+              "trapezoid": 0.013366031270832177,
+              "simpson": 0.013353389246578607,
+              "indicator": 1.2642024253569847e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            4.0,
+            6.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -0.060425316635167634,
+            "absolute_integral": 0.06042531667393705,
+            "endpoint": -1.1143684209438034,
+            "quadrature": {
+              "trapezoid": -0.06042531663516778,
+              "simpson": -0.0604063302295479,
+              "indicator": 1.898640561987658e-05
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": 3.950724333535625e-15,
+            "absolute_integral": 3.950724333535625e-15,
+            "endpoint": 4.8252385842301595e-14,
+            "quadrature": {
+              "trapezoid": 3.950724333535631e-15,
+              "simpson": 3.9574260190506264e-15,
+              "indicator": 6.701685514995598e-18
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.06042531663516367,
+            "absolute_integral": 0.06042531667393327,
+            "endpoint": 1.1143684209437552,
+            "quadrature": {
+              "trapezoid": 0.06042531663516382,
+              "simpson": 0.060406330229543934,
+              "indicator": 1.8986405619883517e-05
+            }
+          }
+        },
+        {
+          "interval": [
+            6.0,
+            8.0
+          ],
+          "normal_left_outward_flux": {
+            "signed_integral": -3.950724333535625e-15,
+            "absolute_integral": 3.950724333535625e-15,
+            "endpoint": -4.8252385842301595e-14,
+            "quadrature": {
+              "trapezoid": -3.950724333535631e-15,
+              "simpson": -3.9574260190506264e-15,
+              "indicator": 6.701685514995598e-18
+            }
+          },
+          "normal_right_outward_flux": {
+            "signed_integral": -0.0400123348769501,
+            "absolute_integral": 0.0400123349597851,
+            "endpoint": -1.004787959118251,
+            "quadrature": {
+              "trapezoid": -0.04001233487695023,
+              "simpson": -0.03997428833983127,
+              "indicator": 3.804653711896033e-05
+            }
+          },
+          "normal_boundary_flux": {
+            "signed_integral": 0.04001233487695405,
+            "absolute_integral": 0.04001233495978875,
+            "endpoint": 1.004787959118299,
+            "quadrature": {
+              "trapezoid": 0.040012334876954186,
+              "simpson": 0.039974288339835226,
+              "indicator": 3.804653711896033e-05
+            }
+          }
+        }
+      ],
+      "continuum_constraint_certified": false,
+      "observable_error_certified": false,
+      "renewal": false,
+      "alpha": 1.05,
+      "weights": [
+        0.7625,
+        0.7625,
+        0.5,
+        0.5,
+        0.2375,
+        0.2375
+      ],
+      "constructor": {
+        "occupations": [
+          0.7625,
+          0.7625,
+          0.5,
+          0.5,
+          0.2375,
+          0.2375
+        ],
+        "columns_unchanged": true,
+        "caller_columns_unchanged": true,
+        "car": {
+          "gap": 2.220446049250313e-16,
+          "admissible": true,
+          "columns": 6,
+          "identity_is_the_mode_car": true
+        },
+        "positive_G": true,
+        "positive_r": true,
+        "positive_Q": true,
+        "G_min": 0.06316419892036323,
+        "G_max": 11.075249724636565,
+        "r_min": 4.208061598748689,
+        "r_max": 4.877665288924738,
+        "Q": 0.25132493326913924,
+        "projected_hamilton_max": 2.969923011878861e-10,
+        "full_hamilton_max": 0.0017878290874264735,
+        "held_out_hamilton_max": 0.0017878288108959682,
+        "converged_to_newton_tolerance": false,
+        "solver_floor": true,
+        "physical_failure": false,
+        "source_derived": true,
+        "source_mean_subtracted": false,
+        "current_mean": -2.2831245923026722e-14,
+        "current_unchanged": true,
+        "shift_mean_gap": 1.7039395552773855e-28,
+        "mean_retained_in_shift_residual": true,
+        "rho_mean": 5.968369234286998,
+        "rho_independent_of_r_max": 0.0,
+        "current_independent_of_r_max": 0.0,
+        "momentum": {
+          "current_mean": -2.2831245923026722e-14,
+          "p_Q_max": 4.082709637331804e-13,
+          "p_Q_mean": -1.2671271638373586e-29,
+          "antiderivative_accepted": true,
+          "source_mean_subtracted": false,
+          "derivative_gap": 7.421603396319279e-26
+        },
+        "chart_admissible": true,
+        "evolve": true,
+        "evolution_gate": {
+          "projected": 0.0001,
+          "full": 0.01
+        },
+        "blocker": null,
+        "accepted_steps": 66
+      },
+      "stop_reason": null,
+      "completed": true,
+      "cpu_seconds": 93.04629600000004
+    }
+  },
+  "series_schema": [
+    "time",
+    "field_energy",
+    "gravity_energy",
+    "energy",
+    "fieldwork_power",
+    "constraint_norm",
+    "forcing_norm",
+    "quadrature_forcing_norm",
+    "projection_forcing_norm",
+    "full_C_l2",
+    "full_D_l2",
+    "full_hamilton_max",
+    "full_momentum_max",
+    "proper_min",
+    "proper_max",
+    "r_min",
+    "r_max",
+    "Q_min",
+    "Q_max",
+    "gram_gap",
+    "omega",
+    "clock_rate",
+    "proper_clock"
+  ],
+  "window_schema": [
+    "normal_shell",
+    "coordinate_matter_energy",
+    "coordinate_gravity_energy",
+    "normal_boundary_flux",
+    "normal_left_outward_flux",
+    "normal_right_outward_flux",
+    "proper_pressure_work",
+    "momentum_lapse_work",
+    "coordinate_metric_work",
+    "normal_balance_defect",
+    "probability",
+    "probability_share",
+    "probability_boundary_flux",
+    "probability_balance_defect",
+    "normal_internal_flux_l2"
+  ],
+  "error_domain": "exploratory nf256 controls; each initial full/held-out residual and actual forcing budget reported. Baseline nf256/nf512 and dt indicators are reference scales, not a control-specific continuum certificate",
+  "forecast": {
+    "measured_full_step_cpu": 0.14893999999999963,
+    "measured_frame_cpu": 0.048921999999999244,
+    "forecast_four_cases_cpu": 369.19727999999895,
+    "full_target_admitted": true,
+    "selected_common_endpoint": 0.3,
+    "preparation_cpu": 14.811317
+  },
+  "cpu_seconds": 387.778793,
+  "source_bindings_after": {
+    "v1_source_json": "780ab1e91062c60f5e0e91a76546e07793810f0200e2bd18ebfcbde13bd631cc",
+    "v1_source_npz": "5949bc30763d7cc9855c0e1d6398b725d402013a9ee21c5c424aedd2eeec1d5b",
+    "v2_source_json": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d",
+    "v2_source_npz": "40a2c377e2dbf9af83f38670fc36c7029a73c7ae7367dd6cd95e4e93857aa877",
+    "driver": "ea0e9512207bdd8e2c72049502d36042fa95c74f8825832436ef29b4641725bb",
+    "galerkin": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "source_constructor": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc",
+    "coupling": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "action": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "conformal_source": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea"
+  },
+  "sealed_sources_unchanged": true,
+  "all_target_reached": true,
+  "verdict": "MEASURED_COARSE_SOURCE_CONTROLS",
+  "continuum_constraint_certified": false,
+  "observable_error_certified": false,
+  "payload_sha256": "34d12c89895ff47269c0e126327d66ee4cf6d1b580d5b06b572d4714acfe2fa2",
+  "payload_bytes": 925067
+}

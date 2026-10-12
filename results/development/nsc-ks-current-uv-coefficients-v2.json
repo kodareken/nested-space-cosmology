@@ -1,0 +1,192 @@
+{
+  "accountable_author": "Douglas Ek",
+  "certificate_from_asymptotic_orders_alone": false,
+  "e_minus2_current": {
+    "angular_pair_of_Im_T_s_major_A2": "that one constructed integrand is odd in ell; this is not a finite-history UV cancellation of the full N,beta coefficient",
+    "h_z_is_the_full_coefficient": false,
+    "linear_fixed_transfer_e_minus2_zero": "owned separately at the reference for linear response; not a finite-history coincidence identity",
+    "terms": {
+      "s+1": {
+        "A3_locally_algebraic_in_metric_jets": false,
+        "Im_A1dag_A1_z_residual": "0",
+        "N_density_e_minus2_uses_A2": true,
+        "N_density_vertex": "V=-m S1 + ell S2 / r; tr(V rho) starts at e^{-1}",
+        "N_momentum_vertex": "S3/a",
+        "beta_e_minus2_contains_A1_interference": true,
+        "beta_e_minus2_contains_h_z": true,
+        "beta_e_minus2_contains_n3_hence_A3": true,
+        "beta_momentum_vertex": "-I, action supplies the overall minus",
+        "carrier_lowers_C3": "d/d eta of exp(-i s e eta) at eta=0 multiplies the coincidence e^{-3} two-point coefficient and feeds e^{-2}",
+        "h_z_is_the_full_e_minus2_coefficient": false,
+        "symbolic_beta_e_minus2": "(-ell*(ell*im(Derivative(r(rho, z), z)) - m*r(rho, z)*re(Derivative(r(rho, z), z)))*a(rho)**2 + 2*(-A2_1*(I*ell + m*r(rho, z)) + (I*ell - m*r(rho, z))*conjugate(A2_1))*a(rho)*r(rho, z)**2 + 4*(I*A2_0*psi(rho, z) - A3_0 - I*psi(rho, z)*conjugate(A2_0) + psi(rho, z)*im(Derivative(psi(rho, z), z)) - conjugate(A3_0) + im(A2z_0))*r(rho, z)**3)/(4*r(rho, z)**3)"
+      },
+      "s-1": {
+        "A3_locally_algebraic_in_metric_jets": false,
+        "Im_A1dag_A1_z_residual": "0",
+        "N_density_e_minus2_uses_A2": true,
+        "N_density_vertex": "V=-m S1 + ell S2 / r; tr(V rho) starts at e^{-1}",
+        "N_momentum_vertex": "S3/a",
+        "beta_e_minus2_contains_A1_interference": true,
+        "beta_e_minus2_contains_h_z": true,
+        "beta_e_minus2_contains_n3_hence_A3": true,
+        "beta_momentum_vertex": "-I, action supplies the overall minus",
+        "carrier_lowers_C3": "d/d eta of exp(-i s e eta) at eta=0 multiplies the coincidence e^{-3} two-point coefficient and feeds e^{-2}",
+        "h_z_is_the_full_e_minus2_coefficient": false,
+        "symbolic_beta_e_minus2": "(-ell*(ell*im(Derivative(r(rho, z), z)) + m*r(rho, z)*re(Derivative(r(rho, z), z)))*a(rho)**2 + 2*(-A2_0*(I*ell - m*r(rho, z)) + (I*ell + m*r(rho, z))*conjugate(A2_0))*a(rho)*r(rho, z)**2 + 4*(-I*A2_1*psi(rho, z) + A3_1 + I*psi(rho, z)*conjugate(A2_1) + psi(rho, z)*im(Derivative(psi(rho, z), z)) + conjugate(A3_1) + im(A2z_1))*r(rho, z)**3)/(4*r(rho, z)**3)"
+      }
+    }
+  },
+  "existing_source_ad759_evaluation_changed": false,
+  "gaps": {
+    "carrier_times_coincidence_C3": "constructed as a needed term, not evaluated on a source panel",
+    "complete_e_minus2_N_beta_coefficient": null,
+    "finite_history_UV_cancellation": "not claimed: missing normalization, density, carrier, source-sign and original-multiplicity terms in the assembled current",
+    "higher_A_j_beyond_constructed_A3_formulae": null,
+    "minor_A3_as_local_metric_jet": "minor A3 = a^2/(2i) Pi_{-s} L0 A2 depends on integrated major A2",
+    "numerical_C_M": null,
+    "physical_local_gate": "OPEN",
+    "source_cutoff_tail_at_160_320": null,
+    "thermal_coherent_source_remainder": null
+  },
+  "identities": {
+    "A0": "e_s",
+    "Im_T_s_major_A2_pure_imag_major_A1": "-m ell/4 (s a^2 r_rho + r_z)/r^2",
+    "T_s": "T_s = d_rho - s/a^2 d_z",
+    "T_s_major_A1": "-i/2 (m^2 + ell^2/r^2)",
+    "V": "V=-m S1 + ell S2 / r",
+    "dummy_symbol_L0_A_j": false,
+    "minor_A1": "a/2 (m - i s ell / r)",
+    "residuals": {
+      "V_definition": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "s+1/A0_is_e_s": [
+        "0",
+        "0"
+      ],
+      "s+1/Im_T_s_major_A2_odd_in_ell": "0",
+      "s+1/Im_T_s_major_A2_parent": "0",
+      "s+1/Im_T_s_major_A2_vanishes_for_ell_0": "0",
+      "s+1/Im_T_s_major_A2_vanishes_for_m_0": "0",
+      "s+1/L0_telescope_M2": [
+        "0",
+        "0"
+      ],
+      "s+1/Pi_minus_A0": [
+        "0",
+        "0"
+      ],
+      "s+1/Pi_s_L0_A1_is_transport_defect": "0",
+      "s+1/Pi_s_L0_A2_is_transport_defect": "0",
+      "s+1/Re_major_A1_normalization": "0",
+      "s+1/T_s_major_A1_parent": "0",
+      "s+1/minor_A1_from_L0_A0": "0",
+      "s+1/minor_A1_matches_P1": "0",
+      "s+1/minor_A1_parent": "0",
+      "s+1/minor_A2_recurrence": "0",
+      "s+1/minor_A3_depends_on_major_A2": "depends",
+      "s+1/order_e_minus1_density": "0",
+      "s-1/A0_is_e_s": [
+        "0",
+        "0"
+      ],
+      "s-1/Im_T_s_major_A2_odd_in_ell": "0",
+      "s-1/Im_T_s_major_A2_parent": "0",
+      "s-1/Im_T_s_major_A2_vanishes_for_ell_0": "0",
+      "s-1/Im_T_s_major_A2_vanishes_for_m_0": "0",
+      "s-1/L0_telescope_M2": [
+        "0",
+        "0"
+      ],
+      "s-1/Pi_minus_A0": [
+        "0",
+        "0"
+      ],
+      "s-1/Pi_s_L0_A1_is_transport_defect": "0",
+      "s-1/Pi_s_L0_A2_is_transport_defect": "0",
+      "s-1/Re_major_A1_normalization": "0",
+      "s-1/T_s_major_A1_parent": "0",
+      "s-1/minor_A1_from_L0_A0": "0",
+      "s-1/minor_A1_parent": "0",
+      "s-1/minor_A2_recurrence": "0",
+      "s-1/minor_A3_depends_on_major_A2": "depends",
+      "s-1/order_e_minus1_density": "0"
+    }
+  },
+  "input_hashes": {
+    "docs/nsc-source-cutoff-bridge.md": "4464afb826d57314657771d49d3ae5b6515fe4a3cd7e03e6372383c0560a9a33",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "src/recursive_horizons/nsc_incoming_fixed_transfer.py": "035bbe460bac17fe8a4898747f357ca6f994317c8d16cbb758ea65a47b803dfb",
+    "src/recursive_horizons/nsc_ks_chebyshev_jet_bound.py": "9994f3fb4e1762b58157ef0077260bddedec2ae36fea44dc84861021620be520",
+    "src/recursive_horizons/nsc_ks_linear_uv_contractions.py": "80ff3095f3d4f48a59c6109f264770a753acd0e2c954c977dee62a5f06c6b88f"
+  },
+  "new_action_term": false,
+  "physical_local_gate": "OPEN: constructed vacuum-envelope jets and geometric Im(major A2) transport; numerical C_M, coherent remainder, and the full E^{-2} N,beta current remain unbounded; no local gate certificate",
+  "pilot": {
+    "angular": 2.23606797749979,
+    "certified_quadrature_error_bound": null,
+    "cpu_seconds": 0.2015779999999996,
+    "cpu_target_seconds": 120.0,
+    "field_or_source_evolutions": 0,
+    "gauss_48_minus_64_max_abs": 6.561845619819373e-11,
+    "gauss_nodes": 48,
+    "h_z": [
+      [
+        -3.170749408204971e-05,
+        -1.511720965392542e-05,
+        -5.364463823228336e-06
+      ],
+      [
+        -1.7529581350432642e-05,
+        -4.189567682027724e-06,
+        -2.887998242940939e-05
+      ]
+    ],
+    "is_full_e_minus2_coefficient": false,
+    "mass": 1.0,
+    "numerical_C_M": null,
+    "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+    "quadrature_n_nodes": 144,
+    "reference_h_z_max_abs": 0.0,
+    "rho_up": 1.0300000000000002,
+    "source_signs": [
+      1,
+      -1
+    ],
+    "z": [
+      1.1768780671724792,
+      1.2068780671724793,
+      1.2368780671724793
+    ]
+  },
+  "reproducer": "python3 scripts/derive_nsc_ks_current_uv_coefficient_control_v2.py --check",
+  "schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v2",
+  "source_hashes": {
+    "docs/nsc-ks-current-uv-coefficients-v2.md": "dd269916f8cc0a111cec7d70d8fa0a9eff1f7e4bf819c244c43867103d48a47b",
+    "scripts/derive_nsc_ks_current_uv_coefficient_control_v2.py": "f4ef775554bfe9d00f4a6aef921c3eae7fc90c31687c272dcc3e20edaa99a783",
+    "src/recursive_horizons/nsc_ks_finite_history_uv_coefficients.py": "8cb2967d80be017d65202adf4c9ae7d2047ee02b51ff3679ac40cb3d96fb6e8b",
+    "tests/test_nsc_ks_finite_history_uv_coefficients.py": "24e3d29f1c8be573422cde9aaff24eeb653aacb9ddff518c58b20699c380ee17"
+  },
+  "status": "OPEN: constructed vacuum-envelope coefficients and geometric h_s,z pilot; numerical C_M and full E^{-2} N,beta current unbounded",
+  "upstream": {
+    "A0": "e_s, real positive major",
+    "P1_match": "s=+1 minor A1 equals the off-diagonal E>0 projector coefficient P1",
+    "Re_major_A1": 0,
+    "history_flat_at_upstream": true,
+    "major_A1": 0,
+    "minor_A1": "a/2 (m - i s ell / r) at the reference radius",
+    "normalization": "positive real major (1+|v|^2)^{-1/2} at rho_up; phase is then fixed by T_s major A1 = -i/2 Q along the incoming characteristic",
+    "physical_source_renormalized": false,
+    "s_minus_uses_e_recurrence_not_positive_energy_P0": true
+  },
+  "vertices": {
+    "N_density": "V=-m S1 + ell S2 / r",
+    "N_momentum": "S3/a",
+    "action_sign": "minus once, as in source_column_matter",
+    "beta_density": 0,
+    "beta_momentum": "-I"
+  }
+}

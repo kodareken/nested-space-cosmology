@@ -1,0 +1,37 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "closed": true,
+  "closure_relative": 3.1937215076187503e-15,
+  "closure_residual": 3.193842759707799e-15,
+  "creation_only": true,
+  "deltas": {
+    "excision_flux": 3.7965767759965676e-05,
+    "inner_mass": 3.796576776315952e-05,
+    "outer_flux": -1.5141587020709457e-06,
+    "sat_debit": 1.8931819022583016e-11
+  },
+  "evolved": false,
+  "identity_pre_registered": "dM_inner/dt = excision mass flux on the closed chart",
+  "inputs": {
+    "excision_final": 0.0010282460948566954,
+    "excision_t10": 0.0009902803270967298,
+    "mass_final": 1.0410282460948723,
+    "mass_t10": 1.0409902803271092,
+    "outer_final": -2.913664643009293e-06,
+    "outer_t10": -1.3995059409383474e-06,
+    "sat_final": 4.017739884610483e-06,
+    "sat_t10": 4.01772095279146e-06
+  },
+  "notes": [
+    "sat_debit is the probability book and is reported beside the mass book; it is not added to either side of the mass identity"
+  ],
+  "production_trajectory": false,
+  "reading": "every gram of inner-mass growth over t=10..20 arrived through the excision boundary; the outer boundary removed mass in every net interval. The interior funnel is one-way at the run level, not only at the tangent level.",
+  "schema": "NSC-INTERIOR-BALANCE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_interior_balance.py": "306b516dcae70bf2156704f47b11c5c8c382ffa3079b532ff4a2915253eb7ab2",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "summary_sha256": "4542fd0aa2354404dd3a00911d5e8ebf2d9df708709469708b970eadfb0d437c",
+  "verdict": "EXCISION_CLOSED outer_leaks_only"
+}

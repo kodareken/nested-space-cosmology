@@ -1,0 +1,818 @@
+{
+  "schema": "NSC-REGIONAL-ENERGY-EXCHANGE-v1",
+  "status": "DIAGNOSTIC",
+  "correction": "An earlier draft called L*FL observer energy, FQ/r radial pressure, the chain-rule radius derivative angular pressure, and beta*Q*FQ a mode-channel current. Those are Hamiltonian derivatives. Observer energy is FL/r. Stresses are rho, p_r, p_perp, j below. beta*Q*FQ is the shift/pressure cross term in the coordinate flux. FQ*Qdot is coordinate metric work and stays nonzero when K_r = K_perp = 0.",
+  "global_energy_meaning": "Global energy is the constrained coordinate Hamiltonian: gravity_energy + M Tr(C H) = dx * sum(L C_tot + beta D_tot). A value near zero means that smearing of the constraints is small. It is not the normal-observer energy and it does not say the matter integral vanishes.",
+  "regional_energy_meaning": "Regional coordinate energy is that Hamiltonian density on a smooth window. Matter and gravity are each large; their sum differs from the windowed constraint smearing by the summation-by-parts term of 2 L (D F)/Q. A partition of unity reproduces the global Hamiltonian. The normal-observer shell energy is the separate nodal sum FL/r.",
+  "coordinate_reference_retained": {
+    "retained": {
+      "matter_closure_error": 9.864223882161127e-10,
+      "transported_closure_error": 9.864782324342514e-10,
+      "total_closure_error": -3.073359300387324e-08,
+      "shift_transport": -0.18691093233529965,
+      "proper_normal_flux": 1.3559256963322972,
+      "shift_pressure_cross": -0.3244579548048109,
+      "coordinate_metric_work": 0.10814440302646627
+    },
+    "absolute_gap": {
+      "matter_closure_error": 5.596967334042802e-12,
+      "transported_closure_error": 1.6275869541004795e-13,
+      "total_closure_error": 5.090639021432253e-11,
+      "shift_transport": 0.0,
+      "proper_normal_flux": 0.0,
+      "shift_pressure_cross": 0.0,
+      "coordinate_metric_work": 0.0
+    },
+    "max_abs_gap": 5.090639021432253e-11,
+    "matches_previous_coordinate_draft": 1
+  },
+  "limits": {
+    "renewal": 0,
+    "continuum_limit_claimed": 0,
+    "frozen_B_embedding_claimed": 0,
+    "old_circulation_transferred": 0,
+    "vacuum_branch_included": 0,
+    "accepted_trajectory": 0,
+    "new_solver": 0,
+    "static_gauge": "L and beta are not evolved",
+    "multiplicity": "M=4 kappa once, inside the existing nodal forces",
+    "half_density": "canonical u = r sqrt(q) psi, sampled as existing ell2 columns",
+    "observer_energy": "nodal FL/r = V rho dx, not L*FL",
+    "coordinate_work": "FQ*Qdot, including shift drag of Q",
+    "proper_pressure_work": "-N V (p_r K_r + 2 p_perp K_perp) dx"
+  },
+  "primitives": {
+    "smooth": {
+      "points": 64,
+      "matter_closure_error": 9.920193555501555e-10,
+      "transported_closure_error": 9.866409911296614e-10,
+      "total_closure_error": -3.0682686613658916e-08,
+      "proper_closure_max": 8.656800649847751e-06,
+      "shell_gap_max": 5.551115123125783e-17,
+      "zero_expansion": {
+        "K_r_max": 3.6411422326893774e-07,
+        "K_perp_max": 0.0,
+        "coordinate_work_l1": 3.0047026033597195,
+        "proper_pressure_work_l1": 9.192516600447966e-07
+      },
+      "channels": {
+        "shift_transport": -0.18691093233529965,
+        "proper_normal_flux": 1.3559256963322972,
+        "shift_pressure_cross": -0.3244579548048109,
+        "coordinate_metric_work": 0.10814440302646627
+      },
+      "omitted_channel_error": {
+        "shift_pressure_cross": 0.3244579538127915,
+        "shift_transport": 0.1869109313432803,
+        "coordinate_metric_work": 0.10814440401848563,
+        "shift_piece_of_Qdot": 0.5056978541594181
+      },
+      "gravity_sum_error": 0.0,
+      "field_sum_error": 0.0,
+      "global_sum_error": 7.105427357601002e-15,
+      "partition_gap": 0.0,
+      "partition_energy_gap": -7.105427357601002e-15,
+      "quasilocal_gap": 6.454010659240339e-10,
+      "product_gap_max": 8.105738302788268e-13,
+      "ward_max": 5.551115123125783e-17,
+      "kernel_gap_max": 1.3877787807814457e-17,
+      "geometric_shift_flux": -0.39141168043182006,
+      "geometric_proper_flux": 2.2390389363826113,
+      "matter_energy": -1.4382666235849726,
+      "gravity_energy": -7.565934321690242,
+      "measured_energy": -9.004200945275215,
+      "constraint_smearing": -10.463141608630613,
+      "global_energy": -53.67522148105001
+    },
+    "galerkin_leakage": {
+      "nf": 32,
+      "nq": 128,
+      "unprojected_closure_error": 2.0834945102521374e-08,
+      "lifted_closure_error": -2.072284379374291,
+      "projection_leakage": -2.072284400209236,
+      "proper_unprojected_max": 8.936563285766308e-07,
+      "proper_lifted_max": 2.4723668375538272,
+      "proper_projection_leakage": 2.472367103935112,
+      "qdot_difference_max": 0.0010192024559575463,
+      "phi_difference_max": 0.5706831809702003,
+      "uses_manufactured_columns": 1,
+      "frozen_link_copied": 0
+    },
+    "packet_alias_n32": {
+      "points": 32,
+      "max_abs": 55.38863113504529,
+      "l2": 127.43998197365568
+    },
+    "packet_alias_n64": {
+      "points": 64,
+      "max_abs": 8.057476329870532,
+      "l2": 31.685286032876522
+    },
+    "pass": 1
+  },
+  "nf512": {
+    "nf": 512,
+    "ng": 511,
+    "nq": 2048,
+    "quadrature_radius_gap": 0.0,
+    "steps": 2,
+    "dt": 0.0005,
+    "duration": 0.001,
+    "source_label": "saved v5 nf512 initial state",
+    "full_T_0_005_not_rerun": 1,
+    "initial": {
+      "label": "initial",
+      "windows": [
+        {
+          "name": "packet_0_2",
+          "matter_energy": 11.836169739829616,
+          "lapse_weighted_energy": 11.836169739829574,
+          "normal_energy": 5.987814763317532,
+          "gravity_energy": -6.211456683965152,
+          "measured_energy": 5.624713055864466,
+          "constraint_smearing": -4.1681851440831555e-13,
+          "quasilocal_boundary": 5.6247130558649046,
+          "matter_channels": {
+            "shift_transport": 6.057588658535151,
+            "proper_normal_flux": 3.2084918604124586e-13,
+            "shift_pressure_cross": 6.057588658535115,
+            "coordinate_metric_work": -2.7645533448632817
+          },
+          "proper_pressure_work": 9.096579306330826e-14,
+          "momentum_lapse_work": 4.3880439427281935e-14,
+          "K_r_max": 6.991061389567022e-11,
+          "K_perp_max": 3.930044148610548e-11,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.34496794688985033,
+              "proper_normal_flux": -1.5523557610027388,
+              "shift_pressure_cross": 0.5174519203353047,
+              "lapse_weighted_energy": 3.7830377314961705,
+              "hamiltonian_energy": 2.5220251543282015
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.6899358937808574,
+              "proper_normal_flux": 1.55235576100296,
+              "shift_pressure_cross": 0.5174519203353783,
+              "lapse_weighted_energy": 3.7830377314963224,
+              "hamiltonian_energy": 5.0440503086643425
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 1.2374427981783902,
+              "proper_normal_flux": -5.568492591797062,
+              "shift_pressure_cross": 1.8561641972694836,
+              "lapse_weighted_energy": 1.934187796994677,
+              "hamiltonian_energy": 1.2894585313284659
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 2.4748855963606085,
+              "proper_normal_flux": 5.568492591797132,
+              "shift_pressure_cross": 1.856164197269507,
+              "lapse_weighted_energy": 1.934187796994659,
+              "hamiltonian_energy": 2.5789170626608637
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 0.43678547444136445,
+              "proper_normal_flux": -1.9655346349841303,
+              "shift_pressure_cross": 0.6551782116627168,
+              "lapse_weighted_energy": 0.20085934142387166,
+              "hamiltonian_energy": 0.13390622761577747
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 0.8735709488840815,
+              "proper_normal_flux": 1.9655346349841585,
+              "shift_pressure_cross": 0.6551782116627262,
+              "lapse_weighted_energy": 0.2008593414238719,
+              "hamiltonian_energy": 0.2678124552319661
+            }
+          ],
+          "geometric_shift_flux": -1.212910499567675,
+          "geometric_proper_flux": 9.55859889765256,
+          "matter_closure_error": 8.908465076729044e-10,
+          "transported_matter_closure_error": -7.990452299821982e-09,
+          "total_closure_error": -1.9427502717661582e-08,
+          "ward_max": 4.163336342344337e-17,
+          "product_gap_max": 1.383103853669354e-09,
+          "unprojected_total_closure_error": -1.1815548539573228e-09,
+          "proper_closure_error": 4.931186916095336e-10,
+          "unprojected_proper_closure_error": 1.5756510616775942e-10
+        },
+        {
+          "name": "packet_2_4",
+          "matter_energy": 11.70448062979201,
+          "lapse_weighted_energy": 11.704480629791977,
+          "normal_energy": 3.4982391842364033,
+          "gravity_energy": -4.831722938381137,
+          "measured_energy": 6.872757691410875,
+          "constraint_smearing": -2.7431728863869735e-13,
+          "quasilocal_boundary": 6.872757691410847,
+          "matter_channels": {
+            "shift_transport": -3.77733951419665,
+            "proper_normal_flux": -9.984338635319949e-14,
+            "shift_pressure_cross": -3.777339514196638,
+            "coordinate_metric_work": -4.744662538739895
+          },
+          "proper_pressure_work": -6.126544096928498e-14,
+          "momentum_lapse_work": 3.170471125960292e-14,
+          "K_r_max": 6.991061389567022e-11,
+          "K_perp_max": 3.930044148610548e-11,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": -0.6038037835958301,
+              "proper_normal_flux": 2.7171170261784567,
+              "shift_pressure_cross": -0.9057056753946714,
+              "lapse_weighted_energy": 0.4491498132701857,
+              "hamiltonian_energy": 0.29943320884648433
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": -1.2076075671936013,
+              "proper_normal_flux": -2.7171170261786566,
+              "shift_pressure_cross": -0.905705675394738,
+              "lapse_weighted_energy": 0.4491498132702176,
+              "hamiltonian_energy": 0.5988664176939297
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -1.2374427981783749,
+              "proper_normal_flux": 5.568492591796992,
+              "shift_pressure_cross": -1.8561641972694605,
+              "lapse_weighted_energy": 2.5658122030035746,
+              "hamiltonian_energy": 1.7105414686673002
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -2.4748855963605774,
+              "proper_normal_flux": -5.568492591797064,
+              "shift_pressure_cross": -1.8561641972694842,
+              "lapse_weighted_energy": 2.5658122030036328,
+              "hamiltonian_energy": 3.4210829373399254
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 0.5821334103766241,
+              "proper_normal_flux": -2.61960034669213,
+              "shift_pressure_cross": 0.8732001155658291,
+              "lapse_weighted_energy": 2.837278298622178,
+              "hamiltonian_energy": 1.8915188657461846
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 1.16426682075511,
+              "proper_normal_flux": 2.6196003466923017,
+              "shift_pressure_cross": 0.8732001155658861,
+              "lapse_weighted_energy": 2.8372782986221896,
+              "hamiltonian_energy": 3.783037731498187
+            }
+          ],
+          "geometric_shift_flux": -2.9988227716880984,
+          "geometric_proper_flux": 8.492239450050086,
+          "matter_closure_error": -1.0759420021599908e-08,
+          "transported_matter_closure_error": -1.8670542445420324e-08,
+          "total_closure_error": -1.660644954881718e-08,
+          "ward_max": 4.163336342344337e-17,
+          "product_gap_max": 1.383103853669354e-09,
+          "unprojected_total_closure_error": 4.304423484313702e-08,
+          "proper_closure_error": -2.1854876578144953e-09,
+          "unprojected_proper_closure_error": -2.4665425515995196e-09
+        },
+        {
+          "name": "packet_4_6",
+          "matter_energy": 0.673724719905314,
+          "lapse_weighted_energy": 0.6737247199053058,
+          "normal_energy": 0.14158977954863536,
+          "gravity_energy": -10.76597272852015,
+          "measured_energy": -10.092248008614837,
+          "constraint_smearing": -5.052133529373163e-14,
+          "quasilocal_boundary": -10.092248008614549,
+          "matter_channels": {
+            "shift_transport": -3.05675665445748,
+            "proper_normal_flux": -1.9947220871270242e-13,
+            "shift_pressure_cross": -3.056756654457458,
+            "coordinate_metric_work": -0.38575630482829953
+          },
+          "proper_pressure_work": -4.150894365734683e-15,
+          "momentum_lapse_work": 7.891306538496849e-15,
+          "K_r_max": 6.991061389567022e-11,
+          "K_perp_max": 3.930044148610548e-11,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": 4.272943605897077e-15,
+              "proper_normal_flux": -1.922824622682927e-14,
+              "shift_pressure_cross": 6.409415409083107e-15,
+              "lapse_weighted_energy": 7.664778308964061e-20,
+              "hamiltonian_energy": 5.109852205970818e-20
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": 8.545887399537817e-15,
+              "proper_normal_flux": 1.922824664844472e-14,
+              "shift_pressure_cross": 6.409415549722833e-15,
+              "lapse_weighted_energy": 7.664646128797914e-20,
+              "hamiltonian_energy": 1.0219528171735773e-19
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -3.339861851541641e-14,
+              "proper_normal_flux": 1.502937832987137e-13,
+              "shift_pressure_cross": -5.009792778112502e-14,
+              "lapse_weighted_energy": 1.5036774556780497e-18,
+              "hamiltonian_energy": 1.0024516371176748e-18
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -6.679724370046267e-14,
+              "proper_normal_flux": -1.5029379826241264e-13,
+              "shift_pressure_cross": -5.009793276856799e-14,
+              "lapse_weighted_energy": 1.5037050789117688e-18,
+              "hamiltonian_energy": 2.0049401052167173e-18
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -1.0189188848180595,
+              "proper_normal_flux": 4.585134981676578,
+              "shift_pressure_cross": -1.528378327228652,
+              "lapse_weighted_energy": 0.33686235995264036,
+              "hamiltonian_energy": 0.22457490663486387
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -2.0378377696393337,
+              "proper_normal_flux": -4.585134981676777,
+              "shift_pressure_cross": -1.5283783272287184,
+              "lapse_weighted_energy": 0.33686235995266545,
+              "hamiltonian_energy": 0.44914981327045017
+            }
+          ],
+          "geometric_shift_flux": 3.7708805191797983,
+          "geometric_proper_flux": -15.877251367300211,
+          "matter_closure_error": -1.6531451763057703e-09,
+          "transported_matter_closure_error": 1.523829196159454e-08,
+          "total_closure_error": 8.84761153230329e-09,
+          "ward_max": 4.163336342344337e-17,
+          "product_gap_max": 1.383103853669354e-09,
+          "unprojected_total_closure_error": 4.4899243434315395e-08,
+          "proper_closure_error": -3.0123699199728075e-10,
+          "unprojected_proper_closure_error": -3.607464194452782e-10
+        },
+        {
+          "name": "complement_6_8",
+          "matter_energy": 0.5356249104636586,
+          "lapse_weighted_energy": 0.5356249104636601,
+          "normal_energy": 0.3844940108463642,
+          "gravity_energy": -2.9408476491250206,
+          "measured_energy": -2.4052227386613625,
+          "constraint_smearing": -7.875947423999233e-14,
+          "quasilocal_boundary": -2.405222738661243,
+          "matter_channels": {
+            "shift_transport": 0.7765075101188864,
+            "proper_normal_flux": -2.1533590942091057e-14,
+            "shift_pressure_cross": 0.7765075101188889,
+            "coordinate_metric_work": -0.08545550637969378
+          },
+          "proper_pressure_work": 2.0430637427993276e-15,
+          "momentum_lapse_work": -1.8247952494659487e-15,
+          "K_r_max": 6.991061389567022e-11,
+          "K_perp_max": 3.930044148610548e-11,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.2588358367060197,
+              "proper_normal_flux": -1.1647612651758974,
+              "shift_pressure_cross": 0.38825375505942644,
+              "lapse_weighted_energy": 0.26781245523183245,
+              "hamiltonian_energy": 0.17854163682103907
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.5176716734128237,
+              "proper_normal_flux": 1.1647612651758756,
+              "shift_pressure_cross": 0.3882537550594193,
+              "lapse_weighted_energy": 0.2678124552318276,
+              "hamiltonian_energy": 0.3570832736426194
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 1.9600887174023648e-14,
+              "proper_normal_flux": -8.820399228362988e-14,
+              "shift_pressure_cross": 2.940133076276092e-14,
+              "lapse_weighted_energy": -6.684152883379584e-20,
+              "hamiltonian_energy": -4.456101922248501e-20
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 3.9201774639903856e-14,
+              "proper_normal_flux": 8.820399293413562e-14,
+              "shift_pressure_cross": 2.9401330979242886e-14,
+              "lapse_weighted_energy": -6.684390026963892e-20,
+              "hamiltonian_energy": -8.912520035956412e-20
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -5.218623797711083e-15,
+              "proper_normal_flux": 2.3483807088643278e-14,
+              "shift_pressure_cross": -7.827935696266125e-15,
+              "lapse_weighted_energy": 1.573954072315187e-20,
+              "hamiltonian_energy": 1.0493027148757182e-20
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -1.0437248153190227e-14,
+              "proper_normal_flux": -2.3483808344516453e-14,
+              "shift_pressure_cross": -7.827936114756961e-15,
+              "lapse_weighted_energy": 1.5739835086230173e-20,
+              "hamiltonian_energy": 2.098644678165096e-20
+            }
+          ],
+          "geometric_shift_flux": 0.4408527520760434,
+          "geometric_proper_flux": -2.173586980402348,
+          "matter_closure_error": 1.3933454390269162e-10,
+          "transported_matter_closure_error": 3.671518644665639e-11,
+          "total_closure_error": -1.0783710813200287e-08,
+          "ward_max": 4.163336342344337e-17,
+          "product_gap_max": 1.383103853669354e-09,
+          "unprojected_total_closure_error": -3.968493089701042e-09,
+          "proper_closure_error": 7.221512070116308e-11,
+          "unprojected_proper_closure_error": 4.640324267164596e-12
+        }
+      ],
+      "partition_gap": 2.220446049250313e-16,
+      "sum_measured_energy": -8.57980353430321e-13,
+      "sum_matter_energy": 24.7499999999906,
+      "sum_normal_energy": 10.012137737948935,
+      "sum_gravity_energy": -24.74999999999146,
+      "global_energy": -8.597567102697212e-13,
+      "sum_minus_global": 1.7763568394002505e-15,
+      "field_energy": 24.7499999999906,
+      "gravity_energy": -24.74999999999146,
+      "positive_r": 1,
+      "positive_Q": 1,
+      "r_min": 4.210504072341751,
+      "Q_min": 0.25132493326910366,
+      "lifted_projection_gap_max": 1.9427502717661582e-08,
+      "unprojected_closure_max": 4.4899243434315395e-08,
+      "proper_projection_gap_max": 2.1854876578144953e-09,
+      "unprojected_proper_closure_max": 2.4665425515995196e-09
+    },
+    "final": {
+      "label": "after_short_steps",
+      "windows": [
+        {
+          "name": "packet_0_2",
+          "matter_energy": 11.845519977517633,
+          "lapse_weighted_energy": 11.839463050999356,
+          "normal_energy": 5.989809714946052,
+          "gravity_energy": -6.217022715232759,
+          "measured_energy": 5.628497262284872,
+          "constraint_smearing": -1.7921129835718347e-10,
+          "quasilocal_boundary": 5.628497262464095,
+          "matter_channels": {
+            "shift_transport": 6.056922192731739,
+            "proper_normal_flux": 0.006269893089687045,
+            "shift_pressure_cross": 6.056220649358732,
+            "coordinate_metric_work": -2.7696532502812388
+          },
+          "proper_pressure_work": 0.00047461752668625194,
+          "momentum_lapse_work": 0.007876615304964505,
+          "K_r_max": 0.011783817448967787,
+          "K_perp_max": 0.000338740179496467,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.34640217313610483,
+              "proper_normal_flux": -1.5585626594446507,
+              "shift_pressure_cross": 0.5196853548622098,
+              "lapse_weighted_energy": 3.7812045747508796,
+              "hamiltonian_energy": 2.520537595696678
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.6833776211702592,
+              "proper_normal_flux": 1.536988944917282,
+              "shift_pressure_cross": 0.5124921703579242,
+              "lapse_weighted_energy": 3.784301138964922,
+              "hamiltonian_energy": 5.046000285426936
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 1.235731045518072,
+              "proper_normal_flux": -5.559888156096863,
+              "shift_pressure_cross": 1.853895896663809,
+              "lapse_weighted_energy": 1.929964462840855,
+              "hamiltonian_energy": 1.2864717141720774
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 2.4786542185279936,
+              "proper_normal_flux": 5.574712509992067,
+              "shift_pressure_cross": 1.8588386023475563,
+              "lapse_weighted_energy": 1.9411013732975306,
+              "hamiltonian_energy": 2.5883073460877077
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 0.4355770527328087,
+              "proper_normal_flux": -1.959740268567134,
+              "shift_pressure_cross": 0.6534838905539518,
+              "lapse_weighted_energy": 0.19947908438840986,
+              "hamiltonian_energy": 0.132962139136447
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 0.8771800816465005,
+              "proper_normal_flux": 1.972759522288986,
+              "shift_pressure_cross": 0.6578247345732802,
+              "lapse_weighted_energy": 0.20341241675675875,
+              "hamiltonian_energy": 0.27124089699778653
+            }
+          ],
+          "geometric_shift_flux": -1.212798401309489,
+          "geometric_proper_flux": 9.533355133973027,
+          "matter_closure_error": -2.686816102936973e-09,
+          "transported_matter_closure_error": -1.157533890960849e-08,
+          "total_closure_error": -3.16835890856737e-10,
+          "ward_max": 2.7755575615628914e-17,
+          "product_gap_max": 1.3832583967143819e-09,
+          "unprojected_total_closure_error": 9.964364000580872e-09,
+          "proper_closure_error": -1.0479925163212835e-09,
+          "unprojected_proper_closure_error": -1.037200406669561e-09
+        },
+        {
+          "name": "packet_2_4",
+          "matter_energy": 11.69212489943741,
+          "lapse_weighted_energy": 11.695911780394162,
+          "normal_energy": 3.4963402728782524,
+          "gravity_energy": -4.832420366603461,
+          "measured_energy": 6.85970453283395,
+          "constraint_smearing": -1.389612209848964e-09,
+          "quasilocal_boundary": 6.85970453422326,
+          "matter_channels": {
+            "shift_transport": -3.7943560761786244,
+            "proper_normal_flux": -0.07852628636641347,
+            "shift_pressure_cross": -3.785622157011271,
+            "coordinate_metric_work": -4.753481386326409
+          },
+          "proper_pressure_work": -0.0006726045174275676,
+          "momentum_lapse_work": -0.002221650461189628,
+          "K_r_max": 0.011783817448967787,
+          "K_perp_max": 0.000338740179496467,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": -0.604920099555085,
+              "proper_normal_flux": 2.721799376778611,
+              "shift_pressure_cross": -0.9074935017572994,
+              "lapse_weighted_energy": 0.4508480517913342,
+              "hamiltonian_energy": 0.30052707072806306
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": -1.202003509732309,
+              "proper_normal_flux": -2.7036617888755967,
+              "shift_pressure_cross": -0.9014458209850047,
+              "lapse_weighted_energy": 0.4454219953136018,
+              "hamiltonian_energy": 0.5939337797828155
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -1.2357310455180568,
+              "proper_normal_flux": 5.559888156096795,
+              "shift_pressure_cross": -1.8538958966637862,
+              "lapse_weighted_energy": 2.568604661318938,
+              "hamiltonian_energy": 1.7120971736238406
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -2.478654218527962,
+              "proper_normal_flux": -5.574712509991996,
+              "shift_pressure_cross": -1.8588386023475325,
+              "lapse_weighted_energy": 2.557469170415494,
+              "hamiltonian_energy": 3.410262961895678
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 0.5875746966141386,
+              "proper_normal_flux": -2.6431429341549864,
+              "shift_pressure_cross": 0.8816740625766317,
+              "lapse_weighted_energy": 2.8341798093369395,
+              "hamiltonian_energy": 1.8890049005743248
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": 1.1393781005406496,
+              "proper_normal_flux": 2.5613034137807578,
+              "shift_pressure_cross": 0.8543776021657198,
+              "lapse_weighted_energy": 2.839388092217856,
+              "hamiltonian_energy": 3.7862990128326888
+            }
+          ],
+          "geometric_shift_flux": -3.0040033103482884,
+          "geometric_proper_flux": 8.403669114576807,
+          "matter_closure_error": -1.3723804315191046e-08,
+          "transported_matter_closure_error": -2.1499857894013985e-08,
+          "total_closure_error": -4.6475911119614466e-08,
+          "ward_max": 2.7755575615628914e-17,
+          "product_gap_max": 1.3832583967143819e-09,
+          "unprojected_total_closure_error": -4.497107575218706e-08,
+          "proper_closure_error": -3.0249191282012205e-09,
+          "unprojected_proper_closure_error": -3.4364134828038734e-09
+        },
+        {
+          "name": "packet_4_6",
+          "matter_energy": 0.6672734416111354,
+          "lapse_weighted_energy": 0.6703217849178352,
+          "normal_energy": 0.14094303600103658,
+          "gravity_energy": -10.753553351479773,
+          "measured_energy": -10.08627990986864,
+          "constraint_smearing": 8.29120667104353e-10,
+          "quasilocal_boundary": -10.08627991069753,
+          "matter_channels": {
+            "shift_transport": -3.039709931534399,
+            "proper_normal_flux": 0.06882026665236547,
+            "shift_pressure_cross": -3.0473602898698853,
+            "coordinate_metric_work": -0.3850633550829167
+          },
+          "proper_pressure_work": -0.00015653387924303665,
+          "momentum_lapse_work": -0.002846459524515853,
+          "K_r_max": 0.011783817448967787,
+          "K_perp_max": 0.000338740179496467,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": 4.2818233795765056e-15,
+              "proper_normal_flux": -1.926575602235999e-14,
+              "shift_pressure_cross": 6.4235488598029964e-15,
+              "lapse_weighted_energy": -8.588346132158216e-18,
+              "hamiltonian_energy": -5.724307693764447e-18
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": 8.462338840693413e-15,
+              "proper_normal_flux": 1.9034416653507705e-14,
+              "shift_pressure_cross": 6.346361564313218e-15,
+              "lapse_weighted_energy": 7.468171490192926e-17,
+              "hamiltonian_energy": 9.956943919845629e-17
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -3.406159341996498e-14,
+              "proper_normal_flux": 1.5324834881144406e-13,
+              "shift_pressure_cross": -5.1101955736115374e-14,
+              "lapse_weighted_energy": -3.628135879925376e-17,
+              "hamiltonian_energy": -2.41837701429271e-17
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": -6.406295050689481e-14,
+              "proper_normal_flux": -1.440731495438743e-13,
+              "shift_pressure_cross": -4.804259766231711e-14,
+              "lapse_weighted_energy": 2.1787682942504394e-16,
+              "hamiltonian_energy": 2.9049565184769307e-16
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -1.023151749347017,
+              "proper_normal_flux": 4.602883202722432,
+              "shift_pressure_cross": -1.535157953130688,
+              "lapse_weighted_energy": 0.3397305015456455,
+              "hamiltonian_energy": 0.22642195658023007
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -2.0165581821872975,
+              "proper_normal_flux": -4.534062936070076,
+              "shift_pressure_cross": -1.5122023367391102,
+              "lapse_weighted_energy": 0.33059128337218935,
+              "hamiltonian_energy": 0.44085148503090504
+            }
+          ],
+          "geometric_shift_flux": 3.7716967568873,
+          "geometric_proper_flux": -15.733288535886249,
+          "matter_closure_error": -1.7907240135173197e-09,
+          "transported_matter_closure_error": 1.4939105952294085e-08,
+          "total_closure_error": -7.603355456353711e-08,
+          "ward_max": 2.7755575615628914e-17,
+          "product_gap_max": 1.3832583967143819e-09,
+          "unprojected_total_closure_error": -5.0964304776357494e-08,
+          "proper_closure_error": -3.307044485280102e-10,
+          "unprojected_proper_closure_error": -3.4581461677458836e-10
+        },
+        {
+          "name": "complement_6_8",
+          "matter_energy": 0.5370945415546382,
+          "lapse_weighted_energy": 0.5363177222354899,
+          "normal_energy": 0.3850464296898786,
+          "gravity_energy": -2.939016427544774,
+          "measured_energy": -2.4019218859901357,
+          "constraint_smearing": -2.369829417654644e-13,
+          "quasilocal_boundary": -2.401921885989867,
+          "matter_channels": {
+            "shift_transport": 0.7771438149811911,
+            "proper_normal_flux": 0.003436126624349409,
+            "shift_pressure_cross": 0.7767617975223323,
+            "coordinate_metric_work": -0.08564305696483361
+          },
+          "proper_pressure_work": -2.3507917978118732e-06,
+          "momentum_lapse_work": 0.0009809966077083015,
+          "K_r_max": 0.011783817448967787,
+          "K_perp_max": 0.000338740179496467,
+          "mode_columns": [
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.25851792641902027,
+              "proper_normal_flux": -1.1632367173341418,
+              "shift_pressure_cross": 0.38780814689515025,
+              "lapse_weighted_energy": 0.26699379968952064,
+              "hamiltonian_energy": 0.17798165477595437
+            },
+            {
+              "occupation": 0.75,
+              "shift_transport": 0.5186258885621275,
+              "proper_normal_flux": 1.1666728439584904,
+              "shift_pressure_cross": 0.388953650627139,
+              "lapse_weighted_energy": 0.2693239225459692,
+              "hamiltonian_energy": 0.35911288677868386
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 1.9499148638802352e-14,
+              "proper_normal_flux": -8.773797732205725e-14,
+              "shift_pressure_cross": 2.925144894540099e-14,
+              "lapse_weighted_energy": 2.2227201705113602e-18,
+              "hamiltonian_energy": 1.4814788511343275e-18
+            },
+            {
+              "occupation": 0.5,
+              "shift_transport": 3.9551109214897185e-14,
+              "proper_normal_flux": 8.896871021453603e-14,
+              "shift_pressure_cross": 2.966190733669908e-14,
+              "lapse_weighted_energy": 5.472142143596444e-18,
+              "hamiltonian_energy": 7.291568493677317e-18
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -5.195244930167622e-15,
+              "proper_normal_flux": 2.337399375041014e-14,
+              "shift_pressure_cross": -7.794396169015623e-15,
+              "lapse_weighted_energy": -1.9018116162417293e-18,
+              "hamiltonian_energy": -1.2684665943768992e-18
+            },
+            {
+              "occupation": 0.25,
+              "shift_transport": -1.0563787019045243e-14,
+              "proper_normal_flux": -2.375745057416529e-14,
+              "shift_pressure_cross": -7.922093276871675e-15,
+              "lapse_weighted_energy": 2.4019172127324323e-17,
+              "hamiltonian_energy": 3.2018332946079874e-17
+            }
+          ],
+          "geometric_shift_flux": 0.44510495477054357,
+          "geometric_proper_flux": -2.2037357126634936,
+          "matter_closure_error": -8.255507388810202e-11,
+          "transported_matter_closure_error": -1.8324508577194365e-10,
+          "total_closure_error": -1.488728695875352e-09,
+          "ward_max": 2.7755575615628914e-17,
+          "product_gap_max": 1.3832583967143819e-09,
+          "unprojected_total_closure_error": 9.765834363406611e-09,
+          "proper_closure_error": -4.716209718825445e-11,
+          "unprojected_proper_closure_error": 2.934208274495077e-11
+        }
+      ],
+      "partition_gap": 2.220446049250313e-16,
+      "sum_measured_energy": -7.399534318608403e-10,
+      "sum_matter_energy": 24.742012860120816,
+      "sum_normal_energy": 10.01213945351522,
+      "sum_gravity_energy": -24.74201286086077,
+      "global_energy": -7.399734158752835e-10,
+      "sum_minus_global": 1.9984014443252818e-14,
+      "field_energy": 24.742012860120795,
+      "gravity_energy": -24.74201286086077,
+      "positive_r": 1,
+      "positive_Q": 1,
+      "r_min": 4.210504849740839,
+      "Q_min": 0.25094822306954573,
+      "lifted_projection_gap_max": 7.603355456353711e-08,
+      "unprojected_closure_max": 5.0964304776357494e-08,
+      "proper_projection_gap_max": 3.0249191282012205e-09,
+      "unprojected_proper_closure_max": 3.4364134828038734e-09
+    },
+    "global_energy_drift": -7.391136591650138e-10,
+    "regional_measured_drift": [
+      0.003784206420406555,
+      -0.013053158576925128,
+      0.005968098746196304,
+      0.003300852671226817
+    ]
+  },
+  "evolution": "short_diagnostic",
+  "v5_npz_sha256": "0c92d3d545afffb47f22c9e8d705dc4d70b2df2ca2fdf5c6abc254f37af35b0d",
+  "module_sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7"
+}

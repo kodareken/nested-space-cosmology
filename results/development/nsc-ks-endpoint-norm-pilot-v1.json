@@ -1,0 +1,43 @@
+{
+  "all_history_cells": false,
+  "bounds": {
+    "actual_carrier_derivative_retained": true,
+    "difference_axial_norm": {
+      "exponent": -140,
+      "mantissa": "1025133127315438077148471606736095079"
+    },
+    "difference_norm": {
+      "exponent": -147,
+      "mantissa": "928264939275060037245355335099079743"
+    },
+    "nodal_maximum_used_as_bound": false,
+    "whole_spatial_period": true
+  },
+  "cell_index": 122,
+  "family": [
+    14,
+    1
+  ],
+  "incoming_constraint_bound": null,
+  "input_hashes": {
+    "results/development/artifacts/nsc-ks-current-trajectory-pilot-v2.npz": "c51701d2304c8567d50b5def155b55377a3d25baff2a88096899f2c08cd8f473",
+    "results/development/nsc-ks-current-trajectory-pilot-v2.json": "cf452980bb43cce9b4fa8d7edbcce7e01f7039dc2c8d6ad6daf4040c2fc34cc5"
+  },
+  "physical_local_gate": "OPEN",
+  "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+  "rho_endpoint": "0x1.03d6147ae147cp+0",
+  "schema": "NSC-KS-ENDPOINT-NORM-PILOT-v1",
+  "source_hashes": {
+    "docs/nsc-ks-endpoint-contraction.md": "1b370bb7467a99446c097438db73902ae62673203ee82ef38dfb9c2e05383f5a",
+    "scripts/derive_nsc_ks_endpoint_norm_pilot.py": "0dba9c8f339edc1222504e676edff4eb1b00ddd19ac5167e7fcab42b20bad3df",
+    "scripts/validate_nsc_ks_current_field_pilot_v3.py": "65186ed02f1b0a3e4a7fc144e9161a471e93fd429425e04178e4dff913e42ccf",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_difference_error.py": "eb8b87abfb72d63721303fef9f04c22d8444cfe44ca109ccc5fc3fb55a83f871",
+    "src/recursive_horizons/nsc_ks_endpoint_contraction.py": "14621f9b041a249d7bf03182aede875096497f559341ea0c293e8f86e64c00c4",
+    "src/recursive_horizons/nsc_ks_finite_matter_error.py": "a23c6537a35742cb4fccf481e34707664ac46e9ee2d6008325fc236ce1004633",
+    "src/recursive_horizons/nsc_ks_reference_error.py": "7a99488dd9487539935360d93a03bd6853b45b22efb6f2d91f99ed5690d9db97",
+    "tests/test_nsc_ks_endpoint_contraction.py": "0ad154753f0dfb60baf471453211015a906b6c3d2f5ed06b5092e58acce98e41"
+  },
+  "source_preparation_digest": "d48a07ada2749c6f408f28d3a633e18747e2b3775e2a6cdd88807cf910ccf785",
+  "status": "ENCLOSED: continuous spatial norms of captured difference interpolant"
+}

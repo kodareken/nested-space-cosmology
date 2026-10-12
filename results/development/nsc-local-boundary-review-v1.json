@@ -1,0 +1,82 @@
+{
+  "schema": "NSC-LOCAL-BOUNDARY-REVIEW-SUCCESSOR-v1",
+  "review_session": "3e59e46d-1890-4129-ad80-155d16ba4c71",
+  "role": "Successor correction record for three confirmed review notes. Scientific v1 JSON and NPZ bytes stay the files hashed here.",
+  "independent_review": {
+    "tests": "lab/tests/test_nsc_local_boundary_independent.py",
+    "result": "4 passed in 0.88 s",
+    "rerun_for_this_record": false
+  },
+  "corrections": [
+    {
+      "id": "boost-return",
+      "path": "lab/src/recursive_horizons/nsc_spherical_null_expansion.py",
+      "note": "positive_boost_preserves_each_sign compares the signs of the arrays returned by boosted_expansions. A return that flips both signs keeps the product and fails the flag."
+    },
+    {
+      "id": "saved-areal-node",
+      "path": "lab/tests/test_nsc_spherical_null_expansion.py",
+      "note": "The T=0 areal-maximum node is opposite-sign, theta_plus 3.113501917378642e-4 and theta_minus -3.113501506382507e-4, with nonzero r_x. Interpolated r_x zeros have maximum |theta| 1.9636126344543498e-11, inside margin 1.8325977887805045e-6, and stay marginal. Later frames carry a nontrivial normal change outside that margin. No horizon birth is claimed."
+    },
+    {
+      "id": "observer-label",
+      "path": "lab/src/recursive_horizons/nsc_coupled_local_response.py",
+      "note": "The live finite-domain label is initial mode columns 0 and 1, weights 0.75 and 0.75, no phase QR. The stored v1 JSON keeps its original observer string."
+    }
+  ],
+  "immutable_v1": {
+    "episode_json_sha256": "9fc9f460aa076db5eb67a3136d3e53797160f2885e124b62e6fb61ee247d9954",
+    "episode_npz_sha256": "2864d3a8d3ba413e840c395961f14a3d71eabee702c27fd9f47c7d333eb24b77",
+    "null_expansion_json_sha256": "6382d22554236dbcbce9db2e2fb9e296b4f6036da11c40fcbe91253717a0d472",
+    "null_expansion_recorded_module_sha256": "1aa47f0b3d680621d23ac9329e0d9e1e38070b7df42fc2ec48848ea367fd82d5",
+    "coupled_response_json_sha256": "33fe043b30b037432801f12905b3545a20ca2070b9edc46bd3a11aa0d76201a1",
+    "coupled_response_npz_sha256": "6f4bfce40a4e34a958f0ac1e3b6f763484505a9800b3e34c7362125cbe160ad1",
+    "stored_observer_label": "initial region-0 plus and minus source columns, unphased"
+  },
+  "current_owner_sha256": {
+    "nsc_spherical_null_expansion.py": "5c57b61c30008f994e1e889b93584488a5ea1675580ab6dfa68281bfc833e89a",
+    "test_nsc_spherical_null_expansion.py": "30abc31fcd6eeb74676b6cf036c89149ef3764ea22f73d71b44c8dacf11dcb9f",
+    "nsc-spherical-null-expansion.md": "d502a5277a6ac19dd4605da9ba861f36a29dd5f6418b577759cc4144c8e1943c",
+    "nsc_coupled_local_response.py": "3e4942a3462962a6e308f14a2eb71e9629d14909824e444d78ad3eece5b34a15",
+    "nsc-coupled-local-response.md": "7b932b6a8a843f5b808e0314dc966d95f25f3588c0c0ae905fa2f5aaf3ae985e"
+  },
+  "reference_unchanged": {
+    "independent_test_sha256": "68c2fa1559d705c3aae2d3b64d693af72311802e51cb5914432e1422063b4ea9"
+  },
+  "controls": {
+    "positive_boost_preserves_each_sign": true,
+    "wrong_return_preserves_each_sign": false,
+    "boost_product_gap": 2.842170943040401e-14,
+    "wrong_return_boost_product_gap": 2.842170943040401e-14,
+    "inverse_metric_product_gap": 2.842170943040401e-14,
+    "null_norm_gap": 4.440892098500626e-16,
+    "analytic_sign_gap": 0.0,
+    "honest_control_cpu_seconds": 0.0010130000000000416,
+    "mutation_control_cpu_seconds": 0.0007360000000000144,
+    "t0_areal_maximum_index": 395,
+    "t0_areal_maximum_r_x": 0.0009305250666967035,
+    "t0_areal_maximum_theta_plus": 0.0003113501917378642,
+    "t0_areal_maximum_theta_minus": -0.0003113501506382507,
+    "t0_interpolated_theta_abs_max": 1.9636126344543498e-11,
+    "absolute_expansion_margin": 1.8325977887805045e-06,
+    "t0_normal_abs_max": 1.6655044770048675e-10,
+    "final_normal_abs_max": 0.0881593239017512,
+    "final_areal_maximum_theta_plus": -0.01804959505125036,
+    "final_areal_maximum_theta_minus": -0.018947158692418444
+  },
+  "unaddressed": [
+    "negative_unit_rescaling_flips_both_signs still applies the minus by hand. boosted_expansions rejects a negative scale.",
+    "test_nsc_spherical_null_expansion.py checks (-theta)*theta < 0 and does not call boosted_expansions.",
+    "A 0.005 frame secant of r moves theta by up to about 1.40e-4, above the smallest same-sign sample 1.62e-5.",
+    "The 2048-point dense derivative and the FFT differ by about 5.23e-10 in r_x. Sample counts stay the same. The published 8e-14 figure is the 64-point comparison.",
+    "The Hermite spinor endpoint 2.92e-7 and the 1024-dimensional midpoint series were not re-integrated.",
+    "No kernel metric variation is computed, so there is no force. The sample labels are not a global horizon and do not extend past T=0.05."
+  ],
+  "verification": {
+    "command": "OMP_NUM_THREADS=1 python scripts/lab.py -m pytest tests/test_nsc_spherical_null_expansion.py tests/test_nsc_local_boundary_independent.py tests/test_nsc_coupled_local_response.py -q",
+    "result": "30 passed in 1.79 s",
+    "cpu_user_seconds": 1.97,
+    "cpu_sys_seconds": 0.30,
+    "nf512_evolution": false
+  }
+}

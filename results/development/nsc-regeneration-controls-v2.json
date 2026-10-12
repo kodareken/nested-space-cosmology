@@ -1,0 +1,200 @@
+{
+  "schema": "NSC-REGENERATION-CONTROLS-v2",
+  "status": "ASSESSED",
+  "review": "01787780-8ed3-4fea-837d-ec21c899939a",
+  "dynamics_rerun": false,
+  "new_action": false,
+  "new_forces": false,
+  "v1_overwritten": false,
+  "predecessor": {
+    "json": "lab/results/development/nsc-regeneration-controls-v1.json",
+    "npz": "lab/results/development/nsc-regeneration-controls-v1.npz",
+    "json_sha256": "3abe72de1be7f5090569086a3134664727e25849eecada6f12b89040bdddc922",
+    "npz_sha256": "8509a1d0a8151c189ce3346d7d47f7c4a6453065d39ec01fda35515af037c96b",
+    "schema": "NSC-REGENERATION-CONTROLS-v1",
+    "immutable": true
+  },
+  "preserved": {
+    "attained_time": 0.1,
+    "Q_min_end": 0.12477163551088903,
+    "G_min_end": 0.015567961028071387,
+    "chi_max_start": 11.148261641496925,
+    "chi_max_end": 89.31089972498953,
+    "leader_content_change": 0.11695656049787839,
+    "packet_flux_end": -5.534007341562886,
+    "reservoir_flux_end": 5.534007341562912,
+    "flux_sum_end": 2.5757174171303632e-14,
+    "field_energy_change": -0.395776510604783,
+    "balance_over_exchange": 4.968435519301012e-08,
+    "stop_reason": null,
+    "chart_stop": false,
+    "positive_G_diagnostic": true,
+    "dt": 0.0005,
+    "cpu_seconds": 48.291323000000034,
+    "steps_completed": 100,
+    "nf256_Q_min_end": 0.12478833556507253,
+    "nf256_field_energy_change": -0.39577650068173753,
+    "nf256_leader_content_change": 0.11695656111427777,
+    "uniform_start_share": 0.47387504789467483,
+    "uniform_end_share": 0.4871048778618654
+  },
+  "ledgers": {
+    "content": {
+      "maintained": true,
+      "localized_end": true,
+      "same_leader": true,
+      "start_leader": 0,
+      "end_leader": 0,
+      "end_share": 0.6198826640133578,
+      "leader_content_change": 0.11695656049787839
+    },
+    "flux": {
+      "packet_flux_end": -5.534007341562886,
+      "reservoir_flux_end": 5.534007341562912,
+      "flux_sum_end": 2.5757174171303632e-14,
+      "balanced": true,
+      "throughflow_magnitude": 5.534007341562886
+    },
+    "reversal": {
+      "reversal": 0.0,
+      "one_drift": true,
+      "rebuilt": false,
+      "new_leader": false,
+      "renewed": false,
+      "splitting_one_drift_is_complete_renewal": false
+    },
+    "accounting": {
+      "field_energy_change": -0.395776510604783,
+      "energy_change": -1.9663900729938177e-08,
+      "balance_over_exchange": 4.968435519301012e-08,
+      "applied_coordinate_work": -0.39577480722671027,
+      "reported_with_windows": false
+    },
+    "proxies": {
+      "candidate_regime": false,
+      "stable_throughflow": false,
+      "renewed": false,
+      "reversal_floor": 0.1,
+      "share_floor": 0.5,
+      "programme_requirements": false
+    },
+    "maintained_with_throughflow": true,
+    "splitting_one_drift_is_complete_renewal": false
+  },
+  "uniform_six": {
+    "weights": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "support": 6,
+    "complement_occupation": 0.0,
+    "localized_relative_to_empty_complement": true,
+    "window_share_proxy_is_a_different_question": true,
+    "window_share_start": 0.47387504789467483,
+    "window_share_end": 0.4871048778618654,
+    "window_proxy_localized": false
+  },
+  "galerkin_half_identity": {
+    "nf": 14,
+    "nq": 64,
+    "dimension_H_G": 28,
+    "dimension_H_fine": 128,
+    "pullback_gap": 7.105427357601002e-15,
+    "half_identity_commutator_H_G": 0.0,
+    "half_identity_commutes_with_H_G": true,
+    "embedding_commutator_H_fine": 11.084247729335008,
+    "embedding_commutes_with_unprojected_H_fine": false,
+    "fine_identity_is_algebraic_control": true,
+    "fine_identity_is_an_occupation": false
+  },
+  "stability": {
+    "endpoint_omega": 2998.824498749641,
+    "endpoint_omega_repeat": 2998.824498749641,
+    "quadrature_omega": 804.247719318987,
+    "owned_stable_timestep": 0.0004668495940938623,
+    "record_dt": 0.0005,
+    "dt_times_omega": 1.4994122493748205,
+    "owned_cap": 1.4,
+    "absolute_rk4_limit": 2.8284271247461903,
+    "above_owned_cap": true,
+    "below_absolute_rk4_limit": true,
+    "chart_failure": null,
+    "gram_gap": 1.3069428872469757e-09,
+    "gram_admissible": true,
+    "positive_r": true,
+    "positive_Q": true,
+    "positive_L": true,
+    "G_min_end": 0.015567961028071387,
+    "series_diagnostic": "L_peak/Q_min with the gauge lapse peak and shift held fixed",
+    "series_endpoint_relative_gap": 0.0006122469423745533,
+    "cap_crossing_index": 93,
+    "cap_crossing_time": 0.0965,
+    "cap_crossing_Q_min": 0.1345054206385445,
+    "cap_crossing_ledgers": {
+      "content": {
+        "maintained": true,
+        "localized_end": true,
+        "same_leader": true,
+        "start_leader": 0,
+        "end_leader": 0,
+        "end_share": 0.6191041577548366,
+        "leader_content_change": 0.10855338655846847
+      },
+      "flux": {
+        "packet_flux_end": -5.407947197472511,
+        "reservoir_flux_end": 5.407947197472412,
+        "flux_sum_end": -9.947598300641403e-14,
+        "balanced": true,
+        "throughflow_magnitude": 5.407947197472511
+      },
+      "reversal": {
+        "reversal": 0.0,
+        "one_drift": true,
+        "rebuilt": false,
+        "new_leader": false,
+        "renewed": false,
+        "splitting_one_drift_is_complete_renewal": false
+      },
+      "accounting": {
+        "field_energy_change": -0.37147311192401133,
+        "energy_change": -2.024186684934648e-08,
+        "reported_with_windows": false
+      },
+      "proxies": {
+        "candidate_regime": false,
+        "stable_throughflow": false,
+        "renewed": false,
+        "reversal_floor": 0.1,
+        "share_floor": 0.5,
+        "programme_requirements": false
+      },
+      "maintained_with_throughflow": true,
+      "splitting_one_drift_is_complete_renewal": false
+    },
+    "unitarity_max": 1.3069464399606545e-09,
+    "chi_max_end": 89.31089972498953
+  },
+  "next_event": {
+    "executed": false,
+    "name": "one owned RK4 step from the stored T=0.10 state at stable_timestep",
+    "dt": 0.0004668495940938623,
+    "measured_cpu_seconds_per_recorded_step": 0.48291323000000036,
+    "estimated_cpu_seconds": 0.48291323000000036,
+    "full_slice_estimated_cpu_seconds": 47.301563,
+    "why": "The stored T=0.10 state remains on the r, Q, L chart with the column Gram inside 1e-8. dt times the owned subspace frequency is already above 1.4 and below 2\u221a2. The lapse-peak reconstruction crosses 1.4 at a stored sample whose content, flux, reversal, and energy exchange keep the same reading as T=0.10. One step at the owned stable timestep is the smallest dynamical probe that can change a ledger. It is not run here."
+  },
+  "policy": {
+    "g_is_initial_convex_radius_hypothesis": true,
+    "initial_domain": "constant Q, chi = p_r = p_chi = 0, r = y^2",
+    "g_is_dynamic_chart_stop": false,
+    "dynamic_chart": "chart_failure on r, Q, and L",
+    "candidate_regime_is_programme_requirement": false,
+    "maintained_with_throughflow_allowed": true,
+    "splitting_one_drift_is_complete_renewal": false,
+    "fine_identity_is_algebraic_control": true
+  }
+}

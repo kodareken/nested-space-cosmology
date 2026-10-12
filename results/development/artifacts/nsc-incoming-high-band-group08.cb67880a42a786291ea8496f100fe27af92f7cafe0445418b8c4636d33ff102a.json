@@ -1,0 +1,392 @@
+{
+  "angular_norm_recurrences": 1,
+  "channel": {
+    "angular_eigenvalue": 9.797958971132712,
+    "angular_level": 8,
+    "compact_level": 0,
+    "compact_mass": 0.0,
+    "copy_count": 1,
+    "degeneracy": 40,
+    "factor": 0.5258640927623113,
+    "family": 1,
+    "index": 8,
+    "reference_scheme": "massive-angular E2+E4/P2+P4",
+    "sample_count": 48,
+    "sample_offset": 384
+  },
+  "group": 8,
+  "local_cross": {
+    "angular_sign_norm_symmetry": "c_n(-lambda)=(-1)^n conjugate(c_n(lambda))",
+    "c1": "L+i*m",
+    "constant_coefficient_exact": 0.0,
+    "cross_numerator_coefficient_upper": [
+      6.92820323027551,
+      82.28469266402496,
+      1230.2411977681172,
+      15398.647214767276,
+      214526.37243014763,
+      2911128.3273149855,
+      42246029.28471343,
+      628282997.0698534,
+      9804694060.1549,
+      159538757412.03967,
+      2700626148546.479,
+      47828113444764.516,
+      878456457899017.0,
+      1.6858207901365972e+16,
+      3.352457951154929e+17,
+      6.949647512383736e+18,
+      1.4924324947068063e+20,
+      3.3333185452974035e+21,
+      7.708619332285805e+22,
+      1.850129979678697e+24,
+      4.593677781855252e+25,
+      1.181335277102959e+27,
+      3.1389215795009595e+28,
+      3.7611507809403555e+29,
+      5e-324,
+      5.4057709485120174e+29,
+      5e-324,
+      1.7717987045876185e+32,
+      5e-324,
+      4.056391561380428e+34,
+      5e-324,
+      8.301717646885045e+36,
+      5e-324,
+      1.898010859004737e+39,
+      5e-324,
+      5.08110446331981e+41,
+      5e-324,
+      1.6014900153286215e+44,
+      5e-324,
+      5.917543622124281e+46,
+      5e-324,
+      2.549730958080921e+49,
+      5e-324,
+      1.2744824643417618e+52,
+      5e-324,
+      7.35053416876753e+54,
+      5e-324,
+      4.862938118109788e+57
+    ],
+    "first_inverse_power": 1,
+    "last_inverse_power": 48,
+    "normalization_denominator_lower": 1.0,
+    "physical_Riccati_order": 24
+  },
+  "radial": {
+    "angular_norm_recurrences": 1,
+    "centered_remainder_depth": 4,
+    "directed_precision": 40,
+    "endpoint_weight_upper": 2.7492708411573745,
+    "explicit_matching_source_corrections_required": true,
+    "finite_offset_archive_accuracy_certified": false,
+    "first_inverse_power": 24,
+    "group": 8,
+    "horizon_enclosure": [
+      "1.900691605470150253001825084782803569673490976616944681",
+      "1.900691605470150253001825084782803586217103227677498178"
+    ],
+    "initial_projector_difference": 0.0,
+    "initial_scope": "same declared affine-horizon vacuum; explicit order24 only",
+    "intervals": 128,
+    "last_inverse_power": 48,
+    "lower": 160.0,
+    "per_sign": [
+      {
+        "coefficient_integral_upper": [
+          4.783468181126602e+28,
+          1.2933079332747423e+29,
+          3.4040929178231544e+29,
+          5.753936643788688e+30,
+          4.446258730188514e+31,
+          6.382884356403397e+32,
+          7.502577190924068e+33,
+          1.0866110624199442e+35,
+          1.5543571933555962e+36,
+          2.412139477254075e+37,
+          3.856795171234323e+38,
+          6.452051179398186e+39,
+          1.115407131568014e+41,
+          1.9921315715383874e+42,
+          3.6583522845718397e+43,
+          6.8876573578096954e+44,
+          1.3245005215746692e+46,
+          2.5914519154123e+47,
+          5.1344754093347934e+48,
+          1.0239602871718372e+50,
+          2.0378781393341376e+51,
+          3.9930730347452364e+52,
+          7.5171255916950775e+53,
+          1.288342324090263e+55,
+          1.6953815949488183e+56
+        ],
+        "natural_coefficient_integral_upper": [
+          8.647632487349738e+28,
+          2.0651732079244945e+29,
+          5.092660520693053e+29,
+          8.945209660963131e+30,
+          6.6930158452535455e+31,
+          9.716065719112887e+32,
+          1.1277499169877974e+34,
+          1.6371904841062176e+35,
+          2.3367344005762554e+36,
+          3.637937280672238e+37,
+          5.843575918829018e+38,
+          9.855915340292775e+39,
+          1.7232853050489272e+41,
+          3.124639999167067e+42,
+          5.848864970764458e+43,
+          1.127400720587562e+45,
+          2.230350970331613e+46,
+          4.513136902524036e+47,
+          9.30224553150267e+48,
+          1.942490993463648e+50,
+          4.0775937818213536e+51,
+          8.49658340605022e+52,
+          1.716797841272342e+54,
+          3.1912845171224756e+55,
+          4.608652174428433e+56
+        ],
+        "norm_bound_provenance": "computed positive angular sign",
+        "sign": 1
+      },
+      {
+        "coefficient_integral_upper": [
+          4.783468181126602e+28,
+          1.2933079332747423e+29,
+          3.4040929178231544e+29,
+          5.753936643788688e+30,
+          4.446258730188514e+31,
+          6.382884356403397e+32,
+          7.502577190924068e+33,
+          1.0866110624199442e+35,
+          1.5543571933555962e+36,
+          2.412139477254075e+37,
+          3.856795171234323e+38,
+          6.452051179398186e+39,
+          1.115407131568014e+41,
+          1.9921315715383874e+42,
+          3.6583522845718397e+43,
+          6.8876573578096954e+44,
+          1.3245005215746692e+46,
+          2.5914519154123e+47,
+          5.1344754093347934e+48,
+          1.0239602871718372e+50,
+          2.0378781393341376e+51,
+          3.9930730347452364e+52,
+          7.5171255916950775e+53,
+          1.288342324090263e+55,
+          1.6953815949488183e+56
+        ],
+        "natural_coefficient_integral_upper": [
+          8.647632487349738e+28,
+          2.0651732079244945e+29,
+          5.092660520693053e+29,
+          8.945209660963131e+30,
+          6.6930158452535455e+31,
+          9.716065719112887e+32,
+          1.1277499169877974e+34,
+          1.6371904841062176e+35,
+          2.3367344005762554e+36,
+          3.637937280672238e+37,
+          5.843575918829018e+38,
+          9.855915340292775e+39,
+          1.7232853050489272e+41,
+          3.124639999167067e+42,
+          5.848864970764458e+43,
+          1.127400720587562e+45,
+          2.230350970331613e+46,
+          4.513136902524036e+47,
+          9.30224553150267e+48,
+          1.942490993463648e+50,
+          4.0775937818213536e+51,
+          8.49658340605022e+52,
+          1.716797841272342e+54,
+          3.1912845171224756e+55,
+          4.608652174428433e+56
+        ],
+        "norm_bound_provenance": "exact defect sign-conjugation symmetry",
+        "sign": -1
+      }
+    ],
+    "physical_Riccati_order": 24,
+    "physical_source_signs_identified": false
+  },
+  "radial_passes": 1,
+  "result": {
+    "aggregate_constraint_action_error_upper": [
+      1.0091887808834894e-14,
+      7.466182666082295e-91
+    ],
+    "combined_is_alternative_not_additional": true,
+    "group": 8,
+    "residuals": {
+      "centered_excess_over_natural": 0.0,
+      "interval_additivity": 7.8269792939897265e-31
+    },
+    "source_windows_count": 2,
+    "stationarity_tolerance": 3e-11,
+    "status": "PASS conditional on matching order24 source corrections",
+    "windows": {
+      "combined": {
+        "constraint_action_error_upper": [
+          1.0091887808834894e-14,
+          7.466182666082295e-91
+        ],
+        "consumer_endpoint_tag": 160.0,
+        "interval": [
+          32.0,
+          160.0
+        ],
+        "original_endpoint_tag": 160.0,
+        "radial_coefficients_changed": false,
+        "thermal_stress_upper": [
+          4.9285087170071916e-92,
+          4.1700528435053556e-92,
+          4.1700528435053556e-92,
+          3.7922793675091807e-93
+        ],
+        "vacuum_energy": {
+          "density_error_upper": 4.757446988158387e-16,
+          "lapse_action_error_upper": 1.0091887808834892e-14,
+          "linear_transverse_density_upper": 4.757446988156517e-16,
+          "physical_Riccati_order": 24,
+          "quadratic_longitudinal_density_upper": 1.8699268548851142e-28,
+          "thermal_quadrature_low_band_errors_included": false,
+          "vacuum_current_error": 0.0
+        },
+        "within_component_tolerance": true
+      },
+      "low": {
+        "constraint_action_error_upper": [
+          1.0046752678796471e-14,
+          7.466182666082295e-91
+        ],
+        "consumer_endpoint_tag": 40.0,
+        "interval": [
+          32.0,
+          40.0
+        ],
+        "original_endpoint_tag": 160.0,
+        "radial_coefficients_changed": false,
+        "thermal_stress_upper": [
+          4.9285087170071916e-92,
+          4.1700528435053556e-92,
+          4.1700528435053556e-92,
+          3.7922793675091807e-93
+        ],
+        "vacuum_energy": {
+          "density_error_upper": 4.736169701635894e-16,
+          "lapse_action_error_upper": 1.004675267879647e-14,
+          "linear_transverse_density_upper": 4.736169701634024e-16,
+          "physical_Riccati_order": 24,
+          "quadratic_longitudinal_density_upper": 1.869864774036017e-28,
+          "thermal_quadrature_low_band_errors_included": false,
+          "vacuum_current_error": 0.0
+        },
+        "within_component_tolerance": true
+      },
+      "middle": {
+        "constraint_action_error_upper": [
+          4.513513003842371e-17,
+          8.223635153431176e-114
+        ],
+        "consumer_endpoint_tag": 160.0,
+        "interval": [
+          40.0,
+          160.0
+        ],
+        "original_endpoint_tag": 160.0,
+        "radial_coefficients_changed": false,
+        "thermal_stress_upper": [
+          5.262058083500878e-115,
+          4.593109315594971e-115,
+          4.593109315594971e-115,
+          3.3447438395295357e-116
+        ],
+        "vacuum_energy": {
+          "density_error_upper": 2.127728652249319e-18,
+          "lapse_action_error_upper": 4.51351300384237e-17,
+          "linear_transverse_density_upper": 2.127728652249313e-18,
+          "physical_Riccati_order": 24,
+          "quadratic_longitudinal_density_upper": 6.208084909719495e-33,
+          "thermal_quadrature_low_band_errors_included": false,
+          "vacuum_current_error": 0.0
+        },
+        "within_component_tolerance": true
+      }
+    }
+  },
+  "schema": "NSC-HIGH-BAND-GROUP-RECEIPT-v1",
+  "signature": {
+    "docs/nsc-incoming-high-band-batch-bound.md": "01e0d3c813e6666f81dc236d868f5d620328355fea836ee7c7603282582eca43",
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-centered-order24.json": "8cc644d154620aedaed8e9c104bbe6e22b7b2222e71085bcd1b7d4a63f73be1b",
+    "results/development/nsc-incoming-group32-order24-bound.json": "0747f2469afd2126ccdb5df86b125c15ac334fe2f631ce249b00c2235f788b04",
+    "results/development/nsc-incoming-low-high-source.json": "42592b84656fb902fe64eba55c21aa34b621287b5a66076fe1165a921bff4cdd",
+    "results/development/nsc-incoming-retained-order24-bound.json": "e2dd066d67c582e059a6cba19002d18a1156ea0429a2b3847aadbb8798852754",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "scripts/derive_nsc_incoming_high_band_batch_bound.py": "d97d4b7447dfa9b927aeb943994e152424f0c1f5ad8b425333539a575ba2b831",
+    "src/recursive_horizons/nsc_incoming_centered_order24.py": "aafc22426efee88a83d9f2a9c26f064a2a32fb9907b1ba67f2e59121f1178396",
+    "src/recursive_horizons/nsc_incoming_defect_taylor_bound.py": "37ebb921300a7d561ba31506f62d5498129b4dd9d62472974c60f31b4cee790a",
+    "src/recursive_horizons/nsc_incoming_high_band_batch_bound.py": "e692d0524a3d7cfd626b5089e18362481963b95d1794f66409c93ee243de7352",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "tests/test_nsc_incoming_high_band_batch_bound.py": "cb3a65e914b0d094a4b6c68c3115b6f9022dbf2ab02c2c27e17ec0a7320d6e82"
+  },
+  "source_corrections_applied": false,
+  "windows_provenance": [
+    {
+      "interval": [
+        32.0,
+        40.0
+      ],
+      "kind": "low",
+      "panels": [
+        {
+          "measure_residual": 0.0,
+          "panel": "low/8_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "measure_residual": 0.0,
+          "panel": "low/8_-1",
+          "rows": 24,
+          "sign": -1
+        }
+      ]
+    },
+    {
+      "interval": [
+        40.0,
+        160.0
+      ],
+      "kind": "middle",
+      "panels": [
+        {
+          "endpoint_measure_residual": 0.0,
+          "left": 40.0,
+          "panel": "mid/8_1",
+          "right": 160.0,
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "endpoint_measure_residual": 0.0,
+          "left": 40.0,
+          "panel": "mid/8_-1",
+          "right": 160.0,
+          "rows": 240,
+          "sign": -1
+        }
+      ]
+    }
+  ]
+}

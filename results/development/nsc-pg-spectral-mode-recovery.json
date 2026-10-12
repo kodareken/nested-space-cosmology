@@ -1,0 +1,4329 @@
+{
+  "accountable_author": "Douglas Ek",
+  "artifact_producer_snapshot": {
+    "consumer_change": "explicit ndarray.item() and compact rejection summaries; numerical producer unchanged",
+    "numeric_functions": "jobs, one, prepare: exact AST match",
+    "path": "results/development/artifacts/nsc-pg-spectral-mode-recovery-producer.d74831ec0cccb34d2bb48910ae60bd1d330bb5183c0493b3e59ef00d8a6f7f0a.py",
+    "sha256": "d74831ec0cccb34d2bb48910ae60bd1d330bb5183c0493b3e59ef00d8a6f7f0a"
+  },
+  "comparison": {
+    "exact": "hashes, labels, masks, coverage and scope",
+    "fields": "all",
+    "float_atol": 3e-13,
+    "float_rtol": 3e-13
+  },
+  "counts": {
+    "accepted_rows": 51360,
+    "groups": 32,
+    "panels": 138,
+    "rows": 54548,
+    "unresolved_rows": 3188
+  },
+  "domain": {
+    "history_selected": false,
+    "horizon_scattering_rerun": false,
+    "input": "authenticated frequency-resolved physical packet columns, never integrated covariance or seed",
+    "inverse": "resolved six-by-two observation matrix; no singular-value floor",
+    "negative_energy": "already owned opposite-angular sigma3 K map; positive real source rows stored",
+    "operator": "same PG Dirac radial ODE on [-1,1]; identity fundamental convention at rho=1",
+    "panel_accounting": "base and refinement panels remain separate; no overlapping panels added here",
+    "scope": "conditional input fields for the common KS source, not a finite closed packet dynamics",
+    "source": "unchanged C_H plus inherited incoming occupation, exact open fiber",
+    "state_changed": false
+  },
+  "failures": [],
+  "gate": {
+    "PDF_bumped": false,
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "all_real_rows": "OPEN",
+    "extended_stationarity": "OPEN",
+    "full_spectral_source": "OPEN: missing subgap/tail fields and common nonlinear subtraction/convergence",
+    "homogeneous_nonexistence": "preserved; not rerun",
+    "metric_timestep": false,
+    "nulls": null,
+    "resolved_mode_recovery": "PASS",
+    "stress": null,
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-massive-mode-resolution.json": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+    "src/recursive_horizons/nsc_pg_retarded_packets.py": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a"
+  },
+  "input_payloads": [
+    {
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+    },
+    {
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+    },
+    {
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+    }
+  ],
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima_on_accepted": {
+    "current_coisometry_residual": 4.871850426172354e-12,
+    "input_error_amplification": 2.999449026702582e-08,
+    "projection_absolute_residual": 4.0571435099834044e-13,
+    "source_projector_residual": 0.0,
+    "transport_current_residual": 3.729792454443856e-13
+  },
+  "panels": {
+    "group13/low": {
+      "accepted": 192,
+      "accepted_energy_range": [
+        0.00034201726881480377,
+        15.994527723698964
+      ],
+      "energy_range": [
+        0.00034201726881480377,
+        15.994527723698964
+      ],
+      "group": 13,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.1237649988306238e-12,
+        "input_error_amplification": 1.6642411142497134e-10,
+        "projection_absolute_residual": 3.1360321232611293e-13,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.4398926009346935e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group13/low/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 192,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "group13/mid": {
+      "accepted": 432,
+      "accepted_energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "group": 13,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.393139157685372e-12,
+        "input_error_amplification": 1.7886851261458347e-08,
+        "projection_absolute_residual": 2.604641281490539e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.1673462817099952e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group13/mid/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 432,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "group14/low16_-1": {
+      "accepted": 96,
+      "accepted_energy_range": [
+        0.0013248831260437577,
+        15.9788018699833
+      ],
+      "energy_range": [
+        0.0013248831260437577,
+        15.9788018699833
+      ],
+      "group": 14,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.098992385433588e-12,
+        "input_error_amplification": 1.7381224250768376e-10,
+        "projection_absolute_residual": 3.1310553497937076e-13,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.201983234987494e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group14/low16_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 96,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "group14/low16_1": {
+      "accepted": 96,
+      "accepted_energy_range": [
+        0.0013248831260437577,
+        15.9788018699833
+      ],
+      "energy_range": [
+        0.0013248831260437577,
+        15.9788018699833
+      ],
+      "group": 14,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.102252728970342e-12,
+        "input_error_amplification": 1.7333281145071286e-10,
+        "projection_absolute_residual": 3.949942169203387e-13,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.231956643379955e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group14/low16_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 96,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "group14/low32_-1": {
+      "accepted": 96,
+      "accepted_energy_range": [
+        0.25102605180644444,
+        7.994527723698964
+      ],
+      "energy_range": [
+        0.25102605180644444,
+        7.994527723698964
+      ],
+      "group": 14,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 5.829100800902445e-13,
+        "input_error_amplification": 8.612334203590072e-11,
+        "projection_absolute_residual": 3.2852134535166437e-13,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 5.192631346083816e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group14/low32_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 96,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "group14/low32_1": {
+      "accepted": 96,
+      "accepted_energy_range": [
+        0.25102605180644444,
+        7.994527723698964
+      ],
+      "energy_range": [
+        0.25102605180644444,
+        7.994527723698964
+      ],
+      "group": 14,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 7.624734067872901e-13,
+        "input_error_amplification": 8.54257479756387e-11,
+        "projection_absolute_residual": 4.0571435099834044e-13,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 5.3045233009888585e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group14/low32_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 96,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "group14/mid24_-1": {
+      "accepted": 432,
+      "accepted_energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "group": 14,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3906981826458011e-12,
+        "input_error_amplification": 1.789518146507883e-08,
+        "projection_absolute_residual": 2.54938115487529e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.1505492607505266e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group14/mid24_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 432,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "group14/mid24_1": {
+      "accepted": 432,
+      "accepted_energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "energy_range": [
+        16.019251120011916,
+        159.98074887998808
+      ],
+      "group": 14,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.34909186443757e-12,
+        "input_error_amplification": 1.7894628076963703e-08,
+        "projection_absolute_residual": 2.547894516306541e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.1650743149441267e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "group14/mid24_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 432,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/10_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 10,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.110427219468881e-12,
+        "input_error_amplification": 1.0650842327133166e-09,
+        "projection_absolute_residual": 1.2770896165555764e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9839177868175876e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/10_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/10_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 10,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.109158230118817e-12,
+        "input_error_amplification": 1.0650842327133228e-09,
+        "projection_absolute_residual": 1.2550330314788996e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.985262596374006e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/10_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/11_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 11,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.085827790343469e-12,
+        "input_error_amplification": 1.1158106462746452e-09,
+        "projection_absolute_residual": 1.2176700527430668e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9755030853440563e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/11_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/11_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 11,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.086810839543938e-12,
+        "input_error_amplification": 1.1158106462746423e-09,
+        "projection_absolute_residual": 1.2077117847571338e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9743069281278293e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/11_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/12_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 12,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.068060820406684e-12,
+        "input_error_amplification": 1.1750072140232184e-09,
+        "projection_absolute_residual": 1.2098473173926734e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.960527171311502e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/12_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/12_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 12,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.071816752999805e-12,
+        "input_error_amplification": 1.1750072140232155e-09,
+        "projection_absolute_residual": 1.2028092777429575e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9817360692245926e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/12_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/15_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 15,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.897859712007729e-12,
+        "input_error_amplification": 9.597463948139494e-10,
+        "projection_absolute_residual": 1.2346231465160394e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.335127001511235e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/15_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/15_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 15,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.837198189326276e-12,
+        "input_error_amplification": 9.600609311226149e-10,
+        "projection_absolute_residual": 1.2274754875582961e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.4039736785926334e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/15_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/16_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 16,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.845449365076525e-12,
+        "input_error_amplification": 9.627279495286725e-10,
+        "projection_absolute_residual": 1.2945172712310921e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.0654233437058113e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/16_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/16_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 16,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.864471068647928e-12,
+        "input_error_amplification": 9.63178323087678e-10,
+        "projection_absolute_residual": 1.2928795717975454e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.117642844184384e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/16_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/17_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 17,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.882292209905968e-12,
+        "input_error_amplification": 9.677194491368359e-10,
+        "projection_absolute_residual": 1.3470905687920313e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.8153085646553806e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/17_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/17_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 17,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.8693846043316586e-12,
+        "input_error_amplification": 9.680222650871197e-10,
+        "projection_absolute_residual": 1.3249391096175054e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.878692820670668e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/17_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/18_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 18,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.922717708801119e-12,
+        "input_error_amplification": 9.718241654525355e-10,
+        "projection_absolute_residual": 1.3258527365323849e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.720810915898787e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/18_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/18_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 18,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.867106041909932e-12,
+        "input_error_amplification": 9.722596901132733e-10,
+        "projection_absolute_residual": 1.312112880046959e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.734715104433944e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/18_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/19_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 19,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.8473112906697965e-12,
+        "input_error_amplification": 9.77350989959051e-10,
+        "projection_absolute_residual": 1.305642854540538e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.774202239016825e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/19_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/19_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 19,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.8509983880209145e-12,
+        "input_error_amplification": 9.775986265150665e-10,
+        "projection_absolute_residual": 1.3313045026526596e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.762609158050965e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/19_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/1_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 1,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.139438426382299e-12,
+        "input_error_amplification": 9.51719898752185e-10,
+        "projection_absolute_residual": 1.3156392376420079e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.7208262877310163e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/1_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/1_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 1,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.140040670754735e-12,
+        "input_error_amplification": 9.517198987521867e-10,
+        "projection_absolute_residual": 1.2900682371080952e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.729792454443856e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/1_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/20_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 20,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.88568312684377e-12,
+        "input_error_amplification": 9.818718536963982e-10,
+        "projection_absolute_residual": 1.2900512251209751e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.841475573521706e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/20_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/20_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 20,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.858983200649262e-12,
+        "input_error_amplification": 9.81960960374887e-10,
+        "projection_absolute_residual": 1.2742264072986891e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.85184733669807e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/20_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/21_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 21,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.876638763709431e-12,
+        "input_error_amplification": 9.94457800991321e-10,
+        "projection_absolute_residual": 1.226839381529299e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9084280487626576e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/21_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/21_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 21,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.866051031613009e-12,
+        "input_error_amplification": 9.965334951407045e-10,
+        "projection_absolute_residual": 1.2150087406302867e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9152963708926324e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/21_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/22_-1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.8734350355056155e-12,
+        "input_error_amplification": 1.0287328667006456e-09,
+        "projection_absolute_residual": 1.2057668427258749e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.8840767370099115e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/22_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/22_1": {
+      "accepted": 480,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.819734676976374e-12,
+        "input_error_amplification": 1.0305028599109751e-09,
+        "projection_absolute_residual": 1.1706916195228469e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.89615921254098e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/22_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 480,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/23_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 23,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1474985665383067e-12,
+        "input_error_amplification": 9.652515772222e-10,
+        "projection_absolute_residual": 9.547345099914323e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.093709982999221e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/23_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/24_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 24,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1372972618664734e-12,
+        "input_error_amplification": 9.671148631691993e-10,
+        "projection_absolute_residual": 9.806925037876526e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.950849995910067e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/24_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/24_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 24,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1191871807934908e-12,
+        "input_error_amplification": 9.675291342946745e-10,
+        "projection_absolute_residual": 9.820184843504437e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.98682696530194e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/24_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/25_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 25,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1101877350106064e-12,
+        "input_error_amplification": 9.689029811331207e-10,
+        "projection_absolute_residual": 1.0064920728551611e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.766922083909393e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/25_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/25_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 25,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.177157185987079e-12,
+        "input_error_amplification": 9.695889929614462e-10,
+        "projection_absolute_residual": 9.891280889512866e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.797665886238222e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/25_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/26_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 26,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.117114627985561e-12,
+        "input_error_amplification": 9.730337999966184e-10,
+        "projection_absolute_residual": 1.0159592140564732e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.532087693130817e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/26_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/26_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 26,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1123014794505504e-12,
+        "input_error_amplification": 9.735228984058992e-10,
+        "projection_absolute_residual": 1.0053682951794378e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.5854776044131903e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/26_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/27_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 27,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.138134358149194e-12,
+        "input_error_amplification": 9.767866639849772e-10,
+        "projection_absolute_residual": 1.0752863864240432e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.316688868546148e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/27_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/27_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 27,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.13811066571123e-12,
+        "input_error_amplification": 9.774755814450144e-10,
+        "projection_absolute_residual": 1.0640954247955364e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.3823166414345115e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/27_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/28_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 28,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.092964502706235e-12,
+        "input_error_amplification": 9.810375069004556e-10,
+        "projection_absolute_residual": 1.0897094330718175e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.2359966824010756e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/28_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/28_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 28,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.0792552804619193e-12,
+        "input_error_amplification": 9.814050206337154e-10,
+        "projection_absolute_residual": 1.0530825367674216e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.223244844621639e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/28_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/29_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 29,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1343441233041878e-12,
+        "input_error_amplification": 9.846588871908516e-10,
+        "projection_absolute_residual": 1.0308950608887705e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.303870075660727e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/29_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/29_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 29,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1230796508298704e-12,
+        "input_error_amplification": 9.85329782067375e-10,
+        "projection_absolute_residual": 1.0307075985653146e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.271342481761492e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/29_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/2_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 2,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.067719431649267e-12,
+        "input_error_amplification": 9.561810207116955e-10,
+        "projection_absolute_residual": 1.3071491716919698e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.517143132589451e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/2_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/2_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 2,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.067374925032063e-12,
+        "input_error_amplification": 9.561810207116947e-10,
+        "projection_absolute_residual": 1.3351735591918759e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.507398920507981e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/2_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/30_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 30,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.118102353210025e-12,
+        "input_error_amplification": 9.895996823334434e-10,
+        "projection_absolute_residual": 9.902985415060968e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.3914812449822037e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/30_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/30_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 30,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.109468879015044e-12,
+        "input_error_amplification": 9.899652028555118e-10,
+        "projection_absolute_residual": 1.0226693929540993e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.3357531176033945e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/30_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/31_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 31,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.1232699653349926e-12,
+        "input_error_amplification": 1.011233335517728e-09,
+        "projection_absolute_residual": 9.943938709459262e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.418568848734109e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/31_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/31_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 31,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.0941727499337487e-12,
+        "input_error_amplification": 1.0149087682897744e-09,
+        "projection_absolute_residual": 1.0146669325208705e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.3932586407253965e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/31_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/32_-1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.119264211833589e-12,
+        "input_error_amplification": 1.0474005916127525e-09,
+        "projection_absolute_residual": 9.584946867947969e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.408110929908857e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/32_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/32_1": {
+      "accepted": 324,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.104610896658642e-12,
+        "input_error_amplification": 1.0506631606411508e-09,
+        "projection_absolute_residual": 9.683125162603918e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.401104178342211e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/32_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 324,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/3_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 3,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.039029420819885e-12,
+        "input_error_amplification": 9.5999615247241e-10,
+        "projection_absolute_residual": 1.3356724950809419e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.23507537855052e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/3_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/3_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 3,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.041463239058543e-12,
+        "input_error_amplification": 9.599961524724092e-10,
+        "projection_absolute_residual": 1.3574157803322476e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.2282313840404795e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/3_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/4_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 4,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.0858432927849246e-12,
+        "input_error_amplification": 9.642351502216967e-10,
+        "projection_absolute_residual": 1.394972129174673e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9615066589851884e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/4_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/4_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 4,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.081724904467648e-12,
+        "input_error_amplification": 9.642351502216928e-10,
+        "projection_absolute_residual": 1.3884692504149658e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.954002501327823e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/4_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/5_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 5,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.078876609778806e-12,
+        "input_error_amplification": 9.693928210378094e-10,
+        "projection_absolute_residual": 1.4203647153830414e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.8642796769670985e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/5_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/5_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 5,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.079688251411253e-12,
+        "input_error_amplification": 9.69392821037814e-10,
+        "projection_absolute_residual": 1.3927832969865061e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.845649862641187e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/5_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/6_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 6,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.104982690981201e-12,
+        "input_error_amplification": 9.745148735750866e-10,
+        "projection_absolute_residual": 1.3880116167474917e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.89046522567268e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/6_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/6_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 6,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.114846441829317e-12,
+        "input_error_amplification": 9.745148735750864e-10,
+        "projection_absolute_residual": 1.3524286441168649e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9260566439336535e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/6_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/7_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 7,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.1169075280761904e-12,
+        "input_error_amplification": 9.78858836840988e-10,
+        "projection_absolute_residual": 1.3301506068497562e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9842409557930947e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/7_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/7_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 7,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.119977160771961e-12,
+        "input_error_amplification": 9.788588368409878e-10,
+        "projection_absolute_residual": 1.3520328319494984e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.999936866491436e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/7_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/8_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 8,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.0522093538875814e-12,
+        "input_error_amplification": 9.897729717570838e-10,
+        "projection_absolute_residual": 1.2963284578950926e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.0536760235645527e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/8_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/8_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 8,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.054318774624992e-12,
+        "input_error_amplification": 9.897729717570784e-10,
+        "projection_absolute_residual": 1.3032567528521308e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.0619442682154265e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/8_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low/9_-1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 9,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.0737009536181e-12,
+        "input_error_amplification": 1.0233125325737832e-09,
+        "projection_absolute_residual": 1.2819212389417722e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.9982818956275455e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/9_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low/9_1": {
+      "accepted": 528,
+      "accepted_energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "energy_range": [
+        0.0011524603595800473,
+        39.980748879988084
+      ],
+      "group": 9,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.076985232832931e-12,
+        "input_error_amplification": 1.0233125325737815e-09,
+        "projection_absolute_residual": 1.2788518388445698e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.0276231305239185e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low/9_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 528,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low_ref/22_-1": {
+      "accepted": 852,
+      "accepted_energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.4960879732853605e-12,
+        "input_error_amplification": 1.0295307691936103e-09,
+        "projection_absolute_residual": 1.4260391299091756e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.3065591199809775e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low_ref/22_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 852,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low_ref/22_1": {
+      "accepted": 852,
+      "accepted_energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.466280318965807e-12,
+        "input_error_amplification": 1.031300864255718e-09,
+        "projection_absolute_residual": 1.433164851010327e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.34052019093614e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low_ref/22_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 852,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low_ref/32_-1": {
+      "accepted": 552,
+      "accepted_energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.553881070749351e-12,
+        "input_error_amplification": 1.0482554321554405e-09,
+        "projection_absolute_residual": 1.1061715107221788e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.7460309774710063e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low_ref/32_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 552,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low_ref/32_1": {
+      "accepted": 552,
+      "accepted_energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 3.5088888365093863e-12,
+        "input_error_amplification": 1.0515220417590443e-09,
+        "projection_absolute_residual": 1.1088790964772496e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 2.7235882241791704e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low_ref/32_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 552,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "low_ref/6_-1": {
+      "accepted": 960,
+      "accepted_energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 6,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.8712100105797586e-12,
+        "input_error_amplification": 9.744360014969882e-10,
+        "projection_absolute_residual": 1.5717570543110577e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.3649369274644506e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low_ref/6_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 960,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "low_ref/6_1": {
+      "accepted": 960,
+      "accepted_energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "energy_range": [
+        0.0005762301797900236,
+        39.989055447397924
+      ],
+      "group": 6,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 4.871850426172354e-12,
+        "input_error_amplification": 9.7443600149699e-10,
+        "projection_absolute_residual": 1.588372549619325e-14,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.3732091353239284e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "low_ref/6_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 960,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/10_-1": {
+      "accepted": 361,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 10,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2534661259969435e-13,
+        "input_error_amplification": 2.990899770317593e-08,
+        "projection_absolute_residual": 7.473198813957418e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.491073583126468e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/10_-1/accepted",
+        "count": 199,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.165180290707857e-08,
+        "minimum_singular_value": 0.00041869148832033453,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 199
+        }
+      },
+      "rows": 560,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/10_1": {
+      "accepted": 361,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 10,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 2.053636318463938e-13,
+        "input_error_amplification": 2.990899770317522e-08,
+        "projection_absolute_residual": 7.99368880080424e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.8944551771765315e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/10_1/accepted",
+        "count": 199,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.16518029070805e-08,
+        "minimum_singular_value": 0.0004186914883203233,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 199
+        }
+      },
+      "rows": 560,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/11_-1": {
+      "accepted": 360,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 11,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.610868478109209e-13,
+        "input_error_amplification": 2.980498938926365e-08,
+        "projection_absolute_residual": 1.0613300975218242e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 4.324802550392268e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/11_-1/accepted",
+        "count": 200,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.161371871462812e-08,
+        "minimum_singular_value": 0.00041891414855226716,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 200
+        }
+      },
+      "rows": 560,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/11_1": {
+      "accepted": 360,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 11,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.5547457961506057e-13,
+        "input_error_amplification": 2.980498938926369e-08,
+        "projection_absolute_residual": 9.834013020973142e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.9756154492739293e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/11_1/accepted",
+        "count": 200,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.161371871462779e-08,
+        "minimum_singular_value": 0.0004189141485522691,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 200
+        }
+      },
+      "rows": 560,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/12_-1": {
+      "accepted": 361,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 12,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 2.388811269889628e-13,
+        "input_error_amplification": 2.999449026702575e-08,
+        "projection_absolute_residual": 8.063311856150161e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.479232327768484e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/12_-1/accepted",
+        "count": 199,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.158707394282867e-08,
+        "minimum_singular_value": 0.0004190700687663082,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 199
+        }
+      },
+      "rows": 560,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/12_1": {
+      "accepted": 361,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 12,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.5715952253862906e-13,
+        "input_error_amplification": 2.999449026702582e-08,
+        "projection_absolute_residual": 1.1964869126151092e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 4.438832938017974e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/12_1/accepted",
+        "count": 199,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.158707394282921e-08,
+        "minimum_singular_value": 0.000419070068766305,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 199
+        }
+      },
+      "rows": 560,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/15_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 15,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2402792799213801e-12,
+        "input_error_amplification": 1.7888771523728586e-08,
+        "projection_absolute_residual": 2.383650116443194e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.1056439361465902e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/15_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/15_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 15,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3207428099448131e-12,
+        "input_error_amplification": 1.7888007002670582e-08,
+        "projection_absolute_residual": 2.361917297010452e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0837171874304767e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/15_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/16_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 16,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2826542406078535e-12,
+        "input_error_amplification": 1.7881530342611377e-08,
+        "projection_absolute_residual": 2.3435311776097552e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0491358293557673e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/16_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/16_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 16,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2314143064092403e-12,
+        "input_error_amplification": 1.788051884174322e-08,
+        "projection_absolute_residual": 2.1719374540523998e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0669271810121502e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/16_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/17_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 17,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2961742827102769e-12,
+        "input_error_amplification": 1.7869983192773573e-08,
+        "projection_absolute_residual": 2.253276030055886e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.081684483214456e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/17_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/17_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 17,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2805353166127033e-12,
+        "input_error_amplification": 1.786873464818241e-08,
+        "projection_absolute_residual": 2.3073511689771335e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0490167360768962e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/17_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/18_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 18,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3230255176463338e-12,
+        "input_error_amplification": 1.7867379192055465e-08,
+        "projection_absolute_residual": 2.380351977716909e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0384635492666831e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/18_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/18_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 18,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3092344269722793e-12,
+        "input_error_amplification": 1.786560054076617e-08,
+        "projection_absolute_residual": 2.329979526256229e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0628221082680452e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/18_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/19_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 19,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.243787469039587e-12,
+        "input_error_amplification": 1.7901951891017725e-08,
+        "projection_absolute_residual": 2.2355379068475257e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.048757440720633e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/19_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/19_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 19,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3759138495739367e-12,
+        "input_error_amplification": 1.7899898461854765e-08,
+        "projection_absolute_residual": 2.255815823163183e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.028007507302454e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/19_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/1_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 1,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.28295692798646e-12,
+        "input_error_amplification": 1.7891304210975494e-08,
+        "projection_absolute_residual": 2.3825150921547846e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0835975724045065e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/1_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/1_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 1,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2903617884569365e-12,
+        "input_error_amplification": 1.7891304210975564e-08,
+        "projection_absolute_residual": 2.2207778394164162e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0735105399794606e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/1_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/20_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 20,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3443708730599393e-12,
+        "input_error_amplification": 1.7934101498817368e-08,
+        "projection_absolute_residual": 2.309627237580188e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0214392195546006e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/20_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/20_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 20,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3272995212633367e-12,
+        "input_error_amplification": 1.7931776934706108e-08,
+        "projection_absolute_residual": 2.401298427446365e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0033856907294134e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/20_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/21_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 21,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2515079826565023e-12,
+        "input_error_amplification": 1.7961171397088095e-08,
+        "projection_absolute_residual": 2.3830056204723206e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0244499244350511e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/21_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/21_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 21,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2943955422314623e-12,
+        "input_error_amplification": 1.795857960686123e-08,
+        "projection_absolute_residual": 2.3471130455772184e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0347883886993493e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/21_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/22_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3189937266058202e-12,
+        "input_error_amplification": 1.7980218070646372e-08,
+        "projection_absolute_residual": 2.3158025744608686e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 9.79228206095327e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/22_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/22_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.333526353130261e-12,
+        "input_error_amplification": 1.7977364028656487e-08,
+        "projection_absolute_residual": 2.218591648865075e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 9.836516207796103e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/22_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/23_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 23,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2949727422383428e-12,
+        "input_error_amplification": 1.7899112062073178e-08,
+        "projection_absolute_residual": 2.3127032875866845e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0855883307483872e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/23_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/24_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 24,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3416338279785227e-12,
+        "input_error_amplification": 1.7896074778995126e-08,
+        "projection_absolute_residual": 2.5204411910321383e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0655184820250425e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/24_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/24_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 24,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3060666223047141e-12,
+        "input_error_amplification": 1.789508933939213e-08,
+        "projection_absolute_residual": 2.3157752032216713e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0990017754251815e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/24_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/25_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 25,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3264921014731315e-12,
+        "input_error_amplification": 1.789037364109815e-08,
+        "projection_absolute_residual": 2.4042163302508756e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0872991794327325e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/25_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/25_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 25,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3067609052039355e-12,
+        "input_error_amplification": 1.7888846931834567e-08,
+        "projection_absolute_residual": 2.380912024059522e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0627415294373011e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/25_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/26_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 26,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2940716856535783e-12,
+        "input_error_amplification": 1.7881197024986092e-08,
+        "projection_absolute_residual": 2.212363205479351e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0690780895269681e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/26_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/26_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 26,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3711859094508931e-12,
+        "input_error_amplification": 1.7879177553523098e-08,
+        "projection_absolute_residual": 2.2070927266259737e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0611035625194587e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/26_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/27_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 27,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2648994985592088e-12,
+        "input_error_amplification": 1.7867910358546068e-08,
+        "projection_absolute_residual": 2.2759858904178376e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0638023111537785e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/27_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/27_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 27,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3063022001437374e-12,
+        "input_error_amplification": 1.7864914277400707e-08,
+        "projection_absolute_residual": 2.2578748379492114e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.100218328554582e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/27_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/28_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 28,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3206234479809023e-12,
+        "input_error_amplification": 1.789962835234125e-08,
+        "projection_absolute_residual": 2.2758115874983106e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0582391035469235e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/28_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/28_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 28,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3348426393088694e-12,
+        "input_error_amplification": 1.7896075825906712e-08,
+        "projection_absolute_residual": 2.2802533378672228e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0565891843656366e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/28_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/29_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 29,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2486131992226327e-12,
+        "input_error_amplification": 1.79307707315341e-08,
+        "projection_absolute_residual": 2.4088752123155977e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0447884808969209e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/29_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/29_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 29,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3146698832958701e-12,
+        "input_error_amplification": 1.7926670737101494e-08,
+        "projection_absolute_residual": 2.309047059122643e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0420461250650315e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/29_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/2_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 2,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.32006547831926e-12,
+        "input_error_amplification": 1.7887497233528545e-08,
+        "projection_absolute_residual": 2.462660198794546e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.072744577481929e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/2_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/2_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 2,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2766208371678784e-12,
+        "input_error_amplification": 1.7887497233528565e-08,
+        "projection_absolute_residual": 2.4197565698510243e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.1030360276850609e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/2_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/30_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 30,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3503977507411513e-12,
+        "input_error_amplification": 1.795899239582582e-08,
+        "projection_absolute_residual": 2.2683219033046963e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0114626311299885e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/30_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/30_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 30,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2979040729559863e-12,
+        "input_error_amplification": 1.7954352857019813e-08,
+        "projection_absolute_residual": 2.287029267137813e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0178246624058831e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/30_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/31_-1": {
+      "accepted": 360,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 31,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.748665735902321e-13,
+        "input_error_amplification": 2.986348074752346e-08,
+        "projection_absolute_residual": 8.716243484912381e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.970642210335021e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/31_-1/accepted",
+        "count": 200,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.168801932199022e-08,
+        "minimum_singular_value": 0.00041847996755571586,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 200
+        }
+      },
+      "rows": 560,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/31_1": {
+      "accepted": 360,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 31,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 2.0431109110930707e-13,
+        "input_error_amplification": 2.9869657370634164e-08,
+        "projection_absolute_residual": 7.485450833995235e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.101104330008237e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/31_1/accepted",
+        "count": 200,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.168733482033041e-08,
+        "minimum_singular_value": 0.0004184839633833346,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 200
+        }
+      },
+      "rows": 560,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/32_-1": {
+      "accepted": 361,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.4467612997785196e-13,
+        "input_error_amplification": 2.9963850464437345e-08,
+        "projection_absolute_residual": 8.380994736790291e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.6009893538853103e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/32_-1/accepted",
+        "count": 199,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.167462825224867e-08,
+        "minimum_singular_value": 0.0004185581527457563,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 199
+        }
+      },
+      "rows": 560,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/32_1": {
+      "accepted": 361,
+      "accepted_energy_range": [
+        40.0423962600334,
+        233.52849502238942
+      ],
+      "energy_range": [
+        40.0423962600334,
+        319.9576037399666
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.6297632700478054e-13,
+        "input_error_amplification": 2.995970610033177e-08,
+        "projection_absolute_residual": 8.814233461217168e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.886893287077211e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/32_1/accepted",
+        "count": 199,
+        "energy_range": [
+          202.1679328893711,
+          319.9576037399666
+        ],
+        "maximum_input_error_amplification": 7.167384933295784e-08,
+        "minimum_singular_value": 0.00041856270144828225,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 199
+        }
+      },
+      "rows": 560,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid/3_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 3,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2834131746020448e-12,
+        "input_error_amplification": 1.788082468994721e-08,
+        "projection_absolute_residual": 2.325407893780797e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0544607074651198e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/3_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/3_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 3,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3490261730668892e-12,
+        "input_error_amplification": 1.78808246899476e-08,
+        "projection_absolute_residual": 2.315819783853682e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.060253853932461e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/3_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/4_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 4,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.360867389423189e-12,
+        "input_error_amplification": 1.7869992007768733e-08,
+        "projection_absolute_residual": 2.3277792559477902e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0604241988271981e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/4_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/4_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 4,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3347413755664247e-12,
+        "input_error_amplification": 1.7869992007768485e-08,
+        "projection_absolute_residual": 2.2832221865459383e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0525866755708846e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/4_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/5_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 5,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.334259489549119e-12,
+        "input_error_amplification": 1.785554916793848e-08,
+        "projection_absolute_residual": 2.3165791041194514e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0322661672215851e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/5_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/5_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 5,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3865012377675749e-12,
+        "input_error_amplification": 1.785554916793825e-08,
+        "projection_absolute_residual": 2.319533620659148e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0493837315875892e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/5_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/6_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 6,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2428157054591134e-12,
+        "input_error_amplification": 1.7891169801750654e-08,
+        "projection_absolute_residual": 2.3663410031390632e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0125564382967143e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/6_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/6_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 6,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.273639449001645e-12,
+        "input_error_amplification": 1.789116980175166e-08,
+        "projection_absolute_residual": 2.3338232342180917e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0296355315994913e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/6_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/7_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 7,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2631835228218233e-12,
+        "input_error_amplification": 1.792453510793537e-08,
+        "projection_absolute_residual": 2.363739126491873e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0423505914936697e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/7_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/7_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 7,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2896865738389112e-12,
+        "input_error_amplification": 1.7924535107935388e-08,
+        "projection_absolute_residual": 2.436359829236658e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0240945987882787e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/7_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/8_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 8,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3352941031649903e-12,
+        "input_error_amplification": 1.7952986750619185e-08,
+        "projection_absolute_residual": 2.3726613903384575e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0101068196651894e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/8_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/8_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 8,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3173773181307942e-12,
+        "input_error_amplification": 1.7952986750619343e-08,
+        "projection_absolute_residual": 2.3397755552044865e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0064027226170271e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/8_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid/9_-1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 9,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3404157390351537e-12,
+        "input_error_amplification": 1.797357701287292e-08,
+        "projection_absolute_residual": 2.3172032422882213e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 1.0042275216773785e-13
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/9_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid/9_1": {
+      "accepted": 240,
+      "accepted_energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "energy_range": [
+        40.0423962600334,
+        159.9576037399666
+      ],
+      "group": 9,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.2803897064147154e-12,
+        "input_error_amplification": 1.797357701287296e-08,
+        "projection_absolute_residual": 2.1894417140376733e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 9.988693350260898e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid/9_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 240,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid_ref/12_-1": {
+      "accepted": 542,
+      "accepted_energy_range": [
+        40.019251120011916,
+        233.81831411444463
+      ],
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 12,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 2.4686468975006783e-13,
+        "input_error_amplification": 2.9991974974065416e-08,
+        "projection_absolute_residual": 1.0088922141290454e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 3.758785698009286e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid_ref/12_-1/accepted",
+        "count": 298,
+        "energy_range": [
+          202.26482596949583,
+          319.9807488799881
+        ],
+        "maximum_input_error_amplification": 7.169640173259213e-08,
+        "minimum_singular_value": 0.0004184310408197576,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 298
+        }
+      },
+      "rows": 840,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid_ref/12_1": {
+      "accepted": 542,
+      "accepted_energy_range": [
+        40.019251120011916,
+        233.81831411444463
+      ],
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 12,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.7126915791485008e-13,
+        "input_error_amplification": 2.9991974974066065e-08,
+        "projection_absolute_residual": 8.724319018921838e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 4.1152094138731075e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid_ref/12_1/accepted",
+        "count": 298,
+        "energy_range": [
+          202.26482596949583,
+          319.9807488799881
+        ],
+        "maximum_input_error_amplification": 7.169640173259306e-08,
+        "minimum_singular_value": 0.00041843104081975223,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 298
+        }
+      },
+      "rows": 840,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid_ref/22_-1": {
+      "accepted": 360,
+      "accepted_energy_range": [
+        40.019251120011916,
+        159.98074887998808
+      ],
+      "energy_range": [
+        40.019251120011916,
+        159.98074887998808
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3511757066657752e-12,
+        "input_error_amplification": 1.7969939438565544e-08,
+        "projection_absolute_residual": 2.361284369810286e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 9.948588712675965e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid_ref/22_-1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 360,
+      "sign": -1,
+      "status": "PASS"
+    },
+    "mid_ref/22_1": {
+      "accepted": 360,
+      "accepted_energy_range": [
+        40.019251120011916,
+        159.98074887998808
+      ],
+      "energy_range": [
+        40.019251120011916,
+        159.98074887998808
+      ],
+      "group": 22,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.3114719733716542e-12,
+        "input_error_amplification": 1.7967057673955204e-08,
+        "projection_absolute_residual": 2.3928513386837587e-15,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 9.892176708241426e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid_ref/22_1/accepted",
+        "count": 0,
+        "energy_range": null,
+        "maximum_input_error_amplification": null,
+        "minimum_singular_value": null,
+        "reasons": {}
+      },
+      "rows": 360,
+      "sign": 1,
+      "status": "PASS"
+    },
+    "mid_ref/32_-1": {
+      "accepted": 541,
+      "accepted_energy_range": [
+        40.019251120011916,
+        233.81831411444463
+      ],
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.8573742424860037e-13,
+        "input_error_amplification": 2.998511812659738e-08,
+        "projection_absolute_residual": 9.90700851455678e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 4.959078404081625e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid_ref/32_-1/accepted",
+        "count": 299,
+        "energy_range": [
+          202.26482596949583,
+          319.9807488799881
+        ],
+        "maximum_input_error_amplification": 7.170301385953256e-08,
+        "minimum_singular_value": 0.00041839245500573406,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 299
+        }
+      },
+      "rows": 840,
+      "sign": -1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    },
+    "mid_ref/32_1": {
+      "accepted": 541,
+      "accepted_energy_range": [
+        40.019251120011916,
+        233.81831411444463
+      ],
+      "energy_range": [
+        40.019251120011916,
+        319.9807488799881
+      ],
+      "group": 32,
+      "maxima_on_accepted": {
+        "current_coisometry_residual": 1.7668126797756758e-13,
+        "input_error_amplification": 2.9991318785697084e-08,
+        "projection_absolute_residual": 9.060455990593145e-16,
+        "source_projector_residual": 0.0,
+        "transport_current_residual": 4.0384574740648936e-14
+      },
+      "rejected": {
+        "accepted_mask_in_payload": "mid_ref/32_1/accepted",
+        "count": 299,
+        "energy_range": [
+          202.26482596949583,
+          319.9807488799881
+        ],
+        "maximum_input_error_amplification": 7.170211814311906e-08,
+        "minimum_singular_value": 0.00041839768164336956,
+        "reasons": {
+          "OPEN: packet inverse does not resolve the declared field tolerance": 299
+        }
+      },
+      "rows": 840,
+      "sign": 1,
+      "status": "OPEN: unresolved rows explicitly excluded"
+    }
+  },
+  "payload": {
+    "bytes": 57351148,
+    "path": "results/development/artifacts/nsc-pg-spectral-mode-recovery.3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff.npz",
+    "sha256": "3c5fe695507ced4182e9c2325db24e0701e646fdfe47f456ce5b01147d97baff"
+  },
+  "reproducer": "python3 scripts/derive_nsc_pg_spectral_mode_recovery.py --check",
+  "schema": "NSC-PG-SPECTRAL-MODE-RECOVERY-v1",
+  "source_hashes": {
+    "docs/nsc-pg-spectral-mode-recovery.md": "2c2985d0a47425f4ace43bdb428aaae11671eec8903ec34689e3a67c9bb26297",
+    "scripts/derive_nsc_pg_spectral_mode_recovery.py": "5898e2a8cf196edc850a7159462856e78fb37b25be97214b974ec9a9bcc1fab7",
+    "src/recursive_horizons/nsc_pg_mode_recovery.py": "9f6768963ae63f152363bdb806f220487807b1c4ac61de9663261f3610676585",
+    "tests/test_nsc_pg_mode_recovery.py": "8899bad9eee86f1b62473eccf950e27263396284586c287e0429ca2aa007060b"
+  },
+  "status": "PASS: resolved real-frequency mode recovery; full spectral source remains OPEN",
+  "tolerances": {
+    "current": 3e-08,
+    "declared_input_accuracy": 3e-11,
+    "field": 3e-08,
+    "projection": 3e-11
+  }
+}

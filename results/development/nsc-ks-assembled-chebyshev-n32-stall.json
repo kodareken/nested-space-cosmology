@@ -1,0 +1,44 @@
+{
+  "accountable_author": "Douglas Ek",
+  "assembled_clipped_leftover": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "assembled_condition_number": 105465718047256.38,
+  "assembled_unclipped_leftover": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "assembled_unclipped_step_norm": null,
+  "constraint_maxima": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "families_evolved": 60,
+  "fas_c_cause": "n32 assembled finite image; condition ~1e14; linear step unavailable; leftover equals residual and stays above 3e-11",
+  "geometry_only_map": false,
+  "high_mode_directions_evolved": 32,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n32-assembled.json": "5bdaf07a853331b3e6975aca45aec24976aac07c4bec9dc6eeb382d7c3e3e91e"
+  },
+  "invented_matter_columns": false,
+  "low_mode_directions_reused": 32,
+  "named_search_stall": "finite_wu_n32_assembled_image_cannot_reach_existence",
+  "parent_profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "49223e613233a84ece27eb4efd544eb462b4343453d7dcbc8f2cf0cfec9dff68",
+  "reproducer": "python3 scripts/derive_nsc_ks_assembled_chebyshev_n32_stall.py --check",
+  "s5_retracted": true,
+  "schema": "NSC-KS-ASSEMBLED-CHEBYSHEV-N32-STALL-v1",
+  "slot_transfer": false,
+  "source_hashes": {
+    "docs/nsc-ks-assembled-chebyshev-n32-stall.md": "fd0d236cbee1311571fcd3d6793610ef7294abfc394e4dc6cbf164189bb7e29f",
+    "scripts/derive_nsc_ks_assembled_chebyshev_n32_stall.py": "1a1ba462b464c9f5fd8ac90a33e4982ca9114014641739893dbbcd8fb7a09fea"
+  },
+  "status": "OPEN: assembled Chebyshev n=32 leftover cannot reach EXISTENCE; finite-image stall; no wild full-scale step",
+  "unclipped_leftover_reaches_existence_tolerance": false
+}

@@ -1,0 +1,2679 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "source/input hashes, structure and scope labels",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-10
+  },
+  "domain": {
+    "Gaussian_contraction": "relative current-history frame W=I; dWplus=A/2, dWminus=-A/2; existing ctp_first_variation",
+    "amplitudes": [
+      0.002,
+      0.001,
+      0.003,
+      0.001
+    ],
+    "closed_sampled_frequency_evolution": false,
+    "history_coordinates": [
+      0.0,
+      0.05
+    ],
+    "history_selection": "none; response coordinates are not a physical duration or stationary solution",
+    "measure": "source-kernel weights sqrt(wo*wi)/(2*pi); covariance is source-fiber multiplication",
+    "metric_Jacobian": "pg_log_jacobian at pg_to_ks(actual PG metric)",
+    "new_boundary_term": false,
+    "omega": 0.4,
+    "overlap_kernel": "A_B(Eo,Ei)=integral Phi_g,Eo dagger Y_B,Ei d rho = (U[g] dagger dU[g]) kernel",
+    "reported_source": "bare Gaussian action derivatives on the inherited real-energy sample, per reduced family; not a full spectral or renormalized source",
+    "state": "same authenticated reference mode fields and source covariance; initial preparation held fixed",
+    "tangent_equation": "Ydot=L[g]Y+dL[g]Phi_g, Y(initial)=0",
+    "variation": "four raw KS amplitudes of the supplied C-infinity response history"
+  },
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_independent_term": "none introduced; declared action inventory retained",
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "complete_state_and_reference_integral": "OPEN: real panels, analytic subgap and tails remain to be composed on the history",
+    "extended_stationarity": "OPEN",
+    "homogeneous_nonexistence": "imported in its original scope, not rerun",
+    "metric_timestep": false,
+    "nonlinear_conditional_metric_jets": "PASS",
+    "nulls": null,
+    "physical_EndpointBranchJets": "OPEN: no physical two-endpoint variation family assigned",
+    "physical_history_selected": false,
+    "sampled_Gaussian_contraction": "PASS",
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "docs/nsc-declared-action-scope.md": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "scripts/derive_nsc_transmitting_history_modes.py": "ccc2d51503e3e04cd2c91bd672b3ce5292ea09f723dac983aa9b10f9552ad9c5",
+    "scripts/refine_nsc_transmitting_history_modes.py": "42d8dc34e6d375f2d7261fdc47866d48797ed5a4ee6d9947378bbeb110953b3f",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "CTP_tangent": 8.124351760557428e-18,
+    "CTP_trace": 3.1062432570336646e-18,
+    "SBP_residual": 2.220446049250313e-16,
+    "history_finite_difference": 2.596425240250017e-10,
+    "imaginary_real_source": 5.293955920339377e-23,
+    "metric_flux_tangent": 0.0,
+    "mode_overlap_tangent": 7.556707143397946e-16,
+    "norm_flux": 2.6645352591003757e-15,
+    "phase_residual": 1.4436276631748162e-15,
+    "signed_operator_and_jet_residual": 0.0,
+    "signed_source_residual": 0.0,
+    "spatial_source_refinement": 7.607783986254358e-09,
+    "tangent_boundary_trace": 4.292727786841548e-16,
+    "temporal_source_refinement": 1.4998221536249856e-09
+  },
+  "numerics": {
+    "coefficient_source": "https://github.com/ranocha/SummationByPartsOperators.jl/blob/21414744283d75d6172cd1763dd5becff5988909/src/SBP_coefficients/MattssonNordstr%C3%B6m2004.jl#L36-L74",
+    "configurations": [
+      [
+        401,
+        64
+      ],
+      [
+        801,
+        64
+      ],
+      [
+        801,
+        128
+      ]
+    ],
+    "finite_difference_control": "four fields on mixed family14, 401 points and64 steps; independent nonzero-history perturbations",
+    "reference_grid_drift": "reported separately; no numerical defect assigned as physical stress",
+    "reference_sampling": "reused authenticated 801-point reference fields; nested spatial restriction only",
+    "spatial_operator": "imported SBP(4,2); existing NSC split/SAT expression",
+    "temporal_method": "same midpoint augmented exponential for state and all tangents"
+  },
+  "payload": {
+    "bytes": 1769572,
+    "path": "results/development/artifacts/nsc-transmitting-history-jets.6099b2251cd3d65fda32965a61df1ae2144a9729579be46b458e2cb3352c88e7.npz",
+    "sha256": "6099b2251cd3d65fda32965a61df1ae2144a9729579be46b458e2cb3352c88e7"
+  },
+  "per_family": {
+    "0_1": {
+      "CTP_tangent": 3.1838034905007754e-19,
+      "CTP_trace": 5.003777564622124e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 0,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.5025882735121644e-17,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.0228438210734989e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.00021558502969530447,
+          -1.3463985429007149e-05,
+          -0.00014141888905392822,
+          0.0
+        ],
+        "801_128": [
+          0.0002155850020914349,
+          -1.3463983324522194e-05,
+          -0.00014141887084779408,
+          0.0
+        ],
+        "801_64": [
+          0.00021558502971272725,
+          -1.3463985514561058e-05,
+          -0.00014141888903649533,
+          0.0
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 8.555390892798533e-14,
+      "tangent_boundary_trace": 3.311007070027306e-16,
+      "temporal_source_refinement": 2.7621292351866916e-11
+    },
+    "10_-1": {
+      "CTP_tangent": 4.038766237563599e-18,
+      "CTP_trace": 1.1556577464170686e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 10,
+      "imaginary_real_source": 1.0339757656912846e-25,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 6.261270456082968e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 7.278449193530734e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.008272264865326688,
+          4.927390644253194e-06,
+          -5.486072902878276e-06,
+          -0.007750091022998923
+        ],
+        "801_128": [
+          0.008272262891219729,
+          4.923905618490403e-06,
+          -5.4845822675741275e-06,
+          -0.007750091027426088
+        ],
+        "801_64": [
+          0.008272263948891575,
+          4.923903564530888e-06,
+          -5.484574506553184e-06,
+          -0.0077500920198618
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 3.4870797223059483e-09,
+      "tangent_boundary_trace": 3.8991886750375117e-16,
+      "temporal_source_refinement": 1.0576718459387457e-09
+    },
+    "10_1": {
+      "CTP_tangent": 4.038766237563599e-18,
+      "CTP_trace": 1.1286225985602146e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 10,
+      "imaginary_real_source": 3.2311742677852644e-27,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 6.261270456082968e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 7.278449193530734e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.008272264865326683,
+          4.9273906442512156e-06,
+          -5.486072902877867e-06,
+          -0.007750091022998919
+        ],
+        "801_128": [
+          0.008272262891219724,
+          4.923905618487936e-06,
+          -5.484582267573365e-06,
+          -0.007750091027426083
+        ],
+        "801_64": [
+          0.008272263948891575,
+          4.923903564530021e-06,
+          -5.484574506551058e-06,
+          -0.007750092019861798
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.487079721194641e-09,
+      "tangent_boundary_trace": 3.8991886750375117e-16,
+      "temporal_source_refinement": 1.0576718511429162e-09
+    },
+    "11_-1": {
+      "CTP_tangent": 5.466626485665506e-18,
+      "CTP_trace": 1.9105705579887393e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 11,
+      "imaginary_real_source": 1.6543612251060553e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 7.556707143397946e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.035034203090691e-07,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.00897992707627772,
+          5.352065836140737e-06,
+          -5.081615500157511e-06,
+          -0.008414200649496129
+        ],
+        "801_128": [
+          0.008979924610226576,
+          5.346822721991322e-06,
+          -5.079480774905253e-06,
+          -0.008414200997264852
+        ],
+        "801_64": [
+          0.008979925757589895,
+          5.346819858637888e-06,
+          -5.079471015815252e-06,
+          -0.008414202074715368
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 5.2459775028493565e-09,
+      "tangent_boundary_trace": 4.0779291653350096e-16,
+      "temporal_source_refinement": 1.1473633189373889e-09
+    },
+    "11_1": {
+      "CTP_tangent": 5.466626485665506e-18,
+      "CTP_trace": 3.1062432570336646e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 11,
+      "imaginary_real_source": 1.6543612251060553e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 7.556707143397946e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.035034203090691e-07,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.008979927076277724,
+          5.352065836141144e-06,
+          -5.081615500158546e-06,
+          -0.008414200649496132
+        ],
+        "801_128": [
+          0.008979924610226583,
+          5.346822721991512e-06,
+          -5.079480774905405e-06,
+          -0.008414200997264856
+        ],
+        "801_64": [
+          0.008979925757589904,
+          5.346819858639541e-06,
+          -5.079471015815787e-06,
+          -0.008414202074715372
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 5.245977501602524e-09,
+      "tangent_boundary_trace": 4.0779291653350096e-16,
+      "temporal_source_refinement": 1.1473633206721123e-09
+    },
+    "12_-1": {
+      "CTP_tangent": 3.949139851088125e-18,
+      "CTP_trace": 1.6679895943845376e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 12,
+      "imaginary_real_source": 1.6543612251060553e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 7.367755614317053e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.4326124760067762e-07,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.009686303939869283,
+          5.777143279131339e-06,
+          -4.736743098327021e-06,
+          -0.009077026725680669
+        ],
+        "801_128": [
+          0.009686300867791622,
+          5.769539318604185e-06,
+          -4.733791744671304e-06,
+          -0.00907702752852957
+        ],
+        "801_64": [
+          0.009686302104529464,
+          5.769535495145085e-06,
+          -4.73377976020291e-06,
+          -0.009077028690850244
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 7.607783986254358e-09,
+      "tangent_boundary_trace": 4.292727786841548e-16,
+      "temporal_source_refinement": 1.2367378423444597e-09
+    },
+    "12_1": {
+      "CTP_tangent": 3.949139851088125e-18,
+      "CTP_trace": 1.4985303755672039e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 12,
+      "imaginary_real_source": 3.308722450212111e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 7.367755614317053e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.4326124760067762e-07,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.009686303939869285,
+          5.7771432791287915e-06,
+          -4.736743098326706e-06,
+          -0.009077026725680674
+        ],
+        "801_128": [
+          0.009686300867791622,
+          5.769539318601502e-06,
+          -4.733791744670398e-06,
+          -0.009077027528529569
+        ],
+        "801_64": [
+          0.009686302104529467,
+          5.769535495142835e-06,
+          -4.733779760202163e-06,
+          -0.00907702869085025
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 7.607783985956202e-09,
+      "tangent_boundary_trace": 4.292727786841548e-16,
+      "temporal_source_refinement": 1.2367378458139067e-09
+    },
+    "13_1": {
+      "CTP_tangent": 8.294351455017757e-19,
+      "CTP_trace": 8.76308523493777e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 13,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 1.1041841968951e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.9611198155836156e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.001765707779803223,
+          2.2944620144065117e-06,
+          -4.788094917815643e-05,
+          0.0
+        ],
+        "801_128": [
+          0.0017657075553736664,
+          2.2944718357337213e-06,
+          -4.788094486977377e-05,
+          0.0
+        ],
+        "801_64": [
+          0.0017657077813229773,
+          2.2944706476871527e-06,
+          -4.788095020439944e-05,
+          0.0
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 8.633280640943722e-12,
+      "tangent_boundary_trace": 2.7887160379958877e-16,
+      "temporal_source_refinement": 2.259493109106614e-10
+    },
+    "14_-1": {
+      "CTP_tangent": 1.576202075012136e-18,
+      "CTP_trace": 5.091343231919983e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 14,
+      "history_finite_difference": 2.596425240250017e-10,
+      "history_finite_difference_by_field": [
+        2.359678599096575e-10,
+        2.596425240250017e-10,
+        2.452966817803721e-10,
+        2.4023660936719746e-10
+      ],
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 1.4563414267459548e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 7.370453464107555e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.002900144020364497,
+          2.3824553194678577e-06,
+          -2.8191948608469114e-05,
+          -0.001754381740772404
+        ],
+        "801_128": [
+          0.0029001436477878954,
+          2.3824684716218655e-06,
+          -2.8191943027644914e-05,
+          -0.0017543815175567262
+        ],
+        "801_64": [
+          0.002900144020036695,
+          2.3824681654677834e-06,
+          -2.8191946075840954e-05,
+          -0.0017543817423543166
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.2845999925684831e-11,
+      "tangent_boundary_trace": 2.743776781179395e-16,
+      "temporal_source_refinement": 3.7224879949337986e-10
+    },
+    "14_1": {
+      "CTP_tangent": 1.576202075012136e-18,
+      "CTP_trace": 9.412017987780592e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 14,
+      "history_finite_difference": 2.596425240250017e-10,
+      "history_finite_difference_by_field": [
+        2.359678599096575e-10,
+        2.596425240250017e-10,
+        2.452966817803721e-10,
+        2.4023660936719746e-10
+      ],
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 1.4563414267459548e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 7.370453464107555e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.002900177744182316,
+          2.4945990651282536e-06,
+          -2.8271859692080993e-05,
+          -0.0017543131730515852
+        ],
+        "801_128": [
+          0.002900177372225331,
+          2.4946144338989357e-06,
+          -2.827185589680675e-05,
+          -0.0017543129502514915
+        ],
+        "801_64": [
+          0.0029001777436220497,
+          2.4946134380433567e-06,
+          -2.8271857987418238e-05,
+          -0.001754313174095704
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.4372915103097808e-11,
+      "tangent_boundary_trace": 2.743776781179395e-16,
+      "temporal_source_refinement": 3.7139671850081046e-10
+    },
+    "15_-1": {
+      "CTP_tangent": 1.6259370522130765e-18,
+      "CTP_trace": 1.5969218033703731e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 15,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.3479724158959924e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.398037077033082e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.003983184877173571,
+          2.801920081932737e-06,
+          -2.1101089239284616e-05,
+          -0.003025517825642269
+        ],
+        "801_128": [
+          0.003983184358056641,
+          2.801928015569395e-06,
+          -2.1101072972843412e-05,
+          -0.0030255174449329977
+        ],
+        "801_64": [
+          0.003983184869582467,
+          2.8019281547081226e-06,
+          -2.110107502271894e-05,
+          -0.0030255178324703567
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.4216565675606672e-11,
+      "tangent_boundary_trace": 2.7106328522878018e-16,
+      "temporal_source_refinement": 5.115258260371403e-10
+    },
+    "15_1": {
+      "CTP_tangent": 1.6259370522130765e-18,
+      "CTP_trace": 1.13146393811494e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 15,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.3479724158959924e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.398037077033082e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.003983236935145243,
+          2.9750536805477773e-06,
+          -2.1224456870566764e-05,
+          -0.0030254119808901573
+        ],
+        "801_128": [
+          0.003983236418892583,
+          2.975067230295608e-06,
+          -2.1224445359497564e-05,
+          -0.0030254116017837457
+        ],
+        "801_64": [
+          0.00398323692903319,
+          2.97506607745284e-06,
+          -2.122444576965224e-05,
+          -0.0030254119879976676
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.239690506282462e-11,
+      "tangent_boundary_trace": 2.7106328522878018e-16,
+      "temporal_source_refinement": 5.101406068408476e-10
+    },
+    "16_-1": {
+      "CTP_tangent": 3.243204124334948e-18,
+      "CTP_trace": 6.26910260086589e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 16,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.854779879769115e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.6774796075735317e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.005043135163951381,
+          3.29645812184801e-06,
+          -1.6970157380408946e-05,
+          -0.0041626907158234415
+        ],
+        "801_128": [
+          0.005043134491016094,
+          3.296434154769905e-06,
+          -1.6970113542984295e-05,
+          -0.00416269020327543
+        ],
+        "801_64": [
+          0.005043135138706437,
+          3.2964346827071096e-06,
+          -1.6970114846112765e-05,
+          -0.00416269073630273
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 4.253429618066018e-11,
+      "tangent_boundary_trace": 2.7490216484500776e-16,
+      "temporal_source_refinement": 6.476903431987258e-10
+    },
+    "16_1": {
+      "CTP_tangent": 3.243204124334948e-18,
+      "CTP_trace": 1.414011697214738e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 16,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.854779879769115e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.6774796075735317e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.005043203713686489,
+          3.5244775198329495e-06,
+          -1.7132628497207516e-05,
+          -0.004162551338542781
+        ],
+        "801_128": [
+          0.005043203047732752,
+          3.524464587311034e-06,
+          -1.713259422889098e-05,
+          -0.004162550831366081
+        ],
+        "801_64": [
+          0.0050432036934806804,
+          3.524463029022922e-06,
+          -1.7132593099296107e-05,
+          -0.00416255136290168
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.539791140869282e-11,
+      "tangent_boundary_trace": 2.7490216484500776e-16,
+      "temporal_source_refinement": 6.457479282198642e-10
+    },
+    "17_-1": {
+      "CTP_tangent": 2.766701746649725e-18,
+      "CTP_trace": 7.909037796089021e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 17,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.060201685278755e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 4.969582831079134e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.00609256762843551,
+          3.823486108967851e-06,
+          -1.4201277438468241e-05,
+          -0.00524099142738256
+        ],
+        "801_128": [
+          0.006092566784960001,
+          3.8233739538189135e-06,
+          -1.4201176400421893e-05,
+          -0.005240990806162062
+        ],
+        "801_64": [
+          0.0060925675673440104,
+          3.823374876349981e-06,
+          -1.4201177008978655e-05,
+          -0.005240991477033447
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.1123261787018314e-10,
+      "tangent_boundary_trace": 2.9337488721317183e-16,
+      "temporal_source_refinement": 7.823840091417122e-10
+    },
+    "17_1": {
+      "CTP_tangent": 2.766701746649725e-18,
+      "CTP_trace": 2.034520199745626e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 17,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.060201685278755e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 4.969582831079134e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006092651772689681,
+          4.1034349149574934e-06,
+          -1.4400741253092858e-05,
+          -0.00524082033774868
+        ],
+        "801_128": [
+          0.006092650942562358,
+          4.103341622518507e-06,
+          -1.4400656778292143e-05,
+          -0.005240819731055937
+        ],
+        "801_64": [
+          0.00609265172238449,
+          4.103339406528989e-06,
+          -1.4400653990224125e-05,
+          -0.005240820400472793
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 9.550842850424533e-11,
+      "tangent_boundary_trace": 2.9337488721317183e-16,
+      "temporal_source_refinement": 7.79822132215835e-10
+    },
+    "18_-1": {
+      "CTP_tangent": 2.538207261317878e-18,
+      "CTP_trace": 1.1665496568263834e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 18,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.897767167584095e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 8.793426167441223e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.007136315301477931,
+          4.368943325085833e-06,
+          -1.2210893284824034e-05,
+          -0.006286841790301286
+        ],
+        "801_128": [
+          0.007136314259325826,
+          4.368642898213652e-06,
+          -1.2210687668236943e-05,
+          -0.00628684109000871
+        ],
+        "801_64": [
+          0.007136315175553168,
+          4.368644247227163e-06,
+          -1.2210687551683093e-05,
+          -0.006286841894447924
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.9907785867007777e-10,
+      "tangent_boundary_trace": 3.1311624469374934e-16,
+      "temporal_source_refinement": 9.162273422597123e-10
+    },
+    "18_1": {
+      "CTP_tangent": 2.538207261317878e-18,
+      "CTP_trace": 1.4916412535343443e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 18,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.897767167584095e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 8.793426167441223e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.007136414421621532,
+          4.698796461315602e-06,
+          -1.2445901974714067e-05,
+          -0.006286640237986278
+        ],
+        "801_128": [
+          0.007136413401784057,
+          4.698525421112463e-06,
+          -1.2445722334965662e-05,
+          -0.006286639570895234
+        ],
+        "801_64": [
+          0.0071364143147462904,
+          4.698522268483806e-06,
+          -1.2445717645660313e-05,
+          -0.006286640374145225
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 2.741928317967317e-10,
+      "tangent_boundary_trace": 3.1311624469374934e-16,
+      "temporal_source_refinement": 9.129622335901644e-10
+    },
+    "19_-1": {
+      "CTP_tangent": 4.461067065111365e-18,
+      "CTP_trace": 2.230317159459378e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 19,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 4.220764384040162e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.4802990085788508e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.008176621056823265,
+          4.926331237597694e-06,
+          -1.0710503235226017e-05,
+          -0.007312688119217606
+        ],
+        "801_128": [
+          0.008176619773644811,
+          4.925682573059351e-06,
+          -1.071012292155728e-05,
+          -0.007312687380287158
+        ],
+        "801_64": [
+          0.00817662082314705,
+          4.925684395097938e-06,
+          -1.0710122002384626e-05,
+          -0.007312688315599274
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 6.468424997561374e-10,
+      "tangent_boundary_trace": 3.236078714779123e-16,
+      "temporal_source_refinement": 1.049502238587019e-09
+    },
+    "19_1": {
+      "CTP_tangent": 4.461067065111365e-18,
+      "CTP_trace": 1.810175582731444e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 19,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 4.220764384040162e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.4802990085788508e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.008176734633500162,
+          5.304398425831419e-06,
+          -1.0979846933228303e-05,
+          -0.007312457146466229
+        ],
+        "801_128": [
+          0.008176733384511147,
+          5.303792545900557e-06,
+          -1.09795045637419e-05,
+          -0.007312456474553135
+        ],
+        "801_64": [
+          0.008176734429945078,
+          5.303788145614324e-06,
+          -1.0979497648925575e-05,
+          -0.007312457409195575
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 6.102802170950342e-10,
+      "tangent_boundary_trace": 3.236078714779123e-16,
+      "temporal_source_refinement": 1.0454339303966886e-09
+    },
+    "1_-1": {
+      "CTP_tangent": 9.632373638325636e-19,
+      "CTP_trace": 6.174870185483849e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 1,
+      "imaginary_real_source": 5.293955920339377e-23,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 1.6708368082191812e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 2.3920347542831033e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0015532920605818338,
+          -6.23353409777831e-06,
+          -2.2346224834489062e-05,
+          -0.0014279102085876711
+        ],
+        "801_128": [
+          0.001553291860008658,
+          -6.233529429382459e-06,
+          -2.2346220952749186e-05,
+          -0.0014279100261606831
+        ],
+        "801_64": [
+          0.0015532920594533315,
+          -6.233530166164842e-06,
+          -2.2346223564444334e-05,
+          -0.0014279102090913856
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 3.9316134678132105e-12,
+      "tangent_boundary_trace": 2.790181664013642e-16,
+      "temporal_source_refinement": 1.9944467345017758e-10
+    },
+    "1_1": {
+      "CTP_tangent": 9.632373638325636e-19,
+      "CTP_trace": 6.051521012539942e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 1,
+      "imaginary_real_source": 5.293955920339377e-23,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 1.6708368082191812e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 2.3920347542831033e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0015532920605818338,
+          -6.233534097778861e-06,
+          -2.2346224834488862e-05,
+          -0.0014279102085876713
+        ],
+        "801_128": [
+          0.0015532918600086561,
+          -6.233529429383058e-06,
+          -2.234622095274895e-05,
+          -0.0014279100261606831
+        ],
+        "801_64": [
+          0.0015532920594533309,
+          -6.233530166165393e-06,
+          -2.234622356444398e-05,
+          -0.0014279102090913858
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.9316134678132105e-12,
+      "tangent_boundary_trace": 2.790181664013642e-16,
+      "temporal_source_refinement": 1.9944467475122019e-10
+    },
+    "20_-1": {
+      "CTP_tangent": 8.124351760557428e-18,
+      "CTP_trace": 1.6805795418015361e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 20,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 7.506543563749122e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.3811653080690625e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.009214677627027705,
+          5.492220936741593e-06,
+          -9.53897711411165e-06,
+          -0.008325275855023018
+        ],
+        "801_128": [
+          0.009214676043332802,
+          5.490986706260781e-06,
+          -9.538324650106625e-06,
+          -0.00832527513167914
+        ],
+        "801_64": [
+          0.009214677225687574,
+          5.490989056819006e-06,
+          -9.538322821125814e-06,
+          -0.00832527619602308
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.231879922586809e-09,
+      "tangent_boundary_trace": 3.274096688710613e-16,
+      "temporal_source_refinement": 1.1823547713812887e-09
+    },
+    "20_1": {
+      "CTP_tangent": 8.124351760557428e-18,
+      "CTP_trace": 1.8143903781451315e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 20,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 7.506543563749122e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.3811653080690625e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.009214805173096134,
+          5.9169234818132795e-06,
+          -9.84152491765648e-06,
+          -0.008325016431307359
+        ],
+        "801_128": [
+          0.009214803638633171,
+          5.915748368715224e-06,
+          -9.840924938400597e-06,
+          -0.008325015831177503
+        ],
+        "801_64": [
+          0.009214804816003008,
+          5.915742376652421e-06,
+          -9.840915413865984e-06,
+          -0.008325016895651368
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.181105160858809e-09,
+      "tangent_boundary_trace": 3.274096688710613e-16,
+      "temporal_source_refinement": 1.1773698370409758e-09
+    },
+    "21_-1": {
+      "CTP_tangent": 6.23298389976074e-18,
+      "CTP_trace": 1.0956900568326409e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 21,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 4.721635607763214e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.674912980020792e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.010251180838439943,
+          6.064670983411019e-06,
+          -8.598896422585946e-06,
+          -0.009328605228516994
+        ],
+        "801_128": [
+          0.010251178874912488,
+          6.062518142260499e-06,
+          -8.59784329520699e-06,
+          -0.009328604590644576
+        ],
+        "801_64": [
+          0.010251180189780495,
+          6.062521082001777e-06,
+          -8.597840429886423e-06,
+          -0.009328605782684731
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.1499014092422886e-09,
+      "tangent_boundary_trace": 3.4858844007189343e-16,
+      "temporal_source_refinement": 1.3148680078761688e-09
+    },
+    "21_1": {
+      "CTP_tangent": 6.23298389976074e-18,
+      "CTP_trace": 1.6255621048994091e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 21,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 4.721635607763214e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.674912980020792e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.010251321869335677,
+          6.534442950936525e-06,
+          -8.933526054412251e-06,
+          -0.009328318309035799
+        ],
+        "801_128": [
+          0.0102513199734556,
+          6.532368429840684e-06,
+          -8.932542421743406e-06,
+          -0.009328317881870565
+        ],
+        "801_64": [
+          0.010251321282297138,
+          6.532360469569651e-06,
+          -8.932529857366433e-06,
+          -0.009328319075144257
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 2.082481366874351e-09,
+      "tangent_boundary_trace": 3.4858844007189343e-16,
+      "temporal_source_refinement": 1.3088415386219854e-09
+    },
+    "22_-1": {
+      "CTP_tangent": 5.555930642760116e-18,
+      "CTP_trace": 1.5060518771783603e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 22,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.887846720064157e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 5.472925121336923e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.011286565038870402,
+          6.642544730757743e-06,
+          -7.827823353885626e-06,
+          -0.010325207129003972
+        ],
+        "801_128": [
+          0.011286562594214048,
+          6.639025827144611e-06,
+          -7.826207629993035e-06,
+          -0.010325206662812367
+        ],
+        "801_64": [
+          0.011286564041307252,
+          6.639029418897157e-06,
+          -7.826203589781856e-06,
+          -0.010325207981533954
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 3.5153118605856914e-09,
+      "tangent_boundary_trace": 3.8440373647115327e-16,
+      "temporal_source_refinement": 1.4470932039462037e-09
+    },
+    "22_1": {
+      "CTP_tangent": 5.555930642760116e-18,
+      "CTP_trace": 2.0448963533494912e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 22,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.887846720064157e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 5.472925121336923e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.01128671905829595,
+          7.1557850588911676e-06,
+          -8.193387122834583e-06,
+          -0.010324893682014415
+        ],
+        "801_128": [
+          0.011286716703223388,
+          7.152366350924059e-06,
+          -8.1918601398709e-06,
+          -0.01032489355591486
+        ],
+        "801_64": [
+          0.011286718143113857,
+          7.152356015366779e-06,
+          -8.191844070462223e-06,
+          -0.010324894877299064
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.4290435243881923e-09,
+      "tangent_boundary_trace": 3.8440373647115327e-16,
+      "temporal_source_refinement": 1.4398904690099412e-09
+    },
+    "23_1": {
+      "CTP_tangent": 1.868842904393794e-18,
+      "CTP_trace": 1.1433124990585438e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 23,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 1.9435871552321177e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.3782275845647626e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0034896314085552287,
+          4.545152092434978e-06,
+          -2.4660174425502827e-05,
+          0.0
+        ],
+        "801_128": [
+          0.003489630969615595,
+          4.545193447194439e-06,
+          -2.4660173552731002e-05,
+          0.0
+        ],
+        "801_64": [
+          0.003489631415636091,
+          4.545190009784224e-06,
+          -2.4660173992343873e-05,
+          0.0
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.7917349246302176e-11,
+      "tangent_boundary_trace": 2.6905801563304356e-16,
+      "temporal_source_refinement": 4.4602049614414496e-10
+    },
+    "24_-1": {
+      "CTP_tangent": 1.521750265687477e-18,
+      "CTP_trace": 9.952107734645995e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 24,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.6449840307621206e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.283177113735413e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.004180189128238922,
+          4.392119477550013e-06,
+          -2.0506597998693695e-05,
+          -0.0012295457230107297
+        ],
+        "801_128": [
+          0.004180188592398623,
+          4.392151342658655e-06,
+          -2.0506583372876478e-05,
+          -0.001229545569854705
+        ],
+        "801_64": [
+          0.004180189128072444,
+          4.3921489341701805e-06,
+          -2.0506583994742298e-05,
+          -0.0012295457270116727
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.94566201671561e-11,
+      "tangent_boundary_trace": 2.76266954055976e-16,
+      "temporal_source_refinement": 5.356738212725087e-10
+    },
+    "24_1": {
+      "CTP_tangent": 1.521750265687477e-18,
+      "CTP_trace": 1.330238773883277e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 24,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.6449840307621206e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.283177113735413e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.004180256278540323,
+          4.6154893170074e-06,
+          -2.0665744095296236e-05,
+          -0.001229409223650754
+        ],
+        "801_128": [
+          0.004180255747711007,
+          4.61552991378597e-06,
+          -2.0665737111019493e-05,
+          -0.0012294090716801194
+        ],
+        "801_64": [
+          0.004180256281577229,
+          4.615525784444543e-06,
+          -2.0665735573267342e-05,
+          -0.0012294092271897543
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.64674371429452e-11,
+      "tangent_boundary_trace": 2.76266954055976e-16,
+      "temporal_source_refinement": 5.338662220633061e-10
+    },
+    "25_-1": {
+      "CTP_tangent": 3.028151315984657e-18,
+      "CTP_trace": 1.1127399036185839e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 25,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.056265732929336e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 4.710892398711258e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.004991734879423533,
+          4.469068728672141e-06,
+          -1.7258092266731585e-05,
+          -0.0024358758308300026
+        ],
+        "801_128": [
+          0.004991734223231987,
+          4.46907253384254e-06,
+          -1.725805108122333e-05,
+          -0.0024358755319382197
+        ],
+        "801_64": [
+          0.004991734863593888,
+          4.4690708092384106e-06,
+          -1.7258051468245772e-05,
+          -0.002435875842809412
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 4.079848581233425e-11,
+      "tangent_boundary_trace": 2.798364438829527e-16,
+      "temporal_source_refinement": 6.403619006584149e-10
+    },
+    "25_1": {
+      "CTP_tangent": 3.028151315984657e-18,
+      "CTP_trace": 1.994974349020691e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 25,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.056265732929336e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 4.710892398711258e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.004991838536183259,
+          4.813918659881804e-06,
+          -1.7503783438089452e-05,
+          -0.0024356651212233925
+        ],
+        "801_128": [
+          0.00499183789148884,
+          4.8139401943162504e-06,
+          -1.750375790419974e-05,
+          -0.0024356648284567612
+        ],
+        "801_64": [
+          0.004991838528921247,
+          4.813935360484592e-06,
+          -1.750375463577838e-05,
+          -0.0024356651370801966
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 2.8802311071238077e-11,
+      "tangent_boundary_trace": 2.798364438829527e-16,
+      "temporal_source_refinement": 6.374324072050408e-10
+    },
+    "26_-1": {
+      "CTP_tangent": 2.3404708233242e-18,
+      "CTP_trace": 9.44284437106859e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 26,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.852763173004607e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 7.0297820648915125e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.005872625163990698,
+          4.680618761572703e-06,
+          -1.4757914355357755e-05,
+          -0.0035963078482182977
+        ],
+        "801_128": [
+          0.005872624363791205,
+          4.680552790792974e-06,
+          -1.475782262363158e-05,
+          -0.0035963074180914443
+        ],
+        "801_64": [
+          0.005872625117599138,
+          4.6805517734264176e-06,
+          -1.4757822764253976e-05,
+          -0.003596307876657626
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 9.159110377921496e-11,
+      "tangent_boundary_trace": 3.016260098114549e-16,
+      "temporal_source_refinement": 7.538079327407132e-10
+    },
+    "26_1": {
+      "CTP_tangent": 2.3404708233242e-18,
+      "CTP_trace": 2.6902825195980647e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 26,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.852763173004607e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 7.0297820648915125e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.005872761658466632,
+          5.134790071437129e-06,
+          -1.508148093366105e-05,
+          -0.003596030380649154
+        ],
+        "801_128": [
+          0.005872760879735984,
+          5.134754492152574e-06,
+          -1.5081416186460192e-05,
+          -0.0035960299690879455
+        ],
+        "801_64": [
+          0.005872761629450685,
+          5.13474861374823e-06,
+          -1.5081410968810102e-05,
+          -0.003596030425193981
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 6.996485094804114e-11,
+      "tangent_boundary_trace": 3.016260098114549e-16,
+      "temporal_source_refinement": 7.497147009108418e-10
+    },
+    "27_-1": {
+      "CTP_tangent": 2.1509155458654126e-18,
+      "CTP_trace": 1.2759066325839305e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 27,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.785419832266028e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.0667789216706743e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006795527584384023,
+          4.981519405498875e-06,
+          -1.281210089884395e-05,
+          -0.0047174477375399124
+        ],
+        "801_128": [
+          0.006795526611254853,
+          4.981308597682929e-06,
+          -1.2811920370574326e-05,
+          -0.004717447195762593
+        ],
+        "801_64": [
+          0.006795527483795621,
+          4.981308397017896e-06,
+          -1.2811920276004927e-05,
+          -0.004717447796835807
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.1100848097890118e-10,
+      "tangent_boundary_trace": 3.047032046605803e-16,
+      "temporal_source_refinement": 8.725407679363584e-10
+    },
+    "27_1": {
+      "CTP_tangent": 2.1509155458654126e-18,
+      "CTP_trace": 1.782534515382372e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 27,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.785419832266028e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.0667789216706743e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006795695129749486,
+          5.5391228316927226e-06,
+          -1.320933871623723e-05,
+          -0.004717107133122855
+        ],
+        "801_128": [
+          0.006795694192395696,
+          5.538959617753153e-06,
+          -1.3209200588084085e-05,
+          -0.004717106635901332
+        ],
+        "801_64": [
+          0.006795695059558413,
+          5.538952299440639e-06,
+          -1.3209193098750902e-05,
+          -0.004717107234704382
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.7053225208362756e-10,
+      "tangent_boundary_trace": 3.047032046605803e-16,
+      "temporal_source_refinement": 8.671627166334517e-10
+    },
+    "28_-1": {
+      "CTP_tangent": 2.7909044180888864e-18,
+      "CTP_trace": 2.324338589346844e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 28,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.3610687035593875e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.6176181877531666e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.007745426137465584,
+          5.344008882433019e-06,
+          -1.1272677972643527e-05,
+          -0.00580790209196703
+        ],
+        "801_128": [
+          0.007745424952896771,
+          5.343531217320125e-06,
+          -1.1272351696273253e-05,
+          -0.005807901464814755
+        ],
+        "801_64": [
+          0.007745425947544975,
+          5.343532002132715e-06,
+          -1.1272351382426863e-05,
+          -0.00580790220428172
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 4.768803003039109e-10,
+      "tangent_boundary_trace": 3.1879129324457515e-16,
+      "temporal_source_refinement": 9.946482040779081e-10
+    },
+    "28_1": {
+      "CTP_tangent": 2.7909044180888864e-18,
+      "CTP_trace": 1.192439078960373e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 28,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.3610687035593875e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 1.6176181877531666e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.007745623501622102,
+          6.001010050066681e-06,
+          -1.1740703101630861e-05,
+          -0.005807500835756949
+        ],
+        "801_128": [
+          0.0077456223721924615,
+          6.000602303451725e-06,
+          -1.1740439209084994e-05,
+          -0.005807500301357848
+        ],
+        "801_64": [
+          0.00774562336001302,
+          6.000593101233311e-06,
+          -1.1740429045954918e-05,
+          -0.005807501039194186
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 4.169488333695577e-10,
+      "tangent_boundary_trace": 3.1879129324457515e-16,
+      "temporal_source_refinement": 9.87820558857877e-10
+    },
+    "29_-1": {
+      "CTP_tangent": 4.0969188741760856e-18,
+      "CTP_trace": 1.4615553504872952e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 29,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.133374763649967e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.423000720690164e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.008713532471518782,
+          5.750569970807508e-06,
+          -1.0033329766969232e-05,
+          -0.006874905553504935
+        ],
+        "801_128": [
+          0.008713531023732242,
+          5.749640950882283e-06,
+          -1.0032777613704334e-05,
+          -0.0068749048758093385
+        ],
+        "801_64": [
+          0.00871353214274152,
+          5.749642935864367e-06,
+          -1.0032777098455532e-05,
+          -0.006874905750456272
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 9.27034943140571e-10,
+      "tangent_boundary_trace": 3.439553249575541e-16,
+      "temporal_source_refinement": 1.1190092776003357e-09
+    },
+    "29_1": {
+      "CTP_tangent": 4.0969188741760856e-18,
+      "CTP_trace": 1.0087633006206683e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 29,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.133374763649967e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 2.423000720690164e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.00871375861999548,
+          6.50360124758117e-06,
+          -1.0569732098321571e-05,
+          -0.006874445717328162
+        ],
+        "801_128": [
+          0.008713757252389077,
+          6.502769939051723e-06,
+          -1.0569267137749403e-05,
+          -0.006874445214374315
+        ],
+        "801_64": [
+          0.008713758362923762,
+          6.502758360710275e-06,
+          -1.056925383113692e-05,
+          -0.006874446088532476
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 8.428868708955459e-10,
+      "tangent_boundary_trace": 3.439553249575541e-16,
+      "temporal_source_refinement": 1.1105346850448505e-09
+    },
+    "2_-1": {
+      "CTP_tangent": 1.0847059104522306e-18,
+      "CTP_trace": 5.2142818837382695e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 2,
+      "imaginary_real_source": 1.3234889800848443e-23,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.2422936607558627e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 6.643744477792498e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0024290518140916077,
+          7.880490740826813e-07,
+          -1.7029827755795896e-05,
+          -0.0022559294557170893
+        ],
+        "801_128": [
+          0.0024290514975763957,
+          7.880529025987174e-07,
+          -1.7029819644678202e-05,
+          -0.002255929170227119
+        ],
+        "801_64": [
+          0.0024290518093882567,
+          7.880530795703817e-07,
+          -1.7029821283490867e-05,
+          -0.00225592945923646
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 6.472305029030017e-12,
+      "tangent_boundary_trace": 2.576629443493973e-16,
+      "temporal_source_refinement": 3.1181186105344594e-10
+    },
+    "2_1": {
+      "CTP_tangent": 1.0847059104522306e-18,
+      "CTP_trace": 5.759791344793954e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 2,
+      "imaginary_real_source": 1.3234889800848443e-23,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.2422936607558627e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 6.643744477792498e-10,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0024290518140916073,
+          7.880490740823289e-07,
+          -1.7029827755795906e-05,
+          -0.0022559294557170893
+        ],
+        "801_128": [
+          0.002429051497576395,
+          7.88052902599151e-07,
+          -1.702981964467806e-05,
+          -0.0022559291702271183
+        ],
+        "801_64": [
+          0.002429051809388257,
+          7.88053079569948e-07,
+          -1.7029821283490704e-05,
+          -0.00225592945923646
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 6.4723052018247386e-12,
+      "tangent_boundary_trace": 2.576629443493973e-16,
+      "temporal_source_refinement": 3.1181186235448854e-10
+    },
+    "30_-1": {
+      "CTP_tangent": 4.755682002596558e-18,
+      "CTP_trace": 1.7280530915171795e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 30,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.647850449853784e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.564513905099993e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.009694422576334051,
+          6.1898084308399355e-06,
+          -9.018648641632763e-06,
+          -0.007923987328369976
+        ],
+        "801_128": [
+          0.00969442079706048,
+          6.1881641818970704e-06,
+          -9.017763249945588e-06,
+          -0.007923986644974705
+        ],
+        "801_64": [
+          0.00969442204199214,
+          6.188167618429244e-06,
+          -9.01776255381253e-06,
+          -0.00792398765227274
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.640812410691906e-09,
+      "tangent_boundary_trace": 3.5509201750063385e-16,
+      "temporal_source_refinement": 1.2449316594970172e-09
+    },
+    "30_1": {
+      "CTP_tangent": 4.755682002596558e-18,
+      "CTP_trace": 8.304893350032398e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 30,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.647850449853784e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 3.564513905099993e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.009694676538762461,
+          7.035724326695156e-06,
+          -9.621175250792294e-06,
+          -0.007923470838943975
+        ],
+        "801_128": [
+          0.009694674870902583,
+          7.03421115650778e-06,
+          -9.620406708634354e-06,
+          -0.007923470460805226
+        ],
+        "801_64": [
+          0.009694676105488458,
+          7.0341966624708685e-06,
+          -9.620389731026832e-06,
+          -0.007923471469310231
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.5276642242878502e-09,
+      "tangent_boundary_trace": 3.5509201750063385e-16,
+      "temporal_source_refinement": 1.2345858745044236e-09
+    },
+    "31_-1": {
+      "CTP_tangent": 4.251813055254458e-18,
+      "CTP_trace": 1.1170589754882412e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 31,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.594315114139762e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 5.1406241837956134e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.010684595740002883,
+          6.6541270733430126e-06,
+          -8.174966167209168e-06,
+          -0.008959246769203283
+        ],
+        "801_128": [
+          0.010684593541770388,
+          6.6514065881567936e-06,
+          -8.173609781761178e-06,
+          -0.008959246135638862
+        ],
+        "801_64": [
+          0.010684594913739139,
+          6.6514117569461e-06,
+          -8.173608929543102e-06,
+          -0.008959247273565871
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.715316396912932e-09,
+      "tangent_boundary_trace": 3.628261387040599e-16,
+      "temporal_source_refinement": 1.3719687504132327e-09
+    },
+    "31_1": {
+      "CTP_tangent": 4.251813055254458e-18,
+      "CTP_trace": 2.3873623618362455e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 31,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 5.594315114139762e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 5.1406241837956134e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.010684876551106299,
+          7.589807410404389e-06,
+          -8.84138123454464e-06,
+          -0.008958675524659787
+        ],
+        "801_128": [
+          0.010684874502119223,
+          7.58725680048163e-06,
+          -8.840175980070871e-06,
+          -0.008958675393395355
+        ],
+        "801_64": [
+          0.010684875861623838,
+          7.587238805801828e-06,
+          -8.840154755274601e-06,
+          -0.008958676534826706
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 2.56860460256126e-09,
+      "tangent_boundary_trace": 3.628261387040599e-16,
+      "temporal_source_refinement": 1.359504614786844e-09
+    },
+    "32_-1": {
+      "CTP_tangent": 6.516271532677109e-18,
+      "CTP_trace": 1.737395683241372e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 32,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 6.206335383118183e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 7.25660105378439e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.011681704208083411,
+          7.13835139148607e-06,
+          -7.463639797212669e-06,
+          -0.00998371039096712
+        ],
+        "801_128": [
+          0.011681701482175231,
+          7.1340784491508516e-06,
+          -7.461642489680243e-06,
+          -0.009983709873033722
+        ],
+        "801_64": [
+          0.011681702981997385,
+          7.134085653750426e-06,
+          -7.461641512384247e-06,
+          -0.009983711139942283
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 4.2657377356445335e-09,
+      "tangent_boundary_trace": 3.9454804896559877e-16,
+      "temporal_source_refinement": 1.4998221536249856e-09
+    },
+    "32_1": {
+      "CTP_tangent": 6.516271532677109e-18,
+      "CTP_trace": 2.097822677663084e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 32,
+      "imaginary_real_source": 0.0,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 6.206335383118183e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 1.4436276631748162e-15,
+      "reference_grid_drift_in_collar": 7.25660105378439e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.011682010879183708,
+          8.160605923215956e-06,
+          -8.191656821857132e-06,
+          -0.009983086315335496
+        ],
+        "801_128": [
+          0.011682008347242388,
+          8.156546674732847e-06,
+          -8.189849071984534e-06,
+          -0.009983086584543539
+        ],
+        "801_64": [
+          0.011682009832215456,
+          8.156524552109886e-06,
+          -8.189822984241071e-06,
+          -0.009983087857898016
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 4.0813711060696655e-09,
+      "tangent_boundary_trace": 3.9454804896559877e-16,
+      "temporal_source_refinement": 1.4849730681221196e-09
+    },
+    "3_-1": {
+      "CTP_tangent": 2.2786916129760185e-18,
+      "CTP_trace": 6.159865129172138e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 3,
+      "imaginary_real_source": 3.308722450212111e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.9411295503508564e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.614754488488984e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0032117119619595527,
+          1.914293182898744e-06,
+          -1.3328720159443982e-05,
+          -0.002994591536836236
+        ],
+        "801_128": [
+          0.0032117115360092542,
+          1.9142826828212384e-06,
+          -1.3328698546935653e-05,
+          -0.0029945911658045
+        ],
+        "801_64": [
+          0.0032117119481622734,
+          1.914282961802585e-06,
+          -1.3328699325786404e-05,
+          -0.0029945915494300574
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.0833657578438257e-11,
+      "tangent_boundary_trace": 2.711621793941786e-16,
+      "temporal_source_refinement": 4.121530191789069e-10
+    },
+    "3_1": {
+      "CTP_tangent": 2.2786916129760185e-18,
+      "CTP_trace": 7.138629949396746e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 3,
+      "imaginary_real_source": 3.308722450212111e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 2.9411295503508564e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.614754488488984e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0032117119619595523,
+          1.9142931828990963e-06,
+          -1.3328720159443972e-05,
+          -0.0029945915368362356
+        ],
+        "801_128": [
+          0.0032117115360092542,
+          1.9142826828223226e-06,
+          -1.3328698546935238e-05,
+          -0.002994591165804499
+        ],
+        "801_64": [
+          0.0032117119481622717,
+          1.914282961803181e-06,
+          -1.332869932578623e-05,
+          -0.0029945915494300566
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 2.083365774276265e-11,
+      "tangent_boundary_trace": 2.711621793941786e-16,
+      "temporal_source_refinement": 4.121530174441834e-10
+    },
+    "4_-1": {
+      "CTP_tangent": 1.8095690411912782e-18,
+      "CTP_trace": 4.543570755855773e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 4,
+      "imaginary_real_source": 6.617444900424222e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.885935469125957e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 3.4797086961513492e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.003960766171954304,
+          2.3584193433240017e-06,
+          -1.098081206154403e-05,
+          -0.003700017093810834
+        ],
+        "801_128": [
+          0.003960765630407521,
+          2.3583611804650867e-06,
+          -1.0980759304629873e-05,
+          -0.0037000166532582235
+        ],
+        "801_64": [
+          0.003960766138497733,
+          2.3583614083403683e-06,
+          -1.0980759267082146e-05,
+          -0.0037000171272279702
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 5.7934983633406434e-11,
+      "tangent_boundary_trace": 2.7804980550034123e-16,
+      "temporal_source_refinement": 5.080902122645004e-10
+    },
+    "4_1": {
+      "CTP_tangent": 1.8095690411912782e-18,
+      "CTP_trace": 6.027491415745277e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 4,
+      "imaginary_real_source": 3.308722450212111e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.885935469125957e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 3.4797086961513492e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0039607661719543025,
+          2.3584193433237306e-06,
+          -1.0980812061543887e-05,
+          -0.003700017093810835
+        ],
+        "801_128": [
+          0.003960765630407519,
+          2.3583611804648427e-06,
+          -1.0980759304630418e-05,
+          -0.0037000166532582235
+        ],
+        "801_64": [
+          0.003960766138497734,
+          2.358361408340314e-06,
+          -1.0980759267081882e-05,
+          -0.0037000171272279707
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 5.7934983416566e-11,
+      "tangent_boundary_trace": 2.7804980550034123e-16,
+      "temporal_source_refinement": 5.080902148665856e-10
+    },
+    "5_-1": {
+      "CTP_tangent": 2.274953388530351e-18,
+      "CTP_trace": 1.0353857855182607e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 5,
+      "imaginary_real_source": 4.963083675318166e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.6743392481035993e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 6.773643949815638e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.004694316431410019,
+          2.7937041957593067e-06,
+          -9.361735485047625e-06,
+          -0.004389970347566425
+        ],
+        "801_128": [
+          0.004694315758699602,
+          2.793535979209622e-06,
+          -9.361622198233046e-06,
+          -0.004389969859244477
+        ],
+        "801_64": [
+          0.004694316360632627,
+          2.793536079419989e-06,
+          -9.361621281181588e-06,
+          -0.00438997042156233
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.6811633931756303e-10,
+      "tangent_boundary_trace": 2.893462589029672e-16,
+      "temporal_source_refinement": 6.019330242579279e-10
+    },
+    "5_1": {
+      "CTP_tangent": 2.274953388530351e-18,
+      "CTP_trace": 8.552005286226489e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 5,
+      "imaginary_real_source": 4.963083675318166e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.6743392481035993e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 6.773643949815638e-09,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.004694316431410022,
+          2.7937041957589814e-06,
+          -9.361735485047752e-06,
+          -0.004389970347566425
+        ],
+        "801_128": [
+          0.004694315758699598,
+          2.793535979208646e-06,
+          -9.361622198233271e-06,
+          -0.004389969859244477
+        ],
+        "801_64": [
+          0.004694316360632626,
+          2.793536079419691e-06,
+          -9.361621281181616e-06,
+          -0.00438997042156233
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.6811633929045798e-10,
+      "tangent_boundary_trace": 2.893462589029672e-16,
+      "temporal_source_refinement": 6.019330277273749e-10
+    },
+    "6_-1": {
+      "CTP_tangent": 2.6931023271635103e-18,
+      "CTP_trace": 8.932119593112982e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 6,
+      "imaginary_real_source": 6.617444900424222e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.3887102699122705e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.2150240846757898e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.005418679677231326,
+          3.2241943425073867e-06,
+          -8.17493722056848e-06,
+          -0.005070753078307108
+        ],
+        "801_128": [
+          0.005418678847714751,
+          3.2238136621213825e-06,
+          -8.174718749275842e-06,
+          -0.005070752573483509
+        ],
+        "801_64": [
+          0.0054186795421943355,
+          3.223813548005553e-06,
+          -8.174716829922375e-06,
+          -0.005070753222961545
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 3.807945018335923e-10,
+      "tangent_boundary_trace": 3.142603950411617e-16,
+      "temporal_source_refinement": 6.944795840832518e-10
+    },
+    "6_1": {
+      "CTP_tangent": 2.6931023271635103e-18,
+      "CTP_trace": 1.019544996113382e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 6,
+      "imaginary_real_source": 6.617444900424222e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.3887102699122705e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 1.2150240846757898e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.005418679677231326,
+          3.224194342506682e-06,
+          -8.174937220568962e-06,
+          -0.005070753078307106
+        ],
+        "801_128": [
+          0.005418678847714745,
+          3.2238136621213554e-06,
+          -8.174718749275984e-06,
+          -0.005070752573483507
+        ],
+        "801_64": [
+          0.0054186795421943355,
+          3.223813548004225e-06,
+          -8.174716829922257e-06,
+          -0.005070753222961542
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 3.8079450245700856e-10,
+      "tangent_boundary_trace": 3.142603950411617e-16,
+      "temporal_source_refinement": 6.94479590154784e-10
+    },
+    "7_-1": {
+      "CTP_tangent": 4.2342766740562074e-18,
+      "CTP_trace": 7.650729970304024e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 7,
+      "imaginary_real_source": 8.271806125530277e-25,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.9302877579384534e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 2.041219006552463e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006137115198889948,
+          3.651826633864735e-06,
+          -7.266680667807841e-06,
+          -0.005745618338467054
+        ],
+        "801_128": [
+          0.006137114175098006,
+          3.6510790614339365e-06,
+          -7.266293827364377e-06,
+          -0.005745617860418254
+        ],
+        "801_64": [
+          0.006137114961235148,
+          3.6510786355983002e-06,
+          -7.266290744942074e-06,
+          -0.005745618596287224
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 7.479982664347368e-10,
+      "tangent_boundary_trace": 3.3953076543282646e-16,
+      "temporal_source_refinement": 7.861371414952245e-10
+    },
+    "7_1": {
+      "CTP_tangent": 4.2342766740562074e-18,
+      "CTP_trace": 8.489453978027243e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 7,
+      "imaginary_real_source": 8.271806125530277e-25,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 3.9302877579384534e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 2.041219006552463e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006137115198889948,
+          3.6518266338636507e-06,
+          -7.266680667807836e-06,
+          -0.005745618338467056
+        ],
+        "801_128": [
+          0.00613711417509801,
+          3.651079061432988e-06,
+          -7.266293827364881e-06,
+          -0.005745617860418254
+        ],
+        "801_64": [
+          0.006137114961235151,
+          3.6510786355970534e-06,
+          -7.266290744941624e-06,
+          -0.005745618596287225
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 7.479982665973672e-10,
+      "tangent_boundary_trace": 3.3953076543282646e-16,
+      "temporal_source_refinement": 7.861371414952245e-10
+    },
+    "8_-1": {
+      "CTP_tangent": 4.647711720376486e-18,
+      "CTP_trace": 9.041286115260993e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 8,
+      "imaginary_real_source": 3.308722450212111e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 6.25116937633408e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 3.2519053005780254e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006851490202971924,
+          4.077761124339209e-06,
+          -6.5488499187391615e-06,
+          -0.006416429976308801
+        ],
+        "801_128": [
+          0.006851488933850733,
+          4.076427614163228e-06,
+          -6.548210318036814e-06,
+          -0.006416429582143713
+        ],
+        "801_64": [
+          0.006851489810986827,
+          4.0764267683282974e-06,
+          -6.548205885578965e-06,
+          -0.006416430403876304
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 1.3343560109114767e-09,
+      "tangent_boundary_trace": 3.5811212675078416e-16,
+      "temporal_source_refinement": 8.771360937923078e-10
+    },
+    "8_1": {
+      "CTP_tangent": 4.647711720376486e-18,
+      "CTP_trace": 9.111779538620834e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 8,
+      "imaginary_real_source": 3.308722450212111e-24,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 6.25116937633408e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 3.2519053005780254e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.006851490202971917,
+          4.077761124340862e-06,
+          -6.548849918739866e-06,
+          -0.006416429976308797
+        ],
+        "801_128": [
+          0.006851488933850732,
+          4.07642761416396e-06,
+          -6.5482103180371625e-06,
+          -0.0064164295821437095
+        ],
+        "801_64": [
+          0.006851489810986822,
+          4.076426768330005e-06,
+          -6.548205885577936e-06,
+          -0.0064164304038762995
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 1.3343560108572666e-09,
+      "tangent_boundary_trace": 3.5811212675078416e-16,
+      "temporal_source_refinement": 8.771360894554991e-10
+    },
+    "9_-1": {
+      "CTP_tangent": 5.47996863352563e-18,
+      "CTP_trace": 1.3818479697833312e-18,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": -1,
+      "group": 9,
+      "imaginary_real_source": 8.271806125530277e-25,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 4.172577943820896e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 4.9549308021184156e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.0075629564184698985,
+          4.502765032011704e-06,
+          -5.9671162158919215e-06,
+          -0.007084337655620647
+        ],
+        "801_128": [
+          0.007562954837913875,
+          4.50054908749997e-06,
+          -5.966116502151906e-06,
+          -0.007084337417313
+        ],
+        "801_64": [
+          0.007562955805531038,
+          4.500547702534423e-06,
+          -5.966110514282914e-06,
+          -0.0070843383245337895
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "imported signed source/operator/jet map",
+      "spatial_source_refinement": 2.2173294772812827e-09,
+      "tangent_boundary_trace": 3.811383393697117e-16,
+      "temporal_source_refinement": 9.676171634775965e-10
+    },
+    "9_1": {
+      "CTP_tangent": 5.47996863352563e-18,
+      "CTP_trace": 8.944233653183821e-19,
+      "SBP_residual": 2.220446049250313e-16,
+      "angular_sign": 1,
+      "group": 9,
+      "imaginary_real_source": 8.271806125530277e-25,
+      "metric_flux_tangent": 0.0,
+      "mode_overlap_tangent": 4.172577943820896e-16,
+      "norm_flux": 2.6645352591003757e-15,
+      "phase_residual": 5.558942964651374e-16,
+      "reference_grid_drift_in_collar": 4.9549308021184156e-08,
+      "sampled_action_derivatives": {
+        "401_64": [
+          0.007562956418469896,
+          4.50276503201539e-06,
+          -5.967116215892064e-06,
+          -0.007084337655620646
+        ],
+        "801_128": [
+          0.007562954837913876,
+          4.500549087504469e-06,
+          -5.966116502152748e-06,
+          -0.007084337417312998
+        ],
+        "801_64": [
+          0.007562955805531033,
+          4.500547702537269e-06,
+          -5.966110514283893e-06,
+          -0.0070843383245337895
+        ]
+      },
+      "sampled_causal_buffer": 0.6102604833521907,
+      "signed_operator_and_jet_residual": 0.0,
+      "signed_source_residual": 0.0,
+      "source": "spatial state/tangent solve",
+      "spatial_source_refinement": 2.2173294781215394e-09,
+      "tangent_boundary_trace": 3.811383393697117e-16,
+      "temporal_source_refinement": 9.676171574060644e-10
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_transmitting_history_jets.py --check",
+  "schema": "NSC-NONLINEAR-TRANSMITTING-HISTORY-JETS-v1",
+  "source_hashes": {
+    "docs/nsc-transmitting-history-jets.md": "50f8997457642aba428afa87bf515aee4597be7d5e5c0a2da45e975a9bb5bab5",
+    "scripts/derive_nsc_transmitting_history_jets.py": "c32c7001317e51215d457c7796f483d815085981cc3a349842f72f276ca59919",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "tests/test_nsc_transmitting_history_jets.py": "0c9b0fdf3566c51dc93d94b658ed620dde929968e4b452265d15543f0a2da747"
+  },
+  "status": "PASS: nonlinear conditional field jets and sampled Gaussian variation",
+  "tolerances": {
+    "CTP_tangent": 3e-11,
+    "CTP_trace": 3e-11,
+    "SBP_residual": 3e-11,
+    "history_finite_difference": 3e-08,
+    "imaginary_real_source": 3e-11,
+    "metric_flux_tangent": 3e-11,
+    "mode_overlap_tangent": 3e-11,
+    "norm_flux": 3e-11,
+    "phase_residual": 3e-11,
+    "signed_operator_and_jet_residual": 3e-11,
+    "signed_source_residual": 3e-11,
+    "spatial_source_refinement": 3e-08,
+    "tangent_boundary_trace": 3e-11,
+    "temporal_source_refinement": 3e-08
+  }
+}

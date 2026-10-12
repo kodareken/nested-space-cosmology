@@ -1,0 +1,103 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "caveat": "inflow series is the forward interval of the junction payload; balance sampled at station times",
+      "lag_profile": {
+        "-1": {
+          "correlation": -0.3916295896498673,
+          "pairs": 15
+        },
+        "-2": {
+          "correlation": -0.3080409237904352,
+          "pairs": 14
+        },
+        "0": {
+          "correlation": -0.4193821394171268,
+          "pairs": 16
+        },
+        "1": {
+          "correlation": -0.4499504829087004,
+          "pairs": 16
+        },
+        "2": {
+          "correlation": -0.36740049125428526,
+          "pairs": 15
+        }
+      },
+      "peak_lag": 1,
+      "reading": "peak at +1: inflow leads balance by one station interval; peak at 0: simultaneous; correlation is not causality",
+      "stations": 17
+    },
+    "mu-1.010-eps-0.001": {
+      "caveat": "inflow series is the forward interval of the junction payload; balance sampled at station times",
+      "lag_profile": {
+        "-1": {
+          "correlation": -0.26457553994619093,
+          "pairs": 30
+        },
+        "-2": {
+          "correlation": -0.14373659350504492,
+          "pairs": 29
+        },
+        "0": {
+          "correlation": -0.3435107156013946,
+          "pairs": 31
+        },
+        "1": {
+          "correlation": -0.35398397222975997,
+          "pairs": 31
+        },
+        "2": {
+          "correlation": -0.35317442519666087,
+          "pairs": 30
+        }
+      },
+      "peak_lag": 1,
+      "reading": "peak at +1: inflow leads balance by one station interval; peak at 0: simultaneous; correlation is not causality",
+      "stations": 32
+    },
+    "mu-1.040-eps-0.001": {
+      "caveat": "inflow series is the forward interval of the junction payload; balance sampled at station times",
+      "lag_profile": {
+        "-1": {
+          "correlation": -0.7413944633873066,
+          "pairs": 36
+        },
+        "-2": {
+          "correlation": -0.5780342164159851,
+          "pairs": 35
+        },
+        "0": {
+          "correlation": -0.8389765546280455,
+          "pairs": 37
+        },
+        "1": {
+          "correlation": -0.8623916924703406,
+          "pairs": 37
+        },
+        "2": {
+          "correlation": -0.8222969919540277,
+          "pairs": 36
+        }
+      },
+      "peak_lag": 1,
+      "reading": "peak at +1: inflow leads balance by one station interval; peak at 0: simultaneous; correlation is not causality",
+      "stations": 38
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-wall-junction-family-v1.json": "e02d7175ea82d66b0ac701d177ab8481eac8021c14ebb32cc22491fea9b42199"
+  },
+  "notes": [
+    "correlation alignment, not a causal proof; the round-17 alignment effect predicted peak at +1 if inflow leads"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-WALL-LEAD-LAG-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_lead_lag.py": "42540d3059fc7abb05c6390682cafd7fa45287e79a0b044273eb9f157276c6dc",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

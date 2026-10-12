@@ -1,0 +1,49 @@
+{
+  "accountable_author": "Douglas Ek",
+  "best_constraint_maxima": [
+    2.619856949437338e-09,
+    7.306972166221115e-08
+  ],
+  "best_profile_identity": "6534e55b1f3dc3b968c2dfcdf56805113a5f4a354199e10a16704455b2316478",
+  "break_even_n_gain_can_reach_existence": false,
+  "break_even_predicted_beta_gain": 4.752044716445641e-10,
+  "break_even_predicted_n_gain": 1.1170112306821595e-12,
+  "break_even_step_norm": 8.619987300746671e-10,
+  "direction_coefficient_over_parent": 61.76122801228874,
+  "direction_quadratic_n_coefficient": 1503295.2583173057,
+  "enclosed_error": null,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-beta48.json": "0489de61f55318bfe456bfe4704d29e010460527d1c0cf013a7bbf874e59cfe2",
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-margin8.json": "85f00af1f46d6da99d2ac0b87eea01f5875b7072ad52f22d79952f016718252d"
+  },
+  "linear_predicted_all_node_residual_maxima": [
+    2.6116298818471335e-09,
+    6.95697216622114e-08
+  ],
+  "newton_step_accepted": false,
+  "next_owner": "declared (w,U) class on I=S(1)+[0.12,0.18]",
+  "parent_quadratic_n_coefficient": 24340.436657415434,
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "predicted_beta_gain": 3.4999999999997468e-09,
+  "predicted_n_gain": 8.22706759020456e-12,
+  "prediction_minus_measured": [
+    -6.059441416041914e-11,
+    -6.383028859570419e-13
+  ],
+  "rank_74_and_above": "unevolved",
+  "rejected_constraint_maxima": [
+    2.6722242960075526e-09,
+    6.957035996509736e-08
+  ],
+  "rejected_profile_identity": "aa7e198206f59e794b1869b760d1c3216e65140df91ae57e5e33e317c9931a70",
+  "schema": "NSC-KS-N64-PRIMAL-NORM-MARGIN8-QUADRATIC-v1",
+  "singular_ratio": 1278.110563012654,
+  "source_hashes": {
+    "docs/nsc-ks-n64-primal-norm-margin8-quadratic.md": "004b083fe9db5400bb0539dd14493c0665dac80eca94d52aee128d3f7e98f9e0",
+    "scripts/derive_nsc_ks_n64_primal_norm_margin8_quadratic.py": "e6a5d89d6382c56476aa55c9271be9a4f7ae88ffba84a41969874fac985bc8cb"
+  },
+  "stall": "n64_primal_norm_margin8_n_quadratic",
+  "status": "OPEN: beta followed the Jacobian and N rose inside the 6.5e-9 ball",
+  "step_norm": 6.348836627778453e-09
+}

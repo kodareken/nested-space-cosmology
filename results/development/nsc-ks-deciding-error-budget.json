@@ -1,0 +1,62 @@
+{
+  "accountable_author": "Douglas Ek",
+  "baseline_low_subgap": null,
+  "changed_history_UV_tail": null,
+  "dense_nodes": 129,
+  "error_budget": {
+    "baseline_covered_regions": null,
+    "baseline_low_subgap": null,
+    "between_node_remainder": null,
+    "changed_history_finite_energy": null,
+    "changed_history_tail": null,
+    "coefficient_arithmetic": null,
+    "preparation_field_axial_derivative": null
+  },
+  "field_error_bound": null,
+  "full_between_node_remainder": null,
+  "geometry_between_node_remainder": [
+    1e-13,
+    1e-13
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-coupled-newton-n16-jacobian-refresh.json": "e97e344f3805e4d523c9ed16ca9ecef95f98953bc22a64de833addbe53a97cea"
+  },
+  "interval": [
+    1.1768780671724792,
+    1.2368780671724793
+  ],
+  "measured_constraint_maxima": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "owned_nodes": 47,
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "residual_chebyshev_tail_max_last4": [
+    5.701e-09,
+    1.0634e-08
+  ],
+  "schema": "NSC-KS-DECIDING-ERROR-BUDGET-v1",
+  "scope": {
+    "geometry_remainder_reused_pattern": true,
+    "identity_is_not_a_source_error_bound": true,
+    "metric_timestep": false,
+    "missing_bounds_cannot_create_EXISTENCE_against_1e-4_leftover": true,
+    "missing_bounds_left_none": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN"
+  },
+  "source_hashes": {
+    "docs/nsc-ks-deciding-error-budget.md": "73a027d5f2acebdb9be6a5bed0d6193859137f3ed080d6c30f0f7d905a34d1c8",
+    "scripts/derive_nsc_ks_deciding_error_budget.py": "6843237652bb232ed04bdbf1da504676ae18efd4b76377789bfaa9d680629ef8",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b"
+  },
+  "status": "OPEN: iterate4 geometry remainder enclosed; UV, full between-node, field and low/subgap remain None",
+  "unclipped_linear_leftover": [
+    0.0001318944269235291,
+    0.0006335944911131271
+  ]
+}

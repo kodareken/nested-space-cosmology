@@ -1,0 +1,61 @@
+{
+ "api_version": "nsc-rn-compression-bounding-v1",
+ "creation_only": true,
+ "deepest_edge_distance_to_inner_horizon": 0.0011571371417168352,
+ "deepest_edge_fraction_of_width": 0.997974604882456,
+ "gain_rises_with_distance_to_horizon": false,
+ "producing_commit": "63563f15471d77df378359fb7c0f8a2457c5f052",
+ "r_minus": 0.7543428628582831,
+ "r_plus": 1.325657137141717,
+ "reading": "The gain rises as the boundary recedes from the horizon and turns over once the boundary reaches the far end of the trapped region. The deepest boundary tried sits at almost the whole trapped width from the horizon, so the compression saturates because the region available to compress into runs out, not because of the grid.",
+ "rows": [
+  {
+   "distance_to_horizon": 0.2856571371417169,
+   "distance_to_inner_horizon": 0.2856571371417169,
+   "fraction_of_trapped_width_used": 0.5,
+   "gain": 1.2571,
+   "r_inner": 1.04
+  },
+  {
+   "distance_to_horizon": 0.475657137141717,
+   "distance_to_inner_horizon": 0.09565713714171686,
+   "fraction_of_trapped_width_used": 0.832566519956649,
+   "gain": 1.6039,
+   "r_inner": 0.85
+  },
+  {
+   "distance_to_horizon": 0.5256571371417169,
+   "distance_to_inner_horizon": 0.04565713714171693,
+   "fraction_of_trapped_width_used": 0.9200840252083986,
+   "gain": 1.8391,
+   "r_inner": 0.8
+  },
+  {
+   "distance_to_horizon": 0.5556571371417169,
+   "distance_to_inner_horizon": 0.015657137141716904,
+   "fraction_of_trapped_width_used": 0.9725945283594485,
+   "gain": 2.0481,
+   "r_inner": 0.77
+  },
+  {
+   "distance_to_horizon": 0.565657137141717,
+   "distance_to_inner_horizon": 0.005657137141716895,
+   "fraction_of_trapped_width_used": 0.9900980294097985,
+   "gain": 2.0295,
+   "r_inner": 0.76
+  },
+  {
+   "distance_to_horizon": 0.570157137141717,
+   "distance_to_inner_horizon": 0.0011571371417168352,
+   "fraction_of_trapped_width_used": 0.997974604882456,
+   "gain": 1.9952,
+   "r_inner": 0.7555
+  }
+ ],
+ "schema": "NSC-RN-COMPRESSION-BOUNDING-v1",
+ "scope_note": "A re-reading of records already taken. It does not measure the actual universe and it adds no new run. Six edges, one mass ratio, one source strength.",
+ "trapped_width": 0.5713142742834338,
+ "turns_over_at_the_far_end": true,
+ "what_this_measures": "The compression gain against the two distances that bound the region it can occupy: the distance to the horizon it is sealed behind, and the distance to the inner horizon past which the excision stops being one.",
+ "why_it_matters": "The saturation was previously attributed to depth alone, which says where it happens and not why. It also sits in the same place as the sign change of the outgoing speed, where the excision boundary condition reverses."
+}

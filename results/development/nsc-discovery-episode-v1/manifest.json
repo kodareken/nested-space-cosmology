@@ -1,0 +1,259 @@
+{
+  "schema": "NSC-DISCOVERY-EPISODE-v1",
+  "stage": 2,
+  "status": "STATION_REACHED",
+  "stations": [
+    1.0,
+    3.0
+  ],
+  "cases": [
+    {
+      "case_id": "nf128_coupled_dt0.001",
+      "ordinal": 0,
+      "npz": "nf128_coupled_dt0.001-000000.npz",
+      "json": "nf128_coupled_dt0.001-000000.json",
+      "arrays_sha256": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+      "parent_case": "nf128_baseline_dt0.0005",
+      "nf": 128,
+      "control": "coupled",
+      "control_mode": "coupled",
+      "geometry": "evolving",
+      "step_cap": 0.001,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_coupled_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_coupled_dt0.0005-000000.npz",
+      "json": "nf128_coupled_dt0.0005-000000.json",
+      "arrays_sha256": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+      "parent_case": "nf128_baseline_dt0.0005",
+      "nf": 128,
+      "control": "coupled",
+      "control_mode": "coupled",
+      "geometry": "evolving",
+      "step_cap": 0.0005,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf128_frozen_geometry_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf128_frozen_geometry_dt0.0005-000000.npz",
+      "json": "nf128_frozen_geometry_dt0.0005-000000.json",
+      "arrays_sha256": "d46cedfa4cca9ef171de4365922f23d687d296687359edbbb0a0b29410a3d88c",
+      "parent_case": "nf128_baseline_dt0.0005",
+      "nf": 128,
+      "control": "frozen_geometry",
+      "control_mode": "frozen_geometry",
+      "geometry": "frozen",
+      "step_cap": 0.0005,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf256_coupled_dt0.001",
+      "ordinal": 0,
+      "npz": "nf256_coupled_dt0.001-000000.npz",
+      "json": "nf256_coupled_dt0.001-000000.json",
+      "arrays_sha256": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+      "parent_case": "nf256_baseline_dt0.0005",
+      "nf": 256,
+      "control": "coupled",
+      "control_mode": "coupled",
+      "geometry": "evolving",
+      "step_cap": 0.001,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf256_coupled_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf256_coupled_dt0.0005-000000.npz",
+      "json": "nf256_coupled_dt0.0005-000000.json",
+      "arrays_sha256": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+      "parent_case": "nf256_baseline_dt0.0005",
+      "nf": 256,
+      "control": "coupled",
+      "control_mode": "coupled",
+      "geometry": "evolving",
+      "step_cap": 0.0005,
+      "coordinate_time": 0.3,
+      "steps": 0
+    },
+    {
+      "case_id": "nf256_frozen_geometry_dt0.0005",
+      "ordinal": 0,
+      "npz": "nf256_frozen_geometry_dt0.0005-000000.npz",
+      "json": "nf256_frozen_geometry_dt0.0005-000000.json",
+      "arrays_sha256": "db4b3a22fa6d4a40914528426b26a191019afcbb593603be5c33a55b82d8b7e1",
+      "parent_case": "nf256_baseline_dt0.0005",
+      "nf": 256,
+      "control": "frozen_geometry",
+      "control_mode": "frozen_geometry",
+      "geometry": "frozen",
+      "step_cap": 0.0005,
+      "coordinate_time": 0.3,
+      "steps": 0
+    }
+  ],
+  "workers": 6,
+  "cpu_budget_seconds": 21600.0,
+  "cpu_accounting": "sum_of_child_process_time",
+  "forecast_factor": 1.5,
+  "memory_limit_bytes": 8589934592,
+  "chunk_limit_bytes": 67108864,
+  "evolution_backend": "dense_galerkin",
+  "reduction_backend": "dense",
+  "reduction_backend_used": false,
+  "streamed_reduction_selected": false,
+  "dense_exterior_propagator_stored": false,
+  "initial_state_called": false,
+  "evolved": true,
+  "stability_certificate": false,
+  "zero_residual_gate": false,
+  "max_T_forced": false,
+  "child_cpu_seconds": 277.185634,
+  "results": [
+    {
+      "case_id": "nf128_coupled_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 22.451092,
+      "coordinate_time": 3.0,
+      "steps": 2700,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_coupled_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 31.78040400000008
+    },
+    {
+      "case_id": "nf256_coupled_dt0.001",
+      "status": "station_reached",
+      "child_cpu_seconds": 37.467749000000005,
+      "coordinate_time": 3.0,
+      "steps": 2700,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_coupled_dt0.001-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 39.60958950000023
+    },
+    {
+      "case_id": "nf128_coupled_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 43.277734,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_coupled_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 44.51214149999959
+    },
+    {
+      "case_id": "nf128_frozen_geometry_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 44.223665000000004,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf128_frozen_geometry_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 118.9491660000001
+    },
+    {
+      "case_id": "nf256_frozen_geometry_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 63.730503999999996,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_frozen_geometry_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 83.38838849999988
+    },
+    {
+      "case_id": "nf256_coupled_dt0.0005",
+      "status": "station_reached",
+      "child_cpu_seconds": 66.03489,
+      "coordinate_time": 3.0,
+      "steps": 5400,
+      "stations_reached": [
+        1.0,
+        3.0
+      ],
+      "stop": {
+        "stop_class": "station_reached",
+        "stations": [
+          1.0,
+          3.0
+        ]
+      },
+      "chunk": "nf256_coupled_dt0.0005-000002.npz",
+      "stability_certificate": false,
+      "state_clamped": false,
+      "physical_instability_claimed": false,
+      "forecast_cpu_seconds": 68.76526049999983
+    }
+  ],
+  "executor_pools": 1
+}

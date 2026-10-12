@@ -1,0 +1,978 @@
+{
+  "accountable_author": "Douglas Ek",
+  "changed_dependency": "spatial resolution only for previously failed controls; tolerance unchanged",
+  "comparison": {
+    "exact": "source/input hashes, structure and scope labels",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-10
+  },
+  "domain_and_control": {
+    "auxiliary_exponential_amplitudes": "deterministic forcing integration only; not new physical degrees of freedom",
+    "computational_edges": "zero right incoming DIFFERENCE, left outflow; no reflecting carrier",
+    "energy_samples": "inherited derivative-control real frequencies; not a complete covariance integral",
+    "equation": "i d_tau w_E=H[g]w_E+(H[g]-H_ref)exp(-i E (tau-ti))Phi_E",
+    "initial_data": "zero difference; authenticated reference mode columns, not seed covariance",
+    "metric_selection": "none; a supplied response history is an argument of the propagator",
+    "new_unknown": "w_E=(U[g]-U_ref)Phi_E as a spatial field",
+    "operator": "same full transmitting canonical Dirac field on PG slices",
+    "state_preparation": "same C_H plus inherited occupation; preparation unchanged at pulse start"
+  },
+  "failed_coarse_families": [
+    "10_-1",
+    "10_1",
+    "11_-1",
+    "11_1",
+    "12_-1",
+    "12_1",
+    "19_-1",
+    "19_1",
+    "20_-1",
+    "20_1",
+    "21_-1",
+    "21_1",
+    "22_-1",
+    "22_1",
+    "29_-1",
+    "29_1",
+    "30_-1",
+    "30_1",
+    "31_-1",
+    "31_1",
+    "32_-1",
+    "32_1",
+    "6_-1",
+    "6_1",
+    "7_-1",
+    "7_1",
+    "8_-1",
+    "8_1",
+    "9_-1",
+    "9_1"
+  ],
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_term": "none introduced; full Gaussian action counted once",
+    "V_c": null,
+    "Weyl_time_node_diagnostic": 93.54264532195464,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "complete_evolved_C_PG": "not integrated",
+    "conditional_mode_propagation": "PASS",
+    "extended_stationarity": "OPEN",
+    "full_EndpointBranchJets": "OPEN",
+    "history_selected": false,
+    "homogeneous_nonexistence": "imported in its original scope, not rerun",
+    "metric_timestep": false,
+    "new_nulls": null,
+    "nonlinear_history_metric_derivatives": "not computed",
+    "physical_endpoint_family": "not selected by these response histories",
+    "remaining_state_integral": "retain all real panels, analytic subgap representation and tail; no complex contour node promoted to canonical frequency",
+    "spatial_history_controls": "all 63 signed families covered by inherited or refined evidence",
+    "spectral_history_convergence": "not established by this spatial refinement",
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "results/development/nsc-massive-signed-preparation.json": "f1195e2e1fbe1b1cedf04321d098e4bf3834652f31ddebcb9031338c8163a5e4",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "scripts/derive_nsc_transmitting_history_modes.py": "ccc2d51503e3e04cd2c91bd672b3ce5292ea09f723dac983aa9b10f9552ad9c5",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "energy_map_residual": 0.0,
+    "fine_left_trace": 3.270510985631082e-113,
+    "fine_right_trace": 4.071549935837915e-26,
+    "forcing_phase_residual": 1.121343624433494e-14,
+    "nonlinear_operator_map_residual": 0.0,
+    "norm_flux_algebra": 8.881784197001252e-16,
+    "projection_reconstruction": 3.096829928978596e-17,
+    "source_map_residual": 0.0,
+    "spatial_response_refinement": 2.981258176039637e-08,
+    "temporal_response_refinement": 3.6740425589912876e-11
+  },
+  "payload": {
+    "bytes": 21239362,
+    "path": "results/development/artifacts/nsc-transmitting-history-refinement.a49a1e9b40df88274b97257ac5f263612dea384feeaaa27e86882ae1eac5834a.npz",
+    "sha256": "a49a1e9b40df88274b97257ac5f263612dea384feeaaa27e86882ae1eac5834a"
+  },
+  "per_family": {
+    "0_1": {
+      "fine_left_trace": 3.270510985631082e-113,
+      "fine_right_trace": 4.071549935837915e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 4.735185100943818e-10,
+      "temporal_response_refinement": 1.4838733638353322e-12
+    },
+    "10_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.675917888900423e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1735261167312964e-207,
+      "fine_right_trace": 6.563363431418936e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.7240242454070943e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.675917888900423e-08,
+      "temporal_response_refinement": 3.1548911579286223e-11
+    },
+    "10_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.675917888900423e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1735261167312964e-207,
+      "fine_right_trace": 6.563363431418936e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.7240242454070943e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.675917888900423e-08,
+      "temporal_response_refinement": 3.1548911579286223e-11
+    },
+    "11_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 3.4108515204261584e-08,
+        "3201_64": 8.52715616716487e-09
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 0.0,
+      "fine_right_trace": 1.395707942921224e-48,
+      "forcing_phase_residual": 6.106511478274558e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 4.440892098500626e-16,
+      "points": 3201,
+      "projection_reconstruction": 2.858246256239919e-17,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 8.52715616716487e-09,
+      "temporal_response_refinement": 3.414378863610667e-11
+    },
+    "11_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 3.4108515204261584e-08,
+        "3201_64": 8.52715616716487e-09
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 0.0,
+      "fine_right_trace": 1.395707942921224e-48,
+      "forcing_phase_residual": 6.106511478274558e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 4.440892098500626e-16,
+      "points": 3201,
+      "projection_reconstruction": 2.858246256239919e-17,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 8.52715616716487e-09,
+      "temporal_response_refinement": 3.414378863610667e-11
+    },
+    "12_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 4.271915227962264e-08,
+        "3201_64": 1.067981972336705e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 0.0,
+      "fine_right_trace": 1.4263833931745177e-48,
+      "forcing_phase_residual": 6.106511478274558e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 4.440892098500626e-16,
+      "points": 3201,
+      "projection_reconstruction": 3.096829928978596e-17,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.067981972336705e-08,
+      "temporal_response_refinement": 3.6740425589912876e-11
+    },
+    "12_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 4.271915227962264e-08,
+        "3201_64": 1.067981972336705e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 0.0,
+      "fine_right_trace": 1.4263833931745177e-48,
+      "forcing_phase_residual": 6.106511478274558e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 4.440892098500626e-16,
+      "points": 3201,
+      "projection_reconstruction": 3.096829928978596e-17,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.067981972336705e-08,
+      "temporal_response_refinement": 3.6740425589912876e-11
+    },
+    "13_1": {
+      "fine_left_trace": 2.4427158653539377e-113,
+      "fine_right_trace": 3.385324190930961e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 6.87038889822818e-10,
+      "temporal_response_refinement": 9.171067509263293e-12
+    },
+    "14_-1": {
+      "fine_left_trace": 2.617261306508678e-113,
+      "fine_right_trace": 3.304155985905e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.5330372993431035e-09,
+      "temporal_response_refinement": 1.0706195537206353e-11
+    },
+    "14_1": {
+      "fine_left_trace": 2.617261306508678e-113,
+      "fine_right_trace": 3.304155985905e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.5330372993431035e-09,
+      "temporal_response_refinement": 1.0706195537206353e-11
+    },
+    "15_-1": {
+      "fine_left_trace": 2.510661497674305e-113,
+      "fine_right_trace": 3.230144117377272e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 4.203061831924773e-09,
+      "temporal_response_refinement": 1.2769127023632962e-11
+    },
+    "15_1": {
+      "fine_left_trace": 2.510661497674305e-113,
+      "fine_right_trace": 3.230144117377272e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 4.203061831924773e-09,
+      "temporal_response_refinement": 1.2769127023632962e-11
+    },
+    "16_-1": {
+      "fine_left_trace": 2.578794480240634e-113,
+      "fine_right_trace": 3.1496647447806317e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 8.405178046586462e-09,
+      "temporal_response_refinement": 1.5051605767068707e-11
+    },
+    "16_1": {
+      "fine_left_trace": 2.578794480240634e-113,
+      "fine_right_trace": 3.1496647447806317e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 8.405178046586462e-09,
+      "temporal_response_refinement": 1.5051605767068707e-11
+    },
+    "17_-1": {
+      "fine_left_trace": 2.4826181534681748e-113,
+      "fine_right_trace": 3.102136339822611e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.4499887382430027e-08,
+      "temporal_response_refinement": 1.74262008616911e-11
+    },
+    "17_1": {
+      "fine_left_trace": 2.4826181534681748e-113,
+      "fine_right_trace": 3.102136339822611e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.4499887382430184e-08,
+      "temporal_response_refinement": 1.74262008616911e-11
+    },
+    "18_-1": {
+      "fine_left_trace": 2.5142931904751675e-113,
+      "fine_right_trace": 3.0717919687210347e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.284294527707689e-08,
+      "temporal_response_refinement": 1.9852910577568265e-11
+    },
+    "18_1": {
+      "fine_left_trace": 2.5142931904751675e-113,
+      "fine_right_trace": 3.0717919687210347e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.284294527707689e-08,
+      "temporal_response_refinement": 1.9852910577568265e-11
+    },
+    "19_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 8.450907325478742e-09
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1865113764167159e-207,
+      "fine_right_trace": 6.5061760982454974e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 1.9023398762132195e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 8.450907325478742e-09,
+      "temporal_response_refinement": 2.2312649516980143e-11
+    },
+    "19_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 8.450907325478742e-09
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1865113764167159e-207,
+      "fine_right_trace": 6.5061760982454974e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 1.9023398762132195e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 8.450907325478742e-09,
+      "temporal_response_refinement": 2.2312649516980143e-11
+    },
+    "1_-1": {
+      "fine_left_trace": 2.4286163044479605e-113,
+      "fine_right_trace": 3.3604998677279957e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 9.682178243157652e-10,
+      "temporal_response_refinement": 7.0064934166840644e-12
+    },
+    "1_1": {
+      "fine_left_trace": 2.4286163044479605e-113,
+      "fine_right_trace": 3.3604998677279957e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 9.682178243157652e-10,
+      "temporal_response_refinement": 7.0064934166840644e-12
+    },
+    "20_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.193897177908582e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1843962392564123e-207,
+      "fine_right_trace": 6.734365652763827e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4544670598653844e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.193897177908582e-08,
+      "temporal_response_refinement": 2.4801548496247524e-11
+    },
+    "20_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.193897177908582e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1843962392564123e-207,
+      "fine_right_trace": 6.734365652763827e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4544670598653844e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.193897177908582e-08,
+      "temporal_response_refinement": 2.4801548496247524e-11
+    },
+    "21_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.627266406054515e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.174976503760578e-207,
+      "fine_right_trace": 6.471322553539873e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.764184017091639e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.627266406054515e-08,
+      "temporal_response_refinement": 2.7312452541758033e-11
+    },
+    "21_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.627266406054515e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.174976503760578e-207,
+      "fine_right_trace": 6.471322553539873e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.764184017091639e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.627266406054515e-08,
+      "temporal_response_refinement": 2.7312452541758033e-11
+    },
+    "22_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.155115483723928e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1719906764660187e-207,
+      "fine_right_trace": 6.488895561455416e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.473104131273532e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.155115483723928e-08,
+      "temporal_response_refinement": 2.983524310538926e-11
+    },
+    "22_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.155115483723928e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1719906764660187e-207,
+      "fine_right_trace": 6.488895561455416e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.473104131273532e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.155115483723928e-08,
+      "temporal_response_refinement": 2.983524310538926e-11
+    },
+    "23_1": {
+      "fine_left_trace": 2.3731249845946625e-113,
+      "fine_right_trace": 3.154501250762571e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.7277667041311304e-09,
+      "temporal_response_refinement": 1.7314273608771008e-11
+    },
+    "24_-1": {
+      "fine_left_trace": 2.624031224367931e-113,
+      "fine_right_trace": 3.155921740484757e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 4.9660606522784226e-09,
+      "temporal_response_refinement": 1.782197952396055e-11
+    },
+    "24_1": {
+      "fine_left_trace": 2.624031224367931e-113,
+      "fine_right_trace": 3.155921740484757e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 4.9660606522784226e-09,
+      "temporal_response_refinement": 1.782197952396055e-11
+    },
+    "25_-1": {
+      "fine_left_trace": 2.5974730088416474e-113,
+      "fine_right_trace": 3.195739921807921e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 8.430942711056125e-09,
+      "temporal_response_refinement": 1.8817534266931088e-11
+    },
+    "25_1": {
+      "fine_left_trace": 2.5974730088416474e-113,
+      "fine_right_trace": 3.195739921807921e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 8.430942711055933e-09,
+      "temporal_response_refinement": 1.8817534266931088e-11
+    },
+    "26_-1": {
+      "fine_left_trace": 2.5882648113465196e-113,
+      "fine_right_trace": 3.105030606170161e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.3492186925277868e-08,
+      "temporal_response_refinement": 2.022832348561031e-11
+    },
+    "26_1": {
+      "fine_left_trace": 2.5882648113465196e-113,
+      "fine_right_trace": 3.105030606170161e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.3492186925277868e-08,
+      "temporal_response_refinement": 2.022832348561031e-11
+    },
+    "27_-1": {
+      "fine_left_trace": 2.4790801415409857e-113,
+      "fine_right_trace": 3.0759610521616253e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.0500315357983364e-08,
+      "temporal_response_refinement": 2.1925024120256554e-11
+    },
+    "27_1": {
+      "fine_left_trace": 2.4790801415409857e-113,
+      "fine_right_trace": 3.0759610521616253e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.0500315357983364e-08,
+      "temporal_response_refinement": 2.1925024120256554e-11
+    },
+    "28_-1": {
+      "fine_left_trace": 2.4784649472336167e-113,
+      "fine_right_trace": 3.0981091118238345e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.981258176039637e-08,
+      "temporal_response_refinement": 2.3817869251453096e-11
+    },
+    "28_1": {
+      "fine_left_trace": 2.4784649472336167e-113,
+      "fine_right_trace": 3.0981091118238345e-26,
+      "forcing_phase_residual": 5.218274278528378e-15,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.981258176039637e-08,
+      "temporal_response_refinement": 2.3817869251453096e-11
+    },
+    "29_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.0449973208918771e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.2201740911861819e-207,
+      "fine_right_trace": 6.4934270722341576e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4432165786662116e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.0449973208918771e-08,
+      "temporal_response_refinement": 2.5853316311945982e-11
+    },
+    "29_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.0449973208918771e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.2201740911861819e-207,
+      "fine_right_trace": 6.4934270722341576e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4432165786662116e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.0449973208918771e-08,
+      "temporal_response_refinement": 2.5853316311945982e-11
+    },
+    "2_-1": {
+      "fine_left_trace": 2.4659762490671052e-113,
+      "fine_right_trace": 3.0755757681779627e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 3.037442615910793e-09,
+      "temporal_response_refinement": 9.239913027245473e-12
+    },
+    "2_1": {
+      "fine_left_trace": 2.4659762490671052e-113,
+      "fine_right_trace": 3.0755757681779615e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 3.0374426159108842e-09,
+      "temporal_response_refinement": 9.239913040694475e-12
+    },
+    "30_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.4210059635269172e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.185640691438397e-207,
+      "fine_right_trace": 6.519835290753336e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4432165786662116e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.4210059635269172e-08,
+      "temporal_response_refinement": 2.801182502163283e-11
+    },
+    "30_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.4210059635269172e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.185640691438397e-207,
+      "fine_right_trace": 6.519835290753336e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4432165786662116e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.4210059635269172e-08,
+      "temporal_response_refinement": 2.801182502163283e-11
+    },
+    "31_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.8830415386417338e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1561796496638949e-207,
+      "fine_right_trace": 6.6958595592412715e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.721613213422207e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.8830415386417338e-08,
+      "temporal_response_refinement": 3.024595916637957e-11
+    },
+    "31_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.8830415386417338e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1561796496638949e-207,
+      "fine_right_trace": 6.6958595592412715e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.721613213422207e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.8830415386417338e-08,
+      "temporal_response_refinement": 3.024595916637957e-11
+    },
+    "32_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.4411393160172457e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.2111286845207905e-207,
+      "fine_right_trace": 6.39902192579562e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.9827589034702242e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.4411393160172457e-08,
+      "temporal_response_refinement": 3.253590225154382e-11
+    },
+    "32_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.4411393160172457e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.2111286845207905e-207,
+      "fine_right_trace": 6.39902192579562e-34,
+      "forcing_phase_residual": 7.882778934215382e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.9827589034702242e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.4411393160172457e-08,
+      "temporal_response_refinement": 3.253590225154382e-11
+    },
+    "3_-1": {
+      "fine_left_trace": 2.4585299877284473e-113,
+      "fine_right_trace": 3.16020822079919e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 6.906495115877557e-09,
+      "temporal_response_refinement": 1.3030893770203057e-11
+    },
+    "3_1": {
+      "fine_left_trace": 2.4585299877284473e-113,
+      "fine_right_trace": 3.16020822079919e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 6.906495115877557e-09,
+      "temporal_response_refinement": 1.3030893770203057e-11
+    },
+    "4_-1": {
+      "fine_left_trace": 2.3689897055048475e-113,
+      "fine_right_trace": 3.104145858051553e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.2654384812950646e-08,
+      "temporal_response_refinement": 1.577068693204645e-11
+    },
+    "4_1": {
+      "fine_left_trace": 2.3689897055048475e-113,
+      "fine_right_trace": 3.1041458580515566e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 1.2654384812951892e-08,
+      "temporal_response_refinement": 1.5770686986160176e-11
+    },
+    "5_-1": {
+      "fine_left_trace": 2.4969785990904256e-113,
+      "fine_right_trace": 3.0882560062940453e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.063105879709347e-08,
+      "temporal_response_refinement": 1.8451575379659428e-11
+    },
+    "5_1": {
+      "fine_left_trace": 2.4969785990904256e-113,
+      "fine_right_trace": 3.0882560062940453e-26,
+      "forcing_phase_residual": 1.121343624433494e-14,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 801,
+      "source": "unchanged authenticated coarse record; not rerun",
+      "spatial_response_refinement": 2.063105879709347e-08,
+      "temporal_response_refinement": 1.8451575379659428e-11
+    },
+    "6_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 7.799144902277356e-09
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1441708768156534e-207,
+      "fine_right_trace": 6.509297530939255e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 1.6940658945086007e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 7.799144902277356e-09,
+      "temporal_response_refinement": 2.109735615305424e-11
+    },
+    "6_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 7.799144902277356e-09
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1441708768156534e-207,
+      "fine_right_trace": 6.509297530939255e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 1.6940658945086007e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 7.799144902277356e-09,
+      "temporal_response_refinement": 2.109735615305424e-11
+    },
+    "7_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.118144269361655e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1623721891131343e-207,
+      "fine_right_trace": 6.463684088638735e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.1813359770301135e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.118144269361655e-08,
+      "temporal_response_refinement": 2.372456878558339e-11
+    },
+    "7_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.118144269361655e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1623721891131343e-207,
+      "fine_right_trace": 6.463684088638735e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.1813359770301135e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.118144269361655e-08,
+      "temporal_response_refinement": 2.372456878558339e-11
+    },
+    "8_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.5401476322276137e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1560873977211087e-207,
+      "fine_right_trace": 6.433731866419447e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.712106380082736e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.5401476322276137e-08,
+      "temporal_response_refinement": 2.6339289303186322e-11
+    },
+    "8_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 1.5401476322276137e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1560873977211087e-207,
+      "fine_right_trace": 6.433731866419447e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.712106380082736e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 1.5401476322276137e-08,
+      "temporal_response_refinement": 2.6339289303186322e-11
+    },
+    "9_-1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.0559352764874608e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1547558246041355e-207,
+      "fine_right_trace": 6.400058289919828e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4544670598653844e-19,
+      "source": "imported signed intertwiner; source and operator identities checked",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.0559352764874608e-08,
+      "temporal_response_refinement": 2.8946448410706304e-11
+    },
+    "9_1": {
+      "all_new_spatial_comparisons": {
+        "1601_64": 2.0559352764874608e-08
+      },
+      "energy_map_residual": 0.0,
+      "fine_left_trace": 1.1547558246041355e-207,
+      "fine_right_trace": 6.400058289919828e-34,
+      "forcing_phase_residual": 1.1107649934270853e-15,
+      "nonlinear_operator_map_residual": 0.0,
+      "norm_flux_algebra": 8.881784197001252e-16,
+      "points": 1601,
+      "projection_reconstruction": 2.4544670598653844e-19,
+      "source": "refined spatial PDE",
+      "source_map_residual": 0.0,
+      "spatial_response_refinement": 2.0559352764874608e-08,
+      "temporal_response_refinement": 2.8946448410706304e-11
+    }
+  },
+  "preserved_coarse_record": "results/development/nsc-transmitting-history-modes.json",
+  "reproducer": "python3 scripts/refine_nsc_transmitting_history_modes.py --check",
+  "schema": "NSC-TRANSMITTING-HISTORY-REFINEMENT-v1",
+  "source_hashes": {
+    "docs/nsc-transmitting-history-refinement.md": "9044470ebd015074823881ff6e65f45ead508e225d8cb48a08ef760a375eb50b",
+    "scripts/refine_nsc_transmitting_history_modes.py": "42d8dc34e6d375f2d7261fdc47866d48797ed5a4ee6d9947378bbeb110953b3f"
+  },
+  "status": "PASS: composed conditional spatial history controls",
+  "tolerances": {
+    "energy_map_residual": 3e-11,
+    "fine_left_trace": 3e-11,
+    "fine_right_trace": 3e-11,
+    "forcing_phase_residual": 3e-11,
+    "nonlinear_operator_map_residual": 3e-11,
+    "norm_flux_algebra": 3e-11,
+    "projection_reconstruction": 3e-11,
+    "source_map_residual": 3e-11,
+    "spatial_response_refinement": 3e-08,
+    "temporal_response_refinement": 3e-08
+  }
+}

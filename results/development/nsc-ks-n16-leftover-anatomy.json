@@ -1,0 +1,175 @@
+{
+  "accountable_author": "Douglas Ek",
+  "all_node_condition_number": 329168502.82130355,
+  "all_node_orthogonal_leftover_max": 0.001307801996,
+  "all_node_system_unclipped_leftover": {
+    "N_max": 4.2391337e-05,
+    "beta_max": 0.001307801996,
+    "control_max": 0.001307801996,
+    "jet_max": 1.46e-10,
+    "step_norm": 87.603766570385
+  },
+  "all_node_unclipped_leftover_from_solve_step": {
+    "N_max": 0.000131894427,
+    "beta_max": 0.000633594491,
+    "control_max": 0.000633594491
+  },
+  "classified_branch": "truncated_svd",
+  "dropped_jet_condition_number": 96664184.95538794,
+  "dropped_jet_unclipped_leftover": {
+    "N_max": 0.0,
+    "beta_max": 0.0,
+    "control_max": 0.0,
+    "step_norm": 28.247049066335
+  },
+  "existence_tolerance": 3e-11,
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47"
+  },
+  "moved_jet_condition_number": 803310070.9379157,
+  "moved_jet_unclipped_leftover": {
+    "N_max": 3.1986845e-05,
+    "beta_max": 0.000782948848,
+    "control_max": 0.000782948848,
+    "jet_max": 4.6e-11,
+    "step_norm": 44.139698062384
+  },
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "schema": "NSC-KS-N16-LEFTOVER-ANATOMY-v1",
+  "scope": {
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "solve_condition_number": 705069850.42489,
+  "solve_orthogonal_leftover_max": 0.000626418496,
+  "solve_singular_values": [
+    0.001872988953,
+    6.3855158e-05,
+    3.6950941e-05,
+    1.0995313e-05,
+    7.864736e-06,
+    4.052537e-06,
+    3.588317e-06,
+    3.149201e-06,
+    3.053746e-06,
+    2.175897e-06,
+    1.305527e-06,
+    9.63673e-07,
+    9.02249e-07,
+    5.76678e-07,
+    4.61818e-07,
+    3.97662e-07,
+    2.18322e-07,
+    1.78734e-07,
+    1.17957e-07,
+    6.6533e-08,
+    1.8506e-08,
+    1.0419e-08,
+    5.8e-09,
+    3.154e-09,
+    2.703e-09,
+    7.88e-10,
+    3.3e-10,
+    3.25e-10,
+    9.8e-11,
+    3.2e-11,
+    4e-12,
+    3e-12
+  ],
+  "solve_unclipped_leftover": {
+    "N_max": 2.8562691e-05,
+    "beta_max": 0.000626418496,
+    "control_max": 0.000626418496,
+    "jet_max": 3e-12,
+    "step_norm": 14.847933022441
+  },
+  "source_hashes": {
+    "docs/nsc-ks-n16-leftover-anatomy.md": "a7ccb60cbd6aef6c645806d4cb2539669f58ff73b8aa865b87f42dc4d34b347f",
+    "scripts/derive_nsc_ks_n16_leftover_anatomy.py": "2385e40beec6f598c17bfda70a40b39b3b48c761a613f6c9a63b83a867acc8ed",
+    "src/recursive_horizons/nsc_local_history_newton.py": "1b55fac1ef1217556e04c9b2231dd15fd9eb30e81039c84fa09223434fc76495"
+  },
+  "status": "OPEN: leftover anatomy recorded; linear prediction is not a residual",
+  "truncated_svd_solve": [
+    {
+      "N_max": 0.001878271491,
+      "beta_max": 0.052569547872,
+      "condition_cutoff": 10000.0,
+      "control_max": 0.052569547872,
+      "jet_max": 7.1094e-07,
+      "kept_modes": 17,
+      "step_norm": 0.034903211387
+    },
+    {
+      "N_max": 5.9209462e-05,
+      "beta_max": 0.00464556469,
+      "condition_cutoff": 1000000.0,
+      "control_max": 0.00464556469,
+      "jet_max": 8.5e-11,
+      "kept_modes": 25,
+      "step_norm": 3.623469465112
+    },
+    {
+      "N_max": 3.3251209e-05,
+      "beta_max": 0.000508837201,
+      "condition_cutoff": 100000000.0,
+      "control_max": 0.000508837201,
+      "jet_max": 3e-12,
+      "kept_modes": 30,
+      "step_norm": 7.213128993634
+    }
+  ],
+  "walk_leftover_direction_projections": [
+    {
+      "constraint_maxima": [
+        0.005178128113432844,
+        0.007495305610980121
+      ],
+      "leftover_direction_dot_residual": -0.0004258075593026752,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-trial.json",
+      "profile_identity": "ee033df12b7a5f91e1c97d2e0674ee6cba5a705e6a6a7aff5fed648e31cee645"
+    },
+    {
+      "constraint_maxima": [
+        0.0049103958505813125,
+        0.0070691766590991675
+      ],
+      "leftover_direction_dot_residual": -0.00027265132041026386,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate.json",
+      "profile_identity": "b96830024bfdb6ed982c231dbc41fb96a5c7f04d8c93673e343695f8633fa444"
+    },
+    {
+      "constraint_maxima": [
+        0.004642661014396362,
+        0.006643047350344374
+      ],
+      "leftover_direction_dot_residual": -0.00011949489619733614,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate2.json",
+      "profile_identity": "b40c5f5228b455f61fc3d25e09c1379c5b1c95287da1aecb824bb2bb88be2922"
+    },
+    {
+      "constraint_maxima": [
+        0.0043749268306221755,
+        0.0062169177875487855
+      ],
+      "leftover_direction_dot_residual": 3.36616406809025e-05,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate3.json",
+      "profile_identity": "045a3ab26eb7ff85ca40772ca1aaeb7e0ae6a02fa4b51f25386e036521c177d0"
+    },
+    {
+      "constraint_maxima": [
+        0.004107193193038788,
+        0.005790788097514318
+      ],
+      "leftover_direction_dot_residual": 0.00018681825959007526,
+      "path": "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json",
+      "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898"
+    }
+  ],
+  "walk_projection_max": 0.00018681826,
+  "walk_projection_min": -0.000425807559,
+  "walk_projection_sign_stable": false
+}

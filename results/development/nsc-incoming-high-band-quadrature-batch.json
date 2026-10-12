@@ -1,0 +1,7617 @@
+{
+  "accountable_author": "Douglas Ek",
+  "aggregate": {
+    "direct_high_vacuum_source": [
+      1.3921365586928563e-07,
+      -9.266106384002253e-07,
+      0.0,
+      4.735498372957672e-07
+    ],
+    "lapse_quadrature_arithmetic_error_upper": 3.547462612926768e-12,
+    "numerical_budget_pass": true,
+    "original_high_source": [
+      1.4887959219899008e-07,
+      -9.172640429844229e-07,
+      1.07715303591151e-46,
+      4.736945383628264e-07
+    ],
+    "replacement_delta_from_original_high_source": [
+      -9.66593632970446e-09,
+      -9.346595415802436e-09,
+      -1.07715303591151e-46,
+      -1.4470106705918116e-10
+    ],
+    "root_composition_instruction": "replace original finite source high regions once; do not add these values atop old high source or earlier corrections",
+    "source_integral_float_enclosure": [
+      [
+        1.3921348863729053e-07,
+        1.3921382310128072e-07
+      ],
+      [
+        -9.2661072174625e-07,
+        -9.266105550542006e-07
+      ],
+      [
+        -5e-324,
+        5e-324
+      ],
+      [
+        4.7354979829973877e-07,
+        4.735498762917957e-07
+      ]
+    ],
+    "source_integral_interval": [
+      [
+        [
+          0,
+          276936410883977578773085663198537819983792781192398766471524445521403489199010159,
+          -290,
+          268
+        ],
+        [
+          0,
+          553874152461667441153220744298988590057736567574576630878000714973533494119267307,
+          -291,
+          269
+        ]
+      ],
+      [
+        [
+          1,
+          28801565189428327607711724609503283954744584377706279056040168363740995602020497,
+          -284,
+          264
+        ],
+        [
+          1,
+          921649920262047704153525863081917208171460878076233332417422992837196496931585357,
+          -289,
+          269
+        ]
+      ],
+      [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      [
+        [
+          0,
+          942029273166511186707755227505286912289422755925639201278704863994516589778042745,
+          -290,
+          269
+        ],
+        [
+          0,
+          942029428315559562321979785544466949979327910354098063356829327318829259703077523,
+          -290,
+          269
+        ]
+      ]
+    ],
+    "stationarity_tolerance": 3e-11,
+    "stress_error_upper": [
+      1.672319950752739e-13,
+      8.334602463333358e-14,
+      5e-324,
+      3.899602839558256e-14
+    ],
+    "thermal_policy": "separate nonzero physical thermal bound required over all replaced regions"
+  },
+  "group_payloads": [
+    {
+      "bytes": 1060553,
+      "group": 6,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group06.3e0a276ced5c8ff2eb40dfe114edb5aa6ce0472fbc2cbd44a97f77e8fdb8e578.json",
+      "sha256": "3e0a276ced5c8ff2eb40dfe114edb5aa6ce0472fbc2cbd44a97f77e8fdb8e578"
+    },
+    {
+      "bytes": 1060464,
+      "group": 1,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group01.d95afa4a4965876214fbcd43410ca377f32593c3ad068c09ae0467c9ecf45272.json",
+      "sha256": "d95afa4a4965876214fbcd43410ca377f32593c3ad068c09ae0467c9ecf45272"
+    },
+    {
+      "bytes": 1060593,
+      "group": 2,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group02.0e2ac83852ed3d48ffd92e6707f4f42237b7c3c622757935ed8433a44ff2c4d7.json",
+      "sha256": "0e2ac83852ed3d48ffd92e6707f4f42237b7c3c622757935ed8433a44ff2c4d7"
+    },
+    {
+      "bytes": 1060380,
+      "group": 3,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group03.da1b8f079e8ac63bdce7544849b44e5c0faebd8ad748d96cd5dac9b46339149b.json",
+      "sha256": "da1b8f079e8ac63bdce7544849b44e5c0faebd8ad748d96cd5dac9b46339149b"
+    },
+    {
+      "bytes": 1060673,
+      "group": 4,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group04.190f6b4eeef382baa53db999245a1e7ec1675ff7d17c9dc33e87a88cd5a5dadf.json",
+      "sha256": "190f6b4eeef382baa53db999245a1e7ec1675ff7d17c9dc33e87a88cd5a5dadf"
+    },
+    {
+      "bytes": 1060543,
+      "group": 5,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group05.cb1c19e84f0ead45b39c340bf470ff8fe3d0efe2af765670dcc43e7d19c98668.json",
+      "sha256": "cb1c19e84f0ead45b39c340bf470ff8fe3d0efe2af765670dcc43e7d19c98668"
+    },
+    {
+      "bytes": 1060594,
+      "group": 7,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group07.353f642c80bde01738e29862c845810b5959e5b4e30ccc4ea5c497a6c0544155.json",
+      "sha256": "353f642c80bde01738e29862c845810b5959e5b4e30ccc4ea5c497a6c0544155"
+    },
+    {
+      "bytes": 1060555,
+      "group": 8,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group08.becdd29e22acd07d8bf495f3aea4f8b016df37383d0a99eb27e3ae34ff199283.json",
+      "sha256": "becdd29e22acd07d8bf495f3aea4f8b016df37383d0a99eb27e3ae34ff199283"
+    },
+    {
+      "bytes": 1060550,
+      "group": 9,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group09.b8be0bec6e9345e778a1aaa19d34a3d58db9fd32224fdb6913e6ca97c1a0fb01.json",
+      "sha256": "b8be0bec6e9345e778a1aaa19d34a3d58db9fd32224fdb6913e6ca97c1a0fb01"
+    },
+    {
+      "bytes": 2347400,
+      "group": 10,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group10.a78b1554fb59e48017abb15cbc6e04f4847b69b893caf1b11b9681187d8ce7fb.json",
+      "sha256": "a78b1554fb59e48017abb15cbc6e04f4847b69b893caf1b11b9681187d8ce7fb"
+    },
+    {
+      "bytes": 2347422,
+      "group": 11,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group11.870580fc0b18a7bc6ccbc39a2f5dd37089f652d62098f76adda44ec2d7eb1477.json",
+      "sha256": "870580fc0b18a7bc6ccbc39a2f5dd37089f652d62098f76adda44ec2d7eb1477"
+    },
+    {
+      "bytes": 2347434,
+      "group": 12,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group12.bf84728d23a043388d949cf32f5d66214427896273ca9c7714337cc7e54f7172.json",
+      "sha256": "bf84728d23a043388d949cf32f5d66214427896273ca9c7714337cc7e54f7172"
+    },
+    {
+      "bytes": 455986,
+      "group": 13,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group13.5c34773b14bc6822f6ffb0060eb96af485ac9f54a9a57ea67e9e19989b4f1564.json",
+      "sha256": "5c34773b14bc6822f6ffb0060eb96af485ac9f54a9a57ea67e9e19989b4f1564"
+    },
+    {
+      "bytes": 1187865,
+      "group": 14,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group14.c331537c5da010501228b34e8bc67f0983a3df20652829a68dbf313dfdf6aab3.json",
+      "sha256": "c331537c5da010501228b34e8bc67f0983a3df20652829a68dbf313dfdf6aab3"
+    },
+    {
+      "bytes": 1059649,
+      "group": 15,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group15.62763212550bb543c983a5e42f429c195c7ed6b5a7e95be853d85c1e9f9ff7f5.json",
+      "sha256": "62763212550bb543c983a5e42f429c195c7ed6b5a7e95be853d85c1e9f9ff7f5"
+    },
+    {
+      "bytes": 1059633,
+      "group": 16,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group16.889037a86d59b428da35ade52d59516c831e85022b1ea984b2a429b58b2e2845.json",
+      "sha256": "889037a86d59b428da35ade52d59516c831e85022b1ea984b2a429b58b2e2845"
+    },
+    {
+      "bytes": 1059809,
+      "group": 17,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group17.e1a50636ee774a15932afd9aa838c68409f425cf7a7af7de2074801ae6c65780.json",
+      "sha256": "e1a50636ee774a15932afd9aa838c68409f425cf7a7af7de2074801ae6c65780"
+    },
+    {
+      "bytes": 1059581,
+      "group": 18,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group18.e2e8c35316eb819440de452012296b06ebadd118d387570996b0ab4e048c3515.json",
+      "sha256": "e2e8c35316eb819440de452012296b06ebadd118d387570996b0ab4e048c3515"
+    },
+    {
+      "bytes": 1059445,
+      "group": 19,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group19.8b1b2d1ea9e172449660d9559215b1843a69ea2594d52c7b7371105dcd59159e.json",
+      "sha256": "8b1b2d1ea9e172449660d9559215b1843a69ea2594d52c7b7371105dcd59159e"
+    },
+    {
+      "bytes": 1059416,
+      "group": 20,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group20.d80617ba48507bdfe3ee9d4a200471ec9570d871eac820669291e6bcfe870339.json",
+      "sha256": "d80617ba48507bdfe3ee9d4a200471ec9570d871eac820669291e6bcfe870339"
+    },
+    {
+      "bytes": 1059348,
+      "group": 21,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group21.726ebc133d7b4b115a4394f66f81d81112941690f1dd81e5a4d25cf3d254f117.json",
+      "sha256": "726ebc133d7b4b115a4394f66f81d81112941690f1dd81e5a4d25cf3d254f117"
+    },
+    {
+      "bytes": 1059351,
+      "group": 22,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group22.9b852b6d6ea225ea1b87f051d5a6945d8f235236020eb43c94d0f5f18e311037.json",
+      "sha256": "9b852b6d6ea225ea1b87f051d5a6945d8f235236020eb43c94d0f5f18e311037"
+    },
+    {
+      "bytes": 408861,
+      "group": 23,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group23.dac9a8274441e2df47902d70696ca1b10f0b4210256d256e8b6837e588481468.json",
+      "sha256": "dac9a8274441e2df47902d70696ca1b10f0b4210256d256e8b6837e588481468"
+    },
+    {
+      "bytes": 1059698,
+      "group": 24,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group24.29b6c2e3f7502880a901bc4bbdc1207ff7bcba7e0bdcc57e2722d475d6a6f63e.json",
+      "sha256": "29b6c2e3f7502880a901bc4bbdc1207ff7bcba7e0bdcc57e2722d475d6a6f63e"
+    },
+    {
+      "bytes": 1059683,
+      "group": 25,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group25.ce1769b70d597c46477a01e50a2a5922eb51c9d059a718928ae5fe44b822bff3.json",
+      "sha256": "ce1769b70d597c46477a01e50a2a5922eb51c9d059a718928ae5fe44b822bff3"
+    },
+    {
+      "bytes": 1059675,
+      "group": 26,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group26.0c08c42b1dfaee1233b24165e46997971fd1cda1d74e3c1bf34d87797074860d.json",
+      "sha256": "0c08c42b1dfaee1233b24165e46997971fd1cda1d74e3c1bf34d87797074860d"
+    },
+    {
+      "bytes": 1059775,
+      "group": 27,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group27.6c05c29fe1f0aedee36508d9110605d61331b95b407c97fca746cdcffdb9ef9a.json",
+      "sha256": "6c05c29fe1f0aedee36508d9110605d61331b95b407c97fca746cdcffdb9ef9a"
+    },
+    {
+      "bytes": 1059643,
+      "group": 28,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group28.f119bd3be3419935711e2839b39fcd0c43c591741cd32fddaa95f32317f23c53.json",
+      "sha256": "f119bd3be3419935711e2839b39fcd0c43c591741cd32fddaa95f32317f23c53"
+    },
+    {
+      "bytes": 1059666,
+      "group": 29,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group29.83bbd4f664ef3a94aec3c40760a2077d08f96f18df233aebd5fdb97bfbeb23f6.json",
+      "sha256": "83bbd4f664ef3a94aec3c40760a2077d08f96f18df233aebd5fdb97bfbeb23f6"
+    },
+    {
+      "bytes": 1059658,
+      "group": 30,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group30.6d5d024c416d56987f4d52aa1d3a0cc060babe36c775a417537d010f331d88a4.json",
+      "sha256": "6d5d024c416d56987f4d52aa1d3a0cc060babe36c775a417537d010f331d88a4"
+    },
+    {
+      "bytes": 2345190,
+      "group": 31,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group31.a926b67c0bdd10862037fff8eb6dad5861a2f6ac9892c777069c1c6f4b74d49f.json",
+      "sha256": "a926b67c0bdd10862037fff8eb6dad5861a2f6ac9892c777069c1c6f4b74d49f"
+    },
+    {
+      "bytes": 2345263,
+      "group": 32,
+      "path": "results/development/artifacts/nsc-incoming-high-band-quadrature-group32.61124bf73290617987db857da3a3db33f7aeb08323ce6b3bf5b31ed98a94b4e8.json",
+      "sha256": "61124bf73290617987db857da3a3db33f7aeb08323ce6b3bf5b31ed98a94b4e8"
+    }
+  ],
+  "groups": {
+    "1": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        5.947384601307898e-17,
+        2.973224122081211e-17,
+        5e-324,
+        1.4870802449307726e-17
+      ],
+      "certified_approximant": [
+        9.850634683930168e-11,
+        -7.006884456320184e-10,
+        0.0,
+        3.9959739623566005e-10
+      ],
+      "direct_high_vacuum_source": [
+        9.850634683930168e-11,
+        -7.006884456320184e-10,
+        0.0,
+        3.9959739623566005e-10
+      ],
+      "group": 1,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.2616081335597016e-15,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.9731273181089254e-10,
+        -6.019992204863041e-10,
+        6.2550792652544325e-93,
+        3.9965597614859813e-10
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        5.67457319880695e-30,
+        3.16432246823195e-30,
+        5e-324,
+        1.2690821856648747e-30
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            401321702517152868696648012664215798199809649577422941943491633557838101992409883,
+            -301,
+            268
+          ],
+          [
+            0,
+            802644374237217519615528454133599327817724899976280504974896429823450269009744233,
+            -302,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            713663816259978504037463790157409507346173888571043080743568311229847185543985115,
+            -299,
+            269
+          ],
+          [
+            1,
+            713663755694333522708736170352885625513637336310852088376335103560159964796458663,
+            -299,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            813994241889266681742463079901638496759155142507680253519146134892560279555529493,
+            -300,
+            269
+          ],
+          [
+            0,
+            406997151236992876064918295479829918856790407250436019985884711091473980421633641,
+            -299,
+            268
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -9.880638497159086e-11,
+        -9.868922514571434e-11,
+        -6.2550792652544325e-93,
+        -5.85799129380825e-14
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/1_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/1_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/1_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/1_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          9.850628736545566e-11,
+          9.85064063131477e-11
+        ],
+        [
+          -7.006884753642596e-10,
+          -7.00688415899777e-10
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          3.9959738136485753e-10,
+          3.995974111064625e-10
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            802643405034305737347058786303178707868054214699266431374094784326115312385351379,
+            -302,
+            269
+          ],
+          [
+            0,
+            200661093559304379915441423289713054087322496107964989371946228153252790152303155,
+            -300,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            178415954064994626010171677377916379267448249394033984836607495643601735176345695,
+            -297,
+            267
+          ],
+          [
+            1,
+            356831877847166761352756625499314807895009113652879614886736716107800104817530499,
+            -298,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            813994241889266681739877913832513945658244074711808599306149111811122700320407901,
+            -300,
+            269
+          ],
+          [
+            0,
+            406997151236992876066210878514392194407245941148371847092383222632192770039194437,
+            -299,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "10": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.9070069892377155e-15,
+        1.447932416535452e-15,
+        5e-324,
+        7.295372890228848e-16
+      ],
+      "certified_approximant": [
+        6.4360041098940316e-09,
+        -3.797392690417553e-08,
+        0.0,
+        2.2204965507034784e-08
+      ],
+      "direct_high_vacuum_source": [
+        6.4360041098940316e-09,
+        -3.797392690417553e-08,
+        0.0,
+        2.2204965507034784e-08
+      ],
+      "group": 10,
+      "interval": [
+        32,
+        320
+      ],
+      "lapse_error_upper": 6.166582300951644e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        6.789748277026097e-09,
+        -3.763946001501323e-08,
+        2.502031706101809e-92,
+        2.221460414601964e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        7.219460923271759e-28,
+        3.9534102594309095e-28,
+        5e-324,
+        1.6495595487693095e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            819397874625808344690988659946165932695884685251188734520802355294370344223113133,
+            -296,
+            269
+          ],
+          [
+            0,
+            819398614835535887004186100314975514180661269832160585732548777649561971610468771,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            604330142312437803756281167518226339950291137509945059761604437547027222516825949,
+            -293,
+            269
+          ],
+          [
+            1,
+            604330096226649934135941539207943299731674956454283375235450035555243781209774561,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            706754876640663813420188630661749138889483926993681207867891909668124917614834331,
+            -294,
+            269
+          ],
+          [
+            0,
+            706754923081091953433928372323512610462712998114022701290475192227107954644878137,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.537441671320658e-10,
+        -3.344668891623059e-10,
+        -2.502031706101809e-92,
+        -9.638638984855539e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/10_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid/10_1",
+          "rows": 560,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/10_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid/10_-1",
+          "rows": 560,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          6.4360012028870416e-09,
+          6.4360070169010215e-09
+        ],
+        [
+          -3.797392835210795e-08,
+          -3.797392545624311e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.2204964777497492e-08,
+          2.2204966236572072e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            409698937312904172299537137377940600697963013457681817990883784531233601421278127,
+            -295,
+            268
+          ],
+          [
+            0,
+            409699307417767943548050242752630122740309964083992842135791781940732556495512825,
+            -295,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            302165071156218901881286380215234504195699379563961941473322526503206019349753155,
+            -292,
+            268
+          ],
+          [
+            1,
+            75541262028331241766206243286962578911320916854538069006301177511982370628386775,
+            -290,
+            266
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            353377438320331906707469149591851784732920545996131167635000848981637076233564645,
+            -293,
+            268
+          ],
+          [
+            0,
+            353377461540545976719589351900779089943177916557720786944182701965979359896291589,
+            -293,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "11": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        6.549227392915055e-15,
+        3.2598476619568763e-15,
+        5e-324,
+        1.6446898684543536e-15
+      ],
+      "certified_approximant": [
+        7.416899730784023e-09,
+        -4.1947849316219225e-08,
+        0.0,
+        2.4682374523501625e-08
+      ],
+      "direct_high_vacuum_source": [
+        7.416899730784023e-09,
+        -4.1947849316219225e-08,
+        0.0,
+        2.4682374523501625e-08
+      ],
+      "group": 11,
+      "interval": [
+        32,
+        320
+      ],
+      "lapse_error_upper": 1.3892759761352887e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        7.796661751156697e-09,
+        -4.160293926113778e-08,
+        2.7105343482769332e-92,
+        2.4699800506147236e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        9.270135550714944e-28,
+        5.067889077782657e-28,
+        5e-324,
+        2.1226779963938494e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            472139945108150082208383638245488999838784846358765105709226861874737548470179567,
+            -295,
+            268
+          ],
+          [
+            0,
+            944281557842777191149519172500436731744868497269594600340810733207694036659539135,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            667572537714246073313994914566417952845499101988548371403521850393343865824434643,
+            -293,
+            269
+          ],
+          [
+            1,
+            667572433957574761784643390531137962563812146657581690633910015437900122365665223,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            785607523991283533199829110397113748702148389231746470706671961571232386797694467,
+            -294,
+            269
+          ],
+          [
+            0,
+            196401907171980492836146392960618148684311671787518427210128072033361687869097457,
+            -292,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.797620203726745e-10,
+        -3.44910055081446e-10,
+        -2.7105343482769332e-92,
+        -1.7425982645611346e-11
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/11_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid/11_1",
+          "rows": 560,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/11_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid/11_-1",
+          "rows": 560,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          7.4168931815566295e-09,
+          7.4169062800114165e-09
+        ],
+        [
+          -4.1947852576066894e-08,
+          -4.1947846056371555e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.4682372878811752e-08,
+          2.4682376168191494e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            944279890216300164298744778851580242655035774963142804787887853906314793215493947,
+            -296,
+            269
+          ],
+          [
+            0,
+            472140778921388595633770835069917244383701207511991003485688301525427170192202161,
+            -295,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            333786268857123036661030063679894863883296965648853320597664193017354828109582809,
+            -292,
+            268
+          ],
+          [
+            1,
+            83446554244696845222072272217220773455339664668552927605262934974566791496366781,
+            -290,
+            266
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            785607523991283533193072905014570194867754719745401420331122650873249950107729739,
+            -294,
+            269
+          ],
+          [
+            0,
+            196401907171980492837835444306254037142910089159104689804015399707857297041588639,
+            -292,
+            267
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "12": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.839919416934436e-14,
+        9.15143096093729e-15,
+        5e-324,
+        4.623881608040814e-15
+      ],
+      "certified_approximant": [
+        8.310012152490243e-09,
+        -4.4721971687777865e-08,
+        0.0,
+        2.6515991920134052e-08
+      ],
+      "direct_high_vacuum_source": [
+        8.310012152490243e-09,
+        -4.4721971687777865e-08,
+        0.0,
+        2.6515991920134052e-08
+      ],
+      "group": 12,
+      "interval": [
+        32,
+        320
+      ],
+      "lapse_error_upper": 3.9029883841518563e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        8.70443454534767e-09,
+        -4.4395503387930654e-08,
+        2.919036990452161e-92,
+        2.6549968966639173e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.168746341133007e-27,
+        6.378128058014611e-28,
+        5e-324,
+        2.682681268646397e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            132248095613898032874307813675115205214108679249691884178202993397197539602849411,
+            -293,
+            267
+          ],
+          [
+            0,
+            528994724944370721287437428680359392560875697097130083185021574970632608165847423,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            711720967987577548758832617079513212131357914974867087283989246674757066729957135,
+            -293,
+            269
+          ],
+          [
+            1,
+            711720676709544726023084992975299565154455051914099291243412174557515926524029357,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            421984531800737747627463424738636430093968220025217771345266527723466980637248871,
+            -293,
+            268
+          ],
+          [
+            0,
+            210992339486409373180780645095786328248669155165935860954496771936369859954911437,
+            -292,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.9442239285742684e-10,
+        -3.2646829984721094e-10,
+        -2.919036990452161e-92,
+        -3.3977046505121185e-11
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/12_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid_ref/12_1",
+          "rows": 840,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/12_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid_ref/12_-1",
+          "rows": 840,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          8.309993753296072e-09,
+          8.310030551684413e-09
+        ],
+        [
+          -4.472198083920883e-08,
+          -4.4721962536346896e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.6515987296252443e-08,
+          2.6515996544015665e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            528992382455592131422831931447422287164271508109868076709031009131376775499678399,
+            -295,
+            269
+          ],
+          [
+            0,
+            132248681236092680340459187983349481563259726496507385797200634857011497769391667,
+            -293,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            88965120998447193596122873650158308766649742123811628238278375547934703801201299,
+            -290,
+            266
+          ],
+          [
+            1,
+            177930169177386181503233655213386576788153757474618338155293604212198840711094025,
+            -291,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            421984531800737747623194113600143187619099922181743017759991718123434430870335087,
+            -293,
+            268
+          ],
+          [
+            0,
+            210992339486409373182915300665032949486103304087673237747134176736386134838368329,
+            -292,
+            267
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "13": {
+      "actual_signs": [
+        1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        4.4998337509433274e-17,
+        2.248835631687708e-17,
+        5e-324,
+        5e-324
+      ],
+      "certified_approximant": [
+        1.2663012888434059e-09,
+        -1.4616363877051806e-08,
+        0.0,
+        0.0
+      ],
+      "direct_high_vacuum_source": [
+        1.2663012888434059e-09,
+        -1.4616363877051806e-08,
+        0.0,
+        0.0
+      ],
+      "group": 13,
+      "interval": [
+        16,
+        160
+      ],
+      "lapse_error_upper": 9.54541742369009e-16,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.266293947141633e-09,
+        -1.461718070228187e-08,
+        2.692882589778775e-47,
+        0.0
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.19162724145538e-28,
+        6.396250840908731e-29,
+        5e-324,
+        5e-324
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            161218824411844563619133711992925965578027710865550677283751920354582060389875807,
+            -296,
+            267
+          ],
+          [
+            0,
+            644875343478994399524199203936509928457861150740662199493651523397715200551016171,
+            -298,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            930439347079997848261659040102152135776773342853029935209580857868192597158080881,
+            -295,
+            269
+          ],
+          [
+            1,
+            930439344216898434184248392054618201872412453950057517733523058850880472569641151,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        7.341701772966746e-15,
+        8.168252300631486e-13,
+        -2.692882589778775e-47,
+        0.0
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            16,
+            160
+          ],
+          "panel": "group13/mid",
+          "rows": 432,
+          "sign": 1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.2663012438450682e-09,
+          1.2663013338417436e-09
+        ],
+        [
+          -1.4616363899540164e-08,
+          -1.4616363854563449e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          -5e-324,
+          5e-324
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            161218824411844563603962539735270778716508684965890536178085987081954697679905791,
+            -296,
+            267
+          ],
+          [
+            0,
+            644875343478994399584883892967130675903937254339302763916315256488224651390896235,
+            -298,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            930439347079997848265730725438586758301562703142980950417709922118880086378612625,
+            -295,
+            269
+          ],
+          [
+            1,
+            930439344216898434180176706718183579347623093660106502525393994600192983349109407,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "14": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        3.107429217111953e-16,
+        1.55561973149281e-16,
+        5e-324,
+        4.316569782808272e-17
+      ],
+      "certified_approximant": [
+        1.4604206591594997e-08,
+        -1.1615349143188283e-07,
+        0.0,
+        4.382505002253828e-08
+      ],
+      "direct_high_vacuum_source": [
+        1.4604206591594997e-08,
+        -1.1615349143188283e-07,
+        0.0,
+        4.382505002253828e-08
+      ],
+      "group": 14,
+      "interval": [
+        16,
+        160
+      ],
+      "lapse_error_upper": 6.5917344136728294e-15,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.4604050666310033e-08,
+        -1.161688045966246e-07,
+        8.078647769336326e-47,
+        4.382904670487561e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        7.760422755969559e-28,
+        4.121349259416809e-28,
+        5e-324,
+        8.847238331903144e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            929665424997054434463482405168232181360575277481880093292091933265120439401058283,
+            -295,
+            269
+          ],
+          [
+            0,
+            58104091534950709811628247547227973362014933953525051249920678504905422671480811,
+            -291,
+            265
+          ]
+        ],
+        [
+          [
+            1,
+            462126642852519814196796894365995029568492587547874968868685805764989805628947323,
+            -291,
+            268
+          ],
+          [
+            1,
+            924253283229372953090593683275729964219275470540902222426874158748451780384847469,
+            -292,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            697446902129991268792322289832658743805188473175254637327260466896816948406534295,
+            -293,
+            269
+          ],
+          [
+            0,
+            697446903503898699551340474031829585111724366753572509152508845478241297746284033,
+            -293,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        1.559252849642082e-13,
+        1.531316474176823e-11,
+        -8.078647769336326e-47,
+        -3.996682337326706e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            16,
+            160
+          ],
+          "panel": "group14/mid24_1",
+          "rows": 432,
+          "sign": 1
+        },
+        {
+          "interval": [
+            16,
+            160
+          ],
+          "panel": "group14/mid24_-1",
+          "rows": 432,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.4604206280852073e-08,
+          1.4604206902337921e-08
+        ],
+        [
+          -1.1615349158744481e-07,
+          -1.1615349127632085e-07
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          4.382504997937258e-08,
+          4.382505006570398e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            929665424997054434414081591588623393550200791124993770267781894661777971208862121,
+            -295,
+            269
+          ],
+          [
+            0,
+            464832732279605678517726387167628180801306714806643571511520447340914615467944569,
+            -294,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            924253285705039628396873217135299249688177402570994492497848867357419452252903889,
+            -292,
+            269
+          ],
+          [
+            1,
+            462126641614686476543657127436210386834041621532828833833198451460505969694919113,
+            -291,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            348723451064995634395457154964247645005145562238660757544052657825938876617921153,
+            -292,
+            268
+          ],
+          [
+            0,
+            348723451751949349776374226967996519453310857725752815695831998361590246458488011,
+            -292,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "15": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        5.849167871403337e-16,
+        2.926339337907439e-16,
+        5e-324,
+        1.1405082223679468e-16
+      ],
+      "certified_approximant": [
+        6.864901197087152e-10,
+        -5.194192214898774e-09,
+        0.0,
+        2.436187436426262e-09
+      ],
+      "direct_high_vacuum_source": [
+        6.864901197087152e-10,
+        -5.194192214898774e-09,
+        0.0,
+        2.436187436426262e-09
+      ],
+      "group": 15,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.2407735930674288e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        9.264672606718074e-10,
+        -4.955217073784173e-09,
+        1.668021137401243e-92,
+        2.4365552836733145e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        6.855068195898352e-29,
+        3.692294070688387e-29,
+        5e-324,
+        1.0229737934551197e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            699201939874141126670009546259396049063383806757891271251669765904659262842093205,
+            -299,
+            269
+          ],
+          [
+            0,
+            699203131370679593867645871837717808950082883651248912313673951249116799312856755,
+            -299,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            330648656432848764032916042522973090638828899546617111239926997348928981496140151,
+            -295,
+            268
+          ],
+          [
+            1,
+            330648619176233096927061350592878299161260453936564222377729211713792217472592423,
+            -295,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            620325152596093902668044773964364979842591149822502700910647258724365691128113465,
+            -297,
+            269
+          ],
+          [
+            0,
+            310162605338750452071039129121232541694681712055771040910581596347758451737774461,
+            -296,
+            268
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.399771409630922e-10,
+        -2.3897514111460044e-10,
+        -1.668021137401243e-92,
+        -3.678472470525591e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/15_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/15_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/15_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/15_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          6.86489534791928e-10,
+          6.864907046255023e-10
+        ],
+        [
+          -5.194192507532708e-09,
+          -5.194191922264839e-09
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.4361873223754395e-09,
+          2.4361875504770848e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            349600969937070563300094721791519823389273207915465158177460916915559908543667311,
+            -298,
+            268
+          ],
+          [
+            0,
+            349601565685339796968732987257037105617460137289104933605210941661328122533807669,
+            -298,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            661297312865697528070532919956695400969774405253368220355703298213683755044836407,
+            -296,
+            269
+          ],
+          [
+            1,
+            661297238352466193849421866275007378630404301712994446879609119911758642892628741,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            620325152596093902665439980939220676862615668006223540286636401412834701870413071,
+            -297,
+            269
+          ],
+          [
+            0,
+            155081302669375226036170762816902346592334726481955310611293512501761973183312329,
+            -295,
+            267
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "16": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        8.292638089495092e-16,
+        4.147196626789209e-16,
+        5e-324,
+        1.672109306488858e-16
+      ],
+      "certified_approximant": [
+        1.3766350715706608e-09,
+        -1.0016202499025285e-08,
+        0.0,
+        5.0945932444106485e-09
+      ],
+      "direct_high_vacuum_source": [
+        1.3766350715706608e-09,
+        -1.0016202499025285e-08,
+        0.0,
+        5.0945932444106485e-09
+      ],
+      "group": 16,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.7591025910908573e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.667377753656771e-09,
+        -9.727458932243104e-09,
+        2.0850264217515833e-92,
+        5.095404090912453e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.2617373344433144e-28,
+        6.806982796628261e-29,
+        5e-324,
+        2.1201669095327414e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            701063369458255931963444832065038328367833845306224461642346159235965926477003777,
+            -298,
+            269
+          ],
+          [
+            0,
+            350532107039181095978959922204824463546474485116298499431782867574685071558641687,
+            -297,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            39850323596806176449741954354026949298474253990814828697656754377691479050910239,
+            -291,
+            265
+          ],
+          [
+            1,
+            637605124748969327439066358309038123168037133903348755128810488752983913840860385,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            648616836440027563286438253423188266821555638864215798166981807373440992546706287,
+            -296,
+            269
+          ],
+          [
+            0,
+            648616879016862722872825236489469145747079395327917935996974399169949426148713945,
+            -296,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.9074268208611033e-10,
+        -2.8874356678218135e-10,
+        -2.0850264217515833e-92,
+        -8.108465018047812e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/16_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/16_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/16_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/16_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.3766342423068517e-09,
+          1.37663590083447e-09
+        ],
+        [
+          -1.0016202913744948e-08,
+          -1.0016202084305621e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          5.094593077199717e-09,
+          5.09459341162158e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            701063369458255931899189723491403112583127784557817125297397756428764492993758837,
+            -298,
+            269
+          ],
+          [
+            0,
+            350532107039181096011087476491642071438827515490502167604257068978285788300264157,
+            -297,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            637605177548898823200204416179125469239676596344426850831116313536784301671312081,
+            -295,
+            269
+          ],
+          [
+            1,
+            622661254637665358822981652142913908890574806066366370566603755135999293929797,
+            -285,
+            259
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            162154209110006890820934742063523301495991098677366723668358109924243511223775703,
+            -294,
+            267
+          ],
+          [
+            0,
+            162154219754215680718881130414641051646167659870666709872630941711604093450079355,
+            -294,
+            267
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "17": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.350872609987961e-15,
+        1.1747086650098984e-15,
+        5e-324,
+        5.387451461522431e-16
+      ],
+      "certified_approximant": [
+        2.352046163447242e-09,
+        -1.664202412986798e-08,
+        0.0,
+        8.814464588526523e-09
+      ],
+      "direct_high_vacuum_source": [
+        2.352046163447242e-09,
+        -1.664202412986798e-08,
+        0.0,
+        8.814464588526523e-09
+      ],
+      "group": 17,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 4.986864318596927e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        2.6925398839740434e-09,
+        -1.6304550456620405e-08,
+        2.5020317061018943e-92,
+        8.815824656154858e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        2.085829307003734e-28,
+        1.1265785165520168e-28,
+        5e-324,
+        3.7614679263124507e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            18715616656755675490105082849338404481404468648163297591626982027917172859142545,
+            -292,
+            264
+          ],
+          [
+            0,
+            74862616277400265942637478474922102374331570396747358903343000209959100723960085,
+            -294,
+            266
+          ]
+        ],
+        [
+          [
+            1,
+            264846908316339874226918265446396660506466510959184851989703626751512944640844737,
+            -293,
+            268
+          ],
+          [
+            1,
+            529693741853810705925362759035779993722345771363878596550793917426131746318094537,
+            -294,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            280552818461119301514421095700306407238626343483847956217431729659421696788531113,
+            -294,
+            268
+          ],
+          [
+            0,
+            561105705512441347051029178118839601246970928463865825625052056311822691365043915,
+            -295,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.404937205268015e-10,
+        -3.3747367324757487e-10,
+        -2.5020317061018943e-92,
+        -1.3600676283348224e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/17_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/17_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/17_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/17_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          2.352043812574632e-09,
+          2.3520485143198525e-09
+        ],
+        [
+          -1.6642025304576646e-08,
+          -1.6642022955159312e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          8.814464049781375e-09,
+          8.81446512727167e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            299449866508090807815125642221543000532600480067322775213836623151441450864444757,
+            -296,
+            268
+          ],
+          [
+            0,
+            299450465109601063797105597267559880667197299890279421865567090135069717777676303,
+            -296,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            529693816632679748457422282405890186424811950848720316944197052797405487042804585,
+            -294,
+            269
+          ],
+          [
+            1,
+            264846870926905352960888503761341564155233421216763991793002059065876074278489713,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            17534551153819956344576491865158537786740513635952672117128958944736500412638111,
+            -290,
+            264
+          ],
+          [
+            0,
+            561105705512441347053423629834379206548527179081076230311788829399098071737686589,
+            -295,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "18": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.7445868930908356e-15,
+        1.3707467280346306e-15,
+        5e-324,
+        6.296512564312682e-16
+      ],
+      "certified_approximant": [
+        3.615399063580585e-09,
+        -2.4953875888644175e-08,
+        0.0,
+        1.3539818731187387e-08
+      ],
+      "direct_high_vacuum_source": [
+        3.615399063580585e-09,
+        -2.4953875888644175e-08,
+        0.0,
+        1.3539818731187387e-08
+      ],
+      "group": 18,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 5.822043435400764e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        4.013976644287969e-09,
+        -2.4560288188459605e-08,
+        2.91903699045219e-92,
+        1.3542118381607419e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        3.2058348428598973e-28,
+        1.732600603564322e-28,
+        5e-324,
+        6.059905511162581e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            920586546312177805372370063967330895417807049542740175834094364145708173951981431,
+            -297,
+            269
+          ],
+          [
+            0,
+            230146986004434532629654512347348809908025429946176304995380627358201856815226303,
+            -295,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            49640571998451436828946623324780950819071768764148730180915000242293436493926901,
+            -290,
+            265
+          ],
+          [
+            1,
+            397124532358542803335663399331770376473481570281890142982227088412861002925867707,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            430954634153968756799420492288204383128814616031565037390524208524252914375991215,
+            -294,
+            268
+          ],
+          [
+            0,
+            107738668558978605113299958916421741960316036317639900152105180912864097496912983,
+            -292,
+            266
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.9857758070738424e-10,
+        -3.935877001845698e-10,
+        -2.91903699045219e-92,
+        -2.299650420031742e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/18_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/18_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/18_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/18_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          3.6153963189936917e-09,
+          3.6154018081674783e-09
+        ],
+        [
+          -2.4953877259390903e-08,
+          -2.4953874517897443e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.353981810153613e-08,
+          1.3539819360838645e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            115073318289022225661342506575459762177485567166070285831130399247817548157191767,
+            -294,
+            266
+          ],
+          [
+            0,
+            920587944017738130600248060753048037630024231998883109166573679595975215955352507,
+            -297,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            397124575987611494634330306724872113130455329151352522809201300231301216552307319,
+            -293,
+            268
+          ],
+          [
+            1,
+            99281133089635700833226519801286467473900097810931865405086447529976819581243899,
+            -291,
+            266
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            861909268307937513594983407845338203951587101479890747888133359520096309703358759,
+            -295,
+            269
+          ],
+          [
+            0,
+            861909348471828840910257248062444497988570421124358528109756504831322299023927535,
+            -295,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "19": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        3.0409188458078038e-15,
+        1.5179108966251997e-15,
+        5e-324,
+        6.96372848648405e-16
+      ],
+      "certified_approximant": [
+        5.146739825982821e-09,
+        -3.4649260041984344e-08,
+        0.0,
+        1.911020734449468e-08
+      ],
+      "direct_high_vacuum_source": [
+        5.146739825982821e-09,
+        -3.4649260041984344e-08,
+        0.0,
+        1.911020734449468e-08
+      ],
+      "group": 19,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 6.45064714416258e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        5.59569733253678e-09,
+        -3.4207192589770113e-08,
+        3.336042274802549e-92,
+        1.9113452192035755e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        4.670908341013913e-28,
+        2.5247921570669146e-28,
+        5e-324,
+        9.132405901516188e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            10238367179589266693510969098463435338277119180007578855301623109051563838231931,
+            -290,
+            263
+          ],
+          [
+            0,
+            655256273801349292318805956151370696748204901642840713182616904050662007303751057,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            137855063185410508942927887904290098020122933322194129365299810937299156461553247,
+            -291,
+            267
+          ],
+          [
+            1,
+            551420204428531094028071409087512692538776896565035026786917591013377878751588103,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            304126394198520622045074216087378820003020395818982002782621311245278067923837545,
+            -293,
+            268
+          ],
+          [
+            0,
+            608252832726308216490819210341046648239531732690937888564489051569412195932366517,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -4.489575065539589e-10,
+        -4.420674522142309e-10,
+        -3.336042274802549e-92,
+        -3.244847541076151e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/19_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/19_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/19_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/19_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          5.1467367850639746e-09,
+          5.146742866901668e-09
+        ],
+        [
+          -3.4649261559895245e-08,
+          -3.4649258524073443e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.9110206648121828e-08,
+          1.9110208040867527e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            327627749746856534162617235110810649559480403168687123651319204230701916076761039,
+            -295,
+            268
+          ],
+          [
+            0,
+            655256273801349292378273508231409259278979722825951512619282374568558260797072563,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            34463765796352627235983099537435437315085496471506752561737303670494131804086561,
+            -289,
+            265
+          ],
+          [
+            1,
+            551420204428531094024053368105706087577900686309703503260319976034668395732416115,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            304126394198520622043620853636450863152598111377039736067243264338718096920185761,
+            -293,
+            268
+          ],
+          [
+            0,
+            608252832726308216493725935242902561940376301574822421995245145382532137939670085,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "2": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.2709072945015875e-16,
+        1.1349666472450687e-16,
+        5e-324,
+        5.679703250826809e-17
+      ],
+      "certified_approximant": [
+        3.066714583453322e-10,
+        -2.1631009469780197e-09,
+        0.0,
+        1.234886202661676e-09
+      ],
+      "direct_high_vacuum_source": [
+        3.066714583453322e-10,
+        -2.1631009469780197e-09,
+        0.0,
+        1.234886202661676e-09
+      ],
+      "group": 2,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 4.817235314953687e-15,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        4.326737967863323e-10,
+        -2.0375162651028173e-09,
+        8.340105687006008e-93,
+        1.2350950309445745e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.8191859500067037e-29,
+        1.0138397967773539e-29,
+        5e-324,
+        4.071439906351449e-30
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            624700330972418630488858492364020743983214348879060184475177389466857304439513655,
+            -300,
+            269
+          ],
+          [
+            0,
+            156175314039097544069939256583510236871119660947052891193153261523380692378135051,
+            -298,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            275394667539638187543716731081735105394051589366518311730304706307583782843988503,
+            -296,
+            268
+          ],
+          [
+            1,
+            137697319320019767438310710116876974360734951525697452562624801669677808462377171,
+            -295,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            628876876450828673437147899697734798616475460696717263517991614953815098536200407,
+            -298,
+            269
+          ],
+          [
+            0,
+            628876934299627872249602146187081810567928842142358338968125291151949831312194635,
+            -298,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -1.2600233844100015e-10,
+        -1.2558468187520238e-10,
+        -8.340105687006008e-93,
+        -2.0882828289847125e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/2_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/2_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/2_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/2_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          3.0667123125460266e-10,
+          3.0667168543606165e-10
+        ],
+        [
+          -2.163101060474685e-09,
+          -2.1631008334813545e-09
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.2348861458646434e-09,
+          1.2348862594587085e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            624700330972418630451801020085961897687162235270077752816328136319340050113991249,
+            -300,
+            269
+          ],
+          [
+            0,
+            312350628078195088158407249306049896890265378698596998215731149620520011919031305,
+            -299,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            275394667539638187545007498669407051447283011348406446776571826774476683425503541,
+            -296,
+            268
+          ],
+          [
+            1,
+            34424329830004941859416331580760250333529810133688346259872810359057839542904913,
+            -293,
+            265
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            628876876450828673435074482306554345810807582612767781923438804345771786117051827,
+            -298,
+            269
+          ],
+          [
+            0,
+            628876934299627872251675563578262263373596720226307820562678101759993143731343215,
+            -298,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "20": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        7.17634012285416e-15,
+        3.5788128769119525e-15,
+        5e-324,
+        1.722783783726683e-15
+      ],
+      "certified_approximant": [
+        6.904672685763665e-09,
+        -4.526224759382589e-08,
+        0.0,
+        2.527196169261825e-08
+      ],
+      "direct_high_vacuum_source": [
+        6.904672685763665e-09,
+        -4.526224759382589e-08,
+        0.0,
+        2.527196169261825e-08
+      ],
+      "group": 20,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.5223042858524028e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        7.415238105242982e-09,
+        -4.476171762736465e-08,
+        3.753047559152807e-92,
+        2.5276653521819273e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        6.531499015644607e-28,
+        3.529731583164767e-28,
+        5e-324,
+        1.3100381427518113e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            879065752953227346718009948640215848728125512187671699585275263125049453135887655,
+            -296,
+            269
+          ],
+          [
+            0,
+            219766895065275833137135234501639568183588417959218188887540715787413225470956327,
+            -294,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            720319015691819891556944213886786412445942473123759450325980965197239398959765877,
+            -293,
+            269
+          ],
+          [
+            1,
+            720318901782904604428973130435769518415902401206038329965031872293350222518001063,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            402186653523732813719251997904806530671638998596419708820147377452334758916414433,
+            -293,
+            268
+          ],
+          [
+            0,
+            25136669272354928465173437354270180627990648192543892470247663781254527292412231,
+            -289,
+            264
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -5.105654194793168e-10,
+        -5.005299664612421e-10,
+        -3.753047559152807e-92,
+        -4.691829201024174e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/20_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/20_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/20_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/20_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          6.9046655094235415e-09,
+          6.904679862103788e-09
+        ],
+        [
+          -4.526225117263877e-08,
+          -4.526224401501301e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.5271959969834464e-08,
+          2.5271963415402035e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            109883219119153418329356791647010305697353478813495689409698020848477568601088607,
+            -293,
+            266
+          ],
+          [
+            0,
+            879067580261103332631696553470691675883651353516578939857853959486881806211004107,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            180079753922954972890640387499374476360787972365777120725609612250870742421687111,
+            -291,
+            267
+          ],
+          [
+            1,
+            1406872855044735555514366785791128955895884736067752533962059352513880179279333,
+            -284,
+            260
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            804373307047465627434334316392182042100723743446328071043388948909217864464201733,
+            -294,
+            269
+          ],
+          [
+            0,
+            804373416715357710889719674754076799338254995907915905644831046995596526725818525,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "21": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.4360538062783754e-14,
+        7.155327393985167e-15,
+        5e-324,
+        3.5139325492834167e-15
+      ],
+      "certified_approximant": [
+        8.828993329045038e-09,
+        -5.619823775659528e-08,
+        0.0,
+        3.169694012073003e-08
+      ],
+      "direct_high_vacuum_source": [
+        8.828993329045038e-09,
+        -5.619823775659528e-08,
+        0.0,
+        3.169694012073003e-08
+      ],
+      "group": 21,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 3.0462754364862896e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        9.410605999705703e-09,
+        -5.563296645868722e-08,
+        4.1700528435030577e-92,
+        3.1704676016873546e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        8.842750213588354e-28,
+        4.776986293607676e-28,
+        5e-324,
+        1.8091061183316118e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            562029618535914070384138875754157642825066671456756400609952598205448926833559545,
+            -295,
+            269
+          ],
+          [
+            0,
+            562031446844206121841640274352273631208137354105385823899427464931337348284533167,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            894358177284710709990902124656492902482960356958691353225823844384896200543837863,
+            -293,
+            269
+          ],
+          [
+            1,
+            894357949540033812067872662524019798236863001278489712006282684151673710261692359,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            504435939122187664793741593306766646738809013510050469041306252549547608344910681,
+            -293,
+            269
+          ],
+          [
+            0,
+            126109012741511824577586272151561000624957963659469347436102729109483241373420475,
+            -291,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -5.816126706606651e-10,
+        -5.652712979080611e-10,
+        -4.1700528435030577e-92,
+        -7.73589614351457e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/21_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/21_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/21_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/21_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          8.828978968506973e-09,
+          8.829007689583101e-09
+        ],
+        [
+          -5.619824491192268e-08,
+          -5.6198230601267885e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          3.169693660679748e-08,
+          3.1696943634662584e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            562029618535914070327848249770348474224275579489720100125609008660034804273535573,
+            -295,
+            269
+          ],
+          [
+            0,
+            562031446844206121897930900336082799808928446072422124383771054476751470844557139,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            894358177284710709998504384764723815201654611888707248093372904435016451900306031,
+            -293,
+            269
+          ],
+          [
+            1,
+            894357949540033812060270402415788885518168746348473817138733624101553458905224191,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            252217969561093832395431259837739445716525877553641403455975947977425693439817961,
+            -292,
+            268
+          ],
+          [
+            0,
+            504436050966047298313224162237531757805589113040645051873765273032629186958956659,
+            -293,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "22": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.6646778654115476e-14,
+        8.28767574213676e-15,
+        5e-324,
+        4.08203153065626e-15
+      ],
+      "certified_approximant": [
+        1.0844513213262897e-08,
+        -6.677862483748816e-08,
+        0.0,
+        3.800686093204608e-08
+      ],
+      "direct_high_vacuum_source": [
+        1.0844513213262897e-08,
+        -6.677862483748816e-08,
+        0.0,
+        3.800686093204608e-08
+      ],
+      "group": 22,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 3.5312515930079685e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.1556367037426019e-08,
+        -6.609203140488976e-08,
+        4.587058127853422e-92,
+        3.801890510942137e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.1660021547479723e-27,
+        6.295223620129981e-28,
+        5e-324,
+        2.4238638246131793e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            690332176598881638745913331881897483191126532739000763450866368995436984274321201,
+            -295,
+            269
+          ],
+          [
+            0,
+            345167147989659788314921896159670173274606638564706693810344914002345634556684495,
+            -294,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            531369055181252649730518627555422537073368701993333830873057965198681509499571601,
+            -292,
+            269
+          ],
+          [
+            1,
+            33210557705520852381009180216436187227077741071389310262448377485091016304239001,
+            -288,
+            265
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            604854177741206620563077914177142496147760797042258747203938052361270692363429881,
+            -293,
+            269
+          ],
+          [
+            0,
+            604854307666911041668641173239439168908228917417166218398567765043203600765492977,
+            -293,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -7.118538241631217e-10,
+        -6.865934325984047e-10,
+        -4.587058127853422e-92,
+        -1.2044177375284676e-11
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low_ref/22_1",
+          "rows": 32,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid_ref/22_1",
+          "rows": 360,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low_ref/22_-1",
+          "rows": 32,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid_ref/22_-1",
+          "rows": 360,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.0844496566484242e-08,
+          1.0844529860041551e-08
+        ],
+        [
+          -6.67786331251639e-08,
+          -6.677861654981241e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          3.800685685001455e-08,
+          3.800686501407762e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            345166088299440819335844348164305773656645920904112091688922199017246046893435639,
+            -294,
+            268
+          ],
+          [
+            0,
+            690334295979319576704068427872626282427047968060189967693711798965636159600818913,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            66421131897656581216940980641365092155556282500946759116199262460307949113628375,
+            -289,
+            266
+          ],
+          [
+            1,
+            531368923288333638091137665887480795462162299127988722142637905277674177458368617,
+            -292,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            302427088870603310279610247005574080863248734845480315799290929320937076767063185,
+            -292,
+            268
+          ],
+          [
+            0,
+            75606788458363880209062324175679187916186530596058041750490494845325017449349561,
+            -290,
+            266
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "23": {
+      "actual_signs": [
+        1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.2575679875284686e-16,
+        6.283177297971805e-17,
+        5e-324,
+        5e-324
+      ],
+      "certified_approximant": [
+        8.135676108640619e-11,
+        -9.467739108715554e-10,
+        0.0,
+        0.0
+      ],
+      "direct_high_vacuum_source": [
+        8.135676108640619e-11,
+        -9.467739108715554e-10,
+        0.0,
+        0.0
+      ],
+      "group": 23,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 2.667656638888557e-15,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.3245997347149125e-10,
+        -8.959299931638889e-10,
+        4.170052843503434e-93,
+        0.0
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.496378985337276e-29,
+        8.33022265629585e-30,
+        5e-324,
+        5e-324
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            82863196539967814939608986138585292849085776574597846476704486718954264173332011,
+            -299,
+            266
+          ],
+          [
+            0,
+            165726905422182264365909088286781952510151497913092297959201426592905392782566899,
+            -300,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            30134572592044383911548117146386307127197091874851450586059951355904052773964717,
+            -294,
+            265
+          ],
+          [
+            1,
+            120538274369354786038191984680888872673221326911596085356601703922997612551302853,
+            -296,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -5.110321238508506e-11,
+        -5.0843917707666515e-11,
+        -4.170052843503434e-93,
+        0.0
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/23_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/23_1",
+          "rows": 240,
+          "sign": 1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          8.135663532960743e-11,
+          8.135688684320494e-11
+        ],
+        [
+          -9.467739737033285e-10,
+          -9.467738480397821e-10
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          -5e-324,
+          5e-324
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            662905572319742519394944776014165336215588524393980996364424342092804307167252345,
+            -302,
+            269
+          ],
+          [
+            0,
+            662907621688729057585563466241644816617703679855170967286017258030451377349671339,
+            -302,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            60269145184088767823626514394077341468839786135939014998249644734746509258876003,
+            -295,
+            266
+          ],
+          [
+            1,
+            120538274369354786037131424478279418244330122139123857704342219877120805129409715,
+            -296,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "24": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        5.009128007210727e-16,
+        2.5054106807655795e-16,
+        5e-324,
+        3.0214535912567144e-17
+      ],
+      "certified_approximant": [
+        4.2706379749338564e-10,
+        -4.0932142307533305e-09,
+        0.0,
+        7.566690087276783e-10
+      ],
+      "direct_high_vacuum_source": [
+        4.2706379749338564e-10,
+        -4.0932142307533305e-09,
+        0.0,
+        7.566690087276783e-10
+      ],
+      "group": 24,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.0625774284967755e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        5.777852351878905e-10,
+        -3.943375919408339e-09,
+        1.2510158530510303e-92,
+        7.567472246630586e-10
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        7.261760885668329e-29,
+        3.916319734011694e-29,
+        5e-324,
+        4.8973316809399264e-30
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            108742912413332009888492304781961317890448376762757130836887002167677951535949029,
+            -297,
+            266
+          ],
+          [
+            0,
+            869945340061448141999915766974316071424935186157810485242137101061989892237702813,
+            -300,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            260563286164062212514015257812347366706424868406768398050460204822932804608423679,
+            -295,
+            268
+          ],
+          [
+            1,
+            130281627133244592000017231242501889974767498028287980431962798100749069356101427,
+            -294,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            192670241425942182670287000926194401018218850706064496235814212046586182777237747,
+            -297,
+            267
+          ],
+          [
+            0,
+            770681027251865313273025747424323333683486812388223786097635525119062034132761909,
+            -299,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -1.5072143769450482e-10,
+        -1.4983831134499163e-10,
+        -1.2510158530510303e-92,
+        -7.821593538025529e-14
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/24_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/24_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/24_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/24_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          4.270632965805849e-10,
+          4.2706429840618643e-10
+        ],
+        [
+          -4.0932144812943986e-09,
+          -4.093213980212262e-09
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          7.566689785131424e-10,
+          7.566690389422144e-10
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            869943299306656078960013756499240899873580713006384780157960747847349726232177757,
+            -300,
+            269
+          ],
+          [
+            0,
+            108743167507681017768480056091345714334367685906685343972409046319507972286639661,
+            -297,
+            266
+          ]
+        ],
+        [
+          [
+            1,
+            521126572328124425033016568245326311682481514380054466822593532790166595620446401,
+            -296,
+            269
+          ],
+          [
+            1,
+            521126508532978367995082872349375981629438214546634251006178069258695291020806665,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            385340482851884365338079991646859484246357163553919335767019309324387027433400527,
+            -298,
+            268
+          ],
+          [
+            0,
+            770681027251865313278013767835381969263647888104643099506853754656632710374911843,
+            -299,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "25": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        9.686975229156232e-16,
+        4.844725316642536e-16,
+        5e-324,
+        1.146664238066231e-16
+      ],
+      "certified_approximant": [
+        8.94965506405362e-10,
+        -7.650775807540553e-09,
+        0.0,
+        2.33845274925529e-09
+      ],
+      "direct_high_vacuum_source": [
+        8.94965506405362e-10,
+        -7.650775807540553e-09,
+        0.0,
+        2.33845274925529e-09
+      ],
+      "group": 25,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 2.0548808523342806e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.0921246899765173e-09,
+        -7.455067028633037e-09,
+        1.6680211374013667e-92,
+        2.338695926673568e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.3129869713829288e-28,
+        7.05852866936677e-29,
+        5e-324,
+        1.275800271814011e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            911537480427214957292853560578007327825697834499703995336849571865800902447887443,
+            -299,
+            269
+          ],
+          [
+            0,
+            911539453698919254451006495436624002763506621027837323149751117895393453731474023,
+            -299,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            487028329803675394596243749177595971746241598310501950964020290237781010733828945,
+            -295,
+            269
+          ],
+          [
+            1,
+            243514134061588453256034501491324887866084491447320505974990581992421868985184775,
+            -294,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            148859754550365077048201240568712301649517553049246755166332047986302970542212619,
+            -295,
+            267
+          ],
+          [
+            0,
+            297719538298183932265221194298819800394709679244603675547493037089336813287918211,
+            -296,
+            268
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -1.9715918357115536e-10,
+        -1.957087789075168e-10,
+        -1.6680211374013667e-92,
+        -2.4317741827799946e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/25_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/25_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/25_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/25_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          8.949645377078389e-10,
+          8.949664751028849e-10
+        ],
+        [
+          -7.650776292013086e-09,
+          -7.65077532306802e-09
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.3384526345888658e-09,
+          2.338452863921714e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            455768740213607478579561737859866561246579621128616974308530208920287767537279897,
+            -298,
+            268
+          ],
+          [
+            0,
+            113942431712364906823092072536862276012005651658788421233692533990077352638100209,
+            -296,
+            266
+          ]
+        ],
+        [
+          [
+            1,
+            487028329803675394600737023189936126934632856668714306929309298475310244058520185,
+            -295,
+            269
+          ],
+          [
+            1,
+            243514134061588453253787864485154810271888862268214327992346077873657252322839155,
+            -294,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            595439018201460308189556398459471136973553288542036388376388363968712729178387833,
+            -297,
+            269
+          ],
+          [
+            0,
+            595439076596367864533690952413017670413936282144157983383925902155172779566299065,
+            -297,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "26": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.3101206111048312e-15,
+        6.550113736159697e-16,
+        5e-324,
+        1.6832798080794822e-16
+      ],
+      "certified_approximant": [
+        1.608856893455274e-09,
+        -1.279091134033363e-08,
+        0.0,
+        4.8903875813974125e-09
+      ],
+      "direct_high_vacuum_source": [
+        1.608856893455274e-09,
+        -1.279091134033363e-08,
+        0.0,
+        4.8903875813974125e-09
+      ],
+      "group": 26,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 2.7791355860031153e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.8499737812592202e-09,
+        -1.2552444595403653e-08,
+        2.0850264217517196e-92,
+        4.891031958818571e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        2.1295175497661232e-28,
+        1.1437104213431904e-28,
+        5e-324,
+        2.523479161773439e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            819324175994828545304404443702901606726386672870485932620431755871831637630161225,
+            -298,
+            269
+          ],
+          [
+            0,
+            409662755188118768103285960486940970975255336213842247536766045113687871513524623,
+            -297,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            814235872020190502272825046769504033270087220212422594710695095228232486126651917,
+            -295,
+            269
+          ],
+          [
+            1,
+            407117894313791124179790745723986364002033162460672444897710960711562556894376453,
+            -294,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            77827305458091965358642524743128335355018737616053341280488980890569948996107053,
+            -293,
+            266
+          ],
+          [
+            0,
+            622618486526004770558184027207613344779709058049629575755646092293049472862761277,
+            -296,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.411168878039462e-10,
+        -2.3846674492997604e-10,
+        -2.0850264217517196e-92,
+        -6.44377421158334e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/26_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/26_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/26_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/26_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.6088555833346628e-09,
+          1.608858203575885e-09
+        ],
+        [
+          -1.2790911995345003e-08,
+          -1.2790910685322254e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          4.890387413069431e-09,
+          4.890387749725394e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            819324175994828545195956847175170190450240455780047588066698180097971608112438695,
+            -298,
+            269
+          ],
+          [
+            0,
+            12801961099628711504922179960962708722291513898720669369176026031269308946012059,
+            -292,
+            263
+          ]
+        ],
+        [
+          [
+            1,
+            814235872020190502280105607003206383632646091028183371848121336450058457177878047,
+            -295,
+            269
+          ],
+          [
+            1,
+            101779473578447781044037616401783797205188431763198014082249460025162392842190847,
+            -292,
+            266
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            155654610916183930716481859199059344576115493031676134547321497747893813697011003,
+            -294,
+            267
+          ],
+          [
+            0,
+            622618486526004770561396788356402649315396986851351767810271948426033810043573689,
+            -296,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "27": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.9370950911495846e-15,
+        1.4674632869108432e-15,
+        5e-324,
+        5.405154144628824e-16
+      ],
+      "certified_approximant": [
+        2.5919146769013047e-09,
+        -1.9570634400413398e-08,
+        0.0,
+        8.461482157485354e-09
+      ],
+      "direct_high_vacuum_source": [
+        2.5919146769013047e-09,
+        -1.9570634400413398e-08,
+        0.0,
+        8.461482157485354e-09
+      ],
+      "group": 27,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 6.23040765720409e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        2.872778101016053e-09,
+        -1.929384424893525e-08,
+        2.5020317061020564e-92,
+        8.4627617912229e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        3.22182012645409e-28,
+        1.7301469917622954e-28,
+        5e-324,
+        4.343066606247497e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            329988591341810432315839022704817401234886665593686205535593688102288431734758953,
+            -296,
+            268
+          ],
+          [
+            0,
+            164994669606428118190491604660713749360554123346873897264703815644496415452465031,
+            -295,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            311453822989116344029992526162230067710900500236921139306607627431518925717736819,
+            -293,
+            268
+          ],
+          [
+            1,
+            77863444070421633869924213014181626059946034103849584462521093645785571838889855,
+            -291,
+            266
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            538635702089395819087765939650063486917217853457938364308933378510298814069940335,
+            -295,
+            269
+          ],
+          [
+            0,
+            134658942726244952773858671057206473056227273698009353275354864395955636607008411,
+            -293,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.8086342411474847e-10,
+        -2.767901514781468e-10,
+        -2.5020317061020564e-92,
+        -1.2796337375465548e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/27_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/27_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/27_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/27_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          2.5919117398062134e-09,
+          2.5919176139963963e-09
+        ],
+        [
+          -1.9570635867876688e-08,
+          -1.957063293295011e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          8.461481616969938e-09,
+          8.46148269800077e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            659977182683620864549641001573816005484272405451598743302622503487637509544508203,
+            -297,
+            269
+          ],
+          [
+            0,
+            659978678425712472844003462478673794427717419123269256827380135294925015734869827,
+            -297,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            77863455747279086008186485381683821797642749164173498846128913033839260983952221,
+            -291,
+            266
+          ],
+          [
+            1,
+            311453776281686535476943436692221284760113639995625481772176349879304169137487355,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            538635702089395819085001257486143776769855853760383767391880885541979439153666917,
+            -295,
+            269
+          ],
+          [
+            0,
+            269317885452489905549099683196372801186135547244796005009235975276070960672153531,
+            -294,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "28": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        3.4297224706038994e-15,
+        1.7127116634208956e-15,
+        5e-324,
+        6.323940725422881e-16
+      ],
+      "certified_approximant": [
+        3.846123054405329e-09,
+        -2.786858452609555e-08,
+        0.0,
+        1.2998079183937541e-08
+      ],
+      "direct_high_vacuum_source": [
+        3.846123054405329e-09,
+        -2.786858452609555e-08,
+        0.0,
+        1.2998079183937541e-08
+      ],
+      "group": 28,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 7.275409368708016e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        4.166358156892368e-09,
+        -2.7553554681154786e-08,
+        2.919036990452459e-92,
+        1.2999801141284298e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        4.636492793220514e-28,
+        2.490221530810634e-28,
+        5e-324,
+        6.846940406703176e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            489667752797817081414611110923799232674587484719911715467293236736039791289076755,
+            -296,
+            269
+          ],
+          [
+            0,
+            122417156526581186977175459357711874126830854162990246059259628115347037287745679,
+            -294,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            887020512156726210797038591853709131054335044622725851566302524653232500417867055,
+            -294,
+            269
+          ],
+          [
+            1,
+            443510201564999452089063642408825249546366358386655851562689787272331638119029525,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            827423551022365370791624443194887222066180435867488219622787026621488841811857489,
+            -295,
+            269
+          ],
+          [
+            0,
+            206855907883864397135019732812535626607286870622169396958461277939222497129789379,
+            -293,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.202351024870395e-10,
+        -3.150298449407651e-10,
+        -2.919036990452459e-92,
+        -1.721957346757299e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/28_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/28_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/28_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/28_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          3.846119624682857e-09,
+          3.8461264841278e-09
+        ],
+        [
+          -2.7868586238807218e-08,
+          -2.7868582813383887e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.2998078551543467e-08,
+          1.2998079816331613e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            244833876398908540677790859762506627401535825250626271529028961438500094765787693,
+            -295,
+            268
+          ],
+          [
+            0,
+            489668626106324747967731228829633474378839250870620156646273826320427750908484085,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            887020512156726210804964640052621626737083597159490598790273613831116191564479899,
+            -294,
+            269
+          ],
+          [
+            1,
+            443510201564999452085100618309369001704992082118273477950704242683389792545723103,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            413711775511182685393632930357401010013117589641957784458364149625294615859663793,
+            -294,
+            268
+          ],
+          [
+            0,
+            827423631535457588544437513730227708469092739072250238539903839127789598611687419,
+            -295,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "29": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        3.8255275010463405e-15,
+        1.9093231608078238e-15,
+        5e-324,
+        7.003663034952527e-16
+      ],
+      "certified_approximant": [
+        5.351883742594537e-09,
+        -3.739023886699119e-08,
+        0.0,
+        1.8346122573587326e-08
+      ],
+      "direct_high_vacuum_source": [
+        5.351883742594537e-09,
+        -3.739023886699119e-08,
+        0.0,
+        1.8346122573587326e-08
+      ],
+      "group": 29,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 8.115023550713991e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        5.723643242066012e-09,
+        -3.7026312353649295e-08,
+        3.336042274802771e-92,
+        1.83491238288312e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        6.422693540271862e-28,
+        3.4501046740171146e-28,
+        5e-324,
+        1.0155265620885165e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            42585827859717108424799519845388157893154686406334927206605526683051523697385947,
+            -292,
+            265
+          ],
+          [
+            0,
+            170343554961904291641425312081357038893627210322518328538627044516870908224882771,
+            -294,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            37190071106035648747578597960843202117595869113367731743808249994657579758091541,
+            -289,
+            265
+          ],
+          [
+            1,
+            595041076925320924974136890482846012481856286915823532014623983564928652158700357,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            9123952705558656322347269786092875939009547216984902363602992059100066994848309,
+            -288,
+            263
+          ],
+          [
+            0,
+            291966508869616919346285295114422259974370315455472289410613270115078447478497587,
+            -293,
+            268
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.717594994714748e-10,
+        -3.6392651334189443e-10,
+        -3.336042274802771e-92,
+        -3.0012552438731073e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/29_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/29_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/29_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/29_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          5.351879917067036e-09,
+          5.351887568122039e-09
+        ],
+        [
+          -3.7390240776314355e-08,
+          -3.7390236957668025e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.834612187322102e-08,
+          1.834612327395363e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            681373245755473734715021956235554974943557560959955580274639124951956298733160283,
+            -296,
+            269
+          ],
+          [
+            0,
+            681374219847617166647471609616083706921426262831476569185557480044351713324545953,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            595041137696570379966748182485282348080855216802218786067245464042743044889117333,
+            -293,
+            269
+          ],
+          [
+            1,
+            1162189603369767431579387256584091598208076124858375886422481483274818131638765,
+            -284,
+            260
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            583932973155754004626992978588229083990419755455645297176325983595406520020886887,
+            -294,
+            269
+          ],
+          [
+            0,
+            583933017739233838695802877950559496054931897342333032915492048417154662606400063,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "3": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        3.325564385618345e-16,
+        1.661490054448851e-16,
+        5e-324,
+        8.320371695440611e-17
+      ],
+      "certified_approximant": [
+        6.475059975555448e-10,
+        -4.517254849202854e-09,
+        0.0,
+        2.5823804233791992e-09
+      ],
+      "direct_high_vacuum_source": [
+        6.475059975555448e-10,
+        -4.517254849202854e-09,
+        0.0,
+        2.5823804233791992e-09
+      ],
+      "group": 3,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 7.054460672763669e-15,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        7.992753807994978e-10,
+        -4.3661911917311855e-09,
+        1.042513210875772e-92,
+        2.5827332862653426e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        3.988810446796871e-29,
+        2.221312665199505e-29,
+        5e-324,
+        8.935420434205552e-30
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            659496167241782569817649475234945612808337813112864068579805988498785994783481971,
+            -299,
+            269
+          ],
+          [
+            0,
+            659496844671212011247818803819361124489119662431136653630112983254266390773843571,
+            -299,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            17972287071385016177812921548314019218107352483281547662386908337867697333246029,
+            -291,
+            264
+          ],
+          [
+            1,
+            143778285994470709688745986061624690001513438118956369658614061231307790060030199,
+            -294,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            328775103594771626960793965124931846587619260716560946336423414581237344199538169,
+            -296,
+            268
+          ],
+          [
+            0,
+            657550249561784425156586785981516656531692545644797119635374498799193245127050119,
+            -297,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -1.5176938324395298e-10,
+        -1.5106365747166813e-10,
+        -1.042513210875772e-92,
+        -3.5286288614340544e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/3_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/3_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/3_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/3_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          6.475056649991062e-10,
+          6.475063301119835e-10
+        ],
+        [
+          -4.51725501535186e-09,
+          -4.517254683053848e-09
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.582380340175482e-09,
+          2.5823805065829164e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            659496167241782569777022723320425306319620588869407227612592999279371940681802627,
+            -299,
+            269
+          ],
+          [
+            0,
+            659496844671212011288445555733881430977836886674593494597325972473680444875522915,
+            -299,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            287556593142160258846420774089805192638297548731509819298232862600963595829612589,
+            -295,
+            268
+          ],
+          [
+            1,
+            287556571988941419376077942806468494854446967238907682617185793267535141622384273,
+            -295,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            82193775898692906739914088579855601930575569327577938725984140381155893067823625,
+            -294,
+            266
+          ],
+          [
+            0,
+            657550249561784425158862007592535534262326512457295502500348204912420788983537457,
+            -297,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "30": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        8.079361653796781e-15,
+        4.0284184397317995e-15,
+        5e-324,
+        1.7281756988778083e-15
+      ],
+      "certified_approximant": [
+        7.069146560915653e-09,
+        -4.7688126662378505e-08,
+        0.0,
+        2.4261860927423346e-08
+      ],
+      "direct_high_vacuum_source": [
+        7.069146560915653e-09,
+        -4.7688126662378505e-08,
+        0.0,
+        2.4261860927423346e-08
+      ],
+      "group": 30,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.713860639542118e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        7.487669771921635e-09,
+        -4.727953253910559e-08,
+        3.753047559153134e-92,
+        2.4265705304625264e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        8.631252514025844e-28,
+        4.636494184215799e-28,
+        5e-324,
+        1.439001327854185e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            225001397009625587073993923766526280492093211480384946986302733255435612981341769,
+            -294,
+            267
+          ],
+          [
+            0,
+            450003822641148330708674547757246046509807609621669466670601809113140377728124135,
+            -295,
+            268
+          ]
+        ],
+        [
+          [
+            1,
+            94865661973920042724934123654178850562658970206343965899484679858966354109926513,
+            -290,
+            266
+          ],
+          [
+            1,
+            94865645946511281640961058076941980154418244493417506508920671551264665775466661,
+            -290,
+            266
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            772223125650457346865888343677317242201859410989675818734097448458335222792724925,
+            -294,
+            269
+          ],
+          [
+            0,
+            24131976114424515756532817877026345421739880109528467636987840061585832047832445,
+            -289,
+            264
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -4.1852321100598185e-10,
+        -4.08594123272917e-10,
+        -3.753047559153134e-92,
+        -3.844377201917576e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/30_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/30_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/30_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/30_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          7.069138481553999e-09,
+          7.0691546402773075e-09
+        ],
+        [
+          -4.768813069079695e-08,
+          -4.7688122633960065e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          2.4261859199247647e-08,
+          2.426186265559905e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            900005588038502348186087120741741874759321772469840750047780060289602678766534833,
+            -296,
+            269
+          ],
+          [
+            0,
+            900007645282296661527237669838855340228666292695037971238634490958420528615080513,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            758925295791360341806851665371956738261004295597555288100340407719908637265162657,
+            -293,
+            269
+          ],
+          [
+            1,
+            758925167572090253120309788477009907475613422000536491166902403561939521817982735,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            48263945353153584178831761960805758217266699689843330237136294213925436832366393,
+            -290,
+            265
+          ],
+          [
+            0,
+            772223235661584504213630324369268164221268379457093499323527623006274859005500877,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "31": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.1920898637217052e-14,
+        1.0931528039721693e-14,
+        5e-324,
+        5.015487731668125e-15
+      ],
+      "certified_approximant": [
+        8.940776228946281e-09,
+        -5.8201101612734345e-08,
+        0.0,
+        3.043302081428151e-08
+      ],
+      "direct_high_vacuum_source": [
+        8.940776228946281e-09,
+        -5.8201101612734345e-08,
+        0.0,
+        3.043302081428151e-08
+      ],
+      "group": 31,
+      "interval": [
+        32,
+        320
+      ],
+      "lapse_error_upper": 4.650041298753061e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        9.404815006459825e-09,
+        -5.775355654062163e-08,
+        4.170052843503461e-92,
+        3.0439661117003534e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.2336633403849654e-27,
+        6.598147784013369e-28,
+        5e-324,
+        2.161976531039657e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            569144943158143572556190507704644510407338401633416276040827430789934786298514125,
+            -295,
+            269
+          ],
+          [
+            0,
+            569147734011840860340159562699668745173588749009087754319145519350082362342769087,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            463116250450604814707272017033347241399114197447374517538992919905699405865494303,
+            -292,
+            268
+          ],
+          [
+            1,
+            926232152965023872385240450691091466847681608469345436419396970739263219152716177,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            484321469144521285032340644001070052194258471493187103694312817988636901345888171,
+            -293,
+            269
+          ],
+          [
+            0,
+            242160814390455535150974997226053406811339360187407903738358968177645800843450581,
+            -292,
+            268
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -4.640387775135442e-10,
+        -4.4754507211271475e-10,
+        -4.170052843503461e-92,
+        -6.640302722023903e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/31_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid/31_1",
+          "rows": 560,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/31_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid/31_-1",
+          "rows": 560,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          8.940754308047642e-09,
+          8.940798149844918e-09
+        ],
+        [
+          -5.820111254426239e-08,
+          -5.8201090681206305e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          3.043301579879377e-08,
+          3.043302582976925e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            71143117894767946559707342341794816523247683797408079709253057576398345025221513,
+            -292,
+            266
+          ],
+          [
+            0,
+            142286933502960215104672832917488680848736420065809848171487122382207597109877777,
+            -293,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            926232500901209629425044553139512370417006397397770037678718110667948659772125555,
+            -293,
+            269
+          ],
+          [
+            1,
+            231558038241255968093684982904568394807225901491581108454666174970678342777894807,
+            -291,
+            267
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            484321469144521285028900000271602386489874532075678517833202636270706316606635909,
+            -293,
+            269
+          ],
+          [
+            0,
+            30270101798806941894086914886348404957941416237020274583614257379576386651634589,
+            -289,
+            265
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "32": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        2.5319904784844323e-14,
+        1.2618837731014415e-14,
+        5e-324,
+        5.8230652540253815e-15
+      ],
+      "certified_approximant": [
+        1.0893052983422103e-08,
+        -6.827319790159833e-08,
+        0.0,
+        3.649013959663848e-08
+      ],
+      "direct_high_vacuum_source": [
+        1.0893052983422103e-08,
+        -6.827319790159833e-08,
+        0.0,
+        3.649013959663848e-08
+      ],
+      "group": 32,
+      "interval": [
+        32,
+        320
+      ],
+      "lapse_error_upper": 5.371066436579695e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.1461850000927526e-08,
+        -6.773164630230542e-08,
+        4.587058127853911e-92,
+        3.650192893224331e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.5838842101412603e-27,
+        8.467847239879318e-28,
+        5e-324,
+        2.8735708818095365e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            173355384701496616308933379323545507648890794628504605123296097126701152866851939,
+            -293,
+            267
+          ],
+          [
+            0,
+            693424762403296714015622547884235196339777352158996069510808952156293618224544055,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            16976927008054976406427450867709818931701858561489938110070984237701376271411129,
+            -287,
+            264
+          ],
+          [
+            1,
+            543261463437240209075767286304788827634866272962194153734513441324178076556779347,
+            -292,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            580716525609583941842735564538798956544531981469542913187340573380919902085050287,
+            -293,
+            269
+          ],
+          [
+            0,
+            290358355475053010213454577012507695573906182244796436208315724048915777310972241,
+            -292,
+            268
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -5.687970175054229e-10,
+        -5.415515992929014e-10,
+        -4.587058127853911e-92,
+        -1.178933560483245e-11
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low_ref/32_1",
+          "rows": 32,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid_ref/32_1",
+          "rows": 840,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low_ref/32_-1",
+          "rows": 32,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            320
+          ],
+          "panel": "mid_ref/32_-1",
+          "rows": 840,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.0893027663517317e-08,
+          1.089307830332689e-08
+        ],
+        [
+          -6.827321052043607e-08,
+          -6.827318528276058e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          3.649013377357322e-08,
+          3.649014541970374e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            43338846175374154070931725458999896332814673391248017240389850653996829453456119,
+            -291,
+            265
+          ],
+          [
+            0,
+            693424762403296714116448457834418885610305756413046214157755730199148958436653907,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            135815416064439811253104109819582735709219683058950268195212794847837801371736217,
+            -290,
+            267
+          ],
+          [
+            1,
+            543261463437240209069029274793172090612447014694071100475933757539270911754990607,
+            -292,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            580716525609583941838162465111616738903926016368359017935872146548189930795130997,
+            -293,
+            269
+          ],
+          [
+            0,
+            145179177737526505107870563363049402197104582397694191917024968732640381477965943,
+            -291,
+            267
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "4": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.0736874323807017e-15,
+        5.361987493399293e-16,
+        5e-324,
+        2.68744342258068e-16
+      ],
+      "certified_approximant": [
+        1.1337579506770676e-09,
+        -7.801986710582257e-09,
+        0.0,
+        4.467872330629662e-09
+      ],
+      "direct_high_vacuum_source": [
+        1.1337579506770676e-09,
+        -7.801986710582257e-09,
+        0.0,
+        4.467872330629662e-09
+      ],
+      "group": 4,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 2.277594082774473e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.313356765140324e-09,
+        -7.623663393056306e-09,
+        1.2510158530508865e-92,
+        4.468510079098315e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        7.314689646991068e-29,
+        4.0697457515108527e-29,
+        5e-324,
+        1.640407798386528e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            577375886711129852020003682650818011182516222053999962863930596370825046086663837,
+            -298,
+            269
+          ],
+          [
+            0,
+            144344245070273349322204857731431364900084144997596173942717607904084719503360763,
+            -296,
+            267
+          ]
+        ],
+        [
+          [
+            1,
+            496654022143617401689573954471653021896272377093971606755132410562484974715042657,
+            -295,
+            269
+          ],
+          [
+            1,
+            496653953877608525538804126997124639502707544990355531906622359372210519729868573,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            2221976593681674241111851217997140849976231464544395888193031976147758070594267,
+            -288,
+            261
+          ],
+          [
+            0,
+            568826076412745227667343283408359023224726527211398208985749323780121839555476455,
+            -296,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -1.7959881446325643e-10,
+        -1.7832331752595093e-10,
+        -1.2510158530508865e-92,
+        -6.377484686527496e-13
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/4_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/4_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/4_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/4_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.133756876989635e-09,
+          1.1337590243645002e-09
+        ],
+        [
+          -7.801987246781008e-09,
+          -7.801986174383507e-09
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          4.46787206188532e-09,
+          4.467872599374005e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            288687943355564925991376483867106248610308365939789931710688325955290789407104447,
+            -297,
+            268
+          ],
+          [
+            0,
+            577376980281093397326070145842330973562236070164804795213424376076582345285897995,
+            -298,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            496654022143617401692164647756141157828551031375914329572987337969006268801477643,
+            -295,
+            269
+          ],
+          [
+            1,
+            496653953877608525536213433712636503570428890708412809088767431965689225643433587,
+            -295,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            284413003991254302861272715372017464673014982719178966782480148976099795846124587,
+            -295,
+            268
+          ],
+          [
+            0,
+            568826076412745227669431764471592151472611816696405622798205211721748313935359633,
+            -296,
+            269
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "5": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.2534939757165236e-15,
+        6.256808297120657e-16,
+        5e-324,
+        3.1390657421652636e-16
+      ],
+      "certified_approximant": [
+        1.7668856040569362e-09,
+        -1.1959051778437103e-08,
+        0.0,
+        6.86296869124702e-09
+      ],
+      "direct_high_vacuum_source": [
+        1.7668856040569362e-09,
+        -1.1959051778437103e-08,
+        0.0,
+        6.86296869124702e-09
+      ],
+      "group": 5,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 2.6590145099818877e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        1.974888771210387e-09,
+        -1.1753448687654067e-08,
+        1.4595184952260829e-92,
+        6.864168729432224e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.2041088110859042e-28,
+        6.692299406046926e-29,
+        5e-324,
+        2.703873709993362e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            3514850574335102236346284519724062850710434147836747235044577216716316224775423,
+            -290,
+            261
+          ],
+          [
+            0,
+            899803023735948470133894010846508260245969657678686204929561619513156536297587543,
+            -298,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            95160234336162723089853730743535191868843243884419717050589106270681607679786275,
+            -292,
+            266
+          ],
+          [
+            1,
+            2973757011839470092466771295036209465759921009795382449274537658041582160334379,
+            -287,
+            261
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            436878546534012481944362059332165286298130385546785496414203785386487006625574257,
+            -295,
+            268
+          ],
+          [
+            0,
+            873757172997897994831407367036615289278838607004206393666539583675136173168473977,
+            -296,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.0800316715345082e-10,
+        -2.05603090783037e-10,
+        -1.4595184952260829e-92,
+        -1.2000381852035055e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/5_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/5_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/5_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/5_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          1.7668843505629602e-09,
+          1.7668868575509121e-09
+        ],
+        [
+          -1.1959052404117935e-08,
+          -1.1959051152756274e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          6.862968377340445e-09,
+          6.862969005153595e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            449900873514893086221664256429638400806789456034525691711227953682683720524507973,
+            -297,
+            268
+          ],
+          [
+            0,
+            899803023735948470195214335036591548414261887455842113678517479627166048791079885,
+            -298,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            380640937344650892361544994013909439109859095725296484872227100093838014556337889,
+            -294,
+            268
+          ],
+          [
+            1,
+            380640897515452171833616654724866139982783769066191336837270145218210932685607723,
+            -294,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            873757093068024963885281688650129650243901192871685165619308911081129318375126257,
+            -296,
+            269
+          ],
+          [
+            0,
+            436878586498948997417424898525408105815599092613046110437819121683490434022248117,
+            -295,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "6": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        1.3844943176407803e-15,
+        6.906720722186559e-16,
+        5e-324,
+        3.4691112441738603e-16
+      ],
+      "certified_approximant": [
+        2.5368517601909153e-09,
+        -1.6835837981476373e-08,
+        0.0,
+        9.686344870833645e-09
+      ],
+      "direct_high_vacuum_source": [
+        2.5368517601909153e-09,
+        -1.6835837981476373e-08,
+        0.0,
+        9.686344870833645e-09
+      ],
+      "group": 6,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 2.9369032088806675e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        2.8244901463583333e-09,
+        -1.6552642397249593e-08,
+        1.668021137401133e-92,
+        9.688566271803961e-09
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        1.8419324201262294e-28,
+        1.0224852935916052e-28,
+        5e-324,
+        4.1422467765581936e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            645956935233953335176151944933892246251203863774812081379402937209257195766287249,
+            -297,
+            269
+          ],
+          [
+            0,
+            645957640300136753708823217310044979209003996394235852277692652032646187846839801,
+            -297,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            535862641670778210430115889254084775239611399121126647783904245965276928410005967,
+            -294,
+            269
+          ],
+          [
+            1,
+            535862597704407685639511015594990227894525500423114722998913743136522651423634963,
+            -294,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            308303629287511173845631240505656819510657228236320200727602495559850406437177859,
+            -294,
+            268
+          ],
+          [
+            0,
+            154151825685481202372245971889758875175628149209561582804158120625794423916250271,
+            -293,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.87638386167418e-10,
+        -2.831955842267802e-10,
+        -1.668021137401133e-92,
+        -2.2214009703159977e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low_ref/6_1",
+          "rows": 32,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/6_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low_ref/6_-1",
+          "rows": 32,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/6_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          2.5368503756965974e-09,
+          2.5368531446852328e-09
+        ],
+        [
+          -1.6835838672148447e-08,
+          -1.6835837290804298e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          9.686344523922519e-09,
+          9.68634521774477e-09
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            645956935233953335129250912361717545858165859010115373814889323071687615237258481,
+            -297,
+            269
+          ],
+          [
+            0,
+            645957640300136753755724249882219679602042001158932559842206266170215768375868569,
+            -297,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            133965660417694552608342581426145814504262559688003948459563844579921341666486349,
+            -292,
+            267
+          ],
+          [
+            1,
+            267931298852203842818128289572245872558543330396112788472281305391057106583847767,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            19268976830469448365269551108686514139958474939274479700530967961182385175036607,
+            -290,
+            264
+          ],
+          [
+            0,
+            308303651370962404745810366546190343622577927627051691127423249432521091469092689,
+            -294,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "7": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        3.4286052787718323e-15,
+        1.7092915156749002e-15,
+        5e-324,
+        8.596568831460592e-16
+      ],
+      "certified_approximant": [
+        3.422727545645264e-09,
+        -2.2196194561972815e-08,
+        0.0,
+        1.2809461053809039e-08
+      ],
+      "direct_high_vacuum_source": [
+        3.422727545645264e-09,
+        -2.2196194561972815e-08,
+        0.0,
+        1.2809461053809039e-08
+      ],
+      "group": 7,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 7.273039489514362e-14,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        3.697556758980572e-09,
+        -2.1926518625573947e-08,
+        1.8765237795763372e-92,
+        1.2812037692277258e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        2.670888778939204e-28,
+        1.4806449621838559e-28,
+        5e-324,
+        6.016344509426954e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            871526520434767316661812713806950467239379245559275033988116020354820286088045849,
+            -297,
+            269
+          ],
+          [
+            0,
+            1702203645474302091929250127981254462899842179128538272943876581579319639908953,
+            -288,
+            260
+          ]
+        ],
+        [
+          [
+            1,
+            176618946649792239757784421199282954879791992031187545224702784790579275013323673,
+            -292,
+            267
+          ],
+          [
+            1,
+            706475677790159247396550225249952669607881034097866231441697657906857323549363483,
+            -294,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            815416601653514798243345104511765593407326146548547077395781568773978444340444457,
+            -295,
+            269
+          ],
+          [
+            0,
+            203854177775128664162632448659927880772126989115177293186387609409444081481598125,
+            -293,
+            267
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -2.74829213335308e-10,
+        -2.696759363988679e-10,
+        -1.8765237795763372e-92,
+        -2.5766384682188038e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/7_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/7_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/7_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/7_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          3.422724117039985e-09,
+          3.4227309742505435e-09
+        ],
+        [
+          -2.219619627126433e-08,
+          -2.2196192852681295e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.2809460194152154e-08,
+          1.2809461913465924e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            871526520434767316593804007163359923279909174511566110117975554742799622225162897,
+            -297,
+            269
+          ],
+          [
+            0,
+            108941033310355333891973096521249103620523658345190064952175659422579039937033361,
+            -294,
+            266
+          ]
+        ],
+        [
+          [
+            1,
+            176618946649792239758962595830590348872721386927435551134260405970576210832995535,
+            -292,
+            267
+          ],
+          [
+            1,
+            706475677790159247391837526724723093636163454512874207803467173186869580270676035,
+            -294,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            815416601653514798239515257570601481626988407411274245677789430196773723368152289,
+            -295,
+            269
+          ],
+          [
+            0,
+            203854177775128664163589910395218908717211423899495501115885644053745261724671167,
+            -293,
+            267
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "8": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        6.993064954975699e-15,
+        3.483793044130527e-15,
+        5e-324,
+        1.754635957902461e-15
+      ],
+      "certified_approximant": [
+        4.39403020859394e-09,
+        -2.7738130784157862e-08,
+        0.0,
+        1.60660804963759e-08
+      ],
+      "direct_high_vacuum_source": [
+        4.39403020859394e-09,
+        -2.7738130784157862e-08,
+        0.0,
+        1.60660804963759e-08
+      ],
+      "group": 8,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.4834264499672864e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        4.695142614098391e-09,
+        -2.7445872733811587e-08,
+        2.0850264217515104e-92,
+        1.607050767395499e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        3.7178526112745164e-28,
+        2.0579741729934043e-28,
+        5e-324,
+        8.3898163519039e-29
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            139855990170023207118892718885713046174343556501298927020447357231823430428894293,
+            -294,
+            267
+          ],
+          [
+            0,
+            559425741320705024865931585400216135287188747811744914072999712693174433627885723,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            55179274824426206102245627161450264909583140358300806369988783254648699238602903,
+            -290,
+            265
+          ],
+          [
+            1,
+            441434087710850856307613764711328283991361952209505335756750517781449057302253313,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            255681096840210593569058393111035650759941683053552576982979469006213915875603835,
+            -293,
+            268
+          ],
+          [
+            0,
+            124844312835922619544710306600715289179161108628909679709907889458370917419601,
+            -282,
+            257
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.01112405504451e-10,
+        -2.9225805034627495e-10,
+        -2.0850264217515104e-92,
+        -4.4271775790892654e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/8_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/8_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/8_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/8_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          4.3940232155289845e-09,
+          4.394037201658896e-09
+        ],
+        [
+          -2.773813426795091e-08,
+          -2.7738127300364816e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.606607874173994e-08,
+          1.606608225101186e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            139855990170023207107059282129657886140521134537613050704970383576127539862027965,
+            -294,
+            267
+          ],
+          [
+            0,
+            559425741320705024913265332424436775422478435666488419334907607315957995895351035,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            13794818706106551525663754627978649601652012983746969192560386414427979826060743,
+            -288,
+            263
+          ],
+          [
+            1,
+            441434087710850856304338633907613616015162659596008772554728418556943296777132761,
+            -293,
+            268
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            127840548420105296783861604456155809953840000965328644533342897525736361384519971,
+            -292,
+            267
+          ],
+          [
+            0,
+            255681152687969524828901892116988943091183631594902311962185031565484831981906741,
+            -293,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    },
+    "9": {
+      "actual_signs": [
+        1,
+        -1
+      ],
+      "arithmetic_and_parameter_radius_upper": [
+        8.11614463016304e-15,
+        4.04007417240737e-15,
+        5e-324,
+        2.038035230892043e-15
+      ],
+      "certified_approximant": [
+        5.4126654457873555e-09,
+        -3.311656490263842e-08,
+        0.0,
+        1.9264615174212886e-08
+      ],
+      "direct_high_vacuum_source": [
+        5.4126654457873555e-09,
+        -3.311656490263842e-08,
+        0.0,
+        1.9264615174212886e-08
+      ],
+      "group": 9,
+      "interval": [
+        32,
+        160
+      ],
+      "lapse_error_upper": 1.7216633469960028e-13,
+      "numerical_accuracy_pass": true,
+      "old_baseline_quadrature_carried": false,
+      "original_high_source": [
+        5.735978070142611e-09,
+        -3.280561557256897e-08,
+        2.2935290639266877e-92,
+        1.9270796821355784e-08
+      ],
+      "purpose": "direct full order24-minus-ad4 vacuum; replaces complete original high-region source",
+      "quadrature_error_upper": [
+        5.010730667126933e-28,
+        2.769142980558004e-28,
+        5e-324,
+        1.13294531745179e-28
+      ],
+      "quadrature_sum_interval": [
+        [
+          [
+            0,
+            172277776688324709369354914395978805456737052978570275015929681553190582475935781,
+            -294,
+            267
+          ],
+          [
+            0,
+            86139146670390483108175804116768407116213204174219812126589176051673898177163491,
+            -293,
+            266
+          ]
+        ],
+        [
+          [
+            1,
+            263514227926042422773229896522693434825016345521195214984429586003600890447260267,
+            -292,
+            268
+          ],
+          [
+            1,
+            527028327261828093500623384789744043424957334837840212044403334227770321357448145,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            613167344196247193239257691911501258165872101492720907445975356334752239652322607,
+            -294,
+            269
+          ],
+          [
+            0,
+            613167473932218583600677041281948959415965460250813512576654750736466865334096595,
+            -294,
+            269
+          ]
+        ]
+      ],
+      "replacement_delta_from_original_high_source": [
+        -3.233126243552555e-10,
+        -3.109493300694519e-10,
+        -2.2935290639266877e-92,
+        -6.181647142897673e-12
+      ],
+      "scope": "specified order24 approximation only; physical projector/thermal errors separate",
+      "selected_original_panels": [
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/9_1",
+          "rows": 24,
+          "sign": 1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/9_1",
+          "rows": 240,
+          "sign": 1
+        },
+        {
+          "interval": [
+            32,
+            40
+          ],
+          "panel": "low/9_-1",
+          "rows": 24,
+          "sign": -1
+        },
+        {
+          "interval": [
+            40,
+            160
+          ],
+          "panel": "mid/9_-1",
+          "rows": 240,
+          "sign": -1
+        }
+      ],
+      "source_integral_float_enclosure": [
+        [
+          5.412657329642725e-09,
+          5.412673561931986e-09
+        ],
+        [
+          -3.31165689427126e-08,
+          -3.311656086256424e-08
+        ],
+        [
+          -5e-324,
+          5e-324
+        ],
+        [
+          1.9264613136177656e-08,
+          1.926461721224812e-08
+        ]
+      ],
+      "source_integral_interval": [
+        [
+          [
+            0,
+            689111106753298837413625666104789838897454847973029792297721764797115116183406981,
+            -296,
+            269
+          ],
+          [
+            0,
+            689113173363123864929200424413272639859198997335009804778710369829038399137644071,
+            -296,
+            269
+          ]
+        ],
+        [
+          [
+            1,
+            32939278490755302846929168895171189210158621121558062986290021224333383076427399,
+            -289,
+            265
+          ],
+          [
+            1,
+            527028327261828093496216475512391885712452087935301634232622166645637973029130295,
+            -293,
+            269
+          ]
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            76645918024530899154456459463377307477504213007273892157592799784485782880999663,
+            -291,
+            266
+          ],
+          [
+            0,
+            306583736966109291802141528743215878880901928842671641380943854397666420969210949,
+            -293,
+            268
+          ]
+        ]
+      ],
+      "source_order": 24,
+      "stationarity_tolerance": 3e-11,
+      "thermal_policy": "old high thermal insertion removed with original high source; physical thermal remains separately bounded, never declared zero"
+    }
+  },
+  "input_hashes": {
+    "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+    "results/development/nsc-incoming-source-quadrature-bound.json": "fa69c81753a735b13d6c2cd49d99e67d0e835e2f7a6c32ba74b699f7d6804340",
+    "results/development/nsc-incoming-spectral-source.json": "fcebadc20eaa3f58c099dcc58554ab25c2c4456e0d91b78bbc8924460979f135",
+    "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "results/development/nsc-pg-group13-covariance.json": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+    "results/development/nsc-pg-retained-covariance.json": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_incoming_middle_bound.py": "35904ad8d0f532c2401f070aa4b389fcd8e96f1c19f5923a2be1aefe0920624b",
+    "src/recursive_horizons/nsc_incoming_middle_order_correction.py": "b3890553083eac25473abf399ec840126087fb4c9503c2beb3d4b05b4b437620",
+    "src/recursive_horizons/nsc_incoming_projector_energy_bound.py": "b96ea36410aed33d49c568c66606ab77f304b8c36e9009caf6675aa61bcfb78d",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_source_quadrature_bound.py": "79b18b4ae90eb21efa2235b49364c0528a99db8156f758b96af731fe179af8c8",
+    "src/recursive_horizons/nsc_incoming_source_tail.py": "38d4add4f497f7e5bd3736a4d90c3edef93abb7c983315abc76c9b533fbd585e",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_incoming_window_refinement.py": "391b201fc27b1f9a1fe00d09dc03e815d70a8e1cf00bef8cda832e05d4314c9b"
+  },
+  "inventory": {
+    "disjoint_windows": 32,
+    "early_interval": [
+      16,
+      160
+    ],
+    "early_middle_groups": [
+      13,
+      14
+    ],
+    "groups": [
+      6,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "ordinary_lower": 32,
+    "remaining_upper": 160,
+    "upper320_groups": [
+      10,
+      11,
+      12,
+      31,
+      32
+    ]
+  },
+  "kernel_order": [
+    "rho",
+    "p_parallel",
+    "T01",
+    "p_perp"
+  ],
+  "method": {
+    "Gauss_nodes": 48,
+    "cell_halfwidth": 4,
+    "circle_arcs": 32,
+    "disk_radius": 8,
+    "frozen_primitive_kind": "low_vacuum",
+    "interval_digits": 80,
+    "maximum_CPU_workers": 3,
+    "one_fixed_resolution_per_channel": true,
+    "purpose": "direct order24-minus-ad4, not order24-minus16"
+  },
+  "reproducer": "python3 scripts/derive_nsc_incoming_high_band_quadrature_batch.py --check",
+  "schema": "NSC-DIRECT-HIGH-BAND-QUADRATURE-BATCH-v1",
+  "scope": {
+    "direct_high_source_complete": true,
+    "infinite_tails_included": false,
+    "low_energy_regions_below_declared_union_included": false,
+    "metric_evolution": false,
+    "new_coupling_or_source_law": false,
+    "old16_baseline_quadrature_carried": false,
+    "old_source_arrays_or_corrections_modified": false,
+    "physical_IV_or_root_selected": false,
+    "push_or_PDF": false,
+    "radial_or_physical_mode_solves": 0,
+    "thermal_or_physical_projector_error_included": false
+  },
+  "source_hashes": {
+    "docs/nsc-incoming-high-band-quadrature-batch.md": "b3428520e7bad016a4e2686aca6bfcd0acfcd6970980fff3a8740e7aab6c035b",
+    "scripts/derive_nsc_incoming_high_band_quadrature_batch.py": "d98db51edfbb8cf2b654401723171ca05cf739e3419e6daf1c01b9c5318af1c9",
+    "src/recursive_horizons/nsc_incoming_high_band_quadrature_batch.py": "9a458b7d4ea74ed0c5b6c6253f2bec299e2913a8550546358ff45f7633f039c4",
+    "tests/test_nsc_incoming_high_band_quadrature_batch.py": "f2308607c4e8e08a7f4d8bfbd2a0c0c0dd549bd97e8a2e047cc8ad425d90d434"
+  },
+  "status": "PASS: all32 direct high-band numerical source integrals certified; physical source OPEN"
+}

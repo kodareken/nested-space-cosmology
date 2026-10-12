@@ -1,0 +1,52 @@
+{
+  "amends": "nsc-frontier-assessment-v1.json",
+  "api_version": "nsc-influence-chain-v1",
+  "closed_by_records": {
+    "p_q_derivation": [
+      "nsc-q-decomposition-v1.json",
+      "nsc-q-analytic-envelope-v1.json"
+    ],
+    "wall_morphology": [
+      "nsc-relaxation-wall-v1.json",
+      "nsc-wall-afterlife-v1.json",
+      "nsc-march-balance-trajectory-v1.json",
+      "nsc-wall-extinction-v1.json"
+    ]
+  },
+  "closed_cells": [
+    {
+      "blocker": "the continuation directory is lock-listed by the lab writer policy; a new campaign requires the sealed campaign runner and hours of CPU",
+      "cell": "wall morphology beyond t=20",
+      "witness": "nsc-isotropy-wall-join-v1.json tail (I at t=40 and t=80)"
+    },
+    {
+      "blocker": "the two-ends v2 record stores only reduced qualities, not the per-room lapse/shift ingredients its own definition uses",
+      "cell": "derivation of p_Q = 0.1173 from the room-quality definitions"
+    }
+  ],
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-frontier-assessment-v1.json": "7dd7205dc5a4c3cc6f955796e3d6fc4c3ce61f5e8861a040088c4051c893b9a4"
+  },
+  "notes": [
+    "the round-63 assessment itself remains creation-only and untouched; this amendment stands beside it"
+  ],
+  "production_trajectory": false,
+  "reading": "two round-63 cells are closed by later records: the wall's t>20 morphology (rounds 73-77) and the p_Q derivation (rounds 67-68). The t=40 campaign is no longer required for either.",
+  "remaining_open_cells": [
+    {
+      "blocker": "the packet preparer is family-pinned and no fourth family mass is recorded; new family runs are a production campaign",
+      "cell": "exponent provenance at a fourth gap point"
+    },
+    {
+      "blocker": "out of lab domain by construction; hypothesis-labeled in the records",
+      "cell": "paper-level coupling of the rim location to a cosmological observable"
+    }
+  ],
+  "schema": "NSC-FRONTIER-AMENDMENT-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_frontier_amendment.py": "a2c3720844148175c7e7131702a80cb854fd462887116a4c6dd593c87b653de2",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

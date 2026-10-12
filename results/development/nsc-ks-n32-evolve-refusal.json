@@ -1,0 +1,32 @@
+{
+  "accountable_author": "Douglas Ek",
+  "all_node_condition_number": 2.360516265322543e+16,
+  "all_node_unclipped_leftover": [
+    0.004107193193,
+    0.005790788098
+  ],
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "families_evolved": 0,
+  "input_hashes": {
+    "results/development/nsc-ks-n32-geometry-leftover.json": "dac8e8cb37e9426ecec1552bc1b87caa157a7f483f5e16cf9f4c36dcebe55570"
+  },
+  "named_search_stall": "n32_geometry_leftover_cannot_reach_existence",
+  "schema": "NSC-KS-N32-EVOLVE-REFUSAL-v1",
+  "scope": {
+    "full_scale_n16_not_evolved": true,
+    "high_mode_matter_columns_invented": false,
+    "metric_timestep": false,
+    "n8_next_not_evolved": true,
+    "new_field_or_source_evolutions": 0,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true
+  },
+  "source_hashes": {
+    "docs/nsc-ks-n32-evolve-refusal.md": "64d6eeabf726943c17688d7f615fd6f3b87810be46e9cb9697d0c4534480662d",
+    "scripts/derive_nsc_ks_n32_evolve_refusal.py": "25277378a00828011646994bafe9001c886f0ee4062386af5b3c4f75943b5920"
+  },
+  "status": "OPEN: n=32 retarded evolve refused; leftover cannot reach 3e-11"
+}

@@ -1,0 +1,109 @@
+{
+  "accountable_author": "Douglas Ek",
+  "acts_on_assembled_residual": true,
+  "all_node_clipped_leftover": [
+    0.003533911291,
+    0.019960582153
+  ],
+  "all_node_condition_number": 4157.012956379634,
+  "all_node_unclipped_leftover": [
+    0.003533911291,
+    0.019960582153
+  ],
+  "assembled_transfer_faithful": false,
+  "chebyshev_assembled_unclipped_leftover": [
+    0.000131894427,
+    0.000633594491
+  ],
+  "clipped_prediction_beats_measured": false,
+  "evolve_authorized": false,
+  "existence_tolerance": 3e-11,
+  "families_evolved": 0,
+  "fas_c_cause": "insufficient representation of the declared class: assembled leftover stays residual-scale",
+  "forbidden_identities": [
+    "2d2588c3c9b1c83fe1a3f291314b8030300c4f14d3b12c24eadd2664eb20231b",
+    "949a188181bd9ba0df43bc8ea00db2c89ce35a458017052b7af928059f819680",
+    "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898"
+  ],
+  "input_hashes": {
+    "results/development/nsc-ks-coupled-newton-n16-damped-iterate4.json": "e7c7de8c38045721b31a2bcd3da59a5197bab7a5873000aa48436bbc47d89a47",
+    "results/development/nsc-ks-coupled-newton-n16-damped-next5.json": "46b9e22e3aa06fc6c2b37ed81b97f5d6e7ed68076b73607becefa0a07353ca5c"
+  },
+  "measured_constraint_maxima": [
+    0.004107193193038788,
+    0.005790788097514318
+  ],
+  "n16": null,
+  "n8": {
+    "all_node_clipped_leftover": [
+      0.003533911291,
+      0.019960582153
+    ],
+    "all_node_clipped_step_norm": 0.358233636623,
+    "all_node_condition_number": 4157.012956379634,
+    "all_node_unclipped_leftover": [
+      0.003533911291,
+      0.019960582153
+    ],
+    "all_node_unclipped_step_norm": 0.358233636623,
+    "assembled_transfer_faithful": false,
+    "change_of_basis_shape": [
+      32,
+      16
+    ],
+    "count": 8,
+    "delta_is_none": false,
+    "direction_count": 16,
+    "slot_transfer_relative_residual": 0.303677530687,
+    "unclipped_reaches_existence": false
+  },
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "no_invented_matter_columns": true,
+  "not_geometry_leftover_alone": true,
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "representation": "Fourier-on-I times owned axial plateau",
+  "schema": "NSC-KS-FOURIER-ASSEMBLED-SEARCH-v1",
+  "scope": {
+    "finite_image_is_not_class_identity": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "no_class_rewrite": true,
+    "physical_EXISTENCE_certificate": false,
+    "physical_NONEXISTENCE_claimed": false,
+    "physical_local_gate": "OPEN",
+    "prediction_is_not_a_nonlinear_residual": true,
+    "s5_not_next": true
+  },
+  "selected": {
+    "all_node_clipped_leftover": [
+      0.003533911291,
+      0.019960582153
+    ],
+    "all_node_clipped_step_norm": 0.358233636623,
+    "all_node_condition_number": 4157.012956379634,
+    "all_node_unclipped_leftover": [
+      0.003533911291,
+      0.019960582153
+    ],
+    "all_node_unclipped_step_norm": 0.358233636623,
+    "assembled_transfer_faithful": false,
+    "change_of_basis_shape": [
+      32,
+      16
+    ],
+    "count": 8,
+    "delta_is_none": false,
+    "direction_count": 16,
+    "slot_transfer_relative_residual": 0.303677530687,
+    "unclipped_reaches_existence": false
+  },
+  "selected_mode_count": 8,
+  "slot_transfer_of_iterate4_assembled_jacobian": true,
+  "source_hashes": {
+    "docs/nsc-ks-fourier-assembled-search.md": "f4927eca0e0bab3cb935f4c51ead20653cfb2fd3d9e8061a48e08ef3b5908044",
+    "scripts/derive_nsc_ks_fourier_assembled_search.py": "b2fee09907802cad8ea322d08146e041d567bd808f1ad60e0f2e69d4b4cd4431",
+    "src/recursive_horizons/nsc_local_incoming_fourier_family.py": "0ab11fa9f0d6e8aad81de75dd63d39173737e89bd62559e7395325bd346c0bbf"
+  },
+  "status": "OPEN: assembled Fourier leftover cannot reach EXISTENCE; no family evolved",
+  "unclipped_reaches_existence": false
+}

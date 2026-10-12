@@ -1,0 +1,38 @@
+{
+  "accountable_author": "Douglas Ek",
+  "existence_tolerance": 3e-11,
+  "fourier_condition_number": 7589.213921587872,
+  "fourier_unclipped_all_node_leftover": [
+    0.000409198777,
+    0.003811452608
+  ],
+  "history_class": "local source-fixed pure-radius compatible histories",
+  "input_hashes": {
+    "results/development/nsc-ks-deciding-bounds-after-fourier.json": "039d974698e4dfdeaadcf5a0781a8a97e87264da05b5211091d9aadf38691eec",
+    "results/development/nsc-ks-flux-first-integral.json": "46d14532c31824ea709f49d26fef632d2d8c5f16a6b1d694ba7cec8b660e3d9d",
+    "results/development/nsc-ks-fourier-wu-evolve-refusal.json": "696ee858fb6bf7d3504ec39e063754cd85453fe01977055e2ea0799206b2b3b4"
+  },
+  "interval": "S(1)+[.12,.18]",
+  "named_search_stall": "declared_wu_image_cannot_reach_existence",
+  "next_named_owner": "an extra normal power s^5 V(z) as a new undeclared class, not this (w,U) discretization",
+  "physical_EXISTENCE_certificate": false,
+  "physical_NONEXISTENCE_certificate": false,
+  "physical_local_gate": "OPEN",
+  "profile_identity": "e15982e241bdc2244481491f38878b501b34ad3bbb208a54f40415d862482898",
+  "schema": "NSC-LOCAL-INCOMING-GATE-STATUS-AFTER-FOURIER-v1",
+  "scope": {
+    "arxiv_blocked": true,
+    "manuscript_and_public_release_blocked": true,
+    "metric_timestep": false,
+    "new_field_or_source_evolutions": 0,
+    "open_is_not_done": true
+  },
+  "source_hashes": {
+    "docs/nsc-local-incoming-gate-status-after-fourier.md": "c514aa74d2dd5215eed873415b0da285012dc7b5cbe886abe809e7b65889ccb7",
+    "scripts/derive_nsc_local_incoming_gate_status_after_fourier.py": "9973c92104b5597fb97aa6cbdfe412883f1dd65143769701b2c68b163316f605"
+  },
+  "state_law": "C_Sigma[g]=U_g C_up U_g\u2020; original fixed source",
+  "status": "OPEN: Fourier leftover and flux currents classified; no physical gate certificate",
+  "walk_divergence_sign_stable": true,
+  "walk_integral_sign_stable": false
+}

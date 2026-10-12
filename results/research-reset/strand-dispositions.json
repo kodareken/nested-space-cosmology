@@ -1,0 +1,247 @@
+{
+  "schema": "NSC-RESEARCH-STRAND-DISPOSITIONS-v1",
+  "baseline": "20261010T112227Z",
+  "method": "Family-level review of named owning notes, scope paragraphs, recorded corrections and supersession boundaries. All other document bytes and result JSONs are inventoried and text-scanned; that is not a claim to have independently checked their derivations. Dispositions control reuse and navigation, not whether the universe obeys a model.",
+  "equations_independently_verified": false,
+  "physics_computations_performed": false,
+  "reviewed_owner_paths": {
+    "BlackHoles-Infinity": [
+      "docs/README.md",
+      "docs/instructions.md",
+      "docs/prior-art-and-open-claim.md",
+      "docs/repository-consolidation.md",
+      "lab/archive/README.md",
+      "lab/docs/active-code-map.md",
+      "lab/docs/claim-ledger.md",
+      "lab/docs/nsc-nested-qualities.md",
+      "lab/docs/nsc-nested-parent-child.md",
+      "lab/docs/nsc-discovery-grandchild.md",
+      "lab/docs/nsc-discovery-coupled-memory.md",
+      "lab/docs/nsc-discovery-observables.md",
+      "lab/docs/nsc-regeneration-realization-audit.md",
+      "lab/docs/nsc-conformal-local-response-successor.md",
+      "lab/docs/nsc-spherical-conformal-continuation.md",
+      "lab/docs/nsc-rn-mmp-source-study.md",
+      "lab/docs/nsc-prior-art-reuse.md",
+      "lab/docs/nsc-rn-work-audit.md",
+      "lab/docs/nsc-rn-geometry-map.md",
+      "lab/docs/nsc-paper-coverage-audit.md",
+      "lab/docs/child-neck/README.md",
+      "lab/docs/child-neck/child-and-neck-status-note.md",
+      "lab/docs/child-neck/kasner-shear-production-note.md",
+      "lab/docs/child-neck/eck-collapse-pair-production-note.md",
+      "lab/docs/child-neck/child-energy-floor-and-thread-length-note.md",
+      "lab/docs/child-neck/child-expansion-and-matter-fraction-note.md",
+      "lab/docs/child-neck/matter-antimatter-and-time-note.md",
+      "lab/docs/child-neck/torsion-splitting-and-inherited-spin-note.md",
+      "lab/docs/child-neck/second-quantised-splitting-note.md",
+      "lab/docs/child-neck/nesting-thread-length-note.md",
+      "lab/docs/child-neck/collapse-threshold-and-expansion-note.md",
+      "lab/docs/child-neck/junction-neck-note.md",
+      "lab/docs/child-neck/israel-matching-note.md",
+      "lab/docs/child-neck/torsion-layer-note.md",
+      "lab/docs/child-neck/casimir-layer-note.md",
+      "lab/docs/child-neck/composite-layer-note.md",
+      "lab/docs/child-neck/balanced-layers-note.md",
+      "lab/docs/child-neck/neck-flux-note.md",
+      "lab/docs/child-neck/swap-symmetry-note.md"
+    ],
+    "BlackHoles-Infinity-w2": [
+      "docs/prior-art-and-open-claim.md",
+      "lab/docs/nsc-influence-chain.md",
+      "lab/docs/nsc-rn-charged-source.md",
+      "lab/docs/nsc-rn-observer-clock.md",
+      "docs/nsc-programme-method.md"
+    ]
+  },
+  "document_overrides": {
+    "docs/nsc-programme-method.md": {
+      "disposition": "partly_superseded_preserve",
+      "reason": "The w2 Hayward g>=-1 failure interpretation is superseded by the canonical correction. Preserve w2 bytes; do not resume work from this stale failure row."
+    },
+    "lab/docs/child-neck/composite-layer-note.md": {
+      "disposition": "partly_superseded_preserve",
+      "successor": "lab/docs/child-neck/balanced-layers-note.md",
+      "reason": "Its 125-field floor and large layer cancellation were withdrawn after normal stress was included; the successor still lacks physical fill and energy-transfer dynamics."
+    },
+    "lab/docs/child-neck/torsion-splitting-and-inherited-spin-note.md": {
+      "disposition": "exploratory_superseded_assumption",
+      "successor": "lab/docs/child-neck/second-quantised-splitting-note.md",
+      "reason": "Classical spin-polarisation splitting is not carried over to the field-operator mean field. The successor distinguishes C-even axial-axial coupling from conditional nonminimal vector-axial helicity terms."
+    },
+    "lab/docs/child-neck/junction-neck-note.md": {
+      "disposition": "partly_superseded_preserve",
+      "successor": "lab/docs/child-neck/israel-matching-note.md",
+      "reason": "The original bare-density neck radius is withdrawn; the later geometric-mass correction itself needs the exact-bounce versus density-cancellation distinction."
+    },
+    "lab/docs/child-neck/israel-matching-note.md": {
+      "disposition": "exploratory_approximation_boundary_required",
+      "reason": "Baseline line 10 calls 1+adot^2=0 a bounce. child_expansion_ladder.py:4-5 carries the closed-FLRW -1 curvature term but explicitly neglects its small shift of the density-cancellation radius. At a real turning point adot=0 and 1+adot^2=1. Therefore zero geometric mass and exact onset at the cancellation radius cannot be imported as established bounce facts.",
+      "post_baseline_correction": "The integrating agent corrected the live owner, child-neck index and status on 10 October 2026; the original text remains in preserved baseline and commit ea5e334c. Numerical records are unchanged."
+    }
+  },
+  "child_neck_subfamily_review": [
+    {"owners": ["kasner-shear-production-note.md", "eck-collapse-pair-production-note.md"], "decision": "Keep conditional production/Pauli-consistency diagnostics. The counts carry two factor-of-two corrections, a counting cutoff, one Kasner epoch, a manually chosen infall span and a species count explicitly recalled from memory. No equation or production law was independently verified here."},
+    {"owners": ["child-energy-floor-and-thread-length-note.md", "child-expansion-and-matter-fraction-note.md", "nesting-thread-length-note.md"], "decision": "Keep dimension/epoch and conditional generation-map questions. Distinguish bare matter energy, geometric mass and exterior mass. The fixed-point claim is withdrawn, Omega=3.97 is not reproduced, and the child count assumes a fixed fermion content. A Hubble-mass coincidence uses free choices and is not a prediction."},
+    {"owners": ["matter-antimatter-and-time-note.md", "torsion-splitting-and-inherited-spin-note.md", "second-quantised-splitting-note.md"], "decision": "Retain explicit baryon-number bookkeeping and the distinction between classical spin polarisation and field-operator helicity. Subsystem entropy needs a traced partner and does not derive time itself; the whole pure-state entropy is not that subsystem entropy. No dynamical baryogenesis or sourced helicity was constructed."},
+    {"owners": ["collapse-threshold-and-expansion-note.md"], "decision": "Borrow the ordinary TOV/expansion comparison instead of recomputing it. This note reports session-only numbers with no saved producer/record; its universal claim about every bounce's energy condition is not adopted without checking its assumptions."},
+    {"owners": ["junction-neck-note.md", "israel-matching-note.md"], "decision": "Reuse standard angular junction conditions only with specified orientation and stress assumptions. The source is an effective fluid and omits torsion surface-spin terms. Exact density-cancellation versus real closed-FLRW bounce semantics need the recorded correction; no global child transition has been independently established."},
+    {"owners": ["torsion-layer-note.md", "casimir-layer-note.md", "composite-layer-note.md", "balanced-layers-note.md"], "decision": "Keep the sequence of pressure/normal-stress compatibility questions and explicit supersession. The latest balanced construction replaces the 125-field claim but still postulates negative-energy fill, uncomputed interlayer exchange and planar layers near a regime where self-gravity matters. A familiar plate formula does not supply the physical boundary."},
+    {"owners": ["neck-flux-note.md"], "decision": "Keep flux bookkeeping as a conditional neck-path readout. The w=-1/2 endpoint varies about 10 percent with tolerance; no microscopic destination for absorbed energy/quanta is supplied. Exterior vacuum is imposed, not evidence that a real sibling channel vanishes."},
+    {"owners": ["swap-symmetry-note.md"], "decision": "Keep alternative symmetry lifts as tests on a chosen free-field Kruskal-type geometry. The owner does not select a throat swap and does not derive the child as an image of the parent. Inside/outside therefore remains distinct from charge conjugation; imported transformation tables are not a discovery."}
+  ],
+  "w2_subfamily_review": [
+    {"owner": "lab/docs/nsc-rn-charged-source.md", "reviewer": "research_audit", "read_boundary": "Full owner; charged-LLL module introduction and infall-winding section; full charged-twist-cliff-v3 record.", "decision": "Reuse the constrained Maxwell/Dirac/monopole source interface with fixed A/C_F and separate Gauss charge. Reflection on a finite fixed dyonic slice is exploratory; no charged backreaction evolution or child creation was demonstrated."},
+    {"owner": "lab/scripts/derive_nsc_charged_ladder_deficit_law.py", "reviewer": "research_audit", "read_boundary": "Full producer and v1 record.", "decision": "The four-rung ansatz is exploratory. First two rungs determine coefficients; later errors are about .07 and 11.6 percent. The producer hashes the cliff record but hardcodes rounded deficits instead of reading them: preserve that provenance caveat."},
+    {"owner": "lab/scripts/derive_nsc_constant_table.py", "reviewer": "research_audit", "read_boundary": "Full producer and v1 record.", "decision": "Seven empirical dimensionless coefficients and their numerical coincidences are hypothesis material, not fundamental or inherited constants. The owner explicitly acknowledges possible numerology."},
+    {"owner": "lab/docs/nsc-rn-observer-clock.md", "reviewer": "research_audit", "read_boundary": "Full owner.", "decision": "Reuse the supplied-metric RK4/tangent observer adapter. The old saved excision integral is neither proper time nor a child clock; missing old stage data prevents recovering those old worldlines from the scalar alone."},
+    {"owner": "lab/scripts/derive_nsc_time_awareness.py", "reviewer": "research_audit", "read_boundary": "Full time-awareness, wall-breathing-timescale, charged-clock-horizon and composed-vs-clock producers; time-awareness/charged-clock records; charged-LLL lines341-397 and reference lines310-347.", "decision": "Physical clock/winding interpretations remain unresolved: infall_winding and dependent producers use 1/(1+sqrt(f_RN)), while the declared PG metric has beta=sqrt(1-f_RN) and ingoing characteristic -(1+beta). Preserve records. This does not invalidate independently computed reflection modes or tangent-lapse shares."},
+    {"owner": "lab/docs/nsc-influence-chain.md", "reviewer": "research_audit", "read_boundary": "Full note including rounds1-112 and full frontier-amendment-v1 record.", "decision": "Quarantine universal missing95/exterior-elimination language and coordinate-invariance claims. The wall>20 open-cell summary is stale after later saved records; the supersession does not authorise another campaign. Neutral/dyonic parameter comparison is not a chart-invariance proof."}
+  ],
+  "strands": {
+    "finite_nesting": {
+      "default_disposition": "reusable_with_stated_domain",
+      "scope": "Finite operator inheritance, Schur reduction, causal memory and a measured pair of nested spatial collars in one periodic spherical metric.",
+      "review": "The finite-window theorem imports Schur algebra and scale covariance. It permits distinct states and arbitrary finite depth. The pair note explicitly excludes a horizon junction, new manifold, regular spherical centre and eternal continuation.",
+      "evidence": ["lab/docs/nsc-nested-qualities.md:5", "lab/docs/nsc-nested-qualities.md:107", "lab/docs/nsc-nested-parent-child.md:3", "lab/docs/nsc-nested-parent-child.md:340"],
+      "next_use": "Reuse the finite graph/reduction algebra and pair observables. A branching atlas must expose whether an edge is a spatial restriction, operator coupling or actual spacetime transition; no relabelling of one as another.",
+      "retire_from_active_path": "Re-proving generic Schur complements or treating identical laws as identical regional states.",
+      "verification_boundary": "Existing finite record claims are cited, not independently replayed here. No black-hole offspring or cosmological abundance is established."
+    },
+    "finite_discovery": {
+      "default_disposition": "reusable_with_stated_domain",
+      "scope": "Saved periodic/conformal realizations, source interventions, moving regional ledgers, retained/exterior reduction and a finite grandchild handoff.",
+      "review": "The grandchild owner distinguishes an early unresolved forecast from a later declared proper-clock interval. Its propagated state, tangent, source and clocks are inherited rather than reinitialised. The memory owner reconstructs the full source before computing geometry forces; its memory kernel is not an extra stress.",
+      "evidence": ["lab/docs/nsc-discovery-grandchild.md:3", "lab/docs/nsc-discovery-grandchild.md:45", "lab/docs/nsc-discovery-coupled-memory.md:1", "lab/docs/nsc-discovery-observables.md:1", "lab/docs/active-code-map.md:133"],
+      "next_use": "Use authenticated saved frames and existing observer adapters to populate finite atlas examples, with spatial versus modal partitions and clock semantics displayed.",
+      "retire_from_active_path": "Further autonomous periodic campaigns whose proposed output supplies no new cross-domain connection.",
+      "verification_boundary": "Scope review covers named owners; individual version notes and all trajectory arrays remain independently unverified. Finite effects do not prove continuum, renewal or universal scale inheritance."
+    },
+    "conformal_realization": {
+      "default_disposition": "reusable_with_stated_domain",
+      "scope": "The finite common-action conformal chain and its local-response successors, as routed by the active code map and frozen companion evidence.",
+      "review": "Keep source controls, actual metric curvature, proper clocks and local-response errors attached to their respective finite realizations. Earlier conditional reductions and later same-trajectory successors are distinct records.",
+      "evidence": ["lab/docs/active-code-map.md:205", "lab/docs/nsc-regeneration-realization-audit.md:13", "lab/docs/nsc-paper-coverage-audit.md:103"],
+      "next_use": "Populate an explicitly periodic finite atlas chart from saved evidence. Use the companion's domain without upgrading it to a global black-hole transition.",
+      "retire_from_active_path": "Navigation that presents earlier conditional response and its successor as interchangeable.",
+      "verification_boundary": "Family scope checked through the code map, paper coverage and realization audit. Individual successor derivations have been inventoried, not independently verified."
+    },
+    "spherical_action": {
+      "default_disposition": "reusable_with_stated_domain",
+      "scope": "Spherical action/source machinery, Galerkin variants, maintained regeneration episode, local response, null-expansion and initial-constraint checks.",
+      "review": "The realization audit separates bitwise handoff, measured finite responses, initial bounds and an absent evolved error bound. Its goal_complete flag is explicitly not a universal verdict; renewal is false in the recorded maintained chain. Null-expansion samples are not a global horizon construction.",
+      "evidence": ["lab/docs/nsc-regeneration-realization-audit.md:9", "lab/docs/nsc-regeneration-realization-audit.md:13", "lab/docs/active-code-map.md:414", "lab/docs/claim-ledger.md:144"],
+      "next_use": "Reuse operators, energy accounting and observer diagnostics where the atlas chart has the same action, source and gauge. Preserve distinct initial, trajectory and continuum uncertainty fields.",
+      "retire_from_active_path": "Superseded numerical controls as the default route; retain the original bytes and the successor relationship.",
+      "verification_boundary": "No numerical trajectory or certificate recomputed during this census. An initial distance bound is not an evolved observable error bound."
+    },
+    "rn_radial": {
+      "default_disposition": "unresolved_chart_specific",
+      "scope": "Magnetic Reissner-Nordstrom reference, radial Dirac/PG source and response, finite neutral continuation, gradient-bubble diagnostics and later radial variants.",
+      "review": "The RN work audit records repeated rediscovery and withdrawn interpretations caused by mistaking chart cuts for physical nesting. The reference geometry map is a classical one-parameter chart. The full programme is not represented by its radial limitations. Reported shell and compression numbers require their named resolution and boundary conditions.",
+      "evidence": ["lab/docs/nsc-rn-work-audit.md:3", "lab/docs/nsc-rn-work-audit.md:21", "lab/docs/nsc-rn-geometry-map.md:6", "docs/instructions.md:99", "lab/docs/claim-ledger.md:29"],
+      "next_use": "Keep RN as a calibrated atlas adapter and comparison chart. Borrow its known geometry. Admit a new computation only for a missing transition/source/coupling connection, with chart and observer identified.",
+      "retire_from_active_path": "Automatic deeper marches, rediscovery of RN horizons or global verdicts inferred from a one-dimensional instrument.",
+      "verification_boundary": "No continuum validation, production seal or demonstrated cosmological child is inferred. Branch-specific guard changes require a separate domain audit."
+    },
+    "paused_incoming_gate": {
+      "default_disposition": "paused_preserve_dependency_closure",
+      "scope": "The source-fixed incoming/KS gate, upstream signed-source arrays, UV/subgap work, derivative certificates and historical endpoint campaigns.",
+      "review": "The gate remains OPEN and its campaign is paused. Active instructions explicitly make it neither a prerequisite for finite nested qualities nor a compulsory next research task. Four historical source objects and later recovered sources are needed by retained evidence closure.",
+      "evidence": ["docs/instructions.md:79", "lab/docs/active-code-map.md:1286", "docs/repository-consolidation.md:24", "lab/.source-history/manifest.json:3"],
+      "next_use": "Reuse an applicable source/certificate by its exact domain and dependency identity; otherwise keep this family outside the atlas's active compute route.",
+      "retire_from_active_path": "The old error-budget cursor and generic repeated precision campaigns. Physical files may move only after reverse-dependency and restore checks.",
+      "verification_boundary": "Hundreds of version notes and thousands of numerical rows are inventoried; the census does not close their physical gate or re-enclose their errors."
+    },
+    "child_neck": {
+      "default_disposition": "exploratory_preserve_unreviewed",
+      "scope": "Uncommitted 7-9 October chain: Kasner production, Einstein-Cartan collapse, expansion, asymmetry, junction/neck layers and throat swaps.",
+      "review": "The owner states hypothesis-first, one Dirac field, a 10-solar-mass parent and mostly order-of-magnitude estimates. Its status note records six corrections and missing helicity, negative-energy-layer matter, spin junction terms, Planck-scale start and parent/child mass-ratio selection. It explicitly has no claim-ledger admission.",
+      "evidence": ["lab/docs/child-neck/README.md:3", "lab/docs/child-neck/child-and-neck-status-note.md:4", "lab/docs/child-neck/child-and-neck-status-note.md:29", "lab/docs/child-neck/child-and-neck-status-note.md:38"],
+      "next_use": "Place its alternative mechanisms on the scenario atlas with borrowed-result links and declared assumptions. Review the latest note plus its correction history before selecting any missing physical calculation.",
+      "retire_from_active_path": "Superseded composite-layer and preliminary counting claims as current conclusions; preserve all original drafts and records.",
+      "verification_boundary": "Reading the status table and successful script regeneration are not independent physical verification. The existence and matter content of the proposed neck remain open."
+    },
+    "w2_influence_interpretations": {
+      "default_disposition": "exploratory_interpretation_quarantined",
+      "scope": "Uncommitted w2 geometric-chain fees, radial influence atlas, constant tables and interpretations of the dark-sector fraction.",
+      "review": "The influence owner combines several distinct scalar fee definitions with a self-similar infinite sum and a .049 target/.03-.10 acceptance band. Failure of those conditional mappings cannot eliminate all exterior influence or establish interior dark matter. Its radial interval atlas is not a multi-child spacetime atlas.",
+      "evidence": ["BlackHoles-Infinity-w2/lab/docs/nsc-influence-chain.md:3", "BlackHoles-Infinity-w2/lab/docs/nsc-influence-chain.md:13", "BlackHoles-Infinity-w2/lab/src/recursive_horizons/nsc_influence_chain.py:43", "BlackHoles-Infinity-w2/lab/scripts/derive_nsc_influence_atlas.py:1"],
+      "next_use": "Preserve as alternative toy mappings. The atlas may show the recorded quantities and assumptions, never their unsupported universal elimination narrative. A finite depth or justified limit must be stated before future use.",
+      "retire_from_active_path": "The .049-target infinite closure as a default discovery target and the claim that an interior interpretation follows by elimination.",
+      "verification_boundary": "No w2 files edited or adopted. Every newly found w2 result remains exploratory until source/domain and interpretation are reviewed."
+    },
+    "w2_radial_extensions": {
+      "default_disposition": "exploratory_preserve_unreviewed",
+      "scope": "Uncommitted w2 wall, march, two-end, charged, tilt, timing, production-preflight and bookkeeping extensions.",
+      "review": "Inventory identifies this separate working stream and its dependencies. These results are not admitted merely because a script or a matching JSON exists; terminology such as wall, clock and quantum requires its defining quantity and domain.",
+      "evidence": ["BlackHoles-Infinity-w2/lab/docs/active-code-map.md", "BlackHoles-Infinity-w2/lab/results/development/nsc-programme-index-v2.json"],
+      "next_use": "Review each candidate's latest owning note and its claimed physical map before selecting reusable diagnostics. Retain w2 unchanged until reconciliation is explicit.",
+      "retire_from_active_path": "Automatic chain-of-follow-up calculations driven by previous index rounds.",
+      "verification_boundary": "Inventoried only at individual derivation level. No new physical verdict is assigned."
+    },
+    "matter_torsion": {
+      "default_disposition": "unresolved_reuse_prior_art_first",
+      "scope": "Particle/charge/nuclear sectors and torsion-derived matter mechanisms, including imported local constructions.",
+      "review": "The prior-art owner identifies established components and forbids treating their reproduction as NSC novelty. Shared coefficients, source/state compatibility and a new scale or transition connection are distinct from generic particle or soliton re-derivation.",
+      "evidence": ["docs/prior-art-and-open-claim.md:3", "docs/prior-art-and-open-claim.md:23", "docs/prior-art-and-open-claim.md:75", "lab/docs/nsc-prior-art-reuse.md"],
+      "next_use": "Borrow applicable formulas and constraints. Keep measured masses, imposed couplings and assumptions distinguishable from any new derived dimensionless relation.",
+      "retire_from_active_path": "Standalone reproduction of familiar particles, nuclear tables or torsion identities as discovery.",
+      "verification_boundary": "Individual sector notes are inventoried, not independently validated. No common-action closure of all matter sectors is asserted."
+    },
+    "spectral_quantum": {
+      "default_disposition": "unresolved_reuse_prior_art_first",
+      "scope": "Spectral action, determinants, anomalies, finite-domain quantum state and boundary response machinery.",
+      "review": "The reuse owner distinguishes applicable imported determinant identities from the missing state/domain/source connection. Finite Dirac/Yukawa data remain inputs unless actually determined; a conditional holonomy saddle still requires a physical return loop.",
+      "evidence": ["docs/prior-art-and-open-claim.md:23", "docs/prior-art-and-open-claim.md:54", "lab/docs/nsc-prior-art-reuse.md:76"],
+      "next_use": "Populate atlas links with operator, state, boundary domain and inherited versus measured coefficients. Use existing determinant and response identities without re-solving them.",
+      "retire_from_active_path": "Raw determinant or coefficient scans without a newly missing compatibility relation.",
+      "verification_boundary": "This is scope/ownership review through prior-art owners. Individual derivations remain independently unverified."
+    },
+    "geometry_transition": {
+      "default_disposition": "unresolved_reuse_prior_art_first",
+      "scope": "Compact/warped geometries, ADM necks, black-universe and horizon charts, clocks and proposed parent-child transitions.",
+      "review": "Existing regular black-universe examples establish possible geometries with their own sources. They do not identify our universe, supply the selected quantum source or turn a singular/infinite limit into a child transition. The transition map, conserved charges and observer semantics must be carried explicitly.",
+      "evidence": ["docs/prior-art-and-open-claim.md:50", "lab/docs/nsc-prior-art-reuse.md", "lab/docs/nsc-nested-parent-child.md:8"],
+      "next_use": "Keep multiple geometry candidates and imported source conditions visible. Join charts only through a stated map; leave an absent arrow absent rather than filling it with a familiar equation.",
+      "retire_from_active_path": "Treating a coordinate inside/outside exchange as charge conjugation or proper-time dynamics without a supporting law.",
+      "verification_boundary": "Every geometry-family file is indexed; individual spacetime constructions and energy conditions are not re-proved here."
+    },
+    "publication": {
+      "default_disposition": "frozen_publication_preserve",
+      "scope": "Foundation, companion and historical draft sources/PDFs plus claim bindings and selected evidence manifests.",
+      "review": "The existing claim-binding check resolves 27 claim markers and 95 record links. Nine registered findings include seven post-preprint findings. Conditional holonomy has a known unlinked record. The coverage note's old corpus counts are historical, not the current census.",
+      "evidence": ["lab/docs/nsc-paper-coverage-audit.md:9", "paper/claim-bindings.json", "scripts/check_claim_bindings.py:1"],
+      "next_use": "Link atlas results to their actual publication coverage and preserve frozen PDF/evidence identities. Update future publication coverage through the existing binding mechanism.",
+      "retire_from_active_path": "Treating either frozen paper as a complete account of all later laboratory work.",
+      "verification_boundary": "Structural claim-binding check ran; no paper rebuilt and no scientific claim independently verified."
+    },
+    "governance_provenance": {
+      "default_disposition": "reusable_navigation_needs_alignment",
+      "scope": "Indexes, prior-art routing, claims, evidence receipts, source-history, storage and publication/lab separation.",
+      "review": "Root and lab are distinct publication and research owners despite many identical bytes. Historical PLAN copies are preserved inputs, not task authority. A retained PLAN versus the old check_current rejection is a known concrete inconsistency.",
+      "evidence": ["docs/instructions.md:22", "docs/README.md:43", "docs/README.md:57", "docs/repository-consolidation.md:24", "lab/.source-history/manifest.json:3"],
+      "next_use": "Use this census to shorten active navigation, identify owners, distinguish same-byte aliases from variants and maintain original hashes. Retire redundant navigation before considering physical deletion.",
+      "retire_from_active_path": "Stale plan/handover cursors and any equation-selection monopoly inferred from historical framing.",
+      "verification_boundary": "Hashes establish identity. They neither establish theorem applicability nor authorise deletion of referenced historical evidence."
+    },
+    "historical_archive": {
+      "default_disposition": "retired_from_active_path_preserve",
+      "scope": "Frozen drafts, old source/tests, pre-closure copies, imported external comparisons and archived campaigns.",
+      "review": "The archive owner explicitly disclaims current scientific authority and records superseded rhetoric and invalidated claims. Original bytes are retained for provenance; revived ideas require a new active derivation rather than rewriting history.",
+      "evidence": ["lab/archive/README.md:3", "lab/archive/README.md:15", "lab/archive/README.md:47"],
+      "next_use": "Search as historical context and dependency source only. Any revival must identify the old failure and a new reason it can now be resolved.",
+      "retire_from_active_path": "Already retired; keep ordinary atlas navigation pointed to current owners and show archives on request.",
+      "verification_boundary": "Historical documents are fully inventoried and text-scanned but not scientifically reviewed as current proofs. No historical payload removed."
+    },
+    "other_research": {
+      "default_disposition": "unresolved_owner_review_required",
+      "scope": "Residual research records and support material not safely assigned by the documented family rules.",
+      "review": "A complete census must expose this residual instead of inventing a scientific interpretation from a filename. Explicit links, path mentions, basename candidates and missing owners remain distinct.",
+      "evidence": ["lab/results/research-reset/document-corpus.json", "lab/results/research-reset/result-families.json"],
+      "next_use": "Resolve the owning note and physical meaning before atlas admission or a new calculation. This disposition is a local boundary, not a verdict that the research lacks value.",
+      "retire_from_active_path": "Unowned records as automatic compute instructions.",
+      "verification_boundary": "Inventoried only. The family receives no scientific validation or rejection."
+    }
+  }
+}

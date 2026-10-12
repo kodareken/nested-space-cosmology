@@ -1,0 +1,1808 @@
+{
+  "artifact_id": "NSC-12-NORMALIZATION-FLOW",
+  "baseline": "92ac858",
+  "beta_functions": {
+    "M_basis_equivalent": {
+      "C2": "1/(320*pi**2)",
+      "E4": "-11/(5760*pi**2)",
+      "M2R": "-2*c_M2R",
+      "M4": "-4*c_M4",
+      "R2": "0",
+      "boxR": "1/(480*pi**2)",
+      "meaning": "same free-Dirac logarithm with I_i written using M itself: hat c_M4=c_M4*(M_ref/M)^4 and hat c_M2R=c_M2R*(M_ref/M)^2, plus the a4 anomaly. Classical -4 c_M4 and -2 c_M2R are unit rewriting, not physical G or Lambda running."
+    },
+    "M_ref_basis": {
+      "C2": "1/(320*pi**2)",
+      "E4": "-11/(5760*pi**2)",
+      "M2R": "0",
+      "M4": "0",
+      "R2": "0",
+      "boxR": "1/(480*pi**2)"
+    },
+    "M_ref_basis_meaning": "dc_i/d ln M at fixed M_ref for this free-Dirac logarithm. M4 and M2R do not run because the subtraction keeps cutoff powers, not M^4 or M^2. That is not a physical Newton or cosmological beta function.",
+    "continuum_bulk_shift_M_to_sM": {
+      "C2": "log(s)/(320*pi**2)",
+      "E4": "0",
+      "M2R": "0",
+      "M4": "0",
+      "R2": "0",
+      "boxR": "0"
+    },
+    "finite_shift_M_to_sM": {
+      "C2": "log(s)/(320*pi**2)",
+      "E4": "-11*log(s)/(5760*pi**2)",
+      "M2R": "0",
+      "M4": "0",
+      "R2": "0",
+      "boxR": "log(s)/(480*pi**2)"
+    },
+    "free_Dirac_log_flow_is_not_recursive_Omega_flow": true,
+    "marginal_stationary_coefficient": "c_R2",
+    "no_finite_fixed_point_along_a4": true,
+    "no_physical_Newton_running_inferred": true,
+    "no_physical_cosmological_running_inferred": true,
+    "running_direction": "a4=(-18*C2+11*E4-12*BoxR)/360"
+  },
+  "classification": "bounded_free_Dirac_normalization_flow_of_the_already_calculated_covariant_remainder",
+  "conventions": {
+    "M": "determinant normalization in ln(Lambda^2/M^2); not a fermion mass; not M_ref; not Omega",
+    "M_ref": "fixed mass in the finite local basis (M_ref^4, M_ref^2 R, C^2, R^2, E4, BoxR)",
+    "Weyl_compensator": "not derived here; a concurrent owner, not this M-flow",
+    "a4": "(-18*C2+11*E4-12*BoxR)/360",
+    "basis": [
+      "M4",
+      "M2R",
+      "C2",
+      "R2",
+      "E4",
+      "boxR"
+    ],
+    "common_action": "shifts of the unresolved finite local part of the same measure; no extra Einstein or scalar term",
+    "continuum_bulk_running": "C2 only on this closed fixed-topology cell; Euler and box bulk EL vanish identically",
+    "curvature": "R_E=-R_L; C2 and E4 from the Lorentzian finite-term owner; Box_E R_E=Box_L R_L",
+    "discrete_Euler_column": "retained in finite-code cancellation to match the finite-term owner; leftover versus C2-only is product-rule error",
+    "fields": [
+      "lapse",
+      "radial_scale",
+      "sphere_radius"
+    ],
+    "gradient_convention": "covariant-source per-node metric_gradients; variation is the inner product against delta N,q,r",
+    "initial_coefficients": "unspecified remains None; symbolic names c_M4..c_boxR; an explicit numeric vector is an unfitted control, not a selected zero action",
+    "operator": "massless torsionless Dirac; existing covariant frequency modulus E_Lambda",
+    "static_energy": "F_i=4*pi*int N q r^2 I_i dx; S_fin=-int F dt; EL densities as in the finite-term owner",
+    "subtraction": "E_Lambda-[A0*Lambda**4/2+A2*Lambda**2+A4*log(Lambda**2/M**2)]/(32*pi**2)"
+  },
+  "cylinder_analytic": {
+    "A4": -3.3510321638291125,
+    "L": 4.0,
+    "a": 1.0,
+    "computed_dE_sub_dlnM": -0.021220659078919377,
+    "dE_sub_dlnM": -0.02122065907891938,
+    "formula": "-1/(15*pi)"
+  },
+  "dirac_remainder_bind": {
+    "E_Lambda_independent_of_M": true,
+    "M": 1.0,
+    "angular_max": 4,
+    "cutoff": 2.0,
+    "frequency_points": 16,
+    "local_subtraction_energy_change": -0.014709040010176366,
+    "points": 16,
+    "raw_energy_after": 4.596608222588733,
+    "raw_energy_before": 4.596608222588733,
+    "raw_energy_change": 0.0,
+    "remainder_energy_change": -0.014709040010176366,
+    "remainder_minus_local": 0.0,
+    "scale_ratio": 2.0
+  },
+  "discrete_euler_refinement": {
+    "classification": "discrete product-rule leftover of the finite-term Euler column, not continuum bulk Euler stress",
+    "coarse_c2_only_visible": true,
+    "grids": [
+      {
+        "E4_energy": -4.185442197610358e-15,
+        "boxR_energy": 1.1161179193627622e-14,
+        "c2_only_energy_residual": -5.516420653606247e-16,
+        "c2_only_gradient_residual": 1.5935424767937745e-10,
+        "discrete_E4_el_maximum": 9.505122756872634e-06,
+        "discrete_boxR_el_maximum": 0.0,
+        "full_energy_residual": -5.516420653606247e-16,
+        "full_gradient_residual": 5.377642775528102e-17,
+        "points": 32
+      },
+      {
+        "E4_energy": -1.3951473992034527e-15,
+        "boxR_energy": -4.185442197610358e-15,
+        "c2_only_energy_residual": -5.48172618408671e-16,
+        "c2_only_gradient_residual": 1.5269903397285844e-15,
+        "discrete_E4_el_maximum": 1.8123522774612532e-10,
+        "discrete_boxR_el_maximum": 0.0,
+        "full_energy_residual": -5.48172618408671e-16,
+        "full_gradient_residual": 2.5478751053409354e-17,
+        "points": 64
+      },
+      {
+        "E4_energy": -5.231802747012948e-16,
+        "boxR_energy": -3.4878684980086318e-15,
+        "c2_only_energy_residual": -5.516420653606247e-16,
+        "c2_only_gradient_residual": 1.4849232954361469e-15,
+        "discrete_E4_el_maximum": 3.53873557218359e-10,
+        "discrete_boxR_el_maximum": 0.0,
+        "full_energy_residual": -5.516420653606247e-16,
+        "full_gradient_residual": 1.431146867680866e-17,
+        "points": 128
+      }
+    ],
+    "metric": "nonconstant R=2 smooth N,q,r",
+    "refined_c2_only_vanished": true,
+    "scale_ratio": 2.0
+  },
+  "exact_identities": {
+    "A4_basis_weights": [
+      "0",
+      "0",
+      "-1/20",
+      "0",
+      "11/360",
+      "-1/30"
+    ],
+    "E_sub": "E_Lambda-[A0*Lambda**4/2+A2*Lambda**2+A4*log(Lambda**2/M**2)]/(32*pi**2)",
+    "M_basis_classical_M2R_beta": "-2*c_M2R",
+    "M_basis_classical_M2R_residual": "0",
+    "M_basis_classical_M4_beta": "-4*c_M4",
+    "M_basis_classical_M4_residual": "0",
+    "M_ratio_is_not_recursive_Omega": true,
+    "M_ref_basis_M4_M2R_betas": [
+      "0",
+      "0"
+    ],
+    "a4_R2_derivative": "0",
+    "a4_R_E_equals_minus_R_L": true,
+    "a4_contains_R2": false,
+    "a4_density": "(-18*C2+11*E4-12*BoxR)/360",
+    "a4_weyl_euler_identity_residual": "0",
+    "arbitrary_initial_coefficients_cancel": "0",
+    "beta_M_ref_basis": [
+      "0",
+      "0",
+      "1/(320*pi**2)",
+      "0",
+      "-11/(5760*pi**2)",
+      "1/(480*pi**2)"
+    ],
+    "compensated_energy_residual": "0",
+    "composition_residuals": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "continuum_Euler_and_box_bulk_EL_vanish": true,
+    "continuum_bulk_EL_residual_with_vanishing_Euler_box": "0",
+    "continuum_bulk_energy_residual_on_closed_cell": "0",
+    "continuum_closed_cell_bulk_running_is_C2": true,
+    "curvature_convention": "R_E=-R_L; C2 and E4 from the Lorentzian finite-term owner; Box_E R_E=Box_L R_L",
+    "dE_sub_dlnM": "A4/(16*pi**2)",
+    "dE_sub_dlnM_residual": "0",
+    "discrete_Euler_column_is_product_rule_error": true,
+    "euler_lagrange_compensation_residual": "0",
+    "finite_shift_M_to_sM": [
+      "0",
+      "0",
+      "log(s)/(320*pi**2)",
+      "0",
+      "-11*log(s)/(5760*pi**2)",
+      "log(s)/(480*pi**2)"
+    ],
+    "identity_scale_shift": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "imported_a4_weyl_euler_basis": "-BoxR/30 - C2/20 + 11*E4/360",
+    "inverse_residuals": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "marginal_stationary_coefficient": "c_R2",
+    "no_physical_Newton_running_inferred": true,
+    "no_physical_cosmological_running_inferred": true,
+    "no_recursive_fixed_point_inferred": true,
+    "running_direction": "a4=(-18*C2+11*E4-12*BoxR)/360",
+    "symbolic_initial_coefficients": [
+      "c_M4",
+      "c_M2R",
+      "c_C2",
+      "c_R2",
+      "c_E4",
+      "c_boxR"
+    ],
+    "unspecified_initial_coefficients": "None"
+  },
+  "families": [
+    {
+      "A4": -3.3510321638291125,
+      "A4_minus_closed_cell_heat": 0.0,
+      "composition_2_3_versus_6": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dE_sub_dlnM": -0.021220659078919377,
+      "derivative_controls": {
+        "analytic_A4": -3.3510321638291125,
+        "analytic_energy": -0.021220659078919377,
+        "centered_differences": [
+          {
+            "energy_minus_analytic": -3.602361464682957e-13,
+            "maximum_gradient_minus_analytic": 2.2514759154268482e-14,
+            "step": 0.001
+          },
+          {
+            "energy_minus_analytic": 8.38530633817669e-14,
+            "maximum_gradient_minus_analytic": 5.240816461360431e-15,
+            "step": 0.0001
+          },
+          {
+            "energy_minus_analytic": 2.6729209123832476e-11,
+            "maximum_gradient_minus_analytic": 1.6705755702395297e-12,
+            "step": 1e-05
+          }
+        ],
+        "energy_minus_stored": 0.0,
+        "finite_difference_comparison_atol": 2e-10,
+        "independent_of_analytic_beta_formula": true,
+        "stored_remainder_log_derivative": -0.021220659078919377
+      },
+      "description": "N=q=1, r=1, L=4, AP 32",
+      "eta": 0.5,
+      "heat_a4_closed_cell": -3.3510321638291125,
+      "inverse_2_and_half": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "length": 4.0,
+      "maximum_composition_residual": 0.0,
+      "maximum_inverse_residual": 0.0,
+      "name": "cylinder",
+      "points": 32,
+      "reference_mass_control": {
+        "A4_at_M_ref_one": -3.3510321638291125,
+        "A4_at_M_ref_two": -3.3510321638291125,
+        "C2_ratio": 1.0,
+        "M2R_ratio": 4.0,
+        "M4_ratio": 16.0,
+        "M4_scales_as_M_ref_to_the_fourth": true,
+        "M_ref_is_not_the_determinant_normalization": true,
+        "M_ref_one_basis_energies": [
+          50.26548245743669,
+          -100.53096491487338,
+          67.02064327658225,
+          201.06192982974676,
+          0.0,
+          0.0
+        ],
+        "M_ref_two_basis_energies": [
+          804.247719318987,
+          -402.1238596594935,
+          67.02064327658225,
+          201.06192982974676,
+          0.0,
+          0.0
+        ],
+        "dE_sub_dlnM_at_M_ref_one": -0.021220659078919377,
+        "dE_sub_dlnM_at_M_ref_two": -0.021220659078919377,
+        "log_flow_independent_of_M_ref": true
+      },
+      "scale_scans": [
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.00021947028991463403,
+            -0.0,
+            0.00013412073272560968,
+            -0.00014631352660975599
+          ],
+          "determinant_energy_change": 0.014709040010177254,
+          "energy_residual": 4.805184028455756e-16,
+          "finite_energy_increment": -0.014709040010176774,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 3.003240017784847e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.5016200088924236e-17,
+            "radial_scale": 1.5016200088924236e-17,
+            "sphere_radius": 3.003240017784847e-17
+          },
+          "scale_ratio": 0.5,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.014709040010177254,
+          "unmatched_maximum_metric_gradient": 0.0009193150006360784,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.0004596575003180392,
+            "radial_scale": 0.0004596575003180392,
+            "sphere_radius": 0.0009193150006360784
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.00021947028991463403,
+            -0.0,
+            0.00013412073272560968,
+            -0.00014631352660975599
+          ],
+          "determinant_energy_change": 0.014709040010177254,
+          "energy_residual": 4.805184028455756e-16,
+          "finite_energy_increment": -0.014709040010176774,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 3.003240017784847e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.5016200088924236e-17,
+            "radial_scale": 1.5016200088924236e-17,
+            "sphere_radius": 3.003240017784847e-17
+          },
+          "scale_ratio": 0.5,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.014709040010177254,
+          "unmatched_maximum_metric_gradient": 0.0009193150006360784,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.0004596575003180392,
+            "radial_scale": 0.0004596575003180392,
+            "sphere_radius": 0.0009193150006360784
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.00021947028991463403,
+            0.0,
+            -0.00013412073272560968,
+            0.00014631352660975599
+          ],
+          "determinant_energy_change": -0.014709040010176366,
+          "energy_residual": 4.0766001685454967e-16,
+          "finite_energy_increment": 0.014709040010176774,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 2.5478751053409354e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.2739375526704677e-17,
+            "radial_scale": 1.2739375526704677e-17,
+            "sphere_radius": 2.5478751053409354e-17
+          },
+          "scale_ratio": 2.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.014709040010176366,
+          "unmatched_maximum_metric_gradient": 0.0009193150006360229,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.00045965750031801145,
+            "radial_scale": 0.00045965750031801145,
+            "sphere_radius": 0.0009193150006360229
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.00021947028991463403,
+            0.0,
+            -0.00013412073272560968,
+            0.00014631352660975599
+          ],
+          "determinant_energy_change": -0.014709040010176366,
+          "energy_residual": 4.0766001685454967e-16,
+          "finite_energy_increment": 0.014709040010176774,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 2.5478751053409354e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.2739375526704677e-17,
+            "radial_scale": 1.2739375526704677e-17,
+            "sphere_radius": 2.5478751053409354e-17
+          },
+          "scale_ratio": 2.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.014709040010176366,
+          "unmatched_maximum_metric_gradient": 0.0009193150006360229,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.00045965750031801145,
+            "radial_scale": 0.00045965750031801145,
+            "sphere_radius": 0.0009193150006360229
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0003166286988823056,
+            0.0,
+            -0.00019349531598363118,
+            0.00021108579925487037
+          ],
+          "determinant_energy_change": -0.021220659078919013,
+          "energy_residual": 3.677613769070831e-16,
+          "finite_energy_increment": 0.02122065907891938,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 2.2985086056692694e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.1492543028346347e-17,
+            "radial_scale": 1.1492543028346347e-17,
+            "sphere_radius": 2.2985086056692694e-17
+          },
+          "scale_ratio": 2.718281828459045,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.021220659078919013,
+          "unmatched_maximum_metric_gradient": 0.0013262911924324383,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.0006631455962162192,
+            "radial_scale": 0.0006631455962162192,
+            "sphere_radius": 0.0013262911924324383
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0003166286988823056,
+            0.0,
+            -0.00019349531598363118,
+            0.00021108579925487037
+          ],
+          "determinant_energy_change": -0.021220659078919013,
+          "energy_residual": 3.677613769070831e-16,
+          "finite_energy_increment": 0.02122065907891938,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 2.2985086056692694e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.1492543028346347e-17,
+            "radial_scale": 1.1492543028346347e-17,
+            "sphere_radius": 2.2985086056692694e-17
+          },
+          "scale_ratio": 2.718281828459045,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.021220659078919013,
+          "unmatched_maximum_metric_gradient": 0.0013262911924324383,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.0006631455962162192,
+            "radial_scale": 0.0006631455962162192,
+            "sphere_radius": 0.0013262911924324383
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0007290645220604975,
+            0.0,
+            -0.0004455394301480817,
+            0.0004860430147069982
+          ],
+          "determinant_energy_change": -0.04886237325862819,
+          "energy_residual": 3.400058012914542e-16,
+          "finite_energy_increment": 0.04886237325862853,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 2.1250362580715887e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.0625181290357943e-17,
+            "radial_scale": 1.0625181290357943e-17,
+            "sphere_radius": 2.1250362580715887e-17
+          },
+          "scale_ratio": 10.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.04886237325862819,
+          "unmatched_maximum_metric_gradient": 0.003053898328664262,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.001526949164332131,
+            "radial_scale": 0.001526949164332131,
+            "sphere_radius": 0.003053898328664262
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0007290645220604975,
+            0.0,
+            -0.0004455394301480817,
+            0.0004860430147069982
+          ],
+          "determinant_energy_change": -0.04886237325862819,
+          "energy_residual": 3.400058012914542e-16,
+          "finite_energy_increment": 0.04886237325862853,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 2.1250362580715887e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 1.0625181290357943e-17,
+            "radial_scale": 1.0625181290357943e-17,
+            "sphere_radius": 2.1250362580715887e-17
+          },
+          "scale_ratio": 10.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.04886237325862819,
+          "unmatched_maximum_metric_gradient": 0.003053898328664262,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.001526949164332131,
+            "radial_scale": 0.001526949164332131,
+            "sphere_radius": 0.003053898328664262
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.0003624543343281858,
+            -0.0,
+            0.00022149987097833573,
+            -0.00024163622288545715
+          ],
+          "determinant_energy_change": 0.024291922645060637,
+          "energy_residual": 2.185751579730777e-16,
+          "finite_energy_increment": -0.02429192264506042,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 1.3660947373317356e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.830473686658678e-18,
+            "radial_scale": 6.830473686658678e-18,
+            "sphere_radius": 1.3660947373317356e-17
+          },
+          "scale_ratio": 0.3183098861837907,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.024291922645060637,
+          "unmatched_maximum_metric_gradient": 0.0015182451653162898,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.0007591225826581449,
+            "radial_scale": 0.0007591225826581449,
+            "sphere_radius": 0.0015182451653162898
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.0003624543343281858,
+            -0.0,
+            0.00022149987097833573,
+            -0.00024163622288545715
+          ],
+          "determinant_energy_change": 0.024291922645060637,
+          "energy_residual": 2.185751579730777e-16,
+          "finite_energy_increment": -0.02429192264506042,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 1.3660947373317356e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.830473686658678e-18,
+            "radial_scale": 6.830473686658678e-18,
+            "sphere_radius": 1.3660947373317356e-17
+          },
+          "scale_ratio": 0.3183098861837907,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.024291922645060637,
+          "unmatched_maximum_metric_gradient": 0.0015182451653162898,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.0007591225826581449,
+            "radial_scale": 0.0007591225826581449,
+            "sphere_radius": 0.0015182451653162898
+          }
+        }
+      ],
+      "stored_remainder_log_derivative": -0.021220659078919377
+    },
+    {
+      "A4": -3.1047371213960595,
+      "A4_minus_closed_cell_heat": -4.440892098500626e-16,
+      "composition_2_3_versus_6": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dE_sub_dlnM": -0.01966097750238458,
+      "derivative_controls": {
+        "analytic_A4": -3.1047371213960595,
+        "analytic_energy": -0.01966097750238458,
+        "centered_differences": [
+          {
+            "energy_minus_analytic": 3.283831540024096e-13,
+            "maximum_gradient_minus_analytic": 4.168106831903273e-14,
+            "step": 0.001
+          },
+          {
+            "energy_minus_analytic": -1.4479736853978409e-12,
+            "maximum_gradient_minus_analytic": 2.852470863679013e-13,
+            "step": 0.0001
+          },
+          {
+            "energy_minus_analytic": 3.407916310260717e-11,
+            "maximum_gradient_minus_analytic": 3.6196666323984328e-12,
+            "step": 1e-05
+          }
+        ],
+        "energy_minus_stored": -3.469446951953614e-18,
+        "finite_difference_comparison_atol": 2e-10,
+        "independent_of_analytic_beta_formula": true,
+        "stored_remainder_log_derivative": -0.019660977502384578
+      },
+      "description": "R=2, a=1, N=q=1, AP 32",
+      "eta": 0.5,
+      "heat_a4_closed_cell": -3.104737121396059,
+      "inverse_2_and_half": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "length": 4.0,
+      "maximum_composition_residual": 0.0,
+      "maximum_inverse_residual": 0.0,
+      "name": "smooth_R2",
+      "points": 32,
+      "reference_mass_control": {
+        "A4_at_M_ref_one": -3.1047371213960595,
+        "A4_at_M_ref_two": -3.1047371213960595,
+        "C2_ratio": 1.0,
+        "M2R_ratio": 4.0,
+        "M4_ratio": 16.0,
+        "M4_scales_as_M_ref_to_the_fourth": true,
+        "M_ref_is_not_the_determinant_normalization": true,
+        "M_ref_one_basis_energies": [
+          91.00914788896189,
+          -112.41109935804343,
+          62.09474242792118,
+          287.11420459010395,
+          0.0,
+          -4.185442197610358e-15
+        ],
+        "M_ref_two_basis_energies": [
+          1456.1463662233903,
+          -449.6443974321737,
+          62.09474242792118,
+          287.11420459010395,
+          0.0,
+          -4.185442197610358e-15
+        ],
+        "dE_sub_dlnM_at_M_ref_one": -0.01966097750238458,
+        "dE_sub_dlnM_at_M_ref_two": -0.01966097750238458,
+        "log_flow_independent_of_M_ref": true
+      },
+      "scale_scans": [
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.00021947028991463403,
+            -0.0,
+            0.00013412073272560968,
+            -0.00014631352660975599
+          ],
+          "determinant_energy_change": 0.01362795112283166,
+          "energy_residual": 1.2732870313669764e-15,
+          "finite_energy_increment": -0.013627951122830387,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 6.245004513516506e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.245004513516506e-17,
+            "radial_scale": 4.089475069343762e-17,
+            "sphere_radius": 4.174178364069192e-17
+          },
+          "scale_ratio": 0.5,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.01362795112283166,
+          "unmatched_maximum_metric_gradient": 0.005945578786924588,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.005945578771821586,
+            "radial_scale": 0.00033095520890508157,
+            "sphere_radius": 0.005945578786924588
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.00021947028991463403,
+            -0.0,
+            0.00013412073272560968,
+            -0.00014631352660975599
+          ],
+          "determinant_energy_change": 0.01362795112283166,
+          "energy_residual": 1.2732870313669764e-15,
+          "finite_energy_increment": -0.013627951122830387,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 6.245004513516506e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.245004513516506e-17,
+            "radial_scale": 4.089475069343762e-17,
+            "sphere_radius": 4.174178364069192e-17
+          },
+          "scale_ratio": 0.5,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.01362795112283166,
+          "unmatched_maximum_metric_gradient": 0.005945578786924588,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.005945578771821586,
+            "radial_scale": 0.00033095520890508157,
+            "sphere_radius": 0.005945578786924588
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.00021947028991463403,
+            0.0,
+            -0.00013412073272560968,
+            0.00014631352660975599
+          ],
+          "determinant_energy_change": -0.013627951122829884,
+          "energy_residual": 5.030698080332741e-16,
+          "finite_energy_increment": 0.013627951122830387,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 4.85722573273506e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 4.85722573273506e-17,
+            "radial_scale": 2.3310346708438345e-17,
+            "sphere_radius": 2.4069288229178198e-17
+          },
+          "scale_ratio": 2.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.013627951122829884,
+          "unmatched_maximum_metric_gradient": 0.0059455787869245325,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.005945578771821586,
+            "radial_scale": 0.0003309552089050538,
+            "sphere_radius": 0.0059455787869245325
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.00021947028991463403,
+            0.0,
+            -0.00013412073272560968,
+            0.00014631352660975599
+          ],
+          "determinant_energy_change": -0.013627951122829884,
+          "energy_residual": 5.030698080332741e-16,
+          "finite_energy_increment": 0.013627951122830387,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 4.85722573273506e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 4.85722573273506e-17,
+            "radial_scale": 2.3310346708438345e-17,
+            "sphere_radius": 2.4069288229178198e-17
+          },
+          "scale_ratio": 2.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.013627951122829884,
+          "unmatched_maximum_metric_gradient": 0.0059455787869245325,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.005945578771821586,
+            "radial_scale": 0.0003309552089050538,
+            "sphere_radius": 0.0059455787869245325
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0003166286988823056,
+            0.0,
+            -0.00019349531598363118,
+            0.00021108579925487037
+          ],
+          "determinant_energy_change": -0.019660977502384824,
+          "energy_residual": -2.42861286636753e-16,
+          "finite_energy_increment": 0.01966097750238458,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 6.223320470066795e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.223320470066795e-17,
+            "radial_scale": 4.376111018694617e-17,
+            "sphere_radius": 4.0657581468206416e-17
+          },
+          "scale_ratio": 2.718281828459045,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.019660977502384824,
+          "unmatched_maximum_metric_gradient": 0.00857765703111063,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.008577657009321699,
+            "radial_scale": 0.0004774674386436861,
+            "sphere_radius": 0.00857765703111063
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0003166286988823056,
+            0.0,
+            -0.00019349531598363118,
+            0.00021108579925487037
+          ],
+          "determinant_energy_change": -0.019660977502384824,
+          "energy_residual": -2.42861286636753e-16,
+          "finite_energy_increment": 0.01966097750238458,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 6.223320470066795e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.223320470066795e-17,
+            "radial_scale": 4.376111018694617e-17,
+            "sphere_radius": 4.0657581468206416e-17
+          },
+          "scale_ratio": 2.718281828459045,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.019660977502384824,
+          "unmatched_maximum_metric_gradient": 0.00857765703111063,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.008577657009321699,
+            "radial_scale": 0.0004774674386436861,
+            "sphere_radius": 0.00857765703111063
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0007290645220604975,
+            0.0,
+            -0.0004455394301480817,
+            0.0004860430147069982
+          ],
+          "determinant_energy_change": -0.04527107371068162,
+          "energy_residual": 4.3021142204224816e-16,
+          "finite_energy_increment": 0.04527107371068205,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 5.767955557622884e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 5.767955557622884e-17,
+            "radial_scale": 4.412702842016003e-17,
+            "sphere_radius": 4.85722573273506e-17
+          },
+          "scale_ratio": 10.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.04527107371068162,
+          "unmatched_maximum_metric_gradient": 0.019750785212650945,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.019750785162480022,
+            "radial_scale": 0.001099409406611046,
+            "sphere_radius": 0.019750785212650945
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0007290645220604975,
+            0.0,
+            -0.0004455394301480817,
+            0.0004860430147069982
+          ],
+          "determinant_energy_change": -0.04527107371068162,
+          "energy_residual": 4.3021142204224816e-16,
+          "finite_energy_increment": 0.04527107371068205,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 5.767955557622884e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 5.767955557622884e-17,
+            "radial_scale": 4.412702842016003e-17,
+            "sphere_radius": 4.85722573273506e-17
+          },
+          "scale_ratio": 10.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.04527107371068162,
+          "unmatched_maximum_metric_gradient": 0.019750785212650945,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.019750785162480022,
+            "radial_scale": 0.001099409406611046,
+            "sphere_radius": 0.019750785212650945
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.0003624543343281858,
+            -0.0,
+            0.00022149987097833573,
+            -0.00024163622288545715
+          ],
+          "determinant_energy_change": 0.02250650853199332,
+          "energy_residual": 9.8879238130678e-16,
+          "finite_energy_increment": -0.02250650853199233,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 6.266688556966216e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.266688556966216e-17,
+            "radial_scale": 3.952594545067467e-17,
+            "sphere_radius": 4.4885969940899884e-17
+          },
+          "scale_ratio": 0.3183098861837907,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.02250650853199332,
+          "unmatched_maximum_metric_gradient": 0.009819100354078625,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.009819100329136132,
+            "radial_scale": 0.0005465712465354267,
+            "sphere_radius": 0.009819100354078625
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.0003624543343281858,
+            -0.0,
+            0.00022149987097833573,
+            -0.00024163622288545715
+          ],
+          "determinant_energy_change": 0.02250650853199332,
+          "energy_residual": 9.8879238130678e-16,
+          "finite_energy_increment": -0.02250650853199233,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 6.266688556966216e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.266688556966216e-17,
+            "radial_scale": 3.952594545067467e-17,
+            "sphere_radius": 4.4885969940899884e-17
+          },
+          "scale_ratio": 0.3183098861837907,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.02250650853199332,
+          "unmatched_maximum_metric_gradient": 0.009819100354078625,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.009819100329136132,
+            "radial_scale": 0.0005465712465354267,
+            "sphere_radius": 0.009819100354078625
+          }
+        }
+      ],
+      "stored_remainder_log_derivative": -0.019660977502384578
+    },
+    {
+      "A4": -4.100301143858642,
+      "A4_minus_closed_cell_heat": 0.0,
+      "composition_2_3_versus_6": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dE_sub_dlnM": -0.02596546032411182,
+      "derivative_controls": {
+        "analytic_A4": -4.100301143858642,
+        "analytic_energy": -0.02596546032411182,
+        "centered_differences": [
+          {
+            "energy_minus_analytic": 3.8500452825829257e-14,
+            "maximum_gradient_minus_analytic": 4.299685607556114e-14,
+            "step": 0.001
+          },
+          {
+            "energy_minus_analytic": 3.8500452825829257e-14,
+            "maximum_gradient_minus_analytic": 3.418463428994656e-13,
+            "step": 0.0001
+          },
+          {
+            "energy_minus_analytic": 5.3329209104280295e-11,
+            "maximum_gradient_minus_analytic": 3.675603224562174e-12,
+            "step": 1e-05
+          }
+        ],
+        "energy_minus_stored": 3.469446951953614e-18,
+        "finite_difference_comparison_atol": 2e-10,
+        "independent_of_analytic_beta_formula": true,
+        "stored_remainder_log_derivative": -0.025965460324111823
+      },
+      "description": "R=2, a=1, N=exp(0.08 cos theta+0.03 sin 2theta), q=exp(0.06 sin theta-0.02 cos 2theta), AP 32",
+      "eta": 0.5,
+      "heat_a4_closed_cell": -4.100301143858642,
+      "inverse_2_and_half": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "length": 4.0,
+      "maximum_composition_residual": 0.0,
+      "maximum_inverse_residual": 0.0,
+      "name": "nonconstant",
+      "points": 32,
+      "reference_mass_control": {
+        "A4_at_M_ref_one": -4.100301143858642,
+        "A4_at_M_ref_two": -4.100301143858642,
+        "C2_ratio": 1.0,
+        "M2R_ratio": 4.0,
+        "M4_ratio": 16.0,
+        "M4_scales_as_M_ref_to_the_fourth": true,
+        "M_ref_is_not_the_determinant_normalization": true,
+        "M_ref_one_basis_energies": [
+          89.634739365329,
+          -104.92126537660317,
+          82.00602287717284,
+          249.19599656031517,
+          -4.185442197610358e-15,
+          1.1161179193627622e-14
+        ],
+        "M_ref_two_basis_energies": [
+          1434.155829845264,
+          -419.6850615064127,
+          82.00602287717284,
+          249.19599656031517,
+          -4.185442197610358e-15,
+          1.1161179193627622e-14
+        ],
+        "dE_sub_dlnM_at_M_ref_one": -0.02596546032411182,
+        "dE_sub_dlnM_at_M_ref_two": -0.02596546032411182,
+        "log_flow_independent_of_M_ref": true
+      },
+      "scale_scans": [
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.00021947028991463403,
+            -0.0,
+            0.00013412073272560968,
+            -0.00014631352660975599
+          ],
+          "determinant_energy_change": 0.017997885615598008,
+          "energy_residual": -1.2247147740396258e-15,
+          "finite_energy_increment": -0.017997885615599233,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 7.546047120499111e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 7.546047120499111e-17,
+            "radial_scale": 7.280417588240162e-17,
+            "sphere_radius": 7.26415455565288e-17
+          },
+          "scale_ratio": 0.5,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.017997885615598008,
+          "unmatched_maximum_metric_gradient": 0.008167396471167765,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.007856923279438988,
+            "radial_scale": 0.0010532252135985742,
+            "sphere_radius": 0.008167396471167765
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.00021947028991463403,
+            -0.0,
+            0.00013412073272560968,
+            -0.00014631352660975599
+          ],
+          "determinant_energy_change": 0.017997885615598008,
+          "energy_residual": -1.2247147740396258e-15,
+          "finite_energy_increment": -0.017997885615599233,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 7.546047120499111e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 7.546047120499111e-17,
+            "radial_scale": 7.280417588240162e-17,
+            "sphere_radius": 7.26415455565288e-17
+          },
+          "scale_ratio": 0.5,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.017997885615598008,
+          "unmatched_maximum_metric_gradient": 0.008167396471167765,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.007856923279438988,
+            "radial_scale": 0.0010532252135985742,
+            "sphere_radius": 0.008167396471167765
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.00021947028991463403,
+            0.0,
+            -0.00013412073272560968,
+            0.00014631352660975599
+          ],
+          "determinant_energy_change": -0.017997885615599785,
+          "energy_residual": -5.516420653606247e-16,
+          "finite_energy_increment": 0.017997885615599233,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 5.377642775528102e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 4.5102810375396984e-17,
+            "radial_scale": 3.865180744910823e-17,
+            "sphere_radius": 5.377642775528102e-17
+          },
+          "scale_ratio": 2.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.017997885615599785,
+          "unmatched_maximum_metric_gradient": 0.00816739647116782,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.007856923279439015,
+            "radial_scale": 0.0010532252135985187,
+            "sphere_radius": 0.00816739647116782
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.00021947028991463403,
+            0.0,
+            -0.00013412073272560968,
+            0.00014631352660975599
+          ],
+          "determinant_energy_change": -0.017997885615599785,
+          "energy_residual": -5.516420653606247e-16,
+          "finite_energy_increment": 0.017997885615599233,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 5.377642775528102e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 4.5102810375396984e-17,
+            "radial_scale": 3.865180744910823e-17,
+            "sphere_radius": 5.377642775528102e-17
+          },
+          "scale_ratio": 2.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.017997885615599785,
+          "unmatched_maximum_metric_gradient": 0.00816739647116782,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.007856923279439015,
+            "radial_scale": 0.0010532252135985187,
+            "sphere_radius": 0.00816739647116782
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0003166286988823056,
+            0.0,
+            -0.00019349531598363118,
+            0.00021108579925487037
+          ],
+          "determinant_energy_change": -0.0259654603241124,
+          "energy_residual": -5.724587470723463e-16,
+          "finite_energy_increment": 0.025965460324111827,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 8.630249292984615e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 8.630249292984615e-17,
+            "radial_scale": 5.605325231750058e-17,
+            "sphere_radius": 6.852157730108388e-17
+          },
+          "scale_ratio": 2.718281828459045,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.0259654603241124,
+          "unmatched_maximum_metric_gradient": 0.011783062385927856,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.011335144251891693,
+            "radial_scale": 0.0015194827925977816,
+            "sphere_radius": 0.011783062385927856
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0003166286988823056,
+            0.0,
+            -0.00019349531598363118,
+            0.00021108579925487037
+          ],
+          "determinant_energy_change": -0.0259654603241124,
+          "energy_residual": -5.724587470723463e-16,
+          "finite_energy_increment": 0.025965460324111827,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 8.630249292984615e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 8.630249292984615e-17,
+            "radial_scale": 5.605325231750058e-17,
+            "sphere_radius": 6.852157730108388e-17
+          },
+          "scale_ratio": 2.718281828459045,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.0259654603241124,
+          "unmatched_maximum_metric_gradient": 0.011783062385927856,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.011335144251891693,
+            "radial_scale": 0.0015194827925977816,
+            "sphere_radius": 0.011783062385927856
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0007290645220604975,
+            0.0,
+            -0.0004455394301480817,
+            0.0004860430147069982
+          ],
+          "determinant_energy_change": -0.059787681875029364,
+          "energy_residual": -1.124100812432971e-15,
+          "finite_energy_increment": 0.05978768187502824,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 8.738669510233166e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 5.735429492448318e-17,
+            "radial_scale": 8.738669510233166e-17,
+            "sphere_radius": 7.112366251504909e-17
+          },
+          "scale_ratio": 10.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.059787681875029364,
+          "unmatched_maximum_metric_gradient": 0.027131503799656287,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.026100134181342965,
+            "radial_scale": 0.0034987384272966993,
+            "sphere_radius": 0.027131503799656287
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            0.0,
+            0.0,
+            0.0007290645220604975,
+            0.0,
+            -0.0004455394301480817,
+            0.0004860430147069982
+          ],
+          "determinant_energy_change": -0.059787681875029364,
+          "energy_residual": -1.124100812432971e-15,
+          "finite_energy_increment": 0.05978768187502824,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 8.738669510233166e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 5.735429492448318e-17,
+            "radial_scale": 8.738669510233166e-17,
+            "sphere_radius": 7.112366251504909e-17
+          },
+          "scale_ratio": 10.0,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": -0.059787681875029364,
+          "unmatched_maximum_metric_gradient": 0.027131503799656287,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.026100134181342965,
+            "radial_scale": 0.0034987384272966993,
+            "sphere_radius": 0.027131503799656287
+          }
+        },
+        {
+          "coefficients_unspecified": true,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.0003624543343281858,
+            -0.0,
+            0.00022149987097833573,
+            -0.00024163622288545715
+          ],
+          "determinant_energy_change": 0.02972343843284797,
+          "energy_residual": 3.0878077872387166e-16,
+          "finite_energy_increment": -0.029723438432847662,
+          "initial_coefficients": null,
+          "initial_coefficients_role": "unspecified",
+          "maximum_metric_gradient_residual": 7.28583859910259e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.245004513516506e-17,
+            "radial_scale": 7.139471305817047e-17,
+            "sphere_radius": 7.28583859910259e-17
+          },
+          "scale_ratio": 0.3183098861837907,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.02972343843284797,
+          "unmatched_maximum_metric_gradient": 0.013488423659999527,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.01297567838555444,
+            "radial_scale": 0.0017393973637206406,
+            "sphere_radius": 0.013488423659999527
+          }
+        },
+        {
+          "coefficients_unspecified": false,
+          "delta_coefficients": [
+            -0.0,
+            -0.0,
+            -0.0003624543343281858,
+            -0.0,
+            0.00022149987097833573,
+            -0.00024163622288545715
+          ],
+          "determinant_energy_change": 0.02972343843284797,
+          "energy_residual": 3.0878077872387166e-16,
+          "finite_energy_increment": -0.029723438432847662,
+          "initial_coefficients": [
+            0.4,
+            -1.1,
+            0.25,
+            3.2,
+            -0.7,
+            0.15
+          ],
+          "initial_coefficients_role": "explicit_arbitrary_control",
+          "maximum_metric_gradient_residual": 7.28583859910259e-17,
+          "maximum_metric_gradient_residual_by_field": {
+            "lapse": 6.245004513516506e-17,
+            "radial_scale": 7.139471305817047e-17,
+            "sphere_radius": 7.28583859910259e-17
+          },
+          "scale_ratio": 0.3183098861837907,
+          "symbolic_coefficients": [
+            "c_M4",
+            "c_M2R",
+            "c_C2",
+            "c_R2",
+            "c_E4",
+            "c_boxR"
+          ],
+          "unmatched_energy": 0.02972343843284797,
+          "unmatched_maximum_metric_gradient": 0.013488423659999527,
+          "unmatched_maximum_metric_gradient_by_field": {
+            "lapse": 0.01297567838555444,
+            "radial_scale": 0.0017393973637206406,
+            "sphere_radius": 0.013488423659999527
+          }
+        }
+      ],
+      "stored_remainder_log_derivative": -0.025965460324111823
+    }
+  ],
+  "gate": {
+    "M_ratio_is_not_Omega": true,
+    "R2_beta_vanishes": true,
+    "centered_derivative_independent_of_beta": true,
+    "coefficients_not_fitted": true,
+    "composition_and_inverse": true,
+    "continuum_bulk_running_is_C2": true,
+    "cylinder_analytic_dE_sub_dlnM": true,
+    "dirac_remainder_uses_existing_owner": true,
+    "discrete_euler_residual_vanishes_under_refinement": true,
+    "energy_and_all_metric_gradients_cancel": true,
+    "exact_identities": true,
+    "no_physical_Newton_or_cosmological_running_inferred": true,
+    "no_recursive_fixed_point_inferred": true,
+    "unmatched_M_changes_the_source": true,
+    "unspecified_initial_coefficients_not_zeroed": true
+  },
+  "headline_residuals": {
+    "coarse_c2_only_gradient_residual": 1.5935424767937745e-10,
+    "maximum_matched_energy_residual": 1.2732870313669764e-15,
+    "maximum_matched_metric_gradient_residual": 8.738669510233166e-17,
+    "maximum_unmatched_energy": 0.059787681875029364,
+    "minimum_unmatched_energy": 0.013627951122829884,
+    "refined_c2_only_gradient_residual_128": 1.4849232954361469e-15,
+    "refined_c2_only_gradient_residual_64": 1.5269903397285844e-15
+  },
+  "input_hashes": {
+    "docs/nsc-covariant-source.md": "c37fe54eaac01c7cb15544634a31885b87c88d009da0f881e36e6b5839406ab6",
+    "docs/nsc-finite-terms.md": "3783e7a8a857a3a8ea02bef7ec913a9e1376000797512dc8da1189ebe9943135",
+    "results/nsc-8-finite-terms.json": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c",
+    "results/nsc-9-covariant-source.json": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
+  },
+  "nonclaims": {
+    "M_ratio_identified_with_Omega": false,
+    "Weyl_compensator_derived": false,
+    "complete_ultraviolet_functional_fixed": false,
+    "continuum_Euler_bulk_stress_from_this_logarithm": false,
+    "finite_coefficients_selected": false,
+    "in_in_measure_constructed": false,
+    "independent_gravity_or_scalar_added": false,
+    "new_to_world_Seeley_coefficient": false,
+    "physical_Newton_running_inferred": false,
+    "physical_cosmological_running_inferred": false,
+    "physical_mass_or_inheritance_scale_selected": false,
+    "recursive_fixed_point_inferred": false,
+    "self_sourcing_fixed": false,
+    "throat_fitted": false,
+    "zero_action_selected_as_baseline": false
+  },
+  "published": "v0.3.0",
+  "reproduction_tolerance": {
+    "dirac_bind_atol": 1e-12,
+    "finite_difference_fields": [
+      "energy_minus_analytic",
+      "maximum_gradient_minus_analytic"
+    ],
+    "finite_difference_float_atol": 2e-10,
+    "float_atol": 2e-12,
+    "float_rtol": 2e-12,
+    "integers_booleans_strings_keys": "exact",
+    "reason": "Matched cancellations and identities are closed-cell algebra at 2e-12. Centered finite-difference residuals of the local subtraction are cancellation-sensitive and compared at 2e-10.",
+    "unmatched_energy_floor": 1e-06
+  },
+  "schema": "nsc-normalization-flow-v1",
+  "source_hashes": {
+    "docs/nsc-normalization-flow.md": "eb3161e6ef39df27d9f56b9eb7faa87cb129dde2dd12c06d15fc10a9f4115959",
+    "scripts/check_nsc_normalization_flow.py": "f360127fed201ccb65976ad0d2a38aee407ec37f132d79e41073ee704a1abf20",
+    "src/recursive_horizons/nsc_covariant_identities.py": "4583df4c45ff35253b4bc490dc43ad87ce5d53ff6967417d67b85e99e0ac0ed1",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_normalization_flow.py": "c866f133a804ff7f5d4c6c6f276f111329b4f1c6a6cfd5a34ad37c457df7147c",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "tests/test_nsc_normalization_flow.py": "bfd3ffdd4ebe8a3140a9ee0230e9de1d242b9ddf6af483c49f8b2a5879815861"
+  },
+  "terminal": true
+}

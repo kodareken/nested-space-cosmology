@@ -1,0 +1,20 @@
+{
+ "charged_mass_inner": 1.0400430378617,
+ "clock_t_over_rm": 5.0,
+ "closure_residual": 9.151568391985165e-13,
+ "creation_only": true,
+ "energy_fraction": 0.001,
+ "fixed_control": "initial_sourced_metric_frozen",
+ "inner_edge": 0.7903225806451606,
+ "inner_edge_gap": 0.03597971778687481,
+ "mass_over_rm": 1.04,
+ "payload_bytes": 127608,
+ "payload_sha256": "d29ccaa2a8f48f91b2d35557363ee501752f5059c3f84a4ea261993862fe8966",
+ "points": 876,
+ "producing_commit": "d273ce6c86cacdf35d57c97292b270fac5fa6713",
+ "r_minus": 0.7543428628582858,
+ "runner_sha256": "7e9473b50ae1e8c0ea1bc0e8263f9be590a47ccdbbdc516e69bc394d3280149e",
+ "schema": "NSC-RN-INWARD-MARCH-v1",
+ "station_over_rm": 5.0,
+ "trapping_horizon": 1.3259540521885302
+}

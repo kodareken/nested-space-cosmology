@@ -1,0 +1,117 @@
+{
+  "api_version": "nsc-rn-charged-lll-v1",
+  "creation_only": true,
+  "evolved": false,
+  "notes": [
+    "the reflection ratio is the outgoing/ingoing characteristic flux ratio at the outermost node; sub-unity means absorption into the hole, above unity would be a radiative window",
+    "the horizon pivot ratio |chi_+/chi_-| at r_+ is the regular-root coupling alpha / |i E_eff - a_+'/2|"
+  ],
+  "production_trajectory": false,
+  "scan": [
+    {
+      "horizon_plus_over_minus": {
+        "imag": 1.4862515245921322,
+        "real": -0.09653808097360003
+      },
+      "horizon_plus_over_minus_modulus": 1.489383495084628,
+      "ingoing_flux": 4.876266508303861,
+      "ode_evaluations": 6763,
+      "omega": 1.5,
+      "omega_over_Phi_H": 0.865988075373544,
+      "outgoing_flux": 2.876263570279987,
+      "reflection_ratio": 0.5898495427561143,
+      "weighted_norm": 32.22748342677668
+    },
+    {
+      "horizon_plus_over_minus": {
+        "imag": 0.6505504434470414,
+        "real": -0.018433002092290617
+      },
+      "horizon_plus_over_minus_modulus": 0.6508115357269542,
+      "ingoing_flux": 4.866388713121371,
+      "ode_evaluations": 6721,
+      "omega": 1.2,
+      "omega_over_Phi_H": 0.6927904602988353,
+      "outgoing_flux": 2.8663861908748,
+      "reflection_ratio": 0.5890171048494519,
+      "weighted_norm": 30.952733395644948
+    },
+    {
+      "horizon_plus_over_minus": {
+        "imag": 0.4085343065947403,
+        "real": -0.007265742446215691
+      },
+      "horizon_plus_over_minus_modulus": 0.40859891174370505,
+      "ingoing_flux": 4.78583919562362,
+      "ode_evaluations": 6592,
+      "omega": 0.8843561919019439,
+      "omega_over_Phi_H": 0.5105612777132273,
+      "outgoing_flux": 2.785837202876992,
+      "reflection_ratio": 0.5821000432744341,
+      "weighted_norm": 30.052366627783197
+    },
+    {
+      "horizon_plus_over_minus": {
+        "imag": 0.28114061450334465,
+        "real": -0.0034403117231885344
+      },
+      "horizon_plus_over_minus_modulus": 0.28116166322610725,
+      "ingoing_flux": 4.873113098016124,
+      "ode_evaluations": 6097,
+      "omega": 0.5,
+      "omega_over_Phi_H": 0.28866269179118137,
+      "outgoing_flux": 2.873111899202119,
+      "reflection_ratio": 0.5895844897118808,
+      "weighted_norm": 28.756565284080505
+    },
+    {
+      "horizon_plus_over_minus": {
+        "imag": 0.23372955943230403,
+        "real": -0.002377704121131767
+      },
+      "horizon_plus_over_minus_modulus": 0.23374165317569437,
+      "ingoing_flux": 4.693013433153716,
+      "ode_evaluations": 5572,
+      "omega": 0.25,
+      "omega_over_Phi_H": 0.14433134589559068,
+      "outgoing_flux": 2.6930126871407403,
+      "reflection_ratio": 0.5738344297325033,
+      "weighted_norm": 26.62694988753696
+    },
+    {
+      "horizon_plus_over_minus": {
+        "imag": 0.21225256613851895,
+        "real": -0.001960778553188071
+      },
+      "horizon_plus_over_minus_modulus": 0.21226162273223345,
+      "ingoing_flux": 5.884692956898644,
+      "ode_evaluations": 5599,
+      "omega": 0.1,
+      "omega_over_Phi_H": 0.057732538358236274,
+      "outgoing_flux": 3.8846924170316255,
+      "reflection_ratio": 0.6601351073852695,
+      "weighted_norm": 19.56231163130955
+    }
+  ],
+  "schema": "NSC-RN-CHARGED-TWIST-v1",
+  "slice": {
+    "A": 0.04501936182826115,
+    "C_F": 0.01125484045706527,
+    "Phi_H": 1.7321254676087483,
+    "Q_E": 4.0,
+    "fermion_sign": 1,
+    "grid_outer": 113.41068580780694,
+    "grid_points": 876,
+    "kappa": 1.4142135623730951,
+    "kappa_note": "first nonzero-angular charged multiplet, n=1",
+    "mass_over_total_radius": 1.01,
+    "q_mag": 1.0,
+    "r_m_tot": 3.544083931493967,
+    "r_minus": 3.0770641540827577,
+    "r_plus": 4.081985387535055
+  },
+  "source_sha256": {
+    "lab/scripts/derive_nsc_rn_charged_twist.py": "5b934ce0947aaca498dbeebbae74f4a5552b492eaa341f9a0ff0b342f80ae79c",
+    "lab/src/recursive_horizons/nsc_rn_charged_lll.py": "05abe32e85e01de3d4586c99d5262244a41714bc52ba4d3d45ee57345c0695a1"
+  }
+}

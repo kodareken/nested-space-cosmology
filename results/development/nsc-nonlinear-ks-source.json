@@ -1,0 +1,3173 @@
+{
+  "accountable_author": "Douglas Ek",
+  "comparison": {
+    "exact": "hashes, structure, scope",
+    "fields": "all",
+    "float_atol": 3e-12,
+    "float_rtol": 3e-10
+  },
+  "domain": {
+    "amplitudes": [
+      0.002,
+      0.001,
+      0.003,
+      0.001
+    ],
+    "angular_copy_sum": false,
+    "derivative": "d_z Psi=d_tau(frame)*chi+frame*d_tau(chi), actual PG equation and inflow",
+    "field_recording": "rho0 slice samples after full spatial evolution; not a closed few-mode bulk",
+    "frame": "Psi_KS=diag(sqrt(-v_plus),sqrt(-v_minus))*chi_PG, actual metric",
+    "full_spectral_integral": false,
+    "history": "same nonzero supplied raw-KS amplitudes and PG pulse as the locked nonlinear jets",
+    "initial_frequency_is_local_momentum": false,
+    "old_generators_rerun": false,
+    "omega": 0.4,
+    "phases_multiplied_twice": false,
+    "propagated_primary_families": 33,
+    "signed_families": 63,
+    "source_sign": "delta Gamma_G=-Tr(C_source*integrated weak H vertex); same dE/(2*pi) sample",
+    "time_coordinates": [
+      0.0,
+      0.05
+    ],
+    "trace_measure": "dT dz=d tau d rho/a0 of the fixed chart"
+  },
+  "failures": {},
+  "gate": {
+    "B2": "OPEN",
+    "Gamma_rest_extra_independent_term": "none introduced",
+    "V_c": null,
+    "Z3": "OUT OF SCOPE",
+    "absolute_stress": null,
+    "common_regulated_reference_trace": "OPEN: same kernel regulator, boundary terms and spectral completion required",
+    "complete_source": "OPEN",
+    "extended_stationarity": "OPEN",
+    "full_raw_heat_equivalence": "not an execution prerequisite of the selected canonical realization",
+    "homogeneous_nonexistence": "preserved, not rerun",
+    "metric_timestep": false,
+    "nonlinear_common_Gaussian_trace": "PASS",
+    "nulls": null,
+    "physical_EndpointBranchJets": "OPEN",
+    "physical_history_selected": false,
+    "updated_constraints": null
+  },
+  "input_hashes": {
+    "docs/nsc-common-ks-trace.md": "367b3a918e4ce099cbf079ff2a1a0588dcf5c36c2b0c29641f19bf3e35517733",
+    "results/development/nsc-common-ks-trace.json": "53f78b11557c7cc3c3e8a1110758014d86508818062920e995e9642c15237750",
+    "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+    "results/development/nsc-transmitting-history-jets.json": "8368c9cf87f984389d8e16417f0841fcdcd4ef98dbca97bd24fe37c86138774e",
+    "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f"
+  },
+  "locked_inputs": {
+    "A": 0.04501936182826115,
+    "C_Euler": 0.0005158468542821582,
+    "C_Weyl": -0.0008441130342798952,
+    "C_boxR": -0.0005627420228532635,
+    "C_gauge": 0.01125484045706527,
+    "Omega": 3.973074368754331,
+    "V_full": 0.0,
+    "magnetic_flux": 4,
+    "zeta": 15.785319939652627
+  },
+  "maxima": {
+    "Gaussian_source_endpoint": 2.9263126915136245e-11,
+    "KS_PG_matrix": 9.184938330741854e-10,
+    "KS_endpoint_matrix": 1.946129254631367e-09,
+    "flux": 2.6645352591003757e-15,
+    "old_endpoint_field": 1.1678469717464123e-14,
+    "phase": 2.3314786774249395e-15,
+    "signed_input_identity": 0.0,
+    "spatial_source_refinement": 8.036461944998857e-09,
+    "time_source_refinement": 3.718809930136624e-10
+  },
+  "payload": {
+    "bytes": 10840935,
+    "path": "results/development/artifacts/nsc-nonlinear-ks-source.005d8814854222396e9b4c6492fa0abdad630ae119f718cbb14c835b32b27bf0.npz",
+    "sha256": "005d8814854222396e9b4c6492fa0abdad630ae119f718cbb14c835b32b27bf0"
+  },
+  "per_family": {
+    "0_1": {
+      "Gaussian_source_endpoint": 5.920971551324605e-14,
+      "KS_PG_matrix": 1.4309807377566615e-12,
+      "KS_endpoint_matrix": 1.5187756582013186e-11,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.08884628701642158,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.289709469886712e-11,
+          "KS_endpoint": 1.8203039180153535e-09,
+          "source_endpoint": 3.425106514598833e-11
+        },
+        "801_128": {
+          "KS_PG": 1.4309807377566615e-12,
+          "KS_endpoint": 1.5187756582013186e-11,
+          "source_endpoint": 5.920971551324605e-14
+        },
+        "801_64": {
+          "KS_PG": 1.4309774365393038e-12,
+          "KS_endpoint": 1.8310392230214134e-09,
+          "source_endpoint": 3.4382751745547224e-11
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.00021558499544423933,
+          -1.3463983154768034e-05,
+          -0.0001414188665416614,
+          0.0
+        ],
+        "801_128": [
+          0.0002155850020846141,
+          -1.3463983265312478e-05,
+          -0.000141418870832124,
+          0.0
+        ],
+        "801_64": [
+          0.0002155849953299755,
+          -1.3463983049315615e-05,
+          -0.00014141886643467204,
+          0.0
+        ]
+      },
+      "spatial_source_refinement": 1.142638230127585e-13,
+      "time_source_refinement": 6.754638596498039e-12
+    },
+    "10_-1": {
+      "Gaussian_source_endpoint": 1.8250580029448987e-11,
+      "KS_PG_matrix": 5.915739859779778e-10,
+      "KS_endpoint_matrix": 1.6854805034063922e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06716634607372403,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 9.454798348754179e-09,
+          "KS_endpoint": 3.686658717194646e-08,
+          "source_endpoint": 1.3728507219923358e-09
+        },
+        "801_128": {
+          "KS_PG": 5.915739859779778e-10,
+          "KS_endpoint": 1.6854805034063922e-09,
+          "source_endpoint": 1.8250580029448987e-11
+        },
+        "801_64": {
+          "KS_PG": 5.915739686307431e-10,
+          "KS_endpoint": 3.497313466604979e-08,
+          "source_endpoint": 1.321626157471667e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.008272263492475966,
+          4.927678137806572e-06,
+          -5.4860373416635185e-06,
+          -0.007750089787363106
+        ],
+        "801_128": [
+          0.00827226288760559,
+          4.923923869070432e-06,
+          -5.4845811541021894e-06,
+          -0.0077500910268631495
+        ],
+        "801_64": [
+          0.008272262627265417,
+          4.923922835813293e-06,
+          -5.484576764601193e-06,
+          -0.007750090784247581
+        ]
+      },
+      "spatial_source_refinement": 3.755301993278509e-09,
+      "time_source_refinement": 2.603401730305599e-10
+    },
+    "10_1": {
+      "Gaussian_source_endpoint": 1.8250580408919748e-11,
+      "KS_PG_matrix": 5.915739859779778e-10,
+      "KS_endpoint_matrix": 1.6854805034063922e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06716634607372403,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 9.454798348754179e-09,
+          "KS_endpoint": 3.686658717194646e-08,
+          "source_endpoint": 1.3728507219923358e-09
+        },
+        "801_128": {
+          "KS_PG": 5.915739859779778e-10,
+          "KS_endpoint": 1.6854805034063922e-09,
+          "source_endpoint": 1.8250580408919748e-11
+        },
+        "801_64": {
+          "KS_PG": 5.915739686307431e-10,
+          "KS_endpoint": 3.497313466604979e-08,
+          "source_endpoint": 1.321626164410561e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.008272263492475961,
+          4.9276781378044035e-06,
+          -5.486037341662653e-06,
+          -0.0077500897873631035
+        ],
+        "801_128": [
+          0.008272262887605583,
+          4.923923869068345e-06,
+          -5.4845811541012e-06,
+          -0.007750091026863143
+        ],
+        "801_64": [
+          0.00827226262726541,
+          4.923922835811206e-06,
+          -5.4845767646004e-06,
+          -0.007750090784247575
+        ]
+      },
+      "spatial_source_refinement": 3.755301993197194e-09,
+      "time_source_refinement": 2.603401730305599e-10
+    },
+    "11_-1": {
+      "Gaussian_source_endpoint": 2.3330218372431474e-11,
+      "KS_PG_matrix": 7.432582119215603e-10,
+      "KS_endpoint_matrix": 1.8170908645604873e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06768854216128291,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.1876864764240325e-08,
+          "KS_endpoint": 4.032492445515956e-08,
+          "source_endpoint": 1.4998924064563157e-09
+        },
+        "801_128": {
+          "KS_PG": 7.432582119215603e-10,
+          "KS_endpoint": 1.8170908645604873e-09,
+          "source_endpoint": 2.3330218372431474e-11
+        },
+        "801_64": {
+          "KS_PG": 7.432582015132194e-10,
+          "KS_endpoint": 3.796955694301829e-08,
+          "source_endpoint": 1.4347942313419626e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.008979925576385314,
+          5.352432851675942e-06,
+          -5.0815704167231264e-06,
+          -0.00841419930798259
+        ],
+        "801_128": [
+          0.00897992460580025,
+          5.346846052209695e-06,
+          -5.079479303105147e-06,
+          -0.00841420099665837
+        ],
+        "801_64": [
+          0.008979924322795664,
+          5.346844614777111e-06,
+          -5.079473955097237e-06,
+          -0.008414200733239114
+        ]
+      },
+      "spatial_source_refinement": 5.588236898831228e-09,
+      "time_source_refinement": 2.830045867791009e-10
+    },
+    "11_1": {
+      "Gaussian_source_endpoint": 2.3330219402423538e-11,
+      "KS_PG_matrix": 7.432582119215603e-10,
+      "KS_endpoint_matrix": 1.8170908645604873e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06768854216128291,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.1876864764240325e-08,
+          "KS_endpoint": 4.032492445515956e-08,
+          "source_endpoint": 1.4998924081910392e-09
+        },
+        "801_128": {
+          "KS_PG": 7.432582119215603e-10,
+          "KS_endpoint": 1.8170908645604873e-09,
+          "source_endpoint": 2.3330219402423538e-11
+        },
+        "801_64": {
+          "KS_PG": 7.432582015132194e-10,
+          "KS_endpoint": 3.796955694301829e-08,
+          "source_endpoint": 1.4347942348114096e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.008979925576385316,
+          5.352432851677135e-06,
+          -5.081570416723681e-06,
+          -0.008414199307982591
+        ],
+        "801_128": [
+          0.008979924605800254,
+          5.3468460522109146e-06,
+          -5.079479303105638e-06,
+          -0.008414200996658374
+        ],
+        "801_64": [
+          0.008979924322795669,
+          5.346844614778276e-06,
+          -5.079473955097718e-06,
+          -0.008414200733239119
+        ]
+      },
+      "spatial_source_refinement": 5.588236898858333e-09,
+      "time_source_refinement": 2.830045850443774e-10
+    },
+    "12_-1": {
+      "Gaussian_source_endpoint": 2.9263126915136245e-11,
+      "KS_PG_matrix": 9.184938330741854e-10,
+      "KS_endpoint_matrix": 1.946129254631367e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.07069890583619091,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.4674094342415067e-08,
+          "KS_endpoint": 4.38475478148348e-08,
+          "source_endpoint": 1.6290762211434995e-09
+        },
+        "801_128": {
+          "KS_PG": 9.184938330741854e-10,
+          "KS_endpoint": 1.946129254631367e-09,
+          "source_endpoint": 2.9263126915136245e-11
+        },
+        "801_64": {
+          "KS_PG": 9.184938261352915e-10,
+          "KS_endpoint": 4.096246886131638e-08,
+          "source_endpoint": 1.547809236682185e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.009686302310793062,
+          5.777603127192363e-06,
+          -4.736686846225193e-06,
+          -0.009077025278472555
+        ],
+        "801_128": [
+          0.009686300862424746,
+          5.7695685817311004e-06,
+          -4.7337898405627525e-06,
+          -0.0090770275278763
+        ],
+        "801_64": [
+          0.009686300556720227,
+          5.769566665247554e-06,
+          -4.733783415040196e-06,
+          -0.009077027243703246
+        ]
+      },
+      "spatial_source_refinement": 8.036461944809122e-09,
+      "time_source_refinement": 3.057045189908125e-10
+    },
+    "12_1": {
+      "Gaussian_source_endpoint": 2.926312612908967e-11,
+      "KS_PG_matrix": 9.184938330741854e-10,
+      "KS_endpoint_matrix": 1.946129254631367e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.07069890583619091,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.4674094342415067e-08,
+          "KS_endpoint": 4.38475478148348e-08,
+          "source_endpoint": 1.629076222878223e-09
+        },
+        "801_128": {
+          "KS_PG": 9.184938330741854e-10,
+          "KS_endpoint": 1.946129254631367e-09,
+          "source_endpoint": 2.926312612908967e-11
+        },
+        "801_64": {
+          "KS_PG": 9.184938261352915e-10,
+          "KS_endpoint": 4.096246886131638e-08,
+          "source_endpoint": 1.547809236682185e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.009686302310793062,
+          5.777603127189192e-06,
+          -4.736686846224615e-06,
+          -0.00907702527847256
+        ],
+        "801_128": [
+          0.009686300862424748,
+          5.769568581727631e-06,
+          -4.733789840561885e-06,
+          -0.009077027527876303
+        ],
+        "801_64": [
+          0.00968630055672023,
+          5.769566665244193e-06,
+          -4.733783415039593e-06,
+          -0.00907702724370325
+        ]
+      },
+      "spatial_source_refinement": 8.036461944998857e-09,
+      "time_source_refinement": 3.0570451725608905e-10
+    },
+    "13_1": {
+      "Gaussian_source_endpoint": 3.303309232052798e-13,
+      "KS_PG_matrix": 5.159258437137442e-12,
+      "KS_endpoint_matrix": 2.3207807109495588e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06847046975755401,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 8.255889721864308e-11,
+          "KS_endpoint": 5.087836173200966e-09,
+          "source_endpoint": 2.8181825644825464e-10
+        },
+        "801_128": {
+          "KS_PG": 5.159258437137442e-12,
+          "KS_endpoint": 2.3207807109495588e-10,
+          "source_endpoint": 3.303309232052798e-13
+        },
+        "801_64": {
+          "KS_PG": 5.1592671107547915e-12,
+          "KS_endpoint": 5.069147171465893e-09,
+          "source_endpoint": 2.8142096639149905e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0017657074979849665,
+          2.2944649028885543e-06,
+          -4.788094172492304e-05,
+          0.0
+        ],
+        "801_128": [
+          0.0017657075552428502,
+          2.2944721660646445e-06,
+          -4.7880944971801407e-05,
+          0.0
+        ],
+        "801_64": [
+          0.0017657074999020109,
+          2.2944715696412348e-06,
+          -4.7880943095598085e-05,
+          0.0
+        ]
+      },
+      "spatial_source_refinement": 6.666752680505386e-12,
+      "time_source_refinement": 5.534083933299294e-11
+    },
+    "14_-1": {
+      "Gaussian_source_endpoint": 5.120253721881129e-13,
+      "KS_PG_matrix": 1.5534410563455846e-11,
+      "KS_endpoint_matrix": 3.846276812939129e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06722155292151828,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.485500832927201e-10,
+          "KS_endpoint": 8.386363950507736e-09,
+          "source_endpoint": 4.641388133205804e-10
+        },
+        "801_128": {
+          "KS_PG": 1.5534410563455846e-11,
+          "KS_endpoint": 3.846276812939129e-10,
+          "source_endpoint": 5.120253721881129e-13
+        },
+        "801_64": {
+          "KS_PG": 1.5534427910690754e-11,
+          "KS_endpoint": 8.31798033229525e-09,
+          "source_endpoint": 4.6311887918343286e-10
+        }
+      },
+      "old_endpoint_field": 1.1678469717464123e-14,
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.0029001435562256836,
+          2.382462889034305e-06,
+          -2.8191943600005713e-05,
+          -0.0017543814609775783
+        ],
+        "801_128": [
+          0.0029001436473926286,
+          2.3824689836472377e-06,
+          -2.8191943060377282e-05,
+          -0.0017543815174063514
+        ],
+        "801_64": [
+          0.0029001435569178157,
+          2.3824688285344444e-06,
+          -2.8191941909401768e-05,
+          -0.0017543814625594878
+        ]
+      },
+      "spatial_source_refinement": 5.9395001395477764e-12,
+      "time_source_refinement": 9.04748129713917e-11
+    },
+    "14_1": {
+      "Gaussian_source_endpoint": 6.42898440646883e-13,
+      "KS_PG_matrix": 1.5534410563455846e-11,
+      "KS_endpoint_matrix": 3.846276812939129e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06722155292151828,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.485500832927201e-10,
+          "KS_endpoint": 8.386363950507736e-09,
+          "source_endpoint": 4.646150634363133e-10
+        },
+        "801_128": {
+          "KS_PG": 1.5534410563455846e-11,
+          "KS_endpoint": 3.846276812939129e-10,
+          "source_endpoint": 6.42898440646883e-13
+        },
+        "801_64": {
+          "KS_PG": 1.5534427910690754e-11,
+          "KS_endpoint": 8.31798033229525e-09,
+          "source_endpoint": 4.626148088736348e-10
+        }
+      },
+      "old_endpoint_field": 1.1678469717464123e-14,
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0029001772795672525,
+          2.494607273411211e-06,
+          -2.8271854595073358e-05,
+          -0.0017543128938917669
+        ],
+        "801_128": [
+          0.0029001773719082194,
+          2.4946150767973763e-06,
+          -2.827185604699244e-05,
+          -0.0017543129502569548
+        ],
+        "801_64": [
+          0.002900177281007241,
+          2.494614574389799e-06,
+          -2.8271854415562824e-05,
+          -0.0017543128949358716
+        ]
+      },
+      "spatial_source_refinement": 7.300978587974558e-12,
+      "time_source_refinement": 9.09009785846071e-11
+    },
+    "15_-1": {
+      "Gaussian_source_endpoint": 1.045262400939384e-12,
+      "KS_PG_matrix": 3.2341091610321726e-11,
+      "KS_endpoint_matrix": 5.284473872047003e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06616276257749691,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.17409493722143e-10,
+          "KS_endpoint": 1.1547503772635359e-08,
+          "source_endpoint": 6.389682116747508e-10
+        },
+        "801_128": {
+          "KS_PG": 3.2341091610321726e-11,
+          "KS_endpoint": 5.284473872047003e-10,
+          "source_endpoint": 1.045262400939384e-12
+        },
+        "801_64": {
+          "KS_PG": 3.234108120198093e-11,
+          "KS_endpoint": 1.1424604123844162e-08,
+          "source_endpoint": 6.363622866503715e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.003983184238205359,
+          2.801937071225495e-06,
+          -2.1101084139165758e-05,
+          -0.003025517343211756
+        ],
+        "801_128": [
+          0.003983184357400958,
+          2.801929060831796e-06,
+          -2.110107294184477e-05,
+          -0.0030255174446963823
+        ],
+        "801_64": [
+          0.00398318423322018,
+          2.801929128074855e-06,
+          -2.1101071964795343e-05,
+          -0.003025517350039858
+        ]
+      },
+      "spatial_source_refinement": 1.2174370415458284e-11,
+      "time_source_refinement": 1.241807776400372e-10
+    },
+    "15_1": {
+      "Gaussian_source_endpoint": 1.2852071566270967e-12,
+      "KS_PG_matrix": 3.2341091610321726e-11,
+      "KS_endpoint_matrix": 5.284473872047003e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06616276257749691,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.17409493722143e-10,
+          "KS_endpoint": 1.1547503772635359e-08,
+          "source_endpoint": 6.396623187729378e-10
+        },
+        "801_128": {
+          "KS_PG": 3.2341091610321726e-11,
+          "KS_endpoint": 5.284473872047003e-10,
+          "source_endpoint": 1.2852071566270967e-12
+        },
+        "801_64": {
+          "KS_PG": 3.234108120198093e-11,
+          "KS_endpoint": 1.1424604123844162e-08,
+          "source_endpoint": 6.355379000844152e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.003983236295482924,
+          2.975071808393817e-06,
+          -2.1224451737713726e-05,
+          -0.0030254114993410342
+        ],
+        "801_128": [
+          0.003983236418368825,
+          2.975068515502765e-06,
+          -2.1224445536465735e-05,
+          -0.0030254116017630057
+        ],
+        "801_64": [
+          0.00398323629349529,
+          2.9750679331174963e-06,
+          -2.1224443737079584e-05,
+          -0.0030254115064485025
+        ]
+      },
+      "spatial_source_refinement": 8.000634141601187e-12,
+      "time_source_refinement": 1.2487353512335986e-10
+    },
+    "16_-1": {
+      "Gaussian_source_endpoint": 1.961600857875584e-12,
+      "KS_PG_matrix": 5.742723310775412e-11,
+      "KS_endpoint_matrix": 6.682026685760517e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.067173965667566,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 9.186687886103551e-10,
+          "KS_endpoint": 1.4669781916998303e-08,
+          "source_endpoint": 8.111266242005755e-10
+        },
+        "801_128": {
+          "KS_PG": 5.742723310775412e-11,
+          "KS_endpoint": 6.682026685760517e-10,
+          "source_endpoint": 1.961600857875584e-12
+        },
+        "801_64": {
+          "KS_PG": 5.7427224434136726e-11,
+          "KS_endpoint": 1.4464204015074422e-08,
+          "source_endpoint": 8.058821812997885e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.005043134352824757,
+          3.296490543852978e-06,
+          -1.6970150977298936e-05,
+          -0.004162690052178805
+        ],
+        "801_128": [
+          0.00504313449005496,
+          3.296436116370763e-06,
+          -1.6970113417314598e-05,
+          -0.004162690202978204
+        ],
+        "801_64": [
+          0.0050431343328242555,
+          3.2964363775909804e-06,
+          -1.6970112459225236e-05,
+          -0.004162690072658192
+        ]
+      },
+      "spatial_source_refinement": 5.416626199764192e-11,
+      "time_source_refinement": 1.5723070415085694e-10
+    },
+    "16_1": {
+      "Gaussian_source_endpoint": 2.341777460964853e-12,
+      "KS_PG_matrix": 5.742723310775412e-11,
+      "KS_endpoint_matrix": 6.682026685760517e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.067173965667566,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 9.186687886103551e-10,
+          "KS_endpoint": 1.4669781916998303e-08,
+          "source_endpoint": 8.119711413651087e-10
+        },
+        "801_128": {
+          "KS_PG": 5.742723310775412e-11,
+          "KS_endpoint": 6.682026685760517e-10,
+          "source_endpoint": 2.341777460964853e-12
+        },
+        "801_64": {
+          "KS_PG": 5.7427224434136726e-11,
+          "KS_endpoint": 1.4464204015074422e-08,
+          "source_endpoint": 8.04718274655114e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0050432029017153475,
+          3.5245116994817255e-06,
+          -1.7132622226970043e-05,
+          -0.00416255067589145
+        ],
+        "801_128": [
+          0.005043203046964434,
+          3.524466929088495e-06,
+          -1.7132594422211717e-05,
+          -0.004162550831311334
+        ],
+        "801_64": [
+          0.005043202888762406,
+          3.524466142635019e-06,
+          -1.713259224465492e-05,
+          -0.004162550700250267
+        ]
+      },
+      "spatial_source_refinement": 4.555684670649873e-11,
+      "time_source_refinement": 1.5820202786676063e-10
+    },
+    "17_-1": {
+      "Gaussian_source_endpoint": 3.3458731390958313e-12,
+      "KS_PG_matrix": 9.251571210511234e-11,
+      "KS_endpoint_matrix": 8.054295516800818e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06895421287722435,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.4798384045944246e-09,
+          "KS_endpoint": 1.7792601669786023e-08,
+          "source_endpoint": 9.829184350121367e-10
+        },
+        "801_128": {
+          "KS_PG": 9.251571210511234e-11,
+          "KS_endpoint": 8.054295516800818e-10,
+          "source_endpoint": 3.3458731390958313e-12
+        },
+        "801_64": {
+          "KS_PG": 9.251571210511234e-11,
+          "KS_endpoint": 1.747466360502159e-08,
+          "source_endpoint": 9.737261049552748e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.006092566645517075,
+          3.823541457002573e-06,
+          -1.4201268570255596e-05,
+          -0.005240990591981231
+        ],
+        "801_128": [
+          0.0060925667836264205,
+          3.823377299692053e-06,
+          -1.4201176135955246e-05,
+          -0.005240990805826343
+        ],
+        "801_64": [
+          0.0060925665936179055,
+          3.8233777577140735e-06,
+          -1.4201175093677613e-05,
+          -0.0052409906416324755
+        ]
+      },
+      "spatial_source_refinement": 1.6369928849957471e-10,
+      "time_source_refinement": 1.9000851499834104e-10
+    },
+    "17_1": {
+      "Gaussian_source_endpoint": 3.9089099795538984e-12,
+      "KS_PG_matrix": 9.251571210511234e-11,
+      "KS_endpoint_matrix": 8.054295516800818e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06895421287722435,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.4798384045944246e-09,
+          "KS_endpoint": 1.7792601669786023e-08,
+          "source_endpoint": 9.83850922606222e-10
+        },
+        "801_128": {
+          "KS_PG": 9.251571210511234e-11,
+          "KS_endpoint": 8.054295516800818e-10,
+          "source_endpoint": 3.9089099795538984e-12
+        },
+        "801_64": {
+          "KS_PG": 9.251571210511234e-11,
+          "KS_endpoint": 1.747466360502159e-08,
+          "source_endpoint": 9.721798591849629e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.006092650788838758,
+          4.1034928082629046e-06,
+          -1.4400732811975988e-05,
+          -0.005240819503315681
+        ],
+        "801_128": [
+          0.00609265094149413,
+          4.103345531428486e-06,
+          -1.4400656973116799e-05,
+          -0.0052408197309551565
+        ],
+        "801_64": [
+          0.006092650750204631,
+          4.103344414937797e-06,
+          -1.4400654228944349e-05,
+          -0.005240819566039728
+        ]
+      },
+      "spatial_source_refinement": 1.4839332510723814e-10,
+      "time_source_refinement": 1.9128949899777092e-10
+    },
+    "18_-1": {
+      "Gaussian_source_endpoint": 5.288240657007337e-12,
+      "KS_PG_matrix": 1.3930102037151837e-10,
+      "KS_endpoint_matrix": 9.406087356038615e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06612681162018247,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.2279537676556105e-09,
+          "KS_endpoint": 2.093434289807128e-08,
+          "source_endpoint": 1.1553954798113053e-09
+        },
+        "801_128": {
+          "KS_PG": 1.3930102037151837e-10,
+          "KS_endpoint": 9.406087356038615e-10,
+          "source_endpoint": 5.288240657007337e-12
+        },
+        "801_64": {
+          "KS_PG": 1.3930102210624185e-10,
+          "KS_endpoint": 2.0469782757714938e-08,
+          "source_endpoint": 1.140684756720245e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.007136314146082451,
+          4.369030584367014e-06,
+          -1.2210880682844291e-05,
+          -0.006286840788397177
+        ],
+        "801_128": [
+          0.007136314257535243,
+          4.368648186454309e-06,
+          -1.2210687209448907e-05,
+          -0.006286841089656997
+        ],
+        "801_64": [
+          0.0071363140348684115,
+          4.3686488571763045e-06,
+          -1.2210685993834081e-05,
+          -0.0062868408925448455
+        ]
+      },
+      "spatial_source_refinement": 3.817271907098109e-10,
+      "time_source_refinement": 2.2266683115390595e-10
+    },
+    "18_1": {
+      "Gaussian_source_endpoint": 6.085696345730501e-12,
+      "KS_PG_matrix": 1.3930102037151837e-10,
+      "KS_endpoint_matrix": 9.406087356038615e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06612681162018247,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.2279537676556105e-09,
+          "KS_endpoint": 2.093434289807128e-08,
+          "source_endpoint": 1.1563490521018793e-09
+        },
+        "801_128": {
+          "KS_PG": 1.3930102037151837e-10,
+          "KS_endpoint": 9.406087356038615e-10,
+          "source_endpoint": 6.085696345730501e-12
+        },
+        "801_64": {
+          "KS_PG": 1.3930102210624185e-10,
+          "KS_endpoint": 2.0469782757714938e-08,
+          "source_endpoint": 1.1386996311146813e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.00713641326527248,
+          4.69888725889491e-06,
+          -1.2445890243347062e-05,
+          -0.006286639236873549
+        ],
+        "801_128": [
+          0.007136413400345954,
+          4.698531506808809e-06,
+          -1.2445722511526451e-05,
+          -0.006286639570732999
+        ],
+        "801_64": [
+          0.007136413176046659,
+          4.698529921002995e-06,
+          -1.2445719005634575e-05,
+          -0.006286639373032699
+        ]
+      },
+      "spatial_source_refinement": 3.57337891915277e-10,
+      "time_source_refinement": 2.242992944156974e-10
+    },
+    "19_-1": {
+      "Gaussian_source_endpoint": 7.880481776032303e-12,
+      "KS_PG_matrix": 1.9947750742876913e-10,
+      "KS_endpoint_matrix": 1.0738198571296315e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06532173917043695,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 3.190021276647248e-09,
+          "KS_endpoint": 2.4106691337566488e-08,
+          "source_endpoint": 1.3291912258350802e-09
+        },
+        "801_128": {
+          "KS_PG": 1.9947750742876913e-10,
+          "KS_endpoint": 1.0738198571296315e-09,
+          "source_endpoint": 7.880481776032303e-12
+        },
+        "801_64": {
+          "KS_PG": 1.994775022245987e-10,
+          "KS_endpoint": 2.3456078496186805e-08,
+          "source_endpoint": 1.3071304143241758e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.00817661972763204,
+          4.926460887240305e-06,
+          -1.071048547877825e-05,
+          -0.007312686954088193
+        ],
+        "801_128": [
+          0.008176619771296143,
+          4.925690453541127e-06,
+          -1.0710122201790273e-05,
+          -0.007312687379943129
+        ],
+        "801_64": [
+          0.008176619516016635,
+          4.92569136021525e-06,
+          -1.07101207275923e-05,
+          -0.007312687150472368
+        ]
+      },
+      "spatial_source_refinement": 7.695270250553977e-10,
+      "time_source_refinement": 2.5527950760217966e-10
+    },
+    "19_1": {
+      "Gaussian_source_endpoint": 8.971772272586137e-12,
+      "KS_PG_matrix": 1.9947750742876913e-10,
+      "KS_endpoint_matrix": 1.0738198571296315e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06532173917043695,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 3.190021276647248e-09,
+          "KS_endpoint": 2.4106691337566488e-08,
+          "source_endpoint": 1.330092530907323e-09
+        },
+        "801_128": {
+          "KS_PG": 1.9947750742876913e-10,
+          "KS_endpoint": 1.0738198571296315e-09,
+          "source_endpoint": 8.971772272586137e-12
+        },
+        "801_64": {
+          "KS_PG": 1.994775022245987e-10,
+          "KS_endpoint": 2.3456078496186805e-08,
+          "source_endpoint": 1.3046393236570974e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.008176733303407631,
+          5.304532844096105e-06,
+          -1.097983066022006e-05,
+          -0.00731245598178187
+        ],
+        "801_128": [
+          0.008176733382619098,
+          5.30380151767283e-06,
+          -1.097950469671175e-05,
+          -0.0073124564743108295
+        ],
+        "801_64": [
+          0.008176733125305754,
+          5.303799307276874e-06,
+          -1.0979500220642673e-05,
+          -0.007312456244512306
+        ]
+      },
+      "spatial_source_refinement": 7.335368192311516e-10,
+      "time_source_refinement": 2.573133442429487e-10
+    },
+    "1_-1": {
+      "Gaussian_source_endpoint": 2.1989528253829604e-13,
+      "KS_PG_matrix": 8.606906853892036e-12,
+      "KS_endpoint_matrix": 3.292387939633608e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06595642761430837,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.3771283939589818e-10,
+          "KS_endpoint": 6.726828753744751e-09,
+          "source_endpoint": 2.487648637430895e-10
+        },
+        "801_128": {
+          "KS_PG": 8.606906853892036e-12,
+          "KS_endpoint": 3.292387939633608e-10,
+          "source_endpoint": 2.1989528253829604e-13
+        },
+        "801_64": {
+          "KS_PG": 8.606927670573654e-12,
+          "KS_endpoint": 6.6914562779629705e-09,
+          "source_endpoint": 2.4812795481471417e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.00155329181181697,
+          -6.233530404141168e-06,
+          -2.234622091003334e-05,
+          -0.001427909980879163
+        ],
+        "801_128": [
+          0.0015532918597887628,
+          -6.233529290286203e-06,
+          -2.234622096070994e-05,
+          -0.0014279100260434481
+        ],
+        "801_64": [
+          0.0015532918113253767,
+          -6.233528977358622e-06,
+          -2.2346220136290526e-05,
+          -0.0014279099813828745
+        ]
+      },
+      "spatial_source_refinement": 1.4267825456667311e-12,
+      "time_source_refinement": 4.8463386081998294e-11
+    },
+    "1_1": {
+      "Gaussian_source_endpoint": 2.1989354781482007e-13,
+      "KS_PG_matrix": 8.606906853892036e-12,
+      "KS_endpoint_matrix": 3.292387939633608e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06595642761430837,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.3771283939589818e-10,
+          "KS_endpoint": 6.726828753744751e-09,
+          "source_endpoint": 2.4876486352624905e-10
+        },
+        "801_128": {
+          "KS_PG": 8.606906853892036e-12,
+          "KS_endpoint": 3.292387939633608e-10,
+          "source_endpoint": 2.1989354781482007e-13
+        },
+        "801_64": {
+          "KS_PG": 8.606927670573654e-12,
+          "KS_endpoint": 6.6914562779629705e-09,
+          "source_endpoint": 2.48127953730512e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0015532918118169702,
+          -6.233530404141926e-06,
+          -2.2346220910033175e-05,
+          -0.0014279099808791635
+        ],
+        "801_128": [
+          0.0015532918597887626,
+          -6.233529290286997e-06,
+          -2.2346220960709754e-05,
+          -0.0014279100260434485
+        ],
+        "801_64": [
+          0.0015532918113253772,
+          -6.23352897735924e-06,
+          -2.2346220136290336e-05,
+          -0.0014279099813828745
+        ]
+      },
+      "spatial_source_refinement": 1.4267826854271674e-12,
+      "time_source_refinement": 4.846338543147699e-11
+    },
+    "20_-1": {
+      "Gaussian_source_endpoint": 1.1215198312142932e-11,
+      "KS_PG_matrix": 2.747255894997025e-10,
+      "KS_endpoint_matrix": 1.2049958755460217e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06926958125605887,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 4.392795887459e-09,
+          "KS_endpoint": 2.73169122877448e-08,
+          "source_endpoint": 1.5047700308024048e-09
+        },
+        "801_128": {
+          "KS_PG": 2.747255894997025e-10,
+          "KS_endpoint": 1.2049958755460217e-09,
+          "source_endpoint": 1.1215198312142932e-11
+        },
+        "801_64": {
+          "KS_PG": 2.747255825608086e-10,
+          "KS_endpoint": 2.6437385863831153e-08,
+          "source_endpoint": 1.4732666475669731e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.009214676122257674,
+          5.4924049502303655e-06,
+          -9.538952610153797e-06,
+          -0.008325274528876284
+        ],
+        "801_128": [
+          0.009214676040308647,
+          5.4909979214590936e-06,
+          -9.538323591392298e-06,
+          -0.00832527513136765
+        ],
+        "801_64": [
+          0.009214675752420926,
+          5.490999091844605e-06,
+          -9.53832177383901e-06,
+          -0.008325274869881818
+        ]
+      },
+      "spatial_source_refinement": 1.405858385760371e-09,
+      "time_source_refinement": 2.8788772060694967e-10
+    },
+    "20_1": {
+      "Gaussian_source_endpoint": 1.2666757047549368e-11,
+      "KS_PG_matrix": 2.747255894997025e-10,
+      "KS_endpoint_matrix": 1.2049958755460217e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06926958125605887,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 4.392795887459e-09,
+          "KS_endpoint": 2.73169122877448e-08,
+          "source_endpoint": 1.5055389174928324e-09
+        },
+        "801_128": {
+          "KS_PG": 2.747255894997025e-10,
+          "KS_endpoint": 1.2049958755460217e-09,
+          "source_endpoint": 1.2666757047549368e-11
+        },
+        "801_64": {
+          "KS_PG": 2.747255825608086e-10,
+          "KS_endpoint": 2.6437385863831153e-08,
+          "source_endpoint": 1.4701936664612836e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.009214803667557217,
+          5.917113759911435e-06,
+          -9.841502697896814e-06,
+          -0.008325015105072752
+        ],
+        "801_128": [
+          0.009214803636188927,
+          5.915761035472271e-06,
+          -9.840924996085977e-06,
+          -0.008325015830833393
+        ],
+        "801_64": [
+          0.009214803345809342,
+          5.915758028719032e-06,
+          -9.840919326745514e-06,
+          -0.008325015569420044
+        ]
+      },
+      "spatial_source_refinement": 1.3557311924028252e-09,
+      "time_source_refinement": 2.9037958496069827e-10
+    },
+    "21_-1": {
+      "Gaussian_source_endpoint": 1.538552252722432e-11,
+      "KS_PG_matrix": 3.667377443394848e-10,
+      "KS_endpoint_matrix": 1.333998814291627e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06871477699355852,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.863191800126177e-09,
+          "KS_endpoint": 3.0572381598537035e-08,
+          "source_endpoint": 1.6825166086753551e-09
+        },
+        "801_128": {
+          "KS_PG": 3.667377443394848e-10,
+          "KS_endpoint": 1.333998814291627e-09,
+          "source_endpoint": 1.538552252722432e-11
+        },
+        "801_64": {
+          "KS_PG": 3.6673773393114395e-10,
+          "KS_endpoint": 2.9415977959024175e-08,
+          "source_endpoint": 1.6392180130636591e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.010251179155923334,
+          6.064922828568351e-06,
+          -8.598863394978713e-06,
+          -0.009328603742926645
+        ],
+        "801_128": [
+          0.010251178871079016,
+          6.062533527783026e-06,
+          -8.597841807901363e-06,
+          -0.009328604590391285
+        ],
+        "801_64": [
+          0.010251178550562482,
+          6.062534992281931e-06,
+          -8.597839561842955e-06,
+          -0.009328604297105279
+        ]
+      },
+      "spatial_source_refinement": 2.3878362864196336e-09,
+      "time_source_refinement": 3.205165334529969e-10
+    },
+    "21_1": {
+      "Gaussian_source_endpoint": 1.7270056099170233e-11,
+      "KS_PG_matrix": 3.667377443394848e-10,
+      "KS_endpoint_matrix": 1.333998814291627e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06871477699355852,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.863191800126177e-09,
+          "KS_endpoint": 3.0572381598537035e-08,
+          "source_endpoint": 1.6830665455075389e-09
+        },
+        "801_128": {
+          "KS_PG": 3.667377443394848e-10,
+          "KS_endpoint": 1.333998814291627e-09,
+          "source_endpoint": 1.7270056099170233e-11
+        },
+        "801_64": {
+          "KS_PG": 3.6673773393114395e-10,
+          "KS_endpoint": 2.9415977959024175e-08,
+          "source_endpoint": 1.6354796458090126e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.010251320186269132,
+          6.534702847544341e-06,
+          -8.93349631653787e-06,
+          -0.00932831682262197
+        ],
+        "801_128": [
+          0.010251319970346312,
+          6.532385699896783e-06,
+          -8.932542365153743e-06,
+          -0.009328317881399728
+        ],
+        "801_64": [
+          0.010251319646817492,
+          6.53238170893563e-06,
+          -8.93253526578858e-06,
+          -0.009328317588738276
+        ]
+      },
+      "spatial_source_refinement": 2.3211386087111045e-09,
+      "time_source_refinement": 3.23528820053709e-10
+    },
+    "22_-1": {
+      "Gaussian_source_endpoint": 2.0485038307576503e-11,
+      "KS_PG_matrix": 4.771889584864741e-10,
+      "KS_endpoint_matrix": 1.4606388484845705e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.0660827995418355,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 7.627806422952355e-09,
+          "KS_endpoint": 3.387859867642895e-08,
+          "source_endpoint": 1.8627741762283767e-09
+        },
+        "801_128": {
+          "KS_PG": 4.771889584864741e-10,
+          "KS_endpoint": 1.4606388484845705e-09,
+          "source_endpoint": 2.0485038307576503e-11
+        },
+        "801_64": {
+          "KS_PG": 4.771889428739629e-10,
+          "KS_endpoint": 3.239323370651803e-08,
+          "source_endpoint": 1.8050684124498728e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.011286563176096226,
+          6.642879369547349e-06,
+          -7.827779836949356e-06,
+          -0.010325205485140904
+        ],
+        "801_128": [
+          0.011286562589420759,
+          6.639046312182918e-06,
+          -7.826205612316848e-06,
+          -0.010325206662643303
+        ],
+        "801_64": [
+          0.01128656223623884,
+          6.639048102352493e-06,
+          -7.826202852573143e-06,
+          -0.010325206337691122
+        ]
+      },
+      "spatial_source_refinement": 3.831267194855581e-09,
+      "time_source_refinement": 3.5318191947408817e-10
+    },
+    "22_1": {
+      "Gaussian_source_endpoint": 2.2880718722690166e-11,
+      "KS_PG_matrix": 4.771889584864741e-10,
+      "KS_endpoint_matrix": 1.4606388484845705e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.0660827995418355,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 7.627806422952355e-09,
+          "KS_endpoint": 3.387859867642895e-08,
+          "source_endpoint": 1.8630128984647998e-09
+        },
+        "801_128": {
+          "KS_PG": 4.771889584864741e-10,
+          "KS_endpoint": 1.4606388484845705e-09,
+          "source_endpoint": 2.2880718722690166e-11
+        },
+        "801_64": {
+          "KS_PG": 4.771889428739629e-10,
+          "KS_endpoint": 3.239323370651803e-08,
+          "source_endpoint": 1.8005746321020366e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.011286717195283052,
+          7.1561298487728445e-06,
+          -8.193348120751526e-06,
+          -0.01032489203637507
+        ],
+        "801_128": [
+          0.011286716699321086,
+          7.152389231642782e-06,
+          -8.191859921681187e-06,
+          -0.01032489355528917
+        ],
+        "801_64": [
+          0.011286716342539225,
+          7.1523840533947334e-06,
+          -8.191851144003492e-06,
+          -0.010324893231676156
+        ]
+      },
+      "spatial_source_refinement": 3.745795378111124e-09,
+      "time_source_refinement": 3.5678186099952214e-10
+    },
+    "23_1": {
+      "Gaussian_source_endpoint": 1.4972787278685201e-12,
+      "KS_PG_matrix": 2.842743401787477e-11,
+      "KS_endpoint_matrix": 4.639215934587336e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06556623865229104,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 4.54826790813323e-10,
+          "KS_endpoint": 1.007806083030971e-08,
+          "source_endpoint": 5.583259436378607e-10
+        },
+        "801_128": {
+          "KS_PG": 2.842743401787477e-11,
+          "KS_endpoint": 4.639215934587336e-10,
+          "source_endpoint": 1.4972787278685201e-12
+        },
+        "801_64": {
+          "KS_PG": 2.8427447895662552e-11,
+          "KS_endpoint": 9.982306523048656e-09,
+          "source_endpoint": 5.559287591903883e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.003489630850229285,
+          4.545169128687812e-06,
+          -2.466017029865225e-05,
+          0.0
+        ],
+        "801_128": [
+          0.0034896309693366887,
+          4.5451949444731666e-06,
+          -2.466017386592337e-05,
+          0.0
+        ],
+        "801_64": [
+          0.003489630859707332,
+          4.545193221649514e-06,
+          -2.466017178451299e-05,
+          0.0
+        ]
+      },
+      "spatial_source_refinement": 2.4092961702299256e-11,
+      "time_source_refinement": 1.0962935680786101e-10
+    },
+    "24_-1": {
+      "Gaussian_source_endpoint": 1.8211403793409048e-12,
+      "KS_PG_matrix": 4.196134065215246e-11,
+      "KS_endpoint_matrix": 5.570784570927604e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06607248173688691,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 6.713181521095235e-10,
+          "KS_endpoint": 1.2117508094156015e-08,
+          "source_endpoint": 6.698265934967917e-10
+        },
+        "801_128": {
+          "KS_PG": 4.196134065215246e-11,
+          "KS_endpoint": 5.570784570927604e-10,
+          "source_endpoint": 1.8211403793409048e-12
+        },
+        "801_64": {
+          "KS_PG": 4.196133718270549e-11,
+          "KS_endpoint": 1.1970891250490112e-08,
+          "source_endpoint": 6.669511627005464e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.0041801884584123285,
+          4.392143810937613e-06,
+          -2.0506593609337462e-05,
+          -0.0012295455271834448
+        ],
+        "801_128": [
+          0.004180188591855469,
+          4.392153163799035e-06,
+          -2.0506583540494432e-05,
+          -0.0012295455698152782
+        ],
+        "801_64": [
+          0.004180188461121281,
+          4.3921519577681e-06,
+          -2.05065819338842e-05,
+          -0.001229545531184428
+        ]
+      },
+      "spatial_source_refinement": 1.1675453260987824e-11,
+      "time_source_refinement": 1.3073418736464504e-10
+    },
+    "24_1": {
+      "Gaussian_source_endpoint": 2.13972394490225e-12,
+      "KS_PG_matrix": 4.196134065215246e-11,
+      "KS_endpoint_matrix": 5.570784570927604e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06607248173688691,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 6.713181521095235e-10,
+          "KS_endpoint": 1.2117508094156015e-08,
+          "source_endpoint": 6.70709670094749e-10
+        },
+        "801_128": {
+          "KS_PG": 4.196134065215246e-11,
+          "KS_endpoint": 5.570784570927604e-10,
+          "source_endpoint": 2.13972394490225e-12
+        },
+        "801_64": {
+          "KS_PG": 4.196133718270549e-11,
+          "KS_endpoint": 1.1970891250490112e-08,
+          "source_endpoint": 6.658740087095438e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.004180255607830653,
+          4.615515155569186e-06,
+          -2.066573969236128e-05,
+          -0.0012294090289205163
+        ],
+        "801_128": [
+          0.004180255747341379,
+          4.615532053509915e-06,
+          -2.0665737554246206e-05,
+          -0.0012294090719091938
+        ],
+        "801_64": [
+          0.00418025561570322,
+          4.6155299824309295e-06,
+          -2.066573486468271e-05,
+          -0.0012294090324594486
+        ]
+      },
+      "spatial_source_refinement": 1.4826861743574837e-11,
+      "time_source_refinement": 1.3163815870687046e-10
+    },
+    "25_-1": {
+      "Gaussian_source_endpoint": 2.5166835846204827e-12,
+      "KS_PG_matrix": 6.248376295536762e-11,
+      "KS_endpoint_matrix": 6.647100329792219e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06894816361016315,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 9.995686448688312e-10,
+          "KS_endpoint": 1.451522027573482e-08,
+          "source_endpoint": 8.016893052187335e-10
+        },
+        "801_128": {
+          "KS_PG": 6.248376295536762e-11,
+          "KS_endpoint": 6.647100329792219e-10,
+          "source_endpoint": 2.5166835846204827e-12
+        },
+        "801_64": {
+          "KS_PG": 6.248375948592066e-11,
+          "KS_endpoint": 1.4304310555490751e-08,
+          "source_endpoint": 7.970396157311321e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.004991734077734228,
+          4.469105578773996e-06,
+          -1.7258086826226252e-05,
+          -0.0024358754431862287
+        ],
+        "801_128": [
+          0.004991734222405359,
+          4.469075050526124e-06,
+          -1.7258051129654157e-05,
+          -0.0024358755319386447
+        ],
+        "801_64": [
+          0.004991734066554272,
+          4.469074187478481e-06,
+          -1.7258049707366603e-05,
+          -0.002435875455165777
+        ]
+      },
+      "spatial_source_refinement": 3.71188596488348e-11,
+      "time_source_refinement": 1.5585108724402996e-10
+    },
+    "25_1": {
+      "Gaussian_source_endpoint": 3.084010531759912e-12,
+      "KS_PG_matrix": 6.248376295536762e-11,
+      "KS_endpoint_matrix": 6.647100329792219e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06894816361016315,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 9.995686448688312e-10,
+          "KS_endpoint": 1.451522027573482e-08,
+          "source_endpoint": 8.029707610629488e-10
+        },
+        "801_128": {
+          "KS_PG": 6.248376295536762e-11,
+          "KS_endpoint": 6.647100329792219e-10,
+          "source_endpoint": 3.084010531759912e-12
+        },
+        "801_64": {
+          "KS_PG": 6.248375948592066e-11,
+          "KS_endpoint": 1.4304310555490751e-08,
+          "source_endpoint": 7.95284716553768e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.004991837733212498,
+          4.8139581374102825e-06,
+          -1.7503778183600676e-05,
+          -0.0024356647350763545
+        ],
+        "801_128": [
+          0.0049918378909525486,
+          4.813943278326782e-06,
+          -1.7503758431168612e-05,
+          -0.0024356648288225142
+        ],
+        "801_64": [
+          0.004991837733636531,
+          4.8139408538027675e-06,
+          -1.750375517648708e-05,
+          -0.0024356647509329865
+        ]
+      },
+      "spatial_source_refinement": 2.3007113595719438e-11,
+      "time_source_refinement": 1.5731601785140548e-10
+    },
+    "26_-1": {
+      "Gaussian_source_endpoint": 3.598827263756252e-12,
+      "KS_PG_matrix": 9.159010529169456e-11,
+      "KS_endpoint_matrix": 7.807632406388048e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.0681503809832776,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.4650633293339377e-09,
+          "KS_endpoint": 1.713641381573261e-08,
+          "source_endpoint": 9.457282882166518e-10
+        },
+        "801_128": {
+          "KS_PG": 9.159010529169456e-11,
+          "KS_endpoint": 7.807632406388048e-10,
+          "source_endpoint": 3.598827263756252e-12
+        },
+        "801_64": {
+          "KS_PG": 9.159010182224758e-11,
+          "KS_endpoint": 1.6836257402119692e-08,
+          "source_endpoint": 9.381739916186627e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.00587262421826241,
+          4.680674352165921e-06,
+          -1.475790692881387e-05,
+          -0.003596307276169412
+        ],
+        "801_128": [
+          0.00587262436261997,
+          4.680556389620238e-06,
+          -1.4757822514878735e-05,
+          -0.003596307418158661
+        ],
+        "801_64": [
+          0.0058726241794251465,
+          4.680555880898836e-06,
+          -1.4757821201584233e-05,
+          -0.0035963073046091287
+        ]
+      },
+      "spatial_source_refinement": 1.1847126708472433e-10,
+      "time_source_refinement": 1.831948238939507e-10
+    },
+    "26_1": {
+      "Gaussian_source_endpoint": 4.4737998299449605e-12,
+      "KS_PG_matrix": 9.159010529169456e-11,
+      "KS_endpoint_matrix": 7.807632406388048e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.0681503809832776,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.4650633293339377e-09,
+          "KS_endpoint": 1.713641381573261e-08,
+          "source_endpoint": 9.472774448529564e-10
+        },
+        "801_128": {
+          "KS_PG": 9.159010529169456e-11,
+          "KS_endpoint": 7.807632406388048e-10,
+          "source_endpoint": 4.4737998299449605e-12
+        },
+        "801_64": {
+          "KS_PG": 9.159010182224758e-11,
+          "KS_endpoint": 1.6836257402119692e-08,
+          "source_endpoint": 9.357071159565855e-10
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.005872760711189187,
+          5.134849636533718e-06,
+          -1.5081474102464793e-05,
+          -0.003596029810238166
+        ],
+        "801_128": [
+          0.005872760878985105,
+          5.134758965952404e-06,
+          -1.5081416797743803e-05,
+          -0.0035960299695530305
+        ],
+        "801_64": [
+          0.005872760693743569,
+          5.134756018132194e-06,
+          -1.5081412799464341e-05,
+          -0.0035960298547826853
+        ]
+      },
+      "spatial_source_refinement": 9.361840152383692e-11,
+      "time_source_refinement": 1.8524153565235846e-10
+    },
+    "27_-1": {
+      "Gaussian_source_endpoint": 5.1410592363104746e-12,
+      "KS_PG_matrix": 1.3086654329641512e-10,
+      "KS_endpoint_matrix": 9.014173417355843e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06917242134755693,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.093120697599371e-09,
+          "KS_endpoint": 1.9908094367471207e-08,
+          "source_endpoint": 1.0978377122314309e-09
+        },
+        "801_128": {
+          "KS_PG": 1.3086654329641512e-10,
+          "KS_endpoint": 9.014173417355843e-10,
+          "source_endpoint": 5.1410592363104746e-12
+        },
+        "801_64": {
+          "KS_PG": 1.3086654156169164e-10,
+          "KS_endpoint": 1.9488903491016174e-08,
+          "source_endpoint": 1.086031186856018e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.006795526486546311,
+          4.981601308318091e-06,
+          -1.281209037990512e-05,
+          -0.004717446987454181
+        ],
+        "801_128": [
+          0.006795526609660738,
+          4.981313738742165e-06,
+          -1.281192004809592e-05,
+          -0.004717447195925524
+        ],
+        "801_64": [
+          0.006795526397764434,
+          4.981313638829248e-06,
+          -1.2811918797754303e-05,
+          -0.004717447046751032
+        ]
+      },
+      "spatial_source_refinement": 2.8766948884290967e-10,
+      "time_source_refinement": 2.1189630432238982e-10
+    },
+    "27_1": {
+      "Gaussian_source_endpoint": 6.407055360433192e-12,
+      "KS_PG_matrix": 1.3086654329641512e-10,
+      "KS_endpoint_matrix": 9.014173417355843e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06917242134755693,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.093120697599371e-09,
+          "KS_endpoint": 1.9908094367471207e-08,
+          "source_endpoint": 1.0995320123136088e-09
+        },
+        "801_128": {
+          "KS_PG": 1.3086654329641512e-10,
+          "KS_endpoint": 9.014173417355843e-10,
+          "source_endpoint": 6.407055360433192e-12
+        },
+        "801_64": {
+          "KS_PG": 1.3086654156169164e-10,
+          "KS_endpoint": 1.9488903491016174e-08,
+          "source_endpoint": 1.0827690176754001e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.006795694030217474,
+          5.539210385604597e-06,
+          -1.3209329453747742e-05,
+          -0.004717106384548126
+        ],
+        "801_128": [
+          0.006795694191374626,
+          5.5389660248085135e-06,
+          -1.320920128433463e-05,
+          -0.004717106636427829
+        ],
+        "801_64": [
+          0.006795693976789395,
+          5.538962356227802e-06,
+          -1.3209196329892678e-05,
+          -0.004717106486129253
+        ]
+      },
+      "spatial_source_refinement": 2.4802937679505206e-10,
+      "time_source_refinement": 2.1458523066092416e-10
+    },
+    "28_-1": {
+      "Gaussian_source_endpoint": 7.224320750995328e-12,
+      "KS_PG_matrix": 1.8194111148228664e-10,
+      "KS_endpoint_matrix": 1.0245328151158663e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06851095303050565,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.909707372614201e-09,
+          "KS_endpoint": 2.2791293213808572e-08,
+          "source_endpoint": 1.255892038802553e-09
+        },
+        "801_128": {
+          "KS_PG": 1.8194111148228664e-10,
+          "KS_endpoint": 1.0245328151158663e-09,
+          "source_endpoint": 7.224320750995328e-12
+        },
+        "801_64": {
+          "KS_PG": 1.8194111148228664e-10,
+          "KS_endpoint": 2.2220294104702276e-08,
+          "source_endpoint": 1.2382413505998557e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.007745424881573545,
+          5.344126080381468e-06,
+          -1.1272663071535558e-05,
+          -0.005807901168858709
+        ],
+        "801_128": [
+          0.007745424950784693,
+          5.343538441640876e-06,
+          -1.127235108766459e-05,
+          -0.005807901465106275
+        ],
+        "801_64": [
+          0.007745424709303624,
+          5.343538834719349e-06,
+          -1.1272349870327713e-05,
+          -0.005807901281175526
+        ]
+      },
+      "spatial_source_refinement": 5.872456621187124e-10,
+      "time_source_refinement": 2.414810686482416e-10
+    },
+    "28_1": {
+      "Gaussian_source_endpoint": 8.982989428262672e-12,
+      "KS_PG_matrix": 1.8194111148228664e-10,
+      "KS_endpoint_matrix": 1.0245328151158663e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06851095303050565,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.909707372614201e-09,
+          "KS_endpoint": 2.2791293213808572e-08,
+          "source_endpoint": 1.2575995921720873e-09
+        },
+        "801_128": {
+          "KS_PG": 1.8194111148228664e-10,
+          "KS_endpoint": 1.0245328151158663e-09,
+          "source_endpoint": 8.982989428262672e-12
+        },
+        "801_64": {
+          "KS_PG": 1.8194111148228664e-10,
+          "KS_endpoint": 2.2220294104702276e-08,
+          "source_endpoint": 1.2340726418189063e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.007745622244022509,
+          6.001134980566084e-06,
+          -1.174069041235259e-05,
+          -0.0058074999137332686
+        ],
+        "801_128": [
+          0.007745622370834855,
+          6.000611286441154e-06,
+          -1.1740439988345778e-05,
+          -0.005807500301903875
+        ],
+        "801_64": [
+          0.0077456221259403785,
+          6.000606675359916e-06,
+          -1.1740433839086235e-05,
+          -0.005807500117170269
+        ]
+      },
+      "spatial_source_refinement": 5.283052061685715e-10,
+      "time_source_refinement": 2.448944762256655e-10
+    },
+    "29_-1": {
+      "Gaussian_source_endpoint": 9.933168789453065e-12,
+      "KS_PG_matrix": 2.4647562810176105e-10,
+      "KS_endpoint_matrix": 1.1487105392758923e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06887377020103441,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 3.941304610802221e-09,
+          "KS_endpoint": 2.5766226097179157e-08,
+          "source_endpoint": 1.4187633706752578e-09
+        },
+        "801_128": {
+          "KS_PG": 2.4647562810176105e-10,
+          "KS_endpoint": 1.1487105392758923e-09,
+          "source_endpoint": 9.933168789453065e-12
+        },
+        "801_64": {
+          "KS_PG": 2.464756246323141e-10,
+          "KS_endpoint": 2.5005079812290276e-08,
+          "source_endpoint": 1.3934237583224096e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.008713531052755411,
+          5.750732887710593e-06,
+          -1.0033309002764167e-05,
+          -0.00687490446125238
+        ],
+        "801_128": [
+          0.008713531020990251,
+          5.749650884051072e-06,
+          -1.0032776631600245e-05,
+          -0.006874904876266268
+        ],
+        "801_64": [
+          0.008713530749317761,
+          5.7496518772902e-06,
+          -1.0032775428197948e-05,
+          -0.006874904658208093
+        ]
+      },
+      "spatial_source_refinement": 1.0810104203928458e-09,
+      "time_source_refinement": 2.716724900597711e-10
+    },
+    "29_1": {
+      "Gaussian_source_endpoint": 1.2301954106005292e-11,
+      "KS_PG_matrix": 2.4647562810176105e-10,
+      "KS_endpoint_matrix": 1.1487105392758923e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06887377020103441,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 3.941304610802221e-09,
+          "KS_endpoint": 2.5766226097179157e-08,
+          "source_endpoint": 1.420339163990536e-09
+        },
+        "801_128": {
+          "KS_PG": 2.4647562810176105e-10,
+          "KS_endpoint": 1.1487105392758923e-09,
+          "source_endpoint": 1.2301954106005292e-11
+        },
+        "801_64": {
+          "KS_PG": 2.464756246323141e-10,
+          "KS_endpoint": 2.5005079812290276e-08,
+          "source_endpoint": 1.3882160542627586e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.008713757199656317,
+          6.503774447567641e-06,
+          -1.0569714835943507e-05,
+          -0.006874444625399245
+        ],
+        "801_128": [
+          0.008713757250616617,
+          6.502782241005829e-06,
+          -1.0569267994324544e-05,
+          -0.006874445214893147
+        ],
+        "801_64": [
+          0.008713756974707708,
+          6.5027764416470605e-06,
+          -1.0569260387734242e-05,
+          -0.006874444996604188
+        ]
+      },
+      "spatial_source_refinement": 9.980059205807502e-10,
+      "time_source_refinement": 2.759089085674349e-10
+    },
+    "2_-1": {
+      "Gaussian_source_endpoint": 4.828450193925665e-13,
+      "KS_PG_matrix": 2.410408157793588e-11,
+      "KS_endpoint_matrix": 4.863851166979424e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06512904550204901,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 3.8563673261660103e-10,
+          "KS_endpoint": 1.038632890804081e-08,
+          "source_endpoint": 3.8983366318010026e-10
+        },
+        "801_128": {
+          "KS_PG": 2.410408157793588e-11,
+          "KS_endpoint": 4.863851166979424e-10,
+          "source_endpoint": 4.828450193925665e-13
+        },
+        "801_64": {
+          "KS_PG": 2.4104076373765583e-11,
+          "KS_endpoint": 1.029170446087413e-08,
+          "source_endpoint": 3.880239866395352e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.0024290514242579445,
+          7.880573836708334e-07,
+          -1.702982393573286e-05,
+          -0.002255929095964139
+        ],
+        "801_128": [
+          0.002429051497191788,
+          7.880533854437368e-07,
+          -1.702981964312397e-05,
+          -0.0022559291700418684
+        ],
+        "801_64": [
+          0.00242905142136427,
+          7.880535345556336e-07,
+          -1.7029818841148633e-05,
+          -0.0022559290994835003
+        ]
+      },
+      "spatial_source_refinement": 5.094584225784262e-12,
+      "time_source_refinement": 7.582751787582609e-11
+    },
+    "2_1": {
+      "Gaussian_source_endpoint": 4.828444772914803e-13,
+      "KS_PG_matrix": 2.410408157793588e-11,
+      "KS_endpoint_matrix": 4.863851166979424e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06512904550204901,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 3.8563673261660103e-10,
+          "KS_endpoint": 1.038632890804081e-08,
+          "source_endpoint": 3.898336627464194e-10
+        },
+        "801_128": {
+          "KS_PG": 2.410408157793588e-11,
+          "KS_endpoint": 4.863851166979424e-10,
+          "source_endpoint": 4.828444772914803e-13
+        },
+        "801_64": {
+          "KS_PG": 2.4104076373765583e-11,
+          "KS_endpoint": 1.029170446087413e-08,
+          "source_endpoint": 3.880239866395352e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0024290514242579445,
+          7.880573836707521e-07,
+          -1.7029823935732652e-05,
+          -0.0022559290959641384
+        ],
+        "801_128": [
+          0.0024290514971917875,
+          7.880533854436283e-07,
+          -1.702981964312378e-05,
+          -0.0022559291700418684
+        ],
+        "801_64": [
+          0.0024290514213642705,
+          7.880535345557149e-07,
+          -1.7029818841148474e-05,
+          -0.0022559290994835
+        ]
+      },
+      "spatial_source_refinement": 5.094584178350417e-12,
+      "time_source_refinement": 7.582751700846435e-11
+    },
+    "30_-1": {
+      "Gaussian_source_endpoint": 1.3354392217708108e-11,
+      "KS_PG_matrix": 3.2612964412370715e-10,
+      "KS_endpoint_matrix": 1.2730140911607664e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06735724833750277,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.214327745625691e-09,
+          "KS_endpoint": 2.882168689821718e-08,
+          "source_endpoint": 1.585862038910868e-09
+        },
+        "801_128": {
+          "KS_PG": 3.2612964412370715e-10,
+          "KS_endpoint": 1.2730140911607664e-09,
+          "source_endpoint": 1.3354392217708108e-11
+        },
+        "801_64": {
+          "KS_PG": 3.261296389195367e-10,
+          "KS_endpoint": 2.7828762072523716e-08,
+          "source_endpoint": 1.5507326707464575e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.009694420990472012,
+          6.190028947459765e-06,
+          -9.01862033716221e-06,
+          -0.007923986069984745
+        ],
+        "801_128": [
+          0.009694420793559637,
+          6.188177536289288e-06,
+          -9.017761792372353e-06,
+          -0.007923986645637305
+        ],
+        "801_64": [
+          0.00969442049125947,
+          6.188179255245429e-06,
+          -9.01776059220103e-06,
+          -0.007923986393895896
+        ]
+      },
+      "spatial_source_refinement": 1.8496922143365797e-09,
+      "time_source_refinement": 3.0230016753729494e-10
+    },
+    "30_1": {
+      "Gaussian_source_endpoint": 1.6464806623130157e-11,
+      "KS_PG_matrix": 3.2612964412370715e-10,
+      "KS_endpoint_matrix": 1.2730140911607664e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06735724833750277,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.214327745625691e-09,
+          "KS_endpoint": 2.882168689821718e-08,
+          "source_endpoint": 1.5871475435996762e-09
+        },
+        "801_128": {
+          "KS_PG": 3.2612964412370715e-10,
+          "KS_endpoint": 1.2730140911607664e-09,
+          "source_endpoint": 1.6464806623130157e-11
+        },
+        "801_64": {
+          "KS_PG": 3.261296389195367e-10,
+          "KS_endpoint": 2.7828762072523716e-08,
+          "source_endpoint": 1.544335884867687e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.009694674951614917,
+          7.035958202738634e-06,
+          -9.621152109989656e-06,
+          -0.007923469579752247
+        ],
+        "801_128": [
+          0.009694674868624166,
+          7.034227621314403e-06,
+          -9.620407632108064e-06,
+          -0.007923470461244975
+        ],
+        "801_64": [
+          0.009694674561152573,
+          7.03422036430455e-06,
+          -9.620398283832167e-06,
+          -0.00792347021012147
+        ]
+      },
+      "spatial_source_refinement": 1.7378384340837986e-09,
+      "time_source_refinement": 3.074715933248928e-10
+    },
+    "31_-1": {
+      "Gaussian_source_endpoint": 1.7576372432145937e-11,
+      "KS_PG_matrix": 4.22575113789847e-10,
+      "KS_endpoint_matrix": 1.3967611384962495e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06581336665695206,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 6.755357833884701e-09,
+          "KS_endpoint": 3.195212003315184e-08,
+          "source_endpoint": 1.756905860378355e-09
+        },
+        "801_128": {
+          "KS_PG": 4.22575113789847e-10,
+          "KS_endpoint": 1.3967611384962495e-09,
+          "source_endpoint": 1.7576372432145937e-11
+        },
+        "801_64": {
+          "KS_PG": 4.225750947078888e-10,
+          "KS_endpoint": 3.0681324841852486e-08,
+          "source_endpoint": 1.7096286331064192e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.010684593983097023,
+          6.654418536861426e-06,
+          -8.17492844570683e-06,
+          -0.008959245347054473
+        ],
+        "801_128": [
+          0.0106845935373645,
+          6.651424164529226e-06,
+          -8.173607732227599e-06,
+          -0.008959246136550122
+        ],
+        "801_64": [
+          0.010684593204110505,
+          6.651426749473583e-06,
+          -8.17360653177122e-06,
+          -0.00895924585143221
+        ]
+      },
+      "spatial_source_refinement": 2.9917873878434424e-09,
+      "time_source_refinement": 3.332539938449841e-10
+    },
+    "31_1": {
+      "Gaussian_source_endpoint": 2.157239374655541e-11,
+      "KS_PG_matrix": 4.22575113789847e-10,
+      "KS_endpoint_matrix": 1.3967611384962495e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06581336665695206,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 6.755357833884701e-09,
+          "KS_endpoint": 3.195212003315184e-08,
+          "source_endpoint": 1.7577298297433153e-09
+        },
+        "801_128": {
+          "KS_PG": 4.22575113789847e-10,
+          "KS_endpoint": 1.3967611384962495e-09,
+          "source_endpoint": 2.157239374655541e-11
+        },
+        "801_64": {
+          "KS_PG": 4.225750947078888e-10,
+          "KS_endpoint": 3.0681324841852486e-08,
+          "source_endpoint": 1.7018775035071432e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.01068487479337647,
+          7.590115885667599e-06,
+          -8.841350743935219e-06,
+          -0.008958674100173137
+        ],
+        "801_128": [
+          0.010684874499230182,
+          7.5872783728753764e-06,
+          -8.840176954214895e-06,
+          -0.008958675393698937
+        ],
+        "801_64": [
+          0.010684874159746335,
+          7.587269366244703e-06,
+          -8.840165560630997e-06,
+          -0.00895867511034808
+        ]
+      },
+      "spatial_source_refinement": 2.846519422895679e-09,
+      "time_source_refinement": 3.3948384728366143e-10
+    },
+    "32_-1": {
+      "Gaussian_source_endpoint": 2.2688760158845467e-11,
+      "KS_PG_matrix": 5.37490250224204e-10,
+      "KS_endpoint_matrix": 1.5193807491206406e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06688907452840025,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 8.591039168254211e-09,
+          "KS_endpoint": 3.515629973249723e-08,
+          "source_endpoint": 1.9317970296334197e-09
+        },
+        "801_128": {
+          "KS_PG": 5.37490250224204e-10,
+          "KS_endpoint": 1.5193807491206406e-09,
+          "source_endpoint": 2.2688760158845467e-11
+        },
+        "801_64": {
+          "KS_PG": 5.374902432853101e-10,
+          "KS_endpoint": 3.355642549940363e-08,
+          "source_endpoint": 1.8697563011760288e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.011681702276286381,
+          7.13872862169725e-06,
+          -7.463590580108064e-06,
+          -0.009983708806948495
+        ],
+        "801_128": [
+          0.011681701476700711,
+          7.13410113791101e-06,
+          -7.461639717130375e-06,
+          -0.009983709874238566
+        ],
+        "801_64": [
+          0.011681701112241084,
+          7.134104740612589e-06,
+          -7.461638519638469e-06,
+          -0.009983709555949703
+        ]
+      },
+      "spatial_source_refinement": 4.6238810846605666e-09,
+      "time_source_refinement": 3.6445962740827564e-10
+    },
+    "32_1": {
+      "Gaussian_source_endpoint": 2.772524297276445e-11,
+      "KS_PG_matrix": 5.37490250224204e-10,
+      "KS_endpoint_matrix": 1.5193807491206406e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06688907452840025,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 8.591039168254211e-09,
+          "KS_endpoint": 3.515629973249723e-08,
+          "source_endpoint": 1.9319767712716596e-09
+        },
+        "801_128": {
+          "KS_PG": 5.37490250224204e-10,
+          "KS_endpoint": 1.5193807491206406e-09,
+          "source_endpoint": 2.772524297276445e-11
+        },
+        "801_64": {
+          "KS_PG": 5.374902432853101e-10,
+          "KS_endpoint": 3.355642549940363e-08,
+          "source_endpoint": 1.8604727480830974e-09
+        }
+      },
+      "phase": 1.9984044559957135e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.011682008947206937,
+          8.161004437110664e-06,
+          -8.191617337681591e-06,
+          -0.009983084727017536
+        ],
+        "801_128": [
+          0.011682008343623701,
+          8.15657439997582e-06,
+          -8.189850073568387e-06,
+          -0.009983086584648658
+        ],
+        "801_64": [
+          0.011682007971742708,
+          8.156563330694911e-06,
+          -8.1898363149599e-06,
+          -0.009983086269597718
+        ]
+      },
+      "spatial_source_refinement": 4.441106415752722e-09,
+      "time_source_refinement": 3.718809930136624e-10
+    },
+    "3_-1": {
+      "Gaussian_source_endpoint": 1.09158187588769e-12,
+      "KS_PG_matrix": 4.7955967322210746e-11,
+      "KS_endpoint_matrix": 6.737352243668488e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.0680208532864877,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 7.671716231033576e-10,
+          "KS_endpoint": 1.3759270514612787e-08,
+          "source_endpoint": 5.167042856947524e-10
+        },
+        "801_128": {
+          "KS_PG": 4.7955967322210746e-11,
+          "KS_endpoint": 6.737352243668488e-10,
+          "source_endpoint": 1.09158187588769e-12
+        },
+        "801_64": {
+          "KS_PG": 4.795596732221098e-11,
+          "KS_endpoint": 1.3580258972911707e-08,
+          "source_endpoint": 5.130477240961051e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.003211711445255267,
+          1.9143111442323905e-06,
+          -1.3328715722394849e-05,
+          -0.002994591059298544
+        ],
+        "801_128": [
+          0.0032117115354376533,
+          1.9142837744031142e-06,
+          -1.3328698518510629e-05,
+          -0.0029945911655610427
+        ],
+        "801_64": [
+          0.0032117114351145493,
+          1.91428391046531e-06,
+          -1.3328697641016132e-05,
+          -0.0029945910718923675
+        ]
+      },
+      "spatial_source_refinement": 2.723376708066265e-11,
+      "time_source_refinement": 1.0032310399088473e-10
+    },
+    "3_1": {
+      "Gaussian_source_endpoint": 1.0915814151017667e-12,
+      "KS_PG_matrix": 4.7955967322210746e-11,
+      "KS_endpoint_matrix": 6.737352243668488e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.0680208532864877,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 7.671716231033576e-10,
+          "KS_endpoint": 1.3759270514612787e-08,
+          "source_endpoint": 5.167042865621141e-10
+        },
+        "801_128": {
+          "KS_PG": 4.7955967322210746e-11,
+          "KS_endpoint": 6.737352243668488e-10,
+          "source_endpoint": 1.0915814151017667e-12
+        },
+        "801_64": {
+          "KS_PG": 4.795596732221098e-11,
+          "KS_endpoint": 1.3580258972911707e-08,
+          "source_endpoint": 5.130477236624242e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0032117114452552657,
+          1.9143111442330952e-06,
+          -1.3328715722394984e-05,
+          -0.002994591059298543
+        ],
+        "801_128": [
+          0.0032117115354376525,
+          1.9142837744037377e-06,
+          -1.3328698518510786e-05,
+          -0.002994591165561042
+        ],
+        "801_64": [
+          0.003211711435114548,
+          1.9142839104657706e-06,
+          -1.3328697641016247e-05,
+          -0.0029945910718923658
+        ]
+      },
+      "spatial_source_refinement": 2.7233767324608138e-11,
+      "time_source_refinement": 1.003231044245656e-10
+    },
+    "4_-1": {
+      "Gaussian_source_endpoint": 2.02993557293224e-12,
+      "KS_PG_matrix": 8.188212781423676e-11,
+      "KS_endpoint_matrix": 8.293598980172614e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06561790483353694,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.309776547636643e-09,
+          "KS_endpoint": 1.7037831062660658e-08,
+          "source_endpoint": 6.390838153819134e-10
+        },
+        "801_128": {
+          "KS_PG": 8.188212781423676e-11,
+          "KS_endpoint": 8.293598980172614e-10,
+          "source_endpoint": 2.02993557293224e-12
+        },
+        "801_64": {
+          "KS_PG": 8.188212781423676e-11,
+          "KS_endpoint": 1.6743960370990685e-08,
+          "source_endpoint": 6.32703266514878e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.003960765532870489,
+          2.3584521967883897e-06,
+          -1.098080619088035e-05,
+          -0.003700016503798011
+        ],
+        "801_128": [
+          0.003960765629609085,
+          2.3583632104006596e-06,
+          -1.0980759227859431e-05,
+          -0.003700016652961653
+        ],
+        "801_64": [
+          0.003960765505794467,
+          2.3583633201187753e-06,
+          -1.0980758167438007e-05,
+          -0.0037000165372152345
+        ]
+      },
+      "spatial_source_refinement": 8.887666961437425e-11,
+      "time_source_refinement": 1.238146182802602e-10
+    },
+    "4_1": {
+      "Gaussian_source_endpoint": 2.0299357897726744e-12,
+      "KS_PG_matrix": 8.188212781423676e-11,
+      "KS_endpoint_matrix": 8.293598980172614e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06561790483353694,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 1.309776547636643e-09,
+          "KS_endpoint": 1.7037831062660658e-08,
+          "source_endpoint": 6.390838136471899e-10
+        },
+        "801_128": {
+          "KS_PG": 8.188212781423676e-11,
+          "KS_endpoint": 8.293598980172614e-10,
+          "source_endpoint": 2.0299357897726744e-12
+        },
+        "801_64": {
+          "KS_PG": 8.188212781423676e-11,
+          "KS_endpoint": 1.6743960370990685e-08,
+          "source_endpoint": 6.327032682496014e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.003960765532870489,
+          2.3584521967883897e-06,
+          -1.0980806190880192e-05,
+          -0.0037000165037980115
+        ],
+        "801_128": [
+          0.003960765629609085,
+          2.3583632104006325e-06,
+          -1.0980759227859314e-05,
+          -0.003700016652961653
+        ],
+        "801_64": [
+          0.003960765505794466,
+          2.358363320118667e-06,
+          -1.0980758167437882e-05,
+          -0.0037000165372152337
+        ]
+      },
+      "spatial_source_refinement": 8.887666972279447e-11,
+      "time_source_refinement": 1.2381461914762193e-10
+    },
+    "5_-1": {
+      "Gaussian_source_endpoint": 3.3634406837370484e-12,
+      "KS_PG_matrix": 1.275741196710145e-10,
+      "KS_endpoint_matrix": 9.802045896679496e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06563005207375956,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.0404400755819063e-09,
+          "KS_endpoint": 2.028743993631732e-08,
+          "source_endpoint": 7.60048967339555e-10
+        },
+        "801_128": {
+          "KS_PG": 1.275741196710145e-10,
+          "KS_endpoint": 9.802045896679496e-10,
+          "source_endpoint": 3.3634406837370484e-12
+        },
+        "801_64": {
+          "KS_PG": 1.2757412314046146e-10,
+          "KS_endpoint": 1.9843070311886812e-08,
+          "source_endpoint": 7.49884162577763e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.004694315671361052,
+          2.793758106577445e-06,
+          -9.361727337592826e-06,
+          -0.004389969647554988
+        ],
+        "801_128": [
+          0.004694315757622617,
+          2.7935393426503055e-06,
+          -9.361622047099344e-06,
+          -0.004389969858898401
+        ],
+        "801_64": [
+          0.004694315610748464,
+          2.7935393878559525e-06,
+          -9.361620702648543e-06,
+          -0.00438996972155126
+        ]
+      },
+      "spatial_source_refinement": 2.1871872149244014e-10,
+      "time_source_refinement": 1.4687415259700964e-10
+    },
+    "5_1": {
+      "Gaussian_source_endpoint": 3.3634410632078088e-12,
+      "KS_PG_matrix": 1.275741196710145e-10,
+      "KS_endpoint_matrix": 9.802045896679496e-10,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06563005207375956,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.0404400755819063e-09,
+          "KS_endpoint": 2.028743993631732e-08,
+          "source_endpoint": 7.600489708090019e-10
+        },
+        "801_128": {
+          "KS_PG": 1.275741196710145e-10,
+          "KS_endpoint": 9.802045896679496e-10,
+          "source_endpoint": 3.3634410632078088e-12
+        },
+        "801_64": {
+          "KS_PG": 1.2757412314046146e-10,
+          "KS_endpoint": 1.9843070311886812e-08,
+          "source_endpoint": 7.498841608430395e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.004694315671361051,
+          2.7937581065768757e-06,
+          -9.361727337592738e-06,
+          -0.004389969647554987
+        ],
+        "801_128": [
+          0.004694315757622617,
+          2.7935393426497092e-06,
+          -9.361622047099273e-06,
+          -0.004389969858898401
+        ],
+        "801_64": [
+          0.004694315610748465,
+          2.7935393878554375e-06,
+          -9.361620702648531e-06,
+          -0.00438996972155126
+        ]
+      },
+      "spatial_source_refinement": 2.1871872143823003e-10,
+      "time_source_refinement": 1.468741517296479e-10
+    },
+    "6_-1": {
+      "Gaussian_source_endpoint": 5.157574888003946e-12,
+      "KS_PG_matrix": 1.867259402654753e-10,
+      "KS_endpoint_matrix": 1.1274256310397913e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06877274232876404,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.986164371332478e-09,
+          "KS_endpoint": 2.353915690145314e-08,
+          "source_endpoint": 8.80791278454196e-10
+        },
+        "801_128": {
+          "KS_PG": 1.867259402654753e-10,
+          "KS_endpoint": 1.1274256310397913e-09,
+          "source_endpoint": 5.157574888003946e-12
+        },
+        "801_64": {
+          "KS_PG": 1.8672593506130486e-10,
+          "KS_endpoint": 2.29042039778804e-08,
+          "source_endpoint": 8.656026329739719e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.005418678796440047,
+          3.2242765003967922e-06,
+          -8.174925874337607e-06,
+          -0.0050707522697678075
+        ],
+        "801_128": [
+          0.005418678846296977,
+          3.2238188196962705e-06,
+          -8.174718492568277e-06,
+          -0.005070752573090882
+        ],
+        "801_64": [
+          0.0054186786765917025,
+          3.2238187571453133e-06,
+          -8.174716761462215e-06,
+          -0.005070752414423353
+        ]
+      },
+      "spatial_source_refinement": 4.577432514789575e-10,
+      "time_source_refinement": 1.6970527413895375e-10
+    },
+    "6_1": {
+      "Gaussian_source_endpoint": 5.157574264587697e-12,
+      "KS_PG_matrix": 1.867259402654753e-10,
+      "KS_endpoint_matrix": 1.1274256310397913e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06877274232876404,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 2.986164371332478e-09,
+          "KS_endpoint": 2.353915690145314e-08,
+          "source_endpoint": 8.807912801889195e-10
+        },
+        "801_128": {
+          "KS_PG": 1.867259402654753e-10,
+          "KS_endpoint": 1.1274256310397913e-09,
+          "source_endpoint": 5.157574264587697e-12
+        },
+        "801_64": {
+          "KS_PG": 1.8672593506130486e-10,
+          "KS_endpoint": 2.29042039778804e-08,
+          "source_endpoint": 8.656026364434188e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0054186787964400455,
+          3.2242765003960604e-06,
+          -8.17492587433771e-06,
+          -0.005070752269767805
+        ],
+        "801_128": [
+          0.005418678846296975,
+          3.22381881969562e-06,
+          -8.17471849256845e-06,
+          -0.00507075257309088
+        ],
+        "801_64": [
+          0.005418678676591699,
+          3.2238187571445543e-06,
+          -8.174716761462377e-06,
+          -0.005070752414423351
+        ]
+      },
+      "spatial_source_refinement": 4.5774325150606254e-10,
+      "time_source_refinement": 1.6970527587367723e-10
+    },
+    "7_-1": {
+      "Gaussian_source_endpoint": 7.477857281957753e-12,
+      "KS_PG_matrix": 2.6101583568138853e-10,
+      "KS_endpoint_matrix": 1.2714867589200141e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06576888378212892,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 4.173670355503423e-09,
+          "KS_endpoint": 2.6811735970300177e-08,
+          "source_endpoint": 1.0020135519928086e-09
+        },
+        "801_128": {
+          "KS_PG": 2.6101583568138853e-10,
+          "KS_endpoint": 1.2714867589200141e-09,
+          "source_endpoint": 7.477857281957753e-12
+        },
+        "801_64": {
+          "KS_PG": 2.610158322119416e-10,
+          "KS_endpoint": 2.5941130493700726e-08,
+          "source_endpoint": 9.803836241092934e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.006137114196876396,
+          3.6519452519660517e-06,
+          -7.266665098284564e-06,
+          -0.0057456174223501685
+        ],
+        "801_128": [
+          0.006137114173266791,
+          3.6510865392912185e-06,
+          -7.266293428158622e-06,
+          -0.005745617859981446
+        ],
+        "801_64": [
+          0.006137113980851524,
+          3.6510863203990127e-06,
+          -7.266291203483578e-06,
+          -0.005745617680173064
+        ]
+      },
+      "spatial_source_refinement": 8.589315670390688e-10,
+      "time_source_refinement": 1.924152668794643e-10
+    },
+    "7_1": {
+      "Gaussian_source_endpoint": 7.477857715638622e-12,
+      "KS_PG_matrix": 2.6101583568138853e-10,
+      "KS_endpoint_matrix": 1.2714867589200141e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06576888378212892,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 4.173670355503423e-09,
+          "KS_endpoint": 2.6811735970300177e-08,
+          "source_endpoint": 1.0020135502580851e-09
+        },
+        "801_128": {
+          "KS_PG": 2.6101583568138853e-10,
+          "KS_endpoint": 1.2714867589200141e-09,
+          "source_endpoint": 7.477857715638622e-12
+        },
+        "801_64": {
+          "KS_PG": 2.610158322119416e-10,
+          "KS_endpoint": 2.5941130493700726e-08,
+          "source_endpoint": 9.803836267113786e-10
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.006137114196876398,
+          3.651945251965618e-06,
+          -7.26666509828432e-06,
+          -0.005745617422350169
+        ],
+        "801_128": [
+          0.006137114173266792,
+          3.6510865392907035e-06,
+          -7.266293428158341e-06,
+          -0.0057456178599814495
+        ],
+        "801_64": [
+          0.006137113980851525,
+          3.651086320398308e-06,
+          -7.266291203483187e-06,
+          -0.005745617680173066
+        ]
+      },
+      "spatial_source_refinement": 8.589315673101193e-10,
+      "time_source_refinement": 1.9241526774682605e-10
+    },
+    "8_-1": {
+      "Gaussian_source_endpoint": 1.038980495604927e-11,
+      "KS_PG_matrix": 3.521343407836275e-10,
+      "KS_endpoint_matrix": 1.4125406426690144e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06701625703319775,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.6298411800492776e-09,
+          "KS_endpoint": 3.011755367321456e-08,
+          "source_endpoint": 1.1241966108022083e-09
+        },
+        "801_128": {
+          "KS_PG": 3.521343407836275e-10,
+          "KS_endpoint": 1.4125406426690144e-09,
+          "source_endpoint": 1.038980495604927e-11
+        },
+        "801_64": {
+          "KS_PG": 3.5213433557945706e-10,
+          "KS_endpoint": 2.896184195244622e-08,
+          "source_endpoint": 1.0945309832088856e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.006851489078775313,
+          4.077925438035024e-06,
+          -6.548828987124022e-06,
+          -0.006416428953264532
+        ],
+        "801_128": [
+          0.006851488931522865,
+          4.0764380039681844e-06,
+          -6.548209733168977e-06,
+          -0.006416429581664405
+        ],
+        "801_64": [
+          0.006851488716455844,
+          4.076437574745826e-06,
+          -6.548206903351295e-06,
+          -0.0064164293808379805
+        ]
+      },
+      "spatial_source_refinement": 1.4878632891978261e-09,
+      "time_source_refinement": 2.1506702148343937e-10
+    },
+    "8_1": {
+      "Gaussian_source_endpoint": 1.0389805986041334e-11,
+      "KS_PG_matrix": 3.521343407836275e-10,
+      "KS_endpoint_matrix": 1.4125406426690144e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06701625703319775,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 5.6298411800492776e-09,
+          "KS_endpoint": 3.011755367321456e-08,
+          "source_endpoint": 1.124196605598038e-09
+        },
+        "801_128": {
+          "KS_PG": 3.521343407836275e-10,
+          "KS_endpoint": 1.4125406426690144e-09,
+          "source_endpoint": 1.0389805986041334e-11
+        },
+        "801_64": {
+          "KS_PG": 3.5213433557945706e-10,
+          "KS_endpoint": 2.896184195244622e-08,
+          "source_endpoint": 1.0945309797394387e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.0068514890787753115,
+          4.077925438037246e-06,
+          -6.548828987124464e-06,
+          -0.006416428953264527
+        ],
+        "801_128": [
+          0.006851488931522865,
+          4.076438003969946e-06,
+          -6.5482097331693506e-06,
+          -0.006416429581664404
+        ],
+        "801_64": [
+          0.006851488716455842,
+          4.07643757474813e-06,
+          -6.5482069033517656e-06,
+          -0.006416429380837979
+        ]
+      },
+      "spatial_source_refinement": 1.487863289116511e-09,
+      "time_source_refinement": 2.1506702321816284e-10
+    },
+    "9_-1": {
+      "Gaussian_source_endpoint": 1.39589020138782e-11,
+      "KS_PG_matrix": 4.6175793570746304e-10,
+      "KS_endpoint_matrix": 1.5505743875883325e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06965462449375767,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 7.381298832570549e-09,
+          "KS_endpoint": 3.346662419412283e-08,
+          "source_endpoint": 1.2477076715561308e-09
+        },
+        "801_128": {
+          "KS_PG": 4.6175793570746304e-10,
+          "KS_endpoint": 1.5505743875883325e-09,
+          "source_endpoint": 1.39589020138782e-11
+        },
+        "801_64": {
+          "KS_PG": 4.6175792703384566e-10,
+          "KS_endpoint": 3.197138265242927e-08,
+          "source_endpoint": 1.2082356816434103e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "signed_input_identity": 0.0,
+      "source_by_configuration": {
+        "401_64": [
+          0.007562955170762227,
+          4.502985297656322e-06,
+          -5.967088662267275e-06,
+          -0.00708433652611176
+        ],
+        "801_128": [
+          0.007562954834995396,
+          4.500563046401984e-06,
+          -5.966115681656256e-06,
+          -0.0070843374167920145
+        ],
+        "801_64": [
+          0.007562954597295357,
+          4.500562347488617e-06,
+          -5.966112131146837e-06,
+          -0.00708433719503667
+        ]
+      },
+      "spatial_source_refinement": 2.422950167704687e-09,
+      "time_source_refinement": 2.377000393391504e-10
+    },
+    "9_1": {
+      "Gaussian_source_endpoint": 1.3958900414679995e-11,
+      "KS_PG_matrix": 4.6175793570746304e-10,
+      "KS_endpoint_matrix": 1.5505743875883325e-09,
+      "causal_buffer": 0.610260483352191,
+      "flux": 2.6645352591003757e-15,
+      "local_derivative_minus_incoming_label": 0.06965462449375767,
+      "matrix_by_configuration": {
+        "401_64": {
+          "KS_PG": 7.381298832570549e-09,
+          "KS_endpoint": 3.346662419412283e-08,
+          "source_endpoint": 1.247707670688769e-09
+        },
+        "801_128": {
+          "KS_PG": 4.6175793570746304e-10,
+          "KS_endpoint": 1.5505743875883325e-09,
+          "source_endpoint": 1.3958900414679995e-11
+        },
+        "801_64": {
+          "KS_PG": 4.6175792703384566e-10,
+          "KS_endpoint": 3.197138265242927e-08,
+          "source_endpoint": 1.2082356781739634e-09
+        }
+      },
+      "phase": 2.3314786774249395e-15,
+      "source_by_configuration": {
+        "401_64": [
+          0.007562955170762225,
+          4.5029852976590054e-06,
+          -5.967088662267779e-06,
+          -0.007084336526111758
+        ],
+        "801_128": [
+          0.007562954834995398,
+          4.500563046404884e-06,
+          -5.966115681656788e-06,
+          -0.007084337416792012
+        ],
+        "801_64": [
+          0.007562954597295355,
+          4.500562347491545e-06,
+          -5.966112131147417e-06,
+          -0.007084337195036669
+        ]
+      },
+      "spatial_source_refinement": 2.4229501674607416e-09,
+      "time_source_refinement": 2.3770004280859736e-10
+    }
+  },
+  "reproducer": "python3 scripts/derive_nsc_nonlinear_ks_source.py --check",
+  "schema": "NSC-NONLINEAR-KS-SOURCE-v1",
+  "source_hashes": {
+    "docs/nsc-nonlinear-ks-source.md": "3380ee7cff10e8120ec17b985479fd19c00c15a608eb756dd244ade97971bd82",
+    "scripts/derive_nsc_nonlinear_ks_source.py": "f9310a2b07de5f90d6e75f0346fce51bf4835ecb7e0590741a98698b6c9dd975",
+    "src/recursive_horizons/nsc_nonlinear_ks_source.py": "969b8f77c694d356d8ca654312e986323326a3b9462f42c2d8bd14c9853882cb",
+    "tests/test_nsc_nonlinear_ks_source.py": "163423c7dc5749e6f056858587aae3488a3057456a6e87b3c55be7278c177fa7"
+  },
+  "status": "PASS: nonlinear common-representation Gaussian source on inherited spectral sample",
+  "tolerances": {
+    "Gaussian_source_endpoint": 3e-08,
+    "KS_PG_matrix": 3e-08,
+    "KS_endpoint_matrix": 3e-08,
+    "flux": 3e-11,
+    "old_endpoint_field": 3e-11,
+    "phase": 3e-11,
+    "signed_input_identity": 3e-11,
+    "spatial_source_refinement": 3e-08,
+    "time_source_refinement": 3e-08
+  }
+}

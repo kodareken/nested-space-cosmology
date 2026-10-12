@@ -1,145 +1,43 @@
-# The NSC papers and their relationship
+# Paper guide
 
-These documents belong to the exterior-first research programme. One retained
-operator-inheritance approach is organized by
-
-$$
-\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta.
-$$
-
-The relation is the inheritance postulate. Its recorded finite operator,
-Schur-complement, recursion and transfer calculations remain reusable within
-their stated domains. Continuing the local calculation does not erase them.
-
-The latest user instruction directs the active task. An accepted conversation
-plan applies where it stays compatible with that instruction and does not
-override later steering. NSC seeks the shared structure of nested regions and
-the local response that structure leaves. Dated manuscript wording and
-archived execution notes do not override that scope. Cosmological
-background/perturbation matching remains subsequent work.
+The one living manuscript is **Nested-Space Cosmology: The Geometry of a Universe**:
+[Markdown source](../paper/nested-space-cosmology.md) and
+[illustrated PDF](../paper/nested-space-cosmology.pdf). Its revision is independent
+of the software release. Future writing updates these files. The
+[catalog](../paper/catalog.json) identifies current, supporting and historical editions.
 
 ## The common research thread
 
-The shared question is how a region's boundaries, surrounding structure and
-state shape what an observer inside can measure. The papers develop different
-parts of that question; they do not yet supply a single closed cosmological
-derivation.
+Regions, boundaries and fields define possible nested geometries. Attachment and
+initial state then determine what an interior observer can access and measure.
+Spherical symmetry supplies the first tractable charts; it does not assert global
+multi-hole topology or a literal shape for every particle.
 
-| Document | Role in that question | Remaining connection |
-| --- | --- | --- |
-| Foundation | Proposes spectrum inheritance and relates boundary operators, state, stress and local response | Physical inheritance and the universal-action closure remain hypotheses |
-| Finite companion | Calculates finite transport, geometric feedback and memory for its declared realization | Its unresolved complement is a mode space, not an established spacetime parent |
-| Current atlas | Supplies candidate geometry, causal access and a conditional field transmission to an interior observer | Exterior preparation, state selection and a discriminating cosmological observable remain open |
+The paper moves from motivation and mathematical language to the map, causal
+access, calculated responses and missing physical connections. The scalar pulse
+and finite transfer/memory results retain their different domains. A mode-space
+complement is not automatically an exterior spacetime. Descent, attachment,
+influence and correlation remain distinct.
 
-The spherical idea supplies round boundary surfaces, areal radius, radial
-propagation and tractable junction laws. A periodic radial realization, a
-regular three-ball and a closed three-sphere have different topologies. A
-parent containing separated holes need not be globally spherical. The atlas
-uses local spherical charts where justified without identifying those
-different constructions.
+## Supporting and historical editions
 
-The new scalar calculation is a concrete geometry-to-field interface, but
-its incoming characteristic is supplied data. It does not yet identify the
-companion's reduced memory operator with a cosmological parent's field
-response. A later use of that machinery must name the physical operator,
-regional projection, state and clock before equating the two descriptions.
+- [Foundation v0.26.0 PDF](../paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf),
+  [source](../paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.md) and
+  [archive receipt](../paper/archive/foundation-v0.26.0/archive-manifest.json),
+  retaining metadata, claim bindings and the renderer.
+- [Regional Transfer, Geometric Feedback, and Local Memory](../paper/finite-regeneration.pdf):
+  the finite realization article, [LaTeX](../paper/finite-regeneration/main.tex)
+  and [evidence manifest](../paper/finite-regeneration-manifest.json).
+- [Local incoming-gate companion](../paper/local-incoming-gate-draft.pdf):
+  the preserved OPEN application checkpoint; its campaign remains paused.
+- Atlas [v1 evidence](../results/development/nsc-cosmological-atlas-v1/narrative.md),
+  [v2 manuscript](../paper/atlas-working-draft.md),
+  [v3](../paper/atlas-working-draft-v3.md), [v4](../paper/atlas-working-draft-v4.md),
+  [v5](../paper/atlas-working-draft-v5.md), [v6](../paper/atlas-working-draft-v6.md):
+  source-bound historical stages, not competing current drafts.
 
-## Foundational manuscript
-
-The current working extension is
-[A Finite Atlas of Nested Cosmologies: Branching, Junctions and Observer Response, working v6](../paper/atlas-working-draft-v6.md).
-It is an illustrated, unpublished draft in the companion research direction,
-not a new release or a replacement for either frozen edition below. It combines
-published two-hole spatial data, source conservation and a signed moving wall
-with an explicit sourced initial slice. End-only gluing supplies a justified
-common-parent existence family; a finite vacuum observer domain supplies a
-geometric degeneracy. The causal section locates centre, wall and parent
-observers in the borrowed isolated history, with matched spacetime charts,
-an emission-specific access table and two distinct horizons. Earlier signals
-may arrive after the chosen slice. The new field section supplies a classical
-conformal scalar, its initial-boundary state and a calculated central waveform.
-Remote preparation and smooth exterior scattering remain open, alongside
-regular formation, the glued parent's global future and stability. The
-[atlas v6 owner](../lab/docs/nsc-cosmological-atlas-v6.md) routes its figures,
-records, source bindings and independent checks. The
-[v2 working manuscript](../paper/atlas-working-draft.md) and
-[v3 manuscript](../paper/atlas-working-draft-v3.md) and
-[v4 manuscript](../paper/atlas-working-draft-v4.md) and
-[v5 manuscript](../paper/atlas-working-draft-v5.md) remain sealed with
-their own evidence. The catalog retains its two
-released document roles until an intentional manuscript release is ready.
-
-[Nested-Space Cosmology, v0.26.0 (43-page PDF)](../paper/nested-space-cosmology.pdf) ·
-[Markdown source](../paper/nested-space-cosmology.md) ·
-[Metadata](../paper/metadata.json) · [Build manifest](../paper/build-manifest.json)
-
-This is the broad working preprint dated 15 September 2026. It contains the
-physical motivation, one-spectrum/inheritance formulation, operator and source
-calculations, developments up to that date, limitations and references. Its
-source and PDF are preserved byte-for-byte. Statements about the next step in
-that dated version are historical; current work is described in
-[the current-result page](current-result.md).
-
-## Current focused companion
-
-[Regional Transfer, Geometric Feedback, and Local Memory (14-page PDF)](../paper/finite-regeneration.pdf) ·
-[LaTeX source](../paper/finite-regeneration/main.tex) ·
-[arXiv source package](../paper/finite-regeneration-arxiv.tar.gz) ·
-[Build manifest](../paper/finite-regeneration-manifest.json)
-
-The 1 October 2026 edition presents the measured finite spherical realization:
-regional source differences, surface exchange, actual metric response,
-maintained localization, and a local response on the same generated trajectory.
-The finite operator inheritance construction is reused in its stated domain.
-Source controls, matched proper clocks, independent curvature jets, and causal
-omission errors are reported with their own numerical comparisons. This is
-the current edition of the focused companion, alongside the preserved foundation.
-
-The pinned science is commit 8a52257fc2829c73d485c7b4c6e310baadfe3c38.
-The [evidence snapshot](../paper/finite-regeneration/evidence/snapshot.json)
-authenticates its complete declared source/input graph, including historical
-source contexts. Tectonic 0.17.0 produced two byte-identical clean cached builds;
-fonts are embedded and text is searchable. The source package contains the
-manuscript, bibliography, generated bibliography, and four used figure PDFs.
-The actual arXiv TeX Live processor and human author review remain pending.
-
-## Historical focused edition
-
-[Nested Qualities and Local Responses (5-page PDF)](../paper/local-incoming-gate-draft.pdf) ·
-[Preserved source](../paper/local-gate-draft/main.tex) ·
-[Source archive](../paper/local-incoming-gate-draft-source.tar.gz) ·
-[Build manifest](../paper/local-gate-draft-manifest.json)
-
-The 27 September 2026 edition retains its finite nested-operator theorem and
-historical incoming-gate appendix. Its source, PDF, archive and manifest stay
-unchanged. The [proof note](nsc-nested-qualities.md) and
-[frozen exact-control snapshot](../paper/nested-quality-evidence/snapshot.json)
-remain available. Earlier editions are history of this same companion;
-they do not create another active paper role.
-
-## Status and verification owners
-
-[Current result](current-result.md) owns scientific status, and
-[the finite realization note](../lab/docs/nsc-spherical-conformal-continuation.md)
-routes the numerical owners. [The catalog](../paper/catalog.json) has two
-active document roles: the foundation and the current focused companion,
-with historical companion links. The measured finite result and the OPEN,
-paused incoming-gate application have separate status fields.
-
-Use the read-only command:
-
-~~~sh
-make finite-check
-~~~
-
-It authenticates the declared evidence graph, source package and PDF without
-repeating a scientific campaign or compiling TeX. An intentional new article
-build uses the pinned project builder through make finite-paper. The historical
-[OPEN draft guide](local-gate-draft.md) remains its old edition's verification
-owner. [Reproduction](reproducing.md) explains both paths. The measured result
-supports the new v0.27.0 publication; the frozen foundation remains v0.26.0.
-
-The [v0.27.0 research release](https://github.com/kodareken/nested-space-cosmology/releases/tag/v0.27.0)
-is published. Its [verification receipt](../results/releases/v0.27.0.json)
-records the science and publication commits, annotated tag, successful CI run,
-and the hashes of all five downloaded assets.
+Historical text retains original logical paths. Materialize its original layout
+with `python scripts/replay_history.py prepare` when following old `lab/` links.
+The living paper uses root paths. The [reproduction guide](reproducing.md)
+distinguishes authentication, numerical replay and publication builds.
+No arXiv submission occurred in reassembly.
