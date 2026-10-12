@@ -32,9 +32,9 @@
       "sha256": "210bef4360b7cdfec7c443068d69ec538c8706b9f507a3f0b9ae0ccd7350dac0"
     },
     {
-      "bytes": 1367,
+      "bytes": 1780,
       "path": ".github/workflows/verify.yml",
-      "sha256": "4f50bc82f3de57fc5837b5dd4f86d6040e1c27df923c1f0bbb36739566ce2ae1"
+      "sha256": "f6bf3a2ed6ae73cd8ef396fbcdb1e6f5b431bb43d9bca20d4bbe2cd81f55fd14"
     },
     {
       "bytes": 356,
@@ -65625,6 +65625,11 @@
       "bytes": 7629,
       "path": "scripts/derive_nsc_window_shell_share.py",
       "sha256": "5606351b18020693333a5325e3337221e73d89ed705a8de588f75d686e08c8e9"
+    },
+    {
+      "bytes": 2351,
+      "path": "scripts/diagnose_history_replay.py",
+      "sha256": "ea654d49f7b9d4c5c4c40704d0984a387e6f516cc732fb8b61a07cace8a54b8a"
     },
     {
       "bytes": 25859,
