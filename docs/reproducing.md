@@ -175,6 +175,18 @@ run now logs that runtime, and a failure preserves original-producer outputs
 and field-level comparison diagnostics. A successful later run does not
 certify identical replay on every machine or excuse a future mismatch.
 
+A subsequent [v5 diagnostic run](https://github.com/kodareken/nested-space-cosmology/actions/runs/38313295989/job/115024003729)
+retained a PNG mismatch while its SVG matched exactly and its JSON passed
+the original numerical tolerance. That runner selected OpenBLAS SkylakeX;
+the producing host selects Haswell in both NumPy and SciPy. The Windows
+replay jobs now explicitly select and verify `OPENBLAS_CORETYPE=Haswell`
+before running the unchanged checkers. This binds a previously automatic
+runtime choice using [OpenBLAS's documented selector](https://github.com/OpenMathLib/OpenBLAS/blob/develop/USAGE.md),
+without changing evidence or tolerances. It does not retrospectively identify
+the uncaptured first v8 mismatch. For local PowerShell replay in a compatible
+x86-64 environment, set `$env:OPENBLAS_CORETYPE='Haswell'` before the commands
+above; other processor architectures require their own established profile.
+
 The former `make reproduce`, `make reproduce-development` and `make reproduce-exact`
 campaign routes now stop with guidance. Their frozen release inputs differ from
 the merged current sources; running the old producer against the current package
