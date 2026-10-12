@@ -177,8 +177,10 @@ certify identical replay on every machine or excuse a future mismatch.
 
 A subsequent [v5 diagnostic run](https://github.com/kodareken/nested-space-cosmology/actions/runs/38313295989/job/115024003729)
 retained a PNG mismatch while its SVG matched exactly and its JSON passed
-the original numerical tolerance. That runner selected OpenBLAS SkylakeX;
-the producing host selects Haswell in both NumPy and SciPy. The Windows
+the original numerical tolerance. Only two pixels differed, each by one
+red/green level. That runner selected OpenBLAS SkylakeX; the known passing
+local replay selects Haswell in both NumPy and SciPy. The original atlas
+manifests did not record CPU dispatch. The Windows
 replay jobs now explicitly select and verify `OPENBLAS_CORETYPE=Haswell`
 before running the unchanged checkers. This binds a previously automatic
 runtime choice using [OpenBLAS's documented selector](https://github.com/OpenMathLib/OpenBLAS/blob/develop/USAGE.md),
