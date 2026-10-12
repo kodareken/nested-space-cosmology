@@ -1,12 +1,11 @@
 {
   "boundary_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
+  "envelope_scope": "Envelope exclusions do not imply exclusion from Git or public access. Root archive/ is tracked and authenticated separately; paper/archive/ is included here.",
   "excluded_category_summaries": [
-    "active lab subtree authenticated separately by docs/lab-snapshot.json",
-    "historical FGC configurations, runners, certificates, and tests",
-    "raw campaign stores and local scientific data",
-    "superseded manuscripts, generated previews, and caches",
-    "private plans, host paths, refs, reflogs, and development history",
-    "NSC experiments outside the current frontier dependency closure"
+    "root archive/ preservation carriers authenticated separately by the reassembly manifest",
+    "retired lab/ and old nested checkout containers, if present locally",
+    "local Git metadata, build/replay directories, virtual environments and caches",
+    "machine-local agent configuration, runtime state and research-reset backup"
   ],
   "export_timestamp_utc": "2026-10-01T00:00:00Z",
   "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
@@ -15,7 +14,7 @@
   "foundation_version": "0.26.0",
   "frontier_artifact_id": "NSC-2-ZETA1-RECURSION-MAP",
   "frontier_sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
-  "historical_archive_location": "not_public",
+  "historical_archive_location": "archive/",
   "included_paths": [
     {
       "bytes": 528,
@@ -33,9 +32,9 @@
       "sha256": "210bef4360b7cdfec7c443068d69ec538c8706b9f507a3f0b9ae0ccd7350dac0"
     },
     {
-      "bytes": 693,
+      "bytes": 1367,
       "path": ".github/workflows/verify.yml",
-      "sha256": "3c795f60da22a9efcadd240ed9dd61193a7b3d5023bff50670000f4b52608340"
+      "sha256": "4f50bc82f3de57fc5837b5dd4f86d6040e1c27df923c1f0bbb36739566ce2ae1"
     },
     {
       "bytes": 356,
@@ -73,14 +72,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 2813,
+      "bytes": 2855,
       "path": "Makefile",
-      "sha256": "72b29433d160fb1715f048047cacae8575d6704b3cdb36cb68eef2cc3deb8a80"
+      "sha256": "7725332b3ffd9dfc7945a79138e9ae5e49dae2792d65d327e01a5527830c2fae"
     },
     {
-      "bytes": 2708,
+      "bytes": 3075,
       "path": "README.md",
-      "sha256": "e5b180ed123f0d098f92944a84933efd211e0cc510d66bd76fb6f6beca2ab96f"
+      "sha256": "db554becae6b8309a5929183c4c1bdbd4a0ccb669c5de3ad308ac0718fb15725"
     },
     {
       "bytes": 629,
@@ -3158,9 +3157,9 @@
       "sha256": "3bf11e41feb6a597b94817ea01abd6384f0ce1c1873a4feb6853abc9c6a436d1"
     },
     {
-      "bytes": 4856,
+      "bytes": 6788,
       "path": "docs/reproducing.md",
-      "sha256": "f8e750962eb2bd01f3b99608f56610b0a371a21c31c1c126e3d009c749b478ec"
+      "sha256": "6af20d15499b3ad47f71c17082064b0dd5ee99337e70da8647b6983b07f84982"
     },
     {
       "bytes": 23007,
@@ -3501,6 +3500,11 @@
       "bytes": 1246,
       "path": "pyproject.toml",
       "sha256": "285ad0cf5a28f6484106a8812e3e9085fa0f4f9b5f91dc57145fa1868e3212f6"
+    },
+    {
+      "bytes": 540,
+      "path": "requirements-history.txt",
+      "sha256": "2e523bd0c67f1e2558995bd68477d83e277ca7c87a3a94238f9f221725c9a095"
     },
     {
       "bytes": 50,
@@ -62658,9 +62662,9 @@
       "sha256": "210e9cb7d187c6fd7d4e9fbf7b5bf029078d74f7a99776ac2ef0dc4782f9b17e"
     },
     {
-      "bytes": 5479,
+      "bytes": 5722,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "8f491b530762a91839074933b398552de7ce1da7fc75746a958f18ed0be49d91"
+      "sha256": "6a1b8b290d5bc9d6b4fc4cdc75cc0512229078d2bb192ee7bee134064a3d4127"
     },
     {
       "bytes": 17236,
@@ -70279,6 +70283,7 @@
     }
   ],
   "lab_snapshot_sha256": "534eb39564e0444f3a945ff2015f863cd74cde6494c20a15d3fe9a52c5ca0258",
+  "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-12",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",

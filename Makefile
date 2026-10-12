@@ -1,4 +1,5 @@
 PYTHON ?= python3
+HISTORY_PYTHON ?= $(PYTHON)
 JOBS ?= auto
 
 .PHONY: help install verify reproduce reproduce-development reproduce-exact paper paper-check test check
@@ -15,7 +16,7 @@ help:
 	@echo "  make paper-check      rebuild twice and verify deterministic bytes"
 	@echo "  make draft-check      authenticate the focused OPEN draft and its evidence"
 	@echo "  make finite-check     authenticate the measured finite-realization article and complete evidence graph"
-	@echo "  make history-check    replay all six atlases and authenticate supporting editions"
+	@echo "  make history-check    replay original editions with the selected HISTORY_PYTHON profile"
 	@echo "  make verify           validate the current paper, atlas and preserved editions"
 
 install:
@@ -46,7 +47,7 @@ verify: check test paper-check history-check
 
 .PHONY: history-check
 history-check:
-	$(PYTHON) scripts/replay_history.py all
+	$(HISTORY_PYTHON) scripts/replay_history.py all
 
 .PHONY: finite-paper finite-check
 finite-paper:

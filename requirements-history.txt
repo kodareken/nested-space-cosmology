@@ -1,0 +1,14 @@
+# Explicit Windows / Python 3.14.8 profile for the frozen atlas v1-v6 checkers.
+# Keep separate from the current manuscript's Matplotlib 3.11.1 environment.
+# NumPy/SciPy/SymPy/Matplotlib versions are recorded by all six atlas manifests.
+mpmath==1.3.0
+numpy==2.5.1
+scipy==1.17.1
+sympy==1.14.0
+threadpoolctl==3.6.0
+matplotlib==3.11.2
+# Pillow is a verified replay pin; its version was not recorded in the atlases.
+# ReportLab and pytest support the preserved-edition and historical test checks.
+Pillow==12.3.0
+reportlab==4.4.9
+pytest==9.1.1

@@ -106,15 +106,18 @@ def main() -> int:
         "frontier_sha256": sha256(FRONTIER),
         "follow_up_artifact_id": "NSC-2-ZETA1-UNIT-CLOSURE-CHECK",
         "follow_up_sha256": sha256(ROOT / "results" / "nsc-2-zeta1-unit-closure-check.json"),
-        "historical_archive_location": "not_public",
+        "historical_archive_location": "archive/",
+        "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
+        "envelope_scope": (
+            "Envelope exclusions do not imply exclusion from Git or public access. "
+            "Root archive/ is tracked and authenticated separately; paper/archive/ is included here."
+        ),
         "lab_snapshot_sha256": sha256(ROOT / "docs/lab-snapshot.json"),
         "excluded_category_summaries": [
-            "active lab subtree authenticated separately by docs/lab-snapshot.json",
-            "historical FGC configurations, runners, certificates, and tests",
-            "raw campaign stores and local scientific data",
-            "superseded manuscripts, generated previews, and caches",
-            "private plans, host paths, refs, reflogs, and development history",
-            "NSC experiments outside the current frontier dependency closure",
+            "root archive/ preservation carriers authenticated separately by the reassembly manifest",
+            "retired lab/ and old nested checkout containers, if present locally",
+            "local Git metadata, build/replay directories, virtual environments and caches",
+            "machine-local agent configuration, runtime state and research-reset backup",
         ],
         "included_paths": [
             {

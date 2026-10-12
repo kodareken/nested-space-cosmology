@@ -29,4 +29,23 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install -e '.[paper,dev]'
       - name: Verify repository boundary, focused tests, and paper
-        run: make check test paper-check history-check PYTHON=python
+        run: make check test paper-check PYTHON=python
+
+  historical-replay:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - name: Enable long paths for original source layouts
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14.8"
+          cache: pip
+          cache-dependency-path: requirements-history.txt
+      - name: Install the isolated historical renderer profile
+        run: python -m pip install -r requirements-history.txt
+      - name: Replay unchanged historical checkers and supporting editions
+        run: python scripts/replay_history.py all

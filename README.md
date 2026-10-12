@@ -39,13 +39,17 @@ Run from this root:
 python scripts/check_publication.py
 python scripts/check_lab_snapshot.py
 python scripts/check_claim_bindings.py
-python scripts/replay_history.py all
 python scripts/build_paper.py --check
 ```
 
 Historical atlas v1–v6 and supporting articles replay in explicitly selected
 original contexts under ignored `.build/replay`. Changed current evidence fails
 authentication; current-source mismatches never silently select historical code.
+Exact historical image replay uses a separate Windows Python 3.14.8 / Matplotlib
+3.11.2 profile; the current paper uses Matplotlib 3.11.1. Follow the
+[historical environment setup](docs/reproducing.md#preserved-editions-and-source-contexts)
+before running `scripts/replay_history.py all`, or select it through `HISTORY_PYTHON`
+when running `make verify`. GitHub checks the two profiles in separate jobs.
 New calculations require a named uncertainty and a finite budget.
 
 This is a research manuscript under development. No arXiv submission or

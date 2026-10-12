@@ -19,8 +19,10 @@ python scripts/build_paper.py --check
 The affected test suite covers atlas attachment incompatibility, disconnected
 siblings, causal delays, unequal children, clock-domain exits, unit rescaling,
 finite-depth dependence, field transfer, preservation failures and publication
-contracts. `make verify` adds explicit historical replay. Running every historical
-simulation is neither required nor authorized by these convenience commands.
+contracts. `make check test paper-check` uses the current environment. `make verify`
+also adds explicit historical replay and requires the separate `HISTORY_PYTHON`
+profile described below. Running every historical simulation is neither required
+nor authorized by these convenience commands.
 
 The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
@@ -34,6 +36,27 @@ byte equality. A failed comparison saves diagnostic PDFs and runtime details
 under ignored `.build/paper-check`; the paper workflow preserves those files.
 
 ## Preserved editions and source contexts
+
+The original atlas manifests record Python 3.14.8 and Matplotlib 3.11.2;
+byte-identical historical image replay is verified on Windows.
+Their unchanged checkers authenticate recorded files and require byte-identical
+regenerated images. This rendering profile is separate from the current paper's
+Matplotlib 3.11.1 profile. [requirements-history.txt](../requirements-history.txt)
+pins the recorded scientific versions, verified replay dependency Pillow 12.3.0
+and the historical checking tools. Pillow and pytest versions were not recorded in
+the atlas manifests. The version pins retain the recorded producer environment;
+Windows selects the platform on which exact historical replay is verified.
+Install it in an isolated environment, without installing the current
+package or its paper extras there. From Windows with Python 3.14.8 available:
+
+```powershell
+py -3.14 -m venv .venv/history
+.\.venv\history\Scripts\python.exe -m pip install -r requirements-history.txt
+.\.venv\history\Scripts\python.exe scripts/replay_history.py all
+```
+
+The following selectors use that historical interpreter (activate the environment
+first if using the short `python` command):
 
 ```sh
 python scripts/replay_history.py prepare
@@ -49,6 +72,19 @@ against those bytes, and run the original checkers. All six atlas bundles are
 recomputed within their finite domains. Supporting-paper authentication checks
 their frozen source, evidence and archives; it does not rerun their full campaigns.
 The original context contains the former foundation paper at its historical path.
+
+With Make installed, select the historical interpreter explicitly:
+
+```sh
+make history-check HISTORY_PYTHON=.venv/history/Scripts/python.exe
+make verify PYTHON=python HISTORY_PYTHON=.venv/history/Scripts/python.exe
+```
+
+`HISTORY_PYTHON` defaults to `PYTHON` for an already selected historical environment;
+it never chooses another interpreter after a failed check. GitHub Actions runs the
+current paper checks on Ubuntu and the exact historical replay in a separate Windows
+job with Python 3.14.8. Both jobs retain their original evidence comparisons. Other
+historical rendering profiles have not been established as byte-identical.
 
 Current atlas producers use root sources. Their source bindings differ from the
 historical bundles, so passing an old bundle to a current producer must fail.
