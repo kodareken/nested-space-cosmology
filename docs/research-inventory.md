@@ -91,6 +91,17 @@ The [characteristic-gravity cards](arxiv-studies.md#characteristic-gravity-libra
 retain the external reading boundary. Other census families are not
 promoted by this targeted calculation.
 
+The [source-leg mass result](nsc-atlas-source-mass.md) extends that same
+preparation to its transverse radius constraint and geometric mass.
+Independent frame conversion, mixed geometry and improved-stress formulas
+check the connection. The coordinate-invariant quantity retains its
+declared Jordan frame; it is not generally conformally invariant. A
+constant negative post-input coefficient on the finite initial surface
+does not establish a vacuum future, asymptotic energy, coupled wall motion
+or finite-amplitude validity. The [mass-law cards](arxiv-studies.md#source-leg-mass-library)
+record the borrowed equations and reading limits; other inventory strands
+remain unaffected.
+
 **Scientific reading has an explicit boundary.** Named current owners,
 supersession notes and all 17 child/neck scientific notes received a scope
 review. The independent w2 review covered charged-source, observer-clock,

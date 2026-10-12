@@ -32,7 +32,13 @@ gravitational evolution requires compatible initial data. The
 now computes the required source-leg radius correction with the original
 compact preparation, corner geometry and null normalization fixed. This
 connects the field to one gravitational constraint; transverse evolution,
-mass change and the coupled wall response remain open.
+mass change and the coupled wall response require additional equations.
+The [source-leg mass successor](nsc-atlas-source-mass.md) now supplies
+the mixed-radius connection on that same initial surface. The geometric
+mass has a negative constant quadratic coefficient after the compact
+trace, checked through full frame conversion and improved-stress transport.
+The paper distinguishes this local initial-data result from bulk evolution,
+asymptotic energy and the still-open dynamical wall response.
 
 ## Supporting and historical editions
 

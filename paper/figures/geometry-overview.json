@@ -43,6 +43,10 @@
     "slice": {
       "path": "results/development/nsc-cosmological-atlas-v4/connection-slice.json",
       "sha256": "62f12562be6c3a918dfe03a98d2af789ccfddde2c12e1aee024949017f0d1394"
+    },
+    "source_mass": {
+      "path": "results/development/nsc-atlas-source-mass-v1/mass.json",
+      "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
     }
   },
   "layout": {
@@ -241,15 +245,16 @@
     "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
     "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
     "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
+    "The source-leg mass successor closes transverse radius transport only on the initial surface; bulk propagation and the dynamical wall response remain open.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "18b725073744d360c60d747ffbf6305b45a148fea423281a081d16c16c8f21b6",
-    "geometry-overview.svg": "b9068a25b3620a960539ea19ab3cba9a92f2928722c3d7f81d8d07884f2c3d0d"
+    "geometry-overview.png": "2285600326c1e0e9cf36a5da8c04fe8a71e6c8bd92ab780caeab78ff5cfbe230",
+    "geometry-overview.svg": "f699a274d252201a6a42c20cca07f0f676cc5f638ebb78769d3b4df44d47042d"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "9ed909c864de85292cabbbe237558705bc8a466f099aabea6fb2554c338f3366",
+  "producer_sha256": "221f45df2d638812d3b327213abd7a2f708072ece974e06ca36ad8d697a115f7",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -701,7 +706,83 @@
       ],
       "status": "CONDITIONAL_CONFORMAL_SCALAR_SURFACE_AND_TANGENTIAL_FLUX_COMPATIBILITY"
     },
-    "slice_status": "CONNECTED_SOURCED_INITIAL_SLICE"
+    "slice_status": "CONNECTED_SOURCED_INITIAL_SLICE",
+    "source_mass": {
+      "conventions": {
+        "amplitude": "formal quadratic coefficient; no nonzero amplitude or perturbative remainder bound selected",
+        "field": "phi=(epsilon/ell)p+O(epsilon^3); s=ell phi_U/(C epsilon) at leading order",
+        "frame_domain": "smooth exterior, positive conformal factor; no transformed material wall or cap sources used",
+        "initial_data": "same C3 source, zero bottom, original corner radius and both expansions, fixed source lapse; zero corner transverse correction",
+        "interpretation": "scalar under coordinate changes; not generally conformally invariant, asymptotic energy or whole-exterior mass",
+        "mass": "geometric mass length mathfrak_m=R(1-g^ab partial_a R partial_b R)/2; mathfrak_m_J/ell=.4+alpha mu_jordan+O(alpha^2)",
+        "metric": "ds^2/ell^2=-C dU dx+r^2 dOmega^2 on the source, C=-4a/U0, a=.8, m=.4",
+        "parameter": "alpha=kappa_4 epsilon^2/ell^2; kappa_4=8 pi G in c=hbar=1 units",
+        "region": "same finite source U=U0 in retained white-hole sector IV; no added future domain"
+      },
+      "equations": {
+        "background_transverse": "d=r0_U/C=(a/x-1)/4>0; (x d)'=-1/4",
+        "geometric_check": "mu_geometric=m h/x+2x(k+d h')",
+        "improved_stress_transport": "mu_jordan'=x^2[(p' s-p s')/3-d(2p'^2-p p'')/3]",
+        "jordan_frame_mass": "mu_jordan=mu_einstein+m p^2/12+x^2 p(s+d p')/3",
+        "jordan_mixed_check": "(x k+d h)'=x^2(p' s-p s')/6",
+        "minimal_frame_mass": "mu_einstein=-integral[t(a-t)p'^2]/4; mu_einstein'=-x^2 d p'^2",
+        "original_kernel_check": "s=(-integral_V(K b)/C-d p)/x; original chi_U/epsilon=-integral_V(K b)",
+        "post_source": "mu_jordan=mu_einstein=-integral_support[t(a-t)p'^2]/4<0; constant on remaining finite source leg",
+        "transverse_field": "s' = -(s+d p')/x; s=-d p/x-a/(4x) integral(p/t^2); s(.4)=0",
+        "transverse_geometry": "k=-d h/x+I0/(24x)+d p^2/6+x p s/6; r_U/C=d+alpha k+O(alpha^2)"
+      },
+      "interpretation": "The fixed preparation and corner data determine geometric mass on the same initial null leg through the mixed radius constraint and full conformal transformation.",
+      "knowledge_boundary": {
+        "asymptotic_energy_computed": false,
+        "bulk_einstein_evolution_solved": false,
+        "corrected_wall_solved": false,
+        "finite_amplitude_validity_bound_established": false,
+        "interior_observer_correction_computed": false,
+        "physical_source_generator_established": false,
+        "post_source_region_claimed_vacuum": false,
+        "stability_established": false,
+        "whole_exterior_mass_determined": false
+      },
+      "last": {
+        "T_Ux_over_C_normalized": -0.0,
+        "T_xx_normalized": 0.0,
+        "V": -2.262011613052105,
+        "d": 0.1653650094226941,
+        "frame_mass_difference": 0.0,
+        "h": -6.12283354819419,
+        "h_prime": -162.18055362491776,
+        "integral_V_kernel_b": 0.37575587558151724,
+        "integral_p_over_x_squared": 0.18864181368363236,
+        "integral_p_squared": 0.06157963228952755,
+        "integral_x_a_minus_x_dp_squared": 115.53278821625796,
+        "k": 2.1081191565820236,
+        "mu_einstein": -28.88319705406449,
+        "mu_geometric": -28.88319705406449,
+        "mu_jordan": -28.88319705406449,
+        "mu_jordan_prime_frame": 0.0,
+        "mu_jordan_prime_stress": -0.0,
+        "p": 0.0,
+        "p_prime": 0.0,
+        "p_second": 0.0,
+        "s": -0.07835520871821607,
+        "s_kernel": -0.07835520871821625,
+        "s_prime": 0.1627300600377949,
+        "x": 0.4815042082576364
+      },
+      "limits": [
+        "Coordinate-invariant geometric mass generally changes under a conformal frame transformation during the input.",
+        "The negative post-input coefficient is relative to the reference; no finite amplitude or negative total mass is established.",
+        "Persistent transverse scalar data prevent an inference of a vacuum future from the compact source trace.",
+        "No asymptotic energy, coupled bulk/wall evolution, interior observer correction or finite-amplitude error bound is established."
+      ],
+      "meaning": {
+        "coordinate_boost": "Unew=bU,Vnew=V/b,Cnew=C/b and phi_Unew=phi_U/b; s and geometric mass unchanged",
+        "post_source": "vanishing p and p' makes the two frame masses coincide here; nonzero transverse s can persist, so no vacuum future is inferred",
+        "sign": "0<t<a and d>0 in this sector IV; positive minimal null stress gives the declared negative coefficient, not an untrapped-exterior monotonicity theorem",
+        "unit_scaling": "dimensionless coefficient fixed; formal mass-length correction ell alpha mu. Changing ell at fixed epsilon and G changes alpha rather than only units"
+      },
+      "status": "QUADRATIC_SOURCE_LEG_INVARIANT_MASS_RESPONSE"
+    }
   },
   "schema": "nsc.geometry-overview.v1"
 }

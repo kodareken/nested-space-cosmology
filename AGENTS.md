@@ -13,7 +13,8 @@ PLAN.md or handover task authorities. Preserve historical evidence and unrelated
 | Borrowing and admission | [Prior art](docs/prior-art-and-open-claim.md), [arXiv library](docs/arxiv-studies.md) |
 | Programme and calculation dependencies | [Atlas owner](docs/nsc-cosmological-atlas.md), [admission](docs/prior-art-and-open-claim.md#compute-admission-rule) |
 | Geometry, causality and fields | [Prepared response and finite tail](docs/nsc-atlas-prepared-response.md), [preparation certificate](docs/nsc-atlas-field-preparation.md), [overview](paper/figures/geometry-overview.png) |
-| Observer inference and gravitational data | [Fixed-model inverse](docs/nsc-atlas-observer-inference.md), [scalar shell consistency](docs/nsc-atlas-scalar-wall-consistency.md), [null initialization](docs/nsc-atlas-characteristic-initialization.md); preparation selection and coupled evolution remain open |
+| Observer inference and physical source | [Fixed-model inverse](docs/nsc-atlas-observer-inference.md), [scalar shell consistency](docs/nsc-atlas-scalar-wall-consistency.md); physical preparation selection remains open |
+| Gravitational data and response | [Null initialization](docs/nsc-atlas-characteristic-initialization.md), [source-leg mass](docs/nsc-atlas-source-mass.md); bulk and wall evolution remain open |
 | One package and commands | `src/recursive_horizons`, `scripts`, `tests`; [reproducing](docs/reproducing.md) |
 | Preservation and recovery | [Consolidation](docs/repository-consolidation.md), [manifest](results/reassembly/manifest.json) |
 
