@@ -7,6 +7,42 @@ These are different scientific domains. Their file count is not a count of
 independent discoveries, and a successful replay is not a proof that their
 physical interpretations agree.
 
+This is the preserved 10 October census, not a claim that two worktrees remain
+active. The [root reassembly](repository-consolidation.md) subsequently moved
+the retained research into one package and recorded every destination and
+variant. The [atlas programme](nsc-cosmological-atlas.md#programme-dependencies)
+now projects this existing inventory into questions and prerequisites. That
+projection neither reruns the census nor upgrades an inventoried derivation
+to an independently verified result.
+
+## Programme questions over the existing inventory
+
+The [eight theme records](nsc-cosmological-atlas.md#eight-linked-research-questions)
+own each question's current result, borrowed foundation, missing connection,
+next decision and knowledge boundary. This table only joins those records to
+the preserved scientific families and dispositions below.
+
+| Theme ID | Existing family and reusable material | Remaining disposition |
+|---|---|---|
+| `sphere` | [Spherical regions](nsc-cosmological-atlas.md#question-spheres), RN charts and sourced cap/neck geometry. | Reusable geometry under stated sources; shape selection and stability remain unresolved. |
+| `insideoutside` | [Attachment and access](nsc-cosmological-atlas.md#question-inside-outside), atlas v4-v6 and retained observer machinery. | Reusable fixed-reference results; common future and exterior-side preparation remain unresolved. |
+| `quantum` | [Field and localized descriptions](nsc-cosmological-atlas.md#question-particle-wave), spectral/Dirac and finite local-observer strands. | Reusable finite models; literal particle/interior identity remains exploratory. |
+| `barriers` | [Boundary classification](nsc-cosmological-atlas.md#question-gradient-boundaries), junctions, scalar matching and corrected RN diagnostics. | Reuse the appropriate equations; pressure-equality-to-balance interpretation is withdrawn. |
+| `scales` | [Regional scales](nsc-cosmological-atlas.md#question-regional-scales), finite inheritance, spectral endpoint and w2 constants. | Finite algebra is reusable; physical constants and empirical w2 fits remain separate unresolved/exploratory claims. |
+| `charge` | [Charge orientation](nsc-cosmological-atlas.md#question-charge), charged sources and child/neck swaps. | Candidate constructions retained; no attachment-selected cosmological asymmetry established. |
+| `time` | [Clocks and direction](nsc-cosmological-atlas.md#question-time), observer clocks and conformal local response. | Reuse domain-labelled proper clocks; w2 clock mismatch and entropy-arrow connection remain unresolved. |
+| `branching` | [Descendants and recurrence](nsc-cosmological-atlas.md#question-branching), finite nesting, multiple-daughter and inheritance literature. | Finite constructions reusable; offspring law, physical recycling and infinite recurrence remain hypotheses. |
+
+The first bounded cycle is [signal origin](nsc-cosmological-atlas.md#signal-origin-cycle).
+The right-parent exclusion and conditional wall-to-centre waveform are already
+recorded. The new [region-IV preparation note](nsc-atlas-field-preparation.md)
+proves a unique finite data-to-wall-to-observer operator under its specified
+initial cap, characteristic data and no-return assumptions. Its numerical
+waveform, remote preparation and formation remain open. That targeted
+certificate does not extend verification to the other census families. The archived
+CCC citation remains a separate literature comparison with no newly absorbed
+equations. All original unread and unverified boundaries below remain in force.
+
 ## What was covered
 
 The [summary](../results/research-reset/inventory-summary.json) and
@@ -114,24 +150,29 @@ First retire stale *routes*: old compulsory gate cursors, superseded conclusions
 duplicated navigation and unreviewed follow-up campaigns. Preserve the numerical
 records and original proofs. Physical relocation or deletion requires an exact
 consumer/dependency decision and a tested recovery location; the compressed
-family dependency graph alone does not authorise it. Root publication and lab
-packages remain separate owners, despite their many identical source files.
+family dependency graph alone does not authorise it. The subsequent
+[reassembly](repository-consolidation.md) supplies those migration and recovery
+receipts. One current root package now owns ordinary work; preserved laboratory
+contexts are selected explicitly for historical replay.
 
 The current default consistency route is the consolidated evidence checker.
-The full historical archive checker is an explicit opt-in and may require
-omitted old Git objects, as already documented by consolidation. A missing
-historical object is not repaired by relaunching a physics campaign.
+Historical replay is explicit and authenticates its selected source objects,
+records and renderer profile. The [reproduction guide](reproducing.md) owns
+those commands. A missing historical object is not repaired by relaunching a
+physics campaign.
 
 From the repository root, regenerate or check this census with standard Python:
 
 ```text
-python -B scripts/research_inventory.py --preservation ../.research-reset-preservation/20261010T112227Z
-python -B scripts/research_inventory.py --preservation ../.research-reset-preservation/20261010T112227Z --check
+python -B scripts/research_inventory.py --preservation .research-reset-preservation/20261010T112227Z
+python -B scripts/research_inventory.py --preservation .research-reset-preservation/20261010T112227Z --check
 python -B -m pytest tests/test_research_inventory.py -q
 ```
 
-The preservation directory is external to the repository; its verified receipt
-hashes and original commits are recorded portably. Generation never reads the
+The preservation directory is local recovery storage excluded from publication;
+its verified receipt hashes and original commits are recorded portably. A fresh
+clone needs that separately preserved snapshot before regenerating this census.
+Generation never reads the
 live working tree as baseline evidence. The seven focused tests check preserved
 input corruption, deletion, concurrent-work isolation, binary Git reads, link
 classification, family grouping and self-inventory exclusion. On this Windows

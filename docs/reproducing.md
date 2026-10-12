@@ -24,6 +24,17 @@ also adds explicit historical replay and requires the separate `HISTORY_PYTHON`
 profile described below. Running every historical simulation is neither required
 nor authorized by these convenience commands.
 
+The current finite preparation bundle can be regenerated without a PDE solve:
+
+```sh
+python scripts/derive_nsc_cosmological_atlas_v7.py --output .build/atlas-v7-review
+python scripts/derive_nsc_cosmological_atlas_v7.py --output .build/atlas-v7-review --check
+```
+
+Creation requires a fresh output directory. This evaluates the admitted finite
+geometry and analytic bound, not a new numerical observer waveform. The
+[preparation owner](nsc-atlas-field-preparation.md) states the domain and limits.
+
 The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
 change. The software release version and the manuscript revision are independent.

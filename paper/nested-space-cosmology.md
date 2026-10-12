@@ -26,7 +26,10 @@ access: selected early signals connect them, while new emissions after the
 chosen initial slice do not. A prescribed early conformal scalar pulse crosses
 the wall and produces a calculable transient at the center. Its waveform does
 not uniquely identify the exterior because the incident state is an independent
-input. A separate finite spherical field model demonstrates regional transfer,
+input. We now identify a finite characteristic preparation in the retained
+white-hole sector and a bounded exterior-to-wall transfer operator. Its
+existence is certified analytically; its numerical waveform is not evaluated.
+A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
 
@@ -54,6 +57,15 @@ then compare with observations**. A universal action tying together all fields
 and regions remains an ambitious candidate. It is not a prerequisite for
 learning whether a particular boundary can be joined or whether a signal can
 reach a particular observer.
+
+A mature atlas would let a reader follow a possible universe from its
+surroundings, through its boundaries, into an observer's world and onward
+through compatible transitions. It would compare families of histories with
+explicit geometry, dynamics and observables. Completion means dependable
+coverage of declared model families, including exclusions and observational
+degeneracies. Establishing that a family describes our universe is a further
+empirical achievement. The present finite connections are steps toward that
+destination, not a claim to have reached it.
 
 The first motif contains two spatially separated black holes in a common
 parent, possible unequal children, and one further generation. A separate
@@ -120,7 +132,7 @@ surroundings shape its state, geometry and measurements?**
 | --- | --- | --- |
 | [Preserved foundation](archive/foundation-v0.26.0/paper/nested-space-cosmology.md) | Spectral inheritance proposal, boundary operators, source and response constructions | A physical inheritance law and common cosmological source completion |
 | [Finite spherical companion](finite-regeneration/main.tex) | A finite realization of regional transfer, geometric feedback and memory with declared action and state | Identification with an actual assembled parent–child spacetime |
-| [Atlas v1–v6 history](../docs/papers.md) and this living manuscript | Geometric compatibility, a sourced slice, observer access and a conditional scalar response | Exterior preparation, other attachment laws and observational discrimination |
+| [Atlas evidence](../docs/nsc-cosmological-atlas.md) and this living manuscript | Geometric compatibility, a sourced slice, observer access, a calibration response and a finite exterior preparation operator | Remote preparation, an evaluated exterior-data response, other attachments and observational discrimination |
 
 Their mathematics is complementary. A finite operator's eliminated modes
 are not automatically the exterior spacetime beyond a black hole. The atlas
@@ -696,14 +708,124 @@ $I(\tau)=T'(\tau)Y[T(\tau)]$, subject to the same regularity and state
 restrictions. Within the zero-area pulse family, the corresponding trace
 must also have zero area. Thus this freely specified pulse does not infer
 a unique exterior. The right parent observer cannot prepare it through
-a causal channel in this reference. Physical exterior preparation is the
-next missing connection.
+a causal channel in this reference. The following construction supplies
+independent finite data elsewhere in the retained geometry; their remote
+physical origin remains unspecified.
 
 Minimal coupling remains a distinct alternative:
 $[n\chi]=-\kappa\chi$ and the cap radial equation contains
 $-2\chi/\eta^2$. Its known bulk de Sitter tail does not solve the
 moving-boundary problem. The conformal transient therefore neither proves
 nor excludes memory in other field theories.
+
+### 13.1. Where the early signal can originate
+
+<!-- nsc-claim:atlas-field-preparation -->
+
+Evidence: [finite preparation and bounds](../results/development/nsc-cosmological-atlas-v7/preparation-access.json),
+[derivation and independent checks](../docs/nsc-atlas-field-preparation.md).
+
+Keep the same geometry and conformal probe. The right-exterior observer
+$P$ still cannot signal the wall or center. However, the early wall is
+adjacent to retained Schwarzschild white-hole geometry. Finite data there
+can reach it without introducing a source at the singular past boundary.
+This is an exterior-side preparation, not a signal sent by $P$.
+
+In dimensionless Kruskal coordinates $U,V<0$, future radial causal
+curves have nondecreasing coordinates. With $x=R/\ell$, define
+
+$$
+F(x)=(1-x/0.8)e^{x/0.8}=UV.
+$$
+
+Choose wall endpoints $x_a=0.45$, $x_b=0.55$ and radial floor
+$x_f=0.4$. Set $V_a=V_W(x_a)$, $V_b=V_W(x_b)$ and
+$U_0=F(x_f)/V_a$. The retained preparation domain is
+
+$$
+D=\{V_a\leq V\leq V_b,\quad U_0\leq U\leq U_W(V)\}.
+$$
+
+The wall truncates this domain: a rectangular continuation across it would
+use the wrong field equation. Monotonicity of $F$ gives
+$0.4\leq R/\ell\leq0.55$ throughout $D$, away from both $R=0$
+and $R=2M$. Prescribe zero cap field and time derivative at the earlier
+flat time $t_a=t_W(x_a)$, and zero reduced field on the bottom
+characteristic $V=V_a$. On $U=U_0$, independently prescribe
+$g(V)=\varepsilon B(4(V-V_m)/(V_b-V_a))$, where
+$V_m=(V_a+V_b)/2$ and $B$ is the $C^3$ bump above.
+It vanishes near the corners. Neither the outgoing wall characteristic
+nor a desired received waveform is independently specified.
+
+![Retained exterior preparation and its independent input](../results/development/nsc-cosmological-atlas-v7/preparation-domain.png)
+
+*Figure 6. The finite preparation occupies the retained side of the early
+wall in sector IV. The profile on the characteristic surface is input,
+not a calculated wall or central waveform. The singularity and horizons
+lie outside this finite domain. Figure 4 supplies the global chart context.*
+
+The cap null labels $u=\eta-r$ and $v=\eta+r$ increase along the
+timelike wall. The earliest possible reflected signal has outgoing label
+$v_a$, whereas $u_b<v_a$ throughout this wall window; the recorded gap
+is $(v_a-u_b)/\ell=2.63459191$. No central reflection can yet return.
+The normal toward the retained exterior has components
+
+$$
+n^U=-\dot{U}_W,\qquad n^V=\dot{V}_W.
+$$
+
+The vanishing outgoing
+characteristic consequently supplies $\chi_U=0$ on the wall.
+
+The borrowed Schwarzschild scalar potential is $f_+2M/R^3$;
+see [Dolan and Ottewill, 1106.4318v1, Eq. 11](https://arxiv.org/html/1106.4318v1).
+Its usual asymptotic scattering conditions are not imported into sector IV.
+The local operator becomes
+
+$$
+\chi_{UV}+K\chi=0,\qquad K=\frac{16M^4}{R^4}e^{-R/(2M)}=-\frac{R_{UV}}{R}.
+$$
+
+Let $L(u)=V_a$ for $u\leq U_a=U_W(x_a)$ and otherwise let
+$L(u)$ be the inverse wall graph. The complete reduced problem is
+
+$$
+\chi(U,V)=g(V)-\int_{U_0}^{U}du\int_{L(u)}^{V}dv\,K(u,v)\chi(u,v).
+$$
+
+Differentiating recovers the PDE, characteristic data and wall condition.
+An analytic bound on the integral operator in the supremum norm is
+
+$$
+q_* =16e^{-1/2}\,[\sqrt{F(0.4)}-\sqrt{F(0.55)}]^2
+\simeq0.138821<1.
+$$
+
+The bound uses $K\leq16e^{-1/2}$ and an AM–GM bound on the
+enclosing area, independent of numerical clock quadrature. The standard
+contraction principle therefore gives a unique finite solution. Moreover,
+
+$$
+\Vert\chi-g\Vert_\infty\leq\frac{q_*}{1-q_*}\Vert g\Vert_\infty.
+$$
+
+At the positive input peak the wall reduced field is at least
+$0.8388\varepsilon$. This bound is not a central-field peak or an
+energy-transmission efficiency.
+
+The wall input is now determined by the solution:
+
+$$
+I=2\dot V_W\left[g'(V_W)-\int_{U_0}^{U_W(V_W)}K(u,V_W)\chi(u,V_W)\,du\right].
+$$
+
+The existing relation $\phi_C[T(\tau_W)]=I/T'$ then defines the
+observer response over $-0.581759\leq T/\ell\leq-0.250231$.
+This closes the finite data-to-wall-to-observer operator. Its numerical
+waveform remains unevaluated; exterior scattering may produce tails.
+The calibration's late zero field is not imposed on this successor.
+Remote generation of $g$, quantum-state selection, backreaction and
+regular formation of the wall remain distinct open connections.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -818,6 +940,10 @@ dimensionless parameters. Useful comparisons include
 $\alpha$, mass ratios, and $Gm^2/(\hbar c)$.
 A numerical change caused solely by unit rescaling is not a changing law.
 
+Successive inheritance maps also need compatible output and input spaces:
+the first transition must supply data on which the next law is defined.
+Drawing another nested sphere does not establish this composition.
+
 The atlas wall parameters $H\ell$, $M/\ell$ and $\kappa\ell$
 are declared inputs, not values inherited from a parent calculation.
 Physical inheritance might preserve a law while changing states, select
@@ -856,6 +982,13 @@ state, not to an endpoint of allowed wavelengths; see
 A relation between a regional temperature and a spectral scale requires a
 specified state and Hamiltonian. Changing a temperature unit supplies neither.
 
+A horizon is not automatically a reflecting cavity wall or a prohibition
+on longer-wavelength modes. A particle-like exterior description likewise
+requires an additional quantum state and measurement model; exterior mass,
+spin and charge alone do not establish that description. Quantum observables
+can have continuous as well as discrete spectra. A detector event or a wave
+crest is not a general definition of a particle.
+
 Separately, $T=0$ in an evolution record names a prepared state and a clock
 origin. It is not the short-wavelength endpoint of a spectrum.
 An ultraviolet cutoff, an initial time and a spatial boundary have different
@@ -884,7 +1017,7 @@ Clustering and lensing require a stress or effective gravitational response
 with the right spatial, temporal and scale dependence. Accelerated
 expansion requires a separate background and perturbation analysis.
 Antimatter and clock arrows require still other data.
-The scalar pulse here has no calculated energy flux or backreaction and
+The calibration scalar pulse has no calculated energy flux or backreaction and
 leaves no persistent central field in its certified interval. It supplies
 none of these dark components.
 
@@ -906,6 +1039,9 @@ Changing radial orientation or the sign of a chart coordinate does not,
 by itself, convert matter into antimatter. A proposed boundary identification
 must say which field components and charges it matches and whether the
 source, state and conserved currents permit it.
+
+A real wave's sign change is not charge conjugation. CPT symmetry is also
+distinct from time reversal alone; neither supplies an entropy arrow.
 
 The library preserves distinct CPT, black-mirror and torsion-production
 proposals. They cannot be combined by assigning one side of every sphere
@@ -950,6 +1086,10 @@ favor an intended cosmic population would assume the result.
 No infinite-generation computation is needed before one such transition
 has been established.
 
+Conformal cyclic cosmology remains a separate possible continuation, with
+its own conformal matching and matter assumptions. It is not identified
+with black-hole offspring or communicating mouths by a scale analogy.
+
 ### 21. Measurements that could decide between maps
 
 <!-- nsc-claim:target-measurement -->
@@ -964,7 +1104,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Exterior preparation of the incoming scalar | Can a specified admissible exterior state supply the wall trace after scattering? | A response predicted from exterior data |
+| Evaluate the admitted finite preparation operator | What wall trace and central response follow from the fixed independent data? | A response predicted from exterior data; a comparison sensitive to scattering |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
 | Stability or formation of an attachment | Do fixed-source disturbances or collapse data remain in the claimed domain? | A stronger cosmological interpretation |
@@ -977,10 +1117,21 @@ redirects it. The [existing admission owner](../docs/prior-art-and-open-claim.md
 keeps that rule. A failed attachment remains visible, while another
 geometric route can proceed under its own assumptions.
 
+![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
+
+*Figure 7. Research dependencies, distinct from spacetime causal arrows.
+Known equations become usable when their inputs, domains and matching are
+established. The [programme record](../results/development/nsc-cosmological-atlas-v7/programme.json)
+names prerequisites, decisions, budgets and stop conditions for eight
+themes: spherical stability, interior/exterior description, quantum fields,
+barriers, scales, charge, time and branching. Arrows do not declare these
+questions solved or prescribe a single compulsory route.*
+
 The current result is a continuous mathematical story at a deliberately
 finite scale: an exterior can be attached on a sourced slice; an isolated
 completion determines observer access; a specified field state gives an
-interior waveform; and finite regional reduction explains how unresolved
+interior waveform; independent finite exterior data now define an admitted
+transfer operator; and finite regional reduction explains how unresolved
 degrees of freedom can retain memory in another fully stated model.
 The remaining work is to connect those statements physically where their
 domains presently differ.
@@ -1001,6 +1152,7 @@ and renders their relationships without launching a new physics calculation.
 | Sourced slice and vacuum observer domain | [Atlas v4](../docs/nsc-cosmological-atlas-v4.md); [manifest](../results/development/nsc-cosmological-atlas-v4/manifest.json) |
 | Isolated causal completion and clocks | [Atlas v5](../docs/nsc-cosmological-atlas-v5.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-cosmological-atlas-v6.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
+| Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

@@ -1,19 +1,19 @@
 {
-  "bytes": 1678635,
+  "bytes": 2217213,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "1d021237f3421a5019ebaf62a10b6b4ffed51dd77fd7e88e4b9afcdd66e3783a",
+  "metadata_sha256": "3be2fa7ce09a0e5be0701e87f4b14ac8ee7c26104f760e5af2db98047d41723e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 19,
-  "pdf_sha256": "0dee46b523f65313d16221f1a6a9c1c3bf54e12ee9e1c58f7cc9ef37b5903c1a",
+  "pages": 22,
+  "pdf_sha256": "89a030d166c9be7bc722f4a1dfaba51ba8562fb3d5bd281491eb91d71e5dff08",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
       "path": "paper/figures/geometry-overview.json",
-      "sha256": "523e2ff617a4ee385699c23cd2bc44c01a2e40b0913e6c55e0211090cce0c1b8"
+      "sha256": "be77ede319da3a6c3aaaf711c3da7ffbcfa02c850ac6410fea5b681a54f86573"
     },
     {
       "path": "paper/figures/geometry-overview.png",
-      "sha256": "4be1e2a721c08599c8476cc41722d48da9c01b7b81803a8ba25dc51ffc1cd9ed"
+      "sha256": "3cff8d1e6f6d9af4dfd6b08c1e67bdcfbdf542f989173ffd05e3cc59d7082274"
     },
     {
       "path": "paper/finite-regeneration-manifest.json",
@@ -108,6 +108,26 @@
       "sha256": "6c0a3bed9e0bdb147ccdb6b4e7d586062f61f1813ab07e90378460028c697f9a"
     },
     {
+      "path": "results/development/nsc-cosmological-atlas-v7/manifest.json",
+      "sha256": "08e3f07a4c0a910852d1fed81949cf334b97bb3497d9ccb3c1aa611259d0bef2"
+    },
+    {
+      "path": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
+      "sha256": "7f2129c2a1b661b77900e6c713838789ba92399d2ee32c771317079509c01033"
+    },
+    {
+      "path": "results/development/nsc-cosmological-atlas-v7/preparation-domain.png",
+      "sha256": "79b384bbdcf47ee642fc4e6e63b1548777cfa5eeb67250bc40c25ba167ce84cb"
+    },
+    {
+      "path": "results/development/nsc-cosmological-atlas-v7/programme.json",
+      "sha256": "c5f4532bc55bb26dbac5a48084d96ab3c42404283f5d720a1b25eb54f596ccec"
+    },
+    {
+      "path": "results/development/nsc-cosmological-atlas-v7/research-dependencies.png",
+      "sha256": "c5bdca932d8aa24a3f394ac9da6a5be5e91afb735112976372774b99dbf7f412"
+    },
+    {
       "path": "results/development/nsc-nested-qualities-v1.json",
       "sha256": "99fb61f62412c8a2965124725b940b7b2907b74c1fee36e05264d4153360f033"
     },
@@ -121,6 +141,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "c1d4f641e958269f1e6dd3c0287b43fbc89d49319f8dc87333c5d9f571216d56",
-  "version": "working-2026-10-12"
+  "source_sha256": "b4fa2a5b253a7a11aadd074bcf35225e40e96393b3476c61a50a3cd348efb86a",
+  "version": "working-2026-10-12.2"
 }
