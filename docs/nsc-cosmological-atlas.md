@@ -1,21 +1,292 @@
-# Finite exterior-first cosmological atlas
+# Cosmological atlas: regions, boundaries and observer measurements
 
-The atlas assembles possible exteriors, interfaces and descendants before
-attempting a local dark-sector fit. It is a map of mathematical candidates
-and missing physical connections, not a claimed solution of the universe.
+The programme asks how regions, their boundaries and their fields can form a
+nested geometry, and what an observer inside one region can infer about the
+rest. Spherical symmetry supplies the first tractable building block. The
+paper's connecting argument is geometry, admissible attachment, specified
+state, transmission, then a local measurement. Particle, cosmological and
+quantum descriptions are questions to connect through explicit models; their
+shared vocabulary alone does not identify their physical objects.
 
-The default motif has one unresolved parent, two off-centre black-hole
-interfaces, two potentially unequal children and one potential grandchild.
-Its finite descent cutoff is two. Each interface has a separate imported
-Schwarzschild exterior chart. No common two-hole parent metric has been
-supplied. A closed FLRW child is an ansatz with unknown source and scale
-factor. S2 symmetry orbits do not imply a global S3 spatial slice, and the
-illustration is a patch diagram rather than a three-dimensional embedding.
+This is the programme owner. The [living paper](../paper/nested-space-cosmology.md)
+presents its argument, the [inventory](research-inventory.md) records what has
+been read and preserved, and the [existing admission rule](prior-art-and-open-claim.md)
+controls new calculation. Those owners retain their separate roles. Reuse a
+solved equation when available; identify whether the missing ingredient is its
+source, state, domain, boundary data, or connection to another result before
+starting a derivation.
 
-The three alternatives are one-hole multiple daughters, a conditional
-three-mouth traversable construction, and a finite response-equivalence
-control. Their assumptions remain separate. Multiple daughters inside one
-black hole are distinct from separate holes producing different children.
+## Current map and independent approaches
+
+The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)
+contains two potentially unequal children and a potential grandchild, with
+finite descent depth two. Its separate Schwarzschild charts and closed-FLRW
+child ansatz are historical starting assumptions. The [v2 parent](nsc-atlas-parent-initial-data.md)
+adds shared Brill-Lindquist spatial data. The [v4 attachment](nsc-cosmological-atlas-v4.md)
+places one sourced interior and a vacuum bridge in a published many-body
+existence construction through selected smooth exterior ends. It does not
+supply an explicit connector metric, a second established child or the common
+future. The [v5 observer map](nsc-cosmological-atlas-v5.md) and
+[v6 conditional waveform](nsc-cosmological-atlas-v6.md) use a separate isolated
+spherical reference. The [finite exterior preparation](nsc-atlas-field-preparation.md)
+now supplies a conditional data-to-wall-to-observer operator in that reference;
+its new numerical waveform remains unevaluated. These causal and field results
+do not automatically extend to the glued many-body spacetime.
+
+Keep three approaches available:
+
+- **Geometric atlas:** assemble compatible published regions and junctions;
+  keep topology, source and initial-data assumptions on each attachment.
+- **Exterior-response atlas:** reuse the [finite response and memory machinery](nsc-evolving-reduction.md)
+  with a physically justified Hamiltonian and state. An atlas of locally
+  indistinguishable exteriors is useful when reconstruction is nonunique.
+- **Connected mouths:** retain the charged semiclassical construction in the
+  [arXiv library](arxiv-studies.md) as a separate communication route. Its
+  sources and causal connections cannot be imported into the neutral scalar
+  reference without a compatibility argument.
+
+One-hole multiple daughters and separate holes producing different children
+are different branching hypotheses. The archived conformal cyclic cosmology
+citation, arXiv:2503.24263, remains a separate comparison question in the
+[library](arxiv-studies.md), with no matching equations absorbed by this
+programme update. Review its conformal matching and state assumptions before
+connecting it to any black-hole branch or energy-recycling claim. None of
+these alternatives becomes compulsory when another one fails.
+
+<a id="programme-dependencies"></a>
+
+## Research dependencies and useful decisions
+
+The stable calculation IDs below identify missing connections, not scheduled
+campaigns. A calculation earns its place through **prerequisites -> decision
+-> further calculation unlocked**. A finite obstruction is valuable when it
+rules out a proposed connection under fixed assumptions. No method can promise
+that every open branch succeeds.
+
+| Connection ID | Prerequisites and decision | Further calculation unlocked |
+|---|---|---|
+| `geometry-baseline` | Fix a borrowed region, topology and validity domain; decide which overlaps can be compared. | `boundary-classification`, alternative region comparisons. |
+| `boundary-classification` | Specify whether the boundary is material, causal, effective or a geometric junction; check the appropriate source and matching conditions. | `wall-transmission`, `clock-entropy`, `field-orientation`. |
+| `wall-transmission` | Supply a field/action, wall source and state class; decide the admissible transmission law. The v6 probe law is already available. | `wall-trace` after compatible preparation data exist. |
+| `parent-preparation` | Locate a data surface in the retained causal domain and specify admissible exterior-side field data; decide whether they can supply the wall input. The finite region-IV problem now has a conditional existence certificate; remote generation remains open. | `wall-trace`, or a recorded exclusion that redirects the source route. |
+| `wall-trace` | Combine compatible preparation, propagation and wall transmission; determine the incident trace rather than assuming its origin. The region-IV trace operator is derived; numerical evaluation remains open. | `observer-response` for the independently specified finite exterior data. |
+| `observer-response` | Use the existing observer, clocks and fixed transfer operator with a justified trace; determine the finite measurement. | `observer-inference`, comparisons of sources and attachments. |
+| `observer-inference` | Compare responses in the same observable domain; decide which exterior differences are distinguishable. | A discriminating observable or an explicitly demonstrated equivalence class. |
+| `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
+| `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
+| `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
+| `clock-entropy` | Supply proper clocks, clock domains and a state evolution; decide which durations and entropy changes are comparable. | A finite arrow-of-time discriminator, without a cross-universe age assumption. |
+| `branching-recurrence` | Supply an offspring rule, physical transition and state/energy bookkeeping; decide what a finite descendant ensemble predicts. | Selection or recurrence comparisons with their probability assumptions exposed. |
+
+The main response dependency chain is
+`parent-preparation + wall-transmission -> wall-trace -> observer-response -> observer-inference`.
+The v6 waveform establishes `observer-response` conditional on a prescribed
+trace. The [finite preparation certificate](nsc-atlas-field-preparation.md)
+connects independent exterior-side data to a unique trace and response operator;
+evaluating that operator and identifying a remote preparation remain distinct
+next questions. Inheritance, charge, clock and alternative-geometry questions
+may proceed independently when their
+own prerequisites are met. A different exterior model needs its own dependency
+edges, not a forced passage through this scalar example.
+
+## Eight linked research questions
+
+These themes organize the existing research census; they do not declare a new
+audit or eight solved connections. The stable IDs used by the programme record
+are `sphere`, `insideoutside`, `quantum`, `barriers`, `scales`, `charge`, `time`
+and `branching`.
+
+<a id="question-spheres"></a>
+
+### Spheres
+
+**Owner and current result:** [parent initial data](nsc-atlas-parent-initial-data.md)
+and [sourced slice](nsc-atlas-connection-slice.md); the
+[v4 record](../results/development/nsc-cosmological-atlas-v4/atlas.json)
+combines locally spherical bodies through an existence construction.
+**Borrowed foundation:** spherical symmetry and the Euclidean fixed-volume,
+isotropic surface-energy result recorded in the [Wulff reading card](arxiv-studies.md).
+**Missing connection:** a specified dynamical selection or stability argument
+for the relevant material or gravitational system. **Next question:** which
+departure from symmetry changes the attachment or an observer measurement,
+and what source permits it? **Knowledge boundary:** a sphere's simplicity is
+motivation; neither two competing forces nor the cited Euclidean minimization
+proves a universal most-probable cosmological shape. S2 orbits do not fix global
+S3 topology, and a multi-hole parent is not globally spherical.
+
+<a id="question-inside-outside"></a>
+
+### Inside and outside
+
+**Owner and current result:** [connection gluing](nsc-atlas-connection-gluing.md),
+[causal classification](nsc-atlas-causal-classification.md) and
+[observer access](../results/development/nsc-cosmological-atlas-v5/observer-access.json).
+The sourced initial slice and isolated reference access verdicts have different
+domains. **Borrowed foundation:** Israel matching, published thin-wall causal
+completions and vacuum end gluing. **Missing connection:** globally compatible
+preparation/evolution data beyond the isolated reference and protected domains.
+**Next question:** what trace and observer response follow from the independently
+specified finite exterior preparation, and what wider history could supply it?
+**Knowledge boundary:** geometric attachment, descent, causal
+influence and correlation remain distinct; the v4 theorem supplies no generic
+sibling signal channel or many-body future.
+
+<a id="question-particle-wave"></a>
+
+### Particle and wave descriptions
+
+**Owner and current result:** [Dirac tetrads](nsc-dirac-tetrad.md),
+[local-observer correspondence](nsc-local-observer-correspondence.md) and
+[scalar transfer](nsc-atlas-field-transfer.md). The
+[v6 field record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
+is a conditional classical response; finite fermionic observer constructions
+belong to their separately specified operator/state models.
+**Borrowed foundation:** field equations, mode decompositions, regular-centre
+conditions and finite retained-region reduction. **Missing connection:** a
+physical identification of a localized particle sector, its quantum state and
+the proposed regional geometry. **Next question:** which shared observable and
+state map would make a field/mode description comparable with a localized
+regional excitation? **Knowledge boundary:** a classical scalar pulse does not
+quantize the atlas, and wave behaviour does not establish literal nested
+particle interiors. No universal particle-spectrum calculation is required
+before answering the finite signal question.
+
+<a id="question-gradient-boundaries"></a>
+
+### Gradient zones and boundaries
+
+**Owner and current result:** [junction sources](nsc-atlas-junction-sources.md),
+[moving boundaries](nsc-atlas-moving-boundaries.md) and
+[field matching](nsc-atlas-field-matching.md); the
+[v6 bundle](../results/development/nsc-cosmological-atlas-v6/narrative.md)
+uses a specified pure-tension wall and scalar jump.
+**Borrowed foundation:** junction conservation, characteristics and
+distributional field matching. **Missing connection:** the source and transport
+law corresponding to any newly proposed energy-gradient zone. **Next question:**
+does that zone act as a material interface, a finite field-propagation barrier,
+an observer horizon, or an attachment of charts, and what observable separates
+these possibilities? **Knowledge boundary:** those categories are not
+interchangeable. The [RN equality crossings](nsc-rn-gradient-bubble.md) remain
+diagnostics; a pressure crossing alone establishes neither mechanical balance
+nor centre regularity.
+
+<a id="question-regional-scales"></a>
+
+### Regional scales and constants
+
+**Owner and current result:** [finite inheritance](nsc-nested-qualities.md),
+[scale binding](nsc-scale-binding.md) and [spectral endpoint](nsc-spectral-endpoint.md).
+The atlas's [unit controls](../tests/test_nsc_cosmological_atlas.py) separate
+rescaling from dimensionless changes; the spectral and charged-throat results
+retain their own models. **Borrowed foundation:** dimensional analysis,
+normalized finite operators, known spectra and the imported charged-throat
+scale relation. **Missing connection:** a physical transition that selects
+dimensionless parameters or an additional propagation coupling.
+**Next question:** which dimensionless observable could distinguish inherited
+laws, changed state and environmental dressing in a specified attachment?
+**Knowledge boundary:** the finite inheritance identity does not derive
+regional constants. Planck length is a derived scale; a shortest allowed
+wavelength requires another hypothesis. Absolute zero is a thermodynamic
+state limit, not the other end of a wavelength interval. Coordinate light
+delays alone do not change locally measured vacuum light speed.
+
+<a id="question-charge"></a>
+
+### Charge and orientation
+
+**Owner and current result:** [charged-source route](nsc-charged-self-sourcing-route.md)
+and the exploratory [swap analysis](child-neck/swap-symmetry-note.md), compared
+with the [CPT and black-mirror reading cards](arxiv-studies.md).
+They retain particular field, topology and symmetry assumptions; the active
+v6 real scalar is neutral. **Borrowed foundation:** conserved field currents,
+charge conjugation and the cited CPT/boundary constructions.
+**Missing connection:** an attachment-selected field identification and
+admissible state that transports or generates a charge asymmetry.
+**Next question:** which transformation preserves the chosen action and
+current across the actual boundary? **Knowledge boundary:** reversing an
+inside/outside orientation does not by itself turn matter into antimatter.
+The swap note's algebra and memory-sourced comparison table have not been
+independently reverified by this programme inventory.
+
+<a id="question-time"></a>
+
+### Time and its direction
+
+**Owner and current result:** [causal observers](nsc-atlas-causal-observers.md),
+[clock inheritance](nsc-clock-horizon.md) and
+[the access table](../results/development/nsc-cosmological-atlas-v5/observer-access.json).
+The reference assigns separate centre, wall and parent proper clocks with
+explicit origins and finite access domains. **Borrowed foundation:** proper
+time, null propagation, conformal coordinates and finite state evolution.
+**Missing connection:** a stated entropy/coarse-graining choice and physical
+state dynamics across an attachment. **Next question:** what clock-domain
+and entropy measurements would distinguish an inherited time orientation
+from a chosen low-entropy initial condition? **Knowledge boundary:** a
+coordinate divergence is not an infinite elapsed lifetime, and finite clock
+maps establish neither a universal age nor an inevitable arrow. The retained
+w2 clock-factor discrepancy remains in the [inventory](research-inventory.md).
+
+<a id="question-branching"></a>
+
+### Branching, inheritance and recycling
+
+**Owner and current result:** the [finite atlas](../results/development/nsc-cosmological-atlas-v1/atlas.json),
+[finite inheritance theorem](nsc-nested-qualities.md) and
+[branching literature cards](arxiv-studies.md). The graph permits unequal
+children and finite descendants; it does not determine offspring rates.
+**Borrowed foundation:** Barrabes-Frolov multiple-daughter geometry and
+Altenberg multitype offspring/inheritance mathematics, in their recorded
+reading domains. **Missing connection:** formation, a transition kernel,
+admissible state transfer and regional energy bookkeeping.
+**Next question:** which physical transition could supply an offspring or
+inheritance rule, and which finite population observable would discriminate
+it? **Knowledge boundary:** recycling and recurrence remain hypotheses.
+Existence of observers supplies no numerical probability proof; conservation
+does not by itself imply repeated personal identity or infinite cosmic
+recurrence. A finite graph or preset matter fraction cannot establish them.
+
+<a id="signal-origin-cycle"></a>
+
+## First bounded cycle: where can the signal originate?
+
+The existing [v5 access table](../results/development/nsc-cosmological-atlas-v5/observer-access.json)
+already excludes the right static parent observer P as a source reaching C
+through this attachment: future-directed causal V cannot decrease from P's
+V>0 to the wall's V<0. Repeating that exclusion is not the next discovery.
+The [v6 transfer](nsc-atlas-field-transfer.md) already computes a centre
+waveform from prescribed exterior-side wall data. Its uncomputed origin is
+the missing connection between these two results.
+
+The [finite preparation derivation](nsc-atlas-field-preparation.md) now closes a
+conditional data-to-wall-to-observer operator on the early region-IV side of
+the retained wall. It keeps the isolated geometry, neutral conformal scalar
+and fixed matching law. Independent characteristic data are prescribed on
+U=U0, with zero bottom data and zero cap Cauchy data at t_a=t_W(R/ell=0.45).
+The retained wedge has 0.4 <= R/ell <= 0.55 and never reaches a horizon or
+singularity. An analytic no-return bound inherits the outgoing wall condition;
+a supremum-norm contraction bound q_* = 0.138820992 < 1 proves a unique finite
+solution and determines its wall trace. The existing cap transfer then defines
+the central response operator. Borrowed field and contraction mathematics are
+being applied to these specified data and this wedge, not rediscovered.
+
+This is a derived conditional existence and transfer result. No new exterior
+or central waveform has been numerically evaluated. Its input is not chosen
+to reproduce the v6 wall trace, and a possible scattering tail is not set to
+zero. Comparing with v6's earlier zero cap at R/ell=0.05 requires the additional
+no-earlier-incoming-history assumption stated in the derivation. "Exterior
+side" means the retained Schwarzschild side of the material wall, not the
+right asymptotically flat exterior I. The known P exclusion remains unchanged.
+
+The concrete next calculation is a bounded evaluation of this operator for
+the independently specified characteristic profile, with an error estimate,
+followed by composition with the existing observer transfer. That unlocks a
+comparison between a prepared exterior response and a prescribed-wall
+calibration in their common observable domain. Remote generation of those
+data, a globally prepared quantum state, regular wall formation and
+backreaction remain separate connections. Alternative attachments,
+connected-mouth models and response-equivalent exteriors stay available.
+Each further calculation still requires its own finite domain, decision,
+budget and redirect outcome under the [existing admission rule](prior-art-and-open-claim.md).
 
 ## Owners and reproducible output
 
@@ -32,26 +303,13 @@ black hole are distinct from separate holes producing different children.
 - [Illustrated narrative](../results/development/nsc-cosmological-atlas-v1/narrative.md)
   and [machine-readable atlas](../results/development/nsc-cosmological-atlas-v1/atlas.json).
 
-From the repository root, with the existing validation interpreter:
-
-```powershell
-.venv/validation/Scripts/python.exe scripts/lab.py scripts/derive_nsc_cosmological_atlas.py
-.venv/validation/Scripts/python.exe scripts/lab.py scripts/derive_nsc_cosmological_atlas.py --check
-.venv/validation/Scripts/python.exe scripts/lab.py -m pytest tests/test_nsc_cosmological_atlas.py -q
-```
-
-At the initial atlas verification on Windows, the validation redirector
-reported `failed to locate pyvenv.cfg: Access is denied`. The installed base
-Python 3.14.8 ran with the same validation site-packages and explicit lab
-source paths, without installing anything. Since `scripts/lab.py` replaces
-`PYTHONPATH`, that fallback invokes this standalone producer directly:
-
-```powershell
-$atlasRoot = (Get-Location).Path
-$env:PYTHONPATH = "$atlasRoot/lab/src;$atlasRoot/lab/scripts;$atlasRoot/.venv/validation/Lib/site-packages"
-& "$env:LOCALAPPDATA/Programs/Python/Python314/python.exe" lab/scripts/derive_nsc_cosmological_atlas.py --check
-& "$env:LOCALAPPDATA/Programs/Python/Python314/python.exe" -m pytest lab/tests/test_nsc_cosmological_atlas.py -q
-```
+The [reproduction guide](reproducing.md) owns the current root commands,
+Windows interpreter fallback and separate historical renderer profile. Use
+`scripts/replay_history.py` in that explicitly selected profile for the frozen
+v1-v6 bundles. Current producers intentionally have different source bindings;
+they may create a fresh bundle at a supplied `--output` path, but cannot make an
+old bundle pass by silently loading old sources. The living paper's overview
+is supplied by [the overview producer](../scripts/build_geometry_overview.py).
 
 The producer refuses an existing output directory. A failure after claiming
 the directory leaves an inspectable partial bundle, without a success manifest;
@@ -121,9 +379,10 @@ The one-hole l>a disconnection threshold specifically uses the
 near-singularity approximation, equal nucleation radius, and a<<R0<<2m in
 equations 9-12; it is not a universal separation rule for sibling universes.
 
-The new scientific work would supply a common parent geometry; physical
-interface sources and full matching; an admissible joint state; interpatch
-clock conversions; and a causal exterior-response prediction. Dimensionless
+Beyond the v4 existence application and the isolated v5-v6 reference, missing
+work includes an explicit common connector/evolution, compatible interface
+sources, an admissible joint state, interpatch clocks and a supplied exterior
+response. Dimensionless
 inherited laws, environmental dressing and state choices must stay distinct.
 Only after those connections exist does a local dark-sector, antimatter or
 time discriminator become a meaningful target. There is no abundance fit here.

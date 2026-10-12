@@ -100,6 +100,13 @@ Before execution, its compact record names:
 5. **Budget and stop:** explicit compute bound and outcomes that stop or redirect this branch.
 6. **Verification and attribution:** independent comparison, error statement and focused prior-art search before claiming novelty.
 
+The [programme dependency graph](nsc-cosmological-atlas.md) makes item 3
+operational: identify prerequisites by name, the unresolved input or compatibility
+condition, and which subsequent calculations become justified under each outcome.
+An equation may already be available while its physical inputs are not. Prefer
+the smallest connection that unlocks useful consequences or excludes a branch.
+This research graph is acyclic; physical recurrence is a separate model question.
+
 Evaluating imported formulas to assemble the atlas and checking adapters are
 permitted integration work, labelled as such. They do not become scientific
 discoveries because tests pass. Hold a candidate's theory and coefficients
@@ -163,3 +170,28 @@ smooth Schwarzschild scattering. A later persistent-response comparison must
 use its own field equation and wall law; a global exterior calculation needs
 admissible initial data and the correct causal branch. A waveform alone cannot
 identify geometry while its incident state remains freely adjustable.
+
+## Finite exterior preparation admission, 12 October 2026
+
+The [preparation owner](nsc-atlas-field-preparation.md) closes a bounded part of
+that v6 gap. This is an application of borrowed field equations and standard
+integral-equation estimates; no worldwide-priority claim is made.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | The v5 isolated signed wall and null clocks; v6 conformal reduced-field matching and regular-centre propagation; Dolan–Ottewill 1106.4318v1 Eq. 11 scalar potential; standard contraction principle |
+| Missing | Independent admissible data on the retained white-hole-side geometry, rather than an arbitrary wall trace |
+| Prerequisites | `geometry-baseline`, `boundary-classification`, `wall-transmission`; keep the right-parent causal exclusion |
+| Decision | Does a finite characteristic strip away from the singularity define a unique transmission problem? |
+| Unlocks | `parent-preparation` supplies a conditional local preparation; `wall-trace` can then be evaluated, enabling `observer-response` and a later `observer-inference` comparison |
+| Domain | Fixed H ell=1, kappa ell=2, M/ell=0.4; real classical massless l=0 conformal scalar; wall R/ell=0.45–0.55; exterior R/ell>=0.4; zero earlier cap data |
+| Budget | Existing adapters only, at most 513 samples and 60 CPU seconds per scientific record; analytic transfer bound, no PDE solve, parameter sweep, backreaction or formation simulation |
+| Stop or redirect | Stop if the retained-side or no-return conditions fail, the corner data conflict, or the contraction bound fails to certify this strip. Report the missing condition; do not retune the theory. A failed bound alone would not prove nonexistence. |
+| Independent check | Recover the scalar potential from -R_UV/R; differentiate the wedge integral; bound its area analytically independent of clock quadrature; compare existing 32/64 clock evaluations and unit rescaling |
+
+The analytic operator norm is at most 0.138821, which certifies a unique finite
+reduced solution. A numerical waveform from those independent data remains
+unevaluated. A global physical source for the characteristic preparation,
+formation of the geometry and quantum-state selection remain open. Any proposed
+solver must identify the specific observer uncertainty it resolves and obtain a
+separate finite admission here before execution.

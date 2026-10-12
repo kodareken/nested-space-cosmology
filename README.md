@@ -14,15 +14,18 @@ It does not establish that every particle is a spherical interior or that our
 universe has a parent. The map distinguishes descent, geometric attachment,
 causal influence and correlation. Missing physical connections remain visible.
 
-The current geometric route reaches a sourced interior connection, a causal map
-and a conditional classical scalar waveform. The incident characteristic is
-supplied; remote preparation and backreaction remain open. Finite transfer,
+The current geometric route reaches a sourced interior connection, a causal map,
+a calibration waveform and a [finite exterior preparation operator](docs/nsc-atlas-field-preparation.md).
+Independent data beside the early wall define a unique transmission problem;
+its numerical received waveform, remote preparation and backreaction remain open. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
 expansion and recycling remain research questions.
 
 ## Read and reproduce
 
+- [Atlas programme and calculation dependencies](docs/nsc-cosmological-atlas.md)
+- [Current preparation map and evidence](docs/nsc-cosmological-atlas-v7.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)
 - [Research inventory and reading boundaries](docs/research-inventory.md)

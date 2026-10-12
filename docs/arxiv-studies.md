@@ -262,6 +262,29 @@ exteriors. Published geometry, Schur elimination, branching processes and
 Bogoliubov transformations are reused. No target abundance or universal scale
 ratio is inserted to fill one of those arrows.
 
+### Finite exterior preparation, atlas v7 — 12 October 2026
+
+The [preparation note](nsc-atlas-field-preparation.md) imports the operator
+and matching law, then connects them on one retained finite domain.
+
+| Source and version | Reading depth | Reusable mathematics and assumptions | Use and unresolved connection |
+| --- | --- | --- | --- |
+| [Dolan–Ottewill, 1106.4318v1](https://arxiv.org/html/1106.4318v1) | Sections II–III, especially Eq. 11; remaining quasinormal-mode analysis not audited | Schwarzschild scalar radial potential f[l(l+1)/R²+2M/R³]; their scattering problem has horizon/infinity conditions. | Import the l=0 local operator into Kruskal coordinates, not their global scattering conditions into sector IV. |
+| [Bär–Tagne Wafo, 1408.4995v2](https://arxiv.org/html/1408.4995v2) | Section 4.2, Theorem 23 and hypotheses inspected; full proof not independently verified | Characteristic partial Cauchy data for a smooth wave operator, with past-compact future. | Context for characteristic data. Not applied as a thin-wall theorem; the finite wedge uses an explicit integral estimate. |
+| [Santiago et al., 1512.02120v2](https://arxiv.org/html/1512.02120v2) | Earlier v6 matching card reused | Distributional scalar matching; static charged-shell assumptions remain distinct. | Retain the conformal reduced-field jump with the moving-wall normal convention. |
+| [Molina–Abdalla–Saa, gr-qc/0309078v1](https://arxiv.org/abs/gr-qc/0309078v1) | Abstract only in this search | Field propagation on Schwarzschild–de Sitter, including initial-data dependence of scalar late behavior. | Challenge to universal late-zero claims; different background, not an implemented moving-shell result. |
+
+Bounded search coverage: arXiv queries combined scalar transmission, moving
+bubble, de Sitter/Schwarzschild, characteristic data, Goursat, timelike boundary
+and Volterra; earlier shell and causal-classification references were revisited.
+Generic scattering and characteristic-problem results were found; no surveyed
+source was established as supplying this exact finite moving-wall data problem.
+This is not a priority finding. Before a numerical successor, inspect established
+characteristic or integral-equation implementations and their boundary assumptions.
+The current contribution is a project connection and analytic norm bound, not
+invention of the scalar potential or contraction principle. Remote source
+preparation and a numerical received waveform remain unresolved.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.

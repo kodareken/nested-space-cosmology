@@ -2,6 +2,31 @@
 
 Current presentation, 12 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Finite exterior preparation and programme, 12 October 2026
+
+The [seventh atlas](nsc-cosmological-atlas-v7.md) connects a finite
+characteristic preparation to the existing interior response operator. The
+fixed conformal scalar and wall admit a retained white-hole-side strip with
+0.4 <= R/ell <= 0.55, wall endpoints 0.45 and 0.55, independent compact
+characteristic data and zero earlier cap data. The wall's outgoing condition
+follows from the absence of a reflected central signal in this window.
+
+The [derivation](nsc-atlas-field-preparation.md) supplies a wedge integral
+equation and an analytic operator-norm bound q* = 0.1388209923 < 1. This
+establishes a unique finite conditional solution and a reduced-field bound,
+without a PDE solver. The [record](../results/development/nsc-cosmological-atlas-v7/preparation-access.json)
+keeps the causal, domain, coefficient and unit checks. Its central arrival
+window is approximately -0.581759 <= T/ell <= -0.250231. The numerical waveform
+from these data is unevaluated. The old pulse's late zero field is not a
+condition imposed on this successor.
+
+The designated right-exterior observer P still cannot send this signal.
+Remote generation of the IV data, formation, stability, quantum state and
+backreaction remain open. The [programme graph](../results/development/nsc-cosmological-atlas-v7/programme.json)
+records the prerequisite, decision and downstream unlock for each candidate
+calculation. It is distinct from physical causal arrows. All earlier scenarios,
+multiple-offspring, communicating-mouth and exterior-response alternatives remain.
+
 ## Exterior-first atlas, 10 October 2026
 
 The [sixth atlas](nsc-cosmological-atlas-v6.md) adds an explicit
