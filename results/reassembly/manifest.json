@@ -20,6 +20,24 @@
   },
   "historical_replay": "Original commit paths materialize under ignored .build/replay; records are not rebound.",
   "merges": {
+    ".github/workflows/verify.yml": {
+      "current_bytes": 3932,
+      "current_sha256": "4955db43f33f798f216d2601d5a71d6f76750f70940ed0a297b73d16de6c303c",
+      "destination": ".github/workflows/verify.yml",
+      "original_root_path": ".github/workflows/verify.yml",
+      "original_root_sha256": "524ffd865d1126ad1d5e489eaf3519008f8ecf7d7628db8e8681904388134d95",
+      "preserved_lab_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
+      "preserved_lab_variant": "archive/reassembly-20261012/lab-context/.github/workflows/verify.yml"
+    },
+    "AGENTS.md": {
+      "current_bytes": 2884,
+      "current_sha256": "999e132ad8ccdaf5a8d01665b46ebcdbd6dea40c2e8717b774b884e3be0c1c51",
+      "destination": "AGENTS.md",
+      "original_root_path": "AGENTS.md",
+      "original_root_sha256": "f5a07598d3d0350a56e1f94fc220b9c257e5de057d6fec6d8c73339f3e154db2",
+      "preserved_lab_sha256": "752e072c68cbfc15953e7c1e1384b78378d71148ffdb4a731f8c308cc700104d",
+      "preserved_lab_variant": "archive/reassembly-20261012/lab-context/AGENTS.md"
+    },
     "CONTRIBUTING.md": {
       "current_bytes": 5974,
       "current_sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235",
@@ -28,6 +46,15 @@
       "original_root_sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235",
       "preserved_lab_sha256": "01a68379136e157e3f1609dc63610f5244f28073feb15acbd4da116e0c89640b",
       "preserved_lab_variant": "archive/reassembly-20261012/lab-context/CONTRIBUTING.md"
+    },
+    "README.md": {
+      "current_bytes": 4094,
+      "current_sha256": "a626b7944c6c49a8fd2fd26f303d2b9d2c87dbeff729c623879e749e54d43d15",
+      "destination": "README.md",
+      "original_root_path": "README.md",
+      "original_root_sha256": "6a01fdb956b4fa6061fce18b963101912ebc80d98e47df3b2dcc207aa3ae9ed0",
+      "preserved_lab_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
+      "preserved_lab_variant": "archive/reassembly-20261012/lab-context/README.md"
     },
     "docs/instructions.md": {
       "current_bytes": 18244,
@@ -19753,8 +19780,8 @@
     {
       "action": "move",
       "bytes": 185245,
-      "current_bytes": 187073,
-      "current_sha256": "289a81bf524aabc24fae501068605fb79eb0759e129244a82311f4650c10ba90",
+      "current_bytes": 187135,
+      "current_sha256": "b18929909e4e533db556b7484de1293e8767566b07f2169e5d7c1463e14dbb6a",
       "destination": "docs/active-code-map.md",
       "disposition": "active_owner",
       "origin": "lab",
@@ -20566,8 +20593,8 @@
     {
       "action": "move",
       "bytes": 8633,
-      "current_bytes": 28690,
-      "current_sha256": "3cf8de792f098c5d7207c2cee815b25fb3e64182fd1abbb522fa328270400f8d",
+      "current_bytes": 30081,
+      "current_sha256": "f0426857690580aace1cbd1e5099d552aa1542981e1d5920234cde822381dcb8",
       "destination": "docs/nsc-cosmological-atlas.md",
       "disposition": "active_owner",
       "origin": "lab",
@@ -25709,8 +25736,8 @@
     {
       "action": "move",
       "bytes": 10488,
-      "current_bytes": 14621,
-      "current_sha256": "aa6ccc2514d16fd2031df58bbc38bb2bc010c4227dfc430626831800a3916acf",
+      "current_bytes": 15197,
+      "current_sha256": "2f52e624e6b2777ec06900649ad5b420c4f577eed994ee2a19eb3f72154dfc8e",
       "destination": "docs/research-inventory.md",
       "disposition": "active_owner",
       "origin": "lab",

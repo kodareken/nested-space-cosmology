@@ -73,7 +73,7 @@ that every open branch succeeds.
 | `parent-preparation` | Locate a data surface in the retained causal domain and specify admissible exterior-side field data; decide whether they can supply the wall input. The finite region-IV problem now has a conditional existence certificate; remote generation remains open. | `wall-trace`, or a recorded exclusion that redirects the source route. |
 | `wall-trace` | Combine compatible preparation, propagation and wall transmission; determine the incident trace rather than assuming its origin. The region-IV trace is evaluated for the fixed independent input in v8. | `observer-response` for the independently specified finite exterior data. |
 | `observer-response` | Use the observer, clocks and fixed transfer operator with a justified trace; v8 resolves a finite central waveform and a positive post-input field tail. | `observer-inference`, comparisons of sources and attachments. |
-| `observer-inference` | Next candidate connection: compare responses in the same observable domain while stating allowed preparation freedom; decide which exterior differences are distinguishable. No new calculation is admitted by this row. | A discriminating observable or an explicitly demonstrated equivalence class. |
+| `observer-inference` | The [fixed-model inverse](nsc-atlas-observer-inference.md) recovers a compatible preparation from a complete signed central trace and gives positive compact-source exclusions. A second geometry and a physical preparation law remain unresolved. | A preparation-restricted response-range comparison or a source-linked independent channel. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -302,7 +302,7 @@ budget and redirect outcome under the [existing admission rule](prior-art-and-op
 
 <a id="observer-identifiability"></a>
 
-### Next connection: observer identifiability under preparation freedom
+### Observer identifiability under preparation freedom
 
 The next useful question is whether an interior measurement distinguishes
 exterior structure once the allowed input preparations are stated. The v8
@@ -312,15 +312,37 @@ change in propagation. The v6 prescribed-wall pulse is a calibration, and
 the v8 zero-kernel control is a numerical omission, so neither automatically
 supplies a competing physical exterior.
 
-A future comparison must define the preparation class, common observer
-clock/domain and measured quantity before deciding whether to test an
-identifiable feature or an equivalence between responses. This is the named
-`observer-inference` unlock, with no calculation or new physical claim admitted
-yet. Its finite budget and stopping rule belong in a separate admission.
-The geometric atlas, connected mouths, inheritance and clock routes remain
+The [analytic inverse](nsc-atlas-observer-inference.md) now closes a bounded
+part of this question. With the same geometry, known clock, zero cap and
+no-return window, a complete compatible signed central trace uniquely
+determines its characteristic preparation. C2 source and wall histories
+that vanish initially correspond to C1 observer histories that vanish on
+the corresponding clock interval. The inverse has a uniform amplitude
+bound and an explicit corner check. No new wave solve is required.
+
+That enlarged class does not preserve the original source's positivity,
+late cutoff or shape. Nonzero positive sources ending at the prescribed
+cutoff must give a positive post-input field and negative accumulated
+signed field. An entirely positive observer bump ending before that cutoff
+requires a source that continues afterwards, and is excluded by the
+compact-source class. The [record](../results/development/nsc-atlas-observer-inference-v1/inference.json)
+states the distinction without claiming equivalence of two geometries.
+
+The next connection is therefore an independently justified preparation
+restriction and its response-range comparison, or an additional channel
+with a shared physical source law. Simply adding a detector in the same
+unchanged cap can be redundant once the full wall history is fixed.
+The source class, common clocks and measured quantity must precede that
+comparison; its budget and stop rule need their own admission. The
+geometric atlas, connected mouths, inheritance and clock routes remain
 available under their own prerequisites.
 
 ## Owners and reproducible output
+
+- [Observer-inverse proof](nsc-atlas-observer-inference.md) and
+  [declaration checker](../scripts/record_nsc_atlas_observer_inference.py)
+  bind the conditional analytic result to unchanged v7/v8 evidence, with
+  no numerical reconstruction or second-model equivalence claimed.
 
 - [Model](../src/recursive_horizons/nsc_cosmological_atlas.py): region/link
   records, finite validation, imported junction/clock constraints, fixed-theory

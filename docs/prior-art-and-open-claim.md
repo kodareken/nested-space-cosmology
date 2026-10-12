@@ -246,3 +246,29 @@ segments of one solve; the 10-million-kernel and 60-CPU-second caps still apply
 to the complete new record. This is a recorded algorithm correction after a
 bounded failure, not permission to retune the physical model or reset a cap
 within a solve. Stop again if these limits or the original accuracy checks fail.
+
+## Observer preparation inverse admission, 12 October 2026
+
+The v8 signal now permits an inference question before any additional wave
+evolution. This admission tests the fixed-model inverse, rather than fitting
+another signal. The original compact positive pulse remains unchanged evidence.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | The v7 retained wedge, positive Schwarzschild kernel, no-return wall law, analytic norm bound q_*<1 and monotone central clock; v8 evaluated response; standard contraction/Neumann-resolvent mathematics |
+| Missing | Whether a complete compatible central trace uniquely determines its characteristic preparation in the fixed model, and which preparation restrictions are needed before using that trace to compare geometries |
+| Prerequisites | Same scalar theory, wall, retained domain, zero bottom and cap; complete observer history from the initial endpoint and its identified proper-time map; preserve the causal exclusion of the right parent |
+| Decision | Prove or reject a bijection between C2 source and wall traces vanishing on a fixed initial open interval, with direct PDE, boundary and corner checks; give the associated central-trace inverse and its limited stability statement |
+| Unlocks | A preparation-constrained response-range comparison or a source-linked independent channel. An unrestricted inverse does not justify comparing freely fitted waveform families as geometry evidence. |
+| Domain | Original wall R/ell in [0.45,0.55], exterior floor 0.4, H ell=1, kappa ell=2, M/ell=0.4, classical massless conformal l=0 probe and the original finite central clock interval |
+| Budget | Proof and focused primary-source review only; one independent analytic review, elementary derivative/corner checks and evidence packaging. No wave solve, kernel quadrature, inverse iteration, parameter scan or new floating-point scientific estimate. |
+| Independent check | Differentiate the wall-prescribed integral to recover f_UV=-Kf and f_U at the wall; recover source and bottom; check the L-switch at U_a; compare with the independent forward-map resolvent identity |
+| Stop or redirect | Stop any broader claim if the inverse needs points outside the retained wedge, fails corner regularity, or leaves the permitted source class. Without a second independently compatible geometry, report only fixed-model invertibility and conditional range-overlap criteria. |
+| Claim boundary | A scoped application of established integral-equation methods, not a new general theorem, numerical source reconstruction, physical source generator, universal degeneracy, geometric reconstruction or priority claim |
+
+The three foreseeable failures are a boundary/domain mismatch, an inverse
+that leaves the declared preparation class, and confusing one trace with a
+controlled family of source-response measurements. Direct differentiation,
+an explicit source-class test, and the focused inverse-wave literature
+comparison address them. A failing check changes the scientific conclusion;
+it does not authorize retuning the model or launching a larger simulation.

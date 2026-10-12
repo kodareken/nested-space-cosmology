@@ -54,21 +54,25 @@ independent analytic comparisons test different possible errors.
 
 ## Reproduce
 
-Use the pinned current root environment in the [reproduction guide](reproducing.md).
-Creation is exclusive and requires a fresh directory:
+Use the explicit original root context in the
+[reproduction guide](reproducing.md#atlas-v8-original-prepared-response-context):
 
 ```sh
-python scripts/derive_nsc_cosmological_atlas_v8.py --output .build/atlas-v8-review
-python scripts/derive_nsc_cosmological_atlas_v8.py --output .build/atlas-v8-review --check
+python scripts/replay_history.py prepare-v8
+python scripts/replay_history.py atlas-v8
 ```
 
-The canonical bundle is checked by
-`python scripts/derive_nsc_cosmological_atlas_v8.py --check`.
+The first command authenticates the retained evidence and materializes commit
+`1154baf290d901e73058392e143d0acb37d22951` without a solve. The second runs its
+unchanged original checker with the recorded Windows scientific/renderer profile.
 The [producer](../scripts/derive_nsc_cosmological_atlas_v8.py) binds the
 [response implementation](../src/recursive_horizons/nsc_atlas_prepared_response.py),
 its scientific owners and upstream evidence; it excludes the canonical
-manuscript to avoid a source/evidence cycle. Changed sources, altered outputs
-and attempted overwrites fail. The [producer tests](../tests/test_nsc_cosmological_atlas_v8.py)
+manuscript to avoid a source/evidence cycle. Because current owners have evolved,
+the current producer's direct `--check` of this frozen bundle fails strictly.
+The replay command selects history explicitly; it does not hide that mismatch.
+Changed sources, altered outputs and attempted overwrites fail.
+The [producer tests](../tests/test_nsc_cosmological_atlas_v8.py)
 cover those failures and preservation of the preceding scenarios.
 
 Replay preserved v7 with `python scripts/replay_history.py atlas-v7`, selecting
@@ -76,7 +80,9 @@ its original sources and recorded Windows runtime as described in the
 [historical replay instructions](reproducing.md#atlas-v7-original-root-context).
 The v1–v6 selectors and frozen evidence remain unchanged.
 
-The next research question is whether different admissible exterior/preparation
-pairs can yield the same interior response, and what further observation would
-separate them. That comparison needs a named candidate and its own admission;
-this waveform alone does not resolve observer identifiability.
+The [analytic successor](nsc-atlas-observer-inference.md) now derives the
+fixed-model preparation inverse and tests restrictions on the allowed source
+class. It supplies no second geometry. Whether different admissible
+exterior/preparation pairs yield the same response still requires a named
+compatible comparison and an independent preparation constraint or discriminator.
+The stored v8 evidence remains unchanged.

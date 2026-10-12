@@ -24,6 +24,9 @@ BUNDLES = ["lab/results/development/nsc-cosmological-atlas" + ("-v" + str(v) if 
 V7_COMMIT = "7fee894ad5a4da2ba378f724e45e926401f82670"
 V7_CONTEXT = ROOT / ".build/replay" / V7_COMMIT[:12]
 V7_BUNDLE = "results/development/nsc-cosmological-atlas-v7"
+V8_COMMIT = "1154baf290d901e73058392e143d0acb37d22951"
+V8_CONTEXT = ROOT / ".build/replay" / V8_COMMIT[:12]
+V8_BUNDLE = "results/development/nsc-cosmological-atlas-v8"
 
 
 def sha(data: bytes) -> str:
@@ -99,42 +102,49 @@ def prepare(context: Path = CONTEXT) -> dict:
     return {"context": str(context), "source_commit": BASELINE, "files": len(hashes)}
 
 
-def prepare_v7(context: Path = V7_CONTEXT) -> dict:
-    """Authenticate v7 evidence and materialize its original root source layout.
-
-    Current scientific owners may evolve. Their frozen bytes come only from
-    V7_COMMIT; retained result payloads must still match that commit in ROOT.
-    No renderer, package installation or scientific calculation is selected.
-    """
-    manifest_name = V7_BUNDLE + "/manifest.json"
-    manifest = json.loads(git("show", V7_COMMIT + ":" + manifest_name))
+def _prepare_root_atlas(context: Path, commit: str, bundle: str, label: str) -> dict:
+    """Authenticate preserved root evidence against an explicitly selected commit."""
+    manifest_name = bundle + "/manifest.json"
+    manifest = json.loads(git("show", commit + ":" + manifest_name))
     source_paths = set(manifest["source_bindings"])
-    bundle_paths = {V7_BUNDLE + "/" + name for name in manifest["outputs"]}
+    bundle_paths = {bundle + "/" + name for name in manifest["outputs"]}
     bundle_paths.add(manifest_name)
     # Full src imports remain isolated even where the producer binds only the
     # modules it uses directly. The source-bound scripts and owners are exact.
     paths = sorted({"src", "pyproject.toml", *source_paths, *bundle_paths})
     retained = bundle_paths | {name for name in source_paths
                                if name.startswith(("results/", "paper/atlas-working-draft"))}
-    data = git("archive", "--format=tar", V7_COMMIT, *paths)
+    data = git("archive", "--format=tar", commit, *paths)
     hashes = install_archive(data, context, retained_paths=retained)
     if not set(paths).difference({"src"}) <= set(hashes):
-        raise ValueError("v7 historical source inventory is incomplete")
-    receipt = {"schema": "NSC-EXPLICIT-REPLAY-v1", "source_commit": V7_COMMIT,
-               "purpose": "Explicit v7 context; never substitutes for a current source check.",
+        raise ValueError(label + " historical source inventory is incomplete")
+    if any(hashes[name] != digest for name, digest in manifest["source_bindings"].items()):
+        raise ValueError(label + " original source does not match its manifest")
+    receipt = {"schema": "NSC-EXPLICIT-REPLAY-v1", "source_commit": commit,
+               "purpose": "Explicit " + label + " context; never substitutes for a current source check.",
                "files": hashes}
     path = context / "replay-context.json"
     encoded = (json.dumps(receipt, indent=2, sort_keys=True) + "\n").encode()
     if path.exists() and path.read_bytes() != encoded:
         raise ValueError("historical context receipt changed")
     path.write_bytes(encoded)
-    return {"context": str(context), "source_commit": V7_COMMIT, "files": len(hashes),
+    return {"context": str(context), "source_commit": commit, "files": len(hashes),
             "evidence_authenticated": len(retained), "scientific_replay": False}
 
 
-def require_v7_profile(context: Path) -> dict:
+def prepare_v7(context: Path = V7_CONTEXT) -> dict:
+    """Materialize original v7 sources; evolving live owners are never inputs."""
+    return _prepare_root_atlas(context, V7_COMMIT, V7_BUNDLE, "v7")
+
+
+def prepare_v8(context: Path = V8_CONTEXT) -> dict:
+    """Materialize original v8 sources; perform no waveform or figure replay."""
+    return _prepare_root_atlas(context, V8_COMMIT, V8_BUNDLE, "v8")
+
+
+def _require_root_profile(context: Path, bundle: str, label: str) -> dict:
     """Reject an incompatible renderer explicitly; never choose a fallback."""
-    expected = json.loads((context / V7_BUNDLE / "manifest.json").read_bytes())["runtime"]
+    expected = json.loads((context / bundle / "manifest.json").read_bytes())["runtime"]
     actual = {"python": platform.python_version()}
     for name in expected.keys() - {"python"}:
         try:
@@ -142,26 +152,45 @@ def require_v7_profile(context: Path) -> dict:
         except PackageNotFoundError:
             actual[name] = "unavailable"
     if platform.system() != "Windows" or actual != expected:
-        raise ValueError("v7 exact image replay requires Windows and its recorded profile "
+        raise ValueError(label + " exact image replay requires Windows and its recorded profile "
                          + json.dumps(expected, sort_keys=True)
                          + "; actual platform=" + platform.system() + " runtime="
                          + json.dumps(actual, sort_keys=True)
-                         + ". Use prepare-v7 for evidence authentication; no fallback was selected.")
+                         + ". Use prepare-" + label + " for evidence authentication; no fallback was selected.")
     return {"platform": platform.system(), **actual}
+
+
+def require_v7_profile(context: Path) -> dict:
+    return _require_root_profile(context, V7_BUNDLE, "v7")
+
+
+def require_v8_profile(context: Path) -> dict:
+    return _require_root_profile(context, V8_BUNDLE, "v8")
 
 
 def run_v7(context: Path = V7_CONTEXT) -> dict:
     """Run the untouched original v7 checker, including its exact image checks."""
     info = prepare_v7(context)
     profile = require_v7_profile(context)
-    script = "scripts/derive_nsc_cosmological_atlas_v7.py"
+    return _run_root_atlas(context, info, profile, "v7")
+
+
+def run_v8(context: Path = V8_CONTEXT) -> dict:
+    """Run the untouched v8 checker with its original finite numerical budget."""
+    info = prepare_v8(context)
+    profile = require_v8_profile(context)
+    return _run_root_atlas(context, info, profile, "v8")
+
+
+def _run_root_atlas(context: Path, info: dict, profile: dict, label: str) -> dict:
+    script = "scripts/derive_nsc_cosmological_atlas_" + label + ".py"
     env = environment(context)
     env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(ROOT / "archive/source-history/objects")
     env["PYTHONNOUSERSITE"] = "1"
     result = subprocess.run([sys.executable, script, "--check"], cwd=context,
                             env=env, capture_output=True, text=True)
     if result.returncode:
-        raise ValueError(f"v7 historical replay failed: {script}\n{result.stdout}\n{result.stderr}")
+        raise ValueError(f"{label} historical replay failed: {script}\n{result.stdout}\n{result.stderr}")
     return {**info, "scientific_replay": True, "runtime": profile,
             "checks": [{"script": script, "result": json.loads(result.stdout)}]}
 
@@ -208,13 +237,17 @@ def run(kind: str, context: Path = CONTEXT) -> dict:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("kind", choices=["prepare", "atlas", "finite", "companion", "tests", "all",
-                                        "prepare-v7", "atlas-v7"],
-                        help="v7 commands are explicit; legacy all retains its separate v1-v6 profile")
+                                        "prepare-v7", "atlas-v7", "prepare-v8", "atlas-v8"],
+                        help="v7/v8 commands are explicit; legacy all retains its separate v1-v6 profile")
     args = parser.parse_args()
     if args.kind == "prepare-v7":
         result = prepare_v7()
     elif args.kind == "atlas-v7":
         result = run_v7()
+    elif args.kind == "prepare-v8":
+        result = prepare_v8()
+    elif args.kind == "atlas-v8":
+        result = run_v8()
     else:
         result = prepare() if args.kind == "prepare" else run(args.kind)
     print(json.dumps(result, indent=2))
