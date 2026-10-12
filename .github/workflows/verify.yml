@@ -82,3 +82,13 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python scripts/replay_history.py atlas-v8
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Retain original response output after replay failure
+        if: failure()
+        run: python scripts/diagnose_history_replay.py --version 8
+      - name: Upload preparation and response replay diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: prepared-atlas-replay-diagnostics
+          path: .build/history-diagnostics
+          if-no-files-found: ignore
