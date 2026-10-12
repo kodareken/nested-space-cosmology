@@ -8,10 +8,12 @@ build/
 dist/
 paper/.build/
 .build/
+/.research-reset-preservation/
 .DS_Store
 ._*
 .pi/subagents/
 .pi/npm/node_modules/
+.pi/npm/
 .codex/
 .pi/settings.json
 
