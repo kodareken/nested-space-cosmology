@@ -39,7 +39,10 @@ to be justified independently.
 The canonically normalized probe adds no singular surface stress or
 tangential flux jump. With fixed corner geometry and null normalization,
 the same preparation requires a calculable correction to the initial
-areal radius and its affine slope. Coupled bulk and wall evolution remain open.
+areal radius and its affine slope. Transverse constraint transport then
+determines a geometric mass response on that initial null surface, including
+a negative quadratic coefficient after the compact input. Coupled bulk and
+wall evolution remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -87,15 +90,12 @@ specific attachment whose mathematics has been checked.
 
 ![Nested regions and the checked geometric connection](figures/geometry-overview.png)
 
-*Figure 1. A finite research map and its current mathematical foothold.
-The upper panel records possible descent through two holes and a further
-generation; those child identifications remain hypotheses. The lower panel
-follows the checked cap–wall–bridge body and its isolated observer/field
-reference. Colors distinguish attachment, descent, causal influence and
-correlation. Layout and circles are diagrammatic: they are not a spatial
-embedding, scale comparison or proof of global spherical topology.
-The [figure record](figures/geometry-overview.json) identifies the source
-records and the status of each displayed connection.*
+*Figure 1. Possible descent (upper panel) remains hypothetical; the lower
+panel shows the checked cap–wall–bridge body and observer/field reference.
+Colors distinguish attachment, descent, influence and correlation. Circles
+and spacing do not establish an embedding, relative scales or global
+spherical topology. The [figure record](figures/geometry-overview.json)
+identifies each connection's evidence and status.*
 
 ### 2. What spherical geometry means here
 
@@ -1188,14 +1188,122 @@ $h_E''=-xp'^2/2$, the minimally coupled affine focusing equation.
 This frame comparison does not extend through the material wall without
 transforming its action too.
 
-This result supplies one intrinsic characteristic constraint. Mixed
-equations, transverse derivatives, later wall matching and the coupled
-interior response remain unresolved. Although $T_{VV}=0$ after the trace
+This result supplies one intrinsic characteristic constraint. By itself it
+does not fix the transverse geometry, later wall matching or the coupled
+interior response. Although $T_{VV}=0$ after the trace
 on this leg, transverse scalar derivatives can persist: it is not a claim
 that the remaining spacetime is vacuum. No mass shift, wall displacement,
-finite-amplitude error bound or stability conclusion follows. These
-initialized data now make a transverse constraint or propagation question
-available without starting a new coupled solver.
+finite-amplitude error bound or stability conclusion follows from this
+intrinsic constraint alone. The next section supplies its transverse-radius
+connection without starting a new coupled solver.
+
+### 13.6. An invariant mass response on the same initial surface
+
+<!-- nsc-claim:atlas-source-mass -->
+
+Evidence: [source-leg mass record](../results/development/nsc-atlas-source-mass-v1/mass.json),
+[derivation and independent stress check](../docs/nsc-atlas-source-mass.md).
+
+An intrinsic radius correction does not determine a spherical gravitational
+mass: the transverse radius derivative is also required. Its corner value
+was already fixed. Borrowing the mixed Einstein equation transports that
+datum along the same initial null surface and closes this missing connection.
+The quantity compared is the geometric Misner--Sharp mass length,
+
+$$
+\mathfrak{m}=\frac{R}{2}\left(1-g^{ab}\partial_aR\partial_bR\right),
+\qquad \frac{\mathfrak{m}_J}{\ell}=m+\alpha\mu_J+O(\alpha^2),\quad m=0.4.
+$$
+
+It is invariant under coordinate changes. The constant reference mass
+also makes this quadratic coefficient unchanged by an order-$\alpha$
+displacement of the compared cuts. A conformal change of metric
+generally changes its value. Dividing the length by $G$ gives mass units
+when $c=1$; this does not turn a finite source-leg value into an asymptotic
+energy or the mass of the entire parent.
+
+On the source leg write $ds^2/\ell^2=-C\,dU\,dx+r^2d\Omega^2$,
+where $C=-4a/U_0>0$, $a=2m=0.8$ and $r=R/\ell$.
+The reference transverse derivative is $d=r_{0,U}/C=(a/x-1)/4$.
+The leading scalar derivative $s=\ell\phi_U/(C\varepsilon)$ is supplied
+by the original field equation and zero bottom data:
+
+$$
+s'=-\frac{s+dp'}{x},\qquad s(0.4)=0.
+$$
+
+No additional outgoing field profile is chosen. In the equivalent smooth
+Einstein-frame description, the borrowed minimal mass law of
+[An and Lim, Eq. (2.15)](https://arxiv.org/html/2005.04090v1) gives
+
+$$
+\mu_E(x)=-\frac{1}{4}\int_{0.4}^{x}t(a-t)p'(t)^2\,dt.
+$$
+
+Both future radial derivatives are positive in this retained white-hole
+sector. Consequently this coefficient decreases for a positive canonical
+null stress; untrapped-exterior monotonicity rules have different signs.
+
+The return to the declared Jordan-frame geometry uses the full geometric
+transformation of [Faraoni and Vitagliano, Eq. (7)](https://arxiv.org/html/1401.1189v1):
+
+$$
+\bar{\mathfrak{m}}=\omega\mathfrak{m}
+-\frac{R^3}{2\omega}(\nabla\omega)^2
+-R^2\nabla\omega\cdot\nabla R,\qquad
+\omega=\sqrt{1-\kappa_4\phi^2/6}.
+$$
+
+Keeping both null derivatives yields the quadratic coefficient
+
+$$
+\mu_J=\mu_E+\frac{mp^2}{12}+\frac{x^2p}{3}(s+dp').
+$$
+
+The frame masses differ during the input. Independent substitution into
+the mixed-radius equation and the geometric mass definition reproduces
+this expression. A second check uses [Hayward's general-matter law,
+Eq. (2.9d)](https://arxiv.org/html/gr-qc/9710089v2), retaining the improved
+mixed stress instead of setting it identically to zero as in the
+minimal-scalar comparison.
+
+After the compact trace ends, $p=p'=0$ and both derivatives of $\omega$
+vanish. The frame masses then agree at this order:
+
+$$
+\mu_J=\mu_E=-\frac{1}{4}\int_{\mathrm{support}}t(a-t)p'(t)^2\,dt<0.
+$$
+
+For the recorded input, this final coefficient is approximately
+$-28.8831970541$. During the input the largest sampled frame difference
+is $4.2654598348$; this is a sampled comparison, not an extremum bound.
+Ten exact symbolic identities and the independent mixed-geometry and
+improved-stress constructions check the borrowed mass laws. The
+129-sample calculation uses 47520 counted quadrature nodes; separate
+quadrature and geometry refinement comparisons change the mass coefficients
+by less than $4.6\times10^{-13}$. These are numerical diagnostics rather
+than rigorous enclosures or bounds on omitted perturbative orders.
+
+![The compact initial field and its geometric mass response](figures/source-mass.png)
+
+*Figure 9. The fixed compact preparation (top) and its quadratic geometric
+mass coefficients on the same initial null leg (bottom). The horizontal
+coordinate retains the corner-anchored affine normalization $x=R_0/\ell$.
+Jordan and Einstein frame masses differ during the input and agree at a
+constant negative correction afterwards. The negative coefficient is
+relative to the reference mass; no finite amplitude or negative total
+mass is established. The [figure record](figures/source-mass.json) binds
+the plotted samples to the mass evidence.*
+
+The sign follows from $0<t<a$ and the nonzero original input. The
+coefficient stays constant on the remaining finite source leg. Transverse
+scalar derivatives can still persist there, so this is neither a vacuum
+future nor a global mass-loss history. It is an invariant response to the
+specified initial data, with the frame and comparison fixed. No finite
+amplitude or perturbative remainder bound has been chosen. The next
+connection is to transport compatible sourced geometry toward the wall
+and test its dynamical junction conditions. Wall motion and the corrected
+interior-observer signal remain open.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1476,7 +1584,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Initialized geometry to transverse response | Which mixed equation and remaining gravitational data connect the sourced null-leg correction to an invariant exterior response or later wall matching? | A coupled geometric response with declared corner and boundary data |
+| Initial mass response to the wall | Which propagation equations and compatible field/gravitational data carry the sourced geometry to a dynamical wall junction? | A calculated wall response and, subsequently, a corrected observer signal |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1492,7 +1600,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 9. Research dependencies, distinct from spacetime causal arrows.
+*Figure 10. Research dependencies, distinct from spacetime causal arrows.
 Known equations become usable when their inputs, domains and matching are
 established. The diagram records the v7 prerequisite structure; the
 updated [programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
@@ -1512,8 +1620,9 @@ within a fixed geometry, and why physical source restrictions must accompany
 any comparison of maps.
 The quadratic stress check now connects that preparation to compatible local
 wall conditions. Its characteristic constraint requires a nonzero initial
-radius correction under the declared corner and null normalization; coupled
-bulk and wall evolution remain to be established.
+radius correction under the declared corner and null normalization;
+transverse constraint transport then supplies an invariant geometric mass coefficient
+on that same surface. Bulk and wall evolution remain to be established.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1538,6 +1647,7 @@ and renders their relationships without launching a new physics calculation.
 | Fixed-model source inverse and preparation exclusions | [Proof](../docs/nsc-atlas-observer-inference.md); [record](../results/development/nsc-atlas-observer-inference-v1/inference.json) |
 | Conformal probe surface stress and tangential flux | [Derivation](../docs/nsc-atlas-scalar-wall-consistency.md); [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json) |
 | Characteristic gravitational initialization | [Constraint and frame check](../docs/nsc-atlas-characteristic-initialization.md); [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json) |
+| Geometric mass on the prepared null surface | [Mixed geometry and stress checks](../docs/nsc-atlas-source-mass.md); [record](../results/development/nsc-atlas-source-mass-v1/mass.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

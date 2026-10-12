@@ -30,6 +30,7 @@ INPUTS = {
     "observer_inference": "results/development/nsc-atlas-observer-inference-v1/inference.json",
     "scalar_wall_consistency": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
     "characteristic_initialization": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
+    "source_mass": "results/development/nsc-atlas-source-mass-v1/mass.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -92,6 +93,16 @@ def load_evidence() -> tuple[dict, dict]:
             or not initial["calculation"]["last"]["h"] < 0
             or not initial["calculation"]["last"]["h_prime"] < 0):
         raise ValueError("The initialization record no longer supports the initial null constraint with evolution open.")
+    mass = records["source_mass"]
+    mass_last = mass["calculation"]["last"]
+    if (mass["status"] != "QUADRATIC_SOURCE_LEG_INVARIANT_MASS_RESPONSE"
+            or mass["inputs"] != response["inputs"]
+            or mass["reference_domain"] != initial["calculation"]["geometry"]
+            or any(value is not False for value in mass["knowledge_boundary"].values())
+            or not mass_last["mu_jordan"] < 0
+            or abs(mass_last["mu_jordan"] - mass_last["mu_einstein"]) > 1e-8
+            or abs(mass_last["mu_jordan"] - mass_last["mu_geometric"]) > 1e-8):
+        raise ValueError("The source-mass record no longer supports an initial geometric response with wall evolution open.")
     return records, provenance
 
 
@@ -199,7 +210,7 @@ def render(output: Path) -> dict:
         "Analytic inverse: signal + fixed geometry → source\n"
         "Permitted preparation still needs a physical law",
         color="causal", size=13)
-    label(4.5, 0.64, "Initial null geometry responds; bulk evolution open", 13, color="muted")
+    label(4.5, 0.64, "Initial geometric mass responds; wall evolution open", 13, color="muted")
 
     for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
                           (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
@@ -287,6 +298,21 @@ def render(output: Path) -> dict:
                     "No coupled bulk/wall evolution, interior observer correction or finite-amplitude error bound is established.",
                 ],
             },
+            "source_mass": {
+                "status": records["source_mass"]["status"],
+                "conventions": records["source_mass"]["conventions"],
+                "equations": records["source_mass"]["equations"],
+                "meaning": records["source_mass"]["meaning"],
+                "knowledge_boundary": records["source_mass"]["knowledge_boundary"],
+                "last": records["source_mass"]["calculation"]["last"],
+                "interpretation": "The fixed preparation and corner data determine geometric mass on the same initial null leg through the mixed radius constraint and full conformal transformation.",
+                "limits": [
+                    "Coordinate-invariant geometric mass generally changes under a conformal frame transformation during the input.",
+                    "The negative post-input coefficient is relative to the reference; no finite amplitude or negative total mass is established.",
+                    "Persistent transverse scalar data prevent an inference of a vacuum future from the compact source trace.",
+                    "No asymptotic energy, coupled bulk/wall evolution, interior observer correction or finite-amplitude error bound is established.",
+                ],
+            },
             "displayed_connections": [
                 {"from": "cap", "to": "wall", "kind": "attachment", "status": "checked initial slice"},
                 {"from": "wall", "to": "bridge", "kind": "attachment", "status": "checked initial slice"},
@@ -308,6 +334,7 @@ def render(output: Path) -> dict:
             "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
             "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
             "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
+            "The source-leg mass successor closes transverse radius transport only on the initial surface; bulk propagation and the dynamical wall response remain open.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],

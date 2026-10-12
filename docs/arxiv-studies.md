@@ -474,8 +474,8 @@ $$
 
 and the corresponding $u$ equation. Borrow the geometric constraint and
 normalization, not a minimal-scalar stress for the Jordan-frame conformal
-probe. Its improved stress must be retained, or the complete smooth-vacuum
-frame map applied. Their choice of null lapse on both initial legs leaves the
+probe. Its improved stress must be retained, or the complete smooth-exterior
+frame map applied with the scalar as its only matter. Their choice of null lapse on both initial legs leaves the
 radius subject to these constraints; prescribing both unchanged would
 overspecify sourced data. The paper's centre and trapped-surface assumptions
 do not become conditions on our finite white-hole-sector strip.
@@ -515,6 +515,106 @@ also changes. Positivity of $F$ ensures this local map is nonsingular, not that
 backreaction is small. The equivalence does not supply unchosen corner data,
 a corrected wall, or stability.
 
+<a id="source-leg-mass-library"></a>
+
+### Geometric mass along the initialized source leg
+
+These readings support the [mass-transport admission](prior-art-and-open-claim.md#invariant-source-leg-mass-admission-13-october-2026).
+Here $m=R(1-\nabla R\cdot\nabla R)/2$ is a geometric length; with $c=1$,
+conversion to ordinary mass units divides by $G$. Coordinate invariance of
+this definition does not mean invariance under a conformal change of metric.
+
+**An--Lim, [2005.04090v1](https://arxiv.org/html/2005.04090v1), 8 May 2020, mass extension.**
+Read (1.1)--(1.3), (2.4), (2.14)--(2.15), and the real uncharged specialization
+(4.1)--(4.6); formation proofs remain outside this reading. With
+$ds^2=-\Omega^2du\,dv+r^2d\Omega_2^2$, the mass is
+$m=r(1+4\Omega^{-2}r_ur_v)/2$. At zero charge and canonical real scalar,
+(2.15)/(4.6), restoring $\kappa_4=8\pi G$, gives
+$m_v=-\kappa_4 r^2\Omega^{-2}r_u\psi_v^2$; (2.14)/(4.5) exchanges $u,v$.
+Equation (2.4) becomes $(rr_u)_v=-\Omega^2/4$.
+These are minimal-matter equations for the Einstein-frame check, not the
+Jordan improved stress. The sign of $r_u$ must be established in the actual
+retained sector; the paper's exterior monotonicity assumptions cannot be
+carried into a white-hole sector by notation alone.
+
+**Madler--Gannouji--Gallo, [2503.24162v3](https://arxiv.org/html/2503.24162v3), 11 July 2025, transverse-data extension.**
+Rechecked the metric (8), geometric mass (21), and (84c), (86)--(92).
+For $ds^2=-Vdw^2+2\epsilon dw\,d\lambda+r^2d\Omega_2^2$,
+$M=r(1-2\epsilon r_wr_\lambda-Vr_\lambda^2)/2$.
+On the affine null boundary $V=V_{,\lambda}=0$, (84c)/(91) gives
+$2\epsilon(rr_\lambda)_{,w}=1-\kappa Q^2/(8\pi r^2)$.
+At zero charge this transports the transverse radius derivative from its
+corner value. That datum is required in addition to intrinsic focusing.
+The equation belongs to their minimal scalar/Maxwell system; the Jordan
+source must be adapted separately. Asymptotic Bondi-mass arguments and a
+coupled transmitting-wall construction are not imported.
+
+**Hayward, [gr-qc/9710089v2](https://arxiv.org/html/gr-qc/9710089v2), 27 August 1998.**
+Read section II's mass definition (2.2), double-null laws (2.8)--(2.10)
+and adjacent sign conventions. Later thermodynamic and horizon laws remain
+unaudited. The source sets $G=1$ and $g_{+-}<0$; its $A$ denotes sphere
+area, not our null lapse. Equation (2.9d) supplies general-matter mass
+transport, without imposing $T_{+-}=0$. Converted to our
+$ds^2=-A\,dU\,dV+R^2d\Omega^2$ and $\kappa_4=8\pi G$:
+
+$$
+m_V=\frac{\kappa_4R^2}{A}(T_{UV}R_V-T_{VV}R_U),\qquad
+m_U=\frac{\kappa_4R^2}{A}(T_{UV}R_U-T_{UU}R_V).
+$$
+
+Its mixed equation (2.10b) becomes
+$(RR_U)_V=-A/4+(\kappa_4/2)R^2T_{UV}$.
+Here $T$ means the full source in $G_{\mu\nu}=\kappa_4T_{\mu\nu}$;
+retaining nonminimal curvature terms there requires consistent accounting.
+These local identities supply the Jordan stress cross-check. Energy-condition
+monotonicity and an asymptotic total-energy interpretation are separate claims.
+
+**Faraoni--Vitagliano, [1401.1189v1](https://arxiv.org/html/1401.1189v1), 6 January 2014.**
+Read section II through (7), including definitions (3)--(6). Later temperature,
+horizon and Kerr--Schild applications remain unaudited. For
+$\bar g=s^2g$, $\bar R=sR$, their equation (7) gives the geometric identity
+
+$$
+\bar m=s m-\frac{R^3}{2s}\nabla s\cdot\nabla s
+-R^2\nabla s\cdot\nabla R,
+$$
+
+with contractions in the original metric. This is the needed comparison
+law, not $\bar m=m$ or a rescaling of the mass coefficient alone.
+Both transverse and tangent scalar derivatives enter when
+$s=\sqrt{1-\kappa_4\phi^2/6}$. The formula itself is geometric and does
+not establish a physical equivalence of matter actions.
+
+**Aviles--Maeda--Martinez, [1910.07534v2](https://arxiv.org/html/1910.07534v2), 23 October 2019, frame reminder.**
+Rechecked (2.21)--(2.24) and the surrounding matter-coupling qualification.
+With the action and coupling already fixed by the initialization owner,
+$\bar g=(1-\kappa_4\phi^2/6)g$ and
+$d\psi/d\phi=(1-\kappa_4\phi^2/6)^{-1}$ in the smooth exterior.
+Use the mass transformation above alongside this field map. This does not
+authorize leaving the cap vacuum term or material-wall action unchanged
+when extending the frame comparison beyond that exterior.
+
+**Hammad, [1610.02951v1](https://arxiv.org/html/1610.02951v1), 7 October 2016, interpretation challenge.**
+Read the introduction, section 2's geometric examples (2.6)--(2.13), and
+section 3's fluid setup and transformed material integral (3.12)--(3.13).
+The remaining scalar-tensor and fluid examples were not audited. The paper
+distinguishes a geometric quasilocal mass from a material-fluid mass and
+explains their different conformal behavior. Retain this warning: a
+geometric mass response is not automatically a rest-mass inventory or a
+global energy. Its perfect-fluid material definition is not substituted
+for the atlas's explicitly chosen geometric mass.
+
+**Search coverage, 13 October 2026.** A bounded primary-source search used
+Misner--Sharp/conformal-transformation, Hayward/unified-first-law and
+Faraoni--Vitagliano queries. The three new primary sources above were read
+at the declared depth alongside the three existing characteristic/frame
+sources; reference links supplied normalization cross-checks. Search results
+for broader Hawking--Hayward transformations and cosmological examples
+were screened but their proofs were not absorbed. No exhaustive citation
+audit or worldwide-priority conclusion follows. The remaining connection
+is the fixed atlas preparation's mixed equation and geometric mass, not a
+new derivation of these established laws.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.
@@ -549,6 +649,7 @@ a corrected wall, or stability.
 - [1311.4182](https://arxiv.org/abs/1311.4182) — Fischmann: conformal powers of the Dirac operator, used for the free compact-carrier identification.
 - [1312.2235](https://arxiv.org/abs/1312.2235) — Kurkov, Lizzi and Vassilevich: high-energy bosons do not propagate, used for the spectral-cutoff propagation wall.
 - [1312.2960](https://arxiv.org/abs/1312.2960) — Adam, Naya, Sanchez-Guillen and Wereszczynski: BPS Skyrme energy linear in topological charge, including the static-energy equations.
+- [1401.1189](https://arxiv.org/abs/1401.1189) — Faraoni and Vitagliano: geometric mass under conformal transformations; v1 equation (7) is imported for the [source-leg mass comparison](#source-leg-mass-library).
 - [1404.0602](https://arxiv.org/abs/1404.0602) — Bianchi and Smerlak: equations 6–9 for the peeling power and relative radiation entropy of a specified incoming vacuum.
 - [1404.5635](https://arxiv.org/abs/1404.5635) — Archived: Bousso, Casini, Fisher and Maldacena, proof of a quantum Bousso bound.
 - [1405.0397](https://arxiv.org/abs/1405.0397) — Castillo-Felisola, Corral, Kovalenko and Schmidt: equations 13 and 18–20, the higher-dimensional Einstein–Cartan contact reused on compact profiles.
@@ -570,6 +671,7 @@ a corrected wall, or stability.
 - [1606.05831](https://arxiv.org/abs/1606.05831) — Archived: Kobayashi, generic instabilities of nonsingular cosmologies in Horndeski theory.
 - [1607.07791](https://arxiv.org/abs/1607.07791) — Imported candidate: an Einstein–Cartan black universe with regular torsion and a positive-kinetic scalar, not yet the same spectral torsion operator.
 - [1609.01731](https://arxiv.org/abs/1609.01731) — Bondi–Sachs formulation used for the distinction between asymptotic Bondi mass and energy carried by outgoing radiation.
+- [1610.02951](https://arxiv.org/abs/1610.02951) — Hammad: distinct geometric and material mass conventions under conformal transformations; scoped interpretation check in the [mass library](#source-leg-mass-library).
 - [1612.07281](https://arxiv.org/abs/1612.07281) — Archived: Bonga, Gupt and Yokomizo, tensor perturbations during inflation in a spatially closed universe, including the three-sphere tensor eigenvalue.
 - [1704.03143](https://arxiv.org/abs/1704.03143) — Contreras et al.: physical models for dipolar asymmetry tested with CMB polarization.
 - [1704.04807](https://arxiv.org/abs/1704.04807) — Archived: exact self-dual Skyrmion identities, equations 11–16, embedded as a scale sector.
@@ -662,7 +764,7 @@ a corrected wall, or stability.
 - [gr-qc/9504004](https://arxiv.org/abs/gr-qc/9504004) — Archived: Jacobson, thermodynamics of spacetime and the Einstein equation of state.
 - [gr-qc/9505009](https://arxiv.org/abs/gr-qc/9505009) — Camporesi and Higuchi: equations 3.51–3.54, the Dirac spectrum on spheres and real hyperbolic spaces.
 - [gr-qc/9612057](https://arxiv.org/abs/gr-qc/9612057) — Archived: Borde, regular black holes and topology change.
-- [gr-qc/9710089](https://arxiv.org/abs/gr-qc/9710089) — Archived: Hayward, the unified first law of black-hole dynamics.
+- [gr-qc/9710089](https://arxiv.org/abs/gr-qc/9710089) — Hayward, the unified first law of black-hole dynamics: v2 local mass transport and mixed-radius identities are imported in the [source-leg mass library](#source-leg-mass-library); later thermodynamic claims remain outside the reading.
 - [gr-qc/9801079](https://arxiv.org/abs/gr-qc/9801079) — Archived: Finster, Smoller and Yau, particlelike solutions of the Einstein–Dirac equations.
 - [gr-qc/9810032](https://arxiv.org/abs/gr-qc/9810032) — Fabris, Pelinson and Shapiro: section 2, the anomaly-induced-action construction.
 - [gr-qc/9901069](https://arxiv.org/abs/gr-qc/9901069) — Hollands: adiabatic Hadamard states for Dirac fields, used to propagate a reference through a smooth auxiliary metric.

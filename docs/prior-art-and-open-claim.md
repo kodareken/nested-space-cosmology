@@ -313,7 +313,7 @@ free. First ask which null constraint correction the fixed preparation forces.
 | Missing | Compatible gravitational data on the admitted source and zero bottom legs; leaving both the radius and null normalization unperturbed has not been justified for a nonzero pulse |
 | Fixed prerequisites | Original v7 C3 reduced-field preparation, v8 leading field, xi=1/6, canonical positive kinetic coefficient, zero scalar background, unchanged corner Schwarzschild geometry and both corner expansions; bottom scalar data zero. Preserve the right-parent causal exclusion. |
 | Gauge and order | Hold the null lapse at its reference value along the source leg, equivalently keep the corner-anchored background areal-radius affine parameter affine there. Solve the order-amplitude-squared radius constraint correction with zero corner correction and derivative; do not also prescribe the original radius all along the leg. |
-| Decision | Determine the required initial radial/expansion correction and whether it vanishes after the compact scalar trace ends. Give an analytic sign or obstruction where possible and evaluate the coefficient for the recorded preparation. No amplitude is selected to make the answer small. |
+| Decision | Determine the required initial radius and affine radial-derivative correction and whether it vanishes after the compact scalar trace ends. Give an analytic sign or obstruction where possible and evaluate the coefficient for the recorded preparation. No amplitude is selected to make the answer small. |
 | Unlocks | A constraint-consistent input for a later coupled exterior/wall problem, or a precise incompatibility requiring a changed initial-data choice. A source-leg result alone does not determine a mass shift, corrected wall, interior waveform or stability. |
 | Finite domain | Existing U=U0, Va<=V<=Vb in retained sector IV, R/ell in [0.4,0.55], and zero bottom Va, U0<=U<=Ua. No new future domain, global source or full bulk evolution. |
 | Budget | One-dimensional constraint quadratures and exact algebra only; at most 129 displayed source samples, Gauss orders 32/64 split at the fixed support edges, at most 20000 scalar integrand evaluations and 60 CPU seconds per complete evidence creation. Reuse 32/64 geometric adapters. No PDE solver, field re-solve, parameter sweep or bulk derivative campaign. |
@@ -328,3 +328,31 @@ transformed sources. The anchored characteristic data, restricted output and
 exterior-only independent check address these three risks. This is an
 application of borrowed constraints to the existing preparation, without a
 claim of worldwide mathematical priority.
+
+## Invariant source-leg mass admission, 13 October 2026
+
+The initialized null radius is intrinsic data. The next missing connection is
+an invariant spherical gravitational response to that same fixed preparation.
+The geometric mass also needs a transverse radius derivative; its corner datum
+is already fixed, and the leading transverse scalar is determined by the
+existing characteristic field equation. Check closure before numerical work.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | An--Lim [2005.04090v1](https://arxiv.org/html/2005.04090v1), mass definition (1.3), mixed radial equation (2.4), mass transport (2.14)-(2.15); Madler--Gannouji--Gallo [2503.24162v3](https://arxiv.org/html/2503.24162v3), geometric mass (21) and transverse transport (84c)/(91); the already imported improved conformal stress and smooth-exterior frame map. |
+| Missing | The Jordan-frame geometric mass coefficient and its connection to the initialized source leg. Minimal-matter transport cannot be inserted unchanged into the Jordan-frame equation. |
+| Fixed prerequisites | Same original C3 reduced-field source, zero bottom trace, canonical conformal scalar with xi=1/6 and zero potential, no additional wall interaction, fixed corner radius, both expansions and lapse, and fixed source-leg lapse. Reuse the sealed initialization evidence and leading field equation. |
+| Decision | Establish whether the mixed equation closes with those data; calculate the order-amplitude-squared geometric mass response along the same leg, including whether a response persists after the compact trace ends. Report its frame, coordinate invariance and sign with their actual assumptions. |
+| Unlocks | An invariant exterior consequence of the admitted preparation and compatible gravitational data; a concrete input for later sourced wall matching. This alone gives no wall motion, central-observer correction, stability or asymptotic energy. |
+| Finite domain | Original U=U0, Va<=V<=Vb in retained sector IV, with the original corner and zero bottom. No new future domain or finite amplitude selection. |
+| Budget | Analytic adaptation of borrowed equations and one-dimensional quadratures only. At most 129 displayed samples, Gauss orders 32/64 split at source support, at most 100000 counted integrand evaluations including reused geometry/constraint quadratures, and 60 process-CPU seconds per complete evidence creation. No PDE solver, wave re-solve, parameter scan or bulk evolution. |
+| Independent checks | Compare geometric mass from mixed-radius transport with borrowed Einstein-frame mass flux and the full frame transformation, including transverse scalar derivatives. Independently check Jordan improved-stress mass transport. Test zero source, fixed corner, support edges, coordinate/unit rescaling, changed theory/data rejection and source/evidence tampering. |
+| Acceptance | Exact symbolic identities close with declared data; independent quadrature/geometry refinements and mass representations agree within 1e-8 absolute plus 1e-8 relative at displayed points. Any post-input sign has an analytic check. Numerical agreement is not an enclosure or a finite-amplitude remainder bound. |
+| Stop or redirect | Expose any unprovided transverse datum, incompatible corner, singular frame map, normalization mismatch, unresolved refinement or exhausted budget. Do not tune a missing datum, import the exterior-region monotonicity assumption into sector IV, or use a historical Dirac/Bondi result to close this scalar calculation. |
+
+The failure forecast is an incorrect matter/frame normalization, a hidden
+transverse-data requirement, or promotion of a geometric mass coefficient to
+global energy or completed evolution. Independent metric and stress checks,
+the explicit corner, and the finite source-leg scope address those risks.
+Known mass laws are borrowed; their application here makes no worldwide
+priority claim.
