@@ -14,6 +14,7 @@ python scripts/check_claim_bindings.py
 python scripts/test_reassembly.py
 python scripts/build_geometry_overview.py
 python scripts/build_characteristic_initialization_figure.py
+python scripts/build_source_mass_figure.py
 python scripts/build_paper.py --check
 ```
 
@@ -73,7 +74,27 @@ prerequisites. Numerical replay separately checks exact identities and
 the finite one-dimensional quadratures in the recorded budget. Creation
 requires a fresh output directory. Refinement agreement is a numerical
 diagnostic, not a rigorous enclosure or a finite-amplitude metric error bound.
-Transverse constraints, later wall matching and coupled evolution remain open.
+That intrinsic constraint alone leaves the transverse geometry open.
+
+The [source-leg mass successor](nsc-atlas-source-mass.md) closes the
+transverse radius equation on the same initial null surface. It compares
+the geometric mass using the full frame transformation, mixed geometry
+and improved-stress transport:
+
+```sh
+python scripts/record_nsc_atlas_source_mass.py --check
+python scripts/run_python.py scripts/record_nsc_atlas_source_mass.py --check-numerics
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_source_mass.py
+```
+
+Its numerical replay checks exact identities, independent transverse-field
+integrals and separate mass/geometry refinements within the recorded finite
+budget. Ordinary authentication performs no numerical integration. The
+geometric mass is invariant under coordinate changes, but generally differs
+between conformal frames during the input. The negative post-input
+coefficient is relative to the fixed reference; it does not select a finite
+amplitude or establish a vacuum future. Later wall matching, bulk evolution
+and the gravitational correction to the observer signal remain open.
 
 Atlas v8 remains the finite exterior-to-interior waveform result. Its original
 replay is explicitly selected below. The fixed input, numerical budget,

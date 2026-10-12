@@ -42,9 +42,9 @@
       "sha256": "577a3493000ac59e11d320d1b58b367e40292a8a80a184c3cffb842fcf2ec59c"
     },
     {
-      "bytes": 2967,
+      "bytes": 3076,
       "path": "AGENTS.md",
-      "sha256": "53471aa271a9b433c4cd9cf4f90352c9d0ab6683ef0b527949b66ae0f24e4391"
+      "sha256": "28a8832da8d2e998ed54f1f229de15fc5923a12256ea539f0f2e4abf305863d7"
     },
     {
       "bytes": 1264,
@@ -77,9 +77,9 @@
       "sha256": "7725332b3ffd9dfc7945a79138e9ae5e49dae2792d65d327e01a5527830c2fae"
     },
     {
-      "bytes": 4813,
+      "bytes": 5214,
       "path": "README.md",
-      "sha256": "221916431fe5f23f958872cf61c42b97cd7cfc6d50b69990b9672f29975bdcf2"
+      "sha256": "67dd93ab407637cafbfc0f2702fe2f8f32762b4a872ce024fb880a7b6b3611e7"
     },
     {
       "bytes": 629,
@@ -107,9 +107,9 @@
       "sha256": "b18929909e4e533db556b7484de1293e8767566b07f2169e5d7c1463e14dbb6a"
     },
     {
-      "bytes": 83411,
+      "bytes": 89702,
       "path": "docs/arxiv-studies.md",
-      "sha256": "f8213a0e796dd306d2ed13aef4ddcc721c78de39b2ba038eb4bd37dfa87f4ef2"
+      "sha256": "38740cfd38a577991d303be73844ff862c7da48470c65b39691c6c50885420b6"
     },
     {
       "bytes": 9911,
@@ -212,9 +212,9 @@
       "sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a"
     },
     {
-      "bytes": 168924,
+      "bytes": 170113,
       "path": "docs/current-result.md",
-      "sha256": "00d603d7bdc383efaa6341ca91d284e14309ad473404d7d7b82b4fb0522a1976"
+      "sha256": "36c933dc0eef6b9b491bf758d4f4d635ab5fbea79163e13a50c5466ab90108d9"
     },
     {
       "bytes": 14497,
@@ -370,6 +370,11 @@
       "bytes": 9402,
       "path": "docs/nsc-atlas-scalar-wall-consistency.md",
       "sha256": "d488b9ada96425252da85e99145a61d520e2d547284a2d707fe98e768afa5945"
+    },
+    {
+      "bytes": 9181,
+      "path": "docs/nsc-atlas-source-mass.md",
+      "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
       "bytes": 4199,
@@ -567,9 +572,9 @@
       "sha256": "bc8c82960db15b20e247550c29d71b2bb58daa8ec7059151ad84151508c092e7"
     },
     {
-      "bytes": 33768,
+      "bytes": 35076,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "dc4261919d1036ca5de27d19483938c77507ea1f97084f54e335aa5618b3b8aa"
+      "sha256": "bf574d777c7192f270950111cea2501cdd83213ad2f350569e11704ce3dc3352"
     },
     {
       "bytes": 3367,
@@ -3177,14 +3182,14 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 3490,
+      "bytes": 3933,
       "path": "docs/papers.md",
-      "sha256": "cffffb4bb2d09ccb8608d7bb81f7d194d1432d979f9cbbb0c67f115af66d56c4"
+      "sha256": "93769d49fa7caed8f1a5a6f75db7d64247c12fa2aaeaf2e7d4e4fd5586a6c641"
     },
     {
-      "bytes": 37608,
+      "bytes": 41556,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "4b632593d331563d65314bc161eb5d6f4bd1af921bb5083daa75c0b82d598e11"
+      "sha256": "a75d214f2b32f6cc1223490ca3a90c895506c33f5c775b2f0ab210f134931978"
     },
     {
       "bytes": 3653,
@@ -3192,19 +3197,19 @@
       "sha256": "3bf11e41feb6a597b94817ea01abd6384f0ce1c1873a4feb6853abc9c6a436d1"
     },
     {
-      "bytes": 14039,
+      "bytes": 15131,
       "path": "docs/reproducing.md",
-      "sha256": "64fa1c18c82654f5a097340c8439f55e9e4aaca4feec77f15e6e0b2fd19a4265"
+      "sha256": "0ff0141386a3845a14a340838eef6b83bd1811c62ac564d033898a113f94450e"
     },
     {
-      "bytes": 26207,
+      "bytes": 26640,
       "path": "docs/research-index.md",
-      "sha256": "af2037d37e880ca5c6388d5153ffd3f7cfd136131c6c925c87e198782a1a1e02"
+      "sha256": "b088541d1940621f9e8014759a055002be7ea051a6e93534bfcee2cf8f72e0a7"
     },
     {
-      "bytes": 16509,
+      "bytes": 17193,
       "path": "docs/research-inventory.md",
-      "sha256": "e6c8c78baeacec8c01ed55f534829761b45e21316e4a9b1d6517645806eefb6b"
+      "sha256": "0998486e94a640313f894d70f5874a81768e2d1ef92b781f121a9436606f7cb2"
     },
     {
       "bytes": 537091,
@@ -3292,19 +3297,19 @@
       "sha256": "bb0d8a62bc4f90a8fc1c37625ebadd621c929006dc476d8db975c10a468db8ae"
     },
     {
-      "bytes": 7784,
+      "bytes": 8251,
       "path": "paper/build-manifest.json",
-      "sha256": "d0eb64c54d9f39829ee0e17c101b48d447569c9799f5962ddcaf85775b27282b"
+      "sha256": "575ae064ddcbc01818bc0ac6d021a409fb711fa19fab4882b534ea53b154d35d"
     },
     {
       "bytes": 3206,
       "path": "paper/catalog.json",
-      "sha256": "423a42e2fab9f847e75291234e89ab931e9e8713ea1ebc5140f36c1a345d8b18"
+      "sha256": "7ac44a2fbd2c128e23a309b4a551a5e6d8966c1c50c471da3aaf40effb39d7c2"
     },
     {
-      "bytes": 11367,
+      "bytes": 12133,
       "path": "paper/claim-bindings.json",
-      "sha256": "30a421b54943d46b25bcaf24458e7381acdc3362762a1f6077c909e3d5fbcbad"
+      "sha256": "08b47524c775066d983741067e22e31fb437710afc0d726afaf3b79f4cf723f3"
     },
     {
       "bytes": 1094,
@@ -3322,19 +3327,34 @@
       "sha256": "67cc5c8a7084e620dfaea31121655de1341dc3651379f8e2213c19508e1b368e"
     },
     {
-      "bytes": 29507,
+      "bytes": 34795,
       "path": "paper/figures/geometry-overview.json",
-      "sha256": "d00abcb8e71df6bbda6c234d8125d8ce1a31e01ee86eb6f936cabfc449788e57"
+      "sha256": "70d84369d2e214642de5a5226e8ad06b8db211e6f47e8d6c5c67eec2d0e8b02c"
     },
     {
-      "bytes": 364167,
+      "bytes": 364966,
       "path": "paper/figures/geometry-overview.png",
-      "sha256": "18b725073744d360c60d747ffbf6305b45a148fea423281a081d16c16c8f21b6"
+      "sha256": "2285600326c1e0e9cf36a5da8c04fe8a71e6c8bd92ab780caeab78ff5cfbe230"
     },
     {
-      "bytes": 150200,
+      "bytes": 150292,
       "path": "paper/figures/geometry-overview.svg",
-      "sha256": "b9068a25b3620a960539ea19ab3cba9a92f2928722c3d7f81d8d07884f2c3d0d"
+      "sha256": "f699a274d252201a6a42c20cca07f0f676cc5f638ebb78769d3b4df44d47042d"
+    },
+    {
+      "bytes": 1075,
+      "path": "paper/figures/source-mass.json",
+      "sha256": "93c8c86247eb1c318cfa7af57c647d7ec49ea20cac2964310d13e1b4d5495525"
+    },
+    {
+      "bytes": 129771,
+      "path": "paper/figures/source-mass.png",
+      "sha256": "86acc2d02acfcf475c9072aeefd215c4c69f44b51808b0891889d080e94446bb"
+    },
+    {
+      "bytes": 67407,
+      "path": "paper/figures/source-mass.svg",
+      "sha256": "394a2eb0c35ff02bdc1e382386079b079f5cabb3710e86c5c15eb9ef986747d3"
     },
     {
       "bytes": 105847,
@@ -3484,7 +3504,7 @@
     {
       "bytes": 396,
       "path": "paper/metadata.json",
-      "sha256": "8ce0b9d3ac04b007db7fb3c00b82f5eb7874918eea659c7144a690c9df0dd866"
+      "sha256": "286b62b4cb87f71f9b6b4c0d7ce5b0bd41f49f6a8229bf0c2ddebef824bb7b67"
     },
     {
       "bytes": 29875,
@@ -3532,14 +3552,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 74898,
+      "bytes": 80014,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "c87860afe05eaaec1bffecb95bfecec8f61fffe4c05819a454220b9cd73bd04a"
+      "sha256": "ada721d81ba5e36d13c56d8b828cc096730e0dcbaaba76258a8a719f115a09ba"
     },
     {
-      "bytes": 2877742,
+      "bytes": 3069824,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "25597b26ec38f533921479e01faad3e15c8db0b0daa154805e14f11ddb522f35"
+      "sha256": "cf20215226b1c97bc260256d405bd9d3d085820d05d907f016111d2faec64bd0"
     },
     {
       "bytes": 5992,
@@ -44167,6 +44187,16 @@
       "sha256": "61f4f2287b2f70196bf1a5fbc773bf529864514d38b46c80a44d9726a8d8b801"
     },
     {
+      "bytes": 5141,
+      "path": "results/development/nsc-atlas-source-mass-v1/manifest.json",
+      "sha256": "2ab5a389669aebb1414633691f4416ecb5bdbabae47aa35823ecd5720e7230b5"
+    },
+    {
+      "bytes": 84948,
+      "path": "results/development/nsc-atlas-source-mass-v1/mass.json",
+      "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
+    },
+    {
       "bytes": 9924,
       "path": "results/development/nsc-background-projection.json",
       "sha256": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48"
@@ -62659,7 +62689,7 @@
     {
       "bytes": 9695031,
       "path": "results/reassembly/manifest.json",
-      "sha256": "6bc0bcc5b31d160c31b89525d9c7c69c461616aa1d00757f5b26c5c11cf9e139"
+      "sha256": "518a8bcff1f8c78e4a38ad8fe66b95e764bf51a8e2afce466c86b63e4e41598a"
     },
     {
       "bytes": 1859,
@@ -62817,9 +62847,9 @@
       "sha256": "0328d82e41c1b494956bdbdba76c13b6bfb64f3c7f6c4c2af13967ca29f584a1"
     },
     {
-      "bytes": 19864,
+      "bytes": 22076,
       "path": "scripts/build_geometry_overview.py",
-      "sha256": "9ed909c864de85292cabbbe237558705bc8a466f099aabea6fb2554c338f3366"
+      "sha256": "221f45df2d638812d3b327213abd7a2f708072ece974e06ca36ad8d697a115f7"
     },
     {
       "bytes": 2814,
@@ -62840,6 +62870,11 @@
       "bytes": 17236,
       "path": "scripts/build_result_manifest.py",
       "sha256": "6565c9ff68bd23703f9ebb287a341c1d21e8e15720403941d9750312f4e67053"
+    },
+    {
+      "bytes": 4196,
+      "path": "scripts/build_source_mass_figure.py",
+      "sha256": "1e2f5f6ad001cc699dd112084fc3530140639e6e92e243c93281919300cf125f"
     },
     {
       "bytes": 8278,
@@ -63147,9 +63182,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 33107,
+      "bytes": 33355,
       "path": "scripts/check_publication.py",
-      "sha256": "b4054b88a6c3dbbe5d48b8423ed4721d16faed7f8b4fad7ef13ed2ad0315f77a"
+      "sha256": "3e024e248f402a0d6ce26393e6f970ac1cfccaec639fe4da6ca901be2f23e583"
     },
     {
       "bytes": 7898,
@@ -65902,6 +65937,11 @@
       "sha256": "08b50d25cd7ac10079db0830cab0ca4a43acc7b87b589330d3b520fad3364d21"
     },
     {
+      "bytes": 19085,
+      "path": "scripts/record_nsc_atlas_source_mass.py",
+      "sha256": "f953443914148147ec836cdbeabaf27e6e97555b450ab62263698f18716c88bc"
+    },
+    {
       "bytes": 11695,
       "path": "scripts/refine_nsc_transmitting_history_modes.py",
       "sha256": "42d8dc34e6d375f2d7261fdc47866d48797ed5a4ee6d9947378bbeb110953b3f"
@@ -66375,6 +66415,11 @@
       "bytes": 14181,
       "path": "src/recursive_horizons/nsc_atlas_prepared_response.py",
       "sha256": "4ef85490e956bb5a055b525761a6403bd36f2ec082bf6cec0fdfbaf80e1f6461"
+    },
+    {
+      "bytes": 11471,
+      "path": "src/recursive_horizons/nsc_atlas_source_mass.py",
+      "sha256": "4551fdc794fdea2906cd7f73fb3a5ad1494ccfabd692d9578dae2075b1516aef"
     },
     {
       "bytes": 5545,
@@ -68270,6 +68315,11 @@
       "bytes": 10715,
       "path": "tests/test_nsc_atlas_scalar_wall_consistency.py",
       "sha256": "291ce46db838898550a7a428502967fd79d242bb6e1173a7220955ccf4f92f4d"
+    },
+    {
+      "bytes": 12850,
+      "path": "tests/test_nsc_atlas_source_mass.py",
+      "sha256": "8de7d4f1dd62fcc3ea84fae5926135e15ff3da8a6b3c02da79525c160a9a3646"
     },
     {
       "bytes": 14600,
@@ -70544,7 +70594,7 @@
   ],
   "lab_snapshot_sha256": "534eb39564e0444f3a945ff2015f863cd74cde6494c20a15d3fe9a52c5ca0258",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
-  "manuscript_revision": "2026-10-13.2",
+  "manuscript_revision": "2026-10-13.3",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

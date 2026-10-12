@@ -651,6 +651,11 @@ def main() -> int:
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("characteristic initialization evidence: " + str(error))
+    try:
+        from record_nsc_atlas_source_mass import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("source-leg mass evidence: " + str(error))
     check_provenance(errors, files)
     if errors:
         for error in errors:

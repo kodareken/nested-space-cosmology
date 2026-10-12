@@ -11,8 +11,9 @@ their different assumptions. The
 question now has a fixed-model inverse; a second-geometry comparison and
 the remote source remain open.
 The prepared probe now supplies [gravitational initial data](nsc-atlas-characteristic-initialization.md)
-through one null constraint. Transverse evolution and coupled wall response
-remain the next connections along that branch.
+through one null constraint. Its [geometric mass successor](nsc-atlas-source-mass.md)
+now supplies the transverse-radius connection on the initial surface;
+bulk propagation and coupled wall response remain open.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
@@ -22,6 +23,7 @@ Preserved owner routes from the pre-reassembly index, updated to root paths. Dat
 | Fixed-model inverse and preparation exclusions | [Analytic proof](nsc-atlas-observer-inference.md), [record](../results/development/nsc-atlas-observer-inference-v1/inference.json); exact compatible-source inverse and compact-source restrictions, with numerical inversion and second-geometry equivalence unclaimed. |
 | Quadratic scalar stress and wall compatibility | [Analytic check](nsc-atlas-scalar-wall-consistency.md), [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json); canonical conformal probe has zero singular scalar surface stress and tangential flux jump. Bulk response, normal-force balance and stability remain open. |
 | Characteristic gravitational initialization | [Constraint and frame check](nsc-atlas-characteristic-initialization.md), [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json); the original compact probe forces an initial radius correction at fixed corner and affine gauge. No mass shift or coupled wall evolution is established. |
+| Geometric mass on the prepared null surface | [Mixed geometry and full stress](nsc-atlas-source-mass.md), [record](../results/development/nsc-atlas-source-mass-v1/mass.json); the post-input quadratic coefficient is negative and constant in the declared finite leg. This is not a vacuum future, asymptotic energy or evolved wall response. |
 | Finite prepared signal and next inference question | [Completed bounded response](nsc-atlas-prepared-response.md), [preparation certificate](nsc-atlas-field-preparation.md), [v8 record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json), [next identifiability connection](nsc-cosmological-atlas.md#observer-identifiability); the finite tail is resolved; its analytic successor constrains preparation freedom, while remote generation and comparison of physical geometries remain open. |
 | Location, branches, commands, and recovery | [Instructions](instructions.md), [consolidation](repository-consolidation.md) |
 | Where a document lives, and which copies match | [Docs route](README.md) |

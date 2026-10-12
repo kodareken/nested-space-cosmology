@@ -1,0 +1,25 @@
+{
+  "inputs": [
+    {
+      "path": "results/development/nsc-atlas-source-mass-v1/mass.json",
+      "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
+    }
+  ],
+  "outputs": {
+    "source-mass.png": "86acc2d02acfcf475c9072aeefd215c4c69f44b51808b0891889d080e94446bb",
+    "source-mass.svg": "394a2eb0c35ff02bdc1e382386079b079f5cabb3710e86c5c15eb9ef986747d3"
+  },
+  "producer": "scripts/build_source_mass_figure.py",
+  "producer_sha256": "1e2f5f6ad001cc699dd112084fc3530140639e6e92e243c93281919300cf125f",
+  "schema": "nsc.source-mass-figure.v1",
+  "semantics": {
+    "comparison": "geometric mass in two conformally related metrics; equal after compact input",
+    "coordinate_invariant_but_frame_dependent": true,
+    "finite_amplitude_selected": false,
+    "global_energy_or_evolved_wall": false,
+    "negative_coefficient_is_not_negative_total_mass": true,
+    "no_new_scientific_calculation": true,
+    "shading": "compact support of the original characteristic trace",
+    "zero_trace_is_not_vacuum_region": true
+  }
+}

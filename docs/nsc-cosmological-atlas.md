@@ -44,7 +44,12 @@ bulk evolution, normal-force balance and stability remain open. The
 now fixes one initial null-leg radius correction from the same compact
 probe with the corner geometry and affine normalization held fixed. Its
 post-input radial slope differs from the reference. This is not a mass
-change or an evolved wall response.
+change or an evolved wall response by itself. The
+[source-leg mass calculation](nsc-atlas-source-mass.md) supplies the
+transverse-radius equation and geometric mass on the same null surface.
+Full frame conversion and improved-stress transport give the same
+negative constant coefficient after the compact input. Later bulk and
+wall evolution remain open.
 
 Keep three approaches available:
 
@@ -86,8 +91,9 @@ that every open branch succeeds.
 | `observer-response` | Use the observer, clocks and fixed transfer operator with a justified trace; v8 resolves a finite central waveform and a positive post-input field tail. | `observer-inference`, comparisons of sources and attachments. |
 | `observer-inference` | The [fixed-model inverse](nsc-atlas-observer-inference.md) recovers a compatible preparation from a complete signed central trace and gives positive compact-source exclusions. A second geometry and a physical preparation law remain unresolved. | A preparation-restricted response-range comparison or a source-linked independent channel. |
 | `probe-stress` | Fix physical field normalization and sufficient regularity; borrow the full Hilbert stress and coupled shell laws. The [conformal shell check](nsc-atlas-scalar-wall-consistency.md) establishes zero additional surface stress and tangential flux jump for this probe. | `gravitational-initialization`, a later preparation-energy criterion; no amplitude bound is supplied by surface cancellation. |
-| `gravitational-initialization` | Specify compatible corner geometry and a null normalization. The [source-leg constraint](nsc-atlas-characteristic-initialization.md) fixes the quadratic radius correction for the original compact field trace; the zero bottom leg retains its reference geometry. | `bulk-backreaction` through a mixed or transverse constraint/propagation question; no mass shift is inferred from a radial slope. |
-| `bulk-backreaction` | Supply the remaining transverse data and coupled equations, including later wall and normal-force conditions. The initialized null leg is one input, not a solved bulk geometry. | A finite validity estimate or a sourced metric/wall response, then an independently shared gravitational response channel. |
+| `gravitational-initialization` | Specify compatible corner geometry and a null normalization. The [source-leg constraint](nsc-atlas-characteristic-initialization.md) fixes the quadratic radius correction for the original compact field trace; the zero bottom leg retains its reference geometry. | `source-leg-mass` after the transverse radius equation is supplied; no mass shift is inferred from a radial slope alone. |
+| `source-leg-mass` | The [mixed equation and mass law](nsc-atlas-source-mass.md) transport the fixed corner datum and determine geometric mass on the same initial leg. Full frame conversion, geometric and improved-stress checks agree. | `bulk-backreaction` through transport toward the moving wall and its dynamical matching; a finite initial-surface mass is not an asymptotic energy or evolved response. |
+| `bulk-backreaction` | Supply the coupled propagation equations and compatible later wall/normal-force conditions. The initialized null leg and geometric mass are inputs, not a solved bulk future. | A finite validity estimate or a sourced metric/wall response, then an independently shared gravitational response channel. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -108,7 +114,7 @@ own prerequisites are met. A different exterior model needs its own dependency
 edges, not a forced passage through this scalar example.
 
 The parallel physical-response branch is
-`wall-transmission + parent-preparation + physical normalization -> probe-stress -> gravitational-initialization -> bulk-backreaction`.
+`wall-transmission + parent-preparation + physical normalization -> probe-stress -> gravitational-initialization -> source-leg-mass -> bulk-backreaction`.
 It supplies prerequisites for interpreting the field as a gravitational source;
 it is not a second proof of the waveform or a formation history.
 
@@ -365,11 +371,21 @@ source amplitude or produce a second observable. The
 then applies the borrowed null constraint to the same compact field trace.
 The specified corner geometry and affine gauge force a radius correction.
 A generic bulk-stress bound was deferred because it would not provide
-these missing gravitational data. A mixed or transverse equation can now
-connect this initial correction to an invariant response or to later wall
-matching; it requires its own admission before evaluation.
+these missing gravitational data. The [mass successor](nsc-atlas-source-mass.md)
+then closes the mixed-radius equation on the same surface and supplies a
+coordinate-invariant geometric response. Its conformal-frame difference
+must be retained during the input. Transport toward the wall and dynamical
+matching are now the next missing connection, requiring a separate
+admission before evaluation.
 
 ## Owners and reproducible output
+
+- [Source-leg mass](nsc-atlas-source-mass.md), its
+  [adapter](../src/recursive_horizons/nsc_atlas_source_mass.py) and
+  [recorder](../scripts/record_nsc_atlas_source_mass.py) connect the fixed initial
+  preparation to an invariant geometric response through borrowed mass
+  laws, mixed-radius transport and full frame conversion. Later bulk and
+  wall evolution remain unresolved.
 
 - [Characteristic initialization](nsc-atlas-characteristic-initialization.md),
   [constraint adapter](../src/recursive_horizons/nsc_atlas_characteristic_initialization.py)
