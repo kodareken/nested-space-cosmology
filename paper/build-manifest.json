@@ -1,19 +1,27 @@
 {
-  "bytes": 2679571,
+  "bytes": 2877742,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "6ed8e708ca322dadee854cce533cc53d3a97e97105be5514079d0f0598b2a61d",
+  "metadata_sha256": "8ce0b9d3ac04b007db7fb3c00b82f5eb7874918eea659c7144a690c9df0dd866",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 28,
-  "pdf_sha256": "43c26442b20d9e006a8e7fc7edfe2b0ba446ba165bef870954d8675d4681f7ee",
+  "pages": 30,
+  "pdf_sha256": "25597b26ec38f533921479e01faad3e15c8db0b0daa154805e14f11ddb522f35",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
+      "path": "paper/figures/characteristic-initialization.json",
+      "sha256": "3f07c253a9b05037bdcf2099cffbb12b443c13fb12dbd260c87a054682f1f098"
+    },
+    {
+      "path": "paper/figures/characteristic-initialization.png",
+      "sha256": "e6f1d484e7afdf5c101265983ab06e1da28932de9f37478f1322217892518e14"
+    },
+    {
       "path": "paper/figures/geometry-overview.json",
-      "sha256": "9cddae456969461f69d09f220a9101a910feb6e2464828e4560626aed38eb805"
+      "sha256": "d00abcb8e71df6bbda6c234d8125d8ce1a31e01ee86eb6f936cabfc449788e57"
     },
     {
       "path": "paper/figures/geometry-overview.png",
-      "sha256": "60ba2fc731413d0eb2d8ee2dcb59e4dcf32c471e32ba879f09f18f660c5894df"
+      "sha256": "18b725073744d360c60d747ffbf6305b45a148fea423281a081d16c16c8f21b6"
     },
     {
       "path": "paper/finite-regeneration-manifest.json",
@@ -26,6 +34,10 @@
     {
       "path": "paper/nested-quality-evidence/snapshot.json",
       "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f"
+    },
+    {
+      "path": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
+      "sha256": "ca5abcf0c235b315006d91c57b9d1f2974d26a4fb49c971e668c07fedf66c578"
     },
     {
       "path": "results/development/nsc-atlas-observer-inference-v1/inference.json",
@@ -161,6 +173,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "2844644a1c3145baf5b79d4c38dac8b22af6815d8003ca2b117118e632613f2b",
-  "version": "working-2026-10-13.1"
+  "source_sha256": "c87860afe05eaaec1bffecb95bfecec8f61fffe4c05819a454220b9cd73bd04a",
+  "version": "working-2026-10-13.2"
 }

@@ -8,6 +8,10 @@
       "path": "results/development/nsc-cosmological-atlas-v4/parent-assembly.json",
       "sha256": "ea0316a5afaa61978a2ba85cf8728f9a303beb14cafde77bdae9b0375ce7fe7a"
     },
+    "characteristic_initialization": {
+      "path": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
+      "sha256": "ca5abcf0c235b315006d91c57b9d1f2974d26a4fb49c971e668c07fedf66c578"
+    },
     "field": {
       "path": "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
       "sha256": "c5a0fc9641b76a260a30137b495838ba020162f611b5cafb4a1f5c58ddd688df"
@@ -236,18 +240,74 @@
     "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
     "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
     "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
+    "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "60ba2fc731413d0eb2d8ee2dcb59e4dcf32c471e32ba879f09f18f660c5894df",
-    "geometry-overview.svg": "8ce44868dd522b051299a9feb571f59ff2d729f08e0cb6d46d6eee60213ae59e"
+    "geometry-overview.png": "18b725073744d360c60d747ffbf6305b45a148fea423281a081d16c16c8f21b6",
+    "geometry-overview.svg": "b9068a25b3620a960539ea19ab3cba9a92f2928722c3d7f81d8d07884f2c3d0d"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "471e913b1d667c5da2bca87f05fc38f54e010bb188fe027cc23fcfc7e8f9da70",
+  "producer_sha256": "9ed909c864de85292cabbbe237558705bc8a466f099aabea6fb2554c338f3366",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
+    "characteristic_initialization": {
+      "analytic_consequences": {
+        "frame_domain": "smooth exterior only with positive conformal factor; no transformation across the material wall is used",
+        "meaning": "pulse forces nonzero radius and affine radial-derivative corrections on the initial source leg",
+        "post_support": "h'=-integral(s p'^2)/2<0 and h=-integral((x-s)s p'^2)/2-integral(p^2)/6<0 for the nonzero compact source",
+        "source_tangent_stress": "after support phi=phi_V=0 on U0, so this leg's T_VV=0 and h' stays constant",
+        "transverse_caveat": "chi_U may remain nonzero after source support; T_UU need not vanish; no vacuum or Schwarzschild post-pulse region is inferred",
+        "unit_scaling": "h and h' are dimensionless at fixed geometry. At fixed alpha, delta R scales as ell. At fixed epsilon and G, alpha scales as ell^-2; this changes physical source strength, not merely units."
+      },
+      "initial_data": {
+        "amplitude": "no epsilon is selected; no finite-amplitude remainder bound is supplied",
+        "bottom": "V=Va, U0<=U<=Ua; scalar zero and unchanged reference null data",
+        "corner": "same background radius and both reference null expansions; h(.4)=h'(.4)=0",
+        "field": "phi=(epsilon/ell)p(x)+O(epsilon^3); p=B(4(V(x)-Vmid)/DeltaV)/x",
+        "gauge": "A=A0 on source; x=R0/ell is the fixed corner-anchored affine coordinate there",
+        "parameter": "alpha=kappa_4 epsilon^2/ell^2; kappa_4=8 pi G in c=hbar=1 units",
+        "radius": "R/ell=x+alpha h(x)+O(alpha^2); radius is not independently fixed along the source",
+        "source": "U=U0, Va<=V<=Vb, retained Schwarzschild sector IV",
+        "theory": "canonical scalar kinetic coefficient one, xi=1/6, zero potential and scalar-independent exterior vacuum; no new wall scalar coupling"
+      },
+      "interpretation": "The original probe requires a quadratic initial source-leg radius correction with fixed corner geometry and affine normalization.",
+      "knowledge_boundary": {
+        "corrected_wall_solved": false,
+        "finite_amplitude_or_error_bound_established": false,
+        "full_characteristic_evolution_solved": false,
+        "h_prime_identified_with_null_expansion": false,
+        "interior_observer_correction_computed": false,
+        "mass_shift_determined": false,
+        "physical_source_generator_established": false,
+        "post_source_region_claimed_vacuum": false,
+        "stability_established": false
+      },
+      "last": {
+        "V": -2.262011613052105,
+        "h": -6.12283354819419,
+        "h_direct": -6.122833548194192,
+        "h_einstein": -6.112570276145935,
+        "h_prime": -162.18055362491776,
+        "h_prime_direct": -162.18055362491776,
+        "h_second": 0.0,
+        "integral_p_squared": 0.06157963228952755,
+        "integral_x_dp_squared": 324.3611072498355,
+        "p": 0.0,
+        "p_prime": 0.0,
+        "p_second": 0.0,
+        "weighted_integral_x_dp_squared": 12.22514055229187,
+        "x": 0.4815042082576364
+      },
+      "limits": [
+        "The radial-slope correction is not a null expansion or a mass change.",
+        "Zero source-tangent stress after input does not establish a vacuum future.",
+        "No coupled bulk/wall evolution, interior observer correction or finite-amplitude error bound is established."
+      ],
+      "status": "QUADRATIC_SOURCE_LEG_NULL_CONSTRAINT_INITIALIZED"
+    },
     "displayed_connections": [
       {
         "from": "cap",

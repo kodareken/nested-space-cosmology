@@ -451,6 +451,70 @@ across our derivative-jump wall. Applying these bounds inside smooth bulk
 requires their sampling/regularity hypotheses; a shell-crossing extension
 remains unprovided.
 
+<a id="characteristic-gravity-library"></a>
+
+### Characteristic gravitational initialization
+
+These readings support the [finite initialization admission](prior-art-and-open-claim.md#characteristic-gravitational-initialization-admission-13-october-2026).
+They supply existing constraints and a frame check; the missing atlas connection
+is their application to the fixed preparation with compatible corner data.
+This bounded search does not establish worldwide priority.
+
+**An-Lim, [2005.04090v1](https://arxiv.org/pdf/2005.04090v1), 8 May 2020.**
+Read section 2's coordinate setup, equations (2.1)-(2.13) and adjacent initial-data
+discussion, checked against PDF pages 8-10. Formation theorems and their proofs
+are not imported. For $ds^2=-\Omega^2du\,dv+r^2d\Omega_2^2$,
+equations (2.6)-(2.7) give the minimal-scalar null constraints; with zero charge
+and real canonical field $\psi$, restoring $\kappa_4=8\pi G$ gives
+
+$$
+\partial_v(\Omega^{-2}\partial_vr)
+ =-\frac{\kappa_4}{2}r\Omega^{-2}(\partial_v\psi)^2,
+$$
+
+and the corresponding $u$ equation. Borrow the geometric constraint and
+normalization, not a minimal-scalar stress for the Jordan-frame conformal
+probe. Its improved stress must be retained, or the complete smooth-vacuum
+frame map applied. Their choice of null lapse on both initial legs leaves the
+radius subject to these constraints; prescribing both unchanged would
+overspecify sourced data. The paper's centre and trapped-surface assumptions
+do not become conditions on our finite white-hole-sector strip.
+
+**Madler-Gannouji-Gallo, [2503.24162v3](https://arxiv.org/html/2503.24162v3), 11 July 2025.**
+Read sections II, the opening hierarchy of III, and III.3.2; asymptotic,
+regular-centre and exact-solution applications remain unaudited. Earlier v2
+was screened; this card uses v3. Their affine-null metric (8) has
+$ds^2=-Vdw^2+2\epsilon dw\,d\lambda+r^2d\Omega_2^2$,
+$\epsilon=\pm1$, and $\kappa=8\pi G$. Equations (16)/(29a) give
+$r_{,\lambda\lambda}=-(\kappa/2)r|\Phi_{,\lambda}|^2$.
+Equations (84a)/(89) give the other leg's affine focusing equation when
+$V=V_{,\lambda}=0$ there. Equations (86)-(92) specify scalar data on two
+intersecting null legs and corner values $\Phi,r,r_{,w},r_{,\lambda},Q$, with $r>0$;
+(84c)/(91) supplies the additional transverse-radius transport.
+Set scalar charge and Maxwell charge to zero and take a real field for the
+minimal Einstein-frame comparison. The symbol $\mathcal F_\Phi$ denotes
+field data in (30) but derivative data in (92); state which is supplied.
+Borrow the hierarchy, not a new solver or a theorem about our transmitting
+material wall. The single-leg correction leaves mixed evolution and wall
+compatibility unresolved.
+
+**Aviles-Maeda-Martinez, [1910.07534v2](https://arxiv.org/html/1910.07534v2), frame extension.**
+Extend the [existing stress card](#conformal-stress-library) with section 2.4,
+equations (2.21)-(2.24), and Appendix A's conformal curvature/connection
+identities (A.2)-(A.3). The rest of the appendix remains unaudited.
+For $F=2\kappa_4f=1-\kappa_4\phi^2/6>0$, their four-dimensional map is
+$\bar g_{\mu\nu}=Fg_{\mu\nu}$ with canonical field derivative
+$d\psi/d\phi=1/F$, choosing its positive branch and zero integration constant.
+It supplies an independent null-focusing check in the smooth Schwarzschild
+vacuum region. Areal radii and affine parametrizations must also be transformed;
+the same coordinate parameter is generally not affine in both frames.
+Equations (2.23)-(2.24) and their warning about matter couplings prevent using
+a pure minimally coupled vacuum model across the entire atlas: the de Sitter
+vacuum term becomes a scalar-dependent potential, and the material wall action
+also changes. Positivity of $F$ ensures this local map is nonsingular, not that
+backreaction is small. The equivalence does not supply unchosen corner data,
+a corrected wall, or stability.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.

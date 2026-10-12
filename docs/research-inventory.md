@@ -40,9 +40,9 @@ unique finite operator under its specified initial cap, characteristic data
 and no-return assumptions. The [v8 response](nsc-atlas-prepared-response.md)
 evaluates that operator and resolves an analytically positive tail within
 the finite arrival window. Remote preparation and formation remain open.
-The next named connection is
-[observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability),
-not an already admitted comparison. These targeted results do not extend
+The [observer identifiability question](nsc-cosmological-atlas.md#observer-identifiability)
+now has a fixed-model inverse; comparison of physical geometries still
+requires an independently justified preparation restriction. These targeted results do not extend
 verification to the other census families. The archived
 CCC citation remains a separate literature comparison with no newly absorbed
 equations. All original unread and unverified boundaries below remain in force.
@@ -80,6 +80,16 @@ identities. Coupled bulk evolution, normal-force balance, quantitative
 backreaction bounds and stability have not been verified. The
 [literature card](arxiv-studies.md#conformal-stress-library) records which
 source sections were read and which proofs remain unaudited.
+
+The [characteristic initialization](nsc-atlas-characteristic-initialization.md)
+is a reusable perturbative source-leg constraint result for that same
+preparation. Its declared corner and affine gauge yield the radius
+correction; integrated formulas and a smooth-exterior Einstein-frame check
+test the inference. This verifies neither the coupled characteristic
+problem nor a mass shift, later wall response or finite-amplitude bound.
+The [characteristic-gravity cards](arxiv-studies.md#characteristic-gravity-library)
+retain the external reading boundary. Other census families are not
+promoted by this targeted calculation.
 
 **Scientific reading has an explicit boundary.** Named current owners,
 supersession notes and all 17 child/neck scientific notes received a scope
