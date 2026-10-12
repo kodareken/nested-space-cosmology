@@ -2,6 +2,26 @@
 
 Current presentation, 13 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Geometric mass on the prepared null surface, 13 October 2026
+
+The [mass calculation](nsc-atlas-source-mass.md) closes the transverse
+radius equation on the initialized source leg, using the same compact
+conformal field preparation, corner data and fixed null lapse. It
+determines a coordinate-invariant geometric Misner--Sharp mass coefficient.
+The Jordan and Einstein frame coefficients generally differ during the
+input; the full conformal transformation includes both scalar derivatives.
+They agree after the compact trace, where the coefficient is negative and
+constant on the remaining finite leg.
+
+The [record](../results/development/nsc-atlas-source-mass-v1/mass.json)
+compares frame-converted flux, mixed-radius geometry and the full improved
+Jordan stress. The sign follows analytically from the source support and
+white-hole-sector orientation. This is not a vacuum future, global
+mass-loss history or asymptotic energy. No finite amplitude, wall motion,
+corrected interior waveform or stability result is supplied. The next
+connection is to carry compatible sourced geometry toward the moving wall
+and test its dynamical junction conditions. Other atlas routes remain open.
+
 ## Characteristic gravitational initialization, 13 October 2026
 
 The [null constraint](nsc-atlas-characteristic-initialization.md) now determines

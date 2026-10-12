@@ -98,6 +98,11 @@
       "section": "13.5",
       "status": "derived",
       "owner": "docs/nsc-atlas-characteristic-initialization.md"
+    },
+    "atlas-source-mass": {
+      "section": "13.6",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-source-mass.md"
     }
   },
   "findings": [
@@ -258,6 +263,14 @@
       "note": "docs/nsc-atlas-characteristic-initialization.md",
       "record": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
       "paper_section": "13.5"
+    },
+    {
+      "id": "atlas-source-mass",
+      "status": "derived",
+      "summary": "The fixed compact conformal preparation and declared corner data determine a geometric Misner-Sharp mass response along the same initial null leg. Full frame conversion, mixed-radius transport and improved-stress flux agree; the post-input quadratic coefficient is negative and constant. No vacuum future, asymptotic energy, evolved wall response or finite-amplitude bound is established.",
+      "note": "docs/nsc-atlas-source-mass.md",
+      "record": "results/development/nsc-atlas-source-mass-v1/mass.json",
+      "paper_section": "13.6"
     }
   ]
 }
