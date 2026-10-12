@@ -28,7 +28,10 @@ the wall and produces a calculable transient at the center. Its waveform does
 not uniquely identify the exterior because the incident state is an independent
 input. We now identify a finite characteristic preparation in the retained
 white-hole sector and a bounded exterior-to-wall transfer operator. Its
-existence is certified analytically; its numerical waveform is not evaluated.
+existence is certified analytically. Evaluating it predicts a central pulse
+followed by a small positive scattering tail within the declared finite
+window. An independent positive-kernel argument fixes the tail's sign;
+spatial and clock refinements test its numerical magnitude.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -77,8 +80,8 @@ specific attachment whose mathematics has been checked.
 ![Nested regions and the checked geometric connection](figures/geometry-overview.png)
 
 *Figure 1. A finite research map and its current mathematical foothold.
-The left panel records possible descent through two holes and a further
-generation; those child identifications remain hypotheses. The right panel
+The upper panel records possible descent through two holes and a further
+generation; those child identifications remain hypotheses. The lower panel
 follows the checked cap–wall–bridge body and its isolated observer/field
 reference. Colors distinguish attachment, descent, causal influence and
 correlation. Layout and circles are diagrammatic: they are not a spatial
@@ -132,7 +135,7 @@ surroundings shape its state, geometry and measurements?**
 | --- | --- | --- |
 | [Preserved foundation](archive/foundation-v0.26.0/paper/nested-space-cosmology.md) | Spectral inheritance proposal, boundary operators, source and response constructions | A physical inheritance law and common cosmological source completion |
 | [Finite spherical companion](finite-regeneration/main.tex) | A finite realization of regional transfer, geometric feedback and memory with declared action and state | Identification with an actual assembled parent–child spacetime |
-| [Atlas evidence](../docs/nsc-cosmological-atlas.md) and this living manuscript | Geometric compatibility, a sourced slice, observer access, a calibration response and a finite exterior preparation operator | Remote preparation, an evaluated exterior-data response, other attachments and observational discrimination |
+| [Atlas evidence](../docs/nsc-cosmological-atlas.md) and this living manuscript | Geometric compatibility, a sourced slice, observer access, a calibration response and an evaluated finite exterior preparation | Remote preparation, later evolution, other attachments and observational discrimination |
 
 Their mathematics is complementary. A finite operator's eliminated modes
 are not automatically the exterior spacetime beyond a black hole. The atlas
@@ -759,7 +762,8 @@ nor a desired received waveform is independently specified.
 
 ![Retained exterior preparation and its independent input](../results/development/nsc-cosmological-atlas-v7/preparation-domain.png)
 
-*Figure 6. The finite preparation occupies the retained side of the early
+*Figure 6. The preserved v7 preparation checkpoint, before the waveform
+evaluation in Section 13.2. The finite preparation occupies the retained side of the early
 wall in sector IV. The profile on the characteristic surface is input,
 not a calculated wall or central waveform. The singularity and horizons
 lie outside this finite domain. Figure 4 supplies the global chart context.*
@@ -821,11 +825,108 @@ $$
 
 The existing relation $\phi_C[T(\tau_W)]=I/T'$ then defines the
 observer response over $-0.581759\leq T/\ell\leq-0.250231$.
-This closes the finite data-to-wall-to-observer operator. Its numerical
-waveform remains unevaluated; exterior scattering may produce tails.
-The calibration's late zero field is not imposed on this successor.
+This closes the finite data-to-wall-to-observer operator. Section 13.2
+evaluates it without imposing the calibration's late zero field.
 Remote generation of $g$, quantum-state selection, backreaction and
 regular formation of the wall remain distinct open connections.
+
+### 13.2. A prepared pulse leaves a finite scattering tail
+
+<!-- nsc-claim:atlas-prepared-response -->
+
+Evidence: [evaluated preparation and response](../results/development/nsc-cosmological-atlas-v8/prepared-response.json),
+[derivation, admission and controls](../docs/nsc-atlas-prepared-response.md).
+
+The next calculation keeps the same geometry, source profile, wall law and
+linear conformal probe. It determines the signal from independent data,
+rather than choosing a wall trace to reproduce a desired central waveform.
+Write the positive integral operator in Section 13.1 as $A$. Reversing its
+integration order gives
+
+$$
+(A\chi)(U,V)=\int_{V_a}^{V}dq
+\int_{U_0}^{\min\{U,U_W(q)\}}dp\,K(p,q)\chi(p,q).
+$$
+
+This form exposes a causal evolution in $V$. For numerical bookkeeping only,
+extend $\chi$ constantly in $U$ beyond the moving wall. All kernel integrals
+remain clipped at the wall; this does not apply the Schwarzschild equation
+inside the cap. The directly evaluated wall derivative is
+
+$$
+J(V)=g'(V)-\int_{U_0}^{U_W(V)}K(U,V)\chi(U,V)\,dU,
+\qquad
+\frac{\ell\phi_C}{\varepsilon}
+=\frac{2J/\varepsilon}{d(T/\ell)/dV}.
+$$
+
+We integrate $\chi-g$ with borrowed DOP853 time stepping and a clipped
+trapezoidal spatial integral. The wall crossings of grid nodes delimit
+steps, preserving the partial-cell boundary integral. No new field solver
+family or asymptotic scattering condition is introduced. The owner records
+the initial stopped attempt and this event-aligned integration correction.
+
+The sign of the resulting tail has an independent analytic check. For
+positive input $g$ and kernel $K$, reversing the nested integrals gives
+$0\leq A^2g\leq q_*Ag$ pointwise. Positivity then bounds subsequent
+terms in the alternating Neumann series. After the input has ended,
+
+$$
+-Ag\leq\chi\leq-(1-q_*)Ag<0
+\quad (U>U_0).
+$$
+
+Consequently $J=-\int K\chi\,dU>0$: scattering in the retained exterior
+leaves a positive central field during this post-input window. Defining
+$B(V)=\int K(U,V)(Ag)(U,V)\,dU$ supplies a quantitative bracket,
+
+$$
+(1-q_*)B(V)\leq J(V)\leq B(V).
+$$
+
+The transverse kernel integral is available exactly. With $m=M/\ell=0.4$
+and $x_a,x_b$ the radii at $U=a,b$ on the same $V$,
+
+$$
+\int_a^bK(U,V)\,dU
+=\frac{2m^2}{V}\left(x_b^{-2}-x_a^{-2}\right).
+$$
+
+Independent quadrature of the remaining two integrals checks the bracket
+at three fixed post-input times. It does not reuse the evolved field.
+
+![Prepared signal, central response and finite scattering tail](../results/development/nsc-cosmological-atlas-v8/prepared-response.png)
+
+*Figure 7. Independent characteristic data produce a wall trace and central
+response. The lower panel resolves the small positive post-input derivative
+with independent analytic brackets. The zero-potential curve is an integration
+diagnostic on the same coordinate map, not a second physical spacetime.
+The plotted tail stops at the admitted domain boundary.*
+
+| Finite result or check | Value |
+| --- | --- |
+| Sampled positive / negative central extrema, $\ell\phi_C/\varepsilon$ | $47.29834$ / $-45.69596$ |
+| Central field at the final admitted arrival | $0.001290498$ |
+| Maximum central change, 257 to 513 spatial nodes | $2.79\times10^{-7}$ |
+| Maximum central change, 129 to 257 clock knots | $3.41\times10^{-8}$ |
+| Final $J/\varepsilon$ and independent bracket | $0.000802039$ in $[0.000696588,0.000808877]$ |
+
+These sampled extrema are field amplitudes, not energy efficiencies or
+certified continuum extrema. The positive post-input interval is
+$-0.340773<T/\ell\leq-0.250231$. Spatial refinement, a separate
+clock refinement and a constant-kernel Bessel benchmark support the
+numerical evaluation. The recorded experiment uses 5,597,264 kernel
+evaluations, within its ten-million evaluation and 60-CPU-second limits.
+Numerical comparisons are diagnostics; the sign conclusion rests on the
+positive-kernel argument, not a claimed rigorous floating-point enclosure.
+
+This closes one missing connection: finite exterior data now yield a checked
+observer response, including an exterior-generated tail even though the
+conformal cap has no bulk tail. It does not establish a lasting remnant,
+backreaction, a signal from $P$, or an observation identifying a unique
+exterior. The useful next question is which response features survive
+freedom in the preparation. Remote generation and continuation beyond this
+window remain separate open problems.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1104,7 +1205,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Evaluate the admitted finite preparation operator | What wall trace and central response follow from the fixed independent data? | A response predicted from exterior data; a comparison sensitive to scattering |
+| Observer inference with preparation freedom | Which measured pulse or tail features require this exterior when independent data are not known? | A discriminating observable or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
 | Stability or formation of an attachment | Do fixed-source disturbances or collapse data remain in the claimed domain? | A stronger cosmological interpretation |
@@ -1119,9 +1220,10 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 7. Research dependencies, distinct from spacetime causal arrows.
+*Figure 8. Research dependencies, distinct from spacetime causal arrows.
 Known equations become usable when their inputs, domains and matching are
-established. The [programme record](../results/development/nsc-cosmological-atlas-v7/programme.json)
+established. The diagram records the v7 prerequisite structure; the
+updated [programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight
 themes: spherical stability, interior/exterior description, quantum fields,
 barriers, scales, charge, time and branching. Arrows do not declare these
@@ -1130,8 +1232,8 @@ questions solved or prescribe a single compulsory route.*
 The current result is a continuous mathematical story at a deliberately
 finite scale: an exterior can be attached on a sourced slice; an isolated
 completion determines observer access; a specified field state gives an
-interior waveform; independent finite exterior data now define an admitted
-transfer operator; and finite regional reduction explains how unresolved
+interior waveform; independent finite exterior data now predict a pulse
+and a positive finite scattering tail; and finite regional reduction explains how unresolved
 degrees of freedom can retain memory in another fully stated model.
 The remaining work is to connect those statements physically where their
 domains presently differ.
@@ -1153,6 +1255,7 @@ and renders their relationships without launching a new physics calculation.
 | Isolated causal completion and clocks | [Atlas v5](../docs/nsc-cosmological-atlas-v5.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
 | Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-cosmological-atlas-v6.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |
+| Evaluated exterior preparation and finite tail | [Response](../docs/nsc-atlas-prepared-response.md); [v8 manifest](../results/development/nsc-cosmological-atlas-v8/manifest.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

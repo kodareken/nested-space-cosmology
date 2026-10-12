@@ -20,14 +20,29 @@
       "path": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
       "sha256": "7f2129c2a1b661b77900e6c713838789ba92399d2ee32c771317079509c01033"
     },
+    "prepared_response": {
+      "path": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
+      "sha256": "d61260d54f2af093fd716c6ebc381b37f18aff11ebff6b9655676f7ff5ca8e7b"
+    },
     "programme": {
-      "path": "results/development/nsc-cosmological-atlas-v7/programme.json",
-      "sha256": "c5f4532bc55bb26dbac5a48084d96ab3c42404283f5d720a1b25eb54f596ccec"
+      "path": "results/development/nsc-cosmological-atlas-v8/programme.json",
+      "sha256": "7575154623a590949e044aabe2a56ff796f878cb2ac0537b70abf56a5c822618"
     },
     "slice": {
       "path": "results/development/nsc-cosmological-atlas-v4/connection-slice.json",
       "sha256": "62f12562be6c3a918dfe03a98d2af789ccfddde2c12e1aee024949017f0d1394"
     }
+  },
+  "layout": {
+    "left_panel_display": "upper",
+    "minimum_font_points": 13,
+    "native_inches": [
+      9,
+      11.2
+    ],
+    "orientation": "portrait",
+    "paper_height_cap_points": 530,
+    "right_panel_display": "lower"
   },
   "left_panel": {
     "connections": [
@@ -210,15 +225,16 @@
     "No spatial embedding, global topology or relative physical scales are depicted.",
     "No parent observer prepares the early scalar trace in the isolated reference.",
     "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
+    "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "3cff8d1e6f6d9af4dfd6b08c1e67bdcfbdf542f989173ffd05e3cc59d7082274",
-    "geometry-overview.svg": "8e3d1734cbab50858ae44d9bcff8dff15ac4c0b4156db131bbd131d1addfea1e"
+    "geometry-overview.png": "43d5278d78e55d1108d401f469982fb15d0ddf8be5f14ad21f6cb246ff1521e9",
+    "geometry-overview.svg": "10f5ffd6567ad6408f65c32c831d1e4894c800430b096dce4aa1b2003e189a4b"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "ec5f5bb2535b276b0e34fd5884180bd931a6254868c28cc83cefd946cb6e3fda",
+  "producer_sha256": "fb81af9784a17b2894507597a8a3e18e8297bdfd22611cadf285aa60dd5fbe23",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -268,7 +284,7 @@
       {
         "from": "independent finite IV data",
         "kind": "causal",
-        "status": "finite conditional transfer operator; waveform not evaluated",
+        "status": "calculated pulse and positive post-input tail within the finite admitted window",
         "to": "wall and centre"
       }
     ],
@@ -434,7 +450,80 @@
         "wall_condition": "chi_U=0 from conformal matching and zero outgoing cap characteristic"
       },
       "remote_generation_established": false,
-      "waveform_evaluated": false
+      "waveform_evaluated_in_v7_certificate": false
+    },
+    "prepared_response": {
+      "analytic_tail": {
+        "bracket": "(1-q*)B(V)<=J(V)<=B(V); B=integral KAg>0",
+        "independent_controls": [
+          {
+            "B_32": 0.0007398370161555513,
+            "B_64": 0.000739837016155595,
+            "B_quadrature_difference": 4.369334755116583e-17,
+            "J": 0.0007361136574744737,
+            "V": -2.3189523150551317,
+            "lower_from_B": 0.0006371321074003646,
+            "source_coordinate": 0.8125,
+            "upper_from_B": 0.000739837016155595
+          },
+          {
+            "B_32": 0.0007621859746701694,
+            "B_64": 0.0007621859746702225,
+            "B_quadrature_difference": 5.312590645178972e-17,
+            "J": 0.0007575130409374605,
+            "V": -2.2999720810541224,
+            "lower_from_B": 0.0006563785613161461,
+            "source_coordinate": 0.875,
+            "upper_from_B": 0.0007621859746702225
+          },
+          {
+            "B_32": 0.0008088769160017055,
+            "B_64": 0.0008088769160017773,
+            "B_quadrature_difference": 7.177418381854039e-17,
+            "J": 0.0008020390045225783,
+            "V": -2.262011613052105,
+            "lower_from_B": 0.0006965878198385987,
+            "source_coordinate": 1.0,
+            "upper_from_B": 0.0008088769160017773
+          }
+        ],
+        "positive_after_input_in_declared_window": true,
+        "proof": "0<=A²g<=q*Ag implies -Ag<=chi<=-(1-q*)Ag after g=0; J=-integral Kchi>0",
+        "uniform_lower_J_over_epsilon": 6.532462063859313e-05
+      },
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Ub": -0.2747468030926288,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105,
+        "arrival_window_over_ell": [
+          -0.5817589515953444,
+          -0.25023070056069985
+        ],
+        "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+        "radius_lower_bound_over_ell": 0.4,
+        "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+        "radius_upper_bound_over_ell": 0.55,
+        "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+        "wall_radius_window_over_ell": [
+          0.45,
+          0.55
+        ]
+      },
+      "metrics": {
+        "negative_sampled_peak": -45.69595940510547,
+        "positive_sampled_peak": 47.298336937029504,
+        "post_input_final_phi": 0.00129049805974254,
+        "post_input_min_J": 0.0007165246329601818,
+        "scattering_max_absolute_change": 0.2659521211029947,
+        "signed_observer_area": -0.017522574896023928,
+        "wall_endpoint_area": -0.017522574645549713
+      },
+      "permanent_memory_established": false,
+      "remote_generation_established": false,
+      "status": "FINITE_PREPARED_CLASSICAL_RESPONSE_WITH_POSITIVE_TAIL",
+      "waveform_evaluated": true
     },
     "slice_status": "CONNECTED_SOURCED_INITIAL_SLICE"
   },

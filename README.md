@@ -15,9 +15,12 @@ universe has a parent. The map distinguishes descent, geometric attachment,
 causal influence and correlation. Missing physical connections remain visible.
 
 The current geometric route reaches a sourced interior connection, a causal map,
-a calibration waveform and a [finite exterior preparation operator](docs/nsc-atlas-field-preparation.md).
-Independent data beside the early wall define a unique transmission problem;
-its numerical received waveform, remote preparation and backreaction remain open. Finite transfer,
+a calibration waveform and a [computed response to independent exterior data](docs/nsc-atlas-prepared-response.md).
+The eighth atlas resolves a central scalar waveform and a positive tail within
+its finite arrival window, supported by an analytic bound and numerical refinement.
+The next question is what an observer can identify when different preparations
+are allowed; that comparison needs its own admission. Remote preparation and
+backreaction remain open. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
 expansion and recycling remain research questions.
@@ -25,7 +28,8 @@ expansion and recycling remain research questions.
 ## Read and reproduce
 
 - [Atlas programme and calculation dependencies](docs/nsc-cosmological-atlas.md)
-- [Current preparation map and evidence](docs/nsc-cosmological-atlas-v7.md)
+- [Current prepared response and evidence](docs/nsc-atlas-prepared-response.md)
+- [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)
 - [Research inventory and reading boundaries](docs/research-inventory.md)
@@ -53,6 +57,8 @@ Exact historical image replay uses a separate Windows Python 3.14.8 / Matplotlib
 [historical environment setup](docs/reproducing.md#preserved-editions-and-source-contexts)
 before running `scripts/replay_history.py all`, or select it through `HISTORY_PYTHON`
 when running `make verify`. GitHub checks the two profiles in separate jobs.
+The v7 preparation bundle has its own explicit `atlas-v7` historical replay;
+the legacy `all` command retains the v1-v6 profile.
 New calculations require a named uncertainty and a finite budget.
 
 This is a research manuscript under development. No arXiv submission or

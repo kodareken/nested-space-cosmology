@@ -25,7 +25,7 @@ the preserved scientific families and dispositions below.
 | Theme ID | Existing family and reusable material | Remaining disposition |
 |---|---|---|
 | `sphere` | [Spherical regions](nsc-cosmological-atlas.md#question-spheres), RN charts and sourced cap/neck geometry. | Reusable geometry under stated sources; shape selection and stability remain unresolved. |
-| `insideoutside` | [Attachment and access](nsc-cosmological-atlas.md#question-inside-outside), atlas v4-v6 and retained observer machinery. | Reusable fixed-reference results; common future and exterior-side preparation remain unresolved. |
+| `insideoutside` | [Attachment and access](nsc-cosmological-atlas.md#question-inside-outside), atlas v4-v8 and retained observer machinery. | Reusable fixed-reference results, including a finite IV preparation and resolved response; common future, remote source and observer identifiability remain unresolved. |
 | `quantum` | [Field and localized descriptions](nsc-cosmological-atlas.md#question-particle-wave), spectral/Dirac and finite local-observer strands. | Reusable finite models; literal particle/interior identity remains exploratory. |
 | `barriers` | [Boundary classification](nsc-cosmological-atlas.md#question-gradient-boundaries), junctions, scalar matching and corrected RN diagnostics. | Reuse the appropriate equations; pressure-equality-to-balance interpretation is withdrawn. |
 | `scales` | [Regional scales](nsc-cosmological-atlas.md#question-regional-scales), finite inheritance, spectral endpoint and w2 constants. | Finite algebra is reusable; physical constants and empirical w2 fits remain separate unresolved/exploratory claims. |
@@ -33,13 +33,17 @@ the preserved scientific families and dispositions below.
 | `time` | [Clocks and direction](nsc-cosmological-atlas.md#question-time), observer clocks and conformal local response. | Reuse domain-labelled proper clocks; w2 clock mismatch and entropy-arrow connection remain unresolved. |
 | `branching` | [Descendants and recurrence](nsc-cosmological-atlas.md#question-branching), finite nesting, multiple-daughter and inheritance literature. | Finite constructions reusable; offspring law, physical recycling and infinite recurrence remain hypotheses. |
 
-The first bounded cycle is [signal origin](nsc-cosmological-atlas.md#signal-origin-cycle).
-The right-parent exclusion and conditional wall-to-centre waveform are already
-recorded. The new [region-IV preparation note](nsc-atlas-field-preparation.md)
-proves a unique finite data-to-wall-to-observer operator under its specified
-initial cap, characteristic data and no-return assumptions. Its numerical
-waveform, remote preparation and formation remain open. That targeted
-certificate does not extend verification to the other census families. The archived
+The [signal-origin cycle](nsc-cosmological-atlas.md#signal-origin-cycle)
+retains the right-parent exclusion and conditional wall-to-centre calibration.
+The [region-IV preparation note](nsc-atlas-field-preparation.md) proves a
+unique finite operator under its specified initial cap, characteristic data
+and no-return assumptions. The [v8 response](nsc-atlas-prepared-response.md)
+evaluates that operator and resolves an analytically positive tail within
+the finite arrival window. Remote preparation and formation remain open.
+The next named connection is
+[observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability),
+not an already admitted comparison. These targeted results do not extend
+verification to the other census families. The archived
 CCC citation remains a separate literature comparison with no newly absorbed
 equations. All original unread and unverified boundaries below remain in force.
 
