@@ -2,6 +2,42 @@
 
 Current presentation, 12 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Prepared interior response and finite positive tail, 12 October 2026
+
+The eighth atlas evaluates the v7 finite exterior preparation operator with
+its geometry, conformal scalar, compact source and initial cap held fixed.
+The [scientific owner](nsc-atlas-prepared-response.md) and
+[response record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json)
+connect the retained Schwarzschild-IV data to the moving-wall trace and
+central observer. This closes the numerical `wall-trace` and
+`observer-response` connection for those independently specified data.
+
+The normalized central field Y=ell phi_C/epsilon has sampled extrema
+47.29833694 and -45.69595941. After the exterior input ends, a positive
+field tail reaches the centre over
+-0.340772595<=T/ell<=-0.250230701, with terminal Y=0.00129049806.
+Its sign follows from an analytic positive-kernel bound. Three independent
+reference-integral brackets contain the computed trace; spatial refinement
+reduces the maximum waveform difference from 1.11704e-6 to 2.79286e-7, and
+the post-input derivative-trace difference is 3.70648e-9. These are numerical
+diagnostics supported by analytic bounds, not rigorous interval enclosures,
+energy fractions or a claim about later persistence.
+
+An initial unsegmented solve stopped at its 6,000-call cap. The admitted
+event-aligned correction completed with at most 4,352 calls per solve,
+5,597,264 kernel values and the unchanged 60-CPU-second guard. The owner
+preserves both outcomes and the unchanged theory, source and tolerances.
+The right-parent P exclusion remains; this signal is prepared in retained
+IV, not driven from the ordinary right exterior.
+
+The next named unlock is
+[observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability):
+which exterior features can an interior signal distinguish when different
+input preparations are allowed? No new comparison or physical claim is
+admitted yet. Remote generation, quantum state, backreaction, formation and
+the many-body future remain open. All other atlas routes and historical
+records below are retained.
+
 ## Finite exterior preparation and programme, 12 October 2026
 
 The [seventh atlas](nsc-cosmological-atlas-v7.md) connects a finite

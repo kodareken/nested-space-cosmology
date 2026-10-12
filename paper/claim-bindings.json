@@ -78,6 +78,11 @@
       "section": "13.1",
       "status": "derived",
       "owner": "docs/nsc-atlas-field-preparation.md"
+    },
+    "atlas-prepared-response": {
+      "section": "13.2",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-prepared-response.md"
     }
   },
   "findings": [
@@ -202,10 +207,18 @@
     {
       "id": "atlas-field-preparation",
       "status": "derived",
-      "summary": "A finite retained IV characteristic preparation defines a unique conditional transfer operator; numerical observer waveform and remote generation remain open.",
+      "summary": "The v7 retained IV preparation defines a unique conditional transfer operator. Its v8 evaluation is recorded separately; remote generation remains open.",
       "note": "docs/nsc-atlas-field-preparation.md",
       "record": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
       "paper_section": "13.1"
+    },
+    {
+      "id": "atlas-prepared-response",
+      "status": "measured",
+      "summary": "Fixed finite IV characteristic data produce a central pulse and positive post-input tail. The sign has a conditional analytic bound; numerical magnitudes have spatial, geometry and independent integral controls. Later persistence and remote preparation remain open.",
+      "note": "docs/nsc-atlas-prepared-response.md",
+      "record": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
+      "paper_section": "13.2"
     }
   ]
 }
