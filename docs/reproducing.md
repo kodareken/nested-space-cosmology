@@ -13,6 +13,7 @@ python scripts/check_publication.py
 python scripts/check_claim_bindings.py
 python scripts/test_reassembly.py
 python scripts/build_geometry_overview.py
+python scripts/build_characteristic_initialization_figure.py
 python scripts/build_paper.py --check
 ```
 
@@ -55,6 +56,24 @@ Its owner, producer and tests are source-bound. As with the inverse, creating
 another record requires a fresh output directory. Independent analytic review
 and exact-algebra checks are distinct from provenance authentication. Bulk
 backreaction, normal-force balance and amplitude bounds remain open.
+
+The [characteristic initialization](nsc-atlas-characteristic-initialization.md)
+evaluates one borrowed null constraint for the original compact source.
+Its corner geometry and affine gauge are fixed; it runs no field or coupled
+Einstein evolution:
+
+```sh
+python scripts/record_nsc_atlas_characteristic_initialization.py --check
+python scripts/run_python.py scripts/record_nsc_atlas_characteristic_initialization.py --check-numerics
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_characteristic_initialization.py
+```
+
+Authentication checks the source-bound owner, implementation, tests and
+prerequisites. Numerical replay separately checks exact identities and
+the finite one-dimensional quadratures in the recorded budget. Creation
+requires a fresh output directory. Refinement agreement is a numerical
+diagnostic, not a rigorous enclosure or a finite-amplitude metric error bound.
+Transverse constraints, later wall matching and coupled evolution remain open.
 
 Atlas v8 remains the finite exterior-to-interior waveform result. Its original
 replay is explicitly selected below. The fixed input, numerical budget,

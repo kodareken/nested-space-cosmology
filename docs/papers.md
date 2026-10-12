@@ -27,7 +27,12 @@ state what preparations are physically allowed before inferring an exterior.
 The [conformal stress check](nsc-atlas-scalar-wall-consistency.md) connects
 the same prepared probe to the wall's quadratic stress conditions. Its
 surface coefficient and tangential flux jump vanish; the smooth bulk
-gravitational response remains the next physical connection to establish.
+gravitational evolution requires compatible initial data. The
+[characteristic initialization](nsc-atlas-characteristic-initialization.md)
+now computes the required source-leg radius correction with the original
+compact preparation, corner geometry and null normalization fixed. This
+connects the field to one gravitational constraint; transverse evolution,
+mass change and the coupled wall response remain open.
 
 ## Supporting and historical editions
 
