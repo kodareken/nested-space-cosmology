@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
+from functools import lru_cache
 import hashlib
 import html
 from io import BytesIO
@@ -16,6 +18,7 @@ import sys
 import tempfile
 import time
 from pathlib import Path
+from types import SimpleNamespace
 from urllib.parse import unquote, urlsplit
 
 REPOSITORY = Path(__file__).resolve().parents[1]
@@ -26,6 +29,35 @@ BUILD_MANIFEST = REPOSITORY / "paper" / "build-manifest.json"
 BUILD_DIRECTORY = REPOSITORY / "paper" / ".build"
 
 IMAGE_LINK = re.compile(r"!\[([^\]]*)\]\((<[^>]+>|[^)]+)\)")
+
+PDF_COMPRESSION_OPTIONS = {
+    "numiterations": 1,
+    "blocksplitting": True,
+    "blocksplittinglast": False,
+    "blocksplittingmax": 15,
+}
+
+
+@contextmanager
+def deterministic_pdf_compression():
+    """Scope a fixed compressor to ReportLab's page, font and image streams."""
+    from reportlab.pdfbase import pdfdoc
+    from zopfli.zlib import compress
+
+    original = pdfdoc.zlib
+
+    @lru_cache(maxsize=256)
+    def encode(data: bytes) -> bytes:
+        return compress(data, **PDF_COMPRESSION_OPTIONS)
+
+    # ReportLab's two PDF compression call sites share this module reference.
+    # Keep stdlib zlib, Matplotlib and Pillow unchanged; restore even on failure.
+    pdfdoc.zlib = SimpleNamespace(compress=encode, decompress=original.decompress)
+    try:
+        yield
+    finally:
+        pdfdoc.zlib = original
+        encode.cache_clear()
 
 
 def local_image_path(source: Path, target: str) -> Path:
@@ -303,6 +335,7 @@ def build_pdf(
     try:
         import matplotlib
         import reportlab
+        import zopfli
         from matplotlib.font_manager import FontProperties
         from matplotlib.mathtext import math_to_image
         from reportlab.lib import colors
@@ -331,14 +364,15 @@ def build_pdf(
         from reportlab.platypus.tableofcontents import TableOfContents
     except ImportError as exc:  # pragma: no cover - exercised only without dependency
         raise SystemExit(
-            "ReportLab is required. Run: python3 -m pip install -r "
-            "requirements-paper.txt"
+            "Pinned paper dependencies are required. Run: python -m pip install -e '.[paper]'"
         ) from exc
-    if getattr(reportlab, "Version", None) != "4.4.9":
-        raise SystemExit(
-            "ReportLab 4.4.9 is required for the canonical PDF; observed "
-            f"{getattr(reportlab, 'Version', 'unknown')}"
-        )
+    for name, required, observed in (
+        ("Matplotlib", "3.11.1", getattr(matplotlib, "__version__", "unknown")),
+        ("ReportLab", "4.4.9", getattr(reportlab, "Version", "unknown")),
+        ("Zopfli", "0.4.3", getattr(zopfli, "__version__", "unknown")),
+    ):
+        if observed != required:
+            raise SystemExit(f"{name} {required} is required for the canonical PDF; observed {observed}")
 
     page_width, page_height = A4
     left_margin = 19 * mm
@@ -1340,7 +1374,8 @@ def build_pdf(
     ]
     manuscript = source.read_text(encoding="utf-8")
     story = cover_story + parse_markdown(manuscript)
-    document.multiBuild(story)
+    with deterministic_pdf_compression():
+        document.multiBuild(story)
 
     if not temporary.is_file() or temporary.stat().st_size < 20_000:
         raise RuntimeError("PDF build did not produce a plausible output file")
@@ -1387,6 +1422,7 @@ def preserve_check_diagnostics(first: Path, second: Path, output: Path, reason: 
     import numpy
     import PIL
     import reportlab
+    import zopfli
     from matplotlib import ft2font
 
     destination = REPOSITORY / ".build" / "paper-check"
@@ -1406,7 +1442,8 @@ def preserve_check_diagnostics(first: Path, second: Path, output: Path, reason: 
         "platform": platform.platform(),
         "zlib": {"compile": zlib.ZLIB_VERSION, "runtime": zlib.ZLIB_RUNTIME_VERSION},
         "packages": {"matplotlib": matplotlib.__version__, "reportlab": reportlab.Version,
-                     "Pillow": PIL.__version__, "numpy": numpy.__version__},
+                     "Pillow": PIL.__version__, "numpy": numpy.__version__, "zopfli": zopfli.__version__},
+        "pdf_compressor": {"name": "zopfli.zlib", "options": PDF_COMPRESSION_OPTIONS},
         "freetype": {"version": ft2font.__freetype_version__,
                      "build_type": getattr(ft2font, "__freetype_build_type__", "unknown")},
         "bundled_fonts": [{"name": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}

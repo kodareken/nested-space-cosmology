@@ -3,6 +3,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import zlib
 
 import pytest
 
@@ -93,4 +94,64 @@ def test_failed_check_preserves_diagnostics_without_accepting_or_replacing_evide
     assert record["zlib"]["runtime"]
     assert tracked.read_bytes() == b"%PDF original evidence"
     assert manifest.read_bytes() == b"{}"
+
+
+def test_pdf_compression_has_fixed_bytes_and_standard_zlib_round_trip():
+    from reportlab.pdfbase import pdfdoc
+
+    with paper.deterministic_pdf_compression():
+        encoded = pdfdoc.PDFZCompress.encode(b"hello\n")
+        assert encoded.hex() == "78dacb48cdc9c9e70200084b021f"
+        assert zlib.decompress(encoded) == b"hello\n"
+        for payload in (b"", bytes(range(256)) * 20, "Spherical geometry: \u03b8".encode()):
+            assert zlib.decompress(pdfdoc.PDFZCompress.encode(payload)) == payload
+
+
+@pytest.mark.parametrize("fail", [False, True])
+def test_compression_is_cached_per_build_and_restored_even_on_failure(monkeypatch, fail):
+    from reportlab.pdfbase import pdfdoc
+    import zopfli.zlib
+
+    original_module, original_compress = pdfdoc.zlib, zlib.compress
+    actual_compress = zopfli.zlib.compress
+    calls = []
+
+    def counted(data, **options):
+        calls.append(data)
+        return actual_compress(data, **options)
+
+    monkeypatch.setattr(zopfli.zlib, "compress", counted)
+    payload = b"the same image can appear in multiple table-of-contents passes"
+    try:
+        with paper.deterministic_pdf_compression():
+            assert pdfdoc.zlib is not original_module
+            assert zlib.compress is original_compress
+            assert pdfdoc.zlib.compress(payload) == pdfdoc.zlib.compress(payload)
+            assert len(calls) == 1
+            if fail:
+                raise RuntimeError("simulated PDF layout failure")
+    except RuntimeError as error:
+        assert fail and str(error) == "simulated PDF layout failure"
+    assert pdfdoc.zlib is original_module
+    assert zlib.compress is original_compress
+    with paper.deterministic_pdf_compression():
+        pdfdoc.zlib.compress(payload)
+    assert len(calls) == 2
+
+
+@pytest.mark.parametrize("module,attribute,name,required", [
+    ("matplotlib", "__version__", "Matplotlib", "3.11.1"),
+    ("reportlab", "Version", "ReportLab", "4.4.9"),
+    ("zopfli", "__version__", "Zopfli", "0.4.3"),
+])
+def test_wrong_rendering_dependency_fails_before_writing_pdf(
+    tmp_path, monkeypatch, module, attribute, name, required
+):
+    import importlib
+
+    monkeypatch.setattr(importlib.import_module(module), attribute, "wrong-version")
+    output = tmp_path / "must-not-exist.pdf"
+    with pytest.raises(SystemExit, match=f"{name} {required} is required"):
+        paper.build_pdf(tmp_path / "source.md", output, {})
+    assert not output.exists()
 

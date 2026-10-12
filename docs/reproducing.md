@@ -26,6 +26,13 @@ The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
 change. The software release version and the manuscript revision are independent.
 
+The canonical PDF uses the pinned Zopfli compressor for ReportLab streams, so
+standard zlib and zlib-ng installations produce the same encoded document.
+This controls compression only; fonts, images, equations and layout retain their
+bound inputs. The builder checks its rendering dependencies and keeps strict
+byte equality. A failed comparison saves diagnostic PDFs and runtime details
+under ignored `.build/paper-check`; the paper workflow preserves those files.
+
 ## Preserved editions and source contexts
 
 ```sh

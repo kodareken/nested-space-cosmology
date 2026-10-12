@@ -30,12 +30,12 @@
     {
       "bytes": 2635,
       "path": ".github/workflows/paper-pdf.yml",
-      "sha256": "24872aaeacb412342eabdc8b763d76e1fd7b1400971fcce9180002f6adefd5a3"
+      "sha256": "210bef4360b7cdfec7c443068d69ec538c8706b9f507a3f0b9ae0ccd7350dac0"
     },
     {
       "bytes": 693,
       "path": ".github/workflows/verify.yml",
-      "sha256": "1873eed89179a3d1c19688fd79239d715b9babc7995b97c27b8b84fbade33d6c"
+      "sha256": "3c795f60da22a9efcadd240ed9dd61193a7b3d5023bff50670000f4b52608340"
     },
     {
       "bytes": 356,
@@ -3158,9 +3158,9 @@
       "sha256": "3bf11e41feb6a597b94817ea01abd6384f0ce1c1873a4feb6853abc9c6a436d1"
     },
     {
-      "bytes": 4389,
+      "bytes": 4856,
       "path": "docs/reproducing.md",
-      "sha256": "88cc0a5e2b86585253a09ade291e3d6b92e85e56017f8599ea40470e74a356d6"
+      "sha256": "f8e750962eb2bd01f3b99608f56610b0a371a21c31c1c126e3d009c749b478ec"
     },
     {
       "bytes": 23007,
@@ -3260,7 +3260,7 @@
     {
       "bytes": 5411,
       "path": "paper/build-manifest.json",
-      "sha256": "1c3b0ce70dec68ff0b26cf4d74dc67581bedf1f8f2557fadd6577af64d92a7e9"
+      "sha256": "4b1df3a7c4c44d1a773b3c7877221fddd789512a88d2ec0896d249c6404f6633"
     },
     {
       "bytes": 3204,
@@ -3488,9 +3488,9 @@
       "sha256": "c1d4f641e958269f1e6dd3c0287b43fbc89d49319f8dc87333c5d9f571216d56"
     },
     {
-      "bytes": 1974487,
+      "bytes": 1678635,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "6f02657d03d92ff6e34905c74724429b3c0cda5fd3b08d89fd5d60887b366455"
+      "sha256": "0dee46b523f65313d16221f1a6a9c1c3bf54e12ee9e1c58f7cc9ef37b5903c1a"
     },
     {
       "bytes": 5992,
@@ -3498,14 +3498,14 @@
       "sha256": "fe677c42489e9f2ac4fed3eab5fee969a9c12c25ea02fee713d0d8626ba18236"
     },
     {
-      "bytes": 1212,
+      "bytes": 1246,
       "path": "pyproject.toml",
-      "sha256": "657909dda9aa7126f9867a4426f3dd1a6a0b2514a3d1daf80b1462bddebfb143"
+      "sha256": "285ad0cf5a28f6484106a8812e3e9085fa0f4f9b5f91dc57145fa1868e3212f6"
     },
     {
-      "bytes": 36,
+      "bytes": 50,
       "path": "requirements-paper.txt",
-      "sha256": "b54801f9deb47c5c159b7e39353a488c3d7d0fcfa96515751e6c10f80b0763c6"
+      "sha256": "a9340df85ec6c8b0d2efd98d895796f225d41edcf75f246ade6d15d35be6487d"
     },
     {
       "bytes": 76,
@@ -62493,14 +62493,19 @@
       "sha256": "0eb5fe3f9fa14519d41c58bf64b83a18fb0e06525b7b464e71875525e1359c99"
     },
     {
+      "bytes": 1859,
+      "path": "results/reassembly/pdf-portability.json",
+      "sha256": "cdb2101dbb3be58d9aaaaaddd3d24a1e2c923239ea3b5677719d58cd02ff7ec6"
+    },
+    {
       "bytes": 9049185,
       "path": "results/reassembly/retirement.json",
       "sha256": "98a487d0d8515f8cf667872ef01ac7a1db5b58467995a969bc22f4fd475f024c"
     },
     {
-      "bytes": 2516,
+      "bytes": 2978,
       "path": "results/reassembly/validation.json",
-      "sha256": "b89a662a1d5443c0ef6dec33996233a11e48674801ee04585bc0ef82413d2512"
+      "sha256": "3774e405d0c576d42fb5a5ced137399443f3c80a2fd3a0f398c206d04498635e"
     },
     {
       "bytes": 170273,
@@ -62648,9 +62653,9 @@
       "sha256": "8eafb9080a5dd6ac005e9575af780280cef4413d91792b06af106cd1f8219e6a"
     },
     {
-      "bytes": 62098,
+      "bytes": 63431,
       "path": "scripts/build_paper.py",
-      "sha256": "7ad52639e56ce1371c00822ea02986b9a0ab2db24bf23b56a0c68e0f89148735"
+      "sha256": "210e9cb7d187c6fd7d4e9fbf7b5bf029078d74f7a99776ac2ef0dc4782f9b17e"
     },
     {
       "bytes": 5479,
@@ -67963,9 +67968,9 @@
       "sha256": "156e985ba293cbaec0f9da2bc107b71a673fb0d57e0284d036d4963ad3c75048"
     },
     {
-      "bytes": 4493,
+      "bytes": 6950,
       "path": "tests/test_main_paper_rendering.py",
-      "sha256": "bf60caccd481ab48a77cf48df2e6fe326a29ba61421b495d2bfa23c30d4388dc"
+      "sha256": "cef1aff5d0417f73e3086063d0bdd4f71bfdc438858943dcc8a9ae47a5cc347e"
     },
     {
       "bytes": 2905,
