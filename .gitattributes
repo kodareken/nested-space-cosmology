@@ -6,3 +6,7 @@
 
 # Imported scientific sources and records retain exact original bytes.
 lab/** -text
+
+# Archived scientific contexts preserve their original byte identities.
+archive/** -text
+paper/archive/** -text

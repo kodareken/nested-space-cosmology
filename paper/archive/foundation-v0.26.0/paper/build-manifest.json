@@ -1,0 +1,174 @@
+{
+  "bytes": 2076644,
+  "metadata": "paper/metadata.json",
+  "metadata_sha256": "90034005464366c8b957904e1d91eeba19c35ae14bdcf5a5d958d294681f5501",
+  "output": "paper/nested-space-cosmology.pdf",
+  "pages": 43,
+  "pdf_sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf",
+  "schema": "NSC-PAPER-BUILD-v1",
+  "scientific_build_inputs": [
+    {
+      "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
+      "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
+    },
+    {
+      "path": "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz",
+      "sha256": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5"
+    },
+    {
+      "path": "results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz",
+      "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2"
+    },
+    {
+      "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+      "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
+    },
+    {
+      "path": "results/development/charged-compact-ctp-completion.json",
+      "sha256": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6"
+    },
+    {
+      "path": "results/development/charged-ctp-neck-source.json",
+      "sha256": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90"
+    },
+    {
+      "path": "results/development/compact-casimir.json",
+      "sha256": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447"
+    },
+    {
+      "path": "results/development/compact-matching.json",
+      "sha256": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9"
+    },
+    {
+      "path": "results/development/nsc-background-projection.json",
+      "sha256": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48"
+    },
+    {
+      "path": "results/development/nsc-child-metric-backreaction.json",
+      "sha256": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a"
+    },
+    {
+      "path": "results/development/nsc-common-time-bulk-split.json",
+      "sha256": "3c3236e5d0e56d2d1eaed1497501e346969599bd3dce0792132e3539bcac6da7"
+    },
+    {
+      "path": "results/development/nsc-constraint-complete-neck.json",
+      "sha256": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe"
+    },
+    {
+      "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
+      "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622"
+    },
+    {
+      "path": "results/development/nsc-dirac-endpoint-jets.json",
+      "sha256": "03de778be24325726b0de2f6046afe43e69935ce914a46338a40ccfc26a09cff"
+    },
+    {
+      "path": "results/development/nsc-extended-action-completion-gate.json",
+      "sha256": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464"
+    },
+    {
+      "path": "results/development/nsc-extended-tilted-history-gate.json",
+      "sha256": "2adaeb34a04bbc4ab3b82607d1770941378b7df7a3bca63b7cbe2e23115c80fa"
+    },
+    {
+      "path": "results/development/nsc-full-extended-history-gate.json",
+      "sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106"
+    },
+    {
+      "path": "results/development/nsc-general-ks-same-action-history.json",
+      "sha256": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128"
+    },
+    {
+      "path": "results/development/nsc-hamiltonian-trace-representation.json",
+      "sha256": "dcb05abc769da5a05a6f69bdeb993a69e1adb488ae4c66a54a180d816fd564dc"
+    },
+    {
+      "path": "results/development/nsc-joint-history-state-bvp.json",
+      "sha256": "5b08cd6f1453ae006cbd7812c781869e96c8f058d2882544a3275da2325ce5e0"
+    },
+    {
+      "path": "results/development/nsc-landau-cauchy-isometry.json",
+      "sha256": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5"
+    },
+    {
+      "path": "results/development/nsc-mode-resolved-cauchy-state.json",
+      "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db"
+    },
+    {
+      "path": "results/development/nsc-pg-retained-covariance.json",
+      "sha256": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495"
+    },
+    {
+      "path": "results/development/nsc-physical-jet-extended-gate.json",
+      "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a"
+    },
+    {
+      "path": "results/development/nsc-transmitting-boundary-remainder.json",
+      "sha256": "c09163816af3961f53f3bd80b236ea4a7c8cb95eb75fd6d765f51568e2d41e72"
+    },
+    {
+      "path": "results/development/nsc-transmitting-boundary-selection.json",
+      "sha256": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e"
+    },
+    {
+      "path": "results/development/nsc-transmitting-cross-resolvent.json",
+      "sha256": "da4ab7e89140914f52b30e8d347c001c4c008202a6e8d9dfcd6214e82e03cd43"
+    },
+    {
+      "path": "results/development/nsc-transmitting-ctp-resolvent.json",
+      "sha256": "33d91d2c845f865811007c7cc71d731f3458c274fd0db8a1de5c89349434215d"
+    },
+    {
+      "path": "results/development/nsc-transmitting-ctp-variation.json",
+      "sha256": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3"
+    },
+    {
+      "path": "results/development/nsc-transmitting-dirac-domain.json",
+      "sha256": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926"
+    },
+    {
+      "path": "results/development/nsc-transmitting-metric-pullback.json",
+      "sha256": "68092e0de029be1c944f992419a40ff7a8ecbd5afba4b8599ec06a25b7871945"
+    },
+    {
+      "path": "results/development/nsc-weyl-endpoint-match.json",
+      "sha256": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6"
+    },
+    {
+      "path": "results/development/recursive-source-binding.json",
+      "sha256": "b962f927e132034de4bd685d86e1c57ff574a7d7a74f778f984cc916c1cd01cd"
+    },
+    {
+      "path": "results/development/scale-binding.json",
+      "sha256": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139"
+    },
+    {
+      "path": "results/development/state-regulator.json",
+      "sha256": "4cd5a58b0f32aaa9f6e04dafe869e716b55e3ac54665c275a9e8a43e90609030"
+    },
+    {
+      "path": "results/development/unruh-state.json",
+      "sha256": "98d4659674ad7f7f6b474b7abcc448518bda6861bbafe3ff98c129918dd21343"
+    },
+    {
+      "path": "results/development/warped-source.json",
+      "sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac"
+    },
+    {
+      "path": "results/nsc-3-geometric-chain.json",
+      "sha256": "a5b5061372fef19817d8abd8a6833be020b54806607101338029e7177bfd0615"
+    },
+    {
+      "path": "results/nsc-6-vacuum-work.json",
+      "sha256": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605"
+    },
+    {
+      "path": "scripts/build_paper.py",
+      "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
+    }
+  ],
+  "source": "paper/nested-space-cosmology.md",
+  "source_sha256": "509f61e7cec3e0a294bcb5f492b805c6ae0216eb1ae1b6fab0a7eb29ec329ff3",
+  "version": "0.26.0"
+}

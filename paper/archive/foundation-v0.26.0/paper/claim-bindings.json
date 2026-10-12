@@ -1,0 +1,167 @@
+{
+  "schema": "nsc-claim-bindings-v1",
+  "paper": "paper/nested-space-cosmology.md",
+  "recorded_on": "2026-10-10",
+
+  "purpose": "Make two questions checkable instead of remembered. First, does every claim marker in the foundation paper have a status and a backing record, and does every record it links exist. Second, does every finding the laboratory records have a home in a paper, or an explicit note saying it is post-preprint.",
+
+  "how_records_are_found": "Not stored here. scripts/check_claim_bindings.py reads the paper and takes the links that follow each <!-- nsc-claim:ID --> marker. Storing them again would let this file and the paper disagree, and the checker would then be checking the copy rather than the paper.",
+
+  "status_values": {
+    "proposal": "the paper states a target or a proposal, not a completed result",
+    "external_reference": "the claim is about published work the project cites and applies",
+    "derived": "the project derived or computed the stated object",
+    "measured": "a finite comparison in a named domain was carried out and recorded",
+    "open": "the question is stated and not decided; an open result is not a failure",
+    "unspecified": "status not yet assigned; the checker reports these as a count rather than failing"
+  },
+
+  "status_rule": "By identifier prefix: target-* is a proposal, imported-* is an external reference, derived-* is derived. Anything else starts unspecified so that no status is invented.",
+
+  "claims": {
+    "target-constants": {"section": "2", "status": "proposal", "owner": null},
+    "target-continuation": {"section": "2.1", "status": "proposal", "owner": null},
+    "imported-charged-throat": {"section": "2.2", "status": "external_reference", "owner": "nsc_rn_reference"},
+    "target-dark-sector": {"section": "2.2", "status": "proposal", "owner": null},
+    "target-measurement": {"section": "2.3", "status": "proposal", "owner": null},
+    "target-antimatter": {"section": "2.4", "status": "proposal", "owner": null},
+    "target-recursion": {"section": "2.5", "status": "proposal", "owner": null},
+
+    "compact-mode-overlaps": {"section": "3", "status": "derived", "owner": null},
+    "charged-sector-parity": {"section": "3", "status": "derived", "owner": null},
+    "torsion-uv-finite-matching": {"section": "4", "status": "derived", "owner": null},
+    "published-flow-compatibility": {"section": "4", "status": "derived", "owner": null},
+
+    "compact-boundary-adjoint": {"section": "4.1", "status": "derived", "owner": null},
+    "curved-compact-source": {"section": "4.2", "status": "measured", "owner": null},
+    "conditional-holonomy-saddle": {"section": "4.3", "status": "derived", "owner": null, "unlinked_record": "lab/results/development/compact-casimir.json", "unlinked_note": "The paper prints the recorded values, the AP-minus-P energy about -0.16995535 and second variation 3.19343937, but does not link the record they came from. Found by this check on 2026-10-05."},
+
+    "derived-horizon-source": {"section": "4.4", "status": "derived", "owner": "nsc_horizon_source"},
+    "derived-warped-source": {"section": "4.5", "status": "derived", "owner": null},
+    "derived-compact-matching": {"section": "4.6", "status": "derived", "owner": null},
+    "derived-gauge-source": {"section": "4.7", "status": "derived", "owner": null},
+
+    "canonical-spherical-action": {"section": "4.7", "status": "derived", "owner": null},
+    "curvature-eft-source": {"section": "4.7", "status": "derived", "owner": null},
+    "full-spectral-endpoint": {"section": "4.7", "status": "measured", "owner": null},
+
+    "child-state-decay": {"section": "4.8", "status": "derived", "owner": null},
+    "absolute-massless-reference": {"section": "4.8", "status": "derived", "owner": null},
+    "finite-angular-reference": {"section": "4.8", "status": "measured", "owner": null},
+    "parent-matched-source": {"section": "4.8", "status": "measured", "owner": null},
+
+    "state-regulator-conversion": {"section": "4.9", "status": "measured", "owner": null},
+    "vacuum-charge-coefficients": {"section": "C.1", "status": "measured", "owner": null}
+  },
+
+    "status_basis": {
+    "rule": "Taken from the lead-in label the paper itself prints at the head of each claim paragraph. 'Imported result / repository derivation' and 'repository derivation' are recorded as derived. A paragraph that states a recorded finite comparison with a number and a refinement check is recorded as measured. A claim about a target or a proposal the paper has not carried out is recorded as proposal, and an unlinked_record field names a record that holds the claim's numbers even though the paper does not link it.",
+    "evidence": {
+      "compact-mode-overlaps": "Imported result / repository derivation: compact mass identification",
+      "charged-sector-parity": "Imported result / repository derivation: charged parity and anomaly compatibility",
+      "torsion-uv-finite-matching": "five-dimensional ultraviolet matching",
+      "published-flow-compatibility": "Imported result / repository derivation: quantum-flow limits",
+      "compact-boundary-adjoint": "Repository derivation using established boundary calculus",
+      "curved-compact-source": "finite endpoint interaction with a recorded value -8.9162e-04 and independent Bessel, spatial, angular and frequency refinements agreeing",
+      "conditional-holonomy-saddle": "one-loop minimum of the real potential for a freely varying holonomy on the stated closed cell",
+      "canonical-spherical-action": "explicit first-order owner of the local two-derivative spherical sector",
+      "curvature-eft-source": "retained curvature-squared contact; the paper states the small-curvature regime is not established at the imposed neck",
+      "full-spectral-endpoint": "Imported spectrum / repository composition; child-radius full derivative 0.001239600 against local truncation -0.164273768",
+      "child-state-decay": "Repository derivation using established Dirac stress differences; a stated bound",
+      "absolute-massless-reference": "Imported Hadamard / conformal construction, repository application",
+      "finite-angular-reference": "neck values rho 0.7101684, p_parallel 0.5026775, p_perp 0.0376558",
+      "parent-matched-source": "Imported characteristic-state prescription / repository calculation; neck stress table with angular refinement below 4e-06",
+      "state-regulator-conversion": "Imported thermal determinant / repository compatibility check; agreement near 1e-16",
+      "vacuum-charge-coefficients": "stated inequality comparison excluding the retained coefficients alone as a near-extremal seed"
+    },
+    "review": "These are assignments read off the paper's own labels, not independent scientific judgements. They can be overridden per claim without touching anything else."
+  },
+
+  "findings": [
+    {
+      "id": "finite-parent-child-pair",
+      "status": "measured",
+      "summary": "Four reciprocal physical effects and a same-trajectory local reduction meet their one-percent comparison targets under one evolving metric and common action.",
+      "note": "lab/docs/nsc-nested-parent-child.md",
+      "record": "lab/results/development/nsc-nested-parent-child-confirmation-v2.json",
+      "paper_section": null,
+      "post_preprint": true
+    },
+    {
+      "id": "two-force-gradient-balance",
+      "status": "measured",
+      "summary": "Historical finite pressure-magnitude crossings and slopes are recorded. Their interpretation as opposing parent-child forces, mechanical balance or a centre-regularity test is withdrawn. The corrected owner defines the remaining diagnostic scope.",
+      "note": "lab/docs/nsc-rn-gradient-bubble.md",
+      "record": "lab/results/development/nsc-rn-gradient-bubble-v5.json",
+      "paper_section": null,
+      "retired_draft": "paper/pending/two-force-gradient-balance.md",
+      "interpretation_corrected_on": "2026-10-10",
+      "post_preprint": true
+    },
+    {
+      "id": "spherical-null-expansion",
+      "status": "measured",
+      "summary": "Sampled local trapping character on the finite chart. Initial extrema marginal. Explicitly not a global horizon and not a child region.",
+      "note": "lab/docs/nsc-spherical-null-expansion.md",
+      "record": "lab/results/development/nsc-spherical-null-expansion-v1.json",
+      "paper_section": null,
+      "post_preprint": true
+    },
+    {
+      "id": "finite-turnover",
+      "status": "measured",
+      "summary": "Completed finite turnover on the frozen depth-three window. Geometry there is an input.",
+      "note": "lab/docs/nsc-imbalance-turnover.md",
+      "record": "lab/results/development/nsc-imbalance-turnover-v1.json",
+      "paper_section": null,
+      "post_preprint": true
+    },
+    {
+      "id": "source-responsive-collars",
+      "status": "measured",
+      "summary": "A static local leading-action solution changes its inner and outer proper lengths in opposite directions. A locked first-order forecast predicts the withheld changes with 0.018 and 0.793 percent remainders.",
+      "note": "lab/docs/nsc-discovery-parent-traction.md",
+      "record": "lab/results/development/nsc-discovery-parent-traction-v1/measurement.json",
+      "paper_section": null,
+      "post_preprint": true
+    },
+    {
+      "id": "coupled-causal-reduction",
+      "status": "measured",
+      "summary": "Retained, drive and memory columns reconstruct the field and its full common-action force, evolving their own geometry. Independent full evolution agrees at recorded numerical precision.",
+      "note": "lab/docs/nsc-discovery-coupled-memory.md",
+      "record": "lab/results/development/nsc-discovery-coupled-memory-v1/manifest.json",
+      "paper_section": null,
+      "post_preprint": true
+    },
+    {
+      "id": "rn-radial-parent",
+      "status": "open",
+      "summary": "Nonperiodic horizon-regular PG exterior with a distinct areal-radius near-throat child. The numerical family is still described as running and its physical results are not claimed.",
+      "note": "lab/docs/nsc-rn-reference.md",
+      "record": "lab/results/development/nsc-rn-pilot-assessment-v2.json",
+      "paper_section": null,
+      "post_preprint": true
+    },
+    {
+      "id": "inherited-light-transport",
+      "status": "measured",
+      "summary": "Characteristic coordinate speeds are 1-beta and -1-beta, about -1.1708 and -3.1708 at the throat, both toward the child even when the local normal-frame light direction is outward. The local speed stays one.",
+      "note": "lab/docs/nsc-lorentzian-transport.md",
+      "record": "results/nsc-4-lorentzian-transport.json",
+      "paper_section": "2.2",
+      "post_preprint": false
+    },
+    {
+      "id": "regional-frequency-scaling",
+      "status": "derived",
+      "summary": "Regional eigenvalues are Lambda_n times the shared dimensionless spectrum; coherent nesting holds at arbitrary finite depth by the normalized recursion.",
+      "note": "lab/docs/nsc-nested-qualities.md",
+      "record": null,
+      "paper_section": "1",
+      "post_preprint": false
+    }
+  ],
+
+  "nonclaim": "A binding and coverage audit of documents against records. It adds no scientific claim and does not assert that any finding listed here should enter a paper."
+}

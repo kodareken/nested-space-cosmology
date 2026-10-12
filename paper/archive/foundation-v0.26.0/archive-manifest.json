@@ -1,0 +1,50 @@
+{
+  "schema": "NSC-PAPER-ARCHIVE-v1",
+  "id": "foundation",
+  "version": "0.26.0",
+  "source_commit": "04a0cb9378977772243ebf7c9be3c74182b030f2",
+  "files": [
+    {
+      "original_path": "paper/nested-space-cosmology.md",
+      "storage_path": "paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.md",
+      "sha256": "509f61e7cec3e0a294bcb5f492b805c6ae0216eb1ae1b6fab0a7eb29ec329ff3",
+      "bytes": 139284
+    },
+    {
+      "original_path": "paper/nested-space-cosmology.pdf",
+      "storage_path": "paper/archive/foundation-v0.26.0/paper/nested-space-cosmology.pdf",
+      "sha256": "159925ae0f785f0b734ce0a18499dde77d10a0692b805cb4615a531df2246faf",
+      "bytes": 2076644
+    },
+    {
+      "original_path": "paper/metadata.json",
+      "storage_path": "paper/archive/foundation-v0.26.0/paper/metadata.json",
+      "sha256": "90034005464366c8b957904e1d91eeba19c35ae14bdcf5a5d958d294681f5501",
+      "bytes": 346
+    },
+    {
+      "original_path": "paper/build-manifest.json",
+      "storage_path": "paper/archive/foundation-v0.26.0/paper/build-manifest.json",
+      "sha256": "2513127bb20752d00f9cda80dbf230a2131d1586ee100780aded26e94c583f19",
+      "bytes": 7378
+    },
+    {
+      "original_path": "paper/claim-bindings.json",
+      "storage_path": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
+      "sha256": "dc19d50f6839871189a59807dd0e333b6a4290c58f0c916fc409b3daa5560284",
+      "bytes": 11267
+    },
+    {
+      "original_path": "paper/catalog.json",
+      "storage_path": "paper/archive/foundation-v0.26.0/paper/catalog.json",
+      "sha256": "d637851d70c795eedccc60106115dbce9394ecd564a15c1be9356cf0726dd615",
+      "bytes": 2385
+    },
+    {
+      "original_path": "scripts/build_paper.py",
+      "storage_path": "paper/archive/foundation-v0.26.0/scripts/build_paper.py",
+      "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46",
+      "bytes": 56695
+    }
+  ]
+}
