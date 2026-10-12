@@ -49,8 +49,8 @@ jobs:
           cache-dependency-path: requirements-history.txt
       - name: Install the isolated historical renderer profile
         run: python -m pip install -r requirements-history.txt
-      - name: Record and verify the original BLAS dispatch
-        run: python -c "import sys,json; sys.path.insert(0,'scripts'); from diagnose_history_replay import runtime_metadata; d=runtime_metadata(); print(json.dumps(d,indent=2)); p=[x for x in d['threadpools'] if x['user_api']=='blas']; assert len(p)>=2 and all(x['architecture']=='Haswell' for x in p), 'original BLAS dispatch unavailable'"
+      - name: Record and verify the reference BLAS dispatch
+        run: python -c "import sys,json; sys.path.insert(0,'scripts'); from diagnose_history_replay import runtime_metadata; d=runtime_metadata(); print(json.dumps(d,indent=2)); p=[x for x in d['threadpools'] if x['user_api']=='blas']; assert len(p)>=2 and all(x['architecture']=='Haswell' for x in p), 'reference BLAS dispatch unavailable'"
       - name: Replay unchanged historical checkers and supporting editions
         run: python scripts/replay_history.py all
       - name: Retain original-producer output after replay failure
@@ -82,8 +82,8 @@ jobs:
             requirements-paper.txt
       - name: Install the preparation and response renderer profile
         run: python -m pip install -r requirements.txt -r requirements-paper.txt
-      - name: Record and verify the original BLAS dispatch
-        run: python -c "import sys,json; sys.path.insert(0,'scripts'); from diagnose_history_replay import runtime_metadata; d=runtime_metadata(); print(json.dumps(d,indent=2)); p=[x for x in d['threadpools'] if x['user_api']=='blas']; assert len(p)>=2 and all(x['architecture']=='Haswell' for x in p), 'original BLAS dispatch unavailable'"
+      - name: Record and verify the reference BLAS dispatch
+        run: python -c "import sys,json; sys.path.insert(0,'scripts'); from diagnose_history_replay import runtime_metadata; d=runtime_metadata(); print(json.dumps(d,indent=2)); p=[x for x in d['threadpools'] if x['user_api']=='blas']; assert len(p)>=2 and all(x['architecture']=='Haswell' for x in p), 'reference BLAS dispatch unavailable'"
       - name: Replay preparation and response in their original source contexts
         run: |
           python scripts/replay_history.py atlas-v7
