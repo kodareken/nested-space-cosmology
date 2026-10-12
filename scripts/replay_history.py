@@ -5,9 +5,11 @@ from __future__ import annotations
 import argparse
 import hashlib
 import io
+from importlib.metadata import PackageNotFoundError, version
 import json
 import os
 from pathlib import Path
+import platform
 import subprocess
 import sys
 import tarfile
@@ -19,6 +21,9 @@ PREFIXES = ("src", "scripts", "tests", "docs", "paper", "results",
             "lab/src", "lab/scripts", "lab/tests", "lab/docs", "lab/.source-history")
 BUNDLES = ["lab/results/development/nsc-cosmological-atlas" + ("-v" + str(v) if v > 1 else "-v1")
            for v in range(1, 7)]
+V7_COMMIT = "7fee894ad5a4da2ba378f724e45e926401f82670"
+V7_CONTEXT = ROOT / ".build/replay" / V7_COMMIT[:12]
+V7_BUNDLE = "results/development/nsc-cosmological-atlas-v7"
 
 
 def sha(data: bytes) -> str:
@@ -53,7 +58,7 @@ def preserved_artifact(name: str) -> bool:
         and name not in {"paper/metadata.json", "paper/catalog.json", "paper/claim-bindings.json", "paper/build-manifest.json"})
 
 
-def install_archive(data: bytes, context: Path) -> dict[str, str]:
+def install_archive(data: bytes, context: Path, *, retained_paths=None) -> dict[str, str]:
     """Creation/resume only: changed context bytes fail instead of being repaired."""
     hashes = {}
     with tarfile.open(fileobj=io.BytesIO(data), mode="r:") as archive:
@@ -64,7 +69,9 @@ def install_archive(data: bytes, context: Path) -> dict[str, str]:
                 raise ValueError("non-file historical archive member: " + member.name)
             target = safe_member(member.name, context)
             content = archive.extractfile(member).read()
-            if preserved_artifact(member.name):
+            retained = (preserved_artifact(member.name) if retained_paths is None
+                        else member.name in retained_paths)
+            if retained:
                 actual = current_artifact(member.name)
                 if not actual.is_file() or sha(actual.read_bytes()) != sha(content):
                     raise ValueError("preserved evidence changed or missing: " + str(actual))
@@ -90,6 +97,73 @@ def prepare(context: Path = CONTEXT) -> dict:
         raise ValueError("historical context receipt changed")
     path.write_bytes(encoded)
     return {"context": str(context), "source_commit": BASELINE, "files": len(hashes)}
+
+
+def prepare_v7(context: Path = V7_CONTEXT) -> dict:
+    """Authenticate v7 evidence and materialize its original root source layout.
+
+    Current scientific owners may evolve. Their frozen bytes come only from
+    V7_COMMIT; retained result payloads must still match that commit in ROOT.
+    No renderer, package installation or scientific calculation is selected.
+    """
+    manifest_name = V7_BUNDLE + "/manifest.json"
+    manifest = json.loads(git("show", V7_COMMIT + ":" + manifest_name))
+    source_paths = set(manifest["source_bindings"])
+    bundle_paths = {V7_BUNDLE + "/" + name for name in manifest["outputs"]}
+    bundle_paths.add(manifest_name)
+    # Full src imports remain isolated even where the producer binds only the
+    # modules it uses directly. The source-bound scripts and owners are exact.
+    paths = sorted({"src", "pyproject.toml", *source_paths, *bundle_paths})
+    retained = bundle_paths | {name for name in source_paths
+                               if name.startswith(("results/", "paper/atlas-working-draft"))}
+    data = git("archive", "--format=tar", V7_COMMIT, *paths)
+    hashes = install_archive(data, context, retained_paths=retained)
+    if not set(paths).difference({"src"}) <= set(hashes):
+        raise ValueError("v7 historical source inventory is incomplete")
+    receipt = {"schema": "NSC-EXPLICIT-REPLAY-v1", "source_commit": V7_COMMIT,
+               "purpose": "Explicit v7 context; never substitutes for a current source check.",
+               "files": hashes}
+    path = context / "replay-context.json"
+    encoded = (json.dumps(receipt, indent=2, sort_keys=True) + "\n").encode()
+    if path.exists() and path.read_bytes() != encoded:
+        raise ValueError("historical context receipt changed")
+    path.write_bytes(encoded)
+    return {"context": str(context), "source_commit": V7_COMMIT, "files": len(hashes),
+            "evidence_authenticated": len(retained), "scientific_replay": False}
+
+
+def require_v7_profile(context: Path) -> dict:
+    """Reject an incompatible renderer explicitly; never choose a fallback."""
+    expected = json.loads((context / V7_BUNDLE / "manifest.json").read_bytes())["runtime"]
+    actual = {"python": platform.python_version()}
+    for name in expected.keys() - {"python"}:
+        try:
+            actual[name] = version(name)
+        except PackageNotFoundError:
+            actual[name] = "unavailable"
+    if platform.system() != "Windows" or actual != expected:
+        raise ValueError("v7 exact image replay requires Windows and its recorded profile "
+                         + json.dumps(expected, sort_keys=True)
+                         + "; actual platform=" + platform.system() + " runtime="
+                         + json.dumps(actual, sort_keys=True)
+                         + ". Use prepare-v7 for evidence authentication; no fallback was selected.")
+    return {"platform": platform.system(), **actual}
+
+
+def run_v7(context: Path = V7_CONTEXT) -> dict:
+    """Run the untouched original v7 checker, including its exact image checks."""
+    info = prepare_v7(context)
+    profile = require_v7_profile(context)
+    script = "scripts/derive_nsc_cosmological_atlas_v7.py"
+    env = environment(context)
+    env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(ROOT / "archive/source-history/objects")
+    env["PYTHONNOUSERSITE"] = "1"
+    result = subprocess.run([sys.executable, script, "--check"], cwd=context,
+                            env=env, capture_output=True, text=True)
+    if result.returncode:
+        raise ValueError(f"v7 historical replay failed: {script}\n{result.stdout}\n{result.stderr}")
+    return {**info, "scientific_replay": True, "runtime": profile,
+            "checks": [{"script": script, "result": json.loads(result.stdout)}]}
 
 
 def environment(context: Path, laboratory: bool = False) -> dict[str, str]:
@@ -133,9 +207,17 @@ def run(kind: str, context: Path = CONTEXT) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("kind", choices=["prepare", "atlas", "finite", "companion", "tests", "all"])
+    parser.add_argument("kind", choices=["prepare", "atlas", "finite", "companion", "tests", "all",
+                                        "prepare-v7", "atlas-v7"],
+                        help="v7 commands are explicit; legacy all retains its separate v1-v6 profile")
     args = parser.parse_args()
-    print(json.dumps(prepare() if args.kind == "prepare" else run(args.kind), indent=2))
+    if args.kind == "prepare-v7":
+        result = prepare_v7()
+    elif args.kind == "atlas-v7":
+        result = run_v7()
+    else:
+        result = prepare() if args.kind == "prepare" else run(args.kind)
+    print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":

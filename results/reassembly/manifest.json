@@ -19753,8 +19753,8 @@
     {
       "action": "move",
       "bytes": 185245,
-      "current_bytes": 186250,
-      "current_sha256": "5d1870ba9d0036ff19dbb8a569326305c10d7551bc21aca774047e43b4288dec",
+      "current_bytes": 187073,
+      "current_sha256": "289a81bf524aabc24fae501068605fb79eb0759e129244a82311f4650c10ba90",
       "destination": "docs/active-code-map.md",
       "disposition": "active_owner",
       "origin": "lab",
@@ -20566,8 +20566,8 @@
     {
       "action": "move",
       "bytes": 8633,
-      "current_bytes": 25983,
-      "current_sha256": "8689cf76b3b3916ceaf3fc5749594216bcf4fbcdb6ed4412976ec0cedcebc969",
+      "current_bytes": 28690,
+      "current_sha256": "3cf8de792f098c5d7207c2cee815b25fb3e64182fd1abbb522fa328270400f8d",
       "destination": "docs/nsc-cosmological-atlas.md",
       "disposition": "active_owner",
       "origin": "lab",
@@ -25709,8 +25709,8 @@
     {
       "action": "move",
       "bytes": 10488,
-      "current_bytes": 14314,
-      "current_sha256": "979bae6f20047c75b83769813b49d9b3632129a773041e735b9167da18fd066f",
+      "current_bytes": 14621,
+      "current_sha256": "aa6ccc2514d16fd2031df58bbc38bb2bc010c4227dfc430626831800a3916acf",
       "destination": "docs/research-inventory.md",
       "disposition": "active_owner",
       "origin": "lab",

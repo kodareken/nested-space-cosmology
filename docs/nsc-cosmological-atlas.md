@@ -29,8 +29,10 @@ supply an explicit connector metric, a second established child or the common
 future. The [v5 observer map](nsc-cosmological-atlas-v5.md) and
 [v6 conditional waveform](nsc-cosmological-atlas-v6.md) use a separate isolated
 spherical reference. The [finite exterior preparation](nsc-atlas-field-preparation.md)
-now supplies a conditional data-to-wall-to-observer operator in that reference;
-its new numerical waveform remains unevaluated. These causal and field results
+supplies a conditional data-to-wall-to-observer operator in that reference.
+The [v8 prepared response](nsc-atlas-prepared-response.md) evaluates it for the
+independent compact input, with an analytically positive post-input tail and
+numerical refinement checks over a finite arrival window. These causal and field results
 do not automatically extend to the glued many-body spacetime.
 
 Keep three approaches available:
@@ -69,9 +71,9 @@ that every open branch succeeds.
 | `boundary-classification` | Specify whether the boundary is material, causal, effective or a geometric junction; check the appropriate source and matching conditions. | `wall-transmission`, `clock-entropy`, `field-orientation`. |
 | `wall-transmission` | Supply a field/action, wall source and state class; decide the admissible transmission law. The v6 probe law is already available. | `wall-trace` after compatible preparation data exist. |
 | `parent-preparation` | Locate a data surface in the retained causal domain and specify admissible exterior-side field data; decide whether they can supply the wall input. The finite region-IV problem now has a conditional existence certificate; remote generation remains open. | `wall-trace`, or a recorded exclusion that redirects the source route. |
-| `wall-trace` | Combine compatible preparation, propagation and wall transmission; determine the incident trace rather than assuming its origin. The region-IV trace operator is derived; numerical evaluation remains open. | `observer-response` for the independently specified finite exterior data. |
-| `observer-response` | Use the existing observer, clocks and fixed transfer operator with a justified trace; determine the finite measurement. | `observer-inference`, comparisons of sources and attachments. |
-| `observer-inference` | Compare responses in the same observable domain; decide which exterior differences are distinguishable. | A discriminating observable or an explicitly demonstrated equivalence class. |
+| `wall-trace` | Combine compatible preparation, propagation and wall transmission; determine the incident trace rather than assuming its origin. The region-IV trace is evaluated for the fixed independent input in v8. | `observer-response` for the independently specified finite exterior data. |
+| `observer-response` | Use the observer, clocks and fixed transfer operator with a justified trace; v8 resolves a finite central waveform and a positive post-input field tail. | `observer-inference`, comparisons of sources and attachments. |
+| `observer-inference` | Next candidate connection: compare responses in the same observable domain while stating allowed preparation freedom; decide which exterior differences are distinguishable. No new calculation is admitted by this row. | A discriminating observable or an explicitly demonstrated equivalence class. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -83,8 +85,10 @@ The main response dependency chain is
 The v6 waveform establishes `observer-response` conditional on a prescribed
 trace. The [finite preparation certificate](nsc-atlas-field-preparation.md)
 connects independent exterior-side data to a unique trace and response operator;
-evaluating that operator and identifying a remote preparation remain distinct
-next questions. Inheritance, charge, clock and alternative-geometry questions
+the [v8 evaluation](nsc-atlas-prepared-response.md) now closes the numerical
+trace and response for those finite data. Observer identifiability under
+preparation freedom and the remote origin of the input remain distinct
+questions. Inheritance, charge, clock and alternative-geometry questions
 may proceed independently when their
 own prerequisites are met. A different exterior model needs its own dependency
 edges, not a forced passage through this scalar example.
@@ -121,12 +125,13 @@ S3 topology, and a multi-hole parent is not globally spherical.
 **Owner and current result:** [connection gluing](nsc-atlas-connection-gluing.md),
 [causal classification](nsc-atlas-causal-classification.md) and
 [observer access](../results/development/nsc-cosmological-atlas-v5/observer-access.json).
-The sourced initial slice and isolated reference access verdicts have different
+The [prepared response](nsc-atlas-prepared-response.md) adds a resolved finite
+scalar waveform and tail. The sourced initial slice and isolated reference access verdicts have different
 domains. **Borrowed foundation:** Israel matching, published thin-wall causal
 completions and vacuum end gluing. **Missing connection:** globally compatible
 preparation/evolution data beyond the isolated reference and protected domains.
-**Next question:** what trace and observer response follow from the independently
-specified finite exterior preparation, and what wider history could supply it?
+**Next question:** what exterior properties can that observer identify when
+preparation freedom is included, and what wider history could supply the input?
 **Knowledge boundary:** geometric attachment, descent, causal
 influence and correlation remain distinct; the v4 theorem supplies no generic
 sibling signal channel or many-body future.
@@ -139,7 +144,8 @@ sibling signal channel or many-body future.
 [local-observer correspondence](nsc-local-observer-correspondence.md) and
 [scalar transfer](nsc-atlas-field-transfer.md). The
 [v6 field record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
-is a conditional classical response; finite fermionic observer constructions
+is a conditional classical response; the [v8 evaluation](nsc-atlas-prepared-response.md)
+propagates independent exterior data to that observer. Finite fermionic observer constructions
 belong to their separately specified operator/state models.
 **Borrowed foundation:** field equations, mode decompositions, regular-centre
 conditions and finite retained-region reduction. **Missing connection:** a
@@ -247,7 +253,7 @@ recurrence. A finite graph or preset matter fraction cannot establish them.
 
 <a id="signal-origin-cycle"></a>
 
-## First bounded cycle: where can the signal originate?
+## Signal-origin cycle: certified preparation and measured response
 
 The existing [v5 access table](../results/development/nsc-cosmological-atlas-v5/observer-access.json)
 already excludes the right static parent observer P as a source reaching C
@@ -269,24 +275,50 @@ solution and determines its wall trace. The existing cap transfer then defines
 the central response operator. Borrowed field and contraction mathematics are
 being applied to these specified data and this wedge, not rediscovered.
 
-This is a derived conditional existence and transfer result. No new exterior
-or central waveform has been numerically evaluated. Its input is not chosen
-to reproduce the v6 wall trace, and a possible scattering tail is not set to
-zero. Comparing with v6's earlier zero cap at R/ell=0.05 requires the additional
+The v7 certificate is a derived conditional existence and transfer result.
+Its input is not chosen to reproduce the v6 wall trace. Comparing with v6's
+earlier zero cap at R/ell=0.05 requires the additional
 no-earlier-incoming-history assumption stated in the derivation. "Exterior
 side" means the retained Schwarzschild side of the material wall, not the
 right asymptotically flat exterior I. The known P exclusion remains unchanged.
 
-The concrete next calculation is a bounded evaluation of this operator for
-the independently specified characteristic profile, with an error estimate,
-followed by composition with the existing observer transfer. That unlocks a
-comparison between a prepared exterior response and a prescribed-wall
-calibration in their common observable domain. Remote generation of those
+The [v8 evaluation](nsc-atlas-prepared-response.md) now computes the operator
+and composes it with the existing observer transfer. A bipolar central field
+is followed by a positive tail over the admitted post-input arrival interval
+-0.340772595<=T/ell<=-0.250230701. Positivity has an independent analytic
+proof; the measured waveform passes spatial and geometry refinement and
+three positive-integral bracket checks. The first unsegmented prototype
+stopped at its call cap; event-aligned integration succeeded with the same
+theory, source and tolerances. These are numerical measurements supported by
+analytic bounds, not rigorous enclosures of every waveform value or a claim
+of persistence after the window.
+
+This closes `wall-trace` and `observer-response` for this preparation. Remote generation of those
 data, a globally prepared quantum state, regular wall formation and
 backreaction remain separate connections. Alternative attachments,
 connected-mouth models and response-equivalent exteriors stay available.
 Each further calculation still requires its own finite domain, decision,
 budget and redirect outcome under the [existing admission rule](prior-art-and-open-claim.md).
+
+<a id="observer-identifiability"></a>
+
+### Next connection: observer identifiability under preparation freedom
+
+The next useful question is whether an interior measurement distinguishes
+exterior structure once the allowed input preparations are stated. The v8
+calculation fixes one exterior and one source; it does not establish that its
+tail uniquely identifies that geometry. A change in source could imitate a
+change in propagation. The v6 prescribed-wall pulse is a calibration, and
+the v8 zero-kernel control is a numerical omission, so neither automatically
+supplies a competing physical exterior.
+
+A future comparison must define the preparation class, common observer
+clock/domain and measured quantity before deciding whether to test an
+identifiable feature or an equivalence between responses. This is the named
+`observer-inference` unlock, with no calculation or new physical claim admitted
+yet. Its finite budget and stopping rule belong in a separate admission.
+The geometric atlas, connected mouths, inheritance and clock routes remain
+available under their own prerequisites.
 
 ## Owners and reproducible output
 
@@ -302,12 +334,20 @@ budget and redirect outcome under the [existing admission rule](prior-art-and-op
   finite depth/cycles, fixed-theory perturbations and invisible exteriors.
 - [Illustrated narrative](../results/development/nsc-cosmological-atlas-v1/narrative.md)
   and [machine-readable atlas](../results/development/nsc-cosmological-atlas-v1/atlas.json).
+- [Prepared-response owner](nsc-atlas-prepared-response.md),
+  [numerical adapter](../src/recursive_horizons/nsc_atlas_prepared_response.py),
+  [v8 producer](../scripts/derive_nsc_cosmological_atlas_v8.py) and
+  [independent controls](../tests/test_nsc_atlas_prepared_response.py) own the
+  latest finite response and its analytic tail checks. The
+  [v8 response record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json)
+  keeps its samples, numerical diagnostics and finite compute counts.
 
 The [reproduction guide](reproducing.md) owns the current root commands,
 Windows interpreter fallback and separate historical renderer profile. Use
 `scripts/replay_history.py` in that explicitly selected profile for the frozen
-v1-v6 bundles. Current producers intentionally have different source bindings;
-they may create a fresh bundle at a supplied `--output` path, but cannot make an
+v1-v6 bundles; v7 has its separate explicit `atlas-v7` replay command and
+recorded profile. Current producers intentionally have different source
+bindings. They may create a fresh bundle at a supplied `--output` path, but cannot make an
 old bundle pass by silently loading old sources. The living paper's overview
 is supplied by [the overview producer](../scripts/build_geometry_overview.py).
 
@@ -379,10 +419,10 @@ The one-hole l>a disconnection threshold specifically uses the
 near-singularity approximation, equal nucleation radius, and a<<R0<<2m in
 equations 9-12; it is not a universal separation rule for sibling universes.
 
-Beyond the v4 existence application and the isolated v5-v6 reference, missing
+Beyond the v4 existence application and the isolated v5-v8 reference, missing
 work includes an explicit common connector/evolution, compatible interface
-sources, an admissible joint state, interpatch clocks and a supplied exterior
-response. Dimensionless
+sources, an admissible joint state, interpatch clocks and exterior responses
+outside the computed finite IV domain. Dimensionless
 inherited laws, environmental dressing and state choices must stay distinct.
 Only after those connections exist does a local dark-sector, antimatter or
 time discriminator become a meaningful target. There is no abundance fit here.
