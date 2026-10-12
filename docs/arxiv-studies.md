@@ -281,9 +281,42 @@ Generic scattering and characteristic-problem results were found; no surveyed
 source was established as supplying this exact finite moving-wall data problem.
 This is not a priority finding. Before a numerical successor, inspect established
 characteristic or integral-equation implementations and their boundary assumptions.
-The current contribution is a project connection and analytic norm bound, not
-invention of the scalar potential or contraction principle. Remote source
-preparation and a numerical received waveform remain unresolved.
+The v7 contribution is a project connection and analytic norm bound, not
+invention of the scalar potential or contraction principle. At that milestone,
+remote source preparation and a numerical received waveform remained unresolved.
+The numerical successor is recorded below; the remote source remains open.
+
+### Evaluated prepared response, atlas v8 — 12 October 2026
+
+The [response owner](nsc-atlas-prepared-response.md) reuses the fixed v7
+equation, data and wall law. These focused method readings distinguish the
+implemented numerical tool from useful comparison schemes whose boundary
+conditions do not match this problem.
+
+| Source and version | Reading depth | Reusable mathematics and assumptions | Use and unresolved connection |
+| --- | --- | --- | --- |
+| [SciPy 1.17.1 DOP853 source](https://github.com/scipy/scipy/blob/v1.17.1/scipy/integrate/_ivp/rk.py), with [official API documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.DOP853.html) | Installed pinned 1.17.1 class, error estimator and dense-output implementation inspected; `solve_ivp` method documentation checked. No independent order/coefficient proof. | Established explicit order-eight Runge–Kutta method, seventh-order dense output and local tolerance control. | Actual v8 time integrator after spatial quadrature, segmented at source and wall/grid events. Its nominal order does not establish the full scheme's accuracy: the C3 source, interpolation and clipped quadrature also matter. |
+| [Gundlach–Price–Pullin, gr-qc/9307009v2](https://arxiv.org/html/gr-qc/9307009v2) | Section III, Eqs. 26–27 and the local/global error discussion read; complete late-time analysis not audited. | Characteristic null-rectangle update for the separated wave equation: potential-weighted midpoint correction, local fourth-order defect and second-order accumulated error in their smooth problem. | Reusable characteristic-grid comparison, not the implemented v8 integrator. Their stationary exterior stencil and asymptotic tail results do not supply our moving-wall closure or a late-time law for the finite IV window. |
+| [Seahra, hep-th/0602194v2](https://arxiv.org/html/hep-th/0602194v2) | Section II.1 and III.1–III.4, especially Eqs. 6 and 23–38 read; cosmological validation and source code not independently audited. | Null diamonds, timelike-boundary triangles, integrated wave equation, interpolated row data and boundary-curvature resolution condition. The boundary uses a Robin law. | A possible comparison route, not a second v8 solver. Its Eq. 28 uses the stationary potential equality at opposite vertices; Eq. 35 depends on its Robin boundary. Our two-coordinate kernel and derivative wall law require a fresh compatible closure before either update can be imported. |
+
+For the SciPy card, the installed/tagged 1.17.1 implementation is the version
+authority. The unversioned online manual currently identifies itself as 1.18.0
+and was used only as an API cross-check. The v8 evidence records its runtime.
+
+In particular, Seahra's `(n·D)psi-alpha psi=0` is not our inherited
+`(partial_tau-n)chi=0`, or `chi_U=0` on the admitted wall. Importing its
+triangle update unchanged would change the physical problem. The exact
+constant-extension integral representation in the response owner keeps the
+retained-domain law and supplies the finite numerical realization used here.
+
+The bounded search covered characteristic scalar propagation, moving timelike
+boundaries, Volterra quadrature and successive approximation. It was not an
+exhaustive successor/challenge search and establishes no priority claim.
+The evaluated project connection is independent IV data to wall trace to
+interior signal, with fixed theory and finite error diagnostics. Remote
+preparation, quantum state and exterior identifiability remain missing
+connections; neither a generic solver invention nor permanent cosmic memory
+is claimed. See the [v8 evidence guide](nsc-cosmological-atlas-v8.md).
 
 ## Studies
 

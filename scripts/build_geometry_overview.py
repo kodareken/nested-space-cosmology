@@ -25,7 +25,8 @@ INPUTS = {
     "access": "results/development/nsc-cosmological-atlas-v5/observer-access.json",
     "field": "results/development/nsc-cosmological-atlas-v6/field-transfer.json",
     "preparation": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
-    "programme": "results/development/nsc-cosmological-atlas-v7/programme.json",
+    "programme": "results/development/nsc-cosmological-atlas-v8/programme.json",
+    "prepared_response": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -48,6 +49,13 @@ def load_evidence() -> tuple[dict, dict]:
         raise ValueError("The sourced-slice record no longer supports this overview.")
     if records["field"]["status"] != "CONDITIONAL_EARLY_CLASSICAL_SCALAR_RESPONSE":
         raise ValueError("The field record no longer supports this overview.")
+    response = records["prepared_response"]
+    if (response["status"] != "FINITE_PREPARED_CLASSICAL_RESPONSE_WITH_POSITIVE_TAIL"
+            or not response["analytic_tail"]["positive_after_input_in_declared_window"]):
+        raise ValueError("The prepared response no longer supports the finite-tail view.")
+    if (response["inputs"] != records["preparation"]["inputs"]
+            or response["preparation"] != records["preparation"]["preparation"]):
+        raise ValueError("The prepared response must retain the certified geometry and input.")
     return records, provenance
 
 
@@ -61,19 +69,21 @@ def render(output: Path) -> dict:
     links = [link for link in motif["links"] if link["id"] in wanted]
     if {link["id"] for link in links} != wanted:
         raise ValueError("The original motif's selected connections have changed.")
+    # The manuscript caps a figure at 530 pt tall. At 11.2 in native height,
+    # the minimum 13 pt label remains 8.54 pt in the rendered paper.
     plt.rcParams.update({
-        "font.family": "DejaVu Sans", "font.size": 11,
+        "font.family": "DejaVu Sans", "font.size": 13,
         "svg.hashsalt": "nsc-geometry-overview-2026-10-12",
         "axes.unicode_minus": False,
     })
-    fig, ax = plt.subplots(figsize=(16, 10))
+    fig, ax = plt.subplots(figsize=(9, 11.2))
     fig.patch.set_facecolor(COLORS["white"])
-    ax.set(xlim=(0, 16), ylim=(0, 10))
+    ax.set(xlim=(0, 9), ylim=(0, 11.2))
     ax.axis("off")
 
-    def label(x, y, text, size=11, color="ink", weight="normal", ha="center", **kw):
+    def label(x, y, text, size=13, color="ink", weight="normal", ha="center", **kw):
         ax.text(x, y, text, fontsize=size, color=COLORS.get(color, color),
-                fontweight=weight, ha=ha, va="center", linespacing=1.4, **kw)
+                fontweight=weight, ha=ha, va="center", linespacing=1.3, **kw)
 
     def arrow(start, end, kind, dashed=False, both=False, rad=0.0):
         ax.add_patch(FancyArrowPatch(
@@ -86,79 +96,79 @@ def render(output: Path) -> dict:
     def circle(x, y, radius, text, sub=None, color="attachment"):
         ax.add_patch(Circle((x, y), radius, fc=COLORS["white"],
                             ec=COLORS[color], lw=1.8))
-        label(x, y + (0.12 if sub else 0), text, size=11, weight="bold")
+        label(x, y + (0.12 if sub else 0), text, size=13, weight="bold")
         if sub:
-            label(x, y - 0.23, sub, size=9, color="muted")
+            label(x, y - 0.17, sub, size=13, color="muted")
 
-    def box(x, y, w, h, text, color="attachment", size=10):
+    def box(x, y, w, h, text, color="attachment", size=13):
         ax.add_patch(FancyBboxPatch((x-w/2, y-h/2), w, h,
-                                   boxstyle="round,pad=0.08,rounding_size=0.12",
+                                   boxstyle="round,pad=0.06,rounding_size=0.10",
                                    fc="white", ec=COLORS[color], lw=1.6))
         label(x, y, text, size=size)
 
-    label(0.55, 9.58, "NESTED-SPACE COSMOLOGY", 12, "muted", "bold", ha="left")
-    label(0.55, 9.10, "From possible regions to a measured interior", 23,
+    label(0.45, 10.91, "NESTED-SPACE COSMOLOGY", 13, "muted", "bold", ha="left")
+    label(0.45, 10.51, "From possible regions to an interior observer", 19,
           "ink", "bold", ha="left")
-    for x0 in (0.35, 8.15):
-        ax.add_patch(FancyBboxPatch((x0, 1.35), 7.5, 7.13,
+    for y0, height in ((6.04, 4.10), (1.04, 4.78)):
+        ax.add_patch(FancyBboxPatch((0.25, y0), 8.5, height,
                                    boxstyle="round,pad=0.02,rounding_size=0.18",
                                    fc=COLORS["panel"], ec="none"))
-    label(0.65, 8.08, "1  A finite branching question", 15, weight="bold", ha="left")
-    label(8.45, 8.08, "2  One checked connection", 15, weight="bold", ha="left")
+    label(0.52, 9.79, "1  A finite branching question", 16, weight="bold", ha="left")
 
-    ax.add_patch(Ellipse((4.05, 6.78), 6.3, 1.83,
+    ax.add_patch(Ellipse((4.5, 8.96), 7.5, 1.15,
                          fc="white", ec=COLORS["line"], lw=1.6))
-    label(4.05, 7.42, "Common parent • not globally spherical", 11, weight="bold")
-    circle(2.50, 6.60, 0.37, "A")
-    circle(5.45, 6.60, 0.46, "B")
-    label(4.05, 6.04, "Two off-center black-hole boundaries", 10, color="muted")
+    label(4.5, 9.29, "Common parent • not globally spherical", 13, weight="bold")
+    circle(2.70, 8.84, 0.27, "A")
+    circle(6.55, 8.84, 0.33, "B")
+    label(4.5, 8.83, "Two off-center\nblack-hole boundaries", 13, color="muted")
     # Parent-to-hole attachment remains a missing common-metric connection.
-    arrow((3.65, 7.05), (2.81, 6.85), "attachment", dashed=True)
-    arrow((4.44, 7.05), (5.04, 6.90), "attachment", dashed=True)
-    circle(2.50, 4.69, 0.71, "Child A?", "candidate")
-    circle(5.45, 4.69, 0.62, "Child B?", "may differ")
-    for x, top in ((2.50, 6.17), (5.45, 6.10)):
-        arrow((x-0.13, top), (x-0.13, 5.44), "descent", dashed=True)
-        arrow((x+0.13, top), (x+0.13, 5.44), "attachment", dashed=True)
-    arrow((3.27, 4.69), (4.75, 4.69), "correlation", dashed=True, both=True)
-    label(4.02, 4.24, "shared ancestry?\nno signal assumed", 9, color="correlation")
-    circle(2.50, 2.67, 0.60, "Grandchild?", "one more level")
-    arrow((2.37, 3.91), (2.37, 3.32), "descent", dashed=True)
-    arrow((2.63, 3.91), (2.63, 3.32), "attachment", dashed=True)
-    label(5.35, 2.96, "Descent is still open.\nMultiple daughters and\ncommunicating mouths retain\ntheir own assumptions.",
-          11, color="muted")
-    label(4.05, 1.73, "Dashed links: a question, not a formation history", 10, color="muted")
+    arrow((3.46, 9.14), (3.03, 8.99), "attachment", dashed=True)
+    arrow((5.57, 9.14), (6.15, 9.02), "attachment", dashed=True)
+    circle(2.70, 7.81, 0.56, "Child A?", "candidate")
+    circle(6.55, 7.81, 0.51, "Child B?", "may differ")
+    for x, top, bottom in ((2.70, 8.52, 8.41), (6.55, 8.45, 8.37)):
+        arrow((x-0.13, top), (x-0.13, bottom), "descent", dashed=True)
+        arrow((x+0.13, top), (x+0.13, bottom), "attachment", dashed=True)
+    arrow((3.34, 7.81), (5.96, 7.81), "correlation", dashed=True, both=True)
+    label(4.63, 7.31, "shared ancestry?\nno signal assumed", 13, color="correlation")
+    circle(1.44, 6.97, 0.65, "Grandchild?")
+    arrow((2.18, 7.54), (1.95, 7.38), "descent", dashed=True)
+    arrow((2.37, 7.34), (2.14, 7.18), "attachment", dashed=True)
+    label(6.13, 6.79, "Descent remains open.\nMultiple daughters and communicating\nmouths retain their own assumptions.",
+          13, color="muted")
+    label(4.5, 6.16, "Dashed links: questions, not a formation history", 13, color="muted")
 
-    label(12.0, 7.50, "Sourced initial slice • fixed wall parameters", 10, color="muted")
-    for x, text, w in ((9.17, "Regular\ncap", 1.14), (10.96, "Material\nwall", 1.14),
-                       (12.75, "Vacuum\nbridge", 1.14), (14.54, "Right\nend", 1.14)):
-        box(x, 6.76, w, 0.83, text)
-    for x in (9.82, 11.61, 13.40):
-        arrow((x, 6.76), (x+0.47, 6.76), "attachment")
-    label(12.0, 5.95, "End-only gluing preserves this body in a\nsufficiently separated initial-data family.",
-          10, color="muted")
-    ax.plot([8.6, 15.15], [5.47, 5.47], color=COLORS["line"], lw=1)
-    label(12.0, 5.10, "Isolated reference • event-specific observer access", 11, weight="bold")
-    for x, name, sub in ((9.17, "C", "center"), (11.84, "W", "wall"), (14.54, "P", "right parent")):
-        circle(x, 4.37, 0.34, name, color="causal")
-        label(x, 3.81, sub, 10, color="muted")
-    arrow((9.60, 4.37), (11.41, 4.37), "causal", both=True)
-    arrow((12.27, 4.37), (14.11, 4.37), "causal")
-    label(10.49, 4.75, "early paths", 9, color="causal")
-    label(13.18, 4.75, "early escape", 9, color="causal")
-    label(12.0, 3.30, "After the anchor: no new cross-observer emission\nreaches another of these three worldlines.", 10, color="muted")
-    box(12.0, 2.34, 6.13, 0.78,
-        "Wall-input calibration → transient at C\nFinite IV data → admitted transfer operator",
-        color="causal", size=10)
-    label(12.0, 1.73, "IV waveform and remote generation remain open", 10, color="muted")
+    label(0.52, 5.49, "2  One checked connection", 16, weight="bold", ha="left")
+    label(4.5, 5.11, "Sourced initial slice • fixed wall parameters", 13, color="muted")
+    for x, text in ((1.35, "Regular\ncap"), (3.45, "Material\nwall"),
+                    (5.55, "Vacuum\nbridge"), (7.65, "Right\nend")):
+        box(x, 4.61, 1.44, 0.61, text)
+    for x in (2.16, 4.26, 6.36):
+        arrow((x, 4.61), (x+0.48, 4.61), "attachment")
+    label(4.5, 3.94, "End-only gluing preserves this body in a\nsufficiently separated initial-data family.",
+          13, color="muted")
+    ax.plot([0.55, 8.45], [3.65, 3.65], color=COLORS["line"], lw=1)
+    label(4.5, 3.39, "Isolated reference • event-specific observer access", 13, weight="bold")
+    for x, name, sub in ((1.35, "C", "center"), (4.50, "W", "wall"), (7.65, "P", "right parent")):
+        circle(x, 2.72, 0.23, name, color="causal")
+        label(x, 2.32, sub, 13, color="muted")
+    arrow((1.67, 2.72), (4.18, 2.72), "causal", both=True)
+    arrow((4.82, 2.72), (7.33, 2.72), "causal")
+    label(2.93, 3.00, "early paths", 13, color="causal")
+    label(6.08, 3.00, "early escape", 13, color="causal")
+    label(4.5, 1.92, "After the anchor: no new cross-observer emission\nreaches another of these three worldlines.", 13, color="muted")
+    box(4.5, 1.26, 7.58, 0.59,
+        "Wall-input calibration → transient at C\nFinite IV data → calculated pulse + positive finite tail",
+        color="causal", size=13)
+    label(4.5, 0.72, "Remote preparation and later evolution remain open", 13, color="muted")
 
-    for x, kind, name in ((0.66, "attachment", "Attachment"), (4.32, "descent", "Descent"),
-                          (7.83, "causal", "Causal influence"), (12.00, "correlation", "Correlation")):
-        arrow((x, 0.90), (x+0.56, 0.90), kind)
-        label(x+0.71, 0.90, name, 11, ha="left")
-    label(8.0, 0.30, "Circles and spacing are schematic. Local spherical charts do not establish global topology.",
-          10, color="muted")
-    fig.subplots_adjust(left=0.015, right=0.985, top=0.985, bottom=0.015)
+    for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
+                          (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
+        arrow((x, 0.37), (x+0.35, 0.37), kind)
+        label(x+0.45, 0.37, name, 13, ha="left")
+    label(4.5, 0.13, "Schematic circles and spacing; local spherical charts do not fix global topology.",
+          13, color="muted")
+    fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
     output.mkdir(parents=True, exist_ok=True)
     for suffix in ("svg", "png"):
         fig.savefig(output / f"geometry-overview.{suffix}", dpi=190,
@@ -170,6 +180,9 @@ def render(output: Path) -> dict:
         "producer": "scripts/build_geometry_overview.py",
         "producer_sha256": sha(Path(__file__).read_bytes()),
         "inputs": provenance,
+        "layout": {"orientation": "portrait", "native_inches": [9, 11.2],
+                   "minimum_font_points": 13, "paper_height_cap_points": 530,
+                   "left_panel_display": "upper", "right_panel_display": "lower"},
         "left_panel": {
             "scenario": "separate_holes",
             "region_ids": [r["id"] for r in motif["regions"]],
@@ -186,7 +199,16 @@ def render(output: Path) -> dict:
             "preparation": {
                 "geometry": records["preparation"]["geometry"],
                 "operator": records["preparation"]["operator"],
-                "waveform_evaluated": False,
+                "waveform_evaluated_in_v7_certificate": False,
+                "remote_generation_established": False,
+            },
+            "prepared_response": {
+                "status": records["prepared_response"]["status"],
+                "domain": records["prepared_response"]["domain"],
+                "metrics": records["prepared_response"]["metrics"],
+                "analytic_tail": records["prepared_response"]["analytic_tail"],
+                "waveform_evaluated": True,
+                "permanent_memory_established": False,
                 "remote_generation_established": False,
             },
             "displayed_connections": [
@@ -199,13 +221,14 @@ def render(output: Path) -> dict:
                 {"from": "prescribed incoming trace", "to": "C", "kind": "causal",
                  "status": "conditional classical scalar response; exterior origin uncomputed"},
                 {"from": "independent finite IV data", "to": "wall and centre", "kind": "causal",
-                 "status": "finite conditional transfer operator; waveform not evaluated"},
+                 "status": "calculated pulse and positive post-input tail within the finite admitted window"},
             ],
         },
         "limits": [
             "No spatial embedding, global topology or relative physical scales are depicted.",
             "No parent observer prepares the early scalar trace in the isolated reference.",
             "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
+            "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],

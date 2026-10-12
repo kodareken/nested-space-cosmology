@@ -2,17 +2,20 @@
 
 The [atlas programme](nsc-cosmological-atlas.md) owns the eight linked research
 questions and their [prerequisites, decisions and unlocks](nsc-cosmological-atlas.md#programme-dependencies).
-The current bounded cycle asks [where the early signal can originate](nsc-cosmological-atlas.md#signal-origin-cycle).
-Its known right-parent exclusion, computed conditional wall-to-centre waveform
-and derived finite region-IV preparation operator retain different evidence
-statuses. The new operator's numerical waveform remains open.
+The [signal-origin cycle](nsc-cosmological-atlas.md#signal-origin-cycle) now
+reaches a [computed finite prepared response](nsc-atlas-prepared-response.md)
+and analytically positive post-input tail. The known right-parent exclusion,
+prescribed-wall calibration and independently prepared IV response retain
+their different assumptions. The next named question is
+[observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability),
+with no new comparison admitted yet; the remote source remains open.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
 |---|---|
 | Active programme and eight theme questions | [Programme owner](nsc-cosmological-atlas.md#eight-linked-research-questions), [dependency map](nsc-cosmological-atlas.md#programme-dependencies); the inventory supplies prior dispositions, not new verification. |
-| Current signal-origin question | [Bounded cycle](nsc-cosmological-atlas.md#signal-origin-cycle), [finite preparation certificate](nsc-atlas-field-preparation.md), [causal access](nsc-atlas-causal-observers.md), [conditional field response](nsc-atlas-field-transfer.md); the finite operator is derived, while its numerical waveform and remote source remain open. |
+| Finite prepared signal and next inference question | [Completed bounded response](nsc-atlas-prepared-response.md), [preparation certificate](nsc-atlas-field-preparation.md), [v8 record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json), [next identifiability connection](nsc-cosmological-atlas.md#observer-identifiability); the finite tail is resolved, while remote source and inference under preparation freedom remain open. |
 | Location, branches, commands, and recovery | [Instructions](instructions.md), [consolidation](repository-consolidation.md) |
 | Where a document lives, and which copies match | [Docs route](README.md) |
 | Task authority and scientific status | Latest user instruction; [exterior-first scope](instructions.md#exterior-first-atlas), [status](current-result.md), [code map](active-code-map.md) |
@@ -21,7 +24,8 @@ Preserved owner routes from the pre-reassembly index, updated to root paths. Dat
 | Moving boundaries and parents with spherical collars, preserved | [Atlas v3](nsc-cosmological-atlas-v3.md), [moving-wall adapter](../src/recursive_horizons/nsc_atlas_moving_boundaries.py), [gluing literature](nsc-atlas-parent-gluing.md), [v3 manuscript](../paper/atlas-working-draft-v3.md) |
 | First sourced interior connection and finite parent observer domain, preserved | [Atlas v4](nsc-cosmological-atlas-v4.md), [slice](nsc-atlas-connection-slice.md), [end-only gluing](nsc-atlas-connection-gluing.md), [observer](nsc-atlas-connection-observer.md), [v4 manuscript](../paper/atlas-working-draft-v4.md) |
 | Interior causal map and observer access, preserved | [Atlas v5](nsc-cosmological-atlas-v5.md), [classification](nsc-atlas-causal-classification.md), [observers](nsc-atlas-causal-observers.md), [v5 manuscript](../paper/atlas-working-draft-v5.md) |
-| Early scalar response and current paper | [Current atlas v6](nsc-cosmological-atlas-v6.md), [field matching](nsc-atlas-field-matching.md), [state and transfer](nsc-atlas-field-transfer.md), [current manuscript](../paper/atlas-working-draft-v6.md), [papers' common thread](papers.md#the-common-research-thread); v1-v5 source-bound evidence stays frozen |
+| Early prescribed-wall scalar calibration, preserved | [Atlas v6](nsc-cosmological-atlas-v6.md), [field matching](nsc-atlas-field-matching.md), [state and transfer](nsc-atlas-field-transfer.md), [historical v6 manuscript](../paper/atlas-working-draft-v6.md); its input and finite late-zero conclusion remain specific to that calibration |
+| Finite exterior preparation and its evaluated response | [V7 preparation](nsc-cosmological-atlas-v7.md), [v8 response owner](nsc-atlas-prepared-response.md), [v8 producer](../scripts/derive_nsc_cosmological_atlas_v8.py), [living manuscript](../paper/nested-space-cosmology.md), [papers' common thread](papers.md#the-common-research-thread); earlier source-bound evidence remains preserved |
 | Discovery across both worktrees and retirement decisions | [Research inventory](research-inventory.md); unopened derivations and unmapped evidence remain explicit |
 | Existing mathematics, assumptions, and gaps | [Lab claim ledger](claim-ledger.md), [code map](active-code-map.md) |
 | RN pressure diagnostics; equilibrium and centre regularity unresolved | [Semantic correction](nsc-rn-gradient-bubble.md), [module](../src/recursive_horizons/nsc_rn_gradient_bubble.py), [driver](../scripts/derive_nsc_rn_gradient_bubble.py), [historical record v5](../results/development/nsc-rn-gradient-bubble-v5.json), [stencil audit](../src/recursive_horizons/nsc_rn_stencil_audit.py), [tests](../tests/test_nsc_rn_gradient_bubble.py) |

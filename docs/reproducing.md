@@ -24,16 +24,21 @@ also adds explicit historical replay and requires the separate `HISTORY_PYTHON`
 profile described below. Running every historical simulation is neither required
 nor authorized by these convenience commands.
 
-The current finite preparation bundle can be regenerated without a PDE solve:
+The current atlas v8 evaluates the admitted finite exterior preparation through
+the moving wall to the interior observer:
 
 ```sh
-python scripts/derive_nsc_cosmological_atlas_v7.py --output .build/atlas-v7-review
-python scripts/derive_nsc_cosmological_atlas_v7.py --output .build/atlas-v7-review --check
+python scripts/derive_nsc_cosmological_atlas_v8.py --output .build/atlas-v8-review
+python scripts/derive_nsc_cosmological_atlas_v8.py --output .build/atlas-v8-review --check
 ```
 
-Creation requires a fresh output directory. This evaluates the admitted finite
-geometry and analytic bound, not a new numerical observer waveform. The
-[preparation owner](nsc-atlas-field-preparation.md) states the domain and limits.
+Creation requires a fresh output directory; `--check` authenticates the bound
+sources and outputs before regeneration. Omit `--output` with `--check` to check
+the canonical v8 bundle. The fixed input, finite numerical budget, refinement
+diagnostics and independent analytic tail bound are recorded in the
+[response owner](nsc-atlas-prepared-response.md). Refinement diagnostics are not
+a rigorous numerical enclosure. The [v8 guide](nsc-cosmological-atlas-v8.md)
+describes the outputs and the unchanged causal limits.
 
 The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
@@ -48,7 +53,7 @@ under ignored `.build/paper-check`; the paper workflow preserves those files.
 
 ## Preserved editions and source contexts
 
-The original atlas manifests record Python 3.14.8 and Matplotlib 3.11.2;
+The original v1–v6 atlas manifests record Python 3.14.8 and Matplotlib 3.11.2;
 byte-identical historical image replay is verified on Windows.
 Their unchanged checkers authenticate recorded files and require byte-identical
 regenerated images. This rendering profile is separate from the current paper's
@@ -102,6 +107,31 @@ historical bundles, so passing an old bundle to a current producer must fail.
 To create a new bundle, supply a fresh `--output` directory; creation is exclusive.
 A changed historical context, changed retained evidence, missing Git object or
 corrupt archive is an error, never a reason to silently select alternative bytes.
+
+### Atlas v7: original root context
+
+Atlas v7 predates the evaluated-response successor. Authenticate its retained
+evidence and materialize its original sources with `prepare-v7`; use `atlas-v7`
+for the original checker's full replay, including exact figure bytes:
+
+```sh
+python scripts/replay_history.py prepare-v7
+python scripts/replay_history.py atlas-v7
+```
+
+These selectors use commit `7fee894ad5a4da2ba378f724e45e926401f82670` under
+`.build/replay/7fee894ad5a4`. `prepare-v7` performs no scientific replay and
+selects no renderer. Full `atlas-v7` replay requires its recorded Windows
+profile: Python 3.14.8, NumPy 2.5.1, SciPy 1.17.1, SymPy 1.14.0 and
+Matplotlib 3.11.1. The existing Windows validation environment supplies this
+profile; its fallback invocation is
+`python scripts/run_python.py scripts/replay_history.py atlas-v7`.
+The v1–v6 history environment above has a different Matplotlib pin.
+
+Neither v7 selector changes the legacy `all` selector or v1–v6 replay.
+An incompatible runtime, modified preserved output or missing source object
+fails explicitly. Current changes to scientific owners are not substituted
+for v7's original source bytes.
 
 The former `make reproduce`, `make reproduce-development` and `make reproduce-exact`
 campaign routes now stop with guidance. Their frozen release inputs differ from

@@ -195,3 +195,54 @@ unevaluated. A global physical source for the characteristic preparation,
 formation of the geometry and quantum-state selection remain open. Any proposed
 solver must identify the specific observer uncertainty it resolves and obtain a
 separate finite admission here before execution.
+
+## Prepared scalar response admission, 12 October 2026
+
+This separate admission succeeds the finite preparation certificate above.
+The [prepared-response owner](nsc-atlas-prepared-response.md) supplies the exact
+constant-extension representation and an independent analytic positive-tail
+bound before numerical propagation. The earlier certificate remains a record
+of what had been established without evaluating a waveform.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | The v7 retained IV strip and source, v6 conformal wall matching and regular-centre response; standard Volterra integration, SciPy DOP853, derivative-informed cubic Hermite interpolation, PCHIP and clipped composite trapezoidal integration; Bessel-series manufactured control |
+| Missing | The independently prepared exterior data have a certified transfer operator, but its central waveform has not been evaluated or separated from numerical error |
+| Prerequisites | Keep the v7 full retained-domain and no-return certificates, compatible zero bottom and cap data, fixed positive C3 compact input, and right-parent causal exclusion; the finite IV input is not a drive from P |
+| Decision | What central signal does this independent preparation produce, and does its post-input tail agree with the analytic positive bound under refinement? |
+| Unlocks | Close `wall-trace` and `observer-response` for this preparation; support a subsequent source-fixed `observer-inference` comparison without asserting that one waveform uniquely identifies an exterior |
+| Fixed domain | H ell=1, kappa ell=2, M/ell=0.4; real classical massless l=0 conformal scalar, no additional wall coupling, linear probe; wall R/ell=0.45–0.55, exterior R/ell>=0.4; the existing finite arrival window only |
+| Representation | Constant U extension of the exact retained-wedge operator for storage; evolve z=chi-g, integrate only to min(U,U_W(V)), and evaluate J=chi_V from the right-hand side rather than differentiating saved output |
+| Budget | At most 257 direct geometry knots per grid and 300 per adapter call; spatial grids 129/257/513 and 257 output points; at most 6,000 right-hand-side calls per solve, 10 million kernel evaluations and 60 CPU seconds for the complete recorded experiment; no sweep, new general PDE framework or theory retuning |
+| Acceptance | Final spatial and geometry waveform differences at every output point at most 1e-6+1e-4 times the absolute fine value; temporal tolerances tighter than this threshold; post-input J refinement and independent reference-quadrature differences below 10% of the analytic positive lower bound |
+| Independent check | Positive analytic bracket (1-q_*) times B(V)<=J(V)<=B(V), using an exact transverse kernel integral and Gauss 32/64 double quadrature at three fixed post-input points; zero-potential and constant-potential Bessel controls; unit scaling, linearity, compatibility and finite-clock rejection |
+| Stop or redirect | Stop at the budget, on failed retained/no-return assumptions, unresolved tail/error separation, or disagreement with the independent bracket. Report the unresolved interface rather than changing parameters to rescue a signal. Other atlas routes remain open. |
+
+The post-input derivative trace has the exact positive lower bound
+(1-q_*) K_min^2 (U_a-U_0)^2 G/2, approximately 6.53246e-5 epsilon in the
+recorded geometry, where G=64 epsilon (V_b-V_a)/315. This analytic check is
+independent of the numerical field solution. Its decimal value uses the
+existing geometric quadrature diagnostics, not interval arithmetic. The
+result will report a finite classical waveform and numerical error evidence;
+it will not claim a global parent source, late-time persistence, energy flux,
+unique exterior inference or worldwide novelty of scalar scattering.
+
+### First bounded attempt and event-aligned integration clarification
+
+The initial 129-node prototype stopped at its 6,000-right-hand-side-call cap
+near normalized source coordinate s=0.575; no completed waveform was accepted.
+The [response owner](nsc-atlas-prepared-response.md#first-execution-stop-and-algorithm-clarification)
+records the failure. The partial spatial integration cell changes at known
+moving-wall/node crossings, so the ODE driver's steps need to respect those
+discrete events.
+
+Before the redirected attempt, split integration at the roots U_W(V)=U_i
+of the existing monotone Hermite wall interpolant and at both input support
+edges. Use a bracketed scalar root finder and carry the correction state
+continuously between DOP853 segments, initially trying each segment's full
+length. The source, theory, spatial integral, grids, tolerances, output window
+and acceptance tests remain fixed. The 6,000-call cap is the sum across all
+segments of one solve; the 10-million-kernel and 60-CPU-second caps still apply
+to the complete new record. This is a recorded algorithm correction after a
+bounded failure, not permission to retune the physical model or reset a cap
+within a solve. Stop again if these limits or the original accuracy checks fail.
