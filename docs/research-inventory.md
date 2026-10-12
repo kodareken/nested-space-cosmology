@@ -71,6 +71,16 @@ instructions and three scientific/procedure variants.
 
 The [observer-inverse proof](nsc-atlas-observer-inference.md) is a reusable conditional analytic result: complete signed traces determine a preparation in the fixed geometry, and positivity/support restrictions exclude some traces. The PDE, corner, boundary and clock identities received independent analytic review. No numerical reconstruction or second physical geometry is verified; external inverse-problem theorem proofs remain outside the recorded reading boundary.
 
+The [scalar wall consistency result](nsc-atlas-scalar-wall-consistency.md) is a
+reusable local compatibility check for the canonical conformal probe and
+original C3 preparation. Independent distributional and variational
+derivations agree on zero additional scalar surface stress; the regular
+tangential flux jump also vanishes. Exact symbolic controls check the
+identities. Coupled bulk evolution, normal-force balance, quantitative
+backreaction bounds and stability have not been verified. The
+[literature card](arxiv-studies.md#conformal-stress-library) records which
+source sections were read and which proofs remain unaudited.
+
 **Scientific reading has an explicit boundary.** Named current owners,
 supersession notes and all 17 child/neck scientific notes received a scope
 review. The independent w2 review covered charged-source, observer-clock,

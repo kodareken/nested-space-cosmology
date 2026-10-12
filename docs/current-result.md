@@ -1,6 +1,24 @@
 # What the calculations show
 
-Current presentation, 12 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current presentation, 13 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Conformal probe stress and shell compatibility, 13 October 2026
+
+The [analytic check](nsc-atlas-scalar-wall-consistency.md) fixes the scalar's
+canonical normalization and connects its quadratic stress to the existing
+wall. The full improved stress has zero singular surface coefficient and
+zero regular tangential flux jump. The published scalar-tensor junction
+law independently gives the unchanged material tension. Keeping only the
+canonical kinetic flux would miss the cancellation.
+
+This removes those two local obstructions for the original smooth compact
+preparation; no wave evolution was rerun. The
+[record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json)
+binds exact algebra and unchanged finite prerequisites. Normal-force balance,
+bulk Einstein response, an amplitude-validity bound and stability remain
+uncomputed. The next useful connection is the pulse's smooth bulk stress and
+the geometric correction it requires, under a separate bounded admission.
+Physical source selection and the other atlas routes remain open.
 
 ## Fixed-model observer inverse and preparation exclusions, 12 October 2026
 

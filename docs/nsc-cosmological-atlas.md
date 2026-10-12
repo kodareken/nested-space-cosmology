@@ -35,6 +35,12 @@ independent compact input, with an analytically positive post-input tail and
 numerical refinement checks over a finite arrival window. These causal and field results
 do not automatically extend to the glued many-body spacetime.
 
+The [conformal stress check](nsc-atlas-scalar-wall-consistency.md) now fixes
+the field normalization and checks its quadratic surface stress and
+tangential flux at that same wall. Both scalar corrections vanish, so no
+extra material surface source is needed for those conditions. The sourced
+bulk geometry, normal-force balance and stability have not been calculated.
+
 Keep three approaches available:
 
 - **Geometric atlas:** assemble compatible published regions and junctions;
@@ -74,6 +80,8 @@ that every open branch succeeds.
 | `wall-trace` | Combine compatible preparation, propagation and wall transmission; determine the incident trace rather than assuming its origin. The region-IV trace is evaluated for the fixed independent input in v8. | `observer-response` for the independently specified finite exterior data. |
 | `observer-response` | Use the observer, clocks and fixed transfer operator with a justified trace; v8 resolves a finite central waveform and a positive post-input field tail. | `observer-inference`, comparisons of sources and attachments. |
 | `observer-inference` | The [fixed-model inverse](nsc-atlas-observer-inference.md) recovers a compatible preparation from a complete signed central trace and gives positive compact-source exclusions. A second geometry and a physical preparation law remain unresolved. | A preparation-restricted response-range comparison or a source-linked independent channel. |
+| `probe-stress` | Fix physical field normalization and sufficient regularity; borrow the full Hilbert stress and coupled shell laws. The [conformal shell check](nsc-atlas-scalar-wall-consistency.md) establishes zero additional surface stress and tangential flux jump for this probe. | `bulk-backreaction`, a later preparation-energy criterion; no amplitude bound is supplied by surface cancellation. |
+| `bulk-backreaction` | Evaluate smooth bulk stress and compatible gravitational data, including normal-force conditions, before choosing a coupled solver. This remains open. | A finite validity estimate or a sourced metric/wall correction, then an independently shared gravitational response channel. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -92,6 +100,11 @@ questions. Inheritance, charge, clock and alternative-geometry questions
 may proceed independently when their
 own prerequisites are met. A different exterior model needs its own dependency
 edges, not a forced passage through this scalar example.
+
+The parallel physical-response branch is
+`wall-transmission + parent-preparation + physical normalization -> probe-stress -> bulk-backreaction`.
+It supplies prerequisites for interpreting the field as a gravitational source;
+it is not a second proof of the waveform or a formation history.
 
 ## Eight linked research questions
 
@@ -337,7 +350,19 @@ comparison; its budget and stop rule need their own admission. The
 geometric atlas, connected mouths, inheritance and clock routes remain
 available under their own prerequisites.
 
+The selected next step was to check the existing probe's own stress before
+introducing a new source or channel. The [surface check](nsc-atlas-scalar-wall-consistency.md)
+finds compatibility with the fixed material wall, using its canonical
+normalization and original C3 preparation. It does not yet restrict the
+source amplitude or produce a second observable. A bulk stress/response
+criterion is the next missing connection along this route, and needs its
+own admission before evaluation.
+
 ## Owners and reproducible output
+
+- [Scalar wall consistency](nsc-atlas-scalar-wall-consistency.md) and its
+  [exact-algebra recorder](../scripts/record_nsc_atlas_scalar_wall_consistency.py)
+  separate two checked surface conditions from open bulk backreaction.
 
 - [Observer-inverse proof](nsc-atlas-observer-inference.md) and
   [declaration checker](../scripts/record_nsc_atlas_observer_inference.py)

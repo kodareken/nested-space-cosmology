@@ -272,3 +272,30 @@ controlled family of source-response measurements. Direct differentiation,
 an explicit source-class test, and the focused inverse-wave literature
 comparison address them. A failing check changes the scientific conclusion;
 it does not authorize retuning the model or launching a larger simulation.
+
+## Conformal probe stress and shell admission, 13 October 2026
+
+The fixed-model inverse leaves freely chosen preparation as an inference
+limitation. Before introducing a source-selection law or another measurement
+channel, check whether the existing transmitted probe has compatible stress
+at its wall. This is a finite compatibility application of published
+scalar-tensor junction conditions, not a new gravity theory.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | Aviles, Maeda and Martinez, [1910.07534v2](https://arxiv.org/html/1910.07534v2), Eqs. (2.10)-(2.14), (3.42)-(3.46), and the non-null distributional derivation; the existing signed pure-tension wall and conformal scalar transmission; the v7/v8 smooth compact preparation |
+| Missing | Does the order-amplitude-squared scalar stress require an additional singular surface source or tangential energy exchange that the fixed wall action does not supply? |
+| Prerequisites | Same four-dimensional Jordan-frame geometry, normal from cap to exterior, continuous scalar, piecewise sufficient differentiability, fixed wall k and xi=1/6; use the original C3 preparation rather than infer full four-dimensional stress regularity for every C2 inverse input |
+| Action and normalization | Fix the scalar kinetic coefficient to one, zero scalar potential, f(phi)=1/(2 kappa_4)-xi phi^2/2 with kappa_4=8 pi G, scalar-independent background vacuum stress, and material wall L=-sigma; k=4 pi G sigma is distinct from kappa_4. No direct scalar-wall interaction. |
+| Perturbative meaning | Zero scalar background, phi=epsilon phi_1; evaluate its quadratic Hilbert stress on the unchanged background. Include xi G_mu_nu phi^2 exactly once. Assume f>0 for the weak-field interpretation; this is not a quantitative backreaction bound or solved Einstein data. |
+| Decision and unlock | Separate the singular scalar surface coefficient, smooth tangential flux jump and remaining bulk Einstein residual. Compatibility permits a subsequent preparation-energy or sourced-geometry question; incompatibility identifies the missing surface law without adjusting the present wall. |
+| Finite domain | The existing regular timelike wall segment R/ell in [0.45,0.55], finite retained exterior and regular cap; local jump identities with H ell=1, k ell=2, M/ell=0.4 fixed. No formation, global energy, late-time or stability conclusion. |
+| Budget | One analytic derivation, one independent derivation/review, and exact symbolic checks within 60 CPU seconds. No field re-solve, numeric derivative of the saved waveform, parameter sweep, new PDE solver or backreaction integration. |
+| Independent check | Compare the distributional improved-stress coefficient with the imported variational scalar-tensor junction; compute tangential flux using one-sided regular traces and the common-normal Gauss-Codazzi conventions. Retain zero-field, normalization and orientation checks. |
+| Stop or redirect | Stop on an undefined distributional product, insufficient regularity, an indispensable unspecified wall coupling, or a failed identity. Report any bulk or normal-force condition left unresolved; shell compatibility alone cannot establish a self-consistent radiating geometry. |
+
+The likely failures are confusing two stress-accounting conventions, using
+insufficient regularity at the interface or centre, and treating a surface
+cancellation as a solved bulk response. The action convention, one-sided
+trace calculation and separate bulk residual are the checks against these
+failures. A new amplitude estimate or coupled solution needs a later admission.

@@ -40,6 +40,22 @@ an existing directory. Its source bindings cover the proof, producer and tests.
 Its pinned predecessor manifests and all stored output hashes are checked
 without importing historical producers or substituting current source bytes.
 
+The separate [scalar wall check](nsc-atlas-scalar-wall-consistency.md) records
+the canonical probe's singular surface stress and regular tangential flux.
+It authenticates the fixed preparation and includes exact symbolic controls;
+it does not rerun the waveform or evolve the geometry:
+
+```sh
+python scripts/record_nsc_atlas_scalar_wall_consistency.py --check
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_wall_consistency.py --check-algebra
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_scalar_wall_consistency.py
+```
+
+Its owner, producer and tests are source-bound. As with the inverse, creating
+another record requires a fresh output directory. Independent analytic review
+and exact-algebra checks are distinct from provenance authentication. Bulk
+backreaction, normal-force balance and amplitude bounds remain open.
+
 Atlas v8 remains the finite exterior-to-interior waveform result. Its original
 replay is explicitly selected below. The fixed input, numerical budget,
 refinement diagnostics and independent analytic tail bound remain in the
