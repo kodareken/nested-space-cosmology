@@ -27,6 +27,7 @@ INPUTS = {
     "preparation": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
     "programme": "results/development/nsc-cosmological-atlas-v8/programme.json",
     "prepared_response": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
+    "observer_inference": "results/development/nsc-atlas-observer-inference-v1/inference.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -56,6 +57,16 @@ def load_evidence() -> tuple[dict, dict]:
     if (response["inputs"] != records["preparation"]["inputs"]
             or response["preparation"] != records["preparation"]["preparation"]):
         raise ValueError("The prepared response must retain the certified geometry and input.")
+    inference = records["observer_inference"]
+    boundary = inference["knowledge_boundary"]
+    if (inference["status"] != "CONDITIONAL_FIXED_OPERATOR_PREPARATION_INVERSE"
+            or not boundary["fixed_operator_source_inverse"]
+            or boundary["numerically_reconstructed_source"]
+            or boundary["second_physical_geometry_constructed"]
+            or boundary["observer_equivalence_established"]
+            or inference["inputs"] != response["inputs"]
+            or inference["domain"] != response["domain"]):
+        raise ValueError("The inference record no longer supports the fixed-model analytic inverse.")
     return records, provenance
 
 
@@ -109,58 +120,61 @@ def render(output: Path) -> dict:
     label(0.45, 10.91, "NESTED-SPACE COSMOLOGY", 13, "muted", "bold", ha="left")
     label(0.45, 10.51, "From possible regions to an interior observer", 19,
           "ink", "bold", ha="left")
-    for y0, height in ((6.04, 4.10), (1.04, 4.78)):
+    for y0, height in ((6.37, 3.77), (0.81, 5.35)):
         ax.add_patch(FancyBboxPatch((0.25, y0), 8.5, height,
                                    boxstyle="round,pad=0.02,rounding_size=0.18",
                                    fc=COLORS["panel"], ec="none"))
-    label(0.52, 9.79, "1  A finite branching question", 16, weight="bold", ha="left")
+    label(0.52, 9.87, "1  A finite branching question", 16, weight="bold", ha="left")
 
-    ax.add_patch(Ellipse((4.5, 8.96), 7.5, 1.15,
+    ax.add_patch(Ellipse((4.5, 9.05), 7.5, 1.15,
                          fc="white", ec=COLORS["line"], lw=1.6))
-    label(4.5, 9.29, "Common parent • not globally spherical", 13, weight="bold")
-    circle(2.70, 8.84, 0.27, "A")
-    circle(6.55, 8.84, 0.33, "B")
-    label(4.5, 8.83, "Two off-center\nblack-hole boundaries", 13, color="muted")
+    label(4.5, 9.38, "Common parent • not globally spherical", 13, weight="bold")
+    circle(2.70, 8.93, 0.27, "A")
+    circle(6.55, 8.93, 0.33, "B")
+    label(4.5, 8.92, "Two off-center\nblack-hole boundaries", 13, color="muted")
     # Parent-to-hole attachment remains a missing common-metric connection.
-    arrow((3.46, 9.14), (3.03, 8.99), "attachment", dashed=True)
-    arrow((5.57, 9.14), (6.15, 9.02), "attachment", dashed=True)
-    circle(2.70, 7.81, 0.56, "Child A?", "candidate")
-    circle(6.55, 7.81, 0.51, "Child B?", "may differ")
-    for x, top, bottom in ((2.70, 8.52, 8.41), (6.55, 8.45, 8.37)):
+    arrow((3.46, 9.23), (3.03, 9.08), "attachment", dashed=True)
+    arrow((5.57, 9.23), (6.15, 9.11), "attachment", dashed=True)
+    circle(2.70, 7.95, 0.56, "Child A?", "candidate")
+    circle(6.55, 7.95, 0.51, "Child B?", "may differ")
+    for x, top, bottom in ((2.70, 8.65, 8.52), (6.55, 8.58, 8.47)):
         arrow((x-0.13, top), (x-0.13, bottom), "descent", dashed=True)
         arrow((x+0.13, top), (x+0.13, bottom), "attachment", dashed=True)
-    arrow((3.34, 7.81), (5.96, 7.81), "correlation", dashed=True, both=True)
-    label(4.63, 7.31, "shared ancestry?\nno signal assumed", 13, color="correlation")
-    circle(1.44, 6.97, 0.65, "Grandchild?")
-    arrow((2.18, 7.54), (1.95, 7.38), "descent", dashed=True)
-    arrow((2.37, 7.34), (2.14, 7.18), "attachment", dashed=True)
-    label(6.13, 6.79, "Descent remains open.\nMultiple daughters and communicating\nmouths retain their own assumptions.",
+    arrow((3.34, 7.95), (5.96, 7.95), "correlation", dashed=True, both=True)
+    label(4.63, 7.60, "shared ancestry?\nno signal assumed", 13, color="correlation")
+    circle(1.44, 7.27, 0.65, "Grandchild?")
+    arrow((2.18, 7.75), (1.95, 7.66), "descent", dashed=True)
+    arrow((2.37, 7.55), (2.14, 7.46), "attachment", dashed=True)
+    label(6.13, 6.98, "Descent remains open.\nMultiple daughters and communicating\nmouths retain their own assumptions.",
           13, color="muted")
-    label(4.5, 6.16, "Dashed links: questions, not a formation history", 13, color="muted")
+    label(4.5, 6.49, "Dashed links: questions, not a formation history", 13, color="muted")
 
-    label(0.52, 5.49, "2  One checked connection", 16, weight="bold", ha="left")
-    label(4.5, 5.11, "Sourced initial slice • fixed wall parameters", 13, color="muted")
+    label(0.52, 5.83, "2  One checked connection", 16, weight="bold", ha="left")
+    label(4.5, 5.45, "Sourced initial slice • fixed wall parameters", 13, color="muted")
     for x, text in ((1.35, "Regular\ncap"), (3.45, "Material\nwall"),
                     (5.55, "Vacuum\nbridge"), (7.65, "Right\nend")):
-        box(x, 4.61, 1.44, 0.61, text)
+        box(x, 4.95, 1.44, 0.61, text)
     for x in (2.16, 4.26, 6.36):
-        arrow((x, 4.61), (x+0.48, 4.61), "attachment")
-    label(4.5, 3.94, "End-only gluing preserves this body in a\nsufficiently separated initial-data family.",
+        arrow((x, 4.95), (x+0.48, 4.95), "attachment")
+    label(4.5, 4.28, "End-only gluing preserves this body in a\nsufficiently separated initial-data family.",
           13, color="muted")
-    ax.plot([0.55, 8.45], [3.65, 3.65], color=COLORS["line"], lw=1)
-    label(4.5, 3.39, "Isolated reference • event-specific observer access", 13, weight="bold")
+    ax.plot([0.55, 8.45], [3.99, 3.99], color=COLORS["line"], lw=1)
+    label(4.5, 3.73, "Isolated reference • event-specific observer access", 13, weight="bold")
     for x, name, sub in ((1.35, "C", "center"), (4.50, "W", "wall"), (7.65, "P", "right parent")):
-        circle(x, 2.72, 0.23, name, color="causal")
-        label(x, 2.32, sub, 13, color="muted")
-    arrow((1.67, 2.72), (4.18, 2.72), "causal", both=True)
-    arrow((4.82, 2.72), (7.33, 2.72), "causal")
-    label(2.93, 3.00, "early paths", 13, color="causal")
-    label(6.08, 3.00, "early escape", 13, color="causal")
-    label(4.5, 1.92, "After the anchor: no new cross-observer emission\nreaches another of these three worldlines.", 13, color="muted")
-    box(4.5, 1.26, 7.58, 0.59,
-        "Wall-input calibration → transient at C\nFinite IV data → calculated pulse + positive finite tail",
+        circle(x, 3.06, 0.23, name, color="causal")
+        label(x, 2.66, sub, 13, color="muted")
+    arrow((1.67, 3.06), (4.18, 3.06), "causal", both=True)
+    arrow((4.82, 3.06), (7.33, 3.06), "causal")
+    label(2.93, 3.34, "early paths", 13, color="causal")
+    label(6.08, 3.34, "early escape", 13, color="causal")
+    label(4.5, 2.30, "After the anchor: no new cross-observer emission\nreaches another of these three worldlines.", 13, color="muted")
+    box(4.5, 1.43, 7.58, 1.00,
+        "Wall-input calibration → transient at C\n"
+        "Finite IV data → calculated pulse + positive finite tail\n"
+        "Analytic inverse: signal + fixed geometry → source\n"
+        "Permitted preparation still needs a physical law",
         color="causal", size=13)
-    label(4.5, 0.72, "Remote preparation and later evolution remain open", 13, color="muted")
+    label(4.5, 0.64, "Remote preparation and later evolution remain open", 13, color="muted")
 
     for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
                           (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
@@ -211,6 +225,19 @@ def render(output: Path) -> dict:
                 "permanent_memory_established": False,
                 "remote_generation_established": False,
             },
+            "observer_inference": {
+                "status": records["observer_inference"]["status"],
+                "domain": records["observer_inference"]["domain"],
+                "preparation_class": records["observer_inference"]["preparation_class"],
+                "analytic_result": records["observer_inference"]["analytic_result"],
+                "knowledge_boundary": records["observer_inference"]["knowledge_boundary"],
+                "interpretation": "Signal and fixed geometry determine a compatible preparation analytically; a physical preparation law still restricts it.",
+                "limits": [
+                    "No source has been reconstructed numerically.",
+                    "No equivalence between two physical exterior geometries is established.",
+                    "Analyst reconstruction creates no causal channel and preserves all observer-access exclusions.",
+                ],
+            },
             "displayed_connections": [
                 {"from": "cap", "to": "wall", "kind": "attachment", "status": "checked initial slice"},
                 {"from": "wall", "to": "bridge", "kind": "attachment", "status": "checked initial slice"},
@@ -229,6 +256,7 @@ def render(output: Path) -> dict:
             "No parent observer prepares the early scalar trace in the isolated reference.",
             "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
             "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
+            "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],

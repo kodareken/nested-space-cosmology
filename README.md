@@ -18,8 +18,11 @@ The current geometric route reaches a sourced interior connection, a causal map,
 a calibration waveform and a [computed response to independent exterior data](docs/nsc-atlas-prepared-response.md).
 The eighth atlas resolves a central scalar waveform and a positive tail within
 its finite arrival window, supported by an analytic bound and numerical refinement.
-The next question is what an observer can identify when different preparations
-are allowed; that comparison needs its own admission. Remote preparation and
+The [analytic inverse](docs/nsc-atlas-observer-inference.md) now determines
+the source from a complete compatible signed field history in that fixed
+geometry. It also excludes histories that violate a positive compact
+preparation. The next comparison needs an independently justified source
+restriction or a source-linked additional channel. Remote preparation and
 backreaction remain open. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
@@ -29,6 +32,7 @@ expansion and recycling remain research questions.
 
 - [Atlas programme and calculation dependencies](docs/nsc-cosmological-atlas.md)
 - [Current prepared response and evidence](docs/nsc-atlas-prepared-response.md)
+- [Observer inverse and preparation restrictions](docs/nsc-atlas-observer-inference.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)
@@ -57,7 +61,7 @@ Exact historical image replay uses a separate Windows Python 3.14.8 / Matplotlib
 [historical environment setup](docs/reproducing.md#preserved-editions-and-source-contexts)
 before running `scripts/replay_history.py all`, or select it through `HISTORY_PYTHON`
 when running `make verify`. GitHub checks the two profiles in separate jobs.
-The v7 preparation bundle has its own explicit `atlas-v7` historical replay;
+The v7 preparation and v8 response have explicit `atlas-v7` and `atlas-v8` historical replays;
 the legacy `all` command retains the v1-v6 profile.
 New calculations require a named uncertainty and a finite budget.
 

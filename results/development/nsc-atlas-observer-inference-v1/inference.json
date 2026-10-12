@@ -1,0 +1,189 @@
+{
+  "analytic_result": {
+    "field_normalization": "f=chi/epsilon; g and h are normalized source and wall traces",
+    "fixed_operator_bijection": "the declared g, h and Y classes are in bijection",
+    "forward": "f=Eg-Af; (Eg)(U,V)=g(V)",
+    "inverse": "f=Eh+Bf=(I-B)^(-1)Eh; g(V)=f(U0,V)",
+    "inverse_integral": "(Bf)(U,V)=integral[U,Uw(V)]dp integral[L(p),V]dq K(p,q)f(p,q)",
+    "inverse_norm_bound": "||B||<=q_*<1; ||g||_infinity<=||h||_infinity/(1-q_*)",
+    "lower_limit": "L(u)=Va for u<=Ua; L(u)=inverse wall V(u) otherwise",
+    "observer_normalization": "theta=T/ell; Y=ell phi_C/epsilon",
+    "observer_to_source_stability": "||g1-g2||_infinity<=(theta_b-theta_a)||Y1-Y2||_infinity/[2(1-q_*)]",
+    "observer_to_wall": "h(V)=(1/2) integral[theta_a,theta(V)] Y(s) ds",
+    "two_model_implication": "a shared observed trace gives a conditional range-overlap question after clocks, normalization and allowed preparations are specified",
+    "verification_method": "differentiate the inverse equation to recover PDE, wall, source and bottom; use the independent Q algebraic factorization"
+  },
+  "borrowed_certificate": {
+    "analytic_norm_bound": 0.13882099234357653,
+    "bottom_data": "chi=0 on V=Va, U0<=U<=Ua",
+    "bound_proof": "DeltaU DeltaV=Fc+Fb-Fc r-Fb/r <= (sqrt(Fc)-sqrt(Fb))^2, r=Vb/Va>0",
+    "cap_data": "phi=0 and partial_t phi=0 on the flat cap slice t=t_a",
+    "kernel_equation": "chi_UV+K chi=0; K=16 M^4 exp(-R/(2M))/R^4=-R_UV/R",
+    "observer": {
+      "after_window": "uncomputed; no zero tail or extension through t_C=0 inferred",
+      "analytic_no_return_log_margin_lower_bound": 0.25656780668615276,
+      "arrival_window_over_ell": [
+        -0.5817589515953444,
+        -0.25023070056069985
+      ],
+      "centre_regularity": "chi=F(eta+r)-F(eta-r); phi_C=2F'(eta_C)/a_C",
+      "first_possible_incoming_label_over_ell": -1.7891827504395676,
+      "flat_time_increment_upper_bound_over_ell": 0.7795241250006228,
+      "initial_cap_t_over_ell": -1.179595952350965,
+      "last_outgoing_wall_label_over_ell": -4.423774662616959,
+      "no_return_margin_over_ell": 2.6345919121773917
+    },
+    "wall_condition": "chi_U=0 from conformal matching and zero outgoing cap characteristic"
+  },
+  "classification": "derived_conditional",
+  "connection_record": {
+    "assumptions": [
+      "fixed v7/v8 geometry and linear conformal scalar law",
+      "C2 source and wall traces vanish on the fixed initial segment",
+      "zero initial cap, no centre return, and the known monotone observer clock"
+    ],
+    "domain": "Fixed linear conformal scalar; finite retained IV wedge and early wall window R/ell in [0.45,0.55]",
+    "evidence_refs": [
+      "results/development/nsc-atlas-observer-inference-v1/inference.json"
+    ],
+    "id": "finite-IV-preparation-inverse",
+    "independent_check_refs": [
+      "docs/nsc-atlas-observer-inference.md"
+    ],
+    "kind": "preparation",
+    "link_refs": [
+      "preparation-IV-W",
+      "scalar-W-C"
+    ],
+    "missing": [
+      "an independently constrained physical preparation law",
+      "a second compatible geometry and a source-linked discriminator"
+    ],
+    "origin": "prescribed_at_boundary",
+    "owner_refs": [
+      "docs/nsc-atlas-observer-inference.md"
+    ],
+    "prerequisite_ids": [
+      "observer-response"
+    ],
+    "prescribed_boundary": "U=U0 in retained IV; the inverse treats the compatible preparation class",
+    "region_refs": [
+      "S_IV",
+      "W",
+      "C"
+    ],
+    "remote_preparation_established": false,
+    "status": "conditional",
+    "unlock_ids": [
+      "observer-inference"
+    ],
+    "waveform_evaluated": false
+  },
+  "domain": {
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105,
+    "arrival_window_over_ell": [
+      -0.5817589515953444,
+      -0.25023070056069985
+    ],
+    "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+    "radius_lower_bound_over_ell": 0.4,
+    "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+    "radius_upper_bound_over_ell": 0.55,
+    "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+    "wall_radius_window_over_ell": [
+      0.45,
+      0.55
+    ]
+  },
+  "execution": {
+    "check_scope": "provenance and exact analytic declaration, not machine verification of theorem truth",
+    "new_scientific_numbers": false,
+    "new_waveforms": 0,
+    "numerically_evaluated_inverse": false,
+    "scientific_numerical_solves": 0
+  },
+  "independent_analytic_review": {
+    "checked": [
+      "B inverse recovers PDE, wall, source and bottom",
+      "Q algebraic cross-check and central normalization",
+      "C2 source/wall and C1 observer classes with the initially quiet corner",
+      "positive compact-source post-input signs",
+      "positive observer-bump exclusion of the late source cutoff"
+    ],
+    "limit": "analytic review of this finite application; provenance tests do not prove the theorem or audit all cited external results",
+    "reference": "docs/nsc-atlas-observer-inference.md#borrowing-independent-review-and-evidence",
+    "status": "independently_checked_in_declared_domain"
+  },
+  "inputs": {
+    "H_ell": 1.0,
+    "M_over_ell": 0.4,
+    "additional_surface_scalar_coupling": 0.0,
+    "angular_mode": 0,
+    "k_ell": 2.0,
+    "length_scale": 1.0,
+    "linear_probe": true,
+    "wall_branch": "expanding",
+    "xi": 0.16666666666666666
+  },
+  "knowledge_boundary": {
+    "fixed_operator_source_inverse": true,
+    "geometry_identified_from_one_unknown_preparation": false,
+    "numerically_reconstructed_source": false,
+    "observer_equivalence_established": false,
+    "physical_preparation_law_established": false,
+    "right_parent_causal_exclusion_changed": false,
+    "second_physical_geometry_constructed": false
+  },
+  "limits": [
+    "The original compact positive pulse is one retained preparation, not the full inverse class.",
+    "No inverse-preserved late compact support or sign condition is asserted.",
+    "A fixed-model source inverse does not identify the geometry or establish equivalence of two physical models.",
+    "Zero cap and the known observer clock fix the otherwise free integration constant and labels.",
+    "C2 regularity of the full four-dimensional scalar at the centre is not claimed for every C2 reduced input; the original C3 pulse and smooth witness have stronger regularity.",
+    "No detector dynamics, physical source generation, late returns or global evolution are supplied."
+  ],
+  "next_unlock": "constrain the preparation independently before comparing source-linked observables or a second compatible geometry",
+  "owner": "docs/nsc-atlas-observer-inference.md",
+  "predecessor_scenario": "finite_iv_prepared_response",
+  "preparation_class": {
+    "initial_zero_segment": [
+      -2.565695357068247,
+      -2.489774421064211
+    ],
+    "initial_zero_segment_origin": "Vs equals the stored v7 input support's left endpoint",
+    "inverse_preserves_original_pulse_subclass": false,
+    "late_support_restriction": null,
+    "observer_condition": "Y=0 on theta([Va,Vs]); theta is the fixed monotone clock",
+    "original_pulse_evidence_unchanged": true,
+    "regularity": "g,h in C2([Va,Vb]); Y in C1([theta_a,theta_b])",
+    "regularity_scope": "C2 reduced field on the retained exterior wedge and C1 central observable; full four-dimensional scalar C2 at the centre is not asserted for every C2 input",
+    "sign_restriction": null,
+    "source_and_wall_condition": "g=h=0 on [Va,Vs]"
+  },
+  "preparation_class_test": {
+    "exclusion_argument": "its integrated h is nonnegative and becomes a positive constant; positive B implies f>=Eh and g>=h>0 after Ve, violating the source cutoff",
+    "exclusion_witness": "a smooth nonzero nonnegative observer bump supported strictly between theta(Vs) and theta(Ve)",
+    "post_input_conditions": [
+      "h(V)<0",
+      "h'(V)>0",
+      "Y(theta(V))>0",
+      "integral[theta_a,theta(V)]Y(s)ds=2h(V)<0"
+    ],
+    "post_input_domain": "Ve<V<=Vb only",
+    "range_membership": "S(I-B)^(-1)E[(1/2) integral[theta_a,theta(V)]Y(s)ds] belongs to the physically permitted source class P",
+    "restricted_source_class": "nonzero nonnegative C2 source supported in [Vs,Ve]",
+    "scope": "exact within-model class exclusion, not a simulated waveform or a second physical geometry",
+    "source_cutoff": -2.3379325490561405
+  },
+  "prerequisite_records": {
+    "preparation": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
+    "programme": "results/development/nsc-cosmological-atlas-v8/programme.json",
+    "response": "results/development/nsc-cosmological-atlas-v8/prepared-response.json"
+  },
+  "schema": "nsc-atlas-observer-inference-v1",
+  "status": "CONDITIONAL_FIXED_OPERATOR_PREPARATION_INVERSE"
+}

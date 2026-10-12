@@ -16,6 +16,10 @@
       "path": "results/development/nsc-cosmological-atlas-v1/atlas.json",
       "sha256": "1775e784ea2c44f5aaf5b4342c0aa8dace0cd738f96d8adbf24e4ca0c6db7f3b"
     },
+    "observer_inference": {
+      "path": "results/development/nsc-atlas-observer-inference-v1/inference.json",
+      "sha256": "8c42d143c8e6bd7f1fdcc9b4b0b1c453fc39efbe3ded8d0face008709252a217"
+    },
     "preparation": {
       "path": "results/development/nsc-cosmological-atlas-v7/preparation-access.json",
       "sha256": "7f2129c2a1b661b77900e6c713838789ba92399d2ee32c771317079509c01033"
@@ -226,15 +230,16 @@
     "No parent observer prepares the early scalar trace in the isolated reference.",
     "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
     "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
+    "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "43d5278d78e55d1108d401f469982fb15d0ddf8be5f14ad21f6cb246ff1521e9",
-    "geometry-overview.svg": "10f5ffd6567ad6408f65c32c831d1e4894c800430b096dce4aa1b2003e189a4b"
+    "geometry-overview.png": "c2b15266fa08174addb01629605f712e5380971e3f9210bdb69a107f09cc272e",
+    "geometry-overview.svg": "b4d268d06effd757efd87b5c16e8152816e9cadd606281c6502247d8f4a87d8d"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "fb81af9784a17b2894507597a8a3e18e8297bdfd22611cadf285aa60dd5fbe23",
+  "producer_sha256": "be85a04f770e00a6112c662b9490a4c3a09a5f6933b0556c9d3dbd472bcc8a08",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -415,6 +420,73 @@
         "verdict": "unresolved"
       }
     ],
+    "observer_inference": {
+      "analytic_result": {
+        "field_normalization": "f=chi/epsilon; g and h are normalized source and wall traces",
+        "fixed_operator_bijection": "the declared g, h and Y classes are in bijection",
+        "forward": "f=Eg-Af; (Eg)(U,V)=g(V)",
+        "inverse": "f=Eh+Bf=(I-B)^(-1)Eh; g(V)=f(U0,V)",
+        "inverse_integral": "(Bf)(U,V)=integral[U,Uw(V)]dp integral[L(p),V]dq K(p,q)f(p,q)",
+        "inverse_norm_bound": "||B||<=q_*<1; ||g||_infinity<=||h||_infinity/(1-q_*)",
+        "lower_limit": "L(u)=Va for u<=Ua; L(u)=inverse wall V(u) otherwise",
+        "observer_normalization": "theta=T/ell; Y=ell phi_C/epsilon",
+        "observer_to_source_stability": "||g1-g2||_infinity<=(theta_b-theta_a)||Y1-Y2||_infinity/[2(1-q_*)]",
+        "observer_to_wall": "h(V)=(1/2) integral[theta_a,theta(V)] Y(s) ds",
+        "two_model_implication": "a shared observed trace gives a conditional range-overlap question after clocks, normalization and allowed preparations are specified",
+        "verification_method": "differentiate the inverse equation to recover PDE, wall, source and bottom; use the independent Q algebraic factorization"
+      },
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Ub": -0.2747468030926288,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105,
+        "arrival_window_over_ell": [
+          -0.5817589515953444,
+          -0.25023070056069985
+        ],
+        "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+        "radius_lower_bound_over_ell": 0.4,
+        "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+        "radius_upper_bound_over_ell": 0.55,
+        "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+        "wall_radius_window_over_ell": [
+          0.45,
+          0.55
+        ]
+      },
+      "interpretation": "Signal and fixed geometry determine a compatible preparation analytically; a physical preparation law still restricts it.",
+      "knowledge_boundary": {
+        "fixed_operator_source_inverse": true,
+        "geometry_identified_from_one_unknown_preparation": false,
+        "numerically_reconstructed_source": false,
+        "observer_equivalence_established": false,
+        "physical_preparation_law_established": false,
+        "right_parent_causal_exclusion_changed": false,
+        "second_physical_geometry_constructed": false
+      },
+      "limits": [
+        "No source has been reconstructed numerically.",
+        "No equivalence between two physical exterior geometries is established.",
+        "Analyst reconstruction creates no causal channel and preserves all observer-access exclusions."
+      ],
+      "preparation_class": {
+        "initial_zero_segment": [
+          -2.565695357068247,
+          -2.489774421064211
+        ],
+        "initial_zero_segment_origin": "Vs equals the stored v7 input support's left endpoint",
+        "inverse_preserves_original_pulse_subclass": false,
+        "late_support_restriction": null,
+        "observer_condition": "Y=0 on theta([Va,Vs]); theta is the fixed monotone clock",
+        "original_pulse_evidence_unchanged": true,
+        "regularity": "g,h in C2([Va,Vb]); Y in C1([theta_a,theta_b])",
+        "regularity_scope": "C2 reduced field on the retained exterior wedge and C1 central observable; full four-dimensional scalar C2 at the centre is not asserted for every C2 input",
+        "sign_restriction": null,
+        "source_and_wall_condition": "g=h=0 on [Va,Vs]"
+      },
+      "status": "CONDITIONAL_FIXED_OPERATOR_PREPARATION_INVERSE"
+    },
     "preparation": {
       "geometry": {
         "U0": -0.32130105902052203,
