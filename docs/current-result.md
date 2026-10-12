@@ -2,6 +2,26 @@
 
 Current presentation, 13 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Characteristic gravitational initialization, 13 October 2026
+
+The [null constraint](nsc-atlas-characteristic-initialization.md) now determines
+the initial areal-radius correction required by the same prepared conformal
+probe. With the corner geometry and affine normalization fixed, the
+quadratic coefficient $h$ and its affine slope $h'$ are negative after the
+compact input. The unchanged lapse and radius cannot both remain reference
+functions on that sourced leg. Independent integrated and smooth-exterior
+Einstein-frame expressions check the result.
+
+The [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json)
+retains the unchanged field preparation and the declared gravitational data.
+This is an intrinsic initial-leg constraint, not a mass shift, wall
+displacement or evolved backreaction. Zero $T_{VV}$ after the trace does
+not remove transverse scalar derivatives or establish a vacuum future.
+Coupled bulk evolution, normal-force balance, finite-amplitude error bounds
+and stability remain open. The next useful connection is a mixed or
+transverse equation linking these initialized data to an invariant exterior
+response or to the wall. Other atlas routes remain available.
+
 ## Conformal probe stress and shell compatibility, 13 October 2026
 
 The [analytic check](nsc-atlas-scalar-wall-consistency.md) fixes the scalar's

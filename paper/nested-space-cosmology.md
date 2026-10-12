@@ -37,7 +37,9 @@ determines a unique preparation. Positivity and a prescribed source cutoff
 exclude some histories; geometry comparison requires those input restrictions
 to be justified independently.
 The canonically normalized probe adds no singular surface stress or
-tangential flux jump; its bulk gravitational response remains open.
+tangential flux jump. With fixed corner geometry and null normalization,
+the same preparation requires a calculable correction to the initial
+areal radius and its affine slope. Coupled bulk and wall evolution remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1092,10 +1094,108 @@ or tangential exchange from the material wall at quadratic order.
 
 The smooth bulk stress remains an order-$\varepsilon^2$ gravitational source.
 No bulk metric response, normal-force balance, quantitative amplitude bound
-or stability result follows from the surface cancellation. The next physical
-connection is to identify a controlled bulk stress or geometric response from
-the normalized preparation. This can constrain source selection for observer
-inference; it has not yet supplied that selection law.
+or stability result follows from the surface cancellation. Before evolving
+that source, its gravitational initial data must satisfy the constraints.
+The next section supplies one such connection; it does not yet select a
+physical preparation law for observer inference.
+
+### 13.5. The prepared pulse requires gravitational initial data
+
+<!-- nsc-claim:atlas-characteristic-initialization -->
+
+Evidence: [initialization record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json),
+[constraint derivation and independent frame check](../docs/nsc-atlas-characteristic-initialization.md).
+
+The field was propagated on a fixed geometry. Adding its gravitational
+source while keeping all initial metric data unchanged would generally
+violate an Einstein constraint. We retain the same compact characteristic
+preparation and apply the spherical null constraint, borrowed from
+[An and Lim, 2005.04090v1, Eqs. (2.6)-(2.7)](https://arxiv.org/html/2005.04090v1),
+with the full conformal stress of Section 13.4 replacing their matter source.
+
+Write the smooth exterior metric as
+
+$$
+ds^2=-A(U,V)\,dU\,dV+R^2d\Omega^2,\qquad
+G_{VV}=-\frac{2}{R}\left(R_{VV}-\frac{A_V}{A}R_V\right).
+$$
+
+At the source-leg corner keep the reference radius $R=0.4\ell$, both
+expansions and the lapse. The zero-data bottom leg retains its reference
+geometry. On $U=U_0$, choose $A=A_0$, so that the background radius
+$x=R_0/\ell$ is an affine parameter with fixed corner origin and scale.
+This is a declared gauge and gravitational-data choice. Fixing both the
+reference lapse and radius everywhere on the sourced leg is not available.
+
+Express the original compact source as $\chi=\varepsilon b(x)$ and put
+$p=b/x$. The leading scalar trace and formal radius correction are
+
+$$
+\phi=\frac{\varepsilon}{\ell}p+O(\varepsilon^3),\qquad
+\alpha=\frac{\kappa_4\varepsilon^2}{\ell^2},\qquad
+\frac{R}{\ell}=x+\alpha h(x)+O(\alpha^2).
+$$
+
+The affine constraint fixes the coefficient rather than choosing it to fit
+an observation:
+
+$$
+h''=-\frac{x}{3}p'^2+\frac{x}{6}pp'',\qquad
+h(0.4)=h'(0.4)=0.
+$$
+
+Primes mean $d/dx$. After the compact trace ends, integration by parts gives
+
+$$
+h'(x)=-\frac{1}{2}\int_{0.4}^{x}s\,p'(s)^2\,ds<0,
+$$
+
+$$
+h(x)=-\frac{1}{2}\int_{0.4}^{x}(x-s)s\,p'(s)^2\,ds
+-\frac{1}{6}\int_{0.4}^{x}p(s)^2\,ds<0.
+$$
+
+Thus the finite source leaves a reduced initial areal radius and affine
+radial slope relative to the corner-anchored reference. The conformal
+stress need not be pointwise positive during the pulse for these signs
+to hold. The slope is not itself the null expansion $2R_x/R$.
+
+At the last source point $x_b=0.4815042083$, the recorded coefficients are
+$h=-6.1228335482$ and $h'=-162.1805536249$. The calculation uses 129
+displayed samples and 15,360 scalar integrand evaluations, with no new
+wave or bulk Einstein solve. Independent direct integration and integration
+by parts agree; separate quadrature and geometric refinements change $h$
+by less than $4.7\times10^{-14}$ and $h'$ by less than
+$1.7\times10^{-12}$. These are numerical diagnostics, not rigorous decimal
+enclosures or bounds on the omitted perturbative terms. No finite amplitude
+has been selected: the formal radius displacement is $\alpha\ell h$.
+
+![The prepared source and its required initial radius correction](figures/characteristic-initialization.png)
+
+*Figure 8. The original compact trace and its quadratic gravitational
+coefficients along one initial null leg. The affine parameter is the
+reference areal radius divided by $\ell$, with its origin and scale fixed
+at the corner. Shading marks the compact input interval. After it ends,
+the radial-slope correction stays negative and constant. These coefficients
+describe initial data; they are not a mass shift or an evolved wall response.
+The [figure record](figures/characteristic-initialization.json) binds the
+plotted samples to the initialization evidence.*
+
+An independent smooth-exterior check rescales the metric by
+$1-\kappa_4\phi^2/6$ and transforms the affine parameter as well.
+The equivalent Einstein-frame coefficient then satisfies
+$h_E''=-xp'^2/2$, the minimally coupled affine focusing equation.
+This frame comparison does not extend through the material wall without
+transforming its action too.
+
+This result supplies one intrinsic characteristic constraint. Mixed
+equations, transverse derivatives, later wall matching and the coupled
+interior response remain unresolved. Although $T_{VV}=0$ after the trace
+on this leg, transverse scalar derivatives can persist: it is not a claim
+that the remaining spacetime is vacuum. No mass shift, wall displacement,
+finite-amplitude error bound or stability conclusion follows. These
+initialized data now make a transverse constraint or propagation question
+available without starting a new coupled solver.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1376,7 +1476,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Probe stress to geometry | What controlled bulk stress or geometric correction follows from the normalized preparation after the local shell checks? | A physical preparation constraint or a sourced geometric response |
+| Initialized geometry to transverse response | Which mixed equation and remaining gravitational data connect the sourced null-leg correction to an invariant exterior response or later wall matching? | A coupled geometric response with declared corner and boundary data |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1392,7 +1492,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 8. Research dependencies, distinct from spacetime causal arrows.
+*Figure 9. Research dependencies, distinct from spacetime causal arrows.
 Known equations become usable when their inputs, domains and matching are
 established. The diagram records the v7 prerequisite structure; the
 updated [programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
@@ -1411,7 +1511,9 @@ The new inverse shows how a complete finite signal selects its preparation
 within a fixed geometry, and why physical source restrictions must accompany
 any comparison of maps.
 The quadratic stress check now connects that preparation to compatible local
-wall conditions; its bulk gravitational response remains to be established.
+wall conditions. Its characteristic constraint requires a nonzero initial
+radius correction under the declared corner and null normalization; coupled
+bulk and wall evolution remain to be established.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1435,6 +1537,7 @@ and renders their relationships without launching a new physics calculation.
 | Evaluated exterior preparation and finite tail | [Response](../docs/nsc-atlas-prepared-response.md); [v8 manifest](../results/development/nsc-cosmological-atlas-v8/manifest.json) |
 | Fixed-model source inverse and preparation exclusions | [Proof](../docs/nsc-atlas-observer-inference.md); [record](../results/development/nsc-atlas-observer-inference-v1/inference.json) |
 | Conformal probe surface stress and tangential flux | [Derivation](../docs/nsc-atlas-scalar-wall-consistency.md); [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json) |
+| Characteristic gravitational initialization | [Constraint and frame check](../docs/nsc-atlas-characteristic-initialization.md); [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

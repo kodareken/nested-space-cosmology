@@ -6,9 +6,13 @@ The [signal-origin cycle](nsc-cosmological-atlas.md#signal-origin-cycle) now
 reaches a [computed finite prepared response](nsc-atlas-prepared-response.md)
 and analytically positive post-input tail. The known right-parent exclusion,
 prescribed-wall calibration and independently prepared IV response retain
-their different assumptions. The next named question is
-[observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability),
-with no new comparison admitted yet; the remote source remains open.
+their different assumptions. The
+[observer identifiability under preparation freedom](nsc-cosmological-atlas.md#observer-identifiability)
+question now has a fixed-model inverse; a second-geometry comparison and
+the remote source remain open.
+The prepared probe now supplies [gravitational initial data](nsc-atlas-characteristic-initialization.md)
+through one null constraint. Transverse evolution and coupled wall response
+remain the next connections along that branch.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
@@ -17,6 +21,7 @@ Preserved owner routes from the pre-reassembly index, updated to root paths. Dat
 | Active programme and eight theme questions | [Programme owner](nsc-cosmological-atlas.md#eight-linked-research-questions), [dependency map](nsc-cosmological-atlas.md#programme-dependencies); the inventory supplies prior dispositions, not new verification. |
 | Fixed-model inverse and preparation exclusions | [Analytic proof](nsc-atlas-observer-inference.md), [record](../results/development/nsc-atlas-observer-inference-v1/inference.json); exact compatible-source inverse and compact-source restrictions, with numerical inversion and second-geometry equivalence unclaimed. |
 | Quadratic scalar stress and wall compatibility | [Analytic check](nsc-atlas-scalar-wall-consistency.md), [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json); canonical conformal probe has zero singular scalar surface stress and tangential flux jump. Bulk response, normal-force balance and stability remain open. |
+| Characteristic gravitational initialization | [Constraint and frame check](nsc-atlas-characteristic-initialization.md), [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json); the original compact probe forces an initial radius correction at fixed corner and affine gauge. No mass shift or coupled wall evolution is established. |
 | Finite prepared signal and next inference question | [Completed bounded response](nsc-atlas-prepared-response.md), [preparation certificate](nsc-atlas-field-preparation.md), [v8 record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json), [next identifiability connection](nsc-cosmological-atlas.md#observer-identifiability); the finite tail is resolved; its analytic successor constrains preparation freedom, while remote generation and comparison of physical geometries remain open. |
 | Location, branches, commands, and recovery | [Instructions](instructions.md), [consolidation](repository-consolidation.md) |
 | Where a document lives, and which copies match | [Docs route](README.md) |

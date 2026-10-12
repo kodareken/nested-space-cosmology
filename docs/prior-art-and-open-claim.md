@@ -299,3 +299,32 @@ insufficient regularity at the interface or centre, and treating a surface
 cancellation as a solved bulk response. The action convention, one-sided
 trace calculation and separate bulk residual are the checks against these
 failures. A new amplitude estimate or coupled solution needs a later admission.
+
+## Characteristic gravitational initialization admission, 13 October 2026
+
+The probe's surface compatibility leaves its gravitational initial data
+unspecified. A generic finite stress bound would not close that gap: smoothness
+on the compact wedge already supplies boundedness, and the amplitude remains
+free. First ask which null constraint correction the fixed preparation forces.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | Spherical null Raychaudhuri/Einstein constraints and intersecting-characteristic data, including Madler-Gannouji-Gallo [2503.24162v3](https://arxiv.org/html/2503.24162v3), Eqs. (16), (29a), (86)-(92); the existing canonical conformal stress; Aviles-Maeda-Martinez [1910.07534v2](https://arxiv.org/html/1910.07534v2), Eqs. (2.11)-(2.14), (2.21)-(2.24), for an independent smooth-vacuum frame check |
+| Missing | Compatible gravitational data on the admitted source and zero bottom legs; leaving both the radius and null normalization unperturbed has not been justified for a nonzero pulse |
+| Fixed prerequisites | Original v7 C3 reduced-field preparation, v8 leading field, xi=1/6, canonical positive kinetic coefficient, zero scalar background, unchanged corner Schwarzschild geometry and both corner expansions; bottom scalar data zero. Preserve the right-parent causal exclusion. |
+| Gauge and order | Hold the null lapse at its reference value along the source leg, equivalently keep the corner-anchored background areal-radius affine parameter affine there. Solve the order-amplitude-squared radius constraint correction with zero corner correction and derivative; do not also prescribe the original radius all along the leg. |
+| Decision | Determine the required initial radial/expansion correction and whether it vanishes after the compact scalar trace ends. Give an analytic sign or obstruction where possible and evaluate the coefficient for the recorded preparation. No amplitude is selected to make the answer small. |
+| Unlocks | A constraint-consistent input for a later coupled exterior/wall problem, or a precise incompatibility requiring a changed initial-data choice. A source-leg result alone does not determine a mass shift, corrected wall, interior waveform or stability. |
+| Finite domain | Existing U=U0, Va<=V<=Vb in retained sector IV, R/ell in [0.4,0.55], and zero bottom Va, U0<=U<=Ua. No new future domain, global source or full bulk evolution. |
+| Budget | One-dimensional constraint quadratures and exact algebra only; at most 129 displayed source samples, Gauss orders 32/64 split at the fixed support edges, at most 20000 scalar integrand evaluations and 60 CPU seconds per complete evidence creation. Reuse 32/64 geometric adapters. No PDE solver, field re-solve, parameter sweep or bulk derivative campaign. |
+| Independent checks | Derive the constraint from null Raychaudhuri and the full improved stress; compare direct stress integration with integration by parts and the smooth-vacuum Einstein-frame focusing law, including the change in affine parameter. Check zero input, corner/bottom compatibility, support edges, unit scaling and rejection of changed theory/domain. Numerical refinement is a diagnostic, not a rigorous enclosure. |
+| Acceptance | Exact constraint and frame identities agree; independent 32/64 evaluations of the dimensionless correction coefficients agree within 1e-8 absolute plus 1e-8 relative at the displayed points; the last coefficient and any sign statement have an independent analytic check. Report the remaining characteristic and wall equations explicitly. |
+| Stop or redirect | Stop on inconsistent corner data, unanchored affine normalization, a singular frame map, disagreement of independent constraints, exhausted budget or unresolved quadrature. If gravitational initialization needs an unspecified physical datum, expose it instead of silently tuning it. |
+
+The likely failures are overspecifying the radius and lapse together,
+mistaking a gauge-labelled expansion for a mass or observer signal, and
+using the vacuum frame transformation across the material wall without its
+transformed sources. The anchored characteristic data, restricted output and
+exterior-only independent check address these three risks. This is an
+application of borrowed constraints to the existing preparation, without a
+claim of worldwide mathematical priority.
