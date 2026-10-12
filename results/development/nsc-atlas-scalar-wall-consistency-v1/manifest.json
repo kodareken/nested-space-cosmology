@@ -1,0 +1,93 @@
+{
+  "outputs": {
+    "consistency.json": {
+      "bytes": 7259,
+      "sha256": "3037d2b6e01fc75643171766db6c3d5d333a8c55133078212bbd92ba10715d3b"
+    }
+  },
+  "prerequisite_bindings": {
+    "v7": {
+      "authenticated_outputs": {
+        "atlas.json": {
+          "bytes": 98321,
+          "sha256": "e1764bf8fbb464a9e6c90ed31de5938713c6b0d1c46b87ef1fb177c23517bbe8"
+        },
+        "narrative.md": {
+          "bytes": 3279,
+          "sha256": "88dd665b6234bc7aeb5da132c8cf10aaabc80907539fe15900fb16ddf33cc792"
+        },
+        "preparation-access.json": {
+          "bytes": 29625,
+          "sha256": "7f2129c2a1b661b77900e6c713838789ba92399d2ee32c771317079509c01033"
+        },
+        "preparation-domain.png": {
+          "bytes": 242485,
+          "sha256": "79b384bbdcf47ee642fc4e6e63b1548777cfa5eeb67250bc40c25ba167ce84cb"
+        },
+        "preparation-domain.svg": {
+          "bytes": 113011,
+          "sha256": "2fa9aa7dcb37e442b93cd74ae4d701b1caca908adffec19ee80763a728f1377f"
+        },
+        "programme.json": {
+          "bytes": 25920,
+          "sha256": "c5f4532bc55bb26dbac5a48084d96ab3c42404283f5d720a1b25eb54f596ccec"
+        },
+        "research-dependencies.png": {
+          "bytes": 217498,
+          "sha256": "c5bdca932d8aa24a3f394ac9da6a5be5e91afb735112976372774b99dbf7f412"
+        },
+        "research-dependencies.svg": {
+          "bytes": 75790,
+          "sha256": "84c2ddba660dc197267a5d7852dd1e54157b20ce6ffecacfcd17bffaf9e61f30"
+        }
+      },
+      "manifest": "results/development/nsc-cosmological-atlas-v7/manifest.json",
+      "manifest_sha256": "08e3f07a4c0a910852d1fed81949cf334b97bb3497d9ccb3c1aa611259d0bef2",
+      "source_commit": "7fee894ad5a4da2ba378f724e45e926401f82670",
+      "verification": "stored manifest and all output bytes; no source replay or numerical solve"
+    },
+    "v8": {
+      "authenticated_outputs": {
+        "atlas.json": {
+          "bytes": 111628,
+          "sha256": "722240ec90a254c1f9663c6b3ba96da708cd82a3ad96cd145e022ed23fbddb8c"
+        },
+        "narrative.md": {
+          "bytes": 2881,
+          "sha256": "4016cda48be51ff5f8b22fa4e2bdc5245303fe415427dd5a948b3e14963ca566"
+        },
+        "preparation-access.json": {
+          "bytes": 29625,
+          "sha256": "7f2129c2a1b661b77900e6c713838789ba92399d2ee32c771317079509c01033"
+        },
+        "prepared-response.json": {
+          "bytes": 57013,
+          "sha256": "d61260d54f2af093fd716c6ebc381b37f18aff11ebff6b9655676f7ff5ca8e7b"
+        },
+        "prepared-response.png": {
+          "bytes": 263363,
+          "sha256": "10f4bb32041decc0524eb18c32063ec3aeb9e73a67b9c3ac9d1574b279253068"
+        },
+        "prepared-response.svg": {
+          "bytes": 134234,
+          "sha256": "f1a8c07d5d6da6e037c22735b272dd607acc9c01d269596d074bded5205eebfd"
+        },
+        "programme.json": {
+          "bytes": 26776,
+          "sha256": "7575154623a590949e044aabe2a56ff796f878cb2ac0537b70abf56a5c822618"
+        }
+      },
+      "manifest": "results/development/nsc-cosmological-atlas-v8/manifest.json",
+      "manifest_sha256": "c4d4d0d1b1ac667886eb5f20cbcb11205eead9975c7915bbce3bdb8c87aaadb5",
+      "source_commit": "1154baf290d901e73058392e143d0acb37d22951",
+      "verification": "stored manifest and all output bytes; no source replay or numerical solve"
+    }
+  },
+  "schema": "nsc-atlas-scalar-wall-consistency-manifest-v1",
+  "scope": "analytic shell compatibility; no numerical field replay or bulk Einstein solve",
+  "source_bindings": {
+    "docs/nsc-atlas-scalar-wall-consistency.md": "d488b9ada96425252da85e99145a61d520e2d547284a2d707fe98e768afa5945",
+    "scripts/record_nsc_atlas_scalar_wall_consistency.py": "08b50d25cd7ac10079db0830cab0ca4a43acc7b87b589330d3b520fad3364d21",
+    "tests/test_nsc_atlas_scalar_wall_consistency.py": "291ce46db838898550a7a428502967fd79d242bb6e1173a7220955ccf4f92f4d"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "assumptions": [
+    "four dimensions; xi=1/6; no direct scalar-wall action or new surface source",
+    "zero scalar background; phi=epsilon phi_1; quadratic stress evaluated on the unchanged background",
+    "continuous scalar and induced metric, with sufficient piecewise regular traces for the stated products",
+    "original C3 finite preparation; full stress regularity is not inferred for the inverse's broader C2 class",
+    "both smooth bulk G_na=0; scalar-independent background vacuum stress",
+    "f>0 for weak-field interpretation; no quantitative amplitude bound is supplied"
+  ],
+  "borrowed": {
+    "equations": [
+      "2.10-2.14",
+      "3.42-3.46"
+    ],
+    "source": "1910.07534v2",
+    "stored_evidence_use": "existing wall, conformal probe and regular finite preparation; no waveform derivatives used",
+    "use": "non-null variational scalar-tensor junction and field stress; fixed-background application"
+  },
+  "classification": "derived_conditional",
+  "conventions": {
+    "action": "f(phi) R -(1/2)(grad phi)^2; f=1/(2 kappa_4)-xi phi^2/2; scalar potential zero",
+    "bracket": "plus trace minus minus trace using the same normal",
+    "extrinsic_curvature": "K_ab=(1/2) L_n gamma_ab",
+    "field_traces": "[phi]=0; q_pm=n phi_pm; d=[q]; v_a=D_a phi; dd=D_a d",
+    "jump": "[K_ab]=-k gamma_ab; [K]=-3k; C_ab=[K_ab]-gamma_ab[K]=2k gamma_ab",
+    "material_wall": "S_ab=-sigma gamma_ab; k=kappa_4 sigma/2; kappa_4=8 pi G",
+    "normal": "common spacelike normal from cap (-) to exterior (+)",
+    "orientation_check": "reverse the common normal and exchange plus/minus side labels together; one-sided normal derivatives and extrinsic curvatures negate and swap, their jumps and the flux jump stay unchanged, and positive k=kappa_4 sigma/2 stays fixed",
+    "scalar_jump": "d=6 xi k phi; D_a d=6 xi k v_a for constant k",
+    "signature": "(-+++)",
+    "split_action_boundary_terms": "the borrowed variational construction includes its 2 f K boundary terms",
+    "stress_accounting": "xi G_mu_nu phi^2 included once in the improved scalar Hilbert stress on the right"
+  },
+  "domain": {
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105,
+    "arrival_window_over_ell": [
+      -0.5817589515953444,
+      -0.25023070056069985
+    ],
+    "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+    "radius_lower_bound_over_ell": 0.4,
+    "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+    "radius_upper_bound_over_ell": 0.55,
+    "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+    "wall_radius_window_over_ell": [
+      0.45,
+      0.55
+    ]
+  },
+  "exact_symbolic_certificate": {
+    "arithmetic": "exact symbolic expressions; no floating-point scientific evaluation",
+    "nonzero_controls": {
+      "changed_scalar_jump_leaves_surface_residual": true,
+      "nonconformal_nonminimal_flux_is_not_identically_zero": true,
+      "nonconformal_nonminimal_surface_is_not_identically_zero": true
+    },
+    "sympy_version": "1.14.0",
+    "zero_residuals": {
+      "amplitude_homogeneity_flux": "0",
+      "amplitude_homogeneity_surface": "0",
+      "common_scalar_action_normalization_junction": "0",
+      "common_scalar_action_normalization_surface": "0",
+      "conformal_amm_residual_vanishes": "0",
+      "conformal_flux_vanishes": "0",
+      "conformal_surface_vanishes": "0",
+      "flux_after_scalar_jump": "0",
+      "flux_matches_product_rule_components": "0",
+      "general_coupling_surface_flux_balance": "0",
+      "improved_surface_matches_component_distribution": "0",
+      "length_rescaling_flux": "0",
+      "length_rescaling_surface": "0",
+      "normal_and_side_reversal_curvature_jump": "0",
+      "normal_and_side_reversal_flux": "0",
+      "normal_and_side_reversal_surface": "0",
+      "surface_after_scalar_jump": "0",
+      "surface_is_negative_amm_residual": "0",
+      "zero_field_flux": "0",
+      "zero_field_surface": "0"
+    }
+  },
+  "execution": {
+    "creation_runs_exact_algebra": true,
+    "exact_algebra_cpu_seconds_max": 60,
+    "new_floating_point_scientific_values": false,
+    "new_waveforms": 0,
+    "ordinary_check_scope": "stored prerequisite, source and declaration authentication; use --check-algebra to repeat exact identities",
+    "scientific_numerical_solves": 0
+  },
+  "identity_interpretation": {
+    "amm_material_coefficient": "coefficient required of material S_ab; compare with -sigma under k=kappa_4 sigma/2",
+    "flux_jump": "[T_na] from one-sided regular traces, with [K_a^b]=-k delta_a^b and G_na=0",
+    "general_coupling_balance": "D^a Sphi_ab + [T_nb]=0 after the borrowed scalar jump; algebraic diagnostic on the fixed background, not a new nonconformal solution",
+    "length_rescaling_control": "hold phi fixed while rescaling lengths: k,d,v scale as 1/s and dd as 1/s^2; this checks derivative homogeneity, not a complete natural-unit rescaling or comparison of different physical couplings",
+    "normalization_control": "multiply the scalar kinetic and nonminimal terms by the same positive constant; surface stress scales by that constant and the scalar jump is unchanged; canonical coefficient one remains the chosen model",
+    "surface_coefficient": "Sphi_ab = surface_coefficient gamma_ab; Tsing_ab=Sphi_ab delta_Sigma, with proper-distance delta"
+  },
+  "independent_review": {
+    "limit": "exact algebra checks identities once their geometric and distributional assumptions are supplied",
+    "reference": "docs/nsc-atlas-scalar-wall-consistency.md",
+    "scope": "independent distributional-stress and variational-junction derivations; common-normal tangential-flux calculation"
+  },
+  "inputs": {
+    "H_ell": 1.0,
+    "M_over_ell": 0.4,
+    "additional_surface_scalar_coupling": 0.0,
+    "angular_mode": 0,
+    "k_ell": 2.0,
+    "length_scale": 1.0,
+    "linear_probe": true,
+    "wall_branch": "expanding",
+    "xi": 0.16666666666666666
+  },
+  "knowledge_boundary": {
+    "additional_singular_scalar_surface_source_required_at_conformal_coupling": false,
+    "bulk_einstein_response_solved": false,
+    "fixed_background_with_nonzero_probe_claimed_exact": false,
+    "nonzero_tangential_scalar_flux_jump_at_conformal_coupling": false,
+    "normal_force_condition_computed": false,
+    "physical_preparation_law_established": false,
+    "quantitative_amplitude_bound_established": false,
+    "stability_established": false
+  },
+  "next_unlock": "a separately admitted preparation-energy or sourced-geometry question; keep normal-force and bulk response explicit",
+  "owner": "docs/nsc-atlas-scalar-wall-consistency.md",
+  "preparation_regularity": "C3 compact polynomial; derivative C2; not C-infinity",
+  "schema": "nsc-atlas-scalar-wall-consistency-v1",
+  "status": "CONDITIONAL_CONFORMAL_SCALAR_SURFACE_AND_TANGENTIAL_FLUX_COMPATIBILITY",
+  "symbolic_identities": {
+    "amm_material_coefficient": "-4*k*f + 2*d*fp",
+    "flux_after_scalar_jump": "4*xi*(1 - 6*xi)*k*phi*v",
+    "flux_jump": "(1 - 2*xi)*d*v - 2*xi*phi*dd - 2*xi*k*phi*v",
+    "surface_after_scalar_jump": "2*xi*(6*xi - 1)*k*phi**2",
+    "surface_coefficient": "xi*(2*phi*d - 2*k*phi**2)",
+    "surface_tangential_derivative": "xi*(2*v*d + 2*phi*dd - 4*k*phi*v)"
+  }
+}

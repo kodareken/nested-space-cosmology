@@ -382,6 +382,75 @@ $T\to\infty$. Borrow the need for independently identified input information:
 known statistics alone are not this dataset, and the finite moving-wall
 experiment does not inherit its recovery theorem.
 
+<a id="conformal-stress-library"></a>
+
+### Conformal scalar stress at a thin wall
+
+These focused readings support the [quadratic stress admission](prior-art-and-open-claim.md#conformal-probe-stress-and-shell-admission-13-october-2026),
+the [field matching](nsc-atlas-field-matching.md) and
+[moving-wall conservation](nsc-atlas-moving-boundaries.md) owners. They supply
+established identities for a finite compatibility check, not a new junction
+theory. This bounded search is neither exhaustive nor a priority claim.
+
+**Aviles-Maeda-Martinez, [1910.07534v2](https://arxiv.org/html/1910.07534v2), 23 October 2019.**
+Read sections 2.1-2.4 and 3.1-3.5.2; appendix derivations, null shells and later
+applications remain unaudited. Equations (2.10)-(2.14) supply the Jordan-frame
+action and scalar/metric equations. With our timelike shell, common normal,
+$K_{ab}=\tfrac12\mathcal L_n\gamma_{ab}$ and $\kappa_4=8\pi G$ (distinct from
+wall $k$), equations (3.42)-(3.44) give
+
+$$
+f=\frac{1}{2\kappa_4}-\frac{\xi\phi^2}{2},\qquad
+M=[n\phi]=2f'[K],\qquad
+-2f([K_{ab}]-\gamma_{ab}[K])+2Mf'\gamma_{ab}=t_{ab}.
+$$
+
+Here $t_{ab}$ is material surface stress, excluding the scalar. Borrow the
+coupled jumps and divergence check (3.51)-(3.54), keeping scalar improvement
+and material stress separate. Continuous metric/scalar and piecewise regular
+fields underlie (3.10)-(3.33); a discontinuous coefficient times a delta
+distribution is not automatically defined. Equations (3.45)-(3.46) use the
+appropriate gravitational boundary terms and a scalar-independent material
+shell action. This does not supply a bulk backreaction solution. Frame changes
+also transform material couplings; section 2.4 prevents retaining them silently.
+
+**Barcelo-Visser, [gr-qc/0008008v1](https://arxiv.org/html/gr-qc/0008008v1), 3 August 2000.**
+Read section 2.2, section 3, opening of section 4 and section 5, with section
+2.1 for conventions; dilaton applications and bulk solutions remain unaudited.
+The timelike codimension-one construction allows finite derivative jumps,
+an intrinsic shell action and bulk scalar kinetic matrix $H_{ij}$. Equations
+(2.24), (2.28), (2.37)-(2.45) independently supply nonminimal coupled jumps.
+Their $K^{BV}_{ab}=-\tfrac12\partial_\eta q_{ab}$ is the opposite of ours;
+translate $F=2f$, $J=[n\phi]$ and $[K^{BV}]=-[K]$ before comparing (2.40)-(2.41).
+Their $F(\phi)(R-2\Lambda)$ action must not silently replace our
+scalar-independent background vacuum stress. Inverted formulas require
+nonzero $F$ and a nonsingular junction matrix; section 3's exceptional
+configurations are not generic conformal-scalar behavior. Section 5 also
+limits frame equivalence at singular transformations and requires consistent
+transformation of observer/matter dynamics.
+
+**Saharian, [hep-th/0308108v2](https://arxiv.org/html/hep-th/0308108v2), 12 December 2003.**
+Read sections 2-3 and the conservation/charge discussion in section 4;
+quantum spectral, Casimir and appendix calculations remain unaudited.
+Equations (3.11), (3.29)-(3.34) separate volume Hilbert stress from a surface
+delta contribution; (3.39)-(3.42) connect its Robin condition and surface
+divergence to bulk flux. Borrow this accounting distinction. Its signature
+and curvature conventions differ, and its one-sided manifold boundary is
+not our two-sided transmitting shell. Do not append its Robin condition or
+count its boundary stress again after using the coupled shell junction.
+
+**Fewster-Osterbrink, [gr-qc/0606009v2](https://arxiv.org/html/gr-qc/0606009v2), 15 August 2006.**
+Read sections I-II.2, Theorem III.1 and conclusion; appendix proofs remain
+unaudited. Equation (4) gives improved stress in their conventions. Theorem
+II.1/(10) bounds sampled stress along affine causal geodesics for on-shell
+$C^2$ fields and $0\leq\xi\leq1/4$, including conformal coupling. Theorem
+II.2/(22) additionally needs a complete Ricci-flat geodesic, bounded field
+and an existing integral for nonnegative full averages. Borrow the challenge
+to pointwise positivity assumptions, not an energy-positivity certificate
+across our derivative-jump wall. Applying these bounds inside smooth bulk
+requires their sampling/regularity hypotheses; a shell-crossing extension
+remains unprovided.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.

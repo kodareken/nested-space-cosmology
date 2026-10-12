@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-12",
+  "recorded_on": "2026-10-13",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -88,6 +88,11 @@
       "section": "13.3",
       "status": "derived",
       "owner": "docs/nsc-atlas-observer-inference.md"
+    },
+    "atlas-scalar-wall-consistency": {
+      "section": "13.4",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scalar-wall-consistency.md"
     }
   },
   "findings": [
@@ -232,6 +237,14 @@
       "note": "docs/nsc-atlas-observer-inference.md",
       "record": "results/development/nsc-atlas-observer-inference-v1/inference.json",
       "paper_section": "13.3"
+    },
+    {
+      "id": "atlas-scalar-wall-consistency",
+      "status": "derived",
+      "summary": "The canonically normalized conformal probe adds no singular scalar surface stress or regular tangential flux jump at the fixed pure-tension wall. This quadratic local compatibility check leaves bulk backreaction, normal-force balance, quantitative amplitude validity and stability open.",
+      "note": "docs/nsc-atlas-scalar-wall-consistency.md",
+      "record": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
+      "paper_section": "13.4"
     }
   ]
 }

@@ -28,6 +28,7 @@ INPUTS = {
     "programme": "results/development/nsc-cosmological-atlas-v8/programme.json",
     "prepared_response": "results/development/nsc-cosmological-atlas-v8/prepared-response.json",
     "observer_inference": "results/development/nsc-atlas-observer-inference-v1/inference.json",
+    "scalar_wall_consistency": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -67,6 +68,22 @@ def load_evidence() -> tuple[dict, dict]:
             or inference["inputs"] != response["inputs"]
             or inference["domain"] != response["domain"]):
         raise ValueError("The inference record no longer supports the fixed-model analytic inverse.")
+    stress = records["scalar_wall_consistency"]
+    stress_boundary = stress["knowledge_boundary"]
+    if (stress["status"] != "CONDITIONAL_CONFORMAL_SCALAR_SURFACE_AND_TANGENTIAL_FLUX_COMPATIBILITY"
+            or stress["inputs"] != response["inputs"]
+            or stress["domain"] != response["domain"]
+            or any(stress_boundary[key] is not False for key in (
+                "additional_singular_scalar_surface_source_required_at_conformal_coupling",
+                "nonzero_tangential_scalar_flux_jump_at_conformal_coupling",
+                "normal_force_condition_computed",
+                "bulk_einstein_response_solved",
+                "fixed_background_with_nonzero_probe_claimed_exact",
+                "quantitative_amplitude_bound_established",
+                "stability_established",
+                "physical_preparation_law_established",
+            ))):
+        raise ValueError("The stress record no longer supports local shell compatibility with bulk response open.")
     return records, provenance
 
 
@@ -174,7 +191,7 @@ def render(output: Path) -> dict:
         "Analytic inverse: signal + fixed geometry → source\n"
         "Permitted preparation still needs a physical law",
         color="causal", size=13)
-    label(4.5, 0.64, "Remote preparation and later evolution remain open", 13, color="muted")
+    label(4.5, 0.64, "Probe stress: shell compatible; bulk response open", 13, color="muted")
 
     for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
                           (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
@@ -238,6 +255,17 @@ def render(output: Path) -> dict:
                     "Analyst reconstruction creates no causal channel and preserves all observer-access exclusions.",
                 ],
             },
+            "scalar_wall_consistency": {
+                "status": records["scalar_wall_consistency"]["status"],
+                "domain": records["scalar_wall_consistency"]["domain"],
+                "knowledge_boundary": records["scalar_wall_consistency"]["knowledge_boundary"],
+                "interpretation": "The canonically normalized conformal probe requires no additional singular scalar surface source or tangential flux jump at quadratic order on the fixed wall.",
+                "limits": [
+                    "The original C3 preparation supplies the regularity; the full C2 inverse class is not covered automatically.",
+                    "The bulk metric response and normal-force condition remain unresolved.",
+                    "No quantitative amplitude bound, stability result or physical preparation law is established.",
+                ],
+            },
             "displayed_connections": [
                 {"from": "cap", "to": "wall", "kind": "attachment", "status": "checked initial slice"},
                 {"from": "wall", "to": "bridge", "kind": "attachment", "status": "checked initial slice"},
@@ -257,6 +285,7 @@ def render(output: Path) -> dict:
             "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
             "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
             "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
+            "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],
