@@ -76,6 +76,8 @@ jobs:
             requirements-paper.txt
       - name: Install the preparation and response renderer profile
         run: python -m pip install -r requirements.txt -r requirements-paper.txt
+      - name: Record the numerical runtime before strict replay
+        run: python -c "import sys,json; sys.path.insert(0,'scripts'); from diagnose_history_replay import runtime_metadata; print(json.dumps(runtime_metadata(),indent=2))"
       - name: Replay preparation and response in their original source contexts
         run: |
           python scripts/replay_history.py atlas-v7

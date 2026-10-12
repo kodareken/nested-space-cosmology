@@ -166,6 +166,15 @@ producer's `--check` on the frozen canonical bundle after a bound owner changes
 must fail. Neither the historical result nor its hash is rewritten to make the
 current source fit. Use the explicit context to replay the original result.
 
+Hosted-runner boundary: on 12 October 2026, the first Windows v8 CI replay
+failed its `prepared-response.json` comparison; a subsequent runner passed
+the unchanged original producer and tolerances. The differing fields from
+that first run were not retained, so its cause remains unresolved. Package
+versions alone do not bind CPU dispatch or BLAS configuration. Each v7/v8 CI
+run now logs that runtime, and a failure preserves original-producer outputs
+and field-level comparison diagnostics. A successful later run does not
+certify identical replay on every machine or excuse a future mismatch.
+
 The former `make reproduce`, `make reproduce-development` and `make reproduce-exact`
 campaign routes now stop with guidance. Their frozen release inputs differ from
 the merged current sources; running the old producer against the current package
