@@ -173,3 +173,75 @@ The command authenticates the existing records, checks the new
 symmetry/domain map and applies their energy normalization. It compares
 all fields and leaves the complete evolving parent-to-child solution,
 physical stability and cosmological predictions open.
+
+
+## A scale-inherited LLL candidate fails the actual neck source test
+
+For transparent LLL propagation under the stated inherited-Hamiltonian
+scaling, $\kappa_c=\Omega\kappa_p$ and
+
+$$t_u=\frac{|q|\kappa_p^2}{48\pi},\quad t_v=\Omega^2t_u,
+\qquad P_{\rm parent}=\frac{|q|\kappa_p^2}{48\pi}(1-\Omega^2).$$
+
+On the recorded q=4 scale branch this gives
+$P_{\rm parent}=-0.02227623165818482$. It describes a candidate
+directed incoming state in the parent energy frame, not a cosmological
+density rate. The global clock-transfer geometry has not independently
+proved the scaling. Using the actual neck
+$A=1-3\pi/2$, $A'=6$, $A''=-3\pi$, $r=1$ and
+$\beta^2=3\pi/2$, the existing conformal stress/PG projection gives
+
+$$T^{(4)}_{++}=0.007886485863354125,\qquad
+T^{(4)}_{--}=0.05267065468742516.$$
+
+Both are positive, whereas this black-universe neck requires both radial
+null components negative. This is the scoped binding obstruction of the
+transparent MMP LLL sector on this geometry; it neither removes the scale
+root nor excludes the full charged angular/compact CTP source and its
+actual recursive transmitting domain. MMP's own horizonless throat keeps
+its different source/geometry identification.
+
+## Counted local warp-conversion source and its unbounded remainder
+
+Keep the exact identity $\mathcal J_\Lambda=\mathcal J_{\le4}
++\mathcal J_{\rm remainder}$ on the original metric. Its local contribution is
+
+$$S_{J,\le4}=-\int\sqrt{-g}
+[V_J+A_JR_L+C_{W,J}C^2+C_{E,J}E_4+C_{\Box,J}\Box R_L].$$
+
+The stored $\Lambda=2$, ell=2, warp s=1 allocation gives
+$V_J=-0.00528370024139$,
+$A_J=-0.00011105299768$ and
+$C_{W,J}=0.00000420159048$, with dimensions length^-4, length^-2
+and one. The matched coefficients are reused, not fitted. $A_J$ enters
+the complete Einstein coefficient once; its $-2A_JG$ tensor is not added
+again to the counted source side. The free Dirac combination supplies no
+independent R_L² coefficient, without setting other sectors' terms to zero.
+
+The retired producer varied N,q,r and their first/second derivatives in
+the general $Nqr^2C^2$ density before imposing the neck profile. After the
+correct interior frame conversion, unit C² coefficient gives
+
+$$(\rho,T_{01},p_\parallel,p_\perp)_{C^2}
+=(-48,0,112/3+16\pi,-128/3-8\pi),$$
+
+with trace zero. In the PG frame the same tensor is
+$(-112/3,-32\beta/3,48+16\pi,-128/3-8\pi)$.
+For $V=V_J$, $c=C_{W,J}$, adding the vacuum contribution yields
+
+$$F_{J,\rm counted}=\begin{pmatrix}
+4\pi(V-112c/3)\\-128\pi\beta c/3\\
+4\pi[V-(48+16\pi)c]\\8\pi[V+(128/3+8\pi)c]
+\end{pmatrix}.$$
+
+Its Killing power is exactly
+$-\beta F_N-(\beta^2+1)F_\beta+\beta F_q=0$.
+A nonzero PG mixed tensor therefore supplies no compensating energy flux.
+The remaining source equation is
+$F_{\rm canonical}+F_{J,\rm counted}+F_{\rm unknown}
+=F_{\rm required}(a_{\rm EH})$. Unknown includes the nonlocal
+J remainder, remaining vacuum conversion, other compact sectors and
+gauge/interface forces. The remainder has no established small bound here,
+so this evaluated summand is neither a controlled full-source truncation
+nor a self-sourced neck. Original spectral/source records are reused
+without a new generator.

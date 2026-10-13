@@ -53,3 +53,25 @@ These data feed the continuous residual enclosure. The time coefficient
 remainders, reciprocal-radius remainder, complete source coverage and
 physical constraint residual still require their own bounds. The local
 physical gate remains OPEN.
+
+
+## Refinement and bound-preserving table reduction
+
+The p=8 table's first-derivative w tail was about `2.76e-8`. The successor
+kept the same analytic profile and period, using p=16, 1024 cells per
+transition, M=65536 and K=8192. Shared coefficient balls must overlap the
+earlier table; exact dyadic enclosures own the result, and binary64 report
+values are display only. This prepares geometry without evolving a field
+or source and leaves the quantum source-energy UV bound separate.
+
+A smaller convolution, including the K=1024 residual-validation control,
+can retain the same physical profile by adding every discarded coefficient
+to each required derivative remainder:
+
+$$T_j^{\rm reduced}=T_j^{\rm old}+
+\sum_{K<|k|\le K_{\rm old}}|2\pi k/L|^j|c_k|_{\rm upper}.$$
+
+The old continuum tail beyond $K_{\rm old}$ remains included. The control
+reused the continuous residual-cell code with a private convolution wrapper;
+no global factory or physical frequency was changed. Faster one-cell
+validation is neither complete-history coverage nor a physical gate.

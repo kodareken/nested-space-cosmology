@@ -97,7 +97,7 @@ evolution implies `w_d -> 0` and `q_dec -> 1/2`. The conclusion also requires
 the preceding gravity, dust, and conservation assumptions. Zero transfer alone
 does not imply it: the flat positive-Lambda control has `Q_b=0` and
 `q_dec -> -1`, while its dark-to-baryon ratio diverges with finite curvature.
-The [plateau owner](nsc-plateau-conditions.md) derives these distinctions.
+The ratio dynamics below retain these distinctions.
 
 Even a known function `Q_b(t)` does not select the pressure or expansion.
 For any regular chosen expanding `a(t)` in the closed dust baseline,
@@ -170,3 +170,41 @@ Because these data have now informed development, they are development targets.
 Confirmation requires an explicitly reserved, previously unseen comparison or
 future independent data, with the operator, state prescription, parameters, and
 prediction procedure frozen before inspecting that result.
+
+
+## Ratio dynamics and future plateau controls
+
+Under the closed flat constant-G, positive-density dust baseline above,
+let $r=\rho_d/\rho_b$ and $\epsilon=Q/[H(\rho_b+\rho_d)]$. The exact
+conservation identities are
+
+$$r'=-3w_dr-(1+r)^2\epsilon,\qquad
+f'=-3w_df(1-f)-\epsilon=(1-f)(1-2q_{\rm dec})-\epsilon.$$
+
+A positive fixed ratio requires
+$\epsilon_*=-3w_{d*}r_* /(1+r_*)^2$. For an autonomous scalar equation
+$r'=F(r)$, local attraction needs $F'(r_*)<0$; a state/geometry-dependent
+stress requires the full coupled Jacobian. At Q=0,
+$r(N)=r(0)\exp[-3\int_0^Nw_d(s)ds]$: a finite positive limit needs a
+convergent integral, and regular asymptotic evolution then gives
+$w_d\to0$, $q_{\rm dec}\to1/2$. In an autonomous zero-transfer model
+$w_d(r_*)=0$ is stable when $w_d'(r_*)>0$. Convergence of the ratio
+alone does not establish regularity of its derivative.
+
+The illustrative present values $(\rho_b,\rho_d)=(0.05,0.95)$ and
+$w_{d0}=-14/19$ do not predict a ratio19. Controls
+$w_d(N)=-(14/19)e^{-kN}$, Q=0, k=1,4,20 share present
+$q_{\rm dec}=-0.55$ but have
+
+$$r_*=19e^{42/(19k)},\qquad
+\log[r_*/r(N)]=\frac{42}{19k}e^{-kN},\qquad
+0\le f_*-f(N)\le\tfrac14\log[r_*/r(N)].$$
+
+These are prescribed histories with exact tail control, not NSC evolution
+or attraction proofs. Even $w_d\to0$ is insufficient: the control
+$w_d=-1/(1+N)$ gives $r=19(1+N)^3\to\infty$ while curvature flattens.
+A Schur fixed point such as $\Gamma=i-\Gamma^{-1}$,
+$\Gamma_*=i(1+\sqrt5)/2$, contracts in room depth with derivative
+$-1/\varphi^2$ but contains no cosmic-time stress law. Ratio divergence,
+bounded fraction, curvature behavior and operator recursion therefore
+remain distinct tests; the common action must derive the physical history.

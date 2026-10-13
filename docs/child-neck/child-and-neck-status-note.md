@@ -37,7 +37,7 @@ Setting: parent of 10 solar masses (`r_g = 29.5 km`, `G M_p/c^3 = 49 microsecond
    has `adot=0` and `1+adot^2=1` at a real turning point, not zero. The claimed
    zero geometric mass there is withdrawn. Tiny near-cancellation neck-onset
    values require a consistent curvature treatment; the saved JSON is unchanged.
-   See [the corrected owner](israel-matching-note.md).
+   See [the consolidated junction correction](#closed-child-junction).
 
 ## 3. Named missing ingredients (sized where possible)
 
@@ -68,3 +68,127 @@ Radiation relation `rho c^2 = 3 c^2/(32 pi G t^2)` at the child's time of neck o
 3. One outside kernel `Pi(k)` for both the late push (`~5.8e-10 J/m^3`) and the catch (`~3.9e74 J/m^3`).
 4. Whether the two sides of a throat carry opposite `h` (swap symmetry): first pass done (`swap-symmetry-note.md`). Three swaps keep the Dirac equation, its mass and the `V.A` term: `T` exchanging the black-hole and white-hole interiors (same sign of matter and helicity), `CP` exchanging the two exteriors and `CRT` exchanging both pairs (opposite sign of both). Remaining: which swap the NSC throat realises; with the `T` image the child inherits `eta = N0/N_need = 6.5e-21`, `9.2e10` below `6e-10`.
 5. The items in section 3 for the neck layer.
+
+## 6. Consolidated derivations and assumptions
+
+### Collapse and production
+
+The cold, free-neutron-gas comparison gave a TOV maximum of `0.710` solar
+masses at central density `4.0e18 kg/m^3`, radius `9.26 km`, versus the
+Newtonian limiting mass `5.73` solar masses. These were session calculations,
+not an independently bound repository result. Pressure contributes to GR
+gravity. With the illustrative `H0 = 70 km/s/Mpc`, `Omega_Lambda = 0.7`, the
+Sun's pull at 1 AU exceeds `Omega_Lambda H0^2 r` by `1.1e22`; that comparison
+does not derive an NSC cosmological constant.
+
+The Popławski closed-FLRW production check assumed `N ~ a^-3` and substituted
+the paper's Eq. (4). It found `H_max = 7.77e23 /s`,
+`H_max / omega_n = 0.544`, and the mode-count bound `(2/3) adot_max^3 = 2.8e39`
+pairs, `38.8` orders below the required population. Its density
+`7.7e84 /m^3` requires Fermi energy density `1.1e88 J/m^3`, against the
+assumed `3.9e74 J/m^3`. The production law and bounce state therefore remain
+unsupported within that model; shear production is a separate calculation.
+The paper's non-reduced Planck-mass convention is required for Eqs. 5–6;
+the Eq. 8 prefactor was not reproduced.
+
+For one massless Dirac field in one Kasner epoch, the corrected pair density is
+`C = n(c tau)^3 = Lambda_2 u_c^2/(2 pi^2)`, `Lambda_2 = 0.01424`.
+At `u_c = 1`, `C = 7.2e-4`. Fermions are twice the pair count: the recorded
+`0.37 N_need` comparison becomes `0.73 N_need`. The stop estimates use
+`x_br^2 = 24 pi e` and `x_t^2 = pi C^2/e`, with `x = c tau/l_P`,
+`eps = e/tau^4`, `n_f = 2C/tau^3`. Their ranges in section 1 depend on the
+sharp `u_c` cut, a chosen thread length and omission of BKL epochs and torsion
+from the field evolution. They do not supply a controlled Planck-scale history.
+
+### Particle number, expansion and nesting
+
+The free degenerate-gas contact model uses
+`eps_eff = eps_F - alpha n^2`, `alpha = kappa (hbar c)^2/32`. At the
+density-cancellation scale its no-production energy is `3.99 E_P` per
+fermion, so the quoted floor at `N_need = 1.8e78` is `7.9e40` solar masses.
+That is a matter-energy sizing under this equation of state, not the
+geometric mass of an exact closed-FLRW bounce. The recorded paper mass
+`1.7e31` solar masses was recalled from its Eq. 9 scaling without rederiving
+the prefactor. Reading it at a later expansion epoch is an open interpretation.
+
+With fixed `N`, adiabatic expansion and complete pair annihilation, the
+turnaround equation is `a^2 - r_m a - r_rad^2 = 0`,
+`r_m = 2G eta N m_n/c^2`, `r_rad^2 = (2G/c^4) N 3.99 E_P a_b`.
+It gives the radiation/matter crossing `eta = 9.0e-8` and the masses in
+section 1; surviving matter is assumed to be neutrons. Acceleration lasts
+only to `a/a_b < sqrt(2)`, so this construction supplies no inflation.
+The full generation map crosses child = parent only at `0.65` Planck masses,
+where `N_f < 1`; the former fixed point `1.8e11 kg` was a false extension of
+the matter-dominated formula. The thermal and entanglement caps are bounds
+on a chosen state. The closed-radiation estimate
+`L_c = (pi/3) [x(2-x)]^(3/2)/x` uses a free Kasner-onset parameter `x`.
+None selects the constant recursive scale `Omega = 3.97`.
+
+### Conserved numbers and operator splitting
+
+Pair production leaves the parent's net baryon number unchanged. With
+baryon conservation, inheritance alone gives `eta <= M*/M`,
+`M* = m_P^2/(4 c1 m_n) = 1.8e11 kg`, `c1 = 0.3975`.
+The `4.11` nats per pair assumes one partner is traced out; the whole pure
+thread has zero entropy. Its arrow-of-time example already works at `eta=0`.
+
+The classical, thermal Hehl–Datta estimate is `delta/T = 37.8 p`,
+`eta = 34.5 p` for small polarisation; rotation could supply
+`p_max = a*/(2 c1 L) = 1.26 a*/L`. The operator mean-field calculation
+supersedes this as a particle/antiparticle splitting mechanism: minimal
+`A.A` gives exactly zero splitting between equal-helicity partners.
+The nonminimal FMT interaction gives `4 kappa' (alpha/gamma) h` from `A.V`
+and `-4 kappa' alpha^2 n_V` from `V.V`,
+`kappa' = (3 kappa/16) gamma^2/(gamma^2+1)`.
+Here `alpha` is the nonminimal coupling, distinct from the contact coefficient
+above. With `beta = 2 gamma alpha/(gamma^2+1)`,
+`eta = 34.5 (beta/2) chi_h`; inherited `chi_h <= 8.9e-21` for the example
+requires `beta ~ 3.9e9` to reach `eta = 6e-10`. Thermal equilibrium, a held
+helicity background and one massless species are assumptions. No source of
+that helicity or asymmetry was derived.
+
+The free-Dirac Kruskal swap test preserves both mass and the `V.A` term for
+`T` on II↔IV, `CP` on I↔III and `CRT` on both pairs. `T` preserves the signs
+of `n_V,n_5`; `CP,CRT` reverse both. The inherited `T` image gives
+`eta = N0/N_need = 6.53e-21`; the calculation does not choose the physical
+swap and does not make the whole child's energy an inherited parent image.
+
+<a id="closed-child-junction"></a>
+### Closed-child junction and neck stress
+
+In geometric units, `R = a sin(chi)` and
+`2m = a sin(chi)^3(1 + adot^2)`. At a real turning point `adot=0`, so
+`m = a sin(chi)^3/2`. Exact density cancellation gives `adot^2=-1` in the
+closed equation and cannot establish zero mass at a real bounce. The tiny
+near-cancellation onset numbers remain unverified approximation outputs.
+
+For a timelike shell, `beta^2 = 1-2m/R+Rdot^2`,
+`sigma = -[beta]/(4 pi R)` and
+`P = ([K^tau_tau]+[K^theta_theta])/(8 pi)`, with the normal directed
+from child to exterior. The radiation-era mass match uses
+`R_j^3 = r_gp a^2/(1+adot^2)`; its timelike segment starts at
+`t_exit/27`, `R=r_g/9`. A shell-free vacuum match requires a comoving
+boundary and zero child pressure. A large closed child with
+`beta_-<0,beta_+>0` needs negative surface energy, with
+`|E| >= sqrt(2R|M_p-m_-|)`. These thin-shell statements treat torsion as an
+effective fluid and omit spin delta functions, recollapse and a physical
+layer model. Unread FMM papers do not independently support the example.
+
+Codazzi gives `sigma(q+2w) Rdot/R = -T_un`,
+`q = d ln|E|/d ln R`, `T_un = (eps+p) a chi' gamma^2`.
+For the outgoing, child-rest-frame segment with `sigma<0,T_un<=0`,
+`w <= -q/2`. Torsion with `eps_eff<0` has `w>=1`, incompatible with a
+rising minimum `|E|`; its lifetime estimates apply only to the thread path.
+The bag-boundary Dirac slab has
+`E/A = -(7 pi^2/2880) hbar c/d^3`, `w=-1`. Normal-stress balance turns
+its filled surface into a vacuum-like layer and the filled torsion constituent
+into dust-like stress. Half of each gives the thread's `w=-1/2`, with the
+`7.6e-36` density tuning at `R=1 m` in section 3. The fill, energy exchange,
+Planck-scale onset and self-gravity remain missing.
+
+With exterior vacuum, the sweep ledger is
+`dE = A (4/3) eps v gamma dt`, `dN = A n_f v dt`, `dB = eta dN`,
+`v=|a chi'|`. Quanta enter the layer, not the exterior. The `w=-1/2`
+trajectory's end energy varies from `-6.1` to `-6.8 M_p` with integration
+tolerance; the `1.3–3.2 M_p` sweep range excludes the `w=-1` run's much
+larger energy. Layer transport and field content at the neck remain open.

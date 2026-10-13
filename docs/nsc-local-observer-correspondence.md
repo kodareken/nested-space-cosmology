@@ -136,3 +136,61 @@ continuum vacuum-matched claims above. The incoming campaign remains paused.
 Its closure and a cosmological fit are not prerequisites for the
 [exterior atlas](nsc-cosmological-atlas.md). Each candidate names
 its actual dependencies; this historical list does not start a campaign.
+
+## Transmitting memory and the finite Gaussian differential
+
+For the whole-line PG convention $G^R(t,s)=-i\theta(t-s)U(t,s)$, the
+transmitting packet resolvent enters as $G_J^R(z)=-\mathcal R(z)$ and
+$D_J^R(z)=-\mathcal K(z)$. This energy-dependent inverse carries eliminated
+bulk memory and is not a branch unitary or an instantaneous Hermitian link.
+Its harmonic vertex obeys
+$\delta\mathcal R_A(z_o,z_i)=-J^\dagger R(z_o)W_AR(z_i)J$ and
+$\delta D_{J,A}^R=\mathcal K(z_o)\delta\mathcal R_A\mathcal K(z_i)$.
+The 33-channel control used $z_i=0.2+0.25i$, $z_o=0.6+0.25i$;
+the real transfer $0.4$ is a response argument, not a selected history.
+Retarded and advanced blocks preserve their distinct causal directions.
+The Keldysh kernel additionally requires the full Cauchy covariance and
+packet/complement cross correlations; retarded response alone determines
+no occupation.
+
+For full canonical branch unitaries, the retained first differential is
+
+$$
+\delta\Gamma_G=-i\operatorname{Tr}
+\left[Q^{-1}C_0(\delta V_-^\dagger V_++V_-^\dagger\delta V_+)\right],
+\qquad Q=I-C_0+C_0V_-^\dagger V_+.
+$$
+
+The 33-channel finite-difference checks authenticate this imported identity.
+Equal-history common changes are flat and select no kernel. With
+$V_\pm(s)=e^{\pm isX/2}V$, the difference derivative is
+$\operatorname{Tr}(VC_0V^\dagger X)$; $X=I/\sqrt{d_c}$ gives
+$\operatorname{Tr}(C_0)/\sqrt{d_c}$ independently of $V$.
+Admissible metric/embedding derivatives, the same-action boundary remainder
+and reference/local allocation are still required for physical selection.
+The finite Gaussian complementary determinant is not silently identified
+with the separately unresolved $\Gamma_{\rm rest}$.
+
+## Historical vacuum-matched prescription
+
+That candidate defined
+$\mathcal B_\Lambda^E=\Gamma_{\rm heat,\Lambda}^E
+-\Gamma_{\rm canonical,vac}^E$ in a common normalization, then proposed
+
+$$
+Z_{\rm vm}=e^{i(\mathcal B_\Lambda^L[g_+]-\mathcal B_\Lambda^L[g_-])}
+\det(I-C_0+C_0U_-^\dagger U_+).
+$$
+
+The real, state-independent phase preserves equal-history normalization and
+canonical overlap modulus. This is an explicit quantization choice, without
+a proof of causal metric dynamics or a unique Euclidean-to-state prescription.
+Its bounded proper-time quadratic radius vertex has
+$\mathcal B_{2,L}(\omega)=\mathcal B_2(-\omega^2)\in\mathbb R$ at finite
+spatial rank. For the 12-point AP circle, $R=2,a=N=q=1$, one reduced
+$\kappa=1$ block and cutoff 4, the canonical response `-0.37527623091`
+plus conversion `0.33146152518` gave `-0.04381470572`, differing from the
+heat response by `-5.35e-15` at imaginary external frequency `0.7`.
+The multiplicity four was not applied. Continuum subtraction, other metric
+variations, full curved history and physical source closure remain open;
+this historical choice does not replace the later declared canonical action.

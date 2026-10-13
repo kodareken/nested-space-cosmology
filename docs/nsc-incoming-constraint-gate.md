@@ -114,3 +114,40 @@ term, metric evolution, PDF or public release is introduced.
 ```sh
 python3 scripts/derive_nsc_incoming_constraint_gate.py --check
 ```
+
+
+## Conditional local surface solutions in the enlarged geometric family
+
+Allowing compatible surface functions is distinct from realizing them by an
+exact fixed-$C_0$ history. For
+$\delta r=T w(z)+T^3U(z)/6$, $\delta a=0$, the retained equations read
+
+$$\mathcal E_N=A(w)U+B(w)w''+C(w')^2+D(w),\qquad
+\mathcal E_\beta=dU'+ew'''+F(w)w'+S_\beta.$$
+
+The certified values are
+$A(0)\in[0.057399277586276304,0.05739927758627644]$ and
+
+$$\det\begin{pmatrix}A(0)&B(0)\\d&e\end{pmatrix}
+\in[-0.0029161631968961416,-0.0029161631968961255].$$
+
+The eliminated third-derivative coefficient lies in
+`[-0.05080487628982585,-0.050804876289825454]`. With
+$p=B/A$, $q=C/A$, $s=D/A$, $K=e-dp$, and $Y=(w,v,\xi)$, the equivalent
+spatial ODE and lapse reconstruction are
+
+$$Y'=\begin{pmatrix}v\\\xi\\
+\displaystyle\frac{d(p_w+2q)v\xi+dq_wv^3-(F-ds_w)v-S_\beta}{K}
+\end{pmatrix},\qquad U=-p(w)\xi-q(w)v^2-s(w).$$
+
+Continuity keeps $A,K$ nonzero near $w=0$. The smooth vector field gives
+a unique smooth local solution for every finite initial pair
+$Y(0)=(0,v_0,\xi_0)$ by
+[Picard--Lindelöf](https://www.mat.univie.ac.at/~gerald/ftp/book-ode/ode.pdf#page=49).
+Reconstructed $U$ makes the lapse equation vanish, and its derivative with
+the ODE makes the shift equation vanish. The metric stays positive near the
+initial point. The neighborhood length and physical initial tuple are
+unspecified; this is local compatible geometric data, with exact retained
+source, not spacetime evolution or parent preparation. Numerical solutions
+still need source/coefficient error bounds. The compact-history exclusions
+above and in the fixed-$C_0$ theorem remain scoped to their own classes.

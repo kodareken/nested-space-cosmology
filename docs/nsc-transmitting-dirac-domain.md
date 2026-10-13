@@ -148,3 +148,28 @@ certificates are retained; no metric evolution is started.
 python3 scripts/define_nsc_transmitting_dirac_domain.py --check
 python3 -m pytest -q tests/test_nsc_transmitting_dirac_domain.py
 ```
+
+## Whole-line projected resolvent
+
+The retained cross-response chose the inherited self-adjoint whole-line
+operator, $R(z)=(H_D-z)^{-1}$, then normalized packet compression
+$\mathcal R=J^\dagger RJ$. The packets are
+$f_p=\sqrt{30}\rho(1-\rho)$ on $(0,1)$ and $f_c(\rho)=f_p(-\rho)$ on
+$(-1,0)$, with both spin components. They are independent $L^2$ probes
+in $D(H)$, not new modes or an initial state; the parent probe is trapped.
+For $\operatorname{Im}z>0$, both characteristic speeds are negative and
+the causal restriction has $\mathcal R_{pc}=0$. The advanced direction
+is its adjoint. Inflow-zero integration and continuous seam matching
+restrict the whole-line solution without creating a reflecting box or
+setting the outflow trace to zero.
+
+The inverse $\mathcal K=\mathcal R^{-1}$ retains the Feshbach complement
+of these domain-preserving finite probes. Its energy-dependent cross kernel
+is not an instantaneous parent/child $B$ or a closed four-mode Hamiltonian.
+Compact static metric jets obey $\delta R=-R\delta HR$ and
+$\delta\mathcal K=-\mathcal K\delta\mathcal R\mathcal K$; seam terms cancel
+between continuous traces. The resolvent identity uses the whole-line product
+$\mathcal R(z)-\mathcal R(w)=(z-w)\int U_{\bar z}^\dagger U_w,d\rho$,
+not the product of compressed matrices. Its passed static controls do not
+supply full time-history branch jets, moving-seam data, boundary action,
+state selection or stationarity.

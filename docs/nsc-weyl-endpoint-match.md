@@ -47,10 +47,11 @@ required by the higher-derivative action. Fixing endpoint metric values alone
 does not supply those data. A temporal end node is not automatically the
 transmitting parent-child hypersurface.
 
-The record explicitly marks the independent first-jet derivatives as
-unavailable, with `null` entries for all four fields at both ends. The stored
-nodal arrays already include their finite-difference dependence; they do not
-separately identify these continuum boundary-jet covectors.
+The original endpoint-match receipt marked independent first-jet
+derivatives unavailable, with `null` entries for all four fields at both
+ends. Its nodal arrays include finite-difference dependence. The later local
+boundary-jet extraction below supplies continuum covectors in their own
+jet basis; the transmitting functional and its pullback remain missing.
 
 **OPEN:** neither the required transmitting metric derivative nor its
 pullback is supplied by the existing action inventory. Accordingly the
@@ -61,3 +62,59 @@ does not interpret an absent derivative as zero or as minus the local vector.
 This binds Step B to the same missing action identified in
 [Step A](nsc-transmitting-boundary-selection.md). It introduces no endpoint
 completion or compensator and selects no control duration as physical.
+
+
+## Continuum boundary jets and the discrete end-node decomposition
+
+For the same local Weyl density $L_W=kNar^2F^2$,
+$k=-16\pi C_W/3$, with
+
+$$F=\frac{\ddot a-\dot a\dot N/N}{N^2a}
+-\frac{\dot a\dot r}{N^2ar}
+-\frac{\ddot r-\dot r\dot N/N}{N^2r}
++\frac{1+\dot r^2/N^2}{r^2},$$
+
+the independent continuum boundary covector is
+$[P_N\delta N+P_a\delta a+P_r\delta r+
+Q_a\delta\dot a+Q_r\delta\dot r]_0^L$, with
+$Q_i=\partial L_W/\partial\ddot g_i$ and
+$P_i=\partial L_W/\partial\dot g_i-dQ_i/dT$.
+The exact identities are
+
+$$Q_a=2kr^2F/N,\quad Q_r=-2karF/N,\quad aQ_a+rQ_r=0,
+\qquad NP_N+\dot aQ_a+\dot rQ_r=0.$$
+
+With proper rates $H_a=\dot a/(Na)$, $H_r=\dot r/(Nr)$ this becomes
+$[\overline P_a\delta a+\overline P_r\delta r+
+\Pi_\sigma\delta(H_a-H_r)]_0^L$, $\Pi_\sigma=NaQ_a$.
+The lapse boundary coefficient cancels, while normal shear remains
+independent of the intrinsic metric. Before final-minus-initial orientation,
+the stored diagnostic shear coefficients are approximately -0.84788331
+and0.85747641 at the initial/final ends.
+
+For the original trapezoid weights W and edge_order2 derivative D, put
+$B=WD+D^TW$ and $S=\operatorname{diag}(-1,0,\ldots,0,1)$.
+The full saved nodal gradient reconstructs as
+
+$$G=WE+SP+D^TSQ+(B-S)P+D^T(B-S)Q.$$
+
+The stencil has $\|B-S\|_2=0.86237244$, so its integration-by-parts
+defect cannot be discarded. The final radius node's bulk, canonical
+boundary and stencil contributions are approximately
+$0.68615308-87.27311859-6.95567981=-93.54264532$.
+The retired extractor authenticated the33-node history and exact eight
+old coefficients, preserved all nodal components, and compared their
+reconstruction to the unchanged gradient within
+$9.13\times10^{-12}<3\times10^{-11}$; highest-jet/proper-lapse
+identities were below $3.14\times10^{-16}$. These are boundary-jet and
+discrete-bookkeeping controls, not physical two-sided matching.
+
+Fixing metric and normal rates kills the canonical form on those allowed
+variations. Fixing the metric alone leaves free shear. A free/glued
+interface needs the actual intrinsic jet, normal shear and oriented
+conjugate matching; temporal control endpoints are not automatically its
+two sides. Local boundary-jet extraction therefore passes while full
+B1/B2 stationarity remains OPEN. The Gaussian Schur determinant factors
+the already counted Gaussian CTP action; Euler/BoxR endpoints also already
+belong to the local action. None supplies an extra compensator, an assumed
+zero transmitting remainder or a physical counterforce to93.5426.

@@ -23,6 +23,147 @@ OWNER = "docs/nsc-atlas-prepared-response.md"
 EVIDENCE = "results/development/nsc-cosmological-atlas-v8/prepared-response.json"
 
 
+
+# Fixed-preparation control inherited from the local source-response producer.
+# It used at most four solves / 300 CPU seconds, 7601 columns, alpha=.001,
+# delta-alpha=.0001, 60/120 time steps and a 1e-11 temporal indicator.
+from hashlib import sha256
+from types import SimpleNamespace
+
+
+def _prepared_chart_coordinates(rho):
+    from recursive_horizons.nsc_ks_spacetime_variation import chart_coordinates
+    return chart_coordinates(rho)
+
+
+def _prepared_coefficients_from_records(*records):
+    from derive_nsc_evolved_incoming_constraints import coefficients_from_records
+    return coefficients_from_records(*records)
+
+
+_prepared_ROOT = Path(__file__).resolve().parents[1]
+
+_prepared_OUTPUT = 'results/development/nsc-local-prepared-response.json'
+
+_prepared_ARTIFACT = 'results/development/artifacts/nsc-local-prepared-response.npz'
+
+_prepared_OWNED = ('scripts/derive_nsc_cosmological_atlas_v8.py', 'docs/nsc-atlas-prepared-response.md')
+
+_prepared_INPUTS = ('results/development/nsc-local-reference-accuracy.json', 'results/development/nsc-incoming-source-update-v5.json', 'results/development/nsc-incoming-surface-coefficients.json', 'results/development/nsc-incoming-surface-regular-branch.json', 'results/development/nsc-incoming-fixed-transfer.json', 'src/recursive_horizons/nsc_exact_phase_prepared_state.py', 'src/recursive_horizons/nsc_evolved_incoming_state.py', 'src/recursive_horizons/nsc_evolved_incoming_constraints.py', 'src/recursive_horizons/nsc_local_incoming_family.py', 'src/recursive_horizons/nsc_compatible_history_geometry.py', 'src/recursive_horizons/nsc_transmitting_history_jets.py', 'src/recursive_horizons/nsc_transmitting_history_modes.py', 'scripts/derive_nsc_evolved_incoming_constraints.py')
+
+_prepared_ALPHA = 0.001
+
+_prepared_STEP = 0.0001
+
+_prepared_CAP = 300.0
+
+_prepared_CASES = (('center', _prepared_ALPHA, 60, True), ('plus', _prepared_ALPHA + _prepared_STEP, 60, False), ('minus', _prepared_ALPHA - _prepared_STEP, 60, False), ('time_fine', _prepared_ALPHA, 120, True))
+
+def _prepared_digest(path):
+    return sha256((_prepared_ROOT / path).read_bytes()).hexdigest()
+
+def _prepared_signatures():
+    return {p: _prepared_digest(p) for p in (*_prepared_OWNED, *_prepared_INPUTS)}
+
+def _prepared_norm(x):
+    return float(np.max(abs(x), initial=0.0))
+
+def _prepared_family(alpha):
+    from recursive_horizons.nsc_compatible_history_geometry import CompatibleIncomingMetric, CompatibleRadiusDirection
+    from recursive_horizons.nsc_local_incoming_family import LocalAxialFunction
+    center = _prepared_chart_coordinates(1.0)[1] + 0.15
+    w = LocalAxialFunction((0.0, 1.0), center)
+    zero = LocalAxialFunction((0.0,), center)
+    return CompatibleIncomingMetric((alpha,), (CompatibleRadiusDirection(w, zero, 0.007, 0.03),))
+
+def _prepared_load_inputs():
+    records = [json.loads((_prepared_ROOT / p).read_text()) for p in _prepared_INPUTS[:5]]
+    p = records[0]['payload']
+    if _prepared_digest(p['path']) != p['sha256']:
+        raise ValueError('refined initial column artifact changed')
+    with np.load(_prepared_ROOT / p['path'], allow_pickle=False) as a:
+        arrays = {k: a[k] for k in a.files}
+    channel = records[4]['actual_source_bindings']['channel']
+    if channel['compact_mass'] != float(arrays['source/mass'].item()) or channel['angular_eigenvalue'] != float(arrays['source/angular'].item()):
+        raise ValueError('source/channel operator changed')
+    return (records, arrays, channel)
+
+def _prepared_evaluate(arrays, name, alpha, coeff, baseline, parameters):
+    from recursive_horizons.nsc_evolved_incoming_constraints import source_column_matter, surface_geometry_response, compatible_history_slots
+
+    def get(key):
+        return arrays[name + '/' + key]
+    times = get('times')
+    z = times + _prepared_chart_coordinates(1.0)[1]
+    F, Fz, dF, dFz = (get(k) for k in ('F', 'Fz', 'dF', 'dFz'))
+    weights = arrays['source/column_weights']
+    C = arrays['source/covariance']
+    E = arrays['source/energies_repeated']
+    current = source_column_matter(F * weights, Fz * weights, C, dF * weights, dFz * weights, **parameters)
+    ref = arrays['reference_F0'][None] * np.exp(-1j * times[:, None, None] * E)
+    refz = -1j * E * ref
+    zero = np.zeros((0, *ref.shape), complex)
+    reference = source_column_matter(ref * weights, refz * weights, C, zero, zero, **parameters)
+    slots, ds = compatible_history_slots(_prepared_family(alpha), z, len(dF))
+    geom = surface_geometry_response(slots, ds, coeff)
+    value = baseline + geom['action_gradient_change'] + current['action_gradient'] - reference['action_gradient']
+    tangent = geom['action_gradient_tangent'] + current['action_gradient_tangent']
+    return {'residual': value, 'tangent': tangent, 'matter': current['action_gradient'], 'matter_tangent': current['action_gradient_tangent'], 'matter_correction': current['action_gradient'] - reference['action_gradient']}
+
+def _prepared_analyze(arrays, meta):
+    rows = {}
+    for name, alpha, steps, _ in _prepared_CASES:
+        if name not in meta['completed']:
+            continue
+        got = _prepared_evaluate(arrays, name, alpha, meta['coefficients'], np.asarray(meta['baseline']), meta['parameters'])
+        mask = np.arange(steps + 1) >= 2 * steps // 3
+        rows[name] = {'sampled_local_constraint_approximant_max': np.max(abs(got['residual'][mask]), axis=0).tolist(), 'sampled_local_matter_correction_max': np.max(abs(got['matter_correction'][mask]), axis=0).tolist(), 'phase_residual': meta['cases'][name]['phase_residual'], 'flux_residual': meta['cases'][name]['flux_residual']}
+    checks = {}
+    if all((n in rows for n in ('center', 'plus', 'minus'))):
+        center = _prepared_evaluate(arrays, 'center', _prepared_ALPHA, meta['coefficients'], np.asarray(meta['baseline']), meta['parameters'])
+        plus = _prepared_evaluate(arrays, 'plus', _prepared_ALPHA + _prepared_STEP, meta['coefficients'], np.asarray(meta['baseline']), meta['parameters'])
+        minus = _prepared_evaluate(arrays, 'minus', _prepared_ALPHA - _prepared_STEP, meta['coefficients'], np.asarray(meta['baseline']), meta['parameters'])
+        fd = (plus['residual'] - minus['residual']) / (2 * _prepared_STEP)
+        checks['complete_local_constraint_derivative'] = _prepared_norm((fd - center['tangent'][0])[40:])
+        checks['local_matter_derivative'] = _prepared_norm(((plus['matter'] - minus['matter']) / (2 * _prepared_STEP) - center['matter_tangent'][0])[40:])
+        checks['dropped_deltaC_effect'] = _prepared_norm(center['matter_tangent'][0, 40:])
+        checks['same_fixed_preparation'] = len({meta['cases'][n]['preparation'] for n in ('center', 'plus', 'minus')}) == 1
+        checks['derivative_passed'] = checks['complete_local_constraint_derivative'] <= 3e-08 and checks['same_fixed_preparation']
+    if 'time_fine' in rows and 'center' in rows:
+        coarse = _prepared_evaluate(arrays, 'center', _prepared_ALPHA, meta['coefficients'], np.asarray(meta['baseline']), meta['parameters'])
+        fine = _prepared_evaluate(arrays, 'time_fine', _prepared_ALPHA, meta['coefficients'], np.asarray(meta['baseline']), meta['parameters'])
+        checks['local_time_change'] = np.max(abs(fine['matter'][::2][40:] - coarse['matter'][40:]), axis=0).tolist()
+        checks['local_tangent_time_change'] = np.max(abs(fine['matter_tangent'][0, ::2][40:] - coarse['matter_tangent'][0, 40:]), axis=0).tolist()
+        checks['time_indicator_target'] = 1e-11
+        checks['time_indicator_passed'] = max(checks['local_time_change']) <= 1e-11
+    return {'per_case': rows, 'checks': checks}
+
+def _prepared_record(arrays, meta, payload):
+    measurements = _prepared_analyze(arrays, meta)
+    return {'schema': 'NSC-LOCAL-PREPARED-RESPONSE-v1', 'accountable_author': 'Douglas Ek', 'status': 'OPEN: source-fixed nonzero-history control; full-source local gate uncertified', 'control': {'amplitude': _prepared_ALPHA, 'finite_difference_step': _prepared_STEP, 'runs_max': 4, 'profile': 'w=alpha*Chebyshev_T1*flat axial cutoff, U=0; normal .007/.03', 'family': '14_1', 'points': 7601, 'local_interval': 'S(1)+[.12,.18]', 'derivative_tolerance': 3e-08, 'temporal_indicator_tolerance': 1e-11}, 'measurements': measurements, 'runtime': meta['runtime'], 'scope': {'physical_local_gate': 'OPEN', 'full_source_error': None, 'field_and_derivative_error': None, 'between_node_error': None, 'all_channel_coverage': False, 'source_changed': False, 'stress_drift_subtracted': False, 'frozen_C0_imposed': False, 'metric_timestep': False}, 'source_hashes': {p: meta['signature'][p] for p in _prepared_OWNED}, 'input_hashes': {p: meta['signature'][p] for p in _prepared_INPUTS}, 'reused_artifacts': meta['reused_artifacts'], 'payload': payload, 'reproducer': 'call prepared_response.check() from scripts/derive_nsc_cosmological_atlas_v8.py'}
+
+def _prepared_check():
+    saved = json.loads((_prepared_ROOT / _prepared_OUTPUT).read_text())
+    _prepared_load_inputs()
+    if _prepared_digest(_prepared_ARTIFACT) != saved['payload']['sha256']:
+        raise ValueError('control payload changed')
+    with np.load(_prepared_ROOT / _prepared_ARTIFACT, allow_pickle=False) as a:
+        arrays = {k: a[k] for k in a.files}
+    meta = json.loads(arrays['metadata_json'].tobytes())
+    if meta['signature'] != _prepared_signatures():
+        raise ValueError('control source/input changed')
+    if _prepared_record(arrays, meta, saved['payload']) != saved:
+        raise ValueError('array-only replay differs')
+    return saved
+
+prepared_response = SimpleNamespace(
+    ALPHA=_prepared_ALPHA, STEP=_prepared_STEP, CAP=_prepared_CAP, CASES=_prepared_CASES,
+    INPUTS=_prepared_INPUTS, OWNED=_prepared_OWNED, OUTPUT=_prepared_OUTPUT,
+    ARTIFACT=_prepared_ARTIFACT, family=_prepared_family, load_inputs=_prepared_load_inputs,
+    evaluate=_prepared_evaluate, analyze=_prepared_analyze, check=_prepared_check,
+    digest=_prepared_digest, coefficients_from_records=_prepared_coefficients_from_records,
+    chart_coordinates=_prepared_chart_coordinates)
+
 def build_record():
     record, programme, prepared = previous.build_record()
     response = response_model.prepared_response_record()

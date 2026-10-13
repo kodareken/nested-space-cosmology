@@ -74,3 +74,34 @@ NON-EXISTENCE in this class, or OPEN with the exact remaining error or input.
 Old fixed-C0 roots are never promoted by relabeling. Extended stationarity
 and metric evolution retain their existing existence gates; publication
 requires Douglas's request.
+
+## Retained upstream compensation lemmas
+
+At the reference $N_K=1,\beta_K=0,k=-E_*$, the actual lapse, axial-scale
+and radius vertices have Pauli coefficient matrix
+
+$$
+V=\begin{pmatrix}-m&0&0\\\ell/r&0&-\ell/r^2\\
+-E_*/a&E_*/a^2&0\end{pmatrix},\qquad
+\det V=-\frac{m\ell E_*}{a^2r^2}\ne0.
+$$
+
+A common nonnegative, nonzero smooth upstream bump gives
+$K_{\rm comp}=-i\mu_b(\overline V_b\alpha)\cdot\sigma$,
+$\mu_b=\widehat w(0)\int b/a_0>0$, where $\overline V_b$ is the positive
+weighted mean of the transported vertices. The reference coordinate factor
+$a_0$ remains fixed under raw metric variation. For group `14_1` at
+`E=0.5562120090641313`, every such bump supported in
+$[203/200,41/40]$ has $\sigma_{\min}(\overline V_b)>51/200$;
+the physical margin is $\mu_b,51/200$, with no bump-independent lower
+bound on $\mu_b$. The rational argument uses $\rho_c=51/50$, halfwidth
+$1/200$, $\sigma_{\min}(V_c)>3/8$ and variation bound $3/25$.
+
+These lemmas permit cancellation of one selected diagonal traceless
+response while leaving incoming metric jets unchanged. They choose no
+amplitudes or finite history. A physical metric must use the same functions
+and coefficients at every energy and channel, respect the union-of-supports
+retarded guards, and retain positive fields. One-pair rank is neither full
+$C_0$ preservation nor constraint closure. Under the adopted source-fixed
+law, these are reusable regression mathematics rather than a requirement to
+restore the old frozen covariance.

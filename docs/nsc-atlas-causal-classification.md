@@ -264,3 +264,14 @@ global horizon structure remain unread or unresolved. The
 [reuse rule](../../docs/prior-art-and-open-claim.md) still governs the next
 calculation. Known causal classifications are borrowed; the gain here is a
 more precise map of this project's already fixed candidate.
+
+The v5 map's Schwarzschild panel used the regular advanced-coordinate rule
+$dv/dR=-1/[s(s-\beta_+)]$, $s=\dot R>0$, and
+$V_K=-\exp(v/(4M))$, $U_K=(1-R/(2M))\exp(R/(2M))/V_K$.
+The origin was fixed by the v4 bridge's $T=0$ slice. Both null coordinates
+increase to the future; the wall remains at $V_K<0$, while a right-parent
+emission has $V_K>0$. These signs forbid the parent-to-wall route, while
+an early $R/\ell=0.5$ wall event at $U_K,V_K<0$ can send a constant-$U_K$
+ray to the right observer. This is the isolated reference completion;
+the finite plotting interval $0.02\le R/\ell\le6$ does not certify the
+glued parent's global history.

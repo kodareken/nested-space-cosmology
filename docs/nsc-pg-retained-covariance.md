@@ -140,3 +140,50 @@ The `mode_control` component compares newly vectorized physical columns with
 the authenticated independent mode-resolution artifact at four existing
 frequencies of the largest mixed group. Its field values and indices are
 retained so the residual is recomputed during record verification.
+
+## Retained subgap, tail and first-group derivations
+
+The first completed massive compact group has $m=\pi/2$ and zero angular
+label. Its eight-probe covariance had CAR residual $3.27\times10^{-11}$,
+eigenvalue range $[0.03570181,0.96429819]$ and probe–bulk correlation norm
+$0.31816523$ at declared accuracy $3\times10^{-9}$. The later full C1b
+assembly above supersedes its then-OPEN status for the other groups, without
+turning the eight probes into a closed field.
+
+The 38 signed subgap families in 20 compact groups use the same source on
+$[1,m_j]$, $m_j=j\pi/2$, with angular-zero sectors counted once. To avoid
+the group-22 cancellation of terms near $1.9\times10^9$, the bounded
+retarded-resolvent representation is
+
+$$
+K=(f-\tfrac12)G_E-2(f-\tfrac12)ww^\dagger
++is(wa^\dagger-aw^\dagger),\qquad
+G_E=(R^+-R^{+\dagger})/i.
+$$
+
+The largest summed adaptive error estimate was $3.14\times10^{-11}$;
+it is a numerical diagnostic, not a complete spectral remainder theorem.
+The 31 other massive groups' 61 signed tails use order-16 endpoint modes,
+64 points per unit, maximum power 24 and six normalization terms. Positive
+8×8 tail matrices $(G,K)$ require signed assembly. The selected $L=160,320$
+splits satisfy representation covariance/Gram budgets $10^{-9},2\times10^{-9}$;
+their maxima are $9.73\times10^{-10},1.95\times10^{-9}$. A separate-process,
+50-digit audit found all 29 new $L=320$ moment matrices identical. These
+bounds do not certify all physical mode errors.
+
+For the separate group-13 history variation, the trapped-region support has
+columns $(Rv,w,0)$ and no exterior horizon column. With
+$B_{ab}(z)=i\int d\rho\,[U_g\phi_a(\bar z)]^\dagger\delta U_g\phi_b(z)$,
+$d=f-1/2$, its signed panel contribution is
+
+$$
+\delta\Gamma_{13,\rm subgap}=-\frac1\pi
+\left[\int_1^{\pi/2}d(B_{vv}-B_{ww})\,dE
++2\operatorname{Re}\int_{\mathcal C}(-isR B_{wv})\,dz\right].
+$$
+
+The conjugate-energy bra and fixed preparation are required. Only reflection
+uses the contour; no complex-frequency Gaussian occupation, extra
+$\Gamma_{\rm rest}$ or new degeneracy is inserted. This finite panel still
+needs the other windows and reference/local allocation before an absolute
+stress or stationarity claim.

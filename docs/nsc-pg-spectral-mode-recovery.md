@@ -87,3 +87,18 @@ earlier certificates, the PDF and the public repository are unchanged.
 python3 scripts/derive_nsc_pg_spectral_mode_recovery.py --prepare
 python3 scripts/derive_nsc_pg_spectral_mode_recovery.py --check
 ```
+
+The retained high-energy completion filled the 3,188 inverse-rejected rows
+directly from the authenticated middle-panel producer's order-16 Riccati
+recipe, $\Phi_E(1)=(0,f_{+,E}(1),f_{-,E}(1))$, preserving source order and
+phase. Its order/current checks apply to newly filled indices; projection
+and accepted-row overlap checks cover the original panels. The prior
+whole-panel OPEN audit remains: Riccati maximum $1.288\times10^{-10}$ and
+order difference $3.590\times10^{-10}$ at unchanged lower-energy edges.
+No threshold was raised or accepted inverse field replaced. Composing tagged
+direct rows with accepted inverse rows covers each index once, supplying
+54,548 archived real-frequency rows across 138 separate base/refinement
+panels. These retain the original vacuum-mode approximation, including the
+zero first column. Coverage is not a combined quadrature or a differentiated
+stress bound; thermal/reflection, subgap, tail and local-source errors remain
+separate.

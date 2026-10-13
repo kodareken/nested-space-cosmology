@@ -22,6 +22,111 @@ from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_
 from derive_nsc_pg_group14_covariance import assemble as assemble_group14
 from derive_nsc_transmitting_boundary_binding import compare
 
+
+def real_panel_quadrature(mass, upper=40., points=16, panels=None):
+    """Real-frequency low panels exclude the separately retained (1,m) subgap."""
+    from numpy.polynomial.legendre import leggauss
+    if mass < 0 or upper <= 1 or points < 1:
+        raise ValueError("nonnegative mass, upper>1 and positive quadrature order required")
+    # Preserve the original low-window landmarks and exact panel membership.
+    edges = sorted(set(min(float(v), upper) for v in
+                       (0., .25, 1., mass, 4., 8., 12., 16., upper)))
+    edges = [value for index, value in enumerate(edges)
+             if index == 0 or value-edges[index-1] > 1e-12]
+    allowed = list(zip(edges, edges[1:]))
+    chosen = allowed if panels is None else list(panels)
+    if any((left, right) not in allowed for left, right in chosen):
+        raise ValueError("refinement must use already declared panel endpoints")
+    x, weights = leggauss(points)
+    energy, weight = [], []
+    for left, right in chosen:
+        if right <= left or (left >= 1. and right <= mass):
+            continue
+        energy.extend(left+(x+1)*(right-left)/2)
+        weight.extend(weights*(right-left)/2)
+    return np.asarray(energy), np.asarray(weight), edges
+
+
+def middle_panel_quadrature(channel, left=40., right=160., points=16):
+    """Eight-unit middle panels retain the validated group14 E=16 exception."""
+    from numpy.polynomial.legendre import leggauss
+    if left < 40 and not (channel == 14 and left == 16):
+        raise ValueError("lower window requires a validated boundary-mode control")
+    if right <= left or (right-left) % 8 or points < 1:
+        raise ValueError("ordered eight-unit quadrature panels required")
+    x, weight = leggauss(points)
+    starts = np.arange(left, right, 8.)
+    return (np.concatenate([value+4*(x+1) for value in starts]),
+            np.tile(4*weight, len(starts)))
+
+
+def complete_archived_real_rows(inverse_modes, accepted, archived_modes):
+    """Complete rejected inverse rows only; accepted inverse bytes stay unchanged."""
+    inverse = np.asarray(inverse_modes)
+    accepted = np.asarray(accepted, dtype=bool)
+    archived = np.asarray(archived_modes)
+    if (inverse.shape != archived.shape or accepted.shape != (len(inverse),)
+            or not np.isfinite(archived[~accepted]).all()):
+        raise ValueError("complete finite archived fields and matching acceptance mask required")
+    result = inverse.copy()
+    result[~accepted] = archived[~accepted]
+    if not np.array_equal(result[accepted], inverse[accepted]):
+        raise ValueError("completion changed accepted inverse rows")
+    if not np.isfinite(result).all():
+        raise ValueError("completion left missing real rows")
+    return result
+
+
+def batched_real_input(energies, weights, channel, sign, preparation):
+    """Physical horizon/infinity modes, not fitted seed covariance, feed low panels."""
+    from recursive_horizons.nsc_pg_batched_modes import real_mode_family
+    from recursive_horizons.nsc_pg_batch_projection import project_mode_family
+    if sign not in (-1, 1) or (not channel["angular_eigenvalue"] and sign == -1):
+        raise ValueError("an admissible signed retained family is required")
+    energies, weights = np.asarray(energies), np.asarray(weights)
+    if weights.shape != energies.shape or energies.ndim != 1:
+        raise ValueError("matching real-frequency energies and quadrature weights required")
+    mass, angular = channel["compact_mass"], sign*channel["angular_eigenvalue"]
+    if np.any((energies > 1.) & (energies < mass)):
+        raise ValueError("the retained subgap must not be counted in real panels")
+    modes = real_mode_family(energies, mass, angular, preparation)
+    projection = project_mode_family(energies, mass, angular,
+                                     modes["mode_at_zero"], modes["mode_at_three"])
+    return {"energy": energies, "weight": weights, "projection": projection,
+            "source": modes["source"], "projector": modes["projector"],
+            "current_residual": modes["current_residual"],
+            "inner_unitarity_residual": modes["inner_unitarity_residual"],
+            "seed_covariance_used_as_input": False}
+
+
+def retained_family_projection(arrays, channel, sign):
+    """Reuse authenticated A2 fields for a non-subgap signed packet projection."""
+    from recursive_horizons.nsc_pg_batch_projection import project_mode_family
+    labels = np.asarray(arrays["label"])
+    selected = ((labels[:, 0] == channel) & (labels[:, 1] == sign)
+                & ((labels[:, 5] < 1.) | (labels[:, 5] > labels[:, 3])))
+    indices = np.flatnonzero(selected)
+    if not len(indices):
+        raise ValueError("empty declared projection family")
+    rows = labels[indices]
+    mass, angular = rows[0, 3:5]
+    projection = project_mode_family(rows[:, 5], mass, angular,
+                                     arrays["interior"][indices, 1],
+                                     arrays["exterior"][indices, 1])
+    return {"indices": indices, "labels": rows, "projection": projection,
+            "source_covariance": arrays["source_covariance"][indices],
+            "source_projector": arrays["source_projector"][indices]}
+
+
+INPUT_METHODS = {
+    "low_real": "same physical horizon/infinity preparation, batched or independent real mode equations; exclude compact (1,m) subgap",
+    "middle": "eight-unit panels, normally E=40..160; validated group14 lower boundary E=16",
+    "archived_high": "order16 Riccati fields fill rejected inverse rows while accepted rows and source covariance stay unchanged",
+    "projection": "reuse authenticated A2 physical fields; keep signed family and original preparation",
+    "scope": "finite panel coverage and order/refinement diagnostics; full differentiated subgap and infinite-tail source remain OPEN",
+    "data": "https://doi.org/10.5281/zenodo.23090015",
+}
+
 OUTPUT='results/development/nsc-pg-retained-covariance.json'
 INPUTS=('results/development/nsc-pg-group13-covariance.json',
  'results/development/nsc-pg-retained-subgap.json','results/development/nsc-pg-retained-tail.json',
@@ -30,9 +135,7 @@ INPUTS=('results/development/nsc-pg-group13-covariance.json',
  'results/development/nsc-transmitting-ctp-resolvent.json')
 SOURCES=('src/recursive_horizons/nsc_pg_retained_covariance.py',
  'src/recursive_horizons/nsc_pg_batched_modes.py','src/recursive_horizons/nsc_pg_batch_projection.py',
- 'scripts/derive_nsc_pg_retained_covariance.py','scripts/derive_nsc_pg_batched_low.py',
- 'scripts/derive_nsc_pg_mid_inputs.py','scripts/derive_nsc_pg_group14_covariance.py',
- 'scripts/derive_nsc_pg_low_inputs.py',
+ 'scripts/derive_nsc_pg_retained_covariance.py','scripts/derive_nsc_pg_group14_covariance.py',
  'docs/nsc-pg-retained-join-audit.json',
  'tests/test_nsc_pg_retained_covariance.py','docs/nsc-pg-retained-covariance.md')
 
@@ -58,7 +161,7 @@ def prepare(manifest_path):
     metadata={'schema':'NSC-PG-RETAINED-COVARIANCE-INPUT-v1','components':receipts,
        'source_hashes':{s:sha(ROOT/s) for s in (
           'src/recursive_horizons/nsc_pg_batched_modes.py','src/recursive_horizons/nsc_pg_batch_projection.py',
-          'scripts/derive_nsc_pg_batched_low.py','scripts/derive_nsc_pg_mid_inputs.py')},
+          'scripts/derive_nsc_pg_retained_covariance.py')},
        'input_hashes':{s:sha(ROOT/s) for s in INPUTS},
        'seed_covariance_used_as_input':False,'start_convention':'matched_delta_q',
        'group14_input':manifest['group14_input'],

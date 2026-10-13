@@ -97,3 +97,40 @@ non-isometric point-column control distinguishes those two matrices.
 - `negative_angular_partner(prepared, negative_source)`
 
 Physical source error and the local incoming gate remain OPEN.
+
+
+## Massive paired-spinor information boundary
+
+The earlier full-spinor PG identification uses the constant unitary
+$W=\eta_1\otimes(I+i\sigma_2)/\sqrt2$ to give
+
+$$H_T^{(4)}=-iI_\eta\otimes(v\partial_\rho+v'/2)
+-NmI_\eta\otimes\sigma_1
+-N(\lambda/r)\eta_3\otimes\sigma_3,
+\qquad v=(N/q_{\rm PG})\sigma_2-\beta I.$$
+
+Its radial signed-frequency involution is
+$\mathfrak C_T=(\eta_1\otimes\sigma_3)K$, with
+$B_TH_T^{(4)*}B_T^\dagger=-H_T^{(4)}$ as a differential-operator identity.
+The constant change preserves the transparent seam and adds no connection.
+It supplies neither a charged four-dimensional state identification nor
+the needed global paired-state preparation.
+
+Groups1–12 ($m=0,\lambda>0$) admit $\sigma_1K$ in T's two-component
+basis; groups13,23 ($m>0,\lambda=0$) admit $\sigma_3K$. Mixed groups14–22
+and24–32 require the angular-paired map. A same-block constant unitary
+would need $B\sigma_i+\sigma_iB=0$ for all three Pauli matrices, whose
+only solution is $B=0$. A varying axis instead carries the connection
+$-ivB'B^\dagger$ and cannot be presented as the unchanged operator.
+
+Stored mixed-group two-component data provide only $X$ in
+$\mathcal C_+=\left(\begin{smallmatrix}X&Z\\Z^\dagger&Y\end{smallmatrix}\right)$.
+There are16 real Hermitian paired coefficients and4 observed ones, giving
+a12-dimensional linear observation kernel. Algebraic witnesses
+$\operatorname{diag}(X,0)$ and $\operatorname{diag}(X,I)$ share the same
+observed block and radial signed pairing but differ by Frobenius norm
+$\sqrt2$ in the unseen marginal. Neither is adopted as a physical state.
+C1b-M remains OPEN: both angular marginals, cross block, Cauchy/CAR
+normalization and full-complement projection must come from the actual
+horizon/infinity-to-paired-PG mode map. The signed KS identity above
+does not erase this earlier information boundary.

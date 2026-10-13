@@ -193,3 +193,56 @@ owner does not provide `require_exterior_killing_frequency`.
 
 No production trajectory and no scientific record are written here. The
 checks are numerical identities on this chart.
+
+## Deferred charged-shell preparation
+
+The charged extension is algebraic preparation for a later experiment, with
+the same action and $V_4=0$; no charged trajectory or measured flux is supplied.
+For integer monopole flux $q_{\rm mag}$, the lowest shell has
+$j=(|q_{\rm mag}|-1)/2$, multiplicity $|q_{\rm mag}|$ and angular eigenvalue
+$\kappa=0$. Its canonical state shape is `(2, points, |q_mag|)` with that
+multiplicity counted once. It is a different eigenspace from the neutral
+$\kappa=1$ shell of multiplicity four.
+
+For $D_\mu=\nabla_\mu-isA_\mu$, $s=\pm1$, and $\phi=r\psi$,
+$J^t=s\psi^\dagger\psi/N$, so $Nr^2J^t=s\phi^\dagger\phi$.
+Define $\mathcal E=A_t'/N$, $Q_E=16\pi C_F r^2\mathcal E$ and
+$\partial_rQ_E=\int s\phi^\dagger\phi\,d\Omega$.
+With $A_t(\infty)=0$, positive charge gives $A_t<0$ and Hamiltonian shift
+$-sA_t=s\Phi$. Its geometric charge is
+$P_{\rm electric}^2=Q_E^2/(256\pi^2C_FA)$,
+$P_{\rm tot}^2=C_Fq_{\rm mag}^2/(4A)+P_{\rm electric}^2$.
+The subextremal branch requires $M/\sqrt{P_{\rm tot}^2}>1$ and derives
+$\Phi_H=Q_E/(16\pi C_Fr_+)$.
+
+The proposed dyonic comparison separates $0<\omega<s\Phi_H$ from
+$\omega>s\Phi_H$, the opposite fermion sign, and a pure-magnetic control
+with $\Phi_H=0$. A finite packet must satisfy
+$4/\omega\le32r_{m,\rm tot}-r_+$; an excluded low band does not authorize
+enlarging the parent. The classical-Dirac test-field NEC statement and the
+conditional NEC censorship theorem retain their hypotheses; neither is a
+nonlinear censorship result for this coupled programme.
+
+## Separate horizonless MMP return
+
+The classical extremal RN throat has positive Maxwell support and
+$AdS_2\times S^2$, with $V_4=0$. MMP's negative Casimir belongs instead to
+a horizonless global-$AdS_2$ return on closed magnetic field lines. The two
+mouths are ends of the same circle, so its $|q_{\rm mag}|$ lowest channels
+are counted once. For $L=\pi\ell$ and the antiperiodic Wilson minimum,
+
+$$
+E_{\rm flat\ strip}=-\frac{|q_{\rm mag}|\pi}{24L},\qquad
+E_{\rm wormhole}=\frac{|q_{\rm mag}|\pi}{24L}
+-\frac{|q_{\rm mag}|,2\pi}{12L}
+=-\frac{|q_{\rm mag}|}{8\ell}.
+$$
+
+The anomaly is already included in that induced stress. The allocation
+$\Gamma=1$ is not an extra action copy, a fitted packet vacuum energy or
+a new $V_4$. The absorbing nonperiodic classical chart supplies no such
+closed return. Its source study neither blocks the neutral branch nor
+restarts a historical coefficient gate. The relevant independent input is
+$\langle T_{kk}\rangle_{\Gamma=1}$ on the specified horizonless return;
+the note's manufactured example $|q_{\rm mag}|=4,\ell=2.5$ gives $E=-0.2$,
+without selecting a physical initial state.

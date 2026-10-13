@@ -75,3 +75,24 @@ Interpolation, node-evolution, preparation/field and source-cutoff /
 coincidence errors remain `None`. The local physical gate stays OPEN until
 those bounds close, even if a Newton control residual is small. This owner
 does not run an all-family campaign or a metric step.
+
+
+## Primal error control and tangent-count independence
+
+The old joint DOP853 RMS norm divided the error by the square root of the
+entire `(A,D,Y)` state length. Adding retarded directions therefore loosened
+the effective primal tolerance. In the n=64 controls, twenty families took
+one fewer step than iterate6 and contributed about `-3.16950304e-4` to N;
+the forty same-step families contributed `-1.88565863e-7`, giving the
+near-constant `-3.1714e-4` offset. Damping did not remove it, while beta
+followed its Jacobian. This was numerical step selection, not a missing
+physical constant mode or a non-existence result.
+
+`evolve_primal_controlled` keeps the existing difference-envelope code
+object but supplies a private solver factory accepting steps from `(A,D)`
+only. Extra zero directions cannot dilute primal control, and optional
+tangent tolerances act on each direction separately. The global solver
+binding stays available for explicit historical replay. The archived
+two-family probe compared 64 directions with 128 directions on the same
+zero-padded metric for `(32,-1)` and `(1,+1)`; it did not take a new
+coefficient step or certify a complete physical source sum.

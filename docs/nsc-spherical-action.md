@@ -235,3 +235,112 @@ known source, spectrum and horizon generators are not run. The next work
 must carry the required matter and nonlocal contributions through this
 action/measure interface, rather than repeat the spherical reduction or
 choose a convergence weight to make the source stationary.
+
+## Measure, spectral completion and the higher-derivative chart
+
+The metric measure is a quotient of the metric-deformation inner-product
+measure by diffeomorphism orbits, with its Jacobian, ghosts and zero modes.
+In Mottola's displayed supermetric, the trace eigenvalue is $1+CD/2$, so its
+zero is $C=-2/D$. Dasgupta–Loll's conditional conformal cancellation uses
+Lorentzian proper-time gauge, an Einstein–Hilbert kinetic term and a common
+regulator. That gauge is distinct from the heat-kernel proper-time regulator.
+Neither construction supplies an arbitrary one-dimensional scale weight.
+The canonical measure above covers its stated local truncation; the full
+nonlocal/5D measure still needs its kinetic operator and actual boundary data.
+
+At the stored child curvature, use the full compact spectral weight. The
+Camporesi–Higuchi $S^4$ spectrum has eigenvalues $\pm m/a$, $m=2,3,\ldots$,
+with $2(m^3-m)/3$ states per sign and volume $8\pi^2a^4/3$. The existing
+two-copy normalization gives
+
+$$
+\Gamma_5(a)=\frac23\sum_{m=2}^{\infty}(m^3-m)h_\Lambda(m^2/a^2),
+\quad
+\partial_{\ln a}\Gamma_5=-\frac43\sum_{m=2}^{\infty}
+(m^3-m)\frac{m^2}{a^2}h_\Lambda'(m^2/a^2).
+$$
+
+At $a=0.325735$, the full and local log-radius derivatives are
+$0.001239600$ and $-0.164273768$. At the local stationary control
+$a=0.43742254$, the full derivative is $0.084326048$ while the local one is
+approximately zero. This rejects that local stationary control for the full
+modulus; it does not exclude other completed-action branches or specify a
+Lorentzian state. The local curvature expansion remains conditional on a
+controlled small-curvature regime.
+
+The retained Einstein–Maxwell–Weyl feedback chart keeps lapse and shift free:
+
+$$
+ds^2=N^2dt^2-q^2(dx+\beta dt)^2-r^2d\Omega^2,
+\quad L=N/r,\quad Q=q/r,
+\quad D=\frac{Q_t-(\beta Q)_x}{L},
+$$
+
+$$
+\sqrt{|h|}R_h=-2D_t+2(\beta D+L_x/Q)_x,\qquad
+C^2=\frac{(R_h-2)^2}{3r^4}.
+$$
+
+For $C_W\ne0$, set $\alpha=-4\pi C_W/3$,
+$F=-4\pi Ar^2+2\alpha\chi$, $Z=-24\pi A$, and
+$V=8\pi Ar^2-\alpha(4\chi+\chi^2)-2\pi C_F\mathrm{flux}^2$.
+Then $F_\chi=2\alpha\ne0$ and $\chi=R_h-2$ is the auxiliary critical point.
+With $\Pi=p_r-(F_r/F_\chi)p_\chi$, the constraints are
+
+$$
+\mathcal C=\frac{p_Qp_\chi}{2F_\chi}+\frac{\Pi^2}{4ZQ}
++\frac{Zr_x^2}{Q}-QV-2\partial_x(F_x/Q),\qquad
+\mathcal D=p_rr_x+p_\chi\chi_x-Q\partial_xp_Q.
+$$
+
+The generator is $H=\int(L\mathcal C+\beta\mathcal D)dx$.
+Periodic spatial fluxes integrate to zero; finite time caps fix $Q,r,\chi$.
+The cap terms cancel the Euler, $\Box R$ and first-order bulk divergences.
+The Euler current requires its mixed terms:
+$j^t=8kA_0-16vs_x$, $j^x=-8(P+\beta k)A_0+16vs_t$,
+where $k=(q_t-(\beta q)_x)/N$, $v=(r_t-\beta r_x)/N$,
+$s=r_x/q$, $P=N_x/q$, $A_0=1+v^2-s^2$.
+This chart supplies conditional constraint data and a boundary primitive,
+not a completed Cauchy evolution or coupled physical source.
+
+On the specified spatially varying PG history, the locked local action is
+
+$$
+S_{\rm local}=-4\pi\int d\tau\,d\rho\sqrt{-\det g_2}\,r^2
+\left[AR+C_F\frac{q_{\rm mag}^2}{2r^4}+C_WC^2+C_EE_4
++C_\Box\Box R\right]+S_{\rm GHY}.
+$$
+
+The magnetic convention is $F_{\theta\phi}=q_{\rm mag}\sin\theta/2$.
+All five coefficients keep their locked signs and values. Compactly supported
+metric variations have zero outer GHY, Euler and $\Box R$ endpoint variation;
+oppositely oriented internal smooth cuts cancel. Subtracting a fixed baseline
+for reporting does not select a physical vacuum. The computed directional
+variation still needs the full spectral/state contribution; $93.54264532195464$
+remains a discrete time-node diagnostic.
+
+The compact warp changes the quantum weight even when its canonical free
+evolution has unchanged KK masses. For two complementary massless 5D copies,
+$\sigma=-a(2Y/\ell)^2$, $a=18/1015$, $Y\in[-\ell/2,\ell/2]$, use
+$D_s=e^{-s\sigma/2}D_0e^{-s\sigma/2}$ and its actual adjoint domain. The
+generalized eigenproblem retains both weights:
+
+$$
+\int e^{-s\sigma}|D_0\chi|^2dY
+=\epsilon\int e^{s\sigma}|\chi|^2dY,\qquad
+h_{\Lambda,s}(y)=\sum_jE_1(\epsilon_j(y;s)/\Lambda^2),\qquad
+\Gamma_{5,\Lambda}=\tfrac12\operatorname{Tr}_4h_{\Lambda,s}(D_4^2).
+$$
+
+The two copies are already counted. At $q=1$, $r=1$, $\ell=2$,
+$\Lambda=2$, $s=1$, the flat and 26-mode warped product potentials are
+$2.21888250509$ and $2.15498055956$; the radius, compact-length and warp
+derivatives are $4.37111539727$, $1.03018040018$, $-0.06242437994$.
+The min–max comparisons are
+$\epsilon_j(y;0)\le\epsilon_j(y;s)\le e^{2sa}\epsilon_j(y;0)$ and
+$V_{2,0}(\Lambda e^{-sa})\le V_{2,s}(\Lambda)\le V_{2,0}(\Lambda)$.
+Observed Galerkin convergence is separate from a proved retained-eigenvalue
+error bound. This Euclidean modulus is one common-source contribution; the
+compensator, finite terms, causal state and transmission still need matching.
+Original records and detailed component equations are in the
+[research deposit](https://doi.org/10.5281/zenodo.23090015).

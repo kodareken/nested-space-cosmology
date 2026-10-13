@@ -2,12 +2,21 @@
 
 The [response owner](nsc-atlas-prepared-response.md) owns the equations,
 analytic bounds and numerical admission. This evidence edition evaluates the
-operator certified in [v7](nsc-cosmological-atlas-v7.md). The
+operator certified by [finite preparation](nsc-atlas-field-preparation.md). The
 [canonical paper](../paper/nested-space-cosmology.md) remains the living
 narrative; the [programme owner](nsc-cosmological-atlas.md) connects the
 calculation to the wider map.
 
 ## Result and limits
+
+The retained v7 step is a conditional existence certificate for independent
+scalar data in a finite characteristic strip on the white-hole side of the
+fixed wall, away from the singularity. Its integral-operator norm bound is
+$0.138821<1$. It defines a unique trace and the composed interior response
+operator; v7 did not evaluate the waveform. The research dependency graph
+records prerequisites and stopping conditions separately from causal links.
+Neither its nodes nor this certificate creates a route from the right parent
+or connects the nine earlier scenarios.
 
 An independently specified compact scalar input in the retained Schwarzschild
 sector IV now has an evaluated route through the fixed moving wall to the

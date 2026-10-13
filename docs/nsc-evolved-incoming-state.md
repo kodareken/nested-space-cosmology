@@ -82,3 +82,68 @@ PYTHONPATH=src python3 -m pytest -q tests/test_nsc_evolved_incoming_state.py
 `--check` replays saved arrays and provenance and does not propagate fields.
 The consumer of this state contracts actual `z` derivatives of `F`; it must
 not restore a stationary `k=-E` substitution on these columns.
+
+
+## What an exactly fixed incoming covariance would require
+
+The older fixed-$C_0$ result is a necessary-condition theorem in a different
+class. On a finite regular trapped KS slab, take smooth positive $N,a,r$,
+compact axial changes, unchanged upstream preparation and canonical frame,
+and the same intrinsic $N,\beta,a,r$ on $\Sigma$. Fix the $N/\beta$ normal
+jets through order four there. The exact physical state then has
+
+$$C_g(T)-P_g(T):H^s(\mathbb R;\mathbb C^2)
+\longrightarrow H^{s+6}(\mathbb R;\mathbb C^2).$$
+
+Here the finite auxiliary projector has transport defect
+$R_g=\partial_TP_g+i[H_g,P_g]\in\Psi^{-6}$ for the existing symmetric
+first-order operator
+$H_g=(A_gD_z+D_zA_g)/2+B_g$, with
+$A_g=(N/a)\sigma_3-\beta I$ and
+$B_g=-Nm\sigma_1+(N\ell/r)\sigma_2$.
+The finite separated-band construction uses the nonzero band difference;
+individual shifted characteristic velocities need not be nonzero. The
+upstream P16 error is a translation-invariant $O(E^{-16})$ multiplier,
+the coherent/thermal correction is regularizing, and the signed relation
+$C(-E,\ell)=I-\sigma_3\overline{C(E,-\ell)}\sigma_3$ covers the other
+momentum cone. The finite Duhamel identity
+
+$$C_g(T)-P_g(T)=U_g(T,T_u)D_uU_g(T,T_u)^\dagger
+-\int_{T_u}^{T}U_g(T,t)R_g(t)U_g(T,t)^\dagger dt$$
+
+and Sobolev propagation give the stated gain. This imports the finite
+approximate-projector method of
+[Gérard and Stoskopf](https://arxiv.org/html/2108.11630), rather than
+assuming a new vacuum or an infinite-series convergence theorem.
+
+Exact operator equality $C_g(\Sigma)=C_0$ forces agreement of classical
+endpoint coefficients through degree minus five. For the first unmatched
+normal derivative of order $k$, the off-diagonal finite differences are
+
+$$\begin{aligned}
+(\Delta p_{k+1})_{01}&=-\frac{a_1^k}{(2i)^{k+1}}
+\left[(\ell/r_1-im)\Delta a_{T^k}
+-\ell a_1\Delta r_{T^k}/r_1^2\right],\\
+(\Delta p_{k+1})_{10}&=\frac{(-1)^ka_1^k}{(2i)^{k+1}}
+\left[(\ell/r_1+im)\Delta a_{T^k}
+-\ell a_1\Delta r_{T^k}/r_1^2\right].
+\end{aligned}$$
+
+For one retained $m\ell\ne0$ block their determinant is
+$im\ell a_1^{2k+1}/(2^{2k+1}r_1^2)\ne0$. Induction for $k=1,2,3,4$
+therefore fixes all permitted twenty normal/mixed $a/r$ jet differences
+to zero. The result is finite-amplitude and necessary, not sufficient;
+sampled kernels, finite energy moments or diagonal covariance equality do
+not establish its operator hypothesis.
+
+In that exact fixed-$C_0$ class the included shift constraint remains
+
+$$\mathcal E_\beta[g,C_0]=P_K<-M,\qquad
+M=\frac{5887634380411363}{265464355000000000}>0.$$
+
+Thus those compact prepared histories cannot solve both included constraints,
+even on an open interval. This excludes neither different parent/preparation
+data nor the source-fixed evolved state above, and proves no global history
+injectivity or extended transmitting stationarity. The existing 33 exact
+scalar checks and finite lower-jet controls support the algebra; they are
+not numerical continuum-error enclosures.

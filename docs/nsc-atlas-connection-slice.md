@@ -178,3 +178,19 @@ the same elementary connection has never appeared elsewhere.
 
 The [adapter](../src/recursive_horizons/nsc_atlas_connection_slice.py) and
 [tests](../tests/test_nsc_atlas_connection_slice.py) own the finite record.
+
+## Retained v4 assembly
+
+The historical v4 application used this sourced body A with $M_A/\ell=0.4$
+and a complete vacuum Schwarzschild bridge B with $M_B/\ell=0.6$. Only
+selected smooth vacuum ends enter the many-body existence theorem; exact
+open overlaps reattach the original bodies. The resulting family has two
+AE ends: the designated common parent and B's other end. That other end is
+not a second established child. Sufficiently large separation is a theorem
+hypothesis, without an explicit common connector or a certified BL distance.
+The separate observer at $R_{\rm obs}/\ell=1.6$ is protected only while its
+past domain stays inside the retained exterior through $R_{\rm cut}/\ell=4$
+and the open overlap. The slice supplies the body-to-vacuum-end interface;
+formation, the many-body future, stability and inherited parameters remain
+open. Its preserved bundle is historical evidence, with replay selected
+explicitly through the reproduction guide.

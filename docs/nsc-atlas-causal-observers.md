@@ -168,3 +168,25 @@ Field transmission through the wall, emission amplitudes, regular formation,
 perturbative stability and the future development of the glued many-body
 data remain outside this calculation. No result here supplies a physical
 signal between siblings or a common age for different universes.
+
+## Protected right-parent observer window
+
+For a separate static observer at $R_{\rm obs}=4M$, retain the identical
+Schwarzschild initial data $h,K=0$ on $2M<R<R_{\rm cut}=10M$, its closure
+and a larger open overlap. With
+$r_*(R)=R+2M\log(R/(2M)-1)$, radial null propagation gives the open window
+
+$$
+0\le\tau_{\rm obs}<\sqrt{1-2M/R_{\rm obs}}
+[r_*(R_{\rm cut})-r_*(R_{\rm obs})]
+=\frac{M}{\sqrt2}[6+2\log4].
+$$
+
+The inward optical endpoint is at minus infinity, so the outer retained-data
+edge sets this bound. Smooth vacuum local uniqueness equates the geometry
+within this domain for admissible distant assemblies; it equates field or
+quantum states only if their data are also equated. No disturbance is predicted
+at the endpoint, and no global shell evolution or sibling channel follows.
+The retained radii are declared inputs, not a gluing theorem's separation
+bound. Analytic null propagation and direct quadrature were the bounded
+controls, with at most 64 Gauss nodes and 60 CPU seconds.

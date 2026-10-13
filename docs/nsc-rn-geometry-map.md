@@ -45,8 +45,10 @@ both and the chart divides in three. For `mu = 1.04`:
 | **trapped** | `[0.7543, 1.3257]` | **negative** | **yes** |
 | below the inner horizon | `[0, 0.7543]` | positive | no |
 
-Only the outermost zero is a sign change *inside the chart's own domain*,
-because the chart stops at `r_minus`.
+Only the outermost zero was a sign change inside the original chart's
+guarded domain, because that interface stopped at `r_minus`. The later
+default-off horizon continuation below distinguishes that guard from the
+reference geometry's real PG domain.
 
 **Every inner edge this programme has ever used lies inside the trapped
 region** — `1.04`, `0.85`, `0.80`, `0.77`, `0.76`, `0.7555`, all of them
@@ -55,13 +57,32 @@ dynamics of matter that is already behind the membrane: the `x2.05`, the
 three-sided shell, the `94%` retention. That is not an accident of where the
 grid was placed; it is where the trapped region is.
 
-And the third region — the one that would be the next nest — is **not
-describable by this chart at all**. Sampling below `r_minus` is refused by
-the chart's own guard: *"static modes stay strictly above the inner horizon"*.
+The third region is a reference-geometric candidate, not an established
+next nest. The original guard refused samples below `r_minus`; the later
+continuation can evaluate them when explicitly enabled. A sourced evolution
+there still needs its own boundary construction.
 
-That is the sharpest limit found so far, and it is a limit in the
-construction rather than in the resolution. The metric has a third region;
-the chart cannot describe it.
+## Real PG domain and the inner-horizon continuation
+
+The reference shift `beta = sqrt(2M/r-Q^2/r^2)` remains real for
+`r > Q^2/(2M)`, below the inner horizon. At `mu=1.04`, the latter is
+`0.754343`, while the real-shift limit is `0.4808`. Both horizons have
+outgoing characteristic speed zero; the speed is positive again below
+the inner horizon within this real domain. This is a description of one
+charged reference solution, without a third-region occupation claim.
+
+The inward characteristic equation has a simple pole where the outgoing
+speed vanishes. The retained implementation uses the same finite horizon-jet
+construction at `r_minus` as at `r_plus`, splits and restarts the branch,
+and fills nearby nodes by Taylor jets. `allow_below_inner_horizon` is
+keyword-only and default off; the real-shift guard remains. The recorded
+checks reached lower edges `0.70`, `0.60`, `0.50` after the former step-size
+failures. Three unchanged packet preparations (`mu=1.002` at centre `12`,
+`mu=1.040` at centres `12` and `3`) retained combined digest
+`91b4e51dc5504dc5934feed86b63bb0f`. The historical curated result was
+`368 passed, 1 skipped`; that count is provenance, not a current suite run.
+Crossing the reference horizon proves neither a valid sourced march beyond
+pure-outflow excision nor iterated nesting.
 
 ## The one structural fact the map exposes
 

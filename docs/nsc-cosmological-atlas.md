@@ -53,6 +53,11 @@ wall evolution remain open. The [normal-force successor](nsc-atlas-scalar-normal
 now establishes zero quadratic regular normal-stress jump at the same
 conformal wall. Fixed vacuum/tension sources then require zero variation
 of mean extrinsic-curvature trace, including metric and wall displacement.
+The [wall-mass closure](nsc-atlas-wall-mass-closure.md) now supplies an
+analytic exterior-side geometric-mass functional from the fixed leading
+wall trace. It retains both null fluxes and the full frame correction.
+Numerical evaluation and coupled cap/wall geometry are still unresolved;
+the wall tail does not inherit the initial leg's mass plateau or late sign.
 
 Keep three approaches available:
 
@@ -97,8 +102,10 @@ that every open branch succeeds.
 | `gravitational-initialization` | Specify compatible corner geometry and a null normalization. The [source-leg constraint](nsc-atlas-characteristic-initialization.md) fixes the quadratic radius correction for the original compact field trace; the zero bottom leg retains its reference geometry. | `source-leg-mass` after the transverse radius equation is supplied; no mass shift is inferred from a radial slope alone. |
 | `source-leg-mass` | The [mixed equation and mass law](nsc-atlas-source-mass.md) transport the fixed corner datum and determine geometric mass on the same initial leg. Full frame conversion, geometric and improved-stress checks agree. | `wall-mass-transport`; a finite initial-surface mass is not an asymptotic energy or evolved wall response. |
 | `wall-normal-force` | The [full normal projection and Gauss identity](nsc-atlas-scalar-normal-force.md) establish zero additional normal-stress jump for the conformal probe. Fixed vacuum/tension sources require zero variation of mean curvature. | `bulk-backreaction` with this necessary boundary condition; it includes metric and wall displacement rather than setting displacement to zero. |
-| `wall-mass-transport` | Candidate, not yet derived or admitted: do the existing leading wall field traces and both borrowed mass-flux components, with full frame conversion, determine exterior-side geometric mass on reference wall cuts? | A finite invariant wall-side response or a named missing datum before selecting a bulk solver; coupled cap/wall geometry remains open. |
-| `bulk-backreaction` | Supply the coupled propagation equations and remaining junction conditions. The initialized null geometry, mass and local normal-force condition are inputs, not a solved bulk future. | A finite validity estimate or a sourced metric/wall response, then an independently shared gravitational response channel. |
+| `wall-mass-transport` | The [analytic closure](nsc-atlas-wall-mass-closure.md) uses the fixed leading wall trace, its first derivative, quiet mass anchor and reference geometry. Both null fluxes plus the full frame term agree with original-frame improved-stress transport. | `wall-mass-evaluation` or `cap-wall-closure`; the quadratic exterior functional is closed, without numerical mass values or a solved coupled boundary. |
+| `wall-mass-evaluation` | Decide whether a finite mass value resolves the next junction uncertainty. Specify quadrature and independent field/geometry error control; the waveform's old samples do not certify the mass integral. | A controlled numerical exterior input to `cap-wall-closure`, if that value changes the matching decision. |
+| `cap-wall-closure` | Identify the remaining cap-side mass and geometric junction data needed alongside the exterior functional and local stress conditions. Retain the cap vacuum and displacement effects on its nonconstant background mass. | A compatible finite metric/wall response or a precise missing datum; no new bulk solver is presumed. |
+| `bulk-backreaction` | Supply any propagation equations and remaining junction conditions actually required after the local closures. Initial null geometry, mass functionals and the normal-force condition do not themselves prove a sourced bulk future. | A finite validity estimate or a sourced metric/wall response, then an independently shared gravitational response channel. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -120,9 +127,12 @@ edges, not a forced passage through this scalar example.
 
 The parallel physical-response branch is
 `wall-transmission + parent-preparation + physical normalization -> probe-stress -> gravitational-initialization -> source-leg-mass`.
-The local branch `probe-stress -> wall-normal-force` needs no mass quadrature;
-the mass branch next tests `wall-mass-transport` before selecting a bulk
-solver. These branches supply inputs to `bulk-backreaction`.
+The local branch `probe-stress -> wall-normal-force` needs no mass quadrature.
+The existing `wall-trace`, canonical normalization and quiet mass anchor
+now close `wall-mass-transport` analytically; no numerical source-leg mass
+curve or normal-force result is needed for the identity itself. The next
+decision is `wall-mass-evaluation` or a named missing `cap-wall-closure`
+input. These branches can supply inputs to `bulk-backreaction` when needed.
 They supply prerequisites for interpreting the field as a gravitational source;
 they do not supply another proof of the waveform or a formation history.
 
@@ -385,14 +395,22 @@ coordinate-invariant geometric response. Its conformal-frame difference
 must be retained during the input. The [normal-force check](nsc-atlas-scalar-normal-force.md)
 now closes the local stress jump without computing individual pressure
 curves. The required mean-curvature variation combines metric and wall
-motion. The next proposed decision is whether the existing leading wall
-field traces close exterior-side geometric mass transport on the reference
-wall cuts, through the borrowed flux and frame laws. It has not yet been
-derived, admitted or evaluated. This can identify a smaller finite bridge
-or its missing datum before selecting a coupled bulk solver; cap and wall
-dynamics still require the remaining junction equations.
+motion. The [wall-mass closure](nsc-atlas-wall-mass-closure.md) now provides
+the exterior-side analytic functional directly from those leading traces,
+using both null fluxes and the full conformal endpoint term. Its first
+derivatives suffice for a future evaluation; no sampled waveform is
+differentiated in the proof. The next choice is controlled evaluation if
+a mass value resolves the matching question, or the named missing cap/wall
+input first. The cap vacuum and radius-dependent reference mass prevent
+silently extending the exterior shortcut through the wall. Coupled
+evolution, stability and finite-amplitude validity remain open.
 
 ## Owners and reproducible output
+
+- [Exterior wall-mass closure](nsc-atlas-wall-mass-closure.md) and its
+  [exact-algebra recorder](../scripts/record_nsc_atlas_wall_mass_closure.py)
+  bind the conditional finite functional to known leading field traces.
+  Numerical evaluation and remaining cap/wall junction data stay separate.
 
 - [Normal-force compatibility](nsc-atlas-scalar-normal-force.md) and its
   [exact-algebra recorder](../scripts/record_nsc_atlas_scalar_normal_force.py)
@@ -537,3 +555,75 @@ nor their tests are a new physical result. This atlas does not establish a
 globally solved multi-black-hole spacetime, stable child formation, inherited
 constant values, sibling signaling, or identification of our observed cosmos
 with any displayed child. No existing paused numerical campaign is resumed.
+
+## Retained parent, wall and clock calculations
+
+The v2–v3 additions have separate domains. Brill–Lindquist supplies a shared
+time-symmetric vacuum slice,
+
+$$
+h_{ab}=\psi^4\delta_{ab},\qquad K_{ab}=0,\qquad
+\psi=1+\sum_i\frac{m_i}{2|x-x_i|}.
+$$
+
+Away from the punctures, $R[h]=-8\psi^{-5}\Delta\psi=0$.
+The outer ADM charge is $\sum_i m_i$; puncture-end charges are
+$M_i=m_i[1+\sum_{j\ne i}m_j/(2d_{ij})]$. For $m_A=1,m_B=1.5,d=12$
+these are $2.5,1.0625,1.5625$. They are asymptotic charges, not horizon
+masses. The three ends of $\mathbb R^3$ minus two punctures do not establish
+formed children or causal channels. The exact companion contribution
+$m_j/[2\sqrt{d^2+r^2-2dr\mu}]$ gives angular variation in
+$q_{AB}=r^2\psi^4\Omega_{AB}$; its sphere curvature is
+$\mathcal K=(1-2\Delta_{S^2}\log\psi)/(r^2\psi^4)$. The recorded 17-point
+profiles at coordinate radii $1,1.5$ are probes, not located horizons.
+
+The [N-body scalar-flat theorem](https://arxiv.org/html/0909.1101v1)
+instead supplies an existence family retaining prescribed spherical collars
+at sufficiently large separation, with positive-mass smooth AE ends. It
+supplies neither a numerical separation threshold nor a connector metric
+for the BL parameters. The [non-time-symmetric extension](https://arxiv.org/html/1004.1355v1)
+needs smooth qualifying $(g,K)$ bodies and timelike ADM energy-momenta.
+An ideal material delta-layer is outside its automatically verified scope.
+BL's axial Killing field is a nonzero KID, so the separate trivial-KID
+localized-neck theorem does not apply directly; this does not exclude other
+gluing routes. The 2002 generic positive-mass-bridge argument was withdrawn
+by its erratum, while its separate many-Schwarzschild construction remained.
+A cutoff interpolation alone does not solve the annular constraints.
+
+The comoving radiation screen fixes $a=A\sin\eta$,
+$t=A(1-\cos\eta)$, $s=\sin\chi_0$, $c_0=\cos\chi_0$ and constant
+Schwarzschild mass $M$. Constant wall tension $\sigma_0$, with
+$P=-\sigma_0$, implies the necessary angular condition
+
+$$
+k^2R^4-2c_0kR^3+2MR-A^2s^4=0,\qquad k=4\pi\sigma_0.
+$$
+
+It cannot hold on an interval of changing $R$ because $A^2s^4\ne0$.
+This excludes either cap orientation and either sign of constant tension,
+without excluding a separate de Sitter/vacuum-wall solution. The 33-point
+witness uses $A=1,M/A=0.4,\chi_0=\pi/3,1.25\le\eta\le1.45$ and $R>2M$;
+samples support the algebraic argument rather than proving it. With vacuum
+outside and constant pure tension, conservation also forces zero relative
+speed through radiation: boundary motion alone does not repair the source.
+The v3 vacuum-wall example and retained-collar family still need compatible
+complete Cauchy data and a protected evolution domain before being identified
+as one spacetime. Neither edition supplies a multi-region Hamiltonian.
+
+The fixed Bronnikov observer calculation uses
+$r=\sqrt{1+\rho^2}$, $\beta=\sqrt{1-A}$ and
+$A=1+3\rho+3(1+\rho^2)(\arctan\rho-\pi/2)$, in units $c=L_{\rm throat}=1$.
+Its null expansions are
+$\theta_\pm=2\rho(-\beta\pm1)/(1+\rho^2)$: exterior, trapped,
+minimum-sphere and anti-trapped regions remain distinct. The horizon is
+$\rho_h\simeq1.90069160547$, $r_h\simeq2.14770309380$.
+The $\mathbb R\times S^2$ interior approaches de Sitter with $\Lambda=9\pi$;
+it is not finite-radius FLRW or a compact spatial universe. Its horizon
+tangent has $\kappa_h\simeq0.238325799634$ and affine parameter
+$\lambda=\lambda_0+C e^{\kappa_h\tau}$, $C>0$. Infinite negative PG time
+therefore has finite affine length in that patch; no singularity or global
+beginning follows. An assigned ancestry clock requires the convergence test
+$T_0=\sum_{m\ge0}(\prod_{j=1}^m q_j)\Delta\widehat\tau_m$.
+Infinitely many rooms do not guarantee infinite proper or affine duration.
+The geometry's quantum source, physical clock transport and global extension
+remain unresolved.

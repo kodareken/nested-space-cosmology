@@ -103,3 +103,23 @@ source/error certificate is actually supplied.
 ```sh
 PYTHONPATH=src python3 -m pytest -q tests/test_nsc_local_incoming_constraints.py
 ```
+
+
+## Structural and joint-assembly controls
+
+The retired constraint-germ adapter preserved the structural response plane
+and two independently evaluated action responses. It checked reference
+integrability with fixed grade0/grade1 metric data:
+$\Delta P_0=\Delta P_1=0$, first changed order2, reference difference
+$O(|k|^{-3})$, raw vertices $O(|k|)$ and insertion tail $O(|k|^{-2})$.
+Independent response and local Euler controls used `3e-11`; their resolved
+numerical Jacobian rank was not an interval nonsingularity certificate.
+
+The joint incoming adapter supplied the missing reference response and
+assembled it with the retained finite33-group source and local terms.
+Prepare/replay kept the original source law, no fitted force and no
+selected physical initial tuple. Quadrature and panel movements were
+indicators; `physical_source_error_bound` remained `None`, and neither
+adapter solved the Cauchy constraints or extended stationarity. These
+structural controls must retain their frozen-source domain when reused
+beside the evolved incoming assembly.

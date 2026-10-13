@@ -290,6 +290,34 @@ a positive minimum radius, and an expanding interior can coexist in one smooth
 four-geometry. The project’s task is to make the common Dirac state source that
 geometry.
 
+The retained 4 October two-room benchmark compared a single inward ray on
+the fixed Bronnikov geometry at commit
+`7656eec34141ceca22c073bca997acefb317be05`, in units
+$c=\hbar=L_{\rm throat}=1$. Its specified PG normal observers are
+$u=\partial_\tau-\beta\partial_\rho$. For positive conserved Killing
+frequency $E$, the inward branch has
+$p=-E/(1+\beta)$ and $\omega_{\rm local}=E/(1+\beta)$, giving
+
+$$
+\frac{\omega_c}{\omega_p}=\frac{1+\beta(\rho_p)}{1+\beta(\rho_c)}.
+$$
+
+This map is regular at the horizon, where $\omega_{\rm local}=E/2$.
+Starting at $\rho_p=8$, the frequency ratios at the horizon, minimum sphere
+and $\rho=-16$ are `0.74961167`, `0.47282123`, `0.029856528`.
+The angular Dirac coefficient $\kappa/r$ follows a different curve:
+with $r=\sqrt{1+\rho^2}$ it peaks at the throat, increasing by
+$\sqrt{65}\simeq8.06226$ from the parent point before falling in the
+expanding interior. One scale factor cannot replace both measurements.
+The child proper-time free-mode Hamiltonian is
+$H_{k\kappa}=(k/a_\parallel)\sigma_3+(\kappa/r)\sigma_1$,
+$a_\parallel=\sqrt{-A}$, after rescaling $\chi=r\sqrt{a_\parallel}\psi$.
+Its instantaneous frequencies obey
+$\omega_{k\kappa}^2=k^2/a_\parallel^2+\kappa^2/r^2$.
+The selected-neck-mode mixing diagnostic does not establish particle
+production, antimatter content, an inherited parent quantum preparation,
+self-consistent geometry or a global ancestry clock.
+
 The Perseus cluster offers an everyday-scale example of black-hole physics
 expressed as music. Repeated outbursts from its central black hole drive
 pressure waves through the hot cluster gas with

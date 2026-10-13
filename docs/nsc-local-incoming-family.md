@@ -54,3 +54,15 @@ by this geometry object; the rho0 transmitting seam stays fixed.
 ```sh
 PYTHONPATH=src python3 -m pytest -q tests/test_nsc_local_incoming_family.py
 ```
+
+
+## Fourier representation of the same two-function class
+
+An alternate finite representation uses $1,\cos(2\pi k\xi),
+\sin(2\pi k\xi)$, where $\xi$ maps the same locked $I$ affinely to
+$[0,1)$, multiplied by the existing axial plateau. The plateau is one on
+$I$ and kills the computational period in the collar. Its n=8 or16 modes
+per function keep the same $(w,U)$ history law, support and normal window;
+`LocalIncomingFamily` remains the Chebyshev regression. Failure of the
+old n≤32 discretization did not exclude the declared smooth function class
+or certify a physical root. Changing basis supplies no source-error bound.

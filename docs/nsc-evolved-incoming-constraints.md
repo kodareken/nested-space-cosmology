@@ -135,3 +135,80 @@ remain present; only their response computation can be omitted.
 
 No new force, source law, parameter fit, physical duration, metric timestep
 or publication is introduced. The frozen-C0 theorem remains a regression.
+
+
+## Conditional covariance and incoming-energy error bounds
+
+For the same source-fixed state, auxiliary $P$ only decomposes
+$C_g=P_g+D_g$. The physical difference retains both $P_g-P_{\rm ref}$
+and $D_g-D_{\rm ref}$; the auxiliary projector supplies no new action.
+On a computational Bloch cell of enclosing length $L>0$, use
+$k_n=q+2\pi n/L$, fiber inner product $L^{-1}\int dz$, Weyl matrix
+$A_{mn}(q)=\hat a_{m-n}((k_m+k_n)/2)$ and reconstruction measure
+$dq/(2\pi)$ without another $1/L$. A physical local application requires
+a separately proved causal embedding of that padded cell.
+
+The uniform evaluation constants are
+
+$$C_0^2=S^2\le1+L^2/4,\qquad C_1^2\le1/4+L^2/4.$$
+
+For the two-spinor Hilbert--Schmidt norm
+$H=\|\Lambda^2A\Lambda^2\|_{\rm HS}$, Schatten Hölder gives
+$d_{11},d_{21}\le\sqrt2 HS$; point evaluation adds no further spin factor.
+Parseval supplies
+
+$$\int_{\rm BZ}\frac{dq}{2\pi}H^2\le\frac8L I[a],\qquad
+I[a]=\int dz\int\frac{dk}{2\pi}
+\left(\langle k\rangle^8\|a\|_F^2+
+\frac1{256}\|\partial_z^4a\|_F^2\right),$$
+
+so $\int_{\rm BZ}H\le\sqrt{8I}/L$. Keep $L,a,r$ as positive
+enclosing intervals in denominators. Replacing them with upper endpoints
+before inversion can underbound the error. With
+$K_j=\int\|\partial_z^jB\|$, let
+$M_1\le1+K_1$ and
+$M_2\le1+\sqrt{4K_1^2+(K_2+K_1^2)^2}$. The actual defect
+$R=\dot P-[G,P]$ then propagates as
+
+$$d_{11}^{\rm ev}\le M_1^2\left(d_{11}(D_{\rm up})+\int d_{11}(R)\right),
+\qquad
+d_{21}^{\rm ev}\le M_2M_1\left(d_{21}(D_{\rm up})+\int d_{21}(R)\right).$$
+
+Writing $\|\rho\|_1\le C_0^2d_{11}^{\rm ev}$ and
+$\|j\|_1\le C_0C_1d_{21}^{\rm ev}$ gives
+
+$$\epsilon_N\le\mu\left[
+\sqrt{m^2+\ell^2/r^2}\,\|\rho\|_1+\|j\|_1/a\right],
+\qquad \epsilon_\beta\le\mu\|j\|_1.$$
+
+These are conditional propagators of supplied certified norms. Fourth axial
+derivatives of the true fourth-order defect require mixed geometry order
+9; spatial-only bounds and formal projector order do not supply them.
+Instantaneous $I[a]$ also does not replace the time-integrated defect norms.
+Missing genuine norm inputs remain `None`, and the gate stays OPEN.
+
+For a normalized vacuum projector $P=(I+n\cdot\sigma)/2$, exact $P_*$,
+$d=\|P_*-P\|_{\rm op}$ and $H=h\cdot\sigma$, rank-one geometry improves
+the incoming energy estimate to
+
+$$|\operatorname{tr}[H(P_*-P)]|
+\le2|h\times n|d+2|h\cdot n|d^2,$$
+
+because $n\cdot(n_*-n)=-2d^2$. Vacuum current error is exactly zero
+when both traces are one. At the incoming surface
+$h=(-m,\lambda/r,-E/a)$; the inherited $c_1=\lambda/r+im$ cancels
+the constant cross-product coefficient. Directed bounds $B(E)$ for the
+cross product and $D(E)$ for the projector distance yield
+$2B(E)D(E)+2(E/a+M)D(E)^2$, with
+$M=\sqrt{m^2+(\lambda/r)^2}$. Integrate the positive polynomial products
+on the original finite bands and count signed multiplicity once; the lapse
+action projection remains $4\pi ar^2$. Pressure bounds remain separate.
+
+The historical eight-cell middle lapse enclosure improved from `4.18017e-5`
+to `1.15107e-7`; group14's 128-cell values were `3.24091e-10` at order16
+and `2.51409e-10` at order24. The latter exceeded `3e-11`. Its conditional
+aggregate near `4.998e-9` required the separately recorded order24 lapse
+correction `-3.30349e-12`; it is not the current missing low/subgap bound.
+Centered depth4 Taylor enclosure at sixteen cells moved `4.37e-6` only
+to `4.35e-6`. These finite numerical outcomes leave modal, quadrature,
+field and complete-spectrum errors separate from the physical constraints.

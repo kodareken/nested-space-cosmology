@@ -144,3 +144,65 @@ The massless evaluator still rejects $m\neq0$.
 .venv/validation/bin/python scripts/lab.py -m pytest -q tests/test_nsc_ks_massive_cubic_uv.py
 .venv/validation/bin/python scripts/lab.py scripts/derive_nsc_ks_massive_cubic_uv.py --check
 ```
+
+
+## Minor-A3 primitive and transported upstream normalization
+
+For the actual $L_0=\partial_\rho-S_3a^{-2}\partial_z-iV/a$, the minor
+recurrence is
+
+$$A_{j+1,-s}=\frac{a^2}{2i}T_{-s}A_{j,-s}
+-\frac a2V_{-s,s}A_{j,s},\qquad V_{-s,s}=-m+is\ell/r.$$
+
+It gives
+
+$$A_{2,-s}=\frac{s\ell a}{4r^2}
+(-a_\rho ar+a^2r_\rho+sr_z+2qr)
+-\frac{ima}{4}(aa_\rho-2q),$$
+
+$$A_{3,-s}=\frac{a^2}{2i}T_{-s}A_{2,-s}
+-\frac a2V_{-s,s}(R+ih).$$
+
+The Stage-2 primitive on `0b0e4ced` bounded second geometry/phase jets,
+minor $A_2$, and the jet part of minor $A_3$ for original massless group1,
+$|\ell|=\sqrt5$. It uses the same normal-window constants
+$|\chi'|\le8/\mathrm{width}$ and
+$|\chi''|\le105/\mathrm{width}^2$, with $s_\rho=-1/a$ on
+$\rho\in[1,33/32]$. The shared unowned upstream $R_{\rm up}+ih_{\rm up}$
+still multiplies $\delta(1/r)$ in the whole-slab minor difference. Massless
+$T_sh=0$ does not set that datum to zero. Complete minor $A_3$, numerical
+$C_4,C_M$ and the vacuum tail remain null. The massless difference-bound
+API rejects massive channels; the generic recurrence above retains mass.
+
+Continuity gives
+$T_sn_2=sT_sq_z=s\ell^2r_z/r^3$, so
+$k=n_2-sq_z$ is transported upstream data. Both histories share it;
+it is not zeroed. The lowest raw coefficients are
+
+| Bilinear | $e^1$ | $e^0$ | $e^{-1}$ |
+|---|---:|---:|---:|
+| $J_I$ | $-s$ | $0$ | $-sk$ |
+| $A^\dagger VA+J_{S3}/a$ | $-1/a$ | $0$ | $-aQ/2-k/a$ |
+
+All three history differences vanish on $\Sigma$, where the intrinsic
+radii and axial scales agree. A common spatially homogeneous upstream
+factor $f(e)=1+c_2e^{-2}+c_3e^{-3}+c_4e^{-4}+O(e^{-5})$ consistently
+transforms every transported coefficient. For either bilinear,
+
+$$J_3'-J_3=2\operatorname{Re}(c_2)J_1
++2\operatorname{Re}(c_3)J_0
++(|c_2|^2+2\operatorname{Re}(c_4))J_{-1}.$$
+
+Its history difference therefore vanishes on $\Sigma$. Varying $R$ alone
+would miss the associated $h_{3,z}$ and $n_4$ shifts: for a real common
+$c$ their contributions are $cq_z+cq_z-2cq_z=0$. This is a formal
+occupied-vacuum coefficient invariance, not physical source matching or a
+numerical higher-order remainder. Spatially varying factors or unmatched
+incoming radii lie outside it.
+
+The retired cubic-residual demonstration applied the shared production
+channel basis `(N2,N4,NM,J2,J4,JM)` only at completed exact saved value
+nodes. Missing nodes stayed empty; a center value was never broadcast.
+No field/source evolution was performed, and $C_M$, uniform $C_4$ on
+$I$ and the complete UV tail stayed null. A changed finite-cutoff nodal
+residual does not close the gate.

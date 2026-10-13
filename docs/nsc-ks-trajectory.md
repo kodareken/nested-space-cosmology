@@ -34,3 +34,24 @@ Sampled periodic L2 norms are diagnostic values. The saved polynomials make
 continuous residual validation possible, but sampled maxima or sums are
 not error bounds and are never passed as certified inputs to the
 [residual-to-matter estimate](nsc-ks-residual-error.md).
+
+
+## Streaming capture and replay
+
+The streaming adapter sends each accepted `TrajectorySegment` to a callback
+and retains only the preceding endpoint. The existing evolution code object
+runs with a private recording DOP853 factory; endpoint fields, dense
+coefficients and preparation identity agree with in-memory capture.
+Deterministic NPZ chunks store `rho_nodes`, `state_nodes` and
+`dense_corrections` for at most four complete segments. Shared endpoints
+match bitwise, chunks carry SHA256 hashes, and the manifest updates atomically
+after each complete chunk. Existing run directories are refused, and an
+interrupted manifest remains incomplete.
+
+Replay verifies numbering, hashes, shapes and continuity one chunk at a
+time; incomplete data are rejected unless explicitly requested. Source,
+history and final prepared-array bindings remain the caller's responsibility.
+The fine value-only protocol uses N=2048, period $205/512$, `rtol=5e-14`,
+`atol=5e-19`, `max_step=1/8192`, and `tangents='zero'`. This is bounded
+storage/capture, with unchanged physical interval and source, rather than
+a residual enclosure or gate certificate.

@@ -76,3 +76,14 @@ C:\Users\swedi\AppData\Local\NSC\validation-venv\Scripts\python.exe `
 
 An OPEN admission is the expected result until budget v5 exists.  Optimizer
 failure remains OPEN and is never converted into NON-EXISTENCE.
+
+
+## Retarded trust-region primitive
+
+The independent primitive uses the same 258-by-64 rectangular Jacobian,
+physical principal scaling and $H^3(w)+H^1(U)$ trust metric. Its Levenberg
+proposal is a model prediction; acceptance needs a fresh value evolution,
+reduced joint maximum residual, positive radius and preserved preparation
+support. Rank-one Broyden updates trigger a full refresh after five accepted
+steps or two poor prediction ratios. The primitive itself launches no
+campaign and cannot bypass the complete error-budget admission above.

@@ -531,3 +531,57 @@ occupation indicators. Their raw \(Q\) differences, a radius distance,
 and a Hamilton-constraint residual cannot be substituted directly as
 occupation errors. The relation does not certify that the coupled
 trajectory remains in its initial-constraint uncertainty.
+
+## Finalized conformal successor on the same realization
+
+The separate conformal comparison consumes the completed
+`nsc-spherical-conformal-episode-v2` primary `nf512_dt_0.0005` on
+$T\in[0.2,0.3]$. It fixes the original $T=0$ observer, columns 0 and 1,
+the six weights $(0.75,0.75,0.5,0.5,0.25,0.25)$ and the actual transported
+$\Phi(0.2)$, with $\|C_{AE}\|_F=0.338636575692358$.
+Its representative generator is $H=\sigma_2P+\kappa Q\sigma_1$,
+$L=Q$, $\beta=0$, using 21 stored frames prolonged to the original
+2048-point quadrature. The geometric multiplicity does not multiply
+occupations. The maximum occupation change is `0.07342951961159094`;
+streamed/full discrepancy is `6.3508141397161655e-6`.
+
+Memory, initial drive and actual cross omission move occupations by
+`0.016818538289934015`, `0.048541204982542864`,
+`0.09206143279175863`, respectively. Their independent control errors are
+`2.20112157194724e-6`, `1.66255239472321e-5`, `1.2282200189728254e-5`.
+The memory reference uses the non-Hermitian triangular negative control
+$G_{\rm off}=H-P_EHP_A$, not a physical replacement model.
+Region 0 remains the leader, with shell/probability shares at least
+`0.6509785261434402`, `0.6558454531429172`; the same segment carries
+resolved surface exchange. Each reported numerical movement is below one
+percent of its own effect. This joins maintained localization, generated
+geometry and conditional local response, without reintegrating geometry
+for omissions or claiming renewal, stress or a continuum error bound.
+
+## Exact coupled source decomposition
+
+The discovery split uses a different fixed observer: original child columns
+$(2,3)$. With $P_A=VV^\dagger$, $P_E=I-P_A$ and fixed $V$, write
+$\Phi=Va+e_{\rm drive}+e_{\rm memory}$. Its exact differential system is
+
+$$
+\begin{aligned}
+i\dot a&=Aa+B(e_{\rm drive}+e_{\rm memory}),\\
+i\dot e_{\rm drive}&=P_EHP_Ee_{\rm drive},\\
+i\dot e_{\rm memory}&=P_EHP_Ee_{\rm memory}+B^\dagger a,
+\end{aligned}
+\quad A=V^\dagger HV,
+\quad B^\dagger a=P_EHVa.
+$$
+
+The initial drive is $P_E\Phi(t_0)$ and initial memory is zero. Summing
+these equations reconstructs the full source law and retains all shared-weight
+cross terms. The same-action forces use that reconstructed source once;
+the Volterra memory kernel and the on-shell endpoint term are not extra
+stress insertions. Matrix-free FFT application forms neither a dense
+covariance nor a stored exterior propagator. The short $0.01$ comparison
+at $n_f=128,256$ gave roundoff agreement of full and split RK4 forces and
+geometry, not a completed $T=0.3\to1$ production segment. Counterfactual
+memory/drive omissions are nonunitary projections, while a physical rank-12
+cross-dephasing preparation remains unresolved. These are separate finite
+identities and controls, without a new campaign authorization.

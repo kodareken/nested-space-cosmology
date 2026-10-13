@@ -23,7 +23,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import validate_nsc_ks_current_field_pilot_v3 as V3
+from fractions import Fraction
+from types import SimpleNamespace
 from recursive_horizons.nsc_ks_evaluation_binding import write_bytes_atomic
 from recursive_horizons.nsc_ks_ball_trajectory import restored_upper
 from recursive_horizons.nsc_ks_current_field_cone import (
@@ -64,6 +65,80 @@ def digest(path):
     path = Path(path)
     return sha256((path if path.is_absolute() else ROOT / path).read_bytes()).hexdigest()
 
+
+
+# Capture constants belong to the measured 1024-node, 12-column cell 122.
+_capture_TIME_DEGREE, _capture_RECIPROCAL_ORDER = 8, 4
+_capture_CAPTURE = ROOT / 'results/development/nsc-ks-current-trajectory-pilot-v2.json'
+
+_capture_EXPECTED_IDENTITY = '0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0'
+
+_capture_EFFECTIVE_PERIOD = Fraction(1759218604441, 4398046511104)
+
+def _capture__scalar(value):
+    return float(np.asarray(value).reshape(()))
+
+def _capture_load_capture():
+    if not _capture_CAPTURE.exists():
+        raise FileNotFoundError('parent current-trajectory capture is required')
+    record = json.loads(_capture_CAPTURE.read_text())
+    if record.get('schema') != 'NSC-KS-CURRENT-TRAJECTORY-PILOT-v2':
+        raise ValueError('unexpected current-trajectory capture schema')
+    for name, expected in {**record['source_hashes'], **record['input_hashes']}.items():
+        if digest(name) != expected:
+            raise ValueError('pilot capture dependency changed: ' + name)
+    payload = ROOT / record['payload']['path']
+    if digest(payload) != record['payload']['sha256']:
+        raise ValueError('pilot capture payload changed')
+    if record['cell_index'] != 122 or record['family'] != [14, 1] or record['grid_nodes'] != 1024 or (record['source_columns'] != 12) or (len(record['source_rows']) != 4) or (record['profile_identity'] != _capture_EXPECTED_IDENTITY):
+        raise ValueError('capture is not the declared current Cheb32 family14_1 cell122 pilot')
+    with np.load(payload, allow_pickle=False) as arrays:
+        data = {key: arrays[key] for key in arrays.files}
+    return (record, data)
+
+def _capture_load_family(capture):
+    history = json.loads((ROOT / capture['history_path']).read_text())
+    family = LocalIncomingFamily(np.array(history['history']['coefficients']))
+    identity = profile_identity(family, include_normal_window=True)
+    if identity != capture['profile_identity'] or identity != _capture_EXPECTED_IDENTITY:
+        raise ValueError('current history identity differs from the captured cell')
+    return family
+
+def _capture_geometry_bounds(family, capture):
+    from recursive_horizons.nsc_ks_current_history_bounds import radius_bounds
+    from recursive_horizons.nsc_ks_radius_enclosure import axial_profile_bounds, reciprocal_radius_tail
+    bounds = radius_bounds(family, capture['rho_up'])
+    rejected = (axial_profile_bounds(family.functions[0])[0], axial_profile_bounds(family.functions[1])[0])
+    tail = reciprocal_radius_tail(bounds['w']['profile_bounds'], bounds['U']['profile_bounds'], normal_support=bounds['normal_support'], reference_radius_lower=bounds['reference_radius_lower'], axial_lower=bounds['axial_lower'], absolute_angular=abs(capture['angular']), order=_capture_RECIPROCAL_ORDER)
+    return (bounds, rejected, tail)
+
+def _capture_segment_from_capture(capture, arrays):
+    grid = np.asarray(arrays['computational_z'], float)
+    if len(grid) != capture['grid_nodes']:
+        raise ValueError('captured spatial grid changed')
+    spacing = Fraction(grid[1]) - Fraction(grid[0])
+    period_q = spacing * len(grid)
+    period = float(period_q)
+    origin = float(grid[0])
+    if abs(period - float(_capture_EFFECTIVE_PERIOD)) > 1e-18 and period_q != _capture_EFFECTIVE_PERIOD:
+        if abs(period - float(_capture_EFFECTIVE_PERIOD)) > 1e-12:
+            raise ValueError('captured spatial period is not the measured source-Fourier period')
+    segment = TrajectorySegment(_capture__scalar(arrays['rho_start']), _capture__scalar(arrays['rho_end']), np.asarray(arrays['start']), np.asarray(arrays['end']), np.asarray(arrays['dense_corrections']))
+    expected = capture['cell_rho_interval']
+    if [segment.rho_end, segment.rho_start] != expected:
+        raise ValueError('saved cell covers another rho interval')
+    weights = np.asarray(arrays['source_weights'], float)
+    energies = np.asarray(arrays['source_energies'], float)
+    if len(weights) != capture['source_columns'] or len(energies) != len(weights):
+        raise ValueError('captured source columns changed')
+    return (segment, grid, origin, period, period_q, weights, energies)
+
+capture_owner = SimpleNamespace(
+    CAPTURE=_capture_CAPTURE, OUTPUT=ROOT / "results/development/nsc-ks-current-field-pilot-v3.json",
+    TIME_DEGREE=_capture_TIME_DEGREE, RECIPROCAL_ORDER=_capture_RECIPROCAL_ORDER,
+    EXPECTED_IDENTITY=_capture_EXPECTED_IDENTITY, EFFECTIVE_PERIOD=_capture_EFFECTIVE_PERIOD,
+    load_capture=_capture_load_capture, load_family=_capture_load_family,
+    segment_from_capture=_capture_segment_from_capture, geometry_bounds=_capture_geometry_bounds)
 
 def synthetic_segment(rho_start, rho_end, *, scale=1.0, nsrc=1, nz=8):
     size = 2 * nsrc * (1 + nz)
@@ -122,16 +197,16 @@ def v4_cell():
     recorded = json.loads(raw)
     _profiles, payload_digest = restore_v4_profile_payload(
         recorded, expected_file_sha256=digest(V4_PATH), file_bytes=raw)
-    capture, arrays = V3.load_capture()
-    family = V3.load_family(capture)
-    segment, _grid, origin, _period, period_q, weights, energies = V3.segment_from_capture(
+    capture, arrays = capture_owner.load_capture()
+    family = capture_owner.load_family(capture)
+    segment, _grid, origin, _period, period_q, weights, energies = capture_owner.segment_from_capture(
         capture, arrays)
     if (capture["cell_index"] != 122 or capture["family"] != [14, 1]
             or capture["profile_identity"] != V4_PROFILE_IDENTITY):
         raise ValueError("capture is not the declared family-14_1 cell 122")
     config = WholeConeFieldConfig(
         family=(14, 1), profile_identity=V4_PROFILE_IDENTITY, bits=90,
-        time_degree=V3.TIME_DEGREE, reciprocal_order=V3.RECIPROCAL_ORDER,
+        time_degree=capture_owner.TIME_DEGREE, reciprocal_order=capture_owner.RECIPROCAL_ORDER,
         spatial_count=capture["grid_nodes"], period_origin=origin,
         period_length_numerator=period_q.numerator,
         period_length_denominator=period_q.denominator,
@@ -139,7 +214,7 @@ def v4_cell():
         source_weights=tuple(map(float, weights)),
         source_energies=tuple(map(float, energies)),
         radius_tail=packed_radius_tail(
-            family, capture["rho_up"], capture["angular"], V3.RECIPROCAL_ORDER,
+            family, capture["rho_up"], capture["angular"], capture_owner.RECIPROCAL_ORDER,
             bits=90),
         profile_payload_sha256=payload_digest,
         settings=dict(recorded["settings"]))

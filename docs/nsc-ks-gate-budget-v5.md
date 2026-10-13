@@ -46,3 +46,13 @@ is not EXISTENCE or NON-EXISTENCE.
 PYTHONPATH=src python3 -m pytest -q tests/test_nsc_ks_gate_budget_v5.py
 python3 scripts/derive_nsc_ks_gate_budget_v5.py --check
 ```
+
+
+## Energy-panel feasibility control
+
+The retired one-step energy preflight constructs the initial Cheb24
+representation and checks one uniform energy-polynomial residual against
+`1e-20`. It performs neither full-panel propagation nor a physical source
+integral. Replay checks the same step and authenticated inputs. A passing
+one-step result only informs the measured-cost/full-residual decision; it
+fills none of the nine complete-budget components above.

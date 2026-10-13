@@ -70,3 +70,35 @@ extended stationarity remains OPEN; no metric equation is stepped.
 python3 scripts/derive_nsc_retarded_fixed_c0_certificate.py --check
 python3 -m pytest -q tests/test_nsc_retarded_fixed_c0_certificate.py
 ```
+
+## Retained response methods and their distinct evidence
+
+The spacetime Fourier-pair pilot kept the complete coherent source in
+$\delta\widehat C_{oi}=\delta A_{oi}C_i f_i^\dagger
++f_oC_o\delta A_{io}^\dagger$ and analytically integrated the stationary
+source-energy delta functions. At the selected diagonal energy it measured
+`-1.0554769134063148e-5`, with spatial/time differences
+`6.91800e-9`, `2.46272e-11` and CAR-pair residual `3.58011e-11`.
+These are numerical diagnostics; the directed projector bound above closes
+the later sign certificate rather than promoting those differences to proof.
+
+The independent short-shell check uses
+
+$$
+A_i'=G_iA_i,\qquad
+B_{oi}'=G_oB_{oi}
+-\frac{i\ell s\chi(s)\widehat w(E_o-E_i)}{ar^2}\sigma_2A_i,
+\qquad
+G_E=\frac{i}{a}(-m\sigma_1+\ell\sigma_2/r-E\sigma_3/a).
+$$
+
+Here $s=T(\rho)-T(1)$ and $\widehat w(\omega)=\int e^{i\omega z}w(z)dz$.
+Its upstream tangent is zero; all three source columns and four signed
+energies remain. No $2\pi$, energy weight or angular multiplicity enters
+this pair ODE. The conditional sign proof uses
+$\|C_\Sigma-P_{v,\Sigma}\|=\sqrt{f_H}$,
+$\|K-K_0\|<9I/50$, $K_0=-iI\sigma_2$ and
+$[K_0,P_v]_{00}=-2I\operatorname{Re}(P_v)_{01}$.
+Thus the full coherent remainder, including its phase, is bounded without
+replacing the physical state. The selected-pair exclusion remains local;
+it cannot exclude all histories or prove full action stationarity.

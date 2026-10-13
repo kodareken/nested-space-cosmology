@@ -105,3 +105,52 @@ unchanged, and metric stepping remains closed.
 python3 scripts/derive_nsc_pg_ks_metric_pullback.py --check
 python3 -m pytest -q tests/test_nsc_pg_ks_metric_pullback.py
 ```
+
+## Spacetime, nonlinear source and endpoint chain rules
+
+A raw KS spacetime direction $\xi^B(T,z)$ pulls back as
+$\delta x_P^A=J^A{}_B\xi^B(T(\rho),\tau+S(\rho))$, with
+
+$$
+\partial_\rho\delta x_P=J'\xi
++J(-\partial_T\xi/a_0+\beta_0\partial_z\xi/a_0^2).
+$$
+
+For $\xi=s(\rho)e^{-i\omega z}$ the spatial factor
+$e^{-i\omega S(\rho)}$ and derivative $s'-i\omega S's$ are required.
+The canonical first variation is
+$\delta H=-i(\delta v\partial_\rho+\frac12\partial_\rho\delta v)+\delta M$;
+its half-density transformation already includes the measure contribution.
+No separate measure force is added. The PG source-mode kernel
+$M_A(E_o,E_i)=\int\Phi_{E_o}^\dagger\delta H_A\Phi_{E_i},d\rho$
+gives insertion
+$-i e^{-iE_o(t_f-\tau)}M_Ae^{-iE_i(\tau-t_i)}$ with spectral measure
+$dE_i/(2\pi)$. Sampled CTP weights are $\sqrt{w_ow_i}/(2\pi)$; source
+covariance retains the coherent open fibers. The 33-group/63-family controls
+do not complete the unsampled infinite trace or select a duration.
+
+For a supplied nonlinear history with both PG speeds negative, restriction
+to actual KS events uses
+$\Psi_{\rm KS}=M\chi_{\rm PG}$,
+$M=\operatorname{diag}(\sqrt{-v_+},\sqrt{-v_-})$ and
+$\partial_z\Psi=(\partial_\tau M)\chi+M\partial_\tau\chi$.
+Already evolved columns carry their phases; neither another $e^{iES}$ nor
+the stationary replacement $\partial_z\Psi=-iE\Psi$ is admissible.
+The symmetric insertion is
+$K_\sigma=-\frac i2[\Psi^\dagger\sigma\partial_z\Psi
+-(\partial_z\Psi)^\dagger\sigma\Psi]$,
+with fixed coordinate measure $d\rho,d\tau/a_0$. This restriction is a
+normal/half-density frame map on resolved solutions, not a Cauchy isometry.
+Finite source checks still need spectral completion and reference allocation
+before an absolute stress or stationarity claim.
+
+The endpoint interface requires
+$J^\pm_{A,e}=\partial V_\pm/\partial g^A_{\Delta,e}$ of shape
+`(4, 2, d_c, d_c)` in the original eight-coefficient basis. Its algebraic
+chain-rule tests do not supply physical branch jets. Full matching is
+$R_{\partial,A,e}=w_{A,e}+b_{A,e}$, where $b$ is the same-action boundary
+remainder's geometric pullback. Renaming `q` to `q_ADM` supplies none of
+those data. The physical jets, remainder and two-sided mismatch remain
+`null`; the diagnostic `93.54264532195464` is retained without a fitted
+counterforce. The Gaussian action is counted once, and metric stepping
+remains outside this retained calculation.

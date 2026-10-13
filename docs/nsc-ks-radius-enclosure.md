@@ -53,3 +53,52 @@ These constants bound the represented analytic profile and the reciprocal
 series tail. Floating profile evaluation, polynomial/FFT arithmetic and
 the continuous time residual still need separate bounds. This helper alone
 does not populate the physical gate's field-error budget.
+
+
+## Mixed geometry and continuous coupling inputs
+
+The same history has $N=1$, $\beta_K=0$, $a=a_{\rm ref}(T)$ and
+$r=r_{\rm ref}(T)+\chi(s)[sw(z)+s^3U(z)/6]$. Directed mixed Taylor jets
+through total order9 use the recurrence $\rho_T=-a(\rho)$ to compose the
+existing background rho-jets into canonical-time jets. The increment
+$\rho(T_0+\tau)-\rho(T_0)$ has exact zero constant, including interval
+basepoints; independent interval subtraction cannot establish that zero.
+Coefficients divide derivatives by $t!z!$. The preparation slab is
+$\rho\in[1,33/32]$, and unresolved plateau boundaries require subdivision.
+Positivity is enclosed rather than supplied by a floor.
+
+For whole-cell axial bounds, combine the time coefficients with the same
+authenticated global profile norms:
+
+$$[\chi(s)s]_t\,w^{(j)}(z)/j!
++[\chi(s)s^3/6]_t\,U^{(j)}(z)/j!.$$
+
+All needed w/U orders and their original amplitudes must be present, the
+analytic profile identities must agree, and the numerical cell must contain
+the compact support. These boxes bound actual mixed derivatives, including
+transition terms such as $\partial_T^4\partial_z^5r$; independent higher
+geometric slots are not introduced.
+
+The radius-coupling recorder supplies the previously missing continuous
+integrals for the same reference/difference field equation. With
+$r=r_0+\delta r$,
+
+$$M=-\frac{i\ell}{a}\frac{\delta r}{r_0r}\sigma_2,
+\qquad M_z=-\frac{i\ell}{a}\frac{\delta r_z}{r^2}\sigma_2.$$
+
+For $-\sigma\le s\le0$, $|d\rho|=a|ds|$ and global $W_j,U_j$, define
+$J_j=\sigma^2W_j/2+\sigma^4U_j/24$. Then
+
+$$\int\|M\||d\rho|\le\frac{|\ell|J_0}{r_{0,\min}r_{\min}},\qquad
+\int\|M_z\||d\rho|\le\frac{|\ell|J_1}{r_{\min}^2}.$$
+
+The covariance-growth recorder also uses full nonlinear
+$q=1/r_g-1/r_{\rm ref}$ Fourier moments through order9. Its comparison is
+
+$$\binom{M_0}{M_1}_{\Sigma}\le
+e^{2K_0}\begin{pmatrix}1&0\\K_1&1\end{pmatrix}
+\binom{M_0(D_{\rm up})+\int M_0(R)}{M_1(D_{\rm up})+\int M_1(R)}.$$
+
+The initial and true-defect moments stay missing. For ell=0 the comparison
+is identity and the radius response is zero, with baseline retained.
+Geometry/coupling enclosures alone fill no complete UV or physical gate.

@@ -71,3 +71,25 @@ No station payloads, no marching.
 - `lab/scripts/run_nsc_rn_inner_packet.py` gained `--below-horizon`, which
   threads the flag to both `build_grid` and `prepare_radial_packet`, and
   refuses an edge below `r_minus` unless that flag is given
+
+## Retained inward-domain and pole diagnostics
+
+The historical inward campaign kept the original spacing, outer boundary
+`32 r_m`, packet and coupled/frozen arms, and moved the edge to one cell
+above `r_minus`. All three `epsilon=0.001` cases retained stations at
+`t=5,10,15,20`. Their final inner-ten-percent pressure-slope minima were
+`-171.6`, `-80.2`, `-62.3` for `mu=1.002,1.010,1.040`.
+These remain positive-radius diagnostics. The attributed universal
+`g>=-1` Hayward criterion and the resulting central-regularity verdict are
+withdrawn: the grid never approaches `r=0`, and even `r_minus>0` would not
+determine that limit. A pointwise power `r^g` is finite at zero only for
+`g>=0`; an integral requires its own measure. No replacement centre verdict
+or new march is claimed.
+
+The inward preparation failure was a simple pole of `d_plus` at vanishing
+`speed_plus`, rather than evidence of stiffness. The outgoing denominator
+vanishes at both RN horizons; `speed_minus=-(N+beta)` is nonzero and equals
+`-2` on the unit-lapse horizon. The later finite-jet continuation resolves
+the reference preparation pole, while the pure-outflow boundary requirement
+still excludes a sourced excision below the inner horizon. A new boundary
+condition there would be a separate construction.

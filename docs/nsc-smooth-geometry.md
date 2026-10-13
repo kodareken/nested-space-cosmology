@@ -135,3 +135,79 @@ not a stationary nested cosmology.
 Reproduce: `python3 scripts/check_nsc_smooth_geometry.py --check`.
 
 Here T_rest means the metric variation of Gamma_one after isolating the Einstein term already contained in that same action. Its coefficient determines G; this is bookkeeping, not adding an independent Einstein action or counting it twice. The null contraction uses the same null vector in both indices. The old seam diagnostic records the magnitude of the derivative jump, whose right-minus-left sign was negative.
+
+
+## Relative vacuum stress on the same compact axial circle
+
+For the compact axial $S^1$ control, changing periodic to antiperiodic
+spin structure changes the vacuum stress on this actual varying radius.
+With $ds^2=N^2dt^2-q^2dx^2-r^2d\Omega^2$, half-density normalization
+$u=r\sqrt q\,\psi$ gives
+
+$$H_\kappa=-i\sigma_2(c\partial_x+c'/2)+v\sigma_1,
+\qquad c=N/q,\quad v=N\kappa/r.$$
+
+For one complex four-component massless Dirac field,
+$E_\eta=-4\sum_{\kappa\ge1}\kappa\sum_js_j(A_{\kappa,\eta})$,
+including both sphere signs and the particle/antiparticle determinant
+count once. Subtract each angular sector before summing. Varying every
+$N_i,q_i,r_i$ by the polar-factor Hellmann--Feynman identity, including
+edge-coefficient variation, gives the relative stress for
+$\Delta E=E_P-E_{AP}$:
+
+$$\Delta\rho=\frac{g_N}{4\pi qr^2h},\quad
+\Delta p_x=-\frac{g_q}{4\pi Nr^2h},\quad
+\Delta p_\perp=-\frac{g_r}{8\pi Nqrh}.$$
+
+The pointwise Weyl identity $Ng_N+qg_q+rg_r=0$ makes the relative trace
+zero; equal local anomalies/counterterms cancel between domains, so this
+does not assert a zero absolute trace. Lapse normalization and conservation
+are checked independently. At512 points and $\kappa_{\max}=8$:
+
+| R | $\Delta E$ | Throat $\Delta(\rho+p_x)$ | $\int\Delta(\rho+p_x)dx$ | RMS conservation residual |
+|---:|---:|---:|---:|---:|
+| 2 | 0.1586544847 | 0.0186082412 | 0.0409127521 | $4.44\times10^{-7}$ |
+| 4 | 0.0194597880 | 0.0017988910 | 0.0041368012 | $1.53\times10^{-7}$ |
+
+Positive P-minus-AP null differences mean AP lowers the source in the
+needed direction. Axial64/128/256/512 controls showed second-order
+movement, with the conservation residual decreasing roughly fourfold per
+doubling; high-angular subtractive SVD roundoff is not a proved tail sign
+or bound. Absolute AP stress, covariant determinant normalization,
+counterterms and the same-action metric equations remain required.
+No G or subtraction coefficient was fitted to the imposed Einstein stress.
+This compact axial circle is distinct from an unwrapped periodic array
+and the transverse compact carrier.
+
+## Geometric variation on the actual smooth transmitting surface
+
+The separate shared PG surface at $\rho=0$ has one smooth metric jet and
+opposite outward normals. In the future-child convention
+$a=\sqrt{\beta^2-1}$ and
+$n=(\beta/a)\partial_\tau-a\partial_\rho$, with $n_p=n$, $n_c=-n$.
+Only on stationary background scalars is $D_Tf=-a\,df/d\rho$; the full
+normal derivative must remain on time-dependent fields. Matching intrinsic
+variations gives $\delta a_c=\delta a_p$, $\delta r_c=\delta r_p$,
+while outward shear variations obey $\delta\sigma_c=-\delta\sigma_p$.
+The Weyl metric covectors $\overline P_a,\overline P_r$ are odd under
+normal reversal, and $\Pi_\sigma$ is even. Consequently
+
+$$(\overline P_{a,p}+\overline P_{a,c})\delta a+
+(\overline P_{r,p}+\overline P_{r,c})\delta r+
+(\Pi_{\sigma,p}-\Pi_{\sigma,c})\delta\sigma=0.$$
+
+The actual reference values are
+$a_0=\sqrt{3\pi/2-1}$, $r_0=1$, $D_Ta=3$, $D_Tr=0$,
+$D_T^2r=a_0^2$, $F=2$, $D_TF=-6a_0$. For unchanged
+$C_W=-0.0008441130342798952$, parent values are
+$\overline P_a=0.4150924626502038$,
+$\overline P_r=-0.6300629292752326$,
+$\Pi_\sigma=0.10900236876297109$ and
+$\sigma=1.557021169290531$; the child has the oriented counterparts.
+Einstein--GHY momenta and the already included odd Euler/BoxR endpoint
+primitives cancel as well. This is geometric seam matching in the shared
+smooth-jet domain, with tolerance $3\times10^{-11}$, not a thin-shell
+result, the old93.54264532195464 end-node diagnostic or full stationarity.
+The Gaussian Schur factor and complementary bulk are already counted
+once. Remaining field variations and bulk Einstein--quantum source
+matching stay OPEN.

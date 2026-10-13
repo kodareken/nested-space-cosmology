@@ -125,3 +125,24 @@ This calculation addresses the finite subgap panel. The high-energy packet
 tail remains a separate part of the complete covariance integral. A complete
 spatial $C_{\mathrm{PG}}$, transmitting endpoint jets and metric evolution are
 not assigned by the contour identity alone.
+
+## Complete canonical subgap covariance
+
+For canonical columns $(Rv,w,0)$, the unchanged horizon covariance gives
+
+$$
+C=f|R|^2vv^\dagger+(1-f)ww^\dagger+K+K^\dagger,\qquad
+K=-isRvw^\dagger.
+$$
+
+The complete probe basis is $(I,\sigma_1,\sigma_2,\sigma_3)$, with
+$C=\frac12\sum_{i=0}^3\operatorname{Tr}(C\sigma_i)\sigma_i$.
+Massless stress projections alone omit $\sigma_1$ and cannot recover the
+matrix. Neither the Gram nor $|R|$ is replaced by its ideal value.
+Coherence continues as $K(z)=-is(z)R(z)v(z)w(\bar z)^\dagger$; a real
+polynomial moment contributes $J+J^\dagger$, not twice the entrywise real
+part. This preserves imaginary off-diagonal coherence without inventing
+a complex-frequency physical occupation. The archived identity check covered
+304 positive subgap rows across 38 signed families, without solving fields.
+It authenticates algebra, not input-mode or integration accuracy; upstream
+transport and validated contour/quadrature remainders remain open.

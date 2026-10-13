@@ -105,3 +105,29 @@ polynomial-moment self-check is now a compensated, forward-error-scaled
 test that returns the identical weights, so `nsc_rn_pg` imports on this
 Windows interpreter. No operator value, calibration hash, or provenance
 changed.
+
+## Observer clocks and the finite room diagnostic
+
+On `ds^2=N^2 dt^2-(dr+beta dt)^2-r^2 dOmega^2`, the PG normal is
+$u=N^{-1}(\partial_t-\beta\partial_r)$. Its transported clock obeys
+$dr/dt=-\beta$, $d\tau/dt=N$, with tangents
+$d(\delta r)/dt=-\delta\beta-\beta_r\delta r$ and
+$d(\delta\tau)/dt=\delta N+N_r\delta r$. A fixed-radius static clock
+instead requires $N^2-\beta^2>0$ and rate $\sqrt{N^2-\beta^2}$.
+The old saved normal scalar integrates the lapse at fixed excision radius;
+it is not this transported proper time or a child clock. The saved outer
+Killing scalar's zero at non-timelike samples is a clamp. The missing
+four RK4 metric stages prevent recovering the old coupled observer's proper
+clock exactly. The observer adapter refuses a domain exit or non-timelike
+static step and keeps the last valid state rather than extrapolating.
+
+The separately recorded finite-resolution diagnostic defines
+`omega_zero=N/r`, `omega_cutoff=(N+|beta|)/spacing` and
+`Q=omega_zero/omega_cutoff`. The six-case inner `Q` ranges from
+`3.9299e-03` to `1.6829e-02`, with inner/outer ratios `18.858–19.909`.
+The three deeper-domain final values are `4.1734e-03`, `9.9791e-03`,
+`2.2380e-02`, with ratios `21.084`, `22.517`, `25.161`.
+These are per-room measurements tied to the stored states and numerical
+spacing, invariant under the stated common coordinate rescaling. They do
+not determine Planck's constant, absolute zero, or a universal physical cutoff.
+The source family remained incomplete, without a `summary.json`.

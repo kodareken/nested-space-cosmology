@@ -167,3 +167,155 @@ implementation controls of the displayed proof, not cosmological simulations.
 
 The supporting v1 correspondence and normalized-recursion records are reused
 by hash. No older scientific record or its hashed source document is edited.
+
+## 6. The massless reference and its finite-cutoff allocation
+
+On the child tail, $u=-1/\rho$ gives the smooth conformal metric
+
+$$
+\bar g=g/r^2=\frac{du^2}{(1+u^2)^2W(u)}-W(u)dz^2-d\Omega_2^2,
+\qquad W(u)=3(\pi-\arctan u)+\frac{3u-u^2}{1+u^2}.
+$$
+
+The auxiliary continuation agrees with this metric above $u=-0.05$, joins
+smoothly to $W=3\pi$ on $[-0.1,-0.05]$, and stays constant below $-0.1$.
+Its ultrastatic negative-energy projector propagates by the conformal Dirac
+operator, with $\psi=r^{-3/2}\bar\psi$. Imported Hadamard propagation and
+the anomalous conformal stress law supply this massless reference; they do
+not select the physical parent state. The unwrapped angular spectrum has
+$\omega^2=k^2/(3\pi)+\kappa^2$, $|\kappa|\geq1$.
+
+In the retained proper-time convention,
+$T^\mu{}_\mu=(-C^2/20+11E_4/360-\Box R/30)/(16\pi^2)$. The asymptotic
+reference has $H_{\rm child}=\sqrt{3\pi}$ and
+
+$$
+\rho_{\rm ref}=\frac{33}{320}-\frac{3u^2}{32}+O(u^3),\qquad
+p_{\parallel,\rm ref}=p_{\perp,\rm ref}=-\frac{33}{320}+\frac{u^2}{32}+O(u^3),
+\qquad \rho_{\rm ref}+p_{\parallel,\rm ref}=-\frac{u^2}{16}+O(u^3).
+$$
+
+This tail expansion cannot be applied at the neck. Its finite $R^2$
+ambiguity must be matched by the complement. Define
+$\mathcal C_{\nu,\mu}=\Gamma_{\rm light,\nu}-\Gamma_{\rm light,ren}[\mu]$;
+the exact allocation is
+$\Gamma_5=\Gamma_{\rm light,ren}+(\Gamma_{H,\nu}+\mathcal C_{\nu,\mu})$.
+At curvature radius $a=0.325735$ and $\nu=1$, the reference projection is
+$0.103125000$, the original light projection $2.8628\times10^{-16}$, and
+the converted complement $-0.102079088$. Their unchanged total is
+$0.00104591235$. Reallocation does not create a new source.
+
+## 7. Normalization, state conversion and the Weyl cocycle
+
+For $x=d^2/\Lambda^2$, the exact profile comparison is
+
+$$
+g_{\rm PT}=\tfrac12E_1(x),\qquad
+g_{\rm log}=-\tfrac12e^{-x}\log(d^2/M^2),\qquad
+h=-\tfrac12[e^{-x}(\log x+\gamma_E)+E_1(x)],
+$$
+$$
+g_{\rm log}=g_{\rm PT}+[\log(M/\Lambda)+\gamma_E/2]e^{-x}+h.
+$$
+
+$M$ is a normalization mass. The remainder has $h(0^+)=0$,
+$\int_0^\infty h\,dx=-1/2$ and $\int_0^\infty xh\,dx=-3/4$.
+A heat-weighted rank and a sharp spectral projector therefore differ in
+their finite volume and Einstein terms; anomaly agreement does not choose
+the measure. No profile is fitted to hold a throat open.
+
+For the existing remainder, $dE_{\rm sub}/d\log M=A_4/(16\pi^2)$ with
+$a_4=(-18C^2+11E_4-12\Box R)/360$. At fixed reference mass, changing
+$M\to sM$ is canceled by $\Delta c_i=\beta_i\log s$, where the basis is
+$(M_{\rm ref}^4,M_{\rm ref}^2R,C^2,R^2,E_4,\Box R)$ and
+
+$$
+\beta_i=\left(0,0,\frac1{320\pi^2},0,-\frac{11}{5760\pi^2},
+\frac1{480\pi^2}\right).
+$$
+
+The continuum closed-cell bulk shift is $C^2$ alone. The discrete Euler
+column is kept for exact finite-code cancellation; at $s=2$ its leftover
+falls from about $1.6\times10^{-10}$ at 32 points to below $10^{-12}$ at
+64 and 128. This subtraction ratio $s$ is distinct from recursive
+$\Omega$, and it supplies no physical Newton or cosmological running.
+
+Finite proper-time conversion also depends on the state. For one massless
+Dirac field on the flat thermal circle,
+
+$$
+\Delta F_{\mathcal C}=-\frac{4T^4}{\pi^2}
+\sum_{n\geq1}\frac{(-1)^n}{n^4}(1+x_n)e^{-x_n},
+\qquad x_n=\frac{n^2\nu^2}{4T^2}.
+$$
+
+At $T/\nu=0.5$, canonical thermal energy is $0.0719658654\nu^4$,
+while the finite-endpoint thermal determinant gives $-0.0012266736\nu^4$.
+The unit pole residue does not equate these state prescriptions. The common
+CTP conversion must retain the canonical state, complement and contour
+correction together; a state-independent local vacuum term cannot remove
+the thermal difference.
+
+Under common metric Weyl scaling,
+$D_\omega[g_\phi]=e^{-\phi/2}D_\omega[g]e^{-\phi/2}$. The same modulus gives
+
+$$
+\mathcal A_\Lambda[g,\phi]=E_\Lambda[g_\phi]-E_\Lambda[g]
+=\int_0^1dt\,\operatorname{Tr}[\phi e^{-D[g_t]^2/\Lambda^2}],
+\qquad g_t=e^{2t\phi}g.
+$$
+
+Independent heat-path and determinant evaluations agree. The local volume
+coefficient is $1/4$, whereas the sharp-projector coefficient is $1/8$.
+For $\phi=0.05+0.04\cos(2\pi x/L)$, the retained local anomaly integral is
+approximately $-0.002804148$. The cocycle composes as
+$\mathcal A[g,\phi+\sigma]=\mathcal A[g,\phi]+\mathcal A[g_\phi,\sigma]$.
+It supplies the compensating integrand once; it does not fix the complete
+measure or select the physical relative-sheet scale.
+
+## 8. The charged throat dictionary and relational vacuum law
+
+For $\int\sqrt{-g}(AR-CF^2-V)$, imported MMP normalization gives
+$G_N=1/(16\pi A)$, $g^2=1/(4C)$, $r_e^2=q^2C/(4A)$ and
+$\ell=16r_e^3/(|q|G_N)$. Integer magnetic flux and a closed antiperiodic
+return path are part of that domain. At the first matching point $\nu=1$,
+$\Xi_{\rm partial}/q^2=V_DC_D/(8A_D^2)=3.4459938566757384$ exceeds the
+charged seed bound $1/4$. The full $V_{\rm full}$ is the missing
+common-action input in that partial embedding.
+
+The relational normalization route imposes, after the full assembly,
+
+$$
+\Gamma_{\rm rel}=(1-\mathcal P_0)\Gamma_{\rm one},\qquad
+\mathcal P_0(V,A,C)=(V,0,0),\qquad
+\left.\frac{\delta\Gamma_{\rm rel}}{\delta g_{\mu\nu}}
+\right|_{\rm homogeneous,unlinked}=0.
+$$
+
+It removes the local $a_0$ tadpole while preserving Einstein, gauge,
+curvature, finite Casimir and link response. Under inherited units,
+$V\to\Omega^4V$ and $\mathrm{Vol}\to\Omega^{-4}\mathrm{Vol}$ keep its
+CTP subtraction invariant. This route sets $V_{\rm full}^{\rm rel}=0$,
+$\lambda_4=0$ and $\Xi=0$; the physical return state and complete induced
+coefficients remain separate conditions.
+
+Keeping the charged light field explicit at
+$\mu_B=\sqrt{|q|}/r_e$ gives
+$A=[Q_1[h_\Lambda]-\mu_B^2]/[6(4\pi)^2]$ and
+$C=H_{\Lambda,\mu_B}(0)/[3(4\pi)^2]$. With $r_e=L_*=1$,
+$\Omega=\Lambda r_e$ and $\zeta=\Omega^2$, the radius condition is
+
+$$
+F_q(\Omega)=\frac{q^2C(\Omega,\sqrt{|q|})}{4A(\Omega,\sqrt{|q|})}-1=0.
+$$
+
+The first checked cutoff-resolved branch is $q=4$:
+$\Omega=3.973074368754324$, $\zeta=15.78531993965257$,
+$AL_*^2=0.04501936182826088$, $C=0.011254840457065235$ and
+$V_{\rm full}L_*^4=0$. Its radius residual is $1.33\times10^{-15}$,
+$H_{\rm child}/\Lambda=0.7726963653$, and 26-to-34 compact modes change
+$\Omega$ by $8.64\times10^{-9}$. The $q=2,3$ roots fail the same cutoff
+condition. This finite candidate does not select flux, establish the
+large-$q$ regime, or supply the physical charged boundary state.
+Original merged records are at
+[Zenodo](https://doi.org/10.5281/zenodo.23090015).

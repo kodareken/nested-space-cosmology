@@ -114,3 +114,21 @@ The missing implementation input is a directed enclosure of the reconstructed
 PDE residual over each continuous rho/z cell, including spatial truncation,
 coefficient evaluation and arithmetic. The error propagation above alone
 does not close the physical local gate.
+
+
+## Continuous polynomial residual component
+
+For a saved signed step $h$ and fraction $\xi$, use
+$S=X_\xi-hL_gX$. Integrating its norm over $\xi$ equals the physical
+rho-residual integral over $|d\rho|$, so no second step-width factor
+appears. Ball Fourier field and time-operator polynomials retain the
+diagonal rate $2\pi k/L-E$, both mass and signed angular off-diagonal
+rates, and the actual $i\sigma_2$ radius correction.
+
+Represent the combined time polynomial at one common Bernstein degree.
+Convexity bounds its row norm over the cell by its largest coefficient
+row norm; spatial Taylor panels retain the full-cell derivative remainder
+from Fourier moments and interval profile derivatives. This bounds only
+the polynomial component. Scalar time-coefficient, reciprocal-radius,
+profile-band and arithmetic remainders must still be included before
+propagating a complete field error or certifying an incoming constraint.

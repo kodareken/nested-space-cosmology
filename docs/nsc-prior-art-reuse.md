@@ -282,3 +282,57 @@ contains the wider source index.
 Mathematical reuse does not require re-proving the literature. A claimed
 identification with NSC still requires checking the particular assumptions
 and source relations on which that identification depends.
+
+## Imported closure mechanisms and retained source response
+
+The imported mechanisms have different jobs in the common construction:
+
+| Import | Connection still needed |
+|---|---|
+| MMP charged-fermion Casimir throat | Match its field, state, coefficient and return domain to the common operator and expanding-child branch. |
+| Schur/Riccati boundary recursion (López Sancho et al.) | Supply the geometric local response and common-action scale stationarity. |
+| Connes–Lott finite Dirac geometry and Chamseddine–Connes spectral action | Identify the physical parent–child link, sector and particle pole. |
+| Kiritsis bulk–boundary exchange | Derive density, pressure, momentum transfer and perturbations from the same state. |
+| Published black-universe and collapse/bounce geometries | Match their source and domain rather than recalculate their existence. |
+
+The corresponding interfaces are
+
+$$
+\left.\delta_g\Gamma_{\rm NSC}\right|_{\mathcal H_{\rm LLL}}
+=\delta_g(S_{\rm EH}+S_{\rm Maxwell}+\Gamma_{\rm Casimir}),\qquad
+\Gamma_\star(x)=K_\star(x)-\Omega^{-1}b\,
+\Gamma_\star(x/\Omega)^{-1}b^\dagger,
+$$
+
+$$
+\det G_{\rm phys}^{-1}(p)=0,\qquad 3H^2=8\pi G\rho_{\rm total},
+\qquad \frac{\delta\Gamma_{\rm one}}{\delta g^{\mu\nu}}=0.
+$$
+
+The Einstein term already belongs to the common action and is counted once.
+Its null projection is a source diagnostic; the remaining metric equations,
+state and conservation law still need to agree. On the imposed smooth profile
+$r(x)=\sqrt{a^2+[\sin(kx)/k]^2}$, $k=\pi/(2R)$, $a=1$, the required source is
+
+$$
+8\pi G(\rho+p_x)=-2r''/r,\qquad
+8\pi G\int(\rho+p_x)\,dx=-2\int(r'/r)^2dx<0.
+$$
+
+The fixed-horizon Dirac transport conserves its norm; the smooth geometry
+retains a gap; compact-product stress and smooth-neck spin-structure response
+have been calculated in their separate domains. At $R=2,4,8$, the recorded
+continuum band edges are approximately $0.76423204$, $0.51425546$, $0.28454085$.
+For 512 axial points, the periodic-minus-antiperiodic measurements are:
+
+| $R$ | $E_P-E_{AP}$ | Neck $\Delta(\rho+p_x)$ | RMS conservation residual |
+|---|---:|---:|---:|
+| 2 | 0.15865448 | 0.01860824 | 4.44e-7 |
+| 4 | 0.01945979 | 0.00179889 | 1.53e-7 |
+
+These are numerical response differences, not an absolute stress or an error
+enclosure. The finite Weyl-invariant contribution, common-scale measure,
+boundary state and topology remain inputs to absolute self-sourcing. The
+full metric solution, stability and physical particle identification remain
+open. The original records are retained in the
+[research deposit](https://doi.org/10.5281/zenodo.23090015).

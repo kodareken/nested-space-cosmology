@@ -82,3 +82,57 @@ Gaussian action includes that complement once. No additional
 $\Gamma_{\rm rest}$ is introduced, and the old Weyl time-node diagnostic is
 not treated as an interface force. Extended stationarity remains OPEN and
 metric stepping remains closed.
+
+## Common-time bulk spaces and the operator domain
+
+On a constant-PG-$\tau$ Cauchy slice, the canonical field is
+$\chi=r\sqrt{q_{\rm PG}}\psi$ in each retained $L^2(\mathbb R;\mathbb C^2)$
+channel. Parent and child are the orthogonal supports $\rho>0$ and
+$\rho<0$, with projectors given by their indicator functions. Values at
+$\rho=0$ do not affect $L^2$ classes. This Hilbert-space split gives
+independent canonical variables; it is distinct from two oriented traces
+of one field on the full spacelike seam. Frequency sample counts used for
+the spatial rank/CAR witnesses were numerical budgets, not a
+frequency-to-position state transformation.
+
+The inherited transmitting operator is
+$H_c=-i(v\partial_\rho+v'/2)+M_c$,
+$v=(N/q_{\rm PG})\sigma_2-\beta I$ and
+$M_c=-Nm_c\sigma_1-N\lambda_c\sigma_3/r$.
+Its graph domain has equal one-sided traces at the noncharacteristic seam.
+Sharp support projection does not preserve that operator domain, so the
+ordinary product $P_pH_DP_c$ is not an admitted Hamiltonian link. Neither
+its distributional seam coefficient nor the trace norm is relabelled as
+$B$. A domain-respecting weak/Galerkin construction or the bounded response
+$P_p(H_D-z)^{-1}P_c$ is required. No seed covariance is copied onto the
+common PG slice by this definition.
+
+## Nonlinear field jets and sampled Gaussian variation
+
+For a supplied nonzero history, state and tangent propagate together:
+
+$$
+\partial_\tau Y_B=L[g]Y_B+\delta_BL[g]\chi_g,
+\qquad Y_B(\tau_i)=0,\qquad
+\mathcal A_B(E_o,E_i)=\int\chi_{g,E_o}^\dagger Y_{B,E_i},d\rho.
+$$
+
+The actual-metric KS-to-PG Jacobian varies the independent lapse, shift,
+radial scale and radius. The directions vanish with all initial time jets,
+so source preparation and phases stay fixed. In the current-history frame,
+$W_\pm=I$, $\delta W_\pm=\pm\mathcal A_B/2$ and
+$\delta_B\Gamma_G=-i\operatorname{Tr}(C_0\mathcal A_B)$.
+The spectral weights remain $\sqrt{w_ow_i}/(2\pi)$, with source covariance
+as a multiplication operator. Identity in this relative first differential
+does not make the sampled frequencies a closed unitary history.
+
+The retained producer uses imported diagonal-norm SBP(4,2), after the earlier
+second-order source-refinement control missed its fixed tolerance. It
+compares `(401,64)`, `(801,64)`, `(801,128)` points/steps and independent
+four-field nonzero-history differences for group 14. All 33 groups/63
+signed families are required; source refinement/history differences use
+`3e-8`, while flux, tangent, trace, signed-map and SBP controls use `3e-11`.
+Discrete reference drift is reported without subtraction. These are finite
+bare Gaussian derivative checks. Complete spectral/reference integration,
+physical two-endpoint variations, boundary allocation and B2 remain OPEN;
+the diagnostic `93.54264532195464` is not a boundary counterforce target.
