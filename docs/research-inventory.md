@@ -102,6 +102,16 @@ or finite-amplitude validity. The [mass-law cards](arxiv-studies.md#source-leg-m
 record the borrowed equations and reading limits; other inventory strands
 remain unaffected.
 
+The [normal-force calculation](nsc-atlas-scalar-normal-force.md) is a
+reusable local compatibility result for the original conformal probe.
+It retains the cap vacuum term and fixes the force sign by independent
+Gauss/Israel and distributional checks. It does not evaluate individual
+normal pressures or solve coupled evolution. The resulting mean-curvature
+condition includes metric and wall displacement. The
+[normal-force library](arxiv-studies.md#scalar-normal-force-library)
+records the scoped readings and sign limitation; prior sealed owners and
+their original open-status fields remain unchanged.
+
 **Scientific reading has an explicit boundary.** Named current owners,
 supersession notes and all 17 child/neck scientific notes received a scope
 review. The independent w2 review covered charged-source, observer-clock,

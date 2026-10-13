@@ -1,0 +1,124 @@
+{
+  "borrowed": {
+    "hilbert_stress_and_scalar_material_jumps": "1910.07534v2 Eqs. 2.11-2.14, 3.42-3.46",
+    "normal_gauss_and_shell_context": "gr-qc/0507063v2 Eqs. 5-6; printed evolution sign is checked against our conventions instead of copied",
+    "previous_surface_formula": "2*xi*(6*xi - 1)*k*phi**2"
+  },
+  "classification": "derived_conditional",
+  "conventions": {
+    "bracket": "plus trace minus minus trace; bars are arithmetic means",
+    "curvature": "K_ab=(1/2)L_n gamma_ab; [K_ab]=-k gamma_ab; [K]=-3k",
+    "force_sign": "S^ab mean(K_ab)=[T_nn]; bulk divergence contributes +[T_nn] delta, surface contributes -S^ab mean(K_ab) delta",
+    "material": "S_ab=-sigma gamma_ab; sigma=2k/kappa_4; kappa_4=8 pi G",
+    "normal": "common spacelike normal from cap (-) to exterior (+)",
+    "order": "quadratic scalar forcing on unchanged reference geometry, not an exact sourced spacetime",
+    "scalar": "p_pm=n phi_pm; d=[p]=6 xi k phi, hence k phi at xi=1/6",
+    "signature": "(-+++)",
+    "stress": "full canonical positive-kinetic improved scalar stress; xi G_nn phi^2 retained exactly once",
+    "vacuum": "Gplus_nn=0; Gminus_nn=-3H^2; [G_nn]=3H^2; mean(K)=-3H^2/(2k)"
+  },
+  "derived_result": {
+    "cap_omission_control": "omitting the cap Einstein term falsely gives -H^2 phi^2/2",
+    "full_balance": "-sigma mean(K)=[Tvac_nn]+[Tphi_nn]",
+    "general_diagnostic": "[Tphi_nn]=2 xi(6xi-1) k mean(K) phi^2 = mean(K) Sphi_coefficient; symbolic coupling diagnostic, not an evolved nonconformal model",
+    "intrinsic_terms": "the shared -v_a v^a/2 and xi D^2(phi^2) cancel in the jump under the declared trace regularity",
+    "physical_model": "[Tphi_nn]=0 at xi=1/6; individual one-sided normal stresses are not thereby zero",
+    "remaining_geometric_condition": "fixed vacuum and tension imply delta mean(K)=0 at quadratic order; this combines metric and wall-embedding corrections and does not imply delta R_wall=0"
+  },
+  "domain": {
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105,
+    "arrival_window_over_ell": [
+      -0.5817589515953444,
+      -0.25023070056069985
+    ],
+    "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+    "radius_lower_bound_over_ell": 0.4,
+    "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+    "radius_upper_bound_over_ell": 0.55,
+    "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+    "wall_radius_window_over_ell": [
+      0.45,
+      0.55
+    ]
+  },
+  "exact_symbolic_certificate": {
+    "arithmetic": "exact symbolic expressions; no floating-point scientific evaluation",
+    "nonzero_controls": {
+      "altering_scalar_jump_changes_force": true,
+      "nonconformal_diagnostic_is_not_identically_zero": true,
+      "omitting_cap_einstein_tensor_produces_false_force": true,
+      "omitting_extrinsic_improvement_changes_jump": true,
+      "wrong_material_force_sign_breaks_vacuum_balance": true
+    },
+    "sympy_version": "1.14.0",
+    "zero_residuals": {
+      "conformal_normal_jump_vanishes": "0",
+      "distributional_normal_divergence_sign": "0",
+      "fixed_field_derivative_homogeneity": "0",
+      "fixed_vacuum_tension_geometric_remainder": "0",
+      "gauss_constraint_from_tensor_and_trace_jumps": "0",
+      "gaussian_normal_hilbert_projection": "0",
+      "general_coupling_reduction": "0",
+      "general_jump_equals_original_surface_contraction": "0",
+      "israel_gauss_material_force_sign": "0",
+      "normal_and_side_reversal_curvature_jump": "0",
+      "normal_and_side_reversal_jump": "0",
+      "normal_and_side_reversal_scalar_jump": "0",
+      "omitted_cap_einstein_term_false_residual": "0",
+      "one_sided_jump_matches_product_rule": "0",
+      "quadratic_amplitude_homogeneity": "0",
+      "reference_beta_mean_curvature": "0",
+      "reference_beta_trace_jump": "0",
+      "vacuum_force_balance": "0",
+      "zero_field_jump": "0"
+    }
+  },
+  "execution": {
+    "cpu_seconds_max": 60,
+    "explicit_algebra_replay_authenticates_first": true,
+    "new_floating_point_scientific_values": false,
+    "new_waveforms": 0,
+    "ordinary_check_scope": "stored output, source and declaration authentication only",
+    "scientific_numerical_solves": 0
+  },
+  "formulas": {
+    "after_scalar_and_geometric_jumps": "2*xi*(6*xi-1)*k*Kbar*phi**2",
+    "gauss_jump": "-2*k*Kbar",
+    "normal_jump": "pbar*d+xi*phi**2*deltaG+2*xi*phi*(Kbar*d+deltaK*pbar)",
+    "normal_projection": "p**2/2-v2/2+xi*(phi**2*G+2*K*phi*p+lap)",
+    "vacuum_gauss_jump": "3*H**2",
+    "vacuum_mean_curvature": "-3*H**2/(2*k)"
+  },
+  "inputs": {
+    "H_ell": 1.0,
+    "M_over_ell": 0.4,
+    "additional_surface_scalar_coupling": 0.0,
+    "angular_mode": 0,
+    "k_ell": 2.0,
+    "length_scale": 1.0,
+    "linear_probe": true,
+    "wall_branch": "expanding",
+    "xi": 0.16666666666666666
+  },
+  "knowledge_boundary": {
+    "bulk_einstein_response_solved": false,
+    "corrected_wall_trajectory_solved": false,
+    "coupled_geometric_normal_force_equation_solved": false,
+    "finite_amplitude_validity_bound_established": false,
+    "fixed_background_with_nonzero_probe_claimed_exact": false,
+    "one_sided_pressure_curves_evaluated": false,
+    "scalar_normal_stress_jump_computed": true,
+    "stability_established": false
+  },
+  "next_unlock": "transport sourced geometry and test its coupled wall equations under a separate admission; no pressure simulation is needed to repeat this identity",
+  "orientation_control": "reverse normal and swap sides together: pbar, Kbar, deltaG and normal-stress jump negate; d, deltaK and positive k remain unchanged",
+  "owner": "docs/nsc-atlas-scalar-normal-force.md",
+  "preparation_regularity": "C3 compact polynomial; derivative C2; not C-infinity",
+  "scaling_control": "amplitude scales phi,pbar,d together; derivative homogeneity holds at fixed phi when first normal derivatives/curvatures scale as inverse length and G_nn as inverse length squared",
+  "schema": "nsc-atlas-scalar-normal-force-v1",
+  "status": "CONDITIONAL_CONFORMAL_SCALAR_NORMAL_STRESS_COMPATIBILITY"
+}

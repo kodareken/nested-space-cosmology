@@ -36,6 +36,10 @@
       "path": "results/development/nsc-cosmological-atlas-v8/programme.json",
       "sha256": "7575154623a590949e044aabe2a56ff796f878cb2ac0537b70abf56a5c822618"
     },
+    "scalar_normal_force": {
+      "path": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
+      "sha256": "987a157a40da83202963ee2f4e6d95d668a5c2d8d5f6668bda9b571edcc74b57"
+    },
     "scalar_wall_consistency": {
       "path": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
       "sha256": "3037d2b6e01fc75643171766db6c3d5d333a8c55133078212bbd92ba10715d3b"
@@ -243,18 +247,18 @@
     "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
     "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
     "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
-    "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
+    "Quadratic local scalar shell compatibility leaves bulk backreaction, the coupled normal-force equation and finite-amplitude validity open.",
     "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
     "The source-leg mass successor closes transverse radius transport only on the initial surface; bulk propagation and the dynamical wall response remain open.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "2285600326c1e0e9cf36a5da8c04fe8a71e6c8bd92ab780caeab78ff5cfbe230",
-    "geometry-overview.svg": "f699a274d252201a6a42c20cca07f0f676cc5f638ebb78769d3b4df44d47042d"
+    "geometry-overview.png": "4660371c957bb367d2ca1258482e8edbb29290882e8307850e701b03d723fab9",
+    "geometry-overview.svg": "4782e8b831ae2c42a0aca16844c594190f9f810e8c60ffc92885da39d494b190"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "221f45df2d638812d3b327213abd7a2f708072ece974e06ca36ad8d697a115f7",
+  "producer_sha256": "069e991e69ac4832b31522a76078ad57abbe6349821ff84a29a2096bab0636a3",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -667,6 +671,71 @@
       "status": "FINITE_PREPARED_CLASSICAL_RESPONSE_WITH_POSITIVE_TAIL",
       "waveform_evaluated": true
     },
+    "scalar_normal_force": {
+      "conventions": {
+        "bracket": "plus trace minus minus trace; bars are arithmetic means",
+        "curvature": "K_ab=(1/2)L_n gamma_ab; [K_ab]=-k gamma_ab; [K]=-3k",
+        "force_sign": "S^ab mean(K_ab)=[T_nn]; bulk divergence contributes +[T_nn] delta, surface contributes -S^ab mean(K_ab) delta",
+        "material": "S_ab=-sigma gamma_ab; sigma=2k/kappa_4; kappa_4=8 pi G",
+        "normal": "common spacelike normal from cap (-) to exterior (+)",
+        "order": "quadratic scalar forcing on unchanged reference geometry, not an exact sourced spacetime",
+        "scalar": "p_pm=n phi_pm; d=[p]=6 xi k phi, hence k phi at xi=1/6",
+        "signature": "(-+++)",
+        "stress": "full canonical positive-kinetic improved scalar stress; xi G_nn phi^2 retained exactly once",
+        "vacuum": "Gplus_nn=0; Gminus_nn=-3H^2; [G_nn]=3H^2; mean(K)=-3H^2/(2k)"
+      },
+      "derived_result": {
+        "cap_omission_control": "omitting the cap Einstein term falsely gives -H^2 phi^2/2",
+        "full_balance": "-sigma mean(K)=[Tvac_nn]+[Tphi_nn]",
+        "general_diagnostic": "[Tphi_nn]=2 xi(6xi-1) k mean(K) phi^2 = mean(K) Sphi_coefficient; symbolic coupling diagnostic, not an evolved nonconformal model",
+        "intrinsic_terms": "the shared -v_a v^a/2 and xi D^2(phi^2) cancel in the jump under the declared trace regularity",
+        "physical_model": "[Tphi_nn]=0 at xi=1/6; individual one-sided normal stresses are not thereby zero",
+        "remaining_geometric_condition": "fixed vacuum and tension imply delta mean(K)=0 at quadratic order; this combines metric and wall-embedding corrections and does not imply delta R_wall=0"
+      },
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Ub": -0.2747468030926288,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105,
+        "arrival_window_over_ell": [
+          -0.5817589515953444,
+          -0.25023070056069985
+        ],
+        "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+        "radius_lower_bound_over_ell": 0.4,
+        "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+        "radius_upper_bound_over_ell": 0.55,
+        "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+        "wall_radius_window_over_ell": [
+          0.45,
+          0.55
+        ]
+      },
+      "interpretation": "The full conformal scalar stress adds no regular normal-stress jump at quadratic order on the fixed wall; a sourced continuation must respect zero mean-curvature variation with fixed vacuum and tension.",
+      "knowledge_boundary": {
+        "bulk_einstein_response_solved": false,
+        "corrected_wall_trajectory_solved": false,
+        "coupled_geometric_normal_force_equation_solved": false,
+        "finite_amplitude_validity_bound_established": false,
+        "fixed_background_with_nonzero_probe_claimed_exact": false,
+        "one_sided_pressure_curves_evaluated": false,
+        "scalar_normal_stress_jump_computed": true,
+        "stability_established": false
+      },
+      "limits": [
+        "The mean-curvature variation includes both metric and wall-embedding corrections; it does not fix the wall displacement to zero.",
+        "No individual normal-pressure curve or coupled metric/wall evolution has been computed.",
+        "The cap vacuum contribution and full improvement terms are essential; no finite-amplitude validity bound or stability result follows."
+      ],
+      "next_question": {
+        "connection_id": "wall-mass-transport",
+        "decision": "Do the existing leading wall field traces close exterior-side geometric mass transport on reference wall cuts through the borrowed flux and frame laws?",
+        "owner": "docs/nsc-cosmological-atlas.md#programme-dependencies",
+        "status": "Proposed question; not yet derived, admitted or evaluated"
+      },
+      "status": "CONDITIONAL_CONFORMAL_SCALAR_NORMAL_STRESS_COMPATIBILITY"
+    },
     "scalar_wall_consistency": {
       "domain": {
         "U0": -0.32130105902052203,
@@ -701,7 +770,7 @@
       },
       "limits": [
         "The original C3 preparation supplies the regularity; the full C2 inverse class is not covered automatically.",
-        "The bulk metric response and normal-force condition remain unresolved.",
+        "The surface/tangential check alone leaves bulk response and normal forcing unresolved.",
         "No quantitative amplitude bound, stability result or physical preparation law is established."
       ],
       "status": "CONDITIONAL_CONFORMAL_SCALAR_SURFACE_AND_TANGENTIAL_FLUX_COMPATIBILITY"

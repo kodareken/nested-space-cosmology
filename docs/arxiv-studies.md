@@ -615,6 +615,49 @@ audit or worldwide-priority conclusion follows. The remaining connection
 is the fixed atlas preparation's mixed equation and geometric mass, not a
 new derivation of these established laws.
 
+<a id="scalar-normal-force-library"></a>
+
+### Regular normal stress at the transmitting wall
+
+The [normal-force owner](nsc-atlas-scalar-normal-force.md) applies these
+borrowed junction identities to the same canonical conformal probe and
+fixed vacuum/tension wall. The regular normal-stress jump is distinct from
+the singular surface coefficient and tangential flux already checked.
+
+**Aviles--Maeda--Martinez, [1910.07534v2](https://arxiv.org/html/1910.07534v2), 23 October 2019.**
+Rechecked (3.42)--(3.46) and (3.51)--(3.54), and read the terminal
+variational conditions (B.40)--(B.41). The remaining appendix derivation
+was not independently audited. These give coupled metric/scalar jumps
+and tangential conservation; they do not themselves evaluate this probe's
+regular normal-stress jump. Retain their scalar-independent material
+action and the previously declared Jordan-frame normalization.
+
+**Barcelo--Visser, [gr-qc/0008008v1](https://arxiv.org/html/gr-qc/0008008v1), 3 August 2000.**
+Rechecked (2.28), (2.40)--(2.45) and (4.54)--(4.56). These supply
+nonminimal junctions and a pure-tension specialization, without an
+evaluated normal-stress cancellation for this atlas. Their extrinsic
+curvature has the opposite sign; their scalar-dependent vacuum coupling
+is not substituted for the present scalar-independent cap vacuum.
+
+**Lobo--Crawford, [gr-qc/0507063v2](https://arxiv.org/html/gr-qc/0507063v2), 6 October 2005.**
+Rechecked section 2, especially (3)--(6), its common-normal convention
+and jump/mean definitions. Borrow the Gauss equation (5) and Israel
+equation (4). With the displayed conventions their contraction yields
+$S^{ab}\overline K_{ab}=[T_{nn}]$. The printed minus sign in (6)
+does not follow from those two equations under this convention, so it
+is not imported. The owner derives the sign directly and checks it
+independently by distributional stress conservation. Later static-shell
+stability analyses supply no stability claim for this transmitting wall.
+
+**Search coverage, 13 October 2026.** Bounded arXiv queries for nonminimal
+scalar thin-shell normal stress and normal-force junctions returned the
+two scalar-junction sources above and differing modified-gravity or
+self-interacting conformal-wormhole models. Those alternatives were
+screened at abstract level, not adopted. No exhaustive priority claim
+follows. The new connection is the evaluated cancellation for the
+declared atlas probe and its necessary geometric wall condition;
+coupled propagation and wall displacement remain open.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.

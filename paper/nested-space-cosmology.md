@@ -36,8 +36,9 @@ For this fixed geometry, a complete compatible signed central history also
 determines a unique preparation. Positivity and a prescribed source cutoff
 exclude some histories; geometry comparison requires those input restrictions
 to be justified independently.
-The canonically normalized probe adds no singular surface stress or
-tangential flux jump. With fixed corner geometry and null normalization,
+At quadratic order the canonically normalized probe adds no singular surface stress,
+tangential flux jump or normal-stress jump at the fixed wall.
+With fixed corner geometry and null normalization,
 the same preparation requires a calculable correction to the initial
 areal radius and its affine slope. Transverse constraint transport then
 determines a geometric mass response on that initial null surface, including
@@ -1305,6 +1306,72 @@ connection is to transport compatible sourced geometry toward the wall
 and test its dynamical junction conditions. Wall motion and the corrected
 interior-observer signal remain open.
 
+### 13.7. The scalar adds no normal-force jump
+
+<!-- nsc-claim:atlas-scalar-normal-force -->
+
+Evidence: [normal-force record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json),
+[projection, sign checks and geometric condition](../docs/nsc-atlas-scalar-normal-force.md).
+
+The initialized geometry must eventually meet the wall's normal-force
+condition. Its scalar contribution can be decided locally before that
+evolution. Retain the action, common normal and original preparation of
+Section 13.4. Define $q=n\phi$, intrinsic derivative $D_a$ and arithmetic
+means denoted by bars. The complete improved stress in Gaussian normal
+coordinates gives
+
+$$
+T^\phi_{nn}=\frac{q^2}{2}-\frac{D_a\phi D^a\phi}{2}
++\xi\left(\phi^2G_{nn}+2K\phi q+D^2\phi^2\right).
+$$
+
+The intrinsic terms have common traces. Combine the borrowed scalar law
+$[q]=6\xi k\phi$ with $[K_{ab}]=-k\gamma_{ab}$ and $[K]=-3k$.
+The Gauss equation fixes $[G_{nn}]=-2k\bar K$, and the jump reduces to
+
+$$
+[T^\phi_{nn}]=2\xi(6\xi-1)k\bar K\phi^2=0,
+\qquad \xi=\frac{1}{6}.
+$$
+
+This is a quadratic identity for the admitted regular traces, independent
+of the waveform's shape. In particular the cap has $G^-_{nn}=-3H^2$;
+dropping that term would falsely leave $-H^2\phi^2/2$. Equality of the
+normal stresses does not make their individual values zero. A symbolic
+general-coupling check reproduces $S_\phi^{ab}\bar K_{ab}$; it does not
+construct a nonconformal solution with the same wall.
+
+With our conventions the normal shell identity is
+
+$$
+S^{ab}\bar K_{ab}=[T_{nn}].
+$$
+
+Contracting the Israel law with the mean curvature and independently
+using distributional conservation both fix this plus sign. The
+[source comparison](../docs/arxiv-studies.md#scalar-normal-force-library)
+records why the opposite printed sign in Lobo--Crawford's Eq. (6) is not
+imported alongside their Gauss and Israel equations.
+
+The material tension and vacuum terms stay fixed. Together with the
+vanishing additional scalar surface stress, the normal condition becomes
+
+$$
+-\sigma\bar K=[T^{\mathrm{vac}}_{nn}]+[T^\phi_{nn}],
+\qquad \delta\bar K=0\quad\mathrm{at\ order}\ \varepsilon^2.
+$$
+
+This variation includes the changed bulk metric, induced metric and wall
+position, pulled back to the reference wall. It does not set the wall's
+displacement to zero or preserve its original trajectory. Exact algebra
+checks the projection, force sign and vacuum contribution without a new
+pressure curve. The next decision is whether the existing leading wall
+field traces close exterior-side geometric mass transport on reference
+wall cuts, using the borrowed flux and frame laws. This smaller connection
+has not yet been derived or admitted; it should be decided before starting
+a new bulk solver. Coupled cap and wall geometry, the corrected observer
+signal and finite-amplitude validity remain open.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -1584,7 +1651,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Initial mass response to the wall | Which propagation equations and compatible field/gravitational data carry the sourced geometry to a dynamical wall junction? | A calculated wall response and, subsequently, a corrected observer signal |
+| Initial mass to exterior wall cuts | Do the existing leading wall field traces close geometric mass transport through the borrowed flux and frame laws? | A finite invariant wall-side response or an exact missing datum, before tackling coupled cap/wall evolution |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1622,7 +1689,9 @@ The quadratic stress check now connects that preparation to compatible local
 wall conditions. Its characteristic constraint requires a nonzero initial
 radius correction under the declared corner and null normalization;
 transverse constraint transport then supplies an invariant geometric mass coefficient
-on that same surface. Bulk and wall evolution remain to be established.
+on that same surface. The vanishing normal-stress jump adds a necessary
+condition on their later wall matching. Bulk and wall evolution remain
+to be established.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1648,6 +1717,7 @@ and renders their relationships without launching a new physics calculation.
 | Conformal probe surface stress and tangential flux | [Derivation](../docs/nsc-atlas-scalar-wall-consistency.md); [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json) |
 | Characteristic gravitational initialization | [Constraint and frame check](../docs/nsc-atlas-characteristic-initialization.md); [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json) |
 | Geometric mass on the prepared null surface | [Mixed geometry and stress checks](../docs/nsc-atlas-source-mass.md); [record](../results/development/nsc-atlas-source-mass-v1/mass.json) |
+| Conformal scalar normal-force compatibility | [Projection and force sign](../docs/nsc-atlas-scalar-normal-force.md); [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 
