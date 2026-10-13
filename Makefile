@@ -8,7 +8,7 @@ help:
 	@echo "Nested-Space Cosmology public commands"
 	@echo "  make install          install the pinned project and paper dependencies"
 	@echo "  make check            validate manifests, claims, paths, and links"
-	@echo "  make test             run affected atlas, preservation and publication tests"
+	@echo "  make test             run the full retained test suite"
 	@echo "  make demonstrate      display authenticated results without recomputing"
 	@echo "  make demonstrate-recompute  explicitly rerun the selected demonstrations"
 	@echo "  make reproduce*       retired campaign routes; select an explicit historical context"
@@ -17,7 +17,7 @@ help:
 	@echo "  make draft-check      authenticate the focused OPEN draft and its evidence"
 	@echo "  make finite-check     authenticate the measured finite-realization article and complete evidence graph"
 	@echo "  make history-check    replay original editions with the selected HISTORY_PYTHON profile"
-	@echo "  make verify           validate the current paper, atlas and preserved editions"
+	@echo "  make verify           validate the current paper and full retained suite"
 
 install:
 	$(PYTHON) -m pip install -e '.[paper,dev]'
@@ -28,7 +28,7 @@ check:
 	$(PYTHON) scripts/check_claim_bindings.py
 
 test:
-	$(PYTHON) scripts/test_reassembly.py
+	$(PYTHON) -m pytest tests/
 
 reproduce reproduce-development reproduce-exact:
 	@echo "This campaign route is retired: merged current sources are not the frozen release context."
@@ -43,7 +43,7 @@ paper:
 paper-check:
 	$(PYTHON) scripts/build_paper.py --check
 
-verify: check test paper-check history-check
+verify: check test paper-check
 
 .PHONY: history-check
 history-check:

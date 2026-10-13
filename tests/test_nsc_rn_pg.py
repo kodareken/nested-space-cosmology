@@ -11,6 +11,7 @@ for _name in (
 import numpy as np
 import pytest
 
+from recursive_horizons import nsc_posix
 from recursive_horizons import nsc_rn_observables as observables
 from recursive_horizons import nsc_rn_pg as pg
 from recursive_horizons import nsc_rn_source as source
@@ -499,9 +500,8 @@ def test_csr_matches_dense_field_source_metric_and_rk4():
 
 def test_saved_state_agrees_and_current_car_is_not_the_cached_field():
     from pathlib import Path
-    saved = Path(
-        "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/"
-        "nsc-rn-neutral-continuation-v1/t20.0000.npz"
+    saved = nsc_posix.repo_path(
+        "results/development/nsc-rn-neutral-continuation-v1/t20.0000.npz"
     )
     if not saved.is_file():
         pytest.skip("saved T20 state is not on this machine")

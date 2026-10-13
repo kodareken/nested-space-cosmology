@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import validate_nsc_ks_current_field_pilot_v3 as V3
+from validate_nsc_ks_current_field_cone_v1 import capture_owner as V3
 from recursive_horizons.evidence_io import publish_exclusive_file
 from recursive_horizons.nsc_ks_ball_operator import (
     AnalyticRadiusFamily, time_operator_enclosure)
@@ -56,7 +56,7 @@ SETTINGS = {
 }
 SOURCE_PATHS = (
     "scripts/validate_nsc_ks_current_field_pilot_v4.py",
-    "scripts/validate_nsc_ks_current_field_pilot_v3.py",
+    "scripts/validate_nsc_ks_current_field_cone_v1.py",
     "src/recursive_horizons/nsc_ks_local_profile_fourier_bound.py",
     "src/recursive_horizons/nsc_ks_difference_residual_polynomial.py",
     "src/recursive_horizons/nsc_ks_residual_polynomial.py",

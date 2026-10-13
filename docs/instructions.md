@@ -1,8 +1,9 @@
 # Instructions for the unified NSC repository
 
 The root owns the single `src/recursive_horizons` package, root scripts, tests,
-notes and evidence. Work on this checkout's `agent/blackholes-infinity/work`
-branch; preserve remote branches and unrelated changes. The latest user
+notes and evidence. Work on this checkout's local `main`
+branch; preserve remote branches and unrelated changes. GitHub is a backup
+mirror; push only when Douglas explicitly asks. The latest user
 instruction determines the task; old PLAN and handover files do not.
 
 The current manuscript is [the main paper](../paper/nested-space-cosmology.md).

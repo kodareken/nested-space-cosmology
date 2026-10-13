@@ -12,6 +12,7 @@ import numpy as np
 import pytest
 from threadpoolctl import threadpool_limits
 
+from recursive_horizons import nsc_posix
 from recursive_horizons import nsc_discovery_backend as backend
 from recursive_horizons import nsc_discovery_coupled_memory as memory
 from recursive_horizons import nsc_discovery_episode as episode
@@ -216,7 +217,7 @@ def test_dependency_closure_pins_the_stored_handoff_without_production():
     text = memory.closure_bytes(record)
     assert "nsc_spherical_galerkin_coupling.py" in text
     with pytest.raises(PermissionError):
-        memory.assert_output_outside_repository("/Users/admin/Documents/BlackHoles-Infinity/lab/results/closure.json")
+        memory.assert_output_outside_repository(nsc_posix.repo_path("results/closure.json"))
 
 
 def test_full_segment_duration_and_cpu_forecast_admit_only_inside_the_budget():

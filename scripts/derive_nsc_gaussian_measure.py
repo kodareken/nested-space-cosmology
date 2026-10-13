@@ -13,9 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'src'))
 from recursive_horizons.nsc_gaussian_measure import warped_gaussian_measure
 from recursive_horizons.nsc_regulated import OperatorConventions, RegulatedOperator
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 OUTPUT = ROOT/'results/development/gaussian-cutoff-measure.json'
 INPUTS = ('results/development/canonical-spectral-bridge.json',
@@ -24,9 +22,8 @@ SOURCES = ('scripts/derive_nsc_gaussian_measure.py',
            'src/recursive_horizons/nsc_gaussian_measure.py',
            'src/recursive_horizons/nsc_regulated.py',
            'docs/nsc-gaussian-cutoff-measure.md',
-           'scripts/check_nsc_compact_boundary_action.py',
-           'scripts/check_nsc_compact_casimir.py',
-           'scripts/check_nsc_vacuum_charge_matching.py')
+           'scripts/check_nsc_compact_matching.py',
+           'scripts/check_nsc_compact_matching.py')
 
 
 def calculate():

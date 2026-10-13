@@ -367,7 +367,7 @@ def build_pdf(
             "Pinned paper dependencies are required. Run: python -m pip install -e '.[paper]'"
         ) from exc
     for name, required, observed in (
-        ("Matplotlib", "3.11.1", getattr(matplotlib, "__version__", "unknown")),
+        ("Matplotlib", "3.11.2", getattr(matplotlib, "__version__", "unknown")),
         ("ReportLab", "4.4.9", getattr(reportlab, "Version", "unknown")),
         ("Zopfli", "0.4.3", getattr(zopfli, "__version__", "unknown")),
     ):

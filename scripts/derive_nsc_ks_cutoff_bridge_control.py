@@ -20,7 +20,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'src'))
 sys.path.insert(0, str(ROOT/'scripts'))
-import derive_nsc_local_prepared_response as P
+from derive_nsc_cosmological_atlas_v8 import prepared_response as P
 from recursive_horizons.nsc_dirac_source_phase import formal_source_phase_coefficient
 from recursive_horizons.nsc_ks_cutoff_bridge_evaluator import source_edge_from_phase
 from recursive_horizons.nsc_ks_profile_identity import profile_identity
@@ -41,7 +41,7 @@ OWNERS = ('scripts/derive_nsc_ks_cutoff_bridge_control.py',
     'src/recursive_horizons/nsc_ks_profile_identity.py',
     'src/recursive_horizons/nsc_ks_spacetime_variation.py',
     'src/recursive_horizons/nsc_local_incoming_family.py',
-    'scripts/derive_nsc_local_prepared_response.py')
+    'scripts/derive_nsc_cosmological_atlas_v8.py')
 
 
 def digest(path):

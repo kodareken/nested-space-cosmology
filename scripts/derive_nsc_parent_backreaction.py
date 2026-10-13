@@ -10,9 +10,7 @@ import sympy as sp
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from recursive_horizons.nsc_spinor_bridge import weyl_matrices, pauli
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 OUTPUT=ROOT/'results/development/parent-backreaction-gate.json'
 INPUTS=('results/development/adm-neck-source-map.json',
@@ -21,8 +19,8 @@ INPUTS=('results/development/adm-neck-source-map.json',
         'results/development/vacuum-matched-ctp.json')
 SOURCES=('scripts/derive_nsc_parent_backreaction.py','docs/nsc-parent-backreaction-gate.md',
          'src/recursive_horizons/nsc_spinor_bridge.py',
-         'scripts/check_nsc_compact_boundary_action.py','scripts/check_nsc_compact_casimir.py',
-         'scripts/check_nsc_vacuum_charge_matching.py')
+         'scripts/check_nsc_compact_matching.py',
+         'scripts/check_nsc_compact_matching.py')
 
 
 def calculate():

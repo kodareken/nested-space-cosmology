@@ -17,9 +17,7 @@ from recursive_horizons.nsc_adm_source import (
 from recursive_horizons.nsc_covariant_operator import smooth_metric, euclidean_operator, SIGMA3
 from recursive_horizons.nsc_influence import ground_covariance
 from recursive_horizons.nsc_regulated import RegulatedOperator, OperatorConventions
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare, native
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, native, hashes
 
 OUTPUT = ROOT/'results/development/adm-source-constraints.json'
 INPUTS = ('results/development/vacuum-matched-ctp.json',
@@ -29,9 +27,8 @@ SOURCES = ('scripts/derive_nsc_adm_source.py', 'src/recursive_horizons/nsc_adm_s
            'src/recursive_horizons/nsc_influence.py',
            'src/recursive_horizons/nsc_regulated.py',
            'docs/nsc-adm-source-constraints.md',
-           'scripts/check_nsc_compact_boundary_action.py',
-           'scripts/check_nsc_compact_casimir.py',
-           'scripts/check_nsc_vacuum_charge_matching.py')
+           'scripts/check_nsc_compact_matching.py',
+           'scripts/check_nsc_compact_matching.py')
 
 
 def exact_identities():

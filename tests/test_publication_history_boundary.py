@@ -30,7 +30,7 @@ def findings(path):
 
 
 def test_exact_old_note_keeps_original_logical_link_context(tmp_path, monkeypatch):
-    path = prepare(tmp_path, monkeypatch, "docs/old-note.md", b"[Old record](../lab/record.json)")
+    path = prepare(tmp_path, monkeypatch, "docs/old-note.md", b"[Old record](../archived-input/record.json)")
     assert findings(path) == []
     path.write_bytes(path.read_bytes() + b"\nchanged")
     assert any("broken Markdown link" in item for item in findings(path))

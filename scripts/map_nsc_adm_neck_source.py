@@ -7,16 +7,14 @@ from pathlib import Path
 import numpy as np
 import sympy as sp
 
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 ROOT=Path(__file__).resolve().parents[1]
 OUTPUT=ROOT/'results/development/adm-neck-source-map.json'
 INPUTS=('results/development/unruh-state.json','results/development/adm-source-constraints.json')
 SOURCES=('scripts/map_nsc_adm_neck_source.py','docs/nsc-adm-neck-source-map.md',
-         'scripts/check_nsc_compact_boundary_action.py','scripts/check_nsc_compact_casimir.py',
-         'scripts/check_nsc_vacuum_charge_matching.py')
+         'scripts/check_nsc_compact_matching.py',
+         'scripts/check_nsc_compact_matching.py')
 
 
 def calculate():

@@ -352,7 +352,7 @@ def test_adapters_keep_rho1_source_error_unresolved(small_cone):
 
 def test_v4_cell_122_restored_payload_stays_inside_directed_enclosure():
     sys.path.insert(0, str(ROOT / "scripts"))
-    import validate_nsc_ks_current_field_pilot_v3 as V3
+    from validate_nsc_ks_current_field_cone_v1 import capture_owner as V3
     raw = V4_PATH.read_bytes()
     recorded = json.loads(raw)
     _profiles, digest = restore_v4_profile_payload(

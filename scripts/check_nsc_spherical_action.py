@@ -12,13 +12,12 @@ sys.path.insert(0,str(ROOT/"src"))
 from recursive_horizons.nsc_spherical_action import (
     potentials, poisson_tensor, canonical_constraints, primitive, casimir, pg_null_coframe,
 )
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_vacuum_charge_matching import compare, hashes
+from check_nsc_compact_matching import authenticated_record, compare_vacuum_charge as compare, hashes
 
 OUTPUT=ROOT/"results/development/spherical-action.json"
 SOURCES=("scripts/check_nsc_spherical_action.py","src/recursive_horizons/nsc_spherical_action.py",
          "docs/nsc-spherical-action.md","docs/nsc-compact-matching.md",
-         "scripts/check_nsc_compact_boundary_action.py","scripts/check_nsc_vacuum_charge_matching.py")
+         "scripts/check_nsc_compact_matching.py","scripts/check_nsc_compact_matching.py")
 INPUTS=("results/development/compact-matching.json","results/development/gauge-source.json")
 
 

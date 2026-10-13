@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect authenticated demonstrations; use --recompute to execute them again."""
+"""Inspect retained result records; recomputation needs the original source context."""
 from __future__ import annotations
 
 import argparse
@@ -9,9 +9,18 @@ from pathlib import Path
 import subprocess
 import sys
 
-from reproduce_public_results import load_manifest, validate_checkout
+from reproduce_public_results import load_manifest, sha256, validate_checkout
 
 ROOT = Path(__file__).resolve().parents[1]
+ZENODO_SNAPSHOT = "https://doi.org/10.5281/zenodo.23090015"
+RETIRED_GENERATORS = frozenset({
+    "scripts/check_nsc_compact_interaction.py",
+    "scripts/check_nsc_charged_sector.py",
+    "scripts/check_nsc_vacuum_charge_matching.py",
+    "scripts/check_nsc_compact_casimir.py",
+    "scripts/check_nsc_horizon_source.py",
+    "scripts/check_nsc_state_regulator.py",
+})
 CASES = (
     ("results/nsc-3-boundary-response.json", "scripts/check_nsc_boundary_response.py",
      "Geometry to boundary response",
@@ -129,14 +138,28 @@ def headlines(relative: str, record: dict) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--recompute", action="store_true",
-                        help="rerun the selected generators with their all-field checks")
+                        help="rerun generators only from their complete original source context")
     args = parser.parse_args()
+    if args.recompute:
+        unavailable = [generator for _, generator, *_ in CASES
+                       if generator in RETIRED_GENERATORS
+                       or not (ROOT / generator).is_file()]
+        if unavailable:
+            parser.error(
+                "these historical generators were retired from this checkout: "
+                + ", ".join(unavailable)
+                + ". Obtain their original source context and retained regeneration "
+                  "inputs from the snapshot at " + ZENODO_SNAPSHOT
+                + "; see docs/reproducing.md for explicit historical contexts. "
+                  "Run without --recompute to inspect authenticated retained results.")
     manifest = load_manifest()
-    validate_checkout(manifest)
+    if args.recompute:
+        validate_checkout(manifest)
     declared = {step["output"] for step in manifest["steps"]}
     missing = [path for path, *_ in CASES if path not in declared]
     if missing:
         raise RuntimeError(f"Demonstrations are missing from the release manifest: {missing}")
+    steps = {step["output"]: step for step in manifest["steps"]}
     env = os.environ.copy()
     env.update({key: "1" for key in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS",
                                      "MKL_NUM_THREADS", "VECLIB_MAXIMUM_THREADS")})
@@ -148,7 +171,10 @@ def main() -> int:
         if args.recompute:
             subprocess.run([sys.executable, str(ROOT / generator), "--check"],
                            cwd=ROOT, env=env, check=True)
-        record = json.loads((ROOT / relative).read_text())
+        record_path = ROOT / relative
+        if not record_path.is_file() or sha256(record_path) != steps[relative]["output_sha256"]:
+            raise RuntimeError(f"retained result hash mismatch: {relative}")
+        record = json.loads(record_path.read_text(encoding="utf-8"))
         print(f"\n{number}. {title}")
         for line in headlines(relative, record):
             print(f"   {line}")
@@ -157,7 +183,8 @@ def main() -> int:
     action = "recomputed and compared" if args.recompute else "displayed from authenticated records"
     print(f"\n{len(CASES)} demonstrations {action} within the {manifest['result_count']}-record release.")
     if not args.recompute:
-        print("To execute these checks again: python3 scripts/demonstrate.py --recompute")
+        print(f"Historical regeneration snapshot: {ZENODO_SNAPSHOT}")
+        print("Recomputation requires the original source context; see docs/reproducing.md.")
     return 0
 
 

@@ -16,6 +16,7 @@ PLAN.md or handover task authorities. Preserve historical evidence and unrelated
 | Observer inference and physical source | [Fixed-model inverse](docs/nsc-atlas-observer-inference.md), [scalar shell consistency](docs/nsc-atlas-scalar-wall-consistency.md); physical preparation selection remains open |
 | Local wall force | [Normal-stress cancellation](docs/nsc-atlas-scalar-normal-force.md); the mean-curvature condition includes metric and wall displacement |
 | Gravitational data and response | [Null initialization](docs/nsc-atlas-characteristic-initialization.md), [source-leg mass](docs/nsc-atlas-source-mass.md); bulk and wall evolution remain open |
+| Exterior wall-mass input | [Analytic functional](docs/nsc-atlas-wall-mass-closure.md); controlled evaluation or a named cap/wall junction input is the next decision |
 | One package and commands | `src/recursive_horizons`, `scripts`, `tests`; [reproducing](docs/reproducing.md) |
 | Preservation and recovery | [Consolidation](docs/repository-consolidation.md), [manifest](results/reassembly/manifest.json) |
 
@@ -32,8 +33,8 @@ Choose calculations by their prerequisites and downstream unlocks. Known equatio
 often need compatible data or a physical identification before they can be used;
 recomputing a known component without changing that gap is not progress.
 
-Work on `agent/blackholes-infinity/work` for this existing checkout. Preserve the
-published remote branches. The Windows scientific runtime is `.venv/validation`
+Work on local `main` in this checkout. GitHub is a backup mirror; push only
+when Douglas explicitly asks. Preserve published remote branches. The Windows scientific runtime is `.venv/validation`
 (Python 3.14.8); see the reproduction guide for its base-interpreter fallback.
 Keep this file an index; detailed research routes belong in the linked notes.
 

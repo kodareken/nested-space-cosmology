@@ -35,7 +35,11 @@ constant; this is a finite initial-data response, with later wall motion
 and observer corrections still open. The [normal-force check](docs/nsc-atlas-scalar-normal-force.md)
 also finds zero additional normal-stress jump at the fixed conformal wall.
 It constrains the later combined metric and wall response; it does not
-require zero wall displacement. Comparing geometries still needs an independently
+require zero wall displacement. The [wall-mass closure](docs/nsc-atlas-wall-mass-closure.md)
+now expresses the exterior geometric mass coefficient as an integral and a
+frame correction built from the existing wall trace. This is an analytic
+functional; its numerical evaluation and coupled cap/wall matching remain
+open. Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
@@ -50,6 +54,7 @@ expansion and recycling remain research questions.
 - [Normal-force compatibility and the remaining wall condition](docs/nsc-atlas-scalar-normal-force.md)
 - [Gravitational initial data for the prepared pulse](docs/nsc-atlas-characteristic-initialization.md)
 - [Geometric mass response on the prepared null surface](docs/nsc-atlas-source-mass.md)
+- [Analytic exterior mass from the known wall field](docs/nsc-atlas-wall-mass-closure.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)
@@ -74,7 +79,7 @@ Historical atlas v1–v6 and supporting articles replay in explicitly selected
 original contexts under ignored `.build/replay`. Changed current evidence fails
 authentication; current-source mismatches never silently select historical code.
 Exact historical image replay uses a separate Windows Python 3.14.8 / Matplotlib
-3.11.2 profile; the current paper uses Matplotlib 3.11.1. Follow the
+3.11.2 profile; the current paper uses Matplotlib 3.11.2. Follow the
 [historical environment setup](docs/reproducing.md#preserved-editions-and-source-contexts)
 before running `scripts/replay_history.py all`, or select it through `HISTORY_PYTHON`
 when running `make verify`. GitHub checks the two profiles in separate jobs.

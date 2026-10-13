@@ -15,16 +15,12 @@ sys.path.insert(0, str(ROOT / "src"))
 from recursive_horizons.nsc_warped_source import (
     WarpedCompactWeight, omitted_tail_bounds, product_potential, source_potential,
 )
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 OUTPUT = ROOT / "results/development/warped-source.json"
 SOURCES = ("scripts/check_nsc_warped_source.py",
            "src/recursive_horizons/nsc_warped_source.py", "docs/nsc-warped-source.md",
-           "scripts/check_nsc_compact_boundary_action.py",
-           "scripts/check_nsc_compact_casimir.py",
-           "scripts/check_nsc_vacuum_charge_matching.py",
+           "scripts/check_nsc_compact_matching.py",
            "docs/nsc-compact-mass-map.md")
 INPUTS = ("results/development/horizon-source.json",
           "results/development/compact-boundary-action.json",

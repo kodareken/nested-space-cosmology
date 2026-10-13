@@ -14,9 +14,7 @@ from recursive_horizons.nsc_covariant_operator import smooth_metric, SIGMA3
 from recursive_horizons.nsc_influence import canonical_hamiltonian, geometric_vertex
 from recursive_horizons.nsc_response_matching import euclidean_kernel, retarded_susceptibility
 from recursive_horizons.nsc_vacuum_matched_ctp import VacuumMatchedDiracAction, vacuum_matched_influence
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 OUTPUT = ROOT/'results/development/vacuum-matched-ctp.json'
 INPUTS = ('results/development/gaussian-cutoff-measure.json',
@@ -28,9 +26,8 @@ SOURCES = ('scripts/derive_nsc_vacuum_matched_ctp.py',
            'src/recursive_horizons/nsc_response_matching.py',
            'src/recursive_horizons/nsc_regulated.py',
            'docs/nsc-vacuum-matched-ctp.md',
-           'scripts/check_nsc_compact_boundary_action.py',
-           'scripts/check_nsc_compact_casimir.py',
-           'scripts/check_nsc_vacuum_charge_matching.py')
+           'scripts/check_nsc_compact_matching.py',
+           'scripts/check_nsc_compact_matching.py')
 
 
 def calculate():

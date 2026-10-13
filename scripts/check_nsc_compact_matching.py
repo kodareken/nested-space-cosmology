@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Bind the computed compact determinant to canonical low-field matching."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -16,18 +17,42 @@ from scipy.integrate import quad_vec
 from scipy.special import erf, erfc, exp1
 from recursive_horizons.nsc_warped_source import integrated_exp1
 from recursive_horizons.nsc_warped_source import WarpedCompactWeight
-from check_nsc_vacuum_charge_matching import hashes
 
 OUTPUT = ROOT/"results/development/compact-matching.json"
 SOURCES = ("scripts/check_nsc_compact_matching.py",
            "docs/nsc-compact-matching.md", "docs/nsc-covariant-source.md",
            "src/recursive_horizons/nsc_finite_terms.py",
-           "scripts/check_nsc_vacuum_charge_matching.py")
+           )
 INPUTS = ("results/development/warped-source.json",
           "results/nsc-9-covariant-source.json", "results/nsc-10-influence.json",
           "results/nsc-10-measure-normalization.json")
 
 
+
+
+def hashes(paths):
+    return {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in paths}
+
+
+def compare_vacuum_charge(expected, actual, path="$"):
+    """Preserve the retired vacuum-charge helper's stricter comparison policy."""
+    if isinstance(expected, dict):
+        if not isinstance(actual, dict) or expected.keys() != actual.keys():
+            raise AssertionError(f"keys differ at {path}")
+        for key in expected:
+            compare_vacuum_charge(expected[key], actual[key], f"{path}/{key}")
+    elif isinstance(expected, list):
+        if not isinstance(actual, list) or len(expected) != len(actual):
+            raise AssertionError(f"list differs at {path}")
+        for i, (a, b) in enumerate(zip(expected, actual)):
+            compare_vacuum_charge(a, b, f"{path}/{i}")
+    elif isinstance(expected, float):
+        if isinstance(actual, bool) or not isinstance(actual, (int, float)):
+            raise AssertionError(f"numeric type differs at {path}")
+        if abs(expected - actual) > 3e-13 + 3e-13 * abs(expected):
+            raise AssertionError(f"numeric value differs at {path}")
+    elif type(expected) is not type(actual) or expected != actual:
+        raise AssertionError(f"exact value differs at {path}")
 
 
 def proper_ratio(weight):

@@ -13,7 +13,7 @@ missing archived payloads are intentional, not an instruction to rerun science.
 - [Portable sparse rules](storage/historical-search.sparse)
 - [Explicit restore command](../scripts/restore_nsc_search_payloads.py)
 
-The Trash copy is `/Users/admin/.Trash/nsc-historical-search-20260928-123024/`.
+The Trash copy is the historical host’s Trash entry `nsc-historical-search-20260928-123024`.
 It retains the original relative paths, a complete `restore-receipt.json` and
 an append-only `moves.jsonl`. Each file was checked against its Git blob and
 SHA-256 before relocation; the atomic same-volume move preserved its inode,
@@ -120,7 +120,7 @@ history. Changing that requires a separate archive/history design which retains
 pinned scientific commits and the other worktrees; no such rewrite was done.
 
 Earlier cleanup moved 28 disposable cache/Finder/PDF-preview targets (22.55 MiB)
-to `/Users/admin/.Trash/nsc-disposable-20260928-115059`, with checked hashes and
+to the historical host’s Trash entry `nsc-disposable-20260928-115059`, with checked hashes and
 restore receipts. The compiler, environments and PDF originals were retained.
 
 Moving files to Trash reduces the active folders. Disk space becomes available

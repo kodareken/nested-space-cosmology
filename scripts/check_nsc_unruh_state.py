@@ -17,15 +17,13 @@ from recursive_horizons.nsc_unruh_state import (
     parent_angular_source,sixth_order_angular_coefficient,thermal_phase_omission_bound,
 )
 from recursive_horizons.nsc_angular_stress import physical_source
-from check_nsc_compact_boundary_action import authenticated_record
-from check_nsc_compact_casimir import compare
-from check_nsc_vacuum_charge_matching import hashes
+from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 OUTPUT=ROOT/'results/development/unruh-state.json'
 SOURCES=('scripts/check_nsc_unruh_state.py','src/recursive_horizons/nsc_unruh_state.py',
          'docs/nsc-unruh-state.md','src/recursive_horizons/nsc_gauge_source.py',
-         'scripts/check_nsc_compact_boundary_action.py','scripts/check_nsc_compact_casimir.py',
-         'scripts/check_nsc_vacuum_charge_matching.py')
+         'scripts/check_nsc_compact_matching.py',
+         'scripts/check_nsc_compact_matching.py')
 INPUTS=('results/development/horizon-source.json','results/development/angular-stress.json',
         'results/development/gauge-source.json')
 EDGES=(0.,.25,1.,4.,16.,64.,128.,256.)

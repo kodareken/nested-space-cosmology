@@ -13,7 +13,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 sys.path.insert(0, str(ROOT / 'scripts'))
-import derive_nsc_local_prepared_response as P
+from derive_nsc_cosmological_atlas_v8 import prepared_response as P
 from recursive_horizons.nsc_ks_radius_enclosure import axial_profile_bounds, reciprocal_radius_tail
 from recursive_horizons.nsc_ks_residual_error import pure_radius_commutator_integrals
 
@@ -22,7 +22,7 @@ OWNED = ('scripts/derive_nsc_ks_radius_bound.py', 'src/recursive_horizons/nsc_ks
          'docs/nsc-ks-radius-enclosure.md', 'src/recursive_horizons/nsc_ks_residual_error.py',
          'docs/nsc-ks-residual-error.md')
 INPUTS = ('results/development/nsc-ks-trajectory-control.json',
-          'scripts/derive_nsc_local_prepared_response.py', 'src/recursive_horizons/nsc_local_incoming_family.py',
+          'scripts/derive_nsc_cosmological_atlas_v8.py', 'src/recursive_horizons/nsc_local_incoming_family.py',
           'src/recursive_horizons/nsc_compatible_history_geometry.py', 'src/recursive_horizons/nsc_lorentzian.py')
 
 

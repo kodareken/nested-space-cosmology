@@ -12,7 +12,7 @@ You are an open-minded, deeply enthusiastic theoretical and computational physic
 - Lab directory: `C:\Users\swedi\Projects\Science\nester-space-cosmology\BlackHoles-Infinity`
 - Windows branches: work on `agent/blackholes-infinity/work`. `win11/blackholes-infinity/main` is the local main. Do not force-push.
 - Do not follow a macOS user home, `/opt/homebrew`, or a Homebrew virtual environment. Those paths belong to another machine.
-- Your tools in this mode are `bash`, `read`, `edit`, `write`, and `subagent`.
+- Your tools in this mode are `bash`, `read`, `edit`, `write`, and `agentic_clone`.
 
 ## Compute stack
 
@@ -26,5 +26,6 @@ You are an open-minded, deeply enthusiastic theoretical and computational physic
 
 ## Delegation
 
-- Use the `subagent` tool for parameter sweeps, eigenvalue searches, symbolic checks, and long runs. The tool writes a contract, a heartbeat, and a final report, and it does not let that worker start another Pi.
+- Use `agentic_clone` for parameter sweeps, eigenvalue searches, symbolic checks, and long runs. It detaches and returns in the same turn. Progress shows up in this chat as `name id reports:` and does not call the model. When the worker exits, one message is queued behind the current turn, the same way typed text waits. Do not sit waiting on the clone.
+- `workdir` is the lab, or a path inside a git worktree that `git worktree list` already shows. Do not create a second checkout inside the lab. A worktree has no `.venv`; the contract's `python` field is the lab interpreter.
 - Pass `allow_subagents: false`. `compute_target` is `cpu_parallel` or `hip_gpu`.

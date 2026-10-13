@@ -27,6 +27,8 @@ the laboratory test suite reaches those nineteen files on Windows.
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import sys
 import time
 import types
@@ -103,3 +105,13 @@ def install() -> list[str]:
 
 if __name__ == "__main__":
     print("installed:", install() or "nothing (both modules are present)")
+
+ROOT = Path(__file__).resolve().parents[2]
+
+
+def repo_path(*parts: str) -> Path:
+    """Resolve a current input inside the single canonical checkout."""
+    path = ROOT.joinpath(*parts).resolve()
+    if not path.is_relative_to(ROOT):
+        raise ValueError("path escapes the repository")
+    return path
