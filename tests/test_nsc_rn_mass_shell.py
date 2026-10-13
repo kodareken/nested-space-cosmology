@@ -216,7 +216,7 @@ class TestRecord:
 def test_driver_refuses_to_overwrite():
     import subprocess
     import sys
-    root = LAB.parent
+    root = LAB
     result = subprocess.run(
         [sys.executable, "scripts/lab.py", "scripts/derive_nsc_rn_mass_shell.py"],
         cwd=root, capture_output=True, text=True)

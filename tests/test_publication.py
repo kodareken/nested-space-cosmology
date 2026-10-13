@@ -3,13 +3,16 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import subprocess
+from types import ModuleType
 import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "results" / "manifest.json"
+FROZEN_BASELINE = "04a0cb9378977772243ebf7c9be3c74182b030f2"
 
 
 def load_script(name: str):
@@ -22,11 +25,71 @@ def load_script(name: str):
     return module
 
 
+def load_frozen_builder(publication):
+    """Run the original producer over read-only files in its declared Git pin."""
+    class FrozenTree(publication._PinnedPath):
+        @property
+        def name(self):
+            return Path(self.relative).name
+
+        def __lt__(self, other):
+            return (self.commit, self.relative) < (other.commit, other.relative)
+
+        def relative_to(self, root):
+            if self.commit != root.commit:
+                raise ValueError("different pinned source contexts")
+            return Path(self.relative).relative_to(root.relative or ".")
+
+        def glob(self, pattern):
+            environment = os.environ.copy()
+            environment["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(
+                ROOT / "archive/source-history/objects")
+            names = subprocess.check_output(
+                ["git", "ls-tree", "-r", "-z", "--name-only", self.commit,
+                 "--", self.relative], cwd=ROOT, env=environment,
+            ).decode("utf-8").split("\0")
+            return [type(self)(self.commit, name) for name in names if name
+                    and Path(name).parent == Path(self.relative)
+                    and Path(name).match(pattern)]
+
+    relative = "scripts/build_result_manifest.py"
+    source = publication._git_bytes(FROZEN_BASELINE, relative)
+    module = ModuleType("pinned_result_manifest_builder")
+    module.__file__ = str(ROOT / relative)
+    exec(compile(source, module.__file__, "exec"), module.__dict__)
+    module.ROOT = FrozenTree(FROZEN_BASELINE)
+    module.OUTPUT = module.ROOT / "results/manifest.json"
+    module.RELEASE_SPEC_PATH = module.ROOT / "results/release-spec.json"
+    module.RELEASE_SPEC = json.loads(module.RELEASE_SPEC_PATH.read_text())
+    module.SCOPED_SPECS = {
+        row["output"]: row for row in module.RELEASE_SPEC["scoped_follow_ups"]}
+    module.SCOPED_FOLLOW_UP_PATHS = tuple(module.SCOPED_SPECS)
+    return module
+
+
 class PublicationManifestTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
+        cls.publication = load_script("check_publication.py")
+        snapshot, _ = cls.publication.retained_receipts()
+        if snapshot is None or cls.publication._baseline() != FROZEN_BASELINE:
+            raise AssertionError("historical publication requires its explicit v2 source pin")
+        for relative in ("results/manifest.json", "results/release-spec.json"):
+            if (ROOT / relative).read_bytes() != cls.publication._git_bytes(FROZEN_BASELINE, relative):
+                raise AssertionError("frozen publication declaration changed: " + relative)
+        cls.reproducer = cls.publication.historical_checker(FROZEN_BASELINE)
+        cls.frozen_root = cls.reproducer.ROOT
         cls.manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
         cls.steps = cls.manifest["steps"]
+        cls.by_output = {step["output"]: step for step in cls.steps}
+
+    def frozen_result(self, relative):
+        expected = self.by_output[relative]["output_sha256"]
+        self.publication.authenticate_frozen_path(
+            relative, expected, result=True, context=FROZEN_BASELINE)
+        raw = (self.frozen_root / relative).read_bytes()
+        self.assertEqual(expected, hashlib.sha256(raw).hexdigest())
+        return json.loads(raw)
 
     HISTORICAL_OUTPUT_SHA256 = {
         "results/nsc-1-bps-self-equal-energy.json": "2dbc0ee428cfbd0205c41af6f7641723d30f304379742c2280117513d14f29e0",
@@ -126,12 +189,12 @@ class PublicationManifestTests(unittest.TestCase):
         observed = {step["output"]: step["output_sha256"] for step in historical}
         self.assertEqual(self.HISTORICAL_OUTPUT_SHA256, observed)
         for step in historical:
-            path = ROOT / step["output"]
+            path = self.frozen_root / step["output"]
             self.assertEqual(
                 step["output_sha256"],
                 hashlib.sha256(path.read_bytes()).hexdigest(),
             )
-            generator = ROOT / step["generator"]
+            generator = self.frozen_root / step["generator"]
             self.assertEqual(
                 step["generator_sha256"],
                 hashlib.sha256(generator.read_bytes()).hexdigest(),
@@ -166,7 +229,7 @@ class PublicationManifestTests(unittest.TestCase):
         self.assertEqual("all_fields", follow_up["comparison_policy"]["kind"])
         self.assertEqual([], follow_up["dependencies"])
         self.assertTrue(follow_up["auxiliary_inputs"])
-        record = json.loads((ROOT / follow_up["output"]).read_text(encoding="utf-8"))
+        record = self.frozen_result(follow_up["output"])
         self.assertIs(
             False, record["nonclaims"]["physical_zeta_or_particle_mass_derived"]
         )
@@ -187,22 +250,25 @@ class PublicationManifestTests(unittest.TestCase):
             self.assertLessEqual(set(step["dependencies"]), complete)
             complete.add(step["output"])
 
-    def test_declared_hashes_match_checkout(self) -> None:
+    def test_declared_hashes_match_pinned_context_and_retained_outputs(self) -> None:
         for step in self.steps:
             for path_key, hash_key in (
                 ("output", "output_sha256"),
                 ("generator", "generator_sha256"),
             ):
-                path = ROOT / step[path_key]
+                path = self.frozen_root / step[path_key]
                 self.assertTrue(path.is_file(), path)
                 self.assertEqual(
                     step[hash_key], hashlib.sha256(path.read_bytes()).hexdigest()
                 )
+                self.publication.authenticate_frozen_path(
+                    step[path_key], step[hash_key], result=path_key == "output",
+                    context=FROZEN_BASELINE)
 
     def test_every_result_is_terminal_and_identified(self) -> None:
         for step in self.steps:
-            result = json.loads((ROOT / step["output"]).read_text(encoding="utf-8"))
-            load_script("reproduce_public_results.py").validate_identity(result, step)
+            result = self.frozen_result(step["output"])
+            self.reproducer.validate_identity(result, step)
             kind = step.get("identity_policy", {}).get("kind")
             if kind in {"schema_gate", "schema_status"}:
                 self.assertNotIn("artifact_id", result)
@@ -237,16 +303,14 @@ class PublicationManifestTests(unittest.TestCase):
         )
 
     def test_frontier_preserves_open_scale_claims(self) -> None:
-        frontier = json.loads(
-            (ROOT / self.manifest["frontier_output"]).read_text(encoding="utf-8")
-        )
+        frontier = self.frozen_result(self.manifest["frontier_output"])
         self.assertIs(False, frontier["gate"]["mode_resolved_tail_solved"])
         self.assertIs(False, frontier["gate"]["zeta_derived"])
         self.assertIs(False, frontier["nonclaims"]["Omega_value_selected"])
         self.assertIs(False, frontier["nonclaims"]["physical_zeta_promoted"])
 
     def test_manifest_builder_round_trip(self) -> None:
-        builder = load_script("build_result_manifest.py")
+        builder = load_frozen_builder(self.publication)
         self.assertEqual(self.manifest, builder.build())
 
     def test_numeric_comparison_policy_propagates_through_dynamic_steps(self) -> None:
@@ -299,9 +363,7 @@ class PublicationManifestTests(unittest.TestCase):
             "a5b5061372fef19817d8abd8a6833be020b54806607101338029e7177bfd0615",
             geometric["output_sha256"],
         )
-        geometric_record = json.loads(
-            (ROOT / geometric["output"]).read_text(encoding="utf-8")
-        )
+        geometric_record = self.frozen_result(geometric["output"])
         self.assertAlmostEqual(
             0.7034881641,
             geometric_record["gap_families"][0]["continuum"]["band_edge"],
@@ -319,21 +381,20 @@ class PublicationManifestTests(unittest.TestCase):
             by_id["NSC-2-ZETA1-UNIT-CLOSURE-CHECK"]["output_sha256"],
         )
 
-    def test_reproduction_validator_accepts_frozen_checkout(self) -> None:
-        reproducer = load_script("reproduce_public_results.py")
-        reproducer.validate_checkout(self.manifest)
+    def test_reproduction_validator_accepts_explicit_frozen_context(self) -> None:
+        self.reproducer.validate_checkout(self.manifest)
 
     def test_all_authenticated_field_variants_are_validated_and_normalized(self) -> None:
-        reproducer = load_script("reproduce_public_results.py")
+        reproducer = self.reproducer
         for name in (
             "nsc-1-s-one-spectral-room-bind.json",
             "nsc-1-s-one-shadow-lensing-observation.json",
             "nsc-1-s-one-resolution-channel-closure.json",
             "nsc-1-s-one-flat-spectral-poles.json",
         ):
-            value = json.loads((ROOT / "results" / name).read_text(encoding="utf-8"))
+            value = self.frozen_result("results/" + name)
             step = next(row for row in self.steps if row["output"] == "results/" + name)
-            locations = reproducer.validate_authenticated_inputs(ROOT, value, step)
+            locations = reproducer.validate_authenticated_inputs(self.frozen_root, value, step)
             normalized = reproducer.normalize_dynamic_hashes(value, locations)
             entries = list(reproducer.authenticated_entries(normalized))
             self.assertTrue(entries)
@@ -408,9 +469,7 @@ class PublicationManifestTests(unittest.TestCase):
                     {"pointer", "relative_tolerance", "absolute_tolerance"},
                     set(observable),
                 )
-                value = json.loads(
-                    (ROOT / step["output"]).read_text(encoding="utf-8")
-                )
+                value = self.frozen_result(step["output"])
                 pointer_value = load_script("reproduce_public_results.py").resolve_pointer(
                     value, observable["pointer"]
                 )

@@ -260,7 +260,8 @@ class RecordContractTests(unittest.TestCase):
         path = ROOT / "results/nsc-12-normalization-flow.json"
         if not path.exists():
             self.skipTest("exclusive result has not been written")
-        compare_record(json.loads(path.read_text()), build_record())
+        compare_record(json.loads(path.read_text()), build_record(
+            source_context='329ef809e466a86ed4a290ee32c19485f85add9d'))
 
     def test_build_record_flags_remain_unfitted_and_not_omega(self):
         identities = exact_flow_identities()

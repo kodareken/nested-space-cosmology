@@ -17,6 +17,7 @@ import math
 import os
 from pathlib import Path
 import re
+import queue
 import secrets
 import selectors
 import signal
@@ -24,6 +25,7 @@ import stat
 import subprocess
 import sys
 import time
+import threading
 from typing import Any, Callable, Union
 
 
@@ -43,6 +45,17 @@ _GIT_EXECUTABLE_CANDIDATES = (
     "/usr/local/bin/git",
 )
 _GIT_MINIMAL_PATH = "/usr/bin:/bin"
+if sys.platform == "win32":
+    _windows_directory_buffer = ctypes.create_unicode_buffer(32768)
+    if not ctypes.WinDLL("kernel32").GetWindowsDirectoryW(
+            _windows_directory_buffer, len(_windows_directory_buffer)):
+        raise OSError("trusted Windows directory is unavailable")
+    _WINDOWS_DIRECTORY = _windows_directory_buffer.value
+    _GIT_MINIMAL_PATH = str(Path(_WINDOWS_DIRECTORY) / "System32")
+    _GIT_EXECUTABLE_CANDIDATES = (
+        "C:/Program Files/Git/cmd/git.exe", "C:/Program Files/Git/bin/git.exe",
+        "C:/Program Files (x86)/Git/cmd/git.exe",
+    )
 _RENAME_EXCL_DARWIN = 0x0004
 _RENAME_NOREPLACE_LINUX = 0x0001
 _CHUNK = 65536
@@ -102,7 +115,7 @@ class PostpublicationUncertainty(EvidenceIOError):
 
 @dataclass(frozen=True, slots=True)
 class PublicationReceipt:
-    """Record that an exclusive publication completed, fsynced, and revalidated."""
+    """Record that an exclusive publication completed, flushed, and revalidated."""
 
     relative_path: str
     kind: str
@@ -564,6 +577,7 @@ def read_regular_file(
     relative: str,
     *,
     max_bytes: int = DEFAULT_MAX_BYTES,
+    _fault_hook: FaultHook | None = None,
 ) -> bytes:
     """Read a single-linked regular file through a no-follow parent chain.
 
@@ -575,6 +589,9 @@ def read_regular_file(
     if type(max_bytes) is not int or max_bytes < 0 or max_bytes > DEFAULT_MAX_BYTES:
         raise UnsafePathError("byte bound is unsafe")
     root = _canonical_root(Path(root))
+    if sys.platform == "win32":
+        return _windows_read_regular_file(root, relative, max_bytes=max_bytes,
+                                          fault_hook=_fault_hook)
     parts = _relative_parts(relative)
     descriptors, identities = _open_chain(root, parts[:-1])
     try:
@@ -608,8 +625,8 @@ def read_regular_file(
         _close_fds(descriptors)
 
 
-def _git_environment() -> dict[str, str]:
-    return {
+def _git_environment(repository: Path | None = None) -> dict[str, str]:
+    environment = {
         "LC_ALL": "C",
         "LANG": "C",
         "PATH": _GIT_MINIMAL_PATH,
@@ -622,6 +639,16 @@ def _git_environment() -> dict[str, str]:
         "GIT_OPTIONAL_LOCKS": "0",
         "GIT_TERMINAL_PROMPT": "0",
     }
+    if sys.platform == "win32":
+        environment["SystemRoot"] = _WINDOWS_DIRECTORY
+    if repository is not None:
+        root = _canonical_root(repository)
+        objects = root / "archive/source-history/objects"
+        if objects.is_dir():
+            if objects.is_symlink() or not objects.resolve().is_relative_to(root):
+                raise GitQueryError("retained source object store is unsafe")
+            environment["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(objects)
+    return environment
 
 
 def _git_executable() -> str:
@@ -651,6 +678,8 @@ def _communicate_bounded(
 ) -> bytes:
     if proc.stdout is None or proc.stderr is None:
         raise GitQueryError("Git capture pipes are absent")
+    if sys.platform == "win32":
+        return _windows_communicate_bounded(proc, max_bytes=max_bytes, timeout=timeout)
     stdout_chunks: list[bytes] = []
     sizes = {"out": 0, "err": 0}
     deadline = time.monotonic() + timeout
@@ -706,9 +735,12 @@ def _run_git(repository: Path, arguments: tuple[str, ...]) -> bytes:
     ):
         raise GitQueryError("Git argument is not an allowed read-only operand")
     root = _canonical_root(Path(repository))
-    root_fd = _open_root(root)
-    root_identity = _devino(os.fstat(root_fd))
-    os.close(root_fd)
+    if sys.platform == "win32":
+        root_identity = _windows_directory_identity(root)
+    else:
+        root_fd = _open_root(root)
+        root_identity = _devino(os.fstat(root_fd))
+        os.close(root_fd)
     git_path = _git_executable()
     command = (
         git_path,
@@ -746,7 +778,7 @@ def _run_git(repository: Path, arguments: tuple[str, ...]) -> bytes:
         proc = subprocess.Popen(
             command,
             cwd=root,
-            env=_git_environment(),
+            env=_git_environment(root),
             stdin=subprocess.DEVNULL,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -758,12 +790,16 @@ def _run_git(repository: Path, arguments: tuple[str, ...]) -> bytes:
     payload = _communicate_bounded(
         proc, max_bytes=DEFAULT_MAX_BYTES, timeout=GIT_TIMEOUT_SECONDS
     )
-    checked_root = _open_root(root)
-    try:
-        if _devino(os.fstat(checked_root)) != root_identity:
+    if sys.platform == "win32":
+        if _windows_directory_identity(root) != root_identity:
             raise GitQueryError("repository root changed during Git query")
-    finally:
-        os.close(checked_root)
+    else:
+        checked_root = _open_root(root)
+        try:
+            if _devino(os.fstat(checked_root)) != root_identity:
+                raise GitQueryError("repository root changed during Git query")
+        finally:
+            os.close(checked_root)
     return payload
 
 
@@ -1026,6 +1062,10 @@ def git_read(repository: Path, operation: GitOperation) -> object:
 
 
 def _load_exclusive_rename() -> tuple[Any, int] | tuple[None, None]:
+    if sys.platform == "win32":
+        if _WINDOWS_PUBLICATION_API is None:
+            return None, None
+        return _WINDOWS_PUBLICATION_API["MoveFileExW"], 0x0008
     if sys.platform == "darwin":
         try:
             libc = ctypes.CDLL("/usr/lib/libSystem.B.dylib", use_errno=True)
@@ -1059,6 +1099,49 @@ def _load_exclusive_rename() -> tuple[Any, int] | tuple[None, None]:
     return None, None
 
 
+def _load_windows_publication_api() -> dict[str, Any] | None:
+    if sys.platform != "win32":
+        return None
+    from ctypes import wintypes
+
+    class FileInformation(ctypes.Structure):
+        _fields_ = [
+            ("attributes", wintypes.DWORD),
+            ("creation", wintypes.FILETIME), ("access", wintypes.FILETIME),
+            ("written", wintypes.FILETIME), ("volume", wintypes.DWORD),
+            ("size_high", wintypes.DWORD), ("size_low", wintypes.DWORD),
+            ("links", wintypes.DWORD), ("index_high", wintypes.DWORD),
+            ("index_low", wintypes.DWORD),
+        ]
+
+    try:
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        signatures = {
+            "CreateFileW": ([wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD,
+                             ctypes.c_void_p, wintypes.DWORD, wintypes.DWORD,
+                             wintypes.HANDLE], wintypes.HANDLE),
+            "CloseHandle": ([wintypes.HANDLE], wintypes.BOOL),
+            "FlushFileBuffers": ([wintypes.HANDLE], wintypes.BOOL),
+            "GetFileInformationByHandle": ([wintypes.HANDLE,
+                                             ctypes.POINTER(FileInformation)], wintypes.BOOL),
+            "ReadFile": ([wintypes.HANDLE, ctypes.c_void_p, wintypes.DWORD,
+                          ctypes.POINTER(wintypes.DWORD), ctypes.c_void_p], wintypes.BOOL),
+            "WriteFile": ([wintypes.HANDLE, ctypes.c_void_p, wintypes.DWORD,
+                           ctypes.POINTER(wintypes.DWORD), ctypes.c_void_p], wintypes.BOOL),
+            "MoveFileExW": ([wintypes.LPCWSTR, wintypes.LPCWSTR,
+                             wintypes.DWORD], wintypes.BOOL),
+        }
+        api: dict[str, Any] = {"information_type": FileInformation}
+        for name, (arguments, result) in signatures.items():
+            function = getattr(kernel, name)
+            function.argtypes, function.restype = arguments, result
+            api[name] = function
+        return api
+    except (AttributeError, OSError):
+        return None
+
+
+_WINDOWS_PUBLICATION_API = _load_windows_publication_api()
 _RENAME_FUNC, _RENAME_FLAG = _load_exclusive_rename()
 
 
@@ -1387,6 +1470,483 @@ def _inventory_digest(files: dict[str, bytes]) -> str:
     )
 
 
+def _windows_call(name: str, *arguments: Any) -> Any:
+    if _WINDOWS_PUBLICATION_API is None:
+        raise UnsupportedPublication("native Windows publication is unavailable")
+    result = _WINDOWS_PUBLICATION_API[name](*arguments)
+    if not result:
+        raise ctypes.WinError(ctypes.get_last_error())
+    return result
+
+
+def _windows_open(path: Path, *, directory: bool = False,
+                  create: bool = False, write: bool = False,
+                  lock_directory: bool = False) -> int:
+    if _WINDOWS_PUBLICATION_API is None:
+        raise UnsupportedPublication("native Windows publication is unavailable")
+    access = 0x0080 if directory else 0x80000000  # attributes / GENERIC_READ
+    if write:
+        access |= 0x40000000  # GENERIC_WRITE
+    flags = 0x00200000  # FILE_FLAG_OPEN_REPARSE_POINT: never follow a leaf link
+    if directory:
+        flags |= 0x02000000  # FILE_FLAG_BACKUP_SEMANTICS
+    if write:
+        flags |= 0x80000000  # FILE_FLAG_WRITE_THROUGH includes NTFS metadata
+    handle = _WINDOWS_PUBLICATION_API["CreateFileW"](
+        str(path), access, 3 if lock_directory else 7, None,
+        1 if create else 3, flags, None,
+    )
+    if handle == ctypes.c_void_p(-1).value:
+        raise ctypes.WinError(ctypes.get_last_error())
+    return handle
+
+
+def _windows_info(handle: int) -> tuple[tuple[int, int], int, int, int, int]:
+    assert _WINDOWS_PUBLICATION_API is not None
+    information = _WINDOWS_PUBLICATION_API["information_type"]()
+    _windows_call("GetFileInformationByHandle", handle, ctypes.byref(information))
+    return (
+        (information.volume, (information.index_high << 32) | information.index_low),
+        information.attributes, (information.size_high << 32) | information.size_low,
+        information.links,
+        (information.written.dwHighDateTime << 32) | information.written.dwLowDateTime,
+    )
+
+
+def _windows_close(handles: list[int]) -> None:
+    if _WINDOWS_PUBLICATION_API is not None:
+        for handle in reversed(handles):
+            _WINDOWS_PUBLICATION_API["CloseHandle"](handle)
+
+
+def _windows_safe_parts(relative: str) -> tuple[str, ...]:
+    parts = _relative_parts(relative)
+    devices = {"CON", "PRN", "AUX", "NUL", *(f"COM{i}" for i in range(1, 10)),
+               *(f"LPT{i}" for i in range(1, 10)),
+               *(f"{prefix}{digit}" for prefix in ("COM", "LPT") for digit in "¹²³")}
+    for part in parts:
+        if (any(ord(character) < 32 or character in '<>:"|?*' for character in part)
+                or part.endswith((".", " ")) or part.split(".", 1)[0].upper() in devices):
+            raise UnsafePathError("path has an unsafe Windows component")
+    return parts
+
+
+def _windows_lock_chain(root: Path, parents: tuple[str, ...]) -> tuple[list[int], list[Path]]:
+    # Denying FILE_SHARE_DELETE holds every ancestor's namespace in place.
+    paths = [*reversed(root.parents), root]
+    for part in parents:
+        paths.append(paths[-1] / part)
+    handles: list[int] = []
+    try:
+        for path in paths:
+            handle = _windows_open(path, directory=True, lock_directory=True)
+            handles.append(handle)
+            _identity, attributes, _size, _links, _time = _windows_info(handle)
+            if not attributes & 0x0010 or attributes & 0x0400:
+                raise UnsafePathError("parent is not a regular Windows directory")
+        return handles, paths
+    except Exception:
+        _windows_close(handles)
+        raise
+
+
+def _windows_revalidate_chain(handles: list[int], paths: list[Path]) -> None:
+    for held, path in zip(handles, paths, strict=True):
+        fresh = _windows_open(path, directory=True, lock_directory=True)
+        try:
+            identity, attributes, _size, _links, _time = _windows_info(fresh)
+            if identity != _windows_info(held)[0] or not attributes & 0x0010 or attributes & 0x0400:
+                raise UnsafePathError("parent chain raced")
+        finally:
+            _windows_close([fresh])
+
+
+def _windows_read(path: Path, *, max_bytes: int = DEFAULT_MAX_BYTES,
+                  fault_hook: FaultHook | None = None) -> tuple[bytes, tuple[int, int]]:
+    handle = _windows_open(path)
+    try:
+        before = _windows_info(handle)
+        identity, attributes, size, links, _time = before
+        if attributes & (0x0010 | 0x0400) or links != 1 or size > max_bytes:
+            raise UnsafePathError("leaf is unsafe")
+        if fault_hook is not None:
+            fault_hook("after_open")
+        chunks: list[bytes] = []
+        remaining = size
+        while remaining:
+            buffer = ctypes.create_string_buffer(min(remaining, _CHUNK))
+            received = ctypes.c_ulong()
+            _windows_call("ReadFile", handle, buffer, len(buffer), ctypes.byref(received), None)
+            if not received.value:
+                raise UnsafePathError("leaf changed while reading")
+            chunks.append(buffer.raw[:received.value])
+            remaining -= received.value
+        if _windows_info(handle) != before:
+            raise UnsafePathError("leaf changed while reading")
+        return b"".join(chunks), identity
+    finally:
+        _windows_close([handle])
+
+
+def _windows_read_regular_file(root: Path, relative: str, *, max_bytes: int,
+                               fault_hook: FaultHook | None) -> bytes:
+    parts = _windows_safe_parts(relative)
+    handles: list[int] = []
+    try:
+        handles, paths = _windows_lock_chain(root, parts[:-1])
+        path = paths[-1] / parts[-1]
+        raw, identity = _windows_read(path, max_bytes=max_bytes, fault_hook=fault_hook)
+        _windows_revalidate_chain(handles, paths)
+        observed, observed_identity = _windows_read(
+            path, max_bytes=max_bytes, fault_hook=fault_hook)
+        if raw != observed or identity != observed_identity:
+            raise UnsafePathError("leaf raced")
+        _windows_revalidate_chain(handles, paths)
+        return raw
+    except OSError as error:
+        raise UnsafePathError("leaf cannot be read safely") from error
+    finally:
+        _windows_close(handles)
+
+
+def _windows_process_job(proc: subprocess.Popen[bytes]) -> tuple[Any, int]:
+    """Bound the whole query process tree; closing the job kills descendants."""
+    from ctypes import wintypes
+
+    class BasicLimits(ctypes.Structure):
+        _fields_ = [("process_time", ctypes.c_longlong), ("job_time", ctypes.c_longlong),
+                    ("flags", wintypes.DWORD), ("minimum_working", ctypes.c_size_t),
+                    ("maximum_working", ctypes.c_size_t), ("active_processes", wintypes.DWORD),
+                    ("affinity", ctypes.c_size_t), ("priority", wintypes.DWORD),
+                    ("scheduling", wintypes.DWORD)]
+
+    class ExtendedLimits(ctypes.Structure):
+        _fields_ = [("basic", BasicLimits), ("io", ctypes.c_ulonglong * 6),
+                    ("process_memory", ctypes.c_size_t), ("job_memory", ctypes.c_size_t),
+                    ("peak_process", ctypes.c_size_t), ("peak_job", ctypes.c_size_t)]
+
+    kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+    kernel.CreateJobObjectW.argtypes = [ctypes.c_void_p, wintypes.LPCWSTR]
+    kernel.CreateJobObjectW.restype = wintypes.HANDLE
+    kernel.SetInformationJobObject.argtypes = [wintypes.HANDLE, ctypes.c_int,
+                                               ctypes.c_void_p, wintypes.DWORD]
+    kernel.SetInformationJobObject.restype = wintypes.BOOL
+    kernel.AssignProcessToJobObject.argtypes = [wintypes.HANDLE, wintypes.HANDLE]
+    kernel.AssignProcessToJobObject.restype = wintypes.BOOL
+    kernel.CloseHandle.argtypes = [wintypes.HANDLE]
+    kernel.CloseHandle.restype = wintypes.BOOL
+    job = kernel.CreateJobObjectW(None, None)
+    if not job:
+        raise GitQueryError("query process tree cannot be bounded")
+    limits = ExtendedLimits()
+    limits.basic.flags = 0x2000  # JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE
+    if (not kernel.SetInformationJobObject(job, 9, ctypes.byref(limits), ctypes.sizeof(limits))
+            or not kernel.AssignProcessToJobObject(job, int(proc._handle))):
+        kernel.CloseHandle(job)
+        raise GitQueryError("query process tree cannot be bounded")
+    return kernel, job
+
+
+def _windows_communicate_bounded(proc: subprocess.Popen[bytes], *,
+                                 max_bytes: int, timeout: float) -> bytes:
+    """Read anonymous Windows pipes with bounded queues, buffers and lifetime."""
+    assert proc.stdout is not None and proc.stderr is not None
+    messages: queue.Queue[tuple[str, bytes | None, Exception | None]] = queue.Queue(maxsize=2)
+    stop = threading.Event()
+    threads: list[threading.Thread] = []
+    kernel, job = None, None
+
+    def send(message: tuple[str, bytes | None, Exception | None]) -> None:
+        while not stop.is_set():
+            try:
+                messages.put(message, timeout=0.1)
+                return
+            except queue.Full:
+                continue
+
+    def reader(stream: Any, kind: str) -> None:
+        try:
+            while not stop.is_set():
+                data = stream.read(_CHUNK)
+                if not data:
+                    break
+                send((kind, data, None))
+            send((kind, None, None))
+        except Exception as error:
+            send((kind, None, error))
+
+    deadline = time.monotonic() + timeout
+    sizes = {"out": 0, "err": 0}
+    stdout: list[bytes] = []
+    active = 2
+    try:
+        kernel, job = _windows_process_job(proc)
+        for stream, kind in ((proc.stdout, "out"), (proc.stderr, "err")):
+            thread = threading.Thread(target=reader, args=(stream, kind), daemon=True)
+            thread.start()
+            threads.append(thread)
+        while active:
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise GitQueryError("Git read timed out")
+            try:
+                kind, data, error = messages.get(timeout=min(0.1, remaining))
+            except queue.Empty:
+                continue
+            if error is not None:
+                raise GitQueryError("Git read failed") from error
+            if data is None:
+                active -= 1
+                continue
+            sizes[kind] += len(data)
+            if sizes[kind] > max_bytes:
+                raise GitQueryError("Git read exceeded the byte bound")
+            if kind == "out":
+                stdout.append(data)
+        proc.wait(timeout=max(0.01, deadline - time.monotonic()))
+        if proc.returncode:
+            raise GitQueryError("Git read failed")
+        return b"".join(stdout)
+    except Exception as error:
+        if proc.poll() is None:
+            proc.kill()
+        if isinstance(error, GitQueryError):
+            raise
+        raise GitQueryError("Git read failed") from error
+    finally:
+        stop.set()
+        if kernel is not None and job is not None:
+            kernel.CloseHandle(job)
+        if proc.poll() is None:
+            proc.kill()
+        proc.wait(timeout=1)
+        for thread in threads:
+            thread.join(timeout=1)
+        proc.stdout.close()
+        proc.stderr.close()
+
+
+def _windows_write(path: Path, payload: bytes) -> tuple[int, int]:
+    handle = _windows_open(path, create=True, write=True)
+    try:
+        remaining = memoryview(payload)
+        while remaining:
+            chunk = bytes(remaining[:_CHUNK])
+            written = ctypes.c_ulong()
+            _windows_call("WriteFile", handle, chunk, len(chunk), ctypes.byref(written), None)
+            if not written.value:
+                raise PrepublicationError("short publication write")
+            remaining = remaining[written.value:]
+        _windows_call("FlushFileBuffers", handle)
+        identity, attributes, size, links, _time = _windows_info(handle)
+        if attributes & (0x0010 | 0x0400) or size != len(payload) or links != 1:
+            raise PrepublicationError("staging file is unsafe")
+        return identity
+    finally:
+        _windows_close([handle])
+
+
+def _windows_directory_identity(path: Path) -> tuple[int, int]:
+    handle = _windows_open(path, directory=True)
+    try:
+        identity, attributes, _size, _links, _time = _windows_info(handle)
+        if not attributes & 0x0010 or attributes & 0x0400:
+            raise UnsafePathError("directory is unsafe")
+        return identity
+    finally:
+        _windows_close([handle])
+
+
+def _windows_inventory(path: Path, expected: dict[str, bytes],
+                       owned: tuple[int, int]) -> dict[str, bytes]:
+    directories = _directory_names(expected)
+    observed: dict[str, bytes] = {}
+    handles, paths = _windows_lock_chain(path, ())
+    try:
+        if _windows_info(handles[-1])[0] != owned:
+            raise PrepublicationError("owned directory identity changed", staging_retained=True)
+        pending = [(path, "")]
+        while pending:
+            directory, prefix = pending.pop()
+            for entry in directory.iterdir():
+                relative = prefix + entry.name
+                _windows_safe_parts(relative)
+                attributes = entry.lstat().st_file_attributes
+                if attributes & 0x0400:
+                    raise UnsafePathError("staging tree contains a reparse point")
+                if attributes & 0x0010:
+                    if relative not in directories:
+                        raise PrepublicationError("staging tree contains an unexpected directory")
+                    handle = _windows_open(entry, directory=True, lock_directory=True)
+                    handles.append(handle)
+                    if _windows_info(handle)[1] & 0x0400:
+                        raise UnsafePathError("staging parent is a reparse point")
+                    pending.append((entry, relative + "/"))
+                else:
+                    if relative not in expected:
+                        raise PrepublicationError("staging tree contains an unexpected file")
+                    observed[relative] = _windows_read(entry)[0]
+        return observed
+    finally:
+        _windows_close(handles)
+
+
+def _windows_populate_directory(stage: Path, files: dict[str, bytes],
+                                owned: tuple[int, int]) -> None:
+    handles, paths = _windows_lock_chain(stage, ())
+    locked = {stage}
+    try:
+        if _windows_info(handles[-1])[0] != owned:
+            raise PrepublicationError("owned directory identity changed", staging_retained=True)
+        for name, payload in files.items():
+            parts = _windows_safe_parts(name)
+            parent = stage
+            for part in parts[:-1]:
+                parent = parent / part
+                if parent not in locked:
+                    parent.mkdir()
+                    handle = _windows_open(parent, directory=True, lock_directory=True)
+                    handles.append(handle)
+                    if _windows_info(handle)[1] & 0x0400:
+                        raise UnsafePathError("staging parent is a reparse point")
+                    locked.add(parent)
+            _windows_write(parent / parts[-1], payload)
+    finally:
+        _windows_close(handles)
+
+
+def _windows_remove_directory(stage: Path, files: dict[str, bytes],
+                               owned: tuple[int, int]) -> None:
+    # Keep every containing directory non-renamable until its leaves are gone;
+    # cleanup must never follow a substituted junction outside the owned tree.
+    handles, paths = _windows_lock_chain(stage, ())
+    children: list[tuple[Path, int]] = []
+    try:
+        if _windows_info(handles[-1])[0] != owned:
+            raise PrepublicationError("staging identity changed", staging_retained=True)
+        for name in sorted(_directory_names(files), key=lambda value: len(value.split("/"))):
+            path = stage.joinpath(*_windows_safe_parts(name))
+            handle = _windows_open(path, directory=True, lock_directory=True)
+            handles.append(handle)
+            attributes = _windows_info(handle)[1]
+            if not attributes & 0x0010 or attributes & 0x0400:
+                raise UnsafePathError("staging parent is unsafe")
+            children.append((path, handle))
+        if _windows_inventory(stage, files, owned) != files:
+            raise PrepublicationError("staging inventory changed", staging_retained=True)
+        for name, expected in files.items():
+            path = stage.joinpath(*_windows_safe_parts(name))
+            if _windows_read(path)[0] != expected:
+                raise PrepublicationError("staging bytes changed", staging_retained=True)
+            path.unlink()
+        for path, handle in reversed(children):
+            _windows_close([handle])
+            handles.remove(handle)
+            path.rmdir()
+        _windows_close([handles.pop()])
+        stage.rmdir()
+    finally:
+        _windows_close(handles)
+
+
+def _publish_windows(root: Path, relative: str, *, kind: str,
+                     expected_file: bytes | None, expected_directory: dict[str, bytes] | None,
+                     fault_hook: FaultHook | None) -> PublicationReceipt:
+    root = _canonical_root(Path(root))
+    parts = _windows_safe_parts(relative)
+    handles, paths = _windows_lock_chain(root, parts[:-1])
+    parent = paths[-1]
+    final, stage = parent / parts[-1], parent / _stage_name(parts[-1])
+    owned: tuple[int, int] | None = None
+    published = False
+
+    def fault(cut: str) -> None:
+        if fault_hook is not None:
+            fault_hook(cut)
+
+    def verify(path: Path) -> str:
+        if kind == "file":
+            raw, identity = _windows_read(path)
+            if identity != owned or raw != expected_file:
+                raise PrepublicationError("owned file identity or bytes changed", staging_retained=True)
+            return _digest(raw)
+        if _windows_directory_identity(path) != owned:
+            raise PrepublicationError("owned directory identity changed", staging_retained=True)
+        observed = _windows_inventory(path, expected_directory or {}, owned)
+        if observed != expected_directory:
+            raise PrepublicationError("staging inventory does not match the snapshot")
+        return _inventory_digest(observed)
+
+    try:
+        if final.exists() or final.is_symlink():
+            raise PrepublicationError("destination exists")
+        if stage.exists() or stage.is_symlink():
+            raise PrepublicationError("staging name is not exclusively available", staging_retained=True)
+        fault("before_write")
+        if kind == "file":
+            owned = _windows_write(stage, expected_file or b"")
+        else:
+            stage.mkdir()
+            owned = _windows_directory_identity(stage)
+            _windows_populate_directory(stage, expected_directory or {}, owned)
+        fault("after_write")
+        # Each staged file was opened write-through and FlushFileBuffers completed.
+        fault("after_file_fsync")
+        fault("before_publish")
+        _windows_revalidate_chain(handles, paths)
+        verify(stage)
+        # Same parent/volume; no COPY_ALLOWED and no REPLACE_EXISTING. Native
+        # collision handling is atomic. WRITE_THROUGH waits for the move on disk.
+        try:
+            _windows_call("MoveFileExW", str(stage), str(final), _RENAME_FLAG)
+        except OSError:
+            # A write-through move can report a late I/O failure. If our
+            # identity is already visible, never describe this as unpublished
+            # or clean up/retry the published evidence.
+            try:
+                visible = _windows_open(final, directory=kind == "directory")
+                try:
+                    if _windows_info(visible)[0] == owned:
+                        published = True
+                finally:
+                    _windows_close([visible])
+            except (OSError, EvidenceIOError):
+                pass
+            raise
+        published = True
+        fault("after_publish")
+        fault("after_parent_fsync")
+        _windows_revalidate_chain(handles, paths)
+        digest = verify(final)
+        _windows_revalidate_chain(handles, paths)
+        return PublicationReceipt(relative, kind, digest)
+    except Exception as error:
+        if published:
+            raise PostpublicationUncertainty(
+                "destination was published but a later durability or identity step failed",
+                relative_path=relative) from error
+        retained = stage.exists() or stage.is_symlink()
+        if owned is not None and retained:
+            try:
+                verify(stage)
+                if kind == "file":
+                    stage.unlink()
+                else:
+                    _windows_remove_directory(stage, expected_directory or {}, owned)
+                retained = False
+            except (OSError, EvidenceIOError):
+                retained = True
+        if isinstance(error, PrepublicationError):
+            error.staging_retained = bool(error.staging_retained or retained)
+            raise
+        if isinstance(error, UnsafePathError):
+            raise
+        raise PrepublicationError("publication failed before the destination was visible",
+                                  staging_retained=retained) from error
+    finally:
+        _windows_close(handles)
+
+
 def _verify_stage(
     parent_fd: int,
     name: str,
@@ -1504,6 +2064,11 @@ def _publish(
     fault_hook: FaultHook | None,
 ) -> PublicationReceipt:
     _require_exclusive_rename_support()
+    if sys.platform == "win32":
+        return _publish_windows(root, relative, kind=kind,
+                                expected_file=expected_file,
+                                expected_directory=expected_directory,
+                                fault_hook=fault_hook)
     root = _canonical_root(Path(root))
     parts = _relative_parts(relative)
     descriptors, identities = _open_chain(root, parts[:-1])

@@ -427,3 +427,21 @@ def test_recorded_result_keeps_gate_open_and_between_node_none():
             if covered:
                 assert saved['requested_node_indices'] == list(range(129))
                 assert saved['completed_node_indices'] == list(range(129))
+
+
+def test_windows_deadline_refuses_publication_of_an_over_budget_node(tmp_path, monkeypatch):
+    """The portable wrapper cannot publish a node after the same CPU cap."""
+    ctx_data = _fake_context()
+    monkeypatch.setattr(P, 'load_context', lambda *_: ctx_data)
+    monkeypatch.setattr(P, 'compute_node',
+                        lambda *_args, **_kwargs: _fake_row(ctx_data, 0, ctx_data['hashes']))
+    monkeypatch.setattr(P, 'paths', lambda _prefix: (tmp_path / 'art', tmp_path / 'out.json'))
+    monkeypatch.delattr(P.signal, 'SIGPROF', raising=False)
+    clock = iter((0.0, 0.0, 61.0, 61.0))
+    monkeypatch.setattr(P.time, 'process_time', lambda: next(clock))
+    result = P.record_run(
+        P.DEFAULT_HISTORY, 129, 'pilot', None, 'deadline-unit', 60.0, False)
+    assert not P.node_file(tmp_path / 'art', 0).exists()
+    assert not (tmp_path / 'out.json').exists()
+    assert result['scope']['physical_local_gate'] == 'OPEN'
+    assert result['scope']['between_node_phase_error_bound'] is None

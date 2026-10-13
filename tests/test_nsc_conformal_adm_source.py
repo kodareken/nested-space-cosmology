@@ -35,14 +35,13 @@ from recursive_horizons.nsc_influence import ground_covariance
 
 
 LAB = Path(__file__).resolve().parents[1]
-ROOT = LAB.parent
+ROOT = LAB
 HISTORICAL_ADM = (
     "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
 )
-HISTORICAL_PATHS = (
-    LAB / "src/recursive_horizons/nsc_adm_source.py",
-    ROOT / "src/recursive_horizons/nsc_adm_source.py",
-)
+# The consolidated checkout has one retained ADM owner. Its exact historical
+# digest remains the independent byte-preservation requirement.
+HISTORICAL_PATHS = (ROOT / "src/recursive_horizons/nsc_adm_source.py",)
 
 
 def _metric():

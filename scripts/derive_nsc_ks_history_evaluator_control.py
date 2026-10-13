@@ -20,7 +20,7 @@ sys.path.insert(0, str(ROOT/'scripts'))
 from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation
 from recursive_horizons.nsc_ks_batched_constraints import KSUpstreamBatch, map_negative_batch
 from recursive_horizons.nsc_ks_source_inventory import ReferenceSourcePanel
-from derive_nsc_evolved_incoming_constraints import coefficients_from_records
+from recursive_horizons.nsc_evolved_incoming_constraints import coefficients_from_records
 
 OUTPUT = ROOT/'results/development/nsc-ks-history-evaluator-control.json'
 PAYLOAD = ROOT/'results/development/artifacts/nsc-ks-history-evaluator-control.npz'

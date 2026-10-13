@@ -43,7 +43,7 @@ except Exception as error:
     THREADPOOL_LIMIT = "not applied: " + type(error).__name__
 
 import derive_nsc_spherical_feedback_episode as episode
-from recursive_horizons import nsc_regional_energy_exchange as regional
+from recursive_horizons.nested import energy_exchange as regional
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
 from recursive_horizons import nsc_spherical_null_expansion as null_expansion
 from recursive_horizons.provenance import resolve_pinned_source_bytes
@@ -69,7 +69,7 @@ from recursive_horizons.nsc_spherical_coupling import (
 from recursive_horizons.nsc_spherical_galerkin_coupling import physical_link_report
 
 LAB = episode.LAB
-ROOT = LAB.parent
+ROOT = LAB
 OUT = LAB / "results" / "development" / "nsc-regeneration-episode-v1.json"
 NPZ = LAB / "results" / "development" / "nsc-regeneration-episode-v1.npz"
 NOTE = LAB / "docs" / "nsc-regeneration-episode.md"

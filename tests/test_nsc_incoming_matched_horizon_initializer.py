@@ -14,6 +14,10 @@ from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision, _lo, _
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def inputs():
     c = json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][32]
     cfg = json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').read_text())['scattering_provenance']['config']
@@ -89,6 +93,7 @@ def test_point_binary_ratio_is_enclosed_without_changing_old_columns():
                 assert _hi(radius) < mp.mpf('2e-22')
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_replay_does_not_prepare_initializers(monkeypatch):
     path=ROOT/'results/development/nsc-incoming-matched-horizon-initializer.json'
     if not path.exists():

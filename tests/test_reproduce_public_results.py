@@ -2,12 +2,15 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 from pathlib import Path
 import tempfile
 import unittest
 
 from test_publication import ROOT, load_script
+
+ORIGINAL_SOURCE_CONTEXT = '329ef809e466a86ed4a290ee32c19485f85add9d'
 
 
 DEVELOPMENT = (
@@ -58,7 +61,7 @@ class ReproducePublicResultsTests(unittest.TestCase):
         for artifact in DEVELOPMENT:
             step = self.steps[artifact]
             value = json.loads((ROOT / step["output"]).read_text())
-            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
             self.assertEqual(set(), locations)
             normalized = self.reproducer.normalize_dynamic_hashes(value, locations)
             self.assertEqual(value["source_hashes"], normalized["source_hashes"])
@@ -68,7 +71,7 @@ class ReproducePublicResultsTests(unittest.TestCase):
             key = next(iter(tampered["source_hashes"]))
             tampered["source_hashes"][key] = "0" * 64
             with self.assertRaises(self.reproducer.ReproductionError):
-                self.reproducer.validate_authenticated_inputs(ROOT, tampered, step)
+                self.reproducer.validate_authenticated_inputs(ROOT, tampered, step, source_context=ORIGINAL_SOURCE_CONTEXT)
 
     def test_new_records_normalize_only_result_input_digests(self):
         expected_counts = {
@@ -82,7 +85,7 @@ class ReproducePublicResultsTests(unittest.TestCase):
         for artifact, count in expected_counts.items():
             step = self.steps[artifact]
             value = json.loads((ROOT / step["output"]).read_text())
-            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
             self.assertEqual(count, len(locations))
             self.assertTrue(all(location[0] == "input_hashes" for location in locations))
             normalized = self.reproducer.normalize_dynamic_hashes(value, locations)
@@ -97,11 +100,40 @@ class ReproducePublicResultsTests(unittest.TestCase):
             key = next(iter(tampered["source_hashes"]))
             tampered["source_hashes"][key] = "0" * 64
             with self.assertRaises(self.reproducer.ReproductionError):
-                self.reproducer.validate_authenticated_inputs(ROOT, tampered, step)
+                self.reproducer.validate_authenticated_inputs(ROOT, tampered, step, source_context=ORIGINAL_SOURCE_CONTEXT)
             with self.assertRaises(self.reproducer.ReproductionError):
                 self.reproducer.normalize_dynamic_hashes(
                     value, {("source_hashes", next(iter(value["source_hashes"])))}
                 )
+
+    def test_original_source_authentication_requires_an_explicit_context(self):
+        step = self.steps["NSC-6-ENERGY-TRANSFER"]
+        value = json.loads((ROOT / step["output"]).read_text())
+        # This producer was merged. Its original hash is not the successor's
+        # current identity and must not pass an ordinary current-root check.
+        with self.assertRaises(self.reproducer.ReproductionError):
+            self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+        self.reproducer.validate_authenticated_inputs(
+            ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
+
+    def test_original_source_context_keeps_numerical_bytes_local_and_exact(self):
+        relative = "results/numerical-input.json"
+        raw = (ROOT / "results/development/compact-matching.json").read_bytes()
+        value = {"input_hashes": {relative: hashlib.sha256(raw).hexdigest()}}
+        with tempfile.TemporaryDirectory() as workspace:
+            work = Path(workspace)
+            path = work / relative
+            with self.assertRaises(self.reproducer.ReproductionError):
+                self.reproducer.validate_authenticated_inputs(
+                    work, value, source_context=ORIGINAL_SOURCE_CONTEXT)
+            path.parent.mkdir()
+            path.write_bytes(raw)
+            self.assertEqual(set(), self.reproducer.validate_authenticated_inputs(
+                work, value, source_context=ORIGINAL_SOURCE_CONTEXT))
+            path.write_bytes(raw + b"\n")
+            with self.assertRaises(self.reproducer.ReproductionError):
+                self.reproducer.validate_authenticated_inputs(
+                    work, value, source_context=ORIGINAL_SOURCE_CONTEXT)
 
     def test_recorded_all_field_policies_are_preserved(self):
         compact = self.steps["NSC-12-COMPACT-INTERACTION"]
@@ -179,14 +211,26 @@ class ReproducePublicResultsTests(unittest.TestCase):
 
     def test_unselected_outputs_are_seeded_for_recursive_authentication(self):
         selected = {"results/development/compact-matching.json"}
+        # Exercise the real retained dependency closure, independently of the
+        # DOI-only carriers elsewhere in the original 100-record publication.
+        by_output = {step["output"]: step for step in self.manifest["steps"]}
+        pending = list(selected)
+        closure = set()
+        while pending:
+            relative = pending.pop()
+            if relative not in closure:
+                closure.add(relative)
+                pending.extend(by_output[relative]["dependencies"])
+        scoped = {"steps": [step for step in self.manifest["steps"] if step["output"] in closure]}
         with tempfile.TemporaryDirectory() as workspace:
             expected = Path(workspace) / "expected"
             work = Path(workspace) / "work"
-            for step in self.manifest["steps"]:
+            for step in scoped["steps"]:
                 self.reproducer.copy_relative(ROOT, expected, step["output"])
             complete = self.reproducer.seed_unselected_outputs(
-                work, expected, self.manifest, selected
+                work, expected, scoped, selected
             )
+            self.assertEqual(closure - selected, complete)
             self.assertNotIn("results/development/compact-matching.json", complete)
             for relative in (
                 "results/development/warped-source.json",
@@ -204,6 +248,10 @@ class ReproducePublicResultsTests(unittest.TestCase):
                     (ROOT / relative).read_bytes(),
                     (work / relative).read_bytes(),
                 )
+            missing = "results/development/warped-source.json"
+            (expected / missing).unlink()
+            with self.assertRaisesRegex(self.reproducer.ReproductionError, "missing dependency"):
+                self.reproducer.seed_unselected_outputs(work, expected, scoped, selected)
 
     def test_empty_explicit_selection_never_triggers_full_reproduction(self):
         for selection in ("", " ", ",,", " , "):

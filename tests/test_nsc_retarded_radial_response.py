@@ -3,7 +3,41 @@ import importlib.util
 from pathlib import Path
 import sys
 import numpy as np
+import json
 import pytest
+import pytest
+
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
+def test_radial_replay_rejects_errors_beyond_operand_envelopes():
+    from copy import deepcopy
+    record = R.check()
+    _parent, _fourier, data = R.inputs()
+    with np.load(ROOT / R.ARTIFACT, allow_pickle=False) as archive:
+        arrays = {k: archive[k] for k in archive.files}
+    meta = json.loads(arrays['metadata_json'].tobytes())
+    index = meta['upstream_index']
+    expected = R.archived_amplitudes(data['reference/x'], data['reference/phi'], data['source/energies'], index)
+    map_bound = R.archived_map_replay_envelope(data['reference/x'], data['reference/phi'], data['source/energies'], index)
+    changed = arrays['reference/upstream'].copy()
+    changed[0, 0, 0] += 4 * map_bound
+    with pytest.raises(ValueError, match='arithmetic envelope'):
+        R.validate_archived_map(expected, changed, data['reference/x'], data['reference/phi'], data['source/energies'], index)
+    label = next(iter(record['per_solve']))
+    field = 'diagonal_K_inverse_antiHermitian'
+    bound = R.inverse_diagnostic_replay_envelopes(arrays, label)[field]
+    changed_record = deepcopy(record)
+    changed_record['per_solve'][label][field] += 4 * bound
+    with pytest.raises(ValueError, match='arithmetic envelope'):
+        R.validate_replay_record(record, changed_record, arrays)
+    changed_record = deepcopy(record)
+    changed_record['status'] = 'PASS: complete physical theory'
+    with pytest.raises(ValueError, match='receipt differs'):
+        R.validate_replay_record(record, changed_record, arrays)
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'));sys.path.insert(0,str(ROOT/'src'))
@@ -38,6 +72,7 @@ def test_pair_comparison_uses_every_selected_pair():
     assert sum(not row['passes'] for row in result['pairs'])==1
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_saved_replay_has_no_propagation_and_preserves_full_response(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('radial/PDE solve called during replay')
     monkeypatch.setattr(R,'short_response',forbidden)

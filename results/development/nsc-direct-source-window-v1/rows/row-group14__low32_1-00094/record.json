@@ -1,0 +1,347 @@
+{
+  "all_source_families": false,
+  "analytic_radius": "0.1",
+  "angular_enclosure": "archived-float union sqrt(5)",
+  "angular_hex": "0x1.1e3779b97f4a8p+1",
+  "angular_sign": 1,
+  "archive_digests": {
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01-+1.json": "8c1258e55b06f8cebf82c4fce679ff3fa45679bd732d58ac127d78f96c03cd1f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-01--1.json": "83ca518a97a5c59e87cacbf578f6adfdc9cac82f238f323ac7def6bc1ba61010",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02-+1.json": "67928a718edcf00b2e00d250039d8f8f3529a27ddabb8792cc9d805346ad22b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-02--1.json": "a09976d0796c367660b36f869c2edb5949b7f1e85cf5f5b527ca028e307204d7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03-+1.json": "ef2edecec4d348a7cc31afd25a09b874532c35cf5d8335d07384e5821aa8c160",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-03--1.json": "e2287e0097855ee7b28fc57bac4990a359d29ca6fbd856268c2c6410e83df7b5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04-+1.json": "d8323b0a7de83f57d3ccbc98c2fcfc09142edef6f8f5d31adf3777bd4a564961",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-04--1.json": "8ee53a6540adbe7f07c627712ae6c349c04dbdb37ffa4f319488c756ba12f12c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05-+1.json": "afdc070960bf890a562cce3ab4542f96e4259d09256f5ac83a1f8eb34c9ced7c",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-05--1.json": "24bd5ca580b6f07e314433d42a40682851032fa5ea7415d1f4d8b30cd01fd256",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06-+1.json": "72d2bb7f8329ff93f2701e0a31a66e63e15d16292a8dd3d84056cbacc3413db0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-06--1.json": "92b789ce874794987a57986bfdc06e2f07310f88c52a8b30d5e0de481e51187a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07-+1.json": "16f285046eb5a8abb9f93c6b32cb129d21fc436a9ce49e39c3e2353ec035d20d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-07--1.json": "a2eed3af3c9715834376a6b2ec3551fd48356518af80bb97a20ef130ac793e2b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08-+1.json": "b59f28c2e91944dde7e33965010e19967533365d2bf379e6824b8ca9264f3738",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-08--1.json": "f33bd47c48f0c862763cbebe62b6e17217ae94cee26d1a4b8f314e4daa9cf306",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09-+1.json": "2fb6ca9dd88af25c193dd328f851fcbc90e7e0e737bac17aff1cc09e29bd6f0b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-09--1.json": "2b061b24f2c86b45dfa37295dc96c0b3aa7da317e6e9a22613aed7bd81ecca93",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10-+1.json": "202e4d2626047e328c0cc3d173478f1b5ccae5898fdada6297bead13b86abe6d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-10--1.json": "414940ead7ba2768923dd08d2ee218d30919f1b58f1cc2be00667e7e96d16032",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11-+1.json": "67edc8eadf792a13da97b41b41f17783958d3417e7ad389e62e75a5f40dfa0c1",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-11--1.json": "1c1d5521bb7d9e43ec7527a51816052d605026cdabf5f96d1991064367454276",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12-+1.json": "83eaf342300d0b76b3656e94680958c23d59a8acb155d1ee6395417f7d33c852",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-12--1.json": "62ed5fa7b5d4b840880e2dd6ad5047db73313e563fd617cbf9e8d09aee3df419",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.json": "6a545864f0d0a0ce8a5f6c4083abfadb6ad4dd5b124b000583c8f15aa2d37b34",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14-+1.npz": "c0f024907f1351ee0ab998a871818555ea2f8b27dc8931636e6f91039875455e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-14--1.json": "97c8471c38ced6dab0cb801d07da1760d64f005af4965bdb3f198eddbc04d239",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15-+1.json": "33dedf7d643953f171f8a1cd31cf930fa8a47b36653ce3d553c32e637108aae9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-15--1.json": "04bcbdc57503773673d0f62230fc8b287c8d1389bb99db21fd46dddb11ef5b75",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16-+1.json": "95bedccf1f8b1af7638660aab1a35a0e9f8316011070ac0db9dae3feb5def4e0",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-16--1.json": "2490ea406e4995fbfd90635b7abadd8079d19042921f1bb7683f9df079181e71",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17-+1.json": "3332b234453c13c014f9dfd915c1e0041a61e5b73f4e0ac44ddc9ca622196123",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-17--1.json": "adfc7d8836e6aa206138a1fd75c839649ae5180485cd04956499b5b8db9cece6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18-+1.json": "1865c03586edb9affd5c11a2ac1572574dfe09c2ce2cb587fc5a0517cd853836",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-18--1.json": "701357e738555ceb7784ac3dc48cc6606505607478b526ca62333c4a75e70539",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19-+1.json": "33842f6a11c5718633e6c4e43ceba19ec4196bfe9c26d4b534182772a23487c9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-19--1.json": "9d4883da6bf7758e38d095b7c6ed1020f368d37650c92f97539200af7ef0129d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20-+1.json": "fdf5ff61880aeb948ee236fde7e10ef858420b6e193975185c038f720154449b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-20--1.json": "481dde106ea408b2c48fbc550d5a1987e16e3f359446a6d417f342d6a11e2481",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21-+1.json": "a49b13aea2017b9c3a51dc5837f1f466eae261b8ee2820ed59475de4cdba31a6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-21--1.json": "98a86d8d3d83a1d2b1fb69bb35b8d537406e542505d4b0635cfadad970c3c92b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22-+1.json": "9cdaeac607dbf20a2425eb8cf19d7023c0d29245cbb1cc27c064daf76b356028",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-22--1.json": "9cbe0bb8b37a1b387bdcb5589fd6775e89c6eb5403d73f85d42f6ee488a0ee97",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24-+1.json": "4bdee28cbc3891d0fb108d94981ab61289fef688fc948f988dfabad826e2dac9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-24--1.json": "18774a6b56b91e5939d2c74cf215ac8718b26bc36e9dcd0c802dc18ae6a23ce9",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25-+1.json": "cf132e9b6b530cdd0bf6bae121ae3fea38d2001d2c45a9d5adc4f96779e3cd8a",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-25--1.json": "6e3547d8b833150105ed5f60019ec0197fe846244ecf11cdd0a716ffe36fd7cd",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26-+1.json": "c66d8b44652e8a03cbdff60e90ce300784315811d68e7f47c7ab9e3429ba4537",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-26--1.json": "05a26bd27bd6c474779f9120c9df2742c634a4521d6600615c83e87ee6f0a883",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27-+1.json": "4b2cc9524c0101fb93978c5bcc7f5aa45cdfb97e7ed882ae254854c7e798a72e",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-27--1.json": "982659e6922062d3b40d5f2df5166c3542af88ea7d21d9b91d83179e64a8685d",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28-+1.json": "d30d16f957bfcada76d109bce15b8fa43e247c3af73adfc1f900f65e9f8a138b",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-28--1.json": "e45153643ff8293008ec90e1528e96dd3451aa280870cf4394f88dad3e9c72a7",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29-+1.json": "cadef94c7e44b45a4339df2f00507087917ab70828bb3de83678db58a6d63f3f",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-29--1.json": "9953228558e91230bc818fd0d6a1b1d14fb8ebdd9cd41c89e7ba2bc7854236e5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30-+1.json": "23b6683e4e0d26da2850521f3312d9ff564b77189034b8d4a049e44cc627fffb",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-30--1.json": "c349ceef1b82eb290c25fc2dbe1a4fe14a436033e56371cf533ba756a3af80b6",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31-+1.json": "620b81efb95d615917010f87d9ae7776045faabb8b13b016dd0ca9b20bb7a7a5",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-31--1.json": "eface92abd8d1e49f49985fd03c2940e236d55c51f283006923709d53fbd7ab3",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32-+1.json": "b1d44d3e6705dc7d7130853a180e1e056361402f087e2f2d81af0c6c9a5a5554",
+    "results/development/artifacts/nsc-ks-retained-response-sum/family-32--1.json": "4ebf6d1cfefa8c92ff04f709f5967dba9403f1e439cef6d75a019c1860e091ac",
+    "results/development/artifacts/nsc-ks-source-inventory.npz": "c71477faec3e446ae15bde2d8b3a9bdf8b42c7cd88afa3bb3dc3926ed34c72c6",
+    "results/development/nsc-ks-retained-response-sum.json": "a2300f2badea68344b041451f70a56affc5a10b795ae4d6fab6f8476b3580407",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf"
+  },
+  "archived_source_replaced": false,
+  "atol_hex": "0x1.203af9ee75616p-49",
+  "batch_rows": [
+    80,
+    96
+  ],
+  "bits": 192,
+  "cells": 2000,
+  "changed_history_C_M": null,
+  "column_weight_hex": "0x1.26ce87abaf5a3p-4",
+  "correction_forcing_used": false,
+  "covariance_errors_unweighted": true,
+  "coverage_schema": "NSC-DIRECT-SOURCE-WINDOW-v1",
+  "defect_degree": 12,
+  "defect_integral_upper": {
+    "exponent": -225,
+    "mantissa": "985375228465047385276987389944724987593162504524265052245"
+  },
+  "direct_vacuum_trace_saved": true,
+  "end_log_delta_hex": "-0x1.40307915712a7p+0",
+  "endpoint_bridge_upper": {
+    "exponent": -241,
+    "mantissa": "2632911438659985320104231762065150902906451950039859632675"
+  },
+  "energy_fiber_hex": [
+    "0x1.fe28849c52f37p+2",
+    "0x1.fe28849c52f37p+2",
+    "0x1.fe28849c52f37p+2"
+  ],
+  "energy_sign": 1,
+  "equation": "n_y=2*cross(h(y),n)",
+  "frame_order": 16,
+  "group": 14,
+  "horizon_rho_hex": "0x1.e693b99d46a80p+0",
+  "initial_archived_arrays_changed": false,
+  "initial_bloch_error_upper": {
+    "exponent": -245,
+    "mantissa": "1526260316892535745533704737860667899107135693038753075221"
+  },
+  "kappa_hex": "0x1.e8175b59c4f10p-3",
+  "local_index": 14,
+  "mass_enclosure": "archived-float union pi/2",
+  "mass_hex": "0x1.921fb54442d18p+0",
+  "max_step_hex": "0x1.999999999999ap-7",
+  "method": "DOP853",
+  "metric_terms": 48,
+  "negative_angular_hex": "-0x1.1e3779b97f4a8p+1",
+  "negative_angular_sign": -1,
+  "negative_comparison_uses_complemented_endpoint": true,
+  "negative_energy_fiber_hex": [
+    "-0x1.fe28849c52f37p+2",
+    "-0x1.fe28849c52f37p+2",
+    "-0x1.fe28849c52f37p+2"
+  ],
+  "negative_energy_sign": -1,
+  "negative_preparation_digest": "55d386530736e01b63e53020d00ba5b95be3ff1b57934f931bf732abbadeac41",
+  "negative_source_digest": "66315c4dd3ffa9fe7600ec60e844f6e6f4637d834b481cbecc6813bfab62fedc",
+  "nfev": 30002,
+  "occupation": {
+    "coherence_retained": true,
+    "field_or_quadrature_error_included": false,
+    "horizon_occupation_upper": {
+      "exponent": -495,
+      "mantissa": "5520049712754884640035419257762961250627736610237849004967"
+    },
+    "incoming_gap_used": false,
+    "incoming_occupation_upper": {
+      "exponent": -268,
+      "mantissa": "5063273228471603266029691875017945025136967499660547091639"
+    },
+    "operator_distance_upper": {
+      "exponent": -268,
+      "mantissa": "5063273228471603266029691875017945025136967499660547091639"
+    },
+    "physical_local_gate": "OPEN",
+    "requires_normalized_sewing": true,
+    "signed_source_norm_equal": true,
+    "source_occupation_law_changed": false
+  },
+  "occupation_added_once": true,
+  "occupation_included_in_archived_distance": false,
+  "omega_hex": "0x1.fc8db36f3016dp+1",
+  "original_preparation_ode_rerun": false,
+  "other_energies_filled_from_this_row": false,
+  "other_positive_angular_family_included": false,
+  "panel": "group14/low32_1",
+  "payload": {
+    "bytes": 417712,
+    "path": "rows/row-group14__low32_1-00094/witness.npz",
+    "sha256": "59a2f409bcd4469306764874a18d233d74bf8df1ee2f8627fe657a6c0363bb1a"
+  },
+  "physical_local_gate": "OPEN",
+  "physical_upstream_budget_component": null,
+  "positive_preparation_digest": "0fba66c1b7bf018fe9eb0ce5bb008ece49cc44d1764305e1846ca53cc24d1337",
+  "positive_scalar_bound_copied_to_negative": false,
+  "positive_source_digest": "fdc4c712a7660a9e9ef011d9e68a43682e84aebb42c7f31baaccefae0dde63cb",
+  "replay_uses_saved_trace": true,
+  "rho_up_hex": "0x1.07ae147ae147cp+0",
+  "row": 94,
+  "rtol_hex": "0x1.c25c268497682p-43",
+  "schema": "NSC-DIRECT-SOURCE-ROW-v1",
+  "signed_comparisons": [
+    {
+      "angular_sign": 1,
+      "archived_distance_lower": {
+        "exponent": 0,
+        "mantissa": "0"
+      },
+      "archived_distance_upper": {
+        "exponent": -220,
+        "mantissa": "16113230436546481463192157797914499702840677374250800867"
+      },
+      "energy_fiber_hex": [
+        "0x1.fe28849c52f37p+2",
+        "0x1.fe28849c52f37p+2",
+        "0x1.fe28849c52f37p+2"
+      ],
+      "energy_sign": 1,
+      "preparation_digest": "0fba66c1b7bf018fe9eb0ce5bb008ece49cc44d1764305e1846ca53cc24d1337",
+      "signed_total_lower": {
+        "exponent": 0,
+        "mantissa": "0"
+      },
+      "signed_total_upper": {
+        "exponent": -228,
+        "mantissa": "4124986991760504274752116028620105169301342758979506997635"
+      },
+      "source_digest": "fdc4c712a7660a9e9ef011d9e68a43682e84aebb42c7f31baaccefae0dde63cb"
+    },
+    {
+      "angular_sign": -1,
+      "archived_distance_lower": {
+        "exponent": 0,
+        "mantissa": "0"
+      },
+      "archived_distance_upper": {
+        "exponent": -225,
+        "mantissa": "517966471504149052719990528696263084827947467367695098921"
+      },
+      "energy_fiber_hex": [
+        "-0x1.fe28849c52f37p+2",
+        "-0x1.fe28849c52f37p+2",
+        "-0x1.fe28849c52f37p+2"
+      ],
+      "energy_sign": -1,
+      "preparation_digest": "55d386530736e01b63e53020d00ba5b95be3ff1b57934f931bf732abbadeac41",
+      "signed_total_lower": {
+        "exponent": 0,
+        "mantissa": "0"
+      },
+      "signed_total_upper": {
+        "exponent": -228,
+        "mantissa": "4143731772037797441934847861924097923997709090112862767051"
+      },
+      "source_digest": "66315c4dd3ffa9fe7600ec60e844f6e6f4637d834b481cbecc6813bfab62fedc"
+    }
+  ],
+  "source_hashes": {
+    "docs/nsc-direct-source-window.md": "da4b144e4a7bfbe4ea938ec43b75afffd79cefb8499a94343d7ac44567454520",
+    "scripts/derive_nsc_direct_source_window.py": "2325292a5b06ecdd2a4d6b4c67dcf55ca6072ec8818e90253f87cade957b6b4a",
+    "src/recursive_horizons/evidence_io.py": "0c7079e9607bde91957ee870ec47057bdaa4904046d081a7370d75033e428b9d",
+    "src/recursive_horizons/nsc_angular_stress.py": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c",
+    "src/recursive_horizons/nsc_charged_ctp_neck.py": "1b049009aa3251474d68deabd6da62c13d1786fce8f04c5da40fa313f629c578",
+    "src/recursive_horizons/nsc_common_ks_trace.py": "a186f4ff445f0b7ef772b9ca7f1bef42b07a49e2d5a8624927e1ecba8107b85d",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_common_time_bulk_split.py": "bb987ec10a6ec5b98d7bc18bc314158fc65be88cd2b0982e45f8e442f82c5459",
+    "src/recursive_horizons/nsc_compact_ctp_neck.py": "3eebb79a6652cde5f23aa284b1637940dd59b409e3fe69c5c77cd5271e1f274e",
+    "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
+    "src/recursive_horizons/nsc_complex_horizon_modes.py": "f6e21705b995bdc51248c063421606d1b52f38753ae4c3562c9a436e2a3e9ec2",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_direct_source_window.py": "4d800586e435fb25e03056caaef501895d811ebaf6c28edb38f5ec8cf8633dc6",
+    "src/recursive_horizons/nsc_direct_vacuum_source.py": "591166d01e5c747e8aaa1d04d2e2dfbe1bfc4fa470a3a2d0ebb4a76033aff70c",
+    "src/recursive_horizons/nsc_evolved_incoming_constraints.py": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc",
+    "src/recursive_horizons/nsc_evolved_incoming_state.py": "67b3c30e0da2508574b53d2e558ad80fb6ed56b66b2efc582330f836b31e69c8",
+    "src/recursive_horizons/nsc_exact_phase_prepared_state.py": "67611ffbc431bc9dc536ace9994a84ffc594fd23203cf830c507f7c1a8550cdf",
+    "src/recursive_horizons/nsc_finite_terms.py": "532b00e9183fe60cc42eb0b14c98fad38e16a05530dfd96b20a3f6437a35cc1c",
+    "src/recursive_horizons/nsc_gauge_source.py": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e",
+    "src/recursive_horizons/nsc_horizon_source.py": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721",
+    "src/recursive_horizons/nsc_incoming_high_energy_source.py": "5c7712f9193b8374384a92f9a6bd5d631ba94012e750a7cf56ffb4f58c0d9502",
+    "src/recursive_horizons/nsc_incoming_source_assembly.py": "1656b152444defd1216ccffbc8024de4df46f097f365af613dcadcd3ffd8e185",
+    "src/recursive_horizons/nsc_incoming_spectral_panels.py": "f22e672a87753ea5f53c722718a726f0b44e09c418f9e4e9d449b3f79ec280d9",
+    "src/recursive_horizons/nsc_incoming_state_moments.py": "567951e8a574fb2367323cabc7c5598883edb15e6556a28a430c568bc13fa377",
+    "src/recursive_horizons/nsc_influence.py": "0f559225a3720febb166115e9cdeddcf76e970b05b09eedd301b0b39a07f81d8",
+    "src/recursive_horizons/nsc_ks_ball_trajectory.py": "a5768ff10d7832978b77f5b9693511f8ed0f4b4ffa2d30bfc87920d49f809fe7",
+    "src/recursive_horizons/nsc_ks_batched_constraints.py": "6cc8d8e204bbbc07536dec6ad1e0f2859a9cb4f14773c0af8c506ede90ec8aa3",
+    "src/recursive_horizons/nsc_ks_difference_envelope.py": "7fac5f2d16afc82fcb1ea12675f1d0282a0802d0b435e8393808aef5e66d00ac",
+    "src/recursive_horizons/nsc_ks_evaluation_binding.py": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
+    "src/recursive_horizons/nsc_ks_local_constraints.py": "ef09afe2ff77a76dba5fb1580c47efc82cd9e4c11f288144d64d98457232d56a",
+    "src/recursive_horizons/nsc_ks_matter_difference.py": "81b87ad8f903c9495b9a8c29825cfa9c1edb18f60677dab55939de43d537750c",
+    "src/recursive_horizons/nsc_ks_primal_step_control.py": "9d541379bd3eed9109bd47a18b803aa93502e087b1d6115a7eb13279db8a9289",
+    "src/recursive_horizons/nsc_ks_profile_identity.py": "8f9c67159265ff2d57c9a3d4646d7a7dcf77609e50823b736c4979acae97f353",
+    "src/recursive_horizons/nsc_ks_retained_upstream_archive.py": "e993f3937aff06aafda728f28446bdba04b6f7c7ccacc5fc312e5ac519d87c94",
+    "src/recursive_horizons/nsc_ks_signed_state.py": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41",
+    "src/recursive_horizons/nsc_ks_source_envelope.py": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
+    "src/recursive_horizons/nsc_ks_source_inventory.py": "e969f8a30c525a19c1abfd1bce49133484d03b10b7ebdabefcba2cb75b3bafd3",
+    "src/recursive_horizons/nsc_ks_spacetime_variation.py": "3d1151e403a5c58faa2956cee7464d9e6432320bb494520ee01973e388be19ec",
+    "src/recursive_horizons/nsc_ks_trajectory.py": "fac438859d328b1cb1d41dcdbd8564d5a4aa38c17fb5eb23bf6feaffe2e0e156",
+    "src/recursive_horizons/nsc_local_incoming_constraints.py": "2dc5ed9f90db240ece33441d38b94e4cc636761b26b9918bf7b5e98909573111",
+    "src/recursive_horizons/nsc_local_incoming_family.py": "9631e997e17bfedbaca2c6e67afec72fd61e22ce159e18dd8a820e256d4cce8b",
+    "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "src/recursive_horizons/nsc_massive_jost_phase_bound.py": "4dfd7dce2ce4030b95882cb2d6e2605a32c2e8d058f6a6067e3c686d49c5e78b",
+    "src/recursive_horizons/nsc_metric_horizon_frame.py": "13302db0da160ef256a73f930e63ce94463d2b09ed7082731336e1f7d820dc92",
+    "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a",
+    "src/recursive_horizons/nsc_paired_horizon_preparation.py": "193efe39a6155c6940ce9c8fb46d6bf8e3f7da3a923409059361fee81dbc4335",
+    "src/recursive_horizons/nsc_pg_archived_high_energy_modes.py": "18624ecc149e1d3842523390b0a4ebaff135ec170f737fd2dac45f9f7d102b6b",
+    "src/recursive_horizons/nsc_pg_ctp_mode_jets.py": "12b961731ad0b62a6e4d723e4f2881353b488973ea8927ae1daf3c527f65443d",
+    "src/recursive_horizons/nsc_pg_fast_packets.py": "9dcf9369d09c05096c4f32760bc6f02021727a34021bf1096d99a9be5cc169ec",
+    "src/recursive_horizons/nsc_pg_high_energy.py": "8ea0403caf541b52199de9f4f202530a3082011de4300535a8ff4c5f9898077b",
+    "src/recursive_horizons/nsc_pg_ks_metric_pullback.py": "54e4edd11395bb9e983d1a38be2360358ef24e4841710c9250f123f5e475ee92",
+    "src/recursive_horizons/nsc_pg_lll_preparation.py": "4042c5da85175a501b100917a08bed0e44319fa7c53edb7c13de8df4b64f6c8a",
+    "src/recursive_horizons/nsc_pg_massive_modes.py": "345b93dedeab7effa1b5e6521b712dc87774f8dbcf48be26a7ff9c97622ee1a4",
+    "src/recursive_horizons/nsc_pg_packet_modes.py": "4cba66cef24aa47324857c5f9acc2aa29226014d50c753112d4be4810495dadd",
+    "src/recursive_horizons/nsc_pg_retarded_packets.py": "37a562373b75d307bbee28ace14a3011471294f73a5ed894549b2d32c0b66e2a",
+    "src/recursive_horizons/nsc_prepared_history_jets.py": "13f958e8f4626f6cc97594da0d595b38ec614ddfc8135dc6a2cdeac73b3566ea",
+    "src/recursive_horizons/nsc_reference_band_action.py": "835b5b054fb0ec23ee5a840374f9722fbdeb2833f28cbae25c5e297fcd7211b8",
+    "src/recursive_horizons/nsc_regulated.py": "48a80b0a1623ba7ddd6cd1b35d39f9caa85f1afe363fa266b3bf9e42d4d170b1",
+    "src/recursive_horizons/nsc_retarded_radial_response.py": "b34c27d2eb2d3299184efacc0c23a3819f5465fd170d07bc5aa45d6929465f35",
+    "src/recursive_horizons/nsc_shape_response.py": "4bbafb7fe2f6e47042821a18ae59a0e36d172f1babc4f4acc7db73819d863dd5",
+    "src/recursive_horizons/nsc_source_occupation_enclosure.py": "e683c0f453a2cf0a6c0442258cc990c2f24d923a3526d8aac1945d7b30a81c61",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_subgap_source_covariance.py": "74548e6fc430e298091393d08834d4b82270db68c2c3c2ceb317917135979c87",
+    "src/recursive_horizons/nsc_transmitting_boundary_history.py": "25cb7e1e40e615f3cb5fe7ee477328104ae08ec6e12c4bbc985cacf846bba91d",
+    "src/recursive_horizons/nsc_transmitting_ctp_variation.py": "8400d14273e5f063c51bcaa2a44a5888be984e8200702640d486d6f586f24602",
+    "src/recursive_horizons/nsc_transmitting_dirac_domain.py": "d9f19ad9b6e8640428858a77a88551014415acd3bcc4cec32c3f46aeaea6720a",
+    "src/recursive_horizons/nsc_transmitting_history_jets.py": "f118b4fe3d278642e95cf9f0d8877ebb13eedf29242ea05706a6a306d17b071f",
+    "src/recursive_horizons/nsc_transmitting_history_modes.py": "b6fe51a151623f38a62669c92a6cdad28339691879bfa364567f2de1acf4d6bd",
+    "src/recursive_horizons/nsc_transmitting_resolvent.py": "3c66d8ebd0e5bd45f4775d9bbc2cee7d6047cf5c442f868c72fe6ddf884c939f",
+    "src/recursive_horizons/nsc_unruh_state.py": "a9836f41ac9715a8f515397969a34cdea9df1f8a22f5ca7719228cebd5d09517",
+    "src/recursive_horizons/nsc_vacuum_source_remainder.py": "84bd9fe4faafabd3fdf3dfbbdfff39e27920449bc8946f8c7704bcf518cb93dd",
+    "tests/test_nsc_direct_source_window.py": "368a9f5d26a85cf04a79393fd2254ab349cfb6030e763526b882e038e1c0ee9f"
+  },
+  "source_occupations_changed": false,
+  "source_quadrature_error_included": false,
+  "start_log_delta_hex": "-0x1.2000000000000p+4",
+  "status": "OPEN: one original direct-vacuum row and its negative partner; finite window only; local gate open",
+  "vacuum_bloch_error_upper": {
+    "exponent": -226,
+    "mantissa": "1970833718121149023752345143912526801438967851087435584889"
+  },
+  "validated_vacuum_bloch_endpoint": [
+    {
+      "lower": {
+        "exponent": -54,
+        "mantissa": "2991933224993089"
+      },
+      "upper": {
+        "exponent": -54,
+        "mantissa": "2991933224993089"
+      }
+    },
+    {
+      "lower": {
+        "exponent": -54,
+        "mantissa": "-2697584741517743"
+      },
+      "upper": {
+        "exponent": -54,
+        "mantissa": "-2697584741517743"
+      }
+    },
+    {
+      "lower": {
+        "exponent": -53,
+        "mantissa": "8779093429818643"
+      },
+      "upper": {
+        "exponent": -53,
+        "mantissa": "8779093429818643"
+      }
+    }
+  ],
+  "weight_applied_to_error": false,
+  "weight_hex": "0x1.0aa3c248697b4p-5"
+}

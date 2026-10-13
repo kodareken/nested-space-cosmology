@@ -14,6 +14,8 @@ THEOREM={'author':'Feng Rong','title':'The Briot-Bouquet systems and the center 
     'zero_eigenvalue_permitted':True,'source_checked':'primary author PDF and published Proposition 2.1 on 2026-09-18'}
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 @lru_cache(maxsize=1)
 def crossing_identities():
     x,y,s,zc,wD=sp.symbols('x y s z_c w_D',real=True)
@@ -74,7 +76,7 @@ def make_record(root):
     import mpmath as mp
     from .nsc_incoming_lapse_coefficient import _interval
     from .nsc_incoming_vacuum_tail_bound import _precision
-    root=Path(root);digest=lambda p:sha256((root/p).read_bytes()).hexdigest()
+    root=Path(root);digest=lambda p:selected_source_sha256(root, p)
     records=[json.loads((root/p).read_text()) for p in INPUTS]
     for record in records:
         for section in ('source_hashes','input_hashes'):

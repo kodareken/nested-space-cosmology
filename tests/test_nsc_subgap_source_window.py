@@ -2,11 +2,24 @@
 from pathlib import Path
 import resource
 import runpy
+import sys
 import pytest
 from recursive_horizons.nsc_ks_retained_upstream_archive import RetainedUpstreamArchive
 from recursive_horizons.nsc_subgap_source_window import (
     EXPECTED_POSITIVE_ROWS, PANEL_ROWS, _cpu_limit, settings_for, subgap_catalogue)
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_cpu_deadline_refuses_expired_work_and_restores_observers():
+    before_trace, before_profile = sys.gettrace(), sys.getprofile()
+    before_limit = resource.getrlimit(resource.RLIMIT_CPU)
+    with pytest.raises(TimeoutError, match='CPU budget exhausted'):
+        with _cpu_limit(.01):
+            while True:
+                pass
+    assert sys.gettrace() is before_trace
+    assert sys.getprofile() is before_profile
+    assert resource.getrlimit(resource.RLIMIT_CPU) == before_limit
 
 
 def test_established_controls_cover_the_54_and_do_not_stick_the_cpu_limit():

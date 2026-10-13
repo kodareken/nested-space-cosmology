@@ -13,7 +13,12 @@ from recursive_horizons.nsc_incoming_subgap_source import (
 from recursive_horizons.nsc_subgap_history_response import AnalyticResponsePanel
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 @pytest.fixture(scope='module')
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def prepared():
     root = Path(__file__).resolve().parents[1]
     payload = json.loads((root/'results/development/nsc-incoming-subgap-source.json').read_text())['payload']
@@ -23,6 +28,7 @@ def prepared():
     return arrays, recompose_incoming_subgap(arrays)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_same_surface_bases_and_local_normalization(prepared):
     _, report = prepared
     assert report['short_stationary_solves'] == 19
@@ -37,6 +43,7 @@ def test_same_surface_bases_and_local_normalization(prepared):
     assert np.isfinite(report['refined_minus_coarse8']).all()
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_independent_complex_node_and_real_contour_refinements(prepared):
     arrays, report = prepared
     assert report['diagnostics']['complex_interpolation'] < 3e-10

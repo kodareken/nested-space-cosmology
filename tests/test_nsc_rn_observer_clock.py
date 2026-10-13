@@ -19,7 +19,7 @@ from recursive_horizons import nsc_rn_pg as pg
 from recursive_horizons import nsc_rn_source as source
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 CPU_LIMIT_SECONDS = 60.0
 EVIDENCE = []
 FROZEN_SHA256 = {
@@ -43,7 +43,7 @@ def _record(name, **values):
     print(f"EVIDENCE {name} {values}")
 
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="module", autouse=True)
 def _cpu_budget():
     started = time.process_time()
     yield
@@ -61,7 +61,8 @@ def _frozen_digests():
     """
     found = {}
     for relative, digest in FROZEN_SHA256.items():
-        data = (ROOT / relative).read_bytes().replace(b"\r\n", b"\n")
+        current_relative = relative.removeprefix("lab/")
+        data = (ROOT / current_relative).read_bytes().replace(b"\r\n", b"\n")
         found[relative] = hashlib.sha256(data).hexdigest()
         assert found[relative] == digest, relative
     return found

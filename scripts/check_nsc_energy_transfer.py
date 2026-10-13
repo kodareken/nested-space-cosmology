@@ -14,7 +14,7 @@ from scipy.sparse.linalg import expm_multiply
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'src'))
-from recursive_horizons.nsc_energy_transfer import (
+from recursive_horizons.dirac.energy import (
     dirac_hamiltonian, positions, regional_operators, split_cut_currents,
     vacuum, expectation, positive_packet, evolve_packet, packet_expectations,
     integrated_current, schur_state_data,
@@ -95,7 +95,7 @@ def calculate():
     return {'schema': 'nsc-energy-transfer-v1', 'artifact_id': 'NSC-6-ENERGY-TRANSFER',
         'classification': 'exact_static_equilibrium_zero_transfer_and_finite_energy_excitation_transport_on_smooth_compact_geometry',
         'source_hashes': {path: hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in (
-            'src/recursive_horizons/nsc_energy_transfer.py', 'src/recursive_horizons/nsc_shape_response.py',
+            'src/recursive_horizons/dirac/energy.py', 'src/recursive_horizons/nsc_shape_response.py',
             'scripts/check_nsc_energy_transfer.py')},
         'comparison_function_sha256': hashlib.sha256(inspect.getsource(compare).encode()).hexdigest(),
         'input_hashes': {path: hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in (

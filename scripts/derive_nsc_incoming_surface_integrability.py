@@ -21,7 +21,9 @@ INPUTS=('results/development/nsc-reference-band-bulk.json',
         'results/development/nsc-mode-resolved-cauchy-state.json')
 
 
-def digest(p):return sha256((ROOT/p).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(p):return selected_source_sha256(ROOT, p)
 
 
 def make_record():

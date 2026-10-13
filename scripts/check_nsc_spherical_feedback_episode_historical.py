@@ -32,7 +32,7 @@ import numpy as np
 from recursive_horizons.provenance import resolve_pinned_source_bytes
 
 LAB = Path(__file__).resolve().parents[1]
-ROOT = LAB.parent
+ROOT = LAB
 EPISODE_JSON = LAB / "results" / "development" / "nsc-spherical-feedback-episode-v1.json"
 EPISODE_NPZ = LAB / "results" / "development" / "nsc-spherical-feedback-episode-v1.npz"
 

@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 from recursive_horizons import nsc_nested_parent_child as model
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
+from recursive_horizons.provenance import resolve_pinned_source_bytes
 
 LAB = Path(__file__).resolve().parents[1]
 OUT = LAB / "results/development/nsc-nested-parent-child-replay-basis-v1.json"
@@ -121,16 +122,37 @@ def run():
     return record
 
 
-def verify():
-    record = json.loads(OUT.read_text())
+def load_preserved_basis():
+    """Authenticate preserved basis/source/observer bytes without rebuilding SVD."""
+    record = json.loads(OUT.read_text(encoding="utf-8"))
+    if record.get("schema") != "NSC-NESTED-PARENT-CHILD-REPLAY-BASIS-v1":
+        raise ValueError("invalid frozen replay basis schema")
     if digest(PAYLOAD) != record["payload_sha256"]:
         raise ValueError("frozen replay basis payload changed")
     for path, expected in record["source_bindings"].items():
-        if digest(LAB / path) != expected:
-            raise ValueError("replay basis source binding changed: " + path)
+        if path.startswith(("src/", "scripts/", "docs/")):
+            # Original implementation context, read only after owner relocation.
+            resolve_pinned_source_bytes(LAB, path, expected, commit="329ef809e466a86ed4a290ee32c19485f85add9d")
+        elif digest(LAB / path) != expected:
+            raise ValueError("replay basis input binding changed: " + path)
     with np.load(PAYLOAD, allow_pickle=False) as stored:
-        report = validate(stored, record["bases"])
-    return report
+        arrays = {name: stored[name].copy() for name in stored.files}
+    return record, arrays
+
+
+def load_frozen_pair(nf, weights):
+    record, arrays = load_preserved_basis()
+    if str(nf) not in record["bases"]:
+        raise ValueError("requested band is absent from frozen replay basis")
+    # Retain the original independent full-geometry, source, observer and CAR
+    # checks before exposing a saved coordinate frame to a scientific caller.
+    validate(arrays, record["bases"])
+    return frozen_pair(nf, weights, arrays, record["bases"][str(nf)])
+
+
+def verify():
+    record, arrays = load_preserved_basis()
+    return validate(arrays, record["bases"])
 
 
 if __name__ == "__main__":

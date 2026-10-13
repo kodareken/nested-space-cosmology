@@ -136,8 +136,7 @@ def source_bindings():
     # and is deliberately excluded, preventing a figure/manuscript hash cycle.
     for question in first.atlas.programme_record()["questions"]:
         paths.update(REPO / ref.split("#", 1)[0] for ref in question["owner_refs"] + question["evidence_refs"])
-    bindings.update({p.relative_to(REPO).as_posix(): first._sha(p) for p in paths})
-    return dict(sorted(bindings.items()))
+    return first.current_source_bindings(REPO, paths, inherited=bindings)
 
 
 def _figure_bytes(figure, stem):

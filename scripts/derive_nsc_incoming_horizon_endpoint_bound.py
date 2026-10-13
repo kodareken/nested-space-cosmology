@@ -31,8 +31,10 @@ INPUTS = ('results/development/nsc-mode-resolved-cauchy-state.json',
           'src/recursive_horizons/nsc_pg_massive_modes.py')
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def digest(path):
-    return sha256((ROOT/path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, Path(path).relative_to(ROOT).as_posix() if Path(path).is_absolute() else path)
 
 
 def signature():
@@ -84,7 +86,7 @@ def make_record(path):
             'status': ('PASS: mathematical endpoint bias bound; propagation and arithmetic OPEN' if passed else
                        'OPEN: finite-collar endpoint enclosure exceeds remaining lapse budget'),
             'source_hashes': {p: digest(p) for p in SOURCES}, 'input_hashes': {p: digest(p) for p in INPUTS},
-            'payload': {'path': str(path.relative_to(ROOT)), 'sha256': digest(path)},
+            'payload': {'path': path.relative_to(ROOT).as_posix(), 'sha256': digest(path)},
             'identity': data['identity'], 'certificate': certificate, 'numerical_controls': control,
             'numerical_control_tolerance': 3e-14,
             'interpretation': 'upper bounds are not measured stress errors or a non-existence certificate; ten-term truncation is negligible, geometric/chart mismatch requires a better representation',

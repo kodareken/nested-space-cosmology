@@ -144,7 +144,7 @@ def write_family(directory, key, record, matter, metadata, z=None, root=None):
     digest = write_payload(npz_path, matter, metadata, z=z)
     record = dict(record)
     record['payload'] = {
-        'path': str(npz_path.relative_to(root or V.ROOT)),
+        'path': npz_path.relative_to(root or V.ROOT).as_posix(),
         'sha256': digest, 'bytes': npz_path.stat().st_size,
     }
     write_json_atomic(json_path, record, exclusive=True)

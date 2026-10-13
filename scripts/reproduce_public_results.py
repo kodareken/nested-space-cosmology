@@ -18,6 +18,8 @@ import tempfile
 import time
 from typing import Any
 
+from recursive_horizons.nsc_frozen_sources import authenticate_source, source_sha256
+
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "results" / "manifest.json"
@@ -381,8 +383,13 @@ def source_fixture_lookup(work: Path, step: dict[str, Any] | None) -> dict[str, 
 
 def validate_authenticated_inputs(
     work: Path, value: dict[str, Any], step: dict[str, Any] | None = None,
-    *, use_auxiliary: bool = True,
+    *, use_auxiliary: bool = True, source_context: str | None = None,
 ) -> set[tuple]:
+    """Check local numerical inputs and current or explicitly pinned sources.
+
+    A source context authenticates original source bytes only. It never fills
+    a missing result, changes a recorded digest, or normalizes a source hash.
+    """
     lookup = auxiliary_lookup(work, step) if use_auxiliary else {}
     lookup.update(source_fixture_lookup(work, step))
     auxiliary_paths = {str(item["path"]) for item in (step or {}).get("auxiliary_inputs", [])}
@@ -397,7 +404,12 @@ def validate_authenticated_inputs(
                 and relative not in generated | auxiliary_paths):
             raise ReproductionError(f"authenticated result is missing from dependency graph: {relative}")
         path = lookup.get(relative, work / relative)
-        if not path.is_file() or sha256(path) != expected:
+        if source_context is not None and not relative.startswith("results/") and relative not in lookup:
+            try:
+                authenticate_source(work, relative, expected, context=source_context)
+            except (OSError, RuntimeError, ValueError) as error:
+                raise ReproductionError(f"authenticated input mismatch: {relative}") from error
+        elif not path.is_file() or sha256(path) != expected:
             raise ReproductionError(f"authenticated input mismatch: {relative}")
         if artifact_id is not None and relative.startswith("results/"):
             actual_id = json.loads(path.read_text(encoding="utf-8")).get("artifact_id")
@@ -407,10 +419,21 @@ def validate_authenticated_inputs(
                 and relative.startswith("results/") and location[0] != "source_hashes"):
             validated_dynamic.add(location)
     if "source_sha256" in value and step is not None:
-        if sha256(work / step["generator"]) != value["source_sha256"]:
-            raise ReproductionError("generator source_sha256 mismatch")
+        try:
+            authenticate_source(work, step["generator"], value["source_sha256"], context=source_context)
+        except (OSError, RuntimeError, ValueError) as error:
+            raise ReproductionError("generator source_sha256 mismatch") from error
     if "comparison_function_sha256" in value:
-        source = (work / "scripts/check_nsc_scale_closure.py").read_text(encoding="utf-8")
+        comparator = "scripts/check_nsc_scale_closure.py"
+        if source_context is None:
+            source = (work / comparator).read_text(encoding="utf-8")
+        else:
+            try:
+                pinned_digest = source_sha256(work, comparator, context=source_context)
+                source = authenticate_source(work, comparator, pinned_digest,
+                                             context=source_context).decode("utf-8")
+            except (OSError, RuntimeError, ValueError) as error:
+                raise ReproductionError("comparison function source unavailable") from error
         node = next(node for node in ast.parse(source).body
                     if isinstance(node, ast.FunctionDef) and node.name == "compare")
         body = "".join(source.splitlines(keepends=True)[node.lineno-1:node.end_lineno])

@@ -12,6 +12,10 @@ spec = importlib.util.spec_from_file_location('source_update_v5', ROOT/'scripts/
 script = importlib.util.module_from_spec(spec); spec.loader.exec_module(script)
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def inputs():
     return [json.loads((ROOT/p).read_text()) for p in script.INPUTS[:2]]
 
@@ -30,6 +34,7 @@ def test_reject_overlap_wrong_cell_or_missing_thermal_remainder():
         script.validate_window(previous, wrong)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_authenticated_replay_keeps_other_source_parts_and_open_gates():
     got = json.loads(json.dumps(script.make_record()))
     assert got == json.loads(script.OUTPUT.read_text())

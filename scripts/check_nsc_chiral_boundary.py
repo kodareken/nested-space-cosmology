@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from recursive_horizons.nsc_chiral_boundary import DEFAULT_RESULT, build_record, compare, jsonable
+from recursive_horizons.dirac.boundary import DEFAULT_RESULT, build_record, compare, jsonable
 
 
 def main():

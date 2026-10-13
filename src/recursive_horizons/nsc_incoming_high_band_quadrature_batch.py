@@ -10,6 +10,7 @@ from pathlib import Path
 
 import mpmath as mp
 import numpy as np
+from .nsc_frozen_sources import selected_source_context
 
 from .nsc_incoming_middle_bound import authenticated_middle_inputs, _parameters
 from .nsc_incoming_source_assembly import read_panels
@@ -23,15 +24,15 @@ from .nsc_incoming_vacuum_tail_bound import _precision, _lo, _hi, _range
 GROUPS = (6,)+tuple(g for g in range(1, 33) if g != 6)
 
 
-@lru_cache(maxsize=1)
-def authenticated_high_inventory(root):
+@lru_cache(maxsize=4)
+def _authenticated_high_data(root, source_context):
     """Authenticate all old endpoints once; retain only small source summaries."""
     root = Path(root)
     middle = authenticated_middle_inputs(root)
     panels, _ = read_panels(root)
     finite = json.loads((root/'results/development/nsc-incoming-spectral-source.json').read_text())
     retained = json.loads((root/'results/development/nsc-pg-retained-covariance.json').read_text())
-    result = {}
+    result, roundoff = {}, {}
     with np.load(root/retained['payload']['path'], allow_pickle=False) as originals:
         for channel in middle['channels'][1:]:
             group = channel['index']; source = finite['groups'][str(group)]
@@ -44,9 +45,23 @@ def authenticated_high_inventory(root):
             factor = incoming_group_factor(channel, signs)
             if factor != source['factor']:
                 raise ValueError('signed multiplicity or original source factor changed')
-            old = np.zeros(4); descriptors = []; by_sign = {}
+            old = np.zeros(4); descriptors = []; by_sign = {}; signed_bounds = {}
             for sign in signs:
                 old_sign = np.zeros(4)
+                error = np.zeros(4)
+                absolute_parts = np.zeros(4)
+                def add_weighted(weights, kernels):
+                    nonlocal old_sign, error, absolute_parts
+                    value = factor*np.einsum('n,nv->v', weights, kernels)
+                    # Products, a real reduction and the outer scale, with
+                    # conservative epsilon (twice binary64 unit roundoff).
+                    eps = np.finfo(float).eps
+                    count = 4*len(weights)+8
+                    gamma = count*eps/(1-count*eps)
+                    scale = abs(factor)*np.sum(abs(weights[:, None]*kernels), axis=0)
+                    error += gamma*scale*(1+gamma)
+                    absolute_parts += abs(value)
+                    old_sign += value
                 selected = [p for p in interval['signed_selected_panels'] if p['sign'] == sign]
                 if len(selected) != 1:
                     raise ValueError('one actual middle panel per signed family required')
@@ -66,22 +81,75 @@ def authenticated_high_inventory(root):
                     mask = (E > 32)&(E < 40)
                     if not np.any(mask) or np.any(w[mask] <= 0) or abs(float(w[mask].sum())-8) > 3e-11:
                         raise ValueError('complete positive LOW cell required')
-                    old_sign += factor*np.einsum('n,nv->v', w[mask], panels[name+'/kernels'][mask])
+                    add_weighted(w[mask], panels[name+'/kernels'][mask])
                     descriptors.append({'sign': sign, 'panel': name, 'interval': [32, 40], 'rows': int(mask.sum())})
                 selection = selected[0]; name = selection['panel']
-                old_sign += factor*np.einsum('n,nv->v', panels[name+'/weights'], panels[name+'/kernels'])
+                add_weighted(panels[name+'/weights'], panels[name+'/kernels'])
                 descriptors.append({'sign': sign, 'panel': name, 'interval': [int(selection['left']), right],
                                     'rows': selection['rows']})
                 old += old_sign; by_sign[str(sign)] = old_sign.tolist()
+                signed_bounds[str(sign)] = error + np.finfo(float).eps*absolute_parts
             result[group] = {'group': group, 'channel': channel, 'interval': [left, right],
                              'actual_signs': list(signs), 'factor_per_sign': factor,
                              'selected_original_panels': descriptors,
                              'original_high_source': old.tolist(), 'original_high_source_per_sign': by_sign,
                              'input_payloads': middle['input_payloads'],
                              'original_source_scope': 'original finite source arrays, including their high-band thermal insertion; before later numerical refinements'}
+            roundoff[group] = {
+                'per_sign': signed_bounds,
+                'sum': sum(signed_bounds.values(), np.zeros(4))
+                       + np.finfo(float).eps*sum((abs(np.asarray(v)) for v in by_sign.values()), np.zeros(4)),
+            }
     if set(result) != set(range(1, 33)):
         raise ValueError('all32 retained non-LLL groups required')
-    return result
+    return result, roundoff
+
+
+def _selected_high_data(root):
+    context = selected_source_context()
+    # A current call must authenticate current files, even after an explicitly
+    # frozen replay populated its own cache. Frozen entries cannot cross scopes.
+    if context is None:
+        return _authenticated_high_data.__wrapped__(root, context)
+    return _authenticated_high_data(root, context)
+
+
+def authenticated_high_inventory(root):
+    return _selected_high_data(root)[0]
+
+
+def require_original_high_union(root, saved, current):
+    """Keep original provenance exact; allow only weighted-sum replay error.
+
+    Each component uses the immutable weights/kernels' uncancelled L1 scale
+    and gamma_(4n+8), then propagates the two cells and signed-family sum.
+    Both platform evaluations are charged. There is no absolute floor, no
+    physical error claim, and the saved recipe is returned without rewriting.
+    """
+    from copy import deepcopy
+    from .nsc_weighted_receipt_replay import same_numeric_structure, exact_record_equal
+    adjusted = deepcopy(current)
+    bounds = _selected_high_data(str(Path(root)))[1][saved['group']]
+
+    def require(old, new, one_replay):
+        same_numeric_structure(old,new)
+        a, b = np.asarray(old, float), np.asarray(new, float)
+        bound = 2*np.asarray(one_replay, float)
+        bound = np.where(bound, np.nextafter(bound, np.inf), 0.)
+        if (a.shape != b.shape or not np.isfinite(a).all() or not np.isfinite(b).all()
+                or np.any(abs(a-b) > bound)):
+            raise ValueError('original high union reduction exceeds replay arithmetic envelope')
+
+    require(saved['original_high_source'], current['original_high_source'], bounds['sum'])
+    adjusted['original_high_source'] = saved['original_high_source']
+    if set(saved['original_high_source_per_sign']) != set(current['original_high_source_per_sign']):
+        raise ValueError('original high union signed census changed')
+    for sign, old in saved['original_high_source_per_sign'].items():
+        require(old, current['original_high_source_per_sign'][sign], bounds['per_sign'][sign])
+    adjusted['original_high_source_per_sign'] = saved['original_high_source_per_sign']
+    if not exact_record_equal(adjusted,saved):
+        raise ValueError('original high union or channel provenance changed')
+    return saved
 
 
 @lru_cache(maxsize=1)
@@ -106,7 +174,8 @@ def replay_direct_group(root, prepared):
     group = prepared['owned_union']['group']
     owned = authenticated_high_inventory(str(Path(root)))[group]
     direct = prepared['direct']
-    if prepared['owned_union'] != owned or direct['channel'] != owned['channel']:
+    owned = require_original_high_union(root, prepared['owned_union'], owned)
+    if direct['channel'] != owned['channel']:
         raise ValueError('original high union or channel provenance changed')
     if direct['group'] != group or direct['kind'] != 'low_vacuum' or direct['interval'] != owned['interval'] or direct['source_order'] != 24:
         raise ValueError('complete direct order24 source required, not a correction')

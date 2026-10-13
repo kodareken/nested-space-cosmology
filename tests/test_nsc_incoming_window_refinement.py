@@ -15,6 +15,11 @@ from recursive_horizons.nsc_incoming_low_high_source import vacuum_source_kernel
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_actual_two_window_endpoints_and_signed_inventory():
     for group, kind, left, right in ((12, 'low_vacuum', 32., 40.), (22, 'middle_correction', 40., 160.)):
         source = owner.authenticated_window(ROOT, group, kind, left, right)
@@ -80,6 +85,7 @@ def test_two_case_record_has_explicit_before_after_and_thermal_policy():
     assert record['windows']['group12_low']['retained_archived_thermal'] is None
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_never_prepares_local_coefficients_or_quadrature(monkeypatch):
     def forbidden(*args, **kwargs): raise AssertionError('preparation called during window replay')
     monkeypatch.setattr(owner, '_riccati_at_one', forbidden); monkeypatch.setattr(owner, 'window_quadrature', forbidden)

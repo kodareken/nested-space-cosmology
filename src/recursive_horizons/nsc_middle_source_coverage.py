@@ -62,12 +62,12 @@ PAYLOAD_NAMES = (
     "positive_covariance", "trace",
 )
 OWNERS = (
-    "docs/nsc-middle-source-coverage.md",
-    "scripts/derive_nsc_middle_source_coverage.py",
+    "docs/nsc-ks-source-operator-majorant-v7.md",
     "scripts/derive_nsc_vacuum_source_correction.py",
     "src/recursive_horizons/nsc_middle_source_coverage.py",
     "src/recursive_horizons/nsc_vacuum_source_correction.py",
     "src/recursive_horizons/nsc_vacuum_source_remainder.py",
+    "tests/test_nsc_middle_source_coverage_v2.py",
     "tests/test_nsc_middle_source_coverage.py",
 )
 
@@ -671,3 +671,40 @@ def _capture(spec, dependencies, *, cpu_limit):
             flow, START, target, rtol=RTOL, atol=ATOL, max_step=MAX_STEP,
             cpu_limit=float(cpu_limit))
         return _prove(spec, expansion, flow, target, trace, int(nfev), dependencies)
+
+
+def main(argv=None):
+    import argparse
+    ROOT = Path(__file__).resolve().parents[2]
+    DEFAULT_OUTPUT = "results/development/nsc-middle-source-coverage-v1"
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--resume", action="store_true",
+                      help="validate saved rows, then capture at most --row-budget new rows")
+    mode.add_argument("--check", action="store_true",
+                      help="replay saved witnesses and do not solve")
+    parser.add_argument("--row-budget", type=int,
+                        help="maximum number of new positive rows to solve")
+    parser.add_argument("--cpu-budget", type=float,
+                        help="process-time budget in seconds for new solves")
+    parser.add_argument("--output", default=DEFAULT_OUTPUT,
+                        help="checkpoint directory, created only by --resume")
+    args = parser.parse_args(argv)
+    output = Path(args.output)
+    if not output.is_absolute():
+        output = ROOT/output
+    if args.check:
+        if args.row_budget is not None or args.cpu_budget is not None:
+            parser.error("check replays saved witnesses and does not accept a solve budget")
+        result = cover(ROOT, output, mode="check")
+    else:
+        if args.row_budget is None or args.cpu_budget is None:
+            parser.error("resume requires explicit --row-budget and --cpu-budget")
+        result = cover(ROOT, output, mode="resume", row_budget=args.row_budget,
+                       cpu_budget=args.cpu_budget)
+    print(json.dumps(result, sort_keys=True, indent=2, allow_nan=False))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -19,7 +19,9 @@ OWNERS=tuple('src/recursive_horizons/'+x+'.py' for x in ('nsc_incoming_surface_q
 C_SHA='98a1a52275bfb198d671d493541548774589f09db57f9fbeabcc3a7ba635b529'
 
 
-def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(path):return selected_source_sha256(ROOT, path)
 def signature():
     if digest(OWNERS[0])!=C_SHA:raise ValueError('independent C reference owner changed')
     return {p:digest(p) for p in (*SOURCES,*RECORDS,*OWNERS)}
@@ -102,7 +104,7 @@ def make_record(path):
             'old_reference_quadrature_or_probe_campaign_rerun':False,'source_numerical_accuracy_inferred':False,
             'physical_normal_data_or_boundary_selected':False,'w_profile_integrated':False,'metric_evolution':False,'Gamma_rest_assigned':False},
         'source_hashes':{p:digest(p) for p in SOURCES},'input_hashes':{p:digest(p) for p in (*RECORDS,*OWNERS)},
-        'payload':{'path':str(path.relative_to(ROOT)),'sha256':sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size},
+        'payload':{'path':path.relative_to(ROOT).as_posix(),'sha256':sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size},
         'reproducer':'python3 scripts/derive_nsc_incoming_surface_coefficients.py --check'}
 
 def main():

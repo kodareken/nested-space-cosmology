@@ -21,7 +21,9 @@ OWNERS=tuple('src/recursive_horizons/'+name+'.py' for name in ('nsc_incoming_end
     'docs/nsc-incoming-vacuum-tail-bound.md','docs/nsc-pg-massive-mode-resolution.md','docs/nsc-retarded-radial-response.md')
 
 
-def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(path):return selected_source_sha256(ROOT, path)
 def inputs():
     records=[json.loads((ROOT/p).read_text()) for p in RECORDS]
     for record in records:

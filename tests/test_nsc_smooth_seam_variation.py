@@ -11,7 +11,7 @@ from derive_nsc_smooth_seam_variation import calculate,reference_jet
 
 
 def test_actual_reference_seam_is_bound_to_the_same_local_density():
-    result=calculate();matching=result['matching']
+    result=calculate(source_context='329ef809e466a86ed4a290ee32c19485f85add9d');matching=result['matching']
     assert max(matching['residuals'].values())<3e-11
     assert result['reference_metric_normal_jet']['r']==1.
     assert abs(matching['parent']['Weyl_scalar_F']-2)<3e-11
@@ -24,7 +24,7 @@ def test_actual_reference_seam_is_bound_to_the_same_local_density():
 
 
 def test_shear_variation_reverses_but_its_conjugate_does_not():
-    r=calculate();p=r['matching']['parent'];c=r['matching']['child']
+    r=calculate(source_context='329ef809e466a86ed4a290ee32c19485f85add9d');p=r['matching']['parent'];c=r['matching']['child']
     assert np.max(abs(np.asarray(p['weyl'])[:2]+np.asarray(c['weyl'])[:2]))<3e-11
     assert abs(p['weyl'][2]-c['weyl'][2])<3e-11
     assert abs(p['sigma']+c['sigma'])<3e-11
@@ -35,7 +35,7 @@ def test_shear_variation_reverses_but_its_conjugate_does_not():
 
 
 def test_smooth_gluing_identity_uses_the_common_jet_not_a_fitted_force():
-    r=calculate();jet,_=reference_jet();jet=dict(jet)
+    r=calculate(source_context='329ef809e466a86ed4a290ee32c19485f85add9d');jet,_=reference_jet();jet=dict(jet)
     jet.update(N=1.1,Nd=.07,Ndd=-.02,ad=.6,add=1.2,addd=-.4,rd=.1,rdd=.5,rddd=.3)
     matched=smooth_seam_match(jet,r['locked_inputs'])
     assert max(matched['residuals'].values())<3e-11

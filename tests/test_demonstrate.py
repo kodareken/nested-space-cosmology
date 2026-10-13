@@ -32,7 +32,9 @@ class DemonstrationReadingRoute(unittest.TestCase):
         self.assertIn("Parent-matched canonical Dirac source", rendered)
         self.assertIn("The finite state-regulator conversion", rendered)
         self.assertIn("not the complete vacuum stress", rendered)
-        self.assertIn("--recompute", rendered)
+        self.assertIn("https://doi.org/10.5281/zenodo.23090015", rendered)
+        self.assertIn("Recomputation requires the original source context", rendered)
+        self.assertIn("docs/reproducing.md", rendered)
 
 
 if __name__ == "__main__":

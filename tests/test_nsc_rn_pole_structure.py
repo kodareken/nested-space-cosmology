@@ -20,7 +20,7 @@ LAB = Path(__file__).resolve().parents[1]
 DEVELOPMENT = LAB / "results/development"
 RECORD = DEVELOPMENT / "nsc-rn-pole-structure-v1.json"
 REACH_NOTE = LAB / "docs/nsc-rn-third-region-reach.md"
-NOTE = LAB / "docs/nsc-rn-pole-structure.md"
+NOTE = LAB / "docs/nsc-rn-excision-domain.md"
 SOURCE = LAB / "src/recursive_horizons/nsc_rn_source.py"
 
 
@@ -92,12 +92,14 @@ class TestTheCorrection:
         previous = REACH_NOTE.read_text(encoding="utf-8")
         current = NOTE.read_text(encoding="utf-8")
         assert "stiff" in previous.lower()
-        assert "was wrong" in current
+        assert "simple pole" in current
+        assert "rather than evidence of stiffness" in current
 
     def test_the_proposal_is_concrete_and_unclaimed(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
-        assert "applies at" in flat
-        assert "worth doing depends on what is on the other side" in flat
+        assert "finite-jet continuation resolves" in flat
+        assert "new boundary" in flat
+        assert "separate construction" in flat
 
 
 class TestScope:
@@ -111,4 +113,4 @@ class TestScope:
 
     def test_it_read_no_station_payloads(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
-        assert "no station" in flat
+        assert "no station" in flat.lower()

@@ -113,6 +113,8 @@ QUANTITY_NAMES = (
 NONE_REQUIRED_QUANTITIES = QUANTITY_NAMES
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def _root():
     return Path(__file__).resolve().parents[2]
 
@@ -522,7 +524,7 @@ def _state_scales(root=None):
         'omega': omega,
         'source_law': '2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))',
         'record': RESTART_RECORD,
-        'record_sha256': sha256((root / RESTART_RECORD).read_bytes()).hexdigest(),
+        'record_sha256': selected_source_sha256(root, RESTART_RECORD),
     })
 
 
@@ -820,7 +822,7 @@ def frozen_coefficient_records(root=None):
             (V2_RECORD, FROZEN_V2_SHA256),
             (V3_RECORD, None),
             (V4_RECORD, None)):
-        digest = sha256((root / path).read_bytes()).hexdigest()
+        digest = selected_source_sha256(root, path)
         if expected is not None and digest != expected:
             raise ValueError('frozen v2 UV coefficient record bytes changed')
         payload = json.loads((root / path).read_text())
@@ -859,7 +861,7 @@ def finite_history_uv_remainder_report():
 
 
 def _digest(root, relative):
-    return sha256((Path(root) / relative).read_bytes()).hexdigest()
+    return selected_source_sha256(Path(root), relative)
 
 
 def _as_map(value, name):

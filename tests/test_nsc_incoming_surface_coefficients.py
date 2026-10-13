@@ -6,6 +6,10 @@ import sympy as sp
 import recursive_horizons.nsc_incoming_surface_coefficients as owner
 ROOT=Path(__file__).resolve().parents[1]
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def read(name):return json.loads((ROOT/f'results/development/nsc-incoming-{name}.json').read_text())
 
 def test_full_two_dimensional_local_C_and_independent_reference_identity():
@@ -35,6 +39,7 @@ def test_new_w_point_energy_and_original_density_bridge():
     assert result['new_reference_point_count']==4
     assert result['new_reference_momentum_integrations']==0
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_never_enters_old_or_new_symbolic_producers(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('symbolic/probe producer entered replay')
     for name in ('homogeneous_reference_energy','local_density_expressions','local_surface_polynomials','polynomial_proof','new_algebra_controls'):

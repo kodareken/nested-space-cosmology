@@ -7,6 +7,10 @@ from fractions import Fraction
 
 import pytest
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
 SPEC=importlib.util.spec_from_file_location('fixed_c0_certificate',ROOT/'scripts/derive_nsc_retarded_fixed_c0_certificate.py')
 M=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(M)
@@ -39,6 +43,7 @@ def test_changed_source_or_pulse_cannot_inherit_the_certificate():
         M.combine(interval,v['energy'],v['channel'],v['source_config'],{**p,'normal_outer':.04})
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_requires_physical_bound_and_retains_full_scope():
     r=json.loads(M.OUTPUT.read_text())
     assert r['source_and_input_sha256']==M.signature()

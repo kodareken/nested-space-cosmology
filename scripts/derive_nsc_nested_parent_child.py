@@ -24,10 +24,12 @@ import numpy as np
 from scipy.integrate import simpson
 from recursive_horizons import nsc_nested_parent_child as model
 from recursive_horizons import nsc_nested_parent_child_response as response
-from recursive_horizons import nsc_regional_energy_exchange as regional
+from recursive_horizons.nested import energy_exchange as regional
 from recursive_horizons import nsc_spherical_coupling as coupling
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
+from recursive_horizons.provenance import resolve_pinned_source_bytes
 
+PILOT_SOURCE_REF = "ec0cd25edbab19f7e1a8245f4713648640748222"
 LAB = Path(__file__).resolve().parents[1]
 OUT = LAB / "results/development/nsc-nested-parent-child-v1.json"
 PAYLOAD = OUT.with_suffix(".npz")
@@ -50,7 +52,7 @@ DEPENDENCIES = (
     LAB / "src/recursive_horizons/nsc_spherical_galerkin_coupling.py",
     LAB / "src/recursive_horizons/nsc_spherical_feedback_action.py",
     LAB / "src/recursive_horizons/nsc_conformal_adm_source.py",
-    LAB / "src/recursive_horizons/nsc_regional_energy_exchange.py",
+    LAB / "src/recursive_horizons/nested/energy_exchange.py",
     LAB / "src/recursive_horizons/nsc_evolving_reduction.py",
 )
 
@@ -386,8 +388,10 @@ def verify():
     if record.get("schema") != "NSC-NESTED-PARENT-CHILD-v1" or digest(PAYLOAD) != record["payload_sha256"]:
         raise ValueError("invalid successor schema or payload")
     for name, expected in record["source_bindings"].items():
-        if digest(LAB / name) != expected:
-            raise ValueError("source binding changed: " + name)
+        # Authenticate the saved pilot's exact source context after owner moves.
+        # The preserved source bytes are read; replay does not execute them.
+        resolve_pinned_source_bytes(
+            LAB, "lab/" + name, expected, commit=PILOT_SOURCE_REF)
     with np.load(PAYLOAD, allow_pickle=False) as stored:
         for name, case in record["results"].items():
             states = [model.NestedState(*(stored[name + "_" + field][index] for field in model.STATE_NAMES))

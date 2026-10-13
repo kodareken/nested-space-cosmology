@@ -13,7 +13,7 @@ import sympy as sp
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from recursive_horizons.nsc_shape_response import smooth_metric, StaticAxialMetric
-from recursive_horizons.nsc_energy_transfer import dirac_hamiltonian
+from recursive_horizons.dirac.energy import dirac_hamiltonian
 from recursive_horizons.nsc_vacuum_work import radius_vertex, pulse_profile, leading_response, evolve_vacuum_pulse
 OUTPUT = ROOT/'results/nsc-6-vacuum-work.json'
 
@@ -106,7 +106,7 @@ def calculate():
     return {'schema':'nsc-vacuum-work-v1','artifact_id':'NSC-6-VACUUM-WORK',
         'classification':'finite_and_perturbative_Dirac_vacuum_response_to_prescribed_geometric_work_not_self_sourced_cosmology',
         'source_hashes':{path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in (
-            'src/recursive_horizons/nsc_vacuum_work.py','src/recursive_horizons/nsc_energy_transfer.py',
+            'src/recursive_horizons/nsc_vacuum_work.py','src/recursive_horizons/dirac/energy.py',
             'src/recursive_horizons/nsc_shape_response.py','scripts/check_nsc_vacuum_work.py')},
         'conventions':{'metric':'ds²=dt²-dx²-r(t,x)² dOmega², compact axial AP circle, original a=1,R=2',
             'radius':'r(t,x)=r0(x)/(1+epsilon*s(x)*g(t)); no added scalar matter',

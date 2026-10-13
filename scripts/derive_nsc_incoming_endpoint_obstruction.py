@@ -24,7 +24,9 @@ OWNERS=tuple('src/recursive_horizons/'+name+'.py' for name in ('nsc_pg_high_ener
     'docs/nsc-retarded-diagonal-sign-bound.md','docs/nsc-upstream-compensator.md')
 
 
-def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(path):return selected_source_sha256(ROOT, path)
 def load_inputs():
     records=[json.loads((ROOT/path).read_text()) for path in RECORDS]
     # Authoritative existing receipts are authenticated, not reproduced.

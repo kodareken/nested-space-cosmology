@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from recursive_horizons.provenance import ARCHIVE, resolve_pinned_source_bytes, resolve_source
+from recursive_horizons.provenance import resolve_pinned_source_bytes, resolve_source
 
 
 class ProvenanceTests(unittest.TestCase):
@@ -15,7 +15,7 @@ class ProvenanceTests(unittest.TestCase):
         commit = "5f10ecd365843d1616e50eb16a20d7acd8377e2c"
         raw = resolve_pinned_source_bytes(root, path, expected, commit=commit)
         self.assertEqual(hashlib.sha256(raw).hexdigest(), expected)
-        with self.assertRaisesRegex(RuntimeError, "source drift"):
+        with self.assertRaisesRegex(RuntimeError, "current source unavailable"):
             resolve_source(root, path, expected)
         with self.assertRaisesRegex(RuntimeError, "pinned source drift"):
             resolve_pinned_source_bytes(root, path, "0" * 64, commit=commit)
@@ -32,20 +32,31 @@ class ProvenanceTests(unittest.TestCase):
             root, pin["path"], pin["sha256"], commit=pin["commit"])
         self.assertEqual(hashlib.sha256(raw).hexdigest(), pin["sha256"])
 
-    def test_archive_preserves_identity_and_active_drift_is_not_hidden(self):
+    def test_retired_receipts_never_substitute_current_source(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory).resolve()
             data = b"historical scientific source\n"
             digest = hashlib.sha256(data).hexdigest()
-            stored = root / ARCHIVE / "scripts/original.py"
+            retired = "archive/pre-closure-2026-09-08"
+            stored = root / retired / "scripts/original.py"
             stored.parent.mkdir(parents=True)
             stored.write_bytes(data)
-            (root / ARCHIVE / "manifest.json").write_text(json.dumps({"entries": [{
+            (root / retired / "manifest.json").write_text(json.dumps({"entries": [{
                 "original_path": "scripts/original.py", "sha256": digest,
-                "storage_path": f"{ARCHIVE}/scripts/original.py"}]}))
-            self.assertEqual(resolve_source(root, "scripts/original.py", digest), stored)
+                "storage_path": f"{retired}/scripts/original.py"}]}))
+            with self.assertRaisesRegex(RuntimeError, "current source unavailable"):
+                resolve_source(root, "scripts/original.py", digest)
+            migration = root / "results/reassembly/manifest.json"
+            migration.parent.mkdir(parents=True)
+            migration.write_text(json.dumps({"rows": [{
+                "origin": "lab", "original_path": "scripts/original.py",
+                "destination": f"{retired}/scripts/original.py"}]}))
+            with self.assertRaisesRegex(RuntimeError, "current source unavailable"):
+                resolve_source(root, "scripts/original.py", digest)
             active = root / "scripts/original.py"
             active.parent.mkdir()
+            active.write_bytes(data)
+            self.assertEqual(resolve_source(root, "scripts/original.py", digest), active)
             active.write_bytes(b"changed")
             with self.assertRaisesRegex(RuntimeError, "source drift"):
                 resolve_source(root, "scripts/original.py", digest)

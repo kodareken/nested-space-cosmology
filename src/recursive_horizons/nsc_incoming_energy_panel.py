@@ -229,3 +229,92 @@ def preflight(channel, config, matched_receipt):
                          'frozen_binary_mass_angular_everywhere':True,'source_kappa_changed':False,
                          'whole_panel_field_error_or_source_integral':False,
                          'metric_evolution_or_physical_IV':False,'maximum_CPU_workers':1}}
+
+# Retained executable control: preflight_control
+# Actual API folded from scripts/derive_nsc_incoming_energy_panel_preflight.py at 329ef809; historical source identities remain frozen.
+from .nsc_frozen_sources import selected_source_sha256 as _retained_incoming_selected_sha256
+def _retained_incoming_source_sha256(root, path):
+    from pathlib import Path
+    value = Path(path)
+    name = value.relative_to(root).as_posix() if value.is_absolute() else path
+    return _retained_incoming_selected_sha256(root, name)
+
+import argparse as _preflight_control_argparse
+from hashlib import sha256 as _preflight_control_sha256
+import json as _preflight_control_json
+from pathlib import Path as _preflight_control_Path
+import sys as _preflight_control_sys
+from recursive_horizons.nsc_posix import ROOT as _preflight_control_ROOT
+_preflight_control_sys.path.insert(0, str(_preflight_control_ROOT / 'src'))
+from recursive_horizons.nsc_incoming_energy_panel import preflight as _preflight_control_preflight, panel_identities as _preflight_control_panel_identities, replay_step as _preflight_control_replay_step
+from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision as _preflight_control__precision
+_preflight_control_OUTPUT = _preflight_control_ROOT / 'results/development/nsc-incoming-energy-panel-preflight.json'
+_preflight_control_SOURCES = ('src/recursive_horizons/nsc_incoming_energy_panel.py', 'scripts/derive_nsc_incoming_energy_panel_preflight.py', 'tests/test_nsc_incoming_energy_panel.py', 'docs/nsc-incoming-energy-panel-preflight.md')
+_preflight_control_INPUTS = ('results/development/nsc-incoming-matched-horizon-initializer.json', 'results/development/nsc-mode-resolved-cauchy-state.json', 'results/development/nsc-compact-matched-restart.json', 'results/development/nsc-incoming-validated-vacuum-propagation.json', 'src/recursive_horizons/nsc_incoming_matched_horizon_initializer.py', 'src/recursive_horizons/nsc_incoming_validated_vacuum_propagation.py', 'src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py', 'src/recursive_horizons/nsc_incoming_middle_bound.py', 'src/recursive_horizons/nsc_incoming_source_quadrature_bound.py')
+
+def _preflight_control_digest(p):
+    return _retained_incoming_source_sha256(_preflight_control_ROOT, p)
+
+def _preflight_control_signature():
+    return {p: _preflight_control_digest(p) for p in (*_preflight_control_SOURCES, *_preflight_control_INPUTS)}
+
+def _preflight_control_prepare():
+    before = _preflight_control_signature()
+    matched = _preflight_control_json.loads((_preflight_control_ROOT / _preflight_control_INPUTS[0]).read_text())
+    for field in ('source_hashes', 'input_hashes'):
+        for p, h in matched[field].items():
+            if _preflight_control_digest(p) != h:
+                raise ValueError('matched initializer input/owner changed')
+    if _preflight_control_digest(matched['payload']['path']) != matched['payload']['sha256']:
+        raise ValueError('initializer artifact changed')
+    c = _preflight_control_json.loads((_preflight_control_ROOT / _preflight_control_INPUTS[1]).read_text())['channels'][32]
+    cfg = _preflight_control_json.loads((_preflight_control_ROOT / _preflight_control_INPUTS[2]).read_text())['scattering_provenance']['config']
+    result = _preflight_control_preflight(c, cfg, matched)
+    if _preflight_control_signature() != before:
+        raise ValueError('preflight input/producer changed')
+    raw = _preflight_control_json.dumps({'schema': 'NSC-ENERGY-PANEL-PREFLIGHT-ARTIFACT-v1', 'signature': before, 'preflight': result}, sort_keys=True, allow_nan=False).encode()
+    h = _preflight_control_sha256(raw).hexdigest()
+    path = _preflight_control_ROOT / f'results/development/artifacts/nsc-incoming-energy-panel-preflight.{h}.json'
+    if path.exists() and path.read_bytes() != raw:
+        raise ValueError('content-addressed collision')
+    if not path.exists():
+        path.write_bytes(raw)
+    return path
+
+def _preflight_control_make_record(path):
+    data = _preflight_control_json.loads(path.read_text())
+    if data['signature'] != _preflight_control_signature():
+        raise ValueError('energy preflight producer/input changed')
+    result = data['preflight']
+    if result['identities'] != _preflight_control_panel_identities():
+        raise ValueError('energy identities changed')
+    checks = {}
+    with _preflight_control__precision(80):
+        for sign, case in result['cases'].items():
+            replay = _preflight_control_replay_step(case['step'])
+            if any((case['step'][k] != v for k, v in replay.items())):
+                raise ValueError('uniform energy residual replay changed')
+            checks[sign] = {'initial_interpolation_error_upper': case['initial_interpolant']['column_interpolation_error_upper'], 'initial_DCT_rounding_upper': case['initial_interpolant']['DCT_coefficient_radius_l1_upper'], 'inherited_projector_error_separate': case['inherited_mathematical_projector_error_upper'], 'step_elapsed_seconds': case['step']['elapsed_seconds'], **replay}
+    passed = all((row['local_gate_pass'] for row in checks.values()))
+    return {'schema': 'NSC-INCOMING-ENERGY-PANEL-PREFLIGHT-v1', 'accountable_author': 'Douglas Ek', 'status': 'PASS: initial Cheb24 and one-step energy residual; full panel not run' if passed else 'OPEN: fixed Cheb24 one-step residual exceeds1e-20; full panel not run', 'source_hashes': {p: _preflight_control_digest(p) for p in _preflight_control_SOURCES}, 'input_hashes': {p: _preflight_control_digest(p) for p in _preflight_control_INPUTS}, 'payload': {'path': path.relative_to(_preflight_control_ROOT).as_posix(), 'sha256': _preflight_control_digest(path)}, 'identities': result['identities'], 'signs': checks, 'shared_geometry_seconds': result['shared_geometry']['elapsed_seconds'], 'elapsed_seconds': result['elapsed_seconds'], 'future_work': result['future_work'], 'initial_interpolation_source': 'https://raw.githubusercontent.com/chebfun/ATAP/development/chap8.m (Theorem8.2 Eq8.3)', 'scope': {'full_panel_run': False, 'physical_source_integral': False, 'one_time_step_each_sign': True, 'shared_geometry_preparations': 1, 'physical_state_scales_or_source_kappa_changed': False, 'endpoint_column_renormalized': False, 'archived_modes_modified': False, 'metric_or_physical_IV': False, 'push_or_PDF': False}, 'next_decision': 'review full residual and measured cost before authorizing any whole-panel run', 'reproducer': 'python3 scripts/derive_nsc_incoming_energy_panel_preflight.py --check'}
+
+from types import SimpleNamespace as _preflight_control_Namespace
+preflight_control = _preflight_control_Namespace(
+    INPUTS=_preflight_control_INPUTS,
+    OUTPUT=_preflight_control_OUTPUT,
+    Path=_preflight_control_Path,
+    ROOT=_preflight_control_ROOT,
+    SOURCES=_preflight_control_SOURCES,
+    _precision=_preflight_control__precision,
+    argparse=_preflight_control_argparse,
+    digest=_preflight_control_digest,
+    json=_preflight_control_json,
+    make_record=_preflight_control_make_record,
+    panel_identities=_preflight_control_panel_identities,
+    preflight=_preflight_control_preflight,
+    prepare=_preflight_control_prepare,
+    replay_step=_preflight_control_replay_step,
+    sha256=_preflight_control_sha256,
+    signature=_preflight_control_signature,
+    sys=_preflight_control_sys,
+)

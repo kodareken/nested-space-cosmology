@@ -93,7 +93,7 @@ the stored diagnostic shear coefficients are approximately -0.84788331
 and0.85747641 at the initial/final ends.
 
 For the original trapezoid weights W and edge_order2 derivative D, put
-$B=WD+D^TW$ and $S=\operatorname{diag}(-1,0,\ldots,0,1)$.
+$B=WD+D^TW$ and $S=\mathrm{diag}(-1,0,\ldots,0,1)$.
 The full saved nodal gradient reconstructs as
 
 $$G=WE+SP+D^TSQ+(B-S)P+D^T(B-S)Q.$$

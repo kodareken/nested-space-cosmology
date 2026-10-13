@@ -42,7 +42,7 @@ def test_saved_replay_retains_all_source_fibers_and_fixed_coefficients(monkeypat
     monkeypatch.setattr(R,'operator_response',forbidden)
     monkeypatch.setattr(R.D,'short_response',forbidden)
     monkeypatch.setattr(R.P,'evolve_prepared_field_jets',forbidden)
-    record=R.check()
+    record=R.check(source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     assert len(record['control']['cases_completed'])<=6
     assert record['scope']['global_C0_matching']=='OPEN'
     assert record['selected_compensation']['same_coefficients_all_cases']
@@ -61,3 +61,21 @@ def test_saved_replay_retains_all_source_fibers_and_fixed_coefficients(monkeypat
             if name+'/fine' in record['control']['cases_completed']:
                 assert np.max(abs(a[name+'/fine/K'][0]))==0
     assert record['runtime']['CPU_seconds']<=60 or record['runtime']['cpu_budget_exceeded']
+
+
+def test_fresh_signature_binds_retained_owners_and_history_is_explicit():
+    from hashlib import sha256
+    from recursive_horizons.nsc_frozen_sources import frozen_source_context
+    current=R.signature()
+    assert 'scripts/derive_nsc_retarded_response_resolution.py' not in current
+    assert 'docs/nsc-upstream-compensator.md' not in current
+    assert 'docs/nsc-preparation-domain-decision.md' in current
+    assert 'docs/nsc-normalized-histories.md' in current
+    assert 'docs/nsc-retarded-fixed-c0-certificate.md' in current
+    for path,digest in current.items():
+        assert sha256((ROOT/path).read_bytes()).hexdigest()==digest
+    with frozen_source_context('329ef809e466a86ed4a290ee32c19485f85add9d'):
+        original=R.signature()
+    assert 'scripts/derive_nsc_retarded_response_resolution.py' in original
+    assert 'docs/nsc-upstream-compensator.md' in original
+    assert 'docs/nsc-retarded-response-resolution.md' in original

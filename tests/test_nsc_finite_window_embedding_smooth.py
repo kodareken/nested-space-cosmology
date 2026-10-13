@@ -16,6 +16,11 @@ from pathlib import Path
 
 import numpy as np
 
+from recursive_horizons.provenance import resolve_pinned_source_bytes
+
+# Saved evidence binds the original sources; numerical inputs remain local.
+ORIGINAL_SOURCE_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 from recursive_horizons import nsc_finite_window_embedding as v1
 from recursive_horizons.nsc_finite_window_embedding_smooth import (
     COLUMN_PHASE,
@@ -42,8 +47,10 @@ def test_v1_sources_are_unchanged():
     assert payload["schema"] == "NSC-FINITE-WINDOW-EMBEDDING-v1"
     assert payload["status"] == "CONSTRUCTED_COMPRESSION_NOT_INVARIANT"
     for relative, digest in payload["source_hashes"].items():
-        path = Path(v1._LAB_ROOT) / relative
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest
+        source = resolve_pinned_source_bytes(
+            Path(v1._LAB_ROOT), relative, digest, commit=ORIGINAL_SOURCE_CONTEXT,
+        )
+        assert hashlib.sha256(source).hexdigest() == digest
 
 
 def test_constraint_integral_still_sees_the_v1_sine_lobes():
@@ -137,5 +144,7 @@ def test_saved_record_matches_these_sources():
     assert payload["representative"]["poly_terms"] == 6
     assert payload["representative"]["flat_power"] == 4
     for relative, digest in payload["source_hashes"].items():
-        path = Path(_LAB_ROOT) / relative
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest
+        source = resolve_pinned_source_bytes(
+            Path(_LAB_ROOT), relative, digest, commit=ORIGINAL_SOURCE_CONTEXT,
+        )
+        assert hashlib.sha256(source).hexdigest() == digest

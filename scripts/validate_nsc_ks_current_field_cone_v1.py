@@ -62,8 +62,10 @@ INPUT_PATHS = (
 
 
 def digest(path):
+    from recursive_horizons.nsc_frozen_sources import selected_source_sha256
     path = Path(path)
-    return sha256((path if path.is_absolute() else ROOT / path).read_bytes()).hexdigest()
+    relative = path.relative_to(ROOT).as_posix() if path.is_absolute() else path.as_posix()
+    return selected_source_sha256(ROOT, relative)
 
 
 

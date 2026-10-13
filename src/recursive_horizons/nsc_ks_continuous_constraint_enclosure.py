@@ -128,10 +128,11 @@ def authenticate_file_digest(path, digest, *, root=None, name="evidence"):
     root = REPO_ROOT if root is None else Path(root)
     relative = repository_relative(path, root)
     _sha256_text(digest, name)
-    target = root / relative
-    if not target.is_file():
-        raise ValueError(name + " file missing: " + relative)
-    actual = file_digest(target)
+    from .nsc_frozen_sources import selected_source_sha256
+    try:
+        actual = selected_source_sha256(root, relative)
+    except FileNotFoundError as error:
+        raise ValueError(name + " file missing: " + relative) from error
     if actual != digest:
         raise ValueError(name + " sha256 does not match file bytes: " + relative)
     return relative, actual

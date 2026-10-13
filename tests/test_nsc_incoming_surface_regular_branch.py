@@ -8,6 +8,10 @@ from recursive_horizons.nsc_incoming_surface_regular_branch import affine_identi
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def script():
     spec=importlib.util.spec_from_file_location('surface_branch',ROOT/'scripts/derive_nsc_incoming_surface_regular_branch.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
@@ -21,6 +25,7 @@ def test_new_affine_derivative_and_independent_C_identities_are_exact():
     assert result['residuals']['determinant_slope_from_C']=='0'
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_distinct_roots_and_safe_component_are_directed():
     module=script();lapse,principal,channels,cauchy=module.inputs()
     result=enclose_branch(lapse,principal,channels,cauchy);bounds=result['intervals']
@@ -35,6 +40,7 @@ def test_distinct_roots_and_safe_component_are_directed():
     assert not result['spacetime_singularity_claimed']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_record_uses_saved_baseline_and_never_runs_old_producers(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('old coefficient producer called')
     monkeypatch.setattr('recursive_horizons.nsc_incoming_lapse_coefficient.closed_lapse_coefficient',forbidden)

@@ -12,15 +12,16 @@ from recursive_horizons.nsc_ks_retained_upstream_archive import RetainedUpstream
 from recursive_horizons.nsc_vacuum_source_remainder import VacuumSourceExpansion
 from recursive_horizons.nsc_vacuum_spinor_remainder import spinor_remainder,truncated_upstream_envelope
 OUTPUT='results/development/nsc-vacuum-spinor-remainder-v1.json'
-OWNERS=('scripts/derive_nsc_vacuum_spinor_remainder.py',
+ORIGINAL_OWNERS=('scripts/derive_nsc_vacuum_spinor_remainder.py',
  'src/recursive_horizons/nsc_vacuum_spinor_remainder.py',
  'tests/test_nsc_vacuum_spinor_remainder.py','docs/nsc-vacuum-spinor-remainder.md')
+OWNERS=(*ORIGINAL_OWNERS[:-1], 'docs/nsc-ks-source-operator-majorant-v7.md')
 
 
 def interval(v):return {'lower':exact_upper(v.lower()),'upper':exact_upper(v.upper())}
 
 
-def calculate():
+def calculate(*, source_context=None):
     archive=RetainedUpstreamArchive(ROOT);cases=[]
     with ctx.workprec(192):
         for group in (1,14):
@@ -57,7 +58,8 @@ def calculate():
      'requires_returned_upstream_coefficients':True,'finite_occupation_source_error_included':False,
      'all_source_families':False,'current_history_L0_A4_H2_integrals':None,
      'changed_history_C_M':None,'physical_local_gate':'OPEN',
-     'source_hashes':implementation_hashes(ROOT,owners=OWNERS),
+     'source_hashes':implementation_hashes(ROOT,owners=OWNERS if source_context is None else ORIGINAL_OWNERS,
+                source_context=source_context),
      'input_hashes':dict(archive.input_hashes)}
 
 
@@ -65,7 +67,8 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     modes=parser.add_mutually_exclusive_group(required=True)
     modes.add_argument('--record',action='store_true');modes.add_argument('--check',action='store_true')
-    args=parser.parse_args();result=calculate()
+    parser.add_argument('--source-context',help='full original source commit for explicit saved-receipt replay')
+    args=parser.parse_args();result=calculate(source_context=args.source_context)
     encoded=(json.dumps(result,sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     if args.record:publish_exclusive_file(ROOT,OUTPUT,encoded)
     elif (ROOT/OUTPUT).read_bytes()!=encoded:raise ValueError('spinor proof or dependencies changed')

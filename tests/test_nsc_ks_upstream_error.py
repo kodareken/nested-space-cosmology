@@ -23,6 +23,9 @@ from recursive_horizons.nsc_ks_upstream_error import (
 from scipy.integrate import DOP853
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def family14_inputs():
     archive = RetainedUpstreamArchive(ROOT)
     source, _negative, archived, first, channel, selections = C.select_source(
@@ -62,6 +65,7 @@ def test_dop853_power_coefficients_reproduce_dense_output():
                 dense(dense.t_old + fraction * dense.h), atol=2e-17, rtol=0)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_family14_directed_continuation_contains_archived_endpoint_indicator():
     _source, archived, first, _channel, _selections, energies, at_one = family14_inputs()
     result = continue_columns(at_one, energies, first.mass, first.angular,
@@ -83,6 +87,7 @@ def test_missing_physical_source_error_keeps_upstream_open():
     assert feed['combined_status'].startswith('OPEN')
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_low_subgap_classification_keeps_reconstruction_unbounded():
     record = json.loads((ROOT / 'results/development/nsc-ks-source-inventory.json').read_text())
     v5 = json.loads((ROOT / 'results/development/nsc-incoming-source-update-v5.json').read_text())

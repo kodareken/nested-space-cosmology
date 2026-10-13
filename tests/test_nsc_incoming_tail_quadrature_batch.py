@@ -17,6 +17,10 @@ CONFIG=json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').
 OUTPUT=ROOT/'results/development/nsc-incoming-tail-quadrature-batch.json'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_actual_endpoint_and_sign_routing():
     for g in range(1,33):
         assert endpoint(CHANNELS[g])==(320. if g in (10,11,12,31,32) else 160.)
@@ -38,6 +42,7 @@ def test_generic_zero_angular_factor_and_outward_thermal_inventory():
                 assert _lo(interval)==_hi(interval)==0 if i in result['exact_zero_components'] else _lo(interval)>0
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_pilot_payload_replays_identically_without_preparation():
     record=json.loads((ROOT/'results/development/nsc-incoming-tail-quadrature-bound.json').read_text())
     payload=json.loads((ROOT/record['payload']['path']).read_text())
@@ -45,6 +50,7 @@ def test_pilot_payload_replays_identically_without_preparation():
     assert thermal_tail(CHANNELS[22],CONFIG)==record['thermal_tail']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_batch_saved_only_replay_and_archive_preservation(monkeypatch):
     if not OUTPUT.exists():pytest.skip('post-preparation batch gate')
     spec=importlib.util.spec_from_file_location('tail_batch',ROOT/'scripts/derive_nsc_incoming_tail_quadrature_batch.py')

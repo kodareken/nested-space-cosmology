@@ -763,3 +763,419 @@ def evolve_ks_source_envelope(
         source.column_weights, source.energies, mass, angular, initial, rho_up,
         binding, preparation, _coverage(nsrc, len(np.unique(np.round(energies, 15)))),
         diagnostics)
+
+from pathlib import Path as _receipt_Path
+from .nsc_frozen_sources import selected_source_sha256 as _receipt_source_sha256
+
+# Retained executable control: comparison_control
+# Folded from scripts/derive_nsc_ks_envelope_comparison.py at 329ef809; original receipts retain their producer identities.
+import os as _comparison_control_os
+import argparse as _comparison_control_argparse
+from hashlib import sha256 as _comparison_control_sha256
+import json as _comparison_control_json
+from pathlib import Path as _comparison_control_Path
+import signal as _comparison_control_signal
+import sys as _comparison_control_sys
+import time as _comparison_control_time
+import numpy as _comparison_control_np
+from recursive_horizons.nsc_posix import ROOT as _comparison_control_ROOT
+_comparison_control_sys.path.insert(0, str(_comparison_control_ROOT / 'src'))
+_comparison_control_sys.path.insert(0, str(_comparison_control_ROOT / 'scripts'))
+from recursive_horizons.nsc_evolved_incoming_constraints import prepared_response_control as _comparison_control_P
+from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation as _comparison_control_FixedSourcePreparation
+from recursive_horizons.nsc_evolved_incoming_constraints import source_column_matter as _comparison_control_source_column_matter
+from recursive_horizons.nsc_ks_source_envelope import evolve_ks_source_envelope as _comparison_control_evolve_ks_source_envelope, computational_z_grid as _comparison_control_computational_z_grid, usual_axial_support as _comparison_control_usual_axial_support
+from recursive_horizons.nsc_ks_spacetime_variation import chart_coordinates as _comparison_control_chart_coordinates
+from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_bytes as _comparison_control_deterministic_npz_bytes
+from recursive_horizons.nsc_retarded_radial_response import archived_amplitudes as _comparison_control_archived_amplitudes
+_comparison_control_OUTPUT = 'results/development/nsc-ks-envelope-comparison.json'
+_comparison_control_ARTIFACT = 'results/development/artifacts/nsc-ks-envelope-comparison.npz'
+_comparison_control_OWNED = ('scripts/derive_nsc_ks_envelope_comparison.py', 'docs/nsc-ks-envelope-comparison.md')
+_comparison_control_INPUTS = (*_comparison_control_P.INPUTS, 'scripts/derive_nsc_local_prepared_response.py', 'docs/nsc-local-prepared-response.md', 'results/development/nsc-local-cf4-response.json', 'src/recursive_horizons/nsc_ks_source_envelope.py')
+_comparison_control_CAP = 120.0
+_comparison_control_TARGET = 1e-11
+_comparison_control_PG_AGREEMENT = 5e-09
+_comparison_control_BASE_OPTIONS = {'rtol': 2e-12, 'atol': 2e-14, 'max_step': 0.001}
+_comparison_control_TIGHT_OPTIONS = {'rtol': 2e-13, 'atol': 2e-15, 'max_step': 0.0005}
+
+class _comparison_control_BudgetReached(RuntimeError):
+    pass
+
+def _comparison_control_digest(p):
+    candidate = _receipt_Path(p)
+    relative = candidate.relative_to(_comparison_control_ROOT).as_posix() if candidate.is_absolute() else candidate.as_posix()
+    if relative == 'src/recursive_horizons/nsc_local_incoming_family.py':
+        return _original_envelope_family_sha256(_comparison_control_ROOT)
+    return _receipt_source_sha256(_comparison_control_ROOT, relative)
+
+def _original_envelope_family_sha256(root):
+    """Authenticate the receipt's explicitly pinned original family source.
+
+    This older comparison/resolution recipe used the declared source-history
+    pin, while its successor API lives in this module. Default calls still
+    hash current bytes. Numerical output paths never enter this adapter.
+    """
+    from .nsc_frozen_sources import authenticate_source, selected_source_context
+    path = 'src/recursive_horizons/nsc_local_incoming_family.py'
+    if selected_source_context() is None:
+        return _receipt_source_sha256(root, path)
+    context = '09f3faa364ca88b8ff482c413022ce38f40bef0d'
+    expected = '9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b'
+    manifest = _comparison_control_json.loads((root/'archive/source-history/manifest.json').read_text(encoding='utf-8'))
+    if not any(row.get('path') == path and row.get('commit') == context
+               and row.get('sha256') == expected for row in manifest['pins']):
+        raise ValueError('original envelope family source pin changed')
+    authenticate_source(root, path, expected, context=context)
+    return expected
+
+
+def _envelope_successor_source_hashes():
+    from .nsc_frozen_sources import source_sha256
+    root = _comparison_control_ROOT
+    return {path: source_sha256(root, path) for path in (
+        'src/recursive_horizons/nsc_ks_source_envelope.py',
+        'src/recursive_horizons/nsc_evolved_incoming_constraints.py',
+        'docs/nsc-ks-source-envelope.md')}
+
+def _comparison_control_signatures():
+    return {p: _comparison_control_digest(p) for p in (*_comparison_control_OWNED, *_comparison_control_INPUTS)}
+
+def _comparison_control_maximum(x):
+    return float(_comparison_control_np.max(abs(x), initial=0.0))
+
+def _comparison_control_matter(arrays, name, parameters):
+    F, Fz, dF, dFz = (arrays[name + '/' + k] for k in ('F', 'Fz', 'dF', 'dFz'))
+    w = arrays['source/column_weights']
+    C = arrays['source/covariance']
+    return _comparison_control_source_column_matter(F * w, Fz * w, C, dF * w, dFz * w, **parameters)
+
+def _comparison_control_analyze(arrays, meta):
+    rows = {}
+    values = {}
+    checks = {}
+    for name in meta['completed']:
+        value = _comparison_control_matter(arrays, name, meta['parameters'])
+        values[name] = value
+        rows[name] = {'matter': value['action_gradient'].tolist(), 'matter_tangent': value['action_gradient_tangent'].tolist(), 'CPU_seconds': meta['cases'][name]['CPU_seconds'], 'function_evaluations': meta['cases'][name]['function_evaluations'], 'accepted_steps': meta['cases'][name]['accepted_steps'], 'computational_norm_residual': meta['cases'][name]['computational_norm_residual']}
+    ref = _comparison_control_matter(arrays, 'analytic_reference', meta['parameters'])['action_gradient']
+    if 'reference64' in values:
+        drift = _comparison_control_np.max(abs(values['reference64']['action_gradient'] - ref), axis=0)
+        checks['reference_matter_drift'] = drift.tolist()
+        checks['reference_passed'] = bool(_comparison_control_np.max(drift) <= 3e-11)
+    for coarse, fine in (('n64', 'n128'), ('n128', 'n256')):
+        if coarse in values and fine in values:
+            change = _comparison_control_np.max(abs(values[fine]['action_gradient'] - values[coarse]['action_gradient']), axis=0)
+            checks[coarse + '_' + fine] = {'matter_change': change.tolist(), 'passes_indicator': bool(_comparison_control_np.max(change) <= _comparison_control_TARGET)}
+    if 'tight' in values:
+        base = meta['tight_base']
+        change = _comparison_control_np.max(abs(values['tight']['action_gradient'] - values[base]['action_gradient']), axis=0)
+        checks['time_tolerance_change'] = change.tolist()
+        checks['time_indicator_passed'] = bool(_comparison_control_np.max(change) <= _comparison_control_TARGET)
+        pg = _comparison_control_matter(arrays, 'pg_cf4_240', meta['parameters'])
+        delta = _comparison_control_np.max(abs(values['tight']['action_gradient'] - pg['action_gradient']), axis=0)
+        checks['PG_CF4_matter_difference'] = delta.tolist()
+        checks['PG_agreement_indicator_passed'] = bool(_comparison_control_np.max(delta) <= _comparison_control_PG_AGREEMENT)
+        checks['PG_field_difference'] = _comparison_control_maximum(arrays['tight/F'] - arrays['pg_cf4_240/F'])
+        checks['PG_axial_difference'] = _comparison_control_maximum(arrays['tight/Fz'] - arrays['pg_cf4_240/Fz'])
+        checks['PG_tangent_difference'] = _comparison_control_maximum(arrays['tight/dF'] - arrays['pg_cf4_240/dF'])
+        checks['PG_axial_tangent_difference'] = _comparison_control_maximum(arrays['tight/dFz'] - arrays['pg_cf4_240/dFz'])
+        checks['local_matter_correction_max'] = _comparison_control_np.max(abs(values['tight']['action_gradient'] - ref), axis=0).tolist()
+    checks['same_fixed_preparation'] = len({v['preparation'] for v in meta['cases'].values()}) <= 1
+    return {'per_case': rows, 'checks': checks}
+
+def _comparison_control_record(arrays, meta, payload):
+    return {'schema': 'NSC-KS-ENVELOPE-COMPARISON-v1', 'accountable_author': 'Douglas Ek', 'status': 'OPEN: independent prepared-state method comparison; physical local gate uncertified', 'control': {'history_amplitude': _comparison_control_P.ALPHA, 'source_family': '14_1', 'rho_up': meta['rho_up'], 'rho_sigma': 1.0, 'local_interval': 'S(1)+[.12,.18]', 'computational_length': 0.4, 'space_indicator_target': _comparison_control_TARGET, 'time_indicator_target': _comparison_control_TARGET, 'reference_target': 3e-11, 'PG_agreement_indicator': _comparison_control_PG_AGREEMENT, 'base_options': _comparison_control_BASE_OPTIONS, 'tight_options': _comparison_control_TIGHT_OPTIONS}, 'measurements': _comparison_control_analyze(arrays, meta), 'runtime': meta['runtime'], 'scope': {'physical_local_gate': 'OPEN', 'full_source_error': None, 'continuum_error': None, 'between_node_error': None, 'indicators_are_error_bounds': False, 'new_PG_runs': 0, 'new_source_preparation': False, 'source_changed': False, 'periodic_Pi_boundary_condition': False, 'source_energy_used_as_outgoing_momentum': False, 'stress_drift_subtracted': False, 'metric_timestep': False}, 'source_hashes': {p: meta['signature'][p] for p in _comparison_control_OWNED}, 'input_hashes': {p: meta['signature'][p] for p in _comparison_control_INPUTS}, 'reused_artifacts': meta['reused_artifacts'], 'payload': payload, 'reproducer': 'python3 scripts/derive_nsc_ks_envelope_comparison.py --check'}
+
+def _comparison_control_publish(arrays, meta):
+    raw = _comparison_control_deterministic_npz_bytes({**arrays, 'metadata_json': _comparison_control_np.frombuffer(_comparison_control_json.dumps(meta, sort_keys=True).encode(), _comparison_control_np.uint8)})
+    (_comparison_control_ROOT / _comparison_control_ARTIFACT).write_bytes(raw)
+    result = _comparison_control_record(arrays, meta, {'path': _comparison_control_ARTIFACT, 'sha256': _comparison_control_sha256(raw).hexdigest(), 'bytes': len(raw)})
+    (_comparison_control_ROOT / _comparison_control_OUTPUT).write_text(_comparison_control_json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + '\n')
+    return result
+
+def _comparison_control_inputs():
+    records, a, channel = _comparison_control_P.load_inputs()
+    pg = _comparison_control_json.loads((_comparison_control_ROOT / 'results/development/nsc-local-cf4-response.json').read_text())
+    if _comparison_control_digest(pg['payload']['path']) != pg['payload']['sha256']:
+        raise ValueError('stored PG payload changed')
+    with _comparison_control_np.load(_comparison_control_ROOT / pg['payload']['path'], allow_pickle=False) as f:
+        old = {k: f[k] for k in f.files}
+    return (records, a, channel, pg, old)
+
+def _comparison_control_run():
+    if (_comparison_control_ROOT / _comparison_control_OUTPUT).exists() or (_comparison_control_ROOT / _comparison_control_ARTIFACT).exists():
+        raise FileExistsError('existing comparison; use --check')
+    sig = _comparison_control_signatures()
+    records, a, channel, pg, old = _comparison_control_inputs()
+    index = int(_comparison_control_np.flatnonzero(a['x'] >= 1.03)[0])
+    rho_up = float(a['x'][index])
+    initial = _comparison_control_archived_amplitudes(a['x'], a['initial_fields'], a['source/energies'], index).transpose(1, 0, 2).reshape(2, 12)
+    source = _comparison_control_FixedSourcePreparation(a['source/covariance'], a['source/column_weights'], _comparison_control_np.repeat(a['source/energies'], 3))
+    target = a['times'][40:] + _comparison_control_chart_coordinates(1.0)[1]
+    arrays = {'target_z': target, 'initial_canonical_columns': initial, 'source/covariance': source.covariance, 'source/column_weights': source.column_weights, 'source/energies': source.energies}
+    for key, oldkey in (('F', 'reference_columns'), ('Fz', 'reference_axial_columns')):
+        arrays['analytic_reference/' + key] = a[oldkey][40:]
+    arrays['analytic_reference/dF'] = arrays['analytic_reference/dFz'] = _comparison_control_np.zeros((0, len(target), 2, 12), complex)
+    for key in ('F', 'Fz'):
+        arrays['pg_cf4_240/' + key] = old['cf4_240/' + key][160::4]
+    for key in ('dF', 'dFz'):
+        arrays['pg_cf4_240/' + key] = old['cf4_240/' + key][:, 160::4]
+    coeff = _comparison_control_P.coefficients_from_records(records[2], records[3])
+    meta = {'signature': sig, 'completed': [], 'attempted': [], 'cases': {}, 'rho_up': rho_up, 'parameters': {'mass': channel['compact_mass'], 'angular': channel['angular_eigenvalue'], 'axial_scale': coeff['a'], 'radius': coeff['r'], 'multiplicity': channel['copy_count'] * channel['degeneracy'] / 2}, 'reused_artifacts': [records[0]['payload'], pg['payload']]}
+    cpu = _comparison_control_time.process_time()
+    wall = _comparison_control_time.monotonic()
+    cap = False
+
+    def stop(*_):
+        raise _comparison_control_BudgetReached('KS comparison120 CPU-second cap')
+
+    def checkpoint():
+        meta['runtime'] = {'CPU_seconds': _comparison_control_time.process_time() - cpu, 'wall_seconds': _comparison_control_time.monotonic() - wall, 'CPU_cap': _comparison_control_CAP, 'attempted': list(meta['attempted']), 'completed': list(meta['completed']), 'cap_reached': cap}
+        if _comparison_control_signatures() != sig:
+            raise ValueError('comparison owner/input changed')
+        return _comparison_control_publish(arrays, meta)
+
+    def case(name, n, alpha, options, tangents):
+        begin = _comparison_control_time.process_time()
+        meta['attempted'].append(name)
+        result = _comparison_control_evolve_ks_source_envelope(source, initial, _comparison_control_P.family(alpha), _comparison_control_computational_z_grid(n), target, channel['compact_mass'], channel['angular_eigenvalue'], rho_up, axial_support=_comparison_control_usual_axial_support(), tangents=tangents, **options)
+        for key, value in (('F', result.columns), ('Fz', result.axial_columns), ('dF', result.column_tangents), ('dFz', result.axial_tangents)):
+            arrays[name + '/' + key] = value
+        meta['cases'][name] = {'CPU_seconds': _comparison_control_time.process_time() - begin, 'preparation': result.fixed_preparation_digest, 'binding': result.binding.fingerprint, **{k: result.diagnostics[k] for k in ('function_evaluations', 'accepted_steps', 'computational_norm_residual', 'continuum_speed_distance', 'padding', 'global_radius_bound_supplied')}}
+        meta['completed'].append(name)
+        checkpoint()
+        print(name + ' complete CPU ' + str(meta['cases'][name]['CPU_seconds']), flush=True)
+    previous = _comparison_control_signal.signal(_comparison_control_signal.SIGPROF, stop)
+    _comparison_control_signal.setitimer(_comparison_control_signal.ITIMER_PROF, _comparison_control_CAP)
+    try:
+        case('reference64', 64, 0.0, _comparison_control_BASE_OPTIONS, 'zero')
+        case('n64', 64, _comparison_control_P.ALPHA, _comparison_control_BASE_OPTIONS, 'all')
+        case('n128', 128, _comparison_control_P.ALPHA, _comparison_control_BASE_OPTIONS, 'all')
+        if not _comparison_control_analyze(arrays, meta)['checks']['n64_n128']['passes_indicator']:
+            case('n256', 256, _comparison_control_P.ALPHA, _comparison_control_BASE_OPTIONS, 'all')
+            base = 'n256'
+            n = 256
+        else:
+            base = 'n128'
+            n = 128
+        meta['tight_base'] = base
+        case('tight', n, _comparison_control_P.ALPHA, _comparison_control_TIGHT_OPTIONS, 'all')
+    except _comparison_control_BudgetReached:
+        cap = True
+    finally:
+        _comparison_control_signal.setitimer(_comparison_control_signal.ITIMER_PROF, 0)
+        _comparison_control_signal.signal(_comparison_control_signal.SIGPROF, previous)
+    return checkpoint()
+
+def _comparison_control_check():
+    saved = _comparison_control_json.loads((_comparison_control_ROOT / _comparison_control_OUTPUT).read_text())
+    _comparison_control_inputs()
+    if _comparison_control_digest(_comparison_control_ARTIFACT) != saved['payload']['sha256']:
+        raise ValueError('saved envelope artifact changed')
+    with _comparison_control_np.load(_comparison_control_ROOT / _comparison_control_ARTIFACT, allow_pickle=False) as a:
+        arrays = {k: a[k] for k in a.files}
+    meta = _comparison_control_json.loads(arrays['metadata_json'].tobytes())
+    if meta['signature'] != _comparison_control_signatures():
+        raise ValueError('envelope comparison owner/input changed')
+    from .nsc_ks_matter_receipt_replay import require_envelope_record
+    require_envelope_record(saved, _comparison_control_record(arrays, meta, saved['payload']), arrays, meta)
+    return saved
+
+from types import SimpleNamespace as _comparison_control_Namespace
+comparison_control = _comparison_control_Namespace(
+    ARTIFACT=_comparison_control_ARTIFACT,
+    BASE_OPTIONS=_comparison_control_BASE_OPTIONS,
+    BudgetReached=_comparison_control_BudgetReached,
+    CAP=_comparison_control_CAP,
+    FixedSourcePreparation=_comparison_control_FixedSourcePreparation,
+    INPUTS=_comparison_control_INPUTS,
+    OUTPUT=_comparison_control_OUTPUT,
+    OWNED=_comparison_control_OWNED,
+    successor_source_hashes=_envelope_successor_source_hashes,
+    P=_comparison_control_P,
+    PG_AGREEMENT=_comparison_control_PG_AGREEMENT,
+    Path=_comparison_control_Path,
+    ROOT=_comparison_control_ROOT,
+    TARGET=_comparison_control_TARGET,
+    TIGHT_OPTIONS=_comparison_control_TIGHT_OPTIONS,
+    analyze=_comparison_control_analyze,
+    archived_amplitudes=_comparison_control_archived_amplitudes,
+    argparse=_comparison_control_argparse,
+    chart_coordinates=_comparison_control_chart_coordinates,
+    check=_comparison_control_check,
+    computational_z_grid=_comparison_control_computational_z_grid,
+    deterministic_npz_bytes=_comparison_control_deterministic_npz_bytes,
+    digest=_comparison_control_digest,
+    evolve_ks_source_envelope=_comparison_control_evolve_ks_source_envelope,
+    inputs=_comparison_control_inputs,
+    json=_comparison_control_json,
+    matter=_comparison_control_matter,
+    maximum=_comparison_control_maximum,
+    np=_comparison_control_np,
+    os=_comparison_control_os,
+    publish=_comparison_control_publish,
+    record=_comparison_control_record,
+    run=_comparison_control_run,
+    sha256=_comparison_control_sha256,
+    signal=_comparison_control_signal,
+    signatures=_comparison_control_signatures,
+    source_column_matter=_comparison_control_source_column_matter,
+    sys=_comparison_control_sys,
+    time=_comparison_control_time,
+    usual_axial_support=_comparison_control_usual_axial_support,
+)
+
+# Retained executable control: resolution_control
+# Folded from scripts/derive_nsc_ks_envelope_resolution.py at 329ef809; original receipts retain their producer identities.
+import os as _envelope_resolution_control_os
+import argparse as _envelope_resolution_control_argparse
+from hashlib import sha256 as _envelope_resolution_control_sha256
+import json as _envelope_resolution_control_json
+from pathlib import Path as _envelope_resolution_control_Path
+import signal as _envelope_resolution_control_signal
+import sys as _envelope_resolution_control_sys
+import time as _envelope_resolution_control_time
+import numpy as _envelope_resolution_control_np
+from recursive_horizons.nsc_posix import ROOT as _envelope_resolution_control_ROOT
+_envelope_resolution_control_sys.path.insert(0, str(_envelope_resolution_control_ROOT / 'src'))
+_envelope_resolution_control_sys.path.insert(0, str(_envelope_resolution_control_ROOT / 'scripts'))
+from recursive_horizons.nsc_ks_source_envelope import comparison_control as _envelope_resolution_control_C
+from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation as _envelope_resolution_control_FixedSourcePreparation
+from recursive_horizons.nsc_ks_source_envelope import evolve_ks_source_envelope as _envelope_resolution_control_evolve_ks_source_envelope, computational_z_grid as _envelope_resolution_control_computational_z_grid, usual_axial_support as _envelope_resolution_control_usual_axial_support
+from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_bytes as _envelope_resolution_control_deterministic_npz_bytes
+_envelope_resolution_control_OUTPUT = 'results/development/nsc-ks-envelope-resolution.json'
+_envelope_resolution_control_ARTIFACT = 'results/development/artifacts/nsc-ks-envelope-resolution.npz'
+_envelope_resolution_control_OWNED = ('scripts/derive_nsc_ks_envelope_resolution.py', 'docs/nsc-ks-envelope-resolution.md')
+_envelope_resolution_control_INPUTS = (*_envelope_resolution_control_C.OWNED, *_envelope_resolution_control_C.INPUTS, _envelope_resolution_control_C.OUTPUT)
+_envelope_resolution_control_TIGHTER = {'rtol': 5e-14, 'atol': 5e-16, 'max_step': 0.00025}
+_envelope_resolution_control_CAP = 30.0
+
+class _envelope_resolution_control_BudgetReached(RuntimeError):
+    pass
+
+def _envelope_resolution_control_digest(p):
+    candidate = _receipt_Path(p)
+    relative = candidate.relative_to(_envelope_resolution_control_ROOT).as_posix() if candidate.is_absolute() else candidate.as_posix()
+    if relative == 'src/recursive_horizons/nsc_local_incoming_family.py':
+        return _original_envelope_family_sha256(_envelope_resolution_control_ROOT)
+    return _receipt_source_sha256(_envelope_resolution_control_ROOT, relative)
+
+def _envelope_resolution_control_signatures():
+    return {p: _envelope_resolution_control_digest(p) for p in (*_envelope_resolution_control_OWNED, *_envelope_resolution_control_INPUTS)}
+
+def _envelope_resolution_control_analyze(arrays, meta):
+    values = {name: _envelope_resolution_control_C.matter(arrays, name, meta['parameters']) for name in ['previous256', *meta['completed']]}
+    checks = {}
+    for first, second, label in [('previous256', 'n512', 'space'), ('n512', 'tighter512', 'time')]:
+        if second in values and first in values:
+            delta = _envelope_resolution_control_np.max(abs(values[second]['action_gradient'] - values[first]['action_gradient']), axis=0)
+            tangent = _envelope_resolution_control_np.max(abs(values[second]['action_gradient_tangent'] - values[first]['action_gradient_tangent']), axis=(0, 1))
+            checks[label] = {'matter_change': delta.tolist(), 'tangent_change': tangent.tolist(), 'target': 1e-11, 'passes_indicator': bool(_envelope_resolution_control_np.max(delta) <= 1e-11)}
+    return checks
+
+def _envelope_resolution_control_record(arrays, meta, payload):
+    checks = _envelope_resolution_control_analyze(arrays, meta)
+    passed = all((k in checks and checks[k]['passes_indicator'] for k in ('space', 'time')))
+    return {'schema': 'NSC-KS-ENVELOPE-RESOLUTION-v1', 'accountable_author': 'Douglas Ek', 'status': ('PASS' if passed else 'OPEN') + ': local envelope resolution indicators; physical gate OPEN', 'control': {'points': 512, 'max_runs': 2, 'history_amplitude': _envelope_resolution_control_C.P.ALPHA, 'local_interval': 'S(1)+[.12,.18]', 'options': [_envelope_resolution_control_C.TIGHT_OPTIONS, _envelope_resolution_control_TIGHTER]}, 'measurements': checks, 'runtime': meta['runtime'], 'scope': {'physical_local_gate': 'OPEN', 'full_source_error': None, 'continuum_error': None, 'between_node_error': None, 'indicators_are_error_bounds': False, 'source_changed': False, 'new_PG_runs': 0, 'new_source_preparation': False, 'stress_drift_subtracted': False, 'metric_timestep': False}, 'source_hashes': {p: meta['signature'][p] for p in _envelope_resolution_control_OWNED}, 'input_hashes': {p: meta['signature'][p] for p in _envelope_resolution_control_INPUTS}, 'reused_artifacts': meta['reused_artifacts'], 'payload': payload, 'reproducer': 'python3 scripts/derive_nsc_ks_envelope_resolution.py --check'}
+
+def _envelope_resolution_control_publish(arrays, meta):
+    raw = _envelope_resolution_control_deterministic_npz_bytes({**arrays, 'metadata_json': _envelope_resolution_control_np.frombuffer(_envelope_resolution_control_json.dumps(meta, sort_keys=True).encode(), _envelope_resolution_control_np.uint8)})
+    (_envelope_resolution_control_ROOT / _envelope_resolution_control_ARTIFACT).write_bytes(raw)
+    result = _envelope_resolution_control_record(arrays, meta, {'path': _envelope_resolution_control_ARTIFACT, 'sha256': _envelope_resolution_control_sha256(raw).hexdigest(), 'bytes': len(raw)})
+    (_envelope_resolution_control_ROOT / _envelope_resolution_control_OUTPUT).write_text(_envelope_resolution_control_json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + '\n')
+    return result
+
+def _envelope_resolution_control_run():
+    if (_envelope_resolution_control_ROOT / _envelope_resolution_control_OUTPUT).exists() or (_envelope_resolution_control_ROOT / _envelope_resolution_control_ARTIFACT).exists():
+        raise FileExistsError('existing resolution record; use --check')
+    sig = _envelope_resolution_control_signatures()
+    old = _envelope_resolution_control_C.check()
+    with _envelope_resolution_control_np.load(_envelope_resolution_control_ROOT / old['payload']['path'], allow_pickle=False) as f:
+        previous = {k: f[k] for k in f.files}
+    oldmeta = _envelope_resolution_control_json.loads(previous['metadata_json'].tobytes())
+    arrays = {k: v for k, v in previous.items() if k.startswith('source/') or k in ('target_z', 'initial_canonical_columns')}
+    for key in ('F', 'Fz', 'dF', 'dFz'):
+        arrays['previous256/' + key] = previous['tight/' + key]
+    source = _envelope_resolution_control_FixedSourcePreparation(arrays['source/covariance'], arrays['source/column_weights'], arrays['source/energies'])
+    meta = {'signature': sig, 'parameters': oldmeta['parameters'], 'rho_up': oldmeta['rho_up'], 'completed': [], 'attempted': [], 'cases': {}, 'reused_artifacts': [old['payload']]}
+    cpu = _envelope_resolution_control_time.process_time()
+    wall = _envelope_resolution_control_time.monotonic()
+    cap = False
+
+    def stop(*_):
+        raise _envelope_resolution_control_BudgetReached('two512-node checks30 CPU-second cap')
+
+    def checkpoint():
+        meta['runtime'] = {'CPU_seconds': _envelope_resolution_control_time.process_time() - cpu, 'wall_seconds': _envelope_resolution_control_time.monotonic() - wall, 'CPU_cap': _envelope_resolution_control_CAP, 'completed': list(meta['completed']), 'attempted': list(meta['attempted']), 'cap_reached': cap}
+        if _envelope_resolution_control_signatures() != sig:
+            raise ValueError('resolution owner/input changed')
+        return _envelope_resolution_control_publish(arrays, meta)
+    prior = _envelope_resolution_control_signal.signal(_envelope_resolution_control_signal.SIGPROF, stop)
+    _envelope_resolution_control_signal.setitimer(_envelope_resolution_control_signal.ITIMER_PROF, _envelope_resolution_control_CAP)
+    try:
+        for name, options in (('n512', _envelope_resolution_control_C.TIGHT_OPTIONS), ('tighter512', _envelope_resolution_control_TIGHTER)):
+            begin = _envelope_resolution_control_time.process_time()
+            meta['attempted'].append(name)
+            result = _envelope_resolution_control_evolve_ks_source_envelope(source, arrays['initial_canonical_columns'], _envelope_resolution_control_C.P.family(_envelope_resolution_control_C.P.ALPHA), _envelope_resolution_control_computational_z_grid(512), arrays['target_z'], meta['parameters']['mass'], meta['parameters']['angular'], meta['rho_up'], axial_support=_envelope_resolution_control_usual_axial_support(), tangents='all', **options)
+            for key, value in (('F', result.columns), ('Fz', result.axial_columns), ('dF', result.column_tangents), ('dFz', result.axial_tangents)):
+                arrays[name + '/' + key] = value
+            if result.fixed_preparation_digest != oldmeta['cases']['tight']['preparation']:
+                raise ValueError('fixed upstream preparation changed')
+            meta['cases'][name] = {'CPU_seconds': _envelope_resolution_control_time.process_time() - begin, 'preparation': result.fixed_preparation_digest, 'binding': result.binding.fingerprint, 'function_evaluations': result.diagnostics['function_evaluations']}
+            meta['completed'].append(name)
+            checkpoint()
+    except _envelope_resolution_control_BudgetReached:
+        cap = True
+    finally:
+        _envelope_resolution_control_signal.setitimer(_envelope_resolution_control_signal.ITIMER_PROF, 0)
+        _envelope_resolution_control_signal.signal(_envelope_resolution_control_signal.SIGPROF, prior)
+    return checkpoint()
+
+def _envelope_resolution_control_check():
+    saved = _envelope_resolution_control_json.loads((_envelope_resolution_control_ROOT / _envelope_resolution_control_OUTPUT).read_text())
+    _envelope_resolution_control_C.check()
+    if _envelope_resolution_control_digest(_envelope_resolution_control_ARTIFACT) != saved['payload']['sha256']:
+        raise ValueError('resolution payload changed')
+    with _envelope_resolution_control_np.load(_envelope_resolution_control_ROOT / _envelope_resolution_control_ARTIFACT, allow_pickle=False) as f:
+        arrays = {k: f[k] for k in f.files}
+    meta = _envelope_resolution_control_json.loads(arrays['metadata_json'].tobytes())
+    if meta['signature'] != _envelope_resolution_control_signatures():
+        raise ValueError('resolution source/input changed')
+    from .nsc_ks_matter_receipt_replay import require_envelope_record
+    require_envelope_record(saved, _envelope_resolution_control_record(arrays, meta, saved['payload']), arrays, meta)
+    return saved
+
+from types import SimpleNamespace as _envelope_resolution_control_Namespace
+resolution_control = _envelope_resolution_control_Namespace(
+    ARTIFACT=_envelope_resolution_control_ARTIFACT,
+    BudgetReached=_envelope_resolution_control_BudgetReached,
+    C=_envelope_resolution_control_C,
+    CAP=_envelope_resolution_control_CAP,
+    FixedSourcePreparation=_envelope_resolution_control_FixedSourcePreparation,
+    INPUTS=_envelope_resolution_control_INPUTS,
+    OUTPUT=_envelope_resolution_control_OUTPUT,
+    OWNED=_envelope_resolution_control_OWNED,
+    successor_source_hashes=_envelope_successor_source_hashes,
+    Path=_envelope_resolution_control_Path,
+    ROOT=_envelope_resolution_control_ROOT,
+    TIGHTER=_envelope_resolution_control_TIGHTER,
+    analyze=_envelope_resolution_control_analyze,
+    argparse=_envelope_resolution_control_argparse,
+    check=_envelope_resolution_control_check,
+    computational_z_grid=_envelope_resolution_control_computational_z_grid,
+    deterministic_npz_bytes=_envelope_resolution_control_deterministic_npz_bytes,
+    digest=_envelope_resolution_control_digest,
+    evolve_ks_source_envelope=_envelope_resolution_control_evolve_ks_source_envelope,
+    json=_envelope_resolution_control_json,
+    np=_envelope_resolution_control_np,
+    os=_envelope_resolution_control_os,
+    publish=_envelope_resolution_control_publish,
+    record=_envelope_resolution_control_record,
+    run=_envelope_resolution_control_run,
+    sha256=_envelope_resolution_control_sha256,
+    signal=_envelope_resolution_control_signal,
+    signatures=_envelope_resolution_control_signatures,
+    sys=_envelope_resolution_control_sys,
+    time=_envelope_resolution_control_time,
+    usual_axial_support=_envelope_resolution_control_usual_axial_support,
+)

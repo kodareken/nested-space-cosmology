@@ -134,7 +134,7 @@ The same charged angular continuation supplies
 $$
 Z_q(-1)=\frac1{30}-\frac{q^2}{6},\qquad
 Z_{q,\ne0}(0)=-|q|-\frac13,\qquad
-\operatorname{FP}_{s=1}Z_q(s)=4\gamma_E-2H_{|q|}.
+\mathrm{FP}_{s=1}Z_q(s)=4\gamma_E-2H_{|q|}.
 $$
 
 Here $Z_q(s)=4\sum_{\ell=b+1}^\infty\ell(\ell^2-b^2)^{-s}$,
@@ -144,7 +144,7 @@ The finite cylinder density and fourth-order harmonic are
 $$
 C_q(R;\mu)=-\frac{Z_q'(-1)+[\log(\mu^2R^2)+1-\gamma_E]Z_q(-1)}
 {16\pi^2R^4},\qquad
-h_q=\log\mu+\frac18\operatorname{FP}Z_q(1).
+h_q=\log\mu+\frac18\mathrm{FP}Z_q(1).
 $$
 
 For $a=b+1$, $\varrho=(b/a)^2$ and first omitted $J\geq3$, the differentiated
@@ -179,14 +179,14 @@ The band is the negative normal-energy band, rather than the sign of shifted
 coordinate energy. Its gap-zero point is excluded without a denominator
 floor. Coordinate time and spatial Moyal derivatives stay explicit.
 The scalar first correction is
-$\operatorname{Tr}P_1=-m\lambda\partial_zr_K/
+$\mathrm{Tr}P_1=-m\lambda\partial_zr_K/
 [2a_Kr_K^2(m^2+\lambda^2/r_K^2+k^2/a_K^2)^{3/2}]$;
 pointwise trace one and CAR bounds therefore belong to the physical
 covariance, not each truncated symbol. The homogeneous restriction matches
 all 1,904 stored reference blocks and the spatial check covers 63 signed
 families. It creates no new vacuum.
 
-For regular high-momentum jets, set $\mu=1/|k|$, $e=\operatorname{sgn}k$,
+For regular high-momentum jets, set $\mu=1/|k|$, $e=\mathrm{sgn}k$,
 $P_\infty=(I-e\sigma_3)/2$, $b=a[-m\sigma_1+(\lambda/r)\sigma_2]$,
 $b_2=a^2(m^2+\lambda^2/r^2)$ and $s=\sqrt{1+\mu^2b_2}$. Then
 
@@ -220,7 +220,7 @@ $\delta h=U\star\delta H\star U^\dagger+[D,h]_\star
 
 $$
 \left[\delta S_{\rm band}
--\tfrac12\operatorname{Tr}(P\star\delta H+\delta H\star P)\right]_{\rm bulk}=0.
+-\tfrac12\mathrm{Tr}(P\star\delta H+\delta H\star P)\right]_{\rm bulk}=0.
 $$
 
 The only nondecaying primitive is odd in $\lambda$ and cancels in the 30
@@ -234,8 +234,8 @@ retain their exchange terms and finite heat-scheme matching remains open.
 ## Tilted transmitting interface
 
 The weighted endpoint metrics are
-$G_0=\operatorname{diag}(w_i)\otimes I_2$ and
-$G_L=\operatorname{diag}(w_i)\otimes B_L$. Every solution of
+$G_0=\mathrm{diag}(w_i)\otimes I_2$ and
+$G_L=\mathrm{diag}(w_i)\otimes B_L$. Every solution of
 
 $$
 R_I[K]=K^\dagger G_LK-G_0=0

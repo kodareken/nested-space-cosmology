@@ -44,7 +44,7 @@ class RetainedUpstreamArchive:
         value = sha256(path.read_bytes()).hexdigest()
         if expected is not None and value != expected:
             raise ValueError('source archive hash mismatch: '+str(name))
-        self.input_hashes[str(path.relative_to(self.root))] = value
+        self.input_hashes[path.relative_to(self.root).as_posix()] = value
         return path
 
     def _record(self, name, expected=None):

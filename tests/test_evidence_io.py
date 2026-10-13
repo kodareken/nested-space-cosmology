@@ -6,6 +6,8 @@ import ast
 from pathlib import Path
 import errno
 import inspect
+import hashlib
+import json
 import os
 import stat
 import subprocess
@@ -18,7 +20,6 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
-HISTORICAL_IMPORT_BASELINE = "5ec2530c213845bcb2031860da08fdff0b30ef2d"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
@@ -238,13 +239,20 @@ class PathReadTests(unittest.TestCase):
             (root / "one.txt").write_bytes(b"one")
             os.link(root / "one.txt", root / "two.txt")
             (root / "dir").mkdir()
-            os.mkfifo(root / "fifo")
+            if sys.platform == "win32":
+                # A real Windows reparse point is the nonregular filesystem
+                # object available here; POSIX FIFOs are not a Windows feature.
+                os.symlink(root / "dir", root / "special", target_is_directory=True)
+                special = "special"
+            else:
+                os.mkfifo(root / "fifo")
+                special = "fifo"
             with self.assertRaises(UnsafePathError):
                 read_regular_file(root, "two.txt")
             with self.assertRaises(UnsafePathError):
                 read_regular_file(root, "dir")
             with self.assertRaises(UnsafePathError):
-                read_regular_file(root, "fifo")
+                read_regular_file(root, special)
 
     def test_root_symlink_and_byte_bound_are_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
@@ -274,6 +282,20 @@ class PathReadTests(unittest.TestCase):
             parent = root / "parent"
             parent.mkdir()
             (parent / "leaf").write_bytes(b"old")
+            if sys.platform == "win32":
+                calls = 0
+
+                def replace_parent(cut: str) -> None:
+                    nonlocal calls
+                    calls += 1
+                    if calls == 2:
+                        parent.rename(root / "moved")
+
+                with self.assertRaises(UnsafePathError):
+                    read_regular_file(root, "parent/leaf", _fault_hook=replace_parent)
+                self.assertEqual((parent / "leaf").read_bytes(), b"old")
+                self.assertFalse((root / "moved").exists())
+                return
             original_read = os.read
             calls = 0
 
@@ -298,6 +320,29 @@ class PathReadTests(unittest.TestCase):
             nested = root / "keep"
             nested.mkdir()
             (nested / "leaf.txt").write_bytes(b"alpha")
+            if sys.platform == "win32":
+                changed = False
+
+                def replace_leaf(cut: str) -> None:
+                    nonlocal changed
+                    if not changed:
+                        changed = True
+                        (nested / "leaf.txt").unlink()
+                        (nested / "leaf.txt").write_bytes(b"beta")
+
+                with self.assertRaises(UnsafePathError):
+                    read_regular_file(root, "keep/leaf.txt", _fault_hook=replace_leaf)
+                self.assertEqual((nested / "leaf.txt").read_bytes(), b"beta")
+                (nested / "other.txt").write_bytes(b"stable")
+
+                def replace_parent(cut: str) -> None:
+                    nested.rename(root / "moved")
+
+                with self.assertRaises(UnsafePathError):
+                    read_regular_file(root, "keep/other.txt", _fault_hook=replace_parent)
+                self.assertEqual((nested / "other.txt").read_bytes(), b"stable")
+                self.assertFalse((root / "moved").exists())
+                return
             original = os.stat
 
             def swap_leaf(
@@ -378,6 +423,15 @@ class PathReadTests(unittest.TestCase):
             keep = root / "keep"
             keep.mkdir()
             (keep / "leaf.txt").write_bytes(b"old-bytes")
+            if sys.platform == "win32":
+                def replace_parent(cut: str) -> None:
+                    keep.rename(root / "moved")
+
+                with self.assertRaises(UnsafePathError):
+                    read_regular_file(root, "keep/leaf.txt", _fault_hook=replace_parent)
+                self.assertEqual((keep / "leaf.txt").read_bytes(), b"old-bytes")
+                self.assertFalse((root / "moved").exists())
+                return
             original = os.read
             replaced = {"done": False}
 
@@ -838,6 +892,27 @@ class PublicationTests(unittest.TestCase):
     def test_every_nested_directory_is_fsynced_before_publication(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
             root = Path(raw).resolve()
+            if sys.platform == "win32":
+                # Windows has no POSIX directory-fsync descriptor. Its native
+                # barrier is a write-through, same-volume, no-replace move.
+                self.assertEqual(evidence_io._RENAME_FLAG, 0x0008)
+                self.assertIsNotNone(evidence_io._RENAME_FUNC)
+                cuts: list[str] = []
+
+                def observe(cut: str) -> None:
+                    cuts.append(cut)
+                    if cut == "after_file_fsync":
+                        stage = next(root.glob(".terminal.evidence-io-stage-*"))
+                        self.assertEqual((stage / "a/b/value").read_bytes(), b"x")
+                        self.assertFalse((root / "terminal").exists())
+                    elif cut == "after_parent_fsync":
+                        self.assertEqual((root / "terminal/a/b/value").read_bytes(), b"x")
+
+                publish_exclusive_directory(root, "terminal", {"a/b/value": b"x"},
+                                            _fault_hook=observe)
+                self.assertLess(cuts.index("after_file_fsync"), cuts.index("before_publish"))
+                self.assertLess(cuts.index("after_publish"), cuts.index("after_parent_fsync"))
+                return
             synced: set[tuple[int, int]] = set()
             original_fsync = os.fsync
 
@@ -1038,52 +1113,30 @@ class ImportIsolationTests(unittest.TestCase):
         self.assertIn("This module is infrastructure", source)
         self.assertIn("does not classify scientific results", source)
 
-    def test_historical_binders_and_runners_do_not_import_the_utility(self) -> None:
-        listed = subprocess.check_output(
-            [
-                "git",
-                "--no-replace-objects",
-                "--no-optional-locks",
-                "-C",
-                str(ROOT),
-                "ls-tree",
-                "-r",
-                "--name-only",
-                "-z",
-                HISTORICAL_IMPORT_BASELINE,
-                "--",
-                "src",
-                "scripts",
-            ],
-            env=evidence_io._git_environment(),
-        )
-        historical_paths = {
-            item.decode("utf-8")
-            for item in listed.split(b"\0")
-            if item and item.endswith(b".py")
-        }
-        self.assertIn(
-            "src/recursive_horizons/fgc/evolution/tdg10_qa2_pref1_binder.py",
-            historical_paths,
-        )
-        self.assertNotIn("src/recursive_horizons/evidence_io.py", historical_paths)
+    def test_pinned_scientific_sources_do_not_import_the_utility(self) -> None:
+        # These are this NSC repository's preserved source contexts. The
+        # unavailable foreign FGC baseline is not asserted or substituted here.
+        manifest = json.loads((ROOT / "archive/source-history/manifest.json").read_text())
+        self.assertEqual(manifest["schema"], "NSC-PINNED-SOURCE-OBJECTS-v1")
+        self.assertEqual(len(manifest["pins"]), 6)
         offenders: list[str] = []
-        for relative in sorted(historical_paths):
-            path = ROOT / relative
-            archived = ROOT / "archive/pre-closure-2026-09-08" / relative
-            if archived.is_file():
-                path = archived
-            text = path.read_text(encoding="utf-8")
-            if "evidence_io" not in text:
+        for pin in manifest["pins"]:
+            relative = pin["path"]
+            raw = evidence_io.git_read(ROOT, ReadBlob(pin["commit"], relative))
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), pin["sha256"], relative)
+            text = raw.decode("utf-8")
+            self.assertNotIn("evidence_io", text, relative)
+            if not relative.endswith(".py"):
                 continue
-            for name in _imported_modules(path):
-                if name == "recursive_horizons.evidence_io" or name.endswith(
-                    ".evidence_io"
-                ):
-                    offenders.append(relative)
-                    break
-            tree = ast.parse(text, filename=str(path))
+            tree = ast.parse(text, filename=relative)
             for node in ast.walk(tree):
+                if isinstance(node, ast.Import):
+                    if any(alias.name == "recursive_horizons.evidence_io"
+                           or alias.name.endswith(".evidence_io") for alias in node.names):
+                        offenders.append(relative)
+                if (isinstance(node, ast.ImportFrom) and node.module
+                        and node.module.endswith(".evidence_io")):
+                    offenders.append(relative)
                 if isinstance(node, ast.ImportFrom) and node.module in {
                     "recursive_horizons",
                     "recursive_horizons.evidence_io",

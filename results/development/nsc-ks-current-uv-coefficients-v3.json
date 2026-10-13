@@ -1,0 +1,222 @@
+{
+  "C_M_or_physical_gate_from_leading_cancellation": false,
+  "accountable_author": "Douglas Ek",
+  "angular_pairs": {
+    "broken_mu_weighted_h_z_max_abs": 9.512248224614913e-05,
+    "count": 30,
+    "equal_mu_and_same_cutoff": true,
+    "equal_mu_weighted_h_z_max_abs": 0.0
+  },
+  "certificate_from_asymptotic_orders_alone": false,
+  "cpu_seconds_total": 1.4017870000000001,
+  "e_minus2_current": {
+    "A3_solved_componentwise": false,
+    "Sigma_I_momentum": "-h_z",
+    "Sigma_S3_momentum": "-s h_z + 4 Re(conj(l) b)",
+    "action_N2": "mu s delta(h_z) / (2 pi a)",
+    "action_beta2": "-mu delta(h_z) / (2 pi)",
+    "linear_fixed_transfer_e_minus2_zero": "owned separately at the reference for linear response; not a finite-history coincidence identity",
+    "local_delta_r_rho_cancels_in_N": true,
+    "n3": "2 s h_z after T_s transport and normalized z-homogeneous upstream",
+    "raw_expansion_still_contains_n3": true
+  },
+  "existing_source_ad759_evaluation_changed": false,
+  "gaps": {
+    "complete_e_minus2_N_beta_coefficient": null,
+    "e_minus3_paired_C4": null,
+    "finite_history_UV_cancellation": "only the leading 1/Lambda algebraic coincidence coefficient; C4, thermal remainder and upstream error stay unbounded",
+    "higher_A_j_beyond_n3": null,
+    "leading_paired_e_minus2_vacuum_coefficient": "cancels for original equal-mu same-cutoff angular pairs after n3=2 s h_z and N local delta(r_rho) cancellation; not a C_M bound",
+    "numerical_C_M": null,
+    "physical_local_gate": "OPEN",
+    "source_cutoff_tail_at_160_320": null,
+    "thermal_coherent_source_remainder": null,
+    "upstream_normalization_error": null
+  },
+  "historical_context": {
+    "commit": "b7d275d110b93b14724b5cd868114bb0c8f09949",
+    "predecessor_record": "results/development/nsc-ks-current-uv-coefficients-v2.json",
+    "predecessor_schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v2",
+    "predecessor_sha256": "de8e67e4cd89eb0331aff4e18d577220b83ddca94c0c6bac6d0c5a0fe32585df"
+  },
+  "identities": {
+    "A0": "e_s",
+    "Im_T_s_major_A2_pure_imag_major_A1": "-m ell/4 (s a^2 r_rho + r_z)/r^2",
+    "T_s": "T_s = d_rho - s/a^2 d_z",
+    "T_s_major_A1": "-i/2 (m^2 + ell^2/r^2)",
+    "V": "V=-m S1 + ell S2 / r",
+    "dummy_symbol_L0_A_j": false,
+    "jet_residuals": {
+      "V_definition": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "s+1/A0_is_e_s": [
+        "0",
+        "0"
+      ],
+      "s+1/Im_T_s_major_A2_odd_in_ell": "0",
+      "s+1/Im_T_s_major_A2_parent": "0",
+      "s+1/Im_T_s_major_A2_vanishes_for_ell_0": "0",
+      "s+1/Im_T_s_major_A2_vanishes_for_m_0": "0",
+      "s+1/L0_telescope_M2": [
+        "0",
+        "0"
+      ],
+      "s+1/Pi_minus_A0": [
+        "0",
+        "0"
+      ],
+      "s+1/Pi_s_L0_A1_is_transport_defect": "0",
+      "s+1/Pi_s_L0_A2_is_transport_defect": "0",
+      "s+1/Re_major_A1_normalization": "0",
+      "s+1/T_s_major_A1_parent": "0",
+      "s+1/minor_A1_from_L0_A0": "0",
+      "s+1/minor_A1_matches_P1": "0",
+      "s+1/minor_A1_parent": "0",
+      "s+1/minor_A2_recurrence": "0",
+      "s+1/minor_A3_depends_on_major_A2": "depends",
+      "s+1/order_e_minus1_density": "0",
+      "s-1/A0_is_e_s": [
+        "0",
+        "0"
+      ],
+      "s-1/Im_T_s_major_A2_odd_in_ell": "0",
+      "s-1/Im_T_s_major_A2_parent": "0",
+      "s-1/Im_T_s_major_A2_vanishes_for_ell_0": "0",
+      "s-1/Im_T_s_major_A2_vanishes_for_m_0": "0",
+      "s-1/L0_telescope_M2": [
+        "0",
+        "0"
+      ],
+      "s-1/Pi_minus_A0": [
+        "0",
+        "0"
+      ],
+      "s-1/Pi_s_L0_A1_is_transport_defect": "0",
+      "s-1/Pi_s_L0_A2_is_transport_defect": "0",
+      "s-1/Re_major_A1_normalization": "0",
+      "s-1/T_s_major_A1_parent": "0",
+      "s-1/minor_A1_from_L0_A0": "0",
+      "s-1/minor_A1_parent": "0",
+      "s-1/minor_A2_recurrence": "0",
+      "s-1/minor_A3_depends_on_major_A2": "depends",
+      "s-1/order_e_minus1_density": "0"
+    },
+    "minor_A1": "a/2 (m - i s ell / r)",
+    "sigma_residuals": {
+      "s+1/Im_Ts_major_A2_odd_ell": "0",
+      "s+1/N_density_q_channel_vanishes": "0",
+      "s+1/N_e2_bracket_is_minus_s_hz_over_a": "0",
+      "s+1/Re_conj_l_b_equals_minus_a2_over_2_Ts_h": "0",
+      "s+1/Re_conj_l_b_from_Tminus_l": "0",
+      "s+1/Sigma_I_momentum_is_minus_hz": "0",
+      "s+1/Sigma_Im_conj_l_lz": "0",
+      "s+1/Sigma_S3_momentum": "0",
+      "s+1/Ts_n3_minus_2s_Ts_hz_after_recurrence": "0",
+      "s+1/continuity_e_minus3_is_Ts_n3_plus_4s_a2_dz_Re": "0",
+      "s+1/local_delta_Re_conj_l_b": "0",
+      "s+1/trV_rho2_plus_4_a_Re_conj_l_b": "0",
+      "s-1/Im_Ts_major_A2_odd_ell": "0",
+      "s-1/N_density_q_channel_vanishes": "0",
+      "s-1/N_e2_bracket_is_minus_s_hz_over_a": "0",
+      "s-1/Re_conj_l_b_equals_minus_a2_over_2_Ts_h": "0",
+      "s-1/Re_conj_l_b_from_Tminus_l": "0",
+      "s-1/Sigma_I_momentum_is_minus_hz": "0",
+      "s-1/Sigma_Im_conj_l_lz": "0",
+      "s-1/Sigma_S3_momentum": "0",
+      "s-1/Ts_n3_minus_2s_Ts_hz_after_recurrence": "0",
+      "s-1/continuity_e_minus3_is_Ts_n3_plus_4s_a2_dz_Re": "0",
+      "s-1/local_delta_Re_conj_l_b": "0",
+      "s-1/trV_rho2_plus_4_a_Re_conj_l_b": "0"
+    }
+  },
+  "input_hashes": {
+    "docs/nsc-source-cutoff-bridge.md": "4464afb826d57314657771d49d3ae5b6515fe4a3cd7e03e6372383c0560a9a33",
+    "results/development/nsc-ks-current-uv-coefficients-v2.json": "de8e67e4cd89eb0331aff4e18d577220b83ddca94c0c6bac6d0c5a0fe32585df",
+    "results/development/nsc-ks-cutoff-bridge-control.json": "04c376aa9ce588129ae7b6890a2689a586a05cc110703acb300b49699143b07e",
+    "results/development/nsc-ks-gate-history-lm-broyden.json": "a0f49becfac369bea8c6b444ab8bbeaf46566089d3a47846a76cc2012e15f40f",
+    "results/development/nsc-ks-source-inventory.json": "5e08961ff211febf0c0653be9b758be67d32846b03b7251979dd1ab674accedf",
+    "src/recursive_horizons/nsc_common_subtracted_ks_source.py": "e96a00d9a83c9e7458602a7d9fef81416a9c66a4cf230f6fb111b89651a98e0a",
+    "src/recursive_horizons/nsc_incoming_fixed_transfer.py": "035bbe460bac17fe8a4898747f357ca6f994317c8d16cbb758ea65a47b803dfb",
+    "src/recursive_horizons/nsc_ks_chebyshev_jet_bound.py": "9994f3fb4e1762b58157ef0077260bddedec2ae36fea44dc84861021620be520",
+    "src/recursive_horizons/nsc_ks_linear_uv_contractions.py": "80ff3095f3d4f48a59c6109f264770a753acd0e2c954c977dee62a5f06c6b88f"
+  },
+  "leading_paired_e_minus2_cancels": true,
+  "new_action_term": false,
+  "physical_local_gate": "OPEN: leading paired e^{-2} vacuum coefficient identified under original equal-mu same-cutoff angular pairs; C_M, C4, thermal remainder, upstream error and the local gate remain unbounded",
+  "pilot": {
+    "angular": 2.23606797749979,
+    "certified_quadrature_error_bound": null,
+    "cpu_seconds": 0.07856099999999988,
+    "cpu_target_seconds": 120.0,
+    "field_or_source_evolutions": 0,
+    "gauss_48_minus_64_max_abs": 6.561845619819373e-11,
+    "gauss_nodes": 48,
+    "h_z": [
+      [
+        -3.170749408204971e-05,
+        -1.511720965392542e-05,
+        -5.364463823228336e-06
+      ],
+      [
+        -1.7529581350432642e-05,
+        -4.189567682027724e-06,
+        -2.887998242940939e-05
+      ]
+    ],
+    "indicator_only": true,
+    "is_full_e_minus2_coefficient": false,
+    "mass": 1.0,
+    "numerical_C_M": null,
+    "profile_identity": "0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0",
+    "quadrature_n_nodes": 144,
+    "reference_h_z_max_abs": 0.0,
+    "rho_up": 1.0300000000000002,
+    "source_signs": [
+      1,
+      -1
+    ],
+    "z": [
+      1.1768780671724792,
+      1.2068780671724793,
+      1.2368780671724793
+    ]
+  },
+  "reproducer": "python3 scripts/derive_nsc_ks_current_uv_coefficient_control_v2.py --check",
+  "schema": "NSC-KS-CURRENT-UV-COEFFICIENTS-v3",
+  "source_hashes": {
+    "docs/nsc-ks-current-uv-coefficients-v2.md": "b80bed2acebfce627bfd5c9612afe9095fc85dbfeccfdf52499ee99de93c5b34",
+    "scripts/derive_nsc_ks_current_uv_coefficient_control_v2.py": "7a8c46476ad5e2fb36007bad6473a8c0f200a2b1702245ef83485e8d72ab70e1",
+    "src/recursive_horizons/nsc_ks_finite_history_uv_coefficients.py": "cf05d38d4862280b6a9fc161ea361c771cc25d70739685337aa7b291cc45f1ff",
+    "tests/test_nsc_ks_finite_history_uv_coefficients.py": "c84e24af47ff8c4f323c5005b33ddcb760ec2bbad44cb1c464a58d98f557004e"
+  },
+  "status": "OPEN: leading paired e^{-2} vacuum coefficient cancels for original equal-mu same-cutoff angular pairs; C_M, C4, thermal remainder and local gate unbounded",
+  "upstream": {
+    "A0": "e_s, real positive major",
+    "P1_match": "s=+1 minor A1 equals the off-diagonal E>0 projector coefficient P1",
+    "Re_major_A1": 0,
+    "history_flat_at_upstream": true,
+    "major_A1": 0,
+    "minor_A1": "a/2 (m - i s ell / r) at the reference radius",
+    "normalization": "positive real major (1+|v|^2)^{-1/2} at rho_up; phase is then fixed by T_s major A1 = -i/2 Q along the incoming characteristic",
+    "physical_source_renormalized": false,
+    "s_minus_uses_e_recurrence_not_positive_energy_P0": true
+  },
+  "vertices": {
+    "N_density": "V=-m S1 + ell S2 / r",
+    "N_momentum": "S3/a",
+    "action_sign": "minus once, as in source_column_matter",
+    "beta_density": 0,
+    "beta_momentum": "-I",
+    "measure": "de/(2 pi) as in the source-cutoff edge",
+    "numerical_residuals": {
+      "N_density": 0.0,
+      "N_momentum": 0.0,
+      "beta_density": 0.0,
+      "beta_momentum": 0.0
+    }
+  }
+}

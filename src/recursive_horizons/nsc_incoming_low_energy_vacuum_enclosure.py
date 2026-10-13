@@ -202,3 +202,141 @@ def replay(payload):
             'endpoint_bridge_projector_error_upper':describe(bridge),'total_projector_error_upper':describe(total),
             'strict_Re_P01_above_one_quarter':bool(_lo(enclosed)>mp.mpf(1)/4),
             'lossless_step_replay_residual':0.,'column_normalized':False}
+
+from pathlib import Path as _receipt_Path
+from .nsc_frozen_sources import selected_source_sha256 as _receipt_source_sha256
+
+# Retained executable control: vacuum_control
+# Folded from scripts/derive_nsc_incoming_low_energy_vacuum_enclosure.py at 329ef809; original receipts retain their producer identities.
+import argparse as _vacuum_control_argparse
+import gzip as _vacuum_control_gzip
+from hashlib import sha256 as _vacuum_control_sha256
+import json as _vacuum_control_json
+from pathlib import Path as _vacuum_control_Path
+import signal as _vacuum_control_signal
+import sys as _vacuum_control_sys
+import time as _vacuum_control_time
+import numpy as _vacuum_control_np
+from recursive_horizons.nsc_posix import ROOT as _vacuum_control_ROOT
+_vacuum_control_sys.path.insert(0, str(_vacuum_control_ROOT / 'src'))
+from recursive_horizons.nsc_incoming_low_energy_vacuum_enclosure import ENERGY as _vacuum_control_ENERGY, STEPS as _vacuum_control_STEPS, PRECISION as _vacuum_control_PRECISION, propagate as _vacuum_control_propagate, replay as _vacuum_control_replay
+_vacuum_control_OUTPUT = 'results/development/nsc-incoming-low-energy-vacuum-enclosure.json'
+_vacuum_control_SOURCES = ('src/recursive_horizons/nsc_incoming_low_energy_vacuum_enclosure.py', 'scripts/derive_nsc_incoming_low_energy_vacuum_enclosure.py', 'tests/test_nsc_incoming_low_energy_vacuum_enclosure.py', 'docs/nsc-incoming-low-energy-vacuum-enclosure.md')
+_vacuum_control_INPUTS = ('results/development/nsc-mode-resolved-cauchy-state.json', 'results/development/nsc-compact-matched-restart.json', 'results/development/nsc-pg-ctp-mode-jets.json', 'src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py', 'src/recursive_horizons/nsc_incoming_validated_vacuum_propagation.py', 'src/recursive_horizons/nsc_incoming_source_quadrature_bound.py', 'src/recursive_horizons/nsc_paired_horizon_preparation.py', 'src/recursive_horizons/nsc_pg_massive_modes.py', 'src/recursive_horizons/nsc_unruh_state.py', 'src/recursive_horizons/nsc_lorentzian.py')
+_vacuum_control_CPU_CAP = 120.0
+
+def _vacuum_control_digest(path):
+    candidate = _receipt_Path(path)
+    relative = candidate.relative_to(_vacuum_control_ROOT).as_posix() if candidate.is_absolute() else candidate.as_posix()
+    return _receipt_source_sha256(_vacuum_control_ROOT, relative)
+
+def _vacuum_control_signature():
+    return {p: _vacuum_control_digest(p) for p in (*_vacuum_control_SOURCES, *_vacuum_control_INPUTS)}
+
+def _vacuum_control_inputs():
+    channel = _vacuum_control_json.loads((_vacuum_control_ROOT / _vacuum_control_INPUTS[0]).read_text())['channels'][14]
+    config = _vacuum_control_json.loads((_vacuum_control_ROOT / _vacuum_control_INPUTS[1]).read_text())['scattering_provenance']['config']
+    reference = _vacuum_control_json.loads((_vacuum_control_ROOT / _vacuum_control_INPUTS[2]).read_text())
+    spec = reference['payload']
+    if _vacuum_control_digest(spec['path']) != spec['sha256']:
+        raise ValueError('selected source-mode artifact changed')
+    with _vacuum_control_np.load(_vacuum_control_ROOT / spec['path'], allow_pickle=False) as a:
+        if float(a['14_1/energies'][3]) != _vacuum_control_ENERGY or a['14_1/mass'].item() != channel['compact_mass'] or a['14_1/angular'].item() != channel['angular_eigenvalue']:
+            raise ValueError('selected energy/channel changed')
+    return (channel, config, spec)
+
+def _vacuum_control_make_record(payload, path):
+    if payload['signature'] != _vacuum_control_signature():
+        raise ValueError('projector proof/input source changed')
+    channel, config, spec = _vacuum_control_inputs()
+    if payload['channel'] != channel or payload['source_config'] != config or payload['selected_source_artifact'] != spec:
+        raise ValueError('physical/source parameter binding changed')
+    if payload.get('budget_exceeded'):
+        result = None
+        status = 'OPEN: fixed CPU budget exhausted before certificate'
+    else:
+        result = _vacuum_control_replay(payload)
+        if result != payload['result']:
+            raise ValueError('directed projector error replay differs')
+        status = 'PASS: directed physical affine-vacuum Re(P01)>1/4' if result['strict_Re_P01_above_one_quarter'] else 'OPEN: fixed directed enclosure does not establish Re(P01)>1/4'
+    return {'schema': 'NSC-INCOMING-LOW-ENERGY-VACUUM-ENCLOSURE-v1', 'accountable_author': 'Douglas Ek', 'status': status, 'group': 14, 'angular_sign': 1, 'energy': _vacuum_control_ENERGY, 'channel': channel, 'source_config': config, 'result': result, 'geometry': payload.get('geometry'), 'initialization': payload.get('tail'), 'endpoint_bridge': payload.get('endpoint_bridge'), 'algorithm': {'steps': _vacuum_control_STEPS, 'precision': _vacuum_control_PRECISION, 'point_column_initial': [1, 0], 'state_wrapping': False, 'column_normalization': False, 'error_recurrence': 'epsilon_next=epsilon+step*sup(norm(H-Hmid))*norm(point_column)+recenter_radius', 'projector_error': 'affine_tail+(1+norm(point_column))*column_error+endpoint_bridge', 'replay': 'directed sum, point chain and coordinate/error accounting; no repeat geometry propagation'}, 'runtime': payload['runtime'], 'selected_source_artifact': spec, 'scope': {'physical_affine_dominant_vacuum_component': True, 'coherent_source_replaced': False, 'coherent_thermal_remainder': 'separate exact owner; not discarded or included in this vacuum projector error', 'archived_modes_or_state_normalized_or_changed': False, 'Jost_phase_changed': False, 'source_occupation_kappa_changed': False, 'group32_bound_applied_to_low_energy': False, 'source_precision_3e_minus_11_claimed': False, 'physical_initial_data_or_metric_evolution': False, 'full_C0_matching_or_extended_stationarity': 'OPEN', 'publication': False}, 'source_hashes': {p: payload['signature'][p] for p in _vacuum_control_SOURCES}, 'input_hashes': {p: payload['signature'][p] for p in _vacuum_control_INPUTS}, 'payload': {'path': path.relative_to(_vacuum_control_ROOT).as_posix(), 'sha256': _vacuum_control_sha256(path.read_bytes()).hexdigest(), 'bytes': path.stat().st_size}, 'reproducer': 'python3 scripts/derive_nsc_incoming_low_energy_vacuum_enclosure.py --check'}
+
+class _vacuum_control_CPUBudget(RuntimeError):
+    pass
+
+def _vacuum_control_run():
+    before = _vacuum_control_signature()
+    channel, config, spec = _vacuum_control_inputs()
+    cpu = _vacuum_control_time.process_time()
+    wall = _vacuum_control_time.monotonic()
+    completed = 0
+
+    def progress(count):
+        nonlocal completed
+        completed = count
+        print(f'{count}/{_vacuum_control_STEPS} directed midpoint cells; CPU {_vacuum_control_time.process_time() - cpu:.2f}s', flush=True)
+
+    def stop(signum, frame):
+        raise _vacuum_control_CPUBudget('fixed120CPU-second budget exhausted')
+    prior = _vacuum_control_signal.signal(_vacuum_control_signal.SIGPROF, stop)
+    _vacuum_control_signal.setitimer(_vacuum_control_signal.ITIMER_PROF, _vacuum_control_CPU_CAP)
+    try:
+        payload = _vacuum_control_propagate(channel, config, progress=progress)
+    except _vacuum_control_CPUBudget:
+        payload = {'budget_exceeded': True, 'steps_completed_at_last_checkpoint': completed, 'channel': channel, 'source_config': config}
+    finally:
+        _vacuum_control_signal.setitimer(_vacuum_control_signal.ITIMER_PROF, 0)
+        _vacuum_control_signal.signal(_vacuum_control_signal.SIGPROF, prior)
+    if _vacuum_control_signature() != before:
+        raise ValueError('proof/input source changed during production')
+    payload.update(signature=before, selected_source_artifact=spec, runtime={'CPU_seconds': _vacuum_control_time.process_time() - cpu, 'wall_seconds': _vacuum_control_time.monotonic() - wall, 'CPU_cap_seconds': _vacuum_control_CPU_CAP, 'budget_exceeded': bool(payload.get('budget_exceeded'))})
+    raw = _vacuum_control_json.dumps(payload, sort_keys=True, separators=(',', ':'), allow_nan=False).encode()
+    compressed = _vacuum_control_gzip.compress(raw, compresslevel=6, mtime=0)
+    h = _vacuum_control_sha256(compressed).hexdigest()
+    path = _vacuum_control_ROOT / f'results/development/artifacts/nsc-incoming-low-energy-vacuum-enclosure.{h}.json.gz'
+    path.write_bytes(compressed)
+    record = _vacuum_control_make_record(payload, path)
+    (_vacuum_control_ROOT / _vacuum_control_OUTPUT).write_text(_vacuum_control_json.dumps(record, indent=2, sort_keys=True, allow_nan=False) + '\n')
+    return record
+
+def _vacuum_control_check():
+    old = _vacuum_control_json.loads((_vacuum_control_ROOT / _vacuum_control_OUTPUT).read_text())
+    spec = old['payload']
+    path = _vacuum_control_ROOT / spec['path']
+    if _vacuum_control_digest(spec['path']) != spec['sha256']:
+        raise ValueError('directed proof artifact changed')
+    payload = _vacuum_control_json.loads(_vacuum_control_gzip.decompress(path.read_bytes()))
+    record = _vacuum_control_make_record(payload, path)
+    if record != old:
+        raise ValueError('directed projector receipt differs')
+    return record
+
+from types import SimpleNamespace as _vacuum_control_Namespace
+vacuum_control = _vacuum_control_Namespace(
+    CPUBudget=_vacuum_control_CPUBudget,
+    CPU_CAP=_vacuum_control_CPU_CAP,
+    ENERGY=_vacuum_control_ENERGY,
+    INPUTS=_vacuum_control_INPUTS,
+    OUTPUT=_vacuum_control_OUTPUT,
+    PRECISION=_vacuum_control_PRECISION,
+    Path=_vacuum_control_Path,
+    ROOT=_vacuum_control_ROOT,
+    SOURCES=_vacuum_control_SOURCES,
+    STEPS=_vacuum_control_STEPS,
+    argparse=_vacuum_control_argparse,
+    check=_vacuum_control_check,
+    digest=_vacuum_control_digest,
+    gzip=_vacuum_control_gzip,
+    inputs=_vacuum_control_inputs,
+    json=_vacuum_control_json,
+    make_record=_vacuum_control_make_record,
+    np=_vacuum_control_np,
+    propagate=_vacuum_control_propagate,
+    replay=_vacuum_control_replay,
+    run=_vacuum_control_run,
+    sha256=_vacuum_control_sha256,
+    signal=_vacuum_control_signal,
+    signature=_vacuum_control_signature,
+    sys=_vacuum_control_sys,
+    time=_vacuum_control_time,
+)

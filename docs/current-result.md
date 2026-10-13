@@ -331,7 +331,7 @@ width $2$.
 The driver, episode note and driver tests now include
 `sat_norm_ledger` with twice the raw SAT coefficient. The saved
 paired run is archived at
-[rn-first-infall-pilot-2026-10-04](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/)
+[rn-first-infall-pilot-2026-10-04](https://doi.org/10.5281/zenodo.23090015)
 with [receipt.json](https://doi.org/10.5281/zenodo.23090015),
 sha256 `e3e8226f7d748ea0a62068c4efa37a7ec9e3d5ff6bd3f4923a9536dd4d77f130`.
 The wrapper `nsc_rn_pilot_march.py` is

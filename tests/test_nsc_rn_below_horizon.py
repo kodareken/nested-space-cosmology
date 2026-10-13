@@ -19,7 +19,7 @@ import pytest
 LAB = Path(__file__).resolve().parents[1]
 DEVELOPMENT = LAB / "results/development"
 RECORD = DEVELOPMENT / "nsc-rn-below-horizon-v1.json"
-NOTE = LAB / "docs/nsc-rn-below-horizon.md"
+NOTE = LAB / "docs/nsc-rn-geometry-map.md"
 SOURCE = LAB / "src/recursive_horizons/nsc_rn_source.py"
 
 
@@ -89,7 +89,9 @@ class TestThereAreTwoZeroes:
             assert entry["positive_below_inner_horizon"]
 
     def test_this_is_why_every_reduction_reported_one(self):
-        assert "reported exactly one zero" in NOTE.read_text(encoding="utf-8")
+        note = NOTE.read_text(encoding="utf-8")
+        assert "Only the outermost zero" in note
+        assert "guarded domain" in note
 
 
 class TestNothingWasRelaxed:
@@ -113,5 +115,5 @@ class TestScope:
 
     def test_it_read_the_reference_model_only(self):
         note = NOTE.read_text(encoding="utf-8")
-        assert "No station payloads, no time step, no marching" in note.replace(
-            chr(10), " ")
+        assert "no station payloads, no time step, no marching" in note.replace(
+            chr(10), " ").lower()

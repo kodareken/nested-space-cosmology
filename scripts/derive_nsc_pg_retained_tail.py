@@ -23,6 +23,7 @@ from recursive_horizons.nsc_paired_horizon_preparation import PairedHorizonSeedM
 from recursive_horizons.nsc_pg_tail_packets import MassiveTailPackets
 from recursive_horizons.nsc_pg_tail_series import EndpointTailSeries
 from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_bytes
+from recursive_horizons.provenance import resolve_pinned_source_bytes
 
 OUTPUT='results/development/nsc-pg-retained-tail.json'
 PHYSICAL_SOURCES=(
@@ -229,7 +230,20 @@ def prepare(workers=2):
                       'groups_requiring_320':need_refine,'open_families':len(open_families)},indent=2))
     return path,arrays,metadata
 
-def make_record(path,arrays,metadata):
+def make_record(path,arrays,metadata,*,source_context=None,source_hashes=None):
+    """Recombine local numeric inputs with current or explicitly pinned sources."""
+    if source_context is None:
+        if source_hashes is not None:
+            raise ValueError('recorded source hashes require an explicit original context')
+        authenticated_sources={p:sha(p) for p in RECORD_SOURCES}
+    else:
+        if set(source_hashes or {})!=set(RECORD_SOURCES):
+            raise ValueError('recorded source hash keys differ from retained-tail contract')
+        authenticated_sources={
+            p:hashlib.sha256(resolve_pinned_source_bytes(
+                ROOT,p,source_hashes[p],commit=source_context,
+            )).hexdigest() for p in RECORD_SOURCES
+        }
     open_families=metadata['open_families']
     passed=not open_families
     status=('PASS: tail-only positive-energy high-energy inputs for 31 retained massive groups '
@@ -239,9 +253,9 @@ def make_record(path,arrays,metadata):
     record={'schema':'NSC-PG-RETAINED-TAIL-v1',
             'status':status,
             'accountable_author':'Douglas Ek',
-            'source_hashes':{p:sha(p) for p in RECORD_SOURCES},
+            'source_hashes':authenticated_sources,
             'input_hashes':{p:sha(p) for p in INPUTS},
-            'payload':{'path':str(path.relative_to(ROOT)),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
+            'payload':{'path':path.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
                        'bytes':path.stat().st_size},
             'locked_inputs':metadata['locked_inputs'],
             'precision_audit':{'evidence':'docs/nsc-pg-tail-moment-audit.json','tables':29,'maximum_numerical_change':0.0,'audit_decimal_precision':50,'future_execution':'separate processes or explicit serial mode; no thread fallback'},
@@ -324,11 +338,17 @@ def verify_arrays(arrays,metadata,state):
     if metadata['signed_fold'] or metadata['full_covariance_assigned']:
         raise ValueError('tail artifact must not assign a folded covariance')
 
-def authenticate(path,arrays,metadata):
+def authenticate(path,arrays,metadata,*,source_context=None):
     state,_,locked=context()
     if locked!=metadata['locked_inputs']:raise ValueError('locked A/Omega/zeta/V_full inputs changed')
     for name,expected in metadata['source_hashes'].items():
-        if sha(name)!=expected:raise ValueError('physical input dependency changed: '+name)
+        if source_context is None:
+            actual=sha(name)
+        else:
+            actual=hashlib.sha256(resolve_pinned_source_bytes(
+                ROOT,name,expected,commit=source_context,
+            )).hexdigest()
+        if actual!=expected:raise ValueError('physical input dependency changed: '+name)
     verify_arrays(arrays,metadata,state)
 
 def main():
@@ -338,13 +358,19 @@ def main():
     parser.add_argument('--input')
     parser.add_argument('--record',action='store_true')
     parser.add_argument('--check',action='store_true')
+    parser.add_argument('--source-context',help='immutable original commit for source authentication during --check')
     args=parser.parse_args()
     if args.workers>2:raise ValueError('at most 2 numerical workers')
+    if args.source_context and not args.check:
+        raise ValueError('an original source context is only available for read-only --check')
     if args.check:
         stored=json.loads((ROOT/OUTPUT).read_text())
         path=ROOT/stored['payload']['path'];arrays,metadata,digest=load_artifact(path)
-        authenticate(path,arrays,metadata)
-        record,_=make_record(path,arrays,metadata)
+        authenticate(path,arrays,metadata,source_context=args.source_context)
+        record,_=make_record(
+            path,arrays,metadata,source_context=args.source_context,
+            source_hashes=stored['source_hashes'] if args.source_context else None,
+        )
         if stored['payload']['sha256']!=digest:raise ValueError('stored payload hash differs')
         if stored!=json.loads(json.dumps(record,sort_keys=True)):
             raise ValueError('stored tail record differs from authenticated recombination')

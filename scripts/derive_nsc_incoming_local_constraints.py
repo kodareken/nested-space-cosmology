@@ -38,6 +38,8 @@ INPUTS = (
 )
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def make_record():
     owners = make_owners()
     checks = {
@@ -55,7 +57,7 @@ def make_record():
     })
     if max(maxima.values()) > 3e-11:
         raise ArithmeticError('new local-force verification exceeded 3e-11')
-    sha = lambda path: hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
+    sha = lambda path: selected_source_sha256(ROOT, path)
     return {
         'schema': 'NSC-INCOMING-LOCAL-CONSTRAINTS-v1',
         'accountable_author': 'Douglas Ek',

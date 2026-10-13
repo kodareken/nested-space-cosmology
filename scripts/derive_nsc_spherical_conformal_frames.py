@@ -21,7 +21,7 @@ for _name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "NUM
 import numpy as np
 from dataclasses import replace
 import derive_nsc_spherical_conformal_episode as episode
-from recursive_horizons import nsc_regional_energy_exchange as regional
+from recursive_horizons.nested import energy_exchange as regional
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
 from recursive_horizons.nsc_spherical_coupling import CauchyState, _combine, source_from_columns
 

@@ -15,7 +15,7 @@ import os
 from pathlib import Path
 
 LAB = Path(__file__).resolve().parents[1]
-ROOT = LAB.parent
+ROOT = LAB
 os.environ.setdefault("MPLCONFIGDIR", str(ROOT / ".build/nsc-nested-parent-child-figure/mpl"))
 
 import matplotlib

@@ -9,7 +9,7 @@ The construction does not assert a regular spherical centre, a horizon
 junction, a new spacetime manifold, or an eternal continuation.
 
 The method reuses the
-[finite inheritance theorem](../../docs/nsc-nested-qualities.md),
+[finite inheritance theorem](nsc-nested-qualities.md),
 [spherical action](nsc-spherical-action.md),
 [direct source](https://doi.org/10.5281/zenodo.23090015), and
 [conformal variation](https://doi.org/10.5281/zenodo.23090015).

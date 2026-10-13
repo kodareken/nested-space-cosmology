@@ -32,6 +32,9 @@ from recursive_horizons.nsc_ks_finite_history_uv_remainder import (
 from recursive_horizons.nsc_local_incoming_family import LocalIncomingFamily
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_massless_reductions_and_actual_pauli_contraction():
     identities = massless_cubic_identities()
     assert not identities['dummy_symbol_L0_A_j']
@@ -164,8 +167,9 @@ def test_characteristic_phase_matches_independent_existing_gauss_owner():
         assert np.max(abs(changed['q_z']-base['q_z']-phase.f_z[index])) < 1e-10
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_live_history_measures_unvalidated_cubic_coefficient():
-    value = D.calculate()
+    value = D.calculate(source_context=FROZEN_PRODUCER_CONTEXT)
     assert value['schema'] == SCHEMA
     assert value['profile_identity'] == CURRENT_HISTORY_IDENTITY
     assert value['pair']['mass'] == 0.0
@@ -199,8 +203,9 @@ def test_live_history_measures_unvalidated_cubic_coefficient():
     validate_cubic_uv_report(value, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_invented_c4_cm_and_independent_R_zero_are_rejected():
-    value = D.calculate()
+    value = D.calculate(source_context=FROZEN_PRODUCER_CONTEXT)
     forged_reduction = deepcopy(value)
     forged_reduction['reduced_transport']['residuals']['s+1/Ts_J3'] = '1'
     with pytest.raises(ValueError, match='reduced transport'):

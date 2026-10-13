@@ -7,6 +7,10 @@ import sys
 import numpy as np
 import pytest
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 SPEC=importlib.util.spec_from_file_location('fourier_response',ROOT/'scripts/derive_nsc_retarded_fourier_response.py')
@@ -40,6 +44,7 @@ def test_invalid_time_or_source_shapes_are_rejected():
         M.covariance_pairs(np.zeros((1,1,2,3)),np.zeros((1,2,3)),np.eye(2)[None])
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_retains_full_pair_scope_and_authenticated_inputs():
     record=json.loads(M.OUTPUT.read_text())
     assert record['source_sha256']==M.signature()

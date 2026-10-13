@@ -55,9 +55,11 @@ INPUTS = (
 EXTERNAL_PAYLOAD = os.environ.get('NSC_SOURCE_INVENTORY_PAYLOAD')
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def peak_rss():
     """Return a process-lifetime resident-memory peak and its unit/source."""
-    if resource is not None:
+    if resource is not None and not getattr(resource, 'STANDIN', False):
         value = int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
         unit = 'bytes' if sys.platform == 'darwin' else 'kilobytes'
         return value, unit, 'resource.ru_maxrss'
@@ -95,7 +97,7 @@ def peak_rss():
 
 
 def digest(path):
-    return sha256((ROOT / path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, path)
 
 
 def ensure_inventory_payload(inventory_record):

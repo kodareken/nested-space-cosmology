@@ -15,6 +15,7 @@ import re
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
 os.environ['OMP_NUM_THREADS'] = '1'
 import argparse
+import ast
 from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
 from hashlib import sha256
 import json
@@ -42,7 +43,7 @@ from recursive_horizons.nsc_ks_evaluation_binding import (
     compare_family_cache, compare_bindings, evaluation_binding, family_identity, family_key_text,
     family_source_binding, legacy_family_consistent, payload_descriptor,
     require_complete_binding, write_bytes_atomic, write_json_atomic,
-    implementation_hashes)
+    implementation_hashes, resolve_recorded_source_bytes)
 from recursive_horizons.nsc_ks_family_pool import (
     acquire_dirac_lock, orphan_family_payloads, release_dirac_lock,
     _worker_entry)
@@ -162,7 +163,7 @@ def history_path(path=None):
     return resolved
 
 
-def context(node_count, settings=None, history=None):
+def context(node_count, settings=None, history=None, *, source_context=None):
     base = R.context()
     parent_path = history_path(history)
     parent = json.loads(parent_path.read_text())
@@ -524,11 +525,14 @@ def default_label(node_count):
     return f'{DEFAULT_LABEL_PREFIX}-{int(node_count)}'
 
 
-def reconstruct_gradient(label, *, replay=None, git_log=None, git_show=None):
+def reconstruct_gradient(label, *, replay=None, git_log=None, git_show=None,
+                         source_context=None):
     """Nodal residual from a finished value-only run. No Dirac.
 
     v1 registers take the explicit historical replay path unless replay=False.
     Production reconstruction stays strict on current working-tree hashes.
+    An explicit immutable source_context requires the identical archived register
+    and unchanged original executable module AST/global bindings.
     """
     directory, output = output_paths(label)
     result = json.loads(output.read_text())
@@ -539,7 +543,8 @@ def reconstruct_gradient(label, *, replay=None, git_log=None, git_show=None):
         raise ValueError('v1 value register is not a production cache')
     if replay:
         return _reconstruct_legacy_gradient(
-            result, directory, record_path=output, git_log=git_log, git_show=git_show)
+            result, directory, record_path=output, git_log=git_log, git_show=git_show,
+            source_context=source_context)
     if schema != SCHEMA_V2:
         raise ValueError('unknown value register schema')
     history = result.get('history_path') or history_named_by(result)
@@ -554,6 +559,47 @@ def reconstruct_gradient(label, *, replay=None, git_log=None, git_show=None):
     return _finish_reconstructed_gradient(assembled, result)
 
 
+# An integrity-only original register declaration. Numeric reconstruction reads
+# local files exclusively; later Git edits/deletions cannot select its identity.
+_RECORDED_REGISTER_SHA256 = {
+    ('329ef809e466a86ed4a290ee32c19485f85add9d',
+     'results/development/nsc-ks-gate-value-step-u0-h5e-4.json'):
+        'c468452bb75c7c2531f321eaf81487fa0d1ae1edc0640919d00d6da9fce12553',
+}
+
+
+def _authenticate_recorded_register(relative_record, raw, source_context):
+    expected=_RECORDED_REGISTER_SHA256.get((source_context,relative_record))
+    if expected is None:
+        raise ValueError('recorded gradient requires a predeclared original register')
+    if not isinstance(raw,bytes) or sha256(raw).hexdigest()!=expected:
+        raise ValueError('local recorded register differs from its declared original SHA256')
+    return expected
+
+
+def reconstruct_recorded_gradient(label, *, source_context, git_log=None,
+                                  git_show=None):
+    """Independent numeric contraction with a disclosed creating-CLI boundary.
+
+    This does not certify the unavailable original creating producer. It pins
+    the original JSON and current executable mathematics, authenticates every
+    local numeric input, and reports any missing creating-CLI source bytes.
+    The ordinary reconstruct_gradient API remains strict.
+    """
+    directory, output = output_paths(label)
+    raw=output.read_bytes()
+    _authenticate_recorded_register(output.relative_to(ROOT).as_posix(),raw,source_context)
+    result = json.loads(raw)
+    if classify_top_record(result) != SCHEMA_V1:
+        raise ValueError('recorded-gradient provenance report requires an immutable v1 register')
+    report = {}
+    gradient = _reconstruct_legacy_gradient(
+        result, directory, record_path=output, git_log=git_log,
+        git_show=git_show, source_context=source_context, producer_report=report,
+    )
+    return {'gradient': gradient, 'provenance': report}
+
+
 def _finish_reconstructed_gradient(assembled, result):
     gradient = assembled.get('gradient')
     if gradient is None:
@@ -563,31 +609,246 @@ def _finish_reconstructed_gradient(assembled, result):
     return np.asarray(gradient, float)
 
 
-def _reconstruct_legacy_gradient(result, directory, *, record_path, git_log=None, git_show=None):
+def _require_original_module_math(original, current):
+    """Require the complete original module AST and its global bindings.
+
+    Added namespaced control APIs may follow the original statements. They
+    cannot overwrite/delete an original global, mutate its attribute/item, or
+    invoke/read an original binding in a new module-level statement.
+    This is an executable-source check, not a physical certification or a
+    statement about external library/import side effects.
+    """
+    frozen = ast.parse(original.decode('utf-8')).body
+    live = ast.parse(current.decode('utf-8')).body
+    if len(live) < len(frozen) or any(
+            ast.dump(left, include_attributes=False) !=
+            ast.dump(right, include_attributes=False)
+            for left, right in zip(frozen, live)):
+        raise ValueError('legacy replay module mathematics changed')
+
+    class ModuleBindings(ast.NodeVisitor):
+        def __init__(self):
+            self.names = set()
+            self.mutated_objects = set()
+            self.read_names = set()
+
+        def visit_Name(self, node):
+            if isinstance(node.ctx, (ast.Store, ast.Del)):
+                self.names.add(node.id)
+            elif isinstance(node.ctx, ast.Load):
+                self.read_names.add(node.id)
+
+        def visit_Import(self, node):
+            self.names.update(alias.asname or alias.name.split('.')[0]
+                              for alias in node.names)
+
+        def visit_ImportFrom(self, node):
+            if any(alias.name == '*' for alias in node.names):
+                raise ValueError('wildcard import cannot authenticate legacy globals')
+            self.names.update(alias.asname or alias.name for alias in node.names)
+
+        def visit_FunctionDef(self, node):
+            self.names.add(node.name)
+            # Defaults/decorators/annotations can execute at module load;
+            # the new function body is not part of the original entry points.
+            expressions = [*node.decorator_list, *node.args.defaults,
+                           *node.args.kw_defaults, node.returns]
+            arguments = [*node.args.posonlyargs, *node.args.args,
+                         *node.args.kwonlyargs, node.args.vararg,
+                         node.args.kwarg]
+            expressions.extend(arg.annotation for arg in arguments
+                               if arg is not None)
+            for value in expressions:
+                if value is not None:
+                    self.visit(value)
+
+        visit_AsyncFunctionDef = visit_FunctionDef
+
+        def visit_ClassDef(self, node):
+            self.names.add(node.name)
+            for value in [*node.bases, *node.keywords,
+                          *node.decorator_list, *node.body]:
+                self.visit(value)
+
+        def visit_Attribute(self, node):
+            if isinstance(node.ctx, (ast.Store, ast.Del)):
+                base = node.value
+                while isinstance(base, (ast.Attribute, ast.Subscript)):
+                    base = base.value
+                if isinstance(base, ast.Name):
+                    self.mutated_objects.add(base.id)
+            self.generic_visit(node)
+
+        visit_Subscript = visit_Attribute
+
+    baseline, additions = ModuleBindings(), ModuleBindings()
+    for node in frozen:
+        baseline.visit(node)
+    original_imports = {
+        ast.dump(node, include_attributes=False) for node in frozen
+        if isinstance(node, (ast.Import, ast.ImportFrom))
+    }
+    for node in live[len(frozen):]:
+        # Repeating the same import binds the same symbol; a different import
+        # or any assignment/delete to an original name remains forbidden.
+        if isinstance(node, (ast.Import, ast.ImportFrom)) and (
+                ast.dump(node, include_attributes=False) in original_imports):
+            continue
+        additions.visit(node)
+    if baseline.names & (
+            additions.names | additions.mutated_objects | additions.read_names):
+        raise ValueError('legacy replay module global bindings changed')
+
+
+def _recorded_gradient_diagnostic(assembled, recorded, ctx, directory, report):
+    """Compare an independent finite recipe without changing physical criteria."""
+    from recursive_horizons.nsc_ks_saved_value_arithmetic import (
+        coefficients_midpoint_roundoff, require_saved_value_summaries,
+        saved_value_replay_envelope)
+    gradient = assembled.get('gradient')
+    if gradient is None:
+        raise ValueError('value run is not complete')
+    gradient = np.asarray(gradient, float)
+    family_arrays, family_records = [], {}
+    for key in sorted(ctx['archived']):
+        json_path, payload = family_paths(directory, key)
+        family_record = json.loads(json_path.read_text())
+        arrays = authenticate_payload(family_record, payload, ROOT, target=ctx['target'])
+        family_arrays.append(np.asarray(arrays['matter_change'], float))
+        family_records.update((arrays.get('metadata') or {}).get('family_records', {}))
+    if len(family_records) != 120:
+        raise ValueError('one hundred twenty original signed families required')
+    weights = signed_family_angular_square_weights(family_records)
+    geometry = geometry_change(ctx['family'], ctx['target'], ctx['coeff'])
+    edge = edge_change(
+        ctx['family'], ctx['target'], weights, ctx['coeff']['a'], _rho_up(ctx),
+        ctx['solver']['phase_nodes'])
+    coefficient = json.loads((ROOT/'results/development/nsc-incoming-surface-coefficients.json').read_text())
+    branch = json.loads((ROOT/'results/development/nsc-incoming-surface-regular-branch.json').read_text())
+    envelope = saved_value_replay_envelope(
+        ctx['family'], ctx['target'], ctx['coeff'], ctx['baseline'], geometry,
+        edge, family_arrays, weights, _rho_up(ctx), ctx['solver']['phase_nodes'],
+        coefficient_errors=coefficients_midpoint_roundoff(coefficient, branch))
+    bounds = require_saved_value_summaries(
+        recorded, gradient, envelope['summary_envelope'])
+    report['numeric_replay'] = {
+        'current_constraint_maxima': np.max(abs(gradient), axis=0).tolist(),
+        'recorded_constraint_maxima': list(recorded['constraint_maxima']),
+        'current_merit': merit(gradient), 'recorded_merit': recorded['merit'],
+        **bounds,
+        'arithmetic_component_maxima': np.max(envelope['arithmetic'], axis=0).tolist(),
+        'coordinate_accuracy_indicator_maxima': np.max(envelope['coordinate_accuracy_indicator'], axis=0).tolist(),
+        'coordinate_accuracy_settings': envelope['coordinate_settings'],
+        'comparison_scope': envelope['scope'],
+        'physical_error_bound': None, 'phase_quadrature_error_bound': None,
+        'physical_constraint_status': 'OPEN',
+    }
+    return gradient
+
+
+def _authenticate_legacy_replay_sources(hashes, *, source_context=None,
+                                        producer_report=None, git_log=None,
+                                        git_show=None):
+    if producer_report is None:
+        authenticate_source_hashes(
+            hashes, ROOT, mode=LEGACY_REPLAY_MODE,
+            git_log=git_log, git_show=git_show)
+    else:
+        if source_context is None:
+            raise ValueError('recorded-gradient report requires an explicit original context')
+        creating_cli = 'scripts/derive_nsc_ks_gate_value.py'
+        if creating_cli not in hashes:
+            raise ValueError('creating-CLI source binding is required')
+        unresolved = []
+        origins = {}
+        for name, expected in hashes.items():
+            try:
+                _raw, origin = resolve_recorded_source_bytes(
+                    ROOT, name, expected, mode=LEGACY_REPLAY_MODE,
+                    git_log=git_log, git_show=git_show)
+                origins[name] = origin
+            except ValueError as error:
+                if name != creating_cli or str(error) != (
+                        'historical source bytes not found for ' + creating_cli):
+                    raise
+                unresolved.append({
+                    'path': name, 'expected_sha256': expected,
+                    'authenticated': False,
+                    'reason': 'original creating-CLI source bytes are unavailable in the preserved snapshot and bounded source history',
+                })
+        producer_report.update({
+            'numeric_inputs_authenticated_from_current_local_bytes': True,
+            'numeric_input_count': sum(name.startswith('results/') for name in origins),
+            'creating_producer_authenticated': not unresolved,
+            'unverified_producer_bindings': unresolved,
+        })
+
+
+def _reconstruct_legacy_gradient(result, directory, *, record_path, git_log=None,
+                                 git_show=None, source_context=None, producer_report=None):
     # Recorded fields can be contracted without rerunning the old propagator.
     # The mathematics that IS executed must still be the recorded version.
-    relative_record = str(Path(record_path).relative_to(ROOT))
-    commit = subprocess.check_output(
-        ['git', '-C', str(ROOT), 'log', '-1', '--format=%H', '--', relative_record],
-        text=True, timeout=30).strip()
-    if not commit:
-        raise ValueError('legacy replay requires a committed historical register')
-    frozen_record = subprocess.check_output(
-        ['git', '-C', str(ROOT), 'show', f'{commit}:{relative_record}'], timeout=30)
-    if frozen_record != Path(record_path).read_bytes():
-        raise ValueError('legacy value register differs from its pinned Git artifact')
+    relative_record = Path(record_path).relative_to(ROOT).as_posix()
+    if producer_report is not None:
+        expected=_authenticate_recorded_register(
+            relative_record,Path(record_path).read_bytes(),source_context)
+        math_commit=source_context
+        producer_report['original_register_authentication']='predeclared SHA256 of current local bytes'
+        producer_report['original_register_sha256']=expected
+    else:
+        commit = subprocess.check_output(
+            ['git', '-C', str(ROOT), 'log', '-1', '--format=%H', '--', relative_record],
+            text=True, timeout=30).strip()
+        if not commit:
+            raise ValueError('legacy replay requires a committed historical register')
+        frozen_record = subprocess.check_output(
+            ['git', '-C', str(ROOT), 'show', f'{commit}:{relative_record}'], timeout=30)
+        if frozen_record != Path(record_path).read_bytes():
+            raise ValueError('legacy value register differs from its pinned Git artifact')
+        math_commit = commit
+        if source_context is not None:
+            if not isinstance(source_context, str) or re.fullmatch(r'[0-9a-f]{40}', source_context) is None:
+                raise ValueError('legacy source context must be an immutable full commit')
+            original_record = subprocess.check_output(
+                ['git', '-C', str(ROOT), 'show', f'{source_context}:{relative_record}'],
+                timeout=30)
+            if original_record != frozen_record:
+                raise ValueError('legacy register differs from its original source context')
+            math_commit = source_context
     for name in LEGACY_REPLAY_MATH:
         frozen = subprocess.check_output(
-            ['git', '-C', str(ROOT), 'show', f'{commit}:{name}'], timeout=30)
-        if sha256(frozen).hexdigest() != digest(name):
-            raise ValueError('legacy replay mathematics changed; use the pinned checkout: ' + name)
-    authenticate_source_hashes(
-        result['source_hashes'], ROOT, mode=LEGACY_REPLAY_MODE,
-        git_log=git_log, git_show=git_show)
+            ['git', '-C', str(ROOT), 'show', f'{math_commit}:{name}'], timeout=30)
+        if source_context is None:
+            if sha256(frozen).hexdigest() != digest(name):
+                raise ValueError('legacy replay mathematics changed; use an explicit original source context: ' + name)
+        elif name.startswith('src/'):
+            try:
+                _require_original_module_math(frozen, (ROOT / name).read_bytes())
+            except ValueError as error:
+                raise ValueError(str(error) + ': ' + name) from error
+        # Producer scripts are historical source evidence here: this replay
+        # contracts local recorded fields and does not execute the producer.
+    _authenticate_legacy_replay_sources(
+        result['source_hashes'], source_context=source_context,
+        producer_report=producer_report, git_log=git_log, git_show=git_show,
+    )
+    if producer_report is not None:
+        producer_report.update({
+            'scope': 'independent contraction of authenticated recorded fields; original creating producer is not certified',
+            'source_context': source_context,
+            'original_register_bytes_authenticated': True,
+            'current_executable_math_original_AST_and_globals_verified': [
+                name for name in LEGACY_REPLAY_MATH if name.startswith('src/')],
+            'physical_local_gate': 'OPEN',
+            'new_operator_solves': 0,
+        })
     if result.get('tangents') != 'zero':
         raise ValueError('legacy value register tangents are not zero')
     history = history_named_by(result)
-    ctx = context(result['node_count'], result.get('solver'), history)
+    ctx = context(
+        result['node_count'], result.get('solver'), history,
+        source_context=source_context,
+    )
     # This path contracts already recorded v1 fields; it launches no solver.
     # Retain the old settings exactly instead of relabeling them as v2.
     if result.get('solver') is not None:
@@ -600,6 +861,9 @@ def _reconstruct_legacy_gradient(result, directory, *, record_path, git_log=None
         raise ValueError('legacy solver settings do not match the top record')
     assembled = assemble(
         ctx, directory, mode=LEGACY_REPLAY_MODE, recorded=result)
+    if producer_report is not None:
+        return _recorded_gradient_diagnostic(
+            assembled, result, ctx, directory, producer_report)
     return _finish_reconstructed_gradient(assembled, result)
 
 

@@ -12,6 +12,10 @@ from recursive_horizons.nsc_spatial_reference_symbol import INDEX
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def data():
     channels=json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels']
     ledger=json.loads((ROOT/'results/development/nsc-incoming-local-constraints.json').read_text())['locked_inputs']
@@ -64,6 +68,7 @@ def test_directed_matrix_excludes_zero_and_reuses_saved_cu():
     assert result['strictly_nonzero']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_runs_no_old_or_new_symbolic_producer(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('coefficient producer entered during directed replay')
     for name in ('local_principal_expressions','local_euler_principal_identity','local_principal_controls',

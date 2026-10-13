@@ -140,7 +140,7 @@ def test_compression_is_cached_per_build_and_restored_even_on_failure(monkeypatc
 
 
 @pytest.mark.parametrize("module,attribute,name,required", [
-    ("matplotlib", "__version__", "Matplotlib", "3.11.1"),
+    ("matplotlib", "__version__", "Matplotlib", "3.11.2"),
     ("reportlab", "Version", "ReportLab", "4.4.9"),
     ("zopfli", "__version__", "Zopfli", "0.4.3"),
 ])

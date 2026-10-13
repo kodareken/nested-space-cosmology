@@ -14,9 +14,11 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 sys.path.insert(0, str(ROOT / 'scripts'))
+from recursive_horizons.nsc_posix import install as _install_posix
+_install_posix()
 from derive_nsc_ks_source_operator_majorant import digest, read_bound, source_error_moments
-from derive_nsc_ks_source_operator_majorant_v4 import require_same_slice
-from derive_nsc_ks_source_operator_majorant_v5 import (
+from recursive_horizons.nsc_ks_source_majorant_replay import require_same_slice as _require_same_slice
+from recursive_horizons.nsc_ks_source_majorant_replay import (
     bind_subgap_inputs, require_saved_witness, subgap_rows)
 from flint import arb, ctx
 from recursive_horizons.evidence_io import publish_exclusive_file
@@ -44,7 +46,8 @@ ADDED_SIGNED = 108
 THRESHOLD_SIGNED = 18
 COVERED, REMAINING = 1168, 0
 FAMILY_SIGNED = 1168
-OWNERS = (
+ORIGINAL_SOURCE_CONTEXT = '329ef809e466a86ed4a290ee32c19485f85add9d'
+ORIGINAL_OWNERS = (
     'scripts/derive_nsc_ks_source_operator_majorant_v7.py',
     'scripts/derive_nsc_ks_source_operator_majorant_v6.py',
     'scripts/derive_nsc_ks_source_operator_majorant_v5.py',
@@ -54,7 +57,90 @@ OWNERS = (
     'src/recursive_horizons/nsc_subgap_source_window.py',
     'src/recursive_horizons/nsc_ks_source_operator_majorant.py',
     'tests/test_nsc_ks_source_operator_majorant_v7.py')
+OWNERS = (
+    'scripts/derive_nsc_ks_source_operator_majorant_v7.py',
+    'scripts/derive_nsc_ks_source_operator_majorant.py',
+    'src/recursive_horizons/nsc_ks_source_majorant_replay.py',
+    'src/recursive_horizons/nsc_threshold18_replay.py',
+    'src/recursive_horizons/nsc_subgap_source_window.py',
+    'src/recursive_horizons/nsc_ks_source_operator_majorant.py',
+    'src/recursive_horizons/nsc_ks_retained_upstream_archive.py',
+    'tests/test_nsc_ks_source_operator_majorant_v7.py',
+    'docs/nsc-ks-source-operator-majorant-v7.md')
 
+
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def cleared_negative_batch(batch):
+    """Exact signed-zero spelling for the v7 computation's recorded convention.
+
+    Some NumPy builds preserve the archive's negative zero at C[0,1].real;
+    others clear it while copying complex blocks. Change only those zero
+    sign bits in a copy and verify numerical equality. Source/preparation
+    digests are recomputed for that explicit copy; archived bytes stay fixed.
+    """
+    if batch.energy_sign >= 0:
+        return batch
+    from dataclasses import replace
+    from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation
+    covariance = np.array(batch.source.covariance, copy=True)
+    fibers = covariance.shape[0] // 3
+    if fibers < 1 or covariance.shape != (3*fibers, 3*fibers):
+        raise ValueError('negative batch fiber census changed')
+    changed = 0
+    view = covariance.view(np.float64).ravel()
+    for index in range(fibers):
+        flat = ((3*index)*covariance.shape[1] + 3*index+1)*2
+        if view[flat] != 0:
+            raise ValueError('negative covariance corner is not zero')
+        changed += int(np.signbit(view[flat]))
+        view[flat] = 0.
+    compared = require_signed_zero_only(batch.source.covariance, covariance, 'cleared signed zeros')
+    if compared['max_abs'] != 0. or compared['signed_zero_differences'] != changed:
+        raise ValueError('signed-zero clearing changed a numeric value')
+    if not changed:
+        return batch
+    source = FixedSourcePreparation(covariance, batch.source.column_weights, batch.source.energies)
+    preparation = hashlib.sha256(
+        source.digest.encode() + np.ascontiguousarray(batch.initial_columns).tobytes()
+        + repr((float(batch.mass), float(batch.angular), float(batch.rho_up), float(RHO_SIGMA))).encode()
+    ).hexdigest()
+    return replace(batch, source=source, preparation_digest=preparation)
+
+
+def inherited_negative_batch(batch, positive):
+    """Use the authenticated original horizon pair, which is even in E.
+
+    The archive already carries this pair. Recomputing its scalar exp on
+    another C runtime can alter a subnormal-scale coherence by one ulp.
+    Inherit both exact complex offdiagonal entries instead. The immutable
+    source/preparation row digests still authenticate the resulting batch.
+    """
+    if (batch.energy_sign != -1 or positive.energy_sign != 1
+            or batch.original_panel != positive.original_panel or batch.rows != positive.rows
+            or not np.array_equal(batch.source.energies, -positive.source.energies)
+            or not np.array_equal(batch.source.column_weights, positive.source.column_weights)):
+        raise ValueError('matching authenticated signed upstream pair required')
+    from dataclasses import replace
+    from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation
+    from recursive_horizons.nsc_ks_batched_constraints import _fixed_preparation_digest
+    covariance = np.array(batch.source.covariance, copy=True)
+    for index in range(len(covariance)//3):
+        a,b=3*index,3*index+1
+        covariance[a,b]=positive.source.covariance[a,b]
+        covariance[b,a]=positive.source.covariance[b,a]
+    source=FixedSourcePreparation(covariance,batch.source.column_weights,batch.source.energies)
+    preparation=_fixed_preparation_digest(
+        source,batch.initial_columns,batch.mass,batch.angular,batch.rho_up,RHO_SIGMA)
+    return replace(batch,source=source,preparation_digest=preparation)
+
+
+def require_same_slice(prior, archive):
+    rho, entries = _require_same_slice(prior, archive)
+    positives={(b.original_panel,b.rows):b for b,_ in entries if b.energy_sign>0}
+    return rho, tuple((
+        cleared_negative_batch(inherited_negative_batch(batch,positives[batch.original_panel,batch.rows]))
+        if batch.energy_sign<0 else batch, channel) for batch,channel in entries)
 
 def subgap_tree_sha256(root=None):
     """Directory entries and file bytes. Directory nodes contribute no marker byte."""
@@ -158,7 +244,7 @@ def ready_subgap_window():
     proof = freeze.get('sha256') if isinstance(freeze, dict) else None
     proof_path = freeze.get('proof') if isinstance(freeze, dict) else None
     if (not isinstance(proof, str) or not isinstance(proof_path, str)
-            or hashlib.sha256((ROOT / proof_path).read_bytes()).hexdigest() != proof
+            or selected_source_sha256(ROOT, proof_path) != proof
             or freeze.get('positive_rows') != 54 or freeze.get('signed_rows') != ADDED_SIGNED):
         raise ValueError('frozen proof code changed')
     if load_failures(root):
@@ -294,6 +380,14 @@ def verify_threshold_identity(archive, prior):
     """Exact values match. NumPy 2.5.1 no longer keeps the negative-zero bytes."""
     equivalence = prior['negative_source_equivalence']
     positive, negative = _batch(archive)
+    negative=inherited_negative_batch(negative,positive)
+    # Authenticate the actual platform spelling before making the explicit,
+    # numerically equal cleared copy expected by the immutable v7 receipt.
+    if (negative.source.digest, negative.preparation_digest) not in (
+            (equivalence['original_raw_source_digest'], equivalence['original_raw_preparation_digest']),
+            (equivalence['local_raw_source_digest'], equivalence['local_raw_preparation_digest'])):
+        raise ValueError('live source digest does not match either recorded signed-zero spelling')
+    negative = cleared_negative_batch(negative)
     if (negative.source.digest != equivalence['original_raw_source_digest']
             or negative.preparation_digest != equivalence['original_raw_preparation_digest']
             or positive.source.digest != equivalence['positive_source_digest']
@@ -477,86 +571,108 @@ def exercise_pure_refusals(base):
         raise ValueError('copied negative error was accepted')
 
 
-def calculate():
-    prior = accepted_v6()
-    base = prior_rows(prior)
-    exercise_pure_refusals(base)
-    archive = RetainedUpstreamArchive(ROOT)
-    rho, entries = require_same_slice(prior, archive)
-    window = ready_subgap_window()
-    added = subgap_rows(window)
-    equivalence, closure, _live_source, _live_preparation = verify_threshold_identity(archive, prior)
-    threshold = [{'panel': PANEL, 'row': index, 'energy_sign': sign}
-                 for index in ROWS for sign in (1, -1)]
-    require_disjoint_complements(base, added, threshold)
-    rebound_base, _base_rebound = rebind_signed_zero_spelling(base, entries)
-    rows, rebound_count = rebind_signed_zero_spelling(add_disjoint_rows(base, added), entries)
-    family, identity = require_original_history(ROOT)
-    if identity != prior.get('profile_identity'):
-        raise ValueError('profile identity changed')
-    channel = archive.meta['channels'][14]
-    if channel['copy_count'] * channel['degeneracy'] / 2 != 12:
-        raise ValueError('multiplicity changed')
-    with ctx.workprec(192):
-        _base_moment, _base_energy, base_covered, base_missing = source_error_moments(
-            archive, entries, rebound_base)
-        if len(base_covered) != PRIOR_COVERED or base_missing != PRIOR_REMAINING:
-            raise ValueError('source census changed')
-        refuse_mutated_identity(archive, entries, rows)
-        moment, energy, covered, missing = source_error_moments(archive, entries, rows)
-        universe = indexed_keys(entries)
-        covered_keys = {_row_key(row) for row in covered}
-        missing_keys = sorted(universe - covered_keys)
-        if (len(universe) != FAMILY_SIGNED or len(covered) != COVERED or missing != REMAINING
-                or missing_keys or len(covered_keys) != COVERED):
-            raise ValueError('source census changed')
-        bound = history_source_insertion(
-            family, rho, moment, energy,
-            mass=arb(channel['compact_mass']).union(arb.pi() / 2),
-            absolute_angular=arb(channel['angular_eigenvalue']).union(arb(5).sqrt()),
-            multiplicity=12)
-        previous = prior['continuous_action_error_upper']
-        if not (restored_upper(bound['N']) > restored_upper(previous['N'])
-                and restored_upper(bound['beta']) > restored_upper(previous['beta'])):
-            raise ValueError('joined source bound did not increase')
-    return {
-        'schema': 'NSC-KS-SOURCE-OPERATOR-MAJORANT-v7',
-        'status': 'continuous source-error bound for 1168 signed rows of family14_1; full upstream component OPEN',
-        'profile_identity': identity, 'rho_up_hex': rho.hex(), 'family': [14, 1],
-        'multiplicity_per_signed_family': 12,
-        'weighted_error_moment': exact_upper(moment),
-        'weighted_energy_error_moment': exact_upper(energy),
-        'continuous_action_error_upper': bound,
-        'negative_source_equivalence': equivalence,
-        'threshold18_closure': closure,
-        'source_coverage': {
-            'covered_signed_rows': COVERED, 'remaining_signed_rows_in_family': REMAINING,
-            'missing_keys': [list(key) for key in missing_keys],
-            'rows': covered, 'all_source_families': False,
-            'complete_middle_window_replayed': True,
-            'complete_direct_source_window_replayed': True,
-            'family14_1_signed_rows_complete': True,
-            'v6_signed_rows_reused': PRIOR_COVERED,
-            'v4_signed_rows_inside_v6': 1042,
-            'threshold18_signed_rows_retained': THRESHOLD_SIGNED,
-            'subgap_signed_rows_added': ADDED_SIGNED,
-            'subgap_positive_rows_witnessed': 54,
-            'subgap_positive_rows_failed': 0,
-            'subgap_positive_rows_missing': 0,
-            'v5_covered_total_not_added': True,
-            'subgap_tree_sha256': SUBGAP_TREE_SHA256,
-            'subgap_proof_replay_repeated': False,
-            'negative_rows_rebound_to_cleared_digest': rebound_count,
-            'negative_signed_zero_corner': 'C[0, 1].real',
-            'ode_rerun': False, 'failed_rows_entered_as_zero': False},
-        'sign_audit': ADJUDICATION,
-        'negative_bloch_convention': '(nx,-ny,-nz)',
-        'covariance_complement_included': True, 'negative_bounds_supplied_separately': True,
-        'source_weights_applied_once': True, 'source_quadrature_error_included': False,
-        'numerical_field_error_included': False, 'value_assembly_arithmetic_included': False,
-        'physical_upstream_budget_component': None, 'physical_local_gate': 'OPEN',
-        'source_hashes': implementation_hashes(ROOT, owners=OWNERS),
-        'input_hashes': bind_subgap_inputs(dict(prior['input_hashes']), window)}
+def calculate(*, source_context=None):
+    from recursive_horizons.nsc_frozen_sources import frozen_source_context, is_implementation_source
+    # The immutable accepted v6/subgap receipts explicitly name their original
+    # producer context. Their numerical outputs remain strict current inputs.
+    upstream_source_context=source_context or ORIGINAL_SOURCE_CONTEXT
+    selection = frozen_source_context(upstream_source_context)
+    with selection:
+        prior = accepted_v6()
+        base = prior_rows(prior)
+        exercise_pure_refusals(base)
+        archive = RetainedUpstreamArchive(ROOT)
+        rho, entries = require_same_slice(prior, archive)
+        window = ready_subgap_window()
+        added = subgap_rows(window)
+        equivalence, closure, _live_source, _live_preparation = verify_threshold_identity(archive, prior)
+        threshold = [{'panel': PANEL, 'row': index, 'energy_sign': sign}
+                     for index in ROWS for sign in (1, -1)]
+        require_disjoint_complements(base, added, threshold)
+        rebound_base, _base_rebound = rebind_signed_zero_spelling(base, entries)
+        rows, rebound_count = rebind_signed_zero_spelling(add_disjoint_rows(base, added), entries)
+        family, identity = require_original_history(ROOT)
+        if identity != prior.get('profile_identity'):
+            raise ValueError('profile identity changed')
+        channel = archive.meta['channels'][14]
+        if channel['copy_count'] * channel['degeneracy'] / 2 != 12:
+            raise ValueError('multiplicity changed')
+        with ctx.workprec(192):
+            _base_moment, _base_energy, base_covered, base_missing = source_error_moments(
+                archive, entries, rebound_base)
+            if len(base_covered) != PRIOR_COVERED or base_missing != PRIOR_REMAINING:
+                raise ValueError('source census changed')
+            refuse_mutated_identity(archive, entries, rows)
+            moment, energy, covered, missing = source_error_moments(archive, entries, rows)
+            universe = indexed_keys(entries)
+            covered_keys = {_row_key(row) for row in covered}
+            missing_keys = sorted(universe - covered_keys)
+            if (len(universe) != FAMILY_SIGNED or len(covered) != COVERED or missing != REMAINING
+                    or missing_keys or len(covered_keys) != COVERED):
+                raise ValueError('source census changed')
+            bound = history_source_insertion(
+                family, rho, moment, energy,
+                mass=arb(channel['compact_mass']).union(arb.pi() / 2),
+                absolute_angular=arb(channel['angular_eigenvalue']).union(arb(5).sqrt()),
+                multiplicity=12)
+            previous = prior['continuous_action_error_upper']
+            if not (restored_upper(bound['N']) > restored_upper(previous['N'])
+                    and restored_upper(bound['beta']) > restored_upper(previous['beta'])):
+                raise ValueError('joined source bound did not increase')
+        result = {
+            'schema': 'NSC-KS-SOURCE-OPERATOR-MAJORANT-v7',
+            'status': 'continuous source-error bound for 1168 signed rows of family14_1; full upstream component OPEN',
+            'profile_identity': identity, 'rho_up_hex': rho.hex(), 'family': [14, 1],
+            'multiplicity_per_signed_family': 12,
+            'weighted_error_moment': exact_upper(moment),
+            'weighted_energy_error_moment': exact_upper(energy),
+            'continuous_action_error_upper': bound,
+            'negative_source_equivalence': equivalence,
+            'threshold18_closure': closure,
+            'source_coverage': {
+                'covered_signed_rows': COVERED, 'remaining_signed_rows_in_family': REMAINING,
+                'missing_keys': [list(key) for key in missing_keys],
+                'rows': covered, 'all_source_families': False,
+                'complete_middle_window_replayed': True,
+                'complete_direct_source_window_replayed': True,
+                'family14_1_signed_rows_complete': True,
+                'v6_signed_rows_reused': PRIOR_COVERED,
+                'v4_signed_rows_inside_v6': 1042,
+                'threshold18_signed_rows_retained': THRESHOLD_SIGNED,
+                'subgap_signed_rows_added': ADDED_SIGNED,
+                'subgap_positive_rows_witnessed': 54,
+                'subgap_positive_rows_failed': 0,
+                'subgap_positive_rows_missing': 0,
+                'v5_covered_total_not_added': True,
+                'subgap_tree_sha256': SUBGAP_TREE_SHA256,
+                'subgap_proof_replay_repeated': False,
+                'negative_rows_rebound_to_cleared_digest': rebound_count,
+                'negative_signed_zero_corner': 'C[0, 1].real',
+                'ode_rerun': False, 'failed_rows_entered_as_zero': False},
+            'sign_audit': ADJUDICATION,
+            'negative_bloch_convention': '(nx,-ny,-nz)',
+            'covariance_complement_included': True, 'negative_bounds_supplied_separately': True,
+            'source_weights_applied_once': True, 'source_quadrature_error_included': False,
+            'numerical_field_error_included': False, 'value_assembly_arithmetic_included': False,
+            'physical_upstream_budget_component': None, 'physical_local_gate': 'OPEN',
+            'source_hashes': implementation_hashes(ROOT, owners=ORIGINAL_OWNERS if source_context else OWNERS, source_context=source_context),
+            'input_hashes': bind_subgap_inputs(dict(prior['input_hashes']), window)}
+        if source_context is None:
+            original_inputs=result['input_hashes']
+            result['historical_source_bindings']={
+                **implementation_hashes(ROOT, owners=ORIGINAL_OWNERS, source_context=upstream_source_context),
+                **{path:value for path,value in original_inputs.items() if is_implementation_source(path)}}
+            result['input_hashes']={
+                ('archive/source-history/'+path[len('.source-history/'):] if path.startswith('.source-history/') else path):value
+                for path,value in original_inputs.items() if not is_implementation_source(path)}
+            if any(not (ROOT/path).is_file() for path in result['input_hashes']):
+                raise ValueError('current majorant input path unavailable')
+            result['upstream_receipt_provenance']={
+                'original_source_context':upstream_source_context,
+                'accepted_v6_sha256':V6_SHA256,'accepted_v5_sha256':V5_SHA256,
+                'subgap_tree_sha256':SUBGAP_TREE_SHA256,
+                'scope':'Original source bindings authenticate accepted input receipts; source_hashes bind the real current computation.'}
+        return result
 
 
 def encoded_result(result):
@@ -585,7 +701,7 @@ def _snapshot(path):
 HISTORIC = (
     PRIOR, V5, 'results/development/nsc-ks-source-operator-majorant-v4.json',
     WINDOW, 'results/development/nsc-threshold18-import-v1',
-    'results/development/nsc-direct-source-window-v1', '.source-history',
+    'results/development/nsc-direct-source-window-v1', 'archive/source-history',
     'src/recursive_horizons/nsc_ks_energy_propagator.py')
 
 
@@ -594,9 +710,10 @@ if __name__ == '__main__':
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--record', action='store_true')
     mode.add_argument('--check', action='store_true')
+    parser.add_argument('--source-context',help='Full original source commit for a byte-exact saved-record replay; numerical inputs always remain local.')
     args = parser.parse_args()
     before = {path: _snapshot(ROOT / path) for path in HISTORIC}
-    result = calculate()
+    result = calculate(source_context=args.source_context)
     encoded = encoded_result(result)
     if {path: _snapshot(ROOT / path) for path in HISTORIC} != before:
         raise ValueError('historic bytes changed')

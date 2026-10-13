@@ -9,7 +9,6 @@ identity of sheet exchange with antimatter or charge conjugation.
 """
 from __future__ import annotations
 
-from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
@@ -25,10 +24,11 @@ from .nsc_causal_common import (
     MetricHistory,
     SpectralInducedSource,
 )
-from .nsc_energy_transfer import expectation, regional_operators, schur_state_data
+from .dirac.energy import expectation, regional_operators, schur_state_data
 from .nsc_influence import ground_covariance
 from .nsc_regulated import direct_chain, recursive_response
 from .nsc_spinor_bridge import exact_checks, pauli, weyl_matrices
+from .nsc_frozen_sources import source_sha256
 
 
 SCHEMA = "NSC-LOCAL-OBSERVER-CORRESPONDENCE-v1"
@@ -56,7 +56,7 @@ INPUTS = (
     "docs/nsc-energy-transfer.md",
     "docs/nsc-regulated-recursion.md",
     "docs/nsc-observable-bridge.md",
-    "src/recursive_horizons/nsc_energy_transfer.py",
+    "src/recursive_horizons/dirac/energy.py",
     "src/recursive_horizons/nsc_regulated.py",
     "src/recursive_horizons/nsc_spinor_bridge.py",
     "src/recursive_horizons/nsc_causal_common.py",
@@ -166,8 +166,9 @@ MISSING_COMMON_ACTION = (
 )
 
 
-def digest(root: Path, relative: str) -> str:
-    return sha256((root / relative).read_bytes()).hexdigest()
+def digest(root: Path, relative: str, *, source_context=None) -> str:
+    return source_sha256(root, relative,
+                         context=None if relative.startswith("results/") else source_context)
 
 
 def _require(ok: bool, message: str) -> None:
@@ -197,6 +198,31 @@ def canonical_record(value: dict[str, Any]) -> dict[str, Any]:
     import json
 
     return json.loads(json.dumps(_jsonable(value), sort_keys=True, allow_nan=False))
+
+
+def compare_records(expected: Any, actual: Any, path: str = "$") -> None:
+    """Compare all fields with the existing finite-control NUMERIC bound.
+
+    Keys, types, source hashes and nonnumeric values remain exact. Tiny linear
+    algebra residuals use the same bound as their independent controls.
+    """
+    if type(expected) is not type(actual):
+        raise ValueError("record type differs at " + path)
+    if isinstance(expected, dict):
+        if expected.keys() != actual.keys():
+            raise ValueError("record keys differ at " + path)
+        for key in expected:
+            compare_records(expected[key], actual[key], path + "/" + str(key))
+    elif isinstance(expected, list):
+        if len(expected) != len(actual):
+            raise ValueError("record list differs at " + path)
+        for index, (left, right) in enumerate(zip(expected, actual)):
+            compare_records(left, right, path + "/" + str(index))
+    elif isinstance(expected, float):
+        if not np.isfinite(expected) or not np.isfinite(actual) or abs(expected - actual) > NUMERIC:
+            raise ValueError("record numeric field differs at " + path)
+    elif expected != actual:
+        raise ValueError("record exact field differs at " + path)
 
 
 def toy_block_hamiltonian() -> tuple[np.ndarray, np.ndarray]:
@@ -541,9 +567,18 @@ def two_sheet_dirac_charge_conjugation() -> dict[str, Any]:
     }
 
 
-def correspondence_record(root: Path | None = None) -> dict[str, Any]:
+def correspondence_record(root: Path | None = None, *, source_context=None,
+                          source_contexts=None) -> dict[str, Any]:
     """Assemble the compact v1 correspondence record."""
     root = Path(root) if root is not None else Path(__file__).resolve().parents[2]
+    # The original receipt named the original energy owner. Current production
+    # names its retained Dirac successor; the two byte identities stay distinct.
+    input_paths = tuple("src/recursive_horizons/nsc_energy_transfer.py"
+                        if source_context is not None and path == "src/recursive_horizons/dirac/energy.py"
+                        else path for path in INPUTS)
+    overrides = dict(source_contexts or {})
+    if set(overrides) - {path for path in OWNERS + input_paths if not path.startswith("results/")}:
+        raise ValueError("unknown original source override")
     schur = block_schur_resolvent_reduction()
     memory = retarded_memory_initial_state_noise()
     action = common_action_variation_conservation()
@@ -597,8 +632,8 @@ def correspondence_record(root: Path | None = None) -> dict[str, Any]:
             "metric_timestep": False,
             "global_parent_child_matching": False,
         },
-        "source_hashes": {path: digest(root, path) for path in OWNERS},
-        "input_hashes": {path: digest(root, path) for path in INPUTS},
+        "source_hashes": {path: digest(root, path, source_context=overrides.get(path, source_context)) for path in OWNERS},
+        "input_hashes": {path: digest(root, path, source_context=overrides.get(path, source_context)) for path in input_paths},
         "reproducer": "python3 scripts/derive_nsc_local_observer_correspondence.py --check",
     }
     return canonical_record(record)

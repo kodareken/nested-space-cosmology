@@ -206,6 +206,17 @@ pointwise after inhomogeneous evolution. Saved row0 and row15 witness
 replays validate phase/Bloch traces without repeating either solver, keep
 covariance errors unweighted, and supply no complete upstream component.
 
+The retained response-sum API is
+[`incoming.retained_response`](../src/recursive_horizons/incoming/retained_response.py);
+the signed row15 capture/replay API is
+[`incoming.row15_witness`](../src/recursive_horizons/incoming/row15_witness.py).
+Their equations and solver controls are retained from the original drivers.
+The reusable
+[phase/Bloch witness owner](../src/recursive_horizons/nsc_subgap_row_witness.py)
+remains independent of capture solvers. The row15 API authenticates its
+retired pilot selection against commit `329ef809`.
+
+
 ### Vacuum and coherent-occupation remainder methods
 
 For the original three-port affine source and $P=\operatorname{diag}(0,1,0)$,

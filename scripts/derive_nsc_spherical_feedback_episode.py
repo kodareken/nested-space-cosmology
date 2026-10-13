@@ -38,7 +38,7 @@ try:
 except Exception as error:
     THREADPOOL_LIMIT = "not applied: " + type(error).__name__
 
-from recursive_horizons import nsc_regional_energy_exchange as regional
+from recursive_horizons.nested import energy_exchange as regional
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
 from recursive_horizons.nsc_spherical_coupling import (
     CauchyRate,
@@ -50,7 +50,7 @@ from recursive_horizons.nsc_spherical_coupling import (
 from recursive_horizons.nsc_spherical_feedback_action import weyl_square_from_rh
 
 LAB = Path(__file__).resolve().parents[1]
-ROOT = LAB.parent
+ROOT = LAB
 OUT = LAB / "results" / "development" / "nsc-spherical-feedback-episode-v1.json"
 NPZ = LAB / "results" / "development" / "nsc-spherical-feedback-episode-v1.npz"
 DRIVER = Path(__file__).resolve()
@@ -214,7 +214,7 @@ FROZEN_PATHS = {
     "v3_json": LAB / "results" / "development" / "nsc-spherical-coupling-refinement-v3.json",
     "galerkin": galerkin._MODULE_PATH,
     "regional_module": regional._MODULE_PATH,
-    "feedback_action": ROOT / "lab" / "src" / "recursive_horizons" / "nsc_spherical_feedback_action.py",
+    "feedback_action": ROOT / "src" / "recursive_horizons" / "nsc_spherical_feedback_action.py",
     "coupling": galerkin._COUPLING_PATH,
     "conformal_source": galerkin._SOURCE_PATH,
     "manuscript_md": ROOT / "paper" / "nested-space-cosmology.md",

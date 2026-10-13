@@ -3,6 +3,8 @@
 There is one package, `nested-space-cosmology`, importing `recursive_horizons`
 from root `src`. Use the pinned versions in [pyproject.toml](../pyproject.toml).
 Scientific conclusions retain the domains in their owning notes.
+The current paper and test dependencies use Matplotlib 3.11.2; the scientific
+stack includes python-flint 0.9.0.
 
 ## Current work
 
@@ -11,20 +13,40 @@ python -m pip install -e '.[paper,dev]'
 python scripts/check_lab_snapshot.py
 python scripts/check_publication.py
 python scripts/check_claim_bindings.py
-python scripts/test_reassembly.py
-python scripts/build_geometry_overview.py
-python scripts/build_characteristic_initialization_figure.py
-python scripts/build_source_mass_figure.py
+python -m pytest tests/
 python scripts/build_paper.py --check
 ```
 
-The affected test suite covers atlas attachment incompatibility, disconnected
-siblings, causal delays, unequal children, clock-domain exits, unit rescaling,
-finite-depth dependence, field transfer, preservation failures and publication
-contracts. `make check test paper-check` uses the current environment. `make verify`
-also adds explicit historical replay and requires the separate `HISTORY_PYTHON`
-profile described below. Running every historical simulation is neither required
-nor authorized by these convenience commands.
+`make verify` runs current checks, every retained test and the deterministic
+paper check. CI uses the same pinned stack on Ubuntu and Windows. Historical
+replay is an explicit separate operation, selected through `make history-check`
+or the commands below.
+
+`check_lab_snapshot.py` authenticates the current paths, hashes and sizes in the
+v2 [retained-file receipts](lab-snapshot.json), plus the unchanged objects and
+pins in [source history](../archive/source-history/manifest.json).
+`check_publication.py` checks retained result identities, publication routing
+and explicit DOI/hash receipts for archived evidence. It does not download or
+verify a remote archive. Current checks do not require the retired reassembly
+manifest or migration scripts; their carriers are cited at
+[Zenodo](https://doi.org/10.5281/zenodo.23090015).
+
+Immutable records can bind earlier source bytes. Authentication then uses the
+record's explicitly declared Git context, preserving its original numerical
+claims and hashes. A pass authenticates that recorded calculation; it does not
+identify its original source with the current implementation. Tests of active
+APIs use this root package. Original-context authentication and replay are
+never a silent fallback from a failed current-source check.
+
+When changing the manuscript's figures, the retained figure producers are:
+
+```sh
+python scripts/build_geometry_overview.py
+python scripts/build_characteristic_initialization_figure.py
+python scripts/build_source_mass_figure.py
+```
+
+Run the paper check after figure changes and inspect the result visually.
 
 The compact analytic successor authenticates the original v7/v8 evidence and
 the proof of the fixed-model preparation inverse. Its checker records no new
@@ -151,156 +173,109 @@ under ignored `.build/paper-check`; the paper workflow preserves those files.
 
 ## Preserved editions and source contexts
 
-The original v1–v6 atlas manifests record Python 3.14.8 and Matplotlib 3.11.2;
-byte-identical historical image replay is verified on Windows.
-Their unchanged checkers authenticate recorded files and require byte-identical
-regenerated images. This rendering profile is separate from the current paper's
-Matplotlib 3.11.1 profile. [requirements-history.txt](../requirements-history.txt)
-pins the recorded scientific versions, verified replay dependency Pillow 12.3.0
-and the historical checking tools. Pillow and pytest versions were not recorded in
-the atlas manifests. The version pins retain the recorded producer environment;
-Windows selects the platform on which exact historical replay is verified.
-Install it in an isolated environment, without installing the current
-package or its paper extras there. From Windows with Python 3.14.8 available:
+Routine authentication uses the retained receipts and explicitly pinned Git
+objects. Historical publication tests run the original result contracts against
+baseline `04a0cb9378977772243ebf7c9be3c74182b030f2`, without restoring deleted
+producers into the active package. The original result manifest and numerical
+claims remain unchanged. [Preservation and source history](repository-consolidation.md)
+describes these receipts; retired migration and result carriers are cited at
+[Zenodo](https://doi.org/10.5281/zenodo.23090015).
+
+Scientific recomputation is separate. `replay_history.py` selects an original
+commit and materializes its source layout under ignored `.build/replay`.
+Its unchanged checkers enforce the original evidence hashes and comparison
+policies. A replay requiring an archived carrier needs its exact hash-bound
+bytes; missing evidence or source objects fail explicitly. Edited current
+owners are never substituted for historical source bytes.
+
+### Atlas v1–v6 and supporting editions
+
+The v1–v6 manifests record Python 3.14.8 and Matplotlib 3.11.2. Their original
+image checks require byte equality in the recorded Windows environment;
+matching package versions alone does not guarantee identical images on another
+machine. [requirements-history.txt](../requirements-history.txt) preserves
+these scientific pins and supplies the replay tools. Pillow 12.3.0 is a replay
+dependency; Pillow and pytest versions were not recorded in the atlas manifests.
+For a deliberate original-context replay, use an isolated environment without
+installing the current project package there:
 
 ```powershell
 py -3.14 -m venv .venv/history
 .\.venv\history\Scripts\python.exe -m pip install -r requirements-history.txt
+.\.venv\history\Scripts\python.exe scripts/replay_history.py prepare
 .\.venv\history\Scripts\python.exe scripts/replay_history.py all
 ```
 
-The following selectors use that historical interpreter (activate the environment
-first if using the short `python` command):
+`prepare` selects the baseline context without scientific recomputation. `all`
+recomputes the six atlas bundles within their recorded finite domains and
+budgets, authenticates the finite and OPEN companions, and runs the original
+publication tests. It does not restart their full research campaigns. The
+individual selectors are `atlas`, `finite`, `companion` and `tests`.
 
-```sh
-python scripts/replay_history.py prepare
-python scripts/replay_history.py atlas
-python scripts/replay_history.py finite
-python scripts/replay_history.py companion
-python scripts/replay_history.py all
-```
-
-These commands select the pre-reassembly source commit explicitly, materialize its
-original layout in ignored `.build/replay`, check current preserved artifacts
-against those bytes, and run the original checkers. All six atlas bundles are
-recomputed within their finite domains. Supporting-paper authentication checks
-their frozen source, evidence and archives; it does not rerun their full campaigns.
-The original context contains the former foundation paper at its historical path.
-
-With Make installed, select the historical interpreter explicitly:
+With Make installed, the optional historical command is:
 
 ```sh
 make history-check HISTORY_PYTHON=.venv/history/Scripts/python.exe
-make verify PYTHON=python HISTORY_PYTHON=.venv/history/Scripts/python.exe
 ```
 
-`HISTORY_PYTHON` defaults to `PYTHON` for an already selected historical environment;
-it never chooses another interpreter after a failed check. GitHub Actions runs the
-current paper checks on Ubuntu, the legacy historical replay in a Windows job
-with Matplotlib 3.11.2, and the explicit v7/v8 replays in a separate Windows job
-with Matplotlib 3.11.1. Both Windows jobs use Python 3.14.8 and retain the original
-evidence comparisons. Other historical rendering profiles have not been
-established as byte-identical.
-
-Current atlas producers use root sources. Their source bindings differ from the
-historical bundles, so passing an old bundle to a current producer must fail.
-To create a new bundle, supply a fresh `--output` directory; creation is exclusive.
-A changed historical context, changed retained evidence, missing Git object or
-corrupt archive is an error, never a reason to silently select alternative bytes.
+`HISTORY_PYTHON` defaults to `PYTHON`; it never selects another interpreter after
+a failure. `make verify` checks the current project and does not run historical
+replay. Current CI runs the retained suite on Linux and Windows with Matplotlib
+3.11.2; the former separate historical rendering jobs are retired.
 
 ### Atlas v7: original root context
 
-Atlas v7 predates the evaluated-response successor. Authenticate its retained
-evidence and materialize its original sources with `prepare-v7`; use `atlas-v7`
-for the original checker's full replay, including exact figure bytes:
+Atlas v7 uses commit `7fee894ad5a4da2ba378f724e45e926401f82670` under
+`.build/replay/7fee894ad5a4`:
 
 ```sh
 python scripts/replay_history.py prepare-v7
 python scripts/replay_history.py atlas-v7
 ```
 
-These selectors use commit `7fee894ad5a4da2ba378f724e45e926401f82670` under
-`.build/replay/7fee894ad5a4`. `prepare-v7` performs no scientific replay and
-selects no renderer. Full `atlas-v7` replay requires its recorded Windows
-profile: Python 3.14.8, NumPy 2.5.1, SciPy 1.17.1, SymPy 1.14.0 and
-Matplotlib 3.11.1. The existing Windows validation environment supplies this
-profile; its fallback invocation is
-`python scripts/run_python.py scripts/replay_history.py atlas-v7`.
-The v1–v6 history environment above has a different Matplotlib pin.
-
-Neither v7 selector changes the legacy `all` selector or v1–v6 replay.
-An incompatible runtime, modified preserved output or missing source object
-fails explicitly. Current changes to scientific owners are not substituted
-for v7's original source bytes.
+`prepare-v7` authenticates the original evidence and sources without a field
+solve or renderer. `atlas-v7` runs the unchanged original checker, including
+exact figure comparisons. That manifest requires Windows, Python 3.14.8,
+NumPy 2.5.1, SciPy 1.17.1, SymPy 1.14.0 and Matplotlib 3.11.1. This immutable
+historical requirement differs from the current 3.11.2 pin; the current
+validation environment is not an exact-image replay environment for v7.
 
 ### Atlas v8: original prepared-response context
 
-Atlas v8 predates the analytic inverse and the updated literature/atlas owners.
-Use its original commit explicitly to authenticate or replay that result:
+Atlas v8 uses commit `1154baf290d901e73058392e143d0acb37d22951` under
+`.build/replay/1154baf290d9`:
 
 ```sh
 python scripts/replay_history.py prepare-v8
 python scripts/replay_history.py atlas-v8
 ```
 
-These selectors use commit `1154baf290d901e73058392e143d0acb37d22951` under
-`.build/replay/1154baf290d9`. `prepare-v8` authenticates retained evidence and
-source bindings against that commit without running a field solve. `atlas-v8`
-runs the unchanged original checker and its finite numerical budget, including
-exact figure comparisons, in the same Windows/Python 3.14.8/Matplotlib 3.11.1
-profile specified for v7 above. The Windows fallback invocation is
-`python scripts/run_python.py scripts/replay_history.py atlas-v8`.
+`prepare-v8` authenticates the original source bindings and retained evidence
+without running a field solve. `atlas-v8` runs the unchanged original producer
+within its finite numerical budget, including exact image comparisons. It
+requires the same recorded Windows/Python 3.14.8/Matplotlib 3.11.1 profile as v7.
+Use these full replay selectors only with that original environment; the
+current renderer does not promise historical PNG identity.
 
-These commands do not add v8 to legacy `all`, loosen numerical/image checks,
-or silently recover from a current-source mismatch. Calling the current v8
-producer's `--check` on the frozen canonical bundle after a bound owner changes
-must fail. Neither the historical result nor its hash is rewritten to make the
-current source fit. Use the explicit context to replay the original result.
+Neither v7 nor v8 is added to legacy `all`. Changed preserved outputs, missing
+source objects and incompatible runtimes fail explicitly. Original image
+comparisons retain byte equality; numerical comparisons retain their recorded
+tolerances. On compatible x86-64 Windows hosts, the established replay setting
+is `$env:OPENBLAS_CORETYPE='Haswell'`. CPU dispatch and BLAS configuration matter
+in addition to version pins, and a later passing run does not excuse a mismatch.
 
-Hosted-runner boundary: on 12 October 2026, the first Windows v8 CI replay
-failed its `prepared-response.json` comparison; a subsequent runner passed
-the unchanged original producer and tolerances. The differing fields from
-that first run were not retained, so its cause remains unresolved. Package
-versions alone do not bind CPU dispatch or BLAS configuration. Each v7/v8 CI
-run now logs that runtime, and a failure preserves original-producer outputs
-and field-level comparison diagnostics. A successful later run does not
-certify identical replay on every machine or excuse a future mismatch.
-
-A subsequent [v5 diagnostic run](https://github.com/kodareken/nested-space-cosmology/actions/runs/38313295989/job/115024003729)
-retained a PNG mismatch while its SVG matched exactly and its JSON passed
-the original numerical tolerance. Only two pixels differed, each by one
-red/green level. That runner selected OpenBLAS SkylakeX; the known passing
-local replay selects Haswell in both NumPy and SciPy. The original atlas
-manifests did not record CPU dispatch. The Windows
-replay jobs now explicitly select and verify `OPENBLAS_CORETYPE=Haswell`
-before running the unchanged checkers. This binds a previously automatic
-runtime choice using [OpenBLAS's documented selector](https://github.com/OpenMathLib/OpenBLAS/blob/develop/USAGE.md),
-without changing evidence or tolerances. It does not retrospectively identify
-the uncaptured first v8 mismatch. For local PowerShell replay in a compatible
-x86-64 environment, set `$env:OPENBLAS_CORETYPE='Haswell'` before the commands
-above; other processor architectures require their own established profile.
-
-The former `make reproduce`, `make reproduce-development` and `make reproduce-exact`
-campaign routes now stop with guidance. Their frozen release inputs differ from
-the merged current sources; running the old producer against the current package
-would fail authentication. Full campaign recomputation is no longer a GitHub Actions
-option. A deliberate rerun first needs a named question, a fresh admission and a
-finite budget, then selection of the source context produced by
-`python scripts/replay_history.py prepare`. Run its historical producer with that
-context's isolated source environment; never change pinned hashes or substitute
-the current package to make an old record pass. Routine authentication remains
-`make history-check` or `python scripts/replay_history.py all`.
-
-The [migration checker](https://doi.org/10.5281/zenodo.23090015) authenticates every
-destination and explicit successor. [Preservation and recovery](repository-consolidation.md)
-describe the original-path manifest and the named implementation variants.
+The retired `make reproduce`, `make reproduce-development` and
+`make reproduce-exact` routes stop with guidance. A new campaign needs a named
+question, fresh admission and a finite budget. Its producer must run in an
+explicitly selected source context; pinned hashes are never changed to fit the
+current package.
 
 ## Windows runtime
 
 The existing validation environment uses Python 3.14.8 and the project's pinned
 scientific stack. If its moved Windows redirector cannot locate `pyvenv.cfg`, use
 `python scripts/run_python.py <script-or-python-arguments>` with the base interpreter;
-for example, `python scripts/run_python.py scripts/test_reassembly.py`. Do not install a
+for example, `python scripts/run_python.py -m pytest tests/`. Do not install a
 second project package or restore the old directory. Normal installations use
 their activated interpreter. Root `scripts/lab.py` is only a compatibility launcher:
 it now runs in this root and does not switch scientific packages.

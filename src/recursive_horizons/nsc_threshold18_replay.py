@@ -11,6 +11,9 @@ import numpy as np
 from .nsc_evolved_incoming_state import _digest_arrays
 from .nsc_ks_retained_upstream_archive import RetainedUpstreamArchive
 from .nsc_ks_signed_state import s3_conjugate, source_complement_residual
+from .nsc_frozen_sources import (
+    authenticate_source, is_implementation_source, selected_source_context,
+    selected_source_sha256)
 
 IMPORT_RELATIVE = 'results/development/nsc-threshold18-import-v1'
 CHECKPOINT_RELATIVE = IMPORT_RELATIVE + '/results/development/nsc-threshold18-actual18-v1'
@@ -66,14 +69,18 @@ def require_signed_zero_only(local, imported, label):
 
 def _git_bytes(repo, *args):
     env = os.environ.copy()
-    env['GIT_ALTERNATE_OBJECT_DIRECTORIES'] = str(repo / 'lab' / '.source-history' / 'objects')
-    proc = subprocess.run(['git', '-C', str(repo), *args], capture_output=True, env=env)
+    env['GIT_ALTERNATE_OBJECT_DIRECTORIES'] = str(repo / 'archive/source-history/objects')
+    proc = subprocess.run(['git', '-C', str(repo), *args], capture_output=True, env=env, timeout=30)
     if proc.returncode != 0:
         raise ValueError('pinned git object unavailable: ' + ' '.join(args))
     return proc.stdout
 
 
 def _file_sha(lab, relative):
+    if is_implementation_source(relative):
+        return selected_source_sha256(lab, relative)
+    if relative.startswith('.source-history/'):
+        relative = 'archive/source-history/' + relative[len('.source-history/'):]
     path = lab / relative
     if not path.is_file():
         raise ValueError('closure file missing: ' + relative)
@@ -82,7 +89,8 @@ def _file_sha(lab, relative):
 
 def verify_closure(lab, record):
     """Check source, archive, baseline and successor hashes. The propagator is not HEAD."""
-    repo = lab.parent
+    lab = Path(lab).resolve()
+    repo = lab
     if record.get('base_commit') != BASE_COMMIT:
         raise ValueError('authoritative base changed')
     source, archive_digests = record.get('source_hashes'), record.get('archive_digests')
@@ -94,13 +102,17 @@ def verify_closure(lab, record):
         raise ValueError('closure hash census changed')
     for relative, expected in source.items():
         file_sha = _file_sha(lab, relative)
-        git_sha = _sha256(_git_bytes(repo, 'show', 'HEAD:lab/' + relative))
+        context = selected_source_context()
+        if context is not None:
+            git_sha = _sha256(authenticate_source(lab, relative, expected, context=context))
+        else:
+            git_sha = _sha256(_git_bytes(repo, 'show', 'HEAD:' + relative))
         if file_sha != expected or git_sha != expected:
             raise ValueError('source closure hash mismatch: ' + relative)
     for relative, expected in archive_digests.items():
         if _file_sha(lab, relative) != expected:
             raise ValueError('archive closure hash mismatch: ' + relative)
-    manifest = json.loads((lab / '.source-history' / 'manifest.json').read_text())
+    manifest = json.loads((lab / 'archive/source-history' / 'manifest.json').read_text())
     pins = {(item.get('path'), item.get('sha256')): item for item in manifest.get('pins') or []}
     historical = []
     for relative, expected in baseline.items():

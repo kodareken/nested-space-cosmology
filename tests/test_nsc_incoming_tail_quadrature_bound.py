@@ -18,6 +18,10 @@ OUTPUT = ROOT/'results/development/nsc-incoming-tail-quadrature-bound.json'
 CHANNEL = json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][22]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_symbolic_cancellation_precedes_directed_arithmetic():
     result = endpoint_certificate()
     assert result['stable_rearrangement_residuals'] == ['0']*3
@@ -74,10 +78,10 @@ def test_localized_circle_arc_power_wrapping_is_finite_after_algebra_fix():
         assert all(mp.isfinite(e) for e in (_lo(inverse.real),_hi(inverse.real),_lo(inverse.imag),_hi(inverse.imag)))
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_saved_only_replay_and_nonzero_outward_thermal(monkeypatch):
     if not OUTPUT.exists(): pytest.skip('post-preparation certificate gate')
-    spec = importlib.util.spec_from_file_location('tail_quad',ROOT/'scripts/derive_nsc_incoming_tail_quadrature_bound.py')
-    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    from recursive_horizons.nsc_incoming_tail_quadrature_bound import quadrature_control as module
     def forbidden(*args,**kwargs): raise AssertionError('replay prepared numerical source')
     monkeypatch.setattr(module,'prepare_integral',forbidden)
     monkeypatch.setattr(CompactTailKernel,'__call__',forbidden)

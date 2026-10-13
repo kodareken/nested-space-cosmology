@@ -13,6 +13,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT/'results/development/nsc-incoming-high-band-batch-bound.json'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_exact_induction_and_actual_interval_sign_control():
     result = sign_symmetry_identity()
     assert result['base_residual'] == result['norm_squared_residual'] == '0'
@@ -22,6 +26,7 @@ def test_exact_induction_and_actual_interval_sign_control():
     assert not result['physical_occupation_symmetry_assumed']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_actual28_groups55_windows_and_no_group13_overlap():
     data = authenticated_batch(ROOT)
     assert len(GROUPS) == 28 and set(GROUPS).isdisjoint({12, 14, 22, 32})
@@ -40,6 +45,7 @@ def test_cached_geometry_does_not_allow_completed_group_reruns():
             obj.bound({'index': group})
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_archived_signed_norm_arrays_and_saved_only_replay(monkeypatch):
     spec = importlib.util.spec_from_file_location('highband', ROOT/'scripts/derive_nsc_incoming_high_band_batch_bound.py')
     script = importlib.util.module_from_spec(spec); spec.loader.exec_module(script)

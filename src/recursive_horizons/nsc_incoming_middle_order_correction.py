@@ -17,6 +17,8 @@ LEFT, RIGHT = 16., 160.
 SIGNS = (1, -1)
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def authenticated_group14(root):
     """Read the selected original grids, moments and physical source labels."""
     root = Path(root); inputs = authenticated_middle_inputs(root)
@@ -45,7 +47,7 @@ def authenticated_group14(root):
     middle = json.loads((root/'results/development/nsc-incoming-middle-bound.json').read_text())
     for field in ('source_hashes', 'input_hashes'):
         for p, expected in middle[field].items():
-            if sha256((root/p).read_bytes()).hexdigest() != expected:
+            if selected_source_sha256(root, p) != expected:
                 raise ValueError('committed middle bound dependency changed: '+p)
     thermal = middle['groups'][13]['thermal_scattering_stress_error_upper']
     return {'channel': channel, 'config': inputs['config'], 'arrays': arrays, 'factor': factor,

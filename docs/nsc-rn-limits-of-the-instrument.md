@@ -20,6 +20,8 @@ third dimension. The circle plus the inside is the ball. The sentence
 "carries a sphere and supplies a radius" is withdrawn: it called the interior
 a missing dimension.
 
+This restriction does not rule out transverse structure in another model.
+
 **Bounded:** every stored array is radial. A claim that the front of the
 circle differs from the back cannot be made from this chart. A claim about
 the ball can, because the ball is this reduction. The gradient balance is

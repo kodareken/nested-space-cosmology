@@ -212,3 +212,5 @@ correction `-3.30349e-12`; it is not the current missing low/subgap bound.
 Centered depth4 Taylor enclosure at sixteen cells moved `4.37e-6` only
 to `4.35e-6`. These finite numerical outcomes leave modal, quadrature,
 field and complete-spectrum errors separate from the physical constraints.
+
+The discrete search ledger declares its merit before any step: `m(g) = max over nodes of max(|E_N|, |E_beta|)`. Rows remain append-only, and a predicted merit remains a prediction. This finite search diagnostic does not close the physical gate.

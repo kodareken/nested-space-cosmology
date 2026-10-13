@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import runpy
 import pytest
+import numpy as np
 from flint import ctx
 from recursive_horizons.nsc_ks_ball_trajectory import restored_upper
 from recursive_horizons.nsc_ks_retained_upstream_archive import RetainedUpstreamArchive
@@ -16,10 +17,13 @@ HISTORIC = (
     ROOT / 'results/development/nsc-subgap-source-window-v1',
     ROOT / 'results/development/nsc-threshold18-import-v1',
     ROOT / 'results/development/nsc-direct-source-window-v1',
-    ROOT / '.source-history',
+    ROOT / 'archive/source-history',
     ROOT / 'src/recursive_horizons/nsc_ks_energy_propagator.py',
 )
 
+
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
 
 def _snapshot(path):
     path = Path(path)
@@ -42,15 +46,17 @@ def _snapshot(path):
 
 @pytest.fixture(scope='module', autouse=True)
 def historic_bytes_stay_unchanged():
-    before = {str(path): _snapshot(path) for path in HISTORIC}
-    yield
-    assert {str(path): _snapshot(path) for path in HISTORIC} == before
+    with frozen_source_context(FROZEN_PRODUCER_CONTEXT):
+        before = {str(path): _snapshot(path) for path in HISTORIC}
+        yield
+        assert {str(path): _snapshot(path) for path in HISTORIC} == before
 
 
 @pytest.fixture(scope='module')
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def data():
     driver = runpy.run_path(str(ROOT / 'scripts/derive_nsc_ks_source_operator_majorant_v7.py'))
-    result = driver['calculate']()
+    result = driver['calculate'](source_context=FROZEN_PRODUCER_CONTEXT)
     encoded = driver['encoded_result'](result)
     output = ROOT / driver['OUTPUT']
     if output.exists():
@@ -63,6 +69,7 @@ def data():
     return driver, result, prior, v5, archive, encoded
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_family_census_joins_disjoint_rows_once(data):
     driver, result, prior, v5, _archive, encoded = data
     coverage = result['source_coverage']
@@ -132,6 +139,7 @@ def test_family_census_joins_disjoint_rows_once(data):
     assert "mode='resume'" not in source
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_overlap_weight_and_identity_mutations_are_refused(data):
     driver, result, prior, _v5, archive, _encoded = data
     base = driver['prior_rows'](prior)
@@ -178,3 +186,45 @@ def test_overlap_weight_and_identity_mutations_are_refused(data):
               'covariance_error_unweighted': True, 'physical_local_gate': 'OPEN'}
     with pytest.raises(ValueError, match='covariance complement'):
         driver['require_saved_witness'](copied)
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
+def test_original_coherence_bytes_are_required_even_for_tiny_entries(data):
+    from dataclasses import replace
+    from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation
+    from recursive_horizons.nsc_ks_batched_constraints import _fixed_preparation_digest, RHO_SIGMA
+    driver,_result,prior,_v5,archive,_encoded=data
+    _rho,entries=driver['require_same_slice'](prior,archive)
+    changed=list(entries)
+    index=next(i for i,(batch,_channel) in enumerate(changed)
+               if batch.original_panel=='group14/mid24_1' and batch.rows==(80,96) and batch.energy_sign<0)
+    batch,channel=changed[index]
+    covariance=np.array(batch.source.covariance,copy=True)
+    assert covariance[0,1] != 0
+    covariance[0,1]=0;covariance[1,0]=0
+    source=FixedSourcePreparation(covariance,batch.source.column_weights,batch.source.energies)
+    preparation=_fixed_preparation_digest(source,batch.initial_columns,batch.mass,batch.angular,batch.rho_up,RHO_SIGMA)
+    changed[index]=(replace(batch,source=source,preparation_digest=preparation),channel)
+    with pytest.raises(ValueError,match='original preparation'):
+        driver['rebind_signed_zero_spelling'](driver['prior_rows'](prior),changed)
+
+
+def test_current_computation_declares_current_and_original_sources_separately(data):
+    from recursive_horizons.nsc_frozen_sources import is_implementation_source
+    driver,saved,_prior,_v5,_archive,_encoded=data
+    current=driver['calculate']()
+    assert current['source_hashes'] != saved['source_hashes']
+    assert current['upstream_receipt_provenance']['original_source_context'] == FROZEN_PRODUCER_CONTEXT
+    assert all((ROOT/path).is_file() for path in current['source_hashes'])
+    assert all((ROOT/path).is_file() for path in current['input_hashes'])
+    assert all(not is_implementation_source(path) for path in current['input_hashes'])
+    assert all(is_implementation_source(path) for path in current['historical_source_bindings'])
+    assert not any(path in current['source_hashes'] for path in driver['ORIGINAL_OWNERS']
+                   if not (ROOT/path).is_file())
+    identity_fields=('family','rho_up_hex','profile_identity','weighted_error_moment',
+        'weighted_energy_error_moment','continuous_action_error_upper',
+        'negative_source_equivalence','threshold18_closure','source_coverage',
+        'physical_local_gate','physical_upstream_budget_component',
+        'source_quadrature_error_included','numerical_field_error_included',
+        'value_assembly_arithmetic_included')
+    assert {key:current[key] for key in identity_fields} == {key:saved[key] for key in identity_fields}

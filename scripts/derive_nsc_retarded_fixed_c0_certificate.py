@@ -1,3 +1,4 @@
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
 #!/usr/bin/env python3
 """Compose the directed projector predicate with the exact coherent sign bound.
 
@@ -10,7 +11,7 @@ import json
 import math
 from pathlib import Path
 
-import derive_nsc_incoming_low_energy_vacuum_enclosure as V
+from recursive_horizons.nsc_incoming_low_energy_vacuum_enclosure import vacuum_control as V
 
 ROOT=Path(__file__).resolve().parents[1]
 OUTPUT=ROOT/'results/development/nsc-retarded-fixed-c0-certificate.json'
@@ -91,7 +92,7 @@ def combine(interval,energy,channel,config,pulse):
         'strict_absolute_response_lower':rational(-exact_upper) if proved else None}
 
 
-def signature():return {p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in (*SOURCES,*INPUTS)}
+def signature():return {p:selected_source_sha256(ROOT, p) for p in (*SOURCES,*INPUTS)}
 
 
 def make_record():

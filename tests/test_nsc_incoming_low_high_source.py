@@ -14,6 +14,10 @@ from recursive_horizons.nsc_incoming_source_tail import _riccati_at_one, paired_
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_zero_extended16_source_matches_existing_ad4_owner():
     # Finite algebra control of signs, subtraction and normalization. No
     # physical mode, scattering or radial interval calculation is called.
@@ -33,6 +37,7 @@ def test_zero_extended16_source_matches_existing_ad4_owner():
             owner.vacuum_source_kernel(31, mass, ell, coeff)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_original_source_cells_and_single_group_scope():
     owned = owner.authenticated_low_inputs(ROOT)
     assert owned['channel']['index'] == 22
@@ -66,6 +71,7 @@ def test_record_preserves_old_values_and_nonzero_thermal_remainder():
     assert record['physical_error_budget']['stationarity_tolerance'] == 3e-11
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_does_not_run_interval_or_source_preparation(monkeypatch):
     def forbidden(*args, **kwargs): raise AssertionError('preparation entered during authenticated replay')
     for name in ('trimmed_defect_jets', '_geometry_jets', '_riccati_at_one', 'positive_grid'):

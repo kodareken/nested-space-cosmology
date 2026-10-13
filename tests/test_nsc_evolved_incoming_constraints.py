@@ -15,6 +15,10 @@ from recursive_horizons.nsc_common_subtracted_ks_source import (
 from recursive_horizons.nsc_transmitting_dirac_domain import S1, S2, S3
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT = Path(__file__).resolve().parents[1]
 PARAM = dict(mass=np.pi/2, angular=np.sqrt(5), axial_scale=np.sqrt(3*np.pi/2-4), radius=np.sqrt(2), multiplicity=7.)
 
@@ -117,9 +121,9 @@ def test_geometry_response_keeps_old_constants_out_and_has_complete_derivative()
         surface_geometry_response(slots,tangent,bad)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_fresh_history_entry_delegates_owned_evolution_with_fixed_source_inputs(monkeypatch):
-    spec=importlib.util.spec_from_file_location('evolved_constraint_control',ROOT/'scripts/derive_nsc_evolved_incoming_constraints.py')
-    control=importlib.util.module_from_spec(spec);spec.loader.exec_module(control)
+    from recursive_horizons.nsc_evolved_incoming_constraints import constraint_control as control
     records,arrays,meta,channel,source,coeff=control.load_inputs()
     state=control.restore_saved_control(arrays,meta,source,'center',records[0]['control']['amplitude'])
     x,phi,data,_=control.STATE.RETARDED.inputs()

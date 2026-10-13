@@ -11,6 +11,10 @@ from recursive_horizons.nsc_incoming_source_tail import _riccati_at_one
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_stable_increment_matches_independent_rank_one_matrices():
     c=json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][12]
     with mp.workdps(70):
@@ -36,6 +40,7 @@ def test_scope_rejects_unowned_group_or_coefficients():
         delta_kernel(40,0,1,[1]*16)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_artifact_replay_cannot_regenerate_coefficients(monkeypatch):
     record=json.loads((ROOT/'results/development/nsc-incoming-retained-order-correction.json').read_text())
     spec=importlib.util.spec_from_file_location('retained_correction_replay',ROOT/'scripts/derive_nsc_incoming_retained_order_correction.py')

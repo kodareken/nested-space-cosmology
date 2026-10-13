@@ -84,6 +84,8 @@ ASSUMPTIONS = (
 )
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def _nonneg(value, name):
     return nonnegative(value, name)
 
@@ -587,7 +589,7 @@ def continuation_matter_bounds(field_norm, axial_norm, field_error, axial_error,
 
 
 def _digest(root, path):
-    return sha256((Path(root) / path).read_bytes()).hexdigest()
+    return selected_source_sha256(Path(root), path)
 
 
 def _method_kind(method):

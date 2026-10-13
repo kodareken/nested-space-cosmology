@@ -763,3 +763,101 @@ def validate_minor_a3_report(report, root=None):
     if float(pair.get('absolute_angular', 0.0)) <= 0.0:
         raise ValueError('smallest representative pair must be a nonzero-angular family')
     return True
+
+from pathlib import Path as _receipt_Path
+from .nsc_frozen_sources import selected_source_sha256 as _receipt_source_sha256
+
+# Retained executable control: minor_control
+# Folded from scripts/derive_nsc_ks_uv_minor_a3.py at 329ef809; original receipts retain their producer identities.
+import argparse as _minor_control_argparse
+from collections.abc import Mapping as _minor_control_Mapping
+from hashlib import sha256 as _minor_control_sha256
+import json as _minor_control_json
+from pathlib import Path as _minor_control_Path
+import sys as _minor_control_sys
+import numpy as _minor_control_np
+from recursive_horizons.nsc_posix import ROOT as _minor_control_ROOT
+_minor_control_sys.path.insert(0, str(_minor_control_ROOT / 'src'))
+from recursive_horizons.nsc_ks_current_uv_transport import CAUCHY_RECORD as _minor_control_CAUCHY_RECORD, HISTORY_RECORD as _minor_control_HISTORY_RECORD
+from recursive_horizons.nsc_ks_evaluation_binding import write_bytes_atomic as _minor_control_write_bytes_atomic, implementation_hashes as _minor_control_implementation_hashes
+from recursive_horizons.nsc_ks_finite_history_uv_coefficients import CUTOFF_BRIDGE_CONTROL as _minor_control_CUTOFF_BRIDGE_CONTROL, INVENTORY_RECORD as _minor_control_INVENTORY_RECORD
+from recursive_horizons.nsc_ks_uv_minor_a3 import SCHEMA as _minor_control_SCHEMA, current_history_minor_a3_report as _minor_control_current_history_minor_a3_report, validate_minor_a3_report as _minor_control_validate_minor_a3_report
+_minor_control_OUTPUT = _minor_control_ROOT / 'results/development/nsc-ks-uv-minor-a3-v1.json'
+_minor_control_OWNERS = ('src/recursive_horizons/nsc_ks_uv_minor_a3.py', 'scripts/derive_nsc_ks_uv_minor_a3.py', 'tests/test_nsc_ks_uv_minor_a3.py', 'docs/nsc-ks-uv-minor-a3.md')
+_minor_control_INPUTS = (_minor_control_HISTORY_RECORD, _minor_control_CAUCHY_RECORD, _minor_control_INVENTORY_RECORD, 'results/development/artifacts/nsc-ks-source-inventory.npz', _minor_control_CUTOFF_BRIDGE_CONTROL, 'src/recursive_horizons/nsc_ks_current_uv_transport.py')
+
+def _minor_control_digest(path):
+    candidate = _receipt_Path(path)
+    relative = candidate.relative_to(_minor_control_ROOT).as_posix() if candidate.is_absolute() else candidate.as_posix()
+    return _receipt_source_sha256(_minor_control_ROOT, relative)
+
+def _minor_control_plain(value):
+    if isinstance(value, _minor_control_Mapping):
+        return {str(key): _minor_control_plain(item) for key, item in value.items()}
+    if isinstance(value, (tuple, list)):
+        return [_minor_control_plain(item) for item in value]
+    if isinstance(value, (_minor_control_np.bool_, bool)):
+        return bool(value)
+    if isinstance(value, _minor_control_np.integer):
+        return int(value)
+    if isinstance(value, _minor_control_np.floating):
+        return float(value)
+    return value
+
+from .nsc_source_binding_graph import original_source_graph as _minor_control_original_source_graph
+
+
+def _minor_control_calculate(*, source_context=None):
+    from contextlib import nullcontext
+    from .nsc_frozen_sources import frozen_source_context
+    selection = frozen_source_context(source_context) if source_context is not None else nullcontext()
+    with selection:
+        report = _minor_control_plain(_minor_control_current_history_minor_a3_report(_minor_control_ROOT))
+        hashes = (_minor_control_implementation_hashes(_minor_control_ROOT, owners=_minor_control_OWNERS)
+                  if source_context is None else
+                  dict(_minor_control_original_source_graph(_minor_control_ROOT, _minor_control_OWNERS, source_context)))
+        return {**report, 'status': 'OPEN: minor A3 jet piece and second geometry/phase jets enclosed on 0b0e4ced; complete history-minus-reference minor A3 retains unowned upstream major A2 times delta(1/r); C4, C_M and the UV tail remain missing', 'source_hashes': hashes, 'input_hashes': {path: _minor_control_digest(path) for path in _minor_control_INPUTS}}
+
+def _minor_control_check(value):
+    if value.get('schema') != _minor_control_SCHEMA:
+        raise ValueError('unexpected minor A3 schema')
+    for path, expected in {**value['source_hashes'], **value['input_hashes']}.items():
+        if _minor_control_digest(path) != expected:
+            raise ValueError('minor A3 dependency changed: ' + path)
+    if value['v1_pilot_rewritten'] or value['v2_record_rewritten'] or value['v3_record_rewritten']:
+        raise ValueError('historical UV remainder bytes are immutable')
+    if value['numerical_C4'] is not None or value['numerical_C_M'] is not None:
+        raise ValueError('minor A3 successor may not invent C4 or C_M')
+    if value['vacuum_integrated_tail_N_beta'] is not None:
+        raise ValueError('leading cancellation is not a vacuum-tail bound')
+    if not value['leading_e_minus2_cancellation_is_not_this_value']:
+        raise ValueError('E^{-2} cancellation is not this bound')
+    _minor_control_validate_minor_a3_report(value, _minor_control_ROOT)
+
+from types import SimpleNamespace as _minor_control_Namespace
+minor_control = _minor_control_Namespace(
+    CAUCHY_RECORD=_minor_control_CAUCHY_RECORD,
+    CUTOFF_BRIDGE_CONTROL=_minor_control_CUTOFF_BRIDGE_CONTROL,
+    HISTORY_RECORD=_minor_control_HISTORY_RECORD,
+    INPUTS=_minor_control_INPUTS,
+    INVENTORY_RECORD=_minor_control_INVENTORY_RECORD,
+    Mapping=_minor_control_Mapping,
+    OUTPUT=_minor_control_OUTPUT,
+    OWNERS=_minor_control_OWNERS,
+    Path=_minor_control_Path,
+    ROOT=_minor_control_ROOT,
+    SCHEMA=_minor_control_SCHEMA,
+    argparse=_minor_control_argparse,
+    calculate=_minor_control_calculate,
+    check=_minor_control_check,
+    current_history_minor_a3_report=_minor_control_current_history_minor_a3_report,
+    digest=_minor_control_digest,
+    implementation_hashes=_minor_control_implementation_hashes,
+    json=_minor_control_json,
+    np=_minor_control_np,
+    plain=_minor_control_plain,
+    sha256=_minor_control_sha256,
+    sys=_minor_control_sys,
+    validate_minor_a3_report=_minor_control_validate_minor_a3_report,
+    write_bytes_atomic=_minor_control_write_bytes_atomic,
+)

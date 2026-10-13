@@ -16,7 +16,9 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 sys.path.insert(0, str(ROOT / 'scripts'))
-import derive_nsc_ks_envelope_resolution as R
+from recursive_horizons.nsc_posix import install as _install_posix
+_install_posix()
+from recursive_horizons.nsc_ks_source_envelope import resolution_control as R
 from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation
 from recursive_horizons.nsc_ks_difference_envelope import evolve_ks_difference_envelope
 from recursive_horizons.nsc_ks_source_envelope import computational_z_grid, usual_axial_support
@@ -24,25 +26,108 @@ from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_
 
 OUTPUT = 'results/development/nsc-ks-difference-control.json'
 ARTIFACT = 'results/development/artifacts/nsc-ks-difference-control.npz'
-OWNED = ('scripts/derive_nsc_ks_difference_control.py', 'docs/nsc-ks-difference-control.md',
+ORIGINAL_SOURCE_CONTEXT = '329ef809e466a86ed4a290ee32c19485f85add9d'
+ORIGINAL_OWNED = ('scripts/derive_nsc_ks_difference_control.py', 'docs/nsc-ks-difference-control.md',
          'src/recursive_horizons/nsc_ks_difference_envelope.py', 'docs/nsc-ks-difference-envelope.md')
-INPUTS = tuple(dict.fromkeys((*R.OWNED, *R.INPUTS, R.OUTPUT)))
+ORIGINAL_INPUTS = tuple(dict.fromkeys((*R.OWNED, *R.INPUTS, R.OUTPUT)))
+OWNED = ('scripts/derive_nsc_ks_difference_control.py', 'docs/nsc-ks-source-envelope.md',
+         'src/recursive_horizons/nsc_ks_difference_envelope.py',
+         'src/recursive_horizons/nsc_ks_source_envelope.py',
+         'src/recursive_horizons/nsc_ks_matter_receipt_replay.py')
+_CURRENT_INPUT_OWNERS = {
+    'scripts/derive_nsc_ks_envelope_resolution.py':'src/recursive_horizons/nsc_ks_source_envelope.py',
+    'scripts/derive_nsc_ks_envelope_comparison.py':'src/recursive_horizons/nsc_ks_source_envelope.py',
+    'docs/nsc-ks-envelope-resolution.md':'docs/nsc-ks-source-envelope.md',
+    'docs/nsc-ks-envelope-comparison.md':'docs/nsc-ks-source-envelope.md',
+    'scripts/derive_nsc_evolved_incoming_constraints.py':'src/recursive_horizons/nsc_evolved_incoming_constraints.py',
+    'scripts/derive_nsc_local_prepared_response.py':'scripts/derive_nsc_cosmological_atlas_v8.py',
+    'docs/nsc-local-prepared-response.md':'docs/nsc-atlas-prepared-response.md',
+}
+INPUTS = tuple(dict.fromkeys(_CURRENT_INPUT_OWNERS.get(path,path) for path in ORIGINAL_INPUTS))
 CASES = (('n256', 256, R.C.TIGHT_OPTIONS), ('n512', 512, R.C.TIGHT_OPTIONS),
          ('tighter512', 512, R.TIGHTER))
 CAP = 30.
 TARGET = 1e-11
 
 
+from recursive_horizons.nsc_frozen_sources import (
+    frozen_source_context, selected_source_context, selected_source_sha256)
+
 class BudgetReached(RuntimeError):
     pass
 
 
 def digest(path):
-    return sha256((ROOT / path).read_bytes()).hexdigest()
+    from recursive_horizons.nsc_frozen_sources import selected_source_context, authenticate_source
+    pins={
+        'src/recursive_horizons/nsc_local_incoming_family.py':('09f3faa364ca88b8ff482c413022ce38f40bef0d','9d2b9fc57e2057d6c34d8943384428341b314370021bcd4156af88320c3de04b'),
+        'src/recursive_horizons/nsc_ks_difference_envelope.py':('e62d28f3230ae6ddb2712df71eb7c61a8ed65ad6','77c89c8e720ca97336ccdee441a645b5c73472cb6f15b09e8120f68ab53db196'),
+    }
+    if selected_source_context() is not None and path in pins:
+        context,expected=pins[path]
+        manifest=json.loads((ROOT/'archive/source-history/manifest.json').read_text(encoding='utf-8'))
+        if not any(p.get('path')==path and p.get('sha256')==expected and p.get('commit')==context for p in manifest['pins']):
+            raise ValueError('original difference source pin changed')
+        authenticate_source(ROOT,path,expected,context=context)
+        return expected
+    return selected_source_sha256(ROOT, path)
 
 
 def signatures():
-    return {p: digest(p) for p in (*OWNED, *INPUTS)}
+    owned,inputs = _binding_paths()
+    return {p: digest(p) for p in (*owned, *inputs)}
+
+
+def _binding_paths():
+    if selected_source_context() is not None:
+        return ORIGINAL_OWNED,ORIGINAL_INPUTS
+    return OWNED,INPUTS
+
+
+def replay_binding_receipt(saved,meta,arrays,name,binding,family):
+    """Keep a stored sampling fingerprint separate from the current binding.
+
+    The old profile sample arrays were not saved. Its fingerprint is bound
+    by the exact local NPZ and original producer pins; we cannot reconstruct
+    those bits from a different numerical runtime. Solver, domain recipe,
+    coefficients, target and source arrays remain unchanged. This does not
+    supply a field/geometry error certificate.
+    """
+    from recursive_horizons.nsc_frozen_sources import selected_source_context, source_sha256
+    if selected_source_context() is None:
+        raise ValueError('explicit original source context required for binding replay')
+    if digest(ARTIFACT)!=saved['payload']['sha256'] or signatures()!=meta['signature']:
+        raise ValueError('original binding receipt bytes or sources changed')
+    with np.load(ROOT/ARTIFACT,allow_pickle=False) as original:
+        if set(arrays)!=set(original.files) or any(
+                arrays[k].dtype!=original[k].dtype or not np.array_equal(arrays[k],original[k])
+                for k in arrays):
+            raise ValueError('original target, source or field arrays changed')
+    case=next(c for c in saved['control']['cases'] if c[0]==name)
+    _name,points,options=case
+    expected=next(c for c in CASES if c[0]==name)
+    if list(expected)!=case or any(getattr(binding,k)!=v for k,v in options.items()):
+        raise ValueError('original binding solver recipe changed')
+    if (binding.rho_up!=meta['rho_up'] or binding.rho_sigma!=1.
+            or binding.amplitudes!=(saved['control']['history_amplitude'],)
+            or binding.inner_radii!=(.007,) or binding.outer_radii!=(.03,)
+            or not np.array_equal(binding.computational_z,computational_z_grid(points))
+            or binding.axial_support!=usual_axial_support()
+            or family.directions[0].w.coefficients!=(0.,1.)
+            or family.directions[0].U.coefficients!=(0.,)
+            or family.directions[0].w.inner!=.03 or family.directions[0].w.outer!=.06
+            or arrays['target_z'].shape!=(21,) or not np.all(np.diff(arrays['target_z'])>0)):
+        raise ValueError('original coefficient, domain or target recipe changed')
+    original=meta['cases'][name]['binding']
+    if not isinstance(original,str) or len(original)!=64 or any(c not in '0123456789abcdef' for c in original):
+        raise ValueError('original binding fingerprint malformed')
+    return {'original_fingerprint':original,'current_fingerprint':binding.fingerprint,
+            'original_samples_retained':False,'original_source_context':selected_source_context(),
+            'current_source_hashes':{p:source_sha256(ROOT,p) for p in (
+                'scripts/derive_nsc_ks_difference_control.py',
+                'src/recursive_horizons/nsc_ks_difference_envelope.py',
+                'src/recursive_horizons/nsc_local_incoming_family.py')},
+            'physical_field_error_bound':None}
 
 
 def analyze(arrays, meta):
@@ -60,6 +145,7 @@ def analyze(arrays, meta):
 
 
 def record(arrays, meta, payload):
+    owned,inputs = _binding_paths()
     checks = analyze(arrays, meta)
     passed = all(k in checks and checks[k]['passes_indicator'] for k in ('space', 'time'))
     return {
@@ -74,8 +160,8 @@ def record(arrays, meta, payload):
                   'indicators_are_error_bounds': False, 'new_PG_runs': 0,
                   'stress_drift_subtracted': False, 'metric_timestep': False,
                   'same_Dirac_law': True, 'frozen_C0_promoted': False},
-        'source_hashes': {p: meta['signature'][p] for p in OWNED},
-        'input_hashes': {p: meta['signature'][p] for p in INPUTS},
+        'source_hashes': {p: meta['signature'][p] for p in owned},
+        'input_hashes': {p: meta['signature'][p] for p in inputs},
         'reused_artifacts': meta['reused_artifacts'], 'payload': payload,
         'reproducer': 'python3 scripts/derive_nsc_ks_difference_control.py --check',
     }
@@ -94,7 +180,8 @@ def run():
     if (ROOT / OUTPUT).exists() or (ROOT / ARTIFACT).exists():
         raise FileExistsError('existing difference control; use --check')
     sig = signatures()
-    previous = R.check()
+    with frozen_source_context(ORIGINAL_SOURCE_CONTEXT):
+        previous = R.check()
     with np.load(ROOT / previous['payload']['path'], allow_pickle=False) as f:
         old = {k: f[k] for k in f.files}
     oldmeta = json.loads(old['metadata_json'].tobytes())
@@ -158,8 +245,8 @@ def check():
     if signatures() != meta['signature']:
         raise ValueError('difference source/input changed')
     rebuilt = json.loads(json.dumps(record(arrays, meta, saved['payload'])))
-    if rebuilt != saved:
-        raise ValueError('difference array replay differs')
+    from recursive_horizons.nsc_ks_matter_receipt_replay import require_envelope_record
+    require_envelope_record(saved,rebuilt,arrays,meta)
     return saved
 
 
@@ -168,5 +255,13 @@ if __name__ == '__main__':
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument('--run', action='store_true')
     group.add_argument('--check', action='store_true')
-    result = run() if parser.parse_args().run else check()
+    parser.add_argument('--source-context', help='Full original source commit for saved --check; numerical inputs stay local.')
+    args=parser.parse_args()
+    if args.source_context is not None:
+        if args.run:
+            parser.error('--source-context selects historical --check only')
+        with frozen_source_context(args.source_context):
+            result=check()
+    else:
+        result=run() if args.run else check()
     print(json.dumps({k: result[k] for k in ('status', 'measurements', 'runtime')}, indent=2))

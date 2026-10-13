@@ -73,7 +73,7 @@ LEGACY_REPLAY_MODE = 'legacy-replay'
 BINDING_DIMENSIONS = (
     'source', 'history', 'channel', 'settings', 'nodes', 'code',
 )
-IMPLEMENTATION_OWNERS = (
+HISTORICAL_IMPLEMENTATION_OWNERS = (
     'scripts/derive_nsc_ks_gate_value.py',
     'docs/nsc-ks-gate-value.md',
     'src/recursive_horizons/nsc_ks_evaluation_binding.py',
@@ -83,6 +83,9 @@ IMPLEMENTATION_OWNERS = (
     'src/recursive_horizons/nsc_ks_energy_propagator.py',
     'src/recursive_horizons/nsc_ks_primal_step_control.py',
 )
+IMPLEMENTATION_OWNERS = tuple(
+    'docs/nsc-ks-source-operator-majorant-v7.md' if path == 'docs/nsc-ks-gate-value.md' else path
+    for path in HISTORICAL_IMPLEMENTATION_OWNERS)
 GIT_SOURCE_PREFIXES = ('scripts/', 'src/', 'docs/')
 _HASH = 64
 _REQUIRED_BINDING = (
@@ -470,7 +473,12 @@ def family_source_binding(entries):
     }
 
 
-def implementation_hashes(root, owners=IMPLEMENTATION_OWNERS):
+def implementation_hashes(root, owners=IMPLEMENTATION_OWNERS, *, source_context=None):
+    if source_context is not None:
+        from .nsc_source_binding_graph import original_source_graph
+        if tuple(owners) == IMPLEMENTATION_OWNERS:
+            owners = HISTORICAL_IMPLEMENTATION_OWNERS
+        return dict(original_source_graph(Path(root), tuple(owners), source_context))
     root = Path(root)
     pending, visited = list(owners), set()
     hashes = {}
@@ -501,7 +509,7 @@ def implementation_hashes(root, owners=IMPLEMENTATION_OWNERS):
         if path.suffix != '.py':
             hashes[name] = file_digest(path)
             continue
-        tree = ast.parse(path.read_text(), filename=name)
+        tree = ast.parse(path.read_text(encoding='utf-8'), filename=name)
         if path.name == '__init__.py' and all(
                 (isinstance(item, ast.Expr) and isinstance(item.value, ast.Constant)
                  and isinstance(item.value.value, str))
@@ -782,7 +790,9 @@ def resolve_recorded_source_bytes(
         raw = path.read_bytes()
         if sha256(raw).hexdigest() == expected:
             return raw, 'working-tree'
-    if not relative.startswith(GIT_SOURCE_PREFIXES):
+    from .nsc_frozen_sources import is_implementation_source
+    if (not relative.startswith(GIT_SOURCE_PREFIXES)
+            or not is_implementation_source(relative)):
         raise ValueError(
             'legacy recorded data hash mismatch: ' + relative
             + ' (working tree is not compared as a silent substitute)')

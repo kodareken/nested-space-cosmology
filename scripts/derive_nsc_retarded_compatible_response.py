@@ -11,6 +11,8 @@ import signal
 import sys
 import time
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256, frozen_source_context
+
 import numpy as np
 from scipy.linalg import block_diag
 from scipy.optimize import brentq
@@ -36,7 +38,7 @@ CASES=((401,64),(801,64),(801,128));CPU_CAP=120.
 MAXABS=lambda x:float(np.max(abs(x)))
 
 
-def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
+def digest(path):return selected_source_sha256(ROOT, path)
 def signature():return {p:digest(p) for p in (*OWNED,*RECORDS,*OWNERS)}
 
 def inputs():
@@ -276,7 +278,12 @@ def run():
     return publish(arrays,meta)
 
 
-def check():
+def check(*, source_context=None):
+    if source_context is not None:
+        # Source bytes use the explicit original context; numerical inputs
+        # are authenticated from current local files by the shared classifier.
+        with frozen_source_context(source_context):
+            return check()
     old=json.loads((ROOT/OUTPUT).read_text());path=ROOT/old['payload']['path']
     if digest(old['payload']['path'])!=old['payload']['sha256']:raise ValueError('response artifact changed')
     with np.load(path,allow_pickle=False) as a:arrays={k:a[k] for k in a.files}
@@ -298,8 +305,11 @@ def check():
 
 def main():
     p=argparse.ArgumentParser();mode=p.add_mutually_exclusive_group(required=True)
-    mode.add_argument('--run',action='store_true');mode.add_argument('--check',action='store_true');args=p.parse_args()
-    record=run() if args.run else check()
+    mode.add_argument('--run',action='store_true');mode.add_argument('--check',action='store_true')
+    p.add_argument('--source-context',help='full original-source commit for read-only archived checks')
+    args=p.parse_args()
+    if args.source_context and not args.check:p.error('--source-context requires --check')
+    record=run() if args.run else check(source_context=args.source_context)
     print(json.dumps({k:record[k] for k in ('status','per_case','comparison','runtime')},indent=2))
 
 if __name__=='__main__':main()

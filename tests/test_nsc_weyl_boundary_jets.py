@@ -6,12 +6,18 @@ from types import SimpleNamespace
 
 import numpy as np
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'scripts'))
 from recursive_horizons.nsc_weyl_boundary_jets import nodal_decomposition
-from derive_nsc_weyl_boundary_jets import calculate
+from recursive_horizons.nsc_weyl_boundary_jets import boundary_control
+calculate = boundary_control.calculate
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_all_frozen_nodal_coefficients_are_reconstructed():
     r=calculate()
     assert r['preserved_Weyl_value']==93.54264532195464
@@ -22,6 +28,7 @@ def test_all_frozen_nodal_coefficients_are_reconstructed():
     assert r['gate']['physical_two_sided_mismatch'] is None
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_normal_shear_is_the_independent_Weyl_boundary_rate():
     r=calculate();proper=r['proper_boundary_coefficients']
     assert max(abs(v) for v in proper['proper_boundary_N'])<3e-11

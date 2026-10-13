@@ -20,7 +20,9 @@ INPUTS=('results/development/nsc-incoming-constraint-gate.json','results/develop
         'src/recursive_horizons/nsc_common_subtracted_ks_source.py','src/recursive_horizons/nsc_lll_geometric_history.py',
         'scripts/derive_nsc_transmitting_boundary_binding.py')
 
-def sha(p):return hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def sha(p):return selected_source_sha256(ROOT, p)
 def read(p):return json.loads((ROOT/p).read_text())
 def make_record():
     table=read(INPUTS[1])['channels'];indices=(0,1,13,14)

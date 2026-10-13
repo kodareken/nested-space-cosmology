@@ -16,8 +16,8 @@ from typing import Any
 import numpy as np
 from scipy.optimize import brentq
 
-from .nsc_compact_matching import local_coefficients, spectral_moments
-from .nsc_mmp_embedding import CommonCoefficients
+from .dirac.compact import local_coefficients, spectral_moments
+from .dirac.charged_throat import CommonCoefficients
 from .nsc_warped_source import WarpedCompactWeight
 
 

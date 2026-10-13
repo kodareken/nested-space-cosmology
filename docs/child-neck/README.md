@@ -33,11 +33,11 @@ Start with [child-and-neck-status-note.md](child-and-neck-status-note.md): one t
 | [neck-flux-note.md](child-and-neck-status-note.md) | What the child gives to the neck: energy, quanta and net baryon number swept up | [neck_flux.py](https://doi.org/10.5281/zenodo.23090015) | [json](../../results/development/child-neck-v1/neck_flux.json) [png](../../results/development/child-neck-v1/neck_flux.png) |
 | [swap-symmetry-note.md](child-and-neck-status-note.md) | Which swaps of the throat keep the Dirac action, and what they do to matter and helicity | [swap_symmetry.py](https://doi.org/10.5281/zenodo.23090015) | [json](https://doi.org/10.5281/zenodo.23090015) [png](https://doi.org/10.5281/zenodo.23090015) |
 
-Scripts are in [lab/scripts/child_neck/](../../scripts/child_neck/). Records and figures are in [lab/results/development/child-neck-v1/](../../results/development/child-neck-v1/).
+Historical child-neck scripts are preserved in the [archived evidence](https://doi.org/10.5281/zenodo.23090015). Retained records and figures are in [results/development/child-neck-v1/](../../results/development/child-neck-v1/).
 
-## Running a script
+## Historical script layout
 
-Each script reads and writes its JSON in the working directory and imports its siblings, so run it from the records folder with the scripts folder on the Python path:
+The following command describes the archived layout. Each script reads and writes its JSON in the working directory and imports its siblings, using the records folder and its matching scripts folder:
 
 ```sh
 cd lab/results/development/child-neck-v1
@@ -56,4 +56,4 @@ On PowerShell set `$env:PYTHONPATH` first. The shipped JSON files are the inputs
 
 ## Studies used
 
-Recorded in [docs/arxiv-studies.md](../../../docs/arxiv-studies.md): arXiv 1110.5019 and 1101.4012 (Popławski) and hep-th/0507253 (Freidel, Minic, Takeuchi).
+Recorded in [docs/arxiv-studies.md](../arxiv-studies.md): arXiv 1110.5019 and 1101.4012 (Popławski) and hep-th/0507253 (Freidel, Minic, Takeuchi).

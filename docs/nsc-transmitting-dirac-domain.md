@@ -157,7 +157,7 @@ $\mathcal R=J^\dagger RJ$. The packets are
 $f_p=\sqrt{30}\rho(1-\rho)$ on $(0,1)$ and $f_c(\rho)=f_p(-\rho)$ on
 $(-1,0)$, with both spin components. They are independent $L^2$ probes
 in $D(H)$, not new modes or an initial state; the parent probe is trapped.
-For $\operatorname{Im}z>0$, both characteristic speeds are negative and
+For $\mathrm{Im}z>0$, both characteristic speeds are negative and
 the causal restriction has $\mathcal R_{pc}=0$. The advanced direction
 is its adjoint. Inflow-zero integration and continuous seam matching
 restrict the whole-line solution without creating a reflecting box or

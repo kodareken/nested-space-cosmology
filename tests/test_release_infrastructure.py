@@ -7,7 +7,9 @@ import json
 from pathlib import Path
 import unittest
 
-from test_publication import ROOT, load_script
+from test_publication import FROZEN_BASELINE, ROOT, load_script
+
+ORIGINAL_SOURCE_CONTEXT = '329ef809e466a86ed4a290ee32c19485f85add9d'
 
 
 class ReleaseInfrastructureTests(unittest.TestCase):
@@ -15,6 +17,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
     def setUpClass(cls):
         cls.reproducer = load_script('reproduce_public_results.py')
         cls.importer = load_script('stage_release_import.py')
+        cls.publication = load_script('check_publication.py')
         cls.release = json.loads((ROOT / 'results/release-spec.json').read_text())
         cls.manifest = cls.reproducer.load_manifest()
         cls.steps = {row['artifact_id']: row for row in cls.manifest['steps']}
@@ -28,7 +31,10 @@ class ReleaseInfrastructureTests(unittest.TestCase):
         ]
         for entry in (preserved + self.release['import_files']
                       + self.release['retained_byte_identical_files']):
-            self.assertEqual(entry['sha256'], hashlib.sha256((ROOT / entry['path']).read_bytes()).hexdigest())
+            status = self.publication.authenticate_frozen_path(
+                entry['path'], entry['sha256'], result=entry['path'].startswith('results/'),
+                context=FROZEN_BASELINE)
+            self.assertIn(status, {'local', 'archived', 'pinned_source'})
         result_paths = {
             entry['path']
             for entry in preserved + self.release['import_files']
@@ -84,7 +90,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
                          'NSC-21-COMPACT-MATCHING'):
             step = self.steps[artifact]
             original = json.loads((ROOT / step['output']).read_text())
-            locations = self.reproducer.validate_authenticated_inputs(ROOT, original, step)
+            locations = self.reproducer.validate_authenticated_inputs(ROOT, original, step, source_context=ORIGINAL_SOURCE_CONTEXT)
             normalized = self.reproducer.normalize_dynamic_hashes(original, locations)
             self.assertEqual(original['source_hashes'], normalized['source_hashes'])
             if 'comparison_function_sha256' in original:
@@ -96,19 +102,19 @@ class ReleaseInfrastructureTests(unittest.TestCase):
                     parent = parent[part]
                 parent[location[-1]] = '0' * 64
                 with self.assertRaises(self.reproducer.ReproductionError):
-                    self.reproducer.validate_authenticated_inputs(ROOT, wrong, step)
+                    self.reproducer.validate_authenticated_inputs(ROOT, wrong, step, source_context=ORIGINAL_SOURCE_CONTEXT)
 
     def test_comparator_hash_is_never_ignored(self):
         step = self.steps['NSC-4-COVARIANT-MEASURE']
         value = json.loads((ROOT / step['output']).read_text())
         value['comparison_function_sha256'] = '0' * 64
         with self.assertRaises(self.reproducer.ReproductionError):
-            self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
 
     def test_normalization_requires_declared_regenerated_results(self):
         step = self.steps['NSC-4-SHAPE-RESPONSE']
         value = json.loads((ROOT / step['output']).read_text())
-        locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+        locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
         self.assertEqual(2, len(locations))
         unchanged = self.reproducer.normalize_dynamic_hashes(value, set())
         self.assertEqual(value, unchanged)
@@ -117,7 +123,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             self.reproducer.normalize_dynamic_hashes(value, {('source_hashes', source)})
         auxiliary_step = self.steps['NSC-2-ZETA1-UNIT-CLOSURE-CHECK']
         auxiliary = json.loads((ROOT / auxiliary_step['output']).read_text())
-        locations = self.reproducer.validate_authenticated_inputs(ROOT, auxiliary, auxiliary_step, use_auxiliary=False)
+        locations = self.reproducer.validate_authenticated_inputs(ROOT, auxiliary, auxiliary_step, use_auxiliary=False, source_context=ORIGINAL_SOURCE_CONTEXT)
         self.assertEqual(set(), locations)
 
     def test_missing_result_dependency_and_changed_source_closure_fail(self):
@@ -125,7 +131,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
         value = json.loads((ROOT / step['output']).read_text())
         step['dependencies'] = []
         with self.assertRaises(self.reproducer.ReproductionError):
-            self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
         manifest = copy.deepcopy(self.manifest)
         row = next(item for item in manifest['steps'] if item['artifact_id'] == 'NSC-4-SHAPE-RESPONSE')
         relative = next(iter(row['source_dependency_hashes']))
@@ -196,7 +202,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
     def test_finite_terms_document_hashes_stay_exact_and_only_three_results_normalize(self):
         step = self.steps['NSC-8-FINITE-TERMS']
         value = json.loads((ROOT / step['output']).read_text())
-        locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+        locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
         self.assertEqual(3, len(locations))
         normalized = self.reproducer.normalize_dynamic_hashes(value, locations)
         for path, digest in value['authenticated_input_hashes'].items():
@@ -271,7 +277,7 @@ class ReleaseInfrastructureTests(unittest.TestCase):
             absolute = 2e-8 if artifact == 'NSC-11-RESPONSE-MATCHING' else 2e-7
             self.assertEqual((2e-8, absolute), (step['comparison_policy']['relative_tolerance'],
                                             step['comparison_policy']['absolute_tolerance']))
-            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step)
+            locations = self.reproducer.validate_authenticated_inputs(ROOT, value, step, source_context=ORIGINAL_SOURCE_CONTEXT)
             normalized = self.reproducer.normalize_dynamic_hashes(value, locations)
             self.assertEqual(value['source_hashes'], normalized['source_hashes'])
             for path, digest in value['input_hashes'].items():

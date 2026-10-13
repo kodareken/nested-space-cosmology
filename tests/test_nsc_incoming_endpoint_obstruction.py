@@ -8,6 +8,10 @@ import recursive_horizons.nsc_incoming_endpoint_obstruction as M
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def script():
     spec=importlib.util.spec_from_file_location('endpoint_proof',ROOT/'scripts/derive_nsc_incoming_endpoint_obstruction.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
@@ -25,6 +29,7 @@ def test_scalar_projector_recurrence_and_endpoint_sign():
     assert proof['linearized_bridge']['physical_linearized_error_order'].startswith('X-deltaP4=O(E^-4)')
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_actual_positive_bump_and_nonzero_mass_angular_guards():
     module=script();records,_,_=module.load_inputs()
     _,compensator,pilot,inventory,restart=records
@@ -38,6 +43,7 @@ def test_actual_positive_bump_and_nonzero_mass_angular_guards():
         M.rational_guard(channel,dict(pulse,axial_halfwidth=.01),config,compensator)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_replay_never_calls_physical_or_old_tail_producers(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('physical/scientific producer entered algebraic proof')
     import scipy.integrate

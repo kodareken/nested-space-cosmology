@@ -18,6 +18,22 @@ class KSDifferenceIncoming(E.KSEnvelopeIncoming):
     envelope_difference: object
     envelope_difference_z: object
 
+    @classmethod
+    def from_authenticated_historical_receipt(cls, root, receipt_path, expected_receipt_sha256,
+                                              *, case, binding, family, source_context,
+                                              source_contexts=None):
+        """Load exact local historical arrays under explicit source pins.
+
+        Ordinary construction retains exact reconstruction checks. This
+        factory authenticates the complete receipt/payload before applying
+        a separately reported finite phase-arithmetic diagnostic.
+        """
+        from .nsc_ks_difference_receipt import authenticated_difference_receipt
+        return authenticated_difference_receipt(
+            cls, root, receipt_path, expected_receipt_sha256, case=case,
+            binding=binding, family=family, source_context=source_context,
+            source_contexts=source_contexts)
+
     def __post_init__(self):
         super().__post_init__()
         for name, shape in (

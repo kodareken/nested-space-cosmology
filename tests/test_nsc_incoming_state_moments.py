@@ -19,13 +19,18 @@ from recursive_horizons.nsc_transmitting_dirac_domain import S1, S2, S3
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 @pytest.fixture(scope='module')
 def data():
-    record = json.loads((ROOT/'results/development/nsc-pg-massive-mode-resolution.json').read_text())
-    path = ROOT/record['payload']['path']
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == record['payload']['sha256']
-    with np.load(path, allow_pickle=False) as fields:
-        yield fields
+    with frozen_source_context(FROZEN_PRODUCER_CONTEXT):
+        record = json.loads((ROOT/'results/development/nsc-pg-massive-mode-resolution.json').read_text())
+        path = ROOT/record['payload']['path']
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == record['payload']['sha256']
+        with np.load(path, allow_pickle=False) as fields:
+            yield fields
 
 
 def test_homogeneous_bloch_equals_existing_proper_KS_reference():
@@ -43,6 +48,7 @@ def test_homogeneous_bloch_equals_existing_proper_KS_reference():
 
 
 @pytest.mark.parametrize('group', [1, 13, 14])
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_global_mode_moments_and_horizon_coherence(data, group):
     label = data['label']
     candidates = np.flatnonzero((label[:, 0] == group) & (label[:, 1] == 1))
@@ -82,6 +88,7 @@ def test_global_mode_moments_and_horizon_coherence(data, group):
                       'largest_roundoff_indicator': float(result['roundoff_indicator'].max())}))
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_signed_energy_fold_and_group_multiplicity(data):
     label = data['label']
     group, energy_target = 14, 2.
@@ -115,6 +122,7 @@ def test_seed_and_massless_LLL_are_not_accepted_as_massive_input():
         incoming_state_moments([1.], np.eye(2)[None], np.eye(3)[None], np.eye(3)[None], 1., 0.)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_coisometry_without_physical_source_sewing_is_rejected(data):
     label = data['label']
     indices = np.flatnonzero((label[:, 0] == 13) & (label[:, 1] == 1) & (label[:, 5] > 2.))

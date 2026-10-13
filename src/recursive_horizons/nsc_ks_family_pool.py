@@ -13,6 +13,17 @@ DEFAULT_WORKERS = 9
 
 
 def dirac_process_lines():
+    if os.name == 'nt':
+        # Enumerate only scientific drivers; POSIX ps is unavailable here.
+        command = ("Get-CimInstance Win32_Process | Where-Object { "
+                   "$_.CommandLine -match 'python' -and "
+                   "$_.CommandLine -match 'derive_nsc_' -and "
+                   "$_.CommandLine -match '--run' } | ForEach-Object { "
+                   "[string]$_.ProcessId + ' ' + $_.CommandLine }")
+        output = subprocess.check_output(
+            ['powershell.exe', '-NoProfile', '-NonInteractive', '-Command', command],
+            text=True, timeout=15)
+        return [line.strip() for line in output.splitlines() if line.strip()]
     output = subprocess.check_output(
         ['ps', '-ax', '-o', 'pid=', '-o', 'command='], text=True)
     return [line.strip() for line in output.splitlines() if line.strip()]
@@ -36,6 +47,37 @@ def other_dirac_runs(lines, self_pid):
 
 
 def pid_is_alive(pid):
+    if os.name == 'nt':
+        # os.kill(pid, 0) sends CTRL_C_EVENT on Windows. Query a process handle.
+        import ctypes
+        from ctypes import wintypes
+        native = ctypes.WinDLL('kernel32', use_last_error=True)
+        native.OpenProcess.argtypes = (wintypes.DWORD, wintypes.BOOL, wintypes.DWORD)
+        native.OpenProcess.restype = wintypes.HANDLE
+        native.WaitForSingleObject.argtypes = (wintypes.HANDLE, wintypes.DWORD)
+        native.WaitForSingleObject.restype = wintypes.DWORD
+        native.CloseHandle.argtypes = (wintypes.HANDLE,)
+        native.CloseHandle.restype = wintypes.BOOL
+        number = int(pid)
+        if number < 1:
+            return False
+        handle = native.OpenProcess(0x00100000, False, number)  # SYNCHRONIZE
+        if not handle:
+            error = ctypes.get_last_error()
+            if error == 87:  # nonexistent process
+                return False
+            if error == 5:  # a protected live process
+                return True
+            raise ctypes.WinError(error)
+        try:
+            status = native.WaitForSingleObject(handle, 0)
+            if status == 258:  # WAIT_TIMEOUT: process has not exited
+                return True
+            if status == 0:
+                return False
+            raise ctypes.WinError(ctypes.get_last_error())
+        finally:
+            native.CloseHandle(handle)
     try:
         os.kill(int(pid), 0)
     except ProcessLookupError:

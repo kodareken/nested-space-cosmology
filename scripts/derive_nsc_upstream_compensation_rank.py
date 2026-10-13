@@ -5,11 +5,12 @@ import argparse
 from fractions import Fraction as Q
 import hashlib
 import json
+from recursive_horizons.nsc_frozen_sources import source_sha256, is_implementation_source
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "results/development/nsc-upstream-compensation-rank.json"
-INPUTS = (
+ORIGINAL_INPUTS = (
     "results/development/nsc-retarded-radial-response.json",
     "results/development/nsc-mode-resolved-cauchy-state.json",
     "docs/nsc-upstream-metric-compensation.md",
@@ -17,6 +18,11 @@ INPUTS = (
     "src/recursive_horizons/nsc_incoming_cauchy_jets.py",
     "src/recursive_horizons/nsc_lorentzian.py",
 )
+CURRENT_EXPLANATIONS = {
+    "docs/nsc-upstream-metric-compensation.md": "docs/nsc-preparation-domain-decision.md",
+    "docs/nsc-incoming-fourier-matching.md": "docs/nsc-retarded-fixed-c0-certificate.md",
+}
+INPUTS = tuple(CURRENT_EXPLANATIONS.get(p,p) for p in ORIGINAL_INPUTS)
 
 
 def guard_labels(m, ell, energy):
@@ -43,7 +49,7 @@ def exact_identities():
             "derivative_identity": True}
 
 
-def build_record():
+def build_record(*, source_context=None):
     radial = json.loads((ROOT / INPUTS[0]).read_text())
     channel = json.loads((ROOT / INPUTS[1]).read_text())["channels"][14]
     assert radial["control"]["family"] == "14_1"
@@ -85,7 +91,8 @@ def build_record():
         "status": "PASS: normalized one-energy diagonal response has full real rank",
         "proof_kind": "symbolic identities and exact rational inequalities; no propagation",
         "selected_channel": "14_1", "selected_input": {k: str(v) for k, v in labels.items()},
-        "input_hashes": {p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in INPUTS},
+        "input_hashes": {p: source_sha256(ROOT,p,context=source_context if is_implementation_source(p) else None)
+                         for p in (INPUTS if source_context is None else ORIGINAL_INPUTS)},
         "identities": exact_identities(),
         "support": {"center": str(center), "halfwidth": str(halfwidth),
                     "left": str(left), "right": str(right),
@@ -112,8 +119,9 @@ def main():
     action = parser.add_mutually_exclusive_group(required=True)
     action.add_argument("--write", action="store_true")
     action.add_argument("--check", action="store_true")
+    parser.add_argument("--source-context", help="full original source commit for explicit saved-receipt replay")
     args = parser.parse_args()
-    record = build_record()
+    record = build_record(source_context=args.source_context)
     if args.write:
         with OUTPUT.open("x") as stream:
             stream.write(json.dumps(record, indent=2, sort_keys=True)+"\n")

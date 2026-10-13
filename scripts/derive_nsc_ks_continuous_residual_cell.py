@@ -18,7 +18,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'scripts'))
 import derive_nsc_ks_trajectory_control as T
 import derive_nsc_ks_profile_fourier_bound as P
-import derive_nsc_ks_profile_fourier_refinement as Q
+from recursive_horizons.nsc_ks_profile_fourier_bound import refinement_control as Q
 from recursive_horizons.nsc_ks_ball_trajectory import BallFourierSegment,exact_upper,restored_upper
 from recursive_horizons.nsc_ks_ball_operator import AnalyticRadiusFamily,time_operator_enclosure
 from recursive_horizons.nsc_ks_residual_polynomial import ResidualPolynomial

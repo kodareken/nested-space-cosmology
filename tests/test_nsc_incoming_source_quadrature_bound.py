@@ -16,6 +16,10 @@ from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision, _lo, _
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def channel():
     return json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][6]
 
@@ -79,6 +83,7 @@ def test_binary_endpoint_serialization_is_lossless():
         assert owner.pack(owner.unpack(owner.pack(value))) == owner.pack(value)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_pilot_record_scope_and_replay_without_source_generation(monkeypatch):
     record_path = ROOT/'results/development/nsc-incoming-source-quadrature-bound.json'
     if not record_path.exists():

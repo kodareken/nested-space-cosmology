@@ -13,7 +13,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from recursive_horizons.nsc_chiral_boundary import (
+from recursive_horizons.dirac.boundary import (
     ALPHA, BETA, DEFAULT_RESULT, ENERGIES, GAMMA5, I4, PORTS, SCHEMA,
     algebra_and_domain, clifford_basis, comm, continuum_data, decompose_link,
     eliminate_center, frame_control, green_from_fundamental, joined_green,
@@ -52,7 +52,7 @@ class DomainAndAlgebraTests(unittest.TestCase):
     def test_schur_symmetry_theorem_with_noncommuting_blocks(self):
         # Independent finite Hermitian example; chirality-invariant blocks
         # need not mutually commute. Distinct rows ensure ordering is tested.
-        from recursive_horizons.nsc_chiral_boundary import ANGULAR
+        from recursive_horizons.dirac.boundary import ANGULAR
         rr = 2.1*I4+.3*ALPHA
         ee = 1.7*I4+.2*ANGULAR
         re = .8*ALPHA+.4j*ANGULAR

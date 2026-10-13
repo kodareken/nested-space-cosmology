@@ -39,7 +39,7 @@ areal-radius near-throat child. Exact magnetic RN calibration comes
 before any sourced case. The source-free jet comparison is measured from reconstructed PG
 jets, meets $10^{-4}$, and is independently confirmed. The archived frames do not store derived energies or curvature.
 `--assess-archive` reads
-[the rank-9 directory](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/)
+[the rank-9 directory](https://doi.org/10.5281/zenodo.23090015)
 without a time step. The official writer refused that sealed
 directory. The accepted body is the manual creation-only
 [assessment v1](../results/development/nsc-rn-pilot-assessment-v1.json),

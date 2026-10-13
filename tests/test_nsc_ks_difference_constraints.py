@@ -1,5 +1,6 @@
 """Integration of the real difference-state type with the KS assembly."""
 import numpy as np
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
 
 from recursive_horizons.nsc_ks_local_constraints import assemble_local_incoming, _REFERENCE_CACHE
 from recursive_horizons.nsc_ks_matter_difference import source_fixed_matter_difference
@@ -46,6 +47,21 @@ def test_cached_reference_difference_is_retained_instead_of_removed():
             _REFERENCE_CACHE[key] = previous
 
 
+def test_difference_driver_default_binds_retained_owners():
+    from pathlib import Path
+    import sys
+    from recursive_horizons.nsc_frozen_sources import source_sha256
+    root=Path(__file__).resolve().parents[1]
+    sys.path.insert(0,str(root/'scripts'))
+    import derive_nsc_ks_difference_control as control
+    current=control.signatures()
+    assert set(current)==set((*control.OWNED,*control.INPUTS))
+    assert all((root/path).is_file() for path in current)
+    assert all(current[path]==source_sha256(root,path) for path in current)
+    assert not (set(control.ORIGINAL_OWNED)-set(control.OWNED)) & set(current)
+
+
+@frozen_source_context('329ef809e466a86ed4a290ee32c19485f85add9d')
 def test_authenticated_nonzero_history_arrays_reach_both_constraints():
     """Replay saved actual source fields; only the short homogeneous reference ODE runs."""
     import json
@@ -68,12 +84,18 @@ def test_authenticated_nonzero_history_arrays_reach_both_constraints():
     binding = E.KSEnvelopeBinding(mesh, w, U, family.amplitudes,
         tuple(d.inner_radius for d in family.directions), tuple(d.outer_radius for d in family.directions),
         E.usual_axial_support(), meta['rho_up'], 1., **options)
-    assert binding.fingerprint == meta['cases'][name]['binding']
-    state = KSDifferenceIncoming(arrays['target_z'], arrays[name + '/F'], arrays[name + '/dF'],
-        arrays[name + '/Fz'], arrays[name + '/dFz'], arrays['source/covariance'],
-        arrays['source/column_weights'], arrays['source/energies'], meta['parameters']['mass'],
-        meta['parameters']['angular'], arrays['initial_canonical_columns'], meta['rho_up'], binding,
-        meta['cases'][name]['preparation'], None, {}, arrays[name + '/A'], arrays[name + '/D'], arrays[name + '/Dz'])
+    replay_binding=control.replay_binding_receipt(saved,meta,arrays,name,binding,family)
+    assert replay_binding['original_fingerprint']==meta['cases'][name]['binding']
+    assert replay_binding['current_fingerprint']==binding.fingerprint
+    assert not replay_binding['original_samples_retained']
+    assert replay_binding['physical_field_error_bound'] is None
+    state = KSDifferenceIncoming.from_authenticated_historical_receipt(
+        root,control.OUTPUT,'01ac13653c8b787567de920d66c13e11dd6cc343d4c1ff4df6f991df1c463bb0',
+        case=name,binding=binding,family=family,
+        source_context='329ef809e466a86ed4a290ee32c19485f85add9d',
+        source_contexts={
+            'src/recursive_horizons/nsc_local_incoming_family.py':'09f3faa364ca88b8ff482c413022ce38f40bef0d',
+            'src/recursive_horizons/nsc_ks_difference_envelope.py':'e62d28f3230ae6ddb2712df71eb7c61a8ed65ad6'})
     read = lambda path: json.loads((root / path).read_text())
     baseline = read('results/development/nsc-incoming-source-update-v5.json')
     coeff = control.R.C.P.coefficients_from_records(

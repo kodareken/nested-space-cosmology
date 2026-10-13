@@ -32,7 +32,7 @@ from recursive_horizons.nsc_ks_source_envelope import computational_z_grid, usua
 from recursive_horizons.nsc_local_incoming_constraints import _channel_record
 from recursive_horizons.nsc_local_incoming_family import LocalIncomingFamily
 from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_bytes
-from derive_nsc_evolved_incoming_constraints import coefficients_from_records
+from recursive_horizons.nsc_evolved_incoming_constraints import coefficients_from_records
 
 HISTORY = "results/development/nsc-ks-gate-history-lm-broyden.json"
 FIELDS = ("columns", "axial_columns", "column_tangents", "axial_tangents")

@@ -6,6 +6,10 @@ import recursive_horizons.nsc_incoming_surface_crossing as owner
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_centered_system_has_no_forbidden_positive_integer_eigenvalue():
     proof=owner.crossing_identities()
     assert set(proof['residuals'].values())=={'0'}
@@ -16,6 +20,7 @@ def test_centered_system_has_no_forbidden_positive_integer_eigenvalue():
     assert owner.THEOREM['locator']=='Proposition 2.1, page 2'
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_crossing_receipt_reuses_frozen_coefficients_without_producers(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('scientific coefficient producer entered crossing proof')
     import recursive_horizons.nsc_incoming_surface_coefficients as coefficient

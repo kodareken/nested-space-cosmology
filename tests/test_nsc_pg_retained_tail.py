@@ -45,7 +45,10 @@ def test_retained_tail_record_is_tail_only_and_covers_all_families():
     assert record['coverage']['family_count']==61
     restart=json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').read_text())
     assert record['locked_inputs']==restart['locked_inputs']
-    rebuilt,_=make_record(ROOT/record['payload']['path'],arrays,metadata)
+    rebuilt,_=make_record(
+        ROOT/record['payload']['path'],arrays,metadata,
+        source_context='329ef809e466a86ed4a290ee32c19485f85add9d',source_hashes=record['source_hashes'],
+    )
     assert json.dumps(record,sort_keys=True)==json.dumps(rebuilt,sort_keys=True)
 
 

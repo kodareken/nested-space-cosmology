@@ -13,7 +13,7 @@ the unchanged horizon/incoming source covariance. Use the already owned
 canonical Dirac operator $H[g]$ on the same transmitting domain and define
 
 $$
-w_E(\tau)=(U[g](\tau,\tau_i)-U_0(\tau,\tau_i))\Phi_E,
+w_E(\tau)=(U[g]\!(\tau,\tau_i)-U_0(\tau,\tau_i))\Phi_E,
 \qquad w_E(\tau_i)=0.
 $$
 
@@ -21,8 +21,8 @@ Applying the imported variation-of-constants identity to that operator gives
 
 $$
 i\partial_\tau w_E
-=H[g](\tau)w_E+
-(H[g](\tau)-H_0)e^{-iE(\tau-\tau_i)}\Phi_E.
+=H[g]\!(\tau)w_E+
+(H[g]\!(\tau)-H_0)e^{-iE(\tau-\tau_i)}\Phi_E.
 $$
 
 The metric dependence is evaluated nonlinearly through the existing KS–PG

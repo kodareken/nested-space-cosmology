@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from .nsc_chiral_boundary import ALPHA, ANGULAR, BETA
+from .dirac.boundary import ALPHA, ANGULAR, BETA
 from .nsc_common_time_bulk_split import CommonTimeBulkSplit
 from .nsc_lorentzian import geometry
 from .nsc_transmitting_dirac_domain import I2, S1, S2, S3, TransmittingDiracSeamDomain

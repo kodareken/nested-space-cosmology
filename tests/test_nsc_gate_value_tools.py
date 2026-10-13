@@ -126,6 +126,24 @@ def test_pool_returns_items_in_submission_order():
     assert map_families(echo_item, (3, 1, 2), workers=2) == (3, 1, 2)
 
 
+def test_process_liveness_does_not_signal_on_windows(monkeypatch):
+    from recursive_horizons.nsc_ks_family_pool import pid_is_alive
+    if os.name == 'nt':
+        def forbidden(*_args):
+            raise AssertionError('liveness query sent a signal')
+        monkeypatch.setattr(os, 'kill', forbidden)
+    assert pid_is_alive(os.getpid())
+
+
+def test_exited_process_is_not_a_live_lock_holder():
+    import subprocess
+    import sys
+    from recursive_horizons.nsc_ks_family_pool import pid_is_alive
+    process = subprocess.Popen([sys.executable, '-c', 'pass'])
+    process.wait(timeout=10)
+    assert not pid_is_alive(process.pid)
+
+
 def test_ledger_declares_merit_and_appends_without_rewriting(tmp_path):
     path = tmp_path/'ledger.json'
     Step.declare_ledger(path)

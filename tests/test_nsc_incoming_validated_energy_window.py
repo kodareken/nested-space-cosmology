@@ -15,12 +15,17 @@ from recursive_horizons.nsc_incoming_window_refinement import authenticated_wind
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def inputs():
     c=json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][32]
     cfg=json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').read_text())['scattering_provenance']['config']
     return c,cfg
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_actual_LOWcell_is_disjoint_from_committed_high_source():
     old=authenticated_window(ROOT,32,'low_vacuum',24.,32.)
     assert old['left']==24 and old['right']==32
@@ -66,6 +71,7 @@ def test_reference_is_existing_full_ad4_with_frozen_binary_labels():
                 assert all(_lo(v.real)<=e<=_hi(v.real) for v,e in zip(actual,expected))
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_geometry_cache_reuses_preflight_coefficients_without_generation(monkeypatch,tmp_path):
     record=json.loads((ROOT/'results/development/nsc-incoming-energy-panel-preflight.json').read_text())
     pre=json.loads((ROOT/record['payload']['path']).read_text())['preflight']
@@ -79,6 +85,7 @@ def test_geometry_cache_reuses_preflight_coefficients_without_generation(monkeyp
         assert found==geometry and len(basis)==37
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_complete_window_replays_without_field_or_reference_generation(monkeypatch):
     path=ROOT/'results/development/nsc-incoming-validated-energy-window.json'
     if not path.exists():pytest.skip('full authorized run has not finished')

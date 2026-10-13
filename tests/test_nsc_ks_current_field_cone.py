@@ -36,6 +36,9 @@ V4_PATH = ROOT / "results/development/nsc-ks-current-field-pilot-v4.json"
 EXPECTED_IDENTITY = V4_PROFILE_IDENTITY
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_checkpoint_cell_dyadic_does_not_round_down(small_cone, monkeypatch):
     from recursive_horizons import nsc_ks_current_field_cone as owner
     family, config, payload = (small_cone[name] for name in ('family', 'config', 'payload'))
@@ -72,6 +75,7 @@ def synthetic_segment(rho_start, rho_end, *, scale=1.0, nsrc=1, nz=8):
 
 
 @pytest.fixture(scope="module")
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def small_cone():
     family = small_family()
     origin = family.center - 0.2
@@ -350,6 +354,7 @@ def test_adapters_keep_rho1_source_error_unresolved(small_cone):
     assert scientific_digest(record) == scientific_digest(result.to_mapping())
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_v4_cell_122_restored_payload_stays_inside_directed_enclosure():
     sys.path.insert(0, str(ROOT / "scripts"))
     from validate_nsc_ks_current_field_cone_v1 import capture_owner as V3

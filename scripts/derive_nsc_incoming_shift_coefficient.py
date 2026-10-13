@@ -36,7 +36,9 @@ OWNERS=('src/recursive_horizons/nsc_spatial_reference_symbol.py',
         'src/recursive_horizons/nsc_incoming_lapse_coefficient.py')
 
 
-def digest(p):return sha256((ROOT/p).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(p):return selected_source_sha256(ROOT, p)
 def signature():return {p:digest(p) for p in (*SOURCES,*RECORDS,*OWNERS)}
 def read(p):return json.loads((ROOT/p).read_text())
 
@@ -141,7 +143,7 @@ def make_record(path):
         'status':'PASS: closed strictly positive c_v; physical initial data and stationarity OPEN' if not failures else 'OPEN: coefficient control mismatch',
         'coefficient':closed,'proof':proof,'controls':controls,'residuals':residuals,'control_tolerance':3e-11,'failures':failures,
         'source_hashes':{p:digest(p) for p in SOURCES},'input_hashes':{p:digest(p) for p in (*RECORDS,*OWNERS)},
-        'payload':{'path':str(path.relative_to(ROOT)),'sha256':sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size},
+        'payload':{'path':path.relative_to(ROOT).as_posix(),'sha256':sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size},
         'scope':{'coefficient_fixed_by_existing_action':True,'same_full_Weyl_and_2D_local_Euler':True,
             'physical_source_cancels_in_response':True,'source_state_or_scale_refit':False,
             'c_u_proof_rerun':False,'probe_reference_or_mode_generators_run':False,

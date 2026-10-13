@@ -52,6 +52,9 @@ import derive_nsc_ks_rho1_source_bound_v1 as D
 CONFIG = {'surface_gravity': .24, 'omega': 3.9}
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def synthetic_panel(*, group=14, sign=1, angular=np.sqrt(5), mass=1.5, name='synthetic'):
     energies = np.array([.4, .8, 2.])
     rng = np.random.default_rng(33)
@@ -323,6 +326,7 @@ def test_small_authenticated_real_sample_preserves_fibers():
         assert len(payload['group13/low/energies']) == 192
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_recorded_register_stays_open_and_authenticates_inputs():
     inventory, _v5, _decision, _channels = inventory_and_v5()
     D.ensure_inventory_payload(inventory)
@@ -343,7 +347,7 @@ def test_recorded_register_stays_open_and_authenticates_inputs():
         assert D.stable(record) == D.stable(saved)
         D.check(saved)
         for path, expected in {**saved['source_hashes'], **saved['input_hashes']}.items():
-            assert sha256((ROOT / path).read_bytes()).hexdigest() == expected
+            assert selected_source_sha256(ROOT, path) == expected
 
     forged = deepcopy(record)
     forged['status'] = 'PASS'

@@ -31,7 +31,7 @@ from recursive_horizons.nsc_ks_source_envelope import (
     KSEnvelopeBinding, computational_z_grid, _sample_axial_profiles, usual_axial_support)
 from recursive_horizons.nsc_local_incoming_family import LocalIncomingFamily
 from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_bytes
-from derive_nsc_evolved_incoming_constraints import coefficients_from_records
+from recursive_horizons.nsc_evolved_incoming_constraints import coefficients_from_records
 
 DIRECTORY = ROOT/'results/development/artifacts/nsc-ks-coupled-retained-control'
 OUTPUT = ROOT/'results/development/nsc-ks-coupled-retained-control.json'
@@ -52,7 +52,7 @@ SEED_U = 12.12435557608503
 KEYS = ('energies', 'z', 'reference', 'difference', 'difference_z', 'tangent', 'tangent_z')
 OWNERS = (
     'scripts/derive_nsc_ks_coupled_retained_control.py',
-    'docs/nsc-ks-coupled-retained-control.md',
+    'docs/nsc-ks-source-operator-majorant-v7.md',
     'src/recursive_horizons/nsc_ks_retained_upstream_archive.py',
     'src/recursive_horizons/nsc_ks_history_evaluator.py',
     'src/recursive_horizons/nsc_ks_cutoff_bridge_evaluator.py',

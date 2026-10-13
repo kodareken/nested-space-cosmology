@@ -3,7 +3,7 @@ import unittest
 import numpy as np
 from scipy.linalg import expm
 
-from recursive_horizons.nsc_energy_transfer import (
+from recursive_horizons.dirac.energy import (
     dirac_hamiltonian, positions, regional_operators, split_cut_currents,
     vacuum, expectation, positive_packet, evolve_packet, integrated_current,
     schur_state_data,

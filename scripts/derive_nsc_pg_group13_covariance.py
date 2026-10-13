@@ -39,7 +39,7 @@ PHYSICAL_SOURCES=('src/recursive_horizons/nsc_paired_horizon_preparation.py',
  'src/recursive_horizons/nsc_pg_tail_series.py','src/recursive_horizons/nsc_pg_threshold_projection.py',
  'src/recursive_horizons/nsc_complex_horizon_modes.py','src/recursive_horizons/nsc_lorentzian.py',
  'src/recursive_horizons/nsc_pg_lll_preparation.py','src/recursive_horizons/nsc_unruh_state.py',
- 'src/recursive_horizons/nsc_gauge_source.py','src/recursive_horizons/nsc_common_time_bulk_split.py',
+ 'src/recursive_horizons/dirac/gauge.py','src/recursive_horizons/nsc_common_time_bulk_split.py',
  'src/recursive_horizons/nsc_transmitting_dirac_domain.py','src/recursive_horizons/nsc_compact_ctp_neck.py',
  'src/recursive_horizons/nsc_mode_resolved_cauchy_state.py')
 

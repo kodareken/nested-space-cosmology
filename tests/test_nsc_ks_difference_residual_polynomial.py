@@ -27,6 +27,9 @@ CAPTURE = ROOT / 'results/development/nsc-ks-current-trajectory-pilot-v2.json'
 EXPECTED_IDENTITY = '0b0e4cedfdb695d342c7f7347740631e916bdaee3a977df56808c725b25dacb0'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def _homogeneous(n=8):
     start = np.r_[np.array([.5, .25]), np.zeros(2 * n)]
     end = 2 * start
@@ -145,6 +148,7 @@ def test_capture_record_declares_the_current_history_pilot_bindings():
     assert sha256(payload.read_bytes()).hexdigest() == record['payload']['sha256']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_saved_pilot_record_replays_without_a_physical_gate():
     path = ROOT / 'results/development/nsc-ks-current-field-pilot-v2.json'
     if not path.exists():

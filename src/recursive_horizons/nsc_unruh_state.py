@@ -14,7 +14,7 @@ from scipy.integrate import quad
 import sympy as sp
 from numpy.polynomial.legendre import leggauss
 
-from .nsc_gauge_source import Exterior
+from .dirac.gauge import Exterior
 
 
 def horizon_covariance(frequency,surface_gravity,reflection,incoming_occupation=0.):

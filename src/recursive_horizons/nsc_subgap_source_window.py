@@ -1249,6 +1249,49 @@ def _cpu_limit(seconds):
     """
     if not math.isfinite(seconds) or seconds <= 0:
         raise TimeoutError("subgap source-window CPU budget exhausted")
+    if getattr(resource, 'STANDIN', False) or not hasattr(signal, 'SIGXCPU'):
+        # Windows has no RLIMIT_CPU/SIGXCPU. Keep the same finite CPU budget
+        # with scoped interpreter events; native calls are charged on return.
+        # A native call cannot be interrupted until it returns to Python.
+        deadline = time.process_time() + float(seconds)
+        previous_trace, previous_profile = sys.gettrace(), sys.getprofile()
+        active = True
+
+        def check():
+            if active and time.process_time() >= deadline:
+                raise TimeoutError("subgap source-window CPU budget exhausted")
+
+        def trace(frame, event, arg):
+            check()
+            if previous_trace is not None:
+                previous_trace(frame, event, arg)
+            return trace if active else previous_trace
+
+        def profile(frame, event, arg):
+            check()
+            if previous_profile is not None:
+                previous_profile(frame, event, arg)
+
+        # settrace affects new frames; mark the existing caller chain too so
+        # a pure Python loop in the with-body also has a finite budget.
+        frames = []
+        frame = sys._getframe().f_back
+        while frame is not None:
+            frames.append((frame, frame.f_trace))
+            frame.f_trace = trace
+            frame = frame.f_back
+        try:
+            sys.settrace(trace)
+            sys.setprofile(profile)
+            yield
+            check()
+        finally:
+            active = False
+            sys.settrace(previous_trace)
+            sys.setprofile(previous_profile)
+            for frame, prior in frames:
+                frame.f_trace = prior
+        return
     usage = resource.getrusage(resource.RUSAGE_SELF)
     consumed = usage.ru_utime + usage.ru_stime
     soft = max(1, int(math.ceil(consumed + float(seconds))))

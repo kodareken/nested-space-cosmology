@@ -18,16 +18,22 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE_PAYLOAD = 'results/development/artifacts/nsc-incoming-spectral-panels.efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73.npz'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 @pytest.fixture(scope='module')
 def inputs():
-    channels = json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels']
-    path = ROOT/SOURCE_PAYLOAD
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == 'efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73'
-    with np.load(path, allow_pickle=False) as data:
-        yield channels, data
+    with frozen_source_context(FROZEN_PRODUCER_CONTEXT):
+        channels = json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels']
+        path = ROOT/SOURCE_PAYLOAD
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == 'efbce40b2f959c7d0294689661d4e2e7193ade965ece0918c72c5a072ec8ad73'
+        with np.load(path, allow_pickle=False) as data:
+            yield channels, data
 
 
 @pytest.mark.parametrize('group,lower', [(13, 160.), (22, 160.), (32, 320.)])
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_same_approximation_tail_and_stored_source_band(inputs, group, lower):
     channels, data = inputs
     channel = channels[group]
@@ -67,6 +73,7 @@ def test_same_approximation_tail_and_stored_source_band(inputs, group, lower):
                       'Riccati_precision_conversion': recurrence_error}))
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_wrong_existing_split_is_rejected(inputs):
     channels, _ = inputs
     with pytest.raises(ValueError, match='archived middle/tail split'):

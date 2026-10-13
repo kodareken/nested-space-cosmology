@@ -47,8 +47,10 @@ OWNERS = (
 )
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def _read(root, path): return json.loads((Path(root)/path).read_text())
-def _hash(root, path): return sha256((Path(root)/path).read_bytes()).hexdigest()
+def _hash(root, path): return selected_source_sha256(Path(root), path)
 def _load(path):
     with np.load(path, allow_pickle=False) as value: return {k: value[k].copy() for k in value.files}
 

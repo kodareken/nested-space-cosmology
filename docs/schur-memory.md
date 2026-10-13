@@ -139,3 +139,9 @@ local gate. The smooth-motif Weyl-disk tail also controls a projected
 resolvent only; it is not identified with a dark-energy density or a cosmic
 fraction. Original calculations are at
 [Zenodo](https://doi.org/10.5281/zenodo.23090015).
+
+The retained coordinate Hamiltonian and normal-observer stress API lives in
+[nested.energy_exchange](../src/recursive_horizons/nested/energy_exchange.py).
+It keeps the generator gravity energy plus `M Tr(C H)` with `M=4 kappa`
+counted once, the finite regional controls, and the separate normal-observer
+shell energy. Renewal and a continuum limit remain unclaimed.

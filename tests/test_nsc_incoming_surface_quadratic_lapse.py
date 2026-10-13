@@ -10,6 +10,10 @@ from recursive_horizons.nsc_incoming_surface_quadratic_lapse import (
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_full_first_second_transport_and_fourth_trace_are_exact():
     result=reference_quadratic_lapse()
     assert all(set(v)=={'0'} for v in result['residuals'].values())
@@ -26,6 +30,7 @@ def test_closed_coefficient_has_correct_factor_and_zero_angular_limit():
     assert sp.simplify(result['kernel']-result['kernel'].subs(L,-L))==0
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_old_n24_control_is_paired_before_comparison_without_rerun():
     result=archived_v_control(ROOT)
     assert result['paired_node_absolute_error']<result['control_tolerance']

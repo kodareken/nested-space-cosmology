@@ -24,7 +24,9 @@ INPUTS=('results/development/nsc-incoming-lapse-coefficient.json',
 CU_EQUATION='-d*a*L^2/(120*pi*r)*(4*m^2*H_r/M^6+(H_r-H_a)/M^4)'
 
 
-def digest(p):return sha256((ROOT/p).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(p):return selected_source_sha256(ROOT, p)
 
 
 def authenticate(record):

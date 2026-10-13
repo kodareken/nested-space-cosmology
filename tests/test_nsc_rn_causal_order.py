@@ -133,6 +133,6 @@ def test_driver_refuses_to_overwrite():
     result = subprocess.run(
         [sys.executable, "scripts/lab.py", "scripts/derive_nsc_rn_causal_order.py",
          "--runs", "nsc-rn-inner-packet-def1040-long:1.04"],
-        cwd=LAB.parent, capture_output=True, text=True)
+        cwd=LAB, capture_output=True, text=True)
     assert result.returncode != 0
     assert "refusing to overwrite" in result.stderr

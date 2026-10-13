@@ -1,0 +1,136 @@
+{
+  "borrowed": {
+    "both_null_mass_laws": "An--Lim, 2005.04090v1 Eqs. 2.14-2.15; canonical source-mass normalization retained",
+    "full_geometric_mass_transform": "Faraoni--Vitagliano, 1401.1189v1 Eq. 7; both derivative contractions retained",
+    "improved_jordan_transport": "Hayward, gr-qc/9710089v2 Eq. 2.9d; canonical improved conformal stress",
+    "normal_force_record_role": "boundary-context status only; normal-force identity is not an algebraic premise of exterior mass closure",
+    "smooth_exterior_frame": "Aviles--Maeda--Martinez, 1910.07534v2 Eqs. 2.21-2.24; not continued through the material wall"
+  },
+  "classification": "derived_conditional",
+  "conventions": {
+    "anchor": "quiet lower wall event with zero scalar data and zero geometric mass correction; no imported source-end value",
+    "clock": "s=tau_wall/ell; v=dx/ds>0; beta=beta_plus; beta^2-v^2=1-2m/x; m=2/5",
+    "mass": "mathfrak_m_J/ell=m+alpha mu_J+O(alpha^2); alpha=kappa_4 epsilon^2/ell^2; formal quadratic order only",
+    "no_return": "chi_U=0 on the retained wall, hence n chi=dot chi; no second independently prescribed characteristic",
+    "normal": "outward cap-to-exterior normal (-Udot,Vdot); beta=n R on the reference",
+    "region": "one-sided smooth exterior limit of the original wall, x=R/ell in [0.45,0.55], retained sector IV",
+    "traces": "w=chi_wall/epsilon; j=dw/ds=ell Vdot J/epsilon; p=w/x; a=dp/ds; b=n_dimensionless p"
+  },
+  "derived_result": {
+    "closure": "mu_J(s)=integral from s_a to s of L(q) dq+Q(s), with Q(s_a)=0",
+    "cut_identification": "constant background exterior mass makes an order-alpha cut displacement invisible to this coefficient; no vanishing wall displacement is inferred",
+    "independent_route": "L+dQ/ds=x^2(beta t_un-v t_nn)/2 with full Jordan improved stress; acceleration cancels",
+    "inputs_required": "existing leading wall traces w,j and background x,v,beta, clock; no unknown Hessian or perturbed metric enters this coefficient",
+    "minimal_sign": "v>|beta| in the retained trapped sector makes L nonpositive; no late Jordan-mass sign is inferred",
+    "null_route": "both Einstein-frame null fluxes along the same timelike path give L; add the full smooth-exterior frame endpoint Q",
+    "regularity": "L and Q have no division by beta; their beta=0 values remain finite at x>0"
+  },
+  "domain": {
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105,
+    "arrival_window_over_ell": [
+      -0.5817589515953444,
+      -0.25023070056069985
+    ],
+    "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+    "radius_lower_bound_over_ell": 0.4,
+    "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+    "radius_upper_bound_over_ell": 0.55,
+    "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+    "wall_radius_window_over_ell": [
+      0.45,
+      0.55
+    ]
+  },
+  "exact_symbolic_certificate": {
+    "arithmetic": "exact symbolic expressions; no numerical mass curve or floating-point scientific evaluation",
+    "nonzero_controls": {
+      "omitting_first_null_flux_changes_density": true,
+      "omitting_frame_endpoint_breaks_jordan_transport": true,
+      "omitting_second_null_flux_changes_density": true,
+      "omitting_transverse_frame_term_changes_mass": true,
+      "reversing_field_normal_without_geometry_changes_density": true,
+      "zeroing_phi_U_after_chi_U_zero_omits_nonzero_flux": true
+    },
+    "sympy_version": "1.14.0",
+    "zero_residuals": {
+      "beta_zero_density_regular": "0",
+      "beta_zero_endpoint_regular": "0",
+      "both_null_fluxes_equal_minimal_wall_density": "0",
+      "consistent_normal_reversal_density": "0",
+      "consistent_normal_reversal_endpoint": "0",
+      "constant_background_mass_makes_cut_displacement_higher_order": "0",
+      "endpoint_from_first_order_wall_trace": "0",
+      "fixed_coupling_length_change_is_not_unit_rescaling": "0",
+      "full_conformal_mass_endpoint": "0",
+      "independent_null_coordinate_reparametrizations": "0",
+      "jordan_improved_stress_equals_integral_plus_endpoint_derivative": "0",
+      "no_return_retains_transverse_scalar_derivative": "0",
+      "normal_trace_from_no_return_condition": "0",
+      "physical_mass_unit_rescaling": "0",
+      "quadratic_density_homogeneity": "0",
+      "quadratic_endpoint_homogeneity": "0",
+      "quiet_anchor_endpoint": "0",
+      "tangent_trace_from_reduced_field": "0",
+      "trapped_sector_minimal_density_decomposition": "0",
+      "wall_acceleration_cancels": "0",
+      "zero_field_density": "0"
+    }
+  },
+  "execution": {
+    "cpu_seconds_max": 60,
+    "explicit_algebra_replay_authenticates_first": true,
+    "new_floating_point_scientific_values": false,
+    "new_waveforms": 0,
+    "numerical_mass_integrals": 0,
+    "ordinary_check_scope": "stored output, source and declaration authentication only",
+    "scientific_numerical_solves": 0
+  },
+  "formulas": {
+    "frame_endpoint": "m*p**2/12+x**2*p*(v*a-beta*b)/6",
+    "frame_endpoint_from_trace": "(v-beta)*w*j/6+(1/(6*x)-m/(4*x**2))*w**2",
+    "improved_t_nn": "a**2/6+b**2/2-p*Hnn/3",
+    "improved_t_un": "2*a*b/3-p*Hun/3",
+    "minimal_mass_density": "x**2*(beta*a*b-v*(a**2+b**2)/2)/2",
+    "normal_field": "(j-beta*p)/x",
+    "null_mass_density": "-x**2*(xV*pU**2*Us+xU*pV**2*Vs)/C",
+    "tangent_field": "(j-v*p)/x",
+    "wave_hessian": "Huu+2*(v*a-beta*b)/x"
+  },
+  "inputs": {
+    "H_ell": 1.0,
+    "M_over_ell": 0.4,
+    "additional_surface_scalar_coupling": 0.0,
+    "angular_mode": 0,
+    "k_ell": 2.0,
+    "length_scale": 1.0,
+    "linear_probe": true,
+    "wall_branch": "expanding",
+    "xi": 0.16666666666666666
+  },
+  "knowledge_boundary": {
+    "bulk_einstein_evolution_solved": false,
+    "cap_mass_determined": false,
+    "corrected_wall_trajectory_solved": false,
+    "exterior_wall_mass_functional_closed": true,
+    "finite_amplitude_validity_bound_established": false,
+    "full_coupled_solution_established": false,
+    "interior_observer_correction_computed": false,
+    "material_shell_mass_determined": false,
+    "numerical_wall_mass_curve_evaluated": false,
+    "stability_established": false
+  },
+  "next_unlock": "separately admitted finite mass quadrature and exterior input to coupled wall/cap matching; v8 waveform convergence does not certify this integral",
+  "owner": "docs/nsc-atlas-wall-mass-closure.md",
+  "preparation_regularity": "C3 compact polynomial; derivative C2; not C-infinity",
+  "scaling": {
+    "amplitude": "rescaling all leading field traces together multiplies L and Q quadratically; varying epsilon alone is represented by alpha",
+    "coordinate": "independent regular null-coordinate changes leave both-flux density invariant; they do not alter wall proper time",
+    "units": "physical mass-length correction ell alpha mu_J; unit relabelling scales ell and kappa_4 as length and length squared, respectively"
+  },
+  "schema": "nsc-atlas-wall-mass-closure-v1",
+  "status": "CONDITIONAL_EXTERIOR_WALL_MASS_FUNCTIONAL_CLOSED"
+}

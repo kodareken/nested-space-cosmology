@@ -24,7 +24,7 @@ from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_
 CODE=('scripts/derive_nsc_pg_massive_modes.py','src/recursive_horizons/nsc_massive_jost_modes.py',
       'src/recursive_horizons/nsc_pg_massive_modes.py')
 DEPENDENCIES=('src/recursive_horizons/nsc_paired_horizon_preparation.py',
-              'src/recursive_horizons/nsc_unruh_state.py','src/recursive_horizons/nsc_gauge_source.py',
+              'src/recursive_horizons/nsc_unruh_state.py','src/recursive_horizons/dirac/gauge.py',
               'src/recursive_horizons/nsc_pg_lll_preparation.py','src/recursive_horizons/nsc_lorentzian.py',
               'src/recursive_horizons/nsc_common_time_bulk_split.py','src/recursive_horizons/nsc_transmitting_dirac_domain.py',
               'src/recursive_horizons/nsc_mode_resolved_cauchy_state.py')

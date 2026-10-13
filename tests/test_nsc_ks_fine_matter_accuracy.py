@@ -8,7 +8,7 @@ pytest.importorskip('flint')
 from flint import arb,acb,acb_mat,ctx
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-import derive_nsc_ks_fine_matter_accuracy as M
+from recursive_horizons.nsc_ks_finite_matter_error import fine_control as M
 
 
 def test_partial_history_cannot_emit_a_numerical_matter_certificate(monkeypatch,tmp_path):

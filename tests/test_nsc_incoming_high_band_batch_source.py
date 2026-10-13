@@ -13,6 +13,45 @@ from recursive_horizons.nsc_incoming_window_refinement import window_kernel
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
+def test_weighted_replay_rejects_changes_beyond_component_roundoff():
+    from copy import deepcopy
+    from recursive_horizons.nsc_incoming_high_band_batch_source import require_group_receipt_replay
+    prior = json.loads((ROOT / 'results/development/nsc-incoming-high-band-batch-source.json').read_text())
+    spec = prior['group6_gate_payload']
+    with np.load(ROOT / spec['path'], allow_pickle=False) as archive:
+        arrays = {k: archive[k].copy() for k in archive.files}
+    metadata = json.loads(arrays['metadata_json'].tobytes())
+    stored = metadata['checked']
+    name = 'low'; sign = '1'
+    prefix = f'{name}/{sign}/archived/'
+    weights, kernels = arrays[prefix+'weights'], arrays[prefix+'kernels']
+    eps = np.finfo(np.float64).eps
+    count = 4*len(weights)+8
+    gamma = count*eps/(1-count*eps)
+    bound = 2*gamma*abs(stored['windows'][name]['factor_per_sign'])*np.sum(abs(weights*kernels[:,0]))*(1+gamma)
+    changed = deepcopy(stored)
+    changed['windows'][name]['per_sign'][sign]['old_source'][0] += float(4*bound)
+    with pytest.raises(ValueError, match='arithmetic envelope'):
+        require_group_receipt_replay(stored, changed, arrays)
+    changed = deepcopy(stored)
+    changed['status'] = 'PASS: physical source certified'
+    with pytest.raises(ValueError, match='outside weighted reductions'):
+        require_group_receipt_replay(stored, changed, arrays)
+    changed=deepcopy(stored)
+    changed['windows'][name]['per_sign'][sign]['old_source']=[str(x) for x in changed['windows'][name]['per_sign'][sign]['old_source']]
+    with pytest.raises(ValueError,match='numeric type'):
+        require_group_receipt_replay(stored,changed,arrays)
+    changed=deepcopy(stored)
+    changed['physical_order24_error_bound']=False
+    with pytest.raises(ValueError,match='outside weighted reductions'):
+        require_group_receipt_replay(stored,changed,arrays)
+
 def script_module():
     spec=importlib.util.spec_from_file_location('high_band_source_replay',ROOT/'scripts/derive_nsc_incoming_high_band_batch_source.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
@@ -29,6 +68,7 @@ def test_exact_horner_identity_and_frozen_kernel_convention():
             assert actual[2]==0.
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_group6_first_and_group13_no_overlapping_low():
     assert owner.GROUPS[0]==6 and len(owner.GROUPS)==28
     assert set(owner.GROUPS)==set(range(1,33))-{12,14,22,32}
@@ -59,6 +99,7 @@ def test_complete_record_preserves_signed_contributions_and_scope():
         assert item['physical_order24_error_bound'] is None
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_per_group_resume_and_full_replay_never_prepare(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('preparation entered during authenticated resume/replay')
     for name in ('prepare_group_source','channel_coefficients','cached_grid'):

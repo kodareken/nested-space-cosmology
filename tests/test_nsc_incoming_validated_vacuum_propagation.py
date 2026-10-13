@@ -12,6 +12,10 @@ from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision,_lo,_hi
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def inputs():
     c=json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][32]
     cfg=json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').read_text())['scattering_provenance']['config']
@@ -65,6 +69,7 @@ def test_stable_geometry_matches_exact_profile_and_proves_disk_margins():
                 assert _lo(v.imag)<=e.imag<=_hi(v.imag)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_full_receipt_and_completed_checkpoint_resume_without_field_steps(monkeypatch,tmp_path):
     path=ROOT/'results/development/nsc-incoming-validated-vacuum-propagation.json'
     if not path.exists():pytest.skip('fixed field run follows primitive tests')

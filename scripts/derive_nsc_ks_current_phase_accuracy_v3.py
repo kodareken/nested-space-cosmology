@@ -529,7 +529,12 @@ def record_run(history, node_count, selection, node_indices, prefix, cpu_budget,
     def exhausted(*_):
         raise TimeoutError('current phase enclosure exceeded its CPU budget')
 
-    previous = signal.signal(signal.SIGPROF, exhausted)
+    # Windows lacks profiling signals. The real node evaluator also checks
+    # process-time deadlines inside each phase/quadrature stage. Keep those
+    # checks, and refuse publication if the outer deadline is crossed.
+    profiling_timer = all(hasattr(signal, name) for name in (
+        'SIGPROF', 'ITIMER_PROF', 'setitimer'))
+    previous = signal.signal(signal.SIGPROF, exhausted) if profiling_timer else None
     try:
         for index in indices:
             existing = load_node_checkpoint(directory, index, binding)
@@ -539,7 +544,8 @@ def record_run(history, node_count, selection, node_indices, prefix, cpu_budget,
             remaining = float(cpu_budget) - (time.process_time() - started)
             if remaining <= 0:
                 break
-            signal.setitimer(signal.ITIMER_PROF, remaining)
+            if profiling_timer:
+                signal.setitimer(signal.ITIMER_PROF, remaining)
             try:
                 row = compute_node(
                     ctx_data['family'], ctx_data['identity'],
@@ -550,7 +556,10 @@ def record_run(history, node_count, selection, node_indices, prefix, cpu_budget,
             except TimeoutError:
                 break
             finally:
-                signal.setitimer(signal.ITIMER_PROF, 0)
+                if profiling_timer:
+                    signal.setitimer(signal.ITIMER_PROF, 0)
+            if time.process_time() - started >= float(cpu_budget):
+                break
             if row.get('budget_exceeded') and not row.get('complete'):
                 break
             write_once(node_file(directory, index), row)
@@ -558,8 +567,9 @@ def record_run(history, node_count, selection, node_indices, prefix, cpu_budget,
         else:
             finished_all = len(rows) == len(indices)
     finally:
-        signal.setitimer(signal.ITIMER_PROF, 0)
-        signal.signal(signal.SIGPROF, previous)
+        if profiling_timer:
+            signal.setitimer(signal.ITIMER_PROF, 0)
+            signal.signal(signal.SIGPROF, previous)
     cpu = time.process_time() - started
     payloads = None
     if finished_all:

@@ -15,7 +15,7 @@ import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'));sys.path.insert(0,str(ROOT/'scripts'))
 import derive_nsc_ks_energy_propagator_control as O
-from derive_nsc_evolved_incoming_constraints import coefficients_from_records
+from recursive_horizons.nsc_evolved_incoming_constraints import coefficients_from_records
 from recursive_horizons.nsc_ks_source_inventory import ReferenceSourcePanel
 from recursive_horizons.nsc_ks_batched_constraints import (
     KSConstraintAccumulator, KSUpstreamBatch, bind_upstream_batch, signed_incoming_pair)

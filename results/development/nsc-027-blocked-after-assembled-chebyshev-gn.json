@@ -1,0 +1,26 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arxiv_metadata_prepared": false,
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-after-assembled-chebyshev-gn.json": "b96240dc9895f7a592cecb1209d613ef0b00652681d8bcf54c6121aac13c6511"
+  },
+  "manuscript_027_written": false,
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "public_checkout_unused": true,
+  "public_paper_exists": true,
+  "public_release_027_cut": false,
+  "schema": "NSC-027-BLOCKED-AFTER-ASSEMBLED-CHEBYSHEV-GN-v1",
+  "scope": {
+    "metric_timestep": false,
+    "no_class_rewrite": true,
+    "open_is_not_a_paper": true,
+    "open_is_not_done": true,
+    "public_checkout_not_edited_by_this_owner": true
+  },
+  "source_hashes": {
+    "docs/nsc-027-blocked-after-assembled-chebyshev-gn.md": "b314b124f144b57ec3d4074b825ff6907aa4c265e1e347ef5cc8bfc54a7b4e02",
+    "scripts/derive_nsc_027_blocked_after_assembled_chebyshev_gn.py": "91f31744d2d7bd700dadb2786492f04493f16eb99edf8c406ad5d18039224e3d"
+  },
+  "status": "OPEN: 0.27.0, GitHub release and arXiv stay blocked"
+}

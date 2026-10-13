@@ -16,13 +16,18 @@ from recursive_horizons.nsc_pg_high_energy import riccati_coefficients
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 @pytest.fixture(scope='module')
 def retained():
-    record = json.loads((ROOT/'results/development/nsc-pg-retained-covariance.json').read_text())
-    path = ROOT/record['payload']['path']
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == record['payload']['sha256']
-    with np.load(path, allow_pickle=False) as payload:
-        yield payload
+    with frozen_source_context(FROZEN_PRODUCER_CONTEXT):
+        record = json.loads((ROOT/'results/development/nsc-pg-retained-covariance.json').read_text())
+        path = ROOT/record['payload']['path']
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == record['payload']['sha256']
+        with np.load(path, allow_pickle=False) as payload:
+            yield payload
 
 
 def _inputs(payload, panel):
@@ -60,6 +65,7 @@ def _high_precision_unrationalized(E, mass, angular, source, higher):
 
 
 @pytest.mark.parametrize('panel', ['mid/12_1', 'mid/23_1', 'mid/32_-1'])
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_same_producer_stable_subtraction_matches_independent_arithmetic(retained, panel):
     metadata, E, C = _inputs(retained, panel)
     before = C.copy()
@@ -88,6 +94,7 @@ def test_same_producer_stable_subtraction_matches_independent_arithmetic(retaine
                       'tiny_thermal_T01_retained': float(result['thermal_kernels'][0, 2])}))
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_changed_tiny_source_is_not_silently_replaced(retained):
     metadata, E, C = _inputs(retained, 'mid/12_1')
     C[0, 2, 2] *= 2

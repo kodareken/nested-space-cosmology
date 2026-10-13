@@ -61,19 +61,21 @@ OWNERS = (
     "docs/nsc-ks-continuous-constraint-enclosure.md",
 )
 INPUTS = (
-    str(HISTORY.relative_to(ROOT)),
-    str(REANCHOR.relative_to(ROOT)),
-    str(BUDGET_V4.relative_to(ROOT)),
-    str(PHASE.relative_to(ROOT)),
-    str(GEOMETRY.relative_to(ROOT)),
+    HISTORY.relative_to(ROOT).as_posix(),
+    REANCHOR.relative_to(ROOT).as_posix(),
+    BUDGET_V4.relative_to(ROOT).as_posix(),
+    PHASE.relative_to(ROOT).as_posix(),
+    GEOMETRY.relative_to(ROOT).as_posix(),
     *EVALUATOR_OWNERS,
     "src/recursive_horizons/nsc_local_incoming_family.py",
     "src/recursive_horizons/nsc_ks_profile_identity.py",
 )
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def digest(path):
-    return sha256((ROOT / path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, path)
 
 
 def plain(value):
@@ -122,8 +124,8 @@ def calculate():
         "schema": SCHEMA,
         "record_revision": 2,
         "supersedes_record": {
-            "path": str(PREDECESSOR.relative_to(ROOT)),
-            "sha256": digest(str(PREDECESSOR.relative_to(ROOT))),
+            "path": PREDECESSOR.relative_to(ROOT).as_posix(),
+            "sha256": digest(PREDECESSOR.relative_to(ROOT).as_posix()),
         },
         "accountable_author": "Douglas Ek",
         "status": (
@@ -158,26 +160,26 @@ def calculate():
         "nine_component_order": list(ERROR_COMPONENTS),
         "phase_value_arithmetic_excluded": True,
         "phase_record": {
-            "path": str(PHASE.relative_to(ROOT)),
-            "sha256": digest(str(PHASE.relative_to(ROOT))),
+            "path": PHASE.relative_to(ROOT).as_posix(),
+            "sha256": digest(PHASE.relative_to(ROOT).as_posix()),
             "history_identity": phase["history_identity"],
             "node_count": phase["node_count"],
         },
         "geometry_between_node_is_not_full_residual": True,
         "geometry_record": {
-            "path": str(GEOMETRY.relative_to(ROOT)),
-            "sha256": digest(str(GEOMETRY.relative_to(ROOT))),
+            "path": GEOMETRY.relative_to(ROOT).as_posix(),
+            "sha256": digest(GEOMETRY.relative_to(ROOT).as_posix()),
             "full_between_node_remainder": geometry["full_between_node_remainder"],
         },
         "predecessor_v4": {
-            "path": str(BUDGET_V4.relative_to(ROOT)),
-            "sha256": digest(str(BUDGET_V4.relative_to(ROOT))),
+            "path": BUDGET_V4.relative_to(ROOT).as_posix(),
+            "sha256": digest(BUDGET_V4.relative_to(ROOT).as_posix()),
             "schema": budget_v4["schema"],
             "missing_components": budget_v4["missing_components"],
         },
         "history": {
-            "path": str(HISTORY.relative_to(ROOT)),
-            "sha256": digest(str(HISTORY.relative_to(ROOT))),
+            "path": HISTORY.relative_to(ROOT).as_posix(),
+            "sha256": digest(HISTORY.relative_to(ROOT).as_posix()),
             "schema": history["schema"],
         },
         "diagnostic": {

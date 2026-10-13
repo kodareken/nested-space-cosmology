@@ -14,6 +14,10 @@ from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision,_lo,_hi
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def inputs():
     c=json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][32]
     cfg=json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').read_text())['scattering_provenance']['config']
@@ -77,6 +81,7 @@ def test_replay_charges_degree25_without_hiding_it_in_projected_equation():
         assert result['projected_low_order_arithmetic_upper']==0.
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_preflight_receipt_replays_without_another_step(monkeypatch):
     path=ROOT/'results/development/nsc-incoming-energy-panel-preflight.json'
     if not path.exists():pytest.skip('preflight follows primitive tests')
@@ -86,6 +91,5 @@ def test_preflight_receipt_replays_without_another_step(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('preflight step rerun during replay')
     monkeypatch.setattr(owner,'energy_step',forbidden)
     monkeypatch.setattr(owner,'initial_interpolant',forbidden)
-    spec=importlib.util.spec_from_file_location('energy_preflight_replay',ROOT/'scripts/derive_nsc_incoming_energy_panel_preflight.py')
-    replay=importlib.util.module_from_spec(spec);spec.loader.exec_module(replay)
+    from recursive_horizons.nsc_incoming_energy_panel import preflight_control as replay
     assert replay.make_record(ROOT/old['payload']['path'])==old

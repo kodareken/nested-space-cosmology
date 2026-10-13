@@ -7,9 +7,13 @@ import sys
 import numpy as np
 import pytest
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-import derive_nsc_ks_uv_minor_a3 as D
+from recursive_horizons.nsc_ks_uv_minor_a3 import minor_control as D
 from recursive_horizons.nsc_ks_current_uv_transport import (
     CURRENT_HISTORY_IDENTITY,
     characteristic_transport_identities,
@@ -81,8 +85,9 @@ def test_zero_history_difference_is_exact_zero_without_zeroing_upstream():
     assert majorants['minor_A3_jet_ref_abs_upper'] > 0
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_live_history_encloses_jets_and_keeps_complete_minor_a3_open():
-    value = D.calculate()
+    value = D.calculate(source_context=FROZEN_PRODUCER_CONTEXT)
     assert value['schema'] == SCHEMA
     assert value['profile_identity'] == CURRENT_HISTORY_IDENTITY
     assert value['pair']['mass'] == 0.0
@@ -119,8 +124,9 @@ def test_live_history_encloses_jets_and_keeps_complete_minor_a3_open():
     validate_minor_a3_report(value, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_invented_c4_cm_and_upstream_zero_are_rejected():
-    value = D.calculate()
+    value = D.calculate(source_context=FROZEN_PRODUCER_CONTEXT)
     forged = deepcopy(value)
     forged['numerical_C4'] = 0.0
     with pytest.raises(ValueError, match='presented as zero'):
@@ -148,8 +154,9 @@ def test_invented_c4_cm_and_upstream_zero_are_rejected():
         validate_minor_a3_report(forged_jet, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_driver_replay_matches_owned_record():
-    value = D.calculate()
+    value = D.calculate(source_context=FROZEN_PRODUCER_CONTEXT)
     D.check(value)
     assert json.loads((ROOT / D.OUTPUT).read_text()) == value
 

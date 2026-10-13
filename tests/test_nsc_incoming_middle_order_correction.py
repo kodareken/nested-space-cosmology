@@ -13,6 +13,10 @@ import recursive_horizons.nsc_incoming_middle_order_correction as owner
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def _projector(series, a):
     v = mp.matrix([1, -1j*a*series]); return v*v.H/(v.H*v)[0]
 
@@ -64,6 +68,7 @@ def test_authenticated_record_is_explicit_additive_and_physical_bound_open():
                           record['additively_corrected_middle_approximation'])
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_does_not_regenerate_coefficients_or_refined_quadrature(monkeypatch):
     def forbidden(*args, **kwargs): raise AssertionError('scientific preparation entered during replay')
     monkeypatch.setattr(owner, '_riccati_at_one', forbidden)

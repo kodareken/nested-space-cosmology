@@ -13,12 +13,17 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT/'results/development/nsc-incoming-group32-source.json'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def script():
     spec = importlib.util.spec_from_file_location('source32', ROOT/'scripts/derive_nsc_incoming_group32_source.py')
     module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
     return module
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_frozen_helper_and_actual_group32_windows():
     module = script(); assert module.digest(module.HELPER) == module.HELPER_SHA
     for _, group, kind, left, right, _ in module.CASES:
@@ -76,6 +81,7 @@ def test_record_has_two_disjoint_explicit_changes_and_nonzero_thermal():
     assert record['windows']['group32_middle']['retained_archived_thermal'] is not None
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_never_prepares_sources_or_radial_coefficients(monkeypatch):
     if not OUTPUT.exists(): pytest.skip('post-preparation source replay gate')
     module = script()

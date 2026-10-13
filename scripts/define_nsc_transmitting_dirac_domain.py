@@ -35,7 +35,7 @@ SOURCES = (
 )
 DEPENDENCIES = (
     "src/recursive_horizons/nsc_causal_common.py",
-    "src/recursive_horizons/nsc_chiral_boundary.py",
+    "src/recursive_horizons/dirac/boundary.py",
     "src/recursive_horizons/nsc_lorentzian.py",
     "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py",
     "scripts/map_nsc_adm_neck_source.py",

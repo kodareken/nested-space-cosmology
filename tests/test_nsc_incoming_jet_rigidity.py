@@ -10,6 +10,10 @@ from recursive_horizons.nsc_incoming_jet_rigidity import inverse_gap_six,normal_
 from recursive_horizons.nsc_incoming_cauchy_jets import NORMAL_ENTRIES
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_six_term_telescoping_and_vanishing_lower_endpoint_terms():
     proof=inverse_gap_six()
     assert proof['term_count']==6 and proof['telescoping_residual']=='0'
@@ -19,6 +23,7 @@ def test_six_term_telescoping_and_vanishing_lower_endpoint_terms():
     assert all(row['normal_chain_residual']=='0' for row in normal_chain()['orders'])
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_all_four_complex_maps_are_injective_and_retain_adjoint_parity():
     parent,q1=R.inputs();proof=endpoint_maps(tuple(tuple(row) for row in q1))
     assert proof['complex_Fourier_amplitudes']
@@ -38,6 +43,7 @@ def test_twenty_slots_exactly_match_the_existing_domain():
     assert all(row['necessary_tangent_change']==0 for row in proof['slots'])
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_authenticated_receipt_keeps_functional_and_first_order_scope():
     record=R.check()
     assert record['result']['slot_count']==20

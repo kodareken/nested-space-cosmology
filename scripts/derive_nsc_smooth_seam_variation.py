@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bind the existing local action to the actual shared rho=0 surface."""
-import hashlib
+import argparse
 import json
 from pathlib import Path
 import sys
@@ -13,6 +13,7 @@ from recursive_horizons.nsc_smooth_seam_variation import smooth_seam_match
 from recursive_horizons.nsc_weyl_boundary_jets import density_partials
 from recursive_horizons.nsc_lorentzian import geometry
 from recursive_horizons.nsc_transmitting_dirac_domain import TransmittingDiracSeamDomain
+from recursive_horizons.nsc_frozen_sources import source_sha256
 
 OUTPUT='results/development/nsc-smooth-seam-variation.json'
 SOURCES=('src/recursive_horizons/nsc_smooth_seam_variation.py',
@@ -26,7 +27,8 @@ INPUTS=('results/development/nsc-weyl-boundary-jets.json',
  'src/recursive_horizons/nsc_transmitting_dirac_domain.py',
  'docs/nsc-common-time-bulk-split.md','docs/nsc-adm-neck-source-map.md',
  'scripts/derive_nsc_transmitting_boundary_binding.py')
-def sha(p):return hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
+def sha(p,source_context=None):
+    return source_sha256(ROOT,p,context=None if p.startswith('results/') else source_context)
 def rec(p):return json.loads((ROOT/p).read_text())
 
 def reference_jet():
@@ -49,7 +51,7 @@ def plain(value):
     if isinstance(value,np.floating):return float(value)
     return value
 
-def calculate():
+def calculate(*,source_context=None):
     old=rec(INPUTS[0]);c=old['locked_inputs'];jet,symbols=reference_jet()
     result=smooth_seam_match(jet,c);p=result['parent']
     independent=density_partials(np.array([[jet[k] for k in ('N','Nd','a','ad','add','r','rd','rdd')]]),c['C_Weyl'])[0]
@@ -66,7 +68,7 @@ def calculate():
     if any(not np.isfinite(v) or v>tol for v in result['residuals'].values()):raise ArithmeticError('physical geometric seam binding failed')
     return {'schema':'NSC-SMOOTH-SEAM-VARIATION-v1','accountable_author':'Douglas Ek',
       'status':'PASS: geometric variation cancels on the shared smooth seam; quantum/full stationarity OPEN',
-      'source_hashes':{p:sha(p) for p in SOURCES},'input_hashes':{p:sha(p) for p in INPUTS},
+      'source_hashes':{p:sha(p,source_context) for p in SOURCES},'input_hashes':{p:sha(p,source_context) for p in INPUTS},
       'locked_inputs':c,'reference_metric_normal_jet':jet,'exact_reference_jet':symbols,
       'domain':{'seam':'one rho=0 surface of the existing smooth global metric',
         'parent':'rho>0, outward normal is the future child normal',
@@ -90,8 +92,14 @@ def calculate():
       'reproducer':'python3 scripts/derive_nsc_smooth_seam_variation.py --check'}
 
 def main():
-    result=calculate()
-    if '--check' in sys.argv:
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check',action='store_true')
+    parser.add_argument('--source-context',help='full original source commit for a saved-record check')
+    args=parser.parse_args()
+    if args.source_context is not None and not args.check:
+        parser.error('--source-context is only valid with --check')
+    result=calculate(source_context=args.source_context)
+    if args.check:
         from derive_nsc_transmitting_boundary_binding import compare
         compare(rec(OUTPUT),result)
     else:(ROOT/OUTPUT).write_text(json.dumps(result,sort_keys=True,indent=2)+'\n')

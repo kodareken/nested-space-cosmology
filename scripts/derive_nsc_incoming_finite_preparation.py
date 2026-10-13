@@ -33,8 +33,10 @@ OWNERS = tuple('src/recursive_horizons/'+name+'.py' for name in (
 MARGIN = Fraction(5887634380411363, 265464355000000000)
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def digest(path):
-    return sha256((ROOT/path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, path)
 
 
 def authenticate(record, label):

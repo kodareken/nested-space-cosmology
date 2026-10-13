@@ -5,9 +5,12 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT=Path(__file__).resolve().parents[1]
-SPEC=importlib.util.spec_from_file_location('retarded_resolution',ROOT/'scripts/derive_nsc_retarded_response_resolution.py')
-R=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(R)
+from recursive_horizons.nsc_retarded_radial_response import resolution_control as R
 
 
 def test_nested_grid_preserves_spin_energy_source_layout():
@@ -41,6 +44,13 @@ def test_outside_support_retains_late_values_as_diagnostic():
     assert not value['directed_bound'] and not value['acceptance_gate']
 
 
+def test_zero_energy_fraction_cannot_be_a_boolean():
+    values=np.zeros((3,2,12),complex);times=np.linspace(0.,1.,3)
+    with pytest.raises(ValueError,match='invalid sampled-energy'):
+        R.energy_fraction_roundoff(values,times,False,0.)
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_saved_replay_binds_sources_and_full_coherent_kernels(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('producer called during saved replay')
     monkeypatch.setattr(R,'reference_fields_on_grid',forbidden)
@@ -67,3 +77,26 @@ def test_saved_replay_binds_sources_and_full_coherent_kernels(monkeypatch):
         assert all(v['passes'] for v in record['comparison']['spatial'].values())
     if not record['runtime']['cpu_budget_exceeded']:
         assert record['runtime']['CPU_seconds']<=120
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
+def test_energy_fraction_replay_rejects_change_beyond_reduction_roundoff():
+    from copy import deepcopy
+    record = R.check()
+    with np.load(ROOT / record['payload']['path'], allow_pickle=False) as archive:
+        arrays = {k: archive[k] for k in archive.files}
+    meta = json.loads(arrays['metadata_json'].tobytes())
+    case = meta['completed'][0]
+    a = R.case_arrays(arrays, case)
+    field = 'characteristic_trace_outside_causal_support'
+    value = record['per_case'][case][field]['sampled_energy_fraction']
+    bound = R.energy_fraction_roundoff(a['characteristic_trace_tangent'], a['times'], value, value)
+    changed = deepcopy(record)
+    changed['per_case'][case][field]['sampled_energy_fraction'] += 4 * bound
+    with pytest.raises(ValueError, match='roundoff envelope'):
+        R.validate_replay(record, changed, arrays, meta)
+    changed = deepcopy(record)
+    changed['per_case'][case][field]['acceptance_gate'] = True
+    with pytest.raises(ValueError, match='receipt differs'):
+        R.validate_replay(record, changed, arrays, meta)
+    assert R.energy_fraction_roundoff(a['characteristic_trace_tangent'], a['times'], 0., 0.) == 0.

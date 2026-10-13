@@ -22,9 +22,10 @@ OUTPUT='results/development/nsc-vacuum-source-remainder-v1.json'
 UPSTREAM='results/development/nsc-subgap-upstream-covariance-v1.json'
 HORIZON='results/development/nsc-metric-horizon-frame-v1.json'
 INVENTORY='results/development/nsc-ks-source-inventory.json'
-OWNERS=('scripts/derive_nsc_vacuum_source_remainder.py',
+ORIGINAL_OWNERS=('scripts/derive_nsc_vacuum_source_remainder.py',
     'src/recursive_horizons/nsc_vacuum_source_remainder.py',
     'tests/test_nsc_vacuum_source_remainder.py','docs/nsc-vacuum-source-remainder.md')
+OWNERS=(*ORIGINAL_OWNERS[:-1], 'docs/nsc-ks-source-operator-majorant-v7.md')
 
 
 def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
@@ -34,7 +35,7 @@ def ball(value):
     return restored_upper(value['lower']).union(restored_upper(value['upper']))
 
 
-def calculate():
+def calculate(*, source_context=None):
     upstream=json.loads((ROOT/UPSTREAM).read_text())
     horizon=json.loads((ROOT/HORIZON).read_text())
     inventory=json.loads((ROOT/INVENTORY).read_text())
@@ -112,7 +113,8 @@ def calculate():
             'integrated_N_beta_UV_tail':None,'physical_upstream_budget_component':None,
             'physical_UV_budget_component':None,'all_source_families':False,
             'physical_local_gate':'OPEN',
-            'source_hashes':implementation_hashes(ROOT,owners=OWNERS),
+            'source_hashes':implementation_hashes(ROOT,owners=OWNERS if source_context is None else ORIGINAL_OWNERS,
+                source_context=source_context),
             'input_hashes':{**archive.input_hashes,
                            **{p:digest(p) for p in (UPSTREAM,HORIZON,INVENTORY,payload['path'])}}}
     return result
@@ -122,7 +124,8 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     mode=parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--record',action='store_true');mode.add_argument('--check',action='store_true')
-    args=parser.parse_args();start=time.process_time();result=calculate()
+    parser.add_argument('--source-context',help='full original source commit for explicit saved-receipt replay')
+    args=parser.parse_args();start=time.process_time();result=calculate(source_context=args.source_context)
     encoded=(json.dumps(result,sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     if args.record:publish_exclusive_file(ROOT,OUTPUT,encoded)
     elif (ROOT/OUTPUT).read_bytes()!=encoded:

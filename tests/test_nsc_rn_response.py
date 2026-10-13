@@ -23,7 +23,7 @@ import derive_nsc_rn_parent as driver
 
 
 LAB = Path(__file__).resolve().parents[1]
-ROOT = LAB.parent
+ROOT = LAB
 ARCHIVE_T0 = LAB / "archive/rn-first-infall-pilot-2026-10-04/nsc-rn-pilot-rank9/t0.npz"
 EVIDENCE = []
 CPU_LIMIT_SECONDS = 60.0
@@ -56,7 +56,7 @@ def _rel(error, signal):
     return error / max(signal, 1.0e-30)
 
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="module", autouse=True)
 def _cpu_budget():
     started = time.process_time()
     yield
@@ -108,7 +108,8 @@ def test_frozen_producer_files_are_untouched():
     # from macOS and from Windows, and a bare byte hash of the same content
     # differs between them. The pins were taken normalised.
     for relative, digest in FROZEN_SHA256.items():
-        data = (ROOT / relative).read_bytes().replace(b"\r\n", b"\n")
+        current_relative = relative.removeprefix("lab/")
+        data = (ROOT / current_relative).read_bytes().replace(b"\r\n", b"\n")
         found = hashlib.sha256(data).hexdigest()
         assert found == digest, relative
 

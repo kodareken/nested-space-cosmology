@@ -41,7 +41,7 @@ OWNER_PATHS = (
     'src/recursive_horizons/nsc_lorentzian.py',
     'src/recursive_horizons/nsc_transmitting_dirac_domain.py',
     'src/recursive_horizons/nsc_unruh_state.py',
-    'src/recursive_horizons/nsc_gauge_source.py',
+    'src/recursive_horizons/dirac/gauge.py',
 )
 
 

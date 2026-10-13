@@ -1,0 +1,31 @@
+{
+  "adjudicator": "nsc-rn-inward-march-t30-v1 station write times",
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "current_watch": {
+    "minutes_so_far": 55.3,
+    "status": "past forecast-B's station-25, well inside forecast-A - the arrival will pick the governing law"
+  },
+  "evolved": false,
+  "forecast_a_v1_mtimes": {
+    "basis": "nsc-march-duration-table-v1.json (mu=1.002)",
+    "minutes_per_t": 8.684999999999999,
+    "station_25_minutes": 212.8,
+    "station_30_minutes": 251.9
+  },
+  "forecast_b_relaxation_mtimes": {
+    "basis": "nsc-relaxation-duration-v1.json (steady 2.0 min/t)",
+    "minutes_per_t": 2.0,
+    "station_25_minutes": 50.0,
+    "station_30_minutes": 60.0
+  },
+  "notes": [
+    "the v1 light-case machine was historically contended; the relaxation campaign's steady rate is the cleanest recorded march rate"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-T30-DUAL-FORECAST-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_t30_dual_forecast.py": "a0dbb7e4e94a16254effdd6770efa8c2164b33d909b563f9777eb2dfdad0b7aa",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

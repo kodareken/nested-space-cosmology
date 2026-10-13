@@ -10,6 +10,8 @@ import sympy as sp
 from .nsc_incoming_surface_reference_lapse import I,S1,S2,S3,_matrix,_zero
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def reference_quadratic_group(m,L,a,r,D,pi):
     """Coefficient of v², not its second derivative; full-line group measure."""
     M2=m*m+L*L
@@ -89,9 +91,9 @@ def archived_v_control(root):
     root=Path(root);record=json.loads((root/'results/development/nsc-incoming-joint-constraints.json').read_text())
     for field in ('source_hashes','input_hashes'):
         for path,digest in record[field].items():
-            if sha256((root/path).read_bytes()).hexdigest()!=digest:raise ValueError('stored control owner changed: '+path)
+            if selected_source_sha256(root, path)!=digest:raise ValueError('stored control owner changed: '+path)
     spec=record['payload']
-    if sha256((root/spec['path']).read_bytes()).hexdigest()!=spec['sha256']:raise ValueError('stored n24 payload changed')
+    if selected_source_sha256(root, spec['path'])!=spec['sha256']:raise ValueError('stored n24 payload changed')
     change=record['reference_controls']['n24']['changed_normal_entries']
     if len(change)!=1 or (change[0]['field'],change[0]['normal_order'],change[0]['spatial_order'],change[0]['delta'])!=('r',1,1,.01):
         raise ValueError('original v=.01 control required')

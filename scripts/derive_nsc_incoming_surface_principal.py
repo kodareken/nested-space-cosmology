@@ -36,7 +36,9 @@ B_OWNER_SHA='afa03c896559f9772409ec4a8fcad81c69414fbae7ae3b520ed7746c62626f3f'
 CU_EQUATION='-d*a*L^2/(120*pi*r)*(4*m^2*H_r/M^6+(H_r-H_a)/M^4)'
 
 
-def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(path):return selected_source_sha256(ROOT, path)
 def signature():
     if digest(OWNERS[0])!=B_OWNER_SHA:raise ValueError('frozen independently proved reference B helper changed')
     return {p:digest(p) for p in (*SOURCES,*RECORDS,*OWNERS)}
@@ -131,7 +133,7 @@ def make_record(path):
             'global_Cauchy_surface_proved':False,'parent_preparation_or_endpoints_complete':False,
             'extended_stationarity':'OPEN','metric_evolution':False,'Gamma_rest_assigned':False,'push_or_PDF':False},
         'source_hashes':{p:digest(p) for p in SOURCES},'input_hashes':{p:digest(p) for p in (*RECORDS,*OWNERS)},
-        'payload':{'path':str(path.relative_to(ROOT)),'sha256':sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size},
+        'payload':{'path':path.relative_to(ROOT).as_posix(),'sha256':sha256(path.read_bytes()).hexdigest(),'bytes':path.stat().st_size},
         'reproducer':'python3 scripts/derive_nsc_incoming_surface_principal.py --check'}
 
 

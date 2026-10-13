@@ -21,10 +21,13 @@ def main():
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--check", action="store_true")
     group.add_argument("--output", type=Path)
+    parser.add_argument("--source-context", help="full original source commit for a saved-record check")
     args = parser.parse_args()
+    if args.source_context is not None and not args.check:
+        parser.error("--source-context is only valid with --check")
     if args.output is not None and args.output.exists():
         raise FileExistsError("refusing to overwrite record")
-    record = build_record()
+    record = build_record(source_context=args.source_context)
     if args.check:
         compare_record(json.loads(OUTPUT.read_text()), record)
         print("Normalization-scale flow, matched coefficient shifts and all-field hashes reproduced.")

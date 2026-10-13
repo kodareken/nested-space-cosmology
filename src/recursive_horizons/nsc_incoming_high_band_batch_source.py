@@ -24,6 +24,8 @@ TOLERANCES = {'contraction_replay': 3e-22, 'prefix16': 3e-40,
     'original_to48': 3e-20, 'quadrature48_to64': 3e-20, 'precision50_to70': 3e-35}
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def horner(values, x):
     result = 0
     for coefficient in reversed(values): result = coefficient+x*result
@@ -87,9 +89,9 @@ def _group13_middle(root):
     record = json.loads((root/'results/development/nsc-pg-group13-covariance.json').read_text())
     for kind in ('source_hashes', 'input_hashes'):
         for p, expected in record[kind].items():
-            if sha256((root/p).read_bytes()).hexdigest() != expected: raise ValueError('group13 source owner/input changed')
+            if selected_source_sha256(root, p) != expected: raise ValueError('group13 source owner/input changed')
     spec = record['payload']
-    if sha256((root/spec['path']).read_bytes()).hexdigest() != spec['sha256']: raise ValueError('group13 artifact changed')
+    if selected_source_sha256(root, spec['path']) != spec['sha256']: raise ValueError('group13 artifact changed')
     finite = json.loads((root/'results/development/nsc-incoming-spectral-source.json').read_text())
     inventory = json.loads((root/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())
     channel = inventory['channels'][13]; factor = incoming_group_factor(channel, (1,))
@@ -112,14 +114,22 @@ def _group13_middle(root):
         'measure_residual': abs(float(w.sum())-144), 'input_payloads': [finite['payload'], spec]}
 
 
-@lru_cache(maxsize=28)
-def authenticated_cases(root, group):
+@lru_cache(maxsize=112)
+def _authenticated_cases(root, group, source_context):
     if group not in GROUPS: raise ValueError('only the28 remaining groups are owned by this batch')
     if group == 13: return {'middle': _group13_middle(root)}
     finite = json.loads((Path(root)/'results/development/nsc-incoming-spectral-source.json').read_text())
     right = finite['groups'][str(group)]['signed_inventory']['1']['upper_energy_endpoint']
     return {'low': authenticated_window(root, group, 'low_vacuum', 32., 40.),
             'middle': authenticated_window(root, group, 'middle_correction', 40., right)}
+
+
+def authenticated_cases(root, group):
+    from .nsc_frozen_sources import selected_source_context
+    context=selected_source_context()
+    if context is None:
+        return _authenticated_cases.__wrapped__(root,group,context)
+    return _authenticated_cases(root,group,context)
 
 
 def prepare_group_source(root, group):
@@ -227,3 +237,87 @@ def replay_group_source(root, arrays, prepared):
     return {'group':group, 'windows':windows, 'explicit_source_delta':total.tolist(), 'failures':failures,
             'status':'PASS: group source controls; physical mode bound OPEN' if not failures else 'OPEN',
             'horner_identity':prepared['horner_identity'], 'new_radial_mode_or_scattering_runs':0}
+
+
+def require_group_receipt_replay(saved, current, arrays):
+    """Authenticate reduction-only differences under operand-derived bounds.
+
+    gamma_(4n+8) bounds each real weighted sum and its outer scale.  Propagate
+    those componentwise errors through the two signed sums, the subtraction
+    of the immutable new value, and the final window sum.  Both evaluations
+    are charged.  No absolute floor is applied to a tiny or zero component,
+    and the original numerical controls, failures, provenance and scope must
+    agree exactly.  This is a binary64 replay guard, not a physical bound.
+    """
+    from copy import deepcopy
+    from .nsc_weighted_receipt_replay import same_numeric_structure, exact_record_equal
+    strict = deepcopy(current)
+    eps = np.finfo(np.float64).eps
+
+    def weighted(name, sign, thermal=False):
+        prefix = f'{name}/{sign}/archived/'
+        weights = arrays[prefix+'weights']
+        kernels = arrays[prefix+('thermal_kernels' if thermal else 'kernels')]
+        count = 4*len(weights)+8
+        gamma = count*eps/(1-count*eps)
+        scale = abs(saved['windows'][name]['factor_per_sign'])*np.sum(abs(weights[:,None]*kernels),axis=0)
+        return gamma*scale*(1+gamma)
+
+    def replace(path, one_replay_bound):
+        old, new, adjusted = saved, current, strict
+        for key in path[:-1]: old, new, adjusted = old[key], new[key], adjusted[key]
+        key = path[-1]
+        same_numeric_structure(old[key],new[key])
+        a,b = np.asarray(old[key],float),np.asarray(new[key],float)
+        bound = 2*np.asarray(one_replay_bound,float)
+        bound = np.where(bound, np.nextafter(bound,np.inf), 0.)
+        if a.shape!=b.shape or not np.isfinite(a).all() or not np.isfinite(b).all() or np.any(abs(a-b)>bound):
+            raise ValueError('group source reduction exceeds replay arithmetic envelope: '+ '/'.join(path))
+        adjusted[key] = old[key]
+
+    delta_bounds = []
+    delta_scales = []
+    for name,window in saved['windows'].items():
+        old_bounds=[];old_values=[];new_values=[];thermal_bounds=[];thermal_values=[]
+        for sign,row in window['per_sign'].items():
+            bound=weighted(name,sign)
+            old_value=np.asarray(row['old_source']);new_value=np.asarray(row['new_numerical_value'])
+            old_bounds.append(bound);old_values.append(old_value);new_values.append(new_value)
+            replace(('windows',name,'per_sign',sign,'old_source'),bound)
+            if window['kind']=='low_vacuum':
+                replace(('windows',name,'per_sign',sign,'explicit_source_delta'),bound+eps*(abs(old_value)+abs(new_value)))
+            if window['kind']=='middle_correction':
+                thermal_bounds.append(weighted(name,sign,True))
+                prefix=f'{name}/{sign}/archived/'
+                thermal_values.append(window['factor_per_sign']*np.einsum('n,nv->v',arrays[prefix+'weights'],arrays[prefix+'thermal_kernels']))
+        old_bound=sum(old_bounds,np.zeros(4))+eps*sum(map(abs,old_values),np.zeros(4))
+        new_bound=eps*sum(map(abs,new_values),np.zeros(4))
+        replace(('windows',name,'old_source'),old_bound)
+        replace(('windows',name,'new_numerical_value'),new_bound)
+        old_value=np.asarray(window['old_source']);new_value=np.asarray(window['new_numerical_value'])
+        if window['kind']=='low_vacuum':
+            delta_bound=old_bound+new_bound+eps*(abs(old_value)+abs(new_value))
+            update_bound=new_bound
+        else:
+            delta_bound=new_bound
+            update_bound=old_bound+new_bound+eps*(abs(old_value)+abs(new_value))
+        replace(('windows',name,'explicit_source_delta'),delta_bound)
+        replace(('windows',name,'updated_source_approximant'),update_bound)
+        if thermal_bounds:
+            thermal_bound=sum(thermal_bounds,np.zeros(4))+eps*sum(map(abs,thermal_values),np.zeros(4))
+            replace(('windows',name,'retained_archived_thermal'),thermal_bound)
+        contraction_bound=0.
+        for sign in window['per_sign']:
+            for label,dps in (('original',70),('refined48',70),('refined64',50),('refined64',70)):
+                prefix=f'{name}/{sign}/{label}/dps{dps}/'
+                weights,kernels=arrays[prefix+'weights'],arrays[prefix+'kernels']
+                count=4*len(weights)+8;gamma=count*eps/(1-count*eps)
+                scale=abs(window['factor_per_sign'])*np.sum(abs(weights[:,None]*kernels),axis=0)
+                contraction_bound=max(contraction_bound,float(np.max(gamma*scale*(1+gamma))))
+        replace(('windows',name,'residuals','contraction_replay'),contraction_bound)
+        delta_bounds.append(delta_bound);delta_scales.append(abs(np.asarray(window['explicit_source_delta'])))
+    count=len(delta_bounds);gamma=count*eps/(1-count*eps)
+    replace(('explicit_source_delta',),sum(delta_bounds,np.zeros(4))+gamma*sum(delta_scales,np.zeros(4)))
+    if not exact_record_equal(strict,saved):
+        raise ValueError('per-group source receipt differs outside weighted reductions')
+    return saved

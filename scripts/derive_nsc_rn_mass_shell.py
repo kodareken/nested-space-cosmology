@@ -93,11 +93,11 @@ def _reduce_case(case_dir: Path) -> Dict[str, Any]:
 
 
 def main() -> int:
-    if not FAMILY.is_dir():
-        print(f"missing family directory: {FAMILY}", file=sys.stderr)
-        return 1
     if RECORD.exists():
         print(f"refusing to overwrite sealed record: {RECORD}", file=sys.stderr)
+        return 1
+    if not FAMILY.is_dir():
+        print(f"missing family directory: {FAMILY}; restore it from Zenodo DOI 10.5281/zenodo.23090015", file=sys.stderr)
         return 1
 
     cases = [_reduce_case(p) for p in sorted(FAMILY.iterdir())

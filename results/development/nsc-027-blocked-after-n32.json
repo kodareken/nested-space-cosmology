@@ -1,0 +1,25 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arxiv_metadata_prepared": false,
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-after-n32.json": "34d909fcdf7a26fe3c23218a78dabf2a8ebf0c63a2e25219ce1d963c9339d154"
+  },
+  "manuscript_027_written": false,
+  "named_search_stall": "n32_geometry_leftover_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "public_checkout_unused": true,
+  "public_paper_exists": true,
+  "public_release_027_cut": false,
+  "schema": "NSC-027-BLOCKED-AFTER-N32-v1",
+  "scope": {
+    "metric_timestep": false,
+    "open_is_not_a_paper": true,
+    "open_is_not_done": true,
+    "public_checkout_not_edited_by_this_owner": true
+  },
+  "source_hashes": {
+    "docs/nsc-027-blocked-after-n32.md": "a2023671a47256414f5aace8b84a671943f69608296785d127fbab93a5398402",
+    "scripts/derive_nsc_027_blocked_after_n32.py": "d6dd605a7ab6f1b79625778a04da077c61459a3e844dc057c0e1e89ee78e5fa1"
+  },
+  "status": "OPEN: 0.27.0, GitHub release and arXiv stay blocked"
+}

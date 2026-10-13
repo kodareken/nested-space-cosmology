@@ -15,6 +15,39 @@ from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision, _range
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
+def test_original_high_union_rejects_changes_beyond_its_weighted_roundoff():
+    current = owner.authenticated_high_inventory(str(ROOT))[6]
+    bounds = owner._selected_high_data(str(ROOT))[1][6]
+    altered = deepcopy(current)
+    altered['original_high_source_per_sign']['1'][0] += float(8*bounds['per_sign']['1'][0])
+    with pytest.raises(ValueError, match='arithmetic envelope'):
+        owner.require_original_high_union(ROOT, altered, current)
+    altered = deepcopy(current)
+    altered['channel']['copy_count'] += 1
+    with pytest.raises(ValueError, match='provenance changed'):
+        owner.require_original_high_union(ROOT, altered, current)
+
+
+def test_current_high_inventory_cannot_reuse_a_frozen_cache(monkeypatch):
+    calls = []
+    def checked(root, context):
+        calls.append(context)
+        return ({}, {})
+    monkeypatch.setattr(owner, '_authenticated_high_data', checked)
+    # Supply the same uncached entrypoint used by the lru wrapper.
+    checked.__wrapped__ = checked
+    with frozen_source_context(FROZEN_PRODUCER_CONTEXT):
+        owner.authenticated_high_inventory(str(ROOT))
+    owner.authenticated_high_inventory(str(ROOT))
+    assert calls == [FROZEN_PRODUCER_CONTEXT, None]
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_original_source_union_is_complete_and_nonoverlapping():
     all_groups = owner.authenticated_high_inventory(str(ROOT))
     assert set(all_groups) == set(range(1, 33))
@@ -28,6 +61,7 @@ def test_original_source_union_is_complete_and_nonoverlapping():
         assert not data['channel']['index'] == 0
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_correction_or_incomplete_window_cannot_become_full_direct_receipt():
     owned = owner.authenticated_high_inventory(str(ROOT))[6]
     record = json.loads((ROOT/'results/development/nsc-incoming-source-quadrature-bound.json').read_text())
@@ -58,6 +92,7 @@ def test_aggregate_encloses_values_and_does_not_relax_tolerance():
         assert not owner.aggregate_groups(groups)['numerical_budget_pass']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_complete_batch_replay_never_generates_source(monkeypatch):
     path = ROOT/'results/development/nsc-incoming-high-band-quadrature-batch.json'
     if not path.exists():

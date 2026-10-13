@@ -1,0 +1,87 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "cases": {
+    "mu-1.002-eps-0.001": {
+      "all": {
+        "correlation": 0.09165058749630142,
+        "pairs": 15,
+        "slope": 784.2384037048624
+      },
+      "junction_overlap": 17,
+      "quiet": {
+        "correlation": 0.17548566158576578,
+        "pairs": 5,
+        "slope": 57370.32133998005
+      },
+      "quiet_stations": 6,
+      "stations": 17,
+      "wall": {
+        "correlation": 0.46912230782800707,
+        "pairs": 10,
+        "slope": 3069.0436818532453
+      },
+      "wall_quiet_mass_inflow_ratio": 18.596659596617442,
+      "wall_stations": 11
+    },
+    "mu-1.010-eps-0.001": {
+      "all": {
+        "correlation": 0.06606159669369921,
+        "pairs": 30,
+        "slope": 314.5353756379647
+      },
+      "junction_overlap": 32,
+      "quiet": {
+        "correlation": -0.25176918442645546,
+        "pairs": 9,
+        "slope": -29546.124851299588
+      },
+      "quiet_stations": 10,
+      "stations": 32,
+      "wall": {
+        "correlation": 0.22699904285061143,
+        "pairs": 21,
+        "slope": 739.4775341391958
+      },
+      "wall_quiet_mass_inflow_ratio": 10.937466876866049,
+      "wall_stations": 22
+    },
+    "mu-1.040-eps-0.001": {
+      "all": {
+        "correlation": 0.07288816177476698,
+        "pairs": 36,
+        "slope": 262.81696275232935
+      },
+      "junction_overlap": 38,
+      "quiet": {
+        "correlation": 0.16564481675270784,
+        "pairs": 24,
+        "slope": 3759.249280284291
+      },
+      "quiet_stations": 26,
+      "stations": 38,
+      "wall": {
+        "correlation": 0.7083766802244159,
+        "pairs": 12,
+        "slope": 2187.8946102443756
+      },
+      "wall_quiet_mass_inflow_ratio": 22.39635670075392,
+      "wall_stations": 12
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-rn-gradient-bubble-v5.json": "96d0c98237bca7a3bd91dc649d3f45ff24ca3075ddf8ccee78cb6c7167e64ebf"
+  },
+  "notes": [
+    "dB_i = B_i - B_(i-1) paired with the mass over the true preceding interval [t_(i-1), t_i] (round 16 stored the forward alignment; this backward alignment strengthens the wall correlation at mu=1.040 from 0.49 to 0.71, recorded here as alignment evidence)",
+    "junction rows follow the bubble v5 wall flags per station",
+    "the quiet regime carries weak mixed-sign slopes across cases: the wall is the only coherent response regime"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-WALL-JUNCTION-FAMILY-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_wall_junction_family.py": "9f8504aae31711f1d8e94a85936fb599526490140e514d7a6588c1d7ad17f3f9",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

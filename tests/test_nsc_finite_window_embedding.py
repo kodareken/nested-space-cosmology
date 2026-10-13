@@ -16,6 +16,11 @@ from pathlib import Path
 
 import numpy as np
 
+from recursive_horizons.provenance import resolve_pinned_source_bytes
+
+# Saved evidence binds the original sources; numerical inputs remain local.
+ORIGINAL_SOURCE_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 from recursive_horizons.nsc_finite_window_embedding import (
     COLUMN_PHASE,
     DEGREE,
@@ -112,5 +117,7 @@ def test_saved_record_matches_these_sources():
     assert payload["interpretation"]["instantaneous_projected_generator_is_J"] is True
     assert payload["construction"]["matrix_error"] < 1e-12
     for relative, digest in payload["source_hashes"].items():
-        path = Path(_LAB_ROOT) / relative
-        assert hashlib.sha256(path.read_bytes()).hexdigest() == digest
+        source = resolve_pinned_source_bytes(
+            Path(_LAB_ROOT), relative, digest, commit=ORIGINAL_SOURCE_CONTEXT,
+        )
+        assert hashlib.sha256(source).hexdigest() == digest

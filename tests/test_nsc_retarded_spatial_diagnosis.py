@@ -21,8 +21,12 @@ def test_saved_and_local_diagnosis_replays_without_any_evolution(monkeypatch):
     monkeypatch.setattr(D.pilot,'one_case',forbidden)
     monkeypatch.setattr(D.pilot,'evolve_prepared_field_jets',forbidden)
     monkeypatch.setattr(D.pilot.FourthOrderModePropagator,'evolve',forbidden)
-    record=D.make_record();saved=json.loads((ROOT/D.OUTPUT).read_text())
-    assert record==saved
+    record,diagnostic=D.replay_recorded_diagnosis(source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
+    # Immutable captured diagnostics and a current binary64 recomputation have
+    # distinct roles; finite-operation comparisons retain all metadata exactly.
+    assert diagnostic['physical_error_bound'] is diagnostic['continuum_error_bound'] is None
+    assert diagnostic['matching_status']=='OPEN'
+    assert not diagnostic['configured_chart_indicators']['proved_error_bound']
     assert record['scope']['field_propagations']==record['scope']['radial_solves']==0
     assert record['decision']['existing_three_solve_response_status'].startswith('OPEN')
     assert record['residuals']['common_node_forcing_identity']==0

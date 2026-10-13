@@ -1,0 +1,26 @@
+{
+  "accountable_author": "Douglas Ek",
+  "arxiv_metadata_prepared": false,
+  "input_hashes": {
+    "results/development/nsc-local-incoming-gate-status-after-assembled-search.json": "818b18a53cdddb388960dc0dbcc30b3ded744e3b516723a0a0ab7e2a9cdc9786"
+  },
+  "manuscript_027_written": false,
+  "named_search_stall": "finite_wu_geometry_image_cannot_reach_existence",
+  "physical_local_gate": "OPEN",
+  "public_checkout_unused": true,
+  "public_paper_exists": true,
+  "public_release_027_cut": false,
+  "schema": "NSC-027-BLOCKED-AFTER-ASSEMBLED-SEARCH-v1",
+  "scope": {
+    "metric_timestep": false,
+    "no_class_rewrite": true,
+    "open_is_not_a_paper": true,
+    "open_is_not_done": true,
+    "public_checkout_not_edited_by_this_owner": true
+  },
+  "source_hashes": {
+    "docs/nsc-027-blocked-after-assembled-search.md": "d10320d7858dd1feb35c1afbf4e5895dd37f9c1db8db13138589df10601879b9",
+    "scripts/derive_nsc_027_blocked_after_assembled_search.py": "923cec8eb44460af08ec4da18796f0633dad2976a85326f8ac9a7d5da56b3fd0"
+  },
+  "status": "OPEN: 0.27.0, GitHub release and arXiv stay blocked"
+}

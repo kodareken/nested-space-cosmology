@@ -3,8 +3,7 @@ import importlib.util
 from pathlib import Path
 import pytest
 pytest.importorskip('flint')
-spec=importlib.util.spec_from_file_location('radius_covariance_bounds',Path(__file__).parents[1]/'scripts/derive_nsc_ks_radius_covariance_bounds.py')
-module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+from recursive_horizons.nsc_fourier_covariance_moments import radius_control as module
 
 
 def test_actual_normal_window_must_fit_the_bound_used_for_spatial_norms():

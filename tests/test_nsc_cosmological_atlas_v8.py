@@ -5,11 +5,7 @@ import xml.etree.ElementTree as ET
 
 import pytest
 
-from test_nsc_cosmological_atlas_v7 import producer as predecessor
-
-
 def producer():
-    predecessor()
     import derive_nsc_cosmological_atlas_v8
     return derive_nsc_cosmological_atlas_v8
 

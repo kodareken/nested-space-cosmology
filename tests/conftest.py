@@ -1,9 +1,7 @@
 """One root package, with explicit Windows limitations for historical tests."""
-import os
 from pathlib import Path
 import sys
 import warnings
-
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,14 +22,17 @@ if _installed:
     )
 
 
-def pytest_collection_modifyitems(items):
-    if os.name != 'nt':
-        return
-    legacy = ('tests/test_nsc_pg_retained_tail.py::'
-              'test_retained_tail_record_is_tail_only_and_covers_all_families')
-    for item in items:
-        if item.nodeid.replace('\\', '/') == legacy:
-            item.add_marker(pytest.mark.skip(reason=(
-                'Historical exact replay serializes native path separators; '
-                'test_portable_tail_replay authenticates every field on Windows. '
-                'The unchanged exact test runs on Linux.')))
+@pytest.fixture(scope="session")
+def original_middle_correction():
+    """Authenticate the original witness independently of fresh adaptive paths."""
+    import hashlib
+    import json
+    import derive_nsc_vacuum_source_correction as producer
+    record_bytes = (ROOT / producer.OUTPUT).read_bytes()
+    assert hashlib.sha256(record_bytes).hexdigest() == (
+        "3e5e31cd670288eac26e8cb139d3b24c886230962560dd0813e76595c8772fb5")
+    prior = json.loads(record_bytes)
+    replayed, _ = producer.calculate(
+        (prior, (ROOT / producer.PAYLOAD).read_bytes()),
+        source_context="329ef809e466a86ed4a290ee32c19485f85add9d")
+    return replayed

@@ -14,6 +14,10 @@ from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision, _lo, _
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def inputs():
     channel = json.loads((ROOT/'results/development/nsc-mode-resolved-cauchy-state.json').read_text())['channels'][32]
     config = json.loads((ROOT/'results/development/nsc-compact-matched-restart.json').read_text())['scattering_provenance']['config']
@@ -62,6 +66,7 @@ def test_covariance_phase_removal_matches_actual_working_frame():
     assert 'not uniform' in values['interpretation']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_replay_never_recomputes_horizon_or_endpoint(monkeypatch):
     path = ROOT/'results/development/nsc-incoming-horizon-endpoint-bound.json'
     if not path.exists():

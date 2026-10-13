@@ -10,11 +10,17 @@ from recursive_horizons.nsc_incoming_source_assembly import assemble, read_panel
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 @pytest.fixture(scope='module')
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def assembled():
     return assemble(ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_each_signed_frequency_interval_is_counted_once(assembled):
     assert len(assembled['groups']) == 32
     assert assembled['residuals']['spectral_interval_measure'] < 3e-11
@@ -34,6 +40,7 @@ def test_each_signed_frequency_interval_is_counted_once(assembled):
     assert any(n == 'group14/low32_1' for n, _ in pieces)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_current_matches_imported_power_normalization(assembled):
     certificate = json.loads((ROOT/'results/development/nsc-incoming-constraint-gate.json').read_text())
     power = certificate['source_bound']['LLL_Killing_power']
@@ -52,6 +59,7 @@ def test_current_matches_imported_power_normalization(assembled):
     assert not assembled['light_allocation']['compact_complement_included']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_finite_source_does_not_claim_unevaluated_tail(assembled):
     assert all(not row['full_source_converged'] for row in assembled['groups'].values())
     assert all(not p['whole_spectrum'] for p in assembled['payload_metadata']['panels'].values())

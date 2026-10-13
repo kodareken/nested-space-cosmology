@@ -25,10 +25,11 @@ from .nsc_ks_value_evaluator import (
     TARGET_COUNTS, assemble_residual, edge_change, geometry_change, merit,
     target_nodes)
 
-import derive_nsc_evolved_incoming_constraints as evolved
+from recursive_horizons.nsc_evolved_incoming_constraints import constraint_control as evolved
 
 VALUE_LABEL = 'v2-current-dop-g1024-d48-metadata2'
 VALUE_RECORD = 'results/development/nsc-ks-gate-value-%s.json' % VALUE_LABEL
+VALUE_RECORD_SHA256 = '3153bd68a22a9f5ce04fa93fdd26b088db93b5f6b080eed8a22a400eb177edbf'
 RETAINED_RHO_PAYLOAD = (
     'results/development/artifacts/nsc-ks-retained-response-sum/family-01-+1.npz')
 SURFACE_COEFFICIENTS = 'results/development/nsc-incoming-surface-coefficients.json'
@@ -385,6 +386,8 @@ def load_saved_finite_cutoff_value(root, label=VALUE_LABEL):
     if identity != CURRENT_HISTORY_IDENTITY:
         raise ValueError('original history 0b0e4ced required')
     record_path = root / VALUE_RECORD
+    if _digest(record_path) != VALUE_RECORD_SHA256:
+        raise ValueError('original saved finite-cutoff value receipt changed')
     record = json.loads(record_path.read_text())
     if record.get('profile_identity') != identity or record.get('history_path') != HISTORY_RECORD:
         raise ValueError('original history 0b0e4ced required')
@@ -404,6 +407,7 @@ def load_saved_finite_cutoff_value(root, label=VALUE_LABEL):
     if len(entries) != 60:
         raise ValueError('sixty saved finite-cutoff families required')
     matter = np.zeros((nodes.size, 2), dtype=float)
+    family_matter_arrays = []
     family_records = {}
     source_identities = []
     for key, path, meta in entries:
@@ -419,6 +423,7 @@ def load_saved_finite_cutoff_value(root, label=VALUE_LABEL):
         if not np.array_equal(arrays['z'], nodes):
             raise ValueError('node-profile mismatch')
         matter += arrays['matter_change']
+        family_matter_arrays.append(arrays['matter_change'])
         stored = arrays.get('metadata') or {}
         overlap = set(family_records) & set(stored.get('family_records', ()))
         if overlap:
@@ -430,9 +435,9 @@ def load_saved_finite_cutoff_value(root, label=VALUE_LABEL):
     weights = signed_family_angular_square_weights(family_records)
     if not np.allclose(weights, EXPECTED_ANGULAR_SQUARE_WEIGHT, rtol=0, atol=1e-6):
         raise ValueError('signed angular-square weights must be 107952 for each energy sign')
-    coeff = evolved.coefficients_from_records(
-        json.loads((root / SURFACE_COEFFICIENTS).read_text()),
-        json.loads((root / SURFACE_BRANCH).read_text()))
+    coefficient_record = json.loads((root / SURFACE_COEFFICIENTS).read_text())
+    branch_record = json.loads((root / SURFACE_BRANCH).read_text())
+    coeff = evolved.coefficients_from_records(coefficient_record, branch_record)
     baseline = np.asarray(
         json.loads((root / SOURCE_UPDATE).read_text())['baseline']['action_gradient_approximant'],
         dtype=float)
@@ -445,8 +450,15 @@ def load_saved_finite_cutoff_value(root, label=VALUE_LABEL):
     # Baseline broadcast belongs to the saved value owner. The cubic term is
     # added later, only as a nodal array, and never through this path.
     residual = assemble_residual(baseline, geometry, matter, edge)
-    if merit(residual) != record['merit'] or np.max(np.abs(residual), axis=0).tolist() != record['constraint_maxima']:
-        raise ValueError('saved finite-cutoff value replay changed')
+    from .nsc_ks_saved_value_arithmetic import (
+        coefficients_midpoint_roundoff, saved_value_replay_envelope,
+        require_saved_value_summaries)
+    replay_components = saved_value_replay_envelope(
+        family, nodes, coeff, baseline, geometry, edge, family_matter_arrays,
+        weights, _retained_rho_up(root), int(record['solver']['phase_nodes']),
+        coefficient_errors=coefficients_midpoint_roundoff(coefficient_record, branch_record))
+    replay_summary = require_saved_value_summaries(
+        record, residual, replay_components['summary_envelope'])
     digest = sha256()
     for item in sorted(source_identities):
         digest.update(str(item).encode())
@@ -456,6 +468,8 @@ def load_saved_finite_cutoff_value(root, label=VALUE_LABEL):
         'nodes': nodes,
         'merit': merit(residual),
         'register_merit': record['merit'],
+        'replay_summary_bounds': replay_summary,
+        'replay_diagnostics': replay_components,
         'constraint_maxima': list(record['constraint_maxima']),
         'profile_identity': identity,
         'node_count': int(record['node_count']),

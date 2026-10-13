@@ -58,7 +58,7 @@ SOURCE_RANK = 6
 GENERATOR_ATOL = 1e-8
 _MODULE = Path(__file__).resolve()
 _LAB = _MODULE.parents[2]
-_REPO = _MODULE.parents[3]
+_REPO = _MODULE.parents[2]
 
 EXACT_EQUATIONS = {
     "split": "Phi = V a + e_drive + e_memory",
@@ -1062,9 +1062,9 @@ def _cap_token(step_cap):
 def _campaign_directory(path, *, create):
     resolved = Path(path).expanduser().resolve()
     if resolved == _REPO or _REPO in resolved.parents:
-        development = _REPO / "lab/results/development"
+        development = _REPO / "results/development"
         if resolved.parent != development or not resolved.name.startswith("nsc-discovery-coupled-memory-"):
-            raise PermissionError("repository campaigns require a new coupled-memory successor under lab/results/development")
+            raise PermissionError("repository campaigns require a new coupled-memory successor under results/development")
     if create:
         resolved.mkdir(parents=True, exist_ok=True)
         if any(resolved.iterdir()):

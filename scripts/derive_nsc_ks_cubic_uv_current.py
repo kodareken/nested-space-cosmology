@@ -56,8 +56,11 @@ INPUTS = (
 )
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+
+
 def digest(path):
-    return sha256((ROOT / path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, path)
 
 
 def plain(value):
@@ -76,18 +79,21 @@ def plain(value):
     return value
 
 
-def calculate():
-    report = plain(current_history_cubic_uv_report(ROOT))
-    return {
-        **report,
-        'status': (
-            'OPEN: generated massless e^{-3} N,beta difference on I is '
-            'constructed from actual Pauli vertices and consistent A3/n4 '
-            'transport; diagnostic quadrature is unvalidated without a '
-            'remainder proof; C4, C_M and the local gate remain missing'),
-        'source_hashes': implementation_hashes(ROOT, owners=OWNERS),
-        'input_hashes': {path: digest(path) for path in INPUTS},
-    }
+def calculate(*, source_context=None):
+    from contextlib import nullcontext
+    selection = frozen_source_context(source_context) if source_context is not None else nullcontext()
+    with selection:
+        report = plain(current_history_cubic_uv_report(ROOT))
+        return {
+            **report,
+            'status': (
+                'OPEN: generated massless e^{-3} N,beta difference on I is '
+                'constructed from actual Pauli vertices and consistent A3/n4 '
+                'transport; diagnostic quadrature is unvalidated without a '
+                'remainder proof; C4, C_M and the local gate remain missing'),
+            'source_hashes': implementation_hashes(ROOT, owners=OWNERS, source_context=source_context),
+            'input_hashes': {path: digest(path) for path in INPUTS},
+        }
 
 
 def check(value):

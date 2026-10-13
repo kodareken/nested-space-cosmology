@@ -23,6 +23,10 @@ from recursive_horizons.nsc_ks_current_uv_report import (
 )
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_transport_identities_use_actual_L0_not_dummy_symbols():
     identities = characteristic_transport_identities()
     assert identities['production_A2_transport_constructed']
@@ -41,6 +45,7 @@ def test_transport_identities_use_actual_L0_not_dummy_symbols():
         assert residuals['%s/Re_Ts_major_A3_massless_is_ell2_h_over_2r2' % tag] == '0'
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_massless_difference_is_zero_without_zeroing_upstream_or_full_envelope():
     closed = history_minus_reference_imag_major_A2(0.0)
     assert closed['numerical_value'] == 0.0
@@ -58,6 +63,7 @@ def test_massless_difference_is_zero_without_zeroing_upstream_or_full_envelope()
     assert not j3['full_envelope_imag_major_A2_set_to_zero']
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_v3_successor_proves_transports_and_keeps_c4_cm_none():
     value, payload = D.calculate()
     assert value['schema'] == V3_SUCCESSOR_SCHEMA
@@ -94,6 +100,7 @@ def test_v3_successor_proves_transports_and_keeps_c4_cm_none():
     D.check(value, payload)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_bindings_and_profile_identity_are_authenticated():
     value, payload = D.calculate()
     bindings = value['remainder']['bindings']
@@ -105,6 +112,7 @@ def test_bindings_and_profile_identity_are_authenticated():
     D.check(value, payload)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_negative_invented_a2_a3_n4_c4_cm_are_rejected():
     value, _ = D.calculate()
     for name in ('A2', 'A3', 'n4', 'C4', 'C_M'):
@@ -127,6 +135,7 @@ def test_negative_invented_a2_a3_n4_c4_cm_are_rejected():
         validate_changed_history_uv_v3(forged_cm, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_missing_upstream_datum_is_not_coerced_to_zero():
     value, _ = D.calculate()
     forged = deepcopy(value['remainder'])
@@ -142,6 +151,7 @@ def test_missing_upstream_datum_is_not_coerced_to_zero():
         validate_changed_history_uv_v3(forged_value, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_wrong_coefficient_scope_is_rejected():
     value, _ = D.calculate()
     forged = deepcopy(value['remainder'])
@@ -161,6 +171,7 @@ def test_wrong_coefficient_scope_is_rejected():
         validate_characteristic_transports(forged_transport, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_transferred_background_tail_and_forged_bindings_are_rejected():
     value, _ = D.calculate()
     forged = deepcopy(value['remainder'])
@@ -183,6 +194,7 @@ def test_transferred_background_tail_and_forged_bindings_are_rejected():
         validate_changed_history_uv_v3(forged_cauchy, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_manufactured_fixtures_cannot_supply_production_constants():
     value, _ = D.calculate()
     remainder = value['remainder']
@@ -201,6 +213,7 @@ def test_manufactured_fixtures_cannot_supply_production_constants():
         validate_changed_history_uv_v3(forged_l0, ROOT)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_historical_v1_and_v2_bytes_are_unchanged():
     value, payload = D.calculate()
     pilot = (ROOT / PILOT_RECORD).read_bytes()
@@ -214,6 +227,7 @@ def test_historical_v1_and_v2_bytes_are_unchanged():
     D.check(value, payload)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_quantity_names_and_gate_remain_open():
     value, _ = D.calculate()
     remainder = value['remainder']

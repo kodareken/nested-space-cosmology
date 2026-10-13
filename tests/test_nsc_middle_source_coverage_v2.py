@@ -7,7 +7,6 @@ from hashlib import sha256
 from io import BytesIO, StringIO
 import json
 from pathlib import Path
-import runpy
 import shutil
 from contextlib import redirect_stdout
 
@@ -124,7 +123,7 @@ def test_publication_and_budgets_do_not_solve(tmp_path, monkeypatch):
     with pytest.raises(ValueError, match="solve budget"):
         cover(ROOT, tmp_path/"bad-check", mode="check", row_budget=1, cpu_budget=1)
 
-    driver = runpy.run_path(str(ROOT/"scripts/derive_nsc_middle_source_coverage.py"))
+    driver = {"main": coverage.main}
     cli_absent = tmp_path/"cli-absent"
     with redirect_stdout(StringIO()):
         assert driver["main"](["--check", "--output", str(cli_absent)]) == 0
@@ -183,7 +182,7 @@ def _expect_refusal(destination, match):
         cover(ROOT, destination, mode="resume", row_budget=1, cpu_budget=30)
 
 
-def test_two_original_rows_then_replay_resume_and_refusals(tmp_path, monkeypatch):
+def test_two_original_rows_then_replay_resume_and_refusals(tmp_path, monkeypatch, original_middle_correction):
     assert SOLVES["count"] == 0
     root = tmp_path.resolve()/"coverage"
     events = []
@@ -217,7 +216,13 @@ def test_two_original_rows_then_replay_resume_and_refusals(tmp_path, monkeypatch
     for field in ("vacuum_bloch_error_upper", "initial_bloch_error_upper",
                   "thermal_coherent_operator_error_upper", "source_comparisons",
                   "cells", "nfev", "energy_hex", "panel", "row"):
+        # A fresh adaptive path has its own independently validated bounds.
+        # The immutable original certificate is reproduced from its own witness.
+        assert original_middle_correction[field] == published[field], field
+    for field in ("energy_hex", "panel", "row"):
         assert saved[field] == published[field], field
+    with np.load(root / saved["payload"]["path"], allow_pickle=False) as data:
+        assert saved["cells"] == len(data["trace"])
     assert saved["horizon_initial_remainder_nonzero"] is True
     assert saved["positive_scalar_bound_copied_to_negative"] is False
     assert saved["negative_comparison_uses_complemented_endpoint"] is True

@@ -17,6 +17,8 @@ from .nsc_incoming_projector_energy_bound import projected_energy_bound
 KINDS = ('low_vacuum', 'middle_correction')
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def authenticated_window(root, group, kind, left, right):
     """Select an actual LOW cell or whole archived middle interval."""
     if kind not in KINDS or group not in range(1, 33) or group in (13, 14) or not 0 < left < right:
@@ -30,9 +32,9 @@ def authenticated_window(root, group, kind, left, right):
     for record in (finite, retained):
         for field in ('source_hashes', 'input_hashes', 'numerical_owner_and_input_hashes'):
             for path, expected in record.get(field, {}).items():
-                if sha256((root/path).read_bytes()).hexdigest() != expected: raise ValueError('window owner/input changed: '+path)
+                if selected_source_sha256(root, path) != expected: raise ValueError('window owner/input changed: '+path)
         item = record['payload']
-        if sha256((root/item['path']).read_bytes()).hexdigest() != item['sha256']: raise ValueError('window artifact changed')
+        if selected_source_sha256(root, item['path']) != item['sha256']: raise ValueError('window artifact changed')
     channel = channels[group]; signs = (1,) if channel['angular_eigenvalue'] == 0 else (1, -1)
     factor = incoming_group_factor(channel, signs)
     if factor != finite['groups'][str(group)]['factor']: raise ValueError('actual group factor changed')

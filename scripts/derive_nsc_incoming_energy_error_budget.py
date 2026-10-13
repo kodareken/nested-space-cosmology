@@ -46,7 +46,9 @@ CONTROL_FILES = {
 }
 
 
-def sha(path): return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def sha(path): return selected_source_sha256(ROOT, path)
 def read(path): return json.loads((ROOT/path).read_text())
 def signature(): return {p: sha(p) for p in (*SOURCES, *INPUTS)}
 
@@ -136,7 +138,7 @@ def replay(path):
     return {'schema': 'NSC-INCOMING-ENERGY-ERROR-BUDGET-v1', 'accountable_author': 'Douglas Ek',
             'status': ('PASS' if passes14 else 'OPEN')+': group14 order24 vacuum energy component; complete source OPEN',
             'source_hashes': {p: sha(p) for p in SOURCES}, 'input_hashes': {p: sha(p) for p in INPUTS},
-            'payload': {'path': str(path.relative_to(ROOT)), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()},
+            'payload': {'path': path.relative_to(ROOT).as_posix(), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()},
             'identity': rank_one_energy_identity(), 'group14_cases': cases,
             'all_group_order16_energy_bounds': groups, 'aggregate': aggregate, 'residuals': residuals,
             'verification_tolerances': {'stored_bound_replay': 1e-24, 'centered_bound_excess': 3e-15, 'exact_identity': 0.},

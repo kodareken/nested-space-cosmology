@@ -32,7 +32,7 @@ FORBIDDEN = (
 )
 OWNERS = (
     'scripts/derive_nsc_ks_gate_step.py',
-    'docs/nsc-ks-gate-step.md',
+    'docs/nsc-evolved-incoming-constraints.md',
     'src/recursive_horizons/nsc_ks_value_evaluator.py',
 )
 

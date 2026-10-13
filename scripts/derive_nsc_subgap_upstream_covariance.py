@@ -13,6 +13,7 @@ from flint import acb,arb,ctx
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from recursive_horizons.evidence_io import publish_exclusive_file
+from recursive_horizons.nsc_frozen_sources import source_sha256
 from recursive_horizons.nsc_ks_ball_trajectory import exact_upper,restored_upper
 from recursive_horizons.nsc_ks_evaluation_binding import implementation_hashes
 from recursive_horizons.nsc_ks_retained_upstream_archive import RetainedUpstreamArchive
@@ -29,9 +30,10 @@ OUTPUT='results/development/nsc-subgap-upstream-covariance-v1.json'
 PAYLOAD='results/development/artifacts/nsc-subgap-upstream-covariance-v1.npz'
 SOURCE='results/development/nsc-subgap-source-covariance-v1.json'
 HORIZON='results/development/nsc-metric-horizon-frame-v1.json'
-OWNERS=('scripts/derive_nsc_subgap_upstream_covariance.py',
+ORIGINAL_OWNERS=('scripts/derive_nsc_subgap_upstream_covariance.py',
     'src/recursive_horizons/nsc_subgap_upstream_covariance.py',
     'tests/test_nsc_subgap_upstream_covariance.py','docs/nsc-subgap-upstream-covariance.md')
+OWNERS=(*ORIGINAL_OWNERS[:-1], 'docs/nsc-ks-source-operator-majorant-v7.md')
 
 
 def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
@@ -41,20 +43,22 @@ def ball(value):
     return restored_upper(value['lower']).union(restored_upper(value['upper']))
 
 
-def authenticated_parent(path):
+def authenticated_parent(path, *, source_context=None):
     record=json.loads((ROOT/path).read_text())
     for group in ('source_hashes','input_hashes'):
         for name,expected in record[group].items():
-            if digest(name)!=expected:raise ValueError('parent dependency changed: '+name)
+            actual=(source_sha256(ROOT,name,context=source_context)
+                    if group=='source_hashes' else digest(name))
+            if actual!=expected:raise ValueError('parent dependency changed: '+name)
     payload=record.get('payload')
     if payload and digest(payload['path'])!=payload['sha256']:
         raise ValueError('parent payload changed')
     return record
 
 
-def calculate(saved=None):
-    source=authenticated_parent(SOURCE)
-    horizon=authenticated_parent(HORIZON)
+def calculate(saved=None, *, source_context=None):
+    source=authenticated_parent(SOURCE,source_context=source_context)
+    horizon=authenticated_parent(HORIZON,source_context=source_context)
     archive=RetainedUpstreamArchive(ROOT)
     selected=[batch for batch,_ in archive.family_entries((14,1))
         if batch.original_panel==source['source_panel'] and batch.rows==(0,16)]
@@ -134,7 +138,8 @@ def calculate(saved=None):
             'source_quadrature_error_included':False,'physical_upstream_budget_component':None,
             'physical_local_gate':'OPEN',
             'payload':{'path':PAYLOAD,'sha256':sha256(raw).hexdigest(),'bytes':len(raw)},
-            'source_hashes':implementation_hashes(ROOT,owners=OWNERS),
+            'source_hashes':implementation_hashes(ROOT,owners=OWNERS if source_context is None else ORIGINAL_OWNERS,
+                source_context=source_context),
             'input_hashes':{**archive.input_hashes,SOURCE:digest(SOURCE),HORIZON:digest(HORIZON)}}
     return result,raw
 
@@ -143,9 +148,10 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     mode=parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--record',action='store_true');mode.add_argument('--check',action='store_true')
+    parser.add_argument('--source-context',help='full original source commit for explicit saved-receipt replay')
     args=parser.parse_args()
     saved=None if args.record else (json.loads((ROOT/OUTPUT).read_text()),(ROOT/PAYLOAD).read_bytes())
-    record,raw=calculate(saved=saved)
+    record,raw=calculate(saved=saved,source_context=args.source_context)
     encoded=(json.dumps(record,sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     if args.record:
         if (ROOT/OUTPUT).exists() or (ROOT/PAYLOAD).exists():

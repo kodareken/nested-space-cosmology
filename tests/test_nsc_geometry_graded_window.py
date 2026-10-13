@@ -157,7 +157,8 @@ def test_scope_flags_and_no_stepper():
 
 
 def test_record_replay_is_deterministic():
-    report = verify_saved()
+    # The saved record pins its original sources; numerical replay is current.
+    report = verify_saved(source_context="329ef809e466a86ed4a290ee32c19485f85add9d")
     assert report["closed_six_mode"] is False
     assert report["cpu_seconds"] <= CPU_LIMIT_S
     assert report["projection_leakage_max"] > 0.5

@@ -24,9 +24,10 @@ from recursive_horizons.nsc_vacuum_source_correction import VacuumCorrection,cap
 
 OUTPUT='results/development/nsc-vacuum-source-correction-v1.json'
 PAYLOAD='results/development/artifacts/nsc-vacuum-source-correction-v1.npz'
-OWNERS=('scripts/derive_nsc_vacuum_source_correction.py',
+ORIGINAL_OWNERS=('scripts/derive_nsc_vacuum_source_correction.py',
     'src/recursive_horizons/nsc_vacuum_source_correction.py',
     'tests/test_nsc_vacuum_source_correction.py','docs/nsc-vacuum-source-correction.md')
+OWNERS=(*ORIGINAL_OWNERS[:-1], 'docs/nsc-ks-source-operator-majorant-v7.md')
 START=-18.
 
 
@@ -34,7 +35,7 @@ def interval(value):
     return {'lower':exact_upper(value.lower()),'upper':exact_upper(value.upper())}
 
 
-def calculate(saved=None):
+def calculate(saved=None, *, source_context=None):
     archive=RetainedUpstreamArchive(ROOT);entries=archive.family_entries((14,1))
     choices=[(float(E),b,j) for b,_ in entries if b.energy_sign>0
         for j,E in enumerate(b.source.energies[::3]) if E>=16]
@@ -109,7 +110,8 @@ def calculate(saved=None):
             'physical_upstream_budget_component':None,'changed_history_C_M':None,
             'physical_local_gate':'OPEN',
             'payload':{'path':PAYLOAD,'sha256':sha256(payload).hexdigest(),'bytes':len(payload)},
-            'source_hashes':implementation_hashes(ROOT,owners=OWNERS),
+            'source_hashes':implementation_hashes(ROOT,owners=OWNERS if source_context is None else ORIGINAL_OWNERS,
+                source_context=source_context),
             'input_hashes':dict(archive.input_hashes)}
     return record,payload
 
@@ -118,9 +120,10 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     mode=parser.add_mutually_exclusive_group(required=True)
     mode.add_argument('--record',action='store_true');mode.add_argument('--check',action='store_true')
+    parser.add_argument('--source-context',help='full original source commit for explicit saved-receipt replay')
     args=parser.parse_args();started=time.process_time()
     saved=None if args.record else (json.loads((ROOT/OUTPUT).read_text()),(ROOT/PAYLOAD).read_bytes())
-    record,raw=calculate(saved)
+    record,raw=calculate(saved,source_context=args.source_context)
     encoded=(json.dumps(record,sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     if args.record:
         if (ROOT/OUTPUT).exists() or (ROOT/PAYLOAD).exists():raise FileExistsError('record exists; use --check')

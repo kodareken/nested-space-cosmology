@@ -22,7 +22,7 @@ from recursive_horizons.nsc_covariant_identities import exact_checks
 from recursive_horizons.nsc_covariant_measure import finite_cutoff_cylinder_stress
 from recursive_horizons.nsc_finite_terms import response_matrix,response_probes
 from recursive_horizons.nsc_shape_response import StaticAxialMetric, smooth_metric as staggered_metric, spin_shape_difference
-from recursive_horizons.nsc_energy_transfer import regional_operators, vacuum, expectation
+from recursive_horizons.dirac.energy import regional_operators, vacuum, expectation
 OUTPUT=ROOT/'results/nsc-9-covariant-source.json'
 
 
@@ -236,7 +236,7 @@ def calculate():
         'scripts/check_nsc_covariant_source.py','tests/test_nsc_covariant_source.py','tests/test_nsc_covariant_identities.py',
         'docs/nsc-covariant-source.md','src/recursive_horizons/nsc_regulated.py','src/recursive_horizons/nsc_finite_terms.py',
         'src/recursive_horizons/nsc_covariant_measure.py','src/recursive_horizons/nsc_shape_response.py',
-        'src/recursive_horizons/nsc_energy_transfer.py')
+        'src/recursive_horizons/dirac/energy.py')
     return native({'schema':'nsc-covariant-source-v1','artifact_id':'NSC-9-COVARIANT-SOURCE',
         'classification':'computed_static_four_dimensional_covariant_cutoff_modulus_and_explicit_UV_subtracted_metric_source',
         'source_hashes':{path:hashlib.sha256((ROOT/path).read_bytes()).hexdigest() for path in source_paths},

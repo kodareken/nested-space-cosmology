@@ -53,7 +53,7 @@ def test_actual_archived_signed_pair_is_bounded_without_new_preparation(monkeypa
     from recursive_horizons.nsc_ks_ball_trajectory import restored_upper
     root=Path(__file__).resolve().parents[1]
     driver=runpy.run_path(str(root/'scripts/derive_nsc_subgap_upstream_covariance.py'))
-    record,payload=driver['calculate']()
+    record,payload=driver['calculate'](source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     assert record['source_signs']==[1,-1]
     assert record['angular_signs']==[1,-1]
     assert record['covered_rows']==[0,1]
@@ -70,7 +70,7 @@ def test_actual_archived_signed_pair_is_bounded_without_new_preparation(monkeypa
     def no_new_solve(*args,**kwargs):
         raise AssertionError('replay must consume the saved trajectory')
     monkeypatch.setitem(driver['calculate'].__globals__,'capture_bloch',no_new_solve)
-    replay,replayed_payload=driver['calculate'](saved=(record,payload))
+    replay,replayed_payload=driver['calculate'](saved=(record,payload),source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     assert replay==record and replayed_payload==payload
     from copy import deepcopy
     from io import BytesIO
@@ -82,13 +82,13 @@ def test_actual_archived_signed_pair_is_bounded_without_new_preparation(monkeypa
     wrong=deterministic_npz_bytes(arrays)
     forged=deepcopy(record);forged['payload']['sha256']=sha256(wrong).hexdigest()
     with pytest.raises(ValueError,match='initializer'):
-        driver['calculate'](saved=(forged,wrong))
+        driver['calculate'](saved=(forged,wrong),source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     with pytest.raises(ValueError,match='payload hash'):
-        driver['calculate'](saved=(record,wrong))
+        driver['calculate'](saved=(record,wrong),source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     with np.load(BytesIO(payload),allow_pickle=False) as saved:
         arrays={k:saved[k].copy() for k in saved.files}
     arrays['positive_columns'][0,0]+=.001
     wrong=deterministic_npz_bytes(arrays)
     forged=deepcopy(record);forged['payload']['sha256']=sha256(wrong).hexdigest()
     with pytest.raises(ValueError,match='archived upstream source'):
-        driver['calculate'](saved=(forged,wrong))
+        driver['calculate'](saved=(forged,wrong),source_context='329ef809e466a86ed4a290ee32c19485f85add9d')

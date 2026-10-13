@@ -16,7 +16,7 @@ class RankGateTests(unittest.TestCase):
         self.assertTrue(all(gate.exact_identities().values()))
 
     def test_exact_margin_and_authenticated_receipt(self):
-        record = gate.build_record()
+        record = gate.build_record(source_context="329ef809e466a86ed4a290ee32c19485f85add9d")
         self.assertEqual(json.loads(gate.OUTPUT.read_text()), record)
         self.assertEqual(Q(record["bounds"]["normalized_response_sigma_min_strict_lower"]), Q(51, 200))
         self.assertEqual(record["scope"]["full_C0_matching"], "OPEN")

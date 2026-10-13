@@ -21,7 +21,12 @@ from recursive_horizons.nsc_incoming_joint_constraints import source_action_grad
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 @pytest.fixture(scope='module')
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def owned(): return authenticated_middle_inputs(ROOT)
 
 
@@ -39,6 +44,7 @@ def test_finite_primitives_enclose_exact_rational_integrals():
         finite_power_primitive(16, 0, 160., 40.)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_authenticated_selected_interval_and_group_rejections(owned):
     assert len(owned['middle_intervals']) == 32
     assert owned['endpoint_measure_residual'] <= 3e-11
@@ -67,6 +73,7 @@ def test_action_bound_has_existing_source_action_normalization():
     assert STATIONARITY_TOLERANCE == 3e-11
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_thermal_trace_triangle_bound_matches_independent_exponential_integral(owned):
     channel = owned['channels'][14]; config = owned['config']
     upper = thermal_middle_difference_bound(channel, config, 16., 160.)
@@ -85,6 +92,7 @@ def test_thermal_trace_triangle_bound_matches_independent_exponential_integral(o
         assert abs(mp.mpf(upper[0])/density-1) < mp.mpf('2e-14')
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_record_is_valid_enclosure_without_nonexistence_claim(owned):
     record = json.loads((ROOT/'results/development/nsc-incoming-middle-bound.json').read_text())
     assert record['valid_enclosure']

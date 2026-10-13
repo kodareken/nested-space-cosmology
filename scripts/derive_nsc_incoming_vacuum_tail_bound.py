@@ -29,8 +29,10 @@ INPUTS = ('results/development/nsc-mode-resolved-cauchy-state.json',
           'src/recursive_horizons/nsc_incoming_state_moments.py')
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def read(path): return json.loads((ROOT/path).read_text())
-def digest(path): return sha256((ROOT/path).read_bytes()).hexdigest()
+def digest(path): return selected_source_sha256(ROOT, path)
 def signature(): return {p: digest(p) for p in (*SOURCES, *INPUTS)}
 def encoded(value): return (json.dumps(value, indent=2, sort_keys=True, allow_nan=False)+'\n').encode()
 
@@ -125,7 +127,7 @@ def make_record(path):
         'thermal_source_bound': tail['thermal_source_bound'],
         'input_hashes': {p: digest(p) for p in INPUTS},
         'source_hashes': {p: digest(p) for p in SOURCES},
-        'payload': {'path': str(path.relative_to(ROOT)), 'sha256': sha256(path.read_bytes()).hexdigest(),
+        'payload': {'path': path.relative_to(ROOT).as_posix(), 'sha256': sha256(path.read_bytes()).hexdigest(),
                     'bytes': path.stat().st_size},
         'reproducer': 'python3 scripts/derive_nsc_incoming_vacuum_tail_bound.py --check'}
 

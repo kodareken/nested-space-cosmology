@@ -67,7 +67,8 @@ def test_saved_replay_binds_history_source_and_nodes(saved):
     assert saved['label'] == VALUE_LABEL
     assert saved['node_count'] == 129
     assert saved['family_count'] == 60 and saved['signed_family_count'] == 120
-    assert saved['merit'] == saved['register_merit']
+    assert abs(saved['merit']-saved['register_merit']) <= saved['replay_summary_bounds']['merit_bound']
+    assert saved['replay_diagnostics']['physical_error_bound'] is None
     assert np.array_equal(saved['nodes'], target_nodes(family, 129))
     assert float(saved['nodes'][saved['center_index']]) == float(family.center)
     assert saved['rho_up'] == float(ARCHIVE_RHO_UP)

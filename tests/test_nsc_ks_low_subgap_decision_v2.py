@@ -7,6 +7,10 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import derive_nsc_ks_low_subgap_decision_v2 as D
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_successor_reuses_group12_and_group32_and_keeps_low_columns_open():
     value = D.calculate()
     assert value['reused_successors']['group12_order24_lapse_error_upper'] < 3e-11

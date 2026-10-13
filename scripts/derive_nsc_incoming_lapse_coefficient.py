@@ -21,7 +21,9 @@ INPUTS=('results/development/nsc-incoming-constraint-germ.json','results/develop
         'src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py')
 
 
-def sha(p):return hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def sha(p):return selected_source_sha256(ROOT, p)
 
 
 def make_record():

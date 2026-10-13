@@ -26,7 +26,7 @@ SOURCES = ('src/recursive_horizons/nsc_reference_band_action.py',
 INPUTS = (PREVIOUS, GENERIC_DIAGNOSTIC, 'src/recursive_horizons/nsc_spatial_reference_symbol.py',
           'src/recursive_horizons/nsc_ks_spacetime_variation.py',
           'src/recursive_horizons/nsc_pg_ks_metric_pullback.py', 'src/recursive_horizons/nsc_lorentzian.py',
-          'src/recursive_horizons/nsc_compact_matching.py', 'src/recursive_horizons/nsc_scale_binding.py',
+          'scripts/check_nsc_compact_matching.py', 'src/recursive_horizons/nsc_scale_binding.py',
           'docs/nsc-vacuum-matched-ctp.md', 'docs/nsc-adm-source-constraints.md',
           'docs/nsc-compact-ctp-completion.md', 'docs/nsc-compact-matching.md',
           'docs/nsc-declared-action-scope.md')

@@ -15,6 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT/'results/development/nsc-incoming-retained-order24-bound.json'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_invalid_domain_rejected_before_any_coefficients():
     for channel, kwargs in (({'index': 0}, {}), ({'index': 12}, {'intervals': 64}),
                             ({'index': 12}, {'depth': 8})):
@@ -49,6 +53,7 @@ def test_normalized_complex_remainder_and_intersection():
             intersect_complex(mp.iv.mpc(1), mp.iv.mpc(2))
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_record_replay_keeps_order24_conditional_and_cannot_prepare(monkeypatch):
     if not RESULT.exists(): pytest.skip('record is prepared after the pre-compute owner gate')
     spec = importlib.util.spec_from_file_location('retained24', ROOT/'scripts/derive_nsc_incoming_retained_order24_bound.py')

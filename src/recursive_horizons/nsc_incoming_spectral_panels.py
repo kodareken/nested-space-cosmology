@@ -36,7 +36,9 @@ NUMERICAL_OWNERS = (
 )
 
 
-def sha(root, path): return hashlib.sha256((Path(root)/path).read_bytes()).hexdigest()
+from .nsc_frozen_sources import selected_source_sha256
+
+def sha(root, path): return selected_source_sha256(Path(root), path)
 def record(root, path): return json.loads((Path(root)/path).read_text())
 def load(path):
     with np.load(path, allow_pickle=False) as a:

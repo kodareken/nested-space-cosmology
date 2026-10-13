@@ -11,21 +11,29 @@ import sys
 import time
 
 import numpy as np
+from recursive_horizons.nsc_frozen_sources import selected_source_context
 
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
-import derive_nsc_retarded_response_resolution as R
+from recursive_horizons.nsc_retarded_radial_response import resolution_control as R
 import derive_nsc_retarded_fourier_response as F
 from recursive_horizons.nsc_retarded_radial_response import archived_amplitudes,pulse_fourier,local_frame_checks,short_response
 
 OUTPUT='results/development/nsc-retarded-radial-response.json'
 ARTIFACT='results/development/artifacts/nsc-retarded-radial-response.npz'
-OWNED=('src/recursive_horizons/nsc_retarded_radial_response.py','scripts/derive_nsc_retarded_radial_response.py',
+HISTORICAL_OWNED=('src/recursive_horizons/nsc_retarded_radial_response.py','scripts/derive_nsc_retarded_radial_response.py',
        'tests/test_nsc_retarded_radial_response.py','docs/nsc-retarded-radial-response.md')
+OWNED=('src/recursive_horizons/nsc_retarded_radial_response.py','scripts/derive_nsc_retarded_radial_response.py',
+       'tests/test_nsc_retarded_radial_response.py','docs/nsc-retarded-fixed-c0-certificate.md')
+
+
+def owned_sources():
+    return HISTORICAL_OWNED if selected_source_context() is not None else OWNED
+
 FOURIER='results/development/nsc-retarded-fourier-response.json'
 TOL=3e-11;CPU_CAP=30.;SETTINGS=((2e-10,2e-12),(2e-13,2e-15))
 
 
-def signature():return {**R.signature(),**F.signature(),**{p:R.P.digest(p) for p in (*OWNED,R.OUTPUT,FOURIER)}}
+def signature():return {**R.signature(),**F.signature(),**{p:R.P.digest(p) for p in (*owned_sources(),R.OUTPUT,FOURIER)}}
 def unpack(value):return np.asarray(value['real'])+1j*np.asarray(value['imag'])
 
 
@@ -109,7 +117,7 @@ def record_from_arrays(arrays,meta,digest,size,fourier):
         'scope':{'physical_low_energy_preparation':'OPEN','rigorous_response_error_bound':None,'full_C0_exclusion':'OPEN',
                  'global_PDE_horizon_scattering_solve':False,'source_state_replaced':False,'metric_evolution':False,
                  'stationarity_or_constraint_solution':False,'tolerance_changes_are_indicators':True,'CAR_residual_subtracted':False},
-        'source_hashes':{p:meta['signature'][p] for p in OWNED},'input_hashes':{p:h for p,h in meta['signature'].items() if p not in OWNED},
+        'source_hashes':{p:meta['signature'][p] for p in owned_sources()},'input_hashes':{p:h for p,h in meta['signature'].items() if p not in owned_sources()},
         'input_payload':meta.get('input_payload'),'payload':{'path':ARTIFACT,'sha256':digest,'bytes':size},
         'reproducer':'python3 scripts/derive_nsc_retarded_radial_response.py --check'}
 
@@ -161,6 +169,84 @@ def run():
     return checkpoint(meta['stop_reason'])
 
 
+def archived_map_replay_envelope(x, phi, energies, index):
+    """Propagate the existing chart tolerance and binary64 map arithmetic.
+
+    chart_coordinates uses epsabs=epsrel=2e-13 for S.  The phase is Lipschitz:
+    |exp(i E S1)-exp(i E S2)| <= |E| |S1-S2|.  Two replays therefore charge
+    twice that fixed requested quadrature accuracy.  A conservative gamma_128
+    covers the small coframe/dot chain, with its geometric conditioning and
+    uncancelled absolute-product scale.  This is replay accuracy, not a
+    certified quadrature or physical source-error bound.
+    """
+    from recursive_horizons.nsc_retarded_radial_response import canonical_map
+    from recursive_horizons.nsc_transmitting_dirac_domain import MODE_TO_CURRENT
+    from recursive_horizons.nsc_lorentzian import geometry
+    from recursive_horizons.nsc_ks_spacetime_variation import chart_coordinates
+    rho = float(x[index]); beta = float(geometry(rho)[0])
+    scale = np.max(abs(canonical_map(rho)) @ abs(MODE_TO_CURRENT) @ abs(phi[[index, len(x)+index]]))
+    eps = np.finfo(np.float64).eps
+    gamma = 128 * eps / (1 - 128 * eps)
+    geometric_condition = 1 + beta**2/(beta**2-1) + 1/(beta*(1-1/beta**2))
+    S = chart_coordinates(rho)[1]
+    coordinate_error = max(2e-13, 2e-13 * abs(S))
+    phase_error = float(np.max(abs(energies))) * coordinate_error
+    bound = 2 * float(scale) * (1+gamma) * (phase_error + gamma*geometric_condition)
+    return float(np.nextafter(bound, np.inf)) if bound else 0.
+
+
+def inverse_diagnostic_replay_envelopes(arrays, label):
+    """2x2 partial-pivot LU forward error from its backward-error model.
+
+    Partial pivoting has growth <=2 for a 2x2 matrix. gamma_(8*(3n+1))
+    conservatively counts complex LU/triangular arithmetic. Propagate that
+    through cond_inf(A), provided the resulting relative error is <1, and
+    bound two implementations. Anti-Hermitian sums and the direct-dot
+    comparison add their own operand-scale arithmetic terms.
+    """
+    f=arrays['reference/incoming']; B=arrays[label+'/response']
+    eps=np.finfo(np.float64).eps; n=2
+    gamma=8*(3*n+1)*eps/(1-8*(3*n+1)*eps)
+    solve_error=direct_error=scale=0.
+    for i in range(4):
+        A=f[i,:,:2].T; rhs=B[i,i,:,:2].T
+        solution=np.linalg.solve(A,rhs)
+        condition=float(np.real(np.linalg.cond(A,np.inf)))
+        relative=2*gamma*condition
+        if not np.isfinite(relative) or relative>=1:
+            raise ValueError('ill-conditioned canonical input replay')
+        norm=float(np.linalg.norm(solution,np.inf))
+        solve_error=max(solve_error,relative/(1-relative)*norm)
+        magnitude=float(np.max(abs(B[i,i]) @ abs(f[i].conj().T)))
+        direct_error=max(direct_error,gamma*magnitude)
+        scale=max(scale,norm,magnitude)
+    return {
+        'diagonal_K_inverse_antiHermitian':float(np.nextafter(4*solve_error+16*eps*scale,np.inf)),
+        'diagonal_K_definition_difference':float(np.nextafter(2*(solve_error+direct_error)+16*eps*scale,np.inf)),
+    }
+
+
+def validate_replay_record(old, record, arrays):
+    from copy import deepcopy
+    from recursive_horizons.nsc_weighted_receipt_replay import exact_record_equal
+    strict=deepcopy(record)
+    for label in old['per_solve']:
+        for field,bound in inverse_diagnostic_replay_envelopes(arrays,label).items():
+            stored=old['per_solve'][label][field]; computed=record['per_solve'][label][field]
+            if not all(type(v) is float and np.isfinite(v) and v>=0 for v in (stored,computed)) or abs(stored-computed)>bound:
+                raise ValueError('radial inverse diagnostic exceeds replay arithmetic envelope')
+            strict['per_solve'][label][field]=stored
+    if not exact_record_equal(strict,old):raise ValueError('radial saved-array receipt differs')
+
+
+def validate_archived_map(expected, saved, x, phi, energies, index):
+    bound=archived_map_replay_envelope(x,phi,energies,index)
+    if (not isinstance(expected,np.ndarray) or not isinstance(saved,np.ndarray)
+            or expected.dtype!=np.dtype(complex) or saved.dtype!=expected.dtype
+            or expected.shape!=saved.shape or not np.isfinite(expected).all() or not np.isfinite(saved).all() or F.maxabs(expected-saved)>bound):
+        raise ValueError('canonical archived input map exceeds replay arithmetic envelope')
+
+
 def check():
     old=json.loads((ROOT/OUTPUT).read_text());parent,fourier,data=inputs()
     if R.P.digest(ARTIFACT)!=old['payload']['sha256']:raise ValueError('radial artifact changed')
@@ -171,10 +257,10 @@ def check():
         if k.startswith('source/') and not np.array_equal(arrays[k],v):raise ValueError('radial source input changed')
     for key,index in (('upstream',meta['upstream_index']),('incoming',int(np.flatnonzero(data['reference/x']==1.)[0]))):
         expected=archived_amplitudes(data['reference/x'],data['reference/phi'],data['source/energies'],index)
-        if not np.array_equal(expected,arrays['reference/'+key]):raise ValueError('canonical archived input map differs')
+        validate_archived_map(expected,arrays['reference/'+key],data['reference/x'],data['reference/phi'],data['source/energies'],index)
     record=record_from_arrays(arrays,meta,R.P.digest(ARTIFACT),(ROOT/ARTIFACT).stat().st_size,fourier)
-    if record!=old:raise ValueError('radial saved-array receipt differs')
-    return record
+    validate_replay_record(old,record,arrays)
+    return old
 
 
 def main():

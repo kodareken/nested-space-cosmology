@@ -62,7 +62,7 @@ expansion and recycling remain research questions.
 - [Prior art and calculation admission](docs/prior-art-and-open-claim.md)
 - [arXiv mathematical library](docs/arxiv-studies.md)
 - [Commands and reproduction](docs/reproducing.md)
-- [Reassembly and recovery](docs/repository-consolidation.md)
+- [Preservation and source pins](docs/repository-consolidation.md)
 
 There is one active package at `src/recursive_horizons`, with root `scripts`,
 `tests`, `docs` and `results`. Install with `python -m pip install -e '.[paper,dev]'`.
@@ -72,19 +72,24 @@ Run from this root:
 python scripts/check_publication.py
 python scripts/check_lab_snapshot.py
 python scripts/check_claim_bindings.py
+python -m pytest tests/
 python scripts/build_paper.py --check
 ```
 
-Historical atlas v1–v6 and supporting articles replay in explicitly selected
-original contexts under ignored `.build/replay`. Changed current evidence fails
-authentication; current-source mismatches never silently select historical code.
-Exact historical image replay uses a separate Windows Python 3.14.8 / Matplotlib
-3.11.2 profile; the current paper uses Matplotlib 3.11.2. Follow the
-[historical environment setup](docs/reproducing.md#preserved-editions-and-source-contexts)
-before running `scripts/replay_history.py all`, or select it through `HISTORY_PYTHON`
-when running `make verify`. GitHub checks the two profiles in separate jobs.
-The v7 preparation and v8 response have explicit `atlas-v7` and `atlas-v8` historical replays;
-the legacy `all` command retains the v1-v6 profile.
+`make verify` runs current checks, the full retained test suite and the paper
+check. CI runs that suite on Linux and Windows with Matplotlib 3.11.2.
+The v2 [retained-file receipts](docs/lab-snapshot.json) authenticate current
+bytes; unchanged [source pins](archive/source-history/manifest.json) preserve
+original scientific contexts. Frozen records retain their exact hashes and
+declared source contexts. Deleted carriers are cited at
+[Zenodo](https://doi.org/10.5281/zenodo.23090015).
+
+Historical producers replay only in explicitly selected contexts under
+ignored `.build/replay`; they do not replace current-source checks. The
+[reproduction guide](docs/reproducing.md#preserved-editions-and-source-contexts)
+distinguishes authentication from scientific recomputation and records each
+original renderer requirement. The current renderer does not promise
+byte-identical historical PNGs. Historical replay is separate from `make verify`.
 New calculations require a named uncertainty and a finite budget.
 
 This is a research manuscript under development. No arXiv submission or

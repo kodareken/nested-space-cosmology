@@ -1,0 +1,55 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "constants": {
+    "covariance_composed_exponent": {
+      "source": "nsc-two-ends-covariance-v1",
+      "value": 0.2345971854502158
+    },
+    "fall_gap_power": {
+      "source": "pre-registered round 30",
+      "value": 0.25
+    },
+    "ladder_a": {
+      "source": "nsc-charged-ladder-deficit-law-v1",
+      "value": 0.6354392981444503
+    },
+    "ladder_b": {
+      "source": "nsc-charged-ladder-deficit-law-v1",
+      "value": 0.4671810119211981
+    },
+    "p_Q_gap_power": {
+      "source": "nsc-two-ends-covariance-v1",
+      "value": 0.1172985927251079
+    },
+    "rise_gap_power": {
+      "source": "pre-registered round 26",
+      "value": 0.5
+    },
+    "wall_oscillator_omega": {
+      "source": "nsc-wall-clock-derivation-v1",
+      "value": 0.38614380309772606
+    }
+  },
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-charged-ladder-deficit-law-v1.json": "b01bd1e9b1dffdb1b1688f64e5f3bd9f2b0a7d44be201a3cba26e8e55c25d720",
+    "lab/results/development/nsc-two-ends-covariance-v1.json": "9766b84cc70d5952f3fb48dea3816ffebe056672988267e25092628dec710d30",
+    "lab/results/development/nsc-wall-clock-derivation-v1.json": "b5ce507aed45a3465daaebc47c2de8fc0ec603065e15cdf1443fe19d3f631978"
+  },
+  "near_identity": {
+    "four_times_p_Q": 0.4691943709004316,
+    "ladder_b": 0.4671810119211981,
+    "relative_difference": 0.004309590775005849
+  },
+  "notes": [
+    "every value is re-read from its own record rather than remembered; sources are named per constant"
+  ],
+  "production_trajectory": false,
+  "schema": "NSC-CONSTANT-TABLE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_constant_table.py": "c3dd9a140cfe2b2584e84011b828f6e7d9d96b9f33cb7e7e859d34ad250189b1",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  },
+  "status": "observation-level; the 4*p_Q ~ b proximity is flagged as possible numerology, exactly like the round-1 transfer share"
+}

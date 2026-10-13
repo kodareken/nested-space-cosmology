@@ -240,12 +240,22 @@ def _derivative_from_point_jet(coeffs, derivative_order, radius, global_bounds,
     # the true value, even for T_2 at z=2.
     if not endpoint_valid:
         return enclosure_for(remaining + 1)
-    result = enclosure_for(1)
-    for lagrange_order in range(2, remaining + 2):
-        candidate = enclosure_for(lagrange_order)
-        if not result.overlaps(candidate):
+    # Every truncation reuses the same Taylor prefix. Accumulate it once,
+    # retaining the original order of all Arb operations and intersections.
+    prefix, power, result = arb(0), radius, None
+    for lagrange_order in range(1, remaining + 2):
+        global_index = derivative_order + lagrange_order
+        extra = prefix
+        if global_index <= degree:
+            extra = extra + _arb_rational(global_bounds[global_index]) * power / factorial(lagrange_order)
+        candidate = _symmetric(point, extra)
+        if result is not None and not result.overlaps(candidate):
             raise ArithmeticError('polynomial midpoint and endpoint remainders disagree')
-        result = result.intersection(candidate)
+        result = candidate if result is None else result.intersection(candidate)
+        if lagrange_order <= remaining:
+            prefix = prefix + abs(factorial(global_index) * coeffs[global_index]
+                                  / factorial(lagrange_order)) * power
+            power *= radius
     if not result.is_finite():
         raise ArithmeticError('nonfinite polynomial derivative enclosure')
     return result

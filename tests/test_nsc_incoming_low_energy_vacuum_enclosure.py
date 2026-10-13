@@ -6,6 +6,10 @@ from pathlib import Path
 import mpmath as mp
 import pytest
 import recursive_horizons.nsc_incoming_low_energy_vacuum_enclosure as M
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT=Path(__file__).resolve().parents[1]
 
 
@@ -44,9 +48,9 @@ def test_whole_cell_norm_and_start_tail_are_outward():
         with pytest.raises(ValueError):M.SelectedGenerator(channel,config,24.)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_replays_without_generator_or_frozen_updates(monkeypatch):
-    spec=importlib.util.spec_from_file_location('low_energy_proof',ROOT/'scripts/derive_nsc_incoming_low_energy_vacuum_enclosure.py')
-    script=importlib.util.module_from_spec(spec);spec.loader.exec_module(script)
+    from recursive_horizons.nsc_incoming_low_energy_vacuum_enclosure import vacuum_control as script
     def forbidden(*args,**kwargs):raise AssertionError('propagation entered error replay')
     monkeypatch.setattr(M,'propagate',forbidden);monkeypatch.setattr(M,'frozen_update',forbidden)
     monkeypatch.setattr(M.SelectedGenerator,'components',forbidden)
@@ -60,6 +64,7 @@ def test_receipt_replays_without_generator_or_frozen_updates(monkeypatch):
     assert record['algorithm']['steps']==2048
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_rejects_incomplete_cell_coverage_and_precision():
     saved=json.loads((ROOT/'results/development/nsc-incoming-low-energy-vacuum-enclosure.json').read_text())
     if saved['result'] is None:pytest.skip('budget checkpoint contains no completed certificate')

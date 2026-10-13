@@ -21,6 +21,8 @@ INPUT_RECORDS = (
 )
 
 
+from .nsc_frozen_sources import selected_source_sha256
+
 def _payload(root, spec):
     raw = (root/spec['path']).read_bytes()
     if sha256(raw).hexdigest() != spec['sha256']:
@@ -48,7 +50,7 @@ def authenticated_middle_inputs(root):
     for record in (bound, finite, retained_record, g13record):
         for field in ('source_hashes', 'input_hashes', 'numerical_owner_and_input_hashes'):
             for path, expected in record.get(field, {}).items():
-                if sha256((root/path).read_bytes()).hexdigest() != expected:
+                if selected_source_sha256(root, path) != expected:
                     raise ValueError('middle input source or record changed: '+path)
     artifact = _payload(root, bound['payload'])
     if artifact['groups'] != bound['groups']:
@@ -82,7 +84,7 @@ def authenticated_middle_inputs(root):
                 metadata = json.loads(data[prefix+'/metadata_json'].tobytes())
                 E, w = data[prefix+'/energies'], data[prefix+'/weights']
             for path, expected in metadata['sources'].items():
-                if sha256((root/path).read_bytes()).hexdigest() != expected:
+                if selected_source_sha256(root, path) != expected:
                     raise ValueError('selected middle producer changed: '+path)
             left, right = validate_middle_interval(channel, sign, metadata, selected['upper_energy_endpoint'])
             if (not np.array_equal(E, panels[name+'/energies']) or not np.array_equal(w, panels[name+'/weights'])

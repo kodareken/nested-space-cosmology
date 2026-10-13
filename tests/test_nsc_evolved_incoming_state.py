@@ -17,11 +17,12 @@ from recursive_horizons.nsc_evolved_incoming_state import (
 import recursive_horizons.nsc_evolved_incoming_state as STATE
 from recursive_horizons.nsc_transmitting_history_jets import FourthOrderModePropagator
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Original producer bytes are explicit; numerical fixtures remain current local inputs.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = importlib.util.spec_from_file_location(
-    'evolved_incoming_control', ROOT / 'scripts/derive_nsc_evolved_incoming_state.py')
-CONTROL = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(CONTROL)
+from recursive_horizons.nsc_evolved_incoming_state import state_control as CONTROL
 
 
 def wave(frequency, phase=0., scale=1.):
@@ -275,6 +276,7 @@ def test_tiny_centered_derivatives_and_primal_amplitude_only():
     assert center.diagnostics['norm_flux_residual'] < 3e-11
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_array_only_saved_retarded_restriction_without_old_solver():
     residual = CONTROL.retarded_restriction_replay(
         json.loads((ROOT / 'results/development/nsc-retarded-compatible-response.json').read_text()),
@@ -286,6 +288,7 @@ def test_array_only_saved_retarded_restriction_without_old_solver():
     assert residual['restriction_parameter_derivative'] == 0
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_replays_arrays_without_propagation(monkeypatch):
     def forbidden(*args, **kwargs):
         raise AssertionError('scientific producer called during receipt replay')
@@ -318,3 +321,27 @@ def test_receipt_replays_arrays_without_propagation(monkeypatch):
         assert np.max(np.abs(expected - saved)) < 1e-15
         assert arrays['source/blocks'].shape[0] == 4
         assert arrays['center/columns'].shape[-1] == 12
+
+
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
+def test_covariance_replay_rejects_changes_beyond_array_roundoff():
+    from copy import deepcopy
+    saved = json.loads((ROOT / CONTROL.OUTPUT).read_text())
+    payload = ROOT / saved['payload']['path']
+    with np.load(payload, allow_pickle=False) as archive:
+        arrays = {k: archive[k] for k in archive.files}
+    meta = json.loads(arrays['metadata_json'].tobytes())
+    replay = CONTROL.record_from_arrays(arrays, meta, CONTROL.digest(saved['payload']['path']), payload.stat().st_size)
+    CONTROL.validate_replay(saved, replay, arrays)
+    field = 'complete_coherent_covariance_derivative'
+    envelope = CONTROL.covariance_roundoff_envelope(arrays)
+    changed = deepcopy(replay)
+    changed['residuals'][field] = saved['residuals'][field] + 4 * envelope
+    # Passing the scientific control alone must not authenticate a receipt.
+    assert changed['residuals'][field] < saved['control']['covariance_derivative_tolerance']
+    with pytest.raises(ValueError, match='roundoff envelope'):
+        CONTROL.validate_replay(saved, changed, arrays)
+    changed = deepcopy(replay)
+    changed['control']['field_runs'] += 1
+    with pytest.raises(ValueError, match='receipt differs'):
+        CONTROL.validate_replay(saved, changed, arrays)

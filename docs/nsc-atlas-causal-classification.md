@@ -261,7 +261,7 @@ original diagram pixels, including the $\Lambda_+=0$ limit and time-sign
 translation. Full nonspherical shell dynamics, a general low-regularity
 Einstein-shell Cauchy theorem, quantum formation and the assembled parent's
 global horizon structure remain unread or unresolved. The
-[reuse rule](../../docs/prior-art-and-open-claim.md) still governs the next
+[reuse rule](prior-art-and-open-claim.md) still governs the next
 calculation. Known causal classifications are borrowed; the gain here is a
 more precise map of this project's already fixed candidate.
 

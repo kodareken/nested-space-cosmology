@@ -286,3 +286,128 @@ def directed_thermal_tail(channel,config):
                 'display_is_not_proof':'lossless interval endpoints own outward rounding',
                 'source_law':'2*exp(-pi*E/kappa)+exp(-2*pi*E/(Omega*kappa))',
                 'exact_zero_components':[]}
+
+# Retained executable control: quadrature_control
+# Actual API folded from scripts/derive_nsc_incoming_tail_quadrature_bound.py at 329ef809; historical source identities remain frozen.
+from .nsc_frozen_sources import selected_source_sha256 as _retained_incoming_selected_sha256
+def _retained_incoming_source_sha256(root, path):
+    from pathlib import Path
+    value = Path(path)
+    name = value.relative_to(root).as_posix() if value.is_absolute() else path
+    return _retained_incoming_selected_sha256(root, name)
+
+import argparse as _quadrature_control_argparse
+from hashlib import sha256 as _quadrature_control_sha256
+import json as _quadrature_control_json
+from pathlib import Path as _quadrature_control_Path
+import sys as _quadrature_control_sys
+import mpmath as _quadrature_control_mp
+import sympy as _quadrature_control_sp
+from recursive_horizons.nsc_posix import ROOT as _quadrature_control_ROOT
+_quadrature_control_sys.path.insert(0, str(_quadrature_control_ROOT / 'src'))
+from recursive_horizons.nsc_incoming_tail_quadrature_bound import prepare_integral as _quadrature_control_prepare_integral, replay_integral as _quadrature_control_replay_integral, directed_thermal_tail as _quadrature_control_directed_thermal_tail
+from recursive_horizons.nsc_incoming_source_quadrature_bound import pack as _quadrature_control_pack, unpack as _quadrature_control_unpack, float_enclosure as _quadrature_control_float_enclosure
+from recursive_horizons.nsc_incoming_middle_bound import _parameters as _quadrature_control__parameters
+from recursive_horizons.nsc_incoming_vacuum_tail_bound import _precision as _quadrature_control__precision, _lo as _quadrature_control__lo, _hi as _quadrature_control__hi, _up_float as _quadrature_control__up_float
+_quadrature_control_OUTPUT = _quadrature_control_ROOT / 'results/development/nsc-incoming-tail-quadrature-bound.json'
+_quadrature_control_SOURCES = ('src/recursive_horizons/nsc_incoming_tail_quadrature_bound.py', 'tests/test_nsc_incoming_tail_quadrature_bound.py', 'scripts/derive_nsc_incoming_tail_quadrature_bound.py', 'docs/nsc-incoming-tail-quadrature-bound.md')
+_quadrature_control_INPUTS = ('results/development/nsc-incoming-source-tail.json', 'results/development/nsc-incoming-vacuum-tail-bound.json', 'results/development/nsc-mode-resolved-cauchy-state.json', 'results/development/nsc-compact-matched-restart.json', 'src/recursive_horizons/nsc_incoming_source_tail.py', 'src/recursive_horizons/nsc_incoming_source_quadrature_bound.py', 'src/recursive_horizons/nsc_incoming_projector_energy_bound.py', 'src/recursive_horizons/nsc_incoming_middle_bound.py', 'src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py', 'src/recursive_horizons/nsc_compact_ctp_neck.py')
+
+def _quadrature_control_digest(p):
+    return _retained_incoming_source_sha256(_quadrature_control_ROOT, p)
+
+def _quadrature_control_read(p):
+    return _quadrature_control_json.loads((_quadrature_control_ROOT / p).read_text())
+
+def _quadrature_control_signature():
+    return {p: _quadrature_control_digest(p) for p in (*_quadrature_control_SOURCES, *_quadrature_control_INPUTS)}
+
+def _quadrature_control_inputs():
+    for path in _quadrature_control_INPUTS[:4]:
+        record = _quadrature_control_read(path)
+        for field in ('source_hashes', 'input_hashes'):
+            for p, expected in record.get(field, {}).items():
+                if _quadrature_control_digest(p) != expected:
+                    raise ValueError('tail input changed: ' + p)
+        if 'payload' in record and _quadrature_control_digest(record['payload']['path']) != record['payload']['sha256']:
+            raise ValueError('tail payload changed')
+    tail, vacuum, inventory, config = [_quadrature_control_read(p) for p in _quadrature_control_INPUTS[:4]]
+    row = tail['groups']['22']
+    physical = vacuum['groups'][21]
+    if row['lower'] != 160.0 or physical['group'] != 22 or physical['lower'] != 160.0:
+        raise ValueError('unchanged group22 endpoint160 required')
+    return (inventory['channels'][22], config['scattering_provenance']['config'], row, physical)
+
+def _quadrature_control_prepare():
+    channel, config, _, _ = _quadrature_control_inputs()
+    before = _quadrature_control_signature()
+    integral = _quadrature_control_prepare_integral(channel)
+    thermal = _quadrature_control_directed_thermal_tail(channel, config)
+    if _quadrature_control_signature() != before:
+        raise ValueError('producer changed during pilot')
+    payload = {'signature': before, 'integral': integral, 'thermal': thermal, 'versions': {'mpmath': _quadrature_control_mp.__version__, 'sympy': _quadrature_control_sp.__version__}}
+    raw = (_quadrature_control_json.dumps(payload, sort_keys=True, indent=2) + '\n').encode()
+    h = _quadrature_control_sha256(raw).hexdigest()
+    path = _quadrature_control_ROOT / f'results/development/artifacts/nsc-incoming-tail-quadrature-bound.{h}.json'
+    if path.exists() and path.read_bytes() != raw:
+        raise ValueError('content-address collision')
+    if not path.exists():
+        path.write_bytes(raw)
+    return path
+
+def _quadrature_control_replay(path):
+    channel, config, archived, physical = _quadrature_control_inputs()
+    payload = _quadrature_control_json.loads(path.read_text())
+    if payload['signature'] != _quadrature_control_signature() or payload['versions'] != {'mpmath': _quadrature_control_mp.__version__, 'sympy': _quadrature_control_sp.__version__}:
+        raise ValueError('pilot signature or numerical library changed')
+    integral = _quadrature_control_replay_integral(payload['integral'])
+    thermal = _quadrature_control_directed_thermal_tail(channel, config)
+    if thermal != payload['thermal']:
+        raise ValueError('outward thermal replay changed')
+    old = archived['tail_by_order']['13']
+    with _quadrature_control__precision(80):
+        intervals = [_quadrature_control_unpack(v) for v in integral['integral_interval']]
+        error = [_quadrature_control_mp.iv.mpf(_quadrature_control__hi(abs(value - _quadrature_control_mp.iv.mpf(stored)))) for value, stored in zip(intervals, old)]
+        a, r, _, _, _ = _quadrature_control__parameters(channel)
+        numerical = [4 * _quadrature_control_mp.iv.pi * a * r * r * error[0], 4 * _quadrature_control_mp.iv.pi * a * a * r * r * error[2]]
+        physical_stress = [_quadrature_control_mp.iv.mpf(v) for v in physical['vacuum_tail_error_upper']]
+        thermal_stress = [_quadrature_control_unpack(v) for v in thermal['intervals']]
+        combined = [4 * _quadrature_control_mp.iv.pi * a * r * r * (error[0] + physical_stress[0] + thermal_stress[0]), 4 * _quadrature_control_mp.iv.pi * a * a * r * r * (error[2] + physical_stress[2] + thermal_stress[2])]
+        zero_safe = lambda v: 0.0 if _quadrature_control__hi(v) == 0 else _quadrature_control__up_float(v)
+        numerical_upper = [zero_safe(v) for v in numerical]
+        combined_upper = [zero_safe(v) for v in combined]
+        numeric_stress = [zero_safe(v) for v in error]
+        display = [_quadrature_control_float_enclosure(v) for v in intervals]
+    return {'schema': 'NSC-INCOMING-TAIL-QUADRATURE-BOUND-v1', 'accountable_author': 'Douglas Ek', 'status': ('PASS' if max(combined_upper) <= 3e-11 else 'OPEN') + ': group22 archived order16 infinite tail numerical and physical budget; full source OPEN', 'source_hashes': {p: _quadrature_control_digest(p) for p in _quadrature_control_SOURCES}, 'input_hashes': {p: _quadrature_control_digest(p) for p in _quadrature_control_INPUTS}, 'payload': {'path': path.relative_to(_quadrature_control_ROOT).as_posix(), 'sha256': _quadrature_control_sha256(path.read_bytes()).hexdigest()}, 'group': 22, 'lower_energy': 160.0, 'riccati_order': 16, 'reference_order': 4, 'kernel_order': ['rho', 'p_parallel', 'T01', 'p_perp'], 'archived_order13_source': old, 'archived_source_unchanged': True, 'certified_integral': integral, 'integral_float_enclosure': display, 'archived_numerical_stress_error_upper': numeric_stress, 'archived_numerical_action_error_upper': numerical_upper, 'imported_vacuum_physical_stress_error_upper': physical['vacuum_tail_error_upper'], 'thermal_tail': thermal, 'combined_action_error_upper': combined_upper, 'stationarity_tolerance': 3e-11, 'endpoint_certificate': payload['integral']['endpoint_certificate'], 'analytic_adapter': payload['integral']['analytic_adapter'], 'residuals': {'exact_endpoint_identities': 0.0, 'saved_gauss_weight_replay': 0.0, 'thermal_replay': 0.0}, 'verification_tolerances': {'exact_endpoint_identities': 0.0, 'saved_gauss_weight_replay': 0.0, 'thermal_replay': 0.0}, 'scope': {'old_Taylor_regenerated': False, 'radial_or_mode_solves': False, 'source_recipe_changed': False, 'new_source_value_composed': False, 'groups_calculated': 1, 'complete32_group_tail_certified': False, 'finite_offset_low_modes_certified': False, 'constraints_solved': False, 'metric_evolution': False, 'Gamma_rest_assigned': False, 'push_or_PDF': False}, 'reproducer': 'python3 scripts/derive_nsc_incoming_tail_quadrature_bound.py --check'}
+
+from types import SimpleNamespace as _quadrature_control_Namespace
+quadrature_control = _quadrature_control_Namespace(
+    INPUTS=_quadrature_control_INPUTS,
+    OUTPUT=_quadrature_control_OUTPUT,
+    Path=_quadrature_control_Path,
+    ROOT=_quadrature_control_ROOT,
+    SOURCES=_quadrature_control_SOURCES,
+    _hi=_quadrature_control__hi,
+    _lo=_quadrature_control__lo,
+    _parameters=_quadrature_control__parameters,
+    _precision=_quadrature_control__precision,
+    _up_float=_quadrature_control__up_float,
+    argparse=_quadrature_control_argparse,
+    digest=_quadrature_control_digest,
+    directed_thermal_tail=_quadrature_control_directed_thermal_tail,
+    float_enclosure=_quadrature_control_float_enclosure,
+    inputs=_quadrature_control_inputs,
+    json=_quadrature_control_json,
+    mp=_quadrature_control_mp,
+    pack=_quadrature_control_pack,
+    prepare=_quadrature_control_prepare,
+    prepare_integral=_quadrature_control_prepare_integral,
+    read=_quadrature_control_read,
+    replay=_quadrature_control_replay,
+    replay_integral=_quadrature_control_replay_integral,
+    sha256=_quadrature_control_sha256,
+    signature=_quadrature_control_signature,
+    sp=_quadrature_control_sp,
+    sys=_quadrature_control_sys,
+    unpack=_quadrature_control_unpack,
+)

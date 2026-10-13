@@ -11,6 +11,10 @@ from recursive_horizons.nsc_incoming_projector_energy_bound import projected_ene
 ROOT = Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_incompatible_domain_is_rejected_before_any_radial_work():
     config = {}; channel = {'index': 14}
     with pytest.raises(ValueError, match='other than14'):
@@ -19,6 +23,7 @@ def test_incompatible_domain_is_rejected_before_any_radial_work():
         centered_middle_bound(config, {'index': 12}, intervals=16)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_record_replays_saved_coefficients_and_keeps_all_equations_open(monkeypatch):
     record = json.loads((ROOT/'results/development/nsc-incoming-centered-middle.json').read_text())
     spec = importlib.util.spec_from_file_location('centered_middle_replay', ROOT/'scripts/derive_nsc_incoming_centered_middle.py')
@@ -34,6 +39,7 @@ def test_record_replays_saved_coefficients_and_keeps_all_equations_open(monkeypa
     assert actual['stationarity_tolerance'] == 3e-11
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_saved_intersections_improve_valid_natural_coefficients():
     record = json.loads((ROOT/'results/development/nsc-incoming-centered-middle.json').read_text())
     artifact = json.loads((ROOT/record['payload']['path']).read_text())

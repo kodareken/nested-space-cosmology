@@ -13,7 +13,7 @@ from math import pi
 
 import numpy as np
 
-from .nsc_mmp_embedding import CommonCoefficients
+from .dirac.charged_throat import CommonCoefficients
 
 
 @dataclass(frozen=True)

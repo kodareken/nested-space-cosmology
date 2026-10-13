@@ -1,0 +1,59 @@
+{
+  "api_version": "nsc-influence-chain-v1",
+  "creation_only": true,
+  "evolved": false,
+  "input_sha256": {
+    "lab/results/development/nsc-march-duration-table-v1.json": "866d281f221b2e720c49a93c6ca51ea8725a60ca0e620bf6f0fd57b445affeaf"
+  },
+  "notes": [
+    "three intervals per case; the factor is a fit, not a law"
+  ],
+  "production_trajectory": false,
+  "reading": "the per-case exponential-in-index decay factor of the march's station intervals; the heaviest case decays fastest",
+  "rows": [
+    {
+      "after_first_intervals": [
+        39.765962255001064,
+        38.77741628090541,
+        38.69471078713735
+      ],
+      "case": "mu-1.002-eps-0.001",
+      "geometric_factor_s": 0.9864385917484343,
+      "pairwise_factors": [
+        0.9751409014635041,
+        0.9978671736876707
+      ]
+    },
+    {
+      "after_first_intervals": [
+        22.445515191555025,
+        18.95676027933756,
+        18.057852276166287
+      ],
+      "case": "mu-1.010-eps-0.001",
+      "geometric_factor_s": 0.8969500509127712,
+      "pairwise_factors": [
+        0.8445678398359915,
+        0.9525811378144049
+      ]
+    },
+    {
+      "after_first_intervals": [
+        15.0552091439565,
+        12.859708011150364,
+        9.873800492286684
+      ],
+      "case": "mu-1.040-eps-0.001",
+      "geometric_factor_s": 0.8098391674147106,
+      "pairwise_factors": [
+        0.8541700011063972,
+        0.7678090734039477
+      ]
+    }
+  ],
+  "schema": "NSC-MARCH-LEARN-RATE-v1",
+  "source_sha256": {
+    "lab/scripts/derive_nsc_march_learn_rate.py": "b245645094241fd8b920e61736dff3380308996c6b0b7e4f3c8727c9149d9dd7",
+    "lab/src/recursive_horizons/nsc_influence_chain.py": "286d20f13f89c70c63cd91879e613ef38e491686f4adec758dc4e97ae29cd6e1"
+  }
+}

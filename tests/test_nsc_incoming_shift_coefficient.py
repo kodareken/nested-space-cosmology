@@ -11,6 +11,10 @@ from recursive_horizons.nsc_spatial_reference_symbol import SymbolJet,star_order
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_trace_formula_has_the_original_star_order_sign():
     identity=owner.weyl_trace_identity()
     assert identity['first_star_order_residual']=='0' and identity['rank_one_block_residual']=='0'
@@ -55,6 +59,7 @@ def test_positive_coefficient_and_zero_angular_reference():
                 assert row[key][0]<=0<=row[key][1]
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_replay_never_runs_symbolic_or_previous_coefficient_producers(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('producer ran during directed coefficient replay')
     for name in ('reference_shift_expressions','integrated_reference_expressions','local_shift_expressions','local_density_controls'):

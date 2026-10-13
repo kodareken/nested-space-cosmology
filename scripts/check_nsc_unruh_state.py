@@ -21,7 +21,7 @@ from check_nsc_compact_matching import authenticated_record, compare, hashes
 
 OUTPUT=ROOT/'results/development/unruh-state.json'
 SOURCES=('scripts/check_nsc_unruh_state.py','src/recursive_horizons/nsc_unruh_state.py',
-         'docs/nsc-unruh-state.md','src/recursive_horizons/nsc_gauge_source.py',
+         'docs/nsc-unruh-state.md','src/recursive_horizons/dirac/gauge.py',
          'scripts/check_nsc_compact_matching.py',
          'scripts/check_nsc_compact_matching.py')
 INPUTS=('results/development/horizon-source.json','results/development/angular-stress.json',

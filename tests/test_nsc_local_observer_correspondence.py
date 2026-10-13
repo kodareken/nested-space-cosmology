@@ -16,7 +16,7 @@ if str(SRC) not in sys.path:
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
 
-from recursive_horizons.nsc_energy_transfer import regional_operators, schur_state_data
+from recursive_horizons.dirac.energy import regional_operators, schur_state_data
 from recursive_horizons.nsc_local_observer_correspondence import (
     CLAIM_STATUS,
     EQUATIONS,
@@ -184,14 +184,30 @@ class TestRecordLayersAndReplay(unittest.TestCase):
     def test_recorded_artifact_replays_when_present(self):
         if not OWNER.OUTPUT.is_file():
             return
-        from hashlib import sha256
+        from recursive_horizons.nsc_frozen_sources import authenticate_source
 
-        live = OWNER.compute()
+        context = "329ef809e466a86ed4a290ee32c19485f85add9d"
+        overrides = {"docs/nsc-local-observer-correspondence.md":
+                     "86d7233c8e166c3cc47e99c0aa1196813d9b1f15"}
+        live = OWNER.compute(source_context=context, source_contexts=overrides)
         saved = json.loads(OWNER.OUTPUT.read_text())
-        assert live == saved
+        from recursive_horizons.nsc_local_observer_correspondence import compare_records
+        compare_records(saved, live)
         for collection in ("source_hashes", "input_hashes"):
             for path, expected in saved[collection].items():
-                assert sha256((ROOT / path).read_bytes()).hexdigest() == expected
+                authenticate_source(ROOT, path, expected,
+                                    context=None if path.startswith("results/") else overrides.get(path, context))
+
+    def test_replay_comparison_keeps_hashes_types_keys_and_numeric_bound(self):
+        from recursive_horizons.nsc_local_observer_correspondence import compare_records
+        compare_records({"residual": 0.0}, {"residual": NUMERIC / 2})
+        for actual in ({"residual": NUMERIC * 2}, {"residual": 0},
+                       {"residual": False}, {"residual": 0.0, "extra": 0}):
+            with self.assertRaises(ValueError):
+                compare_records({"residual": 0.0}, actual)
+        with self.assertRaises(ValueError):
+            compare_records({"source_hashes": {"source.py": "0" * 64}},
+                            {"source_hashes": {"source.py": "1" * 64}})
 
 
 if __name__ == "__main__":

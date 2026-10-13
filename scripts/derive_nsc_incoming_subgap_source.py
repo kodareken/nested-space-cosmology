@@ -25,7 +25,9 @@ SOURCES = ('src/recursive_horizons/nsc_incoming_subgap_source.py',
 CURRENT_IDENTITY = 'results/development/nsc-incoming-constraint-gate.json'
 
 
-def sha(path): return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def sha(path): return selected_source_sha256(ROOT, path)
 def read(path): return json.loads((ROOT/path).read_text())
 def encoded(value):
     value = np.asarray(value)

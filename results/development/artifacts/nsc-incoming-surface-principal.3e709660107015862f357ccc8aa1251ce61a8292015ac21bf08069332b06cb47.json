@@ -1,0 +1,912 @@
+{
+  "directed_matrix": {
+    "B_enclosure_method": "intersection of direct coefficient evaluation and exact relation to saved cu",
+    "column_order": [
+      "U or U_z",
+      "w_zz or w_zzz"
+    ],
+    "components": {
+      "H_r_interval": [
+        -0.42201569295012303,
+        -0.4220156929501229
+      ],
+      "a_interval": [
+        0.8440313859002458,
+        0.8440313859002461
+      ],
+      "direct_total_B_interval": [
+        -0.17874309648200593,
+        -0.17874309648200537
+      ],
+      "local_B_interval": [
+        0.14779299131711046,
+        0.14779299131711054
+      ],
+      "local_d_interval": [
+        0.04154458459537627,
+        0.0415445845953763
+      ],
+      "local_entries": {
+        "compact/weyl_bulk": {
+          "B_interval": [
+            0.13230862121878176,
+            0.13230862121878184
+          ],
+          "d_interval": [
+            0.03376391490354479,
+            0.03376391490354481
+          ],
+          "e_interval": [
+            -0.047395335741033356,
+            -0.047395335741033336
+          ]
+        },
+        "light/WZ_Weyl": {
+          "B_interval": [
+            0.017200191371208602,
+            0.017200191371208616
+          ],
+          "d_interval": [
+            0.004389326957174377,
+            0.00438932695717438
+          ],
+          "e_interval": [
+            -0.006161418941101734,
+            -0.0061614189411017305
+          ]
+        },
+        "light/WZ_boxR": {
+          "B_interval": [
+            0.009809358857632025,
+            0.009809358857632032
+          ],
+          "d_interval": [
+            0.0063324602339557175,
+            0.00633246023395572
+          ],
+          "e_interval": [
+            -0.0088890485511668,
+            -0.008889048551166793
+          ]
+        },
+        "light/bar_radial_R2_squared": {
+          "B_interval": [
+            -0.011525180130511936,
+            -0.011525180130511929
+          ],
+          "d_interval": [
+            -0.002941117499298608,
+            -0.0029411174992986064
+          ],
+          "e_interval": [
+            0.004128527504328328,
+            0.004128527504328332
+          ]
+        }
+      },
+      "per_group_reference_d": [
+        {
+          "B_interval": [
+            -0.02977755695230058,
+            -0.02977755695230053
+          ],
+          "d_interval": [
+            -0.007598952280746867,
+            -0.007598952280746858
+          ],
+          "group": 1
+        },
+        {
+          "B_interval": [
+            -0.016543087195722547,
+            -0.016543087195722516
+          ],
+          "d_interval": [
+            -0.004221640155970483,
+            -0.004221640155970477
+          ],
+          "group": 2
+        },
+        {
+          "B_interval": [
+            -0.011816490854087532,
+            -0.011816490854087513
+          ],
+          "d_interval": [
+            -0.00301545725426463,
+            -0.0030154572542646263
+          ],
+          "group": 3
+        },
+        {
+          "B_interval": [
+            -0.009305486547593932,
+            -0.009305486547593915
+          ],
+          "d_interval": [
+            -0.002374672587733396,
+            -0.0023746725877333928
+          ],
+          "group": 4
+        },
+        {
+          "B_interval": [
+            -0.0077201073580038535,
+            -0.007720107358003841
+          ],
+          "d_interval": [
+            -0.0019700987394528913,
+            -0.001970098739452889
+          ],
+          "group": 5
+        },
+        {
+          "B_interval": [
+            -0.0066172348782890175,
+            -0.006617234878289007
+          ],
+          "d_interval": [
+            -0.0016886560623881925,
+            -0.0016886560623881907
+          ],
+          "group": 6
+        },
+        {
+          "B_interval": [
+            -0.005800822782915697,
+            -0.005800822782915687
+          ],
+          "d_interval": [
+            -0.0014803153793662728,
+            -0.0014803153793662709
+          ],
+          "group": 7
+        },
+        {
+          "B_interval": [
+            -0.005169714748663297,
+            -0.005169714748663286
+          ],
+          "d_interval": [
+            -0.0013192625487407758,
+            -0.001319262548740774
+          ],
+          "group": 8
+        },
+        {
+          "B_interval": [
+            -0.004665998952639693,
+            -0.0046659989526396835
+          ],
+          "d_interval": [
+            -0.0011907190183506487,
+            -0.001190719018350647
+          ],
+          "group": 9
+        },
+        {
+          "B_interval": [
+            -0.004253936707471511,
+            -0.004253936707471505
+          ],
+          "d_interval": [
+            -0.0010855646115352667,
+            -0.0010855646115352656
+          ],
+          "group": 10
+        },
+        {
+          "B_interval": [
+            -0.003910184246261692,
+            -0.003910184246261686
+          ],
+          "d_interval": [
+            -0.000997842218683932,
+            -0.0009978422186839309
+          ],
+          "group": 11
+        },
+        {
+          "B_interval": [
+            -0.003618800324064307,
+            -0.0036188003240643007
+          ],
+          "d_interval": [
+            -0.0009234837841185429,
+            -0.0009234837841185419
+          ],
+          "group": 12
+        },
+        {
+          "B_interval": [
+            -5e-324,
+            5e-324
+          ],
+          "d_interval": [
+            -5e-324,
+            5e-324
+          ],
+          "group": 13
+        },
+        {
+          "B_interval": [
+            -0.024146693622700142,
+            -0.02414669362270011
+          ],
+          "d_interval": [
+            -0.0038495084026448933,
+            -0.00384950840264489
+          ],
+          "group": 14
+        },
+        {
+          "B_interval": [
+            -0.022467725198570886,
+            -0.022467725198570848
+          ],
+          "d_interval": [
+            -0.004239488319780723,
+            -0.004239488319780718
+          ],
+          "group": 15
+        },
+        {
+          "B_interval": [
+            -0.019060681555802032,
+            -0.019060681555802005
+          ],
+          "d_interval": [
+            -0.003954174959100361,
+            -0.003954174959100356
+          ],
+          "group": 16
+        },
+        {
+          "B_interval": [
+            -0.016227377367566333,
+            -0.016227377367566305
+          ],
+          "d_interval": [
+            -0.003565021358783972,
+            -0.003565021358783968
+          ],
+          "group": 17
+        },
+        {
+          "B_interval": [
+            -0.01403791746995897,
+            -0.014037917469958947
+          ],
+          "d_interval": [
+            -0.003199899573547463,
+            -0.0031998995735474595
+          ],
+          "group": 18
+        },
+        {
+          "B_interval": [
+            -0.012337877903781101,
+            -0.012337877903781082
+          ],
+          "d_interval": [
+            -0.002883491370451711,
+            -0.002883491370451708
+          ],
+          "group": 19
+        },
+        {
+          "B_interval": [
+            -0.010992564157429833,
+            -0.010992564157429814
+          ],
+          "d_interval": [
+            -0.0026147422108538793,
+            -0.0026147422108538762
+          ],
+          "group": 20
+        },
+        {
+          "B_interval": [
+            -0.009906168539676642,
+            -0.009906168539676623
+          ],
+          "d_interval": [
+            -0.002386831842140995,
+            -0.0023868318421409913
+          ],
+          "group": 21
+        },
+        {
+          "B_interval": [
+            -0.009012467406826732,
+            -0.009012467406826713
+          ],
+          "d_interval": [
+            -0.0021925810346801367,
+            -0.0021925810346801336
+          ],
+          "group": 22
+        },
+        {
+          "B_interval": [
+            -5e-324,
+            5e-324
+          ],
+          "d_interval": [
+            -5e-324,
+            5e-324
+          ],
+          "group": 23
+        },
+        {
+          "B_interval": [
+            -0.004780149727031078,
+            -0.004780149727031072
+          ],
+          "d_interval": [
+            -0.0006208005734010923,
+            -0.0006208005734010917
+          ],
+          "group": 24
+        },
+        {
+          "B_interval": [
+            -0.008286785365264749,
+            -0.008286785365264736
+          ],
+          "d_interval": [
+            -0.00120692840103824,
+            -0.0012069284010382388
+          ],
+          "group": 25
+        },
+        {
+          "B_interval": [
+            -0.009959322226560553,
+            -0.009959322226560539
+          ],
+          "d_interval": [
+            -0.0016024946232524695,
+            -0.0016024946232524682
+          ],
+          "group": 26
+        },
+        {
+          "B_interval": [
+            -0.010403945641263537,
+            -0.010403945641263521
+          ],
+          "d_interval": [
+            -0.0018167456328165696,
+            -0.0018167456328165676
+          ],
+          "group": 27
+        },
+        {
+          "B_interval": [
+            -0.010210963954608552,
+            -0.010210963954608536
+          ],
+          "d_interval": [
+            -0.001903742657988443,
+            -0.0019037426579884412
+          ],
+          "group": 28
+        },
+        {
+          "B_interval": [
+            -0.009736472234195171,
+            -0.009736472234195158
+          ],
+          "d_interval": [
+            -0.001912184773562376,
+            -0.0019121847735623742
+          ],
+          "group": 29
+        },
+        {
+          "B_interval": [
+            -0.009163945608254917,
+            -0.009163945608254901
+          ],
+          "d_interval": [
+            -0.0018756881510579102,
+            -0.0018756881510579083
+          ],
+          "group": 30
+        },
+        {
+          "B_interval": [
+            -0.008580626458704521,
+            -0.008580626458704504
+          ],
+          "d_interval": [
+            -0.0018152760476508874,
+            -0.0018152760476508852
+          ],
+          "group": 31
+        },
+        {
+          "B_interval": [
+            -0.008024981812907008,
+            -0.008024981812906992
+          ],
+          "d_interval": [
+            -0.001743511772393073,
+            -0.001743511772393071
+          ],
+          "group": 32
+        }
+      ],
+      "precision": 50,
+      "reference_B_interval": [
+        -0.3265360877991164,
+        -0.32653608779911586
+      ],
+      "reference_d_interval": [
+        -0.0712497763464971,
+        -0.07124977634649701
+      ],
+      "total_d_interval": [
+        -0.029705191751120803,
+        -0.02970519175112073
+      ],
+      "total_e_interval": [
+        0.041697994451121254,
+        0.041697994451121365
+      ],
+      "zero_local_channels": [
+        "compact/einstein_bulk",
+        "compact/euler_bulk_diagnostic",
+        "compact/maxwell_bulk",
+        "light/cylinder",
+        "light/LLL_geometry_bar",
+        "light/WZ_Euler",
+        "light/WZ_gauge"
+      ]
+    },
+    "determinant_interval": [
+      -0.0029161631968961416,
+      -0.0029161631968961255
+    ],
+    "direct_matrix_determinant_interval": [
+      -0.0029161631968961537,
+      -0.002916163196896113
+    ],
+    "eliminated_w3_coefficient_interval": [
+      -0.05080487628982585,
+      -0.050804876289825454
+    ],
+    "input_interpretation": "same geometric/harmonic definition and stored-value hulls; unchanged binary local ledger",
+    "matrix_intervals": [
+      [
+        [
+          0.057399277586276304,
+          0.05739927758627644
+        ],
+        [
+          -0.17874309648200593,
+          -0.17874309648200537
+        ]
+      ],
+      [
+        [
+          -0.029705191751120807,
+          -0.029705191751120727
+        ],
+        [
+          0.04169799445112124,
+          0.04169799445112138
+        ]
+      ]
+    ],
+    "precision": 50,
+    "reused_cu_interval": [
+      0.05739927758627631,
+      0.057399277586276436
+    ],
+    "row_order": [
+      "E_N",
+      "E_beta"
+    ],
+    "strictly_negative": true,
+    "strictly_nonzero": true
+  },
+  "local_density_controls": {
+    "0.5": {
+      "compact/einstein_bulk": {
+        "B": 5.551115123125783e-16,
+        "d": -4.440892098500626e-16,
+        "e": 0.0
+      },
+      "compact/euler_bulk_diagnostic": {
+        "B": 0.0,
+        "d": -6.938893903907228e-18,
+        "e": 2.7755575615628914e-17
+      },
+      "compact/maxwell_bulk": {
+        "B": 0.0,
+        "d": 0.0,
+        "e": 0.0
+      },
+      "compact/weyl_bulk": {
+        "B": 0.13230862121878184,
+        "d": 0.03376391490354483,
+        "e": -0.04739533574103341
+      },
+      "light/LLL_geometry_bar": {
+        "B": -3.469446951953614e-18,
+        "d": 0.0,
+        "e": 0.0
+      },
+      "light/WZ_Euler": {
+        "B": 8.673617379884035e-19,
+        "d": 2.6020852139652106e-18,
+        "e": -2.6020852139652106e-18
+      },
+      "light/WZ_Weyl": {
+        "B": 0.017200191371208588,
+        "d": 0.0043893269571743726,
+        "e": -0.006161418941101723
+      },
+      "light/WZ_boxR": {
+        "B": 0.00980935885763202,
+        "d": 0.006332460233955713,
+        "e": -0.00888904855116679
+      },
+      "light/WZ_gauge": {
+        "B": 0.0,
+        "d": 0.0,
+        "e": 0.0
+      },
+      "light/bar_radial_R2_squared": {
+        "B": -0.011525180130511927,
+        "d": -0.002941117499298606,
+        "e": 0.004128527504328326
+      },
+      "light/cylinder": {
+        "B": 0.0,
+        "d": 0.0,
+        "e": 0.0
+      }
+    },
+    "1.0": {
+      "compact/einstein_bulk": {
+        "B": -1.1102230246251565e-16,
+        "d": -1.1102230246251565e-16,
+        "e": 0.0
+      },
+      "compact/euler_bulk_diagnostic": {
+        "B": 2.7755575615628914e-17,
+        "d": 3.469446951953614e-18,
+        "e": 3.469446951953614e-17
+      },
+      "compact/maxwell_bulk": {
+        "B": 0.0,
+        "d": 0.0,
+        "e": 0.0
+      },
+      "compact/weyl_bulk": {
+        "B": 0.13230862121878179,
+        "d": 0.033763914903544794,
+        "e": -0.04739533574103336
+      },
+      "light/LLL_geometry_bar": {
+        "B": 2.6020852139652106e-18,
+        "d": 0.0,
+        "e": 0.0
+      },
+      "light/WZ_Euler": {
+        "B": -4.336808689942018e-19,
+        "d": 1.8431436932253575e-18,
+        "e": 1.0842021724855044e-18
+      },
+      "light/WZ_Weyl": {
+        "B": 0.017200191371208595,
+        "d": 0.004389326957174379,
+        "e": -0.00616141894110173
+      },
+      "light/WZ_boxR": {
+        "B": 0.009809358857632022,
+        "d": 0.006332460233955718,
+        "e": -0.008889048551166793
+      },
+      "light/WZ_gauge": {
+        "B": 0.0,
+        "d": 0.0,
+        "e": 0.0
+      },
+      "light/bar_radial_R2_squared": {
+        "B": -0.011525180130511927,
+        "d": -0.0029411174992986077,
+        "e": 0.004128527504328327
+      },
+      "light/cylinder": {
+        "B": 0.0,
+        "d": 0.0,
+        "e": 0.0
+      }
+    }
+  },
+  "proof": {
+    "combined": {
+      "A_is_reused_certified_c_u": true,
+      "B_relation": "B=-(2*A+H_r*d)/a^2",
+      "c_u_or_c_v_producer_called": false,
+      "determinant": "d*(A+H_r*d)/a^2",
+      "determinant_identity_residual": "0",
+      "e_relation": "e=-d/a^2",
+      "eliminated_w3_coefficient": "d*(A+H_r*d)/(a^2*A)",
+      "elimination_identity_residual": "0",
+      "local_reused_cu_relations": {
+        "compact/einstein_bulk": "0",
+        "compact/euler_bulk_diagnostic": "0",
+        "compact/maxwell_bulk": "0",
+        "compact/weyl_bulk": "0",
+        "light/LLL_geometry_bar": "0",
+        "light/WZ_Euler": "0",
+        "light/WZ_Weyl": "0",
+        "light/WZ_boxR": "0",
+        "light/WZ_gauge": "0",
+        "light/bar_radial_R2_squared": "0",
+        "light/cylinder": "0"
+      },
+      "reference_reused_cu_relation": "0"
+    },
+    "full_local_Euler_principal_residuals": {
+      "compact/einstein_bulk": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "compact/euler_bulk_diagnostic": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "compact/maxwell_bulk": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "compact/weyl_bulk": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/LLL_geometry_bar": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/WZ_Euler": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/WZ_Weyl": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/WZ_boxR": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/WZ_gauge": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/bar_radial_R2_squared": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/cylinder": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      }
+    },
+    "local_beta_wave_ratio_residuals": {
+      "compact/einstein_bulk": "0",
+      "compact/euler_bulk_diagnostic": "0",
+      "compact/maxwell_bulk": "0",
+      "compact/weyl_bulk": "0",
+      "light/LLL_geometry_bar": "0",
+      "light/WZ_Euler": "0",
+      "light/WZ_Weyl": "0",
+      "light/WZ_boxR": "0",
+      "light/WZ_gauge": "0",
+      "light/bar_radial_R2_squared": "0",
+      "light/cylinder": "0"
+    },
+    "local_entries": {
+      "compact/einstein_bulk": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "compact/euler_bulk_diagnostic": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "compact/maxwell_bulk": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "compact/weyl_bulk": {
+        "B": "-32*pi*C_W*(-3*a*r_T + 2*a_T*r)/(3*a**2)",
+        "d": "-32*pi*C_W*a*r/3",
+        "e": "32*pi*C_W*r/(3*a)"
+      },
+      "light/LLL_geometry_bar": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/WZ_Euler": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/WZ_Weyl": {
+        "B": "(-3*a*r_T + 2*a_T*r)*log(r)/(30*pi*a**2)",
+        "d": "a*r*log(r)/(30*pi)",
+        "e": "-r*log(r)/(30*pi*a)"
+      },
+      "light/WZ_boxR": {
+        "B": "(a*r_T + 2*a_T*r)/(60*pi*a**2)",
+        "d": "a*r/(60*pi)",
+        "e": "-r/(60*pi*a)"
+      },
+      "light/WZ_gauge": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      },
+      "light/bar_radial_R2_squared": {
+        "B": "h_q*(-3*a*r_T + 2*a_T*r)/(30*pi*a**2)",
+        "d": "a*h_q*r/(30*pi)",
+        "e": "-h_q*r/(30*pi*a)"
+      },
+      "light/cylinder": {
+        "B": "0",
+        "d": "0",
+        "e": "0"
+      }
+    },
+    "reference_beta_principal": {
+      "beta_wave_ratio_residual": "0",
+      "closed": {
+        "d": "-D*L**2*a/(120*pi*r*(L**2 + m**2)**2)",
+        "e": "D*L**2/(120*pi*a*r*(L**2 + m**2)**2)"
+      },
+      "kernel_identity_residuals": [
+        "0",
+        "0"
+      ],
+      "kernels": {
+        "d": "-L**2*p**2/(16*r*(L**2 + m**2 + p**2)**(7/2))",
+        "e": "-L**2*p**2*(-5*L**2 - 5*m**2 + 2*p**2)/(32*a**2*r*(L**2 + m**2 + p**2)**(9/2))"
+      },
+      "moment_identity_residuals": [
+        "0",
+        "0"
+      ]
+    },
+    "reference_beta_transport": {
+      "formal_current_even": "L**2*a*omega*p*(-1/E_plus + 1/E_minus)/(r*(-omega**2 + (E_minus + E_plus)**2))",
+      "formal_current_odd": "2*I*L*a*m*p*s*(E_minus + E_plus)/(E_minus*E_plus*r*(-omega**2 + (E_minus + E_plus)**2))",
+      "formal_mode": "exp(-i*omega*T+i*q_formal*z); coefficient labels only, no physical frequency/domain",
+      "linear_idempotency_residual": "0",
+      "linear_transport_residual": "0",
+      "odd_full_momentum_residual": "0",
+      "owned_Weyl_shift_residual": "0",
+      "scalar_trace_residual": "0",
+      "spectral_gap_conditions": "E_plus^2=m^2+L^2+(p+s)^2; E_minus^2=m^2+L^2+(p-s)^2; s=q_formal/(2a)"
+    },
+    "reference_lapse_principal": {
+      "closed": "D*L**2*(8*H_r*m**2 + (-2*H_a + 3*H_r)*(L**2 + m**2))/(120*pi*a*r*(L**2 + m**2)**3)",
+      "kernel": "L**2*(-7*H_a*L**2*p**2 - 7*H_a*m**2*p**2 + 5*H_r*L**2*m**2 + 9*H_r*L**2*p**2 + 5*H_r*m**4 + 7*H_r*m**2*p**2 + 2*H_r*p**4)/(32*a**2*r*(L**2 + m**2 + p**2)**(9/2))",
+      "owner_commit": "4680388",
+      "owner_source_sha256": "afa03c896559f9772409ec4a8fcad81c69414fbae7ae3b520ed7746c62626f3f",
+      "residuals": {
+        "full_fourth_order_kernel": [
+          "0"
+        ],
+        "homogeneous_P2_variation": [
+          "0",
+          "0",
+          "0"
+        ],
+        "linear_Weyl_idempotence": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "linear_Weyl_transport": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "odd_Moyal1_pair": [
+          "0"
+        ],
+        "odd_Moyal3_pair": [
+          "0"
+        ],
+        "projector_energy_trace": [
+          "0"
+        ],
+        "standard_moments_and_integral": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "third_order_and_oddness": [
+          "0",
+          "0"
+        ],
+        "third_order_matrix": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "third_order_odd_kernel": "-L*m*p/(8*a**2*r*(L**2 + m**2 + p**2)**(5/2))",
+      "trace_G4_pieces": {
+        "Moyal2_P0_P2_pair": "-L**2*(-7*H_a*L**2*p**2 - 7*H_a*m**2*p**2 + 6*H_a*p**4 + H_r*L**2*m**2 + 5*H_r*L**2*p**2 + H_r*m**4 - 7*H_r*m**2*p**2 - 8*H_r*p**4)/(32*a**2*r*(L**2 + m**2 + p**2)**5)",
+        "Moyal2_P1_P1": "3*L**2*(-3*H_a*L**2*p**2 - 3*H_a*m**2*p**2 + 2*H_a*p**4 + H_r*L**2*m**2 + 3*H_r*L**2*p**2 + H_r*m**4 - H_r*m**2*p**2 - 2*H_r*p**4)/(32*a**2*r*(L**2 + m**2 + p**2)**5)",
+        "ordinary_P1_deltaP3": "-L**2*(5*H_a*L**2*p**2 + 5*H_a*m**2*p**2 - 3*H_r*L**2*m**2 - 5*H_r*L**2*p**2 - 3*H_r*m**4 - 3*H_r*m**2*p**2)/(32*a**2*r*(L**2 + m**2 + p**2)**5)"
+      }
+    },
+    "reused_cu_equation": "-d*a*L^2/(120*pi*r)*(4*m^2*H_r/M^6+(H_r-H_a)/M^4)"
+  },
+  "schema": "NSC-INCOMING-SURFACE-PRINCIPAL-ARTIFACT-v1",
+  "signature": {
+    "docs/nsc-incoming-surface-principal.md": "a7e9bd14de101e384f88a13ce5e57d41dbce5a256503a063f6ba2f38abde689b",
+    "docs/nsc-incoming-surface-reference-lapse.md": "e8d9d49c4dff6ebedc604d76d9dc399ca4348127ae03b4752b660b5747894844",
+    "results/development/nsc-incoming-lapse-coefficient.json": "fb593804b945fab5dbaf5f54031b64ce963139fb8f5a857276896f61fc0d4fc3",
+    "results/development/nsc-incoming-local-constraints.json": "a0c61be6ce7a03793e0b2afe091efcd8bb12d7ee35aa727800b66986d8617f1c",
+    "results/development/nsc-incoming-surface-integrability.json": "270450f9a0df2c0a349af21dc5a9727055e1b55508475829b925d54b596e1a7a",
+    "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+    "scripts/derive_nsc_incoming_surface_principal.py": "81252f63f2811a903c15fc2468885c85b0835cf0f4e2f85087693c69d86d366d",
+    "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
+    "src/recursive_horizons/nsc_incoming_lapse_coefficient.py": "c3ba0efbf27a235dfdc025d5f0109aea0fd32955218b4eb70c4991a7092ba808",
+    "src/recursive_horizons/nsc_incoming_local_constraints.py": "820f43cbc4849074210b7298b1b9ac0c43abf22cb2b4f127ec407a0fc2519ac3",
+    "src/recursive_horizons/nsc_incoming_surface_principal.py": "b7186114245dab0b1635d5062396126c42f5156d738dcbcbb517e9bbff4422db",
+    "src/recursive_horizons/nsc_incoming_surface_reference_lapse.py": "afa03c896559f9772409ec4a8fcad81c69414fbae7ae3b520ed7746c62626f3f",
+    "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
+    "src/recursive_horizons/nsc_light_restoration_action.py": "68b2d11ee79a1e1b1ba42eaa71354266fe26e0341e219771a5e5f67473c12bdc",
+    "src/recursive_horizons/nsc_magnetic_light_reference.py": "57bdb39a3bcd0b020e62a6b9a1d73c1b2331453ce0a9f3c9a319110697c1a055",
+    "src/recursive_horizons/nsc_spatial_reference_symbol.py": "f4a00b696d50cf60629bf02877ce2776cb5b1e53be949319ba5f403172c53700",
+    "src/recursive_horizons/nsc_spherical_local_history.py": "e6dd71caaba93912e545becb9fad89f8a70aeab9670f619739eaafdcf5888bd9",
+    "tests/test_nsc_incoming_surface_principal.py": "894a5d5a1d0f1f52067c1375ea1a609f1144861de9799a2e783f0de13989c3b0",
+    "tests/test_nsc_incoming_surface_reference_lapse.py": "8fb9bae5b7f1f956845005298f2ba8a7aadf30b7a28bc97247cde77649444c3d"
+  }
+}

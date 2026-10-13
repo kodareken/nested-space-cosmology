@@ -30,7 +30,9 @@ INPUTS=('results/development/nsc-mode-resolved-cauchy-state.json',
         'src/recursive_horizons/nsc_unruh_state.py')
 
 
-def digest(path):return sha256((ROOT/path).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def digest(path):return selected_source_sha256(ROOT, Path(path).relative_to(ROOT).as_posix() if Path(path).is_absolute() else path)
 def signature():return{p:digest(p) for p in(*SOURCES,*INPUTS)}
 
 
@@ -70,7 +72,7 @@ def make_record(path):
     return {'schema':'NSC-GEOMETRY-MATCHED-HORIZON-INITIALIZER-v1','accountable_author':'Douglas Ek',
             'status':('PASS: geometry-matched mathematical vacuum endpoint; propagation OPEN' if passed else 'OPEN: matched initializer enclosure exceeds budget'),
             'source_hashes':{p:digest(p) for p in SOURCES},'input_hashes':{p:digest(p) for p in INPUTS},
-            'payload':{'path':str(path.relative_to(ROOT)),'sha256':digest(path)},
+            'payload':{'path':path.relative_to(ROOT).as_posix(),'sha256':digest(path)},
             'identity':data['identity'],'certificate':cert,'point_representations':data['point_representations'],
             'scope':{'new_numerical_approximation_of_same_affine_vacuum':True,
                      'archived_initializers_or_sources_changed':False,'source_kappa_occupation_changed':False,

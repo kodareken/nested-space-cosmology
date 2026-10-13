@@ -17,6 +17,8 @@ from recursive_horizons import nsc_nested_parent_child as nested
 from recursive_horizons import nsc_spherical_coupling as coupling
 from recursive_horizons import nsc_spherical_galerkin_coupling as galerkin
 from recursive_horizons.provenance import resolve_pinned_source_bytes
+from recursive_horizons.nsc_posix import repo_path
+import derive_nsc_nested_parent_child_replay_basis as replay_basis
 
 
 PILOT_SOURCE_REF = "ec0cd25edbab19f7e1a8245f4713648640748222"
@@ -24,8 +26,8 @@ PILOT_SOURCE_REF = "ec0cd25edbab19f7e1a8245f4713648640748222"
 
 @pytest.fixture(scope="module")
 def saved_pilot():
-    root = Path(__file__).resolve().parents[2]
-    path = root / "lab/results/development/nsc-nested-parent-child-v1.json"
+    root = repo_path()
+    path = repo_path("results/development/nsc-nested-parent-child-v1.json")
     return root, json.loads(path.read_text()), path.with_suffix(".npz")
 
 
@@ -376,8 +378,11 @@ def test_saved_pilot_actual_source_covariance_geometry_and_accounting(saved_pilo
     _root, record, payload = saved_pilot
     with np.load(payload, allow_pickle=False) as stored:
         for nf in (128, 256):
-            pair = nested.build_pair(nf)
             base = f"nf{nf}_baseline_dt0.0005"
+            # Archived coordinates and observer bytes belong to their saved
+            # SVD frame, independently of this host's fresh construction.
+            pair = replay_basis.load_frozen_pair(
+                nf, record["results"][base]["source"]["occupations"])
             reference = stored[base + "_reference_columns"]
             child = reference[:, [2, 3]]
             local = {}

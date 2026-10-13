@@ -1,6 +1,6 @@
 import unittest
 
-from recursive_horizons.nsc_mmp_embedding import CommonCoefficients
+from recursive_horizons.dirac.charged_throat import CommonCoefficients
 from recursive_horizons.nsc_relational_vacuum import (
     RelationalVacuumNormalization,
     uniqueness_residual,

@@ -41,7 +41,7 @@ def test_receipt_replays_arrays_without_field_or_radial_producers(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('scientific producer called during receipt replay')
     monkeypatch.setattr(PILOT,'one_case',forbidden)
     monkeypatch.setattr(PILOT,'evolve_prepared_field_jets',forbidden)
-    record=PILOT.check()
+    record=PILOT.check(source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     assert len(record['control']['cases_completed'])<=3
     assert not record['scope']['four_energy_contribution_decides_C0']
     assert record['scope']['continuum_error_bound'] is None
@@ -75,7 +75,7 @@ def test_fixed_surface_constructor_correction_preserves_executed_maps_and_arrays
     assert identity['restriction_residual']==0
     assert identity['trace_map_triples_bitwise_equal']
     assert identity['restriction_map_bitwise_equal']
-    record=PILOT.check()
+    record=PILOT.check(source_context='329ef809e466a86ed4a290ee32c19485f85add9d')
     assert record['postprocessing_correction']['field_solves_repeated']==0
     assert record['execution_source_hashes']!=record['verification_source_hashes']
     assert not identity['coordinate_normal_or_metric_equality_claimed']

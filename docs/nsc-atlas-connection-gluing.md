@@ -263,6 +263,6 @@ assembled parent, full bubble perturbation analysis and original historical
 formation proofs remain outside this audit. This bounded comparison makes
 no claim of priority for the construction.
 
-The existing [reuse and admission rule](../../docs/prior-art-and-open-claim.md)
+The existing [reuse and admission rule](prior-art-and-open-claim.md)
 remains the research owner. Imported formulas, their implementation and this
 scoped assembly argument are not new-to-world gluing or thin-wall dynamics.

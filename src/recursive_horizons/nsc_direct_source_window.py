@@ -72,7 +72,7 @@ PAYLOAD_NAMES = (
     "positive_covariance", "trace",
 )
 OWNERS = (
-    "docs/nsc-direct-source-window.md",
+    "docs/nsc-ks-source-operator-majorant-v7.md",
     "scripts/derive_nsc_direct_source_window.py",
     "src/recursive_horizons/nsc_direct_source_window.py",
     "src/recursive_horizons/nsc_direct_vacuum_source.py",

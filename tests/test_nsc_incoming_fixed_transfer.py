@@ -7,6 +7,10 @@ import recursive_horizons.nsc_incoming_fixed_transfer as M
 ROOT=Path(__file__).resolve().parents[1]
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def test_frames_four_inverse_gap_terms_and_endpoint_algebra():
     proof=M.symbolic_proof()
     assert proof['exact_scalar_residual_count']==81
@@ -28,6 +32,7 @@ def test_complex_Fourier_amplitudes_require_both_entries():
     assert sp.simplify(L10.subs(values))!=0
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_receipt_authentication_and_no_scientific_producer(monkeypatch):
     def forbidden(*args,**kwargs):raise AssertionError('scientific producer entered fixed-transfer proof')
     import scipy.integrate

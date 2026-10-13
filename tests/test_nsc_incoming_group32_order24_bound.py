@@ -9,12 +9,17 @@ ROOT = Path(__file__).resolve().parents[1]
 RESULT = ROOT/'results/development/nsc-incoming-group32-order24-bound.json'
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context
+# Authenticate original source bytes explicitly; numerical outputs remain local.
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def script():
     spec = importlib.util.spec_from_file_location('group32_bound', ROOT/'scripts/derive_nsc_incoming_group32_order24_bound.py')
     module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
     return module
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_original32_guard_and_window_metadata_authenticate():
     module = script(); owned = module.authenticated_windows()
     assert owned['channel']['index'] == 32
@@ -23,6 +28,7 @@ def test_original32_guard_and_window_metadata_authenticate():
     assert owned['low_measure_residual'] <= 3e-13
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_explicit_window_rebinding_preserves_coefficients_and_original():
     module = script(); values = [{'sign': 1, 'coefficient_integral_upper': [1.]*25}]
     radial = {'group': 32, 'lower': 320., 'physical_Riccati_order': 24,
@@ -43,6 +49,7 @@ def test_explicit_window_rebinding_preserves_coefficients_and_original():
         module.bind_window({**radial, 'physical_Riccati_order': 16}, 'low')
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_saved_replay_does_not_prepare_radial_or_local_coefficients(monkeypatch):
     if not RESULT.exists(): pytest.skip('post-preparation replay gate')
     module = script()

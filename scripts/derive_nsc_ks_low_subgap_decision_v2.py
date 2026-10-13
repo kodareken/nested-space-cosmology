@@ -8,6 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
 from recursive_horizons.evidence_io import publish_exclusive_file
 from recursive_horizons.nsc_ks_source_inventory import RetainedSourceInventory
 from recursive_horizons.nsc_ks_upstream_error import classify_low_subgap_windows
@@ -30,7 +31,7 @@ OWNERS = (
 
 
 def digest(path):
-    return sha256((ROOT / path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, path)
 
 
 def calculate():

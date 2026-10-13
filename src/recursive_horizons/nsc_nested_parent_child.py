@@ -398,6 +398,7 @@ def solve_initial_radius_successor(grid, state):
                 converged = True
                 break
             accepted = False
+            positive_trials = []
             factor = 1.
             correction_norm = np.linalg.norm(delta, np.inf)
             for _halving in range(20):
@@ -412,8 +413,22 @@ def solve_initial_radius_successor(grid, state):
                         radius = trial
                         accepted = True
                         break
+                    positive_trials.append(trial)
                 factor *= .5
             if not accepted:
+                # At the arithmetic floor, strict merit decrease can reject a
+                # trial that already meets the unchanged two-order stop rule.
+                # Check only the positive trials of this same bounded search.
+                for trial in positive_trials:
+                    try:
+                        _tr, _tf, _tj, _td, trial_status = _radius_correction(grid, trial, target)
+                    except np.linalg.LinAlgError:
+                        continue
+                    if trial_status["correction_at_arithmetic_floor"]:
+                        radius = trial
+                        status = trial_status
+                        converged = True
+                        break
                 break
         stages.append(dict(status, scale=float(scale), iterations=iteration + 1, converged=converged))
         if not converged:

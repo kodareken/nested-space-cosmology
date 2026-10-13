@@ -32,6 +32,9 @@ from recursive_horizons.nsc_local_incoming_family import LocalIncomingFamily
 import derive_nsc_ks_continuous_constraint_enclosure as D
 
 
+from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_sha256
+FROZEN_PRODUCER_CONTEXT = "329ef809e466a86ed4a290ee32c19485f85add9d"
+
 def digest(raw):
     return sha256(raw).hexdigest()
 
@@ -142,6 +145,7 @@ def test_profile_state_law_and_dependency_hash_mismatch():
     assert wrong_source.source_identity != binding.source_identity
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_outward_float_rounds_up_and_false_pass_is_rejected():
     from recursive_horizons.nsc_ks_continuous_constraint_enclosure import (
         binary_rational,
@@ -174,6 +178,7 @@ def test_outward_float_rounds_up_and_false_pass_is_rejected():
         validate_continuous_enclosure_record(forged_diag)
 
 
+@frozen_source_context(FROZEN_PRODUCER_CONTEXT)
 def test_recorder_binds_current_profile_and_lists_missing_inputs():
     record = D.calculate()
     assert record["profile_identity"] == PROFILE_IDENTITY

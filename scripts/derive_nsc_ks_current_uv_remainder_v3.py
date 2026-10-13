@@ -52,8 +52,10 @@ INPUTS = (
 )
 
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
 def digest(path):
-    return sha256((ROOT / path).read_bytes()).hexdigest()
+    return selected_source_sha256(ROOT, path)
 
 
 def plain(value):

@@ -11,18 +11,24 @@ import hashlib
 import json
 from pathlib import Path
 
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256, selected_source_context
+
 import numpy as np
 from scipy.integrate import simpson, trapezoid
-import derive_nsc_retarded_response_resolution as R
+from recursive_horizons.nsc_retarded_radial_response import resolution_control as R
 
 ROOT=Path(__file__).resolve().parents[1]
 OUTPUT=ROOT/'results/development/nsc-retarded-fourier-response.json'
-OWNED=('scripts/derive_nsc_retarded_fourier_response.py',
+HISTORICAL_OWNED=('scripts/derive_nsc_retarded_fourier_response.py',
        'tests/test_nsc_retarded_fourier_response.py',
        'docs/nsc-retarded-fourier-response.md')
-INPUTS=(R.OUTPUT,'scripts/derive_nsc_retarded_response_resolution.py',
+HISTORICAL_INPUTS=(R.OUTPUT,'scripts/derive_nsc_retarded_response_resolution.py',
         'docs/nsc-incoming-fourier-matching.md')
 
+OWNED=('scripts/derive_nsc_retarded_fourier_response.py','tests/test_nsc_retarded_fourier_response.py',
+       'docs/nsc-retarded-fixed-c0-certificate.md')
+INPUTS=(R.OUTPUT,'src/recursive_horizons/nsc_retarded_radial_response.py',
+        'docs/nsc-retarded-fixed-c0-certificate.md')
 
 def transform_modes(energies,times,delta_trace,clock_shift,*,rule='simpson'):
     """dA[o,i,spin,source]=integral dz exp(i Eo z) dF(z,Ei).
@@ -60,7 +66,9 @@ def covariance_pairs(A,stationary,source):
 
 def maxabs(a):return float(np.max(abs(a)))
 def pack(a):return {'real':a.real.tolist(),'imag':a.imag.tolist()}
-def signature():return {p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in (*OWNED,*INPUTS)}
+def signature():
+    owned,inputs=(HISTORICAL_OWNED,HISTORICAL_INPUTS) if selected_source_context() is not None else (OWNED,INPUTS)
+    return {p:selected_source_sha256(ROOT,p) for p in (*owned,*inputs)}
 
 
 def make_record():

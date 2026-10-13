@@ -22,6 +22,7 @@ for name in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
 import numpy as np
 
 import derive_nsc_nested_parent_child as producer
+import derive_nsc_nested_parent_child_replay_basis as replay_basis
 from recursive_horizons import nsc_nested_parent_child as model
 from recursive_horizons import nsc_nested_parent_child_response as response
 
@@ -133,7 +134,7 @@ def load_witness():
     """Authenticate all resident v1 data using its frozen producer verifier."""
     record = producer.verify()
     case = record["results"][PRIMARY_CASE]
-    pair = model.build_pair(256, occupations=producer.WEIGHTS["baseline"])
+    pair = replay_basis.load_frozen_pair(256, case["source"]["occupations"])
     with np.load(producer.PAYLOAD, allow_pickle=False) as stored:
         times = np.array(stored[PRIMARY_CASE + "_times"], copy=True)
         states = [model.NestedState(*(np.array(stored[PRIMARY_CASE + "_" + field][i], copy=True)
@@ -323,7 +324,7 @@ class Checkpoints:
             temporary.unlink()
             raise RuntimeError("confirmation record plus payload exceeds 64 MiB")
         json_temporary = destination.with_suffix(".json.tmp")
-        json_temporary.write_text(text)
+        json_temporary.write_bytes(text.encode('utf-8'))
         os.replace(temporary, payload)
         os.replace(json_temporary, destination)
         return output

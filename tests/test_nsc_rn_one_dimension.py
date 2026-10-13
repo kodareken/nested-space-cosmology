@@ -21,7 +21,7 @@ SRC = LAB / "src/recursive_horizons"
 RESPONSE = SRC / "nsc_rn_response.py"
 OBSERVABLES = SRC / "nsc_rn_observables.py"
 STATION = (LAB / "results/development/nsc-rn-inner-packet-exc0760-long/station-0.npz")
-NOTE = LAB / "docs/nsc-rn-one-dimension.md"
+NOTE = LAB / "docs/nsc-rn-limits-of-the-instrument.md"
 
 
 class TestTheAngularIndexIsPinnedToOne:
@@ -78,13 +78,13 @@ class TestWhatThisBounds:
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
         assert "no slot for one" in flat
         assert "is withdrawn" in flat
-        assert "inside of that circle is the third" in flat
-        assert "It matches the sphere" in flat
+        assert "that inside is the third dimension" in flat
+        assert "it matches the sphere" in flat.lower()
 
     def test_it_does_not_claim_transverse_structure_is_impossible(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
-        assert "does not say transverse structure is impossible" in flat
+        assert "does not rule out transverse structure in another model" in flat
 
     def test_it_says_it_is_not_the_universe(self):
         flat = NOTE.read_text(encoding="utf-8").replace(chr(10), " ")
-        assert "does not measure the actual universe" in flat
+        assert "does not measure the actual universe" in flat.lower()

@@ -21,7 +21,9 @@ INPUTS=('results/development/nsc-pg-retained-covariance.json','results/developme
         'src/recursive_horizons/nsc_lll_geometric_history.py','docs/nsc-declared-action-scope.md',
         'docs/nsc-common-ks-trace.md','docs/nsc-smooth-seam-variation.md')
 
-def sha(p):return hashlib.sha256((ROOT/p).read_bytes()).hexdigest()
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256
+
+def sha(p):return selected_source_sha256(ROOT, p)
 def make_record():
     ledger,channels,prep=input_data();bound=retained_incoming_flux_bound(ledger,channels,prep)
     identities=sewing_current_identity();tol=3e-11
