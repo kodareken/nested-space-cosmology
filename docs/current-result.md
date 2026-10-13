@@ -2,6 +2,26 @@
 
 Current presentation, 13 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Conformal scalar normal-force compatibility, 13 October 2026
+
+The [normal-force check](nsc-atlas-scalar-normal-force.md) closes the
+regular normal-stress jump left open by the earlier surface calculation.
+The full canonical conformal stress, scalar transmission law and Gauss
+identity give zero additional jump at quadratic order on the fixed wall.
+The cap's Einstein-tensor contribution is essential to the cancellation.
+
+The [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json)
+checks the direct projection, geometric identity and force sign with exact
+algebra, without a new waveform or pressure curve. With fixed vacuum terms
+and material tension, a later compatible perturbation must have zero
+variation of the mean extrinsic-curvature trace. This variation includes
+metric and wall displacement; it does not set either correction to zero.
+The next decision is whether the existing leading wall field traces
+close exterior-side geometric mass transport on reference wall cuts,
+before a new bulk solver is needed. This candidate is not yet derived or
+admitted. Coupled cap/wall evolution, observer corrections and finite-amplitude
+validity remain open. Earlier dated entries retain their original scope.
+
 ## Geometric mass on the prepared null surface, 13 October 2026
 
 The [mass calculation](nsc-atlas-source-mass.md) closes the transverse

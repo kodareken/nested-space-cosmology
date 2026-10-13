@@ -656,6 +656,11 @@ def main() -> int:
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("source-leg mass evidence: " + str(error))
+    try:
+        from record_nsc_atlas_scalar_normal_force import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("scalar normal-force evidence: " + str(error))
     check_provenance(errors, files)
     if errors:
         for error in errors:

@@ -39,6 +39,13 @@ mass has a negative constant quadratic coefficient after the compact
 trace, checked through full frame conversion and improved-stress transport.
 The paper distinguishes this local initial-data result from bulk evolution,
 asymptotic energy and the still-open dynamical wall response.
+The [normal-force check](nsc-atlas-scalar-normal-force.md) now adds zero
+regular normal-stress jump for the same conformal probe. It supplies a
+necessary mean-curvature condition for a later sourced wall, with bulk
+metric and wall displacement both included in that variation.
+The next proposed decision is whether the existing leading wall traces
+already close exterior-side mass transport. That connection remains
+uncomputed and requires its own admission before a larger evolution.
 
 ## Supporting and historical editions
 

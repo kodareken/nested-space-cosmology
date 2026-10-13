@@ -1,10 +1,10 @@
 {
-  "bytes": 3069824,
+  "bytes": 3113126,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "286b62b4cb87f71f9b6b4c0d7ce5b0bd41f49f6a8229bf0c2ddebef824bb7b67",
+  "metadata_sha256": "43137ec4c82eb2afdf03e42e553ef9fe256910cf9ff38bb8b399240d44c3940e",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 32,
-  "pdf_sha256": "cf20215226b1c97bc260256d405bd9d3d085820d05d907f016111d2faec64bd0",
+  "pages": 33,
+  "pdf_sha256": "45b26c819b68f1c190cfea6c83d873486e6a186af81cc706431e4d60f6f1add7",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -17,11 +17,11 @@
     },
     {
       "path": "paper/figures/geometry-overview.json",
-      "sha256": "70d84369d2e214642de5a5226e8ad06b8db211e6f47e8d6c5c67eec2d0e8b02c"
+      "sha256": "90fd90b91a855224e15271cbbcde827fc6015efc05cd36a15a1fb719baf6750e"
     },
     {
       "path": "paper/figures/geometry-overview.png",
-      "sha256": "2285600326c1e0e9cf36a5da8c04fe8a71e6c8bd92ab780caeab78ff5cfbe230"
+      "sha256": "4660371c957bb367d2ca1258482e8edbb29290882e8307850e701b03d723fab9"
     },
     {
       "path": "paper/figures/source-mass.json",
@@ -50,6 +50,10 @@
     {
       "path": "results/development/nsc-atlas-observer-inference-v1/inference.json",
       "sha256": "8c42d143c8e6bd7f1fdcc9b4b0b1c453fc39efbe3ded8d0face008709252a217"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
+      "sha256": "987a157a40da83202963ee2f4e6d95d668a5c2d8d5f6668bda9b571edcc74b57"
     },
     {
       "path": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
@@ -185,6 +189,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "ada721d81ba5e36d13c56d8b828cc096730e0dcbaaba76258a8a719f115a09ba",
-  "version": "working-2026-10-13.3"
+  "source_sha256": "3d325b1581d897981d117da2b7c02438d74b3f5ce6835b626912a2c7e571e389",
+  "version": "working-2026-10-13.4"
 }

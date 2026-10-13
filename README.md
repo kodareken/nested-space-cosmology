@@ -32,7 +32,10 @@ wall response. A [separate mass calculation](docs/nsc-atlas-source-mass.md)
 now supplies the transverse constraint and geometric mass on that same
 initial null leg. Its post-input quadratic coefficient is negative and
 constant; this is a finite initial-data response, with later wall motion
-and observer corrections still open. Comparing geometries still needs an independently
+and observer corrections still open. The [normal-force check](docs/nsc-atlas-scalar-normal-force.md)
+also finds zero additional normal-stress jump at the fixed conformal wall.
+It constrains the later combined metric and wall response; it does not
+require zero wall displacement. Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
@@ -44,6 +47,7 @@ expansion and recycling remain research questions.
 - [Current prepared response and evidence](docs/nsc-atlas-prepared-response.md)
 - [Observer inverse and preparation restrictions](docs/nsc-atlas-observer-inference.md)
 - [Scalar stress and shell compatibility](docs/nsc-atlas-scalar-wall-consistency.md)
+- [Normal-force compatibility and the remaining wall condition](docs/nsc-atlas-scalar-normal-force.md)
 - [Gravitational initial data for the prepared pulse](docs/nsc-atlas-characteristic-initialization.md)
 - [Geometric mass response on the prepared null surface](docs/nsc-atlas-source-mass.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)

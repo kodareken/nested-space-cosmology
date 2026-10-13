@@ -31,6 +31,7 @@ INPUTS = {
     "scalar_wall_consistency": "results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json",
     "characteristic_initialization": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
     "source_mass": "results/development/nsc-atlas-source-mass-v1/mass.json",
+    "scalar_normal_force": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -103,6 +104,19 @@ def load_evidence() -> tuple[dict, dict]:
             or abs(mass_last["mu_jordan"] - mass_last["mu_einstein"]) > 1e-8
             or abs(mass_last["mu_jordan"] - mass_last["mu_geometric"]) > 1e-8):
         raise ValueError("The source-mass record no longer supports an initial geometric response with wall evolution open.")
+    force = records["scalar_normal_force"]
+    force_boundary = force["knowledge_boundary"]
+    if (force["status"] != "CONDITIONAL_CONFORMAL_SCALAR_NORMAL_STRESS_COMPATIBILITY"
+            or force["inputs"] != stress["inputs"]
+            or force["domain"] != stress["domain"]
+            or force_boundary["scalar_normal_stress_jump_computed"] is not True
+            or any(force_boundary[key] is not False for key in (
+                "coupled_geometric_normal_force_equation_solved", "bulk_einstein_response_solved",
+                "corrected_wall_trajectory_solved", "fixed_background_with_nonzero_probe_claimed_exact",
+                "one_sided_pressure_curves_evaluated", "finite_amplitude_validity_bound_established",
+                "stability_established",
+            ))):
+        raise ValueError("The normal-force record no longer supports local scalar compatibility with coupled evolution open.")
     return records, provenance
 
 
@@ -210,7 +224,7 @@ def render(output: Path) -> dict:
         "Analytic inverse: signal + fixed geometry → source\n"
         "Permitted preparation still needs a physical law",
         color="causal", size=13)
-    label(4.5, 0.64, "Initial geometric mass responds; wall evolution open", 13, color="muted")
+    label(4.5, 0.64, "Initial mass + local wall checks; evolution open", 13, color="muted")
 
     for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
                           (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
@@ -281,7 +295,7 @@ def render(output: Path) -> dict:
                 "interpretation": "The canonically normalized conformal probe requires no additional singular scalar surface source or tangential flux jump at quadratic order on the fixed wall.",
                 "limits": [
                     "The original C3 preparation supplies the regularity; the full C2 inverse class is not covered automatically.",
-                    "The bulk metric response and normal-force condition remain unresolved.",
+                    "The surface/tangential check alone leaves bulk response and normal forcing unresolved.",
                     "No quantitative amplitude bound, stability result or physical preparation law is established.",
                 ],
             },
@@ -313,6 +327,25 @@ def render(output: Path) -> dict:
                     "No asymptotic energy, coupled bulk/wall evolution, interior observer correction or finite-amplitude error bound is established.",
                 ],
             },
+            "scalar_normal_force": {
+                "status": records["scalar_normal_force"]["status"],
+                "domain": records["scalar_normal_force"]["domain"],
+                "conventions": records["scalar_normal_force"]["conventions"],
+                "derived_result": records["scalar_normal_force"]["derived_result"],
+                "knowledge_boundary": records["scalar_normal_force"]["knowledge_boundary"],
+                "interpretation": "The full conformal scalar stress adds no regular normal-stress jump at quadratic order on the fixed wall; a sourced continuation must respect zero mean-curvature variation with fixed vacuum and tension.",
+                "next_question": {
+                    "owner": "docs/nsc-cosmological-atlas.md#programme-dependencies",
+                    "connection_id": "wall-mass-transport",
+                    "decision": "Do the existing leading wall field traces close exterior-side geometric mass transport on reference wall cuts through the borrowed flux and frame laws?",
+                    "status": "Proposed question; not yet derived, admitted or evaluated",
+                },
+                "limits": [
+                    "The mean-curvature variation includes both metric and wall-embedding corrections; it does not fix the wall displacement to zero.",
+                    "No individual normal-pressure curve or coupled metric/wall evolution has been computed.",
+                    "The cap vacuum contribution and full improvement terms are essential; no finite-amplitude validity bound or stability result follows.",
+                ],
+            },
             "displayed_connections": [
                 {"from": "cap", "to": "wall", "kind": "attachment", "status": "checked initial slice"},
                 {"from": "wall", "to": "bridge", "kind": "attachment", "status": "checked initial slice"},
@@ -332,7 +365,7 @@ def render(output: Path) -> dict:
             "The admitted IV data are distinct from the old prescribed wall trace and have no modelled remote source.",
             "The positive prepared-field tail is confined to the admitted early window; later evolution and permanent memory remain open.",
             "The analytic preparation inverse fixes the geometry; it does not establish a physical source law or two-geometry equivalence.",
-            "Quadratic scalar shell compatibility leaves bulk backreaction, normal-force balance and finite-amplitude validity open.",
+            "Quadratic local scalar shell compatibility leaves bulk backreaction, the coupled normal-force equation and finite-amplitude validity open.",
             "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
             "The source-leg mass successor closes transverse radius transport only on the initial surface; bulk propagation and the dynamical wall response remain open.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
