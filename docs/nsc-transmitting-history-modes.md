@@ -62,7 +62,7 @@ field are reported; a depleted sampled causal buffer is rejected.
 
 The nonlinear response is compared under separate spatial and temporal
 refinements. Its small-amplitude limit is compared with the already verified
-[spacetime Duhamel derivative](nsc-ks-spacetime-variation.md). This distinguishes
+[spacetime Duhamel derivative](nsc-pg-ks-metric-pullback.md). This distinguishes
 the new conditional propagation from merely applying the old linear kernel.
 Horizon, angular-spectrum and seed generators are not replayed. The same
 radial mode equation is sampled on the newly required propagation grid from

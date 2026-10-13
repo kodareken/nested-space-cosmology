@@ -12,7 +12,7 @@ the trapped chart. In the fixed chart,
 +\frac{(T(\rho)-T(1))^3}{6}U(\tau+S(\rho))\right].
 \]
 
-This is the [implemented compatible geometry](nsc-compatible-prepared-history.md)
+This is the [implemented compatible geometry](https://doi.org/10.5281/zenodo.23090015)
 with compact axial functions. N, beta and a remain fixed. For amplitudes
 in a sufficiently small neighborhood of zero, r stays positive on compact
 K. The canonical principal velocities are unchanged. Extend the variation

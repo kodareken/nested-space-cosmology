@@ -12,7 +12,7 @@ backreaction, and relate the resulting state to cosmological matter and Q.
 
 The [record](../results/nsc-6-vacuum-work.json) and
 `scripts/check_nsc_vacuum_work.py --check` preserve every scientific field.
-The calculation follows the [static energy-transfer result](nsc-energy-transfer.md).
+The calculation follows the [static energy-transfer result](https://doi.org/10.5281/zenodo.23090015).
 
 ## A time-dependent geometry with a fixed canonical domain
 

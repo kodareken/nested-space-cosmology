@@ -1,6 +1,6 @@
 # Moving boundaries: conservation and a separate vacuum-wall control
 
-This successor preserves the [v2 junction screen](nsc-atlas-junction-sources.md).
+This successor preserves the [v2 junction screen](nsc-cosmological-atlas.md).
 It asks whether boundary motion alone restores that rejected attachment, then
 imports a different published moving wall to keep the surviving map visible.
 Neither calculation is a claim to have discovered thin-shell dynamics.

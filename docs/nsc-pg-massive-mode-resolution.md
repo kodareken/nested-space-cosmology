@@ -28,7 +28,7 @@ The measure is $d\rho$, after the angular and compact normalizations already
 recorded in the paired-basis calculation. The transparent neck remains at
 $\rho=0$. The horizon is at the existing $\rho_h$; it is not a reflecting
 endpoint. The whole-line self-adjoint closure is imported from the
-[Dirac-domain result](nsc-dirac-tetrad.md), with the bounded compact mass
+[Dirac-domain result](https://doi.org/10.5281/zenodo.23090015), with the bounded compact mass
 term included. The two bulk support projectors and the T seam are unchanged.
 
 For a signed angular channel, the incoming spectral coordinates are the

@@ -21,13 +21,13 @@ starting a derivation.
 The [v1 motif](../results/development/nsc-cosmological-atlas-v1/atlas.json)
 contains two potentially unequal children and a potential grandchild, with
 finite descent depth two. Its separate Schwarzschild charts and closed-FLRW
-child ansatz are historical starting assumptions. The [v2 parent](nsc-atlas-parent-initial-data.md)
-adds shared Brill-Lindquist spatial data. The [v4 attachment](nsc-cosmological-atlas-v4.md)
+child ansatz are historical starting assumptions. The [v2 parent](nsc-cosmological-atlas.md)
+adds shared Brill-Lindquist spatial data. The [v4 attachment](nsc-atlas-connection-slice.md)
 places one sourced interior and a vacuum bridge in a published many-body
 existence construction through selected smooth exterior ends. It does not
 supply an explicit connector metric, a second established child or the common
-future. The [v5 observer map](nsc-cosmological-atlas-v5.md) and
-[v6 conditional waveform](nsc-cosmological-atlas-v6.md) use a separate isolated
+future. The [v5 observer map](nsc-atlas-causal-classification.md) and
+[v6 conditional waveform](nsc-atlas-field-transfer.md) use a separate isolated
 spherical reference. The [finite exterior preparation](nsc-atlas-field-preparation.md)
 supplies a conditional data-to-wall-to-observer operator in that reference.
 The [v8 prepared response](nsc-atlas-prepared-response.md) evaluates it for the
@@ -147,9 +147,9 @@ and `branching`.
 
 ### Spheres
 
-**Owner and current result:** [parent initial data](nsc-atlas-parent-initial-data.md)
+**Owner and current result:** [parent initial data](nsc-cosmological-atlas.md)
 and [sourced slice](nsc-atlas-connection-slice.md); the
-[v4 record](../results/development/nsc-cosmological-atlas-v4/atlas.json)
+[v4 record](https://doi.org/10.5281/zenodo.23090015)
 combines locally spherical bodies through an existence construction.
 **Borrowed foundation:** spherical symmetry and the Euclidean fixed-volume,
 isotropic surface-energy result recorded in the [Wulff reading card](arxiv-studies.md).
@@ -183,7 +183,7 @@ sibling signal channel or many-body future.
 
 ### Particle and wave descriptions
 
-**Owner and current result:** [Dirac tetrads](nsc-dirac-tetrad.md),
+**Owner and current result:** [Dirac tetrads](https://doi.org/10.5281/zenodo.23090015),
 [local-observer correspondence](nsc-local-observer-correspondence.md) and
 [scalar transfer](nsc-atlas-field-transfer.md). The
 [v6 field record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
@@ -204,10 +204,10 @@ before answering the finite signal question.
 
 ### Gradient zones and boundaries
 
-**Owner and current result:** [junction sources](nsc-atlas-junction-sources.md),
+**Owner and current result:** [junction sources](nsc-cosmological-atlas.md),
 [moving boundaries](nsc-atlas-moving-boundaries.md) and
 [field matching](nsc-atlas-field-matching.md); the
-[v6 bundle](../results/development/nsc-cosmological-atlas-v6/narrative.md)
+[v6 bundle](https://doi.org/10.5281/zenodo.23090015)
 uses a specified pure-tension wall and scalar jump.
 **Borrowed foundation:** junction conservation, characteristics and
 distributional field matching. **Missing connection:** the source and transport
@@ -224,7 +224,7 @@ nor centre regularity.
 ### Regional scales and constants
 
 **Owner and current result:** [finite inheritance](nsc-nested-qualities.md),
-[scale binding](nsc-scale-binding.md) and [spectral endpoint](nsc-spectral-endpoint.md).
+[scale binding](nsc-nested-qualities.md) and [spectral endpoint](nsc-spherical-action.md).
 The atlas's [unit controls](../tests/test_nsc_cosmological_atlas.py) separate
 rescaling from dimensionless changes; the spectral and charged-throat results
 retain their own models. **Borrowed foundation:** dimensional analysis,
@@ -243,8 +243,8 @@ delays alone do not change locally measured vacuum light speed.
 
 ### Charge and orientation
 
-**Owner and current result:** [charged-source route](nsc-charged-self-sourcing-route.md)
-and the exploratory [swap analysis](child-neck/swap-symmetry-note.md), compared
+**Owner and current result:** [charged-source route](https://doi.org/10.5281/zenodo.23090015)
+and the exploratory [swap analysis](child-neck/child-and-neck-status-note.md), compared
 with the [CPT and black-mirror reading cards](arxiv-studies.md).
 They retain particular field, topology and symmetry assumptions; the active
 v6 real scalar is neutral. **Borrowed foundation:** conserved field currents,
@@ -262,7 +262,7 @@ independently reverified by this programme inventory.
 ### Time and its direction
 
 **Owner and current result:** [causal observers](nsc-atlas-causal-observers.md),
-[clock inheritance](nsc-clock-horizon.md) and
+[clock inheritance](nsc-cosmological-atlas.md) and
 [the access table](../results/development/nsc-cosmological-atlas-v5/observer-access.json).
 The reference assigns separate centre, wall and parent proper clocks with
 explicit origins and finite access domains. **Borrowed foundation:** proper
@@ -442,14 +442,14 @@ evolution, stability and finite-amplitude validity remain open.
 - [Model](../src/recursive_horizons/nsc_cosmological_atlas.py): region/link
   records, finite validation, imported junction/clock constraints, fixed-theory
   check, causal graph bounds, and explicitly supplied Hamiltonian adapter.
-- [Producer](../scripts/derive_nsc_cosmological_atlas.py): creation-only JSON,
+- [Producer](https://doi.org/10.5281/zenodo.23090015): creation-only JSON,
   SVG patch maps, PNG previews through the existing matplotlib, illustrated
   narrative and portable source/output hashes. Previews use the SVG's geometry
   and text, with a flat equivalent of its decorative background gradient.
 - [Tests](../tests/test_nsc_cosmological_atlas.py): incompatible junctions,
   unequal children, clock exits, causal delays/disconnection, unit changes,
   finite depth/cycles, fixed-theory perturbations and invisible exteriors.
-- [Illustrated narrative](../results/development/nsc-cosmological-atlas-v1/narrative.md)
+- [Illustrated narrative](https://doi.org/10.5281/zenodo.23090015)
   and [machine-readable atlas](../results/development/nsc-cosmological-atlas-v1/atlas.json).
 - [Prepared-response owner](nsc-atlas-prepared-response.md),
   [numerical adapter](../src/recursive_horizons/nsc_atlas_prepared_response.py),

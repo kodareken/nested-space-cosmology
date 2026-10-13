@@ -8,7 +8,7 @@ or replace the earlier homogeneous no-interface certificate.
 
 ## Bound from the already owned source
 
-Reuse the [compact source's Killing-power normalization](../src/recursive_horizons/nsc_compact_ctp_neck.py),
+Reuse the [compact source's Killing-power normalization](https://doi.org/10.5281/zenodo.23090015),
 the [horizon occupation law](../src/recursive_horizons/nsc_paired_horizon_preparation.py)
 and the [current-normalized mode sewing](../src/recursive_horizons/nsc_pg_massive_modes.py):
 
@@ -64,7 +64,7 @@ point decision.
 
 ## Apply the bound at the actual incoming slice
 
-The [common KS preparation](nsc-common-ks-trace.md) fixes its incoming Cauchy
+The [common KS preparation](https://doi.org/10.5281/zenodo.23090015) fixes its incoming Cauchy
 slice at $\rho=1$. Here $r_1^2=2$ and $a_1^2=3\pi/2-4$. Reuse the existing
 proper-frame projection of the conserved Killing power:
 

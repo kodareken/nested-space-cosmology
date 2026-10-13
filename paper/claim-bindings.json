@@ -22,7 +22,7 @@
     "atlas-junction-screen": {
       "section": "8",
       "status": "derived",
-      "owner": "docs/nsc-atlas-junction-sources.md"
+      "owner": "docs/nsc-cosmological-atlas.md"
     },
     "atlas-sourced-slice": {
       "section": "10",
@@ -108,6 +108,11 @@
       "section": "13.7",
       "status": "derived",
       "owner": "docs/nsc-atlas-scalar-normal-force.md"
+    },
+    "atlas-wall-mass-closure": {
+      "section": "13.8",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-wall-mass-closure.md"
     }
   },
   "findings": [
@@ -144,25 +149,35 @@
       "id": "finite-turnover",
       "status": "measured",
       "summary": "Completed finite turnover on the frozen depth-three window. Geometry there is an input.",
-      "note": "docs/nsc-imbalance-turnover.md",
+      "note": "https://doi.org/10.5281/zenodo.23090015",
       "record": "results/development/nsc-imbalance-turnover-v1.json",
       "paper_section": null,
-      "post_preprint": true
+      "post_preprint": true,
+      "archived_note": {
+        "path": "docs/nsc-imbalance-turnover.md",
+        "sha256": "a58ed51e76fecb419b5b94bc333efc11f580fe629c91e5ef288ec3fd8aeca6b7",
+        "doi": "https://doi.org/10.5281/zenodo.23090015"
+      }
     },
     {
       "id": "source-responsive-collars",
       "status": "measured",
       "summary": "A static local leading-action solution changes its inner and outer proper lengths in opposite directions. A locked first-order forecast predicts the withheld changes with 0.018 and 0.793 percent remainders.",
-      "note": "docs/nsc-discovery-parent-traction.md",
+      "note": "https://doi.org/10.5281/zenodo.23090015",
       "record": "results/development/nsc-discovery-parent-traction-v1/measurement.json",
       "paper_section": null,
-      "post_preprint": true
+      "post_preprint": true,
+      "archived_note": {
+        "path": "docs/nsc-discovery-parent-traction.md",
+        "sha256": "18c358ce1bba1e1d4461c3afbf94552793e0b58e1011694e0984d14d1595978e",
+        "doi": "https://doi.org/10.5281/zenodo.23090015"
+      }
     },
     {
       "id": "coupled-causal-reduction",
       "status": "measured",
       "summary": "Retained, drive and memory columns reconstruct the field and its full common-action force, evolving their own geometry. Independent full evolution agrees at recorded numerical precision.",
-      "note": "docs/nsc-discovery-coupled-memory.md",
+      "note": "docs/nsc-coupled-local-response.md",
       "record": "results/development/nsc-discovery-coupled-memory-v1/manifest.json",
       "paper_section": null,
       "post_preprint": true
@@ -197,7 +212,7 @@
     {
       "id": "atlas-junction-screen",
       "status": "derived",
-      "note": "docs/nsc-atlas-junction-sources.md",
+      "note": "docs/nsc-cosmological-atlas.md",
       "record": "results/development/nsc-cosmological-atlas-v2/junction.json",
       "paper_section": "8"
     },
@@ -284,6 +299,14 @@
       "note": "docs/nsc-atlas-scalar-normal-force.md",
       "record": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
       "paper_section": "13.7"
+    },
+    {
+      "id": "atlas-wall-mass-closure",
+      "status": "derived",
+      "summary": "The fixed leading wall field and quiet anchor determine a conditional quadratic geometric mass functional on the smooth exterior side through both null fluxes and the full conformal endpoint correction. Original-frame improved-stress transport agrees independently. No numerical mass curve, late mass sign or plateau, coupled cap/wall solution, corrected observer response or finite-amplitude bound is established.",
+      "note": "docs/nsc-atlas-wall-mass-closure.md",
+      "record": "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json",
+      "paper_section": "13.8"
     }
   ]
 }

@@ -6,7 +6,7 @@ to the incoming surface independently of the metric. The definition question
 is resolved. This document owns that decision and supersedes the earlier
 pending-choice wording.
 
-The [finite preparation theorem](nsc-incoming-finite-preparation.md)
+The [finite preparation theorem](nsc-evolved-incoming-state.md)
 excludes simultaneous included incoming constraint closure in the declared
 smooth compact history class with exact incoming C0 fixed. More amplitudes,
 normal jets or finite-pair compensators in that same class cannot remove

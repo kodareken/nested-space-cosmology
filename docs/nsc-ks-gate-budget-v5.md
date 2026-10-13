@@ -8,7 +8,7 @@ bound already exceeds its slot. Reconcile using measured pilots and the fixed
 total reserve, rather than silently replacing previously owned uncertainties.
 
 
-Successor of the [v4 nine-component budget](nsc-ks-gate-budget-independent.md)
+Successor of the [v4 nine-component budget](https://doi.org/10.5281/zenodo.23090015)
 for the switched law `C_Sigma[g]=U_g C_up U_g^dagger` on `I=S(1)+[.12,.18]`.
 The nine named components and their allocations are frozen:
 

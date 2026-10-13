@@ -3,7 +3,7 @@
 The previous boundary maps described the intrinsic spatial Dirac operator.
 This calculation implements the actual coordinate-time Hamiltonian on the
 project's unwarped four-dimensional black-universe benchmark. Its derivation
-is independently checked in [the tetrad calculation](nsc-dirac-tetrad.md).
+is independently checked in [the tetrad calculation](https://doi.org/10.5281/zenodo.23090015).
 
 \[
 H_\kappa=-i(\sigma_2-\beta I)\partial_\rho

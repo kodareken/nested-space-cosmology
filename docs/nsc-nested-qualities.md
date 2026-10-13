@@ -10,7 +10,7 @@ separate gravitational incoming gate. Regional states need not be identical.
 
 The construction reuses the [normalized recursion](nsc-regulated-recursion.md),
 [local-observer correspondence](nsc-local-observer-correspondence.md) and
-[energy-transfer identities](nsc-energy-transfer.md). Their historical owners
+[energy-transfer identities](https://doi.org/10.5281/zenodo.23090015). Their historical owners
 and records are unchanged. A successor is needed because the correspondence
 v1 record hashes its original document; editing that document would invalidate
 historical replay.

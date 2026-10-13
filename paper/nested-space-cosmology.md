@@ -42,8 +42,10 @@ With fixed corner geometry and null normalization,
 the same preparation requires a calculable correction to the initial
 areal radius and its affine slope. Transverse constraint transport then
 determines a geometric mass response on that initial null surface, including
-a negative quadratic coefficient after the compact input. Coupled bulk and
-wall evolution remain open.
+a negative quadratic coefficient after the compact input. The existing wall
+field traces also close an analytic exterior-side mass functional through
+both null fluxes and the full conformal transformation. This functional has
+not been evaluated numerically; coupled bulk and wall evolution remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -292,7 +294,7 @@ slice. Extra ends do not by themselves become cosmological children.
 The companion hole supplies nonspherical structure, so an exact isolated
 Schwarzschild collar cannot simply be assumed at either puncture.
 The [parent record](../results/development/nsc-cosmological-atlas-v2/parent.json)
-and [owning analysis](../docs/nsc-cosmological-atlas-v2.md) retain the
+and [owning analysis](../docs/nsc-cosmological-atlas.md) retain the
 construction and checks.
 
 ![Two-hole parent slice and its distinct asymptotic ends](../results/development/nsc-cosmological-atlas-v2/parent-slice.png)
@@ -585,7 +587,7 @@ The inner optical boundary is at negative infinity, so it introduces no
 finite inner cutoff.
 
 Shared smooth vacuum data give the same vacuum development in this domain.
-The [owning argument](../docs/nsc-atlas-connection-observer.md) uses standard
+The [owning argument](../docs/nsc-atlas-causal-observers.md) uses standard
 Cauchy-development uniqueness, with [Sbierski
 (1309.7591v2)](https://arxiv.org/html/1309.7591v2) as a source.
 The bound ends a guaranteed interval; it does not predict that a signal
@@ -1365,12 +1367,64 @@ This variation includes the changed bulk metric, induced metric and wall
 position, pulled back to the reference wall. It does not set the wall's
 displacement to zero or preserve its original trajectory. Exact algebra
 checks the projection, force sign and vacuum contribution without a new
-pressure curve. The next decision is whether the existing leading wall
-field traces close exterior-side geometric mass transport on reference
-wall cuts, using the borrowed flux and frame laws. This smaller connection
-has not yet been derived or admitted; it should be decided before starting
-a new bulk solver. Coupled cap and wall geometry, the corrected observer
-signal and finite-amplitude validity remain open.
+pressure curve. The following connection supplies exterior-side geometric
+mass from the known wall traces. Coupled cap and wall geometry, the corrected
+observer signal and finite-amplitude validity remain open.
+
+### 13.8. Exterior mass closes from the known wall field
+
+<!-- nsc-claim:atlas-wall-mass-closure -->
+
+Evidence: [analytic closure record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json),
+[two flux routes and frame derivation](../docs/nsc-atlas-wall-mass-closure.md).
+
+The same leading field determines a conditional quadratic mass coefficient
+on the smooth exterior limit of the wall. Retain the preparation, quiet
+corner and $0.45\leq R/\ell\leq0.55$ window. Write $s=\tau/\ell$,
+$x=R/\ell$, $v=dx/ds$, $\beta=\beta_+$ and $m=M/\ell=0.4$.
+The known trace gives $w=\chi_W/\varepsilon$, $j=dw/ds$ and $p=w/x$.
+Because $\chi_U|_W=0$, its derivative along the outward normal equals its
+proper-time derivative. For $N=\ell n$, the two scalar derivatives are
+
+$$
+A=\frac{dp}{ds}=\frac{j-vp}{x},\qquad
+B=Np=\frac{j-\beta p}{x}.
+$$
+
+Thus $\chi_U=0$ does not set $\phi_U=0$. Pulling back both borrowed
+Einstein-frame null mass laws to this timelike path, then restoring the
+original frame, gives
+
+$$
+L=\frac{x^2}{2}\left[\beta AB-\frac{v}{2}(A^2+B^2)\right],\qquad
+Q=\frac{mp^2}{12}+\frac{x^2p}{6}(vA-\beta B),
+$$
+
+$$
+\frac{\mathfrak{m}_J}{\ell}=m+\alpha\mu_J+O(\alpha^2),\qquad
+\mu_J(s)=\int_{s_a}^{s}L(s')\,ds'+Q(s),\qquad Q(s_a)=0.
+$$
+
+Here $\alpha=\kappa_4\varepsilon^2/\ell^2$ as before; the stated remainder
+assumes a scalar-odd, metric-even perturbative family. Every input is
+supplied by the fixed trace and reference geometry. The endpoint $Q$
+retains both conformal-gradient components; geometric mass is not frame
+invariant. Hayward's original-frame law with the full improved stress
+independently gives $d\mu_J/ds=L+dQ/ds$. This check needs no numerical
+differentiation of the waveform. Neither expression divides by $\beta$,
+so the regular zero of $\beta_+$ creates no singularity.
+
+The [source comparison](../docs/arxiv-studies.md#wall-mass-library)
+distinguishes this application from known timelike transport and scalar
+mass changes at other shells. No new general law is claimed. A regular
+perturbative continuation would have this coefficient; its existence is
+not proved. Constant background exterior mass removes the first-order
+ambiguity from identifying displaced wall cuts, without fixing displacement
+itself. The wall tail prevents importing the initial leg's mass plateau or
+late sign. No mass curve, cap correction or finite-amplitude bound is supplied.
+The next choice is a separately controlled evaluation of this functional,
+or closure of a named remaining cap/wall junction input. Neither choice
+automatically requires a new bulk solver.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1651,7 +1705,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Initial mass to exterior wall cuts | Do the existing leading wall field traces close geometric mass transport through the borrowed flux and frame laws? | A finite invariant wall-side response or an exact missing datum, before tackling coupled cap/wall evolution |
+| Exterior wall mass to coupled matching | Would controlled evaluation of the closed functional supply the needed junction input, or must a cap/wall condition be closed first? | A finite mass value with its own error control, or a named missing cap/wall datum; no bulk solver is presumed |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1690,8 +1744,10 @@ wall conditions. Its characteristic constraint requires a nonzero initial
 radius correction under the declared corner and null normalization;
 transverse constraint transport then supplies an invariant geometric mass coefficient
 on that same surface. The vanishing normal-stress jump adds a necessary
-condition on their later wall matching. Bulk and wall evolution remain
-to be established.
+condition on their later wall matching. Known field traces also determine
+an analytic exterior-side wall-mass functional without a new field solve.
+Its numerical evaluation and the coupled cap/wall geometry remain distinct
+questions to resolve.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1706,11 +1762,11 @@ and renders their relationships without launching a new physics calculation.
 | Result family | Owning derivation and preserved evidence |
 | --- | --- |
 | Finite inheritance and nested reduction | [Proof](../docs/nsc-nested-qualities.md); [snapshot](nested-quality-evidence/snapshot.json) |
-| Two-hole parent and radiation attachment screen | [Atlas v2](../docs/nsc-cosmological-atlas-v2.md); [manifest](../results/development/nsc-cosmological-atlas-v2/manifest.json) |
-| Signed moving wall and gluing literature | [Atlas v3](../docs/nsc-cosmological-atlas-v3.md); [manifest](../results/development/nsc-cosmological-atlas-v3/manifest.json) |
-| Sourced slice and vacuum observer domain | [Atlas v4](../docs/nsc-cosmological-atlas-v4.md); [manifest](../results/development/nsc-cosmological-atlas-v4/manifest.json) |
-| Isolated causal completion and clocks | [Atlas v5](../docs/nsc-cosmological-atlas-v5.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
-| Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-cosmological-atlas-v6.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
+| Two-hole parent and radiation attachment screen | [Atlas v2](../docs/nsc-cosmological-atlas.md); [manifest](../results/development/nsc-cosmological-atlas-v2/manifest.json) |
+| Signed moving wall and gluing literature | [Atlas v3](../docs/nsc-cosmological-atlas.md); [manifest](../results/development/nsc-cosmological-atlas-v3/manifest.json) |
+| Sourced slice and vacuum observer domain | [Atlas v4](../docs/nsc-atlas-connection-slice.md); [manifest](../results/development/nsc-cosmological-atlas-v4/manifest.json) |
+| Isolated causal completion and clocks | [Atlas v5](../docs/nsc-atlas-causal-classification.md); [manifest](../results/development/nsc-cosmological-atlas-v5/manifest.json) |
+| Classical incoming state and scalar transfer | [Atlas v6](../docs/nsc-atlas-field-transfer.md); [manifest](../results/development/nsc-cosmological-atlas-v6/manifest.json) |
 | Finite exterior preparation and research dependencies | [Preparation](../docs/nsc-atlas-field-preparation.md); [programme](../docs/nsc-cosmological-atlas.md); [v7 manifest](../results/development/nsc-cosmological-atlas-v7/manifest.json) |
 | Evaluated exterior preparation and finite tail | [Response](../docs/nsc-atlas-prepared-response.md); [v8 manifest](../results/development/nsc-cosmological-atlas-v8/manifest.json) |
 | Fixed-model source inverse and preparation exclusions | [Proof](../docs/nsc-atlas-observer-inference.md); [record](../results/development/nsc-atlas-observer-inference-v1/inference.json) |
@@ -1718,6 +1774,7 @@ and renders their relationships without launching a new physics calculation.
 | Characteristic gravitational initialization | [Constraint and frame check](../docs/nsc-atlas-characteristic-initialization.md); [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json) |
 | Geometric mass on the prepared null surface | [Mixed geometry and stress checks](../docs/nsc-atlas-source-mass.md); [record](../results/development/nsc-atlas-source-mass-v1/mass.json) |
 | Conformal scalar normal-force compatibility | [Projection and force sign](../docs/nsc-atlas-scalar-normal-force.md); [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json) |
+| Exterior wall-mass functional | [Both fluxes and full frame conversion](../docs/nsc-atlas-wall-mass-closure.md); [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

@@ -87,7 +87,7 @@ spinor crossing correlation likewise cannot establish which stress is
 
 ## Compatibility and owners
 
-The [consumer](../src/recursive_horizons/nsc_rn_gradient_bubble.py) now has
+The [consumer](rn-pg-wall.md) now has
 API version `nsc-rn-gradient-bubble-v6`. `diagnostic_semantics` travels with
 its outputs. Force/wall field names and legacy verdict strings remain
 available to existing readers, but describe finite pressure diagnostics.
@@ -105,11 +105,11 @@ and an explicitly assumed power-law extrapolation remain separately reported.
 The [driver](../scripts/derive_nsc_rn_gradient_bubble.py) targets a new,
 creation-only `nsc-rn-gradient-bubble-v6.json` and links v5 as its predecessor.
 It was not run for this correction; no v6 family result is claimed. All
-v1–v5 records remain intact. The [tests](../tests/test_nsc_rn_gradient_bubble.py)
+v1–v5 records remain intact. The [tests](rn-pg-wall.md)
 check unchanged finite pressure numerics, unsupported-criterion handling,
 horizon/centre separation and historical-record provenance separately.
 
 The distinct boundary-traction calculation in
-[nsc-discovery-parent-traction.md](nsc-discovery-parent-traction.md) is not
+[nsc-discovery-parent-traction.md](https://doi.org/10.5281/zenodo.23090015) is not
 identified with this pressure-component comparison. Neither diagnostic
 requires becoming the atlas's sole geometric model.

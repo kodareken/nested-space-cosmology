@@ -19,7 +19,7 @@ contributions and backreaction must satisfy those equations together.
 
 ## What is imported, and what is calculated
 
-Use the existing [DHP applicability and regulator audit](nsc-massless-reference.md).
+Use the existing [DHP applicability and regulator audit](nsc-nested-qualities.md).
 DHP supplies the renormalized Dirac stress construction and its local
 ambiguities. [Gérard–Häfner–Wrochna, Theorem 1.1](https://arxiv.org/html/2008.10995)
 supplies a rigorous massless fermionic Unruh construction on its stated
@@ -30,7 +30,7 @@ extension. Here that prescription defines a **boundary-state candidate**.
 Global extension, spin/current trace maps and microlocal regularity remain
 explicit conditions of its physical use.
 
-Reuse the recorded [geometry and horizon](nsc-horizon-source.md), including
+Reuse the recorded [geometry and horizon](https://doi.org/10.5281/zenodo.23090015), including
 surface gravity 0.23832579963401956. Hawking temperature and the general
 state construction are prior results. New work evaluates the actual
 complex Dirac reflection, binds its phase to the real interior spin frame,
@@ -115,7 +115,7 @@ its norm. The mode energy above the instantaneous negative projector is
 missing occupation associated with outward power; dropping it would
 violate the normalization of the energy source.
 
-The unchanged [angular-stress owner](nsc-angular-stress.md) supplies the
+The unchanged [angular-stress owner](https://doi.org/10.5281/zenodo.23090015) supplies the
 orders 0,2,4 subtraction, joint angular finite part, static-cylinder
 normalization and full conformal anomaly. Units are hbar=c=L_throat=1
 and canonical normalization mu=1. No complete physical vacuum, Einstein
@@ -175,7 +175,7 @@ The next source owner is the **same-state finite-cutoff causal conversion
 and complementary functional**, together with the domain applicability
 conditions above. Reuse the established conversion
 Gamma5=Gamma_light,ren+[Gamma_H,nu+C_nu,mu] from the
-[normalization map](nsc-massless-reference.md). Adding this canonical
+[normalization map](nsc-nested-qualities.md). Adding this canonical
 stress to an unchanged cutoff complement would double-count terms.
 Massive compact modes, gauge/boundary interactions and recursive state
 correlations retain their own derived contributions. None may be

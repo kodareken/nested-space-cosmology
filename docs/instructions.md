@@ -123,12 +123,12 @@ repository plan or handover.
 ## Historical periodic parent
 
 The historical programme is the responsive parent, starting at `eb4798c`.
-Owners are the [preparation](nsc-discovery-parent.md),
-[episode adapter](nsc-discovery-parent-episode.md),
-[observer](nsc-discovery-regions.md#leading-parent-observer),
-[response adapter](nsc-discovery-parent-response.md),
-[step control](nsc-discovery-parent-step-control.md)
-and [Dirac contact](nsc-discovery-dirac-contact.md).
+Owners are the [preparation](https://doi.org/10.5281/zenodo.23090015),
+[episode adapter](https://doi.org/10.5281/zenodo.23090015),
+[observer](https://doi.org/10.5281/zenodo.23090015),
+[response adapter](https://doi.org/10.5281/zenodo.23090015),
+[step control](https://doi.org/10.5281/zenodo.23090015)
+and [Dirac contact](https://doi.org/10.5281/zenodo.23090015).
 The magnetic branch has its primary finite preparation, its $T=3$
 episode, and the completed frozen, empty-source and strong-offset
 controls. Renewal is not complete. The matched-offset controls and their
@@ -193,7 +193,7 @@ full-source Newton, set the initial radius from that source
 (\(\rho = F_L/\Delta x_Q\)).
 
 Those historical runs use the default `gauge="prescribed"`. The optional
-[conformal realization](nsc-spherical-conformal-gauge.md) varies
+[conformal realization](https://doi.org/10.5281/zenodo.23090015) varies
 the same constraints before imposing $L=Q$, $\beta=0$, then retains the
 gauge chain rule and work $F_Q\dot Q+F_L\dot L$. Its saved four-run episode
 and normal-clock protocol have their own [status](current-result.md#same-action-conformal-episode-1-october-2026).
@@ -209,19 +209,19 @@ the same-spectrum local induced term, counted once. The vacuum-matched CTP
 branch remains a separate historical choice.
 
 The saved prescribed-gauge continuation is
-[the regeneration episode](nsc-regeneration-episode.md),
+[the regeneration episode](https://doi.org/10.5281/zenodo.23090015),
 $T=0.05$ to $T=0.085$, starting with the predecessor's exact Cauchy
 arrays. Its four space and time refinements meet one percent on the
 claimed physical movements. It stops when the bridge's both-positive arc
 enters the packet. Localization and throughflow are maintained; renewal
 is false. Frame momenta, $\dot Q$, and realized rate increments now
-support the [saved assessment](nsc-spherical-episode-assessment.md).
+support the [saved assessment](https://doi.org/10.5281/zenodo.23090015).
 The [local-response successor](nsc-coupled-local-response.md)
 uses the same continuation and original observer, carrying actual initial
 cross correlations. Memory, exterior drive, and cross omission each move
 the local occupation beyond the reduction error.
 
-The [weak helper](nsc-spherical-cauchy-weak.md) keeps its sealed
+The [weak helper](https://doi.org/10.5281/zenodo.23090015) keeps its sealed
 partial diagnostic and a separate initial-chart certificate. Under the
 sealed positivity hypotheses, the owning note proves a unique positive
 critical radius and a nearby exact initial state with the same source.
@@ -249,7 +249,7 @@ do not set the objective.
 The conformal successor now records the accepted finite chain through
 $T=0.3$: source-dependent regional transfer, generated metric response,
 maintained structure, and a local reduction on the same trajectory.
-The [owning note](nsc-spherical-conformal-continuation.md) routes
+The [owning note](https://doi.org/10.5281/zenodo.23090015) routes
 its actual metric jets, clock correction, source controls, surface ledger,
 and local omission errors. Numerical movements use one percent of their
 own effects. A total propagated or continuum certificate is a stronger

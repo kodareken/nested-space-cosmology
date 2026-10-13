@@ -15,15 +15,15 @@ Paths are relative to this directory.
 
 | Role | Owner |
 |---|---|
-| Core | [nsc_evolving_reduction.py](../src/recursive_horizons/nsc_evolving_reduction.py) |
+| Core | [nsc_evolving_reduction.py](https://doi.org/10.5281/zenodo.23090015) |
 | Dense tests | [test_nsc_evolving_reduction.py](../tests/test_nsc_evolving_reduction.py) |
 | Streamed-backend tests | [test_nsc_evolving_reduction_streamed.py](../tests/test_nsc_evolving_reduction_streamed.py) |
 | Note | [nsc-evolving-reduction.md](nsc-evolving-reduction.md) |
 
 The frozen window and correlated Gaussian state are reused from
-[finite turnover](nsc-finite-turnover.md). The occupied, empty, retarded,
+[finite turnover](https://doi.org/10.5281/zenodo.23090015). The occupied, empty, retarded,
 and initial-cross kernels use the same ordering as
-[the boundary state](nsc-boundary-state.md). Neither owner is modified here.
+[the boundary state](https://doi.org/10.5281/zenodo.23090015). Neither owner is modified here.
 
 ## API
 

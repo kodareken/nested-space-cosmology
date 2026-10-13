@@ -31,6 +31,16 @@ import sys
 HEADING = re.compile(r"^#{2,4}\s+(.*)$")
 MARKER = re.compile(r"<!--\s*nsc-claim:([a-z0-9-]+)\s*-->")
 LINK = re.compile(r"\]\(([^)]+)\)")
+ARCHIVE_URL = "https://doi.org/10.5281/zenodo.23090015"
+
+
+def archived_identity(row):
+    """A DOI citation must declare the particular archived path and identity."""
+    if not isinstance(row, dict) or row.get("doi") != ARCHIVE_URL:
+        return False
+    path = pathlib.PurePosixPath(row.get("path", ""))
+    return (bool(path.parts) and not path.is_absolute() and ".." not in path.parts
+            and bool(re.fullmatch(r"[0-9a-f]{64}", row.get("sha256", ""))))
 
 
 def repo_root() -> pathlib.Path:
@@ -148,10 +158,16 @@ def main(argv: list[str] | None = None) -> int:
         if item.get("status") not in allowed:
             errors.append(f"finding {fid}: invalid status {item.get('status')!r}")
         note = item.get("note")
-        if note and not (root / note).is_file():
+        if note == ARCHIVE_URL:
+            if not archived_identity(item.get("archived_note")):
+                errors.append(f"finding {fid}: archived note lacks its original identity")
+        elif note and not (root / note).is_file():
             errors.append(f"finding {fid}: note does not exist: {note}")
         record = item.get("record")
-        if record and not (root / record).is_file():
+        if record == ARCHIVE_URL:
+            if not archived_identity(item.get("archived_record")):
+                errors.append(f"finding {fid}: archived record lacks its original identity")
+        elif record and not (root / record).is_file():
             errors.append(f"finding {fid}: record does not exist: {record}")
         draft = item.get("pending_section")
         if draft:

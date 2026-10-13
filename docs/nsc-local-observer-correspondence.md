@@ -38,11 +38,11 @@ G_{AA}=S^{-1}=\bigl((zI-H)^{-1}\bigr)_{AA},\qquad
 Reversed multiplication, dropping \(B^\dagger\), replacing the child resolvent
 by \(BB^\dagger/z\), and transposing the coupling are negative controls: each
 disagrees with the joined inverse. This is imported linear algebra. The
-published [boundary Schur record](nsc-boundary-response.md) remains the
+published [boundary Schur record](https://doi.org/10.5281/zenodo.23090015) remains the
 Dirac-operator instance; this correspondence does not rerun that generator.
 
 Eliminating the complementary region in time retains memory *and* the
-eliminated initial state ([energy transfer](nsc-energy-transfer.md)):
+eliminated initial state ([energy transfer](https://doi.org/10.5281/zenodo.23090015)):
 
 \[
 i\dot\psi_A=H_{AA}\psi_A

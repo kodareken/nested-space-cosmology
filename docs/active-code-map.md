@@ -15,14 +15,14 @@ and [claim ledger](claim-ledger.md).
 | Evaluated prepared response and analytic finite tail | [Response owner](nsc-atlas-prepared-response.md), `prepared_response_record()` in [the numerical adapter](../src/recursive_horizons/nsc_atlas_prepared_response.py), [controls](../tests/test_nsc_atlas_prepared_response.py), [v8 producer](../scripts/derive_nsc_cosmological_atlas_v8.py), [record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json); fixed-data wall trace and central waveform pass refinement and independent positive-tail brackets. |
 | Analytic observer inverse and source restrictions | [Proof](nsc-atlas-observer-inference.md), [record/checker](../scripts/record_nsc_atlas_observer_inference.py), [provenance tests](../tests/test_nsc_atlas_observer_inference.py); fixed-model compatible-data bijection and compact-source exclusions. No inverse solver or second-geometry equivalence is claimed. |
 | Finite candidate regions and four connection kinds | [nsc_cosmological_atlas](../src/recursive_horizons/nsc_cosmological_atlas.py), [note](nsc-cosmological-atlas.md) |
-| Reproducible diagrams and source-bound inputs | [Producer](../scripts/derive_nsc_cosmological_atlas.py), [tests](../tests/test_nsc_cosmological_atlas.py) |
-| Shared spatial parent and fixed-source junction screen | [Parent adapter](../src/recursive_horizons/nsc_atlas_parent_initial_data.py), [junction adapter](../src/recursive_horizons/nsc_atlas_junction_sources.py), [v2 producer](../scripts/derive_nsc_cosmological_atlas_v2.py), [scope](nsc-cosmological-atlas-v2.md) |
-| Moving-wall flux, signed dynamics and alternative shared-parent family | [Moving adapter](../src/recursive_horizons/nsc_atlas_moving_boundaries.py), [v3 producer](../scripts/derive_nsc_cosmological_atlas_v3.py), [scope](nsc-cosmological-atlas-v3.md), [gluing sources](nsc-atlas-parent-gluing.md) |
-| First sourced interior, vacuum end and finite observer degeneracy | [Slice adapter](../src/recursive_horizons/nsc_atlas_connection_slice.py), [observer adapter](../src/recursive_horizons/nsc_atlas_connection_observer.py), [v4 producer](../scripts/derive_nsc_cosmological_atlas_v4.py), [scope](nsc-cosmological-atlas-v4.md), [end-only gluing](nsc-atlas-connection-gluing.md) |
-| Interior causal reference, matched charts and observer access | [Reference adapter](../src/recursive_horizons/nsc_atlas_causal_reference.py), [interior observers](../src/recursive_horizons/nsc_atlas_causal_observers.py), [v5 producer](../scripts/derive_nsc_cosmological_atlas_v5.py), [scope](nsc-cosmological-atlas-v5.md), [classification](nsc-atlas-causal-classification.md); known mathematics applied to the isolated reference, with the glued global future still open |
-| Early field state, wall transmission and central waveform | [Field adapter](../src/recursive_horizons/nsc_atlas_field_transfer.py), [state and transfer](nsc-atlas-field-transfer.md), [matching sources](nsc-atlas-field-matching.md), [v6 producer](../scripts/derive_nsc_cosmological_atlas_v6.py), [scope](nsc-cosmological-atlas-v6.md); exact conditional classical response, with global incident-state preparation unresolved |
-| Both-worktree family census, dispositions and reading boundaries | [Inventory](research-inventory.md), [producer](../scripts/research_inventory.py) |
-| Existing supplied-H(t) finite memory/drive reducer | [nsc_evolving_reduction](../src/recursive_horizons/nsc_evolving_reduction.py); a physically justified multi-region Hamiltonian is still missing |
+| Reproducible diagrams and source-bound inputs | [Producer](https://doi.org/10.5281/zenodo.23090015), [tests](../tests/test_nsc_cosmological_atlas.py) |
+| Shared spatial parent and fixed-source junction screen | [Parent adapter](../src/recursive_horizons/nsc_atlas_parent_initial_data.py), [junction adapter](../src/recursive_horizons/nsc_atlas_junction_sources.py), [v2 producer](https://doi.org/10.5281/zenodo.23090015), [scope](nsc-cosmological-atlas.md) |
+| Moving-wall flux, signed dynamics and alternative shared-parent family | [Moving adapter](../src/recursive_horizons/nsc_atlas_moving_boundaries.py), [v3 producer](https://doi.org/10.5281/zenodo.23090015), [scope](nsc-cosmological-atlas.md), [gluing sources](nsc-cosmological-atlas.md) |
+| First sourced interior, vacuum end and finite observer degeneracy | [Slice adapter](../src/recursive_horizons/nsc_atlas_connection_slice.py), [observer adapter](../src/recursive_horizons/nsc_atlas_connection_observer.py), [v4 producer](https://doi.org/10.5281/zenodo.23090015), [scope](nsc-atlas-connection-slice.md), [end-only gluing](nsc-atlas-connection-gluing.md) |
+| Interior causal reference, matched charts and observer access | [Reference adapter](../src/recursive_horizons/nsc_atlas_causal_reference.py), [interior observers](../src/recursive_horizons/nsc_atlas_causal_observers.py), [v5 producer](https://doi.org/10.5281/zenodo.23090015), [scope](nsc-atlas-causal-classification.md), [classification](nsc-atlas-causal-classification.md); known mathematics applied to the isolated reference, with the glued global future still open |
+| Early field state, wall transmission and central waveform | [Field adapter](../src/recursive_horizons/nsc_atlas_field_transfer.py), [state and transfer](nsc-atlas-field-transfer.md), [matching sources](nsc-atlas-field-matching.md), [v6 producer](https://doi.org/10.5281/zenodo.23090015), [scope](nsc-atlas-field-transfer.md); exact conditional classical response, with global incident-state preparation unresolved |
+| Both-worktree family census, dispositions and reading boundaries | [Inventory](research-inventory.md), [producer](https://doi.org/10.5281/zenodo.23090015) |
+| Existing supplied-H(t) finite memory/drive reducer | [nsc_evolving_reduction](https://doi.org/10.5281/zenodo.23090015); a physically justified multi-region Hamiltonian is still missing |
 | Borrowed results and admission before compute | [Existing owner](prior-art-and-open-claim.md), [arXiv reuse library](arxiv-studies.md) |
 
 The source-fixed incoming gate remains OPEN and its campaign is paused. Its
@@ -52,7 +52,7 @@ The numerical family is not running and is not claimed. No case has
 written a `summary.json`; four stopped on the CPU projection and the two
 `mu=1.002` cases stopped silently at `t=8`. The historical pressure reduction over 177 recorded stations is
 [gradient-bubble v5](../results/development/nsc-rn-gradient-bubble-v5.json).
-Its [live consumer](../src/recursive_horizons/nsc_rn_gradient_bubble.py) and
+Its [live consumer](rn-pg-wall.md) and
 [corrected owner](nsc-rn-gradient-bubble.md) now withdraw the interpretation
 as opposing forces or mechanical balance, the unsupported Hayward slope
 threshold, and any inference from inner-horizon reach to centre regularity.
@@ -82,13 +82,13 @@ Rules:
 | Neutral source and radial operator | [Note](nsc-rn-neutral-source.md); `src/recursive_horizons/nsc_rn_source.py`; `tests/test_nsc_rn_source.py`. Registered. Dense and CSR store the same $D(2,1)$ coefficients. The default point factor is not a continuum claim. |
 | Observers | `src/recursive_horizons/nsc_rn_observables.py`; `tests/test_nsc_rn_observables.py`. Registered. Curvature is computed from the supplied jets. |
 | Campaign driver | [Episode](nsc-rn-parent-episode.md); `scripts/derive_nsc_rn_parent.py`; `tests/test_nsc_rn_parent_driver.py`. Registered. The temporary paired run is not a sealed station. |
-| Charged lowest-Landau Gauss branch, later | [Note](nsc-rn-charged-source.md) |
-| MMP negative-Casimir study, parallel | [Note](nsc-rn-mmp-source-study.md) |
+| Charged lowest-Landau Gauss branch, later | [Note](nsc-rn-pg-action.md) |
+| MMP negative-Casimir study, parallel | [Note](nsc-rn-pg-action.md) |
 
 <a id="rn-pending-registration"></a>
 
 The archived pilot and its receipt are
-[rn-first-infall-pilot-2026-10-04](../archive/reassembly-20261012/lab-context/archive/rn-first-infall-pilot-2026-10-04/receipt.json).
+[rn-first-infall-pilot-2026-10-04](https://doi.org/10.5281/zenodo.23090015).
 `sat_norm_ledger` uses twice the raw SAT coefficient. Probability
 closure at the saved clocks stays reconciled. Derived energy and
 curvature come from `--assess-archive`, not from the raw frames. The
@@ -124,16 +124,16 @@ state–geometry force. Status:
 
 | Responsibility | Owner |
 |---|---|
-| Matched-offset and reweighted frozen controls | [Method](nsc-discovery-parent-strong-controls.md); `scripts/assess_nsc_discovery_parent_strong_controls.py`; [record](../results/development/nsc-discovery-parent-strong-controls-v1.json). |
-| Coupled exterior-to-cut response | [Method](nsc-discovery-parent-cut-response.md); `src/recursive_horizons/nsc_discovery_parent_cut_response.py`; `scripts/derive_nsc_discovery_parent_cut_response.py`; [completed batch](../results/development/nsc-discovery-parent-cut-response-v1/prepare.json). |
-| Completed cut assessment | [Note](nsc-discovery-parent-cut-assessment.md); `scripts/assess_nsc_discovery_parent_cut_response.py`; [record](../results/development/nsc-discovery-parent-cut-assessment-v1.json); `tests/test_nsc_discovery_parent_cut_assessment.py`. |
-| Recorded NF256 confirmation | [Note](nsc-discovery-parent-cut-confirmation.md); `scripts/derive_nsc_discovery_parent_cut_confirmation.py`; `tests/test_nsc_discovery_parent_cut_confirmation.py`; [record](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json); [payload](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.npz). Comparison and CPU stay on the status page. |
-| Parent preparation | [Note](nsc-discovery-parent.md); `src/recursive_horizons/nsc_discovery_parent.py`; `scripts/derive_nsc_discovery_parent.py`; [magnetic feasibility](../results/development/nsc-discovery-parent-v1/feasibility-magnetic-v5/pilot.json); [six preparations](../results/development/nsc-discovery-parent-v1/six-magnetic-nf128-v1/preparation-ledger.json); [original pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json) |
-| Episode adapter | [Note](nsc-discovery-parent-episode.md); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`; [$T=3$ batch](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json); [$n_f=256$ confirmation](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json); [frozen parent-heavy](../results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json); [empty source](../results/development/nsc-discovery-parent-empty-source-v1/manifest.json); [strong $T=1$](../results/development/nsc-discovery-parent-strong-t1-v1/manifest.json); [strong $T=3$](../results/development/nsc-discovery-parent-strong-t3-v1/manifest.json), pinned `cc238577`. |
-| Parent observer | [Leading parent observer](nsc-discovery-regions.md#leading-parent-observer); `src/recursive_horizons/nsc_discovery_parent_observer.py`; [contour binding](../results/development/nsc-discovery-regions-v2-binding.json) pinned `4f3d5fc`. Actual projected leading rates. Corrected moving-energy rates lose the former refinement agreement. Endpoints and fixed windows stay at roundoff. Sealed v1 speeds stay unhealed. |
-| Response adapter | [Note](nsc-discovery-parent-response.md); `src/recursive_horizons/nsc_discovery_parent_response.py`; `scripts/derive_nsc_discovery_parent_response.py`. Implemented one-step stage, not a long held result. |
-| Step control | [Note](nsc-discovery-parent-step-control.md); `src/recursive_horizons/nsc_discovery_parent_step_control.py` |
-| Dirac contact | [Note](nsc-discovery-dirac-contact.md); `src/recursive_horizons/nsc_discovery_dirac_contact.py`; [record](../results/development/nsc-discovery-dirac-contact-v1.json). Off-shell reference; physical correction not installed. |
+| Matched-offset and reweighted frozen controls | [Method](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_parent_strong_controls.py`; [record](https://doi.org/10.5281/zenodo.23090015). |
+| Coupled exterior-to-cut response | [Method](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent_cut_response.py`; `scripts/derive_nsc_discovery_parent_cut_response.py`; [completed batch](https://doi.org/10.5281/zenodo.23090015). |
+| Completed cut assessment | [Note](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_parent_cut_response.py`; [record](https://doi.org/10.5281/zenodo.23090015); `tests/test_nsc_discovery_parent_cut_assessment.py`. |
+| Recorded NF256 confirmation | [Note](https://doi.org/10.5281/zenodo.23090015); `scripts/derive_nsc_discovery_parent_cut_confirmation.py`; `tests/test_nsc_discovery_parent_cut_confirmation.py`; [record](../results/development/nsc-discovery-parent-cut-confirmation-v1/confirmation.json); [payload](https://doi.org/10.5281/zenodo.23090015). Comparison and CPU stay on the status page. |
+| Parent preparation | [Note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent.py`; `scripts/derive_nsc_discovery_parent.py`; [magnetic feasibility](https://doi.org/10.5281/zenodo.23090015); [six preparations](https://doi.org/10.5281/zenodo.23090015); [original pilot](../results/development/nsc-discovery-parent-v1/feasibility-nf64-128/pilot.json) |
+| Episode adapter | [Note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent_episode.py`; `scripts/derive_nsc_discovery_parent_episode.py`; [$T=3$ batch](../results/development/nsc-discovery-parent-episode-magnetic-t3-v1/manifest.json); [$n_f=256$ confirmation](../results/development/nsc-discovery-parent-episode-magnetic-nf256-balanced-v1/manifest.json); [frozen parent-heavy](../results/development/nsc-discovery-parent-frozen-parent-heavy-v1/manifest.json); [empty source](../results/development/nsc-discovery-parent-empty-source-v1/manifest.json); [strong $T=1$](../results/development/nsc-discovery-parent-strong-t1-v1/manifest.json); [strong $T=3$](../results/development/nsc-discovery-parent-strong-t3-v1/manifest.json), pinned `cc238577`. |
+| Parent observer | [Leading parent observer](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent_observer.py`; [contour binding](https://doi.org/10.5281/zenodo.23090015) pinned `4f3d5fc`. Actual projected leading rates. Corrected moving-energy rates lose the former refinement agreement. Endpoints and fixed windows stay at roundoff. Sealed v1 speeds stay unhealed. |
+| Response adapter | [Note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent_response.py`; `scripts/derive_nsc_discovery_parent_response.py`. Implemented one-step stage, not a long held result. |
+| Step control | [Note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent_step_control.py` |
+| Dirac contact | [Note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_dirac_contact.py`; [record](https://doi.org/10.5281/zenodo.23090015). Off-shell reference; physical correction not installed. |
 
 <a id="active-discovery-implementation-2026-10-02"></a>
 
@@ -146,37 +146,37 @@ response. The incoming-gate campaign stays paused. Owners of that wave:
 | Responsibility | Owner |
 |---|---|
 | FFT operators and reference comparisons | `src/recursive_horizons/nsc_discovery_backend.py`; `scripts/benchmark_nsc_discovery_backend.py` |
-| Exact hand-off, episode/checkpoints and process pool | [Episode note](nsc-discovery-episode.md); `src/recursive_horizons/nsc_discovery_episode.py`; `scripts/derive_nsc_discovery_episode.py` |
-| Regional diagnostics and saved-data atlas | [Observer note](nsc-discovery-observables.md); `src/recursive_horizons/nsc_discovery_observables.py`; `scripts/derive_nsc_discovery_atlas.py` |
-| Analytic full-state directional response | [Response note](nsc-discovery-response.md); `src/recursive_horizons/nsc_discovery_response.py` |
-| Coupled prediction at actual equal proper time | [Prediction](nsc-discovery-prediction.md); `src/recursive_horizons/nsc_discovery_prediction.py`; `scripts/derive_nsc_discovery_prediction.py` |
-| Prepared-source retention and moving gradient cuts | [Regions](nsc-discovery-regions.md); `src/recursive_horizons/nsc_discovery_regions.py`; `scripts/derive_nsc_discovery_regions.py` |
-| Initial source-selected scale | [Scale relation](nsc-discovery-scale.md); `src/recursive_horizons/nsc_discovery_scale.py` |
-| Physical continuation assessment | [Assessment](nsc-discovery-episode-assessment.md); `scripts/assess_nsc_discovery_episode.py` |
-| Actual four-metric tides and invariants | [Tidal note](nsc-discovery-tidal.md); `src/recursive_horizons/nsc_discovery_tidal.py`; `scripts/derive_nsc_discovery_tidal.py` |
-| Coupled causal reduction and source forces | [Memory note](nsc-discovery-coupled-memory.md); `src/recursive_horizons/nsc_discovery_coupled_memory.py`; `scripts/derive_nsc_discovery_coupled_memory.py` |
-| Source-consistent regime family | [Family](nsc-discovery-family.md); `src/recursive_horizons/nsc_discovery_family.py`; `scripts/derive_nsc_discovery_family.py` |
-| Disjoint normal-energy and coordinate-work ledger | [Balance](nsc-discovery-balance.md); `src/recursive_horizons/nsc_discovery_balance.py`; `scripts/derive_nsc_discovery_balance.py` |
-| Source-compatible static balance | [Stationary control](nsc-discovery-stationary.md); `src/recursive_horizons/nsc_discovery_stationary.py`; `scripts/derive_nsc_discovery_stationary.py` |
-| Exact source-free metric control | [Vacuum control](nsc-discovery-vacuum-control.md); `src/recursive_horizons/nsc_discovery_vacuum_control.py`; `scripts/derive_nsc_discovery_vacuum_control.py` |
-| Whole-state seam translation | [Translation](nsc-discovery-translation.md); `src/recursive_horizons/nsc_discovery_translation.py`; `scripts/derive_nsc_discovery_translation.py` |
-| Inherited grandchild hand-off and withheld future content | [Grandchild](nsc-discovery-grandchild.md); `src/recursive_horizons/nsc_discovery_grandchild.py`; `scripts/derive_nsc_discovery_grandchild.py` |
-| Physical source-width tangent and held-out content | [Width response](nsc-discovery-width-response.md); `src/recursive_horizons/nsc_discovery_width_response.py`; `scripts/derive_nsc_discovery_width_response.py` |
-| First carrier circuit, actual tides and return assessment | [Tidal owner](nsc-discovery-tidal.md); `scripts/assess_nsc_discovery_crossing.py` |
-| Independent carrier extents and matched source preparation | [Extent](nsc-discovery-extent.md); `src/recursive_horizons/nsc_discovery_extent.py`; `scripts/derive_nsc_discovery_extent.py` |
-| General-Q chi-zero positive Cauchy radius | [Dynamic preparation](nsc-discovery-dynamic-preparation.md); `src/recursive_horizons/nsc_discovery_dynamic_preparation.py`; `scripts/derive_nsc_discovery_dynamic_preparation.py` |
-| Saved-field free carrier comparison | [Free return](nsc-discovery-free-return.md); `src/recursive_horizons/nsc_discovery_free_return.py`; `scripts/derive_nsc_discovery_free_return.py` |
-| Connected geometric bilinear response and occupied/empty cut | [Geometric vertices](nsc-discovery-geometric-vertices.md); `src/recursive_horizons/nsc_discovery_geometric_vertices.py`; `scripts/derive_nsc_discovery_geometric_vertices.py` |
-| Static-query noncompact limit and arithmetic assessment | [Limit](nsc-discovery-stationary-limit.md); `scripts/assess_nsc_discovery_stationary_limit.py`; `tests/test_nsc_discovery_stationary_limit.py` |
-| Source-consistent initial geometric rate and curvature | [Initial sectors](nsc-discovery-initial-sector.md); `src/recursive_horizons/nsc_discovery_initial_sector.py`; `scripts/derive_nsc_discovery_initial_sector.py` |
-| Constrained proper-flat curvature pole and action-domain distinction | [Curvature sector](nsc-discovery-curvature-sector.md); `src/recursive_horizons/nsc_discovery_curvature_sector.py`; `scripts/assess_nsc_discovery_curvature_sector.py` |
-| Actual-unit curvature approximation assessment | [Domain](nsc-discovery-eft-domain.md); `scripts/assess_nsc_discovery_eft_domain.py` |
-| Locked work forecast and prescribed finite pulse | [Spectral work](nsc-discovery-spectral-work.md); `src/recursive_horizons/nsc_discovery_spectral_work.py`; `scripts/derive_nsc_discovery_spectral_work.py` |
-| Leading canonical comparison and unchanged quantum source | [Leading model](nsc-discovery-leading-einstein.md); `src/recursive_horizons/nsc_discovery_leading_einstein.py` |
-| Exact-state numerical successor and scaled reaction indicator | [Step control](nsc-discovery-leading-step-control.md); `src/recursive_horizons/nsc_discovery_leading_step_control.py` |
-| Static positive-energy periodic class and exterior boundary charge | [Virial](nsc-discovery-leading-virial.md); `scripts/assess_nsc_discovery_leading_virial.py` |
-| Source-responsive local collars and required parent traction | [Collar](nsc-discovery-parent-traction.md); `src/recursive_horizons/nsc_discovery_parent_traction.py`; `scripts/derive_nsc_discovery_parent_traction.py`; [parent-data criterion](nsc-discovery-parent-continuation.md) |
-| Exact homogeneous sector and source-selected event prediction | [Turn](nsc-discovery-homogeneous-turn.md); `src/recursive_horizons/nsc_discovery_homogeneous_turn.py`; `src/recursive_horizons/nsc_discovery_turn_fullfield.py` |
+| Exact hand-off, episode/checkpoints and process pool | [Episode note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_episode.py`; `scripts/derive_nsc_discovery_episode.py` |
+| Regional diagnostics and saved-data atlas | [Observer note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_observables.py`; `scripts/derive_nsc_discovery_atlas.py` |
+| Analytic full-state directional response | [Response note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_response.py` |
+| Coupled prediction at actual equal proper time | [Prediction](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_prediction.py`; `scripts/derive_nsc_discovery_prediction.py` |
+| Prepared-source retention and moving gradient cuts | [Regions](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_regions.py`; `scripts/derive_nsc_discovery_regions.py` |
+| Initial source-selected scale | [Scale relation](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_scale.py` |
+| Physical continuation assessment | [Assessment](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_episode.py` |
+| Actual four-metric tides and invariants | [Tidal note](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_tidal.py`; `scripts/derive_nsc_discovery_tidal.py` |
+| Coupled causal reduction and source forces | [Memory note](nsc-coupled-local-response.md); `src/recursive_horizons/nsc_discovery_coupled_memory.py`; `scripts/derive_nsc_discovery_coupled_memory.py` |
+| Source-consistent regime family | [Family](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_family.py`; `scripts/derive_nsc_discovery_family.py` |
+| Disjoint normal-energy and coordinate-work ledger | [Balance](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_balance.py`; `scripts/derive_nsc_discovery_balance.py` |
+| Source-compatible static balance | [Stationary control](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_stationary.py`; `scripts/derive_nsc_discovery_stationary.py` |
+| Exact source-free metric control | [Vacuum control](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_vacuum_control.py`; `scripts/derive_nsc_discovery_vacuum_control.py` |
+| Whole-state seam translation | [Translation](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_translation.py`; `scripts/derive_nsc_discovery_translation.py` |
+| Inherited grandchild hand-off and withheld future content | [Grandchild](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_grandchild.py`; `scripts/derive_nsc_discovery_grandchild.py` |
+| Physical source-width tangent and held-out content | [Width response](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_width_response.py`; `scripts/derive_nsc_discovery_width_response.py` |
+| First carrier circuit, actual tides and return assessment | [Tidal owner](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_crossing.py` |
+| Independent carrier extents and matched source preparation | [Extent](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_extent.py`; `scripts/derive_nsc_discovery_extent.py` |
+| General-Q chi-zero positive Cauchy radius | [Dynamic preparation](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_dynamic_preparation.py`; `scripts/derive_nsc_discovery_dynamic_preparation.py` |
+| Saved-field free carrier comparison | [Free return](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_free_return.py`; `scripts/derive_nsc_discovery_free_return.py` |
+| Connected geometric bilinear response and occupied/empty cut | [Geometric vertices](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_geometric_vertices.py`; `scripts/derive_nsc_discovery_geometric_vertices.py` |
+| Static-query noncompact limit and arithmetic assessment | [Limit](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_stationary_limit.py`; `tests/test_nsc_discovery_stationary_limit.py` |
+| Source-consistent initial geometric rate and curvature | [Initial sectors](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_initial_sector.py`; `scripts/derive_nsc_discovery_initial_sector.py` |
+| Constrained proper-flat curvature pole and action-domain distinction | [Curvature sector](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_curvature_sector.py`; `scripts/assess_nsc_discovery_curvature_sector.py` |
+| Actual-unit curvature approximation assessment | [Domain](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_eft_domain.py` |
+| Locked work forecast and prescribed finite pulse | [Spectral work](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_spectral_work.py`; `scripts/derive_nsc_discovery_spectral_work.py` |
+| Leading canonical comparison and unchanged quantum source | [Leading model](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_leading_einstein.py` |
+| Exact-state numerical successor and scaled reaction indicator | [Step control](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_leading_step_control.py` |
+| Static positive-energy periodic class and exterior boundary charge | [Virial](https://doi.org/10.5281/zenodo.23090015); `scripts/assess_nsc_discovery_leading_virial.py` |
+| Source-responsive local collars and required parent traction | [Collar](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_parent_traction.py`; `scripts/derive_nsc_discovery_parent_traction.py`; [parent-data criterion](https://doi.org/10.5281/zenodo.23090015) |
+| Exact homogeneous sector and source-selected event prediction | [Turn](https://doi.org/10.5281/zenodo.23090015); `src/recursive_horizons/nsc_discovery_homogeneous_turn.py`; `src/recursive_horizons/nsc_discovery_turn_fullfield.py` |
 | Historical feedback authentication | `scripts/check_nsc_spherical_feedback_episode_historical.py` |
 
 The first wave has passed integration checks. Numerical inputs freeze before
@@ -201,7 +201,7 @@ for differing instantaneous geometries. Owners relative to the laboratory:
 | Preserved first twelve trajectories and incomplete assessment | [v1 driver](../scripts/derive_nsc_nested_parent_child.py), [v1 JSON/NPZ](../results/development/nsc-nested-parent-child-v1.json) |
 | Cached exact linear-Q response and nf512 space confirmation | [confirmation driver](../scripts/derive_nsc_nested_parent_child_confirmation.py), [v2 JSON/NPZ](../results/development/nsc-nested-parent-child-confirmation-v2.json) |
 | Portable recorded basis and independent saved-data replay | [basis supplement](../results/development/nsc-nested-parent-child-replay-basis-v1.json), [consumer](../scripts/check_nsc_nested_parent_child_confirmation.py) |
-| Physical/mode response visualization | [figure](../results/development/nsc-nested-parent-child-figure.png), [figure data](../results/development/nsc-nested-parent-child-figure.json) |
+| Physical/mode response visualization | [figure](../results/development/nsc-nested-parent-child-figure.png), [figure data](https://doi.org/10.5281/zenodo.23090015) |
 
 The corresponding `test_nsc_nested_parent_child*.py` files own direct,
 response, confirmation and independent controls. The completed finite
@@ -211,20 +211,20 @@ or new spacetime manifold is asserted.
 
 ## Completed finite conformal realization, 2026-10-01
 
-The [owning note](nsc-spherical-conformal-continuation.md) joins the finite
+The [owning note](https://doi.org/10.5281/zenodo.23090015) joins the finite
 chain through $T=0.3$ and the local segment $[0.2,0.3]$. Its owners,
 relative to the laboratory, are:
 
 | Piece | Owner |
 |---|---|
-| Same-action conformal rates | src/recursive_horizons/nsc_spherical_galerkin_coupling.py; [proof](nsc-spherical-conformal-gauge.md) |
+| Same-action conformal rates | src/recursive_horizons/nsc_spherical_galerkin_coupling.py; [proof](https://doi.org/10.5281/zenodo.23090015) |
 | Initial episode and frame ledger | scripts/derive_nsc_spherical_conformal_episode.py; scripts/derive_nsc_spherical_conformal_frames.py; corresponding v1 JSON/NPZ |
 | Bitwise continuation | scripts/derive_nsc_spherical_conformal_continuation.py; results/development/nsc-spherical-conformal-episode-v2.json and .npz |
 | Entry/exit assessment | scripts/derive_nsc_spherical_conformal_transport.py; results/development/nsc-spherical-conformal-transport-v2.json |
 | Analytic matched clock | scripts/derive_nsc_spherical_conformal_clock.py; results/development/nsc-spherical-conformal-clock-v2.json |
-| Source perturbations | scripts/derive_nsc_spherical_conformal_source_controls.py; [note](nsc-spherical-conformal-source-controls.md) |
-| Actual metric jets | scripts/derive_nsc_spherical_conformal_curvature.py; [note](nsc-spherical-conformal-curvature.md) |
-| Same-realization local response | src/recursive_horizons/nsc_conformal_local_response_successor.py; scripts/derive_nsc_conformal_local_response_successor.py; [note](nsc-conformal-local-response-successor.md) |
+| Source perturbations | scripts/derive_nsc_spherical_conformal_source_controls.py; [note](https://doi.org/10.5281/zenodo.23090015) |
+| Actual metric jets | scripts/derive_nsc_spherical_conformal_curvature.py; [note](https://doi.org/10.5281/zenodo.23090015) |
+| Same-realization local response | src/recursive_horizons/nsc_conformal_local_response_successor.py; scripts/derive_nsc_conformal_local_response_successor.py; [note](nsc-coupled-local-response.md) |
 | Independent memory control | src/recursive_horizons/nsc_conformal_memory_control.py; results/development/nsc-conformal-memory-control-v1.json |
 | Read-only preservation | tests/test_nsc_spherical_conformal_preservation.py; the completed thin producers' explicit --check entry points |
 
@@ -309,7 +309,7 @@ Owners, relative to `lab/`:
 - `src/recursive_horizons/nsc_spherical_episode_assessment.py`
 - `tests/test_nsc_spherical_episode_assessment.py`
 - `tests/test_nsc_regeneration_realization_independent.py`
-- [Episode](nsc-regeneration-episode.md), [assessment](nsc-spherical-episode-assessment.md), [independent audit](nsc-regeneration-realization-audit.md)
+- [Episode](https://doi.org/10.5281/zenodo.23090015), [assessment](https://doi.org/10.5281/zenodo.23090015), [independent audit](https://doi.org/10.5281/zenodo.23090015)
 
 The saved four-case continuation has status `FINAL`. It starts with the
 predecessor `dt=0.0005` final arrays at $T=0.05$ and stops at $T=0.085$
@@ -367,7 +367,7 @@ relative to `lab/`:
 - `tests/test_nsc_regeneration_uniform_independent.py`
 - `results/development/nsc-regeneration-controls-v1.json`
 - `results/development/nsc-regeneration-controls-v1.npz`
-- [nsc-regeneration-controls.md](nsc-regeneration-controls.md)
+- [nsc-regeneration-controls.md](https://doi.org/10.5281/zenodo.23090015)
 
 Status `MEASURED`. The second episode reaches $T=0.10$ at $n_f=512$ and
 $n_f=256$. `maintained_structure` is true, `renewed_structure` is false,
@@ -384,7 +384,7 @@ Read-only assessment of the v1 JSON and NPZ. Owners, relative to `lab/`:
 - `scripts/derive_nsc_regeneration_controls.py` (`--assess` writes; `--check` reads v1)
 - `tests/test_nsc_regeneration_controls.py`
 - `tests/test_nsc_regeneration_uniform_independent.py`
-- [nsc-regeneration-controls.md](nsc-regeneration-controls.md)
+- [nsc-regeneration-controls.md](https://doi.org/10.5281/zenodo.23090015)
 
 Status `ASSESSED`. `dynamics_rerun` is false. \(G>0\) is the initial
 convex-radius ansatz. The dynamic chart is positive \(r\), \(Q\), and \(L\).
@@ -474,7 +474,7 @@ six-mode dynamics. Owners, relative to `lab/`:
 - `scripts/derive_nsc_geometry_graded_window.py`
 - `tests/test_nsc_geometry_graded_window.py`
 - `results/development/nsc-geometry-graded-window-v1.json`
-- [nsc-geometry-graded-window.md](nsc-geometry-graded-window.md)
+- [nsc-geometry-graded-window.md](https://doi.org/10.5281/zenodo.23090015)
 
 Status `INITIAL_GRADED_COMPRESSION_NOT_INVARIANT`. `--check` recomputes
 and compares the stored record, including its source hashes, and does not
@@ -496,7 +496,7 @@ Diagnostic helper. It does not step a state. Owners, relative to `lab/`:
 - `tests/test_nsc_spherical_cauchy_weak.py`
 - `tests/test_nsc_spherical_cauchy_weak_independent.py`
 - `results/development/nsc-spherical-cauchy-weak-v1.json`
-- [nsc-spherical-cauchy-weak.md](nsc-spherical-cauchy-weak.md)
+- [nsc-spherical-cauchy-weak.md](https://doi.org/10.5281/zenodo.23090015)
 
 Status `PARTIAL_TERMS_NO_TOTAL_BOUND`. The saved `checkpoint_head` is
 `9a9090a`. `--check` and `verify_saved` remeasure from the declared v5
@@ -518,7 +518,7 @@ The weak helper's separate certificate and proof owners, relative to `lab/`:
 - `src/recursive_horizons/nsc_spherical_cauchy_weak.py`
 - `tests/test_nsc_spherical_cauchy_weak_bound.py`
 - `results/development/nsc-spherical-cauchy-error-v1.json`
-- [nsc-spherical-cauchy-weak.md](nsc-spherical-cauchy-weak.md#initial-lapse-component)
+- [nsc-spherical-cauchy-weak.md](https://doi.org/10.5281/zenodo.23090015)
 
 Status `FINITE_CONDITIONAL_INITIAL_LAPSE_BOUND`. The fine initial radius
 is within $4.06085\times10^{-6}$ of the unique smooth positive critical
@@ -538,7 +538,7 @@ recompute the window or replace the record. Owners, relative to `lab/`:
 - `scripts/derive_nsc_finite_turnover.py`
 - `tests/test_nsc_finite_turnover.py`
 - `results/development/nsc-finite-turnover-v1.json`
-- [nsc-finite-turnover.md](nsc-finite-turnover.md)
+- [nsc-finite-turnover.md](https://doi.org/10.5281/zenodo.23090015)
 
 Verdict `PASS_FINITE_CHANNEL_TURNOVER`. Cut activity
 $G=8986745/950450651136$. Near filtered-response shift
@@ -558,7 +558,7 @@ to `lab/`:
 - `scripts/derive_nsc_imbalance_turnover.py`
 - `tests/test_nsc_imbalance_turnover.py`
 - `results/development/nsc-imbalance-turnover-v1.json`
-- [nsc-imbalance-turnover.md](nsc-imbalance-turnover.md)
+- [nsc-imbalance-turnover.md](https://doi.org/10.5281/zenodo.23090015)
 
 Verdict `PASS_IMBALANCE_MEAN_CIRCULATION`. The saved record replays 34/34
 checks. From the repository root, existing evidence is replayed by
@@ -583,7 +583,7 @@ relative to `lab/`:
 
 - `src/recursive_horizons/nsc_spherical_feedback_action.py`
 - `tests/test_nsc_spherical_feedback_action.py`
-- [nsc-spherical-feedback-action.md](nsc-spherical-feedback-action.md)
+- [nsc-spherical-feedback-action.md](nsc-spherical-action.md)
 
 Module sha256
 `708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f`.
@@ -605,7 +605,7 @@ Separate from the chart above and from the historical
 
 - `src/recursive_horizons/nsc_conformal_adm_source.py`
 - `tests/test_nsc_conformal_adm_source.py`
-- [nsc-conformal-adm-source.md](nsc-conformal-adm-source.md)
+- [nsc-conformal-adm-source.md](https://doi.org/10.5281/zenodo.23090015)
 
 Module sha256
 `7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea`.
@@ -631,7 +631,7 @@ Owners, relative to `lab/`:
 - `tests/test_nsc_spherical_coupling.py`
 - `tests/test_nsc_spherical_coupling_constraint_algebra.py`
 - `results/development/nsc-spherical-coupling-control-v1.json`
-- [nsc-spherical-coupling.md](nsc-spherical-coupling.md)
+- [nsc-spherical-coupling.md](https://doi.org/10.5281/zenodo.23090015)
 
 Record sha256
 `88bea1c962478a2ec57e0c0f3844ab6ee9237d148dc1863f10122ee8fa5a9b60`.
@@ -676,7 +676,7 @@ witnesses above. Owners, relative to `lab/`:
 - `tests/test_nsc_spherical_galerkin_coupling.py`
 - `tests/test_nsc_spherical_galerkin_independent.py`
 - `results/development/nsc-spherical-coupling-control-v2.json`
-- [nsc-spherical-galerkin-coupling.md](nsc-spherical-galerkin-coupling.md)
+- [nsc-spherical-galerkin-coupling.md](https://doi.org/10.5281/zenodo.23090015)
 
 Verdict `FAIL_HELD_OUT_CONSTRAINT`. Renewal is false. This v2 control did
 not run $T=0.05$. A projected residual is not a physical pass. Residuals,
@@ -692,7 +692,7 @@ renewal, and not a rewrite of the v1 or v2 records. Owners, relative to
 
 - `scripts/derive_nsc_spherical_galerkin_refinement.py`
 - `results/development/nsc-spherical-coupling-refinement-v3.json`
-- [nsc-spherical-galerkin-coupling.md](nsc-spherical-galerkin-coupling.md#matched-refinement-v3)
+- [nsc-spherical-galerkin-coupling.md](https://doi.org/10.5281/zenodo.23090015)
 
 Verdict `FAIL_INITIAL_SOLVE`. Internal Newton stopped at rho $0.5$ with
 residual $1.2876060991167562\times 10^{-10}$. Full-source diagnostics are
@@ -714,7 +714,7 @@ contain $T=0.05$. The episode section above owns that saved measurement.
 The initial $10^{-8}$ flag is false and did not veto the
 measurement. The stored radius is the retained Newton best, not the last
 accepted trial. Archived probe bytes are mapped in
-[probes/README.md](../archive/reassembly-20261012/lab-context/archive/probes/README.md); v4 only reprints its
+[probes/README.md](https://doi.org/10.5281/zenodo.23090015); v4 only reprints its
 partial archive.
 
 ## Finite-window embedding v1, 2026-10-01
@@ -726,7 +726,7 @@ not a transfer of the closed-window evolution. Owners, relative to `lab/`:
 - `tests/test_nsc_finite_window_embedding.py`
 - `tests/test_nsc_finite_window_embedding_independent.py`
 - `results/development/nsc-finite-window-embedding-v1.json`
-- [nsc-finite-window-embedding.md](nsc-finite-window-embedding.md)
+- [nsc-finite-window-embedding.md](https://doi.org/10.5281/zenodo.23090015)
 
 Eight independent tests. Quadrature matches the original $H$ and $B$ at
 about $4.45\times 10^{-14}$; a direct analytic integral agrees at about
@@ -742,7 +742,7 @@ Owners, relative to `lab/`:
 - `src/recursive_horizons/nsc_finite_window_embedding_smooth.py`
 - `tests/test_nsc_finite_window_embedding_smooth.py`
 - `results/development/nsc-finite-window-embedding-v2.json`
-- [nsc-finite-window-embedding-smooth.md](nsc-finite-window-embedding-smooth.md)
+- [nsc-finite-window-embedding-smooth.md](https://doi.org/10.5281/zenodo.23090015)
 
 Status `SEAM_REGULAR_COMPRESSION_NOT_INVARIANT`.
 
@@ -754,7 +754,7 @@ trajectory. Owners, relative to `lab/`:
 - `src/recursive_horizons/nsc_spherical_cauchy_data.py`
 - `tests/test_nsc_spherical_cauchy_data.py`
 - `results/development/nsc-spherical-cauchy-data-v1.json`
-- [nsc-spherical-cauchy-data.md](nsc-spherical-cauchy-data.md)
+- [nsc-spherical-cauchy-data.md](https://doi.org/10.5281/zenodo.23090015)
 
 Three tests pass. For $\chi=p_r=p_\chi=0$ and constant $Q$, $p_Q$ is the
 mean-free antiderivative of the current. The mean and held-out current
@@ -769,7 +769,7 @@ branch $B$ as a prerequisite. Owners, relative to `lab/`:
 - `tests/test_nsc_regional_energy_exchange.py`
 - `tests/test_nsc_regional_energy_exchange_independent.py`
 - `results/development/nsc-regional-energy-exchange-v1.json`
-- [nsc-regional-energy-exchange.md](nsc-regional-energy-exchange.md)
+- [nsc-regional-energy-exchange.md](https://doi.org/10.5281/zenodo.23090015)
 
 Six owned tests and eight independent tests. Normal energy is
 $F_L/r=V\rho\,dx$. Proper $\rho$, $p_r$, $p_\perp$, and $j$ divide by
@@ -810,7 +810,7 @@ spherical-coupling trajectories.
 
 ## Continuous local source-error contribution, 2026-09-29
 
-The [exact-response majorant](nsc-ks-source-operator-majorant.md) now carries
+The [exact-response majorant](nsc-ks-source-operator-majorant-v7.md) now carries
 authenticated preparation errors into the actual history-minus-reference
 N/beta action for history 0b0e4ced. It uses characteristic row bounds and the
 existing continuous radius/coupling integrals. No numerical field norm or
@@ -825,7 +825,7 @@ signed rows in this family, its other positive angular family, other groups,
 quadrature and other numerical error components remain unbounded here.
 This partial result is not a complete upstream-budget certificate.
 
-The [numerical-endpoint insertion helper](nsc-ks-covariance-insertion.md)
+The [numerical-endpoint insertion helper](https://doi.org/10.5281/zenodo.23090015)
 provides the alternative epsilon/gamma embedding through the original
 three-column source basis. It requires certified field errors to enlarge
 endpoint norms and keeps source-evidence authentication with the caller.
@@ -835,7 +835,7 @@ The new correction and continuous-response proofs await independent review.
 
 ## Enclosed lower-middle source correction, 2026-09-29
 
-The [correction owner](nsc-vacuum-source-correction.md) evolves the small
+The [correction owner](nsc-ks-source-operator-majorant-v7.md) evolves the small
 difference from the vacuum covariance expansion, retaining its exact forcing
 and a nonzero horizon-to-start error bound. The first original group14/mid24_1
 row (E=16.019251120011916) now has a 484-cell proof witness with vacuum Bloch
@@ -852,7 +852,7 @@ rows and families remain uncovered.
 
 ## Uniform high-energy preparation remainder, 2026-09-29
 
-The [vacuum-source remainder owner](nsc-vacuum-source-remainder.md) derives
+The [vacuum-source remainder owner](nsc-ks-source-operator-majorant-v7.md) derives
 a finite inverse-energy covariance expansion and bounds its exact equation
 defect using norm-preserving homogeneous Bloch evolution. The directed
 constant is independent of energy. Thermal and coherent contributions use
@@ -884,7 +884,7 @@ so its bound is not a measurement of that large an actual source discrepancy.
 
 ## Archived upstream source and signed error, 2026-09-29
 
-The [upstream covariance successor](nsc-subgap-upstream-covariance.md) reaches
+The [upstream covariance successor](nsc-ks-source-operator-majorant-v7.md) reaches
 the production rho_up=1.0300000000000002 slice and compares with the unchanged
 archived columns, rather than a fresh replacement preparation. For the same
 original group14/low16_1 row0, operator errors are bounded by 6.026e-12 for
@@ -930,7 +930,7 @@ crossing below zero; the recorded positive-mass values are unchanged.
 
 ## Original subgap source covariance, 2026-09-29
 
-The [covariance enclosure](nsc-subgap-source-covariance.md) now connects the
+The [covariance enclosure](nsc-ks-source-operator-majorant-v7.md) now connects the
 original group14/low16_1 row0 exterior reflection through the exact horizon
 frame and interior transport to the saved rho=1 source. It preserves the
 original coherence and source occupations. The actual PG-to-KS restriction
@@ -953,7 +953,7 @@ The older checkpoints below retain their original missing-step descriptions.
 
 ## Directed cubic coefficient pilot, 2026-09-29
 
-The [Volterra enclosure](nsc-ks-cubic-uv-enclosure.md) now evaluates the reduced
+The [Volterra enclosure](https://doi.org/10.5281/zenodo.23090015) now evaluates the reduced
 massless system using ball-valued coordinate jets, characteristic composition
 and explicit integral Taylor remainders. The original group-1 pair is enclosed
 at the current history's incoming center, retaining both source signs and the
@@ -972,7 +972,7 @@ concrete algebraic defect; their stated OPEN gaps remain in force.
 
 ## Generated cubic UV coefficient, 2026-09-29
 
-The [massless cubic-current owner](nsc-ks-cubic-uv-current.md) now constructs
+The [massless cubic-current owner](https://doi.org/10.5281/zenodo.23090015) now constructs
 minor A3, the linked h3/n4 transport and the e^-3 N/beta contractions for the
 original group-1 angular pair on the current history. Algebraic identities
 retain the common upstream representative consistently. Actual action signs
@@ -989,7 +989,7 @@ it offers a smaller Volterra-quadrature target for the missing C4 enclosure.
 
 ## Full-profile horizon series, 2026-09-29
 
-The [exact horizon-frame owner](nsc-metric-horizon-frame.md) now uses the full
+The [exact horizon-frame owner](nsc-ks-source-operator-majorant-v7.md) now uses the full
 compact metric, a directed horizon root and a convergent Frobenius series with
 a Cauchy majorant. For the existing group14/low16_1 row0 radial-phase endpoint,
 the frame remainder is below 2.50e-22. The same record maps the bounded phase
@@ -1009,7 +1009,7 @@ error budget unchanged. Current conserved-current and chart controls live in
 
 ## Surface UV invariance and extended source transport, 2026-09-28
 
-The [upstream invariance identity](nsc-ks-uv-upstream-invariance.md) removes common
+The [upstream invariance identity](nsc-ks-massive-cubic-uv.md) removes common
 spacetime-constant scalar upstream normalization coefficients from the formal
 occupied-vacuum C4 **difference on Sigma**. It retains arbitrary common
 k=n2-s*q_z rather than assigning n2_up=0. The actual L0 recurrence, continuity,
@@ -1018,7 +1018,7 @@ A3/n4 terms must change together; varying R while freezing them gives a spurious
 remaining term. The theorem does not remove whole-slab or physical source error.
 Its symbolic identities and countercontrols passed independent Grok review.
 
-The [radial phase continuation](nsc-massive-jost-transport-bound.md) now follows
+The [radial phase continuation](nsc-ks-source-operator-majorant-v7.md) now follows
 an original group-14 source label through 906 original DOP853 cells to a radial
 coordinate offset about 1.0218e-4 outside the coordinate horizon. Exact interval
 metric, phase-monotonicity and tube checks pass on every cell. Refining the
@@ -1037,7 +1037,7 @@ No numerical C4, physical source-column bound or closed gate is claimed.
 
 ## New Stage-2 primitives, 2026-09-28
 
-The [exterior Jost phase method](nsc-massive-jost-phase-bound.md) gives a directed
+The [exterior Jost phase method](nsc-ks-source-operator-majorant-v7.md) gives a directed
 finite-starting-radius error over the entire exterior half-line. Twelve pilot
 cases use three original group-14 energies, both angular signs, and R=60/120.
 At R=60 their combined initializer phase bounds are below 1.84e-15. The
@@ -1045,13 +1045,13 @@ independent Grok review found no blocking defect in the comparison argument;
 14 focused controls pass. Radial transport, horizon sewing and physical rho=1
 source-column accuracy still need bounds. Existing source columns are unchanged.
 
-The [minor-A3 UV primitive](nsc-ks-uv-minor-a3.md) supplies explicit second
+The [minor-A3 UV primitive](nsc-ks-massive-cubic-uv.md) supplies explicit second
 geometry/phase jets and bounds the jet part of the massless minor A3. It isolates
 an unowned upstream major-A2 coefficient multiplying delta(1/r); that coefficient
 is not set to zero. The complete minor A3, C4 and C_M remain missing. The numerical
 difference-coupling helper rejects massive channels outside this derived scope.
 
-The [active-ramp field pilot](nsc-ks-field-ramp-pilot.md) captures and encloses
+The [active-ramp field pilot](https://doi.org/10.5281/zenodo.23090015) captures and encloses
 cell 150 with the same source/history and authenticated profile payload. Its
 order-0/order-1 residual integrals are about (2.73e-16, 1.24e-12). One cell and
 four selected energy rows do not certify the whole history or family. The
@@ -1065,7 +1065,7 @@ No bound above is inserted as a completed physical error-budget component.
 
 ## Endpoint contraction and original-source route, 2026-09-28
 
-The [continuous endpoint contraction](nsc-ks-endpoint-contraction.md) now supplies
+The [continuous endpoint contraction](https://doi.org/10.5281/zenodo.23090015) now supplies
 uniform Fourier norms of the captured difference field and its actual axial
 derivative. The campaign joins them to the propagated numerical errors and
 contracts the positive/negative energy covariances separately. A source/grid
@@ -1089,7 +1089,7 @@ replay passes. Targeted scientific owners from Windows commit `984b46e7` are reu
 Windows repository routing and paper rewrites are not imported.
 
 - `nsc_ks_radius_coupling_bounds.py` closes continuous M and M_z integrals using
-  exact radius-profile bounds; [derivation](nsc-ks-radius-coupling-bounds.md).
+  exact radius-profile bounds; [derivation](nsc-ks-source-operator-majorant-v7.md).
 - `nsc_ks_reference_residual.py` encloses the anchored joint reference defect;
   the saved cell-122 pilot gives integral upper 2.8866449342721377e-16. This is one
   cell. The campaign sums every authenticated segment, including replayed prefixes.
@@ -1113,7 +1113,7 @@ Windows repository routing and paper rewrites are not imported.
 
 ## Directed certification-method successors, 2026-09-25
 
-The [local-Fourier field pilot](nsc-ks-current-field-pilot-v4.md) directly
+The [local-Fourier field pilot](https://doi.org/10.5281/zenodo.23090015) directly
 integrates retained compact-profile coefficients and locally encloses the
 omitted band. On the immutable family-`14_1` cell it changes the continuous
 normalized order-zero/order-one bounds from about `(5.481e-4, 6.429e-1)` to
@@ -1121,11 +1121,11 @@ normalized order-zero/order-one bounds from about `(5.481e-4, 6.429e-1)` to
 coefficient payload reusable by whole-cone pilots. It is one cell, not a field
 certificate.
 
-The [upstream pilot](nsc-ks-upstream-error.md) forms the DOP853 defect before
+The [upstream pilot](nsc-ks-source-operator-majorant-v7.md) forms the DOP853 defect before
 norms, using Bernstein convexity and the exact anti-Hermitian generator. It
 encloses the archived family-14 continuation at about `6.64e-13` unweighted;
 the physical `rho=1` column error remains separate. The
-[low/subgap successor](nsc-ks-low-subgap-decision-v2.md) reuses the already
+[low/subgap successor](nsc-ks-source-operator-majorant-v7.md) reuses the already
 passing group-12/group-32 order-24 windows and identifies the actual remaining
 work: directed reconstruction error for 102 physical rho=1 panels below V5's
 joined thresholds, followed by correlated transport. The historical
@@ -1135,20 +1135,20 @@ the gate OPEN.
 The corrected solve infrastructure is separated from the historical campaign
 drivers. `nsc_ks_history_evaluator.py` binds DOP853/CF4, primal/joint control
 and tangent tolerances into cache identity. The
-[retarded trust-region primitive](nsc-ks-retarded-trust-region.md) handles the
+[retarded trust-region primitive](nsc-ks-local-gate-search-v1.md) handles the
 rectangular 258-by-64 system and refresh policy without launching a run. The
 [certificate-v2 owner](nsc-local-incoming-gate-certificate-v2.md) audits the
 current evidence as OPEN and refuses to record until every continuous bound
 and mutation control is present.
 
-The [finite-history UV remainder successor](nsc-ks-current-uv-remainder.md)
+The [finite-history UV remainder successor](https://doi.org/10.5281/zenodo.23090015)
 checks N and beta angular parity through the first noncancelling paired
 `E^-3` order and the M=4 defect `E^-4 L0 A4`. Its thermal tail is negligible
 on the declared 160/320 cutoffs without being rounded to zero. Numerical
 `C4`, `C_M` and the vacuum tail remain `None` until transported major A2/A3,
 n4, upstream higher-order H2 and current-history `L0 A4` integrals are owned.
 
-The [conditional continuous-constraint owner](nsc-ks-continuous-constraint-bound.md)
+The [conditional continuous-constraint owner](https://doi.org/10.5281/zenodo.23090015)
 defines the final between-node interface from directed full-residual derivative
 bounds and exact-rational final-addition arithmetic. It does not fill the
 between-node or arithmetic slots until final field/contraction inputs exist.
@@ -1176,7 +1176,7 @@ roadmap or an order to resume.
 
 ## Evaluator repair and calibration, 2026-09-25
 
-The [historical handover](../archive/reassembly-20261012/lab-context/handover.md#aktuell-fortsättning-2026-09-25) recorded
+The [historical handover](nsc-ks-source-operator-majorant-v7.md) recorded
 that dated checkpoint; it does not own the current task, and it does not
 resume the paused gate campaign. The [claim ledger](claim-ledger.md#regenerative-interpretation-and-the-local-calculation)
 connects the inherited operator law and regenerative interpretation to the
@@ -1188,7 +1188,7 @@ The current history `0b0e4ced…` now has nodal maxima
 `(6.26318581e-4, 1.11622130e-4)` remain historical measurements.
 The local tolerance remains `3e-11`; the physical verdict is OPEN.
 The true adjoint, separate step-error controls and strict family bindings
-are implemented. The [repair/control record](nsc-ks-evaluator-repair-v2.md)
+are implemented. The [repair/control record](nsc-ks-source-operator-majorant-v7.md)
 also identifies and removes the reference-interpolation offset through the
 exact reference-plus-difference reconstruction. Its zero-history change is
 exactly zero; the complete-family degree indicator is about `2.5e-15`.
@@ -1211,7 +1211,7 @@ primal-control values quoted in the historical account below.
 The following account preserves the earlier search state. It is not the
 current run-driver assignment or instruction to resume a high-mode campaign.
 
-The [historical handover](../archive/reassembly-20261012/lab-context/handover.md) recorded the interruption
+The [historical handover](nsc-ks-source-operator-majorant-v7.md) recorded the interruption
 point at that time. One Cursor session then drove Dirac runs. Value-only iterate6 at 47
 nodes measures `(8.02778773e-4, 3.61431642e-6)` in 105.3 wall seconds.
 The numerical-floor ladder did not declare loop or certificate
@@ -1219,7 +1219,7 @@ numerics. The largest one-knob movement is `8.124e-4`. The value-only
 campaign best at the base solver is the n=32 trial, merit `5.881e-4`.
 Named gap: `value_only_indicator_floor_above_1e-10`.
 The ruler register
-[nsc-ks-gate-ruler-drift](nsc-ks-gate-ruler-drift.md) measures a
+[nsc-ks-gate-ruler-drift](https://doi.org/10.5281/zenodo.23090015) measures a
 same-history N difference of `5.78444155e-5` between two tangent sets of
 `b4b53f0b…`. That is an indicator. Best measured primal-control residual
 is still `ad759424…`: `(2.61952127e-09, 7.29271610e-08)`, prediction
@@ -1259,10 +1259,10 @@ low/subgap stay `None`: dense matter is not stored, the linear UV
 contraction has no numerical tail on `I`, fine-matter accuracy is bound
 to axial profile `a4c061f2…`, and the group13 subgap panel is not a
 constraint error at this history. Register:
-[nsc-ks-n128-image-channels](nsc-ks-n128-image-channels.md).
+[nsc-ks-n128-image-channels](https://doi.org/10.5281/zenodo.23090015).
 
 The Dirac-free current search is
-[nsc-ks-class-current-neighborhood](nsc-ks-class-current-neighborhood.md).
+[nsc-ks-class-current-neighborhood](https://doi.org/10.5281/zenodo.23090015).
 `L(E)` and `Π'+E_β` change sign on `ad759424…`. `L(baseline)` stays near
 `−0.057120987` while geometry, matter and edge change sign. The six
 saved histories keep a positive integrated defect, from `4.86674810e-4`
@@ -1279,7 +1279,7 @@ leftover-null, the n=16 `v·E` projection, the freed jet, the n=32
 geometry leftover, Fourier-on-`I`, the assembled n=32 image, the trivial
 principal cokernel, the n=128 whitened image, the unenclosed
 UV/between-node/field/low-subgap channels, and frozen `P_K`. Register:
-[nsc-ks-certificate-tool-inventory](nsc-ks-certificate-tool-inventory.md).
+[nsc-ks-certificate-tool-inventory](https://doi.org/10.5281/zenodo.23090015).
 Named stall: `declared_class_certificate_tools_exhausted`. The missing
 primitive is a necessary relation, or a residual-image lower bound, on
 evolved `C_Σ` for every declared `(w,U)` history on `I`, strictly above
@@ -1316,10 +1316,10 @@ are locked regressions, not the active history class.
 
 | Current evidence | Verified result | Scope |
 |---|---|---|
-| [Complete fine-history validation](nsc-ks-fine-validation.md) | All246 continuous time cells; 6451.743 proof CPU seconds | Saved nonzero history, N=2048, four original source energies; relative to saved upstream columns |
-| [Numerical matter accuracy](nsc-ks-fine-matter-accuracy.md) | N,beta error uppers `(1.76370e-12,6.99832e-13)` below the `1e-11` control tolerance | Includes reference, field, axial derivative, evaluation and contraction arithmetic at the21 saved incoming nodes; source accuracy separate |
-| [Complete retained finite-source response](nsc-ks-retained-response-sum.md) | All60 nonzero-angular positive families and120 distinct signed families; 48,168 positive energy rows; replay passes | Control amplitude .001; exact ell=0 zero responses retain their baseline; original finite quadratures only |
-| [Actual-node interpolation component](nsc-ks-energy-interpolation-accuracy.md) | Summed N,beta uppers `(3.75761e-14,2.97279e-14)` | All retained families; node evolution and numerical interpolation arithmetic are separate errors |
+| [Complete fine-history validation](nsc-ks-source-operator-majorant-v7.md) | All246 continuous time cells; 6451.743 proof CPU seconds | Saved nonzero history, N=2048, four original source energies; relative to saved upstream columns |
+| [Numerical matter accuracy](nsc-ks-source-operator-majorant-v7.md) | N,beta error uppers `(1.76370e-12,6.99832e-13)` below the `1e-11` control tolerance | Includes reference, field, axial derivative, evaluation and contraction arithmetic at the21 saved incoming nodes; source accuracy separate |
+| [Complete retained finite-source response](https://doi.org/10.5281/zenodo.23090015) | All60 nonzero-angular positive families and120 distinct signed families; 48,168 positive energy rows; replay passes | Control amplitude .001; exact ell=0 zero responses retain their baseline; original finite quadratures only |
+| [Actual-node interpolation component](https://doi.org/10.5281/zenodo.23090015) | Summed N,beta uppers `(3.75761e-14,2.97279e-14)` | All retained families; node evolution and numerical interpolation arithmetic are separate errors |
 
 The complete retained control has raw N,beta maxima
 `(0.8325941365721784,0.27555059156325773)`. Its matter-change maxima are
@@ -1334,15 +1334,15 @@ between incoming nodes. Missing bounds remain explicit. The completed
 four-energy field proof is not transferred automatically to other energies,
 meshes or channels. The error budget must close before a physical gate claim.
 
-The [batch assembly](nsc-ks-batched-constraints.md) counts baseline and
+The [batch assembly](https://doi.org/10.5281/zenodo.23090015) counts baseline and
 geometry once. [Operator interpolation](nsc-ks-energy-propagator.md) retains
 each original source column, covariance and weight. Its
-[derivative majorants](nsc-ks-energy-interpolation-bound.md) use the correct
+[derivative majorants](nsc-ks-energy-propagator.md) use the correct
 row-l2/max norm and sqrt(2) physical-field conversion; the
-[actual-node factor](nsc-ks-energy-node-bound.md) encloses rounded node
+[actual-node factor](https://doi.org/10.5281/zenodo.23090015) encloses rounded node
 locations. Neither introduces a new state or a stress compensation.
 
-The [exact Weyl-defect owner](nsc-weyl-commutator-remainder.md) connects the
+The [exact Weyl-defect owner](nsc-ks-source-operator-majorant-v7.md) connects the
 formal spatial projector to the actual kinetic and Fourier-shift products.
 Seven focused tests verify the products against independent Bloch matrices,
 the two-sided Taylor factor and covariance Duhamel transport in decreasing
@@ -1350,9 +1350,9 @@ rho. These are identities and conditional remainder propagators; numeric
 symbol/transfer seminorms are still required. The auxiliary `C-P` split does
 not replace the source or add a term to the action.
 
-The [mixed geometry jets](nsc-ks-spacetime-geometry-jets.md) retain total
+The [mixed geometry jets](nsc-ks-radius-enclosure.md) retain total
 T/z order9 in the actual coordinate clock. The reviewed
-[Bloch trace bound](nsc-bloch-trace-bound.md) includes the spinor
+[Bloch trace bound](nsc-evolved-incoming-constraints.md) includes the spinor
 Hilbert--Schmidt factor, short-period evaluation constants and conservative
 denominator enclosures. These helpers require numerical defect seminorms;
 they do not turn formal symbol order into an error certificate.
@@ -1361,17 +1361,17 @@ both saved cells. Their strict padding-minus-2D margins exceed0.0464 and
 0.0462 respectively. This establishes the local geometric embedding of the
 same Dirac problem; finite-grid and source errors remain separate.
 
-The [nonlinear radius/covariance record](nsc-ks-radius-covariance-bounds.md)
+The [nonlinear radius/covariance record](nsc-ks-source-operator-majorant-v7.md)
 now binds pointwise derivatives and Fourier-l1 moments through order9 to
 the actual saved profile and normal support. Across all63 angular families,
-the [direct covariance-moment propagator](nsc-fourier-covariance-moments.md)
+the [direct covariance-moment propagator](https://doi.org/10.5281/zenodo.23090015)
 has diagonal multiplier at most `1.00001293494` and zeroth-to-first moment
 coefficient at most `0.000611436568`. The original source is unchanged.
 These small propagation constants localize the remaining UV work to the
 actual auxiliary-projector coefficients, the initial covariance error and
 the time-integrated exact defect. None of those missing quantities is zeroed.
 
-The [regular auxiliary projector](nsc-scaled-reference-projector.md) now
+The [regular auxiliary projector](nsc-mode-resolved-cauchy-state.md) now
 retains `P0=P_infinity+mu*B0` and `Pj=mu^(j+1)*Bj`, `mu=1/abs(k)`.
 Nine focused tests pass, including an actual-profile geometry box with
 `mu in [0,1/64]`, both momentum signs and retained mixed derivatives.
@@ -1379,7 +1379,7 @@ These are auxiliary-symbol enclosures through infinite momentum, not a
 changed-history UV stress certificate. The exact Weyl-rest assembly still
 needs its small- and large-transfer coefficient bounds and time integral.
 
-The first [actual-history small-transfer box](nsc-weyl-small-transfer-bound.md)
+The first [actual-history small-transfer box](nsc-ks-source-operator-majorant-v7.md)
 now has directed coefficients for `C5/abs(k)^5+C6/abs(k)^6`, for both
 momentum signs and axial derivative orders0..2. One2.161 CPU-second algebra
 run used the saved profile and original group14 parameters; replay passes.
@@ -1394,13 +1394,13 @@ Those projections cannot supply missing Pauli components, and nested-node
 agreement remains an indicator rather than a certified source remainder.
 No complex contour object is accepted as a physical Gaussian mode column.
 
-The [subgap matrix identity](nsc-subgap-covariance-matrix.md) now retains
+The [subgap matrix identity](nsc-pg-threshold-projection.md) now retains
 all four Pauli components, the actual mode Gram matrix, reflection modulus
 and coherent cross term. It agrees with the original three-column source
 on all304 retained subgap rows to `2.24e-16` against `3e-11`.
 This is a source identity, not a subgap quadrature or preparation bound.
 
-The [momentum-integrated auxiliary control](nsc-weyl-integrated-moments.md)
+The [momentum-integrated auxiliary control](nsc-ks-source-operator-majorant-v7.md)
 now includes small and large Fourier transfers over the whole axial cell
 on one preparation-time box. At canonical split1024, the bounded auxiliary
 gives zeroth/first moment integral uppers about `(8.76e-9,1.20e-5)` on that
@@ -1409,7 +1409,7 @@ campaign by the same method. They are upper bounds, not a physical residual
 or a NON-EXISTENCE obstruction. Low canonical momentum, initial covariance
 error and the source-input cutoff relation remain separate missing terms.
 
-The [saved-state kernel bridge](nsc-evolved-kernel-bridge-control.md) applies
+The [saved-state kernel bridge](https://doi.org/10.5281/zenodo.23090015) applies
 the owned common equal-time kernel pairing to the evolved source columns
 and an independent finite canonical-momentum quadrature. Its zero-split
 identity residual is `1.89e-14` against `3e-11`; no evolution is rerun.
@@ -1417,7 +1417,7 @@ The finite source cutoff, reference tail and coincidence-limit remainder
 are still unbounded. This control does not change the certified geometric
 coefficients or insert a compensating stress term.
 
-An [exact globally unitary control](nsc-source-cutoff-unitary-control.md)
+An [exact globally unitary control](nsc-ks-source-operator-majorant-v7.md)
 shows why the source-cutoff/coincidence order cannot be settled by
 per-column phase arguments. Its complete covariance is unchanged while
 the differentiated, truncated coincidence kernel retains a finite edge
@@ -1425,14 +1425,14 @@ term. Exact identities vanish; independent matrix differentiation agrees
 within `2.07e-12` against `1e-10`. This toy alone determines no NSC
 correction; the actual Dirac derivation is separate below.
 
-The [actual Dirac density transport](nsc-dirac-source-phase-transport.md)
+The [actual Dirac density transport](https://doi.org/10.5281/zenodo.23090015)
 now fixes the formal source-frequency coefficient `delta n2_s=s*f'_s`.
 It follows both from exact continuity and from the next spinor recurrence,
 for both energy signs; all symbolic residuals are zero. The phase-only
 argument cannot discard this amplitude response. Its formal record is now
 joined to the uniform argument in the following bridge.
 
-The [same-action source-cutoff bridge](nsc-source-cutoff-bridge.md) now
+The [same-action source-cutoff bridge](nsc-ks-source-operator-majorant-v7.md) now
 relates the owned differentiated kernel limit to the infinite
 coincidence-first source sum. A finite source-frequency expansion through
 M>=3, with the owned H2 propagation, gives an integrable differentiated
@@ -1443,11 +1443,11 @@ residuals. This is a scoped analytic identity, not a numerical gate: its
 actual raw tail at160/320 still lacks a numerical bound. The original
 analytic record does not itself modify any assembly.
 
-The [phase quadrature owner](nsc-dirac-source-phase-evaluation.md) and
-[joined evaluator](nsc-ks-cutoff-bridge-evaluator.md) now apply that identity
+The [phase quadrature owner](https://doi.org/10.5281/zenodo.23090015) and
+[joined evaluator](https://doi.org/10.5281/zenodo.23090015) now apply that identity
 with the full retarded phase derivative. Original source fields remain
 unchanged; every represented signed angular family contributes once.
-The [saved all-family control](nsc-ks-cutoff-bridge-control.md) has joined
+The [saved all-family control](https://doi.org/10.5281/zenodo.23090015) has joined
 N,beta maxima `(0.7859347624217665,0.24589507882962786)`, compared with its
 unchanged raw maxima `(0.8325941365721784,0.27555059156325773)`.
 The phase-edge derivative residual is `(2.24504e-11,1.40244e-11)` against
@@ -1457,7 +1457,7 @@ and joined-evaluator tests pass, including the full joined Jacobian.
 The control uses no new source or field evolution. The old raw record is
 retained, and the complete numerical error budget and local gate stay OPEN.
 
-The [input-frequency angular parity](nsc-source-tail-angular-parity.md)
+The [input-frequency angular parity](nsc-ks-source-operator-majorant-v7.md)
 now cancels the full raw inverse-square N,beta coefficient in all30
 original angular pairs. Their source grids, quadrature weights and
 multiplicities agree exactly. The complete observable conjugation checks
@@ -1477,7 +1477,7 @@ the physical solve remains open. The
 candidate to fixed upstream batches, the owned energy propagator, explicit
 signed partners and the batched constraint assembly. It snapshots source,
 baseline and coefficient buffers and preserves all2n retarded directions.
-The [original-source control](nsc-ks-history-evaluator-control.md) restores
+The [original-source control](https://doi.org/10.5281/zenodo.23090015) restores
 16 saved positive rows and their negative partners without re-preparing
 them. Its16-direction finite-difference residual is
 `(7.53964e-12,3.75167e-12)` against the `3e-8` derivative-control tolerance.
@@ -1485,7 +1485,7 @@ Saved-operator replay and30 focused adapter/Newton tests pass. The raw
 partial constraint maxima `(0.707762,0.219148)` are not a root; complete
 source, field, cutoff/coincidence and between-node errors remain OPEN.
 
-The [coupled-history throughput pilot](nsc-ks-coupled-history-pilot.md)
+The [coupled-history throughput pilot](https://doi.org/10.5281/zenodo.23090015)
 now activates both functions at eight coefficients each. Its geometric
 solver guess has `w'(center)=0.00344601055746` and constant
 `U=12.1243555761`; the actual state is newly evolved from saved original
@@ -1496,10 +1496,10 @@ group responses and are not a physical root. Saved-operator replay passes
 without new field evolution. This measures the cost of a full retained
 evaluation for this new history; it does not bypass the source/error gate.
 
-The [directed phase integrator](nsc-dirac-source-phase-bound.md) first
+The [directed phase integrator](https://doi.org/10.5281/zenodo.23090015) first
 closed its one-point value enclosure with exact dyadic rho cells and a
 degree14 Taylor remainder. The
-[coupled-history phase accuracy record](nsc-ks-coupled-phase-accuracy.md)
+[coupled-history phase accuracy record](https://doi.org/10.5281/zenodo.23090015)
 now covers all23 solve/verification nodes of the new history. Comparing
 the actual numerical gradient directly to its true-value balls gives
 N,beta error uppers `(1.68416e-12,1.42151e-12)` for192 Gauss nodes, below
@@ -1532,10 +1532,10 @@ matter derivative differences are below `7.67e-16`. Twelve focused tests
 and saved-operator replay pass. The control tests four original signed
 source energies, not all energies in the interpolation interval. A rigorous
 interpolation and node-evolution error budget remains required before this
-adapter can certify a source sum. The [batch accumulator](nsc-ks-batched-constraints.md)
+adapter can certify a source sum. The [batch accumulator](https://doi.org/10.5281/zenodo.23090015)
 retains the three exact ell=0 zero responses and their baseline allocations.
 
-The [retained group14 response](nsc-ks-retained-response-control.md) now
+The [retained group14 response](https://doi.org/10.5281/zenodo.23090015) now
 uses all584 positive rows in its four original panels, plus the explicit
 opposite-angular negative partner. Their combined N,beta matter-change
 maxima are `(5.66563e-5,2.28888e-5)`. The partial constraint maxima are
@@ -1544,7 +1544,7 @@ seconds and reused the saved operator without a field solve. All37 fixed
 upstream batches and both retarded family responses are saved and replayed.
 Other families and the full spectral/field error budget remain OPEN.
 
-The [joint reference/difference KS control](nsc-ks-difference-control.md)
+The [joint reference/difference KS control](https://doi.org/10.5281/zenodo.23090015)
 resolves the measured value floor for the saved nonzero `14_1` source
 control. The 256/512-node matter differences are
 `(2.26485e-13,1.64028e-12)`; tightened time tolerances change them by
@@ -1571,7 +1571,7 @@ radius-response identities keep their baseline allocations. The next
 scientific gap is the changed-history source sum, including its high-energy
 observable remainder and the remaining low/subgap error budget.
 
-The [linear UV contraction identity](nsc-ks-linear-uv-contractions.md)
+The [linear UV contraction identity](nsc-ks-source-operator-majorant-v7.md)
 now includes the diagonal Q3 forced by the projector-pair relation. Its
 E-linear normal vertex cancels the apparent Q2-only `E^-2` insertion,
 separately for each angular sign; both constraint coefficients vanish
@@ -1580,7 +1580,7 @@ No numeric constant uniform in axial transfer or finite-history remainder
 bound is supplied by this identity. Those are the remaining UV connection,
 not an inferred divergence or a reason to add another action term.
 
-The [continuous-trajectory control](nsc-ks-trajectory-control.md) now saves
+The [continuous-trajectory control](https://doi.org/10.5281/zenodo.23090015) now saves
 61 anchored reconstruction segments of the actual nonzero source control.
 One 64-node run used 0.331 CPU seconds of 30; endpoint reconstruction is
 exact. Sampled residual rectangle indicators for axial orders 0,1,2 are
@@ -1597,11 +1597,11 @@ are not substituted as lower bounds. Nine focused tests and both record
 replays pass. Continuous time/Fourier/profile-arithmetic enclosures are the
 next field-error input; the physical local gate remains OPEN.
 
-Ball-arithmetic [geometry jets](nsc-ks-ball-geometry.md),
-[trajectory coefficients](nsc-ks-ball-trajectory.md),
-[operator coefficient remainders](nsc-ks-ball-operator.md) and the
-[continuous residual polynomial](nsc-ks-residual-polynomial.md) are connected.
-The [local characteristic estimate](nsc-ks-characteristic-error.md) needs
+Ball-arithmetic [geometry jets](https://doi.org/10.5281/zenodo.23090015),
+[trajectory coefficients](https://doi.org/10.5281/zenodo.23090015),
+[operator coefficient remainders](https://doi.org/10.5281/zenodo.23090015) and the
+[continuous residual polynomial](nsc-ks-residual-error.md) are connected.
+The [local characteristic estimate](https://doi.org/10.5281/zenodo.23090015) needs
 only the field and its first axial derivative on the backward cone of I.
 It retains phase cancellation and the B_z error term. These are error
 propagators; a completed cone residual sum is still required.
@@ -1614,12 +1614,12 @@ Eighteen focused ball-pipeline tests and saved-table replay pass. The next
 step sharpens the profile tail and assembles all continuous residual
 contributions before any physical field-accuracy PASS.
 
-The [refined profile certificate](nsc-ks-profile-fourier-refinement.md) now
+The [refined profile certificate](nsc-ks-profile-fourier-bound.md) now
 uses p=16, M=65536, K=8192. For w its value/first/second derivative tails
 are bounded by `(2.18337e-23,3.01024e-18,4.17152e-13)`; all shared
 coefficient intervals agree with the earlier table. This cost 0.788 CPU
 seconds and no field/source run. The first
-[continuous residual cell](nsc-ks-continuous-residual-cell.md) combines
+[continuous residual cell](https://doi.org/10.5281/zenodo.23090015) combines
 Fourier convolution, Bernstein time bounds and all geometric remainders
 on saved segment 30 of 61 and the entire numerical period. Its normalized
 residual/first-derivative upper bounds are `(1.02906e-10,5.45384e-8)`.
@@ -1631,14 +1631,14 @@ finer prepared trajectory and suitably tight integration tolerances.
 Twenty-one focused tests and record-binding/error-composition checks pass.
 Full-history, source-energy and local physical constraint gates remain OPEN.
 
-The [bounded profile reduction](nsc-ks-profile-compression.md) cuts the
+The [bounded profile reduction](nsc-ks-profile-fourier-bound.md) cuts the
 same residual-cell validation from 30.295 to 4.027 CPU seconds by retaining
 1024 profile coefficients per side and adding every discarded coefficient
 to the continuous derivative tails. The resulting bounds remain
 `(1.02906e-10,5.45384e-8)` at the displayed precision. No physical profile
 or field is changed.
 
-The [fine trajectory](nsc-ks-fine-trajectory.md) is now captured and replayed:
+The [fine trajectory](nsc-ks-source-operator-majorant-v7.md) is now captured and replayed:
 N=2048, rtol=5e-14, atol=5e-19, maximum rho step1/8192. One run took
 8.107 CPU seconds of180 and saved246 accepted steps in62 bounded chunks.
 Initial source columns, zero initial difference and final incoming fields
@@ -1649,14 +1649,14 @@ binds the same functions across resolutions. Continuous validation of the
 fine history, its matching-period profile table and full source accuracy
 are still OPEN. No further coarse trajectory validation is scheduled.
 
-The [matching-period fine profile table](nsc-ks-fine-profile-table.md) is
+The [matching-period fine profile table](nsc-ks-source-operator-majorant-v7.md) is
 now verified and bound by the analytic profile identity. Its first-derivative
 tail for w is at most3.05165e-18. The
-[fine-history validator](nsc-ks-fine-validation.md) checkpoints each continuous
+[fine-history validator](nsc-ks-source-operator-majorant-v7.md) checkpoints each continuous
 cell and reuses completed proofs. The recorded pilot at segment122 gives
 residual/axial-residual integral bounds `(6.25164e-17,1.89413e-16)` and used
 25.135 CPU seconds. Full coverage is being accumulated; no partial sum is a
-field-error certificate. The [finite matter-error owner](nsc-ks-finite-matter-error.md)
+field-error certificate. The [finite matter-error owner](nsc-ks-source-operator-majorant-v7.md)
 retains coherent source norm bounds and the actual envelope momentum when
 converting a completed numerical field bound to N,beta insertion error.
 
@@ -1669,15 +1669,15 @@ characteristic bounds. This does not certify the remaining cells or the
 physical source/gate. Do not restart completed cell proofs or the fine
 field evolution.
 
-The [resolved local reference control](nsc-local-reference-accuracy.md)
+The [resolved local reference control](https://doi.org/10.5281/zenodo.23090015)
 now has sampled N,beta drift(5.55778e-12,7.77587e-12) on21 nodes of I,
 below3e-11. Its single7601-grid run took23.303CPU seconds of90; every old
 3801 initial column is unchanged. This is a four-energy reference indicator,
 not a full-source or continuum certificate.
 
-The [exact-phase prepared-state owner](nsc-exact-phase-prepared-state.md)
+The [exact-phase prepared-state owner](https://doi.org/10.5281/zenodo.23090015)
 and [coherent local history family](nsc-local-incoming-family.md) are
-implemented. The [nonzero local response](nsc-local-prepared-response.md)
+implemented. The [nonzero local response](https://doi.org/10.5281/zenodo.23090015)
 passes the full discrete derivative control:2.43940e-8 versus3e-8;
 dropping deltaC changes it by.00249672. Four prescribed runs used172.122CPU
 seconds of300. Halving the midpoint time step changes local matter by
@@ -1685,7 +1685,7 @@ seconds of300. Halving the midpoint time step changes local matter by
 temporal gap activates the approved fourth-order time-method comparison.
 Full-source local closure remains OPEN; the control amplitude is not a root.
 
-The [CF4 comparison](nsc-local-cf4-response.md) completed its three declared
+The [CF4 comparison](https://doi.org/10.5281/zenodo.23090015) completed its three declared
 60/120/240-step cases in240.312CPU seconds of360. Local matter changes are
 (5.09530e-8,4.30094e-8) then(2.25799e-9,1.90529e-9), so its1e-11 indicator
 remains OPEN. No fourth run is scheduled. The source and preparation digest
@@ -1694,7 +1694,7 @@ uses actual PDE derivatives, counts baseline and geometry once, and keeps
 every missing error component explicit. No numerical optimizer failure or
 partial-channel control is a local existence/non-existence result.
 
-The [boundary-buffer control](nsc-incoming-boundary-buffer.md) completed
+The [boundary-buffer control](https://doi.org/10.5281/zenodo.23090015) completed
 its two prescribed exact-phase reference runs in10.835CPU seconds of60.
 The fine-grid raw N,beta drift is(6.16363e-10,5.05498e-10); the sampled
 restriction to I is(7.94880e-11,8.17611e-11). Its3e-11 target remains OPEN.
@@ -1738,7 +1738,7 @@ exact-phase control are complete; the newer KS difference control above owns
 the current value-accuracy evidence. Do not repeat frozen-state exclusions or
 relabel the partial diagnostic as a converged source.
 
-The [current source update](nsc-incoming-source-update-v5.md) combines the
+The [current source update](https://doi.org/10.5281/zenodo.23090015) combines the
 all32 high-energy and tail coverage with the completed validated group32
 `[24,32]` window. It replaces that original low cell once; v4 high and tail
 values are inherited unchanged. The window changes the lapse approximation
@@ -1749,43 +1749,43 @@ against `3e-11`. Remaining low/subgap accuracy, full-source error and physical
 constraints remain OPEN. No further unchanged-background window is scheduled:
 the next physical connection is the compatible history/preparation family.
 
-The [conditional local constraint plane](nsc-incoming-constraint-germ.md) is
+The [conditional local constraint plane](https://doi.org/10.5281/zenodo.23090015) is
 now established for `u=delta(r_TTT)` and `v=delta(r_Tz)`:
 `E_N=S_N+c_u*u+c_v2*v^2`, `E_beta=S_beta+c_v*v`.
 The independent mixed control agrees within `1.02e-12` against `3e-11`;
 its first reference order is unchanged, and the imported power bounds give
 an absolutely integrable reference difference on this restricted plane.
-The [closed lapse coefficient](nsc-incoming-lapse-coefficient.md) now supplies
+The [closed lapse coefficient](https://doi.org/10.5281/zenodo.23090015) now supplies
 the positive enclosure `[0.05739927758627631,0.057399277586276436]`.
 Use this closed value rather than the older small-probe quotient. The
-[closed shift coefficient](nsc-incoming-shift-coefficient.md) now supplies
-`[16.575975622058497,16.575975622058518]`, also strictly positive. The [complete coefficient certificate](nsc-incoming-surface-coefficients.md)
+[closed shift coefficient](https://doi.org/10.5281/zenodo.23090015) now supplies
+`[16.575975622058497,16.575975622058518]`, also strictly positive. The [complete coefficient certificate](https://doi.org/10.5281/zenodo.23090015)
 now encloses `c_v2=C` in `[0.11119593102288508,0.11119593102288536]`
 and closes every fixed coefficient of F and D minus its source constant. These are action responses, not fitted couplings.
 No source, reference, local-force, or rank-control generator needs rerunning.
 
 Completed source checks are reusable receipts:
 
-- Tail numerical integral: the [all32 batch](nsc-incoming-tail-quadrature-batch.md)
+- Tail numerical integral: the [all32 batch](https://doi.org/10.5281/zenodo.23090015)
   passes with numerical lapse error `1.13970e-14`; physical mode and positive
   thermal error bring the total to `1.30188e-14`. The inherited v4 source budget
   already includes it. Group22's pilot was reused exactly; all endpoints,
   angular signs and archive-sum rounding were retained. No tail integral,
   old Taylor expansion or radial certificate needs rerunning.
-- LOW endpoint preparation: the [matched initializer](nsc-incoming-matched-horizon-initializer.md)
+- LOW endpoint preparation: the [matched initializer](https://doi.org/10.5281/zenodo.23090015)
   now bounds the same affine vacuum uniformly for group32 `[24,32]`, both
   signs, with lapse error `8.15610e-19`. It includes the missing geometric
   ratio term in a consistent exact-profile coordinate. Frozen source
   occupations and archived columns remain unchanged. The prior
-  [endpoint enclosure](nsc-incoming-horizon-endpoint-bound.md) remains OPEN
+  [endpoint enclosure](https://doi.org/10.5281/zenodo.23090015) remains OPEN
   as a diagnostic of the old representation, not a source-error measurement.
-  The [validated E24 propagation](nsc-incoming-validated-vacuum-propagation.md)
+  The [validated E24 propagation](https://doi.org/10.5281/zenodo.23090015)
   now passes for both signs:699 fixed steps each, continuous residual and
   arithmetic included, combined weighted lapse-kernel error `4.22695e-17`
   against `1e-13`. This is per positive-energy dE, not a window integral.
-  The [energy-panel preflight](nsc-incoming-energy-panel-preflight.md) passes
+  The [energy-panel preflight](https://doi.org/10.5281/zenodo.23090015) passes
   with uniform one-step column error `7.795e-24` against `1e-20`, retaining
-  the degree25 energy residual. The [complete energy window](nsc-incoming-validated-energy-window.md)
+  the degree25 energy residual. The [complete energy window](https://doi.org/10.5281/zenodo.23090015)
   now passes:699 steps for both signs, full adiabatic reference integration,
   positive thermal remainder and arithmetic give lapse error
   `1.8628405254514626e-16` against its `3e-12` budget. Total CPU was107.77
@@ -1800,24 +1800,24 @@ Completed source checks are reusable receipts:
   still needs full-source accuracy and a physical surface solution needs
   parent and boundary matching.
 
-The [finiteness connection](nsc-incoming-source-finiteness.md) separates
+The [finiteness connection](https://doi.org/10.5281/zenodo.23090015) separates
 mathematical existence from numerical accuracy: exact covariance contraction,
 non-LLL gaps and the certified tail establish finite retained source constants.
 The now strictly positive `c_u*c_v` therefore establishes a unique finite
 algebraic point-germ pair without first evaluating those constants to `3e-11`.
 This is not a surface solution or an error certificate for a numerical pair.
-The [compatible family](nsc-incoming-compatible-surface.md)
+The [compatible family](https://doi.org/10.5281/zenodo.23090015)
 `delta r=T*w(z)+T^3*U(z)/6`, `delta a=0`, carries all six required slots.
-Its [principal matrix](nsc-incoming-surface-principal.md) is certified
+Its [principal matrix](https://doi.org/10.5281/zenodo.23090015) is certified
 nonsingular: determinant `[-0.0029161631968961416,-0.0029161631968961255]`,
 eliminated third-order coefficient near `-0.05080487629`. Together with
-[reference integrability](nsc-incoming-surface-integrability.md) and the
-finite source, this yields [unique smooth local compatible solutions](nsc-incoming-local-surface-existence.md)
+[reference integrability](https://doi.org/10.5281/zenodo.23090015) and the
+finite source, this yields [unique smooth local compatible solutions](nsc-incoming-constraint-gate.md)
 for each finite pair of initial spatial derivatives at w=0. The ODE is in
 spatial z, not metric time. This is the included fixed-C0 constraint problem,
 not global physical initial data or extended EXISTENCE.
 
-The [global momentum balance](nsc-incoming-surface-momentum-balance.md)
+The [global momentum balance](https://doi.org/10.5281/zenodo.23090015)
 is already fixed: `Pi'=−S_beta>M>0`, using the original exact flux witness.
 Thus periodic or uniformly bounded Pi cannot be imposed on an unbounded
 axial domain in this two-function family. No such boundary class is chosen.
@@ -1826,16 +1826,16 @@ supplies boundary/asymptotic or parent-matching data for the new functions.
 The rho0 transmission seam and computational PG outflow controls are not
 axial constraint boundary conditions.
 
-The [regular branch](nsc-incoming-surface-regular-branch.md) reaches its
+The [regular branch](https://doi.org/10.5281/zenodo.23090015) reaches its
 first principal root at `w_D` in `[0.8828574152795067,0.882857415279511]`;
 the lapse pivot near0.986072 is removable in the
-[flux representation](nsc-incoming-surface-flux-form.md). The
-[conditional analytic crossing](nsc-incoming-surface-crossing.md) proves a
+[flux representation](https://doi.org/10.5281/zenodo.23090015). The
+[conditional analytic crossing](https://doi.org/10.5281/zenodo.23090015) proves a
 unique analytic germ for compatible nonzero slope. The inherited nonzero
 source excludes classical zero-slope interior contact in this family.
 These are normal-derivative values, not spacetime positions or singularities.
 
-The [compatible prepared-history adapter](nsc-compatible-prepared-history.md)
+The [compatible prepared-history adapter](https://doi.org/10.5281/zenodo.23090015)
 now carries those normal functions through the actual KS/PG chart and the
 same Dirac generator. Initial and incident preparation derivatives are
 explicit. The actual rho1 grid trace across PG time uses the owned fixed
@@ -1854,7 +1854,7 @@ upstream inflow unchanged. Reference initial/incident columns and zero
 preparation tangents are then physically justified. It does not preserve
 C0 automatically or solve the global constraints.
 
-The [group14 retarded response pilot](nsc-retarded-compatible-response.md)
+The [group14 retarded response pilot](https://doi.org/10.5281/zenodo.23090015)
 completed its three declared solves in5.54 CPU seconds. It is **OPEN**:
 401/801 spatial differences are70.20% for the field,61.16% for its incoming
 trace and63.00% for the sampled covariance, above the25% diagnostic limit.
@@ -1865,17 +1865,17 @@ drift is `3.29398e-5`, reported separately. The constructor argument-order
 correction preserved the used trace maps bitwise and repeated no solves;
 executed source bytes and numerical-array hashes are retained in the receipt.
 
-The [saved spatial diagnosis](nsc-retarded-spatial-diagnosis.md) localized
+The [saved spatial diagnosis](https://doi.org/10.5281/zenodo.23090015) localized
 the failure to the slow characteristic near rho1: forcing at common nodes
 matches exactly, while its first spatial transport differs by45–52%.
-The [targeted same-pulse extension](nsc-retarded-response-resolution.md)
+The [targeted same-pulse extension](https://doi.org/10.5281/zenodo.23090015)
 then passed its declared indicators:1601→3201 spatial differences are3.53%
 for field,1.19% for trace and1.23% for covariance;3201/128→256 time differences
 are below0.062%. One new-grid reference sample matches all old801 columns
 exactly. The three bounded field solves used57.73 CPU seconds. These remain
 numerical indicators; the original failed pilot is retained unchanged.
 
-The [exact Fourier matching identity](nsc-incoming-fourier-matching.md)
+The [exact Fourier matching identity](https://doi.org/10.5281/zenodo.23090015)
 now removes the omitted-energy integration from a selected FIRST-ORDER
 covariance pair: the stationary reference plane wave performs that integral
 analytically. Use raw unweighted tangent columns and the analytic stationary
@@ -1883,7 +1883,7 @@ amplitude, not the truncated four-energy position kernel. The same reduction
 gives the exact complete-source CAR pair identity. A rational causal support
 bound places the exact incoming response inside the saved time interval.
 
-The [Fourier pair result](nsc-retarded-fourier-response.md) has numerical
+The [Fourier pair result](nsc-retarded-fixed-c0-certificate.md) has numerical
 spin00 response `-1.0554769134063148e-5` at
 `Eo=Ei=0.5562120090641313`. Spatial/time differences are `6.91800e-9` and
 `2.46272e-11`; Simpson/trapezoidal difference is `1.47040e-12`.
@@ -1892,12 +1892,12 @@ response. Numerical pair indicators pass; no rigorous continuum response
 bound or exact exclusion certificate is claimed. No energy weights, angular
 multiplicity, projector correction or new propagation entered this reduction.
 
-The [independent radial response](nsc-retarded-radial-response.md) now
+The [independent radial response](nsc-retarded-fixed-c0-certificate.md) now
 agrees with the spacetime calculation within2.13e-6 relative using two
 short-shell solves (0.171 CPU seconds). Its CAR residual is `1.16808e-17`.
 This numerical agreement stays separate from physical preparation accuracy.
 
-The [directed selected-energy projector](nsc-incoming-low-energy-vacuum-enclosure.md)
+The [directed selected-energy projector](https://doi.org/10.5281/zenodo.23090015)
 closes the needed preparation predicate for group14 at positive
 `E=0.5562120090641313`: exact affine-vacuum `Re Pv01` lies in
 `[0.3340819978728732,0.3963230142827034]`, strictly above1/4. One2048-cell
@@ -1914,8 +1914,8 @@ Thus THIS tangent is excluded from fixed-C0 linear matching. Other parent
 extensions, finite-amplitude global matching and the NSC architecture are
 not excluded; extended stationarity remains OPEN.
 
-The [upstream metric compensation lemma](nsc-upstream-metric-compensation.md)
-and its [fixed-interval rank certificate](nsc-upstream-compensation-rank.md)
+The [upstream metric compensation lemma](nsc-preparation-domain-decision.md)
+and its [fixed-interval rank certificate](nsc-preparation-domain-decision.md)
 provide the next constructive route. Actual raw KS lapse, axial-scale and
 radius variations with a common nonnegative bump supported in
 `[203/200,41/40]` have normalized selected-diagonal response singular value
@@ -1924,7 +1924,7 @@ strictly above `51/200`. The actual response includes the positive factor
 variations vanish near Sigma and therefore preserve all incoming geometric
 jets. They are same-Dirac metric variations, not matrix counterforces.
 
-The [common compensator experiment](nsc-upstream-compensator.md) is now
+The [common compensator experiment](https://doi.org/10.5281/zenodo.23090015) is now
 complete. The actual metric triple
 `(cN,ca,cr)=(-0.0002557798,-0.0013170636,0.0243142762)` cancels the selected
 operator/covariance pair to about1e-21, then remains frozen across every
@@ -1934,7 +1934,7 @@ angular-zero families where the original radius response was zero.
 Six short solves used1.39 CPU seconds. These are conditional numerical
 results, not full matching or a physical gravity solution.
 
-The [physical endpoint obstruction](nsc-incoming-endpoint-obstruction.md)
+The [physical endpoint obstruction](https://doi.org/10.5281/zenodo.23090015)
 closes the all-energy question for this flat-parent-control class:
 `lim E² delta Chat(E,E)[0,1] = -ell*a1²*w_hat(0)/(4*r1²) < -2/375`.
 It uses the actual affine-state Riccati defect and an explicit differentiated
@@ -1950,7 +1950,7 @@ The same proof gives necessary zero-transfer conditions
 angular block with unchanged intrinsic data. These are two integrated means,
 not pointwise conditions or a certificate on every normal-jet slot.
 
-The [fixed-transfer result](nsc-incoming-fixed-transfer.md), committed188c6f9,
+The [fixed-transfer result](https://doi.org/10.5281/zenodo.23090015), committed188c6f9,
 now closes the zero-mean first-normal gap. Four inverse-gap terms, the
 physical affine-projector defect and exact unitary pair transport give
 O(E^-4) approximation error. Both complex Fourier-pair entries have
@@ -1959,24 +1959,24 @@ pointwise for smooth compact axial tangents with full C0 matching.
 All81 exact identities, three focused tests and authenticated replay pass.
 No physical propagation was required.
 
-The [constraint intersection](nsc-incoming-preparation-constraint-intersection.md),
+The [constraint intersection](https://doi.org/10.5281/zenodo.23090015),
 committed9b2cad3, separately establishes
 `E_beta-(d/A0)*partial_z E_N=S_beta<-M` on the exact w=0 subfamily.
 Its first-order prepared correction cannot cancel both baseline constraints.
 This does not infer w=0 for arbitrary finite-amplitude prepared histories.
 
-The [normal-jet rigidity theorem](nsc-incoming-jet-rigidity.md) extends that
+The [normal-jet rigidity theorem](https://doi.org/10.5281/zenodo.23090015) extends that
 physical construction through normal orders2..4. Six inverse-gap terms give
 O(E^-6) physical error, below the final E^-5 coefficient. With N/beta jets
 fixed as functions along Sigma, the four complex coefficient maps are
 nondegenerate. All20 allowed a/r normal/mixed tangent slots therefore vanish.
-The [included functional intersection](nsc-incoming-preparation-constraint-intersection.md)
+The [included functional intersection](https://doi.org/10.5281/zenodo.23090015)
 then gives `delta E_N=delta E_beta=0`: local/reference terms depend only on
 the unchanged order-four germ, and the source insertion has fixed C0 and
 intrinsic restriction. This closes first-order constraint repair in the
 stated smooth compact history class, not the nonlinear preparation problem.
 
-The [finite preparation theorem](nsc-incoming-finite-preparation.md),
+The [finite preparation theorem](nsc-evolved-incoming-state.md),
 committed daf42e8 after two Grok reviews, now closes the finite-amplitude
 gap in this class. A finite classical projector through degree minus six
 has transport defect of order minus six. The physical upstream P16 bound,
@@ -1993,7 +1993,7 @@ margin `M=5887634380411363/265464355000000000`. The smooth finite compact
 class with fixed incoming C0, intrinsic data, lapse/shift jets and unchanged
 upstream/source preparation has NON-EXISTENCE for the included constraints.
 Extended stationarity remains OPEN. The authenticated
-[finite-preparation receipt](../results/development/nsc-incoming-finite-preparation.json)
+[finite-preparation receipt](https://doi.org/10.5281/zenodo.23090015)
 is committed as9d2a34e: new producer write/replay pass, all33 exact residuals
 are zero, and root independently matched all22 declared file/artifact hashes.
 All Grok jobs for this batch are terminal; no scientific process is live.
@@ -2018,7 +2018,7 @@ raw-heat-equivalence gate to the declared retained canonical prescription.
 Risks remain interval dependency, asymptotic-series growth, and unresolved
 low/subgap numerical errors. Preserve all original receipts.
 
-The earlier [joint incoming assembly](nsc-incoming-joint-constraints.md) combines
+The earlier [joint incoming assembly](https://doi.org/10.5281/zenodo.23090015) combines
 the finite source, group13 replacement, paired approximate tails, local Euler
 owner and integrated changed-jet reference. Both momentum signs and all 63
 signed families are retained. The reference response passes numerical checks;
@@ -2026,7 +2026,7 @@ the labeled mixed-normal probe changes the shift coefficient from
 `-0.057120987` to `+0.108638769`, while the lapse remains about `-0.69592`.
 These are approximants, not a physical root or Cauchy-surface solution.
 
-The [all-retained-group vacuum-tail bound](nsc-incoming-vacuum-tail-bound.md)
+The [all-retained-group vacuum-tail bound](https://doi.org/10.5281/zenodo.23090015)
 now bounds the existing high-energy recipe against the affine-horizon vacuum:
 aggregate density error below `7.65e-17`, or `1.63e-15` after lapse-action
 projection. Its finite-offset qualification concerns the low/subgap fields
@@ -2034,7 +2034,7 @@ initialized by `PairedHorizonSeedMap.working_frame`. It is not an additional
 infinity matching prerequisite for `archived_middle_boundary_modes`, which
 uses the same local order16 Riccati recipe as the tail, without that frame.
 
-The earlier [finite-middle enclosure](nsc-incoming-middle-bound.md) reuses those
+The earlier [finite-middle enclosure](https://doi.org/10.5281/zenodo.23090015) reuses those
 coefficients on groups13/14 `[16,160]`, groups10–12/31–32 `[40,320]`, others
 `[40,160]`. Its generic vertex estimate is valid but too broad: the summed lapse-error upper bound is
 `4.18e-5` versus `3e-11`. This is an OPEN accuracy gate, not an actual-error
@@ -2049,7 +2049,7 @@ resolve this low-band indicator. The total density quadrature indicator
 projects to `4.14e-9` in lapse units, above the `3e-11` stationarity tolerance.
 These are differences, not certified error bounds. Remaining subgap and
 finite-collar errors stay explicit before the joint normal-data solve.
-Reuse the new response and [band bulk certificate](nsc-reference-band-bulk.md);
+Reuse the new response and [band bulk certificate](nsc-mode-resolved-cauchy-state.md);
 do not repeat their generators or hide an unbounded source error in a root.
 
 The three material risks are cancellation in the high-momentum reference
@@ -2109,21 +2109,21 @@ finite-start qualification without misapplying it to the local tail recipe.
 selected middle intervals. Its broad lapse enclosure remains OPEN; no mode
 solve or new coefficient generation is needed to replay it.
 
-`nsc_incoming_local_constraints.py` [Euler-varies the existing local densities](nsc-incoming-local-constraints.md)
+`nsc_incoming_local_constraints.py` [Euler-varies the existing local densities](https://doi.org/10.5281/zenodo.23090015)
 on `IncomingCauchyJets`. It returns local lapse/shift contributions, preserving
 independent off-shell variations before evaluating the fixed gauge. The
 physical source/reference/band terms remain distinct. Do not substitute a
 pulse-amplitude gradient or label these local contributions a constraint root.
 
-`nsc_incoming_subgap_source.py` [refines group 13's incoming source](nsc-incoming-subgap-source.md)
+`nsc_incoming_subgap_source.py` [refines group 13's incoming source](https://doi.org/10.5281/zenodo.23090015)
 using archived unsewn bases and exact reflection samples. Replays read its
 prepared fields; they do not repeat the short stationary continuation.
-`nsc_incoming_source_tail.py` [integrates all retained paired vacuum tails](nsc-incoming-source-tail.md)
+`nsc_incoming_source_tail.py` [integrates all retained paired vacuum tails](https://doi.org/10.5281/zenodo.23090015)
 from the existing Riccati/ad4 expressions. Structural endpoint identities
 precede numerical differentiation. Its coefficient convergence and thermal
 bound do not silently bound the physical vacuum-mode remainder.
 
-`nsc_incoming_source_assembly.py` contracts [finite incoming spectral panels](nsc-incoming-spectral-source.md)
+`nsc_incoming_source_assembly.py` contracts [finite incoming spectral panels](https://doi.org/10.5281/zenodo.23090015)
 from `nsc_incoming_spectral_panels.py`, using `nsc_incoming_state_moments.py`
 and stable high-energy subtraction. The physical sewing identity preserves
 the small compact current without altering covariance. Base/refined panels
@@ -2132,7 +2132,7 @@ source-specific subgap refinement and paired asymptotic remainder, then the
 allowed normal-data constraint balance. Do not rerun archived mode generators.
 
 `nsc_magnetic_light_reference.py` and `nsc_light_restoration_action.py` own the
-[charged light restoration](nsc-magnetic-light-restoration.md). The first
+[charged light restoration](nsc-mode-resolved-cauchy-state.md). The first
 returns nonzero-angular homogeneous restoration; add physical LLL geometry
 once. The second is the complete light geometric allocation on explicitly
 canonical KS fields and already includes LLL geometry. Add only LLL state to
@@ -2144,7 +2144,7 @@ allocation; no independent `Gamma_rest` or fitted counterterm is introduced.
 for the compact response family in the retained realization. Its rational
 momentum bound does not require another stress integral. Keep that family as
 a response control, not a physical stationarity candidate.
-`nsc_incoming_cauchy_jets.py` defines [same-surface conditional normal data](nsc-incoming-cauchy-data.md):
+`nsc_incoming_cauchy_jets.py` defines [same-surface conditional normal data](https://doi.org/10.5281/zenodo.23090015):
 intrinsic metric/frame and canonical C0 fixed, twenty normal a/r derivative
 slots free. The reference screen passes; constraints, full UV/state matching
 and global preparation remain OPEN. Next: same-slice energy/momentum with
@@ -2152,7 +2152,7 @@ recomputed reference/local allocation on these data, before further large
 history-source calculations. No physical probe values or durations selected.
 
 `nsc_pg_archived_high_energy_modes.py` exposes the [same pinned middle-panel
-boundary recipe](nsc-pg-high-energy-inputs.md) used by the old packet producer.
+boundary recipe](nsc-pg-spectral-mode-recovery.md) used by the old packet producer.
 It fills the 3,188 rejected inverse rows without another ODE/packet/horizon
 run. Accepted inverse fields and their certificate remain unchanged. The
 Riccati/order gate covers newly filled rows; whole-panel approximation
@@ -2172,7 +2172,7 @@ high frequencies, source-specific subgap/tail evaluation, and nonlinear
 state/reference convergence. No old horizon/scattering generator rerun.
 
 `nsc_lll_geometric_history.py` owns the [existing LLL geometric allocation
-on the supplied KS history](nsc-lll-geometric-history.md). It subtracts the
+on the supplied KS history](nsc-mode-resolved-cauchy-state.md). It subtracts the
 canonical spatial normal-order stress from the covariant conformal source,
 eliminating state and null-map dependence. The resulting local metric action
 is counted once at `c=|q|=4`, separately from the compact induced coefficients.
@@ -2181,7 +2181,7 @@ old stationary geometric tensor afterward. Next: common equal-KS-time
 state/reference trace, retaining band connections and the inherited
 subtraction-then-convergence policy. No full raw-heat equality gate is added.
 
-`nsc_transmitting_history_jets.py` owns [nonlinear field metric jets and Gaussian contraction](nsc-transmitting-history-jets.md).
+`nsc_transmitting_history_jets.py` owns [nonlinear field metric jets and Gaussian contraction](nsc-transmitting-history-modes.md).
 State and tangents evolve together under the same spatial discretization.
 The actual-metric KS Jacobian enters all four vertices. The relative overlap
 kernel `U[g]^dagger dU[g]` is formed from spatial fields before sampled energy
@@ -2204,7 +2204,7 @@ variation and physical endpoint binding, retaining the complete source/state
 integral; a finite projected response must not enter `EndpointBranchJets` as
 a full unitary.
 
-`nsc_ks_spacetime_variation.py` owns the [direct KS spacetime chain rule](nsc-ks-spacetime-variation.md)
+`nsc_ks_spacetime_variation.py` owns the [direct KS spacetime chain rule](nsc-pg-ks-metric-pullback.md)
 on the existing PG Cauchy/source representation. It includes `J_prime`, `T_prime`
 and the axial `S_prime` phase, then applies the existing Gaussian CTP differential.
 `derive_nsc_ks_spacetime_variation.py --check` reads its authenticated payload;
@@ -2222,7 +2222,7 @@ the history/endpoint variation domain, not a missing additional action.
 Earlier dated routing below retains its historical scope.
 
 `nsc_compact_restart_scattering.py` and `nsc_compact_matched_restart.py` own
-the [versioned compact restart](nsc-compact-matched-restart.md). Physical signed-
+the [versioned compact restart](https://doi.org/10.5281/zenodo.23090015). Physical signed-
 angular scattering is extracted once and authenticated; the new verifier
 `derive_nsc_compact_matched_restart.py --check` reads it and recomputes both
 historical and matched seed generations with the inherited SU(2) method.
@@ -2232,7 +2232,7 @@ PG covariance. H2's global massive mode/current/Plancherel normalization is
 still required; do not re-run the now-frozen scattering or old source tensors.
 
 `nsc_monopole_paired_basis.py` and `nsc_paired_horizon_preparation.py` own the
-[magnetic/horizon map](nsc-horizon-paired-pg-map.md). They use actual charged
+[magnetic/horizon map](https://doi.org/10.5281/zenodo.23090015). They use actual charged
 harmonics and the original C_H/incoming state, and propagate both angular
 signs with the massive Dirac operator. The new runner
 `derive_nsc_horizon_paired_pg_map.py --check` verifies a stored-frequency
@@ -2242,7 +2242,7 @@ sqrt(2 delta_q/kappa), whereas the frozen seed initializer divides this by
 r_h; the new matched owner retains old data only as controls. Full global
 PG spectral/current completeness and retained-state reconciliation remain open.
 
-`nsc_massive_signed_preparation.py` owns the [massive signed-map/data gate](nsc-massive-signed-preparation.md).
+`nsc_massive_signed_preparation.py` owns the [massive signed-map/data gate](nsc-ks-signed-state.md).
 It imports the existing paired radial operator, maps its coefficients exactly
 to T, and classifies all 32 massive groups. The mixed-group certificate keeps
 the stored seed blocks as information controls only. Its verifier is
@@ -2259,7 +2259,7 @@ contact CAR term and packet/bulk correlations. The new verifier is
 massive 32-channel global reconstruction remains an explicit separate input,
 so this LLL owner cannot supply complete transmitting branch jets.
 
-`nsc_transmitting_ctp_resolvent.py` extends the [same resolvent into CTP memory](nsc-transmitting-ctp-resolvent.md).
+`nsc_transmitting_ctp_resolvent.py` extends the [same resolvent into CTP memory](nsc-local-observer-correspondence.md).
 It reuses the authenticated incoming fields and the original Dirac owner,
 solves only the new outgoing frequency and driven variation, and returns
 retarded/advanced inverse-memory kernels with four frequency-transfer vertices.
@@ -2267,7 +2267,7 @@ retarded/advanced inverse-memory kernels with four frequency-transfer vertices.
 The full PG state/preparation and KS endpoint pullback remain explicit missing
 inputs; existing endpoint consumers keep C1–C4 OPEN where unevaluated.
 
-`nsc_transmitting_resolvent.py` owns the [domain-correct cross response](nsc-transmitting-cross-resolvent.md):
+`nsc_transmitting_resolvent.py` owns the [domain-correct cross response](nsc-transmitting-dirac-domain.md):
 whole-line causal Dirac resolvent restricted to independent spatial probes,
 its inverse-response cross kernel and four static metric variation kernels.
 `derive_nsc_transmitting_resolvent.py --check` compares every new record field
@@ -2279,7 +2279,7 @@ The active Codex task owns execution; AGENTS.md owns the central thesis.
 Actual results belong to the [claim ledger](claim-ledger.md) and
 [result index](../results/README.md).
 
-`nsc_common_time_bulk_split.py` owns the [common-PG-time bulk split](nsc-common-time-bulk-split.md):
+`nsc_common_time_bulk_split.py` owns the [common-PG-time bulk split](https://doi.org/10.5281/zenodo.23090015):
 independent spatial support projectors, canonical normalization and the local
 transmitted Dirac expression. Its ordinary-link guard preserves the distinction
 between Hilbert projectors and the operator domain. Run only the new focused
@@ -2291,26 +2291,26 @@ map from the inherited geometry and rejects given-B-only differentiation.
 `define_nsc_transmitting_dirac_domain.py` verifies the finite trace domain;
 the same-surface graph is not a pair of independent Hamiltonian room states.
 
-The [Dirac endpoint-jet owner](nsc-dirac-endpoint-jets.md),
+The [Dirac endpoint-jet owner](https://doi.org/10.5281/zenodo.23090015),
 `nsc_dirac_endpoint_jets.py`, differentiates the same midpoint propagation as
 the existing Landau owner and supplies partial bulk `EndpointBranchJets`.
 The new runner `derive_nsc_dirac_endpoint_jets.py` verifies that derivative
 path using frozen data. It leaves transmitting link and embedding jets null.
 
-The [transmitting CTP differential](nsc-transmitting-ctp-variation.md) uses
+The [transmitting CTP differential](nsc-local-observer-correspondence.md) uses
 `nsc_transmitting_ctp_variation.py` and the existing Gaussian influence owner.
 It evaluates supplied branch tangents and contracts supplied physical jets
 into the old endpoint basis. The current NSC branch-jet entries remain null;
 `derive_nsc_transmitting_action_completion.py` owns the focused F→H records.
 
-The current [full extended binding gate](nsc-full-extended-history-gate.md) uses
+The current [full extended binding gate](https://doi.org/10.5281/zenodo.23090015) uses
 `nsc_transmitting_boundary_history.py` to audit the declared transmitting action,
 test its remaining freedom on the stored covariance and bind the local Weyl
 end-node gradient. Three separate records retain the OPEN selector and endpoint
 derivative. Its focused runner is `derive_nsc_transmitting_boundary_binding.py`;
 it calls no historical generator or metric stepper.
 
-The [charged scale-binding owner](nsc-scale-binding.md),
+The [charged scale-binding owner](nsc-nested-qualities.md),
 `src/recursive_horizons/nsc_scale_binding.py`, combines the relational
 vacuum law, the compact Wilsonian coefficients above the MMP magnetic scale,
 and the imported charged-radius identity.  It solves only one fixed-flux
@@ -2319,7 +2319,7 @@ development branch resolves the stored child curvature and remains in the
 stored carrier's limit-point regime; flux selection, the charged recursive
 map and the full CTP metric source remain separate gates.
 
-The [recursive LLL source binding](nsc-recursive-source-binding.md),
+The [recursive LLL source binding](nsc-parent-backreaction-gate.md),
 `src/recursive_horizons/nsc_recursive_source_binding.py`, applies the
 candidate scale's inherited state constants to the existing conformal LLL
 stress on the actual stored neck.  Its power identity closes exactly, but both
@@ -2327,7 +2327,7 @@ radial null components have the wrong sign.  It performs no integration and
 isolates the required replacement as the full charged angular/compact CTP
 source on the horizon-penetrating domain.
 
-The [charged CTP neck owner](nsc-charged-ctp-neck-source.md),
+The [charged CTP neck owner](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_charged_ctp_neck.py`, transports the resolved
 magnetic angular tower and scale-inherited covariance through the actual
 exterior reflection and horizon frame.  It returns the retained child-frame
@@ -2336,7 +2336,7 @@ locked compact local source added once.  Those retained null signs pass; the
 first positive compact levels' nonlocal CTP covariance and ADM variations are
 the sole unimplemented source channel.
 
-The [positive compact CTP completion](nsc-compact-ctp-completion.md),
+The [positive compact CTP completion](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_compact_ctp_neck.py`, supplies that last free
 Gaussian channel.  It derives massive exterior reflection, transports the
 `j=1,2` compact covariances and subtracts the fourth-order superadiabatic
@@ -2344,7 +2344,7 @@ projector whose massless limit reproduces the existing subtraction.  The
 completion reads the preceding charged angular record rather than rerunning
 it, returns all four child-frame projections and passes both null signs.
 
-The [background projection owner](nsc-background-projection.md),
+The [background projection owner](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_background_projection.py`, applies the imported
 Kantowski--Sachs conservation ledger and the stored Bronnikov child clock and
 volume to that completed tensor.  It fixes the conserved first density and
@@ -2353,14 +2353,14 @@ the parent Killing power to the child's spatial-Killing charge.  It performs
 no source integration or metric solve; later pressure functions require
 backreaction and evolution of the same CTP state.
 
-The [child metric backreaction gate](nsc-child-metric-backreaction.md),
+The [child metric backreaction gate](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_child_metric_backreaction.py`, evaluates the
 imported Hamiltonian and momentum constraints before launching that evolution.
 The exact stored neck fails both at `T=0`; the record therefore stops with one
 Cauchy row and names the missing density and momentum completion.  It does not
 replay the CTP source, adjust the metric jet or refit the scale.
 
-The [constraint-complete neck owner](nsc-constraint-complete-neck.md),
+The [constraint-complete neck owner](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_constraint_complete_neck.py`, follows permitted
 route B.  The completed tensor uniquely fixes a subluminal Landau normal and
 the Hamiltonian constraint fixes a new areal radius while retaining the
@@ -2368,7 +2368,7 @@ Kantowski--Sachs metric class and `H_sphere=0`.  It closes both initial
 constraints and authorizes joint covariance--metric evolution from the
 source-selected geometry.
 
-The [coupled CTP/metric evolution gate](nsc-coupled-ctp-metric-evolution.md),
+The [coupled CTP/metric evolution gate](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_coupled_ctp_metric_evolution.py`, checks the first
 stress re-evaluation before stepping.  It proves that the radius vertex is
 nonzero and that four integrated stress moments cannot determine the stored
@@ -2389,14 +2389,14 @@ homogeneous ADM history.  Conditional unitarity and CAR pass.  Endpoint-
 identical control histories give different maps, so the record rejects a
 physical U or finite stress until the same action selects the history.
 
-The [joint history/state BVP owner](nsc-joint-history-state-bvp.md),
+The [joint history/state BVP owner](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_joint_history_state_bvp.py`, audits the two allowed
 closure routes against the authenticated constraint and U/C artifacts.  It
 records route C: seed evolution cannot start, and the two-point problem has a
 finite nonuniqueness witness.  `GeneralKSSameActionHistoryFunctional` is the
 single missing executable selector.
 
-The [general-KS same-action owner](nsc-general-ks-same-action-history.md),
+The [general-KS same-action owner](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_general_ks_same_action_history.py`, implements the
 homogeneous lapse/shift boundary gate.  Its complete momentum ledger proves
 nonexistence before collocation: no permitted local term cancels the seed
@@ -2404,34 +2404,34 @@ state's shift variation.  The certificate is scoped to frequency-diagonal
 homogeneous histories without a transmitting tilted interface.
 
 The extended owners are now independently executable.  The
-[fourth-order history](nsc-general-ks-reference.md) supplies parity-completed
-`N,beta,q_ADM,r` reference forces; the [local history](nsc-general-ks-local-history.md)
+[fourth-order history](https://doi.org/10.5281/zenodo.23090015) supplies parity-completed
+`N,beta,q_ADM,r` reference forces; the [local history](https://doi.org/10.5281/zenodo.23090015)
 supplies node-wise Einstein, Maxwell, Weyl, Euler and box-R action gradients;
-and the [tilted interface](nsc-tilted-landau-interface.md) supplies full-rank
+and the [tilted interface](nsc-mode-resolved-cauchy-state.md) supplies full-rank
 weighted frequency-mixing maps.  The
-[extended composition gate](nsc-extended-tilted-history-gate.md) identifies
+[extended composition gate](https://doi.org/10.5281/zenodo.23090015) identifies
 their shared missing boundary-action selector and does not launch an optimizer.
 
-The [NSC–MMP embedding owner](nsc-mmp-embedding.md),
+The [NSC–MMP embedding owner](nsc-nested-qualities.md),
 `src/recursive_horizons/nsc_mmp_embedding.py`, maps the existing charged
 field content, compact parity, AP state and coefficients to the imported
 fermionic throat. It performs no gravity solve. The retained partial
 coefficient set fails its charged seed bound and identifies the unfixed
 `V_full` as the first owner.
 
-The [canonical causal functional](nsc-causal-common-functional.md),
+The [canonical causal functional](https://doi.org/10.5281/zenodo.23090015),
 `src/recursive_horizons/nsc_causal_common.py`, evolves a complete finite
 parent–child covariance and returns four metric forces, stress, power,
 retarded response, noise and discrete Ward residuals. Canonical CTP evolution
 owns causal response; named induced spectral forces enter exactly once.
 
-The [MMP vacuum-owner gate](nsc-mmp-vacuum-owner.md),
+The [MMP vacuum-owner gate](https://doi.org/10.5281/zenodo.23090015),
 `scripts/derive_nsc_vacuum_owner.py`, classifies every existing contribution
 by whether it can change the homogeneous asymptotic vacuum coefficient. It
 quantifies the required reduction and records that the canonical-CTP revision
 does not determine `V_full`. It launches no scientific generator.
 
-The [recursive zero-tadpole owner](nsc-relational-vacuum-normalization.md),
+The [recursive zero-tadpole owner](nsc-nested-qualities.md),
 `src/recursive_horizons/nsc_relational_vacuum.py`, applies the zero-derivative
 projector after complete same-action assembly. It sets the homogeneous
 unlinked gravitating vacuum to zero, preserves the Einstein/gauge bases and
@@ -2449,55 +2449,55 @@ Dirac power to the existing mass normalization. It performs no new
 radiation or generic-collapse computation and does not assume a global
 time reflection of the Lorentzian future-horizon patch.
 
-The [local warp source](nsc-warp-local-neck-source.md),
+The [local warp source](nsc-parent-backreaction-gate.md),
 scripts/derive_nsc_warp_local_source.py, applies the existing general
 metric variation to the actual black-universe profile and combines it with
 stored warp-conversion coefficients. It supplies a nonzero source vector,
 retains the Einstein increment separately and leaves the nonlocal remainder
 uncomputed. No old state or spectrum generator is run.
 
-The [ADM source owner](nsc-adm-source-constraints.md),
+The [ADM source owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_adm_source.py, combines the existing spatial
 Hamiltonian with the derived shift and covariant time measure. Its new
 vertices cover N, beta, q and r. The
-[neck source map](nsc-adm-neck-source-map.md) transports the existing
+[neck source map](https://doi.org/10.5281/zenodo.23090015) transports the existing
 canonical tensor into those equations; it reads the old source record
 and preserves its power rather than recomputing the field state.
 
-The [vacuum-matched real-time owner](nsc-vacuum-matched-ctp.md),
+The [vacuum-matched real-time owner](nsc-local-observer-correspondence.md),
 src/recursive_horizons/nsc_vacuum_matched_ctp.py, evaluates the short-time
 vacuum-conversion vertex at complex frequency squared, constructs a real
 geometric branch phase and combines it with the existing canonical state
 factor. It retains frequency dependence at quadratic probe order and
 does not label the bare branch kernel as a retarded matter correlator.
 
-The [Gaussian measure owner](nsc-gaussian-cutoff-measure.md),
+The [Gaussian measure owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_gaussian_measure.py, reconstructs the full
 proper-time profile through Ein and the ordered canonical-field Jacobian.
 Its derivation uses exact scalar identities and one finite noncommuting
 congruence, with the previous regulator as an input. It does not define
 a new real-time Hamiltonian or rerun prior physical source calculations.
 
-The [compact anomaly derivation](nsc-compact-anomaly-bridge.md),
+The [compact anomaly derivation](https://doi.org/10.5281/zenodo.23090015),
 scripts/derive_nsc_compact_anomaly.py, maps the paired D†D domain to the
 published self-adjoint doubled-Dirac problem and applies its invariant
 coefficients. It performs exact import algebra and reads earlier source
 records; it does not derive heat coefficients or rerun spectra.
 
-The [canonical/spectral allocation](nsc-canonical-spectral-bridge.md),
+The [canonical/spectral allocation](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_canonical_spectral_bridge.py, reads the existing
 flat and warped moments and separates their physical tower and conversion
 contributions. Its checker authenticates stored inputs and compares all
 new allocation fields; it never invokes compact or angular generators.
 
-The [boundary-state owner](nsc-boundary-state.md),
+The [boundary-state owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_boundary_state.py, supplies the full two-time
 Gaussian bath kernels, correlated preparation terms, parent covariance and
 normalized endpoint elimination. Its one integration check connects those
 terms to the existing smooth-cell Hamiltonian; it does not rerun source
 generators or replace the absolute continuum vacuum matching.
 
-The [state/regulator owner](nsc-state-regulator.md),
+The [state/regulator owner](nsc-nested-qualities.md),
 src/recursive_horizons/nsc_state_regulator.py, binds the known fermionic
 thermal heat images to the existing finite proper-time endpoint. Independent
 Matsubara and metric derivatives determine its state-dependent conversion.
@@ -2511,34 +2511,34 @@ through the existing canonical angular-source implementation. Its checker
 reproduces only the new state/interface and source controls. The auxiliary
 reference record is authenticated and read, never recomputed for comparison.
 
-The [finite-radius angular owner](nsc-angular-stress.md),
+The [finite-radius angular owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_angular_stress.py, evolves the complete massless
 reference angular channels and restores their covariant ultraviolet
 subtractions. _angular_transport.cpp accelerates the same unitary method;
 the Python implementation remains its independent control. The checker
 replays only this new source, preserving all previous scientific records.
 
-The [massless-reference owner](nsc-massless-reference.md),
+The [massless-reference owner](nsc-nested-qualities.md),
 src/recursive_horizons/nsc_massless_reference.py, specifies a smooth auxiliary
 extension and the canonical-light/finite-cutoff conversion. Its checker
 binds the conformal-stress tensors to the actual child asymptotics and
 checks the unchanged functional allocation. It consumes the stored compact
 endpoint; the finite-radius CTP angular source is the next owner.
 
-The [child-state owner](nsc-child-state.md),
+The [child-state owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_child_state.py, provides the actual interior
 volume, finite-moment stress bounds and proper-frame null-state projection.
 scripts/check_nsc_child_state.py checks their canonical work and chart maps;
 it reuses the existing spectra and state constants without evolution scans.
 
-The [spectral endpoint owner](nsc-spectral-endpoint.md),
+The [spectral endpoint owner](nsc-spherical-action.md),
 src/recursive_horizons/nsc_spectral_endpoint.py, composes the published S4
 spectrum with the existing compact weight and compares its metric variation
 with the matched local action. scripts/check_nsc_spectral_endpoint.py checks
 the new composition, scale map and independent numerical errors. Existing
 geometry and compact-spectrum generators are not run.
 
-The [curvature EFT owner](nsc-curvature-eft.md),
+The [curvature EFT owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_curvature_eft.py, maps local curvature-squared
 terms to a first-order stress contact and the physical inverse-metric shift.
 scripts/check_nsc_curvature_eft.py checks the off-shell identity, spherical
@@ -2553,35 +2553,35 @@ matter Legendre transform, smeared constraint brackets, full ghost/Jacobian
 operator and mass/domain conversions. It does not solve a new geometry or
 repeat old spectral/source generators.
 
-The [projected gauge-source owner](nsc-gauge-source.md),
+The [projected gauge-source owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_gauge_source.py, applies the existing QED2
 interaction to the recorded exterior. It evaluates charged-mode transmission
 with amplitude and scalar-field IVPs, current checks and tail bounds.
 scripts/check_nsc_gauge_source.py authenticates the old horizon and checks
 the new action/pressure/source map; it does not rerun earlier generators.
 
-The [compact/light matching owner](nsc-compact-matching.md),
+The [compact/light matching owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_compact_matching.py, applies existing heat and
 Mellin formulas to the stored warped weight. It supplies its finite infrared
 limit, vacuum/gravity/gauge coefficients and static metric-basis conversion.
 scripts/check_nsc_compact_matching.py checks that new mapping and the
 matching-scale cancellation without rerunning prior generators.
 
-The [warped spectral source owner](nsc-warped-source.md),
+The [warped spectral source owner](nsc-spherical-action.md),
 src/recursive_horizons/nsc_warped_source.py, supplies h(D4^2) from the
 compact chiral quadratic form and its covariant norm. The new runner
 scripts/check_nsc_warped_source.py checks first variations, the dual-heat
 identity, independent resolutions and omitted-sector bounds. It composes
 with the existing D4 and authenticates earlier records without rerunning them.
 
-The [unwrapped horizon/source owner](nsc-horizon-source.md),
+The [unwrapped horizon/source owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_horizon_source.py, applies known conformal-Dirac
 state formulas to the actual PG domain and an admissible magnetic angular
 zero sector. scripts/check_nsc_horizon_source.py authenticates the recorded
 horizon and checks the new source/current/constraint map. It does not rerun
 collapse, horizon location, neutral greybody or cyclic Casimir calculations.
 
-The [curved compact Casimir owner](nsc-compact-casimir.md),
+The [curved compact Casimir owner](https://doi.org/10.5281/zenodo.23090015),
 src/recursive_horizons/nsc_compact_casimir.py, applies the finite interval
 interaction to the existing covariant operator and differentiates its metric
 and separation. Its full-KK holonomy control uses the existing ultrastatic
@@ -2589,7 +2589,7 @@ frequency integral. scripts/check_nsc_compact_casimir.py compares all new
 fields, separate resolutions and independent variations; old generators
 are authenticated without being rerun.
 
-The [compact mass map](nsc-compact-mass-map.md) connects the existing free
+The [compact mass map](https://doi.org/10.5281/zenodo.23090015) connects the existing free
 five-dimensional carrier to a four-dimensional Weyl mode and Dirac tower.
 `scripts/check_nsc_compact_mass_map.py` checks only its full-spinor embedding
 and endpoint/normalization conventions. It reuses the spinor bridge matrices;
@@ -2597,49 +2597,49 @@ the intrinsic compact operator remains a separate spatial diagnostic.
 
 `src/recursive_horizons/nsc_compact_interaction.py` owns the imported contact
 in the actual compact-mode basis, normalized to the bulk Einstein coefficient.
-The [interaction note](nsc-compact-interaction.md) and its development record
+The [interaction note](https://doi.org/10.5281/zenodo.23090015) and its development record
 give the scope; `make reproduce-development` checks every recorded field.
 The global stiffness and quantum state are explicit unresolved inputs.
 
 `scripts/check_nsc_torsion_uv_map.py` supplies the subsequent exact bulk
 coefficient map, including the proper-time window and the limited derivative
-test. Its [scope](nsc-torsion-uv-map.md) keeps finite matching and physical
+test. Its [scope](https://doi.org/10.5281/zenodo.23090015) keeps finite matching and physical
 continuation separate; the same focused development gate covers its record.
 
 `scripts/check_nsc_flow_compatibility.py` checks the connection projection and
 the quoted flow's failure to preserve that subspace. The [compatibility
-note](nsc-flow-compatibility.md) specifies the variables and measure that
+note](https://doi.org/10.5281/zenodo.23090015) specifies the variables and measure that
 must agree before a published renormalization flow is reused.
 
 `scripts/check_nsc_charged_sector.py` checks the proposed charged compact
 domain, four-dimensional zero-sector anomalies and the two-copy UV gauge
 coefficient. It does not implement the magnetic throat. The
-[source route](nsc-charged-self-sourcing-route.md) maps that next interface
+[source route](https://doi.org/10.5281/zenodo.23090015) maps that next interface
 to an existing self-sourced Einstein–Maxwell–Dirac construction.
 
 `scripts/check_nsc_vacuum_charge_matching.py` owns the subsequent
 dimensionless source-coefficient test. It reuses the released UV and charged
 records, checks the horizon/moment identities and evaluates only the known
-warp integrals. The [matching note](nsc-vacuum-charge-matching.md) identifies
+warp integrals. The [matching note](https://doi.org/10.5281/zenodo.23090015) identifies
 the complete functional contribution still required before a throat run.
 
-The [compact boundary owner](nsc-compact-boundary-action.md),
+The [compact boundary owner](https://doi.org/10.5281/zenodo.23090015),
 scripts/check_nsc_compact_boundary_action.py, maps the declared chiral
 domain to its Euclidean adjoint and applies the known mixed a1–a3 heat
 coefficients. It authenticates and reuses the preceding warp integrals;
 no prior scientific generator is called. The actual transmitting interface
 and determinant phase remain outside this compact-endpoint calculation.
 
-The [torsion/source compatibility note](nsc-torsion-source-compatibility.md)
+The [torsion/source compatibility note](https://doi.org/10.5281/zenodo.23090015)
 owns the candidate extension comparison. It uses published action coefficients;
 it does not alter the current torsionless numerical operator or launch a
 collapse calculation.
 
 - `scripts/check_nsc_scale_closure.py`: independent units/sign check and all-field reproduction.
-- `src/recursive_horizons/nsc_boundary.py` and `scripts/check_nsc_boundary_response.py`: [oriented finite radial Weyl/DtN maps](nsc-boundary-response.md), sparse LU, continuum integration, Green identities and quantified compact-mode projection.
+- `src/recursive_horizons/nsc_boundary.py` and `scripts/check_nsc_boundary_response.py`: [oriented finite radial Weyl/DtN maps](https://doi.org/10.5281/zenodo.23090015), sparse LU, continuum integration, Green identities and quantified compact-mode projection.
 - `scripts/check_nsc_radial_spectrum.py`: [exact Weyl-sequence gaplessness proof](nsc-radial-spectrum.md) for the frozen spatial radial throat.
 - `scripts/check_nsc_threshold_response.py`: [exact threshold jump and independent ODE check](nsc-threshold-response.md), separating boundary stiffness from mass.
-- `src/recursive_horizons/nsc_geometric_chain.py` and `scripts/check_nsc_geometric_chain.py`: [controlled repeated-throat gap and geometric-link recursion](nsc-geometric-chain.md).
+- `src/recursive_horizons/nsc_geometric_chain.py` and `scripts/check_nsc_geometric_chain.py`: [controlled repeated-throat gap and geometric-link recursion](https://doi.org/10.5281/zenodo.23090015).
 - `src/recursive_horizons/nsc_regulated.py` and `scripts/check_nsc_regulated_recursion.py`: finite regulated matrix variations, explicit normalization, frequency reduction, normalized recursion and the trapped-region spatial principal-symbol obstruction. [Derivation and scope](nsc-regulated-recursion.md).
 - `src/recursive_horizons/provenance.py`: authenticated original-path resolution.
 - `scripts/check_current.py`: archive integrity and current routing.
@@ -2647,7 +2647,7 @@ collapse calculation.
 - `src/recursive_horizons/evidence_io.py`: shared neutral evidence I/O.
 - `src/recursive_horizons/unified_action.py`: retained finite reduction/scalar recursion fixtures, not a complete covariant quantum action.
 
-Boundary and regulated-matrix calculations extend this map when verified. Historical FGC code, authority and prospectus are in the [frozen archive](../archive/reassembly-20261012/lab-context/archive/pre-closure-2026-09-08/INDEX.md). Raw stores remain intact; no current command resumes them. The curated preprint is a separate repository.
+Boundary and regulated-matrix calculations extend this map when verified. Historical FGC code, authority and prospectus are in the [frozen archive](https://doi.org/10.5281/zenodo.23090015). Raw stores remain intact; no current command resumes them. The curated preprint is a separate repository.
 
 ## Archived candidate notes
 
@@ -2659,7 +2659,7 @@ the [gap map](claim-ledger.md#scientific-gap-map).
 
 ## Physical closure continuation
 
-- [Self-sourcing progress](nsc-self-sourcing-progress.md): metric/source matching criterion and what is actually computed.
+- [Self-sourcing progress](nsc-prior-art-reuse.md): metric/source matching criterion and what is actually computed.
 - `scripts/check_nsc_dirac_tetrad.py`: exact PG tetrad, spin connection, current and boundary-domain result.
 - `src/recursive_horizons/nsc_lorentzian.py` / `scripts/check_nsc_lorentzian.py`: causal fixed-background propagation and norm/flux ledger.
 - `src/recursive_horizons/nsc_smooth_geometry.py` / `scripts/check_nsc_smooth_geometry.py`: smooth gap and required Einstein stress.
@@ -2668,14 +2668,14 @@ the [gap map](claim-ledger.md#scientific-gap-map).
 
 ## Asymptotic tests
 
-- [Asymptotic requirements](nsc-asymptotic-tests.md): relates depth, cosmic-time, clock and observer tests without claiming physical closure.
+- [Asymptotic requirements](https://doi.org/10.5281/zenodo.23090015): relates depth, cosmic-time, clock and observer tests without claiming physical closure.
 - `src/recursive_horizons/nsc_tail_limit.py` / `scripts/check_nsc_tail_limit.py`: exact endpoint classification and Weyl-disk tail control for the declared spatial chain.
 - `scripts/check_nsc_plateau_conditions.py`: conservation, stability and observational requirements for a finite dark fraction.
 - `scripts/check_nsc_clock_horizon.py`: clock-map convergence, null expansions and coordinate/affine completeness distinction.
 
 ## State-defined energy transfer
 
-- [Energy transfer and cosmological source](nsc-energy-transfer.md): exact equilibrium result, computed excitation flux and the missing state/volume/sector matching.
+- [Energy transfer and cosmological source](https://doi.org/10.5281/zenodo.23090015): exact equilibrium result, computed excitation flux and the missing state/volume/sector matching.
 - `src/recursive_horizons/nsc_energy_transfer.py` / `scripts/check_nsc_energy_transfer.py`: same smooth Dirac Hamiltonian, half-link energy ledger, both compact cuts, spectral and sparse evolution, retarded response versus occupation data.
 - `src/recursive_horizons/nsc_vacuum_work.py` / `scripts/check_nsc_vacuum_work.py`: [prescribed geometric pulse](nsc-vacuum-work.md), exact time-dependent measure reduction, vacuum transitions, full angular/grid controls and work balance.
 
@@ -2687,55 +2687,55 @@ the [gap map](claim-ledger.md#scientific-gap-map).
 
 ## Boundary structure and finite action matching
 
-- `src/recursive_horizons/nsc_chiral_boundary.py` / `scripts/check_nsc_chiral_boundary.py`: paired-angular current/domain identities, first-order full-spinor Green maps, sparse joined/Schur/continuum checks and common-frame Clifford content. [Derivation](nsc-chiral-boundary.md).
-- `src/recursive_horizons/nsc_finite_terms.py` / `scripts/check_nsc_finite_terms.py`: general-metric curvature and variational identities, local stress sensitivities, independent probes and rank of the finite covariant coefficient response. [Derivation](nsc-finite-terms.md).
+- `src/recursive_horizons/nsc_chiral_boundary.py` / `scripts/check_nsc_chiral_boundary.py`: paired-angular current/domain identities, first-order full-spinor Green maps, sparse joined/Schur/continuum checks and common-frame Clifford content. [Derivation](https://doi.org/10.5281/zenodo.23090015).
+- `src/recursive_horizons/nsc_finite_terms.py` / `scripts/check_nsc_finite_terms.py`: general-metric curvature and variational identities, local stress sensitivities, independent probes and rank of the finite covariant coefficient response. [Derivation](https://doi.org/10.5281/zenodo.23090015).
 
 ## Covariant determinant source
 
 - `src/recursive_horizons/nsc_covariant_identities.py`: independent full spacetime spin connection, Lichnerowicz square, physical chirality, metric/Weyl tangents and Dirac heat coefficients.
-- `src/recursive_horizons/nsc_covariant_operator.py` / `scripts/check_nsc_covariant_source.py`: actual frequency-dependent four-dimensional cutoff determinant, metric source, ultraviolet subtraction, independent vacuum/heat controls and source matching projections. [Derivation](nsc-covariant-source.md).
+- `src/recursive_horizons/nsc_covariant_operator.py` / `scripts/check_nsc_covariant_source.py`: actual frequency-dependent four-dimensional cutoff determinant, metric source, ultraviolet subtraction, independent vacuum/heat controls and source matching projections. [Derivation](https://doi.org/10.5281/zenodo.23090015).
 
 ## Normalization and causal state functional
 
-- `src/recursive_horizons/nsc_response_matching.py` / `scripts/check_nsc_response_matching.py`: independent Euclidean frequency loop, canonical Kubo response, finite proper-time Hessian, coordinate contact and angular/continuum relative matching. [Derivation](nsc-response-matching.md).
+- `src/recursive_horizons/nsc_response_matching.py` / `scripts/check_nsc_response_matching.py`: independent Euclidean frequency loop, canonical Kubo response, finite proper-time Hessian, coordinate contact and angular/continuum relative matching. [Derivation](nsc-normalized-histories.md).
 
-- `src/recursive_horizons/nsc_measure_normalization.py` / `scripts/check_nsc_measure_normalization.py`: exact determinant-profile comparison, retained finite remainder, metric variation and sharp-cylinder cutoff-wall control. [Derivation](nsc-measure-normalization.md).
-- `src/recursive_horizons/nsc_influence.py` / `scripts/check_nsc_influence.py`: normalized Gaussian closed-time-path determinant, independent Fock trace, mean force, causal response, fluctuation-dissipation and geometric pair-production connection. [Derivation](nsc-influence.md).
+- `src/recursive_horizons/nsc_measure_normalization.py` / `scripts/check_nsc_measure_normalization.py`: exact determinant-profile comparison, retained finite remainder, metric variation and sharp-cylinder cutoff-wall control. [Derivation](nsc-nested-qualities.md).
+- `src/recursive_horizons/nsc_influence.py` / `scripts/check_nsc_influence.py`: normalized Gaussian closed-time-path determinant, independent Fock trace, mean force, causal response, fluctuation-dissipation and geometric pair-production connection. [Derivation](https://doi.org/10.5281/zenodo.23090015).
 
 ## Preparation-method range diagnostic
 
-- [Vacuum-correction range pilot](nsc-vacuum-correction-range-pilot.md): four bounded original-source checks distinguish enclosure refinement near E=4 from a finite-occupation limitation near E=2; no coverage or gate promotion. Owner: `scripts/pilot_nsc_vacuum_correction_range.py`.
+- [Vacuum-correction range pilot](https://doi.org/10.5281/zenodo.23090015): four bounded original-source checks distinguish enclosure refinement near E=4 from a finite-occupation limitation near E=2; no coverage or gate promotion. Owner: `scripts/pilot_nsc_vacuum_correction_range.py`.
 
 ## Upstream vacuum-column remainder
 
-- [Phase-fixed spinor remainder](nsc-vacuum-spinor-remainder.md): converts the owned Bloch remainder to a uniform initial vacuum-column remainder. It retains finite-occupation and changed-history gaps; core and supplementary independent reviews passed. Owners: `src/recursive_horizons/nsc_vacuum_spinor_remainder.py`, `tests/test_nsc_vacuum_spinor_remainder.py`.
+- [Phase-fixed spinor remainder](nsc-ks-source-operator-majorant-v7.md): converts the owned Bloch remainder to a uniform initial vacuum-column remainder. It retains finite-occupation and changed-history gaps; core and supplementary independent reviews passed. Owners: `src/recursive_horizons/nsc_vacuum_spinor_remainder.py`, `tests/test_nsc_vacuum_spinor_remainder.py`.
 
 ## Resumable middle-energy preparation coverage
 
-- [Middle source coverage](nsc-middle-source-coverage.md): source-bound row checkpoints for group14 angular+1, 16<=E<32 and actual negative partners; 48-row window and its actual negative partners completed; saved witnesses replayed. Owner: `src/recursive_horizons/nsc_middle_source_coverage.py`, driver `scripts/derive_nsc_middle_source_coverage.py`.
+- [Middle source coverage](https://doi.org/10.5281/zenodo.23090015): source-bound row checkpoints for group14 angular+1, 16<=E<32 and actual negative partners; 48-row window and its actual negative partners completed; saved witnesses replayed. Owner: `src/recursive_horizons/nsc_middle_source_coverage.py`, driver `scripts/derive_nsc_middle_source_coverage.py`.
 
-- [Expanded continuous source insertion](nsc-ks-source-operator-majorant-v2.md): 866 signed rows, replacing the old middle pair exactly once; 302 rows remain in this family. Full upstream budget stays OPEN. Owner: `scripts/derive_nsc_ks_source_operator_majorant_v2.py`.
+- [Expanded continuous source insertion](https://doi.org/10.5281/zenodo.23090015): 866 signed rows, replacing the old middle pair exactly once; 302 rows remain in this family. Full upstream budget stays OPEN. Owner: `scripts/derive_nsc_ks_source_operator_majorant_v2.py`.
 
-- [High-angular preparation pilot](nsc-high-angular-preparation-pilot.md): direct-series versus validated correction at the first E>=32 row in groups12/22/32. Identifies which source rows need corrected witnesses before scaling; not whole-family coverage.
+- [High-angular preparation pilot](https://doi.org/10.5281/zenodo.23090015): direct-series versus validated correction at the first E>=32 row in groups12/22/32. Identifies which source rows need corrected witnesses before scaling; not whole-family coverage.
 
 - Current middle-coverage tests: `tests/test_nsc_middle_source_coverage_v2.py` preserves production hashes before/after every test. The original test file remains frozen in row-record provenance; its pre-campaign absence assumption is excluded from default collection.
 
-- [Signed subgap phase transport](nsc-massive-jost-mixed-transport.md): permits finite growth where the predecessor required contraction; original low16_1 row15 pilot completed, 15 tests and independent review passed. Missing/boolean bounds are rejected. Owner: `src/recursive_horizons/nsc_massive_jost_mixed_transport.py`; the saved row15 witness is now available; aggregate inclusion is separate.
+- [Signed subgap phase transport](nsc-ks-source-operator-majorant-v7.md): permits finite growth where the predecessor required contraction; original low16_1 row15 pilot completed, 15 tests and independent review passed. Missing/boolean bounds are rejected. Owner: `src/recursive_horizons/nsc_massive_jost_mixed_transport.py`; the saved row15 witness is now available; aggregate inclusion is separate.
 
-- [Source occupation norm](nsc-source-occupation-enclosure.md), independently reviewed: exact max(sqrt(f),n) source-to-vacuum norm with the existing incoming gap; moderate-energy positive-row pilot. Owners `src/recursive_horizons/nsc_source_occupation_enclosure.py`, `tests/test_nsc_source_occupation_enclosure.py`. Not yet part of the authenticated source aggregate.
+- [Source occupation norm](nsc-ks-source-operator-majorant-v7.md), independently reviewed: exact max(sqrt(f),n) source-to-vacuum norm with the existing incoming gap; moderate-energy positive-row pilot. Owners `src/recursive_horizons/nsc_source_occupation_enclosure.py`, `tests/test_nsc_source_occupation_enclosure.py`. Not yet part of the authenticated source aggregate.
 
-- [Near-threshold phase pilot](nsc-near-threshold-phase-pilot.md): the original subgap8/14_1 row7 is enclosed using a wider validated phase tube; two earlier tighter-tube controls failed. No production row record or aggregate coverage change yet.
+- [Near-threshold phase pilot](https://doi.org/10.5281/zenodo.23090015): the original subgap8/14_1 row7 is enclosed using a wider validated phase tube; two earlier tighter-tube controls failed. No production row record or aggregate coverage change yet.
 
-- [Saved low-row witness](nsc-subgap-row-witness.md): original low16_1 row15, 843 phase cells and 671 Bloch cells, actual signed source arrays, no-solve replay and 13 mutation/structural tests. Owner `scripts/derive_nsc_subgap_row15_upstream.py`; record `results/development/nsc-subgap-row15-upstream-v1.json`.
+- [Saved low-row witness](https://doi.org/10.5281/zenodo.23090015): original low16_1 row15, 843 phase cells and 671 Bloch cells, actual signed source arrays, no-solve replay and 13 mutation/structural tests. Owner `scripts/derive_nsc_subgap_row15_upstream.py`; record `results/development/nsc-subgap-row15-upstream-v1.json`.
 
-- [Source insertion v3](nsc-ks-source-operator-majorant-v3.md): replays the low row15 witness and complete middle window; 868 signed rows covered, 300 still missing in family14_1. Earlier source-insertion records remain historical. Owner `scripts/derive_nsc_ks_source_operator_majorant_v3.py`.
+- [Source insertion v3](https://doi.org/10.5281/zenodo.23090015): replays the low row15 witness and complete middle window; 868 signed rows covered, 300 still missing in family14_1. Earlier source-insertion records remain historical. Owner `scripts/derive_nsc_ks_source_operator_majorant_v3.py`.
 
-- [Direct homogeneous vacuum source](nsc-direct-vacuum-source.md): matching enclosed horizon frame, homogeneous Bloch transport, explicit CPU budget, saved-trace validation, separate signed archive comparisons and occupation allowance. Eight tests and independent review passed; not yet a production source window. Owner `src/recursive_horizons/nsc_direct_vacuum_source.py`.
+- [Direct homogeneous vacuum source](https://doi.org/10.5281/zenodo.23090015): matching enclosed horizon frame, homogeneous Bloch transport, explicit CPU budget, saved-trace validation, separate signed archive comparisons and occupation allowance. Eight tests and independent review passed; not yet a production source window. Owner `src/recursive_horizons/nsc_direct_vacuum_source.py`.
 
-- [Shared cubic UV transport](nsc-ks-cubic-channel-basis.md): one unit-angular massless geometry march per characteristic sign, followed by algebraic mass/angular assembly. Existing factorization reused; 11 tests and independent review passed. Full I, cutoff-ledger aggregation and C_M remain open. Owner `src/recursive_horizons/nsc_ks_cubic_channel_basis.py`.
+- [Shared cubic UV transport](https://doi.org/10.5281/zenodo.23090015): one unit-angular massless geometry march per characteristic sign, followed by algebraic mass/angular assembly. Existing factorization reused; 11 tests and independent review passed. Full I, cutoff-ledger aggregation and C_M remain open. Owner `src/recursive_horizons/nsc_ks_cubic_channel_basis.py`.
 
-- [Cubic inventory moments](nsc-ks-cubic-inventory.md): original 60-family weights, cutoffs 320 for groups 10, 11, 12, 31 and 32 and 160 otherwise, energy fold 1. The inventory does not modify the value residual. `C_M` stays null.
+- [Cubic inventory moments](https://doi.org/10.5281/zenodo.23090015): original 60-family weights, cutoffs 320 for groups 10, 11, 12, 31 and 32 and 160 otherwise, energy fold 1. The inventory does not modify the value residual. `C_M` stays null.
 
-- [Cubic leading value residual](nsc-ks-cubic-residual.md): adds that leading term, N minus and beta plus, on exact saved finite-cutoff target nodes. A center scalar is not broadcast. Higher remainder `C_M` blocks certification. Owner `src/recursive_horizons/nsc_ks_cubic_residual.py`. This inventory and residual are not inputs of the family insertion below, and they do not close the UV certificate or the local gate.
+- [Cubic leading value residual](https://doi.org/10.5281/zenodo.23090015): adds that leading term, N minus and beta plus, on exact saved finite-cutoff target nodes. A center scalar is not broadcast. Higher remainder `C_M` blocks certification. Owner `src/recursive_horizons/nsc_ks_cubic_residual.py`. This inventory and residual are not inputs of the family insertion below, and they do not close the UV certificate or the local gate.
 
 - [Family 14_1 source insertion v7](nsc-ks-source-operator-majorant-v7.md): 1168 of 1168 signed rows in this one positive-angular family. It joins the 1060-row v6 aggregate, including its 18 threshold rows, with the 108 disjoint subgap rows. The overlapping v5 total is not added. The continuous insertion bounds are about `4.226958072607968e-12` (N) and `3.357610065481873e-12` (beta). Record sha256 `c9a98578bf53ee02903403f4b63550ddb1d67ecf870d656f7b1f2ee74de44c12`. `physical_upstream_budget_component` is null. Quadrature error, numerical field error, value-assembly arithmetic, every other source family, and the UV tail stay outside this sum. The local gate stays OPEN. Owner `scripts/derive_nsc_ks_source_operator_majorant_v7.py`, with the v4, v5 and v6 predecessors. Saved inputs are `results/development/nsc-direct-source-window-v1` (87 positive rows), `results/development/nsc-subgap-source-window-v1` (54 positive rows) and `results/development/nsc-threshold18-import-v1` (9 positive rows). The validation environment is Python 3.12.14 with numpy 2.5.1, scipy 1.17.1, sympy 1.14.0, mpmath 1.3.0, python-flint 0.9.0 and threadpoolctl 3.6.0. Its test runner is pytest 8.4.2 from the threshold18 import requirements; those numerical pins were not upgraded.

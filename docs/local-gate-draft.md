@@ -1,7 +1,7 @@
 # Focused nested-qualities companion
 
 [Read the PDF](../paper/local-incoming-gate-draft.pdf) ·
-[Download TeX source](../paper/local-incoming-gate-draft-source.tar.gz) ·
+[Download TeX source](https://doi.org/10.5281/zenodo.23090015) ·
 [Inspect build hashes](../paper/local-gate-draft-manifest.json) ·
 [Inspect theorem snapshot](../paper/nested-quality-evidence/snapshot.json) ·
 [Inspect application snapshot](../paper/local-gate-evidence/snapshot.json)

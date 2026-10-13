@@ -15,7 +15,7 @@ through $T=0.3$ in [the current result](docs/current-result.md#present-spherical
 It measures source-dependent regional transfer, generated geometry, maintained
 localization, and a local response on that same trajectory. The same-action
 choice $L=Q$, $\beta=0$ includes the lapse chain-rule force and
-$F_L\dot L$ work. The [owning note](docs/nsc-spherical-conformal-continuation.md)
+$F_L\dot L$ work. The [owning note](https://doi.org/10.5281/zenodo.23090015)
 states the source controls, numerical indicators, and finite constraint domain.
 The [focused article](paper/finite-regeneration.pdf) presents this result;
 human author review and the actual arXiv processor check remain pending.
@@ -450,7 +450,7 @@ $\pm5.04\%$ in the recorded exploratory control domain. The actual metric
 curvature and the local memory, drive, and cross controls are measured from
 this realization. Numerical movements are below one percent of their own
 claimed effects. They remain indicators; renewal and continuum conclusions
-are separate claims. The [continuation note](docs/nsc-spherical-conformal-continuation.md)
+are separate claims. The [continuation note](https://doi.org/10.5281/zenodo.23090015)
 owns the domains and the [current article](paper/finite-regeneration.pdf)
 connects the finite chain.
 
@@ -482,7 +482,7 @@ veto, and a weak residual alone would not decide the window.
 
 Three historical saved consumers sit on that same prescribed loop and do not replace the
 broader stationarity question above. The
-[regeneration controls](docs/nsc-regeneration-controls.md) continue
+[regeneration controls](https://doi.org/10.5281/zenodo.23090015) continue
 the saved state to $T=0.10$. The leader's shell content rises by about
 $0.117$, packet and reservoir fluxes end opposite near $5.534$, and the
 field and gravitational energies exchange about $0.396$. The record's
@@ -542,7 +542,7 @@ links are the target. Numbers and owners:
 | Independent bulk regions share one time | Spatial support projectors on a common PG slice give independent canonical parent/child variables; the transmission condition belongs to the Dirac operator domain |
 
 The [current-result page](docs/current-result.md) gives the numbers, domains,
-and reproducing artifacts. The [development update](docs/development-update-2026-09-10.md)
+and reproducing artifacts. The [development update](https://doi.org/10.5281/zenodo.23090015)
 connects the latest source and normalization records. The [working paper](paper/nested-space-cosmology.pdf)
 contains the technical derivations and references.
 
@@ -565,7 +565,7 @@ dynamics through $T=0.3$ in [the current result](docs/current-result.md#present-
 It connects source differences, resolved regional transfer, generated
 geometry, maintained structure, and local memory on the same realization.
 The maintained branch is measured; renewal is not claimed. The
-[owning note](docs/nsc-spherical-conformal-continuation.md) and
+[owning note](https://doi.org/10.5281/zenodo.23090015) and
 [focused article](paper/finite-regeneration.pdf) state the finite evidence
 and its numerical domains. The earlier prescribed episodes remain historical
 results, and further constructions stay finite.

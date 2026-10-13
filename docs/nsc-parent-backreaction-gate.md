@@ -14,8 +14,8 @@ pressure to the outgoing power.
 
 This is a scoped flux obstruction, not a no-go theorem for all NSC
 realizations. The [record](../results/development/parent-backreaction-gate.json)
-uses the [existing quantum power](nsc-adm-neck-source-map.md),
-[local source contribution](nsc-warp-local-neck-source.md), and
+uses the [existing quantum power](https://doi.org/10.5281/zenodo.23090015),
+[local source contribution](nsc-parent-backreaction-gate.md), and
 [mass/energy normalization](nsc-spherical-action.md). No radiation,
 angular spectrum or collapse calculation is rerun.
 

@@ -122,14 +122,14 @@ does not establish worldwide priority.
 
 Standalone repetitions of interference, a known soliton, a published nuclear table, a black-universe metric, or a generic test suite are not project results.
 
-The [atlas v2 application](nsc-cosmological-atlas-v2.md) records
+The [atlas v2 application](nsc-cosmological-atlas.md) records
 the first two decisions under this rule: import Brill–Lindquist spatial data
 to supply a common parent, and stop the constant-tension/comoving-radiation
 attachment after its scoped incompatibility check. Neither is claimed as
 new-to-world mathematics. Moving-boundary dynamics and matching to the
 nonspherical parent require their own source/domain admission.
 
-The [v3 application](nsc-cosmological-atlas-v3.md) closes that
+The [v3 application](nsc-cosmological-atlas.md) closes that
 motion-only question through imported conservation, and imports a distinct
 signed de Sitter wall as a finite control. Published N-body gluing now supplies
 a separate parent family with spherical collars; recreating its existence
@@ -138,7 +138,7 @@ was complete wall-body Cauchy data, the chosen Schwarzschild side, and a source
 regularity class covered by the theorem. Neither matching a mass parameter nor
 passing a local shell check closes that interface.
 
-The [v4 application](nsc-cosmological-atlas-v4.md) supplies that
+The [v4 application](nsc-atlas-connection-slice.md) supplies that
 interface in one model: a regular cap, fixed wall, correct vacuum bridge and
 AE end with bulk and distributional constraints checked. The gluing theorem
 acts on smooth vacuum ends only; identical open overlaps preserve the sourced
@@ -149,7 +149,7 @@ Global shell evolution, formation, stability and an observable that breaks
 that equivalence remain separate admission questions. No global smoothness
 requirement is imposed on the wall merely to use the end-only theorem.
 
-The [v5 application](nsc-cosmological-atlas-v5.md) borrows the
+The [v5 application](nsc-atlas-causal-classification.md) borrows the
 isolated wall's causal classification and null coordinates, locates the v4
 slice, and records access for named interior, wall and parent observers. It
 distinguishes early geometric paths from excluded new emissions after the
@@ -160,7 +160,7 @@ future remain explicit. A response calculation must next specify the field,
 state and wall transmission law, or justify another communicating attachment;
 an available null path alone does not supply an observable imprint.
 
-The [v6 application](nsc-cosmological-atlas-v6.md) specifies a
+The [v6 application](nsc-atlas-field-transfer.md) specifies a
 classical conformal scalar, zero earlier interior data and one incoming
 characteristic on the exterior wall side. Borrowed distributional matching
 and conformal propagation give a conditional central waveform. This closes
@@ -393,3 +393,28 @@ contains unsolved metric and wall-displacement corrections. This branch
 stops at the identity. A promising next bridge is exterior-side mass
 transport along the existing wall traces, before a full coupled evolution;
 it requires a separate admission and an independent transport check.
+
+## Exterior wall-mass closure admission, 13 October 2026
+
+The initialized mass and local wall conditions do not yet connect the field
+to gravity on the moving boundary. Test whether a one-sided exterior mass
+functional closes from the already available leading traces before selecting
+a bulk evolution method. This admission is analytic; a numerical mass curve
+needs its own quadrature and error decision after closure.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | Both null mass laws in An--Lim [2005.04090v1](https://arxiv.org/html/2005.04090v1), (2.14)-(2.15); the smooth-exterior field/frame map of Aviles--Maeda--Martinez [1910.07534v2](https://arxiv.org/html/1910.07534v2), (2.21)-(2.24); full geometric mass transformation in Faraoni--Vitagliano [1401.1189v1](https://arxiv.org/html/1401.1189v1), (7); general-matter mass law in Hayward [gr-qc/9710089v2](https://arxiv.org/html/gr-qc/9710089v2), (2.9d). Reuse the existing source-mass normalization and reading boundaries. |
+| Missing | A quadratic Jordan geometric mass coefficient on the exterior limit of the reference wall, with both null fluxes and the full frame correction accounted for. |
+| Fixed prerequisites | Same canonical real massless conformal scalar, original C3 preparation, zero bottom/cap data, no-return condition and fixed material/vacuum parameters. Existing chi_W, J=d chi_W/dV and chi_U=0 on the wall; the outward normal is (-Udot,Vdot). Keep the quiet corner mass and the right-parent causal exclusion. |
+| Decision | Establish whether the leading scalar trace, background clocks and radial derivatives close the exterior-side mass along the timelike reference wall. Identify any unavailable datum, higher derivative or unsolved metric correction that prevents this. |
+| Unlocks | A separately admitted finite mass evaluation and an exterior input to later coupled wall/cap matching, or the smallest missing dynamical equation. This alone supplies no cap mass, wall motion, material-shell mass, corrected observer signal or amplitude bound. |
+| Domain and order | Original wall R/ell in [0.45,0.55], retained exterior sector IV, formal quadratic scalar order and fixed preparation/corner. The smooth exterior frame map is not continued across the material wall. |
+| Budget | One analytic closure and independent exact-algebra check, at most 60 process-CPU seconds per complete evidence creation. No numerical mass curve, waveform rerun, PDE solver, parameter sweep or enlarged future domain. |
+| Independent check | Compare both Einstein-frame null fluxes plus the full frame map with Hayward's Jordan-frame transport retaining the improved stress. Check quiet anchor, zero field, null reparametrization, unit scaling and regularity at beta_+=0. Omitted transverse/flux/frame terms must fail meaningful controls. |
+| Stop or redirect | Stop with the exact obstruction if an unavailable datum or metric correction remains, if independent routes disagree, or if the proposed expression is singular at the regular beta_+=0 crossing. Do not alter the state or sources to close it. Numerical evaluation needs an explicit new budget and independent refinement; v8 waveform convergence alone does not certify a quadratic mass integral. |
+
+The three likely failures are a missing second null flux, incorrect frame
+or timelike-path accounting, and confusion between one-sided mass and a
+coupled wall solution. Two independent mass routes, regular wall variables
+and an explicit unsolved cap/wall remainder distinguish those failures.

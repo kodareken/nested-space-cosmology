@@ -16,13 +16,13 @@ keeps that scope separate from global constraints and full stationarity.
 
 ## The previously missing bound
 
-The [directed low-energy projector certificate](nsc-incoming-low-energy-vacuum-enclosure.md)
+The [directed low-energy projector certificate](https://doi.org/10.5281/zenodo.23090015)
 encloses the exact affine-vacuum component at rho1, with initialization,
 whole-step transport, arithmetic and endpoint uncertainties included.
 Its lower bound on `Re Pv01` exceeds1/4. This is the selected low energy's
 own certificate; no group32 high-energy error was transferred to it.
 
-The [analytic sign bound](nsc-retarded-diagonal-sign-bound.md) then applies.
+The [analytic sign bound](nsc-retarded-fixed-c0-certificate.md) then applies.
 The actual source remains the original coherent horizon pair with a closed
 infinity channel. Its distance from the dominant vacuum component is exactly
 `sqrt(f_H)` in operator norm. That entire remainder, including any allowed
@@ -38,7 +38,7 @@ The original pulse has the exact positive insertion lower bound
 
 ## Why this is a complete selected-pair test
 
-The [Fourier matching identity](nsc-incoming-fourier-matching.md) integrates
+The [Fourier matching identity](https://doi.org/10.5281/zenodo.23090015) integrates
 the stationary source-energy delta functions analytically at first order.
 This selected pair therefore has no omitted energy-quadrature contribution.
 All three source columns and horizon coherence are retained. Different

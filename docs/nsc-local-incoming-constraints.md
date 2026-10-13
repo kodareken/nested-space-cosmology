@@ -1,7 +1,7 @@
 # Bounded local incoming constraint assembly
 
 Local source-fixed N,beta residuals on a declared connected interval I,
-using the actual [exact-phase owner](nsc-exact-phase-prepared-state.md).
+using the actual [exact-phase owner](https://doi.org/10.5281/zenodo.23090015).
 The production local gate is I=S(1)+[.12,.18]. Global matching, extended
 stationarity, metric stepping and observations are out of scope.
 

@@ -113,6 +113,24 @@ coupled metric evolution. Its necessary mean-curvature condition does not
 set the wall displacement to zero; individual one-sided pressures and
 finite-amplitude validity remain uncomputed.
 
+The [wall-mass closure](nsc-atlas-wall-mass-closure.md) expresses the
+exterior mass coefficient using the already fixed leading wall trace.
+It checks both null fluxes, full frame conversion and original-frame stress
+transport analytically, without a numerical mass curve:
+
+```sh
+python scripts/record_nsc_atlas_wall_mass_closure.py --check
+python scripts/run_python.py scripts/record_nsc_atlas_wall_mass_closure.py --check-algebra
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_wall_mass_closure.py
+```
+
+Ordinary checking authenticates stored evidence; explicit algebra replay
+checks the identities and omission controls. Creation requires a new output
+directory within the 60-process-CPU-second budget. A numerical evaluation
+needs its own quadrature, field/geometry error control and admission. The
+existing waveform samples do not certify this new integral. Coupled cap/wall
+geometry and the corrected observer signal remain uncomputed.
+
 Atlas v8 remains the finite exterior-to-interior waveform result. Its original
 replay is explicitly selected below. The fixed input, numerical budget,
 refinement diagnostics and independent analytic tail bound remain in the
@@ -273,7 +291,7 @@ context's isolated source environment; never change pinned hashes or substitute
 the current package to make an old record pass. Routine authentication remains
 `make history-check` or `python scripts/replay_history.py all`.
 
-The [migration checker](../scripts/reassemble_repository.py) authenticates every
+The [migration checker](https://doi.org/10.5281/zenodo.23090015) authenticates every
 destination and explicit successor. [Preservation and recovery](repository-consolidation.md)
 describe the original-path manifest and the named implementation variants.
 

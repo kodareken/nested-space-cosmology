@@ -50,7 +50,7 @@ equations. All original unread and unverified boundaries below remain in force.
 ## What was covered
 
 The [summary](../results/research-reset/inventory-summary.json) and
-[file inventory](../results/research-reset/file-inventory.json) cover **30,951
+[file inventory](https://doi.org/10.5281/zenodo.23090015) cover **30,951
 files** in both preserved working states. The baseline is the original
 `cdb60ef6c40afae680bec7321a96484f45751cd5` canonical commit and
 `d273ce6c86cacdf35d57c97292b270fac5fa6713` w2 commit, overlaid with the
@@ -64,7 +64,7 @@ The census reads all **1,861 document locations**, groups their **863 distinct
 byte contents**, extracts headings, explicit scope/status passages, citations
 and file references, and parses **14,122 result JSONs**. Binary payloads are
 identified by their immutable Git blobs or preserved SHA-256, not numerically
-re-evaluated. The [document corpus](../results/research-reset/document-corpus.json)
+re-evaluated. The [document corpus](https://doi.org/10.5281/zenodo.23090015)
 keeps path aliases and same-path variants separate. In each worktree, 108
 root/lab Markdown pairs are byte-identical; four pairs differ, including
 instructions and three scientific/procedure variants.
@@ -112,6 +112,15 @@ condition includes metric and wall displacement. The
 records the scoped readings and sign limitation; prior sealed owners and
 their original open-status fields remain unchanged.
 
+The [wall-mass closure](nsc-atlas-wall-mass-closure.md) is a reusable
+conditional analytic functional of the fixed wall field. Independent
+Einstein-frame and improved-stress routes agree, retaining both null fluxes
+and the conformal endpoint term. It supplies no numerical mass values,
+late plateau or sign, coupled cap/wall solution or finite-amplitude bound.
+The [wall-mass library](arxiv-studies.md#wall-mass-library) records borrowed
+timelike transport and a prior scalar-through-shell mass calculation in
+a different model. Its bounded comparison makes no priority claim.
+
 **Scientific reading has an explicit boundary.** Named current owners,
 supersession notes and all 17 child/neck scientific notes received a scope
 review. The independent w2 review covered charged-source, observer-clock,
@@ -137,7 +146,7 @@ The recorded scope-review list contains 44 document locations.
 | w2 influence, constants and clocks | Preserve for comparison and hypotheses. Quarantine universal dark-sector-elimination language, the default infinite `.049`-target closure and empirical coefficients presented as fundamental constants. Physical clock/winding interpretations have a documented metric-factor mismatch. |
 | Frozen publications and archives | Keep original papers, manifests and source-history identities. Publication coverage is incomplete for later lab work; archives provide history and replay inputs, not current proof. |
 
-The [result-family index](../results/research-reset/result-families.json) assigns
+The [result-family index](https://doi.org/10.5281/zenodo.23090015) assigns
 every result file to a family, separates versioned records from numerical
 payload directories, links explicit note owners, and records source/test/note
 dependencies. Record-bound scientific-note dependencies count as an owner

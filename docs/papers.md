@@ -43,9 +43,12 @@ The [normal-force check](nsc-atlas-scalar-normal-force.md) now adds zero
 regular normal-stress jump for the same conformal probe. It supplies a
 necessary mean-curvature condition for a later sourced wall, with bulk
 metric and wall displacement both included in that variation.
-The next proposed decision is whether the existing leading wall traces
-already close exterior-side mass transport. That connection remains
-uncomputed and requires its own admission before a larger evolution.
+The [wall-mass closure](nsc-atlas-wall-mass-closure.md) now shows that the
+fixed leading trace supplies an analytic exterior-side mass functional,
+using both null fluxes and the full frame correction. Its numerical
+evaluation remains separate from the unsolved cap/wall geometry. The next
+decision is a controlled finite evaluation or a named remaining junction
+input, according to which unlocks the next physical connection.
 
 ## Supporting and historical editions
 
@@ -58,10 +61,10 @@ uncomputed and requires its own admission before a larger evolution.
   and [evidence manifest](../paper/finite-regeneration-manifest.json).
 - [Local incoming-gate companion](../paper/local-incoming-gate-draft.pdf):
   the preserved OPEN application checkpoint; its campaign remains paused.
-- Atlas [v1 evidence](../results/development/nsc-cosmological-atlas-v1/narrative.md),
-  [v2 manuscript](../paper/atlas-working-draft.md),
-  [v3](../paper/atlas-working-draft-v3.md), [v4](../paper/atlas-working-draft-v4.md),
-  [v5](../paper/atlas-working-draft-v5.md), [v6](../paper/atlas-working-draft-v6.md):
+- Atlas [v1 evidence](https://doi.org/10.5281/zenodo.23090015),
+  [v2 manuscript](https://doi.org/10.5281/zenodo.23090015),
+  [v3](https://doi.org/10.5281/zenodo.23090015), [v4](https://doi.org/10.5281/zenodo.23090015),
+  [v5](https://doi.org/10.5281/zenodo.23090015), [v6](https://doi.org/10.5281/zenodo.23090015):
   source-bound historical stages, not competing current drafts.
 
 Historical text retains original logical paths. Materialize its original layout

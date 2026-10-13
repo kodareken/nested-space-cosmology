@@ -11,7 +11,7 @@ missing archived payloads are intentional, not an instruction to rerun science.
 - [Exact payload index, sizes and hashes](storage/historical-search-payloads.json)
 - [Measured timeline, verification and restore control](storage/necessity-audit.json)
 - [Portable sparse rules](storage/historical-search.sparse)
-- [Explicit restore command](../scripts/restore_nsc_search_payloads.py)
+- [Explicit restore command](https://doi.org/10.5281/zenodo.23090015)
 
 The Trash copy is the historical host’s Trash entry `nsc-historical-search-20260928-123024`.
 It retains the original relative paths, a complete `restore-receipt.json` and

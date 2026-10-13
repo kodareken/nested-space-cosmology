@@ -10,10 +10,10 @@ junction, a new spacetime manifold, or an eternal continuation.
 
 The method reuses the
 [finite inheritance theorem](../../docs/nsc-nested-qualities.md),
-[spherical action](nsc-spherical-feedback-action.md),
-[direct source](nsc-conformal-adm-source.md), and
-[conformal variation](nsc-spherical-conformal-gauge.md).
-The earlier [graded compression](nsc-geometry-graded-window.md) is an
+[spherical action](nsc-spherical-action.md),
+[direct source](https://doi.org/10.5281/zenodo.23090015), and
+[conformal variation](https://doi.org/10.5281/zenodo.23090015).
+The earlier [graded compression](https://doi.org/10.5281/zenodo.23090015) is an
 initial operator measurement. Its large complement leakage is retained;
 that six-mode compression is not substituted for full field evolution.
 
@@ -276,7 +276,7 @@ claimed for these comparisons.
 ## Recorded pilot v1: measured pair, incomplete precision and reduction
 
 The [v1 record](../results/development/nsc-nested-parent-child-v1.json) and
-[payload](../results/development/nsc-nested-parent-child-v1.npz) preserve
+[payload](https://doi.org/10.5281/zenodo.23090015) preserve
 twelve trajectories: baseline, exterior-parent intervention, and
 child-source intervention at $n_f=128,256$ and step caps $0.001,0.0005$.
 All reach $T=0.3$. CPU is $401.36$ s and payload is about $15.85$ MB.
@@ -340,7 +340,7 @@ the comparison domain for the confirmation.
 ## Confirmation v2: the declared finite pair is complete
 
 The [confirmation](../results/development/nsc-nested-parent-child-confirmation-v2.json)
-and its [payload](../results/development/nsc-nested-parent-child-confirmation-v2.npz)
+and its [payload](https://doi.org/10.5281/zenodo.23090015)
 record `MEASURED_CONFIRMED_NESTED_PAIR`. They preserve the v1 witness and
 add only the two $n_f=512$ baseline/parent-source trajectories needed for
 the finer spatial comparison, plus the local response on the saved witness.
@@ -389,7 +389,7 @@ python scripts/lab.py scripts/plot_nsc_nested_parent_child.py --check
 ```
 
 The [four-panel figure](../results/development/nsc-nested-parent-child-figure.png)
-and its [data manifest](../results/development/nsc-nested-parent-child-figure.json)
+and its [data manifest](https://doi.org/10.5281/zenodo.23090015)
 replay the actual source, reciprocal physical responses, length ratio and
 proper clocks. The result is one finite nested pair under one evolving
 metric and the common inherited functional law. Its refinement indicators

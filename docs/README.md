@@ -9,7 +9,7 @@ verification of every derivation.
 | Scientific argument and illustrated map | [Paper](../paper/nested-space-cosmology.md), [PDF](../paper/nested-space-cosmology.pdf) |
 | Geometry, observer access and prepared scalar response | [Atlas v8](nsc-cosmological-atlas-v8.md), [field matching](nsc-atlas-field-matching.md), [prepared response](nsc-atlas-prepared-response.md) |
 | Research owners across all strands | [Scientific index](research-index.md), [code map](active-code-map.md) |
-| Dispositions and unread boundaries | [Inventory](research-inventory.md), [migration](../results/reassembly/README.md) |
+| Dispositions and unread boundaries | [Inventory](research-inventory.md), [migration](https://doi.org/10.5281/zenodo.23090015) |
 | Recorded results and corrections | [Current result](current-result.md) |
 | Reuse and new calculation admission | [Prior art](prior-art-and-open-claim.md), [arXiv library](arxiv-studies.md) |
 | Branches, authority and method | [Instructions](instructions.md) |

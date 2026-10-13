@@ -72,7 +72,7 @@ E_\xi=\int\mathcal N\rho\,dV,\qquad
 
 The receiver's proper power is incoming Killing power divided by its uniform
 lapse squared. Moving boundaries and evolving geometry also require their work
-terms. The [energy-transfer owner](nsc-energy-transfer.md) provides the general
+terms. The [energy-transfer owner](https://doi.org/10.5281/zenodo.23090015) provides the general
 work identity. Equivalent window sources and surface fluxes must not be counted
 twice. Incoming Dirac energy may become radiation or heat; its conversion into
 fixed-mass baryonic dust remains a physical dependency, including baryon-number

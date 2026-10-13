@@ -1,6 +1,6 @@
 # Seam-free periodic radius: gap without derivative seams, and the required Einstein residual
 
-The [repeated-throat chain](nsc-geometric-chain.md) opened a spatial band gap by
+The [repeated-throat chain](https://doi.org/10.5281/zenodo.23090015) opened a spatial band gap by
 periodizing `r=sqrt(1+rho^2)` on `[-R,R]`. That motif is continuous, but `r'`
 jumps at every seam, so it is not a gravitationally matched periodic geometry.
 This calculation changes only that geometric condition. The

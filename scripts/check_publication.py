@@ -6,6 +6,8 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import os
+from types import ModuleType, SimpleNamespace
 from pathlib import Path
 import re
 import subprocess
@@ -45,30 +47,28 @@ IGNORED_NAMES = {
 }
 EXCLUDED_ROOTS = {"collected-data", "configs", "mk", "runs"}
 REQUIRED = {
-    "README.md",
-    "THEORY.md",
-    "AGENTS.md",
-    "CONTRIBUTING.md",
-    "CITATION.cff",
-    "LICENSE",
-    "SECURITY.md",
-    "docs/current-result.md",
-    "docs/prior-art-and-open-claim.md",
-    "docs/reproducing.md",
-    "docs/nsc-closure-verification-2026-09-07.md",
-    "docs/nsc-regulated-recursion.md",
-    "docs/nsc-radial-spectrum.md",
-    "docs/nsc-geometric-chain.md",
-    "paper/nested-space-cosmology.md",
-    "paper/nested-space-cosmology.pdf",
-    "paper/build-manifest.json",
-    "paper/catalog.json",
-    "paper/local-incoming-gate-draft.pdf",
-    "paper/local-gate-draft-manifest.json",
-    "docs/papers.md",
-    "docs/instructions.md",
-    "results/manifest.json",
-    "PUBLICATION-PROVENANCE.json",
+    'AGENTS.md',
+    'CITATION.cff',
+    'CONTRIBUTING.md',
+    'LICENSE',
+    'PUBLICATION-PROVENANCE.json',
+    'README.md',
+    'SECURITY.md',
+    'THEORY.md',
+    'docs/current-result.md',
+    'docs/instructions.md',
+    'docs/nsc-radial-spectrum.md',
+    'docs/nsc-regulated-recursion.md',
+    'docs/papers.md',
+    'docs/prior-art-and-open-claim.md',
+    'docs/reproducing.md',
+    'paper/build-manifest.json',
+    'paper/catalog.json',
+    'paper/local-gate-draft-manifest.json',
+    'paper/local-incoming-gate-draft.pdf',
+    'paper/nested-space-cosmology.md',
+    'paper/nested-space-cosmology.pdf',
+    'results/manifest.json',
 }
 ALLOWED_CATEGORIES = {
     "imported_benchmark_reproduction",
@@ -139,8 +139,131 @@ UNSUPPORTED_GITHUB_MATH = {
 }
 
 
+ARCHIVE_DOI = "10.5281/zenodo.23090015"
+
+
+def retained_receipts() -> tuple[dict | None, dict[str, dict]]:
+    path = ROOT / "docs/lab-snapshot.json"
+    if not path.is_file():
+        return None, {}
+    snapshot = json.loads(path.read_text(encoding="utf-8"))
+    if snapshot.get("schema") != "NSC-CONSOLIDATED-LAB-v2":
+        return None, {}
+    if (snapshot.get("canonical_root") != "."
+            or snapshot.get("provenance", {}).get("archived_import_and_reassembly_doi") != ARCHIVE_DOI):
+        raise ValueError("invalid retained-file receipt identity")
+    receipts = {}
+    for row in snapshot.get("files", []):
+        name = row["path"]
+        _safe_relative(name)
+        if (name in receipts or not re.fullmatch("[0-9a-f]{64}", row.get("sha256", ""))
+                or not isinstance(row.get("bytes"), int) or row["bytes"] < 0):
+            raise ValueError("invalid or repeated retained-file receipt: " + name)
+        receipts[name] = row
+    return snapshot, receipts
+
+
+def _safe_relative(relative: str) -> Path:
+    path = Path(relative)
+    if (path.is_absolute() or path.drive or ".." in path.parts or not path.parts
+            or not (ROOT / path).resolve().is_relative_to(ROOT.resolve())):
+        raise ValueError("unsafe publication evidence path: " + str(relative))
+    return path
+
+
+def _git_bytes(commit: str, relative: str) -> bytes:
+    """Read one exact pinned object without materializing a historical checkout."""
+    _safe_relative(relative)
+    if not re.fullmatch("[0-9a-f]{40}", commit):
+        raise ValueError("historical source is not pinned")
+    key = (str(ROOT), commit, relative)
+    if key not in _PINNED_BYTES:
+        environment = os.environ.copy()
+        objects = ROOT / "archive/source-history/objects"
+        if objects.is_dir():
+            inherited = environment.get("GIT_ALTERNATE_OBJECT_DIRECTORIES", "")
+            environment["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(objects) + (os.pathsep + inherited if inherited else "")
+        result = subprocess.run(["git", "show", f"{commit}:{relative}"], cwd=ROOT,
+                                env=environment, capture_output=True)
+        if result.returncode:
+            raise FileNotFoundError("pinned historical object unavailable: " + relative)
+        _PINNED_BYTES[key] = result.stdout
+    return _PINNED_BYTES[key]
+
+
+_PINNED_BYTES = {}
+
+
+class _PinnedPath:
+    """The frozen checker's read-only path interface over one explicit Git context."""
+    def __init__(self, commit, relative=""):
+        self.commit, self.relative = commit, relative
+
+    def __truediv__(self, relative):
+        return type(self)(self.commit, (Path(self.relative) / relative).as_posix())
+
+    def read_bytes(self):
+        return _git_bytes(self.commit, self.relative)
+
+    def read_text(self, encoding="utf-8"):
+        return self.read_bytes().decode(encoding)
+
+    def is_file(self):
+        try:
+            self.read_bytes()
+            return True
+        except FileNotFoundError:
+            return False
+
+    def stat(self):
+        return SimpleNamespace(st_size=len(self.read_bytes()))
+
+    def __str__(self):
+        return f"pinned:{self.commit}:{self.relative}"
+
+
+def historical_checker(commit):
+    source = _git_bytes(commit, "scripts/reproduce_public_results.py")
+    module = ModuleType("nsc_pinned_release_checker")
+    module.__file__ = str(ROOT / "scripts/reproduce_public_results.py")
+    exec(compile(source, module.__file__, "exec"), module.__dict__)
+    module.ROOT = _PinnedPath(commit)
+    return module
+
+
+def _baseline() -> str:
+    snapshot, _ = retained_receipts()
+    if snapshot is None:
+        from replay_history import BASELINE
+        return BASELINE
+    return snapshot["provenance"]["historical_replay_baseline"]
+
+
+def authenticate_frozen_path(relative, expected, *, result=False, context=None):
+    """Local frozen outputs remain strict; disposed outputs need DOI/hash receipts."""
+    path = ROOT / _safe_relative(relative)
+    if path.is_file() and sha256(path) == expected:
+        return "local"
+    if result:
+        if path.is_file():
+            raise ValueError("retained frozen evidence changed: " + relative)
+        value = json.loads(PROVENANCE.read_text(encoding="utf-8"))
+        rows = {row["path"]: row for row in value.get("evidence_locations", [])}
+        row = rows.get(relative, {})
+        if (row.get("status") != "archived" or row.get("sha256") != expected
+                or row.get("doi") != ARCHIVE_DOI):
+            raise ValueError("missing frozen evidence has no archival receipt: " + relative)
+    raw = _git_bytes(context or _baseline(), relative)
+    if hashlib.sha256(raw).hexdigest() != expected:
+        raise ValueError("pinned historical evidence differs: " + relative)
+    return "archived" if result else "pinned_source"
+
+
 def check_development_snapshot() -> set[str]:
     """Authenticate the later snapshot without extending the frozen release."""
+    snapshot_receipt, _ = retained_receipts()
+    if snapshot_receipt is not None:
+        return check_archived_development_snapshot()
     from reproduce_public_results import validate_authenticated_inputs
     snapshot = json.loads((ROOT / "results/development-snapshot.json").read_text())
     if snapshot.get("schema") != "NSC-DEVELOPMENT-SNAPSHOT-v1":
@@ -196,6 +319,59 @@ def check_development_snapshot() -> set[str]:
     if outputs | payloads != {path for path in sources if path.startswith("results/")}:
         raise ValueError("development record index differs from imported results")
     return outputs
+
+
+def check_archived_development_snapshot() -> set[str]:
+    baseline = _baseline()
+    path = ROOT / "results/development-snapshot.json"
+    if path.read_bytes() != _git_bytes(baseline, "results/development-snapshot.json"):
+        raise ValueError("immutable development snapshot differs from its pinned context")
+    snapshot = json.loads(path.read_text(encoding="utf-8"))
+    if snapshot.get("schema") != "NSC-DEVELOPMENT-SNAPSHOT-v1":
+        raise ValueError("unexpected development snapshot schema")
+    if snapshot["release_manifest_sha256"] != sha256(RESULT_MANIFEST):
+        raise ValueError("development release baseline changed")
+    legacy = historical_checker(baseline)
+    sources = {}
+    for row in snapshot["source_files"]:
+        relative = row["path"]
+        _safe_relative(relative)
+        if relative in sources or Path(relative).parts[0] not in {"docs", "src", "scripts", "tests", "results"}:
+            raise ValueError("invalid development source path")
+        raw = _git_bytes(baseline, relative)
+        if len(raw) != row["bytes"] or hashlib.sha256(raw).hexdigest() != row["sha256"]:
+            raise ValueError("pinned development source differs: " + relative)
+        if relative.startswith("results/"):
+            authenticate_frozen_path(relative, row["sha256"], result=True, context=baseline)
+        sources[relative] = row
+    outputs, payloads, local = set(), set(), set()
+    for record in snapshot["records"]:
+        output = record["output"]
+        if (output in outputs or output not in sources or not output.startswith("results/development/")
+                or record["generator"] not in sources or record["arguments"] != ["--check"]):
+            raise ValueError("invalid development record declaration")
+        value = json.loads(_git_bytes(baseline, output))
+        if record["comparison"] != value["comparison"]:
+            raise ValueError("development comparison policy changed: " + output)
+        legacy.validate_authenticated_inputs(legacy.ROOT, value)
+        declared = [value.get("payload"), *value.get("auxiliary_payloads", [])]
+        if value.get("schema") == "NSC-COMPACT-MATCHED-RESTART-v1":
+            declared += [value.get("scattering_payload"), value.get("seed_generations_payload")]
+        for payload in declared:
+            if isinstance(payload, dict) and payload.get("path"):
+                relative = payload["path"]
+                if relative in payloads or relative not in sources or not relative.startswith("results/development/artifacts/"):
+                    raise ValueError("invalid development payload declaration")
+                raw = _git_bytes(baseline, relative)
+                if len(raw) != payload.get("bytes") or hashlib.sha256(raw).hexdigest() != payload.get("sha256"):
+                    raise ValueError("pinned development payload differs: " + relative)
+                payloads.add(relative)
+        outputs.add(output)
+        if (ROOT / output).is_file():
+            local.add(output)
+    if outputs | payloads != {p for p in sources if p.startswith("results/")}:
+        raise ValueError("development record closure differs")
+    return local
 
 
 def sha256(path: Path) -> str:
@@ -293,16 +469,16 @@ def check_manifest(errors: list[str]) -> None:
             (output, "output_sha256"),
             (generator, "generator_sha256"),
         ):
-            path = ROOT / relative
-            if not path.is_file():
-                errors.append(f"manifest path is absent: {relative}")
-            elif sha256(path) != step.get(field):
-                errors.append(f"manifest hash mismatch: {relative}")
+            try:
+                authenticate_frozen_path(relative, step.get(field), result=(relative == output))
+            except (OSError, ValueError, KeyError, TypeError) as error:
+                errors.append("manifest evidence: " + str(error))
         for auxiliary in step.get("auxiliary_inputs", []):
             relative = str(auxiliary.get("path", ""))
-            path = ROOT / relative
-            if not path.is_file() or sha256(path) != auxiliary.get("sha256"):
-                errors.append(f"auxiliary provenance input mismatch: {relative}")
+            try:
+                authenticate_frozen_path(relative, auxiliary.get("sha256"), result=relative.startswith("results/"))
+            except (OSError, ValueError, KeyError, TypeError) as error:
+                errors.append("auxiliary provenance: " + str(error))
     if current != [manifest.get("frontier_artifact_id")]:
         errors.append(f"historical frontier differs from its declared manifest identity: {current}")
     result_files = {
@@ -322,31 +498,29 @@ def check_manifest(errors: list[str]) -> None:
     except Exception as exc:
         errors.append(f"development snapshot validation failed: {exc}")
         development_outputs = set()
-    migrated_outputs = set()
-    migration = ROOT / "results/reassembly/manifest.json"
-    if migration.is_file():
-        for row in json.loads(migration.read_text(encoding="utf-8"))["rows"]:
-            relative = row["destination"]
-            if row["origin"] in {"lab", "w2"} and relative in result_files:
-                if sha256(ROOT / relative) != row["sha256"]:
-                    errors.append("migrated result differs from its recorded evidence: " + relative)
-                migrated_outputs.add(relative)
-    if result_files != outputs | development_outputs | migrated_outputs:
-        errors.append("tracked NSC result files differ from the manifest closure")
+    receipt_outputs = set()
+    try:
+        snapshot, receipts = retained_receipts()
+        if snapshot is None:
+            raise ValueError("live publication checks require NSC-CONSOLIDATED-LAB-v2 receipts")
+        for relative in result_files & set(receipts):
+            row = receipts[relative]
+            if sha256(ROOT / relative) != row["sha256"] or (ROOT / relative).stat().st_size != row["bytes"]:
+                errors.append("retained result differs from its receipt: " + relative)
+            receipt_outputs.add(relative)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("retained result receipts: " + str(error))
+    local_outputs = {relative for relative in outputs if (ROOT / relative).is_file()}
+    if result_files != local_outputs | development_outputs | receipt_outputs:
+        errors.append("tracked NSC result files differ from authenticated local/archived closure")
 
 
 def validate_historical_release(manifest: dict) -> None:
-    """Run the frozen release contract in an explicit, authenticated context."""
-    from replay_history import CONTEXT, prepare
-
-    prepare(CONTEXT)
-    historical_manifest = CONTEXT / "results/manifest.json"
-    if sha256(RESULT_MANIFEST) != sha256(historical_manifest):
-        raise ValueError("current legacy release manifest differs from its preserved edition")
-    spec = importlib.util.spec_from_file_location(
-        "nsc_preserved_release_checker", CONTEXT / "scripts/reproduce_public_results.py")
-    legacy = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(legacy)
+    """Run the original release contract on pinned Git bytes, without old checkouts."""
+    baseline = _baseline()
+    if RESULT_MANIFEST.read_bytes() != _git_bytes(baseline, "results/manifest.json"):
+        raise ValueError("immutable release manifest differs from its preserved edition")
+    legacy = historical_checker(baseline)
     legacy.validate_checkout(manifest)
 
 
@@ -372,6 +546,29 @@ def check_provenance(errors: list[str], files: list[Path]) -> None:
             errors.append("publication provenance has the wrong manuscript revision")
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("publication version routing: " + str(error))
+    try:
+        from build_publication_provenance import evidence_index
+        expected = evidence_index(ROOT)
+        rows = value.get("evidence_locations", [])
+        locations = {row["path"]: row for row in rows}
+        if len(rows) != len(locations) or set(locations) != set(expected):
+            raise ValueError("publication evidence location set differs from frozen declarations")
+        for relative, identity in expected.items():
+            row = locations[relative]
+            if row.get("sha256") != identity["sha256"] or row.get("bytes") != identity["bytes"]:
+                raise ValueError("publication evidence identity differs: " + relative)
+            disposition = row.get("archive_disposition")
+            if disposition is not None and (
+                    disposition.get("sha256") != identity["sha256"]
+                    or disposition.get("doi") != ARCHIVE_DOI):
+                raise ValueError("publication archival disposition differs: " + relative)
+            status = authenticate_frozen_path(relative, identity["sha256"], result=True)
+            if row.get("status") != status:
+                raise ValueError("publication local/archive status differs: " + relative)
+        if value.get("lab_snapshot_sha256") != sha256(ROOT / "docs/lab-snapshot.json"):
+            raise ValueError("publication retained-file receipt hash differs")
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("publication evidence locations: " + str(error))
     declared = {entry["path"]: entry for entry in value.get("included_paths", [])}
     actual = {
         path.relative_to(ROOT).as_posix()
@@ -509,10 +706,14 @@ def check_paper_catalog(errors: list[str]) -> None:
             raise ValueError("finite companion is a scoped historical result")
         for edition in [companion, *companion.get("historical_editions", [])]:
             prior = json.loads(checked_path(edition["manifest"]).read_text(encoding="utf-8"))
-            if (sha256(checked_path(edition["source"])) != prior["inputs"][edition["source"]]
-                    or sha256(checked_path(edition["pdf"])) != prior["pdf_sha256"]
-                    or sha256(checked_path(edition["source_archive"])) != prior["source_archive_sha256"]):
-                raise ValueError("historical companion source, archive or PDF differs")
+            for relative, digest in ((edition["source"], prior["inputs"][edition["source"]]),
+                                     (edition["pdf"], prior["pdf_sha256"]),
+                                     (edition["source_archive"], prior["source_archive_sha256"])):
+                if (ROOT / relative).is_file():
+                    if sha256(checked_path(relative)) != digest:
+                        raise ValueError("historical companion source, archive or PDF differs")
+                else:
+                    authenticate_frozen_path(relative, digest, result=True)
         if not companion.get("historical_editions"):
             raise ValueError("historical companion edition must remain available")
         if (catalog.get("finite_result_status") != "MEASURED_FINITE_REALIZATION"
@@ -553,14 +754,21 @@ def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
 def historical_content() -> set[str]:
     """Recognize exact migrated provenance, never exempt current entrypoints."""
     candidates = {}
-    migration = ROOT / "results/reassembly/manifest.json"
-    if migration.is_file():
-        record = json.loads(migration.read_text(encoding="utf-8"))
-        candidates.update({row["destination"]: row["sha256"] for row in record["rows"]
-                           if row["origin"] in {"lab", "w2"}
-                           and Path(row["destination"]).suffix.lower()
-                           in {".md", ".json", ".py", ".cpp", ".txt", ".toml", ".yml", ".yaml"}
-                           and not row["destination"].startswith(("archive/", "."))})
+    snapshot, receipts = retained_receipts()
+    if snapshot is not None:
+        candidates.update({name: row["import_sha256"] for name, row in receipts.items()
+                           if row.get("sha256") == row.get("import_sha256")
+                           and row.get("bytes") == row.get("import_bytes")
+                           and not name.startswith(("archive/", "."))})
+    elif not (ROOT / "results/release-spec.json").is_file():
+        # Compatibility for small, isolated historical-link test fixtures only.
+        # A real checkout never routes through the retired migration manifest.
+        fixture = ROOT / "results/reassembly/manifest.json"
+        if fixture.is_file():
+            record = json.loads(fixture.read_text(encoding="utf-8"))
+            candidates.update({row["destination"]: row["sha256"] for row in record["rows"]
+                               if row["origin"] in {"lab", "w2"}
+                               and not row["destination"].startswith(("archive/", "."))})
     for manifest in (ROOT / "results/development").glob("nsc-cosmological-atlas*/manifest.json"):
         record = json.loads(manifest.read_text(encoding="utf-8"))
         candidates.update({path: digest for path, digest in record.get("source_bindings", {}).items()

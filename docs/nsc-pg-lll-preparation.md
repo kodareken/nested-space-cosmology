@@ -69,7 +69,7 @@ $$
 
 The horizon block is the original $C_H$ from the
 [parent-matched state](nsc-unruh-state.md); the incoming occupation is the
-one used in the [charged source](nsc-charged-ctp-neck-source.md).
+one used in the [charged source](https://doi.org/10.5281/zenodo.23090015).
 Its eigenvalues are $0,1,n(E)$, so the full direct-integral covariance obeys
 $0\le C\le I$. The unitary flow map carries this bound onto the PG slice.
 No projection onto negative Killing energy is used to invent a global

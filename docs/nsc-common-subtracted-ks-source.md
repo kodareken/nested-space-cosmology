@@ -73,8 +73,8 @@ $$
 +\delta_BS_{\rm LLL,geo}+\delta_BS_{\rm local,locked}.
 $$
 
-The [LLL allocation](nsc-lll-geometric-history.md) and
-[induced local terms](nsc-spherical-local-history.md) enter once. Force is
+The [LLL allocation](nsc-mode-resolved-cauchy-state.md) and
+[induced local terms](nsc-spherical-action.md) enter once. Force is
 minus this action derivative; no sphere-area or channel multiplicity is
 implicitly added by the kernel API.
 

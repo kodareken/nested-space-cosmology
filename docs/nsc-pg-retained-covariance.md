@@ -104,7 +104,7 @@ are distinct. Refinement measurements do not constitute a uniform theorem
 about all spectral remainders. Source occupation corrections omitted from
 the middle/tail vacuum approximation decrease exponentially with energy
 under the same declared horizon and incoming distributions.
-The [join audit](nsc-pg-retained-join-audit.json) retains physical and
+The [join audit](https://doi.org/10.5281/zenodo.23090015) retains physical and
 approximate packet columns at existing frequencies immediately below 40 for
 the largest angular and largest mixed compact groups. The old angular-only
 seed grid ended below 16, so its new physical low-energy input supplies the

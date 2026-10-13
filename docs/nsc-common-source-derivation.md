@@ -6,10 +6,10 @@ parent–child coherence determines link energy and transfer, and the variation
 of that same Hamiltonian supplies its geometric force. The source is not a
 second fluid assigned to the geometry.
 
-The calculation reuses the [canonical influence](nsc-influence.md),
+The calculation reuses the [canonical influence](https://doi.org/10.5281/zenodo.23090015),
 [mass/charge identification](nsc-observable-bridge.md),
-[covariant source](nsc-covariant-source.md) and
-[compact matching](nsc-compact-matching.md). No spectrum, angular tower,
+[covariant source](https://doi.org/10.5281/zenodo.23090015) and
+[compact matching](https://doi.org/10.5281/zenodo.23090015). No spectrum, angular tower,
 thermal comparison or collapse solution is recalculated. The finite
 quadratic fermion identities below are exact. Their absolute continuum
 normalization must be supplied by the same matched quantum functional.
@@ -213,7 +213,7 @@ identity. The normalized first-order recursive equation in the roadmap is
 the scale-converted version of (11), with its stated 1/Omega and ordered
 matrix products retained.
 
-The [explicit boundary-state construction](nsc-boundary-state.md) now
+The [explicit boundary-state construction](https://doi.org/10.5281/zenodo.23090015) now
 supplies the finite quadratic state's two-time lesser/greater kernels,
 mixed initial-surface terms and normalized endpoint action. It removes
 that finite state kernel from the list of placeholders. Its room partition
@@ -258,11 +258,11 @@ The stored Euclidean allocation is
 \]
 
 It supplies definite spectral coefficients and a Euclidean remainder.
-The [canonical/spectral bridge](nsc-canonical-spectral-bridge.md) now
+The [canonical/spectral bridge](https://doi.org/10.5281/zenodo.23090015) now
 resolves that remainder into its canonical massive-field contribution,
 light endpoint conversion and warp/covariant conversion. The real-time
 conversion to the absolute canonical source remains the next owner.
-The [explicit Gaussian measure](nsc-gaussian-cutoff-measure.md) supplies
+The [explicit Gaussian measure](https://doi.org/10.5281/zenodo.23090015) supplies
 its finite Euclidean operator representation. At fixed cutoff and
 normalization, its ordered warp Jacobian has the variation
 
@@ -280,7 +280,7 @@ delta S_measure=Tr[delta sigma exp(-L_s/Lambda²)]. This recovers the
 retained regulated warp source before taking a continuum limit, without
 an additional pressure coefficient. The finite measure is now explicit;
 its physical time-contour and preparation prescription is still required.
-The [vacuum-matched CTP development](nsc-vacuum-matched-ctp.md) now states
+The [vacuum-matched CTP development](nsc-local-observer-correspondence.md) now states
 one explicit prescription and evaluates its real geometric vertex through
 quadratic order in the radius probe. Its finite state factor is canonical;
 the complete constrained metric source and continuum continuation remain
@@ -291,7 +291,7 @@ two terms, its measure/phase contributions, and their common state.
 Consequently (14) is a derived assembly rule, not an evaluated S_b,Theta
 for the full NSC action. Equation (15) makes the exact missing input visible:
 the matched vacuum/boundary functional whose variations enter its left side.
-The [state-regulator result](nsc-state-regulator.md) already establishes why
+The [state-regulator result](nsc-nested-qualities.md) already establishes why
 one cannot simply substitute the raw finite heat determinant for (7).
 That comparison is not repeated here.
 
@@ -312,10 +312,10 @@ residual would choose the answer. Its derivation must instead come from
 the common operator, normalization and state, and the geometry can change
 when its source equations are solved.
 
-The [ADM source construction](nsc-adm-source-constraints.md) now makes
+The [ADM source construction](https://doi.org/10.5281/zenodo.23090015) now makes
 the independent lapse, shift, radial and sphere variations explicit.
 The stored parent-state tensor has also been
-[transported to the PG normal frame](nsc-adm-neck-source-map.md), giving
+[transported to the PG normal frame](https://doi.org/10.5281/zenodo.23090015), giving
 the canonical contribution to all four equations while preserving the
 same Killing power. Its Einstein coefficient remains symbolic; the
 remaining forces must come from the common action rather than from
@@ -331,7 +331,7 @@ must be explicit; no global time reflection of the Lorentzian horizon
 patch is assumed. The corresponding initial mass balance is conditional
 on the matched asymptotic Einstein normalization.
 
-The [matched local warp contribution](nsc-warp-local-neck-source.md)
+The [matched local warp contribution](nsc-parent-backreaction-gate.md)
 now supplies a nonzero part of the remaining force vector on the actual
 geometry. Its vacuum and Weyl-squared sources are counted on the source
 side; its Einstein increment belongs in the full geometric coefficient.

@@ -20,8 +20,8 @@ quantization. These are established methods. The new checks concern the
 normalization inherited from the NSC coefficient map, its interacting
 source, and the domain at a finite-radius minimum.
 
-The [matched Dirac coefficients](nsc-compact-matching.md) and
-[projected gauge interaction](nsc-gauge-source.md) are reused without running
+The [matched Dirac coefficients](https://doi.org/10.5281/zenodo.23090015) and
+[projected gauge interaction](https://doi.org/10.5281/zenodo.23090015) are reused without running
 their generators. A4,V4,C_F below denote the full effective coefficients;
 the known Dirac contributions are not substituted as their completed values.
 Keep A4>0, C_F>0, V4 unrestricted and magnetic flux 2 pi q.

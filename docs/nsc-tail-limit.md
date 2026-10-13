@@ -117,7 +117,7 @@ cosmological solution. Their sensitivity to the operator, discretization and
 parameter errors must be propagated before comparison with experimental
 uncertainty. An arbitrary `0.95 + tail` would insert the desired answer.
 
-The [plateau conditions](nsc-plateau-conditions.md) separately test cosmic-time
+The [plateau conditions](nsc-observational-targets.md) separately test cosmic-time
 evolution. Depth convergence and a late-time attracting ratio are distinct
 requirements that the same completed model must satisfy.
 

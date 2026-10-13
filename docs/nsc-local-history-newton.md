@@ -156,7 +156,7 @@ propagator and `KSConstraintAccumulator.finalize`. Every candidate is
 evolved from fixed upstream batches on the shared solve/verification node
 set. Source and numerical configuration are snapshotted; operator cache
 keys bind the analytic profile, directions, mesh, channel and solver data.
-The [original-source integration control](nsc-ks-history-evaluator-control.md)
+The [original-source integration control](https://doi.org/10.5281/zenodo.23090015)
 checks its retarded derivative and saved-operator replay. The physical
 gate remains OPEN until the complete error bounds and source-limit bridge
 close, even if the numerical control reports convergence.

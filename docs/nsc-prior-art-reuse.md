@@ -12,7 +12,7 @@ The organizing condition
 $\mathcal T_\Theta^*\mathbb D_\Theta=\mathbb D_\Theta$ and its existing
 operator/block calculations remain inputs. Reuse the exact Schur reduction,
 the [normalized finite recursion](nsc-regulated-recursion.md), the
-[state-dependent transfer identities](nsc-energy-transfer.md), and the
+[state-dependent transfer identities](https://doi.org/10.5281/zenodo.23090015), and the
 [same-action source connection](nsc-common-source-derivation.md) within their
 recorded domains. Do not repeat these calculations to restore confidence in
 an unchanged mathematical result. Those incoming constraints belong to the paused application. The active decision is owned by the [map-first admission rule](prior-art-and-open-claim.md); route-specific next steps below are conditional, not compulsory campaigns.
@@ -70,21 +70,21 @@ tracking system.
 
 ## Compact geometry to mass: reuse the dimensional reduction
 
-The [compact/light matching map](nsc-compact-matching.md) now applies the
+The [compact/light matching map](https://doi.org/10.5281/zenodo.23090015) now applies the
 standard trace/Mellin formula to h(D4^2), using the proper compact length
 for its infrared limit. Reuse its finite Dirac coefficients, normalization
 and scale cancellation. The remaining Gamma_completion is a different
 common-functional contribution; further raw determinant coefficient scans
 cannot determine it.
 
-The [warped-source application](nsc-warped-source.md) now matches the same
+The [warped-source application](nsc-spherical-action.md) now matches the same
 compact domain to a covariant finite-cutoff spectral weight h(D4^2). Reuse
 its measure, adjoint mapping, dual-heat identity and observed convergence.
 The remaining common-functional/state contribution is the next source
 dependency; another KK scan, product-only potential or generic conformal
 derivation will not supply it.
 
-The [curved Casimir/source application](nsc-compact-casimir.md) reuses
+The [curved Casimir/source application](https://doi.org/10.5281/zenodo.23090015) reuses
 Flachi–Moss–Toms's interval determinant, the existing covariant D4 and
 general boundary-determinant formulas. Its new work is the curved metric
 source and the holonomy match to the radial partners. Reuse its convergence
@@ -92,7 +92,7 @@ and phase result. The decompactified curved bulk determinant is not a
 scaleless flat term, and a real physical return loop must be established
 before using the conditional phase saddle in the recursive geometry.
 
-The [compact mass map](nsc-compact-mass-map.md) applies conformal Dirac
+The [compact mass map](https://doi.org/10.5281/zenodo.23090015) applies conformal Dirac
 covariance and the established KK reduction to the actual free carrier.
 The full spacetime warp cancels in its classical canonical field, yielding
 m_n=n pi/(2 L_star) and one chiral zero mode for the declared interval domain.
@@ -106,18 +106,18 @@ and18–20. Their higher-dimensional torsion contact and Clifford decomposition
 are reusable; their chosen zero-mode profiles, truncation and effective
 coupling do not determine the NSC massive tower's overlap coefficients.
 
-That [overlap calculation](nsc-compact-interaction.md) is now evaluated.
+That [overlap calculation](https://doi.org/10.5281/zenodo.23090015) is now evaluated.
 Reuse its full fermionic vertex and the nonzero 3111 coupling. An imported
 single-field axial-source equation needs a controlled reduction of this
 tower; repeating the known KK or Einstein–Cartan derivation does not supply it.
 
-The [five-dimensional UV match](nsc-torsion-uv-map.md) also reuses
+The [five-dimensional UV match](https://doi.org/10.5281/zenodo.23090015) also reuses
 Pfäffle–Stephan Proposition5.4, which already holds in arbitrary dimension.
 Its matching-window weights and quadratic derivative term are checked. The
 finite relative coefficient c_T-9c_R remains a separate matching condition;
 do not repeat the leading heat calculation to determine it.
 
-For quantum flow, the [Pagani–Percacci compatibility check](nsc-flow-compatibility.md)
+For quantum flow, the [Pagani–Percacci compatibility check](https://doi.org/10.5281/zenodo.23090015)
 uses the existing d-dimensional beta functions. Their larger Palatini
 truncation is not the current constrained Dirac connection sector; its
 metric term does not preserve the projected coupling relation. Reuse the
@@ -136,32 +136,32 @@ energy projector is not a replacement where that Killing field is spacelike.
 The stored horizon surface gravity is an input; do not rederive the Hawking
 temperature or luminosity to repeat this state prescription.
 
-The [full angular reference calculation](nsc-angular-stress.md) binds
+The [full angular reference calculation](https://doi.org/10.5281/zenodo.23090015) binds
 existing Dirac mode evolution, adiabatic subtraction, spectral zeta
 normalization and conformal-stress methods. Reuse its finite-radius tensor
 and source-budget result. The next new connection is the parent-state and
 finite-cutoff kernel; repeating the reference integral is not that work.
 
-The [massless-reference application](nsc-massless-reference.md) imports
+The [massless-reference application](nsc-nested-qualities.md) imports
 Hollands' Hadamard construction and the general conformal-stress law.
 Reuse its actual-tail tensor and exact normalization conversion. The next
 source work is the finite-radius angular tensor with parent/state matching;
 repeating the asymptotic anomaly or sphere normalization cannot replace it.
 
-The [child-state application](nsc-child-state.md) uses canonical Dirac
+The [child-state application](https://doi.org/10.5281/zenodo.23090015) uses canonical Dirac
 evolution, trace-norm bounds and the standard difference of renormalized
 stresses. Its finite-moment estimate replaces arbitrary state-evolution
 catalogues. Reuse the existing spinor Hadamard constructions with their
 actual geometry assumptions; a flat-FRW or scalar theorem is not a result
 for the anisotropic child. The remaining target is the absolute reference.
 
-The [spectral endpoint application](nsc-spectral-endpoint.md) imports
+The [spectral endpoint application](nsc-spherical-action.md) imports
 Camporesi–Higuchi's sphere spectrum directly. Reuse its evaluated compact
 composition and scale comparison. The remaining work is the global-state
 and complete-source match; do not recalculate the sphere spectrum or pursue
 the rejected local-truncation radius with more precision.
 
-The [curvature EFT application](nsc-curvature-eft.md) reuses Parker–Simon
+The [curvature EFT application](https://doi.org/10.5281/zenodo.23090015) reuses Parker–Simon
 order reduction and the standard gravitational field-redefinition method.
 The new source/contact normalization and constraint corrections are checked.
 Reuse that map; do not re-solve a fourth-order truncation as though its extra
@@ -176,7 +176,7 @@ boundary state and nonlocal completion still require their own matching.
 Do not repeat spherical GR or interpret pure-geometry ghost cancellation
 as cancellation of every quantum source.
 
-The [projected gauge-source application](nsc-gauge-source.md) now uses
+The [projected gauge-source application](https://doi.org/10.5281/zenodo.23090015) now uses
 MMP Appendix A and curved Schwinger-model bosonization as its interaction
 owner. Reuse that mass/count/action map, the Maxwell pressure identity and
 the new scattering/current result. The collective mode's scale is not a
@@ -184,7 +184,7 @@ four-dimensional fermion mass, and its radial profile has no nonzero
 asymptotic mass threshold. The remaining high-mode, state and absolute-source
 matching must not be replaced by another free-field or constant-mass guess.
 
-The [horizon/state map](nsc-horizon-source.md) now separates the unwrapped
+The [horizon/state map](https://doi.org/10.5281/zenodo.23090015) now separates the unwrapped
 PG domain from the cyclic development cell. Reuse the recorded horizon,
 MMP's magnetic angular zero-mode reduction, the conformal stress/Schwarzian
 relations and the standard Unruh-state flux. Do not repeat those derivations.
@@ -202,7 +202,7 @@ black-universe existence or Hawking's derivation. The neutral multiplicity is ch
 
 | Existing formulation | Reuse | NSC interface |
 |---|---|---|
-| [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3), sections2 and5–6 | Charged-fermion vacuum stress and its semiclassical Einstein–Maxwell throat matching | [Charged operator/state, mass and coefficient matching](nsc-charged-self-sourcing-route.md); this is not a generic black-hole-to-child formation result. |
+| [Maldacena, Milekhin and Popov](https://arxiv.org/html/1807.04726v3), sections2 and5–6 | Charged-fermion vacuum stress and its semiclassical Einstein–Maxwell throat matching | [Charged operator/state, mass and coefficient matching](https://doi.org/10.5281/zenodo.23090015); this is not a generic black-hole-to-child formation result. |
 | [Bronnikov, Dehnen and Melnikov](https://arxiv.org/html/gr-qc/0611022v2), §§2–3 | Regular black-universe metrics, horizon extensions, expanding interiors and asymptotics | Their phantom source is not our Dirac source; match the required stress to the selected common action. |
 | [Bronnikov and Donskoy](https://arxiv.org/html/0910.4930v1), §3 | Effective brane equations, projected bulk-Weyl stress and black-universe constructions | Derive the outside response instead of treating the undetermined bulk term as already calculated. |
 | [Popławski](https://arxiv.org/pdf/2008.02136), equations1,29,32–34 | Published spin-fluid/Einstein–Cartan collapse and bounce system | Match the torsion coupling, state and particle-production law. A dense spin fluid is not the present vacuum control. |
@@ -212,18 +212,18 @@ interior or a collapse/bounce construction is mathematically possible.
 Re-evolve an imported solution only when a specified change in source,
 action, boundary conditions or perturbations requires it.
 
-For metric integration, use the [full measure construction](nsc-quantum-measure-reuse.md),
+For metric integration, use the [full measure construction](nsc-spherical-action.md),
 including gauge Jacobians and zero modes. Do not insert a one-dimensional
 weight to produce a desired scale or equate Lorentzian proper-time gauge with
 the heat-kernel regulator.
 
-The [new coefficient-matching condition](nsc-vacuum-charge-matching.md) uses
+The [new coefficient-matching condition](https://doi.org/10.5281/zenodo.23090015) uses
 the published heat and charged-horizon equations directly. It excludes a
 controlled MMP seed built from the retained positive bulk contribution alone.
 The next owner is the complete vacuum/gravity/gauge contribution, not another
 positive profile, copy-count variation or neutral/magnetic throat scan.
 
-The [compact-boundary application](nsc-compact-boundary-action.md) now
+The [compact-boundary application](https://doi.org/10.5281/zenodo.23090015) now
 matches the declared chiral domain to the known mixed heat formulas. Its
 determinant magnitude fixes the Einstein/GHY ratio and leading boundary
 terms. Reuse this domain map and the stored warp integrals. A physical
@@ -236,7 +236,7 @@ or scan over its integers will supply the missing NSC matching equation.
 
 ## The next useful compatibility comparison
 
-The [action/source comparison](nsc-torsion-source-compatibility.md) now records
+The [action/source comparison](https://doi.org/10.5281/zenodo.23090015) now records
 the coefficient conversion and the remaining domain/state conditions. Reuse
 that comparison rather than restarting the same literature derivation.
 

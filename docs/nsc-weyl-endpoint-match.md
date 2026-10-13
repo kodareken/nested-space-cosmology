@@ -60,7 +60,7 @@ tolerance $3\times10^{-11}$. The code rejects mismatched endpoint bases and
 does not interpret an absent derivative as zero or as minus the local vector.
 
 This binds Step B to the same missing action identified in
-[Step A](nsc-transmitting-boundary-selection.md). It introduces no endpoint
+[Step A](https://doi.org/10.5281/zenodo.23090015). It introduces no endpoint
 completion or compensator and selects no control duration as physical.
 
 

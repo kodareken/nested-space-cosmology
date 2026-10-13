@@ -1,8 +1,1319 @@
 {
+  "archived_evidence_doi": "10.5281/zenodo.23090015",
   "boundary_source_commit": "76975387b9b03e323c1832237e0270dc9d49a382",
   "envelope_scope": "Envelope exclusions do not imply exclusion from Git or public access. Root archive/ is tracked and authenticated separately; paper/archive/ is included here.",
+  "evidence_locations": [
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "1bf31d077b94f90426ff10ca4187515f0b187ace2ff5a620b684dafed618ac3f"
+      },
+      "bytes": null,
+      "path": "paper/finite-regeneration-arxiv.tar.gz",
+      "sha256": "1bf31d077b94f90426ff10ca4187515f0b187ace2ff5a620b684dafed618ac3f",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "paper/finite-regeneration.pdf",
+      "sha256": "416cb4f9ade29bad6f279174b94ba81ccf4d1bf0ea4092259c714fb0a6fd92ce",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "paper/finite-regeneration/main.tex",
+      "sha256": "39108ca99fe7851951000901ca4b25f953e666787f44990d64e3585d6aec3400",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "paper/local-gate-draft/main.tex",
+      "sha256": "b217e03f45556d9ea2994ce44e1652f39d4ef52963f9d939aa5b781905a26d04",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "434a1ab0018085d50986899d8c92e36f4788f431ee63a43b440311dfbe04c790"
+      },
+      "bytes": null,
+      "path": "paper/local-incoming-gate-draft-source.tar.gz",
+      "sha256": "434a1ab0018085d50986899d8c92e36f4788f431ee63a43b440311dfbe04c790",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "paper/local-incoming-gate-draft.pdf",
+      "sha256": "4d4e49e0526137d20722de9047240744520891987e7a43d216dd14cc0762e42d",
+      "status": "local"
+    },
+    {
+      "bytes": 3283,
+      "path": "results/development/adm-neck-source-map.json",
+      "sha256": "32bc59970226bb90ca4bff6353503baf32db36b201b915c478a1a6d4cbce8dbe",
+      "status": "local"
+    },
+    {
+      "bytes": 7156,
+      "path": "results/development/adm-source-constraints.json",
+      "sha256": "eb7f393ff79a1282daa1fe07f67f694bfd5011200f9733581eedd8eb37ceda56",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/angular-stress.json",
+      "sha256": "50a88913745f29003831cc62e203d2e7f2189d05056007e8a0385515d9f9dbf6",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9"
+      },
+      "bytes": 236258,
+      "path": "results/development/artifacts/nsc-compact-restart-scattering.f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9.npz",
+      "sha256": "f6cad2ba84e5a5f89c411c04d205bcc7f5127ce4212fbf96e0fc02f3e415b0c9",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08"
+      },
+      "bytes": 2573460,
+      "path": "results/development/artifacts/nsc-compact-seed-generations.77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08.npz",
+      "sha256": "77e8b578757408c99c6ff8ee68af5e62e41ade02aa442e8e855907863ca98f08",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09"
+      },
+      "bytes": 24872,
+      "path": "results/development/artifacts/nsc-dirac-endpoint-jets.db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09.npz",
+      "sha256": "db8807e478b78f7c853cbc361ef9926077f9168664139b18ea95f750c7f99d09",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1"
+      },
+      "bytes": 521440,
+      "path": "results/development/artifacts/nsc-landau-cauchy-control-isometries.6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1.npz",
+      "sha256": "6a32d9502a828aabcd6c7bb8c99fa88f3fba3b1c7119cb747f2b3dba803e22f1",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940"
+      },
+      "bytes": 407306,
+      "path": "results/development/artifacts/nsc-mode-resolved-cauchy-state.043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940.npz",
+      "sha256": "043a40b40bb2da3f479549d5662d19cae858264b3251685373a08e0e24fa0940",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232"
+      },
+      "bytes": 9829760,
+      "path": "results/development/artifacts/nsc-pg-ctp-mode-jets.f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232.npz",
+      "sha256": "f6d34987d41fd9ea72abdc3ac48b16d403a5b74895f25ef8aa52ca4e65e95232",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940"
+      },
+      "bytes": 428603,
+      "path": "results/development/artifacts/nsc-pg-group13-input.3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940.npz",
+      "sha256": "3c2c6704aac814b3cadcf42303a5718824dc1f30b1d8005262a13c54d103d940",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b"
+      },
+      "bytes": 849780,
+      "path": "results/development/artifacts/nsc-pg-group14-input.59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b.npz",
+      "sha256": "59c30e0137e3df7877a3830f4b885c81792cb800854c7fb492484a611b7da68b",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76"
+      },
+      "bytes": 1194377,
+      "path": "results/development/artifacts/nsc-pg-ks-metric-pullback.191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76.npz",
+      "sha256": "191e5ed4e16224fb78fa4b988c6b8557824e982edd2f40ca1dfa5eb8008f6f76",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa"
+      },
+      "bytes": 4965711,
+      "path": "results/development/artifacts/nsc-pg-massive-mode-fields.351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa.npz",
+      "sha256": "351cc98e42c100cf7d205d302ced41a33fad427409eea392abbd8025ce371ffa",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd"
+      },
+      "bytes": 32367990,
+      "path": "results/development/artifacts/nsc-pg-retained-covariance-input.f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd.npz",
+      "sha256": "f3fa7dd08eaf71ea2dbb930eb1c02934ffa90e01d13980d5373c9e3dc5fe33dd",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26"
+      },
+      "bytes": 186007,
+      "path": "results/development/artifacts/nsc-pg-retained-subgap.f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26.npz",
+      "sha256": "f7f6c6458983435b409704c4aab75c53af61e7718bdf9d97cf1f91bbe4a81d26",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006"
+      },
+      "bytes": 158252,
+      "path": "results/development/artifacts/nsc-pg-retained-tail.1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006.npz",
+      "sha256": "1882900e836b4b5c899e517dd28264bde8c99aaac606a0b9726892ec3b0e7006",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4"
+      },
+      "bytes": 14321218,
+      "path": "results/development/artifacts/nsc-tilted-landau-interface.0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4.npz",
+      "sha256": "0ad9c0be3541640183b1029dc73b8f71d65700d9a146ac83b94a7a1512959ef4",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5"
+      },
+      "bytes": 3352320,
+      "path": "results/development/artifacts/nsc-transmitting-cross-resolvent.580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5.npz",
+      "sha256": "580a8e3288ec8224c9d2b3226ffb96cdb8bd947eb60277ef4b7151d2589b90a5",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2"
+      },
+      "bytes": 3334536,
+      "path": "results/development/artifacts/nsc-transmitting-ctp-resolvent.282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2.npz",
+      "sha256": "282fb4d571b61980ddd82c6c0e49713b3865e021f4da1d8e3a5589ac8b1fdff2",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713"
+      },
+      "bytes": 543340,
+      "path": "results/development/artifacts/nsc-transmitting-dirac-domain.1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713.npz",
+      "sha256": "1f61f12bf1fc3df9e056bb9dd8b0630468c5d6743e2d52f4c54a66ada0330713",
+      "status": "local"
+    },
+    {
+      "bytes": 12878,
+      "path": "results/development/canonical-spectral-bridge.json",
+      "sha256": "6b3871a60887a7b17c99065a881d6de8663b42b8ab4155b1365f4d0dfc7c1e74",
+      "status": "local"
+    },
+    {
+      "bytes": 7203,
+      "path": "results/development/causal-common-functional.json",
+      "sha256": "f9f41ded9ef8529f12239f5f17b0b1de96ba8ef72b9cd6e8029bb403fa433c03",
+      "status": "local"
+    },
+    {
+      "bytes": 97371,
+      "path": "results/development/charged-compact-ctp-completion.json",
+      "sha256": "54b11850a00b9812d85080e8a80be4f67e73b778e844d9565ea23391cbdd85d6",
+      "status": "local"
+    },
+    {
+      "bytes": 19726,
+      "path": "results/development/charged-ctp-neck-source.json",
+      "sha256": "e1ec140c221048457fbd08018d8ef9785074b37d103076a0cf7573ca4dd4cc90",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/charged-sector.json",
+      "sha256": "a3b51fa3fc9f5138dd7192eb2df11a4901657b605787deb50dcca69edecec9be",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/child-state.json",
+      "sha256": "29f82feb3d998ca76fa4a2f8c5266ea4e44f7317a9f63ff99541bf94d7e80060",
+      "status": "local"
+    },
+    {
+      "bytes": 8875,
+      "path": "results/development/compact-anomaly-bridge.json",
+      "sha256": "38c8e98052671c5c852e272a611da8a9f376d8ca683e9f91b0b8f5ae0977d13f",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/compact-boundary-action.json",
+      "sha256": "bd1e2c71af87e45062116bd76a81b3e8ffb554f159c4ef112f65f203d8d209ce",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/compact-casimir.json",
+      "sha256": "df6d7bbe57fa03fcada4fe6199ea87c02cea75f279d99261d79573d382f6a447",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/compact-interaction.json",
+      "sha256": "851a862c6985841c5d337f50ea6c6d573ab9f007b9014064b8e16be1dde17e9f",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/compact-matching.json",
+      "sha256": "8ce5d90379497fa81e1b4cba3cfee21c9931c2c0b5943e292a86dc58b3824df9",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/curvature-eft.json",
+      "sha256": "21dea11100127a4f1f249fd1597b19539022658753ec6b9ad5b9c6384ca00bd8",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/flow-compatibility.json",
+      "sha256": "ab4ce6b98afbb4b79c53396197c699f6071e83ee0e09139e71c8fcd31498aabb",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/gauge-source.json",
+      "sha256": "0f686b17f13526e91e8950e613bf19133b44a05253353b421a446b0f8c8cc592",
+      "status": "local"
+    },
+    {
+      "bytes": 4224,
+      "path": "results/development/gaussian-cutoff-measure.json",
+      "sha256": "125995142e45c28712dfd8fc87c41e89265a37eef8afb74c83230f6becba9ae4",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/horizon-source.json",
+      "sha256": "ca0e13fc89a523a7cb4198f98c94c0ecc725afb3f43d2bc90f3f543b8802238f",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/massless-reference.json",
+      "sha256": "1f02ebec5b8b7701080a3b0705f4f62e23aac44149e88872f945050f81472002",
+      "status": "local"
+    },
+    {
+      "bytes": 3381,
+      "path": "results/development/mmp-embedding.json",
+      "sha256": "f4032d09ea4d7b76f6d02475fde29eb38dd239635e9e812518bc425726d477d0",
+      "status": "local"
+    },
+    {
+      "bytes": 3980,
+      "path": "results/development/mmp-vacuum-owner.json",
+      "sha256": "2a0999ff12a8ed349096c554eb79a54537ef02afffaa9b23efaee4a1c779eb60",
+      "status": "local"
+    },
+    {
+      "bytes": 9924,
+      "path": "results/development/nsc-background-projection.json",
+      "sha256": "e442d8ed5354b5dac164dbe03b05c95a63f964cc3f87fee4d22190c4db5cce48",
+      "status": "local"
+    },
+    {
+      "bytes": 5389,
+      "path": "results/development/nsc-child-metric-backreaction.json",
+      "sha256": "ea810dfc66ab5a456523cb83124eecea4af7219243597fc9431551e21169a66a",
+      "status": "local"
+    },
+    {
+      "bytes": 26042,
+      "path": "results/development/nsc-common-time-bulk-split.json",
+      "sha256": "3c3236e5d0e56d2d1eaed1497501e346969599bd3dce0792132e3539bcac6da7",
+      "status": "local"
+    },
+    {
+      "bytes": 19818,
+      "path": "results/development/nsc-compact-matched-restart.json",
+      "sha256": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
+      "status": "local"
+    },
+    {
+      "bytes": 5536,
+      "path": "results/development/nsc-constraint-complete-neck.json",
+      "sha256": "678827ce51e61cfde9e097c29397edc62b4bc17533967ff96638ef78fa1563fe",
+      "status": "local"
+    },
+    {
+      "bytes": 5889,
+      "path": "results/development/nsc-coupled-ctp-metric-evolution.json",
+      "sha256": "679682c32cf8b9e1906dde5453c4f105ab3bf72c9d3c6862fff9ff2147833622",
+      "status": "local"
+    },
+    {
+      "bytes": 8667,
+      "path": "results/development/nsc-dirac-endpoint-jets.json",
+      "sha256": "03de778be24325726b0de2f6046afe43e69935ce914a46338a40ccfc26a09cff",
+      "status": "local"
+    },
+    {
+      "bytes": 5079,
+      "path": "results/development/nsc-extended-action-completion-gate.json",
+      "sha256": "598e520758d9fa05e93cbd650471545e6c7a923d0e9aeeec928b2d6f7d64b464",
+      "status": "local"
+    },
+    {
+      "bytes": 5628,
+      "path": "results/development/nsc-extended-tilted-history-gate.json",
+      "sha256": "2adaeb34a04bbc4ab3b82607d1770941378b7df7a3bca63b7cbe2e23115c80fa",
+      "status": "local"
+    },
+    {
+      "bytes": 6572,
+      "path": "results/development/nsc-full-extended-history-gate.json",
+      "sha256": "18c907d0e62f9609df61eb7f019bc639f61f1411d05b5f5172257a14dd7cb106",
+      "status": "local"
+    },
+    {
+      "bytes": 39906,
+      "path": "results/development/nsc-general-ks-local-history.json",
+      "sha256": "b76f35399d9fe3b9b034e5c2f6f4ef653e4b03cf0852c6b70383754632aaa02e",
+      "status": "local"
+    },
+    {
+      "bytes": 4643,
+      "path": "results/development/nsc-general-ks-reference.json",
+      "sha256": "6c8d80297b5cafcb0e61815cd5a425d9b45364bddc5f89e3a4a824b974c5a146",
+      "status": "local"
+    },
+    {
+      "bytes": 7205,
+      "path": "results/development/nsc-general-ks-same-action-history.json",
+      "sha256": "ea38901e41d1f46a5d9ce2a4fee6360b88d2e39884411956a3348f0af3673128",
+      "status": "local"
+    },
+    {
+      "bytes": 5829,
+      "path": "results/development/nsc-hamiltonian-trace-representation.json",
+      "sha256": "dcb05abc769da5a05a6f69bdeb993a69e1adb488ae4c66a54a180d816fd564dc",
+      "status": "local"
+    },
+    {
+      "bytes": 229649,
+      "path": "results/development/nsc-horizon-paired-pg-map.json",
+      "sha256": "452d8d7c24e06b01d24ec337aa131154973e46a29c6b230acd4e42c8e6f95886",
+      "status": "local"
+    },
+    {
+      "bytes": 5307,
+      "path": "results/development/nsc-joint-history-state-bvp.json",
+      "sha256": "5b08cd6f1453ae006cbd7812c781869e96c8f058d2882544a3275da2325ce5e0",
+      "status": "local"
+    },
+    {
+      "bytes": 8264,
+      "path": "results/development/nsc-landau-cauchy-isometry.json",
+      "sha256": "c7445beaf747d75dfb638deea34be56c36217b5d6180f1f8c56cb576f04c37c5",
+      "status": "local"
+    },
+    {
+      "bytes": 103548,
+      "path": "results/development/nsc-massive-signed-preparation.json",
+      "sha256": "f1195e2e1fbe1b1cedf04321d098e4bf3834652f31ddebcb9031338c8163a5e4",
+      "status": "local"
+    },
+    {
+      "bytes": 24210,
+      "path": "results/development/nsc-mode-resolved-cauchy-state.json",
+      "sha256": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
+      "status": "local"
+    },
+    {
+      "bytes": 59593,
+      "path": "results/development/nsc-pg-ctp-mode-jets.json",
+      "sha256": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
+      "status": "local"
+    },
+    {
+      "bytes": 35044,
+      "path": "results/development/nsc-pg-group13-covariance.json",
+      "sha256": "63106c6b2be71331cb38aeeecf477fecdfbc5a5b1d166b7d1ff11ebd2756fa92",
+      "status": "local"
+    },
+    {
+      "bytes": 35475,
+      "path": "results/development/nsc-pg-ks-metric-pullback.json",
+      "sha256": "e4cf9ae39b6c964780d3bcaf4682357d2883e8ea4eb5081552815a0a18ea12d2",
+      "status": "local"
+    },
+    {
+      "bytes": 24697,
+      "path": "results/development/nsc-pg-lll-preparation.json",
+      "sha256": "7ea9504c9f39f44f963377cb7fb4f19909fe38bc65fd48c2b2e3ed030017d782",
+      "status": "local"
+    },
+    {
+      "bytes": 66593,
+      "path": "results/development/nsc-pg-massive-mode-resolution.json",
+      "sha256": "2f870f005e364fd8fed4ffe0e7c38c3d1f4751d4ebd36bb5eb658f2a4ccb71ce",
+      "status": "local"
+    },
+    {
+      "bytes": 2002372,
+      "path": "results/development/nsc-pg-retained-covariance.json",
+      "sha256": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495",
+      "status": "local"
+    },
+    {
+      "bytes": 19381,
+      "path": "results/development/nsc-pg-retained-subgap.json",
+      "sha256": "e5c021b53e038295b4906292fe2b194be73aa55407df5dcd1252b404a520bb6d",
+      "status": "local"
+    },
+    {
+      "bytes": 8870,
+      "path": "results/development/nsc-pg-retained-tail.json",
+      "sha256": "e0bda22ce60ea058b3e8a0e963f5ef97ada95421f88507f4a9c027692a29da52",
+      "status": "local"
+    },
+    {
+      "bytes": 4939,
+      "path": "results/development/nsc-physical-jet-extended-gate.json",
+      "sha256": "1d15556e404f319e02cbf1f7a0b931a3d1c70fa50f4fe20f90d4b3ad27eebd6a",
+      "status": "local"
+    },
+    {
+      "bytes": 7526,
+      "path": "results/development/nsc-smooth-seam-variation.json",
+      "sha256": "bda39eac1219b4264370de11995afd60199001f520304e5b20eeca3206ffae44",
+      "status": "local"
+    },
+    {
+      "bytes": 59802,
+      "path": "results/development/nsc-tilted-landau-interface.json",
+      "sha256": "635e965c9a89819dcdbca62d1d23c332896de93ec7ad3727958d31c752247a9a",
+      "status": "local"
+    },
+    {
+      "bytes": 5144,
+      "path": "results/development/nsc-transmitting-boundary-remainder.json",
+      "sha256": "c09163816af3961f53f3bd80b236ea4a7c8cb95eb75fd6d765f51568e2d41e72",
+      "status": "local"
+    },
+    {
+      "bytes": 24842,
+      "path": "results/development/nsc-transmitting-boundary-selection.json",
+      "sha256": "bcc21fadab142124a4e66bf0a8c390ecb9a37d51a6c6210350e49b89bfa6ba1e",
+      "status": "local"
+    },
+    {
+      "bytes": 88613,
+      "path": "results/development/nsc-transmitting-cross-resolvent.json",
+      "sha256": "da4ab7e89140914f52b30e8d347c001c4c008202a6e8d9dfcd6214e82e03cd43",
+      "status": "local"
+    },
+    {
+      "bytes": 39535,
+      "path": "results/development/nsc-transmitting-ctp-resolvent.json",
+      "sha256": "33d91d2c845f865811007c7cc71d731f3458c274fd0db8a1de5c89349434215d",
+      "status": "local"
+    },
+    {
+      "bytes": 25686,
+      "path": "results/development/nsc-transmitting-ctp-variation.json",
+      "sha256": "9c0e589b4c0a4d2395ff9420ff045a8f4e7631c8dcabf743c47a56db0985abc3",
+      "status": "local"
+    },
+    {
+      "bytes": 43142,
+      "path": "results/development/nsc-transmitting-dirac-domain.json",
+      "sha256": "cdfee4a9a1de76af975a093fe527acd1050a5c665f0e570469c3453b501ca926",
+      "status": "local"
+    },
+    {
+      "bytes": 6130,
+      "path": "results/development/nsc-transmitting-metric-pullback.json",
+      "sha256": "68092e0de029be1c944f992419a40ff7a8ecbd5afba4b8599ec06a25b7871945",
+      "status": "local"
+    },
+    {
+      "bytes": 26401,
+      "path": "results/development/nsc-weyl-boundary-jets.json",
+      "sha256": "66436d286f1feb79398745ed16aa0ce129fcd02ba2445d38c7b5aa81a317ac34",
+      "status": "local"
+    },
+    {
+      "bytes": 11160,
+      "path": "results/development/nsc-weyl-endpoint-match.json",
+      "sha256": "914c2bad9d8bfe52b83b5883bcae47a181e65205e85d2c30d4c72f0fdf322ff6",
+      "status": "local"
+    },
+    {
+      "bytes": 5507,
+      "path": "results/development/parent-backreaction-gate.json",
+      "sha256": "23276b420baa2a122e2df5fb748acd032476f639573b5694cd5e2f7fd4685560",
+      "status": "local"
+    },
+    {
+      "bytes": 3073,
+      "path": "results/development/recursive-source-binding.json",
+      "sha256": "b962f927e132034de4bd685d86e1c57ff574a7d7a74f778f984cc916c1cd01cd",
+      "status": "local"
+    },
+    {
+      "bytes": 4963,
+      "path": "results/development/relational-vacuum-normalization.json",
+      "sha256": "2919c661e189c4d58baa53b987e59cd7dedcc16d3be7b8dd61219f18fdc13983",
+      "status": "local"
+    },
+    {
+      "bytes": 8691,
+      "path": "results/development/scale-binding.json",
+      "sha256": "756ff35b97d203c8a0886905c55fccdc554e88f3148fdc3cfead828da3f35139",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/spectral-endpoint.json",
+      "sha256": "6cdb46d5cab8e6de357ec437d3813c2a9381a6c6effbb2d14c55c23e4adef4bb",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/spherical-action.json",
+      "sha256": "f26523b1fdc2aa6e60ebd6acc73409ede6f2f5a7313924d0dd1537cfd279a456",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/state-regulator.json",
+      "sha256": "4cd5a58b0f32aaa9f6e04dafe869e716b55e3ac54665c275a9e8a43e90609030",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/torsion-uv-map.json",
+      "sha256": "74784cddf2a95d11f4412d6fba11001494a882e53f233534d1f0d2338f3e71e8",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/unruh-state.json",
+      "sha256": "98d4659674ad7f7f6b474b7abcc448518bda6861bbafe3ff98c129918dd21343",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/vacuum-charge-matching.json",
+      "sha256": "14e5ca0987f2ac62dae5e9bd67159b7c1b5f560f628225bbecf3e10b6820161b",
+      "status": "local"
+    },
+    {
+      "bytes": 5337,
+      "path": "results/development/vacuum-matched-ctp.json",
+      "sha256": "ef477c7b438735739b2e93f976c7d36d352669bf547a3bd5da43da0fb70a5bf3",
+      "status": "local"
+    },
+    {
+      "bytes": 5165,
+      "path": "results/development/warp-local-neck-source.json",
+      "sha256": "19fefeb200b94c7c4f43cb928843107d0529f5b2dacf77964f1a44a134704590",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/development/warped-source.json",
+      "sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "2dbc0ee428cfbd0205c41af6f7641723d30f304379742c2280117513d14f29e0"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-bps-self-equal-energy.json",
+      "sha256": "2dbc0ee428cfbd0205c41af6f7641723d30f304379742c2280117513d14f29e0",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "285a3c657ca70547ec3ad92b776f122572725f2ac9772861ec03e0392ab65fe2"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-exact-black-universe-defocusing.json",
+      "sha256": "285a3c657ca70547ec3ad92b776f122572725f2ac9772861ec03e0392ab65fe2",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-gravitating-bps-observation-link.json",
+      "sha256": "04054b5cc6bed8fe49c75922ad39e9306f49d3d158368fbc94885ec8616f9ec3",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "629ad9e11671ecef8719dcfefb3ec9a98022c7f374495f7401451723cd91ad4c"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-background-adjusted-graviton.json",
+      "sha256": "629ad9e11671ecef8719dcfefb3ec9a98022c7f374495f7401451723cd91ad4c",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "d45114887d2507ed2a7280446194f0c264867d362e740dc29b3a20661ae82e7a"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-boundary-retarded-pole.json",
+      "sha256": "d45114887d2507ed2a7280446194f0c264867d362e740dc29b3a20661ae82e7a",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-child-orientation.json",
+      "sha256": "82e3b32d49c42f4ba29bc5ddd8df55d67b41617efa72661742641b5279abbb62",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-child-scale-correction.json",
+      "sha256": "19c50a14a9902b372a1868c147dd1506570b40a1ac3bd1f1200d03cfe5b8763b",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-constant-dictionary.json",
+      "sha256": "0dbb3d47aa9ef74b6fb898da5441d673a254ecf7ca5c7ccbde4f0c756a6ced1c",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "1e20a7ca0259790359eabdc697cc6025adc69581035b5bf361ae2e6a2f5f333d"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-dark-black-invariant.json",
+      "sha256": "1e20a7ca0259790359eabdc697cc6025adc69581035b5bf361ae2e6a2f5f333d",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "6d22ec7d1b876aea1af327861414252b7629370899412bb51326a9643e55f3d0"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-doubled-flrw-closure.json",
+      "sha256": "6d22ec7d1b876aea1af327861414252b7629370899412bb51326a9643e55f3d0",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "8c567f1070c181369995ad76bc6049f417381bcb0de986c887645ebe698ce4d3"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-fermionic-geometry-bind.json",
+      "sha256": "8c567f1070c181369995ad76bc6049f417381bcb0de986c887645ebe698ce4d3",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-fermionic-relative-observable.json",
+      "sha256": "6a5fff0ff2d781ee92b71ca3960be244c2a3a05874a2c7442250c27ffe32c318",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "6851dc74c16cab50fc11dd2ee0800498d7e8d48482868972943bac8c415cb11b"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-finite-momentum-graviton.json",
+      "sha256": "6851dc74c16cab50fc11dd2ee0800498d7e8d48482868972943bac8c415cb11b",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "0bd0d95d507263d9632e6a0b47b253ed713de29703fa3a0019351500e53db47c"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-flat-spectral-poles.json",
+      "sha256": "0bd0d95d507263d9632e6a0b47b253ed713de29703fa3a0019351500e53db47c",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "1b9cd7106bd0377ed2a80f8ffdb67ddf0228b49a8a29765a7602e9dc1d56aae8"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-full-exponential-relative-kernel.json",
+      "sha256": "1b9cd7106bd0377ed2a80f8ffdb67ddf0228b49a8a29765a7602e9dc1d56aae8",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f13159e86bf024961332f59e61a568dda16c5060a6f84b32096f69fc157cb738"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-gap-transition-closure.json",
+      "sha256": "f13159e86bf024961332f59e61a568dda16c5060a6f84b32096f69fc157cb738",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "76ba23b812d2a703b86c625f1408a291e63cbee65d0e85ae57800d445e02b9ea"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-gauss-bonnet-component-closure.json",
+      "sha256": "76ba23b812d2a703b86c625f1408a291e63cbee65d0e85ae57800d445e02b9ea",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "fa69cd5c600dc68d8c0c00811fc21dca60a78a3903d9c4de9a953445125cff0d"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-gauss-bonnet-criticality.json",
+      "sha256": "fa69cd5c600dc68d8c0c00811fc21dca60a78a3903d9c4de9a953445125cff0d",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "4558792032532344faa682929aa7d35eb1b08370f4fba62459f52c0be639a1b3"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-gauss-bonnet-kinetic-rank.json",
+      "sha256": "4558792032532344faa682929aa7d35eb1b08370f4fba62459f52c0be639a1b3",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "79ad1f29b9be355fe6858119bb00aef8a413f78c8343818ffe7c6d70b2df08ab"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-gauss-bonnet-null-closure.json",
+      "sha256": "79ad1f29b9be355fe6858119bb00aef8a413f78c8343818ffe7c6d70b2df08ab",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f37cdfd56975c40b5a02679273a7c3c946d51574061ca6ac6d3d3dfabd2d60d9"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-induced-interface-rank.json",
+      "sha256": "f37cdfd56975c40b5a02679273a7c3c946d51574061ca6ac6d3d3dfabd2d60d9",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "967af0ee446f5cd3c8021062009e4fffde4d1a86fbef645832358759b9bc518a"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-interface-characteristic-scan.json",
+      "sha256": "967af0ee446f5cd3c8021062009e4fffde4d1a86fbef645832358759b9bc518a",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "77edf049951f12c525c3cde2dbf29ccb9d7d6e3a537204ecc7d445c3ad2ea5ac"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-invariant-closure-bind.json",
+      "sha256": "77edf049951f12c525c3cde2dbf29ccb9d7d6e3a537204ecc7d445c3ad2ea5ac",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "59bf475d3bef3d1e42cfb0beee62ae7cfe8fbb827b8ede25dc3acc5c942cd996"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-invariant-partition-bind.json",
+      "sha256": "59bf475d3bef3d1e42cfb0beee62ae7cfe8fbb827b8ede25dc3acc5c942cd996",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "d3d3bdfe2a5421ef7a522ac32c9fbd0117bca4f395cdb5b1be4288ba26a77ba7"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-local-two-sheet-anomaly.json",
+      "sha256": "d3d3bdfe2a5421ef7a522ac32c9fbd0117bca4f395cdb5b1be4288ba26a77ba7",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "494995c310b6b44e82f5724b8d815d81804a6fb4ded4a6e267776e1f1851c654"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-nested-pair-closure.json",
+      "sha256": "494995c310b6b44e82f5724b8d815d81804a6fb4ded4a6e267776e1f1851c654",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "a8a2a22a41f05e1d317f8da49d396d6a15cbb65a161553b76c000dad1250b8e4"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-one-operator-bind.json",
+      "sha256": "a8a2a22a41f05e1d317f8da49d396d6a15cbb65a161553b76c000dad1250b8e4",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "31948f9c7a1229e314e62931f0d152856e604fa5e967f78baf13d6653033656b"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-outside-black-bind.json",
+      "sha256": "31948f9c7a1229e314e62931f0d152856e604fa5e967f78baf13d6653033656b",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-particle-wave-identity.json",
+      "sha256": "6dffd874d93d5bcce867af845d205adeb7f7455d7c9020d5c456522c200e31c0",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "9f52811ad1b85af1d93a20cdff5f8ee00e59bb98114afd7c6870218654b18b59"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-reciprocal-closure.json",
+      "sha256": "9f52811ad1b85af1d93a20cdff5f8ee00e59bb98114afd7c6870218654b18b59",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "bf1063999658e9d9a43aacc9baa6b221d539466bf09eae164765460f5de20dae"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-recursive-outside-kernel.json",
+      "sha256": "bf1063999658e9d9a43aacc9baa6b221d539466bf09eae164765460f5de20dae",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-reflection-positivity-obstruction.json",
+      "sha256": "8dd1ba9c8629504deb963e0ce64b586f64b59fc4ce09f1e0324c45658b4c40bb",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-1-s-one-relative-reflection-test.json",
+      "sha256": "d12756930ed3ce225d439d9f294955b36c39f14c3f2e66e14049ae20bfe83ade",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "9afeabf93a804204b97e5e96a87281608cc87d01ff4fad6e726bb1d7fd42e1d7"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-relevant-direction-count.json",
+      "sha256": "9afeabf93a804204b97e5e96a87281608cc87d01ff4fad6e726bb1d7fd42e1d7",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "2d517ae3a957f93706becc33da8844d2d009a8f8f34050b4c0fc2f3fd2fd9406"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-resolution-channel-closure.json",
+      "sha256": "2d517ae3a957f93706becc33da8844d2d009a8f8f34050b4c0fc2f3fd2fd9406",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "520cada50d6c1fd7f2b8b5fe176ce5f2b4d43f6f1dd54240507d367e96f840c3"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-shadow-lensing-observation.json",
+      "sha256": "520cada50d6c1fd7f2b8b5fe176ce5f2b4d43f6f1dd54240507d367e96f840c3",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "b6789d6eb7e8609a1592e3e5bdd581e817eee062fc9b5e08a2c9ddfe4b656fcd"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-shadow-matter-bind.json",
+      "sha256": "b6789d6eb7e8609a1592e3e5bdd581e817eee062fc9b5e08a2c9ddfe4b656fcd",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "802af6cfdd4f6e084f9fd20513e67d34ea67dc90b639b80aa455e8eb85001a4f"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-spectral-boundary-constraint.json",
+      "sha256": "802af6cfdd4f6e084f9fd20513e67d34ea67dc90b639b80aa455e8eb85001a4f",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "94d6134079caff00d9a8a662c75b836ce48b489324392aaf2c4c3096c094a3be"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-spectral-profile-closure.json",
+      "sha256": "94d6134079caff00d9a8a662c75b836ce48b489324392aaf2c4c3096c094a3be",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "36bb0bb6f990c13a7724cb1b51c80723277228c3cba98dfb70e7cca89bfb6435"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-spectral-resolution-wall-bind.json",
+      "sha256": "36bb0bb6f990c13a7724cb1b51c80723277228c3cba98dfb70e7cca89bfb6435",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "ffda536a4a090ae9000f09c7775a2424d1a1ef76de6818e226746317e64766f8"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-spectral-room-bind.json",
+      "sha256": "ffda536a4a090ae9000f09c7775a2424d1a1ef76de6818e226746317e64766f8",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "798c486efb5f4fde5da16616f9e228693ce131aa137652e4976e1e09909c93e0"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-transition-link-coefficient.json",
+      "sha256": "798c486efb5f4fde5da16616f9e228693ce131aa137652e4976e1e09909c93e0",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "08adb805bf70d37de22e8dadf53886bd0c127f00aa9d052450c6ba49dacc9563"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-two-sheet-5d-geometry.json",
+      "sha256": "08adb805bf70d37de22e8dadf53886bd0c127f00aa9d052450c6ba49dacc9563",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "ee3e09df3d74e78397a061a523359682d7a491d6f37a75eb425ab75bf8cfad57"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-two-sheet-5d-null-source.json",
+      "sha256": "ee3e09df3d74e78397a061a523359682d7a491d6f37a75eb425ab75bf8cfad57",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "90a9d8b3e8a33edbc5e87b48fff71f91f0c113cff600dc635632264d15aa2778"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-two-sheet-black-geometry.json",
+      "sha256": "90a9d8b3e8a33edbc5e87b48fff71f91f0c113cff600dc635632264d15aa2778",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "404edddbffa0273f1215ff8225a0f328929dc50b4c0d964ec87851c84a882dbf"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-s-one-warped-resolution-bind.json",
+      "sha256": "404edddbffa0273f1215ff8225a0f328929dc50b4c0d964ec87851c84a882dbf",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "f8259c836993c928df1afeba79b7dc9c83dedb3c98f8e24fc926015f32096e93"
+      },
+      "bytes": null,
+      "path": "results/nsc-1-unified-gradient-boundary-dev3.json",
+      "sha256": "f8259c836993c928df1afeba79b7dc9c83dedb3c98f8e24fc926015f32096e93",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-10-influence.json",
+      "sha256": "4459ef2419f48ffb14faa683ef145b838ded0a4629b994c72f43c18dacf0e1b1",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-10-measure-normalization.json",
+      "sha256": "3cd6afa74729effdfab695af081b1fd0277e0c9f7b5c7df51a6c7a83b6c46b7f",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-11-response-matching.json",
+      "sha256": "a592180e6406e58a33ebcbf8ab5df85d52f92865240c98ba1c0d9dac33ade7d4",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-angular-tower.json",
+      "sha256": "1246bee679d33bdefa6e18efddc62bc7f59439e805ea1485847d86211a65e0ad",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-anomaly-decomposition.json",
+      "sha256": "052750d49e969a1d82b683f6405a1568aff5f56352183eb9da948a6a2ab0b750",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-anomaly-owner-correction.json",
+      "sha256": "02a40da4985f572fe3c535b6b31329b25da017b85e9ce4fcb7870edd6b13c65c",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "39bd1c160c8b72a740f8f26b62c8c202b6f90d357949737981a4e35e1a9d30a1"
+      },
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-foliation.json",
+      "sha256": "39bd1c160c8b72a740f8f26b62c8c202b6f90d357949737981a4e35e1a9d30a1",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-lowest-mode.json",
+      "sha256": "37e19c2b611cc6ff31f0f866e2ac9a07e4dd0c8d9a21f21c6b1a08b79d7238e0",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-orbifold-parity.json",
+      "sha256": "79871e46cde9ba3e7f6b05df2b20074db0ca07cfbf84cb6b274bf7e743d8c747",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-recursion-map.json",
+      "sha256": "4b2c7c3cea91bc980a3de3750e89d32c1b3b105adbdaf7844be1ab70c9565774",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-regulated-determinant.json",
+      "sha256": "5dc40ccbc5f5e27cc40dc5c6be574b3713d0bbc91f5a97c74bcb4b10ad27ff10",
+      "status": "local"
+    },
+    {
+      "archive_disposition": {
+        "doi": "10.5281/zenodo.23090015",
+        "sha256": "77167b67ef6b9f2260a76a6fcc5782eeb6f4e61507a83992222acf1980825263"
+      },
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-self-adjoint-domain.json",
+      "sha256": "77167b67ef6b9f2260a76a6fcc5782eeb6f4e61507a83992222acf1980825263",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-unit-closure-check.json",
+      "sha256": "82f506316c8b73f47f692eb6573c0a8c5156c98944704fccd3cb46f3e2fd0928",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-warped-y.json",
+      "sha256": "243dbdc8d6085815c588ced0280ad05b9b2e7437ce59e4962e560b3945fb90e5",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-2-zeta1-y-boundary-sensitivity.json",
+      "sha256": "970a9e26a8f70cde46a67cb3a48f97255d2ff0b246a7818e9e06601f6078b01e",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-3-boundary-response.json",
+      "sha256": "20bda4d3600724466354084cffcaad0d63debde19020b71708926667b746c767",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-3-geometric-chain.json",
+      "sha256": "a5b5061372fef19817d8abd8a6833be020b54806607101338029e7177bfd0615",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-3-radial-spectrum.json",
+      "sha256": "b0c24ee00a4f4ef5191599692dd20c59a5c0db06d53f40f57178004552abfc21",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-3-regulated-recursion.json",
+      "sha256": "e5164ea586350dbf3bd754b5f68c475ec25f876aab1870ed18cb0be7bff6bc39",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-3-threshold-response.json",
+      "sha256": "23940638d19b073ab9ca2386dbbb60d1326ab71839a338b149a9b35cd58d2ca9",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-4-covariant-measure.json",
+      "sha256": "e1cd39c855e0c723b04718ec35c8404f64fdba89fc497db8cf1e01d1615250ca",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-4-dirac-tetrad.json",
+      "sha256": "acaa1ec0bb521e746f9786f7b0a42fd474699476ba9b91bf5f0c50b2a70fe068",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-4-lorentzian-transport.json",
+      "sha256": "93b1144975de0d146ae42ab35cf6b3dae43f7ea7b8cc2d4130cc5aeada6e98fe",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-4-shape-response.json",
+      "sha256": "2ad75d62c9682355f827f5b51b6b7242ec504ee7424fd674914cc7f9771ad9f7",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-4-smooth-geometry.json",
+      "sha256": "028046731ca6a5e3ee3230db87cd623081083a05877da50e029330a127f11673",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-5-clock-horizon.json",
+      "sha256": "88978d10cf67a4c67089903a084c656ff9fd024819e9af82b68db049d2327f3f",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-5-plateau-conditions.json",
+      "sha256": "d0f6b02e3c8bd9c6174b95ac1ff5fd46e4587bd9277c6c7fdd136a295f049f61",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-5-tail-limit.json",
+      "sha256": "499658c02d7662b2ef3b3f80a4578ae9b952b09a47c31c75a599c09087b7372a",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-6-energy-transfer.json",
+      "sha256": "911fefa75e6ffa5f61224f4354c63351cb366728efa73ecf6784371ff3669be1",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-6-vacuum-work.json",
+      "sha256": "c3446f8e1dbc4d01047715a342654fb7decb57dfeeacc98305e22d6083fe1605",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-7-observable-bridge.json",
+      "sha256": "69495eda9f1815436223a8e472d923aa5ba9db913b03696bdf0e8388b2f1b024",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-8-chiral-boundary.json",
+      "sha256": "9bbf676447b9a6fb68966dfeab1ea798834e478e23501e9757fc8e79027c0f07",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-8-finite-terms.json",
+      "sha256": "85487b7633156285996e2cfdacd1c00d76c34eb0e5416ad7063381b3a8b2ab5c",
+      "status": "local"
+    },
+    {
+      "bytes": null,
+      "path": "results/nsc-9-covariant-source.json",
+      "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a",
+      "status": "local"
+    }
+  ],
   "excluded_category_summaries": [
-    "root archive/ preservation carriers authenticated separately by the reassembly manifest",
+    "archive/source-history original objects and pins authenticated by retained-file receipts",
     "retired lab/ and old nested checkout containers, if present locally",
     "local Git metadata, build/replay directories, virtual environments and caches",
     "machine-local agent configuration, runtime state and research-reset backup"
@@ -27,14 +1338,14 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 2635,
+      "bytes": 2637,
       "path": ".github/workflows/paper-pdf.yml",
-      "sha256": "210bef4360b7cdfec7c443068d69ec538c8706b9f507a3f0b9ae0ccd7350dac0"
+      "sha256": "66d5cd61db9caff1bf8ac82b5af732903256569896590efd588b5ff9d3864fc3"
     },
     {
-      "bytes": 3932,
+      "bytes": 1120,
       "path": ".github/workflows/verify.yml",
-      "sha256": "4955db43f33f798f216d2601d5a71d6f76750f70940ed0a297b73d16de6c303c"
+      "sha256": "cc24cc61fb843e512ffc74be0026ef4cc2182de4b91d07164084195ec6d4bf4e"
     },
     {
       "bytes": 356,
@@ -42,9 +1353,9 @@
       "sha256": "577a3493000ac59e11d320d1b58b367e40292a8a80a184c3cffb842fcf2ec59c"
     },
     {
-      "bytes": 3235,
+      "bytes": 3434,
       "path": "AGENTS.md",
-      "sha256": "b0f212d546ea31d286da75cee5f16fe68297097040e08c798ef2f68b623178c0"
+      "sha256": "b779e2e9a344863f28833481be27c026761f1fc4d09b31a5c4ad5a42e2b9bd35"
     },
     {
       "bytes": 1264,
@@ -72,14 +1383,14 @@
       "sha256": "9fe34c5233f144ec45c7e5b263e35ec5874778262781c7cfadde99754266cc06"
     },
     {
-      "bytes": 2855,
+      "bytes": 2803,
       "path": "Makefile",
-      "sha256": "7725332b3ffd9dfc7945a79138e9ae5e49dae2792d65d327e01a5527830c2fae"
+      "sha256": "776e2db9f4597e9e0644290327dd37d39c77aeafb5bcaee48aaae7ad0e38164c"
     },
     {
-      "bytes": 5559,
+      "bytes": 5938,
       "path": "README.md",
-      "sha256": "86723401086844213d3c0451a0a4a0a2fbb1c13f76eba4f840300c9793fa63d3"
+      "sha256": "fe76cacdce334714c39d660c3a8e7f001c62cdf818fd05b53e703e6dbe6bdca6"
     },
     {
       "bytes": 629,
@@ -87,9 +1398,9 @@
       "sha256": "6f96d9434933872f84b3a068c64061eb6eada257ecffa22e994494bc79591b0b"
     },
     {
-      "bytes": 25296,
+      "bytes": 26703,
       "path": "THEORY.md",
-      "sha256": "f8704a2188d3f69e635083819659855842f1628c6ce13c85acf99a74afa74ef9"
+      "sha256": "6db94748d88ada52834d465d148b76f984d5a06e6321a6c8b2ef478d3e6e3634"
     },
     {
       "bytes": 16135,
@@ -97,54 +1408,34 @@
       "sha256": "8f940b26485c9bb6410779a9ca159e6a0d99f3fe98430a0fdbc03dd70a7aabb4"
     },
     {
-      "bytes": 1786,
+      "bytes": 2716,
       "path": "docs/README.md",
-      "sha256": "fec9e8c2a8bcc69818d6c3331ef15aafee0dd12939806e40cef1ee83dd31752f"
+      "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 187135,
+      "bytes": 185594,
       "path": "docs/active-code-map.md",
-      "sha256": "b18929909e4e533db556b7484de1293e8767566b07f2169e5d7c1463e14dbb6a"
+      "sha256": "5137811099aad312fc041949ed9ffd1aeafa6f03cedd058f0363d4af0a34dc9d"
     },
     {
-      "bytes": 92230,
+      "bytes": 95327,
       "path": "docs/arxiv-studies.md",
-      "sha256": "41f87ff2dae18ae1a627ce7164f8f32e997a7c48a3f999930d4f7ea87adc0040"
+      "sha256": "6b1fe9bf101c00feb3cb14be9575fdb2c83c29f6d35bd7194128adef6a49143d"
     },
     {
-      "bytes": 9911,
+      "bytes": 1458,
+      "path": "docs/atlas-or-child-geometry.md",
+      "sha256": "3db8971c9cadd0350ac60e5d165e2cab37678f88d8fdead475815abdb0464943"
+    },
+    {
+      "bytes": 9464,
       "path": "docs/child-neck/README.md",
-      "sha256": "77234b035c43a58144ba67e6425e6fad9e4f81a572d15656aed6d7d6bd2168d6"
+      "sha256": "4123cbe64c14be533fdb48959d8988002acf2d63e6d3b6b8aae2224cf1d9a0f1"
     },
     {
-      "bytes": 4561,
-      "path": "docs/child-neck/balanced-layers-note.md",
-      "sha256": "355a62b66518daf4f82986ec53583112538f45385f8e8aa0bf2322aecf86259a"
-    },
-    {
-      "bytes": 4665,
-      "path": "docs/child-neck/casimir-layer-note.md",
-      "sha256": "0a87eb9ac9a148359786395060cfab82319c80e3c6a4dba92d11e40ba6828b18"
-    },
-    {
-      "bytes": 9080,
+      "bytes": 16127,
       "path": "docs/child-neck/child-and-neck-status-note.md",
-      "sha256": "444b5f1b95ff1f368104e56e79cd82a163f59365effb298100ef236822557a76"
-    },
-    {
-      "bytes": 4490,
-      "path": "docs/child-neck/child-energy-floor-and-thread-length-note.md",
-      "sha256": "2455b76649d3ca10932b8e3fb053134bef6baa0d5644a2732f0f42038d2cbba6"
-    },
-    {
-      "bytes": 5181,
-      "path": "docs/child-neck/child-expansion-and-matter-fraction-note.md",
-      "sha256": "504f488e49fbc20ec1fb80df98262e2a5f2f7893e48f28a61da0e5367e08eee2"
-    },
-    {
-      "bytes": 2489,
-      "path": "docs/child-neck/collapse-threshold-and-expansion-note.md",
-      "sha256": "8eff99a18387234f03311ca75f30a35b462118ef8327724096500af42bc5f09f"
+      "sha256": "5786489f87174d9f1ad1cc9bc1ae8cb9d02f27e43c0cd4168fe27fa88196861e"
     },
     {
       "bytes": 4214,
@@ -152,69 +1443,14 @@
       "sha256": "22fa3c02fe6d621485e819d1c2208d4618876542c81b3c802c493e82afbb8b61"
     },
     {
-      "bytes": 3703,
-      "path": "docs/child-neck/eck-collapse-pair-production-note.md",
-      "sha256": "70f4fcfe5b6588597a76a55203800e53d5b89c1ef8c238ebb04390347189075e"
-    },
-    {
-      "bytes": 7940,
-      "path": "docs/child-neck/israel-matching-note.md",
-      "sha256": "97b81878f90eab41cb992b95f88259b72b21b2bd59e46654b1ae25092bee9299"
-    },
-    {
-      "bytes": 4612,
-      "path": "docs/child-neck/junction-neck-note.md",
-      "sha256": "5cd6b211d9eda0bbc5d9724d2f19f844a1291fe50c168e4cb6c857b608074ce7"
-    },
-    {
-      "bytes": 6779,
-      "path": "docs/child-neck/kasner-shear-production-note.md",
-      "sha256": "2c3e1da219adf6d47b025a5e0a75281f556968071a3a04a0282b4c736687b1a6"
-    },
-    {
-      "bytes": 4534,
-      "path": "docs/child-neck/matter-antimatter-and-time-note.md",
-      "sha256": "8930779648da8dec99c72f163de27252119f5cbd422295243e3bf6b699516d69"
-    },
-    {
-      "bytes": 3487,
-      "path": "docs/child-neck/neck-flux-note.md",
-      "sha256": "0fceb6949fdd44365d4027ceb36fdc2f6b35c77cc91008336586348a98a8d648"
-    },
-    {
-      "bytes": 3621,
-      "path": "docs/child-neck/nesting-thread-length-note.md",
-      "sha256": "fe0886c9e0ac0712ea9c6c92b0a06720b0d44d01f8a6d3b33559094815ba57f9"
-    },
-    {
-      "bytes": 4600,
-      "path": "docs/child-neck/second-quantised-splitting-note.md",
-      "sha256": "6f040afb70b3fbb1ed7f6301ed76f7abb59692dbe8f70155ce057f4a504f36fd"
-    },
-    {
-      "bytes": 5428,
-      "path": "docs/child-neck/swap-symmetry-note.md",
-      "sha256": "153e3b72dcbe8b75e4749e6aff18011f1af37f8d332a2f68be8e2457c9ac51fe"
-    },
-    {
-      "bytes": 4239,
-      "path": "docs/child-neck/torsion-layer-note.md",
-      "sha256": "a850da367439eb9cc80c65a6e80dd5780ccc7d3bf9d1227fbed9af87d8dbad7b"
-    },
-    {
-      "bytes": 5524,
-      "path": "docs/child-neck/torsion-splitting-and-inherited-spin-note.md",
-      "sha256": "dc2fcb054f8a19e7795f816f160ba913a46e08660fc54a9bac523772f2be804a"
-    },
-    {
-      "bytes": 102088,
+      "bytes": 101762,
       "path": "docs/claim-ledger.md",
-      "sha256": "a44035ca980cd78da0240f8aebf2b0a6ff9c53f483fa4a05e5680087d8a8b37a"
+      "sha256": "f98c9ad0d0f1358c2cb401bbeb0b94562c9a73ef406dfb553f1143d74d6b32d0"
     },
     {
-      "bytes": 171356,
+      "bytes": 171191,
       "path": "docs/current-result.md",
-      "sha256": "1e12b827643c4cd11b4378335b1c474e022f4fba63532b394703cf3feea40486"
+      "sha256": "36d48f72a2071cb0d5f6db369395797a35256a91c07bae187eff810d89eefad1"
     },
     {
       "bytes": 14497,
@@ -227,19 +1463,24 @@
       "sha256": "98a47e88e8749f025ce449e65cb6adf241e5847eeb2d16de920bb26eeca2785f"
     },
     {
-      "bytes": 18244,
+      "bytes": 2029,
+      "path": "docs/inheritance.md",
+      "sha256": "227b3c1ed3bff2736c9ca4a3d2272aa5f3fcc69a65ab9f931f8c0daa539f8217"
+    },
+    {
+      "bytes": 18359,
       "path": "docs/instructions.md",
-      "sha256": "cbab43d6a567895bc3e8b62039c8271b708c701c093a8244689a0b8f38c0762a"
+      "sha256": "ad36ccab4520b8aae843551734d390ec87afd01d569446a306b99767635eb907"
     },
     {
-      "bytes": 6039056,
+      "bytes": 913925,
       "path": "docs/lab-snapshot.json",
-      "sha256": "534eb39564e0444f3a945ff2015f863cd74cde6494c20a15d3fe9a52c5ca0258"
+      "sha256": "90c24a60b7ddcf2924ce263a980b9ee1a44a74bb292f3e76fdb86cf665a7b346"
     },
     {
-      "bytes": 5006,
+      "bytes": 4997,
       "path": "docs/local-gate-draft.md",
-      "sha256": "8ddb45a3787516820fae60ab10458ba596bec5c63c33490720a2865bebd62327"
+      "sha256": "60be356cb4abdd49a7f8915796b9a4682ffea1bde97f1cc952baa5aa7a7dcc99"
     },
     {
       "bytes": 301,
@@ -292,14 +1533,14 @@
       "sha256": "ccf87a573c00b07c94d05bd86a17f687b6e520340a2d2e0320fd1e8854ec95fe"
     },
     {
-      "bytes": 14575,
+      "bytes": 15219,
       "path": "docs/nsc-atlas-causal-classification.md",
-      "sha256": "2ab9ca2a8787413e44974e2fefd41821a4cfdcc1540fb214581b9d9e5673803c"
+      "sha256": "0085426ded39a57034322a1d93834c6efd11a5898db0b58f1f984a93837f6bf3"
     },
     {
-      "bytes": 9246,
+      "bytes": 10244,
       "path": "docs/nsc-atlas-causal-observers.md",
-      "sha256": "18991d22749bf8dd5b26c2ebafe080eec2fbc18bbe5ec45777e03ce2d138f65b"
+      "sha256": "4c88393baedca74992b24af7f659064f9166a758d33cc314bc31a67799d356fa"
     },
     {
       "bytes": 11150,
@@ -307,19 +1548,14 @@
       "sha256": "676447c9b538f1cc0f47c7f556037839b9bdb5f8ddd63a44fcfc2e418af0a1ff"
     },
     {
-      "bytes": 14783,
+      "bytes": 14782,
       "path": "docs/nsc-atlas-connection-gluing.md",
-      "sha256": "50a680760f8cd3f9051bc29c1b387b5211695e0c3adce62b598a02ccd1fcb26b"
+      "sha256": "0d01b708cd5abb43b841e3a261a33a9586a0f832ca321aa8f665977e9a41d6cd"
     },
     {
-      "bytes": 3725,
-      "path": "docs/nsc-atlas-connection-observer.md",
-      "sha256": "87c7d61c27e6373816aa79a0ee8f2a560565cdab742d5f79cd024ad6b2feef68"
-    },
-    {
-      "bytes": 8541,
+      "bytes": 9503,
       "path": "docs/nsc-atlas-connection-slice.md",
-      "sha256": "e739c1c6513cb58b2ff56a24c9e91cab93db8724ddac1a588be31ec9678f3433"
+      "sha256": "c951fd6b6d47dc106e78a8e6629f8a0311f6585d5f32bf32a39b8a1d14984cf0"
     },
     {
       "bytes": 17343,
@@ -337,29 +1573,14 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 12412,
-      "path": "docs/nsc-atlas-junction-sources.md",
-      "sha256": "629f3b18e49f436060fde1e72359e9ec4c271f5e64d5a60da41eb50dd4f027db"
-    },
-    {
-      "bytes": 8899,
+      "bytes": 8895,
       "path": "docs/nsc-atlas-moving-boundaries.md",
-      "sha256": "fbc8dfa5c85a20e224ecc1d592a97da6e02befdbead927c5681efe74762c1ae8"
+      "sha256": "8528a6a5c0100359557cd16b1e53e94fe1b28da0740aff012c0ded19e124dcae"
     },
     {
       "bytes": 12101,
       "path": "docs/nsc-atlas-observer-inference.md",
       "sha256": "aeb030a33bbdfaaf9c51c90b3c7bc5a78c211c4cb782d575b83f3b1c6189a64e"
-    },
-    {
-      "bytes": 12355,
-      "path": "docs/nsc-atlas-parent-gluing.md",
-      "sha256": "da2d9f84537918d2466cf4dbd6145f6cf9f34f08b56b52c10d48e50620bfe435"
-    },
-    {
-      "bytes": 6003,
-      "path": "docs/nsc-atlas-parent-initial-data.md",
-      "sha256": "684d9e9850f60dcc239953ecd853b875260b4a0db6129b59bda25c34bb826c2a"
     },
     {
       "bytes": 19229,
@@ -382,14 +1603,14 @@
       "sha256": "577f15e685033c0e19a612e3d1492cca2a8b5e2c54fafc52ad47e8a7ae370b12"
     },
     {
+      "bytes": 9716,
+      "path": "docs/nsc-atlas-wall-mass-closure.md",
+      "sha256": "754044494cc12897fa5049aced2139754affd8e572ea66398abce3418b3805b8"
+    },
+    {
       "bytes": 4199,
       "path": "docs/nsc-background-projection.md",
       "sha256": "f6d0d4e3274976a41ed899f0deb178311d691448e9dcf8c3191e36b38d66921e"
-    },
-    {
-      "bytes": 5832,
-      "path": "docs/nsc-bloch-trace-bound.md",
-      "sha256": "5848b868b4364e74e4dd35dac64ad8d7da3e4d6f50823135ed5a73354f87df09"
     },
     {
       "bytes": 10991,
@@ -447,11 +1668,6 @@
       "sha256": "fb6dc600ea65dc02ef4f4282dc4b930bead1010b57551e98c6346b4b118d2d2a"
     },
     {
-      "bytes": 8657,
-      "path": "docs/nsc-clock-horizon.md",
-      "sha256": "8ef7849ced4b5fad6b00456c11dd6e2fa4248b6acd6c0caad7afc17d1c014aac"
-    },
-    {
       "bytes": 13455,
       "path": "docs/nsc-closure-verification-2026-09-07.md",
       "sha256": "bd703dbb4a547fa24fcee329ea753d58fecca03ca0f38337eddf9a285b820092"
@@ -462,14 +1678,14 @@
       "sha256": "367b3a918e4ce099cbf079ff2a1a0588dcf5c36c2b0c29641f19bf3e35517733"
     },
     {
-      "bytes": 15767,
+      "bytes": 15893,
       "path": "docs/nsc-common-source-derivation.md",
-      "sha256": "00c19b04e3f40274cb9e5dd74422c279fef82d26bab75072a6ecadc7f86dcbd8"
+      "sha256": "8753ceb33a9caf25ab3f832323bb876470875ce1dbebf9f7c572c821103c78a5"
     },
     {
-      "bytes": 4014,
+      "bytes": 4012,
       "path": "docs/nsc-common-subtracted-ks-source.md",
-      "sha256": "3b3995a801e3df26b6d39802cf5c7cfb90f010fee8a62f08ae1c9209f3eb09db"
+      "sha256": "c2be0239ae4024e192f103bf4769956bd4e6f550df9ef866712017fbd743a9fa"
     },
     {
       "bytes": 6297,
@@ -527,11 +1743,6 @@
       "sha256": "794eaee5c07ebe0e08233d97da48cbb1d37c912169b97588f010b5e41ed89f50"
     },
     {
-      "bytes": 10278,
-      "path": "docs/nsc-conformal-local-response-successor.md",
-      "sha256": "74fc2e1110cddfabbe611f42992c15a98eef2e4b2fbc355845ce43aba8e78b41"
-    },
-    {
       "bytes": 4917,
       "path": "docs/nsc-conformal-local-response.md",
       "sha256": "f3b59885da89ebf5f7eeef90936dd14a65f07c3dfd15dc22fae3f41ac5782a7b"
@@ -542,44 +1753,19 @@
       "sha256": "16af9c7197f474bf93a66384426b8fc91cebb96c6bfd81f5373cba3ad3d08b22"
     },
     {
-      "bytes": 4885,
-      "path": "docs/nsc-cosmological-atlas-v2.md",
-      "sha256": "ef947af8c678535fd63efef8fbb26bf09a0b8136dbe96bde665cb0d981261de1"
-    },
-    {
-      "bytes": 6154,
-      "path": "docs/nsc-cosmological-atlas-v3.md",
-      "sha256": "da7869cac76529426819a059db12e5aee4af173181a0d2d02d77b1f484f2a309"
-    },
-    {
-      "bytes": 3506,
-      "path": "docs/nsc-cosmological-atlas-v4.md",
-      "sha256": "284b4bba7dd0e7948256b8968d79ee4610012a3396c704e0eb4b82544e6e974c"
-    },
-    {
-      "bytes": 7079,
-      "path": "docs/nsc-cosmological-atlas-v5.md",
-      "sha256": "4ef831a0123556aebc1090d58352b5d927cbe2589a12023487074221fb62f6f2"
-    },
-    {
-      "bytes": 8030,
-      "path": "docs/nsc-cosmological-atlas-v6.md",
-      "sha256": "e530c828351aa33f07e62d77acd032f5df98daa815f76f8cb3985ba92e2b0d09"
-    },
-    {
       "bytes": 1868,
       "path": "docs/nsc-cosmological-atlas-v7.md",
       "sha256": "fc22d472b13e224fe67bc34feec2eddb545798afdd4b9838782db4546b787408"
     },
     {
-      "bytes": 5569,
+      "bytes": 6156,
       "path": "docs/nsc-cosmological-atlas-v8.md",
-      "sha256": "bc8c82960db15b20e247550c29d71b2bb58daa8ec7059151ad84151508c092e7"
+      "sha256": "345c8d76b322d1b4d6de16af95e825c345f792385897a9860a3a43a63d1c4d2d"
     },
     {
-      "bytes": 37093,
+      "bytes": 42838,
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "f9c19bd5dfc47fd18f3342bec3d6d1517e03d604ecc18b55525e2907bae749aa"
+      "sha256": "87df825618344c8b59a063063e20b5816abdd98eb10654f3422afe56c5f8d72f"
     },
     {
       "bytes": 3367,
@@ -587,9 +1773,9 @@
       "sha256": "6cab2a37dce87f199638063f08ad7bce03bdddca364ecd69bc682b449cb611aa"
     },
     {
-      "bytes": 28169,
+      "bytes": 30876,
       "path": "docs/nsc-coupled-local-response.md",
-      "sha256": "b2cfe18f50b75b91311bd3cf91aaffcc25a0361b8ae157d8d85cc02807d847fb"
+      "sha256": "aef0119af4086e4821efbc58a9867a8b101930e1010f72f24086e7e66848a270"
     },
     {
       "bytes": 16550,
@@ -607,9 +1793,9 @@
       "sha256": "d4b4393ede4143964f719fcb1ecbedb3ad27940a183483d150afffdd6bd15e8e"
     },
     {
-      "bytes": 5151,
+      "bytes": 5158,
       "path": "docs/nsc-declared-action-scope.md",
-      "sha256": "fa7e264fa49cdf0fb7972eea6522ae3e7df9960763511ec0511dfa6bbd6d40ae"
+      "sha256": "d2bc8acf4bdc376836870da492f2f3ebeab86af7af03c53346509a27a3b522ad"
     },
     {
       "bytes": 2715,
@@ -650,11 +1836,6 @@
       "bytes": 5453,
       "path": "docs/nsc-discovery-balance.md",
       "sha256": "ca6a298bf313ab0406c2ecdbda0c2c04e1ea01c1eefad6cc65d2472f89caa627"
-    },
-    {
-      "bytes": 11070,
-      "path": "docs/nsc-discovery-coupled-memory.md",
-      "sha256": "6e41966574e87549d6019df8d5a2610375a326aaae2f66f89c10c9d8a5630a4e"
     },
     {
       "bytes": 6683,
@@ -857,14 +2038,14 @@
       "sha256": "0c962da1e1c1c9b0f0c18807dfc6549526e914ae61c40d1131a57d74f0d66e28"
     },
     {
-      "bytes": 6561,
+      "bytes": 10059,
       "path": "docs/nsc-evolved-incoming-constraints.md",
-      "sha256": "6e9119e1d6c9ed7c52dc1574b68687c58f084d0fed8c9a6c4785c4f25213f3ce"
+      "sha256": "b737c3dddc0518d6def8fd91c36a448a07a039192bfa50bd9b3ebbf5862113b1"
     },
     {
-      "bytes": 4141,
+      "bytes": 7120,
       "path": "docs/nsc-evolved-incoming-state.md",
-      "sha256": "d4b95ba5886c2b19bbb5002b28ea4ff11933e3ec99e04f8a2ac52e5c736cdcca"
+      "sha256": "cb5e6863eeb8eb75601a2efd58dc6bd4188a6610c529cf20631c9436125992d7"
     },
     {
       "bytes": 1913,
@@ -872,9 +2053,9 @@
       "sha256": "c741f7d88b8c547f836dede6816daba7724dc8644ca9b5d086824b6b0ccb3489"
     },
     {
-      "bytes": 11193,
+      "bytes": 11216,
       "path": "docs/nsc-evolving-reduction.md",
-      "sha256": "e679c08abd76278e08d2fa49ab41cb21cc93da25e16c74a670f7c72ad4f56f6e"
+      "sha256": "a4ccbaea0a751a757b27172f3c6e4f350a46f5cac88bc3c5e81a4aa78ac79e02"
     },
     {
       "bytes": 4224,
@@ -972,11 +2153,6 @@
       "sha256": "a5b2aaa21ebcf7fed838908b04b65850866b8137dad09dec6991f6ec887757ad"
     },
     {
-      "bytes": 5857,
-      "path": "docs/nsc-global-projector-bounds.md",
-      "sha256": "33a888f45e03977856800c09588e9cefe0ecbc0cdd46fbde41a6324737211b0a"
-    },
-    {
       "bytes": 3780,
       "path": "docs/nsc-hamiltonian-trace-representation.md",
       "sha256": "371243e26b216a2e3d50004b9de7b61b42737114d1618251c5ec28e32e6dd95d"
@@ -1027,9 +2203,9 @@
       "sha256": "051903fcbf9f10aa1bc4d955e31673d5952b8dfe1bce8ba05126116d3556e50a"
     },
     {
-      "bytes": 5359,
+      "bytes": 7024,
       "path": "docs/nsc-incoming-constraint-gate.md",
-      "sha256": "239feaa429f01a9a97777a6912dccf87699d324f321677a1619f61c8c75dcd27"
+      "sha256": "93d28ad79617a4d6d66c975e0a439b9e8d538b78cb981339ab6aa75b47aa59bc"
     },
     {
       "bytes": 4403,
@@ -1042,19 +2218,9 @@
       "sha256": "13fdab6ec71a089ab0c0f146941551b7d468aa8d18002d7df078dafdb9440aee"
     },
     {
-      "bytes": 5649,
-      "path": "docs/nsc-incoming-energy-error-budget.md",
-      "sha256": "5d025482dab17a99dbb2cf57ccebedd4d6b5cb21a5977cba919eab28f1217edc"
-    },
-    {
       "bytes": 4481,
       "path": "docs/nsc-incoming-energy-panel-preflight.md",
       "sha256": "73d9c1905d42526dc4eb38d403ce84e3e7988dae2c54b453773ef432d755f64c"
-    },
-    {
-      "bytes": 13887,
-      "path": "docs/nsc-incoming-finite-preparation.md",
-      "sha256": "24a1805e9e2bad4c8925f4feadf678d0e35ba077a2aa6632342416d2944cc408"
     },
     {
       "bytes": 9213,
@@ -1115,11 +2281,6 @@
       "bytes": 3093,
       "path": "docs/nsc-incoming-local-constraints.md",
       "sha256": "0d0070a99ad00dead39cc61449b7bda4c8036bb4177b43292c4e3ca9b17585ee"
-    },
-    {
-      "bytes": 5192,
-      "path": "docs/nsc-incoming-local-surface-existence.md",
-      "sha256": "d7c9f5412359b595333e64f0a7f5828e7833c6808433042e6e062ce64f0aec7f"
     },
     {
       "bytes": 4668,
@@ -1652,19 +2813,14 @@
       "sha256": "97e4661ac85e60fb2d5093eda82dc901290d85dbeb93a555abb01632054aaac3"
     },
     {
-      "bytes": 10060,
-      "path": "docs/nsc-ks-energy-interpolation-bound.md",
-      "sha256": "116074059c8b42a542a72509f8511e68458bed65a74f3e380b35ec3200b5068e"
-    },
-    {
       "bytes": 2126,
       "path": "docs/nsc-ks-energy-node-bound.md",
       "sha256": "23e77e36b1a2c539483623abc0ec45c67a48656028c96e335d21629bdcdbf28d"
     },
     {
-      "bytes": 3073,
+      "bytes": 6646,
       "path": "docs/nsc-ks-energy-propagator.md",
-      "sha256": "4f619ee5a3e9975bb2d7453ab262e643e790eae87995bd3a2e6c70239bc507f9"
+      "sha256": "d6baa4bc28849d195b02885534f4c55b9940d6af2dec9ad5cba9609cae87b279"
     },
     {
       "bytes": 2097,
@@ -1677,39 +2833,9 @@
       "sha256": "6d83407ca58e2e069a3e77bf8378e4896ee53d305c15f8c776461c437b0b3c70"
     },
     {
-      "bytes": 18225,
-      "path": "docs/nsc-ks-evaluator-repair-v2.md",
-      "sha256": "11b55474005dbb928a080407fa6cda1f66c42b851e3000509c3da5ac3c5830a0"
-    },
-    {
       "bytes": 2416,
       "path": "docs/nsc-ks-field-ramp-pilot.md",
       "sha256": "e751299f62d89866a6f428596b18e279a14c242c1942581e483c4854140c28ad"
-    },
-    {
-      "bytes": 1182,
-      "path": "docs/nsc-ks-fine-matter-accuracy.md",
-      "sha256": "9112b3436efec9efd945c62b3d09c08be0843a37dcfaa5cc64e77f23c5016686"
-    },
-    {
-      "bytes": 906,
-      "path": "docs/nsc-ks-fine-profile-table.md",
-      "sha256": "9f0b3cb1c8a53b246c3e28f08cf1008b7c406182e086b093ca7c51499379c6e8"
-    },
-    {
-      "bytes": 1943,
-      "path": "docs/nsc-ks-fine-trajectory.md",
-      "sha256": "44b3f62674841dd794fb2c27b790a66b0c0acaeea6d638cfb29c552e2c8891df"
-    },
-    {
-      "bytes": 1495,
-      "path": "docs/nsc-ks-fine-validation.md",
-      "sha256": "1ef20f78fc4c632b5a79faaa714b58eba70ec22aa1605cce194e9b9c47f540e2"
-    },
-    {
-      "bytes": 1523,
-      "path": "docs/nsc-ks-finite-matter-error.md",
-      "sha256": "e5c4e711d9d52762ae213e70579ec22621430bc3442ddc6d4f282afe08aba033"
     },
     {
       "bytes": 479,
@@ -1737,11 +2863,6 @@
       "sha256": "bb75a7c8a3d82ac87aae52a1588cde8da3db0d4c3a23686192af27e5c298e2f2"
     },
     {
-      "bytes": 732,
-      "path": "docs/nsc-ks-fourier-wu-plateau.md",
-      "sha256": "81d40f76f9ce6d518a2bc479c2257741ebb4439825555936368508041ed32845"
-    },
-    {
       "bytes": 478,
       "path": "docs/nsc-ks-gate-budget-feasibility.md",
       "sha256": "1c78115e2cf1e7b20d1cd95828dacf59cd524fc9b26e337621eb496f4b99bd6e"
@@ -1752,9 +2873,9 @@
       "sha256": "bab61494572d2ab7919a4ea0104939ba6c17961bbd52f272b2cb6fdc1013e781"
     },
     {
-      "bytes": 2284,
+      "bytes": 2749,
       "path": "docs/nsc-ks-gate-budget-v5.md",
-      "sha256": "4533e9e3ad594fac702949df23ff3decdbaff0018767dbd13b2b50e82696ba33"
+      "sha256": "cec994380fcf901194f063e6656c8d4ba2c831f0f25b29e1e1bf75a3126580e9"
     },
     {
       "bytes": 789,
@@ -1792,24 +2913,14 @@
       "sha256": "7b6c0c79a27971a28bfcc7dbd23790c45be02da4488ca3d57319f37072372fb4"
     },
     {
-      "bytes": 6860,
-      "path": "docs/nsc-ks-high-radius-derivatives.md",
-      "sha256": "01db90d89e243229484a4f3e1f14e86b7252065db22ca71359b47e3cea01485e"
-    },
-    {
       "bytes": 1709,
       "path": "docs/nsc-ks-history-evaluator-control.md",
       "sha256": "8b92ab8b3c71d1152789d60f1f757adb1a09e5ebf580c08b692f7d8344512163"
     },
     {
-      "bytes": 3625,
+      "bytes": 4806,
       "path": "docs/nsc-ks-history-evaluator.md",
-      "sha256": "d49740d249996657e2311b7514e537cef628e5ae38ff5a03c026811a33f4d306"
-    },
-    {
-      "bytes": 2266,
-      "path": "docs/nsc-ks-linear-uv-contractions.md",
-      "sha256": "1583a3f7f67aceeee2725b674d712fc28a4da4f4d2359b165c6a72f575b19976"
+      "sha256": "790c18b91481843b686e22129322f3ce9567a53d8b10ff8b5f9c99c8249a63af"
     },
     {
       "bytes": 3521,
@@ -1822,14 +2933,9 @@
       "sha256": "7df54c1d72af7dd72d36ffd17a2d0e5e9cf8718223209bb88bdf83fa194c2121"
     },
     {
-      "bytes": 3732,
+      "bytes": 4282,
       "path": "docs/nsc-ks-local-gate-search-v1.md",
-      "sha256": "3bdfb103ae470f05067acc017b8b9b261bd2b1b127c326b0933093cba6e5bd76"
-    },
-    {
-      "bytes": 1157,
-      "path": "docs/nsc-ks-low-subgap-decision-v2.md",
-      "sha256": "8216715fba70a7358d35fc7525dd3fe4ab946fdc6eca685e14b57d8a79ca5a25"
+      "sha256": "5e0b4bf1effad887d7e2298e74f62b66b2a724b5f27359ababa55bc035e0ea87"
     },
     {
       "bytes": 894,
@@ -1837,9 +2943,9 @@
       "sha256": "f84ef4d4e3a7ede754b9a144166110a3a47753e403d93c105323d6c926872131"
     },
     {
-      "bytes": 4908,
+      "bytes": 7504,
       "path": "docs/nsc-ks-massive-cubic-uv.md",
-      "sha256": "05e520af8c05deea9445ac0a64487fdc3300511c3d4390a5b5684307c496d658"
+      "sha256": "122dafb8aaebc7081055c1a42b95c6250ddf90e11e468d4e3931187d111488c1"
     },
     {
       "bytes": 2015,
@@ -1987,24 +3093,9 @@
       "sha256": "9c412629af5a1f7f653307b03a449914addee121ef4d7c5c93a09fb6917ca998"
     },
     {
-      "bytes": 2089,
-      "path": "docs/nsc-ks-primal-step-control.md",
-      "sha256": "f521c6c05d324ff8745fe7e2129c3c0dce75c9bb0ecda41895bed151e79d2121"
-    },
-    {
-      "bytes": 1268,
-      "path": "docs/nsc-ks-profile-compression.md",
-      "sha256": "5b554289f5ba622ffbddf8f2b6c00a91630052be2462e2fd3aa3da05221d06d1"
-    },
-    {
-      "bytes": 2412,
+      "bytes": 3473,
       "path": "docs/nsc-ks-profile-fourier-bound.md",
-      "sha256": "4b255fa65366edab8df528a786ed219cb622de635d0a2fd11d91d4986172ef81"
-    },
-    {
-      "bytes": 1087,
-      "path": "docs/nsc-ks-profile-fourier-refinement.md",
-      "sha256": "309c6d7b14623d3f80f6334fee2cc7b261ca66a4ff60b8f6a83338d93f21c2fa"
+      "sha256": "f22ea5221e7075d3ddb5d5adbc0cc69b80d12aacddb4b8a45fdaef0425012739"
     },
     {
       "bytes": 830,
@@ -2012,34 +3103,14 @@
       "sha256": "c33735893fd576d69f86844223975682dc29773c1c58b5be4079ba808a115eff"
     },
     {
-      "bytes": 2069,
-      "path": "docs/nsc-ks-radius-coupling-bounds.md",
-      "sha256": "e4aa3314c9471470449a0839032ca399abf2997bd96339b9792d40c8b93ae0a2"
-    },
-    {
-      "bytes": 1861,
-      "path": "docs/nsc-ks-radius-covariance-bounds.md",
-      "sha256": "3bf738d3b8d0c33db428216e0f3bdc903e6d35633bfa94d7949efeef12d1130c"
-    },
-    {
-      "bytes": 2376,
+      "bytes": 4554,
       "path": "docs/nsc-ks-radius-enclosure.md",
-      "sha256": "b42f09d56ed337f0ed6818ea489b27193462501bf5f52df49573b14dcde1cd93"
+      "sha256": "61f351ff53732ab723bd91a76cd834fdd28e1c15f6af43b50f4aff6dfc786cc3"
     },
     {
-      "bytes": 1465,
-      "path": "docs/nsc-ks-reference-error.md",
-      "sha256": "1f5841dac0fef20a734deeff6ba7583099b48a0967039e20a38f57761f8cf3c4"
-    },
-    {
-      "bytes": 4666,
+      "bytes": 5596,
       "path": "docs/nsc-ks-residual-error.md",
-      "sha256": "04741618860c3dab7863e55ed83625eaecaec6d32bbc9f5edac5d4fda5b92359"
-    },
-    {
-      "bytes": 1445,
-      "path": "docs/nsc-ks-residual-polynomial.md",
-      "sha256": "c3acd5ef5962c2f87316df0b7d2acea3445aa3d53f1ca2e45ef63c30938a6fd1"
+      "sha256": "df31d03537521c9a1a3a3e83c7e7367a850d4631602ccc3945d7dd079ccc7db6"
     },
     {
       "bytes": 2030,
@@ -2052,19 +3123,9 @@
       "sha256": "25f6b9f04f789799bf696a2d676eeabd9b8080617cf8be5893f8687fac763e26"
     },
     {
-      "bytes": 924,
-      "path": "docs/nsc-ks-retarded-trust-region.md",
-      "sha256": "01edf23329ed250756545984f893333ed9ceffc20de6cf610718131408bf960c"
-    },
-    {
-      "bytes": 1915,
-      "path": "docs/nsc-ks-rho1-source-bound-v1.md",
-      "sha256": "37e99ffd31122cb5c7cc30026046da0200ebfa130ead18086f602129c066afe8"
-    },
-    {
-      "bytes": 3731,
+      "bytes": 5585,
       "path": "docs/nsc-ks-signed-state.md",
-      "sha256": "378addae37a09523b0c8fbf94a93390428ef0974a705fba11c0f72e59c7124b8"
+      "sha256": "871cfa77efcc359514854ffb82dfdab811ce357b28e5ab1ef5332d61c310bbb7"
     },
     {
       "bytes": 5504,
@@ -2092,29 +3153,9 @@
       "sha256": "48f56bd7475ccff3390b7918c157d482c620feccdbca969635698e57239f9959"
     },
     {
-      "bytes": 4009,
+      "bytes": 28234,
       "path": "docs/nsc-ks-source-operator-majorant-v7.md",
-      "sha256": "91f65a7bc039c941ea17d74c53f58f5f7a6292d3c5a17894dec7e63ff5f48bd9"
-    },
-    {
-      "bytes": 4350,
-      "path": "docs/nsc-ks-source-operator-majorant.md",
-      "sha256": "cc74f98429de477dd879934a324542df8e3e33614ca74ee2a12e7f26092d4f02"
-    },
-    {
-      "bytes": 2378,
-      "path": "docs/nsc-ks-spacetime-geometry-jets.md",
-      "sha256": "00c0cba7edaff54d50e1bead7c51ecca2e1a17ff59699c6a53838fbe65fc94bb"
-    },
-    {
-      "bytes": 4397,
-      "path": "docs/nsc-ks-spacetime-variation.md",
-      "sha256": "6dac75b209854e7d9c55ec6a5e2dcf06fc77c8aa16f7f082fd59876082d04cec"
-    },
-    {
-      "bytes": 2290,
-      "path": "docs/nsc-ks-streaming-trajectory.md",
-      "sha256": "4f9ac9f0b90df6cab4cd024c7b393d6f25dcacc3e646f6ae6bc44b4b0712aa39"
+      "sha256": "a985addfecfbfd81315cddda01d8bc297a6c143db4fe02c8f4c2fb0c94cc7701"
     },
     {
       "bytes": 1304,
@@ -2122,29 +3163,9 @@
       "sha256": "e7457d940fc53fe41a7e6ba9b222bf17984ebd748bab3f6ec046c306b1718c41"
     },
     {
-      "bytes": 1795,
+      "bytes": 2931,
       "path": "docs/nsc-ks-trajectory.md",
-      "sha256": "a00db30d734e898f5da80a9183722c946c8d4fd37196ec5e4517657b28273863"
-    },
-    {
-      "bytes": 1546,
-      "path": "docs/nsc-ks-uniform-axial-geometry.md",
-      "sha256": "ac9e0620f64988d74093d621a445678680992f07fe7624424b14c5d6d69ff402"
-    },
-    {
-      "bytes": 1485,
-      "path": "docs/nsc-ks-upstream-error.md",
-      "sha256": "3829b53624e6e85624d2ebfb233068ee06c8b936e40d32426089f38752cdff86"
-    },
-    {
-      "bytes": 4223,
-      "path": "docs/nsc-ks-uv-minor-a3.md",
-      "sha256": "66aa14ab02b1ef934067507a54a78f627a0dcc94b5fcf38bf3fd41656f1d03b9"
-    },
-    {
-      "bytes": 5140,
-      "path": "docs/nsc-ks-uv-upstream-invariance.md",
-      "sha256": "907ad2c759c7af1015a3e10e916073ddd6b7a1487a746183b602bf8842379f7e"
+      "sha256": "be5814a5ebf05dc39e4d8d121813f8f7cc1ae9206344142f1a3bf6fce8800fa3"
     },
     {
       "bytes": 5064,
@@ -2157,29 +3178,24 @@
       "sha256": "39c64efa9896a2d29ad07e8c1851ecf1bfe377305622eea8603ae828227d4385"
     },
     {
-      "bytes": 5462,
-      "path": "docs/nsc-lll-geometric-history.md",
-      "sha256": "2e2047f589db787f1ffde0d0dcabed9885f6fad2575bbd40952cb246cc67a258"
-    },
-    {
       "bytes": 1425,
       "path": "docs/nsc-local-cf4-response.md",
       "sha256": "15241a1a44122a2e8339e44d956b85f9db369b720b8f235c2ec50f4e199f7c71"
     },
     {
-      "bytes": 7632,
+      "bytes": 7636,
       "path": "docs/nsc-local-history-newton.md",
-      "sha256": "7323d29019f36c15a4b5b2b8e2a46d4b5e8092f0a0dc789c93e1f3efbfec0ec7"
+      "sha256": "19e2dd3ff43d0b0db03ae100fabb934117cc574d703cc0e374d7890a5ee3aad2"
     },
     {
-      "bytes": 3974,
+      "bytes": 5041,
       "path": "docs/nsc-local-incoming-constraints.md",
-      "sha256": "9e6dfbe790e3706db09d03f759aab1da665826b487b811ea82c547ef40ca6c8b"
+      "sha256": "9f1f72c739e81fb259595da2dbddc482ca20da3326d79a794618628a2ee4ea52"
     },
     {
-      "bytes": 2693,
+      "bytes": 3324,
       "path": "docs/nsc-local-incoming-family.md",
-      "sha256": "260e8d8be13404b84e337fdc02dc8c2dec526e638ca4373a738d3b5895e49130"
+      "sha256": "bab5a8c02ce6d38fb432f57d5af9d6d1c6a1b065aa16925fdfc97b61d7d59b8f"
     },
     {
       "bytes": 1042,
@@ -2252,9 +3268,9 @@
       "sha256": "bd7abcfa97b619d6e628daba878fb7f4f41244e95b3b05c4fe44c9a6e25173d1"
     },
     {
-      "bytes": 6399,
+      "bytes": 9282,
       "path": "docs/nsc-local-observer-correspondence.md",
-      "sha256": "03851479bfa8161b6d0e53076c584606602530a7e7f3551f0f2534023664bed3"
+      "sha256": "3f9ffedb0cb0296122f0b2ce3c4491279f3922e8a1631b1b4c7862e2a0cd4051"
     },
     {
       "bytes": 2354,
@@ -2267,44 +3283,9 @@
       "sha256": "d95efce5b4f566ceb4a5a1b477b833a83a45d244447339e3108af021ee6c18dd"
     },
     {
-      "bytes": 2710,
-      "path": "docs/nsc-local-transfer-bound.md",
-      "sha256": "6057589d42b8e540adb72174dd91548c85c1f9aeffd5a09203b6ca240cef7c05"
-    },
-    {
-      "bytes": 4039,
+      "bytes": 4059,
       "path": "docs/nsc-lorentzian-transport.md",
-      "sha256": "a81cdcfe4766f578fb6062c3b3bd73ef5bc8cb14e09ced89a8faa51f07df570c"
-    },
-    {
-      "bytes": 6858,
-      "path": "docs/nsc-magnetic-light-restoration.md",
-      "sha256": "7ad171b45959c15eb103cbeb753421d6742bc8bc74af9ebd8d0c33e84a0a69c4"
-    },
-    {
-      "bytes": 5617,
-      "path": "docs/nsc-massive-jost-mixed-transport.md",
-      "sha256": "435376cd4eea5c2dba86ed0cfeb55d0d7ea22830d688ba58d0cef4abc18e3588"
-    },
-    {
-      "bytes": 5311,
-      "path": "docs/nsc-massive-jost-phase-bound.md",
-      "sha256": "25c3f82d5bc09f2dbea3052e2ef6e92729bcbfbed6e8475e9272071e953a4778"
-    },
-    {
-      "bytes": 6290,
-      "path": "docs/nsc-massive-jost-transport-bound.md",
-      "sha256": "4239ed8b1a2435dba1706061bfc8c69cc3888d0102e859a0f161eea9eab9a6fc"
-    },
-    {
-      "bytes": 7085,
-      "path": "docs/nsc-massive-signed-preparation.md",
-      "sha256": "a0ee632611c36431667ff4f1b9e334809f26eb46cca292d72ddf25e7216bace1"
-    },
-    {
-      "bytes": 10741,
-      "path": "docs/nsc-massless-reference.md",
-      "sha256": "c15261ccf8eef389c4b328b8b8562b270aa329acb41f25b1300f371a921a50e6"
+      "sha256": "71d89221c176ffcb9d5386e362ebb930f36de66b856a55bf188388fdb5c4969b"
     },
     {
       "bytes": 2535,
@@ -2312,24 +3293,9 @@
       "sha256": "bf598f4a62b0f9f14f18ba0c9257583889aca1cefbaf1aec71a056cd4aad20af"
     },
     {
-      "bytes": 15106,
-      "path": "docs/nsc-measure-normalization.md",
-      "sha256": "649a4cb1a1bb44e134432062b576f840dee17068592d23a0c324e44503d16e2d"
-    },
-    {
-      "bytes": 6347,
-      "path": "docs/nsc-metric-horizon-frame.md",
-      "sha256": "9787df3f4a845f3107cefe219006de9e7b2de27cf89e25107ec3c22097244f25"
-    },
-    {
       "bytes": 5689,
       "path": "docs/nsc-middle-source-coverage.md",
       "sha256": "39e71fc113794a000efacd35c594f70143ed713f0fa5639c88587048541b58c4"
-    },
-    {
-      "bytes": 2805,
-      "path": "docs/nsc-mmp-embedding.md",
-      "sha256": "1411dd5deb8424b8d089b9a0e6ebed88a1656733c6575a482c437b7f1b3fe0ff"
     },
     {
       "bytes": 2501,
@@ -2337,9 +3303,9 @@
       "sha256": "9f61a81f0000b4a25289a12b7e753de3bcbb9138cc401d649f289dc0a54c2dc1"
     },
     {
-      "bytes": 3756,
+      "bytes": 10116,
       "path": "docs/nsc-mode-resolved-cauchy-state.md",
-      "sha256": "877fe100b399d2a0493d9ee9fe28a02df5e087a461e2ac19b9819275b2df4ec9"
+      "sha256": "556404448a7769e8987e8fd161bc765f596d7a619cf66fb48b7d42a0eaf6b22c"
     },
     {
       "bytes": 1862,
@@ -2347,24 +3313,19 @@
       "sha256": "8c2d4692e183f054115105335504514dd149ba1ca5d3b14b4984f04df476ec44"
     },
     {
-      "bytes": 20768,
+      "bytes": 20728,
       "path": "docs/nsc-nested-parent-child.md",
-      "sha256": "b09ef32e295e94452794f29b2bbb0683a8b79a8bbdb19d846f20f13be49a9b26"
+      "sha256": "0221dcce25e79f3a860c5df79d2fa6a5daae2834e72e9686759605068c074482"
     },
     {
-      "bytes": 7619,
+      "bytes": 14125,
       "path": "docs/nsc-nested-qualities.md",
-      "sha256": "1f78f700d3c2a36a49c654922e6f668bf1dbb5f37c00908be898a999445b2d3d"
+      "sha256": "e8f363d4b5a2d5202649a1fcb187dbd2fd7bf0c698659cfe741a6e3814f94b41"
     },
     {
-      "bytes": 3625,
-      "path": "docs/nsc-nonlinear-ks-source.md",
-      "sha256": "3380ee7cff10e8120ec17b985479fd19c00c15a608eb756dd244ade97971bd82"
-    },
-    {
-      "bytes": 8842,
-      "path": "docs/nsc-normalization-flow.md",
-      "sha256": "eb3161e6ef39df27d9f56b9eb7faa87cb129dde2dd12c06d15fc10a9f4115959"
+      "bytes": 3700,
+      "path": "docs/nsc-normalized-histories.md",
+      "sha256": "6b5126f7bf9b2579352423abfd6ed7fa965a09b3eeacc8ca7c0dcff3b5f3e7e3"
     },
     {
       "bytes": 11598,
@@ -2372,54 +3333,34 @@
       "sha256": "a812fae995ff009edbeb325f10dfa275253cb2ca0fe4bd6f241bc59a7b3a289b"
     },
     {
-      "bytes": 8694,
+      "bytes": 10418,
       "path": "docs/nsc-observational-targets.md",
-      "sha256": "1f71ff4360d034abde3534682f28d7a334c68cf9a5af73da707e3660b9148d3c"
+      "sha256": "13d281a8452fa2bcef7f55ccf4940197b2bd9aa24546113eb2168c6fd21fa019"
     },
     {
-      "bytes": 5624,
-      "path": "docs/nsc-paper-coverage-audit.md",
-      "sha256": "a01a988238135e89910eadbf9618b7de84ee21a83ede969184c612f5693d639f"
-    },
-    {
-      "bytes": 7097,
+      "bytes": 10268,
       "path": "docs/nsc-parent-backreaction-gate.md",
-      "sha256": "1df21df8dc18917eb2f2783836fe68cc5ea54f1206601cc091e92882545ebe0d"
+      "sha256": "7c2af80e05eede1d96a5da47dabd6121134dd2549c2eaf7f2fa4354a0257b877"
     },
     {
-      "bytes": 4530,
-      "path": "docs/nsc-pg-ctp-mode-jets.md",
-      "sha256": "daa2ca26c0de962cea191830ec8c5376b57f1c1bd200995db34c9b4d67783152"
-    },
-    {
-      "bytes": 5132,
-      "path": "docs/nsc-pg-group13-covariance.md",
-      "sha256": "9f3640822238ef9c552d4d75909ab85b4fcdedbc12622a0cbed11cb314525158"
-    },
-    {
-      "bytes": 4016,
-      "path": "docs/nsc-pg-high-energy-inputs.md",
-      "sha256": "858c20d69ed3913116b6983ccbf19aee7e63917906b9759c434140c64f62408f"
-    },
-    {
-      "bytes": 4497,
+      "bytes": 6906,
       "path": "docs/nsc-pg-ks-metric-pullback.md",
-      "sha256": "397d44e013cd939493538f1b8fce8d0c709560c1d0a944be5f04d40a3e50669b"
+      "sha256": "f8c2cb2bc91ea655bec984562bb0180eb0e0b8b25518678609355bd9bf934092"
     },
     {
-      "bytes": 6324,
+      "bytes": 6333,
       "path": "docs/nsc-pg-lll-preparation.md",
-      "sha256": "14d3fde7de952eb3f747d47a19495a5cac9fe66a01672f9eabc580195b8908d1"
+      "sha256": "483dcec256a5d7e7c9952ed6a884d27f3ec1babe99ffeb0777020426d4e3dff6"
     },
     {
-      "bytes": 11820,
+      "bytes": 11840,
       "path": "docs/nsc-pg-massive-mode-resolution.md",
-      "sha256": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a"
+      "sha256": "3ef9bd82a6e769cf846e12b59167d7b6014e7559c8203728d3577a8041396619"
     },
     {
-      "bytes": 7041,
+      "bytes": 9255,
       "path": "docs/nsc-pg-retained-covariance.md",
-      "sha256": "43c87090e85246aee1802b324f31d70e76e91b4df2e6cc90da7b85c54fa0c04a"
+      "sha256": "85b7384ca69ee94e04e65b110e29eeee070845dd519db1476e7ae398b2a9116e"
     },
     {
       "bytes": 13261,
@@ -2427,19 +3368,9 @@
       "sha256": "111800dd3fbcec40bee9459274c7c374e0aa37b5e8e6463b7c9a2ebd37b1c0a7"
     },
     {
-      "bytes": 3100,
-      "path": "docs/nsc-pg-retained-subgap.md",
-      "sha256": "4e0eab72119fff6b5b2a16b3267333a18d891fd0b365131fb56e4e9f2863518f"
-    },
-    {
-      "bytes": 2437,
-      "path": "docs/nsc-pg-retained-tail.md",
-      "sha256": "a87ecc8f96744f5fe9f73f938633c9149abbf86ea31b3eee94d2115cde9f9eba"
-    },
-    {
-      "bytes": 4117,
+      "bytes": 5092,
       "path": "docs/nsc-pg-spectral-mode-recovery.md",
-      "sha256": "2c2985d0a47425f4ace43bdb428aaae11671eec8903ec34689e3a67c9bb26297"
+      "sha256": "1ae33f037affe28854d0b323055556a8ec35a21c45e749a2e83d5848d02eba2a"
     },
     {
       "bytes": 11789,
@@ -2447,9 +3378,9 @@
       "sha256": "176cc1696cc4a7a36f81b89fc940921b959c451ba0d643262da358e7c4db1a2f"
     },
     {
-      "bytes": 5026,
+      "bytes": 6000,
       "path": "docs/nsc-pg-threshold-projection.md",
-      "sha256": "e4d2dc9eb62d692cba3a41b54ddb39dd5fea624f38602296899a317fa3b0bdbe"
+      "sha256": "3c3f16bfc08ea93999d3d14b67313ad513f6551868778a0d4f193663d6e28e08"
     },
     {
       "bytes": 1793,
@@ -2457,24 +3388,14 @@
       "sha256": "45a71d5c678a1d5531dc3a5715b98c47c8088b28a61777d4bb6f61c67a4320d4"
     },
     {
-      "bytes": 7962,
-      "path": "docs/nsc-plateau-conditions.md",
-      "sha256": "1bb8ea45e35ec25c374f2ffdd8de5b67b85ff7202a2d684769c4a93e35b02398"
-    },
-    {
-      "bytes": 3660,
+      "bytes": 5147,
       "path": "docs/nsc-preparation-domain-decision.md",
-      "sha256": "875dea47881b2f858ee8aea5d8153957c0a675c3042f4d1199376e6e258204ff"
+      "sha256": "84063a0d6a4977ca5d23b871144547c88122db6b97777ed9c24465ac43f4b604"
     },
     {
-      "bytes": 2547,
-      "path": "docs/nsc-prior-art-closure-table.md",
-      "sha256": "a373bb2802a463627d689060cb0426aab85dec4002fcdc37073a51874a32118c"
-    },
-    {
-      "bytes": 19058,
+      "bytes": 21903,
       "path": "docs/nsc-prior-art-reuse.md",
-      "sha256": "200937275261824e8784f45c98aba03551681086fcde9f69d6c9961773f96631"
+      "sha256": "2f93050c10701d42de182100e4c2a28ae34674a86670cd0245a9f7d21c369e40"
     },
     {
       "bytes": 2468,
@@ -2482,34 +3403,9 @@
       "sha256": "c3b1fd086b57a37029a3da9fc243b6c5b5e21ceb10377d52b3869489c59cee01"
     },
     {
-      "bytes": 3360,
-      "path": "docs/nsc-quantum-measure-reuse.md",
-      "sha256": "7a5bc408411d5bc73541fbdac72e7f687c8db4fb1c7040ad1ecc94a471784dd4"
-    },
-    {
       "bytes": 2394,
       "path": "docs/nsc-radial-spectrum.md",
       "sha256": "44f6e7389bb29238145bddd875dc1ee2481ce02824a328dee0a76075fc2b3920"
-    },
-    {
-      "bytes": 8031,
-      "path": "docs/nsc-radius-transfer-sums.md",
-      "sha256": "38e53ec82a30a6f6a222143de86211b42fd760ceb879ad95e3d1449e0f82b406"
-    },
-    {
-      "bytes": 2238,
-      "path": "docs/nsc-recursive-source-binding.md",
-      "sha256": "04eeceef7b4488b4a5d94f59b5a1dc7dd56b00567d27e3fc5aed4810f6b58b05"
-    },
-    {
-      "bytes": 4656,
-      "path": "docs/nsc-reference-band-action.md",
-      "sha256": "1b0f485795806f3b61a6b439b9ce46d55beadca2b0071ba2f390ae0aeeaf3004"
-    },
-    {
-      "bytes": 5644,
-      "path": "docs/nsc-reference-band-bulk.md",
-      "sha256": "77741a7aed69cd505851ac84ce2eeac9ecfefa2c74dc9c1f3fb542c78bcd32ff"
     },
     {
       "bytes": 9897,
@@ -2537,11 +3433,6 @@
       "sha256": "9eceb09e6c125073650afb1f4481122dc6044e92222d969b14608056adc96b93"
     },
     {
-      "bytes": 3974,
-      "path": "docs/nsc-relational-vacuum-normalization.md",
-      "sha256": "3ebc492c443f6db8a4f4f63789368de3c5d3e5c643829b43c2a5a06f03f489cf"
-    },
-    {
       "bytes": 4249,
       "path": "docs/nsc-release-0.4.0.md",
       "sha256": "a1219f74a992dd989af048c91a1eb082d6faec6d3773f767bcbc6f943db9980c"
@@ -2557,14 +3448,9 @@
       "sha256": "c4b39fd250c952db2460fc8013d5a09ee4eee8269eb6565e022603107a301ea6"
     },
     {
-      "bytes": 6697,
-      "path": "docs/nsc-response-matching.md",
-      "sha256": "90dabe580da596f709cd79876bd5f621c768aefcd12c4b4c6e2a3ecd6d045e99"
-    },
-    {
-      "bytes": 6528,
+      "bytes": 6533,
       "path": "docs/nsc-retarded-compatible-preparation.md",
-      "sha256": "6970d00ef8008b9afa66aac6b4b4c4bc6fc05713de84eb6df37058b3d7108eb8"
+      "sha256": "18d1b67677a7fbc0124ba6ca4da6635ed465f666bbc6cc0c08085124e8552479"
     },
     {
       "bytes": 7167,
@@ -2572,24 +3458,9 @@
       "sha256": "4a25f6b7b5285ae564ca5a2f1b541dcfde073329230ef7212b7619e7b95ed3da"
     },
     {
-      "bytes": 6820,
-      "path": "docs/nsc-retarded-diagonal-sign-bound.md",
-      "sha256": "9956a2d329cf7748a1f9393fb7b1470ffbeab605a231a185415d7b72f4d68a57"
-    },
-    {
-      "bytes": 3765,
+      "bytes": 5187,
       "path": "docs/nsc-retarded-fixed-c0-certificate.md",
-      "sha256": "9347ba7e76fe215b53289bde75da8583b2d2bfbeeac110c5d229f3924a0fa263"
-    },
-    {
-      "bytes": 4151,
-      "path": "docs/nsc-retarded-fourier-response.md",
-      "sha256": "aa6832adac39c25bc57f83fe7277af9acef1397749d55f3c387d003f626afadd"
-    },
-    {
-      "bytes": 3284,
-      "path": "docs/nsc-retarded-radial-response.md",
-      "sha256": "92dabba89e05cd2720c185cbf784e4d67b1526fcb8fe9da35968b140dcc1a59f"
+      "sha256": "869701f33d999061497ad3a48857940dfc7467d63ce9aeacd4628bf4a1ed28ba"
     },
     {
       "bytes": 3766,
@@ -2607,19 +3478,9 @@
       "sha256": "99349f9a890d6de24ba4fdc0a1af0bea788bb74a6dc9fbaa3ac8974cb2357665"
     },
     {
-      "bytes": 3527,
-      "path": "docs/nsc-rn-below-horizon.md",
-      "sha256": "8c90a0b0397eb741251c60e4d84f53f5ade5ba6cb85b61064b8dc6e6a531f6a7"
-    },
-    {
       "bytes": 4704,
       "path": "docs/nsc-rn-causal-order.md",
       "sha256": "4c623e33688865d42d635420bd2500f1088abb8b684f44d2c51a30d002be7d4c"
-    },
-    {
-      "bytes": 16385,
-      "path": "docs/nsc-rn-charged-source.md",
-      "sha256": "bf8fdbaba935a90bf965bedc918b85dfbf2609b951d9b374f452f82379ce1c14"
     },
     {
       "bytes": 3292,
@@ -2632,9 +3493,9 @@
       "sha256": "198f5cddda5b72580b75024c4a9b300c62a2f34c39a845d4d5bcefcd00fd9161"
     },
     {
-      "bytes": 5209,
+      "bytes": 6730,
       "path": "docs/nsc-rn-cone-map.md",
-      "sha256": "e68ca5c714a04d6fc2cb05df2df60cd380f269da9ae752df06e70ac922d21e5c"
+      "sha256": "55d8e855efdf719c36582b482bebaf5f2da148e5e59188a2ab8bd66c912870ae"
     },
     {
       "bytes": 4278,
@@ -2657,9 +3518,9 @@
       "sha256": "a6a1b339c66785f843430a06350efde4ae57b0689847ddc1643d142c5fea45f0"
     },
     {
-      "bytes": 2817,
+      "bytes": 4101,
       "path": "docs/nsc-rn-excision-domain.md",
-      "sha256": "30bc785d9874b4a96d3b569250d2f652333f3070e6f389174af115bfac868f03"
+      "sha256": "f8d01506aa5cca0fee3e24127b1d123185663da3d2102e3d02f74a0a63e8f5ec"
     },
     {
       "bytes": 4630,
@@ -2677,14 +3538,14 @@
       "sha256": "7b9dcf70908d147632a5ac45a420fcd89dff9852f641ddf91608cf9ae523be10"
     },
     {
-      "bytes": 4763,
+      "bytes": 5978,
       "path": "docs/nsc-rn-geometry-map.md",
-      "sha256": "110a67efb4f39441e634fd2381e6f28ecc8f6ecf4117a807f5fb21e51159803b"
+      "sha256": "d4797e383e42918b1b103350a80f9839edfb8144ff176a88c299324694ed79e7"
     },
     {
-      "bytes": 6142,
+      "bytes": 6085,
       "path": "docs/nsc-rn-gradient-bubble.md",
-      "sha256": "cc73f4697a780fbfe9ced61588c826adff3829c624db287cfa2cf5356a303012"
+      "sha256": "76ea74842f15faa7adac04cb488d30c62a996221600273d3f897ce5de642ffbf"
     },
     {
       "bytes": 3705,
@@ -2692,19 +3553,9 @@
       "sha256": "64f7fad9860dc5e1fe348120a13d9d3490d5964eb2823015620dce9a266b94f5"
     },
     {
-      "bytes": 3356,
-      "path": "docs/nsc-rn-inner-horizon-fix.md",
-      "sha256": "ac6ccf5af3d0cc641a91352b21a62e449d1ba9eaa4e46a70802b5cfee0124917"
-    },
-    {
       "bytes": 6391,
       "path": "docs/nsc-rn-inner-packet.md",
       "sha256": "b6091798afdee050dbe51d073ed055094915944ec596730ce72b46021a919061"
-    },
-    {
-      "bytes": 3660,
-      "path": "docs/nsc-rn-inward-march.md",
-      "sha256": "ad2c1a5a267b12410d079ab6f408521ac5d2e23036d6e86898bdeaed1cd57aee"
     },
     {
       "bytes": 6828,
@@ -2732,11 +3583,6 @@
       "sha256": "7b79727cf896764039706a999ea3d8af154fff5c18e82b2efbe4a616b5603ea7"
     },
     {
-      "bytes": 8496,
-      "path": "docs/nsc-rn-mmp-source-study.md",
-      "sha256": "c1f148a2a700ab1dd7cd52057900972a1c9588b5816f5e51bb4673b99a18ef27"
-    },
-    {
       "bytes": 5702,
       "path": "docs/nsc-rn-narrow-failure.md",
       "sha256": "24e3410d3188798fcb99d9750bb9a89a34a577adc4f9f37cd64280b511697789"
@@ -2750,16 +3596,6 @@
       "bytes": 5853,
       "path": "docs/nsc-rn-neutral-source.md",
       "sha256": "a90aae97a9be79c79cdfb62a4ed99a69a4e1481fae00512f7e23d721249ca263"
-    },
-    {
-      "bytes": 6043,
-      "path": "docs/nsc-rn-observer-clock.md",
-      "sha256": "bcf978293429889d2182b966e220cba49cf184e50fe484759842f0461725755d"
-    },
-    {
-      "bytes": 3070,
-      "path": "docs/nsc-rn-one-dimension.md",
-      "sha256": "0fe7766246e3f7cd9ea09c184d4d347b84a55d31692dc6dceff198951e224168"
     },
     {
       "bytes": 4935,
@@ -2782,14 +3618,9 @@
       "sha256": "afc5b7729c31967308b8e7a83f6d72e42443979c96aba1e97af95baec0b10283"
     },
     {
-      "bytes": 7839,
+      "bytes": 10494,
       "path": "docs/nsc-rn-pg-action.md",
-      "sha256": "51ba5ded0a7f2bc2ac124ed0d43e1d595b864c0771dc5eb76981101207d4a283"
-    },
-    {
-      "bytes": 3295,
-      "path": "docs/nsc-rn-pole-structure.md",
-      "sha256": "e7cc0ca0e9f0bbf94bb7c62d12f719b477e26a3465dfebce99e2491ac62c4f7f"
+      "sha256": "d8ca278963a66e676316112b69ead3902e58aa9409bc08ec9a52148a522af32b"
     },
     {
       "bytes": 5182,
@@ -2822,11 +3653,6 @@
       "sha256": "d6793cb018350e09e661ea513455c4600f52f34a7a4ad0d18346a3e7f412a7a4"
     },
     {
-      "bytes": 2938,
-      "path": "docs/nsc-rn-two-ends.md",
-      "sha256": "ae9e423df2a51bf97a9651449b19acee446543141d96f25e60b61b531f9a2fd8"
-    },
-    {
       "bytes": 2694,
       "path": "docs/nsc-rn-what-the-child-is.md",
       "sha256": "e80c84e89abd030866f264875fd67ce557eab8a950bdfc9bd5fd9649fd13d76f"
@@ -2837,69 +3663,14 @@
       "sha256": "abafdd26d764160811070471044f269cd3e9f00cbdbae00c9b8db081b7bba144"
     },
     {
-      "bytes": 3870,
-      "path": "docs/nsc-scale-binding.md",
-      "sha256": "6e5e27f49a7577a6c7b67275fc6a42f2ee63d529512ba6c6ab6b48b087334dbe"
-    },
-    {
-      "bytes": 3592,
-      "path": "docs/nsc-scaled-reference-projector.md",
-      "sha256": "67c228ac6f0cb6003eef502f7f8466921a51ebb0a5cae018a6da36216bee8391"
-    },
-    {
-      "bytes": 5911,
-      "path": "docs/nsc-self-sourcing-progress.md",
-      "sha256": "4417917a63ad6b33310c69205fdf6f3cdc326275ea0bf6d96312312e36c64800"
-    },
-    {
-      "bytes": 8166,
-      "path": "docs/nsc-shape-response.md",
-      "sha256": "5eae1d3cc04ee2567f817466eed6f1ff484937f05ca9b5b4648e38a172f63a33"
-    },
-    {
-      "bytes": 5325,
+      "bytes": 9076,
       "path": "docs/nsc-smooth-geometry.md",
-      "sha256": "e1e683706d487b78e40b596137079d42511f274601f6648ec2c7a5fe6973b383"
+      "sha256": "676f871dee5b8820726d6a2727e6229abe9eb2d460be325ad4ccfe521cf71419"
     },
     {
-      "bytes": 4546,
-      "path": "docs/nsc-smooth-seam-variation.md",
-      "sha256": "5eb9f197b6a499069a7502a8b6ac5d9ac20b87b1512fcfbd2f06d4d82926c84a"
-    },
-    {
-      "bytes": 7624,
-      "path": "docs/nsc-source-cutoff-bridge.md",
-      "sha256": "4464afb826d57314657771d49d3ae5b6515fe4a3cd7e03e6372383c0560a9a33"
-    },
-    {
-      "bytes": 2533,
-      "path": "docs/nsc-source-cutoff-unitary-control.md",
-      "sha256": "bedfdbdba790919c6f86260ea893afb2432988ef62569dcccc6d0d2cbb522ea7"
-    },
-    {
-      "bytes": 3568,
-      "path": "docs/nsc-source-occupation-enclosure.md",
-      "sha256": "e436274edc397bf8439ab5127b8648008405b634f258c9e830875d82c1e9fd21"
-    },
-    {
-      "bytes": 4379,
-      "path": "docs/nsc-source-tail-angular-parity.md",
-      "sha256": "8243f6e36c035a843709d1ce4642d471606b02cde0bdcb1d0d5692ef7b2299ad"
-    },
-    {
-      "bytes": 4255,
-      "path": "docs/nsc-spatial-reference-symbol.md",
-      "sha256": "7cbf8c529372f780af007c649fe8482e0c8554b6132648f622d1d532d55b3ac5"
-    },
-    {
-      "bytes": 8978,
-      "path": "docs/nsc-spectral-endpoint.md",
-      "sha256": "a55074de3f1fc2e625bb0259a5e2d53891969f9577882790254fdf4d9734ce8d"
-    },
-    {
-      "bytes": 9980,
+      "bytes": 14965,
       "path": "docs/nsc-spherical-action.md",
-      "sha256": "d5fd8471b44ac05eeed4cad608668e472714c50dd15e3770546e5613ff9ef292"
+      "sha256": "54de3613e2e661de679aec86a80b506873289150a307b6ae5b5bffa1dbb9e922"
     },
     {
       "bytes": 7962,
@@ -2947,19 +3718,9 @@
       "sha256": "abada2afd093acec1a1310185ea7706a74ec4c202b52673626b3d82726d19526"
     },
     {
-      "bytes": 7695,
-      "path": "docs/nsc-spherical-feedback-action.md",
-      "sha256": "cfb3c02b0e5c683d6319e35b6910a4d7ad5abb03e6fe42435e02461dac52fce2"
-    },
-    {
       "bytes": 12475,
       "path": "docs/nsc-spherical-galerkin-coupling.md",
       "sha256": "42e552d03ab2da6be867201594c2924383d351691367d8b09011ebe678f2e5ea"
-    },
-    {
-      "bytes": 3759,
-      "path": "docs/nsc-spherical-local-history.md",
-      "sha256": "fed37dec8ae659ff5c2b512c0c3d503a2e147c4e2532f391b295c8387175ce75"
     },
     {
       "bytes": 12325,
@@ -2967,24 +3728,9 @@
       "sha256": "ec78892ad6674bc818f5964ba306c276b6c0c3fddf282e7df7730a94484d23f0"
     },
     {
-      "bytes": 8611,
-      "path": "docs/nsc-state-regulator.md",
-      "sha256": "8aca94f35304d5e2d16cd9f4111d85f8ceba939164d8f68f41a54607b10ba528"
-    },
-    {
-      "bytes": 7159,
+      "bytes": 7188,
       "path": "docs/nsc-storage.md",
-      "sha256": "1985c325b96d5556c4cd02431fdc0496033df2d0c3e7a3b0de69d58b4ce192af"
-    },
-    {
-      "bytes": 2436,
-      "path": "docs/nsc-subgap-covariance-matrix.md",
-      "sha256": "0cd3ef6bd8d9373d7521514e8319e556e03da436875557e830694535bb4ee6eb"
-    },
-    {
-      "bytes": 3361,
-      "path": "docs/nsc-subgap-history-response.md",
-      "sha256": "8acc50b42e01a45bea8ce39d0ce8c06842c564a60081f76463f6495055777428"
+      "sha256": "0b9c181d9dd390b1e4266d2e773b324d397bd45bfc54a77fa9968a23020a2511"
     },
     {
       "bytes": 3793,
@@ -2992,34 +3738,14 @@
       "sha256": "edefbb28b08858b5388758dbf565276a1ae0f0bc52e0558663a583a9a90a8748"
     },
     {
-      "bytes": 6957,
-      "path": "docs/nsc-subgap-source-covariance.md",
-      "sha256": "ece42b1d9c9330355f89c955de376048a70151fe7092a32a1ab0763c23e2dbe5"
-    },
-    {
-      "bytes": 3179,
-      "path": "docs/nsc-subgap-upstream-covariance.md",
-      "sha256": "97b2aaf199621e7d0985310952e8e5a10c6f41929288db55509ae6577203836d"
-    },
-    {
-      "bytes": 5472,
+      "bytes": 5475,
       "path": "docs/nsc-tail-limit.md",
-      "sha256": "d54c4ced5c3e52e8d4f47654621a47b2b64ffe6d5a3ae4808afea950cfcf1e9b"
+      "sha256": "6ca57f99cd0da09b01c992d8c571e9d4992f09b74a5e4c762cd5633c53346016"
     },
     {
       "bytes": 2016,
       "path": "docs/nsc-threshold-response.md",
       "sha256": "6e24744f080d3063600ed913b87372393890598bf9693a6fd96d0b322fe60a2d"
-    },
-    {
-      "bytes": 1749,
-      "path": "docs/nsc-threshold18-integration.md",
-      "sha256": "cb40403a016d545aa9bace7d83f3472cc1bc6faead1c039001f7c30013a6ce13"
-    },
-    {
-      "bytes": 3785,
-      "path": "docs/nsc-tilted-landau-interface.md",
-      "sha256": "1ed1829891ec42d5d9d12a7932d76a8e16ae422e8be59f38ae28c19cfc6dbb2f"
     },
     {
       "bytes": 6704,
@@ -3042,34 +3768,14 @@
       "sha256": "7b3d929f00d7c2238bef4d864b43904b2484e48f848a4da63b6473b7579b3dff"
     },
     {
-      "bytes": 6192,
-      "path": "docs/nsc-transmitting-cross-resolvent.md",
-      "sha256": "a4f8df55c341e6502c45dc32e422f4378f6e5eff2926bdadd8388b57445150a3"
-    },
-    {
-      "bytes": 6857,
-      "path": "docs/nsc-transmitting-ctp-resolvent.md",
-      "sha256": "af9333484ae7fe43074c59bcc1c694b7dcd4af091285aa0294f612839a5832c3"
-    },
-    {
-      "bytes": 3095,
-      "path": "docs/nsc-transmitting-ctp-variation.md",
-      "sha256": "be1ffb026d35c8e7c68219644031bc1b6af346602f45d70526b5b5ef7229fe5a"
-    },
-    {
-      "bytes": 6124,
+      "bytes": 7562,
       "path": "docs/nsc-transmitting-dirac-domain.md",
-      "sha256": "bb06e937fe7946488b5826dd3cb2494fdea0849baa339196a8df27378e2d1d2e"
+      "sha256": "60d7ffa3713537acf92add38a0028bb4bd5a5e6e8fea0f579b2cdd4546358158"
     },
     {
-      "bytes": 4239,
-      "path": "docs/nsc-transmitting-history-jets.md",
-      "sha256": "50f8997457642aba428afa87bf515aee4597be7d5e5c0a2da45e975a9bb5bab5"
-    },
-    {
-      "bytes": 4241,
+      "bytes": 7077,
       "path": "docs/nsc-transmitting-history-modes.md",
-      "sha256": "8ead7261ab7be55876ee1ea64e8d1657a956bba3074cb70836c613aaacfd5517"
+      "sha256": "a697dc03d72a7279d922cf8568fb92438693a1af790af89eda7e943852ae92b5"
     },
     {
       "bytes": 1882,
@@ -3077,34 +3783,19 @@
       "sha256": "9044470ebd015074823881ff6e65f45ead508e225d8cb48a08ef760a375eb50b"
     },
     {
-      "bytes": 2375,
-      "path": "docs/nsc-transmitting-metric-pullback.md",
-      "sha256": "a7bb8784959d79ba176faf1f41128885b43bb0e1e96ceaf7864d10caa81b0e72"
-    },
-    {
       "bytes": 5807,
       "path": "docs/nsc-two-room-comparison.md",
       "sha256": "4b011a5b8df938b06de45438d3a7e7ecd173e36fd09bf8cbd1ec40e5ea1cf455"
     },
     {
-      "bytes": 9148,
+      "bytes": 9180,
       "path": "docs/nsc-unruh-state.md",
-      "sha256": "ca6e21152528c2be44b3a8c4fdac9d69014e8864c746cf1f19eb735ec361ac4b"
-    },
-    {
-      "bytes": 6377,
-      "path": "docs/nsc-upstream-compensation-rank.md",
-      "sha256": "fda14da8ec2130f435a65bf66c7f3e9f6b413ec6678b1e4b16f02fbcbb6ec466"
+      "sha256": "501aa4aa787d08fc0361475383d4976abf52420b950f8facd5beff3b54e69f8f"
     },
     {
       "bytes": 4151,
       "path": "docs/nsc-upstream-compensator.md",
       "sha256": "cd713c2876208e70fde57e3bf2095bd00797756f13e765d793756abd1b000586"
-    },
-    {
-      "bytes": 6898,
-      "path": "docs/nsc-upstream-metric-compensation.md",
-      "sha256": "cb7f7904846574f6797630cb577c4692a2cdd05f261fa324f14df370f6b14b71"
     },
     {
       "bytes": 8488,
@@ -3117,69 +3808,14 @@
       "sha256": "ee3172857330fd161634236e75ec2252e583f79831240b57c57186b8a9a7d101"
     },
     {
-      "bytes": 8359,
-      "path": "docs/nsc-vacuum-matched-ctp.md",
-      "sha256": "5c8e0ab7246c07a56f40f63dc0e06a21271d3621c699ed4073ad9865fb0aa44d"
-    },
-    {
-      "bytes": 3617,
-      "path": "docs/nsc-vacuum-source-correction.md",
-      "sha256": "0d74dd4ef000f8a4c5c7d1c4aebf0055c85d0362c035d86a99f8c5f56f30f158"
-    },
-    {
-      "bytes": 6547,
-      "path": "docs/nsc-vacuum-source-remainder.md",
-      "sha256": "5a6ade8319e370443b9929cbfe6de91f794b52c741d1ea7548bece7e7a21fccb"
-    },
-    {
-      "bytes": 4802,
-      "path": "docs/nsc-vacuum-spinor-remainder.md",
-      "sha256": "f453c9d0e8427a7f845fc4163c559471584f693dd26c6da4e418d0039a510610"
-    },
-    {
-      "bytes": 8554,
+      "bytes": 8571,
       "path": "docs/nsc-vacuum-work.md",
-      "sha256": "cdbe33671bdbe4728cbb3dd614a79ac07d686f463bea7f3579b722d8e541f60b"
+      "sha256": "3038060a90e73be7af266a20213940c9c920ec6414fc74fec296acc9cd0b5779"
     },
     {
-      "bytes": 5432,
-      "path": "docs/nsc-warp-local-neck-source.md",
-      "sha256": "963a184bc1d998de455f473331ab8a9f2154547451bf35c572518dbd32ca0bb4"
-    },
-    {
-      "bytes": 10519,
-      "path": "docs/nsc-warped-source.md",
-      "sha256": "5e5ac433c2af3bc6f6a6433d9f50dfaa2c06b6c012a018a19bfd21f31e3c12dc"
-    },
-    {
-      "bytes": 5022,
-      "path": "docs/nsc-weyl-boundary-jets.md",
-      "sha256": "93342e305d00fe89b07928b40e426fc4aac4045dbd7369481b17ad6c9faa9422"
-    },
-    {
-      "bytes": 7785,
-      "path": "docs/nsc-weyl-cocycle.md",
-      "sha256": "c235fd2979d5cd7d2ad89c74611876174dbaab7cdec566f5884d2559e41619e4"
-    },
-    {
-      "bytes": 4245,
-      "path": "docs/nsc-weyl-commutator-remainder.md",
-      "sha256": "89489baf2290aaf32b1f544a28916430fdf2697bd821659d1f88877b733a6b0f"
-    },
-    {
-      "bytes": 3127,
+      "bytes": 5719,
       "path": "docs/nsc-weyl-endpoint-match.md",
-      "sha256": "e54da95d85688604a3842427839a6e5a899be66f514dc095d097acc11a59d4ca"
-    },
-    {
-      "bytes": 2549,
-      "path": "docs/nsc-weyl-integrated-moments.md",
-      "sha256": "7d2b96d074298af3b19bd43833b99680a10ab680e3c7a44908d94ad6ae4a292b"
-    },
-    {
-      "bytes": 2299,
-      "path": "docs/nsc-weyl-small-transfer-bound.md",
-      "sha256": "de1659122d849052bb43037c68ac094b2179746853ebb76aaa9882550959cb2e"
+      "sha256": "4cf58363ed9d1679da36b788d7ca9a66f9849011c3971281b11dcafe4ed3aa8a"
     },
     {
       "bytes": 13635,
@@ -3187,34 +3823,49 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 4418,
+      "bytes": 4642,
       "path": "docs/papers.md",
-      "sha256": "6b563e192767cb8bf2eaa6517c061b7d3cc50a4f6d4f9398b793b3ae7c01ca3f"
+      "sha256": "aac560b307ef07bd126ac5907b50f893dda84b0bf0f684eabb12a07690799379"
     },
     {
-      "bytes": 45836,
+      "bytes": 49313,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "a7018e5ebee148f66d679a573070ac50993677437daf59a1bc2faa6b58b545cb"
+      "sha256": "5929ccca47ef6feded8806c08725579b3d4df4a494e9a65319b0cc2b9f4e438e"
     },
     {
-      "bytes": 3653,
+      "bytes": 3356,
       "path": "docs/repository-consolidation.md",
-      "sha256": "3bf11e41feb6a597b94817ea01abd6384f0ce1c1873a4feb6853abc9c6a436d1"
+      "sha256": "6b95c1fcdc1fc95ae7aea3b1fc2be204fbb7a2e48da56ed1df5be4a3118cad57"
     },
     {
-      "bytes": 16009,
+      "bytes": 16967,
       "path": "docs/reproducing.md",
-      "sha256": "528a5287560fef6b87a48611f08d4965d30dce4a241a58c045c0456615e3de2a"
+      "sha256": "5f4925c0c3b8bd64b4cee7578a26005b4bb97019428a0c3fe9a9e3e10ea18c44"
     },
     {
-      "bytes": 27167,
+      "bytes": 26602,
       "path": "docs/research-index.md",
-      "sha256": "77dc639711b7522bf52e89910de5f52d6c208378afe80cd166a1f8c8a561bfaa"
+      "sha256": "6c1f3450ca3754868b4861ab4e6f73afd06da9b50426ae61b6c0b5b5e65df875"
     },
     {
-      "bytes": 17798,
+      "bytes": 18356,
       "path": "docs/research-inventory.md",
-      "sha256": "f21cf14c4279d44cb9223272f190dc389e3d0d09d547deee8cb82436c9f3d9e0"
+      "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
+    },
+    {
+      "bytes": 2068,
+      "path": "docs/rn-pg-wall.md",
+      "sha256": "4b14f965ab0cc0b211a5a2861bfb6f53fc0c84680e7ed9e7739e9e2bf790c4ca"
+    },
+    {
+      "bytes": 1126,
+      "path": "docs/schur-memory-or-inheritance.md",
+      "sha256": "8743646b5d3be82846fe206fb321025802b2234c297bf089d4911b7c21f48243"
+    },
+    {
+      "bytes": 6475,
+      "path": "docs/schur-memory.md",
+      "sha256": "6d693f5f9715b2402ca4b2158fbf41cc390fdc67e3114718b52d39d682d44252"
     },
     {
       "bytes": 537091,
@@ -3309,12 +3960,12 @@
     {
       "bytes": 3206,
       "path": "paper/catalog.json",
-      "sha256": "d130d6152a69d5dc2266e669f2ca9ba18908ce0583b466d5c933d48d31c5ab8d"
+      "sha256": "b257c42ef0b83eac7a6dbc041b29497285310db9d1f9ea4ce4acc7156d5e2791"
     },
     {
-      "bytes": 13005,
+      "bytes": 14294,
       "path": "paper/claim-bindings.json",
-      "sha256": "0e6a0cda60b4a1496a96456a9bfc227a2e3379c84ecb5c6406304eb68f5e5f3a"
+      "sha256": "d80714fdb8c6ddea2754e589181e43ca72461604e11f3bd55d70c635bcd4f54c"
     },
     {
       "bytes": 1094,
@@ -3509,7 +4160,7 @@
     {
       "bytes": 396,
       "path": "paper/metadata.json",
-      "sha256": "43137ec4c82eb2afdf03e42e553ef9fe256910cf9ff38bb8b399240d44c3940e"
+      "sha256": "b10a385adb9b0006350d50b705f56e1fd2401510b18378a68b886e030d732d96"
     },
     {
       "bytes": 29875,
@@ -3557,9 +4208,9 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 83251,
+      "bytes": 86199,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "3d325b1581d897981d117da2b7c02438d74b3f5ce6835b626912a2c7e571e389"
+      "sha256": "b7b517411b555cfae41d067d343b4d51103e0e668791fd6890b5631c3c319214"
     },
     {
       "bytes": 3113126,
@@ -3572,9 +4223,9 @@
       "sha256": "fe677c42489e9f2ac4fed3eab5fee969a9c12c25ea02fee713d0d8626ba18236"
     },
     {
-      "bytes": 1246,
+      "bytes": 1271,
       "path": "pyproject.toml",
-      "sha256": "285ad0cf5a28f6484106a8812e3e9085fa0f4f9b5f91dc57145fa1868e3212f6"
+      "sha256": "83d18e2f5e51285445449d01f173d8bd4f25982bc9565972a7491a27235ca044"
     },
     {
       "bytes": 540,
@@ -3584,17 +4235,17 @@
     {
       "bytes": 50,
       "path": "requirements-paper.txt",
-      "sha256": "a9340df85ec6c8b0d2efd98d895796f225d41edcf75f246ade6d15d35be6487d"
+      "sha256": "78bb5e95b2d947f75c972bf2be8bafe632d9a780c0847f09125614f87a8b1f27"
     },
     {
-      "bytes": 76,
+      "bytes": 96,
       "path": "requirements.txt",
-      "sha256": "57b0b76c31eda3845fde761b6507cf6fa254fba444e9b6f1c4e2d9ed026591f9"
+      "sha256": "448e9d009739839939d0ab5da8a68d0f3a99139bcb7b4bfc6f270552d8846d25"
     },
     {
-      "bytes": 16696,
+      "bytes": 16680,
       "path": "results/README.md",
-      "sha256": "3f5f321cc979f1f39618356e9080e6bd054bcb1f25bf2ba668aa04e4f3026a17"
+      "sha256": "e1883fc27c4815d8ce6d5c4586e0468d6dca68241996148410fc40ce3f211799"
     },
     {
       "bytes": 74558,
@@ -62862,9 +63513,9 @@
       "sha256": "0328d82e41c1b494956bdbdba76c13b6bfb64f3c7f6c4c2af13967ca29f584a1"
     },
     {
-      "bytes": 24751,
+      "bytes": 27307,
       "path": "scripts/build_geometry_overview.py",
-      "sha256": "069e991e69ac4832b31522a76078ad57abbe6349821ff84a29a2096bab0636a3"
+      "sha256": "6fbf763d53bccf0c7818b66624c95107502bcdc51fc517b6c3431f39929abcda"
     },
     {
       "bytes": 2814,
@@ -62874,12 +63525,12 @@
     {
       "bytes": 63431,
       "path": "scripts/build_paper.py",
-      "sha256": "210e9cb7d187c6fd7d4e9fbf7b5bf029078d74f7a99776ac2ef0dc4782f9b17e"
+      "sha256": "8276319efa2c3e9efbf9f3aa13dcd308a36cb0b7ce7a69a3502b81a9ecbbbff5"
     },
     {
-      "bytes": 5722,
+      "bytes": 10735,
       "path": "scripts/build_publication_provenance.py",
-      "sha256": "6a1b8b290d5bc9d6b4fc4cdc75cc0512229078d2bb192ee7bee134064a3d4127"
+      "sha256": "625c3d571e699f5a3ed8dc58ff8fff45215988dea12eea5307bb34ffea74514e"
     },
     {
       "bytes": 17236,
@@ -62892,9 +63543,9 @@
       "sha256": "1e2f5f6ad001cc699dd112084fc3530140639e6e92e243c93281919300cf125f"
     },
     {
-      "bytes": 8278,
+      "bytes": 9132,
       "path": "scripts/check_claim_bindings.py",
-      "sha256": "6906f39bb1c356303c111ff98ee83759598b8dc2bcae13fb5dbd43a2bf7c0cdd"
+      "sha256": "426625b832a48fdc791579b86598eba280f73cfcf6820882c8894d7e28851ff2"
     },
     {
       "bytes": 899,
@@ -62902,9 +63553,9 @@
       "sha256": "07b1aad24f1e42fad4957a6923ad93097013e9c66542ca5a042f7d8addd3ff8e"
     },
     {
-      "bytes": 4475,
+      "bytes": 4960,
       "path": "scripts/check_lab_snapshot.py",
-      "sha256": "e0ab352a2233be509750f384bfbd8fe674db71a910a9009347e82b27eb8ff4dd"
+      "sha256": "17af09966d5610f003111fe4a6a6fd68a24f40d14bab361c036130ce076362fd"
     },
     {
       "bytes": 13561,
@@ -62942,16 +63593,6 @@
       "sha256": "7275972984f9470d340c6ccb8809e45405c215775a65ec83125425a56ca5fcb1"
     },
     {
-      "bytes": 11556,
-      "path": "scripts/check_nsc_compact_boundary_action.py",
-      "sha256": "f19566143dc14a7da8144e3a4cfcb698f53b228a68f5ee08810f6ccb7576e505"
-    },
-    {
-      "bytes": 17014,
-      "path": "scripts/check_nsc_compact_casimir.py",
-      "sha256": "34ef3ca852b561093e544fc8b1c890347c280b1ccc0eea4329ced0f337c1c501"
-    },
-    {
       "bytes": 8501,
       "path": "scripts/check_nsc_compact_interaction.py",
       "sha256": "782a0b633bf05f438a48aa5127bf60ad289a204309ea51a822ae014296e58621"
@@ -62962,9 +63603,9 @@
       "sha256": "7209fcc9985a54a34a56def08af04fe726393000cbd45f0cacf59f219bb18e33"
     },
     {
-      "bytes": 10014,
+      "bytes": 19710,
       "path": "scripts/check_nsc_compact_matching.py",
-      "sha256": "742e49f7fe6aafc306c0b68dc4af85f975d0fc4b2253c584203b27d291f92bbc"
+      "sha256": "112364a0ac2b1ef47d42ed863a7caf8566922d9e2b09396600b1d295ab96de3f"
     },
     {
       "bytes": 23460,
@@ -62982,9 +63623,9 @@
       "sha256": "8f1a77f9ac983287badac12d961f58693711d8d86383f0f46eb3ad7b5b5b44ce"
     },
     {
-      "bytes": 4604,
+      "bytes": 9710,
       "path": "scripts/check_nsc_dirac_source_phase_transport.py",
-      "sha256": "4fa972ecd32ddcfeae6b38126be8e6ff3daea5e44cd5209aeb55b452ee923467"
+      "sha256": "07cb0eee21367c34d3b374ad44066c8230e21d281ff51aaebc0f233f0b69aa1a"
     },
     {
       "bytes": 15148,
@@ -63142,9 +63783,9 @@
       "sha256": "3e7097d2a3f0444ed852ca6d4cb20a7f4a832972a8b7b4a801e99bf20e0eaadd"
     },
     {
-      "bytes": 13700,
+      "bytes": 13661,
       "path": "scripts/check_nsc_spherical_action.py",
-      "sha256": "9ce56e0880cd4cd2223d263c3f72eddc3c85a744c241ece79abd80d52f3a36da"
+      "sha256": "7149fc63550c43fa7fe4a9dea2e9a521274adba3ce0c4bffd2e01ddc55e0cbd8"
     },
     {
       "bytes": 19527,
@@ -63172,9 +63813,9 @@
       "sha256": "d9898ce375471536a0842142c40c5b3000d986060dc96b80a5dac4ed3fb7f982"
     },
     {
-      "bytes": 14875,
+      "bytes": 14735,
       "path": "scripts/check_nsc_unruh_state.py",
-      "sha256": "476f9daca8f1d728305ea9b932f1a3e093f60385ae4573453e1f83d433389930"
+      "sha256": "8b7e43cec57cb00a9d373c91e5440a90a2165d0d26e7ce1f326f9b77fe1709f7"
     },
     {
       "bytes": 11116,
@@ -63187,9 +63828,9 @@
       "sha256": "f75ea645710751521bcd22c880a59d570664f47439d334d5e51595edbb3b0db9"
     },
     {
-      "bytes": 11459,
+      "bytes": 11255,
       "path": "scripts/check_nsc_warped_source.py",
-      "sha256": "c5402c976674123bf35f08e0aeef6581ecfedd6989fa2d12a079cb2d956ddbcb"
+      "sha256": "4f8b0042945b40a333f8141453fdf4ee077762fe04c4c423fc808a40a3b09631"
     },
     {
       "bytes": 18299,
@@ -63197,9 +63838,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 33615,
+      "bytes": 43924,
       "path": "scripts/check_publication.py",
-      "sha256": "8f7c6b4ff5e3815efe472fd080b21ef6195a37e52adcf703d7e483aa86d56f26"
+      "sha256": "a5ebc7689c863bfe63c754b655e4bf3b5a9fae52c21e0a4add9051efbd3f90bb"
     },
     {
       "bytes": 7898,
@@ -63307,19 +63948,14 @@
       "sha256": "c94fa830b638ea7ea41b382392c015f21934d02c2526587da4a708471a9649d2"
     },
     {
-      "bytes": 12921,
-      "path": "scripts/define_nsc_common_time_bulk_split.py",
-      "sha256": "5c823ac4594b5777d46ef2b8d3b4117ba75c330458bc2a1482db5607fed9d884"
-    },
-    {
       "bytes": 13193,
       "path": "scripts/define_nsc_transmitting_dirac_domain.py",
       "sha256": "10adecda52bf0a050c67746bf943ab4019cdfbb1006369ebd5607fb487e3adfc"
     },
     {
-      "bytes": 11187,
+      "bytes": 12661,
       "path": "scripts/demonstrate.py",
-      "sha256": "488d8e2d4983bf5d34a13fd501862c224d78091c6395522ac611692a61daf936"
+      "sha256": "6ec92c855d4d10aebb368d66e681539d273cb094affd23b036dc0df646d0d664"
     },
     {
       "bytes": 3301,
@@ -63352,9 +63988,9 @@
       "sha256": "e9a0eebbd9bcf0303dce13dd75e36351f129cadbdda5283c6ba464ce840f4121"
     },
     {
-      "bytes": 11094,
+      "bytes": 10942,
       "path": "scripts/derive_nsc_adm_source.py",
-      "sha256": "ad6aab76a31fce8c43278c65304a9c625be2f87d524b1e9d5c95caad12bd2507"
+      "sha256": "ce4319cdbf2942009332e79a51e9465da7a02c867d38c8b71e07305d7f161a2e"
     },
     {
       "bytes": 13191,
@@ -63437,9 +64073,9 @@
       "sha256": "9460bce93d4d3d650a42dd5e6186feac77dfe4c20268cc8998a2e759e48a3352"
     },
     {
-      "bytes": 886,
+      "bytes": 2954,
       "path": "scripts/derive_nsc_conformal_local_response.py",
-      "sha256": "f79d53f64ad08e7e4631b099f5e2bd756b324f6cc63f64030113c68337cf4b21"
+      "sha256": "f7a58ce4c7663b7cf5b858c4976fda9b66d192e18c1ca4e364b6fcabb8f807cc"
     },
     {
       "bytes": 1106,
@@ -63517,19 +64153,14 @@
       "sha256": "a8a347af761bad0c715cc4dfcb9381c9e2c6292fa12cf5ae1752eab0957f315f"
     },
     {
-      "bytes": 16887,
+      "bytes": 26909,
       "path": "scripts/derive_nsc_cosmological_atlas_v8.py",
-      "sha256": "37bb9d69819db1ad48a2025d351dbf7cd5cd9e66489bf0cc36dda3c98bcdc35b"
+      "sha256": "6c04284874d0999e6244d6269c4ceace0744402382fb9f78940e43821a041340"
     },
     {
       "bytes": 10406,
       "path": "scripts/derive_nsc_coupled_ctp_metric_evolution.py",
       "sha256": "428571488a9295230a2345cc12cc6963bb3b9764decf9ea4bc5ea565cb3f6897"
-    },
-    {
-      "bytes": 4811,
-      "path": "scripts/derive_nsc_coupled_local_response.py",
-      "sha256": "cf1a2760c81ec60d885b737dd7f0fbd551d6beebbf46db6d85bf0328159a93f1"
     },
     {
       "bytes": 15414,
@@ -63545,11 +64176,6 @@
       "bytes": 12488,
       "path": "scripts/derive_nsc_dirac_endpoint_jets.py",
       "sha256": "1be894ff668404925ee94693226dc96a883c2b9a4341885876b6e2ec75583ca0"
-    },
-    {
-      "bytes": 8645,
-      "path": "scripts/derive_nsc_dirac_source_phase_bound_control.py",
-      "sha256": "125b27a3b08f5e19e60e01ee9f5e5e1468c9cf502f1717e1248c9faedf80697f"
     },
     {
       "bytes": 2221,
@@ -63712,26 +64338,6 @@
       "sha256": "50efd99c67fa9c269387f91fba34459af1bb9565c6a46ea2984773d6128f8c7f"
     },
     {
-      "bytes": 13381,
-      "path": "scripts/derive_nsc_evolved_incoming_constraints.py",
-      "sha256": "ce53587f3077cf4a8de7f8042a5e532319fac9635757b8a48205683e34b4710c"
-    },
-    {
-      "bytes": 19547,
-      "path": "scripts/derive_nsc_evolved_incoming_state.py",
-      "sha256": "f33ee6bb7854feb424aefcd5063105f6c1222ff082a570c70ff36b841d411939"
-    },
-    {
-      "bytes": 8659,
-      "path": "scripts/derive_nsc_evolved_kernel_bridge_control.py",
-      "sha256": "5ce0c57ea6b2c7db868343d8ded65d57a3648a52b40d5bea805db98f17e4c2b3"
-    },
-    {
-      "bytes": 9513,
-      "path": "scripts/derive_nsc_exact_source_phase.py",
-      "sha256": "aee19b7fe2d0f59404e2fd474b1148886af7b6955bb0788fbc380a546913f93d"
-    },
-    {
       "bytes": 7216,
       "path": "scripts/derive_nsc_extended_tilted_history_gate.py",
       "sha256": "daa26999b0234daf8b8ab92ed9592d41ad36a4db02f46fac6918e3d249bf7261"
@@ -63772,9 +64378,9 @@
       "sha256": "54378380b1da9bce1e72fa9fd60ab238f10b9ebfffed73e315a98427ce774344"
     },
     {
-      "bytes": 6527,
+      "bytes": 6375,
       "path": "scripts/derive_nsc_gaussian_measure.py",
-      "sha256": "6b088724d8b1868f80037410c0f0c7431be966967a241f1a29a5e71f73583907"
+      "sha256": "da08ddb84c0e238684e245d60414b1216e5b41cb965dba5fac67645b2318c204"
     },
     {
       "bytes": 12076,
@@ -63832,11 +64438,6 @@
       "sha256": "552d5afc6a841b432b6f70b38908837b9630e9883fad45569cf43ee376845b59"
     },
     {
-      "bytes": 9320,
-      "path": "scripts/derive_nsc_incoming_constraint_germ.py",
-      "sha256": "be2e9327cc9cdb46cc5e4069093983838693b4bb7e692c6504ef373f3881896b"
-    },
-    {
       "bytes": 9003,
       "path": "scripts/derive_nsc_incoming_endpoint_obstruction.py",
       "sha256": "9830e7af82bdad8f875870e1b287a30666ff95dcee428e4c4d13ee2fe94207dc"
@@ -63845,11 +64446,6 @@
       "bytes": 10058,
       "path": "scripts/derive_nsc_incoming_energy_error_budget.py",
       "sha256": "c72a5b459c2ea1317cc9ff87ab3c293b1536b87b0b75607bd5b029930f1dcfef"
-    },
-    {
-      "bytes": 6107,
-      "path": "scripts/derive_nsc_incoming_energy_panel_preflight.py",
-      "sha256": "f00081040056db081763130cee24f916c4c7712fba67e3630d18907e1217e93e"
     },
     {
       "bytes": 13347,
@@ -63897,11 +64493,6 @@
       "sha256": "5944deec11618b362a10ed7776e5f9a872bbfe187129ffc21cd7e3f15e110c68"
     },
     {
-      "bytes": 10945,
-      "path": "scripts/derive_nsc_incoming_joint_constraints.py",
-      "sha256": "be1ab1bc88fd690687722c643ff290340659295c7a1e436bc05c9c7008c1056d"
-    },
-    {
       "bytes": 5205,
       "path": "scripts/derive_nsc_incoming_lapse_coefficient.py",
       "sha256": "086be398f12ae6737ebfc343ab80fd393b043f3fe328c2d8857767a6704304f9"
@@ -63912,11 +64503,6 @@
       "sha256": "0e1d33ecb982161791615fad69ad9615e8b9bfd89ed1bb763e5549f9e2c4a5dc"
     },
     {
-      "bytes": 7243,
-      "path": "scripts/derive_nsc_incoming_low_energy_vacuum_enclosure.py",
-      "sha256": "d614bc8487aa2a76e03fd1db0c6988804c341a2764105fcf41b916e3def8bc3b"
-    },
-    {
       "bytes": 11488,
       "path": "scripts/derive_nsc_incoming_low_high_source.py",
       "sha256": "543f24d8db6feab78c271bd49d6d4cd50bf848750ae6addd1b2864390f9d19d3"
@@ -63925,11 +64511,6 @@
       "bytes": 6008,
       "path": "scripts/derive_nsc_incoming_matched_horizon_initializer.py",
       "sha256": "9129cd30cacb7f95cb5edb2ef09836495d5e2676eb7c9d5e0d668c2a7c1c4911"
-    },
-    {
-      "bytes": 7060,
-      "path": "scripts/derive_nsc_incoming_middle_bound.py",
-      "sha256": "4526aff7ac7a2c4ccc689e6f5b0e48eb15c8bdc0bf478a01f4e8a712a7673832"
     },
     {
       "bytes": 10375,
@@ -63955,11 +64536,6 @@
       "bytes": 7694,
       "path": "scripts/derive_nsc_incoming_source_quadrature_bound.py",
       "sha256": "94b63847324401cf6ebeaed9a8ec2cc9bf4fe4e011bde3470fae980b88d16451"
-    },
-    {
-      "bytes": 16253,
-      "path": "scripts/derive_nsc_incoming_source_tail.py",
-      "sha256": "39acfa3e41133cd361a81d53f155d7ee2661d444c9e4e6f59e0593def9ffb92c"
     },
     {
       "bytes": 7645,
@@ -64020,11 +64596,6 @@
       "bytes": 12793,
       "path": "scripts/derive_nsc_incoming_tail_quadrature_batch.py",
       "sha256": "023e87a8fd500821e066478054fe825e235533ec031c6e919fc5182f1a18a40a"
-    },
-    {
-      "bytes": 7885,
-      "path": "scripts/derive_nsc_incoming_tail_quadrature_bound.py",
-      "sha256": "314b2b19ecc30ecb17f7a2b17e90b8898db39b2f3284ae4fdd2eb403acaaf459"
     },
     {
       "bytes": 9019,
@@ -64272,11 +64843,6 @@
       "sha256": "3f92a0e1836e1335d66a7ca8ad8a83a230c8c6b9b64c7f1ec761400542663234"
     },
     {
-      "bytes": 9315,
-      "path": "scripts/derive_nsc_ks_cubic_residual.py",
-      "sha256": "59f4eb5fb623a7e37b938298abfad0fd6e5e0ef7e917669dbb80e3ef34e0bf0f"
-    },
-    {
       "bytes": 5840,
       "path": "scripts/derive_nsc_ks_cubic_uv_current.py",
       "sha256": "5d86e50c2b777b750ec17880443acf67505fc8705124312d0956e8527948d489"
@@ -64327,9 +64893,9 @@
       "sha256": "71b615cf64e29bdf442b99bf9880758042a3dee68d0acc7fd3aa1e10f882fdf4"
     },
     {
-      "bytes": 10495,
+      "bytes": 10514,
       "path": "scripts/derive_nsc_ks_cutoff_bridge_control.py",
-      "sha256": "ec4424e1a277d40713964672c3025b50a5d6b83646487bec7b5a8d16f55543b8"
+      "sha256": "846035fc9758b4e44f00534b59ff30added33ea02544015aef3ae5f452dd7eab"
     },
     {
       "bytes": 3905,
@@ -64407,16 +64973,6 @@
       "sha256": "2b359dace9b353909860f5ef6d0606093daa955facaf3fb3e06ed015e166695c"
     },
     {
-      "bytes": 11945,
-      "path": "scripts/derive_nsc_ks_envelope_comparison.py",
-      "sha256": "f521cf383942ae3adddf01dee4db82da88753ec42c9050ba0ba6de2593cb8629"
-    },
-    {
-      "bytes": 7212,
-      "path": "scripts/derive_nsc_ks_envelope_resolution.py",
-      "sha256": "aba1582136b6e645b09d954d74a1d719b917013b01811a6474b12ee9f18c25e8"
-    },
-    {
       "bytes": 15456,
       "path": "scripts/derive_nsc_ks_evaluator_accuracy_v2.py",
       "sha256": "8fa2c01d1c13cffc62cf4178e9791de2852686e310d61b3096ffdf89a51621b9"
@@ -64425,16 +64981,6 @@
       "bytes": 3848,
       "path": "scripts/derive_nsc_ks_family_comparison_v3.py",
       "sha256": "1ac5693637d2cb6a3e4a714d2d4bc305117af2d19aeee5c2207c89e154d2f66b"
-    },
-    {
-      "bytes": 11486,
-      "path": "scripts/derive_nsc_ks_fine_matter_accuracy.py",
-      "sha256": "1608a4af6f8826d4c5265978f189c3cdf3cff59da8d10d77268356b5082ebc5f"
-    },
-    {
-      "bytes": 7325,
-      "path": "scripts/derive_nsc_ks_fine_profile_table.py",
-      "sha256": "b1966ffeb1cc6be047aace1f65c03156db88c0842f810c9e52005e4debda6572"
     },
     {
       "bytes": 10267,
@@ -64717,24 +65263,9 @@
       "sha256": "558c36377c7cab8ba4f91da28bf5004407a7440d82f24bee7f6a76eec4a76644"
     },
     {
-      "bytes": 7491,
-      "path": "scripts/derive_nsc_ks_profile_fourier_refinement.py",
-      "sha256": "ca84207e5c4b4e854ae3c1dbce4a881ebc0e00ad3bc022afabab6d9c14557e67"
-    },
-    {
-      "bytes": 5491,
+      "bytes": 5510,
       "path": "scripts/derive_nsc_ks_radius_bound.py",
-      "sha256": "40f7edd7bcf4a908fc5ea9c38c88fac07f169ddab958deea7817cb5e2638ba4c"
-    },
-    {
-      "bytes": 3253,
-      "path": "scripts/derive_nsc_ks_radius_coupling_bounds.py",
-      "sha256": "3e8ef96b546f08d7e52e6e601140da3b09442596e1ae8628e2088aecdc6f55a2"
-    },
-    {
-      "bytes": 6306,
-      "path": "scripts/derive_nsc_ks_radius_covariance_bounds.py",
-      "sha256": "7b327472768ef13e84d7843fc505ae09416bb86b0e81c785e3e4f21cf815075c"
+      "sha256": "a7e1a7e4270f8d042d29d159002e86aebdd98a3df6c4362aef6c6703046584d7"
     },
     {
       "bytes": 2945,
@@ -64747,19 +65278,9 @@
       "sha256": "55cc045ee407dcd86b482f02bd140466e08cc233fb54441ea1a2b1bba1f3caba"
     },
     {
-      "bytes": 14601,
-      "path": "scripts/derive_nsc_ks_retained_response_sum.py",
-      "sha256": "964784244c91cbaeb9e02502fdc09f442e6dd693e45f9e034892040d0910a833"
-    },
-    {
       "bytes": 13269,
       "path": "scripts/derive_nsc_ks_rho1_source_bound_v1.py",
       "sha256": "4b25e01aa8ba0ae31f4a532c514ac8bf4e7628e42a81558448d26c59e0c4ffc1"
-    },
-    {
-      "bytes": 3182,
-      "path": "scripts/derive_nsc_ks_source_control_comparison_v2.py",
-      "sha256": "55bcaa2c2c71a197dc8aa5f99a9442bbe7ce2d1587aca56865074d126843caa7"
     },
     {
       "bytes": 14423,
@@ -64807,11 +65328,6 @@
       "sha256": "ddd6f68c859bd1a5c958ccc723a79038650db1acc1839dd6b1c79ba5eee783ab"
     },
     {
-      "bytes": 11093,
-      "path": "scripts/derive_nsc_ks_spacetime_variation.py",
-      "sha256": "d717793d31ad8ac3f15f9edc26ff23f2c18fccd91e6775b8bffe88314fd55ab1"
-    },
-    {
       "bytes": 9592,
       "path": "scripts/derive_nsc_ks_trajectory_control.py",
       "sha256": "e8e147a716abb377702d03607f65da901c7c21c134afc0539caf60e24b1a1a02"
@@ -64820,11 +65336,6 @@
       "bytes": 9038,
       "path": "scripts/derive_nsc_ks_upstream_error_pilot.py",
       "sha256": "9c508a4487fe59e5c304cd14b632fae04307f45aa4deacb9b8065918eeea0665"
-    },
-    {
-      "bytes": 5092,
-      "path": "scripts/derive_nsc_ks_uv_minor_a3.py",
-      "sha256": "acf400a5abe152c0617422d5c54308714f7532d56264ebfb5715d81f0c47ba8c"
     },
     {
       "bytes": 2814,
@@ -64942,16 +65453,6 @@
       "sha256": "53fe267d0fe6c6ef6d01d312cf115f25d2e192e1de57cd08a034bf8fef5f194a"
     },
     {
-      "bytes": 13077,
-      "path": "scripts/derive_nsc_local_prepared_response.py",
-      "sha256": "ae7d19ebdd9b543d4e19f7c5fe5564df0081439c607fb0713517c1c6bd0436a1"
-    },
-    {
-      "bytes": 9255,
-      "path": "scripts/derive_nsc_local_reference_accuracy.py",
-      "sha256": "024fbea65eceb4c06b4535e6c01a0fbcece90b1b8f708e738283b4d28c7bb437"
-    },
-    {
       "bytes": 4328,
       "path": "scripts/derive_nsc_lowband_placement.py",
       "sha256": "143d4b665b9c86e9dfc21497dc0ac2b8ddf4fe2c147773a6058c1f9a5427887e"
@@ -65027,11 +65528,6 @@
       "sha256": "9176c05c7af7885c60b17179253d53b18a3bd5775a1b09953c751a536b4bab42"
     },
     {
-      "bytes": 2193,
-      "path": "scripts/derive_nsc_middle_source_coverage.py",
-      "sha256": "c916364e704baea4575758ddb139837127332901cee1b7058ef46b87fb165352"
-    },
-    {
       "bytes": 4360,
       "path": "scripts/derive_nsc_mmp_embedding.py",
       "sha256": "bb394e381fc5878a05baf8681db042f5fb44f1a865dfae6fa03b7c244a7966a7"
@@ -65077,14 +65573,9 @@
       "sha256": "650baaf5be27365af5df89687eb5f40a9c6d3b894c2aefcb0eff60cce2750a39"
     },
     {
-      "bytes": 6564,
+      "bytes": 6424,
       "path": "scripts/derive_nsc_parent_backreaction.py",
-      "sha256": "dd396ef586609aa9b7d7bba367488e42c87a238aad974ba8e5a789c7f6aee0ad"
-    },
-    {
-      "bytes": 5179,
-      "path": "scripts/derive_nsc_pg_batched_low.py",
-      "sha256": "0eb0f0cc007dbde104f34317ff4802190d1e6f18318933f4d2c79eda0007d9cf"
+      "sha256": "f5cb9ab92648d166c477ece52d0705c37a2792097b172b174790159859060ad5"
     },
     {
       "bytes": 12368,
@@ -65102,11 +65593,6 @@
       "sha256": "9dd9ef34485eadf16c62b6b014ae2dd19f7a175e06b7b5d6ecc5399d2bfca2e0"
     },
     {
-      "bytes": 9347,
-      "path": "scripts/derive_nsc_pg_high_energy_inputs.py",
-      "sha256": "5eb450bc98a3374990d2a8f1c4bccbfc5906e12b828ef1cd754aeb4296b5dff5"
-    },
-    {
       "bytes": 8594,
       "path": "scripts/derive_nsc_pg_ks_metric_pullback.py",
       "sha256": "a129a100d72db3044b27712e577247c7c317f46dd2bddd18091ee0ff0903be16"
@@ -65117,29 +65603,14 @@
       "sha256": "0a9e81124513051c16e5ea344245a3c82bc5b09d92c7368424415ef2184efeb1"
     },
     {
-      "bytes": 5185,
-      "path": "scripts/derive_nsc_pg_low_inputs.py",
-      "sha256": "fb0a4f623d844d7cf62d4dbdbf23481e70f12013ad6c4f65a5d66523f21a0e39"
-    },
-    {
       "bytes": 9729,
       "path": "scripts/derive_nsc_pg_massive_modes.py",
       "sha256": "484d23fbe59a00db9574e1959f88fbd8278cdd991975e6c7f0dd69a7a0543e8a"
     },
     {
-      "bytes": 3096,
-      "path": "scripts/derive_nsc_pg_mid_inputs.py",
-      "sha256": "fc824b1010940618a00a50ae66571a292a76e0ad3c8c2641decea47881d33b3d"
-    },
-    {
-      "bytes": 16547,
+      "bytes": 22272,
       "path": "scripts/derive_nsc_pg_retained_covariance.py",
-      "sha256": "27018e2af23dcd6e2fe47e215b5a9a3c8863103e616644a96119209433ab26fd"
-    },
-    {
-      "bytes": 3850,
-      "path": "scripts/derive_nsc_pg_retained_projections.py",
-      "sha256": "123330afdd7d2eecc19cf96dd2712699e8883ce7571fa64dd9fd3a4ca9f9ee08"
+      "sha256": "9ad1297ab7c4972ef4c25af7ed5fc24b0bb5216c0837f21589ae55de11f34065"
     },
     {
       "bytes": 21056,
@@ -65250,11 +65721,6 @@
       "bytes": 12637,
       "path": "scripts/derive_nsc_retarded_radial_response.py",
       "sha256": "d330e3fb6ebb4c6a44c4c9db5569c9c207cb9e1dcedc18de17f13011b4c95d00"
-    },
-    {
-      "bytes": 16865,
-      "path": "scripts/derive_nsc_retarded_response_resolution.py",
-      "sha256": "6d912796699c138d8f709a12b6e0e5508e84e6368712a3651f18907ee199f657"
     },
     {
       "bytes": 15982,
@@ -65552,11 +66018,6 @@
       "sha256": "e84bff025fe05dcc18679a7a81fa51bf462205c1bc55131bdbef6bf929e14db3"
     },
     {
-      "bytes": 20020,
-      "path": "scripts/derive_nsc_subgap_row15_upstream.py",
-      "sha256": "c02bff968e6b45d6cb0ed8c9cf03e1657ed8b6bb2c8a73a44cd8f9b1b20505ef"
-    },
-    {
       "bytes": 6960,
       "path": "scripts/derive_nsc_subgap_source_covariance.py",
       "sha256": "bcf9931bcbbc6cb4fa0ac0d350a66eb187d9737b3e051d157eaf8813d7b5fba2"
@@ -65672,11 +66133,6 @@
       "sha256": "c26225b558ce0ba20161cbd337ff0a8b8a5e00394a90a4dce1d20f9472ba277f"
     },
     {
-      "bytes": 15249,
-      "path": "scripts/derive_nsc_transmitting_history_jets.py",
-      "sha256": "c32c7001317e51215d457c7796f483d815085981cc3a349842f72f276ca59919"
-    },
-    {
       "bytes": 13328,
       "path": "scripts/derive_nsc_transmitting_history_modes.py",
       "sha256": "ccc2d51503e3e04cd2c91bd672b3ce5292ea09f723dac983aa9b10f9552ad9c5"
@@ -65717,9 +66173,9 @@
       "sha256": "601733ce706836976307df0752b4ccdbc99bf721220a7086b4378ff8f0561f47"
     },
     {
-      "bytes": 7194,
+      "bytes": 7042,
       "path": "scripts/derive_nsc_vacuum_matched_ctp.py",
-      "sha256": "ac07eb75ea60043af225b6b85ded24c161d90418fd3b5fef8db304e4b7c5f26b"
+      "sha256": "ac35c4bd95bf3509be5539b6f9cea7caba13abd018138a0f26a105f2802051a0"
     },
     {
       "bytes": 7356,
@@ -65832,26 +66288,6 @@
       "sha256": "80eeee67cfa2dadd8e4fb1b40bdac9dc74de115cfd2eed8a88ae85dcbfcb78e6"
     },
     {
-      "bytes": 6465,
-      "path": "scripts/derive_nsc_warp_local_source.py",
-      "sha256": "fcb6374a46742aead87223f6eb5e1dfc3524a6f0b4cdbb4af670c27075901ea5"
-    },
-    {
-      "bytes": 7086,
-      "path": "scripts/derive_nsc_weyl_boundary_jets.py",
-      "sha256": "efe623da3299e5ef7182cb065c2e173e8b02da951ebb020d02f7437d007d3895"
-    },
-    {
-      "bytes": 6836,
-      "path": "scripts/derive_nsc_weyl_integrated_moment_control.py",
-      "sha256": "05a05c3112173b205760fc1f6f2b2176b0a4a0e792d1db3d1f573bcdd94d1175"
-    },
-    {
-      "bytes": 5807,
-      "path": "scripts/derive_nsc_weyl_small_transfer_control.py",
-      "sha256": "8a7096a29e1f4c375d8ca2f5a2dc8d7ed2ff11978ae06a323fa293a9a3157353"
-    },
-    {
       "bytes": 7629,
       "path": "scripts/derive_nsc_window_shell_share.py",
       "sha256": "5606351b18020693333a5325e3337221e73d89ed705a8de588f75d686e08c8e9"
@@ -65882,9 +66318,9 @@
       "sha256": "bb4ada01923ddf738c296d279219f06155a81dc20dfbf513ddde0e8fe1ef5017"
     },
     {
-      "bytes": 4847,
+      "bytes": 4707,
       "path": "scripts/map_nsc_adm_neck_source.py",
-      "sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c"
+      "sha256": "7ba9e010e29770dd04252ee12c9546d39d86b57a21774729733877847b934d5b"
     },
     {
       "bytes": 6065,
@@ -65960,6 +66396,11 @@
       "bytes": 19085,
       "path": "scripts/record_nsc_atlas_source_mass.py",
       "sha256": "f953443914148147ec836cdbeabaf27e6e97555b450ab62263698f18716c88bc"
+    },
+    {
+      "bytes": 21679,
+      "path": "scripts/record_nsc_atlas_wall_mass_closure.py",
+      "sha256": "51ea235e2fbba21eb36a35f504b0890e52f8372e392ca028a6344ca1b05cefa5"
     },
     {
       "bytes": 11695,
@@ -66052,11 +66493,6 @@
       "sha256": "cfa94ae447e10299ae7422e6793d3f88b88dc20ef159030b37d06112ccaffbb2"
     },
     {
-      "bytes": 6494,
-      "path": "scripts/run_nsc_zeta1_recursion_map.py",
-      "sha256": "68cb0e287e226154b4653678571127d167c25eabd06d878ff813681ae0d7a0be"
-    },
-    {
       "bytes": 10435,
       "path": "scripts/run_nsc_zeta1_regulated_determinant.py",
       "sha256": "01caf3d6061b1411a82ab030cdfe17fc8b0c5a9aa076d73ce8dbe589ff67276b"
@@ -66082,21 +66518,6 @@
       "sha256": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210"
     },
     {
-      "bytes": 6881,
-      "path": "scripts/run_s_one_background_adjusted_graviton.py",
-      "sha256": "c9610a2503148b0ee9b40f3aee7e4a20ba7dde793f573c1ee8ea3c802046748a"
-    },
-    {
-      "bytes": 9230,
-      "path": "scripts/run_s_one_boundary_retarded_pole.py",
-      "sha256": "71ba00ab097849204d02e81541cc4ac29f2c8d11c3d6414e05003d6137990625"
-    },
-    {
-      "bytes": 8400,
-      "path": "scripts/run_s_one_child_orientation.py",
-      "sha256": "429866b151c66688cb51b662a52eeb094983d84959206bd5141925e650ce3917"
-    },
-    {
       "bytes": 7937,
       "path": "scripts/run_s_one_child_scale_correction.py",
       "sha256": "17ae5753b6de7b9da621d896c60c45e4d05fd0d6c64a9b91b2c32da605c9da3d"
@@ -66107,34 +66528,14 @@
       "sha256": "0bf46b2f73a34dbfab45eae7cd8cc2a8ee18c5541b186d35fe422f8b658c4c7d"
     },
     {
-      "bytes": 4978,
-      "path": "scripts/run_s_one_dark_black_invariant.py",
-      "sha256": "ec2f3810d61d3c54abadaa449262061b3b83cd947f163c62b33e3dd2a3238eb8"
-    },
-    {
       "bytes": 13347,
       "path": "scripts/run_s_one_doubled_flrw_closure.py",
       "sha256": "63175194ff1b911ec7cf72e77c0372d39498f5414a0e614b60ec102360324624"
     },
     {
-      "bytes": 4724,
-      "path": "scripts/run_s_one_fermionic_geometry_bind.py",
-      "sha256": "e2324f043a9921d5bc81ce017f65c9c11353eb5d55ab8748873a5f4cbc691753"
-    },
-    {
       "bytes": 9604,
       "path": "scripts/run_s_one_fermionic_relative_observable.py",
       "sha256": "cc54c80fa71b1d65e30e6d3f001d214f8304483163df31228032cc58709a0a3e"
-    },
-    {
-      "bytes": 6656,
-      "path": "scripts/run_s_one_finite_momentum_graviton.py",
-      "sha256": "ef0a3e2ad11507df225f0ad8d7aed08cd978bcd96e1a81ffef845818afab9257"
-    },
-    {
-      "bytes": 6093,
-      "path": "scripts/run_s_one_flat_spectral_poles.py",
-      "sha256": "ef33e48afdd51af04f629cc3dfc1dc5bd95b4b88bddd3d881bdadd4de5108d11"
     },
     {
       "bytes": 17733,
@@ -66147,24 +66548,9 @@
       "sha256": "399be28ba5cbdc344d5d4b138c76f9a79478a9f74fa2cdd5afdb2be804c2968b"
     },
     {
-      "bytes": 12926,
-      "path": "scripts/run_s_one_gauss_bonnet_component_closure.py",
-      "sha256": "7a4124be9160a7774b3bf05e5dda61505820e386ce1dca64319dd12a5e661fd5"
-    },
-    {
-      "bytes": 5184,
-      "path": "scripts/run_s_one_gauss_bonnet_criticality.py",
-      "sha256": "6e16409368f5aeeddbc2821c9d39762761c93b94fa90df0e1fec0919be83dc7b"
-    },
-    {
       "bytes": 13680,
       "path": "scripts/run_s_one_gauss_bonnet_kinetic_rank.py",
       "sha256": "4239057dbfad4dfa95fa8a4c6cd2da13aa5abf654825f52b0e00030ab431b0cd"
-    },
-    {
-      "bytes": 12383,
-      "path": "scripts/run_s_one_gauss_bonnet_null_closure.py",
-      "sha256": "f39188ebd032f4473cd17e5401582321b75b5ecb140fcd7e5f64a957123eb7b8"
     },
     {
       "bytes": 10792,
@@ -66202,11 +66588,6 @@
       "sha256": "faf437002a8b46e64d558971ce3363b0955e99614eabd2f576762e5cfa3121f7"
     },
     {
-      "bytes": 6947,
-      "path": "scripts/run_s_one_outside_black_bind.py",
-      "sha256": "5c34be517679cb9bdc82308ba34727b73d32edbafcf7cd9bf5268c60c798e112"
-    },
-    {
       "bytes": 5804,
       "path": "scripts/run_s_one_particle_wave_identity.py",
       "sha256": "3b7be193638073657580fee84a71586a3c97e11eca879c98d697dd7600f6b31d"
@@ -66237,11 +66618,6 @@
       "sha256": "6cdfdc42523eeb7cf6644c21fcab88dd60fcc3f00fe145232882cc3645a3c098"
     },
     {
-      "bytes": 5796,
-      "path": "scripts/run_s_one_resolution_channel_closure.py",
-      "sha256": "f8c9b5cbb8c9ad9e99bd7bdfa01d54565fbbbaa14648ef9c82c26228965b9620"
-    },
-    {
       "bytes": 5866,
       "path": "scripts/run_s_one_shadow_lensing_observation.py",
       "sha256": "3cf79c77819dde65563304d27fb0b94216bea353abfe191199507e1f2dfedb3a"
@@ -66250,11 +66626,6 @@
       "bytes": 5967,
       "path": "scripts/run_s_one_shadow_matter_bind.py",
       "sha256": "81d1e04f65f96ea4020004bf164f50bd29907998e9850814dee538a0a58266f0"
-    },
-    {
-      "bytes": 4818,
-      "path": "scripts/run_s_one_spectral_boundary_constraint.py",
-      "sha256": "f14cacc56f144a77aaacdf6cc904ecb1c64a461cded1b9867d5da18357b2548a"
     },
     {
       "bytes": 4668,
@@ -66277,29 +66648,9 @@
       "sha256": "0b92b4ae4a4fb5bd8c46ee079de31a221c6fbbe155e1a5b03d8855d68df6e25e"
     },
     {
-      "bytes": 11192,
-      "path": "scripts/run_s_one_two_sheet_5d_geometry.py",
-      "sha256": "d413cadf8a569e9a3558b9f2569fd228081a8c5ca2833732ffc88c1d253a4b3b"
-    },
-    {
-      "bytes": 5596,
-      "path": "scripts/run_s_one_two_sheet_5d_null_source.py",
-      "sha256": "2be8d5be19c8be9023cc521326f1015a7845a8a903d4d0aff8e9efaaa9e512dc"
-    },
-    {
-      "bytes": 6340,
-      "path": "scripts/run_s_one_two_sheet_black_geometry.py",
-      "sha256": "e9bd7e8e6f8adc496838fc966dd69cc28bf71cbb6c2cee0de9c1fb602f3ebdbb"
-    },
-    {
       "bytes": 5954,
       "path": "scripts/run_s_one_warped_resolution_bind.py",
       "sha256": "eeb89f8fa1ca3d54a1d6397068c8fecaec89b611bd08bbfab59a39c57e43bf65"
-    },
-    {
-      "bytes": 8217,
-      "path": "scripts/run_unified_gradient_boundary_dev3.py",
-      "sha256": "e95ddc0eb9a4771c420bf79700c9c624dc0d23614a6ef313ab3608bab13acad7"
     },
     {
       "bytes": 5782,
@@ -66317,9 +66668,9 @@
       "sha256": "97e99d82fa75196351dae92112c6849133bc5723ec94b954f1d7130670fe9a4a"
     },
     {
-      "bytes": 16948,
+      "bytes": 21658,
       "path": "scripts/validate_nsc_ks_current_field_cone_v1.py",
-      "sha256": "afd2d69180d5cf88ce6a455b819a98a966673e695eed7b4646d8c7f895339e1c"
+      "sha256": "e103303911c1780aaa3b2fe04c052a3af9b66c96b087ed66ffc3004dab228dba"
     },
     {
       "bytes": 21117,
@@ -66327,14 +66678,9 @@
       "sha256": "95233db45f0c16f3af5b358abedd190f1591d6f9310dd2c6b1baf3c6544d9407"
     },
     {
-      "bytes": 33207,
-      "path": "scripts/validate_nsc_ks_current_field_pilot_v3.py",
-      "sha256": "65186ed02f1b0a3e4a7fc144e9161a471e93fd429425e04178e4dff913e42ccf"
-    },
-    {
-      "bytes": 10634,
+      "bytes": 10651,
       "path": "scripts/validate_nsc_ks_current_field_pilot_v4.py",
-      "sha256": "87d444c2b150189cc5cf772e0dd8024f1426b2514574d4a2b7d87699d1f687b7"
+      "sha256": "dd5fd193185eeecf472e18239e50bbdd758acd9f3b89017b3307b479ecbe5027"
     },
     {
       "bytes": 6977,
@@ -66442,11 +66788,6 @@
       "sha256": "4551fdc794fdea2906cd7f73fb3a5ad1494ccfabd692d9578dae2075b1516aef"
     },
     {
-      "bytes": 5545,
-      "path": "src/recursive_horizons/nsc_background_projection.py",
-      "sha256": "2f1fc3594ff81af9e09390d5c0f7716a23e313a9edf9cd1a09307acb05b31550"
-    },
-    {
       "bytes": 24515,
       "path": "src/recursive_horizons/nsc_bloch_trace_bound.py",
       "sha256": "c5ae0f4571e464c124db355fe3f7d89986b677838be6dc272c342cd40746a15d"
@@ -66460,11 +66801,6 @@
       "bytes": 5933,
       "path": "src/recursive_horizons/nsc_boundary_state.py",
       "sha256": "34aaf2d3d8f2d3e1371c48b7916465c266e7ff4f3d431e7d3960b7b31020c646"
-    },
-    {
-      "bytes": 4402,
-      "path": "src/recursive_horizons/nsc_canonical_spectral_bridge.py",
-      "sha256": "821e1dbdcb79f815521b9aee536643bea1d155c0b639afd49376229e51991879"
     },
     {
       "bytes": 11855,
@@ -66485,16 +66821,6 @@
       "bytes": 3816,
       "path": "src/recursive_horizons/nsc_child_metric_backreaction.py",
       "sha256": "442536050c1aa7602fcdf9939c982f475b5d52c1b6ca5ee96144681bb30909ca"
-    },
-    {
-      "bytes": 2962,
-      "path": "src/recursive_horizons/nsc_child_state.py",
-      "sha256": "50c55b3ca0ae8215426b7b2287392308826b44bb8ca58393b00209129edab69e"
-    },
-    {
-      "bytes": 22423,
-      "path": "src/recursive_horizons/nsc_chiral_boundary.py",
-      "sha256": "2ccefb6bdb36ab1a216022a21f0f7da31bd054b1f0b5d4e53179a5e6ee67a45c"
     },
     {
       "bytes": 5766,
@@ -66530,11 +66856,6 @@
       "bytes": 5535,
       "path": "src/recursive_horizons/nsc_compact_matched_restart.py",
       "sha256": "098735ba10f1daeb5c659057dfa6427922f7e904df63f327ff8c06a2617eb2b3"
-    },
-    {
-      "bytes": 6318,
-      "path": "src/recursive_horizons/nsc_compact_matching.py",
-      "sha256": "a712d2e8a964d11fa7097a9a5e88bafbd296e616032b6fcb7ea9e62501018378"
     },
     {
       "bytes": 5083,
@@ -66605,11 +66926,6 @@
       "bytes": 17589,
       "path": "src/recursive_horizons/nsc_covariant_operator.py",
       "sha256": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a"
-    },
-    {
-      "bytes": 2981,
-      "path": "src/recursive_horizons/nsc_curvature_eft.py",
-      "sha256": "6440e8411e59792020a003d5ab12f9046c12d3e0b598fd06f278247b345c97fc"
     },
     {
       "bytes": 4098,
@@ -66812,11 +67128,6 @@
       "sha256": "8ead983c08b2d80b4b53bab03d81b09b8d8a2c93f46a111326b29a781d61f24f"
     },
     {
-      "bytes": 5654,
-      "path": "src/recursive_horizons/nsc_energy_transfer.py",
-      "sha256": "baee28515d7cd945d20da4b57b2263e3c34165dc209019a4718b254727279c3d"
-    },
-    {
       "bytes": 17485,
       "path": "src/recursive_horizons/nsc_evolved_incoming_constraints.py",
       "sha256": "8586a706e782b7f43687830eadb5e41ba57a6901777118f8de00f8725f8bc9cc"
@@ -66867,11 +67178,6 @@
       "sha256": "7f4c07561ad35679dc82a74946991deb732b26b5771558f2047db1d8a6960805"
     },
     {
-      "bytes": 7648,
-      "path": "src/recursive_horizons/nsc_gauge_source.py",
-      "sha256": "a19bcb81f052eadc2e3ed33843deb6098f2e0aa6b5fa1ff3210932012fb3173e"
-    },
-    {
       "bytes": 3264,
       "path": "src/recursive_horizons/nsc_gaussian_measure.py",
       "sha256": "8f1508ee0c4c70ff5efd52a954e0784fb83242dd72711fe251cd87fb5929e971"
@@ -66910,11 +67216,6 @@
       "bytes": 3577,
       "path": "src/recursive_horizons/nsc_horizon_source.py",
       "sha256": "fecc16c3fd3832e2af1e2d894211ba31d2465fd3c927da639514c07935677721"
-    },
-    {
-      "bytes": 40465,
-      "path": "src/recursive_horizons/nsc_imbalance_turnover.py",
-      "sha256": "565221169e8d188eb464928f51f980ae4d96974a635e0662b00110c24039ab32"
     },
     {
       "bytes": 15254,
@@ -67657,11 +67958,6 @@
       "sha256": "6c62b1dedb03da9788176585b74300640ad009470756a492c2e04e9ae861d94e"
     },
     {
-      "bytes": 7383,
-      "path": "src/recursive_horizons/nsc_mmp_embedding.py",
-      "sha256": "3480ee43db89e9ddb1ea64c631945d0564f5964849600aac343f3dac570dd2c7"
-    },
-    {
       "bytes": 21214,
       "path": "src/recursive_horizons/nsc_mode_resolved_cauchy_state.py",
       "sha256": "9b65545fdc82cdaf52bbeebf6092ed38cfb939eb8a9fe3b31de42b219da90a9a"
@@ -67797,9 +68093,9 @@
       "sha256": "56d260460d63ce12875f9bbaa1c2c1c836aedf125d7477ef608370945c4d612f"
     },
     {
-      "bytes": 3318,
+      "bytes": 3652,
       "path": "src/recursive_horizons/nsc_posix.py",
-      "sha256": "3a2baee4dadba85a49943f2f3e6634fd46c22b860f39391ef5c73161552dc9a1"
+      "sha256": "96e57007b6f10fcd07cd3cccf2cf1003fa5441dac0914b58292d5ebdbe75d33f"
     },
     {
       "bytes": 11287,
@@ -67830,11 +68126,6 @@
       "bytes": 38434,
       "path": "src/recursive_horizons/nsc_regeneration_controls.py",
       "sha256": "ae840728da346388e5b64b4d2b7e66f2b6c607d08f8ce36cdb46f737d4c75fdc"
-    },
-    {
-      "bytes": 45471,
-      "path": "src/recursive_horizons/nsc_regional_energy_exchange.py",
-      "sha256": "9339f401ab3db9d0d2f36d2ae43dded15cb9f83d0c9d3463e4c48726eab73ce7"
     },
     {
       "bytes": 9463,
@@ -67880,11 +68171,6 @@
       "bytes": 6581,
       "path": "src/recursive_horizons/nsc_rn_force_reach.py",
       "sha256": "f21c60eba1e9561ef5ea45c31f4025cfe3dd19786f268554c77e675b065a2908"
-    },
-    {
-      "bytes": 17588,
-      "path": "src/recursive_horizons/nsc_rn_gradient_bubble.py",
-      "sha256": "542d6b12fb2c3c14caca1122444a00cf9865d286a59a9e2e175962cb74f3a362"
     },
     {
       "bytes": 3326,
@@ -67940,11 +68226,6 @@
       "bytes": 10256,
       "path": "src/recursive_horizons/nsc_rn_stencil_audit.py",
       "sha256": "33a2ebb785096b435151a317a72bcec9565aa1ef2765b621f992db512bd85229"
-    },
-    {
-      "bytes": 5217,
-      "path": "src/recursive_horizons/nsc_rn_two_ends.py",
-      "sha256": "63e394aa8d038d96142fddafcf17f7e711d6b4b5f65a18f134f63d77d9dbfe6d"
     },
     {
       "bytes": 7503,
@@ -68070,11 +68351,6 @@
       "bytes": 2086,
       "path": "src/recursive_horizons/nsc_subgap_upstream_covariance.py",
       "sha256": "74595ca4deee3b1209b7f034869885b2addd9ed446505b4c53ed5cd0c4094727"
-    },
-    {
-      "bytes": 4481,
-      "path": "src/recursive_horizons/nsc_tail_limit.py",
-      "sha256": "8e13264167cc98ebccc2271cda7e197dcfa732473b56a81ad36587f0d466eded"
     },
     {
       "bytes": 18993,
@@ -68347,6 +68623,11 @@
       "sha256": "8de7d4f1dd62fcc3ea84fae5926135e15ff3da8a6b3c02da79525c160a9a3646"
     },
     {
+      "bytes": 13635,
+      "path": "tests/test_nsc_atlas_wall_mass_closure.py",
+      "sha256": "d38a926242f152483695038f65416faa55860489b260cef9cc36db60335f6c2c"
+    },
+    {
       "bytes": 14600,
       "path": "tests/test_nsc_bloch_trace_bound.py",
       "sha256": "bc0edd463c6ba99bdd1e088dc8594ad3f3599b9a7c87d3d815b4d15e85393322"
@@ -68612,9 +68893,9 @@
       "sha256": "8e7942d45485296c7c194618971d67dc6be649703f7860259f21d41ad15aa669"
     },
     {
-      "bytes": 14048,
+      "bytes": 14063,
       "path": "tests/test_nsc_discovery_coupled_memory.py",
-      "sha256": "261038b3ebd2d96b05ae0c90fa8434022889fd71f99491d93e1faa216ad4ca60"
+      "sha256": "4abbb0c38f4f88d63a37540d42e33f0fcb49dfb998fa36f6103006e3a29eac71"
     },
     {
       "bytes": 3895,
@@ -68955,11 +69236,6 @@
       "bytes": 14014,
       "path": "tests/test_nsc_global_projector_bounds.py",
       "sha256": "886e37a89d8f50967c0ca74fe2a5f891a1caba6cbd0919a948005ac030869fc6"
-    },
-    {
-      "bytes": 10613,
-      "path": "tests/test_nsc_imbalance_turnover.py",
-      "sha256": "8376fbf04be650c39864a353299a2240fb3adb53cc0643b134cb580f15e23f8c"
     },
     {
       "bytes": 3509,
@@ -69352,9 +69628,9 @@
       "sha256": "de15c1b6ff2a553535410b7c1de70036df622ae93432b5a42b019c273b81ce2e"
     },
     {
-      "bytes": 18819,
+      "bytes": 18837,
       "path": "tests/test_nsc_ks_current_field_cone.py",
-      "sha256": "39ca6378e38111733c10234ffdcb2fe341fde8a277ee1d5b5d4b5c48b29788fa"
+      "sha256": "6e183970183ac5991f28b7fd7533e25cbae657263a1bf2750d95d972dd67328e"
     },
     {
       "bytes": 9420,
@@ -69757,11 +70033,6 @@
       "sha256": "dce217ba6fa7a927eb573a4cf5d0c853edb6f5cca21853923f21d81959349acd"
     },
     {
-      "bytes": 3176,
-      "path": "tests/test_nsc_matryoshka.py",
-      "sha256": "7e673c228bef80ff6d2c3b2070e679c2c71d469d86a0029f9de90394fa48eb46"
-    },
-    {
       "bytes": 10654,
       "path": "tests/test_nsc_measure_normalization.py",
       "sha256": "a165f079525e527c14290f2b5e0a901e3069bc7020f3428e4a44f7f37761440e"
@@ -69780,11 +70051,6 @@
       "bytes": 15364,
       "path": "tests/test_nsc_middle_source_coverage_v2.py",
       "sha256": "e8d3bdc219ba4a33b1d545f30ef256062ccdc60a7b835465a2c117685ab0e0dd"
-    },
-    {
-      "bytes": 917,
-      "path": "tests/test_nsc_mmp_embedding.py",
-      "sha256": "40e7287ac62a3b8b96abbf886dacd33cbbfcfcd8e1e5408d47f0a399eaf57d18"
     },
     {
       "bytes": 1091,
@@ -69947,16 +70213,6 @@
       "sha256": "a9347e481188f1f40e0148036cee74c09b60e2892517a3438095c1f493596493"
     },
     {
-      "bytes": 4911,
-      "path": "tests/test_nsc_regional_energy_exchange.py",
-      "sha256": "4b688de82022b88c566048299034e833396b5378a849dba57a22d52940fff722"
-    },
-    {
-      "bytes": 35633,
-      "path": "tests/test_nsc_regional_energy_exchange_independent.py",
-      "sha256": "0d59872b562144804c3c46f4250098b765e7c2e3f86c9857264d677831f12751"
-    },
-    {
       "bytes": 2284,
       "path": "tests/test_nsc_regulated.py",
       "sha256": "779b600aaaaa94f2dcaefc1b8ab085f1eed951dde20c38c8d1fc333b19027488"
@@ -70092,16 +70348,6 @@
       "sha256": "7b60befa7ea15eb56e6982a4c6257dea73e8a0724a27f407baa3a93ecb5c7f08"
     },
     {
-      "bytes": 5780,
-      "path": "tests/test_nsc_rn_geometry_map.py",
-      "sha256": "887bab0f9dbe6c547207396baf34c7db4ac5b38e159e2419806f9e56c37d44ab"
-    },
-    {
-      "bytes": 19482,
-      "path": "tests/test_nsc_rn_gradient_bubble.py",
-      "sha256": "5a6faa368cb02eb5b1cc9c88666d04cb6167f793f2a264359f10443e1335a11c"
-    },
-    {
       "bytes": 3945,
       "path": "tests/test_nsc_rn_grid_memory.py",
       "sha256": "3c718f4ffd30016b517c9788220863a04fbf7f2b42c459e8451249c9c05227f8"
@@ -70187,9 +70433,9 @@
       "sha256": "26e800ea0934e85b2121c4a09d6e4120d7c1e818d0a4915dc1babb5e7949f591"
     },
     {
-      "bytes": 27604,
+      "bytes": 27013,
       "path": "tests/test_nsc_rn_pg.py",
-      "sha256": "1b1278f1a661cca24eeb0f8e408554b699ff7bc65683190cdac9cc65d5f1ae50"
+      "sha256": "aa904c0a7ffec791615df6ada03b4d54c3352b1cdcda27f52dcd921a7aa541e7"
     },
     {
       "bytes": 4672,
@@ -70235,11 +70481,6 @@
       "bytes": 8676,
       "path": "tests/test_nsc_rn_third_region_reach.py",
       "sha256": "a897e42d08b5724269be2a447108edbece50bfd6c334051e63b0606a54a85670"
-    },
-    {
-      "bytes": 2921,
-      "path": "tests/test_nsc_rn_two_ends.py",
-      "sha256": "4ae0cd57d3b247d1cb6f87ab2a85bc0b451e988af54eefd4b2997391a0aef8b0"
     },
     {
       "bytes": 4191,
@@ -70432,11 +70673,6 @@
       "sha256": "60af837a03c21abe2fbd92ce0fbbaa99ccd8dc6de43ef7ad1c83b68e1461cc54"
     },
     {
-      "bytes": 1252,
-      "path": "tests/test_nsc_tail_limit.py",
-      "sha256": "1b0c323c056ef8a45aa49dfa7cc4a825235cc19a809abb811b2e1c8fcb83ef2e"
-    },
-    {
       "bytes": 2621,
       "path": "tests/test_nsc_transmitting_boundary_history.py",
       "sha256": "f98a9613d93f3a5f9bfbbd190ef3a0f1cb1eb587622d17b122290db986bab63a"
@@ -70557,9 +70793,9 @@
       "sha256": "609b555fd14c6d8719ba0c50f64fb07b487f5d5129d60dd4f8d228efd54a797d"
     },
     {
-      "bytes": 2333,
+      "bytes": 2344,
       "path": "tests/test_publication_history_boundary.py",
-      "sha256": "5de1b4f20e2bafa9f67df01c4fd054d92fef20554ab190272f2526c729b1e797"
+      "sha256": "aeede0724f89c11b6ec6aad16d3436e59eea76dcf223b9f1f91ab257fcd9f215"
     },
     {
       "bytes": 1599,
@@ -70617,9 +70853,9 @@
       "sha256": "be414502bb3c5410d5e3451f9a74312ab398c377176fa20242040874401978ec"
     }
   ],
-  "lab_snapshot_sha256": "534eb39564e0444f3a945ff2015f863cd74cde6494c20a15d3fe9a52c5ca0258",
+  "lab_snapshot_sha256": "f06c2370350c3bb5e3f8f5f303939960abbd0c57c6c6f18f47d0526e6900e64d",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
-  "manuscript_revision": "2026-10-13.4",
+  "manuscript_revision": "2026-10-13.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
   "nsc3_source_commit": "445d5b069adea8b5641384b0ee02f07fe9cfcc0a",
   "public_version": "0.27.0",

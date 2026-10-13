@@ -1,8 +1,8 @@
 # Massive cubic coefficient on the directed integrator
 
 This is the generic-mass extension of the massless
-[reduced current](nsc-ks-cubic-uv-current.md) and its
-[directed enclosure](nsc-ks-cubic-uv-enclosure.md). The action, original
+[reduced current](https://doi.org/10.5281/zenodo.23090015) and its
+[directed enclosure](https://doi.org/10.5281/zenodo.23090015). The action, original
 source sectors and history `0b0e4ced` stay fixed. The massless owners are
 not edited. The result is formal $e^{-3}$ mathematics plus one directed
 point. It is not a UV tail, not coverage of $I$, and not a closed gate.

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Authenticate the imported lab and retained historical source objects.
+"""Authenticate retained current files and unchanged historical source objects.
 
-This verifies file integrity, not a closed scientific gate. The manifest is
-an import receipt; deliberate later edits require an explicit successor receipt.
+This verifies file integrity, not a closed scientific gate. Historical import
+provenance is metadata; deliberate later edits require a current successor receipt.
 """
 import hashlib
 import json
@@ -72,33 +72,44 @@ def check_objects(root=ROOT):
     return len(seen)
 
 
-def check_snapshot(root=ROOT):
-    """Verify the relocation and the unchanged original import identities."""
-    from reassemble_repository import check as check_reassembly
-
-    original = json.loads((root / "docs/lab-snapshot.json").read_text(encoding="utf-8"))
-    migration = json.loads((root / "results/reassembly/manifest.json").read_text(encoding="utf-8"))
-    if original["schema"] != "NSC-CONSOLIDATED-LAB-v1":
+def check_retained_files(manifest, root=ROOT):
+    """Authenticate only explicitly retained current-root files."""
+    if manifest.get("schema") != "NSC-CONSOLIDATED-LAB-v2":
         raise ValueError("unknown lab snapshot schema")
-    if migration["schema"] != "NSC-REASSEMBLY-v1":
-        raise ValueError("unknown reassembly schema")
-    originals = {row["original_path"]: row for row in migration["rows"] if row["origin"] == "lab"}
+    if manifest.get("canonical_root") != ".":
+        raise ValueError("snapshot must use the current repository root")
     seen = set()
-    for row in original["files"]:
+    total_bytes = 0
+    for row in manifest["files"]:
         name = row["path"]
-        if name in seen or not name.startswith("lab/"):
-            raise ValueError("invalid or duplicated lab path")
+        if name in seen:
+            raise ValueError("duplicated retained snapshot path: " + name)
         seen.add(name)
-        migrated = originals.get(name)
-        if migrated is None or migrated["sha256"] != row["sha256"] or migrated["bytes"] != row["bytes"]:
-            raise ValueError("original snapshot identity changed: " + name)
-    for omitted in original["intentionally_omitted"]:
-        if "lab/" + omitted in originals:
-            raise ValueError("historical payload unexpectedly imported: " + omitted)
-    checked = check_reassembly(migration, root)
+        if name.startswith("archive/") and not name.startswith("archive/source-history/"):
+            raise ValueError("retired archive is not a current snapshot input: " + name)
+        full = safe_path(root, name)
+        expected_bytes = row["bytes"]
+        if type(expected_bytes) is not int or expected_bytes < 0:
+            raise ValueError("invalid retained byte count: " + name)
+        expected_hash = row["sha256"]
+        if not isinstance(expected_hash, str) or not re.fullmatch(r"[0-9a-f]{64}", expected_hash):
+            raise ValueError("invalid retained SHA256 identity: " + name)
+        if not full.is_file():
+            raise FileNotFoundError("retained snapshot file missing: " + name)
+        if full.stat().st_size != expected_bytes or digest(full) != expected_hash:
+            raise ValueError("retained snapshot bytes changed: " + name)
+        total_bytes += expected_bytes
+    return {"files": len(seen), "bytes": total_bytes}
+
+
+def check_snapshot(root=ROOT):
+    """Check current retained bytes and the unchanged historical Merkle pins."""
+    manifest = json.loads((root / "docs/lab-snapshot.json").read_text(encoding="utf-8"))
+    checked = check_retained_files(manifest, root)
     count = check_objects(root)
-    print(f"root preservation passed: {checked['total']} destinations; "
-          f"{len(seen)} original import identities; {count} pinned source objects; scientific gate OPEN")
+    print(f"root preservation passed: {checked['files']} retained files; "
+          f"{checked['bytes']} bytes; {count} pinned source objects; scientific gate OPEN")
+    return {**checked, "pinned_objects": count}
 
 if __name__ == "__main__":
     check_snapshot()

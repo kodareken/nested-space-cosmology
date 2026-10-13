@@ -31,7 +31,7 @@ Both are scoped input PASS records; full retained C1b remains OPEN.
 
 Latest: [full-energy PG covariance of retained group13](development/nsc-pg-group13-covariance.json)
 — first massive group PASS, including the computed CAR matrix and bulk-probe
-correlations. [Method and error account](../docs/nsc-pg-group13-covariance.md).
+correlations. [Method and error account](../docs/nsc-pg-retained-covariance.md).
 Verifier: `python3 scripts/derive_nsc_pg_group13_covariance.py --check`.
 Full retained C1b and the remaining 31 massive groups stay OPEN; PDF v0.25.0 unchanged.
 
@@ -47,20 +47,20 @@ Spatial covariance integration remains OPEN; PDF v0.25.0 is unchanged.
 H1: [full compact matched restart](development/nsc-compact-matched-restart.json)
 records both explicit start conventions and their immutable payloads. All
 1,280 historical X controls pass; the new matched checkpoint includes 1,152
-angular partners and signed-frequency data. See the [version policy](../docs/nsc-compact-matched-restart.md).
+angular partners and signed-frequency data. See the [version policy](https://doi.org/10.5281/zenodo.23090015).
 Verifier: `python3 scripts/derive_nsc_compact_matched_restart.py --check`.
 H2/global PG covariance remains OPEN; PDF v0.25.0 is unchanged.
 
 C1b-H: [paired horizon map and normalization gate](development/nsc-horizon-paired-pg-map.json)
 contains magnetic/gauge normalization, derived angular Z, and matched modal
-X/Y controls for all 32 groups. Its [note](../docs/nsc-horizon-paired-pg-map.md)
+X/Y controls for all 32 groups. Its [note](https://doi.org/10.5281/zenodo.23090015)
 identifies the compact interior collar discrepancy. Full spatial PG covariance
 and C1b remain OPEN; the old seed records and PDF v0.25.0 are preserved.
 Verifier: `python3 scripts/derive_nsc_horizon_paired_pg_map.py --check`.
 
 C1b-M: [massive signed preparation gate](development/nsc-massive-signed-preparation.json)
 records exact operator maps and the hard mixed-group data-sufficiency
-certificate. The [derivation](../docs/nsc-massive-signed-preparation.md)
+certificate. The [derivation](../docs/nsc-ks-signed-state.md)
 keeps the missing global state map explicit; no massive spatial C is assigned.
 Verifier: `python3 scripts/derive_nsc_massive_signed_preparation.py --check`.
 The PDF remains at v0.25.0 while full C1b is OPEN.
@@ -74,14 +74,14 @@ The PDF remains at its v0.25.0 checkpoint.
 
 C1 retarded memory: [transmitting CTP resolvent](development/nsc-transmitting-ctp-resolvent.json)
 records four temporal metric-transfer vertices on all 33 channels. The
-[derivation](../docs/nsc-transmitting-ctp-resolvent.md) binds the response to
+[derivation](../docs/nsc-local-observer-correspondence.md) binds the response to
 CTP memory and preserves the missing state/preparation/endpoint inputs.
 Full C1 and C2–C4 remain OPEN.
 Verifier: `python3 scripts/derive_nsc_transmitting_ctp_resolvent.py --check`.
 
 Z2a and static Z2b: [transmitting cross-resolvent](development/nsc-transmitting-cross-resolvent.json)
 passes the domain-correct cross-response and four static metric-kernel checks
-on all 33 retained channels. Its [derivation](../docs/nsc-transmitting-cross-resolvent.md)
+on all 33 retained channels. Its [derivation](../docs/nsc-transmitting-dirac-domain.md)
 keeps the energy-dependent inverse response distinct from an instantaneous
 Hamiltonian block. The time-history CTP bridge and Z4 remain OPEN.
 Verifier: `python3 scripts/derive_nsc_transmitting_resolvent.py --check`.
@@ -149,27 +149,27 @@ negative neck null signs and enables the recorded homogeneous projection.
 
 The latest [nsc-background-projection.json](development/nsc-background-projection.json)
 uses that completed tensor without recalculating it. Its
-[proper-volume/clock ledger](../docs/nsc-background-projection.md) fixes the
+[proper-volume/clock ledger](https://doi.org/10.5281/zenodo.23090015) fixes the
 local child-time density derivative, closes conservation below
 `4.4e-16`, and maps the parent Killing power to child spatial momentum. It
 does not introduce a dark-fluid assignment or a global background history.
 
 The latest [nsc-child-metric-backreaction.json](development/nsc-child-metric-backreaction.json)
 applies the initial ADM gate before any time integration. Its
-[Cauchy-surface note](../docs/nsc-child-metric-backreaction.md) records the
+[Cauchy-surface note](https://doi.org/10.5281/zenodo.23090015) records the
 Hamiltonian and momentum failure at $T=0$, with both source null components
 still negative. No CTP source is replayed after that decisive stop condition.
 
 The subsequent [nsc-constraint-complete-neck.json](development/nsc-constraint-complete-neck.json)
 uses permitted geometry route B. Its
-[source-selected construction](../docs/nsc-constraint-complete-neck.md) derives
+[source-selected construction](https://doi.org/10.5281/zenodo.23090015) derives
 the Landau normal and replacement radius from the completed tensor, closes
 both constraints below `2.3e-16`, and authorizes joint covariance--metric
 evolution next.
 
 The latest [nsc-coupled-ctp-metric-evolution.json](development/nsc-coupled-ctp-metric-evolution.json)
 checks that first same-state source evaluation. Its
-[state-data gate](../docs/nsc-coupled-ctp-metric-evolution.md) records a break
+[state-data gate](https://doi.org/10.5281/zenodo.23090015) records a break
 at `T=0`: the radius vertex is nonzero, but the earlier compact records contain
 integrated stresses rather than the mode covariance required for unitary CTP
 pressure evolution.
@@ -190,13 +190,13 @@ finite selected-surface stress.
 
 The latest [nsc-joint-history-state-bvp.json](development/nsc-joint-history-state-bvp.json)
 selects the permitted nonuniqueness-and-stop route. Its
-[BVP note](../docs/nsc-joint-history-state-bvp.md) records the seed constraint
+[BVP note](https://doi.org/10.5281/zenodo.23090015) records the seed constraint
 failure, the distinct endpoint-compatible covariances and the exact missing
 same-action history selector. Coupled evolution remains closed.
 
 The latest [nsc-general-ks-same-action-history.json](development/nsc-general-ks-same-action-history.json)
 executes the minimal homogeneous shift variation. Its
-[history note](../docs/nsc-general-ks-same-action-history.md) gives a
+[history note](https://doi.org/10.5281/zenodo.23090015) gives a
 duration-independent nonexistence certificate for the frequency-diagonal
 no-interface class. It does not extend that result to a tilted transmitting
 interface or inhomogeneous spherical geometry.
@@ -221,7 +221,7 @@ Subsequent scoped results include:
 
 - [charged-sector.json](development/charged-sector.json) checks the candidate
   charged compact domain, its anomaly cancellation and UV multiplicity. The
-  [source route](../docs/nsc-charged-self-sourcing-route.md) reuses an existing
+  [source route](https://doi.org/10.5281/zenodo.23090015) reuses an existing
   fermion-supported throat; an NSC self-sourced solution remains open.
 - [compact-interaction.json](development/compact-interaction.json) retains
   cross-level interactions after fermionic antisymmetrization.

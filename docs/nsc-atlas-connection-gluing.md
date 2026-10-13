@@ -9,7 +9,7 @@ exterior. It establishes neither a formation history nor a global evolution
 theorem for ideal matter shells.
 
 This resolves a narrower question than the earlier
-[gluing review](nsc-atlas-parent-gluing.md). A direct application of a smooth
+[gluing review](nsc-cosmological-atlas.md). A direct application of a smooth
 global-body theorem would miss the wall's regularity. Instead, apply the
 theorem whose inputs are smooth **ends**, and use locality to retain an
 already verified, piecewise-smooth body. The sealed earlier records retain

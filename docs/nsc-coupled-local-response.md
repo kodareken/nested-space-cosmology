@@ -14,16 +14,16 @@ Paths are relative to `lab/`.
 
 | Role | Owner |
 |---|---|
-| Consumer | [nsc_coupled_local_response.py](../src/recursive_horizons/nsc_coupled_local_response.py) |
-| Driver | [derive_nsc_coupled_local_response.py](../scripts/derive_nsc_coupled_local_response.py) |
-| Tests | [test_nsc_coupled_local_response.py](../tests/test_nsc_coupled_local_response.py) |
+| Consumer | [nsc_coupled_local_response.py](https://doi.org/10.5281/zenodo.23090015) |
+| Driver | [derive_nsc_coupled_local_response.py](../scripts/derive_nsc_conformal_local_response.py) |
+| Tests | [test_nsc_coupled_local_response.py](https://doi.org/10.5281/zenodo.23090015) |
 | Record | [nsc-coupled-local-response-v1.json](../results/development/nsc-coupled-local-response-v1.json) |
-| Series | [nsc-coupled-local-response-v1.npz](../results/development/nsc-coupled-local-response-v1.npz) |
+| Series | [nsc-coupled-local-response-v1.npz](https://doi.org/10.5281/zenodo.23090015) |
 | Successor record | [nsc-coupled-local-response-v2.json](../results/development/nsc-coupled-local-response-v2.json) |
-| Successor series | [nsc-coupled-local-response-v2.npz](../results/development/nsc-coupled-local-response-v2.npz) |
-| Geometry | [nsc-spherical-feedback-episode-v1.npz](../results/development/nsc-spherical-feedback-episode-v1.npz) |
-| Successor geometry | [nsc-regeneration-episode-v1.npz](../results/development/nsc-regeneration-episode-v1.npz), \(T=0.05\) to \(T=0.085\) |
-| Reducer | [nsc_evolving_reduction.py](../src/recursive_horizons/nsc_evolving_reduction.py), called with `backend="streamed"` and not edited |
+| Successor series | [nsc-coupled-local-response-v2.npz](https://doi.org/10.5281/zenodo.23090015) |
+| Geometry | [nsc-spherical-feedback-episode-v1.npz](https://doi.org/10.5281/zenodo.23090015) |
+| Successor geometry | [nsc-regeneration-episode-v1.npz](https://doi.org/10.5281/zenodo.23090015), \(T=0.05\) to \(T=0.085\) |
+| Reducer | [nsc_evolving_reduction.py](https://doi.org/10.5281/zenodo.23090015), called with `backend="streamed"` and not edited |
 
 The v1 seal is unchanged. Module sha256
 `3e4942a3462962a6e308f14a2eb71e9629d14909824e444d78ad3eece5b34a15`.

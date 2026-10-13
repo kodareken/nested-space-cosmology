@@ -21,9 +21,9 @@ introduce a further independently adjustable functional.
 
 | Contribution | Existing owner and treatment |
 |---|---|
-| Einstein–GHY and geometric $\pi$ | The [compact boundary action](nsc-compact-boundary-action.md) fixes its coefficient. The [smooth-seam variation](nsc-smooth-seam-variation.md) cancels the two oriented contributions on the shared smooth cut. |
-| Weyl, Euler and $\Box R$ endpoint primitives | The [Weyl boundary jets](nsc-weyl-boundary-jets.md) and smooth-seam record own them. They are not added again. |
-| Full Gaussian CTP $\Gamma_G=-i\log\det Q$ | [CausalCommonFunctional](../src/recursive_horizons/nsc_causal_common.py) and the [transmitting CTP formulation](nsc-transmitting-ctp-resolvent.md) retain the field, initial correlations and both Schur factors. The complementary factor is not another interface force. |
+| Einstein–GHY and geometric $\pi$ | The [compact boundary action](https://doi.org/10.5281/zenodo.23090015) fixes its coefficient. The [smooth-seam variation](nsc-smooth-geometry.md) cancels the two oriented contributions on the shared smooth cut. |
+| Weyl, Euler and $\Box R$ endpoint primitives | The [Weyl boundary jets](nsc-weyl-endpoint-match.md) and smooth-seam record own them. They are not added again. |
+| Full Gaussian CTP $\Gamma_G=-i\log\det Q$ | [CausalCommonFunctional](../src/recursive_horizons/nsc_causal_common.py) and the [transmitting CTP formulation](nsc-local-observer-correspondence.md) retain the field, initial correlations and both Schur factors. The complementary factor is not another interface force. |
 | Reference subtraction and induced local terms | The existing reference and local-history owners retain their allocation. Their derivatives must be included once in the same metric variation. |
 | $93.54264532195464$ | A diagnostic discrete time-node derivative, not a force or counterterm at the physical seam. |
 

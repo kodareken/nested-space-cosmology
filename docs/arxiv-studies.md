@@ -63,7 +63,7 @@ read, not a claim that every later revision was reviewed.
 
 ### Shared parent and fixed-source attachment, 10 October 2026
 
-The [second atlas](nsc-cosmological-atlas-v2.md) adds a shared
+The [second atlas](nsc-cosmological-atlas.md) adds a shared
 spatial parent and tests one separate spherical source pairing. The following
 reading supplies those components, without importing their full simulation
 programmes or claiming a new junction theorem.
@@ -87,7 +87,7 @@ and nonspherical parent matching remain different open connections.
 
 ### Moving boundaries and a parent with spherical collars
 
-The [third atlas](nsc-cosmological-atlas-v3.md) extends that reading
+The [third atlas](nsc-cosmological-atlas.md) extends that reading
 before admitting another evolution. Lobo-Crawford's **general** equation (8)
 requires zero flux jump for a fixed pure-tension wall. Its contraction with a
 perfect radiation fluid and a vacuum exterior forces zero relative speed;
@@ -106,7 +106,7 @@ signs, fixed inputs, finite domain and independent checks.
 | [Chrusciel-Isenberg-Pollack, gr-qc/0403066v2](https://arxiv.org/html/gr-qc/0403066v2), equations 1.1-1.6 and Theorem 1.1 | Localized vacuum neck construction when both selected regions have trivial KID kernel | Exact axisymmetric BL has a rotational KID and fails this sufficient hypothesis. This is not a general obstruction to gluing; the balanced N-body route remains available. |
 | [Hintz, 2210.13960v1](https://arxiv.org/pdf/2210.13960v1), introduction/Theorems 1.1-1.2 and adjacent qualification; detailed proof/section 6.2 unread | Small-body insertion into a no-KID background, with controlled limiting behaviour | Separate scale-dependent route; convergence to an inserted geometry is not automatically exact collar preservation. The cited Kerr exception permits deep-interior constraint violation and is not imported as an everywhere-vacuum result. |
 
-The [parent-gluing note](nsc-atlas-parent-gluing.md) also records
+The [parent-gluing note](nsc-cosmological-atlas.md) also records
 [gr-qc/0203053v3](https://arxiv.org/html/gr-qc/0203053v3), sections 2 and 4,
 and the full [one-page erratum](https://homepage.univie.ac.at/piotr.chrusciel/papers/cs/erratum_proof.pdf).
 The erratum withdraws section 5's generic positive-mass bridge-addition argument;
@@ -125,7 +125,7 @@ search does not establish priority.
 
 ### First sourced interior and observer domain, atlas v4
 
-The [fourth atlas](nsc-cosmological-atlas-v4.md) connects the fixed
+The [fourth atlas](nsc-atlas-connection-slice.md) connects the fixed
 v3 wall to a regular cap and a smooth vacuum AE end. The new reading supplies
 the spherical initial-data equations, the shell projection and the locality
 argument needed to use gluing outside the sourced body.
@@ -142,7 +142,7 @@ The [slice owner](nsc-atlas-connection-slice.md) supplies fixed
 inputs, analytic expressions and independent constraint checks. The
 [gluing owner](nsc-atlas-connection-gluing.md) distinguishes end-only
 gluing from a global smooth-body assumption and counts the retained ends.
-The [observer owner](nsc-atlas-connection-observer.md) fixes the
+The [observer owner](nsc-atlas-causal-observers.md) fixes the
 static worldline, retained radius and open proper-time window before calculation.
 
 The reading of [Aguirre-Johnson, gr-qc/0508093v2](https://arxiv.org/html/gr-qc/0508093v2)
@@ -164,7 +164,7 @@ locally equivalent far assemblies.
 
 ### Interior causal map, atlas v5
 
-The [fifth atlas](nsc-cosmological-atlas-v5.md) imports the known
+The [fifth atlas](nsc-atlas-causal-classification.md) imports the known
 isolated completion before drawing causal arrows. The source and the v4 slice
 remain fixed. It locates the observers in that history; it does not solve the
 glued many-body evolution or select a new formation mechanism.
@@ -193,7 +193,7 @@ The alternative communicating-mouth and multiple-daughter routes stay open.
 
 ### Early field transfer, atlas v6
 
-The [sixth atlas](nsc-cosmological-atlas-v6.md) chooses a classical
+The [sixth atlas](nsc-atlas-field-transfer.md) chooses a classical
 massless conformal scalar and an explicit early incoming characteristic. The
 new interface is its conditional transmission to the central observer. The
 source of the incident state, a global exterior solution and a quantum vacuum
@@ -658,6 +658,33 @@ follows. The new connection is the evaluated cancellation for the
 declared atlas probe and its necessary geometric wall condition;
 coupled propagation and wall displacement remain open.
 
+<a id="wall-mass-library"></a>
+
+### Exterior mass along the reference wall
+
+The [wall-mass closure](nsc-atlas-wall-mass-closure.md) applies established
+mass laws to the atlas's fixed leading field traces. It closes an analytic
+functional, not a new general transport law or a solved coupled spacetime.
+The [admission](prior-art-and-open-claim.md#exterior-wall-mass-closure-admission-13-october-2026)
+keeps numerical evaluation separate.
+
+| Source/version and reading | Reusable result and boundary |
+| --- | --- |
+| [An--Lim, 2005.04090v1](https://arxiv.org/html/2005.04090v1), 8 May 2020; reread (1.1)--(1.3), (2.4), (2.14)--(2.15) | Both minimal-scalar null mass derivatives, with the canonical normalization already recorded above. A timelike pullback uses both components. Untrapped exterior monotonicity does not transfer to the retained white-hole sector. Formation proofs remain unread in this cycle. |
+| [Hayward, gr-qc/9710089v2](https://arxiv.org/html/gr-qc/9710089v2); reread Section II (2.2)--(2.10), extend reading to VIII (8.1)--(8.9) | The general-matter mass gradient (2.9d) retains mixed stress, and (8.9a) already gives timelike transport in comoving coordinates. This is the original-frame check. The thermodynamic matter interpretation and later horizon laws are not imported. |
+| [Faraoni--Vitagliano, 1401.1189v1](https://arxiv.org/html/1401.1189v1), 6 January 2014; reread Section II through (7) | Full geometric-mass conformal transformation, including both gradient components. Coordinate invariance does not imply equality between frames. Later temperature and horizon applications remain outside the reading. |
+| [Aviles--Maeda--Martinez, 1910.07534v2](https://arxiv.org/html/1910.07534v2), 23 October 2019; reread (2.21)--(2.24), Lemma 1 and adjacent matter qualification | Smooth-exterior field/frame conversion. Extending it through the cap vacuum and material action requires transforming those sources; the exterior calculation does not supply that matching. |
+| [Danielsson--Lehner--Pretorius, 2109.09814v1](https://arxiv.org/html/2109.09814v1), 20 September 2021; read II.1--II.3, III.5 and VI.2.1--VI.2.2 around (98) | Close comparison: a transmitted scalar pulse changes geometric mass just outside and inside a shell. Their minimal scalar, AdS interior and multicomponent material differ from this conformal, de Sitter-cap, pure-tension model. Equation (98) removes the AdS vacuum term inside; outside it is the usual geometric mass. Their solver, stability and internal amplification are not adopted. |
+
+**Search coverage, 13 October 2026.** Four bounded batches of twelve queries
+combined Misner--Sharp, timelike, shell/domain wall, conformal scalar, mass
+balance and conformal transformation. Additional collapse, screening and
+quasilocal-mass results were screened at abstract level only. The closest
+new comparator is the shell calculation above. No exhaustive citation audit
+or worldwide-priority statement follows. The atlas-specific result is that
+its already fixed wall traces close the quadratic one-sided functional;
+numerical mass values and coupled cap/wall geometry remain uncomputed.
+
 ## Studies
 
 - [0711.1088](https://arxiv.org/abs/0711.1088) — Nemec, Tománek and Cuniberti, Appendix A.3: surface Green-function recursion.
@@ -675,11 +702,11 @@ coupled propagation and wall displacement remain open.
 - [1008.3980](https://arxiv.org/abs/1008.3980) — Chamseddine and Connes: spectral action on a space with boundary, used for the extrinsic-curvature coefficient required by the gravitational Hamiltonian.
 - [1009.5179](https://arxiv.org/abs/1009.5179) — Dappiaggi, Hack and Pinamonti: spinor boundary construction for the child state.
 - [1101.1424](https://arxiv.org/abs/1101.1424) — Pfäffle and Stephan: torsionful spectral action, including Proposition 5.4, Theorem 5.7 and the Bochner and heat-kernel formulae.
-- [1101.4012](https://arxiv.org/abs/1101.4012) — Popławski: matter–antimatter asymmetry and dark matter from torsion; the classical spin-torsion splitting between particles and antiparticles at the bounce, used as the starting estimate in the [child and neck chain](child-neck/torsion-splitting-and-inherited-spin-note.md).
+- [1101.4012](https://arxiv.org/abs/1101.4012) — Popławski: matter–antimatter asymmetry and dark matter from torsion; the classical spin-torsion splitting between particles and antiparticles at the bounce, used as the starting estimate in the [child and neck chain](child-neck/child-and-neck-status-note.md).
 - [1106.3263](https://arxiv.org/abs/1106.3263) — Andrianov, Kurkov and Lizzi: spectral action, Weyl anomaly and Higgs-dilaton potential, including the anomaly factorization and scale-versus-cutoff distinction.
 - [1109.2524](https://arxiv.org/abs/1109.2524) — Chung et al.: gravitational Dirac production in inflation, cited as different from the anisotropic radius-pulse benchmark.
 - [1109.6234](https://arxiv.org/abs/1109.6234) — Clemson et al.: primary analysis that different momentum-transfer completions can alter growth.
-- [1110.5019](https://arxiv.org/abs/1110.5019) — Popławski: mass of the universe in a black hole; the closed spin-torsion bounce (equations 1–4), its density and its scaling with the parent mass, used for the child energy floor in the [child and neck chain](child-neck/child-energy-floor-and-thread-length-note.md) and checked for self-consistency in [its collapse note](child-neck/eck-collapse-pair-production-note.md).
+- [1110.5019](https://arxiv.org/abs/1110.5019) — Popławski: mass of the universe in a black hole; the closed spin-torsion bounce (equations 1–4), its density and its scaling with the parent mass, used for the child energy floor in the [child and neck chain](child-neck/child-and-neck-status-note.md) and checked for self-consistency in [its collapse note](child-neck/child-and-neck-status-note.md).
 - [1111.3328](https://arxiv.org/abs/1111.3328) — Pusey, Barrett and Rudolph: on the reality of the quantum state.
 - [1112.0475](https://arxiv.org/abs/1112.0475) — Archived: Olmo and Rubiera-Garcia, a regular-core comparator for Ricci-based gravity, not evidence for the proposed phase transition.
 - [1210.2663](https://arxiv.org/abs/1210.2663) — Kurkov and Lizzi: Higgs-dilaton Lagrangian from spectral regularization, including the common local Weyl anomaly.
@@ -739,7 +766,7 @@ coupled propagation and wall displacement remain open.
 - [1908.08050](https://arxiv.org/abs/1908.08050) — Ruhdorfer, Serra and Weiler: section III.1, removing redundant curvature operators by metric redefinition.
 - [1910.01648](https://arxiv.org/abs/1910.01648) — Montero, Van Riet and Venken: section 2, charged de Sitter geometry used before importing a near-extremal seed.
 - [2003.08398](https://arxiv.org/abs/2003.08398) — Archived: Kovács and Reall, well-posed formulation of Lovelock and Horndeski theories.
-- [2007.11556](https://arxiv.org/abs/2007.11556) — Popławski: torsion, anisotropy and phenomenological particle production. V2 sections 1–8 read for the atlas: the June 2026 revision qualifies the Kantowski–Sachs description and requires a more general geometry tending to a three-sphere. Prior art for the [shear note](child-neck/kasner-shear-production-note.md), not a completed topology/source match.
+- [2007.11556](https://arxiv.org/abs/2007.11556) — Popławski: torsion, anisotropy and phenomenological particle production. V2 sections 1–8 read for the atlas: the June 2026 revision qualifies the Kantowski–Sachs description and requires a more general geometry tending to a three-sphere. Prior art for the [shear note](child-neck/child-and-neck-status-note.md), not a completed topology/source match.
 - [2008.02136](https://arxiv.org/abs/2008.02136) — Popławski: equations 1, 29 and 32–34, a spin-fluid Einstein–Cartan collapse and bounce, not the present vacuum control.
 - [2008.10995](https://arxiv.org/abs/2008.10995) — Gérard, Häfner and Wrochna: Theorem 1.1, the Unruh state for massless fermions on Kerr and its Hadamard property, on its stated domain.
 - [2011.03547](https://arxiv.org/abs/2011.03547) — Archived: East and Ripley, evolution of Einstein-scalar-Gauss–Bonnet gravity in a modified harmonic formulation.
@@ -765,7 +792,7 @@ coupled propagation and wall displacement remain open.
 - [2407.06790](https://arxiv.org/abs/2407.06790) — Archived comparison source for a quoted NICER chiral-effective-field-theory maximum neutron-star mass.
 - [2409.11398](https://arxiv.org/abs/2409.11398) — Archived: Thaalba et al., horizon-penetrating Painlevé–Gullstrand comparator and characteristic diagnostic for gravity with a Ricci coupling.
 - [2410.16264](https://arxiv.org/abs/2410.16264) — Archived: gauge-invariant hyperbolicity study of spherical evolution in scalar-Gauss–Bonnet gravity.
-- [2412.09558](https://arxiv.org/abs/2412.09558) — Tzanavaris, Boyle and Turok: the black mirror, in which the horizon joins the exterior to its own CPT mirror image; a particle falling in from one side meets its CPT-mirror antiparticle, and the PT isometry keeps a hole's charge while CPT reverses it. Prior art for the [swap-symmetry note](child-neck/swap-symmetry-note.md); the Dirac lifts and the V·A term were not found in the abstract and appendix text read.
+- [2412.09558](https://arxiv.org/abs/2412.09558) — Tzanavaris, Boyle and Turok: the black mirror, in which the horizon joins the exterior to its own CPT mirror image; a particle falling in from one side meets its CPT-mirror antiparticle, and the PT isometry keeps a hole's charge while CPT reverses it. Prior art for the [swap-symmetry note](child-neck/child-and-neck-status-note.md); the Dirac lifts and the V·A term were not found in the abstract and appendix text read.
 - [2412.19881](https://arxiv.org/abs/2412.19881) — Arkani-Hamed, Figueiredo and Vazão: the cosmohedron, the polytope proposed for the Tr(Φ³) cosmological wavefunction by blowing up and shaving an associahedron.
 - [2503.14738](https://arxiv.org/abs/2503.14738) — DESI Collaboration: DR2 baryon-acoustic-oscillation measurements and cosmological constraints, not a DR2 full-shape analysis.
 - [2503.14744](https://arxiv.org/abs/2503.14744) — DESI Collaboration: neutrino constraints from DR2 BAO and DR1 full shape, including the stated absence of a joint 2025 full-shape plus DR2 analysis.
@@ -823,7 +850,7 @@ coupled propagation and wall displacement remain open.
 - [hep-th/0206054](https://arxiv.org/abs/hep-th/0206054) — Borokhov, Kapustin and Wu: section 4.1 and the appendix, the magnetic angular spectrum and degeneracies.
 - [hep-th/0207060](https://arxiv.org/abs/hep-th/0207060) — Kiritsis et al.: bulk-boundary energy exchange that modifies cosmological evolution, cited as prior art still requiring the same NSC quantum state.
 - [hep-th/0306138](https://arxiv.org/abs/hep-th/0306138) — Vassilevich: heat-kernel expansion, including sections 3.3 and 7.1 and equations 3.34, 4.26–4.28 and 5.30–5.32.
-- [hep-th/0507253](https://arxiv.org/abs/hep-th/0507253) — Freidel, Minic and Takeuchi: effective four-fermion action from torsion with the Holst and non-minimal couplings, equation 23, used to check that the particle–antiparticle splitting survives second quantisation through the vector–axial term in the [child and neck chain](child-neck/second-quantised-splitting-note.md).
+- [hep-th/0507253](https://arxiv.org/abs/hep-th/0507253) — Freidel, Minic and Takeuchi: effective four-fermion action from torsion with the Holst and non-minimal couplings, equation 23, used to check that the particle–antiparticle splitting survives second quantisation through the vector–axial term in the [child and neck chain](child-neck/child-and-neck-status-note.md).
 - [hep-th/0602146](https://arxiv.org/abs/hep-th/0602146) — Iso, Umetsu and Wilczek: equations 25–28, Hawking radiation from charged black holes and the free fermionic flux normalization.
 - [hep-th/9502109](https://arxiv.org/abs/hep-th/9502109) — Mottola: section III, a configuration-space measure built from metric deformations and divided by diffeomorphism orbits.
 - [hep-th/9511136](https://arxiv.org/abs/hep-th/9511136) — Barrabès and Frolov: v1 introduction and sections 2–4 now read; multiple daughters inside one hole, null-shell matching and boundary interactions. Import the conditional geometry; production probability and microphysics remain open. See the atlas source card.

@@ -18,7 +18,7 @@ PLAN.md or handover task authorities. Preserve historical evidence and unrelated
 | Gravitational data and response | [Null initialization](docs/nsc-atlas-characteristic-initialization.md), [source-leg mass](docs/nsc-atlas-source-mass.md); bulk and wall evolution remain open |
 | Exterior wall-mass input | [Analytic functional](docs/nsc-atlas-wall-mass-closure.md); controlled evaluation or a named cap/wall junction input is the next decision |
 | One package and commands | `src/recursive_horizons`, `scripts`, `tests`; [reproducing](docs/reproducing.md) |
-| Preservation and recovery | [Consolidation](docs/repository-consolidation.md), [manifest](results/reassembly/manifest.json) |
+| Preservation and recovery | [Consolidation](docs/repository-consolidation.md), [manifest](https://doi.org/10.5281/zenodo.23090015) |
 
 One active root owns scientific and publication work. Never use an old nested
 checkout or a second package installation to make a current check pass.
@@ -37,5 +37,3 @@ Work on local `main` in this checkout. GitHub is a backup mirror; push only
 when Douglas explicitly asks. Preserve published remote branches. The Windows scientific runtime is `.venv/validation`
 (Python 3.14.8); see the reproduction guide for its base-interpreter fallback.
 Keep this file an index; detailed research routes belong in the linked notes.
-
-@HYPA.md
