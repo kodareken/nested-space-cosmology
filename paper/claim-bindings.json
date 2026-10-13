@@ -103,6 +103,11 @@
       "section": "13.6",
       "status": "derived",
       "owner": "docs/nsc-atlas-source-mass.md"
+    },
+    "atlas-scalar-normal-force": {
+      "section": "13.7",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-scalar-normal-force.md"
     }
   },
   "findings": [
@@ -271,6 +276,14 @@
       "note": "docs/nsc-atlas-source-mass.md",
       "record": "results/development/nsc-atlas-source-mass-v1/mass.json",
       "paper_section": "13.6"
+    },
+    {
+      "id": "atlas-scalar-normal-force",
+      "status": "derived",
+      "summary": "The full canonical conformal scalar stress has zero regular normal-stress jump on the fixed transmitting wall at quadratic order. Together with zero additional scalar surface stress and fixed vacuum/tension sources, this requires a vanishing quadratic variation of mean extrinsic-curvature trace. That variation includes bulk metric and wall displacement; no unchanged trajectory, bulk evolution or finite-amplitude validity bound is established.",
+      "note": "docs/nsc-atlas-scalar-normal-force.md",
+      "record": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
+      "paper_section": "13.7"
     }
   ]
 }

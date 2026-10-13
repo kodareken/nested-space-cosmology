@@ -356,3 +356,40 @@ global energy or completed evolution. Independent metric and stress checks,
 the explicit corner, and the finite source-leg scope address those risks.
 Known mass laws are borrowed; their application here makes no worldwide
 priority claim.
+
+## Scalar normal-force admission, 13 October 2026
+
+The prepared pulse has compatible singular surface stress and tangential
+flux, and its initial null geometry now has an invariant mass response.
+Before transporting that geometry to the wall, check the remaining local
+normal-force condition. This is an application of existing junction and
+stress laws, not a new general junction theorem.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | Full nonminimal Hilbert stress and scalar/material jumps from Aviles--Maeda--Martinez [1910.07534v2](https://arxiv.org/html/1910.07534v2), (2.11)-(2.14), (3.42)-(3.46); normal Gauss constraint and shell evolution identity from Lobo--Crawford [gr-qc/0507063v2](https://arxiv.org/html/gr-qc/0507063v2), (5)-(6). The existing scalar-wall owner fixes conventions. |
+| Missing | The quadratic regular scalar normal-stress jump for this conformal probe and constant-tension wall, and its role in the unsolved geometric normal-force condition. Surface and tangential cancellation do not supply it. |
+| Fixed prerequisites | Original C3 preparation and no-return window; canonical real massless scalar, xi=1/6, zero scalar background/potential; unchanged scalar-independent vacuum terms and material tension. Continuous induced metric and scalar; sufficient one-sided regularity; common cap-to-exterior normal; [n phi]=k phi, [K_ab]=-k gamma_ab, [K]=-3k. |
+| Decision | Project the full stress onto the normal and reduce its jump analytically on the background. Determine whether the prepared field supplies a nonzero quadratic normal forcing, an automatic compatibility identity, or an unprovided datum. Keep any metric and wall correction explicitly unsolved. |
+| Unlocks | A checked interface condition for the later sourced geometry/wall initial-boundary problem, or a precise obstruction. If cancellation is automatic, borrow the identity and proceed to transport rather than generating pressure curves. |
+| Domain and order | Existing wall R/ell in [0.45,0.55] and original observer/field domain; formal order-amplitude-squared scalar forcing evaluated on the reference geometry. No finite amplitude, new future domain or assertion of an exact unbackreacted spacetime. |
+| Budget | Analytic reduction and exact symbolic verification only, at most 60 process-CPU seconds per complete evidence creation. No waveform rerun, numerical differentiation, parameter scan, pressure curve, bulk solver or wall trajectory integration. |
+| Independent check | Compare direct Gaussian-normal projection with one-sided product/jump identities and the borrowed Gauss/material-shell bookkeeping. Retain the cap vacuum term and the nonminimal Einstein-tensor term exactly once. Check normal-and-side reversal, zero amplitude, dimensional homogeneity and omission/alteration controls. Do not use the unknown sourced Einstein equations to force cancellation. |
+| Stop or redirect | Stop after a proved identity or a named nonzero forcing; do not turn an automatic condition into a new simulation. Stop if undefined products, unprovided traces or incompatible source terms remain. Individual pressure curves or coupled transport require a separate admission. |
+
+The likely failures are a normal/sign convention mismatch, omission of the
+cap's vacuum Einstein tensor, or promotion of local compatibility to a solved
+trajectory. Oriented one-sided checks, explicit vacuum terms and an unsolved
+geometric remainder distinguish these failures. The bounded reading of the
+two imported nonminimal-junction papers did not find this evaluated jump;
+that observation does not certify worldwide priority.
+
+Outcome: the [normal-force calculation](nsc-atlas-scalar-normal-force.md)
+proves zero additional regular scalar normal-stress jump at the selected
+coupling. Gauss/Israel and normal distributional conservation fix the plus
+force sign in the project's conventions; the opposite sign printed in
+Lobo--Crawford (6) is not copied. The resulting geometric condition still
+contains unsolved metric and wall-displacement corrections. This branch
+stops at the identity. A promising next bridge is exterior-side mass
+transport along the existing wall traces, before a full coupled evolution;
+it requires a separate admission and an independent transport check.

@@ -96,6 +96,23 @@ coefficient is relative to the fixed reference; it does not select a finite
 amplitude or establish a vacuum future. Later wall matching, bulk evolution
 and the gravitational correction to the observer signal remain open.
 
+The [normal-force successor](nsc-atlas-scalar-normal-force.md) checks the
+remaining regular scalar stress jump on the fixed wall. Its ordinary
+check authenticates the new declaration and original scalar-wall evidence;
+explicit algebra replay independently tests the projection and force sign:
+
+```sh
+python scripts/record_nsc_atlas_scalar_normal_force.py --check
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_normal_force.py --check-algebra
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_scalar_normal_force.py
+```
+
+Creation requires a fresh output directory and stays inside the declared
+60-process-CPU-second budget. It runs no waveform, pressure history or
+coupled metric evolution. Its necessary mean-curvature condition does not
+set the wall displacement to zero; individual one-sided pressures and
+finite-amplitude validity remain uncomputed.
+
 Atlas v8 remains the finite exterior-to-interior waveform result. Its original
 replay is explicitly selected below. The fixed input, numerical budget,
 refinement diagnostics and independent analytic tail bound remain in the
