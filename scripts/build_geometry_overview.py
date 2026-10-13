@@ -32,6 +32,7 @@ INPUTS = {
     "characteristic_initialization": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
     "source_mass": "results/development/nsc-atlas-source-mass-v1/mass.json",
     "scalar_normal_force": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
+    "wall_mass_closure": "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json",
 }
 COLORS = {
     "ink": "#183346", "muted": "#536977", "panel": "#f1f5f7",
@@ -117,6 +118,20 @@ def load_evidence() -> tuple[dict, dict]:
                 "stability_established",
             ))):
         raise ValueError("The normal-force record no longer supports local scalar compatibility with coupled evolution open.")
+    wall_mass = records["wall_mass_closure"]
+    wall_mass_boundary = wall_mass["knowledge_boundary"]
+    if (wall_mass["status"] != "CONDITIONAL_EXTERIOR_WALL_MASS_FUNCTIONAL_CLOSED"
+            or wall_mass["inputs"] != response["inputs"]
+            or wall_mass["domain"] != force["domain"]
+            or wall_mass_boundary["exterior_wall_mass_functional_closed"] is not True
+            or any(wall_mass_boundary[key] is not False for key in (
+                "numerical_wall_mass_curve_evaluated", "cap_mass_determined",
+                "material_shell_mass_determined", "bulk_einstein_evolution_solved",
+                "corrected_wall_trajectory_solved", "interior_observer_correction_computed",
+                "finite_amplitude_validity_bound_established", "stability_established",
+                "full_coupled_solution_established",
+            ))):
+        raise ValueError("The wall-mass record no longer supports analytic exterior closure with coupled geometry open.")
     return records, provenance
 
 
@@ -224,7 +239,7 @@ def render(output: Path) -> dict:
         "Analytic inverse: signal + fixed geometry → source\n"
         "Permitted preparation still needs a physical law",
         color="causal", size=13)
-    label(4.5, 0.64, "Initial mass + local wall checks; evolution open", 13, color="muted")
+    label(4.5, 0.64, "Wall mass closes analytically; evolution open", 13, color="muted")
 
     for x, kind, name in ((0.39, "attachment", "Attachment"), (2.76, "descent", "Descent"),
                           (4.62, "causal", "Causal influence"), (7.18, "correlation", "Correlation")):
@@ -334,16 +349,31 @@ def render(output: Path) -> dict:
                 "derived_result": records["scalar_normal_force"]["derived_result"],
                 "knowledge_boundary": records["scalar_normal_force"]["knowledge_boundary"],
                 "interpretation": "The full conformal scalar stress adds no regular normal-stress jump at quadratic order on the fixed wall; a sourced continuation must respect zero mean-curvature variation with fixed vacuum and tension.",
-                "next_question": {
-                    "owner": "docs/nsc-cosmological-atlas.md#programme-dependencies",
-                    "connection_id": "wall-mass-transport",
-                    "decision": "Do the existing leading wall field traces close exterior-side geometric mass transport on reference wall cuts through the borrowed flux and frame laws?",
-                    "status": "Proposed question; not yet derived, admitted or evaluated",
-                },
                 "limits": [
                     "The mean-curvature variation includes both metric and wall-embedding corrections; it does not fix the wall displacement to zero.",
                     "No individual normal-pressure curve or coupled metric/wall evolution has been computed.",
                     "The cap vacuum contribution and full improvement terms are essential; no finite-amplitude validity bound or stability result follows.",
+                ],
+            },
+            "wall_mass_closure": {
+                "status": records["wall_mass_closure"]["status"],
+                "domain": records["wall_mass_closure"]["domain"],
+                "conventions": records["wall_mass_closure"]["conventions"],
+                "formulas": records["wall_mass_closure"]["formulas"],
+                "derived_result": records["wall_mass_closure"]["derived_result"],
+                "knowledge_boundary": records["wall_mass_closure"]["knowledge_boundary"],
+                "interpretation": "Known leading wall traces and the quiet mass anchor close the quadratic exterior geometric-mass functional through both null fluxes and the full conformal endpoint term.",
+                "next_question": {
+                    "owner": "docs/nsc-cosmological-atlas.md#programme-dependencies",
+                    "connection_ids": ["wall-mass-evaluation", "cap-wall-closure"],
+                    "decision": "Would controlled finite evaluation supply a needed junction input, or must a named remaining cap/wall datum be closed first?",
+                    "status": "Open decision; no new bulk solver is presumed",
+                },
+                "limits": [
+                    "No numerical mass curve has been evaluated; the old waveform samples do not certify the new integral.",
+                    "A regular perturbative continuation would have this coefficient; existence of the coupled boundary solution is not established.",
+                    "The wall tail supplies no late Jordan mass sign, frame agreement or constant mass plateau.",
+                    "The cap vacuum and nonconstant reference mass require their own treatment; cap/wall evolution, observer correction and finite-amplitude validity remain open.",
                 ],
             },
             "displayed_connections": [
@@ -368,6 +398,7 @@ def render(output: Path) -> dict:
             "Quadratic local scalar shell compatibility leaves bulk backreaction, the coupled normal-force equation and finite-amplitude validity open.",
             "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
             "The source-leg mass successor closes transverse radius transport only on the initial surface; bulk propagation and the dynamical wall response remain open.",
+            "The wall-mass successor closes a smooth exterior-side analytic functional only; its evaluation and the remaining cap/wall geometry are separate questions.",
             "Early reception after the anchor is compatible with exclusions on new emissions.",
             "No second cosmological child, regular formation, stability or dark component is established.",
         ],

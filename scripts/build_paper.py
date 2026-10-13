@@ -650,7 +650,7 @@ def build_pdf(
             value = re.sub(rf"\\{command}\s+([A-Za-z])", r"\1", value)
         for name, symbol in greek.items():
             value = value.replace(f"\\{name}", symbol)
-        value = re.sub(r"\\(log|ln|exp|cos|sin|tan|det|Tr)(?![A-Za-z])", r"\1", value)
+        value = re.sub(r"\\(log|ln|exp|cosh|sinh|tanh|cos|sin|tan|det|Tr)(?![A-Za-z])", r"\1", value)
         value = re.sub(r"_\{([^{}]+)\}", r"_(\1)", value)
         value = re.sub(r"\^\{([^{}]+)\}", r"^(\1)", value)
         value = value.replace("{", "").replace("}", "")
@@ -1056,8 +1056,11 @@ def build_pdf(
 
         def flush_paragraph() -> None:
             if paragraph:
+                style = styles["Body"]
+                if paragraph[0].lstrip().startswith("Evidence:"):
+                    style = ParagraphStyle("RHEvidence", parent=style, keepWithNext=True)
                 story.append(
-                    Paragraph(inline_markup(" ".join(part.strip() for part in paragraph)), styles["Body"])
+                    Paragraph(inline_markup(" ".join(part.strip() for part in paragraph)), style)
                 )
                 paragraph.clear()
 
@@ -1089,6 +1092,18 @@ def build_pdf(
                     rendered.drawWidth *= scale
                     rendered.drawHeight *= scale
                 rendered.hAlign = "CENTER"
+                following = index + 1
+                while following < len(lines) and not lines[following].strip():
+                    following += 1
+                if following < len(lines) and re.match(r"^\*Figure(?:\s|\.)", lines[following].strip()):
+                    caption_lines = []
+                    while following < len(lines) and lines[following].strip():
+                        caption_lines.append(lines[following].strip())
+                        following += 1
+                    caption = Paragraph(inline_markup(" ".join(caption_lines)), styles["Body"])
+                    story.append(KeepTogether([Spacer(1, 5), rendered, Spacer(1, 5), caption]))
+                    index = following
+                    continue
                 story.extend([Spacer(1, 5), rendered, Spacer(1, 5)])
                 index += 1
                 continue

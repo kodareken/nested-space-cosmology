@@ -275,6 +275,64 @@ physical operator, field state and boundary map. Sections 14–15 give a separat
 finite Hilbert-space realization of this reduction, without identifying its
 complementary modes with a cosmological exterior.
 
+### 6.1. The local effective Lambda target
+
+<!-- nsc-claim:target-local-effective-lambda -->
+
+The intended cosmological target is a local effective $\Lambda$ arising
+from inherited Schur memory: surrounding structure that a region does not
+resolve contributes through $\Sigma(z)=B(zI-D)^{-1}B^\dagger$ to its
+local response. A vacuum-form local gravitational part would be written
+$T^{\mathrm{eff}}_{\mu\nu}=-(\Lambda_{\mathrm{eff}}/\kappa_4)g_{\mu\nu}$,
+with $\kappa_4=8\pi G$. Identifying the physical exterior operator, its
+state and boundary map, and obtaining that local part from the causal
+response remain the missing connections. The finite Schur identity fixes
+the reduction; it does not yet provide a measured cosmological value.
+The [Schur-memory owner](../docs/schur-memory.md) keeps this target and
+its retained spectral and geometric dictionary.
+
+### 6.2. The retained local incoming gate
+
+<!-- nsc-claim:local-source-insertion-majorant -->
+
+Evidence: [majorant v7 record](../results/development/nsc-ks-source-operator-majorant-v7.json)
+and [gate budget v5 record](../results/development/nsc-ks-gate-budget-v5.json).
+
+The [local incoming source-insertion majorant v7](../docs/nsc-ks-source-operator-majorant-v7.md)
+is a separate controlled application. For the fixed switched state law
+$C_\Sigma[g]=U_gC_{\mathrm{up}}U_g^\dagger$ on $I=S(1)+[.12,.18]$,
+family $(14,1)$ covers **1168/1168 signed rows**, with original weights
+counted once and no remaining row keys. Its continuous insertion bounds are
+
+$$
+\epsilon_N\leq
+3646674054457366029024452496769420151764188105426118876609\,2^{-229}.
+$$
+
+$$
+\epsilon_\beta\leq
+5793343250846686183515013928067141454707331929528967339969\,2^{-230}.
+$$
+
+These are approximately $4.226958072607968\times10^{-12}$ and
+$3.357610065481873\times10^{-12}$ for this family's source-error
+insertion. The physical local gate remains **OPEN**:
+`physical_upstream_budget_component` is null. Source quadrature,
+numerical field error, value-assembly arithmetic and every other source
+family are excluded from these bounds. Complete row coverage in this
+family does not supply those missing errors.
+
+The [v5 gate budget](../docs/nsc-ks-gate-budget-v5.md) names nine distinct
+components, with total error allocation $2\times10^{-11}$ and residual
+reserve $10^{-11}$ against the physical tolerance $3\times10^{-11}$.
+Its applicable component bounds remain null; 60 positive and 120 signed
+families are declared requirements rather than authenticated coverage.
+The gate is neither an existence nor a non-existence certificate and
+does not determine $\Lambda_{\mathrm{eff}}$. Its paused campaign does not
+invalidate the finite inheritance theorem or the scalar-chain results.
+Retired supporting records are cited at
+[Zenodo](https://doi.org/10.5281/zenodo.23090015).
+
 ## III. A finite map of possible geometries
 
 ### 7. Start with two holes, without manufacturing two children
@@ -606,825 +664,260 @@ add unconstrained parameters until a preferred story appears.
 
 <!-- nsc-claim:atlas-field-response -->
 
-Evidence: [field transfer and checks](../results/development/nsc-cosmological-atlas-v6/field-transfer.json),
-[distributional matching](../docs/nsc-atlas-field-matching.md), and
-[finite initial-state construction](../docs/nsc-atlas-field-transfer.md).
+Evidence: [field-transfer record](../results/development/nsc-cosmological-atlas-v6/field-transfer.json)
+and [field-transfer owner](../docs/nsc-atlas-field-transfer.md).
 
-A causal path permits a response; a field law and state determine one.
-On the fixed wall geometry, take a classical real massless scalar in four
-dimensions, its spherical $l=0$ sector, and conformal coupling
-$\xi=1/6$. Its action and equation are
-
-$$
-S_\phi=-\frac12\int\sqrt{-g}\,[(\nabla\phi)^2+\xi\mathcal R\phi^2]\,d^4x,
-\qquad (\Box-\xi\mathcal R)\phi=0.
-$$
-
-There is no independent scalar interaction added to the wall.
-With the normal directed from cap to exterior, the pure-tension jump gives
-$[K]=-3\kappa$ and singular curvature $6\kappa\delta$.
-Distributional matching therefore requires
+On the fixed de Sitter/Schwarzschild wall, retain $H\ell=1$, $k\ell=2$,
+$M/\ell=0.4$ and a real classical massless scalar in its spherical mode,
+with conformal coupling $\xi=1/6$ and no additional scalar wall interaction.
+For $\chi=R\phi$, the distributional scalar equation gives
 
 $$
-[\phi]=0,\qquad [n\phi]=6\xi\kappa\phi.
+[\phi]=0,\qquad [n\phi]=6\xi k\phi,\qquad
+[\chi]=0,\qquad [n\chi]=(6\xi-1)k\chi=0.
 $$
 
-For $\chi=R\phi$, using $[nR]=-\kappa R$,
+The conformal interface barrier cancels; the smooth exterior potential
+$f_+2M/R^3$ remains. A regular center has
+$\chi=F(\eta+r)-F(\eta-r)$. For incoming wall characteristic
+$I=(d/d\tau_W+n)\chi$, its exact conditional response is
 
 $$
-[\chi]=0,\qquad [n\chi]=(6\xi-1)\kappa\chi.
+\phi_C[T(\tau_W)]=\frac{I(\tau_W)}{T'(\tau_W)},\qquad
+T=t_W-\ell\log(1-R/\ell),\qquad
+T'=\frac{\gamma(1+v_{\rm pec})}{1-R/\ell}>0.
 $$
 
-Conformal coupling cancels this radial delta barrier. It does not remove
-the smooth Schwarzschild scattering potential $f_+2M/R^3$.
-The jump law is borrowed from the distributional field equation; see
-[Santiago et al., 1512.02120v2, equations 31–33](https://arxiv.org/html/1512.02120v2).
-Their static charged-shell setup is not the moving solution used here.
-
-Inside the conformally flat cap, regularity at the center gives
-
-$$
-\chi=F(\eta+r)-F(\eta-r),\qquad
-\phi_C=\frac{2F'(\eta)}{a}.
-$$
-
-The outgoing term enforces central regularity; it is not a second
-independently adjustable central source. The conformal reduction follows
-the published field transformation of [Huguet, Queva and Renaud
-(gr-qc/0603031v1)](https://arxiv.org/html/gr-qc/0603031v1).
-
-Set the initial interior field and its normal derivative to zero on the
-cap slice where the wall has $R=0.05\ell$. Prescribe one exterior-side
-incoming characteristic at the wall,
-
-$$
-I=(d/d\tau_W+n)\chi.
-$$
-
-The plus derivative extracts the inward wave; its propagation direction
-is $U_W-n$. No global exterior state or quantum vacuum is specified.
-For the calibration pulse let $\delta=0.03\ell$,
-$\tau_*=-1.1138558046\ell$, and $z=(\tau_W-\tau_*)/\delta$.
-Define $B(z)=(1-z^2)^4$ for $|z|<1$, with $B=0$ outside, and set
-
-$$
-I=\frac{\varepsilon}{\delta}B'(z).
-$$
-
-The extended $B$ is $C^3$, and $I$ is $C^2$, not an infinitely
-smooth bump. The amplitude $\varepsilon$ is a formal test-field
-normalization. The incoming trace is stipulated zero outside the pulse
-through the retained response interval.
-
-Let $T(\tau_W)$ be central arrival proper time. On this early branch,
-
-$$
-T=t_W-\ell\ln(1-R/\ell),\qquad
-T'=\frac{\gamma(1+v_{\mathrm{pec}})}{1-R/\ell}>0.
-$$
-
-The exact conditional central transfer is
-
-$$
-\phi_C[T(\tau_W)]=\frac{I(\tau_W)}{T'(\tau_W)}.
-$$
-
-This relation includes the wall boost and reception-clock Jacobian.
-It is not a geometric-optics approximation.
-
-![Incoming wall pulse and its central proper-time response](../results/development/nsc-cosmological-atlas-v6/field-response.png)
-
-*Figure 5. A prescribed classical pulse, propagated on the fixed geometry.
-The source record normalizes input as $\ell I/\varepsilon$ and response
-as $\ell\phi_C/\varepsilon$. The incoming history is a calibration
-state. Its remote preparation, energy flux, quantum state and backreaction
-have not been calculated.*
-
-The wall support lies at $R/\ell=0.47499005$ to $0.52285042$.
-The central response lies at $t_C/\ell=-0.50593397$ to
-$-0.34799584$, giving a duration stretch of $2.63230219$.
-Its normalized peaks are $+23.84144800$ and $-24.46533478$;
-the magnitude ratio is $1.02616816$. These are waveform amplitudes,
-not particle abundances or energy-transfer efficiencies.
-
-The center field is exactly zero after this received support through
-$t_C=0$, conditional on the stipulated incoming history.
-From the first central arrival until that endpoint, the wall's comoving
-radius is at least $0.8\ell$, while the earliest reflected ray reaches
-at most $0.65853382\ell$. The $0.14146618\ell$ gap excludes a
-cap round trip in this interval. It does not exclude an uncomputed exterior
-tail under different incoming data, erase an observer's record, or imply
-that the whole field vanishes everywhere.
-
-There is explicit freedom in this wall-input calibration. On an admissible monotone arrival interval,
-a desired central trace $Y(T)$ can be produced by
-$I(\tau)=T'(\tau)Y[T(\tau)]$, subject to the same regularity and state
-restrictions. Within the zero-area pulse family, the corresponding trace
-must also have zero area. This inverse fixes a wall input under the stated
-transfer law; it does not construct two compatible exteriors with the same
-observation. The right parent observer cannot prepare it through
-a causal channel in this reference. The following construction supplies
-independent finite data elsewhere in the retained geometry; their remote
-physical origin remains unspecified.
-
-Minimal coupling remains a distinct alternative:
-$[n\chi]=-\kappa\chi$ and the cap radial equation contains
-$-2\chi/\eta^2$. Its known bulk de Sitter tail does not solve the
-moving-boundary problem. The conformal transient therefore neither proves
-nor excludes memory in other field theories.
+The prescribed wall-clock calibration has half-width $0.03\ell$, duration
+stretch $2.63230219$ and normalized extrema $+23.84144800$ and
+$-24.46533478$. Its central field vanishes after the received support
+through $t_C=0$, conditional on zero incoming data afterward and the
+proved no-return interval. These are field amplitudes, not energy fractions.
+The calibration does not generate its exterior input.
 
 ### 13.1. Where the early signal can originate
 
 <!-- nsc-claim:atlas-field-preparation -->
 
-Evidence: [finite preparation and bounds](../results/development/nsc-cosmological-atlas-v7/preparation-access.json),
-[derivation and independent checks](../docs/nsc-atlas-field-preparation.md).
+Evidence: [preparation record](../results/development/nsc-cosmological-atlas-v7/preparation-access.json)
+and [preparation owner](../docs/nsc-atlas-field-preparation.md).
 
-Keep the same geometry and conformal probe. The right-exterior observer
-$P$ still cannot signal the wall or center. However, the early wall is
-adjacent to retained Schwarzschild white-hole geometry. Finite data there
-can reach it without introducing a source at the singular past boundary.
-This is an exterior-side preparation, not a signal sent by $P$.
+Independent data can instead be placed in retained white-hole sector IV.
+The ordinary right-parent observer remains causally excluded. Let
+$x=R/\ell$, $F(x)=(1-x/0.8)e^{x/0.8}=UV$, $V_a=V_W(0.45)$,
+$V_b=V_W(0.55)$ and $U_0=F(0.4)/V_a$. Define $D$ by
+$V_a\leq V\leq V_b$ and $U_0\leq U\leq U_W(V)$;
+there $0.4\leq R/\ell\leq0.55$. Prescribe zero bottom and cap data and
+$g(V)=\varepsilon B[4(V-V_m)/(V_b-V_a)]$ on $U=U_0$, where
+$B(z)=(1-z^2)^4$ for $|z|<1$ and zero otherwise. This is a compact
+$C^3$ input, independent of any desired central waveform.
 
-In dimensionless Kruskal coordinates $U,V<0$, future radial causal
-curves have nondecreasing coordinates. With $x=R/\ell$, define
-
-$$
-F(x)=(1-x/0.8)e^{x/0.8}=UV.
-$$
-
-Choose wall endpoints $x_a=0.45$, $x_b=0.55$ and radial floor
-$x_f=0.4$. Set $V_a=V_W(x_a)$, $V_b=V_W(x_b)$ and
-$U_0=F(x_f)/V_a$. The retained preparation domain is
+With $L(u)=V_a$ below $U_a$ and the inverse wall graph above it,
 
 $$
-D=\{V_a\leq V\leq V_b,\quad U_0\leq U\leq U_W(V)\}.
+\chi=g-\int_{U_0}^{U}du\int_{L(u)}^Vdv\,K\chi,\qquad
+K=\frac{16M^4}{R^4}e^{-R/(2M)},\qquad \chi_U|_W=0.
 $$
 
-The wall truncates this domain: a rectangular continuation across it would
-use the wrong field equation. Monotonicity of $F$ gives
-$0.4\leq R/\ell\leq0.55$ throughout $D$, away from both $R=0$
-and $R=2M$. Prescribe zero cap field and time derivative at the earlier
-flat time $t_a=t_W(x_a)$, and zero reduced field on the bottom
-characteristic $V=V_a$. On $U=U_0$, independently prescribe
-$g(V)=\varepsilon B(4(V-V_m)/(V_b-V_a))$, where
-$V_m=(V_a+V_b)/2$ and $B$ is the $C^3$ bump above.
-It vanishes near the corners. Neither the outgoing wall characteristic
-nor a desired received waveform is independently specified.
-
-![Retained exterior preparation and its independent input](../results/development/nsc-cosmological-atlas-v7/preparation-domain.png)
-
-*Figure 6. The preserved v7 preparation checkpoint, before the waveform
-evaluation in Section 13.2. The finite preparation occupies the retained side of the early
-wall in sector IV. The profile on the characteristic surface is input,
-not a calculated wall or central waveform. The singularity and horizons
-lie outside this finite domain. Figure 4 supplies the global chart context.*
-
-The cap null labels $u=\eta-r$ and $v=\eta+r$ increase along the
-timelike wall. The earliest possible reflected signal has outgoing label
-$v_a$, whereas $u_b<v_a$ throughout this wall window; the recorded gap
-is $(v_a-u_b)/\ell=2.63459191$. No central reflection can yet return.
-The normal toward the retained exterior has components
+The integral operator has analytic uniform-norm bound
 
 $$
-n^U=-\dot{U}_W,\qquad n^V=\dot{V}_W.
+q_*=16e^{-1/2}[\sqrt{F(0.4)}-\sqrt{F(0.55)}]^2
+=0.13882099234357653<1.
 $$
 
-The vanishing outgoing
-characteristic consequently supplies $\chi_U=0$ on the wall.
-
-The borrowed Schwarzschild scalar potential is $f_+2M/R^3$;
-see [Dolan and Ottewill, 1106.4318v1, Eq. 11](https://arxiv.org/html/1106.4318v1).
-Its usual asymptotic scattering conditions are not imported into sector IV.
-The local operator becomes
-
-$$
-\chi_{UV}+K\chi=0,\qquad K=\frac{16M^4}{R^4}e^{-R/(2M)}=-\frac{R_{UV}}{R}.
-$$
-
-Let $L(u)=V_a$ for $u\leq U_a=U_W(x_a)$ and otherwise let
-$L(u)$ be the inverse wall graph. The complete reduced problem is
-
-$$
-\chi(U,V)=g(V)-\int_{U_0}^{U}du\int_{L(u)}^{V}dv\,K(u,v)\chi(u,v).
-$$
-
-Differentiating recovers the PDE, characteristic data and wall condition.
-An analytic bound on the integral operator in the supremum norm is
-
-$$
-q_* =16e^{-1/2}\,[\sqrt{F(0.4)}-\sqrt{F(0.55)}]^2
-\simeq0.138821<1.
-$$
-
-The bound uses $K\leq16e^{-1/2}$ and an AM–GM bound on the
-enclosing area, independent of numerical clock quadrature. The standard
-contraction principle therefore gives a unique finite solution. Moreover,
-
-$$
-\Vert\chi-g\Vert_\infty\leq\frac{q_*}{1-q_*}\Vert g\Vert_\infty.
-$$
-
-At the positive input peak the wall reduced field is at least
-$0.8388\varepsilon$. This bound is not a central-field peak or an
-energy-transmission efficiency.
-
-The wall input is now determined by the solution:
-
-$$
-I=2\dot V_W\left[g'(V_W)-\int_{U_0}^{U_W(V_W)}K(u,V_W)\chi(u,V_W)\,du\right].
-$$
-
-The existing relation $\phi_C[T(\tau_W)]=I/T'$ then defines the
-observer response over $-0.581759\leq T/\ell\leq-0.250231$.
-This closes the finite data-to-wall-to-observer operator. Section 13.2
-evaluates it without imposing the calibration's late zero field.
-Remote generation of $g$, quantum-state selection, backreaction and
-regular formation of the wall remain distinct open connections.
+It therefore determines a unique finite transfer. The central arrival
+window is $-0.581758951595344\leq T/\ell\leq-0.250230700560700$;
+the no-return null-label gap is $2.634591912177392\ell$. Remote physical
+generation and data beyond that window remain unspecified.
 
 ### 13.2. A prepared pulse leaves a finite scattering tail
 
 <!-- nsc-claim:atlas-prepared-response -->
 
-Evidence: [evaluated preparation and response](../results/development/nsc-cosmological-atlas-v8/prepared-response.json),
-[derivation, admission and controls](../docs/nsc-atlas-prepared-response.md).
+Evidence: [prepared-response record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json)
+and [response owner](../docs/nsc-atlas-prepared-response.md).
 
-The next calculation keeps the same geometry, source profile, wall law and
-linear conformal probe. It determines the signal from independent data,
-rather than choosing a wall trace to reproduce a desired central waveform.
-Write the positive integral operator in Section 13.1 as $A$. Reversing its
-integration order gives
+For this unchanged input, let $A$ denote the positive integral operator
+above. After the compact input ends, its Neumann series gives
+$-Ag\leq\chi\leq-(1-q_*)Ag<0$. Hence the determined wall derivative
 
 $$
-(A\chi)(U,V)=\int_{V_a}^{V}dq
-\int_{U_0}^{\min\{U,U_W(q)\}}dp\,K(p,q)\chi(p,q).
+J=g'(V)-\int_{U_0}^{U_W(V)}K\chi\,dU>0,
+\qquad (1-q_*)\mathcal B(V)\leq J(V)\leq\mathcal B(V),
+\quad \mathcal B=\int KAg\,dU,
 $$
 
-This form exposes a causal evolution in $V$. For numerical bookkeeping only,
-extend $\chi$ constantly in $U$ beyond the moving wall. All kernel integrals
-remain clipped at the wall; this does not apply the Schwarzschild equation
-inside the cap. The directly evaluated wall derivative is
-
-$$
-J(V)=g'(V)-\int_{U_0}^{U_W(V)}K(U,V)\chi(U,V)\,dU,
-\qquad
-\frac{\ell\phi_C}{\varepsilon}
-=\frac{2J/\varepsilon}{d(T/\ell)/dV}.
-$$
-
-We integrate $\chi-g$ with borrowed DOP853 time stepping and a clipped
-trapezoidal spatial integral. The wall crossings of grid nodes delimit
-steps, preserving the partial-cell boundary integral. No new field solver
-family or asymptotic scattering condition is introduced. The owner records
-the initial stopped attempt and this event-aligned integration correction.
-
-The sign of the resulting tail has an independent analytic check. For
-positive input $g$ and kernel $K$, reversing the nested integrals gives
-$0\leq A^2g\leq q_*Ag$ pointwise. Positivity then bounds subsequent
-terms in the alternating Neumann series. After the input has ended,
-
-$$
--Ag\leq\chi\leq-(1-q_*)Ag<0
-\quad (U>U_0).
-$$
-
-Consequently $J=-\int K\chi\,dU>0$: scattering in the retained exterior
-leaves a positive central field during this post-input window. Defining
-$B(V)=\int K(U,V)(Ag)(U,V)\,dU$ supplies a quantitative bracket,
-
-$$
-(1-q_*)B(V)\leq J(V)\leq B(V).
-$$
-
-The transverse kernel integral is available exactly. With $m=M/\ell=0.4$
-and $x_a,x_b$ the radii at $U=a,b$ on the same $V$,
-
-$$
-\int_a^bK(U,V)\,dU
-=\frac{2m^2}{V}\left(x_b^{-2}-x_a^{-2}\right).
-$$
-
-Independent quadrature of the remaining two integrals checks the bracket
-at three fixed post-input times. It does not reuse the evolved field.
-
-![Prepared signal, central response and finite scattering tail](../results/development/nsc-cosmological-atlas-v8/prepared-response.png)
-
-*Figure 7. Independent characteristic data produce a wall trace and central
-response. The lower panel resolves the small positive post-input derivative
-with independent analytic brackets. The zero-potential curve is an integration
-diagnostic on the same coordinate map, not a second physical spacetime.
-The plotted tail stops at the admitted domain boundary.*
-
-| Finite result or check | Value |
-| --- | --- |
-| Sampled positive / negative central extrema, $\ell\phi_C/\varepsilon$ | $47.29834$ / $-45.69596$ |
-| Central field at the final admitted arrival | $0.001290498$ |
-| Maximum central change, 257 to 513 spatial nodes | $2.79\times10^{-7}$ |
-| Maximum central change, 129 to 257 clock knots | $3.41\times10^{-8}$ |
-| Final $J/\varepsilon$ and independent bracket | $0.000802039$ in $[0.000696588,0.000808877]$ |
-
-These sampled extrema are field amplitudes, not energy efficiencies or
-certified continuum extrema. The positive post-input interval is
-$-0.340773<T/\ell\leq-0.250231$. Spatial refinement, a separate
-clock refinement and a constant-kernel Bessel benchmark support the
-numerical evaluation. The recorded experiment uses 5,597,264 kernel
-evaluations, within its ten-million evaluation and 60-CPU-second limits.
-Numerical comparisons are diagnostics; the sign conclusion rests on the
-positive-kernel argument, not a claimed rigorous floating-point enclosure.
-
-This closes one missing connection: finite exterior data now yield a checked
-observer response, including an exterior-generated tail even though the
-conformal cap has no bulk tail. It does not establish a lasting remnant,
-backreaction, a signal from $P$, or an observation identifying a unique
-exterior. The useful next question is which response features survive
-freedom in the preparation. Remote generation and continuation beyond this
-window remain separate open problems.
+produces a positive central tail on
+$-0.340772594886934<T/\ell\leq-0.250230700560700$.
+The sampled normalized extrema are $47.29833694$ and $-45.69595941$;
+the final field is $0.00129049806$. At the final point,
+$J/\varepsilon=0.0008020390045$ lies in the independently evaluated
+bracket $[0.0006965878198,0.0008088769160]$.
+The 257-to-513 spatial and 129-to-257 geometry comparisons change the
+central field by at most $2.79286258\times10^{-7}$ and
+$3.40622250\times10^{-8}$. The calculation uses 5,597,264 kernel values
+within its ten-million/60-CPU-second limits. These numerical controls
+support the finite waveform; the sign follows from the analytic argument.
+No permanent memory, continuum enclosure or later decay law is established.
 
 ### 13.3. What the signal determines when preparation is unknown
 
 <!-- nsc-claim:atlas-observer-inverse -->
 
-Evidence: [analytic inverse record](../results/development/nsc-atlas-observer-inference-v1/inference.json),
-[proof and preparation restrictions](../docs/nsc-atlas-observer-inference.md).
+Evidence: [inverse record](../results/development/nsc-atlas-observer-inference-v1/inference.json)
+and [inverse owner](../docs/nsc-atlas-observer-inference.md).
 
-The forward response now permits a sharper inference question. Hold the
-geometry, scalar law, zero cap and no-return window fixed. Write
-$f=\chi/\varepsilon$, $g=f(U_0,V)$, $h=f(U_W(V),V)$,
-$\theta=T/\ell$ and $Y=\ell\phi_C/\varepsilon$. These are signed
-classical fields, rather than particle counts or intensity-only measurements.
-The inherited central map can be inverted by integration:
+In this fixed geometry, put $f=\chi/\varepsilon$,
+$h=f(U_W(V),V)$, $\theta=T/\ell$ and $Y=\ell\phi_C/\varepsilon$.
+The zero cap fixes the integration constant:
 
 $$
-h(V)=\frac12\int_{\theta_a}^{\theta(V)}Y(s)\,ds.
+h(V)=\frac12\int_{\theta_a}^{\theta(V)}Y(s)ds,\qquad
+f=(I-\mathsf{B})^{-1}Eh,\qquad g(V)=f(U_0,V),
+$$
+$$
+(\mathsf{B}f)(U,V)=\int_U^{U_W(V)}dp\int_{L(p)}^Vdq\,K(p,q)f(p,q).
 $$
 
-The zero initial cap fixes its integration constant. To recover the exterior
-preparation, subtract the forward wedge equation at the wall from its value
-at $U$. With $E$ extending a function of $V$ constantly in $U$, this yields
-
-$$
-f=Eh+\mathsf{B}f,\qquad
-(\mathsf{B}f)(U,V)=\int_U^{U_W(V)}dp
-\int_{L(p)}^Vdq\,K(p,q)f(p,q).
-$$
-
-Every integration point stays in the retained exterior. The existing
-operator-norm bound is $q_*<1$, so the standard resolvent supplies
-
-$$
-f=(I-\mathsf{B})^{-1}Eh,\qquad g(V)=f(U_0,V).
-$$
-
-Direct differentiation recovers $f_{UV}=-Kf$ and the zero outgoing wall
-characteristic; restriction recovers the source, prescribed wall trace and
-zero bottom. The inverse and forward constructions are mutual inverses.
-The change in the derivative of $L$ at $U_a=U_W(V_a)$ requires a corner
-check, supplied explicitly in the owning proof.
-
-More precisely, take $C^2$ source traces that vanish on the initial interval
-$[V_a,V_s]$, where $V_s=V_a+(V_b-V_a)/4$. They correspond bijectively
-to $C^1$ central histories vanishing on $[\theta_a,\theta(V_s)]$.
-The initial zero interval removes corner mismatches. This enlarged class
-allows signed inputs with arbitrary later shape; it does not require the
-original middle-half support, positivity or polynomial profile. The result
-uses the exact smooth geometry and known strictly increasing proper-time map.
-It concerns the reduced exterior field and regular-centre trace; higher
-regularity of the full scalar at the centre requires stronger input regularity.
-For two histories in this same model,
-
-$$
-\|g_1-g_2\|_\infty\leq
-\frac{\theta_b-\theta_a}{2(1-q_*)}\|Y_1-Y_2\|_\infty.
-$$
-
-This controls source amplitude under errors in complete compatible field
-histories. It supplies no bound on source energy, derivatives, backreaction,
-or uncertainty in the geometry. Numerical reconstruction from sampled data
-has not been performed.
-
-Physical restrictions on the preparation change the allowed response range.
-For any nonzero nonnegative source supported in the original
-$[V_s,V_e]$, the positive-kernel argument of Section 13.2 implies, for
-$V_e\leq V\leq V_b$,
-
-$$
-h(V)<0,\qquad Y(\theta(V))>0,\qquad
-\int_{\theta_a}^{\theta(V)}Y(s)\,ds=2h(V)<0.
-$$
-
-A smooth, nonzero, nonnegative observer pulse supported strictly inside
-$(\theta(V_s),\theta(V_e))$ violates this condition. Its integrated $h$
-instead has a positive plateau;
-positivity of the inverse resolvent forces $g\geq h>0$ after $V_e$.
-Such a trace has a preparation in the enlarged class, but that preparation
-cannot obey the original cutoff. This is an exact exclusion within the
-fixed model, rather than another numerical waveform.
-
-The result therefore separates reconstructing a source from identifying
-geometry. Two geometries are observationally degenerate only when a trace
-lies in both physically allowed response ranges. No second geometry is
-constructed here. Controlled nonlinear source-response maps can carry much
-richer geometric information, even with one receiver, as illustrated by
-[Tzou, 2102.01841v3](https://arxiv.org/html/2102.01841v3); those assumptions
-are absent from this passive linear experiment. Comparing candidate exteriors
-needs an independent preparation restriction or a source-linked additional
-channel. The next section tests a prerequisite for a physical preparation:
-whether its stress is compatible with the existing wall.
+The operator-norm bound $q_*<1$ gives a bijection between initially
+quiet $C^2$ source traces and compatible $C^1$ signed central histories.
+For nonzero nonnegative compact sources, the post-input restrictions are
+$h<0$, $Y>0$ and $\int_{\theta_a}^{\theta(V)}Yds=2h<0$.
+An arbitrary fitted trace need not satisfy them. This analytic source
+inverse neither identifies geometry nor reconstructs a source numerically
+from sampled or intensity-only data.
 
 ### 13.4. The transmitted probe and the wall's stress
 
 <!-- nsc-claim:atlas-scalar-wall-consistency -->
 
-Evidence: [analytic stress record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json),
-[derivation and independent junction check](../docs/nsc-atlas-scalar-wall-consistency.md).
+Evidence: [stress record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json)
+and [wall-stress owner](../docs/nsc-atlas-scalar-wall-consistency.md).
 
-The normalized waveform leaves its absolute gravitational stress unspecified.
-Fix the scalar kinetic coefficient to one, zero scalar potential and no direct
-scalar-wall interaction. In the same Jordan frame the curvature coefficient is
-
-$$
-f(\phi)=\frac{1}{2\kappa_4}-\frac{\xi\phi^2}{2},
-\qquad \kappa_4=8\pi G,\quad \xi=\frac16,\quad \phi=\varepsilon\Phi.
-$$
-
-Background vacuum stress remains independent of the scalar. The material
-tension, geometry and original $C^3$ compact preparation remain fixed on the
-finite domain of Section 13.2. This regularity supplies the one-sided
-derivatives needed here; the broader inverse class alone does not establish
-full four-dimensional stress regularity at the center. Assume $f>0$ for the
-weak-field interpretation, without inferring a backreaction bound.
-
-The borrowed nonminimal action gives the full improved Hilbert stress:
+Fix canonical kinetic normalization, $\kappa_4=8\pi G$ and
+$f(\phi)=1/(2\kappa_4)-\phi^2/12>0$ in the weak-field interpretation.
+The full stress includes the nonminimal Einstein term once:
 
 $$
-T^{\mathrm{can}}_{\mu\nu}=\nabla_\mu\phi\nabla_\nu\phi
--\frac12g_{\mu\nu}(\nabla\phi)^2,
-\qquad
-T^\phi_{\mu\nu}=T^{\mathrm{can}}_{\mu\nu}
-+\xi\left[G_{\mu\nu}\phi^2+
-(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)\phi^2\right].
+T^\phi_{\mu\nu}=\nabla_\mu\phi\nabla_\nu\phi
+-\frac{1}{2}g_{\mu\nu}(\nabla\phi)^2
++\xi[G_{\mu\nu}\phi^2+(g_{\mu\nu}\Box-\nabla_\mu\nabla_\nu)\phi^2].
 $$
 
-The Einstein-tensor term is counted once. With the same common normal,
-write $d=[n\phi]=k\phi$ and
-$C_{ab}=[K_{ab}]-\gamma_{ab}[K]=2k\gamma_{ab}$.
-The distributional curvature and second derivatives then give the singular
-scalar surface coefficient
-
-$$
-S^\phi_{ab}=\xi\{2\phi d\gamma_{ab}-\phi^2C_{ab}\}
-=2\xi\phi(d-k\phi)\gamma_{ab}=0.
-$$
-
-An independent substitution into the coupled variational junction law of
-[Aviles, Maeda and Martinez, 1910.07534v2, Eqs. (3.43)-(3.46)](https://arxiv.org/html/1910.07534v2)
-recovers the unchanged material tensor $t_{ab}=-\sigma\gamma_{ab}$.
-Continuous scalar coefficients make the delta terms well defined; products
-with discontinuous normal derivatives are avoided.
-
-The regular tangential flux must also be checked. Using one-sided traces,
-constant $k$, the original curvature jump and the vanishing mixed Einstein
-components of both vacuum backgrounds gives
-
-$$
-[T^\phi_{na}]=(1-6\xi)k\phi D_a\phi=0.
-$$
-
-The canonical kinetic term alone would give a nonzero jump; the improvement
-terms cancel it. Equality of the two fluxes does not mean either flux vanishes.
-Thus these two local conditions require no additional scalar surface source
-or tangential exchange from the material wall at quadratic order.
-
-The smooth bulk stress remains an order-$\varepsilon^2$ gravitational source.
-No bulk metric response, normal-force balance, quantitative amplitude bound
-or stability result follows from the surface cancellation. Before evolving
-that source, its gravitational initial data must satisfy the constraints.
-The next section supplies one such connection; it does not yet select a
-physical preparation law for observer inference.
+For the original sufficiently regular traces, $d=[n\phi]=k\phi$ and
+$C_{ab}=[K_{ab}]-\gamma_{ab}[K]=2k\gamma_{ab}$ give
+$S^\phi_{ab}=\xi(2\phi d\gamma_{ab}-\phi^2C_{ab})=0$ and
+$[T^\phi_{na}]=(1-6\xi)k\phi D_a\phi=0$.
+Thus no additional scalar surface source or tangential flux jump is
+required at quadratic order. The individual fluxes and smooth bulk
+gravitational source need not vanish.
 
 ### 13.5. The prepared pulse requires gravitational initial data
 
 <!-- nsc-claim:atlas-characteristic-initialization -->
 
-Evidence: [initialization record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json),
-[constraint derivation and independent frame check](../docs/nsc-atlas-characteristic-initialization.md).
+Evidence: [initialization record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json)
+and [initial-data owner](../docs/nsc-atlas-characteristic-initialization.md).
 
-The field was propagated on a fixed geometry. Adding its gravitational
-source while keeping all initial metric data unchanged would generally
-violate an Einstein constraint. We retain the same compact characteristic
-preparation and apply the spherical null constraint, borrowed from
-[An and Lim, 2005.04090v1, Eqs. (2.6)-(2.7)](https://arxiv.org/html/2005.04090v1),
-with the full conformal stress of Section 13.4 replacing their matter source.
-
-Write the smooth exterior metric as
-
-$$
-ds^2=-A(U,V)\,dU\,dV+R^2d\Omega^2,\qquad
-G_{VV}=-\frac{2}{R}\left(R_{VV}-\frac{A_V}{A}R_V\right).
-$$
-
-At the source-leg corner keep the reference radius $R=0.4\ell$, both
-expansions and the lapse. The zero-data bottom leg retains its reference
-geometry. On $U=U_0$, choose $A=A_0$, so that the background radius
-$x=R_0/\ell$ is an affine parameter with fixed corner origin and scale.
-This is a declared gauge and gravitational-data choice. Fixing both the
-reference lapse and radius everywhere on the sourced leg is not available.
-
-Express the original compact source as $\chi=\varepsilon b(x)$ and put
-$p=b/x$. The leading scalar trace and formal radius correction are
+On the source leg, keep the reference lapse, radius $0.4\ell$, both corner
+expansions and affine normalization. Use the affine background radius
+$x=R_0(U_0,V)/\ell$, $V(x)=F(x)/U_0$ and
+$b(x)=B(4[V(x)-V_m]/(V_b-V_a))$; primes here and in section 13.6 mean
+$d/dx$. With $p=b(x)/x$,
+$\phi=(\varepsilon/\ell)p+O(\varepsilon^3)$ and
+$\alpha=\kappa_4\varepsilon^2/\ell^2$, write
+$R/\ell=x+\alpha h+O(\alpha^2)$. The intrinsic constraint forces
 
 $$
-\phi=\frac{\varepsilon}{\ell}p+O(\varepsilon^3),\qquad
-\alpha=\frac{\kappa_4\varepsilon^2}{\ell^2},\qquad
-\frac{R}{\ell}=x+\alpha h(x)+O(\alpha^2).
+h''=-\frac{x}{3}p'^2+\frac{x}{6}pp'',\qquad h(0.4)=h'(0.4)=0.
 $$
 
-The affine constraint fixes the coefficient rather than choosing it to fit
-an observation:
-
-$$
-h''=-\frac{x}{3}p'^2+\frac{x}{6}pp'',\qquad
-h(0.4)=h'(0.4)=0.
-$$
-
-Primes mean $d/dx$. After the compact trace ends, integration by parts gives
-
-$$
-h'(x)=-\frac{1}{2}\int_{0.4}^{x}s\,p'(s)^2\,ds<0,
-$$
-
-$$
-h(x)=-\frac{1}{2}\int_{0.4}^{x}(x-s)s\,p'(s)^2\,ds
--\frac{1}{6}\int_{0.4}^{x}p(s)^2\,ds<0.
-$$
-
-Thus the finite source leaves a reduced initial areal radius and affine
-radial slope relative to the corner-anchored reference. The conformal
-stress need not be pointwise positive during the pulse for these signs
-to hold. The slope is not itself the null expansion $2R_x/R$.
-
-At the last source point $x_b=0.4815042083$, the recorded coefficients are
-$h=-6.1228335482$ and $h'=-162.1805536249$. The calculation uses 129
-displayed samples and 15,360 scalar integrand evaluations, with no new
-wave or bulk Einstein solve. Independent direct integration and integration
-by parts agree; separate quadrature and geometric refinements change $h$
-by less than $4.7\times10^{-14}$ and $h'$ by less than
-$1.7\times10^{-12}$. These are numerical diagnostics, not rigorous decimal
-enclosures or bounds on the omitted perturbative terms. No finite amplitude
-has been selected: the formal radius displacement is $\alpha\ell h$.
-
-![The prepared source and its required initial radius correction](figures/characteristic-initialization.png)
-
-*Figure 8. The original compact trace and its quadratic gravitational
-coefficients along one initial null leg. The affine parameter is the
-reference areal radius divided by $\ell$, with its origin and scale fixed
-at the corner. Shading marks the compact input interval. After it ends,
-the radial-slope correction stays negative and constant. These coefficients
-describe initial data; they are not a mass shift or an evolved wall response.
-The [figure record](figures/characteristic-initialization.json) binds the
-plotted samples to the initialization evidence.*
-
-An independent smooth-exterior check rescales the metric by
-$1-\kappa_4\phi^2/6$ and transforms the affine parameter as well.
-The equivalent Einstein-frame coefficient then satisfies
-$h_E''=-xp'^2/2$, the minimally coupled affine focusing equation.
-This frame comparison does not extend through the material wall without
-transforming its action too.
-
-This result supplies one intrinsic characteristic constraint. By itself it
-does not fix the transverse geometry, later wall matching or the coupled
-interior response. Although $T_{VV}=0$ after the trace
-on this leg, transverse scalar derivatives can persist: it is not a claim
-that the remaining spacetime is vacuum. No mass shift, wall displacement,
-finite-amplitude error bound or stability conclusion follows from this
-intrinsic constraint alone. The next section supplies its transverse-radius
-connection without starting a new coupled solver.
+After the compact trace, $h'<0$ and $h<0$ by the integrated expressions;
+$h'$ becomes constant. At $x_b=0.4815042082576364$,
+$h=-6.12283354819419$ and $h'=-162.18055362491776$.
+Direct integration, integration by parts and the transformed affine
+Einstein-frame equation agree. These are initial radius coefficients,
+not a mass shift or an evolved wall; no finite amplitude or perturbative
+remainder bound is selected.
 
 ### 13.6. An invariant mass response on the same initial surface
 
 <!-- nsc-claim:atlas-source-mass -->
 
-Evidence: [source-leg mass record](../results/development/nsc-atlas-source-mass-v1/mass.json),
-[derivation and independent stress check](../docs/nsc-atlas-source-mass.md).
+Evidence: [source-mass record](../results/development/nsc-atlas-source-mass-v1/mass.json)
+and [mass owner](../docs/nsc-atlas-source-mass.md).
 
-An intrinsic radius correction does not determine a spherical gravitational
-mass: the transverse radius derivative is also required. Its corner value
-was already fixed. Borrowing the mixed Einstein equation transports that
-datum along the same initial null surface and closes this missing connection.
-The quantity compared is the geometric Misner--Sharp mass length,
+With $m=M/\ell=0.4$, the fixed transverse corner datum and scalar equation supply
+$d=(a/x-1)/4$, $a=0.8$, and $s'=-(s+dp')/x$, $s(0.4)=0$.
+For the geometric mass length, use
 
 $$
-\mathfrak{m}=\frac{R}{2}\left(1-g^{ab}\partial_aR\partial_bR\right),
-\qquad \frac{\mathfrak{m}_J}{\ell}=m+\alpha\mu_J+O(\alpha^2),\quad m=0.4.
+\mathfrak{m}=\frac{R}{2}[1-g^{ab}\partial_aR\partial_bR],\qquad
+\frac{\mathfrak{m}_J}{\ell}=m+\alpha\mu_J+O(\alpha^2).
 $$
 
-It is invariant under coordinate changes. The constant reference mass
-also makes this quadratic coefficient unchanged by an order-$\alpha$
-displacement of the compared cuts. A conformal change of metric
-generally changes its value. Dividing the length by $G$ gives mass units
-when $c=1$; this does not turn a finite source-leg value into an asymptotic
-energy or the mass of the entire parent.
-
-On the source leg write $ds^2/\ell^2=-C\,dU\,dx+r^2d\Omega^2$,
-where $C=-4a/U_0>0$, $a=2m=0.8$ and $r=R/\ell$.
-The reference transverse derivative is $d=r_{0,U}/C=(a/x-1)/4$.
-The leading scalar derivative $s=\ell\phi_U/(C\varepsilon)$ is supplied
-by the original field equation and zero bottom data:
+The borrowed flux and full conformal frame conversion yield
 
 $$
-s'=-\frac{s+dp'}{x},\qquad s(0.4)=0.
-$$
-
-No additional outgoing field profile is chosen. In the equivalent smooth
-Einstein-frame description, the borrowed minimal mass law of
-[An and Lim, Eq. (2.15)](https://arxiv.org/html/2005.04090v1) gives
-
-$$
-\mu_E(x)=-\frac{1}{4}\int_{0.4}^{x}t(a-t)p'(t)^2\,dt.
-$$
-
-Both future radial derivatives are positive in this retained white-hole
-sector. Consequently this coefficient decreases for a positive canonical
-null stress; untrapped-exterior monotonicity rules have different signs.
-
-The return to the declared Jordan-frame geometry uses the full geometric
-transformation of [Faraoni and Vitagliano, Eq. (7)](https://arxiv.org/html/1401.1189v1):
-
-$$
-\bar{\mathfrak{m}}=\omega\mathfrak{m}
--\frac{R^3}{2\omega}(\nabla\omega)^2
--R^2\nabla\omega\cdot\nabla R,\qquad
-\omega=\sqrt{1-\kappa_4\phi^2/6}.
-$$
-
-Keeping both null derivatives yields the quadratic coefficient
-
-$$
+\mu_E=-\frac14\int_{0.4}^{x}t(a-t)p'(t)^2dt,\qquad
 \mu_J=\mu_E+\frac{mp^2}{12}+\frac{x^2p}{3}(s+dp').
 $$
 
-The frame masses differ during the input. Independent substitution into
-the mixed-radius equation and the geometric mass definition reproduces
-this expression. A second check uses [Hayward's general-matter law,
-Eq. (2.9d)](https://arxiv.org/html/gr-qc/9710089v2), retaining the improved
-mixed stress instead of setting it identically to zero as in the
-minimal-scalar comparison.
-
-After the compact trace ends, $p=p'=0$ and both derivatives of $\omega$
-vanish. The frame masses then agree at this order:
-
-$$
-\mu_J=\mu_E=-\frac{1}{4}\int_{\mathrm{support}}t(a-t)p'(t)^2\,dt<0.
-$$
-
-For the recorded input, this final coefficient is approximately
-$-28.8831970541$. During the input the largest sampled frame difference
-is $4.2654598348$; this is a sampled comparison, not an extremum bound.
-Ten exact symbolic identities and the independent mixed-geometry and
-improved-stress constructions check the borrowed mass laws. The
-129-sample calculation uses 47520 counted quadrature nodes; separate
-quadrature and geometry refinement comparisons change the mass coefficients
-by less than $4.6\times10^{-13}$. These are numerical diagnostics rather
-than rigorous enclosures or bounds on omitted perturbative orders.
-
-![The compact initial field and its geometric mass response](figures/source-mass.png)
-
-*Figure 9. The fixed compact preparation (top) and its quadratic geometric
-mass coefficients on the same initial null leg (bottom). The horizontal
-coordinate retains the corner-anchored affine normalization $x=R_0/\ell$.
-Jordan and Einstein frame masses differ during the input and agree at a
-constant negative correction afterwards. The negative coefficient is
-relative to the reference mass; no finite amplitude or negative total
-mass is established. The [figure record](figures/source-mass.json) binds
-the plotted samples to the mass evidence.*
-
-The sign follows from $0<t<a$ and the nonzero original input. The
-coefficient stays constant on the remaining finite source leg. Transverse
-scalar derivatives can still persist there, so this is neither a vacuum
-future nor a global mass-loss history. It is an invariant response to the
-specified initial data, with the frame and comparison fixed. No finite
-amplitude or perturbative remainder bound has been chosen. The next
-connection is to transport compatible sourced geometry toward the wall
-and test its dynamical junction conditions. Wall motion and the corrected
-interior-observer signal remain open.
+After the input, the frame masses agree at the constant negative coefficient
+$\mu_J=\mu_E=-28.88319705406449$. Their largest sampled difference
+during input is $4.265459834842238$. Independent mixed-radius and improved
+stress laws agree. This is a finite source-leg response relative to the
+reference mass, not a negative total mass, vacuum future or asymptotic energy.
 
 ### 13.7. The scalar adds no normal-force jump
 
 <!-- nsc-claim:atlas-scalar-normal-force -->
 
-Evidence: [normal-force record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json),
-[projection, sign checks and geometric condition](../docs/nsc-atlas-scalar-normal-force.md).
+Evidence: [normal-force record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json)
+and [normal-force owner](../docs/nsc-atlas-scalar-normal-force.md).
 
-The initialized geometry must eventually meet the wall's normal-force
-condition. Its scalar contribution can be decided locally before that
-evolution. Retain the action, common normal and original preparation of
-Section 13.4. Define $q=n\phi$, intrinsic derivative $D_a$ and arithmetic
-means denoted by bars. The complete improved stress in Gaussian normal
-coordinates gives
+The Gauss jump $[G_{nn}]=-2k\bar K$ and complete scalar stress give
 
 $$
-T^\phi_{nn}=\frac{q^2}{2}-\frac{D_a\phi D^a\phi}{2}
-+\xi\left(\phi^2G_{nn}+2K\phi q+D^2\phi^2\right).
-$$
-
-The intrinsic terms have common traces. Combine the borrowed scalar law
-$[q]=6\xi k\phi$ with $[K_{ab}]=-k\gamma_{ab}$ and $[K]=-3k$.
-The Gauss equation fixes $[G_{nn}]=-2k\bar K$, and the jump reduces to
-
-$$
-[T^\phi_{nn}]=2\xi(6\xi-1)k\bar K\phi^2=0,
-\qquad \xi=\frac{1}{6}.
-$$
-
-This is a quadratic identity for the admitted regular traces, independent
-of the waveform's shape. In particular the cap has $G^-_{nn}=-3H^2$;
-dropping that term would falsely leave $-H^2\phi^2/2$. Equality of the
-normal stresses does not make their individual values zero. A symbolic
-general-coupling check reproduces $S_\phi^{ab}\bar K_{ab}$; it does not
-construct a nonconformal solution with the same wall.
-
-With our conventions the normal shell identity is
-
-$$
+[T^\phi_{nn}]=2\xi(6\xi-1)k\bar K\phi^2=0,\qquad
 S^{ab}\bar K_{ab}=[T_{nn}].
 $$
 
-Contracting the Israel law with the mean curvature and independently
-using distributional conservation both fix this plus sign. The
-[source comparison](../docs/arxiv-studies.md#scalar-normal-force-library)
-records why the opposite printed sign in Lobo--Crawford's Eq. (6) is not
-imported alongside their Gauss and Israel equations.
-
-The material tension and vacuum terms stay fixed. Together with the
-vanishing additional scalar surface stress, the normal condition becomes
-
-$$
--\sigma\bar K=[T^{\mathrm{vac}}_{nn}]+[T^\phi_{nn}],
-\qquad \delta\bar K=0\quad\mathrm{at\ order}\ \varepsilon^2.
-$$
-
-This variation includes the changed bulk metric, induced metric and wall
-position, pulled back to the reference wall. It does not set the wall's
-displacement to zero or preserve its original trajectory. Exact algebra
-checks the projection, force sign and vacuum contribution without a new
-pressure curve. The following connection supplies exterior-side geometric
-mass from the known wall traces. Coupled cap and wall geometry, the corrected
-observer signal and finite-amplitude validity remain open.
+The cap contribution $G^-_{nn}=-3H^2$ is essential. Fixed vacuum and
+material tension therefore require $\delta\bar K=0$ at order
+$\varepsilon^2$. This mean-curvature variation includes the bulk metric,
+induced metric and wall displacement. It does not require zero displacement
+or an unchanged trajectory.
 
 ### 13.8. Exterior mass closes from the known wall field
 
 <!-- nsc-claim:atlas-wall-mass-closure -->
 
-Evidence: [analytic closure record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json),
-[two flux routes and frame derivation](../docs/nsc-atlas-wall-mass-closure.md).
+Evidence: [analytic closure record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json)
+and [wall-mass owner](../docs/nsc-atlas-wall-mass-closure.md).
 
-The same leading field determines a conditional quadratic mass coefficient
-on the smooth exterior limit of the wall. Retain the preparation, quiet
-corner and $0.45\leq R/\ell\leq0.55$ window. Write $s=\tau/\ell$,
-$x=R/\ell$, $v=dx/ds$, $\beta=\beta_+$ and $m=M/\ell=0.4$.
-The known trace gives $w=\chi_W/\varepsilon$, $j=dw/ds$ and $p=w/x$.
-Because $\chi_U|_W=0$, its derivative along the outward normal equals its
-proper-time derivative. For $N=\ell n$, the two scalar derivatives are
-
-$$
-A=\frac{dp}{ds}=\frac{j-vp}{x},\qquad
-B=Np=\frac{j-\beta p}{x}.
-$$
-
-Thus $\chi_U=0$ does not set $\phi_U=0$. Pulling back both borrowed
-Einstein-frame null mass laws to this timelike path, then restoring the
-original frame, gives
+On the smooth exterior wall limit in the same $0.45\leq R/\ell\leq0.55$
+window, put $s=\tau/\ell$, $x=R/\ell$, $v=dx/ds$, $\beta=\beta_+$,
+$w=\chi_W/\varepsilon$, $j=dw/ds$ and $p=w/x$. The two known derivatives
+are $A=(j-vp)/x$ and $B=(j-\beta p)/x$. Both null mass fluxes and the
+complete conformal endpoint term give
 
 $$
 L=\frac{x^2}{2}\left[\beta AB-\frac{v}{2}(A^2+B^2)\right],\qquad
-Q=\frac{mp^2}{12}+\frac{x^2p}{6}(vA-\beta B),
+Q=\frac{mp^2}{12}+\frac{x^2p}{6}(vA-\beta B),\qquad
+\mu_J(s)=\int_{s_a}^sL(s')ds'+Q(s),\quad Q(s_a)=0.
 $$
 
-$$
-\frac{\mathfrak{m}_J}{\ell}=m+\alpha\mu_J+O(\alpha^2),\qquad
-\mu_J(s)=\int_{s_a}^{s}L(s')\,ds'+Q(s),\qquad Q(s_a)=0.
-$$
-
-Here $\alpha=\kappa_4\varepsilon^2/\ell^2$ as before; the stated remainder
-assumes a scalar-odd, metric-even perturbative family. Every input is
-supplied by the fixed trace and reference geometry. The endpoint $Q$
-retains both conformal-gradient components; geometric mass is not frame
-invariant. Hayward's original-frame law with the full improved stress
-independently gives $d\mu_J/ds=L+dQ/ds$. This check needs no numerical
-differentiation of the waveform. Neither expression divides by $\beta$,
-so the regular zero of $\beta_+$ creates no singularity.
-
-The [source comparison](../docs/arxiv-studies.md#wall-mass-library)
-distinguishes this application from known timelike transport and scalar
-mass changes at other shells. No new general law is claimed. A regular
-perturbative continuation would have this coefficient; its existence is
-not proved. Constant background exterior mass removes the first-order
-ambiguity from identifying displaced wall cuts, without fixing displacement
-itself. The wall tail prevents importing the initial leg's mass plateau or
-late sign. No mass curve, cap correction or finite-amplitude bound is supplied.
-The next choice is a separately controlled evaluation of this functional,
-or closure of a named remaining cap/wall junction input. Neither choice
-automatically requires a new bulk solver.
+The original-frame improved stress independently gives
+$d\mu_J/ds=L+dQ/ds$. Neither expression divides by $\beta$.
+This is an analytic conditional functional, not an evaluated mass curve
+or a proof that a coupled continuation exists. The wall tail supplies no
+late mass sign or plateau. Coupled bulk and wall evolution, the corrected
+observer response, physical preparation selection, stability and a
+finite-amplitude validity bound remain open. Detailed scalar-chain
+derivations belong to their owners; historical supporting calculations
+are cited at [Zenodo](https://doi.org/10.5281/zenodo.23090015).
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1722,13 +1215,9 @@ geometric route can proceed under its own assumptions.
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
 *Figure 10. Research dependencies, distinct from spacetime causal arrows.
-Known equations become usable when their inputs, domains and matching are
-established. The diagram records the v7 prerequisite structure; the
-updated [programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
-names prerequisites, decisions, budgets and stop conditions for eight
-themes: spherical stability, interior/exterior description, quantum fields,
-barriers, scales, charge, time and branching. Arrows do not declare these
-questions solved or prescribe a single compulsory route.*
+The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
+names prerequisites, decisions, budgets and stop conditions for eight themes.
+Each calculation retains its own domain; arrows do not declare questions solved.*
 
 The current result is a continuous mathematical story at a deliberately
 finite scale: an exterior can be attached on a sourced slice; an isolated

@@ -113,6 +113,16 @@
       "section": "13.8",
       "status": "derived",
       "owner": "docs/nsc-atlas-wall-mass-closure.md"
+    },
+    "target-local-effective-lambda": {
+      "section": "6.1",
+      "status": "proposal",
+      "owner": "docs/schur-memory.md"
+    },
+    "local-source-insertion-majorant": {
+      "section": "6.2",
+      "status": "derived",
+      "owner": "docs/nsc-ks-source-operator-majorant-v7.md"
     }
   },
   "findings": [

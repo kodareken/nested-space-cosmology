@@ -51,6 +51,10 @@
     "source_mass": {
       "path": "results/development/nsc-atlas-source-mass-v1/mass.json",
       "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
+    },
+    "wall_mass_closure": {
+      "path": "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json",
+      "sha256": "684252b81204150d42280d73bb7b68f7e57788f28fb14e2dc10b1271ea88401f"
     }
   },
   "layout": {
@@ -250,15 +254,16 @@
     "Quadratic local scalar shell compatibility leaves bulk backreaction, the coupled normal-force equation and finite-amplitude validity open.",
     "The initialized source-leg null constraint does not solve transverse evolution, later wall matching or a gravitational observer response.",
     "The source-leg mass successor closes transverse radius transport only on the initial surface; bulk propagation and the dynamical wall response remain open.",
+    "The wall-mass successor closes a smooth exterior-side analytic functional only; its evaluation and the remaining cap/wall geometry are separate questions.",
     "Early reception after the anchor is compatible with exclusions on new emissions.",
     "No second cosmological child, regular formation, stability or dark component is established."
   ],
   "outputs": {
-    "geometry-overview.png": "4660371c957bb367d2ca1258482e8edbb29290882e8307850e701b03d723fab9",
-    "geometry-overview.svg": "4782e8b831ae2c42a0aca16844c594190f9f810e8c60ffc92885da39d494b190"
+    "geometry-overview.png": "d533d0e5e9cb30025649bcb6b2c597d5b54ce42a421eb483ccf0a86f6730fa5e",
+    "geometry-overview.svg": "cd782f0b42212c2dbda14ffb5935ad57af6f1f8e844a9623672f85e2b4ba87e6"
   },
   "producer": "scripts/build_geometry_overview.py",
-  "producer_sha256": "069e991e69ac4832b31522a76078ad57abbe6349821ff84a29a2096bab0636a3",
+  "producer_sha256": "6fbf763d53bccf0c7818b66624c95107502bcdc51fc517b6c3431f39929abcda",
   "purpose": "Living-manuscript narrative figure; no new scientific solve",
   "right_panel": {
     "assembly_scope": "Theorem-backed sufficiently separated initial-data family, not solved global future",
@@ -728,12 +733,6 @@
         "No individual normal-pressure curve or coupled metric/wall evolution has been computed.",
         "The cap vacuum contribution and full improvement terms are essential; no finite-amplitude validity bound or stability result follows."
       ],
-      "next_question": {
-        "connection_id": "wall-mass-transport",
-        "decision": "Do the existing leading wall field traces close exterior-side geometric mass transport on reference wall cuts through the borrowed flux and frame laws?",
-        "owner": "docs/nsc-cosmological-atlas.md#programme-dependencies",
-        "status": "Proposed question; not yet derived, admitted or evaluated"
-      },
       "status": "CONDITIONAL_CONFORMAL_SCALAR_NORMAL_STRESS_COMPATIBILITY"
     },
     "scalar_wall_consistency": {
@@ -851,6 +850,86 @@
         "unit_scaling": "dimensionless coefficient fixed; formal mass-length correction ell alpha mu. Changing ell at fixed epsilon and G changes alpha rather than only units"
       },
       "status": "QUADRATIC_SOURCE_LEG_INVARIANT_MASS_RESPONSE"
+    },
+    "wall_mass_closure": {
+      "conventions": {
+        "anchor": "quiet lower wall event with zero scalar data and zero geometric mass correction; no imported source-end value",
+        "clock": "s=tau_wall/ell; v=dx/ds>0; beta=beta_plus; beta^2-v^2=1-2m/x; m=2/5",
+        "mass": "mathfrak_m_J/ell=m+alpha mu_J+O(alpha^2); alpha=kappa_4 epsilon^2/ell^2; formal quadratic order only",
+        "no_return": "chi_U=0 on the retained wall, hence n chi=dot chi; no second independently prescribed characteristic",
+        "normal": "outward cap-to-exterior normal (-Udot,Vdot); beta=n R on the reference",
+        "region": "one-sided smooth exterior limit of the original wall, x=R/ell in [0.45,0.55], retained sector IV",
+        "traces": "w=chi_wall/epsilon; j=dw/ds=ell Vdot J/epsilon; p=w/x; a=dp/ds; b=n_dimensionless p"
+      },
+      "derived_result": {
+        "closure": "mu_J(s)=integral from s_a to s of L(q) dq+Q(s), with Q(s_a)=0",
+        "cut_identification": "constant background exterior mass makes an order-alpha cut displacement invisible to this coefficient; no vanishing wall displacement is inferred",
+        "independent_route": "L+dQ/ds=x^2(beta t_un-v t_nn)/2 with full Jordan improved stress; acceleration cancels",
+        "inputs_required": "existing leading wall traces w,j and background x,v,beta, clock; no unknown Hessian or perturbed metric enters this coefficient",
+        "minimal_sign": "v>|beta| in the retained trapped sector makes L nonpositive; no late Jordan-mass sign is inferred",
+        "null_route": "both Einstein-frame null fluxes along the same timelike path give L; add the full smooth-exterior frame endpoint Q",
+        "regularity": "L and Q have no division by beta; their beta=0 values remain finite at x>0"
+      },
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Ub": -0.2747468030926288,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105,
+        "arrival_window_over_ell": [
+          -0.5817589515953444,
+          -0.25023070056069985
+        ],
+        "domain": "Va<=V<=Vb and U0<=U<=U_W(V)",
+        "radius_lower_bound_over_ell": 0.4,
+        "radius_proof": "F(.55)<=UV<=F(.4), F strictly decreasing in IV",
+        "radius_upper_bound_over_ell": 0.55,
+        "retained_side": "U<=U_W(V), normal n=(-Udot,Vdot)",
+        "wall_radius_window_over_ell": [
+          0.45,
+          0.55
+        ]
+      },
+      "formulas": {
+        "frame_endpoint": "m*p**2/12+x**2*p*(v*a-beta*b)/6",
+        "frame_endpoint_from_trace": "(v-beta)*w*j/6+(1/(6*x)-m/(4*x**2))*w**2",
+        "improved_t_nn": "a**2/6+b**2/2-p*Hnn/3",
+        "improved_t_un": "2*a*b/3-p*Hun/3",
+        "minimal_mass_density": "x**2*(beta*a*b-v*(a**2+b**2)/2)/2",
+        "normal_field": "(j-beta*p)/x",
+        "null_mass_density": "-x**2*(xV*pU**2*Us+xU*pV**2*Vs)/C",
+        "tangent_field": "(j-v*p)/x",
+        "wave_hessian": "Huu+2*(v*a-beta*b)/x"
+      },
+      "interpretation": "Known leading wall traces and the quiet mass anchor close the quadratic exterior geometric-mass functional through both null fluxes and the full conformal endpoint term.",
+      "knowledge_boundary": {
+        "bulk_einstein_evolution_solved": false,
+        "cap_mass_determined": false,
+        "corrected_wall_trajectory_solved": false,
+        "exterior_wall_mass_functional_closed": true,
+        "finite_amplitude_validity_bound_established": false,
+        "full_coupled_solution_established": false,
+        "interior_observer_correction_computed": false,
+        "material_shell_mass_determined": false,
+        "numerical_wall_mass_curve_evaluated": false,
+        "stability_established": false
+      },
+      "limits": [
+        "No numerical mass curve has been evaluated; the old waveform samples do not certify the new integral.",
+        "A regular perturbative continuation would have this coefficient; existence of the coupled boundary solution is not established.",
+        "The wall tail supplies no late Jordan mass sign, frame agreement or constant mass plateau.",
+        "The cap vacuum and nonconstant reference mass require their own treatment; cap/wall evolution, observer correction and finite-amplitude validity remain open."
+      ],
+      "next_question": {
+        "connection_ids": [
+          "wall-mass-evaluation",
+          "cap-wall-closure"
+        ],
+        "decision": "Would controlled finite evaluation supply a needed junction input, or must a named remaining cap/wall datum be closed first?",
+        "owner": "docs/nsc-cosmological-atlas.md#programme-dependencies",
+        "status": "Open decision; no new bulk solver is presumed"
+      },
+      "status": "CONDITIONAL_EXTERIOR_WALL_MASS_FUNCTIONAL_CLOSED"
     }
   },
   "schema": "nsc.geometry-overview.v1"
