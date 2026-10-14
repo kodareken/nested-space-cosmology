@@ -1,5 +1,9 @@
 # Win11 follow-up verification, 14 October 2026
 
+The subsequent [receipt metadata update](receipt-rebinding-20261014.md)
+resolved the four binding failures below: all four passed serially on Win11.
+The table preserves the earlier run's result.
+
 Baseline: `f2671a8c4c72add006ba746a555a601a311b9629`, local `main`.
 Runtime: Python 3.14.8 with the root validation environment, Numba 0.68.0,
 NumPy 2.5.1 and one BLAS/OpenMP thread. The requested 11 nodes ran serially,

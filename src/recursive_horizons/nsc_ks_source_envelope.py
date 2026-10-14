@@ -967,6 +967,19 @@ def _comparison_control_run():
         _comparison_control_signal.signal(_comparison_control_signal.SIGPROF, previous)
     return checkpoint()
 
+def _require_envelope_capture_signature(root, captured, current):
+    """Keep original captures while authenticating exact metadata successors."""
+    from .nsc_receipt_metadata import authenticate_rebound_receipt
+
+    if captured.keys()!=current.keys():
+        raise ValueError('envelope capture signature schema changed')
+    for path, expected in captured.items():
+        if current[path]!=expected:
+            identity=authenticate_rebound_receipt(root,path,expected)
+            if current[path]!=identity['current_sha256']:
+                raise ValueError('current envelope signature does not name the authenticated carrier')
+
+
 def _comparison_control_check():
     saved = _comparison_control_json.loads((_comparison_control_ROOT / _comparison_control_OUTPUT).read_text())
     _comparison_control_inputs()
@@ -975,8 +988,8 @@ def _comparison_control_check():
     with _comparison_control_np.load(_comparison_control_ROOT / _comparison_control_ARTIFACT, allow_pickle=False) as a:
         arrays = {k: a[k] for k in a.files}
     meta = _comparison_control_json.loads(arrays['metadata_json'].tobytes())
-    if meta['signature'] != _comparison_control_signatures():
-        raise ValueError('envelope comparison owner/input changed')
+    _require_envelope_capture_signature(
+        _comparison_control_ROOT, meta['signature'], _comparison_control_signatures())
     from .nsc_ks_matter_receipt_replay import require_envelope_record
     require_envelope_record(saved, _comparison_control_record(arrays, meta, saved['payload']), arrays, meta)
     return saved
@@ -1139,8 +1152,8 @@ def _envelope_resolution_control_check():
     with _envelope_resolution_control_np.load(_envelope_resolution_control_ROOT / _envelope_resolution_control_ARTIFACT, allow_pickle=False) as f:
         arrays = {k: f[k] for k in f.files}
     meta = _envelope_resolution_control_json.loads(arrays['metadata_json'].tobytes())
-    if meta['signature'] != _envelope_resolution_control_signatures():
-        raise ValueError('resolution source/input changed')
+    _require_envelope_capture_signature(
+        _envelope_resolution_control_ROOT, meta['signature'], _envelope_resolution_control_signatures())
     from .nsc_ks_matter_receipt_replay import require_envelope_record
     require_envelope_record(saved, _envelope_resolution_control_record(arrays, meta, saved['payload']), arrays, meta)
     return saved

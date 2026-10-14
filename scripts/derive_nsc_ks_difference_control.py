@@ -22,6 +22,7 @@ from recursive_horizons.nsc_ks_source_envelope import resolution_control as R
 from recursive_horizons.nsc_evolved_incoming_state import FixedSourcePreparation
 from recursive_horizons.nsc_ks_difference_envelope import evolve_ks_difference_envelope
 from recursive_horizons.nsc_ks_source_envelope import computational_z_grid, usual_axial_support
+from recursive_horizons.nsc_ks_source_envelope import _require_envelope_capture_signature
 from recursive_horizons.nsc_mode_resolved_cauchy_state import deterministic_npz_bytes
 
 OUTPUT = 'results/development/nsc-ks-difference-control.json'
@@ -96,8 +97,9 @@ def replay_binding_receipt(saved,meta,arrays,name,binding,family):
     from recursive_horizons.nsc_frozen_sources import selected_source_context, source_sha256
     if selected_source_context() is None:
         raise ValueError('explicit original source context required for binding replay')
-    if digest(ARTIFACT)!=saved['payload']['sha256'] or signatures()!=meta['signature']:
+    if digest(ARTIFACT)!=saved['payload']['sha256']:
         raise ValueError('original binding receipt bytes or sources changed')
+    _require_envelope_capture_signature(ROOT,meta['signature'],signatures())
     with np.load(ROOT/ARTIFACT,allow_pickle=False) as original:
         if set(arrays)!=set(original.files) or any(
                 arrays[k].dtype!=original[k].dtype or not np.array_equal(arrays[k],original[k])
@@ -242,8 +244,7 @@ def check():
     with np.load(ROOT / ARTIFACT, allow_pickle=False) as f:
         arrays = {k: f[k] for k in f.files}
     meta = json.loads(arrays['metadata_json'].tobytes())
-    if signatures() != meta['signature']:
-        raise ValueError('difference source/input changed')
+    _require_envelope_capture_signature(ROOT,meta['signature'],signatures())
     rebuilt = json.loads(json.dumps(record(arrays, meta, saved['payload'])))
     from recursive_horizons.nsc_ks_matter_receipt_replay import require_envelope_record
     require_envelope_record(saved,rebuilt,arrays,meta)

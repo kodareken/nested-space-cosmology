@@ -327,11 +327,11 @@
     "docs/nsc-retarded-compatible-response.md": "4a25f6b7b5285ae564ca5a2f1b541dcfde073329230ef7212b7619e7b95ed3da",
     "docs/nsc-retarded-fourier-response.md": "aa6832adac39c25bc57f83fe7277af9acef1397749d55f3c387d003f626afadd",
     "docs/nsc-retarded-response-resolution.md": "3179a8c6bfcf4049ee0843f228aaa2c2b939c2c82bbada724998fadab232645c",
-    "results/development/nsc-compatible-prepared-history.json": "66cb7f086bb60bc646533ed09ca565cc02fedcafbc609d68b5dcf662a2e61318",
+    "results/development/nsc-compatible-prepared-history.json": "6eae36dbb91885caee51ef6d7e1ec0fa06983a70765f814761128b64c2d6514b",
     "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
-    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
-    "results/development/nsc-retarded-fourier-response.json": "3c29126f053de04670c5bd7e9addbc7943dfa2cd081034be45ea6d935cf1f4ea",
-    "results/development/nsc-retarded-response-resolution.json": "2ee55dd8682dad78e7d578ffc91e949fbf88c3d1a0558a165b289c54f48a934f",
+    "results/development/nsc-retarded-compatible-response.json": "e97fa5d9af108b2a1ddd41a6c4d21f98dce52635ff7fce62b9ca9b8a755acc28",
+    "results/development/nsc-retarded-fourier-response.json": "e5a9cff91668424aedfce5448fe9247266d1f8af52974f1fc67bb802b999c830",
+    "results/development/nsc-retarded-response-resolution.json": "1d566cae047c68f92bc018ecedd6a0e34c93207e6eec5c30e3b71104c9f2b6c6",
     "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
     "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
     "scripts/derive_nsc_retarded_fourier_response.py": "62a6c175d9ced6661ce6407ce955350684bb1e0d15a0c4a0e8a1255b7f344e40",
@@ -354,12 +354,12 @@
   "input_payload": {
     "bytes": 20796029,
     "path": "results/development/artifacts/nsc-retarded-response-resolution.npz",
-    "sha256": "8d3a79e6c1dc5ada4bbe17e9c3450ad6576a25212b04bbe0cd6dcf76c3b997cf"
+    "sha256": "8bbef1bbdda52a9bd227deaa37993735a35ca71708d2ba6a8de183d25cf2fad9"
   },
   "payload": {
     "bytes": 15800,
     "path": "results/development/artifacts/nsc-retarded-radial-response.npz",
-    "sha256": "ed3dea217b2199527f6061e943b2af2a7b1981b1e2ef4e0eb8d35b1d33ccd135"
+    "sha256": "d9c8fdd42ccb22a1368161f329c075bca8dc3f5a01d027bf4884d63498c49bfb"
   },
   "per_solve": {
     "coarse": {

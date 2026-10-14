@@ -67,7 +67,7 @@
   },
   "input_hashes": {
     "results/development/nsc-pg-ctp-mode-jets.json": "63ca3ab2c53fdc2fc3c4c7e9a4aa8ed2a95c4fdad9239f40a9f918c2662bcfd6",
-    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
+    "results/development/nsc-retarded-compatible-response.json": "e97fa5d9af108b2a1ddd41a6c4d21f98dce52635ff7fce62b9ca9b8a755acc28",
     "results/development/nsc-transmitting-history-modes.json": "fbf2b396dec5edfdc89fdb859c877d19ba570b17b711c0b7d7b2f4a2f5de4f57",
     "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
     "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
@@ -438,7 +438,7 @@
     {
       "bytes": 5889941,
       "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
-      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+      "sha256": "ce24b0eb0eeeecc2adfb491668864bddbfec3189f706179f06d69ca5070735a2"
     },
     {
       "bytes": 40006859,

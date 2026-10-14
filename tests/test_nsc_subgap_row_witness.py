@@ -2,6 +2,7 @@
 from copy import deepcopy
 from hashlib import sha256
 from io import BytesIO
+import json
 from pathlib import Path
 import time
 
@@ -31,11 +32,14 @@ from recursive_horizons.nsc_subgap_row_witness import (
     validate_phase_prefix,
 )
 from recursive_horizons.nsc_transmitting_dirac_domain import S3
+from recursive_horizons import nsc_massive_jost_mixed_transport as phase_proof
 
 
 from recursive_horizons.incoming import row15_witness as driver
 HORIZON = 2.0
 INNER = HORIZON + 1.01e-4
+ORIGINAL_RECORD_SHA = 'ab8e9639b2e51d1fa6864c762dd68cc78da480c631776428c832ff0c238310d7'
+ORIGINAL_PAYLOAD_SHA = '074bb1281f3f5fb2b7e31fd3d024435a2df14fa0b956576df1f45bdbc4b6888b'
 
 
 def _step(y0, y1, theta0, theta1, correction=0.0):
@@ -211,13 +215,71 @@ def test_malformed_payload_inventory_is_rejected():
         load_witness_arrays(bad_shape)
 
 
+def _segment_identity(segment):
+    return (segment.y_start.hex(), segment.y_end.hex(),
+            segment.theta_start.hex(), segment.theta_end.hex(),
+            segment.corrections.tobytes())
+
+
+def _require_proof_export_census(record, proof_cells, prefix):
+    """Check accounting against real directed proof returns, not a second theorem."""
+    signs = {'contracting': 0, 'expanding': 0, 'zero': 0, 'straddling': 0}
+    assert set(record['rate_signs']) == set(signs)
+    assert all(type(value) is int and value >= 0 for value in record['rate_signs'].values())
+    assert len(proof_cells) == len(prefix) == record['phase_cells']
+    for (identity, rate), row in zip(proof_cells, prefix):
+        assert identity == (*(float(value).hex() for value in row[:4]), row[5:].tobytes())
+        assert rate.is_finite()
+        if rate.is_zero():
+            label = 'zero'
+        elif rate > 0:
+            label = 'contracting'
+        elif rate < 0:
+            label = 'expanding'
+        else:
+            label = 'straddling'
+        signs[label] += 1
+    assert sum(signs.values()) == len(prefix)
+    assert record['rate_signs'] == signs
+    return signs
+
+
+def test_historical_census_retains_exact_authenticated_counts():
+    original = (driver.ROOT / driver.OUTPUT).read_bytes()
+    assert sha256(original).hexdigest() == ORIGINAL_RECORD_SHA
+    record = json.loads(original)
+    assert record['rate_signs'] == {
+        'contracting': 820, 'expanding': 23, 'zero': 0, 'straddling': 0}
+    assert record['phase_cells'] == 843
+    assert record['bloch_cells'] == 671
+    payload = (driver.ROOT / driver.PAYLOAD).read_bytes()
+    assert record['payload']['sha256'] == sha256(payload).hexdigest() == ORIGINAL_PAYLOAD_SHA
+    assert record['payload']['bytes'] == len(payload)
+    arrays = _arrays(payload)
+    assert arrays['phase_prefix'].shape == (843, 11)
+    assert arrays['bloch_trace'].shape[0] == 671
+
+
 @pytest.fixture(scope='module')
 def evidence():
     audit = {}
+    proof_cells = []
+    real_cell_proof = phase_proof.enclose_mixed_phase_transport_cell
+
+    def observe_cell(segment, *args, **kwargs):
+        cell = real_cell_proof(segment, *args, **kwargs)
+        proof_cells.append((_segment_identity(segment), cell['transport_rate_lower']))
+        return cell
+
     started, wall = time.process_time(), time.perf_counter()
-    record, raw = driver.calculate(audit=audit)
+    # Observe the existing proof once. The fresh adaptive interpolant need not
+    # have the historical capture's census, even when all its bounds hold.
+    with pytest.MonkeyPatch.context() as patch:
+        patch.setattr(phase_proof, 'enclose_mixed_phase_transport_cell', observe_cell)
+        record, raw = driver.calculate(audit=audit)
     audit['record'] = record
     audit['raw'] = raw
+    audit['proof_cells'] = tuple(proof_cells)
     audit['cpu_seconds'] = time.process_time() - started
     audit['wall_seconds'] = time.perf_counter() - wall
     return audit
@@ -232,8 +294,7 @@ def test_saved_prefix_matches_the_one_captured_row(evidence):
     record = evidence['record']
     assert record['phase_cells'] == 843
     assert record['bloch_cells'] == 671
-    assert record['rate_signs'] == {
-        'contracting': 820, 'expanding': 23, 'zero': 0, 'straddling': 0}
+    _require_proof_export_census(record, evidence['proof_cells'], evidence['prefix'])
     assert record['source_panel'] == 'group14/low16_1'
     assert record['source_row'] == 15
     assert record['source_signs'] == [1, -1]
@@ -248,6 +309,18 @@ def test_saved_prefix_matches_the_one_captured_row(evidence):
     assert 0 < positive <= 1.047331588e-10 + 5e-20, positive
     assert 0 < negative <= 1.046705871e-10 + 5e-20, negative
     assert record['positive_covariance_error_upper'] != record['negative_covariance_error_upper']
+
+
+def test_reassigned_rate_census_is_rejected_even_when_total_is_preserved(evidence):
+    forged = deepcopy(evidence['record'])
+    counts = forged['rate_signs']
+    donor = next(name for name, value in counts.items() if value > 0)
+    receiver = next(name for name in counts if name != donor)
+    counts[donor] -= 1
+    counts[receiver] += 1
+    assert sum(counts.values()) == evidence['record']['phase_cells']
+    with pytest.raises(AssertionError):
+        _require_proof_export_census(forged, evidence['proof_cells'], evidence['prefix'])
 
 
 def test_initial_errors_are_nonzero_and_the_gate_stays_open(evidence):

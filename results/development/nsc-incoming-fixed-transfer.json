@@ -307,7 +307,7 @@
     "docs/nsc-pg-massive-mode-resolution.md": "01b8d6615c5b751a08c8792cf190126c871a9815d3f815971f045ce468b31d2a",
     "docs/nsc-retarded-compatible-preparation.md": "6970d00ef8008b9afa66aac6b4b4c4bc6fc05713de84eb6df37058b3d7108eb8",
     "docs/nsc-retarded-radial-response.md": "92dabba89e05cd2720c185cbf784e4d67b1526fcb8fe9da35968b140dcc1a59f",
-    "results/development/nsc-incoming-endpoint-obstruction.json": "8d7c5dbe87efb65b0902900e4a6d9d9a1241457f98826b7db674314da867fed7",
+    "results/development/nsc-incoming-endpoint-obstruction.json": "438b3ce6a1fa554acd4327696677dbb8f5a345f1493b68dad25179343577c2cb",
     "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
     "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
     "src/recursive_horizons/nsc_incoming_endpoint_obstruction.py": "5de5195e61ff5a72a8d960600b47a5a2d1b6e03e7dcb27f93dc1b5fc7248846c",

@@ -50,7 +50,19 @@ def test_missing_remote_or_escaping_image_is_rejected(illustrated_source, target
         paper.local_image_path(illustrated_source, target)
 
 
-def test_illustrated_math_and_table_render_identically_twice(illustrated_source, tmp_path):
+def test_illustrated_math_and_table_render_identically_twice(illustrated_source, tmp_path, monkeypatch):
+    import errno
+
+    replace = Path.replace
+
+    def same_volume_replace(staged, destination):
+        # Model CI's checkout and temporary output being on different drives,
+        # even on a workstation with only one physical volume.
+        if staged.is_relative_to(paper.BUILD_DIRECTORY):
+            raise OSError(errno.EXDEV, "cross-volume atomic replacement")
+        return replace(staged, destination)
+
+    monkeypatch.setattr(Path, "replace", same_volume_replace)
     metadata = json.loads((ROOT / "paper/metadata.json").read_text(encoding="utf-8"))
     first, second = tmp_path / "first.pdf", tmp_path / "second.pdf"
     result_a = paper.build_pdf(illustrated_source, first, metadata)

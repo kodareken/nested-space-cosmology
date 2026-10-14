@@ -25,7 +25,7 @@
     "docs/nsc-incoming-fourier-matching.md": "1b06a749df98210d9eb276b27c9148fcf05106c100b95d0665546d72f999a289",
     "docs/nsc-upstream-metric-compensation.md": "cb7f7904846574f6797630cb577c4692a2cdd05f261fa324f14df370f6b14b71",
     "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
-    "results/development/nsc-retarded-radial-response.json": "f90294b377cbbdd3e04ce93c21fa22d6f60b7443248e38727d4c49fe3045d24b",
+    "results/development/nsc-retarded-radial-response.json": "3c350922277142b64292f58b6bbc8ef49345a76a79597cc74ffcb7d497927606",
     "src/recursive_horizons/nsc_incoming_cauchy_jets.py": "81b664b6bc304a83bb70296073e8f3b6237bec7f9576de87816fb76cc5ac5be8",
     "src/recursive_horizons/nsc_lorentzian.py": "65713e42b80ccb3a4985b8f5797dfbd37207fa89c123cfd0e8419bd24f84510e"
   },

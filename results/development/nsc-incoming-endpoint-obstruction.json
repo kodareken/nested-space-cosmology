@@ -357,8 +357,8 @@
     "results/development/nsc-compact-matched-restart.json": "bc99ed2ae82811eb820a5b54a5da43d907d98ee8d7350c63c57e5d62e98f6dbf",
     "results/development/nsc-incoming-vacuum-tail-bound.json": "6f83cd54a36422d65bb7cae494eea80e20dfc8987bac4e3b9c9c6c4647c7bfbd",
     "results/development/nsc-mode-resolved-cauchy-state.json": "90ed653e3439d385ede5eb8ca2f734d854505cfc03b575345cb836063c6917db",
-    "results/development/nsc-retarded-compatible-response.json": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
-    "results/development/nsc-upstream-compensator.json": "d7e07b91446abfcb8c9dfe7783687600028260e73794ca8aea803dae2af8e2aa",
+    "results/development/nsc-retarded-compatible-response.json": "e97fa5d9af108b2a1ddd41a6c4d21f98dce52635ff7fce62b9ca9b8a755acc28",
+    "results/development/nsc-upstream-compensator.json": "6f6ac356586b0688307b5e41120159157b8ca9708231b27c7af0c7fd69174759",
     "scripts/derive_nsc_retarded_compatible_response.py": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
     "src/recursive_horizons/nsc_compatible_history_geometry.py": "1138363969e00f48ba234e837925d42d6222e67534fd4f1e7ba634daebdf4a0f",
     "src/recursive_horizons/nsc_incoming_vacuum_tail_bound.py": "bcce0ae79b537aab700ca889da468271753b6b6608862cadb8380f6ce1f99710",
@@ -417,12 +417,12 @@
     {
       "bytes": 85712,
       "path": "results/development/artifacts/nsc-upstream-compensator.npz",
-      "sha256": "957997e9b2462bb43dcf8c7ae491a349786e0448e63137743dcc8fb7a606f790"
+      "sha256": "0af7ce6cc7891931377cbeb4212462fcd0dfd478066fa3d0ddeb267d8b39569a"
     },
     {
       "bytes": 5889941,
       "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
-      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+      "sha256": "ce24b0eb0eeeecc2adfb491668864bddbfec3189f706179f06d69ca5070735a2"
     }
   ],
   "reused_physical_background": {

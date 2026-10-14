@@ -4,10 +4,35 @@ import json
 from pathlib import Path
 import numpy as np
 import sympy as sp
+import pytest
 
 ROOT=Path(__file__).resolve().parents[1]
 SPEC=importlib.util.spec_from_file_location('retarded_response',ROOT/'scripts/derive_nsc_retarded_compatible_response.py')
 PILOT=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(PILOT)
+
+
+def test_prepared_control_authenticates_current_declarations_in_original_response_context(monkeypatch):
+    from recursive_horizons.nsc_frozen_sources import frozen_source_context, selected_source_context
+
+    expected=json.loads((ROOT/PILOT.RECORDS[2]).read_text())['source_sha256']
+    current_hash=PILOT.source_sha256
+    checked={}
+
+    def authenticate_current(root,path):
+        assert selected_source_context()=='329ef809e466a86ed4a290ee32c19485f85add9d'
+        checked[path]=current_hash(root,path)
+        return checked[path]
+
+    monkeypatch.setattr(PILOT,'source_sha256',authenticate_current)
+    with frozen_source_context('329ef809e466a86ed4a290ee32c19485f85add9d'):
+        PILOT.inputs()
+    assert checked==expected
+    document='docs/nsc-compatible-prepared-history.md'
+    monkeypatch.setattr(PILOT,'source_sha256',lambda root,path:
+                        '0'*64 if path==document else current_hash(root,path))
+    with frozen_source_context('329ef809e466a86ed4a290ee32c19485f85add9d'):
+        with pytest.raises(ValueError,match='prepared adapter receipt changed: '+document):
+            PILOT.inputs()
 
 
 def test_compact_axial_bump_has_the_declared_coherent_derivatives():

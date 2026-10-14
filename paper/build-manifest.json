@@ -169,7 +169,7 @@
     },
     {
       "path": "scripts/build_paper.py",
-      "sha256": "78b5b1f69a80bd7cd729829bf9fceb523581a905a2a33e322b26580bb3a6af6c"
+      "sha256": "dfd71460ba2e3d91c414556fb45f70f0aed6ae676f8d6cd6a7665dcdaa9f4545"
     }
   ],
   "source": "paper/nested-space-cosmology.md",

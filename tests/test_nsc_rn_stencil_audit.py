@@ -71,9 +71,20 @@ class RecordedVersusExactTests(unittest.TestCase):
         for row in failing_exact[:5]:
             self.assertLess(row["max_relative_weight_difference"], 1e-12)
 
-    def test_extended_precision_is_unavailable_here(self):
-        """Why exact rationals rather than a wider accumulator."""
-        self.assertEqual(np.longdouble(1.0).dtype, np.dtype(np.float64))
+    def test_extended_precision_capability_matches_the_host(self):
+        """The Windows observation is measured; wider Linux types are valid."""
+        extended = np.finfo(np.longdouble)
+        double = np.finfo(np.float64)
+        self.assertTrue(np.isfinite(extended.eps))
+        self.assertGreater(extended.eps, 0)
+        self.assertLessEqual(extended.eps, double.eps)
+        self.assertGreaterEqual(extended.nmant, double.nmant)
+        one = np.longdouble(1)
+        self.assertEqual(np.nextafter(one, np.longdouble(2)) - one, extended.eps)
+        print("EVIDENCE extended_precision", {
+            "dtype": str(np.dtype(np.longdouble)), "mantissa_bits": extended.nmant,
+            "epsilon": str(extended.eps), "wider_than_float64": extended.eps < double.eps,
+        })
 
 
 class SlopeValidityTests(unittest.TestCase):

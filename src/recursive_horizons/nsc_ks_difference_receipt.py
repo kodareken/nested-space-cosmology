@@ -2,7 +2,7 @@
 
 Authentication precedes construction. Source pins select read-only Git
 bytes; JSON/NPZ witnesses always come from the current root. Original and
-current profile fingerprints remain distinct. The phase reconstruction
+current profile fingerprints are authenticated separately. The phase reconstruction
 allowance is a finite arithmetic/library diagnostic, not a field error,
 integration error or changed scientific acceptance criterion.
 """
@@ -17,6 +17,7 @@ import numpy as np
 
 from . import nsc_ks_source_envelope as E
 from .nsc_frozen_sources import authenticate_source, is_implementation_source, source_sha256
+from .nsc_receipt_metadata import authenticate_rebound_receipt
 
 
 def _gamma(n):
@@ -122,7 +123,12 @@ def authenticated_difference_receipt(cls, root, receipt_path, expected_receipt_s
     for name,expected in signature.items():
         historical = is_implementation_source(name)
         context = overrides.get(name,source_context) if historical else None
-        authenticate_source(root,name,expected,context=context)
+        if not historical and source_sha256(root,name)!=expected:
+            # Preserve this capture's identity while proving the current local
+            # carrier differs only by the authorized receipt metadata update.
+            authenticate_rebound_receipt(root,name,expected)
+        else:
+            authenticate_source(root,name,expected,context=context)
         if historical:
             authenticated_contexts[name]=context
     required = {'scripts/derive_nsc_ks_difference_control.py',

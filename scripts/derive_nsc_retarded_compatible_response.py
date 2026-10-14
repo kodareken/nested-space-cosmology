@@ -11,7 +11,7 @@ import signal
 import sys
 import time
 
-from recursive_horizons.nsc_frozen_sources import selected_source_sha256, frozen_source_context
+from recursive_horizons.nsc_frozen_sources import selected_source_sha256, source_sha256, frozen_source_context
 
 import numpy as np
 from scipy.linalg import block_diag
@@ -49,7 +49,10 @@ def inputs():
                 if digest(p)!=h:raise ValueError('retarded input owner changed: '+p)
         if digest(record['payload']['path'])!=record['payload']['sha256']:raise ValueError('retarded input artifact changed')
     for p,h in records[2]['source_sha256'].items():
-        if digest(p)!=h:raise ValueError('prepared adapter receipt changed: '+p)
+        # This separately maintained control receipt declares current sources,
+        # including its corrected owner-document citation. Original retarded
+        # producer authentication must not override that current declaration.
+        if source_sha256(ROOT,p)!=h:raise ValueError('prepared adapter receipt changed: '+p)
     with np.load(ROOT/records[0]['payload']['path'],allow_pickle=False) as a:
         x=a['14_1/x'];phi=a['14_1/reference_field'];meta=json.loads(a['metadata_json'].tobytes())
     if meta['mode_payload']!=records[1]['payload']:raise ValueError('reference/source artifact binding differs')

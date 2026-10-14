@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f2671a8c4c72add006ba746a555a601a311b9629",
+  "current_receipt_commit_parent": "88b2e7b1bf265772eac7108827ccb5539889e5bd",
   "files": [
     {
       "bytes": 1120,
@@ -1437,6 +1437,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
+      "bytes": 4447,
+      "path": "docs/receipt-rebinding-20261014.md",
+      "retention_reason": "Authorized prepared-history receipt metadata verification",
+      "sha256": "08783d85746f9ad707094f3c006e663ca0eca214780c4b4076d6500062eee63a"
+    },
+    {
       "bytes": 18356,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "ea5e334ce025c10df89d61c470082bedf0fbb07a",
@@ -1481,10 +1487,10 @@
       "sha256": "6ecc2724e58650682f26f0aa00d4ce5833569ec0559543f5bd87942cc0af6ce8"
     },
     {
-      "bytes": 5578,
+      "bytes": 5774,
       "path": "docs/win11-verification-20261014.md",
       "retention_reason": "Current verification or documentation for the authorized Windows follow-up",
-      "sha256": "918284c508c51198e2f244ebf153f2ef9a238c17719baea358c46a323e370afa"
+      "sha256": "ead0e263f241e46ac9f65ed8c7d070a1154167313d07e3f6f808018b5d7aa387"
     },
     {
       "bytes": 3283,
@@ -1538,7 +1544,7 @@
       "path": "results/development/artifacts/nsc-evolved-incoming-state.npz",
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept receipt replay test needs the exact authenticated numerical payload; source context never substitutes old result bytes",
-      "sha256": "e7847d012402406b8eacf4e29a2c616f07b6957ec45b8efb3d17c533fea9e4da"
+      "sha256": "79c454e2689f121f68122b5fcb86b3a43a0377c3df1176c90e0da05fff7198cd"
     },
     {
       "bytes": 13473,
@@ -9156,21 +9162,21 @@
       "path": "results/development/artifacts/nsc-retarded-compatible-response.npz",
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept receipt replay test needs the exact authenticated numerical payload; source context never substitutes old result bytes",
-      "sha256": "72aafd825be4722ff6282867a9eff06f9ef82530a091d56300c45d6da9f599af"
+      "sha256": "ce24b0eb0eeeecc2adfb491668864bddbfec3189f706179f06d69ca5070735a2"
     },
     {
       "bytes": 15800,
       "path": "results/development/artifacts/nsc-retarded-radial-response.npz",
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test failed while loading this exact deleted input",
-      "sha256": "ed3dea217b2199527f6061e943b2af2a7b1981b1e2ef4e0eb8d35b1d33ccd135"
+      "sha256": "d9c8fdd42ccb22a1368161f329c075bca8dc3f5a01d027bf4884d63498c49bfb"
     },
     {
       "bytes": 20796029,
       "path": "results/development/artifacts/nsc-retarded-response-resolution.npz",
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test failed while loading this exact deleted input",
-      "sha256": "8d3a79e6c1dc5ada4bbe17e9c3450ad6576a25212b04bbe0cd6dcf76c3b997cf"
+      "sha256": "8bbef1bbdda52a9bd227deaa37993735a35ca71708d2ba6a8de183d25cf2fad9"
     },
     {
       "bytes": 112085,
@@ -9226,7 +9232,7 @@
       "path": "results/development/artifacts/nsc-upstream-compensator.npz",
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test failed while loading this exact deleted input",
-      "sha256": "957997e9b2462bb43dcf8c7ae491a349786e0448e63137743dcc8fb7a606f790"
+      "sha256": "0af7ce6cc7891931377cbeb4212462fcd0dfd478066fa3d0ddeb267d8b39569a"
     },
     {
       "bytes": 102384,
@@ -12780,7 +12786,7 @@
       "original_path": "lab/results/development/nsc-evolved-incoming-constraints.json",
       "original_sha256": "a738e839459e907017ff6844ef2faca34fd21e28b28fe1c5135703d76a1ebee5",
       "path": "results/development/nsc-evolved-incoming-constraints.json",
-      "sha256": "a738e839459e907017ff6844ef2faca34fd21e28b28fe1c5135703d76a1ebee5"
+      "sha256": "6336cb21636504db01b5927762e0afabe3d811b41500c6aaa40b84dc5eb462a2"
     },
     {
       "bytes": 7818,
@@ -12791,7 +12797,7 @@
       "original_path": "lab/results/development/nsc-evolved-incoming-state.json",
       "original_sha256": "1780cb2bfa0dea3a92d235e7d84b6faf8ed99ccc8a2bfaddf3316af123def4b7",
       "path": "results/development/nsc-evolved-incoming-state.json",
-      "sha256": "1780cb2bfa0dea3a92d235e7d84b6faf8ed99ccc8a2bfaddf3316af123def4b7"
+      "sha256": "a7b40f60fad4a4560a2ba36ef61229dae93046f00eb44b1d78f16ecea0f7543a"
     },
     {
       "bytes": 13967,
@@ -13042,7 +13048,7 @@
       "original_path": "lab/results/development/nsc-incoming-endpoint-obstruction.json",
       "original_sha256": "8d7c5dbe87efb65b0902900e4a6d9d9a1241457f98826b7db674314da867fed7",
       "path": "results/development/nsc-incoming-endpoint-obstruction.json",
-      "sha256": "8d7c5dbe87efb65b0902900e4a6d9d9a1241457f98826b7db674314da867fed7"
+      "sha256": "438b3ce6a1fa554acd4327696677dbb8f5a345f1493b68dad25179343577c2cb"
     },
     {
       "bytes": 20462,
@@ -13075,7 +13081,7 @@
       "original_path": "lab/results/development/nsc-incoming-fixed-transfer.json",
       "original_sha256": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2",
       "path": "results/development/nsc-incoming-fixed-transfer.json",
-      "sha256": "4cecaf278b5266ccc5fb78a2cbf5a143846427adcb00af5572c991418815bae2"
+      "sha256": "8d9eaa45b706d4e5a28e3e9ab403f419136e28911a49474547e2bc361ebb09ce"
     },
     {
       "bytes": 15420,
@@ -13152,7 +13158,7 @@
       "original_path": "lab/results/development/nsc-incoming-jet-rigidity.json",
       "original_sha256": "c8047c0398d0bcd235a6218e7eec97339be137a294877123f2db2e1138d57ca0",
       "path": "results/development/nsc-incoming-jet-rigidity.json",
-      "sha256": "c8047c0398d0bcd235a6218e7eec97339be137a294877123f2db2e1138d57ca0"
+      "sha256": "6b8f7d3db554f9f9b4415f50e94f600e1a4ad8cf89d3fc58465991c287df5d11"
     },
     {
       "bytes": 69600,
@@ -16770,7 +16776,7 @@
       "original_path": "lab/results/development/nsc-retarded-compatible-response.json",
       "original_sha256": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9",
       "path": "results/development/nsc-retarded-compatible-response.json",
-      "sha256": "af554fc9c18bf18780b96e258fe8cfb0dcc1df1dfb7da0480c1ef961bb4d61b9"
+      "sha256": "e97fa5d9af108b2a1ddd41a6c4d21f98dce52635ff7fce62b9ca9b8a755acc28"
     },
     {
       "bytes": 5685,
@@ -16781,7 +16787,7 @@
       "original_path": "lab/results/development/nsc-retarded-fixed-c0-certificate.json",
       "original_sha256": "868a833d413c12b0a48f6be36e68f279a66d1946efbd620bcde9f9623fe073e6",
       "path": "results/development/nsc-retarded-fixed-c0-certificate.json",
-      "sha256": "868a833d413c12b0a48f6be36e68f279a66d1946efbd620bcde9f9623fe073e6"
+      "sha256": "d454aa52278cddbfe41b0198bf00a17dba6cfedaa7e9ff2690c5ffeba412df71"
     },
     {
       "bytes": 83550,
@@ -16792,7 +16798,7 @@
       "original_path": "lab/results/development/nsc-retarded-fourier-response.json",
       "original_sha256": "3c29126f053de04670c5bd7e9addbc7943dfa2cd081034be45ea6d935cf1f4ea",
       "path": "results/development/nsc-retarded-fourier-response.json",
-      "sha256": "3c29126f053de04670c5bd7e9addbc7943dfa2cd081034be45ea6d935cf1f4ea"
+      "sha256": "e5a9cff91668424aedfce5448fe9247266d1f8af52974f1fc67bb802b999c830"
     },
     {
       "bytes": 23880,
@@ -16803,7 +16809,7 @@
       "original_path": "lab/results/development/nsc-retarded-radial-response.json",
       "original_sha256": "f90294b377cbbdd3e04ce93c21fa22d6f60b7443248e38727d4c49fe3045d24b",
       "path": "results/development/nsc-retarded-radial-response.json",
-      "sha256": "f90294b377cbbdd3e04ce93c21fa22d6f60b7443248e38727d4c49fe3045d24b"
+      "sha256": "3c350922277142b64292f58b6bbc8ef49345a76a79597cc74ffcb7d497927606"
     },
     {
       "bytes": 16304,
@@ -16814,7 +16820,7 @@
       "original_path": "lab/results/development/nsc-retarded-response-resolution.json",
       "original_sha256": "2ee55dd8682dad78e7d578ffc91e949fbf88c3d1a0558a165b289c54f48a934f",
       "path": "results/development/nsc-retarded-response-resolution.json",
-      "sha256": "2ee55dd8682dad78e7d578ffc91e949fbf88c3d1a0558a165b289c54f48a934f"
+      "sha256": "1d566cae047c68f92bc018ecedd6a0e34c93207e6eec5c30e3b71104c9f2b6c6"
     },
     {
       "bytes": 18926,
@@ -16825,7 +16831,7 @@
       "original_path": "lab/results/development/nsc-retarded-spatial-diagnosis.json",
       "original_sha256": "20534be1d0e56c7a42e1937fb742db03784ad15f0d44d15240ccbdab4efd3abf",
       "path": "results/development/nsc-retarded-spatial-diagnosis.json",
-      "sha256": "20534be1d0e56c7a42e1937fb742db03784ad15f0d44d15240ccbdab4efd3abf"
+      "sha256": "d36e0f5c9453a6e2e76fefa330e55801ae40722e3c7f4a7f7dc46e40508d4070"
     },
     {
       "bytes": 146563,
@@ -18813,7 +18819,7 @@
       "original_path": "lab/results/development/nsc-upstream-compensation-rank.json",
       "original_sha256": "52029e38112e66f0fda0f0df4778653aad1e153fa3692b0ce4223804fe9e822d",
       "path": "results/development/nsc-upstream-compensation-rank.json",
-      "sha256": "52029e38112e66f0fda0f0df4778653aad1e153fa3692b0ce4223804fe9e822d"
+      "sha256": "3910306c037290e473fbeca654169b0d92dbc87646b87dcb37c67b2aa27a1d8f"
     },
     {
       "bytes": 194208,
@@ -18824,7 +18830,7 @@
       "original_path": "lab/results/development/nsc-upstream-compensator.json",
       "original_sha256": "d7e07b91446abfcb8c9dfe7783687600028260e73794ca8aea803dae2af8e2aa",
       "path": "results/development/nsc-upstream-compensator.json",
-      "sha256": "d7e07b91446abfcb8c9dfe7783687600028260e73794ca8aea803dae2af8e2aa"
+      "sha256": "6f6ac356586b0688307b5e41120159157b8ca9708231b27c7af0c7fd69174759"
     },
     {
       "bytes": 22705,
@@ -19130,6 +19136,12 @@
       "original_sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac",
       "path": "results/development/warped-source.json",
       "sha256": "f645cd5de71c80c7f7bd50404af2d1f15cbf9a452986d7503bf5b6dd7abb2aac"
+    },
+    {
+      "bytes": 52943,
+      "path": "results/metadata/prepared-history/receipt-rebind.json",
+      "retention_reason": "Authorized prepared-history receipt metadata verification",
+      "sha256": "46857b7ba2f51b53038305d3796b4de03d4e7a2551e167e20f9100976cc3ceeb"
     },
     {
       "bytes": 7369,
@@ -20643,7 +20655,7 @@
       "sha256": "846035fc9758b4e44f00534b59ff30added33ea02544015aef3ae5f452dd7eab"
     },
     {
-      "bytes": 14451,
+      "bytes": 14558,
       "import_bytes": 8411,
       "import_sha256": "956ae178458f309201999af6fdac2ba75452a1185cedc9b085471a4e08a4d2a3",
       "migration_disposition": "active_owner",
@@ -20651,7 +20663,7 @@
       "original_path": "lab/scripts/derive_nsc_ks_difference_control.py",
       "original_sha256": "956ae178458f309201999af6fdac2ba75452a1185cedc9b085471a4e08a4d2a3",
       "path": "scripts/derive_nsc_ks_difference_control.py",
-      "sha256": "0969546bbee243dbc107bf7b8bf0e71a9cc07b8fb91a138199e648fbd54dd670"
+      "sha256": "d2f3962b08123f10453d59b92a002898516e326f4afb94ff192e60353568dec8"
     },
     {
       "bytes": 4552,
@@ -21308,7 +21320,7 @@
       "sha256": "3cd38b3acfa418db6bfd0fde7df207ae762d68aba3ea702492560e5a3712b763"
     },
     {
-      "bytes": 20543,
+      "bytes": 20804,
       "import_bytes": 19933,
       "import_sha256": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
       "migration_disposition": "active_owner",
@@ -21316,7 +21328,7 @@
       "original_path": "lab/scripts/derive_nsc_retarded_compatible_response.py",
       "original_sha256": "f6917436e089bbcf4feed1490e2ace1f250aa02f3c5429f3b8608a7e724f559b",
       "path": "scripts/derive_nsc_retarded_compatible_response.py",
-      "sha256": "481fbbdfd0b1f526f60e8848b22f4356b6cbda1051f22226d40d3cac779fc4c1"
+      "sha256": "b9ddf07d028808426f7a139c83c7bdd4b58097effe52ce107780839fbb481eeb"
     },
     {
       "bytes": 7927,
@@ -21903,6 +21915,12 @@
       "original_path": "lab/scripts/plot_nsc_rn_gradient_bubble.py",
       "path": "scripts/plot_nsc_rn_gradient_bubble.py",
       "sha256": "8892a722325da7d8a0bf3b6271972c995fe99cfaa124d4f23e576b6900c7afa6"
+    },
+    {
+      "bytes": 15988,
+      "path": "scripts/rebind_nsc_prepared_history_receipts.py",
+      "retention_reason": "Authorized prepared-history receipt metadata verification",
+      "sha256": "3ba886fe408e5758c3b66beff06e83fb4d67cc07cf377a3f97fcf732d88aefaa"
     },
     {
       "bytes": 21679,
@@ -23515,10 +23533,10 @@
       "sha256": "eb8b87abfb72d63721303fef9f04c22d8444cfe44ca109ccc5fc3fb55a83f871"
     },
     {
-      "bytes": 11704,
+      "bytes": 12082,
       "path": "src/recursive_horizons/nsc_ks_difference_receipt.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
-      "sha256": "67b294023c3355f8a437d4ad047e757b654d471feb594da7e6bf0883a92c75ec"
+      "sha256": "96c8ba88531ff54d3c69ce87fd7b2c8ba73493afab036f2efb1033659dbf62cf"
     },
     {
       "bytes": 7753,
@@ -23918,7 +23936,7 @@
       "sha256": "44f281c03f51a79d13b709c4f4343585a6fb7aa63e88b6b774c5ef8f2bec0a41"
     },
     {
-      "bytes": 67445,
+      "bytes": 68096,
       "import_bytes": 35918,
       "import_sha256": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
       "migration_disposition": "active_owner",
@@ -23926,7 +23944,7 @@
       "original_path": "lab/src/recursive_horizons/nsc_ks_source_envelope.py",
       "original_sha256": "98d130c35f0c48bb0be61e811567aa8829723f6c0db92725e2564168a1e285fa",
       "path": "src/recursive_horizons/nsc_ks_source_envelope.py",
-      "sha256": "65f5258c1b37c5759f10087a3f8e222b389023149484a6873737bbfe7668c3a8"
+      "sha256": "d2401346e1f451707583a1dde2e01d120b414f7c73aa252522e6a6c9ffa887b7"
     },
     {
       "bytes": 10883,
@@ -24628,6 +24646,12 @@
       "original_sha256": "85d037c296639b15fc1a529691fb6e56e0dbb313102c086efc26c89c7eaf3497",
       "path": "src/recursive_horizons/nsc_radius_transfer_sums.py",
       "sha256": "85d037c296639b15fc1a529691fb6e56e0dbb313102c086efc26c89c7eaf3497"
+    },
+    {
+      "bytes": 2672,
+      "path": "src/recursive_horizons/nsc_receipt_metadata.py",
+      "retention_reason": "Authorized prepared-history receipt metadata verification",
+      "sha256": "62e602346884525b9ee3d96c05d0394d9221830bdff44b53bf7e077bc90773fb"
     },
     {
       "bytes": 2844,
@@ -26957,10 +26981,10 @@
       "sha256": "09cad4982b999f4b677c2bb32f223189dfc9e966a9309976e50bb5e9b34ccff3"
     },
     {
-      "bytes": 7703,
+      "bytes": 8357,
       "path": "tests/test_nsc_ks_difference_receipt.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
-      "sha256": "b57db4a37c7257085b098c7f3df4b52c575dafbaf9b4d11b0c9b4593b8ea3d13"
+      "sha256": "ee1e6ec717f31046aebc1dff4ecc12fdaa4b3d5a49bda1063aa11dc3a3be3f41"
     },
     {
       "bytes": 7917,
@@ -28066,7 +28090,7 @@
       "sha256": "1a069527bc5aaf9de27079c85847e0dcdfe9ca9e8d3620b319eab21201605cba"
     },
     {
-      "bytes": 4679,
+      "bytes": 5823,
       "import_bytes": 4565,
       "import_sha256": "0580dc73545977748829a4f2a8b97df751e0a78393bf7872b5898108b13dcd34",
       "migration_disposition": "active_owner",
@@ -28074,7 +28098,7 @@
       "original_path": "lab/tests/test_nsc_retarded_compatible_response.py",
       "original_sha256": "0580dc73545977748829a4f2a8b97df751e0a78393bf7872b5898108b13dcd34",
       "path": "tests/test_nsc_retarded_compatible_response.py",
-      "sha256": "63e0b584488df8445299cfbae7c22c06d0cd382ec0edb9846abf4167aaa8cc04"
+      "sha256": "b61cb5754395376431bb0d2c892283100a857401b2bfb2142a1589aac2f55bbc"
     },
     {
       "bytes": 2897,
@@ -28325,7 +28349,7 @@
       "sha256": "1038b8f8e0e32f68f8cd6fd8a5af705f5b7d6466de04020d10dc890ca7598bf4"
     },
     {
-      "bytes": 4574,
+      "bytes": 5162,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "74e4c97273171d2c6130b38d83470f82fdb1e724",
       "import_bytes": 4574,
@@ -28333,7 +28357,7 @@
       "migration_disposition": "active_owner",
       "original_path": "lab/tests/test_nsc_rn_stencil_audit.py",
       "path": "tests/test_nsc_rn_stencil_audit.py",
-      "sha256": "b8aeccf73845b49f49bdcd3392e32690900bd9d19653938c39f6a32f7ee4c30a"
+      "sha256": "c3ce07dfacd84b4aed3909d3e0ae1932b24b214dc7db5edbf6bb850f6c06061d"
     },
     {
       "bytes": 4191,
@@ -28485,7 +28509,7 @@
       "sha256": "7b46ca33385616b827fb98d6b5c77ffe8a6a0eb59540d5fae46f1cecb17ade6e"
     },
     {
-      "bytes": 16265,
+      "bytes": 19606,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3324f51d3cd6d4cbac7484c899216c9fd897eaa2",
       "import_bytes": 16208,
@@ -28493,7 +28517,7 @@
       "migration_disposition": "active_owner",
       "original_path": "lab/tests/test_nsc_subgap_row_witness.py",
       "path": "tests/test_nsc_subgap_row_witness.py",
-      "sha256": "3860d50e04f6a1e6984e87c9b0e6ae18e1db6159cf7f51bcc2acf9ded536b412"
+      "sha256": "4d429d134accf0be7535450f0c03b303aad4d2ac7bda1f8d3d008ae4c203c6d7"
     },
     {
       "bytes": 7424,
@@ -28737,6 +28761,12 @@
       "original_sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d",
       "path": "tests/test_nsc_weyl_small_transfer_bound.py",
       "sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d"
+    },
+    {
+      "bytes": 4897,
+      "path": "tests/test_prepared_history_receipt_rebind.py",
+      "retention_reason": "Authorized prepared-history receipt metadata verification",
+      "sha256": "0700114b6720330bbba520ed48409a7d1bc9b1ff2f0527b6fb23528d5b50b850"
     },
     {
       "bytes": 3610,

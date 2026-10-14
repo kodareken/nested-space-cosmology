@@ -1311,8 +1311,10 @@ def build_pdf(
     )
 
     output.parent.mkdir(parents=True, exist_ok=True)
-    BUILD_DIRECTORY.mkdir(parents=True, exist_ok=True)
-    temporary = BUILD_DIRECTORY / f"{output.name}.tmp"
+    # Atomic replacement requires the staging file and output on one volume.
+    staging = output.parent / ".build"
+    staging.mkdir(parents=True, exist_ok=True)
+    temporary = staging / f"{output.name}.tmp"
     if temporary.exists():
         temporary.unlink()
 

@@ -46,6 +46,8 @@ def authenticated(recipe):
 def test_exact_local_arrays_and_separate_phase_indicators(authenticated):
     record=json.loads((ROOT/RECEIPT).read_text())
     with np.load(ROOT/record['payload']['path'],allow_pickle=False) as archive:
+        metadata=json.loads(archive['metadata_json'].tobytes())
+        original_fingerprint=metadata['cases']['tighter512']['binding']
         for attr,key in [('columns','F'),('column_tangents','dF'),('axial_columns','Fz'),
                          ('axial_tangents','dFz'),('reference_amplitudes','A'),
                          ('envelope_difference','D'),('envelope_difference_z','Dz')]:
@@ -60,7 +62,15 @@ def test_exact_local_arrays_and_separate_phase_indicators(authenticated):
     assert diagnostic['physical_constraint_status']=='OPEN'
     assert diagnostic['maximum_F_arithmetic_bound']>0
     assert diagnostic['maximum_F_library_accuracy_indicator']>0
-    assert authenticated.diagnostics['original_binding_fingerprint']!=authenticated.binding.fingerprint
+    # Original and current identities are separately authenticated. Their
+    # hashes can agree when the current profile bytes match the captured ones.
+    assert authenticated.diagnostics['original_binding_fingerprint']==original_fingerprint
+    binding=authenticated.binding
+    current_fingerprint=E._profile_fingerprint(
+        binding.computational_z,binding.w_samples,binding.U_samples,binding.amplitudes,
+        binding.inner_radii,binding.outer_radii,binding.axial_support,
+        binding.rho_up,binding.rho_sigma,binding.rtol,binding.atol,binding.max_step)
+    assert current_fingerprint==binding.fingerprint
     assert authenticated.diagnostics['current_binding_fingerprint']==authenticated.binding.fingerprint
     assert authenticated.validate()
 

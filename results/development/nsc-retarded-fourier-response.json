@@ -6,14 +6,14 @@
     "scripts/derive_nsc_retarded_fourier_response.py": "62a6c175d9ced6661ce6407ce955350684bb1e0d15a0c4a0e8a1255b7f344e40",
     "tests/test_nsc_retarded_fourier_response.py": "1cc8d25c858d1316bcecb1027f1f045b6d19c1b0a9fa3afbb227fbc36a23378e",
     "docs/nsc-retarded-fourier-response.md": "aa6832adac39c25bc57f83fe7277af9acef1397749d55f3c387d003f626afadd",
-    "results/development/nsc-retarded-response-resolution.json": "2ee55dd8682dad78e7d578ffc91e949fbf88c3d1a0558a165b289c54f48a934f",
+    "results/development/nsc-retarded-response-resolution.json": "1d566cae047c68f92bc018ecedd6a0e34c93207e6eec5c30e3b71104c9f2b6c6",
     "scripts/derive_nsc_retarded_response_resolution.py": "6d912796699c138d8f709a12b6e0e5508e84e6368712a3651f18907ee199f657",
     "docs/nsc-incoming-fourier-matching.md": "1b06a749df98210d9eb276b27c9148fcf05106c100b95d0665546d72f999a289"
   },
   "input_payload": {
     "bytes": 20796029,
     "path": "results/development/artifacts/nsc-retarded-response-resolution.npz",
-    "sha256": "8d3a79e6c1dc5ada4bbe17e9c3450ad6576a25212b04bbe0cd6dcf76c3b997cf"
+    "sha256": "8bbef1bbdda52a9bd227deaa37993735a35ca71708d2ba6a8de183d25cf2fad9"
   },
   "energies": [
     -0.5562120090641313,

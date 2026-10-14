@@ -32,7 +32,8 @@ The geometry replay retains its producer's 20-second cap. For a parallel run,
 `-m 'not cpu_budget'` optionally excludes those two whole tests, including the
 geometry replay's numerical comparisons; the default serial suite includes them.
 The [14 October Win11 follow-up](win11-verification-20261014.md) lists the
-11 requested reruns, remaining binding failures and the checks performed.
+11 requested reruns. The [subsequent receipt update](receipt-rebinding-20261014.md)
+records the metadata regeneration that resolved its four binding failures.
 
 `check_lab_snapshot.py` authenticates the current paths, hashes and sizes in the
 v2 [retained-file receipts](lab-snapshot.json), plus the unchanged objects and
@@ -54,6 +55,12 @@ The threshold18 import has two normalized creator path labels. Its metadata
 checker authenticates the exact old and current bytes and the single string
 replacement, while numerical replay uses current local files. It records the
 original and current tree hashes separately; any other change is rejected.
+
+The bounded prepared-history receipt update has a separate exact
+[ledger](../results/metadata/prepared-history/receipt-rebind.json). Verify its
+current carriers with
+`python scripts/run_python.py scripts/rebind_nsc_prepared_history_receipts.py --verify`.
+The original execution signatures and numerical members remain fixed.
 
 When changing the manuscript's figures, the retained figure producers are:
 
