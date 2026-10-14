@@ -20,6 +20,7 @@ from derive_nsc_ks_source_operator_majorant import digest, read_bound, source_er
 from recursive_horizons.nsc_ks_source_majorant_replay import require_same_slice as _require_same_slice
 from recursive_horizons.nsc_ks_source_majorant_replay import (
     bind_subgap_inputs, require_saved_witness, subgap_rows)
+from recursive_horizons.nsc_threshold18_metadata import authenticate_import_tree
 from flint import arb, ctx
 from recursive_horizons.evidence_io import publish_exclusive_file
 from recursive_horizons.nsc_evolved_incoming_state import _digest_arrays
@@ -62,10 +63,12 @@ OWNERS = (
     'scripts/derive_nsc_ks_source_operator_majorant.py',
     'src/recursive_horizons/nsc_ks_source_majorant_replay.py',
     'src/recursive_horizons/nsc_threshold18_replay.py',
+    'src/recursive_horizons/nsc_threshold18_metadata.py',
     'src/recursive_horizons/nsc_subgap_source_window.py',
     'src/recursive_horizons/nsc_ks_source_operator_majorant.py',
     'src/recursive_horizons/nsc_ks_retained_upstream_archive.py',
     'tests/test_nsc_ks_source_operator_majorant_v7.py',
+    'tests/test_nsc_threshold18_metadata.py',
     'docs/nsc-ks-source-operator-majorant-v7.md')
 
 
@@ -576,6 +579,7 @@ def calculate(*, source_context=None):
     # The immutable accepted v6/subgap receipts explicitly name their original
     # producer context. Their numerical outputs remain strict current inputs.
     upstream_source_context=source_context or ORIGINAL_SOURCE_CONTEXT
+    tree_identity=authenticate_import_tree(ROOT)
     selection = frozen_source_context(upstream_source_context)
     with selection:
         prior = accepted_v6()
@@ -665,6 +669,9 @@ def calculate(*, source_context=None):
             result['input_hashes']={
                 ('archive/source-history/'+path[len('.source-history/'):] if path.startswith('.source-history/') else path):value
                 for path,value in original_inputs.items() if not is_implementation_source(path)}
+            for identity in tree_identity['metadata_normalizations']:
+                result['input_hashes'][identity['path']]=identity['current_sha256']
+            result['threshold_metadata_normalization']=tree_identity
             if any(not (ROOT/path).is_file() for path in result['input_hashes']):
                 raise ValueError('current majorant input path unavailable')
             result['upstream_receipt_provenance']={

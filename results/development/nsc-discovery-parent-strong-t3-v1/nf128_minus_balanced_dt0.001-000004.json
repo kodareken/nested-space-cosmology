@@ -1300,12 +1300,12 @@
     "results/development/nsc-discovery-parent-v1/strong-balanced-v1/minus/parent.npz": "3119b7fddd6dc77a4871d9b9bced31f1279f2417c73fbf771dd8e92b65ad0b0c",
     "results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus/parent.json": "90aa6d4759416a5602f479fd93e6e320b5e9f19ac803576c6ecc7c3a076987a6",
     "results/development/nsc-discovery-parent-v1/strong-balanced-v1/plus/parent.npz": "911b6be21a4b0e505788b9f6a34743a881f4d40465515843580d71ee4f86daab",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.json": "75068cd6ab96b0cec5cd78e1c7b626afe315bff7cf84f459033c8d7cd6dfdc9e",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.npz": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.json": "88a69d26d2a4db1d6f72603bf8ea8edb0807ad2463e1c0b6ffa5818dc3d70fcd",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.npz": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/manifest.json": "4b94e419e7d6be0bddf80b56fc21d4d9eaa34bef0eb0d5f634c6687f83cbfbe8",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1/cpu-ledger.json": "60f5eebd27ed0499d370aa9443e8d495a03702d01d18ec2a9d4fa0d6f027718f"
+    "results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.json": "75068cd6ab96b0cec5cd78e1c7b626afe315bff7cf84f459033c8d7cd6dfdc9e",
+    "results/development/nsc-discovery-parent-strong-t1-v1/nf128_minus_balanced_dt0.001-000003.npz": "af10d5273fd2bb2aadb45442f513c595774b3c6796d95e97c84202aeb189db00",
+    "results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.json": "88a69d26d2a4db1d6f72603bf8ea8edb0807ad2463e1c0b6ffa5818dc3d70fcd",
+    "results/development/nsc-discovery-parent-strong-t1-v1/nf128_plus_balanced_dt0.001-000003.npz": "0265962875989f659a1ad204c2ac8bcb2e2c150b573af4368214f3cbd4625232",
+    "results/development/nsc-discovery-parent-strong-t1-v1/manifest.json": "4b94e419e7d6be0bddf80b56fc21d4d9eaa34bef0eb0d5f634c6687f83cbfbe8",
+    "results/development/nsc-discovery-parent-strong-t1-v1/cpu-ledger.json": "60f5eebd27ed0499d370aa9443e8d495a03702d01d18ec2a9d4fa0d6f027718f"
   },
   "projector_source_reset": false,
   "source_reset": false,
@@ -2557,7 +2557,7 @@
     "coordinate_time": 1.0
   },
   "continuation_predecessor": {
-    "directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-parent-strong-t1-v1",
+    "directory": "results/development/nsc-discovery-parent-strong-t1-v1",
     "case_id": "nf128_minus_balanced_dt0.001",
     "ordinal": 3,
     "json_sha256": "75068cd6ab96b0cec5cd78e1c7b626afe315bff7cf84f459033c8d7cd6dfdc9e",

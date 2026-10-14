@@ -18,6 +18,8 @@ from recursive_horizons.nsc_ks_massive_cubic_uv import require_original_history
 from recursive_horizons.nsc_ks_current_uv_transport import HISTORY_RECORD
 from recursive_horizons.nsc_ks_retained_upstream_archive import RetainedUpstreamArchive
 from recursive_horizons.nsc_ks_source_operator_majorant import history_source_insertion
+from recursive_horizons.nsc_threshold18_metadata import (
+    METADATA_IDENTITIES, authenticate_normalized_metadata)
 
 OUTPUT='results/development/nsc-ks-source-operator-majorant-v1.json'
 HIGH='results/development/nsc-vacuum-source-remainder-v1.json'
@@ -39,7 +41,11 @@ def read_bound(path):
     record=json.loads((ROOT/path).read_text())
     for group in ('source_hashes','input_hashes'):
         for name,expected in record[group].items():
-            if digest(name)!=expected:raise ValueError('source-bound dependency changed: '+name)
+            if digest(name)!=expected:
+                if group=='input_hashes' and name in METADATA_IDENTITIES:
+                    authenticate_normalized_metadata(ROOT,name,expected)
+                else:
+                    raise ValueError('source-bound dependency changed: '+name)
     payload=record.get('payload')
     if payload and digest(payload['path'])!=payload['sha256']:
         raise ValueError('source-bound payload changed')

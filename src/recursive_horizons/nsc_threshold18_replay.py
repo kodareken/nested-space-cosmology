@@ -14,10 +14,12 @@ from .nsc_ks_signed_state import s3_conjugate, source_complement_residual
 from .nsc_frozen_sources import (
     authenticate_source, is_implementation_source, selected_source_context,
     selected_source_sha256)
+from .nsc_threshold18_metadata import (
+    ORIGINAL_IMPORT_TREE_SHA256, CURRENT_IMPORT_TREE_SHA256, authenticate_import_tree)
 
 IMPORT_RELATIVE = 'results/development/nsc-threshold18-import-v1'
 CHECKPOINT_RELATIVE = IMPORT_RELATIVE + '/results/development/nsc-threshold18-actual18-v1'
-IMPORT_TREE_SHA256 = 'bc7c5c2424810650acbeae20c4bedfc18548737f112725c63702eb3f9920a4c7'
+IMPORT_TREE_SHA256 = ORIGINAL_IMPORT_TREE_SHA256
 BASE_COMMIT = 'eebbe0c3b0bfe76be0bae4a64d3b52ba8da7cfb9'
 PROPAGATOR = 'src/recursive_horizons/nsc_ks_energy_propagator.py'
 PROPAGATOR_BLOB = '31818fdd6b8cc9c4d8b9d33f41e0f241b2dd1227'
@@ -148,17 +150,8 @@ def verify_closure(lab, record):
 
 
 def import_tree_sha256(lab):
-    root = lab / IMPORT_RELATIVE
-    digest = hashlib.sha256()
-    files = sorted(path for path in root.rglob('*') if path.is_file())
-    for path in files:
-        digest.update(path.relative_to(root).as_posix().encode())
-        digest.update(b'\0')
-        digest.update(path.read_bytes())
-        digest.update(b'\0')
-    if digest.hexdigest() != IMPORT_TREE_SHA256 or len(files) != 25:
-        raise ValueError('imported threshold18 tree changed')
-    return digest.hexdigest()
+    """The actual current tree digest, after authenticating the normalization."""
+    return authenticate_import_tree(lab)['current_sha256']
 
 
 def _negative_zero_at_corner(local, imported):
@@ -192,7 +185,8 @@ def _batch(archive):
 def replay_threshold18(lab, archive=None):
     """Compare all nine pairs and bind both negative raw digests. No ODE is run."""
     lab = Path(lab)
-    if import_tree_sha256(lab) != IMPORT_TREE_SHA256:
+    tree_identity=authenticate_import_tree(lab)
+    if tree_identity['original_sha256'] != IMPORT_TREE_SHA256:
         raise ValueError('imported threshold18 tree changed')
     archive = archive or RetainedUpstreamArchive(lab)
     positive, negative = _batch(archive)
@@ -335,4 +329,6 @@ def replay_threshold18(lab, archive=None):
             'physical_local_gate': 'OPEN', 'physical_upstream_budget_component': None,
             'negative_endpoint_adjudication': ADJUDICATION,
             'negative_density_endpoint': '(nx,-ny,-nz)', 'rows': rows, 'equivalence': equivalence,
-            'closure': closure, 'import_tree_sha256': IMPORT_TREE_SHA256}
+            'closure': closure, 'import_tree_sha256': IMPORT_TREE_SHA256,
+            'current_import_tree_sha256':tree_identity['current_sha256'],
+            'metadata_normalizations':tree_identity['metadata_normalizations']}

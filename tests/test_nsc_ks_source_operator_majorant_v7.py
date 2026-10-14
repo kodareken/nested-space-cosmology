@@ -214,6 +214,9 @@ def test_current_computation_declares_current_and_original_sources_separately(da
     driver,saved,_prior,_v5,_archive,_encoded=data
     current=driver['calculate']()
     assert current['source_hashes'] != saved['source_hashes']
+    for path in ('src/recursive_horizons/nsc_threshold18_metadata.py',
+                 'tests/test_nsc_threshold18_metadata.py'):
+        assert current['source_hashes'][path] == sha256((ROOT/path).read_bytes()).hexdigest()
     assert current['upstream_receipt_provenance']['original_source_context'] == FROZEN_PRODUCER_CONTEXT
     assert all((ROOT/path).is_file() for path in current['source_hashes'])
     assert all((ROOT/path).is_file() for path in current['input_hashes'])
@@ -221,6 +224,12 @@ def test_current_computation_declares_current_and_original_sources_separately(da
     assert all(is_implementation_source(path) for path in current['historical_source_bindings'])
     assert not any(path in current['source_hashes'] for path in driver['ORIGINAL_OWNERS']
                    if not (ROOT/path).is_file())
+    normalization=current['threshold_metadata_normalization']
+    assert normalization['original_sha256']!=normalization['current_sha256']
+    for identity in normalization['metadata_normalizations']:
+        path=identity['path']
+        assert current['input_hashes'][path]==identity['current_sha256']
+        assert saved['input_hashes'][path]==identity['original_sha256']
     identity_fields=('family','rho_up_hex','profile_identity','weighted_error_moment',
         'weighted_energy_error_moment','continuous_action_error_upper',
         'negative_source_equivalence','threshold18_closure','source_coverage',

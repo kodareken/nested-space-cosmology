@@ -21,20 +21,20 @@
   },
   "commands_completed": [
     {
-      "command": "PYTHONPATH=src:. python3 -B /tmp/nf256_seed_probe.py",
-      "cwd": "/Users/admin/Documents/BlackHoles-Infinity",
+      "command": "PYTHONPATH=src:. python3 -B historical-scratch:nf256_seed_probe.py",
+      "cwd": ".",
       "exit": 1,
       "science": false,
       "result": "ImportError: recursive_horizons resolved to the repository src package, not lab/src"
     },
     {
-      "command": "PYTHONPATH=/Users/admin/Documents/BlackHoles-Infinity/lab/src python3 -B /tmp/nf256_seed_probe.py",
+      "command": "PYTHONPATH=src python3 -B historical-scratch:nf256_seed_probe.py",
       "exit": 1,
       "science": true,
       "result": "Newton history printed, then KeyError 'r_min' before constraint diagnostics on the stalled iterate and before any file write"
     },
     {
-      "command": "PYTHONPATH=/Users/admin/Documents/BlackHoles-Infinity/lab/src python3 -B /tmp/nf256_compensate_probe.py",
+      "command": "PYTHONPATH=src python3 -B historical-scratch:nf256_compensate_probe.py",
       "exit": 0,
       "science": true,
       "result": "Kept the best full-source iterate, printed cancellation and constraint diagnostics, wrote nothing"
@@ -254,5 +254,14 @@
     "constraint diagnostics and positivity on the probe-1 iterate at projected 2.3188625838089735e-10",
     "constraint diagnostics and positivity on the polished radius"
   ],
-  "why_nothing_was_saved_during_the_probe_session": "Both probes lived under /tmp and only printed. The first exited on KeyError before its final print. The second exited 0 after printing. No write to the owned v4 script or record was reached before that session ended."
+  "why_nothing_was_saved_during_the_probe_session": "Both probes lived under /tmp and only printed. The first exited on KeyError before its final print. The second exited 0 after printing. No write to the owned v4 script or record was reached before that session ended.",
+  "path_label_provenance": {
+    "scope": "Saved historical command locations rebased to repository-relative labels; their recorded outcomes and all numbers and digests are unchanged.",
+    "archive_doi": "10.5281/zenodo.23090015",
+    "historical_scratch_labels": [
+      "historical-scratch:nf256_seed_probe.py",
+      "historical-scratch:nf256_compensate_probe.py"
+    ],
+    "availability": "These scratch labels are not runnable checkout paths. Retention of the temporary scripts is not asserted."
+  }
 }

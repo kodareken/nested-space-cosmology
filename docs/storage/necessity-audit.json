@@ -391,7 +391,7 @@
       "exit": 0,
       "denied": [],
       "opened_count": 295,
-      "script": "/Users/admin/.local/state/nsc-storage-audit-20260928/read-current-setup.py",
+      "script": "historical-scratch:nsc-storage-audit-20260928/read-current-setup.py",
       "arguments": []
     },
     {
@@ -459,7 +459,7 @@
       "exit": 0,
       "denied": [],
       "opened_count": 295,
-      "script": "/Users/admin/.local/state/nsc-storage-audit-20260928/read-current-setup.py",
+      "script": "historical-scratch:nsc-storage-audit-20260928/read-current-setup.py",
       "arguments": []
     },
     {
@@ -509,10 +509,21 @@
     "sha256": "160a485fde483a1f9959b950458a86d10b28e134a7e8001c4a975081d23bf40c",
     "source_commit": "8f06a65aaae6051095161f46217dc57a1bf2751f",
     "restored_from_git_and_hash_verified": true,
-    "test_copy_saved": "/Users/admin/.Trash/nsc-historical-search-20260928-123024/restore-control/results/development/artifacts/nsc-ks-coupled-newton-trial/family-24-+1.npz"
+    "test_copy_saved": "historical-trash:nsc-historical-search-20260928-123024/restore-control/results/development/artifacts/nsc-ks-coupled-newton-trial/family-24-+1.npz"
   },
   "grok_review_run": "f0d3b18b-4824-45cc-8ffd-0cbde6707b84",
   "preexisting_issue": "reanchor-v2 --check fails a live nsc_ks_history_evaluator.py hash before any blocked path access; not used as a passing verification",
   "physical_local_gate": "OPEN",
-  "git_history_rewritten": false
+  "git_history_rewritten": false,
+  "path_label_provenance": {
+    "scope": "Historical location labels only; all recorded numbers and digest values are unchanged.",
+    "archive_doi": "10.5281/zenodo.23090015",
+    "historical_scratch_labels": [
+      "historical-scratch:nsc-storage-audit-20260928/read-current-setup.py"
+    ],
+    "historical_trash_labels": [
+      "historical-trash:nsc-historical-search-20260928-123024/restore-control/results/development/artifacts/nsc-ks-coupled-newton-trial/family-24-+1.npz"
+    ],
+    "availability": "Scratch and Trash labels identify historical locations. Their retention in the archive or current checkout is not asserted."
+  }
 }

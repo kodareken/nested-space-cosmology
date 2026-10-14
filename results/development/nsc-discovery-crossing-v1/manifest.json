@@ -68,7 +68,7 @@
   "cpu_budget_seconds": 21600.0,
   "cpu_accounting": "sum_of_child_process_time",
   "forecast_factor": 1.5,
-  "predecessor_directory": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-discovery-episode-v1",
+  "predecessor_directory": "results/development/nsc-discovery-episode-v1",
   "predecessor_manifest_sha256": "c49c29caeab331f57ec6d1b0a18844ad23f2aeb1e730bd09a1df370ea550d575",
   "cost_forecast": {
     "method": "linear_extrapolation_of_recorded_child_cpu",

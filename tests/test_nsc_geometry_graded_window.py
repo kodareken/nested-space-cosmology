@@ -156,6 +156,7 @@ def test_scope_flags_and_no_stepper():
     assert saved["gauge_nf512"]["profile_equals_x_on_packet_arc"] < 1e-12
 
 
+@pytest.mark.cpu_budget
 def test_record_replay_is_deterministic():
     # The saved record pins its original sources; numerical replay is current.
     report = verify_saved(source_context="329ef809e466a86ed4a290ee32c19485f85add9d")

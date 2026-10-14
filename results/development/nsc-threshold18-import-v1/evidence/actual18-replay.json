@@ -212,7 +212,7 @@
   "mac_integration": {
     "checkpoints": "results/development/nsc-threshold18-actual18-v1",
     "doc": "docs/nsc-threshold18-actual-source.md",
-    "lab_root": "/Users/admin/Documents/BlackHoles-Infinity/lab",
+    "lab_root": ".",
     "primary_edited": false,
     "recorder": "src/recursive_horizons/nsc_threshold18_source.py",
     "script": "scripts/derive_nsc_threshold18_source.py",

@@ -3026,25 +3026,25 @@
   "cpu_budget_seconds": 30.0,
   "numerical_threads": 1,
   "source_hashes": {
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_vacuum_control.py": "da5babb939d14f5f11f8974007d3c518923f4f3cfa5335da64730c5318572bd8",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/derive_nsc_discovery_vacuum_control.py": "ac211057c4348beed08aa8741c1c75d951a9521ee08b1320e2db00df9f403e90",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/tests/test_nsc_discovery_vacuum_control.py": "05d1b9e73941ef9035eee89e2bbbf47db0dd8f9c142ff1dd4db9ad0f2582b71f",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/docs/nsc-discovery-vacuum-control.md": "d2630f9cfaec92c1eed52b948346ca32532a28b3e9cac4cb9fa87ba2dcb5a70c",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
+    "src/recursive_horizons/nsc_discovery_vacuum_control.py": "da5babb939d14f5f11f8974007d3c518923f4f3cfa5335da64730c5318572bd8",
+    "scripts/derive_nsc_discovery_vacuum_control.py": "ac211057c4348beed08aa8741c1c75d951a9521ee08b1320e2db00df9f403e90",
+    "tests/test_nsc_discovery_vacuum_control.py": "05d1b9e73941ef9035eee89e2bbbf47db0dd8f9c142ff1dd4db9ad0f2582b71f",
+    "docs/nsc-discovery-vacuum-control.md": "d2630f9cfaec92c1eed52b948346ca32532a28b3e9cac4cb9fa87ba2dcb5a70c",
+    "src/recursive_horizons/nsc_discovery_tidal.py": "12c6a392045425ee9afc2ce0d3356eee9539ee437ffa337b0292ba6aa9e4163d",
+    "src/recursive_horizons/nsc_discovery_episode.py": "321546efb87ff0f99552fc908e220929d961854c78a3160456203e00f1f4bd00",
+    "src/recursive_horizons/nsc_nested_parent_child.py": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b",
+    "src/recursive_horizons/nsc_spherical_coupling.py": "64e066b9b3210121461f902e748d4fc8a9cfc5978af2af47ab4b12fd8797e4f5",
+    "src/recursive_horizons/nsc_spherical_episode_assessment.py": "eea9bc68b2ffe2c7a134061ef49a0aef529d00c424be1e17a5f10808777e82e1",
+    "src/recursive_horizons/nsc_spherical_feedback_action.py": "708df11f3a9b69a32b28148298679098f2c04523edc329c2c4c836fe1ed0e24f",
+    "src/recursive_horizons/nsc_spherical_galerkin_coupling.py": "aa8a64f593e8f0d931eeee407d944b72568fdf4f2c53436048142c3473ec4911",
+    "src/recursive_horizons/nsc_conformal_adm_source.py": "7e935b981de6cb4876142819a1a15587b81574ef1c15bf11adc62a7d8cdaeaea",
+    "src/recursive_horizons/nsc_covariant_operator.py": "0f7d8d3ac76943daa8dd1ff6f7a6203385681e7cb29cc2811c032020d1d17e7a",
+    "src/recursive_horizons/nsc_nested_qualities.py": "02e445310e5f44a1cd1b972071cdf4f03c1a84ba12ccf041f9c3f55a621bddc1",
+    "src/recursive_horizons/nsc_adm_source.py": "0dba93a1090728c0c26fca2f04ac13ae74201fbb66b1aee09155a7146e5d2d09"
   },
   "source_hashes_unchanged": true,
   "input_hashes": {
-    "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f"
+    "results/development/nsc-subgap-history-response.json": "5340326c99008c70bfc6d1e8c557e29746821546832b0417e262a44c7a73153f"
   },
   "input_hashes_unchanged": true,
   "python_array_versions": {

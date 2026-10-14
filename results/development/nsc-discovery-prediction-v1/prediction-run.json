@@ -42,13 +42,13 @@
     "stability_certificate": false
   },
   "inputs": {
-    "v1_json": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-nested-parent-child-v1.json",
+    "v1_json": "results/development/nsc-nested-parent-child-v1.json",
     "v1_json_sha256": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac",
-    "v1_npz": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-nested-parent-child-v1.npz",
+    "v1_npz": "results/development/nsc-nested-parent-child-v1.npz",
     "v1_npz_sha256": "9e51155281c0de2de89fe3758b025a47e30a1e84e95be9249e7dc48e1fd07ead",
-    "basis_json": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-nested-parent-child-replay-basis-v1.json",
+    "basis_json": "results/development/nsc-nested-parent-child-replay-basis-v1.json",
     "basis_json_sha256": "8ad78f1aa9606b4a6163f739445c1f0a4ddb111cac8814699d8476dbdfd7402c",
-    "basis_npz": "/Users/admin/Documents/BlackHoles-Infinity/lab/results/development/nsc-nested-parent-child-replay-basis-v1.npz",
+    "basis_npz": "results/development/nsc-nested-parent-child-replay-basis-v1.npz",
     "basis_npz_sha256": "c733d93c1fbf94f7b79354ffe1162bd38bcd57469ac08a6bd062915c527362fc",
     "prediction_py_sha256": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d",
     "response_py_sha256": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586"
@@ -56,23 +56,23 @@
   "producers": {
     "files": {
       "prediction": {
-        "path": "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_prediction.py",
+        "path": "src/recursive_horizons/nsc_discovery_prediction.py",
         "sha256": "78cdff1a897b0bd7813f7e9b83b1a609b01c09a996665b453de78d2d1ff1e49d"
       },
       "response": {
-        "path": "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_response.py",
+        "path": "src/recursive_horizons/nsc_discovery_response.py",
         "sha256": "0bc33402ba5f9af12b90c1c206dea06486a6b38a96121a76fbca4c599fa8b586"
       },
       "backend": {
-        "path": "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_discovery_backend.py",
+        "path": "src/recursive_horizons/nsc_discovery_backend.py",
         "sha256": "94d720a70a8d8021ea7bd4bfe42a78fb2cdccc97be16ec40ba14c46763311bfa"
       },
       "nested": {
-        "path": "/Users/admin/Documents/BlackHoles-Infinity/lab/src/recursive_horizons/nsc_nested_parent_child.py",
+        "path": "src/recursive_horizons/nsc_nested_parent_child.py",
         "sha256": "a96db1e0b9d8a34bf75153a9df8bae7ba0af6b9d28ef44cd24f25532991fef4b"
       },
       "cli": {
-        "path": "/Users/admin/Documents/BlackHoles-Infinity/lab/scripts/derive_nsc_discovery_prediction.py",
+        "path": "scripts/derive_nsc_discovery_prediction.py",
         "sha256": "ebc90fdf660ce133509947af6bfc89ca2520815d53b32356458b30a4a458517a"
       }
     },

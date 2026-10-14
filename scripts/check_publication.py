@@ -751,41 +751,6 @@ def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
             errors.append(f"broken Markdown link in {path.relative_to(ROOT)}: {target}")
 
 
-# This restored capture retains creation-only path labels verbatim. Its scope is
-# independently sealed to original bytes; it is not a current producer or input
-# routing authority. No numerical data is loaded from Git as a fallback.
-RESTORED_CREATION_METADATA = {
-    "results/development/nsc-discovery-vacuum-control-v1/record.json": {
-        "source_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
-        "bytes": 81852,
-        "sha256": "a2b7b2fc09006ae1f7459c3bf77e588ec64a65bb19df40f8790ad3e6fa3e3ecd",
-    },
-}
-
-
-def restored_creation_metadata(receipts: dict[str, dict]) -> dict[str, str]:
-    """Recognize only the reviewed original creator-metadata capture."""
-    preserved = {}
-    for relative, identity in RESTORED_CREATION_METADATA.items():
-        row = receipts.get(relative)
-        if (relative in GITHUB_MARKDOWN_ENTRYPOINTS or row is None
-                or row.get("restored_from_commit") != identity["source_commit"]
-                or not re.fullmatch(r"[0-9a-f]{40}", identity["source_commit"])
-                or row.get("sha256") != identity["sha256"]
-                or row.get("bytes") != identity["bytes"]):
-            continue
-        local = ROOT / _safe_relative(relative)
-        if (not local.is_file() or local.stat().st_size != identity["bytes"]
-                or sha256(local) != identity["sha256"]):
-            continue
-        original = _git_bytes(identity["source_commit"], relative)
-        if (len(original) != identity["bytes"]
-                or hashlib.sha256(original).hexdigest() != identity["sha256"]):
-            raise ValueError("reviewed creator metadata differs from original bytes: " + relative)
-        preserved[relative] = identity["sha256"]
-    return preserved
-
-
 def historical_content() -> set[str]:
     """Recognize exact migrated provenance, never exempt current entrypoints."""
     candidates = {}
@@ -795,7 +760,6 @@ def historical_content() -> set[str]:
                            if row.get("sha256") == row.get("import_sha256")
                            and row.get("bytes") == row.get("import_bytes")
                            and not name.startswith(("archive/", "."))})
-        candidates.update(restored_creation_metadata(receipts))
     elif not (ROOT / "results/release-spec.json").is_file():
         # Compatibility for small, isolated historical-link test fixtures only.
         # A real checkout never routes through the retired migration manifest.

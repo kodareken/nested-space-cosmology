@@ -99,74 +99,63 @@ def test_extracted_latex_equation_number_is_not_a_link(tmp_path, monkeypatch):
     assert found == ["broken Markdown link in source.md: 14"]
 
 
-def restored_capture(tmp_path, monkeypatch, *, name=None, data=None):
-    """A reviewed immutable capture has its own original identity, not a blanket scope."""
-    name = name or "results/development/reviewed-control/record.json"
-    data = data or json.dumps({"source_hashes": {
-        "/Users/" + "admin/original/producer.py": "a" * 64,
-    }}).encode()
+def current_record(tmp_path, monkeypatch, *, name=None, data=None):
+    """Current normalized records receive current checks, including after restoration."""
+    name = name or "results/development/nsc-discovery-vacuum-control-v1/record.json"
+    data = data or json.dumps({"source_hashes": {"scripts/producer.py": "a" * 64}}).encode()
     path = prepare(tmp_path, monkeypatch, name, data)
     receipt = tmp_path / "docs/lab-snapshot.json"
     value = json.loads(receipt.read_text())
     row = value["files"][0]
     row.pop("import_sha256")
     row.pop("import_bytes")
-    row["restored_from_commit"] = "1" * 40
+    row["restored_from_commit"] = "4390d23901b666659c7c419ba3fdf8c9a08a9794"
     receipt.write_text(json.dumps(value))
-    identity = {"source_commit": row["restored_from_commit"],
-                "sha256": row["sha256"], "bytes": row["bytes"]}
-    monkeypatch.setattr(checker, "RESTORED_CREATION_METADATA", {name: identity})
-    monkeypatch.setattr(checker, "_git_bytes", lambda commit, relative: data)
     return path, receipt
 
 
-def test_reviewed_restored_creator_metadata_keeps_original_path_labels(tmp_path, monkeypatch):
-    path, _ = restored_capture(tmp_path, monkeypatch)
+def test_normalized_relative_record_is_current_and_accepted(tmp_path, monkeypatch):
+    path, _ = current_record(tmp_path, monkeypatch)
     assert findings(path) == []
-    assert path.relative_to(tmp_path).as_posix() in checker.historical_content()
+    assert path.relative_to(tmp_path).as_posix() not in checker.historical_content()
 
 
-def test_modified_restored_bytes_cannot_refresh_away_original_identity(tmp_path, monkeypatch):
-    path, receipt = restored_capture(tmp_path, monkeypatch)
-    path.write_bytes(path.read_bytes() + b"\nchanged")
+@pytest.mark.parametrize("context", ["HEAD", "../outside", "4390d23901b666659c7c419ba3fdf8c9a08a9794"])
+def test_restoration_and_refreshed_receipt_never_exempt_private_paths(tmp_path, monkeypatch, context):
+    path, receipt = current_record(tmp_path, monkeypatch)
+    path.write_bytes(json.dumps({"source_hashes": {
+        "/Users/" + "admin/original/producer.py": "a" * 64,
+    }}).encode())
     value = json.loads(receipt.read_text())
     value["files"][0].update(sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
-                             bytes=path.stat().st_size)
+                             bytes=path.stat().st_size, restored_from_commit=context)
     receipt.write_text(json.dumps(value))
+    monkeypatch.setattr(checker, "_git_bytes", lambda *_: pytest.fail("current record read from Git"))
     assert any("private absolute user path" in item for item in findings(path))
 
 
-@pytest.mark.parametrize("context", ["HEAD", "../outside", "2" * 40])
-def test_restored_creator_metadata_rejects_unreviewed_source_ref(tmp_path, monkeypatch, context):
-    path, receipt = restored_capture(tmp_path, monkeypatch)
-    value = json.loads(receipt.read_text())
-    value["files"][0]["restored_from_commit"] = context
-    receipt.write_text(json.dumps(value))
-    monkeypatch.setattr(checker, "_git_bytes", lambda *_: pytest.fail("unsafe ref reached Git"))
-    assert any("private absolute user path" in item for item in findings(path))
-
-
-def test_restored_creator_metadata_requires_original_blob_identity(tmp_path, monkeypatch):
-    _, _ = restored_capture(tmp_path, monkeypatch)
-    monkeypatch.setattr(checker, "_git_bytes", lambda *_: b"changed original bytes")
-    with pytest.raises(ValueError, match="creator metadata differs from original bytes"):
-        checker.historical_content()
-
-
-def test_reviewed_restored_metadata_still_receives_secret_scan(tmp_path, monkeypatch):
-    data = (b"/Users/" + b"admin/original/path\nBEGIN RSA " + b"PRIVATE KEY")
-    path, _ = restored_capture(tmp_path, monkeypatch, data=data)
+def test_normalized_record_still_receives_secret_scan(tmp_path, monkeypatch):
+    data = json.dumps({"source_hashes": {"scripts/producer.py": "a" * 64},
+                       "diagnostic": "BEGIN RSA " + "PRIVATE KEY"}).encode()
+    path, _ = current_record(tmp_path, monkeypatch, data=data)
     assert any("possible private key" in item for item in findings(path))
 
 
-def test_current_entrypoint_cannot_acquire_restored_capture_scope(tmp_path, monkeypatch):
-    path, _ = restored_capture(tmp_path, monkeypatch, name="README.md")
+def test_current_entrypoint_has_no_restoration_exception(tmp_path, monkeypatch):
+    path, _ = current_record(tmp_path, monkeypatch, name="README.md",
+                             data=b"/Users/" + b"admin/original/path")
     assert any("private absolute user path" in item for item in findings(path))
 
 
-def test_actual_reviewed_capture_matches_its_local_and_original_identities():
-    snapshot, receipts = checker.retained_receipts()
-    assert snapshot is not None
-    expected = {relative: identity["sha256"]
-                for relative, identity in checker.RESTORED_CREATION_METADATA.items()}
-    assert checker.restored_creation_metadata(receipts) == expected
+def test_actual_normalized_vacuum_record_receives_current_checks(monkeypatch):
+    relative = "results/development/nsc-discovery-vacuum-control-v1/record.json"
+    path = ROOT / relative
+    text = path.read_text(encoding="utf-8")
+    assert "/Users/" + "admin" not in text
+    record = json.loads(text)
+    for name in (*record["source_hashes"], *record["input_hashes"]):
+        assert not Path(name).is_absolute() and not Path(name).drive
+        assert ".." not in Path(name).parts
+    monkeypatch.setattr(checker, "REQUIRED", set())
+    assert relative not in checker.historical_content()
+    assert findings(path) == []

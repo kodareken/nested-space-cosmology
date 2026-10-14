@@ -5,13 +5,13 @@
       "repository": "BlackHoles-Infinity",
       "source": "lab/PLAN.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/claim-ledger.md"
+      "target": "docs/claim-ledger.md"
     },
     {
       "repository": "BlackHoles-Infinity",
       "source": "lab/PLAN.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/handover.md:8"
+      "target": "handover.md:8"
     },
     {
       "repository": "BlackHoles-Infinity",
@@ -171,13 +171,13 @@
       "repository": "BlackHoles-Infinity",
       "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/active-code-map.md:3"
+      "target": "docs/active-code-map.md:3"
     },
     {
       "repository": "BlackHoles-Infinity",
       "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/nsc-evolved-incoming-constraints.md:1"
+      "target": "docs/nsc-evolved-incoming-constraints.md:1"
     },
     {
       "repository": "BlackHoles-Infinity",
@@ -246,13 +246,13 @@
       "repository": "BlackHoles-Infinity-w2",
       "source": "lab/PLAN.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/claim-ledger.md"
+      "target": "docs/claim-ledger.md"
     },
     {
       "repository": "BlackHoles-Infinity-w2",
       "source": "lab/PLAN.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/handover.md:8"
+      "target": "handover.md:8"
     },
     {
       "repository": "BlackHoles-Infinity-w2",
@@ -454,13 +454,13 @@
       "repository": "BlackHoles-Infinity-w2",
       "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/active-code-map.md:3"
+      "target": "docs/active-code-map.md:3"
     },
     {
       "repository": "BlackHoles-Infinity-w2",
       "source": "lab/docs/history/PLAN-local-gate-before-mac-nested-2026-09-27.md",
       "status": "historical_or_host_absolute",
-      "target": "/Users/admin/Documents/BlackHoles-Infinity/docs/nsc-evolved-incoming-constraints.md:1"
+      "target": "docs/nsc-evolved-incoming-constraints.md:1"
     },
     {
       "repository": "BlackHoles-Infinity-w2",

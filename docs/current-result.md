@@ -404,8 +404,9 @@ The writer now allows a new development file and still refuses the
 archive, historical results, and any existing output. The current
 reproducible assessment is
 [nsc-rn-pilot-assessment-v2.json](../results/development/nsc-rn-pilot-assessment-v2.json),
-sha256 `a60f369f21bddacb991489848a581a4172f744eed3718d0ee5f7450109bc12e2`,
-$78054$ bytes, $41$ authenticated frames, CPU $1.013725$ seconds.
+current sha256 `e52bd6e96929d4b2b5f48b2fa114f3364da7bd02312346972f7d9cdc192469d0`,
+$78506$ bytes after normalizing historical path labels; its numerical values
+remain $41$ authenticated frames and CPU $1.013725$ seconds.
 Its producing commit is
 `ab03859ae553d197f99430146985598fdeee3382`, the recorded source of
 that file, not a live branch label. The manual v1 body remains the

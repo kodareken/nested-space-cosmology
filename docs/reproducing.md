@@ -4,7 +4,7 @@ There is one package, `nested-space-cosmology`, importing `recursive_horizons`
 from root `src`. Use the pinned versions in [pyproject.toml](../pyproject.toml).
 Scientific conclusions retain the domains in their owning notes.
 The current paper and test dependencies use Matplotlib 3.11.2; the scientific
-stack includes python-flint 0.9.0.
+stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
@@ -22,6 +22,18 @@ paper check. CI uses the same pinned stack on Ubuntu and Windows. Historical
 replay is an explicit separate operation, selected through `make history-check`
 or the commands below.
 
+The history-evaluator test records CPU time as a diagnostic. Set
+`NSC_ENFORCE_TEST_CPU_BUDGETS=1` to enforce its original 30-second reference
+on a comparable, idle host, running that module serially. Selecting only the
+timing test does not run the work it measures. Operational calculation budgets
+remain enforced; parallel pytest workers do not provide comparable timings.
+Both this control and the geometry replay carry the `cpu_budget` marker.
+The geometry replay retains its producer's 20-second cap. For a parallel run,
+`-m 'not cpu_budget'` optionally excludes those two whole tests, including the
+geometry replay's numerical comparisons; the default serial suite includes them.
+The [14 October Win11 follow-up](win11-verification-20261014.md) lists the
+11 requested reruns, remaining binding failures and the checks performed.
+
 `check_lab_snapshot.py` authenticates the current paths, hashes and sizes in the
 v2 [retained-file receipts](lab-snapshot.json), plus the unchanged objects and
 pins in [source history](../archive/source-history/manifest.json).
@@ -37,6 +49,11 @@ claims and hashes. A pass authenticates that recorded calculation; it does not
 identify its original source with the current implementation. Tests of active
 APIs use this root package. Original-context authentication and replay are
 never a silent fallback from a failed current-source check.
+
+The threshold18 import has two normalized creator path labels. Its metadata
+checker authenticates the exact old and current bytes and the single string
+replacement, while numerical replay uses current local files. It records the
+original and current tree hashes separately; any other change is rejected.
 
 When changing the manuscript's figures, the retained figure producers are:
 
