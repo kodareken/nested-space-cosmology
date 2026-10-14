@@ -15,7 +15,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 import derive_nsc_retarded_radial_response as D
 from recursive_horizons.nsc_retarded_radial_response import archived_amplitudes,pulse_fourier
 from recursive_horizons.nsc_upstream_compensator import (
-    operator_response,fit_selected,combine,covariance_response,small_amplitude_range,vertex_identities,DIRECTIONS,MAX_STEP)
+    operator_response,fit_selected,combine,covariance_response,small_amplitude_range,vertex_identities,DIRECTIONS,MAX_STEP,
+    require_covariance_product)
 
 P=D.R.P;F=D.F
 OUTPUT='results/development/nsc-upstream-compensator.json'
@@ -65,6 +66,33 @@ def inputs():
         B=a['fine/response'];f=a['reference/incoming']
         baseline=np.array([[np.linalg.solve(f[i,:,:2].T,B[o,i,:,:2].T).T for i in range(4)] for o in range(4)])
     return radial,result,baseline,[history['payload'],modes['payload'],radial['payload']]
+
+
+def require_family_inputs(arrays,name,current,x,phi):
+    """Keep raw fibers exact; validate derived maps/products separately."""
+    raw=('energies','mass','angular','source','projector','weights')
+    if set(current)!=set((*raw,'stationary','covariance')):
+        raise ValueError('original source fields changed')
+    for key in raw:
+        saved=arrays['input/'+name+'/'+key];value=current[key]
+        if (type(saved) is not np.ndarray or type(value) is not np.ndarray
+            or saved.dtype!=value.dtype or saved.shape!=value.shape
+            or saved.tobytes()!=value.tobytes()):
+            raise ValueError('saved original source changed: '+name+'/'+key)
+    indices=np.flatnonzero(x==1.)
+    if len(x)!=801 or len(indices)!=1 or phi.shape!=(1602,12):
+        raise ValueError('owned reference layout changed')
+    saved_f=arrays['input/'+name+'/stationary']
+    index=int(indices[0]);expected_f=archived_amplitudes(x,phi,current['energies'],index)
+    D.validate_archived_map(expected_f,saved_f,x,phi,current['energies'],index)
+    D.validate_archived_map(expected_f,current['stationary'],x,phi,current['energies'],index)
+    # Authenticate each product against its own admitted map and the same
+    # sealed source. Comparing only two products could accept shared damage.
+    saved_check=require_covariance_product(arrays['input/'+name+'/covariance'],
+        saved_f,arrays['input/'+name+'/source'],label=name+' saved source covariance')
+    current_check=require_covariance_product(current['covariance'],current['stationary'],
+        current['source'],label=name+' current source covariance')
+    return {'saved':saved_check,'current':current_check}
 
 
 def support_guards(original):
@@ -206,9 +234,9 @@ def check(*, source_context=None):
     with np.load(ROOT/ARTIFACT,allow_pickle=False) as a:arrays={k:a[k] for k in a.files}
     meta=json.loads(arrays['metadata_json'].tobytes())
     if meta['signature']!=signature() or meta['input_payloads']!=payloads:raise ValueError('compensator input binding changed')
-    for name,data in families.items():
-        for k,v in data.items():
-            if not np.array_equal(arrays['input/'+name+'/'+k],v):raise ValueError('saved original source changed')
+    with np.load(ROOT/payloads[0]['path'],allow_pickle=False) as history:
+        for name,data in families.items():
+            require_family_inputs(arrays,name,data,history[name+'/x'],history[name+'/reference_field'])
     # Host LAPACK need not reproduce one solution's last bit. Both matrices
     # must satisfy the same authenticated original radial linear systems.
     from recursive_horizons.nsc_retarded_saved_arithmetic import (

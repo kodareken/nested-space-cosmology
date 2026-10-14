@@ -19,6 +19,69 @@ PAULI=np.array([S1,S2,S3]);DIRECTIONS=('original_radius','raw_N','raw_a','raw_r'
 MAX_STEP=1/2000
 
 
+def require_covariance_product(covariance,stationary,source,*,label='source covariance'):
+    """Check one binary64 F C F* result against its own exact operands.
+
+    Both matrix products have three complex terms. With g=gamma_(8k+8),
+    their normal-operation forward radius is ((1+g)**2-1)|F|_1|C|_1|F*|_1.
+    Here |z|_1=|Re z|+|Im z|, so cancellation cannot shrink the budget.
+    Exact rational arithmetic evaluates the target and radius. An additional
+    operation-count term covers gradual underflow; an exactly zero product
+    mass keeps an exactly zero radius. This is a finite arithmetic check,
+    independent of the physical 3e-11 control and of chart accuracy.
+    """
+    operands=(covariance,stationary,source)
+    if any(type(a) is not np.ndarray or a.dtype!=np.dtype(np.complex128)
+           or not np.isfinite(a).all() for a in operands):
+        raise ValueError(label+': finite complex128 arrays required')
+    if (stationary.ndim!=3 or stationary.shape[1:]!=(2,3)
+        or stationary.shape[0]==0 or source.shape!=(stationary.shape[0],3,3)
+        or covariance.shape!=(stationary.shape[0],2,2)):
+        raise ValueError(label+': original frequency/2-by-3 source layout required')
+    eps=Q(1,2**52);g=32*eps/(1-32*eps)
+    eta=Q(1,2**1074);underflow=32*eta*(1+g)
+    largest=Q(float(np.finfo(np.float64).max))
+    def scalar(z):return (Q(float(z.real)),Q(float(z.imag)))
+    def plus(a,b):return (a[0]+b[0],a[1]+b[1])
+    def times(a,b):return (a[0]*b[0]-a[1]*b[1],a[0]*b[1]+a[1]*b[0])
+    def conjugate(a):return (a[0],-a[1])
+    def norm(a):return abs(a[0])+abs(a[1])
+    def dot(a,b):
+        value=(Q(0),Q(0))
+        for left,right in zip(a,b):value=plus(value,times(left,right))
+        return value
+    maximum_error=Q(0);maximum_radius=Q(0)
+    for frequency in range(stationary.shape[0]):
+        F=[[scalar(v) for v in row] for row in stationary[frequency]]
+        C=[[scalar(v) for v in row] for row in source[frequency]]
+        FC=[[dot(F[i],[C[j][k] for j in range(3)]) for k in range(3)] for i in range(2)]
+        first_mass=[[sum((norm(F[i][j])*norm(C[j][k]) for j in range(3)),Q(0))
+                     for k in range(3)] for i in range(2)]
+        first_error=[[g*m+underflow if m else Q(0) for m in row] for row in first_mass]
+        if any(m+e>largest for masses,errors in zip(first_mass,first_error)
+               for m,e in zip(masses,errors)):
+            raise ValueError(label+': first product exceeds finite arithmetic model')
+        for i in range(2):
+            for j in range(2):
+                mass=sum((first_mass[i][k]*norm(F[j][k]) for k in range(3)),Q(0))
+                propagated=sum((first_error[i][k]*norm(F[j][k]) for k in range(3)),Q(0))
+                radius=propagated+g*(mass+propagated)+underflow if mass else Q(0)
+                if mass+radius>largest:
+                    raise ValueError(label+': second product exceeds finite arithmetic model')
+                target=dot(FC[i],[conjugate(v) for v in F[j]])
+                candidate=scalar(covariance[frequency,i,j])
+                error=norm((candidate[0]-target[0],candidate[1]-target[1]))
+                if error>radius:
+                    raise ValueError(label+': product differs beyond operand rounding envelope')
+                maximum_error=max(maximum_error,error);maximum_radius=max(maximum_radius,radius)
+    # Directed display conversion is diagnostic only: admission used Fractions.
+    def display(q):return math.nextafter(float(q),math.inf) if q else 0.
+    return {'maximum_exact_L1_residual':display(maximum_error),
+            'maximum_operand_rounding_radius':display(maximum_radius),
+            'complex_terms_per_product':3,'gamma_operation_count':32,
+            'physical_error_bound':None}
+
+
 def bump(rho):
     # Exact rational center51/50 and halfwidth1/200; avoid redefining the
     # mathematical support by the rounded sum of two binary parameters.

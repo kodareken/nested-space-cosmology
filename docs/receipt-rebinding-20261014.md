@@ -81,3 +81,41 @@ original 820/23 census and all numerical upper bounds remain asserted.
 
 Local logs and JUnit reports are retained under `.build/receipt-rebind-20261014/`.
 GitHub CI status is reported for the final pushed commit separately.
+
+## Finite replay arithmetic on Linux, 15 October
+
+The first full CI run passed on Windows (2,834 passed, 12 skipped) and exposed
+two remaining Linux replay comparisons. Saved receipts and arrays did not
+change while correcting these comparisons.
+
+The `401_64` stationary-field drift maximum differed by one binary64 ulp:
+`0.000431005732696872` versus the stored `0.00043100573269687207`.
+That leaf had no allowance. The existing stationary-trace maximum rule now
+enumerates field and trace drift maxima in all three saved cases. Its allowance
+charges both evaluations of the uncancelled subtraction operands and complex
+modulus, with the same operation counts. Types, peak identities, source hashes,
+statuses and every unlisted field remain exact.
+
+The compensator's six raw fields remain byte-exact in all five families.
+Stationary maps differ across hosts by at most `1.3877787807814457e-16`, inside
+the existing archived-map diagnostic allowance. Both saved and current maps
+are checked independently against the same authenticated history arrays.
+Each derived covariance is checked independently against its own exact
+rational `F C F*` product, using the uncancelled operand masses and two
+three-term complex contractions. Zero source mass has zero allowance;
+gradual underflow has an explicit operation-count term. The complete
+compensator JSON comparison remains exact.
+
+The `3e-11` numerical control, calculation CPU caps, original execution
+identities and OPEN physical qualifications remain unchanged. Negative tests
+reject shared corruption, changes beyond the operand allowance, raw-input
+byte or type changes, nonfinite values and altered metadata.
+
+Linux diagnostics use this same checkout and pinned libraries in an ignored
+project-local validation environment. Its Ubuntu WSL interpreter is Python
+3.14.4; GitHub CI uses Python 3.14.8. Both Linux BLAS libraries use one Haswell
+thread. The four requested tests passed again serially on Win11 in 26.98
+seconds and on Linux in 75.25 seconds. The additional comparison and rejection
+tests passed on both platforms (30 tests each, without repeating the two full
+replay nodes). The independent eighteen-carrier preservation check and the
+claim-binding check passed again after these code changes.

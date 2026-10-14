@@ -1538,7 +1538,7 @@
     {
       "bytes": 1727489,
       "path": "docs/lab-snapshot.json",
-      "sha256": "2e00dd938a74a6b3d5b95cfefe28c8dc82faf11391d04d766801dd2bba9902b1"
+      "sha256": "e690a4b8593fe1294421bc855460d63c1793bc7e41c006677ef1b32e21f1386d"
     },
     {
       "bytes": 4997,
@@ -2131,9 +2131,9 @@
       "sha256": "5929ccca47ef6feded8806c08725579b3d4df4a494e9a65319b0cc2b9f4e438e"
     },
     {
-      "bytes": 4447,
+      "bytes": 6705,
       "path": "docs/receipt-rebinding-20261014.md",
-      "sha256": "08783d85746f9ad707094f3c006e663ca0eca214780c4b4076d6500062eee63a"
+      "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
       "bytes": 3356,
@@ -15226,9 +15226,9 @@
       "sha256": "ad09b1748b9fbf3f13631ffa6cdde93f969a82eeeb318d4662676d8ee50ba8ec"
     },
     {
-      "bytes": 16364,
+      "bytes": 18103,
       "path": "scripts/derive_nsc_upstream_compensator.py",
-      "sha256": "c8b935a503ecd9a6f3a141d510d01b4287c77e5651ee1629e8627ba6f5c50019"
+      "sha256": "9d981a096674949bbefd96a727aa1eea3b34086f78a6cc6cacffbd7d5ab61957"
     },
     {
       "bytes": 7042,
@@ -16816,9 +16816,9 @@
       "sha256": "6d1506b574b9d244e19819068830d01ccb176ed4a077b48cf420a6f3861cbd39"
     },
     {
-      "bytes": 15983,
+      "bytes": 16394,
       "path": "src/recursive_horizons/nsc_retarded_saved_arithmetic.py",
-      "sha256": "60cd1f0cd7088aef70591216d5e742dde8b23c9c745dd7395fe2cba161254a36"
+      "sha256": "b13558b0adc375792ea7b56fb2ec22e0fbd1c6cdc83d981d6d790f11fe2bb491"
     },
     {
       "bytes": 24548,
@@ -17061,9 +17061,9 @@
       "sha256": "703f80fedb843a46b4989ccc524bf6e8d80ff3a1b2fb63094843a117cdb6937f"
     },
     {
-      "bytes": 5830,
+      "bytes": 9589,
       "path": "src/recursive_horizons/nsc_upstream_compensator.py",
-      "sha256": "b9ff215d5759089278b81e63d01a2c34b5cb74ae8595f5417f0ee32cf5628b35"
+      "sha256": "a9cc630344d29239e12df0bbb9a63580ee7a3cc0c712d8cfeb653894ef889bbf"
     },
     {
       "bytes": 6373,
@@ -18511,9 +18511,9 @@
       "sha256": "34a365614d45d625620818e59d111ed243c78c2b523f7e32a9dc278216f1e684"
     },
     {
-      "bytes": 3391,
+      "bytes": 7721,
       "path": "tests/test_nsc_retarded_spatial_diagnosis.py",
-      "sha256": "7fb423b497a0c99c224886288260b37224907532c0f4195dedcd55a72560ed44"
+      "sha256": "a0af22570120ae93bac8fe4b65d8b9444992582a78b61bffa6e7c680e6481371"
     },
     {
       "bytes": 4567,
@@ -18766,9 +18766,9 @@
       "sha256": "e3ef96212a1b9e2485ae9c7fd5997c5ba00ac82dd15b9730e2626ef046ce18a6"
     },
     {
-      "bytes": 4451,
+      "bytes": 8958,
       "path": "tests/test_nsc_upstream_compensator.py",
-      "sha256": "170b6c42bca109128d67b2966b84560e83b831783b281a91f4392682a7eaf195"
+      "sha256": "307fd8d92f3404a5a2ebb9e031276d184aa7b497c55a7ebbb8df5a6955790458"
     },
     {
       "bytes": 6431,
@@ -18886,7 +18886,7 @@
       "sha256": "c64cdfcf34e80a78a0cc59423028407fefee1815087d1ff717110a8bf76bbb9f"
     }
   ],
-  "lab_snapshot_sha256": "2e00dd938a74a6b3d5b95cfefe28c8dc82faf11391d04d766801dd2bba9902b1",
+  "lab_snapshot_sha256": "e690a4b8593fe1294421bc855460d63c1793bc7e41c006677ef1b32e21f1386d",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-13.6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

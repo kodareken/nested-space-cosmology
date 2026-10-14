@@ -166,8 +166,15 @@ def localization_allowances(arrays):
         radius = _up(np.sum(abs(a)*be+abs(b)*ae+ae*be)+_gamma(8*a.size+8)*np.sum(abs(a)*abs(b)))
         correlation = _Ball(numerator,radius)/(_norm(a,ae)*_norm(b,be))
         result[p+('baseline_discriminator',name+'_discrepancy_normalized_correlation')] = float(_up(2*correlation.e))
-    drift, error = _difference(arrays['801_64/trace'],arrays['801_64/stationary_trace'])
-    result[p+('per_case','801_64','stationary_trace_drift','maximum')] = float(_up(2*np.max(error+_gamma(8)*abs(drift))))
+    # Every recorded stationary-drift maximum uses the same finite subtraction
+    # and complex-modulus policy. Charge the original operands before their
+    # cancellation, and both evaluations; metadata and locations stay exact.
+    for case in ('401_64', '801_64', '801_128'):
+        for component in ('field', 'trace'):
+            drift, error = _difference(arrays[case+'/'+component],
+                                       arrays[case+'/stationary_'+component])
+            result[p+('per_case',case,'stationary_'+component+'_drift','maximum')] = float(
+                _up(2*np.max(error+_gamma(8)*abs(drift))))
     kc, kf = arrays['401_64/covariance_tangent'],arrays['801_64/covariance_tangent']
     delta, error = _difference(kc,kf)
     ratio = _norm(delta,error)/_norm(kf)

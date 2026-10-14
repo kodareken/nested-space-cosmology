@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "88b2e7b1bf265772eac7108827ccb5539889e5bd",
+  "current_receipt_commit_parent": "f9ed27bcd0eec29dcd7f55b2230f494c7ac5c3b8",
   "files": [
     {
       "bytes": 1120,
@@ -1437,10 +1437,10 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 4447,
+      "bytes": 6705,
       "path": "docs/receipt-rebinding-20261014.md",
       "retention_reason": "Authorized prepared-history receipt metadata verification",
-      "sha256": "08783d85746f9ad707094f3c006e663ca0eca214780c4b4076d6500062eee63a"
+      "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
       "bytes": 18356,
@@ -21833,11 +21833,11 @@
       "sha256": "ad09b1748b9fbf3f13631ffa6cdde93f969a82eeeb318d4662676d8ee50ba8ec"
     },
     {
-      "bytes": 16364,
+      "bytes": 18103,
       "path": "scripts/derive_nsc_upstream_compensator.py",
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test resolves a missing dependency after approved deletion",
-      "sha256": "c8b935a503ecd9a6f3a141d510d01b4287c77e5651ee1629e8627ba6f5c50019"
+      "sha256": "9d981a096674949bbefd96a727aa1eea3b34086f78a6cc6cacffbd7d5ab61957"
     },
     {
       "bytes": 7042,
@@ -24731,10 +24731,10 @@
       "sha256": "6d1506b574b9d244e19819068830d01ccb176ed4a077b48cf420a6f3861cbd39"
     },
     {
-      "bytes": 15983,
+      "bytes": 16394,
       "path": "src/recursive_horizons/nsc_retarded_saved_arithmetic.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
-      "sha256": "60cd1f0cd7088aef70591216d5e742dde8b23c9c745dd7395fe2cba161254a36"
+      "sha256": "b13558b0adc375792ea7b56fb2ec22e0fbd1c6cdc83d981d6d790f11fe2bb491"
     },
     {
       "bytes": 12595,
@@ -25177,7 +25177,7 @@
       "sha256": "703f80fedb843a46b4989ccc524bf6e8d80ff3a1b2fb63094843a117cdb6937f"
     },
     {
-      "bytes": 5830,
+      "bytes": 9589,
       "import_bytes": 5830,
       "import_sha256": "b9ff215d5759089278b81e63d01a2c34b5cb74ae8595f5417f0ee32cf5628b35",
       "migration_disposition": "active_owner",
@@ -25185,7 +25185,7 @@
       "original_path": "lab/src/recursive_horizons/nsc_upstream_compensator.py",
       "original_sha256": "b9ff215d5759089278b81e63d01a2c34b5cb74ae8595f5417f0ee32cf5628b35",
       "path": "src/recursive_horizons/nsc_upstream_compensator.py",
-      "sha256": "b9ff215d5759089278b81e63d01a2c34b5cb74ae8595f5417f0ee32cf5628b35"
+      "sha256": "a9cc630344d29239e12df0bbb9a63580ee7a3cc0c712d8cfeb653894ef889bbf"
     },
     {
       "bytes": 6373,
@@ -28151,7 +28151,7 @@
       "sha256": "34a365614d45d625620818e59d111ed243c78c2b523f7e32a9dc278216f1e684"
     },
     {
-      "bytes": 3391,
+      "bytes": 7721,
       "import_bytes": 3000,
       "import_sha256": "094f73a457066165efa1a6cc88fe768c923d00e068b66bba494dcc72f3f9ff11",
       "migration_disposition": "active_owner",
@@ -28159,7 +28159,7 @@
       "original_path": "lab/tests/test_nsc_retarded_spatial_diagnosis.py",
       "original_sha256": "094f73a457066165efa1a6cc88fe768c923d00e068b66bba494dcc72f3f9ff11",
       "path": "tests/test_nsc_retarded_spatial_diagnosis.py",
-      "sha256": "7fb423b497a0c99c224886288260b37224907532c0f4195dedcd55a72560ed44"
+      "sha256": "a0af22570120ae93bac8fe4b65d8b9444992582a78b61bffa6e7c680e6481371"
     },
     {
       "bytes": 4567,
@@ -28647,7 +28647,7 @@
       "sha256": "e3ef96212a1b9e2485ae9c7fd5997c5ba00ac82dd15b9730e2626ef046ce18a6"
     },
     {
-      "bytes": 4451,
+      "bytes": 8958,
       "import_bytes": 3443,
       "import_sha256": "823102818db758193db82af216b7c2f4d410588d08aa8b513061589fdb9229dd",
       "migration_disposition": "active_owner",
@@ -28655,7 +28655,7 @@
       "original_path": "lab/tests/test_nsc_upstream_compensator.py",
       "original_sha256": "823102818db758193db82af216b7c2f4d410588d08aa8b513061589fdb9229dd",
       "path": "tests/test_nsc_upstream_compensator.py",
-      "sha256": "170b6c42bca109128d67b2966b84560e83b831783b281a91f4392682a7eaf195"
+      "sha256": "307fd8d92f3404a5a2ebb9e031276d184aa7b497c55a7ebbb8df5a6955790458"
     },
     {
       "bytes": 6431,
