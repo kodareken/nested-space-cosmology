@@ -1,5 +1,27 @@
 # Prior art and admission of new research
 
+## Smooth exterior metric propagation admission, 15 October 2026
+
+The next step carries the same prepared scalar and its already fixed
+characteristic gravitational data into the smooth exterior. The full target
+remains the sourced cap/wall/exterior configuration and corrected observer
+response. First solve the characteristic rectangle
+$U_0\leq U\leq U_a$, $V_a\leq V\leq V_b$: it provides the transverse
+initial leg needed to reach the emerging wall strip, rather than assuming
+metric data in the excised cap. The next wall strip must use the derived
+material matching and coordinate embedding.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed and retained | The spherical double-null Einstein equations and smooth conformal-frame map already derived in the [cap/wall owner](nsc-atlas-cap-wall-response.md), the [source-leg constraint](nsc-atlas-characteristic-initialization.md), the [transverse mass data](nsc-atlas-source-mass.md), and the existing prepared-field Volterra solver. |
+| Missing connection | Propagate the radius and lapse coefficients, compare their geometric mass with independent scalar flux, and supply the resulting characteristic data for matching to the moving wall. |
+| Fixed model and state | Same conformal scalar, canonical normalization, h=1, b=2, m=0.4, original compact source and quiet bottom/cap. Use the original null coordinates, fixed Jordan source lapse and quiet corner; transform source data to the Einstein frame without changing the affine coordinate silently. No physical finite amplitude is selected. |
+| Finite domain | Original characteristic rectangle through V_b, inside the retained exterior wedge; any later extension U>U_a requires explicit compatible wall data. |
+| Implementation | Expose bounded leading field values and first derivatives from the existing dense solution and its integral equations. Solve the linear radius/lapse equations with the supplied characteristic data; use independent mass transport and null constraints as diagnostics. |
+| Compute budget | At most 120 process-CPU seconds per complete pilot or refinement comparison, 30 million scalar-kernel values, and fixed metric grids no larger than 257 U nodes. Begin at 33/65 nodes; admit a finer comparison only if its discrepancy identifies a resolvable numerical error. No parameter survey, new source fit, or arbitrary waveform. |
+| Checks and useful outputs | Zero source; original source/bottom values; both null constraints and mixed equations; geometric mass versus independent scalar flux; field, geometry, quadrature and metric-grid refinement separately; unit/orientation conventions; cumulative budgets. Save compact coefficients and diagnostics, not dense trial grids or failed-run debris. |
+| Stopping or redirection | Diagnose a missing boundary datum, incompatible frame/gauge data, constraint drift that does not refine, or budget exhaustion before designing another run. A solved rectangle supplies initial data for the wall strip; it does not replace the full finite-domain objective. |
+
 ## Cap mass and moving-wall response admission, 15 October 2026
 
 The accepted programme first closes the cap-side input and the coupled wall

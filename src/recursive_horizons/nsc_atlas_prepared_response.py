@@ -26,6 +26,8 @@ CPU_SECONDS = 60
 MAX_KERNEL_VALUES = 10_000_000
 MAX_RHS_PER_SOLVE = 6000
 MAX_FIELD_NODES = 513
+MAX_BULK_CPU_SECONDS = 120
+MAX_BULK_KERNEL_VALUES = 30_000_000
 
 
 class _Budget:
@@ -38,6 +40,39 @@ class _Budget:
         if (self.kernel_values > MAX_KERNEL_VALUES
                 or time.process_time()-self.started > CPU_SECONDS):
             raise RuntimeError("prepared-response finite compute budget exhausted")
+
+
+class PreparedFieldBudget:
+    """Shared, finite budget for a bulk pilot or its complete refinement comparison.
+
+    A caller may reduce these admission ceilings, but cannot enlarge them.
+    Construction starts the CPU clock; solves and all later queries share it.
+    """
+
+    def __init__(self, *, cpu_seconds=120, kernel_values_max=30_000_000):
+        if (isinstance(cpu_seconds, (bool, np.bool_))
+                or not isinstance(cpu_seconds, (int, float, np.integer, np.floating))
+                or not math.isfinite(cpu_seconds)
+                or not 0 < cpu_seconds <= MAX_BULK_CPU_SECONDS):
+            raise ValueError("bulk CPU budget must be positive and at most 120 seconds")
+        if (isinstance(kernel_values_max, (bool, np.bool_))
+                or not isinstance(kernel_values_max, (int, np.integer))
+                or not 0 < kernel_values_max <= MAX_BULK_KERNEL_VALUES):
+            raise ValueError("bulk kernel budget must be a positive integer at most 30000000")
+        self.cpu_seconds = float(cpu_seconds)
+        self.kernel_values_max = int(kernel_values_max)
+        self.started = time.process_time()
+        self.kernel_values = 0
+
+    def check(self, kernel_values=0):
+        if (isinstance(kernel_values, (bool, np.bool_))
+                or not isinstance(kernel_values, (int, np.integer))
+                or kernel_values < 0):
+            raise ValueError("kernel evaluation count must be a nonnegative integer")
+        self.kernel_values += int(kernel_values)
+        if (self.kernel_values > self.kernel_values_max
+                or time.process_time()-self.started > self.cpu_seconds):
+            raise RuntimeError("prepared-field finite compute budget exhausted")
 
 
 @lru_cache(maxsize=2)
@@ -82,7 +117,7 @@ def transverse_kernel_integral(lower, upper, V):
     return 2*M_OVER_ELL**2/V*(b**-2-a**-2)
 
 
-def _solve(nodes, geometry, prepared, budget, *, tolerance=2e-10):
+def _solve(nodes, geometry, prepared, budget, *, tolerance=2e-10, include_bulk=False):
     """Product integration in U and borrowed DOP853 integration in V.
 
     Integrate the correction z=chi-g, so exact source cancellation does not
@@ -159,7 +194,147 @@ def _solve(nodes, geometry, prepared, budget, *, tolerance=2e-10):
             "zero_kernel_phi_C_over_epsilon": 2*gp/T_V,
         }
 
+    if include_bulk:
+        return extract, calls, _bulk_evaluator(U, cuts, segments, geometry, prepared, budget)
     return extract, calls
+
+
+def _bulk_evaluator(grid, cuts, segments, geometry, prepared, budget):
+    """Evaluate the stored dense solution only on the retained rectangle.
+
+    The field uses piecewise linear spatial interpolation. Its V derivative
+    integrates the piecewise linear K*chi integrand, including the partial
+    terminal cell. Its U derivative uses the continuum integral identity
+    with that same numerical field, rather than differentiating samples.
+    """
+    domain = prepared["geometry"]
+    U0, Ua, Ub = (domain[key] for key in ("U0", "Ua", "Ub"))
+    Va, Vb = (domain[key] for key in ("Va", "Vb"))
+    dV = Vb-Va
+    gauss = {order: np.polynomial.legendre.leggauss(order) for order in (32, 64)}
+
+    def field_values(points, times):
+        budget.check()
+        indices = np.minimum(np.searchsorted(cuts, times, side="right")-1, len(segments)-1)
+        correction = np.empty((len(grid), len(times)))
+        for index in np.unique(indices):
+            mask = indices == index
+            correction[:, mask] = segments[index](times[mask])
+        values = np.empty((len(points), len(times)))
+        for column, t in enumerate(times):
+            V = min(Vb, max(Va, Va+dV*float(t)))
+            wall = min(Ub, max(Ua, float(geometry["wall"](V))))
+            g = float(source_profile(V, Va, Vb)[0])
+            clipped = np.minimum(grid, wall)
+            chi = np.where(grid < wall, correction[:, column], correction[-1, column])+g
+            values[:, column] = np.interp(points, clipped, chi)
+        return values
+
+    def bulk(points, normalized_V, *, order=64):
+        points = np.asarray(points, dtype=float)
+        if (points.ndim != 1 or not 1 <= points.size <= MAX_FIELD_NODES
+                or not np.all(np.isfinite(points))
+                or np.any(points < U0) or np.any(points > Ua)):
+            raise ValueError("bulk query needs 1 to 513 finite U values in the retained rectangle [U0, Ua]")
+        if (isinstance(normalized_V, (bool, np.bool_))
+                or not isinstance(normalized_V, (int, float, np.integer, np.floating))
+                or not math.isfinite(normalized_V) or not 0 <= normalized_V <= 1):
+            raise ValueError("bulk query exits the finite preparation window")
+        if (isinstance(order, (bool, np.bool_))
+                or not isinstance(order, (int, np.integer)) or order not in (32, 64)):
+            raise ValueError("bulk derivative quadrature uses Gauss order 32 or 64")
+        budget.check()
+        t = float(normalized_V)
+        V = min(Vb, max(Va, Va+dV*t))
+        wall = min(Ub, max(Ua, float(geometry["wall"](V))))
+        clipped = np.minimum(grid, wall)
+        # The interpolation is at most the current wall; there is no exterior
+        # kernel evaluation or physical continuation on the cap side.
+        chi_grid = field_values(clipped, np.array([t]))[:, 0]
+        chi = np.interp(points, clipped, chi_grid)
+        budget.check(len(grid))
+        integrand = exterior_coefficient(radius_from_null(clipped, V))*chi_grid
+        prefix = np.r_[0., np.cumsum(.5*(integrand[:-1]+integrand[1:])*np.diff(clipped))]
+        indices = np.minimum(np.searchsorted(clipped, points, side="right")-1, len(grid)-2)
+        partial = .5*(integrand[indices]+np.interp(points, clipped, integrand))*(points-clipped[indices])
+        chi_V = float(source_profile(V, Va, Vb)[1])-prefix[indices]-partial
+
+        # U<=Ua is retained for the entire past interval, so no inverse-wall
+        # lower limit or moving-boundary derivative enters this identity.
+        chi_U = np.zeros_like(points)
+        node, weight = gauss[order]
+        time_cuts = sorted({0., t, *(edge for edge in (.25, .75) if edge < t)})
+        for lower, upper in zip(time_cuts[:-1], time_cuts[1:]):
+            half = .5*(upper-lower)
+            times = .5*(upper+lower)+half*node
+            values = field_values(points, times)
+            null_V = Va+dV*times
+            budget.check(points.size*order)
+            K = exterior_coefficient(radius_from_null(points[:, None], null_V[None, :]))
+            chi_U -= dV*half*((K*values) @ weight)
+
+        x = radius_from_null(points, V)
+        inverse_Fprime = -4*M_OVER_ELL**2*np.exp(-x/(2*M_OVER_ELL))/x
+        x_U, x_V = V*inverse_Fprime, points*inverse_Fprime
+        p = chi/x
+        return {"U": points.copy(), "V": np.full_like(points, V),
+                "chi": chi, "chi_U": chi_U, "chi_V": chi_V,
+                "x": x, "x_U": x_U, "x_V": x_V,
+                "p": p, "p_U": (chi_U-p*x_U)/x, "p_V": (chi_V-p*x_V)/x}
+
+    return bulk
+
+
+class PreparedFieldSolution:
+    """Bounded numerical field; no extrapolation or continuum error enclosure.
+
+    ``wall(t_array)`` has the existing response-extractor keys. ``bulk(U, t,
+    order=32|64)`` returns chi=chi/epsilon and p=ell*phi/epsilon, their first
+    null derivatives, and the analytic reference radius x=R/ell and its
+    derivatives. Here t=(V-Va)/(Vb-Va), while all returned derivatives use
+    U,V, not t. Spatial, geometry and 32/64 derivative refinements remain
+    separate diagnostics to be made by the consuming calculation.
+    """
+
+    def __init__(self, nodes, geometry_knots, geometry, prepared, budget):
+        self.nodes = nodes
+        self.geometry_knots = geometry_knots
+        self.geometry = geometry
+        self.domain = {key: prepared["geometry"][key] for key in ("U0", "Ua", "Ub", "Va", "Vb")}
+        self.budget = budget
+        self._wall, self.rhs_calls, self.bulk = _solve(
+            nodes, geometry, prepared, budget, include_bulk=True)
+
+    def wall(self, normalized_V):
+        values = np.atleast_1d(np.asarray(normalized_V, dtype=float))
+        if values.ndim != 1 or not 1 <= values.size <= MAX_FIELD_NODES:
+            raise ValueError("wall query needs 1 to 513 normalized V values")
+        self.budget.check()
+        return self._wall(values)
+
+
+def solve_prepared_field(nodes=257, geometry_knots=257, budget=None):
+    """Solve the fixed preparation once for wall and rectangular bulk queries.
+
+    Supply the same PreparedFieldBudget to every solve in one admitted
+    comparison. The old record producer and its 60-second budget are unchanged.
+    No saved waveform is interpolated or differentiated by this interface.
+    """
+    if (isinstance(nodes, (bool, np.bool_)) or not isinstance(nodes, (int, np.integer))
+            or nodes not in (129, 257, 513)):
+        raise ValueError("admitted field grids have 129, 257 or 513 nodes")
+    if (isinstance(geometry_knots, (bool, np.bool_))
+            or not isinstance(geometry_knots, (int, np.integer)) or geometry_knots not in (129, 257)):
+        raise ValueError("admitted geometry uses 129 or 257 direct wall knots")
+    if budget is None:
+        budget = PreparedFieldBudget()
+    if not isinstance(budget, (PreparedFieldBudget, _Budget)):
+        raise ValueError("a shared PreparedFieldBudget is required")
+    budget.check()
+    prepared = preparation_record()
+    geometry = _geometry(int(geometry_knots))
+    budget.check()
+    return PreparedFieldSolution(int(nodes), int(geometry_knots), geometry, prepared, budget)
 
 
 def _tail_born(V, geometry, prepared, order, budget):
