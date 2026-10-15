@@ -1,0 +1,359 @@
+{
+  "common_grid_maximum_absolute_differences": {
+    "c_J": 1.2047252084812499e-11,
+    "c_J_U": 6.279741171510977e-10,
+    "c_J_V": 6.306066779870889e-13,
+    "h_J": 3.086420008457935e-14,
+    "h_J_U": 3.304023721284466e-12,
+    "h_J_V": 1.4921397450962104e-13,
+    "mu_E": 2.2879476091475226e-12,
+    "mu_J": 2.2879476091475226e-12
+  },
+  "comparison": "time",
+  "execution": {
+    "cpu_seconds": 18.59375,
+    "cpu_seconds_max": 120.0,
+    "field_solves": 1,
+    "metric_rhs_calls": 1566,
+    "metric_solves": 2,
+    "metric_values": 105282,
+    "scalar_kernel_values": 7682796,
+    "scalar_kernel_values_max": 30000000,
+    "source_quadrature_nodes": 86400
+  },
+  "interpretation": "dimensionless quadratic coefficients; no finite epsilon selected",
+  "order": "r_J=r0+alpha*h_J; log C_J=log C0+alpha*c_J; alpha=kappa4*epsilon^2/ell^2",
+  "refinement_is_rigorous_error_enclosure": false,
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-bulk-response-comparison-v1",
+  "settings": [
+    {
+      "field_nodes": 257,
+      "field_order": 32,
+      "geometry_knots": 257,
+      "metric_nodes": 65,
+      "source_order": 64,
+      "tolerance": 2e-09
+    },
+    {
+      "field_nodes": 257,
+      "field_order": 32,
+      "geometry_knots": 257,
+      "metric_nodes": 65,
+      "source_order": 64,
+      "tolerance": 2e-10
+    }
+  ],
+  "solutions": [
+    {
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105
+      },
+      "field_order": 32,
+      "maximum_absolute_defects": {
+        "areal_null_lapse_defect": 6.976502540112506e-07,
+        "frame_mass_defect": 1.5765166949677223e-14,
+        "mass_defect_U": 4.017999302163844e-07,
+        "mass_defect_V": 4.307936727343531e-07,
+        "null_U_integral_defect": 4.931540562580494e-07,
+        "null_V_integral_defect": 2.600370159200338e-07
+      },
+      "metric_nodes": 65,
+      "schema": "nsc-atlas-bulk-response-v1",
+      "scope": "formal exterior rectangle; U=Ua data for subsequent wall matching",
+      "source_order": 64,
+      "transverse_leg_samples": [
+        {
+          "c_J": 0.0,
+          "c_J_U": 0.0,
+          "c_J_V": 0.0,
+          "h_J": 0.0,
+          "h_J_U": 0.0,
+          "h_J_V": 0.0,
+          "mass_defect_U_gauss": 0.0,
+          "mu_E": 0.0,
+          "mu_J": 0.0,
+          "t": 0.0
+        },
+        {
+          "c_J": 0.0,
+          "c_J_U": 0.0,
+          "c_J_V": 0.0,
+          "h_J": 0.0,
+          "h_J_U": 0.0,
+          "h_J_V": 0.0,
+          "mass_defect_U_gauss": 0.0,
+          "mu_E": 0.0,
+          "mu_J": 0.0,
+          "t": 0.125
+        },
+        {
+          "c_J": 0.0,
+          "c_J_U": 0.0,
+          "c_J_V": 0.0,
+          "h_J": 0.0,
+          "h_J_U": 0.0,
+          "h_J_V": 0.0,
+          "mass_defect_U_gauss": 0.0,
+          "mu_E": 0.0,
+          "mu_J": 0.0,
+          "t": 0.25
+        },
+        {
+          "c_J": -0.006687307913124094,
+          "c_J_U": -0.24616941121683733,
+          "c_J_V": -0.9904537883138165,
+          "h_J": -0.01593963004873482,
+          "h_J_U": 0.05983662651935347,
+          "h_J_V": -2.4153233928829003,
+          "mass_defect_U_gauss": -2.025720613474391e-08,
+          "mu_E": -3.5519796640684427,
+          "mu_J": -1.7701752867238179,
+          "t": 0.375
+        },
+        {
+          "c_J": -0.1559221485739305,
+          "c_J_U": -5.828565574083238,
+          "c_J_V": -7.078945217961807,
+          "h_J": -0.4111760880480154,
+          "h_J_U": 1.4532450189253203,
+          "h_J_V": -19.32921214157449,
+          "mass_defect_U_gauss": -2.0311598625255556e-07,
+          "mu_E": -14.204423074732146,
+          "mu_J": -14.316996005464796,
+          "t": 0.5
+        },
+        {
+          "c_J": -0.5349976259302645,
+          "c_J_U": -20.14938865276653,
+          "c_J_V": -12.04955826633018,
+          "h_J": -1.4843079577795846,
+          "h_J_U": 5.049786003234781,
+          "h_J_V": -36.13357968461248,
+          "mass_defect_U_gauss": -1.7583349531946624e-07,
+          "mu_E": -25.379966813827643,
+          "mu_J": -27.09684086498762,
+          "t": 0.625
+        },
+        {
+          "c_J": -0.9589351058914357,
+          "c_J_U": -36.547239204954614,
+          "c_J_V": -9.871299790714783,
+          "h_J": -2.9157121149921275,
+          "h_J_U": 9.395947170305178,
+          "h_J_V": -37.69818195567713,
+          "mass_defect_U_gauss": -2.6150294019089415e-07,
+          "mu_E": -28.883385741091672,
+          "mu_J": -28.88333717573836,
+          "t": 0.75
+        },
+        {
+          "c_J": -1.2905826040850055,
+          "c_J_U": -49.79685793117117,
+          "c_J_V": -7.671582688643468,
+          "h_J": -4.3303763753424835,
+          "h_J_U": 13.199438886527322,
+          "h_J_V": -36.841080109614225,
+          "mass_defect_U_gauss": -3.4468916254581927e-07,
+          "mu_E": -28.88338607062542,
+          "mu_J": -28.883337403685275,
+          "t": 0.875
+        },
+        {
+          "c_J": -1.5461215575180556,
+          "c_J_U": -60.351649723573146,
+          "c_J_V": -5.848126062298908,
+          "h_J": -5.713151382673331,
+          "h_J_U": 16.499325218096654,
+          "h_J_V": -36.01794575953287,
+          "mass_defect_U_gauss": -4.070187387128499e-07,
+          "mu_E": -28.883386354645133,
+          "mu_J": -28.88333759907387,
+          "t": 1.0
+        }
+      ]
+    },
+    {
+      "domain": {
+        "U0": -0.32130105902052203,
+        "Ua": -0.2992702973503126,
+        "Va": -2.565695357068247,
+        "Vb": -2.262011613052105
+      },
+      "field_order": 32,
+      "maximum_absolute_defects": {
+        "areal_null_lapse_defect": 6.976499964395089e-07,
+        "frame_mass_defect": 1.1102230246251565e-14,
+        "mass_defect_U": 4.0179988403110656e-07,
+        "mass_defect_V": 4.3190738452381083e-07,
+        "null_U_integral_defect": 4.93153873293295e-07,
+        "null_V_integral_defect": 2.607300295665027e-07
+      },
+      "metric_nodes": 65,
+      "schema": "nsc-atlas-bulk-response-v1",
+      "scope": "formal exterior rectangle; U=Ua data for subsequent wall matching",
+      "source_order": 64,
+      "transverse_leg_samples": [
+        {
+          "c_J": 0.0,
+          "c_J_U": 0.0,
+          "c_J_V": 0.0,
+          "h_J": 0.0,
+          "h_J_U": 0.0,
+          "h_J_V": 0.0,
+          "mass_defect_U_gauss": 0.0,
+          "mu_E": 0.0,
+          "mu_J": 0.0,
+          "t": 0.0
+        },
+        {
+          "c_J": 0.0,
+          "c_J_U": 0.0,
+          "c_J_V": 0.0,
+          "h_J": 0.0,
+          "h_J_U": 0.0,
+          "h_J_V": 0.0,
+          "mass_defect_U_gauss": 0.0,
+          "mu_E": 0.0,
+          "mu_J": 0.0,
+          "t": 0.125
+        },
+        {
+          "c_J": 0.0,
+          "c_J_U": 0.0,
+          "c_J_V": 0.0,
+          "h_J": 0.0,
+          "h_J_U": 0.0,
+          "h_J_V": 0.0,
+          "mass_defect_U_gauss": 0.0,
+          "mu_E": 0.0,
+          "mu_J": 0.0,
+          "t": 0.25
+        },
+        {
+          "c_J": -0.006687307914290147,
+          "c_J_U": -0.24616941125446445,
+          "c_J_V": -0.9904537883138893,
+          "h_J": -0.015939630048729888,
+          "h_J_U": 0.059836626519487554,
+          "h_J_V": -2.4153233928828834,
+          "mass_defect_U_gauss": -2.0256988086941874e-08,
+          "mu_E": -3.5519796640682246,
+          "mu_J": -1.770175286723601,
+          "t": 0.375
+        },
+        {
+          "c_J": -0.15592214857476983,
+          "c_J_U": -5.828565574117678,
+          "c_J_V": -7.078945217961847,
+          "h_J": -0.4111760880480142,
+          "h_J_U": 1.4532450189255877,
+          "h_J_V": -19.32921214157448,
+          "mass_defect_U_gauss": -2.0311581572229898e-07,
+          "mu_E": -14.204423074731976,
+          "mu_J": -14.316996005464631,
+          "t": 0.5
+        },
+        {
+          "c_J": -0.5349976259423117,
+          "c_J_U": -20.14938865324175,
+          "c_J_V": -12.04955826633081,
+          "h_J": -1.4843079577795537,
+          "h_J_U": 5.0497860032380855,
+          "h_J_V": -36.13357968461233,
+          "mass_defect_U_gauss": -1.758312073718571e-07,
+          "mu_E": -25.379966813825355,
+          "mu_J": -27.09684086498533,
+          "t": 0.625
+        },
+        {
+          "c_J": -0.9589351058915903,
+          "c_J_U": -36.54723920495975,
+          "c_J_V": -9.871299790714792,
+          "h_J": -2.915712114992125,
+          "h_J_U": 9.395947170305318,
+          "h_J_V": -37.69818195567713,
+          "mass_defect_U_gauss": -2.615029011110437e-07,
+          "mu_E": -28.883385741091633,
+          "mu_J": -28.883337175738323,
+          "t": 0.75
+        },
+        {
+          "c_J": -1.29058260408516,
+          "c_J_U": -49.79685793117632,
+          "c_J_V": -7.671582688643464,
+          "h_J": -4.330376375342481,
+          "h_J_U": 13.199438886527467,
+          "h_J_V": -36.841080109614225,
+          "mass_defect_U_gauss": -3.446891199132551e-07,
+          "mu_E": -28.883386070625377,
+          "mu_J": -28.88333740368524,
+          "t": 0.875
+        },
+        {
+          "c_J": -1.546121557518212,
+          "c_J_U": -60.35164972357833,
+          "c_J_V": -5.848126062298933,
+          "h_J": -5.7131513826733284,
+          "h_J_U": 16.499325218096804,
+          "h_J_V": -36.017945759532864,
+          "mass_defect_U_gauss": -4.0701869252757206e-07,
+          "mu_E": -28.883386354645086,
+          "mu_J": -28.883337599073826,
+          "t": 1.0
+        }
+      ]
+    }
+  ],
+  "status": "FORMAL_EXTERIOR_RECTANGLE_REFINEMENT",
+  "transverse_leg_differences": {
+    "c_J": {
+      "fraction_of_maximum_magnitude": 7.791917799885274e-12,
+      "maximum_absolute_difference": 1.2047252084812499e-11,
+      "maximum_coefficient_magnitude": 1.546121557518212
+    },
+    "c_J_U": {
+      "fraction_of_maximum_magnitude": 7.874211260073154e-12,
+      "maximum_absolute_difference": 4.752216398173914e-10,
+      "maximum_coefficient_magnitude": 60.35164972357833
+    },
+    "c_J_V": {
+      "fraction_of_maximum_magnitude": 5.218700198369784e-14,
+      "maximum_absolute_difference": 6.288303211476887e-13,
+      "maximum_coefficient_magnitude": 12.04955826633081
+    },
+    "h_J": {
+      "fraction_of_maximum_magnitude": 5.402307416215741e-15,
+      "maximum_absolute_difference": 3.086420008457935e-14,
+      "maximum_coefficient_magnitude": 5.713151382673331
+    },
+    "h_J_U": {
+      "fraction_of_maximum_magnitude": 2.0025205137847357e-13,
+      "maximum_absolute_difference": 3.304023721284466e-12,
+      "maximum_coefficient_magnitude": 16.499325218096804
+    },
+    "h_J_V": {
+      "fraction_of_maximum_magnitude": 3.9581212347337156e-15,
+      "maximum_absolute_difference": 1.4921397450962104e-13,
+      "maximum_coefficient_magnitude": 37.69818195567713
+    },
+    "mu_E": {
+      "fraction_of_maximum_magnitude": 7.921327440816393e-14,
+      "maximum_absolute_difference": 2.2879476091475226e-12,
+      "maximum_coefficient_magnitude": 28.883386354645133
+    },
+    "mu_J": {
+      "fraction_of_maximum_magnitude": 7.921340812153526e-14,
+      "maximum_absolute_difference": 2.2879476091475226e-12,
+      "maximum_coefficient_magnitude": 28.88333759907387
+    }
+  },
+  "varied_quantity": "tolerance"
+}

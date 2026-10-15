@@ -48,8 +48,12 @@ both null fluxes and the full conformal transformation. This functional has
 not been evaluated numerically. Keeping the cap vacuum at the actual radius
 now supplies a compatible cap mass functional and a regular, quiet-anchored
 wall displacement equation. Two-sided mass transport also preserves the
-temporal and normal junction conditions. Numerical evaluation, smooth bulk
-metric reconstruction and the corrected observer response remain open.
+temporal and normal junction conditions. The same prepared field now drives
+a computed quadratic exterior radius and lapse response on a finite
+characteristic rectangle, checked against independent mass transport and
+null constraints. It supplies a transverse null leg for subsequent wall
+matching. The remaining wall strip, cap metric, evaluated displacement and
+corrected observer response remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1007,13 +1011,97 @@ chosen cap mass or wall force. These are formal quadratic identities,
 checked by independent algebra, not an evaluated displacement curve or
 a completed sourced spacetime.
 
-The next connection is the smooth bulk metric on both sides. Geometric
+The next connection is the smooth bulk metric on both sides; the exterior
+characteristic calculation below supplies its first evolved domain. Geometric
 mass alone does not determine the null lapse, the wall's null-coordinate
 embedding or the central observer's clock. Their reconstruction must use
 the shared wall data and characteristic initial data before calculating
 the corrected arrival map and subsequent scalar response. A nonzero
 allowed amplitude, a controlled remainder, formation and stability remain
 separate questions.
+
+### 13.10. The prepared field drives a smooth exterior metric response
+
+<!-- nsc-claim:atlas-bulk-response -->
+
+Evidence: [metric refinement](../results/development/nsc-atlas-bulk-response-v1/metric/response.json),
+[field refinement](../results/development/nsc-atlas-bulk-response-v1/field/response.json),
+[derivative-quadrature comparison](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json)
+and [bulk-response owner](../docs/nsc-atlas-bulk-response.md), with separate
+[geometry](../results/development/nsc-atlas-bulk-response-v1/geometry/response.json),
+[source quadrature](../results/development/nsc-atlas-bulk-response-v1/source/response.json)
+and [time tolerance](../results/development/nsc-atlas-bulk-response-v1/time/response.json)
+comparisons.
+
+The gravitational data of Sections 13.5--13.6 determine a computed smooth
+exterior response at quadratic order on $[U_0,U_a]\times[V_a,V_b]$, whose two past null
+sides are specified. This rectangle lies inside the retained wedge. Its
+final transverse leg $U=U_a$ supplies data for a later extension toward
+the moving wall; no exterior metric is continued through the excised cap.
+
+Keep the original null coordinates and fixed Jordan source lapse. With
+$r_0=R_0/\ell$, write $r_E=r_0+\alpha H$ and
+$\log C_E=\log C_0+\alpha c$ to the retained order. The leading scalar
+is $\phi=(\varepsilon/\ell)p$, with both first derivatives obtained
+from its characteristic integral equations. The existing smooth exterior
+Einstein equations simplify under $y=r_0H$, $z=c+H/r_0$ to
+
+$$
+y_{UV}=\frac{C_0}{4r_0^2}y-\frac{C_0}{4}z,\qquad
+z_{UV}=-\frac{3C_0}{4r_0^4}y+\frac{C_0}{4r_0^2}z-p_Up_V.
+$$
+
+Integrating their right sides in $U$ gives a linear evolution in $V$.
+The quiet bottom has $y=z=0$. At $U=U_0$, let $x=r_0(U_0,V)$ and
+let $h_{\mathrm{init}}$ denote the original Jordan radius coefficient from
+Section 13.5. The source values in the unchanged coordinate gauge are
+
+$$
+y_0=xh_{\mathrm{init}}-\frac{x^2p^2}{12},\qquad
+z_0=\frac{h_{\mathrm{init}}}{x}-\frac{p^2}{4}.
+$$
+
+The frame and affine-parameter corrections must both be retained;
+the Einstein-affine radius coefficient alone is not the source value at
+fixed original coordinates. Returning to the Jordan metric gives
+$h_J=H+r_0p^2/12$ and $c_J=c+p^2/6$, where
+$r_J=r_0+\alpha h_J$ and $\log C_J=\log C_0+\alpha c_J$.
+
+At $(U_a,V_b)$, the 65-node metric calculation with 257 field nodes
+reports the following dimensionless quadratic coefficients:
+
+| Quantity | Recorded coefficient |
+| --- | ---: |
+| Radius, $h_J$ | $-5.7131513827$ |
+| Logarithmic null lapse, $c_J$ | $-1.5461215575$ |
+| Geometric mass, $\mu_J$ | $-28.8833375991$ |
+
+Changing the metric grid from 33 to 65 nodes reduces the largest sampled
+mass-transport residual from $1.65\times10^{-6}$ to
+$4.31\times10^{-7}$. On the common sampled grid, the changes in
+$h_J,c_J,\mu_J$ are respectively at most $1.15\times10^{-7}$,
+$3.82\times10^{-6}$ and $1.23\times10^{-6}$. A separate 129/257
+field-grid comparison changes these coefficients by at most
+$2.14\times10^{-8}$, $9.55\times10^{-8}$ and $5.78\times10^{-7}$;
+the 32/64 derivative-quadrature comparison changes them by less than
+$7.2\times10^{-15}$. Both null constraints are checked in integral
+form, and geometric mass is compared with transport along both null
+directions. The radial lapse reconstruction checks the same $U$ constraint
+in different variables.
+
+Changing geometry interpolation and source quadrature changes these three
+coefficients by less than $7.2\times10^{-15}$ and $1.5\times10^{-13}$
+respectively; tightening the time tolerance tenfold changes them by less
+than $1.21\times10^{-11}$. Each complete two-solve comparison took
+between 17.16 and 21.91 process-CPU seconds within its 120-second budget.
+
+These are finite numerical comparisons, not rigorous error enclosures or
+a selected nonzero physical amplitude. They establish a sourced exterior
+metric response on the rectangle and provide its transverse radius/lapse
+data. The remaining wall strip requires compatible embedding and junction
+data, followed by the cap metric and central clock. The full sourced
+configuration, corrected observer signal and finite-amplitude remainder
+have not yet been established.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1294,7 +1382,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Boundary functionals to sourced geometry | Can the two mass functionals and quiet-anchored displacement be evaluated with controlled errors and matched to smooth bulk metrics? | The null lapse, wall embedding and central clock needed for a corrected observer response |
+| Exterior rectangle to the shared wall and cap | Can the computed transverse metric data be extended with the two mass functionals and quiet-anchored displacement, then matched to the smooth cap? | The wall embedding and central clock needed for a corrected observer response |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1334,8 +1422,11 @@ an analytic exterior-side wall-mass functional without a new field solve.
 Subtracting the cap vacuum at the actual radius now supplies the other
 mass functional and the quiet-anchored wall displacement equation.
 The temporal and normal conditions agree with their common mass transport.
-Numerical evaluation and reconstruction of the smooth bulk metrics remain
-necessary before an evolved observer correction can be claimed.
+The prepared field now drives an evolved exterior radius and lapse on a
+finite characteristic rectangle, with mass-transport and null-constraint
+checks. Its transverse data enable the next wall extension. Numerical
+evaluation of the displacement and reconstruction through the wall and cap
+remain necessary before an evolved observer correction can be claimed.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1364,6 +1455,7 @@ and renders their relationships without launching a new physics calculation.
 | Conformal scalar normal-force compatibility | [Projection and force sign](../docs/nsc-atlas-scalar-normal-force.md); [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json) |
 | Exterior wall-mass functional | [Both fluxes and full frame conversion](../docs/nsc-atlas-wall-mass-closure.md); [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json) |
 | Cap mass and wall displacement functional | [Vacuum subtraction and junction closure](../docs/nsc-atlas-cap-wall-response.md); [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json) |
+| Smooth exterior metric response | [Characteristic evolution and radial checks](../docs/nsc-atlas-bulk-response.md); [metric](../results/development/nsc-atlas-bulk-response-v1/metric/response.json), [field](../results/development/nsc-atlas-bulk-response-v1/field/response.json) and [derivative](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json) comparisons |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

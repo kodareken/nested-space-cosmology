@@ -2,6 +2,59 @@
 
 Current presentation, 15 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Smooth exterior metric response, 15 October 2026
+
+The [bulk calculation](nsc-atlas-bulk-response.md) evolves the radius and
+lapse coefficients from the original prepared scalar and gravitational
+initial data on $[U_0,U_a]\times[V_a,V_b]$. It retains the original null
+coordinates and fixed Jordan source lapse, including the source's conformal
+and affine-parameter correction. Both scalar derivatives come from the
+field's integral equations; first metric derivatives are evolved alongside
+the metric.
+
+The [33/65 metric comparison](../results/development/nsc-atlas-bulk-response-v1/metric/response.json)
+reduces the largest sampled disagreement between geometric mass and its
+independent flux expressions from $1.65\times10^{-6}$ to
+$4.31\times10^{-7}$. The two integrated null-constraint defects decrease
+from $1.98\times10^{-6}$ and $1.01\times10^{-6}$ to
+$4.94\times10^{-7}$ and $2.61\times10^{-7}$. The areal-null lapse
+diagnostic is the same first constraint in different variables.
+
+At $(U_a,V_b)$ the 65-node calculation with 257 field nodes gives:
+
+| Dimensionless quadratic coefficient | Value |
+| --- | ---: |
+| Jordan radius $h_J$ | -5.7131513827 |
+| Jordan logarithmic lapse $c_J$ | -1.5461215575 |
+| Jordan geometric mass $\mu_J$ | -28.8833375991 |
+
+On common sampled interior nodes and nine time cuts, the metric-grid
+differences in these three quantities are at most $1.15\times10^{-7}$,
+$3.82\times10^{-6}$ and $1.23\times10^{-6}$. The
+[129/257 field comparison](../results/development/nsc-atlas-bulk-response-v1/field/response.json)
+changes them by at most $2.14\times10^{-8}$, $9.55\times10^{-8}$ and
+$5.78\times10^{-7}$. Doubling the
+[derivative quadrature](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json)
+changes them by less than $7.2\times10^{-15}$. The separate
+[geometry interpolation](../results/development/nsc-atlas-bulk-response-v1/geometry/response.json)
+and [source quadrature](../results/development/nsc-atlas-bulk-response-v1/source/response.json)
+comparisons change these three coefficients by less than
+$7.2\times10^{-15}$ and $1.5\times10^{-13}$ respectively. Tightening
+the [time tolerance](../results/development/nsc-atlas-bulk-response-v1/time/response.json)
+tenfold changes them by less than $1.21\times10^{-11}$. All six
+comparisons finished within their individual budgets (17.16--21.91
+process-CPU seconds; at most 10,448,594 scalar-kernel evaluations).
+These are separate refinement indicators, not a continuum or
+finite-amplitude error enclosure.
+
+This supplies a computed transverse characteristic leg at $U=U_a$.
+The [same owner](nsc-atlas-bulk-response.md#continuation-to-the-wall-an-unevaluated-analytic-route)
+derives a route to the emerging wall strip using radial mass/lapse
+reconstruction and the already derived wall-displacement law. That strip,
+the smooth cap, observer clock and higher-order field correction remain
+to be calculated. The coefficients above do not select a finite physical
+amplitude or establish the complete sourced configuration.
+
 ## Cap mass and shared wall displacement, 15 October 2026
 
 The [two-sided boundary calculation](nsc-atlas-cap-wall-response.md) derives

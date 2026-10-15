@@ -1,10 +1,10 @@
 {
-  "bytes": 1899655,
+  "bytes": 1930669,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "5166f7ca819d4e5d749d1c5107007f62f7c2133ecc597c74ab63b4d7782c835c",
+  "metadata_sha256": "03e520bf866d90dbedff6fd34a3abe4217e722a014d4fed07f88e40cf2585e31",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 25,
-  "pdf_sha256": "63cc6d3908b22892d096abd155d8c86f3a8287a0aee11563c657d3dafbd8c356",
+  "pages": 26,
+  "pdf_sha256": "cb0ad4f2fa2cfcd7dd19d8b60eb20bbe950c2fde0bde213f84bf1a649cddb418",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -26,6 +26,30 @@
     {
       "path": "paper/nested-quality-evidence/snapshot.json",
       "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f"
+    },
+    {
+      "path": "results/development/nsc-atlas-bulk-response-v1/derivative/response.json",
+      "sha256": "d607265f4aa0908f5124b3f0058f6cc471cf9749ef5069e4dbe66a315729beaf"
+    },
+    {
+      "path": "results/development/nsc-atlas-bulk-response-v1/field/response.json",
+      "sha256": "5d97d2ec29b5c9e024fdf9bf34d0be41f3038e9011202ae285dda5dff36006f4"
+    },
+    {
+      "path": "results/development/nsc-atlas-bulk-response-v1/geometry/response.json",
+      "sha256": "acc72986db5f121371085bbab860a5e44f7ab6a394b91e08798d9a5e206ef4cf"
+    },
+    {
+      "path": "results/development/nsc-atlas-bulk-response-v1/metric/response.json",
+      "sha256": "53c26da7ea7317920ca976dff0a2bc52bff4ba919f19c5922657687b6d796360"
+    },
+    {
+      "path": "results/development/nsc-atlas-bulk-response-v1/source/response.json",
+      "sha256": "3fab9bdae6c3870c9d70d94cb9e0a3eb56ccb0906e64ccb79579584bd092c873"
+    },
+    {
+      "path": "results/development/nsc-atlas-bulk-response-v1/time/response.json",
+      "sha256": "c7dc1fd169c8732b59437c6f50c0fa9be1043692328b12c4c73b82975f828fde"
     },
     {
       "path": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json",
@@ -181,6 +205,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "4b44aecf881d304556b08d32ae81f0abe091662de7f1d7229199f1a551272c4d",
-  "version": "working-2026-10-15.1"
+  "source_sha256": "de39e9142259a5eb38de2eeed88b599e76faa4bff4b53e419fca1f3481e7e93a",
+  "version": "working-2026-10-15.2"
 }

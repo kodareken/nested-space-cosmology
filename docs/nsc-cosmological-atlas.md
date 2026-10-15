@@ -62,7 +62,12 @@ functional. The angular, temporal and normal conditions agree with the
 two-sided mass transport. This closes the formal boundary reduction;
 smooth bulk propagation, finite-amplitude control and corrected observer
 clocks are the next dynamical connection. The wall tail does not inherit
-the initial leg's mass plateau or late sign.
+the initial leg's mass plateau or late sign. The
+[bulk successor](nsc-atlas-bulk-response.md) propagates the exterior radius
+and lapse on the genuine initial rectangle, with independent mass-flux and
+null-constraint comparisons. It supplies the next characteristic leg at
+$U=U_a$. The emerging wall strip and smooth cap remain the next domains;
+the rectangle is not a complete cap/wall/exterior evolution.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
@@ -118,7 +123,7 @@ that every open branch succeeds.
 | `wall-mass-transport` | The [analytic closure](nsc-atlas-wall-mass-closure.md) uses the fixed leading wall trace, its first derivative, quiet mass anchor and reference geometry. Both null fluxes plus the full frame term agree with original-frame improved-stress transport. | `wall-mass-evaluation` or `cap-wall-closure`; the quadratic exterior functional is closed, without numerical mass values or a solved coupled boundary. |
 | `wall-mass-evaluation` | Decide whether a finite mass value resolves the next junction uncertainty. Specify quadrature and independent field/geometry error control; the waveform's old samples do not certify the mass integral. | A controlled numerical exterior input to `cap-wall-closure`, if that value changes the matching decision. |
 | `cap-wall-closure` | The [two-sided calculation](nsc-atlas-cap-wall-response.md) supplies the cap mass and regular wall-displacement functional, retaining vacuum and the actual-radius background. Temporal and normal matching agree with angular matching and mass transport. | `bulk-backreaction` with these boundary data; numerical evaluation, a compatible bulk solution and finite-amplitude remainder remain to be supplied. |
-| `bulk-backreaction` | Supply any propagation equations and remaining junction conditions actually required after the local closures. Initial null geometry, mass functionals and the normal-force condition do not themselves prove a sourced bulk future. | A finite validity estimate or a sourced metric/wall response, then an independently shared gravitational response channel. |
+| `bulk-backreaction` | The [smooth exterior response](nsc-atlas-bulk-response.md) solves the linear radius/lapse system on the initial rectangle, with separate numerical refinements and independent mass/null-constraint checks. Its transverse leg and the derived radial reconstruction now supply inputs toward the moving-wall strip. | Evaluate the compatible wall embedding and smooth cap, then corrected observer clocks and the higher-order field; establish a finite-amplitude validity estimate before claiming the complete sourced configuration. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -143,9 +148,12 @@ The parallel physical-response branch is
 The local branch `probe-stress -> wall-normal-force` needs no mass quadrature.
 The existing `wall-trace`, canonical normalization and quiet mass anchor
 now close `wall-mass-transport` analytically; no numerical source-leg mass
-curve or normal-force result is needed for the identity itself. The next
-decision is `wall-mass-evaluation` or a named missing `cap-wall-closure`
-input. These branches can supply inputs to `bulk-backreaction` when needed.
+curve or normal-force result is needed for the identity itself. The
+two-sided reduction now closes the cap mass and conditional displacement
+law. The first smooth exterior rectangle is calculated. The next connection
+is the wall strip and cap: evaluate the two mass functionals and wall
+embedding using the bounded field interface, with the solved transverse
+leg or radial reconstruction supplying the exterior geometry.
 They supply prerequisites for interpreting the field as a gravitational source;
 they do not supply another proof of the waveform or a formation history.
 

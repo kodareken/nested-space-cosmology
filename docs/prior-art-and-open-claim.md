@@ -22,6 +22,20 @@ material matching and coordinate embedding.
 | Checks and useful outputs | Zero source; original source/bottom values; both null constraints and mixed equations; geometric mass versus independent scalar flux; field, geometry, quadrature and metric-grid refinement separately; unit/orientation conventions; cumulative budgets. Save compact coefficients and diagnostics, not dense trial grids or failed-run debris. |
 | Stopping or redirection | Diagnose a missing boundary datum, incompatible frame/gauge data, constraint drift that does not refine, or budget exhaustion before designing another run. A solved rectangle supplies initial data for the wall strip; it does not replace the full finite-domain objective. |
 
+**Outcome, 15 October 2026:** the [bulk result](nsc-atlas-bulk-response.md)
+propagates the formal radius/lapse response across the initial rectangle
+and supplies the next transverse characteristic leg. Six separately varied
+comparisons distinguish metric, scalar-field, geometry, derivative
+quadrature, source quadrature and time-tolerance effects. The 33/65
+metric comparison reduces the largest sampled mass-flux defect from
+$1.65\times10^{-6}$ to $4.31\times10^{-7}$, with both integrated null
+constraints refining. Each comparison used 17.16--21.91 process-CPU
+seconds and fewer than 10.45 million scalar-kernel evaluations. The
+[current-result entry](current-result.md#smooth-exterior-metric-response-15-october-2026)
+records the coefficients and all six evidence links. The next domain is
+the moving-wall strip, followed by the cap and observer correction; the
+formal rectangle result does not provide a finite-amplitude remainder.
+
 ## Cap mass and moving-wall response admission, 15 October 2026
 
 The accepted programme first closes the cap-side input and the coupled wall

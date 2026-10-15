@@ -20,13 +20,16 @@ The [wall-mass functional](nsc-atlas-wall-mass-closure.md) now closes the
 exterior coefficient from existing leading traces. The
 [two-sided successor](nsc-atlas-cap-wall-response.md) now gives the cap
 mass and a quiet-anchored displacement functional satisfying all three
-local junction conditions. Compatible bulk propagation and corrected
-observer measurements are the next dynamical calculation.
+local junction conditions. The [smooth exterior calculation](nsc-atlas-bulk-response.md)
+now propagates radius and lapse on the initial characteristic rectangle.
+Continuation to the moving wall, the cap metric and corrected observer
+measurements are the next dynamical connection.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
 |---|---|
+| Smooth exterior metric and next characteristic leg | [Bulk derivation](nsc-atlas-bulk-response.md), [current numerical result](current-result.md#smooth-exterior-metric-response-15-october-2026), [comparison producer](../scripts/record_nsc_atlas_bulk_response.py); formal radius/lapse evolution and independent integral constraints on the initial rectangle. |
 | Cap mass and shared wall displacement | [Two-sided derivation](nsc-atlas-cap-wall-response.md), [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json), [model specification](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json); formal boundary response with fixed action and quiet corner. |
 | Active programme and eight theme questions | [Programme owner](nsc-cosmological-atlas.md#eight-linked-research-questions), [dependency map](nsc-cosmological-atlas.md#programme-dependencies); the inventory supplies prior dispositions, not new verification. |
 | Exterior mass on reference wall cuts | [Analytic functional](nsc-atlas-wall-mass-closure.md), [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json); both null fluxes and full frame correction close the quadratic coefficient from fixed traces. No numerical mass curve or coupled cap/wall solution is supplied. |

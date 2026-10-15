@@ -1,0 +1,28 @@
+{
+  "comparison": "derivative",
+  "outputs": {
+    "response.json": {
+      "bytes": 11136,
+      "sha256": "d607265f4aa0908f5124b3f0058f6cc471cf9749ef5069e4dbe66a315729beaf"
+    }
+  },
+  "schema": "nsc-atlas-bulk-response-comparison-v1-manifest",
+  "source_bindings": {
+    "docs/nsc-atlas-bulk-response.md": "974ea1fd65a0cf52930c84f272c4ca6724a4c7680197387eb368de7119bee107",
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/record_nsc_atlas_bulk_response.py": "667bbb0a1736315caf7b3fceaef90d9d0352fd69fd42e96dda44b83d24606852",
+    "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+    "src/recursive_horizons/nsc_atlas_bulk_response.py": "a06be9c23e329886a1eb667d2500c3fdfb650a607cbae75840daafcaa77cad78",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "8809d2fc2fab34d853ddf37c261bb128a994ddb258556a34fb7d7dcb65813783",
+    "tests/test_nsc_atlas_bulk_response.py": "ad0141cbbba01f34eda70b65d3f5146ff108a153c261e1cc34f99ea66f4bb82c",
+    "tests/test_nsc_atlas_prepared_response.py": "342a791522179d06940f3b2ab7179792dab90211527aaada2a798c33c0eece2b",
+    "tests/test_record_nsc_atlas_bulk_response.py": "0f221cfa97aa07d5b6aac3fae836b0644d68b4044c788ba03caecad13bdb5a9c"
+  }
+}

@@ -10,6 +10,7 @@ and [claim ledger](claim-ledger.md).
 
 | Need | Owner |
 |---|---|
+| Smooth exterior metric propagation | [Derivation](nsc-atlas-bulk-response.md), [bulk solver](../src/recursive_horizons/nsc_atlas_bulk_response.py), [field evaluator](../src/recursive_horizons/nsc_atlas_prepared_response.py), [comparison producer](../scripts/record_nsc_atlas_bulk_response.py); radius/lapse coefficients on the genuine initial rectangle, with independent mass flux and null-constraint diagnostics. |
 | Shared conformal candidate specification | `model_specification()` and `validate_model_specification()` in [the atlas model](../src/recursive_horizons/nsc_cosmological_atlas.py); action, state, clocks, parameter roles and callable operators, with [tests](../tests/test_nsc_cosmological_atlas.py). |
 | Two-sided mass and moving-wall response | [Derivation](nsc-atlas-cap-wall-response.md), [implementation](../src/recursive_horizons/nsc_atlas_cap_wall_response.py), [exact checks](../tests/test_nsc_atlas_cap_wall_response.py), [recorder](../scripts/record_nsc_atlas_cap_wall_response.py); cap/exterior functionals and regular quadratic displacement equation. |
 | Programme questions, dependencies and evidence status | [Atlas owner](nsc-cosmological-atlas.md#programme-dependencies), [eight themes](nsc-cosmological-atlas.md#eight-linked-research-questions), additive `programme_record()` in [the atlas model](../src/recursive_horizons/nsc_cosmological_atlas.py); these records organize research and do not add physical causal edges. |

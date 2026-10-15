@@ -882,6 +882,12 @@ def main() -> int:
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("cap/wall response evidence: " + str(error))
+    try:
+        from record_nsc_atlas_bulk_response import check, VARIATIONS
+        for comparison in VARIATIONS:
+            check(ROOT / "results/development/nsc-atlas-bulk-response-v1" / comparison)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("bulk response evidence: " + str(error))
     check_provenance(errors, files)
     if errors:
         for error in errors:

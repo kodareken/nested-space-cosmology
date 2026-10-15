@@ -119,6 +119,11 @@
       "status": "derived",
       "owner": "docs/nsc-atlas-cap-wall-response.md"
     },
+    "atlas-bulk-response": {
+      "section": "13.10",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-bulk-response.md"
+    },
     "target-local-effective-lambda": {
       "section": "6.1",
       "status": "proposal",
@@ -330,6 +335,14 @@
       "note": "docs/nsc-atlas-cap-wall-response.md",
       "record": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json",
       "paper_section": "13.9"
+    },
+    {
+      "id": "atlas-bulk-response",
+      "status": "measured",
+      "summary": "The original prepared scalar drives linear radius and lapse evolution on the genuine initial exterior rectangle. Geometric mass is compared with both independent scalar-flux paths and the integrated null constraints, with separate numerical refinements. The solved transverse leg supports later continuation; the moving-wall strip, cap metric, corrected observer response and finite-amplitude remainder remain open.",
+      "note": "docs/nsc-atlas-bulk-response.md",
+      "record": "results/development/nsc-atlas-bulk-response-v1/metric/response.json",
+      "paper_section": "13.10"
     }
   ]
 }

@@ -8,6 +8,13 @@ of the software release. Future writing updates these files. The
 
 ## The common research thread
 
+The current working manuscript includes the
+[smooth exterior response](nsc-atlas-bulk-response.md): the prepared field
+now drives a calculated radius and lapse on the original characteristic
+rectangle. Independent mass transport and null constraints check that
+propagation. The next connection is its continuation to the moving wall
+and through the cap, needed for corrected observer measurements.
+
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.
 Spherical symmetry supplies the first tractable charts; it does not assert global

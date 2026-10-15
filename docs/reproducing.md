@@ -8,6 +8,24 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [smooth exterior metric](nsc-atlas-bulk-response.md) has separate
+finite comparisons for metric grid, leading field, geometry interpolation,
+field derivative quadrature, source quadrature and time tolerance. For
+example, create a fresh calculation or authenticate an existing one with:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_bulk_response.py --comparison metric --output .build/bulk-review
+python scripts/run_python.py scripts/record_nsc_atlas_bulk_response.py --check --output .build/bulk-review
+```
+
+`--check` checks the recorded sources, runtime declaration, configuration and
+output integrity; it does not repeat the metric solve. The six comparison
+names are `metric`, `field`, `geometry`, `derivative`, `source` and `time`.
+Each complete two-solve comparison has its own cumulative 120 process-CPU
+second and 30-million-scalar-kernel ceiling. The extended prepared-field
+interface leaves the original v8 evidence untouched; replay that earlier
+record explicitly with `scripts/replay_history.py atlas-v8`.
+
 ```sh
 python -m pip install -e '.[paper,dev]'
 python scripts/check_lab_snapshot.py
