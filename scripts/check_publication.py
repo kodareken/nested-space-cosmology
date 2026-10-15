@@ -904,6 +904,16 @@ def check_scalar_boundary_evidence(errors: list[str]) -> None:
             errors.append(f"scalar boundary {comparison} evidence: {error}")
 
 
+def check_scalar_input_evidence(errors: list[str]) -> None:
+    """Authenticate measured lift/forcing inputs without physical replay."""
+    from record_nsc_atlas_scalar_inputs import VARIATIONS, check
+    for comparison in VARIATIONS:
+        try:
+            check(ROOT / "results/development/nsc-atlas-scalar-inputs-v1" / comparison)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            errors.append(f"scalar input {comparison} evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -948,6 +958,7 @@ def main() -> int:
     check_wall_overlap_evidence(errors)
     check_cap_response_evidence(errors)
     check_scalar_boundary_evidence(errors)
+    check_scalar_input_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

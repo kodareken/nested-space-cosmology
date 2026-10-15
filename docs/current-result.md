@@ -2,6 +2,70 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Scalar lift and exterior forcing, 16 October 2026
+
+The [scalar-input calculation](nsc-atlas-scalar-forcing.md) now evaluates
+the boundary's analytic first derivative and the conservative exterior
+forcing. Both use the same prepared field, quiet anchors and computed wall.
+The comparison holds 129 field nodes and 257 geometry knots fixed, retaining
+cap radial/ray order 16 and the existing wall settings.
+
+The [9/17-knot lift comparison](../results/development/nsc-atlas-scalar-inputs-v1/lift/inputs.json)
+shares 33 direct boundary queries. Sixteen midpoints remain outside both
+fits. The boundary is $\mathfrak b(V)=r_Uc_{1,r}|_W$; its Hermite
+antiderivative supplies the lift exactly for that interpolant.
+
+| Interpolation diagnostic | 9 knots | 17 knots |
+| --- | ---: | ---: |
+| Maximum withheld boundary-value discrepancy | 0.5546024823 | 0.0610876282 |
+| Maximum local-width-scaled slope discrepancy | 3.1990105788 | 0.0596985619 |
+| Terminal lift | 0.0139211082 | 0.0117209086 |
+
+The maximum lift difference is 0.0022004862. Neither fit meets the
+$2.2795554\times10^{-7}$ numerical target, chosen as one tenth of the
+sampled 129/257 field sensitivity in $\mathfrak b$, with a $10^{-11}$
+floor. This is a diagnostic target, not a uniform mathematical enclosure.
+The derivative/potential identities agree within $2.88\times10^{-13}$;
+arrival and wall-coordinate rate discrepancies are below
+$6.01\times10^{-10}$. The unresolved part is the interpolation accuracy,
+so this coarse lift is not yet used for a physical scalar evolution.
+
+The [exterior forcing pair](../results/development/nsc-atlas-scalar-inputs-v1/forcing/inputs.json)
+compares radial Gauss orders 2/4 on nine time slices. A single cumulative
+mass/lapse integration supplies all 129 requested coordinates per slice.
+
+| Quantity | Maximum 2/4 change |
+| --- | ---: |
+| Einstein mass coefficient $\mu_E$ | $3.10\times10^{-11}$ |
+| Einstein lapse coefficient $\zeta_E$ | $2.04\times10^{-10}$ |
+| Conservative scalar flux $F$ | $7.20\times10^{-14}$ |
+| Scalar forcing density $G$ | $4.45\times10^{-10}$ |
+
+The independent timelike mass comparison has maximum discrepancy
+$6.50\times10^{-7}$ at both radial orders. The smaller quadrature changes
+do not remove that separate field/transport discrepancy. Source field and
+tangent-derivative discrepancies are below $4.56\times10^{-14}$ and
+$1.39\times10^{-12}$, respectively; the leading wall derivative and $F_W$
+remain zero. The corrected source pullback persists after the prescribed
+leading pulse ends: at the final cut $g_1=-1.3969369088$ and
+$g_1'=-10.3608466089$. Setting that correction to zero after the leading
+input would change the declared preparation.
+
+The complete lift and forcing pairs take 17.05 and 9.52 process-CPU seconds,
+using 4.89 million and 1.20 million scalar kernels respectively, including
+their field and wall preparations. Both records bind their producer and
+input bytes. The next work is the boundary interpolation, checked time
+interpolation of the exterior forcing, and propagation of the scalar
+correction. Neither these inputs nor the mass agreement supplies the
+central corrected waveform or a finite-amplitude remainder.
+
+An additional analytic identity expresses the pre-arrival cap mass as
+$\nu_E=\tfrac12\int_{q_a}^{q}[f'(z)]^2\,dz-(1-r^2)f(q)^2/(4r)$.
+It follows from the full radial
+constraint and quiet regular centre. The current evaluator still uses the
+original radial metric; the identity gives a route to cheaper independent
+boundary refinement, with its numerical comparison still to be done.
+
 ## Scalar backscatter boundary, 16 October 2026
 
 The [scalar-metric calculation](nsc-atlas-scalar-metric-response.md) now

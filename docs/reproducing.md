@@ -30,6 +30,12 @@ Creation refuses an existing output directory. Use `--check --output PATH`
 to authenticate a saved `inputs.json` and its manifest without a physical
 solve. These inputs do not yet propagate the scalar correction.
 
+The saved pairs are under `results/development/nsc-atlas-scalar-inputs-v1`,
+in `lift` and `forcing`. Both use current source bindings. The
+[result entry](current-result.md#scalar-lift-and-exterior-forcing-16-october-2026)
+reports the unresolved coarse interpolation and the separate exterior
+quadrature/transport discrepancies.
+
 The [scalar backscatter calculation](nsc-atlas-scalar-metric-response.md)
 evaluates the outgoing correction and displaced exterior boundary derivative
 from the same prepared field, cap metric and wall solution:

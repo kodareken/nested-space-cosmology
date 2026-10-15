@@ -23,6 +23,32 @@ unresolved structure, and repeated field queries exhausting the shared
 budget. Withheld interpolation checks, split cumulative quadrature and
 shared counters identify those failures without changing the physical model.
 
+**First interpolation outcome:** the 9/17-knot pair completes in 17.05
+process-CPU seconds and 4.89 million scalar kernels. Its maximum withheld
+boundary error decreases from 0.555 to 0.0611, above the diagnostic target
+$2.28\times10^{-7}$ derived from the saved field sensitivity. The largest
+first-jet identity defect is $2.88\times10^{-13}$; source-edge splitting
+and higher interpolation order therefore merit investigation before another
+physical evaluation. A read-only postprocessing pilot may use four, five,
+seven or nine local Hermite training nodes from the existing 17-knot mesh,
+with stencils confined to the three source-edge blocks. Keep the same 16
+withheld queries out of every fit. Budget: 30 process-CPU seconds, zero field
+or wall solves. Report value and width-scaled slope errors per block;
+non-improvement or a noise plateau redirects to new independent samples and
+the analytically derived pre-arrival mass moment, rather than accepting the
+unresolved cubic fit.
+
+**First forcing outcome:** the cumulative 2/4 radial pair completes in
+9.52 process-CPU seconds and 1.20 million scalar kernels. The maximum
+changes in $F,G$ are $7.20\times10^{-14}$ and $4.45\times10^{-10}$;
+the separate timelike mass discrepancy is $6.50\times10^{-7}$ at both
+orders. Further radial-order increases would not address that larger
+field/transport difference. The
+[saved inputs](current-result.md#scalar-lift-and-exterior-forcing-16-october-2026)
+retain the source pullback after the leading pulse, quiet anchors and costs.
+The known forcing can next be cached in time with a measured interpolation
+error; it has not yet been used to evolve the correction.
+
 ## Scalar backscatter boundary admission, 16 October 2026
 
 The [scalar-metric equations](nsc-atlas-scalar-metric-response.md) determine
