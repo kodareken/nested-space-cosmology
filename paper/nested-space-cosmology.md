@@ -1275,7 +1275,7 @@ At the final reference wall event, the primary 257-node calculation with
 | Cap lapse, $\delta_E$ | $103.4370285720$ |
 | Wall cap-time shift, $T_1$ | $-8.4727761614$ |
 | Central arrival at fixed wall proper time, $\Delta_C$ | $-128.0670033577$ |
-| Central arrival at fixed exterior label, $\left.\Delta_C\right|_V$ | $-130.3664151052$ |
+| Central arrival at fixed exterior label | $-130.3664151052$ |
 
 The maximum radial/timelike cap-mass discrepancy is
 $2.52\times10^{-9}$ over the recorded cuts and cap clock quadrature

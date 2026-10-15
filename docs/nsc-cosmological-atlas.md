@@ -75,6 +75,13 @@ gives the corrected central arrival at a fixed exterior label. The next
 scalar amplitude and finite-amplitude validity remain open; these formal
 coefficients do not establish a complete nonlinear evolution or its stability.
 
+The [scalar-metric continuation](nsc-atlas-scalar-metric-response.md) derives
+the next forced field problem, with an explicit continuation of the same
+prescribed input. The changed cap can scatter the correction back toward
+the wall before a centre-reflected return, so its interior and exterior
+transmission must be solved together. This supplies equations and coordinate
+pullbacks for the next calculation; its scalar waveform is not yet computed.
+
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
 records this candidate's action, regions, state, parameter roles, operators,

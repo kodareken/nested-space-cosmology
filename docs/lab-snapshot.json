@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e379af4b95501edea1b952be2bf477d58650efff",
+  "current_receipt_commit_parent": "6a7335df17bc02015bcd245e692cd578f654d148",
   "files": [
     {
       "bytes": 1506,
@@ -10253,7 +10253,7 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 188930,
+      "bytes": 189269,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "3484e1be037ada6c3f0569e416c1f42132603e51",
       "import_bytes": 185245,
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f512e7b1c1acc88cbc0f2ec9b9de3348fefc856fb0258638e963e2e7c82d7918"
+      "sha256": "3d2ca871dab5fb63249a5d55baa8643a893bfe521d4b484ff3fb9ae5e262b3b0"
     },
     {
       "bytes": 9543,
@@ -10426,7 +10426,7 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 46735,
+      "bytes": 47186,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "ea5e334ce025c10df89d61c470082bedf0fbb07a",
       "import_bytes": 8633,
@@ -10434,7 +10434,7 @@
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "b9766a567c7fe0aff30e6c811a69180a6daf3a6c4959081c6389e17f6f1d8680"
+      "sha256": "7e936c9dda7dcea12fd27a2cf74342256be77a556e31ddcdca9fe9c83b67de8d"
     },
     {
       "bytes": 30876,

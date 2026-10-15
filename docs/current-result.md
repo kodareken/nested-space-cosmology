@@ -27,7 +27,7 @@ nodes, 257 geometry knots, 16-point radial/ray rules and 16 cap clock panels:
 | Cap lapse $\delta_E$ | 103.4370285720 |
 | Wall cap-time shift $T_1$ | -8.4727761614 |
 | Central arrival at fixed proper wall time $\Delta_C$ | -128.0670033577 |
-| Central arrival at fixed exterior label $\left.\Delta_C\right|_V$ | -130.3664151052 |
+| Central arrival at fixed exterior label | -130.3664151052 |
 
 These are coefficients in expansions such as
 $T_C(V)=q_0(V)+\alpha\left.\Delta_C\right|_V+O(\alpha^2)$, with
@@ -99,9 +99,11 @@ than 24.94 million scalar-kernel evaluations each, within the unchanged
 of the evidence package.
 
 This connects the formal sourced exterior, moving wall and regular cap
-to a central null-clock correction. The scalar amplitude at the next
-order still requires its perturbed wave equation and a stated continuation
-of the preparation. A nonzero finite-amplitude range, remainder estimate,
+to a central null-clock correction. The [next scalar derivation](nsc-atlas-scalar-metric-response.md)
+now specifies its forced wave equation, source continuation and wall
+pullbacks, with fourteen independent analytic checks. The cap's outgoing
+correction on the original no-return interval is a known forcing integral;
+the scalar waveform has not yet been evolved. A nonzero finite-amplitude range, remainder estimate,
 formation and stability remain to be established. The refinements here
 measure numerical sensitivity; they do not supply those stronger results.
 

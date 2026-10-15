@@ -1,5 +1,40 @@
 # Prior art and admission of new research
 
+## Scalar response to the computed metric, 15 October 2026
+
+The [cap and clock calculation](nsc-atlas-cap-response.md) now completes the
+formal quadratic metric connection. The next field coefficient requires
+the coupled cap/exterior scalar equation on that geometry. The
+[scalar-metric owner](nsc-atlas-scalar-metric-response.md) derives that
+problem before a numerical evolution is designed.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Retained mathematics | Conformal covariance of the scalar equation; spherical reduced-field equations; the computed Einstein mass/lapse coefficients, material displacement and clock embeddings; the original scalar and metric junction laws. |
+| Missing connection | Order-epsilon-alpha bulk forcing, compatible transmission at the displaced wall, the source-coordinate pullback and the waveform at fixed central proper time. |
+| Fixed continuation | Same action, couplings, quiet data and finite reference geometry. For this candidate continuation keep the prescribed original reduced-field input exactly chi(U0,V)=epsilon g(V). This fixes its higher-order input; it does not select a physical preparation mechanism. |
+| Domain | Original exterior wedge and regular cap; first fixed-clock waveform comparisons lie on a compact subinterval inside the certified central arrival interval. A moved finite-amplitude terminal arrival needs its own domain analysis. |
+| Current work and budget | Derive the linear inhomogeneous transmission problem and check consequential identities symbolically or on manufactured fields, at most 30 process-CPU seconds per check. No scalar evolution or new physical parameter scan is performed in this increment. Numerical discretization, boundary treatment and its finite compute budget will be recorded here before a coupled solve. |
+| Independent checks | Conformal reduced-field invariance; expansion of the exact spherical wave operators; radial-constraint cancellations; wall-normal normalization and transmission; regular-centre cancellation; fixed-clock pullback without counting the null shift twice. |
+| Stop or redirect | A sign, frame or source-gauge mismatch is resolved at its equation. The leading no-return wall condition cannot be reused if the changed cap metric produces backscatter. These equations do not yet supply a scalar waveform or finite-amplitude remainder. |
+
+The likely failures are confusing the conformally transformed scalar with
+the canonical Einstein scalar, dropping the source or wall pullback, and
+imposing the leading outgoing condition on the correction. The separate
+frame definitions, expanded material normals and coupled transmission
+equations make those errors directly checkable.
+
+**Analytic outcome:** fourteen independent symbolic and manufactured-field
+checks pass in 3.3125 process-CPU seconds total. They verify the reduced
+operators, curvature and radial-constraint cancellations, source pullback,
+central null coordinates, waveform reconstruction and weighted transmission.
+A regular static manufactured field has nonzero cap scattering potential
+$K_1=4r^2/135+4r^4/189+O(r^6)$. Within the original no-return interval,
+the outgoing correction at the wall is a known integral of this type of
+bulk forcing, independent of the unknown incoming correction. This permits
+a sequential transmission calculation at this order. No physical scalar
+correction has been evolved.
+
 ## Smooth cap and central-clock admission, 15 October 2026
 
 The wall now has computed mass, displacement and exterior-clock coefficients.

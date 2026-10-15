@@ -28,6 +28,11 @@ metric and central null-arrival clock at fixed proper wall time and at fixed
 exterior label. The higher-order scalar signal and finite-amplitude control
 remain open.
 
+The [scalar-metric continuation](nsc-atlas-scalar-metric-response.md) now
+specifies the next inhomogeneous transmission problem. Its fixed-clock
+readout, source pullback and cap scattering term are derived; a coupled scalar
+evolution is still to be evaluated.
+
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
