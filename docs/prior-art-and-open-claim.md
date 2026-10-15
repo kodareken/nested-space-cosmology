@@ -1,5 +1,30 @@
 # Prior art and admission of new research
 
+## Smooth cap and central-clock admission, 15 October 2026
+
+The wall now has computed mass, displacement and exterior-clock coefficients.
+The next connection reconstructs the cap metric from the same transmitted
+scalar and calculates central proper-time arrivals. The
+[cap owner](nsc-atlas-cap-response.md) states the equations, regular centre,
+clock convention and finite domain.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Retained mathematics | Spherical Einstein radial constraints and mass flux; the existing conformal-frame map, transformed fixed cap vacuum, regular reflected scalar solution and prepared wall trace; the checked two-sided mass/displacement laws and exterior clock. |
+| Missing connection | The smooth cap mass/lapse and its central proper-clock normalization, an independent interior check of the wall mass, and the corrected null-arrival map at fixed proper wall time and at fixed exterior null label. |
+| Fixed model and state | Original conformal scalar, compact reduced-field preparation and quiet cap, h=1, b=2, m=0.4; same action and source gauge, formal alpha=kappa4 epsilon^2/ell^2, no fitted source or finite amplitude. |
+| Finite domain | The reference cap under the original wall interval x in [0.45,0.55], closed after the last wall event by its inward null ray to the centre. Profile labels end at the existing last arrival q_b. Reuse the no-return certificate for quiet earlier labels; retain the reflected term and transmitted tail. |
+| Implementation | New cap field and response modules reuse the existing dense field and wall solution without changing their source-bound records. Profile derivatives come from the continuum integral equation. Integrate regular-centre radial constraints, wall time and inward null rays; keep the two clock comparisons distinct. |
+| Budget | At most 120 process-CPU seconds and 30 million scalar-kernel values per complete pilot or two-setting comparison, including field/wall solves and queries. Field nodes 129/257, geometry knots 129/257, at most 64 Gauss nodes per radial/ray panel, 32 wall-time panels and 129 displayed cuts. Initial pilots determine practical quadrature settings before compact evidence is frozen; transient arrays remain under .build. |
+| Independent checks | Analytic manufactured fields; scalar equation and mass conservation; wall derivatives; radial cap mass against the existing timelike integral including its potential and frame term; zero source; Jordan centre clock; independent wall proper-normalization expansion; fixed-s to fixed-V conversion; separate numerical refinements. |
+| Stop or redirect | Diagnose centre cancellation, missing/out-of-domain profile labels, a mass-path defect that fails to refine, incompatible clock normalization or budget exhaustion before another run. A metric ray correction does not establish the higher-order scalar amplitude, finite-amplitude remainder, formation or stability. |
+
+The three likely difficulties are cancellation near the regular centre,
+quadrature that misses moving pulse structure, and conflating the wall's
+proper time with the external label or central clock. Continuum derivatives,
+split quadratures, independent mass transport and explicit clock conversion
+make those failures detectable while keeping the physical model fixed.
+
 ## Exterior wedge and moving-wall calculation admission, 15 October 2026
 
 The rectangle has supplied a checked gravitational input. The next connection
