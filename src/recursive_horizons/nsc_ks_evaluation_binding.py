@@ -764,14 +764,93 @@ def _git_show(root, commit, relative, git_show=None):
         stderr=subprocess.DEVNULL, timeout=30)
 
 
+def _declared_archived_source_bytes(root, relative, expected, *, max_contexts):
+    """Authenticate a finite declared original source context after a rewrite.
+
+    This does not walk old ancestry or resolve numerical outputs. The exact
+    recorded SHA256 and original commit/path/blob remain separate from every
+    current implementation identity.
+    """
+    from hashlib import sha1
+    from .nsc_frozen_sources import authenticate_source, is_implementation_source
+    if type(max_contexts) is not int or max_contexts < 0:
+        raise ValueError('nonnegative integer archive context limit required')
+    if (not relative.startswith(GIT_SOURCE_PREFIXES)
+            or not is_implementation_source(relative)):
+        raise ValueError('declared archive lookup requires an implementation source')
+    expected = _require_hash(expected, relative)
+    root = Path(root).resolve()
+    path = root/'archive/source-history/manifest.json'
+    if path.is_symlink() or not path.resolve().is_relative_to(root):
+        raise ValueError('source archive manifest escapes repository')
+    if not path.exists():
+        return None
+    if not path.is_file():
+        raise ValueError('source archive manifest must be a regular file')
+    try:
+        manifest = json.loads(path.read_text(encoding='utf-8'))
+    except (UnicodeError, json.JSONDecodeError) as error:
+        raise ValueError('invalid source archive manifest') from error
+    if not isinstance(manifest, dict) or manifest.get('schema') != 'NSC-PINNED-SOURCE-OBJECTS-v1':
+        raise ValueError('invalid source archive manifest schema')
+    if 'authentication_archive' not in manifest:
+        return None
+    archive = manifest['authentication_archive']
+    if (not isinstance(archive, dict)
+            or archive.get('schema') != 'NSC-SPARSE-AUTHENTICATION-ARCHIVE-v1'
+            or not isinstance(archive.get('contexts'), list)):
+        raise ValueError('invalid declared source archive metadata')
+    def object_id(value):
+        return (isinstance(value, str) and len(value) == 40
+                and all(c in '0123456789abcdef' for c in value))
+    candidates = []
+    seen = set()
+    for context in archive['contexts']:
+        if (not isinstance(context, dict) or not object_id(context.get('commit'))
+                or not isinstance(context.get('paths'), list)
+                or context['commit'] in seen):
+            raise ValueError('invalid or duplicate declared source context')
+        commit = context['commit']
+        seen.add(commit)
+        paths = set()
+        for item in context['paths']:
+            if (not isinstance(item, dict) or not isinstance(item.get('path'), str)
+                    or not object_id(item.get('blob'))):
+                raise ValueError('invalid declared source path or blob')
+            name = item['path']
+            parsed = PurePosixPath(name)
+            if (not name or name == '.' or parsed.is_absolute() or ':' in name
+                    or '\\' in name or '..' in parsed.parts
+                    or parsed.as_posix() != name or name in paths):
+                raise ValueError('invalid or duplicate declared source path')
+            paths.add(name)
+            if name == relative:
+                candidates.append((commit, item['blob']))
+    for commit, blob in candidates[:max_contexts]:
+        try:
+            raw = authenticate_source(root, relative, expected, context=commit)
+        except (RuntimeError, FileNotFoundError):
+            continue
+        if type(raw) is not bytes:
+            raise ValueError('archived source authentication must return bytes')
+        if sha256(raw).hexdigest() != expected:
+            continue
+        framed = b'blob '+str(len(raw)).encode()+b'\0'+raw
+        if sha1(framed).hexdigest() != blob:
+            raise ValueError('declared original source blob binding differs')
+        return raw, commit
+    return None
+
+
 def resolve_recorded_source_bytes(
         root, relative, expected, *, mode, git_commit=None, max_commits=32,
         git_log=None, git_show=None):
     """Return authenticated bytes for one recorded hash.
 
     Production reads the working tree only. Legacy replay may resolve
-    implementation sources from a bounded Git log of that path; numerical
-    result artifacts are never walked in Git history.
+    implementation sources from a bounded Git log of that path, followed by
+    finitely declared original archive contexts when using default lookups.
+    Numerical result artifacts are never walked in Git history or the archive.
     """
     root = Path(root).resolve()
     relative = repository_relative(relative, root)
@@ -808,6 +887,11 @@ def resolve_recorded_source_bytes(
             continue
         if sha256(raw).hexdigest() == expected:
             return raw, commit
+    if git_log is None and git_show is None:
+        archived = _declared_archived_source_bytes(
+            root, relative, expected, max_contexts=max_commits)
+        if archived is not None:
+            return archived
     raise ValueError('historical source bytes not found for ' + relative)
 
 

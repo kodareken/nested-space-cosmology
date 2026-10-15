@@ -61,6 +61,12 @@ bytes. Historical records keep their original producer identity; a current
 source mismatch does not silently select an older implementation. Missing
 Git objects, corrupt retained artifacts and changed pinned evidence fail.
 
+Explicit `legacy-replay` source lookup can consult the manifest's bounded
+list of original commit/path/blob identities after searching the retained
+Git log. It requires both the recorded SHA256 and the declared Git blob
+identity. Production reads, explicit commit pins, numerical inputs and
+custom lookup callbacks retain their original contracts.
+
 ## Verification and recovery
 
 Run `python scripts/check_lab_snapshot.py` after transfer or an authorized

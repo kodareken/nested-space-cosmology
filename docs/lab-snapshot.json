@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "cab9d5e1aa1dfa9e70e4e68f92ad1c34bc9eb6a5",
+  "current_receipt_commit_parent": "055cdceb302a1977e9b79a305d1c48367a481632",
   "files": [
     {
       "bytes": 1506,
@@ -33521,7 +33521,9 @@
       "sha256": "9630ceb91eff6b9fcecbf79eccc61470d2f60622861f5f8d21c2b54f11a4b6cf"
     },
     {
-      "bytes": 40586,
+      "bytes": 44805,
+      "change": "Explicit authentication archive/runtime successor for approved history compaction",
+      "changed_from_commit": "055cdceb302a1977e9b79a305d1c48367a481632",
       "import_bytes": 39945,
       "import_sha256": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
       "migration_disposition": "active_owner",
@@ -33529,7 +33531,7 @@
       "original_path": "lab/src/recursive_horizons/nsc_ks_evaluation_binding.py",
       "original_sha256": "c9e6730243bf999ef17f3d693d6a4a64b042b38c4651083b27511133ef89b57e",
       "path": "src/recursive_horizons/nsc_ks_evaluation_binding.py",
-      "sha256": "6122267b31af21121588a470e35816b59d6dece83ac3ddc4fc42c11efa10e5aa"
+      "sha256": "a57d90af5c24331cb968a008b26a36c8de81c38a80d6e43296b2525d903ea3b8"
     },
     {
       "bytes": 5576,
@@ -35294,10 +35296,12 @@
       "sha256": "23a5264fc9d710514288e8457a36ea549a21ff599c7ba716e773ff0e528df549"
     },
     {
-      "bytes": 4555,
+      "bytes": 13205,
+      "change": "Explicit authentication archive/runtime successor for approved history compaction",
+      "changed_from_commit": "055cdceb302a1977e9b79a305d1c48367a481632",
       "path": "tests/test_historical_git_archive_routing.py",
       "retention_reason": "Minimal historical authentication transport and its runtime routing",
-      "sha256": "a560f2cf3f38a4f5b2be3b2ded2d34c326045d1d954fe7871fd37d66f6d4d1e0"
+      "sha256": "1b5ca9d74051dad849ba19eed8113e4e8205bd343be8e55e6378452b9a634503"
     },
     {
       "bytes": 2905,
