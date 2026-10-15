@@ -2,6 +2,40 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Exterior forcing cache, 16 October 2026
+
+The [conservative evolution implementation](nsc-atlas-scalar-evolution.md)
+now caches the known exterior forcing in normalized radius and evaluates
+it back at the original null coordinates. The
+[17/33-time comparison](../results/development/nsc-atlas-forcing-cache-v1/cache.json)
+shares 65 direct slices: 33 training times on 129 radial knots and 32
+withheld times on those knots plus their 128 radial midpoints. Both fits
+retain the same field, geometry and radial quadrature.
+
+| Maximum withheld discrepancy | 17 training times | 33 training times |
+| --- | ---: | ---: |
+| $F$, at radial training knots | 0.0655104 | 0.00700171 |
+| $G$, at radial training knots | 7.91622 | 0.0908529 |
+| $F$, at radial midpoints | 0.0624395 | 0.00862133 |
+| $G$, at radial midpoints | 7.89536 | 0.0893962 |
+| Source pullback $g_1$ | 0.000120579 | 0.0000141481 |
+| Time-cell-width-scaled source slope | 0.000656558 | 0.00000352091 |
+
+The knot comparisons isolate time interpolation at those coordinates;
+midpoint comparisons measure combined time and radial interpolation.
+The complete pair takes 22.84375 process-CPU seconds and 4,431,777 scalar
+kernels. The 49 repeated slice requests are reused. Direct source value
+and slope discrepancies remain below $4.56\times10^{-14}$ and
+$1.78\times10^{-12}$; wall flux is exactly zero. The independent wall-mass
+discrepancy remains $6.50\times10^{-7}$, separate from cache interpolation.
+
+These inputs refine substantially, but sampled discrepancies are not
+uniform bounds. Their effect on the scalar wall signal must be compared
+using the same correction grid, separately from grid and ODE refinement.
+The new scalar solver passes independent moving-wall manufactured
+solutions, source subtraction and material-derivative controls. No physical
+scalar propagation is claimed by this input record.
+
 ## Profile moment and local lift, 16 October 2026
 
 The [pre-arrival moment](nsc-atlas-profile-moment.md) now evaluates the cap
@@ -63,6 +97,14 @@ material radius and clock pullback is the next diagnostic before changing
 the wall-time resolution. The unresolved boundary is not yet used for
 physical scalar propagation. The independent forcing-cache implementation
 and manufactured evolution controls can proceed meanwhile.
+
+The saved-jet decomposition isolates the fine-grid plateau: maximum value
+errors are $5.99\times10^{-10}$ for backscatter, $1.67\times10^{-8}$ for
+material radius and $2.901\times10^{-5}$ for the clock. Their direct values
+sum to within $3.56\times10^{-15}$ and their fitted errors to within
+$7.44\times10^{-15}$. The first two components now meet the original
+target; the clock does not. Refining the wall clock's panels while retaining
+its continuum derivative is the next physical comparison.
 
 ## Scalar lift and exterior forcing, 16 October 2026
 

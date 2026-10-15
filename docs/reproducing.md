@@ -32,6 +32,20 @@ The [conservative evolution implementation](nsc-atlas-scalar-evolution.md)
 adds coefficient caching and the forced fixed-coordinate scalar equation.
 Its manufactured tests do not themselves supply a physical waveform.
 
+The first forcing-cache comparison shares 65 direct slices between 17/33
+training times and 32 withheld times. The latter include radial midpoints
+to distinguish time-only from combined time/radial discrepancies:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_forcing_cache.py --output .build/forcing-cache-review
+python scripts/run_python.py scripts/record_nsc_atlas_forcing_cache.py --check --output results/development/nsc-atlas-forcing-cache-v1
+```
+
+Its 120-process-CPU-second, 30-million-kernel budget includes preparation.
+Authentication reconstructs the interpolants from retained slices with no
+physical fallback. A cached evaluation inside the scalar solver performs
+no new field or metric integration.
+
 The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
 Hermite boundary lift against 16 withheld queries, or cumulative exterior
 forcing with radial orders 2/4 at nine times:

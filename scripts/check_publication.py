@@ -920,6 +920,7 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
     for module_name, directory in (
         ("record_nsc_atlas_profile_moment", "nsc-atlas-profile-moment-v1"),
         ("record_nsc_atlas_local_lift", "nsc-atlas-local-lift-v1"),
+        ("record_nsc_atlas_forcing_cache", "nsc-atlas-forcing-cache-v1"),
     ):
         try:
             import importlib

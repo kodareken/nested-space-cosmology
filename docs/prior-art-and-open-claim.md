@@ -39,6 +39,16 @@ cache structure or an incompatible source/quiet identity requires a
 diagnosis before another pilot. A formal wall coefficient does not complete
 the cap detector waveform or finite-amplitude control.
 
+**First cache outcome:** 65 direct slices cost 22.84375 process-CPU seconds
+and 4,431,777 scalar kernels. Time-knot errors refine from 0.06551 to
+0.007002 in $F$ and 7.91622 to 0.090853 in $G$; source-pullback error
+refines from $1.206\times10^{-4}$ to $1.415\times10^{-5}$. Radial-midpoint
+errors are recorded separately as combined time/radial sensitivities.
+This measures the first cache's cost and accuracy. The next scalar pilot
+must compare the two caches on one correction grid, then change only the
+correction grid at the finer cache. It must retain these sampled input
+effects and the unresolved uniform-error distinction.
+
 ## Profile moment and local lift admission, 16 October 2026
 
 The [profile-moment successor](nsc-atlas-profile-moment.md) checks the exact
