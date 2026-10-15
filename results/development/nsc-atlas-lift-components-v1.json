@@ -1,0 +1,105 @@
+{
+  "components": [
+    {
+      "active_cells": 16,
+      "component": "backscatter",
+      "maximum_absolute_scaled_slope_defect": 2.160136601315929e-06,
+      "maximum_absolute_value_defect": 8.016683139544512e-07,
+      "peak_signed_value_defect": -8.016683139544512e-07,
+      "sampled_b_target_met": false,
+      "slope_peak_t": 0.7421875,
+      "value_peak_t": 0.7421875
+    },
+    {
+      "active_cells": 16,
+      "component": "material_radius",
+      "maximum_absolute_scaled_slope_defect": 4.9081937614974444e-05,
+      "maximum_absolute_value_defect": 1.5804111578088254e-05,
+      "peak_signed_value_defect": 1.5804111578088254e-05,
+      "sampled_b_target_met": false,
+      "slope_peak_t": 0.2578125,
+      "value_peak_t": 0.7421875
+    },
+    {
+      "active_cells": 16,
+      "component": "clock",
+      "maximum_absolute_scaled_slope_defect": 7.215923934966776e-05,
+      "maximum_absolute_value_defect": 3.7519092047744174e-05,
+      "peak_signed_value_defect": -3.7519092047744174e-05,
+      "sampled_b_target_met": false,
+      "slope_peak_t": 0.5234375,
+      "value_peak_t": 0.5078125
+    },
+    {
+      "active_cells": 16,
+      "component": "total",
+      "maximum_absolute_scaled_slope_defect": 7.955383692796053e-05,
+      "maximum_absolute_value_defect": 3.955478507755572e-05,
+      "peak_signed_value_defect": 3.955478507755572e-05,
+      "sampled_b_target_met": false,
+      "slope_peak_t": 0.5234375,
+      "value_peak_t": 0.4921875
+    },
+    {
+      "active_cells": 32,
+      "component": "backscatter",
+      "maximum_absolute_scaled_slope_defect": 1.5151353705519731e-09,
+      "maximum_absolute_value_defect": 5.986758693414861e-10,
+      "peak_signed_value_defect": -5.986758693414861e-10,
+      "sampled_b_target_met": true,
+      "slope_peak_t": 0.2578125,
+      "value_peak_t": 0.2578125
+    },
+    {
+      "active_cells": 32,
+      "component": "material_radius",
+      "maximum_absolute_scaled_slope_defect": 4.239053529412994e-08,
+      "maximum_absolute_value_defect": 1.662606599402023e-08,
+      "peak_signed_value_defect": 1.662606599402023e-08,
+      "sampled_b_target_met": true,
+      "slope_peak_t": 0.2578125,
+      "value_peak_t": 0.2578125
+    },
+    {
+      "active_cells": 32,
+      "component": "clock",
+      "maximum_absolute_scaled_slope_defect": 9.986459870655705e-05,
+      "maximum_absolute_value_defect": 2.9008108770767205e-05,
+      "peak_signed_value_defect": -2.9008108770767205e-05,
+      "sampled_b_target_met": false,
+      "slope_peak_t": 0.5234375,
+      "value_peak_t": 0.5078125
+    },
+    {
+      "active_cells": 32,
+      "component": "total",
+      "maximum_absolute_scaled_slope_defect": 9.986962846651107e-05,
+      "maximum_absolute_value_defect": 2.9005480238097903e-05,
+      "peak_signed_value_defect": -2.9005480238097903e-05,
+      "sampled_b_target_met": false,
+      "slope_peak_t": 0.5234375,
+      "value_peak_t": 0.5078125
+    }
+  ],
+  "cpu_seconds": 0.546875,
+  "cpu_seconds_max": 30,
+  "direct_jet_closure": {
+    "b": 3.552713678800501e-15,
+    "b_U": 2.7284841053187847e-12,
+    "b_s": 4.547473508864641e-13
+  },
+  "fit_error_sum_closure": {
+    "16": 5.551115123125783e-15,
+    "32": 7.438494264988549e-15
+  },
+  "input": "results/development/nsc-atlas-local-lift-v1",
+  "physical_solves": 0,
+  "scalar_kernel_values": 0,
+  "schema": "nsc-atlas-lift-component-assessment-v1",
+  "scope": "saved-jet interpolation diagnosis; no continuum clock error bound",
+  "source_bindings": {
+    "results/development/nsc-atlas-local-lift-v1/lift.json": "7210d915898ef510d18ee38d81e3d5b8db83d32032a88ec40ce79554a5d7be51",
+    "results/development/nsc-atlas-local-lift-v1/manifest.json": "3912e76ba9b84ae280625c849d72dc49807ed91399d0b675de3ea039d312f32f",
+    "scripts/assess_nsc_atlas_lift_components.py": "cee7241b92d4fd8db0a717814e3421f3ee4e2c02eb3fee39a943867ad4119696"
+  }
+}

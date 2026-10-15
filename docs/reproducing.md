@@ -46,6 +46,18 @@ Authentication reconstructs the interpolants from retained slices with no
 physical fallback. A cached evaluation inside the scalar solver performs
 no new field or metric integration.
 
+The boundary-component diagnosis uses only the authenticated 81 saved
+jets and reconstructs eight polynomial fits:
+
+```sh
+python scripts/run_python.py scripts/assess_nsc_atlas_lift_components.py --output .build/lift-components-review.json
+python scripts/run_python.py scripts/assess_nsc_atlas_lift_components.py --check --output results/development/nsc-atlas-lift-components-v1.json
+```
+
+Its 30-process-CPU-second budget excludes physical solves entirely. The
+record binds its producer and input, and `--check` repeats the inexpensive
+component arithmetic and withheld comparisons.
+
 The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
 Hermite boundary lift against 16 withheld queries, or cumulative exterior
 forcing with radial orders 2/4 at nine times:

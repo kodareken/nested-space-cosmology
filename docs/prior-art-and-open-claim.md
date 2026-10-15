@@ -49,6 +49,27 @@ must compare the two caches on one correction grid, then change only the
 correction grid at the finer cache. It must retain these sampled input
 effects and the unresolved uniform-error distinction.
 
+**First restored-data propagation admitted:** after the clock-refined lift
+meets its existing sampled boundary target, authenticate the saved forcing
+slices and clock boundary jets. Reconstruct the original 257-knot reference
+geometry and both interpolants with a shared fresh budget; perform no new
+field, cap or wall solve. Run three correction evolutions: 17/33 cache times
+at 129 correction nodes, and the 33-time cache at 65 nodes. Hold the
+clock-32 lift, relative ODE tolerance $2\times10^{-10}$, absolute tolerance
+$10^{-12}$ and maximum normalized step $1/64$ fixed. All three solves and
+their readouts share 120 process-CPU seconds and 30 million scalar kernels;
+each solve permits at most 6,000 RHS calls. Check retained reference
+coordinates against the reconstructed geometry before propagation.
+
+Report wall values and material derivatives at 17 cuts, source/quiet/wall
+identities, actual cache and grid differences, and their size relative to
+the computed correction. The existing conditional estimate gives sampled
+input-sensitivity indicators when supplied with withheld differences, not
+uniform bounds; do not compare $F,G$ directly with the differently scaled
+boundary target. This first pilot computes an exterior formal coefficient.
+The cap detector signal, ODE-tolerance comparison where consequential, and
+finite-amplitude remainder retain their separate next questions.
+
 ## Profile moment and local lift admission, 16 October 2026
 
 The [profile-moment successor](nsc-atlas-profile-moment.md) checks the exact

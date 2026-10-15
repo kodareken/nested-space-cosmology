@@ -927,6 +927,11 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
             importlib.import_module(module_name).check(ROOT / "results/development" / directory)
         except (OSError, ValueError, KeyError, TypeError) as error:
             errors.append(f"{directory} evidence: {error}")
+    try:
+        from assess_nsc_atlas_lift_components import check as check_components
+        check_components(ROOT / "results/development/nsc-atlas-lift-components-v1.json")
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f"scalar lift component evidence: {error}")
 
 
 def main() -> int:

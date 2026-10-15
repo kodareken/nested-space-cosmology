@@ -98,12 +98,14 @@ the wall-time resolution. The unresolved boundary is not yet used for
 physical scalar propagation. The independent forcing-cache implementation
 and manufactured evolution controls can proceed meanwhile.
 
-The saved-jet decomposition isolates the fine-grid plateau: maximum value
+The [saved-jet decomposition](../results/development/nsc-atlas-lift-components-v1.json)
+isolates the fine-grid plateau: maximum value
 errors are $5.99\times10^{-10}$ for backscatter, $1.67\times10^{-8}$ for
 material radius and $2.901\times10^{-5}$ for the clock. Their direct values
 sum to within $3.56\times10^{-15}$ and their fitted errors to within
 $7.44\times10^{-15}$. The first two components now meet the original
-target; the clock does not. Refining the wall clock's panels while retaining
+target; the clock does not. Its authenticated recomputation takes 0.546875
+process-CPU seconds and no physical solve. Refining the wall clock's panels while retaining
 its continuum derivative is the next physical comparison.
 
 ## Scalar lift and exterior forcing, 16 October 2026
