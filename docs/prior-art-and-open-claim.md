@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Profile moment and local lift admission, 16 October 2026
+
+The [profile-moment successor](nsc-atlas-profile-moment.md) checks the exact
+pre-arrival mass identity, then supplies more boundary samples where the
+saved interpolation comparison failed.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Retained mathematics | Quiet regular cap, the full radial mass constraint and flux, the derived first-derivative profile moment, outgoing scalar forcing, material wall pullback and Hermite interpolation. |
+| Missing connection | A cheaper numerical cap-mass evaluation agreeing with the original radial integral; then a resolved local boundary function and exactly integrated lift for scalar propagation. |
+| Fixed model and state | Same conformal scalar, h=1, b=2, m=0.4, original prescribed reduced-field input, quiet anchors and finite wedge. No finite alpha, new source or fitted physical parameter. |
+| Moment comparison | Field 129, geometry 257, unchanged wall/cap settings, moment Gauss 4/8 and outgoing ray 16. Share one field/wall preparation across both settings. Compare mass at wall and two interior ray fractions at up to nine cuts (at most 27 points), and J_minus, its material derivative, b and b_U against nine original radial BoundaryJet queries. Split moment cells at existing profile edges, field time cuts and arrival spline knots. |
+| Local lift comparison | Proceed after the moment discrepancy is explained and small enough for the intended input accuracy. Hold the selected moment/ray settings fixed. Compare active 16/32 cells with four cells in each outer source block, using five-node local Hermite stencils. Fine 41 training knots plus 40 withheld midpoints give 81 unique queries. Track value/slope/lift differences and floating continuity defects; do not reuse fitted points as holdouts. |
+| Budget | At most 120 process-CPU seconds and 30 million scalar kernels per complete pilot or two-setting comparison, including preparation, wall evolution, moment prefixes and independent reference queries. Tests of analytic/manufactured identities use at most 30 process-CPU seconds each. Temporary arrays remain in .build; consequential records retain settings, source bytes and costs. |
+| Independent controls | Exact polynomial moments, radial mass and flux identities, joint moving-ray derivatives, original radial metric at interior and wall points, zero source, finite-domain/budget rejection, polynomial reproduction, C1 assembly and exact lift differentiation across changing stencils. |
+| Stop or redirect | Diagnose non-refining moment/radial differences before adopting the faster evaluator. A dense-field/continuum-jet discrepancy is not removed by increasing moment order. If local fit errors miss the saved field-based target, locate the failing cells and assess new samples or field resolution; do not raise polynomial degree indefinitely on unchanged data. Neither interpolation agreement nor metric coefficients establish a finite-amplitude solution. |
+
+The likely failures are a numerical profile/derivative mismatch in the exact
+mass identity, loss of a source edge or quiet integration constant, and a
+local polynomial whose values or slopes fail near a stencil transition.
+Independent radial queries, split cumulative integration and genuinely
+withheld cell checks expose these failures before scalar evolution.
+
 ## Scalar lift and forcing admission, 16 October 2026
 
 The sampled outgoing boundary is now known. The
