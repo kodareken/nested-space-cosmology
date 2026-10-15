@@ -8,6 +8,28 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
+Hermite boundary lift against 16 withheld queries, or cumulative exterior
+forcing with radial orders 2/4 at nine times:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_inputs.py --comparison lift --output .build/scalar-input-lift-review
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_inputs.py --comparison forcing --output .build/scalar-input-forcing-review
+```
+
+Each complete pair shares a 120-process-CPU-second, 30-million-kernel
+budget, including the one field and one wall preparation. Both hold 129
+field nodes and 257 geometry knots fixed. Existing wall settings and cap
+radial/ray orders 16 remain unchanged. The boundary fits share their 33
+unique direct queries; withheld points never become fitted knots in that
+comparison. The interpolation target comes from the saved field sensitivity
+and is a numerical diagnostic. Exceeding it is recorded as an unresolved
+discretization, rather than silently accepting the fit.
+
+Creation refuses an existing output directory. Use `--check --output PATH`
+to authenticate a saved `inputs.json` and its manifest without a physical
+solve. These inputs do not yet propagate the scalar correction.
+
 The [scalar backscatter calculation](nsc-atlas-scalar-metric-response.md)
 evaluates the outgoing correction and displaced exterior boundary derivative
 from the same prepared field, cap metric and wall solution:

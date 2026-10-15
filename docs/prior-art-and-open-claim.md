@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Scalar lift and forcing admission, 16 October 2026
+
+The sampled outgoing boundary is now known. The
+[next input calculation](nsc-atlas-scalar-forcing.md) constructs its lift
+and the cumulative exterior forcing needed by the scalar evolution.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Retained mathematics | The derived forced scalar equation, quiet outgoing cap flux, first-jet mass constraints, displaced-wall pullback, Hermite interpolation and the existing clipped Volterra operator. |
+| Missing connection | A differentiable wall input and its exactly integrated lift; exterior mass/lapse and scalar forcing on a full radial slice with one cumulative integration. |
+| Fixed model and state | Original conformal scalar, h=1, b=2, m=0.4, prescribed reduced-field input, original source gauge and quiet anchors. No new source, fitted coupling or finite alpha. |
+| Finite domain | The original retained exterior wedge and wall x in [0.45,0.55], with cap queries confined to the already certified pre-return outgoing rays. |
+| Boundary implementation | First-jet analytic J_minus and wall derivatives; Hermite interpolation in U_W with an exact antiderivative. Initial 9/17 knots, source edges retained, 16 additional withheld midpoints, 33 unique locations total. Field/geometry 129/257, cap radial/ray 16. Record b, width-scaled slope and lift discrepancies; refine only failing panels after diagnosis. |
+| Forcing implementation | One source trace and cumulative radial constraint per V across original cells and requested coordinates. Nine wall-time slices, radial orders 2/4, field derivative order 32. Check source compatibility, quiet data, wall flux and the independent timelike Jordan mass. |
+| Budget | At most 120 process-CPU seconds and 30 million scalar kernels per complete pilot or two-setting comparison, including preparation and wall solve. One initial pilot per connection; refinements respond to the measured discrepancy. Temporary arrays stay in .build; source-bound compact records retain consequential inputs, outputs and costs. |
+| Independent checks | Symbolic first-jet identities, nonconstant manufactured ray derivatives, exact polynomial lift differentiation, cumulative polynomial integrals, source-pullback derivative, zero source, clipping and independent wall mass transport. Withheld samples and separate refinements test numerical sensitivity. |
+| Stop or redirect | Diagnose domain exit, slope/value inconsistency, failed refinement or budget exhaustion before another calculation. Select interpolation tolerance below measured field-input sensitivity, with an explicit roundoff floor; a sampled tolerance is not a uniform theorem. Scalar evolution and its time cache require the measured cost and accuracy of these inputs first. |
+
+The likely failures are inconsistent boundary slopes, quadrature across
+unresolved structure, and repeated field queries exhausting the shared
+budget. Withheld interpolation checks, split cumulative quadrature and
+shared counters identify those failures without changing the physical model.
+
 ## Scalar backscatter boundary admission, 16 October 2026
 
 The [scalar-metric equations](nsc-atlas-scalar-metric-response.md) determine

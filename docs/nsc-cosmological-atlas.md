@@ -83,7 +83,11 @@ transmission retains that returning contribution. On the original no-return
 interval, the outgoing trace is a known forcing integral, so the solution
 can proceed sequentially. Five [numerical comparisons](current-result.md#scalar-backscatter-boundary-16-october-2026)
 now evaluate that trace and the exterior boundary derivative. A controlled
-boundary interpolant and the propagated scalar waveform are next.
+boundary interpolant and the propagated scalar waveform are next. The
+[input successor](nsc-atlas-scalar-forcing.md) supplies analytic boundary
+slopes, a Hermite antiderivative and cumulative exterior forcing; its
+withheld interpolation and radial comparisons determine the discretization
+needed before evolution.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
