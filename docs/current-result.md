@@ -2,6 +2,40 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Exterior scalar correction, 16 October 2026
+
+The [first propagated correction](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json)
+evolves the conservative scalar equation with the original prescribed
+reduced-field source and the resolved 32-panel clock lift. It restores the
+saved forcing and boundary inputs, with no new field, wall or metric solve.
+Four evolutions separate cache-time resolution, correction-grid resolution
+and ODE tolerance. Each retains 17 wall readout cuts.
+
+| Independent comparison | Maximum wall-value change | Maximum material-derivative change | Value change / sampled peak |
+| --- | ---: | ---: | ---: |
+| Forcing cache, 17/33 times; 129 correction nodes | $1.75501\times10^{-3}$ | $1.32631\times10^{-4}$ | 0.654856% |
+| Correction grid, 65/129 nodes; 33 cache times | $6.98421\times10^{-6}$ | $9.31679\times10^{-5}$ | 0.00260606% |
+| ODE tolerance, $2\times10^{-6}/2\times10^{-7}$; fine cache/grid | $3.72805\times10^{-9}$ | $3.95592\times10^{-8}$ | 0.00000139107% |
+
+The finer sampled peak is $0.2679995064$ in the dimensionless exterior
+areal-gauge coefficient $y_W$. Its terminal value is $0.2194607242$;
+its terminal material derivative with respect to $V$ is $-0.5827560530$.
+These multiply $\alpha$ in $\chi/\varepsilon=c_0+\alpha c_1+O(\alpha^2)$;
+they are not finite-amplitude field predictions by themselves.
+
+The complete calculation takes 5.9375 process-CPU seconds and 950,926
+scalar kernels. The four RHS counts are 1,874, 1,987, 1,536 and 2,677,
+all within their unchanged 6,000-call ceilings. Source-value, source-rate
+and wall-flux defects vanish, as do the saved/reference geometry
+differences. The tighter ODE comparison changes the wall value by only
+$2.13\times10^{-6}$ of the cache comparison's change.
+
+The retained interior arrays allow the discrete wall equation and material
+derivative to be checked without another evolution. The comparisons measure
+finite numerical sensitivity, not a uniform error enclosure. The central
+observer still requires the incoming cap forcing, regular reflection and
+clock pullback; its analytic reconstruction is the next connection.
+
 ## Clock-resolved scalar boundary, 16 October 2026
 
 The [clock comparison](../results/development/nsc-atlas-lift-clock-v1/clock.json)
@@ -26,10 +60,12 @@ cap quadrature. This establishes a sufficiently resolved sampled boundary
 input for the first exterior propagation; it is not a uniform error bound.
 
 The first saved-input scalar propagation attempt stopped at its 6,000-RHS
-ceiling in the first case, before producing a solution record. The inputs
-remain intact. Its very tight ODE tolerance and the moving evaluation of
-the piecewise-linear radial forcing cache require a cost diagnosis before
-another attempt. No propagated scalar result is claimed for that attempt.
+ceiling in the first case, before producing a solution record. A no-solve
+diagnosis found 2,609 distinct crossings of radial cache knots. Splitting
+at every crossing would require at least 41,760 RHS calls before adaptive
+refinement. The completed comparison above therefore keeps the original
+cache and splits, uses tolerances appropriate to the measured input
+accuracy, and measures the effect of a tighter tolerance separately.
 
 ## Exterior forcing cache, 16 October 2026
 

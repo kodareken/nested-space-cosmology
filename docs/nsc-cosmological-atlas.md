@@ -95,8 +95,11 @@ boundary economically. The [local-lift comparison](current-result.md#profile-mom
 keeps the same physical inputs and adds withheld samples through the pulse.
 The [conservative evolution connection](nsc-atlas-scalar-evolution.md)
 then caches the known exterior forcing and evolves the correction on the
-original null coordinates. Its numerical implementation and controls are
-distinct from a computed physical waveform or finite-amplitude solution.
+original null coordinates. The [first propagated result](current-result.md#exterior-scalar-correction-16-october-2026)
+now measures its formal wall value and material derivative with separate
+cache, grid and ODE comparisons. Reflected cap forcing and the central
+clock pullback are the next observer connection; finite-amplitude control
+remains a separate requirement.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)

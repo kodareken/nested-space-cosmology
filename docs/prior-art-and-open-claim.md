@@ -27,6 +27,34 @@ shared budget and quadrature comparison. A centre cancellation failure or
 domain exit requires diagnosis. This connection does not supply a physical
 preparation law, finite-amplitude remainder or detector quantum state.
 
+**First central comparison admitted:** after the implementation and
+independent controls are checked, compare incoming radial orders 16/32
+at ray order 16 and five retained emission cuts
+$t=1/8,3/8,1/2,5/8,7/8$. Their central arrival labels lie strictly inside
+the retained window. Use one shared 129-node leading field and 257-knot
+geometry with the existing cap derivative/centre settings. Authenticate and
+reuse the second solution of the cap `radial_fine` record (radial 32,
+ray 16, cap clock 16), the new clock-32 wall/boundary record and the
+fine-cache/fine-grid/tighter-tolerance exterior readout. Check all common
+coordinates, leading profile and material wall data before reuse. The cap
+wall clock $T_1$ and material radius data are independent of the exterior
+clock panel refinement. Recompute the incoming travel integral alongside
+the forcing at each new radial setting, then reconstruct the fixed-$V$
+conversion using the new $V_1$. Compare the fresh travel integral with its
+saved radial-32/ray-16 value; the fine case should reproduce it. No new
+wall, cap-clock or scalar evolution is needed.
+
+The complete pair, including its single leading-field preparation and all
+new incoming integrals, shares 120 process-CPU seconds and 30 million scalar
+kernels. Keep all physical inputs fixed. Record the optical time integral,
+clock derivative, reflected forcing and their contributions to the central
+coefficient. Propagate the already measured exterior cache/grid/tolerance
+differences through the same reconstruction algebra without another field
+solve. Report quiet recovery and numerical centre behaviour. The static/null
+frame cancellation is an algebraic check, not an independently evolved
+second solution. Refine ray order or other inputs only if the outcome
+requires it; a budget failure or non-refining result gets a diagnosis first.
+
 ## Conservative scalar evolution admission, 16 October 2026
 
 The [evolution connection](nsc-atlas-scalar-evolution.md) reuses the already
@@ -200,6 +228,15 @@ and the 6,000-call ceiling per solve. All four solves and readouts still
 share 120 process-CPU seconds and 30 million kernels. Report the actual
 tolerance effect separately; its smallness is a measured outcome, not an
 assumption from comparing the requested tolerance with input indicators.
+
+**Propagation outcome:** all four cases complete in 5.9375 process-CPU
+seconds with 950,926 scalar kernels and no new physical input solves.
+The sampled wall peak is $0.2679995064$. Maximum cache/grid/ODE value
+changes are $1.75501\times10^{-3}$, $6.98421\times10^{-6}$ and
+$3.72805\times10^{-9}$; the derivative changes are recorded independently.
+Source-value, source-rate and wall-flux defects vanish. This supplies the
+formal exterior coefficient and material derivative for central
+reconstruction. The 17-cut sensitivities are not uniform error bounds.
 
 ## Scalar lift and forcing admission, 16 October 2026
 

@@ -51,8 +51,11 @@ now reconstructs the interior metric with its regular centre, checks its
 mass against independent wall transport, and computes the central null-arrival
 correction. The [next scalar calculation](docs/nsc-atlas-scalar-metric-response.md)
 now evaluates the cap's outgoing backscatter and its displaced-wall boundary
-input, with separate field and quadrature refinements. The propagated
-higher-order scalar signal and finite-amplitude control remain open.
+input, with separate field and quadrature refinements. A clock-resolved
+boundary and cached forcing now supply the [propagated exterior scalar
+correction](docs/nsc-atlas-scalar-evolution.md), with separate cache, grid
+and ODE controls. Its central reconstruction and finite-amplitude control
+remain open.
 Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.

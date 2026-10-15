@@ -382,6 +382,14 @@
       "note": "docs/nsc-atlas-scalar-metric-response.md",
       "record": "results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json",
       "paper_section": "13.13"
+    },
+    {
+      "id": "atlas-scalar-evolution",
+      "status": "measured",
+      "summary": "A clock-resolved outgoing boundary and saved exterior forcing determine a formal cubic scalar coefficient on the retained wedge. Four evolutions separately compare forcing-cache time resolution, correction-grid resolution and ODE tolerance, preserving the original reduced-field preparation. The sampled wall response is computed; central reconstruction, uniform error bounds and finite-amplitude validity remain separate questions.",
+      "note": "docs/nsc-atlas-scalar-evolution.md",
+      "record": "results/development/nsc-atlas-scalar-evolution-v1/evolution.json",
+      "paper_section": "13.14"
     }
   ]
 }

@@ -23,6 +23,8 @@ def optical_time_derivative(cap_field, T, r, *, radial_order=16, budget=None):
     """Evaluate D_T using first field jets and the central proper-clock anchor."""
     order = _choice(radial_order, QUADRATURE_ORDERS, "cap radial order")
     budget = _budget(cap_field, budget)
+    if any(np.asarray(value).dtype.kind not in "iuf" for value in (T, r)):
+        raise ValueError("optical derivative endpoints must be real numbers, not booleans")
     T, r = np.broadcast_arrays(np.asarray(T, dtype=float), np.asarray(r, dtype=float))
     if not 1 <= T.size <= MAX_QUERY:
         raise ValueError("request at most 513 paired optical derivative endpoints")
@@ -109,10 +111,9 @@ def incoming_response_integrals(cap_field, q, x, *, radial_order=16, ray_order=1
         integrands["forcing"][first:first+len(rs)] = W1*c0
         integrands["optical_time"][first:first+len(rs)] = optical["D_T"]/A
         integrands["lambda_plus"][first:first+len(rs)] = -D/A
-        qs = np.r_[q, q-2*np.arctanh(rs)]
         # Public profile batches remain bounded even for a full metric batch.
         incoming_f = float(cap_field.profile(np.array([q]))["f"][0])
-        outgoing_f = cap_field.profile(qs[1:])["f"]
+        outgoing_f = cap_field.profile(q-2*np.arctanh(rs))["f"]
         reflected_defect = max(reflected_defect, float(np.max(abs(c0-incoming_f+outgoing_f))))
         central_defect = max(central_defect, float(np.max(abs(optical["central_profile_defect"]))))
         optical_nodes += optical["radial_nodes"]
@@ -128,7 +129,7 @@ def incoming_response_integrals(cap_field, q, x, *, radial_order=16, ray_order=1
     budget.check()
     return {"q": q, "x": x, "u_wall": u, **result, "ray_nodes": len(radii),
             "optical_radial_nodes": optical_nodes, "reflected_profile_defect": reflected_defect,
-            "central_profile_defect": central_defect, "regular_center_K1": 0.,
+            "central_profile_defect": central_defect, "analytic_regular_center_K1": 0.,
             "first_arrival_margin": q-cap_field.domain["qa"],
             "last_arrival_margin": cap_field.domain["qb"]-q,
             "no_return_margin": cap_field.domain["qa"]-u}
@@ -189,7 +190,7 @@ def reconstruct_central_scalar(wall, cap_row, profile, integrals, *, y_wall,
         arrival_spline_derivative=qV, arrival_rate_defect=qV*Vs-Q,
         static_center_derivative=p1+p0**3/12,
         jordan_frame_subtraction=-p0**3/12,
-        static_null_reconstruction_defect=(p1+p0**3/12)-p0**3/12-p1)
+        central_frame_algebra_defect=(p1+p0**3/12)-p0**3/12-p1)
     if "ray_integral" in cap_row:
         result["reused_ray_integral_defect"] = lam-_number(cap_row["ray_integral"], "saved ray integral")
     if not all(math.isfinite(value) for value in result.values()):

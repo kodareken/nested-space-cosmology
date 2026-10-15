@@ -922,6 +922,7 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
         ("record_nsc_atlas_local_lift", "nsc-atlas-local-lift-v1"),
         ("record_nsc_atlas_forcing_cache", "nsc-atlas-forcing-cache-v1"),
         ("record_nsc_atlas_lift_clock", "nsc-atlas-lift-clock-v1"),
+        ("record_nsc_atlas_scalar_evolution", "nsc-atlas-scalar-evolution-v1"),
     ):
         try:
             import importlib

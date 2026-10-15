@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 15 October 2026
+Working research manuscript, 16 October 2026
 
 ## Abstract
 
@@ -56,8 +56,10 @@ exterior null-clock correction, with independent numerical refinements.
 Radial reconstruction now also supplies the smooth cap metric with a
 regular centre and fixed central proper clock. Its mass agrees with the
 independent wall transport, and inward null integration gives a central
-arrival correction at fixed exterior input label. The next scalar
-amplitude response and finite-amplitude remainder remain open.
+arrival correction at fixed exterior input label. The next-order scalar
+equation now supplies a computed exterior correction with separately
+measured forcing-cache, spatial-grid and ODE sensitivities. Its central
+reconstruction and finite-amplitude remainder remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1377,9 +1379,76 @@ within $5.59\times10^{-11}$. These are numerical sensitivity checks,
 not a rigorous total error enclosure.
 
 The boundary samples provide a determined input for the exterior forced
-equation. An accuracy-controlled boundary interpolant, the propagated
-scalar waveform and a nonzero finite-amplitude validity range remain to
-be calculated. No new physical preparation mechanism is asserted.
+equation. The following calculation resolves its interpolation and
+propagates the exterior correction. No new physical preparation mechanism
+or nonzero finite-amplitude validity range is asserted.
+
+### 13.14. The exterior scalar correction propagates on the computed geometry
+
+<!-- nsc-claim:atlas-scalar-evolution -->
+
+Evidence: [mass-moment comparison](../results/development/nsc-atlas-profile-moment-v1/moment.json),
+[clock-resolved boundary](../results/development/nsc-atlas-lift-clock-v1/clock.json),
+[forcing cache](../results/development/nsc-atlas-forcing-cache-v1/cache.json),
+[scalar evolution](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json)
+and the [conservative equation](../docs/nsc-atlas-scalar-evolution.md).
+
+Pull the exterior areal coefficient back to the reference null coordinates:
+$y(U,V)=c_1(r_0(U,V),V)$. The same metric and first scalar jets determine
+the known flux $F$ and density $G$ in
+$y_{UV}+K_0y=F_U-G$. The original prescribed source has the determined
+areal-coordinate pullback $g_1=-H_{E,\mathrm{src}}c_{0,r}|_{\mathrm{src}}$.
+It is retained after the compact leading input; setting it to zero would
+change the preparation continuation.
+
+Let $B_U=\mathfrak b$, where $\mathfrak b=r_{0,U}c_{1,r}|_W$ is the
+outgoing boundary derived above, and choose $B=0$ below the initial wall
+coordinate. Then $z=y-g_1-B$ has zero source and bottom data and
+$z_U|_W=0$. Its conservative evolution is
+
+$$
+z_V=F(U,V)-F(U_0,V)
+-\int_{U_0}^{U}[K_0(z+g_1+B)+G],dU.
+$$
+
+The fixed-$U$ discretization clips inactive nodes to the moving wall.
+The terminal $z$ state has no extra advection term, while the reconstructed
+wall derivative includes the lift transport:
+
+$$
+\frac{dy_W}{dV}=g_1'(V)+z_V|_W+U_W'(V)\mathfrak b(U_W(V)).
+$$
+
+A cumulative pre-arrival cap-mass moment agrees with independent radial
+integration within $2.50\times10^{-9}$ at the retained samples and makes
+the boundary evaluation economical. Its local Hermite lift initially
+exposes a clock interpolation error. Refining the exterior clock from
+16 to 32 panels reduces the withheld boundary discrepancy from
+$1.73\times10^{-6}$ to $5.75\times10^{-8}$, below the unchanged target.
+The lift uses 41 training knots and 40 withheld queries. The exterior
+forcing cache independently compares 17/33 time knots against 32 withheld
+times, including radial midpoint queries.
+
+Four evolutions then hold the physical source, field and geometry fixed:
+
+| Numerical comparison | Maximum $y_W$ change | Maximum $dy_W/dV$ change |
+| --- | ---: | ---: |
+| 17/33 forcing times, 129 correction nodes | $1.756\times10^{-3}$ | $1.327\times10^{-4}$ |
+| 65/129 correction nodes, 33 forcing times | $6.985\times10^{-6}$ | $9.317\times10^{-5}$ |
+| Relative tolerance $2\times10^{-6}/2\times10^{-7}$, fine cache/grid | $3.729\times10^{-9}$ | $3.956\times10^{-8}$ |
+
+The finer sampled peak is $0.2679995064$; the terminal coefficient is
+$0.2194607242$. The cache-time change is 0.655% of that peak, the grid
+change 0.00261%, and the ODE change much smaller. Source-value,
+source-rate and wall-flux defects vanish. Manufactured moving-wall
+solutions independently check the integration signs, source subtraction
+and material derivative. The four evolutions take 5.9375 process-CPU
+seconds and 950,926 scalar kernels using the saved inputs.
+
+This is a formal exterior cubic scalar response for the declared
+preparation. Sampled refinement differences are not uniform bounds.
+The central readout additionally requires reflected cap forcing and the
+observer-clock pullback; no finite amplitude or remainder is fixed here.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1706,8 +1775,9 @@ checks. The retained-wedge evaluation now compares independent radial and
 timelike mass paths, computes the two-sided wall displacement and fixes its
 exterior clock correction. Radial cap reconstruction now also fixes the
 central proper clock and a corrected null-arrival map, with independent
-cap-mass transport and numerical controls. The next scalar amplitude and
-finite-amplitude remainder remain to be supplied.
+cap-mass transport and numerical controls. The formal exterior scalar
+correction is now propagated with independent numerical comparisons.
+Central reconstruction and the finite-amplitude remainder remain to be supplied.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1739,6 +1809,7 @@ and renders their relationships without launching a new physics calculation.
 | Smooth exterior metric response | [Characteristic evolution and radial checks](../docs/nsc-atlas-bulk-response.md); [metric](../results/development/nsc-atlas-bulk-response-v1/metric/response.json), [field](../results/development/nsc-atlas-bulk-response-v1/field/response.json) and [derivative](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json) comparisons |
 | Moving wall and exterior clock | [Mass paths, displacement and clock](../docs/nsc-atlas-wall-evolution.md); [field](../results/development/nsc-atlas-wall-evolution-v1/field/response.json), [radial](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json) and [clock-time](../results/development/nsc-atlas-wall-evolution-v1/time/response.json) comparisons |
 | Smooth cap and central null clock | [Regular centre, metric and arrival map](../docs/nsc-atlas-cap-response.md); [field](../results/development/nsc-atlas-cap-response-v1/field/response.json), [radial](../results/development/nsc-atlas-cap-response-v1/radial/response.json) and [further ray](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json) comparisons |
+| Exterior cubic scalar correction | [Conservative evolution](../docs/nsc-atlas-scalar-evolution.md); [clock lift](../results/development/nsc-atlas-lift-clock-v1/clock.json), [forcing cache](../results/development/nsc-atlas-forcing-cache-v1/cache.json) and [propagated response](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

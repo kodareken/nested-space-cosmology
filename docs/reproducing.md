@@ -72,6 +72,22 @@ polynomials without new physical solves. The 32-panel result meets the
 original sampled boundary target; the [current result](current-result.md#clock-resolved-scalar-boundary-16-october-2026)
 records the numerical comparison and subsequent propagation status.
 
+The first exterior scalar propagation restores these authenticated inputs
+and runs four cases separating cache time, correction grid and ODE tolerance:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_evolution.py --output .build/scalar-evolution-review
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_evolution.py --check --output results/development/nsc-atlas-scalar-evolution-v1
+```
+
+The complete comparison shares 120 process-CPU seconds and 30 million
+kernels, with at most 6,000 RHS calls per solve. It performs no new
+leading-field, wall, forcing-slice or boundary solve. Authentication restores
+the coefficient polynomials and reconstructs 68 discrete wall rates from
+retained interior arrays, without replaying propagation. The
+[result](current-result.md#exterior-scalar-correction-16-october-2026) records
+separate sensitivities and the limit of the formal coefficient.
+
 The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
 Hermite boundary lift against 16 withheld queries, or cumulative exterior
 forcing with radial orders 2/4 at nine times:
