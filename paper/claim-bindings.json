@@ -143,6 +143,11 @@
       "section": "13.12",
       "status": "measured",
       "owner": "docs/nsc-atlas-cap-response.md"
+    },
+    "atlas-scalar-boundary": {
+      "section": "13.13",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-scalar-metric-response.md"
     }
   },
   "findings": [
@@ -369,6 +374,14 @@
       "note": "docs/nsc-atlas-cap-response.md",
       "record": "results/development/nsc-atlas-cap-response-v1/field/response.json",
       "paper_section": "13.12"
+    },
+    {
+      "id": "atlas-scalar-boundary",
+      "status": "measured",
+      "summary": "The computed cap metric produces a determined nonzero outgoing scalar correction on the original no-return window. Weighted transmission and the moving-wall pullback give its exterior areal derivative at nine cuts, with separate field, radial and ray refinements and independent coordinate integration. No boundary interpolant, propagated waveform or finite-amplitude validity range is claimed.",
+      "note": "docs/nsc-atlas-scalar-metric-response.md",
+      "record": "results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json",
+      "paper_section": "13.13"
     }
   ]
 }

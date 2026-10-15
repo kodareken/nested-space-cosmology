@@ -1,6 +1,64 @@
 # What the calculations show
 
-Current presentation, 15 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Scalar backscatter boundary, 16 October 2026
+
+The [scalar-metric calculation](nsc-atlas-scalar-metric-response.md) now
+evaluates a boundary input for the next scalar response. The computed cap
+metric has a nonzero scattering potential. On the certified no-return
+interval, its outgoing correction at the wall is a known forcing integral
+$J_-$, determined from the same leading field and metric. It requires no
+additional outgoing waveform. Combining that integral with the existing
+wall displacement and exterior clock gives the correction's exterior
+areal derivative $c_{1,r}$.
+
+The continuation keeps the original prescribed reduced-field input exact.
+At the final reference radius $x=0.55$, with 257 field/geometry nodes and
+16-point cap radial and outgoing-ray rules:
+
+| Dimensionless coefficient | Value |
+| --- | ---: |
+| Outgoing cap derivative $J_-$ | -1.8223975002 |
+| Backscatter contribution to $c_{1,r}$ | -2.9736230746 |
+| Wall-displacement contribution | -0.5062222284 |
+| Exterior areal derivative $c_{1,r}$ | -3.4798453030 |
+
+These are coefficients in $\chi/\varepsilon=c_0+\alpha c_1+O(\alpha^2)$,
+where $\alpha=\kappa_4\varepsilon^2/\ell^2$. The actual correction is cubic
+in the source amplitude; no finite amplitude has been selected.
+
+| Independent comparison | Maximum change in $J_-$ | Maximum change in $c_{1,r}$ |
+| --- | ---: | ---: |
+| [Field 129/257](../results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json) | $3.16\times10^{-7}$ | $1.73\times10^{-6}$ |
+| [Radial order 8/16](../results/development/nsc-atlas-scalar-boundary-v1/radial/boundary.json) | $2.44\times10^{-7}$ | $3.99\times10^{-7}$ |
+| [Ray order 8/16](../results/development/nsc-atlas-scalar-boundary-v1/ray/boundary.json) | $2.00\times10^{-3}$ | $3.26\times10^{-3}$ |
+| [Radial order 16/32](../results/development/nsc-atlas-scalar-boundary-v1/radial_fine/boundary.json), field 129 | $7.07\times10^{-11}$ | $1.17\times10^{-10}$ |
+| [Ray order 16/32](../results/development/nsc-atlas-scalar-boundary-v1/ray_fine/boundary.json), field 129 | $7.90\times10^{-11}$ | $1.31\times10^{-10}$ |
+
+Each comparison changes one setting at nine common wall cuts. The larger
+coarse-ray difference motivated the further refinement. The primary
+incoming-label and radius quadratures use independently placed nodes and
+agree in $J_-$ within $5.59\times10^{-11}$. General and quiet-profile
+potential formulas agree within $2.95\times10^{-13}$. The algebraic wall
+flux residual is at most $2.23\times10^{-16}$; this reconstruction check
+is not an independent propagated-field error estimate.
+
+At the final cut, the signed forcing integrals are $0.0384206688$ and
+$-1.8608181690$. Every queried ray remains in the established cap, with
+outgoing no-return margin at least 0.9052343761 and central-time quiet
+margin at least 0.2868530625. No central second-derivative query is needed.
+The five complete pairs take 19.06--34.61 process-CPU seconds and at most
+8.45 million scalar kernels each, including preparation and wall evolution.
+All records bind the current sources and are authenticated without replay.
+
+Forty-nine focused tests pass: fourteen earlier operator/coordinate checks,
+nine additional flux/lift/clock identities, sixteen manufactured boundary
+checks and ten record/budget checks. The next connection is an interpolant
+with measured numerical error, followed by the forced exterior and cap
+waveforms. The current nine samples do not provide that interpolant, a
+finite-amplitude remainder or a physical preparation mechanism. Refinement
+differences are sensitivity evidence rather than a rigorous total enclosure.
 
 ## Smooth cap and central arrival clock, 15 October 2026
 

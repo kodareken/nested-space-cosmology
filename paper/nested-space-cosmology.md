@@ -1313,8 +1313,73 @@ pairs within the declared budget; the main field comparison uses both
 129 and 257. Refinement differences are numerical sensitivity estimates.
 No finite $\alpha$ is selected, and this metric null-arrival correction
 does not include the order-$\varepsilon\alpha$ scalar amplitude. Its
-perturbed wave equation, source continuation and finite-amplitude control
-are the next physical connection.
+perturbed wave equation and source continuation are specified in the next
+section. Propagating that correction and establishing finite-amplitude
+control remain the next physical connection.
+
+### 13.13. Geometry supplies an outgoing scalar boundary correction
+
+<!-- nsc-claim:atlas-scalar-boundary -->
+
+Evidence: [field refinement](../results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json),
+[radial integration](../results/development/nsc-atlas-scalar-boundary-v1/radial/boundary.json),
+[ray integration](../results/development/nsc-atlas-scalar-boundary-v1/ray/boundary.json),
+[further radial refinement](../results/development/nsc-atlas-scalar-boundary-v1/radial_fine/boundary.json),
+[further ray refinement](../results/development/nsc-atlas-scalar-boundary-v1/ray_fine/boundary.json)
+and the [scalar-metric derivation](../docs/nsc-atlas-scalar-metric-response.md).
+
+Keep the same prescribed reduced-field input exactly on the original
+anchored source and write $\chi/\varepsilon=c_0+\alpha c_1+O(\alpha^2)$.
+Conformal covariance preserves $\chi$ between the two frames. In cap null
+coordinates normalized to the central clock, $c_0=f(q_+)-f(q_-)$ and
+the computed metric gives
+
+$$
+\partial_-\partial_+\widetilde{c}_1=-K_1c_0,\qquad
+K_1=\frac{A_0}{4}\left[
+\frac{2\nu_E}{r^3}-\frac{p^2}{3}
+-\frac{p_T^2}{6A_0}+\frac{A_0p_r^2}{6}\right].
+$$
+
+The retained wall interval has $q_{-,W}<q_a$. Its outgoing homogeneous
+correction is quiet, so the returning derivative is determined before
+the incoming correction is solved:
+
+$$
+J_-=-\int_{q_a}^{q_{+,W}}K_1(q_{-,W},q)f(q)\,dq.
+$$
+
+Combining the reduced-field transmission laws with the moved wall event
+then fixes the exterior areal derivative,
+
+$$
+c_{1,r,W}=\frac{2q_{-,0,s}}{d}J_-
+-\left(e-\frac{vV_1}{V_{0,s}}\right)\frac{2mw}{x^3d^2},
+\qquad d=v-\beta_+,\qquad e=\rho-\frac{xp_W^2}{12}.
+$$
+
+Here $w=c_{0,W}$ and $q_{-,0,s}=(\beta_--v)/(1-x^2)$.
+The two terms are cap backscatter and the displacement pullback. At
+$x=0.55$, the primary 257-node field calculation gives
+$J_-=-1.8223975002$, a backscatter term $-2.9736230746$ and a
+displacement term $-0.5062222284$, hence $c_{1,r,W}=-3.4798453030$.
+The outgoing correction is therefore nonzero for this prepared pulse;
+the leading zero-outgoing boundary condition cannot be reused at this order.
+
+Over nine common wall cuts, changing the field from 129 to 257 nodes
+changes $c_{1,r,W}$ by at most $1.73\times10^{-6}$. Radial order 8/16
+changes it by $3.99\times10^{-7}$ and ray order 8/16 by
+$3.26\times10^{-3}$. Separate 16/32 controls at 129 field nodes
+reduce these changes below $1.17\times10^{-10}$ and
+$1.31\times10^{-10}$ respectively. In the primary calculation,
+independent integrations in incoming label and radius agree in $J_-$
+within $5.59\times10^{-11}$. These are numerical sensitivity checks,
+not a rigorous total error enclosure.
+
+The boundary samples provide a determined input for the exterior forced
+equation. An accuracy-controlled boundary interpolant, the propagated
+scalar waveform and a nonzero finite-amplitude validity range remain to
+be calculated. No new physical preparation mechanism is asserted.
 
 ### 14. A separate finite model with geometric feedback
 

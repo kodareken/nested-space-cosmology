@@ -8,6 +8,32 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [scalar backscatter calculation](nsc-atlas-scalar-metric-response.md)
+evaluates the outgoing correction and displaced exterior boundary derivative
+from the same prepared field, cap metric and wall solution:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_boundary.py --comparison field --output .build/scalar-boundary-review
+python scripts/run_python.py scripts/record_nsc_atlas_scalar_boundary.py --check --output results/development/nsc-atlas-scalar-boundary-v1/field
+```
+
+Its five comparisons are `field` (129/257), `radial` (8/16), `ray` (8/16),
+`radial_fine` (16/32) and `ray_fine` (16/32). The finer radial/ray controls
+hold 129 field nodes fixed; the other quadrature controls use 257. Geometry
+knots remain 257, and cap radial/ray baseline orders are 16/16. Upstream
+wall settings remain radial order 2, field-derivative order 32, 8 clock
+panels, source order 64 and ODE tolerance $2\times10^{-9}$. The cap field
+keeps derivative order 2, centre quadrature 8 and threshold $10^{-4}$.
+
+Each pair shares one 120-process-CPU-second, 30-million-kernel budget,
+including field/wall preparation and both independent integral coordinates.
+The producer preserves existing output directories and binds source bytes
+before and after the calculation. All five saved records use current
+sources; `--check` performs zero physical solves. Nine samples, signed
+contributions and domain margins document a boundary input, not a boundary
+interpolant or propagated waveform. The [current result](current-result.md#scalar-backscatter-boundary-16-october-2026)
+states all measured numerical sensitivities.
+
 The [smooth cap calculation](nsc-atlas-cap-response.md) reconstructs the
 interior metric and central null-arrival correction from the same prepared
 field and wall solution. Its two clock coefficients keep proper wall time

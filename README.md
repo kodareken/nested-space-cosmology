@@ -49,8 +49,10 @@ the formal wall displacement and exterior clock correction from the same
 field on the retained wedge. The [cap calculation](docs/nsc-atlas-cap-response.md)
 now reconstructs the interior metric with its regular centre, checks its
 mass against independent wall transport, and computes the central null-arrival
-correction. The higher-order scalar signal and finite-amplitude control
-remain open.
+correction. The [next scalar calculation](docs/nsc-atlas-scalar-metric-response.md)
+now evaluates the cap's outgoing backscatter and its displaced-wall boundary
+input, with separate field and quadrature refinements. The propagated
+higher-order scalar signal and finite-amplitude control remain open.
 Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
@@ -71,6 +73,7 @@ expansion and recycling remain research questions.
 - [Smooth exterior metric on the initial rectangle](docs/nsc-atlas-bulk-response.md)
 - [Retained-wedge field, moving wall and exterior clock](docs/nsc-atlas-wall-evolution.md)
 - [Smooth cap and corrected central null clock](docs/nsc-atlas-cap-response.md)
+- [Scalar backscatter and moving-wall boundary input](docs/nsc-atlas-scalar-metric-response.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)

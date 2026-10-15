@@ -30,13 +30,16 @@ remain open.
 
 The [scalar-metric continuation](nsc-atlas-scalar-metric-response.md) now
 specifies the next inhomogeneous transmission problem. Its fixed-clock
-readout, source pullback and cap scattering term are derived; a coupled scalar
-evolution is still to be evaluated.
+readout, source pullback and cap scattering term are derived. Five
+[boundary comparisons](current-result.md#scalar-backscatter-boundary-16-october-2026)
+now evaluate the outgoing correction and displaced exterior wall derivative;
+the interpolant and propagated scalar evolution remain to be evaluated.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
 |---|---|
+| Scalar response on the computed geometry | [Equations and transmission](nsc-atlas-scalar-metric-response.md), [boundary adapter](../src/recursive_horizons/nsc_atlas_scalar_boundary.py), [five comparison records](current-result.md#scalar-backscatter-boundary-16-october-2026); computed outgoing forcing and wall derivative, with the interpolant and waveform still open. |
 | Smooth cap metric and central null clock | [Derivation](nsc-atlas-cap-response.md), [regular cap field](../src/recursive_horizons/nsc_atlas_cap_field.py), [metric and clock solver](../src/recursive_horizons/nsc_atlas_cap_response.py), [comparison recorder](../scripts/record_nsc_atlas_cap_response.py), [current result](current-result.md#smooth-cap-and-central-arrival-clock-15-october-2026); computed formal coefficients with ten declared comparisons, an independent cap-mass path and separate clock conventions. The higher-order scalar amplitude is not computed. |
 | Retained-wedge field, moving wall and exterior clock | [Derivation](nsc-atlas-wall-evolution.md), [field evaluator](../src/recursive_horizons/nsc_atlas_wedge_field.py), [wall solver](../src/recursive_horizons/nsc_atlas_wall_evolution.py), [comparison recorder](../scripts/record_nsc_atlas_wall_evolution.py), [independent rectangle overlap](../results/development/nsc-atlas-wall-overlap-v1/response.json); computed formal displacement and exterior clock coefficients with seven independent numerical refinements. |
 | Smooth exterior metric and next characteristic leg | [Bulk derivation](nsc-atlas-bulk-response.md), [current numerical result](current-result.md#smooth-exterior-metric-response-15-october-2026), [comparison producer](../scripts/record_nsc_atlas_bulk_response.py); formal radius/lapse evolution and independent integral constraints on the initial rectangle. |

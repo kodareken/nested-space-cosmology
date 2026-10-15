@@ -23,6 +23,25 @@ in the outgoing flux, and allowing repeated metric queries to exceed the
 shared budget. Split integration, two coordinate evaluations, signed
 contributions and cumulative counters expose those failures directly.
 
+The first field pair completed in 34.61 process-CPU seconds and 8.45 million
+scalar kernels. The field 129/257 change in the exterior wall derivative
+coefficient is $1.73\times10^{-6}$. Radial order 8/16 changes it by
+$3.99\times10^{-7}$, while outgoing-ray order 8/16 changes it by
+$3.26\times10^{-3}$. The latter is much larger than the field sensitivity;
+the radial contribution remains comparable in the outgoing trace itself.
+These observed discrepancies justify the admitted separate 16/32 radial
+and ray comparisons at 129 field nodes, without changing the shared budget.
+
+**Outcome:** all five pairs complete in 19.06--34.61 process-CPU seconds,
+with at most 8.45 million scalar kernels. The separate 16/32 radial and ray
+changes in the wall derivative fall below $1.17\times10^{-10}$ and
+$1.31\times10^{-10}$. The [result record](current-result.md#scalar-backscatter-boundary-16-october-2026)
+retains the nonzero outgoing coefficient, signed contributions, coordinate
+comparison and remaining field sensitivity. This closes the sampled
+boundary-input calculation. A controlled interpolant and the forced scalar
+evolution require their own discretization and admission; no further
+boundary refinement is justified by the current discrepancies.
+
 ## Scalar response to the computed metric, 15 October 2026
 
 The [cap and clock calculation](nsc-atlas-cap-response.md) now completes the

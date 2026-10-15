@@ -16,6 +16,9 @@ Independent radial and timelike mass paths check this quadratic geometry.
 The central arrival map now includes both travel through the changed cap
 and the moved wall event at a fixed exterior label. The higher-order scalar
 amplitude and finite-amplitude control are the next dynamical connection.
+Section 13.13 now derives and evaluates the cap's outgoing scalar backscatter
+and its exterior wall derivative, with five numerical comparisons. This
+boundary input is the next step toward the propagated scalar correction.
 
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.

@@ -888,6 +888,16 @@ def check_cap_response_evidence(errors: list[str]) -> None:
             errors.append(f"cap response {comparison} evidence: {error}")
 
 
+def check_scalar_boundary_evidence(errors: list[str]) -> None:
+    """Authenticate the five boundary inputs without repeating their quadrature."""
+    from record_nsc_atlas_scalar_boundary import VARIATIONS, check
+    for comparison in VARIATIONS:
+        try:
+            check(ROOT / "results/development/nsc-atlas-scalar-boundary-v1" / comparison)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            errors.append(f"scalar boundary {comparison} evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -931,6 +941,7 @@ def main() -> int:
     check_wall_evolution_evidence(errors)
     check_wall_overlap_evidence(errors)
     check_cap_response_evidence(errors)
+    check_scalar_boundary_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

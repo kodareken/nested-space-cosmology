@@ -79,8 +79,11 @@ The [scalar-metric continuation](nsc-atlas-scalar-metric-response.md) derives
 the next forced field problem, with an explicit continuation of the same
 prescribed input. The changed cap can scatter the correction back toward
 the wall before a centre-reflected return, so its interior and exterior
-transmission must be solved together. This supplies equations and coordinate
-pullbacks for the next calculation; its scalar waveform is not yet computed.
+transmission retains that returning contribution. On the original no-return
+interval, the outgoing trace is a known forcing integral, so the solution
+can proceed sequentially. Five [numerical comparisons](current-result.md#scalar-backscatter-boundary-16-october-2026)
+now evaluate that trace and the exterior boundary derivative. A controlled
+boundary interpolant and the propagated scalar waveform are next.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
