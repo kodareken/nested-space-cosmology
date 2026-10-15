@@ -877,6 +877,11 @@ def main() -> int:
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("scalar normal-force evidence: " + str(error))
+    try:
+        from record_nsc_atlas_cap_wall_response import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("cap/wall response evidence: " + str(error))
     check_provenance(errors, files)
     if errors:
         for error in errors:

@@ -38,8 +38,12 @@ It constrains the later combined metric and wall response; it does not
 require zero wall displacement. The [wall-mass closure](docs/nsc-atlas-wall-mass-closure.md)
 now expresses the exterior geometric mass coefficient as an integral and a
 frame correction built from the existing wall trace. This is an analytic
-functional; its numerical evaluation and coupled cap/wall matching remain
-open. Comparing geometries still needs an independently
+functional. Its [two-sided successor](docs/nsc-atlas-cap-wall-response.md)
+now derives the cap mass and a regular wall-displacement equation, with
+compatible angular, temporal and normal junction conditions. The common
+model specification records the action, state, parameters and clocks.
+Numerical evaluation, bulk metric evolution and corrected observer
+signals are the next connection. Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
@@ -55,6 +59,7 @@ expansion and recycling remain research questions.
 - [Gravitational initial data for the prepared pulse](docs/nsc-atlas-characteristic-initialization.md)
 - [Geometric mass response on the prepared null surface](docs/nsc-atlas-source-mass.md)
 - [Analytic exterior mass from the known wall field](docs/nsc-atlas-wall-mass-closure.md)
+- [Cap mass and shared wall displacement](docs/nsc-atlas-cap-wall-response.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)

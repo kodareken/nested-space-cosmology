@@ -17,13 +17,17 @@ bulk propagation and coupled wall response remain open. The
 [normal-force successor](nsc-atlas-scalar-normal-force.md) now supplies
 a necessary local wall condition without determining its displacement.
 The [wall-mass functional](nsc-atlas-wall-mass-closure.md) now closes the
-exterior coefficient from existing leading traces. Numerical evaluation
-and the remaining coupled cap/wall inputs are separate next decisions.
+exterior coefficient from existing leading traces. The
+[two-sided successor](nsc-atlas-cap-wall-response.md) now gives the cap
+mass and a quiet-anchored displacement functional satisfying all three
+local junction conditions. Compatible bulk propagation and corrected
+observer measurements are the next dynamical calculation.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
 |---|---|
+| Cap mass and shared wall displacement | [Two-sided derivation](nsc-atlas-cap-wall-response.md), [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json), [model specification](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json); formal boundary response with fixed action and quiet corner. |
 | Active programme and eight theme questions | [Programme owner](nsc-cosmological-atlas.md#eight-linked-research-questions), [dependency map](nsc-cosmological-atlas.md#programme-dependencies); the inventory supplies prior dispositions, not new verification. |
 | Exterior mass on reference wall cuts | [Analytic functional](nsc-atlas-wall-mass-closure.md), [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json); both null fluxes and full frame correction close the quadratic coefficient from fixed traces. No numerical mass curve or coupled cap/wall solution is supplied. |
 | Fixed-model inverse and preparation exclusions | [Analytic proof](nsc-atlas-observer-inference.md), [record](../results/development/nsc-atlas-observer-inference-v1/inference.json); exact compatible-source inverse and compact-source restrictions, with numerical inversion and second-geometry equivalence unclaimed. |

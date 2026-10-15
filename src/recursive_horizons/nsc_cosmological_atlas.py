@@ -474,6 +474,45 @@ def _record_rows(value, label):
     return value
 
 
+def _model_number(value, label):
+    """A JSON real number, excluding booleans, coercible text and nonfinites."""
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise ValueError(label + " must be a finite real number")
+    try:
+        finite = math.isfinite(value)
+    except OverflowError:
+        finite = False
+    if not finite:
+        raise ValueError(label + " must be a finite real number")
+    return value
+
+
+def _model_section(record, key):
+    section = record.get(key)
+    if not isinstance(section, dict):
+        raise ValueError(key + " must be a model record")
+    return section
+
+
+def _model_fields(record, expected, label):
+    """Check fixed physical identifiers without treating bools as numbers."""
+    for key, value in expected.items():
+        if key not in record or type(record[key]) is not type(value) or record[key] != value:
+            raise ValueError(label + " changed or missing: " + key)
+
+
+def _model_window(record, key, expected):
+    window = record.get(key)
+    if not isinstance(window, list) or len(window) != 2:
+        raise ValueError(key + " must be a finite ordered interval")
+    low, high = (_model_number(value, key) for value in window)
+    if not low < high:
+        raise ValueError(key + " must be a finite ordered interval")
+    if window != expected:
+        raise ValueError("changed finite reference domain: " + key)
+    return low, high
+
+
 def model_specification(length_scale=1.0):
     """Describe the existing conformal reference without running a calculation.
 
@@ -483,7 +522,9 @@ def model_specification(length_scale=1.0):
     Evidence references locate results, but this metadata does not authenticate
     their bytes, prove a junction, or admit a new scientific computation.
     """
-    ell = _positive(length_scale, "length scale")
+    ell = _model_number(length_scale, "length scale")
+    if ell <= 0:
+        raise ValueError("length scale must be positive")
     scalar_owner = "docs/nsc-atlas-scalar-wall-consistency.md"
     preparation_owner = "docs/nsc-atlas-field-preparation.md"
     response_owner = "docs/nsc-atlas-prepared-response.md"
@@ -509,6 +550,9 @@ def model_specification(length_scale=1.0):
             "surface": "-sigma integral sqrt(-gamma) d3y",
             "variational_boundary_term": "2*f*K",
             "scalar_einstein_tensor_accounting": "included_once_in_improved_scalar_stress",
+            "parameter_refs": {"nonminimal": "xi", "kinetic": "kinetic_coefficient",
+                               "mass_squared": "scalar_mass_squared", "vacuum": "H_ell",
+                               "material_tension": "k_ell", "scalar_surface": "surface_scalar_coupling"},
             "owner_refs": [scalar_owner],
             "source_refs": [{
                 "url": "https://arxiv.org/html/1910.07534v2",
@@ -528,6 +572,15 @@ def model_specification(length_scale=1.0):
             "ell": parameter("unit_scale", ell, "positive reference length; no conversion to measured SI length supplied", preparation_owner, dimensionless=False),
         },
         "calibration": {"status": "not_performed", "parameter_ids": [], "observation_refs": []},
+        "state": {
+            "kind": "classical_prepared_probe", "quantum_state": None,
+            "field_equation": "(box-xi*R)phi=0",
+            "parameter_refs": {"nonminimal": "xi", "amplitude": "epsilon"},
+            "reduced_equation_ref": "src/recursive_horizons/nsc_atlas_field_preparation.py#exterior_coefficient",
+            "transmission_ref": "src/recursive_horizons/nsc_atlas_field_transfer.py#conformal_junction_coefficients",
+            "response_ref": "src/recursive_horizons/nsc_atlas_prepared_response.py#prepared_response_record",
+            "owner_refs": [preparation_owner, "docs/nsc-atlas-field-matching.md", response_owner],
+        },
         "domain": {
             "exterior_region": "Schwarzschild_IV",
             "exterior_radius_over_ell": [.4, .55],
@@ -538,6 +591,8 @@ def model_specification(length_scale=1.0):
             "cap": "regular_de_Sitter_cap_with_zero_earlier_field_data",
             "angular_mode": 0,
             "right_parent_driven_access": False,
+            "parameter_refs": {"cap": "H_ell", "wall": "k_ell", "exterior": "M_over_ell",
+                               "length_scale": "ell"},
             "owner_refs": [preparation_owner, "docs/nsc-atlas-causal-observers.md"],
             "evidence_refs": [preparation_evidence],
         },
@@ -605,6 +660,10 @@ def validate_model_specification(record):
             or record.get("schema") != MODEL_SPECIFICATION_SCHEMA
             or record.get("id") != CONFORMAL_REFERENCE_ID):
         raise ValueError("unsupported model specification")
+    try:
+        canonical_bytes(record)
+    except (TypeError, ValueError, OverflowError) as error:
+        raise ValueError("model specification must contain finite JSON data") from error
     if (record.get("status") != "conditional_reference_model"
             or record.get("new_compute_admitted") is not False):
         raise ValueError("model metadata cannot admit compute or promote a physical result")
@@ -618,88 +677,126 @@ def validate_model_specification(record):
     parameters = record.get("parameters")
     if not isinstance(parameters, dict) or set(parameters) != set(expected):
         raise ValueError("parameter ledger must retain the declared theory, data and unit inputs")
+    dimensional = {"scalar_mass_squared", "epsilon", "ell"}
     for key, (role, value) in expected.items():
         row = parameters[key]
-        if not isinstance(row, dict) or row.get("role") != role:
+        if not isinstance(row, dict) or row.get("role") != role or "value" not in row:
             raise ValueError("parameter role changed: " + key)
         actual = row.get("value")
         if key == "ell":
-            _positive(actual, "length scale")
+            if _model_number(actual, "length scale") <= 0:
+                raise ValueError("length scale must be positive")
         elif value is None:
             if actual is not None:
                 raise ValueError("physical preparation amplitude remains unselected")
-        elif isinstance(actual, bool) or not isinstance(actual, (int, float)) or actual != value:
+        elif _model_number(actual, key) != value:
             raise ValueError("fixed reference parameter changed: " + key)
-        if not isinstance(row.get("dimensionless"), bool):
-            raise ValueError("parameter dimensional status must be explicit")
+        if row.get("dimensionless") is not (key not in dimensional):
+            raise ValueError("parameter dimensional status changed: " + key)
+        if not isinstance(row.get("meaning"), str) or not row["meaning"].strip():
+            raise ValueError("parameter needs an explicit meaning: " + key)
         _references(row, "owner_refs")
     calibration = record.get("calibration")
     if calibration != {"status": "not_performed", "parameter_ids": [], "observation_refs": []}:
         raise ValueError("this reference has no observational calibration")
     if record.get("observational_predictions") != []:
         raise ValueError("conditional responses cannot be relabeled observational predictions")
-    action = record.get("action", {})
-    for key, value in {
+    action = _model_section(record, "action")
+    _model_fields(action, {
         "dimension": 4, "frame": "Jordan", "signature": "-+++",
         "field": "canonical_real_massless_scalar", "zero_background_scalar": True,
+        "bulk": "integral sqrt(-g) [f(phi) R - (nabla phi)^2/2 + L_vac] d4x",
+        "f": "1/(2*kappa_4) - xi*phi^2/2",
+        "gravitational_normalization": "kappa_4=8*pi*G; k=kappa_4*sigma/2",
+        "surface": "-sigma integral sqrt(-gamma) d3y",
         "vacuum": "scalar_independent_fixed_terms", "variational_boundary_term": "2*f*K",
         "scalar_einstein_tensor_accounting": "included_once_in_improved_scalar_stress",
-    }.items():
-        if action.get(key) != value:
-            raise ValueError("fixed scalar action or stress accounting changed: " + key)
+    }, "fixed scalar action or stress accounting")
+    bindings = {"action": {"nonminimal": "xi", "kinetic": "kinetic_coefficient",
+                           "mass_squared": "scalar_mass_squared", "vacuum": "H_ell",
+                           "material_tension": "k_ell", "scalar_surface": "surface_scalar_coupling"},
+                "state": {"nonminimal": "xi", "amplitude": "epsilon"},
+                "domain": {"cap": "H_ell", "wall": "k_ell", "exterior": "M_over_ell", "length_scale": "ell"}}
+    for section_name, expected_bindings in bindings.items():
+        section = _model_section(record, section_name)
+        if section.get("parameter_refs") != expected_bindings:
+            raise ValueError(section_name + " must use the common parameter ledger")
     _references(action, "owner_refs")
-    domain = record.get("domain", {})
-    for key, expected_window in (("exterior_radius_over_ell", [.4, .55]),
-                                 ("wall_radius_over_ell", [.45, .55])):
-        if domain.get(key) != expected_window:
-            raise ValueError("changed finite reference domain: " + key)
+    sources = _record_rows(action.get("source_refs"), "action source references")
+    if len(sources) != 1:
+        raise ValueError("the fixed action needs its borrowed variational source")
+    _model_fields(sources[0], {"url": "https://arxiv.org/html/1910.07534v2",
+                               "equations": "(2.10)-(2.14), (3.42)-(3.46)"}, "borrowed action source")
+    state = _model_section(record, "state")
+    _model_fields(state, {
+        "kind": "classical_prepared_probe", "quantum_state": None,
+        "field_equation": "(box-xi*R)phi=0",
+        "reduced_equation_ref": "src/recursive_horizons/nsc_atlas_field_preparation.py#exterior_coefficient",
+        "transmission_ref": "src/recursive_horizons/nsc_atlas_field_transfer.py#conformal_junction_coefficients",
+        "response_ref": "src/recursive_horizons/nsc_atlas_prepared_response.py#prepared_response_record",
+    }, "field or prepared state")
+    _references(state, "owner_refs")
+    domain = _model_section(record, "domain")
+    exterior_lower, exterior_upper = _model_window(domain, "exterior_radius_over_ell", [.4, .55])
+    lower, upper = _model_window(domain, "wall_radius_over_ell", [.45, .55])
     # These inequalities are physical domain conditions, independently of the
     # evidence labels: sector IV lies inside 2M and this cap receives at R<1/H.
-    lower, upper = domain["wall_radius_over_ell"]
-    if not 0 < lower < upper < min(2*parameters["M_over_ell"]["value"],
-                                 1/parameters["H_ell"]["value"]):
+    if not (0 < exterior_lower <= lower < upper <= exterior_upper
+            < min(2*parameters["M_over_ell"]["value"], 1/parameters["H_ell"]["value"])):
         raise ValueError("wall must remain in regular IV and within central reception")
-    if (domain.get("exterior_region") != "Schwarzschild_IV"
-            or domain.get("wall_branch") != "expanding_timelike"
-            or domain.get("angular_mode") != 0
-            or isinstance(domain.get("angular_mode"), bool)
-            or domain.get("right_parent_driven_access") is not False):
-        raise ValueError("region, angular mode or causal access differs from the reference")
-    clocks = record.get("clocks", {})
-    if (clocks.get("central_arrival_window_over_ell") != [-.5817589515953444, -.25023070056069985]
-            or clocks.get("central") != "de_Sitter_flat_slicing_proper_time_T_at_r=0"
-            or clocks.get("wall") != "induced_proper_time_tau"
-            or clocks.get("cross_universe_age_map") is not None):
-        raise ValueError("observer clock or finite arrival domain differs from the reference")
-    preparation = record.get("preparation", {})
-    if (preparation.get("physical_source_selected") is not False
-            or preparation.get("source_kind") != "independently_prescribed_characteristic_data_in_IV"
-            or preparation.get("source_regularity") != "C3_compact_polynomial"
-            or preparation.get("normalized_support") != [.25, .75]
-            or preparation.get("corner_geometry") != "fixed_radius_both_expansions_and_null_lapse"
-            or preparation.get("source_leg_gauge") != "fixed_reference_null_lapse"):
-        raise ValueError("changed source, regularity or gravitational initial data")
+    _model_fields(domain, {
+        "exterior_region": "Schwarzschild_IV", "wall_branch": "expanding_timelike",
+        "retained_side": "U<=U_W(V)", "null_coordinate_signs": "U<0,V<0,0<UV<1",
+        "cap": "regular_de_Sitter_cap_with_zero_earlier_field_data",
+        "angular_mode": 0, "right_parent_driven_access": False,
+    }, "region, angular mode or causal access")
+    clocks = _model_section(record, "clocks")
+    _model_window(clocks, "central_arrival_window_over_ell", [-.5817589515953444, -.25023070056069985])
+    _model_fields(clocks, {
+        "central": "de_Sitter_flat_slicing_proper_time_T_at_r=0",
+        "wall": "induced_proper_time_tau",
+        "exterior": "Kruskal_U_V_are_coordinates_not_synchronized_observer_clocks",
+        "cross_universe_age_map": None,
+    }, "observer clock")
+    preparation = _model_section(record, "preparation")
+    _model_fields(preparation, {
+        "physical_source_selected": False,
+        "source_kind": "independently_prescribed_characteristic_data_in_IV",
+        "source_regularity": "C3_compact_polynomial",
+        "source_function_ref": "src/recursive_horizons/nsc_atlas_field_preparation.py#source_profile",
+        "corner_geometry": "fixed_radius_both_expansions_and_null_lapse",
+        "source_leg_gauge": "fixed_reference_null_lapse",
+    }, "source, regularity or gravitational initial data")
+    _model_window(preparation, "normalized_support", [.25, .75])
     for key in ("bottom_scalar", "earlier_cap_scalar", "earlier_cap_time_derivative"):
         value = preparation.get(key)
-        if isinstance(value, bool) or value != 0:
+        if _model_number(value, key) != 0:
             raise ValueError("reference preparation requires zero bottom and earlier cap data")
     _references({"source": [preparation.get("source_function_ref")]}, "source")
     for row in (domain, clocks, preparation):
         _references(row, "owner_refs")
         _references(row, "evidence_refs")
-    approximation = record.get("approximation", {})
-    if (approximation.get("field_order") != 1
-            or approximation.get("stress_and_metric_response_order") != 2
-            or approximation.get("positive_f_required") is not True
-            or approximation.get("finite_amplitude_bound") is not None
-            or approximation.get("full_bulk_and_wall_evolution_solved") is not False):
-        raise ValueError("perturbative metadata cannot establish finite-amplitude or full evolution validity")
+    approximation = _model_section(record, "approximation")
+    _model_fields(approximation, {
+        "field_order": 1, "stress_and_metric_response_order": 2,
+        "metric_response_scope": "initial_null_leg_and_analytic_exterior_wall_mass_functional",
+        "positive_f_required": True, "finite_amplitude_bound": None,
+        "full_bulk_and_wall_evolution_solved": False,
+    }, "perturbative validity")
     derived = _record_rows(record.get("derived_quantities"), "derived quantities")
     ids = set(_strings([row.get("id") for row in derived], "derived quantity IDs"))
     if ids & set(parameters):
         raise ValueError("declared inputs cannot also be derived quantities")
+    expected_derived = {
+        "central_field_and_finite_tail": "conditional_evaluated_response",
+        "initial_null_radius_correction": "conditional_evaluated_response",
+        "source_leg_geometric_mass_coefficient": "conditional_evaluated_response",
+        "exterior_wall_mass_functional": "conditional_analytic_functional",
+    }
+    if ids != set(expected_derived):
+        raise ValueError("derived quantities must retain this reference's evidence scope")
     for row in derived:
-        if row.get("status") not in {"conditional_evaluated_response", "conditional_analytic_functional"}:
+        if row.get("status") != expected_derived[row["id"]]:
             raise ValueError("derived quantity needs its conditional evidence scope")
         _references(row, "owner_refs")
         _references(row, "evidence_refs")

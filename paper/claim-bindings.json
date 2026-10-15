@@ -1,7 +1,7 @@
 {
   "schema": "nsc-claim-bindings-v2",
   "paper": "paper/nested-space-cosmology.md",
-  "recorded_on": "2026-10-13",
+  "recorded_on": "2026-10-15",
   "purpose": "Bind the living main manuscript's claims to directly linked evidence. Preserved historical findings remain indexed without promoting them to current cosmological results.",
   "historical_claim_bindings": "paper/archive/foundation-v0.26.0/paper/claim-bindings.json",
   "how_records_are_found": "The checker reads links following each unique nsc-claim marker from the manuscript itself.",
@@ -113,6 +113,11 @@
       "section": "13.8",
       "status": "derived",
       "owner": "docs/nsc-atlas-wall-mass-closure.md"
+    },
+    "atlas-cap-wall-response": {
+      "section": "13.9",
+      "status": "derived",
+      "owner": "docs/nsc-atlas-cap-wall-response.md"
     },
     "target-local-effective-lambda": {
       "section": "6.1",
@@ -317,6 +322,14 @@
       "note": "docs/nsc-atlas-wall-mass-closure.md",
       "record": "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json",
       "paper_section": "13.8"
+    },
+    {
+      "id": "atlas-cap-wall-response",
+      "status": "derived",
+      "summary": "Subtracting the fixed cap vacuum at the actual radius gives a conditional cap mass functional. Together with the exterior functional and the shared quiet event, it determines a regular quadratic wall displacement equation; the angular, temporal and normal junction conditions agree with two-sided mass transport. No numerical mass or displacement curve, smooth sourced bulk metric, corrected observer response or finite-amplitude bound is established.",
+      "note": "docs/nsc-atlas-cap-wall-response.md",
+      "record": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json",
+      "paper_section": "13.9"
     }
   ]
 }

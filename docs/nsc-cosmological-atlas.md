@@ -56,8 +56,21 @@ of mean extrinsic-curvature trace, including metric and wall displacement.
 The [wall-mass closure](nsc-atlas-wall-mass-closure.md) now supplies an
 analytic exterior-side geometric-mass functional from the fixed leading
 wall trace. It retains both null fluxes and the full frame correction.
-Numerical evaluation and coupled cap/wall geometry are still unresolved;
-the wall tail does not inherit the initial leg's mass plateau or late sign.
+The [cap/wall successor](nsc-atlas-cap-wall-response.md) now supplies the
+cap's vacuum-subtracted mass and a quiet-anchored wall-displacement
+functional. The angular, temporal and normal conditions agree with the
+two-sided mass transport. This closes the formal boundary reduction;
+smooth bulk propagation, finite-amplitude control and corrected observer
+clocks are the next dynamical connection. The wall tail does not inherit
+the initial leg's mass plateau or late sign.
+
+The common `model_specification()` interface in
+[`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
+records this candidate's action, regions, state, parameter roles, operators,
+clocks and supplied assumptions. Its
+[saved specification](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json)
+travels with the boundary result. Earlier atlas records describe their own
+candidate families; this specification does not silently combine them.
 
 Keep three approaches available:
 
@@ -104,7 +117,7 @@ that every open branch succeeds.
 | `wall-normal-force` | The [full normal projection and Gauss identity](nsc-atlas-scalar-normal-force.md) establish zero additional normal-stress jump for the conformal probe. Fixed vacuum/tension sources require zero variation of mean curvature. | `bulk-backreaction` with this necessary boundary condition; it includes metric and wall displacement rather than setting displacement to zero. |
 | `wall-mass-transport` | The [analytic closure](nsc-atlas-wall-mass-closure.md) uses the fixed leading wall trace, its first derivative, quiet mass anchor and reference geometry. Both null fluxes plus the full frame term agree with original-frame improved-stress transport. | `wall-mass-evaluation` or `cap-wall-closure`; the quadratic exterior functional is closed, without numerical mass values or a solved coupled boundary. |
 | `wall-mass-evaluation` | Decide whether a finite mass value resolves the next junction uncertainty. Specify quadrature and independent field/geometry error control; the waveform's old samples do not certify the mass integral. | A controlled numerical exterior input to `cap-wall-closure`, if that value changes the matching decision. |
-| `cap-wall-closure` | Identify the remaining cap-side mass and geometric junction data needed alongside the exterior functional and local stress conditions. Retain the cap vacuum and displacement effects on its nonconstant background mass. | A compatible finite metric/wall response or a precise missing datum; no new bulk solver is presumed. |
+| `cap-wall-closure` | The [two-sided calculation](nsc-atlas-cap-wall-response.md) supplies the cap mass and regular wall-displacement functional, retaining vacuum and the actual-radius background. Temporal and normal matching agree with angular matching and mass transport. | `bulk-backreaction` with these boundary data; numerical evaluation, a compatible bulk solution and finite-amplitude remainder remain to be supplied. |
 | `bulk-backreaction` | Supply any propagation equations and remaining junction conditions actually required after the local closures. Initial null geometry, mass functionals and the normal-force condition do not themselves prove a sourced bulk future. | A finite validity estimate or a sourced metric/wall response, then an independently shared gravitational response channel. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |

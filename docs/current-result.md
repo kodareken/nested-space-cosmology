@@ -1,6 +1,26 @@
 # What the calculations show
 
-Current presentation, 13 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+Current presentation, 15 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
+
+## Cap mass and shared wall displacement, 15 October 2026
+
+The [two-sided boundary calculation](nsc-atlas-cap-wall-response.md) derives
+the cap's vacuum-subtracted mass from the same leading field as the exterior
+functional. The cap vacuum is evaluated at the actual moving radius. Its
+frame transformation supplies an additional potential contribution that
+the exterior's Ricci-flat expression does not contain.
+
+Both mass coefficients determine a quiet-anchored linear equation for the
+quadratic wall displacement. It divides by the positive wall speed, stays
+regular at the signed exterior-normal crossing, and satisfies the angular,
+temporal and normal junction conditions with the shared stress transport.
+The [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json)
+binds the exact algebra and the
+[common model specification](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json).
+The next dynamical input is the compatible bulk radius and lapse response,
+followed by corrected observer clocks and field propagation. Numerical
+displacement values and a finite-amplitude remainder bound have not yet
+been calculated.
 
 ## Exterior wall-mass closure, 13 October 2026
 

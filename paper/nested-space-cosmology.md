@@ -3,7 +3,7 @@
 ## The Geometry of a Universe
 
 **Douglas Ek**  
-Working research manuscript, 13 October 2026
+Working research manuscript, 15 October 2026
 
 ## Abstract
 
@@ -45,7 +45,11 @@ determines a geometric mass response on that initial null surface, including
 a negative quadratic coefficient after the compact input. The existing wall
 field traces also close an analytic exterior-side mass functional through
 both null fluxes and the full conformal transformation. This functional has
-not been evaluated numerically; coupled bulk and wall evolution remain open.
+not been evaluated numerically. Keeping the cap vacuum at the actual radius
+now supplies a compatible cap mass functional and a regular, quiet-anchored
+wall displacement equation. Two-sided mass transport also preserves the
+temporal and normal junction conditions. Numerical evaluation, smooth bulk
+metric reconstruction and the corrected observer response remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -919,6 +923,98 @@ finite-amplitude validity bound remain open. Detailed scalar-chain
 derivations belong to their owners; historical supporting calculations
 are cited at [Zenodo](https://doi.org/10.5281/zenodo.23090015).
 
+### 13.9. Cap mass and a regular wall displacement functional
+
+<!-- nsc-claim:atlas-cap-wall-response -->
+
+Evidence: [cap-wall record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json),
+[model specification snapshot](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json)
+and [cap-wall owner](../docs/nsc-atlas-cap-wall-response.md).
+The common [model interface](../src/recursive_horizons/nsc_cosmological_atlas.py)
+separates the fixed action, prescribed preparation and unit scale from
+derived responses. Its parameters $h=H\ell=1$, $b=k\ell=2$ and
+$m=M/\ell=2/5$ remain declared inputs. We retain the same canonical real
+massless scalar, conformal coupling, scalar-independent vacuum terms and
+constant material tension in the Jordan frame.
+
+Let $r=x+\alpha\rho+O(\alpha^2)$ be the actual wall radius in units of
+$\ell$, with $\alpha=\kappa_4\varepsilon^2/\ell^2$ and proper wall time
+$s=\tau/\ell$. The two geometric masses have expansions
+
+$$
+\frac{\mathfrak m_+}{\ell}=m+\alpha\mu_++O(\alpha^2),\qquad
+\frac{\mathfrak m_-}{\ell}=\frac{h^2r^3}{2}+\alpha\nu_-+O(\alpha^2).
+$$
+
+Here $\mu_+$ is the exterior coefficient $\mu_J$ of Section 13.8.
+The cap vacuum is evaluated at the actual radius: its total quadratic
+mass coefficient on the reference wall is
+$\nu_-+3h^2x^2\rho/2$. Holding that vacuum mass constant would omit a
+term required by the angular junction. The shared quiet corner fixes
+$\mu_+(s_a)=\nu_-(s_a)=\rho(s_a)=0$.
+
+Using the signed normals $\beta_-=\beta_++bx$, define
+$B_-=(j-\beta_-p)/x$ with the same $p=w/x$, $j=w_s$ and $A=p_s$
+as above. The cap's vacuum-subtracted mass closes as
+
+$$
+L_-=\frac{x^2}{2}\left[\beta_-AB_--\frac{v}{2}(A^2+B_-^2)\right]
++\frac{h^2x^2vp^2}{2},
+$$
+$$
+Q_-=\frac{x^2p}{6}(vA-\beta_-B_-)-\frac{h^2x^3p^2}{12},\qquad
+\nu_-(s)=\int_{s_a}^sL_-(s')\,ds'+Q_-(s).
+$$
+
+Direct differentiation reproduces the Jordan-frame improved-stress law
+$\nu_{-,s}=x^2(\beta_-q_--vP_-)/2$. Here $q_-=t_{uN,-}$ and
+$P_-=t_{NN,-}$ are the flux and normal pressure of
+$t_{ab}=\ell^4T^\phi_{ab}/\varepsilon^2$. The extra vacuum terms
+in $L_-$ and $Q_-$ are essential; the exterior's zero-vacuum shortcut
+cannot be carried into the cap. The evaluation uses first scalar
+derivatives, while covariant Hessians enter the independent transport
+check. No derivative of sampled waveform data is used.
+
+For this conformal scalar, $f+3f'^2=1/(2\kappa_4)$ reduces the
+scalar-tensor pure-tension junction to the same signed angular law.
+With $D=\mu_+-\nu_-$, its linearization gives
+
+$$
+\delta\beta_\pm=\beta_{\pm,x}\rho+\frac{D}{bx^2},\qquad
+\rho_s=v_x\rho+\frac{\mu_+/x+\beta_+D/(bx^2)}{v}.
+$$
+
+The cap expression replaces the numerator by
+$\nu_-/x+\beta_-D/(bx^2)$ and agrees exactly. Because $v=x_s>0$
+on $x\in[0.45,0.55]$, the equation stays regular through
+$\beta_+=0$. Its homogeneous solution is $C v(s)$, a relative
+proper-time origin shift removed by the shared quiet event.
+
+The existing scalar junction identities give equal one-sided fluxes and
+pressures, $q_+=q_-=q$ and $P_+=P_-=P$. Subtracting the two mass laws
+yields $D_s=-bx^3q/2$. Together with the displacement equation, this gives
+equal corrections to the dimensionless normal accelerations $a_\pm$ and
+zero change in the dimensionless mean extrinsic-curvature trace:
+
+$$
+\delta a_+=\delta a_-=\frac{6m\rho}{bx^4}-\frac{2D}{bx^3},\qquad
+\delta\overline K=0.
+$$
+
+Thus the temporal jump and normal-force condition close with the angular
+condition and mass transport, without setting $\rho=0$ or adding a freely
+chosen cap mass or wall force. These are formal quadratic identities,
+checked by independent algebra, not an evaluated displacement curve or
+a completed sourced spacetime.
+
+The next connection is the smooth bulk metric on both sides. Geometric
+mass alone does not determine the null lapse, the wall's null-coordinate
+embedding or the central observer's clock. Their reconstruction must use
+the shared wall data and characteristic initial data before calculating
+the corrected arrival map and subsequent scalar response. A nonzero
+allowed amplitude, a controlled remainder, formation and stability remain
+separate questions.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -1198,7 +1294,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Exterior wall mass to coupled matching | Would controlled evaluation of the closed functional supply the needed junction input, or must a cap/wall condition be closed first? | A finite mass value with its own error control, or a named missing cap/wall datum; no bulk solver is presumed |
+| Boundary functionals to sourced geometry | Can the two mass functionals and quiet-anchored displacement be evaluated with controlled errors and matched to smooth bulk metrics? | The null lapse, wall embedding and central clock needed for a corrected observer response |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1235,8 +1331,11 @@ transverse constraint transport then supplies an invariant geometric mass coeffi
 on that same surface. The vanishing normal-stress jump adds a necessary
 condition on their later wall matching. Known field traces also determine
 an analytic exterior-side wall-mass functional without a new field solve.
-Its numerical evaluation and the coupled cap/wall geometry remain distinct
-questions to resolve.
+Subtracting the cap vacuum at the actual radius now supplies the other
+mass functional and the quiet-anchored wall displacement equation.
+The temporal and normal conditions agree with their common mass transport.
+Numerical evaluation and reconstruction of the smooth bulk metrics remain
+necessary before an evolved observer correction can be claimed.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1264,6 +1363,7 @@ and renders their relationships without launching a new physics calculation.
 | Geometric mass on the prepared null surface | [Mixed geometry and stress checks](../docs/nsc-atlas-source-mass.md); [record](../results/development/nsc-atlas-source-mass-v1/mass.json) |
 | Conformal scalar normal-force compatibility | [Projection and force sign](../docs/nsc-atlas-scalar-normal-force.md); [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json) |
 | Exterior wall-mass functional | [Both fluxes and full frame conversion](../docs/nsc-atlas-wall-mass-closure.md); [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json) |
+| Cap mass and wall displacement functional | [Vacuum subtraction and junction closure](../docs/nsc-atlas-cap-wall-response.md); [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

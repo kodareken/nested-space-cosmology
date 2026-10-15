@@ -179,7 +179,27 @@ checks the identities and omission controls. Creation requires a new output
 directory within the 60-process-CPU-second budget. A numerical evaluation
 needs its own quadrature, field/geometry error control and admission. The
 existing waveform samples do not certify this new integral. Coupled cap/wall
-geometry and the corrected observer signal remain uncomputed.
+geometry and the corrected observer signal were left to the successor below.
+
+The [cap/wall response](nsc-atlas-cap-wall-response.md) derives the
+vacuum-subtracted cap mass, wall-displacement functional and compatible
+temporal/normal conditions. It records the common model specification with
+the two-sided result:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_cap_wall_response.py --check
+python scripts/run_python.py scripts/record_nsc_atlas_cap_wall_response.py --check-algebra
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_wall_response.py tests/test_record_nsc_atlas_cap_wall_response.py tests/test_nsc_cosmological_atlas.py
+```
+
+Ordinary checking authenticates the stored identities, current sources and
+unchanged exterior evidence. Explicit algebra replay also repeats the exact
+stress, frame and junction calculations. Creating a record uses a fresh
+directory and a 60-process-CPU-second limit. These commands integrate no
+mass, trajectory or bulk metric. `field_mass_ingredients()` exposes the
+first-derivative integrands and endpoints; `wall_response_coefficients()`
+exposes the regular displacement equation. The corrected observer signal
+requires the next bulk radius/lapse and field-response calculation.
 
 Atlas v8 remains the finite exterior-to-interior waveform result. Its original
 replay is explicitly selected below. The fixed input, numerical budget,

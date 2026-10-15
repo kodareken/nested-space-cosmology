@@ -1,6 +1,8 @@
 """Admission and integration checks; these are not cosmological discoveries."""
 from copy import deepcopy
+import ast
 import importlib.util
+import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -202,3 +204,173 @@ def test_creation_only_portable_binding_replay_and_vector_artifacts(tmp_path):
         handle.write("changed")
     with pytest.raises(ValueError, match="binding mismatch"):
         driver.check(output)
+
+
+def test_model_specification_binds_existing_response_and_callable_owners():
+    """The ledger's numbers and source paths come from actual retained owners."""
+    root = Path(__file__).resolve().parents[1]
+    record = model.model_specification()
+    response = json.loads((root / record["clocks"]["evidence_refs"][0]).read_text())
+    for key in ("xi", "H_ell", "k_ell", "M_over_ell"):
+        assert record["parameters"][key]["value"] == response["inputs"][key]
+    assert record["domain"]["angular_mode"] == response["inputs"]["angular_mode"]
+    assert record["domain"]["wall_radius_over_ell"] == response["domain"]["wall_radius_window_over_ell"]
+    assert record["domain"]["exterior_radius_over_ell"] == [
+        response["domain"]["radius_lower_bound_over_ell"],
+        response["domain"]["radius_upper_bound_over_ell"],
+    ]
+    assert record["clocks"]["central_arrival_window_over_ell"] == response["domain"]["arrival_window_over_ell"]
+
+    def check_references(value):
+        if isinstance(value, dict):
+            for key, child in value.items():
+                if key in {"owner_refs", "evidence_refs"}:
+                    assert all((root / ref.split("#", 1)[0]).is_file() for ref in child)
+                check_references(child)
+        elif isinstance(value, list):
+            for child in value:
+                check_references(child)
+    check_references(record)
+    callable_refs = [record["preparation"]["source_function_ref"]]
+    callable_refs += [record["state"][key] for key in
+                      ("reduced_equation_ref", "transmission_ref", "response_ref")]
+    for reference in callable_refs:
+        path, symbol = reference.split("#")
+        tree = ast.parse((root / path).read_text(encoding="utf-8"))
+        assert symbol in {node.name for node in tree.body if isinstance(node, ast.FunctionDef)}
+    assert model.validate_model_specification(json.loads(model.canonical_bytes(record)))
+
+
+def test_model_unit_choice_does_not_change_theory_data_or_legacy_outputs():
+    atlas = model.canonical_bytes(model.build_atlas())
+    programme = model.canonical_bytes(model.programme_record())
+    original = model.model_specification()
+    rescaled = model.model_specification(1000)
+    assert rescaled["parameters"]["ell"]["value"] == 1000
+    rescaled["parameters"]["ell"]["value"] = original["parameters"]["ell"]["value"]
+    assert rescaled == original
+    assert original["parameters"]["epsilon"]["value"] is None
+    assert original["calibration"]["observation_refs"] == []
+    assert set(original["parameters"]) & {row["id"] for row in original["derived_quantities"]} == set()
+    # Standalone metadata does not rewrite the frozen candidate-family outputs.
+    assert model.canonical_bytes(model.build_atlas()) == atlas
+    assert model.canonical_bytes(model.programme_record()) == programme
+
+
+@pytest.mark.parametrize("length", [0, -1, True, None, "1", float("nan"),
+                                    float("inf"), complex(1, 0), 10**1000])
+def test_model_rejects_invalid_supplied_length_scale(length):
+    with pytest.raises(ValueError, match="length scale"):
+        model.model_specification(length)
+
+
+@pytest.mark.parametrize("key,value", [
+    ("xi", 0), ("kinetic_coefficient", -1), ("scalar_mass_squared", 1),
+    ("surface_scalar_coupling", .1), ("H_ell", 2), ("k_ell", 3),
+    ("M_over_ell", .5), ("epsilon", .001), ("ell", 0), ("ell", "1"),
+])
+def test_model_fixed_inputs_cannot_be_retuned_under_the_same_identity(key, value):
+    record = model.model_specification()
+    record["parameters"][key]["value"] = value
+    with pytest.raises(ValueError):
+        model.validate_model_specification(record)
+
+
+@pytest.mark.parametrize("section", ["parameters", "action", "state", "domain",
+                                     "clocks", "preparation", "approximation"])
+@pytest.mark.parametrize("invalid", [None, [], "missing"])
+def test_model_rejects_malformed_sections_as_value_errors(section, invalid):
+    record = model.model_specification()
+    record[section] = invalid
+    with pytest.raises(ValueError):
+        model.validate_model_specification(record)
+
+
+@pytest.mark.parametrize("section,key,value", [
+    ("action", "f", "1/(2*kappa_4) + xi*phi^2/2"),
+    ("action", "zero_background_scalar", 1),
+    ("action", "scalar_einstein_tensor_accounting", "counted_twice"),
+    ("state", "quantum_state", "vacuum"),
+    ("state", "transmission_ref", "src/recursive_horizons/nsc_atlas_field_transfer.py#compact_bump"),
+    ("state", "parameter_refs", {"nonminimal": "k_ell", "amplitude": "epsilon"}),
+    ("domain", "parameter_refs", {"cap": "M_over_ell", "wall": "k_ell", "exterior": "H_ell", "length_scale": "ell"}),
+    ("domain", "right_parent_driven_access", True),
+    ("domain", "angular_mode", False),
+    ("preparation", "source_function_ref", "src/recursive_horizons/nsc_atlas_field_preparation.py#radius_product"),
+    ("preparation", "bottom_scalar", .1),
+    ("preparation", "source_leg_gauge", "unanchored"),
+    ("approximation", "field_order", True),
+    ("approximation", "finite_amplitude_bound", .1),
+    ("approximation", "full_bulk_and_wall_evolution_solved", True),
+])
+def test_model_rejects_incompatible_action_state_and_scope(section, key, value):
+    record = model.model_specification()
+    record[section][key] = value
+    with pytest.raises(ValueError):
+        model.validate_model_specification(record)
+
+
+@pytest.mark.parametrize("section,key,window", [
+    ("domain", "wall_radius_over_ell", [.45, .8]),
+    ("domain", "exterior_radius_over_ell", [0, .55]),
+    ("domain", "wall_radius_over_ell", [.55, .45]),
+    ("domain", "wall_radius_over_ell", [.45]),
+    ("clocks", "central_arrival_window_over_ell", [-.6, 0]),
+    ("clocks", "central_arrival_window_over_ell", [float("nan"), -.2]),
+    ("preparation", "normalized_support", [0, 1]),
+])
+def test_model_cannot_extend_or_relabel_the_recorded_finite_domain(section, key, window):
+    record = model.model_specification()
+    record[section][key] = window
+    with pytest.raises(ValueError):
+        model.validate_model_specification(record)
+
+
+def test_model_separates_inputs_calibration_and_derived_evidence():
+    original = model.model_specification()
+    changed = deepcopy(original)
+    changed["parameters"]["H_ell"]["role"] = "prediction"
+    with pytest.raises(ValueError, match="role"):
+        model.validate_model_specification(changed)
+    changed = deepcopy(original)
+    changed["parameters"]["H_ell"]["dimensionless"] = False
+    with pytest.raises(ValueError, match="dimensional status"):
+        model.validate_model_specification(changed)
+    changed = deepcopy(original)
+    changed["derived_quantities"][0]["id"] = "M_over_ell"
+    with pytest.raises(ValueError, match="inputs cannot"):
+        model.validate_model_specification(changed)
+    changed = deepcopy(original)
+    changed["derived_quantities"][-1]["status"] = "conditional_evaluated_response"
+    with pytest.raises(ValueError, match="evidence scope"):
+        model.validate_model_specification(changed)
+    changed = deepcopy(original)
+    changed["calibration"]["parameter_ids"] = ["H_ell"]
+    with pytest.raises(ValueError, match="calibration"):
+        model.validate_model_specification(changed)
+    changed = deepcopy(original)
+    changed["observational_predictions"] = ["cosmological_constant"]
+    with pytest.raises(ValueError, match="observational predictions"):
+        model.validate_model_specification(changed)
+    changed = deepcopy(original)
+    changed["unresolved"].remove("stability")
+    with pytest.raises(ValueError, match="unresolved"):
+        model.validate_model_specification(changed)
+
+
+def test_model_requires_explicit_unknowns_and_portable_references():
+    for section, key in (("clocks", "cross_universe_age_map"),
+                         ("state", "quantum_state"), ("approximation", "finite_amplitude_bound")):
+        record = model.model_specification()
+        del record[section][key]
+        with pytest.raises(ValueError, match="missing"):
+            model.validate_model_specification(record)
+    record = model.model_specification()
+    del record["parameters"]["epsilon"]["value"]
+    with pytest.raises(ValueError):
+        model.validate_model_specification(record)
+    for reference in ("../outside.json", "C:/private/evidence.json", "missing\\record.json"):
+        record = model.model_specification()
+        record["derived_quantities"][0]["evidence_refs"] = [reference]
+        with pytest.raises(ValueError, match="repository-relative"):
+            model.validate_model_specification(record)
