@@ -1426,14 +1426,14 @@
       "sha256": "55d4d09bd29bb29944fd6c8da43a4702f8d556ee695d37e7eefbbea2ef0d2898"
     },
     {
-      "bytes": 2637,
+      "bytes": 3023,
       "path": ".github/workflows/paper-pdf.yml",
-      "sha256": "66d5cd61db9caff1bf8ac82b5af732903256569896590efd588b5ff9d3864fc3"
+      "sha256": "70d8c91ad742a9b17c11b9dd10f2b781de0f064a3963fd24245f0a2a13861150"
     },
     {
-      "bytes": 1120,
+      "bytes": 1506,
       "path": ".github/workflows/verify.yml",
-      "sha256": "cc24cc61fb843e512ffc74be0026ef4cc2182de4b91d07164084195ec6d4bf4e"
+      "sha256": "95d65047588fc797774b0d32fa37454300b2c4ce1dd517eacc9e16df7dee5c27"
     },
     {
       "bytes": 218,
@@ -1536,9 +1536,9 @@
       "sha256": "ad36ccab4520b8aae843551734d390ec87afd01d569446a306b99767635eb907"
     },
     {
-      "bytes": 1727489,
+      "bytes": 2230815,
       "path": "docs/lab-snapshot.json",
-      "sha256": "e690a4b8593fe1294421bc855460d63c1793bc7e41c006677ef1b32e21f1386d"
+      "sha256": "2648e187ea9145539a04b044661942741ed96d63de9f6d5116493cdb7875c398"
     },
     {
       "bytes": 4997,
@@ -2136,14 +2136,14 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 3356,
+      "bytes": 4587,
       "path": "docs/repository-consolidation.md",
-      "sha256": "6b95c1fcdc1fc95ae7aea3b1fc2be204fbb7a2e48da56ed1df5be4a3118cad57"
+      "sha256": "94797e1e2eeba6b62b7dd3b30e866ec853e620ed14ac64bf81d09a65f9d2a8ef"
     },
     {
-      "bytes": 16313,
+      "bytes": 16838,
       "path": "docs/reproducing.md",
-      "sha256": "412d06a9e66ae2b5241960c4bc528a56047aebb972c0618e3c6ef288820d698d"
+      "sha256": "291414a5a4e327adce2968f58a4a1a318d909b6f46ab9a716aadcd10f07bd571"
     },
     {
       "bytes": 26602,
@@ -13966,9 +13966,9 @@
       "sha256": "b934d2509496a05c754e8d377e25ae371aa2c810f8eb14b42799b9701aeca116"
     },
     {
-      "bytes": 1004,
+      "bytes": 1153,
       "path": "scripts/build_finite_regeneration.py",
-      "sha256": "0328d82e41c1b494956bdbdba76c13b6bfb64f3c7f6c4c2af13967ca29f584a1"
+      "sha256": "04852072bf4c0e7b03b817554c738cfc7880c8cb7e58d116dd16e973e4e67e1b"
     },
     {
       "bytes": 27307,
@@ -14196,9 +14196,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 43924,
+      "bytes": 43854,
       "path": "scripts/check_publication.py",
-      "sha256": "a5ebc7689c863bfe63c754b655e4bf3b5a9fae52c21e0a4add9051efbd3f90bb"
+      "sha256": "8229669f486fd71d78e692f00ac6046a6b4f135b5501bac80f1707b1796e0dc8"
     },
     {
       "bytes": 13188,
@@ -15321,9 +15321,9 @@
       "sha256": "51ea235e2fbba21eb36a35f504b0890e52f8372e392ca028a6344ca1b05cefa5"
     },
     {
-      "bytes": 12041,
+      "bytes": 12124,
       "path": "scripts/replay_history.py",
-      "sha256": "10d0475da332e0fee8b94f1225f9bb9fcdd5637ec6ab4056428819bb17da5826"
+      "sha256": "b68257c86f7a5f9c0f05b684cebb0f5b965c77b3b592533470b542a405e71232"
     },
     {
       "bytes": 41574,
@@ -16916,9 +16916,9 @@
       "sha256": "dce729cfd3c32919e5109fe912bb6451cd910ac112795f98b8ba180d481296c3"
     },
     {
-      "bytes": 3672,
+      "bytes": 4003,
       "path": "src/recursive_horizons/nsc_source_binding_graph.py",
-      "sha256": "ae9add31b6f1c17ac49e16ee3bfe8cd24fd0fdb8ff238db9978498ceeb6ea7a1"
+      "sha256": "0c378dd30c500e93cf2050f44793333380875094008ae2b95c2f180a31907374"
     },
     {
       "bytes": 1478,
@@ -17006,9 +17006,9 @@
       "sha256": "74595ca4deee3b1209b7f034869885b2addd9ed446505b4c53ed5cd0c4094727"
     },
     {
-      "bytes": 6840,
+      "bytes": 7000,
       "path": "src/recursive_horizons/nsc_threshold18_metadata.py",
-      "sha256": "f0c9bb0c6f8c72882c8a994f79ec798154da04176f72a15c8e694304e1b382f1"
+      "sha256": "1b5e49fe7cc2ba95b2fc0b9c168d64282213ca6649b545ed755fac9588914097"
     },
     {
       "bytes": 19534,
@@ -17136,9 +17136,9 @@
       "sha256": "1cf0fc299545cf9388cc843600226e017559c5b4f4a23dcb582c859e0056a186"
     },
     {
-      "bytes": 1368,
+      "bytes": 1625,
       "path": "tests/conftest.py",
-      "sha256": "9835c2f6abca2a480e7211d9b7111cf9e16e0cfa4be32a6653cff700c8efb017"
+      "sha256": "4beed60a5f74531137cf7acc32ec4ce39adf0b9060c23d679c0d5baacc2b28c6"
     },
     {
       "bytes": 1872,
@@ -17159,6 +17159,11 @@
       "bytes": 5744,
       "path": "tests/test_evidence_publication_native.py",
       "sha256": "23a5264fc9d710514288e8457a36ea549a21ff599c7ba716e773ff0e528df549"
+    },
+    {
+      "bytes": 4555,
+      "path": "tests/test_historical_git_archive_routing.py",
+      "sha256": "a560f2cf3f38a4f5b2be3b2ded2d34c326045d1d954fe7871fd37d66f6d4d1e0"
     },
     {
       "bytes": 4256,
@@ -18886,7 +18891,7 @@
       "sha256": "c64cdfcf34e80a78a0cc59423028407fefee1815087d1ff717110a8bf76bbb9f"
     }
   ],
-  "lab_snapshot_sha256": "e690a4b8593fe1294421bc855460d63c1793bc7e41c006677ef1b32e21f1386d",
+  "lab_snapshot_sha256": "2648e187ea9145539a04b044661942741ed96d63de9f6d5116493cdb7875c398",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-13.6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

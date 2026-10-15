@@ -7,7 +7,9 @@ and retained evidence live directly in `src`, `scripts`, `tests`, `docs` and
 The 12 October 2026 migration and retirement records, superseded variants and
 deleted carriers are historical evidence in
 [Zenodo DOI 10.5281/zenodo.23090015](https://doi.org/10.5281/zenodo.23090015).
-They are no longer runtime inputs to current-root verification. The
+The retired containers are no longer runtime inputs to current-root verification.
+Some original bytes still authenticate retained evidence through the sparse
+object archive described below. The
 [current retained-file receipt](lab-snapshot.json) is the v2 successor: each
 checked row names its current repository-relative path, exact byte count
 and SHA256, while retaining the original import path, hashes and Git-blob
@@ -34,9 +36,25 @@ Unrelated agent configuration remains outside this cleanup.
 
 `python scripts/replay_history.py all` deliberately materializes historical
 source contexts under ignored `.build/replay` for the preserved editions.
-The exact source proofs remain in `archive/source-history`; its Merkle
-objects and pinned source hashes are unchanged. The historical Git object
-store is process-local, never a competing installed package.
+The exact source proofs remain in `archive/source-history`. Its original
+25 Merkle objects and six source pins remain unchanged. The historical Git
+object store is process-local, never a competing installed package.
+
+The approved 15 October 2026 history compaction adds 1,654 authentication
+objects (93,389,210 compressed bytes) for 2,866 explicitly inventoried paths
+across 17 original contexts. The [object manifest](../archive/source-history/manifest.json)
+records their identities. Byte-identical objects already retained in the
+baseline tree are reused instead of copied. Original receipt arrays are
+authenticated as bytes; they do not replace current numerical inputs.
+
+Only the necessary commits, Merkle trees and blobs are transported, without
+their parent ancestry. These objects are tracked as archival files and exposed
+to readers through a process-local `GIT_ALTERNATE_OBJECT_DIRECTORIES`; they
+are not live history refs or permanent repository alternates. The keep list
+for history filtering includes the approved archive additions and runtime
+setup. Current scientific records and paper files retain their baseline bytes.
+Full pre-cleanup checkouts and campaigns require the Zenodo archive; the
+sparse authentication store does not preserve an entire historical checkout.
 
 Current checks use retained root evidence and reject changed undeclared
 bytes. Historical records keep their original producer identity; a current
@@ -47,7 +65,8 @@ Git objects, corrupt retained artifacts and changed pinned evidence fail.
 
 Run `python scripts/check_lab_snapshot.py` after transfer or an authorized
 receipt update. It checks the v2 retained-file hashes directly and then
-authenticates the unchanged `archive/source-history` inventory and pins.
+authenticates the declared `archive/source-history` inventory and unchanged
+original source pins.
 It does not require the retired reassembly manifest or retired containers.
 After a later paper or code edit, refresh only the declared current byte/hash
 fields before checking; retain the original import metadata and source pins.

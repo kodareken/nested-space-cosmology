@@ -42,6 +42,13 @@ jobs:
         with:
           python-version: '3.14.8'
           cache: pip
+      - name: Expose tracked historical authentication objects
+        shell: python
+        run: |
+          import os
+          objects = os.path.join(os.environ["GITHUB_WORKSPACE"], "archive", "source-history", "objects")
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as stream:
+              stream.write("GIT_ALTERNATE_OBJECT_DIRECTORIES=" + objects + "\n")
       - name: Install PDF inspection tools and fonts
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils fonts-dejavu-core
       - name: Install pinned paper and test dependencies

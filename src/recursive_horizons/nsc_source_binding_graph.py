@@ -11,6 +11,7 @@ from pathlib import Path
 def original_source_graph(root, owners, context):
     """Authenticate the original AST dependency graph without executing it."""
     import ast
+    import os
     import subprocess
     from pathlib import PurePosixPath
     from .nsc_frozen_sources import authenticate_source, source_sha256
@@ -18,9 +19,15 @@ def original_source_graph(root, owners, context):
     pending, visited, hashes, source_bytes = list(owners), set(), {}, {}
     # Validate the explicit pin before inventorying its immutable source tree.
     source_sha256(root, owners[0], context=context)
+    environment=os.environ.copy()
+    for key in ('GIT_DIR','GIT_WORK_TREE','GIT_INDEX_FILE','GIT_COMMON_DIR'):
+        environment.pop(key,None)
+    objects=root.resolve()/'archive/source-history/objects'
+    if objects.is_dir():
+        environment['GIT_ALTERNATE_OBJECT_DIRECTORIES']=str(objects)
     available = set(subprocess.check_output(
         ['git', '-C', str(root), 'ls-tree', '-r', '--name-only', context],
-        stderr=subprocess.PIPE, timeout=30,
+        env=environment, stderr=subprocess.PIPE, timeout=30,
     ).decode('utf-8').splitlines())
 
     def read(name):

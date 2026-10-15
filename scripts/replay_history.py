@@ -34,7 +34,9 @@ def sha(data: bytes) -> str:
 
 
 def git(*args: str) -> bytes:
-    result = subprocess.run(["git", *args], cwd=ROOT, capture_output=True)
+    from lab import environment
+    result = subprocess.run(["git", *args], cwd=ROOT, capture_output=True,
+                            env=environment(ROOT))
     if result.returncode:
         raise ValueError("historical Git object unavailable: " + result.stderr.decode(errors="replace"))
     return result.stdout

@@ -2,10 +2,13 @@
 """Build the finite companion from an explicit immutable science snapshot."""
 import argparse
 import json
+import os
 
 from finite_regeneration import build, compile_twice, ROOT, source_files, verify
 
 if __name__ == "__main__":
+    from lab import environment
+    os.environ["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = environment(ROOT)["GIT_ALTERNATE_OBJECT_DIRECTORIES"]
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--science-commit")
     parser.add_argument("--check", action="store_true")

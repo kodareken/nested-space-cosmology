@@ -44,6 +44,9 @@ def _original_metadata_bytes(root, relative):
     environment=os.environ.copy()
     for key in ('GIT_DIR','GIT_WORK_TREE','GIT_INDEX_FILE','GIT_COMMON_DIR'):
         environment.pop(key,None)
+    objects=Path(root).resolve()/'archive/source-history/objects'
+    if objects.is_dir():
+        environment['GIT_ALTERNATE_OBJECT_DIRECTORIES']=str(objects)
     try:
         return subprocess.check_output(
             ['git','--no-pager','-C',str(root),'show','--no-textconv',

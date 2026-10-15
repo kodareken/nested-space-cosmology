@@ -781,10 +781,11 @@ def historical_content() -> set[str]:
     # rather than imported by the layout migration. Bind their original bytes.
     from replay_history import BASELINE
     for relative in ("docs/PLAN.md", "lit/cosmo_v3.md"):
-        preserved = subprocess.run(["git", "show", f"{BASELINE}:{relative}"], cwd=ROOT,
-                                   capture_output=True)
-        if preserved.returncode == 0:
-            candidates[relative] = hashlib.sha256(preserved.stdout).hexdigest()
+        try:
+            preserved = _git_bytes(BASELINE, relative)
+        except FileNotFoundError:
+            continue
+        candidates[relative] = hashlib.sha256(preserved).hexdigest()
     return {path for path, digest in candidates.items()
             if path not in GITHUB_MARKDOWN_ENTRYPOINTS
             and (ROOT / path).is_file() and sha256(ROOT / path) == digest}

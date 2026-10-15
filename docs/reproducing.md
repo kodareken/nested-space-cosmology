@@ -36,8 +36,12 @@ The [14 October Win11 follow-up](win11-verification-20261014.md) lists the
 records the metadata regeneration that resolved its four binding failures.
 
 `check_lab_snapshot.py` authenticates the current paths, hashes and sizes in the
-v2 [retained-file receipts](lab-snapshot.json), plus the unchanged objects and
-pins in [source history](../archive/source-history/manifest.json).
+v2 [retained-file receipts](lab-snapshot.json), plus the declared object archive
+and unchanged original pins in [source history](../archive/source-history/manifest.json).
+The [history compaction record](repository-consolidation.md#explicit-historical-replay)
+describes the sparse authentication transport retained after pruning. It
+preserves the bytes required by current checks, without keeping full parent
+ancestry. Complete old checkouts and campaigns require the Zenodo archive.
 `check_publication.py` checks retained result identities, publication routing
 and explicit DOI/hash receipts for archived evidence. It does not download or
 verify a remote archive. Current checks do not require the retired reassembly
@@ -221,7 +225,9 @@ machine. [requirements-history.txt](../requirements-history.txt) preserves
 these scientific pins and supplies the replay tools. Pillow 12.3.0 is a replay
 dependency; Pillow and pytest versions were not recorded in the atlas manifests.
 For a deliberate original-context replay, use an isolated environment without
-installing the current project package there:
+installing the current project package there. After history compaction, restore
+the exact archived context from Zenodo before these full-context commands;
+the sparse authentication store alone does not supply the complete old layout:
 
 ```powershell
 py -3.14 -m venv .venv/history

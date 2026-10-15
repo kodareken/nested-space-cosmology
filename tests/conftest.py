@@ -1,10 +1,14 @@
 """One root package, with explicit Windows limitations for historical tests."""
 from pathlib import Path
+import os
 import sys
 import warnings
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
+# Historical authentication has a checked-in partial object archive. Its use
+# is process-local; no old refs or permanent live-repository alternates remain.
+os.environ['GIT_ALTERNATE_OBJECT_DIRECTORIES']=str(ROOT/'archive/source-history/objects')
 for _path in (str(ROOT), str(ROOT / "src"), str(ROOT / "scripts")):
     if _path not in sys.path:
         sys.path.insert(0, _path)
