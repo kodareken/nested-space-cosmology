@@ -63,6 +63,24 @@ Here $K_V=-(1/a+4/r)K r_V$ and $a=2m$. The compact polynomial source
 supplies $g''$ analytically. Geometry interpolation and field discretization
 remain separate numerical errors in this evaluation.
 
+For small $r$, a stable form avoids subtracting almost equal endpoint
+values. Set $d=r_*(r)$ and integrate over $z\in[-1,1]$:
+
+$$
+I_1=\int_{-1}^1f'(T+dz)\,dz,\quad
+I_T=\int_{-1}^1f''(T+dz)\,dz,\quad
+I_2=\int_{-1}^1z f''(T+dz)\,dz.
+$$
+$$
+p=\frac d r I_1,\qquad p_T=\frac d r I_T,\qquad
+p_r=\frac{r/A_0-d}{r^2}I_1+\frac d{rA_0}I_2.
+$$
+
+The first radial prefactor has the regular expansion
+$2h^2r/3+4h^4r^3/5+6h^6r^5/7+\cdots$.
+This calculation uses derivatives of the continuum field equation, with
+its numerical representation errors retained in the refinement account.
+
 ## Radial metric and an independent mass path
 
 Write the Einstein-frame polar-areal metric as
@@ -140,6 +158,21 @@ The quiet event anchors the relative time origins. The cap mass in $A_1$
 is the Einstein excess $\nu_E$, not the Jordan mass or the total vacuum
 mass. This distinction is measurable in the radial/timelike comparison.
 
+There is also a direct induced-metric check. With
+$e_s=\rho_s-(vp_W^2+2xp_WA_W)/12$, expand the wall's Jordan proper
+normalization without using its cap time equation:
+
+$$
+N=2\beta_-T_{1,s}+\frac{2\delta_{E,W}\beta_-^2}{A_0}
++\frac{A_1(\beta_-^2+v^2)}{A_0^2}
+-\frac{2ve_s}{A_0}+\frac{p_W^2}{6}.
+$$
+
+The prior angular constraint and frame term reduce this residual to
+$N=2(\nu_{E,W}^{\rm radial}-\int L_-ds)/(xA_0)$.
+It exposes the same mass-path discrepancy in the induced metric;
+it is not an independent total error estimate.
+
 At fixed proper emission time $s$, the reference central arrival is
 $q_0=T_0+r_*(x)$. Expanding the inward null equation gives
 
@@ -170,6 +203,19 @@ not yet compute the order-$\varepsilon\alpha$ scalar amplitude; that
 requires its perturbed wave equation, moving boundary and stated source
 continuation.
 
+An independent combination of the radial constraints explains the optical
+integrand. For $h=1$, define $D=\delta_E-2\nu_E/(rA_0)$. Then
+
+$$
+D_r=\frac{2\nu_E(1-3r^2)}{r^2A_0^2}-\frac{rp^2}{A_0},
+\qquad D(T,0)=-\frac{p(T,0)^2}{12}.
+$$
+
+The kinetic terms cancel in this identity, and the ray integrand is
+$-D/A_0$. Positive mass alone therefore does not select its sign. Signed
+quadrature contributions and sampled extrema locate the sign in the
+computed cap; they do not establish a separate continuum error bound.
+
 ## Finite domain and verification
 
 Put $T_a=q_a-r_*(x_a)$, $T_b=q_b-r_*(x_b)$ and
@@ -188,5 +234,50 @@ evaluation, radial, wall-time and ray quadratures are refined separately.
 Their observed differences are numerical sensitivity estimates; they are
 not a proven finite-amplitude remainder.
 
-The implementation and compact evidence are linked here after their bounded
-evaluation. The [current result](current-result.md) owns measured outcomes.
+## Implementation and bounded comparisons
+
+The [cap field evaluator](../src/recursive_horizons/nsc_atlas_cap_field.py)
+reuses the original dense field. Its bounded arrival inverse uses at most
+56 floating bisections; the reported bracket width is conditional on the
+reference spline and is not an interval enclosure of geometry error. The
+small-radius integral formulas apply at $r\le10^{-4}$ by default, with
+$10^{-3}$ retained as a separate numerical control. Their Gauss order is
+8, compared with 16. The differentiated exterior integral uses 2 points per
+active field cell, compared with 4. Every kernel query shares the original
+field's cumulative compute budget.
+
+The [cap metric and clock integrator](../src/recursive_horizons/nsc_atlas_cap_response.py)
+splits constant-time radial quadratures at both incoming and reflected
+profile edges. Ray quadratures also split where the central-clock
+normalization crosses a profile edge. The cap wall clock uses 4-point
+Gauss panels, with partial-panel values from their integrated cubic.
+Tests of [field regularity](../tests/test_nsc_atlas_cap_field.py) and
+[metric/clock identities](../tests/test_nsc_atlas_cap_response.py) include
+independent polynomial profiles, closed radial and ray integrals, exact
+conservation and optical identities, quiet recovery and clock conversion.
+
+The [comparison producer](../scripts/record_nsc_atlas_cap_response.py)
+uses a primary setting of 257 field nodes, 257 geometry knots, radial and
+ray orders 16, and 16 cap clock panels. It reuses the wall integrator with
+radial order 2, field-derivative order 32, 8 exterior clock panels, source
+order 64 and ODE tolerance $2\times10^{-9}$; the separate wall evidence
+records the sensitivity of those inputs.
+
+Nine comparisons vary one numerical setting within each pair: field
+129/257, radial 8/16, ray 8/16, cap time panels 8/16, geometry 129/257,
+cap derivative 2/4, centre Gauss order 8/16, centre threshold
+$10^{-4}/10^{-3}$, and a further ray 16/32 comparison. The geometry,
+derivative, centre and further-ray comparisons fix 129 field nodes to fit
+the complete pair within the same 120 process-CPU-second and 30-million
+scalar-kernel budget. These fixed overrides are recorded explicitly;
+each pair compares the same physical preparation and otherwise identical
+settings. The main field comparison checks 129 against 257 nodes at the
+primary cap quadrature settings.
+
+Each record retains nine common wall cuts, mass/clock defects, signed ray
+contributions, sampled integrand extrema and cumulative execution counts.
+Dense pilot arrays stay under the ignored build directory. Authentication
+checks the declared settings and bound source bytes without another
+physical solve. The [current result](current-result.md) owns measured
+outcomes and links the completed evidence. The higher-order scalar and
+finite-amplitude remainder remain the next dynamical connection.
