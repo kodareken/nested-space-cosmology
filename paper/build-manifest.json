@@ -1,10 +1,10 @@
 {
-  "bytes": 2038205,
+  "bytes": 2085066,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "659396e42794ccd9625bdae5feef9e6cb56cdf4fb2a8d34aa13b04bde5107b07",
+  "metadata_sha256": "8c0e0c96885f58d9c32732fb8c2582bfe6b4bdd064e9de7d83023989ae7d2b6d",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 29,
-  "pdf_sha256": "bf165bab8f68064b290512deee6541b54ae73965e9f43ded942214d1ec3fe702",
+  "pages": 30,
+  "pdf_sha256": "01e8c4315433c1bfca836591a6663bc4c775d04918a06c3090daf4ab313067f3",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -106,6 +106,26 @@
     {
       "path": "results/development/nsc-atlas-observer-inference-v1/inference.json",
       "sha256": "8c42d143c8e6bd7f1fdcc9b4b0b1c453fc39efbe3ded8d0face008709252a217"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json",
+      "sha256": "f60af77a71dff2a13fb2d425d6af72234272a5542d0c76b4b756418292e70c93"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-boundary-v1/radial/boundary.json",
+      "sha256": "0728ed6acf65e837991e7d9545c313f5465ead7e28a73d1d20d7783cd5f94070"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-boundary-v1/radial_fine/boundary.json",
+      "sha256": "089ab5f7a1a5990e01674838f6abbd319c75cfabe4c22fbfddcb3bfc87e50e71"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-boundary-v1/ray/boundary.json",
+      "sha256": "3c1d49fab210c63ffd39b338d88ea9da445ae656cf7edb3d01219bbb777cc55e"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-boundary-v1/ray_fine/boundary.json",
+      "sha256": "caf1dacb2853b9286533c33b3bac5d7950bfd9a8ddd6d1e109ad25a3a001539f"
     },
     {
       "path": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
@@ -277,6 +297,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "9ee1f977039aeab03d65615a89ed986e67186fdd77de3cab3f6cdf0e779ede25",
-  "version": "working-2026-10-15.4"
+  "source_sha256": "8ba3881710ba60b46fc62ea5429a23544a57e75e8ff5ead9fb5339984ff5b950",
+  "version": "working-2026-10-16.1"
 }
