@@ -49,7 +49,7 @@ def synthetic(restored):
     from recursive_horizons.nsc_atlas_scalar_evolution import SCHEMA, SCOPE, reference_kernel
     d = restored.domain
     solutions = []
-    for count, nodes in tool.CASES:
+    for (count, nodes), ode in zip(tool.CASES, tool.ODE_CASES):
         grid = np.linspace(d["U0"], d["Ub"], nodes)
         rows, interiors = [], []
         for t in tool.TIMES:
@@ -72,7 +72,7 @@ def synthetic(restored):
             interiors.append(dict(U=U.tolist(), V=np.full(nodes, V).tolist(), z=z.tolist(), y=y.tolist()))
         cuts = sorted(set([*np.linspace(0, 1, count), *restored.lift.knot_times,
             *((grid[(grid > d["Ua"]) & (grid < d["Ub"]) ]-d["Ua"])/(d["Ub"]-d["Ua"]))]))
-        solutions.append(dict(schema=SCHEMA, scope=SCOPE, domain=d, settings=dict(grid_nodes=nodes, **tool.ODE),
+        solutions.append(dict(schema=SCHEMA, scope=SCOPE, domain=d, settings=dict(grid_nodes=nodes, **ode),
             cache_times=count, wall_samples=rows, interior_samples=interiors, rhs_calls=100,
             readout_rhs_calls=17, kernel_values=nodes*117, segments=len(cuts)-1, split_times=cuts,
             maximum_split_merge_width=0., maximum_absolute_source_defect=0.,
@@ -84,7 +84,7 @@ def synthetic(restored):
         diagnostics=tool.comparison_diagnostics(solutions), sampled_input_indicators=tool.input_indicators(restored.cache),
         refinement_is_rigorous_error_enclosure=False, execution=dict(cpu_seconds=1., cpu_seconds_max=120.,
             scalar_kernel_values=sum(row["kernel_values"] for row in solutions), scalar_kernel_values_max=30_000_000,
-            rhs_calls=300, readout_rhs_calls=51, correction_solves=3, leading_field_solves=0,
+            rhs_calls=400, readout_rhs_calls=68, correction_solves=4, leading_field_solves=0,
             wall_solves=0, new_forcing_slices=0, new_boundary_jets=0))
 
 
@@ -111,14 +111,19 @@ def isolated(tmp_path, monkeypatch, record):
 def test_axes_and_discrete_readout_identities_validate_without_evolving(record):
     assert tool.validate_record(record)
     axes = record["diagnostics"]["axes"]
-    assert [axis["axis"] for axis in axes] == ["cache_time", "correction_grid"]
-    assert all(axis["maximum_absolute_differences"]["y_wall"] > 0 for axis in axes)
+    assert [axis["axis"] for axis in axes] == ["cache_time", "correction_grid", "ODE_tolerance"]
+    assert all(axis["maximum_absolute_differences"]["y_wall"] > 0 for axis in axes[:2])
+    assert axes[2]["maximum_absolute_differences"]["y_wall"] == 0
+    assert record["diagnostics"]["ODE_tolerance_refined"] is True
+    assert record["execution"]["readout_rhs_calls"] == 68
     assert record["sampled_input_indicators"]["uniform_bound"] is False
 
 
 @pytest.mark.parametrize("path,value", [
     (("solutions", 0, "cache_times"), 33),
     (("solutions", 2, "settings", "grid_nodes"), 129),
+    (("solutions", 3, "settings", "tolerance"), 2e-6),
+    (("solutions", 1, "settings", "atol"), 1e-9),
     (("solutions", 1, "wall_samples", 10, "y_wall_V"), 99.),
     (("solutions", 1, "interior_samples", 10, "y", 50), 99.),
     (("solutions", 2, "split_times", 4), .13),

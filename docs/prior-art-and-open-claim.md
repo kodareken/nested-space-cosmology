@@ -186,6 +186,21 @@ coefficient derivatives make that tolerance disproportionate to measured
 input errors; any revised calculation needs its stated controls and a
 separate tolerance comparison. The physical model and saved inputs stay fixed.
 
+**Cost diagnosis and revised propagation:** the 129-node grid has 107
+existing evolution segments, but crosses 2,609 distinct radial cache knots;
+2,189 crossings after the quiet quarter have nonzero coefficient-slope
+jumps. Splitting at every such knot would require at least 41,760 DOP853
+RHS evaluations before any adaptive refinement, versus a 1,712-call minimum
+for the current splits. The saved-input diagnosis uses no propagation.
+Retain the cache and existing splits. Revise the first three cache/grid
+comparisons to relative tolerance $2\times10^{-6}$ and absolute tolerance
+$10^{-8}$, and add one fine-cache/129-node evolution at $2\times10^{-7}$
+and $10^{-9}$ solely to measure ODE sensitivity. Keep maximum step $1/64$
+and the 6,000-call ceiling per solve. All four solves and readouts still
+share 120 process-CPU seconds and 30 million kernels. Report the actual
+tolerance effect separately; its smallness is a measured outcome, not an
+assumption from comparing the requested tolerance with input indicators.
+
 ## Scalar lift and forcing admission, 16 October 2026
 
 The sampled outgoing boundary is now known. The

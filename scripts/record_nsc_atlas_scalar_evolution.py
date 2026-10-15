@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Record three bounded scalar evolutions using authenticated saved inputs.
+"""Record four bounded scalar evolutions using authenticated saved inputs.
 
 The check path restores coefficient polynomials and checks retained discrete
 identities. It never evolves a field or silently regenerates missing inputs.
@@ -25,8 +25,9 @@ SCHEMA = "nsc-atlas-scalar-evolution-comparison-v1"
 STATUS = "FORMAL_EXTERIOR_SCALAR_CORRECTION_REFINEMENT"
 SCOPE = "formal exterior cubic scalar coefficient; sampled sensitivity, no central waveform or uniform remainder"
 TIMES = tuple(i/16 for i in range(17))
-CASES = ((17, 129), (33, 129), (33, 65))
-ODE = dict(tolerance=2e-10, atol=1e-12, max_step=1/64, rhs_calls_max=6000)
+CASES = ((17, 129), (33, 129), (33, 65), (33, 129))
+ODE = dict(tolerance=2e-6, atol=1e-8, max_step=1/64, rhs_calls_max=6000)
+ODE_CASES = (ODE, ODE, ODE, {**ODE, "tolerance": 2e-7, "atol": 1e-9})
 Q = .13882099234357653
 ROW_KEYS = ("t", "V", "U_wall", "U_wall_V", "g1", "g1_V", "B_wall", "b_wall",
     "z_wall", "y_wall", "z_wall_V", "y_wall_V", "source_defect", "source_rate_defect",
@@ -113,23 +114,26 @@ def input_indicators(cache):
 
 def comparison_diagnostics(solutions):
     axes = []
-    for name, first, second in (("cache_time", 0, 1), ("correction_grid", 2, 1)):
+    for name, first, second in (("cache_time", 0, 1), ("correction_grid", 2, 1), ("ODE_tolerance", 1, 3)):
         left, right = (solutions[index]["wall_samples"] for index in (first, second))
         differences = {key: max(abs(a[key]-b[key]) for a, b in zip(left, right)) for key in READOUTS}
         peak = max(abs(row["y_wall"]) for row in right)
         axes.append({"axis": name, "solution_indices": [first, second], "maximum_absolute_differences": differences,
             "fine_sampled_peak_y": peak, "sampled_y_difference_over_peak": differences["y_wall"]/peak if peak else None})
+    cache_difference = axes[0]["maximum_absolute_differences"]["y_wall"]
+    ode_difference = axes[2]["maximum_absolute_differences"]["y_wall"]
     return {"axes": axes, "sampled_readout_times": list(TIMES), "uniform_error_enclosure": False,
-            "source_or_lift_changes_between_axes": False, "ODE_tolerance_refined": False}
+            "source_or_lift_changes_between_axes": False, "ODE_tolerance_refined": True,
+            "ODE_y_difference_over_cache_y_difference": ode_difference/cache_difference if cache_difference else None}
 
 
 def compare():
     from recursive_horizons.nsc_atlas_scalar_evolution import solve_scalar_correction
     restored = restore_inputs()
     solutions = []
-    for count, nodes in CASES:
+    for (count, nodes), ode in zip(CASES, ODE_CASES):
         solution = solve_scalar_correction(restored.forcing[count], restored.lift,
-            np.linspace(restored.domain["U0"], restored.domain["Ub"], nodes), **ODE)
+            np.linspace(restored.domain["U0"], restored.domain["Ub"], nodes), **ode)
         saved = solution.summary(TIMES)
         saved["cache_times"] = count
         saved["interior_samples"] = [_plain(solution.bulk(np.minimum(solution.grid, row["U_wall"]), row["t"]))
@@ -148,15 +152,15 @@ def compare():
             "scalar_kernel_values_max": restored.shared.kernel_values_max,
             "rhs_calls": sum(row["rhs_calls"] for row in solutions),
             "readout_rhs_calls": sum(row["readout_rhs_calls"] for row in solutions),
-            "correction_solves": 3, "leading_field_solves": 0, "wall_solves": 0,
+            "correction_solves": 4, "leading_field_solves": 0, "wall_solves": 0,
             "new_forcing_slices": 0, "new_boundary_jets": 0}}
 
 
-def _validate_solution(saved, restored, count, nodes):
+def _validate_solution(saved, restored, count, nodes, ode):
     from recursive_horizons.nsc_atlas_scalar_evolution import SCHEMA as SOLVER_SCHEMA, SCOPE as SOLVER_SCOPE, reference_kernel
     if saved["schema"] != SOLVER_SCHEMA or saved["scope"] != SOLVER_SCOPE or saved["cache_times"] != count:
         raise ValueError("scalar evolution solution declaration mismatch")
-    cache_record._same(saved["settings"], dict(grid_nodes=nodes, **ODE), "solver settings")
+    cache_record._same(saved["settings"], dict(grid_nodes=nodes, **ode), "solver settings")
     cache_record._same(saved["domain"], restored.domain, "solution domain")
     rows, interiors = saved["wall_samples"], saved["interior_samples"]
     if (not isinstance(rows, list) or len(rows) != 17 or [row["t"] for row in rows] != list(TIMES)
@@ -252,10 +256,10 @@ def validate_record(record):
         cache_record._same(record["domain"], restored.domain, "restored domain")
         cache_record._same(record["inputs"], restored.receipt, "input authentication")
         cache_record._same(record["geometry_restoration_defects"], restored.geometry_defects, "restored geometry")
-        if not isinstance(record["solutions"], list) or len(record["solutions"]) != 3:
-            raise ValueError("scalar evolution requires three fixed-axis solutions")
-        for saved, (count, nodes) in zip(record["solutions"], CASES):
-            _validate_solution(saved, restored, count, nodes)
+        if not isinstance(record["solutions"], list) or len(record["solutions"]) != 4:
+            raise ValueError("scalar evolution requires four fixed-axis solutions")
+        for saved, (count, nodes), ode in zip(record["solutions"], CASES, ODE_CASES):
+            _validate_solution(saved, restored, count, nodes, ode)
         cache_record._same(record["sampled_input_indicators"], input_indicators(restored.cache), "sampled input indicator")
         cache_record._same(record["diagnostics"], comparison_diagnostics(record["solutions"]), "axis comparison")
         cost = record["execution"]
@@ -264,14 +268,14 @@ def validate_record(record):
         _count(cost["scalar_kernel_values_max"], "kernel ceiling")
         if cost["cpu_seconds"] > 120 or cost["cpu_seconds_max"] != 120 or cost["scalar_kernel_values_max"] != 30_000_000:
             raise ValueError("scalar evolution budget changed or exceeded")
-        for key, maximum in (("scalar_kernel_values", 30_000_000), ("rhs_calls", 18000), ("readout_rhs_calls", 51)):
+        for key, maximum in (("scalar_kernel_values", 30_000_000), ("rhs_calls", 24000), ("readout_rhs_calls", 68)):
             _count(cost[key], key, maximum)
         for key in ("rhs_calls", "readout_rhs_calls"):
             if cost[key] != sum(solution[key] for solution in record["solutions"]):
                 raise ValueError("scalar evolution cumulative RHS accounting mismatch")
         if cost["scalar_kernel_values"] != sum(solution["kernel_values"] for solution in record["solutions"]):
             raise ValueError("scalar evolution cumulative kernel accounting mismatch")
-        for key, expected in (("correction_solves", 3), ("leading_field_solves", 0), ("wall_solves", 0),
+        for key, expected in (("correction_solves", 4), ("leading_field_solves", 0), ("wall_solves", 0),
                               ("new_forcing_slices", 0), ("new_boundary_jets", 0)):
             if type(cost[key]) is not int or cost[key] != expected:
                 raise ValueError("scalar evolution restored-input accounting mismatch")
@@ -314,7 +318,7 @@ def check(directory):
         raise ValueError("scalar evolution output mismatch")
     validate_record(json.loads(raw))
     return {"checked": str(directory), "physical_solves": 0, "propagated_scalar_solves": 0,
-            "saved_discrete_readouts_checked": 51}
+            "saved_discrete_readouts_checked": 68}
 
 
 def main():
