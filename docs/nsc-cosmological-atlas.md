@@ -97,9 +97,10 @@ The [conservative evolution connection](nsc-atlas-scalar-evolution.md)
 then caches the known exterior forcing and evolves the correction on the
 original null coordinates. The [first propagated result](current-result.md#exterior-scalar-correction-16-october-2026)
 now measures its formal wall value and material derivative with separate
-cache, grid and ODE comparisons. Reflected cap forcing and the central
-clock pullback are the next observer connection; finite-amplitude control
-remains a separate requirement.
+cache, grid and ODE comparisons. The [central reconstruction](nsc-atlas-central-scalar-response.md)
+connects that trace to the observer by reflected incoming-ray integration
+and its central-clock pullback. Finite-amplitude control remains a
+separate requirement.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)

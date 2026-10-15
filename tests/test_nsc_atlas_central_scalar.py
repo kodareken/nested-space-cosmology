@@ -125,6 +125,10 @@ def test_incoming_integral_matches_closed_static_mass_and_independent_null_rule(
     # Dropping f(u) would give c0=q rather than 2*atanh(r), including at centre.
     assert result["reflected_profile_defect"] < 5e-16
     assert max(field.profile_sizes+field.jet_sizes) <= 513
+    center = result["center_samples"]
+    assert len(center) == 2 and 0 < center[0]["r"] < center[1]["r"] < .01
+    for row in center:
+        assert row["K1_over_r_squared"] == pytest.approx(4/135+4*row["r"]**2/189, abs=2e-7)
 
 
 def test_forced_null_polynomial_cancels_at_regular_centre_with_moving_wall():
@@ -205,6 +209,29 @@ def test_incoming_rejects_outside_domain_and_optical_queries_are_bounded():
     wall, cap, profile, integrals = zero_inputs()
     with pytest.raises(ValueError, match="coordinates"):
         reconstruct(wall, cap, profile, {**integrals, "q": .91})
+    with pytest.raises(ValueError, match="reference data"):
+        reconstruct(wall, {**cap, "q0_s": 100.}, profile, integrals)
+
+
+def test_entire_reconstruction_has_cubic_amplitude_scaling():
+    wall, cap, profile, integrals = zero_inputs()
+    wall.update(V1=.2, V1_s=-.1)
+    cap.update(e=.03, e_s=-.04, T1=.1, T1_s=.02, nu_E_wall=.01, delta_E_wall=-.3)
+    profile.update(f=.4, f_prime=.7, f_second=-.2)
+    integrals.update(forcing_integral=.4, optical_time_integral=-.7, lambda_plus_integral=.3)
+    inputs = dict(y_wall=.6, y_wall_s=-.2, J_minus=.3)
+    original = reconstruct(wall, cap, profile, integrals, **inputs)
+    scale = -.6
+    changed_wall = {**wall, **{key: wall[key]*scale**2 for key in ("V1", "V1_s")}}
+    changed_cap = {**cap, **{key: cap[key]*scale**2 for key in
+        ("e", "e_s", "T1", "T1_s", "nu_E_wall", "delta_E_wall")}}
+    changed_integrals = {**integrals, "forcing_integral": integrals["forcing_integral"]*scale**3,
+        **{key: integrals[key]*scale**2 for key in ("optical_time_integral", "lambda_plus_integral")}}
+    changed = reconstruct(changed_wall, changed_cap, {key: value*scale for key, value in profile.items()},
+        changed_integrals, **{key: value*scale**3 for key, value in inputs.items()})
+    for key in ("p1_center", "exterior_trace_term", "arrival_rate_term", "arrival_shift_term",
+                "outgoing_wall_term", "incoming_forcing_term", "static_center_derivative"):
+        assert changed[key] == pytest.approx(original[key]*scale**3, abs=2e-15)
 
 
 def test_live_adapter_reuses_geometry_but_not_supplied_scalar_coefficients():

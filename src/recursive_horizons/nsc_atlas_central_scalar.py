@@ -98,6 +98,7 @@ def incoming_response_integrals(cap_field, q, x, *, radial_order=16, ray_order=1
     integrands = {name: np.empty(len(radii)) for name in ("forcing", "optical_time", "lambda_plus")}
     reflected_defect = central_defect = 0.
     optical_nodes = 0
+    center_samples = []
     for first in range(0, len(radii), MAX_QUERY):
         rs = radii[first:first+MAX_QUERY]
         ts = q-np.arctanh(rs)
@@ -107,6 +108,10 @@ def incoming_response_integrals(cap_field, q, x, *, radial_order=16, ray_order=1
         A = 1-rs*rs
         W1 = 2*mass/rs**3-p*p/3-pT*pT/(6*A)+A*pr*pr/6
         c0 = rs*p  # Stable regular field, including its reflected term.
+        for index in range(min(2-len(center_samples), len(rs))):
+            K1 = float(A[index]*W1[index]/4)
+            center_samples.append({"r": float(rs[index]), "T": float(ts[index]),
+                "W1": float(W1[index]), "K1": K1, "K1_over_r_squared": K1/float(rs[index]**2)})
         D = lapse-2*mass/(rs*A)
         integrands["forcing"][first:first+len(rs)] = W1*c0
         integrands["optical_time"][first:first+len(rs)] = optical["D_T"]/A
@@ -130,6 +135,7 @@ def incoming_response_integrals(cap_field, q, x, *, radial_order=16, ray_order=1
     return {"q": q, "x": x, "u_wall": u, **result, "ray_nodes": len(radii),
             "optical_radial_nodes": optical_nodes, "reflected_profile_defect": reflected_defect,
             "central_profile_defect": central_defect, "analytic_regular_center_K1": 0.,
+            "center_samples": center_samples,
             "first_arrival_margin": q-cap_field.domain["qa"],
             "last_arrival_margin": cap_field.domain["qb"]-q,
             "no_return_margin": cap_field.domain["qa"]-u}
@@ -164,6 +170,10 @@ def reconstruct_central_scalar(wall, cap_row, profile, integrals, *, y_wall,
     Q, Qminus = (bm+v)/A, (bm-v)/A
     if Q <= 0 or Qminus <= 0:
         raise ValueError("central reconstruction requires monotone cap null labels")
+    for key, expected in (("x", x), ("q0_s", Q), ("V0_s", Vs)):
+        if key in cap_row and not math.isclose(_number(cap_row[key], key), expected,
+                                               rel_tol=2e-11, abs_tol=2e-12):
+            raise ValueError("saved cap and current wall reference data differ: "+key)
     reference = reference_coefficients(x)
     acceleration, bm_x, bp_x = [float(reference[key]) for key in
         ("radial_acceleration", "beta_minus_x", "beta_plus_x")]

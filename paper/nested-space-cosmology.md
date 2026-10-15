@@ -44,7 +44,8 @@ areal radius and its affine slope. Transverse constraint transport then
 determines a geometric mass response on that initial null surface, including
 a negative quadratic coefficient after the compact input. The existing wall
 field traces also close an analytic exterior-side mass functional through
-both null fluxes and the full conformal transformation. Keeping the cap vacuum at the actual radius
+both null fluxes and the full conformal transformation. Retaining the cap's
+radius-dependent vacuum background at the actual radius
 now supplies a compatible cap mass functional and a regular, quiet-anchored
 wall displacement equation. Two-sided mass transport also preserves the
 temporal and normal junction conditions. The same prepared field now drives
@@ -1408,7 +1409,7 @@ $z_U|_W=0$. Its conservative evolution is
 
 $$
 z_V=F(U,V)-F(U_0,V)
--\int_{U_0}^{U}[K_0(z+g_1+B)+G],dU.
+-\int_{U_0}^{U}[K_0(z+g_1+B)+G]\,dU.
 $$
 
 The fixed-$U$ discretization clips inactive nodes to the moving wall.
@@ -1429,13 +1430,14 @@ The lift uses 41 training knots and 40 withheld queries. The exterior
 forcing cache independently compares 17/33 time knots against 32 withheld
 times, including radial midpoint queries.
 
-Four evolutions then hold the physical source, field and geometry fixed:
+Four evolutions then hold the physical source, 129-node leading field and
+257-knot reference geometry fixed:
 
 | Numerical comparison | Maximum $y_W$ change | Maximum $dy_W/dV$ change |
 | --- | ---: | ---: |
-| 17/33 forcing times, 129 correction nodes | $1.756\times10^{-3}$ | $1.327\times10^{-4}$ |
-| 65/129 correction nodes, 33 forcing times | $6.985\times10^{-6}$ | $9.317\times10^{-5}$ |
-| Relative tolerance $2\times10^{-6}/2\times10^{-7}$, fine cache/grid | $3.729\times10^{-9}$ | $3.956\times10^{-8}$ |
+| 17/33 forcing times, 129 correction nodes | $1.755\times10^{-3}$ | $1.326\times10^{-4}$ |
+| 65/129 correction nodes, 33 forcing times | $6.984\times10^{-6}$ | $9.317\times10^{-5}$ |
+| Relative tolerance $2\times10^{-6}/2\times10^{-7}$, fine cache/grid | $3.728\times10^{-9}$ | $3.956\times10^{-8}$ |
 
 The finer sampled peak is $0.2679995064$; the terminal coefficient is
 $0.2194607242$. The cache-time change is 0.655% of that peak, the grid
