@@ -55,6 +55,28 @@ frame cancellation is an algebraic check, not an independently evolved
 second solution. Refine ray order or other inputs only if the outcome
 requires it; a budget failure or non-refining result gets a diagnosis first.
 
+**First central outcome:** the five-cut radial 16/32 pair takes 27.9375
+process-CPU seconds and 14,498,108 scalar kernels. The maximum central
+coefficient magnitude is 34,413.8691, and its maximum radial change is
+$1.09781\times10^{-5}$. The fine incoming travel integral reproduces the
+authenticated earlier calculation within $1.43\times10^{-14}$. Quiet
+recovery is below $3.49\times10^{-137}$. This is a large formal coefficient
+relative to the sampled leading-field peak 42.2137; it does not fix an
+admissible finite amplitude.
+
+The incoming forcing and optical time derivative are new integrals, so
+their ray-resolution sensitivity must also be measured. Authenticate and
+reuse the radial-32/ray-16 central result, then evaluate radial-32/ray-32
+at the same five cuts. One fresh 129-node field with 257 geometry knots
+and the unchanged derivative/centre settings supplies the new rays; the
+old wall, cap clock, outgoing boundary and exterior response remain reused.
+The complete new calculation, including preparation, has 120 process-CPU
+seconds and 30 million kernels. No new wall/cap-clock/scalar evolution is
+admitted. Compare the incoming forcing, optical derivative, travel
+integral, every central contribution and total coefficient. This separate
+ray comparison retains the same physical inputs; unresolved drift or a
+budget failure requires diagnosis before another resolution increase.
+
 ## Conservative scalar evolution admission, 16 October 2026
 
 The [evolution connection](nsc-atlas-scalar-evolution.md) reuses the already
