@@ -8,12 +8,14 @@ of the software release. Future writing updates these files. The
 
 ## The common research thread
 
-The current working manuscript includes the
-[smooth exterior response](nsc-atlas-bulk-response.md): the prepared field
-now drives a calculated radius and lapse on the original characteristic
-rectangle. Independent mass transport and null constraints check that
-propagation. The next connection is its continuation to the moving wall
-and through the cap, needed for corrected observer measurements.
+The current working manuscript carries the prepared field through the
+[smooth exterior response](nsc-atlas-bulk-response.md),
+[moving wall](nsc-atlas-wall-evolution.md) and
+[cap metric and central null clock](nsc-atlas-cap-response.md).
+Independent radial and timelike mass paths check this quadratic geometry.
+The central arrival map now includes both travel through the changed cap
+and the moved wall event at a fixed exterior label. The higher-order scalar
+amplitude and finite-amplitude control are the next dynamical connection.
 
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.
@@ -53,9 +55,10 @@ metric and wall displacement both included in that variation.
 The [wall-mass closure](nsc-atlas-wall-mass-closure.md) now shows that the
 fixed leading trace supplies an analytic exterior-side mass functional,
 using both null fluxes and the full frame correction. Its numerical
-evaluation remains separate from the unsolved cap/wall geometry. The next
-decision is a controlled finite evaluation or a named remaining junction
-input, according to which unlocks the next physical connection.
+evaluation and compatible cap/wall response are now recorded in the
+successor calculations above. Those formal coefficients retain their
+perturbative domain; formation, stability and a physical preparation
+mechanism remain later questions.
 
 ## Supporting and historical editions
 

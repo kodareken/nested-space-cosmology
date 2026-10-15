@@ -2,6 +2,82 @@
 
 Current presentation, 15 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Smooth cap and central arrival clock, 15 October 2026
+
+The [cap calculation](nsc-atlas-cap-response.md) reconstructs the smooth
+interior metric from the same prepared scalar that drives the exterior
+and moving wall. It keeps the reflected field, transformed cap potential
+and regular centre. The lapse is normalized so the cap time coordinate
+is Jordan proper time at the central observer. No independent cap source,
+mass constant or observer-clock history is added.
+
+The radial Einstein mass agrees with the independently integrated timelike
+wall mass. The metric and existing wall displacement determine the wall's
+cap-time correction and the inward null-arrival correction. Converting
+from fixed wall proper time to a fixed exterior input label includes the
+already computed exterior embedding shift.
+
+At the final reference event $x=0.55$, the primary setting has 257 field
+nodes, 257 geometry knots, 16-point radial/ray rules and 16 cap clock panels:
+
+| Dimensionless quadratic coefficient | Value |
+| --- | ---: |
+| Cap Einstein excess mass $\nu_E$ | 17.7590647726 |
+| Cap Jordan excess mass $\nu_J$ | 17.7590784210 |
+| Cap lapse $\delta_E$ | 103.4370285720 |
+| Wall cap-time shift $T_1$ | -8.4727761614 |
+| Central arrival at fixed proper wall time $\Delta_C$ | -128.0670033577 |
+| Central arrival at fixed exterior label $\left.\Delta_C\right|_V$ | -130.3664151052 |
+
+These are coefficients in expansions such as
+$T_C(V)=q_0(V)+\alpha\left.\Delta_C\right|_V+O(\alpha^2)$, with
+$\alpha=\kappa_4\varepsilon^2/\ell^2$. They are not finite-amplitude
+time shifts. The final conversion between the two clock comparisons is
+2.2994117476 in the same coefficient units.
+
+The [8/16 radial comparison](../results/development/nsc-atlas-cap-response-v1/radial/response.json)
+reduces the maximum cap mass-path discrepancy from
+$1.49\times10^{-4}$ to $2.52\times10^{-9}$. This maximum includes
+the cap clock quadrature nodes and nine saved wall cuts. The direct
+induced-metric residual falls to $1.33\times10^{-8}$; the derivation
+shows that it is the same mass mismatch multiplied by $2/[xA_0(x)]$,
+not an additional independent error estimate. The radial comparison
+changes the arrival coefficient by at most $6.30\times10^{-3}$.
+
+The [129/257 field comparison](../results/development/nsc-atlas-cap-response-v1/field/response.json)
+changes the fixed-label arrival coefficient by at most
+$6.42\times10^{-7}$. The [8/16 ray comparison](../results/development/nsc-atlas-cap-response-v1/ray/response.json)
+changes it by $2.31\times10^{-5}$; the independent
+[16/32 ray refinement](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json),
+with 129 field nodes held fixed, changes it by only $1.84\times10^{-9}$.
+Changing the [regular-centre threshold](../results/development/nsc-atlas-cap-response-v1/centre_radius/response.json)
+from $10^{-4}$ to $10^{-3}$ changes it by at most $9.53\times10^{-10}$.
+The primary small-radius choice reduces derivative-query cost while
+retaining agreement in the reported coefficients.
+
+Signed quadrature contributions locate the negative ray integral inside
+the cap. At the final primary cut, the positive contribution is
+$6.47\times10^{-9}$ and the negative contribution is
+$-112.0145129776$. Their sum is $-112.0145129711$.
+The centre-normalized lapse can outweigh the positive mass term in the
+optical integrand. The recorded extrema are sampled values, not bounds
+over the continuous ray.
+
+The first five completed records retain their exact source context at
+`19983a7b4730d1fdc8e59ae4ba2f3efd560913a6`. The geometry comparison
+exposed an overly strict validator: interpolated arrival endpoints differed
+by at most $2.22\times10^{-16}$. The corrected validator compares domains
+within an absolute $10^{-13}$ tolerance and keeps the actual coordinates.
+It does not alter any field, metric equation or saved result. The
+[reproduction guide](reproducing.md) names the source context explicitly.
+
+This connects the formal sourced exterior, moving wall and regular cap
+to a central null-clock correction. The scalar amplitude at the next
+order still requires its perturbed wave equation and a stated continuation
+of the preparation. A nonzero finite-amplitude range, remainder estimate,
+formation and stability remain to be established. The refinements here
+measure numerical sensitivity; they do not supply those stronger results.
+
 ## Moving wall and exterior clock, 15 October 2026
 
 The [wall calculation](nsc-atlas-wall-evolution.md) evaluates the same

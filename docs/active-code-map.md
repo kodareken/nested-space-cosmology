@@ -10,7 +10,8 @@ and [claim ledger](claim-ledger.md).
 
 | Need | Owner |
 |---|---|
-| Retained-wedge field, wall displacement and exterior clock | [Derivation](nsc-atlas-wall-evolution.md), `WedgeField` in the [field evaluator](../src/recursive_horizons/nsc_atlas_wedge_field.py), `solve_wall_evolution()` in the [wall solver](../src/recursive_horizons/nsc_atlas_wall_evolution.py), [comparison recorder](../scripts/record_nsc_atlas_wall_evolution.py), [wall controls](../tests/test_nsc_atlas_wall_evolution.py) and [field controls](../tests/test_nsc_atlas_wedge_field.py); computed formal coefficients with separate field, radial, derivative, time, geometry, source and ODE refinements. The cap metric and central clock remain open. |
+| Smooth cap metric and central null-arrival clock | [Derivation](nsc-atlas-cap-response.md), `CapLeadingField` in the [field adapter](../src/recursive_horizons/nsc_atlas_cap_field.py), `solve_cap_response()` in the [metric/clock solver](../src/recursive_horizons/nsc_atlas_cap_response.py), [comparison recorder](../scripts/record_nsc_atlas_cap_response.py), [field controls](../tests/test_nsc_atlas_cap_field.py) and [metric controls](../tests/test_nsc_atlas_cap_response.py); formal coefficients are being evaluated with radial/timelike mass checks and distinct fixed-proper-time and fixed-exterior-label arrivals. |
+| Retained-wedge field, wall displacement and exterior clock | [Derivation](nsc-atlas-wall-evolution.md), `WedgeField` in the [field evaluator](../src/recursive_horizons/nsc_atlas_wedge_field.py), `solve_wall_evolution()` in the [wall solver](../src/recursive_horizons/nsc_atlas_wall_evolution.py), [comparison recorder](../scripts/record_nsc_atlas_wall_evolution.py), [wall controls](../tests/test_nsc_atlas_wall_evolution.py) and [field controls](../tests/test_nsc_atlas_wedge_field.py); computed formal coefficients with separate field, radial, derivative, time, geometry, source and ODE refinements, supplying the cap calculation above. |
 | Radial reconstruction and rectangle overlap | [Wall owner](nsc-atlas-wall-evolution.md), [overlap recorder](../scripts/record_nsc_atlas_wall_overlap.py), [controls](../tests/test_record_nsc_atlas_wall_overlap.py), [record](../results/development/nsc-atlas-wall-overlap-v1/response.json); independent finite comparison at the common characteristic leg, without a finite-amplitude error enclosure. |
 | Smooth exterior metric propagation | [Derivation](nsc-atlas-bulk-response.md), [bulk solver](../src/recursive_horizons/nsc_atlas_bulk_response.py), [field evaluator](../src/recursive_horizons/nsc_atlas_prepared_response.py), [comparison producer](../scripts/record_nsc_atlas_bulk_response.py); radius/lapse coefficients on the genuine initial rectangle, with independent mass flux and null-constraint diagnostics. |
 | Shared conformal candidate specification | `model_specification()` and `validate_model_specification()` in [the atlas model](../src/recursive_horizons/nsc_cosmological_atlas.py); action, state, clocks, parameter roles and callable operators, with [tests](../tests/test_nsc_cosmological_atlas.py). |
@@ -33,7 +34,7 @@ and [claim ledger](claim-ledger.md).
 The six bulk-v1 records retain their original source bindings. The
 [publication check](../scripts/check_publication.py) explicitly authenticates
 that named historical context through [the replay helper](../scripts/replay_history.py);
-it checks new wall-evolution records against the current sources. Neither
+it checks wall-evolution and cap-response records against the current sources. Neither
 authentication path reruns the physical calculations.
 
 The source-fixed incoming gate remains OPEN and its campaign is paused. Its

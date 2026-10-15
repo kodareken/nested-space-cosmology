@@ -7,9 +7,11 @@ Authentication checks declarations and bytes without solving those equations.
 from __future__ import annotations
 
 import argparse
+from functools import lru_cache
 import json
 import math
 from pathlib import Path
+import subprocess
 import time
 
 import numpy as np
@@ -19,6 +21,8 @@ from record_nsc_atlas_wall_evolution import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
+ORIGINAL_SOURCE_CONTEXT = "19983a7b4730d1fdc8e59ae4ba2f3efd560913a6"
+SOURCE_CONTEXTS = ("current", ORIGINAL_SOURCE_CONTEXT)
 SCHEMA = "nsc-atlas-cap-response-comparison-v1"
 STATUS = "FORMAL_CAP_METRIC_NULL_CLOCK_REFINEMENT"
 SCOPE = "quadratic cap metric and central null clock; no higher-order scalar amplitude or finite-amplitude enclosure"
@@ -68,8 +72,27 @@ SAMPLE_KEYS = {"t", "V", "x", "T0_wall", "q0", "nu_E_wall", "nu_J_wall", "delta_
 PROFILE_COUNTS = {"profile_requested", "wall_points", "second_points", "cache_hits"}
 
 
-def source_bindings():
-    return {name: digest((ROOT/name).read_bytes()) for name in SOURCES}
+@lru_cache(maxsize=4)
+def _original_bindings(root, source_context):
+    """Read only the explicitly named source snapshot; never execute its code."""
+    bindings = {}
+    for name in SOURCES:
+        try:
+            raw = subprocess.check_output(
+                ["git", "-C", str(root), "show", source_context+":"+name], stderr=subprocess.PIPE)
+        except (OSError, subprocess.CalledProcessError) as error:
+            raise ValueError("pinned cap source unavailable at "+source_context+
+                             "; a full Git checkout is required: "+name) from error
+        bindings[name] = digest(raw)
+    return bindings
+
+
+def source_bindings(source_context="current"):
+    if source_context not in SOURCE_CONTEXTS:
+        raise ValueError("unknown explicit cap source context")
+    if source_context == "current":
+        return {name: digest((ROOT/name).read_bytes()) for name in SOURCES}
+    return dict(_original_bindings(ROOT, source_context))
 
 
 def differences(summaries):
@@ -193,10 +216,13 @@ def validate_record(record, kind):
                            for key in ("radial_order", "ray_order", "time_panels"))):
                 raise ValueError("cap comparison solution settings or scope mismatch")
             domain = solution["domain"]
-            if not isinstance(domain, dict) or set(domain) != DOMAIN_KEYS or domain != solutions[0]["domain"]:
+            if not isinstance(domain, dict) or set(domain) != DOMAIN_KEYS:
                 raise ValueError("cap comparison domains differ")
             for value in domain.values():
                 real(value, "domain")
+            if any(not math.isclose(domain[key], solutions[0]["domain"][key], rel_tol=0, abs_tol=1e-13)
+                   for key in DOMAIN_KEYS):
+                raise ValueError("cap comparison domains differ beyond endpoint roundoff")
             if not (domain["U0"] < domain["Ua"] < domain["Ub"] < 0
                     and domain["Va"] < domain["Vb"] < 0 and domain["U0"]*domain["Va"] < 1
                     and domain["Ta"] < domain["Tb"] < domain["qb"] and domain["qa"] < domain["qb"]
@@ -305,11 +331,11 @@ def create(directory, kind):
             "execution": record["execution"], "differences": record["cap_differences"]}
 
 
-def check(directory):
+def check(directory, *, source_context="current"):
     directory = Path(directory)
     manifest = json.loads((directory/"manifest.json").read_bytes())
     if (manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()
+            or manifest.get("source_bindings") != source_bindings(source_context)
             or manifest.get("comparison") not in VARIATIONS):
         raise ValueError("cap comparison source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "response.json"}
@@ -320,7 +346,8 @@ def check(directory):
     if path.is_symlink() or manifest["outputs"]["response.json"] != {"sha256": digest(raw), "bytes": len(raw)}:
         raise ValueError("cap comparison output mismatch")
     validate_record(json.loads(raw), manifest["comparison"])
-    return {"checked": str(directory), "comparison": manifest["comparison"], "cap_solves": 0}
+    return {"checked": str(directory), "comparison": manifest["comparison"],
+            "source_context": source_context, "cap_solves": 0}
 
 
 def main():
@@ -328,8 +355,13 @@ def main():
     parser.add_argument("--comparison", choices=VARIATIONS, default="field")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--source-context", choices=SOURCE_CONTEXTS, default="current",
+                        help="explicit authentication context; creation always uses current sources")
     args = parser.parse_args()
-    print(json.dumps(check(args.output) if args.check else create(args.output, args.comparison), sort_keys=True))
+    if not args.check and args.source_context != "current":
+        parser.error("--source-context selects authentication only; creation uses current sources")
+    print(json.dumps(check(args.output, source_context=args.source_context)
+                     if args.check else create(args.output, args.comparison), sort_keys=True))
 
 
 if __name__ == "__main__":

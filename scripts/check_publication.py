@@ -871,6 +871,19 @@ def check_wall_overlap_evidence(errors: list[str]) -> None:
         errors.append("wall/rectangle overlap evidence: " + str(error))
 
 
+def check_cap_response_evidence(errors: list[str]) -> None:
+    """Authenticate all declared cap comparisons without metric or ray replay."""
+    from record_nsc_atlas_cap_response import ORIGINAL_SOURCE_CONTEXT, VARIATIONS, check
+    original = {"field", "radial", "ray", "centre_radius", "ray_fine"}
+    for comparison in VARIATIONS:
+        try:
+            context = ORIGINAL_SOURCE_CONTEXT if comparison in original else "current"
+            check(ROOT / "results/development/nsc-atlas-cap-response-v1" / comparison,
+                  source_context=context)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            errors.append(f"cap response {comparison} evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -913,6 +926,7 @@ def main() -> int:
     check_bulk_response_history(errors)
     check_wall_evolution_evidence(errors)
     check_wall_overlap_evidence(errors)
+    check_cap_response_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

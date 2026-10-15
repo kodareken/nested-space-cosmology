@@ -68,9 +68,12 @@ $U=U_a$. The [retained-wedge successor](nsc-atlas-wall-evolution.md) now
 computes radial mass and lapse integrals up to the wall, its formal
 displacement and its exterior clock correction. The same dense field
 solution supplies the integrands on the physical exterior domain.
-The cap metric, central observer clock, corrected scalar signal and
-finite-amplitude validity remain open; these formal coefficients do not
-establish a complete cap/wall/exterior evolution or its stability.
+The [cap reconstruction](nsc-atlas-cap-response.md) now supplies its smooth
+mass and lapse, regular centre and central proper-clock normalization.
+Independent radial/timelike cap masses agree, and inward null integration
+gives the corrected central arrival at a fixed exterior label. The next
+scalar amplitude and finite-amplitude validity remain open; these formal
+coefficients do not establish a complete nonlinear evolution or its stability.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
@@ -125,8 +128,8 @@ that every open branch succeeds.
 | `wall-normal-force` | The [full normal projection and Gauss identity](nsc-atlas-scalar-normal-force.md) establish zero additional normal-stress jump for the conformal probe. Fixed vacuum/tension sources require zero variation of mean curvature. | `bulk-backreaction` with this necessary boundary condition; it includes metric and wall displacement rather than setting displacement to zero. |
 | `wall-mass-transport` | The [analytic closure](nsc-atlas-wall-mass-closure.md) uses the fixed leading wall trace, its first derivative, quiet mass anchor and reference geometry. Both null fluxes plus the full frame term agree with original-frame improved-stress transport. | `wall-mass-evaluation` or `cap-wall-closure`; the quadratic exterior functional is closed, without numerical mass values or a solved coupled boundary. |
 | `wall-mass-evaluation` | The [retained-wedge calculation](nsc-atlas-wall-evolution.md) evaluates the boundary mass laws and compares an independent radial path, using the dense leading field and separate numerical controls. | Compatible mass data for the formal wall displacement and exterior clock; old waveform samples alone do not certify these integrals. |
-| `cap-wall-closure` | The [two-sided calculation](nsc-atlas-cap-wall-response.md) supplies the cap mass and regular wall-displacement functional, retaining vacuum and the actual-radius background. Temporal and normal matching agree with angular matching and mass transport. | `bulk-backreaction` and the retained-wedge evaluation with these boundary data; the cap metric and finite-amplitude remainder remain to be supplied. |
-| `bulk-backreaction` | The [smooth exterior response](nsc-atlas-bulk-response.md) solves the linear radius/lapse system on the initial rectangle, with separate numerical refinements and independent mass/null-constraint checks. The [retained-wedge successor](nsc-atlas-wall-evolution.md) computes the compatible wall displacement and exterior clock from radial reconstruction and the two-sided boundary laws. | Supply the cap metric, central observer clock and higher-order field; establish a finite-amplitude validity estimate before claiming the complete sourced configuration. |
+| `cap-wall-closure` | The [two-sided calculation](nsc-atlas-cap-wall-response.md) supplies the cap mass and regular wall-displacement functional, retaining vacuum and the actual-radius background. Temporal and normal matching agree with angular matching and mass transport. | `bulk-backreaction` and the retained-wedge evaluation with these boundary data; a finite-amplitude remainder remains to be supplied. |
+| `bulk-backreaction` | The [smooth exterior response](nsc-atlas-bulk-response.md) and [retained-wedge successor](nsc-atlas-wall-evolution.md) supply formal exterior geometry, wall displacement and exterior clock. The [cap calculation](nsc-atlas-cap-response.md) reconstructs the smooth interior metric and central null-arrival correction, checked against independent cap mass transport. | Solve the higher-order field with a stated source continuation and establish a finite-amplitude validity estimate for the sourced configuration. |
 | `inheritance-map` | Specify a physical transition/state map compatible with the regional laws; decide what is inherited rather than merely relabelled. | `regional-scales`, `branching-recurrence`. |
 | `regional-scales` | Fix regional rulers and dimensionless observables; decide whether a change is units, state, dressing or a different law. | Conditional coupling or propagation comparisons. |
 | `field-orientation` | Specify field lifts, conserved current and attachment orientation; decide which charge identifications are allowed. | A charge-transport or asymmetry calculation with a stated initial state. |
@@ -155,8 +158,10 @@ curve or normal-force result is needed for the identity itself. The
 two-sided reduction now closes the cap mass and conditional displacement
 law. The first smooth exterior rectangle is calculated. The retained-wedge
 evaluation now connects radial reconstruction to the two mass functionals,
-wall embedding and exterior clock. The cap metric and central observer
-clock remain the next connection.
+wall embedding and exterior clock. The cap metric and central null clock
+are now computed from the same prepared field. Their independent mass
+comparison closes this quadratic geometric connection; the next scalar
+amplitude and finite-amplitude remainder still need calculation.
 They supply prerequisites for interpreting the field as a gravitational source;
 they do not supply another proof of the waveform or a formation history.
 
@@ -429,10 +434,19 @@ subtracted at the actual radius. The [retained-wedge evaluation](nsc-atlas-wall-
 now connects the leading field to the wall displacement and exterior clock.
 Seven independent numerical refinements and an
 [overlap with the rectangle solver](../results/development/nsc-atlas-wall-overlap-v1/response.json)
-support these formal coefficients. The cap metric, central clock,
-corrected scalar signal, stability and finite-amplitude validity remain open.
+support these formal coefficients. The [cap reconstruction](nsc-atlas-cap-response.md)
+now supplies the regular interior metric and central arrival correction,
+with independent cap mass transport and numerical controls. The next scalar
+amplitude, stability and finite-amplitude validity remain open.
 
 ## Owners and reproducible output
+
+- [Smooth cap and central clock](nsc-atlas-cap-response.md), the
+  [cap field](../src/recursive_horizons/nsc_atlas_cap_field.py),
+  [metric/clock integrator](../src/recursive_horizons/nsc_atlas_cap_response.py)
+  and [recorder](../scripts/record_nsc_atlas_cap_response.py) connect the
+  same prepared scalar to an interior mass/lapse and null-arrival map.
+  The radial and timelike mass paths are compared independently.
 
 - [Retained-wedge field and moving wall](nsc-atlas-wall-evolution.md), the
   [field evaluator](../src/recursive_horizons/nsc_atlas_wedge_field.py),

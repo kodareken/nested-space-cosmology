@@ -281,3 +281,15 @@ checks the declared settings and bound source bytes without another
 physical solve. The [current result](current-result.md) owns measured
 outcomes and links the completed evidence. The higher-order scalar and
 finite-amplitude remainder remain the next dynamical connection.
+
+The first five completed comparisons (`field`, `radial`, `ray`,
+`centre_radius`, `ray_fine`) retain their exact producer context at
+`19983a7b4730d1fdc8e59ae4ba2f3efd560913a6`. A later validator correction
+allows absolute endpoint differences up to $10^{-13}$ between geometry
+interpolations, preserving their actual reported coordinates. The original
+exact dictionary comparison rejected a $2.22\times10^{-16}$ endpoint
+difference before writing the geometry record. No physical equation or
+saved numerical result changed. Checking those five records requires the
+explicit original source context and its Git objects; the remaining four
+use the corrected current producer. There is no automatic fallback from
+a failed current-source check to historical code.

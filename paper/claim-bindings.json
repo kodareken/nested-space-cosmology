@@ -138,6 +138,11 @@
       "section": "6.2",
       "status": "derived",
       "owner": "docs/nsc-ks-source-operator-majorant-v7.md"
+    },
+    "atlas-cap-response": {
+      "section": "13.12",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-cap-response.md"
     }
   },
   "findings": [
@@ -356,6 +361,14 @@
       "note": "docs/nsc-atlas-wall-evolution.md",
       "record": "results/development/nsc-atlas-wall-evolution-v1/field/response.json",
       "paper_section": "13.11"
+    },
+    {
+      "id": "atlas-cap-response",
+      "status": "measured",
+      "summary": "The same prepared scalar supplies a regular-centre cap metric and Jordan central proper clock. Independent radial and timelike cap masses agree under separate numerical controls. Wall normalization and inward null integration yield formal central arrival coefficients at fixed wall proper time and fixed exterior label. The higher-order scalar amplitude and finite-amplitude remainder remain open.",
+      "note": "docs/nsc-atlas-cap-response.md",
+      "record": "results/development/nsc-atlas-cap-response-v1/field/response.json",
+      "paper_section": "13.12"
     }
   ]
 }

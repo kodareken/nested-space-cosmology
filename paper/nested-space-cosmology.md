@@ -53,8 +53,11 @@ characteristic rectangle, checked against independent mass transport and
 null constraints. Extending the same field evaluator to the retained wedge
 now supplies a second mass path, the computed wall displacement and its
 exterior null-clock correction, with independent numerical refinements.
-The cap metric, central clock, next scalar response and finite-amplitude
-remainder remain open.
+Radial reconstruction now also supplies the smooth cap metric with a
+regular centre and fixed central proper clock. Its mass agrees with the
+independent wall transport, and inward null integration gives a central
+arrival correction at fixed exterior input label. The next scalar
+amplitude response and finite-amplitude remainder remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -920,11 +923,11 @@ $$
 
 The original-frame improved stress independently gives
 $d\mu_J/ds=L+dQ/ds$. Neither expression divides by $\beta$.
-This is an analytic conditional functional, not an evaluated mass curve
-or a proof that a coupled continuation exists. The wall tail supplies no
-late mass sign or plateau. Coupled bulk and wall evolution, the corrected
-observer response, physical preparation selection, stability and a
-finite-amplitude validity bound remain open. Detailed scalar-chain
+This analytic conditional functional is evaluated with the coupled
+quadratic geometry in Sections 13.10--13.12. The wall tail alone supplies
+no late mass sign or plateau. Physical preparation selection, the next
+scalar amplitude, stability and a finite-amplitude validity bound remain
+open. Detailed scalar-chain
 derivations belong to their owners; historical supporting calculations
 are cited at [Zenodo](https://doi.org/10.5281/zenodo.23090015).
 
@@ -1099,8 +1102,8 @@ between 17.16 and 21.91 process-CPU seconds within its 120-second budget.
 These are finite numerical comparisons, not rigorous error enclosures or
 a selected nonzero physical amplitude. They establish a sourced exterior
 metric response on the rectangle and provide its transverse radius/lapse
-data. Section 13.11 continues to the moving wall using the same source
-and material junction. The cap metric and central clock, full sourced
+data. Sections 13.11--13.12 continue to the moving wall and cap using the
+same source and material junction. The full finite-amplitude sourced
 configuration, corrected observer signal and finite-amplitude remainder
 have not yet been established.
 
@@ -1191,9 +1194,110 @@ that residual alone is not a total metric error estimate.
 These computations connect the sourced exterior and the two-sided mass
 functionals to an actual wall displacement and exterior null embedding at
 quadratic order. Their numerical differences are refinement diagnostics.
-The smooth cap metric, central arrival correction, next scalar waveform and
-finite-amplitude remainder are the remaining connections to the interior
-observer.
+Section 13.12 supplies the cap metric and central arrival correction.
+The next scalar waveform and finite-amplitude remainder remain to be
+calculated.
+
+### 13.12. The cap geometry changes the central arrival clock
+
+<!-- nsc-claim:atlas-cap-response -->
+
+Evidence: [field refinement](../results/development/nsc-atlas-cap-response-v1/field/response.json),
+[radial integration](../results/development/nsc-atlas-cap-response-v1/radial/response.json),
+[ray integration](../results/development/nsc-atlas-cap-response-v1/ray/response.json),
+[further ray refinement](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json),
+[wall-time integration](../results/development/nsc-atlas-cap-response-v1/time/response.json),
+[geometry](../results/development/nsc-atlas-cap-response-v1/geometry/response.json),
+[derivative quadrature](../results/development/nsc-atlas-cap-response-v1/derivative/response.json),
+[centre quadrature](../results/development/nsc-atlas-cap-response-v1/centre_order/response.json),
+[centre threshold](../results/development/nsc-atlas-cap-response-v1/centre_radius/response.json)
+and the [cap derivation](../docs/nsc-atlas-cap-response.md).
+
+The same prepared wall trace fixes the leading regular field in the cap.
+With $A_0=1-r^2$, $r_*=\operatorname{atanh}r$ and
+$f(q(V))=\chi_W(V)/\varepsilon$, where $q$ is the existing central
+arrival map,
+
+$$
+p(T,r)=\frac{f(T+r_*)-f(T-r_*)}{r},\qquad p(T,0)=2f'(T).
+$$
+
+The reflected term remains in the interior. Both profile derivatives and
+stable centre evaluations come from the existing field's continuum
+integral equations. The fixed cap vacuum transforms to a quadratic
+potential $H^2\phi^2$ in the Einstein frame; it is retained in the metric.
+
+For the polar-areal metric
+$ds_E^2/\ell^2=-e^{2\alpha\delta_E}A\,dT^2+A^{-1}dr^2+r^2d\Omega^2$,
+write $A=A_0-2\alpha\nu_E/r$. The radial constraints give
+
+$$
+\nu_{E,r}=\frac{r^2}{4}
+\left(\frac{p_T^2}{A_0}+A_0p_r^2\right)+\frac{r^2p^2}{2},
+\qquad
+\delta_{E,r}=\frac r2\left(p_r^2+\frac{p_T^2}{A_0^2}\right).
+$$
+
+Regularity fixes $\nu_E(T,0)=0$. Taking $T$ to be Jordan central proper
+time fixes $\delta_E(T,0)=-p(T,0)^2/12$. These constants require no new
+source history. At the wall the Jordan excess is
+$\nu_J=\nu_E-r^2A_0pp_r/6-r^3p^2/12$; its endpoint term agrees with
+$Q_-$, while the independent radial $\nu_E$ agrees with $\int L_-ds$.
+The scalar equation gives the corresponding mass-conservation identity.
+
+Let the cap wall time be $T_W=T_0+\alpha T_1$ and its Einstein radius
+be $x+\alpha e$, where $e=\rho-xp_W^2/12$. The material normalization
+fixes $T_1$ from the same mass, lapse and wall displacement. The inward
+null equation then gives the central arrival coefficient at fixed wall
+proper time:
+
+$$
+\Delta_C=T_1+\frac{e}{A_0(x)}
++\int_0^x\left[\frac{2\nu_E}{rA_0^2}-\frac{\delta_E}{A_0}\right]_{T=q_0-r_*(r)}dr,
+\qquad q_0=T_0+r_*(x).
+$$
+
+The integral is regular at the centre. At a fixed exterior null label,
+the moved emission event adds the correction
+
+$$
+\left.\Delta_C\right|_V=\Delta_C-q_{0,s}\frac{V_1}{V_{0,s}},
+\qquad T_C(V)=q_0(V)+\alpha\left.\Delta_C\right|_V+O(\alpha^2).
+$$
+
+At the final reference wall event, the primary 257-node calculation with
+16-point radial/ray rules and 16 cap clock panels gives:
+
+| Dimensionless quadratic coefficient | Recorded value |
+| --- | ---: |
+| Cap Einstein excess mass, $\nu_E$ | $17.7590647726$ |
+| Cap lapse, $\delta_E$ | $103.4370285720$ |
+| Wall cap-time shift, $T_1$ | $-8.4727761614$ |
+| Central arrival at fixed wall proper time, $\Delta_C$ | $-128.0670033577$ |
+| Central arrival at fixed exterior label, $\left.\Delta_C\right|_V$ | $-130.3664151052$ |
+
+The maximum radial/timelike cap-mass discrepancy is
+$2.52\times10^{-9}$ over the recorded cuts and cap clock quadrature
+nodes. Changing the field from 129 to 257 nodes changes the fixed-label
+arrival coefficient by at most $6.42\times10^{-7}$. The clock convention
+matters: the final exterior-label shift alone contributes $2.2994117476$
+to the difference between the two arrival coefficients.
+
+The metric ray integrand has both mass and lapse terms. With
+$D=\delta_E-2\nu_E/(rA_0)$, the radial constraints independently give
+$D_r=2\nu_E(1-3r^2)/(r^2A_0^2)-rp^2/A_0$ and the integrand is
+$-D/A_0$. Positive cap mass does not fix its sign. The records preserve
+signed quadrature contributions and sampled extrema; at the final primary
+cut the ray integral is $-112.0145129711$.
+
+The comparisons retain explicit fixed settings. Geometry, cap derivative,
+centre and further-ray controls use 129 field nodes to fit their complete
+pairs within the declared budget; the main field comparison uses both
+129 and 257. Refinement differences are numerical sensitivity estimates.
+No finite $\alpha$ is selected, and this metric null-arrival correction
+does not include the order-$\varepsilon\alpha$ scalar amplitude. Its
+perturbed wave equation, source continuation and finite-amplitude control
+are the next physical connection.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1474,7 +1578,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Exterior rectangle to the shared wall and cap | Can the computed transverse metric data be extended with the two mass functionals and quiet-anchored displacement, then matched to the smooth cap? | The wall embedding and central clock needed for a corrected observer response |
+| Formal sourced geometry to a controlled finite-amplitude response | With the quadratic cap/wall/exterior geometry and null clocks supplied, what scalar correction follows from the perturbed wave equation and a stated continuation of the preparation? | A corrected detector signal and a finite-amplitude validity estimate |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1518,8 +1622,10 @@ The prepared field now drives an evolved exterior radius and lapse on a
 finite characteristic rectangle, with mass-transport and null-constraint
 checks. The retained-wedge evaluation now compares independent radial and
 timelike mass paths, computes the two-sided wall displacement and fixes its
-exterior clock correction. Reconstruction of the cap and its central clock
-is the next step toward the corrected arrival map and scalar signal.
+exterior clock correction. Radial cap reconstruction now also fixes the
+central proper clock and a corrected null-arrival map, with independent
+cap-mass transport and numerical controls. The next scalar amplitude and
+finite-amplitude remainder remain to be supplied.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1550,6 +1656,7 @@ and renders their relationships without launching a new physics calculation.
 | Cap mass and wall displacement functional | [Vacuum subtraction and junction closure](../docs/nsc-atlas-cap-wall-response.md); [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json) |
 | Smooth exterior metric response | [Characteristic evolution and radial checks](../docs/nsc-atlas-bulk-response.md); [metric](../results/development/nsc-atlas-bulk-response-v1/metric/response.json), [field](../results/development/nsc-atlas-bulk-response-v1/field/response.json) and [derivative](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json) comparisons |
 | Moving wall and exterior clock | [Mass paths, displacement and clock](../docs/nsc-atlas-wall-evolution.md); [field](../results/development/nsc-atlas-wall-evolution-v1/field/response.json), [radial](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json) and [clock-time](../results/development/nsc-atlas-wall-evolution-v1/time/response.json) comparisons |
+| Smooth cap and central null clock | [Regular centre, metric and arrival map](../docs/nsc-atlas-cap-response.md); [field](../results/development/nsc-atlas-cap-response-v1/field/response.json), [radial](../results/development/nsc-atlas-cap-response-v1/radial/response.json) and [further ray](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json) comparisons |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

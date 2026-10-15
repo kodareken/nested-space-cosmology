@@ -8,6 +8,63 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [smooth cap calculation](nsc-atlas-cap-response.md) reconstructs the
+interior metric and central null-arrival correction from the same prepared
+field and wall solution. Its two clock coefficients keep proper wall time
+and exterior null label fixed, respectively. Create a comparison, then
+authenticate its saved settings, source bindings and bytes:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_cap_response.py --comparison field --output .build/cap-review
+python scripts/run_python.py scripts/record_nsc_atlas_cap_response.py --check --output .build/cap-review
+```
+
+Each complete comparison shares one 120 process-CPU-second and
+30-million-scalar-kernel budget across field preparation, wall evolution,
+cap reconstruction, rays and diagnostics. Authentication performs no
+physical solve. The baseline uses field/geometry 257/257, cap radial/ray
+orders 16/16 and 16 cap time panels; upstream wall radial order 2 and 8
+time panels retain the existing field-derivative order 32, source order 64
+and ODE tolerance $2\times10^{-9}$.
+
+| Comparison | Changed setting | Fixed field nodes |
+| --- | --- | --- |
+| `field` | 129 to 257 field nodes | Varied |
+| `radial` | Cap radial order 8 to 16 | 257 |
+| `ray` | Ray order 8 to 16 | 257 |
+| `time` | Cap time panels 8 to 16 | 257 |
+| `geometry` | Geometry knots 129 to 257 | 129 |
+| `derivative` | Continuum second-derivative order 2 to 4 | 129 |
+| `centre_order` | Small-radius quadrature order 8 to 16 | 129 |
+| `centre_radius` | Small-radius threshold $10^{-4}$ to $10^{-3}$ | 129 |
+| `ray_fine` | Ray order 16 to 32 | 129 |
+
+The field-129 overrides are explicit in each record's `comparison_base`;
+all other settings stay fixed within each pair. The default derivative
+order is 2, small-radius order 8 and threshold $10^{-4}$. These comparisons
+measure numerical sensitivity of formal metric and null-clock coefficients.
+They do not compute the higher-order scalar amplitude or a finite-amplitude
+error enclosure. Signed ray integrals and extrema refer to the quadrature
+samples, with no claim of continuum extrema.
+
+The retained `field`, `radial`, `ray`, `centre_radius` and `ray_fine` records
+keep the original source context `19983a7b4730d1fdc8e59ae4ba2f3efd560913a6`.
+Their bytes are unchanged after the declaration checker gained a
+$10^{-13}$ absolute tolerance for geometry-endpoint roundoff. Authenticate
+those five records with an explicit context, for example:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_cap_response.py --check --source-context 19983a7b4730d1fdc8e59ae4ba2f3efd560913a6 --output results/development/nsc-atlas-cap-response-v1/field
+```
+
+This reads the pinned source bytes from a full Git checkout, then checks
+the saved record with the current structural validator. It does not run
+the historical producer. Missing Git objects fail explicitly; there is no
+substitution of current sources. The other four retained comparisons use
+the current source context. The publication checker selects each of these
+contexts by its explicit comparison name, and authentication reports the
+selected context and zero cap solves.
+
 The [moving-wall calculation](nsc-atlas-wall-evolution.md) extends the same
 prepared field to its retained wedge and evaluates two mass paths, wall
 displacement and the exterior null clock. Create or authenticate a comparison:
@@ -21,7 +78,8 @@ Its independent comparison names are `field`, `radial`, `derivative`, `time`,
 `geometry`, `source` and `ode`. Each two-setting comparison includes its field
 solves and queries in one 120 process-CPU-second, 30-million-kernel budget.
 The saved summaries are formal quadratic coefficients and numerical
-refinement diagnostics. The corrected central observer is a later calculation.
+refinement diagnostics. The smooth-cap calculation above supplies the next
+metric and central-clock connection.
 
 The independent radial/mixed overlap uses the same field on the old rectangle
 and a different gravitational integration path:

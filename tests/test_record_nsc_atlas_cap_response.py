@@ -2,6 +2,8 @@
 from copy import deepcopy
 import json
 import math
+import subprocess
+import sys
 import time
 from types import SimpleNamespace
 
@@ -166,4 +168,68 @@ def test_mid_calculation_source_change_cannot_create_evidence(isolated, monkeypa
     monkeypatch.setattr(tool, "compare", changed)
     with pytest.raises(RuntimeError, match="inputs or runtime changed"):
         tool.create(isolated, "radial")
+    assert not isolated.exists()
+
+
+def test_geometry_endpoint_roundoff_is_preserved_but_domain_drift_fails():
+    record = synthetic("geometry")
+    domain = record["solutions"][1]["domain"]
+    domain["qb"] += math.ulp(domain["qb"])
+    domain["Tb"] += math.ulp(domain["Tb"])
+    preserved = deepcopy(record)
+    assert tool.validate_record(record, "geometry")
+    assert record == preserved
+    domain["qb"] += 1e-8
+    domain["Tb"] += 1e-8
+    with pytest.raises(ValueError, match="domains differ"):
+        tool.validate_record(record, "geometry")
+
+
+def test_original_sources_require_explicit_context_and_never_replay(isolated, monkeypatch):
+    original = {name: (tool.ROOT/name).read_bytes() for name in tool.SOURCES}
+    tool.create(isolated, "radial")
+    evidence = {p.name: p.read_bytes() for p in isolated.iterdir()}
+    (tool.ROOT/"src/recursive_horizons/nsc_atlas_cap_field.py").write_bytes(b"new current interface")
+    monkeypatch.setattr(tool, "compare", lambda *_: pytest.fail("unexpected physical calculation"))
+    with pytest.raises(ValueError, match="source binding"):
+        tool.check(isolated)
+    calls = []
+    def git(args, **kwargs):
+        assert args[:4] == ["git", "-C", str(tool.ROOT), "show"]
+        context, name = args[4].split(":", 1)
+        assert context == tool.ORIGINAL_SOURCE_CONTEXT
+        calls.append(name)
+        return original[name]
+    monkeypatch.setattr(tool.subprocess, "check_output", git)
+    checked = tool.check(isolated, source_context=tool.ORIGINAL_SOURCE_CONTEXT)
+    assert checked["source_context"] == tool.ORIGINAL_SOURCE_CONTEXT and checked["cap_solves"] == 0
+    assert calls == list(tool.SOURCES)
+    assert evidence == {p.name: p.read_bytes() for p in isolated.iterdir()}
+    with pytest.raises(ValueError, match="unknown explicit"):
+        tool.check(isolated, source_context="automatic")
+
+
+def test_missing_original_objects_fail_without_current_fallback(isolated, monkeypatch):
+    tool.create(isolated, "radial")
+    assert tool.check(isolated)["source_context"] == "current"
+    def missing(args, **kwargs):
+        raise subprocess.CalledProcessError(128, args, stderr=b"missing object")
+    monkeypatch.setattr(tool.subprocess, "check_output", missing)
+    with pytest.raises(ValueError, match="pinned cap source unavailable.*full Git checkout"):
+        tool.check(isolated, source_context=tool.ORIGINAL_SOURCE_CONTEXT)
+
+
+def test_cli_reports_selected_authentication_context(isolated, monkeypatch, capsys):
+    def check(path, *, source_context):
+        assert path == isolated and source_context == tool.ORIGINAL_SOURCE_CONTEXT
+        return {"source_context": source_context, "cap_solves": 0}
+    monkeypatch.setattr(tool, "check", check)
+    monkeypatch.setattr(sys, "argv", ["cap-recorder", "--check", "--output", str(isolated),
+                                      "--source-context", tool.ORIGINAL_SOURCE_CONTEXT])
+    tool.main()
+    assert json.loads(capsys.readouterr().out)["source_context"] == tool.ORIGINAL_SOURCE_CONTEXT
+    monkeypatch.setattr(sys, "argv", ["cap-recorder", "--output", str(isolated),
+                                      "--source-context", tool.ORIGINAL_SOURCE_CONTEXT])
+    with pytest.raises(SystemExit):
+        tool.main()
     assert not isolated.exists()
