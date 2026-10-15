@@ -8,6 +8,29 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [profile-moment successor](nsc-atlas-profile-moment.md) compares the
+pre-arrival mass identity against the original radial evaluator, then
+compares local lifts on 16/32 active cells with 40 withheld queries:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_profile_moment.py --output .build/profile-moment-review
+python scripts/run_python.py scripts/record_nsc_atlas_profile_moment.py --check --output results/development/nsc-atlas-profile-moment-v1
+python scripts/run_python.py scripts/record_nsc_atlas_local_lift.py --output .build/local-lift-review
+```
+
+Each complete physical comparison has one shared 120-process-CPU-second,
+30-million-kernel budget. The mass pair uses moment orders 4/8 and the
+original radial/ray order 16 reference; the local lifts share 81 direct
+moment-order-8 boundary jets. Both retain the same 129-node field and
+257-knot geometry. Creation refuses an existing output directory. The
+local-lift `--check` authenticates its predecessor and reconstructs only
+the saved polynomials; it performs no physical solve. Numerical outcomes
+are in the [current result](current-result.md#profile-moment-and-local-lift-16-october-2026).
+
+The [conservative evolution implementation](nsc-atlas-scalar-evolution.md)
+adds coefficient caching and the forced fixed-coordinate scalar equation.
+Its manufactured tests do not themselves supply a physical waveform.
+
 The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
 Hermite boundary lift against 16 withheld queries, or cumulative exterior
 forcing with radial orders 2/4 at nine times:

@@ -1,5 +1,44 @@
 # Prior art and admission of new research
 
+## Conservative scalar evolution admission, 16 October 2026
+
+The [evolution connection](nsc-atlas-scalar-evolution.md) reuses the already
+derived fixed-coordinate equation and quiet anchors. Its missing numerical
+inputs are a resolved wall lift and a checked interpolation of the exterior
+forcing. Implementation and manufactured controls may proceed while the
+local-lift comparison is evaluated; numerical propagation of the physical
+input follows its measured accuracy and the first cache comparison.
+
+The first cache comparison holds the prepared field at 129 nodes, geometry
+at 257 knots, radial Gauss order 2, field derivative order 32, source order
+64 and 129 radial cache nodes. Compare 17/33 uniformly spaced training times,
+including both source edges, with the 32 fine-mesh midpoints withheld from
+both fits: 65 unique direct forcing slices. Each withheld slice includes
+the 129 radial knots and their 128 midpoints, staying within the 513-point
+field interface. Report time errors at the radial knots and combined
+time/radial errors at midpoints separately. Both fits share the original
+field preparation and use the same source state. Track separate per-block
+and per-coordinate discrepancies, exact source/wall/quiet identities and
+the analytic source derivative. Preserve the post-input source correction.
+
+The finite budget is 120 process-CPU seconds and 30 million scalar kernels
+for the complete first comparison, including its preparation and all
+reference slices. At most 129 correction nodes and 6,000 correction RHS
+calls are allowed in the subsequent first propagation pilot, sharing a
+fresh complete 120-second/30-million-kernel budget with any inputs it
+recomputes. Each manufactured test has a 30-process-CPU-second ceiling.
+No field or metric integration occurs inside the correction RHS.
+
+Independent controls include the zero input, nonconstant exact source and
+lift, a nonlinear moving-wall manufactured solution with nonzero flux and
+potential, source subtraction, time normalization, fixed-$U$ clipping and
+wall material derivatives. The physical comparison must report input-cache
+effects separately from correction-grid and ODE-tolerance effects. Sampled
+input differences are not uniform bounds. Budget exhaustion, unresolved
+cache structure or an incompatible source/quiet identity requires a
+diagnosis before another pilot. A formal wall coefficient does not complete
+the cap detector waveform or finite-amplitude control.
+
 ## Profile moment and local lift admission, 16 October 2026
 
 The [profile-moment successor](nsc-atlas-profile-moment.md) checks the exact

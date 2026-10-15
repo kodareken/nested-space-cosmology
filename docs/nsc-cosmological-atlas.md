@@ -89,6 +89,15 @@ slopes, a Hermite antiderivative and cumulative exterior forcing; its
 withheld interpolation and radial comparisons determine the discretization
 needed before evolution.
 
+The [profile moment](nsc-atlas-profile-moment.md) now agrees with the
+independent radial cap-mass evaluation closely enough to refine the
+boundary economically. The [local-lift comparison](current-result.md#profile-moment-and-local-lift-16-october-2026)
+keeps the same physical inputs and adds withheld samples through the pulse.
+The [conservative evolution connection](nsc-atlas-scalar-evolution.md)
+then caches the known exterior forcing and evolves the correction on the
+original null coordinates. Its numerical implementation and controls are
+distinct from a computed physical waveform or finite-amplitude solution.
+
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)
 records this candidate's action, regions, state, parameter roles, operators,
