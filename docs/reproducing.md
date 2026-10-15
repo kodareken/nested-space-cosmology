@@ -58,6 +58,20 @@ Its 30-process-CPU-second budget excludes physical solves entirely. The
 record binds its producer and input, and `--check` repeats the inexpensive
 component arithmetic and withheld comparisons.
 
+The clock refinement reuses those outgoing cap jets, recomputes wall clocks
+with 16/32 panels, and keeps the same boundary knots and holdouts:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_lift_clock.py --output .build/lift-clock-review
+python scripts/run_python.py scripts/record_nsc_atlas_lift_clock.py --check --output results/development/nsc-atlas-lift-clock-v1
+```
+
+One field preparation and two wall solves share 120 process-CPU seconds
+and 30 million kernels. The check restores saved first jets and clock
+polynomials without new physical solves. The 32-panel result meets the
+original sampled boundary target; the [current result](current-result.md#clock-resolved-scalar-boundary-16-october-2026)
+records the numerical comparison and subsequent propagation status.
+
 The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
 Hermite boundary lift against 16 withheld queries, or cumulative exterior
 forcing with radial orders 2/4 at nine times:

@@ -1,5 +1,32 @@
 # Prior art and admission of new research
 
+## Central scalar reconstruction admission, 16 October 2026
+
+The existing central-clock cap equation and regular reflection determine
+the central cubic scalar coefficient by incoming-ray quadrature once the
+exterior wall value and its material derivative are known. Two independent
+derivations give the same relation; a second cap PDE solve is unnecessary
+for this particular readout. The missing connection is numerical evaluation
+of the incoming clock derivative and the reflected cap forcing integral.
+
+Keep the same action, reduced-field preparation, reference geometry, quiet
+anchors and finite no-return domain. Use the full regular cap field and
+radial metric on incoming rays: the pre-arrival profile-moment simplification
+does not apply where the reflected profile is nonzero. Obtain clock
+derivatives from the existing first-jet optical identity, not differences
+of stored clock samples. Report the inherited continuum/arrival-spline rate
+discrepancy. Evaluate the Jordan central field at fixed central proper time;
+no second arrival shift is added to that already pulled-back observable.
+
+Implementation and independent analytic/manufactured tests are admitted
+while the exterior propagation is resolved. Tests have a 30-process-CPU-second
+ceiling each and cover the optical derivative, incoming integration signs,
+regular reflection, clock pullback, zero source and cubic scaling. Physical
+central evaluation requires the exterior result and a separately specified
+shared budget and quadrature comparison. A centre cancellation failure or
+domain exit requires diagnosis. This connection does not supply a physical
+preparation law, finite-amplitude remainder or detector quantum state.
+
 ## Conservative scalar evolution admission, 16 October 2026
 
 The [evolution connection](nsc-atlas-scalar-evolution.md) reuses the already
@@ -140,6 +167,24 @@ eight-panel result, withheld value/slope errors, lift differences and the
 clock's polynomial/continuum slope discrepancy. Success must resolve the
 original target without changing physical data. A plateau or budget failure
 requires a new diagnosis; no further degree increase is assumed.
+
+**Clock outcome:** the complete 16/32 pair takes 35.234375 process-CPU
+seconds and 5,002,056 scalar kernels. Withheld boundary-value errors fall
+from $1.73136\times10^{-6}$ to $5.74819\times10^{-8}$; the finer result
+passes the unchanged target. The maximum lift difference is
+$3.24913\times10^{-10}$. Continuum versus panel-polynomial clock slope
+differences decrease independently, and their boundary identity closes
+below $1.92\times10^{-12}$. The 81 outgoing cap jets are reused with no
+new cap queries. This admits the saved-input propagation specified above.
+
+**First propagation attempt:** the 17-time-cache/129-node case exhausts
+its 6,000-RHS allowance at relative tolerance $2\times10^{-10}$ before
+producing a result. No completed record is retained. Inspect the saved
+forcing's radial interpolation crossings and solver split inventory
+without a new field or scalar evolution. Diagnose whether nonsmooth
+coefficient derivatives make that tolerance disproportionate to measured
+input errors; any revised calculation needs its stated controls and a
+separate tolerance comparison. The physical model and saved inputs stay fixed.
 
 ## Scalar lift and forcing admission, 16 October 2026
 

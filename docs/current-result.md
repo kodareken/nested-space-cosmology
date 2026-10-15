@@ -2,6 +2,35 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Clock-resolved scalar boundary, 16 October 2026
+
+The [clock comparison](../results/development/nsc-atlas-lift-clock-v1/clock.json)
+resolves the interior interpolation plateau identified below. It holds the
+leading field, geometry, 41 boundary knots and 40 withheld queries fixed,
+reuses the 81 authenticated outgoing cap jets, and changes only the wall
+clock integration from 16 to 32 panels. Both calculations retain the
+continuum clock rates as their supplied derivatives.
+
+| Diagnostic | 16 clock panels | 32 clock panels |
+| --- | ---: | ---: |
+| Maximum withheld boundary-value discrepancy | $1.73136\times10^{-6}$ | $5.74819\times10^{-8}$ |
+| Maximum cell-width-scaled slope discrepancy | $2.16504\times10^{-6}$ | $4.08960\times10^{-8}$ |
+| Maximum clock $V_{1,s}$ polynomial/continuum gap | $8.86470\times10^{-4}$ | $6.29210\times10^{-5}$ |
+
+The finer boundary passes the unchanged $2.2795554\times10^{-7}$ sampled
+target. The maximum lift difference is $3.24913\times10^{-10}$, and the
+clock derivative-gap identity closes below $1.92\times10^{-12}$. The pair
+takes 35.234375 process-CPU seconds and 5,002,056 scalar kernels, including
+one leading-field preparation and two wall solves. It uses no new outgoing
+cap quadrature. This establishes a sufficiently resolved sampled boundary
+input for the first exterior propagation; it is not a uniform error bound.
+
+The first saved-input scalar propagation attempt stopped at its 6,000-RHS
+ceiling in the first case, before producing a solution record. The inputs
+remain intact. Its very tight ODE tolerance and the moving evaluation of
+the piecewise-linear radial forcing cache require a cost diagnosis before
+another attempt. No propagated scalar result is claimed for that attempt.
+
 ## Exterior forcing cache, 16 October 2026
 
 The [conservative evolution implementation](nsc-atlas-scalar-evolution.md)
