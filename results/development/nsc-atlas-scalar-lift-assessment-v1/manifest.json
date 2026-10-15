@@ -1,0 +1,32 @@
+{
+  "input": {
+    "directory": "results/development/nsc-atlas-scalar-inputs-v1/lift",
+    "files": {
+      "inputs.json": {
+        "bytes": 72154,
+        "sha256": "c19f080a6573bd81611907cb257a49b84ec3c57c052c3ff829a3c08176eb96b4"
+      },
+      "manifest.json": {
+        "bytes": 5661,
+        "sha256": "766ab92d272cc5b7491477e2659d1e7564ca0eaf1b781452ace2d5882e635a09"
+      }
+    },
+    "source_validation": {
+      "checker": "scripts/record_nsc_atlas_scalar_inputs.py:check",
+      "comparison": "lift",
+      "physical_solves": 0,
+      "source_bindings_sha256": "3e30eb5b3b444cda6b1898c614eb31b9583a81f66300758d13054b8d87df0f7a"
+    }
+  },
+  "outputs": {
+    "assessment.json": {
+      "bytes": 67479,
+      "sha256": "fa978247eacaaec712a9740152fd970bbabe606c3ffacb781a8886b58c6caab2"
+    }
+  },
+  "schema": "nsc-atlas-scalar-lift-assessment-v1-manifest",
+  "source_bindings": {
+    "scripts/assess_nsc_atlas_scalar_lift.py": "84969a60a340f3ed0546710efcf534963ed3a991880ee792e83669ab56a4d5ac",
+    "tests/test_assess_nsc_atlas_scalar_lift.py": "54eade14d9c23d05c26a725dd5e1a4efac4530f0ded68dec29c5b7c96349dd4b"
+  }
+}

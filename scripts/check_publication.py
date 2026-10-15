@@ -912,6 +912,11 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
             check(ROOT / "results/development/nsc-atlas-scalar-inputs-v1" / comparison)
         except (OSError, ValueError, KeyError, TypeError) as error:
             errors.append(f"scalar input {comparison} evidence: {error}")
+    try:
+        from assess_nsc_atlas_scalar_lift import check as check_assessment
+        check_assessment(ROOT / "results/development/nsc-atlas-scalar-lift-assessment-v1")
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f"scalar lift assessment evidence: {error}")
 
 
 def main() -> int:

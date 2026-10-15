@@ -1,0 +1,2254 @@
+{
+  "assessment": {
+    "absolute_b_target": 2.2795553853427466e-07,
+    "extrapolated_queries": 0,
+    "heldout_used_for_training": false,
+    "interpolation_variable": "U_W",
+    "is_uniform_error_bound": false,
+    "method": "locally normalized confluent Krogh Hermite",
+    "methods": [
+      {
+        "blocks": [
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "maximum_absolute_b_defect": 3.9062066174821415e-131,
+            "maximum_absolute_scaled_slope_defect": 1.703502195154083e-130,
+            "used_training_nodes": 4,
+            "withheld_points": 4
+          },
+          {
+            "available_training_nodes": 9,
+            "interval": [
+              0.25,
+              0.75
+            ],
+            "maximum_absolute_b_defect": 0.012317317281206108,
+            "maximum_absolute_scaled_slope_defect": 0.028676286217484182,
+            "used_training_nodes": 4,
+            "withheld_points": 8
+          },
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.75,
+              1.0
+            ],
+            "maximum_absolute_b_defect": 2.863684400722377e-09,
+            "maximum_absolute_scaled_slope_defect": 6.883512396127622e-09,
+            "used_training_nodes": 4,
+            "withheld_points": 4
+          }
+        ],
+        "maximum_absolute_b_defect": 0.012317317281206108,
+        "maximum_absolute_scaled_slope_defect": 0.028676286217484182,
+        "requested_nodes": 4,
+        "sampled_b_target_met": false,
+        "withheld_samples": [
+          {
+            "U": -0.2988265665079471,
+            "b_U_interpolated": 0.0,
+            "b_U_reference": 0.0,
+            "b_defect": 0.0,
+            "b_interpolated": 0.0,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009019316392830934,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.2978258929921137,
+            "normalization_width": 0.0028888087163977394,
+            "scaled_slope_defect": 0.0,
+            "t": 0.03125,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875
+            ]
+          },
+          {
+            "U": -0.2978952401796758,
+            "b_U_interpolated": 0.0,
+            "b_U_reference": 0.0,
+            "b_defect": 0.0,
+            "b_interpolated": 0.0,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009616488057345718,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.2978258929921137,
+            "normalization_width": 0.0028888087163977394,
+            "scaled_slope_defect": 0.0,
+            "t": 0.09375,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875
+            ]
+          },
+          {
+            "U": -0.2969023037729127,
+            "b_U_interpolated": 3.25188562784534e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 3.7403128633228326e-132,
+            "b_interpolated": 3.7403128633228326e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010252282713800742,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.296828431673833,
+            "normalization_width": 0.0030798680743929774,
+            "scaled_slope_defect": 3.333925080961585e-132,
+            "t": 0.15625,
+            "training_indices": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2958437383259679,
+            "b_U_interpolated": 1.5585692831834775e-127,
+            "b_U_reference": 0.0,
+            "b_defect": 3.9062066174821415e-131,
+            "b_interpolated": 3.9062066174821415e-131,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010929909972783314,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.296828431673833,
+            "normalization_width": 0.0030798680743929774,
+            "scaled_slope_defect": 1.703502195154083e-130,
+            "t": 0.21875,
+            "training_indices": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2947151882069589,
+            "b_U_interpolated": 1.7762497867169367,
+            "b_U_reference": 0.0069277745137232396,
+            "b_defect": -0.0024667752970862163,
+            "b_interpolated": -0.0024663044544587726,
+            "b_reference": 4.708426274438208e-07,
+            "block": 1,
+            "cell_width": 0.0011652902656787978,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.2934220463164213,
+            "normalization_width": 0.0037329026404304133,
+            "scaled_slope_defect": 0.0020617737176716277,
+            "t": 0.28125,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375
+            ]
+          },
+          {
+            "U": -0.2935119269267676,
+            "b_U_interpolated": 134.06625535749393,
+            "b_U_reference": 135.74123003620423,
+            "b_defect": -0.002569336427979973,
+            "b_interpolated": 0.025020847682603337,
+            "b_reference": 0.02759018411058331,
+            "block": 1,
+            "cell_width": 0.0012425155362343898,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.2934220463164213,
+            "normalization_width": 0.0037329026404304133,
+            "scaled_slope_defect": -0.0020811820610967522,
+            "t": 0.34375,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375
+            ]
+          },
+          {
+            "U": -0.29222881883740026,
+            "b_U_interpolated": 3400.654873331652,
+            "b_U_reference": 3398.2395079977546,
+            "b_defect": 0.005662411769412401,
+            "b_interpolated": 1.6996110911199775,
+            "b_reference": 1.6939486793505651,
+            "block": 1,
+            "cell_width": 0.0013250968385172257,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.2921326462906696,
+            "normalization_width": 0.003981122160576223,
+            "scaled_slope_defect": 0.0032005929678118467,
+            "t": 0.40625,
+            "training_indices": [
+              5,
+              6,
+              7,
+              8
+            ],
+            "training_times": [
+              0.3125,
+              0.375,
+              0.4375,
+              0.5
+            ]
+          },
+          {
+            "U": -0.2908602761387034,
+            "b_U_interpolated": 7135.734873195929,
+            "b_U_reference": 7138.177360535989,
+            "b_defect": -0.006261544697270693,
+            "b_interpolated": 9.856455042922478,
+            "b_reference": 9.86271658761975,
+            "block": 1,
+            "cell_width": 0.001413509785824607,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.29075724786727575,
+            "normalization_width": 0.004246887934895138,
+            "scaled_slope_defect": -0.003452479756926698,
+            "t": 0.46875,
+            "training_indices": [
+              6,
+              7,
+              8,
+              9
+            ],
+            "training_times": [
+              0.375,
+              0.4375,
+              0.5,
+              0.5625
+            ]
+          },
+          {
+            "U": -0.28940021052409265,
+            "b_U_interpolated": 669.9584963720818,
+            "b_U_reference": 667.9551177722286,
+            "b_defect": 0.004904974310029786,
+            "b_interpolated": 16.326027664013957,
+            "b_reference": 16.321122689703927,
+            "block": 1,
+            "cell_width": 0.0015082813105533055,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.28928970132812015,
+            "normalization_width": 0.0045317873361718775,
+            "scaled_slope_defect": 0.003021658500120934,
+            "t": 0.53125,
+            "training_indices": [
+              7,
+              8,
+              9,
+              10
+            ],
+            "training_times": [
+              0.4375,
+              0.5,
+              0.5625,
+              0.625
+            ]
+          },
+          {
+            "U": -0.2878419786869109,
+            "b_U_interpolated": -5789.631853551201,
+            "b_U_reference": -5788.1195565988655,
+            "b_defect": -0.004237114446096868,
+            "b_interpolated": 11.717878997092674,
+            "b_reference": 11.72211611153877,
+            "block": 1,
+            "cell_width": 0.0016099962397939649,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.2877232940092778,
+            "normalization_width": 0.00483758240220733,
+            "scaled_slope_defect": -0.002434792406711897,
+            "t": 0.59375,
+            "training_indices": [
+              8,
+              9,
+              10,
+              11
+            ],
+            "training_times": [
+              0.5,
+              0.5625,
+              0.625,
+              0.6875
+            ]
+          },
+          {
+            "U": -0.28617832077986677,
+            "b_U_interpolated": -5821.95860616982,
+            "b_U_reference": -5822.915724407055,
+            "b_defect": 0.003185876084301431,
+            "b_interpolated": 0.8492276701849275,
+            "b_reference": 0.8460417941006261,
+            "block": 1,
+            "cell_width": 0.0017193048518600595,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.286050687563414,
+            "normalization_width": 0.005166232672828286,
+            "scaled_slope_defect": 0.0016455780290813348,
+            "t": 0.65625,
+            "training_indices": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2844012907665585,
+            "b_U_interpolated": -591.5149470325232,
+            "b_U_reference": -607.1259183454301,
+            "b_defect": 0.012317317281206108,
+            "b_interpolated": -4.601492540831043,
+            "b_reference": -4.6138098581122495,
+            "block": 1,
+            "cell_width": 0.0018369315811742615,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.286050687563414,
+            "normalization_width": 0.005166232672828286,
+            "scaled_slope_defect": 0.028676286217484182,
+            "t": 0.71875,
+            "training_indices": [
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2825021774213516,
+            "b_U_interpolated": 10.124487687402022,
+            "b_U_reference": 10.124485403110274,
+            "b_defect": -2.4771704687509555e-09,
+            "b_interpolated": -4.755670234787318,
+            "b_reference": -4.755670232310147,
+            "block": 2,
+            "cell_width": 0.001963685071152521,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.28031134395095764,
+            "normalization_width": 0.006312454552084512,
+            "scaled_slope_defect": 4.4856296032256105e-09,
+            "t": 0.78125,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375
+            ]
+          },
+          {
+            "U": -0.28047141451545166,
+            "b_U_interpolated": 16.38185414065766,
+            "b_U_reference": 16.38185422024816,
+            "b_defect": -8.139657836636616e-10,
+            "b_interpolated": -4.728335566429197,
+            "b_reference": -4.7283355656152315,
+            "block": 2,
+            "cell_width": 0.0021004698143001765,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.28031134395095764,
+            "normalization_width": 0.006312454552084512,
+            "scaled_slope_defect": -1.671774492182936e-10,
+            "t": 0.84375,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375
+            ]
+          },
+          {
+            "U": -0.27829847846498706,
+            "b_U_interpolated": 20.79753066246614,
+            "b_U_reference": 20.79753069961425,
+            "b_defect": -1.0043850195984305e-09,
+            "b_interpolated": -4.687591742430601,
+            "b_reference": -4.687591741426216,
+            "block": 2,
+            "cell_width": 0.0022482996666318145,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.27812534462423805,
+            "normalization_width": 0.00675708306321865,
+            "scaled_slope_defect": -8.352008015718076e-11,
+            "t": 0.90625,
+            "training_indices": [
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27597177140198337,
+            "b_U_interpolated": 23.761793250509097,
+            "b_U_reference": 23.761796108738377,
+            "b_defect": -2.863684400722377e-09,
+            "b_interpolated": -4.635465528734177,
+            "b_reference": -4.635465525870493,
+            "block": 2,
+            "cell_width": 0.0024083135822866586,
+            "extrapolated": false,
+            "nodes": 4,
+            "normalization_centre": -0.27812534462423805,
+            "normalization_width": 0.00675708306321865,
+            "scaled_slope_defect": -6.883512396127622e-09,
+            "t": 0.96875,
+            "training_indices": [
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "maximum_absolute_b_defect": 2.8927627984345394e-131,
+            "maximum_absolute_scaled_slope_defect": 1.4460824557454845e-130,
+            "used_training_nodes": 5,
+            "withheld_points": 4
+          },
+          {
+            "available_training_nodes": 9,
+            "interval": [
+              0.25,
+              0.75
+            ],
+            "maximum_absolute_b_defect": 0.00956094994111952,
+            "maximum_absolute_scaled_slope_defect": 0.022065772385041874,
+            "used_training_nodes": 5,
+            "withheld_points": 8
+          },
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.75,
+              1.0
+            ],
+            "maximum_absolute_b_defect": 3.00107494410895e-10,
+            "maximum_absolute_scaled_slope_defect": 8.862201736796715e-10,
+            "used_training_nodes": 5,
+            "withheld_points": 4
+          }
+        ],
+        "maximum_absolute_b_defect": 0.00956094994111952,
+        "maximum_absolute_scaled_slope_defect": 0.022065772385041874,
+        "requested_nodes": 5,
+        "sampled_b_target_met": false,
+        "withheld_samples": [
+          {
+            "U": -0.2988265665079471,
+            "b_U_interpolated": -4.111640178422025e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 1.737162375950933e-132,
+            "b_interpolated": 1.737162375950933e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009019316392830934,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": -3.7084183662664073e-132,
+            "t": 0.03125,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2978952401796758,
+            "b_U_interpolated": -6.963912000855805e-131,
+            "b_U_reference": 0.0,
+            "b_defect": 5.946005092109778e-133,
+            "b_interpolated": 5.946005092109778e-133,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009616488057345718,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": -6.696837658863637e-134,
+            "t": 0.09375,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2969023037729127,
+            "b_U_interpolated": 2.2673787970554207e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 1.3228486213719943e-132,
+            "b_interpolated": 1.3228486213719943e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010252282713800742,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": 2.3245808446689612e-132,
+            "t": 0.15625,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2958437383259679,
+            "b_U_interpolated": 1.3230506558117954e-127,
+            "b_U_reference": 0.0,
+            "b_defect": 2.8927627984345394e-131,
+            "b_interpolated": 2.8927627984345394e-131,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010929909972783314,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": 1.4460824557454845e-130,
+            "t": 0.21875,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2947151882069589,
+            "b_U_interpolated": -18.92893141434533,
+            "b_U_reference": 0.0069277745137232396,
+            "b_defect": 0.00956094994111952,
+            "b_interpolated": 0.009561420783746964,
+            "b_reference": 4.708426274438208e-07,
+            "block": 1,
+            "cell_width": 0.0011652902656787978,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.292715291423509,
+            "normalization_width": 0.00514641242625502,
+            "scaled_slope_defect": -0.022065772385041874,
+            "t": 0.28125,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5
+            ]
+          },
+          {
+            "U": -0.2935119269267676,
+            "b_U_interpolated": 134.4667548334902,
+            "b_U_reference": 135.74123003620423,
+            "b_defect": 0.0022923382572190808,
+            "b_interpolated": 0.02988252236780239,
+            "b_reference": 0.02759018411058331,
+            "block": 1,
+            "cell_width": 0.0012425155362343898,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.292715291423509,
+            "normalization_width": 0.00514641242625502,
+            "scaled_slope_defect": -0.001583555239917655,
+            "t": 0.34375,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5
+            ]
+          },
+          {
+            "U": -0.29222881883740026,
+            "b_U_interpolated": 3398.9436080842124,
+            "b_U_reference": 3398.2395079977546,
+            "b_defect": 0.0020736069254412293,
+            "b_interpolated": 1.6960222862760064,
+            "b_reference": 1.6939486793505651,
+            "block": 1,
+            "cell_width": 0.0013250968385172257,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.292715291423509,
+            "normalization_width": 0.00514641242625502,
+            "scaled_slope_defect": 0.0009330007985650108,
+            "t": 0.40625,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5
+            ]
+          },
+          {
+            "U": -0.2908602761387034,
+            "b_U_interpolated": 7138.017902581873,
+            "b_U_reference": 7138.177360535989,
+            "b_defect": -0.0017910729165215855,
+            "b_interpolated": 9.860925514703228,
+            "b_reference": 9.86271658761975,
+            "block": 1,
+            "cell_width": 0.001413509785824607,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2913785056353929,
+            "normalization_width": 0.005489403471129528,
+            "scaled_slope_defect": -0.0002253953785693623,
+            "t": 0.46875,
+            "training_indices": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "training_times": [
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625
+            ]
+          },
+          {
+            "U": -0.28940021052409265,
+            "b_U_interpolated": 668.0577475831171,
+            "b_U_reference": 667.9551177722286,
+            "b_defect": 0.0017158174381712854,
+            "b_interpolated": 16.322838507142098,
+            "b_reference": 16.321122689703927,
+            "block": 1,
+            "cell_width": 0.0015082813105533055,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.28995224974737877,
+            "normalization_width": 0.005856884174689103,
+            "scaled_slope_defect": 0.00015479462566876843,
+            "t": 0.53125,
+            "training_indices": [
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "training_times": [
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625
+            ]
+          },
+          {
+            "U": -0.2878419786869109,
+            "b_U_interpolated": -5788.1346426443515,
+            "b_U_reference": -5788.1195565988655,
+            "b_defect": -0.0014435130491943227,
+            "b_interpolated": 11.720672598489577,
+            "b_reference": 11.72211611153877,
+            "block": 1,
+            "cell_width": 0.0016099962397939649,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.28843004890219015,
+            "normalization_width": 0.006251092188031937,
+            "scaled_slope_defect": -2.4288476505799284e-05,
+            "t": 0.59375,
+            "training_indices": [
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "training_times": [
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875
+            ]
+          },
+          {
+            "U": -0.28617832077986677,
+            "b_U_interpolated": -5823.140621285011,
+            "b_U_reference": -5822.915724407055,
+            "b_defect": 0.0007611762104418052,
+            "b_interpolated": 0.8468029703110679,
+            "b_reference": 0.8460417941006261,
+            "block": 1,
+            "cell_width": 0.0017193048518600595,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2868048282186907,
+            "normalization_width": 0.006674513983381591,
+            "scaled_slope_defect": -0.00038666629343770846,
+            "t": 0.65625,
+            "training_indices": [
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2844012907665585,
+            "b_U_interpolated": -612.7584806933864,
+            "b_U_reference": -607.1259183454301,
+            "b_defect": -0.0016850178198737353,
+            "b_interpolated": -4.615494875932123,
+            "b_reference": -4.6138098581122495,
+            "block": 1,
+            "cell_width": 0.0018369315811742615,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2868048282186907,
+            "normalization_width": 0.006674513983381591,
+            "scaled_slope_defect": -0.010346631659893994,
+            "t": 0.71875,
+            "training_indices": [
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2825021774213516,
+            "b_U_interpolated": 10.124485562944397,
+            "b_U_reference": 10.124485403110274,
+            "b_defect": -3.00107494410895e-10,
+            "b_interpolated": -4.755670232610255,
+            "b_reference": -4.755670232310147,
+            "block": 2,
+            "cell_width": 0.001963685071152521,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 3.1386388085405965e-10,
+            "t": 0.78125,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.28047141451545166,
+            "b_U_interpolated": 16.38185424086564,
+            "b_U_reference": 16.38185422024816,
+            "b_defect": 1.596136556258898e-10,
+            "b_interpolated": -4.728335565455618,
+            "b_reference": -4.7283355656152315,
+            "block": 2,
+            "cell_width": 0.0021004698143001765,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 4.330638914214359e-11,
+            "t": 0.84375,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27829847846498706,
+            "b_U_interpolated": 20.797530719153233,
+            "b_U_reference": 20.79753069961425,
+            "b_defect": -1.8059775896972496e-10,
+            "b_interpolated": -4.687591741606814,
+            "b_reference": -4.687591741426216,
+            "block": 2,
+            "cell_width": 0.0022482996666318145,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 4.392949068355038e-11,
+            "t": 0.90625,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27597177140198337,
+            "b_U_interpolated": 23.761795740754664,
+            "b_U_reference": 23.761796108738377,
+            "b_defect": -2.1873081124113014e-10,
+            "b_interpolated": -4.635465526089224,
+            "b_reference": -4.635465525870493,
+            "block": 2,
+            "cell_width": 0.0024083135822866586,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": -8.862201736796715e-10,
+            "t": 0.96875,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "maximum_absolute_b_defect": 2.8927627984345394e-131,
+            "maximum_absolute_scaled_slope_defect": 1.4460824557454845e-130,
+            "used_training_nodes": 5,
+            "withheld_points": 4
+          },
+          {
+            "available_training_nodes": 9,
+            "interval": [
+              0.25,
+              0.75
+            ],
+            "maximum_absolute_b_defect": 0.08498373249110269,
+            "maximum_absolute_scaled_slope_defect": 0.33518179584941454,
+            "used_training_nodes": 7,
+            "withheld_points": 8
+          },
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.75,
+              1.0
+            ],
+            "maximum_absolute_b_defect": 3.00107494410895e-10,
+            "maximum_absolute_scaled_slope_defect": 8.862201736796715e-10,
+            "used_training_nodes": 5,
+            "withheld_points": 4
+          }
+        ],
+        "maximum_absolute_b_defect": 0.08498373249110269,
+        "maximum_absolute_scaled_slope_defect": 0.33518179584941454,
+        "requested_nodes": 7,
+        "sampled_b_target_met": false,
+        "withheld_samples": [
+          {
+            "U": -0.2988265665079471,
+            "b_U_interpolated": -4.111640178422025e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 1.737162375950933e-132,
+            "b_interpolated": 1.737162375950933e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009019316392830934,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": -3.7084183662664073e-132,
+            "t": 0.03125,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2978952401796758,
+            "b_U_interpolated": -6.963912000855805e-131,
+            "b_U_reference": 0.0,
+            "b_defect": 5.946005092109778e-133,
+            "b_interpolated": 5.946005092109778e-133,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009616488057345718,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": -6.696837658863637e-134,
+            "t": 0.09375,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2969023037729127,
+            "b_U_interpolated": 2.2673787970554207e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 1.3228486213719943e-132,
+            "b_interpolated": 1.3228486213719943e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010252282713800742,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": 2.3245808446689612e-132,
+            "t": 0.15625,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2958437383259679,
+            "b_U_interpolated": 1.3230506558117954e-127,
+            "b_U_reference": 0.0,
+            "b_defect": 2.8927627984345394e-131,
+            "b_interpolated": 2.8927627984345394e-131,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010929909972783314,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": 1.4460824557454845e-130,
+            "t": 0.21875,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2947151882069589,
+            "b_U_interpolated": 29.600097632972627,
+            "b_U_reference": 0.0069277745137232396,
+            "b_defect": -0.010436742635512369,
+            "b_interpolated": -0.010436271792884925,
+            "b_reference": 4.708426274438208e-07,
+            "block": 1,
+            "cell_width": 0.0011652902656787978,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2911561526483354,
+            "normalization_width": 0.00826468997660229,
+            "scaled_slope_defect": 0.03448463276664137,
+            "t": 0.28125,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625
+            ]
+          },
+          {
+            "U": -0.2935119269267676,
+            "b_U_interpolated": 137.06248504041218,
+            "b_U_reference": 135.74123003620423,
+            "b_defect": -0.0007699923496213568,
+            "b_interpolated": 0.026820191760961953,
+            "b_reference": 0.02759018411058331,
+            "block": 1,
+            "cell_width": 0.0012425155362343898,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2911561526483354,
+            "normalization_width": 0.00826468997660229,
+            "scaled_slope_defect": 0.001641679870055819,
+            "t": 0.34375,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625
+            ]
+          },
+          {
+            "U": -0.29222881883740026,
+            "b_U_interpolated": 3398.4821516181582,
+            "b_U_reference": 3398.2395079977546,
+            "b_defect": -5.267244425755102e-05,
+            "b_interpolated": 1.6938960069063076,
+            "b_reference": 1.6939486793505651,
+            "block": 1,
+            "cell_width": 0.0013250968385172257,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2911561526483354,
+            "normalization_width": 0.00826468997660229,
+            "scaled_slope_defect": 0.00032152629428327563,
+            "t": 0.40625,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625
+            ]
+          },
+          {
+            "U": -0.2908602761387034,
+            "b_U_interpolated": 7138.618617381643,
+            "b_U_reference": 7138.177360535989,
+            "b_defect": 0.00023592876657296813,
+            "b_interpolated": 9.862952516386322,
+            "b_reference": 9.86271658761975,
+            "block": 1,
+            "cell_width": 0.001413509785824607,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2911561526483354,
+            "normalization_width": 0.00826468997660229,
+            "scaled_slope_defect": 0.0006237208693948851,
+            "t": 0.46875,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625
+            ]
+          },
+          {
+            "U": -0.28940021052409265,
+            "b_U_interpolated": 667.412203289116,
+            "b_U_reference": 667.9551177722286,
+            "b_defect": -0.000514088848021288,
+            "b_interpolated": 16.320608600855905,
+            "b_reference": 16.321122689703927,
+            "block": 1,
+            "cell_width": 0.0015082813105533055,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.28971385508956593,
+            "normalization_width": 0.008818704562783553,
+            "scaled_slope_defect": -0.0008188677681075449,
+            "t": 0.53125,
+            "training_indices": [
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            "training_times": [
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875
+            ]
+          },
+          {
+            "U": -0.2878419786869109,
+            "b_U_interpolated": -5787.581130134691,
+            "b_U_reference": -5788.1195565988655,
+            "b_defect": 0.0006029311734625509,
+            "b_interpolated": 11.722719042712233,
+            "b_reference": 11.72211611153877,
+            "block": 1,
+            "cell_width": 0.0016099962397939649,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2881741315308616,
+            "normalization_width": 0.009413120607723424,
+            "scaled_slope_defect": 0.0008668645827262405,
+            "t": 0.59375,
+            "training_indices": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.28617832077986677,
+            "b_U_interpolated": -5817.547257737094,
+            "b_U_reference": -5822.915724407055,
+            "b_defect": 0.003891422389017629,
+            "b_interpolated": 0.8499332164896437,
+            "b_reference": 0.8460417941006261,
+            "block": 1,
+            "cell_width": 0.0017193048518600595,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2881741315308616,
+            "normalization_width": 0.009413120607723424,
+            "scaled_slope_defect": 0.00923003079271293,
+            "t": 0.65625,
+            "training_indices": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2844012907665585,
+            "b_U_interpolated": -424.65761125957283,
+            "b_U_reference": -607.1259183454301,
+            "b_defect": 0.08498373249110269,
+            "b_interpolated": -4.528826125621147,
+            "b_reference": -4.6138098581122495,
+            "block": 1,
+            "cell_width": 0.0018369315811742615,
+            "extrapolated": false,
+            "nodes": 7,
+            "normalization_centre": -0.2881741315308616,
+            "normalization_width": 0.009413120607723424,
+            "scaled_slope_defect": 0.33518179584941454,
+            "t": 0.71875,
+            "training_indices": [
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2825021774213516,
+            "b_U_interpolated": 10.124485562944397,
+            "b_U_reference": 10.124485403110274,
+            "b_defect": -3.00107494410895e-10,
+            "b_interpolated": -4.755670232610255,
+            "b_reference": -4.755670232310147,
+            "block": 2,
+            "cell_width": 0.001963685071152521,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 3.1386388085405965e-10,
+            "t": 0.78125,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.28047141451545166,
+            "b_U_interpolated": 16.38185424086564,
+            "b_U_reference": 16.38185422024816,
+            "b_defect": 1.596136556258898e-10,
+            "b_interpolated": -4.728335565455618,
+            "b_reference": -4.7283355656152315,
+            "block": 2,
+            "cell_width": 0.0021004698143001765,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 4.330638914214359e-11,
+            "t": 0.84375,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27829847846498706,
+            "b_U_interpolated": 20.797530719153233,
+            "b_U_reference": 20.79753069961425,
+            "b_defect": -1.8059775896972496e-10,
+            "b_interpolated": -4.687591741606814,
+            "b_reference": -4.687591741426216,
+            "block": 2,
+            "cell_width": 0.0022482996666318145,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 4.392949068355038e-11,
+            "t": 0.90625,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27597177140198337,
+            "b_U_interpolated": 23.761795740754664,
+            "b_U_reference": 23.761796108738377,
+            "b_defect": -2.1873081124113014e-10,
+            "b_interpolated": -4.635465526089224,
+            "b_reference": -4.635465525870493,
+            "block": 2,
+            "cell_width": 0.0024083135822866586,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": -8.862201736796715e-10,
+            "t": 0.96875,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.0,
+              0.25
+            ],
+            "maximum_absolute_b_defect": 2.8927627984345394e-131,
+            "maximum_absolute_scaled_slope_defect": 1.4460824557454845e-130,
+            "used_training_nodes": 5,
+            "withheld_points": 4
+          },
+          {
+            "available_training_nodes": 9,
+            "interval": [
+              0.25,
+              0.75
+            ],
+            "maximum_absolute_b_defect": 0.7651489149239747,
+            "maximum_absolute_scaled_slope_defect": 3.4609462762741274,
+            "used_training_nodes": 9,
+            "withheld_points": 8
+          },
+          {
+            "available_training_nodes": 5,
+            "interval": [
+              0.75,
+              1.0
+            ],
+            "maximum_absolute_b_defect": 3.00107494410895e-10,
+            "maximum_absolute_scaled_slope_defect": 8.862201736796715e-10,
+            "used_training_nodes": 5,
+            "withheld_points": 4
+          }
+        ],
+        "maximum_absolute_b_defect": 0.7651489149239747,
+        "maximum_absolute_scaled_slope_defect": 3.4609462762741274,
+        "requested_nodes": 9,
+        "sampled_b_target_met": false,
+        "withheld_samples": [
+          {
+            "U": -0.2988265665079471,
+            "b_U_interpolated": -4.111640178422025e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 1.737162375950933e-132,
+            "b_interpolated": 1.737162375950933e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009019316392830934,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": -3.7084183662664073e-132,
+            "t": 0.03125,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2978952401796758,
+            "b_U_interpolated": -6.963912000855805e-131,
+            "b_U_reference": 0.0,
+            "b_defect": 5.946005092109778e-133,
+            "b_interpolated": 5.946005092109778e-133,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0009616488057345718,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": -6.696837658863637e-134,
+            "t": 0.09375,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2969023037729127,
+            "b_U_interpolated": 2.2673787970554207e-129,
+            "b_U_reference": 0.0,
+            "b_defect": 1.3228486213719943e-132,
+            "b_interpolated": 1.3228486213719943e-132,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010252282713800742,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": 2.3245808446689612e-132,
+            "t": 0.15625,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2958437383259679,
+            "b_U_interpolated": 1.3230506558117954e-127,
+            "b_U_reference": 0.0,
+            "b_defect": 2.8927627984345394e-131,
+            "b_interpolated": 2.8927627984345394e-131,
+            "b_reference": 0.0,
+            "block": 0,
+            "cell_width": 0.0010929909972783314,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.29727939749347454,
+            "normalization_width": 0.003981799713676071,
+            "scaled_slope_defect": 1.4460824557454845e-130,
+            "t": 0.21875,
+            "training_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "training_times": [
+              0.0,
+              0.0625,
+              0.125,
+              0.1875,
+              0.25
+            ]
+          },
+          {
+            "U": -0.2947151882069589,
+            "b_U_interpolated": 28.7331055118272,
+            "b_U_reference": 0.0069277745137232396,
+            "b_defect": -0.01098309779224305,
+            "b_interpolated": -0.010982626949615605,
+            "b_reference": 4.708426274438208e-07,
+            "block": 1,
+            "cell_width": 0.0011652902656787978,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": 0.03347433528745039,
+            "t": 0.28125,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2935119269267676,
+            "b_U_interpolated": 137.2407336149332,
+            "b_U_reference": 135.74123003620423,
+            "b_defect": -0.0011149813514983453,
+            "b_interpolated": 0.026475202759084965,
+            "b_reference": 0.02759018411058331,
+            "block": 1,
+            "cell_width": 0.0012425155362343898,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": 0.0018631564932098032,
+            "t": 0.34375,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.29222881883740026,
+            "b_U_interpolated": 3398.438423230777,
+            "b_U_reference": 3398.2395079977546,
+            "b_defect": -0.0003255890764271019,
+            "b_interpolated": 1.693623090274138,
+            "b_reference": 1.6939486793505651,
+            "block": 1,
+            "cell_width": 0.0013250968385172257,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": 0.0002635819464110184,
+            "t": 0.40625,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2908602761387034,
+            "b_U_interpolated": 7138.153710698366,
+            "b_U_reference": 7138.177360535989,
+            "b_defect": -0.00031204325604861083,
+            "b_interpolated": 9.8624045443637,
+            "b_reference": 9.86271658761975,
+            "block": 1,
+            "cell_width": 0.001413509785824607,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": -3.342927691262705e-05,
+            "t": 0.46875,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.28940021052409265,
+            "b_U_interpolated": 667.6554354457761,
+            "b_U_reference": 667.9551177722286,
+            "b_defect": -0.00042401671447223066,
+            "b_interpolated": 16.320698672989455,
+            "b_reference": 16.321122689703927,
+            "block": 1,
+            "cell_width": 0.0015082813105533055,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": -0.00045200525209145823,
+            "t": 0.53125,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2878419786869109,
+            "b_U_interpolated": -5790.242031655536,
+            "b_U_reference": -5788.1195565988655,
+            "b_defect": -0.0018914521725239553,
+            "b_interpolated": 11.720224659366247,
+            "b_reference": 11.72211611153877,
+            "block": 1,
+            "cell_width": 0.0016099962397939649,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": -0.0034171768602963694,
+            "t": 0.59375,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.28617832077986677,
+            "b_U_interpolated": -5856.597542484104,
+            "b_U_reference": -5822.915724407055,
+            "b_defect": -0.019786131226455228,
+            "b_interpolated": 0.8262556628741708,
+            "b_reference": 0.8460417941006261,
+            "block": 1,
+            "cell_width": 0.0017193048518600595,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": -0.057909313239339386,
+            "t": 0.65625,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2844012907665585,
+            "b_U_interpolated": -2491.216927364782,
+            "b_U_reference": -607.1259183454301,
+            "b_defect": -0.7651489149239747,
+            "b_interpolated": -5.378958773036224,
+            "b_reference": -4.6138098581122495,
+            "block": 1,
+            "cell_width": 0.0018369315811742615,
+            "extrapolated": false,
+            "nodes": 9,
+            "normalization_centre": -0.2893780344318182,
+            "normalization_width": 0.011820926409636612,
+            "scaled_slope_defect": -3.4609462762741274,
+            "t": 0.71875,
+            "training_indices": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "training_times": [
+              0.25,
+              0.3125,
+              0.375,
+              0.4375,
+              0.5,
+              0.5625,
+              0.625,
+              0.6875,
+              0.75
+            ]
+          },
+          {
+            "U": -0.2825021774213516,
+            "b_U_interpolated": 10.124485562944397,
+            "b_U_reference": 10.124485403110274,
+            "b_defect": -3.00107494410895e-10,
+            "b_interpolated": -4.755670232610255,
+            "b_reference": -4.755670232310147,
+            "block": 2,
+            "cell_width": 0.001963685071152521,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 3.1386388085405965e-10,
+            "t": 0.78125,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.28047141451545166,
+            "b_U_interpolated": 16.38185424086564,
+            "b_U_reference": 16.38185422024816,
+            "b_defect": 1.596136556258898e-10,
+            "b_interpolated": -4.728335565455618,
+            "b_reference": -4.7283355656152315,
+            "block": 2,
+            "cell_width": 0.0021004698143001765,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 4.330638914214359e-11,
+            "t": 0.84375,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27829847846498706,
+            "b_U_interpolated": 20.797530719153233,
+            "b_U_reference": 20.79753069961425,
+            "b_defect": -1.8059775896972496e-10,
+            "b_interpolated": -4.687591741606814,
+            "b_reference": -4.687591741426216,
+            "block": 2,
+            "cell_width": 0.0022482996666318145,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": 4.392949068355038e-11,
+            "t": 0.90625,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          },
+          {
+            "U": -0.27597177140198337,
+            "b_U_interpolated": 23.761795740754664,
+            "b_U_reference": 23.761796108738377,
+            "b_defect": -2.1873081124113014e-10,
+            "b_interpolated": -4.635465526089224,
+            "b_reference": -4.635465525870493,
+            "block": 2,
+            "cell_width": 0.0024083135822866586,
+            "extrapolated": false,
+            "nodes": 5,
+            "normalization_centre": -0.2791071871598143,
+            "normalization_width": 0.00872076813437117,
+            "scaled_slope_defect": -8.862201736796715e-10,
+            "t": 0.96875,
+            "training_indices": [
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "training_times": [
+              0.75,
+              0.8125,
+              0.875,
+              0.9375,
+              1.0
+            ]
+          }
+        ]
+      }
+    ],
+    "original_cubic_maximum_absolute_b_defect": 0.06108762816826108,
+    "slope_error_scale": "original bracketing 17-knot U-cell width",
+    "source_blocks": [
+      [
+        0.0,
+        0.25
+      ],
+      [
+        0.25,
+        0.75
+      ],
+      [
+        0.75,
+        1.0
+      ]
+    ],
+    "training_times": [
+      0.0,
+      0.0625,
+      0.125,
+      0.1875,
+      0.25,
+      0.3125,
+      0.375,
+      0.4375,
+      0.5,
+      0.5625,
+      0.625,
+      0.6875,
+      0.75,
+      0.8125,
+      0.875,
+      0.9375,
+      1.0
+    ],
+    "withheld_times": [
+      0.03125,
+      0.09375,
+      0.15625,
+      0.21875,
+      0.28125,
+      0.34375,
+      0.40625,
+      0.46875,
+      0.53125,
+      0.59375,
+      0.65625,
+      0.71875,
+      0.78125,
+      0.84375,
+      0.90625,
+      0.96875
+    ]
+  },
+  "execution": {
+    "cpu_seconds": 0.078125,
+    "cpu_seconds_max": 30.0,
+    "field_solves": 0,
+    "scalar_kernel_values": 0,
+    "wall_solves": 0
+  },
+  "input": {
+    "directory": "results/development/nsc-atlas-scalar-inputs-v1/lift",
+    "files": {
+      "inputs.json": {
+        "bytes": 72154,
+        "sha256": "c19f080a6573bd81611907cb257a49b84ec3c57c052c3ff829a3c08176eb96b4"
+      },
+      "manifest.json": {
+        "bytes": 5661,
+        "sha256": "766ab92d272cc5b7491477e2659d1e7564ca0eaf1b781452ace2d5882e635a09"
+      }
+    },
+    "source_validation": {
+      "checker": "scripts/record_nsc_atlas_scalar_inputs.py:check",
+      "comparison": "lift",
+      "physical_solves": 0,
+      "source_bindings_sha256": "3e30eb5b3b444cda6b1898c614eb31b9583a81f66300758d13054b8d87df0f7a"
+    }
+  },
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-scalar-lift-assessment-v1",
+  "scope": "saved-data interpolation sensitivity; no new samples, physical solve or uniform enclosure"
+}

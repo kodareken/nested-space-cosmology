@@ -36,6 +36,20 @@ in `lift` and `forcing`. Both use current source bindings. The
 reports the unresolved coarse interpolation and the separate exterior
 quadrature/transport discrepancies.
 
+The subsequent saved-data assessment changes local Hermite stencil size
+while keeping the original training and withheld samples fixed:
+
+```sh
+python scripts/run_python.py scripts/assess_nsc_atlas_scalar_lift.py --output .build/scalar-lift-assessment-review
+python scripts/run_python.py scripts/assess_nsc_atlas_scalar_lift.py --check --output results/development/nsc-atlas-scalar-lift-assessment-v1
+```
+
+This calculation uses no field or wall solve. Its separate creation-only
+record binds the predecessor evidence and the assessment producer; `--check`
+repeats only the inexpensive interpolation arithmetic. The results motivate
+additional samples near the active pulse edges, rather than higher degree
+on the unchanged knots.
+
 The [scalar backscatter calculation](nsc-atlas-scalar-metric-response.md)
 evaluates the outgoing correction and displaced exterior boundary derivative
 from the same prepared field, cap metric and wall solution:

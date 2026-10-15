@@ -38,6 +38,18 @@ non-improvement or a noise plateau redirects to new independent samples and
 the analytically derived pre-arrival mass moment, rather than accepting the
 unresolved cubic fit.
 
+**Postprocessing outcome:** the admitted four stencils require 0.078125
+process-CPU seconds, zero new field/wall solves and zero scalar kernels.
+Their maximum value errors are 0.0123173, 0.00956095, 0.0849837 and
+0.765149 for four, five, seven and nine requested nodes. None meets the
+original target. The post-pulse block reaches $3.01\times10^{-10}$ with
+its five available nodes; the unresolved active-pulse errors peak near
+its source edges. The
+[assessment](../results/development/nsc-atlas-scalar-lift-assessment-v1/assessment.json)
+therefore redirects to additional local samples and a numerical comparison
+of the derived mass-moment formula. Further degree increases on the same
+training data are not supported by this outcome.
+
 **First forcing outcome:** the cumulative 2/4 radial pair completes in
 9.52 process-CPU seconds and 1.20 million scalar kernels. The maximum
 changes in $F,G$ are $7.20\times10^{-14}$ and $4.45\times10^{-10}$;

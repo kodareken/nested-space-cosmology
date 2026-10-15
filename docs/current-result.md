@@ -66,6 +66,27 @@ constraint and quiet regular centre. The current evaluator still uses the
 original radial metric; the identity gives a route to cheaper independent
 boundary refinement, with its numerical comparison still to be done.
 
+The [saved-data assessment](../results/development/nsc-atlas-scalar-lift-assessment-v1/assessment.json)
+then tests local higher-order Hermite stencils on the same 17 training knots,
+retaining all 16 withheld queries and splitting at the source edges. It
+requires 0.078125 process-CPU seconds and no new field or wall solve.
+
+| Requested local training nodes | Maximum withheld value error | Maximum width-scaled slope error |
+| --- | ---: | ---: |
+| 4 | 0.0123173 | 0.0286763 |
+| 5 | 0.00956095 | 0.0220658 |
+| 7 | 0.0849837 | 0.335182 |
+| 9 | 0.765149 | 3.46095 |
+
+All four miss the original target. The post-pulse block, which has five
+available training nodes, reaches $3.01\times10^{-10}$ value error. The
+active block carries the failure, with peak discrepancies at its near-edge
+withheld cuts $t=0.28125$ or $0.71875$. Increasing the degree on these
+unchanged knots is therefore not the next refinement. Additional active-edge
+samples, after comparing the cheaper mass-moment evaluator with the existing
+radial metric, are the concrete next connection. This assessment does not
+construct a new global lift or propagate a scalar field.
+
 ## Scalar backscatter boundary, 16 October 2026
 
 The [scalar-metric calculation](nsc-atlas-scalar-metric-response.md) now
