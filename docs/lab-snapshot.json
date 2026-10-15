@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "055cdceb302a1977e9b79a305d1c48367a481632",
+  "current_receipt_commit_parent": "d256b9ea244541ada1b13722aadd40b1f0cc30a1",
   "files": [
     {
       "bytes": 1506,
@@ -56,21 +56,27 @@
       "sha256": "923399c4656029c239b175a8b732eafe1efddfc91d586ad29c8f6171bac0c0c1"
     },
     {
-      "bytes": 781249,
+      "bytes": 781931,
       "change": "Explicit authentication archive/runtime successor for approved history compaction",
-      "changed_from_commit": "cab9d5e1aa1dfa9e70e4e68f92ad1c34bc9eb6a5",
+      "changed_from_commit": "d256b9ea244541ada1b13722aadd40b1f0cc30a1",
       "import_bytes": 6920,
       "import_sha256": "a08a954b421af53f25c2dd82e4464e54ed9cfc82e444ad3a07dda96b512b24cc",
       "migration_disposition": "immutable_source_proof",
       "original_path": "lab/.source-history/manifest.json",
       "path": "archive/source-history/manifest.json",
-      "sha256": "df2681365df5445ae9fc6098f5fb946430c5bae5aa525fb942740feaa2516ca5"
+      "sha256": "15234b7949d15762d7c932df4e4c7e0b0d721c4756df0abfed0a41f1685c57c6"
     },
     {
       "bytes": 2997,
       "path": "archive/source-history/objects/00/52a4887e3c2285e5ff674a9fed28171bb7f0a4",
       "retention_reason": "Minimal historical authentication transport and its runtime routing",
       "sha256": "992e93909417592429e0cd84ca81038ecdd9da465105e8ac6121bba2d3942751"
+    },
+    {
+      "bytes": 172,
+      "path": "archive/source-history/objects/00/a252fbd64ebfb2efc7360962b696ecac0833e9",
+      "retention_reason": "Minimal historical authentication transport and its runtime routing",
+      "sha256": "1e9c965979971e73405d4e7fe783479aaa0cdc6a82db3488b42e96c504e09ccd"
     },
     {
       "bytes": 1905,
@@ -8109,6 +8115,12 @@
       "path": "archive/source-history/objects/cc/29d21d85bfcadfa5a79610d715ce176227eaed",
       "retention_reason": "Minimal historical authentication transport and its runtime routing",
       "sha256": "457b4c7cf33c96307198fe502e054904ee74461ca93f54bb6f9c7ca793b29e4a"
+    },
+    {
+      "bytes": 928,
+      "path": "archive/source-history/objects/cc/29f84b77cf182cf61f63b54c40c62930aefd15",
+      "retention_reason": "Minimal historical authentication transport and its runtime routing",
+      "sha256": "ac2cb702371d5e52778ee4eaf5308393ea1e6a51606a46f8975d3949772e24b7"
     },
     {
       "bytes": 24985,

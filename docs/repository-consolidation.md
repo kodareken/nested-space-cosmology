@@ -40,8 +40,8 @@ The exact source proofs remain in `archive/source-history`. Its original
 25 Merkle objects and six source pins remain unchanged. The historical Git
 object store is process-local, never a competing installed package.
 
-The approved 15 October 2026 history compaction adds 1,654 authentication
-objects (93,389,210 compressed bytes) for 2,866 explicitly inventoried paths
+The approved 15 October 2026 history compaction adds 1,656 authentication
+objects (93,390,310 compressed bytes) for 2,868 explicitly inventoried paths
 across 17 original contexts. The [object manifest](../archive/source-history/manifest.json)
 records their identities. Byte-identical objects already retained in the
 baseline tree are reused instead of copied. Original receipt arrays are

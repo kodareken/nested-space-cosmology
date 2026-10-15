@@ -10113,6 +10113,18 @@
       "type": "blob",
       "sha256": "ac45e4fe6e8880c55a4f2c0d3f7e39ce64f376f0bcbfe86411f75e8b7e94dd1c",
       "bytes": 5684
+    },
+    {
+      "oid": "cc29f84b77cf182cf61f63b54c40c62930aefd15",
+      "type": "blob",
+      "sha256": "37ec91a75d7e73a7a4bdfe6c3268c4596b7a303ffba30120c219180ba0c90025",
+      "bytes": 1949
+    },
+    {
+      "oid": "00a252fbd64ebfb2efc7360962b696ecac0833e9",
+      "type": "blob",
+      "sha256": "45d8a25971e6bed3b4520395b93005e58472a420bf3993be186dc78ad658c3c5",
+      "bytes": 223
     }
   ],
   "authentication_archive": {
@@ -10121,8 +10133,8 @@
     "baseline_commit": "cab9d5e1aa1dfa9e70e4e68f92ad1c34bc9eb6a5",
     "baseline_tree": "b754d79a6587f7a14477d6026f4c422318e1be55",
     "purpose": "Original-source and exact-receipt authentication only. No full ancestry, historical checkout, numerical substitution or simulation.",
-    "added_objects": 1654,
-    "added_compressed_bytes": 93389210,
+    "added_objects": 1656,
+    "added_compressed_bytes": 93390310,
     "reuse": "Byte-identical objects in the retained baseline tree remain ordinary Git objects; they are not duplicated in this partial transport.",
     "contexts": [
       {
@@ -12020,6 +12032,14 @@
           {
             "path": "scripts/run_unified_gradient_boundary_dev3.py",
             "blob": "d6aea28ae7c92c935a7b2559e1732c7e3f7d640e"
+          },
+          {
+            "path": "scripts/update_lab_snapshot.py",
+            "blob": "cc29f84b77cf182cf61f63b54c40c62930aefd15"
+          },
+          {
+            "path": "scripts/verify_finite_regeneration.py",
+            "blob": "00a252fbd64ebfb2efc7360962b696ecac0833e9"
           },
           {
             "path": "src/recursive_horizons/_angular_transport.cpp",

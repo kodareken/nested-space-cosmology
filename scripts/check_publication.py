@@ -780,12 +780,19 @@ def historical_content() -> set[str]:
     # These pre-existing historical notes were already in the publication root,
     # rather than imported by the layout migration. Bind their original bytes.
     from replay_history import BASELINE
+    environment = os.environ.copy()
+    objects = ROOT / "archive/source-history/objects"
+    if objects.is_dir():
+        environment["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(objects)
     for relative in ("docs/PLAN.md", "lit/cosmo_v3.md"):
-        try:
-            preserved = _git_bytes(BASELINE, relative)
-        except FileNotFoundError:
+        if not (ROOT / relative).is_file():
             continue
-        candidates[relative] = hashlib.sha256(preserved).hexdigest()
+        # This global note inventory is independent of current-record reads.
+        preserved = subprocess.run(["git", "show", f"{BASELINE}:{relative}"],
+                                   cwd=ROOT, env=environment, capture_output=True,
+                                   timeout=30)
+        if preserved.returncode == 0:
+            candidates[relative] = hashlib.sha256(preserved.stdout).hexdigest()
     return {path for path, digest in candidates.items()
             if path not in GITHUB_MARKDOWN_ENTRYPOINTS
             and (ROOT / path).is_file() and sha256(ROOT / path) == digest}

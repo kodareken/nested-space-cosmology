@@ -1536,9 +1536,9 @@
       "sha256": "ad36ccab4520b8aae843551734d390ec87afd01d569446a306b99767635eb907"
     },
     {
-      "bytes": 2231164,
+      "bytes": 2231770,
       "path": "docs/lab-snapshot.json",
-      "sha256": "b73e72a8c1221a8572958d340d7d787279b3775214de943a2fa6560db2ae9b21"
+      "sha256": "ff6a473eb093688492ee871fccdeea758e941e3c7dd14a707b19a130e5bfd0e0"
     },
     {
       "bytes": 4997,
@@ -2138,7 +2138,7 @@
     {
       "bytes": 4936,
       "path": "docs/repository-consolidation.md",
-      "sha256": "b0cc87362186fb5cdb164db97c8b28d87bae140c1dd87c2bf6a8b90421682160"
+      "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
       "bytes": 16838,
@@ -14196,9 +14196,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 43854,
+      "bytes": 44316,
       "path": "scripts/check_publication.py",
-      "sha256": "8229669f486fd71d78e692f00ac6046a6b4f135b5501bac80f1707b1796e0dc8"
+      "sha256": "0e395daf189a29f329e75124bd12b349b0c6787221aea6907e8fbdd751eba661"
     },
     {
       "bytes": 13188,
@@ -18891,7 +18891,7 @@
       "sha256": "c64cdfcf34e80a78a0cc59423028407fefee1815087d1ff717110a8bf76bbb9f"
     }
   ],
-  "lab_snapshot_sha256": "b73e72a8c1221a8572958d340d7d787279b3775214de943a2fa6560db2ae9b21",
+  "lab_snapshot_sha256": "ff6a473eb093688492ee871fccdeea758e941e3c7dd14a707b19a130e5bfd0e0",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-13.6",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
