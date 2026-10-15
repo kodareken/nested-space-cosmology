@@ -1,5 +1,31 @@
 # Prior art and admission of new research
 
+## Exterior wedge and moving-wall calculation admission, 15 October 2026
+
+The rectangle has supplied a checked gravitational input. The next connection
+uses the same leading scalar on the full retained wedge to evaluate the radial
+mass and lapse at the wall, compare the independent timelike mass functional,
+and calculate the displacement and exterior clock correction. The cap's smooth
+metric and corrected central observation follow afterward.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Retained mathematics | The [bulk radial mass/lapse laws](nsc-atlas-bulk-response.md), [two-sided mass and displacement functionals](nsc-atlas-cap-wall-response.md), original prepared-field Volterra equation and signed wall normalization. No new action, source, coupling or amplitude. |
+| Missing connection | Controlled evaluation beyond U_a up to U_W(V), including the moving lower endpoint of the transverse derivative; the resulting metric input to the material wall's proper-time evolution and exterior null clock. |
+| Fixed data | Original compact C3 reduced-field preparation, quiet cap/bottom/corner, h=1, b=2, m=0.4, same Jordan source gauge and canonical conformal scalar. All response quantities are formal coefficients of alpha=kappa4 epsilon^2/ell^2. |
+| Domain | Original no-return wedge U_0<=U<=U_W(V), V_a<=V<=V_b, wall radius in [0.45,0.55]. Evaluate the exterior kernel only on this retained domain. For U>U_a, start chi_U at the inverse wall label L(U), with chi_U=0 there. |
+| Implementation | Expose the existing dense field solution additively; paired field evaluation and split quadrature supply first derivatives. Integrate radial mass/lapse and the independent proper-time masses, then the quiet-anchored displacement and exterior clock. Reuse source data and field values; never differentiate stored waveform samples. |
+| Compute budget | At most 120 process-CPU seconds and 30 million scalar-kernel evaluations for each complete pilot or two-setting comparison, including its field solves and queries. Start with 129/257 field nodes, temporal Gauss orders 32/64 and per-cell radial orders 2/4. At most 129 displayed time cuts; dense grids and exploratory output stay under .build. Diagnose exhaustion before redesigning a run. |
+| Independent checks | Rectangle overlap; exact quiet/source/wall limits; nonzero physical p_U despite chi_U=0 at the wall; inverse-wall bracketing; radial versus timelike Jordan mass; both displacement equations; angular and clock normalization; regular beta_+=0 crossing; field, radial, temporal, source and geometry refinements varied separately; zero source and coordinate/unit controls. |
+| Useful output | A finite numerical wall response and exterior clock coefficient with measured refinement differences and mass-path defects. Preserve the six original rectangle records under explicit commit-pinned replay when their source API evolves. |
+| Stop or redirect | Diagnose an unprovided datum, field query outside its domain, mass-path disagreement that does not refine, singular normalization or exhausted budget. A formal coefficient alone supplies neither a finite-amplitude remainder nor the unsolved central-observer correction. |
+
+Three likely failures are crossing the moving domain while evaluating a kernel,
+losing a frame or cap-vacuum term in the mass comparison, and confusing the
+exterior null coordinate with the central observer's clock. Domain checks,
+independent mass paths and separately named observer maps make each failure
+detectable without changing the physical inputs.
+
 ## Smooth exterior metric propagation admission, 15 October 2026
 
 The next step carries the same prepared scalar and its already fixed

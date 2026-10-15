@@ -117,12 +117,16 @@ def transverse_kernel_integral(lower, upper, V):
     return 2*M_OVER_ELL**2/V*(b**-2-a**-2)
 
 
-def _solve(nodes, geometry, prepared, budget, *, tolerance=2e-10, include_bulk=False):
+def _solve(nodes, geometry, prepared, budget, *, tolerance=2e-10, include_bulk=False,
+           include_dense=False):
     """Product integration in U and borrowed DOP853 integration in V.
 
     Integrate the correction z=chi-g, so exact source cancellation does not
     rely on numerically integrating g'. The terminal U node always stores the
     wall value because the solution is constant outside the moving wall.
+    Existing callers receive two entries, or three with include_bulk. The
+    explicit include_dense option adds a fourth entry for retained-wedge
+    evaluation of this same solve, without another field evolution.
     """
     if nodes not in (129, 257, 513):
         raise ValueError("admitted field grids have 129, 257 or 513 nodes")
@@ -194,6 +198,9 @@ def _solve(nodes, geometry, prepared, budget, *, tolerance=2e-10, include_bulk=F
             "zero_kernel_phi_C_over_epsilon": 2*gp/T_V,
         }
 
+    if include_dense:
+        return (extract, calls, _bulk_evaluator(U, cuts, segments, geometry, prepared, budget),
+                {"grid": U, "cuts": cuts, "segments": tuple(segments), "prepared": prepared})
     if include_bulk:
         return extract, calls, _bulk_evaluator(U, cuts, segments, geometry, prepared, budget)
     return extract, calls
@@ -294,6 +301,8 @@ class PreparedFieldSolution:
     derivatives. Here t=(V-Va)/(Vb-Va), while all returned derivatives use
     U,V, not t. Spatial, geometry and 32/64 derivative refinements remain
     separate diagnostics to be made by the consuming calculation.
+    ``dense_data`` exposes the original grid, dense segment partition and
+    preparation to WedgeField; it is numerical state, not a cap continuation.
     """
 
     def __init__(self, nodes, geometry_knots, geometry, prepared, budget):
@@ -302,8 +311,8 @@ class PreparedFieldSolution:
         self.geometry = geometry
         self.domain = {key: prepared["geometry"][key] for key in ("U0", "Ua", "Ub", "Va", "Vb")}
         self.budget = budget
-        self._wall, self.rhs_calls, self.bulk = _solve(
-            nodes, geometry, prepared, budget, include_bulk=True)
+        self._wall, self.rhs_calls, self.bulk, self.dense_data = _solve(
+            nodes, geometry, prepared, budget, include_bulk=True, include_dense=True)
 
     def wall(self, normalized_V):
         values = np.atleast_1d(np.asarray(normalized_V, dtype=float))

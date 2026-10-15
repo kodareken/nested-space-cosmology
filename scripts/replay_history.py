@@ -27,6 +27,11 @@ V7_BUNDLE = "results/development/nsc-cosmological-atlas-v7"
 V8_COMMIT = "1154baf290d901e73058392e143d0acb37d22951"
 V8_CONTEXT = ROOT / ".build/replay" / V8_COMMIT[:12]
 V8_BUNDLE = "results/development/nsc-cosmological-atlas-v8"
+BULK_V1_COMMIT = "3470152e176611849140eec3b02bafede405d147"
+BULK_V1_CONTEXT = ROOT / ".build/replay" / BULK_V1_COMMIT[:12]
+BULK_V1_BUNDLE = "results/development/nsc-atlas-bulk-response-v1"
+BULK_V1_COMPARISONS = ("metric", "field", "geometry", "derivative", "source", "time")
+BULK_V1_BUNDLES = tuple(BULK_V1_BUNDLE + "/" + kind for kind in BULK_V1_COMPARISONS)
 
 
 def sha(data: bytes) -> str:
@@ -106,21 +111,33 @@ def prepare(context: Path = CONTEXT) -> dict:
 
 def _prepare_root_atlas(context: Path, commit: str, bundle: str, label: str) -> dict:
     """Authenticate preserved root evidence against an explicitly selected commit."""
-    manifest_name = bundle + "/manifest.json"
-    manifest = json.loads(git("show", commit + ":" + manifest_name))
-    source_paths = set(manifest["source_bindings"])
-    bundle_paths = {bundle + "/" + name for name in manifest["outputs"]}
-    bundle_paths.add(manifest_name)
+    return _prepare_root_bundles(context, commit, (bundle,), label)
+
+
+def _prepare_root_bundles(context: Path, commit: str, bundles: tuple[str, ...],
+                          label: str, *, extra_paths=()) -> dict:
+    """Install one union archive and receipt, with every original binding checked."""
+    bindings, bundle_paths = {}, set()
+    for bundle in bundles:
+        manifest_name = bundle + "/manifest.json"
+        manifest = json.loads(git("show", commit + ":" + manifest_name))
+        for name, digest in manifest["source_bindings"].items():
+            if name in bindings and bindings[name] != digest:
+                raise ValueError(label + " original manifests disagree on a source binding")
+            bindings[name] = digest
+        bundle_paths.update(bundle + "/" + name for name in manifest["outputs"])
+        bundle_paths.add(manifest_name)
+    source_paths = set(bindings)
     # Full src imports remain isolated even where the producer binds only the
     # modules it uses directly. The source-bound scripts and owners are exact.
-    paths = sorted({"src", "pyproject.toml", *source_paths, *bundle_paths})
+    paths = sorted({"src", "pyproject.toml", *extra_paths, *source_paths, *bundle_paths})
     retained = bundle_paths | {name for name in source_paths
                                if name.startswith(("results/", "paper/atlas-working-draft"))}
     data = git("archive", "--format=tar", commit, *paths)
     hashes = install_archive(data, context, retained_paths=retained)
     if not set(paths).difference({"src"}) <= set(hashes):
         raise ValueError(label + " historical source inventory is incomplete")
-    if any(hashes[name] != digest for name, digest in manifest["source_bindings"].items()):
+    if any(hashes[name] != digest for name, digest in bindings.items()):
         raise ValueError(label + " original source does not match its manifest")
     receipt = {"schema": "NSC-EXPLICIT-REPLAY-v1", "source_commit": commit,
                "purpose": "Explicit " + label + " context; never substitutes for a current source check.",
@@ -142,6 +159,95 @@ def prepare_v7(context: Path = V7_CONTEXT) -> dict:
 def prepare_v8(context: Path = V8_CONTEXT) -> dict:
     """Materialize original v8 sources; perform no waveform or figure replay."""
     return _prepare_root_atlas(context, V8_COMMIT, V8_BUNDLE, "v8")
+
+
+def prepare_bulk_v1(context: Path = BULK_V1_CONTEXT) -> dict:
+    """Authenticate all six retained records in their single original context."""
+    return _prepare_root_bundles(context, BULK_V1_COMMIT, BULK_V1_BUNDLES,
+                                 "bulk-v1", extra_paths=("scripts/run_python.py",))
+
+
+def _bulk_command(context: Path, code: str) -> dict:
+    env = environment(context)
+    env["GIT_ALTERNATE_OBJECT_DIRECTORIES"] = str(ROOT / "archive/source-history/objects")
+    env["PYTHONNOUSERSITE"] = "1"
+    result = subprocess.run([sys.executable, "-c", code, *BULK_V1_BUNDLES], cwd=context,
+                            env=env, capture_output=True, text=True)
+    if result.returncode:
+        raise ValueError("bulk-v1 historical check failed:\n" + result.stdout + "\n" + result.stderr)
+    return json.loads(result.stdout)
+
+
+def check_bulk_v1(context: Path = BULK_V1_CONTEXT) -> dict:
+    """Select the original recorder explicitly; authenticate without field solves."""
+    info = prepare_bulk_v1(context)
+    result = _bulk_command(context, "import json,sys; "
+        "from pathlib import Path; import record_nsc_atlas_bulk_response as original; "
+        "print(json.dumps({'checks':[original.check(Path(p)) for p in sys.argv[1:]]}))")
+    return {**info, **result, "scientific_replay": False, "metric_solves": 0}
+
+
+def require_bulk_v1_profile(context: Path) -> dict:
+    """Numerical replay uses the recorded packages; authentication is profile-free."""
+    profiles = [json.loads((context / bundle / "response.json").read_bytes())["runtime"]
+                for bundle in BULK_V1_BUNDLES]
+    expected = profiles[0]
+    actual = {"python": platform.python_version()}
+    for name in expected.keys() - {"python"}:
+        try:
+            actual[name] = version(name)
+        except PackageNotFoundError:
+            actual[name] = "unavailable"
+    if any(profile != expected for profile in profiles) or actual != expected:
+        raise ValueError("bulk-v1 numerical replay requires its recorded runtime "
+                         + json.dumps(expected, sort_keys=True) + "; actual="
+                         + json.dumps(actual, sort_keys=True)
+                         + ". Use check-bulk-v1 for authentication; no fallback was selected.")
+    return actual
+
+
+def run_bulk_v1(context: Path = BULK_V1_CONTEXT) -> dict:
+    """Explicitly replay all six numerical studies, retaining no replacement records.
+
+    Original creation budgets still apply to each complete comparison. Floating
+    scientific values use 1e-10 relative plus 1e-12 absolute tolerance; execution
+    counters and CPU time are validated by the original contract, not equated.
+    """
+    info = check_bulk_v1(context)
+    profile = require_bulk_v1_profile(context)
+    code = '''import json, math, sys
+from pathlib import Path
+import record_nsc_atlas_bulk_response as original
+
+def close(left, right):
+    if isinstance(left, dict):
+        return isinstance(right, dict) and left.keys() == right.keys() and all(close(left[k], right[k]) for k in left)
+    if isinstance(left, list):
+        return isinstance(right, list) and len(left) == len(right) and all(close(a, b) for a, b in zip(left, right))
+    if isinstance(left, float):
+        return (isinstance(right, (int, float)) and not isinstance(right, bool)
+                and math.isfinite(left) and math.isfinite(right)
+                and abs(left-right) <= 1e-12+1e-10*max(abs(left), abs(right)))
+    return type(left) is type(right) and left == right
+
+checks = []
+for name in sys.argv[1:]:
+    directory = Path(name)
+    original.check(directory)
+    saved = json.loads((directory / 'response.json').read_bytes())
+    result = original.compare(saved['comparison'])
+    original.validate_record(result, saved['comparison'])
+    original.check(directory)
+    execution = result.pop('execution')
+    saved.pop('execution')
+    if not close(saved, result):
+        raise ValueError('bulk-v1 numerical replay mismatch: ' + name)
+    checks.append({'comparison': result['comparison'], 'metric_solves': 2, 'execution': execution})
+print(json.dumps({'checks': checks}))
+'''
+    result = _bulk_command(context, code)
+    return {**info, **result, "scientific_replay": True, "metric_solves": 12,
+            "runtime": profile, "relative_tolerance": 1e-10, "absolute_tolerance": 1e-12}
 
 
 def _require_root_profile(context: Path, bundle: str, label: str) -> dict:
@@ -239,8 +345,9 @@ def run(kind: str, context: Path = CONTEXT) -> dict:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("kind", choices=["prepare", "atlas", "finite", "companion", "tests", "all",
-                                        "prepare-v7", "atlas-v7", "prepare-v8", "atlas-v8"],
-                        help="v7/v8 commands are explicit; legacy all retains its separate v1-v6 profile")
+                                        "prepare-v7", "atlas-v7", "prepare-v8", "atlas-v8",
+                                        "prepare-bulk-v1", "check-bulk-v1", "bulk-v1"],
+                        help="v7/v8/bulk-v1 are explicit; legacy all retains its separate v1-v6 profile")
     args = parser.parse_args()
     if args.kind == "prepare-v7":
         result = prepare_v7()
@@ -250,6 +357,12 @@ def main():
         result = prepare_v8()
     elif args.kind == "atlas-v8":
         result = run_v8()
+    elif args.kind == "prepare-bulk-v1":
+        result = prepare_bulk_v1()
+    elif args.kind == "check-bulk-v1":
+        result = check_bulk_v1()
+    elif args.kind == "bulk-v1":
+        result = run_bulk_v1()
     else:
         result = prepare() if args.kind == "prepare" else run(args.kind)
     print(json.dumps(result, indent=2))

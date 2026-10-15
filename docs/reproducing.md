@@ -8,6 +8,21 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [moving-wall calculation](nsc-atlas-wall-evolution.md) extends the same
+prepared field to its retained wedge and evaluates two mass paths, wall
+displacement and the exterior null clock. Create or authenticate a comparison:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_wall_evolution.py --comparison field --output .build/wall-review
+python scripts/run_python.py scripts/record_nsc_atlas_wall_evolution.py --check --output .build/wall-review
+```
+
+Its independent comparison names are `field`, `radial`, `derivative`, `time`,
+`geometry`, `source` and `ode`. Each two-setting comparison includes its field
+solves and queries in one 120 process-CPU-second, 30-million-kernel budget.
+The saved summaries are formal quadratic coefficients and numerical
+refinement diagnostics. The corrected central observer is a later calculation.
+
 The [smooth exterior metric](nsc-atlas-bulk-response.md) has separate
 finite comparisons for metric grid, leading field, geometry interpolation,
 field derivative quadrature, source quadrature and time tolerance. For
@@ -25,6 +40,20 @@ Each complete two-solve comparison has its own cumulative 120 process-CPU
 second and 30-million-scalar-kernel ceiling. The extended prepared-field
 interface leaves the original v8 evidence untouched; replay that earlier
 record explicitly with `scripts/replay_history.py atlas-v8`.
+
+The six retained bulk-v1 records were produced at `3470152e1766`, before
+the wedge API was added. Authenticate them with their original recorder,
+or explicitly repeat all six original numerical studies:
+
+```sh
+python scripts/run_python.py scripts/replay_history.py check-bulk-v1
+python scripts/run_python.py scripts/replay_history.py bulk-v1
+```
+
+The first command checks retained bytes and declarations without a metric
+solve. The second requires the recorded runtime and uses each original
+comparison's compute budget. Both select the named source context explicitly;
+they never replace a failing current-source check with historical code.
 
 ```sh
 python -m pip install -e '.[paper,dev]'

@@ -843,6 +843,15 @@ def check_public_boundary(errors: list[str], files: list[Path]) -> None:
             check_markdown_links(errors, path, text)
 
 
+def check_bulk_response_history(errors: list[str]) -> None:
+    """Select bulk-v1's named original source context, never a failure fallback."""
+    try:
+        from replay_history import check_bulk_v1
+        check_bulk_v1()
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("bulk response original-context evidence: " + str(error))
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -882,12 +891,7 @@ def main() -> int:
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("cap/wall response evidence: " + str(error))
-    try:
-        from record_nsc_atlas_bulk_response import check, VARIATIONS
-        for comparison in VARIATIONS:
-            check(ROOT / "results/development/nsc-atlas-bulk-response-v1" / comparison)
-    except (OSError, ValueError, KeyError, TypeError) as error:
-        errors.append("bulk response evidence: " + str(error))
+    check_bulk_response_history(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:
