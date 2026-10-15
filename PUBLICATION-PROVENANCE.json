@@ -2236,9 +2236,9 @@
       "sha256": "e8710fecb80a92039634c314dfac4d8be6a8899758bd2b2a93c39100d5926e46"
     },
     {
-      "bytes": 8159,
+      "bytes": 7973,
       "path": "paper/build-manifest.json",
-      "sha256": "a657a78370bb71381a7176fb4e3078df78a15910da9de74a3d7631bb4e9c11bd"
+      "sha256": "b8789fe09bb8e85793c591a33dae306b88ab4c395a77c87a373ac6eb855c047d"
     },
     {
       "bytes": 3206,
