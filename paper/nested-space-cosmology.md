@@ -942,8 +942,8 @@ $\ell$, with $\alpha=\kappa_4\varepsilon^2/\ell^2$ and proper wall time
 $s=\tau/\ell$. The two geometric masses have expansions
 
 $$
-\frac{\mathfrak m_+}{\ell}=m+\alpha\mu_++O(\alpha^2),\qquad
-\frac{\mathfrak m_-}{\ell}=\frac{h^2r^3}{2}+\alpha\nu_-+O(\alpha^2).
+\frac{\mathfrak{m}_+}{\ell}=m+\alpha\mu_++O(\alpha^2),\qquad
+\frac{\mathfrak{m}_-}{\ell}=\frac{h^2r^3}{2}+\alpha\nu_-+O(\alpha^2).
 $$
 
 Here $\mu_+$ is the exterior coefficient $\mu_J$ of Section 13.8.
@@ -998,7 +998,7 @@ zero change in the dimensionless mean extrinsic-curvature trace:
 
 $$
 \delta a_+=\delta a_-=\frac{6m\rho}{bx^4}-\frac{2D}{bx^3},\qquad
-\delta\overline K=0.
+\delta\overline{K}=0.
 $$
 
 Thus the temporal jump and normal-force condition close with the angular

@@ -23,6 +23,17 @@ an angular equation for all junction conditions, and promoting a formal wall
 response to a complete spacetime. Independent frame/stress derivations,
 explicit temporal/normal checks and the remaining-data statement address them.
 
+**Outcome, 15 October 2026:** the
+[two-sided derivation](nsc-atlas-cap-wall-response.md) closes the cap
+vacuum-subtracted mass and quiet-anchored displacement functionals. The
+saved certificate has 26 exact zero identities and six omission controls;
+creation used 1.546875 process-CPU seconds with no numerical integration.
+Independent original-frame and frame-transform calculations agree, including
+the temporal and normal conditions. The next missing connection is the
+smooth bulk radius/lapse solution and wall embedding, followed by observer
+clock and field corrections. No additional independent cap mass constant or
+wall-pressure history was needed for this formal boundary reduction.
+
 This file prevents Nested-Space Cosmology from spending compute on an already known component and then presenting the reproduction as project novelty. Import a result with its assumptions and attribution. The research contribution must close a previously missing connection, distinguish candidate exteriors, or establish why a proposed connection is unavailable in a named domain.
 
 The research direction adopted on 10 October 2026 is exterior first: build a

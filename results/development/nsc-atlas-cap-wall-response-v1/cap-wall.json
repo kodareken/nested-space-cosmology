@@ -1,0 +1,82 @@
+{
+  "acceleration_response": "delta_a_pm=6*m*rho/(b*x**4)-2*D/(b*x**3)",
+  "cap_mass": "m_minus/ell=h**2*r**3/2+alpha*nu_minus+O(alpha**2)",
+  "cap_pulled_coefficient": "nu_minus+3*h**2*x**2*rho/2",
+  "clock": "s=tau_wall/ell, shared quiet corner rho(s_a)=0",
+  "derived": [
+    "cap vacuum-subtracted mass functional",
+    "quiet-anchored wall displacement functional",
+    "compatible angular, temporal and normal junction conditions"
+  ],
+  "displacement": "rho_s=v_x*rho+(mu_plus/x+beta_plus*D/(b*x**2))/v",
+  "domain": {
+    "b": 2,
+    "h": 1,
+    "m": 0.4,
+    "source": "original C3 compact preparation, quiet cap and bottom, no-return",
+    "x": [
+      0.45,
+      0.55
+    ]
+  },
+  "exact_algebra": {
+    "arithmetic": "exact symbolic expressions; no mass quadrature, trajectory or bulk evolution",
+    "nonzero_controls": {
+      "changed_cap_mass_without_exterior_changes_wall_forcing": true,
+      "omitted_cap_displacement_changes_total_mass": true,
+      "omitted_cap_einstein_tensor_changes_normal_stress": true,
+      "omitted_endpoint_changes_jordan_transport": true,
+      "omitted_transformed_potential_changes_transport": true,
+      "wrong_mixed_flux_sign_changes_temporal_jump": true
+    },
+    "sympy_version": "1.14.0",
+    "zero_residuals": {
+      "background_acceleration_agrees_on_both_sides": "0",
+      "cap_actual_radius_background_displacement": "0",
+      "cap_endpoint_acceleration_cancels": "0",
+      "cap_endpoint_trace_form": "0",
+      "cap_frame_endpoint_subtracts_actual_radius_vacuum": "0",
+      "cap_full_improved_normal_projection": "0",
+      "cap_transport_equals_direct_jordan_stress": "0",
+      "complete_exterior_acceleration_numerator_is_beta_times_delta_a": "0",
+      "conformal_material_trace_retains_tension_jump": "0",
+      "linear_acceleration_from_transported_mass_difference": "0",
+      "linear_angular_jump": "0",
+      "linear_cap_mass_constraint": "0",
+      "linear_exterior_mass_constraint": "0",
+      "linear_mean_curvature_variation_vanishes": "0",
+      "mass_difference_from_both_first_derivative_functionals": "0",
+      "mass_difference_transport_from_equal_scalar_stresses": "0",
+      "normal_force_from_two_radial_einstein_equations": "0",
+      "normal_reversal_preserves_cap_mass_ingredients": "0",
+      "physical_mass_and_displacement_unit_scaling": "0",
+      "quadratic_field_scaling": "0",
+      "signed_background_angular_jump": "0",
+      "signed_background_mass_difference": "0",
+      "temporal_jump_from_angular_and_mixed_flux": "0",
+      "transformed_fixed_vacuum_potential": "0",
+      "two_displacement_formulas_agree": "0",
+      "zero_source_mass_ingredients": "0"
+    }
+  },
+  "execution": {
+    "bulk_metric_solves": 0,
+    "cpu_seconds_max": 60,
+    "numerical_integrations": 0,
+    "waveform_solves": 0
+  },
+  "mass_difference": "D=mu_plus-nu_minus",
+  "mean_curvature_response": "delta_mean_K=0 (includes metric and wall displacement)",
+  "order": "r=x+alpha*rho, alpha=kappa_4*epsilon**2/ell**2",
+  "owner": "docs/nsc-atlas-cap-wall-response.md",
+  "remaining": [
+    "controlled numerical evaluation",
+    "compatible bulk metric evolution",
+    "corrected observer clock and field response",
+    "finite-amplitude remainder bound",
+    "formation, stability and physical source selection"
+  ],
+  "schema": "nsc-atlas-cap-wall-response-v1",
+  "signed_normal_response": "delta_beta_pm=beta_pm_x*rho+D/(b*x**2)",
+  "status": "CONDITIONAL_TWO_SIDED_MASS_AND_WALL_DISPLACEMENT_FUNCTIONALS"
+}

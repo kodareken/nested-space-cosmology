@@ -1,0 +1,273 @@
+{
+  "action": {
+    "bulk": "integral sqrt(-g) [f(phi) R - (nabla phi)^2/2 + L_vac] d4x",
+    "dimension": 4,
+    "f": "1/(2*kappa_4) - xi*phi^2/2",
+    "field": "canonical_real_massless_scalar",
+    "frame": "Jordan",
+    "gravitational_normalization": "kappa_4=8*pi*G; k=kappa_4*sigma/2",
+    "owner_refs": [
+      "docs/nsc-atlas-scalar-wall-consistency.md"
+    ],
+    "parameter_refs": {
+      "kinetic": "kinetic_coefficient",
+      "mass_squared": "scalar_mass_squared",
+      "material_tension": "k_ell",
+      "nonminimal": "xi",
+      "scalar_surface": "surface_scalar_coupling",
+      "vacuum": "H_ell"
+    },
+    "scalar_einstein_tensor_accounting": "included_once_in_improved_scalar_stress",
+    "signature": "-+++",
+    "source_refs": [
+      {
+        "equations": "(2.10)-(2.14), (3.42)-(3.46)",
+        "url": "https://arxiv.org/html/1910.07534v2",
+        "use": "nonminimal scalar action and variational junction laws"
+      }
+    ],
+    "surface": "-sigma integral sqrt(-gamma) d3y",
+    "vacuum": "scalar_independent_fixed_terms",
+    "variational_boundary_term": "2*f*K",
+    "zero_background_scalar": true
+  },
+  "approximation": {
+    "field_order": 1,
+    "finite_amplitude_bound": null,
+    "full_bulk_and_wall_evolution_solved": false,
+    "metric_response_scope": "initial_null_leg_and_analytic_exterior_wall_mass_functional",
+    "positive_f_required": true,
+    "stress_and_metric_response_order": 2
+  },
+  "calibration": {
+    "observation_refs": [],
+    "parameter_ids": [],
+    "status": "not_performed"
+  },
+  "clocks": {
+    "central": "de_Sitter_flat_slicing_proper_time_T_at_r=0",
+    "central_arrival_window_over_ell": [
+      -0.5817589515953444,
+      -0.25023070056069985
+    ],
+    "cross_universe_age_map": null,
+    "evidence_refs": [
+      "results/development/nsc-cosmological-atlas-v8/prepared-response.json"
+    ],
+    "exterior": "Kruskal_U_V_are_coordinates_not_synchronized_observer_clocks",
+    "owner_refs": [
+      "docs/nsc-atlas-causal-observers.md",
+      "docs/nsc-atlas-prepared-response.md"
+    ],
+    "wall": "induced_proper_time_tau"
+  },
+  "derived_quantities": [
+    {
+      "evidence_refs": [
+        "results/development/nsc-cosmological-atlas-v8/prepared-response.json"
+      ],
+      "id": "central_field_and_finite_tail",
+      "owner_refs": [
+        "docs/nsc-atlas-prepared-response.md"
+      ],
+      "status": "conditional_evaluated_response"
+    },
+    {
+      "evidence_refs": [
+        "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json"
+      ],
+      "id": "initial_null_radius_correction",
+      "owner_refs": [
+        "docs/nsc-atlas-characteristic-initialization.md"
+      ],
+      "status": "conditional_evaluated_response"
+    },
+    {
+      "evidence_refs": [
+        "results/development/nsc-atlas-source-mass-v1/mass.json"
+      ],
+      "id": "source_leg_geometric_mass_coefficient",
+      "owner_refs": [
+        "docs/nsc-atlas-source-mass.md"
+      ],
+      "status": "conditional_evaluated_response"
+    },
+    {
+      "evidence_refs": [
+        "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json"
+      ],
+      "id": "exterior_wall_mass_functional",
+      "owner_refs": [
+        "docs/nsc-atlas-wall-mass-closure.md"
+      ],
+      "status": "conditional_analytic_functional"
+    }
+  ],
+  "domain": {
+    "angular_mode": 0,
+    "cap": "regular_de_Sitter_cap_with_zero_earlier_field_data",
+    "evidence_refs": [
+      "results/development/nsc-cosmological-atlas-v7/preparation-access.json"
+    ],
+    "exterior_radius_over_ell": [
+      0.4,
+      0.55
+    ],
+    "exterior_region": "Schwarzschild_IV",
+    "null_coordinate_signs": "U<0,V<0,0<UV<1",
+    "owner_refs": [
+      "docs/nsc-atlas-field-preparation.md",
+      "docs/nsc-atlas-causal-observers.md"
+    ],
+    "parameter_refs": {
+      "cap": "H_ell",
+      "exterior": "M_over_ell",
+      "length_scale": "ell",
+      "wall": "k_ell"
+    },
+    "retained_side": "U<=U_W(V)",
+    "right_parent_driven_access": false,
+    "wall_branch": "expanding_timelike",
+    "wall_radius_over_ell": [
+      0.45,
+      0.55
+    ]
+  },
+  "id": "conformal-scalar-cap-wall-schwarzschild-iv",
+  "new_compute_admitted": false,
+  "observational_predictions": [],
+  "parameters": {
+    "H_ell": {
+      "dimensionless": true,
+      "meaning": "fixed cap vacuum scale; not an inferred Hubble constant",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "theory",
+      "value": 1.0
+    },
+    "M_over_ell": {
+      "dimensionless": true,
+      "meaning": "fixed Schwarzschild geometric mass at the quiet corner",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "geometric_data",
+      "value": 0.4
+    },
+    "ell": {
+      "dimensionless": false,
+      "meaning": "positive reference length; no conversion to measured SI length supplied",
+      "owner_refs": [
+        "docs/nsc-atlas-field-preparation.md"
+      ],
+      "role": "unit_scale",
+      "value": 1.0
+    },
+    "epsilon": {
+      "dimensionless": false,
+      "meaning": "physical amplitude in phi=epsilon*Phi is unselected",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "preparation_data",
+      "value": null
+    },
+    "k_ell": {
+      "dimensionless": true,
+      "meaning": "fixed positive material tension in reference units",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "theory",
+      "value": 2.0
+    },
+    "kinetic_coefficient": {
+      "dimensionless": true,
+      "meaning": "canonical positive scalar normalization",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "theory",
+      "value": 1.0
+    },
+    "scalar_mass_squared": {
+      "dimensionless": false,
+      "meaning": "massless scalar with zero potential",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "theory",
+      "value": 0.0
+    },
+    "surface_scalar_coupling": {
+      "dimensionless": true,
+      "meaning": "no added scalar interaction at the wall",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "theory",
+      "value": 0.0
+    },
+    "xi": {
+      "dimensionless": true,
+      "meaning": "fixed conformal nonminimal coupling",
+      "owner_refs": [
+        "docs/nsc-atlas-scalar-wall-consistency.md"
+      ],
+      "role": "theory",
+      "value": 0.16666666666666666
+    }
+  },
+  "preparation": {
+    "bottom_scalar": 0.0,
+    "corner_geometry": "fixed_radius_both_expansions_and_null_lapse",
+    "earlier_cap_scalar": 0.0,
+    "earlier_cap_time_derivative": 0.0,
+    "evidence_refs": [
+      "results/development/nsc-cosmological-atlas-v7/preparation-access.json"
+    ],
+    "normalized_support": [
+      0.25,
+      0.75
+    ],
+    "owner_refs": [
+      "docs/nsc-atlas-field-preparation.md",
+      "docs/nsc-atlas-characteristic-initialization.md"
+    ],
+    "physical_source_selected": false,
+    "source_function_ref": "src/recursive_horizons/nsc_atlas_field_preparation.py#source_profile",
+    "source_kind": "independently_prescribed_characteristic_data_in_IV",
+    "source_leg_gauge": "fixed_reference_null_lapse",
+    "source_regularity": "C3_compact_polynomial"
+  },
+  "schema": "nsc-atlas-model-specification-v1",
+  "state": {
+    "field_equation": "(box-xi*R)phi=0",
+    "kind": "classical_prepared_probe",
+    "owner_refs": [
+      "docs/nsc-atlas-field-preparation.md",
+      "docs/nsc-atlas-field-matching.md",
+      "docs/nsc-atlas-prepared-response.md"
+    ],
+    "parameter_refs": {
+      "amplitude": "epsilon",
+      "nonminimal": "xi"
+    },
+    "quantum_state": null,
+    "reduced_equation_ref": "src/recursive_horizons/nsc_atlas_field_preparation.py#exterior_coefficient",
+    "response_ref": "src/recursive_horizons/nsc_atlas_prepared_response.py#prepared_response_record",
+    "transmission_ref": "src/recursive_horizons/nsc_atlas_field_transfer.py#conformal_junction_coefficients"
+  },
+  "status": "conditional_reference_model",
+  "unresolved": [
+    "physical_preparation_selection",
+    "coupled_bulk_and_wall_evolution",
+    "finite_amplitude_validity",
+    "formation",
+    "stability",
+    "joined_quantum_state_and_detector_model",
+    "physical_parameter_inheritance",
+    "cosmological_effective_stress_and_observational_identification"
+  ]
+}

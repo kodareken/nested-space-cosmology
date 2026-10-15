@@ -1,10 +1,10 @@
 {
-  "bytes": 1827043,
+  "bytes": 1899655,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "669d5567eee0591fb3b89c7688dba7a1117101e3678083151d965e2896579387",
+  "metadata_sha256": "5166f7ca819d4e5d749d1c5107007f62f7c2133ecc597c74ab63b4d7782c835c",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 23,
-  "pdf_sha256": "9e346744f00e98362dcbabcb8cf5aa7741a522792d8309652bcc0ba2e6f6e5fd",
+  "pages": 25,
+  "pdf_sha256": "63cc6d3908b22892d096abd155d8c86f3a8287a0aee11563c657d3dafbd8c356",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -26,6 +26,14 @@
     {
       "path": "paper/nested-quality-evidence/snapshot.json",
       "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f"
+    },
+    {
+      "path": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json",
+      "sha256": "6e27679a3cedcbd6895273d66c43f28e223af1448c005384e99f8418c7072aad"
+    },
+    {
+      "path": "results/development/nsc-atlas-cap-wall-response-v1/model-specification.json",
+      "sha256": "eae0428f83ab112f360593ce954a4bf963775fd98935deeaea4a8d70db09da69"
     },
     {
       "path": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
@@ -173,6 +181,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "07241e058536a414dbc9e1cf1bd3708d5657b42dcac278542305c63586d23d43",
-  "version": "working-2026-10-13.6"
+  "source_sha256": "4b44aecf881d304556b08d32ae81f0abe091662de7f1d7229199f1a551272c4d",
+  "version": "working-2026-10-15.1"
 }

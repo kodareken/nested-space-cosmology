@@ -1,0 +1,28 @@
+{
+  "outputs": {
+    "cap-wall.json": {
+      "bytes": 3492,
+      "sha256": "6e27679a3cedcbd6895273d66c43f28e223af1448c005384e99f8418c7072aad"
+    },
+    "model-specification.json": {
+      "bytes": 8463,
+      "sha256": "eae0428f83ab112f360593ce954a4bf963775fd98935deeaea4a8d70db09da69"
+    }
+  },
+  "predecessor": {
+    "manifest": "results/development/nsc-atlas-wall-mass-closure-v1/manifest.json",
+    "role": "exterior functional, quiet anchor and original scalar/stress context",
+    "sha256": "23159f708b77539d3e47f9b584bed3854ced9d8bb6a71179bb6ac38733f0a4d5"
+  },
+  "schema": "nsc-atlas-cap-wall-response-v1-manifest",
+  "source_bindings": {
+    "docs/nsc-atlas-cap-wall-response.md": "7f8f6fdbbee7f0fb53596b1352b0cda521eb027a381d398c79eda9bf60629856",
+    "scripts/record_nsc_atlas_cap_wall_response.py": "031e45b3a7bf6dd727c381ff97583ad2a214b36eedd72ebe545c496db98c4654",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_cosmological_atlas.py": "ea39fcdf55af21f909c73ad8fbc59b72a8f4b14bba6c14e8802f3c5ce87907c9",
+    "tests/test_nsc_atlas_cap_wall_response.py": "db0cb2064c81bbefe30611088e15841c1173dc7e850ce57c49f152cbcf98d232",
+    "tests/test_nsc_cosmological_atlas.py": "9bb4cb9293086832d01572b49a86589f3cb55fdbae74fe372bf366d182250264",
+    "tests/test_record_nsc_atlas_cap_wall_response.py": "b583a35de46e7dc483d0dca5c7b832894f44fb4ea76b39ff2f99d15ce21bb82b"
+  }
+}
