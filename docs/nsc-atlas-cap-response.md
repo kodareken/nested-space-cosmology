@@ -263,16 +263,27 @@ radial order 2, field-derivative order 32, 8 exterior clock panels, source
 order 64 and ODE tolerance $2\times10^{-9}$; the separate wall evidence
 records the sensitivity of those inputs.
 
-Nine comparisons vary one numerical setting within each pair: field
+Ten comparisons vary one numerical setting within each pair: field
 129/257, radial 8/16, ray 8/16, cap time panels 8/16, geometry 129/257,
 cap derivative 2/4, centre Gauss order 8/16, centre threshold
-$10^{-4}/10^{-3}$, and a further ray 16/32 comparison. The geometry,
-derivative, centre and further-ray comparisons fix 129 field nodes to fit
+$10^{-4}/10^{-3}$, and further radial and ray 16/32 comparisons. The geometry,
+derivative, centre and further-radial/ray comparisons fix 129 field nodes to fit
 the complete pair within the same 120 process-CPU-second and 30-million
 scalar-kernel budget. These fixed overrides are recorded explicitly;
 each pair compares the same physical preparation and otherwise identical
 settings. The main field comparison checks 129 against 257 nodes at the
 primary cap quadrature settings.
+
+The time-panel comparison reuses the same completed ray integrals. Their
+inputs are the leading cap field, reference emission events and radial/ray
+orders; changing the wall-time quadrature changes $T_1$ but none of those
+inputs. The producer checks this identity before reuse and records reused
+ray counts separately from newly evaluated nodes. Its first attempt exhausted
+the shared budget while redundantly recomputing those integrals; no result
+was written. The revised comparison keeps the original budget and settings.
+The further radial comparison addresses the observed $6.30\times10^{-3}$
+arrival-coefficient change between radial orders 8 and 16, independently of
+the much smaller wall mass-path residual.
 
 Each record retains nine common wall cuts, mass/clock defects, signed ray
 contributions, sampled integrand extrema and cumulative execution counts.
@@ -290,6 +301,8 @@ interpolations, preserving their actual reported coordinates. The original
 exact dictionary comparison rejected a $2.22\times10^{-16}$ endpoint
 difference before writing the geometry record. No physical equation or
 saved numerical result changed. Checking those five records requires the
-explicit original source context and its Git objects; the remaining four
-use the corrected current producer. There is no automatic fallback from
-a failed current-source check to historical code.
+explicit original source context and its Git objects. The geometry,
+derivative and centre-order records retain the corrected producer context
+at `5e58c9fd2866f8adcc107ee22f13f389e7f15c77`. The time and further-radial
+comparisons use the current producer with explicit ray reuse. There is no
+automatic fallback from a failed current-source check to historical code.

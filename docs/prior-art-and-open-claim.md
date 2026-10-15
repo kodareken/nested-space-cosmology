@@ -25,6 +25,16 @@ proper time with the external label or central clock. Continuum derivatives,
 split quadratures, independent mass transport and explicit clock conversion
 make those failures detectable while keeping the physical model fixed.
 
+The first time-panel pair exhausted the shared budget while evaluating the
+same arrival rays twice. Changing only the wall-time panels changes the
+$T_1$ integral, while the leading cap field and reference rays stay fixed.
+The revised producer reuses those rays after checking their identical inputs,
+records the saved work separately, and keeps the original budget. The
+observed radial-order 8/16 arrival difference of $6.30\times10^{-3}$ also
+motivates a 16/32 radial comparison with 129 field nodes held fixed. This
+tests the interior ray metric independently of the wall mass-path residual;
+it uses the same already admitted orders and compute ceilings.
+
 ## Exterior wedge and moving-wall calculation admission, 15 October 2026
 
 The rectangle has supplied a checked gravitational input. The next connection

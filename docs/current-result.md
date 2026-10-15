@@ -55,6 +55,14 @@ from $10^{-4}$ to $10^{-3}$ changes it by at most $9.53\times10^{-10}$.
 The primary small-radius choice reduces derivative-query cost while
 retaining agreement in the reported coefficients.
 
+With 129 field nodes fixed, the [129/257 geometry comparison](../results/development/nsc-atlas-cap-response-v1/geometry/response.json)
+changes the arrival coefficient by at most $1.06\times10^{-8}$.
+The [2/4 derivative-quadrature comparison](../results/development/nsc-atlas-cap-response-v1/derivative/response.json)
+leaves the saved coefficients equal at floating-point precision; the
+[8/16 centre-quadrature comparison](../results/development/nsc-atlas-cap-response-v1/centre_order/response.json)
+changes them by at most $7.11\times10^{-15}$. These are sensitivities of
+this finite calculation, not exact continuum identities.
+
 Signed quadrature contributions locate the negative ray integral inside
 the cap. At the final primary cut, the positive contribution is
 $6.47\times10^{-9}$ and the negative contribution is
@@ -70,6 +78,8 @@ by at most $2.22\times10^{-16}$. The corrected validator compares domains
 within an absolute $10^{-13}$ tolerance and keeps the actual coordinates.
 It does not alter any field, metric equation or saved result. The
 [reproduction guide](reproducing.md) names the source context explicitly.
+The geometry, derivative and centre-order records retain their corrected
+producer at `5e58c9fd2866f8adcc107ee22f13f389e7f15c77`.
 
 This connects the formal sourced exterior, moving wall and regular cap
 to a central null-clock correction. The scalar amplitude at the next

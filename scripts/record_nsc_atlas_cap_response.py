@@ -22,7 +22,8 @@ from record_nsc_atlas_wall_evolution import (
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGINAL_SOURCE_CONTEXT = "19983a7b4730d1fdc8e59ae4ba2f3efd560913a6"
-SOURCE_CONTEXTS = ("current", ORIGINAL_SOURCE_CONTEXT)
+INTERMEDIATE_SOURCE_CONTEXT = "5e58c9fd2866f8adcc107ee22f13f389e7f15c77"
+SOURCE_CONTEXTS = ("current", ORIGINAL_SOURCE_CONTEXT, INTERMEDIATE_SOURCE_CONTEXT)
 SCHEMA = "nsc-atlas-cap-response-comparison-v1"
 STATUS = "FORMAL_CAP_METRIC_NULL_CLOCK_REFINEMENT"
 SCOPE = "quadratic cap metric and central null clock; no higher-order scalar amplitude or finite-amplitude enclosure"
@@ -51,9 +52,10 @@ VARIATIONS = {
     "centre_order": ("small_radius_order", 8, 16),
     "centre_radius": ("centre_radius", 1e-4, 1e-3),
     "ray_fine": ("ray_order", 16, 32),
+    "radial_fine": ("radial_order", 16, 32),
 }
 COMPARISON_BASE_OVERRIDES = {kind: {"field_nodes": 129} for kind in
-                            ("geometry", "derivative", "centre_order", "centre_radius", "ray_fine")}
+                            ("geometry", "derivative", "centre_order", "centre_radius", "ray_fine", "radial_fine")}
 TIMES = tuple(float(t) for t in np.linspace(0, 1, 9))
 QUANTITIES = ("nu_E_wall", "nu_J_wall", "delta_E_wall", "T1", "T1_s", "ray_integral",
               "Delta_C_fixed_s", "Delta_C_fixed_V")
@@ -109,6 +111,25 @@ def differences(summaries):
     return result
 
 
+def _reuse_time_rays(previous, current, previous_config, current_config):
+    """Reuse identical reference rays when only the T1 integration panels change.
+
+    CapSolution.ray_nodes continues to count newly evaluated nodes. Its cache
+    length counts available rays; the returned metadata identifies reused work.
+    """
+    if (previous.cap_field is not current.cap_field
+            or previous.wall_solution is not current.wall_solution
+            or previous.budget is not current.budget
+            or {k: v for k, v in previous_config.items() if k != "time_panels"}
+                != {k: v for k, v in current_config.items() if k != "time_panels"}
+            or any(previous.settings[k] != current.settings[k] for k in ("radial_order", "ray_order"))
+            or set(previous.ray_cache) != set(TIMES) or current.ray_cache or current.ray_nodes != 0):
+        raise ValueError("ray reuse requires identical prepared field, wall, radial and ray settings")
+    current.ray_cache = {t: dict(value) for t, value in previous.ray_cache.items()}
+    return {"ray_evaluations_reused": len(current.ray_cache),
+            "ray_nodes_reused": sum(value["ray_nodes"] for value in current.ray_cache.values())}
+
+
 def compare(kind):
     from recursive_horizons.nsc_atlas_prepared_response import PreparedFieldBudget, solve_prepared_field
     from recursive_horizons.nsc_atlas_wedge_field import WedgeField
@@ -124,6 +145,7 @@ def compare(kind):
     metrics = BulkBudget(started=shared.started, external=shared)
     geometry = source_geometry()
     fields, walls, cap_fields, summaries, settings = {}, {}, {}, [], []
+    previous_cap = None
     for value in (low, high):
         config = {**base, varied: value}
         field_key = config["field_nodes"], config["geometry_knots"]
@@ -143,12 +165,17 @@ def compare(kind):
         cap_field = cap_fields[cap_key]
         cap = solve_cap_response(cap_field, walls[wall_key], budget=metrics,
             **{key: config[key] for key in ("radial_order", "ray_order", "time_panels")})
+        reuse = {"ray_evaluations_reused": 0, "ray_nodes_reused": 0}
+        if kind == "time" and previous_cap is not None:
+            reuse = _reuse_time_rays(previous_cap, cap, settings[-1], config)
         summary = cap.summary(TIMES)
+        summary.update(reuse)
         # Costs belong to the whole comparison; the shared counters are cumulative.
         for key in ("rhs_calls", "metric_values", "source_nodes", "process_cpu_seconds"):
             summary.pop(key, None)
         summaries.append(summary)
         settings.append(config)
+        previous_cap = cap
     shared.check()
     metrics.check()
     return {"schema": SCHEMA, "comparison": kind, "varied_quantity": varied,
@@ -209,7 +236,7 @@ def validate_record(record, kind):
         solutions = record["solutions"]
         if not isinstance(solutions, list) or len(solutions) != 2:
             raise ValueError("cap comparison requires two solutions")
-        for solution, setting in zip(solutions, settings):
+        for index, (solution, setting) in enumerate(zip(solutions, settings)):
             if (solution["schema"] != SOLUTION_SCHEMA or solution["scope"] != SOLUTION_SCOPE
                     or type(solution["clock_time_order"]) is not int or solution["clock_time_order"] != 4
                     or any(type(solution[key]) is not int or solution[key] != setting[key]
@@ -272,8 +299,22 @@ def validate_record(record, kind):
                                   ("ray_evaluations", len(TIMES))):
                 if type(solution[key]) is not int or solution[key] != expected:
                     raise ValueError("cap comparison query count mismatch")
+            reused = solution.get("ray_evaluations_reused", 0)
+            reused_nodes = solution.get("ray_nodes_reused", 0)
+            expected_reused = len(TIMES) if kind == "time" and index == 1 else 0
+            if type(reused) is not int or reused != expected_reused:
+                raise ValueError("cap comparison ray reuse inventory mismatch")
+            count(reused_nodes, "reused ray nodes", 9*len(TIMES)*setting["ray_order"])
             count(solution["ray_nodes"], "ray nodes", 9*len(TIMES)*setting["ray_order"])
-            if solution["ray_nodes"] < len(TIMES)*setting["ray_order"]:
+            if reused:
+                if solution["ray_nodes"] != 0 or reused_nodes != solutions[0]["ray_nodes"]:
+                    raise ValueError("cap comparison reused rays are counted as fresh work")
+                ray_keys = ("ray_integral", "ray_positive_integral", "ray_negative_integral",
+                            "ray_integrand_sample_min", "ray_integrand_sample_max")
+                if any(row[key] != prior[key] for row, prior in zip(rows, solutions[0]["cap_samples"])
+                       for key in ray_keys):
+                    raise ValueError("cap comparison reused ray values changed")
+            elif reused_nodes or solution["ray_nodes"] < len(TIMES)*setting["ray_order"]:
                 raise ValueError("cap comparison ray quadrature inventory mismatch")
         if record["cap_differences"] != differences(solutions):
             raise ValueError("cap comparison saved differences disagree")

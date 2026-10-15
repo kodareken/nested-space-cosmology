@@ -8,6 +8,7 @@ import time
 from types import SimpleNamespace
 
 import pytest
+import numpy as np
 
 import record_nsc_atlas_cap_response as tool
 
@@ -38,6 +39,8 @@ def synthetic(kind="radial"):
         "clock_time_order": 4, "maximum_absolute_defects": dict.fromkeys(tool.DEFECTS, 0.),
         "cap_samples": deepcopy(rows), "wall_metric_evaluations": 4*setting["time_panels"]+9,
         "ray_evaluations": 9, "ray_nodes": 9*setting["ray_order"]} for setting in settings]
+    if kind == "time":
+        solutions[1].update(ray_evaluations_reused=9, ray_nodes_reused=solutions[0]["ray_nodes"], ray_nodes=0)
     return {"schema": tool.SCHEMA, "comparison": kind, "varied_quantity": varied,
         "status": tool.STATUS, "scope": tool.SCOPE, "order": tool.ORDER, "source_scale": 1.,
         "runtime": {"python": "3.14.8", "numpy": "2.5.1", "scipy": "1.17.1"},
@@ -185,7 +188,8 @@ def test_geometry_endpoint_roundoff_is_preserved_but_domain_drift_fails():
         tool.validate_record(record, "geometry")
 
 
-def test_original_sources_require_explicit_context_and_never_replay(isolated, monkeypatch):
+@pytest.mark.parametrize("context", [tool.ORIGINAL_SOURCE_CONTEXT, tool.INTERMEDIATE_SOURCE_CONTEXT])
+def test_original_sources_require_explicit_context_and_never_replay(isolated, monkeypatch, context):
     original = {name: (tool.ROOT/name).read_bytes() for name in tool.SOURCES}
     tool.create(isolated, "radial")
     evidence = {p.name: p.read_bytes() for p in isolated.iterdir()}
@@ -196,27 +200,28 @@ def test_original_sources_require_explicit_context_and_never_replay(isolated, mo
     calls = []
     def git(args, **kwargs):
         assert args[:4] == ["git", "-C", str(tool.ROOT), "show"]
-        context, name = args[4].split(":", 1)
-        assert context == tool.ORIGINAL_SOURCE_CONTEXT
+        selected, name = args[4].split(":", 1)
+        assert selected == context
         calls.append(name)
         return original[name]
     monkeypatch.setattr(tool.subprocess, "check_output", git)
-    checked = tool.check(isolated, source_context=tool.ORIGINAL_SOURCE_CONTEXT)
-    assert checked["source_context"] == tool.ORIGINAL_SOURCE_CONTEXT and checked["cap_solves"] == 0
+    checked = tool.check(isolated, source_context=context)
+    assert checked["source_context"] == context and checked["cap_solves"] == 0
     assert calls == list(tool.SOURCES)
     assert evidence == {p.name: p.read_bytes() for p in isolated.iterdir()}
     with pytest.raises(ValueError, match="unknown explicit"):
         tool.check(isolated, source_context="automatic")
 
 
-def test_missing_original_objects_fail_without_current_fallback(isolated, monkeypatch):
+@pytest.mark.parametrize("context", [tool.ORIGINAL_SOURCE_CONTEXT, tool.INTERMEDIATE_SOURCE_CONTEXT])
+def test_missing_original_objects_fail_without_current_fallback(isolated, monkeypatch, context):
     tool.create(isolated, "radial")
     assert tool.check(isolated)["source_context"] == "current"
     def missing(args, **kwargs):
         raise subprocess.CalledProcessError(128, args, stderr=b"missing object")
     monkeypatch.setattr(tool.subprocess, "check_output", missing)
     with pytest.raises(ValueError, match="pinned cap source unavailable.*full Git checkout"):
-        tool.check(isolated, source_context=tool.ORIGINAL_SOURCE_CONTEXT)
+        tool.check(isolated, source_context=context)
 
 
 def test_cli_reports_selected_authentication_context(isolated, monkeypatch, capsys):
@@ -233,3 +238,43 @@ def test_cli_reports_selected_authentication_context(isolated, monkeypatch, caps
     with pytest.raises(SystemExit):
         tool.main()
     assert not isolated.exists()
+
+
+def test_time_comparison_reuses_only_identical_reference_rays(monkeypatch):
+    from recursive_horizons import nsc_atlas_cap_response as cap_module
+    shared_field = object()
+    budget = SimpleNamespace(check=lambda **_: None)
+    wall = SimpleNamespace(sample=lambda t: {"V1": 0.})
+    cache = {t: {"integral": t, "positive_integral": t, "negative_integral": 0.,
+                 "integrand_sample_min": 0., "integrand_sample_max": 1., "ray_nodes": 16}
+             for t in tool.TIMES}
+    first = SimpleNamespace(cap_field=shared_field, wall_solution=wall, budget=budget,
+        settings=dict(radial_order=16, ray_order=16, time_panels=8), ray_cache=cache, ray_nodes=144)
+    second = object.__new__(cap_module.CapSolution)
+    second.cap_field, second.wall_solution, second.budget = shared_field, wall, budget
+    second.settings = dict(radial_order=16, ray_order=16, time_panels=16)
+    second.ray_cache, second.ray_nodes = {}, 0
+    second.time_cuts, second.time_prefix = np.linspace(0, 1, 17), np.ones(17)
+    second.time_basis = [lambda _: 0.]*4
+    second.time_values = np.zeros((16, 4))
+    second.maxima = {"fixed_V_conversion_defect": 0.}
+    second._wall = lambda t: {"t": t, "x": .5, "q0": 2., "e": 0., "q0_s": 1., "V0_s": 1.}
+    left, right = {**tool.BASE, "time_panels": 8}, {**tool.BASE, "time_panels": 16}
+    with pytest.raises(ValueError, match="identical"):
+        tool._reuse_time_rays(first, second, left, {**right, "ray_order": 32})
+    metadata = tool._reuse_time_rays(first, second, left, right)
+    assert metadata == {"ray_evaluations_reused": 9, "ray_nodes_reused": 144}
+    monkeypatch.setattr(cap_module, "ray_integral", lambda *_args, **_kwargs: pytest.fail("repeated identical ray"))
+    sampled = second.sample(.5)
+    assert sampled["T1"] == 1. and sampled["Delta_C_fixed_s"] == 1.5
+    assert sampled["ray_integral"] == .5 and second.ray_nodes == 0 and len(second.ray_cache) == 9
+    second.ray_cache[.5]["integral"] = 99.
+    assert first.ray_cache[.5]["integral"] == .5
+
+
+def test_reused_ray_work_and_values_cannot_be_relabelled():
+    for key, value in (("ray_nodes", 1), ("ray_nodes_reused", 0), ("ray_evaluations_reused", 0)):
+        record = synthetic("time")
+        record["solutions"][1][key] = value
+        with pytest.raises(ValueError):
+            tool.validate_record(record, "time")

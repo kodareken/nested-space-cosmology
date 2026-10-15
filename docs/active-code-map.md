@@ -34,8 +34,11 @@ and [claim ledger](claim-ledger.md).
 The six bulk-v1 records retain their original source bindings. The
 [publication check](../scripts/check_publication.py) explicitly authenticates
 that named historical context through [the replay helper](../scripts/replay_history.py);
-it checks wall-evolution and cap-response records against the current sources. Neither
-authentication path reruns the physical calculations.
+it checks wall-evolution records against the current sources. The cap-response
+checker explicitly selects five records from its first context, three from
+its second context and two current-source records as documented in
+[reproduction](reproducing.md). Authentication never
+reruns the physical calculations.
 
 The source-fixed incoming gate remains OPEN and its campaign is paused. Its
 threshold, source, and history belong to that application. A later "next",

@@ -873,11 +873,15 @@ def check_wall_overlap_evidence(errors: list[str]) -> None:
 
 def check_cap_response_evidence(errors: list[str]) -> None:
     """Authenticate all declared cap comparisons without metric or ray replay."""
-    from record_nsc_atlas_cap_response import ORIGINAL_SOURCE_CONTEXT, VARIATIONS, check
+    from record_nsc_atlas_cap_response import (
+        ORIGINAL_SOURCE_CONTEXT, INTERMEDIATE_SOURCE_CONTEXT, VARIATIONS, check,
+    )
     original = {"field", "radial", "ray", "centre_radius", "ray_fine"}
+    intermediate = {"geometry", "derivative", "centre_order"}
     for comparison in VARIATIONS:
         try:
-            context = ORIGINAL_SOURCE_CONTEXT if comparison in original else "current"
+            context = (ORIGINAL_SOURCE_CONTEXT if comparison in original else
+                       INTERMEDIATE_SOURCE_CONTEXT if comparison in intermediate else "current")
             check(ROOT / "results/development/nsc-atlas-cap-response-v1" / comparison,
                   source_context=context)
         except (OSError, ValueError, KeyError, TypeError) as error:

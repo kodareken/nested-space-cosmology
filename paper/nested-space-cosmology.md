@@ -1204,6 +1204,7 @@ calculated.
 
 Evidence: [field refinement](../results/development/nsc-atlas-cap-response-v1/field/response.json),
 [radial integration](../results/development/nsc-atlas-cap-response-v1/radial/response.json),
+[further radial refinement](../results/development/nsc-atlas-cap-response-v1/radial_fine/response.json),
 [ray integration](../results/development/nsc-atlas-cap-response-v1/ray/response.json),
 [further ray refinement](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json),
 [wall-time integration](../results/development/nsc-atlas-cap-response-v1/time/response.json),
@@ -1283,6 +1284,15 @@ arrival coefficient by at most $6.42\times10^{-7}$. The clock convention
 matters: the final exterior-label shift alone contributes $2.2994117476$
 to the difference between the two arrival coefficients.
 
+The 8/16 ray refinement changes the arrival coefficient by at most
+$2.31\times10^{-5}$; the further 16/32 ray comparison with 129 field
+nodes changes it by $1.84\times10^{-9}$. At that fixed field resolution,
+129/257 geometry knots change it by $1.06\times10^{-8}$, and moving
+the stable-centre threshold from $10^{-4}$ to $10^{-3}$ changes it by
+$9.53\times10^{-10}$. Doubling the centre quadrature changes it by
+$7.11\times10^{-15}$; doubling the differentiated-integral quadrature
+leaves the saved coefficients equal at floating-point precision.
+
 The metric ray integrand has both mass and lapse terms. With
 $D=\delta_E-2\nu_E/(rA_0)$, the radial constraints independently give
 $D_r=2\nu_E(1-3r^2)/(r^2A_0^2)-rp^2/A_0$ and the integrand is
@@ -1291,7 +1301,7 @@ signed quadrature contributions and sampled extrema; at the final primary
 cut the ray integral is $-112.0145129711$.
 
 The comparisons retain explicit fixed settings. Geometry, cap derivative,
-centre and further-ray controls use 129 field nodes to fit their complete
+centre and further-radial/ray controls use 129 field nodes to fit their complete
 pairs within the declared budget; the main field comparison uses both
 129 and 257. Refinement differences are numerical sensitivity estimates.
 No finite $\alpha$ is selected, and this metric null-arrival correction

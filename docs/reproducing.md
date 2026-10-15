@@ -38,6 +38,7 @@ and ODE tolerance $2\times10^{-9}$.
 | `centre_order` | Small-radius quadrature order 8 to 16 | 129 |
 | `centre_radius` | Small-radius threshold $10^{-4}$ to $10^{-3}$ | 129 |
 | `ray_fine` | Ray order 16 to 32 | 129 |
+| `radial_fine` | Cap radial order 16 to 32 | 129 |
 
 The field-129 overrides are explicit in each record's `comparison_base`;
 all other settings stay fixed within each pair. The default derivative
@@ -46,6 +47,13 @@ measure numerical sensitivity of formal metric and null-clock coefficients.
 They do not compute the higher-order scalar amplitude or a finite-amplitude
 error enclosure. Signed ray integrals and extrema refer to the quadrature
 samples, with no claim of continuum extrema.
+
+In the `time` comparison, the prepared field, wall and radial/ray rules are
+identical. Only the wall-time coefficient's integration panels change. The
+second solution reuses the first solution's nine reference-ray integrals;
+`ray_nodes` counts fresh work and separate reused-ray counts preserve that
+distinction. The shared budget still includes the first ray calculation
+and both wall-time integrations.
 
 The retained `field`, `radial`, `ray`, `centre_radius` and `ray_fine` records
 keep the original source context `19983a7b4730d1fdc8e59ae4ba2f3efd560913a6`.
@@ -60,9 +68,12 @@ python scripts/run_python.py scripts/record_nsc_atlas_cap_response.py --check --
 This reads the pinned source bytes from a full Git checkout, then checks
 the saved record with the current structural validator. It does not run
 the historical producer. Missing Git objects fail explicitly; there is no
-substitution of current sources. The other four retained comparisons use
-the current source context. The publication checker selects each of these
-contexts by its explicit comparison name, and authentication reports the
+substitution of current sources. The `geometry`, `derivative` and
+`centre_order` records similarly retain context
+`5e58c9fd2866f8adcc107ee22f13f389e7f15c77`; pass that full hash to
+`--source-context` for their authentication. The `time` and `radial_fine`
+records use current sources. The publication checker selects all three
+contexts by explicit comparison name, and authentication reports the
 selected context and zero cap solves.
 
 The [moving-wall calculation](nsc-atlas-wall-evolution.md) extends the same
