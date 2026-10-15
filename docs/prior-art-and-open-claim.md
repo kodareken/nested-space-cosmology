@@ -35,6 +35,19 @@ motivates a 16/32 radial comparison with 129 field nodes held fixed. This
 tests the interior ray metric independently of the wall mass-path residual;
 it uses the same already admitted orders and compute ceilings.
 
+**Outcome, 15 October 2026:** ten separately varied comparisons now connect
+the smooth cap mass/lapse, moving-wall cap time and central null arrival.
+The primary mass-path discrepancy is $2.52\times10^{-9}$. The finer
+16/32 radial and ray controls change the arrival coefficient by less than
+$2\times10^{-9}$ each at fixed 129-node field resolution; field 129/257
+changes it by $6.42\times10^{-7}$, while cap time panels 8/16 change it
+by $1.92\times10^{-5}$. Each complete pair used 35.98--56.31 process-CPU
+seconds and fewer than 24.94 million scalar kernels. The
+[current result](current-result.md#smooth-cap-and-central-arrival-clock-15-october-2026)
+retains the settings and all ten evidence bundles. The next connection is
+the higher-order scalar response on this changing geometry, followed by
+finite-amplitude control; the null-clock coefficients alone do not supply it.
+
 ## Exterior wedge and moving-wall calculation admission, 15 October 2026
 
 The rectangle has supplied a checked gravitational input. The next connection

@@ -1236,7 +1236,7 @@ $$
 \nu_{E,r}=\frac{r^2}{4}
 \left(\frac{p_T^2}{A_0}+A_0p_r^2\right)+\frac{r^2p^2}{2},
 \qquad
-\delta_{E,r}=\frac r2\left(p_r^2+\frac{p_T^2}{A_0^2}\right).
+\delta_{E,r}=\frac{r}{2}\left(p_r^2+\frac{p_T^2}{A_0^2}\right).
 $$
 
 Regularity fixes $\nu_E(T,0)=0$. Taking $T$ to be Jordan central proper
@@ -1292,6 +1292,13 @@ the stable-centre threshold from $10^{-4}$ to $10^{-3}$ changes it by
 $9.53\times10^{-10}$. Doubling the centre quadrature changes it by
 $7.11\times10^{-15}$; doubling the differentiated-integral quadrature
 leaves the saved coefficients equal at floating-point precision.
+The coarser 8/16 radial comparison changes the arrival coefficient by
+$6.30\times10^{-3}$; a separate 16/32 radial comparison at 129 field
+nodes reduces that sensitivity to $1.97\times10^{-9}$. The 8/16 cap
+time-panel comparison changes it by $1.92\times10^{-5}$, exceeding
+the field and finer radial/ray sensitivities. Its two time integrations
+reuse identical reference rays, with fresh and reused work recorded
+separately. These differences do not form a rigorous total error bound.
 
 The metric ray integrand has both mass and lapse terms. With
 $D=\delta_E-2\nu_E/(rA_0)$, the radial constraints independently give

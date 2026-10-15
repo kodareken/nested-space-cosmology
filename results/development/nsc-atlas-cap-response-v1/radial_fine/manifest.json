@@ -1,0 +1,41 @@
+{
+  "comparison": "radial_fine",
+  "outputs": {
+    "response.json": {
+      "bytes": 29615,
+      "sha256": "82134d7ab6eb6a1f956ddc7bf80bd7d892e38c6390648ec75444fe6106131d72"
+    }
+  },
+  "schema": "nsc-atlas-cap-response-comparison-v1-manifest",
+  "source_bindings": {
+    "docs/nsc-atlas-cap-response.md": "ce0b2272376d6f226a9893324a09cde17b5de38475a6f952b37904eb9b0f5001",
+    "docs/nsc-atlas-wall-evolution.md": "c4f8cdf4188becda0a81235c94e65116bfc4094589525f555ecf414fc6beaee4",
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/record_nsc_atlas_cap_response.py": "652f1c1bd3b14851a688654d7f5cf4d46418adfe99d4d828456e9c29ed1e341f",
+    "scripts/record_nsc_atlas_wall_evolution.py": "986a12a7c375c21c3eeb19b95f5bccbf24ffb272e08850e566d2376642b363b9",
+    "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+    "src/recursive_horizons/nsc_atlas_bulk_response.py": "a06be9c23e329886a1eb667d2500c3fdfb650a607cbae75840daafcaa77cad78",
+    "src/recursive_horizons/nsc_atlas_cap_field.py": "736067b633f6697e3488e57805aeae3cdbe0d3b8d4bab74d885f9f60aef72d2c",
+    "src/recursive_horizons/nsc_atlas_cap_response.py": "89b9d4f655a92ce76e3e4ebcd55aebcbe4674a7fdec0f77684ed152aba26416e",
+    "src/recursive_horizons/nsc_atlas_cap_wall_response.py": "59ab212889fa0ba2d665203dca36726b32ec74b26aa6aea2d9346044eeda8b53",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "ca14e7b0d15a586002642b27bab2e786b70d9be1a3ea59fb6d781f549844b981",
+    "src/recursive_horizons/nsc_atlas_wall_evolution.py": "458e9a71a51d5b98b7573af7759baed93ab9bfe19f98e09c0e7f4a79651aceef",
+    "src/recursive_horizons/nsc_atlas_wedge_field.py": "6c1486750bd2d244b71f5cf7770ed5a43adfdb3b525561d116dd33f890e88a23",
+    "tests/test_nsc_atlas_bulk_response.py": "ad0141cbbba01f34eda70b65d3f5146ff108a153c261e1cc34f99ea66f4bb82c",
+    "tests/test_nsc_atlas_cap_field.py": "f59ff1dfa7af52e16eb2ad29510970c153390c022cdb61deef0cd02272bd3620",
+    "tests/test_nsc_atlas_cap_response.py": "6040587911d0a83819dedcb97a13a9b380af3f36b9afc58eb126bb81ba3da368",
+    "tests/test_nsc_atlas_cap_wall_response.py": "db0cb2064c81bbefe30611088e15841c1173dc7e850ce57c49f152cbcf98d232",
+    "tests/test_nsc_atlas_prepared_response.py": "342a791522179d06940f3b2ab7179792dab90211527aaada2a798c33c0eece2b",
+    "tests/test_nsc_atlas_wall_evolution.py": "f0d8b2ce8b167ec2713dbde53359c6f43d2bfdf4a6a752ee024c7fb9b1d812f8",
+    "tests/test_nsc_atlas_wedge_field.py": "285cd9e5c59e5db579e74ca2d8f6adfb989c8b9dc9e7f53c109aa36251321e54",
+    "tests/test_record_nsc_atlas_cap_response.py": "a1bce148ac092fe092effd0bbc8859bae8ac961bdf0b6cd8db98ae3f81cef3df",
+    "tests/test_record_nsc_atlas_wall_evolution.py": "3d6cfc0f91a2fc20b96d7018f22779ee5595d0f47f9693ab164a63006ff90676"
+  }
+}

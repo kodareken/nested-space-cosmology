@@ -43,6 +43,11 @@ induced-metric residual falls to $1.33\times10^{-8}$; the derivation
 shows that it is the same mass mismatch multiplied by $2/[xA_0(x)]$,
 not an additional independent error estimate. The radial comparison
 changes the arrival coefficient by at most $6.30\times10^{-3}$.
+The [16/32 radial refinement](../results/development/nsc-atlas-cap-response-v1/radial_fine/response.json),
+with 129 field nodes fixed, changes it by $1.97\times10^{-9}$.
+This checks the interior radial integrals along the arrival rays, where
+most of the coarser change arose. Its wall mass-path discrepancy falls
+from $2.48\times10^{-9}$ to $1.54\times10^{-9}$.
 
 The [129/257 field comparison](../results/development/nsc-atlas-cap-response-v1/field/response.json)
 changes the fixed-label arrival coefficient by at most
@@ -63,6 +68,13 @@ leaves the saved coefficients equal at floating-point precision; the
 changes them by at most $7.11\times10^{-15}$. These are sensitivities of
 this finite calculation, not exact continuum identities.
 
+The [8/16 cap-time-panel comparison](../results/development/nsc-atlas-cap-response-v1/time/response.json)
+changes the arrival coefficient by at most $1.92\times10^{-5}$. Its
+second solution reuses the identical reference-ray integrals while
+recomputing the wall-time integral; fresh and reused nodes are reported
+separately. This time-panel sensitivity exceeds the field and finer
+radial/ray sensitivities, and is retained explicitly in the accuracy account.
+
 Signed quadrature contributions locate the negative ray integral inside
 the cap. At the final primary cut, the positive contribution is
 $6.47\times10^{-9}$ and the negative contribution is
@@ -80,6 +92,11 @@ It does not alter any field, metric equation or saved result. The
 [reproduction guide](reproducing.md) names the source context explicitly.
 The geometry, derivative and centre-order records retain their corrected
 producer at `5e58c9fd2866f8adcc107ee22f13f389e7f15c77`.
+The time and further-radial comparisons use the current producer. All ten
+complete pairs finished in 35.98--56.31 process-CPU seconds and used fewer
+than 24.94 million scalar-kernel evaluations each, within the unchanged
+120-second and 30-million budgets. Dense exploratory arrays are not part
+of the evidence package.
 
 This connects the formal sourced exterior, moving wall and regular cap
 to a central null-clock correction. The scalar amplitude at the next
