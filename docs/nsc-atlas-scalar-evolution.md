@@ -38,6 +38,35 @@ the original $U$ measure.
 
 ## Cache the known forcing
 
+The wall lift has a separate clock-resolution requirement. With
+$a=2q_{-,s}/d$, $E=e-vV_1/V_s$ and $C=c_{0,rr}|_W$, its boundary is
+
+$$
+\mathfrak b=r_UaJ_- - r_UeC + r_U(e-E)C.
+$$
+
+These are respectively the cap-backscatter, material-radius and exterior
+clock-pullback contributions. Differentiate each product using the existing
+material first jets and divide by $V_sU_W'$ to obtain its $U$ slope.
+Their values and derivatives sum to the original boundary; the decomposition
+introduces no independent data or new fit parameters.
+
+The inherited clock evaluator integrates a cubic interpolant through four
+Gauss rates per time panel for $V_1$, while its supplied $V_{1,s}$ uses the
+continuum rate at the query. The two numerical objects can disagree between
+panel endpoints. The saved component comparison identifies that discrepancy
+as the limitation of the 32-active-cell lift. A clock-panel refinement must
+therefore retain the continuum rates and improve the values; replacing the
+slopes by derivatives of the coarse interpolant alone would not establish
+physical clock accuracy.
+
+The outgoing $J_-,(J_-)_s$ depend on the same leading field and reference
+geometry, not on this quadratic clock correction. An authenticated saved
+trace can therefore be reused when varying only the clock panels. Recompute
+the material wall coefficients and pullback with the new clock, checking
+their reference coordinates and leading profile against the saved input.
+Keep the boundary training and withheld points fixed in that comparison.
+
 At each cache time, use
 $\eta=(U-U_0)/(U_W(V)-U_0)$ to place the requested forcing samples on the
 retained radial interval. The existing cumulative evaluator integrates

@@ -88,6 +88,28 @@ eight-panel clock's value/continuum-slope consistency; the earlier nine-cut
 comparisons sampled only its panel boundaries. Do not silently accept the
 unresolved interpolant or increase its degree again.
 
+**Saved-component diagnosis:** zero additional physical solves isolate the
+fine-fit error in the clock pullback. Maximum withheld value discrepancies
+are $5.99\times10^{-10}$ for backscatter, $1.67\times10^{-8}$ for material
+radius and $2.901\times10^{-5}$ for the clock. Direct value and derivative
+sums close to floating roundoff. The source inspection confirms that clock
+values use panel-polynomial integrals while their supplied slopes use
+continuum rates at the query. This identifies the term requiring refinement,
+without by itself bounding its error against the continuum clock.
+
+**Clock refinement admitted:** compare wall clock panels 16/32 with the
+same field 129, geometry 257, original wall settings and fixed fine lift
+(41 training knots, 40 withheld queries). Reuse the authenticated outgoing
+$J_-,(J_-)_s$ from the local-lift record: these depend only on the unchanged
+leading field and geometry. Recompute each wall and its boundary pullback,
+checking coordinates and leading profile consistency. Share one field
+preparation and one 120-process-CPU-second/30-million-kernel budget across
+both wall solutions and all 81 queries per solution. Compare the retained
+eight-panel result, withheld value/slope errors, lift differences and the
+clock's polynomial/continuum slope discrepancy. Success must resolve the
+original target without changing physical data. A plateau or budget failure
+requires a new diagnosis; no further degree increase is assumed.
+
 ## Scalar lift and forcing admission, 16 October 2026
 
 The sampled outgoing boundary is now known. The

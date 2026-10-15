@@ -20,7 +20,8 @@ DOMAIN_KEYS = ("U0", "Ua", "Ub", "Va", "Vb")
 MAX_SLICES = 129
 QUIET_TOLERANCE = 1e-24
 DEFECT_KEYS = ("temporal_F_defect", "temporal_G_defect", "combined_F_defect",
-               "combined_G_defect", "source_F_defect", "g1_defect", "g1_V_defect")
+               "combined_G_defect", "source_F_defect", "g1_defect", "g1_V_defect",
+               "scaled_g1_V_defect")
 
 
 def _array(values, label, maximum):
@@ -75,6 +76,7 @@ class ForcingSliceProvider:
                 raise ValueError("invalid forcing slice "+key)
             self.settings[key] = int(value)
         self.cache = {}
+        self.recorded_only = False
         self.cache_hits = 0
         self.counts = dict.fromkeys(("radial_nodes", "field_points", "field_batches",
                                     "kernel_values", "metric_values", "source_nodes"), 0)
@@ -82,30 +84,57 @@ class ForcingSliceProvider:
                                     "source_p_defect", "source_p_V_defect"), 0.)
         self.budget.check()
 
-    def slice(self, t, eta_grid):
-        t = _time(t)
-        eta = _ordered(eta_grid, "slice eta grid", 513, endpoints=True)
-        key = (t, tuple(eta))
-        self.budget.check()
-        if key in self.cache:
-            self.cache_hits += 1
-            return dict(self.cache[key])
-        if len(self.cache) >= MAX_SLICES:
-            raise ValueError("retain at most 129 distinct forcing slices")
-        d = self.domain
-        V = min(d["Vb"], max(d["Va"], d["Va"]+(d["Vb"]-d["Va"])*t))
-        wall = float(self.geometry["wall"](V))
-        U = d["U0"]+eta*(wall-d["U0"])
-        U[0], U[-1] = d["U0"], d["Ub"]
-        before = (self.wedge.budget.kernel_values, self.budget.metric_values, self.budget.source_nodes)
-        row = ScalarForcing(self.wedge, self.source_geometry, U, budget=self.budget,
-                            **self.settings).slice(t)
-        row["eta"] = eta.copy()
-        after = (self.wedge.budget.kernel_values, self.budget.metric_values, self.budget.source_nodes)
-        for name, first, last in zip(("kernel_values", "metric_values", "source_nodes"), before, after):
-            self.counts[name] += last-first
-        for name in ("radial_nodes", "field_points", "field_batches"):
-            self.counts[name] += int(row[name])
+    @classmethod
+    def from_records(cls, wedge, source_geometry, records, *, budget, radial_order=2,
+                     field_order=32, source_order=64):
+        """Replay retained coefficient slices, with no physical fallback.
+
+        A lightweight wedge supplying only the original domain, saved wall
+        coordinates and shared budget suffices. Every requested slice must
+        have been retained; this method does not reconstruct a scalar state.
+        """
+        provider = cls(wedge, source_geometry, budget=budget, radial_order=radial_order,
+                       field_order=field_order, source_order=source_order)
+        for original in records:
+            if len(provider.cache) >= MAX_SLICES:
+                raise ValueError("retain at most 129 distinct forcing slices")
+            row = dict(original)
+            t = _time(row["t"])
+            eta = _ordered(row["eta"], "recorded eta grid", 513, endpoints=True)
+            key = (t, tuple(eta))
+            if key in provider.cache:
+                raise ValueError("duplicate recorded forcing slice")
+            d = provider.domain
+            V = min(d["Vb"], max(d["Va"], d["Va"]+(d["Vb"]-d["Va"])*t))
+            wall = float(provider.geometry["wall"](V))
+            expected = d["U0"]+eta*(wall-d["U0"])
+            expected[0], expected[-1] = d["U0"], wall
+            for name in ("U", "F", "G"):
+                value = _array(row[name], "recorded "+name, 513).copy()
+                if value.shape != eta.shape:
+                    raise ValueError("recorded forcing array shape differs from eta")
+                row[name] = value
+            if not np.allclose(row["U"], expected, rtol=0, atol=8*np.finfo(float).eps):
+                raise ValueError("recorded forcing coordinates differ from the original wall")
+            for name in ("g1", "g1_V", "source_p_defect", "source_p_V_defect"):
+                value = _array(row[name], "recorded "+name, 1)
+                if value.ndim != 0:
+                    raise ValueError("recorded forcing scalar is not scalar")
+                row[name] = float(value)
+            for name in ("radial_nodes", "field_points", "field_batches"):
+                provider.counts[name] += BulkBudget._count(row[name])
+            costs = dict(row["slice_costs"])
+            if set(costs) != {"kernel_values", "metric_values", "source_nodes"}:
+                raise ValueError("recorded forcing slice costs have unexpected keys")
+            for name, value in costs.items():
+                provider.counts[name] += BulkBudget._count(value)
+            row["eta"], row["slice_costs"] = eta, costs
+            provider._accept_row(t, row)
+            provider.cache[key] = row
+        provider.recorded_only = True
+        return provider
+
+    def _accept_row(self, t, row):
         for name in ("source_p_defect", "source_p_V_defect"):
             self.maxima[name] = max(self.maxima[name], abs(float(row[name])))
         wall_error = abs(float(row["F"][-1]))
@@ -121,6 +150,36 @@ class ForcingSliceProvider:
         for value in row.values():
             if isinstance(value, np.ndarray):
                 value.setflags(write=False)
+
+    def slice(self, t, eta_grid):
+        t = _time(t)
+        eta = _ordered(eta_grid, "slice eta grid", 513, endpoints=True)
+        key = (t, tuple(eta))
+        self.budget.check()
+        if key in self.cache:
+            self.cache_hits += 1
+            return dict(self.cache[key])
+        if self.recorded_only:
+            raise ValueError("requested forcing slice was not retained")
+        if len(self.cache) >= MAX_SLICES:
+            raise ValueError("retain at most 129 distinct forcing slices")
+        d = self.domain
+        V = min(d["Vb"], max(d["Va"], d["Va"]+(d["Vb"]-d["Va"])*t))
+        wall = float(self.geometry["wall"](V))
+        U = d["U0"]+eta*(wall-d["U0"])
+        U[0], U[-1] = d["U0"], d["Ub"]
+        before = (self.wedge.budget.kernel_values, self.budget.metric_values, self.budget.source_nodes)
+        row = ScalarForcing(self.wedge, self.source_geometry, U, budget=self.budget,
+                            **self.settings).slice(t)
+        row["eta"] = eta.copy()
+        after = (self.wedge.budget.kernel_values, self.budget.metric_values, self.budget.source_nodes)
+        row["slice_costs"] = dict(zip(("kernel_values", "metric_values", "source_nodes"),
+                                     (last-first for first, last in zip(before, after))))
+        for name, first, last in zip(("kernel_values", "metric_values", "source_nodes"), before, after):
+            self.counts[name] += last-first
+        for name in ("radial_nodes", "field_points", "field_batches"):
+            self.counts[name] += int(row[name])
+        self._accept_row(t, row)
         self.cache[key] = row
         return dict(row)
 
@@ -208,7 +267,9 @@ class ForcingTimeCache:
         if (not math.isfinite(wall) or not d["U0"] < wall <= d["Ub"]+tolerance
                 or np.any(U < d["U0"]) or np.any(U > max(d["Ub"], wall))):
             raise ValueError("cache query exits the original retained U domain")
-        clipped = np.minimum(U, wall)
+        # Ub denotes the moving terminal node, including a one-ulp wall
+        # endpoint outside the stored coordinate, as in ScalarForcing.
+        clipped = np.where(U == d["Ub"], wall, np.minimum(U, wall))
         eta = np.clip((clipped-d["U0"])/(wall-d["U0"]), 0., 1.)
         block = int(np.searchsorted([.25, .75], t, side="right"))
         data = self._coefficients[block](t)
@@ -241,6 +302,9 @@ class ForcingTimeCache:
                    "g1_defect": fitted["g1"]-reference["g1"],
                    "g1_V_defect": fitted["g1_V"]-reference["g1_V"],
                    "reference": reference, "interpolated": fitted}
+            cell = int(np.searchsorted(self.training_times, t, side="right")-1)
+            row["cell_width_V"] = self.dV*float(self.training_times[cell+1]-self.training_times[cell])
+            row["scaled_g1_V_defect"] = row["cell_width_V"]*row["g1_V_defect"]
             for key in ("F", "G"):
                 row["temporal_"+key+"_defect"] = float(np.max(abs(difference[key][::2])))
                 row["combined_"+key+"_defect"] = float(np.max(abs(difference[key][1::2])))

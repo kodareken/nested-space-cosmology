@@ -11,6 +11,7 @@ import json
 import math
 from pathlib import Path
 import time
+from types import SimpleNamespace
 
 import numpy as np
 
@@ -69,6 +70,91 @@ def _same(actual, expected, label="saved interpolation"):
             raise ValueError(label+" numerical mismatch")
 
 
+def _solutions(provider, wedge, geometry, budget):
+    from recursive_horizons.nsc_atlas_forcing_cache import ForcingTimeCache
+    fits = [ForcingTimeCache(wedge, geometry, np.linspace(0, 1, 129),
+            np.linspace(0, 1, count), WITHHELD, budget=budget,
+            radial_order=2, field_order=32, source_order=64, slice_provider=provider)
+            for count in TRAINING_COUNTS]
+    results = []
+    for fit in fits:
+        summary = fit.summary()
+        summary.pop("slice_provider")
+        summary["validation_samples"] = [
+            {key: value for key, value in row.items() if key != "reference"}
+            for row in fit.validation_rows]
+        results.append(_plain(summary))
+    return results
+
+
+def comparison_diagnostics(solutions):
+    from recursive_horizons.nsc_atlas_forcing_cache import DEFECT_KEYS as CACHE_DEFECTS
+    keys = (*CACHE_DEFECTS, "scaled_g1_V_defect")
+    return {"maximum_absolute_defects": [
+            {key: max(abs(row[key]) for row in solution["validation_samples"]) for key in keys}
+            for solution in solutions],
+        "training_times": list(TRAINING_COUNTS), "withheld_times": 32,
+        "temporal_scope": "withheld times at the 129 radial training knots",
+        "combined_scope": "withheld times at the 128 radial midpoints",
+        "scaled_source_slope": "time-cell V width times g1_V discrepancy",
+        "uniform_error_enclosure": False}
+
+
+def _saved_solutions(record):
+    """Use exact retained wall values and slices; missing inputs fail closed."""
+    from recursive_horizons.nsc_atlas_bulk_response import BulkBudget
+    from recursive_horizons.nsc_atlas_forcing_cache import ForcingSliceProvider
+    d = record["domain"]
+    by_V = {row["V"]: row["U_wall"] for row in record["direct_samples"]}
+    def wall(V):
+        values = np.asarray(V)
+        try:
+            return np.array([by_V[float(value)] for value in values.ravel()]).reshape(values.shape)
+        except KeyError as error:
+            raise ValueError("authentication requested an unrecorded wall coordinate") from error
+    shared = SimpleNamespace(started=time.process_time(), kernel_values=0, check=lambda *_: None)
+    metrics = BulkBudget(started=shared.started, external=shared)
+    wedge = SimpleNamespace(domain=dict(d), geometry={"wall": wall}, budget=shared)
+    rows = [{key: value for key, value in row.items()
+             if key not in ("wall_integral_L_plus", "wall_mass_defect")}
+            for row in record["direct_samples"]]
+    provider = ForcingSliceProvider.from_records(wedge, record["source_geometry"], rows,
+        budget=metrics, radial_order=2, field_order=32, source_order=64)
+    return _solutions(provider, wedge, record["source_geometry"], metrics)
+
+
+def compare():
+    from recursive_horizons.nsc_atlas_forcing_cache import ForcingSliceProvider
+    shared, metrics, geometry, wedge, wall, cap = _prepare()
+    provider = ForcingSliceProvider(wedge, geometry, budget=metrics,
+        radial_order=2, field_order=32, source_order=64)
+    solutions = _solutions(provider, wedge, geometry, metrics)
+    rows = []
+    for raw in sorted(provider.cache.values(), key=lambda row: row["t"]):
+        row = dict(raw)
+        row["wall_integral_L_plus"] = wall._wall(row["t"])["integral_L_plus"]
+        row["wall_mass_defect"] = float(row["mu_E"][-1])-row["wall_integral_L_plus"]
+        rows.append(_plain(row))
+    provider_summary = _plain(provider.summary())
+    shared.check()
+    metrics.check()
+    record = {"schema": SCHEMA, "status": STATUS, "scope": SCOPE,
+        "source_scale": 1., "runtime": runtime_versions(), "settings": dict(SETTINGS),
+        "domain": {key: float(geometry[key]) for key in DOMAIN_KEYS},
+        "source_geometry": _plain(geometry), "direct_samples": rows, "solutions": solutions,
+        "diagnostics": comparison_diagnostics(solutions), "slice_provider": provider_summary,
+        "refinement_is_rigorous_error_enclosure": False, "heldout_used_for_training": False,
+        "profile_evaluation": {"counts": dict(cap.evaluation_counts),
+            "maximum_inverse_bracket_width": cap.max_inverse_bracket_width},
+        "execution": {"cpu_seconds": time.process_time()-shared.started, "cpu_seconds_max": shared.cpu_seconds,
+            "scalar_kernel_values": shared.kernel_values, "scalar_kernel_values_max": shared.kernel_values_max,
+            "metric_values": metrics.metric_values, "source_quadrature_nodes": metrics.source_nodes,
+            "rhs_calls": metrics.rhs_calls, "field_solves": 1, "wall_solves": 1,
+            "direct_forcing_slices": len(provider.cache)}}
+    record["direct_diagnostics"] = _validate_direct(record)
+    return _plain(record)
+
+
 def _validate_direct(record):
     d, rows = record["domain"], record["direct_samples"]
     if (not isinstance(rows, list) or len(rows) != 65
@@ -78,8 +164,13 @@ def _validate_direct(record):
     scalar_keys = set(FORCING_SCALARS)
     for i, row in enumerate(rows):
         n = 129 if i % 2 == 0 else 257
-        if set(row) != set(FORCING_ARRAYS+FORCING_SCALARS+FORCING_COUNTS):
+        if set(row) != set(FORCING_ARRAYS+FORCING_SCALARS+FORCING_COUNTS) | {"eta", "slice_costs"}:
             raise ValueError("forcing cache direct slice inventory mismatch")
+        _same(row["eta"], np.linspace(0, 1, n).tolist(), "direct eta grid")
+        if set(row["slice_costs"]) != {"kernel_values", "metric_values", "source_nodes"}:
+            raise ValueError("forcing cache slice cost inventory mismatch")
+        for key, value in row["slice_costs"].items():
+            _count(value, key, 30_000_000)
         for key in FORCING_ARRAYS:
             if not isinstance(row[key], list) or len(row[key]) != n:
                 raise ValueError("forcing cache direct array shape mismatch")
@@ -113,9 +204,9 @@ def _validate_direct(record):
                 or row["mu_E"][0] != row["source_mu_E"] or row["zeta_E"][0] != row["source_zeta_E"]
                 or not _equal(row["wall_mass_defect"], row["mu_E"][-1]-row["wall_integral_L_plus"])):
             raise ValueError("forcing cache source or independent mass identity mismatch")
-    if (any(abs(rows[0][key]) > 1e-24 for key in ("g1", "g1_V", "wall_integral_L_plus"))
-            or any(abs(value) > 1e-24 for key in ("F", "G", "mu_E", "zeta_E") for value in rows[0][key])):
-        raise ValueError("forcing cache quiet corner mismatch")
+        if row["t"] <= .25 and (any(abs(row[key]) > 1e-24 for key in ("g1", "g1_V", "wall_integral_L_plus"))
+                or any(abs(value) > 1e-24 for key in ("F", "G", "mu_E", "zeta_E") for value in row[key])):
+            raise ValueError("forcing cache quiet interval mismatch")
     return {"unique_direct_slices": 65, "training_slices": 33, "withheld_slices": 32,
         "field_points": sum(row["field_points"] for row in rows),
         "field_batches": sum(row["field_batches"] for row in rows),
@@ -143,6 +234,10 @@ def validate_record(record):
             _real(value, "domain")
         if not (d["U0"] < d["Ua"] < d["Ub"] < 0 and d["Va"] < d["Vb"] < 0 and d["U0"]*d["Va"] < 1):
             raise ValueError("forcing cache exits the retained domain")
+        from recursive_horizons.nsc_atlas_characteristic_initialization import validate_geometry
+        validate_geometry(record["source_geometry"])
+        if any(record["source_geometry"][key] != d[key] for key in d):
+            raise ValueError("forcing cache source geometry differs from domain")
         _same(record["direct_diagnostics"], _validate_direct(record), "direct diagnostics")
         solutions = _saved_solutions(record)
         _same(record["solutions"], solutions)
@@ -174,6 +269,26 @@ def validate_record(record):
         for key, value in (("field_solves", 1), ("wall_solves", 1), ("direct_forcing_slices", 65)):
             if type(cost[key]) is not int or cost[key] != value:
                 raise ValueError("forcing cache solve or reuse count mismatch")
+        provider = record["slice_provider"]
+        expected_counts = {key: sum(row[key] for row in record["direct_samples"])
+                           for key in ("radial_nodes", "field_points", "field_batches")}
+        expected_counts.update({key: sum(row["slice_costs"][key] for row in record["direct_samples"])
+                                for key in ("kernel_values", "metric_values", "source_nodes")})
+        expected_counts.update(physical_slices=65, cache_hits=49)
+        expected_counts["maximum_absolute_input_defects"] = {
+            "quiet_input_defect": max(max(abs(row[key]) for key in ("g1", "g1_V"))
+                                     for row in record["direct_samples"] if row["t"] <= .25),
+            "wall_flux_defect": max(abs(row["F"][-1]) for row in record["direct_samples"]),
+            **{key: max(abs(row[key]) for row in record["direct_samples"])
+               for key in ("source_p_defect", "source_p_V_defect")}}
+        expected_counts["maximum_absolute_input_defects"]["quiet_input_defect"] = max(
+            expected_counts["maximum_absolute_input_defects"]["quiet_input_defect"],
+            *(abs(value) for row in record["direct_samples"] if row["t"] <= .25 for key in ("F", "G") for value in row[key]))
+        _same(provider, expected_counts, "slice reuse accounting")
+        if (provider["kernel_values"] > cost["scalar_kernel_values"]
+                or provider["metric_values"] > cost["metric_values"]
+                or provider["source_nodes"] > cost["source_quadrature_nodes"]):
+            raise ValueError("forcing cache cumulative cost is smaller than its slices")
     except (KeyError, TypeError, IndexError) as error:
         raise ValueError("incomplete forcing cache record") from error
     return True
