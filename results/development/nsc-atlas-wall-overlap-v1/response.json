@@ -1,0 +1,150 @@
+{
+  "difference_convention": "radial constraints minus propagated rectangle metric at U=Ua",
+  "domain": {
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105
+  },
+  "execution": {
+    "cpu_seconds": 11.234375,
+    "cpu_seconds_max": 120.0,
+    "field_solves": 1,
+    "metric_solves": 1,
+    "metric_values": 52965,
+    "radial_evaluations": 9,
+    "rhs_calls": 738,
+    "scalar_kernel_values": 4108105,
+    "scalar_kernel_values_max": 30000000,
+    "source_quadrature_nodes": 40320,
+    "wall_solves": 0
+  },
+  "maximum_absolute": {
+    "mu_E_difference": 4.0701205961113374e-07,
+    "mu_J_difference": 4.0701205605842006e-07,
+    "rectangle_lapse_defect": 6.976502540112506e-07,
+    "rectangle_mass_defect_U": 4.017999302163844e-07,
+    "rectangle_mass_defect_V": 4.307936727343531e-07,
+    "zeta_E_difference": 1.291108739032154e-06
+  },
+  "refinement_is_rigorous_error_enclosure": false,
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "samples": [
+    {
+      "U": -0.2992702973503126,
+      "V": -2.565695357068247,
+      "mu_E_difference": -0.0,
+      "mu_J_difference": 0.0,
+      "rectangle_lapse_defect": 0.0,
+      "rectangle_mass_defect_U": 0.0,
+      "rectangle_mass_defect_V": 0.0,
+      "t": 0.0,
+      "zeta_E_difference": 0.0
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.5277348890662292,
+      "mu_E_difference": -0.0,
+      "mu_J_difference": 0.0,
+      "rectangle_lapse_defect": 0.0,
+      "rectangle_mass_defect_U": 0.0,
+      "rectangle_mass_defect_V": 0.0,
+      "t": 0.125,
+      "zeta_E_difference": 0.0
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.489774421064211,
+      "mu_E_difference": -1.261601576412622e-78,
+      "mu_J_difference": -2.334429313277688e-77,
+      "rectangle_lapse_defect": 0.0,
+      "rectangle_mass_defect_U": 0.0,
+      "rectangle_mass_defect_V": 0.0,
+      "t": 0.25,
+      "zeta_E_difference": 7.304534624238729e-78
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.4518139530621936,
+      "mu_E_difference": 2.0255152222148354e-08,
+      "mu_J_difference": 2.025515200010375e-08,
+      "rectangle_lapse_defect": -3.284636451716949e-11,
+      "rectangle_mass_defect_U": 1.56810284757114e-08,
+      "rectangle_mass_defect_V": -3.513762036888579e-08,
+      "t": 0.375,
+      "zeta_E_difference": -1.4478741727774747e-07
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.4138534850601756,
+      "mu_E_difference": 2.0306192105579157e-07,
+      "mu_J_difference": 2.030619175030779e-07,
+      "rectangle_lapse_defect": 5.570632843898693e-09,
+      "rectangle_mass_defect_U": 1.0780754422512473e-07,
+      "rectangle_mass_defect_V": -3.400009784826352e-07,
+      "t": 0.5,
+      "zeta_E_difference": -1.291108739032154e-06
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.375893017058158,
+      "mu_E_difference": 1.7580059719080054e-07,
+      "mu_J_difference": 1.7580059719080054e-07,
+      "rectangle_lapse_defect": 7.272815505388053e-08,
+      "rectangle_mass_defect_U": -1.276665493321616e-07,
+      "rectangle_mass_defect_V": -2.15185714580457e-07,
+      "t": 0.625,
+      "zeta_E_difference": -2.8691626363652745e-07
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.3379325490561405,
+      "mu_E_difference": 2.614961438496266e-07,
+      "mu_J_difference": 2.614961438496266e-07,
+      "rectangle_lapse_defect": 2.305352788667392e-07,
+      "rectangle_mass_defect_U": -2.5624373023447333e-07,
+      "rectangle_mass_defect_V": -2.8527831119617986e-07,
+      "t": 0.75,
+      "zeta_E_difference": -2.57340287745933e-07
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.2999720810541224,
+      "mu_E_difference": 3.4468243015339795e-07,
+      "mu_J_difference": 3.4468242660068427e-07,
+      "rectangle_lapse_defect": 4.4706805191196963e-07,
+      "rectangle_mass_defect_U": -3.394513790055953e-07,
+      "rectangle_mass_defect_V": -3.6846432038828425e-07,
+      "t": 0.875,
+      "zeta_E_difference": -4.7459946195260727e-07
+    },
+    {
+      "U": -0.2992702973503126,
+      "V": -2.262011613052105,
+      "mu_E_difference": 4.0701205961113374e-07,
+      "mu_J_difference": 4.0701205605842006e-07,
+      "rectangle_lapse_defect": 6.976502540112506e-07,
+      "rectangle_mass_defect_U": -4.017999302163844e-07,
+      "rectangle_mass_defect_V": -4.307936727343531e-07,
+      "t": 1.0,
+      "zeta_E_difference": -7.259337717613334e-07
+    }
+  ],
+  "schema": "nsc-atlas-wall-rectangle-overlap-v1",
+  "scope": "quadratic exterior coefficients at U=Ua; no full spacetime or finite-amplitude error enclosure",
+  "settings": {
+    "field_nodes": 257,
+    "field_order": 32,
+    "geometry_knots": 257,
+    "metric_nodes": 65,
+    "radial_order": 4,
+    "source_order": 64,
+    "tolerance": 2e-09
+  },
+  "status": "FORMAL_RADIAL_RECTANGLE_OVERLAP"
+}

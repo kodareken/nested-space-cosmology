@@ -12,8 +12,7 @@ question now has a fixed-model inverse; a second-geometry comparison and
 the remote source remain open.
 The prepared probe now supplies [gravitational initial data](nsc-atlas-characteristic-initialization.md)
 through one null constraint. Its [geometric mass successor](nsc-atlas-source-mass.md)
-now supplies the transverse-radius connection on the initial surface;
-bulk propagation and coupled wall response remain open. The
+now supplies the transverse-radius connection on the initial surface. The
 [normal-force successor](nsc-atlas-scalar-normal-force.md) now supplies
 a necessary local wall condition without determining its displacement.
 The [wall-mass functional](nsc-atlas-wall-mass-closure.md) now closes the
@@ -22,20 +21,23 @@ exterior coefficient from existing leading traces. The
 mass and a quiet-anchored displacement functional satisfying all three
 local junction conditions. The [smooth exterior calculation](nsc-atlas-bulk-response.md)
 now propagates radius and lapse on the initial characteristic rectangle.
-Continuation to the moving wall, the cap metric and corrected observer
-measurements are the next dynamical connection.
+The [retained-wedge calculation](nsc-atlas-wall-evolution.md) now computes
+the formal wall displacement and exterior clock correction. The cap metric,
+central observer clock, corrected scalar signal and finite-amplitude control
+remain the next dynamical connection.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
 | Need | Owner |
 |---|---|
+| Retained-wedge field, moving wall and exterior clock | [Derivation](nsc-atlas-wall-evolution.md), [field evaluator](../src/recursive_horizons/nsc_atlas_wedge_field.py), [wall solver](../src/recursive_horizons/nsc_atlas_wall_evolution.py), [comparison recorder](../scripts/record_nsc_atlas_wall_evolution.py), [independent rectangle overlap](../results/development/nsc-atlas-wall-overlap-v1/response.json); computed formal displacement and exterior clock coefficients with seven independent numerical refinements. |
 | Smooth exterior metric and next characteristic leg | [Bulk derivation](nsc-atlas-bulk-response.md), [current numerical result](current-result.md#smooth-exterior-metric-response-15-october-2026), [comparison producer](../scripts/record_nsc_atlas_bulk_response.py); formal radius/lapse evolution and independent integral constraints on the initial rectangle. |
 | Cap mass and shared wall displacement | [Two-sided derivation](nsc-atlas-cap-wall-response.md), [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json), [model specification](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json); formal boundary response with fixed action and quiet corner. |
 | Active programme and eight theme questions | [Programme owner](nsc-cosmological-atlas.md#eight-linked-research-questions), [dependency map](nsc-cosmological-atlas.md#programme-dependencies); the inventory supplies prior dispositions, not new verification. |
 | Exterior mass on reference wall cuts | [Analytic functional](nsc-atlas-wall-mass-closure.md), [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json); both null fluxes and full frame correction close the quadratic coefficient from fixed traces. No numerical mass curve or coupled cap/wall solution is supplied. |
 | Fixed-model inverse and preparation exclusions | [Analytic proof](nsc-atlas-observer-inference.md), [record](../results/development/nsc-atlas-observer-inference-v1/inference.json); exact compatible-source inverse and compact-source restrictions, with numerical inversion and second-geometry equivalence unclaimed. |
 | Quadratic scalar stress and wall compatibility | [Analytic check](nsc-atlas-scalar-wall-consistency.md), [record](../results/development/nsc-atlas-scalar-wall-consistency-v1/consistency.json); canonical conformal probe has zero singular scalar surface stress and tangential flux jump. This earlier check does not address normal forcing or coupled evolution. |
-| Regular normal force at the conformal wall | [Projection and sign checks](nsc-atlas-scalar-normal-force.md), [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json); the quadratic normal-stress jump vanishes and constrains mean-curvature variation. Individual pressures, wall displacement and coupled bulk evolution remain uncomputed. |
+| Regular normal force at the conformal wall | [Projection and sign checks](nsc-atlas-scalar-normal-force.md), [record](../results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json); the quadratic normal-stress jump vanishes and constrains mean-curvature variation. This earlier result supplies a boundary condition rather than individual pressures or an evolved wall. |
 | Characteristic gravitational initialization | [Constraint and frame check](nsc-atlas-characteristic-initialization.md), [record](../results/development/nsc-atlas-characteristic-initialization-v1/initialization.json); the original compact probe forces an initial radius correction at fixed corner and affine gauge. No mass shift or coupled wall evolution is established. |
 | Geometric mass on the prepared null surface | [Mixed geometry and full stress](nsc-atlas-source-mass.md), [record](../results/development/nsc-atlas-source-mass-v1/mass.json); the post-input quadratic coefficient is negative and constant in the declared finite leg. This is not a vacuum future, asymptotic energy or evolved wall response. |
 | Finite prepared signal and next inference question | [Completed bounded response](nsc-atlas-prepared-response.md), [preparation certificate](nsc-atlas-field-preparation.md), [v8 record](../results/development/nsc-cosmological-atlas-v8/prepared-response.json), [next identifiability connection](nsc-cosmological-atlas.md#observer-identifiability); the finite tail is resolved; its analytic successor constrains preparation freedom, while remote generation and comparison of physical geometries remain open. |

@@ -2,6 +2,72 @@
 
 Current presentation, 15 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Moving wall and exterior clock, 15 October 2026
+
+The [wall calculation](nsc-atlas-wall-evolution.md) evaluates the same
+prepared field across the full retained exterior wedge. Radial mass and
+lapse integration reaches the moving wall. Its Jordan mass is compared
+independently with the timelike functional; both one-sided mass laws then
+drive the quiet-anchored wall displacement and exterior null clock.
+
+At the final reference radius $x=0.55$, with 257 field nodes, 257 geometry
+knots, radial Gauss order 4 and 16 clock panels:
+
+| Dimensionless quadratic coefficient | Value |
+| --- | ---: |
+| Exterior mass $\mu_+$ | -28.8834223256 |
+| Cap excess mass $\nu_-$ | 17.7590784205 |
+| Wall displacement $\rho$ | -5.2868390417 |
+| Exterior clock ratio $\eta=V_1/V_0$ | -0.8178125677 |
+
+These multiply $\alpha=\kappa_4\varepsilon^2/\ell^2$ in their respective
+expansions. The cap excess subtracts the fixed vacuum mass at the actual
+radius; its total pulled-back mass coefficient is 15.3601752054 here.
+The calculation selects no finite amplitude.
+
+The [129/257 field comparison](../results/development/nsc-atlas-wall-evolution-v1/field/response.json)
+reduces the maximum radial/timelike mass discrepancy from
+$6.49\times10^{-7}$ to $1.63\times10^{-7}$. These maxima include the
+clock quadrature nodes as well as nine reported time cuts. At the common
+cuts, the changes in $\mu_+,\nu_-,\rho,\eta$ are at most
+$3.38\times10^{-7}$, $2.09\times10^{-7}$, $3.64\times10^{-8}$ and
+$3.57\times10^{-9}$ respectively. Angular matching, the two displacement
+equations, frame conversion and clock normalization have residuals below
+$4.3\times10^{-14}$; the reference wall-spline clock normalization has
+its separate $9.85\times10^{-10}$ diagnostic at 257 geometry knots.
+
+The [8/16 clock-panel comparison](../results/development/nsc-atlas-wall-evolution-v1/time/response.json)
+changes $\eta$ by at most $2.41\times10^{-8}$, while the
+[2/4 radial-rule comparison](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json)
+changes it by less than $1.35\times10^{-13}$. Doubling the
+[field derivative quadrature](../results/development/nsc-atlas-wall-evolution-v1/derivative/response.json)
+leaves the eight recorded comparison quantities identical in this run.
+The [geometry interpolation](../results/development/nsc-atlas-wall-evolution-v1/geometry/response.json),
+[source quadrature](../results/development/nsc-atlas-wall-evolution-v1/source/response.json)
+and [wall ODE tolerance](../results/development/nsc-atlas-wall-evolution-v1/ode/response.json)
+comparisons change these quantities by at most $5.64\times10^{-11}$,
+$2.85\times10^{-14}$ and $8.25\times10^{-13}$ respectively. Each
+complete two-setting comparison used 50.50--99.29 process-CPU seconds
+and at most 12,761,511 scalar-kernel evaluations within its fixed budget.
+These are measured refinement differences, not a continuum enclosure.
+
+An [independent overlap calculation](../results/development/nsc-atlas-wall-overlap-v1/response.json)
+compares the radial method with the earlier mixed metric solver at $U=U_a$
+on nine cuts. Their mass coefficients differ by at most $4.08\times10^{-7}$,
+consistent with the earlier metric-grid discrepancy scale. The lapse
+coefficients differ by at most $1.30\times10^{-6}$. This comparison uses
+a different radial quadrature, exposing spatial error that a constraint
+computed with the same trapezoidal rule can cancel. The integrated
+constraint residual alone is therefore not a total metric error estimate.
+This check used 11.24 process-CPU seconds and 4,108,105 kernel values.
+
+The formal boundary now has computed displacement and exterior embedding
+coefficients, with no extra adjustable wall datum. The next connection is
+the smooth cap metric with its regular centre and fixed central clock,
+followed by the corrected arrival map and next scalar response. A
+finite-amplitude remainder, formation and stability remain to be calculated.
+The dated entries below retain the scope of their original results.
+
 ## Smooth exterior metric response, 15 October 2026
 
 The [bulk calculation](nsc-atlas-bulk-response.md) evolves the radius and

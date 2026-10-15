@@ -124,6 +124,11 @@
       "status": "measured",
       "owner": "docs/nsc-atlas-bulk-response.md"
     },
+    "atlas-wall-evolution": {
+      "section": "13.11",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-wall-evolution.md"
+    },
     "target-local-effective-lambda": {
       "section": "6.1",
       "status": "proposal",
@@ -343,6 +348,14 @@
       "note": "docs/nsc-atlas-bulk-response.md",
       "record": "results/development/nsc-atlas-bulk-response-v1/metric/response.json",
       "paper_section": "13.10"
+    },
+    {
+      "id": "atlas-wall-evolution",
+      "status": "measured",
+      "summary": "The original leading field determines radial exterior mass and lapse on the retained wedge, independently compared with the timelike wall mass. Both mass functionals produce a computed quadratic wall displacement and exterior null-clock correction, with seven separately varied numerical comparisons. The cap metric, central observer correction, next scalar waveform and finite-amplitude remainder remain open.",
+      "note": "docs/nsc-atlas-wall-evolution.md",
+      "record": "results/development/nsc-atlas-wall-evolution-v1/field/response.json",
+      "paper_section": "13.11"
     }
   ]
 }

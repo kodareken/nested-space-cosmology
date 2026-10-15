@@ -23,6 +23,18 @@ solves and queries in one 120 process-CPU-second, 30-million-kernel budget.
 The saved summaries are formal quadratic coefficients and numerical
 refinement diagnostics. The corrected central observer is a later calculation.
 
+The independent radial/mixed overlap uses the same field on the old rectangle
+and a different gravitational integration path:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_wall_overlap.py --output .build/wall-overlap-review
+python scripts/run_python.py scripts/record_nsc_atlas_wall_overlap.py --check --output results/development/nsc-atlas-wall-overlap-v1
+```
+
+It records nine common cuts, mass and lapse differences, the mixed solver's
+own constraint diagnostics, and the cumulative compute budget. Authentication
+performs no field, metric or wall evolution.
+
 The [smooth exterior metric](nsc-atlas-bulk-response.md) has separate
 finite comparisons for metric grid, leading field, geometry interpolation,
 field derivative quadrature, source quadrature and time tolerance. For

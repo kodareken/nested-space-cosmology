@@ -852,6 +852,25 @@ def check_bulk_response_history(errors: list[str]) -> None:
         errors.append("bulk response original-context evidence: " + str(error))
 
 
+def check_wall_evolution_evidence(errors: list[str]) -> None:
+    """Authenticate every current wall comparison without numerical replay."""
+    from record_nsc_atlas_wall_evolution import VARIATIONS, check
+    for comparison in VARIATIONS:
+        try:
+            check(ROOT / "results/development/nsc-atlas-wall-evolution-v1" / comparison)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            errors.append(f"wall evolution {comparison} evidence: {error}")
+
+
+def check_wall_overlap_evidence(errors: list[str]) -> None:
+    """Authenticate the independently recorded overlap on the common leg."""
+    try:
+        from record_nsc_atlas_wall_overlap import check
+        check(ROOT / "results/development/nsc-atlas-wall-overlap-v1")
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append("wall/rectangle overlap evidence: " + str(error))
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -892,6 +911,8 @@ def main() -> int:
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("cap/wall response evidence: " + str(error))
     check_bulk_response_history(errors)
+    check_wall_evolution_evidence(errors)
+    check_wall_overlap_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

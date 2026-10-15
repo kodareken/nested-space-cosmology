@@ -23,16 +23,16 @@ the source from a complete compatible signed field history in that fixed
 geometry. It also excludes histories that violate a positive compact
 preparation. A [quadratic stress check](docs/nsc-atlas-scalar-wall-consistency.md)
 shows that the same conformal probe needs no additional singular surface
-stress or tangential flux imbalance at its fixed wall. Its bulk gravitational
-evolution remains open. The [characteristic constraint](docs/nsc-atlas-characteristic-initialization.md)
+stress or tangential flux imbalance at its fixed wall. The
+[characteristic constraint](docs/nsc-atlas-characteristic-initialization.md)
 now fixes the pulse's initial radius correction when the corner geometry and
 null normalization are held fixed. The radial correction and its affine slope
 are negative after the compact trace; this is not a mass shift or an evolved
 wall response. A [separate mass calculation](docs/nsc-atlas-source-mass.md)
 now supplies the transverse constraint and geometric mass on that same
 initial null leg. Its post-input quadratic coefficient is negative and
-constant; this is a finite initial-data response, with later wall motion
-and observer corrections still open. The [normal-force check](docs/nsc-atlas-scalar-normal-force.md)
+constant; this is a finite initial-data response. The
+[normal-force check](docs/nsc-atlas-scalar-normal-force.md)
 also finds zero additional normal-stress jump at the fixed conformal wall.
 It constrains the later combined metric and wall response; it does not
 require zero wall displacement. The [wall-mass closure](docs/nsc-atlas-wall-mass-closure.md)
@@ -42,8 +42,13 @@ functional. Its [two-sided successor](docs/nsc-atlas-cap-wall-response.md)
 now derives the cap mass and a regular wall-displacement equation, with
 compatible angular, temporal and normal junction conditions. The common
 model specification records the action, state, parameters and clocks.
-Numerical evaluation, bulk metric evolution and corrected observer
-signals are the next connection. Comparing geometries still needs an independently
+The [smooth exterior calculation](docs/nsc-atlas-bulk-response.md) propagates
+radius and lapse on the initial characteristic rectangle. The
+[moving-wall calculation](docs/nsc-atlas-wall-evolution.md) now computes
+the formal wall displacement and exterior clock correction from the same
+field on the retained wedge. The cap metric, central observer clock,
+corrected scalar signal and finite-amplitude control remain open.
+Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
 Periodic collars are not established child universes. Constants, antimatter,
@@ -60,6 +65,8 @@ expansion and recycling remain research questions.
 - [Geometric mass response on the prepared null surface](docs/nsc-atlas-source-mass.md)
 - [Analytic exterior mass from the known wall field](docs/nsc-atlas-wall-mass-closure.md)
 - [Cap mass and shared wall displacement](docs/nsc-atlas-cap-wall-response.md)
+- [Smooth exterior metric on the initial rectangle](docs/nsc-atlas-bulk-response.md)
+- [Retained-wedge field, moving wall and exterior clock](docs/nsc-atlas-wall-evolution.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)

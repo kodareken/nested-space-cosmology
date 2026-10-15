@@ -26,6 +26,18 @@ exterior null coordinate with the central observer's clock. Domain checks,
 independent mass paths and separately named observer maps make each failure
 detectable without changing the physical inputs.
 
+**Outcome, 15 October 2026:** seven separately varied comparisons now evaluate
+the wall masses, displacement and exterior clock. The 129/257 field comparison
+reduces the maximum mass-path discrepancy from 6.49e-7 to 1.63e-7; the clock's
+8/16-panel comparison changes its ratio coefficient by at most 2.41e-8.
+Every comparison completed within 120 process-CPU seconds and 30 million
+scalar-kernel values. A separate radial-versus-mixed rectangle overlap checks
+both mass and lapse with a distinct quadrature. The
+[current result](current-result.md#moving-wall-and-exterior-clock-15-october-2026)
+records all eight evidence bundles. The smooth cap and central clock are the
+next physical connection; these coefficients do not establish a finite-amplitude
+remainder.
+
 ## Smooth exterior metric propagation admission, 15 October 2026
 
 The next step carries the same prepared scalar and its already fixed

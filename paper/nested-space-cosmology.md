@@ -44,16 +44,17 @@ areal radius and its affine slope. Transverse constraint transport then
 determines a geometric mass response on that initial null surface, including
 a negative quadratic coefficient after the compact input. The existing wall
 field traces also close an analytic exterior-side mass functional through
-both null fluxes and the full conformal transformation. This functional has
-not been evaluated numerically. Keeping the cap vacuum at the actual radius
+both null fluxes and the full conformal transformation. Keeping the cap vacuum at the actual radius
 now supplies a compatible cap mass functional and a regular, quiet-anchored
 wall displacement equation. Two-sided mass transport also preserves the
 temporal and normal junction conditions. The same prepared field now drives
 a computed quadratic exterior radius and lapse response on a finite
 characteristic rectangle, checked against independent mass transport and
-null constraints. It supplies a transverse null leg for subsequent wall
-matching. The remaining wall strip, cap metric, evaluated displacement and
-corrected observer response remain open.
+null constraints. Extending the same field evaluator to the retained wedge
+now supplies a second mass path, the computed wall displacement and its
+exterior null-clock correction, with independent numerical refinements.
+The cap metric, central clock, next scalar response and finite-amplitude
+remainder remain open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1098,10 +1099,101 @@ between 17.16 and 21.91 process-CPU seconds within its 120-second budget.
 These are finite numerical comparisons, not rigorous error enclosures or
 a selected nonzero physical amplitude. They establish a sourced exterior
 metric response on the rectangle and provide its transverse radius/lapse
-data. The remaining wall strip requires compatible embedding and junction
-data, followed by the cap metric and central clock. The full sourced
+data. Section 13.11 continues to the moving wall using the same source
+and material junction. The cap metric and central clock, full sourced
 configuration, corrected observer signal and finite-amplitude remainder
 have not yet been established.
+
+### 13.11. The same field displaces the wall and changes its exterior clock
+
+<!-- nsc-claim:atlas-wall-evolution -->
+
+Evidence: [field refinement](../results/development/nsc-atlas-wall-evolution-v1/field/response.json),
+[radial quadrature](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json),
+[clock integration](../results/development/nsc-atlas-wall-evolution-v1/time/response.json)
+and the [wall-evolution owner](../docs/nsc-atlas-wall-evolution.md).
+
+The leading field now supplies a computed response on the moving boundary,
+with the action, source and quiet corner of Sections 13.5--13.10 unchanged.
+Extending its first-derivative evaluator to the retained wedge requires the
+correct lower endpoint: a column with $U>U_a$ begins where it meets the wall.
+At that event $\chi_U=0$, while $p_U=-p r_{0,U}/x$ is generally nonzero.
+Both derivatives are obtained from the integral equations of the original
+field solution.
+
+Define the areal-null lapse $Z=C/(2r_U)$. The Einstein-frame mass and
+logarithmic lapse coefficients follow radial constraints at fixed $V$:
+
+$$
+\mu_E=\mu_{E,0}-\int_{U_0}^{U}\frac{r_0^2r_{0,V}}{C_0}p_U^2\,dq,
+\qquad
+\zeta_E=\zeta_{E,0}+\int_{U_0}^{U}\frac{r_0}{2r_{0,U}}p_U^2\,dq.
+$$
+
+Their source constants are already fixed by the characteristic data.
+At the wall, frame conversion gives $\mu_+^{\mathrm{radial}}=\mu_{E,W}+Q_+$
+and $\zeta_{J,W}=\zeta_{E,W}+p^2/4$. The independent timelike mass
+functionals of Section 13.9 determine $\mu_+$ and $\nu_-$, and hence the
+quiet-anchored displacement $\rho$. The radial and timelike mass values are
+compared, rather than equated by the numerical implementation.
+
+The exterior embedding also follows from these data. Write
+$V_W=V_0(1+\alpha\eta)$, with $s$ the original Jordan wall proper time,
+$d=v-\beta_+>0$, and $Z_0=-2a/V_0$, $a=2m$. Expanding
+$V_{W,s}=1/[Z_J(r_{W,s}-\beta_+)]$ gives
+
+$$
+\eta_s=\frac{1}{2ad}\left[
+\zeta_{J,W}+\frac{\rho_s-\delta\beta_+}{d}\right],
+\qquad \eta(s_a)=0.
+$$
+
+The background lapse is evaluated at the moved $V_W$ in this expansion.
+The equation stays regular through the zero of the signed $\beta_+$.
+
+At the final reference radius $x=0.55$, the 257-node field calculation gives:
+
+| Dimensionless quadratic coefficient | Recorded value |
+| --- | ---: |
+| Exterior mass, $\mu_+$ | $-28.8834223256$ |
+| Cap excess mass, $\nu_-$ | $17.7590784205$ |
+| Wall displacement, $\rho$ | $-5.2868390417$ |
+| Exterior clock ratio, $\eta=V_1/V_0$ | $-0.8178125677$ |
+
+For example, the radius expansion is $r_W=0.55+\alpha\rho+O(\alpha^2)$;
+the tabulated number is its coefficient, with no finite $\alpha$ selected.
+The cap excess subtracts its vacuum mass at the actual wall radius.
+
+Changing the leading field from 129 to 257 nodes reduces the largest sampled
+mass-path discrepancy from $6.49\times10^{-7}$ to $1.63\times10^{-7}$.
+The maximum changes at nine common time cuts in $\mu_+,\nu_-,\rho,\eta$
+are respectively $3.38\times10^{-7}$, $2.09\times10^{-7}$,
+$3.64\times10^{-8}$ and $3.57\times10^{-9}$. Doubling the clock panels
+from 8 to 16 changes $\eta$ by at most $2.41\times10^{-8}$.
+The radial 2/4-point comparison changes it by less than $1.35\times10^{-13}$.
+The angular jump, two forms of the displacement equation and clock
+normalization are checked on the same trajectories.
+
+The [32/64 field-derivative comparison](../results/development/nsc-atlas-wall-evolution-v1/derivative/response.json)
+leaves the eight reported comparison quantities identical in this run.
+Separate [geometry](../results/development/nsc-atlas-wall-evolution-v1/geometry/response.json),
+[source](../results/development/nsc-atlas-wall-evolution-v1/source/response.json)
+and [ODE tolerance](../results/development/nsc-atlas-wall-evolution-v1/ode/response.json)
+comparisons change them by less than $5.64\times10^{-11}$,
+$2.85\times10^{-14}$ and $8.25\times10^{-13}$ respectively. All seven
+comparisons completed within their individual 120 process-CPU-second budgets.
+An [independent rectangle overlap](../results/development/nsc-atlas-wall-overlap-v1/response.json)
+finds mass and lapse differences of at most $4.08\times10^{-7}$ and
+$1.30\times10^{-6}$ against the mixed metric solver. Different radial
+quadratures expose error that a shared-rule constraint residual can cancel;
+that residual alone is not a total metric error estimate.
+
+These computations connect the sourced exterior and the two-sided mass
+functionals to an actual wall displacement and exterior null embedding at
+quadratic order. Their numerical differences are refinement diagnostics.
+The smooth cap metric, central arrival correction, next scalar waveform and
+finite-amplitude remainder are the remaining connections to the interior
+observer.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1424,9 +1516,10 @@ mass functional and the quiet-anchored wall displacement equation.
 The temporal and normal conditions agree with their common mass transport.
 The prepared field now drives an evolved exterior radius and lapse on a
 finite characteristic rectangle, with mass-transport and null-constraint
-checks. Its transverse data enable the next wall extension. Numerical
-evaluation of the displacement and reconstruction through the wall and cap
-remain necessary before an evolved observer correction can be claimed.
+checks. The retained-wedge evaluation now compares independent radial and
+timelike mass paths, computes the two-sided wall displacement and fixes its
+exterior clock correction. Reconstruction of the cap and its central clock
+is the next step toward the corrected arrival map and scalar signal.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1456,6 +1549,7 @@ and renders their relationships without launching a new physics calculation.
 | Exterior wall-mass functional | [Both fluxes and full frame conversion](../docs/nsc-atlas-wall-mass-closure.md); [record](../results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json) |
 | Cap mass and wall displacement functional | [Vacuum subtraction and junction closure](../docs/nsc-atlas-cap-wall-response.md); [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json) |
 | Smooth exterior metric response | [Characteristic evolution and radial checks](../docs/nsc-atlas-bulk-response.md); [metric](../results/development/nsc-atlas-bulk-response-v1/metric/response.json), [field](../results/development/nsc-atlas-bulk-response-v1/field/response.json) and [derivative](../results/development/nsc-atlas-bulk-response-v1/derivative/response.json) comparisons |
+| Moving wall and exterior clock | [Mass paths, displacement and clock](../docs/nsc-atlas-wall-evolution.md); [field](../results/development/nsc-atlas-wall-evolution-v1/field/response.json), [radial](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json) and [clock-time](../results/development/nsc-atlas-wall-evolution-v1/time/response.json) comparisons |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

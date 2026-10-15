@@ -1,10 +1,10 @@
 {
-  "bytes": 1930664,
+  "bytes": 1967749,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "03e520bf866d90dbedff6fd34a3abe4217e722a014d4fed07f88e40cf2585e31",
+  "metadata_sha256": "2e68d089eb3ee4d5fff7f21e530573bb2eb378caa7be0d6bef41afa9349cd091",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 26,
-  "pdf_sha256": "d4120faaf3010e278ddbf7ce86847c73c790e137f3171500589a88e43a711a52",
+  "pages": 27,
+  "pdf_sha256": "e460e25bcaafdb086076942d557dda121fa97f938e937bcdd66ed36a64ec35c3",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -80,8 +80,40 @@
       "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
     },
     {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/derivative/response.json",
+      "sha256": "253f3c2220d2258ae25429210abcc7d638151c0a8af471b03c9f21198704e775"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/field/response.json",
+      "sha256": "07ec4b40a491b537a85768ff82218d0e6e7726357aafd0555e45a9940dd7009c"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/geometry/response.json",
+      "sha256": "175bff07b60edfba57c60686f8b05fea00ab284e2aba874fbfe5b9e5c8e36947"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/ode/response.json",
+      "sha256": "64f4872a3f8a04e7c202016876708e050217f2f149ca645ed3efd3186963c643"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/radial/response.json",
+      "sha256": "5e1ccd1c6361acc2c45b4e8605498259999031b4f6876b242d7016779dddda98"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/source/response.json",
+      "sha256": "ab48e8abbe903359ad0e024ed7fb4455270fb04e3808e0e6b5e8ebacbcc1e9aa"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-evolution-v1/time/response.json",
+      "sha256": "a763942eb7bf799764777b0985e3cf24b2565386bf292ce3bcd6b2fdf626d4d7"
+    },
+    {
       "path": "results/development/nsc-atlas-wall-mass-closure-v1/wall-mass.json",
       "sha256": "684252b81204150d42280d73bb7b68f7e57788f28fb14e2dc10b1271ea88401f"
+    },
+    {
+      "path": "results/development/nsc-atlas-wall-overlap-v1/response.json",
+      "sha256": "30043edac37a1c5b3e70b9c80c2378772518856a9d7f463253f79bb43694ee0e"
     },
     {
       "path": "results/development/nsc-conformal-local-response-v2.json",
@@ -205,6 +237,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "89d7a78b2e4d68b3f8e56498ad2da6ec9d06ff31596dc9ccaebf7421b6d16d73",
-  "version": "working-2026-10-15.2"
+  "source_sha256": "328d578066458bc540813b87f62664de1ff79150dea372a21cbe01d27c3442fb",
+  "version": "working-2026-10-15.3"
 }
