@@ -158,6 +158,75 @@ $V=V_a$ and compatible at the source corner. Imposing zero correction on
 the background source curve in areal coordinates would change the declared
 input. No new incident waveform is introduced.
 
+### Conservative exterior forcing on the existing wedge
+
+Pull back the areal coefficient to the reference exterior coordinates:
+$y(U,V)=c_1(r_0(U,V),V)$. Here $r_{0,V}=-P_0/2$,
+$r_{0,U}>0$ and $C_0=2Z_0r_{0,U}$. The equation becomes
+
+$$
+y_{UV}+K_0y=\partial_U F-G,\qquad
+K_0=\frac{C_0m}{2r_0^3},\qquad
+F=\frac{Z_0}{2}\left(A_0\zeta_E-\frac{2\mu_E}{r_0}\right)
+\frac{c_{0,U}}{r_{0,U}},
+$$
+$$
+G=\left[\frac{C_0(m\zeta_E+\mu_E)}{2r_0^3}
+-\frac{p_Up_V}{6}\right]c_0.
+$$
+
+The derivatives in the last expression are in the original null chart:
+$\mathcal R_{E,1}=-4p_Up_V/C_0$. This formulation uses first scalar
+jets and a known flux. At each fixed $V$, the radial mass and lapse can
+be obtained on the active grid by one cumulative quadrature, then reused
+in $F$ and $G$. Integrating separately from the source to every grid point
+would repeat the same work.
+
+Let $g_1(V)=-H_{E,\mathrm{src}}c_{0,r}|_{\mathrm{src}}$ and let
+$\mathfrak b(V)=r_{0,U}c_{1,r}|_W$ be the boundary derivative derived below.
+For $L(U)=U_W^{-1}(U)$ on newly exposed wall coordinates, define
+
+$$
+B_{\mathrm{lift}}(U)=\begin{cases}
+0,&U\le U_a,\\
+\displaystyle\int_{U_a}^{U}\mathfrak b(L(q))\,dq,&U>U_a.
+\end{cases}
+$$
+
+Then $z=y-g_1(V)-B_{\mathrm{lift}}(U)$ has zero source and bottom values and
+$z_U|_W=0$. Its evolution is
+
+$$
+z_V=F(U,V)-F(U_0,V)
+-\int_{U_0}^{U}\left[K_0(z+g_1+B_{\mathrm{lift}})+G\right](q,V)\,dq.
+$$
+
+This has the existing clipped Volterra geometry. Grid values beyond the
+moving wall are bookkeeping continuations of the wall value of $z$;
+their reconstructed $B_{\mathrm{lift}}$ is evaluated at the clipped coordinate as well.
+The lift removes a moving-wall derivative term without differentiating
+$\mathfrak b$. It introduces no adjustable boundary datum. At the wall $F_W=0$
+because $c_{0,U}|_W=0$, whereas $p_U|_W$ is generally nonzero. The
+wall readout and its continuum derivative are
+
+$$
+y_W=z_W+g_1+B_{\mathrm{lift}}(U_W),\qquad
+\frac{dy_W}{dV}=g_1'+U_W'\mathfrak b-F(U_0,V)
+-\int_{U_0}^{U_W}(K_0y+G)\,dU,
+$$
+$$
+g_1'=-\left(H_{E,\mathrm{src}}'
++\frac{H_{E,\mathrm{src}}P_{0,r}}2\right)c_{0,r}
++\frac{H_{E,\mathrm{src}}K_0c_0}{r_{0,U}}
+\quad\text{on the source.}
+$$
+
+The last identity follows by differentiating the source pullback and using
+$c_{0,UV}=-K_0c_0$. It avoids differences of stored waveforms. With
+$K_0=F=G=0$, the manufactured solution $y=g_1+B_{\mathrm{lift}}$ checks the wall
+transport term exactly. A numerical boundary interpolant and an exterior
+evolution have not yet been computed.
+
 ## Cap equation in the central proper-clock gauge
 
 Use the computed polar-areal cap metric
@@ -432,6 +501,46 @@ Once a centre-reflected correction can return to the wall, the quiet
 outgoing argument no longer applies and the full transmission problem
 must be revisited on its continued domain.
 
+### Evaluating the outgoing boundary input
+
+For the retained wall cuts set $u=q_W-2\mathrm{atanh}(x)$. Along the
+active part of the outgoing ray,
+
+$$
+J_-=-\int_{q_a}^{q_W}K_1(T,r)f(q)\,dq,\qquad
+T=\frac{u+q}{2},\qquad r=\tanh\frac{q-u}{2}.
+$$
+
+These points have $T\le T_W\le T_b<q_a$ and $u<q_a$. Thus their
+reflected profile is quiet, and the metric queries remain within the
+existing cap. Substitution of $p=f(q)/r$, $p_T=f'(q)/r$ and
+$p_r=f'(q)/(rA_0)-f(q)/r^2$ into the general potential cancels the
+terms quadratic in $f'$:
+
+$$
+K_1=\frac{A_0\nu_E}{2r^3}
+-\frac{A_0ff'}{12r^3}
++\frac{A_0(1-3r^2)f^2}{24r^4}.
+$$
+
+This gives an independent expression to check against the general
+first-jet potential. A second quadrature uses $q=u+2\mathrm{atanh}(r)$
+and $dq=2\,dr/A_0$. Both integrals split at the prescribed profile edges.
+The [boundary admission](prior-art-and-open-claim.md#scalar-backscatter-boundary-admission-16-october-2026)
+fixes the comparison domain, settings and shared compute budget. Its
+numerical outputs belong in the result record; sampled values alone
+do not supply the boundary interpolant required for an exterior solve.
+
+The implementation is `ScalarBoundary` in the
+[boundary adapter](../src/recursive_horizons/nsc_atlas_scalar_boundary.py),
+with a [comparison producer](../scripts/record_nsc_atlas_scalar_boundary.py).
+The [boundary tests](../tests/test_nsc_atlas_scalar_boundary.py) check
+manufactured integration and transmission; the
+[flux tests](../tests/test_nsc_atlas_scalar_flux.py) independently check
+the conservative exterior and clock-derivative identities. Compact
+numerical outcomes and their reproduction commands are maintained in
+the [current result](current-result.md) and [reproduction guide](reproducing.md).
+
 ## Central waveform and the remaining numerical connection
 
 In the static cap coordinates, reconstruction at fixed Jordan central
@@ -495,6 +604,23 @@ The cap field interface already obtains $w_{VV}$ and $f''$ from the
 continuum integral equation. No stored waveform is differentiated. The
 cap central-null equation avoids new differentiated metric data; its
 outgoing-label integral is an additional geometric query, not a new source.
+
+For the later derivative of the incoming clock pullback, the optical
+constraint and mass-flux law also give a first-jet formula:
+
+$$
+D_T(T,r)=-\frac{p_0p_{0,T}}6
++\int_0^r\left[
+\frac{(1-3h^2s^2)p_Tp_r}{1-h^2s^2}
+-\frac{2h^2spp_T}{1-h^2s^2}\right]ds.
+$$
+
+It follows from
+$D_r=2\nu_E(1-3h^2r^2)/(r^2A_0^2)-h^2rp^2/A_0$ and
+$\nu_{E,T}=r^2A_0p_Tp_r/2$, with the central clock anchor.
+It specifies a route to differentiating the ray integral without
+differentiating saved clock samples; that numerical derivative is not
+part of the boundary calculation above.
 
 The finite calculation uses the retained wedge and cap with
 $q_+\le q_b$, including its established quiet earlier data. Initial

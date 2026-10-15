@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Scalar backscatter boundary admission, 16 October 2026
+
+The [scalar-metric equations](nsc-atlas-scalar-metric-response.md) determine
+the outgoing correction at the wall before the exterior correction is
+evolved. This calculation evaluates that missing boundary input from the
+same prepared field and computed cap metric.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Retained mathematics | Forced cap equation in central-clock null coordinates; the no-return certificate; regular radial Einstein constraint; weighted null transmission and the displaced-wall pullback. |
+| Missing connection | The numerical outgoing trace J_minus and its induced exterior areal derivative c1_r, with backscatter and displacement contributions kept separate. |
+| Fixed model and state | Original conformal scalar, h=1, b=2, m=0.4, prescribed reduced-field input and quiet anchors; no new source, fitted parameter or finite alpha. |
+| Finite domain | Nine reference wall cuts, x in [0.45,0.55]. For each cut integrate q from q_a to q_W on the outgoing ray u=q_W-2 atanh(x); T=(u+q)/2 and r=tanh((q-u)/2). These points remain before central arrival and within the existing cap. |
+| Implementation | A boundary adapter reuses the same prepared field, cap radial metric and wall displacement/exterior clock. Split quadrature at the existing profile edges. Compute the same integral in q and r, with the correct Jacobian, and compare the general and quiet-profile potential formulas. No new cap clock solve is needed. |
+| Budget | At most 120 process-CPU seconds and 30 million scalar kernels per complete pilot or two-setting comparison, including preparation and wall solve. Field nodes 129/257; cap radial and outgoing-ray orders 8/16/32. At most one initial pilot; subsequent field, radial and ray pairs vary one setting. A further 16/32 pair is justified only by an unresolved discrepancy. Transient pilots stay under .build. |
+| Independent checks | Manufactured forced-null integration, zero source, cubic scaling, q/r reparameterization, potential identity, wall flux reconstruction and regularity across beta_plus=0. Numerical sensitivity is recorded separately from a rigorous error enclosure. |
+| Stop or redirect | Diagnose a domain exit, disagreement of the independent formulas, non-refining residual or exhausted budget before another run. Nine boundary samples do not define a controlled interpolant or a propagated scalar waveform; those are subsequent connections. |
+
+The likely numerical difficulties are missing a pulse edge, losing a sign
+in the outgoing flux, and allowing repeated metric queries to exceed the
+shared budget. Split integration, two coordinate evaluations, signed
+contributions and cumulative counters expose those failures directly.
+
 ## Scalar response to the computed metric, 15 October 2026
 
 The [cap and clock calculation](nsc-atlas-cap-response.md) now completes the

@@ -1215,7 +1215,7 @@ Evidence: [field refinement](../results/development/nsc-atlas-cap-response-v1/fi
 and the [cap derivation](../docs/nsc-atlas-cap-response.md).
 
 The same prepared wall trace fixes the leading regular field in the cap.
-With $A_0=1-r^2$, $r_*=\operatorname{atanh}r$ and
+With $A_0=1-r^2$, $r_*=\mathrm{atanh}\,r$ and
 $f(q(V))=\chi_W(V)/\varepsilon$, where $q$ is the existing central
 arrival map,
 
