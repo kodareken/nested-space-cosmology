@@ -917,6 +917,15 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
         check_assessment(ROOT / "results/development/nsc-atlas-scalar-lift-assessment-v1")
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append(f"scalar lift assessment evidence: {error}")
+    for module_name, directory in (
+        ("record_nsc_atlas_profile_moment", "nsc-atlas-profile-moment-v1"),
+        ("record_nsc_atlas_local_lift", "nsc-atlas-local-lift-v1"),
+    ):
+        try:
+            import importlib
+            importlib.import_module(module_name).check(ROOT / "results/development" / directory)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            errors.append(f"{directory} evidence: {error}")
 
 
 def main() -> int:

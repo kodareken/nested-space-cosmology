@@ -16,6 +16,7 @@ compares local lifts on 16/32 active cells with 40 withheld queries:
 python scripts/run_python.py scripts/record_nsc_atlas_profile_moment.py --output .build/profile-moment-review
 python scripts/run_python.py scripts/record_nsc_atlas_profile_moment.py --check --output results/development/nsc-atlas-profile-moment-v1
 python scripts/run_python.py scripts/record_nsc_atlas_local_lift.py --output .build/local-lift-review
+python scripts/run_python.py scripts/record_nsc_atlas_local_lift.py --check --output results/development/nsc-atlas-local-lift-v1
 ```
 
 Each complete physical comparison has one shared 120-process-CPU-second,

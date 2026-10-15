@@ -73,6 +73,21 @@ existing interpolation target. The full wall-$U$ width times the slope
 discrepancy is below $1.8\times10^{-9}$. This admits the already specified
 local lift pair at moment order 8, holding all physical inputs fixed.
 
+**Local-lift outcome:** the 81-query pair takes 17.9375 process-CPU seconds
+and 3,737,156 scalar kernels. Withheld value errors are
+$3.95548\times10^{-5}$ and $2.90055\times10^{-5}$, both above the original
+target. The maximum lift difference is $2.47058\times10^{-8}$; assembly
+and transport roundoff are below $5.33\times10^{-15}$. The fine fit now
+fails most strongly through the pulse interior rather than its edges.
+Before another physical lift calculation, use the saved 81 first jets to
+decompose the same boundary into backscatter, material-radius and clock
+pullback terms, reconstructing the same fits and withheld comparisons.
+Budget: 30 process-CPU seconds, zero physical solves or new scalar kernels.
+Check value and derivative sum closure. In particular, inspect the inherited
+eight-panel clock's value/continuum-slope consistency; the earlier nine-cut
+comparisons sampled only its panel boundaries. Do not silently accept the
+unresolved interpolant or increase its degree again.
+
 ## Scalar lift and forcing admission, 16 October 2026
 
 The sampled outgoing boundary is now known. The

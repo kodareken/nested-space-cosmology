@@ -33,8 +33,36 @@ existing $2.2795554\times10^{-7}$ interpolation target. Even multiplying the
 slope discrepancy by the entire retained wall-$U$ width gives less than
 $1.8\times10^{-9}$. This supports using moment order 8 for the admitted local
 lift comparison. Its five-node, fixed-per-cell Hermite construction and
-exact antiderivative pass independent polynomial and continuity tests;
-the active 16/32-cell physical comparison is the next calculation.
+exact antiderivative pass independent polynomial and continuity tests.
+
+The [local comparison](../results/development/nsc-atlas-local-lift-v1/lift.json)
+then shares 81 direct jets between 25/41 training knots and 40 withheld
+queries. It takes 17.9375 process-CPU seconds and 3,737,156 scalar kernels.
+
+| Diagnostic | 16 active cells | 32 active cells |
+| --- | ---: | ---: |
+| Maximum withheld boundary-value discrepancy | $3.95548\times10^{-5}$ | $2.90055\times10^{-5}$ |
+| Maximum cell-width-scaled slope discrepancy | $7.95539\times10^{-5}$ | $9.98697\times10^{-5}$ |
+| Terminal lift | 0.0117052349145 | 0.0117052398354 |
+
+The maximum sampled lift difference is $2.47058\times10^{-8}$, while
+boundary values still miss the original target. Endpoint value jumps are
+below $5.33\times10^{-15}$; exact polynomial differentiation and wall
+transport agree below $1.78\times10^{-15}$ and $1.52\times10^{-16}$,
+respectively. Thus assembly roundoff is not the observed limitation.
+The post-pulse value error is below $2.99\times10^{-10}$.
+
+The largest fine-fit value discrepancies occur at $t=0.5078125$ and
+$0.4921875$, through the pulse interior. The near-edge discrepancy has
+substantially improved, but further knot refinement alone does not explain
+this interior plateau. The inherited wall clock uses eight panels and
+four-node polynomial antiderivatives for its values, while the supplied
+clock slopes use the continuum rate. The earlier nine-cut comparisons lie
+at these panel boundaries. A saved-jet decomposition into cap backscatter,
+material radius and clock pullback is the next diagnostic before changing
+the wall-time resolution. The unresolved boundary is not yet used for
+physical scalar propagation. The independent forcing-cache implementation
+and manufactured evolution controls can proceed meanwhile.
 
 ## Scalar lift and exterior forcing, 16 October 2026
 
