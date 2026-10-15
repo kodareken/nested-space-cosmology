@@ -1,5 +1,28 @@
 # Prior art and admission of new research
 
+## Cap mass and moving-wall response admission, 15 October 2026
+
+The accepted programme first closes the cap-side input and the coupled wall
+equations of the existing conformal reference. The exterior mass functional
+is already available. A new numerical waveform or a cosmological fit would
+not resolve this missing connection.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed | The existing full conformal Hilbert stress and scalar/material junction laws of Aviles--Maeda--Martinez, 1910.07534v2; Hayward's general spherical mass transport, gr-qc/9710089v2; the complete mass frame transformation of Faraoni--Vitagliano, 1401.1189v1; the already checked exterior functional and normal-force identity. Exact equations and reading boundaries remain in the existing source cards. |
+| Missing | Does the existing transmitted field fix the cap's vacuum-subtracted mass and a compatible quadratic areal-radius response of the material wall? Which bulk or initial data remain necessary afterward? |
+| Fixed model | Canonical real massless scalar, xi=1/6, no direct scalar-wall interaction, scalar-independent vacuum stress, constant material tension; h=H ell=1, K=k ell=2, m=M/ell=0.4; original C3 preparation, quiet cap/bottom, same corner and common cap-to-exterior normal. |
+| Domain and order | Original no-return wall interval 0.45 <= R/ell <= 0.55 in the isolated reference. Formal order alpha=kappa_4 epsilon^2/ell^2, with perturbed proper wall time anchored at the quiet starting event. Keep cap vacuum mass h^2 R^3/2 and its displacement correction. No formation, late-time, finite-amplitude existence or glued-parent future claim. |
+| Decision and unlock | Derive cap transport directly with the Jordan improved stress and independently using the smooth cap frame and transformed vacuum potential. Combine both one-sided masses with the angular junction; test temporal and normal compatibility, identify integration constants and any missing metric data. A closed response permits a separately controlled finite evaluation; an obstruction names the missing datum or incompatibility. |
+| Budget | One analytic derivation and independent review; exact symbolic verification within 60 process-CPU seconds per complete certificate. No waveform re-solve, mass quadrature, parameter sweep or bulk PDE solve in this admission. |
+| Checks | Vacuum subtraction on the actual displaced radius; both null/scalar derivatives; the cap curvature contribution; transformed vacuum potential; quiet anchors; orientation and length scaling; zero source; regularity at beta_plus=0; differentiation of angular matching with tangential flux; normal Gauss identity; omission controls. |
+| Stop or redirect | Stop on an unprovided integration datum, inconsistent material/scalar jumps, singular response coefficient in the admitted regular domain, mismatched independent transport, or exhausted budget. A formal wall coefficient does not establish a full bulk solution or a finite-amplitude error bound. |
+
+The likely obstacles are losing the cap vacuum/displacement terms, mistaking
+an angular equation for all junction conditions, and promoting a formal wall
+response to a complete spacetime. Independent frame/stress derivations,
+explicit temporal/normal checks and the remaining-data statement address them.
+
 This file prevents Nested-Space Cosmology from spending compute on an already known component and then presenting the reproduction as project novelty. Import a result with its assumptions and attribution. The research contribution must close a previously missing connection, distinguish candidate exteriors, or establish why a proposed connection is unavailable in a named domain.
 
 The research direction adopted on 10 October 2026 is exterior first: build a
