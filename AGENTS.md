@@ -129,8 +129,11 @@ implementation and scientific context.
 This checkout is the active scientific and publication root, on local `main`.
 Current checks use its single package. Historical replay has an explicit entry
 point at `scripts/replay_history.py`. Existing historical evidence, published
-remote branches and unrelated work are preserved. GitHub pushes follow
-Douglas's explicit publication or backup instruction.
+remote branches and unrelated work are preserved. The local checkout is the
+working authority; Git and GitHub provide version history and a web backup.
+Commit and push all work to GitHub as it progresses, including unfinished
+work, unless Douglas says otherwise. Record its current state honestly in
+the commit; completion or publication readiness is not a condition for saving.
 
 The Windows scientific runtime is `.venv/validation` (Python 3.14.8); the
 reproduction guide documents its base-interpreter fallback. Detailed research

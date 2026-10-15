@@ -3,7 +3,8 @@
 The root owns the single `src/recursive_horizons` package, root scripts, tests,
 notes and evidence. Work on this checkout's local `main`
 branch; preserve remote branches and unrelated changes. GitHub is a backup
-mirror; push only when Douglas explicitly asks. The latest user
+mirror; commit and push work as it progresses, including unfinished work,
+unless Douglas says otherwise. The latest user
 instruction determines the task; old PLAN and handover files do not.
 
 The current manuscript is [the main paper](../paper/nested-space-cosmology.md).
