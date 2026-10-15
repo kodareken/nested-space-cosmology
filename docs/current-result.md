@@ -2,6 +2,40 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Profile moment and local lift, 16 October 2026
+
+The [pre-arrival moment](nsc-atlas-profile-moment.md) now evaluates the cap
+mass from a cumulative first-profile-derivative integral. The
+[comparison record](../results/development/nsc-atlas-profile-moment-v1/moment.json)
+holds the prepared field, wall and geometry fixed, comparing moment Gauss
+orders 4/8 against the original radial calculation. It includes nine
+boundary cuts and 24 independent mass points on the outgoing cap rays.
+
+| Quantity | Maximum moment 4/8 difference | Maximum moment-8 / radial difference |
+| --- | ---: | ---: |
+| Cap Einstein mass coefficient | $1.07\times10^{-14}$ | $2.50\times10^{-9}$ |
+| Outgoing scalar coefficient $J_-$ | $8.89\times10^{-16}$ | $5.87\times10^{-11}$ |
+| Material derivative $(J_-)_s$ | $5.69\times10^{-14}$ | $4.94\times10^{-9}$ |
+| Wall boundary value $\mathfrak b$ | $2.67\times10^{-15}$ | $1.52\times10^{-10}$ |
+| Wall slope $\mathfrak b_U$ | $1.82\times10^{-12}$ | $7.18\times10^{-8}$ |
+
+The whole comparison takes 12.25 process-CPU seconds and 2,637,474 scalar
+kernels, including one field and wall preparation and the original radial
+reference. The new integration is stable under its quadrature refinement.
+The larger radial/moment difference remains a separate numerical
+representation discrepancy: the dense field and its continuum first jet
+need not be exact derivatives of one floating interpolant, and the original
+radial reference also has quadrature error. These nine cuts do not identify
+each contribution separately or establish a uniform bound.
+
+The maximum boundary-value discrepancy is over 1,500 times smaller than the
+existing $2.2795554\times10^{-7}$ interpolation target. Even multiplying the
+slope discrepancy by the entire retained wall-$U$ width gives less than
+$1.8\times10^{-9}$. This supports using moment order 8 for the admitted local
+lift comparison. Its five-node, fixed-per-cell Hermite construction and
+exact antiderivative pass independent polynomial and continuity tests;
+the active 16/32-cell physical comparison is the next calculation.
+
 ## Scalar lift and exterior forcing, 16 October 2026
 
 The [scalar-input calculation](nsc-atlas-scalar-forcing.md) now evaluates

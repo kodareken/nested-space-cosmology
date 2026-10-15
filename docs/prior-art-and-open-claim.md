@@ -23,6 +23,17 @@ local polynomial whose values or slopes fail near a stencil transition.
 Independent radial queries, split cumulative integration and genuinely
 withheld cell checks expose these failures before scalar evolution.
 
+**Moment outcome:** the complete 4/8 pair and original radial reference take
+12.25 process-CPU seconds and 2,637,474 scalar kernels. The maximum mass
+quadrature change is $1.07\times10^{-14}$; the independent radial difference
+is $2.50\times10^{-9}$. For the boundary value those differences are
+$2.67\times10^{-15}$ and $1.52\times10^{-10}$, respectively. The separate
+radial/dense-field representation discrepancy is not removed by moment
+refinement, but its sampled boundary effect is over 1,500 times below the
+existing interpolation target. The full wall-$U$ width times the slope
+discrepancy is below $1.8\times10^{-9}$. This admits the already specified
+local lift pair at moment order 8, holding all physical inputs fixed.
+
 ## Scalar lift and forcing admission, 16 October 2026
 
 The sampled outgoing boundary is now known. The
