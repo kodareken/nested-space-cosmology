@@ -8,6 +8,10 @@ develop that programme with mathematical reasoning and useful implementation.
 
 ## Mathematics, calculation and language
 
+Geometry -> mathematical relationships -> calculation -> observable consequences.
+Words describe that work; familiar labels such as "particle" and "wave" do
+not dictate its structure. The focus is on geometry rather than English labels.
+
 Mathematics is the verification tool. A physical theory is a proposed account
 of reality; its familiarity or acceptance does not make it a mathematical
 axiom. A physical model can be wrong while arithmetic, algebra and the
@@ -133,3 +137,5 @@ reproduction guide documents its base-interpreter fallback. Detailed research
 routes belong in their existing owners, with the accepted plan kept in the
 chat. Paused numerical campaigns remain historical context until useful to
 the active work.
+
+Do not ever change this AGENTS.md unless Douglas explicitly tells you to.
