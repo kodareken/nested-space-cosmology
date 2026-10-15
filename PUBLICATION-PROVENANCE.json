@@ -14526,9 +14526,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 47451,
+      "bytes": 47904,
       "path": "scripts/check_publication.py",
-      "sha256": "ee8ae7110f1e6777231713cacd9016d61a1ec4a0a0540ae604cd78ee5e37d0d8"
+      "sha256": "82ee7f9c3aaae32fa6312cf8f77cfc1926b607818d641e3dc2b1e70a7ad71816"
     },
     {
       "bytes": 13188,
@@ -19296,9 +19296,9 @@
       "sha256": "98d1b5539e572ac0cb6560deb19d83158c00f1cde215863faf3658ae2ef7e7fa"
     },
     {
-      "bytes": 7565,
+      "bytes": 8531,
       "path": "tests/test_publication_history_boundary.py",
-      "sha256": "62568f1ec8eb3bab0e2a06d753abb9f18315fd114aad6bbcb280e3214c9a788f"
+      "sha256": "f8bd5122bb9b2a1350ed588c9f4b9af940731e16d4fac6651cc94bc8a8f8f445"
     },
     {
       "bytes": 1599,

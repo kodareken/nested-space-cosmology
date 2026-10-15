@@ -99,6 +99,26 @@ def test_extracted_latex_equation_number_is_not_a_link(tmp_path, monkeypatch):
     assert found == ["broken Markdown link in source.md: 14"]
 
 
+@pytest.mark.parametrize("newline", ["\n", "\r\n"])
+def test_display_equation_arguments_are_not_links_but_adjacent_links_are(tmp_path, monkeypatch, newline):
+    monkeypatch.setattr(checker, "ROOT", tmp_path)
+    (tmp_path / "present.md").write_text("present")
+    text = newline.join(("[Existing note](present.md)", "$$",
+                         r"\int [K_0(z+g_1+B)+G](q,V)\,dq", "$$",
+                         "[Missing note](missing.md)", ""))
+    found = []
+    checker.check_markdown_links(found, tmp_path / "source.md", text)
+    assert found == ["broken Markdown link in source.md: missing.md"]
+
+
+def test_unclosed_math_opener_does_not_hide_a_document_link(tmp_path, monkeypatch):
+    monkeypatch.setattr(checker, "ROOT", tmp_path)
+    found = []
+    checker.check_markdown_links(found, tmp_path / "source.md",
+                                 "$$\nx=1\n[Missing note](missing.md)\n")
+    assert found == ["broken Markdown link in source.md: missing.md"]
+
+
 def current_record(tmp_path, monkeypatch, *, name=None, data=None):
     """Current normalized records receive current checks, including after restoration."""
     name = name or "results/development/nsc-discovery-vacuum-control-v1/record.json"

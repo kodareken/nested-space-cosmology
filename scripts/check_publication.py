@@ -724,6 +724,12 @@ def check_paper_catalog(errors: list[str]) -> None:
 
 
 def check_markdown_links(errors: list[str], path: Path, text: str) -> None:
+    # A display equation can contain [operator](argument); its brackets are
+    # mathematical syntax, not Markdown links. Mask only closed standalone
+    # $$ blocks so an unmatched opener cannot hide later document links.
+    # The public-boundary caller still scans the original text for secrets.
+    text = re.sub(r"(?ms)^[ \t]*\$\$[ \t]*\r?\n.*?^[ \t]*\$\$[ \t]*(?:\r?\n|$)",
+                  lambda match: "\n" * match.group().count("\n"), text)
     for match in LINK_RE.finditer(text):
         raw_target = match.group(1)
         # Plain-text arXiv extractions can join a set notation and equation
