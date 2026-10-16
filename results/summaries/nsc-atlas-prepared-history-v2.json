@@ -1,0 +1,115 @@
+{
+  "comparison": {
+    "F": {
+      "direct_peak": 0.9955122036556919,
+      "label": -0.5040732796583627,
+      "maximum_absolute": 5.9634300563670085e-12,
+      "peak_relative": 5.9903133627777425e-12
+    },
+    "F_prime": {
+      "direct_peak": 23.65466299516541,
+      "label": -0.3622323678885899,
+      "maximum_absolute": 1.8213697217106528e-10,
+      "peak_relative": 7.699833737149028e-12
+    },
+    "F_second": {
+      "direct_peak": 1196.069548896819,
+      "label": -0.5040732796583627,
+      "maximum_absolute": 9.60803953944378e-05,
+      "peak_relative": 8.033010746160744e-08
+    }
+  },
+  "comparison_points": 392,
+  "comparison_sha256": "a68ed1f7f283a59677c604b3434002bc06accf843509982121b732e35d95a26b",
+  "execution": {
+    "charged_values": 1362327,
+    "cpu_seconds": 2.3125,
+    "raw_history_saved": false,
+    "retries": 0,
+    "source_integrations_attempted": 1,
+    "source_integrations_completed": 1,
+    "time_steps": 0
+  },
+  "input_sha256": "a8dcfb845ab24cf1c97392d5156081517d4685587a4448f7a6a47ec8e8076066",
+  "inputs": {
+    "derivative_order": 4,
+    "field_nodes": 257,
+    "geometry_knots": 257,
+    "quiet_tolerances": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "interpretation": "finite comparisons on one prepared numerical field; no continuum error bound, finite-amplitude evolution or observational prediction",
+  "limits": {
+    "charged_values": 10000000,
+    "cpu_seconds": 60.0
+  },
+  "maximum_inverse_bracket_width": 4.440892098500626e-16,
+  "physical_input_domain": {
+    "Ta": -1.0664592301893958,
+    "Tb": -0.8686120141351636,
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105,
+    "qa": -0.5817589515953442,
+    "qb": -0.25023070056070007,
+    "qmin": -1.5511595087834475,
+    "xa": 0.44999999999999996,
+    "xb": 0.55
+  },
+  "schema": "nsc-atlas-prepared-history-v1",
+  "source_bindings": {
+    "scripts/check_nsc_atlas_prepared_history.py": "f9555c6dd4cce0422a49ec6d0bc1fc51b6925f0e7c282f42c373200533b546be",
+    "src/recursive_horizons/nsc_atlas_background_profile.py": "b143425a13458fce5b2663bfd94775b5575dbe7681c998a9e3ad850812f372fa",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "3631c15a6cdcefb28977c3b3fc1001c928038fc580862096050aacf15c394fec",
+    "src/recursive_horizons/nsc_atlas_cap_field.py": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31",
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e0c26ea5417fb46b1e971e9b4ac5c0122aae400104551516488d321e9272a579",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py": "059fd502b8aa596b68fddcfe7212b41c62d854cfff45bf8f4b0c341db37030cf",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0"
+  },
+  "source_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+  "status": "completed_interpolation_comparison",
+  "transfer": {
+    "charged_evaluations": 401125,
+    "curvature_method": "CapLeadingField.profile(second=True): differentiated continuum integral and arrival chain",
+    "diagnostics": {
+      "knot_jet_discrepancies": [
+        3.642919299551295e-17,
+        6.702194355057145e-12,
+        3.956080945499707e-06
+      ],
+      "maximum_inverse_bracket_width": 4.440892098500626e-16,
+      "original_field_cuts": 138,
+      "original_geometry_knots": 257,
+      "quiet_jet_discrepancies": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quiet_tolerances": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "retained_knots": 393
+    },
+    "numerical_error_enclosure": false,
+    "onset": {
+      "arrival_rate": 1.0289023850141723,
+      "index": 87,
+      "label": -0.5049233867280902,
+      "quartic_coefficient": 429711.59455406887,
+      "source_V": -2.489774421064211,
+      "source_V_roundoff": 1.1102230246251565e-16
+    },
+    "scope": "prepared leading field retained as a computational C2 history with its analytic quartic onset; no finite-amplitude evolution or interpolation error enclosure"
+  }
+}

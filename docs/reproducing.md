@@ -53,6 +53,16 @@ Old result manifests remain intact, current validation code runs, and newly
 created records bind current code. Unknown source changes and all data-hash
 changes still fail. Verified original Git bytes are cached within a process;
 current files, registry entries and checker hashes are checked on every call.
+Named `implementation-successor` entries also preserve the original producer
+bytes when a calculation evolves. This classification does not assert
+equivalent numerical results: the cap-field quiet branch and new history
+adapter remain separate from the older evidence. The wall, overlap, cap and
+scalar-boundary checkers authenticate saved inventories without rerunning
+their producers; creation still binds current bytes. The October 17 update
+passes 62 source-authentication and recorder tests. Check results report
+`reviewed-successors` when stored producer bytes differ from current files;
+`current` is reserved for exact current bindings. The degree-seven
+characteristic profile also has an explicit implementation-successor entry.
 The shared synthetic-test budgets count only CPU time
 inside their tests, retaining cumulative point and active-CPU limits.
 
@@ -410,8 +420,24 @@ It refuses to overwrite a result, shares one 10-million-value / 60-second
 budget, and saves only summaries and hashes, including a stopped outcome.
 The retained v1 source completes but fails the exact quiet-jet check; it
 must not be overwritten. After the causal quiet-branch correction, the
-next admitted execution uses the same command with output
-`results/summaries/nsc-atlas-prepared-history-v2.json`.
+same command with output
+`results/summaries/nsc-atlas-prepared-history-v2.json` completed 392
+comparisons on 393 retained knots, with 1,362,327 values / 2.3125 CPU
+seconds. The [receipt](../results/summaries/nsc-atlas-prepared-history-v2.json)
+binds the source commit, inputs, comparisons and finite interpretation.
+Both outputs are immutable; use a new output name for a justified replay.
+This comparison is not a continuum error enclosure or a cap trajectory.
+
+The retained background in the common stage has separate finite controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_fixed_background_stage.py tests/test_nsc_atlas_fixed_cap_stage.py tests/test_nsc_atlas_fixed_cap_time.py -q -s
+```
+
+Ten controls pass across twelve development executions with 2,102,999
+values / 3.28125 active CPU seconds. They compare the same total polynomial,
+its constrained mass direction and one common manufactured step at the
+evolving cap clock. They do not integrate the prepared physical source.
 
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.

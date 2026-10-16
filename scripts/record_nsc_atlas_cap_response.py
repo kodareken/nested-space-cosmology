@@ -373,12 +373,17 @@ def create(directory, kind):
 
 
 def check(directory, *, source_context="current"):
+    from validation_source_successors import verify_saved_bindings
     directory = Path(directory)
     manifest = json.loads((directory/"manifest.json").read_bytes())
     if (manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings(source_context)
+            or (source_context != "current" and manifest.get("source_bindings") != source_bindings(source_context))
             or manifest.get("comparison") not in VARIATIONS):
         raise ValueError("cap comparison source binding or schema mismatch")
+    if source_context == "current":
+        verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
+        if manifest["source_bindings"] != source_bindings():
+            source_context="reviewed-successors"
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "response.json"}
             or set(manifest.get("outputs", {})) != {"response.json"}):
         raise ValueError("cap comparison inventory mismatch")

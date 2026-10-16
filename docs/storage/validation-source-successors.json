@@ -1,15 +1,15 @@
 {
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
-    "scripts/validation_source_successors.py": "e656ed75556510a84a572d7320c18da8a2232a7d23d1ea918d75ea95f5e46bb4",
+    "scripts/validation_source_successors.py": "49a44c3bb6de75db1ec834ebdcc0d41261fd0786570c9e719078fa3acd74475c",
     "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
     "tests/test_nsc_atlas_validation.py": "9503c6082794cd564ae5ae9b2fcfb87bd115532b2c64017f463deac7e2c056d1",
-    "tests/test_validation_source_successors.py": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
+    "tests/test_validation_source_successors.py": "647da10f51d600219346d58e9c7cd591ba2467a50560d59680bb300ac215caf7"
   },
   "schema": "nsc-validation-source-successors-v1",
-  "scope": "Validation-only current successors. Original Git bytes are authenticated but never executed; result data and scientific owners have no compatibility fallback.",
+  "scope": "Reviewed current source successors. Original Git bytes are authenticated but never executed; implementation successors preserve historical provenance without asserting numerical equivalence. Result data, scientific documents and unregistered changes have no compatibility fallback.",
   "successors": {
     "scripts/assess_nsc_atlas_scalar_lift.py": {
       "classification": "validation-only",
@@ -77,6 +77,12 @@
       "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
       "successor_sha256": "1667bf1aa8a8a8fdbb8d4860369ccdb1080d39afe366cf96287c3e1f9c7d03e1"
     },
+    "scripts/record_nsc_atlas_cap_response.py": {
+      "classification": "validation-only",
+      "original_sha256": "652f1c1bd3b14851a688654d7f5cf4d46418adfe99d4d828456e9c29ed1e341f",
+      "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
+      "successor_sha256": "f68ba93c371d54b6e7b95b1a85a5ec0b6c164af8f0113bcb64d28ed964808c3e"
+    },
     "scripts/record_nsc_atlas_central_ray.py": {
       "classification": "validation-only",
       "original_sha256": "f1d1d6b014597c80ef8d30f474642d2ffe4dc8466243e07dee182d73f069ed14",
@@ -137,6 +143,12 @@
       "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
       "successor_sha256": "943628b7fefeff983c9081b920107d44e714e0a1fa0212e5820786f834109dcc"
     },
+    "scripts/record_nsc_atlas_scalar_boundary.py": {
+      "classification": "validation-only",
+      "original_sha256": "0f390d4004da1f6894cc169e7203e81ef9fd926baeaaf2c1f89ee17179de8085",
+      "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
+      "successor_sha256": "1987d3ab9d4515c26f55ddec6b503ec836f19bcffaaa355e4d4f7b3f1fa72410"
+    },
     "scripts/record_nsc_atlas_scalar_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "2d891435da48c8711fcb22fc03096842fc36dcbe585bebe1d5bcbff0c9a21cff",
@@ -167,6 +179,36 @@
       "reason": "Validate rounded profile-knot brackets from their own coordinates and forward operand-conditioned departure allowances; generating equations, retained data and original pins are unchanged.",
       "successor_sha256": "83947ed2cb7ce74a22f9aabd4f9191b43f3cc1086a877c345394581ddab1393d"
     },
+    "scripts/record_nsc_atlas_wall_evolution.py": {
+      "classification": "validation-only",
+      "original_sha256": "986a12a7c375c21c3eeb19b95f5bccbf24ffb272e08850e566d2376642b363b9",
+      "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
+      "successor_sha256": "0abfd78304e76119e7ecba408b7bd6e7e6094a8e15ffac69da2dbab0db1e6927"
+    },
+    "scripts/record_nsc_atlas_wall_overlap.py": {
+      "classification": "validation-only",
+      "original_sha256": "c01284137599154a6380161a74a332e095ddb9369239e28b03fc07b30e6b5c00",
+      "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
+      "successor_sha256": "2d4bbb9b69f3fe9fd5b56d446c66062809e79f0d618e721b7639a0f60f3526ec"
+    },
+    "src/recursive_horizons/nsc_atlas_background_profile.py": {
+      "classification": "implementation-successor",
+      "original_sha256": "576567d0c7a31b33982edb922ccc7aee772355c50aca0559a70620efdb0b753a",
+      "reason": "Adds native-knot prepared history transfer and analytic onset; original profile evidence remains tied to the original implementation.",
+      "successor_sha256": "b143425a13458fce5b2663bfd94775b5575dbe7681c998a9e3ad850812f372fa"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_field.py": {
+      "classification": "implementation-successor",
+      "original_sha256": "736067b633f6697e3488e57805aeae3cdbe0d3b8d4bab74d885f9f60aef72d2c",
+      "reason": "Exact causal quiet branch now extends through the compact source front; old evidence authenticates its original producer and does not establish results for the changed field interface.",
+      "successor_sha256": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31"
+    },
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py": {
+      "classification": "implementation-successor",
+      "original_sha256": "381ee76f840b8392d7b96634fe7caab38bf3ee36e2fd48a87232c964d1c864a5",
+      "reason": "Adds the one-sided degree-seven source onset and degree-aware moments; historical quintic evidence authenticates its original producer, not results for the extended representation.",
+      "successor_sha256": "059fd502b8aa596b68fddcfe7212b41c62d854cfff45bf8f4b0c341db37030cf"
+    },
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py": {
       "classification": "validation-only",
       "original_sha256": "c067ea9a8a5b3a78263ab5671f9a6ad746863d73fc4dfc7da6425166bc15b9dd",
@@ -178,6 +220,12 @@
       "original_sha256": "5ea8752860c3f7a657da2dddd458af13df6a3f53f6d9b6058ad6468e3d524cf5",
       "reason": "Separate bounded rebuilt-wall coordinate roundoff from strict internal saved-grid consistency; retained arrays and generation equations are unchanged.",
       "successor_sha256": "7e881a637d9a7fdcb3600b96fb465887a9315acf8449ace9170d2da7c22e2a8a"
+    },
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": {
+      "classification": "implementation-successor",
+      "original_sha256": "ca14e7b0d15a586002642b27bab2e786b70d9be1a3ea59fb6d781f549844b981",
+      "reason": "Exposes the existing charged-value count as evaluations for shared cap budgets; historical preparation evidence retains its original producer bytes.",
+      "successor_sha256": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0"
     },
     "src/recursive_horizons/nsc_atlas_refined_cache.py": {
       "classification": "validation-only",
@@ -220,6 +268,12 @@
       "original_sha256": "c2fe8bea7c9198a5aa03cf710303b203e0f62904b267449641ce87a9e9ab3e32",
       "reason": "Assert precise authenticated source/data drift rejection while retaining no-replay guards.",
       "successor_sha256": "4f33590540faf7836afc9704db516226ae9c8c6a031dbeb77ddc9d7f26b663c6"
+    },
+    "tests/test_nsc_atlas_cap_field.py": {
+      "classification": "test-only",
+      "original_sha256": "f59ff1dfa7af52e16eb2ad29510970c153390c022cdb61deef0cd02272bd3620",
+      "reason": "Adds causal quiet-front control; retains historical test source authentication separately from the new control.",
+      "successor_sha256": "2edef8994814304d37839b1f9ddb1f797412b9b795f9796945c6c8ffd5e0a97c"
     },
     "tests/test_nsc_atlas_characteristic_trace.py": {
       "classification": "test-only",

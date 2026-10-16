@@ -171,19 +171,22 @@ def create(directory):
 
 
 def check(directory):
+    from validation_source_successors import verify_saved_bindings
     directory = Path(directory)
     if ({path.name for path in directory.iterdir()} != {"manifest.json", "response.json"}
             or any((directory/name).is_symlink() for name in ("manifest.json", "response.json"))):
         raise ValueError("overlap output inventory mismatch")
     manifest = json.loads((directory/"manifest.json").read_bytes())
-    if (manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()):
+    if manifest.get("schema") != SCHEMA+"-manifest":
         raise ValueError("overlap source binding or schema mismatch")
+    verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
     raw = (directory/"response.json").read_bytes()
     if manifest.get("outputs") != {"response.json": {"sha256": digest(raw), "bytes": len(raw)}}:
         raise ValueError("overlap output mismatch")
     validate_record(json.loads(raw))
-    return {"checked": str(directory), "field_solves": 0, "metric_solves": 0, "wall_solves": 0}
+    context="current" if manifest["source_bindings"] == source_bindings() else "reviewed-successors"
+    return {"checked": str(directory), "field_solves": 0, "metric_solves": 0, "wall_solves": 0,
+            "source_context": context}
 
 
 def main():

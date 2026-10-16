@@ -6318,9 +6318,50 @@ source mask from zeta `-1.0000000000000016` to `-0.9999999999999956`.
 The input front's `1.11022e-16` coordinate roundoff remains recorded; the
 numerical arrival is not claimed to be the exact continuum clock.
 
-Three targeted fake-prepared controls pass. A second fixed-input physical
-transfer is prepared with zero quiet tolerances and a separate output;
-the failed first receipt is retained.
+Three targeted fake-prepared controls pass. The [second fixed-input transfer](../results/summaries/nsc-atlas-prepared-history-v2.json)
+completes with zero quiet tolerances and 393 retained knots. Its 392
+native-interval midpoint comparisons give maximum absolute discrepancies
+`5.96343e-12`, `1.82137e-10`, `9.60804e-5` for F,F',F'', respectively.
+Their global peak-relative values are `5.99031e-12`, `7.69983e-12`,
+`8.03301e-8`. The onset coefficient is `429711.59455406887`, fixed by
+the source and arrival derivative, and the largest F'' discrepancy lies
+in its first active interval. Knot jet discrepancies are also retained.
+
+The transfer and comparison use 1,362,327 values / 2.3125 CPU seconds.
+Both physical attempts total 2,414,839 values / 4.34375 CPU seconds, with
+no time steps, grid changes or saved full histories. These are finite
+comparisons against the same prepared numerical field, not continuum
+error bounds. Independent Grok review confirms the causal quiet argument;
+an evolved solver's own quiet residual remains a separate diagnostic.
+The common-stage connection is implemented below.
+
+### Retained history at the evolving cap clock
+
+The existing [common stage](../src/recursive_horizons/nsc_atlas_fixed_cap_stage.py)
+accepts the retained background alongside the fixed cap departures. Each
+stage evaluates it at `T=gauge.T+state.wall.T`. The existing hybrid supplies
+the physical T_x; the background time derivative is subtracted once from
+the departure rates. The constrained mass rate remains
+
+\[
+ N_x=T_xN_T+N_c\cdot c_x+N_d\cdot d_x+R_x\rho(R).
+\]
+
+The total scalar trace enters the exterior callback before its outgoing
+jets and wall rates are calculated. No second background is added at the
+wall, and the explicit-time affine remainder remains visible. The existing
+fixed-coefficient SSPRK3 adapter evaluates the same background at the
+physical clock of each of its predictor, midpoint and accepted states.
+
+Two [manufactured controls](../tests/test_nsc_atlas_fixed_background_stage.py)
+check an independently represented total cubic history, a direct mass
+directional difference, and one common time step with nonzero clock departure.
+The mass-direction values are `2.2976403795706864e-5` (difference) and
+`2.2976377177617093e-5` (equations); omitting the `5.14562e-6` clock term
+would fail. Both new and eight existing controls pass with the
+[development accounting and test corrections](prior-art-and-open-claim.md#retained-history-in-the-common-stage-17-october-2026)
+recorded. This connects the representation and evolution interface; a
+physical prepared-source departure trajectory and its error control remain.
 
 ### Central clock in general null labels
 

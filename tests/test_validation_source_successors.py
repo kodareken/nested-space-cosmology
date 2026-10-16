@@ -176,6 +176,37 @@ def test_only_explicit_package_path_is_eligible():
     assert tool._source_path("src/recursive_horizons/nsc_atlas_refined_cache.py")
     assert not tool._source_path("src/recursive_horizons/nsc_atlas_nonlinear_source.py")
     assert not tool._source_path("scripts/data.json")
+    for name in ("nsc_atlas_cap_field", "nsc_atlas_background_profile", "nsc_atlas_prepared_response",
+                 "nsc_atlas_characteristic_background"):
+        assert tool._source_path("src/recursive_horizons/"+name+".py")
+
+
+def test_implementation_successor_keeps_original_calculation_bytes(history):
+    root,_,old,new,registry=history
+    name="src/recursive_horizons/nsc_atlas_cap_field.py"
+    write(root,name,old)
+    subprocess.run(["git","-C",str(root),"add",name],check=True,capture_output=True)
+    subprocess.run(["git","-C",str(root),"-c","user.name=Control",
+                    "-c","user.email=control@example.invalid","commit","--amend","--no-edit","-q"],
+                   check=True,capture_output=True)
+    commit=subprocess.check_output(["git","-C",str(root),"rev-parse","HEAD"]).decode().strip()
+    # The test fixture's origin now contains this original package source.
+    with pytest.MonkeyPatch.context() as patch:
+        patch.setattr(tool,"ORIGIN_COMMIT",commit)
+        registry['origin_commit']=commit
+        registry['successors'][name]=dict(original_sha256=sha(old),successor_sha256=sha(new),
+            classification='implementation-successor',reason='Changed calculation, original evidence remains at its source.')
+        write(root,name,new);save_registry(root,registry)
+        assert tool.verify_saved_source(name,sha(old),root)==old
+        assert tool.verify_saved_source(name,sha(new),root)==new
+        write(root,name,b'unreviewed further implementation')
+        with pytest.raises(ValueError,match='unregistered'):
+            tool.verify_saved_source(name,sha(old),root)
+        write(root,name,new)
+        registry['successors']['scripts/validator.py']['classification']='implementation-successor'
+        save_registry(root,registry)
+        with pytest.raises(ValueError,match='entry'):
+            tool.verify_saved_source(name,sha(old),root)
 
 
 def test_active_cap_replay_policy_keeps_counts_structure_and_scientific_changes_strict():

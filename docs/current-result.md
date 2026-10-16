@@ -39,8 +39,8 @@ the affine remainder. Four new controls and six existing controls pass in
 The independent incoming quartic mass formula agrees; its common-wall
 scalar-flux discrepancy is `1.35278e-13` and actual temporal mass discrepancy
 `-8.81777e-18`. This is a manufactured zero-coupling event. Connecting the
-prepared physical history and evolving its finite-coupling departures
-remain next. The failed runtime attempt is retained; no scan, source solve
+prepared physical history is now checked below; evolving its finite-coupling
+departures remains next. The failed runtime attempt is retained; no scan
 or trajectory retry has been run.
 
 An [exact interpolation check](nsc-atlas-finite-amplitude.md#preserving-the-source-onset-when-retaining-its-history)
@@ -59,7 +59,20 @@ source completes, then transfer stops at quiet jets of order `1e-40`
 [receipt](../results/summaries/nsc-atlas-prepared-history-v1.json) has no
 interpolation comparison. The field interface now uses the mathematically
 known zero solution through the source front; three targeted controls pass.
-The next physical attempt keeps the source and zero tolerances fixed.
+The [second transfer](../results/summaries/nsc-atlas-prepared-history-v2.json)
+completes with the same source and zero tolerances: 393 retained knots and
+392 interval-midpoint comparisons, using 1,362,327 values / 2.3125 CPU
+seconds. Maximum absolute F,F',F'' differences are respectively
+`5.96343e-12`, `1.82137e-10`, and `9.60804e-5`; their global peak-relative
+values are `5.99031e-12`, `7.69983e-12`, and `8.03301e-8`. This checks one
+numerical history transfer, without a continuum error enclosure or time
+evolution. Both physical attempts total 2,414,839 values / 4.34375 CPU seconds.
+The [common-stage connection](nsc-atlas-finite-amplitude.md#retained-history-at-the-evolving-cap-clock)
+now evaluates this representation at the evolving cap clock. Two new and
+eight existing controls pass, including a mass-direction difference of
+`2.29764038e-5` versus the equation's `2.29763772e-5`, and one manufactured
+common time step. These are interface checks; the prepared physical
+departure trajectory is still outstanding.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

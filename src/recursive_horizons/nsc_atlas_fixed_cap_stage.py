@@ -37,7 +37,7 @@ def fixed_state(value,exterior_cells,basis):
 
 
 def quiet_fixed_state(basis,*,exterior_cells):
-    """Zero total fields and vacuum departures; caller supplies quiet inputs."""
+    """Zero coefficients and vacuum departures; any background is separate."""
     if not isinstance(basis,FixedCapBasis): raise ValueError('require a fixed cap basis')
     if type(exterior_cells) is not int or not 2<=exterior_cells<=512:
         raise ValueError('require 2..512 exterior cells')
@@ -95,8 +95,14 @@ def exterior_departure_stage(departure,wall,*,x,eta,source,W,W_x,alpha,tube,budg
 
 def coupled_fixed_stage(state,*,basis,x,eta,source,gauge,alpha,tube,budget,
                          departure_gradient=quadratic_departure_gradient,
-                         exterior_quadrature_order=2,rtol=2e-13,atol=2e-15):
-    """One actual exterior/cap/hybrid state with separately measured defects."""
+                         exterior_quadrature_order=2,rtol=2e-13,atol=2e-15,
+                         background=None):
+    """One actual exterior/cap/hybrid state with separately measured defects.
+
+    With a retained history, cap coefficients describe departures. Evaluate
+    that history at this state's physical cap clock, including its evolved
+    departure; the coupled wall supplies the clock rate and total trace.
+    """
     _shared_budget(budget);before=budget.evaluations
     eta=_grid(eta,'eta',2,512);state=fixed_state(state,len(eta)-1,basis)
     x=_scalar(x,'x');alpha=_scalar(alpha,'alpha',nonnegative=True)
@@ -132,7 +138,8 @@ def coupled_fixed_stage(state,*,basis,x,eta,source,gauge,alpha,tube,budget,
         return result['outgoing']
     connection=fixed_cap_hybrid_reference(basis,state['cap']['chi'],state['cap']['canonical_density'],Z,
         alpha=alpha,exterior_wall=outgoing,C_wall=math.exp(wall['L']),eta_plus=boost,eta_plus_x=boost_x,
-        budget=budget,rtol=rtol,atol=atol)
+        budget=budget,rtol=rtol,atol=atol,background=background,
+        background_time=wall['T'] if background is not None else None)
     hybrid_rates=connection['wall_rates'];actual_rates=dict(hybrid_rates,c=connection['cap_c_x'])
     q,p=exterior['longitudinal'],exterior['first_jets']
     hybrid_defect={k:hybrid_rates[k]-q[k][-1]-Wx*p[k][-1] for k in FIELDS}

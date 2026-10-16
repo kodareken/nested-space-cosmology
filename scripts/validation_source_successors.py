@@ -1,9 +1,11 @@
-"""Authenticate explicitly reviewed validation-only successors of saved sources.
+"""Authenticate explicitly reviewed successors of saved implementation sources.
 
 This module never executes historical code. A registered successor authenticates
 the original bytes from the pinned Git commit and the exact current bytes. Data,
-scientific owners, unregistered changes and changed inventories remain strict.
+scientific documents, unregistered changes and changed inventories remain strict.
 Creation-time source inventories must continue hashing the current files.
+Implementation successors preserve provenance; they do not assert numerical
+equivalence or transfer an old result to a changed calculation.
 """
 from __future__ import annotations
 
@@ -27,8 +29,12 @@ REVIEWED_PACKAGE_PATHS = frozenset({
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py",
     "src/recursive_horizons/nsc_atlas_refined_cache.py",
     "src/recursive_horizons/nsc_atlas_forcing_cache.py",
+    "src/recursive_horizons/nsc_atlas_cap_field.py",
+    "src/recursive_horizons/nsc_atlas_background_profile.py",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py",
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py",
 })
-CLASSIFICATIONS = frozenset({"validation-only", "test-only"})
+CLASSIFICATIONS = frozenset({"validation-only", "test-only", "implementation-successor"})
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 
 
@@ -81,7 +87,8 @@ def _registry(root):
                 or row["classification"] not in CLASSIFICATIONS
                 or not isinstance(row["reason"], str) or not row["reason"].strip()
                 or any(not isinstance(row[k], str) or not _SHA256.fullmatch(row[k]) for k in ("original_sha256", "successor_sha256"))
-                or (row["classification"] == "test-only" and not name.startswith("tests/"))):
+                or (row["classification"] == "test-only" and not name.startswith("tests/"))
+                or (row["classification"] == "implementation-successor" and name not in REVIEWED_PACKAGE_PATHS)):
             raise ValueError("invalid validation-successor entry: " + name)
     return document["successors"]
 

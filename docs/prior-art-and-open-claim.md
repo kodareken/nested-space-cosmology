@@ -1865,6 +1865,64 @@ solved. The new physical attempt keeps **zero quiet tolerances**, the same
 admitted only after this equation and arithmetic diagnosis; write a new
 `v2` receipt and preserve `v1`. No source shape, amplitude or grid changes.
 
+**Second outcome:** the [v2 receipt](../results/summaries/nsc-atlas-prepared-history-v2.json)
+completes the transfer and all 392 native-interval midpoint comparisons.
+It retains 393 knots, including onset index 87 at q=`-0.5049233867280902`,
+with A=`429711.59455406887` and arrival derivative `1.0289023850141723`.
+All three quiet discrepancies and tolerances are zero. Maximum absolute
+F,F',F'' comparison errors are `5.96343e-12`, `1.82137e-10`, `9.60804e-5`;
+global peak-relative errors are `5.99031e-12`, `7.69983e-12`, `8.03301e-8`.
+The largest F'' discrepancy occurs at q=`-0.5040732796583627`, in the
+first active interval. The existing inverse bracket is at most `4.44089e-16`.
+
+The second run uses **1,362,327 values / 2.3125 CPU seconds**; the two
+physical attempts total **2,414,839 values / 4.34375 CPU seconds**. There
+are no cap time steps or raw histories. Both receipts' eleven producer
+bindings were checked against their frozen Git commits without a replay;
+array hashes require regeneration to verify their full numerical contents.
+Independent Grok review confirms the quiet-branch argument. This known
+branch does not measure possible leakage in a later numerical evolution;
+such solver residuals must still be inspected separately. The next
+connection uses the retained history with the actual evolving cap clock
+and fixed-space departures, keeping its explicit-time mass derivative.
+
+### Retained history in the common stage, 17 October 2026
+
+Pass the retained background through the existing common stage and hybrid;
+its time is the physical wall T, including the state's clock departure.
+The hybrid still determines T_x, and the cap mass rate keeps T_x N_T.
+Check a cubic history against the identical total polynomial represented
+in the fixed basis, including nonzero clock departure. Independently
+difference the constrained mass along the returned state/radius/clock
+direction. Then take one manufactured common SSPRK3 step and evaluate
+its continuous midpoint residual using the same history at every stage.
+
+The two new controls share **8,000,000 values / 60 active CPU seconds**;
+the existing stage and time controls retain their own unchanged limits.
+No prepared-source solve, scan or physical trajectory is admitted here.
+Stop and diagnose the first mismatch. A frozen reference clock, omitted
+N_T, or double-added background would appear in the total-polynomial and
+directional-derivative comparisons. Success admits the next physical
+departure calculation, not a finite-interval error or stability claim.
+
+**Outcome:** both new controls and eight existing stage/time controls
+pass, in twelve development executions using **2,102,999 charged values /
+3.28125 active CPU seconds**. The first comparison initially supplied
+physical-z polynomial coefficients to a local-coordinate transfer; the
+test now includes the exact cell scale. A subsequent raw extension
+coefficient gap of `8.54453e-9` motivated comparison of the actual cap
+field L2 norm and wall trace, each below the original `2e-9` allowance.
+Neither the production equations nor the radial tolerances changed.
+
+The independent mass-direction difference is `2.2976403795706864e-5`,
+against the returned `2.2976377177617093e-5`, a gap of `2.66181e-11`.
+The explicit clock contribution is `5.145624455085506e-6`. The single
+manufactured step completes; sampled midpoint residual maxima for exterior,
+wall and cap groups are `1.72367e-10`, `1.77314e-11`, `4.62579e-7`, in their
+respective component units. These are diagnostics, not uniform errors.
+Grok independently confirms the clock chain rule and single N_T term;
+its review did not rederive the hybrid geometry or inspect the test bodies.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

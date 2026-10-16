@@ -15,6 +15,7 @@ import platform
 import time
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-wall-evolution-comparison-v1"
@@ -259,9 +260,9 @@ def check(directory):
     directory = Path(directory)
     manifest = json.loads((directory/"manifest.json").read_bytes())
     if (manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()
             or manifest.get("comparison") not in VARIATIONS):
         raise ValueError("wall comparison source binding or schema mismatch")
+    verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "response.json"}
             or set(manifest.get("outputs", {})) != {"response.json"}):
         raise ValueError("wall comparison inventory mismatch")
@@ -270,7 +271,9 @@ def check(directory):
     if path.is_symlink() or manifest["outputs"]["response.json"] != {"sha256": digest(raw), "bytes": len(raw)}:
         raise ValueError("wall comparison output mismatch")
     validate_record(json.loads(raw), manifest["comparison"])
-    return {"checked": str(directory), "comparison": manifest["comparison"], "wall_solves": 0}
+    context="current" if manifest["source_bindings"] == source_bindings() else "reviewed-successors"
+    return {"checked": str(directory), "comparison": manifest["comparison"], "wall_solves": 0,
+            "source_context": context}
 
 
 def main():

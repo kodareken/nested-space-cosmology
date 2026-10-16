@@ -326,13 +326,14 @@ def create(directory, kind):
 
 
 def check(directory):
+    from validation_source_successors import verify_saved_bindings
     directory = Path(directory)
     manifest_path = directory/"manifest.json"
     manifest = json.loads(manifest_path.read_bytes())
     if (manifest_path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()
             or manifest.get("comparison") not in VARIATIONS):
         raise ValueError("scalar boundary source binding or schema mismatch")
+    verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "boundary.json"}
             or set(manifest.get("outputs", {})) != {"boundary.json"}):
         raise ValueError("scalar boundary inventory mismatch")
@@ -341,8 +342,9 @@ def check(directory):
     if path.is_symlink() or manifest["outputs"]["boundary.json"] != {"sha256": digest(raw), "bytes": len(raw)}:
         raise ValueError("scalar boundary output mismatch")
     validate_record(json.loads(raw), manifest["comparison"])
+    context="current" if manifest["source_bindings"] == source_bindings() else "reviewed-successors"
     return {"checked": str(directory), "comparison": manifest["comparison"],
-            "source_context": "current", "physical_solves": 0}
+            "source_context": context, "physical_solves": 0}
 
 
 def main():

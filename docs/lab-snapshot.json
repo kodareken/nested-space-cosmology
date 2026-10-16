@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+  "current_receipt_commit_parent": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 224487,
-      "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
-      "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+      "bytes": 224752,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "d19895677512f73b0d65c9e44bbff073ab3ce8d4b3c95971e0cad8f0a82207a5"
+      "sha256": "edfceece25c4d506e74cdbcb7e630a90e2f5779977a749f73e6e70c9f8774c21"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 317143,
-      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
-      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "bytes": 318104,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a6f8b4b98d74a4633325d28a167efb4b4136ce7db66f490a32cb5cfcccd20958"
+      "sha256": "9326fbc3396251b85d99ae46a4a14ba155d6fe9bb164f070c2246a210391857f"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 304156,
-      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
-      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "bytes": 306623,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b5feac937e3b56fdda99f00fd1838af45fb43e29dc1656c5b8c342c3b46ba304"
+      "sha256": "6e42607f83a7bfd90f12c8224627db4fc205ae313a61c48a339bf947ad1cb007"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 327409,
-      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
-      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "bytes": 331094,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "28e3f3183184b6b3d5e521a10eeefc444e4a33a6db5b7799ab354fe5eb171d42"
+      "sha256": "cab83d5b0e152749d27dcdf8e8008b6d1428d5e699a45e2b4ffabaa6e6bb9114"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 106750,
-      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
-      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "bytes": 108383,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "90fb1d603a33c56950a1214f6a3414b728f13d6e5e1c73cc58b67f033cb7d0fa"
+      "sha256": "c9da8be478fc60ad166b97a78c96f52be20dbff1ecda7dcf106c474c5edb65ab"
     },
     {
       "bytes": 18356,
@@ -11458,6 +11458,14 @@
       "original_sha256": "eb2e73cb22e3da22a128d5a0f93e1b4b7756c02f79760e78007b0c7ae92f356d",
       "path": "docs/storage/necessity-audit.json",
       "sha256": "6ecc2724e58650682f26f0aa00d4ce5833569ec0559543f5bd87942cc0af6ce8"
+    },
+    {
+      "bytes": 28942,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "docs/storage/validation-source-successors.json",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "61254c240725bc66722e4ebe42357cd8be9451d4282f189532070be8cbbb5f08"
     },
     {
       "bytes": 5774,
@@ -29583,6 +29591,14 @@
       "sha256": "3467a8d8d5017694278c2a7121f971c7d52caf2cffeb68d201300f403a0be622"
     },
     {
+      "bytes": 4601,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "results/summaries/nsc-atlas-prepared-history-v2.json",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "b0a25098c9c4f6900b40ab50895506ad294a1caa2ca98a479abad1ec1348ac3e"
+    },
+    {
       "bytes": 4429,
       "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
       "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
@@ -32124,10 +32140,42 @@
       "sha256": "3ba886fe408e5758c3b66beff06e83fb4d67cc07cf377a3f97fcf732d88aefaa"
     },
     {
+      "bytes": 25316,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "scripts/record_nsc_atlas_cap_response.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "f68ba93c371d54b6e7b95b1a85a5ec0b6c164af8f0113bcb64d28ed964808c3e"
+    },
+    {
+      "bytes": 21063,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "scripts/record_nsc_atlas_scalar_boundary.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "1987d3ab9d4515c26f55ddec6b503ec836f19bcffaaa355e4d4f7b3f1fa72410"
+    },
+    {
+      "bytes": 15824,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "scripts/record_nsc_atlas_wall_evolution.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "0abfd78304e76119e7ecba408b7bd6e7e6094a8e15ffac69da2dbab0db1e6927"
+    },
+    {
       "bytes": 21679,
       "path": "scripts/record_nsc_atlas_wall_mass_closure.py",
       "retention_reason": "Current successor implementation, proof record or verification for the authorized cleanup",
       "sha256": "51ea235e2fbba21eb36a35f504b0890e52f8372e392ca028a6344ca1b05cefa5"
+    },
+    {
+      "bytes": 10654,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "scripts/record_nsc_atlas_wall_overlap.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "2d4bbb9b69f3fe9fd5b56d446c66062809e79f0d618e721b7639a0f60f3526ec"
     },
     {
       "bytes": 31254,
@@ -32212,6 +32260,14 @@
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test resolves a missing dependency after approved deletion",
       "sha256": "7c0d3e984a60a829ed0deb59976fb7c1afcb8e2ff308c7d0be62a2f86f26705f"
+    },
+    {
+      "bytes": 6842,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "scripts/validation_source_successors.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "49a44c3bb6de75db1ec834ebdcc0d41261fd0786570c9e719078fa3acd74475c"
     },
     {
       "bytes": 2185,
@@ -32571,12 +32627,12 @@
       "sha256": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d"
     },
     {
-      "bytes": 9739,
-      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
-      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "bytes": 10102,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
       "path": "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py",
       "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
-      "sha256": "8af4033a8d5526386d051c1a2d2047f2fb028d5ba149aeb25a62bf16cd06af4a"
+      "sha256": "a8d525386d74d5f19cf115f0f42b52eafd0f82f549f9448d9bbdd04bdf39732c"
     },
     {
       "bytes": 5782,
@@ -36156,6 +36212,14 @@
       "sha256": "60086386ea1f1468758421f97fb98435e6cbec17574fd0928b7c839b3034901c"
     },
     {
+      "bytes": 6034,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "tests/test_nsc_atlas_fixed_background_stage.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "b14cde7e44cdcee8dbe7d6dcff6d7d8affafc67d61b662f00152ac3049908aff"
+    },
+    {
       "bytes": 6484,
       "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
       "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
@@ -39555,6 +39619,14 @@
       "original_sha256": "16f70ee71503a6561a045e1e16548f832ce9a632a00e2223ff1c1326f09c0a48",
       "path": "tests/test_provenance.py",
       "sha256": "7303f32b784ac232d273a430aad59520f35b0d39ed3ff356d621c81ac7891854"
+    },
+    {
+      "bytes": 10746,
+      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
+      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "path": "tests/test_validation_source_successors.py",
+      "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
+      "sha256": "647da10f51d600219346d58e9c7cd591ba2467a50560d59680bb300ac215caf7"
     }
   ],
   "navigation_changes": [
