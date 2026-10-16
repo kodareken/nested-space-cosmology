@@ -2,6 +2,26 @@
 
 ## Fixed-input spatial refinement, 16 October 2026
 
+**Outcome:** the [two new evolutions](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+complete on the first attempt with 60,087,926 total points and 256.8125
+CPU seconds, including 6,684,624 points for creation validation. One
+standalone check passes with 6,684,624 points and no trajectory replay.
+The paired wall-scalar spatial difference is `2.69431e-7`, or `0.774698%`
+of the finer response peak; geometry and clock differences are below
+`0.071471%` of their respective peaks. The incoming constraint maximum
+decreases from `5.54765e-4` to `3.53518e-4`; at identical diagnostic
+width it is `3.31042e-4` on the new solution. The source-subtracted
+outgoing maximum decreases from `7.78011e-3` to `4.93833e-3` (native)
+or `5.15143e-3` (equal width).
+
+This is an actual spatial improvement, not merely a changed diagnostic.
+Wall curvature still changes substantially with width and evolution:
+equal-width weighted wall differences reach `1.84444e-4` and
+`2.22042e-4` for the three- and five-point alternatives. The profile's
+quiet leakage and source-trace sampling sensitivity remain. No automatic
+third grid or junction-failure conclusion follows. The admission fixed
+before the calculation is retained below.
+
 The completed wall audit leaves a spatially unresolved curvature estimate.
 Another first-derivative balance on the same saved grid could avoid an
 explicit second derivative, but would still share its evolution error.
@@ -27,9 +47,9 @@ expected-array shape in the quartic test and the final 129-cut/64-versus-32
 orchestration control. The latter stubs repeated summaries and profile
 work while exercising actual restrictions, comparisons and wall curvature;
 it is not a physical evolution. Combined measured control work is
-964,614 points and 2.921875 CPU seconds. Intentional exhaustion controls
-remain distinct from physical work. New sources are frozen before the
-evolutions; existing results and their bound producers remain unchanged.
+964,614 points and 2.921875 CPU seconds, plus a deliberate 99-point
+exhaustion attempt. New sources were frozen before the evolutions;
+existing results and their bound producers remain unchanged.
 
 ## Incoming wall curvature and transported constraint, 16 October 2026
 

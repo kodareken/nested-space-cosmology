@@ -73,8 +73,11 @@ time difference to `1.68%` of its finer response peak. The
 separates inherited source residuals and localizes the larger incoming
 constraint to wall-origin stencils. The [wall-curvature calculation](docs/current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 finds that spatial-stencil sensitivity prevents a reliable wall-transport
-interpretation, selecting spatial and bulk-transport accuracy next.
-Spatial accuracy, profile support and a complete error
+interpretation. The [fixed-input 32/64-cell comparison](docs/current-result.md#fixed-input-spatial-refinement-16-october-2026)
+now finds a paired wall-scalar spatial difference of `0.77%` of its finer
+response peak and geometry/clock differences below `0.072%`. Constraint
+residuals decrease under actual spatial refinement; wall curvature remains
+sensitive. Spatial accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently

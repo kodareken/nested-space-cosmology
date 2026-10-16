@@ -8,22 +8,24 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
-The [fixed-input spatial comparison](prior-art-and-open-claim.md#fixed-input-spatial-refinement-16-october-2026)
-has a new [recorder](../scripts/record_nsc_atlas_spatial_refinement.py) and
+The [completed fixed-input spatial comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+uses the [recorder](../scripts/record_nsc_atlas_spatial_refinement.py) and
 [saved-state analyzer](../scripts/analyze_nsc_atlas_spatial_refinement.py).
 It adds zero and finite-amplitude 64-cell windows to the retained 32-cell
 comparison, holding the 512 SSPRK3 steps, 1,025 exact cache rows, source
-snapshot and computational profile fixed. The physical comparison has not
-yet run. Its focused controls and creation/check entry points are:
+snapshot and computational profile fixed. Run its focused controls or
+authenticate the [saved record](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json):
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_analyze_nsc_atlas_spatial_refinement.py tests/test_record_nsc_atlas_spatial_refinement.py -q
-python scripts/run_python.py scripts/record_nsc_atlas_spatial_refinement.py --output results/development/nsc-atlas-spatial-refinement-v1
 python scripts/run_python.py scripts/record_nsc_atlas_spatial_refinement.py --output results/development/nsc-atlas-spatial-refinement-v1 --check
 ```
 
-Creation requires a fresh directory and shares 450 process CPU seconds and
-80,000,000 points across authentication, both trajectories, saved diagnostics
+The original creation and validation use 60,087,926 points and 256.8125
+process CPU seconds. One independent standalone check passes with
+6,684,624 authentication points. The [manifest](../results/development/nsc-atlas-spatial-refinement-v1/manifest.json)
+binds 92 files. Creation requires a fresh directory and shares 450 process
+CPU seconds and 80,000,000 points across authentication, both trajectories, saved diagnostics
 and creation validation. A standalone check has 60 CPU seconds/8,000,000
 points; it reconstructs saved physical fields, final stages and diagnostics,
 without source integration, cache reconstruction or trajectory replay. The
@@ -32,7 +34,12 @@ Failures leave an ignored `.build` receipt and no completed canonical
 record. Comparisons sum adjacent total physical cap integrals and distinguish
 native from restricted derivative stencils, retaining the nonzero source
 constraint. Two spatial grids do not establish a convergence order or error
-enclosure.
+enclosure. The paired wall-scalar spatial difference is 0.774698% of the
+fine response peak, while the paired cap `Iq` difference is about 7% of
+the old 32-cell paired peak at common normalized cells. Wall curvature and
+quiet-profile support remain unresolved. A fresh numerical repeat uses the same producer with
+`--output` naming a fresh directory and without `--check`; the completed
+record is never overwritten.
 
 The [incoming wall-constraint audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 uses pinned histories, four one-sided spatial stencils and causal birth

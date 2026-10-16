@@ -2,6 +2,92 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed-input spatial refinement, 16 October 2026
+
+The [completed spatial comparison](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json)
+adds zero and finite-amplitude cases with **64 exterior and cap cells**, each
+using the same 512 SSPRK3 steps as the retained 32-cell pair. The action,
+amplitudes, 129-knot source snapshot, 65-knot computational profile and
+1,025 exact source/gauge cache rows remain fixed. The new cases retain 129
+cuts, with 1,024 steps and 3,074 coupled stages in total. No source solve,
+cache reconstruction or old trajectory is replayed.
+
+For the finite-minus-zero wall response, the maximum spatial differences
+over the common saved cuts are:
+
+| Wall quantity | 64-cell response peak | Absolute 32/64-cell difference |
+| --- | ---: | ---: |
+| Radius `r` | `7.67048e-4` | `2.49128e-7` |
+| Log lapse `L` | `6.48799e-3` | `2.62950e-6` |
+| Cap coordinate clock `T` | `1.28019e-3` | `9.14961e-7` |
+| Wall proper clock `s` | `1.19789e-4` | `4.67205e-8` |
+| Reduced scalar `c` | `3.47788e-5` | `2.69431e-7` |
+
+The scalar difference is **0.774698%** of its 64-cell response peak.
+Each geometry/clock difference is at most **0.071471%** of that channel's
+fine response peak. These are sampled spatial sensitivities, not relative
+errors at each point. Exterior comparisons use common `x,eta`; cap
+comparisons sum adjacent **total physical cell integrals** at common
+normalized radial cells, whose actual radii can differ.
+
+The cap response has a larger spatial sensitivity. The paired `Iq`
+cell-integral difference reaches **`3.09202e-3`**, about **7%** of the
+old 32-cell paired peak `4.43087e-2`; `Ip` gives `3.09203e-3`.
+These are adjacent-cell sums at common normalized cells, not integrals
+over identical physical radii. The close wall and clock comparisons do
+not establish convergence of the full cap state.
+
+Independent constraints retain the actual nonzero source residual. The
+finite case gives the following maxima on 129 cuts:
+
+| Diagnostic | Old 32 cells | New 64 cells restricted to 32-cell widths | New native 64 cells |
+| --- | ---: | ---: | ---: |
+| Incoming `abs(E_Ubar)` | `5.54765e-4` | `3.31042e-4` | `3.53518e-4` |
+| Outgoing `abs(E_x-r_source E_source/r)` | `7.78011e-3` | `5.15143e-3` | `4.93833e-3` |
+
+The restricted comparison recomputes derivatives at the old widths and
+common nodes; the native maximum also includes the added spatial nodes.
+Improvement therefore survives holding the diagnostic widths fixed, but
+the residuals remain finite. Source Hermite right-trace curvature and
+centred departure curvature remain distinct, with front and characteristic
+origin masks retained in the record.
+
+Wall curvature is still unresolved. For the weighted wall estimate
+`B=r_wall E_Ubar_wall`, equal-width old/new differences reach `1.84444e-4`
+and `2.22042e-4` for the three- and five-point alternatives. Changing only
+the derivative width on the new solution gives `1.14253e-4` and
+`1.30794e-4`. No new birth-transport interpolation or prescribed wall
+acceleration enters these estimates, and they do not establish a junction
+failure.
+
+The zero-cap comparison against its own incoming trace gives maximum
+discrepancies `9.46065e-4` with linear interpolation and `8.91627e-4` with
+PCHIP; the interpolation alternatives differ by up to `1.35891e-3`.
+The quiet-profile defect persists: zero-case quiet wall `c` reaches
+`1.24714e-9`, exterior `c` reaches `5.49325e-9`, and each quiet cap integral
+channel reaches `3.34079e-7`. Constructed flux identities remain separate
+from propagation accuracy. Two spatial grids do not establish an order,
+a continuum limit or a uniform error enclosure; the remaining spatial,
+transport and profile-support issues are not assigned to a specific
+operator by this result.
+
+The selected next implementation target is a higher-order exterior
+departure derivative used consistently in both radial-prefix jets and
+ALE transport. The known computational-profile support defect remains
+separate; no additional physical comparison has been run for that change.
+
+Creation and validation use **60,087,926 charged points and 256.8125
+process CPU seconds**, within the shared 80-million-point/450-second
+allowance. Calculation accounts for 53,403,302 points and 249.359375 CPU
+seconds, including 6,576,387 diagnostic points; creation validation adds
+6,684,624 points. One independent standalone check passes with the same
+6,684,624 authentication points under its 8-million-point/60-second limit,
+without time or source replay. The [manifest](../results/development/nsc-atlas-spatial-refinement-v1/manifest.json)
+binds 92 files. The result is 61,744,126 bytes with SHA256
+`29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd`;
+the 11,810-byte manifest has SHA256
+`dbfed10ec7ee36f8c909fa375e273459797b88ead546b07bf1a3c0789107bd1b`.
+
 ## Incoming wall curvature and transported constraint, 16 October 2026
 
 The [wall-curvature audit](../results/development/nsc-atlas-wall-constraint-audit-v1.json)

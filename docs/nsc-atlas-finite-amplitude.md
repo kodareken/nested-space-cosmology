@@ -2404,6 +2404,41 @@ after assembling the physical radius and actual source jets. Neither
 difference supplies a continuum error bound, and neither assumes a zero
 incoming constraint at the wall.
 
+The [completed 32/64-cell comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+finds a paired wall-scalar difference of `2.69431e-7`, or `0.774698%`
+of the fine response peak. Geometry and clock differences are below
+`0.071471%` of their respective fine peaks. At equal diagnostic width,
+the incoming constraint maximum decreases from `5.54765e-4` to
+`3.31042e-4`; its native fine-grid maximum is `3.53518e-4`.
+On common nodes the equal-width evolution difference reaches
+`2.75515e-4`, while the same-history derivative-width difference reaches
+`4.97718e-5`. Thus the observed improvement involves the evolved data.
+The corresponding source-subtracted outgoing maxima are `7.78011e-3`
+(old), `5.15143e-3` (fine at equal width) and `4.93833e-3` (fine native).
+
+The weighted wall estimates remain sensitive: equal-width evolution
+differences reach `1.84444e-4` and `2.22042e-4`, while narrowing the
+stencil on the fine history changes them by `1.14253e-4` and
+`1.30794e-4`. These measurements support further spatial-operator work
+but do not supply a converged wall datum. The unchanged profile's quiet
+leakage and the source's curvature-trace convention remain separate
+identified issues; the new grid does not remove them.
+
+Small wall-observable changes do not bound the whole cap state. The
+adjacent-sum paired cap `Iq` difference reaches `3.09202e-3`, about
+7% of the old 32-cell paired peak. The own-trace cap comparison also
+remains limited by its wall-history interpolation sensitivity.
+
+The next implementation question is the first-order exterior departure
+gradient in `background_stage`, used both for transverse prefix jets and
+the moving-grid evolution rate. A successor needs one consistent
+higher-order reconstruction for both uses, with the same source, profile
+and cap laws. Its wall closure must be derived and checked on manufactured
+inflow/advection data before a new coupled run. Substituting the desired
+wall derivative into a diagnostic would not test this correction. The
+existing frozen operator and comparisons remain the baseline; no further
+grid doubling or changed profile is selected by this result alone.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

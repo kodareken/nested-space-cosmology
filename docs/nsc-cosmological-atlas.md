@@ -137,9 +137,13 @@ difference to `1.68%` of the fine response peak. The
 separates source inheritance and diagnostic sampling; the incoming residual
 is largest in wall-origin stencils. The [independent wall-curvature audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
 finds strong spatial-stencil sensitivity and no reliable explanation of
-the disjoint interior subset by transported wall data. Spatial derivative
-and bulk-transport accuracy are the next connection before interpreting
-a junction defect. Profile support and exterior constraint/wall-slope residuals
+the disjoint interior subset by transported wall data. The [fixed-input
+32/64-cell comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
+now reduces constraints at equal diagnostic width and limits the paired
+wall-scalar change to `0.77%` of its fine response peak. Geometry and clock
+changes are below `0.072%`; wall curvature is still unresolved. Spatial
+operator accuracy precedes interpreting a junction defect. Profile support
+and exterior constraint/wall-slope residuals
 remain unresolved. Coupled
 well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.
