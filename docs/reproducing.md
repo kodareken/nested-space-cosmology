@@ -189,6 +189,20 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The mass-gradient and geometric-energy identities use no numerical fields,
+reference solves or retained states:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_flux_projection_identity.py -q -s
+```
+
+Fifteen exact controls check the adjoint tail, reaction cancellation, mixed
+reconstruction derivatives, upwind projection, geometric-coordinate energy,
+moving cells and both boundaries. Development used zero field samples /
+2.984375 active CPU seconds across 39 executions, within 20 seconds. These
+are mathematical controls for the next discretization, not a changed native
+evolution or another observational prediction.
+
 The interface algebra uses no numerical fields or root search:
 
 ```sh

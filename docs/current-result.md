@@ -2,6 +2,35 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Mass-gradient and geometric energy identities, 16 October 2026
+
+The [new exact derivation](nsc-atlas-finite-amplitude.md#variational-mass-response-and-flux-projection)
+expresses the constrained cap mass variation directly in the total scalar
+moments. Its nonlocal term contains the original field reaction. Keeping
+that term makes both continuum field equations derivatives of the same mass
+functional and reproduces the physical wall mass flux.
+
+The derivation splits upwind work into nonpositive trace damping and a
+reconstruction remainder with no fixed sign. An exact two-cell example has
+positive mass work despite upwinding. This identifies the compatibility
+condition a new discretization must satisfy; it does not reinterpret the
+earlier terminal decomposition as an error bound.
+
+At zero backreaction, mass equals geometric-coordinate wave energy minus an
+explicit wall term. A moving-cell reference with the shared wall scalar,
+incoming characteristic and reflecting centre obeys that mass balance with
+explicit nonnegative numerical losses. The corresponding finite-alpha
+mass-gradient form is exact in the continuum; consistency of discrete
+gradients, regular reconstruction, background transport and physical
+boundaries remains open. No corrected finite-amplitude trajectory is claimed.
+
+All [15 exact controls](../tests/test_nsc_atlas_cap_flux_projection_identity.py)
+pass. Development used 39 test executions, **zero field samples / 2.984375
+active CPU seconds**, within the 20-second algebra allowance. Grok independently
+confirmed the continuum adjoint, reaction cancellation, gradient form and
+projection split. Only mathematics, controls and source provenance are saved;
+no new physical payload or prediction-register entry is created.
+
 ## Terminal cap transport attribution, 16 October 2026
 
 The [compact comparison](../results/summaries/nsc-atlas-cap-transport-balance-v1.json)

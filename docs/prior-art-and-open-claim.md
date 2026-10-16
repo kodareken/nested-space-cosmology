@@ -311,6 +311,32 @@ selecting a corrected discretization. A scalar mass projection or deletion
 of one channel does not provide the missing field evolution. This analytical
 step supplies a decision for the next implementation, not another physical run.
 
+**Analytical outcome:** the [mass adjoint and projection identity](nsc-atlas-finite-amplitude.md#variational-mass-response-and-flux-projection)
+are proved for the exact primitive-conforming model. The reaction appears
+as a nonlocal tail in the q-moment derivative; it converts the original
+field equations into a common mass-gradient system. Native moment weights
+need not equal conjugate face traces, and the difference explains why
+upwind work alone has no guaranteed mass sign. The reference functional
+must not be confused with the earlier diagnostic reference when a native
+small-radius field approximation violates the exact primitive relation.
+
+The zero-backreaction geometric energy calculation includes moving cell
+widths, the wall primitive, incoming wall data and centre reflection. Its
+complete semidiscrete identity has explicit nonnegative numerical losses.
+Grok independently reviewed the adjoint, reaction and gradient derivations
+and the two-cell sign counterexample. Fifteen exact controls pass in 39
+development executions: **zero field samples / 2.984375 active CPU seconds**.
+No retained physical state, radial ODE or trajectory was evaluated.
+
+**Decision:** develop a discretization from the common mass gradient, with
+the geometric energy result as its zero-backreaction control. First resolve
+the boundary work and regular reconstruction, then background and moving
+geometry compatibility. A central telescoping identity by itself is not a
+consistent evolution, and the existing reaction cannot be counted twice.
+The next compute admission must specify that construction and its controls
+before any retained-field comparison or evolution. The previous physical
+candidate, wall law and observed transport defect remain unchanged.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

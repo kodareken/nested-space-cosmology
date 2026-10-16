@@ -3339,6 +3339,236 @@ locates the imbalance in reconstructed field transport and interfaces, with
 radial-map contributions below the stated diagnostic resolution. It supplies
 no corrected evolution or uniform finite-amplitude bound.
 
+#### Variational mass response and flux projection
+
+The terminal attribution identifies field transport and reconstructed
+interfaces as the unresolved connection. The following exact calculation
+relates the mass functional to that transport. It uses the same equations,
+with an exact scalar primitive and smooth potential; it does not change the
+saved evolution. The [fifteen symbolic controls](../tests/test_nsc_atlas_cap_flux_projection_identity.py)
+use no retained field samples or numerical radial solves.
+
+Write `P=Pdiff`, `U=P_f`, and use total fields
+
+$$
+\chi=rf,\qquad q=\chi_r,\qquad p=r\Pi,\qquad
+A=1-r^2-2\alpha n/r,\qquad B=Ae^\delta.
+$$
+
+Take a regular centre, `n(0)=chi(0)=0`, fixed `R,T`, and piecewise smooth,
+integrable variations with fixed interfaces. The exact radial constraint is
+
+$$
+n_r=\rho=\frac{r^2P}{2}+\frac A4[p^2+(q-f)^2],\qquad
+a=\delta_r=\frac{\alpha}{2r}[p^2+(q-f)^2],\qquad
+W(r)=\exp\left(-\int_r^R a(s)ds\right).
+$$
+
+Denote a variation by `d`, to distinguish it from the lapse. Differentiating
+this constraint, including the dependence of `A` on `n`, gives
+
+$$
+(dn)_r+a\,dn=\frac{r^2U}{2}df+
+\frac A2\{p\,dp+(q-f)(dq-df)\}.
+$$
+
+Since `W_r=aW`, integration to the wall gives
+`dn(R)=integral(h_p dp+h_q dq+h_f df) dr`, where
+
+$$
+h_p=\frac{WAp}{2},\quad h_q=\frac{WA(q-f)}2,\quad
+h_f=\frac W2[r^2U-A(q-f)].
+$$
+
+The primitive relation fixes `df(r)=integral_0^r dq(s)ds/r`. Changing the
+order of integration therefore yields the functional derivatives
+
+$$
+\boxed{dn(R)=\int_0^R(g_p\,dp+g_q\,dq)dr,\qquad
+g_p=h_p,\quad g_q=h_q+\int_r^R\frac{h_f(s)}s ds.}
+$$
+
+The integral in `g_q` retains the field-value/potential contribution. For
+a branch-fixed reconstruction with moments `I`, its mass weight is
+`w_i=integral(g_p p_{I_i}+g_q q_{I_i})dr`. Both shape derivatives enter:
+characteristic limiting can make `q` depend on a `p` moment and conversely.
+A face trace of `g` is not this integrated moment weight.
+
+The radial constraints also give
+`A_r+aA=-2r+2alpha n/r^2-alpha rP`. Thus, for the original reaction
+
+$$
+S=e^\delta r[(U-2f)+\alpha(2n/r^3-P)f],\qquad
+H(r)=\int_r^R S(s)ds,
+$$
+
+the same derivative has the useful equivalent form
+
+$$
+g_p=\frac{e^{-\delta_W}}2Bp,\qquad
+\boxed{g_q=\frac{e^{-\delta_W}}2(Bq+H)-\frac{A_Wf_W}{2}.}
+$$
+
+Indeed, `(g_q-WAq/2)_r=-WS/(2e^delta)`, and `W/e^delta=e^{-delta_W}`;
+the wall value supplies the last constant. With `u=Bp`, `v=Bq`,
+`c=e^{-delta_W}` and `C=A_Wf_W/2`, the original field equations
+`p_T=v_r-S`, `q_T=u_r` then satisfy
+
+$$
+g_pp_T+g_qq_T
+=\partial_r\left[\frac c2u(v+H)-Cu\right].
+$$
+
+The reaction cancels because `H_r=-S`. At the regular centre the primitive
+vanishes; at the wall it equals
+`J_W=A_W^2 exp(delta_W) p_W(q_W-f_W)/2`. This proves `n_T(R)=J_W`
+for the stated continuum equations. No independent removal of the reaction
+or field-value channel is compatible with this calculation.
+
+At an ordinary fixed interface, `f,n,A,W` and the tail integral are
+continuous, although `p,q` can jump. Consequently
+
+$$
+[g_p\pm g_q]=\frac{WA}{2}[p\pm q].
+$$
+
+Use right-minus-left jumps and left-minus-right cell-weight differences
+`Delta w`. The native characteristic speeds are
+`s_+=-T_x B-v_j`, `s_-=T_x B-v_j`, with radial face velocity `v_j`.
+For `j_+=[p+q]`, `j_-=[p-q]`, the exact interior upwind work is
+
+$$
+\begin{aligned}
+U_j&=\frac14\sum_{\sigma=\pm}|s_\sigma|
+ (\Delta w^p+\sigma\Delta w^q)j_\sigma\\
+&=-\frac{WA}{8}\sum_{\sigma=\pm}|s_\sigma|j_\sigma^2
+ +\frac14\sum_{\sigma=\pm}|s_\sigma|\eta_\sigma j_\sigma,\\
+\eta_\sigma&=\Delta w^p+\sigma\Delta w^q+\frac{WA}{2}j_\sigma.
+\end{aligned}
+$$
+
+For `A>0`, the first term is nonpositive. The projection remainder has no
+fixed sign. This is not merely freedom in arbitrary weights: at `alpha=0`,
+take constant `p=1,9/8` in the interior cells `[1/4,1/2]`, `[1/2,3/4]`,
+with `q=f=0`, `T_x=1`, and a stationary face. Differentiating their actual
+mass integrals with respect to their integral moments gives upwind work
+`67/16384>0`: trace damping `-9/4096` plus projection `103/16384`.
+This counterexample concerns that piecewise constant representation, not
+the native limited-linear state or a nonzero gravitational response at
+`alpha=0`.
+
+The formula may use native weights `w^Q`, but the reference functional just
+derived, `N*`, requires `q=(rf)_r` exactly. It is not automatically identical
+to the earlier diagnostic reference, which retains native field formulas.
+In particular, the native small-radius approximation for `Phi` must be
+accounted for before replacing it by `(q-f)/r`. The weight difference
+`w^Q-w*` can contain field-representation and potential errors as well as
+radial quadrature error. No value for that difference is supplied here.
+Ordinary-face variations keep the background clock, radius, physical
+endpoint fluxes and interface locations fixed. Their other contributions
+remain in the full ledger; this local identity does not discard them or
+merge coincident moving events.
+
+#### A mass-gradient route and its geometric reference limit
+
+The preceding adjoint gives a stronger structural consequence:
+
+$$
+\boxed{p_T=2e^{\delta_W}\partial_r g_q,\qquad
+q_T=2e^{\delta_W}\partial_r g_p.}
+$$
+
+These are the original field equations, including the reaction through
+`g_q`, expressed through derivatives of the constrained mass. At fixed
+geometry a differentiable discrete mass with moment gradients `w` therefore
+suggests the central gradient fluxes
+`F_p=e^{delta_W}(w_L^q+w_R^q)` and
+`F_q=e^{delta_W}(w_L^p+w_R^p)`. Their interior mass work is exactly
+`2e^{delta_W}(w_L^p w_L^q-w_R^p w_R^q)`. For cells `0,...,N-1`,
+the sum leaves the explicit boundary expression
+
+$$
+\dot N=
+w_{N-1}\cdot F_W-2e^{\delta_W}w_{N-1}^p w_{N-1}^q
+-w_0\cdot F_C+2e^{\delta_W}w_0^p w_0^q.
+$$
+
+This is an exact algebraic route for constructing both field equations,
+not an added scalar correction to a computed mass rate. It is not yet a
+consistent cap scheme: physical incoming data must give the required wall
+term, reconstruction gradients must approximate the continuum derivatives,
+and moving geometry, analytic background transport, limiter branches and
+time integration still require their own compatible identities. A reaction
+already included through the gradient cannot be added again as a separate
+source. Arbitrary boundary fluxes do not satisfy the required wall identity.
+
+At `alpha=0`, in the existing centre-normalized gauge `delta=0`, the
+structure can be made local. Here `P=f^2`, `A0=1-r^2`, and
+
+$$
+\rho_0=\frac{A_0}{4}(p^2+q^2)
+-\partial_r\left(\frac{A_0rf^2}{4}\right).
+$$
+
+Use the already established geometric coordinate `z=atanh(r)` and define
+`u=A0 p`, `v=A0 q`. The moments are unchanged,
+`integral p dr=integral u dz`, `integral q dr=integral v dz`, while
+
+$$
+u_T=v_z,\qquad v_T=u_z,\qquad
+n(R)=E-K_W,\quad E=\int_0^{z_W}\frac{u^2+v^2}{4}dz,\quad
+K_W=\frac{A_0(R)\chi_W^2}{4R}.
+$$
+
+This adds an energy/mass relation to the existing characteristic background;
+the coordinate and wave solution themselves are not new. For a moving wall,
+`z_{W,x}=R_x/A0(R)` and `chi_{W,x}=T_x u_W+z_{W,x}v_W`. Differentiating both
+`E` and `K_W`, including their moving endpoints, gives exactly
+`n(R)_x=R_x rho_W+T_x J_W`, with
+`J_W=u_W(v_W-A0(R)f_W)/2`. Omitting `K_W` loses this identity.
+
+For piecewise constant `u,v` on moving `z` cells of length `h`, the discrete
+energy is `(I_u^2+I_v^2)/(4h)`. Its geometric derivative `-h_x(u^2+v^2)/4`
+cancels the interior mesh-velocity term in central transport. Upwinding then
+adds exactly
+
+$$
+-\frac18\left(|-T_x-z_{j,x}|[u+v]^2
++|T_x-z_{j,x}|[u-v]^2\right).
+$$
+
+There is no projection remainder for this particular quadratic energy and
+constant reconstruction. Its physical boundary completion is also explicit.
+Let `G=(u+v)_incoming=A0(R)(R w_plus+f_W)`, retain the outgoing last-cell
+`u-v`, and set `u_hat=(G+u-v)/2`, `v_hat=(G-u+v)/2`. Use these two traces
+in both conservative wall fluxes. At the centre, retain the outgoing `u+v`
+and impose `u_hat=0`, giving `v_hat=u+v` and zero q flux. Since
+`chi_W=sum I_v`, the same wall flux supplies
+`chi_{W,x}=T_x u_hat+z_{W,x}v_hat`.
+
+For `T_x>0` and timelike faces `|z_{j,x}|<T_x`, the resulting semidiscrete
+mass `N_h=sum (I_u^2+I_v^2)/(4h)-K_W` obeys
+
+$$
+\dot N_h=R_x\rho(\widehat u,\widehat v,f_W)
++T_xJ(\widehat u,\widehat v,f_W)-D_{\rm int}-D_C-D_W,
+$$
+
+where `D_int` is the sum of the positive jump squares above,
+`D_C=T_x u_0^2/2`, and
+`D_W=(T_x+z_{W,x})(u_{N-1}+v_{N-1}-G)^2/8`. A three-cell symbolic
+calculation checks the complete moving mass identity directly from the
+conservative moment rates. It includes the wall scalar and all cell-width
+derivatives. The interface and boundary losses are numerical, not extra
+physical matter. This is a piecewise constant weak-field control, not a
+pointwise regular centre reconstruction or a repaired nonzero-alpha cap.
+
+Higher-order regular shapes, finite-backreaction gradients and the actual
+wall dynamics remain to be constructed together. These exact results select
+a compatible-gradient construction and geometric energy control as the next
+implementation route. They do not supply a new evolved history, a nonlinear
+stability theorem, or finite-amplitude cap-wall closure.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

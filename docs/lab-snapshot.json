@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "273af3e89aae74982fa48db411ab2f01844d8a87",
+  "current_receipt_commit_parent": "f3c29220f346dce3c759922fbcf6b24da522813a",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 211493,
-      "change": "Record the independently reproduced terminal cap transport attribution and compact evidence.",
-      "changed_from_commit": "273af3e89aae74982fa48db411ab2f01844d8a87",
+      "bytes": 212133,
+      "change": "Derive and verify the constrained cap mass gradient and geometric energy compatibility identities.",
+      "changed_from_commit": "f3c29220f346dce3c759922fbcf6b24da522813a",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9707a0c974544e745a7e1ba1ff8ad44c8b1e3c5e0b66a445ce205a77461cc836"
+      "sha256": "afa9e1f697dcf89b50d69e94a9b0bbd597f0b1f8c035249aab879daf3b384cd8"
     },
     {
       "bytes": 9543,
@@ -35467,6 +35467,14 @@
       "original_sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719",
       "path": "tests/test_nsc_assembled_chebyshev_gn_stall.py",
       "sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719"
+    },
+    {
+      "bytes": 12374,
+      "change": "Derive and verify the constrained cap mass gradient and geometric energy compatibility identities.",
+      "changed_from_commit": "f3c29220f346dce3c759922fbcf6b24da522813a",
+      "path": "tests/test_nsc_atlas_cap_flux_projection_identity.py",
+      "retention_reason": "Exact controls for the cap mass adjoint, flux projection and geometric energy boundaries.",
+      "sha256": "458e91da68f89b0889f8af6accda762f1cf0d01b391b03e2e9370aa98a6f5631"
     },
     {
       "bytes": 3449,
