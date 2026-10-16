@@ -2,6 +2,54 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Midpoint-complete SSPRK3 comparison, 16 October 2026
+
+The [512-step pair](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json)
+completes with the same source, profile, spatial operators and finite
+interval. Creation and validation use **174.90625 process CPU seconds
+and 33,604,170 points**. The [manifest](../results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json)
+binds 86 inputs and producers. One standalone check passes with 1,418,330
+points, reconstructing the midpoint cache and two final radial stages
+without source integration or trajectory replay.
+
+The original 513 cache rows remain bit-for-bit unchanged. New midpoint
+values use the same 129-knot source snapshot; its scalar is analytic while
+its geometry and transverse jets retain their Hermite approximation.
+The largest order-32/64 reference-gauge difference is `1.98952e-13`,
+below the declared `5e-12` tolerance. The finite midpoint source constraint
+retains a maximum `5.31874e-4`; this is an interpolant residual.
+
+| Quantity | Fine 512-step endpoint response, finite minus zero | Maximum paired 256/512 temporal difference |
+| --- | ---: | ---: |
+| Radius `r` | `-7.67296891e-4` | `6.62412e-11` |
+| Log lapse `L` | `-6.48536218e-3` | `6.54539e-10` |
+| Central coordinate clock `T` | `-1.27927881e-3` | `1.38604e-10` |
+| Wall proper clock `s` | `-1.19741847e-4` | `1.09942e-11` |
+| Wall scalar `c` | `2.88661471e-5` | `5.84100e-7` |
+
+The scalar time difference is **1.67616%** of the fine response peak
+`3.48476e-5`, with its maximum at cut 99 (`x=0.4630384111`). The earlier
+128/256 maximum is 12.966 times larger. This is a quotient of measured
+differences, not an established order or error enclosure. The endpoint
+scalar difference is `-5.66081e-7`, close to the history maximum.
+The finer history differs from the old SSPRK2 extrapolant by `5.92862e-7`;
+the much closer agreement at 256 steps did not identify the exact result.
+
+The finite departure-constraint maxima remain `5.54765e-4` for `E_Ubar`
+and `8.76852e-3` for `E_x`, with RMS `1.05505e-4` and `2.02399e-3`.
+Their pointwise 256/512 changes reach about `1.83e-5` and `2.34e-4`;
+similar maxima do not mean identical residual fields. Final finite wall
+compatibility defects remain `-3.12493e-4`, `7.73819e-3`, `-1.22940e-4`
+in the radius, lapse and scalar rate channels. The finite outgoing-cap
+peak is `6.66429e-4`; the zero outgoing characteristic remains exactly zero.
+
+The quiet wall scalar falls to `1.24742e-9`, but quiet cap integrals still
+reach `1.66329e-7`. The known computational-profile support defect remains.
+The next mathematical work addresses that representation and separates
+inherited source residuals from spatial constraint errors. The present
+result does not authorize an automatic further time refinement or close
+the finite-amplitude validity question.
+
 ## Fixed-input SSPRK3 coupled window, 16 October 2026
 
 The [four-case result](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json)
@@ -52,8 +100,8 @@ intervals bracketing its knots. The zero-reference chain quadrature also
 tracks most of the zero-wall discrepancy. These findings motivate the
 admitted [512-step comparison](prior-art-and-open-claim.md#midpoint-complete-ssprk3-comparison-16-october-2026),
 which requires new midpoint evaluations of the same source and reference
-gauge interfaces. Its implementation is in preparation; the source and
-computational profile remain fixed for that comparison.
+gauge interfaces. That comparison is now complete above; the source and
+computational profile remained fixed.
 
 ## Local SSPRK3 comparison, 16 October 2026
 

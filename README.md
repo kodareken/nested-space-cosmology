@@ -66,9 +66,10 @@ the exact vacuum and carrying the leading cap pulse analytically. An
 independent incoming-characteristic comparison reduces the 32-cell pulse
 discrepancy from about `0.38` to below `0.0009`. Paired spatial changes in
 wall geometry and clocks are below `0.063%` of their finite response peaks.
-The [higher-order time comparison](docs/current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
-retains close agreement for geometry and clocks, while scalar time
-sensitivity and exterior constraint residuals remain accuracy questions. A controlled
+The [higher-order time comparisons](docs/current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+retain close agreement for geometry and clocks and reduce the paired scalar
+time difference to `1.68%` of its finer response peak. Spatial constraints,
+profile support and a complete error estimate remain accuracy questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,

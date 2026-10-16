@@ -977,6 +977,15 @@ def check_background_evolution_evidence(errors: list[str]) -> None:
         errors.append(f"characteristic-background exterior/wall/cap evidence: {error}")
 
 
+def check_ssprk3_refinement_evidence(errors: list[str]) -> None:
+    """Authenticate refined cache/two final stages without trajectory replay."""
+    try:
+        from record_nsc_atlas_ssprk3_refinement import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError, RuntimeError) as error:
+        errors.append(f"midpoint-complete SSPRK3 evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -1026,6 +1035,7 @@ def main() -> int:
     check_coupled_evolution_evidence(errors)
     check_compatible_evolution_evidence(errors)
     check_background_evolution_evidence(errors)
+    check_ssprk3_refinement_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

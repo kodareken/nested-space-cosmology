@@ -67,7 +67,10 @@ the original pre-arrival window with a common cap, wall and exterior.
 Carrying the incoming cap pulse analytically substantially reduces its
 transport error. Geometry and clock responses change little under the tested
 refinements, but scalar time sensitivity and pointwise constraint defects
-remain unresolved. This is a finite numerical comparison, not a converged
+remain unresolved. A fixed-input SSPRK3 comparison reduces the scalar's
+256/512-step change to 1.68% of the fine paired peak, while exposing the
+role of computational profile-knot phase in temporal quadrature.
+This is a finite numerical comparison, not a converged
 spacetime or a finite-amplitude remainder bound.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
@@ -1661,6 +1664,92 @@ evolution. No continuum error enclosure, converged nonlinear spacetime,
 central-arrival waveform, formation mechanism or stability result follows
 from this window.
 
+### 13.17. Profile-knot phase and a finer temporal comparison
+
+<!-- nsc-claim:atlas-ssprk3-refinement -->
+
+Evidence: [128/256-step histories](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json),
+[512-step comparison](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json),
+[source-bound manifest](../results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json)
+and [figure record](../docs/figures/nsc-atlas-ssprk3-refinement.manifest.json).
+The [time-contribution derivation](../docs/nsc-atlas-finite-amplitude.md#isolating-the-scalar-time-contribution)
+retains the background chain, physical wall flux and frame conversion separately.
+
+The same spatial operators and physical inputs now use the three-stage
+SSPRK3 method at 128, 256 and 512 steps, always with 32 cells. The last
+comparison adds only the missing midpoint data: the original 513 rows
+are preserved exactly, and the same source snapshot supplies 512 new
+midpoints. Direct reference-gauge quadrature at orders 32 and 64 differs
+by at most $1.99\times10^{-13}$ across its values and jets. The source
+geometry still uses its inherited Hermite approximation; its residuals
+are retained. Neither the physical preparation nor the 65-knot
+computational cap profile is refitted.
+
+The latter profile is $C^2$, with possible jumps in its third derivative.
+An exact local model explains why the position of a knot inside a step
+matters. For a prescribed path with
+$B(x)=A(x-x_*)_+^3/6$ and $\theta=(x_*-x_0)/h\in[0,1]$, the
+SSPRK3-weighted background-chain defect is
+
+$$
+\mathcal R_B=B(x_0+h)-B(x_0)
+-\frac{h}{6}\{B'(x_0)+4B'(x_0+h/2)+B'(x_0+h)\}.
+$$
+
+$$
+\mathcal R_B=\frac{Ah^3}{12}(1-2\theta)\min(\theta,1-\theta)^2.
+$$
+
+It vanishes at an endpoint or midpoint and has largest magnitude
+$|A|h^3/324$ at phases $1/3$ and $2/3$. For a smooth increasing wall
+label $\zeta(x)$ crossing a profile knot, the leading coefficient is
+$A=[F_{\mathrm{bg}}''']\zeta_x^3$. This local quadrature identity does
+not prescribe the coupled stage trajectory or identify its entire error.
+In particular, shifting the crossing phase on refinement can change the
+sign and size of a difference without a fixed observed convergence order.
+
+![Fixed-input SSPRK3 temporal comparison of the paired wall scalar](../docs/figures/nsc-atlas-ssprk3-refinement.png)
+
+*Figure 11. A: finite-minus-zero wall scalar at 128, 256 and 512 time
+steps. B: signed changes between successive histories. C: the region
+containing their largest changes; dots mark fine finite-history saved
+intervals containing a profile knot. These endpoint brackets do not
+reconstruct internal-stage paths or assign causation.*
+
+The paired scalar maximum time difference falls from
+$7.57345\times10^{-6}$ for 128/256 steps to $5.84100\times10^{-7}$
+for 256/512 steps. The latter occurs at saved cut 99 and is 1.67616%
+of the fine peak $3.48476\times10^{-5}$. The difference ratio, 12.966,
+is a measured quotient, not a convergence order. The final scalar change
+is $-5.66081\times10^{-7}$, so an endpoint alone does not characterize
+the history. All entries below use finite minus zero at common labels.
+
+| Quantity | 512-step endpoint response | Maximum 256/512-step difference |
+| --- | ---: | ---: |
+| Radius $r$ | $-7.67296891\times10^{-4}$ | $6.62412\times10^{-11}$ |
+| Log lapse $L$ | $-6.48536218\times10^{-3}$ | $6.54539\times10^{-10}$ |
+| Central coordinate clock $T$ | $-1.27927881\times10^{-3}$ | $1.38604\times10^{-10}$ |
+| Wall proper clock $s$ | $-1.19741847\times10^{-4}$ | $1.09942\times10^{-11}$ |
+| Wall scalar $c$ | $2.88661471\times10^{-5}$ | $5.84100\times10^{-7}$ |
+
+The earlier SSPRK2 extrapolant $(4\Delta c_{512}-\Delta c_{256})/3$
+agrees with the new 256-step history within $5.60381\times10^{-8}$,
+but with the new 512-step history only within $5.92862\times10^{-7}$.
+The closer earlier agreement therefore does not certify the true error.
+Independent finite constraint maxima remain approximately
+$(5.55\times10^{-4},0.008769)$ for $(E_{\bar U},E_x)$.
+The unchanged computational profile's pre-support contribution also remains
+a separate representation issue: fine cap-integral leakage is about
+$1.66\times10^{-7}$ even though the wall scalar leakage falls to
+$1.25\times10^{-9}$. Spatial defects, profile support, central arrival
+and a uniform finite-amplitude remainder remain open.
+
+The two new histories and their validation use 174.90625 process-CPU
+seconds and 33,604,170 points, within 300 seconds and 50 million points.
+Their manifest binds 86 inputs and producers. A separate authentication
+uses 1,418,330 points, reconstructs midpoint data and two final stages,
+and replays no source integration or trajectory.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -1956,7 +2045,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 11. Research dependencies, distinct from spacetime causal arrows.
+*Figure 12. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*
@@ -1994,7 +2083,11 @@ now also completes the original pre-arrival window. Its six-case comparison
 substantially reduces leading cap transport error and resolves integrated
 geometry and clock changes within the tested refinements. Scalar time
 sensitivity and independent constraint and wall-slope defects prevent a
-converged-solution claim. The finite-amplitude existence and remainder
+converged-solution claim. With the source and spatial operators fixed,
+SSPRK3 temporal refinement reduces the paired scalar change to 1.68%
+of its fine peak; computational profile-knot phase prevents interpreting
+a single difference quotient as an observed order. Spatial constraints
+and the profile's support defect remain separate. The finite-amplitude existence and remainder
 problem remains open.
 The remaining work is to connect those statements physically where their
 domains presently differ.
@@ -2030,6 +2123,7 @@ and renders their relationships without launching a new physics calculation.
 | Exterior cubic scalar correction | [Conservative evolution](../docs/nsc-atlas-scalar-evolution.md); [clock lift](../results/development/nsc-atlas-lift-clock-v1/clock.json), [forcing cache](../results/development/nsc-atlas-forcing-cache-v1/cache.json) and [propagated response](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json) |
 | Central cubic scalar correction | [Reflected transport and clock pullback](../docs/nsc-atlas-central-scalar-response.md); [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json) and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json) |
 | Nonlinear coupled pre-arrival window | [Exact model and characteristic background](../docs/nsc-atlas-finite-amplitude.md); [six-case result](../results/development/nsc-atlas-background-evolution-v1/background.json) and [manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json); scalar time sensitivity and pointwise constraints remain unresolved |
+| Fixed-input SSPRK3 temporal refinement | [Profile-knot and chain identities](../docs/nsc-atlas-finite-amplitude.md); [128/256 histories](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json), [512 comparison](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json) and [manifest](../results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json); finite temporal differences, without an error enclosure |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

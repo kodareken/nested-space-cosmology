@@ -39,6 +39,15 @@ residuals remain explicit. The [comparison figure](figures/nsc-atlas-background-
 and saved fields connect this numerical advance to the manuscript without
 claiming a uniform error enclosure or central-arrival solution.
 
+Section 13.17 now adds the [fixed-input SSPRK3 comparison](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+and its [saved-history figure](figures/nsc-atlas-ssprk3-refinement.png).
+The paired scalar's 256/512-step difference is 1.68% of its fine peak.
+An exact local profile-knot identity explains why crossing phase matters
+to quadrature, without assigning the full coupled error. The observed
+difference ratio, small geometry changes and earlier extrapolant agreement
+do not establish convergence order or resolve the remaining spatial,
+constraint and computational-support defects.
+
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.
 Spherical symmetry supplies the first tractable charts; it does not assert global

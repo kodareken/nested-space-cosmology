@@ -1,0 +1,77 @@
+{
+  "comparison": {
+    "alpha": 0.00012983127142551443,
+    "cells": 32,
+    "knot_markers": "strictly interior profile knots between saved fine finite wall labels",
+    "max_temporal_change": [
+      7.573447719151118e-06,
+      5.840995121603187e-07
+    ],
+    "maximum_indices": [
+      96,
+      99
+    ],
+    "peak_paired_c": [
+      4.202032278217017e-05,
+      3.5157162783364115e-05,
+      3.484755826732577e-05
+    ],
+    "scope": "saved finite-window temporal diagnostic; no convergence-order or error-bound claim",
+    "steps": [
+      128,
+      256,
+      512
+    ],
+    "zoom_indices": [
+      88,
+      107
+    ]
+  },
+  "execution": {
+    "arithmetic_points": 21801,
+    "cache_reconstructions": 0,
+    "count_scope": "array operands and plot vertices; excludes file bytes and rendering pixels",
+    "cpu_limit_seconds": 30,
+    "cpu_seconds": 1.09375,
+    "point_limit": 200000,
+    "recursive_scientific_authentications": 0,
+    "renders": 1,
+    "source_integrations": 0,
+    "time_evolutions": 0
+  },
+  "inputs": {
+    "results/development/nsc-atlas-ssprk3-evolution-v1/manifest.json": {
+      "bytes": 10270,
+      "sha256": "cf20e9190d400e81fa05a1dcf31535cbe99ed20d9a3fdf9c21f981f2565fdf75"
+    },
+    "results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json": {
+      "bytes": 12182095,
+      "sha256": "24cd8319c131360154cbdd7088cd2f212f8d572a0fe6fdff69a2c845c9223546"
+    },
+    "results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json": {
+      "bytes": 11034,
+      "sha256": "f85a1491eeba5c77514936e48f69a4335d5a92edda2a0db2a0dc624a3701f041"
+    },
+    "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json": {
+      "bytes": 17243615,
+      "sha256": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02"
+    }
+  },
+  "outputs": {
+    "docs/figures/nsc-atlas-ssprk3-refinement.png": {
+      "bytes": 247686,
+      "sha256": "f0b1809bdc800e28cdb7d8a6871687b16ec43300b82eb102aceffdc3e2d5d64a"
+    }
+  },
+  "producer": {
+    "scripts/plot_nsc_atlas_ssprk3_refinement.py": {
+      "bytes": 10146,
+      "sha256": "115e32263ae0d124f55cfc81d5b24fb889647f8750605fd2becb242259554701"
+    }
+  },
+  "runtime": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.1"
+  },
+  "schema": "nsc-atlas-ssprk3-refinement-figure-v1"
+}

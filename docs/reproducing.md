@@ -155,6 +155,23 @@ gauge-order comparison, evolution and validation. A standalone check has
 final radial stages, with no trajectory or source-ODE replay. The 86
 input/source bindings remain frozen. Creation requires a new directory.
 
+The [completed 512-step pair](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+uses 174.90625 CPU seconds and 33,604,170 points, including validation.
+The standalone check uses 1,418,330 points. Its cache construction uses
+575,112 points, including both gauge orders; all original 513 rows are
+preserved. The paired scalar temporal difference is `5.84100e-7`, or
+1.67616% of the fine peak. `diagnostics` retains full signed comparison
+arrays and maximum locations, quiet channels and profile-knot brackets.
+
+The [three-resolution figure](figures/nsc-atlas-ssprk3-refinement.png)
+uses only authenticated saved arrays. Its original render uses 21,801
+arithmetic points and 1.09375 CPU seconds within a 30-second/200,000-point
+allowance. Reproduce it at a fresh path:
+
+```sh
+python scripts/run_python.py scripts/plot_nsc_atlas_ssprk3_refinement.py --output .build/nsc-atlas-ssprk3-refinement.png
+```
+
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
 without replaying its source or time evolution. Its 25 controls exercise

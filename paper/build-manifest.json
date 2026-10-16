@@ -1,10 +1,10 @@
 {
-  "bytes": 2536828,
+  "bytes": 2803690,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "8bce782f03bee97928bc8ceb8e80b36001ac2307cf29b6fe82d21bfb9caea6e7",
+  "metadata_sha256": "f02e1478e17da0f1835cd2d244ae2023144167cfde91b938361dcced5116ff39",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 35,
-  "pdf_sha256": "b93d49110ccc0bc10735f1c6bb61b752078e8ccbc340d15e2374b7503c217a33",
+  "pages": 36,
+  "pdf_sha256": "5e43acbc525647557742502cb7794be9c2c63ce1c6874efd38db2b675bb59036",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -14,6 +14,14 @@
     {
       "path": "docs/figures/nsc-atlas-background-evolution.png",
       "sha256": "b466692a612df205cb6298d194fb26ca086f6eddb393eb4e44b1a53578c17f2d"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-ssprk3-refinement.manifest.json",
+      "sha256": "17db27d362dfa0cb92edb6fdf8baa7f4b18c91b4b272cef3dcb9f93366226eac"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-ssprk3-refinement.png",
+      "sha256": "f0b1809bdc800e28cdb7d8a6871687b16ec43300b82eb102aceffdc3e2d5d64a"
     },
     {
       "path": "paper/figures/geometry-overview.json",
@@ -184,6 +192,18 @@
       "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
     },
     {
+      "path": "results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json",
+      "sha256": "24cd8319c131360154cbdd7088cd2f212f8d572a0fe6fdff69a2c845c9223546"
+    },
+    {
+      "path": "results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json",
+      "sha256": "f85a1491eeba5c77514936e48f69a4335d5a92edda2a0db2a0dc624a3701f041"
+    },
+    {
+      "path": "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json",
+      "sha256": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02"
+    },
+    {
       "path": "results/development/nsc-atlas-wall-evolution-v1/derivative/response.json",
       "sha256": "253f3c2220d2258ae25429210abcc7d638151c0a8af471b03c9f21198704e775"
     },
@@ -341,6 +361,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "6bf8048361fc7cd4eb85fe43d1d5aa4c7e756ac74364c945db13846cda4dbaf5",
-  "version": "working-2026-10-16.3"
+  "source_sha256": "1f8835ae9afbd70c3fe0cf4e2fcbd80fe945942708757a366c1e63a75e83848c",
+  "version": "working-2026-10-16.4"
 }

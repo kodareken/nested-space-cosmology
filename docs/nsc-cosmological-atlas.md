@@ -130,9 +130,10 @@ wave error. The [six-case characteristic-background successor](current-result.md
 now carries the incoming pulse analytically while evolving its correction.
 Its independent 32-cell incoming pullback discrepancy falls from `0.38`
 to below `0.0009`; paired wall geometry and clock responses change by less
-than `0.063%` under spatial refinement. The [higher-order time comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
-retains close geometry and clock agreement. Scalar time sensitivity and
-exterior constraint/wall-slope residuals remain unresolved. Coupled
+than `0.063%` under spatial refinement. The [higher-order time comparisons](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+retain close geometry and clock agreement and reduce the scalar time
+difference to `1.68%` of the fine response peak. Profile support and exterior
+constraint/wall-slope residuals remain unresolved. Coupled
 well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.
 

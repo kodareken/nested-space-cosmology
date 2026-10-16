@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "42f70456050329ee4fa16039d2885813b81906e8",
+  "current_receipt_commit_parent": "fc55bd4e3546f711b17700fead30bf82067ec776",
   "files": [
     {
       "bytes": 1506,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 9238,
+      "bytes": 9326,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "db5febb3c1cd80d0133db1f54e80e6e019d907dd",
+      "changed_from_commit": "fc55bd4e3546f711b17700fead30bf82067ec776",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "75b3a28cf1747edd4dc3e71023fdcaa04c61455bf25e9d35e7c69f4dd911cd85"
+      "sha256": "27a4a3e277b450f3967748095d1020b00f899c88ba8d809d6f6997b7c852b2fc"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 199968,
+      "bytes": 199990,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "42f70456050329ee4fa16039d2885813b81906e8",
+      "changed_from_commit": "fc55bd4e3546f711b17700fead30bf82067ec776",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "12c625c3cde96b5cbadfd67a9b530bed2b724f4131858adde1d3c54eef195e82"
+      "sha256": "6f29d83e3a696f3477abf19b201bafa907f32d07089fee877a34ad8b4aab4ed7"
     },
     {
       "bytes": 9543,
@@ -10426,15 +10426,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 52393,
+      "bytes": 52462,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "db5febb3c1cd80d0133db1f54e80e6e019d907dd",
+      "changed_from_commit": "fc55bd4e3546f711b17700fead30bf82067ec776",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "e03138ddc2d086e3182e06fa733650100920e805eec53469f7ac34ded5557817"
+      "sha256": "48fc6bab73515edfa2af52c0dea3c14a78d8cdf3e8742812cddaf54d09a14f97"
     },
     {
       "bytes": 30876,

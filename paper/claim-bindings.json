@@ -163,6 +163,11 @@
       "section": "13.16",
       "status": "measured",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
+    },
+    "atlas-ssprk3-refinement": {
+      "section": "13.17",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-finite-amplitude.md"
     }
   },
   "findings": [
@@ -421,6 +426,14 @@
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/development/nsc-atlas-background-evolution-v1/background.json",
       "paper_section": "13.16"
+    },
+    {
+      "id": "atlas-ssprk3-refinement",
+      "status": "measured",
+      "summary": "With the same source, computational profile and spatial operators, SSPRK3 histories at 128, 256 and 512 steps reduce the maximum paired scalar time difference to 1.67616 percent of the fine peak. An exact local cubic-kink identity exposes phase-dependent chain quadrature. The measured difference ratio establishes neither convergence order nor a temporal error enclosure; finite spatial constraints and the computational support defect remain open.",
+      "note": "docs/nsc-atlas-finite-amplitude.md",
+      "record": "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json",
+      "paper_section": "13.17"
     }
   ]
 }

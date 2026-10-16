@@ -2136,7 +2136,7 @@ For `theta<=1/2`, expansion gives `theta^2*(1-2*theta)`; for
 with an endpoint or the midpoint has zero defect. An interior kink has
 a phase-dependent cubic defect, whose sign can change on refinement.
 Its largest magnitude is `abs(A)*h^3/324`, at phases `1/3` and `2/3`.
-For a monotone smooth wall label `zeta(x)`, a jump of `F'''` contributes
+For a monotone increasing smooth wall label `zeta(x)`, a jump of `F'''` contributes
 this local leading term with `A=[F''']*zeta_x^3`; the remaining terms
 depend on the smooth profile and trajectory. The full coupled stages
 need not follow that prescribed trajectory, so this identity alone does
@@ -2151,7 +2151,29 @@ wall time difference with correlation `0.997555` and maximum residual
 points and 0.921875 CPU seconds, with no coupled stage or source solve.
 The finite trajectory shifts knots into the step interiors. The admitted
 [512-step comparison](prior-art-and-open-claim.md#midpoint-complete-ssprk3-comparison-16-october-2026)
-tests its remaining temporal sensitivity while preserving that profile.
+now measures a paired scalar time difference `5.84100e-7`, or 1.67616%
+of the fine response peak, while preserving that profile. Its difference
+from the old SSPRK2 extrapolant increases to `5.92862e-7`, so the earlier
+close cross-method agreement did not certify the limit. Finite constraint
+and quiet cap residuals persist; no further time refinement is automatic.
+
+A support-preserving profile would give a conditional scalar-zero
+invariance: if all reached cap labels satisfy `T+atanh(r)<=zeta_front`,
+the profile and its first two jets vanish there, all incoming source scalar
+jets vanish, and the cap/exterior scalar states are zero, then the bulk,
+cap and hybrid-wall scalar rates vanish. SSPRK3 preserves that zero state.
+This does not prove exact finite vacuum geometry. The retained source
+snapshot has prefront Hermite leakage, with `max(abs(h))=1.26817e-14`,
+`max(abs(h_x))=5.08617e-11` and finite `max(abs(r_x-1))=6.66134e-15`,
+even though `c,c_x,c_xx` are exactly zero. The scalar check uses 26,178
+saved values and 0.140625 CPU seconds, with no source or stage evaluation.
+
+Existing prefront profile values and first jets can be retained, but
+their nonzero computational curvature must change if the profile is to
+vanish there. A zero value/first/second jet at the exact reference front
+permits a C2 connection to the later retained knots. Matching a C3 onset
+requires an additional condition. The source-front label and actual-stage
+coverage need explicit checking before that successor is constructed.
 
 ### Central clock in general null labels
 

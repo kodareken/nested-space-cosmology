@@ -2,6 +2,17 @@
 
 ## Midpoint-complete SSPRK3 comparison, 16 October 2026
 
+**Outcome:** the [512-step pair](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+completes with 174.90625 process CPU seconds and 33,604,170 points.
+Standalone authentication passes with 1,418,330 points. The paired scalar
+256/512 difference is `5.84100e-7`, or 1.67616% of the finer peak, versus
+the earlier `7.57345e-6`. This reduction does not establish an order or
+uniform bound. Finite constraints and the quiet cap-profile defect persist.
+The old SSPRK2 extrapolant is farther from the new 512-step history than
+from the 256-step history. No further automatic time refinement follows;
+the next connection is the identified profile support and spatial/source
+constraint work. The original fixed admission follows.
+
 The saved four-case histories localize 90% of the squared paired scalar
 time difference to cuts 89--98. On the zero reference, direct Simpson
 quadrature of the known background chain has defects `2.06210e-6` and
@@ -33,8 +44,8 @@ This includes the isolated correction of a test-fixture alias. Controls
 include actual analytic compact-scalar jets, manufactured
 source curvature, independent gauge mass/clock identities, exact old-row
 preservation, paired-history indexing, tampering and shared-budget checks.
-The producer and its 86 input/source bindings are frozen for one admitted
-physical comparison. No new source integration is involved.
+The producer and its 86 input/source bindings remain frozen with the
+completed comparison. No new source integration was involved.
 
 ## Fixed-input SSPRK3 coupled window, 16 October 2026
 
