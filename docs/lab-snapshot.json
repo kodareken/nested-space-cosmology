@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
+  "current_receipt_commit_parent": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 321671,
-      "change": "Record the endpoint velocity limit and prepare one leading common-port comparison.",
-      "changed_from_commit": "025abbb6ecb10d1b95ea21ad1b25c80799a48b0b",
+      "bytes": 322206,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4d774d450ab38a422bc17f36081df344f6cd2e066d749f27fd4e00ded80838cf"
+      "sha256": "21061cf50aa5645e2c2c1b4a99ff0fff44d1a89ec1c0e114291619b6410fb39f"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 317603,
-      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
-      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
+      "bytes": 318637,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "34627cca5ab29d1cc5e9d733a35c2a8111647bce44641101d8271f70b13ceea3"
+      "sha256": "ce7256bcba52c52c0c0f9a4f2de82296d074e6a0208fdac66302f2a3ef9c5602"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 351471,
-      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
-      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
+      "bytes": 354182,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4e6f0363628a8eec65a754e5268c4577ead737856bd22ca0e4961e177f2b3e97"
+      "sha256": "9cbcb9d81657a99c5edfbed2e40adeaa714d33a031bc1d18d4a15562b9789252"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 113522,
-      "change": "Record the endpoint velocity limit and prepare one leading common-port comparison.",
-      "changed_from_commit": "025abbb6ecb10d1b95ea21ad1b25c80799a48b0b",
+      "bytes": 114074,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a5cab9e912a4014274d574d9a4dbd538007ea1cfd25ce16842696576abb08db8"
+      "sha256": "98aef22447a1494730e568af8033806c6cbf91a6adac974fde5b4b8ba4cdde8f"
     },
     {
       "bytes": 18356,
@@ -29607,6 +29607,14 @@
       "sha256": "c9f24a5073d28ceac899f5d31d03c418d3ecfdd450ec8390dd1cc5dedbe5416c"
     },
     {
+      "bytes": 14948,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
+      "path": "results/summaries/nsc-atlas-prepared-endpoint-connection-v1.json",
+      "retention_reason": "Bounded prepared endpoint diagnosis and independent controls.",
+      "sha256": "66cad433395f2d5712b76976c3c35322eec7027b2707b84abcc37e11545a8138"
+    },
+    {
       "bytes": 2672,
       "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
       "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
@@ -29708,12 +29716,12 @@
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
     },
     {
-      "bytes": 9143,
-      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
-      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
+      "bytes": 12913,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
       "path": "scripts/check_nsc_atlas_prepared_endpoint_connection.py",
       "retention_reason": "Bounded endpoint diagnosis and its scientific owner.",
-      "sha256": "50e2151a4462c294bfd6b63ec5efd75c2eb5a0807e5b1582ea8f16561edda568"
+      "sha256": "0a7d4f0d086d1d479e83fe0ff1929eb4c66e2d2ab26623d8c6ad3eb83303a1e2"
     },
     {
       "bytes": 4953,
@@ -39656,6 +39664,14 @@
       "original_sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d",
       "path": "tests/test_nsc_weyl_small_transfer_bound.py",
       "sha256": "1d4d86c5cb2d92758a511419414b490815a77c0eca535ec12d5c9edf20cf261d"
+    },
+    {
+      "bytes": 1420,
+      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
+      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
+      "path": "tests/test_prepared_endpoint_dense_jet.py",
+      "retention_reason": "Bounded prepared endpoint diagnosis and independent controls.",
+      "sha256": "4e53e761045c3e0c2908556fb4118dc1e713595c7fdb3d66bc40c1519ec9b5f7"
     },
     {
       "bytes": 4897,

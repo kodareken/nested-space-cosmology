@@ -534,6 +534,17 @@ This creation-only comparison has its own admitted 10-million-value /
 one prepared field, takes no time step and reports an alpha-zero reference
 event with zero cap departures. It does not recreate the evolved endpoint.
 
+The separately admitted local dense-polynomial split uses the same event:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_prepared_endpoint_connection.py --audit-dense-piece --output results/summaries/nsc-atlas-prepared-endpoint-connection-v2.json
+```
+
+It analytically differentiates one existing dense polynomial and records
+its difference from the prepared RHS jet and retained history derivative.
+It retains those two small polynomial pieces, not a trajectory. The
+physical derivative interface and evolution operator remain unchanged.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

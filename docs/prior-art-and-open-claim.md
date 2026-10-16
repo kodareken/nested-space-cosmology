@@ -2251,6 +2251,50 @@ identities pass with 6,000 algebra values / 0.203125 CPU seconds. The local
 comparison now reports the density-rate difference from the predicted
 incoming boundary forcing, leaving numerical gradient/projection error visible.
 
+**Numerical outcome:** the frozen `f154ecc` reference comparison completes
+with 1,708,414 values / 2.5625 CPU seconds, one preparation and no time
+steps. The history-minus-direct prepared material rate is `6.76460751e-9`;
+direct-minus-exterior-prefix is `-3.22726177e-12`. The common conformal
+gap is `6.76138468e-9`. Label and label-rate differences are `2.54241e-14`
+and `2.14395e-11`. The canonical-density rate has L2 norm `6.52894299e-7`;
+its difference from the proved incoming boundary force is `4.03972e-13`.
+This identifies a local history-transfer contribution without assigning
+the earlier evolved gap entirely to it.
+
+### Local dense-polynomial derivative audit, 17 October 2026
+
+The earlier midpoint comparison is sampled evidence, not a bound everywhere
+inside a history interval. At this endpoint its retained F' differs from
+the prepared interface F' by about `1.88e-9`. The interface value comes from
+DOP853 dense output, whereas its first jet recomputes the field RHS. Before
+changing either preparation or transfer, separate those two numerical
+objects analytically at the same label.
+
+The existing endpoint checker gains an explicit `--audit-dense-piece`
+mode. It keeps the same source, clock, geometry and stage, reconstructs the
+same input identity once, and retains only the one relevant dense polynomial
+and one history piece. Differentiate the pinned SciPy DOP853 nested
+polynomial by the product rule and compare against independently expanded
+power-polynomial derivatives: **4,000 algebra values / 10 CPU seconds**.
+Read the installed dense-output and segment-selection code; record the
+SciPy version and its source-file hash with the audit.
+
+Then measure `retained F' - dense F'` and `dense F' - RHS-derived F'`, with
+the same analytic source derivative and arrival Jacobian. Their sum must
+equal the original local transfer difference. This is an interpolation/ODE
+defect diagnosis; the dense derivative does not replace the physical first
+jet. The complete one-event audit retains the **10-million-value / 60-second**
+shared budget. No grid scan, new trajectory, tolerance tuning or change to
+the field source. Stop after this split, or on an unexpected dense type,
+out-of-domain polynomial query, changed input identity or exhausted budget.
+
+The independent power-polynomial control passes with 1,336 counted values;
+active CPU time is below the reported clock tick (`0.0` seconds). Grok's
+read-only review independently proposes the same three-jet split. Its
+printed clock-rate difference was corrected from the stored operands to
+`2.14395e-11`; its assumption that the queried piece is the first onset
+piece is not used. The audit records the actual interval index and inputs.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

@@ -6580,6 +6580,22 @@ of M. An independent exact density/variation control passes with 6,000
 algebra values / 0.203125 CPU seconds. Numerical constraint-gradient and
 projection errors remain separately measurable against this boundary force.
 
+The [leading reference endpoint](../results/summaries/nsc-atlas-prepared-endpoint-connection-v1.json)
+identifies a history-transfer contribution: retained-minus-direct prepared
+material rate `6.76460751e-9`, versus direct-minus-exterior-prefix
+`-3.22726177e-12`. The common conformal gap is `6.76138468e-9`, and its
+weak-velocity channel is at roundoff. The two incoming labels differ by
+`2.54241e-14` and their rates by `2.14395e-11`; no clock was adjusted.
+The computed canonical-density rate has L2 norm `6.52894299e-7`, with
+only `4.03972e-13` remaining after subtracting the predicted boundary force.
+It completes with 1,708,414 values / 2.5625 CPU seconds and no time steps.
+
+This is a leading reference state, not the earlier evolved finite-alpha
+endpoint. A further local split must distinguish differentiation of the
+retained polynomial from differentiation of the prepared dense output and
+the prepared equation-derived first jet. The earlier midpoint comparison
+does not bound discrepancies everywhere within an interval.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

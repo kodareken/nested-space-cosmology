@@ -19,14 +19,68 @@ from recursive_horizons.nsc_atlas_reference_wall_gauge import ReferenceWallGauge
 from recursive_horizons.nsc_atlas_wedge_field import WedgeField
 from recursive_horizons.nsc_atlas_cap_fixed_basis import FixedCapBasis
 from recursive_horizons.nsc_atlas_fixed_cap_stage import quiet_fixed_state,coupled_fixed_stage
+from recursive_horizons.nsc_atlas_field_preparation import source_profile
 
 INPUT='results/summaries/nsc-atlas-fixed-history-onset-v1.json'
 PREPARED='results/summaries/nsc-atlas-prepared-history-v2.json'
 
 
+def dense_polynomial_jet(coefficients,initial,t_left,t_right,t,*,budget):
+    """Differentiate the pinned DOP853 nested polynomial, not field samples."""
+    coefficients=np.asarray(coefficients,dtype=float)
+    if (coefficients.shape!=(7,) or not np.all(np.isfinite(coefficients))
+            or not np.isfinite([initial,t_left,t_right,t]).all()
+            or not t_left<t_right or not t_left<=t<=t_right):
+        raise ValueError('require one finite DOP853 scalar polynomial on its own interval')
+    width=t_right-t_left;x=(t-t_left)/width
+    value=first=second=0.
+    for i,coefficient in enumerate(coefficients[::-1]):
+        value+=coefficient
+        factor,sign=(x,1.) if i%2==0 else (1-x,-1.)
+        second=second*factor+2*sign*first
+        first=first*factor+sign*value
+        value*=factor
+    budget.check(112)
+    return dict(value=float(value+initial),first=float(first/width),second=float(second/width**2))
+
+
+def audit_dense_piece(field,background,t,V,retained_first,direct_first,*,budget):
+    """One local polynomial/RHS derivative split; no source or history solve."""
+    import scipy
+    from scipy.integrate._ivp.rk import Dop853DenseOutput
+    import scipy.integrate._ivp.rk as rk
+    data=field.dense_data
+    outer=min(int(np.searchsorted(data['cuts'],t,side='right')-1),len(data['segments'])-1)
+    solution=data['segments'][outer]
+    if not solution.ascending: raise ValueError('require ascending prepared dense output')
+    inner=min(max(int(np.searchsorted(solution.ts_sorted,t,side=solution.side)-1),0),solution.n_segments-1)
+    piece=solution.interpolants[inner]
+    if not isinstance(piece,Dop853DenseOutput): raise ValueError('unexpected dense polynomial implementation')
+    polynomial=dense_polynomial_jet(piece.F[:,-1],float(piece.y_old[-1]),piece.t_old,piece.t,t,budget=budget)
+    _,gp=source_profile(V,field.domain['Va'],field.domain['Vb'])
+    dV=field.domain['Vb']-field.domain['Va'];qV=float(field.geometry['arrival'](V,1))
+    dense_first=(float(gp)+polynomial['first']/dV)/qV
+    label=float(field.geometry['arrival'](V));inputs=background.inputs
+    i=min(int(np.searchsorted(inputs['labels'],label,side='right')-1),len(inputs['labels'])-2)
+    a=retained_first-dense_first;b=dense_first-direct_first
+    budget.check(80+8*piece.y_old.size)
+    return dict(scipy_version=scipy.__version__,rk_source_sha256=hashlib.sha256(Path(rk.__file__).read_bytes()).hexdigest(),
+        dense_interval=[float(piece.t_old),float(piece.t)],dense_coefficients=piece.F[:,-1].copy(),
+        dense_initial=float(piece.y_old[-1]),polynomial=polynomial,
+        dense_value_identity=polynomial['value']-float(piece(t)[-1]),
+        dense_first_q=dense_first,retained_minus_dense_first_q=a,dense_minus_rhs_first_q=b,
+        first_split_identity=(retained_first-direct_first)-a-b,
+        history_interval=i,onset_interval=background.onset['index'],
+        history_input={key:value[i:i+2].copy() for key,value in inputs.items()},
+        history_power_coefficients=background.profile._spline.c[:,i].copy(),
+        scope='analytic derivative of the numerical dense polynomial; not a replacement physical field jet')
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output',type=Path,required=True);args=parser.parse_args()
+    parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--audit-dense-piece',action='store_true',help='also split the one local history derivative error against its dense polynomial')
+    args=parser.parse_args()
     if args.output.exists(): raise ValueError('preserve the existing comparison')
     if not args.output.parent.is_dir(): raise ValueError('output parent must exist')
     commit,bindings=frozen_sources()
@@ -38,7 +92,7 @@ def main():
     if saved['status']!='completed_numerical_interval': raise ValueError('require completed endpoint')
     geometry=json.loads(original)['geometry']
     budget=Budget(maximum_evaluations=10000000,cpu_seconds=60.)
-    report=dict(schema='nsc-atlas-prepared-endpoint-connection-v1',source_commit=commit,
+    report=dict(schema='nsc-atlas-prepared-endpoint-connection-v2' if args.audit_dense_piece else 'nsc-atlas-prepared-endpoint-connection-v1',source_commit=commit,
         source_bindings=bindings,input=dict(path=INPUT,sha256=hashlib.sha256(raw).hexdigest()),
         prepared_reference=dict(path=PREPARED,sha256=hashlib.sha256(prepared_raw).hexdigest()),
         original_input=dict(path=producer.BASE_INPUT,sha256=hashlib.sha256(original).hexdigest()),
@@ -92,6 +146,10 @@ def main():
                 retained_minus_prepared_rate=float(retained['F_prime'][1])*qx-Jx,
                 source_value_identity=g-float(direct['source_chi_over_epsilon'][0]),
                 interior_values_sha256=array_hash({'U':U,'chi':exterior['chi']}))
+            if args.audit_dense_piece:
+                report['dense_audit']=audit_dense_piece(field,background,t,V,
+                    float(retained['F_prime'][0]),float(direct_profile['f_prime'][0]),budget=preparation)
+            report['preparation']['charged_values']=preparation.evaluations
         finally:
             budget.check(preparation.evaluations)
         phase='one leading common stage'
@@ -129,7 +187,7 @@ def main():
         source_integrations=int(source_completed),retries=0,time_steps=0,raw_history_saved=False)
     args.output.write_text(json.dumps(plain(report),indent=2,sort_keys=True,allow_nan=False)+'\n',
                            encoding='utf-8',newline='\n')
-    keys=('status','execution','failure','clock','field','residual','prepared_minus_prefix_rate','cap_rate_minus_retained_rate')
+    keys=('status','execution','failure','clock','field','residual','prepared_minus_prefix_rate','cap_rate_minus_retained_rate','dense_audit')
     print(json.dumps(plain({k:report.get(k) for k in keys})),flush=True)
     return 0 if report['status']=='completed_reference_comparison' else 1
 

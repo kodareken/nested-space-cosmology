@@ -127,6 +127,14 @@ geometry, zero cap departures and no time evolution (1,696,469 values /
 finite-alpha state's incoming mismatch. A separate leading reference event
 will compare the actual prepared wall jets, retained history and common port.
 
+That [leading-reference comparison](../results/summaries/nsc-atlas-prepared-endpoint-connection-v1.json)
+now finds a `6.76461e-9` material-rate difference in history transfer,
+against `3.22726e-12` between the prepared rate and exterior prefix. The
+incoming boundary-force identity explains the cap momentum rate to
+`4.03972e-13` in L2. One preparation and one event use 1,708,414 values /
+2.5625 CPU seconds, without an evolution or grid scan. This locates a
+transfer contribution; it does not reconstruct the missing evolved state.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.
