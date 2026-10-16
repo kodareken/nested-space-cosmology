@@ -29,12 +29,11 @@ def report():
           'charged values;',CONTROLS.active_cpu_seconds,'active CPU seconds')
 
 
-@pytest.mark.parametrize('R',[1/256,1/2])
-def test_constant_zero_coupling_cap_matches_hand_mass_balance(R,budget):
-    # Dyadic data make the constant-field limiter ties exactly representable.
-    # Decimal moment/rate rounding can select different one-sided ties in
-    # component-first and direction-first arithmetic; that domain guard stays.
-    p,q,rx,pdot,qdot=1/4,1/8,R/8,1/16,-1/32
+@pytest.mark.parametrize('R,p,q',[(1/256,1/4,1/8),(1/2,1/4,1/8),(.004,.3,.2)])
+def test_constant_zero_coupling_cap_matches_hand_mass_balance(R,p,q,budget):
+    # The decimal case previously failed exact branch agreement when the
+    # adapter contracted directions before choosing the native limiter.
+    rx,pdot,qdot=R/8,1/16,-1/32
     faces=R*np.linspace(0,1,5)
     state=dict(Ip=p*np.diff(faces**2)/2,Iq=q*np.diff(faces))
     rates=dict(R=rx,T=1/4,Ip=(pdot/p+2*rx/R)*state['Ip'],Iq=(qdot/q+rx/R)*state['Iq'])

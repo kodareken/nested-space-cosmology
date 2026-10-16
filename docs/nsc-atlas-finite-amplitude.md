@@ -3322,10 +3322,17 @@ jump-sum discrepancy, are returned alongside the full balance defect. They
 are checks, never replacements for a missing channel. A returned defect is
 not automatically accepted: retained-state interpretation requires the
 explicit accuracy checks in the [calculation record](prior-art-and-open-claim.md#next-fixed-terminal-comparison).
-Nine manufactured controls cover exact constant caps, nonconstant coupled
+Ten manufactured controls cover exact constant caps, nonconstant coupled
 rates, coincident wall/axis/switch events and rejected input inconsistencies.
-The existing coupled-rate ledger is recovered with defect about `8.2e-16`.
-No retained cap has yet been evaluated with this assembler.
+The existing coupled-rate ledger is recovered with defect about `8.1e-16`.
+The decimal constant-cap control also tests native branch agreement when
+directional rates cancel. The adapter now selects its limiter in the exact
+same component basis and arithmetic order as `mass_tangent`, then contracts
+each reconstruction jet to the full-direction column. The independent radial
+query column remains zero in reconstruction data and one in the query radius.
+This fixes branch-representative drift without changing the retained native
+tangent, imposing a residual or weakening the branch check. The first retained
+attempt stopped at that branch comparison; reference integration has not run.
 
 ### Central clock in general null labels
 

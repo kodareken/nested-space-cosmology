@@ -253,6 +253,33 @@ declarations remain exact. Adaptive integration counts are retained as bounded
 work receipts; they are not required to be identical across platforms. No
 retained-state result has been obtained with this recorder yet.
 
+The first attempt with producer `4ce93f9` stops on the zero case before any
+reference flow: `native tangent partition/limiter differs`. It uses
+1,667,473 points / 2.921875 CPU seconds and one metric/RHS/tangent. The exact
+branch guard remains in force. A single prefix-only diagnosis may reconstruct
+that zero metric/RHS and compare the adapter's branches to the saved tangent,
+with at most 500,000 points / 30 CPU seconds, carried inside the original
+48-million-point / 300-second allowance. It performs no reference integration,
+time step or grid comparison. The candidate cause is component-first versus
+direction-first rounding in branch selection; that must be established before
+changing the adapter or repeating the retained comparison.
+
+**Diagnosis:** 27 minus-characteristic branch choices differ at zero-valued
+secants. The 128 panel endpoints and owners agree. Rebuilding in the native
+130-component basis reproduces every saved branch; contracting input rates
+before reconstruction changes cancellation roundoff. The prefix uses
+199,435 points / 2.515625 CPU seconds. Grok independently confirms the cause
+and the component-first correction. The adapter now contracts reconstruction
+jets only after branch selection, preserving the native tangent and exact guard.
+
+All 44 affected manufactured checks pass, including the previously failing
+decimal constant cap. Cumulative full-cap controls are 1,327,411 points /
+18.25 active CPU seconds; field controls are 53,753 / 0.734375; radial-composer
+controls are 691,326 / 9.40625. Each remains within its original allowance.
+The retained comparison may resume after freezing the corrected producer,
+carrying **1,866,908 points / 5.4375 CPU seconds** already consumed. Its
+physical states, reference tolerances and acceptance limits are unchanged.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

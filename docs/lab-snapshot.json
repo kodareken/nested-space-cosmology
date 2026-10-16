@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ee09c74f442ebe6663f414154f92764733513bcd",
+  "current_receipt_commit_parent": "4ce93f97dabd3694bee331abb49c5691628088d1",
   "files": [
     {
       "bytes": 2218,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 211142,
-      "change": "Bounded terminal transport recorder with compact output and explicit numerical gates.",
-      "changed_from_commit": "ee09c74f442ebe6663f414154f92764733513bcd",
+      "bytes": 211271,
+      "change": "Preserve the native limiter branch before contracting cap field jets; retain the bounded diagnosis.",
+      "changed_from_commit": "4ce93f97dabd3694bee331abb49c5691628088d1",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2777a9352b2a52704a44e3e502b33450957a5384d29c60a96b4ce25aae9890f6"
+      "sha256": "046af82ea5b91ba321d9e9e7e869ce41ce48299051a13eb7b46143adb9801935"
     },
     {
       "bytes": 9543,
@@ -32168,12 +32168,12 @@
       "sha256": "d782102450e221a96045286481873e6092b2d2e6eef0d62d500ef3729fdd6f11"
     },
     {
-      "bytes": 11844,
-      "change": "Full cap transport assembly and independent balance controls; original import records preserved.",
-      "changed_from_commit": "d6159c6c75a7e6d165690e61089739da4c9623bc",
+      "bytes": 12635,
+      "change": "Preserve the native limiter branch before contracting cap field jets; retain the bounded diagnosis.",
+      "changed_from_commit": "4ce93f97dabd3694bee331abb49c5691628088d1",
       "path": "src/recursive_horizons/nsc_atlas_cap_transport_fields.py",
       "retention_reason": "Read-only cap transport field jets and manufactured controls for the existing mass-balance comparison.",
-      "sha256": "8fb4c24ca96efac250342c4b0903284099db827f73a2cfa8de7005c7813aa37d"
+      "sha256": "be485c09aa10a0e724a0ac31eff97691c4394677be9890a6878410fcefd34f21"
     },
     {
       "bytes": 5084,
@@ -35489,10 +35489,12 @@
       "sha256": "c3f8b5ab81d77b75aa421eab83ddda71db29f53ea0f2fa4f4f70777fce5c3665"
     },
     {
-      "bytes": 8043,
+      "bytes": 7986,
+      "change": "Preserve the native limiter branch before contracting cap field jets; retain the bounded diagnosis.",
+      "changed_from_commit": "4ce93f97dabd3694bee331abb49c5691628088d1",
       "path": "tests/test_nsc_atlas_cap_transport_balance.py",
       "retention_reason": "Full ordered cap transport/reference balance and independent manufactured controls.",
-      "sha256": "5b7bc65d7cfead4b85bb3ba86f78e6eabfb2ee9efaecb6a0f0514de88615e3bc"
+      "sha256": "02073ea27f9051183c5ed1ce5cacc01a3720dac93b1930df83d713839e3d4168"
     },
     {
       "bytes": 12106,

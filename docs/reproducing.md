@@ -106,7 +106,7 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_transport_fields
 ```
 
 Its 27 manufactured controls pass. Cumulative development uses
-18,526 charged values / 0.609375 active CPU seconds of the
+53,753 charged values / 0.734375 active CPU seconds of the
 200,000-point / 20-second allowance. No retained cap or radial solve is used.
 Native samples exclude axis jets and exact formula-switch queries. Reference
 samples provide explicitly named small-radius limits, and a separate method
@@ -123,7 +123,7 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_radial_compariso
 Seven controls check an exact constant-field cap, a nonconstant reference
 against independent fixed-radius variation, moving switch coincidences,
 frozen partitions and invalid native evidence. Cumulative development uses
-472,439 charged values / 6.625 active CPU seconds of the 1,000,000-point /
+691,326 charged values / 9.40625 active CPU seconds of the 1,000,000-point /
 40-second allowance. A native born panel exactly on a formula switch remains
 outside the existing tangent's domain. No retained cap has been evaluated;
 the lapse, residual/jump integrals and integration-error control remain open.
@@ -138,7 +138,7 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_transport_refere
 Five manufactured checks pass using 9,828 charged values / 0.046875 active CPU
 seconds of a 200,000-point / 20-second allowance. Exact polynomial integrals
 and a 60-digit independent mass integral check the states and attenuation.
-The complete interface assembly remains to be implemented. The expanded seven
+The full assembler below supplies the interface assembly. The expanded seven
 transport-algebra controls also check wall/centre coincidences and separate
 interface velocities; that run uses zero field samples / 0.8125 CPU seconds.
 Neither component evaluates the retained cap or provides an error enclosure.
@@ -151,15 +151,18 @@ independent:
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_transport_balance.py -q -s
 ```
 
-Nine manufactured controls pass. Cumulative development, including failed
-and corrected attempts, uses 890,431 charged values / 12.328125 active CPU
+Ten manufactured controls pass. Cumulative development, including failed
+and corrected attempts, uses 1,327,411 charged values / 18.25 active CPU
 seconds of a 2,000,000-point / 60-second allowance. One coupled-rate test uses
 the original RHS and discrete ledger; the new channel sum differs by about
-`8.2e-16`. The full-balance wall remains off the native formula switches, and
+`8.1e-16`. The full-balance wall remains off the native formula switches, and
 the centre lapse is independently checked against the frozen field. Reported
 reference mass/rate/jump discrepancies still require a declared accuracy
 budget before interpreting a retained-state result. That next fixed terminal
-comparison is specified in the calculation owner; it has not run yet.
+comparison is specified in the calculation owner. Its first attempt stopped
+before integration at a limiter-branch mismatch. A bounded diagnosis identified
+component-order cancellation; the corrected adapter now selects the native
+branch before contracting reconstruction derivatives. The exact guard remains.
 
 The retained-state recorder and its synthetic routing controls are:
 

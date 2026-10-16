@@ -48,8 +48,11 @@ class CapTransportFields:
     Reference samples provide named small-radius limits, and a separate
     method supplies regular axis coefficients without asserting axis jets.
 
-    Construction charges the reused two-column reconstruction plus 12*n+2
-    primal/domain checks. Each query charges all reused background/potential
+    Reconstruction selects its branch in the native mass tangent's component
+    basis before contracting to the two query columns. This preserves the
+    floating-point representative at cancelling/tied characteristic slopes.
+    Construction charges that reconstruction and each component contraction,
+    plus 12*n+2 primal/domain checks. Each query charges reused background/potential
     work plus 15*N returned field/coefficient jet values. All calls share the
     caller's existing metric budget and accept at most 513 query points.
     """
@@ -81,11 +84,21 @@ class CapTransportFields:
         if (not self._profile.quiet_extension and
                 np.any((labels == self._profile.domain["first_label"]) & (label_rates > 0))):
             raise ValueError("backward transport direction leaves lower profile domain")
-        ip = _Jet(state["Ip"], np.column_stack((rates["Ip"], np.zeros(n))))
-        iq = _Jet(state["Iq"], np.column_stack((rates["Iq"], np.zeros(n))))
+        # Match mass_tangent's operation order for branch selection. Contracting
+        # input directions first can turn tiny cancelling secant rates into exact
+        # zero and choose a different representative at a native limiter tie.
+        count = 2+2*n
+        unit = np.eye(count)
+        seed = np.r_[rx,tx,rates['Ip'],rates['Iq']]
+        component_R = _Jet(radius,unit[0])
+        ip = _Jet(state['Ip'],unit[2:2+n])
+        iq = _Jet(state['Iq'],unit[2+n:])
         try:
             with np.errstate(over="raise", divide="raise", invalid="raise"):
-                self._rec, branches = _reconstruction(self._R*y, ip, iq, np.array([1.,0.]), budget)
+                component_rec, branches = _reconstruction(component_R*y, ip, iq, seed, budget)
+                self._rec = {k:_Jet(j.v,np.stack((j.d@seed,np.zeros_like(j.v)),axis=-1))
+                             for k,j in component_rec.items()}
+                budget.check(sum(j.v.size for j in component_rec.values())*(count+2))
         except FloatingPointError as error:
             raise ValueError("nonfinite transport reconstruction") from error
         primal = _reconstruct(self._faces, state)
