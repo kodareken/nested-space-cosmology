@@ -2783,7 +2783,9 @@ a physical junction failure. Further grid scans are not the next step.
 The [diagnostic companion](../src/recursive_horizons/nsc_atlas_cap_mass_tangent.py)
 differentiates the implemented mass-edge quadrature. It leaves the retained
 metric and transport producers unchanged. At this stage its manufactured
-controls pass; the four retained terminal cases have not been evaluated.
+controls and the four retained terminal cases pass, including creation
+validation and a standalone check. The [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
+records the numerical contributions and the corrected accumulation bound.
 
 On panel j, with half-width h and Gauss weights omega, the edge recurrence is
 
@@ -2906,6 +2908,19 @@ on the terminal zero case because of intermediate cancellation. This is
 an arithmetic check of two contractions of the same stored tape, not an
 uncertainty estimate for the physical mass equation. Ledger, face-split
 and saved-state tolerances keep their separate scales.
+
+For the finite order-eight state, the implemented upwind pairing is
+`-2.01783226502` of total balance `-2.12697432799`; the remaining pairing is
+`-0.10914206297`. The next connection is the piecewise mass-transport
+identity above: map its reconstructed field-equation defects, moving
+interface jumps and quadrature defects onto this discrete remainder.
+The radius and clock jets already differentiate all panel/node motion
+and downstream attenuation. Adding a separate width-times-density term
+would not recover a missing contribution. Similarly, a one-sided face
+trace is not automatically the counterpart of the nonlocal mass weights.
+No modified transport law is supplied by the one scalar mass constraint;
+a proposed change must preserve its field equations and recheck the full
+direction's limiter/cut branch. No further numerical run is admitted here.
 
 ### Central clock in general null labels
 
