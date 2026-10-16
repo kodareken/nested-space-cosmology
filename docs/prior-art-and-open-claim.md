@@ -1,6 +1,40 @@
 # Prior art and admission of new research
 
+## Fixed-input SSPRK3 coupled window, 16 October 2026
+
+The six-stage local comparison below preserves the exact scalar balance
+and moves the paired increment substantially closer to the independent
+SSPRK2 asymptotic extrapolant. This supports a full-window temporal
+comparison while holding the physical model and all spatial operators
+fixed. It does not certify either local endpoint as exact.
+
+| Item | Fixed SSPRK3 window |
+| --- | --- |
+| Inputs | Hash-authenticate the original six-case background record, its 66 bound inputs and the new local-step/operator evidence. Reuse its original 513 source/gauge rows and stored computational profile inputs. No old trajectory validation replay, profile-stage extraction, source solve or reference quadrature. |
+| Model and domain | Same action, source, amplitudes `0` and `0.00012983127142551443`, quiet corner, spatial grids, wall-label gauge and original finite interval. The characteristic background is unchanged. |
+| Cases | Zero/finite amplitude, each at 32 cells with 128 and 256 SSPRK3 steps. Supply exact cached midpoint nodes. Save 129 accepted slices per case: 768 steps and 2,308 coupled stages including four final reconstructions. |
+| Operators | Existing first-order exterior departure derivative, order-two prefix quadrature, characteristic cap departures, order-four positive partial cap quadrature and unchanged hybrid wall equations. Only the time update changes. |
+| Shared creation allowance | 300 process CPU seconds and 50,000,000 charged points for input authentication, profile construction, all four cases, diagnostics and creation validation together. Preserve the caller's accumulated budget. |
+| Diagnostics | Raw and finite-minus-zero temporal histories in wall geometry, clocks, scalar, physical cap integrals and exterior fields. Compare the new cases with the existing 32-cell SSPRK2 256/512-step histories at common saved cuts. Retain raw/departure constraint diagnostics at 129/65 cuts, own-trace zero-cap pullback, outgoing cap history, profile margins and final wall compatibility defects. |
+| Authentication | Reconstruct every saved physical state from raw departures, source, reference and profile; reconstruct four final coupled stages and all saved-array diagnostics. Verify hash bindings, shapes, clocks, accounting and finite domains. Do not replay a trajectory to check it. A standalone authentication has 60 CPU seconds/5,000,000 points. |
+| Stop | First profile or exterior domain exit, nonfinite arithmetic, nonpositive cap metric, invalid hybrid incoming sum, non-timelike wall, stage Courant value above `.4`, or shared-budget exhaustion. Preserve the failed state and phase under ignored `.build`; diagnose before a new calculation. No automatic retries or changed physical input. |
+| Decision | Determine whether temporal sensitivity decreases enough to separate it from the remaining spatial constraint and cap errors. Two SSPRK3 resolutions do not establish an observed order or a propagated error enclosure. Unchanged spatial deficiencies remain part of the result. |
+
+Recorder/authentication controls have 30 process CPU seconds and 100,000
+charged points. The physical comparison begins only after these controls
+and independent review. Historical results and their producers stay fixed.
+
 ## SSPRK3 with fixed physical inputs, 16 October 2026
+
+**Outcome:** all 20 operator controls pass with 27,607 points and 0.5625
+CPU seconds, plus two intentional exhaustion charges; the 17 local
+producer controls pass with 3,808 points and 0.140625 CPU seconds.
+The [physical local comparison](../results/development/nsc-atlas-ssprk3-step-audit-v1.json)
+uses six stages, 70,118 points and 1.1875 CPU seconds; its standalone
+check passes. Its paired discrepancy from the SSPRK2 asymptotic
+extrapolant is `-2.71979e-9`, compared with `-2.67869e-8` for the two
+SSPRK2 half steps. This is a controlled local improvement against that
+comparison, not an exact-error result. The fixed admission follows.
 
 The exact local ledger below identifies a temporal cancellation to improve.
 Keep the current action, amplitude, source/gauge cache, characteristic

@@ -2053,6 +2053,13 @@ and limiter changes can reduce the measured temporal order. Any measured
 improvement leaves the spatial constraint and cap-refinement questions
 separate; the Runge--Kutta coefficients do not resolve those questions.
 
+The [first local result](current-result.md#local-ssprk3-comparison-16-october-2026)
+uses six stages and 70,118 points. Its paired increment differs from the
+SSPRK2 asymptotic extrapolant by `-2.71979e-9`, compared with
+`-2.67869e-8` for the two SSPRK2 half steps. The weighted canonical and
+invariant balances close at roundoff. This motivates the fixed-input
+128/256-step comparison; the extrapolant is not an exact solution.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -92,6 +92,27 @@ replays no complete trajectory. Creation is exclusive and `--check`
 repeats only those same local steps. The [outcome](current-result.md#actual-scalar-step-balance-16-october-2026)
 retains the distinction between local increments and full-history error.
 
+The [SSPRK3 operator](../src/recursive_horizons/nsc_atlas_background_ssprk3.py)
+uses the existing coupled stage and exact supplied midpoint cache keys.
+Its 20 controls take 27,607 points and 0.5625 CPU seconds, plus two
+intentional budget-exhaustion charges. The 17 local-recorder controls use
+3,808 points and 0.140625 CPU seconds:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_background_ssprk3.py tests/test_diagnose_nsc_atlas_ssprk3_step.py -q
+python scripts/run_python.py scripts/diagnose_nsc_atlas_ssprk3_step.py --output results/development/nsc-atlas-ssprk3-step-audit-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_ssprk3_step.py --output results/development/nsc-atlas-ssprk3-step-audit-v1.json --check
+```
+
+The [saved local result](../results/development/nsc-atlas-ssprk3-step-audit-v1.json)
+uses six stages, 70,118 points and 1.1875 CPU seconds, within its
+30-second/150,000-point allowance. It reads the pinned earlier local
+SSPRK2 record without replaying those steps. The weighted five-part
+ledger, common starting state and stage keys are verified independently.
+Creation requires a new path; `--check` repeats only the six new stages.
+The [full original-window comparison](prior-art-and-open-claim.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+is being prepared with four fixed 128/256-step cases and no new source.
+
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
 without replaying its source or time evolution. Its 25 controls exercise

@@ -1,0 +1,768 @@
+{
+  "audit_source_bindings": {
+    "results/development/nsc-atlas-background-step-audit-v1.json": "a94a40a9a57f5b435b32d8d43005115650348f44d84a4ab67d49c3a181907aa4",
+    "scripts/diagnose_nsc_atlas_background_step.py": "e9ac13a5f2d93be2ad9f0d4734897af86d3f6b1184ddfab639ae3d9d66945455",
+    "scripts/diagnose_nsc_atlas_background_time.py": "d29a4190a40b9344c51c57833a58053ede0b3c34992c71ffa920a0ea5f0bab09",
+    "scripts/diagnose_nsc_atlas_ssprk3_step.py": "68f04e1e48b275bb4d9fda42f38fd735cc787e69a576437541979e18dd7f552a",
+    "src/recursive_horizons/nsc_atlas_background_ssprk3.py": "dcc3ecc2023679be3a837e807de58548cb1b6b51bc3e7419e1cba1b8caee8362",
+    "tests/test_diagnose_nsc_atlas_background_step.py": "76bcaf5ad07a4addea5edf4fb61e46945d047cceb06d3a395b88c5640901f12c",
+    "tests/test_diagnose_nsc_atlas_background_time.py": "26cbb7da5a9719bf958a3f9e3d90e8cfa2ccca3539269daf97f8d3e862b16ee6",
+    "tests/test_diagnose_nsc_atlas_ssprk3_step.py": "9e99254ca1897b598a67d90088621aea77a22ad490b2402f6efdb8388da0eaf1",
+    "tests/test_nsc_atlas_background_ssprk3.py": "af95185ae9f06ceb1e9b621baf88d46f86d33e8dfc69bc17344fe0de645e4d13"
+  },
+  "cases": [
+    {
+      "alpha": 0.0,
+      "amplitude": "zero",
+      "case": 1,
+      "comparison": {
+        "component_closures": {
+          "rk2_coarse": 0.0,
+          "rk2_richardson": -7.28583859910259e-17,
+          "rk2_two_halves": -5.551115123125783e-17,
+          "ssprk3": 0.0
+        },
+        "components": {
+          "rk2_coarse": {
+            "background_remainder": -1.2471547330861199e-05,
+            "cap_return_flux": 0.0,
+            "exterior_flux": -0.03010090807492071,
+            "frame_remainder": -6.938893903907228e-18,
+            "reference_geometry_remainder": 0.0
+          },
+          "rk2_richardson": {
+            "background_remainder": -6.1680714609953684e-09,
+            "cap_return_flux": 0.0,
+            "exterior_flux": -0.030111083118995418,
+            "frame_remainder": -9.25185853854297e-18,
+            "reference_geometry_remainder": 0.0
+          },
+          "rk2_two_halves": {
+            "background_remainder": -3.1225128863110463e-06,
+            "cap_return_flux": 0.0,
+            "exterior_flux": -0.030108539357976742,
+            "frame_remainder": -8.673617379884035e-18,
+            "reference_geometry_remainder": 0.0
+          },
+          "ssprk3": {
+            "background_remainder": -6.168071498002803e-09,
+            "cap_return_flux": 0.0,
+            "exterior_flux": -0.03011108284152659,
+            "frame_remainder": 6.938893903907228e-18,
+            "reference_geometry_remainder": 0.0
+          }
+        },
+        "endpoints": {
+          "rk2_coarse": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.40390726790138154,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          },
+          "rk2_richardson": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492676,
+            "c": 0.40390955823656616,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          },
+          "rk2_two_halves": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.40390898565277,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          },
+          "ssprk3": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.40390955851403504,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          }
+        },
+        "increments": {
+          "rk2_coarse": -0.03011337962225158,
+          "rk2_richardson": -0.03011108928706696,
+          "rk2_two_halves": -0.030111661870863116,
+          "ssprk3": -0.03011108900959808
+        },
+        "richardson_scope": "asymptotic (4*two_half_steps-coarse)/3 comparison; not truth or an error bound",
+        "ssprk3_minus_reference": {
+          "rk2_coarse": {
+            "L": 0.0,
+            "T": 0.0,
+            "c": 2.290612653499391e-06,
+            "r": 0.0,
+            "s": 0.0
+          },
+          "rk2_richardson": {
+            "L": 0.0,
+            "T": -1.3877787807814457e-17,
+            "c": 2.774688812046122e-10,
+            "r": 0.0,
+            "s": 0.0
+          },
+          "rk2_two_halves": {
+            "L": 0.0,
+            "T": 0.0,
+            "c": 5.728612650357512e-07,
+            "r": 0.0,
+            "s": 0.0
+          }
+        }
+      },
+      "step": {
+        "accepted": {
+          "background_chi": 0.40393928083298497,
+          "canonical_chi": 0.40390955851403504,
+          "canonical_f": 0.7901452512011815,
+          "departure_chi": -2.972231894994836e-05,
+          "raw_state_sha256": "06096f899608a4e645aba6debb015483934d63035ff3d3c7d15b3475788aeba6",
+          "wall": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.40390955851403504,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          }
+        },
+        "alpha": 0.0,
+        "background_chain": -6.16807150147225e-09,
+        "cache_indices": [
+          328,
+          329,
+          330
+        ],
+        "closures": {
+          "canonical": 3.469446951953614e-18,
+          "departure": 1.545835128739098e-20,
+          "invariant": 0.0,
+          "invariant_flux": 0.0
+        },
+        "components": {
+          "background_remainder": -6.168071498002803e-09,
+          "cap_return_flux": 0.0,
+          "exterior_flux": -0.03011108284152659,
+          "frame_remainder": 6.938893903907228e-18,
+          "reference_geometry_remainder": 0.0
+        },
+        "evaluated_points": 34420,
+        "h": 0.00031837581350641075,
+        "increment": -0.03011108900959808,
+        "initial": {
+          "background_chi": 0.43405088067761705,
+          "canonical_chi": 0.4340206475236331,
+          "canonical_f": 0.8497175256679502,
+          "departure_chi": -3.0233153983926392e-05,
+          "raw_state_sha256": "4a3e5afa3e7bfdab50b9877a4a03a507efae97edaabce16ba4ebe5ecda06e3d4",
+          "wall": {
+            "L": -0.1949995039703361,
+            "T": 0.11316934212664698,
+            "c": 0.4340206475236331,
+            "r": 0.510782271064088,
+            "s": 0.0708484300943692
+          }
+        },
+        "label": "zero",
+        "midpoint_state": {
+          "background_chi": 0.41893922948827905,
+          "canonical_chi": 0.4189081064454854,
+          "canonical_f": 0.8198082317616742,
+          "departure_chi": -3.1123042793677164e-05,
+          "raw_state_sha256": "b0b5aed39261131e717c89c19a77f1e39a68c7bb9c0efbdcba7bb1b192ba3a4d",
+          "wall": {
+            "L": -0.19509252289574863,
+            "T": 0.11357860964185618,
+            "c": 0.4189081064454854,
+            "r": 0.5109830448339117,
+            "s": 0.07111155616572565
+          }
+        },
+        "reference_geometry": {
+          "T": {
+            "accepted": 0.11398835977492675,
+            "actual_defect": -3.608224830031759e-16,
+            "closure": -4.7704895589362195e-18,
+            "physical_rk": 0.1139883597749271,
+            "reference_defect": -3.5605199344423966e-16
+          },
+          "r": {
+            "accepted": 0.5111839347259385,
+            "actual_defect": -1.1102230246251565e-16,
+            "closure": 3.12792326762068e-17,
+            "physical_rk": 0.5111839347259386,
+            "reference_defect": -1.4230153513872246e-16
+          }
+        },
+        "right_predictor": {
+          "background_chi": 0.40393928083298497,
+          "canonical_chi": 0.4039090300142606,
+          "canonical_f": 0.7901442173271911,
+          "departure_chi": -3.0250818724399613e-05,
+          "raw_state_sha256": "84171b1880b3f9f55b2d8e65f9a1f31517b1cf1c06214a7c061940dff197bb33",
+          "wall": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.4039090300142606,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          }
+        },
+        "rk": {
+          "T": 0.1139883597749271,
+          "c": 0.40390956468210654,
+          "chi": 0.40390956468210654,
+          "radius": 0.5111839347259386
+        },
+        "stage_geometry_defects": {
+          "T": [
+            9.645376172132255e-07,
+            -2.41658252673018e-07
+          ],
+          "r": [
+            2.3206970995630696e-07,
+            -5.8148529028803023e-08
+          ]
+        },
+        "stage_times": [
+          0.45221363341504833,
+          0.45253200922855474,
+          0.4523728213218015
+        ],
+        "stages": [
+          {
+            "chain": {
+              "B_x": -95.23980705056434,
+              "Jc": -95.23986253449159,
+              "Jchi": -95.23986253449158,
+              "Q_c": -95.23986253449159,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": 0.0,
+              "departure_chain_defect": 4.119968255444917e-15,
+              "departure_chi_rate": -5.54839272452045e-05,
+              "invariant_split_defect": 0.0
+            },
+            "courant": 0.10032277022324568,
+            "wall_rates": {
+              "L": -0.5832619334152995,
+              "T": 2.569457464915384,
+              "c": -95.23986253449159,
+              "r": 1.2608733927347167,
+              "s": 1.6518589404873003
+            }
+          },
+          {
+            "chain": {
+              "B_x": -93.83943214041858,
+              "Jc": -93.85055701344058,
+              "Jchi": -93.85055701344056,
+              "Q_c": -93.85055701344058,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": 0.0,
+              "departure_chain_defect": 5.0133508455729725e-16,
+              "departure_chi_rate": -0.011124873021984673,
+              "invariant_split_defect": 0.0
+            },
+            "courant": 0.10054596387268525,
+            "wall_rates": {
+              "L": -0.5875557653452419,
+              "T": 2.575520967356473,
+              "c": -93.85055701344058,
+              "r": 1.2623323262024924,
+              "s": 1.6561382276143746
+            }
+          },
+          {
+            "chain": {
+              "B_x": -94.59834914747319,
+              "Jc": -94.59314730333031,
+              "Jchi": -94.59314730333031,
+              "Q_c": -94.59314730333031,
+              "canonical_flux_defect": 1.4210854715202004e-14,
+              "canonical_frame_defect": 0.0,
+              "cap_c_return": 0.0,
+              "departure_chain_defect": 1.0526302052227265e-14,
+              "departure_chi_rate": 0.005201844142863753,
+              "invariant_split_defect": 0.0
+            },
+            "courant": 0.10043431649957393,
+            "wall_rates": {
+              "L": -0.5854069413689937,
+              "T": 2.572485924537174,
+              "c": -94.59314730333031,
+              "r": 1.261602035655732,
+              "s": 1.6539967147036105
+            }
+          }
+        ],
+        "weights": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.6666666666666666
+        ],
+        "x_left": 0.45221363341504833,
+        "x_mid": 0.4523728213218015,
+        "x_right": 0.45253200922855474
+      }
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "amplitude": "finite",
+      "case": 4,
+      "comparison": {
+        "component_closures": {
+          "rk2_coarse": 3.469446951953614e-18,
+          "rk2_richardson": 0.0,
+          "rk2_two_halves": 0.0,
+          "ssprk3": 0.0
+        },
+        "components": {
+          "rk2_coarse": {
+            "background_remainder": -1.2422520719757024e-05,
+            "cap_return_flux": -5.393683117006266e-08,
+            "exterior_flux": -0.030100345775596577,
+            "frame_remainder": 2.9675313942267856e-10,
+            "reference_geometry_remainder": 6.106226635438361e-16
+          },
+          "rk2_richardson": {
+            "background_remainder": 1.5384014806496538e-07,
+            "cap_return_flux": -5.393302945515002e-08,
+            "exterior_flux": -0.030110524361629327,
+            "frame_remainder": 9.315939223745555e-13,
+            "reference_geometry_remainder": 9.251858538542972e-17
+          },
+          "rk2_two_halves": {
+            "background_remainder": -2.990250068890532e-06,
+            "cap_return_flux": -5.393397988387818e-08,
+            "exterior_flux": -0.03010797971512114,
+            "frame_remainder": 7.488698029745056e-11,
+            "reference_geometry_remainder": 2.220446049250313e-16
+          },
+          "ssprk3": {
+            "background_remainder": 1.5120438251470247e-07,
+            "cap_return_flux": -5.393290316391418e-08,
+            "exterior_flux": -0.030110524166461893,
+            "frame_remainder": -9.199446759922125e-13,
+            "reference_geometry_remainder": 0.0
+          }
+        },
+        "endpoints": {
+          "rk2_coarse": {
+            "L": -0.1967345551159429,
+            "T": 0.1137387830031497,
+            "c": 0.4039459317600628,
+            "r": 0.5110084967532295,
+            "s": 0.07136601819970702
+          },
+          "rk2_richardson": {
+            "L": -0.19673455763637815,
+            "T": 0.11373878261298914,
+            "c": 0.40394832924287755,
+            "r": 0.5110084964140689,
+            "s": 0.07136601816927961
+          },
+          "rk2_two_halves": {
+            "L": -0.19673455700626932,
+            "T": 0.11373878271052928,
+            "c": 0.40394772987217387,
+            "r": 0.511008496498859,
+            "s": 0.07136601817688645
+          },
+          "ssprk3": {
+            "L": -0.19673455768004589,
+            "T": 0.11373878261091323,
+            "c": 0.4039483268005541,
+            "r": 0.5110084964161496,
+            "s": 0.07136601816968044
+          }
+        },
+        "increments": {
+          "rk2_coarse": -0.030112821936393752,
+          "rk2_richardson": -0.030110424453579032,
+          "rk2_two_halves": -0.030111023824282712,
+          "ssprk3": -0.030110426895902487
+        },
+        "richardson_scope": "asymptotic (4*two_half_steps-coarse)/3 comparison; not truth or an error bound",
+        "ssprk3_minus_reference": {
+          "rk2_coarse": {
+            "L": -2.5641029854917008e-09,
+            "T": -3.922364655295496e-10,
+            "c": 2.3950404912653767e-06,
+            "r": -3.370798085100546e-10,
+            "s": -3.0026578445863095e-11
+          },
+          "rk2_richardson": {
+            "L": -4.366773609376651e-11,
+            "T": -2.0759088892319255e-12,
+            "c": -2.442323454587836e-09,
+            "r": 2.0807799927524684e-12,
+            "s": 4.0083214525310495e-13
+          },
+          "rk2_two_halves": {
+            "L": -6.737765623210379e-10,
+            "T": -9.96160515187583e-11,
+            "c": 5.969283802254033e-07,
+            "r": -8.270939488852491e-11,
+            "s": -7.206013563632041e-12
+          }
+        }
+      },
+      "step": {
+        "accepted": {
+          "background_chi": 0.4146428614722853,
+          "canonical_chi": 0.4039474164778691,
+          "canonical_f": 0.7904906069289829,
+          "departure_chi": -0.010695444994416192,
+          "raw_state_sha256": "bc44f81d594f479875021e0341d3b321d7fd1be1cbb72f099cebb0d1755e36f5",
+          "wall": {
+            "L": -0.19673455768004589,
+            "T": 0.11373878261091323,
+            "c": 0.4039483268005541,
+            "r": 0.5110084964161496,
+            "s": 0.07136601816968044
+          }
+        },
+        "alpha": 0.00012983127142551443,
+        "background_chain": 1.5120336024562753e-07,
+        "cache_indices": [
+          328,
+          329,
+          330
+        ],
+        "closures": {
+          "canonical": -2.42861286636753e-17,
+          "departure": 6.776263578034403e-19,
+          "invariant": 0.0,
+          "invariant_flux": -3.8570439346612617e-19
+        },
+        "components": {
+          "background_remainder": 1.5120438251470247e-07,
+          "cap_return_flux": -5.393290316391418e-08,
+          "exterior_flux": -0.030110524166461893,
+          "frame_remainder": -9.199446759922125e-13,
+          "reference_geometry_remainder": 0.0
+        },
+        "evaluated_points": 34420,
+        "h": 0.00031837581350641075,
+        "increment": -0.030110426895902487,
+        "initial": {
+          "background_chi": 0.44460581937144944,
+          "canonical_chi": 0.43405762250123103,
+          "canonical_f": 0.8500735701624794,
+          "departure_chi": -0.010548196870218409,
+          "raw_state_sha256": "6a8ab0d68def149834844463e12f172f9f8af17b1a39071330c1630e6b7f192e",
+          "wall": {
+            "L": -0.19650165386899607,
+            "T": 0.11292722096492297,
+            "c": 0.4340587536964566,
+            "r": 0.5106118314186231,
+            "s": 0.07083982688853491
+          }
+        },
+        "label": "finite",
+        "midpoint_state": {
+          "background_chi": 0.42957638202227116,
+          "canonical_chi": 0.41895337293119855,
+          "canonical_f": 0.8201744013867219,
+          "departure_chi": -0.010623009091072607,
+          "raw_state_sha256": "beca99cccc958b1a91e4e7d1bacacff563b89a2f7dd2d1fd64aca54c89e282c6",
+          "wall": {
+            "L": -0.1966179336110428,
+            "T": 0.11333276067510566,
+            "c": 0.41895438930915485,
+            "r": 0.5108101060248247,
+            "s": 0.07110275224149469
+          }
+        },
+        "reference_geometry": {
+          "T": {
+            "accepted": 0.11373878261091323,
+            "actual_defect": -3.608224830031759e-16,
+            "closure": -4.7704895589362195e-18,
+            "physical_rk": 0.1137387826109136,
+            "reference_defect": -3.5605199344423966e-16
+          },
+          "r": {
+            "accepted": 0.5110084964161496,
+            "actual_defect": -1.1102230246251565e-16,
+            "closure": 3.12792326762068e-17,
+            "physical_rk": 0.5110084964161498,
+            "reference_defect": -1.4230153513872246e-16
+          }
+        },
+        "right_predictor": {
+          "background_chi": 0.4146388590101211,
+          "canonical_chi": 0.4039160162730057,
+          "canonical_f": 0.7904290634786438,
+          "departure_chi": -0.01072284273711539,
+          "raw_state_sha256": "960014da348178ad11bbfeeb620321661f8ba234fb0cf0697ac643e7b43d4295",
+          "wall": {
+            "L": -0.1967341498916135,
+            "T": 0.1137388802059312,
+            "c": 0.40391692638319876,
+            "r": 0.5110085584345658,
+            "s": 0.0713660247855211
+          }
+        },
+        "rk": {
+          "T": 0.1137387826109136,
+          "c": 0.4039481755961716,
+          "chi": 0.40394726527450886,
+          "radius": 0.5110084964161498
+        },
+        "stage_geometry_defects": {
+          "T": [
+            9.645376172157192e-07,
+            -2.4165825266895223e-07
+          ],
+          "r": [
+            2.32069709895429e-07,
+            -5.814852900963975e-08
+          ]
+        },
+        "stage_times": [
+          0.45221363341504833,
+          0.45253200922855474,
+          0.4523728213218015
+        ],
+        "stages": [
+          {
+            "chain": {
+              "B_x": -94.68891948856897,
+              "Jc": -95.23822215842873,
+              "Jchi": -95.23747204654606,
+              "Q_c": -95.23805471241562,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": -0.00016744601310669002,
+              "departure_chain_defect": 6.328271240363392e-15,
+              "departure_chi_rate": -0.5485525579770957,
+              "invariant_split_defect": -1.7842715152593946e-15
+            },
+            "courant": 0.10032277022324568,
+            "wall_rates": {
+              "L": -0.7281109042936542,
+              "T": 2.546345133640919,
+              "c": -95.23822215842873,
+              "r": 1.2453676737126063,
+              "s": 1.6506187364186788
+            }
+          },
+          {
+            "chain": {
+              "B_x": -93.45699423119186,
+              "Jc": -93.84900391517908,
+              "Jchi": -93.84836509302806,
+              "Q_c": -93.8488325362634,
+              "canonical_flux_defect": 1.4210854715202004e-14,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": -0.00017137891568443247,
+              "departure_chain_defect": 1.4765966227514582e-14,
+              "departure_chi_rate": -0.3913708618362227,
+              "invariant_split_defect": 3.457168362350216e-15
+            },
+            "courant": 0.10054596387268525,
+            "wall_rates": {
+              "L": -0.7349503085455309,
+              "T": 2.5517980194624506,
+              "c": -93.84900391517908,
+              "r": 1.246439132165922,
+              "s": 1.6548566522241048
+            }
+          },
+          {
+            "chain": {
+              "B_x": -94.13210833797893,
+              "Jc": -94.59156762304531,
+              "Jchi": -94.59087423427569,
+              "Q_c": -94.59139822908737,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 0.0,
+              "cap_c_return": -0.0001693939579356709,
+              "departure_chain_defect": 2.55351295663786e-15,
+              "departure_chi_rate": -0.45876589629675635,
+              "invariant_split_defect": 3.0866151648489826e-15
+            },
+            "courant": 0.10043431649957393,
+            "wall_rates": {
+              "L": -0.731540778956774,
+              "T": 2.549066436964848,
+              "c": -94.59156762304531,
+              "r": 1.245900991004323,
+              "s": 1.6527356835065312
+            }
+          }
+        ],
+        "weights": [
+          0.16666666666666666,
+          0.16666666666666666,
+          0.6666666666666666
+        ],
+        "x_left": 0.45221363341504833,
+        "x_mid": 0.4523728213218015,
+        "x_right": 0.45253200922855474
+      }
+    }
+  ],
+  "execution": {
+    "accepted_endpoint_extra_stage_calls": 0,
+    "comparison_points": 177,
+    "cpu_seconds": 1.1875,
+    "evaluated_points": 70118,
+    "full_trajectory_replays": 0,
+    "hash_authentication_passes": 2,
+    "initial_evaluations": 0,
+    "local_ssprk3_steps": 2,
+    "local_step_points": 68840,
+    "maximum_courant": 0.10054596387268525,
+    "old_ssprk2_steps_replayed": 0,
+    "profile_fit_points": 1101,
+    "profile_stage_extractions": 0,
+    "retries": 0,
+    "source_integrations": 0,
+    "stage_calls": 6
+  },
+  "input": {
+    "local_step": {
+      "bytes": 35955,
+      "local_steps_replayed": 0,
+      "path": "results/development/nsc-atlas-background-step-audit-v1.json",
+      "sha256": "a94a40a9a57f5b435b32d8d43005115650348f44d84a4ab67d49c3a181907aa4",
+      "source_bindings": {
+        "scripts/diagnose_nsc_atlas_background_step.py": "e9ac13a5f2d93be2ad9f0d4734897af86d3f6b1184ddfab639ae3d9d66945455",
+        "scripts/diagnose_nsc_atlas_background_time.py": "d29a4190a40b9344c51c57833a58053ede0b3c34992c71ffa920a0ea5f0bab09",
+        "tests/test_diagnose_nsc_atlas_background_step.py": "76bcaf5ad07a4addea5edf4fb61e46945d047cceb06d3a395b88c5640901f12c",
+        "tests/test_diagnose_nsc_atlas_background_time.py": "26cbb7da5a9719bf958a3f9e3d90e8cfa2ccca3539269daf97f8d3e862b16ee6"
+      }
+    },
+    "original": {
+      "authenticated_input_files": 66,
+      "hashed_bytes": 42502534,
+      "manifest_sha256": "b9a657079dbef081d9a343e1814a6f8271582bb9370443dbfd91305401c4584c",
+      "path": "results/development/nsc-atlas-background-evolution-v1/background.json",
+      "recursive_validation": false,
+      "sha256": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca"
+    }
+  },
+  "limits": {
+    "cpu_seconds": 30.0,
+    "evaluated_points": 150000,
+    "stage_calls": 6
+  },
+  "paired": {
+    "rk2_coarse": {
+      "closure": 2.0071504476374714e-18,
+      "components": {
+        "background_remainder": 4.902661110417483e-08,
+        "cap_return_flux": -5.393683117006266e-08,
+        "exterior_flux": 5.622993241340135e-07,
+        "frame_remainder": 2.9675314636157246e-10,
+        "reference_geometry_remainder": 6.106226635438361e-16
+      },
+      "endpoint": {
+        "L": -0.0015486715319283362,
+        "T": -0.0002495767717770464,
+        "c": 3.866385868128708e-05,
+        "r": -0.00017543797270902495,
+        "s": -9.00464262763856e-06
+      },
+      "increment": 5.576858578271171e-07
+    },
+    "rk2_richardson": {
+      "closure": 7.121355388657645e-17,
+      "components": {
+        "background_remainder": 1.6000821952596075e-07,
+        "cap_return_flux": -5.393302945515002e-08,
+        "exterior_flux": 5.587573660911782e-07,
+        "frame_remainder": 9.316031742330941e-13,
+        "reference_geometry_remainder": 9.251858538542972e-17
+      },
+      "endpoint": {
+        "L": -0.0015486740523635856,
+        "T": -0.0002495771619376169,
+        "c": 3.8771006311388856e-05,
+        "r": -0.00017543831186961345,
+        "s": -9.00467305504915e-06
+      },
+      "increment": 6.648334879288953e-07
+    },
+    "rk2_two_halves": {
+      "closure": 5.3044591288853304e-17,
+      "components": {
+        "background_remainder": 1.3226281742051427e-07,
+        "cap_return_flux": -5.393397988387818e-08,
+        "exterior_flux": 5.596428556027544e-07,
+        "frame_remainder": 7.488698897106794e-11,
+        "reference_geometry_remainder": 2.220446049250313e-16
+      },
+      "endpoint": {
+        "L": -0.0015486734222547593,
+        "T": -0.0002495770643974604,
+        "c": 3.874421940386341e-05,
+        "r": -0.00017543822707943857,
+        "s": -9.004665448203442e-06
+      },
+      "increment": 6.380465804034507e-07
+    },
+    "ssprk3": {
+      "closure": -3.85717628355927e-19,
+      "components": {
+        "background_remainder": 1.5737245401270528e-07,
+        "cap_return_flux": -5.393290316391418e-08,
+        "exterior_flux": 5.586750646963123e-07,
+        "frame_remainder": -9.199516148861164e-13,
+        "reference_geometry_remainder": 0.0
+      },
+      "endpoint": {
+        "L": -0.0015486740960313217,
+        "T": -0.00024957716401351193,
+        "c": 3.8768286519053063e-05,
+        "r": -0.00017543830978883346,
+        "s": -9.004672654217005e-06
+      },
+      "increment": 6.621136955931028e-07
+    }
+  },
+  "paired_ssprk3_minus_reference_increment": {
+    "rk2_coarse": 1.0442783776598574e-07,
+    "rk2_richardson": -2.719792335792448e-09,
+    "rk2_two_halves": 2.40671151896521e-08
+  },
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-ssprk3-step-audit-v1",
+  "scope": "one local interval with unchanged physical inputs; weighted increment identities and sampled method sensitivity; Richardson is asymptotic, not truth; no global convergence or error enclosure",
+  "settings": {
+    "cache_indices": [
+      328,
+      329,
+      330
+    ],
+    "cap_quadrature_order": 4,
+    "cases": [
+      1,
+      4
+    ],
+    "cut": 82,
+    "exterior_quadrature_order": 2,
+    "maximum_courant": 0.4,
+    "stage_order": [
+      328,
+      330,
+      329
+    ],
+    "time_scheme": "SSPRK(3,3); one step per saved amplitude",
+    "weights": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.6666666666666666
+    ]
+  }
+}

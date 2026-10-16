@@ -2,6 +2,35 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Local SSPRK3 comparison, 16 October 2026
+
+The [local higher-order comparison](../results/development/nsc-atlas-ssprk3-step-audit-v1.json)
+takes one SSPRK3 step from each of the same cut-82 starting states. All
+geometry, source, profile and spatial operators remain fixed. Six stages
+use 70,118 points and 1.1875 process CPU seconds; standalone checking
+reproduces the result without replaying the old SSPRK2 steps.
+
+The paired invariant-scalar increment is `6.62113696e-7`, compared with
+`5.57685858e-7` for one SSPRK2 step, `6.38046580e-7` for its two halves
+and `6.64833488e-7` for their asymptotic `(4*fine-coarse)/3` extrapolant.
+The new discrepancy from that extrapolant is `-2.71979234e-9`; the
+two-half-step discrepancy is `-2.67869075e-8`. Separately, the new zero
+and finite endpoint discrepancies are `2.77469e-10` and `-2.44232e-9`.
+The extrapolant is a numerical comparison, not an exact reference.
+
+The weighted five-part increment closes at roundoff. The canonical
+closures are below `2.43e-17`, with paired invariant closure below
+`3.86e-19`. The zero-case background-chain remainder falls to
+`-6.16807e-9`; the finite remainder is `1.51203e-7`. Those terms remain
+in the update. No common scalar value is overwritten to obtain agreement.
+
+Twenty operator controls and seventeen producer controls pass, including
+smooth nonlinear convergence, nonautonomous stage timing, curved reference
+geometry, matched-profile cancellation and a nonsmooth switch without an
+assumed convergence order. The next [fixed-input coupled comparison](prior-art-and-open-claim.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+uses 128/256 steps over the original window. This local result motivates
+that test; it does not resolve the full history's temporal or spatial errors.
+
 ## Actual scalar-step balance, 16 October 2026
 
 The [local-step record](../results/development/nsc-atlas-background-step-audit-v1.json)

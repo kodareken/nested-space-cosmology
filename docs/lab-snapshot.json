@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "509aa9fa3a00298e6a76015728799d4acd4c6fe1",
+  "current_receipt_commit_parent": "38b53ca734c36d62dc75cd06b885f95d5cd9564c",
   "files": [
     {
       "bytes": 1506,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 198590,
-      "change": "Record exact local scalar-step balance and its higher-order time-integration successor",
-      "changed_from_commit": "509aa9fa3a00298e6a76015728799d4acd4c6fe1",
+      "bytes": 199214,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "38b53ca734c36d62dc75cd06b885f95d5cd9564c",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "0196ffa3fa11637e87cf4e14c36e195d2a0ae1c863db307c05b04ed1a1bb2cc1"
+      "sha256": "968ad991c41fec1250bbf1dbe0ec7b1518ce15e8a8b46dfaaf3ed112445114f7"
     },
     {
       "bytes": 9543,
