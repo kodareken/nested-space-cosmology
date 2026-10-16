@@ -2,6 +2,60 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Saved near-wall row audit, 16 October 2026
+
+The [saved-array audit](../results/development/nsc-atlas-boundary-rows-audit-v1.json)
+inspects exactly cuts 63, 68 and 128 from both 64-cell methods and both
+amplitudes. It reconstructs nodes 56--64 near the wall and 28--36 as a
+same-cut interior control, with 54 shared analytic vacuum evaluations.
+There is no stage, source solve, profile fit, complete-history diagnostic
+or time evolution. The retained incoming constraints and wall estimates
+are reproduced from the raw saved departures and physical endpoints.
+
+For the quadratic method's finite case, the independent, **unweighted**
+incoming constraint has the following signed values:
+
+| Saved cut | Node 62 | Node 63 | Native `p5` wall | Stride-two `p5` wall |
+| --- | ---: | ---: | ---: | ---: |
+| 63 | `9.28122e-5` | `3.64417e-4` | `7.66633e-4` | `3.00362e-4` |
+| 68 | `8.76453e-5` | `3.03531e-4` | `6.38441e-4` | `3.27035e-5` |
+| 128 | `-4.15880e-5` | `-7.89433e-5` | `-1.41493e-4` | `-9.20329e-5` |
+
+At the first two cuts, the interior-control values are below `2.895e-10`
+and `2.468e-10` in magnitude. At cut 128 they reach several `1e-6`.
+The final rows therefore contain a particularly sensitive shape during
+the pulse. At cut 63, node 63, the five signed contributions are
+`-0.00217152184` from departure curvature, `-4.83023e-6` from background
+lapse times radius departure, `+0.00252877654` from background radius
+times lapse departure, `-1.29737e-7` from the departure product, and
+`+1.21222e-5` from scalar stress. The residual is principally a mismatch
+between the curvature and lapse contributions.
+
+This is not a causal identification of the special derivative row.
+The radial third difference at cut 63 decreases in magnitude from
+`1.21976e-8` to `9.76935e-9` even while the last-node constraint grows.
+At cut 68 the lapse third difference changes from `1.41281e-8` to
+`8.12983e-7`. The result separates changing a stencil on identical data
+from comparing changed evolved states with one common diagnostic. The
+[exact stencil identities](nsc-atlas-finite-amplitude.md#a-common-second-order-departure-derivative)
+explain sensitivity but do not determine whether the boundary shape arose
+from the closure or from coupled cap/interface data.
+
+All eight controls and independent review pass before creation. Creation
+and its validation pass on the first attempt with **97,350 points / 1.59375
+process CPU seconds**; one standalone check passes with **48,675 points /
+1.5625 CPU seconds**. The record authenticates all 104 predecessor bindings
+and binds its own producer and controls. Its 468,207 bytes have SHA256
+`f2f33cfc7e539ef65b3960d1d4b1f532c938325f2fe414b79915882b84be0f02`.
+
+The audit localizes a discrete boundary sensitivity and leaves its origin
+ambiguous. End this same-grid stencil scan. The next independent question
+is whether reconstructed cap mass and lapse satisfy their temporal and
+radial equations on selected saved cuts. That check must retain the actual
+cap field trace and measured mass derivative; substituting the desired
+mass-flux law would remove the discrepancy being tested. No new wall
+condition or coupled evolution follows from this audit alone.
+
 ## Fixed-grid exterior-operator comparison, 16 October 2026
 
 The [completed comparison](../results/development/nsc-atlas-operator-comparison-v1/operator.json)
@@ -50,8 +104,8 @@ more sensitive: paired log-lapse and scalar method differences reach
 `3.83563%` and `1.98226%` of their respective new peaks. Small wall
 differences therefore do not certify the complete state.
 
-Independent wall curvature remains unresolved. The native three- and
-five-point weighted incoming peaks increase from `2.40506e-4` and
+Independent wall curvature remains unresolved. The native `p3` and
+`p5` weighted incoming peaks increase from `2.40506e-4` and
 `2.21621e-4` to `3.30267e-4` and `3.82613e-4`. On the same new
 history, widening those stencils changes their values by up to
 `1.80909e-4` and `3.02654e-4`. The stride-two peaks are `2.79637e-4`

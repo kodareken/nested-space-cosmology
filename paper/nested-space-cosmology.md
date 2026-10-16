@@ -1780,7 +1780,7 @@ The independent constraints use saved field differences and analytic vacuum
 jets, rather than the evolution stencil. Write
 $E_a=r_{aa}-L_a r_a+r\Psi_a^2/2$ for $a=\bar U,x$.
 The outgoing diagnostic retains the actual source curvature through
-$\mathcal R_x=E_x-r_{\rm src}E_{x,\rm src}/r$.
+$\mathcal R_x=E_x-r_{\mathrm{src}}E_{x,\mathrm{src}}/r$.
 All entries below concern the finite-amplitude history on the same 8,001
 interior diagnostic points.
 
@@ -1801,10 +1801,12 @@ below 0.018% of their respective new peaks. These are sensitivities to
 the chosen derivative, not bounds on the continuum solution.
 
 The improved average residual and wall slopes do not settle wall curvature.
-Independent three- and five-point native-width estimates of the wall
+Independent backward-stencil estimates of the wall
 $E_{\bar U}$ peak increase from $4.87\times10^{-4}$ and
 $4.49\times10^{-4}$ to $6.67\times10^{-4}$ and
-$7.73\times10^{-4}$. Their maxima of the native-minus-double-width
+$7.73\times10^{-4}$ at native width. The first estimate uses three nodes
+for first derivatives and four for second derivatives; the other uses
+five for both. Their maxima of the native-minus-double-width
 differences are $3.58\times10^{-4}$ and $6.06\times10^{-4}$.
 The source Hermite curvature remains a one-sided trace at saved knots;
 its nonzero constraint is retained, not replaced by the source ODE target.

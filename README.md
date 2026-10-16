@@ -81,7 +81,10 @@ sensitive. The [same-grid quadratic-derivative comparison](docs/current-result.m
 reduces final wall kinematic defects about 21--33 times with a `0.52%`
 paired wall-scalar method difference. Constraint RMS decreases, but the
 largest near-wall incoming residual rises slightly and independent wall
-curvature remains unresolved. Boundary accuracy, profile support and a complete error
+curvature remains unresolved. A [three-cut saved-row audit](docs/current-result.md#saved-near-wall-row-audit-16-october-2026)
+localizes that sensitivity to the final exterior rows without identifying
+its cause; the next independent check is the cap's mass/lapse consistency.
+Boundary accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently

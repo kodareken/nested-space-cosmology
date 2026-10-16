@@ -8,6 +8,25 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [near-wall saved-row audit](current-result.md#saved-near-wall-row-audit-16-october-2026)
+uses the [bounded diagnostic](../scripts/diagnose_nsc_atlas_boundary_rows.py)
+and [eight synthetic controls](../tests/test_diagnose_nsc_atlas_boundary_rows.py).
+Controls pass with 60,460 aggregate points/0.15625 CPU seconds. Creation
+including validation uses 97,350 points/1.59375 CPU seconds; its one
+standalone check uses 48,675 points/1.5625 CPU seconds. Each authenticates
+the 104 input bindings once and evaluates three fixed cuts, without a
+stage or trajectory. Both production allowances are 30 CPU seconds and
+150,000 points. To authenticate the retained result:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_boundary_rows.py --output results/development/nsc-atlas-boundary-rows-audit-v1.json --check
+```
+
+Fresh reproduction selects a new output file without `--check`; existing
+files are protected. The result reports stencil sensitivity and leaves
+the origin of the boundary shape unresolved. It does not impose a wall
+derivative or resolve the independent cap mass equation.
+
 The [same-grid exterior-operator comparison](prior-art-and-open-claim.md#fixed-grid-exterior-operator-comparison-16-october-2026)
 uses the [quadratic derivative](../src/recursive_horizons/nsc_atlas_departure_gradient.py),
 [explicit coupled stage](../src/recursive_horizons/nsc_atlas_gradient_evolution.py)
@@ -1001,12 +1020,13 @@ The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
 change. The software release version and the manuscript revision are independent.
 
-Revision `working-2026-10-16.4` passes two clean deterministic builds and
-visual inspection of the cover, abstract, new Section 13.17, figures,
-quantitative table, conclusion and evidence appendix. Its 36-page PDF is
-2,803,690 bytes with SHA256
-`5e43acbc525647557742502cb7794be9c2c63ce1c6874efd38db2b675bb59036`.
-The current paper checks and 31 claims with 106 evidence links pass.
+Revision `working-2026-10-16.5` has passed visual inspection of the cover,
+contents, abstract, new Section 13.18, quantitative table, conclusion and
+evidence appendix. Its 37-page PDF is 2,810,596 bytes with SHA256
+`5d28ba600c527daa00e8497203faf9aa001b17d0fc283c90191bed093fb95aaf`.
+The source has 32 claims with 112 resolved evidence links. The clean
+byte-for-byte build check is in progress; its result is recorded below
+when complete.
 
 The canonical PDF uses the pinned Zopfli compressor for ReportLab streams, so
 standard zlib and zlib-ng installations produce the same encoded document.

@@ -2502,6 +2502,50 @@ issues. In particular, the general J/O relations above retain the cap
 constraints; a future cap check must measure its temporal mass residual
 instead of substituting the desired flux law into the acceleration.
 
+The boundary-row diagnostic has two exact polynomial controls. Write
+`Delta^3 Z_j=Z_(j+3)-3Z_(j+2)+3Z_(j+1)-Z_j`. On identical arrays,
+
+$$
+G^{\mathrm{center}}_{N-1}-G^{\mathrm{back}}_{N-1}
+=\frac{\Delta^3Z_{N-3}}{2h},\qquad
+G^{\mathrm{forward}}_{N-2}-G^{\mathrm{center}}_{N-2}
+=-\frac{\Delta^3Z_{N-3}}{2h}.
+$$
+
+Thus the penultimate row changes the leading first-derivative truncation
+coefficient by `h^2 Z'''/2`. This is a property of the stencils; it is
+not an estimate of the accumulated coupled evolution error.
+
+The wall diagnostic labelled `p3` uses three nodes for the first derivative
+and four for the second; `p5` uses five for each. A perturbation `epsilon`
+only at node `N-1` contributes `-5 epsilon/(h W)^2` and
+`-26 epsilon/[3(h W)^2]` to their native wall curvatures, respectively.
+The stride-two stencils omit that node entirely. Their second-derivative
+Taylor errors on smooth exact samples start at orders two and three,
+respectively. On evolved data these errors also contain the differentiated
+state error. The [saved-row admission](prior-art-and-open-claim.md#saved-near-wall-row-audit-16-october-2026)
+therefore separates stencil changes on identical arrays from changes in the
+evolved arrays, retaining scalar stress and both background cross terms.
+A concentrated last-row contribution alone cannot identify its physical or
+numerical origin.
+
+The [completed three-cut audit](current-result.md#saved-near-wall-row-audit-16-october-2026)
+finds that localization. At cut 63 the new finite incoming constraint
+changes from `9.28122e-5` at node 62 to `3.64417e-4` at node 63,
+while the same-cut interior control is below `2.895e-10`. The node-63
+value combines departure curvature `-0.00217152184`, background-radius
+and lapse-departure coupling `+0.00252877654`, and smaller terms.
+The new native/wide `p5` wall values at cut 68 are `6.38441e-4`
+and `3.27035e-5`. These are unweighted constraints.
+
+The radius third difference decreases between the old and new methods
+at each selected cut, despite the unresolved local constraint. Therefore
+localization alone does not select a corrected evolution stencil. The
+same-grid diagnostic ends here. An independent cap temporal-mass and
+radial-lapse check is the next selected calculation, retaining actual
+reconstructed derivatives and incoming-field trace differences before
+interpreting the J/O relations or replacing the boundary treatment.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -1,10 +1,10 @@
 {
-  "bytes": 2803690,
+  "bytes": 2810596,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "f02e1478e17da0f1835cd2d244ae2023144167cfde91b938361dcced5116ff39",
+  "metadata_sha256": "02532d6e5e920d06dd4471da087b88a5e778da11a1c240bfa8e2fdb76e9e41db",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 36,
-  "pdf_sha256": "5e43acbc525647557742502cb7794be9c2c63ce1c6874efd38db2b675bb59036",
+  "pages": 37,
+  "pdf_sha256": "5d28ba600c527daa00e8497203faf9aa001b17d0fc283c90191bed093fb95aaf",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -152,6 +152,14 @@
       "sha256": "8c42d143c8e6bd7f1fdcc9b4b0b1c453fc39efbe3ded8d0face008709252a217"
     },
     {
+      "path": "results/development/nsc-atlas-operator-comparison-v1/manifest.json",
+      "sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd"
+    },
+    {
+      "path": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+      "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09"
+    },
+    {
       "path": "results/development/nsc-atlas-profile-moment-v1/moment.json",
       "sha256": "91dd0edb78cc95c6af44d0f8d66553964fd0dfd47c6779b5e6bb92e287f161ef"
     },
@@ -190,6 +198,10 @@
     {
       "path": "results/development/nsc-atlas-source-mass-v1/mass.json",
       "sha256": "76fbed87ade6bce114e9e41fddcfe479bc94946dba4f3ccc55519c54724e347f"
+    },
+    {
+      "path": "results/development/nsc-atlas-spatial-refinement-v1/spatial.json",
+      "sha256": "29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd"
     },
     {
       "path": "results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json",
@@ -361,6 +373,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "1f8835ae9afbd70c3fe0cf4e2fcbd80fe945942708757a366c1e63a75e83848c",
-  "version": "working-2026-10-16.4"
+  "source_sha256": "b88de046cbd11f9689fa94a7f2960133e485407f6198b2701bab92089488fde1",
+  "version": "working-2026-10-16.5"
 }
