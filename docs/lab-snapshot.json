@@ -3,8 +3,16 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "534c714b6a677763c225937e8eb1363c8740902c",
+  "current_receipt_commit_parent": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
   "files": [
+    {
+      "bytes": 3120,
+      "change": "Carry the inherited history clock origin and allow active PDF checks to finish.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
+      "path": ".github/workflows/paper-pdf.yml",
+      "retention_reason": "Living manuscript PDF verification workflow.",
+      "sha256": "4fc30c752d6f84b187aacf8d59cb6cb848b4659f26b1ec74bdeb6a2220f535b3"
+    },
     {
       "bytes": 2338,
       "change": "Record the independently reproduced terminal cap transport attribution and compact evidence.",
@@ -10301,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 318104,
-      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
-      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "bytes": 318449,
+      "change": "Carry the prepared history clock origin explicitly and verify constant-translation invariance.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9326fbc3396251b85d99ae46a4a14ba155d6fe9bb164f070c2246a210391857f"
+      "sha256": "450dd1b9c9b8f36337e0ce7411106734e12b16e6efeb35eb6a9b4c9a3c98ab4c"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 307532,
-      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
-      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
+      "bytes": 308365,
+      "change": "Carry the prepared history clock origin explicitly and verify constant-translation invariance.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3bb59e8df4829143170b557be7ce877453debe81305625f4f122ff3572dadfa8"
+      "sha256": "befc3e24ba81900dfeaef2e0642f462a2c67a07885435f182b1338ac0e2a79d1"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 332822,
-      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
-      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
+      "bytes": 335113,
+      "change": "Carry the prepared history clock origin explicitly and verify constant-translation invariance.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ea8f78dec4df0e5b8b436388ab40569023585e4d6cd6cb82cae1d9aa183f463c"
+      "sha256": "666670b5eab5fe588fe5d46489e78055aff38f68a182a9ec5490d6a50190621a"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 108701,
-      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
-      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
+      "bytes": 109072,
+      "change": "Carry the inherited history clock origin and allow active PDF checks to finish.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "257ae140aa7f5b626bf20491a15c169c30335ff4011b328c805875148872892e"
+      "sha256": "d2373b7b6ffffd02351eaf46d009e3d18538b47dcd8140f649e5954cbf1ce685"
     },
     {
       "bytes": 18356,
@@ -32627,12 +32635,12 @@
       "sha256": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d"
     },
     {
-      "bytes": 10102,
-      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
-      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "bytes": 10415,
+      "change": "Carry the prepared history clock origin explicitly and verify constant-translation invariance.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
       "path": "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py",
       "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
-      "sha256": "a8d525386d74d5f19cf115f0f42b52eafd0f82f549f9448d9bbdd04bdf39732c"
+      "sha256": "4d6c95571b042b36668f355dcb3a859b533919e03ac27845b52220fdffab8105"
     },
     {
       "bytes": 5782,
@@ -36212,12 +36220,12 @@
       "sha256": "60086386ea1f1468758421f97fb98435e6cbec17574fd0928b7c839b3034901c"
     },
     {
-      "bytes": 6034,
-      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
-      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "bytes": 7419,
+      "change": "Carry the prepared history clock origin explicitly and verify constant-translation invariance.",
+      "changed_from_commit": "3c3a8275c1a3ea2ee94c80555d787196d0cbb172",
       "path": "tests/test_nsc_atlas_fixed_background_stage.py",
       "retention_reason": "Bounded prepared-history evidence or focused common-stage control.",
-      "sha256": "b14cde7e44cdcee8dbe7d6dcff6d7d8affafc67d61b662f00152ac3049908aff"
+      "sha256": "da4723a9148c88980931a53487cb17d625f27372974854bdaf8be5708601c765"
     },
     {
       "bytes": 6484,

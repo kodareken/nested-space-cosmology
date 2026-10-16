@@ -1953,6 +1953,44 @@ Both time projections agree with independent rational polynomial integrals,
 and the point-contact control retains the full onset hull. No prepared
 source or coupled trajectory is rerun for this change.
 
+### Source-front clock alignment, 17 October 2026
+
+Before a physical coupled window, compare the retained history's declared
+front label with `T+atanh(R)` from the existing reference wall gauge at the
+original source-front x. Use one gauge query and the original order-64
+source geometry under **10,000 values / 10 CPU seconds**. Compare q_V by
+the independent chain `q_x/V_x` as well. This is a clock-interface check,
+not a source solve, fit, scan or error enclosure. Any discrepancy remains
+visible before choosing initial data for the numerical departure window.
+
+The first query finds q differs by `1.0664592301894058`, the negative of
+the prepared history's initial T. The gauge explicitly sets T=0 at the
+quiet anchor, whereas the history has `Ta=-1.0664592301893958`. Pass this
+inherited additive offset into the common stage; its derivative is zero.
+The first handwritten V_x expression also had an erroneous factor four
+from the source's normalized bump coordinate; use the actual derivative
+of `V=(1-x/.8)*exp(x/.8)/U0`. That was a diagnostic expression, not solver
+code. The query used 1,412 values / 0.015625 CPU seconds.
+
+One further gauge query checks the corrected labels and chain rule. One
+manufactured common-state control shifts all history labels and its clock
+origin by the same constant, checking invariant fields, rates and mass.
+This added control uses the existing 8-million-value / 60-second common
+history allowance. No physical integration or source parameter changes.
+
+**Outcome:** the corrected front labels differ by `1.0103029524088925e-14`;
+the independent q_V is `1.0289023849503227` versus the retained
+`1.0289023850141723`, a difference of `-6.384959228000753e-11`.
+The second gauge query uses 1,412 values, with measured CPU below the
+timer increment (reported 0); both queries total 2,824 values / 0.015625
+CPU seconds. These floating discrepancies are recorded, not fitted away.
+
+The clock-translation control passes with **272,778 values / 0.40625 CPU
+seconds**. Including this control, the common-stage/time development total
+is **2,375,777 values / 3.6875 CPU seconds** across thirteen executions of
+eleven distinct controls. The common stage accepts the explicit constant
+`background_clock_offset`; a nonzero offset without a history is rejected.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

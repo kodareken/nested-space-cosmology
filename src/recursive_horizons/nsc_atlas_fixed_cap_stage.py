@@ -96,16 +96,20 @@ def exterior_departure_stage(departure,wall,*,x,eta,source,W,W_x,alpha,tube,budg
 def coupled_fixed_stage(state,*,basis,x,eta,source,gauge,alpha,tube,budget,
                          departure_gradient=quadratic_departure_gradient,
                          exterior_quadrature_order=2,rtol=2e-13,atol=2e-15,
-                         background=None):
+                         background=None,background_clock_offset=0.):
     """One actual exterior/cap/hybrid state with separately measured defects.
 
     With a retained history, cap coefficients describe departures. Evaluate
-    that history at this state's physical cap clock, including its evolved
-    departure; the coupled wall supplies the clock rate and total trace.
+    that history at this state's cap clock plus its declared constant history
+    origin. The evolved clock departure remains included; the coupled wall
+    supplies the clock rate and total trace. The offset changes no clock rate.
     """
     _shared_budget(budget);before=budget.evaluations
     eta=_grid(eta,'eta',2,512);state=fixed_state(state,len(eta)-1,basis)
     x=_scalar(x,'x');alpha=_scalar(alpha,'alpha',nonnegative=True)
+    offset=_scalar(background_clock_offset,'background clock offset')
+    if background is None and offset!=0.:
+        raise ValueError('background clock offset requires a retained background')
     if not callable(departure_gradient): raise ValueError('departure gradient must be callable')
     W,Wx,boost,boost_x=(_scalar(gauge[k],'gauge.'+k) for k in ('W','W_x','eta_plus','eta_plus_x'))
     if W<=0 or Wx<=0 or not math.isclose(boost,-.5*math.log(Wx),rel_tol=1e-12,abs_tol=1e-12):
@@ -139,7 +143,7 @@ def coupled_fixed_stage(state,*,basis,x,eta,source,gauge,alpha,tube,budget,
     connection=fixed_cap_hybrid_reference(basis,state['cap']['chi'],state['cap']['canonical_density'],Z,
         alpha=alpha,exterior_wall=outgoing,C_wall=math.exp(wall['L']),eta_plus=boost,eta_plus_x=boost_x,
         budget=budget,rtol=rtol,atol=atol,background=background,
-        background_time=wall['T'] if background is not None else None)
+        background_time=wall['T']+offset if background is not None else None)
     hybrid_rates=connection['wall_rates'];actual_rates=dict(hybrid_rates,c=connection['cap_c_x'])
     q,p=exterior['longitudinal'],exterior['first_jets']
     hybrid_defect={k:hybrid_rates[k]-q[k][-1]-Wx*p[k][-1] for k in FIELDS}

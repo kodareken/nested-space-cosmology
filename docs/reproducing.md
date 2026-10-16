@@ -63,6 +63,8 @@ passes 62 source-authentication and recorder tests. Check results report
 `reviewed-successors` when stored producer bytes differ from current files;
 `current` is reserved for exact current bindings. The degree-seven
 characteristic profile also has an explicit implementation-successor entry.
+An active GitHub PDF check is allowed to finish when later work is pushed;
+the concurrency group keeps the newest pending revision for the next run.
 The shared synthetic-test budgets count only CPU time
 inside their tests, retaining cumulative point and active-CPU limits.
 
@@ -434,10 +436,13 @@ The retained background in the common stage has separate finite controls:
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_fixed_background_stage.py tests/test_nsc_atlas_fixed_cap_stage.py tests/test_nsc_atlas_fixed_cap_time.py -q -s
 ```
 
-Ten controls pass across twelve development executions with 2,102,999
-values / 3.28125 active CPU seconds. They compare the same total polynomial,
+Eleven controls pass across thirteen development executions with 2,375,777
+values / 3.6875 active CPU seconds. They compare the same total polynomial,
 its constrained mass direction and one common manufactured step at the
-evolving cap clock. They do not integrate the prepared physical source.
+evolving cap clock, and verify invariance under a constant history-clock
+translation. They do not integrate the prepared physical source. For the
+prepared history, pass its inherited `physical_input_domain.Ta` as
+`background_clock_offset`; the reference wall gauge uses T=0 at that anchor.
 
 The exact quiet-prefix integration simplification is checked separately:
 `python scripts/run_python.py -m pytest tests/test_nsc_atlas_quiet_history_partition.py -q -s`.

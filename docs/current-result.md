@@ -73,6 +73,11 @@ eight existing controls pass, including a mass-direction difference of
 `2.29764038e-5` versus the equation's `2.29763772e-5`, and one manufactured
 common time step. These are interface checks; the prepared physical
 departure trajectory is still outstanding.
+The physical front check also identifies the inherited clock offset:
+`Ta=-1.0664592301893958`, because the wall gauge starts T at zero. The
+stage now accepts that constant explicitly. Corrected front labels agree
+within `1.01030e-14`; the added clock-translation control preserves fields,
+rates and mass. No source value or coupling was fitted.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

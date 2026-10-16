@@ -12,6 +12,7 @@ from recursive_horizons.nsc_atlas_cap_fixed_reference import fixed_cap_reference
 from recursive_horizons.nsc_atlas_fixed_cap_stage import coupled_fixed_stage
 from recursive_horizons.nsc_atlas_fixed_cap_time import advance_fixed_ssprk3,fixed_time_residual
 from recursive_horizons.nsc_atlas_reference_wall_gauge import ReferenceWallGauge
+from recursive_horizons.nsc_atlas_cap_background_jets import RetainedCapBackground
 from test_nsc_atlas_fixed_background_reference import history
 from test_nsc_atlas_fixed_cap_stage import case
 from test_nsc_atlas_reference_wall_gauge import GEOMETRY
@@ -119,3 +120,21 @@ def test_one_common_history_step_keeps_stage_clock_and_mass_remainder(budget):
         for key in initial[group]: np.testing.assert_array_equal(initial[group][key],saved[group][key])
     print('common history midpoint residuals:',{g:max(float(np.max(abs(v))) for v in row.values())
           for g,row in residual['residual'].items()})
+
+
+def test_constant_history_clock_origin_preserves_the_common_physical_state(budget):
+    state,kw,bg=manufactured_case(budget);data=bg.inputs;shift=.25
+    shifted=RetainedCapBackground(data['labels']+shift,data['values'],data['first'],data['second'])
+    original=coupled_fixed_stage(state,background=bg,**kw)
+    moved=coupled_fixed_stage(state,background=shifted,background_clock_offset=shift,**kw)
+    assert moved['connection']['cap']['background']['time']==original['connection']['cap']['background']['time']+shift
+    for key in original['physical_wall']:
+        assert moved['physical_wall'][key]==pytest.approx(original['physical_wall'][key],rel=0.,abs=2e-13)
+    for group in original['rates']:
+        for key in original['rates'][group]:
+            np.testing.assert_allclose(moved['rates'][group][key],original['rates'][group][key],rtol=2e-11,atol=2e-10)
+    assert moved['connection']['cap']['mass_rate']==pytest.approx(original['connection']['cap']['mass_rate'],rel=0.,abs=2e-12)
+    with pytest.raises(ValueError,match='requires a retained background'):
+        coupled_fixed_stage(state,background_clock_offset=shift,**kw)
+    with pytest.raises(ValueError,match='background clock offset'):
+        coupled_fixed_stage(state,background=bg,background_clock_offset=float('nan'),**kw)

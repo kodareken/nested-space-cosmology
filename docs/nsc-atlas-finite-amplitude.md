@@ -6339,7 +6339,8 @@ The common-stage connection is implemented below.
 
 The existing [common stage](../src/recursive_horizons/nsc_atlas_fixed_cap_stage.py)
 accepts the retained background alongside the fixed cap departures. Each
-stage evaluates it at `T=gauge.T+state.wall.T`. The existing hybrid supplies
+stage evaluates it at `T_history=gauge.T+state.wall.T+background_clock_offset`.
+The offset is a declared constant coordinate origin. The existing hybrid supplies
 the physical T_x; the background time derivative is subtracted once from
 the departure rates. The constrained mass rate remains
 
@@ -6377,6 +6378,18 @@ exactly, and checks both projected time derivatives against rational
 polynomial integrals. It uses 386,961 values / 0.609375 CPU seconds.
 This is an exact zero-piece integration simplification; physical-window
 cost and accuracy have not yet been measured with it.
+
+The prepared field and wall gauge have different time origins. The gauge
+defines T=0 at its quiet x=.4 anchor, while the retained field's absolute
+cap time there is `Ta=-1.0664592301893958`. That inherited datum is the
+prepared history's `background_clock_offset`; it is not selected by matching
+an observed signal. At the source front, the shifted label differs from
+the retained label by `1.01030e-14`, and the independent arrival derivative
+differs by `-6.38496e-11`. These remain floating comparisons, not exact
+continuum clock bounds. A constant translation of the history and its
+evaluation clock preserves the common fields, rates and mass in the added
+control. The clock rate T_x and explicit-time mass term acquire no extra
+scale factor.
 
 ### Central clock in general null labels
 
