@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2236324,
+      "bytes": 2236767,
       "path": "docs/lab-snapshot.json",
-      "sha256": "1087e755340859b76ebb56eb516dfa953b21006ef36b817264233053348a0c31"
+      "sha256": "9be1cee83a6dc25df9737138bfb3a166d0f5ada7e7e9f02ce459773b1da01be9"
     },
     {
       "bytes": 4997,
@@ -2146,9 +2146,9 @@
       "sha256": "ec78892ad6674bc818f5964ba306c276b6c0c3fddf282e7df7730a94484d23f0"
     },
     {
-      "bytes": 8803,
+      "bytes": 9347,
       "path": "docs/nsc-storage.md",
-      "sha256": "0452c02c6a2aa452b9c29fbbf3ca75e1bce89bbcf66e7398d212db7c1b659dd6"
+      "sha256": "c7c1f4cb458df532556a65ad2191166410cc4dd4ffbdcc14155e52b00c8ee32b"
     },
     {
       "bytes": 5475,
@@ -20401,7 +20401,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "1087e755340859b76ebb56eb516dfa953b21006ef36b817264233053348a0c31",
+  "lab_snapshot_sha256": "9be1cee83a6dc25df9737138bfb3a166d0f5ada7e7e9f02ce459773b1da01be9",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

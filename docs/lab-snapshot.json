@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "8d575f1d942d9e1aa6cf5be76a65459587d3209d",
+  "current_receipt_commit_parent": "27026bb8dddba15192f25affbffce396d242a945",
   "files": [
     {
       "bytes": 2068,
@@ -11277,9 +11277,9 @@
       "sha256": "ec78892ad6674bc818f5964ba306c276b6c0c3fddf282e7df7730a94484d23f0"
     },
     {
-      "bytes": 8803,
+      "bytes": 9347,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "changed_from_commit": "27026bb8dddba15192f25affbffce396d242a945",
       "import_bytes": 7159,
       "import_sha256": "1985c325b96d5556c4cd02431fdc0496033df2d0c3e7a3b0de69d58b4ce192af",
       "migration_disposition": "active_owner",
@@ -11287,7 +11287,7 @@
       "original_path": "lab/docs/nsc-storage.md",
       "original_sha256": "1985c325b96d5556c4cd02431fdc0496033df2d0c3e7a3b0de69d58b4ce192af",
       "path": "docs/nsc-storage.md",
-      "sha256": "0452c02c6a2aa452b9c29fbbf3ca75e1bce89bbcf66e7398d212db7c1b659dd6"
+      "sha256": "c7c1f4cb458df532556a65ad2191166410cc4dd4ffbdcc14155e52b00c8ee32b"
     },
     {
       "bytes": 5475,
@@ -29479,6 +29479,14 @@
       "original_path": "lab/results/research-reset/unowned-families.json",
       "path": "results/research-reset/unowned-families.json",
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
+    },
+    {
+      "bytes": 182893,
+      "change": "Register completed discrete mass ledger summary in publication inventory",
+      "changed_from_commit": "27026bb8dddba15192f25affbffce396d242a945",
+      "path": "results/summaries/nsc-atlas-cap-mass-balance-v1.json",
+      "provenance_role": "current compact result; full numerical data retained locally",
+      "sha256": "d3d7be8d7b2a124b6e6facbfc8ddfb86ff1e66eceb1cd16553fa7c243c8109e0"
     },
     {
       "bytes": 318358,

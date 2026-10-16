@@ -16,6 +16,12 @@ Regenerate the full output locally when an analysis needs those operands.
 CPU timings and raw byte hashes describe the recorded run; floating-point
 reproduction is assessed under its numerical comparison policy.
 
+Register each new tracked summary's path, byte count and SHA256 in the
+current-file receipt at `docs/lab-snapshot.json`, with its creation commit
+parent and compact-result role. Refresh `PUBLICATION-PROVENANCE.json` and
+run `scripts/check_publication.py`; the publication result inventory checks
+this registration separately from the summary's own hash check.
+
 [check_result_storage.py](../scripts/check_result_storage.py) rejects new or
 changed result JSON larger than 1 MiB. The
 [baseline](storage/result-payload-baseline.json) permits only byte-identical
@@ -27,6 +33,9 @@ The first compact successor is the
 [terminal cap mass-functional summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json).
 Its full record remains local under `.build/results/`; the
 [reproduction guide](reproducing.md#current-work) gives its command.
+The [discrete cap mass ledger](../results/summaries/nsc-atlas-cap-mass-balance-v1.json)
+uses the same policy and includes the first failed attempt in its recorded
+creation allowance.
 
 ## Current state, 2026-09-28
 
