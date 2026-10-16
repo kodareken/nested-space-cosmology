@@ -76,8 +76,16 @@ class _Fields:
 
 
 def _background_partition(basis,Z,T,background):
-    """Existing history knots and formula switch in fixed local coordinates."""
-    knots=tuple(Q(float(v)) for v in background.inputs['labels']);time=Q(T)
+    """History polynomial breaks and formula switch in fixed coordinates.
+
+    The onset constructor proves all preceding pieces identically zero.
+    Their interior knots need not split numerical integration. Preserve the
+    domain endpoint and onset; the metric certificate retains every cut.
+    """
+    labels=background.inputs['labels'];onset=background.onset
+    if onset is not None and onset['index']>1:
+        labels=np.r_[labels[:1],labels[onset['index']:]]
+    knots=tuple(Q(float(v)) for v in labels);time=Q(T)
     events={Q(SMALL_Z),*(v-time for v in knots),*(time-v for v in knots)}
     breaks=[0.];owners=[]
     for cell in range(basis.cells):

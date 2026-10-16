@@ -6363,6 +6363,21 @@ would fail. Both new and eight existing controls pass with the
 recorded. This connects the representation and evolution interface; a
 physical prepared-source departure trajectory and its error control remain.
 
+The radial partition now omits only interior labels preceding a declared
+onset whose endpoint jets are all exactly zero. Those pieces are the same
+zero polynomial, so their internal cuts do not affect the degree bound
+for the projection quadrature. The original first label, active onset,
+later labels, basis cuts and centre formula switch remain. The original
+inputs and all metric-certificate cuts remain unchanged: its closed
+Bernstein hulls can see an active piece even at point contact.
+
+A [single independent control](../tests/test_nsc_atlas_quiet_history_partition.py)
+reduces five radial panels to four while preserving the certificate
+exactly, and checks both projected time derivatives against rational
+polynomial integrals. It uses 386,961 values / 0.609375 CPU seconds.
+This is an exact zero-piece integration simplification; physical-window
+cost and accuracy have not yet been measured with it.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

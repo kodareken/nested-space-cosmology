@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+  "current_receipt_commit_parent": "534c714b6a677763c225937e8eb1363c8740902c",
   "files": [
     {
       "bytes": 2338,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 306623,
-      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
-      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "bytes": 307532,
+      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
+      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "6e42607f83a7bfd90f12c8224627db4fc205ae313a61c48a339bf947ad1cb007"
+      "sha256": "3bb59e8df4829143170b557be7ce877453debe81305625f4f122ff3572dadfa8"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 331094,
-      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
-      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "bytes": 332822,
+      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
+      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cab83d5b0e152749d27dcdf8e8008b6d1428d5e699a45e2b4ffabaa6e6bb9114"
+      "sha256": "ea8f78dec4df0e5b8b436388ab40569023585e4d6cd6cb82cae1d9aa183f463c"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 108383,
-      "change": "Record the prepared history comparison, evolving-clock connection, and exact historical source authentication.",
-      "changed_from_commit": "c4228a4982c878c625a7bd54bb9ccbb7d1b6470f",
+      "bytes": 108701,
+      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
+      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "c9da8be478fc60ad166b97a78c96f52be20dbff1ecda7dcf106c474c5edb65ab"
+      "sha256": "257ae140aa7f5b626bf20491a15c169c30335ff4011b328c805875148872892e"
     },
     {
       "bytes": 18356,
@@ -32444,12 +32444,12 @@
       "sha256": "1159d3244334cbd470c0a2ea88cc7d375fe4d680f8900c47b606d44ecfbd47b4"
     },
     {
-      "bytes": 18548,
-      "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
-      "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+      "bytes": 18917,
+      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
+      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "d56df7ac78465c8c3a23a7a8282ebb9e392fddeae3b66070b1d7a75301ad8ba0"
+      "sha256": "5596db3d0bd312fee6b7d52827793b08c1384fb665d35773a55c9024c9d2b252"
     },
     {
       "bytes": 7301,
@@ -36291,6 +36291,14 @@
       "path": "tests/test_nsc_atlas_prepared_background.py",
       "retention_reason": "Onset-preserving prepared history, independent controls and bounded physical comparison.",
       "sha256": "be3e2dd30b18c2c65156a3c934abc9f9a70398a952e70630815434c97ec78652"
+    },
+    {
+      "bytes": 4845,
+      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
+      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
+      "path": "tests/test_nsc_atlas_quiet_history_partition.py",
+      "retention_reason": "Exact quiet-prefix partition and independent rational projection control.",
+      "sha256": "e8c6739b087edabe1e39c42cd915facf10d24e7d9d7e248776d2f882a8ae9358"
     },
     {
       "bytes": 7870,

@@ -1923,6 +1923,36 @@ respective component units. These are diagnostics, not uniform errors.
 Grok independently confirms the clock chain rule and single N_T term;
 its review did not rederive the hybrid geometry or inspect the test bodies.
 
+### Exact quiet-prefix integration cuts, 17 October 2026
+
+The physical retained history has onset index 87. Its first 87 pieces
+are identically zero by their original endpoint jets and the constructor
+contract. Interior quiet labels 1..86 therefore need not split the radial
+ODE or time-projection integrals. Keep label 0, the onset label, every
+active label, fixed basis boundaries and the centre formula switch.
+Original inputs, profile evaluation and domain checks remain intact.
+
+Grok's independent review identifies a separate certificate issue: a
+closed-interval hull can include the full active piece even at point
+contact with its front. Coarsening those certificate intervals can weaken
+the positivity bound. Keep all original certificate cuts and hulls.
+
+One manufactured history with a zero prefix and degree-seven onset compares
+the reduced integration partition with the original partition. Compare
+both projections with exact rational polynomial integrals, and compare
+mass, lapse, clock derivative and the remainder identity. Include one
+point-contact hull check. Allow **3,000,000 values / 60 active CPU seconds**,
+with no physical source solve or scan. A missing onset cut, changed
+certificate, or rounding gap beyond the declared numerical tolerances
+stops this connection for diagnosis.
+
+**Outcome:** the single control passes once with **386,961 charged values /
+0.609375 active CPU seconds**. Its radial partition goes from five to
+four panels; the four-interval metric certificate is exactly unchanged.
+Both time projections agree with independent rational polynomial integrals,
+and the point-contact control retains the full onset hull. No prepared
+source or coupled trajectory is rerun for this change.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

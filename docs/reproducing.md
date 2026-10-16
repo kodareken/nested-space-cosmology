@@ -439,6 +439,11 @@ values / 3.28125 active CPU seconds. They compare the same total polynomial,
 its constrained mass direction and one common manufactured step at the
 evolving cap clock. They do not integrate the prepared physical source.
 
+The exact quiet-prefix integration simplification is checked separately:
+`python scripts/run_python.py -m pytest tests/test_nsc_atlas_quiet_history_partition.py -q -s`.
+One control passes with 386,961 values / 0.609375 CPU seconds, using exact
+rational projection integrals and an unchanged original-cut certificate.
+
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.
 It stopped at the 180-second CPU check after 341/371 steps. Preserve that
