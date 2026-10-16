@@ -26,6 +26,7 @@ RESOLVER_SOURCES = ("scripts/validation_source_successors.py",
 REVIEWED_PACKAGE_PATHS = frozenset({
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py",
     "src/recursive_horizons/nsc_atlas_refined_cache.py",
+    "src/recursive_horizons/nsc_atlas_forcing_cache.py",
 })
 CLASSIFICATIONS = frozenset({"validation-only", "test-only"})
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")

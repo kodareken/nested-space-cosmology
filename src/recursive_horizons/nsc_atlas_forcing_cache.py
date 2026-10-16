@@ -19,6 +19,7 @@ BLOCKS = ((0., .25), (.25, .75), (.75, 1.))
 DOMAIN_KEYS = ("U0", "Ua", "Ub", "Va", "Vb")
 MAX_SLICES = 129
 QUIET_TOLERANCE = 1e-24
+WALL_COORDINATE_REPLAY_ATOL = 2e-13
 DEFECT_KEYS = ("temporal_F_defect", "temporal_G_defect", "combined_F_defect",
                "combined_G_defect", "source_F_defect", "g1_defect", "g1_V_defect",
                "scaled_g1_V_defect")
@@ -107,14 +108,22 @@ class ForcingSliceProvider:
             d = provider.domain
             V = min(d["Vb"], max(d["Va"], d["Va"]+(d["Vb"]-d["Va"])*t))
             wall = float(provider.geometry["wall"](V))
-            expected = d["U0"]+eta*(wall-d["U0"])
-            expected[0], expected[-1] = d["U0"], wall
             for name in ("U", "F", "G"):
                 value = _array(row[name], "recorded "+name, 513).copy()
                 if value.shape != eta.shape:
                     raise ValueError("recorded forcing array shape differs from eta")
                 row[name] = value
-            if not np.allclose(row["U"], expected, rtol=0, atol=8*np.finfo(float).eps):
+            # The rebuilt reference curve has the same coordinate replay
+            # allowance as restore_inputs. The retained affine grid still has
+            # its original, much tighter internal arithmetic check: accepting
+            # curve roundoff must not accept independently displaced nodes.
+            recorded_wall = float(row["U"][-1])
+            expected = d["U0"]+eta*(recorded_wall-d["U0"])
+            expected[0], expected[-1] = d["U0"], recorded_wall
+            if (not math.isfinite(wall)
+                    or abs(recorded_wall-wall) > WALL_COORDINATE_REPLAY_ATOL
+                    or not np.allclose(row["U"], expected, rtol=0,
+                                       atol=8*np.finfo(float).eps)):
                 raise ValueError("recorded forcing coordinates differ from the original wall")
             for name in ("g1", "g1_V", "source_p_defect", "source_p_V_defect"):
                 value = _array(row[name], "recorded "+name, 1)

@@ -187,7 +187,8 @@ def test_pinned_hashes_all86_bindings_and_no_scientific_validator(tmp_path,budge
     monkeypatch.setattr(tool.producer,"validate_record",forbidden)
     assert tool.authenticate(tmp_path,budget)[2]["authenticated_input_files"]==86
     (tmp_path/names[0]).write_bytes(b"changed")
-    with pytest.raises(ValueError,match="bound input changed"):tool.authenticate(tmp_path,budget)
+    with pytest.raises(ValueError,match=r"^saved data/source binding changed: bound0\.txt$"):
+        tool.authenticate(tmp_path,budget)
     manifest["source_bindings"][names[0]]=tool.digest(b"changed")
     target.with_name("manifest.json").write_bytes(tool.encoded(manifest))
     with pytest.raises(ValueError,match="pinned"):tool.authenticate(tmp_path,budget)

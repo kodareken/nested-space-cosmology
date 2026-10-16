@@ -1,7 +1,7 @@
 {
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
-    "scripts/validation_source_successors.py": "3f4d923d8906894ddf2976ec7a4c16f91f564510374999fd0b3f9d786e6cc07d",
+    "scripts/validation_source_successors.py": "e656ed75556510a84a572d7320c18da8a2232a7d23d1ea918d75ea95f5e46bb4",
     "src/recursive_horizons/nsc_atlas_validation.py": "518765fcf70f0e2bdb71e63180c6696a9af5e33b280982c0a7e848bcab43dbe8",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
@@ -173,6 +173,12 @@
       "reason": "SourceSnapshot constructor replay comparison uses an analytic floating-roundoff allowance; source evaluation, interpolation and physical integration are unchanged.",
       "successor_sha256": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47"
     },
+    "src/recursive_horizons/nsc_atlas_forcing_cache.py": {
+      "classification": "validation-only",
+      "original_sha256": "5ea8752860c3f7a657da2dddd458af13df6a3f53f6d9b6058ad6468e3d524cf5",
+      "reason": "Separate bounded rebuilt-wall coordinate roundoff from strict internal saved-grid consistency; retained arrays and generation equations are unchanged.",
+      "successor_sha256": "7e881a637d9a7fdcb3600b96fb465887a9315acf8449ace9170d2da7c22e2a8a"
+    },
     "src/recursive_horizons/nsc_atlas_refined_cache.py": {
       "classification": "validation-only",
       "original_sha256": "7164dc2191cf175a8423fbcdde631b9961a4322bae7ed4399383146ca60f1ac0",
@@ -197,11 +203,35 @@
       "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
       "successor_sha256": "f1e8bb849390b9f4650351cec06ac5ffc07a278052e498f3e76b1302b21d5168"
     },
+    "tests/test_diagnose_nsc_atlas_constraint_transport.py": {
+      "classification": "test-only",
+      "original_sha256": "9441c88bceb00abeb49425f56932bf2d482ecd4f61da2b8aac94024e3293f3b7",
+      "reason": "Assert precise authenticated source/data drift rejection while retaining no-replay guards.",
+      "successor_sha256": "58b214c3b43a911eb436782a6d97bce7fd9bf4b01fa30f84a5c709a4b86fe7d8"
+    },
+    "tests/test_diagnose_nsc_atlas_ssprk3_step.py": {
+      "classification": "test-only",
+      "original_sha256": "9e99254ca1897b598a67d90088621aea77a22ad490b2402f6efdb8388da0eaf1",
+      "reason": "Assert precise authenticated source/data drift rejection while retaining no-replay guards.",
+      "successor_sha256": "41e37d21e6e8ab3c7643fb09701f930c1c7fcf4166f0291c14ac8764ef168627"
+    },
+    "tests/test_diagnose_nsc_atlas_wall_constraint.py": {
+      "classification": "test-only",
+      "original_sha256": "c2fe8bea7c9198a5aa03cf710303b203e0f62904b267449641ce87a9e9ab3e32",
+      "reason": "Assert precise authenticated source/data drift rejection while retaining no-replay guards.",
+      "successor_sha256": "4f33590540faf7836afc9704db516226ae9c8c6a031dbeb77ddc9d7f26b663c6"
+    },
     "tests/test_nsc_atlas_characteristic_trace.py": {
       "classification": "test-only",
       "original_sha256": "87dce18f63893154bd3659987126b11afec1145708442e214c152fe6985e37e1",
       "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
-      "successor_sha256": "6602ba38864f8a9d7d85e12ff5e3a4af5532b896257af7305906c51dc0a0e584"
+      "successor_sha256": "e5bc0382466ba8f10145fbb9d7a3caf10bce9d31ad4459aa3076017a65dad96f"
+    },
+    "tests/test_nsc_atlas_forcing_cache.py": {
+      "classification": "test-only",
+      "original_sha256": "21b2290bb2cd6db1c554f553193c64cafadab862d08d5d72ac2c314c365d4ed5",
+      "reason": "Exercise rebuilt-wall roundoff acceptance, exact retained arrays, and rejection of independent node/endpoint corruption and nonfinite geometry without field solves.",
+      "successor_sha256": "8992543db2806ed55d342d881b5cb1f2a2be821d9eb15f34468daac60f2b9799"
     },
     "tests/test_nsc_atlas_gradient_evolution.py": {
       "classification": "test-only",

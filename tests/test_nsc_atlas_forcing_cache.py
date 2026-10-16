@@ -223,6 +223,40 @@ def test_saved_slices_replay_without_physical_fallback(setup, monkeypatch):
     assert not provider.cache[next(iter(provider.cache))]["F"].flags.writeable
 
 
+def test_saved_coordinates_allow_reference_roundoff_without_changing_rows(setup, monkeypatch):
+    result = cache(setup)
+    records = copy.deepcopy(list(result.slice_provider.cache.values()))
+    wall = setup.wedge.geometry["wall"]
+    setup.wedge.geometry["wall"] = lambda V: wall(V)+1e-13
+    calls = len(setup.calls)
+    monkeypatch.setattr(model, "ScalarForcing", lambda *a, **k: pytest.fail("physical replay"))
+    provider = model.ForcingSliceProvider.from_records(
+        setup.wedge, setup.geometry, records, budget=setup.budget)
+    assert len(setup.calls) == calls
+    for saved in records:
+        replay = provider.slice(saved["t"], saved["eta"])
+        for name in ("U", "F", "G"):
+            np.testing.assert_array_equal(replay[name], saved[name])
+
+
+@pytest.mark.parametrize("mutation", ["reference_wall", "interior_node", "source_endpoint", "nan_wall"])
+def test_coordinate_replay_allowance_does_not_hide_grid_corruption(setup, mutation):
+    result = cache(setup)
+    records = copy.deepcopy(list(result.slice_provider.cache.values()))
+    wall = setup.wedge.geometry["wall"]
+    offset = 3e-13 if mutation == "reference_wall" else 1e-13
+    if mutation == "nan_wall":
+        offset = np.nan
+    setup.wedge.geometry["wall"] = lambda V: wall(V)+offset
+    if mutation == "interior_node":
+        records[0]["U"][1] += 5e-14
+    elif mutation == "source_endpoint":
+        records[0]["U"][0] += 5e-14
+    with pytest.raises(ValueError, match="coordinates differ"):
+        model.ForcingSliceProvider.from_records(
+            setup.wedge, setup.geometry, records, budget=setup.budget)
+
+
 @pytest.mark.parametrize("mutation", ["U", "eta", "nan", "cost", "duplicate", "quiet", "wall"])
 def test_saved_slice_tampering_is_rejected(setup, mutation):
     result = cache(setup)

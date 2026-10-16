@@ -10,6 +10,7 @@ import pytest
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 from recursive_horizons.nsc_atlas_characteristic_trace import SourceSnapshot
 from recursive_horizons.nsc_atlas_nonlinear_source import source_amplitude_bound
+from recursive_horizons.nsc_atlas_validation import source_jet_roundoff_tolerances
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -226,9 +227,18 @@ def test_saved_source_knots_recover_values_without_integration_or_march(monkeypa
     snapshot = SourceSnapshot(record["geometry"], alpha=data["alpha"],
         x_nodes=data["source"]["x"], source_rows=data["source"])
     row = snapshot.sample(snapshot.x_nodes)
+    # Analytic scalar jets are evaluated again, rather than copied from the
+    # knots. Their subtracted null label amplifies platform rounding.
+    jet_allowances = dict(zip(("c", "c_x"),
+        source_jet_roundoff_tolerances(snapshot.x_nodes, record["geometry"])))
     for key in ("h", "h_x", "r", "C", "log_C", "c", "r_x", "log_C_x", "c_x",
                 "r_Ubar", "log_C_Ubar", "c_Ubar"):
-        np.testing.assert_allclose(row[key], data["source"][key], rtol=2e-13, atol=2e-13)
+        if key in jet_allowances:
+            expected = np.asarray(data["source"][key])
+            np.testing.assert_array_less(abs(row[key]-expected),
+                2e-13+2e-13*abs(expected)+jet_allowances[key], err_msg=key)
+        else:
+            np.testing.assert_allclose(row[key], data["source"][key], rtol=2e-13, atol=2e-13)
     # Its polynomial curvature is honestly separate from the integrated source.
     assert np.max(abs(row["source_constraint"])) > 1e-8
     np.testing.assert_allclose(row["source_constraint"], row["source_constraint_from_curvature_defect"], atol=2e-14)

@@ -155,7 +155,9 @@ def test_pinned_old_step_and_producer_drift_fail_before_any_stage(tmp_path, monk
         if mutation == "rehashed_source":
             raw = json.loads(path.read_bytes()); raw["audit_source_bindings"][name] = tool.digest(b"changed")
             path.write_bytes(tool.encoded(raw))
-    with pytest.raises((ValueError, RuntimeError), match="payload mismatch|binding mismatch"):
+    expected = (r"unregistered saved source binding change: scripts/diagnose_nsc_atlas_background_time\.py$"
+                if mutation == "source" else "payload mismatch")
+    with pytest.raises((ValueError, RuntimeError), match=expected):
         tool.audit(tmp_path, budget=budget)
     assert calls == []
 

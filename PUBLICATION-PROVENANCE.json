@@ -1558,7 +1558,7 @@
     {
       "bytes": 2236324,
       "path": "docs/lab-snapshot.json",
-      "sha256": "556e97bc00b1e6e30548facfa798fc58105bef644d1278781b4b3498e83e3d92"
+      "sha256": "a655f369553e51fd470633fa2b87b5fadd0ddce5af547ae2fc9133fc485fc46f"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 73697,
+      "bytes": 73927,
       "path": "docs/reproducing.md",
-      "sha256": "4ce60e2a3a2e183f4d90f02bfa0804a1c6aca487bc55496902fe95f231f43c6b"
+      "sha256": "a92c571105b3173eaa54ef58ce900883939cbd840a07c027443816f1d341f235"
     },
     {
       "bytes": 31710,
@@ -2266,9 +2266,9 @@
       "sha256": "1faad06ecb90998397db1629aaa4a8b6be940e7501452e901f32a1fcbd7b1d6d"
     },
     {
-      "bytes": 22221,
+      "bytes": 24342,
       "path": "docs/storage/validation-source-successors.json",
-      "sha256": "71112449cb218c2f39ed39f6208b71e3f71d4159c9b4f163fe096b66545323b8"
+      "sha256": "e99d0eea74a8007787b4592b901ff1e128f671e661c869ee4e2debdae8929215"
     },
     {
       "bytes": 5774,
@@ -16301,9 +16301,9 @@
       "sha256": "7c0d3e984a60a829ed0deb59976fb7c1afcb8e2ff308c7d0be62a2f86f26705f"
     },
     {
-      "bytes": 6258,
+      "bytes": 6315,
       "path": "scripts/validation_source_successors.py",
-      "sha256": "3f4d923d8906894ddf2976ec7a4c16f91f564510374999fd0b3f9d786e6cc07d"
+      "sha256": "e656ed75556510a84a572d7320c18da8a2232a7d23d1ea918d75ea95f5e46bb4"
     },
     {
       "bytes": 240,
@@ -16521,9 +16521,9 @@
       "sha256": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d"
     },
     {
-      "bytes": 18503,
+      "bytes": 19075,
       "path": "src/recursive_horizons/nsc_atlas_forcing_cache.py",
-      "sha256": "5ea8752860c3f7a657da2dddd458af13df6a3f53f6d9b6058ad6468e3d524cf5"
+      "sha256": "7e881a637d9a7fdcb3600b96fb465887a9315acf8449ace9170d2da7c22e2a8a"
     },
     {
       "bytes": 7542,
@@ -18251,19 +18251,19 @@
       "sha256": "6138ec2e0679bb7746d4f3477c2dae042d59e66bde6e112442eff8c39d723b34"
     },
     {
-      "bytes": 13509,
+      "bytes": 13548,
       "path": "tests/test_diagnose_nsc_atlas_constraint_transport.py",
-      "sha256": "9441c88bceb00abeb49425f56932bf2d482ecd4f61da2b8aac94024e3293f3b7"
+      "sha256": "58b214c3b43a911eb436782a6d97bce7fd9bf4b01fa30f84a5c709a4b86fe7d8"
     },
     {
-      "bytes": 11010,
+      "bytes": 11157,
       "path": "tests/test_diagnose_nsc_atlas_ssprk3_step.py",
-      "sha256": "9e99254ca1897b598a67d90088621aea77a22ad490b2402f6efdb8388da0eaf1"
+      "sha256": "41e37d21e6e8ab3c7643fb09701f930c1c7fcf4166f0291c14ac8764ef168627"
     },
     {
-      "bytes": 13190,
+      "bytes": 13279,
       "path": "tests/test_diagnose_nsc_atlas_wall_constraint.py",
-      "sha256": "c2fe8bea7c9198a5aa03cf710303b203e0f62904b267449641ce87a9e9ab3e32"
+      "sha256": "4f33590540faf7836afc9704db516226ae9c8c6a031dbeb77ddc9d7f26b663c6"
     },
     {
       "bytes": 49204,
@@ -18386,9 +18386,9 @@
       "sha256": "6b2fec4d1ec741886c5401b0723c493e940f6587a8e6f41be20722bb738c21e9"
     },
     {
-      "bytes": 10093,
+      "bytes": 10693,
       "path": "tests/test_nsc_atlas_characteristic_trace.py",
-      "sha256": "6602ba38864f8a9d7d85e12ff5e3a4af5532b896257af7305906c51dc0a0e584"
+      "sha256": "e5bc0382466ba8f10145fbb9d7a3caf10bce9d31ad4459aa3076017a65dad96f"
     },
     {
       "bytes": 7017,
@@ -18441,9 +18441,9 @@
       "sha256": "1238ec27efeeba6106a3b638fc799ba88ac82a62f2d8acbbee64feb40658118d"
     },
     {
-      "bytes": 13571,
+      "bytes": 15179,
       "path": "tests/test_nsc_atlas_forcing_cache.py",
-      "sha256": "21b2290bb2cd6db1c554f553193c64cafadab862d08d5d72ac2c314c365d4ed5"
+      "sha256": "8992543db2806ed55d342d881b5cb1f2a2be821d9eb15f34468daac60f2b9799"
     },
     {
       "bytes": 9193,
@@ -20361,7 +20361,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "556e97bc00b1e6e30548facfa798fc58105bef644d1278781b4b3498e83e3d92",
+  "lab_snapshot_sha256": "a655f369553e51fd470633fa2b87b5fadd0ddce5af547ae2fc9133fc485fc46f",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

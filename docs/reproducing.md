@@ -16,6 +16,9 @@ Source-frame checks also propagate Hermite reconstruction roundoff through
 derived constraint residuals; cancellation is assessed against its operands.
 Reference-geometry derivative allowances account for the actual spline knot
 spacing, while retained coordinates and copied inputs remain exact where declared.
+Restored forcing grids allow `2e-13` absolute drift in the independently rebuilt
+wall coordinate. Their saved affine node spacing and fixed source endpoint
+still use the original eight-epsilon check; saved arrays are never moved.
 Profile-fit replay similarly propagates rounding through its polynomial basis
 conversion and differentiated residuals. Adaptive inverse iterations and their
 work totals are checked for internal consistency and algorithmic bounds in each

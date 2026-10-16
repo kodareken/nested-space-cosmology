@@ -176,7 +176,8 @@ def test_pinned_transport_result_and_producer_changes_reject_without_replay(tmp_
     monkeypatch.setattr(tool.prior,"audit",forbidden)
     assert tool.authenticate(tmp_path,budget)[0] is record and seen==[budget]
     name=tool.prior.OWN_SOURCES[0];(tmp_path/name).write_text("changed")
-    with pytest.raises(ValueError,match="producer changed"):tool.authenticate(tmp_path,budget)
+    with pytest.raises(ValueError,match=r"^unregistered saved source binding change: scripts/diagnose_nsc_atlas_constraint_transport\.py$"):
+        tool.authenticate(tmp_path,budget)
     row["audit_source_bindings"][name]=tool.digest(b"changed");target.write_bytes(tool.encoded(row))
     with pytest.raises(ValueError,match="pinned"):tool.authenticate(tmp_path,budget)
 
