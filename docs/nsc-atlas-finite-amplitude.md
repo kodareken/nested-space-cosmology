@@ -5931,6 +5931,148 @@ earlier affine-background remainder and moving-knot obstruction still
 apply; this alpha-zero reference alone does not authorize a finite-alpha
 lift or another trajectory.
 
+### Finite-coupling characteristic transport and common wall port
+
+The [reduced canonical equations](#reduced-canonical-field-and-an-exact-incoming-wave-control)
+already specify the finite-alpha dynamics. Their useful transport variables
+in z=atanh(r) are
+
+\[
+ E^+=A_0(p+q),\quad E^-=A_0(p-q),\quad
+ q=\chi_r,\quad \beta=B/A_0,\quad A_0=1-r^2.
+\]
+
+Here q is a field derivative, not the finite-space coefficient vector used
+above. Put `mu=exp(delta)`, `P=3+alpha*P1`, `m=r^3/2+alpha*N`. The common
+reaction is
+
+\[
+ S=B_r f+r\mu U_\alpha
+  =\mu\left[r(U_\alpha-2f)
+       +\alpha\left(\frac{2N}{r^2}-rP_1\right)f\right].
+\]
+
+Adding and subtracting the polar equations gives
+
+\[
+ \boxed{E^+_T-\partial_z(\beta E^+)=-A_0S,\qquad
+ E^-_T+\partial_z(\beta E^-)=-A_0S,}
+ \qquad \chi_T=\frac\beta2(E^++E^-).
+\]
+
+The plus family moves inward and the minus family outward. Their identical
+sources cancel in the primitive constraint:
+
+\[
+ K=\chi_z-\frac{E^+-E^-}{2},\qquad K_T=0.
+\]
+
+Regularity at the axis gives `chi=0`, `E_plus=-E_minus`, hence zero primitive
+and mass flux there. At alpha zero, beta=1 and S=0; the previous incoming
+cap has `E_plus=2F'`, `E_minus=0`. Finite coupling generally generates the
+minus family and changes the characteristic speed. Keeping `T+z` as an
+exact finite-alpha characteristic or forcing the outgoing family to zero
+would change these equations.
+
+The [smooth-point operator](../src/recursive_horizons/nsc_atlas_cap_characteristics.py)
+`characteristic_point_rhs()` implements these equations at at most 513
+supplied points with `0<r<1`. It reuses `reference_potential()` and the
+stable quotient `(U_alpha-2f)/alpha` from the existing reduced cap. The
+metric derivative is evaluated with its analytic vacuum cancellation,
+
+\[
+ \beta_z=\alpha\mu\left(\frac{2N}{r^2}-rP_1-\frac{4N}{A_0}\right).
+\]
+
+Rates include `T_x partial_T + z_x partial_z` at moving query points.
+An independently supplied chi_z is compared with `(E_plus-E_minus)/2`;
+the operator reports a discrepancy rather than replacing that derivative.
+The axis, internal interfaces and the history reconstruction remain the
+caller's responsibility. This is a local PDE operator, not a radial solve
+or a claim that a discretization preserves K.
+
+At the material wall, use the actual chi and outgoing E_minus. With
+`f=chi/R`, `u=sinh(a*f)/a`, `a=sqrt(alpha/6)`, the existing hybrid receives
+
+\[
+ c=Ru,\qquad w_-=\frac{E^-/A_0+f}{R},\qquad
+ E^+=A_0\left[\frac{2V_+c_V/H-u}{\sqrt D}+f\right].
+\]
+
+The last expression is the one incoming boundary condition. It supplies
+neither an independent wall-value waveform nor a second scalar condition.
+The hybrid identities imply
+
+\[
+ \chi_x=\frac{H E^+}{2A_0V_+}+\frac{A E^-}{2A_0HV_+},\qquad
+ c_x=\sqrt D\chi_x+(u-f\sqrt D)R_x
+     =c_V+\frac{C_-}{2V_+}.
+\]
+
+`characteristic_wall_port()` makes the shared-value exterior callback,
+calls the original hybrid and derives the incoming trace and wall rates.
+It uses the same boost-gauge conversion as the fixed-cap adapter to obtain
+the exterior lapse rate. Its scalar tangent residual checks this local
+conversion; an independently evolved bulk trace must still be compared
+with the returned incoming value.
+
+The small frame term is evaluated without subtracting equal leading terms.
+For `v=a*f`,
+
+\[
+ u-f\sqrt D=-f\left(\frac{v^2}{3}+\frac{v^4}{30}
+ +\frac{v^6}{840}+\frac{v^8}{45360}+\frac{v^{10}}{3991680}+\cdots\right).
+\]
+
+On `|v|<=.1`, the displayed truncation has a real-arithmetic remainder
+bounded by `|f|*v^12/[518918400*(1-v^2/180)]`. Floating function and
+arithmetic errors remain separate. The original hybrid itself is unchanged;
+the reported tangent residual includes any difference in its arithmetic.
+
+The existing constrained mass identity, in these variables, has
+
+\[
+ p=\frac{E^++E^-}{2A_0},\quad h=\frac{E^+-E^-}{2A_0}-f,\quad
+ \rho=\frac{r^2P_1}{2}+\frac A4(p^2+h^2),\quad
+ N_T=\frac{AB}{2}ph,\quad N_x=T_xN_T+R_x\rho.
+\]
+
+The implementation returns rho and the temporal/moving mass **targets**.
+It does not calculate an independent radial mass derivative, so their
+presence is not a verified numerical mass balance. Physical mass remains
+`m=r^3/2+alpha*N`, including its moving vacuum contribution.
+
+All six [controls](../tests/test_nsc_atlas_cap_characteristics.py) pass in
+seven executions using **27,948 charged values / 0.234375 active CPU
+seconds**. The first five pass with 25,680 values; the stable-frame control
+and one affected wall-port repeat add 2,268 (active CPU below the timer's
+reported resolution). They check the exact conservative transformation,
+primitive identity, an incoming alpha-zero profile, independent 70-digit
+polar-equation arithmetic at finite alpha, moving query rates, reported
+primitive inconsistency, the production hybrid's common value and both
+traces, 80-digit frame-gap arithmetic, quiet recovery and invalid
+metric/domain/budget rejection. No source, radial ODE or physical time
+evolution is run. Independent Grok derivation confirms the continuum
+signs, characteristic directions and nonlinear wall conversion.
+
+The next connection is the incoming-history field representation and its
+actual constrained mass derivative. The existing characteristic profile
+and regular background jets supply the reference history; finite-alpha
+departures must retain the generated outgoing field and explicit-time
+mass contribution. A common numerical history and boundary flux are still
+needed before invoking these local identities in a trajectory.
+
+In particular, [CapLeadingField.profile](../src/recursive_horizons/nsc_atlas_cap_field.py)
+already maps the prepared wall solution through the arrival clock and
+returns F,F' and optional F''. Its second jet uses the differentiated
+exterior integral, not saved-waveform differences; it is not the exact
+second derivative of the numerical field interpolant. This is the existing
+source-to-cap route to reuse. `RetainedCapBackground` instead supplies
+self-consistent derivatives of its declared C2 Hermite representation.
+The original background/profile adapter made its second jets by a declared
+gradient of supplied first jets. Those two numerical derivative meanings
+must remain distinct when forming the history and its error account.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

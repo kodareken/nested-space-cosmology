@@ -27,9 +27,15 @@ Three new controls pass with 38,000 values / 1.28125 active CPU seconds.
 An [incoming characteristic cap](nsc-atlas-finite-amplitude.md#incoming-cap-reference-that-carries-the-onset)
 carries the onset exactly at alpha zero and satisfies its integrated mass
 identity. Its history comes from the existing prepared wall interface.
-The next connection is a finite-coupling representation with the correct
-characteristics and explicit-time mass terms. The failed runtime attempt
-is retained; no scan, source solve or trajectory retry has been run.
+The [finite-coupling characteristic operator and wall port](nsc-atlas-finite-amplitude.md#finite-coupling-characteristic-transport-and-common-wall-port)
+now implement both generated field families and the common-value hybrid
+connection. Six controls pass in seven executions with 27,948 values /
+0.234375 active CPU seconds, including independent 70-digit polar-equation
+and 80-digit frame arithmetic. Their mass outputs are targets, not a
+computed mass-balance result. The next connection is the incoming-history
+representation and its explicit-time constrained mass derivative. The
+failed runtime attempt is retained; no scan, source solve or trajectory
+retry has been run.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

@@ -1644,6 +1644,45 @@ keeps the floating support edge and prepared-interface coordinate conversion
 explicit. The next work derives compatible finite-alpha characteristic
 and mass terms before implementing an incoming-history representation.
 
+### Finite-coupling characteristic transport and wall port
+
+Use the existing reduced scalar PDE and radial constraints to carry the
+incoming field without projecting its boundary drive into the fixed
+primitive space. In z=atanh(r), derive the conservative equations for
+`E_plus=A0*(p+q)` and `E_minus=A0*(p-q)`, where here `q=chi_r`.
+Retain their common finite-alpha source, the primitive compatibility
+constraint, the regular-axis reflection and the original central clock.
+
+Implement a bounded smooth-point operator in the existing package and a
+shared-value wall port that calls the existing hybrid. The exterior callback
+supplies its jets on that same field value. Report the radial mass density
+and temporal mass target as targets; no regional mass derivative has yet
+been calculated by this interface. Reuse the stable potential-reaction
+quotient and analytic constrained metric derivative. Do not fit a source
+history, change the finite candidate or replay the stopped interval.
+
+Exact PDE/primitive identities and manufactured point/port controls share
+**100,000 charged values / 30 active CPU seconds**. Check both families,
+the alpha-zero incoming solution, an independent finite-alpha polar PDE,
+clock/coordinate conversion, primitive inconsistency reporting, common
+wall value and scalar tangent, metric/domain failures and caller budgets.
+No source solve, radial ODE, spatial grid scan or time evolution is included.
+Independent Grok review checks the characteristic equations and maps existing
+history APIs. A failure redirects the implementation before a trajectory.
+
+**Outcome:** all six controls pass in seven executions with **27,948 values /
+0.234375 active CPU seconds**. The original five use 25,680 values;
+the stable-frame control and affected port repeat add 2,268. Independent
+70-digit finite-alpha polar arithmetic and 80-digit frame arithmetic agree.
+The point operator and shared-value port reuse the potential, radial
+constraint identities and hybrid, and report primitive discrepancy.
+Their mass outputs are conditional targets, not a verified radial mass
+derivative. Grok independently confirms the PDE signs and wall conversion;
+its small-frame cancellation concern is addressed in the new port. The
+existing hybrid is unchanged. The next connection is the retained incoming
+history and its explicit-time constrained mass derivative, without a
+source refit or scan.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

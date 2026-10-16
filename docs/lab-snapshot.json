@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "59c65d1b580e37a9e00717f869723c25bc2f89cb",
+  "current_receipt_commit_parent": "812545897d7b2a89ead9b15ca0287815103e17b2",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 222551,
-      "change": "Derive the actual hybrid onset coefficient and compatible incoming cap reference.",
-      "changed_from_commit": "59c65d1b580e37a9e00717f869723c25bc2f89cb",
+      "bytes": 223038,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "798e88168393ec1aacb60870fe23931bfc500fd726c748a1253fa343dc9b1dd8"
+      "sha256": "9c7c410acb7df150b6e1e7a9e1100890ad7ead60728e51848da59861ceba6f7c"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 314860,
-      "change": "Derive the actual hybrid onset coefficient and compatible incoming cap reference.",
-      "changed_from_commit": "59c65d1b580e37a9e00717f869723c25bc2f89cb",
+      "bytes": 315321,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "46475d43880c43ba3fb30ee7a175e641b37eda65d3b3b483275bb1ca403344ba"
+      "sha256": "4242213c6c3a502cc938ea9f6d21a038614afc26a1ed35fe2a5f641178dc4179"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 285037,
-      "change": "Derive the actual hybrid onset coefficient and compatible incoming cap reference.",
-      "changed_from_commit": "59c65d1b580e37a9e00717f869723c25bc2f89cb",
+      "bytes": 291243,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b653b200a33923888b5430df4ef43e0109eecfcc806d6fafc1bfd99e0785b68b"
+      "sha256": "d3f0c56a54a6aab8d925a467ce7621275f18c6da223d23dff2dcf277c3f63b94"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 313596,
-      "change": "Derive the actual hybrid onset coefficient and compatible incoming cap reference.",
-      "changed_from_commit": "59c65d1b580e37a9e00717f869723c25bc2f89cb",
+      "bytes": 315995,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0d41b5ffdbe6d6d2fbc4f73abeb995e3fb738c69131b7fe43d8f92baceffa616"
+      "sha256": "94c967311a30bb86a85cf86e12b97c02e3bec2f667aff9046c6950ff00ed885a"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 103957,
-      "change": "Derive the actual hybrid onset coefficient and compatible incoming cap reference.",
-      "changed_from_commit": "59c65d1b580e37a9e00717f869723c25bc2f89cb",
+      "bytes": 104215,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fa8c13e2b852a36738744470e1913babf131ed24cf0bdc5b3542399f57ed2181"
+      "sha256": "fee28817089d0df43b8bf79cce55a0e616b32b009b8b4d8ddc291136b4a7a4c7"
     },
     {
       "bytes": 18356,
@@ -32324,6 +32324,14 @@
       "sha256": "f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852"
     },
     {
+      "bytes": 8413,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "path": "src/recursive_horizons/nsc_atlas_cap_characteristics.py",
+      "retention_reason": "Finite-coupling smooth characteristic PDE and shared-value wall port with independent controls.",
+      "sha256": "b8c216d73c39e7493916a5cc84837c1df9f83429e7fb1dbe7826a77bcc994081"
+    },
+    {
       "bytes": 9810,
       "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
       "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
@@ -35795,6 +35803,14 @@
       "path": "tests/test_nsc_atlas_cap_background_reference.py",
       "retention_reason": "Retained-background metric domain and explicit-time mass reference",
       "sha256": "61a64be9de9c8b735313cbb06dc840f70e4f62abfbf1e598deb3eefa33d71761"
+    },
+    {
+      "bytes": 6768,
+      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
+      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "path": "tests/test_nsc_atlas_cap_characteristics.py",
+      "retention_reason": "Finite-coupling smooth characteristic PDE and shared-value wall port with independent controls.",
+      "sha256": "a4d9eac48c364468231aebd9a40ace10157fe3366974c62083060527d570e235"
     },
     {
       "bytes": 4920,
