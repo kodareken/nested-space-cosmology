@@ -1,12 +1,12 @@
 {
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
-    "scripts/validation_source_successors.py": "49a44c3bb6de75db1ec834ebdcc0d41261fd0786570c9e719078fa3acd74475c",
+    "scripts/validation_source_successors.py": "6ed04648bb81bf1e62427415f3a7f4033d2eb26d6749d5f3f3d5bbd14d35cbad",
     "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
     "tests/test_nsc_atlas_validation.py": "9503c6082794cd564ae5ae9b2fcfb87bd115532b2c64017f463deac7e2c056d1",
-    "tests/test_validation_source_successors.py": "647da10f51d600219346d58e9c7cd591ba2467a50560d59680bb300ac215caf7"
+    "tests/test_validation_source_successors.py": "ccc0b88083622a77535cda2d80a715d387589c9f6f98b1ddc2cdc73b4e8f1a34"
   },
   "schema": "nsc-validation-source-successors-v1",
   "scope": "Reviewed current source successors. Original Git bytes are authenticated but never executed; implementation successors preserve historical provenance without asserting numerical equivalence. Result data, scientific documents and unregistered changes have no compatibility fallback.",
@@ -191,6 +191,13 @@
       "reason": "Authenticate saved source inventories against exact reviewed successor/origin bytes; creation still hashes current files, retained result bytes and numerical validation are unchanged.",
       "successor_sha256": "2d4bbb9b69f3fe9fd5b56d446c66062809e79f0d618e721b7639a0f60f3526ec"
     },
+    "scripts/summarize_result.py": {
+      "classification": "validation-only",
+      "original_commit": "2551c9f52703fb418bec5a5ebf3d0bde136cfcc5",
+      "original_sha256": "e3b4e2464ffc0b5602266ec082dfcb4d9aed1c160789b1b64ba9ed103f2f5c61",
+      "reason": "Compact-summary checking authenticates exact registered original producer bytes; creation, current input bindings, payload bytes and summary data comparisons remain unchanged.",
+      "successor_sha256": "713be2b2f09494a451cec1599706e622d0e3507573a7e18185133391b6aa4a87"
+    },
     "src/recursive_horizons/nsc_atlas_background_profile.py": {
       "classification": "implementation-successor",
       "original_sha256": "576567d0c7a31b33982edb922ccc7aee772355c50aca0559a70620efdb0b753a",
@@ -202,6 +209,13 @@
       "original_sha256": "736067b633f6697e3488e57805aeae3cdbe0d3b8d4bab74d885f9f60aef72d2c",
       "reason": "Exact causal quiet branch now extends through the compact source front; old evidence authenticates its original producer and does not establish results for the changed field interface.",
       "successor_sha256": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": {
+      "classification": "implementation-successor",
+      "original_commit": "bc701626c08404c6ab4440a9919a1a166cbfe863",
+      "original_sha256": "e15805c7073bb54e30ce5bf8b065b44020b28d795807fdbe54257f42fe40016d",
+      "reason": "The degree-five third-moment loop now follows the actual history polynomial degree, supporting the quartic-onset degree-seven piece and charging its extra terms. Preserve the original finite mass-ledger evidence at its later source commit; no replay or result transfer is asserted.",
+      "successor_sha256": "e0c26ea5417fb46b1e971e9b4ac5c0122aae400104551516488d321e9272a579"
     },
     "src/recursive_horizons/nsc_atlas_characteristic_background.py": {
       "classification": "implementation-successor",

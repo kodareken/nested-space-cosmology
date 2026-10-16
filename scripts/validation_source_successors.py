@@ -33,6 +33,7 @@ REVIEWED_PACKAGE_PATHS = frozenset({
     "src/recursive_horizons/nsc_atlas_background_profile.py",
     "src/recursive_horizons/nsc_atlas_prepared_response.py",
     "src/recursive_horizons/nsc_atlas_characteristic_background.py",
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py",
 })
 CLASSIFICATIONS = frozenset({"validation-only", "test-only", "implementation-successor"})
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")
@@ -83,7 +84,10 @@ def _registry(root):
     for name, row in document["successors"].items():
         _path(root, name)
         if (not _source_path(name) or not isinstance(row, dict)
-                or set(row) != {"original_sha256", "successor_sha256", "classification", "reason"}
+                or set(row) not in ({"original_sha256", "successor_sha256", "classification", "reason"},
+                                    {"original_sha256", "successor_sha256", "classification", "reason", "original_commit"})
+                or ("original_commit" in row and (not isinstance(row["original_commit"],str)
+                    or re.fullmatch(r"[0-9a-f]{40}",row["original_commit"]) is None))
                 or row["classification"] not in CLASSIFICATIONS
                 or not isinstance(row["reason"], str) or not row["reason"].strip()
                 or any(not isinstance(row[k], str) or not _SHA256.fullmatch(row[k]) for k in ("original_sha256", "successor_sha256"))
@@ -130,7 +134,7 @@ def verify_saved_source(name, expected, root):
     if (row is None or row["original_sha256"] != expected
             or row["successor_sha256"] != actual):
         raise ValueError("unregistered saved source binding change: " + name)
-    return _original_bytes(str(root), ORIGIN_COMMIT, name, expected)
+    return _original_bytes(str(root), row.get("original_commit",ORIGIN_COMMIT), name, expected)
 
 
 def verify_saved_bindings(expected, root, *, expected_paths=None):

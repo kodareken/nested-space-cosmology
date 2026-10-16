@@ -1,6 +1,7 @@
 """Generic compact-result and legacy-byte storage controls; no science runs."""
 import copy
 import json
+from pathlib import Path
 
 import pytest
 
@@ -153,3 +154,21 @@ def test_nested_scratch_and_uppercase_json_do_not_evade_storage_guard(tmp_path,m
     with pytest.raises(ValueError,match="new oversized") as error:
         storage.check(tmp_path)
     assert error.value.violations[0]["path"]==name
+
+
+@pytest.mark.parametrize('stem',[
+    'nsc-atlas-cap-mass-direction-v1','nsc-atlas-cap-mass-balance-v1',
+    'nsc-atlas-cap-transport-balance-v1',
+])
+def test_tracked_summary_authenticates_when_ignored_raw_is_absent(monkeypatch,stem):
+    path=summary.ROOT/'results/summaries'/str(stem+'.json')
+    before=path.read_bytes();saved=summary.load_json(before)
+    raw=summary.ROOT/saved['raw_payload']['path']
+    # Model a clean checkout without moving or deleting actual local evidence.
+    is_file,exists=Path.is_file,Path.exists
+    monkeypatch.setattr(Path,'is_file',lambda self:False if self==raw else is_file(self))
+    monkeypatch.setattr(Path,'exists',lambda self:False if self==raw else exists(self))
+    receipt=summary.check_summary(path)
+    assert not receipt['raw_available'] and receipt['scientific_replays']==0
+    assert receipt['producer_context']=='reviewed-successors'
+    assert path.read_bytes()==before

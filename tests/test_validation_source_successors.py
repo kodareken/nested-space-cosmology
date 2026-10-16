@@ -220,3 +220,51 @@ def test_active_cap_replay_policy_keeps_counts_structure_and_scientific_changes_
         assert not checker(dict(expected,calls=20.0),expected)
         assert not checker(dict(expected,quiet=1),expected)
         assert not checker(dict(expected,scope="changed"),expected)
+
+
+def test_later_source_origin_is_explicit_immutable_and_authenticated(history):
+    root,_,_,_,registry=history
+    name='src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py'
+    old=b'# later original derivative\n';new=b'# reviewed degree-seven derivative\n'
+    write(root,name,old)
+    subprocess.run(['git','-C',str(root),'add',name],check=True,capture_output=True)
+    subprocess.run(['git','-C',str(root),'-c','user.name=Control','-c','user.email=control@example.invalid',
+                    'commit','-qm','later source'],check=True,capture_output=True)
+    commit=subprocess.check_output(['git','-C',str(root),'rev-parse','HEAD']).decode().strip()
+    registry['successors'][name]=dict(original_sha256=sha(old),successor_sha256=sha(new),
+        classification='implementation-successor',reason='Later numerical representation.',original_commit=commit)
+    write(root,name,new);save_registry(root,registry)
+    assert tool.verify_saved_source(name,sha(old),root)==old
+    registry['successors'][name].pop('original_commit');save_registry(root,registry)
+    with pytest.raises(ValueError,match='pinned origin'):
+        tool.verify_saved_source(name,sha(old),root)
+    for invalid in ('HEAD',commit[:7],None,123):
+        registry['successors'][name]['original_commit']=invalid;save_registry(root,registry)
+        with pytest.raises(ValueError,match='entry'): tool.verify_saved_source(name,sha(old),root)
+    registry['successors'][name]['original_commit']=commit
+    registry['successors'][name]['original_sha256']=sha(b'invented original');save_registry(root,registry)
+    with pytest.raises(ValueError,match='pinned origin'):
+        tool.verify_saved_source(name,sha(b'invented original'),root)
+
+
+@pytest.mark.parametrize('raw_available',[False,True])
+def test_compact_summary_preserves_reviewed_original_with_or_without_raw(history,raw_available):
+    import summarize_result as summary
+    root,name,old,new,registry=history
+    raw=root/'.build/results/raw.json';raw.parent.mkdir(parents=True)
+    raw.write_bytes(summary.encoded({'samples':list(range(32))}))
+    write(root,name,old)
+    output=root/'results/summaries/control.json'
+    summary.create_summary(raw,output,argv=['never-executed'],producer_paths=[name],root=root)
+    saved=output.read_bytes();write(root,name,new)
+    if not raw_available: raw.unlink()  # disposable fixture only
+    receipt=summary.check_summary(output,root=root)
+    assert receipt['raw_available']==raw_available and receipt['scientific_replays']==0
+    assert receipt['producer_context']=='reviewed-successors'
+    assert receipt['original_producer_paths']==[name] and output.read_bytes()==saved
+    write(root,name,b'unreviewed change')
+    with pytest.raises(ValueError,match='unregistered'): summary.check_summary(output,root=root)
+    write(root,name,new)
+    changed=json.loads(saved);changed['producer_bindings'][name]['bytes']+=1
+    output.write_bytes(summary.encoded(changed))
+    with pytest.raises(ValueError,match='byte count'): summary.check_summary(output,root=root)

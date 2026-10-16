@@ -164,7 +164,12 @@ def create_summary(input_path,output_path,*,argv,producer_paths,root=ROOT,select
 
 
 def check_summary(path,*,root=ROOT):
-    """Check bindings; an absent ignored raw file is reported, never regenerated."""
+    """Authenticate original producers and current inputs, without replay.
+
+    An explicitly reviewed source successor can authenticate its original
+    Git bytes. Creation still records current bytes. This does not transfer
+    the old numerical result to the changed implementation.
+    """
     target,_=relative_file(root,path)
     body=target.read_bytes()
     if len(body)>MAX_SUMMARY_BYTES: raise ValueError("summary exceeds1MiB")
@@ -178,10 +183,20 @@ def check_summary(path,*,root=ROOT):
     if regen.get("cwd")!="." or regen.get("executed_by_summary") is not False:
         raise ValueError("invalid regeneration declaration")
     if not saved.get("producer_bindings"): raise ValueError("missing producer bindings")
-    for name in ("producer_bindings","input_bindings"):
-        bindings=saved.get(name)
-        if not isinstance(bindings,dict) or _bindings(list(bindings),root)!=bindings:
-            raise ValueError(name+" mismatch")
+    from validation_source_successors import verify_saved_source
+    bindings=saved['producer_bindings'];historical=[]
+    if not isinstance(bindings,dict): raise ValueError('producer_bindings mismatch')
+    for name,expected in bindings.items():
+        source,relative=relative_file(root,name)
+        if (not isinstance(expected,dict) or set(expected)!={'sha256','bytes'}
+                or type(expected['bytes']) is not int or expected['bytes']<0):
+            raise ValueError('invalid producer binding')
+        original=verify_saved_source(relative,expected['sha256'],root)
+        if len(original)!=expected['bytes']: raise ValueError('producer_bindings byte count mismatch')
+        if sha256(source.read_bytes())!=expected['sha256']: historical.append(relative)
+    bindings=saved.get('input_bindings')
+    if not isinstance(bindings,dict) or _bindings(list(bindings),root)!=bindings:
+        raise ValueError('input_bindings mismatch')
     raw=saved["raw_payload"]
     original,_=relative_file(root,raw["path"],must_exist=False)
     if (type(raw.get("bytes")) is not int or raw["bytes"]<0 or not isinstance(raw.get("sha256"),str)
@@ -198,7 +213,9 @@ def check_summary(path,*,root=ROOT):
         if compact(select(payload,saved["selection"]))!=saved["data"] or provenance!=saved["reported_provenance"]:
             raise ValueError("compact data differs from raw payload")
     return dict(checked=str(path),raw_available=available,raw_bytes=raw["bytes"],
-        producers=len(saved["producer_bindings"]),inputs=len(saved["input_bindings"]),scientific_replays=0)
+        producers=len(saved["producer_bindings"]),inputs=len(saved["input_bindings"]),scientific_replays=0,
+        producer_context='reviewed-successors' if historical else 'current',
+        original_producer_paths=historical)
 
 
 def main():

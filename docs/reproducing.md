@@ -63,6 +63,21 @@ passes 62 source-authentication and recorder tests. Check results report
 `reviewed-successors` when stored producer bytes differ from current files;
 `current` is reserved for exact current bindings. The degree-seven
 characteristic profile also has an explicit implementation-successor entry.
+
+Compact summaries use the same authentication for producer bindings while
+keeping input files byte-exact. A successor may name a full `original_commit`
+when its original source was introduced after the shared registry origin.
+The cap third-moment helper uses its `bc70162` origin: its later extension
+from quintic to degree-seven histories does not rewrite the two saved
+mass-ledger summaries. The summary checker itself has a validation-only
+successor entry. Check receipts list `original_producer_paths` and the
+current/original context; creation still binds current files. Forty storage
+and source controls pass, including the three real tracked summaries with
+their ignored raw payloads treated as absent. All three standalone summary
+checks also pass with local raw payloads present. Neither check regenerates
+scientific data. This fixes the producer-binding failure seen on both
+platforms in GitHub run `38977670691`; it was not a raw-file absence error.
+
 An active GitHub PDF check is allowed to finish when later work is pushed;
 the concurrency group keeps the newest pending revision for the next run.
 The shared synthetic-test budgets count only CPU time
