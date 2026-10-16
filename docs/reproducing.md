@@ -53,6 +53,8 @@ the rejected numeric leaves or separates wall-coordinate drift from internal
 forcing-grid drift. These diagnostics read the failed comparison's operands;
 they do not rerun a producer or change acceptance. Investigate those values
 before modifying a replay allowance.
+Conditioned comparisons retain the actual rejected subtree for that report,
+so accepted conditioned differences cannot obscure a later failing value.
 
 The Verify workflow lets an active full-suite run finish while subsequent
 commits are saved. It keeps the latest pending run in the same concurrency
@@ -86,6 +88,16 @@ used 11,632 charged values / 0.21875 active CPU seconds of the cumulative
 200,000-point / 20-second allowance. No retained cap or radial solve is used.
 The adapter excludes axis jets and exact formula-switch queries; the later
 shadow evaluator still needs interface limits and controlled radial flow.
+
+The interface algebra uses no numerical fields or root search:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_interface_identity.py -q -s
+```
+
+All three exact controls pass in 1.71875 active CPU seconds within their
+20-second allowance. They establish primitive continuity, formula-switch
+orders and the necessity of the moving potential-jump term.
 
 The discrete cap mass derivative and departure-flux ledger are implemented
 in a diagnostic companion to the unchanged producer. Run their controls with:

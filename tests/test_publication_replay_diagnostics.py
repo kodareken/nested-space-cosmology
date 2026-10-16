@@ -42,6 +42,18 @@ def test_forcing_failure_separates_curve_and_internal_grid():
     assert float(row['internal_grid_difference']) > float(row['internal_grid_allowance'])
 
 
+def test_conditioned_failure_reports_the_rejected_value_not_accepted_arrays():
+    from record_nsc_atlas_coupled_evolution import _equal
+    actual = {'conditioned':[1e-11,2e-11], 'other':{'rate':1e-12}}
+    expected = {'conditioned':[0.,0.], 'other':{'rate':0.}}
+    with pytest.raises(ValueError,match='unconditioned') as caught:
+        _equal(actual,expected,'diagnostics',roundoff={('conditioned',):np.full(2,3e-11)})
+    rows = json.loads(replay_failure_message(caught.value).split(': ',1)[1])
+    assert len(rows) == 1
+    assert rows[0]['path'] == 'diagnostics.other.rate'
+    assert float(rows[0]['absolute_difference']) == 1e-12
+
+
 def test_unrelated_frame_locals_are_not_reported():
     private_local = 'unrelated content'
     try: raise ValueError('ordinary failure')

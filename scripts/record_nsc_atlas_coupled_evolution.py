@@ -281,6 +281,13 @@ def _equal(actual, expected, label, *, roundoff=None):
     # exact. Descendant checkers share this validation-only comparison.
     if roundoff:
         used = set()
+        rejected = []
+        def reject(a, b, path):
+            # Keep the actual failing subtree for bounded error reporting.
+            # A generic traversal would also report already accepted leaves
+            # whose explicit conditioning exceeds the ordinary comparator.
+            rejected.append((a, b, path))
+            return False
         def compare(a, b, path=()):
             if path in roundoff:
                 used.add(path)
@@ -291,15 +298,23 @@ def _equal(actual, expected, label, *, roundoff=None):
                         or bound.shape != bv.shape or not np.all(np.isfinite(bound)) or np.any(bound < 0)
                         or not np.all(np.isfinite(av)) or not np.all(np.isfinite(bv))
                         or np.any(abs(av-bv) > bound)):
+                    reject(a, b, path)
                     raise ValueError(label+" conditioned replay mismatch: "+str(path))
                 return True
             if isinstance(a, dict) and isinstance(b, dict):
-                return set(a) == set(b) and all(compare(a[k], b[k], (*path, k)) for k in a)
+                if set(a) != set(b):
+                    return reject(a, b, path)
+                return all(compare(a[k], b[k], (*path, k)) for k in a)
             if isinstance(a, list) and isinstance(b, list):
-                return len(a) == len(b) and all(compare(v, w, (*path, i)) for i, (v, w) in enumerate(zip(a, b)))
-            return previous._same_recomputed(a, b)
-        if not compare(plain(actual), plain(expected)) or used != set(roundoff):
+                if len(a) != len(b):
+                    return reject(a, b, path)
+                return all(compare(v, w, (*path, i)) for i, (v, w) in enumerate(zip(a, b)))
+            return previous._same_recomputed(a, b) or reject(a, b, path)
+        if not compare(plain(actual), plain(expected)):
             raise ValueError(label+" inventory or unconditioned value mismatch")
+        if used != set(roundoff):
+            missing = sorted((str(p) for p in set(roundoff)-used))[:3]
+            raise ValueError(label+" conditioned inventory has unused paths: "+str(missing))
     elif not previous._same_recomputed(plain(actual), plain(expected)):
         raise ValueError(label+" mismatch")
 

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f7f850fdaf2dc2a31094feeff7231d65e6d4a52f",
+  "current_receipt_commit_parent": "4f615d5ef80a332ba6a6df02ab1b86c064c2eed9",
   "files": [
     {
       "bytes": 2218,
@@ -35419,6 +35419,12 @@
       "original_sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719",
       "path": "tests/test_nsc_assembled_chebyshev_gn_stall.py",
       "sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719"
+    },
+    {
+      "bytes": 3449,
+      "path": "tests/test_nsc_atlas_cap_interface_identity.py",
+      "retention_reason": "Exact cell-continuity and formula-switch identities for the cap mass comparison.",
+      "sha256": "f940b6f8c2ed8b3d0e7071e951567702ab45efddbb0f8ade7d839b65922b9982"
     },
     {
       "bytes": 4765,

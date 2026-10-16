@@ -3069,6 +3069,77 @@ already measured upwind work can be subtracted to resolve the remaining
 `-0.10914206297`. A frozen-branch central-flux subtraction is still an
 algebraic comparison, not a validated replacement evolution.
 
+#### Interfaces of the reconstructed radial comparison
+
+The departure scalar is continuous at every cell face. In an ordinary cell,
+`q=qc+qs*r` has mean `Iq/(b-a)` and `qc=Iq/(b-a)-qs*(a+b)/2`, so its
+primitive increases by exactly `Iq`. Both traces of `f=chi/r` therefore
+agree. The regular first cell also satisfies
+`Q0*b+Q2*b^3/3=Iq[0]`. Its quadratic term is necessary for that identity.
+The independent limited traces of `Pi` and `Phi` can still jump. At a pure
+profile-knot preimage, the background fields are continuous because the
+profile is C2; both mass-density and mass-flux jumps vanish there. Keep the
+preimage as an integration breakpoint for the piecewise higher derivatives.
+
+The implementation switches require separate accounting. At `r0=0.01`,
+the background scalar and `Pi` formulas agree in real arithmetic, while
+the right-minus-left `Phi` jump is `DeltaC*I1`, where `I1` is the common
+split integral of `F'` and
+
+$$
+\Delta C=\frac{r/(1-r^2)-\operatorname{atanh}r}{r^2}
+ -\sum_{k=1}^{5}\frac{2k}{2k+1}r^{2k-1}
+ =\frac{12}{13}r^{11}+\frac{14}{15}r^{13}+\cdots.
+$$
+
+For `0<r<1`, this positive remainder lies between `(12/13)*r^11`
+and `r^11/(1-r^2)`. The switch has velocity zero. With continuous shadow
+mass and lapse, its density jump is
+`[rho]=r^2*A^E*(2*Phi_left*[Phi]+[Phi]^2)/4`; its flux jump must also be
+retained. Roundoff from the two evaluated formulas is a separate error.
+
+For `alpha>0`, write `q=sqrt(alpha/6)*f`, `q0=1e-4`, and
+`f_star=q0*sqrt(6/alpha)`. Potential switches occur at `f=+/-f_star`.
+With `S4=1+q^2/6+q^4/120`, the real-arithmetic difference between the
+outer hyperbolic branch and inner polynomial branch is
+
+$$
+\Delta P=f^2D(q),\qquad
+D(q)=\frac{\cosh^2q+1}{2}
+ \left[\left(\frac{\sinh q}{q}\right)^2-S_4(q)^2\right]
+ =\frac{q^6}{2520}+O(q^8).
+$$
+$$
+\Delta U=f\,[2D(q)+qD'(q)]=\frac{f q^6}{315}+O(f q^8).
+$$
+
+These differences are nonzero. At a simple root the full fixed-radius jets
+give `v=-f_x/f_r`. With no other coincident switch, `a` and `J` are
+continuous, while `[rho]=r^2*[P]/2`. The right-minus-left sign of `[P]`
+follows whether `|f|` enters or leaves the polynomial branch. The term
+`-W*v*[rho]` belongs in the differentiated balance. Its omission cannot be
+justified from the small value jump alone: a nearly tangent crossing can
+have large velocity. At `alpha=0` this threshold is absent.
+
+A complete numerical inventory must isolate all threshold roots on each
+analytic piece, or bound the omitted contribution independently. Endpoint
+sign samples alone cannot establish absence of roots. A non-simple root,
+unresolved root enclosure, or unresolved coincident motion stops that
+comparison. At coincident stations retain their preimages, order the
+backward ray by `(r,-v)`, and keep any born zero-width panel until its
+directional derivative is included. A root on a cell face uses each side's
+continuation and its owner admissibility; continuity of `f` does not imply
+equality of the two radial slopes. Axis and wall remain endpoint terms.
+
+Three [exact controls](../tests/test_nsc_atlas_cap_interface_identity.py)
+prove the cell primitive identities, both switch leading orders, and a
+moving potential-jump contribution against an independently integrated
+manufactured mass. They pass with zero field samples and 1.71875 active CPU
+seconds. No threshold roots or shadow solution have been computed for the
+retained cap. The current field adapter intentionally rejects exact switch
+queries; branch-limit evaluation and root completeness are still required
+by the numerical comparison.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -969,7 +969,14 @@ def replay_failure_message(error: Exception) -> str:
                             if type(a) in (int,float) and type(b) in (int,float):
                                 row["absolute_difference"] = format(abs(a-b), ".17g")
                         leaves.append(row)
-                visit(plain(values["actual"]), plain(values["expected"]), values["label"])
+                rejected = values.get("rejected")
+                if rejected:
+                    for actual, expected, keys in rejected[:3]:
+                        path = values["label"]+"".join(
+                            f"[{key}]" if isinstance(key,int) else "."+key for key in keys)
+                        visit(actual, expected, path)
+                else:
+                    visit(plain(values["actual"]), plain(values["expected"]), values["label"])
                 details.extend(leaves)
             traceback = traceback.tb_next
     except (KeyError, TypeError, ValueError, AttributeError, OverflowError) as diagnostic_error:

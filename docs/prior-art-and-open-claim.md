@@ -61,6 +61,22 @@ jets have regular polynomial oracles. This component supplies field inputs
 only. The retained-state shadow flow, switch/interface inventory and error
 decomposition have not been evaluated.
 
+The interface inventory now receives exact algebra controls, under a separate
+20-active-CPU-second allowance with zero field samples. Prove continuity of
+the primitive-derived scalar at every reconstruction face, and retain the
+nonzero differences between the implemented potential and small-radius
+formula branches. Derive threshold velocities from the full fixed-radius
+field derivative. These controls admit no root search, retained cap or
+radial integration; unresolved tangencies or coincident branch motion must
+be identified before that numerical comparison is designed.
+
+**Interface outcome:** all three exact controls pass with zero field samples
+and 1.71875 active CPU seconds. The mathematical owner records continuity,
+nonzero switch gaps and full-direction root speeds. An initial Grok review
+misstated the small-radius leading order and treated sub-roundoff gaps as
+zero; direct series algebra corrected both, and the follow-up review agreed.
+There is no retained-state root inventory or shadow-flow result yet.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

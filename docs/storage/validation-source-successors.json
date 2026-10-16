@@ -98,8 +98,8 @@
     "scripts/record_nsc_atlas_coupled_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "2898d38aea0540530ef5fc76e1c7d3fc377d41bdbb414d3f51dbba54be29b264",
-      "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
-      "successor_sha256": "236b18d99094daea371fe68f713bccc396a921b0c2f26904673abdf5b3548279"
+      "reason": "Preserve the actual rejected subtree for diagnostic reporting after conditioned comparison; acceptance policy and retained data unchanged.",
+      "successor_sha256": "8d8303f01585997c1a9f42f33259dfc299951d3bf5e7cc70a94d67987f081919"
     },
     "scripts/record_nsc_atlas_forcing_cache.py": {
       "classification": "validation-only",

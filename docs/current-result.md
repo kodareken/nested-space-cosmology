@@ -93,6 +93,15 @@ independent nonconstant field differences. Cumulative development uses
 review found no blocking defect. This implements one input to the comparison;
 the shadow radial flow and complete interface terms remain to be evaluated.
 
+The [interface derivation](nsc-atlas-finite-amplitude.md#interfaces-of-the-reconstructed-radial-comparison)
+now proves scalar continuity across reconstruction faces and identifies the
+nonzero formula-switch jumps. Three exact controls pass with zero field
+samples / 1.71875 active CPU seconds. The small-radius jump starts at
+`(12/13)*r^11`; the potential value gap starts at `f^2*q^6/2520`.
+The corrected orders and root-speed rules received independent Grok review.
+Root completeness and branch-limit evaluation remain the next numerical
+requirements; small jumps alone do not bound their moving contributions.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)
