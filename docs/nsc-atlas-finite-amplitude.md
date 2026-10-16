@@ -6545,6 +6545,18 @@ retain one small final state, wall rates, trace and gradient diagnostics,
 and its existing state hash. The v1 receipt remains unchanged, and no
 trajectory has been repeated for this algebraic result.
 
+The [single endpoint limit control](../results/summaries/nsc-atlas-fixed-history-endpoint-velocity-v1.json)
+uses the original prepared history, endpoint radius/time and fixed basis,
+with alpha zero and zero departures. It gives `d_v=2.10085855e-15`.
+The independently contracted forward and adjoint wall discrepancies are
+`2.10098798e-15` and `-3.23501807e-18`, with a contraction identity defect
+`1.29427e-19`. The two projected L2 discrepancies are `3.76349e-17` and
+`3.75948e-19`. It completes in 1,696,469 values / 2.546875 CPU seconds.
+These are errors measured against the exact zero-coupling identity at this
+event, not bounds on the earlier finite-alpha trajectory. No change to the
+mass-gradient solver follows from this check. The next local comparison
+traces the leading prepared field through its clock, history and common port.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

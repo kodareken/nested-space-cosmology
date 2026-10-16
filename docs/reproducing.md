@@ -521,6 +521,19 @@ This creation-only command shares its 10-million-value / 60-second budget
 between preparation and one radial reference. It takes no time step and
 does not reconstruct the completed finite-alpha endpoint state.
 
+The separate leading-reference endpoint comparison checks the prepared
+wall jets, inherited arrival clock, retained profile and one existing
+common stage:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_prepared_endpoint_connection.py --output results/summaries/nsc-atlas-prepared-endpoint-connection-v1.json
+```
+
+This creation-only comparison has its own admitted 10-million-value /
+60-second budget. It samples 63 original exterior interior positions from
+one prepared field, takes no time step and reports an alpha-zero reference
+event with zero cap departures. It does not recreate the evolved endpoint.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

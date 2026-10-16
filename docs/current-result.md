@@ -119,6 +119,14 @@ checks pass. This identifies what the next local diagnostic must measure;
 it does not assign the completed physical gap to one channel from aggregate
 numbers. The original result is preserved, with no further evolution.
 
+The [endpoint zero-coupling control](../results/summaries/nsc-atlas-fixed-history-endpoint-velocity-v1.json)
+now measures the velocity gap at `2.10086e-15`; its independent adjoint
+contraction is `-3.23502e-18`. It uses the same prepared history and endpoint
+geometry, zero cap departures and no time evolution (1,696,469 values /
+2.546875 CPU seconds). This local check does not identify the earlier
+finite-alpha state's incoming mismatch. A separate leading reference event
+will compare the actual prepared wall jets, retained history and common port.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

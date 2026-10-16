@@ -2192,6 +2192,44 @@ nonzero velocity is a numerical defect of this control, not an additional
 physical force; its size determines whether the radial calculation needs
 attention before any further physical evolution.
 
+**Outcome:** the frozen `025abbb` control completes with 1,696,469 charged
+values / 2.546875 CPU seconds, one preparation and no time steps. Its
+velocity discrepancy is `2.10085855e-15`. Independent forward and adjoint
+contractions are `2.10098798e-15` and `-3.23501807e-18`; the contraction
+identity differs by `1.29427e-19`. The prepared input identity matches both
+original receipts. This local limit check gives no evidence that a change
+to radial mass-gradient assembly is needed.
+
+### Leading endpoint transfer and common-port comparison, 17 October 2026
+
+The completed physical trajectory lacks its final coefficients. Use an
+explicit leading reference event to check the source-to-cap transfer before
+considering another evolution. Rebuild the same 257/257 prepared field once;
+authenticate the original source geometry and retained-history input hash.
+At the original right endpoint compare the direct prepared wall value and
+first derivative, the inherited arrival label/rate, and the retained
+profile evaluated with the anchored reference clock. Convert V derivatives
+with the analytic V(x) Jacobian. No stored waveform is differentiated.
+
+Sample the same prepared field at the 63 original exterior interior nodes
+using `WedgeField`; its retained-side guard must pass. Set the reference
+metric, alpha zero and zero cap departures, and evaluate one unchanged
+64-cell exterior/common-cap stage. Report both scalar channels, the direct
+versus prefix derivative and all clock/profile differences. This defines
+a new reference state; it is not a reconstruction of the actual finite-alpha
+endpoint. Geometry is not adjusted to make the transfers agree.
+
+The decision is whether a mismatch is already present in this one leading
+event and where it enters. Use **10 million charged values / 60 process-CPU
+seconds**, including preparation, queries, basis and the one stage, on one
+shared clock. The preparation child is charged exactly once. Stop on the
+first failed domain, input identity or budget check, or after this comparison.
+No time steps, grid scan, source retuning or change to the evolution operator.
+Possible failure modes are incompatible clock labels, an exterior query on
+the excised side, and overinterpreting the reference event as the missing
+physical state; the separate differences, retained-side guard and explicit
+state definition keep those distinctions observable.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
