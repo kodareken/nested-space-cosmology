@@ -8,6 +8,47 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [selected cap mass and wall-curve audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+uses the [recorder](../scripts/diagnose_nsc_atlas_cap_consistency.py) and
+[analyzer](../scripts/analyze_nsc_atlas_cap_consistency.py) on the fixed
+operator-comparison histories. Its 34 manufactured and provenance controls
+pass on their first attempt with 62,119 shared points and 0.34375 process
+CPU seconds:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_analyze_nsc_atlas_cap_consistency.py tests/test_nsc_atlas_cap_consistency_orchestration.py tests/test_diagnose_nsc_atlas_cap_consistency.py -q
+```
+
+The [completed record](../results/development/nsc-atlas-cap-consistency-v1.json)
+uses 4,393,156 points and 15.359375 process CPU seconds including creation
+validation. One standalone check passes with 2,196,578 points and 8.453125
+CPU seconds. The 820,093-byte record has SHA256
+`79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728`.
+To authenticate it:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_consistency.py --output results/development/nsc-atlas-cap-consistency-v1.json --check
+```
+
+Each invocation authenticates the 104 inherited bindings once and checks
+seven audit source/control bindings. Each analysis reconstructs 64 cap
+metrics and 12 selected exterior prefixes and hybrid wall maps, comparing
+quadrature orders 4/8 and radial/time widths one/two at cuts 63, 68 and 128.
+Creation performs one analysis and one validation under a shared 120-CPU-second,
+eight-million-point allowance; a standalone check performs one analysis under
+60 CPU seconds/four million points. Neither invokes a source solve, full
+coupled stage, cap RHS or trajectory replay. The three control suites share
+30 CPU seconds/one million points. A fresh creation requires a new output
+file without `--check`; the first failure leaves an ignored `.build` receipt
+with its cut, order and phase when available, without retry or completed output.
+
+Pulse residuals remain strongly sensitive to radial derivative width despite
+negligible order-4/8 changes. At the final finite cut the temporal mass
+residual is about `-8.32e-5`, while radial mass and lapse residuals are below
+`1.7e-9` and `9.3e-9`. The actual wall-curve acceleration also differs from
+the hybrid prediction. The next connection concerns cap transport and mass
+balance; this audit supplies neither a new wall law nor a new evolution.
+
 The [near-wall saved-row audit](current-result.md#saved-near-wall-row-audit-16-october-2026)
 uses the [bounded diagnostic](../scripts/diagnose_nsc_atlas_boundary_rows.py)
 and [eight synthetic controls](../tests/test_diagnose_nsc_atlas_boundary_rows.py).
@@ -25,7 +66,8 @@ python scripts/run_python.py scripts/diagnose_nsc_atlas_boundary_rows.py --outpu
 Fresh reproduction selects a new output file without `--check`; existing
 files are protected. The result reports stencil sensitivity and leaves
 the origin of the boundary shape unresolved. It does not impose a wall
-derivative or resolve the independent cap mass equation.
+derivative; the selected cap audit above now evaluates the independent
+mass and wall-curve consistency questions.
 
 The [same-grid exterior-operator comparison](prior-art-and-open-claim.md#fixed-grid-exterior-operator-comparison-16-october-2026)
 uses the [quadratic derivative](../src/recursive_horizons/nsc_atlas_departure_gradient.py),

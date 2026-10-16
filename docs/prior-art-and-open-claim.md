@@ -1,6 +1,37 @@
 # Prior art and admission of new research
 
+## Terminal cap mass-functional derivative, 16 October 2026
+
+The completed selected-cap audit isolates a terminal temporal mass
+discrepancy that is much larger than its incoming-trace flux change. The
+[mass-transport identity and tangent](nsc-atlas-finite-amplitude.md#cap-mass-balance-under-field-transport)
+connect the radial functional to bulk field transport and moving-interface
+terms. The missing connection is its derivative under the implemented cap
+transport rates. Evaluate that selected-state question before another
+trajectory or a changed physical wall law.
+
+| Item | Fixed terminal functional calculation |
+| --- | --- |
+| Inputs and domain | Pin the completed cap-consistency payload and its seven producer/control bindings; authenticate its predecessor payload/manifest and 104 bindings once through the existing hash-only reader. Use only cut 128, both amplitudes and quadrature orders four/eight, unchanged 64-cell raw cap states and stored profile jets. No profile fit or previous analysis replay. |
+| Rates and reconstruction | Reconstruct four base cap metrics and check their saved mass/field values. Reuse the corresponding stored hybrid `r_s,T_s,Vdot_plus,w_plus`; set `R_x=r_s/Vdot_plus`, `T_x=T_s/Vdot_plus`. Evaluate the existing `background_cap_rhs` once for each base, yielding exactly four cap RHS calls. Keep these directions fixed for the local functional probes. No full coupled stage, exterior prefix/map, source solve, gauge quadrature or trajectory. |
+| Directional probe | Let `dx` be the stored saved-cut spacing and `h=dx/8`. Vary `(R,T,Ip,Iq)` linearly backward along the selected rates at offsets `-2h,-h,-h/2,-h/4`. Reconstruct each cap metric with its fixed profile and order. Together with the base this is exactly 20 cap metrics per analysis, supplying backward-three-point derivatives at `h,h/2,h/4`. Each input must retain the finite profile domain, positive metric, valid radius and finite reconstructed fields. The terminal zero case has no upper-profile margin; forward probes are excluded. |
+| Measurements | Retain functional derivatives, step-width and order differences, left and imposed-face fluxes, global mass balance `D_x n_W-R_x rho_n-T_x J`, and the version using each previously recorded radial derivative. Verify their difference `R_x e_r`. Compare with both saved-history time widths using the owner's `e_hist,hyb` bridge: first express the saved mass derivative with hybrid rates, then report its difference from the original measured-rate residual separately. Retain hybrid-minus-measured `R_x,T_x` differences. Record limiter secant/sign/selection ties and branch changes, radial/profile split counts and domain margins for every probe. Do not interpret three widths or a branch crossing as an established convergence order. |
+| Controls | Use manufactured smooth moving functionals to check the derivative coefficients, geometric/background participation, width scaling and global-versus-radial balance identity. Exercise a one-sided branch example, immutable inputs, exact stored-rate conversion, common-budget exhaustion and first-failure retention. Synthetic dispatch controls verify 20 metrics/four RHS calls and that no forward probe or full stage is invoked. Controls share 30 process CPU seconds/300,000 points; no retained physical diagnostic is part of them. |
+| Allowance | One creation including validation has 60 process CPU seconds/4,000,000 points. One standalone check has 30 CPU seconds/2,000,000 points. Static accounting from the prior metric implementation estimates fewer than one million points per analysis; this is not a measured guarantee. Freeze producers and controls before creation. |
+| Decision and stop | A stable instantaneous residual comparable with the saved-history discrepancy redirects to the cap's discrete mass/energy balance. A small instantaneous residual redirects to time integration or saved-history differentiation. Material width/order/branch sensitivity leaves attribution unresolved and ends this probe set. Stop on the first invalid input/domain, nonfinite field, failed reconstruction or budget exhaustion with an ignored diagnostic receipt. No new evolution or wall law follows from this calculation alone. |
+
 ## Selected cap mass and wall-curve audit, 16 October 2026
+
+**Outcome:** the [completed audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+and creation validation pass on the first attempt with 4,393,156 points /
+15.359375 process CPU seconds. One standalone check passes with 2,196,578
+points / 8.453125 CPU seconds. Pulse-time residuals are strongly sensitive
+to radial derivative width; quadrature-order sensitivity is small. At the
+terminal cut, radial mass/lapse residuals are small while the temporal mass
+residual remains and is not explained by the incoming-trace flux mismatch.
+This redirects to the cap mass-functional/discrete-transport connection
+before another evolution or changed wall law. The admission below remains
+the fixed scope of the completed calculation.
 
 The saved exterior-row audit localizes the sensitivity but leaves its
 origin ambiguous. Before another evolution or boundary-stencil change,

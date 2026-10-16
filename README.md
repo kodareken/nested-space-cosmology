@@ -83,7 +83,11 @@ paired wall-scalar method difference. Constraint RMS decreases, but the
 largest near-wall incoming residual rises slightly and independent wall
 curvature remains unresolved. A [three-cut saved-row audit](docs/current-result.md#saved-near-wall-row-audit-16-october-2026)
 localizes that sensitivity to the final exterior rows without identifying
-its cause; the next independent check is the cap's mass/lapse consistency.
+its cause. The [cap mass and actual wall-curve audit](docs/current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+finds strong pulse-time derivative-width sensitivity. At the terminal cut,
+radial mass and lapse residuals are small but a temporal mass discrepancy
+remains; the incoming-field mismatch does not explain it. The next
+connection is the cap mass functional's balance under discrete field transport.
 Boundary accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.

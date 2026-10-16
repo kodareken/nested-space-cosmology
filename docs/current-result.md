@@ -2,6 +2,77 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Selected cap mass and wall-curve audit, 16 October 2026
+
+The [completed cap audit](../results/development/nsc-atlas-cap-consistency-v1.json)
+reconstructs both amplitudes at 16 saved times, with integration orders four
+and eight on every time: 64 cap metrics and 12 selected exterior-prefix and
+hybrid-boundary evaluations per analysis. It differentiates saved states
+without calling a coupled stage, cap RHS, source solve or time evolution.
+The [derivation](nsc-atlas-finite-amplitude.md#independent-cap-mass-and-wall-curve-consistency)
+keeps reconstructed left scalar fields, actual wall motion and imposed
+boundary fields separate.
+
+At integration order eight and native time spacing, the finite case gives:
+
+| Cut | Radial stride | Normalized temporal mass `e_m` | Normalized radial mass `e_r` | Actual curve `K_geom-k_minus` |
+| --- | ---: | ---: | ---: | ---: |
+| 63 | 1 | `-20.4225` | `36.5048` | `0.00788673` |
+| 63 | 2 | `-93.8856` | `179.927` | `0.0405946` |
+| 68 | 1 | `21.5735` | `-39.1857` | `-0.00963231` |
+| 68 | 2 | `-7.12331` | `17.5031` | `0.00253880` |
+| 128 | 1 | `-0.640753` | `-3.48156e-6` | `-0.000434340` |
+| 128 | 2 | `-0.640748` | `-1.30435e-5` | `-0.000434342` |
+
+The pulse-time estimates are strongly sensitive to radial width, including
+a sign change at cut 68. These pointwise derivatives do not yet identify a
+physical constraint or junction failure. Across all selected finite cases,
+changing integration order four to eight changes `e_m` by at most
+`6.547e-6`, `e_r` by `2.832e-7`, the lapse residual by `1.996e-10`, and
+`K_geom` by `1.454e-9`. Integration-order sensitivity is much smaller
+than the observed differentiation-width sensitivity.
+
+The terminal cut separates a further question. Its actual radial mass
+residual is below `1.694e-9` and lapse residual below `9.283e-9` for both
+radial widths. The actual temporal mass residual remains
+`E_m=-8.31897e-5` at native time width and `-7.62616e-5` at twice that
+width. Radial widening barely changes it. The mass evolution therefore
+needs a direct cap-transport consistency analysis. These two widths
+measure sensitivity; they do not bound the continuum error.
+
+At that terminal cut the reconstructed, hybrid and curve-kinematic
+incoming characteristics are respectively `0.0538697`, `0.0323255` and
+`0.0323257`. The hybrid-minus-left normalized mass flux is only
+`-3.37875e-5`, far smaller than the normalized residual `e_m=-0.640753`.
+Replacing the left trace by the imposed trace cannot explain that temporal
+mass discrepancy. The actual curve acceleration differs from the hybrid
+prediction by `-4.34340e-4` at native time width and `-2.92509e-4` at
+twice that width. Its proper-time derivative is also measured independently,
+not imposed from the saved clock. The zero-backreaction case has its own
+time-differencing acceleration defect, `8.07036e-5` / `3.11790e-4`.
+Consequently these acceleration differences alone are not a junction test.
+
+All zero-backreaction actual mass and lapse residuals vanish; its nonzero
+normalized `e_m,e_r` are probe consistency quantities. At the terminal
+cut its normalized temporal value is `-0.0268475` / `-0.0289519` for the
+two time widths. Both amplitudes retain positive reconstructed proper-time
+norms and stay within the supplied finite profile domain.
+
+The 34 synthetic controls pass on their first combined run with **62,119
+points / 0.34375 process CPU seconds**, followed by independent source
+review. Creation and validation pass on the first attempt with **4,393,156
+points / 15.359375 CPU seconds**; the one standalone check passes with
+**2,196,578 points / 8.453125 CPU seconds**. The record authenticates 104
+inherited bindings and binds seven audit source/control files. Its 820,093
+bytes have SHA256
+`79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728`.
+
+The next connection is between the cap's reconstructed mass functional
+and its existing discrete field-transport equations. Establish that balance
+before another evolution or a change to the physical wall law. The present
+result neither closes the finite-amplitude error estimate nor identifies
+the exterior boundary mismatch's cause.
+
 ## Saved near-wall row audit, 16 October 2026
 
 The [saved-array audit](../results/development/nsc-atlas-boundary-rows-audit-v1.json)

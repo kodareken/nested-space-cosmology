@@ -2607,10 +2607,165 @@ implied by the saved wall curve, and the one imposed by the hybrid map
 remain separate reported quantities. Their associated flux differences
 are measured explicitly, without replacing the primary left-trace residual.
 
-The [fixed admission](prior-art-and-open-claim.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
-specifies matched integration orders on all neighboring slices, time and
-radial widths, actual boundary-map reconstruction and a finite compute
-allowance. It is a proposed consistency check, not a recorded cap result.
+The [completed audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+uses matched integration orders on all neighboring slices, two time and
+radial widths, actual boundary-map reconstruction and the
+[fixed allowance](prior-art-and-open-claim.md#selected-cap-mass-and-wall-curve-audit-16-october-2026).
+Pulse-time pointwise residuals change strongly with radial width, while
+quadrature-order sensitivity is small. At the terminal cut the finite
+radial mass/lapse residuals are small, but the actual temporal mass
+residual is `-8.319e-5` / `-7.626e-5` at the two time widths. The normalized
+left-to-hybrid flux difference is only `-3.379e-5`, compared with the
+normalized temporal residual `-0.640753` / `-0.587390`. That trace change
+cannot account for the mass discrepancy. The next connection is the
+reconstructed cap mass functional's balance under the existing discrete
+field transport, including its moving radial cells. These observations
+identify a numerical consistency question; they do not establish a new
+physical source or a failed junction law.
+
+#### Cap mass balance under field transport
+
+The terminal discrepancy motivates a connection between the radial mass
+functional and the scalar transport equations. On a smooth cap piece write
+`S=Pi^2+Phi^2`, `B=A exp(delta)`, `U=dPdiff/df`, and
+
+$$
+a=\frac{\alpha r S}{2},\qquad
+q=\frac{r^2P_{\mathrm{diff}}}{2}
+       +\frac{r^2(1-r^2)S}{4},\qquad
+J=\frac{r^2 A^2e^\delta\Pi\Phi}{2}.
+$$
+
+Then `e_r=n_r+a n-q`, `E_delta=delta_r-a`, and `e_m=n_T-J`.
+Keep the field-equation defects explicit:
+
+$$
+\mathcal R_f=f_T-B\Pi,\qquad
+\mathcal R_\Pi=\Pi_T-r^{-2}\partial_r(r^2B\Phi)+e^\delta U,
+\qquad
+\mathcal R_\Phi=\Phi_T-\partial_r(B\Pi).
+$$
+
+Differentiating the radial mass equation at fixed areal radius, using
+`A_T=-2 alpha n_T/r`, and collecting the product derivatives gives
+
+$$
+\boxed{\partial_r e_m+a e_m
+=\partial_T e_r+J E_\delta
+ +\frac{r^2}{2}\left[U\mathcal R_f
+       +A(\Pi\mathcal R_\Pi+\Phi\mathcal R_\Phi)\right].}
+$$
+
+In particular, the potential terms cancel when `f_T=B Pi` and the
+`-exp(delta) U` term in `Pi_T` are inserted. The remaining scalar products
+give `J_r+J delta_r`; moving `a J` to the right produces `J E_delta`.
+This identity was derived independently twice. It explains why a small
+radial defect at the wall alone does not establish the temporal mass law:
+the latter also depends on field transport throughout the cap.
+
+For piecewise reconstructed fields, apply the identity on each smooth
+piece. Set `mu(r)=exp(integral_0^r a d rho)` and denote its right-hand side
+by `F`. If `n` is continuous at a moving interface `r_j(T)`, differentiation
+along that interface gives
+
+$$
+[n_T]_j=-r_{j,T}[n_r]_j,\qquad
+[e_m]_j=-r_{j,T}[n_r]_j-[J]_j.
+$$
+
+Consequently, with regular-centre `e_m(0)=0`,
+
+$$
+\mu(R)e_m(R^-)
+=\sum_{\mathrm{pieces}}\int\mu F\,dr
+ +\sum_{0<r_j<R}\mu(r_j)[e_m]_j.
+$$
+
+This is piecewise calculus with explicit traces. It does not assign products
+such as `Pi R_Pi` a meaning when the residual is distributional. Moving
+cell-interface terms cannot simply be omitted from a numerical balance.
+
+The actual finite-dimensional mass functional offers a direct next test.
+At fixed `y=r/R`, let `N(y)=n(Ry)` and
+
+$$
+\mathcal A=\frac{\alpha R^2yS}{2},\qquad
+\mathcal B=R^3y^2\left[\frac{P_{\mathrm{diff}}}{2}
+                         +\frac{(1-R^2y^2)S}{4}\right].
+$$
+
+The exact radial problem is $N_y+\mathcal A N=\mathcal B$, $N(0)=0$.
+Along the existing rates `(R_x,T_x,Ip_x,Iq_x)`, its tangent $M=\partial_x N$
+satisfies
+
+$$
+M_y+\mathcal A M=\mathcal B_x-\mathcal A_x N,\qquad M(0)=0.
+$$
+
+The wall balance compares `M(1)` with `R_x n_r+T_x J`, retaining left and
+imposed-face fluxes separately. Field tangents include the changing
+background profile, cap reconstruction and moving radius. For the
+implemented quadrature, its actual nodes, weights, split points and
+recurrence must also be differentiated or tested by controlled directional
+variation; the exact integral formula is not automatically its derivative.
+Limiter ties and branch changes require separate one-sided treatment.
+The zero-backreaction terminal profile reaches its upper supplied label,
+so a forward finite perturbation can exit the domain. An analytic tangent
+or explicitly backward probes must preserve that boundary.
+
+This identifies the next selected-state calculation; it has not yet been
+evaluated. It separates instantaneous spatial/flux compatibility from
+time differentiation of saved histories, without supplying a continuum
+error bound or changing the physical wall law.
+
+For a direct finite-dimensional test, freeze the selected hybrid rates
+`R_x=r_s/Vdot_plus`, `T_x=T_s/Vdot_plus` and its incoming `w_plus`. One
+`background_cap_rhs` evaluation supplies the departure-integral rates.
+Perturb `R,T,Ip,Iq` together along that direction, leaving the profile
+fixed; reconstruct the mass from scratch at each admissible nearby input.
+These are variations of one functional, not accepted evolution steps.
+For the base value `N0` and backward values `N(-h)`, `N(-2h)`, use
+
+$$
+D_hN=\frac{3N_0-4N(-h)+N(-2h)}{2h}.
+$$
+
+Three widths `h,h/2,h/4` require four distinct backward probes. Compare
+the resulting normalized temporal defect with the saved-history result,
+and also report the global balance
+
+$$
+\mathcal B_{\mathrm{mass}}
+=D_hN-R_x\rho_n-T_xJ,\qquad
+\rho_n=\frac{R^2P_{\mathrm{diff}}}{2}
+       +\frac{R^2 A(\Pi^2+\Phi^2)}{4}.
+$$
+
+If `e_m^dir=(D_hN-R_x D_rn)/T_x-J`, then
+`B_mass-T_x e_m^dir=R_x e_r`. The global form avoids using a radial
+difference to define its expected moving-boundary contribution, while
+the displayed relation preserves the independently measured radial defect.
+Both left and imposed-face flux comparisons remain explicit. Stable
+nonzero instantaneous defects implicate spatial transport/reconstruction
+compatibility; small ones redirect to time integration or saved-history
+differentiation. Branch and width sensitivity can leave that attribution
+unresolved.
+
+The instantaneous direction uses hybrid wall/clock rates, whereas the
+saved-history residual used measured rates. Keep that change separate:
+
+$$
+e_{\mathrm{hist,hyb}}
+=\frac{D_x^{\mathrm{hist}}n_W-R_x^{\mathrm{hyb}}D_rn}
+       {T_x^{\mathrm{hyb}}}-J,\qquad
+e_m^{\mathrm{dir}}-e_{\mathrm{hist,hyb}}
+=\frac{D_hN-D_x^{\mathrm{hist}}n_W}{T_x^{\mathrm{hyb}}}.
+$$
+
+Report `e_hist,hyb-e_hist` separately. The already recorded `n_T,T_x,R_x`
+and radial derivative recover `D_x^hist n_W`; this bridge needs no new
+metric or evolution. Without it, a directional-versus-history comparison
+would also contain changed wall and clock rates.
 
 ### Central clock in general null labels
 
