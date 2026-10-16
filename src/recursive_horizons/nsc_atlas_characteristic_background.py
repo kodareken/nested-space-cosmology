@@ -2,11 +2,13 @@
 
 This is a computational subtraction profile, not a new physical source or
 an imposed finite-amplitude wall waveform. Values and all derivatives come
-from the same piecewise quintic Hermite polynomial. A C2 knot gives finite
+from the same Hermite profile. An optional degree-seven first active piece
+preserves a supplied quartic onset; other pieces are quintic. A C2 knot gives finite
 regular centre first jets; jumps of its third derivative need not give a
 radially differentiable Pi there. No arbitrary smoothness claim is made.
 """
 import math
+from collections.abc import Mapping
 
 import numpy as np
 from scipy.interpolate import BPoly, PPoly
@@ -41,17 +43,27 @@ def _moment(low, high, power):
     return (high-low)*sum(high**(power-j)*low**j for j in range(power+1))/(power+1)
 
 
+def _onset_bernstein(quartic, value, first, second, width):
+    """Degree-seven controls, valid for float or exact/interval scalar inputs."""
+    return [0,0,0,0,quartic*width**4/35,
+            value-2*width*first/7+width*width*second/42,value-width*first/7,value]
+
+
 class CharacteristicProfile:
-    """Finite C2 quintic Hermite data, with optional certified quiet extension.
+    """Finite C2 Hermite data, with optional quiet extension and quartic onset.
 
     Two to 513 strictly increasing labels carry F,F',F''. Below the first
     label the profile is zero only when all three initial jets are exactly
     zero. Upper extrapolation is always rejected. Public query batches have
     at most 513 points. The caller owns one cumulative budget; there is no
     internal budget reset or physical preparation/evolution.
+    Optional onset={index,quartic_coefficient} replaces only that first
+    active interval by a degree-seven piece. All supplied jets up to its
+    left endpoint must be zero; its fourth right derivative is 24 times
+    the coefficient. Preceding intervals remain exactly quiet.
     """
 
-    def __init__(self, labels, values, derivatives, second_derivatives):
+    def __init__(self, labels, values, derivatives, second_derivatives, *, onset=None):
         arrays = [_array(v, name) for v, name in (
             (labels, "labels"), (values, "values"), (derivatives, "derivatives"),
             (second_derivatives, "second_derivatives"))]
@@ -60,21 +72,52 @@ class CharacteristicProfile:
                 or np.any(np.diff(arrays[0]) <= 0)):
             raise ValueError("profile needs 2..513 matching vectors with increasing labels")
         labels, values, derivatives, second_derivatives = (v.copy() for v in arrays)
+        self._onset = None
+        if onset is not None:
+            if not isinstance(onset,Mapping) or set(onset)!={'index','quartic_coefficient'}:
+                raise ValueError('onset requires index and quartic_coefficient')
+            index=onset['index'];quartic=onset['quartic_coefficient']
+            if (isinstance(index,(bool,np.bool_)) or not isinstance(index,(int,np.integer))
+                    or not 0<=index<len(labels)-1):
+                raise ValueError('onset index must identify an existing active interval')
+            if (isinstance(quartic,(bool,np.bool_)) or not isinstance(quartic,(int,float,np.integer,np.floating))
+                    or not math.isfinite(float(quartic)) or float(quartic)==0.):
+                raise ValueError('onset quartic coefficient must be finite and nonzero')
+            if any(np.any(row[:index+1]!=0.) for row in (values,derivatives,second_derivatives)):
+                raise ValueError('onset and preceding supplied jets must be exactly quiet')
+            self._onset=dict(index=int(index),quartic_coefficient=float(quartic))
         try:
             with np.errstate(over="raise", divide="raise", invalid="raise", under="ignore"):
                 data = np.column_stack((values, derivatives, second_derivatives))
                 self._spline = PPoly.from_bernstein_basis(
                     BPoly.from_derivatives(labels, data, extrapolate=False))
+                if self._onset is not None:
+                    i=self._onset['index'];h=labels[i+1]-labels[i]
+                    controls=np.array(_onset_bernstein(self._onset['quartic_coefficient'],
+                        values[i+1],derivatives[i+1],second_derivatives[i+1],h),dtype=float)
+                    if controls[4]==0. or not np.all(np.isfinite(controls)):
+                        raise ValueError('onset coefficient is unresolved in Bernstein coordinates')
+                    piece=PPoly.from_bernstein_basis(BPoly(controls[:,None],labels[i:i+2],extrapolate=False))
+                    coefficients=np.pad(self._spline.c,((2,0),(0,0)))
+                    coefficients[:,i]=piece.c[:,0]
+                    if coefficients[3,i]==0.:
+                        raise ValueError('onset quartic coefficient is unresolved in power coordinates')
+                    self._spline=PPoly(coefficients,labels,extrapolate=False)
         except (FloatingPointError, OverflowError) as error:
             raise ValueError("nonfinite characteristic profile coefficients") from error
         if not np.all(np.isfinite(self._spline.c)):
             raise ValueError("nonfinite characteristic profile coefficients")
         self._labels = labels
         self._labels.setflags(write=False)
-        self._derivatives = [self._spline.derivative(order) for order in range(1, 6)]
+        self._derivatives = [self._spline.derivative(order) for order in range(1, len(self._spline.c))]
         self.quiet_extension = bool(values[0] == derivatives[0] == second_derivatives[0] == 0.)
         self.domain = {"first_label": float(labels[0]), "last_label": float(labels[-1]),
                        "quiet_below": self.quiet_extension}
+
+    @property
+    def onset(self):
+        """Copy of the one-sided onset specification, if supplied."""
+        return None if self._onset is None else self._onset.copy()
 
     @property
     def breakpoints(self):
@@ -121,11 +164,13 @@ class CharacteristicProfile:
             index = min(index, len(self._labels)-2)
             coefficient = self._spline.c[:, index]
             at = T-self._labels[index]
-            moments = [_moment(low, high, order) for order in range(5)]
-            for order in range(5):
+            degree=len(coefficient)-1
+            budget.check(4*max(0,degree-5))
+            moments = [_moment(low, high, order) for order in range(degree)]
+            for order in range(degree):
                 derivative = float(np.polyval(np.polyder(coefficient, order+1), at))
                 first += derivative*distance**order/math.factorial(order)*moments[order]
-            for order in range(4):
+            for order in range(degree-1):
                 derivative = float(np.polyval(np.polyder(coefficient, order+2), at))
                 factor = derivative*distance**order/math.factorial(order)
                 second += factor*moments[order]

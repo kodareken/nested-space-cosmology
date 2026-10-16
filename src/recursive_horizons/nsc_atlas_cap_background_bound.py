@@ -12,6 +12,7 @@ from .nsc_atlas_cap_background_jets import RetainedCapBackground
 from .nsc_atlas_cap_polynomial_basis import _count
 from .nsc_atlas_cap_variational_reference import _exact_ball
 from .nsc_atlas_polar_cap import _scalar, _vector
+from .nsc_atlas_characteristic_background import _onset_bernstein
 
 
 def _hermite_controls(v0,d0,s0,v1,d1,s1,h):
@@ -21,6 +22,21 @@ def _hermite_controls(v0,d0,s0,v1,d1,s1,h):
     first=[5*(b-a)/h for a,b in zip(values[:-1],values[1:])]
     second=[4*(b-a)/h for a,b in zip(first[:-1],first[1:])]
     return values,first,second
+
+
+def _background_controls(background,knots,values,first,second):
+    """Original-input controls, including the one-sided active onset piece."""
+    controls=[_hermite_controls(values[i],first[i],second[i],values[i+1],first[i+1],second[i+1],
+                                knots[i+1]-knots[i]) for i in range(len(knots)-1)]
+    onset=background.onset
+    if onset is not None:
+        i=onset['index'];h=knots[i+1]-knots[i]
+        v=list(map(arb,_onset_bernstein(_exact_ball(onset['quartic_coefficient']),
+                                      values[i+1],first[i+1],second[i+1],h)))
+        d=[7*(b-a)/h for a,b in zip(v[:-1],v[1:])]
+        s=[6*(b-a)/h for a,b in zip(d[:-1],d[1:])]
+        controls[i]=(v,d,s)
+    return controls
 
 
 def _upper_max(values):
@@ -70,8 +86,7 @@ def background_metric_bound(background,T,Z,chi_coefficients,density_coefficients
         if not R>0 or not R<1:
             raise ValueError('metric interval is not resolved inside (0,1)')
         values,first,second=([_exact_ball(x) for x in data[key]] for key in ('values','first','second'))
-        controls=[_hermite_controls(values[i],first[i],second[i],values[i+1],first[i+1],second[i+1],
-                                    knots[i+1]-knots[i]) for i in range(len(knots)-1)]
+        controls=_background_controls(background,knots,values,first,second)
         budget.check(96*len(controls)+64*count)
         cb,kb=([abs(_exact_ball(x)) for x in a] for a in (chi,k))
         slopes=[arb(p*(p+1)//2) for p in range(1,2*count,2)]

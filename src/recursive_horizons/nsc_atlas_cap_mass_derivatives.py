@@ -38,8 +38,10 @@ def third_moments(profile, T, distance, *, budget):
         index = min(index, len(labels)-2)
         coefficient = profile._spline.c[:, index]
         at = T-labels[index]
-        moments = [_moment(low, high, power) for power in range(5)]
-        for order in range(3):
+        degree=len(coefficient)-1
+        budget.check(3*max(0,degree-5))
+        moments = [_moment(low, high, power) for power in range(degree)]
+        for order in range(degree-2):
             factor = (float(np.polyval(np.polyder(coefficient, order+3), at))
                       * distance**order/math.factorial(order))
             result += factor*np.asarray(moments[order:order+3])

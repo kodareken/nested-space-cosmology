@@ -386,6 +386,29 @@ All three symbolic controls pass with zero field samples / 0.21875 active
 CPU seconds. They test onset order and coefficient, not a bound on the
 prepared-history interpolation error or a physical evolution.
 
+The implemented first active piece, centre moments and mass/metric checks:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_retained_onset.py -q -s
+```
+
+Eight new and 65 affected existing controls pass across 75 development
+executions with 787,030 charged values / 2.0625 active CPU seconds. The
+existing suites cover characteristic background, retained background jets,
+background bounds and cap mass derivatives. No physical source is replayed.
+
+The prepared-source adapter's manufactured interface checks:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_prepared_background.py tests/test_nsc_atlas_background_profile.py -q -s
+```
+
+The 33 controls pass with 8,596 charged values / 0.09375 CPU seconds.
+The separately admitted physical check is
+`python scripts/run_python.py scripts/check_nsc_atlas_prepared_history.py --output results/summaries/nsc-atlas-prepared-history-v1.json`.
+It refuses to overwrite a result, shares one 10-million-value / 60-second
+budget, and saves only summaries and hashes, including a stopped outcome.
+
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.
 It stopped at the 180-second CPU check after 341/371 steps. Preserve that

@@ -92,7 +92,8 @@ def _background_partition(basis,Z,T,background):
 
 
 def _background_time_projection(basis,fields,gram,breaks,owners,background,T,budget):
-    # Each knot-split product has degree <=9: six Gauss points suffice in
+    # Each knot-split product has degree <=11 with the degree-seven onset
+    # (<=9 for quintic history): six Gauss points suffice in
     # real arithmetic. Evaluation and Gram rounding remain numerical errors.
     nodes,weights=leggauss(6);loads=np.zeros((2,basis.dimension))
     for panel,cell in enumerate(owners):

@@ -48,8 +48,13 @@ identifies the next required correction: ordinary quintic history transfer
 can introduce a cubic term at a quartic source onset. A unique degree-seven
 first active piece preserves both its order and source-fixed coefficient.
 Three symbolic controls pass with zero field samples / 0.21875 CPU seconds.
-The profile, centre moments and input certificate must carry that piece
-together before the physical source is transferred.
+The profile, centre moments and both input certificates now carry that
+piece together. Eight new and 65 affected existing controls pass in 75
+development executions, with 787,030 charged values / 2.0625 CPU seconds.
+The prepared-field adapter also passes five new and 28 existing controls
+(8,596 values / 0.09375 CPU seconds), preserving the original derivative
+interface and reporting quiet-front discrepancies. Its first physical
+source transfer and finite interpolation comparison remain next.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

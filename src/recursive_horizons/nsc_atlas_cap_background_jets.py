@@ -18,12 +18,18 @@ SMALL_Z = .01
 class RetainedCapBackground:
     """The same finite C2 profile plus its original binary Hermite inputs."""
 
-    def __init__(self, labels, values, first, second):
-        self.profile = CharacteristicProfile(labels,values,first,second)
+    def __init__(self, labels, values, first, second, *, onset=None):
+        self.profile = CharacteristicProfile(labels,values,first,second,onset=onset)
+        self._onset=self.profile.onset
         self._inputs = {name:np.array(value,dtype=float,copy=True) for name,value in
                         zip(('labels','values','first','second'),(labels,values,first,second))}
         for value in self._inputs.values():
             value.setflags(write=False)
+
+    @property
+    def onset(self):
+        """Original binary onset coefficient and piece index, before conversion."""
+        return None if self._onset is None else self._onset.copy()
 
     @property
     def inputs(self):

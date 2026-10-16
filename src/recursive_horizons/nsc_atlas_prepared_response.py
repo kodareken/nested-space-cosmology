@@ -64,6 +64,11 @@ class PreparedFieldBudget:
         self.started = time.process_time()
         self.kernel_values = 0
 
+    @property
+    def evaluations(self):
+        """Same cumulative count for cap/reference callers sharing this budget."""
+        return self.kernel_values
+
     def check(self, kernel_values=0):
         if (isinstance(kernel_values, (bool, np.bool_))
                 or not isinstance(kernel_values, (int, np.integer))

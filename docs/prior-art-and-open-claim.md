@@ -1756,6 +1756,84 @@ must extend the same profile, centre moments and Bernstein input controls
 together before the prepared history is imported. No physical data were
 evaluated or changed.
 
+The next implementation extends `CharacteristicProfile` with an optional
+one-sided first active degree-seven piece and retains its source-fixed
+quartic coefficient in `RetainedCapBackground`. All preceding supplied
+jets must be exactly zero. Extend both centre moment routines by the
+actual polynomial degree and route both metric certificates through the
+same original-input piece controls. The existing quintic path remains
+unchanged. Six Gauss points still suffice for the fixed-basis time
+projection: its highest product degree becomes eleven.
+
+Manufactured controls share **2,000,000 charged values / 30 active CPU
+seconds**. Use independent degree-seven polynomials, one-sided front and
+C2 joins, exact polynomial moment integrals across a quiet front, the
+small-z switch, positive-radius constrained mass and time derivatives,
+both original-input certificates, input-copy and invalid-domain checks.
+Run affected existing profile/jet/bound controls once within this allowance.
+Grok independently checks the Bernstein and moment formulas. No prepared
+source solve, numerical evolution or scan is included. Unresolved front
+coefficients, lost centre terms or inconsistent certificates stop this
+component before the physical history is imported.
+
+**Implementation outcome:** 73 distinct controls pass in 75 development
+executions, with **787,030 charged values / 2.0625 active CPU seconds**.
+The new controls use 769,126 values initially and seven on focused repair;
+the existing profile, jet, bound and mass-partial suites use 861, 9,405,
+7,213 and 418 respectively. Two assertions were corrected without changing
+the numerical equations or tolerances: third jets need not match at a C2
+join, and the underflow fixture must avoid triggering an earlier overflow.
+Independent Grok algebra confirms the controls, derivative hulls and full
+moment ranges. Exact quintic total transfer now rejects onset histories;
+the retained-background route preserves them directly. No prepared source
+or physical evolution was run.
+
+The prepared-history adapter now has a concrete input route: use the union
+of existing prepared-field cuts, arrival-spline knots and named source
+edges, with at most 513 unique labels. Query `CapLeadingField.profile`
+once with `second=True`; use its original value and first two jets, and
+the source/arrival formula for the first active quartic coefficient.
+Keep the mathematically quiet jets zero only under explicit numerical
+quiet tolerances (zero by default), recording the original discrepancies.
+Retain the binary front's offset from its exact input-derived support
+root. Neither a quiet tolerance nor a profile coefficient fits observations.
+
+Adapter controls use **100,000 charged values / 20 active CPU seconds**
+on manufactured prepared-field interfaces, without a source solve. They
+check native knots, source/arrival normalization, derivative provenance,
+quiet-discrepancy rejection/recording, first-piece onset, finite domain,
+input immutability and shared budget accounting. A physical replay and
+its interpolation-error comparison still require their own fixed-input
+calculation; the adapter alone supplies no such error bound.
+
+**Adapter outcome:** five new and 28 existing wall-profile controls pass
+once, with **8,596 charged values / 0.09375 CPU seconds** (467 / 0.015625
+for the new adapter). They verify the actual API connection on manufactured
+input, source normalization, derivative provenance, tolerance accounting,
+copied inputs, finite-domain rejection and a shared prepared/cap budget
+counter. No physical source was solved in these controls.
+
+### One prepared physical history transfer, 17 October 2026
+
+Run the existing fixed preparation once at its 257-field-node,
+257-geometry-knot setting, using the existing order-four differentiated
+wall integral for F''. Transfer the native knot union through the checked
+adapter with **zero quiet tolerances**. Compare F,F',F'' at the midpoint of
+each existing interval against direct calls to the same prepared-field
+interface. This is a finite interpolation comparison, not a continuum
+error enclosure or a resolution scan. Retain both absolute maxima and
+their global peak-relative values, the onset coefficient, inverse bracket,
+input hashes and work count. Do not save the full field or history arrays.
+
+The complete source solve, transfer and comparisons share **10,000,000
+charged values / 60 active CPU seconds**. Stop at the first domain,
+quiet-jet, arithmetic or budget failure and save its phase and measured
+reason. No automatic retry, altered source, fitted coefficient, cap time
+trajectory or finite-amplitude claim is part of this calculation. Native
+knot capacity, numerical quiet-front leakage and unresolved interpolation
+error are the three specific risks. Its outcome selects the next actual
+source/cap connection rather than another grid campaign.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

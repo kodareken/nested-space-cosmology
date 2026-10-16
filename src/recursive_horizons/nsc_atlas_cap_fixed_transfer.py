@@ -96,6 +96,8 @@ def transfer_initial_background(background,T,Z,*,budget):
     budget=_budget(budget);before=budget.evaluations
     if not isinstance(background,RetainedCapBackground):
         raise ValueError('initial transfer requires the retained original Hermite data')
+    if background.onset is not None:
+        raise ValueError('onset history must remain in the background; a fixed quintic total transfer is not exact')
     T,Z=exact_number(T,'initial time'),exact_number(Z,'wall coordinate')
     if Z<=0:
         raise ValueError('wall coordinate must be positive')

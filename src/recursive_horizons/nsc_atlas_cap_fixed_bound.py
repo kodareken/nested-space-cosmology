@@ -11,7 +11,7 @@ import numpy as np
 from flint import arb,ctx,fmpq
 
 from .nsc_atlas_background_cap import _budget
-from .nsc_atlas_cap_background_bound import _envelope_step, _hermite_controls, _piece_ranges
+from .nsc_atlas_cap_background_bound import _envelope_step, _background_controls, _piece_ranges
 from .nsc_atlas_cap_background_jets import RetainedCapBackground
 from .nsc_atlas_cap_fixed_basis import FixedCapBasis,exact_number
 from .nsc_atlas_polar_cap import _scalar,_vector
@@ -123,8 +123,7 @@ def fixed_background_metric_bound(basis,chi,canonical_density,Z,*,background,T,a
         if not 0<zb.tanh()<1: raise ValueError('background metric interval is unresolved')
         knots=list(map(_ball,labels))
         v,d,s=([_ball(x) for x in data[k]] for k in ('values','first','second'))
-        controls=[_hermite_controls(v[i],d[i],s[i],v[i+1],d[i+1],s[i+1],knots[i+1]-knots[i])
-                  for i in range(len(knots)-1)]
+        controls=_background_controls(background,knots,v,d,s)
         mapped=sorted({z for label in labels for z in (label-T,T-label) if 0<z<Z})
         U=arb(0);floors=[];panels=0
         for cell in range(basis.cells):

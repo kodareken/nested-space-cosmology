@@ -1,11 +1,14 @@
-"""Build a finite computational cap profile from supplied zero-case wall jets.
+"""Build computational cap histories from existing wall or prepared-field jets.
 
 The caller supplies values and material rates evaluated at the same saved
 stages. This adapter does not prepare a source, reconstruct a physical stage,
 or evolve a field. Its second jets are interpolation curvature; they are not
 an independently measured or computed physical second derivative.
+The prepared-field adapter instead uses the existing continuum-integral
+second jet and preserves the analytic quartic onset explicitly.
 """
 from collections.abc import Mapping
+from fractions import Fraction
 import math
 
 import numpy as np
@@ -118,3 +121,84 @@ def build_background_profile(walls, wall_rates, *, alpha, budget):
         "diagnostics": diagnostics,
         "charged_evaluations": None if before is None else budget.evaluations-before,
     }
+
+
+def build_prepared_background(cap, *, quiet_tolerances=(0.,0.,0.)):
+    """Retain the existing prepared field, with its mathematical quartic front.
+
+    Existing field cuts and geometry knots supply the labels; there is no
+    solve, knot scan or waveform differentiation. Values/first jets and the
+    continuum-integral second jet come from CapLeadingField.profile. The
+    resulting Hermite profile owns its own runtime derivatives. Their
+    difference from the prepared field needs a separate error comparison.
+
+    The analytic quiet branch replaces supplied quiet jets only within the
+    caller's three declared numerical tolerances, which default to zero.
+    Their measured discrepancies remain in the result. The rounded source
+    front is recorded relative to the exact root of the binary endpoints.
+    cap.budget owns every query and all adapter accounting.
+    """
+    from .nsc_atlas_cap_field import CapLeadingField
+    from .nsc_atlas_cap_background_jets import RetainedCapBackground
+    from .nsc_atlas_characteristic_background import _array,_budget
+    if not isinstance(cap,CapLeadingField):
+        raise ValueError('prepared background requires the existing CapLeadingField')
+    budget=_budget(cap.budget)
+    before=budget.kernel_values
+    tolerances=_array(quiet_tolerances,'quiet tolerances')
+    if tolerances.shape!=(3,) or np.any(tolerances<0):
+        raise ValueError('three nonnegative quiet tolerances are required')
+    if cap.quiet_certificate.get('quiet_cap') is not True:
+        raise ValueError('prepared background requires the quiet-cap certificate')
+    cuts=_array(cap.prepared_field.dense_data['cuts'],'prepared field cuts')
+    geometry=_array(cap.geometry['arrival'].x,'arrival geometry knots')
+    if (cuts.ndim!=1 or len(cuts)<2 or cuts[0]!=0. or cuts[-1]!=1.
+            or np.any(np.diff(cuts)<=0.) or geometry.ndim!=1
+            or np.any(np.diff(geometry)<=0.)):
+        raise ValueError('prepared field cuts and arrival knots must be ordered')
+    Va,Vb=cap.Va,cap.Vb;dV=cap.dV
+    if not np.isfinite([Va,Vb,dV]).all() or not Va<Vb or dV!=Vb-Va:
+        raise ValueError('prepared source endpoints are inconsistent')
+    edges=Va+dV*np.array([.25,.75])
+    native=geometry[(geometry>=Va)&(geometry<=Vb)]
+    V=np.unique(np.r_[Va,Vb,native,np.clip(Va+dV*cuts,Va,Vb),edges])
+    if not 2<=len(V)<=MAX_POINTS:
+        raise ValueError('native prepared-history union exceeds 513 labels')
+    labels=np.asarray(cap.geometry['arrival'](V),dtype=float)
+    if (labels.shape!=V.shape or not np.all(np.isfinite(labels)) or np.any(np.diff(labels)<=0.)
+            or labels[0]!=cap.domain['qa'] or labels[-1]!=cap.domain['qb']):
+        raise ValueError('prepared-history arrival labels are unresolved or leave the finite domain')
+    index=int(np.searchsorted(V,edges[0]));qV=float(cap.geometry['arrival'](edges[0],1))
+    if not np.isfinite(qV) or qV<=0.: raise ValueError('source-front arrival rate must be positive')
+    try:
+        quartic=float((8/(dV*qV))**4)
+    except (OverflowError,ZeroDivisionError) as error:
+        raise ValueError('source-front quartic coefficient is unresolved') from error
+    if not np.isfinite(quartic) or quartic==0.:
+        raise ValueError('source-front quartic coefficient is unresolved')
+    budget.check(8*len(V))
+    sample=cap.profile(labels,second=True)
+    raw=np.array([sample[k] for k in ('f','f_prime','f_second')],dtype=float,copy=True)
+    if raw.shape!=(3,len(V)) or not np.all(np.isfinite(raw)):
+        raise ValueError('prepared history returned invalid value/first/second jets')
+    quiet=np.max(abs(raw[:,:index+1]),axis=1)
+    if np.any(quiet>tolerances):
+        raise ValueError('prepared quiet-jet discrepancy exceeds the declared tolerances: '
+                         f'{quiet.tolist()} versus {tolerances.tolist()}')
+    supplied=raw.copy();supplied[:,:index+1]=0.
+    background=RetainedCapBackground(labels,*supplied,
+        onset=dict(index=index,quartic_coefficient=quartic))
+    jet=background.profile.jet(labels,budget=budget)
+    defects=np.array([np.max(abs(jet[k]-supplied[i])) for i,k in enumerate(('F','F_prime','F_second'))])
+    exact_front=(3*Fraction(float(Va))+Fraction(float(Vb)))/4
+    budget.check(6*len(V))
+    return dict(background=background,source_null_labels=V.copy(),
+        physical_input_domain=dict(cap.domain),
+        onset=dict(index=index,label=float(labels[index]),source_V=float(edges[0]),arrival_rate=qV,
+            quartic_coefficient=quartic,source_V_roundoff=float(Fraction(float(edges[0]))-exact_front)),
+        diagnostics=dict(quiet_jet_discrepancies=quiet,quiet_tolerances=tolerances.copy(),
+            knot_jet_discrepancies=defects,maximum_inverse_bracket_width=float(cap.max_inverse_bracket_width),
+            original_field_cuts=len(cuts),original_geometry_knots=len(geometry),retained_knots=len(V)),
+        curvature_method='CapLeadingField.profile(second=True): differentiated continuum integral and arrival chain',
+        charged_evaluations=budget.kernel_values-before,numerical_error_enclosure=False,
+        scope='prepared leading field retained as a computational C2 history with its analytic quartic onset; no finite-amplitude evolution or interpolation error enclosure')

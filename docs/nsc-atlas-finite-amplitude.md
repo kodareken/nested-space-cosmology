@@ -6238,6 +6238,62 @@ integral meaning of `CapLeadingField.profile(..., second=True)` and record
 its difference from the resulting interpolant. No such prepared-history
 transfer or physical evolution has yet been evaluated.
 
+The [profile](../src/recursive_horizons/nsc_atlas_characteristic_background.py)
+now implements the optional onset as one existing interval, using Bernstein
+controls
+
+\[
+ (b_0,\ldots,b_7)=\left(0,0,0,0,\frac{Ah^4}{35},
+ y-\frac{2hd}{7}+\frac{h^2e}{42},y-\frac{hd}{7},y\right),
+\]
+
+where d and e are the next physical first and second derivatives.
+The fourth derivative is imposed only from the active side. Original
+binary A and its interval index are copied and retained alongside the
+Hermite inputs. Both metric certificates use the same original-input
+controls, differentiating them with factors 7/h and then 6/h. The regular
+centre moment routines include every term of the actual degree. The
+older exact transfer into a quintic **total-field** space rejects this
+history; it must remain in the retained-background route instead.
+
+Eight [new controls](../tests/test_nsc_atlas_retained_onset.py) and 65
+affected existing controls pass in 75 development executions, using
+**787,030 charged values / 2.0625 active CPU seconds**. The first run's two
+failed assertions were corrected: a C2 join does not match third jets,
+and the underflow fixture initially triggered an earlier nonfinite guard.
+The corrections add seven values, with CPU below the reported timer
+resolution. The checks include an independent degree-seven polynomial,
+one-sided quiet/front jets, C2 joins, degree-six moments, 80-digit centre
+and formula-switch values, original-input Bernstein reconstruction,
+analytic incoming mass/time derivatives and a finite-coupling independent
+time difference. Grok independently confirms the Bernstein and moment
+formulas. These are manufactured controls; the prepared history is next.
+Grok's subsequent source review finds no concrete defect in the onset,
+centre sums, original-input hull selection or guarded total-field transfer.
+
+`build_prepared_background()` in the existing
+[profile adapter](../src/recursive_horizons/nsc_atlas_background_profile.py)
+now supplies the prepared-field connection. It uses the union of existing
+field cuts, arrival-spline knots and source edges, rejecting more than 513
+labels. One `CapLeadingField.profile(..., second=True)` call supplies the
+value and two jets. The source and arrival derivative fix A; no waveform
+differences or fitted amplitude enter this route. The original supplied
+quiet-jet discrepancies must lie within explicitly supplied numerical
+tolerances, zero by default, before the analytic quiet anchor is used.
+Those discrepancies, the front coordinate roundoff, inverse bracket,
+physical input domain and knot interpolation discrepancies remain visible.
+
+Five new [adapter controls](../tests/test_nsc_atlas_prepared_background.py)
+and 28 existing wall-profile controls pass once, using **8,596 charged
+values / 0.09375 CPU seconds**. The public prepared-field budget exposes
+its same count to cap callers; it is not reset between preparation and
+later evaluation. The [one-source producer](../scripts/check_nsc_atlas_prepared_history.py)
+is prepared to evaluate the 257/257 source and compare its native-interval
+midpoints under the [separate finite allowance](prior-art-and-open-claim.md#one-prepared-physical-history-transfer-17-october-2026).
+This comparison has not yet run; it will retain only a compact summary
+and hashes. The resulting C2 interpolation is still distinct from the
+continuum-integral second jet sampled to construct it.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap
