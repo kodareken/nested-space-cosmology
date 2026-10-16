@@ -2,6 +2,96 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## First coupled exterior, wall and cap window, 16 October 2026
+
+The [five-case record](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
+now evolves the original source, full active exterior, moving wall and
+regular polar cap as one simultaneous numerical state. Both zero and
+nonzero amplitude use 16 and 32 spatial cells with 256 time steps; a fifth
+nonzero-amplitude case uses 32 cells and 512 steps. All cases reach the
+original final incoming label, without a restart, tube change or timestep
+adjustment. The field before the first source front remains exactly zero.
+
+Creation and authentication take **29.234375 process CPU seconds** and
+**3,582,985 charged evaluations** within the shared 180-second/8,000,000
+allowance. There are 1,536 accepted time steps and 3,077 simultaneous
+stage evaluations. The 174 focused controls and independent reviews pass.
+Standalone authentication passes with no source integration, reference
+quadrature or time evolution; it rechecks saved histories and reconstructs
+the five final radial-cap and wall/prefix states.
+
+The amplitude is the existing `alpha=0.00012983127142551443`. The following
+responses compare the nonzero and zero-amplitude trajectories at the same
+incoming label. Radius is the Einstein areal radius in units of `ell`;
+`T` is the Jordan central clock and `s` the elapsed Einstein wall proper
+time, also in units of `ell`. Both clocks start at zero at the quiet event.
+
+| Quantity | 32-cell endpoint finite-minus-zero response | Maximum change of that response, 16 to 32 cells | Maximum finite-case change, 256 to 512 steps |
+| --- | ---: | ---: | ---: |
+| Wall radius | `-8.7816060e-4` | `2.2151424e-5` | `5.5198112e-8` |
+| Central-clock label `T` | `-1.0603179e-3` | `4.1014888e-5` | `6.8894707e-8` |
+| Wall proper time `s` | `-1.0575706e-4` | `3.9962302e-6` | `8.2728074e-8` |
+| Exterior wall `log C` | `-5.5282619e-3` | `2.0665515e-4` | `1.4647639e-7` |
+
+These are measured discretization changes, not uncertainty bounds. The
+nonzero-amplitude wall still expands from `.45` to `.54911913`; its
+negative relative radius response is not a collapse result. The last
+column is a separate integration comparison, while the middle column
+keeps the two amplitude runs paired at each spatial resolution.
+
+The vacuum geometric controls improve with spatial refinement: the
+maximum exterior radius error decreases from `1.31045e-4` to `6.92061e-5`,
+and the maximum `log C` error from `4.61545e-4` to `2.48652e-4`.
+Against the independently evolved original rectangle at common `Ubar,x`,
+the nonzero-amplitude interior radius difference decreases from
+`1.32996e-4` to `6.75251e-5`, and the scalar difference from
+`1.04516e-3` to `3.59684e-4`. The fine-grid linear-versus-quadratic
+interpolation sensitivity is `2.24459e-6` in radius and `2.29267e-5`
+in the scalar. It is retained separately and does not enclose the
+interpolation error.
+
+The independent constraints identify unfinished numerical work:
+
+| Maximum diagnostic | 16 cells, 256 steps | 32 cells, 256 steps |
+| --- | ---: | ---: |
+| Interior `abs(E_Ubar)`, nonzero amplitude | `0.0274659` | `0.0275928` |
+| Interior `abs(E_x)`, nonzero amplitude | `0.0517912` | `0.0268848` |
+| Final cap `abs(Phi - FD(f_r))` | `3.47861` | `3.34860` |
+| Final wall radius kinematic mismatch | `0.00918011` | `0.00463796` |
+
+The `E_Ubar` maximum and cap field compatibility have not shown a clear
+decrease in this comparison. The same vacuum `E_Ubar` maximum is already
+about `.0276`; it occurs in the early quiet layer next to the wall, at
+`(x,eta)=(.4089145,.9375)` on 16 cells and
+`(.4044573,.96875)` on 32. Its nonzero-amplitude RMS decreases from
+`.00612378` to `.00421590`, while the maximum persists. Smaller time steps change
+these diagnostics little, so time resolution is not the first target.
+The source snapshot has maximum actual constraint defect `0.00130298`;
+its withheld radius and first-derivative differences are much smaller,
+`1.65437e-11` and `1.45279e-9`. Its actual second derivative is used,
+and this input defect is not replaced by the source-ODE target.
+
+The scalar wall response is not resolved: its endpoint finite-minus-zero
+value changes from `-3.49052e-4` to `+1.10855e-4`. The paired spatial
+change, `4.69583e-4`, exceeds the fine response's maximum magnitude,
+`3.78254e-4`. The geometric entries above therefore do not establish
+accuracy of the accompanying scalar prediction.
+
+The next calculation must locate and resolve the spatial/interface
+constraint and cap compatibility errors. Saved-array diagnosis finds a
+nearly correct cap total field jump (`5.39e-8` discrepancy on the
+32-cell, 256-step final slice) alongside a local value/gradient discrepancy of about
+`.12085`. The [compatible primitive and zero-outgoing control](nsc-atlas-finite-amplitude.md#saved-data-diagnosis-and-the-compatible-cap-connection)
+give the next implementation target: reconstruct the field value from
+the conservative gradient and common wall value, and preserve the exact
+vacuum interface as a separate control. The trajectories connect the
+numerical regions and give a reproducible finite response; they do not
+yet supply a converged constraint-compatible solution or a uniform
+finite-amplitude validity interval. The interval also ends before the
+first central signal arrival. Its tiny numerical central tail is not
+a new physical central-observer prediction. Formation, stability and
+the later quantum/cosmological consequences remain subsequent work.
+
 ## First nonlinear exterior rectangle, 16 October 2026
 
 The [four-grid record](../results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json)
@@ -48,11 +138,12 @@ the propagated residuals. The sampled transport difference
 an important part of the raw differentiation error. This diagnosis does
 not remove the remaining propagated discretization error.
 
-The next connection uses the exact source plus an interpolated propagated
-increment to supply values and controlled first jets on `Ubar=Ubar_b`.
-That leg feeds new exterior cells adjoining the moving wall; it is not
-itself the wall. The regular polar cap and hybrid interface then supply
-the coupled continuation. This result is a numerical exterior region
+The coupled continuation now uses the original source plus a propagated
+increment on the full active exterior `0<=Ubar<=W_ref(x)`. Ordered radial
+integrals supply its outgoing derivatives, and the regular polar cap and
+hybrid interface supply the actual moving endpoint. The completed
+rectangle remains an independent overlap control; its terminal leg is
+not itself the wall. This result is a numerical exterior region
 with measured discretization changes, not a full nested spacetime,
 formation/stability result or uniform finite-amplitude remainder bound.
 

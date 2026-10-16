@@ -118,10 +118,16 @@ regional starting pieces, with source-only amplitude bounds and independent
 analytic controls. The [first nonlinear rectangle](current-result.md#first-nonlinear-exterior-rectangle-16-october-2026)
 now evolves the original preparation at zero and nonzero amplitude on two
 grids, with refining metric and independently differenced constraints.
-The outgoing leg needs controlled jets retaining the exact steep source;
-it then feeds new exterior cells adjoining the moving wall. The regular
-cap march, coupled well-posedness and a central-readout remainder remain
-to be established.
+The [simultaneous stage](nsc-atlas-finite-amplitude.md#a-simultaneous-exterior-wall-and-cap-stage)
+now combines the original source, ordered exterior integrals, a moving
+wall and the regular polar cap. Source lifting retains the steep pulse
+analytically. The completed rectangle supplies an independent overlap
+control; the common evolution uses the full active exterior up to the
+actual wall. Its [five-case numerical comparison](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+now completes that finite window. Spatial/interface constraints and cap
+field compatibility remain unresolved, with a concrete conservative
+primitive reconstruction identified as the next connection. Coupled
+well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.
 
 The common `model_specification()` interface in

@@ -1300,6 +1300,275 @@ After the final exterior source label $V=V_b$, the central readout follows the
 terminal inward ray $dr/dT=-B$ within the determined domain; no extra
 incoming waveform is supplied to complete that ray.
 
+### A simultaneous exterior, wall and cap stage
+
+The [coupled operator](../src/recursive_horizons/nsc_atlas_coupled_evolution.py)
+uses the full active exterior rather than identifying the completed
+rectangle's terminal leg with the wall. Put
+
+$$
+0\le\eta=\bar U/W(x)\le1,\qquad
+X=(r,L,c),\quad L=\log C,\quad Y=X-X_0(x).
+$$
+
+Here `X0` is the original source, and `W(.4)=Ubar_b>0`. The source
+endpoint has `Y=0`; the other endpoint is the common wall state. Only
+interior increments are evolved independently. For a simultaneous radial
+slice, let `P=X_Ubar` and `Q=X_x`, with the latter derivative at fixed
+`Ubar`. The exterior potential is zero. The exact bulk equations give
+
+$$
+(r r_x)_{\bar U}=-\frac C4,\qquad
+(r f_x)_{\bar U}=-r_x f_{\bar U},\qquad
+L_{\bar U x}=\frac{2r_{\bar U}r_x}{r^2}
++\frac C{2r^2}-\alpha f_{\bar U}f_x,
+$$
+$$
+f_{\bar U}=\frac{c_{\bar U}-u r_{\bar U}}{r\sqrt D},\qquad
+u=c/r,\quad D=1+\alpha u^2/6.
+$$
+
+Consequently three ordered radial prefixes determine `r_x`, `f_x` and
+`L_x` from the original source derivatives, then
+`c_x=u*r_x+r*sqrt(D)*f_x`. The
+[prefix implementation](../src/recursive_horizons/nsc_atlas_exterior_characteristic_slice.py)
+accepts spatial first jets explicitly. Its trapezoidal and Simpson
+controls measure quadrature error separately from any later numerical
+spatial derivative. No pure Einstein constraint is substituted into these
+diagnostics.
+
+The moving-coordinate update is
+
+$$
+Y_x\big|_\eta=Q-X_0'(x)+\eta\frac{W_x}{W}Y_\eta.
+$$
+
+For positive `W_x` its transport speed is negative, so the prototype uses
+forward spatial upwinding towards the wall. The terminal backward jet is
+compared with the incoming jet required by the hybrid law. It is not
+replaced by that required jet when reporting compatibility.
+
+The [source snapshot](../src/recursive_horizons/nsc_atlas_characteristic_trace.py)
+retains the analytic compact `g,g_x,g_xx` and interpolates only the
+integrated Jordan correction and transverse jets. Its `h,h_x,h_xx` are
+derivatives of the same cubic Hermite polynomial. The source-ODE target
+curvature is reported separately; inserting that target in place of the
+interpolant's actual second derivative would conceal an input defect.
+All live-source samples are obtained within that source's original budget;
+later snapshot evaluations use the caller's cumulative allowance.
+
+#### Fixed wall label and evolving lapse
+
+Choose `W(x)=W_ref(x)` from the unchanged vacuum reference. This uses
+the remaining outgoing-label freedom after the original source and quiet
+bottom are anchored. It fixes a coordinate trajectory, not the physical
+wall radius. The actual exterior wall lapse remains an evolved unknown.
+Write `b` for the exterior null boost here, to distinguish it from the
+radial grid coordinate:
+
+$$
+b=-\tfrac12\log W_x,\qquad
+x_s=(C_W W_x)^{-1/2},\qquad \bar U_s=W_x x_s.
+$$
+
+The hybrid law supplies `r_s,c_s,T_s,k_plus`. Its acceleration equation
+`b_s=k_plus-x_s*L_x+Gamma/2`, with `Gamma=d_s L_W`, then gives
+
+$$
+\frac{d r_W}{dx}=\frac{r_s}{x_s},\quad
+\frac{d c_W}{dx}=\frac{c_s}{x_s},\quad
+\frac{dT}{dx}=\frac{T_s}{x_s},\quad
+\frac{ds}{dx}=\frac1{x_s},\qquad
+\boxed{\frac{d L_W}{dx}=2b_x-\frac{2k_+}{x_s}+2L_x\big|_W.}
+$$
+
+The implementation first evaluates the boost-independent hybrid
+quantities, then evaluates the incoming lapse jet using the actual
+`Gamma=x_s*d_x L_W`. Prescribing `L_W` in addition to `W` would use the
+same coordinate freedom twice. The measured endpoint mismatch is
+
+$$
+\mathcal R_W^X=\frac{dX_W}{dx}-Q_W-W_xP_W^{\rm numerical}
+=W_x(P_W^{\rm required}-P_W^{\rm numerical}).
+$$
+
+These are two expressions for one residual, not independent error bounds.
+
+The [reference gauge evaluator](../src/recursive_horizons/nsc_atlas_reference_wall_gauge.py)
+inverts the reference's local advanced-time integral between radii `.45`
+and `.55`, then differentiates its defining equations analytically.
+It returns `W,W_x,W_xx` and `b,b_x` without differencing coarse wall
+samples. `T=s=0` at the quiet anchor. The same evaluator supplies analytic
+vacuum radius, lapse and clock comparisons, including the event where
+the signed exterior `beta_plus` passes through zero.
+
+#### Conservative cap update
+
+The [cap operator](../src/recursive_horizons/nsc_atlas_polar_cap.py) uses
+`y=r/R(x)` and the three regular cell variables `f,Pi,Q=Phi/r`.
+Their averages carry weights `dr`, `r^2 dr` and `r dr`, respectively.
+On a cell with fixed faces `a,b` in `y`, define
+`d1=(b^2-a^2)/2` and `d2=(b^3-a^3)/3`. Reynolds transport gives
+
+$$
+\begin{aligned}
+\Pi_x&=\frac{[y^2(T_xB\Phi+R_xy\Pi)]_a^b}{R d_2}
+-\frac{3R_x}{R}\Pi-T_x\langle e^\delta U_\alpha\rangle_{r^2},\\
+Q_x&=\frac{[T_xB\Pi+R_xy\Phi]_a^b}{R^2d_1}
+-\frac{2R_x}{R}Q,\\
+f_x&=T_x\langle B\Pi\rangle_{dr}
++\frac{R_x[yf]_a^b}{R(b-a)}-\frac{R_x}{R}f.
+\end{aligned}
+$$
+
+At the axis the weighted `Pi` flux vanishes, but the `B*Pi` flux in
+the `Q` equation remains. `Phi(0)=0` and the two characteristics reflect.
+The scalar characteristics have speeds `-T_x B-R_x y` and
+`T_x B-R_x y`; the timelike wall admits one incoming characteristic.
+That value is the hybrid `w_plus`; the common transported `f_W` enters
+only as the value of newly admitted material when the mesh expands.
+It is derived from `c_W/r_W`, not an additional source waveform.
+
+`Pi` is reconstructed linearly in `rho=r^2`, with limited slopes and
+the exact `r^2`-weighted mean radius squared in each cell. This retains
+the even quadratic axis term. A literal constant reconstruction of a
+quadratic `Pi` would leave a nonvanishing first-cell error in `Q_x`.
+`f` and `Q` are piecewise constant, so the overall prototype remains
+first order. Smooth-axis manufactured controls explicitly test the
+quadratic `Pi` case.
+
+Every cap stage integrates the radial constraints using the same stage
+fields, open Gauss nodes and a vacuum-subtracted mass,
+
+$$
+m=\frac{r^3}{2}+\alpha n,\qquad
+n_r+\frac{\alpha r}{2}(\Pi^2+\Phi^2)n
+=r^2\left[\frac{P-3}{2\alpha}
++\frac{1-r^2}{4}(\Pi^2+\Phi^2)\right].
+$$
+
+The continuous expression for `(P-3)/alpha` is used at zero or tiny
+amplitude. The centre anchors `delta=-log cosh(sqrt(alpha/6)*f_C)`.
+The incoming endpoint trace has zero radial measure and is not used as
+an extra constraint input. Independently differenced mass/lapse residuals
+and `Phi-f_r` are reported separately.
+
+The complete common stage advances with fixed-step SSPRK2. Both its
+predictor stages check the declared domain and characteristic Courant
+limit; a first failure stops the calculation with its context. A CFL
+diagnostic alone does not prove stability of the coupled metric, reaction
+and boundary terms. The [admitted comparison](prior-art-and-open-claim.md#coupled-characteristic-exterior-and-polar-cap-16-october-2026)
+therefore retains vacuum, spatial, temporal, source and constraint
+measurements as separate evidence.
+
+#### Independent constraints on a moving saved grid
+
+The [history diagnostics](../src/recursive_horizons/nsc_atlas_coupled_diagnostics.py)
+differentiate saved increments with centred stencils, independently of
+the upwind stage or its mixed-equation integrals. Let
+`b=W_x/W` and `a=eta*b` in this paragraph. Then
+
+$$
+\partial_x\big|_{\bar U}=\partial_x\big|_\eta-a\partial_\eta,
+\qquad
+r_{xx}\big|_{\bar U}=r_{0,xx}+Y_{r,xx}-2aY_{r,x\eta}
++a^2Y_{r,\eta\eta}
++\eta\left(2b^2-\frac{W_{xx}}W\right)Y_{r,\eta}.
+$$
+
+First derivatives use the analogous chain rule, with the source's actual
+first jets, and `r_Ubar_Ubar=Y_r,etaeta/W^2`. This retains the steep
+analytic source instead of differentiating its sampled waveform again.
+The pure constraints and geometric mass are
+
+$$
+E_a=r_{aa}-L_a r_a+\frac{\alpha r}{2D}
+\left(\frac{c_a-u r_a}{r}\right)^2,
+\quad a\in\{\bar U,x\},\qquad
+m=\frac r2\left(1+4e^{-L}r_{\bar U}r_x\right).
+$$
+
+All boundary stencils are excluded, and source-front stencils are
+identified separately. Source constraint defects remain a separate input
+diagnostic; lifting the known source does not remove its interpolation
+error. Coarsening an already saved history measures diagnostic sampling
+sensitivity. The separately evolved time-step comparison measures time
+integration sensitivity. Neither replaces spatial refinement or a
+continuum residual bound.
+
+The [first five-case calculation](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
+completes this numerical window with the same source and action. Its
+[measured responses and unresolved constraints](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+separate spatial, temporal and source sensitivity. In particular, the
+early quiet wall layer retains a nondecreasing maximum `E_Ubar`, and
+the cap's discrete field compatibility and scalar wall response are
+unresolved. The completed trajectory is evidence for the implemented
+coupling and its numerical behaviour, not the missing uniform estimate.
+
+#### Saved-data diagnosis and the compatible cap connection
+
+The flat maximum `E_Ubar` is present before the source pulse and moves
+into a thinner wall-adjacent strip with refinement. Exact-vacuum
+preservation at the discrete interface is therefore a direct control
+for the next exterior scheme. Subtracting the vacuum diagnostic after
+the calculation would not repair that boundary evolution.
+
+The cap has a different local compatibility problem. Its separately
+evolved `f` and `Q` have a nearly correct total jump but different local
+profiles. On the 32-cell, 256-step nonzero-amplitude final slice, integrating the
+piecewise `Phi=rQ` gives a wall-to-centre jump differing from the common
+field jump by about `5.39e-8`. This diagnostic infers the regular centre
+value as `f_C=f[0]-Q[0]*r1^2/6` from the first cell average and its outer
+radius `r1`; the retained cap metric uses its original `f[0]` approximation.
+The largest cell-average value
+discrepancy from its primitive is about `.120849`. The latter is about
+9.9% of the final peak `f`. The derivative diagnostic's largest defect
+lies inside the pulse rather than at the axis. These comparisons use
+the declared cell weights; a fine-cell restriction does not establish
+decreasing maximum error yet.
+
+A precise continuum connection is available without a new source law:
+
+$$
+f(T,r)=f_W(T)-\int_r^{R(T)}\Phi(T,z)\,dz.
+$$
+
+The existing wall chain rule and cap conservation equation give
+
+$$
+\frac{d f_W}{dT}=B_W\Pi_W+R_T\Phi_W,\qquad
+\Phi_T=(B\Pi)_r
+\quad\Longrightarrow\quad f_T=B\Pi,\qquad f_r=\Phi.
+$$
+
+Thus conservative `Q` plus the transported common wall value can
+determine a compatible `f` reconstruction and its potential, instead
+of carrying an independent locally inconsistent value profile.
+For piecewise constant `Q`, the face increment is exactly
+`Q*(r_right^2-r_left^2)/2`; the corresponding cell average is obtained
+by integrating that same quadratic primitive. This is the next
+numerical connection to implement and test, not an established
+improvement to the retained run.
+
+There is also an exact zero-amplitude transmission control. In the
+de Sitter cap, `A=1-r^2`, `delta=0`, `r_star=atanh(r)` and `chi=r*f`
+obeys the free reduced wave equation. Before an outgoing signal can
+return from the centre, the quiet initial state implies
+
+$$
+(\partial_T-\partial_{r_\star})\chi=0
+\quad\Longleftrightarrow\quad
+R\,w_- - \frac{c_W}{R}=0.
+$$
+
+Every saved zero-amplitude wall event has `T<.198`, earlier than even
+the initial inward light-travel interval `atanh(.45)>.484`. This
+control therefore applies throughout the present window. Reconstructing
+the declared outgoing last-cell trace from saved data gives peak
+absolute defects about `8.72` and `9.84` on 16 and 32 cells. Resolving
+this cancellation and local value/gradient compatibility is necessary
+before interpreting the small finite-minus-zero scalar response.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

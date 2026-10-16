@@ -1,5 +1,85 @@
 # Prior art and admission of new research
 
+## Coupled characteristic exterior and polar cap, 16 October 2026
+
+The completed rectangle supplies an independent overlap test for the next
+coupled evolution. Its terminal leg is not the moving wall. Construct the
+coupled numerical stage on the full exterior interval
+`0<=Ubar<=W(x)`, where `W(.4)=Ubar_b>0`, and the regular cap
+`0<=r<=r_wall(T)`. Moving coordinates keep both boundaries on grid endpoints
+without starting a strip of zero width. The original source, central clock,
+action and hybrid transmission law remain fixed.
+
+For the exterior, the mixed equations determine the longitudinal first jets
+from the source by ordered radial integrals. With `P=X_Ubar` supplied by
+the same stage fields, first integrate `(r*r_x)_Ubar=-C/4`, then
+`(r*f_x)_Ubar=-r_x*f_Ubar` for the normalized canonical scalar, then the
+existing lapse equation. The moving-coordinate update includes its grid
+advection. A source-plus-increment representation preserves the known compact
+profile analytically. The wall's values and incoming derivatives must come
+from the hybrid map at its actual events; discrepancy with the numerical
+one-sided regional jets is a monitored coupling residual.
+
+Implement and independently check the source snapshot, exterior prefix
+operator and regular cap constraint/evolution operators before a physical
+coupled run. A snapshot copies bounded initial data while the original
+source budget is live; later polynomial evaluation debits the caller's
+cumulative budget and performs no reintegration or clock reset. Derivatives
+of an interpolated source must be derivatives of that same interpolant.
+Any source-ODE target or constraint defect is reported separately.
+
+Manufactured, analytic-vacuum and saved-data controls have a 30-process-CPU-
+second and 20,000-evaluation ceiling for each operator's complete test run.
+No new physical source integration, amplitude choice or spacetime run is
+included at this implementation stage. The cap scheme must specify its axis,
+radial constraints, one incoming scalar characteristic, moving-grid advection
+and common-field compatibility. The exterior gauge must match the quiet
+corner and use only the remaining wall-born null-label freedom. Resolve a
+failed identity or boundary count before assembling the coupled step. Its
+physical calculation will receive an explicit domain, shared budget and
+refinement design after these connections are concrete.
+
+The source snapshot, prefix and cap operators now pass their manufactured
+and vacuum controls. The assembled simultaneous stage passes 14 controls,
+including the actual wall acceleration, common-field chain rule, quiet
+scalar, zero-amplitude geometric independence and fixed-step stopping.
+Independent review confirms the interface data count. This admits the
+following first coupled calculation; it does not assume its outcome.
+
+| Item | Fixed coupled calculation |
+| --- | --- |
+| Borrowed mathematics and connection | The exact conformal action, original characteristic source, regular polar constraints and hybrid wall law derived in the [nonlinear owner](nsc-atlas-finite-amplitude.md). Connect these through one simultaneous exterior/cap/wall stage. |
+| Domain | Original `x=.4..x_last`, exterior `0<=Ubar<=W_ref(x)`, cap `0<=r<=r_wall(x)`. The vacuum reference has wall radii `.45..55`; the sourced radius evolves. The original incoming labels and quiet corner remain fixed. |
+| Gauge and state | Prescribe only `W_ref(x)`. Evolve the wall radius, common scalar, exterior log lapse, central clock and elapsed proper time. Source-plus-increment exterior state and weighted cap cells use the same stage. |
+| Source and amplitude | Original compact pulse and action, `alpha=0` and `alpha=0.00012983127142551443`. Two source integrations retain `rtol=2e-10`, `atol=1e-12`, maximum step `source_length/32`; sample 257 points and the 33-node bottom while each child budget is live. A 129-knot snapshot retains the analytic pulse and has an independent withheld-point comparison against those source rows. |
+| Spatial and temporal comparison | Exterior and cap both use 16 or 32 cells. Four zero/finite cases use 256 fixed SSPRK2 steps; a fifth finite 32-cell case uses 512 steps. Store 129 accepted slices per case. Exterior forward upwinding and the cap finite-volume reconstruction are first order; prefix quadrature is trapezoidal, cap quadrature order four. |
+| Reference evaluation | Evaluate the reference wall gauge on the common 513-point time grid before the marches. Reuse exact-index rows; no interpolation of its derivatives. Keep inversion and quadrature accounting and endpoint defects. |
+| Budget | One cumulative 180-process-CPU-second and 8,000,000-evaluation allowance for creation, including inputs, stages and checks. Each source child retains its own 30-second/20,000-evaluation limit and debits the parent. No child clock is reset. |
+| Controls | Exact vacuum geometry and wall clocks; quiet field; finite-minus-zero spatial changes with raw errors retained; the separate 256/512-step comparison; source interpolation defects; independent pure null constraints on saved histories; one-sided wall compatibility, regular cap constraints and field compatibility. Compare the original rectangle only at common physical null coordinates, with interpolation explicitly identified. |
+| Stop | First nonfinite state, declared exterior tube exit (`0.2<=r<=0.8`, `-2<=log C<=2`, `-4<=c<=4`), loss of positive cap `A` or incoming sum `H`, wall timelikeness, characteristic Courant value above `.4`, or budget failure. Preserve the case, stage and reason. Do not enlarge a tube, alter a step, amplitude or source, or retry silently. |
+| Decision | A finite coupled numerical trajectory with measured changes and residuals, or an explicit incompatibility/numerical diagnosis. This interval does not reach the first central arrival; it cannot by itself complete the full observer response, formation/stability analysis or a uniform error enclosure. |
+
+The five cases test one source law and one action. Zero amplitude retains
+the normalized scalar equation while its stress vanishes. Comparison with
+the source-only amplitude threshold does not turn that threshold into a
+coupled existence bound. Completion of a recorded numerical trajectory
+must be distinguished from its convergence and physical interpretation.
+
+**Outcome:** all five cases finish on their declared grids, with 1,536
+time steps, 3,077 simultaneous stages and no restart or guard failure.
+Creation plus authentication uses 29.234375 process CPU seconds and
+3,582,985 evaluations. The [source-bound record](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
+authenticates without source or time replay. Vacuum geometry and the
+independent rectangle comparison improve under spatial refinement; the
+separate time-step changes in geometric response are much smaller.
+The maximum `E_Ubar` persists in an early quiet wall layer, cap
+`Phi-f_r` compatibility is not resolved, and the scalar wall response
+changes sign between spatial grids. The [measured results](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+retain these limitations. Diagnose the spatial/interface and cap
+compatibility errors from these saved data before designing a successor;
+this outcome does not admit an unbounded refinement campaign or a new
+physical source.
+
 ## Nonlinear exterior rectangle, 16 October 2026
 
 Assemble the exact source and implicit characteristic cells into the original

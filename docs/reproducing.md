@@ -8,6 +8,54 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The simultaneous exterior, wall and polar-cap stage uses a source snapshot,
+ordered exterior integrals, the constrained regular cap and the existing
+hybrid wall law. Its fixed reference wall label evolves the actual wall
+lapse through the acceleration equation. Run the analytic and manufactured
+controls without a new physical source integration:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_characteristic_trace.py tests/test_nsc_atlas_exterior_characteristic_slice.py tests/test_nsc_atlas_polar_cap.py tests/test_nsc_atlas_reference_wall_gauge.py tests/test_nsc_atlas_coupled_evolution.py -q
+```
+
+The [scientific owner](nsc-atlas-finite-amplitude.md#a-simultaneous-exterior-wall-and-cap-stage)
+specifies the coordinate, axis, characteristic and averaging conventions.
+The first-order spatial scheme and fixed-step SSPRK2 retain measured
+residuals; they do not supply a continuum error certificate.
+
+The [coupled recorder](../scripts/record_nsc_atlas_coupled_evolution.py)
+completes five declared cases, with two spatial resolutions and one
+separate time refinement. The independent saved-history diagnostics and
+original-rectangle overlap have their own manufactured controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_coupled_diagnostics.py tests/test_record_nsc_atlas_coupled_evolution.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_coupled_evolution.py --check --output results/development/nsc-atlas-coupled-evolution-v1
+```
+
+For a fresh reproduction, use a directory that does not exist:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_coupled_evolution.py --output .build/coupled-evolution-review
+```
+
+Creation uses one cumulative 180-process-CPU-second/8,000,000-evaluation
+budget including authentication, with the original bounded source children.
+The record separates calculation and verification charges. It retains
+129 accepted slices per case, exact-index cached source and reference
+inputs, final radial/wall data and independent comparisons. Source hashes
+are checked before and after calculation. A first failure is saved under
+the ignored `.build/coupled-evolution-failures` area, without creating a
+completed result directory or changing the declared grid.
+
+Standalone checking performs no source integration, reference quadrature
+or time evolution. It authenticates the original rectangle, reconstructs
+the source interpolant and five final radial-cap/prefix states, and
+recomputes the saved-array diagnostics. The creation-only
+[result](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
+retains unresolved spatial/interface and cap field-compatibility errors;
+see the [current outcome](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026).
+
 The [nonlinear rectangle marcher](../src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py)
 assembles the exact source and quiet bottom in the original affine null
 rectangle. Its independent nodal diagnostics compute pure null constraints

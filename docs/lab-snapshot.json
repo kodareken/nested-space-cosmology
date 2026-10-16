@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "73c88f4a3a6d3aa6694e9f7ccf2c3700c135c149",
+  "current_receipt_commit_parent": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
   "files": [
     {
       "bytes": 1506,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 8482,
-      "change": "Explicit successor for propagated exterior and reconstructed central scalar response; original import fields preserved",
-      "changed_from_commit": "ea0fd5bdc2000dd859101761d38c2219218e51c2",
+      "bytes": 8898,
+      "change": "Explicit successor for the first coupled exterior-wall-cap numerical window and its measured compatibility errors; original import fields preserved",
+      "changed_from_commit": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "a8883c67bccb5ac3fae6c41968627b5e557181d4a6db0f909a24ebeaafb8f761"
+      "sha256": "50806112256a027819deb7b2987f5145012b7a9dc902e4fbf3dbe42f0f6eca2f"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 193679,
-      "change": "Explicit successor for the first nonlinear exterior rectangle and its measured refinement; original import fields preserved",
-      "changed_from_commit": "73c88f4a3a6d3aa6694e9f7ccf2c3700c135c149",
+      "bytes": 194781,
+      "change": "Explicit successor for the first coupled exterior-wall-cap numerical window and its measured compatibility errors; original import fields preserved",
+      "changed_from_commit": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "80394d289f278017883af5d95f3e70d26925b291885c69d14b023620f3815403"
+      "sha256": "e0bc7af50fa5ee799647d3209ab92169476720c58f51bd20ced9b49e30dc269a"
     },
     {
       "bytes": 9543,
@@ -10426,15 +10426,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 51254,
-      "change": "Explicit successor for the first nonlinear exterior rectangle and its measured refinement; original import fields preserved",
-      "changed_from_commit": "73c88f4a3a6d3aa6694e9f7ccf2c3700c135c149",
+      "bytes": 51794,
+      "change": "Explicit successor for the first coupled exterior-wall-cap numerical window and its measured compatibility errors; original import fields preserved",
+      "changed_from_commit": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "5cc76f227fd257f5259bd1244f95691a93ea824db17aeb8ca819350c01096a66"
+      "sha256": "1e9ffece86bd3256327b2377b078cd1ce6ac117d5830e79ac89c08a3bf33aa77"
     },
     {
       "bytes": 30876,

@@ -950,6 +950,15 @@ def check_nonlinear_rectangle_evidence(errors: list[str]) -> None:
         errors.append(f"nonlinear exterior rectangle evidence: {error}")
 
 
+def check_coupled_evolution_evidence(errors: list[str]) -> None:
+    """Authenticate the five coupled histories without source or time replay."""
+    try:
+        from record_nsc_atlas_coupled_evolution import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f"coupled exterior/wall/cap evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -996,6 +1005,7 @@ def main() -> int:
     check_scalar_boundary_evidence(errors)
     check_scalar_input_evidence(errors)
     check_nonlinear_rectangle_evidence(errors)
+    check_coupled_evolution_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:
