@@ -1384,6 +1384,90 @@ against their pinned `8f6c73c` Git bytes, so later adapter changes remain
 distinct from the earlier retained calculation. A hash-only check passes;
 the initial-event numerical audit was not repeated for this provenance edit.
 
+### Fixed-cap and exterior common stage
+
+Connect the instantaneous hybrid adapter to the existing exterior departure
+prefix and its one shared transverse derivative. Preserve the source's
+values/first jets and the evolved physical wall lapse; only the reference
+wall label and boost are gauge inputs. The fixed cap stores total polynomial
+coefficients, not the old finite-volume `Ip,Iq` integrals.
+
+The exterior endpoint scalar is the cap value. Distinguish its actual
+coefficient tangent from the hybrid's requested tangent, and report both
+wall kinematic residuals and the independent numerical-minus-required
+incoming first jets. Radius conversion roundoff is reported separately.
+If the source supplies its own second radius jet, recompute the pure source
+constraint from that jet; absence of curvature is an unavailable diagnostic,
+not a zero residual. No mixed equation is reused as an independent check.
+
+Reuse `vacuum_slice`, `departure_slice`, the departure-gradient operator
+and the hybrid adapter. Frozen historical stage producers stay unchanged;
+an extracted orchestration helper is checked against their actual output.
+Focused controls have **2,000,000 charged values / 60 active CPU seconds**:
+quiet vacuum recovery, unchanged exterior prefixes and source anchoring,
+one derivative shared by prefix and coordinate transport, nonzero common
+scalar/jet residual identities, and input/domain failures. No retained
+physical trajectory, resolution scan or time step is included. The cap's
+clipped Galerkin stability limit must not be replaced by the exterior
+characteristic Courant number. A finite update needs its own justified
+time-operator and error allowance after this connection is checked.
+
+**Stage outcome:** four controls pass with **176,442 charged values /
+0.203125 active CPU seconds**. The extracted exterior reconstruction and
+prefix outputs agree bit for bit with the frozen stage. One focused repeat
+after naming the requested and actual tangents distinctly passes with
+**73,806 / 0.0625**; aggregate development work is **250,248 / 0.265625**.
+The actual endpoint defect is the hybrid kinematic defect plus the cap's
+scalar transport defect. All source/endpoint values stay fixed and the
+numerical incoming jets are measured rather than replaced.
+
+### Frozen cap time-operator bound
+
+Before choosing an explicit time step, derive the actual linear generator
+in the independently checked `alpha=0`, fixed-radius, zero-incoming limit.
+The mass matrices use the same fixed basis. For `S=K-beta*e*e^T` and
+`beta=A0/R`, the endpoint trace inequality supplies positivity of S.
+Check dissipation in `H=diag(S,M)` and derive an energy-norm generator bound
+from exact rational M,K,e, not from the scaled Gram condition alone.
+
+At most **80,000 charged algebra values / 20 active CPU seconds** cover
+exact small rational matrix controls of the energy identity, positivity
+bound, norm bound and cubic Runge--Kutta polynomial. A rigorous scalar
+remainder estimate may then bound one constant-operator step and its
+repetition. No physical fields, source preparation, trajectory, step-size
+scan or finite-amplitude stability claim is included. This determines the
+missing time-operator requirement; moving geometry and nonlinear feedback
+need their own bounds before a physical interval can be certified.
+
+**Exact outcome:** four matrix controls pass once with **60,000 charged
+algebra values / 6.5 active CPU seconds**. The constant cap generator is
+dissipative in its actual energy metric; its squared weighted norm is
+bounded by `2tr(M^-1 K)+(e^T M^-1 e)^2`. The one-cell odd-quintic control
+at `Z=1/2` gives the exact rational value `3444` for that upper bound.
+The controls verify the cubic step polynomial and an exact rational
+energy-amplification inequality for one predetermined manufactured step.
+There is no trajectory or finite-amplitude stability result. The coupled
+stage's Grok source review also completes without an actionable defect.
+
+Use the remaining algebra allowance to check the moving-cut energy term in
+that same zero-coupling limit. Differentiate S and M exactly, keeping the
+wall trace and its derivative, and compare the resulting energy rate with
+the cap's moving-density identity. One additional control is limited to
+**16,000 algebra values** within the original 80,000 / 20 total. The
+result may bound cap energy and a continuous time residual for prescribed
+geometry and incoming data; it cannot replace the exterior feedback or
+finite-amplitude estimate.
+
+**Moving-cut outcome:** the additional control passes once with **16,000
+algebra values / 1.484375 active CPU seconds**, bringing this calculation to
+**76,000 / 7.984375**. It verifies `S_Z=vv^T+2A0*ee^T`, `M_Z=ee^T`, the
+source flux and the single moving-domain density. Their energy inequality
+and continuous-residual estimate apply to the zero-coupling cap with the
+same prescribed geometry and incoming data. They do not close the exterior
+or bound a finite-amplitude trajectory.
+Independent Grok review confirms these displayed identities and the
+continuous-residual estimate under the same prescribed-input assumptions.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

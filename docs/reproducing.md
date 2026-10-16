@@ -310,6 +310,21 @@ physical trajectory and take no time step. Historical cap-reference
 producer hashes are authenticated at commit `8f6c73c`; current code changes
 do not update the original numerical receipt.
 
+The common fixed-cap/exterior stage and its zero-coupling time estimates:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_fixed_cap_stage.py -q -s
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_time_operator.py -q -s
+```
+
+Four stage controls pass, plus one focused repeat for the output names,
+using 250,248 values / 0.265625 active CPU seconds of 2,000,000 / 60.
+The five exact time controls use 76,000 algebra values / 7.984375 active
+CPU seconds of 80,000 / 20 across their original executions. They verify
+the frozen generator, an energy-norm time bound and the moving-cut energy
+identity. These commands do not run a physical trajectory or a grid scan.
+No unchanged suite repeat is required for the next connection.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

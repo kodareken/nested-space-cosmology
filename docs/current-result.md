@@ -25,8 +25,21 @@ is implemented. It uses one common scalar value and derives cap clock,
 wall velocity and incoming field from the existing hybrid. Four controls
 pass with 375,431 charged values / 0.375 active CPU seconds, including
 independent energy and moving-field differences. It reports the actual
-scalar and physical temporal mass residuals. The actual exterior prefix
-and finite time interval are the next connection.
+scalar and physical temporal mass residuals. The [common stage](../src/recursive_horizons/nsc_atlas_fixed_cap_stage.py)
+now supplies the actual exterior prefix and all shared rates. Its four
+controls and one naming-focused repeat pass with 250,248 values / 0.265625
+active CPU seconds. Grok source review finds no actionable defect. The
+hybrid kinematic defect and actual cap endpoint-update defect remain
+separate; source curvature is checked when supplied.
+
+A [frozen linear-cap time bound](nsc-atlas-finite-amplitude.md#time-operator-bound-in-the-frozen-linear-cap-limit)
+now follows from the exact energy metric, rather than the old face-based
+Courant rule. The [moving-cut extension](nsc-atlas-finite-amplitude.md#moving-cut-energy-and-continuous-time-residual)
+also supplies an energy and continuous-time-residual estimate for the
+zero-coupling cap with prescribed geometry and incoming data. Five exact
+matrix controls pass with 76,000 algebra values / 7.984375 active CPU seconds.
+Finite coupling, exterior feedback and spatial errors still need bounds
+before a physical interval is certified.
 
 ## Fixed-space mass-gradient implementation, 16 October 2026
 

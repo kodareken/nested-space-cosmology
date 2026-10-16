@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+  "current_receipt_commit_parent": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 220396,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 221098,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "4e58f5d716cd88a7093f76f489924037a6b21d56ca9ba1d789a5c7e34ad00be9"
+      "sha256": "6cd38989c616110165696ce293e400a5c03b45937d77980a2a0c0aed22674ee6"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 310750,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 311730,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3e4f15b836ade68ef35eda33e4507db761afce1e8be6864ede784e46434b645b"
+      "sha256": "cf2812fe342f8403df48fbb7dbcdc9f95d7f75ecdcbf4746eca2d1ebe288bf44"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 259776,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 267114,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f0a2e0434af264226374098a815536e113e00036e6ae8a141f59e67b678ce5d1"
+      "sha256": "435e60e451bec0ce8ff6a07d483c3e4ddbcccc6d38f4468499104660190f629f"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 297531,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 302662,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "86de2197dccd9f3bbdc64a1a779ece5e9160af75371d5f084b32d30267a39773"
+      "sha256": "52f23cdf842bbac9b8dfdea6243c32fef2141506dd5618bd620da05989b42abd"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 101091,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 101849,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "dc1c6c5a688fb5b1555433f652e8663d2b789787258892fc827023a66da279ef"
+      "sha256": "d84c0d93c766f21aaaf810bea8796bc1538916c795affc99c2d4dc2f8fcf1a6f"
     },
     {
       "bytes": 18356,
@@ -32475,6 +32475,14 @@
       "sha256": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d"
     },
     {
+      "bytes": 9739,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "path": "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py",
+      "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
+      "sha256": "8af4033a8d5526386d051c1a2d2047f2fb028d5ba149aeb25a62bf16cd06af4a"
+    },
+    {
       "bytes": 13914,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "2774f009167c6d9bd6aeed4c896e7764f884dfdc",
@@ -35887,6 +35895,14 @@
       "sha256": "c3f8b5ab81d77b75aa421eab83ddda71db29f53ea0f2fa4f4f70777fce5c3665"
     },
     {
+      "bytes": 4615,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "path": "tests/test_nsc_atlas_cap_time_operator.py",
+      "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
+      "sha256": "98c9bffe5fb672a14b5a7e5b7323a33313fb757ab731977ea1e2ba734732246b"
+    },
+    {
       "bytes": 7986,
       "change": "Preserve the native limiter branch before contracting cap field jets; retain the bounded diagnosis.",
       "changed_from_commit": "4ce93f97dabd3694bee331abb49c5691628088d1",
@@ -35986,6 +36002,14 @@
       "original_path": "lab/tests/test_nsc_atlas_field_transfer.py",
       "path": "tests/test_nsc_atlas_field_transfer.py",
       "sha256": "1238ec27efeeba6106a3b638fc799ba88ac82a62f2d8acbbee64feb40658118d"
+    },
+    {
+      "bytes": 6484,
+      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
+      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "path": "tests/test_nsc_atlas_fixed_cap_stage.py",
+      "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
+      "sha256": "59e437f3dfed4a9274e76a16c72a80b80c54e592dc328fbbe2556f31587e78e9"
     },
     {
       "bytes": 5871,

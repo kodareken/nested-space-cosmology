@@ -5363,10 +5363,192 @@ an independently integrated zero-coupling energy/rate oracle, callback/direct
 agreement, quiet vacuum wall clocks, a nonzero manufactured state, a moving
 field finite difference, immutable inputs and invalid-port rejection. No
 retained nonzero state or time trajectory is evaluated by these controls.
-The next connection supplies the actual exterior prefix and common state
-update from the quiet corner, then bounds their residuals over a finite
-interval. The original retained reference remains bound to its producer
+The common stage below supplies the actual exterior prefix. A finite state
+update and its residual bounds remain required. The original retained reference remains bound to its producer
 at `8f6c73c`; extending the adapter does not relabel that earlier evidence.
+
+#### Common exterior, wall and fixed-cap stage
+
+The [common stage](../src/recursive_horizons/nsc_atlas_fixed_cap_stage.py)
+joins the fixed cap to the existing `departure_slice`. Its state contains
+three exterior departure arrays, four wall/clock departures `r,L,T,s`,
+and two total-field coefficient vectors `chi,canonical_density`. The wall
+scalar remains the image of the cap coefficients. The cap's actual floating
+radius is used at the exterior endpoint; its conversion difference from the
+evolved radius is recorded and guarded by four machine epsilons times the
+radius. No mismatch is removed from a field derivative.
+
+The exterior restores source and wall values, evaluates one transverse
+departure derivative, and uses it in both ordered prefixes and coordinate
+transport. The extracted orchestration agrees bit for bit with the frozen
+stage's exterior outputs. Original field equations and historical producers
+remain unchanged.
+
+Write `Q_X` for the exterior fixed-Ubar longitudinal derivative, `P_X` for
+its numerical incoming derivative, and `P_X^req` for the hybrid's required
+derivative. For `X=r,L,c`, the hybrid kinematic defect remains
+
+\[
+ K_X=X_x^{hybrid}-Q_X-W_xP_X=-W_x(P_X-P_X^{req}).
+\]
+
+The reconstructed cap scalar has the separate tangent discrepancy `E_c`
+derived above. The actual shared-endpoint update defect is `K_c+E_c`.
+The stage reports these separately as `wall_kinematic_defect`, the
+connection's `conformal_wall_flux`, and `shared_wall_update_defect`.
+Numerical incoming jets are retained, and no independent wall scalar is
+advanced. When the source supplies its own `r_xx`, its pure constraint is
+
+\[
+ E_{x,source}=r_{xx}-L_xr_x+
+ \frac{\alpha r}{2D}\left(\frac{c_x-(c/r)r_x}{r}\right)^2,
+ \qquad D=1+\alpha(c/r)^2/6.
+\]
+
+Missing curvature is reported as unavailable, rather than inferred from a
+mixed equation. Four [controls](../tests/test_nsc_atlas_fixed_cap_stage.py)
+pass, plus one focused repeat after output naming was aligned with the
+existing stage: **250,248 charged values / 0.265625 active CPU seconds**
+in total. They cover vacuum recovery, frozen-prefix equality, one shared
+derivative, nonzero scalar/jet residuals, source normalization, immutability
+and domain rejection. Grok source review finds no actionable defect. This
+is a common rate map, not a finite evolution or pure-bulk-constraint bound.
+
+#### Time-operator bound in the frozen linear cap limit
+
+The old face-based Courant criterion does not control clipped quintic
+coefficients. Start from the independently checked limit `alpha=0`, fixed
+`Z>0`, `T_x=1`, `R_x=0`, and zero incoming field. Define
+
+\[
+ M=\int_0^Z\phi\phi^Tdz,\quad K=\int_0^Z\phi_z\phi_z^Tdz,
+ \quad e=\phi(Z),\quad b=\frac{1-R^2}{R}=\frac2{\sinh(2Z)},
+ \quad S=K-bee^T.
+\]
+
+Every represented field vanishes at the axis. Cauchy--Schwarz gives
+`ee^T <= Z K`; also `bZ<1`, since `sinh(2Z)>2Z`. Hence
+`S >= (1-bZ)K > 0`. For coefficient vector `u=(c,d)`,
+
+\[
+ N=\tfrac14u^THu,\quad H=\operatorname{diag}(S,M),\quad
+ u_x=Ju,\quad
+ J=\begin{pmatrix}0&I\\-M^{-1}S&-M^{-1}ee^T\end{pmatrix}.
+\]
+\[
+ J^TH+HJ=\operatorname{diag}(0,-2ee^T),\qquad
+ N_x=-\tfrac12(e^Td)^2\le0.
+\]
+
+The exact constant-operator flow is contractive in the H norm without
+requiring J to be normal. Its induced norm is bounded by its weighted
+Frobenius norm:
+
+\[
+ \|J\|_H^2\le\operatorname{tr}(H^{-1}J^THJ)
+ =2\operatorname{tr}(M^{-1}S)+(e^TM^{-1}e)^2\le L_*^2,
+\]
+\[
+ L_*^2=2\operatorname{tr}(M^{-1}K)+(e^TM^{-1}e)^2.
+\]
+
+For rational knots and cut, these defining matrix entries are rational.
+This is a dynamical bound; the scaled Gram condition alone is not one.
+For the cubic Runge--Kutta polynomial, the exponential series gives
+
+\[
+ \|P_3(hJ)-e^{hJ}\|_H\le
+ \delta=\frac{(hL_*)^4e^{hL_*}}{24},\qquad
+ \|P_3(hJ)\|_H\le1+\delta.
+\]
+
+Telescoping n identical steps bounds the flow discrepancy by
+`(1+delta)^n-1 <= n*delta*(1+delta)^(n-1)`. This does not assert that the
+polynomial itself is contractive. For `hL_*<1`, replacing the exponential
+by `1/(1-hL_*)` supplies a rational upper bound for an exact control.
+
+Four [exact matrix controls](../tests/test_nsc_atlas_cap_time_operator.py)
+pass using **60,000 charged algebra values / 6.5 active CPU seconds**.
+Independent monomials span the same one-cell odd-quintic space. At `Z=1/2`
+the exact upper bound is `L_*^2=3444`. The controls check positivity,
+dissipation, the weighted norm, the cubic polynomial, and a positive-definite
+rational energy-amplification bound for one manufactured Robin value and
+one predetermined step. They run no numerical trajectory.
+
+This estimate is restricted to constant geometry and zero coupling. A moving
+wall changes M and H; finite coupling and exterior feedback change the rate
+map and source terms. Those effects and the spatial residuals must be bounded
+before this result can support a finite physical interval.
+
+#### Moving-cut energy and continuous time residual
+
+The zero-coupling estimate extends to a prescribed moving cut inside the
+same last cell, without changing basis functions or coefficient meanings.
+Put `l=phi_z(Z)`, `v=l-b*e`, `A0=sech^2 Z`. Since `b_Z=-b^2-2A0`,
+
+\[
+ M_Z=ee^T,\qquad S_Z=vv^T+2A_0ee^T,\qquad
+ H_Z=\operatorname{diag}(S_Z,M_Z)\succeq0.
+\]
+
+For supplied `T_x>0` and incoming drive `C=A0*R*w_plus`, the same coefficient
+equations give the exact moving-domain identity
+
+\[
+ N_x=\frac{T_x}{2}(VC-V^2)+\frac{Z_x}{4}u^TH_Zu,
+ \qquad V=e^Td.
+\]
+
+The second term is `Z_x*A0*rho_W=R_x*rho_W`. It accounts for the moving
+domain. Adding `-M^-1*M_x*d` to the coefficient rate would introduce the
+extra work `-Z_x*(e^T*d)^2/2`. In fact,
+
+\[
+ \frac14u^TH_Zu=
+ \frac14\{(v^Tc)^2+(e^Td)^2\}+\frac{A_0}{2}(e^Tc)^2.
+\]
+
+Define the nonnegative geometry factor
+
+\[
+ \gamma(Z)=\operatorname{tr}(H^{-1}H_Z)
+ =v^TS^{-1}v+2A_0e^TS^{-1}e+e^TM^{-1}e,
+ \qquad g(x)=\max(Z_x,0)\gamma(Z).
+\]
+
+Positive semidefiniteness and completing the flux square imply
+`N_x <= g*N + T_x*C^2/8`. Writing `G(x)=integral_(x0)^x g(t)dt`,
+
+\[
+ N(x)\le e^{G(x)}\left[N(x_0)+
+ \int_{x_0}^{x}e^{-G(t)}\frac{T_x(t) C(t)^2}{8}\,dt\right].
+\]
+
+This is conditional on the stated geometry and input bounds. For the same
+prescribed `Z(x),T_x(x),C(x)`, let a continuous coefficient approximation
+have residual `r=u_h'-F(x,u_h)` and error `epsilon=u_h-u`. Dissipation of
+the homogeneous generator gives, without assuming normality,
+
+\[
+ \|\epsilon(x)\|_{H(x)}\le
+ e^{G(x)/2}\|\epsilon(x_0)\|_{H(x_0)}+
+ \int_{x_0}^{x}e^{[G(x)-G(t)]/2}\|r(t)\|_{H(t)}\,dt.
+\]
+
+Thus an independently bounded continuous time defect can control a cap
+coefficient error. The estimate is not obtained from a saved endpoint
+difference alone. It does not bound spatial truncation or replace the
+exterior feedback with prescribed physical data.
+
+One additional exact control verifies the matrix derivatives, moving energy
+identity and single domain contribution using **16,000 algebra values /
+1.484375 active CPU seconds**. All five time-operator controls together use
+**76,000 / 7.984375** of the admitted 80,000 / 20. The common finite-amplitude
+problem still requires source/exterior closure and a nonlinear error estimate.
+Independent Grok review confirms the displayed moving energy and residual
+estimates. The error estimate uses the dissipative pairing directly; it
+does not need a separate Lipschitz or generator-norm bound for this linear,
+prescribed-geometry problem.
 
 ### Central clock in general null labels
 
