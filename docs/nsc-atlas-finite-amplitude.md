@@ -5699,7 +5699,8 @@ intermediate stages as well as accepted states.
 The minimum stage metric certificate was `0.773878364523775`. Selected
 exterior pure-U residuals reached `2.02810e-11`, and source residuals
 `9.78749e-11`. Weak cap mass balance stayed within `1.02438e-20`, but the
-conformal scalar tangent gap reached `7.07677e-4`. The sampled continuous
+conformal wall-flux gap reached `7.07677e-4` (the scalar-tangent gap
+`E_f` was `1.48821e-3`). The sampled continuous
 time residual in the derived wall scalar was `1.17754e-9`; cap density
 and chi residuals had maximum L2 norms `9.26385e-8` and `1.46171e-11`.
 These are different residuals, not interchangeable error enclosures.
@@ -6434,6 +6435,44 @@ clock-aware residuals, in a compact receipt. Its new creation-only mode
 binds committed sources before computing and charges one field preparation
 into the original overall clock and count. The complete coupled error
 estimate and physical prediction remain outstanding.
+
+The [completed receipt](../results/summaries/nsc-atlas-fixed-history-onset-v1.json)
+uses the same full source cell and 236+135 time steps, with 1,855 common
+stages. It costs 1,176,614,645 values / 619.4375 CPU seconds, including one
+prepared field and transfer. The retained input hash exactly matches the
+v2 history, and all 70 source bindings authenticate at `2551c9f`. The
+minimum stage metric certificate is `0.773824049621412`.
+
+| Sampled quantity | Maximum absolute value |
+| --- | ---: |
+| Conformal scalar wall-flux residual `E_c` | `5.40982898e-8` |
+| Canonical scalar-tangent residual `E_f` | `1.13752336e-7` |
+| Derived wall-scalar time residual | `5.38806476e-13` |
+| Actual physical temporal-mass residual | `1.54459677e-15` |
+| Affine explicit-time mass remainder | `2.50884930e-12` |
+| Weak-balance minus explicit-time remainder identity | `2.39405933e-20` |
+| Selected exterior pure-U constraint | `2.02810185e-11` |
+
+The previous, shorter 341-step attempt had `E_c=7.07677230e-4` and
+`E_f=1.48820981e-3`. The new complete interval covers its domain and has
+recorded maxima about 13,000 times smaller. This supports the onset-lag
+diagnosis; it does not supply a convergence order or a uniform error bound.
+The new weak-balance defect is `5.28415752e-12`: its nonzero affine remainder
+is recorded, not erased to reproduce the polynomial-only balance.
+
+The final source knot has two metric curvatures. Writing the actual local
+Hermite polynomial as `a3 t^3+a2 t^2+a1 t+a0`, the left endpoint curvature
+is `6 a3 Delta+2 a2`, while the next piece gives `2 a2_next`. At source
+knot 36, these are `-1.13548391e-6` and `0.00272394368`; the common source
+ODE target is `-5.82457777e-6`. Their actual null constraints are
+`6.08790298e-10` and `3.54409283e-7`. The run's maximum uses the second,
+as specified by the snapshot's right-interval convention. The direct frame
+constraints agree with `alpha*(h_xx-Q)/sqrt(F)` to below `1e-15` on both
+sides. This independent 134-value check changes neither the saved result
+nor the input. Curvature is not a first-jet RHS forcing, and different
+constraint and scalar residual units preclude assigning causation by
+comparing their magnitudes. The remaining junction gap needs its own
+incoming-characteristic/weak-projection decomposition before another run.
 
 ### Central clock in general null labels
 

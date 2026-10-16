@@ -489,6 +489,17 @@ controls compare clock/radius/field perturbations with recomputed masses
 and wall scalars; source-failure accounting and receipt preservation are
 checked by `tests/test_run_nsc_atlas_fixed_onset.py` without a physical solve.
 
+The [v1 history receipt](../results/summaries/nsc-atlas-fixed-history-onset-v1.json)
+completed 371 steps with 1,176,614,645 values / 619.4375 CPU seconds. Its
+producer is frozen at `2551c9f52703fb418bec5a5ebf3d0bde136cfcc5`; 70 source
+hashes, the original input/geometry/schedule and the v2 prepared-history
+identity have been authenticated without a replay. The committed receipt
+is 18,513 bytes and contains no full history. Preserve it when regenerating
+into a separately named local output. The one-sided source endpoint check
+uses the saved input's `exact_rows[::2]`, knot 36, and the actual left/right
+Hermite curvatures; its equations and values are in the
+[owner](nsc-atlas-finite-amplitude.md#derived-time-residuals-and-the-full-retained-history-interval).
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

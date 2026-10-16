@@ -2077,6 +2077,48 @@ calculation. Likely failure modes are unresolved radial conditioning,
 persistent cap/interface mismatch, and source or time residuals masking the
 comparison; the retained diagnostics distinguish them without a grid scan.
 
+**Outcome:** the interval completes all 371 steps / 1,855 common stages,
+using 1,176,614,645 values / 619.4375 CPU seconds, including one source
+preparation. The 18,513-byte [receipt](../results/summaries/nsc-atlas-fixed-history-onset-v1.json)
+binds 70 producer files at `2551c9f`, the original input/geometry/schedule,
+and the same prepared-history input hash as v2. All bindings and stage
+accounting were checked without replay. The maximum conformal wall-flux
+gap is `5.4098290e-8`, versus `7.0767723e-4` in the earlier 341-step
+attempt; the new full interval includes that shorter domain. The same
+derived scalar time residual is `5.3880648e-13`. This is a representation
+comparison, not a convergence estimate or an observational prediction.
+The affine weak-balance remainder is retained: weak balance reaches
+`5.2841575e-12`, while its remainder identity is within `2.3940593e-20`.
+The source constraint maximum is `3.5440928e-7` at the final source knot.
+No automatic refinement or further evolution follows from this result.
+
+### One-sided source curvature at the completed endpoint, 17 October 2026
+
+`SourceSnapshot` is C1 in its metric correction and explicitly uses the
+right Hermite interval for curvature at an interior knot. The completed
+window ends at such a knot. Before interpreting its largest source
+constraint as an interior defect, evaluate both polynomial second
+derivatives at that same endpoint from the authenticated original source
+rows. Use the same continuous value and first derivative, source profile,
+amplitude and frame. Compare the actual two constraints with
+`alpha*(h_xx-Q)/sqrt(F)` and their jump. At most **20,000 values / 30 CPU
+seconds**, one endpoint with two analytic polynomial jets, no nearby-grid
+query, source solve, field solve or evolution. The decision is whether the
+reported maximum belongs to the interval's left limit or the next source
+piece; neither side is substituted to make a constraint vanish. Stop after
+this attribution or the first failed frame identity.
+
+**Outcome:** the two actual curvatures at source knot 36 are
+`h_xx(left)=-1.1354839067362777e-6` and
+`h_xx(right)=0.0027239436776577454`, with common ODE target
+`-5.8245777685680185e-6`. Their direct constraints are
+`6.087902982207517e-10` and `3.5440928280303467e-7`; the latter reproduces
+the saved endpoint exactly. Both agree with the curvature-defect formula
+within `1e-15`. This uses 134 values and less than one process-clock tick
+(reported CPU time 0.0 seconds). The large saved maximum belongs to the
+next interpolation piece at the endpoint, not the left limit of the
+completed interval. Both are retained; no constraint or RHS is overwritten.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

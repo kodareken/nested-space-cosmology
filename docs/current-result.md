@@ -9,7 +9,7 @@ reaches the nonzero field regime, then stops at its CPU ceiling after
 341/371 accepted steps (235,384,613 values / 180.015625 CPU seconds).
 It preserves the original source and records source, wall, mass, time and
 selected exterior constraint residuals in a compact summary. There is no
-completed right endpoint. The scalar tangent gap reaches `7.07677e-4`
+completed right endpoint. The conformal wall-flux gap reaches `7.07677e-4`
 while its sampled time residual is `1.17754e-9` and weak mass balance is
 within `1.02438e-20`.
 
@@ -87,6 +87,28 @@ constraint defect of about `6.9e-11`, so the next physical history attempt
 retains the original start and complete 371-step schedule. Its admitted
 900-second / two-billion-value ceiling includes one prepared-field transfer;
 there is no quiet-prefix shortcut or grid scan.
+
+That [full retained-history interval](../results/summaries/nsc-atlas-fixed-history-onset-v1.json)
+now completes 371 steps / 1,855 stages with 1,176,614,645 charged values /
+619.4375 CPU seconds, including one preparation and no retries. The largest
+conformal wall-flux residual is `5.409829e-8`, compared with `7.076772e-4`
+in the shorter original attempt; the corresponding scalar-tangent values
+are `1.137523e-7` and `1.488210e-3`. The derived scalar time residual is
+`5.388065e-13`, so completing the time solve does not remove the remaining
+junction gap. Weak balance retains its explicit-time remainder, with an
+identity defect below `2.4e-20`; the actual physical temporal-mass residual
+reaches `1.544597e-15`. The metric certificate remains above `0.773824`.
+
+The maximum source constraint `3.544093e-7` is the right-piece reading at
+the final source knot. An independent one-sided polynomial evaluation gives
+`6.087903e-10` on the completed interval's left limit. Both use the same
+continuous source value and first derivative; neither is changed to make
+the constraint vanish. The snapshot's second derivatives are diagnostic
+inputs, so their jump cannot by itself explain the scalar boundary gap.
+All 70 frozen source bindings, original input/geometry/schedule and the
+prepared-history hash pass without replay. The compact receipt is 18,513
+bytes. This completes a finite numerical interval, not the coupled
+continuum estimate or an observational test.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
