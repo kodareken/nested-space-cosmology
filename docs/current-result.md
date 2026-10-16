@@ -14,9 +14,10 @@ arrival labels strictly inside the finite window.
 
 The fixed-central-clock field is
 $\ell\phi_C/\varepsilon=p_0+\alpha p_{1,C}+O(\alpha^2)$.
-At radial and ray orders both 32 the retained coefficients are:
+Write $T=\tau_C/\ell$ for dimensionless central proper time. At radial
+and ray orders both 32 the retained coefficients are:
 
-| Central time $T/\ell$ | $p_0$ | $p_{1,C}$ |
+| Central time $T$ | $p_0$ | $p_{1,C}$ |
 | --- | ---: | ---: |
 | -0.54363418 | 0 | $3.49\times10^{-137}$ |
 | -0.46546305 | 42.21372894 | 3395.219 |
@@ -38,9 +39,10 @@ taking 50.046875 process-CPU seconds and 26,350,673 scalar kernels.
 
 One leading-field preparation and ten incoming rays take 27.9375
 process-CPU seconds and 14,498,108 scalar kernels. No wall, cap-clock or
-exterior correction is evolved again. The fine travel integral reproduces
-the earlier cap result within $1.43\times10^{-14}$; fixed-material-time
-arrival agrees within $2.85\times10^{-14}$. Quiet recovery is below
+exterior correction is evolved again. At radial-32/ray-16, the travel
+integral reproduces the earlier cap result within $1.43\times10^{-14}$;
+fixed-material-time arrival agrees within $2.85\times10^{-14}$. Ray order
+32 changes each by $5.21\times10^{-10}$. Quiet recovery is below
 $3.49\times10^{-137}$. Two positive-radius samples on each ray retain
 the computed centre-near potential separately from its analytic zero
 at the centre. The frame cancellation closes below $9.10\times10^{-13}$
@@ -52,7 +54,11 @@ correction small. No finite $\alpha$ or uniform relative-error claim is
 selected from this table. The nonlinear amplitude interval and remainder
 need their own calculation. The [exact nonlinear owner](nsc-atlas-finite-amplitude.md)
 derives the source constraint, smooth bulk equations and transformed wall
-laws from the same action. A source-only continuation bound keeps radius,
+laws from the same action. The invariant reduced field and its normal
+derivative transmit continuously. On a branch with positive Einstein-radius
+expansion, the temporal wall condition follows from angular matching and
+the scalar jump without dividing by the vanishing exterior normal-radius
+factor. A source-only continuation bound keeps radius,
 slope and conformal factor positive for sufficiently small nonzero
 amplitude. The coupled bulk/interface/centre remainder remains unresolved.
 

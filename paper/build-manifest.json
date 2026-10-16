@@ -1,10 +1,10 @@
 {
-  "bytes": 2085066,
+  "bytes": 2196978,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "8c0e0c96885f58d9c32732fb8c2582bfe6b4bdd064e9de7d83023989ae7d2b6d",
+  "metadata_sha256": "5b018594148289fa35ba3cac62d6a4ed1e50cb3c316322f6cbbeaed82a916f8a",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 30,
-  "pdf_sha256": "01e8c4315433c1bfca836591a6663bc4c775d04918a06c3090daf4ab313067f3",
+  "pages": 33,
+  "pdf_sha256": "7f4827e02026483158c9da57065e88e0a1a247e84fd7986845e40b7fd272cf2f",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
     {
@@ -100,12 +100,32 @@
       "sha256": "eae0428f83ab112f360593ce954a4bf963775fd98935deeaea4a8d70db09da69"
     },
     {
+      "path": "results/development/nsc-atlas-central-ray-v1/ray.json",
+      "sha256": "788f7690d62980308c537e209e27295679b730f0688ac43f3a9e5bceb317d4a3"
+    },
+    {
+      "path": "results/development/nsc-atlas-central-scalar-v1/central.json",
+      "sha256": "3868ca7b3457a4c71d39217a0f4c577ee5200eb361d9e90c53251608c2061f03"
+    },
+    {
       "path": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
       "sha256": "ca5abcf0c235b315006d91c57b9d1f2974d26a4fb49c971e668c07fedf66c578"
     },
     {
+      "path": "results/development/nsc-atlas-forcing-cache-v1/cache.json",
+      "sha256": "3d069e63a6ae7352c5c7b0a71a6d5c4e4889a92764fee3d754a252da4744fd3a"
+    },
+    {
+      "path": "results/development/nsc-atlas-lift-clock-v1/clock.json",
+      "sha256": "c68ad7393c5a7675f5da66e5b30115e0bdd14a53d30c3f9867e6ed3b1af7fe43"
+    },
+    {
       "path": "results/development/nsc-atlas-observer-inference-v1/inference.json",
       "sha256": "8c42d143c8e6bd7f1fdcc9b4b0b1c453fc39efbe3ded8d0face008709252a217"
+    },
+    {
+      "path": "results/development/nsc-atlas-profile-moment-v1/moment.json",
+      "sha256": "91dd0edb78cc95c6af44d0f8d66553964fd0dfd47c6779b5e6bb92e287f161ef"
     },
     {
       "path": "results/development/nsc-atlas-scalar-boundary-v1/field/boundary.json",
@@ -126,6 +146,10 @@
     {
       "path": "results/development/nsc-atlas-scalar-boundary-v1/ray_fine/boundary.json",
       "sha256": "caf1dacb2853b9286533c33b3bac5d7950bfd9a8ddd6d1e109ad25a3a001539f"
+    },
+    {
+      "path": "results/development/nsc-atlas-scalar-evolution-v1/evolution.json",
+      "sha256": "d244e1df6f0dce2a79c6e18cbc768d28627f799d47f6f6444b3af13ef047fd5f"
     },
     {
       "path": "results/development/nsc-atlas-scalar-normal-force-v1/normal-force.json",
@@ -297,6 +321,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "8ba3881710ba60b46fc62ea5429a23544a57e75e8ff5ead9fb5339984ff5b950",
-  "version": "working-2026-10-16.1"
+  "source_sha256": "a44c1a7be78da220d68a87bf6d00ad13a45f72d7099fe4ea522e53367b62fddb",
+  "version": "working-2026-10-16.2"
 }

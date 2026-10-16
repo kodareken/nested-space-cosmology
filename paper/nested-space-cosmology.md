@@ -1404,7 +1404,7 @@ areal-coordinate pullback $g_1=-H_{E,\mathrm{src}}c_{0,r}|_{\mathrm{src}}$.
 It is retained after the compact leading input; setting it to zero would
 change the preparation continuation.
 
-Let $B_U=\mathfrak b$, where $\mathfrak b=r_{0,U}c_{1,r}|_W$ is the
+Let $B_U=b_{\mathrm{out}}$, where $b_{\mathrm{out}}=r_{0,U}c_{1,r}|_W$ is the
 outgoing boundary derived above, and choose $B=0$ below the initial wall
 coordinate. Then $z=y-g_1-B$ has zero source and bottom data and
 $z_U|_W=0$. Its conservative evolution is
@@ -1419,7 +1419,7 @@ The terminal $z$ state has no extra advection term, while the reconstructed
 wall derivative includes the lift transport:
 
 $$
-\frac{dy_W}{dV}=g_1'(V)+z_V|_W+U_W'(V)\mathfrak b(U_W(V)).
+\frac{dy_W}{dV}=g_1'(V)+z_V|_W+U_W'(V)b_{\mathrm{out}}(U_W(V)).
 $$
 
 A cumulative pre-arrival cap-mass moment agrees with independent radial
@@ -1462,22 +1462,22 @@ Evidence: [central derivation](../docs/nsc-atlas-central-scalar-response.md),
 [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json)
 and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json).
 
-Use the same Jordan central proper time and put
+Write the dimensionless Jordan central proper time as $T=\tau_C/\ell$ and put
 $u=T-\operatorname{atanh}r$, $q=T+\operatorname{atanh}r$.
 The leading reduced field is $c_0=f(q)-f(u)$. Unlike the outgoing wall
 ray, an incoming ray to the centre can contain both profile terms. Its
 metric and forcing therefore use the full reflected field.
 
-Let $a(q)$ be the outgoing label of the wall event with incoming label
-$q$, and write $J(q)=\widetilde c_{1,u}|_W$. The wall value in central-clock
-null coordinates is
+Write $c_N$ for the central-clock null correction. Let $a(q)$ be the
+outgoing label of the wall event with incoming label $q$, and write
+$J(q)=c_{N,u}|_W$. Its wall value is
 
 $$
 H(q)=y_W(V(q))-C(q)f'(q),\qquad C=\Delta C_{\mathrm{fixed}\,V}.
 $$
 
-The forced cap equation is $\widetilde c_{1,uq}=-K_1c_0$. Differentiating
-the wall value gives $\widetilde c_{1,q}|_W=H'-a'J$; integrating inward
+The forced cap equation is $c_{N,uq}=-K_1c_0$. Differentiating
+the wall value gives $c_{N,q}|_W=H'-a'J$; integrating inward
 and imposing regular reflection at $u=q$ then yields
 
 $$
@@ -1508,7 +1508,7 @@ $$
 Five cuts lie strictly inside the retained arrival interval. With incoming
 radial and ray orders both 32, they give:
 
-| Central time $T/\ell$ | Leading $p_0$ | Cubic coefficient $p_{1,C}$ |
+| Central time $T$ | Leading $p_0$ | Cubic coefficient $p_{1,C}$ |
 | --- | ---: | ---: |
 | $-0.54363418$ | $0$ | $3.49\times10^{-137}$ |
 | $-0.46546305$ | $42.21372894$ | $3395.219$ |
@@ -1531,8 +1531,9 @@ ray successor 50.046875 seconds, each within its own 120-second and
 
 The quiet sample remains below $3.49\times10^{-137}$. Positive-radius
 centre samples retain the potential separately from its analytic
-$K_1=O(r^2)$ limit. The fine radial travel integral reproduces the previous
-cap calculation within $1.43\times10^{-14}$. Manufactured controls check
+$K_1=O(r^2)$ limit. The radial-32/ray-16 travel integral reproduces the
+previous cap calculation within $1.43\times10^{-14}$; changing to ray
+order 32 moves it by $5.21\times10^{-10}$. Manufactured controls check
 the optical derivative, integration sign, reflection factor and clock
 conversion independently of this physical run.
 
@@ -1540,9 +1541,13 @@ The coefficient is large for this preparation, particularly near the
 leading field's zero crossing. Its size neither selects a finite amplitude
 nor bounds the omitted term. The [exact nonlinear equations](../docs/nsc-atlas-finite-amplitude.md)
 now specify the next connection. The same action fixes the canonical
-Einstein potential and wall tension as
-$\widehat V_\pm=3h_\pm^2\cosh^4(\Psi/\sqrt6)$ and
-$\sigma_E=\sigma\cosh^3(\Psi/\sqrt6)$.
+Einstein potential and wall tension:
+
+$$
+\widehat{V}_\pm=3h_\pm^2\cosh^4(\Psi/\sqrt{6}),\qquad
+\sigma_E=\sigma\cosh^3(\Psi/\sqrt{6}).
+$$
+
 An exact source-leg constraint admits a nonzero small-amplitude interval
 with positive radius and conformal factor. Extending that control through
 the bulk, moving interface and regular centre, with a quantitative

@@ -157,6 +157,160 @@ matching, proper wall normalization and the signed angular/temporal
 conditions must be used together. The reference zero of `beta_plus` is not
 a singularity; a reduction dividing by that quantity is unsuitable.
 
+## Exact invariant-field reduction and regular readout
+
+There is an exact reduced equation for the same invariant field propagated
+in the perturbative calculation. Set
+
+$$
+c=\chi/\varepsilon,\qquad u=c/r,\qquad
+w=\sqrt6\sinh(\Psi/\sqrt6)=\sqrt\alpha\,u.
+$$
+
+Here `u` is a scalar ratio, not a null coordinate. The continuous normalized
+equations at `alpha=0` follow from
+
+$$
+\Psi=\sqrt6\operatorname{asinh}(\sqrt\alpha\,u/\sqrt6),\qquad
+\mathcal F=(1+\alpha u^2/6)^{-1},\qquad
+\Psi_a=\frac{\sqrt\alpha\,u_a}{\sqrt{1+\alpha u^2/6}},\qquad
+\widehat V=3h^2(1+\alpha u^2/6)^2.
+$$
+
+Indeed, $w_{,\Psi\Psi}=w/6$ and this potential satisfies
+$w_{,\Psi}\widehat V_{,\Psi}=2\widehat Vw/3$.
+The canonical equation and Einstein trace
+$R_E=(\nabla\Psi)^2+4\widehat V$ therefore give
+$(\Box_E-R_E/6)w=0$. On either smooth side of the wall,
+
+$$
+\boxed{c_{UV}+\mathcal Kc=0,\qquad
+\mathcal K=-\frac{r_{UV}}r+\frac{CR_E}{24}
+=\frac{Cm}{2r^3}-\frac{C\widehat V}{12}
+-\frac{\Psi_U\Psi_V}{6},}
+\qquad
+m=\frac r2\left(1+\frac{4r_Ur_V}{C}\right).
+$$
+
+The mass `m` includes the cap vacuum contribution. Substitution of the
+relations above makes all scalar backreaction terms explicitly proportional
+to `alpha`. The vacuum exterior gives its original Schwarzschild kernel;
+the vacuum cap has `m=h^2 r^3/2` and `K=0`. Differentiating this mass using
+the null constraints and mixed radius equation also gives the exact laws
+
+$$
+m_U=\frac{r^2\widehat V}{2}r_U-
+\frac{r^2r_V}{C}\Psi_U^2,\qquad
+m_V=\frac{r^2\widehat V}{2}r_V-
+\frac{r^2r_U}{C}\Psi_V^2.
+$$
+
+These are first-derivative identities, not replacements for proving that
+the constraints propagate in a chosen independent evolution system.
+
+The reduced field has homogeneous transmission conditions exactly.
+The angular Jordan jump gives
+$[\widehat n_J r_J]=-br_J$, which cancels
+$[\widehat n_J\phi_J]=b\phi_J$ in their product. Consequently
+
+$$
+[c]=[\widehat n_Jc]=[\widehat n_Ec]=0.
+$$
+
+In exterior null labels `(U,V)` and cap null labels `(Q_-,Q_+)`, continuity
+of tangential and normal derivatives is equivalently
+
+$$
+\dot U_+c_{U,+}=\dot Q_-c_{Q_-,-},\qquad
+\dot V_+c_{V,+}=\dot Q_+c_{Q_+,-},
+$$
+
+where a dot uses one common proper-time parameter on the wall. Its timelike
+label rates, rather than `beta_plus`, are the denominators of this
+transmission map. This statement includes the original wall source:
+the singular conformal-curvature term and the jump of the conformal
+scalar's normal derivative cancel. The displayed smooth formula for `K`
+must not be applied as a distributional curvature formula at the wall.
+For a continuous timelike multiplier tangent to the wall, the scalar energy
+flux is proportional to $(n c)(Xc)$ and is continuous. This cancels the
+basic interface flux; it does not estimate differentiated metric or moving
+interface terms.
+
+Choose actual cap null labels with `Q_-=Q_+=T` on the axis, where `T` is
+Jordan central proper time. At a regular centre,
+
+$$
+c=0,\quad c_{Q_-}+c_{Q_+}=0,\qquad
+r_{Q_-}=-r_{Q_+},\qquad
+C=4r_{Q_+}^2=\mathcal F,\qquad r_{Q_+}=\sqrt{\mathcal F}/2.
+$$
+
+The normalized Jordan central scalar is therefore exactly
+
+$$
+\boxed{p_{J,C}=\lim_{r\to0}\sqrt{\mathcal F}\frac cr
+=2c_{Q_+}\big|_{Q_-=Q_+=T}.}
+$$
+
+In this gauge a uniform first-jet remainder controls the physical central
+readout without an additional frame or clock correction. At the axis
+$\mathcal F=1-2\alpha c_{Q_+}^2/3$; positivity would follow from a proved
+uniform derivative bound and a corresponding small amplitude. Sampled
+derivatives do not establish that bound. Regularity gives
+
+$$
+\frac m{r^3}\longrightarrow\frac{\widehat V_C}{6}
++\frac{\Psi_T^2}{12\mathcal F_C},\qquad
+\Psi_{Q_-}=\Psi_{Q_+}=\Psi_T/2.
+$$
+
+Thus the constant terms in `K` cancel at the centre. With sufficient even
+radial regularity, `K=O(r^2)`. A numerical or analytic estimate must retain
+this cancellation or use the regular mass-density variable; independent
+bounds on singular-looking terms do not prove the regular limit.
+
+### Temporal junction on the expanding Einstein branch
+
+One junction redundancy can be resolved exactly. In dimensionless Einstein
+proper wall time `s_E`, let
+
+$$
+\omega=\frac{dr_W}{ds_E},\qquad
+\beta_\pm=\widehat n_{E,\pm}r,\qquad
+B=b\mathcal F^{-3/2}.
+$$
+
+The angular condition is $[\beta]=-Br_W$.
+The mixed smooth Einstein equation gives
+$\operatorname{Hess}r(\dot\Sigma,n)=-r\Psi_{s_E}\Psi_n/2$,
+and hence
+
+$$
+\frac{d\beta_\pm}{ds_E}
+=\widehat K_{E,\pm}{}^{s_E}{}_{s_E}\,\omega
+-\frac r2\Psi_{s_E}\widehat n_{E,\pm}\Psi.
+$$
+
+Since $B_{,\Psi}=Bz/2$ and
+$[\widehat n_E\Psi]=Bz=2B_{,\Psi}$, differentiating the angular
+condition cancels the derivative of `B` and yields
+
+$$
+\omega\left([\widehat K_E{}^{s_E}{}_{s_E}]+B\right)=0.
+$$
+
+On a tube preserving `omega>0`, the temporal Israel condition follows
+from the angular condition, scalar jump and smooth Einstein equation.
+This requires Einstein areal expansion; Jordan expansion alone is not
+the finite-amplitude condition. No division by `beta_plus` occurs.
+Once the full extrinsic jump holds, the Gauss constraint gives
+$[\widehat{\mathcal T}_{nn}]=-2B\overline{\widehat K_E}$, with
+dimensionless Einstein stress defined by
+$\widehat G_E=\widehat{\mathcal T}$ and `K` here denoting the extrinsic
+trace. This identifies the normal-force condition as a consistency
+consequence when the bulk constraints hold. It does not prove their
+propagation or the existence of that expanding tube.
+
 ## Exact source family in the original affine gauge
 
 The [initialization owner](nsc-atlas-characteristic-initialization.md)
@@ -213,6 +367,12 @@ while its radius and slope retain their evolved values.
 The bottom and cap initial data remain quiet reference data;
 the fixed corner expansion and lapse are unchanged. A separate Einstein
 affine reparametrization must not be mistaken for the original source gauge.
+There is no additional freely selectable source mass function. On the
+exterior source, its transformed `r,C` traces and the original corner
+value determine the transverse expansion through
+$(r_U)_V=-r_Ur_V/r-C/(4r)$; the mass then follows from its geometric
+definition. The specified source continuation, quiet data, corner and
+wall branch identify the exact family whose construction is still needed.
 
 ### What a source-leg bound establishes
 
@@ -270,9 +430,11 @@ such a theorem. In particular, the following remain to be established.
 
 - Choose an independent characteristic/interface system with anchored gauge
   and a fixed-domain identification. Show that the remaining null Einstein
-  constraints and temporal/normal wall conditions propagate from compatible
-  initial and interface data. Distributional stress conservation must use
-  the transformed scalar-dependent tension if the Einstein frame is used.
+  constraints propagate from compatible initial and interface data. The
+  temporal and normal consequences derived above apply only when their
+  smooth equations, constraints and positive Einstein expansion hold.
+  Distributional stress conservation must use the transformed
+  scalar-dependent tension if the Einstein frame is used.
 - Prove a regular-centre estimate and a boundary energy or characteristic
   estimate for the moving transmission law, without derivative loss or
   division by `beta_plus`. Standard smooth-bulk scalar evolution does not
@@ -295,6 +457,66 @@ regular first-derivative bounds are also needed. The quadratic metric
 and cubic scalar calculations evaluate particular forced directions, not
 that inverse's operator norm. Older bounds for other actions or domains
 cannot fill this gap.
+
+A concrete next estimate is the forced reference transmission resolvent in
+a norm that controls one scalar derivative at the centre, together with
+the metric-constraint and wall maps in the same regularity class. On a
+regular cap radial coordinate `x` with `r_J/x>=a_min>0`, the centre condition
+`c(T,0)=0` gives
+$\|c/r_J\|_\infty\le a_{\min}^{-1}\|c_x\|_\infty$.
+A first-commuted scalar energy controlling `c` in spatial `H2` and its
+time derivative in `H1` can therefore control this readout; uncommuted
+energy alone cannot. In a wall-adapted Gaussian-normal collar, coordinate
+tangential differentiation commutes with the normal derivative, so both
+homogeneous scalar transmission conditions commute. The bulk commutator,
+moving coordinate coefficients and matching to a regular centre still
+need bounds. The compact preparation is `C3` and piecewise `W4,infinity`;
+unlimited differentiability must not be used to close that estimate.
+
+The local commuted operator can be written explicitly. In that collar take
+the quotient metric to be
+$h=-a(s,n)^2ds^2+dn^2$, with the wall at `n=0`, common wall proper time
+`s`, and `a(s,0)=1`. Define the scalar quotient potential
+$W=(\Box_h r)/r+R_E/6$, which equals `4K/C` in a double-null chart.
+Then
+
+$$
+Lc=-a^{-2}c_{ss}+\frac{a_s}{a^3}c_s+c_{nn}
+ +\frac{a_n}{a}c_n-Wc.
+$$
+
+For `Lc=0` and `v=c_s`, direct differentiation gives
+
+$$
+Lv=-\frac{2a_s}{a^3}v_s
+-\left(\frac{a_{ss}}{a^3}-\frac{3a_s^2}{a^4}\right)v
+-\left(\frac{a_{ns}}a-\frac{a_na_s}{a^2}\right)c_n+W_sc.
+$$
+
+A prescribed forcing adds its `s` derivative to this right side. There
+is no `c_nn` commutator term. Since the coordinate fields commute,
+`[c]=[c_n]=0` implies `[v]=[v_n]=0`; the energy fluxes of both equations
+cancel at the wall. This is a local derivative-preserving scalar estimate
+on a prescribed collar with `a` bounded above and away from zero and
+bounded one-sided `a_s,a_n,a_ss,a_ns,W,W_s`. An energy with a positive
+added zeroth-order scalar term handles a potential of either sign.
+These hypotheses are to be bounded, not inferred from the transmission
+identities. The collar need not reach the centre: a compatible regular
+centre patch, patch transition estimates and bounds for coefficients
+generated by the coupled Einstein and wall equations remain necessary.
+
+This route need not infer constants from the saved central cuts. For
+example, after constructing a bounded reference resolvent and a
+constraint-compatible map on a specified regular tube, a preconditioned
+fixed-point map with defect at most `alpha A` and Lipschitz constant at most
+`alpha L` would preserve a radius-`R` ball and contract if
+$\alpha A\le R/2$ and $\alpha L\le1/2$, together with the geometric
+margin inequalities. Finite proved `A,L` would then supply a nonzero
+interval by explicit inequalities. The first-jet kernel and homogeneous
+transmission laws above identify the operators to estimate; they do not
+establish these constants, a derivative-preserving coupled map, or its
+constraint compatibility. A bounded scalar interface estimate is a useful
+next component, rather than a complete nonlinear certificate.
 
 One concrete sufficient route is a residual estimate on this finite domain.
 Use regular weighted variables and the normalized field `chi/epsilon`,

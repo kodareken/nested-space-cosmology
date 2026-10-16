@@ -49,7 +49,7 @@ the formal wall displacement and exterior clock correction from the same
 field on the retained wedge. The [cap calculation](docs/nsc-atlas-cap-response.md)
 now reconstructs the interior metric with its regular centre, checks its
 mass against independent wall transport, and computes the central null-arrival
-correction. The [next scalar calculation](docs/nsc-atlas-scalar-metric-response.md)
+correction. The [scalar response calculation](docs/nsc-atlas-scalar-metric-response.md)
 now evaluates the cap's outgoing backscatter and its displaced-wall boundary
 input, with separate field and quadrature refinements. A clock-resolved
 boundary and cached forcing now supply the [propagated exterior scalar

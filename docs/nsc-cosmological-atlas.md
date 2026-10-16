@@ -100,9 +100,9 @@ cache, grid and ODE comparisons. The [central reconstruction](nsc-atlas-central-
 now connects that trace to the observer by reflected incoming-ray integration
 and its central-clock pullback. At five interior arrival cuts, the
 [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json)
-changes the formal cubic central coefficient by at most `1.10e-5`, and the
+changes the formal cubic central coefficient by about `1.10e-5` at most, and the
 independent [ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json)
-by `5.28e-5`. The sampled fine coefficient has maximum absolute size
+by about `5.28e-5`. The sampled fine coefficient has maximum absolute size
 `3.44e4`; inherited exterior cache, grid and ODE sensitivities are separately
 `1.15e-4`, `1.67e-4` and `5.96e-8`. These are sampled changes, not a total
 error enclosure or a selected physical amplitude.
