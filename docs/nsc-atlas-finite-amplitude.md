@@ -5339,6 +5339,35 @@ report the derived tangent residual, together with the temporal mass
 residual. Its finite-dimensional field evolution remains an approximation
 until the residual and error over a nonzero interval are bounded.
 
+The [instantaneous adapter](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
+now makes this connection. The radial solve passes an immutable scalar
+packet to one wall callback; the exterior callback receives its common
+`r,c` and returns three outgoing first jets. The hybrid supplies `T_x,R_x`
+and the incoming cap field. Independently prescribed versions of those
+three inputs are rejected on the coupled route. The physical wall lapse
+rate follows from the existing fixed-coordinate boost law. A second cheap
+hybrid evaluation fills in the incoming lapse jet with that derived rate;
+it does not change the scalar port or trigger another radial/exterior solve.
+
+The returned diagnostics compare the actual coefficient tangent with the
+hybrid tangent and its exact factored expression. They retain both actual
+and matched temporal mass products. The implemented mass derivative is
+used, so its small numerical weak-balance discrepancy is included rather
+than silently set to zero. Physical mass rates include the moving vacuum
+contribution. Exterior bulk constraints and all time-error estimates remain
+the caller's work.
+
+Four [focused controls](../tests/test_nsc_atlas_cap_fixed_hybrid.py) pass
+with **375,431 charged values / 0.375 active CPU seconds**. They include
+an independently integrated zero-coupling energy/rate oracle, callback/direct
+agreement, quiet vacuum wall clocks, a nonzero manufactured state, a moving
+field finite difference, immutable inputs and invalid-port rejection. No
+retained nonzero state or time trajectory is evaluated by these controls.
+The next connection supplies the actual exterior prefix and common state
+update from the quiet corner, then bounds their residuals over a finite
+interval. The original retained reference remains bound to its producer
+at `8f6c73c`; extending the adapter does not relabel that earlier evidence.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

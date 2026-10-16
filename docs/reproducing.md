@@ -297,6 +297,19 @@ or time step. The [compact audit](../results/summaries/nsc-atlas-cap-initial-jun
 is saved; these commands are reproduction entry points, not an instruction
 to repeat completed calculations before the next connection.
 
+The shared-value instantaneous hybrid adapter has focused controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_fixed_hybrid.py -q -s
+```
+
+All four pass once with 375,431 charged values / 0.375 active CPU seconds
+of the shared 1,500,000 / 45 allowance. The independent zero-coupling energy
+oracle is included on the small test space. These controls call no stored
+physical trajectory and take no time step. Historical cap-reference
+producer hashes are authenticated at commit `8f6c73c`; current code changes
+do not update the original numerical receipt.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

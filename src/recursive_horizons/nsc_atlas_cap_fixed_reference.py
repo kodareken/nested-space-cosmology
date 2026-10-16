@@ -4,6 +4,8 @@ Reuses the radial forward/adjoint engine. Total fields are fixed physical
 polynomials; the wall only clips their domain. No time trajectory is solved.
 """
 from fractions import Fraction as Q
+from collections.abc import Mapping
+from types import MappingProxyType
 
 import numpy as np
 from numpy.polynomial.polynomial import polyval
@@ -70,13 +72,16 @@ class _Fields:
                     fb=fb,pb=pb,hb=hb,f=float(f),p=k/A0,h=float(h),chi=chi,k=k,chi_z=chi_z)
 
 
-def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x,radius_rate,
-                        incoming_w_plus,budget,rtol=2e-13,atol=2e-15):
+def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_rate=None,
+                        incoming_w_plus=None,budget,rtol=2e-13,atol=2e-15,wall_coupler=None):
     """One instantaneous radial solve and weak coefficient RHS.
 
     The metric certificate covers exact rational shapes and binary inputs.
     The floating operator, forward/adjoint agreement and Gram residual are
     numerical consistency checks, not uniform truncation/error enclosures.
+    A wall_coupler receives one immutable scalar metric/trace packet after
+    the radial solve. It supplies T_x, radius_rate and incoming_w_plus from
+    the same junction, instead of independently supplied diagnostic rates.
     """
     budget=_budget(budget);before=budget.evaluations
     if not isinstance(basis,FixedCapBasis): raise ValueError('require a fixed local basis')
@@ -84,8 +89,13 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x,radius_rate,
     if c.shape!=(basis.dimension,) or d.shape!=c.shape:
         raise ValueError('fixed coefficient dimensions differ')
     Z=exact_number(Z,'wall coordinate')
-    alpha=_scalar(alpha,'alpha',nonnegative=True);tx=_scalar(T_x,'T_x',positive=True)
-    rx=_scalar(radius_rate,'radius rate');incoming=_scalar(incoming_w_plus,'incoming wall field')
+    alpha=_scalar(alpha,'alpha',nonnegative=True)
+    if wall_coupler is None:
+        tx=_scalar(T_x,'T_x',positive=True)
+        rx=_scalar(radius_rate,'radius rate');incoming=_scalar(incoming_w_plus,'incoming wall field')
+    elif (not callable(wall_coupler) or
+          any(v is not None for v in (T_x,radius_rate,incoming_w_plus))):
+        raise ValueError('wall coupler and prescribed rates are mutually exclusive')
     rtol=_scalar(rtol,'rtol',positive=True);atol=_scalar(atol,'atol',positive=True)
     if not 64*np.finfo(float).eps<=rtol<=1e-6 or not 1e-15<=atol<=1e-7:
         raise ValueError('fixed reference radial tolerances outside the numerical domain')
@@ -137,6 +147,15 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x,radius_rate,
             R,A0=wall['r'],wall['A0']
             _,_,A,_,rho,_=coefficients(basis.cells-1,breaks[-1],mass)
             mu=float(np.exp(lapse));B=A*mu
+            if wall_coupler is not None:
+                packet=MappingProxyType(dict(radius=R,f=wall['f'],p=wall['p'],h=wall['h'],
+                    A=A,B=B,delta=lapse,mass=mass,rho=rho,alpha=alpha))
+                supplied=wall_coupler(packet)
+                if not isinstance(supplied,Mapping) or set(supplied)!={'T_x','radius_rate','incoming_w_plus'}:
+                    raise ValueError('wall coupler must return exactly the three junction inputs')
+                tx=_scalar(supplied['T_x'],'coupled T_x',positive=True)
+                rx=_scalar(supplied['radius_rate'],'coupled radius rate')
+                incoming=_scalar(supplied['incoming_w_plus'],'coupled incoming wall field')
             if not abs(rx)<tx*B: raise ValueError('fixed cap wall speed is not timelike')
             V=2*mu*gram.solve(gd,budget=budget)
             idx=gram.wall['indices'];e=gram.wall['value']

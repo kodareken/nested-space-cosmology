@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "8f6c73cda90ad32afa584040df3bee9d81284552",
+  "current_receipt_commit_parent": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 220218,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 220396,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "5ef1c1e318c19796db8c3e83f45c05014209991b9aa59993282f762fbd0d7fb8"
+      "sha256": "4e58f5d716cd88a7093f76f489924037a6b21d56ca9ba1d789a5c7e34ad00be9"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 310239,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 310750,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0315156ff7bca39b3acbac196fdf6b78301d261ece406ee055d068db8f421959"
+      "sha256": "3e4f15b836ade68ef35eda33e4507db761afce1e8be6864ede784e46434b645b"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 257903,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 259776,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ac2887db54aafe696bb5ad5cab77fbb8b5d07fe9009651f316b6c88b3a3a7b82"
+      "sha256": "f0a2e0434af264226374098a815536e113e00036e6ae8a141f59e67b678ce5d1"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 295264,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 297531,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3b9069d0ce448818bb61bc24d2b4f5db0fd5ded86f744af0558ba6defe1e8ec0"
+      "sha256": "86de2197dccd9f3bbdc64a1a779ece5e9160af75371d5f084b32d30267a39773"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 100509,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 101091,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a9e5b4dd604d11c393cb7d9a7e001b74a12a0d47a810c12f8f4cdfed1cfce28b"
+      "sha256": "dc1c6c5a688fb5b1555433f652e8663d2b789787258892fc827023a66da279ef"
     },
     {
       "bytes": 18356,
@@ -29620,12 +29620,12 @@
       "sha256": "4af20d7d70e7fcb8353e5ab1bb0e15205aa49f496590286d39127e8892a56e20"
     },
     {
-      "bytes": 6403,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 7136,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "path": "scripts/check_nsc_atlas_cap_initial_junction.py",
       "retention_reason": "Fixed cap moving-wall compatibility and initial junction evidence",
-      "sha256": "250fa95e489a0215f784994614b069d0b7518e12f3805cf742bbefc94d0fe61c"
+      "sha256": "19f3ef7e512f20bb44fedd63a8a920717c289b8aaa2c6a454e08318c7f49391b"
     },
     {
       "bytes": 2815,
@@ -32308,12 +32308,20 @@
       "sha256": "16df667ecad5ba64434f249205f2a3257674d601a387e01a69c9318250b84f18"
     },
     {
-      "bytes": 11763,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "bytes": 5137,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "path": "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py",
+      "retention_reason": "Fixed cap instantaneous material-wall coupling and independent controls",
+      "sha256": "3b794b499afa67d101d20ba1669a2f11ddcc501866aa7780e2151554f3c5a8ec"
+    },
+    {
+      "bytes": 13031,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "a2ee9ded70981772b62f4e889786e6720592fada34f052f1f95b8a7839aada41"
+      "sha256": "e125c43c4f6bf19693ebcd87370816f78ab80dffbaa9dcba84014c6f575832c2"
     },
     {
       "bytes": 7147,
@@ -35755,6 +35763,14 @@
       "path": "tests/test_nsc_atlas_cap_fixed_bound.py",
       "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
       "sha256": "b2fcf4d6b7d737719e99f7fc8e0ba1bba4ef10e2534e4ae1d22ddfa58f09311f"
+    },
+    {
+      "bytes": 6989,
+      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
+      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "path": "tests/test_nsc_atlas_cap_fixed_hybrid.py",
+      "retention_reason": "Fixed cap instantaneous material-wall coupling and independent controls",
+      "sha256": "adf78c62897ecf48784bf86dfa6a22309177837136225e378d7553011631ba25"
     },
     {
       "bytes": 6937,

@@ -8,33 +8,49 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import subprocess
 import time
 
 import numpy as np
 
 from diagnose_nsc_atlas_boundary_rows import authenticate, Budget, plain
 from record_nsc_atlas_operator_comparison import subset
-from validation_source_successors import verify_saved_source
 from recursive_horizons.nsc_atlas_nonlinear_boundary import hybrid_wall_boundary
 from recursive_horizons.nsc_atlas_vacuum_departure import vacuum_slice
 
 ROOT=Path(__file__).resolve().parents[1]
 REFERENCE='results/summaries/nsc-atlas-cap-fixed-reference-v1.json'
+REFERENCE_COMMIT='8f6c73cda90ad32afa584040df3bee9d81284552'
 SOURCES=('scripts/check_nsc_atlas_cap_initial_junction.py',
          'scripts/diagnose_nsc_atlas_boundary_rows.py',
          'src/recursive_horizons/nsc_atlas_nonlinear_boundary.py',
          'src/recursive_horizons/nsc_atlas_vacuum_departure.py')
 
 
+def retained_cap_reference():
+    """Read the original receipt and authenticate its historical producer.
+
+    The current adapter may evolve. These Git bytes authenticate the old
+    calculation only; no historical code is imported or executed.
+    """
+    raw=(ROOT/REFERENCE).read_bytes()
+    pinned=subprocess.check_output(['git','-C',str(ROOT),'show',REFERENCE_COMMIT+':'+REFERENCE])
+    if raw!=pinned: raise ValueError('retained cap receipt differs from its pinned commit')
+    value=json.loads(raw)
+    for name,expected in value['source_bindings'].items():
+        source=subprocess.check_output(['git','-C',str(ROOT),'show',REFERENCE_COMMIT+':'+name])
+        if hashlib.sha256(source).hexdigest()!=expected:
+            raise ValueError('historical cap producer hash differs: '+name)
+    return raw,value
+
+
 def main():
     budget=Budget(maximum_evaluations=10000,cpu_seconds=15.)
     current,_,cache,identity=authenticate(ROOT,budget)
-    raw=(ROOT/REFERENCE).read_bytes();reference=json.loads(raw)
+    raw,reference=retained_cap_reference()
     if (reference['schema']!='nsc-atlas-cap-fixed-reference-v1' or
             reference['input']['sha256']!=identity['sha256']):
         raise ValueError('cap reference does not bind the retained exterior payload')
-    for name,expected in reference['source_bindings'].items():
-        verify_saved_source(name,expected,ROOT)
     cap=reference['result'];selected=reference['selection']
     R,f,alpha=cap['radius'],cap['wall']['f'],selected['alpha']
     q=math.sqrt(alpha/6)*f
@@ -107,7 +123,7 @@ def main():
                           common_data_match=True,finite_time_solution=False),
         scope='necessary common-data audit and quiet vacuum junction; no evolved nonzero scalar state',
         input={key:identity[key] for key in ('path','sha256','manifest_sha256','authenticated_input_files')},
-        cap_reference=dict(path=REFERENCE,sha256=hashlib.sha256(raw).hexdigest()),
+        cap_reference=dict(path=REFERENCE,sha256=hashlib.sha256(raw).hexdigest(),source_commit=REFERENCE_COMMIT),
         source_bindings={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES},
         execution=dict(charged_values=budget.evaluations,cpu_seconds=time.process_time()-budget.started,
                        terminal_comparisons=2,quiet_hybrid_calls=2,radial_solves=0,prefix_solves=0,time_steps=0),

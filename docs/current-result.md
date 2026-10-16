@@ -20,6 +20,14 @@ largest residual `9.32587e-15`. Its derived rates are `R_x=1.084575413`
 and `T_x=1.840737097`. The next common evolution starts there. No terminal
 data are overwritten and no new time trajectory or prediction is claimed.
 
+The instantaneous [fixed-cap hybrid adapter](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
+is implemented. It uses one common scalar value and derives cap clock,
+wall velocity and incoming field from the existing hybrid. Four controls
+pass with 375,431 charged values / 0.375 active CPU seconds, including
+independent energy and moving-field differences. It reports the actual
+scalar and physical temporal mass residuals. The actual exterior prefix
+and finite time interval are the next connection.
+
 ## Fixed-space mass-gradient implementation, 16 October 2026
 
 The [local mass adapter](nsc-atlas-finite-amplitude.md#metric-domain-for-fixed-local-total-fields)

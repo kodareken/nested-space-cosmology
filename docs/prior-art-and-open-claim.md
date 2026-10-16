@@ -1348,6 +1348,42 @@ value, incoming jets and gauge-rate checks; the largest residual is
 binds all inputs. The next finite window starts from this quiet event,
 using one common field value and explicit scalar/mass residuals.
 
+### One fixed-cap hybrid stage
+
+Connect the checked fixed-cap operator to the existing hybrid through one
+callback after the radial constraint solve. The callback receives immutable
+scalar wall data, constructs the common exterior value, obtains the exterior
+first jets and returns the hybrid's actual `T_x,R_x,w_plus`. These inputs
+are mutually exclusive with diagnostic prescribed rates. There is one
+radial solve and one exterior callback per stage; no circular rerun.
+
+Keep the fixed-coordinate boost law and derive the physical lapse rate
+from `K_plus`. Report the scalar tangent discrepancy, the rescaled temporal
+mass discrepancies against both actual and matched traces, and the physical
+mass factors including vacuum motion. Do not impose a second scalar value,
+replace strong traces, or claim that weak balance makes the connection exact.
+
+Implementation controls use one small fixed space, a quiet vacuum event and
+manufactured nonzero coefficients/outgoing jets. A shared **1,500,000-value /
+45-active-CPU-second** allowance covers callback/direct equivalence, common
+value and derivative identities, vacuum recovery, immutable inputs and
+invalid-port rejection. The existing alpha-zero energy control may run once
+as an independent regression within that allowance. No retained nonzero
+reference, preparation fit, time step or resolution scan is admitted here.
+Any failure is diagnosed before changing an assertion or repeating work.
+
+**Implementation outcome:** four controls pass once with **375,431 charged
+values / 0.375 active CPU seconds**. The zero-coupling energy oracle is
+included directly on the small fixed space; the older suite was not rerun.
+The nonzero control differentiates the moving scalar trace independently
+without another radial solve. It also checks the physical mass subtraction,
+the strong outgoing channel and the residual that remains when it differs
+from the weak mass pair. No assertions were loosened and no retry occurred.
+The original cap receipt's twelve producer hashes are now authenticated
+against their pinned `8f6c73c` Git bytes, so later adapter changes remain
+distinct from the earlier retained calculation. A hash-only check passes;
+the initial-event numerical audit was not repeated for this provenance edit.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
