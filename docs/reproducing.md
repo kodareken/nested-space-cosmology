@@ -8,6 +8,58 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The next cap representation carries an exact characteristic background and
+evolves departures. Run its 31 manufactured and independent radial controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_characteristic_background.py tests/test_nsc_atlas_background_cap.py -q
+```
+
+The profile suite has one 30-CPU-second/20,000-point allowance; the cap
+suite has 30 CPU seconds and 100,000 points for positive partial quadrature
+and an independent narrow-pulse order-4/8/16 comparison. The
+[owner](nsc-atlas-finite-amplitude.md#carrying-a-characteristic-background-and-evolving-its-correction)
+specifies the background's finite domain, centre limits and free incoming
+correction. These tests do not replay the prepared physical source.
+
+The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
+uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
+without replaying its source or time evolution. Its 25 controls exercise
+the exact incoming cap pullback, a closed polynomial prefix oracle,
+derivative/integration separation, changed-input rejection and the shared
+allowance:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_compatible_transport.py -q
+```
+
+Authenticate only the pinned input payload, manifest and its 51 source
+bindings, without reconstructing a scientific state:
+
+```sh
+python scripts/run_python.py -c "import sys; sys.path.insert(0, 'scripts'); import diagnose_nsc_atlas_compatible_transport as audit; print(audit.authenticate()[2])"
+```
+
+Reproduce the saved-state audit into a file that does not exist:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_compatible_transport.py --output .build/compatible-transport-audit-review.json
+```
+
+Omitting `--output` prints the JSON without saving it. Each invocation has
+one cumulative 30-process-CPU-second/100,000-point allowance, including
+the before/after input hash checks, two zero-amplitude cap pullbacks and
+four frozen finite-amplitude stages. Each stage reconstructs its cap once,
+then crosses two departure derivative rules with two prefix quadratures;
+it does not integrate a new trajectory. The
+[completed audit](../results/development/nsc-atlas-compatible-transport-audit-v1.json)
+uses 48,910 points and 0.859375 CPU seconds. Its input identity, audit
+source hashes, runtime and counts are saved in the JSON. The
+[outcome](current-result.md#compatible-transport-audit-16-october-2026)
+distinguishes cap-profile smearing and derivative sensitivity from
+quadrature sensitivity, without treating the postprocessed alternatives
+as evolved solutions or error bounds.
+
 The compatible successor evolves exact-vacuum geometric departures and
 conserved cap integrals. Its single common scalar wall value comes from
 the cap gradient primitive. Run its manufactured and analytic controls:

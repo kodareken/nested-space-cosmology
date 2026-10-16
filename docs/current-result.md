@@ -2,6 +2,51 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Compatible transport audit, 16 October 2026
+
+The [saved-state audit](../results/development/nsc-atlas-compatible-transport-audit-v1.json)
+separates cap propagation from exterior derivative and integration errors in
+the compatible window below. It uses **48,910 charged points and 0.859375
+process CPU seconds**, within 100,000 points and 30 seconds. It authenticates
+the fixed input payload, manifest and 51 source bindings, reconstructs four
+cap slices and evaluates 16 exterior prefixes. It performs no source
+integration, time evolution or recursive scientific validation.
+
+At zero amplitude the cap's exact incoming reduced field is
+$c(T,r)=F(T+\operatorname{atanh}r)$ on this pre-return domain. Here $F$ is
+interpolated from the saved wall trace, and its earlier extension is zero.
+The saved cap primitive differs from the linear-interpolated pullback by
+`0.561147` on 16 cells and `0.380945` on 32 cells. Both maxima occur at the
+final slice, at `r/R=0.75`. PCHIP gives `0.562137` and `0.381936`; the maximum
+linear-versus-PCHIP difference is only `0.00133205`. Thus exact primitive
+consistency and zero outgoing characteristic have not prevented substantial
+incoming-profile smearing. This is a comparison against the measured wall
+input; interpolation sensitivity is not an error enclosure.
+
+Four frozen exterior stages cross first- and second-order departure
+derivatives with trapezoidal and Simpson prefix integration. The physical
+state, original source/gauge and one cap reconstruction per cut stay fixed.
+The quiet cut remains at roundoff. The geometric wall compatibility defects
+are much more sensitive to departure derivatives than prefix integration.
+The derivative columns below retain prefix order 2:
+
+| Saved cut | Absolute radius defect, first to second derivatives | Absolute lapse defect, first to second derivatives | Change from prefix order 2 to 4 with first derivatives, radius / lapse |
+| --- | ---: | ---: | ---: |
+| `x=0.45030338`, near the interior `E_Ubar` maximum | `4.64142e-4` to `2.31601e-4` | `0.0181449` to `0.00805629` | `2.46563e-8` / `2.20221e-6` |
+| Final `x=0.48150421` | `3.25773e-4` to `1.41601e-4` | `0.00814595` to `0.00367161` | `3.10212e-8` / `1.01229e-6` |
+
+These results identify departure-gradient treatment as a concrete exterior
+correction to investigate while preserving exact vacuum subtraction. They
+do not validate a new evolution scheme: at the pulse cuts, second-order
+postprocessing increases the scalar wall mismatch, including `0.0878829`
+to `0.119238` at the first tabulated cut. Scalar longitudinal-jet sensitivity
+to quadrature reaches `1.32719e-4`; its cancellation in the scalar wall
+compatibility check does not establish transport accuracy. The next
+connection is accurate incoming cap transport together with a consistent
+exterior spatial derivative and wall treatment, followed by a coupled
+comparison. This audit neither changes the saved trajectory nor supplies
+a continuum or finite-amplitude error bound.
+
 ## Compatible coupled evolution, 16 October 2026
 
 The [compatible five-case result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)

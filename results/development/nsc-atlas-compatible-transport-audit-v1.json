@@ -1,0 +1,6224 @@
+{
+  "audit_source_bindings": {
+    "scripts/diagnose_nsc_atlas_compatible_transport.py": "05071cd1fbdec7a1c7a2c1697904478b3273e3bce42da77a3c4a74bc2b8799ac",
+    "tests/test_diagnose_nsc_atlas_compatible_transport.py": "6138ec2e0679bb7746d4f3477c2dae042d59e66bde6e112442eff8c39d723b34"
+  },
+  "cap_pullback": [
+    {
+      "cells": 16,
+      "interpretation": "saved zero wall trace pulled back with the exact de Sitter incoming characteristics; linear/PCHIP sensitivity is sampled, not a uniform interpolation bound",
+      "maxima": {
+        "interpolation_sensitivity": {
+          "absolute": 0.0013320502714297966,
+          "face": 13,
+          "q": 0.6436933526484957,
+          "r": 0.43816164563496973,
+          "signed": 0.0013320502714297966,
+          "snapshot": 116,
+          "x": 0.473863188733483,
+          "y": 0.8125
+        },
+        "linear": {
+          "absolute": 0.5611469619503946,
+          "face": 12,
+          "q": 0.6364673245553735,
+          "r": 0.41250000000000003,
+          "signed": -0.5611469619503946,
+          "snapshot": 128,
+          "x": 0.4815042082576364,
+          "y": 0.75
+        },
+        "pchip": {
+          "absolute": 0.5621373535307894,
+          "face": 12,
+          "q": 0.6364673245553735,
+          "r": 0.41250000000000003,
+          "signed": -0.5621373535307894,
+          "snapshot": 128,
+          "x": 0.4815042082576364,
+          "y": 0.75
+        }
+      },
+      "q_wall": [
+        0.48470027859405174,
+        0.816228529628696
+      ],
+      "reflected_branch_upper_label": 0.19784721605423244,
+      "rows": [
+        {
+          "R": 0.45,
+          "T": 0.0,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.48470027859405174,
+          "quiet_points": 16,
+          "snapshot": 0,
+          "x": 0.4
+        },
+        {
+          "R": 0.4506911225185555,
+          "T": 0.0011741650132000893,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4867413932216538,
+          "quiet_points": 16,
+          "snapshot": 1,
+          "x": 0.4006367516270128
+        },
+        {
+          "R": 0.4513832834738267,
+          "T": 0.002352493835349454,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4887886538218205,
+          "quiet_points": 16,
+          "snapshot": 2,
+          "x": 0.4012735032540256
+        },
+        {
+          "R": 0.452076488496743,
+          "T": 0.0035350143665916754,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.490842100550592,
+          "quiet_points": 16,
+          "snapshot": 3,
+          "x": 0.4019102548810384
+        },
+        {
+          "R": 0.4527707432923936,
+          "T": 0.0047217547797863664,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.49290177398353446,
+          "quiet_points": 16,
+          "snapshot": 4,
+          "x": 0.40254700650805114
+        },
+        {
+          "R": 0.45346605364098597,
+          "T": 0.005912743523797783,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4949677151210868,
+          "quiet_points": 16,
+          "snapshot": 5,
+          "x": 0.40318375813506396
+        },
+        {
+          "R": 0.4541624253988194,
+          "T": 0.007108009326833843,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.49703996539399453,
+          "quiet_points": 16,
+          "snapshot": 6,
+          "x": 0.40382050976207673
+        },
+        {
+          "R": 0.45485986449927523,
+          "T": 0.008307581199836997,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4991185666688325,
+          "quiet_points": 16,
+          "snapshot": 7,
+          "x": 0.4044572613890895
+        },
+        {
+          "R": 0.4555583769538238,
+          "T": 0.009511488439927867,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5012035612536182,
+          "quiet_points": 16,
+          "snapshot": 8,
+          "x": 0.4050940130161023
+        },
+        {
+          "R": 0.4562579688530484,
+          "T": 0.010719760633902845,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5032949919035182,
+          "quiet_points": 16,
+          "snapshot": 9,
+          "x": 0.4057307646431151
+        },
+        {
+          "R": 0.4569586463676902,
+          "T": 0.011932427661791976,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5053929018266582,
+          "quiet_points": 16,
+          "snapshot": 10,
+          "x": 0.40636751627012785
+        },
+        {
+          "R": 0.4576604157496943,
+          "T": 0.01314951970044534,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5074973346899825,
+          "quiet_points": 16,
+          "snapshot": 11,
+          "x": 0.40700426789714067
+        },
+        {
+          "R": 0.4583632833333058,
+          "T": 0.014371067227229915,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5096083346253041,
+          "quiet_points": 16,
+          "snapshot": 12,
+          "x": 0.40764101952415344
+        },
+        {
+          "R": 0.4590672555361502,
+          "T": 0.01559710102372689,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5117259462353553,
+          "quiet_points": 16,
+          "snapshot": 13,
+          "x": 0.4082777711511662
+        },
+        {
+          "R": 0.45977233886035274,
+          "T": 0.01682765217952199,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5138502145999996,
+          "quiet_points": 16,
+          "snapshot": 14,
+          "x": 0.408914522778179
+        },
+        {
+          "R": 0.4604785398936705,
+          "T": 0.018062752096045406,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5159811852825287,
+          "quiet_points": 16,
+          "snapshot": 15,
+          "x": 0.4095512744051918
+        },
+        {
+          "R": 0.4611858653106452,
+          "T": 0.01930243249047511,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5181189043360702,
+          "quiet_points": 16,
+          "snapshot": 16,
+          "x": 0.41018802603220456
+        },
+        {
+          "R": 0.4618943218737741,
+          "T": 0.020546725399699234,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5202634183100968,
+          "quiet_points": 16,
+          "snapshot": 17,
+          "x": 0.4108247776592174
+        },
+        {
+          "R": 0.462603916434703,
+          "T": 0.021795663184345778,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5224147742570527,
+          "quiet_points": 15,
+          "snapshot": 18,
+          "x": 0.41146152928623014
+        },
+        {
+          "R": 0.4633146559354381,
+          "T": 0.023049278532873682,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5245730197390863,
+          "quiet_points": 15,
+          "snapshot": 19,
+          "x": 0.4120982809132429
+        },
+        {
+          "R": 0.4640265474095803,
+          "T": 0.02430760446573286,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5267382028349032,
+          "quiet_points": 15,
+          "snapshot": 20,
+          "x": 0.41273503254025573
+        },
+        {
+          "R": 0.4647395979835799,
+          "T": 0.02557067433958896,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5289103721467311,
+          "quiet_points": 15,
+          "snapshot": 21,
+          "x": 0.4133717841672685
+        },
+        {
+          "R": 0.46545381487801357,
+          "T": 0.02683852185161896,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5310895768074084,
+          "quiet_points": 15,
+          "snapshot": 22,
+          "x": 0.41400853579428126
+        },
+        {
+          "R": 0.4661692054088821,
+          "T": 0.02811118104387243,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5332758664875872,
+          "quiet_points": 15,
+          "snapshot": 23,
+          "x": 0.4146452874212941
+        },
+        {
+          "R": 0.4668857769889328,
+          "T": 0.02938868630770857,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5354692914030675,
+          "quiet_points": 15,
+          "snapshot": 24,
+          "x": 0.41528203904830685
+        },
+        {
+          "R": 0.4676035371290035,
+          "T": 0.030671072388303224,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5376699023222561,
+          "quiet_points": 15,
+          "snapshot": 25,
+          "x": 0.4159187906753196
+        },
+        {
+          "R": 0.4683224934393915,
+          "T": 0.03195837438923178,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5398777505737532,
+          "quiet_points": 15,
+          "snapshot": 26,
+          "x": 0.4165555423023324
+        },
+        {
+          "R": 0.4690426536312439,
+          "T": 0.033250627777123475,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5420928880540696,
+          "quiet_points": 15,
+          "snapshot": 27,
+          "x": 0.4171922939293452
+        },
+        {
+          "R": 0.46976402551797575,
+          "T": 0.034547868386397805,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5443153672354831,
+          "quiet_points": 15,
+          "snapshot": 28,
+          "x": 0.41782904555635797
+        },
+        {
+          "R": 0.4704866170167099,
+          "T": 0.03585013242407485,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5465452411740261,
+          "quiet_points": 15,
+          "snapshot": 29,
+          "x": 0.41846579718337074
+        },
+        {
+          "R": 0.47121043614974495,
+          "T": 0.03715745647466881,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5487825635176189,
+          "quiet_points": 15,
+          "snapshot": 30,
+          "x": 0.41910254881038356
+        },
+        {
+          "R": 0.4719354910460472,
+          "T": 0.03846987750516076,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5510273885143414,
+          "quiet_points": 15,
+          "snapshot": 31,
+          "x": 0.4197393004373963
+        },
+        {
+          "R": 0.47266178994277,
+          "T": 0.03978743287005554,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5532797710208539,
+          "quiet_points": 15,
+          "snapshot": 32,
+          "x": 0.4203760520644091
+        },
+        {
+          "R": 0.47338934118680087,
+          "T": 0.041110160316525125,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5555397665109665,
+          "quiet_points": 15,
+          "snapshot": 33,
+          "x": 0.4210128036914219
+        },
+        {
+          "R": 0.4741181532363333,
+          "T": 0.042438097989633654,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5578074310843569,
+          "quiet_points": 15,
+          "snapshot": 34,
+          "x": 0.4216495553184347
+        },
+        {
+          "R": 0.4748482346624701,
+          "T": 0.04377128443765652,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5600828214754496,
+          "quiet_points": 14,
+          "snapshot": 35,
+          "x": 0.42228630694544744
+        },
+        {
+          "R": 0.4755795941508535,
+          "T": 0.0451097586174858,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5623659950624484,
+          "quiet_points": 14,
+          "snapshot": 36,
+          "x": 0.42292305857246026
+        },
+        {
+          "R": 0.47631224050332455,
+          "T": 0.04645355990012883,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 2.427567962503061e-07,
+            "rms": 5.887788114741206e-08
+          },
+          "pchip": {
+            "maximum_absolute": 2.427567962503061e-07,
+            "rms": 5.887788114741206e-08
+          },
+          "q_wall": 0.5646570098765342,
+          "quiet_points": 14,
+          "snapshot": 37,
+          "x": 0.42355981019947303
+        },
+        {
+          "R": 0.4770461826396126,
+          "T": 0.047802728076299636,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 4.272474725382018e-06,
+            "rms": 1.0362797389110141e-06
+          },
+          "pchip": {
+            "maximum_absolute": 4.272474725382018e-06,
+            "rms": 1.0362797389110141e-06
+          },
+          "q_wall": 0.5669559246112251,
+          "quiet_points": 14,
+          "snapshot": 38,
+          "x": 0.4241965618264858
+        },
+        {
+          "R": 0.47778142959905623,
+          "T": 0.04915730336210845,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 2.4740628899093234e-05,
+            "rms": 6.00120254515865e-06
+          },
+          "pchip": {
+            "maximum_absolute": 2.4740628899093234e-05,
+            "rms": 6.00120254515865e-06
+          },
+          "q_wall": 0.5692627986319108,
+          "quiet_points": 14,
+          "snapshot": 39,
+          "x": 0.4248333134534986
+        },
+        {
+          "R": 0.47851799054235294,
+          "T": 0.050517326404844944,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 8.803851852350639e-05,
+            "rms": 2.135714929724985e-05
+          },
+          "pchip": {
+            "maximum_absolute": 8.803851852350639e-05,
+            "rms": 2.135714929724985e-05
+          },
+          "q_wall": 0.5715776919855514,
+          "quiet_points": 14,
+          "snapshot": 40,
+          "x": 0.4254700650805114
+        },
+        {
+          "R": 0.4792558747533429,
+          "T": 0.05188283828886462,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.00023723427689216034,
+            "rms": 5.755780641409328e-05
+          },
+          "pchip": {
+            "maximum_absolute": 0.00023723427689216034,
+            "rms": 5.755780641409328e-05
+          },
+          "q_wall": 0.57390066541056,
+          "quiet_points": 14,
+          "snapshot": 41,
+          "x": 0.42610681670752415
+        },
+        {
+          "R": 0.4799950916408233,
+          "T": 0.0532538805415741,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0005335156903181552,
+            "rms": 0.00012946249760117408
+          },
+          "pchip": {
+            "maximum_absolute": 0.0005335156903181552,
+            "rms": 0.00012946249760117408
+          },
+          "q_wall": 0.5762317803468594,
+          "quiet_points": 14,
+          "snapshot": 42,
+          "x": 0.42674356833453697
+        },
+        {
+          "R": 0.48073565074039726,
+          "T": 0.054630495139523026,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0010563344093152474,
+            "rms": 0.00025637909815727657
+          },
+          "pchip": {
+            "maximum_absolute": 0.0010563344093152474,
+            "rms": 0.00025637909815727657
+          },
+          "q_wall": 0.5785710989461282,
+          "quiet_points": 14,
+          "snapshot": 43,
+          "x": 0.42738031996154974
+        },
+        {
+          "R": 0.4814775617163553,
+          "T": 0.05601272451459978,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0019024399843354121,
+            "rms": 0.0004618402075680477
+          },
+          "pchip": {
+            "maximum_absolute": 0.0019024399843354121,
+            "rms": 0.0004618402075680477
+          },
+          "q_wall": 0.5809186840822306,
+          "quiet_points": 14,
+          "snapshot": 44,
+          "x": 0.4280170715885625
+        },
+        {
+          "R": 0.48222083436359203,
+          "T": 0.057400611560336406,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.003183984520355292,
+            "rms": 0.0007731563933364142
+          },
+          "pchip": {
+            "maximum_absolute": 0.003183984520355292,
+            "rms": 0.0007731563933364142
+          },
+          "q_wall": 0.5832745993618397,
+          "quiet_points": 14,
+          "snapshot": 45,
+          "x": 0.4286538232155753
+        },
+        {
+          "R": 0.4829654786095569,
+          "T": 0.058794199638322546,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.005025870636108812,
+            "rms": 0.0012207882390078606
+          },
+          "pchip": {
+            "maximum_absolute": 0.005025870636108812,
+            "rms": 0.0012207882390078606
+          },
+          "q_wall": 0.5856389091352562,
+          "quiet_points": 14,
+          "snapshot": 46,
+          "x": 0.4292905748425881
+        },
+        {
+          "R": 0.48371150451624156,
+          "T": 0.06019353258473309,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.007562506853422155,
+            "rms": 0.0018375767583103414
+          },
+          "pchip": {
+            "maximum_absolute": 0.007562506853422155,
+            "rms": 0.0018375767583103414
+          },
+          "q_wall": 0.5880116785074267,
+          "quiet_points": 14,
+          "snapshot": 47,
+          "x": 0.42992732646960086
+        },
+        {
+          "R": 0.4844589222822046,
+          "T": 0.0615986547169725,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.010934125550733458,
+            "rms": 0.0026578694797381084
+          },
+          "pchip": {
+            "maximum_absolute": 0.010934125550733458,
+            "rms": 0.0026578694797381084
+          },
+          "q_wall": 0.5903929733491717,
+          "quiet_points": 14,
+          "snapshot": 48,
+          "x": 0.4305640780966137
+        },
+        {
+          "R": 0.4852077422446316,
+          "T": 0.06300961084043272,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.015282809215580602,
+            "rms": 0.0037165771667329916
+          },
+          "pchip": {
+            "maximum_absolute": 0.015282809215580602,
+            "rms": 0.0037165771667329916
+          },
+          "q_wall": 0.5927828603086149,
+          "quiet_points": 14,
+          "snapshot": 49,
+          "x": 0.43120082972362644
+        },
+        {
+          "R": 0.4859579748814358,
+          "T": 0.0644264462553758,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.020748360949076707,
+            "rms": 0.005048193723308247
+          },
+          "pchip": {
+            "maximum_absolute": 0.020748360949076707,
+            "rms": 0.005048193723308247
+          },
+          "q_wall": 0.5951814068228345,
+          "quiet_points": 14,
+          "snapshot": 50,
+          "x": 0.4318375813506392
+        },
+        {
+          "R": 0.48670963081339574,
+          "T": 0.06584920676393533,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.027464145039070954,
+            "rms": 0.0066858093494766594
+          },
+          "pchip": {
+            "maximum_absolute": 0.027464145039070954,
+            "rms": 0.0066858093494766594
+          },
+          "q_wall": 0.5975886811297276,
+          "quiet_points": 14,
+          "snapshot": 51,
+          "x": 0.43247433297765203
+        },
+        {
+          "R": 0.48746272080633357,
+          "T": 0.06727793867724424,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 1.1559208445337836e-07,
+            "rms": 2.8035198452152708e-08
+          },
+          "linear": {
+            "maximum_absolute": 0.03555284451744055,
+            "rms": 0.008660103784596085
+          },
+          "pchip": {
+            "maximum_absolute": 0.035552960109525,
+            "rms": 0.008660131699133596
+          },
+          "q_wall": 0.6000047522800989,
+          "quiet_points": 13,
+          "snapshot": 52,
+          "x": 0.4331110846046648
+        },
+        {
+          "R": 0.4882172557733346,
+          "T": 0.06871268882269262,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 8.26574671783808e-06,
+            "rms": 2.0047380466028763e-06
+          },
+          "linear": {
+            "maximum_absolute": 0.04510922584749822,
+            "rms": 0.010995203939440316
+          },
+          "pchip": {
+            "maximum_absolute": 0.04511749159421606,
+            "rms": 0.010997198722406218
+          },
+          "q_wall": 0.6024296901499825,
+          "quiet_points": 13,
+          "snapshot": 53,
+          "x": 0.43374783623167756
+        },
+        {
+          "R": 0.4889732467770065,
+          "T": 0.07015350455131167,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 4.4160499303676676e-05,
+            "rms": 1.071049430053377e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.05612275980225464,
+            "rms": 0.013690051644634696
+          },
+          "pchip": {
+            "maximum_absolute": 0.056166920301558315,
+            "rms": 0.013700700941486947
+          },
+          "q_wall": 0.60486356545319,
+          "quiet_points": 13,
+          "snapshot": 54,
+          "x": 0.4343845878586904
+        },
+        {
+          "R": 0.48973070503178295,
+          "T": 0.07160043374529546,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00010180560555662509,
+            "rms": 2.469148617587844e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.06837541734442888,
+            "rms": 0.016693885335056464
+          },
+          "pchip": {
+            "maximum_absolute": 0.06847722294998551,
+            "rms": 0.016718413755985314
+          },
+          "q_wall": 0.6073064497541035,
+          "quiet_points": 13,
+          "snapshot": 55,
+          "x": 0.43502133948570315
+        },
+        {
+          "R": 0.4904896419062698,
+          "T": 0.07305352482565744,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00017188713145285133,
+            "rms": 4.168875286261963e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.08144982852813845,
+            "rms": 0.019908479576680124
+          },
+          "pchip": {
+            "maximum_absolute": 0.0816217156595913,
+            "rms": 0.019949846533227414
+          },
+          "q_wall": 0.6097584154807113,
+          "quiet_points": 13,
+          "snapshot": 56,
+          "x": 0.4356580911127159
+        },
+        {
+          "R": 0.49125006892563544,
+          "T": 0.07451282676002632,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00024840989880001163,
+            "rms": 6.024825007067304e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.09478872221726294,
+            "rms": 0.02320285566508189
+          },
+          "pchip": {
+            "maximum_absolute": 0.09503713211606295,
+            "rms": 0.02326255171440742
+          },
+          "q_wall": 0.6122195359378935,
+          "quiet_points": 13,
+          "snapshot": 57,
+          "x": 0.43629484273972874
+        },
+        {
+          "R": 0.4920119977740457,
+          "T": 0.07597838907058313,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00032584570031124645,
+            "rms": 7.902919059038979e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.10774912937276314,
+            "rms": 0.026426865912720473
+          },
+          "pchip": {
+            "maximum_absolute": 0.10807497507307438,
+            "rms": 0.026505018914214345
+          },
+          "q_wall": 0.6146898853209601,
+          "quiet_points": 13,
+          "snapshot": 58,
+          "x": 0.4369315943667415
+        },
+        {
+          "R": 0.49277544029714604,
+          "T": 0.07745026184214557,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00039910373515307865,
+            "rms": 9.679687385968703e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.11964949264877123,
+            "rms": 0.029423281749243847
+          },
+          "pchip": {
+            "maximum_absolute": 0.12004859638392432,
+            "rms": 0.029518753813429475
+          },
+          "q_wall": 0.6171695387294553,
+          "quiet_points": 13,
+          "snapshot": 59,
+          "x": 0.43756834599375427
+        },
+        {
+          "R": 0.49354040850459047,
+          "T": 0.07892849573040062,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000463699196381253,
+            "rms": 0.0001124635744231725
+          },
+          "linear": {
+            "maximum_absolute": 0.1298100505250026,
+            "rms": 0.03203859672418169
+          },
+          "pchip": {
+            "maximum_absolute": 0.13027374972138386,
+            "rms": 0.032149118742012844
+          },
+          "q_wall": 0.6196585721812267,
+          "quiet_points": 13,
+          "snapshot": 60,
+          "x": 0.4382050976207671
+        },
+        {
+          "R": 0.49430691457261866,
+          "T": 0.08041314197028902,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005158851689623795,
+            "rms": 0.00012512053190126494
+          },
+          "linear": {
+            "maximum_absolute": 0.13758686593215172,
+            "rms": 0.0341328395230354
+          },
+          "pchip": {
+            "maximum_absolute": 0.13810275110111409,
+            "rms": 0.0342551727833178
+          },
+          "q_wall": 0.6221570626267684,
+          "quiet_points": 13,
+          "snapshot": 61,
+          "x": 0.43884184924777986
+        },
+        {
+          "R": 0.4950749708466818,
+          "T": 0.08190425238454403,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005527434360940026,
+            "rms": 0.00013405997475778928
+          },
+          "linear": {
+            "maximum_absolute": 0.14239987053517497,
+            "rms": 0.03558884284241561
+          },
+          "pchip": {
+            "maximum_absolute": 0.14295261397126896,
+            "rms": 0.03571895542692466
+          },
+          "q_wall": 0.6246650879638421,
+          "quiet_points": 13,
+          "snapshot": 62,
+          "x": 0.4394786008747926
+        },
+        {
+          "R": 0.49584458984412016,
+          "T": 0.08340187939239209,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005722392960213624,
+            "rms": 0.0001387884153308923
+          },
+          "linear": {
+            "maximum_absolute": 0.14375529652465496,
+            "rms": 0.03632168623354239
+          },
+          "pchip": {
+            "maximum_absolute": 0.1443275358206763,
+            "rms": 0.03645493225855686
+          },
+          "q_wall": 0.6271827270523911,
+          "quiet_points": 13,
+          "snapshot": 63,
+          "x": 0.44011535250180545
+        },
+        {
+          "R": 0.49661578425689035,
+          "T": 0.08490607601841187,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005732439700131542,
+            "rms": 0.00013903208456544927
+          },
+          "linear": {
+            "maximum_absolute": 0.1412628679279878,
+            "rms": 0.03628952647511457
+          },
+          "pchip": {
+            "maximum_absolute": 0.14183611189800097,
+            "rms": 0.03642081678792955
+          },
+          "q_wall": 0.6297100597297365,
+          "quiet_points": 13,
+          "snapshot": 64,
+          "x": 0.4407521041288182
+        },
+        {
+          "R": 0.4973885669543458,
+          "T": 0.08641689590156144,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005555272805642941,
+            "rms": 0.00013473515621639537
+          },
+          "linear": {
+            "maximum_absolute": 0.13464812308884352,
+            "rms": 0.03550791222940764
+          },
+          "pchip": {
+            "maximum_absolute": 0.13520365036940782,
+            "rms": 0.035631868705859285
+          },
+          "q_wall": 0.6322471668260825,
+          "quiet_points": 13,
+          "snapshot": 65,
+          "x": 0.441388855755831
+        },
+        {
+          "R": 0.498162950986072,
+          "T": 0.08793439330437663,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000519723006766587,
+            "rms": 0.0001260513442918965
+          },
+          "linear": {
+            "maximum_absolute": 0.12376023907612532,
+            "rms": 0.03407110741290575
+          },
+          "pchip": {
+            "maximum_absolute": 0.12427996208289191,
+            "rms": 0.034182209274412366
+          },
+          "q_wall": 0.6347941301803253,
+          "quiet_points": 13,
+          "snapshot": 66,
+          "x": 0.4420256073828438
+        },
+        {
+          "R": 0.49893894958477497,
+          "T": 0.08945862312234014,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004672693369604797,
+            "rms": 0.00011332946070002283
+          },
+          "linear": {
+            "maximum_absolute": 0.10857572737374596,
+            "rms": 0.03218548882388625
+          },
+          "pchip": {
+            "maximum_absolute": 0.10904299671070644,
+            "rms": 0.03227827834634101
+          },
+          "q_wall": 0.6373510326561754,
+          "quiet_points": 13,
+          "snapshot": 67,
+          "x": 0.44266235900985657
+        },
+        {
+          "R": 0.49971657616922666,
+          "T": 0.09098964089342948,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00040032697036640474,
+            "rms": 9.709355197671752e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.08919836827162947,
+            "rms": 0.030218050921072534
+          },
+          "pchip": {
+            "maximum_absolute": 0.08959869524199587,
+            "rms": 0.030287638239068736
+          },
+          "q_wall": 0.6399179581586012,
+          "quiet_points": 12,
+          "snapshot": 68,
+          "x": 0.44329911063686933
+        },
+        {
+          "R": 0.5004958443472686,
+          "T": 0.0925275028078486,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00032167759807505414,
+            "rms": 7.801827780179614e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.09686343932378431,
+            "rms": 0.028742787956125407
+          },
+          "pchip": {
+            "maximum_absolute": 0.09686347546730299,
+            "rms": 0.028786222938456823
+          },
+          "q_wall": 0.6424949916506061,
+          "quiet_points": 12,
+          "snapshot": 69,
+          "x": 0.44393586226388215
+        },
+        {
+          "R": 0.5012767679188718,
+          "T": 0.09407226571794047,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00023460568808225668,
+            "rms": 5.6900655623438956e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.10883303602649098,
+            "rms": 0.028496160160352283
+          },
+          "pchip": {
+            "maximum_absolute": 0.10883393574637139,
+            "rms": 0.028515247989093738
+          },
+          "q_wall": 0.6450822191703336,
+          "quiet_points": 12,
+          "snapshot": 70,
+          "x": 0.4445726138908949
+        },
+        {
+          "R": 0.502059360879259,
+          "T": 0.0956239871482942,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0001427666948842221,
+            "rms": 3.466705898326721e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.1216331237101271,
+            "rms": 0.030174926181743247
+          },
+          "pchip": {
+            "maximum_absolute": 0.12164007751967108,
+            "rms": 0.030179033065317978
+          },
+          "q_wall": 0.6476797278485267,
+          "quiet_points": 12,
+          "snapshot": 71,
+          "x": 0.4452093655179077
+        },
+        {
+          "R": 0.5028436374220869,
+          "T": 0.0971827253060445,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 5.0045004812759863e-05,
+            "rms": 1.6084355743601468e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.13606397909296772,
+            "rms": 0.0342202606232682
+          },
+          "pchip": {
+            "maximum_absolute": 0.13610749355019708,
+            "rms": 0.034228374621675155
+          },
+          "q_wall": 0.6502876059263348,
+          "quiet_points": 12,
+          "snapshot": 72,
+          "x": 0.4458461171449205
+        },
+        {
+          "R": 0.5036296119426918,
+          "T": 0.09874853909137041,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00010197267321902142,
+            "rms": 2.6530982075359984e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.15159914940933508,
+            "rms": 0.04024907039116196
+          },
+          "pchip": {
+            "maximum_absolute": 0.1517011220825541,
+            "rms": 0.04027507087946888
+          },
+          "q_wall": 0.6529059427734841,
+          "quiet_points": 12,
+          "snapshot": 73,
+          "x": 0.4464828687719333
+        },
+        {
+          "R": 0.5044172990413982,
+          "T": 0.10032148810819687,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00017772394847060183,
+            "rms": 5.2318807884000085e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.16739284534313675,
+            "rms": 0.04760384107114904
+          },
+          "pchip": {
+            "maximum_absolute": 0.16757056929160738,
+            "rms": 0.04765497986396701
+          },
+          "q_wall": 0.655534828906818,
+          "quiet_points": 12,
+          "snapshot": 74,
+          "x": 0.44711962039894604
+        },
+        {
+          "R": 0.5052067135268955,
+          "T": 0.10190163267510902,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0002638774790803093,
+            "rms": 7.947496828645317e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.18183072763487343,
+            "rms": 0.055540598409410634
+          },
+          "pchip": {
+            "maximum_absolute": 0.18209460511395373,
+            "rms": 0.05561861095374274
+          },
+          "q_wall": 0.6581743560092221,
+          "quiet_points": 12,
+          "snapshot": 75,
+          "x": 0.44775637202595886
+        },
+        {
+          "R": 0.5059978704196774,
+          "T": 0.10348903383647014,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003523606331668379,
+            "rms": 0.00010511685646437262
+          },
+          "linear": {
+            "maximum_absolute": 0.19293548998894436,
+            "rms": 0.06339499625369063
+          },
+          "pchip": {
+            "maximum_absolute": 0.1932878506221112,
+            "rms": 0.06349767394763987
+          },
+          "q_wall": 0.660824616948924,
+          "quiet_points": 12,
+          "snapshot": 76,
+          "x": 0.4483931236529716
+        },
+        {
+          "R": 0.5067907849555542,
+          "T": 0.10508375337376819,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00043489109691782074,
+            "rms": 0.0001272761023225038
+          },
+          "linear": {
+            "maximum_absolute": 0.20512303822380873,
+            "rms": 0.07083035276118152
+          },
+          "pchip": {
+            "maximum_absolute": 0.20541673234973323,
+            "rms": 0.07095258634884608
+          },
+          "q_wall": 0.663485705799208,
+          "quiet_points": 12,
+          "snapshot": 77,
+          "x": 0.4490298752799844
+        },
+        {
+          "R": 0.5075854725892327,
+          "T": 0.10668585381717896,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005037908510367312,
+            "rms": 0.00014425043217101754
+          },
+          "linear": {
+            "maximum_absolute": 0.23944768489649948,
+            "rms": 0.07759626979433783
+          },
+          "pchip": {
+            "maximum_absolute": 0.23976380822764987,
+            "rms": 0.07773083403268191
+          },
+          "q_wall": 0.6661577178585256,
+          "quiet_points": 12,
+          "snapshot": 78,
+          "x": 0.4496666269069972
+        },
+        {
+          "R": 0.5083819489979692,
+          "T": 0.10829539845736195,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005526363081695268,
+            "rms": 0.00015466482896626656
+          },
+          "linear": {
+            "maximum_absolute": 0.27125717779162395,
+            "rms": 0.08352481913503539
+          },
+          "pchip": {
+            "maximum_absolute": 0.2715753816088835,
+            "rms": 0.08366305107451641
+          },
+          "q_wall": 0.6688407496710325,
+          "quiet_points": 12,
+          "snapshot": 79,
+          "x": 0.45030337853401
+        },
+        {
+          "R": 0.5091802300852942,
+          "T": 0.10991245135748669,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005767472617825703,
+            "rms": 0.0001575933348183777
+          },
+          "linear": {
+            "maximum_absolute": 0.2997855790782856,
+            "rms": 0.0884851034185026
+          },
+          "pchip": {
+            "maximum_absolute": 0.30008485955220987,
+            "rms": 0.08861766928005685
+          },
+          "q_wall": 0.6715348990475456,
+          "quiet_points": 12,
+          "snapshot": 80,
+          "x": 0.45094013016102275
+        },
+        {
+          "R": 0.5099803319848141,
+          "T": 0.11153707736550152,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005735209730682866,
+            "rms": 0.00015267202602382122
+          },
+          "linear": {
+            "maximum_absolute": 0.3243211202572873,
+            "rms": 0.09239941236840855
+          },
+          "pchip": {
+            "maximum_absolute": 0.32458058586476646,
+            "rms": 0.09251706412086862
+          },
+          "q_wall": 0.6742402650869456,
+          "quiet_points": 12,
+          "snapshot": 81,
+          "x": 0.45157688178803557
+        },
+        {
+          "R": 0.510782271064088,
+          "T": 0.11316934212664698,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005426198853067665,
+            "rms": 0.00014020772975767665
+          },
+          "linear": {
+            "maximum_absolute": 0.3442228491090542,
+            "rms": 0.09525454970074528
+          },
+          "pchip": {
+            "maximum_absolute": 0.34442223112252157,
+            "rms": 0.09534882702164961
+          },
+          "q_wall": 0.6769569481980261,
+          "quiet_points": 12,
+          "snapshot": 82,
+          "x": 0.45221363341504833
+        },
+        {
+          "R": 0.5115860639285846,
+          "T": 0.11480931209622026,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00048602310974507623,
+            "rms": 0.00012134266243069358
+          },
+          "linear": {
+            "maximum_absolute": 0.35893611939972503,
+            "rms": 0.09710650335392972
+          },
+          "pchip": {
+            "maximum_absolute": 0.35905482174229586,
+            "rms": 0.09717011133149289
+          },
+          "q_wall": 0.6796850501218054,
+          "quiet_points": 12,
+          "snapshot": 83,
+          "x": 0.4528503850420611
+        },
+        {
+          "R": 0.5123917274257179,
+          "T": 0.11645705455259694,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00040795331751508623,
+            "rms": 9.894321351985721e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.36800458562066884,
+            "rms": 0.09808470583486537
+          },
+          "pchip": {
+            "maximum_absolute": 0.36800463312064957,
+            "rms": 0.0981082861557743
+          },
+          "q_wall": 0.682424673954308,
+          "quiet_points": 12,
+          "snapshot": 84,
+          "x": 0.4534871366690739
+        },
+        {
+          "R": 0.5131992786489666,
+          "T": 0.1181126376105179,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00031469214506907317,
+            "rms": 8.834183694411913e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.37089694593571887,
+            "rms": 0.09835187620496022
+          },
+          "pchip": {
+            "maximum_absolute": 0.3710803624402572,
+            "rms": 0.09840370190791946
+          },
+          "q_wall": 0.6851759241698356,
+          "quiet_points": 11,
+          "snapshot": 85,
+          "x": 0.4541238882960867
+        },
+        {
+          "R": 0.514008734942077,
+          "T": 0.1197761302346445,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0002396842461651616,
+            "rms": 7.797931742597363e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.36759680794031724,
+            "rms": 0.09819874777965258
+          },
+          "pchip": {
+            "maximum_absolute": 0.3678364921864824,
+            "rms": 0.09825390255633908
+          },
+          "q_wall": 0.6879389066447303,
+          "quiet_points": 11,
+          "snapshot": 86,
+          "x": 0.45476063992309945
+        },
+        {
+          "R": 0.5148201139033518,
+          "T": 0.12144760225339193,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003028652521626096,
+            "rms": 7.88613814145824e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.35804513548429684,
+            "rms": 0.09789661355646141
+          },
+          "pchip": {
+            "maximum_absolute": 0.35834800073645945,
+            "rms": 0.09796228148274759
+          },
+          "q_wall": 0.6907137286816498,
+          "quiet_points": 11,
+          "snapshot": 87,
+          "x": 0.4553973915501123
+        },
+        {
+          "R": 0.5156334333900281,
+          "T": 0.12312712437304557,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003531403183278936,
+            "rms": 8.833488142465176e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.3423205965070506,
+            "rms": 0.09772932132951402
+          },
+          "pchip": {
+            "maximum_absolute": 0.3426737368253785,
+            "rms": 0.0978104149995959
+          },
+          "q_wall": 0.6935004990343643,
+          "quiet_points": 11,
+          "snapshot": 88,
+          "x": 0.45603414317712504
+        },
+        {
+          "R": 0.5164487115227446,
+          "T": 0.12481476819216845,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00038464188938602817,
+            "rms": 0.0001024171128612075
+          },
+          "linear": {
+            "maximum_absolute": 0.32064090410013546,
+            "rms": 0.09796085337368717
+          },
+          "pchip": {
+            "maximum_absolute": 0.3210255459895215,
+            "rms": 0.0980582902260377
+          },
+          "q_wall": 0.6962993279330897,
+          "quiet_points": 11,
+          "snapshot": 89,
+          "x": 0.4566708948041378
+        },
+        {
+          "R": 0.5172659666901013,
+          "T": 0.12651060621630428,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003943906169395772,
+            "rms": 0.00011723757170207701
+          },
+          "linear": {
+            "maximum_absolute": 0.2933623900999274,
+            "rms": 0.09878761507779896
+          },
+          "pchip": {
+            "maximum_absolute": 0.29375678071686695,
+            "rms": 0.0988973946209597
+          },
+          "q_wall": 0.6991103271103668,
+          "quiet_points": 11,
+          "snapshot": 90,
+          "x": 0.4573076464311506
+        },
+        {
+          "R": 0.5180852175533153,
+          "T": 0.12821471187299127,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003808939786618115,
+            "rms": 0.00012990000356407488
+          },
+          "linear": {
+            "maximum_absolute": 0.26097650768119507,
+            "rms": 0.10031728656401372
+          },
+          "pchip": {
+            "maximum_absolute": 0.2613574016598569,
+            "rms": 0.10042931377244077
+          },
+          "q_wall": 0.7019336098275137,
+          "quiet_points": 11,
+          "snapshot": 91,
+          "x": 0.4579443980581634
+        },
+        {
+          "R": 0.5189064830509712,
+          "T": 0.12992715952708211,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004593356048905664,
+            "rms": 0.0001393958216762744
+          },
+          "linear": {
+            "maximum_absolute": 0.2660939698016469,
+            "rms": 0.10254577863057314
+          },
+          "pchip": {
+            "maximum_absolute": 0.2661266114551274,
+            "rms": 0.10265438141436699
+          },
+          "q_wall": 0.7047692909016448,
+          "quiet_points": 11,
+          "snapshot": 92,
+          "x": 0.45858114968517616
+        },
+        {
+          "R": 0.5197297824038726,
+          "T": 0.13164802449638932,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005144466585943128,
+            "rms": 0.00014651206213864997
+          },
+          "linear": {
+            "maximum_absolute": 0.3101775939157942,
+            "rms": 0.10536244332369185
+          },
+          "pchip": {
+            "maximum_absolute": 0.3103168153805132,
+            "rms": 0.10548001328918283
+          },
+          "q_wall": 0.707617486733291,
+          "quiet_points": 11,
+          "snapshot": 93,
+          "x": 0.459217901312189
+        },
+        {
+          "R": 0.5205551351199936,
+          "T": 0.13337738306765765,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000530012327147722,
+            "rms": 0.00015254497541293262
+          },
+          "linear": {
+            "maximum_absolute": 0.350611916269875,
+            "rms": 0.10861434479617116
+          },
+          "pchip": {
+            "maximum_absolute": 0.3508818892737442,
+            "rms": 0.1087434881078623
+          },
+          "q_wall": 0.7104783153346264,
+          "quiet_points": 11,
+          "snapshot": 94,
+          "x": 0.45985465293920175
+        },
+        {
+          "R": 0.5213825609995357,
+          "T": 0.13511531251287406,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005007334974955202,
+            "rms": 0.00015961519341749686
+          },
+          "linear": {
+            "maximum_absolute": 0.3864593452669014,
+            "rms": 0.11210040675707594
+          },
+          "pchip": {
+            "maximum_absolute": 0.38687273557408697,
+            "rms": 0.11224344739235537
+          },
+          "q_wall": 0.7133518963583201,
+          "quiet_points": 11,
+          "snapshot": 95,
+          "x": 0.4604914045662145
+        },
+        {
+          "R": 0.52221208014009,
+          "T": 0.1368618911059238,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005584241653628919,
+            "rms": 0.0001704539541393698
+          },
+          "linear": {
+            "maximum_absolute": 0.4168629782106148,
+            "rms": 0.11561214860056551
+          },
+          "pchip": {
+            "maximum_absolute": 0.4174214023759777,
+            "rms": 0.11577112810911765
+          },
+          "q_wall": 0.7162383511270296,
+          "quiet_points": 11,
+          "snapshot": 96,
+          "x": 0.46112815619322733
+        },
+        {
+          "R": 0.52304371294191,
+          "T": 0.13861719813960227,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0006964837793247414,
+            "rms": 0.00018762918140209243
+          },
+          "linear": {
+            "maximum_absolute": 0.44106796407660753,
+            "rms": 0.11895908505917197
+          },
+          "pchip": {
+            "maximum_absolute": 0.4417644478559323,
+            "rms": 0.1191362135619778
+          },
+          "q_wall": 0.7191378026635549,
+          "quiet_points": 11,
+          "snapshot": 97,
+          "x": 0.4617649078202401
+        },
+        {
+          "R": 0.5238774801132937,
+          "T": 0.14038131394298686,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008301656109129807,
+            "rms": 0.0002140345051473402
+          },
+          "linear": {
+            "maximum_absolute": 0.45844083262177937,
+            "rms": 0.12198742995039272
+          },
+          "pchip": {
+            "maximum_absolute": 0.45927099823269235,
+            "rms": 0.12218728600940858
+          },
+          "q_wall": 0.7220503757216616,
+          "quiet_points": 11,
+          "snapshot": 98,
+          "x": 0.46240165944725287
+        },
+        {
+          "R": 0.5247134026760825,
+          "T": 0.14215431989918592,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0010966356347787976,
+            "rms": 0.0002801802163205836
+          },
+          "linear": {
+            "maximum_absolute": 0.46848853181807804,
+            "rms": 0.12459311656529407
+          },
+          "pchip": {
+            "maximum_absolute": 0.46958516745285683,
+            "rms": 0.12485171384604597
+          },
+          "q_wall": 0.7249761968176057,
+          "quiet_points": 11,
+          "snapshot": 99,
+          "x": 0.4630384110742657
+        },
+        {
+          "R": 0.5255515019712764,
+          "T": 0.1439362984634703,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004721704078882172,
+            "rms": 0.00011790564213323821
+          },
+          "linear": {
+            "maximum_absolute": 0.4708755262514994,
+            "rms": 0.12671749885131672
+          },
+          "pchip": {
+            "maximum_absolute": 0.47092147702688447,
+            "rms": 0.1267583018833061
+          },
+          "q_wall": 0.7279153942623683,
+          "quiet_points": 10,
+          "snapshot": 100,
+          "x": 0.46367516270127845
+        },
+        {
+          "R": 0.5263917996647696,
+          "T": 0.1457273331817958,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0012907554683204703,
+            "rms": 0.000344311015361087
+          },
+          "linear": {
+            "maximum_absolute": 0.4654293673153417,
+            "rms": 0.12838067864653036
+          },
+          "pchip": {
+            "maximum_absolute": 0.46672012278366215,
+            "rms": 0.12870014727560375
+          },
+          "q_wall": 0.730868098194621,
+          "quiet_points": 10,
+          "snapshot": 101,
+          "x": 0.4643119143282912
+        },
+        {
+          "R": 0.5272343177532068,
+          "T": 0.14752750870972725,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009883544899575991,
+            "rms": 0.0002886821181309426
+          },
+          "linear": {
+            "maximum_absolute": 0.45249814910225816,
+            "rms": 0.12970996582605152
+          },
+          "pchip": {
+            "maximum_absolute": 0.45348650359221576,
+            "rms": 0.12997121584288365
+          },
+          "q_wall": 0.7338344406144393,
+          "quiet_points": 10,
+          "snapshot": 102,
+          "x": 0.46494866595530404
+        },
+        {
+          "R": 0.5280790785699674,
+          "T": 0.14933691083177603,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008658095769772389,
+            "rms": 0.0002711437801996837
+          },
+          "linear": {
+            "maximum_absolute": 0.43307921245013636,
+            "rms": 0.13094518133986793
+          },
+          "pchip": {
+            "maximum_absolute": 0.4339450220271136,
+            "rms": 0.13118827319534448
+          },
+          "q_wall": 0.736814555417787,
+          "quiet_points": 10,
+          "snapshot": 103,
+          "x": 0.4655854175823168
+        },
+        {
+          "R": 0.5289261047912887,
+          "T": 0.1511556264811875,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007403874167477564,
+            "rms": 0.00025255384931332413
+          },
+          "linear": {
+            "maximum_absolute": 0.4074387398525231,
+            "rms": 0.13214000707947132
+          },
+          "pchip": {
+            "maximum_absolute": 0.40817912726927086,
+            "rms": 0.13236603645850123
+          },
+          "q_wall": 0.739808578431836,
+          "quiet_points": 10,
+          "snapshot": 104,
+          "x": 0.4662221692093296
+        },
+        {
+          "R": 0.5297754194424965,
+          "T": 0.1529837437601076,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007138359271276762,
+            "rms": 0.0002310459810633836
+          },
+          "linear": {
+            "maximum_absolute": 0.3758995865762246,
+            "rms": 0.1333318762923739
+          },
+          "pchip": {
+            "maximum_absolute": 0.3764981518385955,
+            "rms": 0.13353793727163332
+          },
+          "q_wall": 0.7428166474510072,
+          "quiet_points": 10,
+          "snapshot": 105,
+          "x": 0.4668589208363424
+        },
+        {
+          "R": 0.5306270459043967,
+          "T": 0.15482135196025215,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0006806507466563527,
+            "rms": 0.0002080668841261131
+          },
+          "linear": {
+            "maximum_absolute": 0.3389539991902121,
+            "rms": 0.13456001311390875
+          },
+          "pchip": {
+            "maximum_absolute": 0.3394000442855559,
+            "rms": 0.1347413381581017
+          },
+          "q_wall": 0.7458389022739389,
+          "quiet_points": 10,
+          "snapshot": 106,
+          "x": 0.46749567246335516
+        },
+        {
+          "R": 0.5314810079197937,
+          "T": 0.15666854158401086,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0006208590791695126,
+            "rms": 0.00018807699830143107
+          },
+          "linear": {
+            "maximum_absolute": 0.2972507512850477,
+            "rms": 0.13584304955316923
+          },
+          "pchip": {
+            "maximum_absolute": 0.29754497560987253,
+            "rms": 0.13600622345300953
+          },
+          "q_wall": 0.7488754847412742,
+          "quiet_points": 10,
+          "snapshot": 107,
+          "x": 0.4681324240903679
+        },
+        {
+          "R": 0.5323373296001541,
+          "T": 0.1585254043660265,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005385169008881828,
+            "rms": 0.00017986812186593173
+          },
+          "linear": {
+            "maximum_absolute": 0.3449555181889297,
+            "rms": 0.1371805863632862
+          },
+          "pchip": {
+            "maximum_absolute": 0.3453472521653183,
+            "rms": 0.13734546669813846
+          },
+          "q_wall": 0.7519265387743391,
+          "quiet_points": 10,
+          "snapshot": 108,
+          "x": 0.46876917571738075
+        },
+        {
+          "R": 0.5331960354324158,
+          "T": 0.16039203329525903,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00045446464244704166,
+            "rms": 0.00017635879090351604
+          },
+          "linear": {
+            "maximum_absolute": 0.38987440678492524,
+            "rms": 0.13859871635542226
+          },
+          "pchip": {
+            "maximum_absolute": 0.3902298463535301,
+            "rms": 0.13875326884779002
+          },
+          "q_wall": 0.7549922104147293,
+          "quiet_points": 10,
+          "snapshot": 109,
+          "x": 0.4694059273443935
+        },
+        {
+          "R": 0.5340571502859471,
+          "T": 0.16226852263754749,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005578341643428381,
+            "rms": 0.00016622760017003037
+          },
+          "linear": {
+            "maximum_absolute": 0.43001964459616665,
+            "rms": 0.14007875934684055
+          },
+          "pchip": {
+            "maximum_absolute": 0.430239231592974,
+            "rms": 0.1402024284099217
+          },
+          "q_wall": 0.7580726478648296,
+          "quiet_points": 10,
+          "snapshot": 110,
+          "x": 0.4700426789714063
+        },
+        {
+          "R": 0.5349206994196607,
+          "T": 0.16415496795868503,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005818985684352684,
+            "rms": 0.00015149462113013147
+          },
+          "linear": {
+            "maximum_absolute": 0.46436305709878367,
+            "rms": 0.14157323966830979
+          },
+          "pchip": {
+            "maximum_absolute": 0.4643942344993268,
+            "rms": 0.14164679394339766
+          },
+          "q_wall": 0.7611680015292999,
+          "quiet_points": 10,
+          "snapshot": 111,
+          "x": 0.4706794305984191
+        },
+        {
+          "R": 0.5357867084892828,
+          "T": 0.16605146614801616,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000523891171762908,
+            "rms": 0.00014856496918298873
+          },
+          "linear": {
+            "maximum_absolute": 0.49155902502093674,
+            "rms": 0.14292430914226054
+          },
+          "pchip": {
+            "maximum_absolute": 0.4918450817375759,
+            "rms": 0.14302720447844308
+          },
+          "q_wall": 0.7642784240575399,
+          "quiet_points": 10,
+          "snapshot": 112,
+          "x": 0.47131618222543187
+        },
+        {
+          "R": 0.5366552035547856,
+          "T": 0.16795811544257555,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005238343759236264,
+            "rms": 0.00016350806402353916
+          },
+          "linear": {
+            "maximum_absolute": 0.5113865468097043,
+            "rms": 0.1441456280456888
+          },
+          "pchip": {
+            "maximum_absolute": 0.5119103811856279,
+            "rms": 0.14427956052524465
+          },
+          "q_wall": 0.767404070387175,
+          "quiet_points": 10,
+          "snapshot": 113,
+          "x": 0.47195293385244463
+        },
+        {
+          "R": 0.5375262110879847,
+          "T": 0.16987501545178188,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008149968971081778,
+            "rms": 0.00021491014276511558
+          },
+          "linear": {
+            "maximum_absolute": 0.5238180653457636,
+            "rms": 0.14527950363755462
+          },
+          "pchip": {
+            "maximum_absolute": 0.5246330622428718,
+            "rms": 0.14546595607072288
+          },
+          "q_wall": 0.7705450977885855,
+          "quiet_points": 10,
+          "snapshot": 114,
+          "x": 0.47258968547945746
+        },
+        {
+          "R": 0.5383997579803071,
+          "T": 0.17180226718270208,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00040751960055490644,
+            "rms": 9.945210335083213e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.5287754476647012,
+            "rms": 0.14634960189706459
+          },
+          "pchip": {
+            "maximum_absolute": 0.5288187182940729,
+            "rms": 0.14637458029346817
+          },
+          "q_wall": 0.7737016659105113,
+          "quiet_points": 10,
+          "snapshot": 115,
+          "x": 0.4732264371064702
+        },
+        {
+          "R": 0.539275871550732,
+          "T": 0.1737399730658994,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0013320502714297966,
+            "rms": 0.00034923111534045114
+          },
+          "linear": {
+            "maximum_absolute": 0.525913811892868,
+            "rms": 0.14730583028230196
+          },
+          "pchip": {
+            "maximum_absolute": 0.5272458621642978,
+            "rms": 0.1476147376725693
+          },
+          "q_wall": 0.7768739368267579,
+          "quiet_points": 9,
+          "snapshot": 116,
+          "x": 0.473863188733483
+        },
+        {
+          "R": 0.5401545795539121,
+          "T": 0.17568823698188868,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009889481711385928,
+            "rms": 0.00028722065489089946
+          },
+          "linear": {
+            "maximum_absolute": 0.5150886241058157,
+            "rms": 0.14814307174162863
+          },
+          "pchip": {
+            "maximum_absolute": 0.5160775722769543,
+            "rms": 0.14838859705593105
+          },
+          "q_wall": 0.7800620750840472,
+          "quiet_points": 9,
+          "snapshot": 117,
+          "x": 0.4744999403604958
+        },
+        {
+          "R": 0.5410359101884763,
+          "T": 0.17764716428820385,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008189031348273534,
+            "rms": 0.0002624371021970389
+          },
+          "linear": {
+            "maximum_absolute": 0.4963589820244888,
+            "rms": 0.14886821193244487
+          },
+          "pchip": {
+            "maximum_absolute": 0.49717788515931616,
+            "rms": 0.14908860736226107
+          },
+          "q_wall": 0.7832662477510263,
+          "quiet_points": 9,
+          "snapshot": 118,
+          "x": 0.4751366919875086
+        },
+        {
+          "R": 0.5419198921055223,
+          "T": 0.1796168618471102,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007142684074402383,
+            "rms": 0.00023176609659219329
+          },
+          "linear": {
+            "maximum_absolute": 0.4699865103860683,
+            "rms": 0.1495086406431747
+          },
+          "pchip": {
+            "maximum_absolute": 0.47060947144964616,
+            "rms": 0.14969993663718897
+          },
+          "q_wall": 0.7864866244684944,
+          "quiet_points": 9,
+          "snapshot": 119,
+          "x": 0.47577344361452134
+        },
+        {
+          "R": 0.5428065544173014,
+          "T": 0.18159743805396775,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0006868780048234074,
+            "rms": 0.00019613335991431965
+          },
+          "linear": {
+            "maximum_absolute": 0.4364296999631549,
+            "rms": 0.1501072424990322
+          },
+          "pchip": {
+            "maximum_absolute": 0.4368253544838974,
+            "rms": 0.15026044524294271
+          },
+          "q_wall": 0.7897233775008604,
+          "quiet_points": 9,
+          "snapshot": 120,
+          "x": 0.47641019524153416
+        },
+        {
+          "R": 0.5436959267061007,
+          "T": 0.18358900286626725,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00061392362924894,
+            "rms": 0.00016533855326855297
+          },
+          "linear": {
+            "maximum_absolute": 0.3963335944690786,
+            "rms": 0.150693944089942
+          },
+          "pchip": {
+            "maximum_absolute": 0.3964914191996249,
+            "rms": 0.15081598572416818
+          },
+          "q_wall": 0.7929766817888768,
+          "quiet_points": 9,
+          "snapshot": 121,
+          "x": 0.47704694686854693
+        },
+        {
+          "R": 0.5445880390333301,
+          "T": 0.1855916678333647,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005028697089299212,
+            "rms": 0.00015642058861076733
+          },
+          "linear": {
+            "maximum_absolute": 0.35039274723739755,
+            "rms": 0.15128948303716064
+          },
+          "pchip": {
+            "maximum_absolute": 0.35045414801670294,
+            "rms": 0.15140652870356264
+          },
+          "q_wall": 0.796246715003694,
+          "quiet_points": 9,
+          "snapshot": 122,
+          "x": 0.4776836984955597
+        },
+        {
+          "R": 0.5454829219488165,
+          "T": 0.18760554612692396,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005019766666300787,
+            "rms": 0.0001571602602097321
+          },
+          "linear": {
+            "maximum_absolute": 0.39212698495219794,
+            "rms": 0.15195738000416584
+          },
+          "pchip": {
+            "maximum_absolute": 0.3921331921445473,
+            "rms": 0.15206084724558458
+          },
+          "q_wall": 0.7995336576022598,
+          "quiet_points": 9,
+          "snapshot": 123,
+          "x": 0.47832045012257246
+        },
+        {
+          "R": 0.5463806065003123,
+          "T": 0.18963075257209502,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005398600504717965,
+            "rms": 0.00016311184607053307
+          },
+          "linear": {
+            "maximum_absolute": 0.4390701614465789,
+            "rms": 0.15266455144517688
+          },
+          "pchip": {
+            "maximum_absolute": 0.43934498476056366,
+            "rms": 0.15279534440517942
+          },
+          "q_wall": 0.8028376928841143,
+          "quiet_points": 9,
+          "snapshot": 124,
+          "x": 0.4789572017495853
+        },
+        {
+          "R": 0.5472811242432243,
+          "T": 0.1916674036794502,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005553925131497328,
+            "rms": 0.00017586086407494055
+          },
+          "linear": {
+            "maximum_absolute": 0.48029834096592905,
+            "rms": 0.1534581503198266
+          },
+          "pchip": {
+            "maximum_absolute": 0.4808537334790788,
+            "rms": 0.15360992505955928
+          },
+          "q_wall": 0.8061590070496238,
+          "quiet_points": 9,
+          "snapshot": 125,
+          "x": 0.47959395337659805
+        },
+        {
+          "R": 0.5481845072505673,
+          "T": 0.193715617677694,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007883449674284115,
+            "rms": 0.00019821134884589805
+          },
+          "linear": {
+            "maximum_absolute": 0.5148062765564094,
+            "rms": 0.1543075820447524
+          },
+          "pchip": {
+            "maximum_absolute": 0.5155946215238378,
+            "rms": 0.15447540663401024
+          },
+          "q_wall": 0.8094977892596865,
+          "quiet_points": 9,
+          "snapshot": 126,
+          "x": 0.4802307050036108
+        },
+        {
+          "R": 0.5490907881231512,
+          "T": 0.19577551454717868,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009371288444353087,
+            "rms": 0.0002326031178005728
+          },
+          "linear": {
+            "maximum_absolute": 0.5418556509895,
+            "rms": 0.15517735663410787
+          },
+          "pchip": {
+            "maximum_absolute": 0.5427927798339353,
+            "rms": 0.1553730994684409
+          },
+          "q_wall": 0.8128542316969696,
+          "quiet_points": 9,
+          "snapshot": 127,
+          "x": 0.48086745663062364
+        },
+        {
+          "R": 0.55,
+          "T": 0.19784721605423244,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009903915803949337,
+            "rms": 0.00026510873178174394
+          },
+          "linear": {
+            "maximum_absolute": 0.5611469619503946,
+            "rms": 0.15611529902686375
+          },
+          "pchip": {
+            "maximum_absolute": 0.5621373535307894,
+            "rms": 0.15633650888116088
+          },
+          "q_wall": 0.816228529628696,
+          "quiet_points": 9,
+          "snapshot": 128,
+          "x": 0.4815042082576364
+        }
+      ],
+      "steps": 256
+    },
+    {
+      "cells": 32,
+      "interpretation": "saved zero wall trace pulled back with the exact de Sitter incoming characteristics; linear/PCHIP sensitivity is sampled, not a uniform interpolation bound",
+      "maxima": {
+        "interpolation_sensitivity": {
+          "absolute": 0.0013320366785986026,
+          "face": 26,
+          "q": 0.6436933526484957,
+          "r": 0.43816164563496973,
+          "signed": 0.0013320366785986026,
+          "snapshot": 116,
+          "x": 0.473863188733483,
+          "y": 0.8125
+        },
+        "linear": {
+          "absolute": 0.38094543178275564,
+          "face": 24,
+          "q": 0.6364673245553735,
+          "r": 0.41250000000000003,
+          "signed": -0.38094543178275564,
+          "snapshot": 128,
+          "x": 0.4815042082576364,
+          "y": 0.75
+        },
+        "pchip": {
+          "absolute": 0.3819358213258791,
+          "face": 24,
+          "q": 0.6364673245553735,
+          "r": 0.41250000000000003,
+          "signed": -0.3819358213258791,
+          "snapshot": 128,
+          "x": 0.4815042082576364,
+          "y": 0.75
+        }
+      },
+      "q_wall": [
+        0.48470027859405174,
+        0.816228529628696
+      ],
+      "reflected_branch_upper_label": 0.19784721605423244,
+      "rows": [
+        {
+          "R": 0.45,
+          "T": 0.0,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.48470027859405174,
+          "quiet_points": 32,
+          "snapshot": 0,
+          "x": 0.4
+        },
+        {
+          "R": 0.4506911225185555,
+          "T": 0.0011741650132000893,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4867413932216538,
+          "quiet_points": 32,
+          "snapshot": 1,
+          "x": 0.4006367516270128
+        },
+        {
+          "R": 0.4513832834738267,
+          "T": 0.002352493835349454,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4887886538218205,
+          "quiet_points": 32,
+          "snapshot": 2,
+          "x": 0.4012735032540256
+        },
+        {
+          "R": 0.452076488496743,
+          "T": 0.0035350143665916754,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.490842100550592,
+          "quiet_points": 32,
+          "snapshot": 3,
+          "x": 0.4019102548810384
+        },
+        {
+          "R": 0.4527707432923936,
+          "T": 0.0047217547797863664,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.49290177398353446,
+          "quiet_points": 32,
+          "snapshot": 4,
+          "x": 0.40254700650805114
+        },
+        {
+          "R": 0.45346605364098597,
+          "T": 0.005912743523797783,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4949677151210868,
+          "quiet_points": 32,
+          "snapshot": 5,
+          "x": 0.40318375813506396
+        },
+        {
+          "R": 0.4541624253988194,
+          "T": 0.007108009326833843,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.49703996539399453,
+          "quiet_points": 32,
+          "snapshot": 6,
+          "x": 0.40382050976207673
+        },
+        {
+          "R": 0.45485986449927523,
+          "T": 0.008307581199836997,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.4991185666688325,
+          "quiet_points": 32,
+          "snapshot": 7,
+          "x": 0.4044572613890895
+        },
+        {
+          "R": 0.4555583769538238,
+          "T": 0.009511488439927867,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5012035612536182,
+          "quiet_points": 32,
+          "snapshot": 8,
+          "x": 0.4050940130161023
+        },
+        {
+          "R": 0.4562579688530484,
+          "T": 0.010719760633902845,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5032949919035182,
+          "quiet_points": 31,
+          "snapshot": 9,
+          "x": 0.4057307646431151
+        },
+        {
+          "R": 0.4569586463676902,
+          "T": 0.011932427661791976,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5053929018266582,
+          "quiet_points": 31,
+          "snapshot": 10,
+          "x": 0.40636751627012785
+        },
+        {
+          "R": 0.4576604157496943,
+          "T": 0.01314951970044534,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5074973346899825,
+          "quiet_points": 31,
+          "snapshot": 11,
+          "x": 0.40700426789714067
+        },
+        {
+          "R": 0.4583632833333058,
+          "T": 0.014371067227229915,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5096083346253041,
+          "quiet_points": 31,
+          "snapshot": 12,
+          "x": 0.40764101952415344
+        },
+        {
+          "R": 0.4590672555361502,
+          "T": 0.01559710102372689,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5117259462353553,
+          "quiet_points": 31,
+          "snapshot": 13,
+          "x": 0.4082777711511662
+        },
+        {
+          "R": 0.45977233886035274,
+          "T": 0.01682765217952199,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5138502145999996,
+          "quiet_points": 31,
+          "snapshot": 14,
+          "x": 0.408914522778179
+        },
+        {
+          "R": 0.4604785398936705,
+          "T": 0.018062752096045406,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5159811852825287,
+          "quiet_points": 31,
+          "snapshot": 15,
+          "x": 0.4095512744051918
+        },
+        {
+          "R": 0.4611858653106452,
+          "T": 0.01930243249047511,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5181189043360702,
+          "quiet_points": 31,
+          "snapshot": 16,
+          "x": 0.41018802603220456
+        },
+        {
+          "R": 0.4618943218737741,
+          "T": 0.020546725399699234,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5202634183100968,
+          "quiet_points": 31,
+          "snapshot": 17,
+          "x": 0.4108247776592174
+        },
+        {
+          "R": 0.462603916434703,
+          "T": 0.021795663184345778,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5224147742570527,
+          "quiet_points": 30,
+          "snapshot": 18,
+          "x": 0.41146152928623014
+        },
+        {
+          "R": 0.4633146559354381,
+          "T": 0.023049278532873682,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5245730197390863,
+          "quiet_points": 30,
+          "snapshot": 19,
+          "x": 0.4120982809132429
+        },
+        {
+          "R": 0.4640265474095803,
+          "T": 0.02430760446573286,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5267382028349032,
+          "quiet_points": 30,
+          "snapshot": 20,
+          "x": 0.41273503254025573
+        },
+        {
+          "R": 0.4647395979835799,
+          "T": 0.02557067433958896,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5289103721467311,
+          "quiet_points": 30,
+          "snapshot": 21,
+          "x": 0.4133717841672685
+        },
+        {
+          "R": 0.46545381487801357,
+          "T": 0.02683852185161896,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5310895768074084,
+          "quiet_points": 30,
+          "snapshot": 22,
+          "x": 0.41400853579428126
+        },
+        {
+          "R": 0.4661692054088821,
+          "T": 0.02811118104387243,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5332758664875872,
+          "quiet_points": 30,
+          "snapshot": 23,
+          "x": 0.4146452874212941
+        },
+        {
+          "R": 0.4668857769889328,
+          "T": 0.02938868630770857,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5354692914030675,
+          "quiet_points": 30,
+          "snapshot": 24,
+          "x": 0.41528203904830685
+        },
+        {
+          "R": 0.4676035371290035,
+          "T": 0.030671072388303224,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5376699023222561,
+          "quiet_points": 30,
+          "snapshot": 25,
+          "x": 0.4159187906753196
+        },
+        {
+          "R": 0.4683224934393915,
+          "T": 0.03195837438923178,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5398777505737532,
+          "quiet_points": 29,
+          "snapshot": 26,
+          "x": 0.4165555423023324
+        },
+        {
+          "R": 0.4690426536312439,
+          "T": 0.033250627777123475,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5420928880540696,
+          "quiet_points": 29,
+          "snapshot": 27,
+          "x": 0.4171922939293452
+        },
+        {
+          "R": 0.46976402551797575,
+          "T": 0.034547868386397805,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5443153672354831,
+          "quiet_points": 29,
+          "snapshot": 28,
+          "x": 0.41782904555635797
+        },
+        {
+          "R": 0.4704866170167099,
+          "T": 0.03585013242407485,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5465452411740261,
+          "quiet_points": 29,
+          "snapshot": 29,
+          "x": 0.41846579718337074
+        },
+        {
+          "R": 0.47121043614974495,
+          "T": 0.03715745647466881,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5487825635176189,
+          "quiet_points": 29,
+          "snapshot": 30,
+          "x": 0.41910254881038356
+        },
+        {
+          "R": 0.4719354910460472,
+          "T": 0.03846987750516076,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5510273885143414,
+          "quiet_points": 29,
+          "snapshot": 31,
+          "x": 0.4197393004373963
+        },
+        {
+          "R": 0.47266178994277,
+          "T": 0.03978743287005554,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5532797710208539,
+          "quiet_points": 29,
+          "snapshot": 32,
+          "x": 0.4203760520644091
+        },
+        {
+          "R": 0.47338934118680087,
+          "T": 0.041110160316525125,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5555397665109665,
+          "quiet_points": 29,
+          "snapshot": 33,
+          "x": 0.4210128036914219
+        },
+        {
+          "R": 0.4741181532363333,
+          "T": 0.042438097989633654,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5578074310843569,
+          "quiet_points": 29,
+          "snapshot": 34,
+          "x": 0.4216495553184347
+        },
+        {
+          "R": 0.4748482346624701,
+          "T": 0.04377128443765652,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5600828214754496,
+          "quiet_points": 28,
+          "snapshot": 35,
+          "x": 0.42228630694544744
+        },
+        {
+          "R": 0.4755795941508535,
+          "T": 0.0451097586174858,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "pchip": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "q_wall": 0.5623659950624484,
+          "quiet_points": 28,
+          "snapshot": 36,
+          "x": 0.42292305857246026
+        },
+        {
+          "R": 0.47631224050332455,
+          "T": 0.04645355990012883,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 4.867989928864702e-07,
+            "rms": 8.474496692898462e-08
+          },
+          "pchip": {
+            "maximum_absolute": 4.867989928864702e-07,
+            "rms": 8.474496692898462e-08
+          },
+          "q_wall": 0.5646570098765342,
+          "quiet_points": 28,
+          "snapshot": 37,
+          "x": 0.42355981019947303
+        },
+        {
+          "R": 0.4770461826396126,
+          "T": 0.047802728076299636,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 8.56547283372436e-06,
+            "rms": 1.4913629394021424e-06
+          },
+          "pchip": {
+            "maximum_absolute": 8.56547283372436e-06,
+            "rms": 1.4913629394021424e-06
+          },
+          "q_wall": 0.5669559246112251,
+          "quiet_points": 28,
+          "snapshot": 38,
+          "x": 0.4241965618264858
+        },
+        {
+          "R": 0.47778142959905623,
+          "T": 0.04915730336210845,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 4.95802153161237e-05,
+            "rms": 8.634993922654182e-06
+          },
+          "pchip": {
+            "maximum_absolute": 4.95802153161237e-05,
+            "rms": 8.634993922654182e-06
+          },
+          "q_wall": 0.5692627986319108,
+          "quiet_points": 28,
+          "snapshot": 39,
+          "x": 0.4248333134534986
+        },
+        {
+          "R": 0.47851799054235294,
+          "T": 0.050517326404844944,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.00017633137551709835,
+            "rms": 3.07225443295095e-05
+          },
+          "pchip": {
+            "maximum_absolute": 0.00017633137551709835,
+            "rms": 3.07225443295095e-05
+          },
+          "q_wall": 0.5715776919855514,
+          "quiet_points": 28,
+          "snapshot": 40,
+          "x": 0.4254700650805114
+        },
+        {
+          "R": 0.4792558747533429,
+          "T": 0.05188283828886462,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0004748167717497552,
+            "rms": 8.277150855463533e-05
+          },
+          "pchip": {
+            "maximum_absolute": 0.0004748167717497552,
+            "rms": 8.277150855463533e-05
+          },
+          "q_wall": 0.57390066541056,
+          "quiet_points": 28,
+          "snapshot": 41,
+          "x": 0.42610681670752415
+        },
+        {
+          "R": 0.4799950916408233,
+          "T": 0.0532538805415741,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0010668865413659332,
+            "rms": 0.00018610391563945964
+          },
+          "pchip": {
+            "maximum_absolute": 0.0010668865413659332,
+            "rms": 0.00018610391563945964
+          },
+          "q_wall": 0.5762317803468594,
+          "quiet_points": 28,
+          "snapshot": 42,
+          "x": 0.42674356833453697
+        },
+        {
+          "R": 0.48073565074039726,
+          "T": 0.054630495139523026,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0,
+            "rms": 0.0
+          },
+          "linear": {
+            "maximum_absolute": 0.0021101976161719215,
+            "rms": 0.00036838382250864535
+          },
+          "pchip": {
+            "maximum_absolute": 0.0021101976161719215,
+            "rms": 0.00036838382250864535
+          },
+          "q_wall": 0.5785710989461282,
+          "quiet_points": 27,
+          "snapshot": 43,
+          "x": 0.42738031996154974
+        },
+        {
+          "R": 0.4814775617163553,
+          "T": 0.05601272451459978,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 1.2585459713788757e-07,
+            "rms": 2.190847326101215e-08
+          },
+          "linear": {
+            "maximum_absolute": 0.003795504626841281,
+            "rms": 0.0006632052166801445
+          },
+          "pchip": {
+            "maximum_absolute": 0.003795630481438419,
+            "rms": 0.0006632270428127517
+          },
+          "q_wall": 0.5809186840822306,
+          "quiet_points": 27,
+          "snapshot": 44,
+          "x": 0.4280170715885625
+        },
+        {
+          "R": 0.48222083436359203,
+          "T": 0.057400611560336406,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 8.029850064465966e-06,
+            "rms": 1.3978174768979443e-06
+          },
+          "linear": {
+            "maximum_absolute": 0.0063170068429725815,
+            "rms": 0.0011050242539543604
+          },
+          "pchip": {
+            "maximum_absolute": 0.006325036693037048,
+            "rms": 0.0011064152814300855
+          },
+          "q_wall": 0.5832745993618397,
+          "quiet_points": 27,
+          "snapshot": 45,
+          "x": 0.4286538232155753
+        },
+        {
+          "R": 0.4829654786095569,
+          "T": 0.058794199638322546,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 4.022337112888171e-05,
+            "rms": 7.00199016075182e-06
+          },
+          "linear": {
+            "maximum_absolute": 0.0097684932575127,
+            "rms": 0.001711300192418893
+          },
+          "pchip": {
+            "maximum_absolute": 0.009808716628641582,
+            "rms": 0.0017182580756687227
+          },
+          "q_wall": 0.5856389091352562,
+          "quiet_points": 27,
+          "snapshot": 46,
+          "x": 0.4292905748425881
+        },
+        {
+          "R": 0.48371150451624156,
+          "T": 0.06019353258473309,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 9.084562176992091e-05,
+            "rms": 1.5814192891545745e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.014075974047861376,
+            "rms": 0.0024711487864102506
+          },
+          "pchip": {
+            "maximum_absolute": 0.014166819669631295,
+            "rms": 0.0024868304816470965
+          },
+          "q_wall": 0.5880116785074267,
+          "quiet_points": 27,
+          "snapshot": 47,
+          "x": 0.42992732646960086
+        },
+        {
+          "R": 0.4844589222822046,
+          "T": 0.0615986547169725,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0001508224060387032,
+            "rms": 2.625481090881594e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.01902193500809347,
+            "rms": 0.003350127538672634
+          },
+          "pchip": {
+            "maximum_absolute": 0.019172757414132175,
+            "rms": 0.003376080364665013
+          },
+          "q_wall": 0.5903929733491717,
+          "quiet_points": 27,
+          "snapshot": 48,
+          "x": 0.4305640780966137
+        },
+        {
+          "R": 0.4852077422446316,
+          "T": 0.06300961084043272,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00021391105781513788,
+            "rms": 3.723713552746296e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.02429443098744405,
+            "rms": 0.004299666908920333
+          },
+          "pchip": {
+            "maximum_absolute": 0.024508342045259184,
+            "rms": 0.004336298257998779
+          },
+          "q_wall": 0.5927828603086149,
+          "quiet_points": 27,
+          "snapshot": 49,
+          "x": 0.43120082972362644
+        },
+        {
+          "R": 0.4859579748814358,
+          "T": 0.0644264462553758,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0002750356442986681,
+            "rms": 4.7877560263777235e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.02952955350145176,
+            "rms": 0.005265879091408465
+          },
+          "pchip": {
+            "maximum_absolute": 0.029804589145750425,
+            "rms": 0.005312626269808805
+          },
+          "q_wall": 0.5951814068228345,
+          "quiet_points": 27,
+          "snapshot": 50,
+          "x": 0.4318375813506392
+        },
+        {
+          "R": 0.48670963081339574,
+          "T": 0.06584920676393533,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003301056174359329,
+            "rms": 5.746401210105554e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.03434667387349297,
+            "rms": 0.006197929156522505
+          },
+          "pchip": {
+            "maximum_absolute": 0.0346767794909289,
+            "rms": 0.006253381587144358
+          },
+          "q_wall": 0.5975886811297276,
+          "quiet_points": 27,
+          "snapshot": 51,
+          "x": 0.43247433297765203
+        },
+        {
+          "R": 0.48746272080633357,
+          "T": 0.06727793867724424,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00037595916345608063,
+            "rms": 6.544609300284025e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.038377055644642645,
+            "rms": 0.007056473314967363
+          },
+          "pchip": {
+            "maximum_absolute": 0.03875301480809873,
+            "rms": 0.007118470758111868
+          },
+          "q_wall": 0.6000047522800989,
+          "quiet_points": 26,
+          "snapshot": 52,
+          "x": 0.4331110846046648
+        },
+        {
+          "R": 0.4882172557733346,
+          "T": 0.06871268882269262,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004103049815791793,
+            "rms": 7.143942131748888e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.04128641928368894,
+            "rms": 0.00782185410281418
+          },
+          "pchip": {
+            "maximum_absolute": 0.04169672426526812,
+            "rms": 0.007888088352932187
+          },
+          "q_wall": 0.6024296901499825,
+          "quiet_points": 26,
+          "snapshot": 53,
+          "x": 0.43374783623167756
+        },
+        {
+          "R": 0.4889732467770065,
+          "T": 0.07015350455131167,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00043165765112615495,
+            "rms": 7.553415283794607e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.042792029552412236,
+            "rms": 0.008497129261193101
+          },
+          "pchip": {
+            "maximum_absolute": 0.04322368720353839,
+            "rms": 0.00856669632173069
+          },
+          "q_wall": 0.60486356545319,
+          "quiet_points": 26,
+          "snapshot": 54,
+          "x": 0.4343845878586904
+        },
+        {
+          "R": 0.48973070503178295,
+          "T": 0.07160043374529546,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004392677803237155,
+            "rms": 7.849349243797871e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.04267486130840886,
+            "rms": 0.009100968611005381
+          },
+          "pchip": {
+            "maximum_absolute": 0.04311412908873258,
+            "rms": 0.00917348960590129
+          },
+          "q_wall": 0.6073064497541035,
+          "quiet_points": 26,
+          "snapshot": 55,
+          "x": 0.43502133948570315
+        },
+        {
+          "R": 0.4904896419062698,
+          "T": 0.07305352482565744,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004330479661637243,
+            "rms": 8.1105178632135e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.0407873831460043,
+            "rms": 0.009658498609940827
+          },
+          "pchip": {
+            "maximum_absolute": 0.04122043111216803,
+            "rms": 0.009733812748129336
+          },
+          "q_wall": 0.6097584154807113,
+          "quiet_points": 26,
+          "snapshot": 56,
+          "x": 0.4356580911127159
+        },
+        {
+          "R": 0.49125006892563544,
+          "T": 0.07451282676002632,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00041349538873294844,
+            "rms": 8.397073168317759e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.044146415238498146,
+            "rms": 0.010194113677530713
+          },
+          "pchip": {
+            "maximum_absolute": 0.04439482483617316,
+            "rms": 0.010272307783745323
+          },
+          "q_wall": 0.6122195359378935,
+          "quiet_points": 26,
+          "snapshot": 57,
+          "x": 0.43629484273972874
+        },
+        {
+          "R": 0.4920119977740457,
+          "T": 0.07597838907058313,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0003816118018427628,
+            "rms": 8.735208296708746e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.051187885555025375,
+            "rms": 0.010727222092138397
+          },
+          "pchip": {
+            "maximum_absolute": 0.051513730892342104,
+            "rms": 0.01080833338395161
+          },
+          "q_wall": 0.6146898853209601,
+          "quiet_points": 26,
+          "snapshot": 58,
+          "x": 0.4369315943667415
+        },
+        {
+          "R": 0.49277544029714604,
+          "T": 0.07745026184214557,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00039910333177053253,
+            "rms": 9.113486548845238e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.0574261278925507,
+            "rms": 0.01127283729648144
+          },
+          "pchip": {
+            "maximum_absolute": 0.05782523122432123,
+            "rms": 0.011356509209686774
+          },
+          "q_wall": 0.6171695387294553,
+          "quiet_points": 26,
+          "snapshot": 59,
+          "x": 0.43756834599375427
+        },
+        {
+          "R": 0.49354040850459047,
+          "T": 0.07892849573040062,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00046369877757585637,
+            "rms": 9.491974983574257e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.062367474890027134,
+            "rms": 0.011846986599970726
+          },
+          "pchip": {
+            "maximum_absolute": 0.06283117366760299,
+            "rms": 0.011932200364564795
+          },
+          "q_wall": 0.6196585721812267,
+          "quiet_points": 25,
+          "snapshot": 60,
+          "x": 0.4382050976207671
+        },
+        {
+          "R": 0.49430691457261866,
+          "T": 0.08041314197028902,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005158847609409573,
+            "rms": 9.817365719996402e-05
+          },
+          "linear": {
+            "maximum_absolute": 0.06556202867183154,
+            "rms": 0.012474763374925896
+          },
+          "pchip": {
+            "maximum_absolute": 0.0660779134327725,
+            "rms": 0.012559925677659095
+          },
+          "q_wall": 0.6221570626267684,
+          "quiet_points": 25,
+          "snapshot": 61,
+          "x": 0.43884184924777986
+        },
+        {
+          "R": 0.4950749708466818,
+          "T": 0.08190425238454403,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005527430643856163,
+            "rms": 0.00010043090971222608
+          },
+          "linear": {
+            "maximum_absolute": 0.06662690160643957,
+            "rms": 0.013193778986741478
+          },
+          "pchip": {
+            "maximum_absolute": 0.06717964467082518,
+            "rms": 0.013277719675454056
+          },
+          "q_wall": 0.6246650879638421,
+          "quiet_points": 25,
+          "snapshot": 62,
+          "x": 0.4394786008747926
+        },
+        {
+          "R": 0.49584458984412016,
+          "T": 0.08340187939239209,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005722389839055431,
+            "rms": 0.00010156568202177127
+          },
+          "linear": {
+            "maximum_absolute": 0.06526352370203663,
+            "rms": 0.014042959703332207
+          },
+          "pchip": {
+            "maximum_absolute": 0.06583576268594217,
+            "rms": 0.01412509121941935
+          },
+          "q_wall": 0.6271827270523911,
+          "quiet_points": 25,
+          "snapshot": 63,
+          "x": 0.44011535250180545
+        },
+        {
+          "R": 0.49661578425689035,
+          "T": 0.08490607601841187,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005732437373005272,
+            "rms": 0.00010183556719464598
+          },
+          "linear": {
+            "maximum_absolute": 0.06183212950866715,
+            "rms": 0.015119921191523358
+          },
+          "pchip": {
+            "maximum_absolute": 0.06240537324596768,
+            "rms": 0.015200539629302004
+          },
+          "q_wall": 0.6297100597297365,
+          "quiet_points": 25,
+          "snapshot": 64,
+          "x": 0.4407521041288182
+        },
+        {
+          "R": 0.4973885669543458,
+          "T": 0.08641689590156144,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005555271427205855,
+            "rms": 0.00010179265297507867
+          },
+          "linear": {
+            "maximum_absolute": 0.05869356440589006,
+            "rms": 0.0165410388748104
+          },
+          "pchip": {
+            "maximum_absolute": 0.05887278068933632,
+            "rms": 0.01662175769089845
+          },
+          "q_wall": 0.6322471668260825,
+          "quiet_points": 25,
+          "snapshot": 65,
+          "x": 0.441388855755831
+        },
+        {
+          "R": 0.498162950986072,
+          "T": 0.08793439330437663,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005197229743610365,
+            "rms": 0.00010208399433792944
+          },
+          "linear": {
+            "maximum_absolute": 0.06670098373825928,
+            "rms": 0.018199957639592028
+          },
+          "pchip": {
+            "maximum_absolute": 0.06695516292414086,
+            "rms": 0.018282570426754297
+          },
+          "q_wall": 0.6347941301803253,
+          "quiet_points": 25,
+          "snapshot": 66,
+          "x": 0.4420256073828438
+        },
+        {
+          "R": 0.49893894958477497,
+          "T": 0.08945862312234014,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00046726941541255784,
+            "rms": 0.00010319716347835694
+          },
+          "linear": {
+            "maximum_absolute": 0.07393521427292758,
+            "rms": 0.019972190550341176
+          },
+          "pchip": {
+            "maximum_absolute": 0.07426735596538947,
+            "rms": 0.02005795460840447
+          },
+          "q_wall": 0.6373510326561754,
+          "quiet_points": 25,
+          "snapshot": 67,
+          "x": 0.44266235900985657
+        },
+        {
+          "R": 0.49971657616922666,
+          "T": 0.09098964089342948,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004073474551535179,
+            "rms": 0.00010525532113736313
+          },
+          "linear": {
+            "maximum_absolute": 0.08258019500863512,
+            "rms": 0.02176217395508364
+          },
+          "pchip": {
+            "maximum_absolute": 0.0827786962491669,
+            "rms": 0.021851486795408766
+          },
+          "q_wall": 0.6399179581586012,
+          "quiet_points": 24,
+          "snapshot": 68,
+          "x": 0.44329911063686933
+        },
+        {
+          "R": 0.5004958443472686,
+          "T": 0.0925275028078486,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00047422149449945217,
+            "rms": 0.00010796053816348683
+          },
+          "linear": {
+            "maximum_absolute": 0.0937356582469322,
+            "rms": 0.023587202252015535
+          },
+          "pchip": {
+            "maximum_absolute": 0.09397286716886022,
+            "rms": 0.02367951466028839
+          },
+          "q_wall": 0.6424949916506061,
+          "quiet_points": 24,
+          "snapshot": 69,
+          "x": 0.44393586226388215
+        },
+        {
+          "R": 0.5012767679188718,
+          "T": 0.09407226571794047,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005277749036783907,
+            "rms": 0.00011070204549040441
+          },
+          "linear": {
+            "maximum_absolute": 0.10360301366632585,
+            "rms": 0.02541955678334774
+          },
+          "pchip": {
+            "maximum_absolute": 0.10386914510541645,
+            "rms": 0.025513677468800122
+          },
+          "q_wall": 0.6450822191703336,
+          "quiet_points": 24,
+          "snapshot": 70,
+          "x": 0.4445726138908949
+        },
+        {
+          "R": 0.502059360879259,
+          "T": 0.0956239871482942,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005639220289346963,
+            "rms": 0.00011275557136367962
+          },
+          "linear": {
+            "maximum_absolute": 0.11179657933438258,
+            "rms": 0.027238456789049
+          },
+          "pchip": {
+            "maximum_absolute": 0.11208139005581352,
+            "rms": 0.027333187880126446
+          },
+          "q_wall": 0.6476797278485267,
+          "quiet_points": 24,
+          "snapshot": 71,
+          "x": 0.4452093655179077
+        },
+        {
+          "R": 0.5028436374220869,
+          "T": 0.0971827253060445,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005797137999640906,
+            "rms": 0.00011368900299326319
+          },
+          "linear": {
+            "maximum_absolute": 0.11797244230829984,
+            "rms": 0.029029801585568265
+          },
+          "pchip": {
+            "maximum_absolute": 0.11826581084805166,
+            "rms": 0.02912554027166464
+          },
+          "q_wall": 0.6502876059263348,
+          "quiet_points": 24,
+          "snapshot": 72,
+          "x": 0.4458461171449205
+        },
+        {
+          "R": 0.5036296119426918,
+          "T": 0.09874853909137041,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005734913636700756,
+            "rms": 0.00011369449922435833
+          },
+          "linear": {
+            "maximum_absolute": 0.12183596869192859,
+            "rms": 0.03078162786605576
+          },
+          "pchip": {
+            "maximum_absolute": 0.12212873829324922,
+            "rms": 0.030878741982411063
+          },
+          "q_wall": 0.6529059427734841,
+          "quiet_points": 24,
+          "snapshot": 73,
+          "x": 0.4464828687719333
+        },
+        {
+          "R": 0.5044172990413982,
+          "T": 0.10032148810819687,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005449646709144718,
+            "rms": 0.00011350147208657392
+          },
+          "linear": {
+            "maximum_absolute": 0.12314835342947805,
+            "rms": 0.03250386190094953
+          },
+          "pchip": {
+            "maximum_absolute": 0.12343402041991569,
+            "rms": 0.03260299844640741
+          },
+          "q_wall": 0.655534828906818,
+          "quiet_points": 24,
+          "snapshot": 74,
+          "x": 0.44711962039894604
+        },
+        {
+          "R": 0.5052067135268955,
+          "T": 0.10190163267510902,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004952212258992061,
+            "rms": 0.00011432747779529472
+          },
+          "linear": {
+            "maximum_absolute": 0.12173201582350657,
+            "rms": 0.034265125638361864
+          },
+          "pchip": {
+            "maximum_absolute": 0.1220125781338699,
+            "rms": 0.034367477995833694
+          },
+          "q_wall": 0.6581743560092221,
+          "quiet_points": 24,
+          "snapshot": 75,
+          "x": 0.44775637202595886
+        },
+        {
+          "R": 0.5059978704196774,
+          "T": 0.10348903383647014,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004266708062447555,
+            "rms": 0.00012162110998105961
+          },
+          "linear": {
+            "maximum_absolute": 0.11750852971060499,
+            "rms": 0.03595911354273244
+          },
+          "pchip": {
+            "maximum_absolute": 0.11785238443797508,
+            "rms": 0.036071676286068055
+          },
+          "q_wall": 0.660824616948924,
+          "quiet_points": 24,
+          "snapshot": 76,
+          "x": 0.4483931236529716
+        },
+        {
+          "R": 0.5067907849555542,
+          "T": 0.10508375337376819,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00043489074896393976,
+            "rms": 0.00010913358429640121
+          },
+          "linear": {
+            "maximum_absolute": 0.12715498989038665,
+            "rms": 0.03756003187103024
+          },
+          "pchip": {
+            "maximum_absolute": 0.12744868341118742,
+            "rms": 0.03764513719894947
+          },
+          "q_wall": 0.663485705799208,
+          "quiet_points": 23,
+          "snapshot": 77,
+          "x": 0.4490298752799844
+        },
+        {
+          "R": 0.5075854725892327,
+          "T": 0.10668585381717896,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005037905076451035,
+            "rms": 0.00011282765001317159
+          },
+          "linear": {
+            "maximum_absolute": 0.1450597061835236,
+            "rms": 0.03907242760579576
+          },
+          "pchip": {
+            "maximum_absolute": 0.14537582895090762,
+            "rms": 0.039166664549176756
+          },
+          "q_wall": 0.6661577178585256,
+          "quiet_points": 23,
+          "snapshot": 78,
+          "x": 0.4496666269069972
+        },
+        {
+          "R": 0.5083819489979692,
+          "T": 0.10829539845736195,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005526360016694931,
+            "rms": 0.00011424059860862841
+          },
+          "linear": {
+            "maximum_absolute": 0.16013650208118224,
+            "rms": 0.040509153814422695
+          },
+          "pchip": {
+            "maximum_absolute": 0.1604547053876556,
+            "rms": 0.04060263799714677
+          },
+          "q_wall": 0.6688407496710325,
+          "quiet_points": 23,
+          "snapshot": 79,
+          "x": 0.45030337853401
+        },
+        {
+          "R": 0.5091802300852942,
+          "T": 0.10991245135748669,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005767470223053406,
+            "rms": 0.00011356150885880127
+          },
+          "linear": {
+            "maximum_absolute": 0.17187510294364783,
+            "rms": 0.04189495202953763
+          },
+          "pchip": {
+            "maximum_absolute": 0.1721743829664465,
+            "rms": 0.041985450864618856
+          },
+          "q_wall": 0.6715348990475456,
+          "quiet_points": 23,
+          "snapshot": 80,
+          "x": 0.45094013016102275
+        },
+        {
+          "R": 0.5099803319848141,
+          "T": 0.11153707736550152,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005735208254549762,
+            "rms": 0.00011119019476269857
+          },
+          "linear": {
+            "maximum_absolute": 0.17984145997951628,
+            "rms": 0.04330358284887661
+          },
+          "pchip": {
+            "maximum_absolute": 0.18010092519535714,
+            "rms": 0.04339364719390428
+          },
+          "q_wall": 0.6742402650869456,
+          "quiet_points": 23,
+          "snapshot": 81,
+          "x": 0.45157688178803557
+        },
+        {
+          "R": 0.510782271064088,
+          "T": 0.11316934212664698,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000542619846646275,
+            "rms": 0.00010814599296336706
+          },
+          "linear": {
+            "maximum_absolute": 0.18368854806479806,
+            "rms": 0.044771348904805226
+          },
+          "pchip": {
+            "maximum_absolute": 0.18388792973577195,
+            "rms": 0.04485841693240703
+          },
+          "q_wall": 0.6769569481980261,
+          "quiet_points": 23,
+          "snapshot": 82,
+          "x": 0.45221363341504833
+        },
+        {
+          "R": 0.5115860639285846,
+          "T": 0.11480931209622026,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004860231876337995,
+            "rms": 0.00010567150156222254
+          },
+          "linear": {
+            "maximum_absolute": 0.18318502665216063,
+            "rms": 0.04625569177950616
+          },
+          "pchip": {
+            "maximum_absolute": 0.18330372867838074,
+            "rms": 0.046336634976216845
+          },
+          "q_wall": 0.6796850501218054,
+          "quiet_points": 23,
+          "snapshot": 83,
+          "x": 0.4528503850420611
+        },
+        {
+          "R": 0.5123917274257179,
+          "T": 0.11645705455259694,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004079535090689146,
+            "rms": 0.00010508284849841611
+          },
+          "linear": {
+            "maximum_absolute": 0.17822566350425517,
+            "rms": 0.04774465055926996
+          },
+          "pchip": {
+            "maximum_absolute": 0.17822571102452822,
+            "rms": 0.04781443864692838
+          },
+          "q_wall": 0.682424673954308,
+          "quiet_points": 23,
+          "snapshot": 84,
+          "x": 0.4534871366690739
+        },
+        {
+          "R": 0.5131992786489666,
+          "T": 0.1181126376105179,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00047202127772718455,
+            "rms": 0.00011080976454465033
+          },
+          "linear": {
+            "maximum_absolute": 0.1686274641081209,
+            "rms": 0.04922182881760448
+          },
+          "pchip": {
+            "maximum_absolute": 0.16881087844746523,
+            "rms": 0.049311164968843274
+          },
+          "q_wall": 0.6851759241698356,
+          "quiet_points": 22,
+          "snapshot": 85,
+          "x": 0.4541238882960867
+        },
+        {
+          "R": 0.514008734942077,
+          "T": 0.1197761302346445,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005387683566499962,
+            "rms": 0.00011377410289001634
+          },
+          "linear": {
+            "maximum_absolute": 0.17710301997218203,
+            "rms": 0.05072172054613062
+          },
+          "pchip": {
+            "maximum_absolute": 0.17726878997460072,
+            "rms": 0.05081078945427163
+          },
+          "q_wall": 0.6879389066447303,
+          "quiet_points": 22,
+          "snapshot": 86,
+          "x": 0.45476063992309945
+        },
+        {
+          "R": 0.5148201139033518,
+          "T": 0.12144760225339193,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005761559639487768,
+            "rms": 0.0001165544851427732
+          },
+          "linear": {
+            "maximum_absolute": 0.19572211389692928,
+            "rms": 0.052283854819489974
+          },
+          "pchip": {
+            "maximum_absolute": 0.19581299496773075,
+            "rms": 0.05236715846734888
+          },
+          "q_wall": 0.6907137286816498,
+          "quiet_points": 22,
+          "snapshot": 87,
+          "x": 0.4553973915501123
+        },
+        {
+          "R": 0.5156334333900281,
+          "T": 0.12312712437304557,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005795899588254827,
+            "rms": 0.00011922491961896513
+          },
+          "linear": {
+            "maximum_absolute": 0.21017275684734815,
+            "rms": 0.053951008968808944
+          },
+          "pchip": {
+            "maximum_absolute": 0.21019367579245674,
+            "rms": 0.05402738441925408
+          },
+          "q_wall": 0.6935004990343643,
+          "quiet_points": 22,
+          "snapshot": 88,
+          "x": 0.45603414317712504
+        },
+        {
+          "R": 0.5164487115227446,
+          "T": 0.12481476819216845,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005479948014659453,
+            "rms": 0.00012286232477874237
+          },
+          "linear": {
+            "maximum_absolute": 0.21984168475250832,
+            "rms": 0.05582203338109707
+          },
+          "pchip": {
+            "maximum_absolute": 0.21997499099550089,
+            "rms": 0.05591210735594825
+          },
+          "q_wall": 0.6962993279330897,
+          "quiet_points": 22,
+          "snapshot": 89,
+          "x": 0.4566708948041378
+        },
+        {
+          "R": 0.5172659666901013,
+          "T": 0.12651060621630428,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004840201768233354,
+            "rms": 0.00012750735631995643
+          },
+          "linear": {
+            "maximum_absolute": 0.22470526406577696,
+            "rms": 0.05781721492808254
+          },
+          "pchip": {
+            "maximum_absolute": 0.22494751962475057,
+            "rms": 0.057919197543784405
+          },
+          "q_wall": 0.6991103271103668,
+          "quiet_points": 22,
+          "snapshot": 90,
+          "x": 0.4573076464311506
+        },
+        {
+          "R": 0.5180852175533153,
+          "T": 0.12821471187299127,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00039402615479805503,
+            "rms": 0.00013338269482280468
+          },
+          "linear": {
+            "maximum_absolute": 0.22467333238238785,
+            "rms": 0.05979269032854619
+          },
+          "pchip": {
+            "maximum_absolute": 0.22501793923898872,
+            "rms": 0.05990249337617199
+          },
+          "q_wall": 0.7019336098275137,
+          "quiet_points": 22,
+          "snapshot": 91,
+          "x": 0.4579443980581634
+        },
+        {
+          "R": 0.5189064830509712,
+          "T": 0.12992715952708211,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00045933518931518674,
+            "rms": 0.00011870634511700214
+          },
+          "linear": {
+            "maximum_absolute": 0.2197440345933066,
+            "rms": 0.06164926248603602
+          },
+          "pchip": {
+            "maximum_absolute": 0.21976869861603587,
+            "rms": 0.061720682713220475
+          },
+          "q_wall": 0.7047692909016448,
+          "quiet_points": 22,
+          "snapshot": 92,
+          "x": 0.45858114968517616
+        },
+        {
+          "R": 0.5197297824038726,
+          "T": 0.13164802449638932,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0010702710749032063,
+            "rms": 0.00022196230168642918
+          },
+          "linear": {
+            "maximum_absolute": 0.21000571688386738,
+            "rms": 0.06332594061725128
+          },
+          "pchip": {
+            "maximum_absolute": 0.21107598795877058,
+            "rms": 0.06351080392487948
+          },
+          "q_wall": 0.707617486733291,
+          "quiet_points": 21,
+          "snapshot": 93,
+          "x": 0.459217901312189
+        },
+        {
+          "R": 0.5205551351199936,
+          "T": 0.13337738306765765,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008524440170571967,
+            "rms": 0.0001946111507177748
+          },
+          "linear": {
+            "maximum_absolute": 0.2050650230698856,
+            "rms": 0.06492841346994656
+          },
+          "pchip": {
+            "maximum_absolute": 0.2053349956629683,
+            "rms": 0.06509790700786489
+          },
+          "q_wall": 0.7104783153346264,
+          "quiet_points": 21,
+          "snapshot": 94,
+          "x": 0.45985465293920175
+        },
+        {
+          "R": 0.5213825609995357,
+          "T": 0.13511531251287406,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008267687605456597,
+            "rms": 0.00019698511184759138
+          },
+          "linear": {
+            "maximum_absolute": 0.22600294303474477,
+            "rms": 0.06661204534058637
+          },
+          "pchip": {
+            "maximum_absolute": 0.22641633280263418,
+            "rms": 0.0667895808250425
+          },
+          "q_wall": 0.7133518963583201,
+          "quiet_points": 21,
+          "snapshot": 95,
+          "x": 0.4604914045662145
+        },
+        {
+          "R": 0.52221208014009,
+          "T": 0.1368618911059238,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008057194603765527,
+            "rms": 0.00020279968718411195
+          },
+          "linear": {
+            "maximum_absolute": 0.2427181466846523,
+            "rms": 0.06832152677633477
+          },
+          "pchip": {
+            "maximum_absolute": 0.24327657021319404,
+            "rms": 0.06850833718532232
+          },
+          "q_wall": 0.7162383511270296,
+          "quiet_points": 21,
+          "snapshot": 96,
+          "x": 0.46112815619322733
+        },
+        {
+          "R": 0.52304371294191,
+          "T": 0.13861719813960227,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00076424154966237,
+            "rms": 0.00020985364229228948
+          },
+          "linear": {
+            "maximum_absolute": 0.25482210428536123,
+            "rms": 0.06997012220574358
+          },
+          "pchip": {
+            "maximum_absolute": 0.25551858733656285,
+            "rms": 0.07016462314587871
+          },
+          "q_wall": 0.7191378026635549,
+          "quiet_points": 21,
+          "snapshot": 97,
+          "x": 0.4617649078202401
+        },
+        {
+          "R": 0.5238774801132937,
+          "T": 0.14038131394298686,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008301645805922631,
+            "rms": 0.00021992240269496955
+          },
+          "linear": {
+            "maximum_absolute": 0.2619958444973375,
+            "rms": 0.07148843027857384
+          },
+          "pchip": {
+            "maximum_absolute": 0.26282600907792975,
+            "rms": 0.07169156423347049
+          },
+          "q_wall": 0.7220503757216616,
+          "quiet_points": 21,
+          "snapshot": 98,
+          "x": 0.46240165944725287
+        },
+        {
+          "R": 0.5247134026760825,
+          "T": 0.14215431989918592,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0010966287373567196,
+            "rms": 0.0002518437796233346
+          },
+          "linear": {
+            "maximum_absolute": 0.263996623920038,
+            "rms": 0.07284839772963198
+          },
+          "pchip": {
+            "maximum_absolute": 0.2650932526573947,
+            "rms": 0.07307761187914691
+          },
+          "q_wall": 0.7249761968176057,
+          "quiet_points": 21,
+          "snapshot": 99,
+          "x": 0.4630384110742657
+        },
+        {
+          "R": 0.5255515019712764,
+          "T": 0.1439362984634703,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0004912262135025047,
+            "rms": 0.00016762377575552684
+          },
+          "linear": {
+            "maximum_absolute": 0.2608315911992969,
+            "rms": 0.07407004782206716
+          },
+          "pchip": {
+            "maximum_absolute": 0.26087756203919255,
+            "rms": 0.07419429124723938
+          },
+          "q_wall": 0.7279153942623683,
+          "quiet_points": 20,
+          "snapshot": 100,
+          "x": 0.46367516270127845
+        },
+        {
+          "R": 0.5263917996647696,
+          "T": 0.1457273331817958,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0012907425587135313,
+            "rms": 0.000283272638275131
+          },
+          "linear": {
+            "maximum_absolute": 0.25413959280435816,
+            "rms": 0.07536978659553413
+          },
+          "pchip": {
+            "maximum_absolute": 0.2554303353630717,
+            "rms": 0.07562862374254306
+          },
+          "q_wall": 0.730868098194621,
+          "quiet_points": 20,
+          "snapshot": 101,
+          "x": 0.4643119143282912
+        },
+        {
+          "R": 0.5272343177532068,
+          "T": 0.14752750870972725,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009883544306455994,
+            "rms": 0.00024789386223777874
+          },
+          "linear": {
+            "maximum_absolute": 0.2444976199623321,
+            "rms": 0.07681825237685919
+          },
+          "pchip": {
+            "maximum_absolute": 0.2454859743929777,
+            "rms": 0.07704458368163267
+          },
+          "q_wall": 0.7338344406144393,
+          "quiet_points": 20,
+          "snapshot": 102,
+          "x": 0.46494866595530404
+        },
+        {
+          "R": 0.5280790785699674,
+          "T": 0.14933691083177603,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008658091319065919,
+            "rms": 0.00024057429252349806
+          },
+          "linear": {
+            "maximum_absolute": 0.25878302976517875,
+            "rms": 0.07835815342378065
+          },
+          "pchip": {
+            "maximum_absolute": 0.25956338026467274,
+            "rms": 0.07857118903558293
+          },
+          "q_wall": 0.736814555417787,
+          "quiet_points": 20,
+          "snapshot": 103,
+          "x": 0.4655854175823168
+        },
+        {
+          "R": 0.5289261047912887,
+          "T": 0.1511556264811875,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008533814105861071,
+            "rms": 0.00023899611602388814
+          },
+          "linear": {
+            "maximum_absolute": 0.27750833218287785,
+            "rms": 0.07986346063281716
+          },
+          "pchip": {
+            "maximum_absolute": 0.27836171359346396,
+            "rms": 0.08008736228641376
+          },
+          "q_wall": 0.739808578431836,
+          "quiet_points": 20,
+          "snapshot": 104,
+          "x": 0.4662221692093296
+        },
+        {
+          "R": 0.5297754194424965,
+          "T": 0.1529837437601076,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008859882009188969,
+            "rms": 0.00023749851411240672
+          },
+          "linear": {
+            "maximum_absolute": 0.2911710883418963,
+            "rms": 0.08127567322748583
+          },
+          "pchip": {
+            "maximum_absolute": 0.2920570765428152,
+            "rms": 0.08150091521998198
+          },
+          "q_wall": 0.7428166474510072,
+          "quiet_points": 20,
+          "snapshot": 105,
+          "x": 0.4668589208363424
+        },
+        {
+          "R": 0.5306270459043967,
+          "T": 0.15482135196025215,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008933654101379584,
+            "rms": 0.00023294426734676139
+          },
+          "linear": {
+            "maximum_absolute": 0.2993588516380815,
+            "rms": 0.0825630931623936
+          },
+          "pchip": {
+            "maximum_absolute": 0.30025221704821947,
+            "rms": 0.08277925777763932
+          },
+          "q_wall": 0.7458389022739389,
+          "quiet_points": 20,
+          "snapshot": 106,
+          "x": 0.46749567246335516
+        },
+        {
+          "R": 0.5314810079197937,
+          "T": 0.15666854158401086,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.001060988663327711,
+            "rms": 0.00024677059238068617
+          },
+          "linear": {
+            "maximum_absolute": 0.3019557076251177,
+            "rms": 0.08372555223798459
+          },
+          "pchip": {
+            "maximum_absolute": 0.3030166962884454,
+            "rms": 0.08394918342221151
+          },
+          "q_wall": 0.7488754847412742,
+          "quiet_points": 20,
+          "snapshot": 107,
+          "x": 0.4681324240903679
+        },
+        {
+          "R": 0.5323373296001541,
+          "T": 0.1585254043660265,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005385182347652073,
+            "rms": 0.0001548156773319723
+          },
+          "linear": {
+            "maximum_absolute": 0.300221710520416,
+            "rms": 0.08491065708104507
+          },
+          "pchip": {
+            "maximum_absolute": 0.3002424872295948,
+            "rms": 0.08502143179394465
+          },
+          "q_wall": 0.7519265387743391,
+          "quiet_points": 19,
+          "snapshot": 108,
+          "x": 0.46876917571738075
+        },
+        {
+          "R": 0.5331960354324158,
+          "T": 0.16039203329525903,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00045446433130970354,
+            "rms": 0.00014646681871622325
+          },
+          "linear": {
+            "maximum_absolute": 0.2942900912667994,
+            "rms": 0.08617630924483356
+          },
+          "pchip": {
+            "maximum_absolute": 0.29443164474693095,
+            "rms": 0.08629341890456436
+          },
+          "q_wall": 0.7549922104147293,
+          "quiet_points": 19,
+          "snapshot": 109,
+          "x": 0.4694059273443935
+        },
+        {
+          "R": 0.5340571502859471,
+          "T": 0.16226852263754749,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005578338553451911,
+            "rms": 0.00012976154993493206
+          },
+          "linear": {
+            "maximum_absolute": 0.28361976776163433,
+            "rms": 0.08748156545238306
+          },
+          "pchip": {
+            "maximum_absolute": 0.2837126983072894,
+            "rms": 0.08757503278164236
+          },
+          "q_wall": 0.7580726478648296,
+          "quiet_points": 19,
+          "snapshot": 110,
+          "x": 0.4700426789714063
+        },
+        {
+          "R": 0.5349206994196607,
+          "T": 0.16415496795868503,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005818983304596431,
+            "rms": 0.000126907751509669
+          },
+          "linear": {
+            "maximum_absolute": 0.2949442841384452,
+            "rms": 0.08875990740417876
+          },
+          "pchip": {
+            "maximum_absolute": 0.29497546150820875,
+            "rms": 0.08884802852344297
+          },
+          "q_wall": 0.7611680015292999,
+          "quiet_points": 19,
+          "snapshot": 111,
+          "x": 0.4706794305984191
+        },
+        {
+          "R": 0.5357867084892828,
+          "T": 0.16605146614801616,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005238910448716327,
+            "rms": 0.00014040646546974989
+          },
+          "linear": {
+            "maximum_absolute": 0.31363924531160947,
+            "rms": 0.08996128676505968
+          },
+          "pchip": {
+            "maximum_absolute": 0.31392530180121936,
+            "rms": 0.09007625273646895
+          },
+          "q_wall": 0.7642784240575399,
+          "quiet_points": 19,
+          "snapshot": 112,
+          "x": 0.47131618222543187
+        },
+        {
+          "R": 0.5366552035547856,
+          "T": 0.16795811544257555,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005584139486606299,
+            "rms": 0.00016242892023911725
+          },
+          "linear": {
+            "maximum_absolute": 0.3265661519519881,
+            "rms": 0.09107151650205429
+          },
+          "pchip": {
+            "maximum_absolute": 0.3270899859327757,
+            "rms": 0.0912168386533836
+          },
+          "q_wall": 0.767404070387175,
+          "quiet_points": 19,
+          "snapshot": 113,
+          "x": 0.47195293385244463
+        },
+        {
+          "R": 0.5375262110879847,
+          "T": 0.16987501545178188,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000814993089638949,
+            "rms": 0.00019879211739111212
+          },
+          "linear": {
+            "maximum_absolute": 0.33345924045478126,
+            "rms": 0.09207007139972809
+          },
+          "pchip": {
+            "maximum_absolute": 0.3342742335444202,
+            "rms": 0.09225479461192002
+          },
+          "q_wall": 0.7705450977885855,
+          "quiet_points": 19,
+          "snapshot": 114,
+          "x": 0.47258968547945746
+        },
+        {
+          "R": 0.5383997579803071,
+          "T": 0.17180226718270208,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.00048299832298237533,
+            "rms": 0.00014991515506236578
+          },
+          "linear": {
+            "maximum_absolute": 0.3352398558890499,
+            "rms": 0.09308530589020847
+          },
+          "pchip": {
+            "maximum_absolute": 0.3352831453455042,
+            "rms": 0.09319388522200531
+          },
+          "q_wall": 0.7737016659105113,
+          "quiet_points": 19,
+          "snapshot": 115,
+          "x": 0.4732264371064702
+        },
+        {
+          "R": 0.539275871550732,
+          "T": 0.1737399730658994,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0013320366785986026,
+            "rms": 0.0002839854904341453
+          },
+          "linear": {
+            "maximum_absolute": 0.3320185177962228,
+            "rms": 0.09414502255140875
+          },
+          "pchip": {
+            "maximum_absolute": 0.3333505544748214,
+            "rms": 0.09440585626351479
+          },
+          "q_wall": 0.7768739368267579,
+          "quiet_points": 18,
+          "snapshot": 116,
+          "x": 0.473863188733483
+        },
+        {
+          "R": 0.5401545795539121,
+          "T": 0.17568823698188868,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009889481134846,
+            "rms": 0.00024605768715654384
+          },
+          "linear": {
+            "maximum_absolute": 0.3234168853002478,
+            "rms": 0.0952329639528504
+          },
+          "pchip": {
+            "maximum_absolute": 0.3244058334137324,
+            "rms": 0.09545916512978488
+          },
+          "q_wall": 0.7800620750840472,
+          "quiet_points": 18,
+          "snapshot": 117,
+          "x": 0.4744999403604958
+        },
+        {
+          "R": 0.5410359101884763,
+          "T": 0.17764716428820385,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008189026757383644,
+            "rms": 0.00023561154751197688
+          },
+          "linear": {
+            "maximum_absolute": 0.3092508295342572,
+            "rms": 0.09630735284680615
+          },
+          "pchip": {
+            "maximum_absolute": 0.31006973220999556,
+            "rms": 0.09652103416236611
+          },
+          "q_wall": 0.7832662477510263,
+          "quiet_points": 18,
+          "snapshot": 118,
+          "x": 0.4751366919875086
+        },
+        {
+          "R": 0.5419198921055223,
+          "T": 0.1796168618471102,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007961282679084247,
+            "rms": 0.00022677499428233692
+          },
+          "linear": {
+            "maximum_absolute": 0.33083426651803804,
+            "rms": 0.0973391145715139
+          },
+          "pchip": {
+            "maximum_absolute": 0.33163039478594647,
+            "rms": 0.09755078479574916
+          },
+          "q_wall": 0.7864866244684944,
+          "quiet_points": 18,
+          "snapshot": 119,
+          "x": 0.47577344361452134
+        },
+        {
+          "R": 0.5428065544173014,
+          "T": 0.18159743805396775,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007011305635660214,
+            "rms": 0.00020681284352509055
+          },
+          "linear": {
+            "maximum_absolute": 0.34830749676689776,
+            "rms": 0.09833772482291682
+          },
+          "pchip": {
+            "maximum_absolute": 0.3490086273304638,
+            "rms": 0.09852288760295515
+          },
+          "q_wall": 0.7897233775008604,
+          "quiet_points": 18,
+          "snapshot": 120,
+          "x": 0.47641019524153416
+        },
+        {
+          "R": 0.5436959267061007,
+          "T": 0.18358900286626725,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000613924408234226,
+            "rms": 0.0001705593300007356
+          },
+          "linear": {
+            "maximum_absolute": 0.35944246023657445,
+            "rms": 0.09927086960494985
+          },
+          "pchip": {
+            "maximum_absolute": 0.35990829824650916,
+            "rms": 0.09941188761794119
+          },
+          "q_wall": 0.7929766817888768,
+          "quiet_points": 18,
+          "snapshot": 121,
+          "x": 0.47704694686854693
+        },
+        {
+          "R": 0.5445880390333301,
+          "T": 0.1855916678333647,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0005028706978908969,
+            "rms": 0.00013418040912128025
+          },
+          "linear": {
+            "maximum_absolute": 0.3648371870314113,
+            "rms": 0.10021104307908985
+          },
+          "pchip": {
+            "maximum_absolute": 0.36483810530838956,
+            "rms": 0.10029235244704077
+          },
+          "q_wall": 0.796246715003694,
+          "quiet_points": 18,
+          "snapshot": 122,
+          "x": 0.4776836984955597
+        },
+        {
+          "R": 0.5454829219488165,
+          "T": 0.18760554612692396,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0007400276131205308,
+            "rms": 0.00017694488003164159
+          },
+          "linear": {
+            "maximum_absolute": 0.36373434424960727,
+            "rms": 0.1011154157458623
+          },
+          "pchip": {
+            "maximum_absolute": 0.3644743718627278,
+            "rms": 0.10126206308339204
+          },
+          "q_wall": 0.7995336576022598,
+          "quiet_points": 17,
+          "snapshot": 123,
+          "x": 0.47832045012257246
+        },
+        {
+          "R": 0.5463806065003123,
+          "T": 0.18963075257209502,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008370587708538269,
+            "rms": 0.00019136771682614633
+          },
+          "linear": {
+            "maximum_absolute": 0.3565824264762405,
+            "rms": 0.1020021253014614
+          },
+          "pchip": {
+            "maximum_absolute": 0.3574194852470943,
+            "rms": 0.10217592168888305
+          },
+          "q_wall": 0.8028376928841143,
+          "quiet_points": 17,
+          "snapshot": 124,
+          "x": 0.4789572017495853
+        },
+        {
+          "R": 0.5472811242432243,
+          "T": 0.1916674036794502,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009099236971964464,
+            "rms": 0.000214322600715423
+          },
+          "linear": {
+            "maximum_absolute": 0.34320362900370927,
+            "rms": 0.10288733907161178
+          },
+          "pchip": {
+            "maximum_absolute": 0.3441135527009057,
+            "rms": 0.10308805773149197
+          },
+          "q_wall": 0.8061590070496238,
+          "quiet_points": 17,
+          "snapshot": 125,
+          "x": 0.47959395337659805
+        },
+        {
+          "R": 0.5481845072505673,
+          "T": 0.193715617677694,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0008856996679525997,
+            "rms": 0.0002316120842875686
+          },
+          "linear": {
+            "maximum_absolute": 0.34666580458750285,
+            "rms": 0.1037649167580262
+          },
+          "pchip": {
+            "maximum_absolute": 0.3474541485786672,
+            "rms": 0.10397868704932718
+          },
+          "q_wall": 0.8094977892596865,
+          "quiet_points": 17,
+          "snapshot": 126,
+          "x": 0.4802307050036108
+        },
+        {
+          "R": 0.5490907881231512,
+          "T": 0.19577551454717868,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.0009371276055573086,
+            "rms": 0.00024423133336769383
+          },
+          "linear": {
+            "maximum_absolute": 0.3671398049069037,
+            "rms": 0.10460302514875494
+          },
+          "pchip": {
+            "maximum_absolute": 0.368076932512461,
+            "rms": 0.10482846534448609
+          },
+          "q_wall": 0.8128542316969696,
+          "quiet_points": 17,
+          "snapshot": 127,
+          "x": 0.48086745663062364
+        },
+        {
+          "R": 0.55,
+          "T": 0.19784721605423244,
+          "interpolation_sensitivity": {
+            "maximum_absolute": 0.000990389543123471,
+            "rms": 0.00025021582242033174
+          },
+          "linear": {
+            "maximum_absolute": 0.38094543178275564,
+            "rms": 0.10539326791147778
+          },
+          "pchip": {
+            "maximum_absolute": 0.3819358213258791,
+            "rms": 0.1056259229572739
+          },
+          "q_wall": 0.816228529628696,
+          "quiet_points": 17,
+          "snapshot": 128,
+          "x": 0.4815042082576364
+        }
+      ],
+      "steps": 256
+    }
+  ],
+  "crossed_stages": [
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_radial_reconstructions": 1,
+      "cap_wall": {
+        "A": 0.7873075976376714,
+        "delta": 0.0,
+        "w_minus": 0.0
+      },
+      "cells": 32,
+      "comparisons": {
+        "derivative_order2": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 2.220446049250313e-16,
+              "rms": 6.111576606606443e-17
+            },
+            "c": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -2.4868995751603507e-14,
+            "c": 0.0,
+            "r": 6.8833827526759706e-15
+          }
+        },
+        "derivative_order4": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 2.220446049250313e-16,
+              "rms": 5.797950651443767e-17
+            },
+            "c": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -2.4868995751603507e-14,
+            "c": 0.0,
+            "r": 6.8833827526759706e-15
+          }
+        },
+        "quadrature_first": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 1.1102230246251565e-16,
+              "rms": 2.7331801484138993e-17
+            },
+            "c": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 0.0,
+            "c": 0.0,
+            "r": 0.0
+          }
+        },
+        "quadrature_second": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 1.1102230246251565e-16,
+              "rms": 1.9326502171479226e-17
+            },
+            "c": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 0.0,
+            "c": 0.0,
+            "r": 0.0
+          }
+        }
+      },
+      "interpretation": "fixed saved physical state and cap reconstruction; endpoint slope sensitivity and prefix sensitivity do not establish the accuracy of the cap state or a new evolution",
+      "radial_jet_change_identity": {
+        "2": 8.767058369410388e-18,
+        "4": 8.767058369410388e-18
+      },
+      "results": {
+        "first_2": {
+          "incoming_w_plus": 0.0,
+          "longitudinal": {
+            "L": 1.0453366459969728,
+            "c": 0.0,
+            "r": 0.7730602358135831
+          },
+          "required_transverse": {
+            "L": -0.6777151823217477,
+            "c": 0.0,
+            "r": 0.1982595405737293
+          },
+          "transverse": {
+            "L": -0.677715182321704,
+            "c": 0.0,
+            "r": 0.19825954057371964
+          },
+          "wall_kinematic_defect": {
+            "L": -7.460698725481052e-14,
+            "c": 0.0,
+            "r": 1.6486811915683575e-14
+          },
+          "wall_rates": {
+            "L": -0.11231368261079178,
+            "c": 0.0,
+            "r": 1.111720528930403
+          },
+          "x_s": 0.8375754951734061
+        },
+        "first_4": {
+          "incoming_w_plus": 0.0,
+          "longitudinal": {
+            "L": 1.0453366459969728,
+            "c": 0.0,
+            "r": 0.7730602358135831
+          },
+          "required_transverse": {
+            "L": -0.6777151823217477,
+            "c": 0.0,
+            "r": 0.1982595405737293
+          },
+          "transverse": {
+            "L": -0.677715182321704,
+            "c": 0.0,
+            "r": 0.19825954057371964
+          },
+          "wall_kinematic_defect": {
+            "L": -7.460698725481052e-14,
+            "c": 0.0,
+            "r": 1.6486811915683575e-14
+          },
+          "wall_rates": {
+            "L": -0.11231368261079178,
+            "c": 0.0,
+            "r": 1.111720528930403
+          },
+          "x_s": 0.8375754951734061
+        },
+        "second_2": {
+          "incoming_w_plus": 0.0,
+          "longitudinal": {
+            "L": 1.045336645996973,
+            "c": 0.0,
+            "r": 0.7730602358135831
+          },
+          "required_transverse": {
+            "L": -0.6777151823217475,
+            "c": 0.0,
+            "r": 0.1982595405737293
+          },
+          "transverse": {
+            "L": -0.6777151823216893,
+            "c": 0.0,
+            "r": 0.19825954057371561
+          },
+          "wall_kinematic_defect": {
+            "L": -9.947598300641403e-14,
+            "c": 0.0,
+            "r": 2.3370194668359545e-14
+          },
+          "wall_rates": {
+            "L": -0.11231368261079133,
+            "c": 0.0,
+            "r": 1.111720528930403
+          },
+          "x_s": 0.8375754951734061
+        },
+        "second_4": {
+          "incoming_w_plus": 0.0,
+          "longitudinal": {
+            "L": 1.045336645996973,
+            "c": 0.0,
+            "r": 0.7730602358135831
+          },
+          "required_transverse": {
+            "L": -0.6777151823217475,
+            "c": 0.0,
+            "r": 0.1982595405737293
+          },
+          "transverse": {
+            "L": -0.6777151823216893,
+            "c": 0.0,
+            "r": 0.19825954057371561
+          },
+          "wall_kinematic_defect": {
+            "L": -9.947598300641403e-14,
+            "c": 0.0,
+            "r": 2.3370194668359545e-14
+          },
+          "wall_rates": {
+            "L": -0.11231368261079133,
+            "c": 0.0,
+            "r": 1.111720528930403
+          },
+          "x_s": 0.8375754951734061
+        }
+      },
+      "snapshot": 16,
+      "wall": {
+        "L": -0.18093278473608113,
+        "T": 0.01930243249047511,
+        "c": 0.0,
+        "r": 0.4611858653106452,
+        "s": 0.011718368000994135
+      },
+      "x": 0.41018802603220456
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_radial_reconstructions": 1,
+      "cap_wall": {
+        "A": 0.7463538192750925,
+        "delta": 0.0043896715818572685,
+        "w_minus": 3.970994024720881
+      },
+      "cells": 32,
+      "comparisons": {
+        "derivative_order2": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 3.964977359549593e-06,
+              "rms": 1.114723207138797e-06
+            },
+            "c": {
+              "maximum_absolute": 0.00020380741016801096,
+              "rms": 6.402576122652857e-05
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 0.009825295543509194,
+            "c": 0.07965373016975061,
+            "r": 8.208004013865455e-05
+          }
+        },
+        "derivative_order4": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 5.129222921951282e-06,
+              "rms": 1.3046529333579155e-06
+            },
+            "c": {
+              "maximum_absolute": 0.00020221484329852046,
+              "rms": 7.110092431763317e-05
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 0.00982635107998897,
+            "c": 0.0796537301697515,
+            "r": 8.208004013865455e-05
+          }
+        },
+        "quadrature_first": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 4.580362138462135e-07,
+              "rms": 1.6186059213010685e-07
+            },
+            "c": {
+              "maximum_absolute": 0.0001327190581630333,
+              "rms": 2.6851474434113433e-05
+            },
+            "r": {
+              "maximum_absolute": 7.489004039129554e-08,
+              "rms": 1.7373552183719696e-08
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -6.984462856962637e-07,
+            "c": -1.2896350654045818e-12,
+            "r": -1.4625715305527365e-08
+          }
+        },
+        "quadrature_second": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 8.790259597990513e-07,
+              "rms": 2.412672515439897e-07
+            },
+            "c": {
+              "maximum_absolute": 7.813723148863971e-05,
+              "rms": 1.7160171136851108e-05
+            },
+            "r": {
+              "maximum_absolute": 7.489004039129554e-08,
+              "rms": 1.7373552183719696e-08
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 3.5709019408081133e-07,
+            "c": -1.2887468869848817e-12,
+            "r": -1.4625715305527365e-08
+          }
+        }
+      },
+      "interpretation": "fixed saved physical state and cap reconstruction; endpoint slope sensitivity and prefix sensitivity do not establish the accuracy of the cap state or a new evolution",
+      "radial_jet_change_identity": {
+        "2": -2.7985968577282083e-17,
+        "4": -2.7985968577282083e-17
+      },
+      "results": {
+        "first_2": {
+          "incoming_w_plus": -11.820040183833516,
+          "longitudinal": {
+            "L": 1.0757964898328234,
+            "c": -5.932439690451574,
+            "r": 0.7370090862803584
+          },
+          "required_transverse": {
+            "L": -0.564766178722374,
+            "c": -8.996831410909179e-06,
+            "r": 0.1654912656227834
+          },
+          "transverse": {
+            "L": -0.5578921992549046,
+            "c": -0.04578527134996484,
+            "r": 0.16559539304377693
+          },
+          "wall_kinematic_defect": {
+            "L": -0.019869994956106307,
+            "c": 0.13232136466183794,
+            "r": -0.0003009917820856467
+          },
+          "wall_rates": {
+            "L": -0.556722369977543,
+            "c": -5.932465696783947,
+            "r": 1.2153798217133118
+          },
+          "x_s": 0.647172548234248
+        },
+        "first_4": {
+          "incoming_w_plus": -11.81986498005161,
+          "longitudinal": {
+            "L": 1.0757962046132208,
+            "c": -5.932306971393411,
+            "r": 0.737009011390318
+          },
+          "required_transverse": {
+            "L": -0.5647664203482746,
+            "c": -8.99683185705549e-06,
+            "r": 0.16549126056305052
+          },
+          "transverse": {
+            "L": -0.5578921992549046,
+            "c": -0.04578527134996484,
+            "r": 0.16559539304377693
+          },
+          "wall_kinematic_defect": {
+            "L": -0.019870693402392003,
+            "c": 0.1323213646605483,
+            "r": -0.0003010064078009522
+          },
+          "wall_rates": {
+            "L": -0.5567233536434313,
+            "c": -5.932332977727073,
+            "r": 1.2153797321975561
+          },
+          "x_s": 0.647172548234248
+        },
+        "second_2": {
+          "incoming_w_plus": -11.819994376409644,
+          "longitudinal": {
+            "L": 1.075800454810183,
+            "c": -5.932405067661254,
+            "r": 0.7370090862803584
+          },
+          "required_transverse": {
+            "L": -0.5647648008722815,
+            "c": -8.996831410909179e-06,
+            "r": 0.1654912656227834
+          },
+          "transverse": {
+            "L": -0.5612898600043235,
+            "c": -0.07334129775579679,
+            "r": 0.16556699764096738
+          },
+          "wall_kinematic_defect": {
+            "L": -0.010044699412597113,
+            "c": 0.21197509483158855,
+            "r": -0.00021891174194699214
+          },
+          "wall_rates": {
+            "L": -0.5567144221726936,
+            "c": -5.932431073993627,
+            "r": 1.2153798217133118
+          },
+          "x_s": 0.647172548234248
+        },
+        "second_4": {
+          "incoming_w_plus": -11.820098144476828,
+          "longitudinal": {
+            "L": 1.0758013338361427,
+            "c": -5.932483204892742,
+            "r": 0.737009011390318
+          },
+          "required_transverse": {
+            "L": -0.5647646773377427,
+            "c": -8.996831856748227e-06,
+            "r": 0.16549126056305052
+          },
+          "transverse": {
+            "L": -0.5612898600043235,
+            "c": -0.07334129775579679,
+            "r": 0.16556699764096738
+          },
+          "wall_kinematic_defect": {
+            "L": -0.010044342322403033,
+            "c": 0.2119750948302998,
+            "r": -0.00021892636766229767
+          },
+          "wall_rates": {
+            "L": -0.5567131860565397,
+            "c": -5.932509211226404,
+            "r": 1.2153797321975561
+          },
+          "x_s": 0.647172548234248
+        }
+      },
+      "snapshot": 69,
+      "wall": {
+        "L": -0.191182950601882,
+        "T": 0.09242658885341769,
+        "c": 0.9944908044770217,
+        "r": 0.5004167716137901,
+        "s": 0.05761907490366271
+      },
+      "x": 0.44393586226388215
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_radial_reconstructions": 1,
+      "cap_wall": {
+        "A": 0.7384677810160393,
+        "delta": 0.004477091886125669,
+        "w_minus": 2.3927902430398875
+      },
+      "cells": 32,
+      "comparisons": {
+        "derivative_order2": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 7.3805311018304565e-06,
+              "rms": 2.5689444523866498e-06
+            },
+            "c": {
+              "maximum_absolute": 0.0002388800946135916,
+              "rms": 0.00011236964895257875
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 0.010088651594275522,
+            "c": 0.03135500366943145,
+            "r": 0.00023254059960930995
+          }
+        },
+        "derivative_order4": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 1.1113176181298812e-05,
+              "rms": 3.101125671335682e-06
+            },
+            "c": {
+              "maximum_absolute": 0.00024049904604339645,
+              "rms": 0.00010933352071435279
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 0.010092363561596818,
+            "c": 0.03135500366943145,
+            "r": 0.00023254059960930995
+          }
+        },
+        "quadrature_first": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 1.4879176837290231e-06,
+              "rms": 4.814204686190949e-07
+            },
+            "c": {
+              "maximum_absolute": 3.264257072999044e-05,
+              "rms": 8.521814528381753e-06
+            },
+            "r": {
+              "maximum_absolute": 1.2177593600171122e-07,
+              "rms": 3.323192769201434e-08
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -2.2022084427142374e-06,
+            "c": -6.195932655828074e-12,
+            "r": -2.4656256147892464e-08
+          }
+        },
+        "quadrature_second": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 2.2846322422775955e-06,
+              "rms": 6.323391099938633e-07
+            },
+            "c": {
+              "maximum_absolute": 3.390570688566186e-05,
+              "rms": 9.382656976400183e-06
+            },
+            "r": {
+              "maximum_absolute": 1.2177593600171122e-07,
+              "rms": 3.323192769201434e-08
+            }
+          },
+          "wall_kinematic_change": {
+            "L": 1.509758878581735e-06,
+            "c": -6.195932655828074e-12,
+            "r": -2.4656256147892464e-08
+          }
+        }
+      },
+      "interpretation": "fixed saved physical state and cap reconstruction; endpoint slope sensitivity and prefix sensitivity do not establish the accuracy of the cap state or a new evolution",
+      "radial_jet_change_identity": {
+        "2": 9.215718466126788e-18,
+        "4": 9.215718466126788e-18
+      },
+      "results": {
+        "first_2": {
+          "incoming_w_plus": -122.97594503982654,
+          "longitudinal": {
+            "L": 1.096626526370388,
+            "c": -95.12689794241219,
+            "r": 0.7260219239591523
+          },
+          "required_transverse": {
+            "L": -0.5518209436573756,
+            "c": -2.4577487013424843e-05,
+            "r": 0.15939483726213843
+          },
+          "transverse": {
+            "L": -0.5461710954036934,
+            "c": -0.02738897306470383,
+            "r": 0.15953935854387435
+          },
+          "wall_kinematic_defect": {
+            "L": -0.018144939870083476,
+            "c": 0.08788294659325843,
+            "r": -0.0004641416635104978
+          },
+          "wall_rates": {
+            "L": -0.6755906009108759,
+            "c": -95.12697687497887,
+            "r": 1.2379312014938668
+          },
+          "x_s": 0.6151800411261075
+        },
+        "first_4": {
+          "incoming_w_plus": -122.9759131222657,
+          "longitudinal": {
+            "L": 1.0966250783575509,
+            "c": -95.12686529984146,
+            "r": 0.7260218021832163
+          },
+          "required_transverse": {
+            "L": -0.5518216293660974,
+            "c": -2.4577488942672312e-05,
+            "r": 0.1593948295848407
+          },
+          "transverse": {
+            "L": -0.5461710954036934,
+            "c": -0.02738897306470383,
+            "r": 0.15953935854387435
+          },
+          "wall_kinematic_defect": {
+            "L": -0.01814714207852619,
+            "c": 0.0878829465870625,
+            "r": -0.0004641663197666457
+          },
+          "wall_rates": {
+            "L": -0.6755942511321558,
+            "c": -95.12694423241433,
+            "r": 1.2379310550616747
+          },
+          "x_s": 0.6151800411261075
+        },
+        "second_2": {
+          "incoming_w_plus": -122.97575727020357,
+          "longitudinal": {
+            "L": 1.0966339069014899,
+            "c": -95.12674981214481,
+            "r": 0.7260219239591523
+          },
+          "required_transverse": {
+            "L": -0.5518186312261791,
+            "c": -2.4577487013424843e-05,
+            "r": 0.15939483726213843
+          },
+          "transverse": {
+            "L": -0.5493101188490574,
+            "c": -0.03715208134692061,
+            "r": 0.15946695162987962
+          },
+          "wall_kinematic_defect": {
+            "L": -0.008056288275807955,
+            "c": 0.11923795026268988,
+            "r": -0.00023160106390118784
+          },
+          "wall_rates": {
+            "L": -0.675575793821904,
+            "c": -95.12682874471149,
+            "r": 1.2379312014938668
+          },
+          "x_s": 0.6151800411261075
+        },
+        "second_4": {
+          "incoming_w_plus": -122.97580970909476,
+          "longitudinal": {
+            "L": 1.0966361915337322,
+            "c": -95.1267837178517,
+            "r": 0.7260218021832163
+          },
+          "required_transverse": {
+            "L": -0.5518181611277041,
+            "c": -2.4577488942672312e-05,
+            "r": 0.1593948295848407
+          },
+          "transverse": {
+            "L": -0.5493101188490574,
+            "c": -0.03715208134692061,
+            "r": 0.15946695162987962
+          },
+          "wall_kinematic_defect": {
+            "L": -0.008054778516929373,
+            "c": 0.11923795025649395,
+            "r": -0.00023162572015733573
+          },
+          "wall_rates": {
+            "L": -0.6755719994307832,
+            "c": -95.12686265042457,
+            "r": 1.2379310550616747
+          },
+          "x_s": 0.6151800411261075
+        }
+      },
+      "snapshot": 79,
+      "wall": {
+        "L": -0.19508243132139516,
+        "T": 0.10810658394414803,
+        "c": 0.6181912259311204,
+        "r": 0.5082305728981275,
+        "s": 0.06771109908499778
+      },
+      "x": 0.45030337853401
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "cap_radial_reconstructions": 1,
+      "cap_wall": {
+        "A": 0.6965265582035248,
+        "delta": 0.003036680484276105,
+        "w_minus": -0.029516778459545517
+      },
+      "cells": 32,
+      "comparisons": {
+        "derivative_order2": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 5.8310972480990486e-05,
+              "rms": 2.6313073723933368e-05
+            },
+            "c": {
+              "maximum_absolute": 0.0004303542900213411,
+              "rms": 0.0002657385579540053
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -0.004474331965337086,
+            "c": 0.0002454477602860547,
+            "r": 0.00018417171950446676
+          }
+        },
+        "derivative_order4": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 5.899768468031752e-05,
+              "rms": 2.6392555524989905e-05
+            },
+            "c": {
+              "maximum_absolute": 0.00043073920644344683,
+              "rms": 0.0002658324762163248
+            },
+            "r": {
+              "maximum_absolute": 0.0,
+              "rms": 0.0
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -0.004473645252540681,
+            "c": 0.0002454477602860547,
+            "r": 0.00018417171950446676
+          }
+        },
+        "quadrature_first": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 1.5071703275415516e-06,
+              "rms": 6.897584594416081e-07
+            },
+            "c": {
+              "maximum_absolute": 5.308203353853597e-06,
+              "rms": 2.5254565673617037e-06
+            },
+            "r": {
+              "maximum_absolute": 2.1617084489111704e-07,
+              "rms": 1.114446970289469e-07
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -1.0122873774776053e-06,
+            "c": -9.002964606458219e-12,
+            "r": -3.102117396291959e-08
+          }
+        },
+        "quadrature_second": {
+          "longitudinal": {
+            "L": {
+              "maximum_absolute": 1.5054294719707428e-06,
+              "rms": 6.941929875006654e-07
+            },
+            "c": {
+              "maximum_absolute": 5.17984360898574e-06,
+              "rms": 2.442077875211137e-06
+            },
+            "r": {
+              "maximum_absolute": 2.1617084489111704e-07,
+              "rms": 1.114446970289469e-07
+            }
+          },
+          "wall_kinematic_change": {
+            "L": -3.255745810726296e-07,
+            "c": -9.002964606458219e-12,
+            "r": -3.102117396291959e-08
+          }
+        }
+      },
+      "interpretation": "fixed saved physical state and cap reconstruction; endpoint slope sensitivity and prefix sensitivity do not establish the accuracy of the cap state or a new evolution",
+      "radial_jet_change_identity": {
+        "2": 6.735605996566196e-17,
+        "4": 6.735605996566196e-17
+      },
+      "results": {
+        "first_2": {
+          "incoming_w_plus": 0.03192691554270142,
+          "longitudinal": {
+            "L": 1.2106211266615177,
+            "c": 0.0029520148675238177,
+            "r": 0.6685994537290066
+          },
+          "required_transverse": {
+            "L": -0.43168525583995654,
+            "c": -2.2074388910018348e-05,
+            "r": 0.13153459552049865
+          },
+          "transverse": {
+            "L": -0.433142173261311,
+            "c": 9.90000199655759e-06,
+            "r": 0.13159286062479217
+          },
+          "wall_kinematic_defect": {
+            "L": 0.008145945643745822,
+            "c": -0.00017877584995496955,
+            "r": -0.00032577300919423013
+          },
+          "wall_rates": {
+            "L": -1.2030260559012222,
+            "c": 0.0028285921055029323,
+            "r": 1.4040382985647992
+          },
+          "x_s": 0.4731088223325276
+        },
+        "first_4": {
+          "incoming_w_plus": 0.03192209754584643,
+          "longitudinal": {
+            "L": 1.2106208603642437,
+            "c": 0.002947174715960149,
+            "r": 0.6685993202915068
+          },
+          "required_transverse": {
+            "L": -0.43168543688942335,
+            "c": -2.2074390520215194e-05,
+            "r": 0.1315345899723044
+          },
+          "transverse": {
+            "L": -0.433142173261311,
+            "c": 9.90000199655759e-06,
+            "r": 0.13159286062479217
+          },
+          "wall_kinematic_defect": {
+            "L": 0.008144933356368345,
+            "c": -0.00017877585895793415,
+            "r": -0.00032580403036819305
+          },
+          "wall_rates": {
+            "L": -1.2030273344858737,
+            "c": 0.002823751944936299,
+            "r": 1.4040381341061254
+          },
+          "x_s": 0.4731088223325276
+        },
+        "second_2": {
+          "incoming_w_plus": 0.03235070417883798,
+          "longitudinal": {
+            "L": 1.2106794376339987,
+            "c": 0.003377733311497901,
+            "r": 0.6685994537290066
+          },
+          "required_transverse": {
+            "L": -0.4316748271014078,
+            "c": -2.2074388910018426e-05,
+            "r": 0.13153459552049865
+          },
+          "transverse": {
+            "L": -0.43233150198809384,
+            "c": -3.39987831945443e-05,
+            "r": 0.13155992117265222
+          },
+          "wall_kinematic_defect": {
+            "L": 0.003671613678408736,
+            "c": 6.667191033108512e-05,
+            "r": -0.00014160128968976338
+          },
+          "wall_rates": {
+            "L": -1.202909435558488,
+            "c": 0.0032543105494770154,
+            "r": 1.4040382985647992
+          },
+          "x_s": 0.4731088223325276
+        },
+        "second_4": {
+          "incoming_w_plus": 0.03234572839162614,
+          "longitudinal": {
+            "L": 1.210679858048924,
+            "c": 0.0033727346200047685,
+            "r": 0.6685993202915068
+          },
+          "required_transverse": {
+            "L": -0.4316748853310229,
+            "c": -2.2074390520215272e-05,
+            "r": 0.1315345899723044
+          },
+          "transverse": {
+            "L": -0.43233150198809384,
+            "c": -3.39987831945443e-05,
+            "r": 0.13155992117265222
+          },
+          "wall_kinematic_defect": {
+            "L": 0.0036712881038276635,
+            "c": 6.667190132812051e-05,
+            "r": -0.0001416323108637263
+          },
+          "wall_rates": {
+            "L": -1.202909340718144,
+            "c": 0.003249311848980918,
+            "r": 1.4040381341061254
+          },
+          "x_s": 0.4731088223325276
+        }
+      },
+      "snapshot": 128,
+      "wall": {
+        "L": -0.22433779082800664,
+        "T": 0.19674906867666733,
+        "c": -0.008741651783233405,
+        "r": 0.5491430727079243,
+        "s": 0.12557849537131738
+      },
+      "x": 0.4815042082576364
+    }
+  ],
+  "execution": {
+    "cap_pullback_points": 39474,
+    "cap_radial_reconstructions": 4,
+    "cpu_seconds": 0.859375,
+    "crossed_stage_points": 9436,
+    "evaluated_points": 48910,
+    "exterior_prefix_evaluations": 16,
+    "hash_authentication_passes": 2,
+    "recursive_validations": 0,
+    "source_integrations": 0,
+    "time_steps": 0
+  },
+  "input": {
+    "authenticated_source_files": 51,
+    "hashed_bytes": 27081875,
+    "manifest_sha256": "7a8b5b6215dacb7a554c2c9b60e14f698217d944859604312775b9aeb48d3ff7",
+    "path": "results/development/nsc-atlas-compatible-evolution-v1/compatible.json",
+    "recursive_validation": false,
+    "sha256": "a7e27b25ce171951415f97b64e055fd93062e3c21cd709c19c99c7543167c434"
+  },
+  "limits": {
+    "cpu_seconds": 30.0,
+    "evaluated_points": 100000
+  },
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-compatible-transport-audit-v1",
+  "scope": "saved-state mechanism audit; no new physical trajectory, convergence result or uniform error bound",
+  "settings": {
+    "cap_quadrature_order": 4,
+    "derivative_methods": [
+      "first",
+      "second"
+    ],
+    "exterior_case": 3,
+    "exterior_cuts": [
+      16,
+      69,
+      79,
+      128
+    ],
+    "prefix_orders": [
+      2,
+      4
+    ],
+    "second_derivative_method": "numpy.gradient(edge_order=2) on departure values",
+    "zero_cases": [
+      0,
+      1
+    ]
+  }
+}

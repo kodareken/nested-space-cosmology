@@ -123,7 +123,7 @@ now combines the original source, ordered exterior integrals, a moving
 wall and the regular polar cap. Source lifting retains the steep pulse
 analytically. The completed rectangle supplies an independent overlap
 control; the common evolution uses the full active exterior up to the
-actual wall. The [compatible five-case successor](current-result.md#compatible-cap-and-vacuum-departures-16-october-2026)
+actual wall. The [compatible five-case successor](current-result.md#compatible-coupled-evolution-16-october-2026)
 completes that finite window with exact-vacuum departures and one cap scalar
 primitive. It removes the quiet geometric layer and zero-amplitude outgoing
 wave error. The finite response remains nonzero; the next accuracy
@@ -648,11 +648,11 @@ adding a coupling is a separate model and changes the local response problem.
 ## Borrowed sources and remaining connections
 
 The complete versioned URLs and reading boundaries live in the generated
-atlas source records. Key anchors are [Barrabes–Frolov](https://arxiv.org/html/hep-th/9511136v1)
+atlas source records. Key anchors are [Barrabesâ€“Frolov](https://arxiv.org/html/hep-th/9511136v1)
 for one-hole branching and null shells, [Emparan et al.](https://arxiv.org/html/2012.07821v2)
 for a controlled connected-mouth alternative, and [Poplawski v2](https://arxiv.org/html/2007.11556v2)
 for the anisotropic spin-fluid hypothesis and its explicit geometric limitation.
-The exact Kantowski–Sachs metric is not a finished route to the required S3
+The exact Kantowskiâ€“Sachs metric is not a finished route to the required S3
 geometry. The connected-mouth source domain cannot be silently replaced with
 the exploratory one-Dirac-field neutral-child source.
 The one-hole l>a disconnection threshold specifically uses the
@@ -681,7 +681,7 @@ with any displayed child. No existing paused numerical campaign is resumed.
 
 ## Retained parent, wall and clock calculations
 
-The v2–v3 additions have separate domains. Brill–Lindquist supplies a shared
+The v2â€“v3 additions have separate domains. Brillâ€“Lindquist supplies a shared
 time-symmetric vacuum slice,
 
 $$

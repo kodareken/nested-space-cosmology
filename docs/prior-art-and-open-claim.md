@@ -1,5 +1,71 @@
 # Prior art and admission of new research
 
+## Characteristic background and frozen-stage transport diagnosis, 16 October 2026
+
+The compatible record removes the vacuum and field-primitive defects but
+still spreads the known incoming cap pulse. Reuse the exact de Sitter
+reduced-wave formula and the same nonlinear radial constraints. Define one
+finite C2 quintic Hermite profile `F` from explicit values and first/second
+jets. Its analytic derivatives belong to that same interpolant. The
+background `chi0=F(T+atanh r)-F(T-atanh r)` has exact physical-cell
+integrals; evolve departures in those integrals and retain the full
+finite incoming boundary discrepancy. The profile is a computational
+subtraction, not an extra prescribed finite wall value.
+
+Implement the background, conservative departure balances, and total-field
+cap constraints with quadrature split at cell boundaries and mapped
+profile knots. Include all baseline/departure cross terms in the energy
+source. Operator controls use manufactured fields, known regular-axis
+limits, exact incoming propagation, moving-wall chains and independent
+radial integration; the profile suite has a cumulative 30-process-CPU-second
+and 20,000-point limit. The first cap controls exposed negative nodal mass
+from the Gauss antiderivative on a narrow positive-energy pulse. The
+corrected cap suite uses direct positive-weight partial integrals, including
+the independent order-4/8/16 comparison. Its additional partial quadrature
+has a fixed 30-process-CPU-second/100,000-point allowance. No clipping or
+physical run is used to repair the failed numerical representation.
+A failed control identifies a correction before any
+physical successor is designed. No new prepared-source evolution is
+admitted here.
+
+Separately, authenticate the compatible payload and its 51 source/input
+hashes, without replaying its source or time solve. A frozen-data audit has
+one 30-process-CPU-second/100,000-point allowance. It compares both saved
+zero-case cap primitives with incoming-characteristic pullback of their own
+wall histories, keeping linear/PCHIP interpolation sensitivity. At four
+fixed finite 32-cell saved cuts (indices 16, 69, 79 and 128), cross first-
+and second-order departure derivatives with prefix quadrature orders two
+and four. Reconstruct the cap once per cut and hold it fixed in the four
+crossed evaluations. Record outgoing jets, inferred incoming jets and wall
+kinematic defects. The closed polynomial prefix control at 9/17/33 nodes
+uses a separate 30-second/20,000-point operator allowance. Stop at the
+first domain, finite-arithmetic or cumulative-budget failure.
+
+This audit decides whether the exterior discrepancy chiefly changes with
+the transverse derivative or prefix quadrature on the same state. It does
+not measure the error in that state or in the frozen cap. The background
+controls decide whether the cap can carry the known wave without numerical
+spreading while leaving the nonlinear correction free. These decisions
+precede another coupled run or a central-arrival extension.
+
+**Outcome:** the frozen-state audit completes with 48,910 points and
+0.859375 process CPU seconds. Its [record](../results/development/nsc-atlas-compatible-transport-audit-v1.json)
+retains 51 authenticated input bindings, both cap pullbacks and the 16
+crossed exterior evaluations. Geometric wall mismatches chiefly respond
+to the transverse derivative choice; scalar mismatches do not uniformly
+improve. This does not select a new exterior evolution scheme.
+
+The characteristic profile and corrected cap operators pass 31 controls:
+861 profile points and 41,332 cap points, using .046875 and .328125 process
+CPU seconds respectively in the combined check. The narrow manufactured
+pulse is smaller than a cap cell. Its wall-mass coefficient errors against
+independent radial ODE integration are `.0291139`, `6.43643e-10` and
+`5.57581e-11` at quadrature orders 4, 8 and 16. The corresponding internal
+gamma consistency differences are `1.29328e-4`, `1.29928e-6` and
+`3.28205e-14`. Both the exact matched background and a distinct nonzero
+incoming correction are tested. These controls validate the new regional
+representation; they are not a new result for the original preparation.
+
 ## Compatible reduced cap and vacuum departures, 16 October 2026
 
 The [first coupled window](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)

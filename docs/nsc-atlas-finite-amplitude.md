@@ -1759,7 +1759,7 @@ uses the same preparation, amplitude and interval as the first coupled
 window. Its 16/32-cell, 256-step cases and separate finite 32-cell,
 512-step case all finish. Creation and authentication together cost
 64.40625 process CPU seconds and 5,371,737 charged points. The
-[current result](current-result.md#compatible-cap-and-vacuum-departures-16-october-2026)
+[current result](current-result.md#compatible-coupled-evolution-16-october-2026)
 contains the response comparisons.
 
 Vacuum geometry and wall clocks now agree with their exact trajectories
@@ -1811,6 +1811,92 @@ transport and its gradient-squared gravitational source. It must retain
 the single common wall scalar and the original action. Extending the
 domain or increasing every grid without addressing this identified
 leading-wave error would not resolve the present uncertainty.
+
+#### Carrying a characteristic background and evolving its correction
+
+The [background adapter](../src/recursive_horizons/nsc_atlas_characteristic_background.py)
+defines one finite C2 quintic Hermite profile `F` from its values and first
+two derivatives. All evaluated jets differentiate that same interpolant.
+Quiet continuation below its first label requires matching zero value and
+both derivatives; no upper extrapolation is supplied. With
+`xi=atanh(r)` and `A0=1-r^2`, define
+
+$$
+\chi_0=F(T+\xi)-F(T-\xi),\qquad
+p_0=\frac{F'(T+\xi)-F'(T-\xi)}{A_0},\qquad
+q_0=\frac{F'(T+\xi)+F'(T-\xi)}{A_0}.
+$$
+
+Both cell integrals have exact endpoint primitives:
+`Iq0=[F(T+xi)-F(T-xi)]` and `Ip0=[F(T+xi)+F(T-xi)]`.
+Reflection retains `chi0(0)=p0(0)=0`, with `f0(0)=2F'(T)` and
+`Pi0(0)=2F''(T)`. Piecewise C2 interpolation supplies these finite axis
+limits, not arbitrary smoothness: a jump in the third derivative can
+leave a radial derivative cusp in `Pi0` at a knot-centre event. The present
+physical window has a quiet centre; later centre-regularity claims must
+state their required profile smoothness.
+
+The [departure cap](../src/recursive_horizons/nsc_atlas_background_cap.py)
+reuses the conservative reconstruction for `dp=p-p0` and `dq=q-q0`.
+It evolves their physical cell integrals. Subtracting the exact background
+balances gives
+
+$$
+\begin{aligned}
+\partial_x\Delta I_p&=
+ [T_x(B\,dq+(B-A_0)q_0)+R_xy\,dp]_{\rm faces}
+ -T_x\int S\,dr,\\
+\partial_x\Delta I_q&=
+ [T_x(B\,dp+(B-A_0)p_0)+R_xy\,dq]_{\rm faces},\\
+S&=\alpha e^\delta r\left[
+ (2n/r^3-P_{\rm diff})f+(U_\alpha-2f)/\alpha\right],\qquad
+P_{\rm diff}=(P-3)/\alpha.
+\end{aligned}
+$$
+
+The last quotients use their continuous limits. The total scalar is
+`chi=chi0+integral(dq dr)` everywhere, including the wall. The hybrid map
+continues to supply the total incoming characteristic. Its departure is
+`R*w_plus+f_wall-(p0+q0)_wall`, which generally is nonzero. Consequently
+choosing `F` does not impose a second boundary datum or suppress a finite
+waveform correction. The total wall rate restores
+`T_x*A0*p0+R_x*q0` before converting the canonical field to `c`.
+
+The metric uses total `f,Pi,Phi`, including their background/departure
+cross terms. Split the radial integration at every cell edge and mapped
+profile knot. On each panel integrate
+
+$$
+\gamma'=a,\quad n'+an=b,\qquad
+a=\alpha r(\Pi^2+\Phi^2)/2,\quad
+b=r^2[P_{\rm diff}/2+(1-r^2)(\Pi^2+\Phi^2)/4].
+$$
+
+Let `G_poly` be the Gauss polynomial antiderivative approximation to
+`integral(a)` from the panel's left edge. At each target node and endpoint,
+use a separate positive-weight Gauss partial quadrature `Q` of the actual
+total fields:
+
+$$
+G_t=Q_{[r_l,r_t]}(a),\qquad
+n_t=e^{-G_t}n_l+Q_{[r_l,r_t]}(e^{G_{\rm poly}-G_t}b),\qquad
+\gamma_t=\gamma_l+G_t.
+$$
+
+The shifted exponential avoids an unnecessary large intermediate factor.
+The factors restart at each panel without changing its prefix values.
+Reconstruct `m=r^3/2+alpha*n`,
+`delta=-log(cosh(sqrt(alpha/6)*f_center))+gamma` and `A=1-2m/r`.
+
+The first implementation integrated the mass source through an
+antiderivative matrix. A narrow-pulse control exposed a negative nodal
+mass contribution despite positive energy. The positive-weight partial
+quadrature above removes that defect without clipping: `a,b,n_l>=0`
+give `G_t,n_t>=0`. Separate partial quadratures do not by themselves
+guarantee monotonicity between nodes. The difference between `G_poly`
+and direct `G_t` remains a reported quadrature-consistency diagnostic.
+Independent radial integration and order-4/8/16 narrow-pulse comparisons
+test accuracy; constructed node and primitive identities cannot do so.
 
 ### Central clock in general null labels
 

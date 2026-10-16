@@ -60,7 +60,7 @@ cuts, with separate incoming radial/ray refinements and inherited exterior
 sensitivities. These are finite-domain perturbative coefficients. The
 [exact nonlinear equations](docs/nsc-atlas-finite-amplitude.md) specify the
 same model's source, smooth evolution and material interface. The
-[compatible coupled window](docs/current-result.md#compatible-cap-and-vacuum-departures-16-october-2026)
+[compatible coupled window](docs/current-result.md#compatible-coupled-evolution-16-october-2026)
 now evolves the exterior, moving wall and regular cap together, preserving
 the exact vacuum and eliminating the zero-amplitude outgoing-wave error.
 Spatial and time comparisons retain a nonzero geometric and scalar response.
