@@ -123,7 +123,7 @@ def build_background_profile(walls, wall_rates, *, alpha, budget):
     }
 
 
-def build_prepared_background(cap, *, quiet_tolerances=(0.,0.,0.)):
+def build_prepared_background(cap, *, quiet_tolerances=(0.,0.,0.),enrich_ordinary_pieces=False):
     """Retain the existing prepared field, with its mathematical quartic front.
 
     Existing field cuts and geometry knots supply the labels; there is no
@@ -137,12 +137,17 @@ def build_prepared_background(cap, *, quiet_tolerances=(0.,0.,0.)):
     Their measured discrepancies remain in the result. The rounded source
     front is recorded relative to the exact root of the binary endpoints.
     cap.budget owns every query and all adapter accounting.
+    Opt-in enrichment queries one interior value/first jet per ordinary
+    active piece and preserves all knots and endpoint jets. The actual
+    rounded query labels remain inputs to the polynomial and its certificate.
     """
     from .nsc_atlas_cap_field import CapLeadingField
     from .nsc_atlas_cap_background_jets import RetainedCapBackground
     from .nsc_atlas_characteristic_background import _array,_budget
     if not isinstance(cap,CapLeadingField):
         raise ValueError('prepared background requires the existing CapLeadingField')
+    if type(enrich_ordinary_pieces) is not bool:
+        raise ValueError('enrichment choice must be boolean')
     budget=_budget(cap.budget)
     before=budget.kernel_values
     tolerances=_array(quiet_tolerances,'quiet tolerances')
@@ -188,11 +193,27 @@ def build_prepared_background(cap, *, quiet_tolerances=(0.,0.,0.)):
     supplied=raw.copy();supplied[:,:index+1]=0.
     background=RetainedCapBackground(labels,*supplied,
         onset=dict(index=index,quartic_coefficient=quartic))
+    original_inputs=background.inputs;enrichment=None
+    if enrich_ordinary_pieces:
+        indices=np.arange(index+1,len(labels)-1,dtype=int)
+        if len(indices):
+            queries=labels[indices]+(labels[indices+1]-labels[indices])/2
+            extra=cap.profile(queries)
+            background=RetainedCapBackground(labels,*supplied,
+                onset=dict(index=index,quartic_coefficient=quartic),
+                interior_jets=dict(indices=indices,labels=queries,values=extra['f'],first=extra['f_prime']))
+            budget.check(128*len(indices))
+            midpoint_rounding=max(abs(Fraction(float(q))-(Fraction(float(labels[i]))+Fraction(float(labels[i+1])))/2)
+                                  for i,q in zip(indices,queries))
+        else:
+            midpoint_rounding=Fraction(0)
+        enrichment=dict(ordinary_pieces=len(indices),onset_piece_unchanged=True,
+            maximum_query_midpoint_roundoff=float(midpoint_rounding),polynomial_degree=7)
     jet=background.profile.jet(labels,budget=budget)
     defects=np.array([np.max(abs(jet[k]-supplied[i])) for i,k in enumerate(('F','F_prime','F_second'))])
     exact_front=(3*Fraction(float(Va))+Fraction(float(Vb)))/4
     budget.check(6*len(V))
-    return dict(background=background,source_null_labels=V.copy(),
+    result=dict(background=background,source_null_labels=V.copy(),
         physical_input_domain=dict(cap.domain),
         onset=dict(index=index,label=float(labels[index]),source_V=float(edges[0]),arrival_rate=qV,
             quartic_coefficient=quartic,source_V_roundoff=float(Fraction(float(edges[0]))-exact_front)),
@@ -202,3 +223,6 @@ def build_prepared_background(cap, *, quiet_tolerances=(0.,0.,0.)):
         curvature_method='CapLeadingField.profile(second=True): differentiated continuum integral and arrival chain',
         charged_evaluations=budget.kernel_values-before,numerical_error_enclosure=False,
         scope='prepared leading field retained as a computational C2 history with its analytic quartic onset; no finite-amplitude evolution or interpolation error enclosure')
+    if enrich_ordinary_pieces:
+        result.update(original_history_inputs=original_inputs,enrichment=enrichment)
+    return result

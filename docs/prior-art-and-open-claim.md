@@ -2337,6 +2337,50 @@ samples / 0.125 CPU seconds. The degree-six derivative blind spot and the
 general interior-label degree-seven reconstruction are verified independently
 of the production interpolation code.
 
+Implementation verification admits **2 million counted values / 60 active
+CPU seconds** for the new independent runtime controls: rational degree-seven
+reproduction at a non-midpoint interior label, unchanged quiet/onset pieces,
+C2 joins, input copies and rejection, original-input Arb reconstruction,
+third moments, one independent alpha-zero mass integral and both metric
+certificates. A zero-endpoint interior bubble must be visible to each
+certificate, and the quintic total-field transfer must reject it. The
+prepared-adapter synthetic control uses its existing 100,000-value / 20-second
+budget and checks one additional profile query without source integration.
+Run affected existing controls under their unchanged per-module budgets.
+Stop and diagnose any failure; do not use physical evolution as a unit test.
+
+**Implementation controls:** six new and 105 affected existing controls pass
+in 112 development executions, with 2,428,045 counted values / 4.015625
+active CPU seconds. One new forward-velocity assertion was too strict for
+the existing ODE absolute error (`6.04190e-13` versus `3e-13`). The corrected
+control tests the independent weighted-adjoint contraction against the exact
+zero identity, retaining the forward/adjoint discrepancy separately. No
+production tolerance or operator changed. A mistyped test filename caused
+one collection failure before any calculation. Forty source/storage controls
+also pass after updating the two existing implementation-successor hashes;
+all original receipts remain unchanged.
+
+### First enriched leading endpoint comparison, 17 October 2026
+
+Run the existing one-event checker once with `--enrich-history` and
+`--audit-dense-piece`, after freezing its source. The original 257/257
+prepared field, source geometry, 393 knots, onset coefficient, reference
+endpoint, basis, exterior cells and zero-coupling reference state stay fixed.
+Query one value/first pair at the binary midpoint of each ordinary active
+history interval; these are representation data, not new source parameters.
+Authenticate the original four nodal arrays against the old history hash
+and record the enriched identity separately. Keep the old comparison files.
+
+Use **10 million charged values / 60 process-CPU seconds**, including one
+preparation, interior queries, certificate and one common stage. The local
+decision limits, in the existing dimensionless x normalization, are
+`1e-10` for history material-rate and conformal wall-gap differences,
+`1e-11` for prepared/prefix rate and density-force L2 differences, and
+`1e-12` for the scalar velocity channel. These are diagnostic decision
+limits, not continuum error bounds. A miss stops with its measured values;
+do not retune to pass. No grid scan, extra time trajectory or change to the
+physical model is admitted by this comparison.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

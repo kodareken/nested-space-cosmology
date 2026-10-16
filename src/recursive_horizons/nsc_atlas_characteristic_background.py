@@ -3,7 +3,8 @@
 This is a computational subtraction profile, not a new physical source or
 an imposed finite-amplitude wall waveform. Values and all derivatives come
 from the same Hermite profile. An optional degree-seven first active piece
-preserves a supplied quartic onset; other pieces are quintic. A C2 knot gives finite
+preserves a supplied quartic onset. Optional interior value/first jets enrich
+selected ordinary pieces to degree seven; unselected pieces stay quintic. A C2 knot gives finite
 regular centre first jets; jumps of its third derivative need not give a
 radially differentiable Pi there. No arbitrary smoothness claim is made.
 """
@@ -49,6 +50,46 @@ def _onset_bernstein(quartic, value, first, second, width):
             value-2*width*first/7+width*width*second/42,value-width*first/7,value]
 
 
+def _enriched_bernstein(v0,d0,s0,v1,d1,s1,h,eta,value,first):
+    """Degree-seven endpoint/interior controls in float, rational or Arb arithmetic."""
+    base=[v0,v0+h*d0/5,v0+2*h*d0/5+h*h*s0/20,
+          v1-2*h*d1/5+h*h*s1/20,v1-h*d1/5,v1]
+    def evaluate(row):
+        while len(row)>1: row=[(1-eta)*a+eta*b for a,b in zip(row[:-1],row[1:])]
+        return row[0]
+    dv=value-evaluate(base.copy())
+    dx=first-evaluate([5*(b-a)/h for a,b in zip(base[:-1],base[1:])])
+    psi=eta**3*(1-eta)**3;psi_prime=3*eta**2*(1-eta)**2*(1-2*eta)
+    a=dv/psi;b=(h*dx-psi_prime*a)/psi
+    controls=base
+    for degree in (5,6):
+        controls=[controls[0],*[(i*controls[i-1]+(degree+1-i)*controls[i])/(degree+1)
+            for i in range(1,degree+1)],controls[-1]]
+    controls[3]+=(a-eta*b)/35
+    controls[4]+=(a+(1-eta)*b)/35
+    return controls
+
+
+def _interior_data(value,labels,onset):
+    if value is None: return None
+    names={'indices','labels','values','first'}
+    if not isinstance(value,Mapping) or set(value)!=names:
+        raise ValueError('interior jets require indices, labels, values and first')
+    data={key:_array(value[key],'interior '+key).copy() for key in names}
+    indices=data['indices']
+    if (any(row.ndim!=1 or row.shape!=indices.shape for row in data.values())
+            or np.any(indices!=np.floor(indices)) or np.any(np.diff(indices)<=0)
+            or np.any(indices<0) or np.any(indices>=len(labels)-1)):
+        raise ValueError('interior jets require matching rows and ordered distinct interval indices')
+    indices=indices.astype(int);data['indices']=indices
+    if (np.any(data['labels']<=labels[indices]) or np.any(data['labels']>=labels[indices+1])):
+        raise ValueError('interior query must lie strictly inside its own interval')
+    if onset is not None and np.any(indices<=onset['index']):
+        raise ValueError('interior jets cannot replace the certified quiet prefix or onset piece')
+    for row in data.values(): row.flags.writeable=False
+    return data
+
+
 class CharacteristicProfile:
     """Finite C2 Hermite data, with optional quiet extension and quartic onset.
 
@@ -61,9 +102,12 @@ class CharacteristicProfile:
     active interval by a degree-seven piece. All supplied jets up to its
     left endpoint must be zero; its fourth right derivative is 24 times
     the coefficient. Preceding intervals remain exactly quiet.
+    Optional interior_jets={indices,labels,values,first} adds one supplied
+    value/first pair per selected ordinary interval at its actual binary label.
+    End jets remain unchanged. Quiet/onset replacement is rejected.
     """
 
-    def __init__(self, labels, values, derivatives, second_derivatives, *, onset=None):
+    def __init__(self, labels, values, derivatives, second_derivatives, *, onset=None,interior_jets=None):
         arrays = [_array(v, name) for v, name in (
             (labels, "labels"), (values, "values"), (derivatives, "derivatives"),
             (second_derivatives, "second_derivatives"))]
@@ -86,6 +130,7 @@ class CharacteristicProfile:
             if any(np.any(row[:index+1]!=0.) for row in (values,derivatives,second_derivatives)):
                 raise ValueError('onset and preceding supplied jets must be exactly quiet')
             self._onset=dict(index=int(index),quartic_coefficient=float(quartic))
+        self._interior=_interior_data(interior_jets,labels,self._onset)
         try:
             with np.errstate(over="raise", divide="raise", invalid="raise", under="ignore"):
                 data = np.column_stack((values, derivatives, second_derivatives))
@@ -103,6 +148,16 @@ class CharacteristicProfile:
                     if coefficients[3,i]==0.:
                         raise ValueError('onset quartic coefficient is unresolved in power coordinates')
                     self._spline=PPoly(coefficients,labels,extrapolate=False)
+                if self._interior is not None:
+                    coefficients=np.pad(self._spline.c,((8-len(self._spline.c),0),(0,0)))
+                    for j,i in enumerate(self._interior['indices']):
+                        h=labels[i+1]-labels[i];eta=(self._interior['labels'][j]-labels[i])/h
+                        controls=np.array(_enriched_bernstein(values[i],derivatives[i],second_derivatives[i],
+                            values[i+1],derivatives[i+1],second_derivatives[i+1],h,eta,
+                            self._interior['values'][j],self._interior['first'][j]),dtype=float)
+                        piece=PPoly.from_bernstein_basis(BPoly(controls[:,None],labels[i:i+2],extrapolate=False))
+                        coefficients[:,i]=piece.c[:,0]
+                    self._spline=PPoly(coefficients,labels,extrapolate=False)
         except (FloatingPointError, OverflowError) as error:
             raise ValueError("nonfinite characteristic profile coefficients") from error
         if not np.all(np.isfinite(self._spline.c)):
@@ -118,6 +173,11 @@ class CharacteristicProfile:
     def onset(self):
         """Copy of the one-sided onset specification, if supplied."""
         return None if self._onset is None else self._onset.copy()
+
+    @property
+    def interior_jets(self):
+        """Original optional value/first jets at their actual binary labels."""
+        return None if self._interior is None else {key:row.copy() for key,row in self._interior.items()}
 
     @property
     def breakpoints(self):

@@ -545,6 +545,18 @@ its difference from the prepared RHS jet and retained history derivative.
 It retains those two small polynomial pieces, not a trajectory. The
 physical derivative interface and evolution operator remain unchanged.
 
+The first enriched reference comparison uses the unchanged source and knot
+grid, with additional ordinary-piece value/first jets:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_prepared_endpoint_connection.py --enrich-history --audit-dense-piece --output results/summaries/nsc-atlas-prepared-endpoint-enriched-v1.json
+```
+
+It separately authenticates the original nodal history and records the new
+input identity. Declared local decision limits are enforced in the receipt.
+This command also has a 10-million-value / 60-second budget and takes no
+time step. Existing creation-only output files are preserved.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

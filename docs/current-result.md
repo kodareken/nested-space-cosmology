@@ -144,6 +144,12 @@ derivative checks can miss this error and how an interior value/first-jet
 degree-seven correction preserves all endpoint jets. That representation
 must next be carried consistently through its input certificates.
 
+That optional representation now passes exact-polynomial, original-input
+Arb, moment and mass checks, with the quiet/onset pieces preserved. Six new
+and 105 existing controls pass (112 development executions). The first
+enriched physical-source comparison is restricted to the same single
+zero-coupling reference event, with its limits fixed before execution.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

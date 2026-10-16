@@ -62,6 +62,10 @@ def audit_dense_piece(field,background,t,V,retained_first,direct_first,*,budget)
     dense_first=(float(gp)+polynomial['first']/dV)/qV
     label=float(field.geometry['arrival'](V));inputs=background.inputs
     i=min(int(np.searchsorted(inputs['labels'],label,side='right')-1),len(inputs['labels'])-2)
+    interior=background.interior_jets;interior_row=None
+    if interior is not None:
+        selected=np.flatnonzero(interior['indices']==i)
+        if len(selected): interior_row={key:value[int(selected[0])].item() for key,value in interior.items()}
     a=retained_first-dense_first;b=dense_first-direct_first
     budget.check(80+8*piece.y_old.size)
     return dict(scipy_version=scipy.__version__,rk_source_sha256=hashlib.sha256(Path(rk.__file__).read_bytes()).hexdigest(),
@@ -71,7 +75,8 @@ def audit_dense_piece(field,background,t,V,retained_first,direct_first,*,budget)
         dense_first_q=dense_first,retained_minus_dense_first_q=a,dense_minus_rhs_first_q=b,
         first_split_identity=(retained_first-direct_first)-a-b,
         history_interval=i,onset_interval=background.onset['index'],
-        history_input={key:value[i:i+2].copy() for key,value in inputs.items()},
+        history_input={key:inputs[key][i:i+2].copy() for key in ('labels','values','first','second')},
+        history_interior_jet=interior_row,
         history_power_coefficients=background.profile._spline.c[:,i].copy(),
         scope='analytic derivative of the numerical dense polynomial; not a replacement physical field jet')
 
@@ -80,6 +85,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--audit-dense-piece',action='store_true',help='also split the one local history derivative error against its dense polynomial')
+    parser.add_argument('--enrich-history',action='store_true',help='use the separately admitted interior-jet enrichment of ordinary pieces')
     args=parser.parse_args()
     if args.output.exists(): raise ValueError('preserve the existing comparison')
     if not args.output.parent.is_dir(): raise ValueError('output parent must exist')
@@ -92,7 +98,9 @@ def main():
     if saved['status']!='completed_numerical_interval': raise ValueError('require completed endpoint')
     geometry=json.loads(original)['geometry']
     budget=Budget(maximum_evaluations=10000000,cpu_seconds=60.)
-    report=dict(schema='nsc-atlas-prepared-endpoint-connection-v2' if args.audit_dense_piece else 'nsc-atlas-prepared-endpoint-connection-v1',source_commit=commit,
+    schema=('nsc-atlas-prepared-endpoint-enriched-v1' if args.enrich_history else
+        'nsc-atlas-prepared-endpoint-connection-v2' if args.audit_dense_piece else 'nsc-atlas-prepared-endpoint-connection-v1')
+    report=dict(schema=schema,source_commit=commit,
         source_bindings=bindings,input=dict(path=INPUT,sha256=hashlib.sha256(raw).hexdigest()),
         prepared_reference=dict(path=PREPARED,sha256=hashlib.sha256(prepared_raw).hexdigest()),
         original_input=dict(path=producer.BASE_INPUT,sha256=hashlib.sha256(original).hexdigest()),
@@ -111,9 +119,11 @@ def main():
             if any(field.domain[key]!=geometry[key] for key in ('U0','Ua','Ub','Va','Vb')):
                 raise ValueError('prepared and coupled null domains differ')
             cap=CapLeadingField(field,derivative_order=4)
-            transfer=build_prepared_background(cap);background=transfer['background']
+            transfer=build_prepared_background(cap,enrich_ordinary_pieces=args.enrich_history)
+            background=transfer['background']
             identity=array_hash(background.inputs)
-            if not identity==reference['input_sha256']==saved['preparation']['input_sha256']:
+            original_identity=array_hash(transfer.get('original_history_inputs',background.inputs))
+            if not original_identity==reference['input_sha256']==saved['preparation']['input_sha256']:
                 raise ValueError('prepared history identity differs')
             V=float(gauge['V']);Vx=V*(-x/(.8*(.8-x)))
             t=(V-field.domain['Va'])/(field.domain['Vb']-field.domain['Va'])
@@ -133,6 +143,8 @@ def main():
             p,px,_=source_jet(x,geometry);g=float(x*p);gx=float(p+x*px)
             report['preparation']=dict(input_sha256=identity,charged_values=preparation.evaluations,
                 field_nodes=257,geometry_knots=257,clock_offset=offset)
+            if args.enrich_history:
+                report['preparation'].update(original_input_sha256=original_identity,enrichment=transfer['enrichment'])
             Jx=float(direct['wall_dchi_dV_over_epsilon'][0])*Vx
             report['clock']=dict(x=x,V=V,V_x=Vx,radius=R,reference_T=float(gauge['T']),
                 history_label=q,prepared_label=q_direct,label_difference=q-q_direct,
@@ -180,6 +192,16 @@ def main():
             density_rate_minus_boundary_force_L2=float(np.sqrt(gram.squared_norm(density_error,budget=budget))),
             exterior_departure_max=float(np.max(abs(state['departure']['c']))),
             numerical_error_enclosure=False)
+        if args.enrich_history:
+            checks=dict(history_material_rate=(abs(report['field']['retained_minus_prepared_rate']),1e-10),
+                conformal_wall_gap=(abs(report['residual']['conformal_wall_flux']),1e-10),
+                prepared_prefix_gap=(abs(report['prepared_minus_prefix_rate']),1e-11),
+                velocity_channel=(abs(report['residual']['scalar_velocity_channel']),1e-12),
+                density_force_L2=(report['density_rate_minus_boundary_force_L2'],1e-11))
+            report['acceptance']={key:dict(measured=value,limit=limit,passed=value<=limit)
+                                  for key,(value,limit) in checks.items()}
+            if not all(item['passed'] for item in report['acceptance'].values()):
+                raise ValueError('enriched local comparison misses its declared numerical decision limits')
         budget.check()
     except (ValueError,RuntimeError,FloatingPointError,OverflowError,KeyError,TypeError) as error:
         report.update(status='stopped',failure=dict(phase=phase,reason=str(error)))

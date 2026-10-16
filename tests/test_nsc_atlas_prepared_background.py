@@ -110,3 +110,21 @@ def test_budget_exhaustion_precedes_profile_query(budget):
         with pytest.raises(RuntimeError,match='budget exhausted'):build_prepared_background(cap)
         assert not cap.calls
     finally:budget.kernel_values_max=limit
+
+
+def test_enrichment_queries_existing_profile_without_changing_knots_or_onset(budget):
+    cap=AnalyticPreparedCap(budget);base=build_prepared_background(cap);cap.calls.clear()
+    before=budget.evaluations;out=build_prepared_background(cap,enrich_ordinary_pieces=True)
+    assert out['charged_evaluations']==budget.evaluations-before
+    assert len(cap.calls)==2 and cap.calls[0][1] is True and cap.calls[1][1] is False
+    bg=out['background'];extra=bg.interior_jets
+    assert out['enrichment']['ordinary_pieces']==3
+    for key in ('labels','values','first','second'):
+        np.testing.assert_array_equal(bg.inputs[key],base['background'].inputs[key])
+        np.testing.assert_array_equal(out['original_history_inputs'][key],base['background'].inputs[key])
+    np.testing.assert_array_equal(bg.profile._spline.c[:,:2],base['background'].profile._spline.c[:,:2])
+    np.testing.assert_array_equal(extra['labels'],cap.calls[1][0])
+    original=cap.profile(extra['labels'])
+    computed=bg.profile.jet(extra['labels'],budget=budget)
+    np.testing.assert_allclose(computed['F'],original['f'],atol=3e-13,rtol=3e-13)
+    np.testing.assert_allclose(computed['F_prime'],original['f_prime'],atol=3e-12,rtol=3e-12)

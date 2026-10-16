@@ -201,8 +201,8 @@
     "src/recursive_horizons/nsc_atlas_background_profile.py": {
       "classification": "implementation-successor",
       "original_sha256": "576567d0c7a31b33982edb922ccc7aee772355c50aca0559a70620efdb0b753a",
-      "reason": "Adds native-knot prepared history transfer and analytic onset; original profile evidence remains tied to the original implementation.",
-      "successor_sha256": "b143425a13458fce5b2663bfd94775b5575dbe7681c998a9e3ad850812f372fa"
+      "reason": "Opt-in degree-seven interior-jet history enrichment with unchanged default inputs; original evidence retains its authenticated producer and is not reinterpreted as enriched.",
+      "successor_sha256": "4103e32423cde5eb95131fe4cd67ebb9e32c568d13e7bd74a76edced5199c427"
     },
     "src/recursive_horizons/nsc_atlas_cap_field.py": {
       "classification": "implementation-successor",
@@ -220,8 +220,8 @@
     "src/recursive_horizons/nsc_atlas_characteristic_background.py": {
       "classification": "implementation-successor",
       "original_sha256": "381ee76f840b8392d7b96634fe7caab38bf3ee36e2fd48a87232c964d1c864a5",
-      "reason": "Adds the one-sided degree-seven source onset and degree-aware moments; historical quintic evidence authenticates its original producer, not results for the extended representation.",
-      "successor_sha256": "059fd502b8aa596b68fddcfe7212b41c62d854cfff45bf8f4b0c341db37030cf"
+      "reason": "Opt-in degree-seven interior-jet history enrichment with unchanged default inputs; original evidence retains its authenticated producer and is not reinterpreted as enriched.",
+      "successor_sha256": "b7883490e6bad9c7096bfa6c6616e0674ff319e08e0e0be7ababf6055d1d5c9c"
     },
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py": {
       "classification": "validation-only",

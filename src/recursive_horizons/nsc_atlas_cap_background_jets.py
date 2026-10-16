@@ -18,11 +18,13 @@ SMALL_Z = .01
 class RetainedCapBackground:
     """The same finite C2 profile plus its original binary Hermite inputs."""
 
-    def __init__(self, labels, values, first, second, *, onset=None):
-        self.profile = CharacteristicProfile(labels,values,first,second,onset=onset)
+    def __init__(self, labels, values, first, second, *, onset=None,interior_jets=None):
+        self.profile = CharacteristicProfile(labels,values,first,second,onset=onset,interior_jets=interior_jets)
         self._onset=self.profile.onset
         self._inputs = {name:np.array(value,dtype=float,copy=True) for name,value in
                         zip(('labels','values','first','second'),(labels,values,first,second))}
+        if self.profile.interior_jets is not None:
+            self._inputs.update({'interior_'+key:value for key,value in self.profile.interior_jets.items()})
         for value in self._inputs.values():
             value.setflags(write=False)
 
@@ -35,6 +37,10 @@ class RetainedCapBackground:
     def inputs(self):
         """Copies of the supplied data, before interpolation-coefficient rounding."""
         return {key:value.copy() for key,value in self._inputs.items()}
+
+    @property
+    def interior_jets(self):
+        return self.profile.interior_jets
 
     def reduced_jets(self, T, z, *, budget):
         """One bounded point: f,p,h, their T/z partials, chi,k and k_T.

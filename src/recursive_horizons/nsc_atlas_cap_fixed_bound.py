@@ -124,6 +124,7 @@ def fixed_background_metric_bound(basis,chi,canonical_density,Z,*,background,T,a
         knots=list(map(_ball,labels))
         v,d,s=([_ball(x) for x in data[k]] for k in ('values','first','second'))
         controls=_background_controls(background,knots,v,d,s)
+        if background.interior_jets is not None: budget.check(128*len(background.interior_jets['indices']))
         mapped=sorted({z for label in labels for z in (label-T,T-label) if 0<z<Z})
         U=arb(0);floors=[];panels=0
         for cell in range(basis.cells):

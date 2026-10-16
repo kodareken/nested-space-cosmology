@@ -6627,6 +6627,23 @@ replaced by an unrepresentable exact midpoint. Implementation must carry
 these inputs into every certificate; the special quartic-onset piece stays
 separate. No physical evolution with this enrichment has been run.
 
+Optional interior jets are now implemented in the existing profile and
+retained-background owners. The original binary labels and jets enter the
+runtime polynomial and both Arb metric certificates through one Bernstein
+formula. The prepared adapter queries ordinary active pieces only, leaving
+the quiet prefix, first active quartic piece and knot grid intact. A
+quintic total-field transfer rejects enriched histories explicitly. Default
+constructors retain their existing inputs and behavior.
+
+The [independent controls](../tests/test_nsc_atlas_interior_history.py)
+check exact rational reconstruction, C2 joins, stable moments, mass,
+immutable original inputs and a bubble invisible to endpoint-only bounds.
+Six new and 105 existing controls pass in 112 development executions;
+the [admission record](prior-art-and-open-claim.md#degree-seven-interior-jet-enrichment-17-october-2026)
+retains the corrected numerical test assumption and compute costs. The next
+one-event comparison has fixed numerical decision limits; no enriched
+trajectory or continuum error estimate is implied by these controls.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -12,7 +12,7 @@ from .nsc_atlas_cap_background_jets import RetainedCapBackground
 from .nsc_atlas_cap_polynomial_basis import _count
 from .nsc_atlas_cap_variational_reference import _exact_ball
 from .nsc_atlas_polar_cap import _scalar, _vector
-from .nsc_atlas_characteristic_background import _onset_bernstein
+from .nsc_atlas_characteristic_background import _onset_bernstein,_enriched_bernstein
 
 
 def _hermite_controls(v0,d0,s0,v1,d1,s1,h):
@@ -36,6 +36,15 @@ def _background_controls(background,knots,values,first,second):
         d=[7*(b-a)/h for a,b in zip(v[:-1],v[1:])]
         s=[6*(b-a)/h for a,b in zip(d[:-1],d[1:])]
         controls[i]=(v,d,s)
+    interior=background.interior_jets
+    if interior is not None:
+        for j,i in enumerate(interior['indices']):
+            h=knots[i+1]-knots[i];eta=(_exact_ball(interior['labels'][j])-knots[i])/h
+            v=list(map(arb,_enriched_bernstein(values[i],first[i],second[i],values[i+1],first[i+1],second[i+1],
+                h,eta,_exact_ball(interior['values'][j]),_exact_ball(interior['first'][j]))))
+            d=[7*(b-a)/h for a,b in zip(v[:-1],v[1:])]
+            s=[6*(b-a)/h for a,b in zip(d[:-1],d[1:])]
+            controls[i]=(v,d,s)
     return controls
 
 
@@ -88,6 +97,7 @@ def background_metric_bound(background,T,Z,chi_coefficients,density_coefficients
         values,first,second=([_exact_ball(x) for x in data[key]] for key in ('values','first','second'))
         controls=_background_controls(background,knots,values,first,second)
         budget.check(96*len(controls)+64*count)
+        if background.interior_jets is not None: budget.check(128*len(background.interior_jets['indices']))
         cb,kb=([abs(_exact_ball(x)) for x in a] for a in (chi,k))
         slopes=[arb(p*(p+1)//2) for p in range(1,2*count,2)]
         lc=sum(c*s for c,s in zip(cb,slopes))/zb
