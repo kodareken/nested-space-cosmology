@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "34dcb24cfe376eeb2055705438fd3501c584a6c2",
+  "current_receipt_commit_parent": "b578a56dfd3cb156d98d0c5f5416877d4c7b0a75",
   "files": [
     {
       "bytes": 1506,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 8898,
-      "change": "Explicit successor for the first coupled exterior-wall-cap numerical window and its measured compatibility errors; original import fields preserved",
-      "changed_from_commit": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
+      "bytes": 8966,
+      "change": "Record the compatible five-case window, exact-vacuum and outgoing controls, and the remaining incoming cap transport error",
+      "changed_from_commit": "b578a56dfd3cb156d98d0c5f5416877d4c7b0a75",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "50806112256a027819deb7b2987f5145012b7a9dc902e4fbf3dbe42f0f6eca2f"
+      "sha256": "08c8aec2fbf4549925639bd606584e1b2c30361d2238a89e4fd8eb0777cb7b52"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 195475,
-      "change": "Explicit successor for compatible reduced-cap and vacuum-departure operators; original import fields preserved",
-      "changed_from_commit": "34dcb24cfe376eeb2055705438fd3501c584a6c2",
+      "bytes": 195842,
+      "change": "Record the compatible five-case window, exact-vacuum and outgoing controls, and the remaining incoming cap transport error",
+      "changed_from_commit": "b578a56dfd3cb156d98d0c5f5416877d4c7b0a75",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f8e05bbe2996f73a0eed0a87626f7173231db9fdca1897dcc71d8d96fc77dac5"
+      "sha256": "a56270eb718d2414750057edf0fc409cc393bc92d9db36639d4a60d38fa6ab37"
     },
     {
       "bytes": 9543,
@@ -10426,15 +10426,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 51794,
-      "change": "Explicit successor for the first coupled exterior-wall-cap numerical window and its measured compatibility errors; original import fields preserved",
-      "changed_from_commit": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
+      "bytes": 51953,
+      "change": "Record the compatible five-case window, exact-vacuum and outgoing controls, and the remaining incoming cap transport error",
+      "changed_from_commit": "b578a56dfd3cb156d98d0c5f5416877d4c7b0a75",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "1e9ffece86bd3256327b2377b078cd1ce6ac117d5830e79ac89c08a3bf33aa77"
+      "sha256": "a22e1b36f2653834e3128c2c5e711a25520bb89fe8e4604ac1e65e186750de03"
     },
     {
       "bytes": 30876,

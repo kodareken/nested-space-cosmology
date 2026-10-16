@@ -1752,6 +1752,66 @@ report both ordinary finite differences and analytic vacuum jets plus
 finite differences of the departures. Neither diagnostic substitutes the
 mixed evolution equations for the derivatives it is testing.
 
+#### Compatible window outcome and the remaining cap transport
+
+The [five-case record](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
+uses the same preparation, amplitude and interval as the first coupled
+window. Its 16/32-cell, 256-step cases and separate finite 32-cell,
+512-step case all finish. Creation and authentication together cost
+64.40625 process CPU seconds and 5,371,737 charged points. The
+[current result](current-result.md#compatible-cap-and-vacuum-departures-16-october-2026)
+contains the response comparisons.
+
+Vacuum geometry and wall clocks now agree with their exact trajectories
+to approximately `1e-16`. The cap's zero-amplitude outgoing reduced trace
+`a_minus=p-q` is exactly zero at every saved wall event. These remove the
+predecessor's quiet geometric layer and its spurious outgoing cap signal.
+The constructed primitive and wall-flux identities also hold to roundoff;
+they do not measure propagation error.
+
+The actual finite response remains nonzero. At 32 cells its endpoint
+radius change is `-8.56927e-4`, central-clock-label change `-1.09815e-3`
+and conformal wall-scalar change `+3.29131e-5`. The paired scalar spatial
+change is `2.49582e-6`, about 6.9% of its peak response. The separate raw
+finite scalar time comparison is `1.24653e-4`, with only `2.00485e-8`
+at the endpoint. Without a corresponding zero-amplitude 512-step run,
+this does not establish time convergence of the small nonlinear history.
+Finite departure constraints still peak during the pulse at the final
+interior spatial node: `abs(E_Ubar)=.00959384` and `abs(E_x)=.00748492`.
+Their spatial changes improve; their values are not error enclosures.
+
+There is a direct propagation control before any central return. At zero
+amplitude the same equations give
+
+$$
+\chi(T,r)=F(T+\operatorname{atanh}r),\qquad p=q.
+$$
+
+The saved wall history supplies `F` on
+`zeta_W=T+atanh(R)`, since `chi_W=c_W` in this limit. Quiet initial data
+supply zero before the wall's first label. Pull this history back along
+incoming characteristics and compare it with the independently evolved
+cell-face primitive `cumsum(Iq)`. This comparison tests transport of the
+actual computed wall input; it does not assume that input is exact.
+Linear interpolation gives maximum primitive differences `.56115` and
+`.38095` on 16 and 32 cells, at the final `y=.75` face. A shape-preserving
+cubic interpolation changes the differences by about `.001`, much less
+than the discrepancy. The incoming pulse has amplitude about `.995`.
+Thus exact cancellation of the outgoing characteristic coexists with
+substantial spreading of the incoming pulse.
+
+The finite outgoing maximum changes from `1.60392e-4` to `3.44027e-4`,
+while its separate time change is `4.00569e-7`. The fine cap's energy
+source is consequently not established by the integral identities or by
+the small wall time-step change. Its final mass and lapse endpoint-trap
+defects are `.000498315` and `.00244719`; these compare one radial
+quadrature with another and do not bound the Gauss constraint error.
+The next numerical connection is accurate incoming characteristic
+transport and its gradient-squared gravitational source. It must retain
+the single common wall scalar and the original action. Extending the
+domain or increasing every grid without addressing this identified
+leading-wave error would not resolve the present uncertainty.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

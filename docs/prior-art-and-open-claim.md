@@ -71,6 +71,28 @@ ready; no prepared-source trajectory was used as an implementation test.
 | Stop | Same exterior tube (`.2<=r<=.8`, `-2<=log C<=2`, `-4<=c<=4`), positive cap `A,B` and hybrid incoming sum, timelike wall, maximum stage Courant `.4`, finite arithmetic and cumulative limits. Preserve the first failure and state; no retry, source replacement, enlarged tube or adaptive step. |
 | Decision | Determine whether the vacuum layer and leading outgoing-wave error are removed in the coupled calculation, and whether the finite response improves under the declared spatial/time comparisons. A failed or unresolved comparison produces a diagnosis. A successful comparison supplies the next central-arrival-domain construction; it is not a uniform error enclosure, stability proof or observation of nature. |
 
+**Outcome:** all five compatible cases finish at their original endpoint,
+using 64.40625 process CPU seconds and 5,371,737 charged points including
+creation authentication. The [record](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
+binds 51 source/input files. Independent standalone authentication passes
+with 1,202,991 points and no source integration, reference quadrature or
+time evolution. The vacuum geometric departures stay at roundoff and the
+zero-amplitude outgoing reduced characteristic is exactly zero. Both
+diagnosed predecessor errors are removed.
+
+The nonzero response still needs a transport accuracy correction. The
+paired spatial scalar change falls to `2.49582e-6`, about 6.9% of its fine
+response maximum, but the separate finite-case time change `1.24653e-4`
+exceeds that response. There is no zero-amplitude 512-step case, so
+cancellation of the leading time error has not been measured. Nonzero
+departure constraints improve spatially but remain largest beside the wall
+during the pulse. The cap's nonlinear outgoing trace changes from
+`1.60392e-4` to `3.44027e-4` with spatial refinement. A saved-history
+incoming-characteristic comparison identifies substantial leading cap
+pulse spreading, rather than an additional algebraic junction condition,
+as the next connection. See the [numerical outcome](nsc-atlas-finite-amplitude.md#compatible-window-outcome-and-the-remaining-cap-transport).
+No central-arrival extension is inferred from this finite-window result.
+
 ## Coupled characteristic exterior and polar cap, 16 October 2026
 
 The completed rectangle supplies an independent overlap test for the next

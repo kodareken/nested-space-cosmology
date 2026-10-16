@@ -123,10 +123,12 @@ now combines the original source, ordered exterior integrals, a moving
 wall and the regular polar cap. Source lifting retains the steep pulse
 analytically. The completed rectangle supplies an independent overlap
 control; the common evolution uses the full active exterior up to the
-actual wall. Its [five-case numerical comparison](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
-now completes that finite window. Spatial/interface constraints and cap
-field compatibility remain unresolved, with a concrete conservative
-primitive reconstruction identified as the next connection. Coupled
+actual wall. The [compatible five-case successor](current-result.md#compatible-cap-and-vacuum-departures-16-october-2026)
+completes that finite window with exact-vacuum departures and one cap scalar
+primitive. It removes the quiet geometric layer and zero-amplitude outgoing
+wave error. The finite response remains nonzero; the next accuracy
+connection is incoming cap characteristic transport and its gravitational
+source, identified through a direct saved-wave propagation comparison. Coupled
 well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.
 

@@ -26,14 +26,21 @@ subtraction. These controls do not replay the prepared physical source.
 
 The [successor recorder](../scripts/record_nsc_atlas_compatible_evolution.py)
 authenticates and reuses the first coupled run's source and reference caches.
-Its five-case comparison has the same grids, time steps and amplitude, with
-one shared 180-CPU-second/8,000,000-point allowance including inherited
-authentication and final checks. A new run requires a fresh directory:
+Its [completed five-case comparison](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
+has the same grids, time steps and amplitude, with one shared
+180-CPU-second/8,000,000-point allowance including inherited authentication
+and final checks. Run the recorder controls and authenticate the canonical
+result without a physical replay:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_record_nsc_atlas_compatible_evolution.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_compatible_evolution.py --check --output results/development/nsc-atlas-compatible-evolution-v1
+```
+
+A fresh reproduction requires a directory that does not exist:
+
+```sh
 python scripts/run_python.py scripts/record_nsc_atlas_compatible_evolution.py --output .build/compatible-evolution-review
-python scripts/run_python.py scripts/record_nsc_atlas_compatible_evolution.py --check --output .build/compatible-evolution-review
 ```
 
 Checking reconstructs raw-to-physical saved fields, final cap constraints,
@@ -43,6 +50,14 @@ departure diagnostics remain distinct. Fine cap integrals are restricted
 by summing adjacent cells. The first failure is saved under the ignored
 `.build/compatible-evolution-failures` area with no completed result
 directory, automatic retry or change of numerical settings.
+
+The saved creation and validation total 64.40625 process CPU seconds and
+5,371,737 charged points. Standalone authentication uses 1,202,991 points;
+it reuses the inherited source/reference caches and evolves no trajectory.
+All five cases retain 129 slices. Exact vacuum and zero-outgoing recovery,
+paired spatial responses, raw finite-case time changes and remaining cap
+transport/constraint limits are reported in the
+[current result](current-result.md#compatible-coupled-evolution-16-october-2026).
 
 The simultaneous exterior, wall and polar-cap stage uses a source snapshot,
 ordered exterior integrals, the constrained regular cap and the existing

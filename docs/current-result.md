@@ -2,6 +2,90 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Compatible coupled evolution, 16 October 2026
+
+The [compatible five-case result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
+completes the same original finite window with exact-vacuum exterior
+departures and conservative reduced cap fields. One cap primitive supplies
+the common wall scalar value. The source, reference gauge, amplitude
+`alpha=0.00012983127142551443`, spatial grids and time steps are unchanged
+from the [first coupled record](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json).
+Its authenticated source and reference caches are reused without a new
+source integration or reference quadrature.
+
+All five cases finish on their first attempt. Creation, inherited
+authentication and final validation take **64.40625 process CPU seconds**
+and **5,371,737 charged points**, within the shared 180-second/8,000,000-point
+allowance. The record retains 129 slices per case, 1,536 accepted time
+steps and 3,077 coupled stages. Standalone authentication passes with
+1,202,991 charged points and no source integration, reference quadrature
+or time evolution. It authenticates the inherited record and reconstructs
+the five current final cap and wall/prefix states.
+
+The two zero-amplitude runs preserve vacuum radius and lapse departures
+below `3.41e-16`, and the outgoing reduced cap characteristic `p-q` is
+exactly zero throughout both saved histories. Before the source front,
+the scalar is exactly zero in all five cases. This resolves the earlier
+vacuum evolution and zero-amplitude outgoing-cancellation defects. The
+cap primitive and reconstructed cell integrals also agree to roundoff;
+those constructed identities check consistency, not propagation accuracy.
+
+At the common final incoming label, the 32-cell, 256-step responses are:
+
+| Quantity | Endpoint finite-minus-zero response | Maximum change of that response, 16 to 32 cells | Maximum finite-case change, 256 to 512 steps |
+| --- | ---: | ---: | ---: |
+| Einstein wall radius `r` | `-8.5692729e-4` | `3.7035117e-5` | `4.9110877e-8` |
+| Exterior wall `log C` | `-5.7147440e-3` | `3.3556494e-4` | `5.3748406e-7` |
+| Common normalized wall scalar `c` | `+3.2913121e-5` | `2.4958217e-6` | `1.2465336e-4` |
+| Jordan central-clock label `T` | `-1.0981474e-3` | `6.8382929e-5` | `1.0173993e-7` |
+| Einstein wall proper time `s` | `-1.0886792e-4` | `6.1467112e-6` | `1.2101090e-8` |
+
+Lengths and clocks use the same `ell` normalization and quiet-event origin
+as the preceding record. The wall expands from `.45` to `.5491430727`;
+the negative relative radius response is not a collapse result. The middle
+column compares finite-minus-zero responses at both spatial resolutions.
+The last column compares the finite cases alone: there is no 512-step
+zero-amplitude case, so it is not a paired response error. All entries
+are measured changes on this finite window, not error bounds.
+
+The scalar response improves spatially: the preceding record's endpoint
+changed sign, from `-3.49052e-4` to `+1.10855e-4`, whereas the new endpoints
+are `+3.54089e-5` and `+3.29131e-5`. Its paired spatial change decreases
+from `4.69583e-4` to `2.49582e-6`. Nevertheless, the new raw time change
+`1.24653e-4` exceeds the fine finite-minus-zero response's peak
+`3.60995e-5`. The endpoint time change is only `2.00485e-8`, which does
+not represent the maximum over the history. The full scalar response
+therefore remains unresolved.
+
+Independent constraints now differentiate the propagated departure while
+retaining exact vacuum derivatives. Raw finite-difference diagnostics
+remain separately saved. On the 32-cell zero-amplitude history, the
+departure maxima are `4.19e-12` for `abs(E_Ubar)` and `1.11e-10` for
+`abs(E_x)`; differentiating the full curved vacuum numerically gives
+`3.03e-6` and `3.18e-4` instead. The finite-amplitude departure diagnostics
+retain nonzero residuals:
+
+| Interior diagnostic, 129 saved slices | 16 cells, 256 steps | 32 cells, 256 steps |
+| --- | ---: | ---: |
+| Maximum `abs(E_Ubar)` | `0.0117836` | `0.00959384` |
+| RMS `E_Ubar` | `0.00233254` | `0.00183422` |
+| Maximum `abs(E_x)` | `0.0101808` | `0.00748492` |
+| RMS `E_x` | `0.00200158` | `0.00172481` |
+
+The unchanged source snapshot retains its own interpolation-curvature
+defect. Final cap mass/lapse checks and wall kinematic checks remain
+independent of the constructed primitive identities. In particular, the
+finite cap lapse trapezoid residual increases from `6.12e-4` to `2.45e-3`,
+and the final scalar wall kinematic mismatch decreases from `6.36e-4`
+to `1.79e-4` but remains nonzero. Resolving cap transport and these
+interface/constraint errors is the next numerical connection. Neither
+the inherited source error nor the new residuals are removed by vacuum
+subtraction. This is a coupled finite numerical trajectory with measured
+sensitivities, not a converged solution or a uniform finite-amplitude
+validity certificate. The window still ends before the first central
+signal arrival; its tiny numerical central tail is not a physical
+central-observer prediction.
+
 ## First coupled exterior, wall and cap window, 16 October 2026
 
 The [five-case record](../results/development/nsc-atlas-coupled-evolution-v1/coupled.json)
