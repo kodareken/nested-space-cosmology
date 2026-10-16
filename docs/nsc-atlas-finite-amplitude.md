@@ -6290,9 +6290,37 @@ its same count to cap callers; it is not reset between preparation and
 later evaluation. The [one-source producer](../scripts/check_nsc_atlas_prepared_history.py)
 is prepared to evaluate the 257/257 source and compare its native-interval
 midpoints under the [separate finite allowance](prior-art-and-open-claim.md#one-prepared-physical-history-transfer-17-october-2026).
-This comparison has not yet run; it will retain only a compact summary
-and hashes. The resulting C2 interpolation is still distinct from the
-continuum-integral second jet sampled to construct it.
+The [first physical transfer](../results/summaries/nsc-atlas-prepared-history-v1.json)
+completes the source, then stops at the strict quiet check before any
+interpolation comparison: the quiet jets are
+`[0,5.37477524314984e-40,1.5572687669723015e-39]`. It uses 1,052,512
+values / 2.03125 CPU seconds. The source shape and tolerances are unchanged.
+The resulting C2 interpolation is still distinct from the continuum-integral
+second jet sampled to construct it.
+
+The [causal field interface](../src/recursive_horizons/nsc_atlas_cap_field.py)
+previously returned exact zero only for q no later than the preparation
+corner. Its actual fixed source has a longer known quiet interval. On
+\(V_a\le V\le V_f\), the source is zero and its Volterra correction obeys
+
+\[
+ z_V(U,V)=-\int_{U_0}^{\min(U,U_W(V))}K(U',V)z(U',V)\,dU',
+ \qquad z(U,V_a)=0.
+\]
+
+The finite-domain bounded kernel and Gronwall uniqueness give z=0.
+The compact source is C3 at its front, so F,F',F'' are zero there too.
+The interface now uses this known solution through the declared front
+arrival. It leaves subsequent active-field evaluations in place. This
+avoids converting an exactly quiet label through several floating-point
+coordinates: a single V step near the nominal front changes the computed
+source mask from zeta `-1.0000000000000016` to `-0.9999999999999956`.
+The input front's `1.11022e-16` coordinate roundoff remains recorded; the
+numerical arrival is not claimed to be the exact continuum clock.
+
+Three targeted fake-prepared controls pass. A second fixed-input physical
+transfer is prepared with zero quiet tolerances and a separate output;
+the failed first receipt is retained.
 
 ### Central clock in general null labels
 

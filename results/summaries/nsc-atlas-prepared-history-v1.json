@@ -1,0 +1,59 @@
+{
+  "execution": {
+    "charged_values": 1052512,
+    "cpu_seconds": 2.03125,
+    "raw_history_saved": false,
+    "retries": 0,
+    "source_integrations_attempted": 1,
+    "source_integrations_completed": 1,
+    "time_steps": 0
+  },
+  "failure": {
+    "phase": "native history transfer with zero quiet tolerances",
+    "reason": "prepared quiet-jet discrepancy exceeds the declared tolerances: [0.0, 5.37477524314984e-40, 1.5572687669723015e-39] versus [0.0, 0.0, 0.0]"
+  },
+  "inputs": {
+    "derivative_order": 4,
+    "field_nodes": 257,
+    "geometry_knots": 257,
+    "quiet_tolerances": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "limits": {
+    "charged_values": 10000000,
+    "cpu_seconds": 60.0
+  },
+  "physical_input_domain": {
+    "Ta": -1.0664592301893958,
+    "Tb": -0.8686120141351636,
+    "U0": -0.32130105902052203,
+    "Ua": -0.2992702973503126,
+    "Ub": -0.2747468030926288,
+    "Va": -2.565695357068247,
+    "Vb": -2.262011613052105,
+    "qa": -0.5817589515953442,
+    "qb": -0.25023070056070007,
+    "qmin": -1.5511595087834475,
+    "xa": 0.44999999999999996,
+    "xb": 0.55
+  },
+  "schema": "nsc-atlas-prepared-history-v1",
+  "source_bindings": {
+    "scripts/check_nsc_atlas_prepared_history.py": "f9555c6dd4cce0422a49ec6d0bc1fc51b6925f0e7c282f42c373200533b546be",
+    "src/recursive_horizons/nsc_atlas_background_profile.py": "b143425a13458fce5b2663bfd94775b5575dbe7681c998a9e3ad850812f372fa",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "3631c15a6cdcefb28977c3b3fc1001c928038fc580862096050aacf15c394fec",
+    "src/recursive_horizons/nsc_atlas_cap_field.py": "736067b633f6697e3488e57805aeae3cdbe0d3b8d4bab74d885f9f60aef72d2c",
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e0c26ea5417fb46b1e971e9b4ac5c0122aae400104551516488d321e9272a579",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py": "059fd502b8aa596b68fddcfe7212b41c62d854cfff45bf8f4b0c341db37030cf",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0"
+  },
+  "source_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+  "status": "stopped"
+}

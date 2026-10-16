@@ -167,6 +167,21 @@ def test_quiet_interval_and_finite_cap_domain(fake_prepared):
             cap.jet(T, r)
 
 
+def test_compact_source_causal_quiet_branch_reaches_its_front(fake_prepared):
+    cap=CapLeadingField(fake_prepared)
+    front=float(cap.edges[1]);qa=cap.domain['qa']
+    q=np.array([qa,qa+(front-qa)/2,front])
+    row=cap.profile(q,second=True)
+    assert all(np.all(value==0.) for value in row.values())
+    assert cap.evaluation_counts['wall_points']==cap.evaluation_counts['second_points']==0
+    assert cap.quiet_certificate['source_front_arrival']==front
+    # The subsequent active source is still evaluated, rather than erased.
+    active=cap.geometry['arrival'](cap.Va+.31*cap.dV)
+    row=cap.profile(active,second=True)
+    assert float(row['f'])>0.
+    assert cap.evaluation_counts['wall_points']==cap.evaluation_counts['second_points']==1
+
+
 def test_cap_time_allows_only_endpoint_roundoff(fake_prepared):
     cap = CapLeadingField(fake_prepared)
     Ta = cap.domain["Ta"]

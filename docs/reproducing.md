@@ -408,6 +408,10 @@ The separately admitted physical check is
 `python scripts/run_python.py scripts/check_nsc_atlas_prepared_history.py --output results/summaries/nsc-atlas-prepared-history-v1.json`.
 It refuses to overwrite a result, shares one 10-million-value / 60-second
 budget, and saves only summaries and hashes, including a stopped outcome.
+The retained v1 source completes but fails the exact quiet-jet check; it
+must not be overwritten. After the causal quiet-branch correction, the
+next admitted execution uses the same command with output
+`results/summaries/nsc-atlas-prepared-history-v2.json`.
 
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.

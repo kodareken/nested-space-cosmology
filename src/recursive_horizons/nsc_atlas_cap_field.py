@@ -97,6 +97,8 @@ class CapLeadingField:
         self.domain.update(qa=qa, qb=qb, xa=xa, xb=xb, Ta=float(Ta), Tb=float(Tb),
                            qmin=float(Ta-np.arctanh(xa)))
         self.edges = np.asarray([qa, *arrival(self.Va+self.dV*np.array([.25, .75])), qb])
+        self.quiet_certificate.update(source_front_V=float(self.Va+self.dV/4),
+                                      source_front_arrival=float(self.edges[1]))
         self._cache = OrderedDict()
         self.evaluation_counts = dict(profile_requested=0, wall_points=0, second_points=0, cache_hits=0)
         self.max_inverse_bracket_width = 0.
@@ -177,7 +179,11 @@ class CapLeadingField:
         rows = np.zeros((len(unique), 3))
         missing = []
         for i, qvalue in enumerate(unique):
-            if qvalue <= self.domain["qa"]:
+            # Before the fixed compact source starts, the zero-initial
+            # Volterra equation is homogeneous: the field and these jets
+            # vanish. Preserve this known branch through its declared
+            # front rather than inverting/re-evaluating a rounded edge.
+            if qvalue <= self.edges[1]:
                 continue
             cached = self._cache.get(float(qvalue))
             if cached is not None and (not second or cached[2] is not None):

@@ -53,8 +53,13 @@ piece together. Eight new and 65 affected existing controls pass in 75
 development executions, with 787,030 charged values / 2.0625 CPU seconds.
 The prepared-field adapter also passes five new and 28 existing controls
 (8,596 values / 0.09375 CPU seconds), preserving the original derivative
-interface and reporting quiet-front discrepancies. Its first physical
-source transfer and finite interpolation comparison remain next.
+interface and reporting quiet-front discrepancies. The first physical
+source completes, then transfer stops at quiet jets of order `1e-40`
+(1,052,512 values / 2.03125 CPU seconds). The preserved
+[receipt](../results/summaries/nsc-atlas-prepared-history-v1.json) has no
+interpolation comparison. The field interface now uses the mathematically
+known zero solution through the source front; three targeted controls pass.
+The next physical attempt keeps the source and zero tolerances fixed.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

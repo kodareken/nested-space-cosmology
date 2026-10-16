@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+  "current_receipt_commit_parent": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
   "files": [
     {
       "bytes": 2338,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 316789,
-      "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
-      "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+      "bytes": 317143,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e24b00a8b3628d6e27402e41ec57cde228cc87ac65efd5ee685aa8f6f4b44dc4"
+      "sha256": "a6f8b4b98d74a4633325d28a167efb4b4136ce7db66f490a32cb5cfcccd20958"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 302691,
-      "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
-      "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+      "bytes": 304156,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "623a7fe3d7c99baac1be17d92406368a33726b1affe92fb4bfc8cad006986904"
+      "sha256": "b5feac937e3b56fdda99f00fd1838af45fb43e29dc1656c5b8c342c3b46ba304"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 325447,
-      "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
-      "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+      "bytes": 327409,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "68bc5999460f0f506feea9ef6c7528754b1a3d436a30c8645b9a0c69fb9ae32e"
+      "sha256": "28e3f3183184b6b3d5e521a10eeefc444e4a33a6db5b7799ab354fe5eb171d42"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 106492,
-      "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
-      "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
+      "bytes": 106750,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9a3aeaa6087dc3931116bb15fc3e8a9a79b1870d6517611e5a7d404f4ff51b0c"
+      "sha256": "90fb1d603a33c56950a1214f6a3414b728f13d6e5e1c73cc58b67f033cb7d0fa"
     },
     {
       "bytes": 18356,
@@ -29575,6 +29575,14 @@
       "sha256": "c9f24a5073d28ceac899f5d31d03c418d3ecfdd450ec8390dd1cc5dedbe5416c"
     },
     {
+      "bytes": 2672,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "path": "results/summaries/nsc-atlas-prepared-history-v1.json",
+      "retention_reason": "Compact first prepared-history outcome with frozen producer hashes.",
+      "sha256": "3467a8d8d5017694278c2a7121f971c7d52caf2cffeb68d201300f403a0be622"
+    },
+    {
       "bytes": 4429,
       "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
       "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
@@ -32346,6 +32354,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_characteristics.py",
       "retention_reason": "Finite-coupling smooth characteristic PDE and shared-value wall port with independent controls.",
       "sha256": "b8c216d73c39e7493916a5cc84837c1df9f83429e7fb1dbe7826a77bcc994081"
+    },
+    {
+      "bytes": 16791,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "path": "src/recursive_horizons/nsc_atlas_cap_field.py",
+      "retention_reason": "Compact first prepared-history outcome with frozen producer hashes.",
+      "sha256": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31"
     },
     {
       "bytes": 9810,
@@ -35859,6 +35875,14 @@
       "path": "tests/test_nsc_atlas_cap_dilation_identity.py",
       "retention_reason": "Exact regular-centre and moving-domain mass identities for odd polynomial fields.",
       "sha256": "2eb9d4965aad3ac276960164bf0d1bba0791ca5626ee01b7d1fd14512004877e"
+    },
+    {
+      "bytes": 11577,
+      "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
+      "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
+      "path": "tests/test_nsc_atlas_cap_field.py",
+      "retention_reason": "Compact first prepared-history outcome with frozen producer hashes.",
+      "sha256": "2edef8994814304d37839b1f9ddb1f797412b9b795f9796945c6c8ffd5e0a97c"
     },
     {
       "bytes": 11104,

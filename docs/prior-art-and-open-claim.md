@@ -1834,6 +1834,37 @@ knot capacity, numerical quiet-front leakage and unresolved interpolation
 error are the three specific risks. Its outcome selects the next actual
 source/cap connection rather than another grid campaign.
 
+**First outcome:** the source completes and the exact-zero transfer check
+stops at `[0, 5.37477524314984e-40, 1.5572687669723015e-39]` for the quiet
+value/first/second jets. The immutable [receipt](../results/summaries/nsc-atlas-prepared-history-v1.json)
+records **1,052,512 charged values / 2.03125 CPU seconds**, one source
+integration and no retry. No interpolation comparison was reached.
+
+Three source-only endpoint arithmetic queries identify the sensitivity:
+the nominal front gives zeta `-1.0000000000000016`, while the next V float
+gives `-0.9999999999999956`. That neighbour has `g=6.22302e-57`,
+`g'=7.38294e-41`, and `g''=6.56929e-25`. The nominal front differs from
+the exact support root of the binary endpoints by `1.11022e-16`. These
+are arithmetic evaluations, without another field solve.
+
+The correction uses the known causal branch. Before the compact source
+starts, `g=0`; the zero-initial Volterra equation for `z=chi-g` is
+homogeneous with a bounded kernel. Uniqueness gives `z=0`, and the C3
+source has zero jets through order three at the front. `CapLeadingField`
+therefore returns that known zero through the declared source-front
+arrival, rather than only through the earlier preparation corner. The
+floating front and numerical arrival map remain distinct from their
+continuum values. This does not erase a computed active-source residual.
+
+Three targeted fake-prepared controls pass in 1.93 seconds of pytest wall
+time, covering exact quiet/front jets, the still-active subsequent source,
+and the independent zero-kernel second-jet chain. Those existing fixtures
+did not print a separate aggregate charge counter; no physical source was
+solved. The new physical attempt keeps **zero quiet tolerances**, the same
+257/257 source, and the same 10-million-value / 60-second ceiling. It is
+admitted only after this equation and arithmetic diagnosis; write a new
+`v2` receipt and preserve `v1`. No source shape, amplitude or grid changes.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
