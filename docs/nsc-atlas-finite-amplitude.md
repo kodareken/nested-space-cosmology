@@ -5752,12 +5752,184 @@ are exactly zero before the front in the numerical attempt; its nonzero
 pre-front gravitational interpolation residual is a separate matter.
 
 This result establishes a mechanism in the zero-coupling finite-space
-equations. It does not yet assign a power or coefficient to the actual
-hybrid drive, or prove the cause of the entire measured finite-amplitude
-gap. The next calculation is the one-sided expansion of the existing
-hybrid `w_plus`, followed by a representation that carries that boundary
-onset while retaining the mass identity. No time or mode scan, weak-flux
-replacement, or interval retry follows from this diagnosis.
+equations. The following calculation identifies the actual hybrid drive's
+leading coefficient. Neither result attributes the entire measured
+finite-amplitude gap. No time or mode scan, weak-flux replacement, or
+interval retry follows from this diagnosis.
+
+### Actual hybrid onset from the retained source
+
+Let x_star be the mathematical root of `zeta(x_star)=-1`, not the rounded
+stored `support_x` label, and put `t=x-x_star>0`. In the original source
+coordinate,
+
+\[
+ V(x)=\frac{(1-x/a)e^{x/a}}{U_0},\quad a=0.8,\qquad
+ \zeta(x)=\frac{4[V(x)-(V_a+V_b)/2]}{V_b-V_a},
+ \quad \kappa=\zeta'(x_*)=
+ -\frac{4x_*e^{x_*/a}}{a^2U_0(V_b-V_a)}>0.
+\]
+
+The original C3 source therefore has the one-sided expansion
+
+\[
+ g(x)=16\kappa^4t^4+O(t^5),\qquad
+ g_x(x)=64\kappa^4t^3+O(t^4).
+\]
+
+To carry that coefficient through the exterior, use its actual scalar
+prefix rather than equating the wall jet with g_x. Consider the
+exact-arithmetic finite equations with the constrained mass and lapse
+evaluated as mathematical functionals, zero scalar onset, fixed finite
+basis and bounded spatial differentiation, on a regular local interval:
+positive radii, lapses and H, nonsingular M, and a wall cut away from the
+representation's domain edges. Geometric coefficients are right-smooth;
+the exterior geometry need not be exactly vacuum. For the cap coefficients
+q,d and exterior scalar state e, write y=(q,d,e). The scalar right-hand
+side is locally Lipschitz, vanishes with y,g,g_x, and obeys
+
+\[
+ |y'(t)|\le K(|y(t)|+|g(t)|+|g_x(t)|).
+\]
+
+The integral inequality gives `y=O(t^4)`. The cap equation
+`q'=T_x V(q,d)` has no direct source-derivative forcing, with `V(0,0)=0`,
+so `q=O(t^5)`. This also makes the physical exterior scalar and its fixed
+spatial first jets O(t^4), including the supplied source node. These are
+local orders of the finite equations, with constants depending on the
+chosen space; they are not uniform spatial-convergence estimates.
+
+Two implemented trace laws are essential to that argument. The exterior
+U-jet is the bounded derivative of its scalar state and endpoint values,
+not an independently supplied source derivative. In the cap,
+
+\[
+ \chi_W=\phi_W^Tq,\quad k_W=\phi_W^Td,\quad
+ \chi_{z,W}=\phi_{z,W}^Tq,\qquad
+ w_-=\frac{k_W-\chi_{z,W}}{A_0R}+\frac{\chi_W}{R^2}.
+\]
+
+The actual common scalar is `c_W=R*u(f_W)`, with `f_W=chi_W/R`,
+`u(f)=sinh(sqrt(alpha/6)*f)/sqrt(alpha/6)` and its continuous alpha-zero
+limit. Its coefficient tangent is
+
+\[
+ (c_x)_{\rm cap}=\sqrt{D_W}
+ \left(\phi_W^Tq'+\chi_{z,W}\frac{R_x}{A_0}\right)
+ +(u_W-f_W\sqrt{D_W})R_x=O(t^4).
+\]
+
+It does not use d' or the hybrid-requested c_x. Together these identities
+give `w_-=O(t^4)` and close the state-to-jet argument. Independent Grok
+review identifies these as necessary hypotheses: the coefficient would
+not follow from the source order alone if either trace law were changed.
+
+Write `u=c/r`, `D=1+alpha*u^2/6`. The existing prefix gives, at the wall,
+
+\[
+ c_V=u_Wr_{x,W}+\sqrt{D_W}\left[
+ \frac{g_x-u_0r_{x,0}}{\sqrt{D_0}}
+ -\int_0^W r_x f_{\bar U}\,d\bar U\right],\qquad
+ f_{\bar U}=\frac{c_{\bar U}-u r_{\bar U}}{r\sqrt D}.
+\]
+
+Here c_V is the hybrid's outgoing jet in its relabelled x coordinate,
+as supplied by `departure_slice`; its name does not change that coordinate.
+The fixed quadrature preserves the same orders. Since the integral and
+u_0 are O(t^4), while u_W=O(t^5), this proves
+`c_V=g_x+O(t^4)` under the stated local assumptions.
+
+At zero cap state the constrained metric has A=A0=1-R^2 and mu=1.
+For fixed finite alpha, its first changes are quadratic in the scalar
+state: `N=O(t^8)`, `delta=O(alpha*t^8)`, and
+`B=A0+O(alpha*t^8)`. The exact hybrid identities are
+
+\[
+ C_- =\frac A H(R\sqrt{D_W}w_- -u_W),\qquad
+ w_+=\frac{2V_+c_V/H-u_W}{R\sqrt{D_W}},\qquad
+ (c_x)_{\rm hybrid}=c_V+\frac{C_-}{2V_+}.
+\]
+
+The strong outgoing cap trace is O(t^4), so C_minus is O(t^4). Consequently
+
+\[
+ C=B Rw_+=\frac{2A_{0*}V_{+*}}{H_*}\,64\kappa^4t^3+O(t^4),
+ \qquad
+ \boxed{E_c=(c_x)_{\rm cap}-(c_x)_{\rm hybrid}
+       =-64\kappa^4t^3+O(t^4).}
+\]
+
+The geometry cancels from the leading scalar-tangent defect. At alpha zero
+this also follows from `T_x A0+R_x=H/V_plus` and the previous r_B formula.
+This is a finite-space onset obstruction, including fixed finite alpha
+under regularity, rather than a failure of the analytic cap-mass identity.
+It supplies neither the remainder constant nor a bound over the attempted
+window. Floating masking at a rounded support edge shifts the analytic
+onset; the existing source-jet roundoff controls address numerical replay,
+not equality of that binary edge with x_star.
+
+### Incoming cap reference that carries the onset
+
+Reuse the [reduced canonical incoming solution](#reduced-canonical-field-and-an-exact-incoming-wave-control).
+In the alpha-zero cap, z=atanh(r) and the bulk primitive obeys
+`chi_TT=chi_zz`. Before the front reaches the centre, its incoming family is
+
+\[
+ \chi(T,z)=F(T+z-\lambda_*),\qquad k=F',\qquad
+ F(\lambda)=0\quad(\lambda\le0).
+\]
+
+This is the early part of the existing reflected characteristic solution;
+it introduces no independently adjustable incident waveform. At the wall,
+
+\[
+ p=\frac{F'}{A_0},\quad h=\frac{F'}{A_0}-\frac F R,
+ \quad w_-=\frac F{R^2},\quad C_-=0,\quad c_{\bar U,+}=0.
+\]
+
+Put `lambda_W=T+Z-lambda_star` and `b=A0/R`. The hybrid gives
+`lambda_W,x=H/(V_plus*A0)>0` and
+
+\[
+ C=\frac{2c_V}{\lambda_{W,x}}-bF=2F'-bF,
+ \qquad \frac{dF(\lambda_W(x))}{dx}=c_V.
+\]
+
+Thus the same exterior supplies the incoming primitive. It has a quartic
+wall onset rather than the finite fixed-space quintic onset. For the
+local quartic example `F(lambda)=a_F*lambda_+^4`, let
+`d=T+Z-lambda_star` with `0<d<Z`. Direct integration gives
+
+\[
+ N=\frac14\left[\int_0^Z(k^2+\chi_z^2)dz-b\chi_W^2\right]
+  =\frac{8a_F^2d^7}{7}-\frac{b a_F^2d^8}{4},\qquad
+ N_T=\frac{k_W(C-k_W)}2.
+\]
+
+The moving derivative adds `Z_x N_Z`, retaining the derivative of b(Z).
+The leading physical incoming layer's mass is seventh order, whereas the
+fixed-space scalar density is eighth order. This comparison concerns their
+different onset representations, not a claim that either exponent bounds
+the numerical error over the full interval.
+
+The reusable input is [PreparedFieldSolution.wall](../src/recursive_horizons/nsc_atlas_prepared_response.py),
+which returns `wall_chi_over_epsilon` and `wall_dchi_dV_over_epsilon` from
+the original source and exterior equation. Its argument is
+`(V-Va)/(Vb-Va)`, and its derivative uses original V. Conversion to x
+therefore multiplies that derivative by V_x. The wall-arrival map supplies
+the incoming label. These are bounded numerical outputs, not an exact
+continuum field or a finite-alpha characteristic. No prepared solve or
+terminal-profile fit is run for this derivation.
+
+Three [new controls](../tests/test_nsc_atlas_hybrid_onset.py) pass once using
+**38,000 charged values / 1.28125 active CPU seconds**. They independently
+expand the source and prefix, check the hybrid coefficient, integrate the
+quartic layer's mass, and exercise the production hybrid on a compatible
+incoming trace. The next representation must retain the incoming history
+and account for its explicit time dependence in the mass derivative. The
+earlier affine-background remainder and moving-knot obstruction still
+apply; this alpha-zero reference alone does not authorize a finite-alpha
+lift or another trajectory.
 
 ### Central clock in general null labels
 

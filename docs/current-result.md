@@ -17,10 +17,19 @@ An [exact onset-order calculation](nsc-atlas-finite-amplitude.md#finite-space-on
 shows why small time residual and weak mass balance need not close the
 strong scalar boundary equation: in the zero-coupling finite-space model,
 the trace responds one power later than a finite-order incoming drive.
-Two symbolic controls pass, with independent Grok review. The next work
-derives the actual hybrid drive's onset coefficient and the representation
-needed to carry it. The failed runtime attempt is retained; no scan or
-retry has been run.
+Two symbolic controls pass, with independent Grok review. The subsequent
+[source-to-hybrid derivation](nsc-atlas-finite-amplitude.md#actual-hybrid-onset-from-the-retained-source)
+gives `E_c=-64*kappa^4*t^3+O(t^4)` for the regular finite-space equations,
+where kappa is the original source-label derivative at its mathematical
+support root. It includes fixed finite coupling under the stated local
+regularity assumptions; it is not a bound for the whole attempted window.
+Three new controls pass with 38,000 values / 1.28125 active CPU seconds.
+An [incoming characteristic cap](nsc-atlas-finite-amplitude.md#incoming-cap-reference-that-carries-the-onset)
+carries the onset exactly at alpha zero and satisfies its integrated mass
+identity. Its history comes from the existing prepared wall interface.
+The next connection is a finite-coupling representation with the correct
+characteristics and explicit-time mass terms. The failed runtime attempt
+is retained; no scan, source solve or trajectory retry has been run.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

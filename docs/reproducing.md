@@ -349,10 +349,12 @@ The retained-source onset's exact time scale and boundary-order controls:
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_linear_bound.py -q -s
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_onset_lag.py -q -s
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_hybrid_onset.py -q -s
 ```
 
 The two matrix controls use 38,144 values / 0.03125 active CPU seconds;
-the two onset-order controls use 24,000 / 0.40625. Neither replays fields.
+the two onset-order controls use 24,000 / 0.40625. The three source/hybrid
+and incoming-cap controls use 38,000 / 1.28125. None replays fields.
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.
 It stopped at the 180-second CPU check after 341/371 steps. Preserve that

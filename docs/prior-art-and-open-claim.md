@@ -1607,6 +1607,43 @@ Grok review confirms those statements. This does not establish the actual
 hybrid drive's coefficient. The next action is its one-sided expansion,
 not another numerical trajectory or resolution scan.
 
+### Actual hybrid onset and incoming cap reference
+
+Connect the preceding finite-space onset result to the existing C3 source
+and hybrid, rather than identifying the drive with the source by assumption.
+Expand at the mathematical support root in the original source-radius
+coordinate. Use the scalar prefix, fixed-space zero initial state and actual
+hybrid outgoing port. Separate this asymptotic statement from binary source
+masking and from a bound over the attempted finite interval.
+
+Derive the early incoming alpha-zero cap directly from its wave equation,
+including its wall characteristics and moving mass identity. Identify the
+existing prepared-field value/first-derivative interface that can supply its
+incoming history. This comparison must not prescribe a second independent
+waveform or use a fitted terminal profile. Finite-alpha extension requires
+its own characteristic and explicit-time mass terms.
+
+Three new controls have **40,000 charged algebra/numeric values / 20 active
+CPU seconds**: source and scalar-prefix onset, the actual hybrid leading
+coefficient, and the incoming reference including its integrated mass and
+production hybrid. No source solve, trajectory, resolution scan or replay
+is included. Grok independently reviews the equations and maps the existing
+prepared-field interface. An algebraic contradiction redirects the derivation
+before any evolution is attempted.
+
+**Outcome:** three controls pass once using **38,000 charged values /
+1.28125 active CPU seconds**, with no source or field replay. The hybrid
+drive has leading coefficient `2*A0*V_plus/H*64*kappa^4`, and the scalar
+tangent gap is `-64*kappa^4*t^3+O(t^4)`. An integral inequality supplies
+the exterior O(t^4) order under the regular finite-equation assumptions;
+the source bump alone would not establish it. The alpha-zero incoming
+cap closes the strong boundary relation and its quartic-layer mass
+identity. These are local algebraic results, not a finite-window error
+bound or an evolving finite-alpha construction. The [owner](nsc-atlas-finite-amplitude.md#actual-hybrid-onset-from-the-retained-source)
+keeps the floating support edge and prepared-interface coordinate conversion
+explicit. The next work derives compatible finite-alpha characteristic
+and mass terms before implementing an incoming-history representation.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
