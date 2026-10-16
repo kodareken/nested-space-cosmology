@@ -28,7 +28,7 @@ SOURCES=(
 
 
 def main():
-    budget=Budget(maximum_evaluations=25_000_000,cpu_seconds=120.)
+    budget=Budget(maximum_evaluations=30_000_000,cpu_seconds=120.)
     phase='authenticate'
     try:
         current,_,_,identity=authenticate(ROOT,budget)
@@ -64,7 +64,7 @@ def main():
         source_bindings={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in SOURCES},
         execution=dict(charged_values=budget.evaluations,cpu_seconds=time.process_time()-budget.started,
                        transfers=1,radial_references=1,time_steps=0,trajectory_replays=0),
-        limits=dict(charged_values=25_000_000,cpu_seconds=120.))
+        limits=dict(charged_values=30_000_000,cpu_seconds=120.))
     print(json.dumps(plain(report),indent=2,sort_keys=True,allow_nan=False))
 
 

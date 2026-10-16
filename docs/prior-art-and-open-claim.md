@@ -1256,6 +1256,22 @@ fields, mesh, source, alpha and radial tolerances. This changes the finite
 work allowance, not the calculation. Preserve both receipts; no automatic
 retry or further increase follows if that one replay fails.
 
+**Completion outcome:** the failed attempt and its producer are preserved
+in `e5d7cb55c35844bae20d0af73eee0aac85cdb5d6`. One unchanged-input replay
+with the admitted larger allowance passes using **25,463,040 values /
+7.734375 CPU seconds**. Aggregate retained work is **50,463,048 values /
+15.25 CPU seconds** across those two attempts. The completed reference has
+17,741 field sites and 518 sensitivity channels, at the original 65 cells.
+Rescaled mass is `17.633757131085453`; wall lapse is `0.01342227558686664`.
+The weak balance is `-8.68175e-15`, momentum gap `3.35819e-14`, normal
+gap `-2.45602e-14`, and projected physical L2 gradient gaps are
+`3.52426e-13` (chi) / `8.16598e-10` (k). All declared consistency checks
+pass. The [compact result](../results/summaries/nsc-atlas-cap-fixed-reference-v1.json)
+preserves scalar outputs and twelve source hashes, without coefficient
+histories. It does not establish a material-wall evolution or numerical
+error enclosure. The next connection is admissible initial junction data
+and a common finite wall/exterior/field update using the existing candidate.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

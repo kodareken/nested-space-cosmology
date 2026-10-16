@@ -272,6 +272,12 @@ The forward integrations are complete, but there is no checked retained
 mass/RHS. The owner bounds the adjoint/operator tail explicitly and admits
 one completion replay with 30,000,000 / 120, at identical numerical settings.
 No scan or time trajectory is involved.
+The one completion replay passes with 25,463,040 values / 7.734375 CPU
+seconds. Both retained attempts together use 50,463,048 values / 15.25 CPU
+seconds. The [compact result](../results/summaries/nsc-atlas-cap-fixed-reference-v1.json)
+records mass, lapse, weak balance, actual wall differences and propagated
+gradient comparison. The script now uses the admitted 30,000,000 / 120
+allowance. No further replay is required for this recorded result.
 
 The internal wavefront identities and bounded position/amplitude stage:
 

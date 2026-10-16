@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+  "current_receipt_commit_parent": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
   "files": [
     {
       "bytes": 2338,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 308511,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "bytes": 309080,
+      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
+      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "50283b0f8d2b73a17b6f94eb0a0d94033ccf665c0088ac538a36f3ed45a843fc"
+      "sha256": "70f87d25e0a133537c2e776d94ad70ef1565a2752897237fd250df5f3dba4b5b"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 251288,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "bytes": 253646,
+      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
+      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fc8418b91600597517ee10364dae2d7c49de0b384b75cc42d0c3323912564a38"
+      "sha256": "42c2072670405257e343b8a0c623c3709a9acd3ab978cadc41e595d8cf94aa5c"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 289427,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "bytes": 290533,
+      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
+      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "265865ad5971510f88b720a124963b4ea2caca4c747e504abdaa0803b07c2ba2"
+      "sha256": "40786860e15967a1ed027d6bed559bd6facedd0e1af2e18c6c6034c8503dc7a7"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 99101,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "bytes": 99549,
+      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
+      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "109a5bf714522a7ad779497fb5105d33c9e163a7e4cad0ea6f6dbf6e7f65a52d"
+      "sha256": "414e09837a659109ad491d47e23bcaf72854c30ea615cc9abd0c65df619e6b3c"
     },
     {
       "bytes": 18356,
@@ -29521,6 +29521,14 @@
       "sha256": "233b309e5343d2f62403671dc7a9a00592332f1f345d3b6a3ec523e701e7f530"
     },
     {
+      "bytes": 5381,
+      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
+      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
+      "path": "results/summaries/nsc-atlas-cap-fixed-reference-v1.json",
+      "retention_reason": "Compact retained fixed-space cap mass, wall and gradient-comparison evidence",
+      "sha256": "f77b78a4d3668b09ba35cbef729266d63605ab77126c9dde1ffab64fc4539b5e"
+    },
+    {
       "bytes": 3815,
       "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
       "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
@@ -29589,11 +29597,11 @@
     },
     {
       "bytes": 4124,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
+      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
       "path": "scripts/check_nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "fb4d2e67fa8adb73c6d5aecc0a344ef82bc87b3edcad0466b6e4c977d053c713"
+      "sha256": "9095f547dca2f0272f74e1cddc5ce97e34c73b7abc1b66faee200de275c99173"
     },
     {
       "bytes": 7677,

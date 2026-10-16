@@ -12,13 +12,22 @@ radial accuracy corrects the alpha=0 coefficient-rate mismatch without
 relaxing its assertion. Independent Grok source and mathematical reviews
 confirm the adapter and its banded physical norm.
 
-The first retained reference stops at **25,000,008 charged values / 7.515625
-CPU seconds** during adjoint quadrature, after forward integration of all
-cells. It has not produced a checked retained mass/weak RHS. The diagnosed
-remaining quadrature and operator tail are below three million charged
-values; the [calculation record](prior-art-and-open-claim.md#one-retained-fixed-space-mass-reference)
-specifies one bounded completion replay. No time trajectory or new
-observational prediction is claimed.
+The retained finite-alpha reference now passes: rescaled mass
+`N=17.633757131085453`, wall lapse `delta=0.01342227558686664`, weak
+mass-balance discrepancy `-8.68175e-15`. The actual momentum and normal
+wall-trace discrepancies are `3.35819e-14` and `-2.45602e-14`. The physical
+forward/adjoint rate L2 gaps are `3.52426e-13` for chi and `8.16598e-10`
+for k. The fixed-space representation therefore closes this instantaneous
+mass/trace calculation to the reported numerical consistency tolerances.
+
+The first work-limited attempt is preserved in `e5d7cb5`. One diagnosed
+completion replay passes with 25,463,040 values / 7.734375 CPU seconds;
+both attempts together use **50,463,048 values / 15.25 CPU seconds**.
+The [compact receipt](../results/summaries/nsc-atlas-cap-fixed-reference-v1.json)
+binds all inputs and sources. This is one constrained slice with declared
+incoming data and `T_x=1, R_x=0`; admissible material-wall initial data,
+common wall/exterior evolution and error control remain required. No time
+trajectory or new observational prediction is claimed.
 
 ## Exact retained-pulse local transfer, 16 October 2026
 
