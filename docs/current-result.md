@@ -2,6 +2,24 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed-space mass-gradient implementation, 16 October 2026
+
+The [local mass adapter](nsc-atlas-finite-amplitude.md#metric-domain-for-fixed-local-total-fields)
+now uses the shared radial forward/adjoint engine for the total fields.
+Independent energy, finite coefficient/shape derivatives, stable axis and
+physical-norm controls pass across the focused checks. The tighter requested
+radial accuracy corrects the alpha=0 coefficient-rate mismatch without
+relaxing its assertion. Independent Grok source and mathematical reviews
+confirm the adapter and its banded physical norm.
+
+The first retained reference stops at **25,000,008 charged values / 7.515625
+CPU seconds** during adjoint quadrature, after forward integration of all
+cells. It has not produced a checked retained mass/weak RHS. The diagnosed
+remaining quadrature and operator tail are below three million charged
+values; the [calculation record](prior-art-and-open-claim.md#one-retained-fixed-space-mass-reference)
+specifies one bounded completion replay. No time trajectory or new
+observational prediction is claimed.
+
 ## Exact retained-pulse local transfer, 16 October 2026
 
 The [fixed physical-coordinate implementation](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)

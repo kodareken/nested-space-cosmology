@@ -5159,8 +5159,58 @@ entries. Retain that existing engine first; a sparse replacement needs its
 own demonstrated necessity. The physical shape derivative remains the
 boundary value `N_Z=A0*rho_W`, and the already derived weak rates use the
 banded Gram factor. No background-time or dilation term is introduced.
-This specifies the next adapter connection; its numerical implementation,
-checks, solve-error estimate and finite wall coupling remain outstanding.
+The [numerical adapter](../src/recursive_horizons/nsc_atlas_cap_fixed_reference.py)
+now implements that connection using the shared engine without changing it.
+For the total field and each basis function it first forms the exact local
+polynomial `Delta=z*chi_z-chi`, then rounds once for evaluation. The
+element-index integration coordinate supplies `h*A0`; it does not move the
+physical polynomial basis. The output records the rounded wall-coordinate
+offset and the difference between local polynomial and basis-row trace
+evaluation. The initial metric certificate excludes those numerical errors.
+
+The first alpha=0 comparison recovered independently integrated mass and
+gradients but missed `c_x=T_x*d` by `3.40552204e-9` after the conditioned
+Gram solve. One tighter requested radial accuracy, `rtol=2e-13` and
+`atol=2e-15`, passed the unchanged rate and wall assertions. These are now
+the adapter defaults. The finite coefficient directional derivative and
+wall-shape mass differences also pass their original checks.
+
+Gradient differences must be propagated through the operator. For forward
+minus adjoint differences `Delta g_c, Delta g_d`, the adapter computes
+
+\[
+ \Delta V=2\mu M^{-1}\Delta g_d,\qquad
+ \Delta d_x=T_x M^{-1}\{-2\mu\Delta g_c-e(e^T\Delta V)\}.
+\]
+
+It reports coefficient infinity norms, physical L2 norms and the signed
+wall-velocity difference. With `M=S L L^T S`, the stable numerical norm is
+`||L^T S v||^2`; the factor has diagonal scaling and lower bandwidth five.
+This is a norm of the represented field using the numerical Gram, not an
+interval enclosure. In the manufactured finite case, the raw gradient gap
+is `7.70217e-16`, but the canonical coefficient-rate gap is `7.44041e-8`
+against coefficients reaching `93205.5378`. Its physical L2 gap is only
+`1.01493e-12`, and its wall-velocity gap is `2.31570e-15`. Thus a bare
+coefficient absolute threshold would depend on the chosen coordinates.
+The dedicated norm control compares independently integrated energy and
+requires physical L2/wall discrepancies below `2e-10`; it passes.
+
+The [six manufactured controls](../tests/test_nsc_atlas_cap_fixed_reference.py)
+cover these identities, stable axis limits, quiet fields, common centre
+lapse, coefficient preservation and domain rejection. The recorded
+development work, including diagnosed failures, ten control executions and
+one standalone base-state diagnostic, is **5,226,742 charged values /
+4.640625 active CPU seconds** under the original allowance plus its
+specifically admitted physical-norm follow-up. Independent Grok source and
+mathematical reviews confirm the coordinate map, delta algebra, rates and
+stable norm. The first retained reference reaches the shared engine's
+adjoint quadrature, then stops at **25,000,008 charged values / 7.515625
+CPU seconds**. Its forward integrations are complete, but the independent
+gradient check and weak RHS are not. The [work diagnosis](prior-art-and-open-claim.md#one-retained-fixed-space-mass-reference)
+bounds the full remaining adjoint/operator tail below three million values
+and specifies one completion replay at unchanged numerical settings.
+Numerical error enclosures, scalar residuals
+and finite wall coupling remain outstanding.
 
 ### Central clock in general null labels
 

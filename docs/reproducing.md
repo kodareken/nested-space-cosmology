@@ -248,6 +248,31 @@ records the positive metric floor for the rounded coefficients. This
 regenerates the initial transfer and performs one certificate, without
 rerunning the polynomial comparison, Gram factor or a radial integration.
 
+The fixed-space mass/gradient controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_fixed_reference.py -q -s
+```
+
+Six manufactured controls check independently integrated alpha=0 energy
+and rates, finite coefficient/shape derivatives, stable centre limits and
+the strong/weak wall distinction. The [admission record](prior-art-and-open-claim.md#fixed-local-field-mass-gradient-adapter)
+preserves the initial conditioned-rate failure, one tighter-accuracy repeat,
+and the subsequent physical-norm diagnosis. Aggregate development work is
+5,226,742 values / 4.640625 active CPU seconds, including one standalone
+diagnostic; a fresh suite has a 5,000,000 / 60 allowance. A separate
+1,000,000 / 15 follow-up checked the stable Gram norm. Numerical tolerances
+and same-metric forward/adjoint agreement are not uniform error bounds.
+
+The separately admitted single retained reference command is
+`python scripts/run_python.py scripts/check_nsc_atlas_cap_fixed_reference.py`.
+Its first 25,000,000-value / 120-CPU-second attempt reaches adjoint
+quadrature, then exhausts at 25,000,008 values / 7.515625 CPU seconds.
+The forward integrations are complete, but there is no checked retained
+mass/RHS. The owner bounds the adjoint/operator tail explicitly and admits
+one completion replay with 30,000,000 / 120, at identical numerical settings.
+No scan or time trajectory is involved.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

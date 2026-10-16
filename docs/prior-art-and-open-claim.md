@@ -1139,6 +1139,123 @@ binds sources and the retained selection. There is no radial solve or time
 evolution. Numerical field evaluation and ODE errors still need control in
 the mass adapter.
 
+### Fixed local-field mass-gradient adapter
+
+Reuse the existing radial forward-sensitivity and independent adjoint
+quadrature engine for the total fixed-space chi/k coefficients. Integrate
+each existing physical cell through an element coordinate with Jacobian
+`h*A0`; clip only the final cell. Use stable odd-axis reduced-field formulas,
+the new exact-field metric certificate and the banded Gram factor. Keep
+the actual wall traces distinct from the mass-gradient-projected wall value.
+The shape contribution is the boundary density `N_Z=A0*rho_W`; there is no
+affine-background time derivative, dilation or moment-derivative insertion.
+
+Manufactured adapter controls have **5,000,000 charged values / 60 active
+CPU seconds**. Compare alpha=0 mass and gradients with independently
+integrated local polynomial energy, check the corresponding coefficient
+rates, and test a finite-alpha coefficient directional derivative and a
+fixed-coefficient wall-shape derivative. Also check quiet data, the common
+centre lapse, moving-wall weak mass identity, explicit strong/weak trace
+differences, input preservation and domain rejection. Independent Grok
+mathematical/source review supplies a separate check. These controls admit
+no retained-input mass solve, scan, trajectory or publication claim; such
+a calculation requires its own budget after the adapter checks succeed.
+
+The first five controls use **1,832,284 charged values / 1.6875 active CPU
+seconds**. Four pass. The alpha=0 independently integrated mass and gradients
+agree, but the coefficient-rate check fails by `3.40552204e-9`: the clipped
+Gram inverse amplifies the radial gradient error at requested tolerances
+`rtol=2e-11, atol=2e-13`. Keep the rate assertion unchanged. One focused
+repeat tightens the radial tolerances to `2e-13, 2e-15`, within the original
+control budget. Propagated forward/adjoint gradient error also needs review
+before any retained calculation. This is a diagnosed accuracy correction,
+not a resolution scan or a new physical input.
+
+The focused zero-coupling repeat passes unchanged with **376,974 values /
+0.296875 CPU seconds**. Three affected controls at the tighter defaults use
+another **2,251,384 values / 2.015625 CPU seconds**: quiet/domain controls
+pass, and finite coefficient/shape mass differences pass, but the new
+propagated canonical-coefficient rate difference exceeds `2e-8`. The total
+is **4,460,642 values / 4.0 active CPU seconds**. Before changing accuracy
+policy, use at most the remaining **539,358 values / 56 CPU seconds** for
+one manufactured base state and its independently integrated Gram norm.
+Print the gradient, coefficient-rate, physical L2 and wall discrepancies.
+No repeated directional/shape pair or retained-input solve is admitted.
+
+The single diagnostic uses **380,646 values / 0.328125 CPU seconds**.
+The raw gradient difference is `7.70217e-16`, propagated canonical rate
+coefficient difference `7.44041e-8`, and coefficient rate peak `93205.5378`.
+Its independently integrated physical L2 difference is `1.01493e-12`;
+the wall-velocity difference is `2.31570e-15`. Thus a fixed absolute bound
+on representation-dependent coefficient infinity norms is not the right
+field accuracy criterion. Keep those values reported, and compare physical
+L2 and wall discrepancies instead. The original zero-coupling rate identity
+and independent mass/shape assertions stay unchanged.
+
+The development total is now **4,841,288 values / 4.328125 CPU seconds**.
+A specifically admitted **1,000,000-value / 15-active-CPU-second follow-up**
+checks one stable Gram norm against independently integrated energy and one
+finite base-state propagated comparison. Compute `||L^T S v||^2` from the
+scaled Gram factor `M=S L L^T S`, avoiding cancellation in `v^T M v`.
+Both physical L2 rate discrepancies and the wall-velocity discrepancy must
+be below `2e-10`; this is still a numerical consistency criterion, not a
+uniform error bound. Do not repeat the finite-difference pairs or scan a
+resolution/tolerance family. Source review must cover the new norm method.
+
+The new norm control passes with **385,454 values / 0.3125 CPU seconds**.
+It agrees with independently integrated energy and gives rate L2 gaps
+`2.11376e-16` (chi) and `1.01493e-12` (k), with wall-velocity gap
+`2.31570e-15`. Aggregate development work is **5,226,742 values / 4.640625
+active CPU seconds**, including the diagnosed failures and one standalone
+base-state diagnostic. No additional tolerance repeat is needed.
+Independent Grok source and mathematical reviews confirm the element map,
+delta preprocessing, weak rates, projected differences and stable Gram norm.
+The accidental test ordering of coefficient-infinity and L2 values was
+removed: there is no general ordering between those norms. Physical and
+wall accuracy assertions remain unchanged. Coordinate rounding remains a
+numerical error question; review prose does not supply its enclosure.
+
+### One retained fixed-space mass reference
+
+After adapter and norm review, evaluate one instantaneous reference using
+the same authenticated terminal profile, exact initial transfer and recorded
+finite alpha. Keep `T_x=1`, `R_x=0` and the previously specified incoming
+value `(p_background+h_background)/R` from the same supplied source; this is
+an initial trace comparison, not a new preparation or an exterior evolution.
+The scope is one 65-cell, 518-sensitivity constrained mass solve, the existing
+adjoint comparison, and the fixed-space weak coefficient update.
+
+Budget: **25,000,000 charged values / 120 CPU seconds**, including
+authentication, transfer, certificate, Gram and field work. Use the checked
+defaults `rtol=2e-13, atol=2e-15`; no scan or automatic retry is admitted.
+Require finite output, positive metric domain, weak mass-balance discrepancy
+below `2e-8`, and forward/adjoint projected L2 rate and wall-velocity gaps
+below `2e-8`. These are numerical consistency checks. Record the actual
+strong/weak wall differences independently without forcing them to pass.
+Print compact results, work, hashes and failure phase; preserve no raw
+coefficient history. A failure diagnoses the specific condition before
+another calculation is designed. Success precedes coupled wall evolution
+and its numerical/error analysis; it is not that evolution.
+
+**First outcome:** the run stops at **25,000,008 charged values / 7.515625
+CPU seconds** in `_radial_variations` at its adjoint coefficient evaluation
+(line 117), before completing the independent gradient comparison. The
+forward loop has integrated every cell before that code is reached. No
+retained mass/RHS is accepted from this interrupted reference.
+
+The work diagnosis is explicit. For D=259, an ordinary adjoint sample
+charges at most `140+160+(2D+48)+12+2D = 1396` values: basis evaluation,
+reduced fields, coefficient vector, potential and adjoint accumulation.
+All `65*32` adjoint points therefore cost at most **2,903,680** values.
+The two wall evaluations, four banded solves, two norms and final scalar
+checks add below 90,000. The completed forward prefix was already below
+25,000,008, so replaying the unchanged reference needs below **27,993,688**
+values under this accounting. After preserving the failed attempt, admit
+one **30,000,000-value / 120-CPU-second** completion replay with identical
+fields, mesh, source, alpha and radial tolerances. This changes the finite
+work allowance, not the calculation. Preserve both receipts; no automatic
+retry or further increase follows if that one replay fails.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

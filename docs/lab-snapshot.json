@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "1826cd9c37582768236c38285a6605fea00e31b6",
+  "current_receipt_commit_parent": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 219103,
-      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
-      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "bytes": 219653,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "5217a38a6a01b44ed629b1b75ec47f263562ac3aeee9a7e75616e1d979997692"
+      "sha256": "e858c57c359aeaced4fa1f5fbb2b982de4b23a747735dbe34d31b481fdeb17d5"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 307428,
-      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
-      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "bytes": 308511,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "41ca7d5cc1f99702ade7f07c93b3f4dc6a694d91cc2bd8eda37df7d898a94725"
+      "sha256": "50283b0f8d2b73a17b6f94eb0a0d94033ccf665c0088ac538a36f3ed45a843fc"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 248207,
-      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
-      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "bytes": 251288,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "802b10f168fa2ab58308d265e81ea5af7842576d365e4290070db0b3f563a416"
+      "sha256": "fc8418b91600597517ee10364dae2d7c49de0b384b75cc42d0c3323912564a38"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 281916,
-      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
-      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "bytes": 289427,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "bada048a4384b6d9f178471d3f67731221601bb881757c47dc3b767655d72101"
+      "sha256": "265865ad5971510f88b720a124963b4ea2caca4c747e504abdaa0803b07c2ba2"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 97701,
-      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
-      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "bytes": 99101,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fd68131b03a8b6662924858020e57b9650dff338ba1b61ee0a8a1e56dd58672c"
+      "sha256": "109a5bf714522a7ad779497fb5105d33c9e163a7e4cad0ea6f6dbf6e7f65a52d"
     },
     {
       "bytes": 18356,
@@ -29588,6 +29588,14 @@
       "sha256": "44a67722bff5e827a26762265fe4a0cf9b1a8e29afad97f4995f5bc2a65ee4a0"
     },
     {
+      "bytes": 4124,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "path": "scripts/check_nsc_atlas_cap_fixed_reference.py",
+      "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
+      "sha256": "fb4d2e67fa8adb73c6d5aecc0a344ef82bc87b3edcad0466b6e4c977d053c713"
+    },
+    {
       "bytes": 7677,
       "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
       "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
@@ -32260,12 +32268,12 @@
       "sha256": "f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852"
     },
     {
-      "bytes": 8908,
-      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
-      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "bytes": 9810,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py",
       "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
-      "sha256": "e94d366b34f4d4cd2b3ff4836491b8f197bcb4b0cf8eefbf7f5b2f3673d7c2c2"
+      "sha256": "048cdbee78b7be34b6ffac4b04019078f7f044a13a918d25472c7ad4d850d5ae"
     },
     {
       "bytes": 4863,
@@ -32274,6 +32282,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py",
       "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
       "sha256": "16df667ecad5ba64434f249205f2a3257674d601a387e01a69c9318250b84f18"
+    },
+    {
+      "bytes": 11763,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
+      "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
+      "sha256": "a2ee9ded70981772b62f4e889786e6720592fada34f052f1f95b8a7839aada41"
     },
     {
       "bytes": 7147,
@@ -35715,6 +35731,14 @@
       "path": "tests/test_nsc_atlas_cap_fixed_bound.py",
       "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
       "sha256": "b2fcf4d6b7d737719e99f7fc8e0ba1bba4ef10e2534e4ae1d22ddfa58f09311f"
+    },
+    {
+      "bytes": 6937,
+      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
+      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "path": "tests/test_nsc_atlas_cap_fixed_reference.py",
+      "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
+      "sha256": "3d886326a8db6bada63a575b8ba40c20e8b31fa17f421030b167209c86334961"
     },
     {
       "bytes": 3676,

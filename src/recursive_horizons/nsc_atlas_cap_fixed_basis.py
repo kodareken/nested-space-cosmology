@@ -45,6 +45,25 @@ class FixedCapGram:
     def lower(self):
         return self._lower.copy()
 
+    def squared_norm(self,coefficients,*,budget):
+        """Numerical integral of the squared field via the scaled factor.
+
+        M=S L L^T S, so ||L^T S c||^2 avoids cancellation in c^T M c.
+        This uses the stored numerical Gram, not an interval enclosure.
+        """
+        budget=_budget(budget)
+        coefficients=_vector(coefficients,'Gram norm coefficients')
+        if coefficients.shape!=(self.dimension,):
+            raise ValueError('Gram norm coefficient dimension differs')
+        budget.check(24*self.dimension)
+        scaled=self._scale*coefficients
+        product=self._factor[0]*scaled
+        for offset in range(1,len(self._factor)):
+            product[:-offset]+=self._factor[offset,:self.dimension-offset]*scaled[offset:]
+        value=float(product@product)
+        if not np.isfinite(value): raise ValueError('nonfinite Gram squared norm')
+        return value
+
     def solve(self,rhs,*,budget):
         budget=_budget(budget)
         rhs=_vector(rhs,'Gram right hand side')
