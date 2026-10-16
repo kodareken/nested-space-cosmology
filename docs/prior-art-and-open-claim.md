@@ -1,5 +1,39 @@
 # Prior art and admission of new research
 
+## Cap transport and radial-quadrature separation, 16 October 2026
+
+The completed mass ledger below leaves a definite remainder. Before another
+physical calculation, connect it to the radial constraints and reconstructed
+field equations using the same full direction as the ledger. The mathematical
+inputs are the existing mass-transport identity, variation of constants for
+a scalar linear ODE, and differentiation of moving interfaces.
+
+This step admits exact symbolic controls only: the general local identity,
+moving-interface integration, the wall conversion, and affine panel-error
+telescoping with its full derivative. The controls share 20 active process-CPU
+seconds, with no numerical field samples, retained-state evaluations, evolution,
+or grid scans. Independent derivation and omission controls check the signs
+and the terms that would otherwise disappear in a wall-only comparison.
+
+**Outcome:** four exact controls pass, with zero field samples and 0.640625
+active CPU seconds. The [mathematical owner](nsc-atlas-finite-amplitude.md#separating-radial-quadrature-from-reconstructed-field-transport)
+now specifies the shadow radial problem, full-direction field residuals,
+moving-interface signs and differentiated panel-error sum. Grok independently
+confirmed the corrected full-direction balance. No retained cap was evaluated.
+
+The shadow radial solution is a mathematical comparison using the same
+reconstructed fields and centre lapse. It is not a replacement cap or a new
+physical candidate. Its numerical evaluation and any corrected evolution
+remain unadmitted until the exact bridge, all formula-switch interfaces,
+one-sided branches, finite evaluation budget, and independent error check
+are specified. In particular, defining a quadrature derivative by subtracting
+the two total derivatives cannot then serve as an independent closure check.
+
+The likely failures are omission of moving-interface terms, reuse of the
+producer's attenuation in an exact-flow error sum, and circular verification
+of the quadrature derivative. Exact omission controls address these before
+any further physical run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

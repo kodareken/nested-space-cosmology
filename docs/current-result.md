@@ -74,6 +74,15 @@ and [reproduction guide](reproducing.md#current-work) define the domain.
 Finite-amplitude closure remains open; the next connection is a compatible
 discrete mass/transport balance before another coupled evolution.
 
+The [shadow-radial decomposition](nsc-atlas-finite-amplitude.md#separating-radial-quadrature-from-reconstructed-field-transport)
+now derives that comparison: differentiated radial quadrature error,
+wall-density/flux conversion, and full reconstructed field residuals with
+moving-interface jumps sum to the existing mass balance. Four exact algebra
+controls pass with zero field samples and 0.640625 active CPU seconds;
+Grok independently checked the corrected full-direction formula. The new
+channels have not been evaluated on the retained state. This supplies the
+mathematical connection for a bounded evaluator, not a corrected evolution.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)

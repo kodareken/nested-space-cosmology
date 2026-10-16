@@ -11,7 +11,9 @@ permissions:
 
 concurrency:
   group: verify-${{ github.ref }}
-  cancel-in-progress: true
+  # Preserve an active full-suite run while saving ongoing research commits.
+  # GitHub keeps only the latest pending run for this group by default.
+  cancel-in-progress: false
 
 jobs:
   retained-suite:

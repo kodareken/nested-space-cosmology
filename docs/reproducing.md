@@ -52,7 +52,25 @@ forcing-grid drift. These diagnostics read the failed comparison's operands;
 they do not rerun a producer or change acceptance. Investigate those values
 before modifying a replay allowance.
 
+The Verify workflow lets an active full-suite run finish while subsequent
+commits are saved. It keeps the latest pending run in the same concurrency
+group; intermediate pending runs can be replaced, as documented by
+[GitHub's concurrency rules](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency).
+A successful older run is evidence for that commit, not for a newer queued one.
+
 ## Current work
+
+The [shadow-radial comparison](nsc-atlas-finite-amplitude.md#separating-radial-quadrature-from-reconstructed-field-transport)
+has exact controls for its local identity, wall conversion, differentiated
+panel-error sum and moving-interface signs:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_transport_identity.py -q -s
+```
+
+These controls share 20 active process-CPU seconds and take no numerical
+field samples. They do not evaluate a retained cap or authorize a new
+trajectory. The numerical shadow-flow/error evaluator is still to be built.
 
 The discrete cap mass derivative and departure-flux ledger are implemented
 in a diagnostic companion to the unchanged producer. Run their controls with:

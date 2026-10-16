@@ -2922,6 +2922,134 @@ No modified transport law is supplied by the one scalar mass constraint;
 a proposed change must preserve its field equations and recheck the full
 direction's limiter/cut branch. No further numerical run is admitted here.
 
+#### Separating radial quadrature from reconstructed field transport
+
+The ledger can be connected to the field equations without identifying its
+nonlocal weights with pointwise face traces. Freeze the same full backward
+direction `(R_x,T_x,Ip_x,Iq_x)` and the branch it selected. On the resulting
+piecewise total fields, define a **shadow radial solution**
+
+$$
+n^E_r+a n^E=b,\quad n^E(0)=0,\qquad
+\delta^E_r=a,\quad\delta^E(0)=\delta_0.
+$$
+
+Here `a,b` are the actual field/potential expressions in the preceding
+recurrence, and `delta_0` is the same centre lapse. This exact linear radial
+problem is a comparison for the existing reconstruction, not a different
+cap candidate. Set `A^E=1-r^2-2 alpha n^E/r`, `B^E=A^E exp(delta^E)`.
+The fields themselves still follow the implemented departure rates.
+
+Let `N^Q` be the producer's wall mass, `D^Q` its checked full tangent, and
+`E=N^Q-n^E(R)`. With left wall traces,
+
+$$
+\rho^E=b-a n^E,\quad\rho^Q=b-a N^Q,\qquad
+J^E=\frac{r^2(A^E)^2e^{\delta^E}\Pi\Phi}{2},
+\qquad \rho^E(R)-\rho^Q(R)=a(R)E.
+$$
+
+`J^Q` denotes the same left-trace flux used by the ledger. The imposed
+incoming-face flux remains a separately reported comparison. Dots below
+differentiate the complete moving-wall map; subscripts `x` on interior
+fields mean the full selected direction **at fixed physical radius**.
+They include dependence on `R`, the cell moments and the background clock.
+They are not partial derivatives of the profile with frozen cell state.
+
+Define the reconstruction's field-equation defects in that direction:
+
+$$
+\begin{aligned}
+\mathcal R_f^x&=f_x-T_xB^E\Pi,\\
+\mathcal R_\Pi^x&=\Pi_x-T_xr^{-2}\partial_r(r^2B^E\Phi)
+                         +T_xe^{\delta^E}U,\\
+\mathcal R_\Phi^x&=\Phi_x-T_x\partial_r(B^E\Pi),
+\qquad U=\partial_fP_{\rm diff}.
+\end{aligned}
+$$
+
+Use the derivative of the implemented potential branch in `U`. Substituting
+a different small-field expression would add a different residual. With
+`M=n^E_x-T_x J^E` and `W(r)=exp(-integral_r^R a ds)`, the earlier product
+identity gives
+
+$$
+M_r+aM=\frac{r^2}{2}
+\left[U\mathcal R_f^x+A^E(\Pi\mathcal R_\Pi^x+\Phi\mathcal R_\Phi^x)\right].
+$$
+
+The shadow mass is continuous. At an interior interface with velocity
+`v_j=dr_j/dx`, right-minus-left jumps therefore obey
+`[M]_j=-v_j[rho^E]_j-T_x[J^E]_j`. Integrating from the regular centre,
+where `M(0)=0`, and converting the moving-wall derivative yields
+
+$$
+\boxed{\begin{aligned}
+\mathcal B_{\rm mass}^Q={}&\dot E+R_xa(R)E+T_x(J^E_W-J^Q_W)\\
+&+\sum_{\rm pieces}\int W\frac{r^2}{2}
+  \left[U\mathcal R_f^x+A^E(\Pi\mathcal R_\Pi^x+\Phi\mathcal R_\Phi^x)\right]dr\\
+&-\sum_{0<r_j<R}W(r_j)\left(v_j[\rho^E]_j+T_x[J^E]_j\right).
+\end{aligned}}
+$$
+
+The first line isolates radial quadrature and its wall-flux conversion.
+The remaining lines measure compatibility of the reconstructed field rates
+with the shadow geometry, including its moving interfaces. The wall is
+excluded from the jump sum because its contribution is already explicit.
+Cell faces have `v_j=R_x*y_j`; the two profile-knot families have
+`v_j=+(1-r_j^2)*T_x` and `v_j=-(1-r_j^2)*T_x`. The exact integration
+partition must also account for formula switches, including `r=0.01`
+(velocity zero) and the potential threshold where its level set supplies
+a nonzero jump. Tangencies, coincidences and branch openings need their
+one-sided limits; a zero-width panel cannot be discarded before taking a
+directional derivative.
+
+There is an independent route to the first channel. On each original
+producer panel, let `L_j^Q` be its actual affine edge map and `L_j^E` the
+exact radial flow of the same reconstructed fields. With the numerical
+entering mass `N_j^Q`, set
+
+$$
+\varepsilon_j=(L_j^Q-L_j^E)(N_j^Q),\qquad
+\sigma_{j+1}^E=\exp\left(-\int_{r_{j+1}}^R a\,dr\right).
+$$
+
+Affine telescoping, using the **exact** downstream attenuation, gives
+
+$$
+E=\sum_j\sigma_{j+1}^E\varepsilon_j,\qquad
+\dot E=\sum_j\left(\dot\sigma_{j+1}^E\varepsilon_j
+                         +\sigma_{j+1}^E\dot\varepsilon_j\right).
+$$
+
+The derivative of each local error includes its moving endpoints, field
+samples and entering mass `N_j^Q`. Both exact and implemented panel maps
+participate. Additional formula-switch splits may be needed inside an
+exact flow even when the producer did not split there. The stored
+`gamma_interpolant_defect_nodes` is not this panel error. Defining `dot E`
+as `D^Q-d(n^E(R))/dx` would make the final comparison circular; that
+difference can only be an independent check of the differentiated panel sum.
+
+The [exact controls](../tests/test_nsc_atlas_cap_mass_transport_identity.py)
+check the full-parameter product identity without imposing the field
+equations, the moving-wall conversion, differentiated affine telescoping,
+and a manufactured moving-interface example with an independently
+integrated radial mass. Omitting attenuation derivatives, entering-mass
+derivatives, the radius term, or the interface jump fails its control.
+Four controls pass with zero field samples and 0.640625 active CPU seconds.
+An independent Grok derivation agrees with the corrected full-direction
+formula; its initial split into profile time and other state changes is
+absorbed into the full fixed-radius derivative above.
+
+No value of these new channels has been calculated for the retained cap.
+Their evaluator needs controlled exact-flow approximation, positive `A^E`
+and finite lapse on its declared domain, full reconstructed field jets,
+branch/interface accounting and an independent error budget.
+Once the complete balance closes through these independent channels, the
+already measured upwind work can be subtracted to resolve the remaining
+`-0.10914206297`. A frozen-branch central-flux subtraction is still an
+algebraic comparison, not a validated replacement evolution.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap
