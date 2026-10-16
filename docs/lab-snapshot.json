@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "d6159c6c75a7e6d165690e61089739da4c9623bc",
+  "current_receipt_commit_parent": "ee09c74f442ebe6663f414154f92764733513bcd",
   "files": [
     {
       "bytes": 2218,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 210715,
-      "change": "Full cap transport assembly and independent balance controls; original import records preserved.",
-      "changed_from_commit": "d6159c6c75a7e6d165690e61089739da4c9623bc",
+      "bytes": 211142,
+      "change": "Bounded terminal transport recorder with compact output and explicit numerical gates.",
+      "changed_from_commit": "ee09c74f442ebe6663f414154f92764733513bcd",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "657f115e1e8982c1aafac62c9e2f9b4e176a5614af5e0b3e70dfa737efdadfdd"
+      "sha256": "2777a9352b2a52704a44e3e502b33450957a5384d29c60a96b4ce25aae9890f6"
     },
     {
       "bytes": 9543,
@@ -31911,6 +31911,14 @@
       "sha256": "2cb43ddebd78db037fdc931b1a32c1c1fc996c4fcee58f6fd5aadaa152a77940"
     },
     {
+      "bytes": 24812,
+      "change": "Bounded terminal transport recorder with compact output and explicit numerical gates.",
+      "changed_from_commit": "ee09c74f442ebe6663f414154f92764733513bcd",
+      "path": "scripts/diagnose_nsc_atlas_cap_transport_balance.py",
+      "retention_reason": "Bounded terminal cap transport comparison and manufactured recorder controls.",
+      "sha256": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd"
+    },
+    {
       "bytes": 4707,
       "import_bytes": 4847,
       "import_sha256": "c485cd50cd52a43e2e188b54c646f2fba7f2d671e2e91c0e14f4d217c04e9c5c",
@@ -35409,6 +35417,14 @@
       "original_path": "lab/tests/conftest.py",
       "path": "tests/conftest.py",
       "sha256": "4beed60a5f74531137cf7acc32ec4ce39adf0b9060c23d679c0d5baacc2b28c6"
+    },
+    {
+      "bytes": 12253,
+      "change": "Bounded terminal transport recorder with compact output and explicit numerical gates.",
+      "changed_from_commit": "ee09c74f442ebe6663f414154f92764733513bcd",
+      "path": "tests/test_diagnose_nsc_atlas_cap_transport_balance.py",
+      "retention_reason": "Bounded terminal cap transport comparison and manufactured recorder controls.",
+      "sha256": "db63543b1983ba9f30e6eaeba6920367d359fd21b7f0acbb6c92de604909a25c"
     },
     {
       "bytes": 49204,

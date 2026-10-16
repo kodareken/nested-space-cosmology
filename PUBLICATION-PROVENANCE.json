@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 210715,
+      "bytes": 211142,
       "path": "docs/active-code-map.md",
-      "sha256": "657f115e1e8982c1aafac62c9e2f9b4e176a5614af5e0b3e70dfa737efdadfdd"
+      "sha256": "2777a9352b2a52704a44e3e502b33450957a5384d29c60a96b4ce25aae9890f6"
     },
     {
       "bytes": 95327,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2241070,
+      "bytes": 2242006,
       "path": "docs/lab-snapshot.json",
-      "sha256": "866e99943164481d1e72b43c5ec2c41bba47a862d16abfc3ce1ed94f62ccf083"
+      "sha256": "056210760e11e7352e06773b0da07f5028c06998c846403ec543890bf21be573"
     },
     {
       "bytes": 4997,
@@ -2201,9 +2201,9 @@
       "sha256": "7e7c50e31cf42ae37ee780d56873aa013596d70d1e1c3ab8f138112d3dd4b4ed"
     },
     {
-      "bytes": 224483,
+      "bytes": 225766,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "4b2be1278e0478533f8a44dcada6badb798f21c4e8f1c0846d68528ca1488fdd"
+      "sha256": "664fa2309e9f6028b8b0c569b519ad3577b95e659830dddbf41aee2e28782ec0"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 82918,
+      "bytes": 84218,
       "path": "docs/reproducing.md",
-      "sha256": "8a523121c69f586a0befe521b231504b166e79556e15c71f17a4ef7c33a4772d"
+      "sha256": "f64d7d5e5bcaafbb129cb2ae060bcc08f28fa7a0b6beca9dacf0a6038614405a"
     },
     {
       "bytes": 31710,
@@ -15956,6 +15956,11 @@
       "sha256": "3f751901982a3070e28c08c7a848848e81d3a45025b597fa36c7f1ed97edc6f5"
     },
     {
+      "bytes": 24812,
+      "path": "scripts/diagnose_nsc_atlas_cap_transport_balance.py",
+      "sha256": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd"
+    },
+    {
       "bytes": 16099,
       "path": "scripts/diagnose_nsc_atlas_compatible_transport.py",
       "sha256": "063f73745addb59eaa518c5ae6ef9e1e5a3e19873dfb015d9818fff9bbb1f29a"
@@ -18296,6 +18301,11 @@
       "sha256": "5d26b13311c4118320ef3944166d760569bd971c16a26594cd63b187408c73b6"
     },
     {
+      "bytes": 12253,
+      "path": "tests/test_diagnose_nsc_atlas_cap_transport_balance.py",
+      "sha256": "db63543b1983ba9f30e6eaeba6920367d359fd21b7f0acbb6c92de604909a25c"
+    },
+    {
       "bytes": 12029,
       "path": "tests/test_diagnose_nsc_atlas_compatible_transport.py",
       "sha256": "6138ec2e0679bb7746d4f3477c2dae042d59e66bde6e112442eff8c39d723b34"
@@ -20466,7 +20476,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "866e99943164481d1e72b43c5ec2c41bba47a862d16abfc3ce1ed94f62ccf083",
+  "lab_snapshot_sha256": "056210760e11e7352e06773b0da07f5028c06998c846403ec543890bf21be573",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

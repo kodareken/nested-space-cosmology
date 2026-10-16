@@ -161,6 +161,25 @@ reference mass/rate/jump discrepancies still require a declared accuracy
 budget before interpreting a retained-state result. That next fixed terminal
 comparison is specified in the calculation owner; it has not run yet.
 
+The retained-state recorder and its synthetic routing controls are:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_cap_transport_balance.py -q -s
+python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_transport_balance.py --output .build/results/nsc-atlas-cap-transport-balance-v1.json --summary results/summaries/nsc-atlas-cap-transport-balance-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_transport_balance.py --output .build/results/nsc-atlas-cap-transport-balance-v1.json --check
+```
+
+Creation reconstructs the analysis once for independent validation. The
+[fixed comparison](prior-art-and-open-claim.md#next-fixed-terminal-comparison)
+sets its shared 48-million-point / 300-second allowance and the separate
+24-million-point / 150-second check. Only terminal cut 128, 64 cells and native
+order eight are used. Scalar summaries select `/analysis/summary`; full
+piece arrays stay local. Twenty-one manufactured recorder controls pass.
+Actual input and producer hashes remain exact. Numerical replay uses absolute
+`1e-8` / relative `2e-12`, with all original gates also checked independently
+on the saved detailed data. Adaptive ODE counts are bounded work receipts;
+the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
+
 The interface algebra uses no numerical fields or root search:
 
 ```sh

@@ -234,6 +234,25 @@ summary contains the scalar channels, accuracy comparisons, source/input
 identities, raw hash and regeneration command. This comparison diagnoses the
 existing state; it does not establish a corrected evolution or closure.
 
+The [terminal recorder](../scripts/diagnose_nsc_atlas_cap_transport_balance.py)
+implements this fixed inventory. Its 21 manufactured orchestration and
+authentication controls pass; cumulative development work is **195,757 charged
+values / 1.765625 active CPU seconds** within 250,000 / 20. They exercise
+the individual accuracy gates, native-ledger mismatch, tolerance sensitivity,
+creation-only output, hash-only input authentication, producer changes and
+failure receipts. Grok identified the raw-output boundary as the remaining
+recorder risk. The recorder now requires ignored `.build/results` output and
+its `--summary` option uses the existing summary tool with the explicit scalar
+selection. Controls verify that tracked full-output paths are rejected.
+
+The recorder reconstructs its scientific payload with absolute `1e-8` and
+relative `2e-12` arithmetic tolerance. Saved scalar summaries are also checked
+against their detailed balances and must independently pass the original
+accuracy gates. Schema, inputs, producers, fixed call inventory and tolerance
+declarations remain exact. Adaptive integration counts are retained as bounded
+work receipts; they are not required to be identical across platforms. No
+retained-state result has been obtained with this recorder yet.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
