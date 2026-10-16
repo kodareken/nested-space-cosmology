@@ -2,10 +2,10 @@
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
     "scripts/validation_source_successors.py": "e656ed75556510a84a572d7320c18da8a2232a7d23d1ea918d75ea95f5e46bb4",
-    "src/recursive_horizons/nsc_atlas_validation.py": "518765fcf70f0e2bdb71e63180c6696a9af5e33b280982c0a7e848bcab43dbe8",
+    "src/recursive_horizons/nsc_atlas_validation.py": "de742eed9e749c6b82a2651ff79516620d4d4b1c630bcd7f87cf5cdbf5bdee7d",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
-    "tests/test_nsc_atlas_validation.py": "0e6ff19a8b75bb6a1fbd47d9ba4df97917e52ffed0511b3f00aff86188cfc8b9",
+    "tests/test_nsc_atlas_validation.py": "8741ff96f86018727b9b752cd86c2dbf67a3b5e20ff25d72d31ce3e7e76cea00",
     "tests/test_validation_source_successors.py": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
   },
   "schema": "nsc-validation-source-successors-v1",
@@ -74,8 +74,8 @@
     "scripts/record_nsc_atlas_background_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "eed75a5b1673f58bee5748ccb6437d6f8872c2970ce93a70933cbd1aa865655f",
-      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
-      "successor_sha256": "aef5650a3b6ef528d7fb2717b4d10a2b46ef2f565eae27bc589a35a1faa5168f"
+      "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
+      "successor_sha256": "1667bf1aa8a8a8fdbb8d4860369ccdb1080d39afe366cf96287c3e1f9c7d03e1"
     },
     "scripts/record_nsc_atlas_central_ray.py": {
       "classification": "validation-only",
@@ -92,14 +92,14 @@
     "scripts/record_nsc_atlas_compatible_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "9cf6802c5eca6b840fc3158438ca34178e719095ba839a4dd71cea549f265c2c",
-      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
-      "successor_sha256": "8ae696d638ef5ab47bbaed81a385e8093b3df98a688f8f07fca23a1736be354d"
+      "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
+      "successor_sha256": "35443dfe0fec7acb396107f0cefdc13b32f53f4e0948b212e76537874b54f4c9"
     },
     "scripts/record_nsc_atlas_coupled_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "2898d38aea0540530ef5fc76e1c7d3fc377d41bdbb414d3f51dbba54be29b264",
-      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
-      "successor_sha256": "ca9ca2660d5b117052d990905d0e88efdb977f5c31ec9dc9d369b128e43fd999"
+      "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
+      "successor_sha256": "236b18d99094daea371fe68f713bccc396a921b0c2f26904673abdf5b3548279"
     },
     "scripts/record_nsc_atlas_forcing_cache.py": {
       "classification": "validation-only",
@@ -140,8 +140,8 @@
     "scripts/record_nsc_atlas_scalar_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "2d891435da48c8711fcb22fc03096842fc36dcbe585bebe1d5bcbff0c9a21cff",
-      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
-      "successor_sha256": "a04141339907751eec4a9fb629eefff5e0633940835845ab7bab546871cffffc"
+      "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
+      "successor_sha256": "a53c8738d5bd0abcd0f39063946a6541af81b716bc7b93faa1afc919c855e905"
     },
     "scripts/record_nsc_atlas_scalar_inputs.py": {
       "classification": "validation-only",
@@ -158,8 +158,8 @@
     "scripts/record_nsc_atlas_ssprk3_evolution.py": {
       "classification": "validation-only",
       "original_sha256": "57891d825cb49363f86acbab37791917193394b9e2c2cc023720178c8eb1c7fc",
-      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
-      "successor_sha256": "1e9a28c6160af9570069fabd051fb7f837bf3620981cd676ded27720a2dd67ed"
+      "reason": "Validation-only bounded endpoint restoration or operand-conditioned departure diagnostic comparison. Immutable result data, generating equations, source inputs and original pins remain unchanged.",
+      "successor_sha256": "118e02bdf46e5ae2763bc6fdfb7885533325ab133932110bfeaa31193bb397f8"
     },
     "scripts/record_nsc_atlas_ssprk3_refinement.py": {
       "classification": "validation-only",
@@ -249,7 +249,7 @@
       "classification": "test-only",
       "original_sha256": "2a59768c44041b8be3ea32fe674562581284d175bdbc5d871cf2256eabad271b",
       "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
-      "successor_sha256": "dcb7d19019643afbcdba50c1cf8e02058ac77504fd19317720e65bc1ea9f81e3"
+      "successor_sha256": "257adee2996ff3d7c12528cf41895949ec14b27505bb31018648d5011924345b"
     },
     "tests/test_record_nsc_atlas_central_scalar.py": {
       "classification": "test-only",
@@ -303,7 +303,7 @@
       "classification": "test-only",
       "original_sha256": "584dbff95a6b58a67025070efc21691316d105cadd07ef986e4bf3e00d5bdabe",
       "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
-      "successor_sha256": "4997325e8ff1835350ddd51437b36ad42753a2a08730153d054a4285767b684f"
+      "successor_sha256": "4e0d8c36eed9d89d3fc9329f8cf004ad53ce130dce4142673b9ac3aa43f3784c"
     },
     "tests/test_record_nsc_atlas_ssprk3_refinement.py": {
       "classification": "test-only",

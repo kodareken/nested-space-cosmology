@@ -19,6 +19,15 @@ spacing, while retained coordinates and copied inputs remain exact where declare
 Restored forcing grids allow `2e-13` absolute drift in the independently rebuilt
 wall coordinate. Their saved affine node spacing and fixed source endpoint
 still use the original eight-epsilon check; saved arrays are never moved.
+Restored reference splines evaluate a saved endpoint just outside their live
+domain at the live endpoint, within the already admitted eight-epsilon bound.
+Interior queries are unchanged; larger excursions and nonfinite values fail.
+Departure-history constraint replay propagates rounding through the analytic
+vacuum, terminal subtraction, centred stencils and moving-grid coefficients.
+Only `E_Ubar`, `E_x` and their numeric summary leaves receive those additional
+operand-dependent allowances. Mass, source constraints, counts, masks and
+other diagnostics keep their existing checks. The eight-unit elementary-function
+assumption is a replay policy, not a certified SciPy accuracy bound.
 Profile-fit replay similarly propagates rounding through its polynomial basis
 conversion and differentiated residuals. Adaptive inverse iterations and their
 work totals are checked for internal consistency and algorithmic bounds in each

@@ -95,6 +95,7 @@ def restore_inputs():
     from recursive_horizons.nsc_atlas_prepared_response import PreparedFieldBudget, _geometry
     from recursive_horizons.nsc_atlas_bulk_response import BulkBudget
     from recursive_horizons.nsc_atlas_forcing_cache import ForcingSliceProvider, ForcingTimeCache
+    from recursive_horizons.nsc_atlas_validation import EndpointReplaySpline
     shared = PreparedFieldBudget()
     metrics = BulkBudget(started=shared.started, external=shared)
     cache, clock, receipt = input_snapshot()
@@ -103,14 +104,23 @@ def restore_inputs():
     for key in ("Ua", "Ub", "Va", "Vb"):
         if abs(geometry[key]-d[key]) > 8*np.finfo(float).eps*max(1., abs(d[key])):
             raise ValueError("restored geometry endpoints differ from retained domain")
+    # The saved endpoints can lie an admitted rounding unit outside the live
+    # nonextrapolating spline. Snap only that endpoint-sized excursion.
+    geometry = {key: EndpointReplaySpline(value) if key in {"wall","arrival","Vdot"} else value
+                for key,value in geometry.items()}
+    def difference(rebuilt, saved):
+        rebuilt, saved = float(rebuilt), float(saved)
+        if not math.isfinite(rebuilt) or not math.isfinite(saved):
+            raise ValueError("nonfinite restored reference geometry sample")
+        return abs(rebuilt-saved)
     defects = dict(wall_coordinate=0., wall_derivative=0., arrival_coordinate=0.)
     for row in cache["direct_samples"]:
-        defects["wall_coordinate"] = max(defects["wall_coordinate"], abs(float(geometry["wall"](row["V"]))-row["U_wall"]))
+        defects["wall_coordinate"] = max(defects["wall_coordinate"], difference(geometry["wall"](row["V"]),row["U_wall"]))
     boundary = clock["solutions"][1]["boundary_samples"]
     for row in boundary:
-        defects["wall_coordinate"] = max(defects["wall_coordinate"], abs(float(geometry["wall"](row["V"]))-row["U"]))
-        defects["wall_derivative"] = max(defects["wall_derivative"], abs(float(geometry["wall"](row["V"], 1))-row["U_V"]))
-        defects["arrival_coordinate"] = max(defects["arrival_coordinate"], abs(float(geometry["arrival"](row["V"]))-row["q_plus"]))
+        defects["wall_coordinate"] = max(defects["wall_coordinate"], difference(geometry["wall"](row["V"]),row["U"]))
+        defects["wall_derivative"] = max(defects["wall_derivative"], difference(geometry["wall"](row["V"],1),row["U_V"]))
+        defects["arrival_coordinate"] = max(defects["arrival_coordinate"], difference(geometry["arrival"](row["V"]),row["q_plus"]))
     tolerances = _geometry_tolerances(geometry)
     if any(not math.isfinite(value) or value > tolerances[key] for key, value in defects.items()):
         raise ValueError("full reference geometry differs from retained input coordinates: "

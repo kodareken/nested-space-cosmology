@@ -4,6 +4,32 @@ import numpy as np
 from .nsc_atlas_field_preparation import radius_product
 
 
+class EndpointReplaySpline:
+    """Evaluate a restored spline at an admitted rounded domain endpoint.
+
+    Saved and rebuilt reference bounds already admit eight binary64 units.
+    An endpoint lying just outside the rebuilt, nonextrapolating spline is
+    evaluated at that spline's endpoint. Interior arguments are unchanged;
+    larger excursions and nonfinite arguments still fail. This adapter is
+    for validation replay, never a source or evolution extrapolator.
+    """
+    def __init__(self, spline):
+        self._spline = spline
+
+    def __getattr__(self, name):
+        return getattr(self._spline, name)
+
+    def __call__(self, values, *args, **kwargs):
+        points = np.asarray(values, dtype=float)
+        low, high = float(self._spline.x[0]), float(self._spline.x[-1])
+        lower_allowance = 8*np.finfo(float).eps*np.maximum(1., np.maximum(abs(points), abs(low)))
+        upper_allowance = 8*np.finfo(float).eps*np.maximum(1., np.maximum(abs(points), abs(high)))
+        if (not np.all(np.isfinite(points)) or np.any(points<low-lower_allowance)
+                or np.any(points>high+upper_allowance)):
+            raise ValueError("reference replay query leaves its rounded spline endpoints")
+        return self._spline(np.clip(points, low, high), *args, **kwargs)
+
+
 def source_jet_roundoff_tolerances(x, geometry, *, second=False):
     """Absolute replay allowances for (g, g_x), optionally also g_xx.
 
@@ -95,6 +121,135 @@ class _Roundoff:
         if np.any(denominator <= 0):
             raise ValueError("source replay logarithm is not defined")
         return self.rounded(np.log1p(self.value), self.error/denominator)
+
+    def log(self):
+        if np.any(self.value-self.error <= 0):
+            raise ValueError("replay logarithm is not positive")
+        return self.rounded(np.log(self.value), self.error/(self.value-self.error))
+
+    def exp(self):
+        value = np.exp(self.value)
+        return self.rounded(value, value*np.expm1(self.error))
+
+    def __getitem__(self, index):
+        return _Roundoff(self.value[index], np.broadcast_to(self.error, self.value.shape)[index])
+
+
+def departure_history_roundoff_tolerances(row, source, alpha):
+    """Replay conditioning of departure diagnostics, using their actual operands.
+
+    Interior departures, source jets and gauge samples are immutable saved
+    inputs. Only the analytic vacuum and terminal subtraction are rebuilt.
+    Eight binary64 rounding units per operation describe alternate arithmetic
+    paths (including the elementary functions). The Lambert-W input error
+    uses |dw/dq|=|w|/(|q|(1+w)); a factor two bounds its variation on the
+    explicitly small admitted interval. This is a floating replay allowance,
+    not a certified SciPy error bound or a physical/truncation error estimate.
+
+    Propagation through the *actual* centred stencils retains 1/de^2, 1/dx^2,
+    mixed derivatives and moving-grid coefficients. Two expression radii
+    compare independent evaluations. Summary extrema use their candidate
+    intervals; RMS uses the normalized Euclidean norm. Counts stay exact.
+    No evolution, fit, vacuum query or field modification occurs here.
+    """
+    Q, eps, a = _Roundoff, np.finfo(float).eps, .8
+    x, eta = np.asarray(row["x"]), np.asarray(row["eta"])
+    g = row["gauge"]
+    U = Q(eta[None, :])*Q(np.asarray(g["W"])[:, None])
+    t = Q(x[:, None])
+    q = (1-U/(4*a))*(1-t/a)*(t/a).exp()/np.e
+    # Recover the already evaluated vacuum radius, including the rounding
+    # radius of this recovery. The source endpoint is an exact affine anchor.
+    off = Q(np.asarray(source["r"]))-Q(x)
+    recovered = Q(row["states"]["r"])-off[:, None]-Q(row["departure"]["r"])
+    rv = recovered.value
+    w = rv/a-1
+    relative_input = q.error/(abs(q.value)-q.error)
+    branch_radius = 2*abs(w)*relative_input/(1+w)+8*eps*abs(w)
+    if (np.any(rv <= 0) or np.any(rv >= a) or not np.all(np.isfinite(branch_radius))
+            or np.any(branch_radius > (1+w)/16)):
+        raise ValueError("vacuum replay leaves the separated Lambert-W branch")
+    vr = Q(rv, recovered.error+a*branch_radius+8*eps*abs(rv))
+    vr.value[:, 0], vr.error[:, 0] = x, 0.
+    vL = (t/vr).log()+(t-vr)/a
+    C = vL.exp()
+    p, R = C*(a-t)/(4*t), (1-U/(4*a))*C
+    B = 1/vr+1/a
+    LU, Lx = -B*p, 1/t+1/a-B*R
+    vacuum = {"r": vr, "L": vL, "c": Q(np.zeros_like(rv))}
+    offsets = {"r": off, "L": Q(source["log_C"]), "c": Q(source["c"])}
+    first = {"r": Q(source["r_x"])-1, "L": Q(source["log_C_x"]), "c": Q(source["c_x"])}
+    z, states = {}, {}
+    for key in ("r", "L", "c"):
+        value = np.asarray(row["departure"][key])
+        error = np.zeros_like(value)
+        terminal = Q(np.asarray(row["states"][key])[:, -1])-vacuum[key][:, -1]-offsets[key]
+        error[:, -1] = terminal.error
+        z[key] = Q(value, error)
+        rebuilt = vacuum[key]+offsets[key][:, None]+z[key]
+        # Both physical endpoints are supplied, not rebuilt.
+        rebuilt.error[:, [0, -1]] = 0.
+        states[key] = Q(row["states"][key], rebuilt.error)
+    take = np.s_[1:-1, 1:-1]
+    dx, de = Q(x[1])-Q(x[0]), Q(eta[1])-Q(eta[0])
+    W = Q(np.asarray(g["W"])[1:-1, None])
+    b = Q(np.asarray(g["W_x"])[1:-1, None])/W
+    transport = Q(eta[None, 1:-1])*b
+    second_map = Q(eta[None, 1:-1])*(2*b*b-Q(np.asarray(g["W_xx"])[1:-1, None])/W)
+    derivatives = {}
+    for key, vu, vx in (("r", p, R), ("L", LU, Lx), ("c", Q(np.zeros_like(rv)), Q(np.zeros_like(rv)))):
+        f = z[key]
+        d_eta = (f[1:-1, 2:]-f[1:-1, :-2])/(2*de)
+        d_x = (f[2:, 1:-1]-f[:-2, 1:-1])/(2*dx)
+        derivatives[key+"_Ubar"] = vu[take]+d_eta/W
+        derivatives[key+"_x"] = vx[take]+first[key][1:-1, None]+d_x-transport*d_eta
+        if key == "r":
+            d_ee = (f[1:-1, 2:]-2*f[take]+f[1:-1, :-2])/(de*de)
+            d_xx = (f[2:, 1:-1]-2*f[take]+f[:-2, 1:-1])/(dx*dx)
+            d_xe = (f[2:, 2:]-f[2:, :-2]-f[:-2, 2:]+f[:-2, :-2])/(4*dx*de)
+            derivatives["r_Ubar_Ubar"] = (LU*p)[take]+d_ee/(W*W)
+            derivatives["r_xx"] = ((Lx*R)[take]+Q(source["r_xx"])[1:-1, None]+d_xx
+                -2*transport*d_xe+transport*transport*d_ee+second_map*d_eta)
+    r, c = (states[k][take] for k in ("r", "c"))
+    u = c/r
+    D = 1+alpha*u*u/6
+    values = {}
+    for coord, second in (("Ubar", "r_Ubar_Ubar"), ("x", "r_xx")):
+        ua = (derivatives["c_"+coord]-u*derivatives["r_"+coord])/r
+        values["E_"+coord] = (derivatives[second]-derivatives["L_"+coord]*derivatives["r_"+coord]
+                              +alpha*r*ua*ua/(2*D))
+    result = {}
+    for key, value in values.items():
+        bound = 2*value.error
+        if not np.all(np.isfinite(bound)) or np.any(bound < 0):
+            raise ValueError("nonfinite departure replay conditioning")
+        result[(key,)] = bound
+        for name, mask in row["masks"].items():
+            selected = bound[mask]
+            if not selected.size:
+                continue
+            samples = np.asarray(row[key])[mask]
+            for statistic, center, lower, upper in (
+                    ("min", np.min(samples), np.min(samples-selected), np.min(samples+selected)),
+                    ("max", np.max(samples), np.max(samples-selected), np.max(samples+selected)),
+                    ("max_abs", np.max(abs(samples)),
+                     np.max(np.maximum(0., abs(samples)-selected)), np.max(abs(samples)+selected))):
+                result[("summaries", key, name, statistic)] = float(max(center-lower, upper-center))
+            rms = float(row["summaries"][key][name]["rms"])
+            gamma = (selected.size+8)*eps/(1-(selected.size+8)*eps)
+            result[("summaries", key, name, "rms")] = float(np.sqrt(np.mean(selected*selected)))+2*gamma*abs(rms)
+    return result
+
+
+def collect_departure_replay(allowances, case_index, source, alpha, **histories):
+    """Attach transient path allowances only when a checker requests them."""
+    if allowances is None:
+        return
+    for name, row in histories.items():
+        stride = (len(source["r"])-1)//(len(row["x"])-1)
+        subset = {key: np.asarray(value)[::stride] for key, value in source.items()}
+        for path, bound in departure_history_roundoff_tolerances(row, subset, alpha).items():
+            allowances[("histories", case_index, name, *path)] = bound
 
 
 def background_profile_roundoff_tolerances(inputs):

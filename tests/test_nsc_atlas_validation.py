@@ -7,6 +7,100 @@ from recursive_horizons.nsc_atlas_validation import source_jet_roundoff_toleranc
 from recursive_horizons.nsc_atlas_validation import source_snapshot_roundoff_tolerances
 
 
+def test_reference_endpoint_replay_preserves_interior_and_derivative():
+    from scipy.interpolate import CubicHermiteSpline
+    from recursive_horizons.nsc_atlas_validation import EndpointReplaySpline
+    x=np.array([-2.5,-2.4,-2.3])
+    spline=CubicHermiteSpline(x,x*x,2*x,extrapolate=False)
+    replay=EndpointReplaySpline(spline)
+    outside=np.array([np.nextafter(x[0],-np.inf),np.nextafter(x[-1],np.inf)])
+    assert np.isnan(spline(outside)).all()
+    np.testing.assert_array_equal(replay(outside),spline(x[[0,-1]]))
+    np.testing.assert_array_equal(replay(outside,1),spline(x[[0,-1]],1))
+    interior=np.linspace(x[0],x[-1],11)
+    np.testing.assert_array_equal(replay(interior),spline(interior))
+    assert replay.x is spline.x and replay.c is spline.c
+    assert replay(float(outside[0]))==spline(x[0])
+
+
+@pytest.mark.parametrize('point',[-2.5-1e-12,-2.3+1e-12,np.nan,np.inf])
+def test_reference_endpoint_replay_rejects_larger_excursions(point):
+    from scipy.interpolate import CubicHermiteSpline
+    from recursive_horizons.nsc_atlas_validation import EndpointReplaySpline
+    x=np.array([-2.5,-2.3])
+    replay=EndpointReplaySpline(CubicHermiteSpline(x,x*x,2*x,extrapolate=False))
+    with pytest.raises(ValueError,match='rounded spline endpoints'): replay(point)
+
+
+@pytest.mark.parametrize('nonzero', [False, True])
+def test_departure_replay_covers_reconstructed_wall_cancellation(monkeypatch, nonzero):
+    import recursive_horizons.nsc_atlas_departure_diagnostics as diagnostic
+    from recursive_horizons.nsc_atlas_validation import departure_history_roundoff_tolerances
+    from test_nsc_atlas_departure_diagnostics import history, diagnose
+    data, _, _ = history(nt=9, ne=17, nonzero=nonzero, quadratic=True)
+    budget = model.Budget(maximum_evaluations=4000, cpu_seconds=5.)
+    original = diagnose(data, budget)
+    evaluator = diagnostic.vacuum_slice
+    def shifted(U, x, **kwargs):
+        row = evaluator(U, x, **kwargs)
+        # One-ULP library variation propagated coherently through the analytic
+        # jets; retained input states, gauge and source are not perturbed.
+        direction = np.where(np.arange(len(U)) % 2, np.inf, -np.inf)
+        r = np.where(U == 0, x, np.nextafter(row['r'], direction))
+        L = np.log(x/r)+(x-r)/.8
+        C = np.exp(L)
+        p, R = C*(.8-x)/(4*x), (1-U/3.2)*C
+        LU, Lx = -(1/r+1/.8)*p, 1/x+1/.8-(1/r+1/.8)*R
+        row.update(r=r,L=L,C=C,r_Ubar=p,r_x=R,log_C_Ubar=LU,log_C_x=Lx,
+                   r_Ubar_Ubar=LU*p,r_xx=Lx*R)
+        return row
+    monkeypatch.setattr(diagnostic, 'vacuum_slice', shifted)
+    rebuilt = diagnose(data, budget)
+    bounds = departure_history_roundoff_tolerances(rebuilt, data['source'], .2)
+    for path, bound in bounds.items():
+        a, b = original, rebuilt
+        for key in path:
+            a, b = a[key], b[key]
+        assert np.all(abs(np.asarray(a)-b) <= bound), path
+    assert max(np.max(abs(original[k]-rebuilt[k])) for k in ('E_Ubar','E_x')) > 2e-13
+    assert max(np.max(b) for b in bounds.values()) < 1e-7
+    assert {p[0] for p in bounds} == {'E_Ubar','E_x','summaries'}
+    assert all(p[-1] != 'count' for p in bounds)
+    budget.check()
+
+
+def test_conditioned_comparison_rejects_physical_drift_and_unchanged_metadata():
+    import copy
+    from record_nsc_atlas_coupled_evolution import _equal
+    saved = {'E_Ubar': [[0., 1.]], 'summaries': {'count': 2}, 'mass': .4}
+    rebuilt = copy.deepcopy(saved)
+    bounds = {('E_Ubar',): np.array([[1e-10, 2e-10]])}
+    rebuilt['E_Ubar'][0][0] = 5e-11
+    _equal(saved, rebuilt, 'control', roundoff=bounds)
+    rebuilt['E_Ubar'][0][0] = 1e-10+1e-13
+    with pytest.raises(ValueError, match='conditioned replay'):
+        _equal(saved, rebuilt, 'control', roundoff=bounds)
+    zero_bounds = {('E_Ubar',): np.zeros((1,2))}
+    rebuilt['E_Ubar'][0][0] = 1e-15
+    with pytest.raises(ValueError, match='conditioned replay'):
+        _equal(saved, rebuilt, 'control', roundoff=zero_bounds)
+    rebuilt['E_Ubar'][0][0] = 1e-6
+    with pytest.raises(ValueError, match='conditioned replay'):
+        _equal(saved, rebuilt, 'control', roundoff=bounds)
+    for key, changed in [('summaries', {'count': 2.00000001}), ('mass', .40001)]:
+        rebuilt = copy.deepcopy(saved)
+        rebuilt[key] = changed
+        with pytest.raises(ValueError, match='unconditioned'):
+            _equal(saved, rebuilt, 'control', roundoff=bounds)
+    for value in (np.nan, True, 0):
+        rebuilt = copy.deepcopy(saved)
+        rebuilt['E_Ubar'] = [[value, value]]
+        with pytest.raises(ValueError, match='conditioned replay'):
+            _equal(saved, rebuilt, 'control', roundoff=bounds)
+    with pytest.raises(ValueError, match='inventory'):
+        _equal(saved, saved, 'control', roundoff={('absent',): 1e-10})
+
+
 def test_compact_source_roundoff_tracks_label_cancellation_not_signal_error():
     geometry = model.source_geometry()
     points = np.r_[geometry["x_corner"], np.linspace(*geometry["support_x"], 15)[1:-1], geometry["x_last"]]

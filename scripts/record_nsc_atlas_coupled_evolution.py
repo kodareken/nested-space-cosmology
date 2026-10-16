@@ -275,11 +275,32 @@ def calculate(budget=None):
         raise
 
 
-def _equal(actual, expected, label):
+def _equal(actual, expected, label, *, roundoff=None):
     # Saved data hashes remain exact. Re-evaluated arithmetic is portable at
     # binary64 roundoff, while keys, shapes, integer counters and flags remain
     # exact. Descendant checkers share this validation-only comparison.
-    if not previous._same_recomputed(plain(actual), plain(expected)):
+    if roundoff:
+        used = set()
+        def compare(a, b, path=()):
+            if path in roundoff:
+                used.add(path)
+                av, bv, bound = np.asarray(a), np.asarray(b), np.asarray(roundoff[path])
+                if (av.dtype.kind != "f" or bv.dtype.kind != "f" or av.shape != bv.shape
+                        or any(type(v) is not float for v in np.asarray(a, dtype=object).flat)
+                        or any(type(v) is not float for v in np.asarray(b, dtype=object).flat)
+                        or bound.shape != bv.shape or not np.all(np.isfinite(bound)) or np.any(bound < 0)
+                        or not np.all(np.isfinite(av)) or not np.all(np.isfinite(bv))
+                        or np.any(abs(av-bv) > bound)):
+                    raise ValueError(label+" conditioned replay mismatch: "+str(path))
+                return True
+            if isinstance(a, dict) and isinstance(b, dict):
+                return set(a) == set(b) and all(compare(a[k], b[k], (*path, k)) for k in a)
+            if isinstance(a, list) and isinstance(b, list):
+                return len(a) == len(b) and all(compare(v, w, (*path, i)) for i, (v, w) in enumerate(zip(a, b)))
+            return previous._same_recomputed(a, b)
+        if not compare(plain(actual), plain(expected)) or used != set(roundoff):
+            raise ValueError(label+" inventory or unconditioned value mismatch")
+    elif not previous._same_recomputed(plain(actual), plain(expected)):
         raise ValueError(label+" mismatch")
 
 

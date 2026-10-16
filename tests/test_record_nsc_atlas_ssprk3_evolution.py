@@ -83,7 +83,7 @@ def synthetic(budget):
         evolutions.append(True)
         raise AssertionError("authentication must not propagate a trajectory")
     patch.setattr(tool, "evolve_background_ssprk3", forbidden_evolve)
-    def diagnostics(record, parent, base, profile, shared):
+    def diagnostics(record, parent, base, profile, shared, *, replay_allowances=None):
         shared.check(7)
         return dict(physical_cap=[case["snapshots"][-1]["physical"]["cap"] for case in record["cases"]])
     patch.setattr(tool, "diagnostics", diagnostics)

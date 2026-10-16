@@ -15,6 +15,7 @@ import time
 import uuid
 
 import numpy as np
+from recursive_horizons.nsc_atlas_validation import collect_departure_replay
 from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_coupled_evolution as previous
@@ -178,7 +179,7 @@ def _cap_characteristics(case, budget):
         interpretation="sampled stated reconstruction; no radial metric solve or propagation error enclosure")
 
 
-def diagnostics(record, parent, budget):
+def diagnostics(record, parent, budget, *, replay_allowances=None):
     histories, tables, controls, overlaps, old_differences, caps = [], [], [], [], [], []
     old_rectangle = json.loads((ROOT/previous.previous.RELATIVE_OUTPUT/"rectangle.json").read_bytes())
     gauge129 = subset(parent["gauge"]["rows"], slice(None, None, 4))
@@ -187,6 +188,9 @@ def diagnostics(record, parent, budget):
         coarse, coarse_departed = _histories(parent, case, budget, 2)
         histories.append(dict(raw129=previous.compact_history(full), raw65=previous.compact_history(coarse),
             departure129=previous.compact_history(departed), departure65=previous.compact_history(coarse_departed)))
+        collect_departure_replay(replay_allowances, len(histories)-1,
+            parent["initial_data"][case["amplitude"]]["snapshot_rows"], case["alpha"],
+            departure129=departed, departure65=coarse_departed)
         table = _tables(case, full)
         tables.append(table)
         old_table = _old_tables(parent, old, budget)
@@ -327,7 +331,9 @@ def validate_record(record, budget=None, *, require_creation=True):
             _real(execution["max_courant"], "Courant", high=.4)
             end += charge
         before = budget.evaluations
-        _equal(record["diagnostics"], diagnostics(record, parent, budget), "saved diagnostics")
+        replay_allowances = {}
+        rebuilt = diagnostics(record, parent, budget, replay_allowances=replay_allowances)
+        _equal(record["diagnostics"], rebuilt, "saved diagnostics", roundoff=replay_allowances)
         diagnostic_charges = budget.evaluations-before
         execution = record["execution"]
         expected = dict(evaluations=end+diagnostic_charges, inherited_authentication_evaluations=auth_charges,

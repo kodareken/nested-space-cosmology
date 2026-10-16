@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4a976213e6c458259c9a9fa9fb94fa927e2899ba",
+  "current_receipt_commit_parent": "e486dedf191df9efd8161c04292fa8481d5152fe",
   "files": [
     {
       "bytes": 2068,

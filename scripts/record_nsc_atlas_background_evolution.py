@@ -16,6 +16,7 @@ import time
 import uuid
 
 import numpy as np
+from recursive_horizons.nsc_atlas_validation import collect_departure_replay
 from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_compatible_evolution as previous
@@ -269,7 +270,7 @@ def frozen_quadrature(case,profile,budget):
     return dict(rows=rows,scope="same saved state/profile; local radial quadrature sensitivity, not a global error bound")
 
 
-def diagnostics(record,parent,base,profile,budget):
+def diagnostics(record,parent,base,profile,budget, *, replay_allowances=None):
     histories,table_list,caps,old_differences,oracles=[],[],[],[],[]
     old={(c["amplitude"],c["cells"],c["steps"]):c for c in parent["cases"]}
     for case in record["cases"]:
@@ -280,6 +281,9 @@ def diagnostics(record,parent,base,profile,budget):
         histories.append(dict(raw129=previous.previous.compact_history(full),
             departure129=previous.previous.compact_history(dep),raw65=previous.previous.compact_history(coarse),
             departure65=previous.previous.compact_history(depcoarse)))
+        collect_departure_replay(replay_allowances, len(histories)-1,
+            base["initial_data"][case["amplitude"]]["snapshot_rows"], case["alpha"],
+            departure129=dep, departure65=depcoarse)
         table=tables(case,base["initial_data"][case["amplitude"]]["snapshot_rows"],budget)
         table_list.append(table)
         caps.append(cap_history(case,profile,budget))
@@ -458,7 +462,9 @@ def validate_record(record,budget=None,*,require_creation=True):
             _real(execution["max_courant"],"Courant",high=.4)
             end+=charge
         before=budget.evaluations
-        _equal(record["diagnostics"],diagnostics(record,parent,base,profile,budget),"saved diagnostics")
+        replay_allowances = {}
+        rebuilt = diagnostics(record,parent,base,profile,budget,replay_allowances=replay_allowances)
+        _equal(record["diagnostics"],rebuilt,"saved diagnostics",roundoff=replay_allowances)
         diagnostic_charges=budget.evaluations-before
         expected=dict(evaluations=end+diagnostic_charges,inherited_authentication_evaluations=auth_charges,
             profile_extraction_evaluations=record["profile_inputs"]["extraction_evaluations"],

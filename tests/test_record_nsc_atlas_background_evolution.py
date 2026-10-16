@@ -187,7 +187,7 @@ def synthetic(monkeypatch):
         return dict(snapshots=snapshots,final_stage=dict(state=state),stages=stages,
                     max_courant=.1,retries=0)
     monkeypatch.setattr(tool,"evolve_background",evolve)
-    def diag(record,parent,base,profile,budget):
+    def diag(record,parent,base,profile,budget, *, replay_allowances=None):
         budget.check(23)
         return dict(caps=[c["snapshots"][-1]["physical"]["cap"] for c in record["cases"]])
     monkeypatch.setattr(tool,"diagnostics",diag)
