@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "5633042aa2eebea12e5227416234ace318933678",
+  "current_receipt_commit_parent": "0f6bc768f7175957c139dae1565a0287437bb88c",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 221696,
-      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
-      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "bytes": 222335,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "66db0baee6f47280e4a391c91118c50bd3e9c97f33ed6adaaf7e25167853c928"
+      "sha256": "f1fafd01253bf357fdd32bba98174a4cce2abbefdddc2826cf2472201fa23e01"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 312938,
-      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
-      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "bytes": 314084,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "aa07f18779fd951cd066f1683dfac72d6af27562ddd6da94b286eb90237aab4e"
+      "sha256": "9feea62341722f1b224590dda2193597cbddd8887834a08fc2bbe942873e3db6"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 271636,
-      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
-      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "bytes": 278082,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "3713f67152cbac0d1d282c3596b6ce41b4a710147e302735a6af11160e353a31"
+      "sha256": "a261cc36487b4b3ee08e2658d337605e45b69ecbf25cb06a6f7202f8f1c76015"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 306975,
-      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
-      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "bytes": 311267,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "46d8fc2e0ce45c295ac9b3cc593817647069cdb36bc772d9531b955a6e98e9b0"
+      "sha256": "ecb66757affee7ba093fcf2ddf61b43680eeb9af0e2209f4919db870918a771b"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 102887,
-      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
-      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "bytes": 103806,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "73d6381277ca0b8da67bf5f0f50e01cab5e1f14c523a011d21725f3a03e426a7"
+      "sha256": "5dcc7d66d7fb04c817157815beb5cb85d5e7869387b33f5a806c84e3aeee87ed"
     },
     {
       "bytes": 18356,
@@ -29567,6 +29567,14 @@
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
     },
     {
+      "bytes": 7582,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
+      "path": "results/summaries/nsc-atlas-fixed-onset-v1.json",
+      "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
+      "sha256": "c9f24a5073d28ceac899f5d31d03c418d3ecfdd450ec8390dd1cc5dedbe5416c"
+    },
+    {
       "bytes": 4429,
       "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
       "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
@@ -32113,6 +32121,14 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
+      "bytes": 13616,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
+      "path": "scripts/run_nsc_atlas_fixed_onset.py",
+      "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
+      "sha256": "e83f1446b7ddb0d45ecd26f55f3e91ad9951d187176b96e8622126b141fb2ca7"
+    },
+    {
       "bytes": 15544,
       "import_bytes": 15544,
       "import_sha256": "43bc55e038812b8a75a08e5a296a2ece2aff004ce1c96013c851f44453b41ce5",
@@ -32354,6 +32370,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_geometric_reference.py",
       "retention_reason": "Regular-centre geometric mass-gradient reference and independent manufactured controls.",
       "sha256": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81"
+    },
+    {
+      "bytes": 2628,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
+      "path": "src/recursive_horizons/nsc_atlas_cap_linear_bound.py",
+      "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
+      "sha256": "0d75c29860dc55c9a83e06f6cf46a8f3116527ec6a1cf42eb3eb53e4e59fd6af"
     },
     {
       "bytes": 3088,
@@ -35859,6 +35883,14 @@
       "sha256": "f93cbf38c74094d5c503e71c287301a61531634b98a054f2f2ede2cff5738b89"
     },
     {
+      "bytes": 1847,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
+      "path": "tests/test_nsc_atlas_cap_linear_bound.py",
+      "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
+      "sha256": "26cbb3653b15758510301698b4f4bc3c8d2501b4b5ba95a3d3fe1dbe8cd6f6dd"
+    },
+    {
       "bytes": 7378,
       "change": "Reference lapse and transport channels with endpoint identities; original import records preserved.",
       "changed_from_commit": "38eb600356cd5bceb4686a3f50797ab358e28c24",
@@ -35873,6 +35905,14 @@
       "path": "tests/test_nsc_atlas_cap_moving_projection_identity.py",
       "retention_reason": "Exact-model cap projection bounds and moving-domain compatibility controls.",
       "sha256": "9010cb3a0fca83aaebff47609201e84236f6fd8620e424675dd47dde27997059"
+    },
+    {
+      "bytes": 2266,
+      "change": "Explicit successor for the first fixed-space retained-source interval and onset-order analysis.",
+      "changed_from_commit": "0f6bc768f7175957c139dae1565a0287437bb88c",
+      "path": "tests/test_nsc_atlas_cap_onset_lag.py",
+      "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
+      "sha256": "2d86974bb4c6f6361b298bc482d525b90481a37232644e07cbdfc8d447a226da"
     },
     {
       "bytes": 5277,

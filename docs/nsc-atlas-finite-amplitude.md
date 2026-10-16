@@ -5635,6 +5635,130 @@ The corrected comparison uses the absolute coefficient scale under
 cancellation. Source coefficients and queries are unchanged. Neither
 attempt integrated a source or evolved a physical state.
 
+### First retained-source fixed-cap interval
+
+The [exact small-matrix helper](../src/recursive_horizons/nsc_atlas_cap_linear_bound.py)
+integrates the fixed rational basis to form M,K,e at a declared wall cut.
+It computes the initial frozen bound `L_*^2=2tr(M^-1 K)+(e^T M^-1 e)^2`
+and its integer square-root ceiling. Two [independent controls](../tests/test_nsc_atlas_cap_linear_bound.py)
+recover the one-cell invariant `3444` and the exact mass, stiffness and
+wall value of a global linear field on two cells. Both pass with
+**38,144 charged values / 0.03125 active CPU seconds**. Grok mathematical
+review confirms the integrals, bound and integer ceiling.
+
+The [onset runner](../scripts/run_nsc_atlas_fixed_onset.py) uses the same
+retained source interval 35 and splits time at the analytic scalar front.
+It starts with quiet total cap fields and exterior/wall departures at the
+last checked quiet value/first-jet knot. The original finite amplitude and
+129 Hermite knots stay fixed. The exterior retains its existing 64-cell
+quadratic derivative.
+
+Let `dT,dZ` be the reference endpoint changes, `Z0` the initial wall
+coordinate, and `a=max(4*dZ,2*dT)`. The two fixed cells have knots
+`[0,Z0-a,Z0+a]`. The initial cut is one half and the reference end cut is
+at most five eighths. The quiet reference characteristic starting at the
+initial wall ends at `z=Z0-dT`; therefore `a>=dT` contains this reference
+incoming layer inside the last cell. These are geometric sizing rules;
+two cells are not asserted to resolve the pulse, and `T+z` is not the
+exact finite-amplitude characteristic label.
+
+Each time piece uses `ceil(16*L*T_max*piece_length)` equal steps, where L
+is the initial integer cap bound and `T_max` is the integer ceiling of
+the reference endpoint clock rates. Actual positive `T_x<=T_max` and the
+cap cut domain are checked at every stage. This selects a time scale from
+the initial frozen operator. It does not extend the frozen energy theorem
+to the moving, state-dependent cap/exterior coupling.
+
+Every accepted step includes a fresh midpoint Hermite residual. Cap
+components use separate physical `L2(0,Z)` norms through the current Gram;
+wall and exterior components retain their own units. The derivative of
+the derived wall scalar is checked separately. Scalar, temporal mass,
+source-curvature and wall-jet defects remain visible. The independent
+pure-U constraint algebra is evaluated on the original centre and wall
+patches, using the quadratic radial curvature of the departures. It is
+a selected spatial diagnostic, not a continuum constraint enclosure.
+
+The runner keeps only aggregate maxima, physical endpoint values, source
+and producer identities, an accepted-state history hash, and execution
+counts. A stopped attempt records its phase and reason without claiming
+the unfinished endpoint. Source/code review found no actionable defect in
+the stage physics or time schedule. The selected pure-U diagnostic and
+nullable initial metric minimum were added afterward and checked by the
+parent; they do not change the state update.
+
+The [first attempt](../results/summaries/nsc-atlas-fixed-onset-v1.json)
+has `dZ=0.0009446994071695691`, `dT=0.0013384741798292757`, `L=12106`
+and `T_max=3`, giving **236+135 steps**. It stopped at the CPU check after
+**341/371 accepted steps**, at `x=0.42287166568847995`, using
+**235,384,613 values / 180.015625 CPU seconds** and 1,708 attempted common
+stage calls. The initial maximum rate was `9.73353e-14`; scalar zero
+recovery held through the source front. No right-endpoint result or
+completed interval is claimed. The summary includes extrema from attempted
+intermediate stages as well as accepted states.
+
+The minimum stage metric certificate was `0.773878364523775`. Selected
+exterior pure-U residuals reached `2.02810e-11`, and source residuals
+`9.78749e-11`. Weak cap mass balance stayed within `1.02438e-20`, but the
+conformal scalar tangent gap reached `7.07677e-4`. The sampled continuous
+time residual in the derived wall scalar was `1.17754e-9`; cap density
+and chi residuals had maximum L2 norms `9.26385e-8` and `1.46171e-11`.
+These are different residuals, not interchangeable error enclosures.
+They motivate a boundary-representation diagnosis before another interval
+attempt. Completing the remaining steps would not by itself explain the gap.
+
+### Finite-space onset lag at the scalar boundary
+
+Consider the same finite-space equations in the zero-coupling limit, with
+smooth prescribed geometry, nonsingular `M(0)`, zero initial scalar
+coefficients, and a drive `C(t)=c_m t^m+O(t^(m+1))`, `m>=1`, `c_m!=0`.
+Here t measures time from onset and `ell=phi_z(Z)`, `b=A0/R`. Writing the
+coefficient vectors as q,d avoids confusing q with the wall scalar c:
+
+\[
+q'=T_xd,\qquad
+d'=T_xM^{-1}\{-Sq+e(C-e^Td)\}.
+\]
+
+Leading-order integration gives
+
+\[
+d=\frac{T_{x0}M_0^{-1}e_0c_m}{m+1}t^{m+1}+O(t^{m+2}),
+\qquad
+q=\frac{T_{x0}^2M_0^{-1}e_0c_m}{(m+1)(m+2)}t^{m+2}+O(t^{m+3}).
+\]
+
+Consequently the strong incoming boundary residual satisfies
+
+\[
+r_B=(\ell-be)^Tq+e^Td-C=-c_m t^m+O(t^{m+1}).
+\]
+
+The trace of the finite-dimensional solution responds one time power later
+than its boundary drive. Reducing time-integration error at fixed space
+cannot remove this leading residual. In this limit the weak and strong
+momentum traces coincide, while `dh=r_B/A0`. The previously derived
+moving-wall identity therefore becomes
+
+\[
+E_f=\frac{(R_x+T_xA_0)r_B}{2RA_0},\qquad E_c=R E_f.
+\]
+
+Weak mass balance can hold while this strong boundary relation fails.
+Two [exact controls](../tests/test_nsc_atlas_cap_onset_lag.py) verify the
+cubic-drive Taylor recurrence and this scalar-tangent conversion using
+**24,000 algebra values / 0.40625 active CPU seconds**. Independent Grok
+review confirms the leading orders and factors. The scalar coefficients
+are exactly zero before the front in the numerical attempt; its nonzero
+pre-front gravitational interpolation residual is a separate matter.
+
+This result establishes a mechanism in the zero-coupling finite-space
+equations. It does not yet assign a power or coefficient to the actual
+hybrid drive, or prove the cause of the entire measured finite-amplitude
+gap. The next calculation is the one-sided expansion of the existing
+hybrid `w_plus`, followed by a representation that carries that boundary
+onset while retaining the mass identity. No time or mode scan, weak-flux
+replacement, or interval retry follows from this diagnosis.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

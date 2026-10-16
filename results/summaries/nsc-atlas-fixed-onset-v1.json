@@ -1,0 +1,167 @@
+{
+  "accepted_history_sha256": "5da4281fb0692a3924bdb8c670bb84d651dd07aee8efa9be3e7fae57ae24de42",
+  "execution": {
+    "accepted_steps": 341,
+    "charged_values": 235384613,
+    "common_stage_calls": 1708,
+    "cpu_seconds": 180.015625,
+    "last_accepted_x": 0.42287166568847995,
+    "raw_history_saved": false,
+    "retries": 0,
+    "source_integrations": 0
+  },
+  "failure": {
+    "phase": "common step",
+    "reason": "characteristic initialization budget exhausted"
+  },
+  "geometry": {
+    "cap_cells": 2,
+    "cap_dimension": 7,
+    "exact_cap_knots": [
+      "0",
+      "2308242254218069/4503599627370496",
+      "2342278637402917/4503599627370496"
+    ],
+    "exterior_cells": 64,
+    "reference_T": [
+      0.04377128443765652,
+      0.0451097586174858
+    ],
+    "reference_delta_T": 0.0013384741798292757,
+    "reference_delta_Z": 0.0009446994071695691,
+    "reference_incoming_label_advance": 0.002283173586998845,
+    "reference_radius": [
+      0.4748482346624701,
+      0.4755795941508535
+    ],
+    "scalar_front": 0.42269179059454887,
+    "x_left": 0.42228630694544744,
+    "x_right": 0.42292305857246026
+  },
+  "initial": {
+    "maximum_absolute_rate": 9.733532628186963e-14,
+    "source_constraint": 6.846851463133793e-11,
+    "wall": {
+      "L": -0.18301412018572688,
+      "T": 0.04377128443765652,
+      "c": 0.0,
+      "r": 0.47484823466247006,
+      "s": 0.026834395534829546
+    }
+  },
+  "input": {
+    "alpha": 0.00012983127142551443,
+    "authenticated_input_files": 104,
+    "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+    "operator_sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09",
+    "path": "results/development/nsc-atlas-coupled-evolution-v1/coupled.json",
+    "sha256": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86",
+    "source_knots": 129
+  },
+  "limits": {
+    "accepted_steps": 1024,
+    "charged_values": 600000000,
+    "cpu_seconds": 180.0
+  },
+  "maximum_absolute": {
+    "cap.weak_balance_defect": 1.0243804705856695e-20,
+    "connection.canonical_wall_flux": 0.0007076772297500694,
+    "connection.conformal_wall_flux": 0.0007076772297500691,
+    "connection.conformal_wall_flux_factored": 0.0007076772297500691,
+    "connection.physical_temporal_mass_actual": 1.0675811254994553e-11,
+    "connection.physical_temporal_mass_matched": 1.2848793088354668e-12,
+    "connection.scalar_tangent": 0.001488209809962419,
+    "connection.scalar_tangent_factored": 0.0014882098099624184,
+    "connection.strong_minus_weak_outgoing": 0.0010710887597883173,
+    "connection.temporal_mass_actual": 8.222835021005997e-08,
+    "connection.temporal_mass_matched": 9.896531819551776e-09,
+    "connection.weak_flux_actual": 8.222835021005926e-08,
+    "connection.weak_flux_matched": 9.896531819551061e-09,
+    "exterior.selected_pure_U_constraint": 2.0281012270780788e-11,
+    "exterior_characteristic_courant": 0.0008761921060025086,
+    "identity.conformal_scalar": 4.336808689942018e-19,
+    "identity.selected_pure_U_decomposition": 3.4498166509330187e-17,
+    "identity.wall.L": 5.791340998087774e-16,
+    "identity.wall.c": 2.439454888092385e-19,
+    "identity.wall.r": 3.6500562530515505e-16,
+    "shared_wall_update_defect.L": 9.250378241176804e-13,
+    "shared_wall_update_defect.c": 0.0005884672600469002,
+    "shared_wall_update_defect.r": 2.531308496145357e-13,
+    "source.source_constraint": 9.787491491242561e-11,
+    "source.source_constraint_from_curvature_defect": 9.78754256226695e-11,
+    "source.source_constraint_jordan": 9.78754256226695e-11,
+    "source.source_h_xx_defect": 7.538663416603886e-07,
+    "source.stage_minus_snapshot": 0.0,
+    "time_L2.canonical_density": 9.263847405191982e-08,
+    "time_L2.chi": 1.4617103532336066e-11,
+    "time_component.departure.L": 3.9404683611968387e-16,
+    "time_component.departure.c": 1.2565772210872692e-11,
+    "time_component.departure.r": 1.2333272654759272e-16,
+    "time_component.wall.L": 1.1102230288612765e-16,
+    "time_component.wall.T": 3.599730082704521e-26,
+    "time_component.wall.r": 2.1753628322374622e-26,
+    "time_component.wall.s": 2.159250348248323e-26,
+    "time_derived.wall_c": 1.177543695156468e-09,
+    "wall_incoming_jet_defect.L": 4.497513472756509e-13,
+    "wall_incoming_jet_defect.c": 5.758645802959406e-05,
+    "wall_incoming_jet_defect.r": 1.2256862191861728e-13,
+    "wall_kinematic_defect.L": 9.250378241176804e-13,
+    "wall_kinematic_defect.c": 0.0001192099697031689,
+    "wall_kinematic_defect.r": 2.531308496145357e-13
+  },
+  "minimum_stage_metric_certificate": 0.773878364523775,
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schedule": {
+    "T_x_ceiling": 3,
+    "initial_linear_bound_squared": "984423557475577466783456319670256110516526568618279409168495138662317442022498674749778001988301278136767462666664264238008725865540068908660733828846978622457838926211588967735988022411264/6717905236583894229379779604405459227307655126207927152631682071569997819013482789699508933486514658392220835107150282643926389775093384468940241493809268732061794000851134897155553",
+    "initial_linear_integer_bound": 12106,
+    "maximum_initial_scaled_step": 0.0625,
+    "piece_steps": [
+      236,
+      135
+    ],
+    "scope": "initial frozen alpha=0 time scale; moving coupled stability not established"
+  },
+  "schema": "nsc-atlas-fixed-onset-v1",
+  "scope": "retained-source numerical common evolution; sampled defects, no continuum error enclosure or observational prediction",
+  "selected_exterior_constraint_nodes": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "source_bindings": {
+    "scripts/run_nsc_atlas_fixed_onset.py": "e83f1446b7ddb0d45ecd26f55f3e91ad9951d187176b96e8622126b141fb2ca7",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py": "048cdbee78b7be34b6ffac4b04019078f7f044a13a918d25472c7ad4d850d5ae",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py": "16df667ecad5ba64434f249205f2a3257674d601a387e01a69c9318250b84f18",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py": "3b794b499afa67d101d20ba1669a2f11ddcc501866aa7780e2151554f3c5a8ec",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py": "e125c43c4f6bf19693ebcd87370816f78ab80dffbaa9dcba84014c6f575832c2",
+    "src/recursive_horizons/nsc_atlas_cap_linear_bound.py": "0d75c29860dc55c9a83e06f6cf46a8f3116527ec6a1cf42eb3eb53e4e59fd6af",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_characteristic_trace.py": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47",
+    "src/recursive_horizons/nsc_atlas_departure_gradient.py": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452",
+    "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py": "8af4033a8d5526386d051c1a2d2047f2fb028d5ba149aeb25a62bf16cd06af4a",
+    "src/recursive_horizons/nsc_atlas_fixed_cap_time.py": "124b370c7fc0652f020cbfed2926925a17053f8dca0680046388d285161e725f",
+    "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+    "src/recursive_horizons/nsc_atlas_reference_wall_gauge.py": "e905f2b6e888d53ee2d539920d09d037eb6bb074a60717932cfead12c87b3113",
+    "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157"
+  },
+  "status": "stopped"
+}

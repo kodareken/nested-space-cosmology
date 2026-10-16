@@ -4,6 +4,24 @@ Current presentation, 16 October 2026: [the living atlas manuscript](../paper/ne
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 
+The first [retained-source fixed-space onset attempt](nsc-atlas-finite-amplitude.md#first-retained-source-fixed-cap-interval)
+reaches the nonzero field regime, then stops at its CPU ceiling after
+341/371 accepted steps (235,384,613 values / 180.015625 CPU seconds).
+It preserves the original source and records source, wall, mass, time and
+selected exterior constraint residuals in a compact summary. There is no
+completed right endpoint. The scalar tangent gap reaches `7.07677e-4`
+while its sampled time residual is `1.17754e-9` and weak mass balance is
+within `1.02438e-20`.
+
+An [exact onset-order calculation](nsc-atlas-finite-amplitude.md#finite-space-onset-lag-at-the-scalar-boundary)
+shows why small time residual and weak mass balance need not close the
+strong scalar boundary equation: in the zero-coupling finite-space model,
+the trace responds one power later than a finite-order incoming drive.
+Two symbolic controls pass, with independent Grok review. The next work
+derives the actual hybrid drive's onset coefficient and the representation
+needed to carry it. The failed runtime attempt is retained; no scan or
+retry has been run.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

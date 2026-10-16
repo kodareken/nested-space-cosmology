@@ -1536,6 +1536,77 @@ in the [scientific owner](nsc-atlas-finite-amplitude.md#retained-source-at-the-f
 Grok review confirms the polynomial and interpretation; transverse source
 splines remain outside this audit.
 
+### First retained-source fixed-cap interval
+
+Use the original source interval 35, from `0.42228630694544744` to
+`0.42292305857246026`, split at its scalar front. Start with quiet cap
+coefficients and departures at the checked earlier knot. Keep the original
+129-knot source, its finite amplitude, full curvature residual and the
+existing 64-cell quadratic exterior operator. This advances the retained
+preparation rather than another manufactured waveform.
+
+Derive a two-cell trial space from the reference endpoint clocks: for
+`Z0=atanh(R0)`, `dZ=Z1-Z0`, `dT=T1-T0`, set
+`a=max(4*dZ,2*dT)` and knots `[0,Z0-a,Z0+a]`. The initial cut is one half;
+the reference final cut is at most five eighths. The last cell contains
+the reference incoming layer because `a>=dT`. These are geometric scale
+and domain choices, not spatial accuracy or finite-amplitude causality
+certificates. All actual stage radii must remain in the existing cut domain.
+
+First integrate exact rational basis products for M,K,e and evaluate
+`L_*^2=2tr(M^-1 K)+(e^T M^-1 e)^2` at the initial cut. Two independent
+small controls have **60,000 values / 15 active CPU seconds**. Use the
+integer ceiling L and `T_max=ceil(max(reference T_x at endpoints))` to
+choose each time-piece count `ceil(16*L*T_max*piece_length)`. Guard actual
+positive `T_x<=T_max`. This preserves the checked initial frozen time scale;
+it is not a stability theorem for the moving coupled system. No step-size
+or spatial scan is admitted.
+
+One numerical interval attempt has **600,000,000 charged values / 180 CPU
+seconds**, at most 1024 accepted steps and five common stage calls per
+step (including one interior continuous residual). Stop on an exceeded
+budget, domain, clock guard, or failed independent identity; save a compact
+diagnosis before considering another attempt. No retry is hidden. Keep
+stage arrays in memory and save only aggregate residuals, physical endpoint
+values, inputs, hashes and execution counts. Cap residuals use physical L2
+norms, with the derived wall-scalar residual separate; source, scalar,
+mass and wall defects remain explicit. This is the first retained-source
+numerical trajectory of this fixed-space operator, not a continuum error
+enclosure or a new observational prediction.
+
+Reuse the existing independent pure-U constraint algebra on centre nodes
+28..36 and wall-interior nodes 56..63 of that same 64-cell exterior, with
+the quadratic radial curvature of the stored departures. This is a selected
+spatial residual, not a full history derivative or a constraint enclosure.
+
+**Attempt outcome:** the derived initial bound is `L=12106`, clock ceiling
+3, and piece counts 236+135. The attempt stopped at its CPU check after
+**341/371 accepted steps**, **1,708 stage calls**, **235,384,613 values /
+180.015625 CPU seconds**. The last accepted label is
+`0.42287166568847995`. The compact receipt retains the failure, accepted
+history hash and maxima, including attempted intermediate stages. There
+is no completed right endpoint and no retry is admitted here.
+
+The observed scalar tangent gap is much larger than the sampled time
+residual, while weak mass balance remains near roundoff. Diagnose the
+finite-space boundary response before another evolution. For smooth
+prescribed geometry in the zero-coupling limit, derive the onset orders
+of the same Galerkin ODE under `C(t)=c_m*t^m+O(t^(m+1))`, with zero scalar
+state. Admit **30,000 algebra values / 15 active CPU seconds** for two
+exact controls: an independent cubic-drive Taylor recurrence and the
+moving scalar-tangent conversion. No field or source replay, mode/step
+scan, or weak-flux modification. The actual hybrid drive's leading power
+and coefficient require their own derivation; this diagnosis must not
+assume they equal the prescribed source profile.
+
+**Algebra outcome:** both onset controls pass once with **24,000 values /
+0.40625 active CPU seconds**. For a nonzero finite-order drive and a fixed
+finite basis, the strong incoming trace is delayed by one power of time;
+the displayed conversion to `E_f,E_c` is exact in the zero-coupling limit.
+Grok review confirms those statements. This does not establish the actual
+hybrid drive's coefficient. The next action is its one-sided expansion,
+not another numerical trajectory or resolution scan.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

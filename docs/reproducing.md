@@ -344,6 +344,23 @@ explains why the earlier quiet knot, rather than the scalar front, supplies
 the candidate numerical starting values. No full retained trajectory or
 uniform time-error bound is produced by either command.
 
+The retained-source onset's exact time scale and boundary-order controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_linear_bound.py -q -s
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_onset_lag.py -q -s
+```
+
+The two matrix controls use 38,144 values / 0.03125 active CPU seconds;
+the two onset-order controls use 24,000 / 0.40625. Neither replays fields.
+The numerical attempt was produced with
+`python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.
+It stopped at the 180-second CPU check after 341/371 steps. Preserve that
+receipt; any future rerun needs its own output and an admitted reason.
+The [owner](nsc-atlas-finite-amplitude.md#first-retained-source-fixed-cap-interval)
+records the residuals and the analytical next action. No replay is needed
+to verify the saved bytes and producer hashes.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh
