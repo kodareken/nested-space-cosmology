@@ -118,3 +118,45 @@ def fixed_time_residual(step,x,*,basis,exterior_cells,stage,budget):
     budget.check()
     return dict(x=path['x'],state=path['state'],derivative=path['derivative'],
                 residual=residual,stage=row,stage_calls=1,uniform_error_bound=False)
+
+
+def fixed_derived_residual(residual,row,*,basis,budget,background=None):
+    """Push a time residual through the actual wall scalar and cap mass.
+
+    Both time paths use the same gauge, so wall departure residuals are
+    physical radius/clock residuals. The cap coefficients are departures
+    when a history is present. Its explicit clock derivative and the total
+    radial trace must therefore enter these differentials. This contraction
+    supplies sampled residuals, not a trajectory error enclosure.
+    """
+    _shared_budget(budget)
+    cap=row['connection']['cap'];R=cap['radius'];A0=1-R*R
+    local=basis.gram(cap['wall_coordinate'],budget=budget).wall
+    dc=_finite(residual['cap']['chi'],'chi residual',(basis.dimension,))
+    dd=_finite(residual['cap']['canonical_density'],'density residual',(basis.dimension,))
+    dr=float(_finite(residual['wall']['r'],'radius residual',()))
+    dt=float(_finite(residual['wall']['T'],'clock residual',()))
+    if ('background' in cap)!=(background is not None):
+        raise ValueError('derived residual requires the stage background')
+    clock_chi=0.
+    if background is not None:
+        clock_chi=background.reduced_jets(cap['background']['time'],cap['wall_coordinate'],
+                                         budget=budget)['k']*dt
+    field_chi=float(local['value']@dc[local['indices']])
+    radial_chi=cap['wall']['q_trace']*dr
+    f=cap['wall']['f'];q=np.sqrt(cap['alpha']/6)*f
+    u=f*(np.sinh(q)/q if q else 1.);root=np.cosh(q)
+    scalar=float(root*(field_chi+radial_chi+clock_chi)+(u-f*root)*dr)
+    gradient=cap['gradient']
+    clock_mass=gradient.get('T',0.)*dt
+    field_mass=float(gradient['chi']@dc+gradient['canonical_density']@dd)
+    rho=cap['shape_derivative_Z']/A0
+    normalized=float(clock_mass+field_mass+rho*dr)
+    physical=float(cap['alpha']*(clock_mass+field_mass)
+                   +row['connection']['physical_mass_density']*dr)
+    result=dict(wall_c=scalar,normalized_cap_mass=normalized,physical_cap_mass=physical,
+                clock_wall_c=float(root*clock_chi),clock_normalized_mass=float(clock_mass))
+    if not all(np.isfinite(value) for value in result.values()):
+        raise ValueError('nonfinite derived residual')
+    budget.check(8*basis.dimension+64)
+    return result

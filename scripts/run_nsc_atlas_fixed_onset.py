@@ -6,6 +6,8 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import subprocess
+import sys
 import time
 
 import numpy as np
@@ -17,14 +19,16 @@ from recursive_horizons.nsc_atlas_reference_wall_gauge import ReferenceWallGauge
 from recursive_horizons.nsc_atlas_cap_fixed_basis import FixedCapBasis
 from recursive_horizons.nsc_atlas_cap_linear_bound import frozen_cap_bound
 from recursive_horizons.nsc_atlas_fixed_cap_stage import quiet_fixed_state,coupled_fixed_stage
-from recursive_horizons.nsc_atlas_fixed_cap_time import advance_fixed_ssprk3,fixed_time_residual
+from recursive_horizons.nsc_atlas_fixed_cap_time import (
+    advance_fixed_ssprk3,fixed_time_residual,fixed_derived_residual,
+)
+from recursive_horizons.nsc_atlas_prepared_response import PreparedFieldBudget,solve_prepared_field
+from recursive_horizons.nsc_atlas_cap_field import CapLeadingField
+from recursive_horizons.nsc_atlas_background_profile import build_prepared_background
+from recursive_horizons.nsc_source_binding_graph import original_source_graph
+from check_nsc_atlas_prepared_history import array_hash
 
 ROOT=Path(__file__).resolve().parents[1]
-SOURCE_NAMES=('nsc_atlas_characteristic_initialization','nsc_atlas_characteristic_trace',
-    'nsc_atlas_reference_wall_gauge','nsc_atlas_cap_fixed_basis','nsc_atlas_cap_linear_bound',
-    'nsc_atlas_cap_fixed_bound','nsc_atlas_cap_fixed_reference','nsc_atlas_cap_fixed_hybrid',
-    'nsc_atlas_fixed_cap_stage','nsc_atlas_fixed_cap_time','nsc_atlas_vacuum_departure',
-    'nsc_atlas_departure_gradient','nsc_atlas_nonlinear_boundary')
 
 
 def digest_state(value):
@@ -32,19 +36,70 @@ def digest_state(value):
                                     allow_nan=False).encode()).hexdigest()
 
 
+def frozen_sources():
+    """Pin imported local owners and their AST dependencies before computing."""
+    commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    owners=set()
+    for module in tuple(sys.modules.values()):
+        name=getattr(module,'__file__',None)
+        if name is None: continue
+        path=Path(name).resolve()
+        if path.is_relative_to(ROOT) and path.suffix=='.py':
+            relative=path.relative_to(ROOT)
+            if relative.parts[0] in ('src','scripts'): owners.add(relative.as_posix())
+    owners.update(('pyproject.toml','scripts/run_python.py'))
+    bindings=original_source_graph(ROOT,tuple(sorted(owners)),commit)
+    for name,expected in bindings.items():
+        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+            raise ValueError('commit the calculation source before execution: '+name)
+    return commit,bindings
+
+
+def prepare_history(budget,report):
+    """One preparation phase, charged into the original caller budget once."""
+    budget.check()
+    remaining=budget.maximum_evaluations-budget.evaluations
+    if remaining<=0: raise RuntimeError('no remaining preparation value budget')
+    preparation=PreparedFieldBudget(cpu_seconds=min(60.,budget.cpu_seconds),
+                                    kernel_values_max=min(10000000,remaining))
+    preparation.started=budget.started
+    report.update(source_integrations_attempted=1,source_integrations_completed=0,
+                  phase_limits=dict(charged_values=preparation.kernel_values_max,
+                                    cpu_seconds_from_run_start=preparation.cpu_seconds))
+    try:
+        field=solve_prepared_field(nodes=257,geometry_knots=257,budget=preparation)
+        report['source_integrations_completed']=1
+        cap=CapLeadingField(field,derivative_order=4)
+        result=build_prepared_background(cap)
+        background=result['background']
+        report.update(inputs=dict(field_nodes=257,geometry_knots=257,derivative_order=4,
+                                  quiet_tolerances=[0.,0.,0.]),
+                      input_sha256=array_hash(background.inputs),onset=result['onset'],
+                      diagnostics=result['diagnostics'],clock_offset=cap.domain['Ta'],
+                      numerical_error_enclosure=False)
+        return background,float(cap.domain['Ta'])
+    finally:
+        report['charged_values']=preparation.evaluations
+        report['cpu_seconds_from_run_start']=time.process_time()-budget.started
+        budget.check(preparation.evaluations)
+
+
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--retained-history',action='store_true',
+                        help='same full interval and schedule, with the prepared background and departures')
     args=parser.parse_args()
-    budget=Budget(maximum_evaluations=600000000,cpu_seconds=180.)
-    report=dict(schema='nsc-atlas-fixed-onset-v1',status='incomplete',runtime=producer.runtime_versions(),
+    if args.output.exists(): raise ValueError('preserve the existing result; choose a new admitted output')
+    if not args.output.parent.is_dir(): raise ValueError('output parent must already exist')
+    commit,bindings=frozen_sources()
+    values,cpu=(2000000000,900.) if args.retained_history else (600000000,180.)
+    budget=Budget(maximum_evaluations=values,cpu_seconds=cpu)
+    report=dict(schema='nsc-atlas-fixed-history-onset-v1' if args.retained_history else 'nsc-atlas-fixed-onset-v1',
+        status='incomplete',runtime=producer.runtime_versions(),source_commit=commit,
         scope='retained-source numerical common evolution; sampled defects, no continuum error enclosure or observational prediction',
-        limits=dict(charged_values=600000000,cpu_seconds=180.,accepted_steps=1024),
-        source_bindings={str(Path('src/recursive_horizons')/(name+'.py')).replace('\\','/'):
-            hashlib.sha256((ROOT/'src/recursive_horizons'/str(name+'.py')).read_bytes()).hexdigest()
-            for name in SOURCE_NAMES})
-    report['source_bindings']['scripts/run_nsc_atlas_fixed_onset.py']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+        limits=dict(charged_values=values,cpu_seconds=cpu,accepted_steps=1024),source_bindings=bindings)
     phase='input authentication';calls=accepted=0;maxima={};minimum_A=None;last_x=None
-    history=hashlib.sha256();state=None
+    history=hashlib.sha256();state=None;background=None;clock_offset=0.
     def maximum(key,value):
         maxima[key]=max(maxima.get(key,0.),float(np.max(np.abs(value))))
     try:
@@ -59,6 +114,9 @@ def main():
         left,right=float(x[j]),float(x[j+1]);alpha=float(data['alpha'])
         snapshot=SourceSnapshot(geometry,alpha=alpha,x_nodes=x,source_rows=rows,budget=budget)
         gauge=ReferenceWallGauge(geometry,order=64,budget=budget)
+        if args.retained_history:
+            phase='one prepared history and transfer';report['preparation']={}
+            background,clock_offset=prepare_history(budget,report['preparation'])
         reference=gauge.sample(np.array([left,right]));Z0,Z1=np.arctanh(reference['r'])
         dZ=Q(float(Z1))-Q(float(Z0));dT=Q(float(reference['T'][1]))-Q(float(reference['T'][0]))
         a=max(4*dZ,2*dT);knots=[Q(0),Q(float(Z0))-a,Q(float(Z0))+a]
@@ -91,11 +149,12 @@ def main():
             nonlocal calls,minimum_A
             calls+=1
             source=snapshot.sample(x);ref=gauge.sample(x)
-            if x<=front and (any(np.any(v!=0.) for v in value['cap'].values())
+            if background is None and x<=front and (any(np.any(v!=0.) for v in value['cap'].values())
                              or np.any(value['departure']['c']!=0.)):
                 raise ValueError('scalar zero-source recovery failed before the front')
             row=coupled_fixed_stage(value,basis=basis,x=x,eta=eta,source=source,gauge=ref,
-                alpha=alpha,tube=dict(r=[.2,.8],L=[-2.,2.],c=[-4.,4.]),budget=budget)
+                alpha=alpha,tube=dict(r=[.2,.8],L=[-2.,2.],c=[-4.,4.]),budget=budget,
+                background=background,background_clock_offset=clock_offset)
             connection=row['connection'];cap=connection['cap'];tx=connection['wall_rates']['T']
             if not 0<tx<=tx_ceiling: raise ValueError('actual cap clock exits declared ceiling')
             floor=cap['metric_certificate']['A_lower_float_down']
@@ -108,6 +167,15 @@ def main():
                 maximum('source.'+key,source[key])
             maximum('source.stage_minus_snapshot',row['source_constraint']-source['source_constraint'])
             maximum('cap.weak_balance_defect',cap['weak_balance_defect'])
+            if background is not None:
+                maximum('cap.explicit_time_remainder',cap['explicit_time_remainder'])
+                maximum('cap.remainder_identity_defect',cap['remainder_identity_defect'])
+                maximum('cap.explicit_mass_clock_derivative',cap['gradient']['T'])
+                maximum('cap.background_radial_intervals',cap['background']['radial_intervals'])
+                if x<=front:
+                    maximum('quiet.cap_wall_scalar',row['physical_wall']['c'])
+                    maximum('quiet.exterior_scalar_departure',value['departure']['c'])
+                    for key,v in value['cap'].items(): maximum('quiet.cap_coefficients.'+key,v)
             # Reuse the existing independent pure-U constraint algebra on
             # its original centre/wall patches, without a history replay.
             vac=row['exterior_prefix']['vacuum']
@@ -133,6 +201,13 @@ def main():
 
         history.update(digest_state(dict(x=left,state=state)).encode())
         first_row=final_row=None
+        if background is not None:
+            # This starts at the original left, not a presumed continuation
+            # of a skipped numerical quiet prefix. The whole cap is quiet.
+            initial_label=float(reference['T'][0]+clock_offset+Z0)
+            onset=float(background.inputs['labels'][background.onset['index']])
+            report['initial_history_quiet_margin']=onset-initial_label
+            if not initial_label<onset: raise ValueError('initial cap history is not entirely quiet')
         for piece,(pa,pb) in enumerate(pieces):
             nodes=np.linspace(pa,pb,counts[piece]+1)
             for index in range(counts[piece]):
@@ -154,15 +229,8 @@ def main():
                     maximum('time_L2.'+key,math.sqrt(gram.squared_norm(dr['cap'][key],budget=budget)))
                 for group in ('departure','wall'):
                     for key,v in dr[group].items(): maximum('time_component.'+group+'.'+key,v)
-                # Differential of the derived scalar applied to the time
-                # residual, with the same reference rate on both paths.
-                local=gram.wall;idx=local['indices'];coeff=dense['state']['cap']['chi']
-                chi=float(local['value']@coeff[idx]);chiz=float(local['first']@coeff[idx]);f=chi/R
-                k=math.sqrt(alpha/6);u=math.sinh(k*f)/k;root=math.cosh(k*f)
-                radius_residual=float(dr['wall']['r'])
-                scalar_residual=root*(float(local['value']@dr['cap']['chi'][idx])
-                    +chiz*radius_residual/(1-R*R))+(u-f*root)*radius_residual
-                maximum('time_derived.wall_c',scalar_residual)
+                derived=fixed_derived_residual(dr,physical,basis=basis,budget=budget,background=background)
+                for key,v in derived.items(): maximum('time_derived.'+key,v)
                 for item in step['stages']:
                     maximum('exterior_characteristic_courant',(xb-xa)*item['exterior_characteristic_courant_rate'])
                 state=step['accepted_state'];final_row=step['stages'][3];last_x=xb;accepted+=1
@@ -181,6 +249,10 @@ def main():
             connection_residuals=final_row['connection']['residual'],
             source_constraint=final_row['source_constraint'],
             state_sha256=digest_state(state))
+        if background is not None:
+            report['final']['background']=dict(time=cap['background']['time'],
+                explicit_time_remainder=cap['explicit_time_remainder'],
+                explicit_mass_clock_derivative=cap['gradient']['T'])
         if calls!=5*accepted: raise ValueError('common stage accounting mismatch')
         budget.check();report['status']='completed_numerical_interval'
     except (ValueError,RuntimeError,FloatingPointError,OverflowError,KeyError,TypeError) as error:
@@ -189,7 +261,9 @@ def main():
         accepted_history_sha256=history.hexdigest(),
         execution=dict(charged_values=budget.evaluations,cpu_seconds=time.process_time()-budget.started,
             common_stage_calls=calls,accepted_steps=accepted,last_accepted_x=last_x,
-            source_integrations=0,retries=0,raw_history_saved=False))
+            source_integrations=report.get('preparation',{}).get('source_integrations_completed',0),
+            source_integrations_attempted=report.get('preparation',{}).get('source_integrations_attempted',0),
+            retries=0,raw_history_saved=False))
     args.output.write_text(json.dumps(plain(report),indent=2,sort_keys=True,allow_nan=False)+'\n',
                            encoding='utf-8',newline='\n')
     print(json.dumps(dict(status=report['status'],execution=report['execution'],

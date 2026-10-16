@@ -6391,6 +6391,50 @@ evaluation clock preserves the common fields, rates and mass in the added
 control. The clock rate T_x and explicit-time mass term acquire no extra
 scale factor.
 
+#### Derived time residuals and the full retained-history interval
+
+Let `delta` denote Hermite derivative minus common-stage rate. Both paths
+use the same gauge, so the wall departure residuals are physical `delta R`
+and `delta T`. For departure coefficients `a,b`, total wall field
+`f=chi/R`, and background `k0=partial_T chi0`, the chain rules are
+
+\[
+ \delta\chi=e\cdot\delta a+
+ \frac{\chi_z}{1-R^2}\delta R+k_0\delta T,
+ \qquad
+ \delta c_W=\cosh(\kappa f)\delta\chi+
+ (u-f\cosh(\kappa f))\delta R,
+\]
+\[
+ u=\frac{\sinh(\kappa f)}{\kappa},\quad
+ \kappa=\sqrt{\alpha/6},\qquad
+ \delta N=N_T\delta T+N_a\cdot\delta a+N_b\cdot\delta b+\rho\delta R,
+ \quad \delta m=\alpha\delta N+\frac32R^2\delta R.
+\]
+
+The zero-coupling limit is `u=f`. The radial trace is the total history
+plus departure trace; `N_T` is the actual explicit-time constrained mass
+derivative. Its affine remainder is not added a second time. The
+[time adapter](../src/recursive_horizons/nsc_atlas_fixed_cap_time.py) now
+provides these contractions. Two independent shifted-slice controls,
+with and without the cubic background, agree within `6e-13` for the wall
+scalar and physical mass, and `5e-15` for normalized mass. They use
+630,439 values / 0.796875 CPU seconds and discriminate omission of the
+clock terms.
+
+The [admitted physical diagnostic](prior-art-and-open-claim.md#one-full-fixed-interval-evolution-with-retained-history-17-october-2026)
+uses the original full onset interval and 371-step schedule with this
+representation. A three-event source check found a pre-front metric
+interpolation constraint of about `6.9e-11`; dropping the quiet prefix
+would not be a justified replacement for evolving it. The source values
+and first derivatives enter the common RHS, while its curvature and
+transverse-jet interpolation defects remain separate diagnostics. The
+same runner retains all of them, plus the affine mass remainder and the
+clock-aware residuals, in a compact receipt. Its new creation-only mode
+binds committed sources before computing and charges one field preparation
+into the original overall clock and count. The complete coupled error
+estimate and physical prediction remain outstanding.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

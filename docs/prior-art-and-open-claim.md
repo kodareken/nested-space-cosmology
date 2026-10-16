@@ -1991,6 +1991,92 @@ is **2,375,777 values / 3.6875 CPU seconds** across thirteen executions of
 eleven distinct controls. The common stage accepts the explicit constant
 `background_clock_offset`; a nonzero offset without a history is rejected.
 
+### Quiet source data before the retained-history window, 17 October 2026
+
+Before skipping the old numerical quiet prefix, inspect the actual retained
+source interpolant. Its scalar bump is analytic and masked to zero before
+the front, but a metric Hermite interval can straddle that front. Load the
+original authenticated 129-row source once and query exactly three declared
+events: the old source-cell left edge, the penultimate quiet time node of
+the old fixed schedule, and the front. Compare h and its derivatives,
+scalar jets, source constraint and transverse jets against the quiet
+vacuum values. Use **20,000 values / 30 CPU seconds**, with no field or
+source ODE solve. This determines whether a shortened quiet initialization
+is compatible with the numerical input; discrepancies are not snapped away.
+
+**Outcome:** three queries use 135 charged values / 0.015625 CPU seconds.
+The scalar value and first two derivatives are zero at all three events.
+At the proposed shortened start, `h=1.4337521e-14`,
+`h_x=6.2991614e-14`, `h_xx=-5.2705143e-7` and the source constraint is
+`-6.8427801e-11`. At the front the constraint is `-6.9010356e-11`.
+The transverse scalar interpolation is also nonzero, `3.2382790e-11` at
+the shortened start. The common exterior RHS consumes the source values
+and first x derivatives; these transverse snapshot jets and the second
+derivative constraint are diagnostics. That distinction does not establish
+equivalence to an evolved quiet prefix. Retain the original left endpoint
+and its original steps in the next history-based comparison.
+
+### Derived residuals with the evolving history clock, 17 October 2026
+
+The wall scalar and constrained cap mass depend on the background clock as
+well as the fixed departure coefficients and moving radius. Differentiate
+those actual functions: include the background `k delta T` in `delta chi`,
+the total radial trace, `N_T delta T`, and the cap vacuum mass derivative.
+Check the contraction against two independently recomputed perturbed slices
+in an arbitrary direction changing coefficients, clock and radius together,
+once with the manufactured cubic history and once without it. Use the
+existing common-stage control allowance, with at most **2 million additional
+values / 60 active CPU seconds** for these two controls; no physical source
+solve or trajectory. Require scalar and physical mass differences below
+`2e-10`, normalized mass below `2e-8`, and clock contributions large enough
+that omission fails. Stop at the first mismatch before physical execution.
+
+**Outcome:** both controls pass with 630,439 values / 0.796875 CPU seconds.
+The largest scalar, normalized-mass and physical-mass differences are
+`3.14315e-13`, `4.24353e-15` and `5.68635e-13`. Four existing time controls
+also pass with 270,183 values / 0.265625 CPU seconds. Four orchestration
+controls use substitute producers to check success/failure accounting,
+preserved clock origin and refusal to overwrite an existing receipt.
+
+### One full fixed-interval evolution with retained history, 17 October 2026
+
+Use the existing onset runner with its retained-history mode. The new
+representation addresses the derived onset lag; it is not a refinement of
+the earlier stopped polynomial-only attempt. Keep the original 129 source
+rows, alpha, both endpoints, two-cell seven-dimensional cap departure
+space, 64 exterior cells, frozen initial operator and 371-step schedule.
+Retain the entire quiet prefix because its source interpolation is not
+identically vacuum. No source or geometry parameter is fitted.
+
+Regenerate the same 257/257 prepared leading field once, retain its 393
+native history knots and quartic onset with zero quiet tolerances, and use
+the inherited `Ta` at every common stage. This history is a representation
+of the cap background; the physical finite-coupling departures and clock
+are evolved. The original shared budget includes preparation, radial
+constraints, forward/adjoint gradients, stages and midpoint residuals.
+Allow **2 billion charged values / 900 process-CPU seconds**, with the
+preparation subphase capped at 10 million / 60 seconds from the original
+clock. The larger allowance includes the history jets and split radial
+integration absent from the previous run. It does not authorize a retry.
+
+Keep the independently checked scalar and mass chain rules, affine mass
+remainder, all wall defects, source constraint, selected exterior pure-null
+residuals, metric floor and actual time residuals. Preserve initial vacuum
+recovery; record tiny pre-front scalar leakage arising from the declared
+history/gauge front discrepancy rather than silently zeroing it. The
+frozen alpha-zero timescale is not a coupled stability certificate.
+
+The decision is whether the prepared history removes the leading scalar
+boundary mismatch while preserving the actual constrained mass calculation,
+and which residual then limits closure. Save a compact creation-only receipt,
+source/input hashes and a streamed accepted-state hash; no raw history.
+Freeze the producer before execution. A completed finite interval alone is
+not a continuum or observational prediction. Stop at the first domain,
+metric, gradient, algebra or budget failure and diagnose it before another
+calculation. Likely failure modes are unresolved radial conditioning,
+persistent cap/interface mismatch, and source or time residuals masking the
+comparison; the retained diagnostics distinguish them without a grid scan.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

@@ -457,6 +457,23 @@ The [owner](nsc-atlas-finite-amplitude.md#first-retained-source-fixed-cap-interv
 records the residuals and the analytical next action. No replay is needed
 to verify the saved bytes and producer hashes.
 
+The prepared-history successor uses the same full interval and time
+schedule, with a separately admitted budget:
+
+```sh
+python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --retained-history --output results/summaries/nsc-atlas-fixed-history-onset-v1.json
+```
+
+This is a creation command, not part of routine verification. The runner
+requires committed producer sources and refuses to overwrite any existing
+output. It regenerates the leading field once, retains the inherited clock
+origin, and charges preparation and common evolution to the same overall
+budget. The original left endpoint is retained because the source metric
+interpolant has a pre-front constraint defect. Independent derived-residual
+controls compare clock/radius/field perturbations with recomputed masses
+and wall scalars; source-failure accounting and receipt preservation are
+checked by `tests/test_run_nsc_atlas_fixed_onset.py` without a physical solve.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

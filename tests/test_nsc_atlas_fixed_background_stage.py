@@ -10,7 +10,9 @@ from control_budget import ControlBudget
 from recursive_horizons.nsc_atlas_cap_fixed_transfer import _transfer_coefficients
 from recursive_horizons.nsc_atlas_cap_fixed_reference import fixed_cap_reference
 from recursive_horizons.nsc_atlas_fixed_cap_stage import coupled_fixed_stage
-from recursive_horizons.nsc_atlas_fixed_cap_time import advance_fixed_ssprk3,fixed_time_residual
+from recursive_horizons.nsc_atlas_fixed_cap_time import (
+    advance_fixed_ssprk3,fixed_time_residual,fixed_derived_residual,
+)
 from recursive_horizons.nsc_atlas_reference_wall_gauge import ReferenceWallGauge
 from recursive_horizons.nsc_atlas_cap_background_jets import RetainedCapBackground
 from test_nsc_atlas_fixed_background_reference import history
@@ -138,3 +140,42 @@ def test_constant_history_clock_origin_preserves_the_common_physical_state(budge
         coupled_fixed_stage(state,background_clock_offset=shift,**kw)
     with pytest.raises(ValueError,match='background clock offset'):
         coupled_fixed_stage(state,background=bg,background_clock_offset=float('nan'),**kw)
+
+
+@pytest.mark.parametrize('retained',[False,True])
+def test_derived_residual_against_shifted_field_clock_radius_and_mass(budget,retained):
+    state,kw,bg=manufactured_case(budget)
+    if not retained: bg=None
+    row=coupled_fixed_stage(state,background=bg,**kw)
+    # An independent direction, not the evolution rate or a rearranged RHS.
+    direction=copy.deepcopy(state)
+    direction['cap']['chi']=np.array([.01,-.02,.03])
+    direction['cap']['canonical_density']=np.array([-.03,.01,.02])
+    direction['wall']['r']=.07;direction['wall']['T']=.1
+    contracted=fixed_derived_residual(direction,row,basis=kw['basis'],background=bg,budget=budget)
+    cap=row['connection']['cap'];T=float(kw['gauge']['T']+state['wall']['T'])
+    h=1e-5;values=[]
+    for sign in (-1,1):
+        delta=sign*h;R=cap['radius']+delta*direction['wall']['r']
+        shifted=fixed_cap_reference(kw['basis'],
+            state['cap']['chi']+delta*direction['cap']['chi'],
+            state['cap']['canonical_density']+delta*direction['cap']['canonical_density'],
+            Q(float(np.arctanh(R))),alpha=kw['alpha'],T_x=1.,radius_rate=0.,incoming_w_plus=0.,
+            background=bg,background_time=T+delta*direction['wall']['T'] if retained else None,
+            budget=budget)
+        k=np.sqrt(kw['alpha']/6)
+        values.append(np.array([R*np.sinh(k*shifted['wall']['f'])/k,
+                                shifted['mass'],R**3/2+kw['alpha']*shifted['mass']]))
+    difference=(values[1]-values[0])/(2*h)
+    expected=np.array([contracted[k] for k in ('wall_c','normalized_cap_mass','physical_cap_mass')])
+    np.testing.assert_allclose(difference,expected,rtol=0.,atol=2e-8)
+    assert abs(difference[0]-expected[0])<2e-10
+    assert abs(difference[2]-expected[2])<2e-10
+    if retained:
+        assert abs(contracted['clock_wall_c'])>1e-6
+        assert abs(contracted['clock_normalized_mass'])>1e-7
+        with pytest.raises(ValueError,match='requires the stage background'):
+            fixed_derived_residual(direction,row,basis=kw['basis'],budget=budget)
+    else:
+        assert contracted['clock_wall_c']==contracted['clock_normalized_mass']==0.
+    print('derived residual direction:',retained,difference.tolist(),expected.tolist())

@@ -79,6 +79,15 @@ stage now accepts that constant explicitly. Corrected front labels agree
 within `1.01030e-14`; the added clock-translation control preserves fields,
 rates and mass. No source value or coupling was fitted.
 
+The wall-scalar and physical cap-mass time residuals now retain that clock
+dependence. Two independent shifted-slice controls pass with 630,439 values /
+0.796875 CPU seconds; the scalar and physical-mass directional differences
+are below `6e-13`. A three-event source check finds a pre-front Hermite
+constraint defect of about `6.9e-11`, so the next physical history attempt
+retains the original start and complete 371-step schedule. Its admitted
+900-second / two-billion-value ceiling includes one prepared-field transfer;
+there is no quiet-prefix shortcut or grid scan.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.
