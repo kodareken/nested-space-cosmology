@@ -39,8 +39,8 @@ inside their tests, retaining cumulative point and active-CPU limits.
 
 ## Current work
 
-The discrete cap mass derivative is under implementation in a diagnostic
-companion to the unchanged producer. Run its manufactured controls with:
+The discrete cap mass derivative and departure-flux ledger are implemented
+in a diagnostic companion to the unchanged producer. Run their controls with:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_derivatives.py tests/test_nsc_atlas_cap_mass_tangent.py tests/test_nsc_atlas_cap_mass_balance.py -q -s
@@ -48,9 +48,23 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_derivatives
 
 The [mathematical owner](nsc-atlas-finite-amplitude.md#discrete-mass-derivative-and-departure-flux-balance)
 states the branch-specific derivative and telescoping identity. The controls
-have passed. The first retained-state attempt stopped at the zero/order-four
-ledger identity, with no accepted result; see the
-[diagnosis scope](prior-art-and-open-claim.md#discrete-cap-mass-balance-16-october-2026).
+have passed. The [completed four-case result](current-result.md#discrete-cap-mass-balance-16-october-2026)
+accounts for the upwind contribution and retains the remaining discrepancy.
+The [calculation record](prior-art-and-open-claim.md#discrete-cap-mass-balance-16-october-2026)
+preserves the failed rounding check and its bounded diagnosis.
+
+Full payloads belong in ignored `.build/results`. Creation refuses to
+overwrite an existing output. Reconstruct a missing payload, or validate
+an existing one, using the frozen producer and input bindings:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_mass_balance.py --output .build/results/nsc-atlas-cap-mass-balance-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_mass_balance.py --output .build/results/nsc-atlas-cap-mass-balance-v1.json --check
+python scripts/run_python.py scripts/summarize_result.py --output results/summaries/nsc-atlas-cap-mass-balance-v1.json --check
+```
+
+The last command checks hashes and structure without a scientific replay.
+The compact summary contains the exact regeneration argument vector.
 
 The [first prediction-register entry](prediction-register.md#nsc-p001--perturbative-cap-and-moving-wall)
 binds the closed perturbative cap–wall relation and four computed

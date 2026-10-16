@@ -2,7 +2,18 @@
 
 ## Discrete cap mass balance, 16 October 2026
 
-Implementation is in progress. The completed directional check below leaves
+**Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
+passes creation validation and one standalone check. The finite order-eight
+balance is `-2.12697432799`, including upwind work `-2.01783226502` and
+remaining balance `-0.10914206297`. The corrected source freeze is `8d575f1`.
+The original failed attempt plus successful creation/validation uses
+11,275,091 points / 8.75 CPU seconds; the separately admitted diagnostic and
+standalone check retain their own receipts. Full data stays local; the
+[summary](../results/summaries/nsc-atlas-cap-mass-balance-v1.json) binds its
+hash and regeneration command. No new evolution follows from this ledger.
+The admission and development record below retain their original sequence.
+
+The completed directional check below leaves
 the cap mass functional and its discrete transport as the unresolved connection.
 Differentiate the implemented radial quadrature, then use finite-volume
 summation by parts to separate its terms. The mathematical inputs are the
@@ -61,7 +72,8 @@ freeze, resume the fixed four-case creation with the first failed attempt's
 12,000,000-point / 90-second allowance. The separate one-case diagnosis
 keeps its own declared receipt. Grok confirmed the accumulation bound; its
 review removed the arbitrary unit floor and added a nontrivial attenuation
-to the independent cancellation control. No raw result has yet been accepted.
+to the independent cancellation control. The subsequent accepted result is
+recorded in the outcome above.
 
 ## Terminal cap mass-functional derivative, 16 October 2026
 

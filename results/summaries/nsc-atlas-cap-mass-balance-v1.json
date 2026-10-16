@@ -1,0 +1,5007 @@
+{
+  "authentication": {
+    "reported_provenance_revalidated": false,
+    "scientific_validation_executed": false,
+    "scope": "raw and explicitly listed local byte bindings only"
+  },
+  "data": {
+    "cases": [
+      {
+        "alpha": 0.0,
+        "amplitude": "zero",
+        "order8_minus_order4": {
+          "B_mass": -4.570820748689419e-05,
+          "B_mass_without_upwind": -4.5708207487185626e-05,
+          "actual_B_mass": 0.0,
+          "tangent_minus_previous": 2.7534505774029494e-07
+        },
+        "orders": {
+          "4": {
+            "B_mass": -0.08467559398315715,
+            "B_mass_imposed": -0.08467408900056443,
+            "B_mass_without_upwind": 0.004361564679559102,
+            "actual_B_mass": -0.0,
+            "checks": {
+              "contraction_roundoff_allowance": 3.6885415937606464e-09,
+              "contraction_roundoff_ratio": 0.00014650429328561164,
+              "defects": {
+                "derivative_ledger": 4.163336342344337e-17,
+                "forward_reverse": 5.403871794484871e-13,
+                "interior_split": -2.7755575615628914e-17,
+                "telescoping": 2.7755575615628914e-17
+              },
+              "face_rounding_allowance": 5.684341886080802e-14,
+              "rounding_allowance": 5.684341886080802e-14
+            },
+            "direction": {
+              "R_x": 1.4302100275371246,
+              "T_x": 3.262881129757635,
+              "w_plus": 0.03232603007350927
+            },
+            "flux_change": -4.6124346332557504e-07,
+            "flux_imposed": 3.7922282295817373e-06,
+            "flux_left": 4.253471692907312e-06,
+            "incoming_mass_rate_derivative": 0.006357669649195425,
+            "interpretation": "removing one ledger term is an algebraic diagnostic, not an evolved alternative",
+            "ledger": {
+              "centre": -1.7190745765294455e-50,
+              "clock": -0.03959738975324212,
+              "direct": -0.08453482137046732,
+              "incoming_mass_rate_derivative": 0.006357669649195425,
+              "interior": -0.025142351251085444,
+              "interior_central": 0.06389480741163082,
+              "interior_split_defect": -2.7755575615628914e-17,
+              "interior_upwind": -0.08903715866271625,
+              "maximum_face_split_defect": 2.3310346708438345e-18,
+              "radius": -0.019797885401943327,
+              "reaction": -0.0,
+              "telescoping_defect": 2.7755575615628914e-17,
+              "total": -0.08453482137046729,
+              "wall": 2.8050358035964363e-06
+            },
+            "previous_D_n": -0.08453372970421796,
+            "previous_finest_width": 1.9898488344149507e-05,
+            "radial": [
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025951166042053615,
+                "e_r": -1.67872779559562e-08,
+                "history_e_m_same_rates": -0.026843223413458583,
+                "identity_defect": -3.851521676891858e-18,
+                "radial_stride": 1,
+                "tangent_minus_history": 0.0008920573714049675,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025950954807029268,
+                "e_r": -4.986988584959563e-07,
+                "history_e_m_same_rates": -0.02684301217843424,
+                "identity_defect": -2.1412251752759865e-17,
+                "radial_stride": 2,
+                "tangent_minus_history": 0.0008920573714049709,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025951166042053615,
+                "e_r": -1.67872779559562e-08,
+                "history_e_m_same_rates": -0.028951976824971665,
+                "identity_defect": -3.851521676891858e-18,
+                "radial_stride": 1,
+                "tangent_minus_history": 0.0030008107829180494,
+                "time_stride": 2
+              },
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025950954807029268,
+                "e_r": -4.986988584959563e-07,
+                "history_e_m_same_rates": -0.028951765589947318,
+                "identity_defect": -2.1412251752759865e-17,
+                "radial_stride": 2,
+                "tangent_minus_history": 0.0030008107829180494,
+                "time_stride": 2
+              }
+            ],
+            "radial_density": 8.872405991004052e-05,
+            "tangent": {
+              "Ip_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.923759268043923,
+                "minimum": -11.749362476170077,
+                "scalar_count": 64,
+                "sha256": "a80f1293757dbae2ae61d20b3ae9dad56be2eb1d19a70cb4a18e0d85d917417a"
+              },
+              "Iq_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.9293146436579,
+                "minimum": -11.743807100556168,
+                "scalar_count": 64,
+                "sha256": "c776a8e5abceb736b6637db345583c69bd0706fa1de6a146fbc484d31eedf32c"
+              },
+              "N": 17.754203329630236,
+              "N_R": -0.013842642004150979,
+              "N_T": -0.012135713248059204,
+              "born_panels": 0,
+              "contraction_absolute_work": 15612.513672174033,
+              "contraction_gamma": 2.3625545964028915e-13,
+              "contraction_path_operations": 1064,
+              "contraction_roundoff_allowance": 3.6885415937606464e-09,
+              "forward": -0.08453482136992686,
+              "limiter_branches": {
+                "minus": [
+                  "endpoint",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "right",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "zero",
+                  "left",
+                  "right",
+                  "zero",
+                  "right",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "right",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "right",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "endpoint"
+                ],
+                "plus": [
+                  "endpoint",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "endpoint"
+                ]
+              },
+              "panel_count": 128,
+              "panels": [
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0,
+                  "owner": 0,
+                  "right": 0.00859375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.00859375,
+                  "owner": 1,
+                  "right": 0.0171875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0171875,
+                  "owner": 2,
+                  "right": 0.025781250000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.025781250000000002,
+                  "owner": 3,
+                  "right": 0.034375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.034375,
+                  "owner": 4,
+                  "right": 0.04296875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.04296875,
+                  "owner": 5,
+                  "right": 0.051562500000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.051562500000000004,
+                  "owner": 6,
+                  "right": 0.06015625000000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.06015625000000001,
+                  "owner": 7,
+                  "right": 0.06875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.06875,
+                  "owner": 8,
+                  "right": 0.07734375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.07734375,
+                  "owner": 9,
+                  "right": 0.0859375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0859375,
+                  "owner": 10,
+                  "right": 0.09453125000000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.09453125000000001,
+                  "owner": 11,
+                  "right": 0.10312500000000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.10312500000000001,
+                  "owner": 12,
+                  "right": 0.11171875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.11171875,
+                  "owner": 13,
+                  "right": 0.12031250000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12031250000000002,
+                  "owner": 14,
+                  "right": 0.12890625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12890625,
+                  "owner": 15,
+                  "right": 0.1375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1375,
+                  "owner": 16,
+                  "right": 0.14609375000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.14609375000000002,
+                  "owner": 17,
+                  "right": 0.1546875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1546875,
+                  "owner": 18,
+                  "right": 0.16328125000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.16328125000000002,
+                  "owner": 19,
+                  "right": 0.171875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.171875,
+                  "owner": 20,
+                  "right": 0.18046875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.18046875,
+                  "owner": 21,
+                  "right": 0.18906250000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.18906250000000002,
+                  "owner": 22,
+                  "right": 0.19765625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.19765625,
+                  "owner": 23,
+                  "right": 0.20625000000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.20625000000000002,
+                  "owner": 24,
+                  "right": 0.21484375000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.21484375000000003,
+                  "owner": 25,
+                  "right": 0.2234375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2234375,
+                  "owner": 26,
+                  "right": 0.23203125000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.23203125000000002,
+                  "owner": 27,
+                  "right": 0.24062500000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.24062500000000003,
+                  "owner": 28,
+                  "right": 0.24921875000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.24921875000000002,
+                  "owner": 29,
+                  "right": 0.2578125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2578125,
+                  "owner": 30,
+                  "right": 0.26640625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.26640625,
+                  "owner": 31,
+                  "right": 0.275
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.275,
+                  "owner": 32,
+                  "right": 0.2792358072536607
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2792358072536607,
+                  "owner": 32,
+                  "right": 0.28300108159381115
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.28300108159381115,
+                  "owner": 32,
+                  "right": 0.28359375000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.28359375000000003,
+                  "owner": 33,
+                  "right": 0.2867803630949789
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2867803630949789,
+                  "owner": 33,
+                  "right": 0.29057369392967636
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.29057369392967636,
+                  "owner": 33,
+                  "right": 0.29218750000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.29218750000000004,
+                  "owner": 34,
+                  "right": 0.29438111626155095
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.29438111626155095,
+                  "owner": 34,
+                  "right": 0.2982026722288929
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2982026722288929,
+                  "owner": 34,
+                  "right": 0.30078125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.30078125,
+                  "owner": 35,
+                  "right": 0.30203840392742753
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.30203840392742753,
+                  "owner": 35,
+                  "right": 0.30588835339245435
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.30588835339245435,
+                  "owner": 35,
+                  "right": 0.309375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.309375,
+                  "owner": 36,
+                  "right": 0.3097525625801686
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3097525625801686,
+                  "owner": 36,
+                  "right": 0.3136310733482585
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3136310733482585,
+                  "owner": 36,
+                  "right": 0.3175239274356659
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3175239274356659,
+                  "owner": 36,
+                  "right": 0.31796875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.31796875,
+                  "owner": 37,
+                  "right": 0.32143116644151676
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.32143116644151676,
+                  "owner": 37,
+                  "right": 0.3253528318031656
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3253528318031656,
+                  "owner": 37,
+                  "right": 0.32656250000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.32656250000000003,
+                  "owner": 38,
+                  "right": 0.32928896477331904
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.32928896477331904,
+                  "owner": 38,
+                  "right": 0.333239606396211
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.333239606396211,
+                  "owner": 38,
+                  "right": 0.33515625000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.33515625000000004,
+                  "owner": 39,
+                  "right": 0.3372047974827716
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3372047974827716,
+                  "owner": 39,
+                  "right": 0.34118457858475854
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34118457858475854,
+                  "owner": 39,
+                  "right": 0.34375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34375,
+                  "owner": 40,
+                  "right": 0.34517898996780344
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34517898996780344,
+                  "owner": 40,
+                  "right": 0.34918807158332044
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34918807158332044,
+                  "owner": 40,
+                  "right": 0.35234375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.35234375,
+                  "owner": 41,
+                  "right": 0.3532118630392366
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3532118630392366,
+                  "owner": 41,
+                  "right": 0.35725040356948845
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.35725040356948845,
+                  "owner": 41,
+                  "right": 0.3609375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3609375,
+                  "owner": 42,
+                  "right": 0.36130373200222726
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.36130373200222726,
+                  "owner": 42,
+                  "right": 0.365371886726681
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.365371886726681,
+                  "owner": 42,
+                  "right": 0.3694549056586201
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3694549056586201,
+                  "owner": 42,
+                  "right": 0.36953125000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.36953125000000003,
+                  "owner": 43,
+                  "right": 0.37355282620434516
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.37355282620434516,
+                  "owner": 43,
+                  "right": 0.3776656852231567
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3776656852231567,
+                  "owner": 43,
+                  "right": 0.37812500000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.37812500000000004,
+                  "owner": 44,
+                  "right": 0.3817935189882235
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3817935189882235,
+                  "owner": 44,
+                  "right": 0.3859363631457799
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3859363631457799,
+                  "owner": 44,
+                  "right": 0.38671875000000006
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.38671875000000006,
+                  "owner": 45,
+                  "right": 0.39009425267258024
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.39009425267258024,
+                  "owner": 45,
+                  "right": 0.3942672218315406
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3942672218315406,
+                  "owner": 45,
+                  "right": 0.3953125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3953125,
+                  "owner": 46,
+                  "right": 0.39845530412546437
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.39845530412546437,
+                  "owner": 46,
+                  "right": 0.40265853224879056
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.40265853224879056,
+                  "owner": 46,
+                  "right": 0.40390625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.40390625,
+                  "owner": 47,
+                  "right": 0.4068769380372594
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4068769380372594,
+                  "owner": 47,
+                  "right": 0.4111105524154021
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4111105524154021,
+                  "owner": 47,
+                  "right": 0.41250000000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.41250000000000003,
+                  "owner": 48,
+                  "right": 0.4153594053417645
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4153594053417645,
+                  "owner": 48,
+                  "right": 0.41962352575175366
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.41962352575175366,
+                  "owner": 48,
+                  "right": 0.42109375000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42109375000000004,
+                  "owner": 49,
+                  "right": 0.42390294149799596
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42390294149799596,
+                  "owner": 49,
+                  "right": 0.42819767928809854
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42819767928809854,
+                  "owner": 49,
+                  "right": 0.42968750000000006
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42968750000000006,
+                  "owner": 50,
+                  "right": 0.4325077646196981
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4325077646196981,
+                  "owner": 50,
+                  "right": 0.4368332217126492
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4368332217126492,
+                  "owner": 50,
+                  "right": 0.43828125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.43828125,
+                  "owner": 51,
+                  "right": 0.44117407343825
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.44117407343825,
+                  "owner": 51,
+                  "right": 0.44553034124534124
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.44553034124534124,
+                  "owner": 51,
+                  "right": 0.446875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.446875,
+                  "owner": 52,
+                  "right": 0.4499020450831456
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4499020450831456,
+                  "owner": 52,
+                  "right": 0.45428920332068584
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.45428920332068584,
+                  "owner": 52,
+                  "right": 0.45546875000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.45546875000000003,
+                  "owner": 53,
+                  "right": 0.45869183266262664
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.45869183266262664,
+                  "owner": 53,
+                  "right": 0.4631099480613651
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4631099480613651,
+                  "owner": 53,
+                  "right": 0.46406250000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.46406250000000004,
+                  "owner": 54,
+                  "right": 0.4675435626251906
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4675435626251906,
+                  "owner": 54,
+                  "right": 0.47199268752233
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.47199268752233,
+                  "owner": 54,
+                  "right": 0.47265625000000006
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.47265625000000006,
+                  "owner": 55,
+                  "right": 0.4764573318806725
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4764573318806725,
+                  "owner": 55,
+                  "right": 0.4809375026829771
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4809375026829771,
+                  "owner": 55,
+                  "right": 0.48125000000000007
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48125000000000007,
+                  "owner": 56,
+                  "right": 0.48543320465732415
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48543320465732415,
+                  "owner": 56,
+                  "right": 0.48984375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48984375,
+                  "owner": 57,
+                  "right": 0.48994444016260463
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48994444016260463,
+                  "owner": 57,
+                  "right": 0.4944712090687581
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4944712090687581,
+                  "owner": 57,
+                  "right": 0.49843750000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.49843750000000003,
+                  "owner": 58,
+                  "right": 0.4990135086316
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4990135086316,
+                  "owner": 58,
+                  "right": 0.5035713333618019
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5035713333618019,
+                  "owner": 58,
+                  "right": 0.50703125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.50703125,
+                  "owner": 59,
+                  "right": 0.5081446748879209
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5081446748879209,
+                  "owner": 59,
+                  "right": 0.5127335218130509
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5127335218130509,
+                  "owner": 59,
+                  "right": 0.515625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.515625,
+                  "owner": 60,
+                  "right": 0.5173378595648279
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5173378595648279,
+                  "owner": 60,
+                  "right": 0.5219576702384421
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5219576702384421,
+                  "owner": 60,
+                  "right": 0.5242187500000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5242187500000001,
+                  "owner": 61,
+                  "right": 0.5265929324323095
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5265929324323095,
+                  "owner": 61,
+                  "right": 0.531243621076015
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.531243621076015,
+                  "owner": 61,
+                  "right": 0.5328125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5328125,
+                  "owner": 62,
+                  "right": 0.535909707250146
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.535909707250146,
+                  "owner": 62,
+                  "right": 0.5405911579975934
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5405911579975934,
+                  "owner": 62,
+                  "right": 0.5414062500000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5414062500000001,
+                  "owner": 63,
+                  "right": 0.5452879361258706
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5452879361258706,
+                  "owner": 63,
+                  "right": 0.55
+                }
+              ],
+              "primal_face_defect": 8.271806125530277e-25,
+              "primal_faces": {
+                "compacted_numeric_array": true,
+                "length": 65,
+                "maximum": 17.754203329630236,
+                "minimum": 0.0,
+                "scalar_count": 65,
+                "sha256": "9d2059deac1894f57756f1cc0e09c410274188203e735d10be764425ee7b4251"
+              },
+              "reverse": -0.08453482137046725
+            },
+            "tangent_minus_previous": -1.0916662492865825e-06
+          },
+          "8": {
+            "B_mass": -0.08472130219064404,
+            "B_mass_imposed": -0.08471979720805133,
+            "B_mass_without_upwind": 0.004315856472071916,
+            "actual_B_mass": -0.0,
+            "checks": {
+              "contraction_roundoff_allowance": 3.6885416055491158e-09,
+              "contraction_roundoff_ratio": 9.482013373696858e-05,
+              "defects": {
+                "derivative_ledger": 5.551115123125783e-17,
+                "forward_reverse": 3.4974800833253994e-13,
+                "interior_split": -5.551115123125783e-17,
+                "telescoping": 1.3877787807814457e-17
+              },
+              "face_rounding_allowance": 5.684341886080802e-14,
+              "rounding_allowance": 5.684341886080802e-14
+            },
+            "direction": {
+              "R_x": 1.4302100275371246,
+              "T_x": 3.262881129757635,
+              "w_plus": 0.03232603007350927
+            },
+            "flux_change": -4.6124346332557504e-07,
+            "flux_imposed": 3.7922282295817373e-06,
+            "flux_left": 4.253471692907312e-06,
+            "incoming_mass_rate_derivative": 0.006357669649195445,
+            "interpretation": "removing one ledger term is an algebraic diagnostic, not an evolved alternative",
+            "ledger": {
+              "centre": -1.7190745790725418e-50,
+              "clock": -0.03962823633338716,
+              "direct": -0.08458052957795421,
+              "incoming_mass_rate_derivative": 0.006357669649195445,
+              "interior": -0.025142351251082422,
+              "interior_central": 0.06389480741163359,
+              "interior_split_defect": -5.551115123125783e-17,
+              "interior_upwind": -0.08903715866271596,
+              "maximum_face_split_defect": 2.3310346708438345e-18,
+              "radius": -0.019812747029288213,
+              "reaction": -0.0,
+              "telescoping_defect": 1.3877787807814457e-17,
+              "total": -0.0845805295779542,
+              "wall": 2.8050358035964452e-06
+            },
+            "previous_D_n": -0.0845797132567626,
+            "previous_finest_width": 1.9898488344149507e-05,
+            "radial": [
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025965174584187026,
+                "e_r": -1.6787071252608726e-08,
+                "history_e_m_same_rates": -0.02684698562376669,
+                "identity_defect": -8.415920840571715e-18,
+                "radial_stride": 1,
+                "tangent_minus_history": 0.0008818110395796656,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025964963349117378,
+                "e_r": -4.986987551442758e-07,
+                "history_e_m_same_rates": -0.026846774388697044,
+                "identity_defect": -9.826323341978731e-18,
+                "radial_stride": 2,
+                "tangent_minus_history": 0.0008818110395796656,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025965174584187026,
+                "e_r": -1.6787071252608726e-08,
+                "history_e_m_same_rates": -0.02894966139358447,
+                "identity_defect": -8.415920840571715e-18,
+                "radial_stride": 1,
+                "tangent_minus_history": 0.002984486809397443,
+                "time_stride": 2
+              },
+              {
+                "actual_e_m": -0.0,
+                "e_m": -0.025964963349117378,
+                "e_r": -4.986987551442758e-07,
+                "history_e_m_same_rates": -0.02894945015851482,
+                "identity_defect": -9.826323341978731e-18,
+                "radial_stride": 2,
+                "tangent_minus_history": 0.002984486809397443,
+                "time_stride": 2
+              }
+            ],
+            "radial_density": 8.872405991004052e-05,
+            "tangent": {
+              "Ip_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.923759268044165,
+                "minimum": -11.749362476169882,
+                "scalar_count": 64,
+                "sha256": "5f7090d3bc4bda83438cad34127e04a9a663f49f1274de3ecba8df999e809e76"
+              },
+              "Iq_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.929314643657708,
+                "minimum": -11.743807100556339,
+                "scalar_count": 64,
+                "sha256": "39f8cb5d36a11793c511bfdd3a309295530190e08e2a7204e6cfc512cda8feef"
+              },
+              "N": 17.75420335017397,
+              "N_R": -0.013853033224362514,
+              "N_T": -0.012145167034120769,
+              "born_panels": 0,
+              "contraction_absolute_work": 15612.513722071164,
+              "contraction_gamma": 2.3625545964028915e-13,
+              "contraction_path_operations": 1064,
+              "contraction_roundoff_allowance": 3.6885416055491158e-09,
+              "forward": -0.0845805295776044,
+              "limiter_branches": {
+                "minus": [
+                  "endpoint",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "right",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "zero",
+                  "left",
+                  "right",
+                  "zero",
+                  "right",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "right",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "right",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "endpoint"
+                ],
+                "plus": [
+                  "endpoint",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "endpoint"
+                ]
+              },
+              "panel_count": 128,
+              "panels": [
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0,
+                  "owner": 0,
+                  "right": 0.00859375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.00859375,
+                  "owner": 1,
+                  "right": 0.0171875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0171875,
+                  "owner": 2,
+                  "right": 0.025781250000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.025781250000000002,
+                  "owner": 3,
+                  "right": 0.034375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.034375,
+                  "owner": 4,
+                  "right": 0.04296875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.04296875,
+                  "owner": 5,
+                  "right": 0.051562500000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.051562500000000004,
+                  "owner": 6,
+                  "right": 0.06015625000000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.06015625000000001,
+                  "owner": 7,
+                  "right": 0.06875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.06875,
+                  "owner": 8,
+                  "right": 0.07734375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.07734375,
+                  "owner": 9,
+                  "right": 0.0859375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0859375,
+                  "owner": 10,
+                  "right": 0.09453125000000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.09453125000000001,
+                  "owner": 11,
+                  "right": 0.10312500000000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.10312500000000001,
+                  "owner": 12,
+                  "right": 0.11171875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.11171875,
+                  "owner": 13,
+                  "right": 0.12031250000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12031250000000002,
+                  "owner": 14,
+                  "right": 0.12890625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12890625,
+                  "owner": 15,
+                  "right": 0.1375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1375,
+                  "owner": 16,
+                  "right": 0.14609375000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.14609375000000002,
+                  "owner": 17,
+                  "right": 0.1546875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1546875,
+                  "owner": 18,
+                  "right": 0.16328125000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.16328125000000002,
+                  "owner": 19,
+                  "right": 0.171875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.171875,
+                  "owner": 20,
+                  "right": 0.18046875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.18046875,
+                  "owner": 21,
+                  "right": 0.18906250000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.18906250000000002,
+                  "owner": 22,
+                  "right": 0.19765625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.19765625,
+                  "owner": 23,
+                  "right": 0.20625000000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.20625000000000002,
+                  "owner": 24,
+                  "right": 0.21484375000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.21484375000000003,
+                  "owner": 25,
+                  "right": 0.2234375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2234375,
+                  "owner": 26,
+                  "right": 0.23203125000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.23203125000000002,
+                  "owner": 27,
+                  "right": 0.24062500000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.24062500000000003,
+                  "owner": 28,
+                  "right": 0.24921875000000002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.24921875000000002,
+                  "owner": 29,
+                  "right": 0.2578125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2578125,
+                  "owner": 30,
+                  "right": 0.26640625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.26640625,
+                  "owner": 31,
+                  "right": 0.275
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.275,
+                  "owner": 32,
+                  "right": 0.2792358072536607
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2792358072536607,
+                  "owner": 32,
+                  "right": 0.28300108159381115
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.28300108159381115,
+                  "owner": 32,
+                  "right": 0.28359375000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.28359375000000003,
+                  "owner": 33,
+                  "right": 0.2867803630949789
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2867803630949789,
+                  "owner": 33,
+                  "right": 0.29057369392967636
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.29057369392967636,
+                  "owner": 33,
+                  "right": 0.29218750000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.29218750000000004,
+                  "owner": 34,
+                  "right": 0.29438111626155095
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.29438111626155095,
+                  "owner": 34,
+                  "right": 0.2982026722288929
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2982026722288929,
+                  "owner": 34,
+                  "right": 0.30078125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.30078125,
+                  "owner": 35,
+                  "right": 0.30203840392742753
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.30203840392742753,
+                  "owner": 35,
+                  "right": 0.30588835339245435
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.30588835339245435,
+                  "owner": 35,
+                  "right": 0.309375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.309375,
+                  "owner": 36,
+                  "right": 0.3097525625801686
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3097525625801686,
+                  "owner": 36,
+                  "right": 0.3136310733482585
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3136310733482585,
+                  "owner": 36,
+                  "right": 0.3175239274356659
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3175239274356659,
+                  "owner": 36,
+                  "right": 0.31796875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.31796875,
+                  "owner": 37,
+                  "right": 0.32143116644151676
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.32143116644151676,
+                  "owner": 37,
+                  "right": 0.3253528318031656
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3253528318031656,
+                  "owner": 37,
+                  "right": 0.32656250000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.32656250000000003,
+                  "owner": 38,
+                  "right": 0.32928896477331904
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.32928896477331904,
+                  "owner": 38,
+                  "right": 0.333239606396211
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.333239606396211,
+                  "owner": 38,
+                  "right": 0.33515625000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.33515625000000004,
+                  "owner": 39,
+                  "right": 0.3372047974827716
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3372047974827716,
+                  "owner": 39,
+                  "right": 0.34118457858475854
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34118457858475854,
+                  "owner": 39,
+                  "right": 0.34375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34375,
+                  "owner": 40,
+                  "right": 0.34517898996780344
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34517898996780344,
+                  "owner": 40,
+                  "right": 0.34918807158332044
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.34918807158332044,
+                  "owner": 40,
+                  "right": 0.35234375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.35234375,
+                  "owner": 41,
+                  "right": 0.3532118630392366
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3532118630392366,
+                  "owner": 41,
+                  "right": 0.35725040356948845
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.35725040356948845,
+                  "owner": 41,
+                  "right": 0.3609375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3609375,
+                  "owner": 42,
+                  "right": 0.36130373200222726
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.36130373200222726,
+                  "owner": 42,
+                  "right": 0.365371886726681
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.365371886726681,
+                  "owner": 42,
+                  "right": 0.3694549056586201
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3694549056586201,
+                  "owner": 42,
+                  "right": 0.36953125000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.36953125000000003,
+                  "owner": 43,
+                  "right": 0.37355282620434516
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.37355282620434516,
+                  "owner": 43,
+                  "right": 0.3776656852231567
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3776656852231567,
+                  "owner": 43,
+                  "right": 0.37812500000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.37812500000000004,
+                  "owner": 44,
+                  "right": 0.3817935189882235
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3817935189882235,
+                  "owner": 44,
+                  "right": 0.3859363631457799
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3859363631457799,
+                  "owner": 44,
+                  "right": 0.38671875000000006
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.38671875000000006,
+                  "owner": 45,
+                  "right": 0.39009425267258024
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.39009425267258024,
+                  "owner": 45,
+                  "right": 0.3942672218315406
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3942672218315406,
+                  "owner": 45,
+                  "right": 0.3953125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.3953125,
+                  "owner": 46,
+                  "right": 0.39845530412546437
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.39845530412546437,
+                  "owner": 46,
+                  "right": 0.40265853224879056
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.40265853224879056,
+                  "owner": 46,
+                  "right": 0.40390625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.40390625,
+                  "owner": 47,
+                  "right": 0.4068769380372594
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4068769380372594,
+                  "owner": 47,
+                  "right": 0.4111105524154021
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4111105524154021,
+                  "owner": 47,
+                  "right": 0.41250000000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.41250000000000003,
+                  "owner": 48,
+                  "right": 0.4153594053417645
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4153594053417645,
+                  "owner": 48,
+                  "right": 0.41962352575175366
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.41962352575175366,
+                  "owner": 48,
+                  "right": 0.42109375000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42109375000000004,
+                  "owner": 49,
+                  "right": 0.42390294149799596
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42390294149799596,
+                  "owner": 49,
+                  "right": 0.42819767928809854
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42819767928809854,
+                  "owner": 49,
+                  "right": 0.42968750000000006
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.42968750000000006,
+                  "owner": 50,
+                  "right": 0.4325077646196981
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4325077646196981,
+                  "owner": 50,
+                  "right": 0.4368332217126492
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4368332217126492,
+                  "owner": 50,
+                  "right": 0.43828125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.43828125,
+                  "owner": 51,
+                  "right": 0.44117407343825
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.44117407343825,
+                  "owner": 51,
+                  "right": 0.44553034124534124
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.44553034124534124,
+                  "owner": 51,
+                  "right": 0.446875
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.446875,
+                  "owner": 52,
+                  "right": 0.4499020450831456
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4499020450831456,
+                  "owner": 52,
+                  "right": 0.45428920332068584
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.45428920332068584,
+                  "owner": 52,
+                  "right": 0.45546875000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.45546875000000003,
+                  "owner": 53,
+                  "right": 0.45869183266262664
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.45869183266262664,
+                  "owner": 53,
+                  "right": 0.4631099480613651
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4631099480613651,
+                  "owner": 53,
+                  "right": 0.46406250000000004
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.46406250000000004,
+                  "owner": 54,
+                  "right": 0.4675435626251906
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4675435626251906,
+                  "owner": 54,
+                  "right": 0.47199268752233
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.47199268752233,
+                  "owner": 54,
+                  "right": 0.47265625000000006
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.47265625000000006,
+                  "owner": 55,
+                  "right": 0.4764573318806725
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4764573318806725,
+                  "owner": 55,
+                  "right": 0.4809375026829771
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4809375026829771,
+                  "owner": 55,
+                  "right": 0.48125000000000007
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48125000000000007,
+                  "owner": 56,
+                  "right": 0.48543320465732415
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48543320465732415,
+                  "owner": 56,
+                  "right": 0.48984375
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48984375,
+                  "owner": 57,
+                  "right": 0.48994444016260463
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.48994444016260463,
+                  "owner": 57,
+                  "right": 0.4944712090687581
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4944712090687581,
+                  "owner": 57,
+                  "right": 0.49843750000000003
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.49843750000000003,
+                  "owner": 58,
+                  "right": 0.4990135086316
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.4990135086316,
+                  "owner": 58,
+                  "right": 0.5035713333618019
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5035713333618019,
+                  "owner": 58,
+                  "right": 0.50703125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.50703125,
+                  "owner": 59,
+                  "right": 0.5081446748879209
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5081446748879209,
+                  "owner": 59,
+                  "right": 0.5127335218130509
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5127335218130509,
+                  "owner": 59,
+                  "right": 0.515625
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.515625,
+                  "owner": 60,
+                  "right": 0.5173378595648279
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5173378595648279,
+                  "owner": 60,
+                  "right": 0.5219576702384421
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5219576702384421,
+                  "owner": 60,
+                  "right": 0.5242187500000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5242187500000001,
+                  "owner": 61,
+                  "right": 0.5265929324323095
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5265929324323095,
+                  "owner": 61,
+                  "right": 0.531243621076015
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.531243621076015,
+                  "owner": 61,
+                  "right": 0.5328125
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5328125,
+                  "owner": 62,
+                  "right": 0.535909707250146
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.535909707250146,
+                  "owner": 62,
+                  "right": 0.5405911579975934
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5405911579975934,
+                  "owner": 62,
+                  "right": 0.5414062500000001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5414062500000001,
+                  "owner": 63,
+                  "right": 0.5452879361258706
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.5452879361258706,
+                  "owner": 63,
+                  "right": 0.55
+                }
+              ],
+              "primal_face_defect": 1.7763568394002505e-15,
+              "primal_faces": {
+                "compacted_numeric_array": true,
+                "length": 65,
+                "maximum": 17.75420335017397,
+                "minimum": 0.0,
+                "scalar_count": 65,
+                "sha256": "6d556a9aa8aad97cd00309b67d671d709414ef94958cc10a80b96710f2cf3ca9"
+              },
+              "reverse": -0.08458052957795414
+            },
+            "tangent_minus_previous": -8.163211915462876e-07
+          }
+        }
+      },
+      {
+        "alpha": 0.00012983127142551443,
+        "amplitude": "finite",
+        "order8_minus_order4": {
+          "B_mass": 3.545387412495771e-05,
+          "B_mass_without_upwind": 3.5453830118381546e-05,
+          "actual_B_mass": 4.603021554574257e-09,
+          "tangent_minus_previous": 2.2407803701440798e-07
+        },
+        "orders": {
+          "4": {
+            "B_mass": -2.1270097818622125,
+            "B_mass_imposed": -2.126901073437816,
+            "B_mass_without_upwind": -0.10917751679969001,
+            "actual_B_mass": -0.0002761523843136771,
+            "checks": {
+              "contraction_roundoff_allowance": 3.6163431896023593e-09,
+              "contraction_roundoff_ratio": 8.325882486596897e-05,
+              "defects": {
+                "derivative_ledger": 1.3322676295501878e-14,
+                "forward_reverse": -3.0109248427834245e-13,
+                "interior_split": -8.881784197001252e-16,
+                "telescoping": -2.220446049250313e-15
+              },
+              "face_rounding_allowance": 5.684341886080802e-14,
+              "rounding_allowance": 2.456329089618984e-12
+            },
+            "direction": {
+              "R_x": 1.407911607361274,
+              "T_x": 3.2174148045007507,
+              "w_plus": 0.032325500355095224
+            },
+            "flux_change": -3.3787506741211133e-05,
+            "flux_imposed": 2.441849178884981e-06,
+            "flux_left": 3.622935592009611e-05,
+            "incoming_mass_rate_derivative": 0.009277612834384108,
+            "interpretation": "removing one ledger term is an algebraic diagnostic, not an evolved alternative",
+            "ledger": {
+              "centre": -6.409625669557026e-51,
+              "clock": 28.715060440292532,
+              "direct": -2.126699872175301,
+              "incoming_mass_rate_derivative": 0.009277612834384108,
+              "interior": -43.21219833088815,
+              "interior_central": -41.194366065825626,
+              "interior_split_defect": -8.881784197001252e-16,
+              "interior_upwind": -2.0178322650625224,
+              "maximum_face_split_defect": 1.457167719820518e-16,
+              "radius": 12.363241726940645,
+              "reaction": 0.007193674704202251,
+              "telescoping_defect": -2.220446049250313e-15,
+              "total": -2.1266998721753034,
+              "wall": 2.616775465520795e-06
+            },
+            "previous_D_n": -2.12724719963804,
+            "previous_finest_width": 1.9898488344149507e-05,
+            "radial": [
+              {
+                "actual_e_m": -8.58303217632013e-05,
+                "e_m": -0.6610912827149125,
+                "e_r": -3.48156008951302e-06,
+                "history_e_m_same_rates": -0.6407432731992299,
+                "identity_defect": -1.6572792536093464e-16,
+                "radial_stride": 1,
+                "tangent_minus_history": -0.020348009515682608,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -8.582977852107835e-05,
+                "e_m": -0.6610870984986064,
+                "e_r": -1.3043495240810943e-05,
+                "history_e_m_same_rates": -0.6407390889829238,
+                "identity_defect": -3.317557003851973e-16,
+                "radial_stride": 2,
+                "tangent_minus_history": -0.020348009515682608,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -8.58303217632013e-05,
+                "e_m": -0.6610912827149125,
+                "e_r": -3.48156008951302e-06,
+                "history_e_m_same_rates": -0.5873519923588917,
+                "identity_defect": -1.6572792536093464e-16,
+                "radial_stride": 1,
+                "tangent_minus_history": -0.07373929035602078,
+                "time_stride": 2
+              },
+              {
+                "actual_e_m": -8.582977852107835e-05,
+                "e_m": -0.6610870984986064,
+                "e_r": -1.3043495240810943e-05,
+                "history_e_m_same_rates": -0.5873478081425857,
+                "identity_defect": -3.317557003851973e-16,
+                "radial_stride": 2,
+                "tangent_minus_history": -0.07373929035602067,
+                "time_stride": 2
+              }
+            ],
+            "radial_density": 0.0001373273860493504,
+            "tangent": {
+              "Ip_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.759271939445926,
+                "minimum": -11.215962098994781,
+                "scalar_count": 64,
+                "sha256": "cf111776b398a2efd2a1aef900d63d6fd941b88116aee85bc46e18295724f766"
+              },
+              "Iq_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.765519372061647,
+                "minimum": -11.210060528524574,
+                "scalar_count": 64,
+                "sha256": "3b01ea533fccfe207cb25da0b7e518e68b7eb8f3d0335f75fa2d0a96bf771eb0"
+              },
+              "N": 17.659370330340703,
+              "N_R": 8.7812627314807,
+              "N_T": 8.924886029654568,
+              "born_panels": 0,
+              "contraction_absolute_work": 15306.91902361778,
+              "contraction_gamma": 2.3625545964028915e-13,
+              "contraction_path_operations": 1064,
+              "contraction_roundoff_allowance": 3.6163431896023593e-09,
+              "forward": -2.126699872175591,
+              "limiter_branches": {
+                "minus": [
+                  "endpoint",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "right",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "endpoint"
+                ],
+                "plus": [
+                  "endpoint",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "right",
+                  "endpoint"
+                ]
+              },
+              "panel_count": 128,
+              "panels": [
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0,
+                  "owner": 0,
+                  "right": 0.008581762745316924
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.008581762745316924,
+                  "owner": 1,
+                  "right": 0.01716352549063385
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.01716352549063385,
+                  "owner": 2,
+                  "right": 0.02574528823595077
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.02574528823595077,
+                  "owner": 3,
+                  "right": 0.0343270509812677
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0343270509812677,
+                  "owner": 4,
+                  "right": 0.04290881372658462
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.04290881372658462,
+                  "owner": 5,
+                  "right": 0.05149057647190154
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.05149057647190154,
+                  "owner": 6,
+                  "right": 0.06007233921721847
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.06007233921721847,
+                  "owner": 7,
+                  "right": 0.0686541019625354
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0686541019625354,
+                  "owner": 8,
+                  "right": 0.07723586470785232
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.07723586470785232,
+                  "owner": 9,
+                  "right": 0.08581762745316925
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.08581762745316925,
+                  "owner": 10,
+                  "right": 0.09439939019848617
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.09439939019848617,
+                  "owner": 11,
+                  "right": 0.10298115294380308
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.10298115294380308,
+                  "owner": 12,
+                  "right": 0.11156291568912001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.11156291568912001,
+                  "owner": 13,
+                  "right": 0.12014467843443694
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12014467843443694,
+                  "owner": 14,
+                  "right": 0.12872644117975388
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12872644117975388,
+                  "owner": 15,
+                  "right": 0.1373082039250708
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1373082039250708,
+                  "owner": 16,
+                  "right": 0.1458899666703877
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1458899666703877,
+                  "owner": 17,
+                  "right": 0.15447172941570464
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.15447172941570464,
+                  "owner": 18,
+                  "right": 0.16305349216102155
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.16305349216102155,
+                  "owner": 19,
+                  "right": 0.1716352549063385
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1716352549063385,
+                  "owner": 20,
+                  "right": 0.1802170176516554
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1802170176516554,
+                  "owner": 21,
+                  "right": 0.18879878039697234
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.18879878039697234,
+                  "owner": 22,
+                  "right": 0.19738054314228926
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.19738054314228926,
+                  "owner": 23,
+                  "right": 0.20596230588760617
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.20596230588760617,
+                  "owner": 24,
+                  "right": 0.2145440686329231
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2145440686329231,
+                  "owner": 25,
+                  "right": 0.22312583137824002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.22312583137824002,
+                  "owner": 26,
+                  "right": 0.23170759412355696
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.23170759412355696,
+                  "owner": 27,
+                  "right": 0.24028935686887387
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.24028935686887387,
+                  "owner": 28,
+                  "right": 0.2488711196141908
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2488711196141908,
+                  "owner": 29,
+                  "right": 0.25745288235950775
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.25745288235950775,
+                  "owner": 30,
+                  "right": 0.26603464510482466
+                },
+                {
+                  "attenuation": 0.9999999999999999,
+                  "born": false,
+                  "left": 0.26603464510482466,
+                  "owner": 31,
+                  "right": 0.2746164078501416
+                },
+                {
+                  "attenuation": 0.9999999999999998,
+                  "born": false,
+                  "left": 0.2746164078501416,
+                  "owner": 32,
+                  "right": 0.280415867729036
+                },
+                {
+                  "attenuation": 0.9999999999999998,
+                  "born": false,
+                  "left": 0.280415867729036,
+                  "owner": 32,
+                  "right": 0.2831981705954585
+                },
+                {
+                  "attenuation": 0.9999999999999999,
+                  "born": false,
+                  "left": 0.2831981705954585,
+                  "owner": 33,
+                  "right": 0.284178426975038
+                },
+                {
+                  "attenuation": 0.9999999999999991,
+                  "born": false,
+                  "left": 0.284178426975038,
+                  "owner": 33,
+                  "right": 0.28795494681584827
+                },
+                {
+                  "attenuation": 0.9999999999999986,
+                  "born": false,
+                  "left": 0.28795494681584827,
+                  "owner": 33,
+                  "right": 0.2917454689868696
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2917454689868696,
+                  "owner": 33,
+                  "right": 0.2917799333407754
+                },
+                {
+                  "attenuation": 0.9999999999999974,
+                  "born": false,
+                  "left": 0.2917799333407754,
+                  "owner": 34,
+                  "right": 0.29555003521151
+                },
+                {
+                  "attenuation": 0.9999999999999971,
+                  "born": false,
+                  "left": 0.29555003521151,
+                  "owner": 34,
+                  "right": 0.2993686871846884
+                },
+                {
+                  "attenuation": 0.9999999999999992,
+                  "born": false,
+                  "left": 0.2993686871846884,
+                  "owner": 34,
+                  "right": 0.30036169608609237
+                },
+                {
+                  "attenuation": 0.9999999999999974,
+                  "born": false,
+                  "left": 0.30036169608609237,
+                  "owner": 35,
+                  "right": 0.3032014665556268
+                },
+                {
+                  "attenuation": 0.9999999999999967,
+                  "born": false,
+                  "left": 0.3032014665556268,
+                  "owner": 35,
+                  "right": 0.30704841490999
+                },
+                {
+                  "attenuation": 0.9999999999999983,
+                  "born": false,
+                  "left": 0.30704841490999,
+                  "owner": 35,
+                  "right": 0.3089434588314093
+                },
+                {
+                  "attenuation": 0.999999999999999,
+                  "born": false,
+                  "left": 0.3089434588314093,
+                  "owner": 36,
+                  "right": 0.31090957375121026
+                },
+                {
+                  "attenuation": 0.9999999999999987,
+                  "born": false,
+                  "left": 0.31090957375121026,
+                  "owner": 36,
+                  "right": 0.3147849844810887
+                },
+                {
+                  "attenuation": 0.9999999999999994,
+                  "born": false,
+                  "left": 0.3147849844810887,
+                  "owner": 36,
+                  "right": 0.3175252215767262
+                },
+                {
+                  "attenuation": 0.9999999999999996,
+                  "born": false,
+                  "left": 0.3175252215767262,
+                  "owner": 37,
+                  "right": 0.31867468837956225
+                },
+                {
+                  "attenuation": 0.9999999999999937,
+                  "born": false,
+                  "left": 0.31867468837956225,
+                  "owner": 37,
+                  "right": 0.3225787265836423
+                },
+                {
+                  "attenuation": 0.9999999999999838,
+                  "born": false,
+                  "left": 0.3225787265836423,
+                  "owner": 37,
+                  "right": 0.3261069843220431
+                },
+                {
+                  "attenuation": 0.9999999999999892,
+                  "born": false,
+                  "left": 0.3261069843220431,
+                  "owner": 38,
+                  "right": 0.32649714006546915
+                },
+                {
+                  "attenuation": 0.9999999999998022,
+                  "born": false,
+                  "left": 0.32649714006546915,
+                  "owner": 38,
+                  "right": 0.33042996960944826
+                },
+                {
+                  "attenuation": 0.999999999999585,
+                  "born": false,
+                  "left": 0.33042996960944826,
+                  "owner": 38,
+                  "right": 0.3343772557884394
+                },
+                {
+                  "attenuation": 0.9999999999999558,
+                  "born": false,
+                  "left": 0.3343772557884394,
+                  "owner": 38,
+                  "right": 0.33468874706736007
+                },
+                {
+                  "attenuation": 0.9999999999981433,
+                  "born": false,
+                  "left": 0.33468874706736007,
+                  "owner": 39,
+                  "right": 0.3383390389389432
+                },
+                {
+                  "attenuation": 0.9999999999961889,
+                  "born": false,
+                  "left": 0.3383390389389432,
+                  "owner": 39,
+                  "right": 0.3423153591352513
+                },
+                {
+                  "attenuation": 0.9999999999987332,
+                  "born": false,
+                  "left": 0.3423153591352513,
+                  "owner": 39,
+                  "right": 0.343270509812677
+                },
+                {
+                  "attenuation": 0.9999999999891396,
+                  "born": false,
+                  "left": 0.343270509812677,
+                  "owner": 40,
+                  "right": 0.34630625616251526
+                },
+                {
+                  "attenuation": 0.9999999999467403,
+                  "born": false,
+                  "left": 0.34630625616251526,
+                  "owner": 40,
+                  "right": 0.35031176948867976
+                },
+                {
+                  "attenuation": 0.9999999995484015,
+                  "born": false,
+                  "left": 0.35031176948867976,
+                  "owner": 40,
+                  "right": 0.3518522725579939
+                },
+                {
+                  "attenuation": 0.9999999815236714,
+                  "born": false,
+                  "left": 0.3518522725579939,
+                  "owner": 41,
+                  "right": 0.35433193823524073
+                },
+                {
+                  "attenuation": 0.9999990061756436,
+                  "born": false,
+                  "left": 0.35433193823524073,
+                  "owner": 41,
+                  "right": 0.35836680114677294
+                },
+                {
+                  "attenuation": 0.9999972164264161,
+                  "born": false,
+                  "left": 0.35836680114677294,
+                  "owner": 41,
+                  "right": 0.3604340353033108
+                },
+                {
+                  "attenuation": 0.9999932141898215,
+                  "born": false,
+                  "left": 0.3604340353033108,
+                  "owner": 42,
+                  "right": 0.36241639655916924
+                },
+                {
+                  "attenuation": 0.9999573481230166,
+                  "born": false,
+                  "left": 0.36241639655916924,
+                  "owner": 42,
+                  "right": 0.36648076236654015
+                },
+                {
+                  "attenuation": 0.9999370516036193,
+                  "born": false,
+                  "left": 0.36648076236654015,
+                  "owner": 42,
+                  "right": 0.3690157980486277
+                },
+                {
+                  "attenuation": 0.9999405005356271,
+                  "born": false,
+                  "left": 0.3690157980486277,
+                  "owner": 43,
+                  "right": 0.3705599359867204
+                },
+                {
+                  "attenuation": 0.9997365944915189,
+                  "born": false,
+                  "left": 0.3705599359867204,
+                  "owner": 43,
+                  "right": 0.3746539543253022
+                },
+                {
+                  "attenuation": 0.9996927263504397,
+                  "born": false,
+                  "left": 0.3746539543253022,
+                  "owner": 43,
+                  "right": 0.3775975607939447
+                },
+                {
+                  "attenuation": 0.9998474657769394,
+                  "born": false,
+                  "left": 0.3775975607939447,
+                  "owner": 44,
+                  "right": 0.378762853738153
+                },
+                {
+                  "attenuation": 0.999318908339579,
+                  "born": false,
+                  "left": 0.378762853738153,
+                  "owner": 44,
+                  "right": 0.3828866699923378
+                },
+                {
+                  "attenuation": 0.999313696076804,
+                  "born": false,
+                  "left": 0.3828866699923378,
+                  "owner": 44,
+                  "right": 0.3861793235392616
+                },
+                {
+                  "attenuation": 0.999807407011134,
+                  "born": false,
+                  "left": 0.3861793235392616,
+                  "owner": 45,
+                  "right": 0.3870254382253733
+                },
+                {
+                  "attenuation": 0.9989998826476058,
+                  "born": false,
+                  "left": 0.3870254382253733,
+                  "owner": 45,
+                  "right": 0.39117919290274483
+                },
+                {
+                  "attenuation": 0.9991296357564627,
+                  "born": false,
+                  "left": 0.39117919290274483,
+                  "owner": 45,
+                  "right": 0.3947610862845785
+                },
+                {
+                  "attenuation": 0.9998626375551457,
+                  "born": false,
+                  "left": 0.3947610862845785,
+                  "owner": 46,
+                  "right": 0.39534796777361486
+                },
+                {
+                  "attenuation": 0.9991098321867662,
+                  "born": false,
+                  "left": 0.39534796777361486,
+                  "owner": 46,
+                  "right": 0.39953179582462117
+                },
+                {
+                  "attenuation": 0.9993771879987813,
+                  "born": false,
+                  "left": 0.39953179582462117,
+                  "owner": 46,
+                  "right": 0.4033428490298954
+                },
+                {
+                  "attenuation": 0.9999486377063053,
+                  "born": false,
+                  "left": 0.4033428490298954,
+                  "owner": 47,
+                  "right": 0.40373070923170234
+                },
+                {
+                  "attenuation": 0.999587969714653,
+                  "born": false,
+                  "left": 0.40373070923170234,
+                  "owner": 47,
+                  "right": 0.407944739309847
+                },
+                {
+                  "attenuation": 0.9998287704903578,
+                  "born": false,
+                  "left": 0.407944739309847,
+                  "owner": 47,
+                  "right": 0.41192461177521233
+                },
+                {
+                  "attenuation": 0.9999947937877639,
+                  "born": false,
+                  "left": 0.41192461177521233,
+                  "owner": 48,
+                  "right": 0.4121739164606726
+                },
+                {
+                  "attenuation": 0.9999682049884443,
+                  "born": false,
+                  "left": 0.4121739164606726,
+                  "owner": 48,
+                  "right": 0.4164182701177449
+                },
+                {
+                  "attenuation": 0.9999814308029338,
+                  "born": false,
+                  "left": 0.4164182701177449,
+                  "owner": 48,
+                  "right": 0.4205063745205293
+                },
+                {
+                  "attenuation": 0.999997538891628,
+                  "born": false,
+                  "left": 0.4205063745205293,
+                  "owner": 49,
+                  "right": 0.4206778286895269
+                },
+                {
+                  "attenuation": 0.9998500712438028,
+                  "born": false,
+                  "left": 0.4206778286895269,
+                  "owner": 49,
+                  "right": 0.42495261949984586
+                },
+                {
+                  "attenuation": 0.9996334658338067,
+                  "born": false,
+                  "left": 0.42495261949984586,
+                  "owner": 49,
+                  "right": 0.4290881372658462
+                },
+                {
+                  "attenuation": 0.9999813429183608,
+                  "born": false,
+                  "left": 0.4290881372658462,
+                  "owner": 50,
+                  "right": 0.42924266872577166
+                },
+                {
+                  "attenuation": 0.9993362795626196,
+                  "born": false,
+                  "left": 0.42924266872577166,
+                  "owner": 50,
+                  "right": 0.4335480013327899
+                },
+                {
+                  "attenuation": 0.9991360570217875,
+                  "born": false,
+                  "left": 0.4335480013327899,
+                  "owner": 50,
+                  "right": 0.4376699000111631
+                },
+                {
+                  "attenuation": 0.9999540725548575,
+                  "born": false,
+                  "left": 0.4376699000111631,
+                  "owner": 51,
+                  "right": 0.4378686410071228
+                },
+                {
+                  "attenuation": 0.9989455507663314,
+                  "born": false,
+                  "left": 0.4378686410071228,
+                  "owner": 51,
+                  "right": 0.4422046100850956
+                },
+                {
+                  "attenuation": 0.9990073045928425,
+                  "born": false,
+                  "left": 0.4422046100850956,
+                  "owner": 51,
+                  "right": 0.44625166275648004
+                },
+                {
+                  "attenuation": 0.9999285341984941,
+                  "born": false,
+                  "left": 0.44625166275648004,
+                  "owner": 52,
+                  "right": 0.44655592947938627
+                },
+                {
+                  "attenuation": 0.9990642715983249,
+                  "born": false,
+                  "left": 0.44655592947938627,
+                  "owner": 52,
+                  "right": 0.4509226186020241
+                },
+                {
+                  "attenuation": 0.9993470597714703,
+                  "born": false,
+                  "left": 0.4509226186020241,
+                  "owner": 52,
+                  "right": 0.454833425501797
+                },
+                {
+                  "attenuation": 0.9999349766604907,
+                  "born": false,
+                  "left": 0.454833425501797,
+                  "owner": 53,
+                  "right": 0.4553046952839773
+                },
+                {
+                  "attenuation": 0.9995302743694644,
+                  "born": false,
+                  "left": 0.4553046952839773,
+                  "owner": 53,
+                  "right": 0.4597021756911756
+                },
+                {
+                  "attenuation": 0.9997742104627336,
+                  "born": false,
+                  "left": 0.4597021756911756,
+                  "owner": 53,
+                  "right": 0.4634151882471139
+                },
+                {
+                  "attenuation": 0.9999717496621661,
+                  "born": false,
+                  "left": 0.4634151882471139,
+                  "owner": 54,
+                  "right": 0.46411507423679116
+                },
+                {
+                  "attenuation": 0.9998943665895695,
+                  "born": false,
+                  "left": 0.46411507423679116,
+                  "owner": 54,
+                  "right": 0.4685434034896018
+                },
+                {
+                  "attenuation": 0.9999732177199141,
+                  "born": false,
+                  "left": 0.4685434034896018,
+                  "owner": 54,
+                  "right": 0.47199695099243083
+                },
+                {
+                  "attenuation": 0.9999968852964961,
+                  "born": false,
+                  "left": 0.47199695099243083,
+                  "owner": 55,
+                  "right": 0.47298717407825136
+                },
+                {
+                  "attenuation": 0.9999957693806053,
+                  "born": false,
+                  "left": 0.47298717407825136,
+                  "owner": 55,
+                  "right": 0.4774463945912024
+                },
+                {
+                  "attenuation": 0.9999999007341254,
+                  "born": false,
+                  "left": 0.4774463945912024,
+                  "owner": 55,
+                  "right": 0.48057871373774774
+                },
+                {
+                  "attenuation": 0.9999999967949934,
+                  "born": false,
+                  "left": 0.48057871373774774,
+                  "owner": 56,
+                  "right": 0.4819210714721852
+                },
+                {
+                  "attenuation": 0.9999999542650535,
+                  "born": false,
+                  "left": 0.4819210714721852,
+                  "owner": 56,
+                  "right": 0.48641120891090617
+                },
+                {
+                  "attenuation": 0.9999999734977092,
+                  "born": false,
+                  "left": 0.48641120891090617,
+                  "owner": 56,
+                  "right": 0.48916047648306465
+                },
+                {
+                  "attenuation": 0.9999999925905059,
+                  "born": false,
+                  "left": 0.48916047648306465,
+                  "owner": 57,
+                  "right": 0.4909168087288067
+                },
+                {
+                  "attenuation": 0.9999999874852281,
+                  "born": false,
+                  "left": 0.4909168087288067,
+                  "owner": 57,
+                  "right": 0.4954378702595899
+                },
+                {
+                  "attenuation": 0.9999999966055995,
+                  "born": false,
+                  "left": 0.4954378702595899,
+                  "owner": 57,
+                  "right": 0.4977422392283816
+                },
+                {
+                  "attenuation": 0.999999998955071,
+                  "born": false,
+                  "left": 0.4977422392283816,
+                  "owner": 58,
+                  "right": 0.49997439022435036
+                },
+                {
+                  "attenuation": 0.9999999987959467,
+                  "born": false,
+                  "left": 0.49997439022435036,
+                  "owner": 58,
+                  "right": 0.5045263626008765
+                },
+                {
+                  "attenuation": 0.9999999997745953,
+                  "born": false,
+                  "left": 0.5045263626008765,
+                  "owner": 58,
+                  "right": 0.5063240019736985
+                },
+                {
+                  "attenuation": 0.9999999999222976,
+                  "born": false,
+                  "left": 0.5063240019736985,
+                  "owner": 59,
+                  "right": 0.5090937784870188
+                },
+                {
+                  "attenuation": 0.9999999998988196,
+                  "born": false,
+                  "left": 0.5090937784870188,
+                  "owner": 59,
+                  "right": 0.5136766259577027
+                },
+                {
+                  "attenuation": 0.9999999999759538,
+                  "born": false,
+                  "left": 0.5136766259577027,
+                  "owner": 59,
+                  "right": 0.5149057647190155
+                },
+                {
+                  "attenuation": 0.999999999930026,
+                  "born": false,
+                  "left": 0.5149057647190155,
+                  "owner": 60,
+                  "right": 0.5182748899153121
+                },
+                {
+                  "attenuation": 0.9999999999053668,
+                  "born": false,
+                  "left": 0.5182748899153121,
+                  "owner": 60,
+                  "right": 0.5228885519331048
+                },
+                {
+                  "attenuation": 0.9999999999878133,
+                  "born": false,
+                  "left": 0.5228885519331048,
+                  "owner": 60,
+                  "right": 0.5234875274643324
+                },
+                {
+                  "attenuation": 0.9999999999246585,
+                  "born": false,
+                  "left": 0.5234875274643324,
+                  "owner": 61,
+                  "right": 0.527517590091308
+                },
+                {
+                  "attenuation": 0.999999999916331,
+                  "born": false,
+                  "left": 0.527517590091308,
+                  "owner": 61,
+                  "right": 0.5320692902096493
+                },
+                {
+                  "attenuation": 0.9999999999973725,
+                  "born": false,
+                  "left": 0.5320692902096493,
+                  "owner": 62,
+                  "right": 0.5321619788055109
+                },
+                {
+                  "attenuation": 0.9999999998502135,
+                  "born": false,
+                  "left": 0.5321619788055109,
+                  "owner": 62,
+                  "right": 0.5368216886469731
+                },
+                {
+                  "attenuation": 0.9999999998460282,
+                  "born": false,
+                  "left": 0.5368216886469731,
+                  "owner": 62,
+                  "right": 0.5406510529549662
+                },
+                {
+                  "attenuation": 0.9999999999616084,
+                  "born": false,
+                  "left": 0.5406510529549662,
+                  "owner": 63,
+                  "right": 0.5414966861544269
+                },
+                {
+                  "attenuation": 0.9999999997541595,
+                  "born": false,
+                  "left": 0.5414966861544269,
+                  "owner": 63,
+                  "right": 0.5461869336369259
+                },
+                {
+                  "attenuation": 0.9999999998071863,
+                  "born": false,
+                  "left": 0.5461869336369259,
+                  "owner": 63,
+                  "right": 0.5492328157002832
+                }
+              ],
+              "primal_face_defect": 3.552713678800501e-15,
+              "primal_faces": {
+                "compacted_numeric_array": true,
+                "length": 65,
+                "maximum": 17.659370330340703,
+                "minimum": 0.0,
+                "scalar_count": 65,
+                "sha256": "796483703c41cbda3d2f6017ea26c712e095e063955fb850afc5415fee5d276d"
+              },
+              "reverse": -2.12669987217529
+            },
+            "tangent_minus_previous": 0.0005473274627498803
+          },
+          "8": {
+            "B_mass": -2.1269743279880875,
+            "B_mass_imposed": -2.1268656195636937,
+            "B_mass_without_upwind": -0.10914206296957163,
+            "actual_B_mass": -0.00027614778129212255,
+            "checks": {
+              "contraction_roundoff_allowance": 3.616343197901533e-09,
+              "contraction_roundoff_ratio": 6.140031318207792e-05,
+              "defects": {
+                "derivative_ledger": -1.7763568394002505e-15,
+                "forward_reverse": -2.220446049250313e-13,
+                "interior_split": 1.0658141036401503e-14,
+                "telescoping": 7.549516567451064e-15
+              },
+              "face_rounding_allowance": 5.684341886080802e-14,
+              "rounding_allowance": 2.4563290895390985e-12
+            },
+            "direction": {
+              "R_x": 1.4079116073690565,
+              "T_x": 3.2174148044831625,
+              "w_plus": 0.032325500355095224
+            },
+            "flux_change": -3.378750674065444e-05,
+            "flux_imposed": 2.4418491788447484e-06,
+            "flux_left": 3.622935591949919e-05,
+            "incoming_mass_rate_derivative": 0.009277612834212025,
+            "interpretation": "removing one ledger term is an algebraic diagnostic, not an evolved alternative",
+            "ledger": {
+              "centre": -6.409625679003171e-51,
+              "clock": 28.715085485012793,
+              "direct": -2.126664418301175,
+              "incoming_mass_rate_derivative": 0.009277612834212025,
+              "interior": -43.21219832948279,
+              "interior_central": -41.19436606446428,
+              "interior_split_defect": 1.0658141036401503e-14,
+              "interior_upwind": -2.017832265018516,
+              "maximum_face_split_defect": 2.1402150884863858e-16,
+              "radius": 12.363252134683778,
+              "reaction": 0.007193674709583787,
+              "telescoping_defect": 7.549516567451064e-15,
+              "total": -2.1266644183011674,
+              "wall": 2.6167754655357004e-06
+            },
+            "previous_D_n": -2.127211969841956,
+            "previous_finest_width": 1.9898488344149507e-05,
+            "radial": [
+              {
+                "actual_e_m": -8.58288911052587e-05,
+                "e_m": -0.6610802633516505,
+                "e_r": -3.4815600876794445e-06,
+                "history_e_m_same_rates": -0.6407403054877995,
+                "identity_defect": -5.561025408608658e-17,
+                "radial_stride": 1,
+                "tangent_minus_history": -0.02033995786385101,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -8.582834786313575e-05,
+                "e_m": -0.6610760791353444,
+                "e_r": -1.3043495238977367e-05,
+                "history_e_m_same_rates": -0.6407361212714934,
+                "identity_defect": -1.4722110249637543e-16,
+                "radial_stride": 2,
+                "tangent_minus_history": -0.02033995786385101,
+                "time_stride": 1
+              },
+              {
+                "actual_e_m": -8.58288911052587e-05,
+                "e_m": -0.6610802633516505,
+                "e_r": -3.4815600876794445e-06,
+                "history_e_m_same_rates": -0.5873454463478119,
+                "identity_defect": -5.561025408608658e-17,
+                "radial_stride": 1,
+                "tangent_minus_history": -0.07373481700383855,
+                "time_stride": 2
+              },
+              {
+                "actual_e_m": -8.582834786313575e-05,
+                "e_m": -0.6610760791353444,
+                "e_r": -1.3043495238977367e-05,
+                "history_e_m_same_rates": -0.5873412621315058,
+                "identity_defect": -1.4722110249637543e-16,
+                "radial_stride": 2,
+                "tangent_minus_history": -0.07373481700383855,
+                "time_stride": 2
+              }
+            ],
+            "radial_density": 0.0001373273860475168,
+            "tangent": {
+              "Ip_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.759271939207892,
+                "minimum": -11.215962098773801,
+                "scalar_count": 64,
+                "sha256": "9c7cf5b2e1764f9306c33823c2eff99ddf5b1b7f185d4cd498b7904a08dfb1e9"
+              },
+              "Iq_weights": {
+                "compacted_numeric_array": true,
+                "length": 64,
+                "maximum": 11.765519371824304,
+                "minimum": -11.210060528303488,
+                "scalar_count": 64,
+                "sha256": "46414fe3ed480193ac8e49d7532f2c89a3b047630b8589a021017ed8e323822b"
+              },
+              "N": 17.65937035731755,
+              "N_R": 8.781270123759263,
+              "N_T": 8.924893813816311,
+              "born_panels": 0,
+              "contraction_absolute_work": 15306.919058745747,
+              "contraction_gamma": 2.3625545964028915e-13,
+              "contraction_path_operations": 1064,
+              "contraction_roundoff_allowance": 3.616343197901533e-09,
+              "forward": -2.126664418301391,
+              "limiter_branches": {
+                "minus": [
+                  "endpoint",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "zero",
+                  "left",
+                  "zero",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "zero",
+                  "left",
+                  "zero",
+                  "left",
+                  "zero",
+                  "right",
+                  "zero",
+                  "zero",
+                  "right",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "right",
+                  "endpoint"
+                ],
+                "plus": [
+                  "endpoint",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "right",
+                  "right",
+                  "right",
+                  "zero",
+                  "left",
+                  "right",
+                  "endpoint"
+                ]
+              },
+              "panel_count": 128,
+              "panels": [
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0,
+                  "owner": 0,
+                  "right": 0.008581762745316924
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.008581762745316924,
+                  "owner": 1,
+                  "right": 0.01716352549063385
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.01716352549063385,
+                  "owner": 2,
+                  "right": 0.02574528823595077
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.02574528823595077,
+                  "owner": 3,
+                  "right": 0.0343270509812677
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0343270509812677,
+                  "owner": 4,
+                  "right": 0.04290881372658462
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.04290881372658462,
+                  "owner": 5,
+                  "right": 0.05149057647190154
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.05149057647190154,
+                  "owner": 6,
+                  "right": 0.06007233921721847
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.06007233921721847,
+                  "owner": 7,
+                  "right": 0.0686541019625354
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.0686541019625354,
+                  "owner": 8,
+                  "right": 0.07723586470785232
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.07723586470785232,
+                  "owner": 9,
+                  "right": 0.08581762745316925
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.08581762745316925,
+                  "owner": 10,
+                  "right": 0.09439939019848617
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.09439939019848617,
+                  "owner": 11,
+                  "right": 0.10298115294380308
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.10298115294380308,
+                  "owner": 12,
+                  "right": 0.11156291568912001
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.11156291568912001,
+                  "owner": 13,
+                  "right": 0.12014467843443694
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12014467843443694,
+                  "owner": 14,
+                  "right": 0.12872644117975388
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.12872644117975388,
+                  "owner": 15,
+                  "right": 0.1373082039250708
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1373082039250708,
+                  "owner": 16,
+                  "right": 0.1458899666703877
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1458899666703877,
+                  "owner": 17,
+                  "right": 0.15447172941570464
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.15447172941570464,
+                  "owner": 18,
+                  "right": 0.16305349216102155
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.16305349216102155,
+                  "owner": 19,
+                  "right": 0.1716352549063385
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1716352549063385,
+                  "owner": 20,
+                  "right": 0.1802170176516554
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.1802170176516554,
+                  "owner": 21,
+                  "right": 0.18879878039697234
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.18879878039697234,
+                  "owner": 22,
+                  "right": 0.19738054314228926
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.19738054314228926,
+                  "owner": 23,
+                  "right": 0.20596230588760617
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.20596230588760617,
+                  "owner": 24,
+                  "right": 0.2145440686329231
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2145440686329231,
+                  "owner": 25,
+                  "right": 0.22312583137824002
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.22312583137824002,
+                  "owner": 26,
+                  "right": 0.23170759412355696
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.23170759412355696,
+                  "owner": 27,
+                  "right": 0.24028935686887387
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.24028935686887387,
+                  "owner": 28,
+                  "right": 0.2488711196141908
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2488711196141908,
+                  "owner": 29,
+                  "right": 0.25745288235950775
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.25745288235950775,
+                  "owner": 30,
+                  "right": 0.26603464510482466
+                },
+                {
+                  "attenuation": 0.9999999999999999,
+                  "born": false,
+                  "left": 0.26603464510482466,
+                  "owner": 31,
+                  "right": 0.2746164078501416
+                },
+                {
+                  "attenuation": 0.9999999999999998,
+                  "born": false,
+                  "left": 0.2746164078501416,
+                  "owner": 32,
+                  "right": 0.280415867729036
+                },
+                {
+                  "attenuation": 0.9999999999999998,
+                  "born": false,
+                  "left": 0.280415867729036,
+                  "owner": 32,
+                  "right": 0.2831981705954585
+                },
+                {
+                  "attenuation": 0.9999999999999999,
+                  "born": false,
+                  "left": 0.2831981705954585,
+                  "owner": 33,
+                  "right": 0.284178426975038
+                },
+                {
+                  "attenuation": 0.9999999999999991,
+                  "born": false,
+                  "left": 0.284178426975038,
+                  "owner": 33,
+                  "right": 0.28795494681584827
+                },
+                {
+                  "attenuation": 0.9999999999999986,
+                  "born": false,
+                  "left": 0.28795494681584827,
+                  "owner": 33,
+                  "right": 0.2917454689868696
+                },
+                {
+                  "attenuation": 1.0,
+                  "born": false,
+                  "left": 0.2917454689868696,
+                  "owner": 33,
+                  "right": 0.2917799333407754
+                },
+                {
+                  "attenuation": 0.9999999999999974,
+                  "born": false,
+                  "left": 0.2917799333407754,
+                  "owner": 34,
+                  "right": 0.29555003521151
+                },
+                {
+                  "attenuation": 0.9999999999999971,
+                  "born": false,
+                  "left": 0.29555003521151,
+                  "owner": 34,
+                  "right": 0.2993686871846884
+                },
+                {
+                  "attenuation": 0.9999999999999992,
+                  "born": false,
+                  "left": 0.2993686871846884,
+                  "owner": 34,
+                  "right": 0.30036169608609237
+                },
+                {
+                  "attenuation": 0.9999999999999974,
+                  "born": false,
+                  "left": 0.30036169608609237,
+                  "owner": 35,
+                  "right": 0.3032014665556268
+                },
+                {
+                  "attenuation": 0.9999999999999967,
+                  "born": false,
+                  "left": 0.3032014665556268,
+                  "owner": 35,
+                  "right": 0.30704841490999
+                },
+                {
+                  "attenuation": 0.9999999999999983,
+                  "born": false,
+                  "left": 0.30704841490999,
+                  "owner": 35,
+                  "right": 0.3089434588314093
+                },
+                {
+                  "attenuation": 0.999999999999999,
+                  "born": false,
+                  "left": 0.3089434588314093,
+                  "owner": 36,
+                  "right": 0.31090957375121026
+                },
+                {
+                  "attenuation": 0.9999999999999987,
+                  "born": false,
+                  "left": 0.31090957375121026,
+                  "owner": 36,
+                  "right": 0.3147849844810887
+                },
+                {
+                  "attenuation": 0.9999999999999994,
+                  "born": false,
+                  "left": 0.3147849844810887,
+                  "owner": 36,
+                  "right": 0.3175252215767262
+                },
+                {
+                  "attenuation": 0.9999999999999996,
+                  "born": false,
+                  "left": 0.3175252215767262,
+                  "owner": 37,
+                  "right": 0.31867468837956225
+                },
+                {
+                  "attenuation": 0.9999999999999937,
+                  "born": false,
+                  "left": 0.31867468837956225,
+                  "owner": 37,
+                  "right": 0.3225787265836423
+                },
+                {
+                  "attenuation": 0.9999999999999838,
+                  "born": false,
+                  "left": 0.3225787265836423,
+                  "owner": 37,
+                  "right": 0.3261069843220431
+                },
+                {
+                  "attenuation": 0.9999999999999892,
+                  "born": false,
+                  "left": 0.3261069843220431,
+                  "owner": 38,
+                  "right": 0.32649714006546915
+                },
+                {
+                  "attenuation": 0.9999999999998022,
+                  "born": false,
+                  "left": 0.32649714006546915,
+                  "owner": 38,
+                  "right": 0.33042996960944826
+                },
+                {
+                  "attenuation": 0.999999999999585,
+                  "born": false,
+                  "left": 0.33042996960944826,
+                  "owner": 38,
+                  "right": 0.3343772557884394
+                },
+                {
+                  "attenuation": 0.9999999999999558,
+                  "born": false,
+                  "left": 0.3343772557884394,
+                  "owner": 38,
+                  "right": 0.33468874706736007
+                },
+                {
+                  "attenuation": 0.9999999999981433,
+                  "born": false,
+                  "left": 0.33468874706736007,
+                  "owner": 39,
+                  "right": 0.3383390389389432
+                },
+                {
+                  "attenuation": 0.9999999999961889,
+                  "born": false,
+                  "left": 0.3383390389389432,
+                  "owner": 39,
+                  "right": 0.3423153591352513
+                },
+                {
+                  "attenuation": 0.9999999999987332,
+                  "born": false,
+                  "left": 0.3423153591352513,
+                  "owner": 39,
+                  "right": 0.343270509812677
+                },
+                {
+                  "attenuation": 0.9999999999891396,
+                  "born": false,
+                  "left": 0.343270509812677,
+                  "owner": 40,
+                  "right": 0.34630625616251526
+                },
+                {
+                  "attenuation": 0.9999999999435435,
+                  "born": false,
+                  "left": 0.34630625616251526,
+                  "owner": 40,
+                  "right": 0.35031176948867976
+                },
+                {
+                  "attenuation": 0.9999999995484015,
+                  "born": false,
+                  "left": 0.35031176948867976,
+                  "owner": 40,
+                  "right": 0.3518522725579939
+                },
+                {
+                  "attenuation": 0.9999999815236713,
+                  "born": false,
+                  "left": 0.3518522725579939,
+                  "owner": 41,
+                  "right": 0.35433193823524073
+                },
+                {
+                  "attenuation": 0.9999990061756349,
+                  "born": false,
+                  "left": 0.35433193823524073,
+                  "owner": 41,
+                  "right": 0.35836680114677294
+                },
+                {
+                  "attenuation": 0.9999972164264158,
+                  "born": false,
+                  "left": 0.35836680114677294,
+                  "owner": 41,
+                  "right": 0.3604340353033108
+                },
+                {
+                  "attenuation": 0.9999932141898212,
+                  "born": false,
+                  "left": 0.3604340353033108,
+                  "owner": 42,
+                  "right": 0.36241639655916924
+                },
+                {
+                  "attenuation": 0.999957348122816,
+                  "born": false,
+                  "left": 0.36241639655916924,
+                  "owner": 42,
+                  "right": 0.36648076236654015
+                },
+                {
+                  "attenuation": 0.9999370516036177,
+                  "born": false,
+                  "left": 0.36648076236654015,
+                  "owner": 42,
+                  "right": 0.3690157980486277
+                },
+                {
+                  "attenuation": 0.9999405005356271,
+                  "born": false,
+                  "left": 0.3690157980486277,
+                  "owner": 43,
+                  "right": 0.3705599359867204
+                },
+                {
+                  "attenuation": 0.9997365944915058,
+                  "born": false,
+                  "left": 0.3705599359867204,
+                  "owner": 43,
+                  "right": 0.3746539543253022
+                },
+                {
+                  "attenuation": 0.9996927263504379,
+                  "born": false,
+                  "left": 0.3746539543253022,
+                  "owner": 43,
+                  "right": 0.3775975607939447
+                },
+                {
+                  "attenuation": 0.9998474657769394,
+                  "born": false,
+                  "left": 0.3775975607939447,
+                  "owner": 44,
+                  "right": 0.378762853738153
+                },
+                {
+                  "attenuation": 0.999318908339322,
+                  "born": false,
+                  "left": 0.378762853738153,
+                  "owner": 44,
+                  "right": 0.3828866699923378
+                },
+                {
+                  "attenuation": 0.999313696076725,
+                  "born": false,
+                  "left": 0.3828866699923378,
+                  "owner": 44,
+                  "right": 0.3861793235392616
+                },
+                {
+                  "attenuation": 0.999807407011134,
+                  "born": false,
+                  "left": 0.3861793235392616,
+                  "owner": 45,
+                  "right": 0.3870254382253733
+                },
+                {
+                  "attenuation": 0.9989998826465895,
+                  "born": false,
+                  "left": 0.3870254382253733,
+                  "owner": 45,
+                  "right": 0.39117919290274483
+                },
+                {
+                  "attenuation": 0.999129635756134,
+                  "born": false,
+                  "left": 0.39117919290274483,
+                  "owner": 45,
+                  "right": 0.3947610862845785
+                },
+                {
+                  "attenuation": 0.9998626375551457,
+                  "born": false,
+                  "left": 0.3947610862845785,
+                  "owner": 46,
+                  "right": 0.39534796777361486
+                },
+                {
+                  "attenuation": 0.9991098321853984,
+                  "born": false,
+                  "left": 0.39534796777361486,
+                  "owner": 46,
+                  "right": 0.39953179582462117
+                },
+                {
+                  "attenuation": 0.9993771879982789,
+                  "born": false,
+                  "left": 0.39953179582462117,
+                  "owner": 46,
+                  "right": 0.4033428490298954
+                },
+                {
+                  "attenuation": 0.9999486377063053,
+                  "born": false,
+                  "left": 0.4033428490298954,
+                  "owner": 47,
+                  "right": 0.40373070923170234
+                },
+                {
+                  "attenuation": 0.9995879697137828,
+                  "born": false,
+                  "left": 0.40373070923170234,
+                  "owner": 47,
+                  "right": 0.407944739309847
+                },
+                {
+                  "attenuation": 0.9998287704900864,
+                  "born": false,
+                  "left": 0.407944739309847,
+                  "owner": 47,
+                  "right": 0.41192461177521233
+                },
+                {
+                  "attenuation": 0.9999947937877639,
+                  "born": false,
+                  "left": 0.41192461177521233,
+                  "owner": 48,
+                  "right": 0.4121739164606726
+                },
+                {
+                  "attenuation": 0.9999682049883013,
+                  "born": false,
+                  "left": 0.4121739164606726,
+                  "owner": 48,
+                  "right": 0.4164182701177449
+                },
+                {
+                  "attenuation": 0.9999814308029328,
+                  "born": false,
+                  "left": 0.4164182701177449,
+                  "owner": 48,
+                  "right": 0.4205063745205293
+                },
+                {
+                  "attenuation": 0.999997538891628,
+                  "born": false,
+                  "left": 0.4205063745205293,
+                  "owner": 49,
+                  "right": 0.4206778286895269
+                },
+                {
+                  "attenuation": 0.999850071243705,
+                  "born": false,
+                  "left": 0.4206778286895269,
+                  "owner": 49,
+                  "right": 0.42495261949984586
+                },
+                {
+                  "attenuation": 0.9996334658335176,
+                  "born": false,
+                  "left": 0.42495261949984586,
+                  "owner": 49,
+                  "right": 0.4290881372658462
+                },
+                {
+                  "attenuation": 0.9999813429183608,
+                  "born": false,
+                  "left": 0.4290881372658462,
+                  "owner": 50,
+                  "right": 0.42924266872577166
+                },
+                {
+                  "attenuation": 0.9993362795618055,
+                  "born": false,
+                  "left": 0.42924266872577166,
+                  "owner": 50,
+                  "right": 0.4335480013327899
+                },
+                {
+                  "attenuation": 0.9991360570210165,
+                  "born": false,
+                  "left": 0.4335480013327899,
+                  "owner": 50,
+                  "right": 0.4376699000111631
+                },
+                {
+                  "attenuation": 0.9999540725548575,
+                  "born": false,
+                  "left": 0.4376699000111631,
+                  "owner": 51,
+                  "right": 0.4378686410071228
+                },
+                {
+                  "attenuation": 0.9989455507649659,
+                  "born": false,
+                  "left": 0.4378686410071228,
+                  "owner": 51,
+                  "right": 0.4422046100850956
+                },
+                {
+                  "attenuation": 0.999007304592177,
+                  "born": false,
+                  "left": 0.4422046100850956,
+                  "owner": 51,
+                  "right": 0.44625166275648004
+                },
+                {
+                  "attenuation": 0.9999285341984941,
+                  "born": false,
+                  "left": 0.44625166275648004,
+                  "owner": 52,
+                  "right": 0.44655592947938627
+                },
+                {
+                  "attenuation": 0.9990642715973621,
+                  "born": false,
+                  "left": 0.44655592947938627,
+                  "owner": 52,
+                  "right": 0.4509226186020241
+                },
+                {
+                  "attenuation": 0.9993470597712825,
+                  "born": false,
+                  "left": 0.4509226186020241,
+                  "owner": 52,
+                  "right": 0.454833425501797
+                },
+                {
+                  "attenuation": 0.9999349766604907,
+                  "born": false,
+                  "left": 0.454833425501797,
+                  "owner": 53,
+                  "right": 0.4553046952839773
+                },
+                {
+                  "attenuation": 0.999530274369302,
+                  "born": false,
+                  "left": 0.4553046952839773,
+                  "owner": 53,
+                  "right": 0.4597021756911756
+                },
+                {
+                  "attenuation": 0.9997742104627326,
+                  "born": false,
+                  "left": 0.4597021756911756,
+                  "owner": 53,
+                  "right": 0.4634151882471139
+                },
+                {
+                  "attenuation": 0.9999717496621661,
+                  "born": false,
+                  "left": 0.4634151882471139,
+                  "owner": 54,
+                  "right": 0.46411507423679116
+                },
+                {
+                  "attenuation": 0.9998943665895338,
+                  "born": false,
+                  "left": 0.46411507423679116,
+                  "owner": 54,
+                  "right": 0.4685434034896018
+                },
+                {
+                  "attenuation": 0.9999732177199078,
+                  "born": false,
+                  "left": 0.4685434034896018,
+                  "owner": 54,
+                  "right": 0.47199695099243083
+                },
+                {
+                  "attenuation": 0.9999968852964961,
+                  "born": false,
+                  "left": 0.47199695099243083,
+                  "owner": 55,
+                  "right": 0.47298717407825136
+                },
+                {
+                  "attenuation": 0.9999957693806031,
+                  "born": false,
+                  "left": 0.47298717407825136,
+                  "owner": 55,
+                  "right": 0.4774463945912024
+                },
+                {
+                  "attenuation": 0.9999999007341006,
+                  "born": false,
+                  "left": 0.4774463945912024,
+                  "owner": 55,
+                  "right": 0.48057871373774774
+                },
+                {
+                  "attenuation": 0.9999999967949934,
+                  "born": false,
+                  "left": 0.48057871373774774,
+                  "owner": 56,
+                  "right": 0.4819210714721852
+                },
+                {
+                  "attenuation": 0.9999999542582179,
+                  "born": false,
+                  "left": 0.4819210714721852,
+                  "owner": 56,
+                  "right": 0.48641120891090617
+                },
+                {
+                  "attenuation": 0.9999999734977072,
+                  "born": false,
+                  "left": 0.48641120891090617,
+                  "owner": 56,
+                  "right": 0.48916047648306465
+                },
+                {
+                  "attenuation": 0.9999999925905059,
+                  "born": false,
+                  "left": 0.48916047648306465,
+                  "owner": 57,
+                  "right": 0.4909168087288067
+                },
+                {
+                  "attenuation": 0.9999999874852281,
+                  "born": false,
+                  "left": 0.4909168087288067,
+                  "owner": 57,
+                  "right": 0.4954378702595899
+                },
+                {
+                  "attenuation": 0.9999999966055995,
+                  "born": false,
+                  "left": 0.4954378702595899,
+                  "owner": 57,
+                  "right": 0.4977422392283816
+                },
+                {
+                  "attenuation": 0.999999998955071,
+                  "born": false,
+                  "left": 0.4977422392283816,
+                  "owner": 58,
+                  "right": 0.49997439022435036
+                },
+                {
+                  "attenuation": 0.9999999987959467,
+                  "born": false,
+                  "left": 0.49997439022435036,
+                  "owner": 58,
+                  "right": 0.5045263626008765
+                },
+                {
+                  "attenuation": 0.9999999997745953,
+                  "born": false,
+                  "left": 0.5045263626008765,
+                  "owner": 58,
+                  "right": 0.5063240019736985
+                },
+                {
+                  "attenuation": 0.9999999999222976,
+                  "born": false,
+                  "left": 0.5063240019736985,
+                  "owner": 59,
+                  "right": 0.5090937784870188
+                },
+                {
+                  "attenuation": 0.9999999998988196,
+                  "born": false,
+                  "left": 0.5090937784870188,
+                  "owner": 59,
+                  "right": 0.5136766259577027
+                },
+                {
+                  "attenuation": 0.9999999999759538,
+                  "born": false,
+                  "left": 0.5136766259577027,
+                  "owner": 59,
+                  "right": 0.5149057647190155
+                },
+                {
+                  "attenuation": 0.999999999930026,
+                  "born": false,
+                  "left": 0.5149057647190155,
+                  "owner": 60,
+                  "right": 0.5182748899153121
+                },
+                {
+                  "attenuation": 0.9999999999053668,
+                  "born": false,
+                  "left": 0.5182748899153121,
+                  "owner": 60,
+                  "right": 0.5228885519331048
+                },
+                {
+                  "attenuation": 0.9999999999878133,
+                  "born": false,
+                  "left": 0.5228885519331048,
+                  "owner": 60,
+                  "right": 0.5234875274643324
+                },
+                {
+                  "attenuation": 0.9999999999246585,
+                  "born": false,
+                  "left": 0.5234875274643324,
+                  "owner": 61,
+                  "right": 0.527517590091308
+                },
+                {
+                  "attenuation": 0.999999999916331,
+                  "born": false,
+                  "left": 0.527517590091308,
+                  "owner": 61,
+                  "right": 0.5320692902096493
+                },
+                {
+                  "attenuation": 0.9999999999973725,
+                  "born": false,
+                  "left": 0.5320692902096493,
+                  "owner": 62,
+                  "right": 0.5321619788055109
+                },
+                {
+                  "attenuation": 0.9999999998502135,
+                  "born": false,
+                  "left": 0.5321619788055109,
+                  "owner": 62,
+                  "right": 0.5368216886469731
+                },
+                {
+                  "attenuation": 0.9999999998460282,
+                  "born": false,
+                  "left": 0.5368216886469731,
+                  "owner": 62,
+                  "right": 0.5406510529549662
+                },
+                {
+                  "attenuation": 0.9999999999616084,
+                  "born": false,
+                  "left": 0.5406510529549662,
+                  "owner": 63,
+                  "right": 0.5414966861544269
+                },
+                {
+                  "attenuation": 0.9999999997541595,
+                  "born": false,
+                  "left": 0.5414966861544269,
+                  "owner": 63,
+                  "right": 0.5461869336369259
+                },
+                {
+                  "attenuation": 0.9999999998071863,
+                  "born": false,
+                  "left": 0.5461869336369259,
+                  "owner": 63,
+                  "right": 0.5492328157002832
+                }
+              ],
+              "primal_face_defect": 1.6155871338926322e-27,
+              "primal_faces": {
+                "compacted_numeric_array": true,
+                "length": 65,
+                "maximum": 17.65937035731755,
+                "minimum": 0.0,
+                "scalar_count": 65,
+                "sha256": "9f7e4021ff9aa8946192cc224135c9f9a9069f27f519fc11c006adffd0f05d4f"
+              },
+              "reverse": -2.126664418301169
+            },
+            "tangent_minus_previous": 0.0005475515407868947
+          }
+        }
+      }
+    ],
+    "cut": 128,
+    "evaluated_points": 5194071,
+    "execution": {
+      "charges": {
+        "input_and_profile": 1541,
+        "ledger_analysis": 4432,
+        "metrics": 159330,
+        "rhs": 3844,
+        "tangents": 5024924
+      },
+      "evolution_calls": 0,
+      "gauge_quadratures": 0,
+      "hybrid_calls": 0,
+      "ledger_calls": 4,
+      "metric_calls": 4,
+      "prefix_calls": 0,
+      "profile_constructions": 1,
+      "profile_fits": 0,
+      "rhs_calls": 4,
+      "source_solves": 0,
+      "stage_calls": 0,
+      "tangent_calls": 4
+    },
+    "limitations": "one common backward branch; fixed profile/state; order difference is not an error bound",
+    "quadrature_orders": [
+      4,
+      8
+    ],
+    "schema": "nsc-atlas-cap-mass-balance-analysis-v1",
+    "scope": "terminal one-sided discrete mass derivative and departure-flux ledger; fixed state, no evolution"
+  },
+  "input_bindings": {
+    "results/development/nsc-atlas-cap-consistency-v1.json": {
+      "bytes": 820093,
+      "sha256": "79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728"
+    },
+    "results/summaries/nsc-atlas-cap-mass-direction-v1.json": {
+      "bytes": 318358,
+      "sha256": "9092a6f4d6dd2a58f7b3b31e0dc2d5c33b1a33c05755fe94501579bd808ebd7e"
+    }
+  },
+  "producer_bindings": {
+    "scripts/analyze_nsc_atlas_cap_consistency.py": {
+      "bytes": 22770,
+      "sha256": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a"
+    },
+    "scripts/analyze_nsc_atlas_cap_mass_balance.py": {
+      "bytes": 12305,
+      "sha256": "99c8ac39a488739e7d0fe7fdd1f44fb95579178e9fb654b05aa6a334167cd8aa"
+    },
+    "scripts/analyze_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 21158,
+      "sha256": "590c4540ec94c0d79a0a03119ac014c38e30b5975b228034a99d5a03e484a936"
+    },
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": {
+      "bytes": 21884,
+      "sha256": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45"
+    },
+    "scripts/diagnose_nsc_atlas_cap_consistency.py": {
+      "bytes": 9651,
+      "sha256": "2ba770b0880e1d60d313d644ed77b7485b352a187e6f09370c1d9cd77c06f230"
+    },
+    "scripts/diagnose_nsc_atlas_cap_mass_balance.py": {
+      "bytes": 8163,
+      "sha256": "d00f249e6d6ab9b860bcd98a75450e469ea555449d4cfe856980aeebd71bdb52"
+    },
+    "scripts/diagnose_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 11161,
+      "sha256": "3f751901982a3070e28c08c7a848848e81d3a45025b597fa36c7f1ed97edc6f5"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": {
+      "bytes": 6092,
+      "sha256": "e15805c7073bb54e30ce5bf8b065b44020b28d795807fdbe54257f42fe40016d"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_mass_tangent.py": {
+      "bytes": 16081,
+      "sha256": "1764f3b6b9b3a58db870db6ae5a4a0d12ebeaa6427564aabd28bf59e57c80a24"
+    },
+    "tests/control_budget.py": {
+      "bytes": 1437,
+      "sha256": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9"
+    },
+    "tests/test_analyze_nsc_atlas_cap_consistency.py": {
+      "bytes": 9319,
+      "sha256": "37bdc2f51ddadd1522d8cc055588ebea2a7a17d701bfd552e8586134b17910b3"
+    },
+    "tests/test_analyze_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 6533,
+      "sha256": "bdb00107af0b275589c1858ffb3cfa2637d0d266426fcf1e50ad0f22a4e32c07"
+    },
+    "tests/test_diagnose_nsc_atlas_boundary_rows.py": {
+      "bytes": 12642,
+      "sha256": "e40be41a5373a3b1d79f077d46e8708443c5c23e1fac52b233a3f3acd98ccb75"
+    },
+    "tests/test_diagnose_nsc_atlas_cap_consistency.py": {
+      "bytes": 8725,
+      "sha256": "802a24dbd8236329be1efb935895f7cbb19c227782a5d710c88eca596a581804"
+    },
+    "tests/test_diagnose_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 10941,
+      "sha256": "5d26b13311c4118320ef3944166d760569bd971c16a26594cd63b187408c73b6"
+    },
+    "tests/test_nsc_atlas_cap_consistency_orchestration.py": {
+      "bytes": 8148,
+      "sha256": "84c8e98042aef0998a39b88dcd9281e404aeddad744d4ac85df3338869894ada"
+    },
+    "tests/test_nsc_atlas_cap_mass_balance.py": {
+      "bytes": 8203,
+      "sha256": "1e1ed8be19bd829b4fbcf1b22a4bfd6157e4fe8a4c93d791905e505f8bc542a5"
+    },
+    "tests/test_nsc_atlas_cap_mass_derivatives.py": {
+      "bytes": 6413,
+      "sha256": "92f77f46df5c5f00cb1c6c3b7db8db4c79c4d76187c9a5d5041197110987193c"
+    },
+    "tests/test_nsc_atlas_cap_mass_direction_orchestration.py": {
+      "bytes": 8504,
+      "sha256": "caebaa65379a419f1cacd33a2b82564b0adfb899d07a6e65d09a2601071e8277"
+    },
+    "tests/test_nsc_atlas_cap_mass_tangent.py": {
+      "bytes": 8661,
+      "sha256": "0ed6826a5d303f8a04098c887bf74829993b271b67ab81ead4f77ade23bca217"
+    }
+  },
+  "raw_payload": {
+    "bytes": 203846,
+    "path": ".build/results/nsc-atlas-cap-mass-balance-v1.json",
+    "sha256": "da0a5acb2b91fbbf3a3ec54ba5ddabf388c8192a67678f2bee43b92b3742b555"
+  },
+  "regeneration": {
+    "argv": [
+      "python",
+      "scripts/run_python.py",
+      "scripts/diagnose_nsc_atlas_cap_mass_balance.py",
+      "--output",
+      ".build/results/nsc-atlas-cap-mass-balance-v1.json"
+    ],
+    "cwd": ".",
+    "executed_by_summary": false
+  },
+  "reported_provenance": {
+    "audit_source_bindings": {
+      "scripts/analyze_nsc_atlas_cap_consistency.py": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a",
+      "scripts/analyze_nsc_atlas_cap_mass_balance.py": "99c8ac39a488739e7d0fe7fdd1f44fb95579178e9fb654b05aa6a334167cd8aa",
+      "scripts/analyze_nsc_atlas_cap_mass_direction.py": "590c4540ec94c0d79a0a03119ac014c38e30b5975b228034a99d5a03e484a936",
+      "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+      "scripts/diagnose_nsc_atlas_cap_consistency.py": "2ba770b0880e1d60d313d644ed77b7485b352a187e6f09370c1d9cd77c06f230",
+      "scripts/diagnose_nsc_atlas_cap_mass_balance.py": "d00f249e6d6ab9b860bcd98a75450e469ea555449d4cfe856980aeebd71bdb52",
+      "scripts/diagnose_nsc_atlas_cap_mass_direction.py": "3f751901982a3070e28c08c7a848848e81d3a45025b597fa36c7f1ed97edc6f5",
+      "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e15805c7073bb54e30ce5bf8b065b44020b28d795807fdbe54257f42fe40016d",
+      "src/recursive_horizons/nsc_atlas_cap_mass_tangent.py": "1764f3b6b9b3a58db870db6ae5a4a0d12ebeaa6427564aabd28bf59e57c80a24",
+      "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
+      "tests/test_analyze_nsc_atlas_cap_consistency.py": "37bdc2f51ddadd1522d8cc055588ebea2a7a17d701bfd552e8586134b17910b3",
+      "tests/test_analyze_nsc_atlas_cap_mass_direction.py": "bdb00107af0b275589c1858ffb3cfa2637d0d266426fcf1e50ad0f22a4e32c07",
+      "tests/test_diagnose_nsc_atlas_boundary_rows.py": "e40be41a5373a3b1d79f077d46e8708443c5c23e1fac52b233a3f3acd98ccb75",
+      "tests/test_diagnose_nsc_atlas_cap_consistency.py": "802a24dbd8236329be1efb935895f7cbb19c227782a5d710c88eca596a581804",
+      "tests/test_diagnose_nsc_atlas_cap_mass_direction.py": "5d26b13311c4118320ef3944166d760569bd971c16a26594cd63b187408c73b6",
+      "tests/test_nsc_atlas_cap_consistency_orchestration.py": "84c8e98042aef0998a39b88dcd9281e404aeddad744d4ac85df3338869894ada",
+      "tests/test_nsc_atlas_cap_mass_balance.py": "1e1ed8be19bd829b4fbcf1b22a4bfd6157e4fe8a4c93d791905e505f8bc542a5",
+      "tests/test_nsc_atlas_cap_mass_derivatives.py": "92f77f46df5c5f00cb1c6c3b7db8db4c79c4d76187c9a5d5041197110987193c",
+      "tests/test_nsc_atlas_cap_mass_direction_orchestration.py": "caebaa65379a419f1cacd33a2b82564b0adfb899d07a6e65d09a2601071e8277",
+      "tests/test_nsc_atlas_cap_mass_tangent.py": "0ed6826a5d303f8a04098c887bf74829993b271b67ab81ead4f77ade23bca217"
+    },
+    "execution": {
+      "analysis_evaluations": 5194071,
+      "cpu_seconds": 6.015625,
+      "creation_validation_evaluations": 5194071,
+      "evaluated_points": 10388142,
+      "hash_authentication_passes": 1,
+      "initial_evaluations": 886949,
+      "previous_analysis_replays": 0,
+      "time_steps": 0
+    },
+    "input": {
+      "direction_summary": {
+        "bytes": 318358,
+        "path": "results/summaries/nsc-atlas-cap-mass-direction-v1.json",
+        "sha256": "9092a6f4d6dd2a58f7b3b31e0dc2d5c33b1a33c05755fe94501579bd808ebd7e"
+      },
+      "inherited": {
+        "cap_audit_source_bindings": {
+          "scripts/analyze_nsc_atlas_cap_consistency.py": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a",
+          "scripts/diagnose_nsc_atlas_boundary_rows.py": "d6879903228ef652b2015a95b3cef0dd21735561db32053bdfa48ca6c46d9afa",
+          "scripts/diagnose_nsc_atlas_cap_consistency.py": "1c4489fb2d8a00a884d454006218a4ec5f47c8cd8e7bc65b1a0c053cd3992d32",
+          "tests/test_analyze_nsc_atlas_cap_consistency.py": "f7a166b26f6c70dd702fee27a38477dbc249f6303f26ba65194e35a6d379c4fb",
+          "tests/test_diagnose_nsc_atlas_boundary_rows.py": "e40be41a5373a3b1d79f077d46e8708443c5c23e1fac52b233a3f3acd98ccb75",
+          "tests/test_diagnose_nsc_atlas_cap_consistency.py": "802a24dbd8236329be1efb935895f7cbb19c227782a5d710c88eca596a581804",
+          "tests/test_nsc_atlas_cap_consistency_orchestration.py": "84c8e98042aef0998a39b88dcd9281e404aeddad744d4ac85df3338869894ada"
+        },
+        "cap_bytes": 820093,
+        "cap_path": "results/development/nsc-atlas-cap-consistency-v1.json",
+        "cap_scientific_replays": 0,
+        "cap_sha256": "79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728",
+        "inherited": {
+          "authenticated_input_files": 104,
+          "baseline_path": "results/development/nsc-atlas-spatial-refinement-v1/spatial.json",
+          "baseline_sha256": "29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd",
+          "cache_path": "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json",
+          "cache_sha256": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02",
+          "hashed_bytes": 175037221,
+          "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+          "path": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+          "recursive_validation": false,
+          "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09",
+          "source_bindings": {
+            "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+            "results/development/nsc-atlas-background-evolution-v1/background.json": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca",
+            "results/development/nsc-atlas-background-evolution-v1/manifest.json": "b9a657079dbef081d9a343e1814a6f8271582bb9370443dbfd91305401c4584c",
+            "results/development/nsc-atlas-background-step-audit-v1.json": "a94a40a9a57f5b435b32d8d43005115650348f44d84a4ab67d49c3a181907aa4",
+            "results/development/nsc-atlas-compatible-evolution-v1/compatible.json": "a7e27b25ce171951415f97b64e055fd93062e3c21cd709c19c99c7543167c434",
+            "results/development/nsc-atlas-compatible-evolution-v1/manifest.json": "7a8b5b6215dacb7a554c2c9b60e14f698217d944859604312775b9aeb48d3ff7",
+            "results/development/nsc-atlas-coupled-evolution-v1/coupled.json": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86",
+            "results/development/nsc-atlas-coupled-evolution-v1/manifest.json": "c8bb11266693bba7043f6eb3a35045b09421e688f6069eee943459aec4a26f0f",
+            "results/development/nsc-atlas-nonlinear-rectangle-v1/manifest.json": "a749597c5403ba89f40665296156672a4efcee31044f34da086223b92a840b28",
+            "results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json": "afaa47304c353ca88d7b296b67996e55346f813abb2bc04e06c1f823d7ddf9da",
+            "results/development/nsc-atlas-spatial-refinement-v1/manifest.json": "dbfed10ec7ee36f8c909fa375e273459797b88ead546b07bf1a3c0789107bd1b",
+            "results/development/nsc-atlas-spatial-refinement-v1/spatial.json": "29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd",
+            "results/development/nsc-atlas-ssprk3-evolution-v1/manifest.json": "cf20e9190d400e81fa05a1dcf31535cbe99ed20d9a3fdf9c21f981f2565fdf75",
+            "results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json": "24cd8319c131360154cbdd7088cd2f212f8d572a0fe6fdff69a2c845c9223546",
+            "results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json": "f85a1491eeba5c77514936e48f69a4335d5a92edda2a0db2a0dc624a3701f041",
+            "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02",
+            "results/development/nsc-atlas-ssprk3-step-audit-v1.json": "9a549c59b9e40a8b9f45207c79ba638cab3409e44bb4c327e4a5b44c0ba9749a",
+            "scripts/analyze_nsc_atlas_operator_comparison.py": "17c3e27bbc891c41bfc2f12519053b11c59f916e65e138a264433cc0aec19e1c",
+            "scripts/analyze_nsc_atlas_spatial_refinement.py": "1a90dcf150521d85d58be87ee202dbdcc71ae498ae6da04312caefcf432e344a",
+            "scripts/diagnose_nsc_atlas_background_step.py": "e9ac13a5f2d93be2ad9f0d4734897af86d3f6b1184ddfab639ae3d9d66945455",
+            "scripts/diagnose_nsc_atlas_background_time.py": "d29a4190a40b9344c51c57833a58053ede0b3c34992c71ffa920a0ea5f0bab09",
+            "scripts/diagnose_nsc_atlas_compatible_transport.py": "05071cd1fbdec7a1c7a2c1697904478b3273e3bce42da77a3c4a74bc2b8799ac",
+            "scripts/diagnose_nsc_atlas_ssprk3_step.py": "68f04e1e48b275bb4d9fda42f38fd735cc787e69a576437541979e18dd7f552a",
+            "scripts/record_nsc_atlas_background_evolution.py": "eed75a5b1673f58bee5748ccb6437d6f8872c2970ce93a70933cbd1aa865655f",
+            "scripts/record_nsc_atlas_compatible_evolution.py": "9cf6802c5eca6b840fc3158438ca34178e719095ba839a4dd71cea549f265c2c",
+            "scripts/record_nsc_atlas_coupled_evolution.py": "2898d38aea0540530ef5fc76e1c7d3fc377d41bdbb414d3f51dbba54be29b264",
+            "scripts/record_nsc_atlas_nonlinear_rectangle.py": "3dd04d62f8982bd1c7f5500ed00dcb945e1b8c5aadb9888c193f830282cae8d0",
+            "scripts/record_nsc_atlas_operator_comparison.py": "5af2ba3b01bddc6cc573f46dc7011ebb7af136fb45326d6bb0c687f7e9adc6fa",
+            "scripts/record_nsc_atlas_spatial_refinement.py": "679ceb0f76df95f438de4396a6c64a8743bc584795ce13374d9ffb5239c4fcd9",
+            "scripts/record_nsc_atlas_ssprk3_evolution.py": "57891d825cb49363f86acbab37791917193394b9e2c2cc023720178c8eb1c7fc",
+            "scripts/record_nsc_atlas_ssprk3_refinement.py": "2e6cfa1d66b7524057a09eb2eb4f2481c51d56a9f9d042074d022c080d12b7c4",
+            "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+            "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+            "src/recursive_horizons/nsc_atlas_background_cap.py": "df34fdee624eb58d466b778e8f05ee74241922e43f5b60d619c0a8c557f6ceed",
+            "src/recursive_horizons/nsc_atlas_background_evolution.py": "7b7d5db8e790354c0bf7069f983eb4851390b1cbfaa3a56a10de97033e1059b9",
+            "src/recursive_horizons/nsc_atlas_background_profile.py": "576567d0c7a31b33982edb922ccc7aee772355c50aca0559a70620efdb0b753a",
+            "src/recursive_horizons/nsc_atlas_background_ssprk3.py": "dcc3ecc2023679be3a837e807de58548cb1b6b51bc3e7419e1cba1b8caee8362",
+            "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+            "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+            "src/recursive_horizons/nsc_atlas_characteristic_background.py": "381ee76f840b8392d7b96634fe7caab38bf3ee36e2fd48a87232c964d1c864a5",
+            "src/recursive_horizons/nsc_atlas_characteristic_cell.py": "71745e4fc58ab722a91d47c1fba90344fce786b2dc3ded6063d7dceb8784f135",
+            "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+            "src/recursive_horizons/nsc_atlas_characteristic_trace.py": "c067ea9a8a5b3a78263ab5671f9a6ad746863d73fc4dfc7da6425166bc15b9dd",
+            "src/recursive_horizons/nsc_atlas_compatible_evolution.py": "82f8f127f2b401b1234dfe7ceecddee011cf907c34fd87c06cbb64c20ddd9385",
+            "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+            "src/recursive_horizons/nsc_atlas_coupled_diagnostics.py": "9bb5d343683d2d8028d0796a18a5fd12ec677f5ec373e678675e6f56fdbddee6",
+            "src/recursive_horizons/nsc_atlas_coupled_evolution.py": "08746ab7c4aa71b543be5e1aca469e1fa43795277cfdce8102161b738d64423b",
+            "src/recursive_horizons/nsc_atlas_departure_diagnostics.py": "98a99baeb613738612b8dd26d68edbbeb6be1f514c835bcca3929e868cc687b3",
+            "src/recursive_horizons/nsc_atlas_departure_gradient.py": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452",
+            "src/recursive_horizons/nsc_atlas_exterior_characteristic_slice.py": "905f820fc7240b272dab9a3766708e3ff471d4210d408d5300f5eea0d983d766",
+            "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+            "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+            "src/recursive_horizons/nsc_atlas_gradient_evolution.py": "f007f4842d3b6f2490559e6035d6b5859d8848e477d39b8e77731a0e136d445d",
+            "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+            "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+            "src/recursive_horizons/nsc_atlas_nonlinear_bulk.py": "5ed3d18a642b562528c397526f85e92272784915bdb3a289cf9e8fa5d32c1b42",
+            "src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py": "0cf41411da3be90a1f0f030581adc4ce1da672e2d638d9d6f91f6bf4c4013824",
+            "src/recursive_horizons/nsc_atlas_nonlinear_source.py": "9a5922f9fbc856a4fb6e0c1c1f6a28a40e3034656de81db88d6cc8b917def72c",
+            "src/recursive_horizons/nsc_atlas_polar_cap.py": "17a9bece68716d2c80711bbdef3fc340d36f11edb6fa2f233806b39332603617",
+            "src/recursive_horizons/nsc_atlas_reduced_cap.py": "ed474652def7f60db02a14e5147a08b14b43963ef756ad4c3de3ad4800d698e9",
+            "src/recursive_horizons/nsc_atlas_reference_wall_gauge.py": "e905f2b6e888d53ee2d539920d09d037eb6bb074a60717932cfead12c87b3113",
+            "src/recursive_horizons/nsc_atlas_refined_cache.py": "7164dc2191cf175a8423fbcdde631b9961a4322bae7ed4399383146ca60f1ac0",
+            "src/recursive_horizons/nsc_atlas_stage_ssprk3.py": "aab87a8bc67a9b69391a425a5893c9c07e73eedde668d1a2cdff4eb971cdcbc0",
+            "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157",
+            "tests/test_analyze_nsc_atlas_operator_comparison.py": "1884720e27ca3c89a597739416940ccf1d42a0ffafb995bc3058d78faf581db2",
+            "tests/test_analyze_nsc_atlas_spatial_refinement.py": "4126ea70af520d0a468f0cc2dd2ef9160d4c1df688628259830b3930708ea358",
+            "tests/test_diagnose_nsc_atlas_background_step.py": "76bcaf5ad07a4addea5edf4fb61e46945d047cceb06d3a395b88c5640901f12c",
+            "tests/test_diagnose_nsc_atlas_background_time.py": "26cbb7da5a9719bf958a3f9e3d90e8cfa2ccca3539269daf97f8d3e862b16ee6",
+            "tests/test_diagnose_nsc_atlas_compatible_transport.py": "6138ec2e0679bb7746d4f3477c2dae042d59e66bde6e112442eff8c39d723b34",
+            "tests/test_diagnose_nsc_atlas_ssprk3_step.py": "9e99254ca1897b598a67d90088621aea77a22ad490b2402f6efdb8388da0eaf1",
+            "tests/test_nsc_atlas_background_cap.py": "b4f8409c173ed38035683747bac228bfac123f6ea581b113b899d17aab429151",
+            "tests/test_nsc_atlas_background_endpoint.py": "97abfeee4883ec2d92e19217b77a6b13b7bfa02d9fb979a4f48ee23acd791096",
+            "tests/test_nsc_atlas_background_evolution.py": "5cee18cc762ab2ec1d79528de886aa74bf2916492ff377bac3db9be574ed16e2",
+            "tests/test_nsc_atlas_background_profile.py": "8575e0ecd39b9b8c114e9cd90ac9a26dce30da90ac6031b355a7457a4fa2f9bb",
+            "tests/test_nsc_atlas_background_ssprk3.py": "af95185ae9f06ceb1e9b621baf88d46f86d33e8dfc69bc17344fe0de645e4d13",
+            "tests/test_nsc_atlas_characteristic_background.py": "d9f4e0d0bb7ffcafee2ab028408f8bb1ca42d351a8dc93b8eeafac02cf5fd07f",
+            "tests/test_nsc_atlas_characteristic_cell.py": "2ffc46e56c87250d353cd788548cc6ccaf07f4b2670ad7bb15a09407e2fa112e",
+            "tests/test_nsc_atlas_characteristic_trace.py": "87dce18f63893154bd3659987126b11afec1145708442e214c152fe6985e37e1",
+            "tests/test_nsc_atlas_compatible_evolution.py": "0514bc9bed8f471aa62f9e30e138f38df495da0f4da8e30cb34359ce686a1a44",
+            "tests/test_nsc_atlas_coupled_diagnostics.py": "3e51699a58f5384657de9c94436ac94b0db2b713ba254ed48962f6b1e8601b4f",
+            "tests/test_nsc_atlas_coupled_evolution.py": "a693e6b95a68e2ef6db476a5c4dc1f797b9be5562c20c5b429a6f81e07216345",
+            "tests/test_nsc_atlas_departure_diagnostics.py": "4caabec765a0782ec043da87783519899360877238e024c844df0cce8c0ef4ab",
+            "tests/test_nsc_atlas_departure_gradient.py": "7e39de34243de6da5392ce8e797fd3c1d627a0e8744625a880e50cfac9f26f54",
+            "tests/test_nsc_atlas_exterior_characteristic_slice.py": "7ab6b9f9f0cabeb0293be13fb11c1b26da62362587070c9419ea716425a23e7a",
+            "tests/test_nsc_atlas_gradient_evolution.py": "b7708869ad018ca631d4d5b3e53cd3b4dcc1a53c8d070c19ac8e3a207a0a965e",
+            "tests/test_nsc_atlas_hybrid_boundary.py": "84e88d93ca6654b4e35b282118be4a48e3ad9ab2b7aeab2bf4b086f71d8c4509",
+            "tests/test_nsc_atlas_nonlinear_boundary.py": "4d9d988a8213fdb3002dfcc342f165868acdd133ecb0eb43050ccbd82acf66d8",
+            "tests/test_nsc_atlas_nonlinear_bulk.py": "e3bf75d7b5c559847b13790513e76453d684af7cf8f29a109a8841a07d032b46",
+            "tests/test_nsc_atlas_nonlinear_rectangle.py": "e8018dd94f13d1c57acd45c57f93511333289668e71e89faf0872732aa13d1b0",
+            "tests/test_nsc_atlas_nonlinear_source.py": "1627ffaac2cb68e8fcda45bb5aee8c129a69db8c4a7f19a7a040d90c67e6c9b1",
+            "tests/test_nsc_atlas_polar_cap.py": "f66db7c453bc2a004d987d28bbb5b447b6585ca59eb8a6b9b46d80a7a74c5788",
+            "tests/test_nsc_atlas_reduced_cap.py": "fa9cc1a0b0a10e3bacae73d4a63e8c275518804d52aa58908e8cdc9b50a9ca5f",
+            "tests/test_nsc_atlas_reference_wall_gauge.py": "0162e855c16f5763a7224c89b0e7155107d65aa813b16004823b740cb769e520",
+            "tests/test_nsc_atlas_refined_cache.py": "819f2b0b342933c25f28dcc4fada7f95254ef6b9969dd67c5d6c9fdaca15d6f8",
+            "tests/test_nsc_atlas_stage_ssprk3.py": "48fdd0fa76a2f09ab20ec30c8fd84b3e0b02569effff441e57b1437b69f7e43a",
+            "tests/test_nsc_atlas_vacuum_departure.py": "014fe35e4902add7fa4f3e044df92f550cede64bb3896f17fec5cf8926c3b4eb",
+            "tests/test_record_nsc_atlas_background_evolution.py": "2a59768c44041b8be3ea32fe674562581284d175bdbc5d871cf2256eabad271b",
+            "tests/test_record_nsc_atlas_compatible_evolution.py": "cbcc13d89b08d96600abf42485a5ad911c2f2638634a88f54fb9a12957205133",
+            "tests/test_record_nsc_atlas_coupled_evolution.py": "d7e973f9210992c1882a9482ffc60f39a3c7f0c3ed502b35a5f2d5ceeb561c04",
+            "tests/test_record_nsc_atlas_nonlinear_rectangle.py": "4f66ac5fa4951f97c0a04f4a35c522620a6c080c592cfb3df74755c64425f518",
+            "tests/test_record_nsc_atlas_operator_comparison.py": "bd4622827eee3bec9bcda3b9644c335fb4cd38ea247cb8fe294ff22c437ac94f",
+            "tests/test_record_nsc_atlas_spatial_refinement.py": "7528535e1849b49882eadfcac7c1c3b5960746b6a2e82920bbeaf299b5d314bf",
+            "tests/test_record_nsc_atlas_ssprk3_evolution.py": "584dbff95a6b58a67025070efc21691316d105cadd07ef986e4bf3e00d5bdabe",
+            "tests/test_record_nsc_atlas_ssprk3_refinement.py": "4d2377607dd726ff37733d9d855561f85e7881cf1451292cd22821e44dcfe124"
+          }
+        }
+      },
+      "previous_analysis_replays": 0
+    },
+    "limits": {
+      "check": {
+        "cpu_seconds": 45.0,
+        "evaluated_points": 6000000
+      },
+      "creation": {
+        "cpu_seconds": 90.0,
+        "evaluated_points": 12000000
+      }
+    },
+    "runtime": {
+      "numpy": "2.5.1",
+      "python": "3.14.8",
+      "scipy": "1.17.1"
+    },
+    "schema": "nsc-atlas-cap-mass-balance-audit-v1",
+    "scope": "terminal one-sided discrete mass derivative and departure-flux ledger; fixed state, no evolution"
+  },
+  "schema": "nsc-compact-result-v1",
+  "selection": "/analysis"
+}

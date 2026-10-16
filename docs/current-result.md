@@ -2,6 +2,78 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Discrete cap mass balance, 16 October 2026
+
+The [four-case ledger](../results/summaries/nsc-atlas-cap-mass-balance-v1.json)
+differentiates the actual cap mass-edge quadrature at the saved terminal
+state, using one common backward branch. Forward and reverse contraction,
+primal mass recovery, finite-volume telescoping and the interior face
+decomposition all pass. Each analysis uses four metrics, four cap RHS
+vectors and four tangents: both amplitudes at orders four and eight, with
+no trajectory, source fit or grid scan.
+
+For the finite case at order eight, the normalized mass rate decomposes as:
+
+| Contribution | Normalized mass rate |
+| --- | ---: |
+| Radius | `12.3632521347` |
+| Background clock | `28.7150854850` |
+| Interior central transport | `-41.1943660645` |
+| Interior upwind transport | `-2.0178322650` |
+| Reaction | `0.00719367471` |
+| Wall departure flux | `0.00000261677547` |
+| Centre departure flux | `-6.41e-51` |
+| Total derivative | `-2.1266644183` |
+
+Subtracting the moving-wall density and left-trace mass flux gives
+`B_mass=-2.12697432799`, or actual gravitational rate
+`alpha*B_mass=-2.76147781292e-4`. The explicit upwind contribution is
+`-2.01783226502`; the remaining balance is `-0.10914206297`. This is an
+algebraic attribution of the implemented transport, not an evolution with
+that term removed. Large central, radius and clock terms cancel; their
+remaining mismatch still needs its discrete mathematical counterpart.
+
+The order-eight minus order-four balance difference is `3.54539e-5`, while
+the upwind contribution changes by about `4.4e-11`. These two orders do not
+provide an error enclosure. With the saved native radial derivative, the
+normalized temporal defect is `-0.66108026335`, actual `-8.58288911053e-5`.
+It differs from the previous finest backward functional derivative by
+`0.00017018370` in the normalized temporal defect. The tangent mass rate
+differs from the previous finest mass-rate estimate by `0.00054755154`.
+The explicit derivative now avoids choosing a finite probe width.
+
+The zero-backreaction control has normalized balance `-0.08472130219`,
+upwind contribution `-0.08903715866`, and remainder `0.00431585647`.
+Its actual gravitational defect is exactly zero because `alpha=0`.
+
+The largest observed forward/reverse difference is `5.40387e-13`.
+Absolute contraction work is about `1.5e4`, despite the much smaller
+signed result; the derived accumulation allowances are at most
+`3.689e-9`. The mass-ledger difference is at most `1.333e-14`, and face
+decomposition differs by at most `2.141e-16`. These arithmetic checks do
+not bound the discretization error in the physical equations.
+
+The 55 controls pass with cumulative **155,213 points / 2.9375 active CPU
+seconds** across all development attempts. The first physical attempt
+stopped at an underscaled forward/reverse comparison. One explicitly
+bounded diagnostic recovered the missing failure values before the bound
+was corrected and independently reviewed. The completed producer is frozen
+at `8d575f1`. Creation plus validation uses **10,388,142 points / 6.015625
+CPU seconds**; carrying the first failed attempt gives **11,275,091 points /
+8.75 seconds** within its original allowance. The separate diagnostic uses
+886,949 points / 2.671875 seconds, and the standalone check uses
+**5,194,071 points / 4.296875 seconds**. A carried-clock setup was rejected
+before any scientific evaluation and corrected by reducing the remaining
+CPU allowance.
+
+The 203,846-byte raw record remains local under `.build/results`, SHA256
+`da0a5acb2b91fbbf3a3ec54ba5ddabf388c8192a67678f2bee43b92b3742b555`.
+The tracked summary retains the source/input bindings and regeneration
+command. The [mathematical owner](nsc-atlas-finite-amplitude.md#discrete-mass-derivative-and-departure-flux-balance)
+and [reproduction guide](reproducing.md#current-work) define the domain.
+Finite-amplitude closure remains open; the next connection is a compatible
+discrete mass/transport balance before another coupled evolution.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)
