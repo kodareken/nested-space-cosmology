@@ -1726,6 +1726,36 @@ finite-coupling remainder. Grok independently confirms the mass identity;
 the metric bound covers exact input interpolants, excluding numerical
 evaluation and evolution errors. No physical source replay occurs.
 
+### Preserving the physical incoming onset during history transfer
+
+Before importing the prepared profile, check whether its existing C2
+quintic representation preserves the quartic onset established above.
+The first three zero jets alone permit a cubic interpolation term. Derive
+that coefficient, test an exact higher-order perturbation of the quartic,
+and construct the unique first-interval polynomial that retains the known
+quartic coefficient while matching the next value and first two jets.
+
+This admits symbolic controls only, sharing **20 active CPU seconds and
+zero field samples**. Check endpoint interpolation, onset derivatives and
+uniqueness independently by solving the coefficient system. Keep the
+prepared source's continuum-integral second jet distinct from numerical
+interpolant derivatives. No prepared source solve, knot scan or trajectory
+is included. A failure of onset order or coefficient redirects the adapter
+before any physical calculation.
+
+**Outcome:** three symbolic controls pass with zero field samples and
+**0.21875 active CPU seconds**. Ordinary quintic interpolation can add a
+cubic term to a quartic physical onset. A sextic removes that term but
+does not in general retain the specified quartic coefficient. The unique
+degree-seven first active piece preserves both while matching the next
+three jets. The [owner](nsc-atlas-finite-amplitude.md#preserving-the-source-onset-when-retaining-its-history)
+records the construction and its one-sided front derivative. Implementation
+is supported by independent Grok algebra of the same endpoint systems and
+source-to-arrival coefficient. It
+must extend the same profile, centre moments and Bernstein input controls
+together before the prepared history is imported. No physical data were
+evaluated or changed.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

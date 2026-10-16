@@ -6164,6 +6164,80 @@ prepared-field interface, distinguish its continuum second jet from its
 numerical interpolation derivative, and keep the finite-coupling departure
 and time-remainder checks in that common evolution.
 
+### Preserving the source onset when retaining its history
+
+The successful quartic control above does not establish that ordinary
+quintic interpolation preserves a general physical onset. Let the first
+active interval have length h, use \(s=x/h\), and supply
+\(y=F(h),v=hF'(h),w=h^2F''(h)\), with the first three jets zero at x=0.
+The usual quintic Hermite coefficient of \(s^3\) is
+
+\[
+ C_3=10y-4v+\tfrac12 w.
+\]
+
+For the independent profile \(F(x)=Ax^4+Bx^6\), this equals \(Bh^6\).
+The interpolant therefore has a lower-order cubic term even though all
+supplied endpoint jets are correct. Its small coefficient does not restore
+the quartic asymptotic order. Merely setting the third front derivative
+to zero and using a sextic is insufficient to preserve the coefficient:
+for \(F=Ax^4+Bx^7\), the resulting \(s^4\) coefficient is
+\(Ah^4+Bh^7\).
+
+There is a unique degree-seven first piece preserving the known quartic
+coefficient as well as the next value and first two jets. Set
+
+\[
+ \begin{gathered}
+ C_4=Ah^4,\quad Y=y-C_4,\quad V=v-4C_4,\quad W=w-12C_4,\\
+ P(s)=C_4s^4+C_5s^5+C_6s^6+C_7s^7,\\
+ C_5=21Y-6V+W/2,\qquad C_6=11V-W-35Y,\qquad
+ C_7=(W-10V+30Y)/2.
+ \end{gathered}
+\]
+
+The eight conditions are the four zero derivatives of orders 0..3 at the
+front, the specified fourth derivative \(24A\), and the three right jets.
+The coefficient matrix is nonsingular. This piece joins the quiet zero
+branch with C3 continuity and ordinary following quintics with C2
+continuity. The fourth derivative at the front is **one-sided**; imposing
+it on the preceding quiet interval would destroy that quiet interval.
+
+For the existing compact preparation, write
+\(\zeta=-1+4(V_{\rm null}-V_f)/\Delta V\) and
+\(q-q_f=q_V(V_{\rm null}-V_f)+O((V_{\rm null}-V_f)^2)\).
+Since \(g=(1-\zeta^2)^4\) and the initially quiet wall correction starts
+at fifth order, the inherited reference profile has
+
+\[
+ A=16\left(\frac{4}{\Delta V\,q_V}\right)^4.
+\]
+
+This fixes A from the source and reference arrival clock. It is not a
+parameter fitted to a later wall signal. The floating source mask and
+inverse-arrival bracket need their own arithmetic account; a numerical
+sample close to a mathematical support edge is not an exact zero jet.
+
+Three [exact controls](../tests/test_nsc_atlas_history_onset.py) pass with
+**zero field samples / 0.21875 active CPU seconds**. They derive the
+quintic and sextic counterexamples, independently solve all eight
+conditions, verify reproduction through degree seven, and recover A under
+the arrival change of variable. This establishes onset order and
+coefficient, not an interpolation error bound for the rest of the interval.
+Independent Grok algebra confirms the three coefficient systems, the
+source-to-arrival factor and the one-sided front restriction.
+
+Consequently the next source adapter must first extend the existing
+profile's **first active piece**, its centre moment sums and original-input
+Bernstein certificate together. The present centre sums have quintic
+degree limits; changing only interpolation would silently omit terms.
+Keep the quiet interval zero and subsequent C2 pieces unchanged. Use
+existing prepared-field cuts and arrival-geometry knots, with the source
+edges explicit, rather than a new knot scan. Preserve the continuum
+integral meaning of `CapLeadingField.profile(..., second=True)` and record
+its difference from the resulting interpolant. No such prepared-history
+transfer or physical evolution has yet been evaluated.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

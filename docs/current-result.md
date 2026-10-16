@@ -43,6 +43,14 @@ prepared physical history and evolving its finite-coupling departures
 remain next. The failed runtime attempt is retained; no scan, source solve
 or trajectory retry has been run.
 
+An [exact interpolation check](nsc-atlas-finite-amplitude.md#preserving-the-source-onset-when-retaining-its-history)
+identifies the next required correction: ordinary quintic history transfer
+can introduce a cubic term at a quartic source onset. A unique degree-seven
+first active piece preserves both its order and source-fixed coefficient.
+Three symbolic controls pass with zero field samples / 0.21875 CPU seconds.
+The profile, centre moments and input certificate must carry that piece
+together before the physical source is transferred.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

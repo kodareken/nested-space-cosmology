@@ -376,6 +376,16 @@ keeps numerical resolution distinct from the exact-input metric bound.
 This command uses manufactured histories, without a physical source or
 time-trajectory replay.
 
+The source-history onset obstruction and its exact first-piece solution:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_history_onset.py -q -s
+```
+
+All three symbolic controls pass with zero field samples / 0.21875 active
+CPU seconds. They test onset order and coefficient, not a bound on the
+prepared-history interpolation error or a physical evolution.
+
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.
 It stopped at the 180-second CPU check after 341/371 steps. Preserve that
