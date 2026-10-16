@@ -20,6 +20,15 @@ evaluation on reconstructed saved cap data, with actual left field traces.
 | Allowance | One creation including validation has 120 process CPU seconds/8,000,000 points. One standalone check has 60 CPU seconds/4,000,000 points. Static helper accounting estimates about 2.6 million points per analysis for 64 cap metrics, 12 prefix/maps and selected reconstructions; that is a planning estimate, not a measured guarantee. Freeze new producers and controls before creation. |
 | Decision and stop | A residual stable against these widths and integration orders identifies a cap/interface consistency question; a strongly changing residual identifies unresolved numerical differentiation or reconstruction. Trace mismatch is a discrete boundary fact, not proof of a new source law. Retain the cap contributions in the J/O identities. Stop on nonfinite data, invalid profile/domain, non-timelike reconstructed curve, failed reconstruction or budget exhaustion, with an ignored failure receipt before any revised calculation. No new evolution, physical coupling or wall equation is admitted by this diagnostic. |
 
+The 34 synthetic mathematical, orchestration and record controls pass on
+their first combined run with **62,119 aggregate points / 0.34375 process
+CPU seconds**, including deliberate exhausted attempts. The acceleration
+control contracts an independently calculated Christoffel acceleration
+with the outward normal. Measured `D_x A` enters the curve normalization;
+its difference from an algebraic chain-rule reconstruction is retained.
+All controls use one cumulative allowance and no retained physical replay.
+The new analyzer, recorder and controls are frozen before creation.
+
 ## Saved near-wall row audit, 16 October 2026
 
 **Outcome:** the [fixed saved-row result](current-result.md#saved-near-wall-row-audit-16-october-2026)
