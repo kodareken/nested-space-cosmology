@@ -143,3 +143,27 @@ def test_cpu_budget_is_enforced(monkeypatch):
     monkeypatch.setattr(tool.time, "process_time", lambda: 31.)
     with pytest.raises(RuntimeError, match="30-process-CPU"):
         tool._budget(0.)
+
+
+def test_recomputed_assessment_accepts_ulp_but_preserves_integer_metadata(tmp_path, monkeypatch):
+    monkeypatch.setattr(tool, "input_snapshot", lambda: (fixture_record(), {"authenticated": True}))
+    monkeypatch.setattr(tool, "source_bindings", lambda: {"script-and-tests": "test-hash"})
+    directory = tmp_path/"assessment"
+    tool.create(directory)
+    payload = directory/"assessment.json"
+    manifest_path = directory/"manifest.json"
+    record = json.loads(payload.read_bytes())
+    row = record["assessment"]["methods"][0]["withheld_samples"][0]
+    row["b_interpolated"] = float(np.nextafter(row["b_interpolated"], np.inf))
+    def save():
+        raw = tool.encoded(record)
+        payload.write_bytes(raw)
+        manifest = json.loads(manifest_path.read_bytes())
+        manifest["outputs"]["assessment.json"] = {"sha256": tool.digest(raw), "bytes": len(raw)}
+        manifest_path.write_bytes(tool.encoded(manifest))
+    save()
+    assert tool.check(directory)["physical_solves"] == 0
+    row["nodes"] = float(row["nodes"])
+    save()
+    with pytest.raises(ValueError, match="deterministic"):
+        tool.check(directory)

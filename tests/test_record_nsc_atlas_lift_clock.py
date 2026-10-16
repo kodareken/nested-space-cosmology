@@ -2,6 +2,7 @@
 from copy import deepcopy
 import json
 import math
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -87,6 +88,37 @@ def test_quartic_clock_rate_and_boundary_slope_gap(monkeypatch):
         assert len(solution["lift"]["knot_samples"]) == 41
         assert len(solution["lift"]["validation_samples"]) == 40
         assert solution["lift"]["heldout_used_for_training"] is False
+
+
+def test_recomputed_clock_roundoff_does_not_relax_counts_or_accuracy_target(monkeypatch):
+    record, _ = synthetic(monkeypatch)
+    record["solutions"][0]["clock_diagnostics"][20]["clock_slope_identity_defect"] += 1e-12
+    assert tool.validate_record(record)
+    record["solutions"][0]["clock_diagnostics"][20]["clock_slope_identity_defect"] += 1e-7
+    with pytest.raises(ValueError, match="clock boundary algebra"):
+        tool.validate_record(record)
+    assert not tool._same_recomputed({"count": 1.}, {"count": 1})
+    assert not tool._same_recomputed({"count": True}, {"count": 1})
+    assert not tool._same_recomputed([float("nan")], [0.])
+    assert not tool._same_recomputed([0.], [0., 0.])
+
+
+def test_saved_clock_conditioning_under_one_ulp_reference_jets():
+    """Only saved polynomial/algebra evaluation; no predecessor or field solve."""
+    root = Path(__file__).resolve().parents[1]
+    old = json.loads((root/"results/development/nsc-atlas-local-lift-v1/lift.json").read_bytes())
+    saved = json.loads((root/"results/development/nsc-atlas-lift-clock-v1/clock.json").read_bytes())
+    for solution in saved["solutions"]:
+        walls = deepcopy(solution["wall_samples"])
+        for row in walls:
+            for key in ("v", "beta_plus", "beta_minus", "Vdot"):
+                row[key] = math.nextafter(row[key], math.inf)
+        expected = tool._plain(tool.rebuild_solution(old, solution["wall_time_panels"], walls,
+                                                    solution["clock_panels"]))
+        assert tool._same_recomputed(solution, expected)
+        changed = deepcopy(expected)
+        changed["lift"]["validation_samples"][20]["b_U_interpolated"] += .001
+        assert not tool._same_recomputed(solution, changed)
 
 
 def test_restore_with_live_geometry_preserves_budget_and_quiet_anchor(monkeypatch):

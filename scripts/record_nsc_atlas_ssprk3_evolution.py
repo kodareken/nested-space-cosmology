@@ -15,6 +15,7 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_background_evolution as previous
 import diagnose_nsc_atlas_ssprk3_step as local
@@ -95,8 +96,7 @@ def load_inputs(budget):
             or saved.get("execution",{}).get("stage_calls")!=6):
         raise ValueError("pinned local SSPRK3 declaration mismatch")
     for name,expected in saved["audit_source_bindings"].items():
-        if digest((ROOT/name).read_bytes())!=expected:
-            raise ValueError("local SSPRK3 source binding mismatch: "+name)
+        verify_saved_source(name, expected, ROOT)
     budget.check()
     return parent,base,dict(background=identity["original"],rk2_local=identity["local_step"],
         ssprk3_local=dict(path=LOCAL_INPUT,sha256=digest(raw),bytes=len(raw),
@@ -353,7 +353,7 @@ def check(directory):
     manifest=json.loads((directory/"manifest.json").read_bytes())
     raw=(directory/"ssprk3.json").read_bytes()
     bindings,runtime=source_bindings(),runtime_versions()
-    if (manifest.get("schema")!=SCHEMA+"-manifest" or manifest.get("source_bindings")!=bindings
+    if (manifest.get("schema")!=SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
             or manifest.get("outputs")!={"ssprk3.json":dict(sha256=digest(raw),bytes=len(raw))}):
         raise ValueError("SSPRK3 hash/source mismatch")
     budget.check()

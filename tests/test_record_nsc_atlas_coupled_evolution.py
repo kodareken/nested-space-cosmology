@@ -17,6 +17,19 @@ GEOMETRY = dict(U0=-.32130105902052203, Ua=-.2992702973503126,
     support_x=[.42269179059454887, .4631925883576189], x_corner=.4, x_last=.4815042082576364)
 
 
+def test_recomputed_numerics_allow_roundoff_with_exact_structure_and_counts():
+    tool._equal({"metric": np.array([1., 0.]), "count": 2, "flag": False},
+                {"metric": [1.+1e-13, 1e-14], "count": 2, "flag": False}, "recomputed metric")
+    for actual, expected in (({"count": 2.}, {"count": 2}),
+                             ({"flag": 0}, {"flag": False}),
+                             ([0.], [0., 0.]),
+                             ([1.+1e-8], [1.]),
+                             ([float("nan")], [0.]),
+                             ([float("inf")], [0.])):
+        with pytest.raises(ValueError, match="recomputed"):
+            tool._equal(actual, expected, "recomputed")
+
+
 @pytest.fixture(autouse=True)
 def bounded_control():
     started = time.process_time()

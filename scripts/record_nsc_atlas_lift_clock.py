@@ -15,6 +15,7 @@ import time
 from types import SimpleNamespace
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_local_lift as predecessor
 from record_nsc_atlas_scalar_inputs import BASE, KNOT_KEYS, digest, encoded, runtime_versions, _plain
@@ -175,6 +176,26 @@ def comparison_diagnostics(old, solutions):
             *(abs(a["B_lift"]-b["B_lift"]) for a, b in zip(s["lift"]["validation_samples"], old_fine["validation_samples"]))) for s in solutions]}
 
 
+def _same_recomputed(actual, expected):
+    """Numerical replay only; integers, booleans, keys and lengths stay exact.
+
+    Clock-slope subtraction and the degree-nine Hermite conversion amplify
+    floating evaluation differences. The 8e-12 floor matches the independent
+    manufactured slope-identity control; 2e-11 is the existing reference-data
+    allowance above. Neither changes the saved prediction/refinement targets.
+    """
+    if isinstance(expected, dict):
+        return isinstance(actual, dict) and set(actual) == set(expected) and all(
+            _same_recomputed(actual[key], value) for key, value in expected.items())
+    if isinstance(expected, list):
+        return isinstance(actual, list) and len(actual) == len(expected) and all(
+            _same_recomputed(a, b) for a, b in zip(actual, expected))
+    if type(expected) is float:
+        return (type(actual) in (int, float) and math.isfinite(actual) and math.isfinite(expected)
+                and math.isclose(actual, expected, rel_tol=2e-11, abs_tol=8e-12))
+    return type(actual) is type(expected) and actual == expected
+
+
 def _prepare_shared():
     from recursive_horizons.nsc_atlas_prepared_response import PreparedFieldBudget, solve_prepared_field
     from recursive_horizons.nsc_atlas_bulk_response import BulkBudget
@@ -231,10 +252,10 @@ def validate_record(record):
     if len(solutions) != 2:
         raise ValueError("clock comparison requires exactly two solutions")
     for panels, solution in zip(PANELS, solutions):
-        expected = rebuild_solution(old, panels, solution["wall_samples"], solution["clock_panels"])
-        if not predecessor._same_saved(solution, expected):
+        expected = _plain(rebuild_solution(old, panels, solution["wall_samples"], solution["clock_panels"]))
+        if not _same_recomputed(solution, expected):
             raise ValueError("clock boundary algebra or saved polynomial mismatch")
-    if not predecessor._same_saved(record["diagnostics"], comparison_diagnostics(old, solutions)):
+    if not _same_recomputed(record["diagnostics"], _plain(comparison_diagnostics(old, solutions))):
         raise ValueError("clock comparison diagnostics mismatch")
     cost = record["execution"]
     required = dict(cpu_seconds_max=120., scalar_kernel_values_max=30_000_000,
@@ -288,7 +309,7 @@ def check(directory):
         raise ValueError("clock evidence must not use symlinks")
     manifest = json.loads((directory/"manifest.json").read_bytes())
     raw = (directory/"clock.json").read_bytes()
-    if (manifest.get("schema") != SCHEMA+"-manifest" or manifest.get("source_bindings") != source_bindings()
+    if (manifest.get("schema") != SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
             or manifest.get("outputs") != {"clock.json": {"sha256": digest(raw), "bytes": len(raw)}}):
         raise ValueError("clock record source or output binding mismatch")
     record = json.loads(raw)

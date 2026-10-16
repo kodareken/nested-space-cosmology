@@ -16,6 +16,7 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_compatible_evolution as previous
 from diagnose_nsc_atlas_compatible_transport import cap_pullback
@@ -92,7 +93,7 @@ def load_parent(budget):
     raw, manifest_raw = (directory/"compatible.json").read_bytes(), (directory/"manifest.json").read_bytes()
     manifest = json.loads(manifest_raw)
     if (manifest.get("schema") != previous.SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != previous.source_bindings()
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=previous.SOURCES)
             or manifest.get("outputs") != {"compatible.json":dict(sha256=digest(raw),bytes=len(raw))}):
         raise ValueError("parent compatible hash/source mismatch")
     parent = json.loads(raw)
@@ -494,7 +495,7 @@ def check(directory):
         raise ValueError("background output inventory mismatch")
     manifest=json.loads((directory/"manifest.json").read_bytes())
     raw=(directory/"background.json").read_bytes()
-    if (manifest.get("schema")!=SCHEMA+"-manifest" or manifest.get("source_bindings")!=source_bindings()
+    if (manifest.get("schema")!=SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
             or manifest.get("outputs")!={"background.json":dict(sha256=digest(raw),bytes=len(raw))}):
         raise ValueError("background hash/source mismatch")
     return dict(checked=str(directory),**validate_record(json.loads(raw)))

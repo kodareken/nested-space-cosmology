@@ -248,6 +248,7 @@ def test_create_is_atomic_on_source_drift_and_keeps_failure_receipt(tmp_path, mo
     monkeypatch.setattr(tool, "ROOT", tmp_path)
     state = dict(changed=False)
     monkeypatch.setattr(tool, "source_bindings", lambda:dict(source="after" if state["changed"] else "before"))
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     monkeypatch.setattr(tool, "calculate", lambda budget:dict(runtime=tool.runtime_versions(), execution=dict(evaluations=0)))
     def validate(*args, **kwargs):
         state["changed"] = True
@@ -276,6 +277,7 @@ def test_creation_only_hash_guard_and_standalone_authentication_ceiling(tmp_path
         assert created_budgets[-1].started <= time.process_time()
         return dict(source="fixed")
     monkeypatch.setattr(tool, "source_bindings", bindings)
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     runtime, calls = tool.runtime_versions(), []
     def calculate(shared):
         calls.append(("calculate", shared))
@@ -301,6 +303,7 @@ def test_creation_only_hash_guard_and_standalone_authentication_ceiling(tmp_path
     assert binding_budget_ids[-1] == id(shared)
     changed = dict(value=False)
     monkeypatch.setattr(tool, "source_bindings", lambda:dict(source="changed" if changed["value"] else "fixed"))
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     def changing_validate(record, shared=None, **kwargs):
         result = validate(record, shared, **kwargs)
         changed["value"] = True

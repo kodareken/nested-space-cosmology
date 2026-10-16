@@ -14,6 +14,7 @@ import numpy as np
 from scipy.interpolate import CubicHermiteSpline
 
 from .nsc_atlas_characteristic_initialization import Budget, source_jet
+from .nsc_atlas_validation import source_jet_roundoff_tolerances
 from .nsc_atlas_nonlinear_bulk import bulk_operator
 from .nsc_atlas_nonlinear_source import source_amplitude_bound
 
@@ -107,8 +108,9 @@ class SourceSnapshot:
             raise ValueError("source rows and snapshot knots differ")
         self._charge(int(nodes.size))
         frame = self._frame(nodes, rows["h"], rows["h_x"], np.zeros_like(nodes))
+        pulse_atol = dict(zip(("c", "c_x"), source_jet_roundoff_tolerances(nodes, geometry)))
         for key in ("rJ", "rJ_x", "r", "C", "log_C", "c", "r_x", "log_C_x", "c_x"):
-            if not np.allclose(rows[key], frame[key], rtol=2e-13, atol=2e-13):
+            if not np.allclose(rows[key], frame[key], rtol=2e-13, atol=2e-13+pulse_atol.get(key, 0.)):
                 raise ValueError("source frame or compact profile mismatch: "+key)
         # The common quiet corner is fixed by the original affine gauge.
         a0 = (.8/nodes[0]-1)/4

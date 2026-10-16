@@ -2,6 +2,58 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Terminal cap mass-functional derivative, 16 October 2026
+
+The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)
+evaluates the implemented cap mass functional along the existing field and
+wall rates at the terminal cut. Both amplitudes and integration orders four
+and eight use the same saved states: 20 reconstructed metrics and four cap
+RHS calls per analysis, with no trajectory or grid scan. The full raw record
+is local under `.build/results`; the summary retains its hash, inputs and
+regeneration command.
+
+For the finite case, order eight and the native radial derivative:
+
+| Backward width | Normalized temporal mass defect | Actual mass defect |
+| --- | ---: | ---: |
+| `h = 7.95939533766e-5` | `-0.6638552087` | `-8.6189165787e-5` |
+| `h/2` | `-0.6617654479` | `-8.5917849481e-5` |
+| `h/4` | `-0.6612504470` | `-8.5850986271e-5` |
+
+The finest order-eight minus order-four difference is `1.09497e-5` in the
+normalized defect. The saved-history value, expressed using the same wall
+and clock rates, is `-0.6407403055`; conversion from the original measured
+rates changes that value by only `1.22404e-5`. The finest instantaneous
+minus history difference is `-0.0205101416`. Changing the incoming scalar
+trace changes the normalized flux by only `-3.37875e-5`.
+
+Together with the previous small terminal radial mass and lapse residuals,
+this localizes a substantial consistency question to the reconstructed cap
+mass and its discrete transport. Time differentiation of saved histories
+alone cannot account for it. It does not yet isolate one flux, reconstruction
+or coupling term, and does not establish failure of the physical wall law.
+The next mathematical connection is a discrete energy balance, not another
+grid scan.
+
+The finest backward stencil has no recorded limiter selection or sign
+changes. At the coarser `-h` probe, a minus secant changes from zero to
+`4.48934e-32` in both orders; order four also changes a secant from
+`-2.52676e-17` to zero and a slope selection in cell 39. These changes are
+retained in the summary. The widths do not establish a classical two-sided
+tangent or a convergence order. Every probe remains inside the supplied
+profile domain. The zero-backreaction case has finest normalized defect
+`-0.0259649244`, but its actual gravitational mass defect is exactly zero.
+
+All 26 controls pass with cumulative **171,957 points / 1.34375 process CPU
+seconds**, including correction of one synthetic roundoff threshold.
+Creation with validation passes with **1,711,610 points / 6.6875 CPU seconds**;
+the one standalone check passes with **855,805 points / 4.078125 CPU seconds**.
+The raw 520,080-byte record has SHA256
+`d0fec7048ab1cb476e15672ccf334c2c8e628c059c1fdec709e702c9dafd6f74`.
+The [derivation](nsc-atlas-finite-amplitude.md#cap-mass-balance-under-field-transport)
+and [reproduction instructions](reproducing.md#current-work) retain the
+precise comparison. Finite-amplitude closure remains open.
+
 ## Selected cap mass and wall-curve audit, 16 October 2026
 
 The [completed cap audit](../results/development/nsc-atlas-cap-consistency-v1.json)

@@ -142,6 +142,21 @@ def test_lift_withheld_target_is_diagnostic_and_tampering_is_rejected(monkeypatc
             tool.validate_record(changed, "lift")
 
 
+def test_target_rebuild_roundoff_does_not_relax_reference_metadata(monkeypatch):
+    record = synthetic("lift", monkeypatch)
+    target = deepcopy(record["diagnostics"]["interpolation_target"])
+    for key in ("sampled_field_b_sensitivity", "absolute_b_target"):
+        target[key] = float(np.nextafter(target[key], np.inf))
+    monkeypatch.setattr(tool, "interpolation_target", lambda: deepcopy(target))
+    assert tool.validate_record(record, "lift")
+    for key, value in (("absolute_b_target", 1.), ("source_sha256", "changed"),
+                       ("reference_cuts", 9.), ("is_uniform_bound", 0)):
+        changed = deepcopy(record)
+        changed["diagnostics"]["interpolation_target"][key] = value
+        with pytest.raises(ValueError, match="target reference"):
+            tool.validate_record(changed, "lift")
+
+
 def test_forcing_accepts_inherited_wall_ulp_but_not_changed_inputs(monkeypatch):
     record = synthetic("forcing", monkeypatch, endpoint_roundoff=True)
     assert tool.validate_record(record, "forcing")

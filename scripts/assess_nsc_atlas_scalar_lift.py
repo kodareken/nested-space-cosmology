@@ -15,6 +15,7 @@ import time
 
 import numpy as np
 from scipy.interpolate import KroghInterpolator
+from validation_source_successors import verify_saved_bindings
 
 import record_nsc_atlas_scalar_inputs as predecessor
 from record_nsc_atlas_scalar_inputs import digest, encoded, runtime_versions
@@ -200,14 +201,16 @@ def check(directory):
         raise ValueError("assessment files must not be symlinks")
     manifest = json.loads((directory/"manifest.json").read_bytes())
     raw = (directory/"assessment.json").read_bytes()
-    if (manifest.get("schema") != SCHEMA+"-manifest" or manifest.get("source_bindings") != source_bindings()
+    if (manifest.get("schema") != SCHEMA+"-manifest"
+            or (manifest.get("source_bindings") != source_bindings()
+                and not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES))
             or manifest.get("outputs") != {"assessment.json": {"sha256": digest(raw), "bytes": len(raw)}}):
         raise ValueError("assessment output or source binding mismatch")
     saved, binding = input_snapshot()
     record = json.loads(raw)
     if (manifest.get("input") != binding or record.get("input") != binding
             or record.get("schema") != SCHEMA or record.get("scope") != SCOPE
-            or record.get("assessment") != assess(saved)):
+            or not predecessor._same_recomputed(record.get("assessment"), assess(saved))):
         raise ValueError("assessment input or deterministic postprocessing mismatch")
     runtime = record.get("runtime")
     if (not isinstance(runtime, dict) or set(runtime) != {"python", "numpy", "scipy"}

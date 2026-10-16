@@ -6,7 +6,87 @@ Scientific conclusions retain the domains in their owning notes.
 The current paper and test dependencies use Matplotlib 3.11.2; the scientific
 stack includes python-flint 0.9.0 and Numba 0.68.0.
 
+Saved evidence bytes, input identities, array shapes, discrete counts and
+symbolic identities retain exact checks. Recomputed floating-point arithmetic
+uses the numerical allowance of its validator. The clock boundary checker
+uses relative `2e-11` / absolute `8e-12`; the rectangle diagnostic comparison
+uses relative `2e-12` / absolute `2e-13`. Compact-source checks propagate
+binary64 coordinate rounding through the source polynomial and its derivative,
+instead of demanding relative agreement with a derivative near zero.
+These are replay allowances, not physical uncertainty or convergence bounds.
+One-ULP conditioning controls and deliberate larger corruptions test the
+acceptance and rejection sides.
+
+The [validation successor record](storage/validation-source-successors.json)
+identifies the original Git bytes and the reviewed current checker bytes.
+Old result manifests remain intact, current validation code runs, and newly
+created records bind current code. Unknown source changes and all data-hash
+changes still fail. The shared synthetic-test budgets count only CPU time
+inside their tests, retaining cumulative point and active-CPU limits.
+
 ## Current work
+
+The [first prediction-register entry](prediction-register.md#nsc-p001--perturbative-cap-and-moving-wall)
+binds the closed perturbative cap–wall relation and four computed
+coefficients to their original evidence. Authenticate its projections without
+repeating a calculation:
+
+```sh
+python scripts/run_python.py scripts/check_prediction_register.py
+```
+
+The [terminal cap mass-functional derivative](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+uses the [analyzer](../scripts/analyze_nsc_atlas_cap_mass_direction.py) and
+[recorder](../scripts/diagnose_nsc_atlas_cap_mass_direction.py) on the authenticated
+terminal cap states. Its 26 mathematical, orchestration and provenance controls
+pass with cumulative usage of 171,957 points and 1.34375 process CPU seconds,
+including the initial epsilon-tolerance failure and its correction:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_analyze_nsc_atlas_cap_mass_direction.py tests/test_nsc_atlas_cap_mass_direction_orchestration.py tests/test_diagnose_nsc_atlas_cap_mass_direction.py -q
+```
+
+The [compact summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)
+uses 1,711,610 points and 6.6875 process CPU seconds including creation
+validation. One standalone check passes with 855,805 points and 4.078125
+CPU seconds. The 520,080-byte record has SHA256
+`d0fec7048ab1cb476e15672ccf334c2c8e628c059c1fdec709e702c9dafd6f74`.
+The original producer was frozen at `fc71709`. Full data remains local in
+ignored `.build/results/`. A clean checkout can regenerate it when needed:
+
+```sh
+python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_mass_direction.py --output .build/results/nsc-atlas-cap-mass-direction-v1.json
+```
+
+Creation refuses to overwrite an existing record. Append `--check` to check
+an existing raw record. For an inexpensive summary/input authentication that
+does not repeat the numerical diagnostic, use:
+
+```sh
+python scripts/run_python.py scripts/summarize_result.py --output results/summaries/nsc-atlas-cap-mass-direction-v1.json --check
+python scripts/run_python.py scripts/check_result_storage.py
+```
+
+The first command reports whether the raw file is present; its absence on
+a clean checkout is expected. [Storage policy](nsc-storage.md#current-calculation-outputs-16-october-2026)
+keeps future arrays local and their summaries, hashes and commands in Git.
+
+Each invocation pins the prior cap audit, verifies its seven producer bindings
+within the twelve audit bindings, and authenticates the 104 inherited bindings
+once. Each analysis uses 20 cap metrics and four cap RHS evaluations at the
+terminal cut, holding the directions fixed for backward probes. Creation
+performs one analysis and one validation under a shared 60-CPU-second,
+four-million-point allowance; a check performs one analysis under 30 CPU
+seconds/two million points. No source, full stage or trajectory is replayed.
+The three control suites share 30 CPU seconds/300,000 points. Fresh creation
+requires a new output file without `--check`; first failures leave an ignored
+`.build` receipt without retry.
+
+The finest order-eight finite directional residual is `-0.6612504470`, compared
+with `-0.6407403055` from saved history expressed with the same rates; its
+order-eight minus order-four change is `1.09497e-5`. These are qualified
+backward functional diagnostics, without a convergence-order claim. At zero
+amplitude the normalized residual is not a physical gravitational defect.
 
 The [selected cap mass and wall-curve audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
 uses the [recorder](../scripts/diagnose_nsc_atlas_cap_consistency.py) and
@@ -46,8 +126,9 @@ Pulse residuals remain strongly sensitive to radial derivative width despite
 negligible order-4/8 changes. At the final finite cut the temporal mass
 residual is about `-8.32e-5`, while radial mass and lapse residuals are below
 `1.7e-9` and `9.3e-9`. The actual wall-curve acceleration also differs from
-the hybrid prediction. The next connection concerns cap transport and mass
-balance; this audit supplies neither a new wall law nor a new evolution.
+the hybrid prediction. The terminal mass-functional calculation above now
+tests the cap transport connection; neither audit supplies a new wall law or
+a new evolution.
 
 The [near-wall saved-row audit](current-result.md#saved-near-wall-row-audit-16-october-2026)
 uses the [bounded diagnostic](../scripts/diagnose_nsc_atlas_boundary_rows.py)

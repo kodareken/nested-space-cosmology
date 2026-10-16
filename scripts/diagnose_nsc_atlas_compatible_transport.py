@@ -17,6 +17,7 @@ import numpy as np
 from scipy.interpolate import PchipInterpolator
 
 import record_nsc_atlas_compatible_evolution as producer
+from validation_source_successors import verify_saved_source
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 from recursive_horizons.nsc_atlas_nonlinear_boundary import hybrid_wall_boundary
 from recursive_horizons.nsc_atlas_reduced_cap import reduced_cap_metric
@@ -56,10 +57,8 @@ def authenticate(root=ROOT):
         candidate = (root / name).resolve()
         if not candidate.is_relative_to(root):
             raise ValueError("input binding exits the repository")
-        data = candidate.read_bytes()
+        data = verify_saved_source(name,expected,root)
         total_bytes += len(data)
-        if digest(data) != expected:
-            raise ValueError("input source binding mismatch: " + name)
         if name == producer.previous.RELATIVE_OUTPUT + "/coupled.json":
             retained[name] = data
     record = json.loads(raw)

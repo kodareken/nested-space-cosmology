@@ -10,6 +10,7 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_ssprk3_evolution as previous
 from recursive_horizons.nsc_atlas_refined_cache import make_refined_cache, validate_refined_cache
@@ -73,8 +74,7 @@ def load_inputs(budget):
             or set(bindings)!=set(previous.SOURCES) or len(bindings)!=80):
         raise ValueError("pinned SSPRK3 payload/manifest mismatch")
     for name,expected in bindings.items():
-        if digest((ROOT/name).read_bytes())!=expected:
-            raise ValueError("inherited source binding mismatch: "+name)
+        verify_saved_source(name, expected, ROOT)
     parent=json.loads(raw)
     background,base,identity=previous.load_inputs(budget)
     if (parent.get("schema")!=previous.SCHEMA or parent.get("settings")!=previous.SETTINGS
@@ -389,7 +389,7 @@ def check(directory):
     raw=(directory/"refinement.json").read_bytes()
     manifest=json.loads((directory/"manifest.json").read_bytes())
     bindings,runtime=source_bindings(),runtime_versions()
-    if (manifest.get("schema")!=SCHEMA+"-manifest" or manifest.get("source_bindings")!=bindings
+    if (manifest.get("schema")!=SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
             or manifest.get("outputs")!={"refinement.json":dict(sha256=digest(raw),bytes=len(raw))}):
         raise ValueError("refinement hash/source mismatch")
     budget.check()

@@ -15,16 +15,16 @@ from recursive_horizons.nsc_atlas_gradient_evolution import coupled_stage
 from test_nsc_atlas_reference_wall_gauge import GEOMETRY
 
 
-CONTROL = Budget(maximum_evaluations=300000, cpu_seconds=30.)
+from control_budget import ControlBudget
+
+CONTROL = ControlBudget(maximum_evaluations=300000, cpu_seconds=30.)
 TUBE = {"r": [.2, .8], "L": [-2., 2.], "c": [-4., 4.]}
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def gradient_control_budget():
-    yield CONTROL
-    CONTROL.check()
-    print("gradient stage/driver controls:", CONTROL.evaluations, "points;",
-          time.process_time()-CONTROL.started, "process CPU seconds")
+    with CONTROL.active() as shared:
+        yield shared
 
 
 def profile(scale=0.):

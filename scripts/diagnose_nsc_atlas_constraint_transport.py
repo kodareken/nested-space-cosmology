@@ -12,6 +12,7 @@ import uuid
 import numpy as np
 
 import record_nsc_atlas_ssprk3_refinement as producer
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,10 +68,8 @@ def authenticate(root, budget):
         candidate = (root / name).resolve()
         if not candidate.is_relative_to(root):
             raise ValueError("bound input exits repository")
-        data = candidate.read_bytes()
+        data = verify_saved_source(name,expected,root)
         hashed_bytes += len(data)
-        if digest(data) != expected:
-            raise ValueError("bound input changed: " + name)
         if name == BASE_INPUT:
             base_raw = data
     record = json.loads(raw)
@@ -334,6 +333,9 @@ def check(path, *, root=ROOT):
     budget = shared_budget()
     saved = json.loads(Path(path).read_bytes())
     current = audit(root,budget=budget)
+    if saved.get("audit_source_bindings") != current.get("audit_source_bindings"):
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=OWN_SOURCES)
+        current["audit_source_bindings"] = saved["audit_source_bindings"]
     for row in (saved,current):
         cpu = row["execution"].pop("cpu_seconds")
         if isinstance(cpu,bool) or not math.isfinite(cpu) or not 0 <= cpu <= 30.:

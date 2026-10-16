@@ -1,5 +1,33 @@
 # NSC storage: measured necessity and lean working tree
 
+## Current calculation outputs, 16 October 2026
+
+New raw calculation output belongs under ignored `.build/results/`. Commit
+compact summaries, input and producer identities, raw SHA256/byte counts,
+and the exact regeneration command. This keeps useful work backed up without
+adding every numerical array to Git. A summary records the calculation's
+status and limitations even when the research is unfinished.
+
+Use [summarize_result.py](../scripts/summarize_result.py) to preserve scalars
+and small structured records while replacing long numeric arrays with their
+length, range and canonical-content hash. These array descriptors identify
+omitted data; they are not substitutes for the arrays in later calculations.
+Regenerate the full output locally when an analysis needs those operands.
+CPU timings and raw byte hashes describe the recorded run; floating-point
+reproduction is assessed under its numerical comparison policy.
+
+[check_result_storage.py](../scripts/check_result_storage.py) rejects new or
+changed result JSON larger than 1 MiB. The
+[baseline](storage/result-payload-baseline.json) permits only byte-identical
+large files already tracked when this rule was introduced. Existing bound
+inputs and Git history remain recoverable. This is a forward storage rule,
+not an instruction to rerun old campaigns or silently replace their inputs.
+
+The first compact successor is the
+[terminal cap mass-functional summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json).
+Its full record remains local under `.build/results/`; the
+[reproduction guide](reproducing.md#current-work) gives its command.
+
 ## Current state, 2026-09-28
 
 **31.03 GiB of historical search NPZ payloads have left the active working tree.**

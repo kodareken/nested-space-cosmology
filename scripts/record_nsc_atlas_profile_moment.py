@@ -13,6 +13,7 @@ from pathlib import Path
 import time
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings
 
 from record_nsc_atlas_scalar_inputs import (
     SOURCES as INPUTS_SOURCES, BASE, TIMES, JET_KEYS, JET_DEFECTS, MARGINS,
@@ -298,7 +299,7 @@ def check(directory):
     manifest_path = directory/"manifest.json"
     manifest = json.loads(manifest_path.read_bytes())
     if (manifest_path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()):
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)):
         raise ValueError("profile moment source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "moment.json"}
             or set(manifest.get("outputs", {})) != {"moment.json"}):

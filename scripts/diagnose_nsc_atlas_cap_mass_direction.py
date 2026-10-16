@@ -14,6 +14,7 @@ import numpy as np
 
 import diagnose_nsc_atlas_cap_consistency as previous
 from analyze_nsc_atlas_cap_mass_direction import analyze
+from validation_source_successors import verify_saved_bindings
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-cap-mass-direction-audit-v1"
@@ -32,6 +33,7 @@ OWN_SOURCES = (*previous.OWN_SOURCES,
     "tests/test_diagnose_nsc_atlas_cap_mass_direction.py")
 Budget, plain, encoded, digest = previous.Budget, previous.plain, previous.encoded, previous.digest
 runtime_versions = previous.runtime_versions
+same_recomputed = previous.same_recomputed
 EXPECTED_CALLS = dict(metric_calls=20, rhs_calls=4, profile_constructions=1,
     profile_fits=0, stage_calls=0, prefix_calls=0, hybrid_calls=0,
     source_solves=0, gauge_quadratures=0, evolution_calls=0)
@@ -76,11 +78,12 @@ def authenticate(root,budget,bindings):
         raise ValueError("pinned cap audit mismatch")
     cap = json.loads(raw)
     current,_,cache,identity = previous.authenticate(root,budget)
-    expected = {name:bindings[name] for name in previous.OWN_SOURCES}
+    expected = cap.get("audit_source_bindings")
     if (cap.get("schema") != previous.SCHEMA or cap.get("scope") != previous.SCOPE
             or cap.get("limits") != previous.LIMITS or cap.get("runtime") != runtime_versions()
-            or cap.get("input") != identity or cap.get("audit_source_bindings") != expected):
+            or cap.get("input") != identity):
         raise ValueError("cap audit declaration/input/source mismatch")
+    verify_saved_bindings(expected,root,expected_paths=previous.OWN_SOURCES)
     budget.check()
     return current,cap,cache,dict(cap_path=CAP_INPUT,cap_sha256=cap_digest,cap_bytes=len(raw),
         cap_audit_source_bindings=expected,inherited=identity,cap_scientific_replays=0)
@@ -123,13 +126,15 @@ def _failure_receipt(error,root,budget,initial,phase):
     error.failure_receipt = str(receipt)
 
 
-def _validation(saved,current,cap_audit,cache,identity,bindings,budget):
+def _validation(saved,current,cap_audit,cache,identity,bindings,budget,*,root=ROOT):
     if (saved.get("schema") != SCHEMA or saved.get("scope") != SCOPE
             or saved.get("limits") != LIMITS or saved.get("input") != identity
-            or saved.get("audit_source_bindings") != bindings or saved.get("runtime") != runtime_versions()):
+            or saved.get("runtime") != runtime_versions()):
         raise ValueError("cap-mass-direction declaration mismatch")
+    if saved.get("audit_source_bindings") != bindings:
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=bindings)
     expected = _analysis(current,cap_audit,cache,budget)
-    if encoded(saved.get("analysis")) != encoded(expected):
+    if not same_recomputed(saved.get("analysis"),plain(expected)):
         raise ValueError("cap-mass-direction saved reconstruction mismatch")
     receipt = saved.get("execution",{})
     initial,cpu = receipt.get("initial_evaluations"),receipt.get("cpu_seconds")
@@ -161,7 +166,7 @@ def create(path, *, root=ROOT, budget=None):
             audit_source_bindings=bindings,runtime=runtime,analysis=result,
             execution=_execution(result["evaluated_points"],initial,time.process_time()-budget.started))
         phase = "creation validation"
-        _validation(payload,current,cap_audit,cache,identity,bindings,budget)
+        _validation(payload,current,cap_audit,cache,identity,bindings,budget,root=root)
         if bindings != _own_bindings(root) or runtime != runtime_versions():
             raise ValueError("cap-mass-direction producer/runtime changed during calculation")
         if budget.evaluations-initial != payload["execution"]["evaluated_points"]:
@@ -189,7 +194,7 @@ def check(path, *, root=ROOT, budget=None):
         phase = "check input authentication"
         current,cap_audit,cache,identity = authenticate(root,budget,bindings)
         phase = "check selected reconstruction"
-        cost = _validation(saved,current,cap_audit,cache,identity,bindings,budget)
+        cost = _validation(saved,current,cap_audit,cache,identity,bindings,budget,root=root)
         if bindings != _own_bindings(root) or runtime != runtime_versions():
             raise ValueError("cap-mass-direction producer/runtime changed during authentication")
         if budget.evaluations-start != cost:

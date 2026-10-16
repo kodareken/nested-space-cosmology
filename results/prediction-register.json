@@ -1,0 +1,109 @@
+{
+  "schema": "nsc-prediction-register-v1",
+  "document": "docs/prediction-register.md",
+  "entries": [
+    {
+      "id": "NSC-P001",
+      "title": "Quiet-anchored perturbative cap mass, wall displacement and exterior clock",
+      "registered_on": "2026-10-16",
+      "registration": {
+        "kind": "retrospective",
+        "evidence_previously_calculated": true,
+        "preregistered": false,
+        "withheld_observations": false
+      },
+      "status": "closed_conditional_perturbative_result",
+      "model_id": "conformal-scalar-cap-wall-schwarzschild-iv",
+      "parameters": {
+        "h": {"value": 1.0, "model_parameter": "H_ell", "role": "theory"},
+        "b": {"value": 2.0, "model_parameter": "k_ell", "role": "theory"},
+        "m": {"value": 0.4, "model_parameter": "M_over_ell", "role": "geometric_data"},
+        "xi": {"value": 0.16666666666666666, "model_parameter": "xi", "role": "theory"}
+      },
+      "domain": {
+        "reference_radius_over_ell": [0.45, 0.55],
+        "branch": "expanding_timelike",
+        "source": "original_C3_compact_characteristic_preparation",
+        "quiet_cap_and_bottom": true,
+        "no_return": true,
+        "normal_orientation": "cap_to_exterior",
+        "frame": "Jordan"
+      },
+      "expansion": {
+        "alpha": "kappa_4*epsilon^2/ell^2",
+        "units": "dimensionless_coefficients",
+        "wall_time": "s=tau_wall/ell",
+        "mu_plus": "m_plus/ell=m+alpha*mu_plus+O(alpha^2)",
+        "nu_minus": "m_minus/ell=h^2*r^3/2+alpha*nu_minus+O(alpha^2), vacuum at actual radius r",
+        "rho": "r=x+alpha*rho+O(alpha^2)",
+        "eta": "V_W=V0*(1+alpha*eta)+O(alpha^2); exterior embedding, not central proper time"
+      },
+      "prediction_point": {
+        "reference_radius_over_ell": 0.55,
+        "normalized_V": 1.0,
+        "evidence": "wall_field",
+        "pointer": "/solutions/1/wall_samples/8"
+      },
+      "coefficients": {
+        "mu_plus": {"value": -28.88342232555452, "field_refinement_maximum_absolute_difference": 3.3761187623326805e-7},
+        "nu_minus": {"value": 17.759078420520662, "field_refinement_maximum_absolute_difference": 2.088306541025986e-7},
+        "rho": {"value": -5.2868390416906355, "field_refinement_maximum_absolute_difference": 3.6360701116677774e-8},
+        "eta": {"value": -0.8178125677354874, "field_refinement_maximum_absolute_difference": 3.5651870344821646e-9}
+      },
+      "identities": {
+        "delta_mean_K": {
+          "value": "0",
+          "order": "coefficient_of_alpha",
+          "evidence": "cap_wall",
+          "pointer": "/exact_algebra/zero_residuals/linear_mean_curvature_variation_vanishes"
+        },
+        "delta_a_plus_minus_delta_a_minus": {
+          "value": "0",
+          "order": "coefficient_of_alpha",
+          "evidence": "cap_wall",
+          "pointer": "/exact_algebra/zero_residuals/temporal_jump_from_angular_and_mixed_flux",
+          "common_value_formula": "6*m*rho/(b*x^4)-2*(mu_plus-nu_minus)/(b*x^3)"
+        }
+      },
+      "uncertainty": {
+        "kind": "sampled_field_grid_sensitivity",
+        "field_nodes": [129, 257],
+        "sample_count": 9,
+        "source_pointer": "/wall_differences/{coefficient}/maximum_absolute_difference",
+        "scope": "maximum over nine common cuts; not an endpoint-specific or total error bound",
+        "other_settings_held_fixed": true,
+        "rigorous_error_enclosure": false,
+        "finite_alpha_selected": false,
+        "finite_amplitude_remainder_bound": null
+      },
+      "observational_test": {
+        "status": "pending",
+        "calibration": "none",
+        "parameters_chosen_as_model_inputs": true,
+        "data_refs": [],
+        "physical_source_selected": false,
+        "SI_scale_selected": false,
+        "future_comparison_uncertainty": null
+      },
+      "rejection": {
+        "fixed_assumption_identity_failure": "Reject the conditional identity if an independent derivation under the same action, source, domain, orientation and order yields a nonzero residual.",
+        "independent_prediction_test": "Once an independent comparison and its uncertainty are supplied, reject agreement if the prediction lies outside that declared uncertainty; the present field-grid differences are not an observational acceptance band."
+      },
+      "open_limits": [
+        "nonlinear_finite_amplitude_closure",
+        "uniform_remainder_and_total_numerical_error",
+        "physical_preparation_and_observational_identification",
+        "formation_stability_and_multi_region_composition"
+      ],
+      "evidence": {
+        "cap_wall_owner": {"path": "docs/nsc-atlas-cap-wall-response.md", "bytes": 11063, "sha256": "7f8f6fdbbee7f0fb53596b1352b0cda521eb027a381d398c79eda9bf60629856"},
+        "wall_owner": {"path": "docs/nsc-atlas-wall-evolution.md", "bytes": 6888, "sha256": "c4f8cdf4188becda0a81235c94e65116bfc4094589525f555ecf414fc6beaee4"},
+        "model": {"path": "results/development/nsc-atlas-cap-wall-response-v1/model-specification.json", "bytes": 8463, "sha256": "eae0428f83ab112f360593ce954a4bf963775fd98935deeaea4a8d70db09da69"},
+        "cap_wall": {"path": "results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json", "bytes": 3492, "sha256": "6e27679a3cedcbd6895273d66c43f28e223af1448c005384e99f8418c7072aad"},
+        "cap_wall_manifest": {"path": "results/development/nsc-atlas-cap-wall-response-v1/manifest.json", "bytes": 1622, "sha256": "abb1d36373e223b2f97ef86622ad83d53ff2828d5e5b073a16034cfe20269cfc"},
+        "wall_field": {"path": "results/development/nsc-atlas-wall-evolution-v1/field/response.json", "bytes": 21058, "sha256": "07ec4b40a491b537a85768ff82218d0e6e7726357aafd0555e45a9940dd7009c"},
+        "wall_field_manifest": {"path": "results/development/nsc-atlas-wall-evolution-v1/field/manifest.json", "bytes": 2919, "sha256": "ee033123d163061402c48b098bed9be73ef54df391fae18b7f444d1a481eb35d"}
+      }
+    }
+  ]
+}

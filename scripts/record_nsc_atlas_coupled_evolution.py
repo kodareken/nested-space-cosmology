@@ -17,6 +17,7 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 from scipy.special import lambertw
 
 import record_nsc_atlas_nonlinear_rectangle as previous
@@ -274,7 +275,10 @@ def calculate(budget=None):
 
 
 def _equal(actual, expected, label):
-    if encoded(actual) != encoded(expected):
+    # Saved data hashes remain exact. Re-evaluated arithmetic is portable at
+    # binary64 roundoff, while keys, shapes, integer counters and flags remain
+    # exact. Descendant checkers share this validation-only comparison.
+    if not previous._same_recomputed(plain(actual), plain(expected)):
         raise ValueError(label+" mismatch")
 
 
@@ -543,7 +547,7 @@ def check(directory):
             or any(path.is_symlink() for path in directory.iterdir())):
         raise ValueError("coupled output inventory mismatch")
     manifest = json.loads((directory/"manifest.json").read_bytes())
-    if manifest.get("schema") != SCHEMA+"-manifest" or manifest.get("source_bindings") != source_bindings():
+    if manifest.get("schema") != SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES):
         raise ValueError("coupled source binding/manifest mismatch")
     raw = (directory/"coupled.json").read_bytes()
     if manifest.get("outputs") != {"coupled.json": dict(sha256=digest(raw), bytes=len(raw))}:

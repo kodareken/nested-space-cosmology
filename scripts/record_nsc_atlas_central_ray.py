@@ -9,6 +9,7 @@ from pathlib import Path
 import time
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_central_scalar as base
 from record_nsc_atlas_scalar_inputs import _plain, _real, _count, _equal, digest, encoded, runtime_versions
@@ -263,7 +264,7 @@ def check(directory):
     path = directory/"manifest.json"
     manifest = json.loads(path.read_bytes())
     if (path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()):
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)):
         raise ValueError("central ray source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "ray.json"}
             or set(manifest.get("outputs", {})) != {"ray.json"}):

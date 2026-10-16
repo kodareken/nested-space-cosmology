@@ -14,6 +14,7 @@ import time
 from types import SimpleNamespace
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings
 
 from record_nsc_atlas_scalar_inputs import (
     BASE, SOURCES as INPUT_SOURCES, DOMAIN_KEYS, FORCING_ARRAYS, FORCING_COUNTS,
@@ -318,7 +319,7 @@ def check(directory):
     path = directory/"manifest.json"
     manifest = json.loads(path.read_bytes())
     if (path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()):
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)):
         raise ValueError("forcing cache source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "cache.json"}
             or set(manifest.get("outputs", {})) != {"cache.json"}):

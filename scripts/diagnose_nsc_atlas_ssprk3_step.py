@@ -15,6 +15,7 @@ import time
 import numpy as np
 
 import diagnose_nsc_atlas_background_step as previous
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 from recursive_horizons.nsc_atlas_background_ssprk3 import advance_background_ssprk3
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,8 +51,7 @@ def authenticate(root=ROOT):
             or set(saved.get("audit_source_bindings", {})) != set(previous.SOURCES)):
         raise ValueError("pinned SSPRK2 declaration mismatch")
     for name, expected in saved["audit_source_bindings"].items():
-        if digest((root/name).read_bytes()) != expected:
-            raise ValueError("SSPRK2 source binding mismatch: "+name)
+        verify_saved_source(name,expected,root)
     settings = saved["settings"]
     if (settings["cases"] != list(CASES) or settings["cut"] != CUT
             or settings["cache_indices"] != [328, 329, 330]
@@ -273,6 +273,10 @@ def create(path, *, root=ROOT):
 def check(path, *, root=ROOT):
     saved = json.loads(Path(path).read_bytes())
     current = audit(root)
+    # Provenance is authenticated separately; scientific fields remain exact.
+    if saved.get("audit_source_bindings") != current.get("audit_source_bindings"):
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=SOURCES)
+        current["audit_source_bindings"] = saved["audit_source_bindings"]
     for row in (saved, current):
         cpu = row["execution"].pop("cpu_seconds")
         if isinstance(cpu, bool) or not math.isfinite(cpu) or not 0 <= cpu <= 30:

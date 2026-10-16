@@ -14,6 +14,7 @@ import numpy as np
 
 import diagnose_nsc_atlas_boundary_rows as previous
 from analyze_nsc_atlas_cap_consistency import analyze
+from validation_source_successors import verify_saved_bindings
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-cap-consistency-audit-v1"
@@ -30,6 +31,7 @@ OWN_SOURCES = (*previous.OWN_SOURCES,
     "tests/test_diagnose_nsc_atlas_cap_consistency.py")
 Budget, plain, encoded, digest = previous.Budget, previous.plain, previous.encoded, previous.digest
 runtime_versions, authenticate = previous.runtime_versions, previous.authenticate
+same_recomputed = previous.same_recomputed
 EXPECTED_CALLS = dict(metric_calls=64, prefix_calls=12, hybrid_calls=12,
     profile_constructions=1, profile_fits=0, stage_calls=0, rhs_calls=0,
     source_solves=0, gauge_quadratures=0, evolution_calls=0)
@@ -95,13 +97,15 @@ def _failure_receipt(error,root,budget,initial,phase):
     error.failure_receipt = str(receipt)
 
 
-def _validation(saved,current,cache,identity,bindings,budget):
+def _validation(saved,current,cache,identity,bindings,budget,*,root=ROOT):
     if (saved.get("schema") != SCHEMA or saved.get("scope") != SCOPE
             or saved.get("limits") != LIMITS or saved.get("input") != identity
-            or saved.get("audit_source_bindings") != bindings or saved.get("runtime") != runtime_versions()):
+            or saved.get("runtime") != runtime_versions()):
         raise ValueError("cap-consistency declaration mismatch")
+    if saved.get("audit_source_bindings") != bindings:
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=bindings)
     expected = _analysis(current,cache,budget)
-    if encoded(saved.get("analysis")) != encoded(expected):
+    if not same_recomputed(saved.get("analysis"),plain(expected)):
         raise ValueError("cap-consistency saved reconstruction mismatch")
     receipt = saved.get("execution",{})
     initial,cpu = receipt.get("initial_evaluations"),receipt.get("cpu_seconds")
@@ -133,7 +137,7 @@ def create(path, *, root=ROOT, budget=None):
             audit_source_bindings=bindings,runtime=runtime,analysis=result,
             execution=_execution(result["evaluated_points"],initial,time.process_time()-budget.started))
         phase = "creation validation"
-        _validation(payload,current,cache,identity,bindings,budget)
+        _validation(payload,current,cache,identity,bindings,budget,root=root)
         if bindings != _own_bindings(root) or runtime != runtime_versions():
             raise ValueError("cap-consistency producer/runtime changed during calculation")
         if budget.evaluations-initial != payload["execution"]["evaluated_points"]:
@@ -161,7 +165,7 @@ def check(path, *, root=ROOT, budget=None):
         phase = "check input authentication"
         current,_,cache,identity = authenticate(root,budget)
         phase = "check selected reconstruction"
-        cost = _validation(saved,current,cache,identity,bindings,budget)
+        cost = _validation(saved,current,cache,identity,bindings,budget,root=root)
         if bindings != _own_bindings(root) or runtime != runtime_versions():
             raise ValueError("cap-consistency producer/runtime changed during authentication")
         if budget.evaluations-start != cost:

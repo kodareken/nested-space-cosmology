@@ -188,6 +188,7 @@ def test_frozen_quadrature_holds_state_and_profile(monkeypatch):
 def test_create_check_behavior_and_shared_ceiling(tmp_path,monkeypatch):
     monkeypatch.setattr(tool,"ROOT",tmp_path)
     monkeypatch.setattr(tool,"source_bindings",lambda:dict(source="fixed"))
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     runtime=tool.runtime_versions()
     def calculate(budget):
         budget.check(70)
@@ -213,6 +214,7 @@ def test_creation_source_drift_during_authentication_leaves_failure_receipt(tmp_
     monkeypatch.setattr(tool,"ROOT",tmp_path)
     state={"changed":False}
     monkeypatch.setattr(tool,"source_bindings",lambda:dict(source="after" if state["changed"] else "before"))
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     monkeypatch.setattr(tool,"calculate",lambda budget:dict(runtime=tool.runtime_versions(),execution=dict(evaluations=0)))
     def validate(*args,**kwargs):
         state["changed"]=True

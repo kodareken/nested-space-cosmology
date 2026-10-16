@@ -177,7 +177,7 @@ def test_pinned_parent_and_all92_paths_without_validator(tmp_path,budget,monkeyp
     got=ORIGINAL_LOAD(budget)
     assert got[3]["authenticated_input_files"]==92 and got[2]==base and got[1]==ancestor
     (tmp_path/names[0]).write_text("changed")
-    with pytest.raises(ValueError,match="source changed"):ORIGINAL_LOAD(budget)
+    with pytest.raises(ValueError,match="source.*chang|binding"):ORIGINAL_LOAD(budget)
     manifest["source_bindings"][names[0]]=tool.digest(b"changed");path.with_name("manifest.json").write_bytes(tool.encoded(manifest))
     with pytest.raises(ValueError,match="pinned"):ORIGINAL_LOAD(budget)
 
@@ -187,6 +187,7 @@ def test_creation_and_check_share_live_allowance_no_overwrite_and_auth_drift(tmp
     monkeypatch.setattr(tool,"Budget",lambda **kwargs:budget)
     bindings=dict(frozen="one")
     monkeypatch.setattr(tool,"source_bindings",lambda:dict(bindings))
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     calls=[]
     def calculate(shared):
         assert shared is budget;shared.check(2)

@@ -10,6 +10,7 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_spatial_refinement as previous
 from analyze_nsc_atlas_operator_comparison import diagnostics
@@ -91,9 +92,7 @@ def load_inputs(budget):
         path = (ROOT/name).resolve()
         if not path.is_relative_to(ROOT.resolve()):
             raise ValueError("bound input exits the repository")
-        data = path.read_bytes()
-        if digest(data) != expected:
-            raise ValueError("inherited source changed: "+name)
+        data = verify_saved_source(name, expected, ROOT)
         if name in (BASE_INPUT,CACHE_INPUT):
             retained[name] = data
     parent = json.loads(raw)
@@ -315,7 +314,7 @@ def check(directory):
     raw = (directory/"operator.json").read_bytes()
     manifest = json.loads((directory/"manifest.json").read_bytes())
     bindings,runtime = source_bindings(),runtime_versions()
-    if (manifest.get("schema") != SCHEMA+"-manifest" or manifest.get("source_bindings") != bindings
+    if (manifest.get("schema") != SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
             or manifest.get("outputs") != {"operator.json":dict(sha256=digest(raw),bytes=len(raw))}):
         raise ValueError("operator-comparison hash/source mismatch")
     result = validate_record(json.loads(raw),budget)

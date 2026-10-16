@@ -2713,8 +2713,7 @@ The zero-backreaction terminal profile reaches its upper supplied label,
 so a forward finite perturbation can exit the domain. An analytic tangent
 or explicitly backward probes must preserve that boundary.
 
-This identifies the next selected-state calculation; it has not yet been
-evaluated. It separates instantaneous spatial/flux compatibility from
+The completed selected-state calculation below separates instantaneous spatial/flux compatibility from
 time differentiation of saved histories, without supplying a continuum
 error bound or changing the physical wall law.
 
@@ -2766,6 +2765,18 @@ Report `e_hist,hyb-e_hist` separately. The already recorded `n_T,T_x,R_x`
 and radial derivative recover `D_x^hist n_W`; this bridge needs no new
 metric or evolution. Without it, a directional-versus-history comparison
 would also contain changed wall and clock rates.
+
+The [completed directional calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+finds finest finite `e_m^dir=-0.6612504470`, with order sensitivity
+`1.09497e-5`, compared with `e_hist,hyb=-0.6407403055`.
+The last two widths differ by `0.000515001`; the finest stencil has no
+recorded limiter branch changes. Thus the mass discrepancy survives
+direct use of the implemented rates. The earlier small terminal radial
+mass and lapse residuals do not imply temporal mass compatibility.
+An exact discrete balance must now separate geometry/background changes,
+boundary flux, interior flux and reaction contributions. This result
+does not assign the discrepancy to a particular coupling term or establish
+a physical junction failure. Further grid scans are not the next step.
 
 ### Central clock in general null labels
 

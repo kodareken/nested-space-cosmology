@@ -227,6 +227,7 @@ def test_creation_check_shared_clocks_hashes_and_failure_receipt(tmp_path,monkey
         assert created and created[-1].started<=time.process_time()
         return dict(source="changed" if changed["value"] else "fixed")
     monkeypatch.setattr(tool,"source_bindings",bindings)
+    monkeypatch.setattr(tool, "verify_saved_bindings", lambda expected, root, **kw: expected == tool.source_bindings())
     calls=[]
     def calculate(shared):
         calls.append(shared); shared.check(20)

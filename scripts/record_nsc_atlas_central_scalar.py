@@ -13,6 +13,7 @@ from pathlib import Path
 import time
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_cap_response as cap_record
 import record_nsc_atlas_lift_clock as clock_record
@@ -372,7 +373,7 @@ def check(directory):
     path = directory/"manifest.json"
     manifest = json.loads(path.read_bytes())
     if (path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()):
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)):
         raise ValueError("central scalar source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "central.json"}
             or set(manifest.get("outputs", {})) != {"central.json"}):

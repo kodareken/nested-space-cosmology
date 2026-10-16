@@ -15,6 +15,7 @@ import numpy as np
 from .nsc_atlas_characteristic_initialization import Budget
 from .nsc_atlas_characteristic_trace import SourceSnapshot
 from .nsc_atlas_reference_wall_gauge import ReferenceWallGauge
+from .nsc_atlas_validation import source_jet_roundoff_tolerances
 
 SCHEMA = "nsc-atlas-refined-cache-v1"
 GAUGE_TOLERANCE = 5e-12
@@ -74,6 +75,61 @@ def _exact_rows(actual,expected,label,budget):
         budget.check(b.size)
         if a.shape!=b.shape or not np.array_equal(a.view(np.uint64),b.view(np.uint64)):
             raise ValueError(label+" differs: "+key)
+
+
+def _replay_rows(actual,expected,label,*,geometry=None,budget=None,gauge=False):
+    """Validation-only roundoff comparison; copied rows use _exact_rows instead.
+
+    The analytic scalar allowance is conditioned on the null-label evaluation.
+    Coordinates and iteration counts stay exact. These comparisons do not add
+    scientific queries; when replacing an existing comparison its charges are
+    retained. The caller's CPU clock covers every comparison.
+    """
+    if set(actual)!=set(expected):
+        raise ValueError(label+" field inventory differs")
+    pulse = {} if geometry is None else dict(zip(("c","c_x","c_xx"),
+        source_jet_roundoff_tolerances(np.asarray(expected["x"]),geometry,second=True)))
+    for key in expected:
+        a,b=np.asarray(actual[key],dtype=float),np.asarray(expected[key],dtype=float)
+        if budget is not None:
+            budget.check(b.size)
+        if a.shape!=b.shape or not np.all(np.isfinite(a)) or not np.all(np.isfinite(b)):
+            raise ValueError(label+" differs: "+key)
+        if key in {"x","inverse_iterations"}:
+            same=np.array_equal(a.view(np.uint64),b.view(np.uint64))
+            if key=="inverse_iterations":
+                same=bool(same and all(type(x) is type(y) for x,y in zip(_plain(actual[key]),_plain(expected[key]))))
+        else:
+            atol=GAUGE_TOLERANCE if gauge else 2e-13+pulse.get(key,0.)
+            same=np.allclose(a,b,rtol=2e-12,atol=atol)
+            if key in pulse:
+                quiet=(b==0)&(pulse[key]==0)
+                same=bool(same and np.all(a[quiet]==0))
+        if not same:
+            raise ValueError(label+" differs: "+key)
+
+
+def _same_replayed(actual,expected):
+    """Exact structure/counters with bounded floating replay differences."""
+    if isinstance(expected,dict):
+        return isinstance(actual,dict) and set(actual)==set(expected) and all(
+            _same_replayed(actual[k],v) for k,v in expected.items())
+    if isinstance(expected,list):
+        return isinstance(actual,list) and len(actual)==len(expected) and all(
+            _same_replayed(a,b) for a,b in zip(actual,expected))
+    if type(expected) is float:
+        return type(actual) is float and math.isfinite(actual) and math.isfinite(expected) and math.isclose(
+            actual,expected,rel_tol=2e-12,abs_tol=2e-13)
+    return type(actual) is type(expected) and actual==expected
+
+
+def _same_copied_rows(actual,original):
+    """Copied JSON rows retain numeric types and signed zero as well as values."""
+    if set(actual)!=set(original):
+        return False
+    copied={key:actual[key][::2] for key in original}
+    return json.dumps(copied,sort_keys=True,separators=(",",":"),allow_nan=False)==json.dumps(
+        _plain(original),sort_keys=True,separators=(",",":"),allow_nan=False)
 
 
 def _midpoints(x,budget):
@@ -146,7 +202,7 @@ def _compare_gauges(fine,coarse,budget):
     return differences
 
 
-def make_refined_cache(base,budget):
+def make_refined_cache(base,budget,*,_validation=False):
     """Return JSON-compatible1025-row cache; all work uses the caller budget.
 
     No initial budget count or elapsed time is stored, so rebuilding the same
@@ -175,7 +231,11 @@ def make_refined_cache(base,budget):
         snapshot=SourceSnapshot(base["geometry"],alpha=data["alpha"],x_nodes=x[::4],
             source_rows={key:value[::2] for key,value in exact.items()},budget=budget)
         reproduced=snapshot.sample(x)
-        _exact_rows(reproduced,old,label+" old source reproduction",budget)
+        if _validation:
+            _replay_rows(reproduced,old,label+" old source reproduction",
+                         geometry=base["geometry"],budget=budget)
+        else:
+            _exact_rows(reproduced,old,label+" old source reproduction",budget)
         new=_table(snapshot.sample(mid),512,label+" midpoint source",budget)
         _exact_rows({"x":new["x"]},{"x":mid},"new source keys",budget)
         source_rows[label]=_interleave(data["snapshot_rows"],new,budget)
@@ -224,9 +284,32 @@ def validate_refined_cache(cache,base,budget):
         supplied=json.dumps(cache,sort_keys=True,separators=(",",":"),allow_nan=False)
     except (ValueError,TypeError,OverflowError) as error:
         raise ValueError("refined cache must be finite JSON-compatible data") from error
-    reconstructed=make_refined_cache(base,budget)
-    if supplied!=json.dumps(reconstructed,sort_keys=True,separators=(",",":"),allow_nan=False):
-        raise ValueError("refined cache differs from deterministic reconstruction")
+    reconstructed=make_refined_cache(base,budget,_validation=True)
+    # The historical513 row bytes and all cache keys remain exact. Only newly
+    # recomputed floating arithmetic is compared numerically; nothing is replaced.
+    try:
+        if not np.array_equal(np.asarray(cache["x_nodes"]).view(np.uint64),
+                              np.asarray(reconstructed["x_nodes"]).view(np.uint64)):
+            raise ValueError("cache keys differ")
+        if set(cache["source_rows"])!=set(reconstructed["source_rows"]):
+            raise ValueError("source label inventory differs")
+        for label in ("zero","finite"):
+            old=base["initial_data"][label]["snapshot_rows"]
+            table=cache["source_rows"][label]
+            if not _same_copied_rows(table,old):
+                raise ValueError("copied source rows differ")
+            _replay_rows(table,reconstructed["source_rows"][label],"source replay",geometry=base["geometry"])
+        old=base["gauge"]["rows"]
+        table=cache["gauge_rows"]
+        if not _same_copied_rows(table,old):
+            raise ValueError("copied gauge rows differ")
+        _replay_rows(table,reconstructed["gauge_rows"],"gauge replay",gauge=True)
+        keys=set(reconstructed)-{"x_nodes","source_rows","gauge_rows"}
+        if set(cache)!=set(reconstructed) or not _same_replayed(
+                {k:cache[k] for k in keys},{k:reconstructed[k] for k in keys}):
+            raise ValueError("cache declarations or diagnostics differ")
+    except (KeyError,TypeError,ValueError) as error:
+        raise ValueError("refined cache differs from deterministic reconstruction: "+str(error)) from error
     budget.check()
     return dict(validation_evaluations=budget.evaluations-start,source_integrations=0,
                 regional_marches=0,time_evolutions=0)

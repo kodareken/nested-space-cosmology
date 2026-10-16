@@ -3,12 +3,12 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ea90ff02d045ad1e4e180fc767c8394580f1534a",
+  "current_receipt_commit_parent": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "files": [
     {
-      "bytes": 1506,
-      "change": "Explicit authentication archive/runtime successor for approved history compaction",
-      "changed_from_commit": "cab9d5e1aa1dfa9e70e4e68f92ad1c34bc9eb6a5",
+      "bytes": 1875,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
       "import_bytes": 366,
       "import_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -16,7 +16,7 @@
       "original_path": "lab/.github/workflows/verify.yml",
       "original_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
       "path": ".github/workflows/verify.yml",
-      "sha256": "95d65047588fc797774b0d32fa37454300b2c4ce1dd517eacc9e16df7dee5c27"
+      "sha256": "0e3e49f2e638dcd6e957d7e446bda23f38fe5bb4858ba2f22ba547e275642e8f"
     },
     {
       "bytes": 9326,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 11061,
+      "bytes": 11518,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "58216a881e92b2be7b995440236f31abb19e56a5",
+      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "8ebc91137df6d074f04a1b495d8e9191dbb86c4713896aa8c4f956a7d4ed8f34"
+      "sha256": "37931125da3ba6cb5043beacff569aa507833c057444000dc0eb0607ff8b5e62"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 205900,
+      "bytes": 207105,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "58216a881e92b2be7b995440236f31abb19e56a5",
+      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "88746ed6bf04aab7353ac2f03cf6c40f877548b549e1f6a2aade02c74bd77fa4"
+      "sha256": "faff361c1bf8117fdb9c9bd3ce1e29b2e0f995c1de59c2425d7b29a6fec2a788"
     },
     {
       "bytes": 9543,
@@ -10301,9 +10301,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 18416,
-      "change": "explicit successor after consolidation; original import fields preserved",
-      "changed_from_commit": "a1f7faa05cb8b5ef3e2762166bbef843b0b01805",
+      "bytes": 18915,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
       "import_bytes": 2361,
       "import_sha256": "fd4043a700bfd862443c97011f41d8dfc26e987d1a2d59df05cdc36108b8be83",
       "migration_disposition": "folded_into_current_root_owner",
@@ -10311,7 +10311,7 @@
       "original_path": "lab/docs/instructions.md",
       "original_sha256": "9a82dcdfcb22e91c844845a8d8e9f1c79266c13aa3d5a9b299e92896886e556c",
       "path": "docs/instructions.md",
-      "sha256": "8853011186c4ecff3845a28a6e2488d6dad95a25ca2641ed37966916f90471dd"
+      "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
       "bytes": 15208,
@@ -11277,7 +11277,9 @@
       "sha256": "ec78892ad6674bc818f5964ba306c276b6c0c3fddf282e7df7730a94484d23f0"
     },
     {
-      "bytes": 7188,
+      "bytes": 8803,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
       "import_bytes": 7159,
       "import_sha256": "1985c325b96d5556c4cd02431fdc0496033df2d0c3e7a3b0de69d58b4ce192af",
       "migration_disposition": "active_owner",
@@ -11285,7 +11287,7 @@
       "original_path": "lab/docs/nsc-storage.md",
       "original_sha256": "1985c325b96d5556c4cd02431fdc0496033df2d0c3e7a3b0de69d58b4ce192af",
       "path": "docs/nsc-storage.md",
-      "sha256": "0b9c181d9dd390b1e4266d2e773b324d397bd45bfc54a77fa9968a23020a2511"
+      "sha256": "0452c02c6a2aa452b9c29fbbf3ca75e1bce89bbcf66e7398d212db7c1b659dd6"
     },
     {
       "bytes": 5475,
@@ -19643,6 +19645,70 @@
       "restored_from_commit": "4390d23901b666659c7c419ba3fdf8c9a08a9794",
       "retention_reason": "kept test failed while loading this exact deleted input",
       "sha256": "723e0f474b87b22b6511afaba68f86934bad5b3f846c6de9efb6d208648109a7"
+    },
+    {
+      "bytes": 35955,
+      "git_blob_at_registration": "35443a2998f6481e5f7693c3c8e561d82f4c1a0f",
+      "path": "results/development/nsc-atlas-background-step-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "a94a40a9a57f5b435b32d8d43005115650348f44d84a4ab67d49c3a181907aa4"
+    },
+    {
+      "bytes": 50129,
+      "git_blob_at_registration": "f9732bce375f83143a26239292a57f989b7d8d5b",
+      "path": "results/development/nsc-atlas-background-time-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "9d21bba1013a03cd6f58af6645893e7b8a2e421fda11514cf8bf224b9f59db7a"
+    },
+    {
+      "bytes": 468207,
+      "git_blob_at_registration": "fccadb1e29bc42245c89e6b216a9b085744f7e75",
+      "path": "results/development/nsc-atlas-boundary-rows-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "f2f33cfc7e539ef65b3960d1d4b1f532c938325f2fe414b79915882b84be0f02"
+    },
+    {
+      "bytes": 820093,
+      "git_blob_at_registration": "e9216bb0e483bfc7d1be21f7958b55abc927252f",
+      "path": "results/development/nsc-atlas-cap-consistency-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728"
+    },
+    {
+      "bytes": 185060,
+      "git_blob_at_registration": "1a53f752d18a7050d1591be75d1b342cedeec2be",
+      "path": "results/development/nsc-atlas-compatible-transport-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "d8257ce102e68c7007593c7317deee3e5b38394d9b6de9418a3a42440dbb4f2d"
+    },
+    {
+      "bytes": 5758447,
+      "git_blob_at_registration": "9cfa4ea0bea143c36fb1daa98eafcb9b7174268c",
+      "path": "results/development/nsc-atlas-constraint-transport-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "72e0205dbe8d2854307fc6ef3d5dd761327c75c3451fc5bd11ed6952ce2db9e0"
+    },
+    {
+      "bytes": 27317,
+      "git_blob_at_registration": "a2e0e0853633975888e80127bc89a40bdcc94812",
+      "path": "results/development/nsc-atlas-ssprk3-step-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "9a549c59b9e40a8b9f45207c79ba638cab3409e44bb4c327e4a5b44c0ba9749a"
+    },
+    {
+      "bytes": 12343277,
+      "git_blob_at_registration": "41f1285dc158365e45cd06b6234a294f378774ea",
+      "path": "results/development/nsc-atlas-wall-constraint-audit-v1.json",
+      "provenance_role": "current finite diagnostic; registered without numerical regeneration",
+      "registered_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "sha256": "0cea406caa7c66d9b19c9693cf8b2f7bf6c09927c8b20dbd4447f8a1301131c8"
     },
     {
       "bytes": 13289,
@@ -29354,6 +29420,12 @@
       "sha256": "ddeadeb106d2d7827ec9cdddc897e6f4cf591ae19d7806689f3d4eb975e6d19a"
     },
     {
+      "bytes": 5916,
+      "path": "results/prediction-register.json",
+      "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
+      "sha256": "a4cbddf67fcc30ea29e2f52c38f0bf4e1da53979acfe7e94f0454cbf3d34db13"
+    },
+    {
       "bytes": 11412,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "ea5e334ce025c10df89d61c470082bedf0fbb07a",
@@ -29407,6 +29479,14 @@
       "original_path": "lab/results/research-reset/unowned-families.json",
       "path": "results/research-reset/unowned-families.json",
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
+    },
+    {
+      "bytes": 318358,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "path": "results/summaries/nsc-atlas-cap-mass-direction-v1.json",
+      "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
+      "sha256": "9092a6f4d6dd2a58f7b3b31e0dc2d5c33b1a33c05755fe94501579bd808ebd7e"
     },
     {
       "bytes": 899,

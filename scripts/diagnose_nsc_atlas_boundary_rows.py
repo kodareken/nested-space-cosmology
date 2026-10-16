@@ -18,6 +18,8 @@ import numpy as np
 
 import record_nsc_atlas_operator_comparison as producer
 import analyze_nsc_atlas_spatial_refinement as spatial
+from validation_source_successors import verify_saved_bindings, verify_saved_source
+from record_nsc_atlas_nonlinear_rectangle import _same_recomputed as same_recomputed
 from recursive_horizons.nsc_atlas_departure_gradient import (
     quadratic_departure_gradient, first_order_departure_gradient,
 )
@@ -77,9 +79,7 @@ def authenticate(root,budget):
         p=(root/name).resolve()
         if not p.is_relative_to(root):
             raise ValueError("input binding exits repository")
-        data=p.read_bytes(); hashed_bytes+=len(data)
-        if digest(data)!=expected:
-            raise ValueError("input binding changed: "+name)
+        data=verify_saved_source(name,expected,root); hashed_bytes+=len(data)
         if name in (producer.INPUT,producer.CACHE_INPUT):
             retained[name]=data
     if set(retained)!={producer.INPUT,producer.CACHE_INPUT}:
@@ -290,13 +290,18 @@ def _own_bindings(root):
     return {name:digest((Path(root)/name).read_bytes()) for name in OWN_SOURCES}
 
 
-def _validation(saved,inputs,identity,bindings,budget):
+def _validation(saved,inputs,identity,bindings,budget,*,root=ROOT):
     if (saved.get("schema")!=SCHEMA or saved.get("scope")!=SCOPE or saved.get("limits")!=LIMITS
-            or saved.get("input")!=identity or saved.get("audit_source_bindings")!=bindings
+            or saved.get("input")!=identity
             or saved.get("runtime")!=runtime_versions()):
         raise ValueError("boundary-row audit declaration mismatch")
+    if saved.get("audit_source_bindings") != bindings:
+        try:
+            verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=bindings)
+        except ValueError as error:
+            raise ValueError("boundary-row audit declaration mismatch: " + str(error)) from error
     expected=analyze(*inputs,budget)
-    if encoded(saved.get("analysis"))!=encoded(expected):
+    if not same_recomputed(saved.get("analysis"),plain(expected)):
         raise ValueError("boundary-row saved arithmetic mismatch")
     e=saved["execution"]; cost=expected["evaluated_points"]
     if (set(e)!={"analysis_evaluations","creation_validation_evaluations","evaluated_points","initial_evaluations",
@@ -328,7 +333,7 @@ def create(path,*,root=ROOT,budget=None):
                 stage_calls=0,time_steps=0,source_integrations=0,gauge_quadratures=0,profile_evaluations=0,
                 history_reconstructions=0,scientific_validator_calls=0)))
         phase="creation validation"
-        _validation(payload,(current,old,cache),identity,bindings,budget)
+        _validation(payload,(current,old,cache),identity,bindings,budget,root=root)
         if bindings!=_own_bindings(root): raise ValueError("audit producer changed during calculation")
         payload["execution"]["cpu_seconds"]=time.process_time()-budget.started
         budget.check(); raw=encoded(payload); budget.check()
@@ -350,7 +355,7 @@ def check(path,*,root=ROOT,budget=None):
     budget=shared_budget(budget); start=budget.evaluations
     saved=json.loads(Path(path).read_bytes())
     current,old,cache,identity=authenticate(root,budget); bindings=_own_bindings(root)
-    _validation(saved,(current,old,cache),identity,bindings,budget)
+    _validation(saved,(current,old,cache),identity,bindings,budget,root=root)
     if bindings!=_own_bindings(root): raise ValueError("audit producer changed during authentication")
     budget.check()
     return dict(checked=str(path),evaluated_points=budget.evaluations-start,

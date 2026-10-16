@@ -12,6 +12,7 @@ import uuid
 import numpy as np
 
 import diagnose_nsc_atlas_constraint_transport as prior
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 from recursive_horizons.nsc_atlas_vacuum_departure import vacuum_slice
 
@@ -54,8 +55,7 @@ def authenticate(root,budget):
             or retained.get("runtime") != runtime_versions() or set(bindings) != set(prior.OWN_SOURCES)):
         raise ValueError("source-transport provenance mismatch")
     for name,expected in bindings.items():
-        if digest((Path(root)/name).read_bytes()) != expected:
-            raise ValueError("source-transport producer changed: "+name)
+        verify_saved_source(name,expected,root)
     budget.check()
     return record,retained,dict(refinement=identity,source_transport=dict(path=TRANSPORT_INPUT,
         sha256=digest(raw),bytes=len(raw),producer_bindings=bindings),scientific_validator_calls=0)
@@ -370,6 +370,9 @@ def check(path,*,root=ROOT):
     budget = shared_budget()
     saved = json.loads(Path(path).read_bytes())
     current = audit(root,budget=budget)
+    if saved.get("audit_source_bindings") != current.get("audit_source_bindings"):
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=OWN_SOURCES)
+        current["audit_source_bindings"] = saved["audit_source_bindings"]
     for row in (saved,current):
         cpu = row["execution"].pop("cpu_seconds")
         if isinstance(cpu,bool) or not math.isfinite(cpu) or not 0 <= cpu <= 30.:

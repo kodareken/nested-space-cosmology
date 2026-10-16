@@ -13,6 +13,7 @@ from pathlib import Path
 import time
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings
 
 from record_nsc_atlas_scalar_boundary import (
     SOURCES as BOUNDARY_SOURCES, BASE as BOUNDARY_BASE,
@@ -205,6 +206,20 @@ def _equal(left, right):
     return math.isclose(left, right, rel_tol=1e-12, abs_tol=1e-13)
 
 
+def _same_recomputed(actual, expected):
+    """Replay arithmetic with the existing tolerance; metadata stays exact."""
+    if isinstance(expected, dict):
+        return isinstance(actual, dict) and set(actual) == set(expected) and all(
+            _same_recomputed(actual[key], value) for key, value in expected.items())
+    if isinstance(expected, list):
+        return isinstance(actual, list) and len(actual) == len(expected) and all(
+            _same_recomputed(a, b) for a, b in zip(actual, expected))
+    if type(expected) is float:
+        return (type(actual) in (int, float) and math.isfinite(actual)
+                and math.isfinite(expected) and _equal(actual, expected))
+    return type(actual) is type(expected) and actual == expected
+
+
 def _validate_lift(record):
     from scipy.interpolate import CubicHermiteSpline
     d, diagnostics = record["domain"], record["diagnostics"]
@@ -287,7 +302,7 @@ def _validate_lift(record):
         if solution["maximum_absolute_defects"] != {key: max(abs(row[key]) for row in withheld) for key in LIFT_DEFECTS}:
             raise ValueError("scalar lift withheld maxima disagree")
     target = interpolation_target()
-    if diagnostics["interpolation_target"] != target:
+    if not _same_recomputed(diagnostics["interpolation_target"], target):
         raise ValueError("scalar lift diagnostic target reference disagrees")
     if diagnostics["sampled_b_target_met"] != [solution["maximum_absolute_defects"]["b_defect"] <= target["absolute_b_target"]
                                                for solution in record["solutions"]]:
@@ -478,7 +493,8 @@ def check(directory):
     manifest_path = directory/"manifest.json"
     manifest = json.loads(manifest_path.read_bytes())
     if (manifest_path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings() or manifest.get("comparison") not in VARIATIONS):
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)
+            or manifest.get("comparison") not in VARIATIONS):
         raise ValueError("scalar input source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "inputs.json"}
             or set(manifest.get("outputs", {})) != {"inputs.json"}):

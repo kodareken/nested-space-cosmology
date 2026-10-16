@@ -226,3 +226,50 @@ def test_nonfinite_json_rejected_before_any_reconstruction(synthetic,budget):
     with pytest.raises(ValueError,match="JSON-compatible"):
         tool.validate_refined_cache(cache,synthetic[0],budget)
     assert budget.evaluations==before
+
+
+def test_validation_roundoff_does_not_change_creation_or_copied_rows(synthetic,budget,monkeypatch):
+    base,cache,_=synthetic
+    original=tool.SourceSnapshot.sample
+    def rounded(self,x):
+        rows=original(self,x)
+        rows["r"]=rows["r"]+1e-14
+        return rows
+    monkeypatch.setattr(tool.SourceSnapshot,"sample",rounded)
+    with pytest.raises(ValueError,match="old source reproduction differs"):
+        tool.make_refined_cache(base,budget)
+    before=copy.deepcopy(cache)
+    receipt=tool.validate_refined_cache(cache,base,budget)
+    assert receipt["validation_evaluations"]==cache["execution"]["evaluations"]
+    assert cache==before
+    changed=copy.deepcopy(cache)
+    changed["source_rows"]["zero"]["r"][2]=np.nextafter(changed["source_rows"]["zero"]["r"][2],1.)
+    with pytest.raises(ValueError,match="copied source rows"):
+        tool.validate_refined_cache(changed,base,budget)
+
+
+def test_replay_rows_preserve_quiet_source_keys_and_counts(budget):
+    x=np.array([.41,.44,.48]); g,gx,gxx=pulse(x)
+    expected=dict(x=x,c=g,c_x=gx,c_xx=gxx,r=x.copy())
+    changed=copy.deepcopy(expected); changed["r"]+=1e-14
+    tool._replay_rows(changed,expected,"control",geometry=GEOMETRY,budget=budget)
+    changed["c"][0]=1e-16
+    with pytest.raises(ValueError,match="differs: c"):
+        tool._replay_rows(changed,expected,"control",geometry=GEOMETRY,budget=budget)
+    changed=copy.deepcopy(expected); changed["x"][1]=np.nextafter(x[1],1.)
+    with pytest.raises(ValueError,match="differs: x"):
+        tool._replay_rows(changed,expected,"control",geometry=GEOMETRY,budget=budget)
+    assert not tool._same_replayed({"count":2.0},{"count":2})
+    assert not tool._same_replayed({"flag":1},{"flag":True})
+
+
+def test_copied_row_types_signed_zero_and_inventory_remain_exact(budget):
+    original={"x":[.4,.5],"count":[1,2],"zero":[0.,0.]}
+    supplied={"x":[.4,.45,.5],"count":[1,1.,2],"zero":[0.,0.,0.]}
+    assert tool._same_copied_rows(supplied,original)
+    changed=copy.deepcopy(supplied); changed["count"][0]=1.
+    assert not tool._same_copied_rows(changed,original)
+    changed=copy.deepcopy(supplied); changed["zero"][0]=-0.
+    assert not tool._same_copied_rows(changed,original)
+    assert not tool._same_copied_rows(dict(supplied,extra=[0,0,0]),original)
+    budget.check(24)

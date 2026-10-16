@@ -1,0 +1,273 @@
+{
+  "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+  "resolver_bindings": {
+    "scripts/validation_source_successors.py": "26ddff70ef3e76ffa3c328743e203081bed711aa03f82746a7cdd0022f789cea",
+    "src/recursive_horizons/nsc_atlas_validation.py": "2d71c93ba4285c8cb15df30d7b5e5fcc67fe3ef8cedd7ad2cb884213527b019e",
+    "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
+    "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
+    "tests/test_nsc_atlas_validation.py": "9c3da4c4838726d42b8fd48020d5626144e0543a5277c9ab02b5f2118c9c65f4",
+    "tests/test_validation_source_successors.py": "4720cfcbc589aea4cd5295d1e05742a05ea4967be62c76fb6e139a65b32d9b76"
+  },
+  "schema": "nsc-validation-source-successors-v1",
+  "scope": "Validation-only current successors. Original Git bytes are authenticated but never executed; result data and scientific owners have no compatibility fallback.",
+  "successors": {
+    "scripts/assess_nsc_atlas_scalar_lift.py": {
+      "classification": "validation-only",
+      "original_sha256": "84969a60a340f3ed0546710efcf534963ed3a991880ee792e83669ab56a4d5ac",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "d929b2c7f335174cf70485aa3b37d184fafce2b738a6f4dc9ac2f6592a986b93"
+    },
+    "scripts/diagnose_nsc_atlas_background_step.py": {
+      "classification": "validation-only",
+      "original_sha256": "e9ac13a5f2d93be2ad9f0d4734897af86d3f6b1184ddfab639ae3d9d66945455",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "c43b44681d22e406d518cb7a3b1be3014b6e4805d045feda7d0b07c92aa2a709"
+    },
+    "scripts/diagnose_nsc_atlas_background_time.py": {
+      "classification": "validation-only",
+      "original_sha256": "d29a4190a40b9344c51c57833a58053ede0b3c34992c71ffa920a0ea5f0bab09",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "b087089929662a06e36a720b9d4afbfc5b203d4264e0067f7bfbf04a1bd9991c"
+    },
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": {
+      "classification": "validation-only",
+      "original_sha256": "d6879903228ef652b2015a95b3cef0dd21735561db32053bdfa48ca6c46d9afa",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45"
+    },
+    "scripts/diagnose_nsc_atlas_cap_consistency.py": {
+      "classification": "validation-only",
+      "original_sha256": "1c4489fb2d8a00a884d454006218a4ec5f47c8cd8e7bc65b1a0c053cd3992d32",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "2ba770b0880e1d60d313d644ed77b7485b352a187e6f09370c1d9cd77c06f230"
+    },
+    "scripts/diagnose_nsc_atlas_cap_mass_direction.py": {
+      "classification": "validation-only",
+      "original_sha256": "9eb941028a5380144c1cb07da990e1a70930b210592a7d3828aaa64bab0f4603",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "3f751901982a3070e28c08c7a848848e81d3a45025b597fa36c7f1ed97edc6f5"
+    },
+    "scripts/diagnose_nsc_atlas_compatible_transport.py": {
+      "classification": "validation-only",
+      "original_sha256": "05071cd1fbdec7a1c7a2c1697904478b3273e3bce42da77a3c4a74bc2b8799ac",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "063f73745addb59eaa518c5ae6ef9e1e5a3e19873dfb015d9818fff9bbb1f29a"
+    },
+    "scripts/diagnose_nsc_atlas_constraint_transport.py": {
+      "classification": "validation-only",
+      "original_sha256": "65e95e1e493d2e9221ddb96ba12944f614482f9da3f76e68c1c96c64bf602ef4",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "b3d6b148aea3d78df37c75776ef7f81befddc5ea77eb3f665bce26df7b5e30b4"
+    },
+    "scripts/diagnose_nsc_atlas_ssprk3_step.py": {
+      "classification": "validation-only",
+      "original_sha256": "68f04e1e48b275bb4d9fda42f38fd735cc787e69a576437541979e18dd7f552a",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "fc07aeb9052738ec15e866f119bd69139ccc5dd5c9ee1607b9ac2690436277a4"
+    },
+    "scripts/diagnose_nsc_atlas_wall_constraint.py": {
+      "classification": "validation-only",
+      "original_sha256": "59c6f490171a3c08057dfeffb77bea73493c0ea88d839c66ec51580ed2d8a563",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "231d2d9ab21f3f9b5387db114f1ccc5e1113dd6c1e498b005da2f2d434fe672a"
+    },
+    "scripts/record_nsc_atlas_background_evolution.py": {
+      "classification": "validation-only",
+      "original_sha256": "eed75a5b1673f58bee5748ccb6437d6f8872c2970ce93a70933cbd1aa865655f",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "a3c68cf94814b6a03115a437be6867e1dfb2a8ada31821904dbd6c04c7573926"
+    },
+    "scripts/record_nsc_atlas_central_ray.py": {
+      "classification": "validation-only",
+      "original_sha256": "f1d1d6b014597c80ef8d30f474642d2ffe4dc8466243e07dee182d73f069ed14",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "9c4d212e8a66484c7889e197b185dbdb0b939f2e437dc870297e19063d270aa3"
+    },
+    "scripts/record_nsc_atlas_central_scalar.py": {
+      "classification": "validation-only",
+      "original_sha256": "33c50db57d3435bba496560f88cbf32009939050c80b43aae4516cce7d0ea9d0",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "7e16516471258f4e7e3f9bd736902d51d034b702dd0f6e2d4ca2cd2791e33bdc"
+    },
+    "scripts/record_nsc_atlas_compatible_evolution.py": {
+      "classification": "validation-only",
+      "original_sha256": "9cf6802c5eca6b840fc3158438ca34178e719095ba839a4dd71cea549f265c2c",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "8ae696d638ef5ab47bbaed81a385e8093b3df98a688f8f07fca23a1736be354d"
+    },
+    "scripts/record_nsc_atlas_coupled_evolution.py": {
+      "classification": "validation-only",
+      "original_sha256": "2898d38aea0540530ef5fc76e1c7d3fc377d41bdbb414d3f51dbba54be29b264",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "1a6071943e8305931c06584b62efcdb1ded10bfa540212cd4d85c1b00d271eaa"
+    },
+    "scripts/record_nsc_atlas_forcing_cache.py": {
+      "classification": "validation-only",
+      "original_sha256": "e2c0197465e3151ee23cbd00398acc5f7ea8defa01af88b043e77d4f1eb74dd2",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "a39c265adad70c6c47ba4d526cfcfd62181ccfafc7b0df7634474aa38b819e5d"
+    },
+    "scripts/record_nsc_atlas_lift_clock.py": {
+      "classification": "validation-only",
+      "original_sha256": "076e21cd48464d37b51afe71f7269de5867bb856df7323fc197bd35c341ba201",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "e569145f2a99afd8a1e47111a976295127ab6d0bcfca8657bee58c8f7ff63326"
+    },
+    "scripts/record_nsc_atlas_local_lift.py": {
+      "classification": "validation-only",
+      "original_sha256": "40b531a21bf7f63f03b0a5248ad65f93e7e396e66df64f4564339124f1de8399",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "21aeeabcf71a1fe0c00445d9fe977cdd1b8fffbfa25ff72d97596794d9d67a70"
+    },
+    "scripts/record_nsc_atlas_nonlinear_rectangle.py": {
+      "classification": "validation-only",
+      "original_sha256": "3dd04d62f8982bd1c7f5500ed00dcb945e1b8c5aadb9888c193f830282cae8d0",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "1ca50b5f0da6f401cd244f1749fa5175fb38da2ea2497799500cbfd9cbb9d647"
+    },
+    "scripts/record_nsc_atlas_operator_comparison.py": {
+      "classification": "validation-only",
+      "original_sha256": "5af2ba3b01bddc6cc573f46dc7011ebb7af136fb45326d6bb0c687f7e9adc6fa",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "ed1cde39cd7e3fc6aeebd97de8a659d78d499f870b32a5b8c531240262984d54"
+    },
+    "scripts/record_nsc_atlas_profile_moment.py": {
+      "classification": "validation-only",
+      "original_sha256": "fd7a0e6892d4bd461f31209b07096744409a2c20f1555f12e5710ee00759cc25",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "943628b7fefeff983c9081b920107d44e714e0a1fa0212e5820786f834109dcc"
+    },
+    "scripts/record_nsc_atlas_scalar_evolution.py": {
+      "classification": "validation-only",
+      "original_sha256": "2d891435da48c8711fcb22fc03096842fc36dcbe585bebe1d5bcbff0c9a21cff",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "bc12429f4d9f734e27987684cfd7bd2e468804210159481a317e2921b4566c99"
+    },
+    "scripts/record_nsc_atlas_scalar_inputs.py": {
+      "classification": "validation-only",
+      "original_sha256": "031557cf0b41e72123da2418128f0df4c0df255ed863894d40a1d711afbc5a80",
+      "reason": "Reviewed bounded floating replay comparison and explicit source-successor authentication only; generation equations and retained result bytes are unchanged.",
+      "successor_sha256": "24cbd0ebb3756684f335db52436e8b2d64671990f8bd71cf61ce224baab5c1d8"
+    },
+    "scripts/record_nsc_atlas_spatial_refinement.py": {
+      "classification": "validation-only",
+      "original_sha256": "679ceb0f76df95f438de4396a6c64a8743bc584795ce13374d9ffb5239c4fcd9",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "e866a239c3894da1126f4fccc1b732a16bbd2c64123ceaef3235b943052cf44e"
+    },
+    "scripts/record_nsc_atlas_ssprk3_evolution.py": {
+      "classification": "validation-only",
+      "original_sha256": "57891d825cb49363f86acbab37791917193394b9e2c2cc023720178c8eb1c7fc",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "17218e834d496f9692e554b279cb7c5bea368b7d1e6865a8d00bb7a91c9830b0"
+    },
+    "scripts/record_nsc_atlas_ssprk3_refinement.py": {
+      "classification": "validation-only",
+      "original_sha256": "2e6cfa1d66b7524057a09eb2eb4f2481c51d56a9f9d042074d022c080d12b7c4",
+      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
+      "successor_sha256": "7166d5a52c62c05406eebce4d1506f7fb366109e5ac07265974d0b5005f0bfd3"
+    },
+    "src/recursive_horizons/nsc_atlas_characteristic_trace.py": {
+      "classification": "validation-only",
+      "original_sha256": "c067ea9a8a5b3a78263ab5671f9a6ad746863d73fc4dfc7da6425166bc15b9dd",
+      "reason": "SourceSnapshot constructor replay comparison uses an analytic floating-roundoff allowance; source evaluation, interpolation and physical integration are unchanged.",
+      "successor_sha256": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47"
+    },
+    "src/recursive_horizons/nsc_atlas_refined_cache.py": {
+      "classification": "validation-only",
+      "original_sha256": "7164dc2191cf175a8423fbcdde631b9961a4322bae7ed4399383146ca60f1ac0",
+      "reason": "Private validation-only numerical reconstruction accepts conditioned floating replay differences; default cache creation, exact copied513 rows, keys and counters remain unchanged.",
+      "successor_sha256": "7ffb5323f34f18e66d8af963b09b611b120f8c6f4b62f8ff7c57824a053a5475"
+    },
+    "tests/test_analyze_nsc_atlas_cap_consistency.py": {
+      "classification": "test-only",
+      "original_sha256": "f7a166b26f6c70dd702fee27a38477dbc249f6303f26ba65194e35a6d379c4fb",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "37bdc2f51ddadd1522d8cc055588ebea2a7a17d701bfd552e8586134b17910b3"
+    },
+    "tests/test_analyze_nsc_atlas_cap_mass_direction.py": {
+      "classification": "test-only",
+      "original_sha256": "3192f68901fb45bf0feca979437411d5f986b9e0307b060fcd83771d1d826dba",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "bdb00107af0b275589c1858ffb3cfa2637d0d266426fcf1e50ad0f22a4e32c07"
+    },
+    "tests/test_assess_nsc_atlas_scalar_lift.py": {
+      "classification": "test-only",
+      "original_sha256": "54eade14d9c23d05c26a725dd5e1a4efac4530f0ded68dec29c5b7c96349dd4b",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "f1e8bb849390b9f4650351cec06ac5ffc07a278052e498f3e76b1302b21d5168"
+    },
+    "tests/test_nsc_atlas_characteristic_trace.py": {
+      "classification": "test-only",
+      "original_sha256": "87dce18f63893154bd3659987126b11afec1145708442e214c152fe6985e37e1",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "6602ba38864f8a9d7d85e12ff5e3a4af5532b896257af7305906c51dc0a0e584"
+    },
+    "tests/test_nsc_atlas_gradient_evolution.py": {
+      "classification": "test-only",
+      "original_sha256": "b7708869ad018ca631d4d5b3e53cd3b4dcc1a53c8d070c19ac8e3a207a0a965e",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "4249b32980f375cd589de390a3456815c9362942f6c235ffdc3a07baa496ee13"
+    },
+    "tests/test_nsc_atlas_refined_cache.py": {
+      "classification": "test-only",
+      "original_sha256": "819f2b0b342933c25f28dcc4fada7f95254ef6b9969dd67c5d6c9fdaca15d6f8",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "977212e96fa692b8939f37523c8c1fbe59d6ccc8db700975a59a68e7ce93f9a4"
+    },
+    "tests/test_record_nsc_atlas_background_evolution.py": {
+      "classification": "test-only",
+      "original_sha256": "2a59768c44041b8be3ea32fe674562581284d175bdbc5d871cf2256eabad271b",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "435f71e4ef343efe53c4bc0b22563a44c62a8bf6e0b9d4b9a70a48b93b5124a8"
+    },
+    "tests/test_record_nsc_atlas_coupled_evolution.py": {
+      "classification": "test-only",
+      "original_sha256": "d7e973f9210992c1882a9482ffc60f39a3c7f0c3ed502b35a5f2d5ceeb561c04",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "5a2581248e703def08c0d7b1ed0d5a7deb6e81fd49fe831b284168904d2185fb"
+    },
+    "tests/test_record_nsc_atlas_lift_clock.py": {
+      "classification": "test-only",
+      "original_sha256": "e0ac019f6d3dba982ca27a89804f6563cf48669e583594dacf36b2662e9021c3",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "c63c2bcf0137bb94e4164af122c6d14617bd1e3ddebcdfda8b55452fe49b5381"
+    },
+    "tests/test_record_nsc_atlas_nonlinear_rectangle.py": {
+      "classification": "test-only",
+      "original_sha256": "4f66ac5fa4951f97c0a04f4a35c522620a6c080c592cfb3df74755c64425f518",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "149ddf770c795c9f1c33cbbd418b148f6bb6e8d24721109adcf55be53d3ced12"
+    },
+    "tests/test_record_nsc_atlas_operator_comparison.py": {
+      "classification": "test-only",
+      "original_sha256": "bd4622827eee3bec9bcda3b9644c335fb4cd38ea247cb8fe294ff22c437ac94f",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "edc8d955786bdefc61e1f25d676b8d43a61e8aec224d610bfff4a1eb16c11d71"
+    },
+    "tests/test_record_nsc_atlas_scalar_inputs.py": {
+      "classification": "test-only",
+      "original_sha256": "760ef121ed7eb69ea9c81a46c834de03d0965dbde6a8b52ff97a85836e640518",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "0270e82bbd2bd10726eb52c8e9c39ff2e6da2ae60b47654960e6d5321ae45fe6"
+    },
+    "tests/test_record_nsc_atlas_spatial_refinement.py": {
+      "classification": "test-only",
+      "original_sha256": "7528535e1849b49882eadfcac7c1c3b5960746b6a2e82920bbeaf299b5d314bf",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "93e718bac3ab08ad136ff3989ca7618c283b892536c317deb602c34cb7262f02"
+    },
+    "tests/test_record_nsc_atlas_ssprk3_evolution.py": {
+      "classification": "test-only",
+      "original_sha256": "584dbff95a6b58a67025070efc21691316d105cadd07ef986e4bf3e00d5bdabe",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "4997325e8ff1835350ddd51437b36ad42753a2a08730153d054a4285767b684f"
+    },
+    "tests/test_record_nsc_atlas_ssprk3_refinement.py": {
+      "classification": "test-only",
+      "original_sha256": "4d2377607dd726ff37733d9d855561f85e7881cf1451292cd22821e44dcfe124",
+      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
+      "successor_sha256": "82b2c9d9fc4050df9a1414fbe17ee8eb6a079f90c6a1e5a37cdadbad14db72e4"
+    }
+  }
+}

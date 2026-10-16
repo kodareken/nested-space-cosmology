@@ -8,24 +8,17 @@ import pytest
 import analyze_nsc_atlas_cap_consistency as tool
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 
-_CONTROL_BUDGET = None
-_REPORTED = False
+from control_budget import ControlBudget
+
+_CONTROL_BUDGET = ControlBudget(maximum_evaluations=1000000, cpu_seconds=30.)
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def budget():
     # Pytest may register the imported fixture separately in the recorder
     # module. Both registrations intentionally share this one accumulator.
-    global _CONTROL_BUDGET, _REPORTED
-    if _CONTROL_BUDGET is None:
-        _CONTROL_BUDGET = Budget(maximum_evaluations=1000000, cpu_seconds=30.)
-    shared = _CONTROL_BUDGET
-    yield shared
-    shared.check()
-    if not _REPORTED:
-        print("cap consistency controls", shared.evaluations, "points",
-              time.process_time()-shared.started, "process CPU seconds")
-        _REPORTED = True
+    with _CONTROL_BUDGET.active() as shared:
+        yield shared
 
 
 def manufactured_curve():

@@ -17,12 +17,14 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 import scipy
 from scipy.special import lambertw
 
 from recursive_horizons.nsc_atlas_characteristic_initialization import (
     Budget, source_geometry, source_jet, validate_geometry,
 )
+from recursive_horizons.nsc_atlas_validation import source_jet_roundoff_tolerances
 from recursive_horizons.nsc_atlas_nonlinear_source import ExactSource, source_amplitude_bound
 
 
@@ -264,6 +266,20 @@ def _close(actual, expected, label, atol=2e-13):
         raise ValueError(label+" identity mismatch")
 
 
+def _same_recomputed(actual, expected):
+    """Compare recomputed arithmetic, retaining exact structure and counts."""
+    if isinstance(expected, dict):
+        return isinstance(actual, dict) and set(actual) == set(expected) and all(
+            _same_recomputed(actual[key], value) for key, value in expected.items())
+    if isinstance(expected, list):
+        return isinstance(actual, list) and len(actual) == len(expected) and all(
+            _same_recomputed(a, b) for a, b in zip(actual, expected))
+    if type(expected) is float:
+        return (type(actual) in (int, float) and math.isfinite(actual) and math.isfinite(expected)
+                and math.isclose(actual, expected, rel_tol=2e-12, abs_tol=2e-13))
+    return type(actual) is type(expected) and actual == expected
+
+
 def _validate_initial(record):
     geometry = record["geometry"]
     if (set(geometry) != {"order", "U0", "Ua", "Ub", "Va", "Vb", "x_corner", "x_last", "support_x", "support_V"}
@@ -271,7 +287,9 @@ def _validate_initial(record):
         raise ValueError("original geometry inventory/order mismatch")
     validate_geometry(geometry)
     bounds = source_amplitude_bound(geometry)
-    if record["source_bounds"] != bounds or set(record["initial_data"]) != {"zero", "finite"}:
+    if (not _same_recomputed(record["source_bounds"], bounds)
+            or record["source_bounds"]["test_alpha"] != record["source_bounds"]["alpha_star"]/2
+            or set(record["initial_data"]) != {"zero", "finite"}):
         raise ValueError("source threshold or amplitude inventory mismatch")
     CJ0 = -3.2/geometry["U0"]
     Ubar = np.linspace(0., CJ0*(geometry["Ua"]-geometry["U0"]), 33)
@@ -279,11 +297,14 @@ def _validate_initial(record):
     expected_domain = {key: geometry[key] for key in ("U0", "Ua", "Ub", "Va", "Vb")}
     expected_domain.update(x_a=.4, x_b=geometry["x_last"], Ubar_a=0., Ubar_b=Ubar[-1], CJ0=CJ0)
     p, px, _ = source_jet(x, geometry)
+    g_roundoff, gx_roundoff = source_jet_roundoff_tolerances(x, geometry)
     quiet = (x <= geometry["support_x"][0]) | (x >= geometry["support_x"][1])
     g, gx = np.where(quiet, 0., x*p), np.where(quiet, 0., p+x*px)
     for label in ("zero", "finite"):
         data = record["initial_data"][label]
-        alpha = 0. if label == "zero" else bounds["alpha_star"]/2
+        # This is the retained model input, already authenticated against the
+        # recomputed bound above; do not replace it with platform-roundoff data.
+        alpha = 0. if label == "zero" else record["source_bounds"]["test_alpha"]
         if (type(data["alpha"]) not in (int, float) or data["alpha"] != alpha
                 or data["domain"] != expected_domain or data["max_step"] != bounds["length"]/32):
             raise ValueError("source amplitude, domain or step mismatch")
@@ -306,8 +327,8 @@ def _validate_initial(record):
                    "initial mass")
             if kind == "source":
                 _close(arrays["x"], coordinates, "source coordinates", atol=0)
-                _close(arrays["c"], g, "original compact source")
-                _close(arrays["c_x"], gx, "original compact source derivative")
+                _close(arrays["c"], g, "original compact source", atol=2e-13+g_roundoff)
+                _close(arrays["c_x"], gx, "original compact source derivative", atol=2e-13+gx_roundoff)
                 _close(arrays["rJ"], x+alpha*arrays["h"], "source scaled radius")
                 _close(arrays["rJ_x"], 1+alpha*arrays["h_x"], "source scaled slope")
                 _close(arrays["C"], 1-alpha*g*g/(6*arrays["rJ"]**2), "source conformal factor")
@@ -409,10 +430,10 @@ def validate_record(record):
                 "max_updates": int(np.max(grid["cells"]["updates"])),
                 **{"max_"+key: float(np.max(grid["cells"][key])) for key in
                    ("residual_norm", "correction_norm", "condition_number")}}
-            if encoded(grid["summary"]) != encoded(expected_summary):
+            if not _same_recomputed(grid["summary"], expected_summary):
                 raise ValueError("grid summary or cumulative transition mismatch")
             previous_end += costs
-        if encoded(record["diagnostics"]) != encoded(diagnostics(record)):
+        if not _same_recomputed(record["diagnostics"], plain(diagnostics(record))):
             raise ValueError("saved-array diagnostics disagree with nodal states")
         execution = record["execution"]
         _real(execution["cpu_seconds"], "global CPU", high=120)
@@ -490,7 +511,7 @@ def check(directory):
             or any(path.is_symlink() for path in directory.iterdir())):
         raise ValueError("rectangle output inventory mismatch")
     manifest = json.loads((directory/"manifest.json").read_bytes())
-    if manifest.get("schema") != SCHEMA+"-manifest" or manifest.get("source_bindings") != source_bindings():
+    if manifest.get("schema") != SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES):
         raise ValueError("rectangle source binding or manifest schema mismatch")
     raw = (directory/"rectangle.json").read_bytes()
     if manifest.get("outputs") != {"rectangle.json": {"sha256": digest(raw), "bytes": len(raw)}}:

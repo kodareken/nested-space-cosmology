@@ -58,6 +58,48 @@ def test_live_entrypoint_never_inherits_historical_exemption(tmp_path, monkeypat
     assert any("broken Markdown link" in item for item in findings(path))
 
 
+@pytest.mark.parametrize("expression", [
+    r"$F(T+\operatorname{atanh}r)$",
+    "$$\n" + r"\operatorname*{arg\,min}_x f(x)" + "\n$$",
+])
+def test_mathjax_operator_names_are_valid_in_live_markdown(tmp_path, monkeypatch, expression):
+    path = prepare(tmp_path, monkeypatch, "README.md", expression.encode())
+    assert findings(path) == []
+
+
+def test_markdown_delimiter_guard_remains_active(tmp_path, monkeypatch):
+    path = prepare(tmp_path, monkeypatch, "README.md", br"\(x=1\)")
+    assert findings(path) == ["unsupported GitHub math parenthesized inline delimiter in README.md"]
+
+
+def test_result_inventory_reports_unregistered_and_missing_evidence():
+    found = {"results/kept.json", "results/unregistered.json"}
+    authenticated = {"results/kept.json", "results/missing.json"}
+    errors = []
+    checker.check_result_inventory(errors, found, authenticated)
+    assert errors == [
+        "tracked NSC result files differ from authenticated local/archived closure"
+        "; unregistered: ['results/unregistered.json']; absent: ['results/missing.json']"
+    ]
+    errors = []
+    checker.check_result_inventory(errors, found, found)
+    assert errors == []
+
+
+def test_portable_result_summaries_require_the_same_inventory_receipts(tmp_path, monkeypatch):
+    monkeypatch.setattr(checker, "ROOT", tmp_path)
+    records = {"results/nsc-release.json", "results/development/audit.json",
+               "results/summaries/audit.json"}
+    for name in (*records, ".build/results/raw.json", "results/development/nested/record.json"):
+        path = tmp_path/name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("{}")
+    assert checker.result_inventory_files() == records
+    errors = []
+    checker.check_result_inventory(errors, records, records-{"results/summaries/audit.json"})
+    assert len(errors) == 1 and "unregistered: ['results/summaries/audit.json']" in errors[0]
+
+
 def test_exact_historical_bytes_still_receive_secret_scan(tmp_path, monkeypatch):
     path = prepare(tmp_path, monkeypatch, "docs/old-note.md", b"BEGIN RSA " + b"PRIVATE KEY")
     assert any("possible private key" in item for item in findings(path))

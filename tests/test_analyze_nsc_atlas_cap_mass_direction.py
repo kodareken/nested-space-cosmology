@@ -8,22 +8,16 @@ import pytest
 import analyze_nsc_atlas_cap_mass_direction as tool
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
 
-_CONTROL_BUDGET = None
-_REPORTED = False
+from control_budget import ControlBudget
+
+_CONTROL_BUDGET = ControlBudget(maximum_evaluations=300000, cpu_seconds=30.)
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture
 def budget():
     # Imported fixture registrations share one accumulator across all suites.
-    global _CONTROL_BUDGET, _REPORTED
-    if _CONTROL_BUDGET is None:
-        _CONTROL_BUDGET = Budget(maximum_evaluations=300000, cpu_seconds=30.)
-    yield _CONTROL_BUDGET
-    _CONTROL_BUDGET.check()
-    if not _REPORTED:
-        print("cap mass direction controls", _CONTROL_BUDGET.evaluations,
-              "points", time.process_time()-_CONTROL_BUDGET.started, "process CPU seconds")
-        _REPORTED = True
+    with _CONTROL_BUDGET.active() as shared:
+        yield shared
 
 
 def test_backward_polynomial_coefficients_and_one_sided_kink(budget):

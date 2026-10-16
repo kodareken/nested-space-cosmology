@@ -1,0 +1,287 @@
+{
+  "entries": {
+    "results/development/artifacts/nsc-incoming-constraint-germ.7c9600576f9453d85868371b8a0bf37680f011d364337460591c824c1277c02a.json": {
+      "bytes": 5918543,
+      "sha256": "7c9600576f9453d85868371b8a0bf37680f011d364337460591c824c1277c02a"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group01.d95afa4a4965876214fbcd43410ca377f32593c3ad068c09ae0467c9ecf45272.json": {
+      "bytes": 1060464,
+      "sha256": "d95afa4a4965876214fbcd43410ca377f32593c3ad068c09ae0467c9ecf45272"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group02.0e2ac83852ed3d48ffd92e6707f4f42237b7c3c622757935ed8433a44ff2c4d7.json": {
+      "bytes": 1060593,
+      "sha256": "0e2ac83852ed3d48ffd92e6707f4f42237b7c3c622757935ed8433a44ff2c4d7"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group03.da1b8f079e8ac63bdce7544849b44e5c0faebd8ad748d96cd5dac9b46339149b.json": {
+      "bytes": 1060380,
+      "sha256": "da1b8f079e8ac63bdce7544849b44e5c0faebd8ad748d96cd5dac9b46339149b"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group04.190f6b4eeef382baa53db999245a1e7ec1675ff7d17c9dc33e87a88cd5a5dadf.json": {
+      "bytes": 1060673,
+      "sha256": "190f6b4eeef382baa53db999245a1e7ec1675ff7d17c9dc33e87a88cd5a5dadf"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group05.cb1c19e84f0ead45b39c340bf470ff8fe3d0efe2af765670dcc43e7d19c98668.json": {
+      "bytes": 1060543,
+      "sha256": "cb1c19e84f0ead45b39c340bf470ff8fe3d0efe2af765670dcc43e7d19c98668"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group06.3e0a276ced5c8ff2eb40dfe114edb5aa6ce0472fbc2cbd44a97f77e8fdb8e578.json": {
+      "bytes": 1060553,
+      "sha256": "3e0a276ced5c8ff2eb40dfe114edb5aa6ce0472fbc2cbd44a97f77e8fdb8e578"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group07.353f642c80bde01738e29862c845810b5959e5b4e30ccc4ea5c497a6c0544155.json": {
+      "bytes": 1060594,
+      "sha256": "353f642c80bde01738e29862c845810b5959e5b4e30ccc4ea5c497a6c0544155"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group08.becdd29e22acd07d8bf495f3aea4f8b016df37383d0a99eb27e3ae34ff199283.json": {
+      "bytes": 1060555,
+      "sha256": "becdd29e22acd07d8bf495f3aea4f8b016df37383d0a99eb27e3ae34ff199283"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group09.b8be0bec6e9345e778a1aaa19d34a3d58db9fd32224fdb6913e6ca97c1a0fb01.json": {
+      "bytes": 1060550,
+      "sha256": "b8be0bec6e9345e778a1aaa19d34a3d58db9fd32224fdb6913e6ca97c1a0fb01"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group10.a78b1554fb59e48017abb15cbc6e04f4847b69b893caf1b11b9681187d8ce7fb.json": {
+      "bytes": 2347400,
+      "sha256": "a78b1554fb59e48017abb15cbc6e04f4847b69b893caf1b11b9681187d8ce7fb"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group11.870580fc0b18a7bc6ccbc39a2f5dd37089f652d62098f76adda44ec2d7eb1477.json": {
+      "bytes": 2347422,
+      "sha256": "870580fc0b18a7bc6ccbc39a2f5dd37089f652d62098f76adda44ec2d7eb1477"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group12.bf84728d23a043388d949cf32f5d66214427896273ca9c7714337cc7e54f7172.json": {
+      "bytes": 2347434,
+      "sha256": "bf84728d23a043388d949cf32f5d66214427896273ca9c7714337cc7e54f7172"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group14.c331537c5da010501228b34e8bc67f0983a3df20652829a68dbf313dfdf6aab3.json": {
+      "bytes": 1187865,
+      "sha256": "c331537c5da010501228b34e8bc67f0983a3df20652829a68dbf313dfdf6aab3"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group15.62763212550bb543c983a5e42f429c195c7ed6b5a7e95be853d85c1e9f9ff7f5.json": {
+      "bytes": 1059649,
+      "sha256": "62763212550bb543c983a5e42f429c195c7ed6b5a7e95be853d85c1e9f9ff7f5"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group16.889037a86d59b428da35ade52d59516c831e85022b1ea984b2a429b58b2e2845.json": {
+      "bytes": 1059633,
+      "sha256": "889037a86d59b428da35ade52d59516c831e85022b1ea984b2a429b58b2e2845"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group17.e1a50636ee774a15932afd9aa838c68409f425cf7a7af7de2074801ae6c65780.json": {
+      "bytes": 1059809,
+      "sha256": "e1a50636ee774a15932afd9aa838c68409f425cf7a7af7de2074801ae6c65780"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group18.e2e8c35316eb819440de452012296b06ebadd118d387570996b0ab4e048c3515.json": {
+      "bytes": 1059581,
+      "sha256": "e2e8c35316eb819440de452012296b06ebadd118d387570996b0ab4e048c3515"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group19.8b1b2d1ea9e172449660d9559215b1843a69ea2594d52c7b7371105dcd59159e.json": {
+      "bytes": 1059445,
+      "sha256": "8b1b2d1ea9e172449660d9559215b1843a69ea2594d52c7b7371105dcd59159e"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group20.d80617ba48507bdfe3ee9d4a200471ec9570d871eac820669291e6bcfe870339.json": {
+      "bytes": 1059416,
+      "sha256": "d80617ba48507bdfe3ee9d4a200471ec9570d871eac820669291e6bcfe870339"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group21.726ebc133d7b4b115a4394f66f81d81112941690f1dd81e5a4d25cf3d254f117.json": {
+      "bytes": 1059348,
+      "sha256": "726ebc133d7b4b115a4394f66f81d81112941690f1dd81e5a4d25cf3d254f117"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group22.9b852b6d6ea225ea1b87f051d5a6945d8f235236020eb43c94d0f5f18e311037.json": {
+      "bytes": 1059351,
+      "sha256": "9b852b6d6ea225ea1b87f051d5a6945d8f235236020eb43c94d0f5f18e311037"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group24.29b6c2e3f7502880a901bc4bbdc1207ff7bcba7e0bdcc57e2722d475d6a6f63e.json": {
+      "bytes": 1059698,
+      "sha256": "29b6c2e3f7502880a901bc4bbdc1207ff7bcba7e0bdcc57e2722d475d6a6f63e"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group25.ce1769b70d597c46477a01e50a2a5922eb51c9d059a718928ae5fe44b822bff3.json": {
+      "bytes": 1059683,
+      "sha256": "ce1769b70d597c46477a01e50a2a5922eb51c9d059a718928ae5fe44b822bff3"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group26.0c08c42b1dfaee1233b24165e46997971fd1cda1d74e3c1bf34d87797074860d.json": {
+      "bytes": 1059675,
+      "sha256": "0c08c42b1dfaee1233b24165e46997971fd1cda1d74e3c1bf34d87797074860d"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group27.6c05c29fe1f0aedee36508d9110605d61331b95b407c97fca746cdcffdb9ef9a.json": {
+      "bytes": 1059775,
+      "sha256": "6c05c29fe1f0aedee36508d9110605d61331b95b407c97fca746cdcffdb9ef9a"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group28.f119bd3be3419935711e2839b39fcd0c43c591741cd32fddaa95f32317f23c53.json": {
+      "bytes": 1059643,
+      "sha256": "f119bd3be3419935711e2839b39fcd0c43c591741cd32fddaa95f32317f23c53"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group29.83bbd4f664ef3a94aec3c40760a2077d08f96f18df233aebd5fdb97bfbeb23f6.json": {
+      "bytes": 1059666,
+      "sha256": "83bbd4f664ef3a94aec3c40760a2077d08f96f18df233aebd5fdb97bfbeb23f6"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group30.6d5d024c416d56987f4d52aa1d3a0cc060babe36c775a417537d010f331d88a4.json": {
+      "bytes": 1059658,
+      "sha256": "6d5d024c416d56987f4d52aa1d3a0cc060babe36c775a417537d010f331d88a4"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group31.a926b67c0bdd10862037fff8eb6dad5861a2f6ac9892c777069c1c6f4b74d49f.json": {
+      "bytes": 2345190,
+      "sha256": "a926b67c0bdd10862037fff8eb6dad5861a2f6ac9892c777069c1c6f4b74d49f"
+    },
+    "results/development/artifacts/nsc-incoming-high-band-quadrature-group32.61124bf73290617987db857da3a3db33f7aeb08323ce6b3bf5b31ed98a94b4e8.json": {
+      "bytes": 2345263,
+      "sha256": "61124bf73290617987db857da3a3db33f7aeb08323ce6b3bf5b31ed98a94b4e8"
+    },
+    "results/development/artifacts/nsc-incoming-source-quadrature-bound.13db8a33215f721f6bb8b95bfbd937a091c9e331eef6c16929dd01303d7cf43f.json": {
+      "bytes": 1078349,
+      "sha256": "13db8a33215f721f6bb8b95bfbd937a091c9e331eef6c16929dd01303d7cf43f"
+    },
+    "results/development/artifacts/nsc-incoming-validated-energy-sign-1.9d8a750d58b4d2f0fe0814f7a7fcc647433218466c07268fe23bd23c3e17519a.json": {
+      "bytes": 36558791,
+      "sha256": "9d8a750d58b4d2f0fe0814f7a7fcc647433218466c07268fe23bd23c3e17519a"
+    },
+    "results/development/artifacts/nsc-incoming-validated-energy-sign1.83fcc381fbdce215f0e495efa613358628e81ba56d447e094ebf01289c59418c.json": {
+      "bytes": 36560485,
+      "sha256": "83fcc381fbdce215f0e495efa613358628e81ba56d447e094ebf01289c59418c"
+    },
+    "results/development/artifacts/nsc-incoming-validated-vacuum-sign-1.64a8ccf9daa6561d9f43607b683dd277b5a286fd463ce0387a1059e73819e0b4.json": {
+      "bytes": 2019839,
+      "sha256": "64a8ccf9daa6561d9f43607b683dd277b5a286fd463ce0387a1059e73819e0b4"
+    },
+    "results/development/artifacts/nsc-incoming-validated-vacuum-sign1.ad3f59853b850a49398970abff2701ebd8579e7e124e858c776e1e6a5000bcaa.json": {
+      "bytes": 2020286,
+      "sha256": "ad3f59853b850a49398970abff2701ebd8579e7e124e858c776e1e6a5000bcaa"
+    },
+    "results/development/nsc-atlas-background-evolution-v1/background.json": {
+      "bytes": 15257295,
+      "sha256": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca"
+    },
+    "results/development/nsc-atlas-compatible-evolution-v1/compatible.json": {
+      "bytes": 13200327,
+      "sha256": "a7e27b25ce171951415f97b64e055fd93062e3c21cd709c19c99c7543167c434"
+    },
+    "results/development/nsc-atlas-constraint-transport-audit-v1.json": {
+      "bytes": 5758447,
+      "sha256": "72e0205dbe8d2854307fc6ef3d5dd761327c75c3451fc5bd11ed6952ce2db9e0"
+    },
+    "results/development/nsc-atlas-coupled-evolution-v1/coupled.json": {
+      "bytes": 10584747,
+      "sha256": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86"
+    },
+    "results/development/nsc-atlas-forcing-cache-v1/cache.json": {
+      "bytes": 3910480,
+      "sha256": "3d069e63a6ae7352c5c7b0a71a6d5c4e4889a92764fee3d754a252da4744fd3a"
+    },
+    "results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json": {
+      "bytes": 2685739,
+      "sha256": "afaa47304c353ca88d7b296b67996e55346f813abb2bc04e06c1f823d7ddf9da"
+    },
+    "results/development/nsc-atlas-operator-comparison-v1/operator.json": {
+      "bytes": 40859403,
+      "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09"
+    },
+    "results/development/nsc-atlas-scalar-evolution-v1/evolution.json": {
+      "bytes": 1049366,
+      "sha256": "d244e1df6f0dce2a79c6e18cbc768d28627f799d47f6f6444b3af13ef047fd5f"
+    },
+    "results/development/nsc-atlas-spatial-refinement-v1/spatial.json": {
+      "bytes": 61744126,
+      "sha256": "29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd"
+    },
+    "results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json": {
+      "bytes": 12182095,
+      "sha256": "24cd8319c131360154cbdd7088cd2f212f8d572a0fe6fdff69a2c845c9223546"
+    },
+    "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json": {
+      "bytes": 17243615,
+      "sha256": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02"
+    },
+    "results/development/nsc-atlas-wall-constraint-audit-v1.json": {
+      "bytes": 12343277,
+      "sha256": "0cea406caa7c66d9b19c9693cf8b2f7bf6c09927c8b20dbd4447f8a1301131c8"
+    },
+    "results/development/nsc-discovery-stationary-critical-v3.json": {
+      "bytes": 1066056,
+      "sha256": "45dfc4b5aa66d95da0966bd33074c06328816b330d4b88d63bb1d5ce8a91cbbd"
+    },
+    "results/development/nsc-ks-coupled-newton-n32-assembled.json": {
+      "bytes": 1069525,
+      "sha256": "5bdaf07a853331b3e6975aca45aec24976aac07c4bec9dc6eeb382d7c3e3e91e"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-beta48.json": {
+      "bytes": 1859680,
+      "sha256": "0489de61f55318bfe456bfe4704d29e010460527d1c0cf013a7bbf874e59cfe2"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-beta48b.json": {
+      "bytes": 1859580,
+      "sha256": "b37b6a09f62d593fb5aebcaf1e6f120012daf01685a31b71b9677fc086a7ee20"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-margin8.json": {
+      "bytes": 1859765,
+      "sha256": "85f00af1f46d6da99d2ac0b87eea01f5875b7072ad52f22d79952f016718252d"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-probe65.json": {
+      "bytes": 1859666,
+      "sha256": "c85aee844584c71ad2644f531c33f73d5c37b1d18c0db326a769ae71a03a7a67"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-rank29.json": {
+      "bytes": 1859580,
+      "sha256": "e8c094f41db2b65a60909da9c241cc6d6a6a63151ae7725d4fe70e51807dd891"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-rank64.json": {
+      "bytes": 1859802,
+      "sha256": "505e952d21b10f95c740eae75815ef5f96295476b9c715847f58e5e417b13d7d"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-rank70.json": {
+      "bytes": 1859574,
+      "sha256": "4a105aeb852ce4339e38209e971dc6b4b9d1d64b2fb33ba473dbef91f99498d4"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-sup16.json": {
+      "bytes": 1859599,
+      "sha256": "e146b4c402e5cbc6964951b2cac92bc3eeefccbdae797b56f81a46b02af9550b"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-sup32.json": {
+      "bytes": 1859587,
+      "sha256": "f5f69a85170d47423eb0cdd7c73926f874c405dd38fca0aea45868c2222ff5ce"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust03.json": {
+      "bytes": 1859885,
+      "sha256": "fcadd08f2f80ff4c4fa4866aab4571fe31a42a93835b4286a7c7f3c6baefa7c5"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-trust05.json": {
+      "bytes": 1859982,
+      "sha256": "e36f6d7a968fb3a277a4a8e5be3b54a2d1b89df0320bc3d2ed8172d7d4fb1b14"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-primal-norm-zeropad.json": {
+      "bytes": 1858115,
+      "sha256": "f3040a616a57dc8068f3991ab62530d5711da2d4447f9f98e3b5777fd02276c8"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-truncated-iterate7.json": {
+      "bytes": 1858943,
+      "sha256": "d4a6015cf15437b4ffecee9fd92f183c185642bc46cbe1c4cd058a63bb2473d9"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-truncated-iterate8.json": {
+      "bytes": 1859420,
+      "sha256": "c2041693a0c2691004e54a29dbd49c51f7cc7997751710f80e1a394c5379a074"
+    },
+    "results/development/nsc-ks-coupled-newton-n64-truncated-iterate9.json": {
+      "bytes": 1859247,
+      "sha256": "d46f1468f9587d5d44994c6b6db20ae9eed54876a6e98ea8ea6d3ea6390b1560"
+    },
+    "results/development/nsc-ks-current-field-pilot-v4.json": {
+      "bytes": 3662632,
+      "sha256": "a10407eebb68e9c70666119a2429769ee1b59d16b235af6a3321ac07177ef0a1"
+    },
+    "results/development/nsc-nested-parent-child-v1.json": {
+      "bytes": 2513866,
+      "sha256": "79039c49d6632a181319d52321820e789df21aa9292f6ba7eecc08b2536965ac"
+    },
+    "results/development/nsc-pg-retained-covariance.json": {
+      "bytes": 2002372,
+      "sha256": "2e5714fdd3b684888c4d0f410a8138b16a0192ca92405d3abc929a6d77650495"
+    },
+    "results/development/nsc-rn-cone-map-v1.json": {
+      "bytes": 2196388,
+      "sha256": "e4f75a85a886ebe033c5f426ff568dec0c52c909882426bdd6ed682acde31581"
+    },
+    "results/development/nsc-spherical-conformal-episode-v2.json": {
+      "bytes": 3775135,
+      "sha256": "f1aeea7c29be7f7a961a9f74d174500bee60e3785b116cecb236e1fa4c7f7a6d"
+    }
+  },
+  "limit_bytes": 1048576,
+  "schema": "nsc-result-payload-baseline-v1",
+  "scope": "byte-identical preexisting git-tracked large result JSON only"
+}

@@ -133,7 +133,8 @@ GITHUB_MARKDOWN_ENTRYPOINTS = {
     "results/README.md",
 }
 UNSUPPORTED_GITHUB_MATH = {
-    "operatorname macro": re.compile(r"\\operatorname\*?\{"),
+    # GitHub renders TeX with MathJax, including its AMS operatorname macro.
+    # Check Markdown delimiters here, not supported mathematical notation.
     "parenthesized inline delimiter": re.compile(r"\\\(|\\\)"),
     "bracket display delimiter": re.compile(r"(?m)^\\\[$|^\\\]$"),
 }
@@ -399,6 +400,25 @@ def public_files() -> list[Path]:
     return sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
 
 
+def result_inventory_files() -> set[str]:
+    """Flat release, development and portable-summary records need receipts."""
+    return {
+        path.relative_to(ROOT).as_posix()
+        for directory, pattern in ((ROOT/"results", "nsc-*.json"),
+                                   (ROOT/"results/development", "*.json"),
+                                   (ROOT/"results/summaries", "*.json"))
+        for path in directory.glob(pattern) if path.is_file()
+    }
+
+
+def check_result_inventory(errors: list[str], found: set[str], authenticated: set[str]) -> None:
+    """Explain closure mismatches without accepting unregistered evidence."""
+    unexpected, missing = sorted(found-authenticated), sorted(authenticated-found)
+    if unexpected or missing:
+        errors.append("tracked NSC result files differ from authenticated local/archived closure"
+                      f"; unregistered: {unexpected}; absent: {missing}")
+
+
 def check_manifest(errors: list[str]) -> None:
     try:
         manifest = json.loads(RESULT_MANIFEST.read_text(encoding="utf-8"))
@@ -481,16 +501,7 @@ def check_manifest(errors: list[str]) -> None:
                 errors.append("auxiliary provenance: " + str(error))
     if current != [manifest.get("frontier_artifact_id")]:
         errors.append(f"historical frontier differs from its declared manifest identity: {current}")
-    result_files = {
-        path.relative_to(ROOT).as_posix()
-        for path in (ROOT / "results").glob("nsc-*.json")
-    }
-    development = ROOT / "results" / "development"
-    if development.is_dir():
-        result_files.update(
-            path.relative_to(ROOT).as_posix()
-            for path in development.glob("*.json")
-        )
+    result_files = result_inventory_files()
     try:
         development_outputs = check_development_snapshot()
         if development_outputs & outputs:
@@ -519,8 +530,8 @@ def check_manifest(errors: list[str]) -> None:
         current_outputs.add(component_output)
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append(f"scalar lift component evidence: {error}")
-    if result_files != local_outputs | development_outputs | receipt_outputs | current_outputs:
-        errors.append("tracked NSC result files differ from authenticated local/archived closure")
+    check_result_inventory(errors, result_files,
+                           local_outputs | development_outputs | receipt_outputs | current_outputs)
 
 
 def validate_historical_release(manifest: dict) -> None:

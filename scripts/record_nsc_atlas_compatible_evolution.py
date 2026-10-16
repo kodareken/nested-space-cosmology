@@ -15,6 +15,7 @@ import time
 import uuid
 
 import numpy as np
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_coupled_evolution as previous
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget
@@ -79,7 +80,7 @@ def load_parent(budget):
     raw, manifest_raw = (directory/"coupled.json").read_bytes(), (directory/"manifest.json").read_bytes()
     manifest = json.loads(manifest_raw)
     if (manifest.get("schema") != previous.SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != previous.source_bindings()
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=previous.SOURCES)
             or manifest.get("outputs") != {"coupled.json": dict(sha256=digest(raw), bytes=len(raw))}):
         raise ValueError("inherited coupled hash/source binding mismatch")
     parent = json.loads(raw)
@@ -402,7 +403,7 @@ def check(directory):
             or any(p.is_symlink() for p in directory.iterdir())):
         raise ValueError("compatible output inventory mismatch")
     manifest = json.loads((directory/"manifest.json").read_bytes())
-    if manifest.get("schema") != SCHEMA+"-manifest" or manifest.get("source_bindings") != source_bindings():
+    if manifest.get("schema") != SCHEMA+"-manifest" or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES):
         raise ValueError("compatible source binding/manifest mismatch")
     raw = (directory/"compatible.json").read_bytes()
     if manifest.get("outputs") != {"compatible.json": dict(sha256=digest(raw), bytes=len(raw))}:

@@ -15,6 +15,7 @@ from types import SimpleNamespace
 
 import numpy as np
 from numpy.polynomial import Polynomial
+from validation_source_successors import verify_saved_bindings
 
 import record_nsc_atlas_profile_moment as predecessor
 from record_nsc_atlas_scalar_inputs import (
@@ -287,7 +288,7 @@ def check(directory):
     manifest_path = directory/"manifest.json"
     manifest = json.loads(manifest_path.read_bytes())
     if (manifest_path.is_symlink() or manifest.get("schema") != SCHEMA+"-manifest"
-            or manifest.get("source_bindings") != source_bindings()):
+            or not verify_saved_bindings(manifest.get("source_bindings"), ROOT, expected_paths=SOURCES)):
         raise ValueError("local lift source binding or schema mismatch")
     if ({p.name for p in directory.iterdir()} != {"manifest.json", "lift.json"}
             or set(manifest.get("outputs", {})) != {"lift.json"}):

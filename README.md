@@ -86,8 +86,10 @@ localizes that sensitivity to the final exterior rows without identifying
 its cause. The [cap mass and actual wall-curve audit](docs/current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
 finds strong pulse-time derivative-width sensitivity. At the terminal cut,
 radial mass and lapse residuals are small but a temporal mass discrepancy
-remains; the incoming-field mismatch does not explain it. The next
-connection is the cap mass functional's balance under discrete field transport.
+remains; the incoming-field mismatch does not explain it. The
+[direct mass-functional check](docs/current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+finds that this discrepancy also remains under the implemented instantaneous
+field rates. Its next connection is the cap's discrete energy balance.
 Boundary accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
@@ -99,6 +101,8 @@ expansion and recycling remain research questions.
 
 ## Read and reproduce
 
+- [Prediction register](docs/prediction-register.md): the closed perturbative cap–wall relation and its computed coefficients.
+- [Compact result storage](docs/nsc-storage.md#current-calculation-outputs-16-october-2026): summaries and hashes in Git, regenerable raw arrays locally.
 - [Atlas programme and calculation dependencies](docs/nsc-cosmological-atlas.md)
 - [Current prepared response and evidence](docs/nsc-atlas-prepared-response.md)
 - [Observer inverse and preparation restrictions](docs/nsc-atlas-observer-inference.md)

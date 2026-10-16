@@ -18,6 +18,7 @@ import time
 import numpy as np
 
 import diagnose_nsc_atlas_background_time as previous
+from validation_source_successors import verify_saved_bindings
 from recursive_horizons.nsc_atlas_background_evolution import background_stage, _combine, _state
 from recursive_horizons.nsc_atlas_reduced_cap import _wall_conversion
 
@@ -258,6 +259,10 @@ def create(path,*,root=ROOT):
 def check(path,*,root=ROOT):
     saved=json.loads(Path(path).read_bytes())
     current=audit(root)
+    # Provenance is authenticated separately; scientific fields remain exact.
+    if saved.get("audit_source_bindings") != current.get("audit_source_bindings"):
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=SOURCES)
+        current["audit_source_bindings"] = saved["audit_source_bindings"]
     for row in (saved,current):
         cpu=row["execution"].pop("cpu_seconds")
         if isinstance(cpu,bool) or not math.isfinite(cpu) or not 0<=cpu<=30:

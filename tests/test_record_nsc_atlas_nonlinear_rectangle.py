@@ -106,6 +106,39 @@ def base():
     return synthetic()
 
 
+def test_source_and_recomputed_roundoff_keep_structures_and_counts_exact(base):
+    from recursive_horizons.nsc_atlas_validation import source_jet_roundoff_tolerances
+    record = copy.deepcopy(base)
+    row = record["initial_data"]["finite"]["source"]
+    _, tolerance = source_jet_roundoff_tolerances(row["x"], record["geometry"])
+    i = int(np.argmax(tolerance))
+    row["c_x"][i] += tolerance[i]/2
+    tool._validate_initial(record)
+    row["c_x"][i] += 1e-6
+    with pytest.raises(ValueError, match="compact source derivative"):
+        tool._validate_initial(record)
+    assert tool._same_recomputed({"residual": 1e-15, "cells": 3}, {"residual": 0., "cells": 3})
+    assert not tool._same_recomputed({"residual": 1e-6}, {"residual": 0.})
+    assert not tool._same_recomputed({"cells": 3.}, {"cells": 3})
+    assert not tool._same_recomputed({"cells": True}, {"cells": 1})
+
+
+def test_bound_rebuild_roundoff_retains_saved_amplitude_exactly(base, monkeypatch):
+    rebuilt = copy.deepcopy(base["source_bounds"])
+    for key in ("M1_bound", "M2_bound", "Lbar", "alpha_star", "test_alpha"):
+        rebuilt[key] = float(np.nextafter(rebuilt[key], np.inf))
+    monkeypatch.setattr(tool, "source_amplitude_bound", lambda _: rebuilt)
+    tool._validate_initial(base)
+    changed = copy.deepcopy(base)
+    changed["initial_data"]["finite"]["alpha"] = float(np.nextafter(
+        changed["initial_data"]["finite"]["alpha"], np.inf))
+    with pytest.raises(ValueError, match="source amplitude"):
+        tool._validate_initial(changed)
+    rebuilt["alpha_star"] *= 1.001
+    with pytest.raises(ValueError, match="source threshold"):
+        tool._validate_initial(base)
+
+
 @pytest.fixture
 def isolated(tmp_path, monkeypatch, base):
     root = tmp_path/"repository"

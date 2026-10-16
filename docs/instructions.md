@@ -301,6 +301,14 @@ cosmological matching are not established.
 
 ## Reuse and verification
 
+Save new full numerical outputs under ignored `.build/results/`, and commit
+their compact summaries, hashes, input identities and regeneration commands.
+The [storage owner](nsc-storage.md#current-calculation-outputs-16-october-2026)
+and `scripts/check_result_storage.py` enforce the limit on new large JSON.
+Keep existing bound evidence intact. The
+[prediction register](prediction-register.md) records each result's fixed
+inputs, quantitative outputs, comparison status and remaining uncertainty.
+
 Consult the prior-art reuse map and existing evidence before compute. Name the
 missing connection and the smallest check that can resolve it. Stop repeated
 verification that leaves the physical gap unchanged. Historical derivations

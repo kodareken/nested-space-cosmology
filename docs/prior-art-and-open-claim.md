@@ -2,6 +2,18 @@
 
 ## Terminal cap mass-functional derivative, 16 October 2026
 
+**Outcome:** the [completed calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
+and creation validation pass with 1,711,610 points / 6.6875 process CPU seconds.
+One standalone check passes with 855,805 points / 4.078125 CPU seconds.
+The finite instantaneous defect remains `-0.6612504470` at the finest
+backward width, compared with same-rate history `-0.6407403055`.
+Its quadrature difference is `1.09497e-5`; the finest stencil has no recorded
+limiter branch changes. Coarser tiny-secant changes remain disclosed.
+This ends the probe set and redirects to discrete cap energy balance.
+No new trajectory or grid scan is called for. The raw output stays in
+ignored local storage with a [tracked summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json).
+The admission below preserves the completed calculation's scope.
+
 The completed selected-cap audit isolates a terminal temporal mass
 discrepancy that is much larger than its incoming-trace flux change. The
 [mass-transport identity and tangent](nsc-atlas-finite-amplitude.md#cap-mass-balance-under-field-transport)
@@ -30,7 +42,7 @@ the numerical implementation was unchanged. The affected orchestration
 test and remaining unexecuted controls then passed. Across both attempts,
 the shared allowance records **171,957 points / 1.34375 process CPU seconds**,
 including exhausted child attempts. No retained physical calculation was
-part of the controls. Producers and controls are frozen before creation.
+part of the controls. Producers and controls were frozen at `fc71709` before creation.
 
 ## Selected cap mass and wall-curve audit, 16 October 2026
 

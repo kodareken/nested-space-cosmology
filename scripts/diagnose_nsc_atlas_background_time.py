@@ -17,6 +17,7 @@ import numpy as np
 from scipy.optimize import brentq
 
 import record_nsc_atlas_background_evolution as producer
+from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = producer.RELATIVE_OUTPUT+"/background.json"
@@ -53,10 +54,8 @@ def authenticate(root=ROOT):
         candidate = (root/name).resolve()
         if not candidate.is_relative_to(root):
             raise ValueError("bound input exits the repository")
-        data = candidate.read_bytes()
+        data = verify_saved_source(name,expected,root)
         hashed_bytes += len(data)
-        if digest(data) != expected:
-            raise ValueError("background input binding mismatch: "+name)
         if name == BASE:
             base_raw = data
     if base_raw is None:
@@ -291,6 +290,10 @@ def create(path,*,root=ROOT):
 def check(path,*,root=ROOT):
     saved=json.loads(Path(path).read_bytes())
     current=audit(root)
+    # Provenance is authenticated separately; scientific fields remain exact.
+    if saved.get("audit_source_bindings") != current.get("audit_source_bindings"):
+        verify_saved_bindings(saved.get("audit_source_bindings"),root,expected_paths=OWN_SOURCES)
+        current["audit_source_bindings"] = saved["audit_source_bindings"]
     for row in (saved,current):
         value=row["execution"].pop("cpu_seconds")
         if isinstance(value,bool) or not math.isfinite(value) or not 0<=value<=30:

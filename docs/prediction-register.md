@@ -1,0 +1,93 @@
+# Prediction register
+
+This register states what the fixed model predicts, where it applies and how
+agreement could be rejected. Each entry distinguishes derived consequences,
+numerical sensitivity and observations. The [machine-readable register](../results/prediction-register.json)
+binds the evidence bytes and the exact locations of reported values.
+
+## NSC-P001 — Perturbative cap and moving wall
+
+**Registered retrospectively on 16 October 2026.** These results had already
+been derived and calculated. This entry is neither a preregistration nor a
+test against withheld observations. Its status is a **closed conditional
+perturbative result**; observational testing and nonlinear finite-amplitude
+closure remain open.
+
+The [cap/wall derivation](nsc-atlas-cap-wall-response.md),
+[wall evaluation](nsc-atlas-wall-evolution.md) and
+[model snapshot](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json)
+fix a canonical real massless conformal scalar, a de Sitter cap, a
+Schwarzschild exterior and a pure-tension wall. The chosen inputs are
+$h=H\ell=1$, $b=k\ell=2$, $m=M/\ell=0.4$ and $\xi=1/6$; they are not fitted
+observations. The source is the original $C^3$ compact characteristic pulse,
+with quiet earlier cap and bottom data. The expanding timelike reference
+wall has $x\in[0.45,0.55]$ on the finite no-return domain, with the signed
+normal directed from cap to exterior.
+
+Write $s=\tau_W/\ell$ and $\alpha=\kappa_4\varepsilon^2/\ell^2$. In the
+Jordan frame the predictions are coefficients in
+
+$$
+\frac{\mathfrak m_+}{\ell}=m+\alpha\mu_++O(\alpha^2),\qquad
+\frac{\mathfrak m_-}{\ell}=\frac{h^2r^3}{2}+\alpha\nu_-+O(\alpha^2),
+$$
+$$
+r=x+\alpha\rho+O(\alpha^2),\qquad
+V_W=V_0(1+\alpha\eta)+O(\alpha^2).
+$$
+
+The cap vacuum is subtracted at the actual radius $r$. The coefficient
+$\eta$ concerns the exterior null embedding; it is not the central
+observer's proper clock. The common quiet event fixes the integration
+constants. At reference radius $x=0.55$, the fine side of the retained
+129/257-field-node comparison gives:
+
+| Dimensionless coefficient | Value at $x=0.55$ | Maximum 129/257 field-grid difference over nine common cuts |
+| --- | ---: | ---: |
+| $\mu_+$ | -28.88342232555452 | $3.3761187623326805\times10^{-7}$ |
+| $\nu_-$ | 17.759078420520662 | $2.088306541025986\times10^{-7}$ |
+| $\rho$ | -5.2868390416906355 | $3.6360701116677774\times10^{-8}$ |
+| $\eta$ | -0.8178125677354874 | $3.5651870344821646\times10^{-9}$ |
+
+Values are copied from `/solutions/1/wall_samples/8` of the
+[wall field-comparison record](../results/development/nsc-atlas-wall-evolution-v1/field/response.json),
+with sensitivity values from its `/wall_differences` object. Its
+[manifest](../results/development/nsc-atlas-wall-evolution-v1/field/manifest.json)
+retains the original source context. Other numerical settings stay fixed
+within this comparison. These sampled differences are not error bars, an
+endpoint-specific bound or a total error enclosure. No physical amplitude,
+SI length scale or finite-amplitude remainder bound is supplied here.
+
+At the same retained order, the
+[exact cap/wall record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json)
+and [manifest](../results/development/nsc-atlas-cap-wall-response-v1/manifest.json)
+give
+
+$$
+\delta\overline K=0,\qquad
+\delta a_+=\delta a_-=\frac{6m\rho}{bx^4}
+-\frac{2(\mu_+-\nu_-)}{bx^3}.
+$$
+
+These are conditional identities for the coefficient of $\alpha$, including
+both metric and wall displacement. They do not assert vanishing displacement
+or all-order closure of the nonlinear trajectory.
+
+An independent identity failure under the same action, preparation, domain,
+orientation and perturbative order would reject this conditional result.
+An observational or other independent numerical test still needs a defined
+observable, physical input selection and a declared uncertainty. Once those
+are supplied, a prediction outside that uncertainty rejects agreement. The
+field-grid differences above must not be substituted for that future
+acceptance band. No observational calibration has been performed.
+
+Check the register with:
+
+```sh
+python scripts/run_python.py scripts/check_prediction_register.py
+```
+
+The checker authenticates the seven evidence files, their manifest links,
+the parameter/domain declarations and the exact saved-value projections.
+It performs no symbolic derivation, numerical integration or generator run;
+cross-platform numerical replay belongs to the separate evidence validators.

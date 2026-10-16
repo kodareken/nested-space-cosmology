@@ -64,6 +64,18 @@ def make(nodes=17, degree=3, alpha=None, budget=None):
     return SourceSnapshot(GEOMETRY, alpha=alpha, x_nodes=x, source_rows=rows, budget=budget)
 
 
+def test_saved_compact_first_jet_allows_roundoff_but_rejects_changed_source():
+    from recursive_horizons.nsc_atlas_validation import source_jet_roundoff_tolerances
+    alpha, x, rows = manufactured()
+    _, allowance = source_jet_roundoff_tolerances(x, GEOMETRY)
+    i = int(np.argmax(allowance))
+    rows["c_x"][i] += allowance[i]/2
+    SourceSnapshot(GEOMETRY, alpha=alpha, x_nodes=x, source_rows=rows)
+    rows["c_x"][i] += 1e-6
+    with pytest.raises(ValueError, match="compact profile mismatch: c_x"):
+        SourceSnapshot(GEOMETRY, alpha=alpha, x_nodes=x, source_rows=rows)
+
+
 def test_cubic_radius_correction_and_exact_pulse_at_withheld_points():
     snapshot = make()
     x = np.linspace(.4, GEOMETRY["x_last"], 65)
