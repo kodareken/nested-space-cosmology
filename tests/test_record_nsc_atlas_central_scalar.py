@@ -8,6 +8,25 @@ import pytest
 import record_nsc_atlas_central_scalar as tool
 
 
+def test_arrival_tangent_replay_keeps_retained_value_and_rejects_corruption():
+    import numpy as np
+    from scipy.interpolate import CubicHermiteSpline
+    x = np.linspace(-2.5, -2.2, 257)
+    q = .5+2*(x-x[0])
+    original = CubicHermiteSpline(x, q, np.full_like(x, 2.))
+    changed = q.copy()
+    changed[128] += 8*np.finfo(float).eps
+    replay = CubicHermiteSpline(x, changed, np.full_like(x, 2.))
+    query = (x[127]+x[128])/2
+    retained, current = float(original(query, 1)), float(replay(query, 1))
+    allowance = tool.exterior_record.reference_derivative_roundoff(replay)
+    assert retained != current
+    assert tool._check_arrival_derivative(retained, current, allowance) == retained
+    for invalid in (retained+1e-7, float("nan"), -retained):
+        with pytest.raises(ValueError, match="arrival"):
+            tool._check_arrival_derivative(invalid, current, allowance)
+
+
 def synthetic(inputs):
     solutions = []
     for order in tool.RADIAL_ORDERS:

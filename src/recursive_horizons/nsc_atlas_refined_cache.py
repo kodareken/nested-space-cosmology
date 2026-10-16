@@ -15,7 +15,7 @@ import numpy as np
 from .nsc_atlas_characteristic_initialization import Budget
 from .nsc_atlas_characteristic_trace import SourceSnapshot
 from .nsc_atlas_reference_wall_gauge import ReferenceWallGauge
-from .nsc_atlas_validation import source_jet_roundoff_tolerances
+from .nsc_atlas_validation import source_snapshot_roundoff_tolerances
 
 SCHEMA = "nsc-atlas-refined-cache-v1"
 GAUGE_TOLERANCE = 5e-12
@@ -77,18 +77,19 @@ def _exact_rows(actual,expected,label,budget):
             raise ValueError(label+" differs: "+key)
 
 
-def _replay_rows(actual,expected,label,*,geometry=None,budget=None,gauge=False):
+def _replay_rows(actual,expected,label,*,geometry=None,alpha=0.,source_knots=None,budget=None,gauge=False):
     """Validation-only roundoff comparison; copied rows use _exact_rows instead.
 
-    The analytic scalar allowance is conditioned on the null-label evaluation.
+    The source-frame allowance propagates null-label roundoff into scalar jets
+    and cancellation residuals such as h_xx-Q; it is not a source error bound.
     Coordinates and iteration counts stay exact. These comparisons do not add
     scientific queries; when replacing an existing comparison its charges are
     retained. The caller's CPU clock covers every comparison.
     """
     if set(actual)!=set(expected):
         raise ValueError(label+" field inventory differs")
-    pulse = {} if geometry is None else dict(zip(("c","c_x","c_xx"),
-        source_jet_roundoff_tolerances(np.asarray(expected["x"]),geometry,second=True)))
+    conditioned = {} if geometry is None else source_snapshot_roundoff_tolerances(
+        expected,geometry,alpha,source_knots=source_knots)
     for key in expected:
         a,b=np.asarray(actual[key],dtype=float),np.asarray(expected[key],dtype=float)
         if budget is not None:
@@ -100,27 +101,60 @@ def _replay_rows(actual,expected,label,*,geometry=None,budget=None,gauge=False):
             if key=="inverse_iterations":
                 same=bool(same and all(type(x) is type(y) for x,y in zip(_plain(actual[key]),_plain(expected[key]))))
         else:
-            atol=GAUGE_TOLERANCE if gauge else 2e-13+pulse.get(key,0.)
+            atol=GAUGE_TOLERANCE if gauge else 2e-13+conditioned.get(key,0.)
             same=np.allclose(a,b,rtol=2e-12,atol=atol)
-            if key in pulse:
-                quiet=(b==0)&(pulse[key]==0)
+            if key in {"c","c_x","c_xx"} and key in conditioned:
+                quiet=(b==0)&(conditioned[key]==0)
                 same=bool(same and np.all(a[quiet]==0))
         if not same:
-            raise ValueError(label+" differs: "+key)
+            if key in {"x","inverse_iterations"}:
+                detail=" (exact coordinate/count comparison)"
+            else:
+                allowance=np.broadcast_to(atol+2e-12*abs(b),b.shape)
+                excess=abs(a-b)-allowance
+                worst=int(np.argmax(excess))
+                detail=(f" (maximum difference={float(np.max(abs(a-b))):.17g}, "
+                        f"maximum allowance={float(np.max(allowance)):.17g}, "
+                        f"worst index={worst}, difference={float(abs(a-b).flat[worst]):.17g}, "
+                        f"allowance={float(allowance.flat[worst]):.17g})")
+            raise ValueError(label+" differs: "+key+detail)
 
 
-def _same_replayed(actual,expected):
+def _same_replayed(actual,expected,absolute=None):
     """Exact structure/counters with bounded floating replay differences."""
     if isinstance(expected,dict):
         return isinstance(actual,dict) and set(actual)==set(expected) and all(
-            _same_replayed(actual[k],v) for k,v in expected.items())
+            _same_replayed(actual[k],v,absolute.get(k) if isinstance(absolute,dict) else None)
+            for k,v in expected.items())
     if isinstance(expected,list):
         return isinstance(actual,list) and len(actual)==len(expected) and all(
             _same_replayed(a,b) for a,b in zip(actual,expected))
     if type(expected) is float:
         return type(actual) is float and math.isfinite(actual) and math.isfinite(expected) and math.isclose(
-            actual,expected,rel_tol=2e-12,abs_tol=2e-13)
+            actual,expected,rel_tol=2e-12,abs_tol=2e-13 if absolute is None else absolute)
     return type(actual) is type(expected) and actual==expected
+
+
+def _source_summary_allowances(reconstructed,base):
+    """Only maxima of conditioned source residuals inherit their row allowance."""
+    result={}
+    for label in ("zero","finite"):
+        rows={key:np.asarray(value)[1::2] for key,value in reconstructed["source_rows"][label].items()}
+        data=base["initial_data"][label]
+        limits=source_snapshot_roundoff_tolerances(rows,base["geometry"],data["alpha"],
+                                                  source_knots=_source_knots(data))
+        result[label]={key:2e-13+float(np.max(limits.get(field,0.))) for key,field in (
+            ("maximum_midpoint_source_constraint","source_constraint"),
+            ("maximum_midpoint_curvature_defect","source_h_xx_defect"))}
+    return {"diagnostics":{"source":result}}
+
+
+def _source_knots(data):
+    """Original129 knot values, including the transverse mixed-slope inputs."""
+    exact=data.get("exact_rows",{})
+    if not {"x","h","h_x"}<=set(exact):
+        return None
+    return {key:np.asarray(value)[::2] for key,value in exact.items()}
 
 
 def _same_copied_rows(actual,original):
@@ -233,7 +267,8 @@ def make_refined_cache(base,budget,*,_validation=False):
         reproduced=snapshot.sample(x)
         if _validation:
             _replay_rows(reproduced,old,label+" old source reproduction",
-                         geometry=base["geometry"],budget=budget)
+                         geometry=base["geometry"],alpha=data["alpha"],
+                         source_knots=_source_knots(data),budget=budget)
         else:
             _exact_rows(reproduced,old,label+" old source reproduction",budget)
         new=_table(snapshot.sample(mid),512,label+" midpoint source",budget)
@@ -298,15 +333,26 @@ def validate_refined_cache(cache,base,budget):
             table=cache["source_rows"][label]
             if not _same_copied_rows(table,old):
                 raise ValueError("copied source rows differ")
-            _replay_rows(table,reconstructed["source_rows"][label],"source replay",geometry=base["geometry"])
+            _replay_rows(table,reconstructed["source_rows"][label],label+" source replay",
+                         geometry=base["geometry"],alpha=base["initial_data"][label]["alpha"],
+                         source_knots=_source_knots(base["initial_data"][label]))
         old=base["gauge"]["rows"]
         table=cache["gauge_rows"]
         if not _same_copied_rows(table,old):
             raise ValueError("copied gauge rows differ")
         _replay_rows(table,reconstructed["gauge_rows"],"gauge replay",gauge=True)
         keys=set(reconstructed)-{"x_nodes","source_rows","gauge_rows"}
+        source_limits=_source_summary_allowances(reconstructed,base)
+        for label,fields in source_limits["diagnostics"]["source"].items():
+            for field,atol in fields.items():
+                actual=cache["diagnostics"]["source"][label][field]
+                expected=reconstructed["diagnostics"]["source"][label][field]
+                if not _same_replayed(actual,expected,atol):
+                    raise ValueError(f"source diagnostic {label}.{field} differs: "
+                        f"difference={abs(actual-expected):.17g}, "
+                        f"allowance={atol+2e-12*abs(expected):.17g}")
         if set(cache)!=set(reconstructed) or not _same_replayed(
-                {k:cache[k] for k in keys},{k:reconstructed[k] for k in keys}):
+                {k:cache[k] for k in keys},{k:reconstructed[k] for k in keys},source_limits):
             raise ValueError("cache declarations or diagnostics differ")
     except (KeyError,TypeError,ValueError) as error:
         raise ValueError("refined cache differs from deterministic reconstruction: "+str(error)) from error

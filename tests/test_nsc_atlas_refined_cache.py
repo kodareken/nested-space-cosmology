@@ -273,3 +273,64 @@ def test_copied_row_types_signed_zero_and_inventory_remain_exact(budget):
     assert not tool._same_copied_rows(changed,original)
     assert not tool._same_copied_rows(dict(supplied,extra=[0,0,0]),original)
     budget.check(24)
+
+
+def test_source_knots_keep_transverse_values_and_mixed_slope_inputs(budget):
+    rows={key:(np.arange(7,dtype=float)+i).tolist() for i,key in enumerate(
+        ("x","h","h_x","r","C","c","r_x","c_x","r_Ubar","c_Ubar","log_C_Ubar"))}
+    original=copy.deepcopy(rows)
+    knots=tool._source_knots({"exact_rows":rows})
+    assert set(knots)==set(rows)
+    for key,value in rows.items():
+        np.testing.assert_array_equal(knots[key],value[::2])
+    assert rows==original
+    budget.check(4*len(rows))
+
+
+@pytest.mark.parametrize("alpha",(0.,1e-5))
+def test_source_curvature_cancellation_and_summary_use_term_conditioning(alpha,budget):
+    # Same affine x, but a few rounding units in the subtracted null label.
+    # Recompute Q independently; do not invent a relative error on h_xx-Q.
+    x=np.array([.44,.445,.45])
+    V=(1-x/.8)*np.exp(x/.8)/GEOMETRY["U0"]
+    z=4*(V-(GEOMETRY["Va"]+GEOMETRY["Vb"])/2)/(GEOMETRY["Vb"]-GEOMETRY["Va"])
+    zx=-4*x*np.exp(x/.8)/(.64*GEOMETRY["U0"]*(GEOMETRY["Vb"]-GEOMETRY["Va"]))
+    zxx=zx*(1/x+1/.8)
+    def fields(label):
+        g=(1-label*label)**4
+        bz=-8*label*(1-label*label)**3
+        bzz=8*(1-label*label)**2*(7*label*label-1)
+        gx,gxx=bz*zx,bzz*zx*zx+bz*zxx
+        Q=(g*gxx-2*gx*gx)/(6*x)+g*gx/(3*x*x)
+        return g,gx,gxx,Q
+    g,gx,gxx,Q=fields(z)
+    expected=dict(x=x,h=np.zeros_like(x),h_x=np.zeros_like(x),h_xx=Q,
+        c=g,c_x=gx,c_xx=gxx,source_ode_h_xx=Q,
+        source_h_xx_defect=np.zeros_like(x),source_constraint=np.zeros_like(x))
+    changed=copy.deepcopy(expected)
+    shifted=fields(z+4*np.finfo(float).eps)
+    for key,value in zip(("c","c_x","c_xx","source_ode_h_xx"),shifted):
+        changed[key]=value
+    changed["source_h_xx_defect"]=Q-shifted[-1]
+    changed["source_constraint"]=alpha*changed["source_h_xx_defect"]/np.sqrt(
+        1-alpha*changed["c"]**2/(6*x*x))
+    assert np.max(abs(changed["source_h_xx_defect"]))>2e-13
+    tool._replay_rows(changed,expected,"source control",geometry=GEOMETRY,alpha=alpha,budget=budget)
+    reconstructed={"source_rows":{label:tool._plain(expected) for label in ("zero","finite")}}
+    base={"geometry":GEOMETRY,"initial_data":{
+        "zero":{"alpha":0.},"finite":{"alpha":alpha}}}
+    limits=tool._source_summary_allowances(reconstructed,base)
+    summary={"diagnostics":{"source":{label:{
+        "maximum_midpoint_source_constraint":0.,"maximum_midpoint_curvature_defect":0.}
+        for label in ("zero","finite")}}}
+    replay=copy.deepcopy(summary)
+    replay["diagnostics"]["source"]["finite"]["maximum_midpoint_curvature_defect"]=float(
+        abs(changed["source_h_xx_defect"][1]))
+    assert tool._same_replayed(replay,summary,limits)
+    damaged=copy.deepcopy(changed)
+    damaged["source_h_xx_defect"]+=1e-6
+    with pytest.raises(ValueError,match=r"source_h_xx_defect.*maximum difference=.*allowance="):
+        tool._replay_rows(damaged,expected,"source control",geometry=GEOMETRY,alpha=alpha,budget=budget)
+    replay["diagnostics"]["source"]["finite"]["maximum_midpoint_curvature_defect"]=1e-6
+    assert not tool._same_replayed(replay,summary,limits)
+    budget.check(100*x.size)

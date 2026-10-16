@@ -42,7 +42,8 @@ def restored_fixture():
         receipt={"files": {"cache": "a"*64, "clock": "b"*64}, "clock_time_panels": 32,
             "clock_sampled_b_target_met": True, "restored_forcing_slices": 65, "restored_boundary_jets": 81,
             "new_leading_field_solves": 0, "new_wall_solves": 0},
-        geometry_defects=dict(wall_coordinate=0., wall_derivative=0., arrival_coordinate=0.))
+        geometry_defects=dict(wall_coordinate=0., wall_derivative=0., arrival_coordinate=0.),
+        geometry_tolerances=dict(wall_coordinate=2e-13, wall_derivative=2e-11, arrival_coordinate=2e-13))
 
 
 def synthetic(restored):
@@ -251,3 +252,42 @@ def test_restore_uses_full_geometry_and_shared_budget_without_physical_fallback(
     cache["direct_samples"][5]["U_wall"] += 1e-6
     with pytest.raises(ValueError, match="reference geometry"):
         tool.restore_inputs()
+
+
+def test_geometry_replay_allowance_tracks_hermite_derivative_conditioning():
+    from scipy.interpolate import CubicHermiteSpline
+    x = np.linspace(-2.5, -2.2, 257)
+    values = -.3+.1*(x-x[0])
+    slopes = np.full_like(x, .1)
+    original = CubicHermiteSpline(x, values, slopes)
+    changed = values.copy()
+    changed[128] += 8*np.finfo(float).eps
+    replay = CubicHermiteSpline(x, changed, slopes)
+    query = (x[127]+x[128])/2
+    defect = abs(float(replay(query, 1)-original(query, 1)))
+    allowance = tool.reference_derivative_roundoff(replay)
+    assert 2e-13 < defect < allowance < 1e-8
+    assert abs(float(replay(query)-original(query))) < 2e-13
+    limits = tool._geometry_tolerances({"wall": replay})
+    saved = dict(wall_coordinate=0., wall_derivative=0., arrival_coordinate=0.)
+    current = {**saved, "wall_derivative": defect}
+    tool._check_geometry_receipt(saved, current, limits)
+    with pytest.raises(ValueError, match="geometry arithmetic"):
+        tool._check_geometry_receipt(saved, {**current, "wall_derivative": 1e-7}, limits)
+    with pytest.raises(ValueError, match="geometry arithmetic"):
+        tool._check_geometry_receipt(saved, {**current, "wall_coordinate": 1e-10}, limits)
+
+
+def test_wall_derivative_replay_allowance_is_propagated_only_to_its_readouts(monkeypatch):
+    restored = restored_fixture()
+    saved = synthetic(restored)
+    wall = restored.geometry["wall"]
+    derivative_shift = restored.geometry_tolerances["wall_derivative"]/4
+    restored.geometry["wall"] = lambda V, derivative=0: wall(V, derivative)+(derivative_shift if derivative else 0.)
+    restored.geometry_defects["wall_derivative"] = derivative_shift
+    monkeypatch.setattr(tool, "restore_inputs", lambda: restored)
+    assert tool.validate_record(saved)
+    damaged = deepcopy(saved)
+    damaged["solutions"][0]["wall_samples"][10]["U_wall_V"] += 1e-7
+    with pytest.raises(ValueError, match="wall-rate"):
+        tool.validate_record(damaged)

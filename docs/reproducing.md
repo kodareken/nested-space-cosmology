@@ -11,8 +11,11 @@ symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker
 uses relative `2e-11` / absolute `8e-12`; the rectangle diagnostic comparison
 uses relative `2e-12` / absolute `2e-13`. Compact-source checks propagate
-binary64 coordinate rounding through the source polynomial and its derivative,
-instead of demanding relative agreement with a derivative near zero.
+binary64 coordinate rounding through the source polynomial and its derivatives.
+Source-frame checks also propagate Hermite reconstruction roundoff through
+derived constraint residuals; cancellation is assessed against its operands.
+Reference-geometry derivative allowances account for the actual spline knot
+spacing, while retained coordinates and copied inputs remain exact where declared.
 These are replay allowances, not physical uncertainty or convergence bounds.
 One-ULP conditioning controls and deliberate larger corruptions test the
 acceptance and rejection sides.
@@ -21,7 +24,9 @@ The [validation successor record](storage/validation-source-successors.json)
 identifies the original Git bytes and the reviewed current checker bytes.
 Old result manifests remain intact, current validation code runs, and newly
 created records bind current code. Unknown source changes and all data-hash
-changes still fail. The shared synthetic-test budgets count only CPU time
+changes still fail. Verified original Git bytes are cached within a process;
+current files, registry entries and checker hashes are checked on every call.
+The shared synthetic-test budgets count only CPU time
 inside their tests, retaining cumulative point and active-CPU limits.
 
 ## Current work

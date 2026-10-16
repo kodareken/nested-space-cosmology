@@ -30,6 +30,35 @@ def test_recomputed_numerics_allow_roundoff_with_exact_structure_and_counts():
             tool._equal(actual, expected, "recomputed")
 
 
+def test_snapshot_replay_conditions_residuals_but_not_copied_coordinates():
+    from recursive_horizons.nsc_atlas_validation import source_snapshot_roundoff_tolerances
+    x = np.linspace(.4, GEOMETRY["x_last"], 129)
+    snapshot = object.__new__(tool.SourceSnapshot)
+    snapshot._geometry, snapshot._alpha = GEOMETRY, 1e-4
+    snapshot._bounds = dict(r_min=.2, v_max=2., F_min=.5)
+    h, hx = 30*(x-.4)**3, 90*(x-.4)**2
+    preliminary = snapshot._frame(x, h, hx, np.zeros_like(x))
+    row = snapshot._frame(x, h, hx, preliminary["source_ode_h_xx"])
+    knots = dict(x=x, h=h, h_x=hx)
+    tolerances = source_snapshot_roundoff_tolerances(row, GEOMETRY, 1e-4, source_knots=knots)
+    changed = copy.deepcopy(row)
+    index = int(np.argmax(tolerances["source_h_xx_defect"]))
+    changed["source_h_xx_defect"][index] += tolerances["source_h_xx_defect"][index]/2
+    tool._source_snapshot_equal(changed, row, GEOMETRY, 1e-4, source_knots=knots)
+    changed["source_h_xx_defect"][index] += 1e-4
+    with pytest.raises(ValueError, match="source_h_xx_defect.*max_abs_difference=.*allowance="):
+        tool._source_snapshot_equal(changed, row, GEOMETRY, 1e-4, source_knots=knots)
+    changed = copy.deepcopy(row); changed["x"][2] = np.nextafter(x[2], np.inf)
+    with pytest.raises(ValueError, match="exact coordinates"):
+        tool._source_snapshot_equal(changed, row, GEOMETRY, 1e-4, source_knots=knots)
+    changed = copy.deepcopy(row); changed["c"][0] = 1e-16
+    with pytest.raises(ValueError, match="mismatch: c;"):
+        tool._source_snapshot_equal(changed, row, GEOMETRY, 1e-4, source_knots=knots)
+    changed = copy.deepcopy(row); changed["C"] = list(changed["C"]); changed["C"][0] = True
+    with pytest.raises(ValueError, match="shape/type/nonfinite"):
+        tool._source_snapshot_equal(changed, row, GEOMETRY, 1e-4, source_knots=knots)
+
+
 @pytest.fixture(autouse=True)
 def bounded_control():
     started = time.process_time()

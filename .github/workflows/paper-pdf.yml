@@ -34,6 +34,11 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      OPENBLAS_CORETYPE: Haswell
     steps:
       - uses: actions/checkout@v7
         with:

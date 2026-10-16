@@ -64,6 +64,59 @@ def test_registered_successor_returns_original_receipt_bytes(history):
     tool.verify_saved_bindings({name:sha(old)}, root, expected_paths=[name])
 
 
+def test_only_successful_origin_reads_cached_current_and_registry_still_checked(history,monkeypatch):
+    root,name,old,new,registry=history
+    original=tool.subprocess.run
+    calls=[]
+    def counted(*args,**kwargs):
+        calls.append(args[0])
+        return original(*args,**kwargs)
+    monkeypatch.setattr(tool.subprocess,"run",counted)
+    assert tool.verify_saved_source(name,sha(old),root)==old
+    assert tool.verify_saved_source(name,sha(old),root)==old
+    assert len(calls)==1
+    write(root,name,b"# unreviewed current drift\n")
+    with pytest.raises(ValueError,match="unregistered"):
+        tool.verify_saved_source(name,sha(old),root)
+    write(root,name,new)
+    registry["successors"][name]["successor_sha256"]=sha(b"wrong successor")
+    save_registry(root,registry)
+    with pytest.raises(ValueError,match="unregistered"):
+        tool.verify_saved_source(name,sha(old),root)
+    registry["successors"][name]["successor_sha256"]=sha(new)
+    save_registry(root,registry)
+    registry["successors"][name]["original_sha256"]=sha(b"different origin")
+    save_registry(root,registry)
+    with pytest.raises(ValueError,match="pinned origin"):
+        tool.verify_saved_source(name,sha(b"different origin"),root)
+    assert len(calls)==2
+    registry["successors"][name]["original_sha256"]=sha(old)
+    save_registry(root,registry)
+    write(root,tool.RESOLVER_SOURCES[0],b"# current resolver drift\n")
+    with pytest.raises(ValueError,match="resolver drift"):
+        tool.verify_saved_source(name,sha(old),root)
+    assert len(calls)==2
+
+
+@pytest.mark.parametrize("failure",("git_error","wrong_bytes"))
+def test_failed_origin_reads_are_not_cached(history,monkeypatch,failure):
+    root,name,old,_,_=history
+    original=tool.subprocess.run
+    calls=[]
+    def first_fails(*args,**kwargs):
+        calls.append(args[0])
+        if len(calls)==1:
+            return subprocess.CompletedProcess(args[0],1 if failure=="git_error" else 0,
+                                               stdout=b"unverified",stderr=b"fixture")
+        return original(*args,**kwargs)
+    monkeypatch.setattr(tool.subprocess,"run",first_fails)
+    with pytest.raises(ValueError,match="pinned origin"):
+        tool.verify_saved_source(name,sha(old),root)
+    assert tool.verify_saved_source(name,sha(old),root)==old
+    assert tool.verify_saved_source(name,sha(old),root)==old
+    assert len(calls)==2
+
+
 def test_unexpected_current_drift_and_unlisted_source_are_rejected(history):
     root, name, old, _, registry = history
     write(root, name, b"# unreviewed edit\n")
@@ -136,4 +189,3 @@ def test_active_cap_replay_policy_keeps_counts_structure_and_scientific_changes_
         assert not checker(dict(expected,calls=20.0),expected)
         assert not checker(dict(expected,quiet=1),expected)
         assert not checker(dict(expected,scope="changed"),expected)
-

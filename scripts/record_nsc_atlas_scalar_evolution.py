@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 import time
 from types import SimpleNamespace
@@ -61,6 +62,35 @@ def input_snapshot():
         "new_leading_field_solves": 0, "new_wall_solves": 0}
 
 
+def reference_derivative_roundoff(spline):
+    """Binary64 replay allowance for the same differentiated Hermite curve.
+
+    Coordinate and slope rounding enters a spline derivative divided by its
+    knot width. This is an arithmetic allowance, not a geometry error estimate.
+    The retained coordinates, data and numerical approximation stay unchanged.
+    """
+    widths = np.diff(spline.x)
+    value_scale = max(1., float(np.max(abs(spline.c[-1]))))
+    slope_scale = max(1., float(np.max(abs(spline.c[-2]))))
+    coordinate_scale = max(1., float(np.max(abs(spline.x))))
+    return 2e-13+32*np.finfo(float).eps*(value_scale+coordinate_scale*slope_scale)/float(np.min(widths))
+
+
+def _geometry_tolerances(geometry):
+    return dict(wall_coordinate=2e-13,
+                wall_derivative=reference_derivative_roundoff(geometry["wall"]),
+                arrival_coordinate=2e-13)
+
+
+def _check_geometry_receipt(saved, current, tolerances):
+    if (not isinstance(saved, dict) or set(saved) != set(current)
+            or any(type(saved[key]) not in (int, float) or not math.isfinite(saved[key])
+                   or saved[key] < 0 or abs(saved[key]-value) > tolerances[key]
+                   for key, value in current.items())):
+        raise ValueError("restored geometry arithmetic receipt differs: "
+                         f"saved={saved}, rebuilt={current}, allowances={tolerances}")
+
+
 def restore_inputs():
     from recursive_horizons.nsc_atlas_prepared_response import PreparedFieldBudget, _geometry
     from recursive_horizons.nsc_atlas_bulk_response import BulkBudget
@@ -81,8 +111,10 @@ def restore_inputs():
         defects["wall_coordinate"] = max(defects["wall_coordinate"], abs(float(geometry["wall"](row["V"]))-row["U"]))
         defects["wall_derivative"] = max(defects["wall_derivative"], abs(float(geometry["wall"](row["V"], 1))-row["U_V"]))
         defects["arrival_coordinate"] = max(defects["arrival_coordinate"], abs(float(geometry["arrival"](row["V"]))-row["q_plus"]))
-    if any(value > 2e-13 for value in defects.values()):
-        raise ValueError("full reference geometry differs from retained input coordinates")
+    tolerances = _geometry_tolerances(geometry)
+    if any(not math.isfinite(value) or value > tolerances[key] for key, value in defects.items()):
+        raise ValueError("full reference geometry differs from retained input coordinates: "
+                         f"defects={defects}, allowances={tolerances}")
     wedge = SimpleNamespace(domain=dict(d), geometry=geometry, budget=shared)
     provider = ForcingSliceProvider.from_records(wedge, cache["source_geometry"], cache["direct_samples"], budget=metrics)
     forcing = {count: ForcingTimeCache(wedge, cache["source_geometry"], np.linspace(0, 1, 129),
@@ -90,7 +122,8 @@ def restore_inputs():
     lift = clock_record.restore_lift(d, boundary, geometry=geometry, budget=metrics, validation=False)
     shared.check()
     return SimpleNamespace(shared=shared, budget=metrics, domain=d, geometry=geometry, forcing=forcing,
-        lift=lift, cache=cache, clock=clock, receipt=receipt, geometry_defects=defects)
+        lift=lift, cache=cache, clock=clock, receipt=receipt, geometry_defects=defects,
+        geometry_tolerances=tolerances)
 
 
 def input_indicators(cache):
@@ -204,7 +237,12 @@ def _validate_solution(saved, restored, count, nodes, ode):
         expected = dict(V=V, U_wall=wall, U_wall_V=wall_V, g1=supplied["g1"], g1_V=supplied["g1_V"],
             B_wall=float(B[-1]), b_wall=b, z_wall=float(z[-1]), y_wall=float(y[-1]), z_wall_V=zV,
             y_wall_V=float(supplied["g1_V"]+zV+wall_V*b), wall_flux=float(supplied["F"][-1]))
-        if any(not _equal(row[key], value) for key, value in expected.items()):
+        # Only these two readouts depend on the rebuilt wall spline derivative.
+        # Its arithmetic allowance propagates through the explicit wall_V*b term.
+        derivative_atol = restored.geometry_tolerances["wall_derivative"]
+        extra = dict(U_wall_V=derivative_atol, y_wall_V=abs(b)*derivative_atol)
+        if any(not math.isclose(row[key], value, rel_tol=1e-12,
+                                abs_tol=1e-13+extra.get(key, 0.)) for key, value in expected.items()):
             raise ValueError("scalar evolution saved source, lift or discrete wall-rate identity mismatch")
         if t <= .25 and max(abs(z).max(), abs(y).max(), *(abs(row[key]) for key in READOUTS)) > 1e-24:
             raise ValueError("scalar evolution lost the quiet interval")
@@ -256,7 +294,8 @@ def validate_record(record):
         restored = restore_inputs()
         cache_record._same(record["domain"], restored.domain, "restored domain")
         cache_record._same(record["inputs"], restored.receipt, "input authentication")
-        cache_record._same(record["geometry_restoration_defects"], restored.geometry_defects, "restored geometry")
+        _check_geometry_receipt(record["geometry_restoration_defects"], restored.geometry_defects,
+                                restored.geometry_tolerances)
         if not isinstance(record["solutions"], list) or len(record["solutions"]) != 4:
             raise ValueError("scalar evolution requires four fixed-axis solutions")
         for saved, (count, nodes), ode in zip(record["solutions"], CASES, ODE_CASES):

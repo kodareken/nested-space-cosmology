@@ -8,6 +8,7 @@ Creation-time source inventories must continue hashing the current files.
 from __future__ import annotations
 
 import hashlib
+from functools import lru_cache
 import json
 from pathlib import Path, PurePosixPath
 import re
@@ -84,6 +85,20 @@ def _registry(root):
     return document["successors"]
 
 
+@lru_cache(maxsize=128)
+def _original_bytes(root, commit, name, expected):
+    """Cache only successfully authenticated immutable Git bytes.
+
+    Current files and the registry are deliberately checked outside this cache
+    on every call. Exceptions are not cached by lru_cache.
+    """
+    process = subprocess.run(["git", "-C", root, "show", commit + ":" + name],
+                             capture_output=True, check=False)
+    if process.returncode or _digest(process.stdout) != expected:
+        raise ValueError("saved source is not authenticated by the pinned origin: " + name)
+    return process.stdout
+
+
 def verify_saved_source(name, expected, root):
     """Return authenticated ORIGINAL bytes; current bytes when already exact.
 
@@ -107,11 +122,7 @@ def verify_saved_source(name, expected, root):
     if (row is None or row["original_sha256"] != expected
             or row["successor_sha256"] != actual):
         raise ValueError("unregistered saved source binding change: " + name)
-    process = subprocess.run(["git", "-C", str(root), "show", ORIGIN_COMMIT + ":" + name],
-                             capture_output=True, check=False)
-    if process.returncode or _digest(process.stdout) != expected:
-        raise ValueError("saved source is not authenticated by the pinned origin: " + name)
-    return process.stdout
+    return _original_bytes(str(root), ORIGIN_COMMIT, name, expected)
 
 
 def verify_saved_bindings(expected, root, *, expected_paths=None):
@@ -123,4 +134,3 @@ def verify_saved_bindings(expected, root, *, expected_paths=None):
     for name, digest in expected.items():
         verify_saved_source(name, digest, root)
     return True
-

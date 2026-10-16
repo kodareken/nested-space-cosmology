@@ -24,6 +24,7 @@ import record_nsc_atlas_nonlinear_rectangle as previous
 from recursive_horizons.nsc_atlas_characteristic_initialization import Budget, source_geometry, validate_geometry
 from recursive_horizons.nsc_atlas_nonlinear_source import ExactSource, source_amplitude_bound
 from recursive_horizons.nsc_atlas_characteristic_trace import SourceSnapshot
+from recursive_horizons.nsc_atlas_validation import source_snapshot_roundoff_tolerances
 from recursive_horizons.nsc_atlas_reference_wall_gauge import ReferenceWallGauge
 from recursive_horizons.nsc_atlas_coupled_evolution import quiet_initial_state, coupled_stage, evolve_coupled
 from recursive_horizons.nsc_atlas_coupled_diagnostics import (
@@ -282,6 +283,34 @@ def _equal(actual, expected, label):
         raise ValueError(label+" mismatch")
 
 
+def _source_snapshot_equal(actual, expected, geometry, alpha, *, source_knots=None):
+    """Condition rebuilt diagnostic arithmetic; retain exact query coordinates."""
+    label = "retained source interpolant"
+    if not isinstance(actual, dict) or set(actual) != set(expected):
+        raise ValueError(label+" inventory mismatch")
+    tolerances = source_snapshot_roundoff_tolerances(expected, geometry, alpha, source_knots=source_knots)
+    for key, value in expected.items():
+        a, b = np.asarray(actual[key]), np.asarray(value)
+        if (a.dtype.kind not in "iuf" or a.shape != b.shape
+                or any(isinstance(v, (bool, np.bool_)) for v in np.asarray(actual[key], dtype=object).flat)
+                or not np.all(np.isfinite(a)) or not np.all(np.isfinite(b))):
+            raise ValueError(label+" shape/type/nonfinite mismatch: "+key)
+        if key == "x":
+            if not np.array_equal(a.astype(float).view(np.uint64), b.astype(float).view(np.uint64)):
+                raise ValueError(label+" exact coordinates mismatch")
+            continue
+        allowance = 2e-13+2e-12*abs(b)+tolerances.get(key, 0.)
+        error = abs(a-b)
+        quiet = (b == 0) & (tolerances[key] == 0) if key in ("c", "c_x", "c_xx") else np.zeros(b.shape, dtype=bool)
+        failed = (error > allowance) | (quiet & (a != 0))
+        if np.any(failed):
+            worst = int(np.argmax(np.where(failed, error/allowance, -1)))
+            raise ValueError(label+" mismatch: "+key+
+                f"; max_abs_difference={float(np.max(error)):.17g}; "
+                f"worst_index={worst}; difference={float(error.flat[worst]):.17g}; "
+                f"allowance={float(np.broadcast_to(allowance, b.shape).flat[worst]):.17g}")
+
+
 def _table(rows, length, label):
     if not isinstance(rows, dict) or not rows:
         raise ValueError(label+" must be a nonempty table")
@@ -393,7 +422,8 @@ def _validate_inputs(record, budget):
             _close(exact[key], original[key], "exact source "+key)
         _close(exact["m"], exact["r"]*(1+4*exact["r_Ubar"]*exact["r_x"]/exact["C"])/2, "source geometric mass")
         snapshot = SourceSnapshot(geometry, alpha=alpha, x_nodes=x[::4], source_rows=subset(exact, slice(None, None, 2)), budget=budget)
-        _equal(data["snapshot_rows"], snapshot.sample(x), "retained source interpolant")
+        _source_snapshot_equal(data["snapshot_rows"], snapshot.sample(x), geometry, alpha,
+                               source_knots=subset(exact, slice(None, None, 2)))
         _equal(data["snapshot_summary"], snapshot.summary(), "snapshot construction summary")
         _equal(data["domain"], snapshot.domain, "source domain")
         bottom = _table(data["bottom"], 33, "quiet bottom")

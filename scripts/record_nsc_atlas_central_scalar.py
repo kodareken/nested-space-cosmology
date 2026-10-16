@@ -94,7 +94,18 @@ def input_snapshot():
     return dict(domain=domain, caps=caps, walls=walls, boundary=boundary,
                 exterior=exterior_rows, receipt=receipt,
                 profile_edges=[edge_rows[t]["q_plus"] for t in (0., .25, .75, 1.)],
+                arrival_spline_roundoff=exterior_record.reference_derivative_roundoff(reference["arrival"]),
                 arrival_spline_derivatives=[float(reference["arrival"](row["V"], 1)) for row in caps])
+
+
+def _check_arrival_derivative(retained, reproduced, allowance):
+    """Validate the rebuilt tangent without replacing the retained input."""
+    _real(retained, "arrival spline derivative")
+    if (retained <= 0 or not math.isfinite(reproduced)
+            or abs(retained-reproduced) > allowance):
+        raise ValueError("central arrival spline differs from the reference geometry: "
+                         f"difference={abs(retained-reproduced):.17g}, allowance={allowance:.17g}")
+    return retained
 
 
 def reconstruct_rows(inputs, i, profile, integrals, qV):
@@ -292,8 +303,8 @@ def validate_record(record):
                 _real(qV, "arrival spline derivative")
                 if qV <= 0:
                     raise ValueError("central arrival map must increase")
-                if not _equal(qV, inputs["arrival_spline_derivatives"][i]):
-                    raise ValueError("central arrival spline differs from the reference geometry")
+                _check_arrival_derivative(qV, inputs["arrival_spline_derivatives"][i],
+                                          inputs["arrival_spline_roundoff"])
                 leading = leading_compatibility(inputs, i, row["profile"], qV)
                 _same(row["leading_compatibility"], leading, "leading profile compatibility")
                 if (abs(leading["field_value_defect"]) > 2e-9*max(1., abs(inputs["walls"][i]["w"]))
