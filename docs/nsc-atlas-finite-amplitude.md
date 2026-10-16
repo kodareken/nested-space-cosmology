@@ -3976,6 +3976,104 @@ Independent Grok derivation confirms the matrix shape identities, kinetic
 cancellation, full remainder and hand-computed `6/7` coefficient per unit
 wall speed. The timelike examples above use half that speed.
 
+#### Dilation-compatible regular field space
+
+The preceding defect comes from projecting a discontinuous slope transport
+back into a continuous P1 space. A different regular representation removes
+that particular obstruction. Let `xi=z/Z` and use global odd polynomials
+
+$$
+\chi=\sum_j c_j\xi^{p_j},\qquad k=\sum_j d_j\xi^{p_j},
+\qquad p_j=1,3,\ldots,2m-1.
+$$
+
+This changes the finite-dimensional representation, not the action, fields,
+potential or wall law. Odd powers give even regular `f=chi/r` and
+`Pi=k/(A0 r)` at the centre, with `f_C=c_1/Z`, `Pi_C=d_1/Z` and
+`Phi_C=0`. Write `E=diag(p_j)` and `e=(1,...,1)^T`. Dilation stays in
+the same space: `z chi_z=sum_j (E c)_j xi^p_j`, and likewise for `k`.
+
+Consider the exact constrained mass `N(c,d,Z)=n(tanh Z)` at fixed alpha
+on a positive-metric cap. Changing only the coordinate scale through
+`c_T=(Z_T/Z)E c`, `d_T=(Z_T/Z)E d` leaves both physical functions
+unchanged at fixed `z`, hence at fixed `r`. It also preserves `c_1/Z` and
+the inherited centre lapse. The radial solution on each common interior
+prefix is therefore unchanged; only the outer integration limit moves.
+The exact shape identity is
+
+$$
+\boxed{N_Z+\frac{g_c^TEc+g_d^TEd}{Z}=A_0(R)\rho_W.}
+$$
+
+Here the coefficient gradients and `N_Z` are taken in this polynomial
+representation. The density is the original radial mass density evaluated
+on the reconstructed fields. No new source term or mass correction is used.
+The argument requires differentiability of the constrained radial solution
+in its declared positive-metric domain.
+
+The mass matrix is `M_ij=Z/(p_i+p_j+1)`, and the wall evaluation vector
+is `e`, not the last coordinate vector used for nodal P1 coefficients.
+Retain the inherited clock explicitly:
+
+$$
+\begin{aligned}
+V&=2e^{\delta_W}M^{-1}g_d,\qquad D_W=B_WRw_+,\\
+c_T&=V+(Z_T/Z)Ec,\\
+d_T&=M^{-1}\{-2e^{\delta_W}g_c+e(D_W-e^TV)\}+(Z_T/Z)Ed.
+\end{aligned}
+$$
+
+The common gradient cancels the fixed-domain interior pairings. The exact
+shape identity supplies the remaining domain derivative, giving
+
+$$
+\boxed{N_T=\frac{(e^TV)(D_W-e^TV)}{2e^{\delta_W}}+R_T\rho_W,
+\qquad R_T=A_0(R)Z_T.}
+$$
+
+This is a moving-domain weak mass identity for exact gradients. It is not
+a Poisson-bracket assertion. State dependence of the clock factor is
+retained; no derivative of that factor is required in this first derivative
+of the clock-independent mass functional.
+
+At alpha zero the independent quadratic check uses
+`K_ij=p_i p_j/[Z(p_i+p_j-1)]` and
+`N=(d^T M d+c^T(K-b ee^T)c)/4`. Direct integration gives
+
+$$
+ME+EM=Zee^T-M,\qquad EK+KE=K+pp^T/Z,\qquad
+C=(Z_T/Z)ME.
+$$
+
+These identities and `b_Z=-(2A0+b^2)` reproduce the original wall density
+for a non-affine odd primitive. The seven executions of
+[six exact controls](../tests/test_nsc_atlas_cap_dilation_identity.py) use
+zero field samples and 1.296875 active CPU seconds. They check the regular
+centre, fixed physical fields and clock, independently integrated matrices,
+quadratic shape derivative, general gradient pairing and separate normal
+traces. The first run's only failure was an unexpanded symbolic equality;
+the expanded zero difference and focused replay pass.
+
+The remaining wall variables remain distinct: the weak momentum is
+`p_hat=(e^T V)/B_W`, while the reconstructed momentum is `k_W/A0(R)`.
+The weak normal variable follows the imposed incoming characteristic;
+the reconstructed one follows `chi_z`. The wall scalar rate combines the
+weak velocity with the exact reconstructed coordinate transport. Equality
+to the material-interface scalar rate still requires a trace-consistency
+check. The previous P1 projection constant does not apply to this new
+space. Nonlinear radial gradients, numerical conditioning, truncation error,
+trace bounds and a coupled physical evolution remain to be implemented and
+checked before this reference replaces any production update.
+
+Independent Grok review confirms the finite-alpha shape argument, inherited
+clock, weak pairing and non-affine quadratic limit. It also identifies the
+numerical requirements: the monomial Gram matrix is poorly conditioned as
+degree grows, and the actual global field slopes need their own certificate.
+An orthogonal basis may improve conditioning, but the dilation operator,
+wall evaluation and mass gradient must all be transformed consistently.
+Using the P1 nodal-slope certificate unchanged would not bound polynomial
+derivatives between nodes.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

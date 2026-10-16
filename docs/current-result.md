@@ -2,6 +2,22 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Regular polynomial moving-cap identity, 16 October 2026
+
+The [next reference construction](nsc-atlas-finite-amplitude.md#dilation-compatible-regular-field-space)
+uses smooth odd polynomials, whose coordinate dilation stays within their
+own field space. This preserves the regular centre and inherited clock and
+gives an exact shape derivative of the constrained mass. Combined with the
+common mass gradient, it recovers the moving-domain weak mass law without
+the P1 projection remainder.
+
+Six symbolic controls pass, including an independently differentiated
+quadratic mass with a non-affine primitive. This is a mathematical route
+confirmed by independent Grok derivation
+to the moving-cap update; nonlinear numerical gradients, error bounds and
+strong wall transmission are not yet implemented in this representation.
+No physical solver or prediction has been replaced.
+
 ## Moving-mesh mass compatibility, 16 October 2026
 
 An [exact moving-domain calculation](nsc-atlas-finite-amplitude.md#moving-mesh-projection-remainder)

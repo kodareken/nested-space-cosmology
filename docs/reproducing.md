@@ -189,6 +189,17 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The regular odd-polynomial space has an exact moving-domain mass identity:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_dilation_identity.py -q -s
+```
+
+Six controls pass in seven development executions, using zero field samples
+and 1.296875 active CPU seconds, within the 20-second algebra allowance.
+The independent quadratic check and general gradient pairing supply no
+numerical radial or physical evolution result.
+
 The moving-cap reference identity and its timelike counterexample are exact:
 
 ```sh

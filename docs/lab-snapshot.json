@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
+  "current_receipt_commit_parent": "fdeac21aebade9626c564fa7d8bdc4ebd756b203",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 214092,
-      "change": "Bound exact cap wall-momentum projection and identify the moving-mesh mass remainder.",
-      "changed_from_commit": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
+      "bytes": 214519,
+      "change": "Derive a regular polynomial moving-cap mass identity with exact shape controls.",
+      "changed_from_commit": "fdeac21aebade9626c564fa7d8bdc4ebd756b203",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "dae9ff0c2fd94674217042180feba92eb5f793e9de4fb8e849c9d87117c3c907"
+      "sha256": "b8a3208d390623e5be41d58306fd7c1e34b47df4aa421a6fe5b100f94d58b797"
     },
     {
       "bytes": 9543,
@@ -35491,6 +35491,14 @@
       "original_sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719",
       "path": "tests/test_nsc_assembled_chebyshev_gn_stall.py",
       "sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719"
+    },
+    {
+      "bytes": 4920,
+      "change": "Derive a regular polynomial moving-cap mass identity with exact shape controls.",
+      "changed_from_commit": "fdeac21aebade9626c564fa7d8bdc4ebd756b203",
+      "path": "tests/test_nsc_atlas_cap_dilation_identity.py",
+      "retention_reason": "Exact regular-centre and moving-domain mass identities for odd polynomial fields.",
+      "sha256": "2eb9d4965aad3ac276960164bf0d1bba0791ca5626ee01b7d1fd14512004877e"
     },
     {
       "bytes": 12374,

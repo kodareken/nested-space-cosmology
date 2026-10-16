@@ -511,6 +511,44 @@ Completed independent Grok derivation confirms the full remainder and exact
 two-element coefficient. The next connection is the moving-domain mass shape
 derivative and a slope-compatible transport rule, not another grid scan.
 
+### Dilation-compatible regular cap space
+
+The P1 counterexample redirects the moving-cap construction to a field space
+closed under coordinate dilation. Test global odd polynomials in `xi=z/Z`,
+with powers `1,3,...,2m-1`; oddness preserves the regular centre and the
+Euler derivative `xi d_xi` stays in the same space. Keep the action,
+potential, incoming boundary law and inherited clock unchanged.
+
+Derive the exact moving-domain mass shape identity for arbitrary admissible
+nonnegative alpha, then check its geometric reference limit by independent
+symbolic differentiation of the quadratic mass. Exact matrix/algebra
+controls have **20 active CPU seconds**, zero field samples and no radial
+or time integration. Use at most three odd basis functions, general
+coefficient symbols, both velocity signs and the fixed-wall limit. Check
+the regular centre, Gram and stiffness matrices, full weak mass rate and
+the distinction between the weak and reconstructed wall derivatives.
+
+Grok independently checks the shape argument. Stop if that argument omits
+a field, clock or boundary term. This calculation may establish a compatible
+moving-domain reference space; it does not supply nonlinear numerical
+gradients, their error bounds or strong wall transmission. The P1 projection
+constant is not transferred to this different space.
+
+**Exact-control outcome:** six controls pass in seven executions, using
+zero field samples and **1.296875 active CPU seconds**, including algebra
+fixture construction. An unexpanded symbolic comparison failed in the
+first run; expansion proves the zero difference and the focused replay
+passes. The [shape identity](nsc-atlas-finite-amplitude.md#dilation-compatible-regular-field-space)
+supplies exactly the moving wall-density contribution without modifying the
+mass or source law. It holds for the exact constrained mass and gradients;
+the independent quadratic control checks its alpha-zero limit. Numerical
+gradients and strong material-interface transmission remain open.
+Completed independent Grok review confirms the shape identity, clock
+normalization and gradient pairing. Before numerical implementation, the
+global derivative bound and basis conditioning must be handled explicitly;
+the old P1 helper cannot certify the new polynomial coefficients as if they
+were nodal samples.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
