@@ -97,6 +97,8 @@ def test_nonzero_stage_preserves_common_value_and_exposes_actual_trace_residuals
     assert res['scalar_tangent']==pytest.approx(res['scalar_tangent_factored'],abs=3e-15)
     assert res['conformal_wall_flux']==pytest.approx(res['conformal_wall_flux_factored'],abs=3e-15)
     assert abs(res['scalar_tangent'])>1e-6
+    assert abs(res['scalar_channel_identity_defect'])<3e-15
+    assert abs(res['scalar_incoming_channel'])>1e-6
     for pair in ('actual','matched'):
         assert res['temporal_mass_'+pair]-res['weak_flux_'+pair]==pytest.approx(cap['weak_balance_defect']/tx,abs=1e-17)
         assert res['physical_temporal_mass_'+pair]==.02*res['temporal_mass_'+pair]

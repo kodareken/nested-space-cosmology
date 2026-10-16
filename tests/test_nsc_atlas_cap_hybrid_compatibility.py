@@ -4,7 +4,7 @@ import pytest
 
 from control_budget import ControlBudget
 
-CONTROLS=ControlBudget(maximum_evaluations=40000,cpu_seconds=20.)
+CONTROLS=ControlBudget(maximum_evaluations=54000,cpu_seconds=20.)
 R,A,H,mu,rootD=s.symbols('R A H mu rootD',positive=True)
 P,Q,dp,dh=s.symbols('P Q dp dh',real=True)
 beta=(H+A/H)/2
@@ -114,3 +114,50 @@ def test_physical_mass_dictionary_keeps_the_moving_vacuum_density(budget):
     assert s.simplify(recovered_T-alpha*A*A*mu*p*h/2
                       -alpha*(NT-A*A*mu*p*h/2))==0
     assert s.simplify(mass_s.subs(alpha,0)-3*R*R*v/2)==0
+
+
+def test_velocity_and_incoming_channels_from_independent_moving_trace(budget):
+    budget.check(6000)
+    rx,tx=s.symbols('rx tx',real=True)
+    # Weak primitive velocity is B*P; the physical radial trace is h.
+    cap_tangent=(tx*B*P+rx*h)/R
+    hybrid_tangent=(tx*B*matched_p+rx*matched_h)/R
+    velocity_gap=B*(P-p)
+    incoming_gap=(p+h)/R-incoming
+    velocity_channel=tx*velocity_gap/R
+    incoming_channel=(rx+tx*B)*incoming_gap/2
+    assert s.simplify(cap_tangent-hybrid_tangent-velocity_channel-incoming_channel)==0
+    fixed={A:1,mu:1,R:1,rx:1,tx:2}
+    assert s.simplify(velocity_channel.subs({**fixed,dp:1,dh:-1}))==-2
+    assert s.simplify(incoming_channel.subs({**fixed,dp:1,dh:-1}))==0
+    assert s.simplify(velocity_channel.subs({**fixed,dp:0,dh:1}))==0
+    assert s.simplify(incoming_channel.subs({**fixed,dp:0,dh:1}))==s.Rational(3,2)
+
+
+def test_mass_sensitivity_yields_only_metric_correction_projection(budget):
+    budget.check(8000)
+    r,A0,alpha,N,ps,hs,potential,phi=s.symbols('r A0 alpha N ps hs potential phi',positive=True)
+    actual_A=A0-2*alpha*N/r
+    rho=r*r*potential/2+actual_A*(ps*ps+hs*hs)/4
+    damping=alpha*(ps*ps+hs*hs)/(2*r)
+    assert s.simplify(s.diff(rho,N)+damping)==0
+    assert s.simplify(s.diff(rho,ps)*phi/A0-actual_A*ps*phi/(2*A0))==0
+    delta=s.Function('delta');radius=s.symbols('radius',positive=True)
+    weight=s.exp(delta(r)-delta(radius))
+    assert s.simplify(s.diff(weight,r)-s.diff(delta(r),r)*weight)==0
+    assert weight.subs(r,radius)==1
+    assert s.simplify(s.exp(delta(radius))*weight-s.exp(delta(r)))==0
+    # Independent exact one-function Galerkin integral. The nonconstant
+    # b below is a projection control, not an asserted metric solution.
+    z,Z,beta,density=s.symbols('z Z beta density',positive=True)
+    background_k=2*z**3;total_k=background_k+density*z;b=1+beta*z*z
+    gram=s.integrate(z*z,(z,0,Z))
+    gradient=s.integrate(z*b*total_k/2,(z,0,Z))
+    projected_background=s.integrate(z*background_k,(z,0,Z))/gram
+    weak_velocity=Z*(2*gradient/gram-projected_background)+background_k.subs(z,Z)
+    physical_velocity=(b*total_k).subs(z,Z)
+    defect=s.factor(weak_velocity-physical_velocity)
+    independent=-beta*(8*Z**5/s.Integer(7)+2*density*Z**3/s.Integer(5))
+    assert s.simplify(defect-independent)==0
+    assert defect.subs(beta,0)==0
+    assert defect.subs({beta:1,Z:1,density:1})==-s.Rational(54,35)

@@ -2119,6 +2119,79 @@ within `1e-15`. This uses 134 values and less than one process-clock tick
 next interpolation piece at the endpoint, not the left limit of the
 completed interval. Both are retained; no constraint or RHS is overwritten.
 
+### Scalar boundary channels before further evolution, 17 October 2026
+
+Use the existing strong/weak factorization to split `E_f` into the cap's
+weak-velocity discrepancy and its incoming-characteristic discrepancy.
+Prove the split by independently differentiating the moving field and
+subtracting the hybrid's matched pair. Include controls with each channel
+alone nonzero. Add these diagnostics to the existing hybrid return without
+changing its rates, source or wall law. At most **6,000 new symbolic values /
+20 CPU seconds**, plus the existing quiet and nonzero hybrid controls under
+their original 1.5-million-value / 45-second allowance. No source solve or
+trajectory. A failure of the independent chain rule stops the change.
+
+The completed receipt keeps aggregate and endpoint residuals, not the final
+coefficient state, so it cannot numerically apportion these new channels
+without regeneration. Future onset receipts will retain one bounded final
+state, its hash, wall rates and endpoint diagnostics; this small reusable
+input is distinct from a full time history. Preserve the completed v1 bytes.
+This diagnostic change includes no reproduction or new evolution.
+
+The first exact split passes (6,000 algebra values / 0.203125 CPU seconds).
+The quiet and nonzero numerical controls pass in three executions using
+201,657 values / 0.484375 CPU seconds. The first nonzero test incorrectly
+assumed both channels were large; its velocity channel is only `4.1094e-13`.
+That size assertion was removed, while the independently differentiated
+identity and symbolic single-channel omission controls remain. No equation
+or physical tolerance changed.
+
+One further analytic bridge derives the velocity channel from the actual
+mass sensitivity: differentiate the mass constraint at fixed chi, T and R,
+apply its integrating factor, then convert dr to A0 dz. Check the variation
+coefficients and an exact nonconstant polynomial projection with **8,000
+additional algebra values / 20 CPU seconds**. This tests whether the ideal
+velocity discrepancy is the endpoint projection error of `(B/A0-1)k`, and
+vanishes at alpha zero in the declared lapse gauge. It does not estimate
+the numerical gradient error or evaluate the completed physical state.
+
+**Outcome:** the additional exact control passes with 8,000 algebra values /
+0.1875 CPU seconds. The two new identities together use 14,000 / 0.390625.
+The mass-sensitivity integrating factor gives the claimed projection formula
+and its alpha-zero cancellation. No numerical attribution of the physical
+endpoint follows without its coefficient state and gradient diagnostics.
+
+Independent Grok review confirms the fixed-radius density variation and
+the channel factors. Its unread lapse-stepper dependency was checked in
+`_radial_variations`: the implemented radial RHS is
+`jacobian*[rho,a,partials-a*sensitivity]`, with the declared centre lapse.
+No separate lapse factor or moving-radius derivative was omitted.
+
+### Physical-history endpoint velocity limit control, 17 October 2026
+
+The exact alpha-zero identity supplies a cheap, discriminating next check
+before any trajectory reproduction. Rebuild the unchanged 257/257 prepared
+history once, require its input hash to match v2, and use the completed
+receipt's exact two-cell basis, endpoint radius and stored background time.
+Set cap departures to zero and alpha to zero for this explicit limit
+control. This is not a reconstruction of the completed finite-alpha state.
+Use one fixed radial-reference event with T_x=1, R_x=0 and incoming value
+zero; these port choices do not enter its weak primitive velocity.
+
+Compare the returned `v_W-B p_W` with the proved value zero and compare
+the forward/adjoint projected wall velocities. Independently contract the
+mass-gradient discrepancy against the background's Gauss-exact polynomial
+time projection. This can reveal radial-gradient/projection error on the
+actual prepared history without attributing the completed junction gap to
+it. Preserve the source and original result. Use **10 million charged values /
+60 process-CPU seconds**, including preparation, basis and the one radial
+event, with one common clock and no retries. No grid scan, time evolution
+or finite-alpha endpoint reconstruction. Freeze the code before execution;
+stop after this one diagnostic or the first domain/budget failure. A
+nonzero velocity is a numerical defect of this control, not an additional
+physical force; its size determines whether the radial calculation needs
+attention before any further physical evolution.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

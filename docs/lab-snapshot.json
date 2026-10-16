@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "6239ee1c0dce94e64330b7a7bdccd3cf673faa73",
+  "current_receipt_commit_parent": "7971e3548cde61f4219c582752cd7dfd88d74de5",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 224997,
-      "change": "Record the complete history-based onset interval and identify the one-sided source endpoint curvature.",
-      "changed_from_commit": "6239ee1c0dce94e64330b7a7bdccd3cf673faa73",
+      "bytes": 225251,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "db4afb728c80f883923953fbcaa99907b914b590cb2b5af0f1cace89493a2edc"
+      "sha256": "344e70d45f24c15a0f407fa1e17925a9e00724899fb18b92c5b86a398df31cac"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 320492,
-      "change": "Record the complete history-based onset interval and identify the one-sided source endpoint curvature.",
-      "changed_from_commit": "6239ee1c0dce94e64330b7a7bdccd3cf673faa73",
+      "bytes": 321116,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "41a3f47bccb61185c0b94c0987e5f58e7635ff4567068977cff7c8544546687e"
+      "sha256": "926a542b958adac5f70889a6578d05c62aaaeba2031f8d2c85994c3cd50d1136"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 312897,
-      "change": "Record the complete history-based onset interval and identify the one-sided source endpoint curvature.",
-      "changed_from_commit": "6239ee1c0dce94e64330b7a7bdccd3cf673faa73",
+      "bytes": 315833,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "88932bfdc28cdec3b6f672031d92655f5c072b3ca8f56219cf757661a3ddfe5d"
+      "sha256": "ecb466d4324ab420797e4fad94d26c8f5db8af0a423581dc0ae25b72ae9e9d75"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 343242,
-      "change": "Record the complete history-based onset interval and identify the one-sided source endpoint curvature.",
-      "changed_from_commit": "6239ee1c0dce94e64330b7a7bdccd3cf673faa73",
+      "bytes": 347791,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "806d943c98afa3da4acc643fc90ae5f5dbfc2e251a5b34fac16a1c83c2a29f99"
+      "sha256": "80f0dffc883e533197d08a916393b2dcc6f1a5519845e24329c49386f1b7e57a"
     },
     {
       "bytes": 6705,
@@ -11416,12 +11416,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 111747,
-      "change": "Record the complete history-based onset interval and identify the one-sided source endpoint curvature.",
-      "changed_from_commit": "6239ee1c0dce94e64330b7a7bdccd3cf673faa73",
+      "bytes": 112901,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f0956b5513c95f190f85af8d77fb63afa0cf70d1fe223a37d43acf8ad97065f1"
+      "sha256": "b86978f419ee7ecb1faaa41f96ec8c785e3e8cd6b7bf87d130a99f41bf2fff7d"
     },
     {
       "bytes": 18356,
@@ -29693,6 +29693,14 @@
     },
     {
       "bytes": 4953,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
+      "path": "scripts/check_nsc_atlas_fixed_history_endpoint.py",
+      "retention_reason": "Exact scalar-boundary channel attribution and bounded endpoint diagnostics.",
+      "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
+    },
+    {
+      "bytes": 4953,
       "change": "Implement the one-sided source onset, complete centre moments and prepared-history connection.",
       "changed_from_commit": "32f1fe7ced9f7e3fdb36d3eec422cff67adf9ead",
       "path": "scripts/check_nsc_atlas_prepared_history.py",
@@ -32201,12 +32209,12 @@
       "sha256": "dea660fcf1f062a969da84a609cc67dc874a743cfae6bd07fc1bcaf3c0a27f11"
     },
     {
-      "bytes": 17902,
-      "change": "Carry history-clock derivatives into physical residuals and prepare one full retained-history onset interval.",
-      "changed_from_commit": "e78f0316972b016848db9e0cf64c81ec7fafab08",
+      "bytes": 18241,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "scripts/run_nsc_atlas_fixed_onset.py",
       "retention_reason": "Retained-source onset attempt, exact time scale and boundary-order diagnosis.",
-      "sha256": "f59b3b6298a5a6e063c59965cee656a94502e08aa96a0b89ed71d27292d618a5"
+      "sha256": "74a6e22d65ee4d17e1c369e72053c17d655c1908b42761aca9a1efd18fe1c8b7"
     },
     {
       "bytes": 15544,
@@ -32460,12 +32468,12 @@
       "sha256": "9373d3d293e5b22ca05a3a11c4e5e3645d97da100d915713c5513a6236a22b6f"
     },
     {
-      "bytes": 5289,
-      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
-      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
+      "bytes": 5612,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py",
       "retention_reason": "Fixed cap instantaneous material-wall coupling and independent controls",
-      "sha256": "1159d3244334cbd470c0a2ea88cc7d375fe4d680f8900c47b606d44ecfbd47b4"
+      "sha256": "b46a1549b69dcc64b5018e43c005441ade48c4c0552e3ad5235b68e4f6ed8300"
     },
     {
       "bytes": 18917,
@@ -35981,12 +35989,12 @@
       "sha256": "b2fcf4d6b7d737719e99f7fc8e0ba1bba4ef10e2534e4ae1d22ddfa58f09311f"
     },
     {
-      "bytes": 6989,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 7101,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "tests/test_nsc_atlas_cap_fixed_hybrid.py",
       "retention_reason": "Fixed cap instantaneous material-wall coupling and independent controls",
-      "sha256": "adf78c62897ecf48784bf86dfa6a22309177837136225e378d7553011631ba25"
+      "sha256": "7a61509685b9120054a3d3dadeabfd44598bf1165e79c0cf0dd77f8468872620"
     },
     {
       "bytes": 6937,
@@ -36021,12 +36029,12 @@
       "sha256": "e2eca38434c88d0ed02d848ec1a8dd33d2ab09444dab1de37b4972c1d4ccc570"
     },
     {
-      "bytes": 4436,
-      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
-      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "bytes": 6832,
+      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
+      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
       "path": "tests/test_nsc_atlas_cap_hybrid_compatibility.py",
       "retention_reason": "Fixed cap moving-wall compatibility and initial junction evidence",
-      "sha256": "2ee164b5aebfacc6f06c7954a92598d18993fba115126776db9b030375eac1e3"
+      "sha256": "c455ad71933b28282a78d6be30f3a8e4826411176a3a2f1ffadb6dfe5d14801b"
     },
     {
       "bytes": 3449,

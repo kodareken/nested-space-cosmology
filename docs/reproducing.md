@@ -500,6 +500,27 @@ uses the saved input's `exact_rows[::2]`, knot 36, and the actual left/right
 Hermite curvatures; its equations and values are in the
 [owner](nsc-atlas-finite-amplitude.md#derived-time-residuals-and-the-full-retained-history-interval).
 
+The subsequent diagnostic extension separates the wall residual into
+weak-velocity and incoming-characteristic terms. Two exact controls use
+14,000 algebra values / 0.390625 CPU seconds; run them with
+`python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_hybrid_compatibility.py -k 'velocity_and_incoming or mass_sensitivity' -q -s`.
+Future onset outputs include one small final state and its wall/gradient
+diagnostics so a local attribution need not reconstruct the whole history.
+That extension does not backfill or change the frozen v1 result. These algebraic controls
+perform no further physical run.
+
+The separately admitted single-event alpha-zero velocity control uses the
+completed endpoint geometry and the same prepared history with zero cap
+departures:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_fixed_history_endpoint.py --output results/summaries/nsc-atlas-fixed-history-endpoint-velocity-v1.json
+```
+
+This creation-only command shares its 10-million-value / 60-second budget
+between preparation and one radial reference. It takes no time step and
+does not reconstruct the completed finite-alpha endpoint state.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

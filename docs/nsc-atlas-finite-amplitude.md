@@ -6474,6 +6474,77 @@ constraint and scalar residual units preclude assigning causation by
 comparing their magnitudes. The remaining junction gap needs its own
 incoming-characteristic/weak-projection decomposition before another run.
 
+#### Separating the remaining scalar boundary channels
+
+With the same total cap traces and the common hybrid input, define
+
+\[
+ d_v=v_W-Bp_W,\qquad
+ d_+=\frac{p_W+h_W}{R}-w_+.
+\]
+
+The existing matched-pair equations give the exact decomposition
+
+\[
+ \boxed{E_f=\frac{T_x}{R}d_v+
+ \frac{R_x+T_xB}{2}d_+,\qquad E_c=R\sqrt D\,E_f.}
+\]
+
+This separates the weak-velocity trace from incoming-characteristic
+compatibility. The latter involves both cap traces and the common incoming
+data; it is not automatically an exterior-only error. Independently
+differentiating the moving field proves the split, including cases with
+only one nonzero channel. The existing hybrid adapter reports both terms
+and their identity defect without changing any state rate or wall law.
+
+The velocity term has a further exact description. Hold chi, T and R fixed
+while varying a canonical-density coefficient `d_i`. Set `k=A0 p=k0+k_h`,
+`A0=1-r^2`, `z=atanh(r)`, and let `phi_i` be the fixed basis. The mass and
+lapse constraints imply
+
+\[
+ a=\frac{\alpha(p^2+h^2)}{2r},\quad \delta_r=a,\qquad
+ (\partial_{d_i}N)_r+a\,\partial_{d_i}N
+   =\frac{A p\,\phi_i}{2A_0}.
+\]
+
+The central mass derivative is zero. Its integrating factor, `dr=A0 dz`,
+and `mu=exp(delta(R))` therefore give
+
+\[
+ 2\mu\,\partial_{d_i}N
+  =\int_0^{Z}\phi_i(z)\frac{B(z)}{A_0(z)}k(z)\,dz.
+\]
+
+Here mu multiplies the already evaluated mass gradient; no derivative of
+the product mu N is taken. The chosen central lapse depends on the fixed
+field chi, so a density variation adds no central-lapse term. Let `P_h` be
+the exact L2 projection on the fixed basis and set `b=B/A0`. Subtracting
+the background's projected time derivative in the departure equation yields
+
+\[
+ v_h=k_h+P_h[(b-1)k],\qquad
+ \boxed{d_v=\{P_h[(b-1)k]\}(Z)-(b(Z)-1)k(Z).}
+\]
+
+At alpha zero the anchored lapse is zero and `b=1`, so this channel vanishes
+for every admitted retained history. At finite coupling it is the endpoint
+projection error of the metric correction times the total momentum, with
+numerical constraint-gradient, projection and arithmetic errors entering
+separately in an implementation. The existing forward/adjoint wall-velocity
+comparison is useful diagnostic evidence, not an error enclosure.
+
+Two exact controls pass with 14,000 algebra values / 0.390625 CPU seconds.
+The second differentiates the mass constraint, checks the integrating
+factor, and evaluates an independent nonconstant polynomial projection.
+The quiet and nonzero numerical channels pass under the original hybrid
+budget; their development record includes one corrected size assumption.
+The completed v1 summary does not retain the coefficient state needed to
+numerically divide its physical gap into these channels. Future receipts
+retain one small final state, wall rates, trace and gradient diagnostics,
+and its existing state hash. The v1 receipt remains unchanged, and no
+trajectory has been repeated for this algebraic result.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

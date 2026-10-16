@@ -110,6 +110,15 @@ prepared-history hash pass without replay. The compact receipt is 18,513
 bytes. This completes a finite numerical interval, not the coupled
 continuum estimate or an observational test.
 
+The [next exact decomposition](nsc-atlas-finite-amplitude.md#separating-the-remaining-scalar-boundary-channels)
+splits the scalar gap into weak-velocity and incoming-characteristic terms.
+The mass constraint proves that the ideal velocity term is an endpoint
+projection error of `(B/A0-1)k`, and is exactly zero at alpha zero in the
+chosen clock gauge. Two symbolic controls and quiet/nonzero numerical
+checks pass. This identifies what the next local diagnostic must measure;
+it does not assign the completed physical gap to one channel from aggregate
+numbers. The original result is preserved, with no further evolution.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

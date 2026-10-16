@@ -167,6 +167,7 @@ def main():
                 maximum('source.'+key,source[key])
             maximum('source.stage_minus_snapshot',row['source_constraint']-source['source_constraint'])
             maximum('cap.weak_balance_defect',cap['weak_balance_defect'])
+            maximum('cap.projected_gradient_wall_velocity',cap['projected_gradient_discrepancy']['wall_velocity'])
             if background is not None:
                 maximum('cap.explicit_time_remainder',cap['explicit_time_remainder'])
                 maximum('cap.remainder_identity_defect',cap['remainder_identity_defect'])
@@ -243,6 +244,9 @@ def main():
         cap=final_row['connection']['cap'];Z=float(np.arctanh(final_row['physical_wall']['r']))
         gram=basis.gram(Z,budget=budget)
         report['final']=dict(wall=final_row['physical_wall'],wall_departures=state['wall'],
+            state=state,wall_rates=final_row['wall_rates'],
+            cap_wall_diagnostics=cap['wall'],
+            projected_gradient_discrepancy=cap['projected_gradient_discrepancy'],
             normalized_cap_mass=cap['mass'],cap_lapse=cap['lapse'],
             cap_L2={k:math.sqrt(gram.squared_norm(v,budget=budget)) for k,v in state['cap'].items()},
             exterior_departure_max={k:float(np.max(abs(v))) for k,v in state['departure'].items()},
@@ -263,7 +267,7 @@ def main():
             common_stage_calls=calls,accepted_steps=accepted,last_accepted_x=last_x,
             source_integrations=report.get('preparation',{}).get('source_integrations_completed',0),
             source_integrations_attempted=report.get('preparation',{}).get('source_integrations_attempted',0),
-            retries=0,raw_history_saved=False))
+            retries=0,raw_history_saved=False,final_state_saved='final' in report))
     args.output.write_text(json.dumps(plain(report),indent=2,sort_keys=True,allow_nan=False)+'\n',
                            encoding='utf-8',newline='\n')
     print(json.dumps(dict(status=report['status'],execution=report['execution'],

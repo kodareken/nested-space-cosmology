@@ -72,7 +72,12 @@ def fixed_cap_hybrid_reference(basis,chi,canonical_density,Z,*,alpha,exterior_wa
     factor=wall['A']**2*mu/2
     actual=factor*wall['p_trace']*wall['h_trace']
     matched=factor*R**2*float(hybrid['Pi'])*float(hybrid['Phi'])
+    velocity_channel=tx*wall['velocity_discrepancy']/R
+    incoming_channel=(rx+tx*wall['B'])*wall['incoming_discrepancy']/2
     residual=dict(scalar_tangent=Ef,scalar_tangent_factored=float(factored),
+        scalar_velocity_channel=float(velocity_channel),
+        scalar_incoming_channel=float(incoming_channel),
+        scalar_channel_identity_defect=float(Ef-velocity_channel-incoming_channel),
         canonical_wall_flux=R*Ef,conformal_wall_flux=cap_c_x-rates['c'],
         conformal_wall_flux_factored=R*rootD*factored,
         temporal_mass_actual=temporal-actual,temporal_mass_matched=temporal-matched,
@@ -86,7 +91,7 @@ def fixed_cap_hybrid_reference(basis,chi,canonical_density,Z,*,alpha,exterior_wa
     if not all(np.isfinite(v) for v in (*rates.values(),*residual.values(),
                                        physical_mass_rate,physical_density)):
         raise ValueError('nonfinite fixed-cap hybrid rate or residual')
-    budget.check(128)
+    budget.check(144)
     return dict(cap=cap,common=connection['common'],outgoing=connection['outgoing'],
         hybrid=hybrid,wall_rates=rates,residual=residual,cap_f_x=cap_f_x,cap_c_x=cap_c_x,
         physical_mass_rate=physical_mass_rate,physical_mass_density=physical_density,
