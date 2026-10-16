@@ -3640,13 +3640,13 @@ fixed-radius reference. The last-element derivative need not equal `v_hat`.
 Both that discrepancy and its converted incoming-characteristic residual
 are returned, separately from the mass/weak-flux balance residual.
 
-The [24 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) include
+The [26 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) include
 an exact time-linear wave on two prescribed meshes, independent dense
 element matrices, direct integration of the original radial mass density,
 symbolic centre limits, the completed-square bound, small-radius arithmetic,
 quiet data, input immutability and rejected data/budget cases. Development
-uses **4,888 charged coefficient/manufactured values / 0.203125 active CPU
-seconds** in 45 test executions. No saved field, radial ODE or physical time
+uses **7,744 charged coefficient/manufactured values / 0.359375 active CPU
+seconds** in 71 test executions. No saved field, radial ODE or physical time
 evolution is evaluated. The production cap is unchanged. Moving radius,
 finite backreaction and the background/departure decomposition remain
 outside this reference component.

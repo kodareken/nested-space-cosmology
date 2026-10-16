@@ -17,10 +17,10 @@ the last-element reconstructed derivative. This distinction is needed for
 the later boundary-consistency check. It evaluates no moving wall or
 finite-backreaction trajectory and does not replace the production cap.
 
-All [24 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) pass,
+All [26 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) pass,
 including direct integration of the original radial density and independent
-matrix gradients. Development uses **4,888 charged coefficient/manufactured
-values / 0.203125 active CPU seconds** across 45 executions, within the
+matrix gradients. Development uses **7,744 charged coefficient/manufactured
+values / 0.359375 active CPU seconds** across 71 executions, within the
 200,000-value / 20-second allowance. No physical payload is generated.
 
 ## Mass-gradient and geometric energy identities, 16 October 2026

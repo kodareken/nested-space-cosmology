@@ -166,6 +166,15 @@ def test_small_radius_linear_shape_retains_mass_without_catastrophic_subtraction
     assert row['mass'] > 0
 
 
+@pytest.mark.parametrize('data', [
+    dict(chi=np.array([0., 1e-200, 2e-200, 3e-200]), velocity=np.zeros(4)),
+    dict(z_nodes=np.array([0., 1e-200]), chi=np.zeros(2), velocity=np.array([0., 1.])),
+])
+def test_unresolved_positive_mass_or_coercivity_is_rejected(data, budget):
+    with pytest.raises(ValueError, match='underflows|trace gap'):
+        evaluate(budget, **data)
+
+
 def test_inputs_and_returned_arrays_do_not_alias(budget):
     z, chi, u = np.array([0., .2, .5]), np.array([0., .1, .3]), np.array([0., .2, .1])
     before = copy.deepcopy((z, chi, u))

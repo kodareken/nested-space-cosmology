@@ -366,9 +366,9 @@ extension question; it does not establish that extension or the evolving wall.
 
 **Outcome:** the [regular reference](nsc-atlas-finite-amplitude.md#regular-centre-fixed-cap-mass-gradient-control)
 has an exact positive quadratic mass, the required weak incoming flux and
-an explicit completed-square input bound. Twenty-four controls pass in 45
-development executions: **4,888 charged coefficient/manufactured values /
-0.203125 active CPU seconds**. The reconstructed boundary derivative is
+an explicit completed-square input bound. Twenty-six controls pass in 71
+development executions: **7,744 charged coefficient/manufactured values /
+0.359375 active CPU seconds**. The reconstructed boundary derivative is
 reported separately. Grok independently confirmed the weak equations,
 incoming conversion, positivity and centre limits. Source review follows;
 no physical trajectory or nonzero-backreaction extension has been run.

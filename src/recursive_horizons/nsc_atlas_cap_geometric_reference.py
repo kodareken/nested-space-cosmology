@@ -59,7 +59,8 @@ def geometric_cap_reference(z_nodes, chi, velocity, *, T_x, incoming_w_plus, bud
                 raise ValueError("wall radius must be representable strictly between zero and one")
             A = float(1/np.cosh(z[-1])**2)
             gap = float(_positive_gap(z[-1]))
-            if not np.isfinite(gap) or gap <= 0:
+            beta = gap*z[-1]
+            if not np.isfinite(gap) or gap <= 0 or beta <= 0:
                 raise ValueError("positive geometric trace gap is not resolved")
             h = np.diff(z)
             slope = np.diff(chi)/h
@@ -92,6 +93,8 @@ def geometric_cap_reference(z_nodes, chi, velocity, *, T_x, incoming_w_plus, bud
             shape = np.sum(h*shifted*shifted)
             potential = shape+gap*chi[-1]**2
             mass = (kinetic+potential)/4
+            if mass == 0 and (np.any(chi != 0) or np.any(velocity != 0)):
+                raise ValueError("positive mass underflows for the supplied nonzero fields")
             mass_rate = float(gradient_chi@chi_rate[1:]
                               +gradient_velocity@velocity_rate[1:])
             flux = velocity[-1]*(drive-velocity[-1])/2
@@ -104,7 +107,7 @@ def geometric_cap_reference(z_nodes, chi, velocity, *, T_x, incoming_w_plus, bud
                 gradient=dict(chi=gradient_chi, velocity=gradient_velocity),
                 mass=float(mass), kinetic_mass=float(kinetic/4),
                 potential_mass=float(potential/4), positive_trace_gap=gap,
-                coercivity_factor=float(gap*z[-1]),
+                coercivity_factor=float(beta),
                 mass_rate=mass_rate, physical_mass_flux=float(flux),
                 balance_defect=float(mass_rate-tx*flux),
                 incoming_flux_bound=float(tx*drive*drive/8),
