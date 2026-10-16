@@ -4298,6 +4298,212 @@ cancellation and the global slope certificate. The reviewer did not execute
 tests or re-read the shared radial solver body; the controls above supply
 execution evidence.
 
+#### Fixed-profile representation diagnosis
+
+The [projection component](../src/recursive_horizons/nsc_atlas_cap_profile_projection.py)
+now tests the existing computational profile itself. On a fixed cap slice,
+
+\[
+ \chi_0=F(T+Z\xi)-F(T-Z\xi),\qquad
+ k_0=F'(T+Z\xi)-F'(T-Z\xi),
+\]
+
+and the coefficients of each odd Legendre mode are
+
+\[
+ c_j=(2p_j+1)\int_0^1\chi_0 P_{p_j}\,d\xi,\qquad
+ d_j=(2p_j+1)\int_0^1k_0 P_{p_j}\,d\xi.
+\]
+
+Split at every mapped profile knot, including the quiet-extension edge.
+The coefficient integrands have degree at most 36, so 19-point Gauss is
+exact in exact arithmetic on each piece. The squared residuals have degree
+at most 62, covered by 32-point Gauss. Direct residual integration avoids
+subtracting nearly equal energies. The physical norms are
+
+\[
+ \|e\|_{L^2(dz)}^2=Z\int_0^1e^2d\xi,\qquad
+ \|e_z\|_{L^2(dz)}^2=Z^{-1}\int_0^1e_\xi^2d\xi.
+\]
+
+Report keys `chi_xi` and `k_xi` identify derivative integrands; their returned
+norms include this `1/Z` factor and are norms of the **physical z derivative**.
+The H1 residual is not an energy difference: derivative projection is not
+orthogonal in this pairing. The wall comparison retains the value term,
+
+\[
+ \Delta w_+=\frac{\Delta k+\Delta\chi_z}{A_0R}
+                 -\frac{\Delta\chi}{R^2}.
+\]
+
+The last term cannot be dropped when the projection changes the wall value.
+Centre values are `2 F'(T)` and `2 F''(T)`, compared with the projected
+`s.c/Z` and `s.d/Z`. The certified quiet extension below the first profile
+label is admissible; upper extrapolation remains excluded.
+
+Eight [independent controls](../tests/test_nsc_atlas_cap_profile_projection.py)
+pass with **234,742 charged values / 0.90625 CPU seconds**. They include
+quintic reproduction and exact piecewise integrals of a truncated cubic
+profile, its derivative residuals, quiet limits and domain/budget rejection.
+Grok confirms the quadrature orders, reflection derivatives and physical
+norm factors. Completed independent Grok source review found no correctness
+blocker in reflection, projection, split quadrature or trace normalization.
+It did not execute the controls or re-read the basis implementation. Its
+requested nonzero sixteen-mode coefficient control now also passes; the
+control receipt includes that focused addition.
+
+The [one fixed input diagnosis](../scripts/check_nsc_atlas_cap_profile_projection.py)
+authenticates the existing operator-comparison payload and 104 bindings,
+then uses its **zero-case terminal cut 128**, `x=0.4815042082576364`,
+`T=0.19784721605423244`, `R=0.55`, `Z=0.6183813135744636`.
+All 65 existing profile intervals/quiet pieces are retained; no source is
+refitted. The input payload SHA256 is
+`312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09`;
+the selected profile's canonical-array SHA256 is
+`04e10695afac696c4b0e2c178ccf17a19a04ce20706b60bdf86f6f44af38e0fe`.
+
+| Quantity | Residual norm | Relative to original norm |
+|---|---:|---:|
+| Primitive chi | 0.01494870769471052 | 0.06791943818548013 |
+| Canonical density k | 0.8700432643748897 | 0.1460260575723819 |
+| Primitive derivative | 2.435828693493262 | 0.408823877612646 |
+| Density derivative | 151.03382952730925 | 0.5645312602617536 |
+
+The original centre is still quiet: `f=Pi=0`. The projected centre gives
+`f=-0.6742457405504162`, `Pi=-38.79888310735645`. The wall errors are
+`Delta f=-0.13703417265604292`, `Delta Pi=11.347534097957219`,
+`Delta Phi=-161.02998990160847`, and
+`Delta w_plus=-149.68245580365124` against original
+`w_plus=0.03192911946666193`. These are projection errors relative to the
+specified interpolant, not a newly evolved physical signal. The interpolant's
+wall value also differs slightly from the saved finite-volume field;
+this diagnosis does not identify the two.
+
+The single diagnosis uses **2,328,407 charged values / 2.296875 CPU seconds**,
+with one projection, one profile construction and zero radial solves,
+source preparations, time steps or trajectory replays. The command prints
+its compact result and input/producer hashes; no raw payload is added.
+
+**Outcome:** the sixteen-mode global representation is inadequate for this
+narrow background pulse, despite its good matrix condition and mass identities.
+Do not promote it to physical evolution or mask the trace error with a
+boundary adjustment. The next connection is an enriched representation that
+retains the existing characteristic background directly and represents its
+departure. Its explicit time and moving-domain dependence must enter the
+same mass-gradient calculation; simply subtracting the background from the
+current polynomial RHS does not establish that balance. This is a specific
+numerical representation limitation, not a change to the action or source.
+
+#### Mass balance with a retained characteristic background
+
+Retaining the narrow pulse directly requires an affine field space,
+
+\[
+ \chi=\chi_0(T,z)+\phi(z/Z)^T c,\qquad
+ k=k_0(T,z)+\phi(z/Z)^T d,
+ \qquad k_0=\partial_T\chi_0.
+\]
+
+The same constrained radial mass now has explicit dependence
+`N(T,Z,c,d)`. Let `g_c`, `g_d`, `N_T` and `N_Z` be its actual partial
+derivatives. At fixed physical `z`, the background does not depend on `Z`.
+The coefficient dilation therefore still cancels the fixed-z change of the
+**departure**, giving
+
+\[
+ N_Z+\frac{g_c^TEc+g_d^TEd}{Z}=A_0(R)\rho_W.
+\]
+
+The time dependence adds a separate connection. Put
+
+\[
+ a=\partial_T\chi_0,\quad b=\partial_T k_0,\quad
+ a_h=M^{-1}\int_0^Z\phi a\,dz,\quad
+ b_h=M^{-1}\int_0^Z\phi b\,dz,
+ \quad \mu=e^{\delta_W},\quad C=B_WRw_{\rm in}.
+\]
+
+A direct background subtraction from the polynomial weak equations gives
+fixed-Z departure rates
+
+\[
+ v=2\mu M^{-1}g_d-a_h,\quad V_W=a_W+e^Tv,
+ \qquad
+ w=M^{-1}\{-2\mu g_c+e(C-V_W)\}-b_h.
+\]
+
+Adding coordinate motion gives `c_x=T_x v+Z_x E c/Z` and
+`d_x=T_x w+Z_x E d/Z`. Differentiating the actual mass, rather than
+assuming that subtraction cancels its time dependence, yields
+
+\[
+ N_x=T_x\left\{\frac{V_W(C-V_W)}{2\mu}+\mathcal R\right\}
+       +R_x\rho_W,
+\]
+
+\[
+ \boxed{\mathcal R=N_T-g_c^Ta_h-g_d^Tb_h
+       -\frac{(a_W-e^Ta_h)(C-V_W)}{2\mu}.}
+\]
+
+This is an exact finite-dimensional contraction of the stated rates and
+mass derivatives. It supplies a remainder to evaluate or control; it is
+not a conservative evolved solver. The flux in this identity uses the weak
+pair `(V_W/B_W, R w_in-V_W/B_W)`. Comparison to the actual hybrid trace pair
+still requires the two-trace correction derived above.
+
+At alpha zero, `mu=1` and
+
+\[
+ N=\frac14\left\{\int_0^Z(k^2+\chi_z^2)dz
+                         -\beta\chi_W^2\right\},\qquad
+ \beta=A_0(R)/R.
+\]
+
+For the reflected background, `b=chi_0,zz`. Orthogonality of the L2
+projection and closure of the complete odd polynomial space under the
+second derivative give `v=d`, `V_W=k_W`, and
+
+\[
+ N_T-g_c^Ta_h-g_d^Tb_h
+       =\tfrac12(a_W-e^Ta_h)(\chi_{z,W}-\beta\chi_W).
+\]
+
+For example, set `eta=a-Pa`, `theta=b-Pb`. Integrating
+`chi_z eta_z+k theta` by parts leaves the boundary term: the remaining
+integral vanishes because the departure second derivative and momentum are
+in the trial space and `P` is self-adjoint. Consequently
+
+\[
+ \mathcal R=\tfrac12\Delta a\,A_0(R)\,dh,\qquad
+ \Delta a=a_W-e^Ta_h,\quad
+ dh=\frac{k_W+\chi_{z,W}-\beta\chi_W-C}{A_0(R)}.
+\]
+
+A compatible incoming trace gives zero remainder in this reference limit.
+An arbitrary imposed incoming value does not. This distinction matters
+when using the background to carry a pulse whose global polynomial
+projection has a large endpoint error.
+
+An independently integrated counterexample uses `F(u)=u^4`, one departure
+basis function `z/Z`, and `T=c=d=C=0`. Then `chi_0=0`, `k_0=a=8z^3`,
+`b=0`, `a_h=24Z^3/5`, `g_d=4Z^4/5` and `N_T=g_c=0`.
+The weak departure rates are `v=0`, `w=-24Z^2`. The direct mass rate is
+`-96Z^6/5`, while the weak wall flux is `-32Z^6`, leaving the exact
+remainder **`64Z^6/5`**. Choosing the compatible `C=8Z^3` instead gives
+zero departure rates and zero remainder. This intentionally incompatible
+instantaneous boundary input is an algebraic counterexample, not an
+evolved physical failure.
+
+Three [exact controls](../tests/test_nsc_atlas_cap_affine_background_identity.py)
+pass, using **6,000 charged algebra values / 0.21875 CPU seconds**, with
+zero field samples. They differentiate the polynomial background's
+integrated mass, check the general incoming remainder and independently
+check the moving shape identity. Independent Grok derivation confirms the
+full mass split, moving shape term, geometric-limit remainder and both
+incoming choices in the counterexample. A finite-alpha enrichment still needs the
+explicit `N_T` and a controlled remainder before a physical time step.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

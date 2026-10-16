@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+  "current_receipt_commit_parent": "adf2a1059714f3f80e0140163069d70e418e23c9",
   "files": [
     {
       "bytes": 2338,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 11518,
-      "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "bytes": 12027,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "37931125da3ba6cb5043beacff569aa507833c057444000dc0eb0607ff8b5e62"
+      "sha256": "fd398924784f815badaef56a653ab0dc3ca78a4589ab26587c4a2a81c0c12227"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 215677,
-      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
-      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "bytes": 216678,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "ecfe28884701ec88751ad1a80d6847a5ddbdee57f10e6a700f5157b52b9fe89e"
+      "sha256": "29b12d0353bf9a5a3e468fc261512f53634542d4b65bef425b8869b66d7d5688"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 298709,
-      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
-      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "bytes": 300292,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0253d12229fed042360bf609ed6a99ec88927c3065a75e3fcfca1f62ef1a4a52"
+      "sha256": "a9aa742871d42978051603cce0f5d4410237cf2f8633337c98ce8cd9452a97f6"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 206320,
-      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
-      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "bytes": 214999,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "2f32a70337edb55bdd07a003433479353b775273d96d5984f2088437bff51890"
+      "sha256": "5fbbf0950d4d0bdaff4edfe9ec265f076cd1639203cd0d89ec8ccb4928af3c55"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 252883,
-      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
-      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "bytes": 256894,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4ed4cd7d8624a6de2ce88f16169e4c02e5bc2abba0078395021b6cc800b43ee4"
+      "sha256": "b1fb38c04411afd4bf2855f33c47c9dcce77d3da24aed618c9f2452669038acd"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 89890,
-      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
-      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "bytes": 91319,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "f47adb3c3b428c39a92d79d9381f8e8c12316b38919ad07dd1d1054efb1e23a2"
+      "sha256": "7c6320a49288596a299698e47fe3d8a2385664724f2f5dbba84552615adce38e"
     },
     {
       "bytes": 18356,
@@ -29548,6 +29548,14 @@
       "sha256": "07b1aad24f1e42fad4957a6923ad93097013e9c66542ca5a042f7d8addd3ff8e"
     },
     {
+      "bytes": 2815,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "path": "scripts/check_nsc_atlas_cap_profile_projection.py",
+      "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
+      "sha256": "6ea75e024593da8dfc24fac9f4c37870754a1c03e7b9a8d7ad47fef702f9637b"
+    },
+    {
       "bytes": 2304,
       "import_bytes": 2304,
       "import_sha256": "43812275230b2104ed20dedfa283c3ff90667e8b01a655f3f25ff10712a8768e",
@@ -32210,6 +32218,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py",
       "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
       "sha256": "2cff6a901a4e1c1b0073bc3636d30d495e992ddf9daf89f751e6573dffb5e8b2"
+    },
+    {
+      "bytes": 5967,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "path": "src/recursive_horizons/nsc_atlas_cap_profile_projection.py",
+      "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
+      "sha256": "8971d4e1c45396dc39b81a808ca2b9a8b3f247d53c5ddf51220286b7e8c81024"
     },
     {
       "bytes": 6049,
@@ -35541,6 +35557,14 @@
       "sha256": "a8868e928c5c9d1c55d4e303b90622942cbd4e80e9fb545e91d395cb40ddc719"
     },
     {
+      "bytes": 2508,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "path": "tests/test_nsc_atlas_cap_affine_background_identity.py",
+      "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
+      "sha256": "560a3df4dca97545746c8aa273b142944e798afcbe365efd447b5776aa1fb54a"
+    },
+    {
       "bytes": 4920,
       "change": "Derive a regular polynomial moving-cap mass identity with exact shape controls.",
       "changed_from_commit": "fdeac21aebade9626c564fa7d8bdc4ebd756b203",
@@ -35609,6 +35633,14 @@
       "path": "tests/test_nsc_atlas_cap_polynomial_reference.py",
       "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
       "sha256": "69e9b10c37291bca7c6ec82bb2db510e293dd05601de2e52eb464118d18291ce"
+    },
+    {
+      "bytes": 4546,
+      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
+      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "path": "tests/test_nsc_atlas_cap_profile_projection.py",
+      "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
+      "sha256": "b205bed11becb9c6063519c98d777cff658b103ffcc428774e5af39f267bd428"
     },
     {
       "bytes": 7887,

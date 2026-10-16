@@ -189,6 +189,34 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The fixed background-profile projection diagnostic:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_profile_projection.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_cap_profile_projection.py
+```
+
+Eight controls pass with 234,742 charged values / 0.90625 CPU seconds of
+their 2-million / 30-second allowance. The one fixed input projection uses
+2,328,407 / 2.296875 of a separate 4-million / 30-second allowance. It
+prints compact results and hashes; it creates no files and does not replay
+an evolution. The existing zero-case terminal profile is not adequately
+represented by sixteen global modes. The [result](nsc-atlas-finite-amplitude.md#fixed-profile-representation-diagnosis)
+records value, derivative, wall and centre discrepancies. Keys ending in
+`_xi` label derivative integrands, but returned norms include the coordinate
+factor and are physical z-derivative norms.
+
+The explicit-time mass connection for a retained background:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_affine_background_identity.py -q -s
+```
+
+Three exact controls pass with 6,000 algebra values / 0.21875 CPU seconds
+of a 10,000 / 10-second allowance. No numerical fields are evaluated.
+The [remainder and counterexample](nsc-atlas-finite-amplitude.md#mass-balance-with-a-retained-characteristic-background)
+show the compatibility term that naive background subtraction would miss.
+
 The orthogonal basis and its shared cap adapter:
 
 ```sh

@@ -2,6 +2,32 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed-profile representation diagnosis, 16 October 2026
+
+The [single-slice projection](nsc-atlas-finite-amplitude.md#fixed-profile-representation-diagnosis)
+finds that sixteen global odd Legendre modes do not resolve the existing
+narrow characteristic background. Against the supplied quintic profile at
+the zero-case terminal cut, relative L2 errors are `6.79%` for the primitive
+and `14.60%` for canonical density; derivative errors are `40.88%` and
+`56.45%`. The projected centre is spuriously nonquiet, and wall traces have
+large errors. Good conditioning and the verified mass identity do not remove
+this representation error.
+
+Eight exact-polynomial, piecewise-integral and domain controls pass. The
+one diagnosis uses 2,328,407 charged values / 2.296875 CPU seconds, with no
+radial solve or evolution. Its command prints compact norms and hashes.
+The next mathematical connection is retention of the existing background
+with a represented departure, including the resulting explicit time and
+radius derivatives of the mass. No additional mode scan is started.
+
+The [retained-background mass derivation](nsc-atlas-finite-amplitude.md#mass-balance-with-a-retained-characteristic-background)
+now exposes an explicit-time remainder in naive background subtraction.
+Three exact controls pass, including an independent mass integral with
+nonzero remainder `64 Z^6/5` for an incompatible incoming value and zero
+remainder for its compatible limit. The moving shape identity remains
+valid. This identifies the additional compatibility term before changing
+the physical evolution.
+
 ## Conditioned moving-cap representation, 16 October 2026
 
 The [orthogonal extension](nsc-atlas-finite-amplitude.md#orthogonal-regular-cap-coordinates)

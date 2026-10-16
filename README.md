@@ -89,8 +89,13 @@ radial mass and lapse residuals are small but a temporal mass discrepancy
 remains; the incoming-field mismatch does not explain it. The
 [direct mass-functional check](docs/current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)
 finds that this discrepancy also remains under the implemented instantaneous
-field rates. Its next connection is the cap's discrete energy balance.
-Boundary accuracy, profile support and a complete error
+field rates. The [discrete ledger and independent transport check](docs/current-result.md#terminal-cap-transport-attribution-16-october-2026)
+now identify the numerical transport contribution. A mass-gradient reference
+recovers a checked weak mass law, including moving-radius terms. The
+[single-slice profile diagnosis](docs/current-result.md#fixed-profile-representation-diagnosis-16-october-2026)
+finds that sixteen global modes do not resolve the narrow supplied pulse;
+the retained-background extension now has an explicit derived mass remainder
+to control before evolution. Boundary accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently

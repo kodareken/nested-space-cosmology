@@ -678,6 +678,69 @@ confirms the basis mathematics. Completed independent Grok source review
 found no correctness defect in the extension. It read the basis controls
 but did not execute tests or re-read the shared radial solver body.
 
+### Fixed-profile projection diagnosis
+
+The next missing connection is representation of the already supplied cap
+background. Use the existing `CharacteristicProfile` without changing its
+knots or source data. On one fixed slice, project its reflected primitive
+and canonical density onto sixteen odd Legendre modes. Split at every
+mapped knot: 19-point Gauss integration is algebraically exact for the
+coefficient integrands, and 32-point Gauss for the squared residuals.
+Compute the residual L2 norms, derivative seminorms, centre values and wall
+first jets directly. Their finite arithmetic discrepancies are diagnostic;
+they do not enclose interpolation error or finite-alpha evolution.
+
+The mathematical check reuses the existing independent Grok reviewer.
+Implementation controls have **2,000,000 charged values / 30 active CPU
+seconds** for exact polynomial reproduction, an independently integrated
+piecewise profile, centre/wall identities, quiet limits and domain/budget
+rejection. The single input diagnosis has **4,000,000 charged values / 30
+CPU seconds**, using the existing operator-comparison profile and the
+zero-case terminal cut 128. Authenticate its existing fixed hashes; no old
+trajectory is replayed. Store only compact norms, traces, hashes and the
+command. No cap radial solve, new preparation, time integration or scan is
+admitted. Stop on representation error that prevents use of this field
+space; identify the missing resolution mechanism before further evolution.
+
+**Projection outcome:** eight controls pass with 234,742 charged values /
+0.90625 CPU seconds. The single authenticated input diagnosis uses
+2,328,407 / 2.296875; no radial solve or time step is performed. Relative
+primitive/density errors are 6.79%/14.60%, and derivative errors are
+40.88%/56.45%; large wall errors and a spurious centre response exclude
+using the current sixteen global modes for this narrow background pulse.
+The [owning derivation](nsc-atlas-finite-amplitude.md#fixed-profile-representation-diagnosis)
+records norms, trace errors and fixed hashes. Retaining the background
+directly is the next candidate representation; its explicit time-dependent
+mass balance must be derived before another physical evolution. The current
+diagnosis is complete. Independent Grok source review found no correctness
+blocker; its nonzero sixteen-mode exact-polynomial control was added and
+passed within the same development allowance.
+
+### Affine-background mass connection
+
+The fixed pulse diagnosis requires retaining the supplied characteristic
+background and representing its departure. Before implementing that RHS,
+derive the exact explicit-time and moving-radius contributions to the same
+mass functional. Check whether subtracting projected background rates from
+the polynomial weak equations preserves the moving mass law. Admit one
+independent Grok derivation and exact symbolic controls of the general
+coefficient contraction and one polynomial background counterexample,
+**10,000 charged algebra values / 10 CPU seconds**. No field samples,
+radial integrations, source fits or physical evolution. If a remainder
+survives, expose it and identify what additional compatibility is needed;
+do not silently install the naive background-subtracted update.
+
+**Affine outcome:** the [exact mass connection](nsc-atlas-finite-amplitude.md#mass-balance-with-a-retained-characteristic-background)
+contains an explicit-time remainder. Three independently integrated
+symbolic controls pass with 6,000 charged algebra values / 0.21875 CPU
+seconds, zero field samples. A one-mode quartic-background example has
+remainder `64 Z^6/5` for an incompatible imposed incoming value; the
+compatible incoming limit has zero remainder and zero departure rates.
+The moving shape identity survives because the background stays in physical
+coordinates. No background-subtracted physical update is installed.
+Independent Grok derivation confirms the full mass split, shape identity,
+geometric-limit remainder and counterexample.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
