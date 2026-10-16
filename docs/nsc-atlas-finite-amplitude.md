@@ -2175,6 +2175,81 @@ permits a C2 connection to the later retained knots. Matching a C3 onset
 requires an additional condition. The source-front label and actual-stage
 coverage need explicit checking before that successor is constructed.
 
+#### Inherited constraints and saved-cut differentiation
+
+The exact transport identity above also applies to the numerical source
+representation's nonzero constraint. In the separate null coordinates
+`(Ubar,x)`, set `u=c/r`, `D=1+alpha*u^2/6` and
+
+$$
+E_a=r_{aa}-L_a r_a+\frac{\alpha r}{2D}u_a^2,
+\qquad a\in\{\bar U,x\}.
+$$
+
+On a piecewise smooth solution of the mixed equations, a segment from
+the source at `Ubar=0` carries
+
+$$
+E_x^{\rm inherited}(\bar U,x)
+=\frac{r_{\rm src}(x)E_{\rm src}(x)}{r(\bar U,x)},
+\qquad
+\mathcal T_x=rE_x^{\rm FD}-r_{\rm src}E_{\rm src}.
+$$
+
+The source term uses its actual interpolated `r_xx`; substituting the
+exact source ODE would erase a supplied residual. The
+[saved-data calculation](prior-art-and-open-claim.md#saved-constraint-transport-and-sampling-16-october-2026)
+retains the raw diagnostic, inherited prediction and subtracted remainder
+as separate arrays. Radius is reconstructed from the saved physical
+increment and source value, without evaluating a coupled stage.
+
+Every one of the 129 saved cuts is a knot of the source Hermite
+interpolant. At the interior cuts its second derivative uses the right polynomial trace,
+whereas centred differences of propagated departures sample both sides.
+The 65-cut diagnostic has wider temporal stencils at a subset of those
+same knots. Comparing the two diagnostics at identical points measures
+differentiation sensitivity, including this trace convention. It does
+not by itself isolate evolution error or establish its order. Front-near
+comparisons use the union of both stencils' front masks.
+
+The trace effect has a conditional local formula. Suppose the fields and
+first jets are continuous across a source knot, their pieces are C2, and
+the mixed and tangential second jets have common traces. If
+`J=[r_src,xx]`, exact transport and the departure decomposition imply
+
+$$
+[r_{xx}]_{\bar U}=\frac{r_{\rm src}}r J,
+\qquad [Z_{xx}]_{\bar U}=\left(\frac{r_{\rm src}}r-1\right)J.
+$$
+
+A centred second difference tends to the mean of the two curvature
+traces. With other derivatives evaluated exactly, adding the right source
+trace therefore leaves the limiting contribution
+`(1-r_src/r)*J/2` in `E_x^FD-E_x^inherited`. Smooth `W` and the common
+mixed/tangential traces give the same jump in the moving eta description.
+C1 regularity alone does not establish those second-jet assumptions.
+This identity identifies a possible sampling contribution; no correction
+is subtracted from the saved diagnostic on its authority alone.
+
+For the other constraint, `Ubar=eta W(x)` determines the origin of its
+constant-null-coordinate segment. Points with `Ubar<=W(.4)` inherit the
+quiet bottom value. Points with `Ubar>W(.4)` enter through the wall and
+instead satisfy
+
+$$
+rE_{\bar U}(\bar U,x)
+=r_W(x_b)E_{\bar U,W}(x_b),\qquad W(x_b)=\bar U.
+$$
+
+The incoming wall value remains to be determined independently. A saved
+first-jet tangential defect does not determine `r_Ubar_Ubar`; setting
+that wall value to zero would assume the needed result. Partition the
+three-point eta stencils into wholly bottom-origin, wholly wall-origin
+and separator-crossing sets. The 129/65 comparison uses the same eta
+stencil, so equality of `E_Ubar` at matching cuts is an indexing control,
+not spatial convergence. General wall constraint identities must also
+retain the outgoing source residual rather than assume it vanishes.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

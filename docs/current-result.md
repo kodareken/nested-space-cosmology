@@ -2,6 +2,58 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Saved constraint transport and sampling, 16 October 2026
+
+The [saved-data audit](../results/development/nsc-atlas-constraint-transport-audit-v1.json)
+separates the actual source constraint from the interior diagnostic. It
+uses **689,270 arithmetic points and 0.921875 process CPU seconds**,
+with no source evaluation, cache reconstruction, coupled stage or time
+step. The fixed 512-step record and its 86 bound paths are authenticated.
+One standalone saved-arithmetic check passes with the same 689,270 points.
+All 21 focused controls pass with aggregate 72,316 points and 0.359375
+CPU seconds, including the correction of an aliased test fixture.
+
+For the finite case on 129 saved cuts:
+
+| Sampled quantity | Maximum absolute value | RMS |
+| --- | ---: | ---: |
+| Raw `E_x` | `8.76852e-3` | `2.02399e-3` |
+| Inherited `r_source E_source/r` | `1.29723e-3` | `4.46292e-4` |
+| Subtracted `E_x-r_source E_source/r` | `7.78011e-3` | `1.94731e-3` |
+| Weighted transport residual `r E_x-r_source E_source` | `3.97496e-3` | `1.00334e-3` |
+
+The inherited contribution does not account for the remaining residual.
+Its independent source-jet arithmetic agrees with the cached source
+constraint within `3.33067e-16`. The subtracted maximum occurs at
+`x=0.4579443981`, `eta=.875`. Widening the diagnostic time stencil from
+129 to 65 cuts changes `E_x` at matched points by at most `1.34189e-3`
+(RMS `2.99980e-4`). The union front-near mask has a smaller maximum
+change `1.73087e-4`; the largest change is away from the physical fronts.
+These stencils lie on Hermite knots and retain the one-sided-source
+versus centred-departure curvature distinction. This is differentiation
+sensitivity, not a continuous evolution error estimate.
+
+The incoming constraint `E_Ubar` has the following three-point eta-stencil
+partition. A wall-origin value has not been independently established as
+zero.
+
+| Stencil origin | Points | Maximum absolute `E_Ubar` | RMS |
+| --- | ---: | ---: | ---: |
+| Entirely quiet-bottom origin | 2,774 | `1.15980e-5` | `8.67329e-7` |
+| Entirely wall origin | 916 | `5.54765e-4` | `2.18632e-4` |
+| Crosses the origin separator | 247 | `4.38487e-5` | `1.22287e-5` |
+
+At matched points `E_Ubar` is identical on both saved-time subsets,
+because its spatial stencil is unchanged. The zero-amplitude case has
+zero inherited source constraint, with raw maxima `1.08440e-10` for
+`E_x` and `4.66452e-12` for `E_Ubar`.
+
+The next missing datum is an independent incoming wall constraint from
+one-sided derivatives of the saved departures and analytic vacuum jets.
+Its stencil sensitivity and transport into the wall-origin region must
+be separated before changing the wall or bulk evolution. The existing
+first-jet compatibility defect cannot substitute for this curvature.
+
 ## Midpoint-complete SSPRK3 comparison, 16 October 2026
 
 The [512-step pair](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json)

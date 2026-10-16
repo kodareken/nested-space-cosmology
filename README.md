@@ -68,8 +68,12 @@ discrepancy from about `0.38` to below `0.0009`. Paired spatial changes in
 wall geometry and clocks are below `0.063%` of their finite response peaks.
 The [higher-order time comparisons](docs/current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
 retain close agreement for geometry and clocks and reduce the paired scalar
-time difference to `1.68%` of its finer response peak. Spatial constraints,
-profile support and a complete error estimate remain accuracy questions. A controlled
+time difference to `1.68%` of its finer response peak. The
+[constraint-origin audit](docs/current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+separates inherited source residuals and localizes the larger incoming
+constraint to wall-origin stencils, selecting an independent wall-curvature
+calculation next. Spatial accuracy, profile support and a complete error
+estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,

@@ -132,8 +132,13 @@ Its independent 32-cell incoming pullback discrepancy falls from `0.38`
 to below `0.0009`; paired wall geometry and clock responses change by less
 than `0.063%` under spatial refinement. The [higher-order time comparisons](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
 retain close geometry and clock agreement and reduce the scalar time
-difference to `1.68%` of the fine response peak. Profile support and exterior
-constraint/wall-slope residuals remain unresolved. Coupled
+difference to `1.68%` of the fine response peak. The
+[saved constraint audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+separates source inheritance and diagnostic sampling; the incoming residual
+is largest in wall-origin stencils. An independent wall-curvature and
+birth-transport diagnostic is the next connection before changing the
+evolution. Profile support and exterior constraint/wall-slope residuals
+remain unresolved. Coupled
 well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.
 

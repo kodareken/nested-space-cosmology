@@ -8,6 +8,25 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [constraint transport audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+uses only pinned saved arrays, separating the inherited source residual,
+diagnostic time-stencil sensitivity and incoming-characteristic origin:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_constraint_transport.py -q
+python scripts/run_python.py scripts/diagnose_nsc_atlas_constraint_transport.py --output results/development/nsc-atlas-constraint-transport-audit-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_constraint_transport.py --output results/development/nsc-atlas-constraint-transport-audit-v1.json --check
+```
+
+Its 21 controls pass with aggregate 72,316 points and 0.359375 CPU seconds.
+The completed audit uses 689,270 points and 0.921875 CPU seconds. Creation
+and a standalone check each have 30 CPU seconds/1,000,000 points; controls
+share 30 CPU seconds/300,000 points. Creation requires a fresh path and
+checking repeats only saved arithmetic and hash authentication, with no
+source/cache/profile/stage or time-evolution replay. The producer, controls
+and input bindings remain fixed with the result.
+One standalone check passes with 689,270 points.
+
 The current cap representation carries an exact characteristic background and
 evolves departures. Run its 72 manufactured, endpoint and independent radial controls:
 
@@ -895,6 +914,13 @@ describes the outputs and causal limits.
 The paper builder renders local figures, authenticates their bytes and compares
 two builds in check mode. Visual inspection is still required for a manuscript
 change. The software release version and the manuscript revision are independent.
+
+Revision `working-2026-10-16.4` passes two clean deterministic builds and
+visual inspection of the cover, abstract, new Section 13.17, figures,
+quantitative table, conclusion and evidence appendix. Its 36-page PDF is
+2,803,690 bytes with SHA256
+`5e43acbc525647557742502cb7794be9c2c63ce1c6874efd38db2b675bb59036`.
+The current paper checks and 31 claims with 106 evidence links pass.
 
 The canonical PDF uses the pinned Zopfli compressor for ReportLab streams, so
 standard zlib and zlib-ng installations produce the same encoded document.

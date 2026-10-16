@@ -1,5 +1,38 @@
 # Prior art and admission of new research
 
+## Saved constraint transport and sampling, 16 October 2026
+
+The 512-step comparison reduces temporal scalar sensitivity while leaving
+the finite sampled null constraints. Before changing the evolution, separate
+the source constraint already supplied by the Hermite representation from
+the residual inside the domain. The diagnostic uses the existing exact
+transport identity and only retained arrays.
+
+| Item | Fixed saved-data calculation |
+| --- | --- |
+| Inputs | Hash-authenticate the completed `nsc-atlas-ssprk3-refinement-v1` payload, manifest and all 86 bound paths. Use its two saved histories, source/gauge cache and existing 129/65-cut departure diagnostics. No recursive physical validator, source evaluation, profile fit, stage or trajectory. |
+| Missing connection | Compare the measured `E_x` to `r_source E_source/r`, retaining both the inherited source contribution and the remainder. Calculate `r E_x-r_source E_source` separately. Reconstruct radius from saved physical increments and the saved source radius, and independently form the actual source constraint from its cached first/second jets. |
+| Domain and sampling | Same zero/finite cases, 32 cells and original finite interval. Compare 65-cut diagnostic values with the identical interior cuts and eta nodes of the 129-cut diagnostic. Keep signed arrays, maxima and locations; use the union of their front-crossing time-stencil masks. This is diagnostic differentiation sensitivity, not time-evolution refinement. |
+| Incoming constraint | Partition the three-point eta stencil by `Ubar=eta W(x)` relative to `W(.4)`: wholly bottom-origin, wholly wall-origin, or crossing their separator. A quiet bottom supplies zero incoming constraint. The wall-origin value remains unspecified; the saved first-jet wall defect cannot supply pure transverse curvature. Temporal coarsening leaves this spatial stencil unchanged. |
+| Regularity convention | Every saved cut is a source Hermite knot. At the interior cuts the cached second derivative uses the right trace; centred differences of evolved departures mix neighboring pieces. The subtracted remainder retains this sampling issue and is not identified with continuous evolution error. |
+| Allowance | One creation uses at most 30 process CPU seconds and 1,000,000 arithmetic points including authentication and saved-array validation. One standalone check has the same allowance. Focused manufactured controls share 30 CPU seconds and 300,000 points. No physical source or evolution is repeated. |
+| Checks and stop | Independent nonzero-source transport examples, coordinate/index/sign checks, stencil partitions, source-jet identity, changed-input/output rejection and shared-budget controls. Stop on the first mismatch, nonfinite value, invalid radius/grid or exhaustion; preserve a diagnostic receipt under ignored `.build`. Creation requires a fresh path. |
+| Decision | Determine how much of the sampled constraint is inherited and how much changes with the diagnostic stencil. Then choose a source representation, spatial derivative or independent incoming-wall diagnostic according to the measured remainder. No automatic time doubling or altered physical assumptions. |
+
+**Outcome:** the [saved audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+completes with 689,270 points and 0.921875 CPU seconds. All 21 controls
+pass with aggregate 72,316 points and 0.359375 CPU seconds, including
+four rerun mutation controls after an isolated fixture-alias correction.
+Independent review passes. The finite inherited `E_x` maximum is
+`1.29723e-3`; the subtracted maximum remains `7.78011e-3`. Matched
+129/65 diagnostic sensitivity reaches `1.34189e-3`. The incoming
+constraint is largest in the wall-origin region (`5.54765e-4`, versus
+`1.15980e-5` on bottom-origin stencils). This selects an independent
+one-sided wall-curvature and transport diagnostic before a change to the
+evolution. The source and diagnostic trace conventions remain explicit.
+One standalone saved-arithmetic check passes with 689,270 points and
+no source/cache/profile/stage or trajectory replay.
+
 ## Midpoint-complete SSPRK3 comparison, 16 October 2026
 
 **Outcome:** the [512-step pair](current-result.md#midpoint-complete-ssprk3-comparison-16-october-2026)
