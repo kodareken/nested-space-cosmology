@@ -1898,6 +1898,34 @@ and direct `G_t` remains a reported quadrature-consistency diagnostic.
 Independent radial integration and order-4/8/16 narrow-pulse comparisons
 test accuracy; constructed node and primitive identities cannot do so.
 
+The [input adapter](../src/recursive_horizons/nsc_atlas_background_profile.py)
+maps supplied zero-case wall values and same-stage rates to the profile:
+
+$$
+\zeta_W=T+\operatorname{atanh}R,\qquad
+F(\zeta_W)=c_W,\qquad
+F'(\zeta_W)=\frac{c_{W,x}}{T_x+R_x/(1-R^2)}.
+$$
+
+It uses a stated second-order difference of these first jets to select
+`F''` as computational interpolation curvature. It performs no physical
+source solve and does not advertise those second jets as an independent
+physical calculation. The finite profile range remains enforced at every
+runtime query. Withheld wall values and first jets can check the chosen
+interpolant separately from the evolved incoming correction.
+
+The [coupled adapter](../src/recursive_horizons/nsc_atlas_background_evolution.py)
+retains the original exterior and wall formulas and fixed SSPRK2. Its
+cap state stores departure integrals, and every saved physical view also
+stores the total integrals at that event's actual `T,R`. Its wall chain
+uses the full background-plus-departure rate. Seventy-two controls pass across
+these four operators, including actual moving-vacuum steps, an active
+finite-amplitude background with nonzero incoming correction and the
+regular-axis and radial-integration checks above. Exact terminal-label
+evaluation passes, while a one-ulp excursion outside the profile is rejected.
+The first physical
+comparison is specified in the [calculation record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026).
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

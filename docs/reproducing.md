@@ -9,18 +9,43 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 ## Current work
 
 The next cap representation carries an exact characteristic background and
-evolves departures. Run its 31 manufactured and independent radial controls:
+evolves departures. Run its 72 manufactured, endpoint and independent radial controls:
 
 ```sh
-python scripts/run_python.py -m pytest tests/test_nsc_atlas_characteristic_background.py tests/test_nsc_atlas_background_cap.py -q
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_characteristic_background.py tests/test_nsc_atlas_background_cap.py tests/test_nsc_atlas_background_profile.py tests/test_nsc_atlas_background_evolution.py tests/test_nsc_atlas_background_endpoint.py -q
 ```
 
 The profile suite has one 30-CPU-second/20,000-point allowance; the cap
 suite has 30 CPU seconds and 100,000 points for positive partial quadrature
-and an independent narrow-pulse order-4/8/16 comparison. The
+and an independent narrow-pulse order-4/8/16 comparison. The input adapter
+has 30 CPU seconds/20,000 points; the coupled stage has 30 CPU
+seconds/100,000 points. The endpoint suite has 30 CPU seconds/20,000 points;
+it accepts the exact terminal profile label and rejects an excursion beyond it.
+The
 [owner](nsc-atlas-finite-amplitude.md#carrying-a-characteristic-background-and-evolving-its-correction)
 specifies the background's finite domain, centre limits and free incoming
 correction. These tests do not replay the prepared physical source.
+
+The [six-case recorder](../scripts/record_nsc_atlas_background_evolution.py)
+keeps the raw cap departures and reconstructed physical integrals separately.
+Its controls check profile fitting versus withheld rows, physical reconstruction,
+paired comparisons, shared accounting, immutable output and failed-attempt receipts:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_record_nsc_atlas_background_evolution.py -q
+```
+
+The first physical comparison has a shared allowance of 600 CPU seconds and
+100 million evaluated points, including authentication. It reuses the bound
+source cache and extracts the computational profile once. Its [calculation
+record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026)
+fixes six cases and stopping conditions. Creation uses a new output directory;
+`--check` authenticates saved data without replaying time evolution:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_background_evolution.py --output results/development/nsc-atlas-background-evolution-v1
+python scripts/run_python.py scripts/record_nsc_atlas_background_evolution.py --output results/development/nsc-atlas-background-evolution-v1 --check
+```
 
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)

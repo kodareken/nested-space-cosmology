@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "d6a71b26ae06647c0d2264cddadaba7998165947",
+  "current_receipt_commit_parent": "85495f7afe0c76e861a1afb74cfbec5879e79d9d",
   "files": [
     {
       "bytes": 1506,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 196939,
-      "change": "Route frozen transport diagnosis and the verified characteristic-background cap operators; correct compatible-result anchors",
-      "changed_from_commit": "d6a71b26ae06647c0d2264cddadaba7998165947",
+      "bytes": 197282,
+      "change": "Route the verified coupled characteristic-background implementation and fixed six-case comparison",
+      "changed_from_commit": "85495f7afe0c76e861a1afb74cfbec5879e79d9d",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "938051e6e1d5fbfd2f98c6a6ed998c8ad426d2fd4d516d4ec5950ac53bf40e82"
+      "sha256": "f308aded5584a9fb50032fc00eecea5f2c649d720136f2077fb2c8e660dc2193"
     },
     {
       "bytes": 9543,

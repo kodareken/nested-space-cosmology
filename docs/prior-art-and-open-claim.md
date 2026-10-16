@@ -1,6 +1,60 @@
 # Prior art and admission of new research
 
+## Coupled characteristic-background comparison, 16 October 2026
+
+The new profile, radial cap, input adapter and common stage have passed
+72 manufactured/independent controls, including exact endpoint coverage.
+The input adapter uses 8,129 points
+plus 180 intentional budget-exhaustion charges; the coupled stage uses
+26,661 points. The existing source, exterior and wall algorithms stay
+fixed. The changed cap variables carry the known characteristic waveform
+analytically, while departures retain the nonlinear response and every
+incoming discrepancy. The next run answers whether this removes the
+measured leading cap transport error in the original coupled preparation.
+
+The following fixed comparison is admitted after its recorder and
+authentication controls pass:
+
+| Item | Characteristic-background comparison |
+| --- | --- |
+| Parent inputs | Authenticate the compatible record and its bound inputs. Reuse the original 513-point source and gauge caches. No new source integration or reference quadrature. |
+| Computational profile | Reconstruct same-stage rates at the 129 saved zero-amplitude, 32-cell cuts. Select every second cut for 65 profile knots; retain the other 64 as a value/first-jet interpolation comparison. Define `F,F',F''` through the documented adapter. Reuse this one profile in every case. Its finite label interval is a query guard, not permission to extend the physical source. |
+| Physical model and domain | Same action, compact preparation, `alpha=0` or `0.00012983127142551443`, original incoming interval, quiet corner and reference wall-label gauge. Actual radius, lapse and both clocks evolve. |
+| Six cases | Each amplitude uses 16 cells/256 steps, 32 cells/256 steps and 32 cells/512 steps. Save 129 accepted slices per case. This adds the previously missing zero-amplitude time comparison. |
+| Numerical methods | Unchanged first-order exterior departure derivative and order-two prefix quadrature; cap characteristic departures and positive partial quadrature of order four, split at cell and profile knots; fixed SSPRK2. No second-order exterior evolution is inferred from the frozen audit. |
+| Shared allowance | 600 process CPU seconds and 100,000,000 charged points for parent authentication, profile extraction, all six evolutions, diagnostics and creation authentication together. The larger finite allowance covers profile-knot panels and positive partial quadrature; no child reset or uncharged source replacement. |
+| Independent comparisons | Paired finite-minus-zero spatial and temporal responses; raw physical histories and departure constraints; cap incoming-characteristic pullback in the zero case; actual total cap integral restriction; predecessor overlap; profile coverage and interpolation sensitivity. |
+| Radial quadrature control | At saved cuts 69, 79 and 128 of the finite 32-cell/256-step case, hold the state/profile fixed and compare cap orders four/eight. Retain wall mass coefficient, lapse, metric, outgoing trace and internal gamma consistency. This is a local quadrature comparison, not a time-evolution error enclosure. |
+| Stop | First profile-domain exit, original exterior tube exit, nonfinite arithmetic, loss of positive cap metric or hybrid incoming sum, non-timelike wall, Courant value above `.4`, or cumulative budget failure. Preserve the first state/context and diagnose before designing another run. |
+| Decision | Measure whether the leading pulse is transported accurately and whether the finite response gains paired space/time agreement. Remaining derivative, source and nonlinear residuals stay visible. This window still precedes central arrival and does not establish formation, stability, a global error bound or observational agreement. |
+
+The variable number of radial panels makes stage charges depend on the
+actual state. Record measured shared-budget deltas and validate their
+arithmetic and ceilings. Authentication reconstructs saved physical
+states, final radial/wall states and diagnostics without time evolution;
+it does not claim to recompute every unsaved stage's charge.
+
 ## Characteristic background and frozen-stage transport diagnosis, 16 October 2026
+
+The next connection is the common coupled stage. Its new input adapter
+builds the computational profile from supplied zero-amplitude wall values
+and same-stage rates: `zeta=T+atanh(R)` and
+`F'=c_x/(T_x+R_x/(1-R^2))`. Finite differences of these supplied first
+jets select interpolation curvature `F''`; they are not reported as a
+measured physical second derivative. The resulting single quintic
+interpolant supplies all runtime background jets. No source integration
+or time evolution occurs inside this adapter.
+
+The coupled adapter keeps the original exterior discretization, source,
+wall equations and fixed SSPRK2, replacing only the cap representation.
+It restores the full background wall rate and saves both raw departure
+integrals and reconstructed physical integrals. Input-adapter controls
+have 30 CPU seconds/20,000 points; common-stage controls have 30 CPU
+seconds/100,000 points. They test manufactured input chains, actual moving
+vacuum evolution, finite common-wall conversion, free incoming correction,
+domain failure and cumulative-budget failure. A new original-source run
+still requires its concrete profile coverage, cases and shared creation
+budget to be specified after these controls.
 
 The compatible record removes the vacuum and field-primitive defects but
 still spreads the known incoming cap pulse. Reuse the exact de Sitter
