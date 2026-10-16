@@ -111,7 +111,21 @@ SSPRK2 record without replaying those steps. The weighted five-part
 ledger, common starting state and stage keys are verified independently.
 Creation requires a new path; `--check` repeats only the six new stages.
 The [full original-window comparison](prior-art-and-open-claim.md#fixed-input-ssprk3-coupled-window-16-october-2026)
-is being prepared with four fixed 128/256-step cases and no new source.
+uses four fixed 128/256-step cases and no new source. Its recorder's 27
+controls pass with 37,821 points and 1.796875 CPU seconds:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_record_nsc_atlas_ssprk3_evolution.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_ssprk3_evolution.py --output results/development/nsc-atlas-ssprk3-evolution-v1
+python scripts/run_python.py scripts/record_nsc_atlas_ssprk3_evolution.py --output results/development/nsc-atlas-ssprk3-evolution-v1 --check
+```
+
+Creation has one 300-CPU-second/50-million-point allowance for four
+evolutions, diagnostics and authentication together. The standalone
+60-second/5-million-point check reconstructs saved fields, four final
+stages and diagnostics without a trajectory or source replay. Creation
+requires a fresh directory; failures retain their first context under
+ignored `.build`. The fixed model and 80 bound paths remain unchanged.
 
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)

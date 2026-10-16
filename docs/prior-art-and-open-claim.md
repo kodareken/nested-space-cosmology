@@ -24,6 +24,13 @@ Recorder/authentication controls have 30 process CPU seconds and 100,000
 charged points. The physical comparison begins only after these controls
 and independent review. Historical results and their producers stay fixed.
 
+The recorder and independent authentication controls are complete: 27 tests
+pass with 37,821 shared points and 1.796875 process CPU seconds. They cover
+both exact time schedules, real raw-to-physical reconstruction, four final
+stage checks, paired/RK2 comparison indexing, changed inputs and accounting,
+and creation/standalone clocks beginning before input authentication. The
+producer and its 80 input/source bindings are frozen for the admitted run.
+
 ## SSPRK3 with fixed physical inputs, 16 October 2026
 
 **Outcome:** all 20 operator controls pass with 27,607 points and 0.5625
