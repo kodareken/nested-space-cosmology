@@ -2546,6 +2546,72 @@ radial-lapse check is the next selected calculation, retaining actual
 reconstructed derivatives and incoming-field trace differences before
 interpreting the J/O relations or replacing the boundary treatment.
 
+#### Independent cap mass and wall-curve consistency
+
+The next selected diagnostic reconstructs the cap from saved states, rather
+than substituting its desired temporal mass equation into the wall force.
+Write `m=r^3/2+alpha*n` and `P=3+alpha*Pdiff`, using the stable potential
+quotient already returned by the cap implementation. At the moving wall
+`r=R(x)`, the chain rule gives
+
+$$
+n_T\big|_r=\frac{D_x n_W-R_x D_r n_W}{T_x}.
+$$
+
+Here all temporal derivatives come from neighboring saved wall states and
+reconstructed metrics; radial derivatives come from the returned cap face
+arrays. The scalar fields below are the left reconstructed cap traces.
+The normalized mass residuals and the lapse residual are
+
+$$
+e_m=n_T-\frac{R^2A^2e^\delta}{2}\Pi\Phi,\qquad
+e_r=D_r n-\frac{R^2P_{\mathrm{diff}}}{2}
+             -\frac{R^2A}{4}(\Pi^2+\Phi^2),
+$$
+
+$$
+E_m=\alpha e_m,\qquad E_r=\alpha e_r,\qquad
+E_\delta=D_r\delta-\frac{\alpha R}{2}(\Pi^2+\Phi^2).
+$$
+
+The brackets `e_m,e_r` have finite normalized-probe limits at `alpha=0`.
+Their values in that limit are not nonzero vacuum Einstein residuals:
+the actual mass residuals retain the factor `alpha`. The analytic vacuum
+derivative `3r^2/2` is restored when reporting `m_r`; it is not replaced
+by a finite difference of `r^3/2`.
+
+An acceleration check can also use the actual saved curve. Define
+
+$$
+\sigma^2=Ae^{2\delta}T_x^2-\frac{R_x^2}{A},\qquad
+v=\frac{R_x}{\sigma},\qquad
+\beta=\frac{Ae^\delta T_x}{\sigma},\qquad
+v_s=\frac{R_{xx}\sigma-R_x\sigma_x}{\sigma^3}.
+$$
+
+Require measured `T_x>0` and `sigma^2>0`. Compute `sigma_x` by
+differentiating the displayed expression using
+measured `A_W,x`, `delta_W,x`, `R_xx` and `T_xx`. Compare `sigma`
+with the derivative of the saved proper clock instead of imposing their
+equality. The independently reconstructed metric derivatives are
+
+$$
+A_r=-2R-2\alpha\left(\frac{n_r}{R}-\frac{n}{R^2}\right),\qquad
+A_T=-\frac{2\alpha n_T}{R}.
+$$
+
+They enter the full `K_geom` expression above. Neither the hybrid predicted
+acceleration nor the desired mass-flux law supplies these derivatives.
+The incoming cap characteristic reconstructed on the left, the one
+implied by the saved wall curve, and the one imposed by the hybrid map
+remain separate reported quantities. Their associated flux differences
+are measured explicitly, without replacing the primary left-trace residual.
+
+The [fixed admission](prior-art-and-open-claim.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
+specifies matched integration orders on all neighboring slices, time and
+radial widths, actual boundary-map reconstruction and a finite compute
+allowance. It is a proposed consistency check, not a recorded cap result.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

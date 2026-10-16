@@ -1,5 +1,25 @@
 # Prior art and admission of new research
 
+## Selected cap mass and wall-curve audit, 16 October 2026
+
+The saved exterior-row audit localizes the sensitivity but leaves its
+origin ambiguous. Before another evolution or boundary-stencil change,
+test the independent cap temporal mass equation and the actual wall
+curve. The [cap consistency derivation](nsc-atlas-finite-amplitude.md#independent-cap-mass-and-wall-curve-consistency)
+reuses the chain rule, polar-areal Einstein equations and full acceleration
+formula already in this owner chain. The missing connection is their
+evaluation on reconstructed saved cap data, with actual left field traces.
+
+| Item | Fixed cap consistency calculation |
+| --- | --- |
+| Inputs and domain | Authenticate the completed operator comparison and all its 104 bindings once. Use its zero-backreaction and finite cases at target cuts 63, 68 and 128. Reconstruct both quadrature orders 4/8 at all 16 unique neighboring cuts: 61--70 and 122, 124--128, for both amplitudes. Instantiate the unchanged `CharacteristicProfile` directly from stored labels, values and two jets. No source/profile fit or prior trajectory reconstruction. |
+| Metric and derivatives | Reuse `background_cap_metric` and `background_cap_profile`, with 64 cells and the saved cap states and wall `R,T`. Differentiate returned `n_faces` and `delta_faces` at the wall using backward-three-point first derivatives at radial strides one/two. Use centered-three-point temporal derivatives at strides one/two for targets 63/68; use backward-three-point first and backward-four-point second temporal derivatives at 128. All supports stay inside the saved domain. The matched order-4/order-8 neighbor sets control temporal as well as radial quadrature sensitivity. |
+| Boundary inputs | At each target, amplitude and quadrature order, reconstruct the exterior prefix with the unchanged quadratic departure gradient and exact saved source/gauge rows, then evaluate the hybrid wall map: 12 selected prefix/map calls, reusing target cap metrics. Its incoming characteristic and force predictions do not require the log-lapse proper derivative, so one map call with that auxiliary input zero suffices for the selected outputs. No full coupled stage, cap RHS, source integration, gauge quadrature or time evolution. |
+| Measurements | Record normalized and actual temporal/radial mass residuals, lapse residual, reconstructed left `Pi,Phi`, actual imposed hybrid incoming characteristic and a separately labelled wall-curve kinematic trace. Retain flux changes between those traces. Derive the curve proper-time factor from measured `R_x,T_x,A,delta`; compare it with the derivative of saved `s`. Use measured second time derivatives and radial/temporal mass derivatives in the full geometric acceleration, then compare with the hybrid prediction. Do not substitute a desired constraint, velocity or acceleration to define its own test. |
+| Controls | Synthetic moving profiles check the fixed-radius chain rule, analytic vacuum subtraction, potential quotient, normalized alpha-zero limit, radial and temporal stencil coefficients and actual-curve acceleration. Check target/neighbour indices, input mutation, common-budget exhaustion, first-failure retention and that no full stage/RHS/evolution is invoked. Include a scalar trace mismatch that changes the flux without changing the primary left-trace residual. Controls share 30 CPU seconds/1,000,000 points; no retained physical diagnostic is part of them. |
+| Allowance | One creation including validation has 120 process CPU seconds/8,000,000 points. One standalone check has 60 CPU seconds/4,000,000 points. Static helper accounting estimates about 2.6 million points per analysis for 64 cap metrics, 12 prefix/maps and selected reconstructions; that is a planning estimate, not a measured guarantee. Freeze new producers and controls before creation. |
+| Decision and stop | A residual stable against these widths and integration orders identifies a cap/interface consistency question; a strongly changing residual identifies unresolved numerical differentiation or reconstruction. Trace mismatch is a discrete boundary fact, not proof of a new source law. Retain the cap contributions in the J/O identities. Stop on nonfinite data, invalid profile/domain, non-timelike reconstructed curve, failed reconstruction or budget exhaustion, with an ignored failure receipt before any revised calculation. No new evolution, physical coupling or wall equation is admitted by this diagnostic. |
+
 ## Saved near-wall row audit, 16 October 2026
 
 **Outcome:** the [fixed saved-row result](current-result.md#saved-near-wall-row-audit-16-october-2026)

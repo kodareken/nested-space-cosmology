@@ -1024,9 +1024,10 @@ Revision `working-2026-10-16.5` has passed visual inspection of the cover,
 contents, abstract, new Section 13.18, quantitative table, conclusion and
 evidence appendix. Its 37-page PDF is 2,810,596 bytes with SHA256
 `5d28ba600c527daa00e8497203faf9aa001b17d0fc283c90191bed093fb95aaf`.
-The source has 32 claims with 112 resolved evidence links. The clean
-byte-for-byte build check is in progress; its result is recorded below
-when complete.
+Two clean builds match the tracked PDF byte for byte. The current paper
+and catalog bindings pass, and the source has 32 claims with 112 resolved
+evidence links. The saved near-wall audit is documented in its research
+owner; it does not change the manuscript's fixed-grid numerical result.
 
 The canonical PDF uses the pinned Zopfli compressor for ReportLab streams, so
 standard zlib and zlib-ng installations produce the same encoded document.

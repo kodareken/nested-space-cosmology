@@ -1558,7 +1558,7 @@
     {
       "bytes": 2231801,
       "path": "docs/lab-snapshot.json",
-      "sha256": "4c41cb4e12d11d2d01c6bae32483bb682149176a8f5b1f119c3b4c3628e26909"
+      "sha256": "6521d23513f43346684cd7efb6d674c754c0c9675d63182cb5c3b0f1a983eb40"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 126651,
+      "bytes": 129340,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "50b4ed794ee0dc395f4d65354526b8be8b7b41e70e41a5ab24eb4db8a311b847"
+      "sha256": "35b9bb0aaa43543ab3d5f955281f348280a534ee35b2ab4a5d671a66dafb4f6f"
     },
     {
       "bytes": 8895,
@@ -2196,9 +2196,9 @@
       "sha256": "b150dd1295c3d6efa4b789c731f608f96660e356c5aec4cd79b1afb4d062a472"
     },
     {
-      "bytes": 190614,
+      "bytes": 195108,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "2c647b0f36befebf3a9478e906d452cf71c0c4a87ef46590430b994d2eea835e"
+      "sha256": "628453713b77738e92ca805d3583470a374af81acdcf0e88b5457cf1e3b8be30"
     },
     {
       "bytes": 6705,
@@ -2211,9 +2211,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 65637,
+      "bytes": 65772,
       "path": "docs/reproducing.md",
-      "sha256": "21938da6701cc010ad50266f8cd3584414642dcd320eb7a4e0005e7de5eef6a1"
+      "sha256": "bcb10bdecd2117161649a71669c98b5beafd4013fea52c062611e10a8a9a72e1"
     },
     {
       "bytes": 31710,
@@ -20226,7 +20226,7 @@
       "sha256": "c64cdfcf34e80a78a0cc59423028407fefee1815087d1ff717110a8bf76bbb9f"
     }
   ],
-  "lab_snapshot_sha256": "4c41cb4e12d11d2d01c6bae32483bb682149176a8f5b1f119c3b4c3628e26909",
+  "lab_snapshot_sha256": "6521d23513f43346684cd7efb6d674c754c0c9675d63182cb5c3b0f1a983eb40",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",
