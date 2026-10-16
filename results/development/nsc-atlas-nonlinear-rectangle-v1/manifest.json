@@ -1,0 +1,31 @@
+{
+  "outputs": {
+    "rectangle.json": {
+      "bytes": 2685739,
+      "sha256": "afaa47304c353ca88d7b296b67996e55346f813abb2bc04e06c1f823d7ddf9da"
+    }
+  },
+  "schema": "nsc-atlas-nonlinear-rectangle-v1-manifest",
+  "source_bindings": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/record_nsc_atlas_nonlinear_rectangle.py": "3dd04d62f8982bd1c7f5500ed00dcb945e1b8c5aadb9888c193f830282cae8d0",
+    "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+    "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_cell.py": "71745e4fc58ab722a91d47c1fba90344fce786b2dc3ded6063d7dceb8784f135",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "src/recursive_horizons/nsc_atlas_nonlinear_bulk.py": "5ed3d18a642b562528c397526f85e92272784915bdb3a289cf9e8fa5d32c1b42",
+    "src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py": "0cf41411da3be90a1f0f030581adc4ce1da672e2d638d9d6f91f6bf4c4013824",
+    "src/recursive_horizons/nsc_atlas_nonlinear_source.py": "9a5922f9fbc856a4fb6e0c1c1f6a28a40e3034656de81db88d6cc8b917def72c",
+    "tests/test_nsc_atlas_characteristic_cell.py": "2ffc46e56c87250d353cd788548cc6ccaf07f4b2670ad7bb15a09407e2fa112e",
+    "tests/test_nsc_atlas_nonlinear_bulk.py": "e3bf75d7b5c559847b13790513e76453d684af7cf8f29a109a8841a07d032b46",
+    "tests/test_nsc_atlas_nonlinear_rectangle.py": "e8018dd94f13d1c57acd45c57f93511333289668e71e89faf0872732aa13d1b0",
+    "tests/test_nsc_atlas_nonlinear_source.py": "1627ffaac2cb68e8fcda45bb5aee8c129a69db8c4a7f19a7a040d90c67e6c9b1",
+    "tests/test_record_nsc_atlas_nonlinear_rectangle.py": "4f66ac5fa4951f97c0a04f4a35c522620a6c080c592cfb3df74755c64425f518"
+  }
+}

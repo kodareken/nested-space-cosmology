@@ -115,8 +115,13 @@ by the central clock. The wall construction has a noncircular constraint
 implication on its positive-radius, untrapped-cap branch. An exact-model
 source integrator and bounded characteristic-cell solver now implement the
 regional starting pieces, with source-only amplitude bounds and independent
-analytic controls. Their regional assembly, regular cap march, coupled
-well-posedness and a central-readout remainder remain to be established.
+analytic controls. The [first nonlinear rectangle](current-result.md#first-nonlinear-exterior-rectangle-16-october-2026)
+now evolves the original preparation at zero and nonzero amplitude on two
+grids, with refining metric and independently differenced constraints.
+The outgoing leg needs controlled jets retaining the exact steep source;
+it then feeds new exterior cells adjoining the moving wall. The regular
+cap march, coupled well-posedness and a central-readout remainder remain
+to be established.
 Formation and stability also remain open.
 
 The common `model_specification()` interface in

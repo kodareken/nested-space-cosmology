@@ -218,6 +218,113 @@ roundoff. A complete smooth grid has second-order accuracy; the local
 order is not a fourth-order regional claim. A later prepared-source march
 must also measure propagated constraints and cumulative error.
 
+### Original exterior rectangle and independent diagnostics
+
+The characteristic input below determines the finite rectangle
+
+$$
+0\le\bar U\le\bar U_b=C_{J0}(U_a-U_0),\qquad
+x_a=0.4\le x\le x_b=x_{\rm last},\qquad
+\bar U=C_{J0}(U-U_0),\quad C_{J0}=-3.2/U_0.
+$$
+
+Its lower sides are the exact source at $\bar U=0$ and the quiet
+Schwarzschild bottom at $x=x_a$. A future timelike wall starting at
+$(\bar U_b,x_a)$, parametrized by Einstein proper wall time $s$, obeys
+$C\bar U_s x_s=1$ with both rates positive. While
+that continuation and chart exist, the wall lies beyond $\bar U_b$;
+the fixed rectangle has no incoming characteristic from that later wall.
+This causal statement allows the regional calculation before the coupled
+wall march. It does not itself establish the latter's existence interval.
+
+The [regional midpoint march](../src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py)
+stores $X_{ij}=(r,L,c)$ with $\bar U$ as
+the first array axis and $x$ as the second. For the cell ending at
+$(i,j)$, its three inputs are $X_{i-1,j-1}$, $X_{i-1,j}$ and
+$X_{i,j-1}$. Boundary first jets are retained separately as independent
+comparators; they are not fitted from the stored scalar waveform.
+
+To measure null constraints independently of the mixed evolution equation,
+use centered three-point first and pure second differences on interior
+nodes. At the low endpoint of a uniform coordinate with spacing $h$, use
+
+$$
+D f_0=\frac{-3f_0+4f_1-f_2}{2h},\qquad
+D^2f_0=\frac{2f_0-5f_1+4f_2-f_3}{h^2},
+$$
+
+with reflected formulas at the high endpoint. For each $a=\bar U,x$,
+the nodal diagnostics are
+
+$$
+u=\frac cr,\qquad D=1+\frac{\alpha u^2}{6},\qquad
+u_a^{\rm FD}=\frac{D_a c-uD_a r}{r},
+$$
+$$
+E_a^{\rm FD}=D_{aa}r-(D_aL)(D_ar)
++\frac{\alpha r}{2D}(u_a^{\rm FD})^2,\qquad
+m^{\rm FD}=\frac r2\left(1+4(D_{\bar U}r)(D_xr)e^{-L}\right).
+$$
+
+Pure second derivatives in these expressions are never replaced by the
+solved mixed right-hand side. Polynomial data with a prescribed nonzero
+constraint provide an omission control. The zero-amplitude geometry gives
+an independent full-grid comparator. With
+$p=(1-\bar U/3.2)(1-x/0.8)e^{x/0.8}$,
+
+$$
+r_0=0.8\,[1+W_0(-p/e)],\qquad
+L_0=\log(x/r_0)+(x-r_0)/0.8,\qquad m_0=0.4.
+$$
+
+This principal Lambert branch is the positive trapped-radius branch of the
+original null chart. The normalized scalar still propagates at $\alpha=0$;
+zero amplitude removes its gravitational forcing, not its limiting field
+equation. In particular, the source value can vanish after the pulse while
+its transverse derivative $c_{\bar U}$ remains nonzero.
+
+The first admitted calculation compares 16 and 32 cells per direction at
+zero amplitude and half the source-only threshold. It retains raw fields,
+raw constraint residuals, and finite-minus-zero responses as distinct
+quantities. Common interior nodes supply the refinement comparison. Stencils
+touching either fixed source support label are flagged separately, alongside
+the all-interior diagnostic; boundary defects are compared with the exact
+source/bottom first jets. The inherited $C^3$, piecewise $W^{4,\infty}$
+profile warrants measuring derivative refinement separately from field
+refinement. Two resolutions give sampled differences, not an established
+asymptotic rate or a rigorous error enclosure.
+
+The [creation-only recorder](../scripts/record_nsc_atlas_nonlinear_rectangle.py)
+retains the exact boundaries, nodal states, local iterations, independent
+diagnostics and cumulative source/cell accounting. Its authentication path
+recomputes the saved-array diagnostics without a source integration or cell
+solve. The [admission](prior-art-and-open-claim.md#nonlinear-exterior-rectangle-16-october-2026)
+fixes the domain, four comparisons, tolerances and stopping budget.
+
+The [first record](../results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json)
+completes all four grids. The [measured comparison](current-result.md#first-nonlinear-exterior-rectangle-16-october-2026)
+shows refining metric and constraint diagnostics, with the largest raw
+$E_x$ error already present when differencing the known source. To extract
+jets for the next characteristic leg, write
+$X(\bar U,x)=X_0(x)+\Delta X(\bar U,x)$ and retain the exact source jets:
+
+$$
+r_x^{\rm lift}=r_{0,x}+D_x\Delta r,\qquad
+r_{xx}^{\rm lift}=r_{0,xx}+D_{xx}\Delta r,\qquad
+c_x^{\rm lift}=g_x+D_x\Delta c,\qquad
+L_x^{\rm lift}=L_{0,x}+D_x\Delta L.
+$$
+
+This differentiates the propagated increment and adds known initial
+derivatives; it does not substitute a mixed equation for a pure constraint.
+For values between nodes, keep the compact $g(x)$ analytic and interpolate
+its propagated correction, so grid placement does not flatten the source
+peak. The increment still needs its own refinement control. The supplied
+source jets also retain their numerical initialization error; the split is
+an exact algebraic identity, not a numerical enclosure. The terminal
+leg $\bar U=\bar U_b$ supplies wall-born exterior cells; the hybrid interface
+must be evaluated at actual evolved wall events.
+
 ### Regular polar-areal cap
 
 Inside an untrapped cap, use the Einstein metric

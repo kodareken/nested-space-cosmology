@@ -941,6 +941,15 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
             errors.append(f"{directory} evidence: {error}")
 
 
+def check_nonlinear_rectangle_evidence(errors: list[str]) -> None:
+    """Authenticate the four original-source grids without source/cell replay."""
+    try:
+        from record_nsc_atlas_nonlinear_rectangle import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f"nonlinear exterior rectangle evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -986,6 +995,7 @@ def main() -> int:
     check_cap_response_evidence(errors)
     check_scalar_boundary_evidence(errors)
     check_scalar_input_evidence(errors)
+    check_nonlinear_rectangle_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

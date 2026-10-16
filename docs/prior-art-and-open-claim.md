@@ -1,5 +1,53 @@
 # Prior art and admission of new research
 
+## Nonlinear exterior rectangle, 16 October 2026
+
+Assemble the exact source and implicit characteristic cells into the original
+exterior rectangle. This is the first regional evolution of the nonlinear
+equations for the fixed preparation. The source and quiet bottom determine
+this rectangle without future wall data: a compatible future timelike wall
+has increasing `Ubar` and lies beyond its quiet-corner value `Ubar_b` while
+the chart remains regular. Continuation of that wall and the cap remains the
+next coupled problem.
+
+| Admission item | Fixed decision |
+| --- | --- |
+| Borrowed and connected | The exact source, normalized mixed equations and constraint transport in the [finite-amplitude owner](nsc-atlas-finite-amplitude.md), together with the tested implicit-midpoint cell. No new action, preparation or free boundary data. |
+| Missing connection | Propagation of the prescribed finite-amplitude source across the rectangle, with independently differenced null constraints and a measured discretization change. |
+| Fixed domain | `Ubar=CJ0*(U-U0)`, `CJ0=-3.2/U0`; `0<=Ubar<=CJ0*(Ua-U0)`, `.4<=x<=x_last`. Use `source_geometry(64)` once and retain its original support fronts. |
+| Fixed comparisons | Four uniform grids: zero amplitude and `alpha=alpha_star/2`, each with 16 and 32 cells per direction. The normalized scalar remains present at zero amplitude. Compute raw state/constraint changes and finite-minus-zero differences separately. |
+| Input accuracy | Source DOP853 `rtol=2e-10,atol=1e-12`, default maximum step `source_length/32`, split at the original support edges. Sample both sources and quiet bottoms on the 33-node grids before marching; coarse boundaries are their even-index subsets. |
+| Cell settings | Existing absolute and relative tolerances `1e-12`, reference scales `(1,1,1)`, at most 12 Newton updates and 8 backtracking trials, maximum scaled condition number `1e12`. Fixed state guard `r in [.2,.8]`, `log(C) in [-2,2]`, `c in [-4,4]`. These are engineering guards, not an invariant-tube theorem. |
+| Cumulative budget | One parent budget of 120 process CPU seconds and 60,000 charged evaluations, including reference geometry, source construction, queries and all four grids. Each source uses a child of the existing Budget with at most 30 CPU seconds and 20,000 evaluations, debiting the parent for every charge. Neither budget resets during the calculation. Record each grid's RHS/Jacobian counts and source charges. |
+| Independent controls | Before the original-source run, use manufactured polynomial constraint violations and exact shifted Schwarzschild grids; check a zero-field march against analytic geometry. Manufactured implementation tests have an aggregate 30 CPU-second/20,000-cell-charge ceiling. In the physical run compare the zero-amplitude metric with exact Schwarzschild, retain quiet-field recovery, and compare source transverse derivatives with the integrated first jets, including the nonzero post-pulse scalar derivative. |
+| Diagnostics | Compute first and pure second derivatives from the nodal fields, never from the solved mixed equation. Retain raw constraints and derivative-defined mass. Compare common interior nodes under refinement and report all-interior, front-near and away-from-front summaries; boundary derivative defects are separate. Small cell residuals are not constraint convergence. |
+| Outcome | A source-bound numerical rectangle and measured refinement, or a precise failed cell, tube or budget diagnosis. A useful result supplies data for subsequent wall-born cells; it does not establish cap evolution, a central observation, stability or a uniform finite-amplitude error enclosure. |
+| Stop or redirect | Stop on the first budget, iteration or tube failure with its cell indices, coordinates, input corners and cumulative accounting. Do not enlarge the tube, alter the amplitude, subdivide or restart silently. Preserve a useful diagnosis before designing any changed calculation. |
+
+The recorder is creation-only. It binds its producer and inputs before and
+after calculation, saves the four nodal arrays and exact boundaries, and
+authenticates them without reintegrating a source or solving a cell. A failed
+run leaves no completed result directory; its diagnostic is kept in the
+ignored build area until a concise scientific diagnosis is incorporated here.
+Two grid sizes measure a difference; they do not by themselves establish an
+asymptotic order or a rigorous error bound. No new leading-field solve is
+included merely to supply another comparator.
+
+**Outcome:** all four grids complete, with 2,560 successful cells, 23,237
+charged evaluations and 5.71875 process CPU seconds including validation.
+The 31 new implementation/authentication tests and independent reviews
+pass. The [saved result](../results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json)
+authenticates without a source integration or cell solve. Vacuum radius and
+lapse errors decrease about fourfold. On common interior nodes the raw
+finite-amplitude `E_x` maximum decreases from `0.2074424` to `0.0591010`;
+the same finite-difference diagnostic on the exact source decreases from
+`0.2086466` to `0.0594446`. Its analytic source constraint remains below
+`1.06e-15`. The original source's steep derivatives therefore require
+explicit treatment in extracting outgoing jets. Retain the exact source
+and interpolate/differentiate the propagated increment for the next
+rectangle-to-wall connection, carrying its measured input sensitivity.
+There is no additional rectangle scan or amplitude change in this outcome.
+
 ## Exact source and characteristic-cell implementation, 16 October 2026
 
 Use the [source first-jet system](nsc-atlas-finite-amplitude.md#completing-the-source-first-jets)

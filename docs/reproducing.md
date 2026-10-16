@@ -8,6 +8,37 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [nonlinear rectangle marcher](../src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py)
+assembles the exact source and quiet bottom in the original affine null
+rectangle. Its independent nodal diagnostics compute pure null constraints
+and geometric mass without using the solved mixed equations as derivatives.
+The [four-grid recorder](../scripts/record_nsc_atlas_nonlinear_rectangle.py)
+compares zero amplitude and half the source-only bound on 16/32 cells per
+direction. Run its implementation controls and authenticate the saved result:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_nonlinear_rectangle.py tests/test_record_nsc_atlas_nonlinear_rectangle.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_nonlinear_rectangle.py --check --output results/development/nsc-atlas-nonlinear-rectangle-v1
+```
+
+For a fresh reproduction, select a directory that does not exist:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_nonlinear_rectangle.py --output .build/nonlinear-rectangle-review
+```
+
+Creation has one 120-process-CPU-second, 60,000-evaluation budget, including
+initialization and all four marches. Source children retain their own
+30-second/20,000-evaluation limits and debit the parent. Boundary queries
+finish before marching. Failure records its phase and any failed cell under
+`.build/nonlinear-rectangle-failures`, without writing a completed result
+directory. Authentication checks source/output hashes, settings, boundaries,
+counts and recomputed diagnostics with zero source integrations or cell
+solves. The [owner](nsc-atlas-finite-amplitude.md#original-exterior-rectangle-and-independent-diagnostics)
+and [admission](prior-art-and-open-claim.md#nonlinear-exterior-rectangle-16-october-2026)
+define the finite scope; sampled differences do not certify a continuum
+error bound or the later moving-wall and cap evolution.
+
 The [exact source integrator](../src/recursive_horizons/nsc_atlas_nonlinear_source.py)
 retains the original compact preparation and quiet corner. Its amplitude
 control comes from a continuous source-only bound. The

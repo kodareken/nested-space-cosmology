@@ -2,6 +2,60 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## First nonlinear exterior rectangle, 16 October 2026
+
+The [four-grid record](../results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json)
+now propagates the exact-model source across the original exterior rectangle.
+It compares zero amplitude and `alpha=0.00012983127142551443` on 16 and 32
+cells per direction, with the original compact pulse and quiet bottom.
+All 2,560 cells complete in 5.71875 process CPU seconds and 23,237 charged
+evaluations. Each cell uses two full Newton updates; no tube change,
+subdivision or alternative seed is needed. The field before the first source
+front is exactly zero.
+
+The zero-amplitude numerical geometry agrees with analytic Schwarzschild:
+at 32 cells, the maximum radius error is `3.4444e-9` and the maximum
+`log(C)` error is `5.9628e-7`, both about four times smaller than at 16.
+The following comparisons use the same 225 interior points on both grids:
+
+| Quantity | 16-cell value | 32-cell value at common points |
+| --- | ---: | ---: |
+| Maximum raw finite-amplitude `abs(E_U)` | `1.11663e-5` | `2.79078e-6` |
+| Maximum raw finite-amplitude `abs(E_x)` | `0.2074424` | `0.0591010` |
+
+The finite-amplitude state differences at those points are `1.02824e-8`
+in radius, `1.37207e-6` in `log(C)` and `6.50796e-5` in the normalized
+scalar. Comparing the finite-minus-zero response between grids gives
+`1.79285e-9`, `2.69272e-7` and `6.01643e-7`, respectively. These paired
+differences retain the raw residuals above; they do not subtract away a
+constraint error. Source transverse scalar derivatives retain the nonzero
+post-pulse value, with the maximum finite-amplitude defect falling from
+`7.29062e-6` to `1.61650e-6` over each grid's post-pulse source points.
+
+The [march and diagnostics](../src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py)
+and [creation-only recorder](../scripts/record_nsc_atlas_nonlinear_rectangle.py)
+pass 31 focused implementation/authentication tests and independent review.
+Authentication of the actual saved result passes with zero source
+integrations or cell solves. The [nonlinear owner](nsc-atlas-finite-amplitude.md#original-exterior-rectangle-and-independent-diagnostics)
+specifies the equations and independently differenced diagnostics.
+
+The saved source identifies the main derivative issue: its finite-difference
+`E_x` maximum is `0.208647` at 16 cells and `0.0594446` at 32, even though
+the source's analytic constraint is below `1.06e-15`. These nearly reproduce
+the propagated residuals. The sampled transport difference
+`r*E_x(Ubar,x)-r_source*E_x(0,x)` is much smaller: `3.75545e-4` and
+`1.14297e-4` at common interior points. The steep known source is therefore
+an important part of the raw differentiation error. This diagnosis does
+not remove the remaining propagated discretization error.
+
+The next connection uses the exact source plus an interpolated propagated
+increment to supply values and controlled first jets on `Ubar=Ubar_b`.
+That leg feeds new exterior cells adjoining the moving wall; it is not
+itself the wall. The regular polar cap and hybrid interface then supply
+the coupled continuation. This result is a numerical exterior region
+with measured discretization changes, not a full nested spacetime,
+formation/stability result or uniform finite-amplitude remainder bound.
+
 ## Exact source initialization and characteristic cells, 16 October 2026
 
 The [source integrator](../src/recursive_horizons/nsc_atlas_nonlinear_source.py)
