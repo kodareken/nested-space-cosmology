@@ -125,8 +125,8 @@ against independent fixed-radius variation, moving switch coincidences,
 frozen partitions and invalid native evidence. Cumulative development uses
 691,326 charged values / 9.40625 active CPU seconds of the 1,000,000-point /
 40-second allowance. A native born panel exactly on a formula switch remains
-outside the existing tangent's domain. No retained cap has been evaluated;
-the lapse, residual/jump integrals and integration-error control remain open.
+outside the existing tangent's domain. The terminal comparison below combines
+these maps with the independent lapse and residual/jump integrals.
 
 The next component integrates mass, lapse and the three field-residual channels
 on one declared smooth piece, with no input from the native mass tangent:
@@ -163,6 +163,11 @@ comparison is specified in the calculation owner. Its first attempt stopped
 before integration at a limiter-branch mismatch. A bounded diagnosis identified
 component-order cancellation; the corrected adapter now selects the native
 branch before contracting reconstruction derivatives. The exact guard remains.
+The [completed fixed comparison](current-result.md#terminal-cap-transport-attribution-16-october-2026)
+passes the declared accuracy gates in both cases.
+Creation plus reconstruction uses 23,516,078 points / 185.40625 CPU seconds;
+including the initial failure and branch diagnosis gives 25,382,986 /
+190.84375. The standalone reconstruction passes with 11,758,039 / 93.265625.
 
 The retained-state recorder and its synthetic routing controls are:
 
@@ -170,6 +175,7 @@ The retained-state recorder and its synthetic routing controls are:
 python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_cap_transport_balance.py -q -s
 python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_transport_balance.py --output .build/results/nsc-atlas-cap-transport-balance-v1.json --summary results/summaries/nsc-atlas-cap-transport-balance-v1.json
 python scripts/run_python.py scripts/diagnose_nsc_atlas_cap_transport_balance.py --output .build/results/nsc-atlas-cap-transport-balance-v1.json --check
+python scripts/run_python.py scripts/summarize_result.py --output results/summaries/nsc-atlas-cap-transport-balance-v1.json --check
 ```
 
 Creation reconstructs the analysis once for independent validation. The

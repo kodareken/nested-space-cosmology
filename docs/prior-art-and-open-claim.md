@@ -250,8 +250,7 @@ relative `2e-12` arithmetic tolerance. Saved scalar summaries are also checked
 against their detailed balances and must independently pass the original
 accuracy gates. Schema, inputs, producers, fixed call inventory and tolerance
 declarations remain exact. Adaptive integration counts are retained as bounded
-work receipts; they are not required to be identical across platforms. No
-retained-state result has been obtained with this recorder yet.
+work receipts; they are not required to be identical across platforms.
 
 The first attempt with producer `4ce93f9` stops on the zero case before any
 reference flow: `native tangent partition/limiter differs`. It uses
@@ -279,6 +278,38 @@ controls are 691,326 / 9.40625. Each remains within its original allowance.
 The retained comparison may resume after freezing the corrected producer,
 carrying **1,866,908 points / 5.4375 CPU seconds** already consumed. Its
 physical states, reference tolerances and acceptance limits are unchanged.
+
+**Retained outcome:** producer `273af3e` passes creation and reconstruction
+on both cases at both tolerances. The largest balance discrepancy is
+`5.76473e-10`; the largest channel tolerance change is `3.56406e-10`. Radial
+map error is negligible at the declared diagnostic resolution, while the
+bulk field residuals and ordered interfaces recover the original imbalance.
+See the [full interpretation and compact evidence](current-result.md#terminal-cap-transport-attribution-16-october-2026).
+Creation plus reconstruction uses 23,516,078 points / 185.40625 CPU seconds.
+With the failed attempt and prefix diagnosis carried, the total is 25,382,986 /
+190.84375 within the original allowance. This diagnoses the fixed state; it
+does not close the cap-wall evolution.
+The standalone reconstruction passes with 11,758,039 points / 93.265625 CPU
+seconds within its 24-million-point / 150-second allowance.
+
+### Next analytical connection: cell fluxes and reconstructed transport
+
+Use the existing finite-volume updates, native mass-component weights and
+the proved transport identity. Derive the discrete integration-by-parts
+relation between one interior face's central/upwind fluxes and the bulk
+Pi/Phi residuals plus ordered jumps. Keep the field-value/potential term,
+background time dependence, moving cells and physical endpoint terms. The
+small finite field-value channel is about `3.26e-5`, not zero at the current
+diagnostic resolution.
+
+Exact symbolic and manufactured algebraic controls may use 20 active CPU
+seconds, with no retained-field evaluations, reference solves, new trajectories
+or grid scans. First establish whether the current flux/reconstruction admits
+the required common mass balance and which algebraic terms prevent it.
+Upwind dissipation and reconstruction defects must be distinguished before
+selecting a corrected discretization. A scalar mass projection or deletion
+of one channel does not provide the missing field evolution. This analytical
+step supplies a decision for the next implementation, not another physical run.
 
 ## Discrete cap mass balance, 16 October 2026
 

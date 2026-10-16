@@ -3332,7 +3332,12 @@ each reconstruction jet to the full-direction column. The independent radial
 query column remains zero in reconstruction data and one in the query radius.
 This fixes branch-representative drift without changing the retained native
 tangent, imposing a residual or weakening the branch check. The first retained
-attempt stopped at that branch comparison; reference integration has not run.
+attempt stopped at that branch comparison. The corrected two-state terminal
+comparison now passes all declared accuracy gates; its
+[recorded channel attribution](current-result.md#terminal-cap-transport-attribution-16-october-2026)
+locates the imbalance in reconstructed field transport and interfaces, with
+radial-map contributions below the stated diagnostic resolution. It supplies
+no corrected evolution or uniform finite-amplitude bound.
 
 ### Central clock in general null labels
 

@@ -1,0 +1,639 @@
+{
+  "authentication": {
+    "reported_provenance_revalidated": false,
+    "scientific_validation_executed": false,
+    "scope": "raw and explicitly listed local byte bindings only"
+  },
+  "data": {
+    "cases": [
+      {
+        "alpha": 0.0,
+        "amplitude": "zero",
+        "direction": {
+          "R_x": 1.4302100275371246,
+          "T_x": 3.262881129757635,
+          "w_plus": 0.03232603007350927
+        },
+        "fine_minus_coarse": {
+          "field_Phi": 2.884775751610391e-13,
+          "field_Pi": 2.0280999102340047e-13,
+          "field_f": 4.8853472265839026e-17,
+          "interfaces": 0.0,
+          "radial_map_error_rate": -5.722122826465814e-11,
+          "wall_density_conversion": 0.0,
+          "wall_flux_conversion": 0.0
+        },
+        "runs": [
+          {
+            "accuracy_gates_passed": true,
+            "actual_native_balance": -0.0,
+            "channels": {
+              "field_Phi": -0.03355357724579846,
+              "field_Pi": -0.04058310010705854,
+              "field_f": -2.7649864026753985e-05,
+              "interfaces": -0.010556974974828642,
+              "radial_map_error_rate": 1.1979439283147643e-10,
+              "wall_density_conversion": 0.0,
+              "wall_flux_conversion": 0.0
+            },
+            "defects": {
+              "balance": 1.1872604288587496e-10,
+              "jump_attenuation": -1.734723475976807e-18,
+              "reference_mass": 2.842170943040401e-14,
+              "reference_rate": 1.1849041192668608e-10,
+              "wall_density_effect": 0.0
+            },
+            "interface_count": 128,
+            "minimum_sampled_A": 0.6975,
+            "native_balance": -0.08472130219064404,
+            "native_mass": 17.75420335017397,
+            "native_tangent_allowance": 3.6885416055491158e-09,
+            "native_tangent_defect": -2.274014310188477e-13,
+            "piece_count": 129,
+            "radial_mass_error": -2.3814623064402234e-13,
+            "reference_lapse": 0.0,
+            "reference_mass": 17.75420335017421,
+            "reference_rate": -0.08458052969751291,
+            "sampled_A_positive": true,
+            "settings": {
+              "atol": 2e-12,
+              "rtol": 2e-10
+            },
+            "telescope_defects": [
+              -1.1441416438877978e-16,
+              1.1328058866767775e-13
+            ],
+            "telescope_roundoff_bounds": [
+              1.5131054625001931e-09,
+              1.3238504803278037e-06
+            ],
+            "total": -0.084721302071918,
+            "uniform_error_enclosure": false
+          },
+          {
+            "accuracy_gates_passed": true,
+            "actual_native_balance": -0.0,
+            "channels": {
+              "field_Phi": -0.03355357724550998,
+              "field_Pi": -0.04058310010685573,
+              "field_f": -2.7649864026705132e-05,
+              "interfaces": -0.010556974974828642,
+              "radial_map_error_rate": 6.257316456681829e-11,
+              "wall_density_conversion": 0.0,
+              "wall_flux_conversion": 0.0
+            },
+            "defects": {
+              "balance": 6.199614432933487e-11,
+              "jump_attenuation": -1.734723475976807e-18,
+              "reference_mass": 1.3145040611561853e-13,
+              "reference_rate": 6.176034683669229e-11,
+              "wall_density_effect": 0.0
+            },
+            "interface_count": 128,
+            "minimum_sampled_A": 0.6975,
+            "native_balance": -0.08472130219064404,
+            "native_mass": 17.75420335017397,
+            "native_tangent_allowance": 3.6885416055491158e-09,
+            "native_tangent_defect": -2.274014310188477e-13,
+            "piece_count": 129,
+            "radial_mass_error": -1.1234986804655956e-13,
+            "reference_lapse": 0.0,
+            "reference_mass": 17.754203350174087,
+            "reference_rate": -0.0845805296402915,
+            "sampled_A_positive": true,
+            "settings": {
+              "atol": 2e-14,
+              "rtol": 2e-12
+            },
+            "telescope_defects": [
+              4.8896833538569685e-15,
+              1.134604913389966e-13
+            ],
+            "telescope_roundoff_bounds": [
+              1.5131054625001931e-09,
+              1.3238504803278035e-06
+            ],
+            "total": -0.0847213021286479,
+            "uniform_error_enclosure": false
+          }
+        ],
+        "tolerance_sensitivity_passed": true
+      },
+      {
+        "alpha": 0.00012983127142551443,
+        "amplitude": "finite",
+        "direction": {
+          "R_x": 1.4079116073690565,
+          "T_x": 3.2174148044831625,
+          "w_plus": 0.032325500355095224
+        },
+        "fine_minus_coarse": {
+          "field_Phi": 1.438849039914203e-13,
+          "field_Pi": 4.3520742565306136e-13,
+          "field_f": 8.153877963448797e-17,
+          "interfaces": 5.329070518200751e-15,
+          "radial_map_error_rate": 3.564059910878477e-10,
+          "wall_density_conversion": 1.721040069954433e-20,
+          "wall_flux_conversion": 0.0
+        },
+        "runs": [
+          {
+            "accuracy_gates_passed": true,
+            "actual_native_balance": -0.00027614778129212255,
+            "channels": {
+              "field_Phi": -8.366882289719193,
+              "field_Pi": -8.417690606485142,
+              "field_f": -3.255458277406858e-05,
+              "interfaces": 14.657631122799582,
+              "radial_map_error_rate": -5.770335383690376e-10,
+              "wall_density_conversion": -2.6517464986184316e-20,
+              "wall_flux_conversion": -2.1802050755047933e-20
+            },
+            "defects": {
+              "balance": -5.764722033063663e-10,
+              "jump_attenuation": -3.552713678800501e-15,
+              "reference_mass": 9.237055564881302e-14,
+              "reference_rate": -5.767897270914091e-10,
+              "wall_density_effect": 8.839228271152146e-21
+            },
+            "interface_count": 128,
+            "minimum_sampled_A": 0.68999443754123,
+            "native_balance": -2.1269743279880875,
+            "native_mass": 17.65937035731755,
+            "native_tangent_allowance": 3.616343197901533e-09,
+            "native_tangent_defect": -8.659739592076221e-14,
+            "piece_count": 129,
+            "radial_mass_error": -2.7710936973605736e-13,
+            "reference_lapse": 0.01342178937852204,
+            "reference_mass": 17.65937035731784,
+            "reference_rate": -2.126664417723818,
+            "sampled_A_positive": true,
+            "settings": {
+              "atol": 2e-12,
+              "rtol": 2e-10
+            },
+            "telescope_defects": [
+              1.421315192558372e-14,
+              6.261594844677307e-13
+            ],
+            "telescope_roundoff_bounds": [
+              1.4976254741066494e-09,
+              1.3203436267662194e-06
+            ],
+            "total": -2.1269743285645597,
+            "uniform_error_enclosure": false
+          },
+          {
+            "accuracy_gates_passed": true,
+            "actual_native_balance": -0.00027614778129212255,
+            "channels": {
+              "field_Phi": -8.36688228971905,
+              "field_Pi": -8.417690606484706,
+              "field_f": -3.255458277398704e-05,
+              "interfaces": 14.657631122799588,
+              "radial_map_error_rate": -2.2062754728118995e-10,
+              "wall_density_conversion": -9.307064286639987e-21,
+              "wall_flux_conversion": -2.1802050755047933e-20
+            },
+            "defects": {
+              "balance": -2.194817660949866e-10,
+              "jump_attenuation": 1.7763568394002505e-15,
+              "reference_mass": 2.2382096176443156e-13,
+              "reference_rate": -2.1904700275854339e-10,
+              "wall_density_effect": 2.1418130041637892e-20
+            },
+            "interface_count": 128,
+            "minimum_sampled_A": 0.68999443754123,
+            "native_balance": -2.1269743279880875,
+            "native_mass": 17.65937035731755,
+            "native_tangent_allowance": 3.616343197901533e-09,
+            "native_tangent_defect": -8.659739592076221e-14,
+            "piece_count": 129,
+            "radial_mass_error": -9.725947483698418e-14,
+            "reference_lapse": 0.013421789378522009,
+            "reference_mass": 17.659370357317652,
+            "reference_rate": -2.1266644180809764,
+            "sampled_A_positive": true,
+            "settings": {
+              "atol": 2e-14,
+              "rtol": 2e-12
+            },
+            "telescope_defects": [
+              5.769221848230342e-15,
+              -1.2615236038760566e-13
+            ],
+            "telescope_roundoff_bounds": [
+              1.4976254741066496e-09,
+              1.320343626766219e-06
+            ],
+            "total": -2.1269743282075693,
+            "uniform_error_enclosure": false
+          }
+        ],
+        "tolerance_sensitivity_passed": true
+      }
+    ],
+    "cells": 64,
+    "cut": 128,
+    "gates": {
+      "balance": 1e-06,
+      "channel_sensitivity": 5e-07,
+      "jump_attenuation": 1e-07,
+      "reference_mass": 1e-08,
+      "reference_rate": 2e-07,
+      "wall_density_effect": 1e-07
+    },
+    "native_order": 8,
+    "scope": "fixed terminal cap bulk/interface/radial-error attribution; not corrected evolution or closure",
+    "uniform_error_enclosure": false
+  },
+  "input_bindings": {
+    "results/development/nsc-atlas-cap-consistency-v1.json": {
+      "bytes": 820093,
+      "sha256": "79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728"
+    },
+    "results/summaries/nsc-atlas-cap-mass-balance-v1.json": {
+      "bytes": 182893,
+      "sha256": "d3d7be8d7b2a124b6e6facbfc8ddfb86ff1e66eceb1cd16553fa7c243c8109e0"
+    },
+    "results/summaries/nsc-atlas-cap-mass-direction-v1.json": {
+      "bytes": 318358,
+      "sha256": "9092a6f4d6dd2a58f7b3b31e0dc2d5c33b1a33c05755fe94501579bd808ebd7e"
+    }
+  },
+  "producer_bindings": {
+    "scripts/analyze_nsc_atlas_cap_consistency.py": {
+      "bytes": 22770,
+      "sha256": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a"
+    },
+    "scripts/analyze_nsc_atlas_cap_mass_balance.py": {
+      "bytes": 12305,
+      "sha256": "99c8ac39a488739e7d0fe7fdd1f44fb95579178e9fb654b05aa6a334167cd8aa"
+    },
+    "scripts/analyze_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 21158,
+      "sha256": "590c4540ec94c0d79a0a03119ac014c38e30b5975b228034a99d5a03e484a936"
+    },
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": {
+      "bytes": 21884,
+      "sha256": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45"
+    },
+    "scripts/diagnose_nsc_atlas_cap_consistency.py": {
+      "bytes": 9651,
+      "sha256": "2ba770b0880e1d60d313d644ed77b7485b352a187e6f09370c1d9cd77c06f230"
+    },
+    "scripts/diagnose_nsc_atlas_cap_mass_balance.py": {
+      "bytes": 8163,
+      "sha256": "d00f249e6d6ab9b860bcd98a75450e469ea555449d4cfe856980aeebd71bdb52"
+    },
+    "scripts/diagnose_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 11161,
+      "sha256": "3f751901982a3070e28c08c7a848848e81d3a45025b597fa36c7f1ed97edc6f5"
+    },
+    "scripts/diagnose_nsc_atlas_cap_transport_balance.py": {
+      "bytes": 24812,
+      "sha256": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd"
+    },
+    "scripts/summarize_result.py": {
+      "bytes": 10809,
+      "sha256": "e3b4e2464ffc0b5602266ec082dfcb4d9aed1c160789b1b64ba9ed103f2f5c61"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": {
+      "bytes": 6092,
+      "sha256": "e15805c7073bb54e30ce5bf8b065b44020b28d795807fdbe54257f42fe40016d"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_mass_tangent.py": {
+      "bytes": 16081,
+      "sha256": "1764f3b6b9b3a58db870db6ae5a4a0d12ebeaa6427564aabd28bf59e57c80a24"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_radial_comparison.py": {
+      "bytes": 9241,
+      "sha256": "d1b5aafdc9de16bc1e3e1c39d46b620c7eb6c4b183c9a8117bacee81efef9d38"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_radial_reference.py": {
+      "bytes": 7002,
+      "sha256": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_transport_balance.py": {
+      "bytes": 9523,
+      "sha256": "d782102450e221a96045286481873e6092b2d2e6eef0d62d500ef3729fdd6f11"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_transport_fields.py": {
+      "bytes": 12635,
+      "sha256": "be485c09aa10a0e724a0ac31eff97691c4394677be9890a6878410fcefd34f21"
+    },
+    "src/recursive_horizons/nsc_atlas_cap_transport_reference.py": {
+      "bytes": 5084,
+      "sha256": "d812471107802c3926a567f252208b79c14ac29a02c3f01e2b96610edc2c6bf9"
+    },
+    "tests/control_budget.py": {
+      "bytes": 1437,
+      "sha256": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9"
+    },
+    "tests/test_analyze_nsc_atlas_cap_consistency.py": {
+      "bytes": 9319,
+      "sha256": "37bdc2f51ddadd1522d8cc055588ebea2a7a17d701bfd552e8586134b17910b3"
+    },
+    "tests/test_analyze_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 6533,
+      "sha256": "bdb00107af0b275589c1858ffb3cfa2637d0d266426fcf1e50ad0f22a4e32c07"
+    },
+    "tests/test_diagnose_nsc_atlas_boundary_rows.py": {
+      "bytes": 12642,
+      "sha256": "e40be41a5373a3b1d79f077d46e8708443c5c23e1fac52b233a3f3acd98ccb75"
+    },
+    "tests/test_diagnose_nsc_atlas_cap_consistency.py": {
+      "bytes": 8725,
+      "sha256": "802a24dbd8236329be1efb935895f7cbb19c227782a5d710c88eca596a581804"
+    },
+    "tests/test_diagnose_nsc_atlas_cap_mass_direction.py": {
+      "bytes": 10941,
+      "sha256": "5d26b13311c4118320ef3944166d760569bd971c16a26594cd63b187408c73b6"
+    },
+    "tests/test_diagnose_nsc_atlas_cap_transport_balance.py": {
+      "bytes": 12253,
+      "sha256": "db63543b1983ba9f30e6eaeba6920367d359fd21b7f0acbb6c92de604909a25c"
+    },
+    "tests/test_nsc_atlas_cap_consistency_orchestration.py": {
+      "bytes": 8148,
+      "sha256": "84c8e98042aef0998a39b88dcd9281e404aeddad744d4ac85df3338869894ada"
+    },
+    "tests/test_nsc_atlas_cap_mass_balance.py": {
+      "bytes": 8203,
+      "sha256": "1e1ed8be19bd829b4fbcf1b22a4bfd6157e4fe8a4c93d791905e505f8bc542a5"
+    },
+    "tests/test_nsc_atlas_cap_mass_derivatives.py": {
+      "bytes": 6413,
+      "sha256": "92f77f46df5c5f00cb1c6c3b7db8db4c79c4d76187c9a5d5041197110987193c"
+    },
+    "tests/test_nsc_atlas_cap_mass_direction_orchestration.py": {
+      "bytes": 8504,
+      "sha256": "caebaa65379a419f1cacd33a2b82564b0adfb899d07a6e65d09a2601071e8277"
+    },
+    "tests/test_nsc_atlas_cap_mass_tangent.py": {
+      "bytes": 8661,
+      "sha256": "0ed6826a5d303f8a04098c887bf74829993b271b67ab81ead4f77ade23bca217"
+    },
+    "tests/test_nsc_atlas_cap_radial_comparison.py": {
+      "bytes": 7653,
+      "sha256": "9a66af467f168e4dbb4c1edce2954fe7033a6c6e50e0d8995f114ee28846996b"
+    },
+    "tests/test_nsc_atlas_cap_radial_reference.py": {
+      "bytes": 8078,
+      "sha256": "c3f8b5ab81d77b75aa421eab83ddda71db29f53ea0f2fa4f4f70777fce5c3665"
+    },
+    "tests/test_nsc_atlas_cap_transport_balance.py": {
+      "bytes": 7986,
+      "sha256": "02073ea27f9051183c5ed1ce5cacc01a3720dac93b1930df83d713839e3d4168"
+    },
+    "tests/test_nsc_atlas_cap_transport_fields.py": {
+      "bytes": 12106,
+      "sha256": "a2c7ba9933270d3d0cefb74863d607dfe57045c625874d5f151603ae3afed7a4"
+    },
+    "tests/test_nsc_atlas_cap_transport_reference.py": {
+      "bytes": 5322,
+      "sha256": "fb1aa307069848464ce714e308ccc1ff2f4cde4215386f36e45e1fdf3f2999ea"
+    }
+  },
+  "raw_payload": {
+    "bytes": 2050199,
+    "path": ".build/results/nsc-atlas-cap-transport-balance-v1.json",
+    "sha256": "400fa7df4beb17dab2f83c3a735907258cb2ee8a3169859ce273021af13084d4"
+  },
+  "regeneration": {
+    "argv": [
+      "python",
+      "scripts/run_python.py",
+      "scripts/diagnose_nsc_atlas_cap_transport_balance.py",
+      "--output",
+      ".build/results/nsc-atlas-cap-transport-balance-v1.json"
+    ],
+    "cwd": ".",
+    "executed_by_summary": false
+  },
+  "reported_provenance": {
+    "audit_source_bindings": {
+      "scripts/analyze_nsc_atlas_cap_consistency.py": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a",
+      "scripts/analyze_nsc_atlas_cap_mass_balance.py": "99c8ac39a488739e7d0fe7fdd1f44fb95579178e9fb654b05aa6a334167cd8aa",
+      "scripts/analyze_nsc_atlas_cap_mass_direction.py": "590c4540ec94c0d79a0a03119ac014c38e30b5975b228034a99d5a03e484a936",
+      "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+      "scripts/diagnose_nsc_atlas_cap_consistency.py": "2ba770b0880e1d60d313d644ed77b7485b352a187e6f09370c1d9cd77c06f230",
+      "scripts/diagnose_nsc_atlas_cap_mass_balance.py": "d00f249e6d6ab9b860bcd98a75450e469ea555449d4cfe856980aeebd71bdb52",
+      "scripts/diagnose_nsc_atlas_cap_mass_direction.py": "3f751901982a3070e28c08c7a848848e81d3a45025b597fa36c7f1ed97edc6f5",
+      "scripts/diagnose_nsc_atlas_cap_transport_balance.py": "545314108872f623ffd88db01a71d2d5d548aa00f312c70f3c9abd22c8be79fd",
+      "scripts/summarize_result.py": "e3b4e2464ffc0b5602266ec082dfcb4d9aed1c160789b1b64ba9ed103f2f5c61",
+      "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e15805c7073bb54e30ce5bf8b065b44020b28d795807fdbe54257f42fe40016d",
+      "src/recursive_horizons/nsc_atlas_cap_mass_tangent.py": "1764f3b6b9b3a58db870db6ae5a4a0d12ebeaa6427564aabd28bf59e57c80a24",
+      "src/recursive_horizons/nsc_atlas_cap_radial_comparison.py": "d1b5aafdc9de16bc1e3e1c39d46b620c7eb6c4b183c9a8117bacee81efef9d38",
+      "src/recursive_horizons/nsc_atlas_cap_radial_reference.py": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab",
+      "src/recursive_horizons/nsc_atlas_cap_transport_balance.py": "d782102450e221a96045286481873e6092b2d2e6eef0d62d500ef3729fdd6f11",
+      "src/recursive_horizons/nsc_atlas_cap_transport_fields.py": "be485c09aa10a0e724a0ac31eff97691c4394677be9890a6878410fcefd34f21",
+      "src/recursive_horizons/nsc_atlas_cap_transport_reference.py": "d812471107802c3926a567f252208b79c14ac29a02c3f01e2b96610edc2c6bf9",
+      "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
+      "tests/test_analyze_nsc_atlas_cap_consistency.py": "37bdc2f51ddadd1522d8cc055588ebea2a7a17d701bfd552e8586134b17910b3",
+      "tests/test_analyze_nsc_atlas_cap_mass_direction.py": "bdb00107af0b275589c1858ffb3cfa2637d0d266426fcf1e50ad0f22a4e32c07",
+      "tests/test_diagnose_nsc_atlas_boundary_rows.py": "e40be41a5373a3b1d79f077d46e8708443c5c23e1fac52b233a3f3acd98ccb75",
+      "tests/test_diagnose_nsc_atlas_cap_consistency.py": "802a24dbd8236329be1efb935895f7cbb19c227782a5d710c88eca596a581804",
+      "tests/test_diagnose_nsc_atlas_cap_mass_direction.py": "5d26b13311c4118320ef3944166d760569bd971c16a26594cd63b187408c73b6",
+      "tests/test_diagnose_nsc_atlas_cap_transport_balance.py": "db63543b1983ba9f30e6eaeba6920367d359fd21b7f0acbb6c92de604909a25c",
+      "tests/test_nsc_atlas_cap_consistency_orchestration.py": "84c8e98042aef0998a39b88dcd9281e404aeddad744d4ac85df3338869894ada",
+      "tests/test_nsc_atlas_cap_mass_balance.py": "1e1ed8be19bd829b4fbcf1b22a4bfd6157e4fe8a4c93d791905e505f8bc542a5",
+      "tests/test_nsc_atlas_cap_mass_derivatives.py": "92f77f46df5c5f00cb1c6c3b7db8db4c79c4d76187c9a5d5041197110987193c",
+      "tests/test_nsc_atlas_cap_mass_direction_orchestration.py": "caebaa65379a419f1cacd33a2b82564b0adfb899d07a6e65d09a2601071e8277",
+      "tests/test_nsc_atlas_cap_mass_tangent.py": "0ed6826a5d303f8a04098c887bf74829993b271b67ab81ead4f77ade23bca217",
+      "tests/test_nsc_atlas_cap_radial_comparison.py": "9a66af467f168e4dbb4c1edce2954fe7033a6c6e50e0d8995f114ee28846996b",
+      "tests/test_nsc_atlas_cap_radial_reference.py": "c3f8b5ab81d77b75aa421eab83ddda71db29f53ea0f2fa4f4f70777fce5c3665",
+      "tests/test_nsc_atlas_cap_transport_balance.py": "02073ea27f9051183c5ed1ce5cacc01a3720dac93b1930df83d713839e3d4168",
+      "tests/test_nsc_atlas_cap_transport_fields.py": "a2c7ba9933270d3d0cefb74863d607dfe57045c625874d5f151603ae3afed7a4",
+      "tests/test_nsc_atlas_cap_transport_reference.py": "fb1aa307069848464ce714e308ccc1ff2f4cde4215386f36e45e1fdf3f2999ea"
+    },
+    "execution": {
+      "analysis_evaluations": 11758039,
+      "cpu_seconds": 185.40625,
+      "creation_validation_evaluations": 11758039,
+      "evaluated_points": 23516078,
+      "hash_authentication_passes": 1,
+      "initial_evaluations": 1866908,
+      "previous_analysis_replays": 0,
+      "time_steps": 0
+    },
+    "input": {
+      "inherited": {
+        "direction_summary": {
+          "bytes": 318358,
+          "path": "results/summaries/nsc-atlas-cap-mass-direction-v1.json",
+          "sha256": "9092a6f4d6dd2a58f7b3b31e0dc2d5c33b1a33c05755fe94501579bd808ebd7e"
+        },
+        "inherited": {
+          "cap_audit_source_bindings": {
+            "scripts/analyze_nsc_atlas_cap_consistency.py": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a",
+            "scripts/diagnose_nsc_atlas_boundary_rows.py": "d6879903228ef652b2015a95b3cef0dd21735561db32053bdfa48ca6c46d9afa",
+            "scripts/diagnose_nsc_atlas_cap_consistency.py": "1c4489fb2d8a00a884d454006218a4ec5f47c8cd8e7bc65b1a0c053cd3992d32",
+            "tests/test_analyze_nsc_atlas_cap_consistency.py": "f7a166b26f6c70dd702fee27a38477dbc249f6303f26ba65194e35a6d379c4fb",
+            "tests/test_diagnose_nsc_atlas_boundary_rows.py": "e40be41a5373a3b1d79f077d46e8708443c5c23e1fac52b233a3f3acd98ccb75",
+            "tests/test_diagnose_nsc_atlas_cap_consistency.py": "802a24dbd8236329be1efb935895f7cbb19c227782a5d710c88eca596a581804",
+            "tests/test_nsc_atlas_cap_consistency_orchestration.py": "84c8e98042aef0998a39b88dcd9281e404aeddad744d4ac85df3338869894ada"
+          },
+          "cap_bytes": 820093,
+          "cap_path": "results/development/nsc-atlas-cap-consistency-v1.json",
+          "cap_scientific_replays": 0,
+          "cap_sha256": "79d1e02917ba7c1a7d3326cd80612b0467f19b0b5b7b1e69b6e1e2f1f3ae9728",
+          "inherited": {
+            "authenticated_input_files": 104,
+            "baseline_path": "results/development/nsc-atlas-spatial-refinement-v1/spatial.json",
+            "baseline_sha256": "29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd",
+            "cache_path": "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json",
+            "cache_sha256": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02",
+            "hashed_bytes": 175037221,
+            "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+            "path": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+            "recursive_validation": false,
+            "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09",
+            "source_bindings": {
+              "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+              "results/development/nsc-atlas-background-evolution-v1/background.json": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca",
+              "results/development/nsc-atlas-background-evolution-v1/manifest.json": "b9a657079dbef081d9a343e1814a6f8271582bb9370443dbfd91305401c4584c",
+              "results/development/nsc-atlas-background-step-audit-v1.json": "a94a40a9a57f5b435b32d8d43005115650348f44d84a4ab67d49c3a181907aa4",
+              "results/development/nsc-atlas-compatible-evolution-v1/compatible.json": "a7e27b25ce171951415f97b64e055fd93062e3c21cd709c19c99c7543167c434",
+              "results/development/nsc-atlas-compatible-evolution-v1/manifest.json": "7a8b5b6215dacb7a554c2c9b60e14f698217d944859604312775b9aeb48d3ff7",
+              "results/development/nsc-atlas-coupled-evolution-v1/coupled.json": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86",
+              "results/development/nsc-atlas-coupled-evolution-v1/manifest.json": "c8bb11266693bba7043f6eb3a35045b09421e688f6069eee943459aec4a26f0f",
+              "results/development/nsc-atlas-nonlinear-rectangle-v1/manifest.json": "a749597c5403ba89f40665296156672a4efcee31044f34da086223b92a840b28",
+              "results/development/nsc-atlas-nonlinear-rectangle-v1/rectangle.json": "afaa47304c353ca88d7b296b67996e55346f813abb2bc04e06c1f823d7ddf9da",
+              "results/development/nsc-atlas-spatial-refinement-v1/manifest.json": "dbfed10ec7ee36f8c909fa375e273459797b88ead546b07bf1a3c0789107bd1b",
+              "results/development/nsc-atlas-spatial-refinement-v1/spatial.json": "29d7fc1d9ac8b161101f4ff23485a78cb97702c23e06e141d01266fa042dcbbd",
+              "results/development/nsc-atlas-ssprk3-evolution-v1/manifest.json": "cf20e9190d400e81fa05a1dcf31535cbe99ed20d9a3fdf9c21f981f2565fdf75",
+              "results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json": "24cd8319c131360154cbdd7088cd2f212f8d572a0fe6fdff69a2c845c9223546",
+              "results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json": "f85a1491eeba5c77514936e48f69a4335d5a92edda2a0db2a0dc624a3701f041",
+              "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json": "ab95bdcd43b6df78e776f5282387e3f7398d8996a25d4e3de4e5a8226fc25e02",
+              "results/development/nsc-atlas-ssprk3-step-audit-v1.json": "9a549c59b9e40a8b9f45207c79ba638cab3409e44bb4c327e4a5b44c0ba9749a",
+              "scripts/analyze_nsc_atlas_operator_comparison.py": "17c3e27bbc891c41bfc2f12519053b11c59f916e65e138a264433cc0aec19e1c",
+              "scripts/analyze_nsc_atlas_spatial_refinement.py": "1a90dcf150521d85d58be87ee202dbdcc71ae498ae6da04312caefcf432e344a",
+              "scripts/diagnose_nsc_atlas_background_step.py": "e9ac13a5f2d93be2ad9f0d4734897af86d3f6b1184ddfab639ae3d9d66945455",
+              "scripts/diagnose_nsc_atlas_background_time.py": "d29a4190a40b9344c51c57833a58053ede0b3c34992c71ffa920a0ea5f0bab09",
+              "scripts/diagnose_nsc_atlas_compatible_transport.py": "05071cd1fbdec7a1c7a2c1697904478b3273e3bce42da77a3c4a74bc2b8799ac",
+              "scripts/diagnose_nsc_atlas_ssprk3_step.py": "68f04e1e48b275bb4d9fda42f38fd735cc787e69a576437541979e18dd7f552a",
+              "scripts/record_nsc_atlas_background_evolution.py": "eed75a5b1673f58bee5748ccb6437d6f8872c2970ce93a70933cbd1aa865655f",
+              "scripts/record_nsc_atlas_compatible_evolution.py": "9cf6802c5eca6b840fc3158438ca34178e719095ba839a4dd71cea549f265c2c",
+              "scripts/record_nsc_atlas_coupled_evolution.py": "2898d38aea0540530ef5fc76e1c7d3fc377d41bdbb414d3f51dbba54be29b264",
+              "scripts/record_nsc_atlas_nonlinear_rectangle.py": "3dd04d62f8982bd1c7f5500ed00dcb945e1b8c5aadb9888c193f830282cae8d0",
+              "scripts/record_nsc_atlas_operator_comparison.py": "5af2ba3b01bddc6cc573f46dc7011ebb7af136fb45326d6bb0c687f7e9adc6fa",
+              "scripts/record_nsc_atlas_spatial_refinement.py": "679ceb0f76df95f438de4396a6c64a8743bc584795ce13374d9ffb5239c4fcd9",
+              "scripts/record_nsc_atlas_ssprk3_evolution.py": "57891d825cb49363f86acbab37791917193394b9e2c2cc023720178c8eb1c7fc",
+              "scripts/record_nsc_atlas_ssprk3_refinement.py": "2e6cfa1d66b7524057a09eb2eb4f2481c51d56a9f9d042074d022c080d12b7c4",
+              "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+              "src/recursive_horizons/__init__.py": "207d6c6b0b69b7ba16818864ad11f26b2168cbc6a99431dbcb8fcfa0340e58cf",
+              "src/recursive_horizons/nsc_atlas_background_cap.py": "df34fdee624eb58d466b778e8f05ee74241922e43f5b60d619c0a8c557f6ceed",
+              "src/recursive_horizons/nsc_atlas_background_evolution.py": "7b7d5db8e790354c0bf7069f983eb4851390b1cbfaa3a56a10de97033e1059b9",
+              "src/recursive_horizons/nsc_atlas_background_profile.py": "576567d0c7a31b33982edb922ccc7aee772355c50aca0559a70620efdb0b753a",
+              "src/recursive_horizons/nsc_atlas_background_ssprk3.py": "dcc3ecc2023679be3a837e807de58548cb1b6b51bc3e7419e1cba1b8caee8362",
+              "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+              "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+              "src/recursive_horizons/nsc_atlas_characteristic_background.py": "381ee76f840b8392d7b96634fe7caab38bf3ee36e2fd48a87232c964d1c864a5",
+              "src/recursive_horizons/nsc_atlas_characteristic_cell.py": "71745e4fc58ab722a91d47c1fba90344fce786b2dc3ded6063d7dceb8784f135",
+              "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+              "src/recursive_horizons/nsc_atlas_characteristic_trace.py": "c067ea9a8a5b3a78263ab5671f9a6ad746863d73fc4dfc7da6425166bc15b9dd",
+              "src/recursive_horizons/nsc_atlas_compatible_evolution.py": "82f8f127f2b401b1234dfe7ceecddee011cf907c34fd87c06cbb64c20ddd9385",
+              "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+              "src/recursive_horizons/nsc_atlas_coupled_diagnostics.py": "9bb5d343683d2d8028d0796a18a5fd12ec677f5ec373e678675e6f56fdbddee6",
+              "src/recursive_horizons/nsc_atlas_coupled_evolution.py": "08746ab7c4aa71b543be5e1aca469e1fa43795277cfdce8102161b738d64423b",
+              "src/recursive_horizons/nsc_atlas_departure_diagnostics.py": "98a99baeb613738612b8dd26d68edbbeb6be1f514c835bcca3929e868cc687b3",
+              "src/recursive_horizons/nsc_atlas_departure_gradient.py": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452",
+              "src/recursive_horizons/nsc_atlas_exterior_characteristic_slice.py": "905f820fc7240b272dab9a3766708e3ff471d4210d408d5300f5eea0d983d766",
+              "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+              "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+              "src/recursive_horizons/nsc_atlas_gradient_evolution.py": "f007f4842d3b6f2490559e6035d6b5859d8848e477d39b8e77731a0e136d445d",
+              "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+              "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+              "src/recursive_horizons/nsc_atlas_nonlinear_bulk.py": "5ed3d18a642b562528c397526f85e92272784915bdb3a289cf9e8fa5d32c1b42",
+              "src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py": "0cf41411da3be90a1f0f030581adc4ce1da672e2d638d9d6f91f6bf4c4013824",
+              "src/recursive_horizons/nsc_atlas_nonlinear_source.py": "9a5922f9fbc856a4fb6e0c1c1f6a28a40e3034656de81db88d6cc8b917def72c",
+              "src/recursive_horizons/nsc_atlas_polar_cap.py": "17a9bece68716d2c80711bbdef3fc340d36f11edb6fa2f233806b39332603617",
+              "src/recursive_horizons/nsc_atlas_reduced_cap.py": "ed474652def7f60db02a14e5147a08b14b43963ef756ad4c3de3ad4800d698e9",
+              "src/recursive_horizons/nsc_atlas_reference_wall_gauge.py": "e905f2b6e888d53ee2d539920d09d037eb6bb074a60717932cfead12c87b3113",
+              "src/recursive_horizons/nsc_atlas_refined_cache.py": "7164dc2191cf175a8423fbcdde631b9961a4322bae7ed4399383146ca60f1ac0",
+              "src/recursive_horizons/nsc_atlas_stage_ssprk3.py": "aab87a8bc67a9b69391a425a5893c9c07e73eedde668d1a2cdff4eb971cdcbc0",
+              "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157",
+              "tests/test_analyze_nsc_atlas_operator_comparison.py": "1884720e27ca3c89a597739416940ccf1d42a0ffafb995bc3058d78faf581db2",
+              "tests/test_analyze_nsc_atlas_spatial_refinement.py": "4126ea70af520d0a468f0cc2dd2ef9160d4c1df688628259830b3930708ea358",
+              "tests/test_diagnose_nsc_atlas_background_step.py": "76bcaf5ad07a4addea5edf4fb61e46945d047cceb06d3a395b88c5640901f12c",
+              "tests/test_diagnose_nsc_atlas_background_time.py": "26cbb7da5a9719bf958a3f9e3d90e8cfa2ccca3539269daf97f8d3e862b16ee6",
+              "tests/test_diagnose_nsc_atlas_compatible_transport.py": "6138ec2e0679bb7746d4f3477c2dae042d59e66bde6e112442eff8c39d723b34",
+              "tests/test_diagnose_nsc_atlas_ssprk3_step.py": "9e99254ca1897b598a67d90088621aea77a22ad490b2402f6efdb8388da0eaf1",
+              "tests/test_nsc_atlas_background_cap.py": "b4f8409c173ed38035683747bac228bfac123f6ea581b113b899d17aab429151",
+              "tests/test_nsc_atlas_background_endpoint.py": "97abfeee4883ec2d92e19217b77a6b13b7bfa02d9fb979a4f48ee23acd791096",
+              "tests/test_nsc_atlas_background_evolution.py": "5cee18cc762ab2ec1d79528de886aa74bf2916492ff377bac3db9be574ed16e2",
+              "tests/test_nsc_atlas_background_profile.py": "8575e0ecd39b9b8c114e9cd90ac9a26dce30da90ac6031b355a7457a4fa2f9bb",
+              "tests/test_nsc_atlas_background_ssprk3.py": "af95185ae9f06ceb1e9b621baf88d46f86d33e8dfc69bc17344fe0de645e4d13",
+              "tests/test_nsc_atlas_characteristic_background.py": "d9f4e0d0bb7ffcafee2ab028408f8bb1ca42d351a8dc93b8eeafac02cf5fd07f",
+              "tests/test_nsc_atlas_characteristic_cell.py": "2ffc46e56c87250d353cd788548cc6ccaf07f4b2670ad7bb15a09407e2fa112e",
+              "tests/test_nsc_atlas_characteristic_trace.py": "87dce18f63893154bd3659987126b11afec1145708442e214c152fe6985e37e1",
+              "tests/test_nsc_atlas_compatible_evolution.py": "0514bc9bed8f471aa62f9e30e138f38df495da0f4da8e30cb34359ce686a1a44",
+              "tests/test_nsc_atlas_coupled_diagnostics.py": "3e51699a58f5384657de9c94436ac94b0db2b713ba254ed48962f6b1e8601b4f",
+              "tests/test_nsc_atlas_coupled_evolution.py": "a693e6b95a68e2ef6db476a5c4dc1f797b9be5562c20c5b429a6f81e07216345",
+              "tests/test_nsc_atlas_departure_diagnostics.py": "4caabec765a0782ec043da87783519899360877238e024c844df0cce8c0ef4ab",
+              "tests/test_nsc_atlas_departure_gradient.py": "7e39de34243de6da5392ce8e797fd3c1d627a0e8744625a880e50cfac9f26f54",
+              "tests/test_nsc_atlas_exterior_characteristic_slice.py": "7ab6b9f9f0cabeb0293be13fb11c1b26da62362587070c9419ea716425a23e7a",
+              "tests/test_nsc_atlas_gradient_evolution.py": "b7708869ad018ca631d4d5b3e53cd3b4dcc1a53c8d070c19ac8e3a207a0a965e",
+              "tests/test_nsc_atlas_hybrid_boundary.py": "84e88d93ca6654b4e35b282118be4a48e3ad9ab2b7aeab2bf4b086f71d8c4509",
+              "tests/test_nsc_atlas_nonlinear_boundary.py": "4d9d988a8213fdb3002dfcc342f165868acdd133ecb0eb43050ccbd82acf66d8",
+              "tests/test_nsc_atlas_nonlinear_bulk.py": "e3bf75d7b5c559847b13790513e76453d684af7cf8f29a109a8841a07d032b46",
+              "tests/test_nsc_atlas_nonlinear_rectangle.py": "e8018dd94f13d1c57acd45c57f93511333289668e71e89faf0872732aa13d1b0",
+              "tests/test_nsc_atlas_nonlinear_source.py": "1627ffaac2cb68e8fcda45bb5aee8c129a69db8c4a7f19a7a040d90c67e6c9b1",
+              "tests/test_nsc_atlas_polar_cap.py": "f66db7c453bc2a004d987d28bbb5b447b6585ca59eb8a6b9b46d80a7a74c5788",
+              "tests/test_nsc_atlas_reduced_cap.py": "fa9cc1a0b0a10e3bacae73d4a63e8c275518804d52aa58908e8cdc9b50a9ca5f",
+              "tests/test_nsc_atlas_reference_wall_gauge.py": "0162e855c16f5763a7224c89b0e7155107d65aa813b16004823b740cb769e520",
+              "tests/test_nsc_atlas_refined_cache.py": "819f2b0b342933c25f28dcc4fada7f95254ef6b9969dd67c5d6c9fdaca15d6f8",
+              "tests/test_nsc_atlas_stage_ssprk3.py": "48fdd0fa76a2f09ab20ec30c8fd84b3e0b02569effff441e57b1437b69f7e43a",
+              "tests/test_nsc_atlas_vacuum_departure.py": "014fe35e4902add7fa4f3e044df92f550cede64bb3896f17fec5cf8926c3b4eb",
+              "tests/test_record_nsc_atlas_background_evolution.py": "2a59768c44041b8be3ea32fe674562581284d175bdbc5d871cf2256eabad271b",
+              "tests/test_record_nsc_atlas_compatible_evolution.py": "cbcc13d89b08d96600abf42485a5ad911c2f2638634a88f54fb9a12957205133",
+              "tests/test_record_nsc_atlas_coupled_evolution.py": "d7e973f9210992c1882a9482ffc60f39a3c7f0c3ed502b35a5f2d5ceeb561c04",
+              "tests/test_record_nsc_atlas_nonlinear_rectangle.py": "4f66ac5fa4951f97c0a04f4a35c522620a6c080c592cfb3df74755c64425f518",
+              "tests/test_record_nsc_atlas_operator_comparison.py": "bd4622827eee3bec9bcda3b9644c335fb4cd38ea247cb8fe294ff22c437ac94f",
+              "tests/test_record_nsc_atlas_spatial_refinement.py": "7528535e1849b49882eadfcac7c1c3b5960746b6a2e82920bbeaf299b5d314bf",
+              "tests/test_record_nsc_atlas_ssprk3_evolution.py": "584dbff95a6b58a67025070efc21691316d105cadd07ef986e4bf3e00d5bdabe",
+              "tests/test_record_nsc_atlas_ssprk3_refinement.py": "4d2377607dd726ff37733d9d855561f85e7881cf1451292cd22821e44dcfe124"
+            }
+          }
+        },
+        "previous_analysis_replays": 0
+      },
+      "mass_ledger_summary": {
+        "bytes": 182893,
+        "path": "results/summaries/nsc-atlas-cap-mass-balance-v1.json",
+        "sha256": "d3d7be8d7b2a124b6e6facbfc8ddfb86ff1e66eceb1cd16553fa7c243c8109e0"
+      },
+      "previous_analysis_replays": 0
+    },
+    "limits": {
+      "check": {
+        "cpu_seconds": 150.0,
+        "evaluated_points": 24000000
+      },
+      "creation": {
+        "cpu_seconds": 300.0,
+        "evaluated_points": 48000000
+      }
+    },
+    "runtime": {
+      "numpy": "2.5.1",
+      "python": "3.14.8",
+      "scipy": "1.17.1"
+    },
+    "schema": "nsc-atlas-cap-transport-balance-audit-v1",
+    "scope": "fixed terminal cap bulk/interface/radial-error attribution; not corrected evolution or closure",
+    "settings": [
+      {
+        "atol": 2e-12,
+        "rtol": 2e-10
+      },
+      {
+        "atol": 2e-14,
+        "rtol": 2e-12
+      }
+    ]
+  },
+  "schema": "nsc-compact-result-v1",
+  "selection": "/analysis/summary"
+}

@@ -2,6 +2,73 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Terminal cap transport attribution, 16 October 2026
+
+The [compact comparison](../results/summaries/nsc-atlas-cap-transport-balance-v1.json)
+accounts for the saved mass imbalance through independently integrated field
+residuals, moving-interface terms and local radial-map errors. Both original
+terminal states use 64 cells and native order eight. Each is compared at two
+reference ODE tolerances; the state, wall clocks, source and native transport
+rates are fixed. No time evolution or grid scan is performed.
+
+At the finer reference tolerance the finite-amplitude case gives:
+
+| Contribution | Normalized mass-balance rate |
+| --- | ---: |
+| Field-value residual | `-0.0000325545827740` |
+| Pi transport residual | `-8.41769060648` |
+| Phi transport residual | `-8.36688228972` |
+| Ordered interface terms | `+14.6576311228` |
+| Local radial-map error derivative | `-2.20628e-10` |
+| Both wall conversions combined | `-3.11091e-20` |
+| Sum | `-2.12697432821` |
+| Original native balance | `-2.12697432799` |
+
+The assembled difference is `-2.19482e-10`. The largest absolute balance
+difference over all four comparisons is `5.76473e-10`; the largest channel
+change between tolerances is `3.56406e-10`, against the declared `1e-6`
+balance and `5e-7` sensitivity limits. The two independent reference mass
+routes differ by at most `2.23821e-13`; their material-rate and jump-sum
+checks also pass. These are observed agreement and sensitivity checks, not
+a uniform error enclosure.
+
+This locates the tested imbalance in reconstructed field transport and its
+interfaces. Radial integration cannot account for the retained order-one
+imbalance at this diagnostic resolution. It does not establish a repaired
+transport scheme, a different wall law or finite-amplitude closure. The large
+bulk and interface contributions must remain together; deleting a channel or
+subtracting the earlier upwind term would not construct a compatible evolution.
+
+The zero-backreaction case similarly has bulk `-0.0741643272164` and interface
+`-0.0105569749748`, recovering native balance `-0.0847213021906` with difference
+`6.19961e-11`. Its actual gravitational balance is zero because `alpha=0`.
+The minimum sampled metric factors are `0.6975` and `0.689994437541`; sampled
+positivity does not prove positivity between samples.
+
+The first attempt stopped before reference integration because the adapter
+selected different representatives at cancelling limiter slopes. A bounded
+prefix diagnosis found 27 differing minus branches with identical panel
+geometry. Selecting the native component basis before contracting the field
+direction fixes that arithmetic inconsistency; the native tangent and exact
+branch guard are preserved. Grok independently reviewed the correction.
+
+Producer `273af3e` completes creation plus reconstruction in **23,516,078
+points / 185.40625 CPU seconds**. Including the failed attempt and its bounded
+diagnosis gives **25,382,986 points / 190.84375 seconds**, within the original
+48-million-point / 300-second allowance. The 2,050,199-byte raw payload remains
+under ignored `.build/results`, SHA256
+`400fa7df4beb17dab2f83c3a735907258cb2ee8a3169859ce273021af13084d4`.
+Only the 38,076-byte summary, its 33 producer bindings, three direct input
+bindings, inherited authentication and regeneration command are tracked.
+The independent standalone reconstruction also passes: **11,758,039 points /
+93.265625 CPU seconds**, within 24 million / 150. Summary authentication is
+separately a byte/hash check; it does not itself execute that scientific replay.
+
+The [mathematical owner](nsc-atlas-finite-amplitude.md#separating-radial-quadrature-from-reconstructed-field-transport)
+defines the identity. The next analytical connection is a common discrete
+field-transport and mass balance that accounts for these interface terms;
+another evolved history is not yet supplied by this result.
+
 ## Discrete cap mass balance, 16 October 2026
 
 The [four-case ledger](../results/summaries/nsc-atlas-cap-mass-balance-v1.json)

@@ -3,12 +3,12 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4ce93f97dabd3694bee331abb49c5691628088d1",
+  "current_receipt_commit_parent": "273af3e89aae74982fa48db411ab2f01844d8a87",
   "files": [
     {
-      "bytes": 2218,
-      "change": "Exact cap transport bridge and validation scheduling; original import records preserved.",
-      "changed_from_commit": "c94326067c34bc8d197bcf4063599d4d6813cd4c",
+      "bytes": 2338,
+      "change": "Record the independently reproduced terminal cap transport attribution and compact evidence.",
+      "changed_from_commit": "273af3e89aae74982fa48db411ab2f01844d8a87",
       "import_bytes": 366,
       "import_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -16,7 +16,7 @@
       "original_path": "lab/.github/workflows/verify.yml",
       "original_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
       "path": ".github/workflows/verify.yml",
-      "sha256": "1af1c5f4aefdcd8b031c45658eb5d2a62e7ad3fe6046bd1174126651921bdfba"
+      "sha256": "c0acba22000a0bae97fc5dcc2e936bbb65e4b88a43abc9e66ff9db2ca11fd09c"
     },
     {
       "bytes": 9326,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 211271,
-      "change": "Preserve the native limiter branch before contracting cap field jets; retain the bounded diagnosis.",
-      "changed_from_commit": "4ce93f97dabd3694bee331abb49c5691628088d1",
+      "bytes": 211493,
+      "change": "Record the independently reproduced terminal cap transport attribution and compact evidence.",
+      "changed_from_commit": "273af3e89aae74982fa48db411ab2f01844d8a87",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "046af82ea5b91ba321d9e9e7e869ce41ce48299051a13eb7b46143adb9801935"
+      "sha256": "9707a0c974544e745a7e1ba1ff8ad44c8b1e3c5e0b66a445ce205a77461cc836"
     },
     {
       "bytes": 9543,
@@ -29495,6 +29495,12 @@
       "path": "results/summaries/nsc-atlas-cap-mass-direction-v1.json",
       "provenance_role": "current compact result or prediction register; full numerical data not newly committed",
       "sha256": "9092a6f4d6dd2a58f7b3b31e0dc2d5c33b1a33c05755fe94501579bd808ebd7e"
+    },
+    {
+      "bytes": 38076,
+      "path": "results/summaries/nsc-atlas-cap-transport-balance-v1.json",
+      "retention_reason": "Compact fixed-state cap transport attribution, hashes and regeneration command.",
+      "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
     },
     {
       "bytes": 899,
