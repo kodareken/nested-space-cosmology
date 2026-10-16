@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "c5cc488767155b0afb5558c969bc9f8aa4d1814d",
+  "current_receipt_commit_parent": "db5febb3c1cd80d0133db1f54e80e6e019d907dd",
   "files": [
     {
       "bytes": 1506,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 9085,
-      "change": "Record coupled characteristic-background result, manuscript and scalar-time diagnosis",
-      "changed_from_commit": "894a79c7e1795edc7e8f966c12f930067333d962",
+      "bytes": 9238,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "db5febb3c1cd80d0133db1f54e80e6e019d907dd",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "3d0e59d804c056d90aec725134288c2116e5958539b2cf9a5da4549a7bf7a96a"
+      "sha256": "75b3a28cf1747edd4dc3e71023fdcaa04c61455bf25e9d35e7c69f4dd911cd85"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 199303,
+      "bytes": 199411,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "c5cc488767155b0afb5558c969bc9f8aa4d1814d",
+      "changed_from_commit": "db5febb3c1cd80d0133db1f54e80e6e019d907dd",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2a5431c6a69d14e53ae9961daedcbfa672a9e13bd79f92f536310700ff142bb8"
+      "sha256": "d3b2a81ba0d643d19f657671f4867449f3e55a5152c0249f186e944fb9bf947f"
     },
     {
       "bytes": 9543,
@@ -10426,15 +10426,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 52245,
-      "change": "Record coupled characteristic-background result, manuscript and scalar-time diagnosis",
-      "changed_from_commit": "894a79c7e1795edc7e8f966c12f930067333d962",
+      "bytes": 52393,
+      "change": "Current mathematical and reproducibility updates; original import fields preserved",
+      "changed_from_commit": "db5febb3c1cd80d0133db1f54e80e6e019d907dd",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "8a02de086a102891c991b81bbfe08a362e2e4e850a9ae8d489e57ccec4c294e0"
+      "sha256": "e03138ddc2d086e3182e06fa733650100920e805eec53469f7ac34ded5557817"
     },
     {
       "bytes": 30876,

@@ -2060,6 +2060,18 @@ SSPRK2 asymptotic extrapolant by `-2.71979e-9`, compared with
 invariant balances close at roundoff. This motivates the fixed-input
 128/256-step comparison; the extrapolant is not an exact solution.
 
+The [full comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+now completes at the same two amplitudes and fixed 32-cell spatial grid.
+Its paired radius and clock temporal differences are below `1.34e-9`,
+while the paired scalar difference is `7.57345e-6` (21.54% of the fine
+peak). The new fine scalar history differs from the earlier pointwise
+SSPRK2 extrapolant by at most `5.60381e-8`. Agreement between those
+approximations does not certify their common limit or uniform error.
+The finite constraint residuals persist. A small pre-support scalar is
+also present in both amplitudes and decreases with time resolution.
+The actual source/profile regularity and stage sampling must be inspected
+before extending the cache or assuming third-order convergence.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

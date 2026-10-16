@@ -2,6 +2,55 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed-input SSPRK3 coupled window, 16 October 2026
+
+The [four-case result](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json)
+completes the original finite interval at zero and finite amplitude, each
+with 32 cells and 128/256 SSPRK3 steps. The source, computational profile,
+spatial operators and physical model are unchanged. Creation and validation
+use **130.734375 process CPU seconds and 24,939,592 charged points**.
+The [manifest](../results/development/nsc-atlas-ssprk3-evolution-v1/manifest.json)
+binds 80 inputs and producers. Standalone authentication passes with
+956,575 points and four final radial checks; it replays no trajectory.
+
+The table compares finite minus zero at common saved cuts. The extrapolant
+is formed pointwise from the earlier SSPRK2 histories as
+`(4*paired_512-paired_256)/3`; it is an asymptotic numerical comparison.
+
+| Quantity | New 256-step endpoint response | Maximum new 128/256 difference | Maximum new 256-step difference from old SSPRK2 extrapolant |
+| --- | ---: | ---: | ---: |
+| Radius `r` | `-7.67296957e-4` | `3.21892e-10` | `5.38e-11` |
+| Log lapse `L` | `-6.48536153e-3` | `1.33516e-9` | `2.03e-10` |
+| Central coordinate clock `T` | `-1.27927868e-3` | `4.24196e-10` | `7.28e-11` |
+| Wall proper clock `s` | `-1.19741836e-4` | `5.03008e-11` | `7.30e-12` |
+| Wall scalar `c` | `2.94322283e-5` | `7.57345e-6` | `5.60381e-8` |
+
+Geometry and clocks agree closely between time grids and methods. The
+scalar's maximum 128/256 difference occurs at saved cut 96 and is
+**21.54%** of the fine history's peak `3.51572e-5` (cut 90).
+The finer scalar history agrees with the old
+SSPRK2 extrapolant within `5.60381e-8` (RMS `2.00495e-8`), but these
+comparisons do not establish a convergence order or a temporal error bound.
+The scalar remains unresolved at the response scale.
+
+The 256-step finite departure constraints retain maxima `5.56851e-4`
+for `E_Ubar` and `8.76847e-3` for `E_x`, with RMS `1.05752e-4` and
+`2.02504e-3`. Zero-case metric departures stay below `3.75e-16`, while
+the diagnostic scalar before source support is nonzero: its maximum
+changes from `3.17616e-7` to `1.57101e-7`, equally for both amplitudes.
+That aggregate compares different maximizing channels: coarse wall `c`
+and fine cap `Ip`/`Iq`. The wall scalar's own pre-support maximum falls
+to `1.98830e-8`. Centre pre-arrival fields stay below `4.02e-15`.
+The own-trace zero-cap comparison remains at its interpolation scale
+(linear discrepancy `8.89651e-4`, PCHIP `8.36309e-4`). Spatial residuals
+and the scalar's temporal sensitivity remain distinct numerical questions.
+
+The next decision uses saved histories and the actual source/profile
+regularity to locate that sensitivity. A finer SSPRK3 run would require
+additional exact source/gauge midpoint data; the original 513-row cache
+does not supply them. Neither a cache extension nor another evolution
+is implied by the present comparison.
+
 ## Local SSPRK3 comparison, 16 October 2026
 
 The [local higher-order comparison](../results/development/nsc-atlas-ssprk3-step-audit-v1.json)

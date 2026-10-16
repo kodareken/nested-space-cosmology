@@ -2,6 +2,18 @@
 
 ## Fixed-input SSPRK3 coupled window, 16 October 2026
 
+**Outcome:** the [four-case comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+completes with 130.734375 process CPU seconds and 24,939,592 points.
+One standalone authentication passes with 956,575 points, four final
+radial stages and no trajectory replay. Geometry and clock differences
+are small, but the paired scalar 128/256 difference is `7.57345e-6`,
+or 21.54% of the fine peak. The fine scalar agrees with the old SSPRK2
+pointwise extrapolant within `5.60381e-8`; this does not establish an
+error enclosure or convergence order. Finite constraints and small
+pre-support scalar leakage remain measured. Saved-array and source/profile
+inspection precede a decision about further time resolution. The fixed
+admission below records the calculation chosen before its outcome.
+
 The six-stage local comparison below preserves the exact scalar balance
 and moves the paired increment substantially closer to the independent
 SSPRK2 asymptotic extrapolant. This supports a full-window temporal
@@ -29,7 +41,7 @@ pass with 37,821 shared points and 1.796875 process CPU seconds. They cover
 both exact time schedules, real raw-to-physical reconstruction, four final
 stage checks, paired/RK2 comparison indexing, changed inputs and accounting,
 and creation/standalone clocks beginning before input authentication. The
-producer and its 80 input/source bindings are frozen for the admitted run.
+producer and its 80 input/source bindings remain frozen with the result.
 
 ## SSPRK3 with fixed physical inputs, 16 October 2026
 

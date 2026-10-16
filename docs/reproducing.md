@@ -127,6 +127,16 @@ stages and diagnostics without a trajectory or source replay. Creation
 requires a fresh directory; failures retain their first context under
 ignored `.build`. The fixed model and 80 bound paths remain unchanged.
 
+The [completed four-case comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)
+uses 130.734375 CPU seconds and 24,939,592 points, including validation.
+Standalone checking passes with 956,575 points. Its scalar time difference
+remains 21.54% of the fine response peak; closer cross-method agreement
+does not replace a temporal error estimate. The saved `diagnostics`
+contain `finite_minus_zero`, `paired_time`, `paired_versus_ssprk2`,
+constraint histories and pre-support controls. The old SSPRK2 paired
+histories supply the pointwise comparison `(4*paired_512-paired_256)/3`;
+compare this array with the new paired 256-step history without a solve.
+
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
 without replaying its source or time evolution. Its 25 controls exercise
