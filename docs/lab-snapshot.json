@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "025abbb6ecb10d1b95ea21ad1b25c80799a48b0b",
+  "current_receipt_commit_parent": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
   "files": [
     {
       "bytes": 3120,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 316675,
-      "change": "Record the endpoint velocity limit and prepare one leading common-port comparison.",
-      "changed_from_commit": "025abbb6ecb10d1b95ea21ad1b25c80799a48b0b",
+      "bytes": 317603,
+      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
+      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "447ab3ea077d94ada70a8e30f97940eb744125dc192c04cb4904ba568e606bdf"
+      "sha256": "34627cca5ab29d1cc5e9d733a35c2a8111647bce44641101d8271f70b13ceea3"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 350184,
-      "change": "Record the endpoint velocity limit and prepare one leading common-port comparison.",
-      "changed_from_commit": "025abbb6ecb10d1b95ea21ad1b25c80799a48b0b",
+      "bytes": 351471,
+      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
+      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ab4c93b21e4f1c70f2ba4e0c8740a86fdda6e6b369d11d814a00efb78cb483d4"
+      "sha256": "4e6f0363628a8eec65a754e5268c4577ead737856bd22ca0e4961e177f2b3e97"
     },
     {
       "bytes": 6705,
@@ -29708,12 +29708,12 @@
       "sha256": "4057c89fa075d9dcf847f3c4987bcf0cddec8d6b97d5cc5bee2e68115649a10a"
     },
     {
-      "bytes": 7985,
-      "change": "Record the endpoint velocity limit and prepare one leading common-port comparison.",
-      "changed_from_commit": "025abbb6ecb10d1b95ea21ad1b25c80799a48b0b",
+      "bytes": 9143,
+      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
+      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
       "path": "scripts/check_nsc_atlas_prepared_endpoint_connection.py",
       "retention_reason": "Bounded endpoint diagnosis and its scientific owner.",
-      "sha256": "326f1ef44158db61fa57e67c91306326762f808549846d3636031a54c16e238c"
+      "sha256": "50e2151a4462c294bfd6b63ec5efd75c2eb5a0807e5b1582ea8f16561edda568"
     },
     {
       "bytes": 4953,
@@ -36045,12 +36045,12 @@
       "sha256": "e2eca38434c88d0ed02d848ec1a8dd33d2ab09444dab1de37b4972c1d4ccc570"
     },
     {
-      "bytes": 6832,
-      "change": "Separate scalar boundary channels and prepare a one-event velocity limit diagnostic without another evolution.",
-      "changed_from_commit": "7971e3548cde61f4219c582752cd7dfd88d74de5",
+      "bytes": 7722,
+      "change": "Check the leading boundary force and retain explicit clock/domain controls.",
+      "changed_from_commit": "6e34d3d988585e83cc38272fd5c4e23467a02d93",
       "path": "tests/test_nsc_atlas_cap_hybrid_compatibility.py",
       "retention_reason": "Fixed cap moving-wall compatibility and initial junction evidence",
-      "sha256": "c455ad71933b28282a78d6be30f3a8e4826411176a3a2f1ffadb6dfe5d14801b"
+      "sha256": "090d2036b337a0092e2ec6f5a0a99c8173ea1bb741397a82ad03545026e402fe"
     },
     {
       "bytes": 3449,

@@ -6557,6 +6557,29 @@ event, not bounds on the earlier finite-alpha trajectory. No change to the
 mass-gradient solver follows from this check. The next local comparison
 traces the leading prepared field through its clock, history and common port.
 
+At alpha zero the same mass functional also has the exact form
+
+\[
+ N=\frac14\int_0^Z(k^2+\chi_z^2)\,dz
+       -\frac{A_0(R)\chi(Z)^2}{4R}.
+\]
+
+Expanding the original radial density gives this identity by one integration
+by parts; regularity removes the central boundary term. Its first variation
+is `2g_chi=-load(chi_zz)+e*A0*h_W`. For a retained linear-wave history
+with zero departures, `chi_zz=k_T`, `v_W=k_W` and the projected interior
+forcing cancels. The remaining canonical-density rate is therefore
+
+\[
+ \boxed{d_x=-T_x A_0(R)R\,d_+\,M^{-1}e.}
+\]
+
+Here `e` is the wall evaluation vector and M the dz Gram matrix. This is
+an instantaneous statement at a moving-wall event, without a time derivative
+of M. An independent exact density/variation control passes with 6,000
+algebra values / 0.203125 CPU seconds. Numerical constraint-gradient and
+projection errors remain separately measurable against this boundary force.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -2219,6 +2219,14 @@ versus prefix derivative and all clock/profile differences. This defines
 a new reference state; it is not a reconstruction of the actual finite-alpha
 endpoint. Geometry is not adjusted to make the transfers agree.
 
+Grok review confirms V_x, scalar normalization, the W/U conversion and
+budget accounting. Its proposed clock objection is resolved by reading
+`RetainedCapBackground.reduced_jets(T,z)`: the common stage supplies the
+central time T and the background evaluates the two feet T+z and T-z.
+The script explicitly checks the quiet reflected foot and equality of all
+five original null-domain endpoints. Label/rate differences remain reported,
+and partial-profile versus material-x derivatives are labelled separately.
+
 The decision is whether a mismatch is already present in this one leading
 event and where it enters. Use **10 million charged values / 60 process-CPU
 seconds**, including preparation, queries, basis and the one stage, on one
@@ -2229,6 +2237,19 @@ Possible failure modes are incompatible clock labels, an exterior query on
 the excised side, and overinterpreting the reference event as the missing
 physical state; the separate differences, retained-side guard and explicit
 state definition keep those distinctions observable.
+
+Before interpreting its cap rate, independently reduce the alpha-zero
+mass density to wave energy plus its boundary derivative. A single exact
+control, **6,000 algebra values / 20 CPU seconds**, checks that identity
+and its integrated first variation. For a retained solution of the linear
+wave equation with zero departures, it predicts
+`d_x=-T_x*A0*R*d_plus*M^{-1}e`. This identifies a boundary-force comparison,
+not a numerical claim about the previously evolved endpoint.
+
+**Exact-control outcome:** the wave-energy density and first-variation
+identities pass with 6,000 algebra values / 0.203125 CPU seconds. The local
+comparison now reports the density-rate difference from the predicted
+incoming boundary forcing, leaving numerical gradient/projection error visible.
 
 ## Discrete cap mass balance, 16 October 2026
 

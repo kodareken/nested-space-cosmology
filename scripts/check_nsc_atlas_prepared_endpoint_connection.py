@@ -54,6 +54,8 @@ def main():
         try:
             field=solve_prepared_field(nodes=257,geometry_knots=257,budget=preparation)
             source_completed=True
+            if any(field.domain[key]!=geometry[key] for key in ('U0','Ua','Ub','Va','Vb')):
+                raise ValueError('prepared and coupled null domains differ')
             cap=CapLeadingField(field,derivative_order=4)
             transfer=build_prepared_background(cap);background=transfer['background']
             identity=array_hash(background.inputs)
@@ -63,6 +65,9 @@ def main():
             t=(V-field.domain['Va'])/(field.domain['Vb']-field.domain['Va'])
             R=float(gauge['r']);A0=1-R*R;offset=cap.domain['Ta']
             q=float(gauge['T'])+offset+float(np.arctanh(R))
+            minus=float(gauge['T'])+offset-float(np.arctanh(R))
+            if minus>background.inputs['labels'][background.onset['index']]:
+                raise ValueError('reference endpoint no longer has a quiet reflected foot')
             q_direct=float(field.geometry['arrival'](V))
             qx=float(gauge['T_x']+gauge['r_x_total']/A0)
             direct=field.wall(np.array([t]))
@@ -77,10 +82,12 @@ def main():
             Jx=float(direct['wall_dchi_dV_over_epsilon'][0])*Vx
             report['clock']=dict(x=x,V=V,V_x=Vx,radius=R,reference_T=float(gauge['T']),
                 history_label=q,prepared_label=q_direct,label_difference=q-q_direct,
+                quiet_reflected_label=minus,
                 history_label_rate=qx,prepared_label_rate=float(field.geometry['arrival'](V,1))*Vx,
                 wall_U_difference=float(gauge['U'])-float(field.geometry['wall'](V)))
             report['field']=dict(prepared_wall_value=float(direct['wall_chi_over_epsilon'][0]),
                 prepared_wall_material_rate=Jx,direct_profiles=direct_profile,retained_profiles=retained,
+                derivative_conventions='profile derivatives use q; material rates use x; J*V_x uses the prepared zero chi_U wall condition',
                 retained_material_rate=float(retained['F_prime'][1])*qx,
                 retained_minus_prepared_rate=float(retained['F_prime'][1])*qx-Jx,
                 source_value_identity=g-float(direct['source_chi_over_epsilon'][0]),
@@ -97,15 +104,22 @@ def main():
             background=background,background_clock_offset=offset)
         connection=row['connection'];caprow=connection['cap'];rates=connection['wall_rates']
         phase='endpoint comparison'
+        gram=basis.gram(Q(float(np.arctanh(R))),budget=budget)
+        trace=np.zeros(basis.dimension);trace[gram.wall['indices']]=gram.wall['value']
+        port=-rates['T']*A0*R*caprow['wall']['incoming_discrepancy']*gram.solve(trace,budget=budget)
+        density_error=caprow['rates']['canonical_density']-port
         report.update(status='completed_reference_comparison',common_wall=row['physical_wall'],
             wall_rates=rates,cap_wall=caprow['wall'],residual=connection['residual'],
             projected_gradient_discrepancy=caprow['projected_gradient_discrepancy'],
             prepared_minus_prefix_rate=Jx-connection['outgoing']['c_V'],
             prefix_outgoing=connection['outgoing'],
+            prefix_derivative_coordinate='x (the common stage names this null coordinate V)',
             cap_c_rate=connection['cap_c_x'],hybrid_c_rate=rates['c'],
             cap_rate_minus_retained_rate=connection['cap_c_x']-report['field']['retained_material_rate'],
-            cap_departure_rate_L2={key:float(np.sqrt(basis.gram(Q(float(np.arctanh(R))),budget=budget)
-                .squared_norm(value,budget=budget))) for key,value in caprow['rates'].items()},
+            cap_departure_rate_L2={key:float(np.sqrt(gram.squared_norm(value,budget=budget)))
+                for key,value in caprow['rates'].items()},
+            incoming_boundary_force_L2=float(np.sqrt(gram.squared_norm(port,budget=budget))),
+            density_rate_minus_boundary_force_L2=float(np.sqrt(gram.squared_norm(density_error,budget=budget))),
             exterior_departure_max=float(np.max(abs(state['departure']['c']))),
             numerical_error_enclosure=False)
         budget.check()

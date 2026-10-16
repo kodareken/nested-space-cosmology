@@ -4,7 +4,7 @@ import pytest
 
 from control_budget import ControlBudget
 
-CONTROLS=ControlBudget(maximum_evaluations=54000,cpu_seconds=20.)
+CONTROLS=ControlBudget(maximum_evaluations=60000,cpu_seconds=20.)
 R,A,H,mu,rootD=s.symbols('R A H mu rootD',positive=True)
 P,Q,dp,dh=s.symbols('P Q dp dh',real=True)
 beta=(H+A/H)/2
@@ -161,3 +161,23 @@ def test_mass_sensitivity_yields_only_metric_correction_projection(budget):
     assert s.simplify(defect-independent)==0
     assert defect.subs(beta,0)==0
     assert defect.subs({beta:1,Z:1,density:1})==-s.Rational(54,35)
+
+
+def test_zero_coupling_mass_density_yields_incoming_boundary_force(budget):
+    budget.check(6000)
+    r,chi,chi_z,k=s.symbols('r chi chi_z k',real=True,nonzero=True)
+    A0=1-r*r
+    # dr=A0 dz; the original positive radial density equals wave energy
+    # minus a total derivative. This includes the cap's potential term.
+    density_z=A0*chi*chi/2+(k*k+(chi_z-A0*chi/r)**2)/4
+    boundary=A0*chi*chi/(4*r)
+    boundary_z=A0*s.diff(boundary,r)+chi_z*s.diff(boundary,chi)
+    assert s.simplify(density_z-(k*k+chi_z*chi_z)/4+boundary_z)==0
+    # Integrating the first variation by parts leaves A0*h at the wall.
+    wall_h=chi_z/A0-chi/r
+    assert s.simplify(chi_z-A0*chi/r-A0*wall_h)==0
+    load,e,wp=s.symbols('load e wp',real=True)
+    gc=-load/2+e*A0*wall_h/2
+    force=-2*gc+e*(A0*r*wp-k)
+    incoming_gap=(k/A0+wall_h)/r-wp
+    assert s.simplify(force-load+A0*r*e*incoming_gap)==0
