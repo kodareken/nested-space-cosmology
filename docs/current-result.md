@@ -2,6 +2,26 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Numerical moving-cap reference, 16 October 2026
+
+The [polynomial adapter](../src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py)
+now uses the same radial mass engine as the P1 reference and independently
+integrates the radius-shape derivative. On the declared manufactured state,
+shape agreement is `1.37469e-15`, gradient agreement `2.91746e-14`, and
+the weak moving mass-balance residual `7.05545e-17`. The exact-model metric
+lower bound is `0.7861214361263889`.
+
+All 24 new controls and 32 affected P1/projection controls pass. The separate
+normal-trace discrepancy is `-0.0876791`, with scalar-tangent discrepancy
+`-0.0560200` against the actual hybrid interface. Its mass-rate discrepancy
+is `-0.000880323`, accounted for by the flux and moving-density trace gaps.
+The tiny weak mass residual does not supply wall transmission.
+This is one checked weak RHS with a prescribed timelike radius rate.
+Numerical error enclosures and a coupled physical evolution remain open.
+The [derivation and receipt](nsc-atlas-finite-amplitude.md#independent-numerical-shape-derivative)
+record its domain and independent checks. No large payload or prediction
+entry is generated.
+
 ## Regular polynomial moving-cap identity, 16 October 2026
 
 The [next reference construction](nsc-atlas-finite-amplitude.md#dilation-compatible-regular-field-space)

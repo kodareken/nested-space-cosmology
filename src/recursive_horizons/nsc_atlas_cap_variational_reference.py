@@ -26,39 +26,104 @@ def _exact_ball(value):
     return arb(fmpq(ratio.numerator, ratio.denominator))
 
 
+def _metric_floor_from_slopes(Z, lc, lk, al, *, scope):
+    """Apply the radial inequality to certified global derivative bounds.
+
+    Arb inputs and the working precision belong to the field-space caller.
+    """
+    R, A0 = Z.tanh(), 1/Z.cosh()**2
+    if not (R > 0 and R < 1):
+        raise ValueError("radial interval is not resolved inside 0<R<1")
+    F, pmax = lc*Z/R, lk*Z/A0
+    hmax = lc/A0+F
+    argument = (al/6).sqrt()*F
+    if not argument <= 100:
+        raise ValueError("potential argument is outside the finite reference domain")
+    if al == 0 or lc == 0:
+        potential = F*F
+    else:
+        sinc = argument.sinh()/argument
+        potential = F*F*sinc*sinc*(argument.cosh()**2+1)/2
+    bmax = R*R*potential/2+(pmax*pmax+hmax*hmax)/4
+    bound = A0-2*al*bmax
+    if not bound.is_finite() or not bound > 0:
+        raise ValueError("sufficient all-radius metric bound is not positive")
+    lower = bound.lower()
+    mantissa, exponent = lower.man_exp()
+    down = float(np.nextafter(float(lower), -np.inf))
+    if not np.isfinite(down) or down <= 0:
+        raise ValueError("positive metric margin is not representable")
+    return dict(A_lower=dict(mantissa=str(mantissa), exponent=int(exponent)),
+                A_lower_float_down=down, precision_bits=160,
+                scope=scope)
+
+
 def _metric_domain(z, chi, k, alpha, budget):
-    """Sufficient all-radius bound for the exact declared radial solution."""
+    """Sufficient all-radius bound for the exact declared P1 solution."""
     budget.check(64*len(z)+64)
     with ctx.workprec(160):
         zb, cb, kb = [[_exact_ball(v) for v in values] for values in (z, chi, k)]
         Z, al = zb[-1], _exact_ball(alpha)
-        R, A0 = Z.tanh(), 1/Z.cosh()**2
-        if not (R > 0 and R < 1):
-            raise ValueError("radial interval is not resolved inside 0<R<1")
         lc = max(abs((b-a)/(v-u)).upper() for a,b,u,v in zip(cb[:-1],cb[1:],zb[:-1],zb[1:]))
         lk = max(abs((b-a)/(v-u)).upper() for a,b,u,v in zip(kb[:-1],kb[1:],zb[:-1],zb[1:]))
-        F, pmax = lc*Z/R, lk*Z/A0
-        hmax = lc/A0+F
-        argument = (al/6).sqrt()*F
-        if not argument <= 100:
-            raise ValueError("potential argument is outside the finite reference domain")
-        if alpha == 0 or lc == 0:
-            potential = F*F
-        else:
-            sinc = argument.sinh()/argument
-            potential = F*F*sinc*sinc*(argument.cosh()**2+1)/2
-        bmax = R*R*potential/2+(pmax*pmax+hmax*hmax)/4
-        bound = A0-2*al*bmax
-        if not bound.is_finite() or not bound > 0:
-            raise ValueError("sufficient all-radius metric bound is not positive")
-        lower = bound.lower()
-        mantissa, exponent = lower.man_exp()
-        down = float(np.nextafter(float(lower), -np.inf))
-        if not np.isfinite(down) or down <= 0:
-            raise ValueError("positive metric margin is not representable")
-        return dict(A_lower=dict(mantissa=str(mantissa), exponent=int(exponent)),
-                    A_lower_float_down=down, precision_bits=160,
-                    scope="exact radial solution for the declared P1 fields; numerical ODE error excluded")
+        return _metric_floor_from_slopes(
+            Z,lc,lk,al,scope="exact radial solution for the declared P1 fields; numerical ODE error excluded")
+
+
+def _radial_variations(breaks, coefficients, *, centre_lapse, derivative_count,
+                       nonzero_field, budget, rtol, atol):
+    """Shared radial mass/sensitivity engine on a caller's fixed coordinate.
+
+    coefficients returns (r, dr/dcoordinate, A, a, rho, source_partials).
+    A shape partial includes its Jacobian derivative in source_partials.
+    Forward and adjoint routes share the metric, not sensitivity values.
+    """
+    state = np.zeros(2+derivative_count)
+    state[1] = centre_lapse
+    pieces = []
+    samples = 0
+    sampled_minimum_A = 1.
+    def evaluate(cell, point, mass):
+        nonlocal samples, sampled_minimum_A
+        row = coefficients(cell,point,mass)
+        samples += 1
+        _,jacobian,A,a,rho,partials = row
+        if (not np.all(np.isfinite([jacobian,A,a,rho])) or jacobian <= 0 or A <= 0
+                or len(partials) != derivative_count or not np.all(np.isfinite(partials))):
+            raise ValueError("invalid radial coefficient or derivative source")
+        sampled_minimum_A = min(sampled_minimum_A,A)
+        return row
+    for cell in range(len(breaks)-1):
+        def rhs(point, values):
+            _,jacobian,_,a,rho,partials = evaluate(cell,point,values[0])
+            budget.check(len(values))
+            return jacobian*np.r_[rho,a,partials-a*values[2:]]
+        solution = solve_ivp(rhs,(breaks[cell],breaks[cell+1]),state,method='DOP853',
+                             rtol=rtol,atol=atol,dense_output=True)
+        if not solution.success or not np.all(np.isfinite(solution.y)):
+            raise ValueError("radial mass-gradient integration failed")
+        state = solution.y[:,-1].copy()
+        pieces.append(solution)
+    mass, lapse = float(state[0]), float(state[1])
+    if mass < 0 or (mass == 0 and nonzero_field):
+        raise ValueError("positive reference mass is unresolved")
+    nodes, weights = leggauss(32)
+    adjoint = np.zeros(derivative_count)
+    for cell, solution in enumerate(pieces):
+        lo, hi = breaks[cell], breaks[cell+1]
+        points = (lo+hi)/2+(hi-lo)*nodes/2
+        values = solution.sol(points)
+        for j, point in enumerate(points):
+            _,jacobian,_,_,_,partials = evaluate(cell,point,values[0,j])
+            budget.check(derivative_count)
+            adjoint += (hi-lo)*weights[j]*jacobian*np.exp(values[1,j]-lapse)*partials/2
+    gradient = state[2:]
+    discrepancy = float(np.max(abs(gradient-adjoint)))
+    if discrepancy > GRADIENT_ABSOLUTE_TOLERANCE:
+        raise ValueError("forward and adjoint mass gradients exceed the declared tolerance")
+    return dict(mass=mass,lapse=lapse,gradient=gradient.copy(),adjoint_gradient=adjoint,
+                gradient_discrepancy=discrepancy,field_sites=samples,
+                sampled_minimum_A=sampled_minimum_A,adjoint_order=32)
 
 
 def variational_cap_reference(z_nodes, chi, canonical_density, *, alpha, T_x,
@@ -93,13 +158,9 @@ def variational_cap_reference(z_nodes, chi, canonical_density, *, alpha, T_x,
         raise ValueError("wall radius is not representable inside 0<R<1")
     if alpha > 0 and np.sqrt(alpha/6) == 0:
         raise ValueError("reference alpha scale underflows")
-    samples = 0
-    sampled_minimum_A = 1.
 
     def coefficients(cell, point, mass):
-        nonlocal samples, sampled_minimum_A
         budget.check(32+16*m)
-        samples += 1
         if not z[cell] <= point <= z[cell+1]:
             raise ValueError("radial evaluation escaped its declared element")
         r, A0 = float(np.tanh(point)), float(1/np.cosh(point)**2)
@@ -126,51 +187,26 @@ def variational_cap_reference(z_nodes, chi, canonical_density, *, alpha, T_x,
         A = A0-2*alpha*mass/r
         if not np.isfinite(A) or A <= 0:
             raise ValueError("numerical radial solution left the positive metric domain")
-        sampled_minimum_A = min(sampled_minimum_A,A)
         square = p*p+h*h
         a = alpha*square/(2*r)
         rho = r*r*P/2+A*square/4
         partials = np.r_[r*r*U*f_basis/2+A*h*h_basis/2, A*p*p_basis/2]
         return r,A0,A,a,rho,partials
 
-    state = np.zeros(2+2*m)
-    pieces = []
     try:
         with np.errstate(over="raise", invalid="raise", divide="raise"):
             centre_f = float(chi[1]/z[1])
             centre_q = np.sqrt(alpha/6)*centre_f
             centre_lapse = -float(np.log1p(2*np.sinh(centre_q/2)**2))
-            state[1] = centre_lapse
-            for cell in range(m):
-                def rhs(point, values):
-                    _,A0,_,a,rho,partials = coefficients(cell,point,values[0])
-                    budget.check(len(values))
-                    return A0*np.r_[rho,a,partials-a*values[2:]]
-                solution = solve_ivp(rhs,(z[cell],z[cell+1]),state,method='DOP853',
-                                     rtol=rtol,atol=atol,dense_output=True)
-                if not solution.success or not np.all(np.isfinite(solution.y)):
-                    raise ValueError("radial mass-gradient integration failed")
-                state = solution.y[:,-1].copy()
-                pieces.append(solution)
-            mass, lapse = float(state[0]), float(state[1])
-            if mass < 0 or (mass == 0 and (np.any(chi != 0) or np.any(k != 0))):
-                raise ValueError("positive reference mass is unresolved")
-            # Independent variation-of-constants integral: the forward
-            # sensitivity components are not read by this quadrature.
-            nodes, weights = leggauss(32)
-            adjoint = np.zeros(2*m)
-            for cell, solution in enumerate(pieces):
-                lo, hi = z[cell], z[cell+1]
-                points = (lo+hi)/2+(hi-lo)*nodes/2
-                values = solution.sol(points)
-                for j, point in enumerate(points):
-                    _,A0,_,_,_,partials = coefficients(cell,point,values[0,j])
-                    budget.check(2*m)
-                    adjoint += (hi-lo)*weights[j]*A0*np.exp(values[1,j]-lapse)*partials/2
-            gradient = state[2:]
-            gradient_discrepancy = float(np.max(abs(gradient-adjoint)))
-            if gradient_discrepancy > GRADIENT_ABSOLUTE_TOLERANCE:
-                raise ValueError("forward and adjoint mass gradients exceed the declared tolerance")
+            reference = _radial_variations(
+                z,coefficients,centre_lapse=centre_lapse,derivative_count=2*m,
+                nonzero_field=bool(np.any(chi != 0) or np.any(k != 0)),
+                budget=budget,rtol=rtol,atol=atol)
+            mass,lapse = reference['mass'],reference['lapse']
+            gradient,adjoint = reference['gradient'],reference['adjoint_gradient']
+            gradient_discrepancy = reference['gradient_discrepancy']
+            samples = reference['field_sites']
+            sampled_minimum_A = reference['sampled_minimum_A']
             gc, gk = gradient[:m], gradient[m:]
             budget.check(32*m+32)
             diagonal = np.r_[(widths[:-1]+widths[1:])/3,widths[-1]/3]

@@ -189,6 +189,19 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The numerical odd-polynomial reference and affected common-engine checks:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_variational_reference.py tests/test_nsc_atlas_cap_projection_bound.py tests/test_nsc_atlas_cap_polynomial_reference.py -q -s
+```
+
+All 56 controls pass. New polynomial development uses 673,997 charged values /
+1.515625 active CPU seconds across 28 executions; the separately admitted extraction regressions
+use 490,356 / 1.15625 for P1 and 4,620 / 0.5 for its projection bound.
+The [record](prior-art-and-open-claim.md#numerical-regular-polynomial-cap-reference)
+keeps those allowances separate from earlier development. One moving-domain
+RHS and its radius derivative are evaluated; no physical evolution occurs.
+
 The regular odd-polynomial space has an exact moving-domain mass identity:
 
 ```sh

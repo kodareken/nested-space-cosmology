@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "fdeac21aebade9626c564fa7d8bdc4ebd756b203",
+  "current_receipt_commit_parent": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 214519,
-      "change": "Derive a regular polynomial moving-cap mass identity with exact shape controls.",
-      "changed_from_commit": "fdeac21aebade9626c564fa7d8bdc4ebd756b203",
+      "bytes": 215079,
+      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
+      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "b8a3208d390623e5be41d58306fd7c1e34b47df4aa421a6fe5b100f94d58b797"
+      "sha256": "3e0b9f7d5741e33c3ebdfc96bf2db6ab36592b2c6f94a6cef42d0439d5cd494d"
     },
     {
       "bytes": 9543,
@@ -32164,6 +32164,14 @@
       "sha256": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81"
     },
     {
+      "bytes": 11059,
+      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
+      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+      "path": "src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py",
+      "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
+      "sha256": "b7f05a51313ac3014b18a5dcd67b58c8dddb213bae8a2fc037d555201c8bcaab"
+    },
+    {
       "bytes": 6049,
       "change": "Bound exact cap wall-momentum projection and identify the moving-mesh mass remainder.",
       "changed_from_commit": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
@@ -32204,12 +32212,12 @@
       "sha256": "d812471107802c3926a567f252208b79c14ac29a02c3f01e2b96610edc2c6bf9"
     },
     {
-      "bytes": 11775,
-      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
-      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
+      "bytes": 13278,
+      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
+      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
       "path": "src/recursive_horizons/nsc_atlas_cap_variational_reference.py",
       "retention_reason": "Primitive-conforming finite-backreaction mass gradients, metric domain bound and manufactured controls.",
-      "sha256": "c08b59c21f74ead66b809c50c97029e5e6600a43e3d15708bb51ca19907121a7"
+      "sha256": "1b8b1d0daa252b1b1965bcf2a4c4cb03450ca7fe67ba991cd2be723c6f4f24bf"
     },
     {
       "bytes": 16914,
@@ -35537,6 +35545,14 @@
       "path": "tests/test_nsc_atlas_cap_moving_projection_identity.py",
       "retention_reason": "Exact-model cap projection bounds and moving-domain compatibility controls.",
       "sha256": "9010cb3a0fca83aaebff47609201e84236f6fd8620e424675dd47dde27997059"
+    },
+    {
+      "bytes": 13960,
+      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
+      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+      "path": "tests/test_nsc_atlas_cap_polynomial_reference.py",
+      "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
+      "sha256": "65d5ad28c8c1bebc1a3cb45a028bdee3d063af1c5ac883ea008f639eb6dd3d5c"
     },
     {
       "bytes": 7887,

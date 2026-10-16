@@ -4074,6 +4074,124 @@ wall evaluation and mass gradient must all be transformed consistently.
 Using the P1 nodal-slope certificate unchanged would not bound polynomial
 derivatives between nodes.
 
+#### Independent numerical shape derivative
+
+The numerical polynomial reference keeps `xi=z/Z` fixed during radial
+integration. This supplies a second route to the shape derivative instead
+of setting it from the preceding identity. Define `J=Z A0`, so
+`n_xi=J rho` and `delta_xi=J a`. With the coefficient vectors held fixed,
+
+$$
+\begin{aligned}
+r_Z&=\xi A_0,& (A_0)_Z&=-2r\xi A_0,\\
+f_Z&=-f r_Z/r,& p_Z&=2r\xi p,\\
+q_Z&=(-1/Z+2r\xi)q,& h_Z&=q_Z-f_Z,\\
+A_Z\big|_n&=(A_0)_Z+2\alpha n r_Z/r^2,\qquad
+J_Z/J=1/Z-2r\xi.
+\end{aligned}
+$$
+
+Differentiate the original radial density at fixed running mass:
+
+$$
+s_Z=rr_ZP+\tfrac12r^2U f_Z
+ +\tfrac14(A_Z|_n)(p^2+h^2)+\tfrac A2(pp_Z+hh_Z).
+$$
+
+The forward mass-shape derivative starts at zero at the centre and obeys
+
+$$
+\boxed{G_\xi=J[-aG+s_Z]+J_Z\rho,\qquad G(0)=0.}
+$$
+
+The `-aG` term differentiates the metric's running mass; the last term
+differentiates the radial Jacobian. At `xi=1` this gives the total `N_Z`;
+there is no additional moving-endpoint term in this fixed-unit-interval
+integration. The endpoint contribution appears separately when comparing
+with the dilation identity. The mass does not depend on the centre lapse
+constant, so no centre-clock sensitivity is added to this mass equation.
+The inherited lapse itself still sets the weak rates.
+
+Near the centre the direct difference `q_Z-f_Z` cancels two finite terms.
+The equivalent regular form is
+
+$$
+h_Z=(-1/Z+2r\xi)h+\xi(2r-\gamma(z))f,\qquad
+\gamma(z)=1/z-A_0/r.
+$$
+
+For each odd monomial, the existing positive-gap evaluator also gives
+`h_j=xi^(p_j-1) [(p_j-1)+z gamma(z)]/(Z A0)`.
+Whole-cap derivative bounds are
+`L_chi=sum_j p_j |c_j|/Z` and `L_k=sum_j p_j |d_j|/Z`.
+Applying the earlier metric inequality to these actual global bounds,
+with exact binary coefficients and outward Arb arithmetic, supplies the
+polynomial-domain certificate.
+
+The [new adapter](../src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py)
+uses the same radial gradient engine as the P1 reference.
+It checks the independently integrated shape against dilation, the forward
+gradients against attenuation-weighted quadrature, and the Gram solves by
+their conditioning and residual. Its one-RHS domain is one to three odd
+modes with a positive metric certificate and a prescribed timelike wall
+speed. Requested ODE tolerances and these acceptance checks are not uniform
+numerical error enclosures. The scalar tangent is compared with both the
+weak characteristic pair and the actual hybrid-interface pair.
+
+The hybrid interface combines the supplied `w_plus` with the reconstructed
+`w_minus=(p_trace-h_trace)/R`. Set
+`dp=p_trace-p_weak`, `dh=h_trace-h_weak`. Its transmitted pair is
+`p_interface=p_weak+(dp-dh)/2`,
+`h_interface=h_weak+(-dp+dh)/2`. Consequently
+
+$$
+f_x^{\rm cap}-f_x^{\rm interface}
+=\frac{(R_x-T_xB)\,dp+(R_x+T_xB)\,dh}{2R}.
+$$
+
+The smaller expression `R_x dh/R` compares only with the weak pair; it is
+reported separately and is not called material transmission. Likewise the
+actual interface mass-rate discrepancy is the weak balance defect plus
+`T_x (J_weak-J_interface)+R_x (rho_trace-rho_interface)`, with
+`J_interface=A B p_interface h_interface/2` and
+`rho_trace-rho_interface=A(p_trace^2+h_trace^2-p_interface^2-h_interface^2)/4`.
+The potential cancels in this last difference because the field is common.
+
+On the admitted three-mode manufactured state at `alpha=.002`, `Z=.5`,
+the mass is `0.00023306432649816832` and the exact-model metric lower bound
+is `0.7861214361263889`. The independently integrated shape differs from
+the dilation identity by `1.3746870395486832e-15`; forward and adjoint
+gradients differ by `2.917457941897794e-14`. The mass/weak-flux-plus-motion
+residual is `7.05544563744942e-17`. The Gram condition number is about
+`849.576`; a separate 75-digit solve checks its effect on the rates.
+
+The reconstructed-minus-weak momentum discrepancy is `-4.18419e-10`,
+the normal discrepancy is `-0.08767909754045838`, and the actual interface
+scalar-tangent discrepancy is `-0.05601999753599185`. The interface mass-rate
+discrepancy is `-0.0008803230560492166`, decomposed into the displayed trace
+contributions. The weak-pair scalar difference is separately `-0.00758934`.
+These prescribed fields and
+incoming data are a manufactured calculation, not the retained physical
+cap. In particular, the tiny mass-balance residual does not erase the
+boundary discrepancies or supply material transmission.
+
+All [24 new controls](../tests/test_nsc_atlas_cap_polynomial_reference.py)
+pass in 28 executions with **673,997 charged values / 1.515625 active CPU seconds**. They
+include the independent radius/coefficient direction, quadratic limit,
+centre and lapse integral, global metric bound, high-precision Gram solve,
+timelike motion of both signs, quiet data and rejection of jointly corrupted
+forward/adjoint shape values before the weak solve. The one-mode finite-alpha
+case agrees with the existing P1 reference. The common-engine extraction also
+passes all 19 P1 controls with unchanged reported values and all 13 P1
+projection controls. Independent Grok derivation confirms the shape ODE and
+the use of global polynomial slope bounds; source review is pending.
+The interface check adds an exact two-trace scalar identity and checks the
+mass-rate discrepancy against its independent flux/density decomposition.
+A separate local-jet construction calls the existing `hybrid_wall_boundary()`
+and recovers the reported incoming/outgoing pair, radius/clock rates and
+transmitted scalar tangent. It is a local interface check, not an exterior
+source history or a solved coupled evolution.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

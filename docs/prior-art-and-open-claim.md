@@ -549,6 +549,68 @@ global derivative bound and basis conditioning must be handled explicitly;
 the old P1 helper cannot certify the new polynomial coefficients as if they
 were nodal samples.
 
+### Numerical regular-polynomial cap reference
+
+Implement one moving-cap weak RHS in the proven odd-polynomial space.
+Reuse the existing radial mass/sensitivity integration and independent
+adjoint quadrature through a common engine; keep the original P1 wrapper
+and its public results. A Grok worker owns that extraction while the root
+owns the new field evaluator and its controls. No production evolution is
+replaced.
+
+Use one to three odd modes in the dimensionless geometric coordinate, with
+the same potential and centre lapse. Certify whole-cap derivative norms
+from the polynomial coefficients, then apply the existing radial metric
+inequality. Check the Gram solve's conditioning and residual. Independently
+integrate the radius-shape sensitivity on fixed `xi=z/Z`, including the
+Jacobian derivative; compare it with the exact shape identity and a centred
+radius perturbation. Do not set it equal to the desired mass law.
+
+New manufactured controls share **2,000,000 coefficient/derivative values /
+60 active CPU seconds**. One separate P1 regression may use **500,000 values /
+15 seconds** after the extraction, and one projection-bound regression may
+use **10,000 values / 10 seconds** for the reused metric helper. These are
+new refactor checks, not a reopening of the earlier fixed-cap allowance.
+Use the declared nonconstant three-mode state at `Z=.5`, `alpha=.002`,
+`chi=(.03,.02,-.005)`, `k=(.01,.015,-.002)`, `T_x=.7` and timelike
+`R_x=+/-.04`; include quiet/zero-alpha limits and fixed-wall recovery.
+Two fixed radial tolerances, a joint coefficient/radius directional check,
+an independent high-precision Gram solve and deliberately corrupted gradient
+or shape values test the new connection. Gradient and shape agreement must
+be within `2e-8`, manufactured mass-rate balance within `1e-10`, and exact
+zero-alpha mass recovery within `2e-9`.
+
+Stop on a failed domain, inaccurate solve, inconsistent derivative or
+exhausted budget and identify its source before more computation. Main risks
+are a missing shape Jacobian, importing P1 bounds into the polynomial space,
+and confusing the weak boundary flux with strong material transmission.
+Separate shape integration, certified global slopes and explicit momentum,
+normal and scalar-tangent discrepancies address these risks. No retained
+state, new waveform, mesh scan or time trajectory is admitted.
+
+**Manufactured outcome:** all 24 new controls pass in 28 executions, using
+**673,997 charged values / 1.515625 active CPU seconds**. The separate extraction regression
+uses **490,356 / 1.15625** for 19 P1 controls and **4,620 / 0.5** for 13
+projection controls, within their separate new allowances. P1 values remain
+unchanged. No existing budget is silently reset.
+
+The polynomial shape identity residual is `1.37469e-15`, independent
+gradient discrepancy `2.91746e-14`, and weak moving mass-balance residual
+`7.05545e-17`. Normal and scalar-tangent discrepancies remain nonzero in
+the manufactured state, as recorded in the [owner](nsc-atlas-finite-amplitude.md#independent-numerical-shape-derivative).
+The initial scalar comparison used the weak characteristic pair. Following
+the existing hybrid interface through its reconstructed outgoing field gives
+the actual scalar discrepancy `-0.0560200` and interface mass-rate discrepancy
+`-0.000880323`. Both trace errors are now retained in the exact decomposition;
+the earlier weak-pair difference is named separately. Five affected controls
+pass after that interpretation correction, without changing fields or rates.
+One additional check constructs local exterior jets and calls the existing
+hybrid boundary helper to verify the actual transmitted pair and rates.
+Grok confirms the shape equation and global slope bound mathematically.
+The delegated extraction terminated without changing its owned file; the
+root completed the extraction and ran the regressions. A fresh Grok source
+review is in progress. No physical coupled trajectory has been run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
