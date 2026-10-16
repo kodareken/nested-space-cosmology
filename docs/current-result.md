@@ -2,6 +2,21 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Moving enrichment regularity, 16 October 2026
+
+An [exact C2 counterexample](nsc-atlas-finite-amplitude.md#tangent-enrichment-and-its-moving-knot-obstruction)
+shows why closing the background remainder at one instant is insufficient.
+Adding its second time tangent to the primitive introduces a moving
+gradient jump. The cap mass then has an internal-interface contribution
+`9 q^2` that ordinary pointwise differentiation misses. The corresponding
+time variation is outside H1; a fixed three-function space also misses the
+next time tangent with exact squared L2 error `3/2`.
+
+Three exact controls pass with 24,000 algebra values / 0.765625 CPU seconds.
+The original C2 background remains unchanged. An evolving enrichment needs
+suitable regularity or derived interface conditions; no physical solver
+has been changed on the strength of the frozen-slice identity alone.
+
 ## Fixed retained-pulse coupling diagnosis, 16 October 2026
 
 The [two fixed references](nsc-atlas-finite-amplitude.md#fixed-retained-pulse-mass-remainder-diagnosis)

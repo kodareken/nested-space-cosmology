@@ -189,6 +189,19 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The moving tangent-enrichment regularity control:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_background_enrichment.py -q -s
+```
+
+Three exact algebra controls pass across four development executions,
+using 24,000 charged values / 0.765625 CPU seconds of a 50,000 / 15
+allowance. They check the moving-interface mass term, loss of H1 time
+differentiability and the fixed-space tangent error. They run no physical
+trajectory and create no data file. The [owner](nsc-atlas-finite-amplitude.md#tangent-enrichment-and-its-moving-knot-obstruction)
+records the first symbolic-form assertion correction and the scope.
+
 The retained-background field jets, metric certificate and explicit-time
 reference controls:
 

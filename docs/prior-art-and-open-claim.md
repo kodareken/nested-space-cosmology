@@ -842,6 +842,45 @@ retains values, input/producer hashes and the one-ulp domain adjustment.
 No scan, time step or raw output file is generated. This diagnoses the
 stated affine coupling; a compatible evolving construction remains open.
 
+### Moving tangent-enrichment regularity check
+
+The finite remainder motivates testing a space containing the background
+time tangents `a=chi0_T` and `b=k0_T`. At a frozen slice, their exact inclusion
+eliminates the projection remainder by the chain rule, with actual basis
+values at the wall. Affine departure rates still subtract the represented
+background rates. This does not establish a time-dependent finite space.
+
+Before an enriched radial implementation, check the regularity of its
+moving basis. Use the exact manufactured C2 profile
+`F(u)=(u-kappa)_+^3`, `0<T<kappa`, `ell=kappa-T` inside `(0,Z)`.
+For positive z its reflected primitive is `(z-ell)_+^3`; its second time
+tangent is `b=6(z-ell)_+`. Adding `q*b` to the primitive introduces a moving
+gradient jump. Derive the actual cap quadratic mass by piecewise integration,
+compare its total derivative to ordinary pointwise differentiation, and
+check the H1 difference quotient. A fixed rational three-function Gram
+calculation can independently measure the missing third time tangent.
+
+Allowance: **50,000 charged algebra values / 15 CPU seconds**, zero field
+samples, radial solves or time steps. Retain the original profile and
+existing numerical results unchanged. A nonzero moving-interface term
+rules out simply feeding this enriched basis to the smooth explicit-time
+source; derive interface conditions or choose a different field space
+before a physical step. Independent Grok review checks the regularity and
+interface sign. No grid or mode scan is admitted.
+
+**Regularity-control outcome:** three controls pass across four executions,
+using 24,000 charged algebra values / 0.765625 CPU seconds. One assertion
+initially compared algebraically equivalent unsimplified expressions; its
+focused corrected repeat passes. Exact integration gives the missing
+moving-interface contribution `9 q^2`; the H1 gradient quotient diverges
+as `36 q^2/epsilon`, and the frozen three-function L2 projection error of
+`b_T` is `3/2`. The [derivation](nsc-atlas-finite-amplitude.md#tangent-enrichment-and-its-moving-knot-obstruction)
+separates frozen tangent closure from a valid evolving space. This excludes
+naive insertion of the moving enrichment into the smooth sensitivity
+source. Independent Grok review confirms the full mass derivative, positive
+interface sign, H1 obstruction and distinction from the unchanged C2
+background. It corrects the earlier smooth-pairing-only enrichment proposal.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0b8d0af84145ffb68549015e23d7defc40aa0edc",
+  "current_receipt_commit_parent": "42f98153186c6aba590399341f857a5b2282f0e5",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 217284,
-      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
-      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "bytes": 217615,
+      "change": "Derive and independently check the moving tangent-enrichment interface obstruction.",
+      "changed_from_commit": "42f98153186c6aba590399341f857a5b2282f0e5",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "c5d0a23241cc0b442b076dcdfbceeaabfaabf6d0b0e1f8f51c60249d153516b5"
+      "sha256": "11d2ddb6743808e1cf40233f10c4cd1de9baf834f674a3dfbf8388960fc61ae3"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 302743,
-      "change": "Record reviewed metric certificate and the fixed retained-pulse mass-remainder diagnosis.",
-      "changed_from_commit": "0b8d0af84145ffb68549015e23d7defc40aa0edc",
+      "bytes": 303616,
+      "change": "Derive and independently check the moving tangent-enrichment interface obstruction.",
+      "changed_from_commit": "42f98153186c6aba590399341f857a5b2282f0e5",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "bbadbfb394c2abd1e80e6f473d0719161ad499bab225de8c9cb09d1e26cbf681"
+      "sha256": "4af5cffea9d19a9ea5a06e0a5556958c224068b8eb39df4820c2cdea4822ebeb"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 225672,
-      "change": "Record reviewed metric certificate and the fixed retained-pulse mass-remainder diagnosis.",
-      "changed_from_commit": "0b8d0af84145ffb68549015e23d7defc40aa0edc",
+      "bytes": 229448,
+      "change": "Derive and independently check the moving tangent-enrichment interface obstruction.",
+      "changed_from_commit": "42f98153186c6aba590399341f857a5b2282f0e5",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e758ec75e669da91709896a378eb0a85ea022304deec45f1e2044806ce641229"
+      "sha256": "a4845c0a12bf388987fd7ffd32edb3a2e133efb0a067adc226141180b5dd0637"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 263251,
-      "change": "Record reviewed metric certificate and the fixed retained-pulse mass-remainder diagnosis.",
-      "changed_from_commit": "0b8d0af84145ffb68549015e23d7defc40aa0edc",
+      "bytes": 265707,
+      "change": "Derive and independently check the moving tangent-enrichment interface obstruction.",
+      "changed_from_commit": "42f98153186c6aba590399341f857a5b2282f0e5",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b602635f3093832012e2badfca07d23722387df87920e9e7323c6916219b8524"
+      "sha256": "6ba689d8f2669e84bb000a010a563721808e9783e46f6c496cd024e2fb51242a"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 93119,
-      "change": "Record reviewed metric certificate and the fixed retained-pulse mass-remainder diagnosis.",
-      "changed_from_commit": "0b8d0af84145ffb68549015e23d7defc40aa0edc",
+      "bytes": 93757,
+      "change": "Derive and independently check the moving tangent-enrichment interface obstruction.",
+      "changed_from_commit": "42f98153186c6aba590399341f857a5b2282f0e5",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "268b51bd82ed098c44f57d629373a6dd968bb95d9d9a10bfb6b58182b87c74c9"
+      "sha256": "2a14cf717a1c1d963158db23d4b5d20546488dd0577111cb4d97f8d11bbed0a1"
     },
     {
       "bytes": 18356,
@@ -35603,6 +35603,14 @@
       "path": "tests/test_nsc_atlas_cap_background_bound.py",
       "retention_reason": "Retained-background metric domain and explicit-time mass reference",
       "sha256": "e6a773a2c746e00bc5e185ae1846c2b7891dd7fc60553e155361a06440578c3e"
+    },
+    {
+      "bytes": 3084,
+      "change": "Derive and independently check the moving tangent-enrichment interface obstruction.",
+      "changed_from_commit": "42f98153186c6aba590399341f857a5b2282f0e5",
+      "path": "tests/test_nsc_atlas_cap_background_enrichment.py",
+      "retention_reason": "Exact moving-enrichment regularity and cap mass interface controls",
+      "sha256": "10015f4d3301b476f36d26cceee88ca5907b2a3a59755610c3f12076a4114e2c"
     },
     {
       "bytes": 5150,

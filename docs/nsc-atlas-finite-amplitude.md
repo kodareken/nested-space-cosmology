@@ -4708,6 +4708,84 @@ inputs and producers are bound by SHA256:
 | Polynomial reference | `35d7273d3ffda6ecb441b0280c07dbd794992950ba609674bd2be1e280b3fb0e` |
 | Shared radial engine | `0779ff9783932b2335b9dc09bb64a218daad6b694393d82cfc97f62ce8888f93` |
 
+#### Tangent enrichment and its moving-knot obstruction
+
+The retained-background remainder has a precise fixed-slice interpretation.
+Let `P` be the L2 projector onto the common field space, `eta=a-Pa` and
+`theta=b-Pb`. For admissible field variations,
+
+\[
+ N_T-g_c^Ta_h-g_d^Tb_h=D\mathcal N(\eta,\theta).
+\]
+
+If both background tangents are exactly in the trial space, this term and
+`a_W-(Pa)_W` vanish. This holds for the nonlinear constrained mass, without
+adding an artificial flux. New basis functions have their actual wall
+values, not the unit wall values of odd Legendre modes. Affine departure
+rates still subtract the represented background rates; total field rates
+include them. This establishes a frozen-slice identity only. The independent
+review confirms this identity and the need to account for basis motion.
+
+A stronger obstruction occurs for merely C2 input profiles if `b` is also
+used as a primitive-field direction. Consider the exact manufactured profile
+
+\[
+ F(u)=(u-\kappa)_+^3,\qquad 0<T<\kappa,\quad
+ \ell=\kappa-T\in(0,Z),\qquad x=z-\ell.
+\]
+
+On the positive cap, `chi0=x_+^3`, `a=k0=3x_+^2` and `b=6x_+`.
+Set `chi=chi0+q b`, `k=k0`, with constant nonzero `q`. The primitive is
+continuous, but its z derivative jumps by `6q` at the moving knot. At fixed
+wall, put `L=Z-ell` and `beta=A0(R)/R`. The actual geometric-limit cap mass is
+
+\[
+ N=\frac{9}{10}L^5+3qL^3+9q^2L
+             -\frac\beta4(L^3+6qL)^2.
+\]
+
+Ordinary pointwise time differentiation away from the knot, including the
+wall term, misses **`9 q^2`**. Reynolds differentiation of the piecewise
+integral supplies `-ell_T [rho_z]=[rho_z]=9q^2`, where
+`rho_z=(k^2+chi_z^2)/4` and brackets mean right minus left. The unmodified
+background `q=0` has no such jump. This obstruction is introduced by the
+new trial direction; it does not invalidate the retained C2 background
+reference or its original smooth time source.
+
+Moreover, `b_T=6 H(z-ell)` is not an H1 variation. For the pure added field
+`q b`, translating the knot by epsilon gives the exact spatial-gradient
+quotient norm squared `36 q^2/epsilon`. It diverges as epsilon tends to
+zero. Thus the expression `D N(psi_T c,psi_T d)` alone is not justified for
+this moving basis. The ordinary field derivative must be supplemented by
+the moving-interface contribution. With `Z=1`, `ell=1/2` and the exact
+space `span{z,a,b}`, the squared L2 projection error of `b_T` is **`3/2`**.
+This also directly rules out closure of that particular moving space.
+
+For the nonlinear radial equation `n_r=rho`, continuity of `n` at a moving
+internal radius `r_j(T)` gives the necessary sensitivity jump
+
+\[
+ [n_T]_j=-r_{j,T}[\rho]_j.
+\]
+
+It is zero for the original exact C2 background, whose radial source is
+continuous. A new basis that makes `rho` discontinuous needs this jump in
+addition to the existing bulk sensitivity. The weak evolution and its
+internal fluxes must also be derived; installing this sensitivity jump
+alone would not establish a conservative cap-wall evolution.
+
+Three [exact controls](../tests/test_nsc_atlas_cap_background_enrichment.py)
+pass across four executions, using **24,000 charged algebra values /
+0.765625 CPU seconds**, with zero field samples or time steps. The first
+run's difference-quotient assertion compared unsimplified expressions;
+its corrected exact algebraic equality passes on the focused repeat.
+The mass integration and projection controls passed on their first run.
+Independent Grok review confirms the full cap expression, interface sign
+and failure of the smooth-only pairing for this moving enrichment.
+The next implementation choice must preserve the required regularity or
+include derived internal-interface terms and error control. No enriched
+physical solver is installed by this diagnosis.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap
