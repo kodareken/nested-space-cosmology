@@ -3266,6 +3266,46 @@ channel only. The complete balance still needs the reference lapse, bulk
 field residuals, interface flux/density terms and controlled integration error.
 No retained-state comparison or corrected evolution follows from these tests.
 
+#### Reference lapse and field-residual channels
+
+The [smooth-piece integrator](../src/recursive_horizons/nsc_atlas_cap_transport_reference.py)
+uses six states: `n,delta,Z_f,Z_Pi,Z_Phi,Z_jump`. It integrates
+`n_r=b_*-a*n`, `delta_r=a`, each `Z_i,r=F_i-a*Z_i`, and
+`Z_jump,r=-a*Z_jump`, where
+
+$$
+F_f=\frac{r^2}{2}U_*\mathcal R_f^x,\qquad
+F_\Pi=\frac{r^2}{2}A^E\Pi\mathcal R_\Pi^x,\qquad
+F_\Phi=\frac{r^2}{2}A^E\Phi\mathcal R_\Phi^x.
+$$
+
+The radial product derivatives use
+`A_r=-2*r-2*alpha*(rho/r-n/r^2)` and
+`B_r=exp(delta)*(A_r+A*a)`. Multiplying the Pi residual by `r^2`
+before evaluation avoids unnecessary singular divisions. The regular centre
+has zero mass, accumulated channels and RHS, with its supplied centre lapse;
+axis field jets are not queried. A zero-width piece is the identity map for
+these states. This component never reads the native mass tangent or the
+local radial-map error.
+
+The complete caller must supply the same centre lapse as the existing cap,
+split at every reference interface, and add `-v*[rho]-T_x*[J]` to `Z_jump`
+between adjacent pieces. That interface assembly is not implemented by the
+smooth-piece integrator. Select the global centre and wall by their ordered
+event identities. An interior interface may coincide with `R` at the
+evaluation time and still contribute in the backward limit; its term must
+not disappear through an instantaneous `r<R` filter. Coincident interfaces
+retain separate velocities and intermediate traces. At the centre, the
+regular `rho,J` limits make their contributions vanish. Seven exact transport
+controls include these wall/centre and coincident-cut cases.
+
+Five manufactured numerical controls check the smooth-piece integration
+against exact polynomial integrals and an independent 60-digit constant-
+attenuation mass integral. The reported minimum `A` is over solver samples,
+not a proof of positivity between them. Requested solver tolerances likewise
+do not enclose integration error. Interface assembly, a controlled error
+comparison and application to the retained cap remain open.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

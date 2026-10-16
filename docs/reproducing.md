@@ -128,6 +128,21 @@ frozen partitions and invalid native evidence. Cumulative development uses
 outside the existing tangent's domain. No retained cap has been evaluated;
 the lapse, residual/jump integrals and integration-error control remain open.
 
+The next component integrates mass, lapse and the three field-residual channels
+on one declared smooth piece, with no input from the native mass tangent:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_transport_reference.py -q -s
+```
+
+Five manufactured checks pass using 9,828 charged values / 0.046875 active CPU
+seconds of a 200,000-point / 20-second allowance. Exact polynomial integrals
+and a 60-digit independent mass integral check the states and attenuation.
+The complete interface assembly remains to be implemented. The expanded seven
+transport-algebra controls also check wall/centre coincidences and separate
+interface velocities; that run uses zero field samples / 0.8125 CPU seconds.
+Neither component evaluates the retained cap or provides an error enclosure.
+
 The interface algebra uses no numerical fields or root search:
 
 ```sh

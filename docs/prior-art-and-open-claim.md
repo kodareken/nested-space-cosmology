@@ -143,6 +143,36 @@ and coefficient errors remain outside it. Native born panels exactly on a
 formula switch retain the existing tangent's rejection, while reference-only
 born pieces have named side limits. No retained cap or new evolution was run.
 
+Before the residual-integral implementation, extend the existing exact
+transport controls to interfaces coincident at the wall or centre. Their
+backward ordering determines which traces survive. An interior cut reaching
+the wall still has its moving jump in the limit; selecting jumps solely by
+the instantaneous inequality `0 < r < R` would erase that term. These exact
+polynomial controls use the existing 20-active-CPU-second algebra allowance
+and zero numerical field samples. They admit no physical cap evaluation.
+
+**Endpoint outcome:** all seven transport-algebra controls pass with zero
+field samples and 0.8125 additional active CPU seconds (2.453125 cumulative).
+They reject a merged velocity for coincident cuts and the wrong limiting wall
+trace. Grok independently confirmed the ordered-interface treatment.
+
+The next numerical component integrates one declared smooth reference piece:
+mass, lapse, three field-residual channels and attenuation of an incoming
+jump channel. Its inputs are explicit field jets, the same centre lapse and
+one caller-owned budget. It does not discover interfaces or assemble the
+final cap balance. Manufactured polynomial and constant-field controls,
+independent fixed-radius variation, born-piece and finite-domain guards
+share 200,000 charged values / 20 active CPU seconds. A sampled metric margin
+is reported as sampled, not a proof between solver queries. No retained cap,
+trajectory or scan is admitted; a failed identity stops this component.
+
+**Smooth-piece outcome:** all five controls pass on their first run, using
+9,828 charged values / 0.046875 active CPU seconds. Grok's independent source
+review confirmed the weighted residuals, regular centre start, attenuation,
+born-piece identity and shared budget. The component reports only sampled
+metric margins and requested solver tolerances. Full ordered-interface
+assembly and a controlled retained-state comparison remain outstanding.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

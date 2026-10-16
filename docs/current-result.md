@@ -124,6 +124,17 @@ not an integration-error enclosure. Native switch-domain exclusions remain
 explicit. The reference lapse, field-residual and jump integrals, and a
 controlled retained-state error comparison remain outstanding.
 
+The [smooth-piece transport integrator](../src/recursive_horizons/nsc_atlas_cap_transport_reference.py)
+now computes the reference mass/lapse and three attenuated field-residual
+channels on one declared smooth piece. Five manufactured controls pass with
+9,828 charged values / 0.046875 active CPU seconds, including independent
+polynomial and 60-digit integral comparisons. The exact transport suite now
+has seven controls, adding coincident wall cuts and the regular centre limit;
+that extension uses zero field samples / 0.8125 active CPU seconds. It shows
+why an interior interface reaching the wall must retain its jump and limiting
+trace. Full cap interface assembly, error control and retained-state evaluation
+remain outstanding. No transport law or physical wall equation has changed.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)
