@@ -75,8 +75,22 @@ the numerical equality comparison.
 The [saved audit](../results/development/nsc-atlas-background-time-audit-v1.json)
 completes with 57,152 points and 1.0625 CPU seconds; its standalone check
 passes. It exposes substantial cancellation and does not isolate the
-accumulated scalar time error. The next [local accepted-step comparison](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
-uses identical saved starting states and the existing source/gauge cache.
+accumulated scalar time error. The subsequent [local accepted-step comparison](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
+uses identical saved starting states and the existing source/gauge cache:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_background_step.py -q
+python scripts/run_python.py scripts/diagnose_nsc_atlas_background_step.py --output results/development/nsc-atlas-background-step-audit-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_background_step.py --output results/development/nsc-atlas-background-step-audit-v1.json --check
+```
+
+Its 22 controls use 5,312 points and 0.125 CPU seconds. The physical
+diagnostic uses 138,891 points and 1.546875 CPU seconds, within its
+30-second/250,000-point allowance. It takes six local SSPRK2 steps with
+twelve coupled stages and saves an exact five-part scalar balance; it
+replays no complete trajectory. Creation is exclusive and `--check`
+repeats only those same local steps. The [outcome](current-result.md#actual-scalar-step-balance-16-october-2026)
+retains the distinction between local increments and full-history error.
 
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)

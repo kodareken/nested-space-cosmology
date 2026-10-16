@@ -2010,6 +2010,49 @@ ledgers before subtraction makes the local comparison exact without
 asserting a propagated error estimate. The [admission](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
 fixes cut 82, both amplitudes, twelve stages and the existing input cache.
 
+The [completed local ledger](current-result.md#actual-scalar-step-balance-16-october-2026)
+uses 138,891 points and 1.546875 CPU seconds. The paired fine-minus-coarse
+increment is `8.03607226e-8`: background chain `8.32362063e-8`, exterior
+flux `-2.65646853e-9`, frame conversion `-2.21866157e-10`, cap return
+`2.85128618e-12` and radius conversion at roundoff. Its closure is
+`5.10e-17`. The individual amplitudes contain much larger cancelling
+terms. This is a measured local truncation sensitivity, not a reason to
+drop the exact background contribution from the update.
+
+#### Higher-order time integration with the same regional equations
+
+The next adapter changes the time update alone. With `Y` denoting the
+raw exterior, wall and cap departures, use SSPRK(3,3):
+
+$$
+\begin{aligned}
+Y_1&=Y_n+hF(x_n,Y_n),\\
+Y_2&=\tfrac34Y_n+\tfrac14[Y_1+hF(x_n+h,Y_1)],\\
+Y_{n+1}&=\tfrac13Y_n+\tfrac23[Y_2+hF(x_n+h/2,Y_2)].
+\end{aligned}
+$$
+
+The [standard method](https://math.umd.edu/~tadmor/pub/linear-stability/Gottlieb-Shu-Tadmor.SIREV-01.pdf)
+has weights `b=(1/6,1/6,2/3)` at `c=(0,1,1/2)`. Its order conditions
+are `sum(b)=1`, `sum(b*c)=1/2`, `sum(b*c^2)=1/3` and `b*A*c=1/6`.
+The time coordinate can be included as an additional equation `x'=1`,
+which fixes the nonautonomous stage coordinates. Source and reference
+geometry are read at these coordinates; physical predictor geometry
+is not formed by mixing reference values from different times.
+
+In the five-part scalar ledger above, replace every trapezoidal increment
+by `h*(J_0/6+J_1/6+2*J_2/3)`. The accepted canonical primitive still
+satisfies `chi_1=chi_RK+R_B`, and the same telescoping frame/geometry/
+background decomposition remains exact. The cap wall scalar is neither
+prescribed nor independently evolved. Explicit midpoint nodes retain
+exact access to the original cache despite floating-point rounding.
+
+The [bounded local comparison](prior-art-and-open-claim.md#ssprk3-with-fixed-physical-inputs-16-october-2026)
+holds every spatial and physical input fixed. Computational profile knots
+and limiter changes can reduce the measured temporal order. Any measured
+improvement leaves the spatial constraint and cap-refinement questions
+separate; the Runge--Kutta coefficients do not resolve those questions.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

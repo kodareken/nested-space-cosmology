@@ -1,0 +1,951 @@
+{
+  "audit_source_bindings": {
+    "scripts/diagnose_nsc_atlas_background_step.py": "e9ac13a5f2d93be2ad9f0d4734897af86d3f6b1184ddfab639ae3d9d66945455",
+    "scripts/diagnose_nsc_atlas_background_time.py": "d29a4190a40b9344c51c57833a58053ede0b3c34992c71ffa920a0ea5f0bab09",
+    "tests/test_diagnose_nsc_atlas_background_step.py": "76bcaf5ad07a4addea5edf4fb61e46945d047cceb06d3a395b88c5640901f12c",
+    "tests/test_diagnose_nsc_atlas_background_time.py": "26cbb7da5a9719bf958a3f9e3d90e8cfa2ccca3539269daf97f8d3e862b16ee6"
+  },
+  "cases": [
+    {
+      "alpha": 0.0,
+      "amplitude": "zero",
+      "case": 1,
+      "coarse": {
+        "accepted": {
+          "background_chi": 0.40393928083298497,
+          "canonical_chi": 0.40390726790138154,
+          "canonical_f": 0.7901407702061856,
+          "departure_chi": -3.2012931603427964e-05,
+          "raw_state_sha256": "4db5ce2a859337911d60ce626cc3ddfd8e7072d5a0f0e06ffaf720f3f65fcf77",
+          "wall": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.40390726790138154,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          }
+        },
+        "alpha": 0.0,
+        "background_chain": -1.2471547330871607e-05,
+        "closures": {
+          "canonical": 1.0408340855860843e-17,
+          "departure": -1.3552527156068805e-20,
+          "invariant": 0.0,
+          "invariant_flux": 0.0
+        },
+        "components": {
+          "background_remainder": -1.2471547330861199e-05,
+          "cap_return_flux": 0.0,
+          "exterior_flux": -0.03010090807492071,
+          "frame_remainder": -6.938893903907228e-18,
+          "reference_geometry_remainder": 0.0
+        },
+        "evaluated_points": 22917,
+        "h": 0.00031837581350641075,
+        "increment": -0.03011337962225158,
+        "initial": {
+          "background_chi": 0.43405088067761705,
+          "canonical_chi": 0.4340206475236331,
+          "canonical_f": 0.8497175256679502,
+          "departure_chi": -3.0233153983926392e-05,
+          "raw_state_sha256": "4a3e5afa3e7bfdab50b9877a4a03a507efae97edaabce16ba4ebe5ecda06e3d4",
+          "wall": {
+            "L": -0.1949995039703361,
+            "T": 0.11316934212664698,
+            "c": 0.4340206475236331,
+            "r": 0.510782271064088,
+            "s": 0.0708484300943692
+          }
+        },
+        "label": "zero coarse",
+        "left_index": 328,
+        "predictor": {
+          "background_chi": 0.40393928083298497,
+          "canonical_chi": 0.4039090300142606,
+          "canonical_f": 0.7901442173271911,
+          "departure_chi": -3.0250818724399613e-05,
+          "raw_state_sha256": "84171b1880b3f9f55b2d8e65f9a1f31517b1cf1c06214a7c061940dff197bb33",
+          "wall": {
+            "L": -0.19518588358401456,
+            "T": 0.11398835977492675,
+            "c": 0.4039090300142606,
+            "r": 0.5111839347259385,
+            "s": 0.07137502284233466
+          }
+        },
+        "predictor_geometry_defect": {
+          "T": 9.645376172132255e-07,
+          "r": 2.3206970995630696e-07
+        },
+        "reference_geometry": {
+          "T": {
+            "accepted": 0.11398835977492675,
+            "actual_defect": -6.986439760048313e-10,
+            "closure": 7.589415207398531e-19,
+            "physical_rk": 0.11398836047357072,
+            "reference_defect": -6.986439767637728e-10
+          },
+          "r": {
+            "accepted": 0.5111839347259385,
+            "actual_defect": -1.7485490833024642e-10,
+            "closure": -3.707971429900425e-17,
+            "physical_rk": 0.5111839349007934,
+            "reference_defect": -1.7485487125053212e-10
+          }
+        },
+        "right_index": 330,
+        "rk": {
+          "T": 0.11398836047357072,
+          "c": 0.4039197394487124,
+          "chi": 0.4039197394487124,
+          "radius": 0.5111839349007934
+        },
+        "stages": [
+          {
+            "chain": {
+              "B_x": -95.23980705056434,
+              "Jc": -95.23986253449159,
+              "Jchi": -95.23986253449158,
+              "Q_c": -95.23986253449159,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": 0.0,
+              "departure_chain_defect": 4.119968255444917e-15,
+              "departure_chi_rate": -5.54839272452045e-05,
+              "invariant_split_defect": 0.0
+            },
+            "courant": 0.10032277022324568,
+            "wall_rates": {
+              "L": -0.5832619334152995,
+              "T": 2.569457464915384,
+              "c": -95.23986253449159,
+              "r": 1.2608733927347167,
+              "s": 1.6518589404873003
+            }
+          },
+          {
+            "chain": {
+              "B_x": -93.83943214041858,
+              "Jc": -93.85055701344058,
+              "Jchi": -93.85055701344056,
+              "Q_c": -93.85055701344058,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": 0.0,
+              "departure_chain_defect": 5.0133508455729725e-16,
+              "departure_chi_rate": -0.011124873021984673,
+              "invariant_split_defect": 0.0
+            },
+            "courant": 0.10054596387268525,
+            "wall_rates": {
+              "L": -0.5875557653452419,
+              "T": 2.575520967356473,
+              "c": -93.85055701344058,
+              "r": 1.2623323262024924,
+              "s": 1.6561382276143746
+            }
+          }
+        ],
+        "x_left": 0.45221363341504833,
+        "x_right": 0.45253200922855474
+      },
+      "comparison_closure": -5.377642775528102e-17,
+      "fine_components": {
+        "background_remainder": -3.1225128863110463e-06,
+        "cap_return_flux": 0.0,
+        "exterior_flux": -0.030108539357976742,
+        "frame_remainder": -8.673617379884035e-18,
+        "reference_geometry_remainder": 0.0
+      },
+      "fine_minus_coarse": {
+        "background_remainder": 9.349034444550153e-06,
+        "cap_return_flux": 0.0,
+        "exterior_flux": -7.631283056031002e-06,
+        "frame_remainder": -1.734723475976807e-18,
+        "reference_geometry_remainder": 0.0
+      },
+      "fine_minus_coarse_increment": 1.7177513884636397e-06,
+      "halves": [
+        {
+          "accepted": {
+            "background_chi": 0.41893922948827905,
+            "canonical_chi": 0.41890940584756226,
+            "canonical_f": 0.8198107747072572,
+            "departure_chi": -2.9823640716770277e-05,
+            "raw_state_sha256": "12fe286487df8dd97f307d09ec40006e6b8ba46e5b5771554c2e6db2c4455e1c",
+            "wall": {
+              "L": -0.19509252289574863,
+              "T": 0.11357860964185618,
+              "c": 0.41890940584756226,
+              "r": 0.5109830448339117,
+              "s": 0.07111155616572565
+            }
+          },
+          "alpha": 0.0,
+          "background_chain": -1.6818358138104283e-06,
+          "closures": {
+            "canonical": -2.7755575615628914e-17,
+            "departure": 6.88214269644119e-22,
+            "invariant": -5.551115123125783e-17,
+            "invariant_flux": 0.0
+          },
+          "components": {
+            "background_remainder": -1.6818358137826728e-06,
+            "cap_return_flux": 0.0,
+            "exterior_flux": -0.015109559840257025,
+            "frame_remainder": 0.0,
+            "reference_geometry_remainder": 0.0
+          },
+          "evaluated_points": 22917,
+          "h": 0.00015918790675317762,
+          "increment": -0.015111241676070863,
+          "initial": {
+            "background_chi": 0.43405088067761705,
+            "canonical_chi": 0.4340206475236331,
+            "canonical_f": 0.8497175256679502,
+            "departure_chi": -3.0233153983926392e-05,
+            "raw_state_sha256": "4a3e5afa3e7bfdab50b9877a4a03a507efae97edaabce16ba4ebe5ecda06e3d4",
+            "wall": {
+              "L": -0.1949995039703361,
+              "T": 0.11316934212664698,
+              "c": 0.4340206475236331,
+              "r": 0.510782271064088,
+              "s": 0.0708484300943692
+            }
+          },
+          "label": "zero first half",
+          "left_index": 328,
+          "predictor": {
+            "background_chi": 0.41893922948827905,
+            "canonical_chi": 0.4189089875019249,
+            "canonical_f": 0.8198099559997842,
+            "departure_chi": -3.0241986354163016e-05,
+            "raw_state_sha256": "5f65c62cf4b83879a65bb51a97edbec942f68a3f5107312ab8802918c0583e44",
+            "wall": {
+              "L": -0.19509252289574863,
+              "T": 0.11357860964185618,
+              "c": 0.4189089875019249,
+              "r": 0.5109830448339117,
+              "s": 0.07111155616572565
+            }
+          },
+          "predictor_geometry_defect": {
+            "T": 2.4095987799326295e-07,
+            "r": 5.797375341991414e-08
+          },
+          "reference_geometry": {
+            "T": {
+              "accepted": 0.11357860964185618,
+              "actual_defect": -8.719594490891325e-11,
+              "closure": 1.463672932855431e-18,
+              "physical_rk": 0.11357860972905212,
+              "reference_defect": -8.719594637258618e-11
+            },
+            "r": {
+              "accepted": 0.5109830448339117,
+              "actual_defect": -2.1817214701513876e-11,
+              "closure": 4.889751797909625e-17,
+              "physical_rk": 0.5109830448557289,
+              "reference_defect": -2.1817263599031855e-11
+            }
+          },
+          "right_index": 329,
+          "rk": {
+            "T": 0.11357860972905212,
+            "c": 0.4189110876833761,
+            "chi": 0.4189110876833761,
+            "radius": 0.5109830448557289
+          },
+          "stages": [
+            {
+              "chain": {
+                "B_x": -95.23980705056434,
+                "Jc": -95.23986253449159,
+                "Jchi": -95.23986253449158,
+                "Q_c": -95.23986253449159,
+                "canonical_flux_defect": 0.0,
+                "canonical_frame_defect": 1.4210854715202004e-14,
+                "cap_c_return": 0.0,
+                "departure_chain_defect": 4.119968255444917e-15,
+                "departure_chi_rate": -5.54839272452045e-05,
+                "invariant_split_defect": 0.0
+              },
+              "courant": 0.05016138511161409,
+              "wall_rates": {
+                "L": -0.5832619334152995,
+                "T": 2.569457464915384,
+                "c": -95.23986253449159,
+                "r": 1.2608733927347167,
+                "s": 1.6518589404873003
+              }
+            },
+            {
+              "chain": {
+                "B_x": -94.59834914747319,
+                "Jc": -94.59314863368144,
+                "Jchi": -94.59314863368145,
+                "Q_c": -94.59314863368144,
+                "canonical_flux_defect": -1.4210854715202004e-14,
+                "canonical_frame_defect": -1.4210854715202004e-14,
+                "cap_c_return": 0.0,
+                "departure_chain_defect": -9.697104230710352e-15,
+                "departure_chi_rate": 0.005200513791744504,
+                "invariant_split_defect": 0.0
+              },
+              "courant": 0.05021715824977821,
+              "wall_rates": {
+                "L": -0.5854069413689937,
+                "T": 2.572485924537174,
+                "c": -94.59314863368144,
+                "r": 1.261602035655732,
+                "s": 1.6539967147036105
+              }
+            }
+          ],
+          "x_left": 0.45221363341504833,
+          "x_right": 0.4523728213218015
+        },
+        {
+          "accepted": {
+            "background_chi": 0.40393928083298497,
+            "canonical_chi": 0.40390898565277,
+            "canonical_f": 0.7901441305453352,
+            "departure_chi": -3.0295180214955975e-05,
+            "raw_state_sha256": "3b7b468ae966c580c26daa16682021d884c2b72bb1b95ce77233149926120d71",
+            "wall": {
+              "L": -0.19518588358401456,
+              "T": 0.11398835977492675,
+              "c": 0.40390898565277,
+              "r": 0.5111839347259385,
+              "s": 0.07137502284233466
+            }
+          },
+          "alpha": 0.0,
+          "background_chain": -1.4406770725543944e-06,
+          "closures": {
+            "canonical": 2.6020852139652106e-17,
+            "departure": -1.4293680984916318e-21,
+            "invariant": 0.0,
+            "invariant_flux": 0.0
+          },
+          "components": {
+            "background_remainder": -1.4406770725283735e-06,
+            "cap_return_flux": 0.0,
+            "exterior_flux": -0.014998979517719715,
+            "frame_remainder": -8.673617379884035e-18,
+            "reference_geometry_remainder": 0.0
+          },
+          "evaluated_points": 23061,
+          "h": 0.00015918790675323313,
+          "increment": -0.015000420194792252,
+          "initial": {
+            "background_chi": 0.41893922948827905,
+            "canonical_chi": 0.41890940584756226,
+            "canonical_f": 0.8198107747072572,
+            "departure_chi": -2.9823640716770277e-05,
+            "raw_state_sha256": "12fe286487df8dd97f307d09ec40006e6b8ba46e5b5771554c2e6db2c4455e1c",
+            "wall": {
+              "L": -0.19509252289574863,
+              "T": 0.11357860964185618,
+              "c": 0.41890940584756226,
+              "r": 0.5109830448339117,
+              "s": 0.07111155616572565
+            }
+          },
+          "label": "zero second half",
+          "left_index": 329,
+          "predictor": {
+            "background_chi": 0.40393928083298497,
+            "canonical_chi": 0.40391028505334947,
+            "canonical_f": 0.7901466724886381,
+            "departure_chi": -2.8995779635475878e-05,
+            "raw_state_sha256": "14321d3392a045ee1bc7d1a2cd449151af4fa42005269059a411c8f5aa0e868d",
+            "wall": {
+              "L": -0.19518588358401456,
+              "T": 0.11398835977492675,
+              "c": 0.40391028505334947,
+              "r": 0.5111839347259385,
+              "s": 0.07137502284233466
+            }
+          },
+          "predictor_geometry_defect": {
+            "T": 2.4148359134047465e-07,
+            "r": 5.8104815169393587e-08
+          },
+          "reference_geometry": {
+            "T": {
+              "accepted": 0.11398835977492675,
+              "actual_defect": -8.746531277026293e-11,
+              "closure": 2.2768245622195593e-18,
+              "physical_rk": 0.11398835986239206,
+              "reference_defect": -8.746531504708749e-11
+            },
+            "r": {
+              "accepted": 0.5111839347259385,
+              "actual_defect": -2.1896595647774575e-11,
+              "closure": -3.474867962816042e-17,
+              "physical_rk": 0.5111839347478351,
+              "reference_defect": -2.1896560899094947e-11
+            }
+          },
+          "right_index": 330,
+          "rk": {
+            "T": 0.11398835986239206,
+            "c": 0.40391042632984253,
+            "chi": 0.40391042632984253,
+            "radius": 0.5111839347478351
+          },
+          "stages": [
+            {
+              "chain": {
+                "B_x": -94.59834914747319,
+                "Jc": -94.59314862000738,
+                "Jchi": -94.59314862000738,
+                "Q_c": -94.59314862000738,
+                "canonical_flux_defect": 0.0,
+                "canonical_frame_defect": 0.0,
+                "cap_c_return": 0.0,
+                "departure_chain_defect": -3.472916398905568e-15,
+                "departure_chi_rate": 0.0052005274658063795,
+                "invariant_split_defect": 0.0
+              },
+              "courant": 0.050217158249795724,
+              "wall_rates": {
+                "L": -0.5854069413689937,
+                "T": 2.572485924537174,
+                "c": -94.59314862000738,
+                "r": 1.261602035655732,
+                "s": 1.6539967147036105
+              }
+            },
+            {
+              "chain": {
+                "B_x": -93.83943214041858,
+                "Jc": -93.85055698095319,
+                "Jchi": -93.85055698095317,
+                "Q_c": -93.85055698095319,
+                "canonical_flux_defect": 0.0,
+                "canonical_frame_defect": 1.4210854715202004e-14,
+                "cap_c_return": 0.0,
+                "departure_chain_defect": 3.849351393192535e-15,
+                "departure_chi_rate": -0.01112484053459569,
+                "invariant_split_defect": 0.0
+              },
+              "courant": 0.05027298193635139,
+              "wall_rates": {
+                "L": -0.5875557653452419,
+                "T": 2.575520967356473,
+                "c": -93.85055698095319,
+                "r": 1.2623323262024924,
+                "s": 1.6561382276143746
+              }
+            }
+          ],
+          "x_left": 0.4523728213218015,
+          "x_right": 0.45253200922855474
+        }
+      ]
+    },
+    {
+      "alpha": 0.00012983127142551443,
+      "amplitude": "finite",
+      "case": 4,
+      "coarse": {
+        "accepted": {
+          "background_chi": 0.41464284276549784,
+          "canonical_chi": 0.40394502145357103,
+          "canonical_f": 0.7904859195494741,
+          "departure_chi": -0.010697821311926804,
+          "raw_state_sha256": "214a284e6823482bb46c7a5da30d515019079867e67a9f92468d67bbf4082b14",
+          "wall": {
+            "L": -0.1967345551159429,
+            "T": 0.1137387830031497,
+            "c": 0.4039459317600628,
+            "r": 0.5110084967532295,
+            "s": 0.07136601819970702
+          }
+        },
+        "alpha": 0.00012983127142551443,
+        "background_chain": -1.2422436733688924e-05,
+        "closures": {
+          "canonical": -2.7755575615628914e-17,
+          "departure": 1.6534083130403943e-18,
+          "invariant": 3.469446951953614e-18,
+          "invariant_flux": 2.0071835348619736e-18
+        },
+        "components": {
+          "background_remainder": -1.2422520719757024e-05,
+          "cap_return_flux": -5.393683117006266e-08,
+          "exterior_flux": -0.030100345775596577,
+          "frame_remainder": 2.9675313942267856e-10,
+          "reference_geometry_remainder": 6.106226635438361e-16
+        },
+        "evaluated_points": 22917,
+        "h": 0.00031837581350641075,
+        "increment": -0.030112821936393752,
+        "initial": {
+          "background_chi": 0.44460581937144944,
+          "canonical_chi": 0.43405762250123103,
+          "canonical_f": 0.8500735701624794,
+          "departure_chi": -0.010548196870218409,
+          "raw_state_sha256": "6a8ab0d68def149834844463e12f172f9f8af17b1a39071330c1630e6b7f192e",
+          "wall": {
+            "L": -0.19650165386899607,
+            "T": 0.11292722096492297,
+            "c": 0.4340587536964566,
+            "r": 0.5106118314186231,
+            "s": 0.07083982688853491
+          }
+        },
+        "label": "finite coarse",
+        "left_index": 328,
+        "predictor": {
+          "background_chi": 0.4146388590101211,
+          "canonical_chi": 0.4039160162730057,
+          "canonical_f": 0.7904290634786438,
+          "departure_chi": -0.01072284273711539,
+          "raw_state_sha256": "960014da348178ad11bbfeeb620321661f8ba234fb0cf0697ac643e7b43d4295",
+          "wall": {
+            "L": -0.1967341498916135,
+            "T": 0.1137388802059312,
+            "c": 0.40391692638319876,
+            "r": 0.5110085584345658,
+            "s": 0.0713660247855211
+          }
+        },
+        "predictor_geometry_defect": {
+          "T": 9.645376172157192e-07,
+          "r": 2.32069709895429e-07
+        },
+        "reference_geometry": {
+          "T": {
+            "accepted": 0.1137387830031497,
+            "actual_defect": -6.986439760048313e-10,
+            "closure": 7.589415207398531e-19,
+            "physical_rk": 0.11373878370179367,
+            "reference_defect": -6.986439767637728e-10
+          },
+          "r": {
+            "accepted": 0.5110084967532295,
+            "actual_defect": -1.7485479730794395e-10,
+            "closure": 7.39425881635114e-17,
+            "physical_rk": 0.5110084969280843,
+            "reference_defect": -1.7485487125053212e-10
+          }
+        },
+        "right_index": 330,
+        "rk": {
+          "T": 0.11373878370179367,
+          "c": 0.403958354280782,
+          "chi": 0.40395744389030475,
+          "radius": 0.5110084969280843
+        },
+        "stages": [
+          {
+            "chain": {
+              "B_x": -94.68891948856897,
+              "Jc": -95.23822215842873,
+              "Jchi": -95.23747204654606,
+              "Q_c": -95.23805471241562,
+              "canonical_flux_defect": 0.0,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": -0.00016744601310669002,
+              "departure_chain_defect": 6.328271240363392e-15,
+              "departure_chi_rate": -0.5485525579770957,
+              "invariant_split_defect": -1.7842715152593946e-15
+            },
+            "courant": 0.10032277022324568,
+            "wall_rates": {
+              "L": -0.7281109042936542,
+              "T": 2.546345133640919,
+              "c": -95.23822215842873,
+              "r": 1.2453676737126063,
+              "s": 1.6506187364186788
+            }
+          },
+          {
+            "chain": {
+              "B_x": -93.45699423119186,
+              "Jc": -93.84900391517908,
+              "Jchi": -93.84836509302806,
+              "Q_c": -93.8488325362634,
+              "canonical_flux_defect": 1.4210854715202004e-14,
+              "canonical_frame_defect": 1.4210854715202004e-14,
+              "cap_c_return": -0.00017137891568443247,
+              "departure_chain_defect": 1.4765966227514582e-14,
+              "departure_chi_rate": -0.3913708618362227,
+              "invariant_split_defect": 3.457168362350216e-15
+            },
+            "courant": 0.10054596387268525,
+            "wall_rates": {
+              "L": -0.7349503085455309,
+              "T": 2.5517980194624506,
+              "c": -93.84900391517908,
+              "r": 1.246439132165922,
+              "s": 1.6548566522241048
+            }
+          }
+        ],
+        "x_left": 0.45221363341504833,
+        "x_right": 0.45253200922855474
+      },
+      "comparison_closure": -2.7390927931835937e-18,
+      "fine_components": {
+        "background_remainder": -2.990250068890532e-06,
+        "cap_return_flux": -5.393397988387818e-08,
+        "exterior_flux": -0.03010797971512114,
+        "frame_remainder": 7.488698029745056e-11,
+        "reference_geometry_remainder": 2.220446049250313e-16
+      },
+      "fine_minus_coarse": {
+        "background_remainder": 9.432270650866492e-06,
+        "cap_return_flux": 2.851286184479708e-12,
+        "exterior_flux": -7.633939524562261e-06,
+        "frame_remainder": -2.21866159125228e-10,
+        "reference_geometry_remainder": -3.885780586188048e-16
+      },
+      "fine_minus_coarse_increment": 1.7981121110399734e-06,
+      "halves": [
+        {
+          "accepted": {
+            "background_chi": 0.42957538456380817,
+            "canonical_chi": 0.41894700529423745,
+            "canonical_f": 0.8201619110516852,
+            "departure_chi": -0.010628379269570732,
+            "raw_state_sha256": "34adc7f2523a586268d21163d4c8f2f4cd8b093381824aa3a89fb5ae313a9cf0",
+            "wall": {
+              "L": -0.19661783338195135,
+              "T": 0.11333278484082925,
+              "c": 0.4189480216257899,
+              "r": 0.5108101213296116,
+              "s": 0.07110275389001483
+            }
+          },
+          "alpha": 0.00012983127142551443,
+          "background_chain": -1.429483158198186e-06,
+          "closures": {
+            "canonical": 2.0816681711721685e-17,
+            "departure": -5.285485590866834e-19,
+            "invariant": -1.734723475976807e-18,
+            "invariant_flux": -1.809970441939531e-18
+          },
+          "components": {
+            "background_remainder": -1.4294935617997773e-06,
+            "cap_return_flux": -2.6812167434117322e-08,
+            "exterior_flux": -0.015109275801740232,
+            "frame_remainder": 3.680264600014471e-11,
+            "reference_geometry_remainder": 1.6653345369377348e-16
+          },
+          "evaluated_points": 22917,
+          "h": 0.00015918790675317762,
+          "increment": -0.015110732070666655,
+          "initial": {
+            "background_chi": 0.44460581937144944,
+            "canonical_chi": 0.43405762250123103,
+            "canonical_f": 0.8500735701624794,
+            "departure_chi": -0.010548196870218409,
+            "raw_state_sha256": "6a8ab0d68def149834844463e12f172f9f8af17b1a39071330c1630e6b7f192e",
+            "wall": {
+              "L": -0.19650165386899607,
+              "T": 0.11292722096492297,
+              "c": 0.4340587536964566,
+              "r": 0.5106118314186231,
+              "s": 0.07083982688853491
+            }
+          },
+          "label": "finite first half",
+          "left_index": 328,
+          "predictor": {
+            "background_chi": 0.42957437415520044,
+            "canonical_chi": 0.41893885435153355,
+            "canonical_f": 0.8201459292141045,
+            "departure_chi": -0.010635519803666883,
+            "raw_state_sha256": "fbc7f5f22740d75a8012526232efe8542f117f689623fdc6d3fdbf7d528223ac",
+            "wall": {
+              "L": -0.19661773099887808,
+              "T": 0.1133328092764964,
+              "c": 0.4189398706237048,
+              "r": 0.5108101368654929,
+              "s": 0.07110275553440173
+            }
+          },
+          "predictor_geometry_defect": {
+            "T": 2.409598779939135e-07,
+            "r": 5.7973753444552634e-08
+          },
+          "reference_geometry": {
+            "T": {
+              "accepted": 0.11333278484082925,
+              "actual_defect": -8.719595878670106e-11,
+              "closure": -1.2414114874959026e-17,
+              "physical_rk": 0.1133327849280252,
+              "reference_defect": -8.719594637258618e-11
+            },
+            "r": {
+              "accepted": 0.5108101213296116,
+              "actual_defect": -2.181732572381634e-11,
+              "closure": -6.21247844834194e-17,
+              "physical_rk": 0.5108101213514289,
+              "reference_defect": -2.1817263599031855e-11
+            }
+          },
+          "right_index": 329,
+          "rk": {
+            "T": 0.1133327849280252,
+            "c": 0.41894945111935156,
+            "chi": 0.41894843477739563,
+            "radius": 0.5108101213514289
+          },
+          "stages": [
+            {
+              "chain": {
+                "B_x": -94.68891948856897,
+                "Jc": -95.23822215842873,
+                "Jchi": -95.23747204654606,
+                "Q_c": -95.23805471241562,
+                "canonical_flux_defect": 0.0,
+                "canonical_frame_defect": 1.4210854715202004e-14,
+                "cap_c_return": -0.00016744601310669002,
+                "departure_chain_defect": 6.328271240363392e-15,
+                "departure_chi_rate": -0.5485525579770957,
+                "invariant_split_defect": -1.7842715152593946e-15
+              },
+              "courant": 0.05016138511161409,
+              "wall_rates": {
+                "L": -0.7281109042936542,
+                "T": 2.546345133640919,
+                "c": -95.23822215842873,
+                "r": 1.2453676737126063,
+                "s": 1.6506187364186788
+              }
+            },
+            {
+              "chain": {
+                "B_x": -94.13202339606468,
+                "Jc": -94.59155727745248,
+                "Jchi": -94.59086393707024,
+                "Q_c": -94.59138786160239,
+                "canonical_flux_defect": 0.0,
+                "canonical_frame_defect": 1.4210854715202004e-14,
+                "cap_c_return": -0.0001694158500961454,
+                "departure_chain_defect": 6.106226635438361e-15,
+                "departure_chi_rate": -0.45884054100556326,
+                "invariant_split_defect": 8.118505867571457e-16
+              },
+              "courant": 0.05021715824977821,
+              "wall_rates": {
+                "L": -0.7315422294730025,
+                "T": 2.5490665891987936,
+                "c": -94.59155727745248,
+                "r": 1.245901127418192,
+                "s": 1.652735850938717
+              }
+            }
+          ],
+          "x_left": 0.45221363341504833,
+          "x_right": 0.4523728213218015
+        },
+        {
+          "accepted": {
+            "background_chi": 0.41464285680782703,
+            "canonical_chi": 0.40394681955352485,
+            "canonical_f": 0.7904894386710589,
+            "departure_chi": -0.01069603725430221,
+            "raw_state_sha256": "6f37b3176e01462ad2c502b341519e9da99ea41fcd584f98f03bfc039a90ef59",
+            "wall": {
+              "L": -0.19673455700626932,
+              "T": 0.11373878271052928,
+              "c": 0.40394772987217387,
+              "r": 0.511008496498859,
+              "s": 0.07136601817688645
+            }
+          },
+          "alpha": 0.00012983127142551443,
+          "background_chain": -1.5607459553732689e-06,
+          "closures": {
+            "canonical": 8.673617379884035e-18,
+            "departure": 8.538092108323347e-19,
+            "invariant": 1.734723475976807e-18,
+            "invariant_flux": 1.0781372842342656e-18
+          },
+          "components": {
+            "background_remainder": -1.5607565070907548e-06,
+            "cap_return_flux": -2.7121812449760862e-08,
+            "exterior_flux": -0.014998703913380908,
+            "frame_remainder": 3.8084334297305844e-11,
+            "reference_geometry_remainder": 5.551115123125783e-17
+          },
+          "evaluated_points": 23061,
+          "h": 0.00015918790675323313,
+          "increment": -0.015000291753616057,
+          "initial": {
+            "background_chi": 0.42957538456380817,
+            "canonical_chi": 0.41894700529423745,
+            "canonical_f": 0.8201619110516852,
+            "departure_chi": -0.010628379269570732,
+            "raw_state_sha256": "34adc7f2523a586268d21163d4c8f2f4cd8b093381824aa3a89fb5ae313a9cf0",
+            "wall": {
+              "L": -0.19661783338195135,
+              "T": 0.11333278484082925,
+              "c": 0.4189480216257899,
+              "r": 0.5108101213296116,
+              "s": 0.07110275389001483
+            }
+          },
+          "label": "finite second half",
+          "left_index": 329,
+          "predictor": {
+            "background_chi": 0.4146418666941578,
+            "canonical_chi": 0.4039404514580983,
+            "canonical_f": 0.7904769531586467,
+            "departure_chi": -0.010701415236059473,
+            "raw_state_sha256": "52d50e7c3aa50687865456c3efcb1c7251d959e2fd3a82b420f36339ea34336c",
+            "wall": {
+              "L": -0.19673445690964764,
+              "T": 0.11373880688724315,
+              "c": 0.4039413617336408,
+              "r": 0.5110085118155602,
+              "s": 0.07136601983889214
+            }
+          },
+          "predictor_geometry_defect": {
+            "T": 2.4148359135288877e-07,
+            "r": 5.810481517874483e-08
+          },
+          "reference_geometry": {
+            "T": {
+              "accepted": 0.11373878271052928,
+              "actual_defect": -8.746529889247512e-11,
+              "closure": 1.6154612370034016e-17,
+              "physical_rk": 0.11373878279799458,
+              "reference_defect": -8.746531504708749e-11
+            },
+            "r": {
+              "accepted": 0.511008496498859,
+              "actual_defect": -2.1896484625472112e-11,
+              "closure": 7.627362283435524e-17,
+              "physical_rk": 0.5110084965207555,
+              "reference_defect": -2.1896560899094947e-11
+            }
+          },
+          "right_index": 330,
+          "rk": {
+            "T": 0.11373878279799458,
+            "c": 0.4039492906286809,
+            "chi": 0.4039483802994802,
+            "radius": 0.5110084965207555
+          },
+          "stages": [
+            {
+              "chain": {
+                "B_x": -94.1320661294047,
+                "Jc": -94.5915629825779,
+                "Jchi": -94.59086961503604,
+                "Q_c": -94.5913935773694,
+                "canonical_flux_defect": 1.4210854715202004e-14,
+                "canonical_frame_defect": 1.4210854715202004e-14,
+                "cap_c_return": -0.0001694052084884187,
+                "departure_chain_defect": 7.16093850883226e-15,
+                "departure_chi_rate": -0.4588034856313428,
+                "invariant_split_defect": -7.31335022922941e-15
+              },
+              "courant": 0.050217158249795724,
+              "wall_rates": {
+                "L": -0.7315414053795912,
+                "T": 2.549066515784887,
+                "c": -94.5915629825779,
+                "r": 1.2459010560448902,
+                "s": 1.6527357663326312
+              }
+            },
+            {
+              "chain": {
+                "B_x": -93.45714607339369,
+                "Jc": -93.84902074145842,
+                "Jchi": -93.84838184151495,
+                "Q_c": -93.84884939449543,
+                "canonical_flux_defect": -1.4210854715202004e-14,
+                "canonical_frame_defect": -2.842170943040401e-14,
+                "cap_c_return": -0.00017134696299159248,
+                "departure_chain_defect": -7.16093850883226e-15,
+                "departure_chi_rate": -0.39123576812125543,
+                "invariant_split_defect": 5.329531304124058e-15
+              },
+              "courant": 0.05027298193635139,
+              "wall_rates": {
+                "L": -0.7349478201329402,
+                "T": 2.5517978079693573,
+                "c": -93.84902074145842,
+                "r": 1.2464389111049197,
+                "s": 1.6548563981887063
+              }
+            }
+          ],
+          "x_left": 0.4523728213218015,
+          "x_right": 0.45253200922855474
+        }
+      ]
+    }
+  ],
+  "execution": {
+    "accepted_endpoint_extra_stage_calls": 0,
+    "cpu_seconds": 1.546875,
+    "evaluated_points": 138891,
+    "full_trajectory_replays": 0,
+    "hash_authentication_passes": 2,
+    "initial_evaluations": 0,
+    "local_ssprk2_steps": 6,
+    "local_step_points": 137790,
+    "maximum_courant": 0.10054596387268525,
+    "profile_fit_points": 1101,
+    "profile_stage_extractions": 0,
+    "retries": 0,
+    "source_integrations": 0,
+    "stage_calls": 12
+  },
+  "input": {
+    "authenticated_input_files": 66,
+    "hashed_bytes": 42502534,
+    "manifest_sha256": "b9a657079dbef081d9a343e1814a6f8271582bb9370443dbfd91305401c4584c",
+    "path": "results/development/nsc-atlas-background-evolution-v1/background.json",
+    "recursive_validation": false,
+    "sha256": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca"
+  },
+  "limits": {
+    "cpu_seconds": 30.0,
+    "evaluated_points": 250000,
+    "stage_calls": 12
+  },
+  "paired_closure": 5.103741437143623e-17,
+  "paired_fine_minus_coarse": {
+    "background_remainder": 8.323620631633943e-08,
+    "cap_return_flux": 2.851286184479708e-12,
+    "exterior_flux": -2.656468531259115e-09,
+    "frame_remainder": -2.2186615739050453e-10,
+    "reference_geometry_remainder": -3.885780586188048e-16
+  },
+  "paired_increment": 8.036072257633364e-08,
+  "runtime": {
+    "numpy": "2.5.1",
+    "python": "3.14.8",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-background-step-audit-v1",
+  "scope": "one actual interval and exact increment decomposition; local coarse/fine sensitivity, not a global error bound or causal attribution for the full saved trajectory",
+  "settings": {
+    "cache_indices": [
+      328,
+      329,
+      330
+    ],
+    "cap_quadrature_order": 4,
+    "cases": [
+      1,
+      4
+    ],
+    "cut": 82,
+    "exterior_quadrature_order": 2,
+    "maximum_courant": 0.4,
+    "time_scheme": "frozen SSPRK2 _combine; one coarse and two halves from identical raw start"
+  }
+}

@@ -2,6 +2,44 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Actual scalar-step balance, 16 October 2026
+
+The [local-step record](../results/development/nsc-atlas-background-step-audit-v1.json)
+compares one step with two half steps from the same saved state at
+`x=0.45221363341504833`, separately at zero and finite amplitude. Its
+six local SSPRK2 steps use exactly twelve coupled stages, 138,891 charged
+points and 1.546875 process CPU seconds. The existing source/gauge cache
+supplies every stage. The standalone repeat check passes; no complete
+trajectory or source solve is replayed.
+
+The table gives **two half steps minus one step** for the invariant scalar
+increment, followed by finite minus zero. All entries are field increments,
+not instantaneous rates.
+
+| Contribution | Zero amplitude | Finite amplitude | Finite minus zero |
+| --- | ---: | ---: | ---: |
+| Exterior flux | `-7.63128306e-6` | `-7.63393952e-6` | `-2.65646853e-9` |
+| Returning-cap flux | `0` | `2.85128618e-12` | `2.85128618e-12` |
+| Frame conversion | `-1.73e-18` | `-2.21866159e-10` | `-2.21866157e-10` |
+| Reference-radius conversion | `0` | `-3.89e-16` | `-3.89e-16` |
+| Background chain | `9.34903444e-6` | `9.43227065e-6` | `8.32362063e-8` |
+| Total scalar change | `1.71775139e-6` | `1.79811211e-6` | `8.03607226e-8` |
+
+The paired five-part sum closes within `5.11e-17`; individual accepted
+scalar balances close within `5.56e-17`. The maximum stage Courant value
+is `0.100546`. Thus the local calculation identifies large, partially
+cancelling flux/background terms and a paired difference carried mainly
+by the background-chain term. It does not assign the whole retained
+history's error to this single interval. Removing that term would also
+remove a required part of the exact representation.
+
+The [derivation](nsc-atlas-finite-amplitude.md#isolating-the-scalar-time-contribution)
+retains the reference-radius and clock increments explicitly. Its 22
+independent controls use 5,312 points and 0.125 CPU seconds, including
+matched-profile cancellation, curved reference geometry, and ordered cap
+primitive reconstruction. The next method comparison must preserve these
+identities while reducing temporal truncation in the full coupled update.
+
 ## Scalar time-contribution audit, 16 October 2026
 
 The [saved-profile audit](../results/development/nsc-atlas-background-time-audit-v1.json)
@@ -28,8 +66,8 @@ halves; its finite-minus-zero refinement change is only `1.0121e-7`.
 These rates and prescribed paths do not explain the accumulated paired
 scalar history difference `5.71668e-6`.
 
-The next [accepted-step balance](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
-compares one actual step with two half steps from identical saved data.
+The subsequent [accepted-step balance](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
+above compares one actual step with two half steps from identical saved data.
 It separates exterior flux, cap return, frame conversion, reference
 geometry and background-chain contributions before any evolution method
 is changed. The [owner](nsc-atlas-finite-amplitude.md#isolating-the-scalar-time-contribution)

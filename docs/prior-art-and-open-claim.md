@@ -1,6 +1,63 @@
 # Prior art and admission of new research
 
+## SSPRK3 with fixed physical inputs, 16 October 2026
+
+The exact local ledger below identifies a temporal cancellation to improve.
+Keep the current action, amplitude, source/gauge cache, characteristic
+profile, cap reconstruction and exterior derivatives fixed. Borrow the
+three-stage third-order method in [Gottlieb, Shu and Tadmor, equation 4.2](https://math.umd.edu/~tadmor/pub/linear-stability/Gottlieb-Shu-Tadmor.SIREV-01.pdf).
+Apply it to the same raw departures at stage times `x`, `x+h`, `x+h/2`.
+Its formal order does not establish stability or third-order convergence
+of this spatially reconstructed, piecewise-profile coupled system.
+
+Implement an explicit cached-midpoint interface: each stage reads the
+existing source and reference data at its exact supplied key. Validate
+the midpoint to floating-point accuracy without replacing it by a new
+lookup coordinate. Restore physical geometry independently at every
+stage and accepted endpoint. The original 513-node cache supports
+128/256-step SSPRK3 comparisons; it does not supply the midpoints for
+512 steps.
+
+The operator controls have **30 process CPU seconds and 150,000 points**.
+Use independent Runge--Kutta order identities, nonautonomous polynomial
+forcing, nonlinear convergence, curved reference reconstruction, matched
+profile cancellation, actual quiet-vacuum stages and endpoint/domain/CFL/
+shared-budget failures. Preserve the `.4` stage Courant guard and the
+first-failure context. Profile knots and limiter changes must remain
+visible rather than assuming smooth convergence across them.
+
+After controls and independent review, admit one local diagnostic at the
+same saved cut 82: one SSPRK3 step for each amplitude, **six coupled
+stages total**, using cache indices 328, 330 and 329 in stage order.
+Its **30-process-CPU-second/150,000-point** budget includes hash
+authentication, profile reconstruction and the weighted five-part ledger.
+The diagnostic controls separately have 30 CPU seconds/100,000 points.
+Authenticate and reuse the saved SSPRK2 local results without replaying
+their twelve stages. Compare endpoints and paired increments against
+their coarse, two-half-step and `(4*fine-coarse)/3` values. That last value
+is an asymptotic extrapolant, not an independent exact solution or an
+error certificate.
+
+The exact ledger uses stage weights `(1/6,1/6,2/3)`. Retain all five
+contributions, the common wall primitive and reference-geometry defects.
+Stop on the first input, domain, arithmetic, CFL or budget failure; no
+automatic retry, source interpolation, profile replacement or full
+trajectory is admitted by this local calculation. One standalone check
+may reproduce the same six stages. Its result determines whether a
+subsequent fixed 128/256 trajectory comparison is useful; that comparison
+needs its own finite shared budget and controls before it runs.
+
 ## Actual scalar-step balance, 16 October 2026
+
+**Outcome:** the [six local steps](current-result.md#actual-scalar-step-balance-16-october-2026)
+finish with twelve stages, 138,891 points and 1.546875 process CPU seconds.
+Standalone checking reproduces the result. The paired local scalar change
+is `8.03607e-8`, chiefly the difference of the background-chain contributions
+after substantial cancellation in each amplitude. The five-part sum closes
+within `5.11e-17`. All 22 controls pass with 5,312 points and 0.125 CPU
+seconds. This locates the local contributions without attributing the
+whole trajectory's error or changing the physical model. The admission
+below records the fixed calculation chosen beforehand.
 
 The saved-profile audit below exposes large cancelling terms. Its frozen
 rates and straight paths cannot identify the error of an accepted coupled

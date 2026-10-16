@@ -53,7 +53,9 @@ def compact_state(state,gauge,profile,alpha,budget):
     wall={k:float(gauge[k])+float(state["wall"][k]) for k in ("r","L","T","s")}
     bg=profile.background(wall["T"],wall["r"],budget=budget)
     B=float(bg["chi"])
-    Z=float(np.sum(state["cap"]["Iq"]))
+    # Match the frozen cap's ordered primitive exactly. Pairwise np.sum can
+    # differ by roundoff and would fail the bitwise saved-wall comparison.
+    Z=float(np.cumsum(state["cap"]["Iq"])[-1])
     chi=B+Z
     wall["c"]=frame(wall["r"],chi,alpha)
     budget.check(len(state["cap"]["Iq"])+8)
