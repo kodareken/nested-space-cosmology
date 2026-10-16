@@ -3306,6 +3306,27 @@ not a proof of positivity between them. Requested solver tolerances likewise
 do not enclose integration error. Interface assembly, a controlled error
 comparison and application to the retained cap remain open.
 
+The [full cap assembler](../src/recursive_horizons/nsc_atlas_cap_transport_balance.py)
+now connects those pieces. `reference_transport_cap()` authenticates the
+centre values against the frozen reconstruction and integrates every ordered
+piece, adding each interface event to the jump channel. It independently
+reconstructs the weighted jump sum from the lapse increments. It never reads
+the native mass tangent. `cap_transport_balance()` separately obtains the
+affine local-map error and combines it with the wall, bulk and jump terms in
+the selected-reference identity. The wall fields must share a limiting trace;
+a wall exactly at `r=0.01` remains excluded from this full comparison.
+
+The affine chain and residual ODE are distinct numerical solutions of the
+reference radial problem. Their mass and material-rate differences, and the
+jump-sum discrepancy, are returned alongside the full balance defect. They
+are checks, never replacements for a missing channel. A returned defect is
+not automatically accepted: retained-state interpretation requires the
+explicit accuracy checks in the [calculation record](prior-art-and-open-claim.md#next-fixed-terminal-comparison).
+Nine manufactured controls cover exact constant caps, nonconstant coupled
+rates, coincident wall/axis/switch events and rejected input inconsistencies.
+The existing coupled-rate ledger is recovered with defect about `8.2e-16`.
+No retained cap has yet been evaluated with this assembler.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

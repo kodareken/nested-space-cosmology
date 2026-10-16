@@ -143,6 +143,24 @@ transport-algebra controls also check wall/centre coincidences and separate
 interface velocities; that run uses zero field samples / 0.8125 CPU seconds.
 Neither component evaluates the retained cap or provides an error enclosure.
 
+The full cap assembler now connects these components and every ordered
+interface event, while keeping the affine and residual-ODE reference solutions
+independent:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_transport_balance.py -q -s
+```
+
+Nine manufactured controls pass. Cumulative development, including failed
+and corrected attempts, uses 890,431 charged values / 12.328125 active CPU
+seconds of a 2,000,000-point / 60-second allowance. One coupled-rate test uses
+the original RHS and discrete ledger; the new channel sum differs by about
+`8.2e-16`. The full-balance wall remains off the native formula switches, and
+the centre lapse is independently checked against the frozen field. Reported
+reference mass/rate/jump discrepancies still require a declared accuracy
+budget before interpreting a retained-state result. That next fixed terminal
+comparison is specified in the calculation owner; it has not run yet.
+
 The interface algebra uses no numerical fields or root search:
 
 ```sh

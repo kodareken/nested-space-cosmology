@@ -173,6 +173,67 @@ born-piece identity and shared budget. The component reports only sampled
 metric margins and requested solver tolerances. Full ordered-interface
 assembly and a controlled retained-state comparison remain outstanding.
 
+The full-cap assembler now has a defined bounded scope: reuse frozen native
+panels and their reference switch pieces, propagate mass/lapse/residual
+states, and add every ordered interior interface event, including born pieces
+at coincident radii. Authenticate the centre lapse against the frozen field.
+Construct the final comparison from the independent local-map error derivative,
+wall conversion, bulk channels and jump channel; compare it with the original
+native tangent balance. The two derivative constructions remain independent.
+
+Manufactured full caps and exact piecewise-density controls share 2,000,000
+charged values / 60 active CPU seconds. They cover both amplitudes, nonzero
+interface motion, separate coincident velocities, wall and axis events,
+unchanged inputs and deliberate centre/partition corruption. The full-balance
+domain retains the native wall-sample switch guards. No retained state, new
+trajectory or scan is admitted by these controls. Missing jumps, mismatched
+wall traces or independent identity failure stop the assembler before a
+physical calculation. Numerical solver tolerances remain distinct from an
+error estimate; controlled retained-state evaluation will need its own budget.
+
+**Full-cap outcome:** all nine manufactured controls pass. Development uses
+890,431 charged values / 12.328125 active CPU seconds, including the first
+small-radius constant-field rejection, its focused correction, and the final
+mass/jump assertions. Decimal moment/rate rounding selected different tied
+limiter representatives in the two arithmetic paths. The exact constant-field
+oracle now uses dyadic data; the common-branch guard remains unchanged. The
+coupled-rate control recovers the original ledger balance `-0.12288686492081752`
+with assembled defect `-8.187894806610529e-16`. Grok independently confirmed
+the formula and required explicit reference mass/rate/jump agreement checks.
+
+### Next fixed terminal comparison
+
+After the recorder and its manufactured orchestration checks are frozen,
+evaluate only the original zero/finite terminal cut 128 at 64 cells and native
+quadrature order eight. Reuse the saved profile, wall clocks and incoming
+trace, authenticate the existing mass-ledger summary, and reconstruct two
+metrics, two RHS directions and two tangents per analysis. Compare each with
+the saved order-eight mass ledger before interpreting the new channels.
+
+Use exactly two reference tolerance pairs, `(rtol,atol)=(2e-10,2e-12)` and
+`(2e-12,2e-14)`, on those same states and directions. This is a fixed numerical
+accuracy comparison, with no time step, spatial grid scan or source fit.
+Per analysis there are four full reference balances. Creation plus independent
+reconstruction share **48,000,000 charged points / 300 process CPU seconds**;
+a later standalone check has **24,000,000 / 150 seconds**. Failure records
+the phase, counts, scalar defects and consumed allowance before any redesign.
+
+The intended resolution is `1e-6` in the normalized mass balance, comfortably
+below the retained `0.1`-scale remainder. Require reference mass disagreement
+at most `1e-8`, its wall-density effect `abs(R_x*a_W*delta_n)` at most `1e-7`,
+reference-rate disagreement at most `2e-7`, and jump attenuation disagreement
+at most `1e-7`. Native map telescopes retain their derived roundoff bounds.
+Each channel's change between the two tolerance settings must be at most
+`5e-7`, and the full balance defect at most `1e-6`. Report all checks and
+sampled metric margins. These are declared diagnostic accuracy checks, not a
+uniform integration-error enclosure or proof of a positive metric between
+samples. A failure is not permission to loosen its limit without diagnosis.
+
+Keep full piece/channel data under ignored `.build/results`. The tracked
+summary contains the scalar channels, accuracy comparisons, source/input
+identities, raw hash and regeneration command. This comparison diagnoses the
+existing state; it does not establish a corrected evolution or closure.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

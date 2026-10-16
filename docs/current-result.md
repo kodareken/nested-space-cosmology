@@ -135,6 +135,19 @@ why an interior interface reaching the wall must retain its jump and limiting
 trace. Full cap interface assembly, error control and retained-state evaluation
 remain outstanding. No transport law or physical wall equation has changed.
 
+The [full reference balance assembler](../src/recursive_horizons/nsc_atlas_cap_transport_balance.py)
+now joins all pieces and ordered interface jumps with the independent radial
+map-error channel. Nine manufactured controls pass. Using the existing cap
+RHS and discrete flux ledger, it recovers balance `-0.12288686492081752`
+with defect `-8.187894806610529e-16`. Cumulative development uses 890,431
+charged values / 12.328125 active CPU seconds. One decimal constant-field
+case hit the existing limiter-branch guard; an exactly representable oracle
+passes without weakening that guard. Grok found no formula blocker and
+confirmed the need to bound disagreement between the two reference flows.
+The next calculation is the [fixed terminal comparison](prior-art-and-open-claim.md#next-fixed-terminal-comparison),
+with explicit mass/rate/jump and two-setting accuracy limits. The new channels
+have not yet been evaluated on the retained physical states.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)

@@ -147,6 +147,21 @@ class CapTransportFields:
         budget.check(8)
         return dict(a=0.,b=0.,a_x=0.,b_x=0.,a_r=ar,b_r=0.)
 
+    def reference_center(self, *, budget):
+        """Independent regular centre values and the declared lapse gauge."""
+        if budget is not self._budget:
+            raise ValueError("transport queries require the same caller budget")
+        jet=self._profile.jet(float(self._T.v),budget=budget)
+        f=float(2*jet['F_prime']+self._rec['Q0'].v)
+        pi=float(2*jet['F_second']+self._rec['P0'].v)
+        with np.errstate(over='raise',invalid='raise'):
+            z=np.sqrt(self._alpha/6)*f
+            delta=-float(np.log1p(2*np.sinh(z/2)**2))
+        if not np.all(np.isfinite([f,pi,delta])):
+            raise ValueError('nonfinite reference centre')
+        budget.check(8)
+        return dict(f=f,Pi=pi,delta=delta)
+
     def _sample(self, cell, radii, *, budget, reference, small_radius_side):
         if budget is not self._budget:
             raise ValueError("transport queries require the same caller budget")
