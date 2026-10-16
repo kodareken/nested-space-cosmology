@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "adf2a1059714f3f80e0140163069d70e418e23c9",
+  "current_receipt_commit_parent": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 216678,
-      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
-      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "bytes": 217284,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "29b12d0353bf9a5a3e468fc261512f53634542d4b65bef425b8869b66d7d5688"
+      "sha256": "c5d0a23241cc0b442b076dcdfbceeaabfaabf6d0b0e1f8f51c60249d153516b5"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 300292,
-      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
-      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "bytes": 301564,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "a9aa742871d42978051603cce0f5d4410237cf2f8633337c98ce8cd9452a97f6"
+      "sha256": "eeb0b0b00e984e248dd068901e8ae011ebc74979ac5d048afc1fac641a8bad16"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 214999,
-      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
-      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "bytes": 221233,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5fbbf0950d4d0bdaff4edfe9ec265f076cd1639203cd0d89ec8ccb4928af3c55"
+      "sha256": "50cd94c95eb12ca32181e6855a78d50c5598fc7d094428d5c2b4b20ae32027c4"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 256894,
-      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
-      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "bytes": 262172,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b1fb38c04411afd4bf2855f33c47c9dcce77d3da24aed618c9f2452669038acd"
+      "sha256": "f08d8810979690d33776b42538b3476d37108cf8f67e51319f9e62c6e36c3c82"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 91319,
-      "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
-      "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
+      "bytes": 92730,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7c6320a49288596a299698e47fe3d8a2385664724f2f5dbba84552615adce38e"
+      "sha256": "b3e4d90decfb1e14283b745bb69a82739032b9eadcdf840b99f7ecdd64e0f6f2"
     },
     {
       "bytes": 18356,
@@ -29548,6 +29548,22 @@
       "sha256": "07b1aad24f1e42fad4957a6923ad93097013e9c66542ca5a042f7d8addd3ff8e"
     },
     {
+      "bytes": 3047,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "scripts/check_nsc_atlas_cap_background_domain.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "0e62b62704a07fecdc5cd21f56977eb1d1cce348e7046ed1703a2529ee712a5b"
+    },
+    {
+      "bytes": 3903,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "scripts/check_nsc_atlas_cap_background_reference.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "b4500e686114c905dd9360224807d02c9e1881bdb4534b042dd7f5116699e7d8"
+    },
+    {
       "bytes": 2815,
       "change": "Diagnose fixed pulse truncation and derive the explicit-time background mass remainder.",
       "changed_from_commit": "adf2a1059714f3f80e0140163069d70e418e23c9",
@@ -32196,6 +32212,22 @@
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
     },
     {
+      "bytes": 6352,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "src/recursive_horizons/nsc_atlas_cap_background_bound.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "cd3013306825187e2c7b9336a56990183eb6dbc1383fad2146f0bb4fe49f3948"
+    },
+    {
+      "bytes": 3626,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "src/recursive_horizons/nsc_atlas_cap_background_jets.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852"
+    },
+    {
       "bytes": 6920,
       "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
       "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
@@ -32212,12 +32244,12 @@
       "sha256": "16857a7cca0e2112f0f3fd98e9c42568b442429f8ed044e1dcb78e07538503b4"
     },
     {
-      "bytes": 12446,
-      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
-      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "bytes": 16968,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
       "path": "src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py",
       "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
-      "sha256": "2cff6a901a4e1c1b0073bc3636d30d495e992ddf9daf89f751e6573dffb5e8b2"
+      "sha256": "35d7273d3ffda6ecb441b0280c07dbd794992950ba609674bd2be1e280b3fb0e"
     },
     {
       "bytes": 5967,
@@ -35563,6 +35595,30 @@
       "path": "tests/test_nsc_atlas_cap_affine_background_identity.py",
       "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
       "sha256": "560a3df4dca97545746c8aa273b142944e798afcbe365efd447b5776aa1fb54a"
+    },
+    {
+      "bytes": 4752,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "tests/test_nsc_atlas_cap_background_bound.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "e6a773a2c746e00bc5e185ae1846c2b7891dd7fc60553e155361a06440578c3e"
+    },
+    {
+      "bytes": 5150,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "tests/test_nsc_atlas_cap_background_jets.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "9777d65a3b0258c835fc34a559c113c9c1aaf31dfc8d4f94836c78bb471246ee"
+    },
+    {
+      "bytes": 5209,
+      "change": "Retain exact Hermite inputs, compute background mass time sensitivity and expose its remainder.",
+      "changed_from_commit": "e50de8bab78b8a02fd0ebcbe7be7f0b7a3b29fa2",
+      "path": "tests/test_nsc_atlas_cap_background_reference.py",
+      "retention_reason": "Retained-background metric domain and explicit-time mass reference",
+      "sha256": "61a64be9de9c8b735313cbb06dc840f70e4f62abfbf1e598deb3eefa33d71761"
     },
     {
       "bytes": 4920,

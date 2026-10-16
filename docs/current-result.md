@@ -2,6 +2,28 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Retained-background time sensitivity, 16 October 2026
+
+The [existing cap reference](nsc-atlas-finite-amplitude.md#explicit-time-radial-sensitivity)
+now retains the characteristic background directly and computes its explicit
+time mass derivative in the same forward/adjoint radial engine. Polynomial
+coefficients represent only the departure. The actual weak mass discrepancy
+and the derived background remainder remain separate outputs.
+
+Fourteen stable-jet controls and seven reference controls pass, including
+an exact-field change of representation, time/radius chain rules, the
+quartic remainder and compatible incoming limit, quiet data and mass
+underflow rejection. The 26 monomial controls and a sixteen-mode regression
+still pass. Independent Grok source review confirms the adapter's formulas
+and accounting.
+
+A [local exact-C2 metric certificate](nsc-atlas-finite-amplitude.md#retained-background-field-jets-and-metric-domain)
+uses original Hermite inputs and cumulative source bounds over the existing
+profile intervals. Seven certificate controls pass; source review precedes
+the fixed-profile use. Numerical interpolation, radial error and the
+physical evolution remain separate questions. No time step or new
+observational prediction has been produced.
+
 ## Fixed-profile representation diagnosis, 16 October 2026
 
 The [single-slice projection](nsc-atlas-finite-amplitude.md#fixed-profile-representation-diagnosis)

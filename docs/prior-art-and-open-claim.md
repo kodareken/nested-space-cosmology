@@ -741,6 +741,91 @@ coordinates. No background-subtracted physical update is installed.
 Independent Grok derivation confirms the full mass split, shape identity,
 geometric-limit remainder and counterexample.
 
+### Retained-background jets and local metric domain
+
+To evaluate the derived explicit-time remainder on the narrow supplied
+profile, retain its original Hermite input arrays with the existing
+`CharacteristicProfile`. Add a bounded adapter for stable `f,p,h` and their
+T/z derivatives, using exact polynomial moments near the centre and the
+existing endpoint jets elsewhere. The action, source data and physical
+preparation stay fixed. Exact-C2 Hermite mathematics refers to the original
+binary input values; numerical interpolation-coefficient rounding remains
+part of the numerical error, not a new physical datum.
+
+Derive a local positive-metric certificate from the original profile knots.
+Exact-binary Arb Bernstein coefficients bound the C2 quintic and its first
+two derivatives. Combine these with the regular polynomial departure bounds,
+then integrate the positive radial source upper bound interval by interval.
+Bound `n/r` by the endpoints of each affine cumulative envelope. This
+replaces an overly pessimistic global slope estimate; it is not a grid scan.
+
+Jet and derivative controls have **300,000 charged values / 20 CPU seconds**;
+certificate controls have **500,000 / 30 seconds**. Use independent
+high-precision polynomial jets and exact radial envelopes, regular-centre
+and quiet limits, inward finite-domain checks and failure before integration.
+An independently reviewed fixed-profile certificate may use **100,000 /
+10 seconds**, without a radial solve or time evolution. If the certificate
+fails, report that sufficient-bound failure before proposing further work.
+
+**Jet/control outcome:** fourteen jet controls pass in fifteen executions,
+using 9,430 charged values / 0.34375 CPU seconds. The first exact-equality
+assertion exposed ordinary coefficient-conversion rounding; the explicit
+2e-14 check passes. Interior-knot tests cover both evaluation branches.
+Seven local-certificate controls pass with 7,213 / 0.203125. The delegated
+certificate implementation run ended without edits or a final report;
+the parent implemented the independently derived recurrence. Mathematical
+review is complete; certificate source review remains in progress.
+
+### Explicit-time retained-background radial reference
+
+Extend the existing polynomial reference with a retained-background option,
+reusing its radial mass/sensitivity engine, shape check and wall accounting.
+Add the exact explicit-time source derived above and split at existing
+profile knots. Project the background time jets with algebraically exact
+19-point split Gauss integration. Report the explicit-time remainder and
+its identity discrepancy separately; do not absorb it into a zero balance
+residual or impose it as a new physical source.
+
+Controls have **4,000,000 charged values / 60 CPU seconds**. Compare a
+polynomial background against the same full field in the existing adapter,
+including coefficient/shape/time chain rules, and check quiet and boundary
+limits. Run the affected monomial controls within their remaining recorded
+allowance; one sixteen-mode unchanged-path regression has a separate
+**1,000,000 / 30-second** allowance because the adapter changes. After the
+local metric certificate and source review pass, a separately admitted
+fixed-profile calculation may evaluate the actual explicit-time remainder.
+No physical time evolution is admitted by these operator controls.
+
+**Reference-control outcome:** seven new controls pass with 378,959 charged
+values / 1.0 CPU seconds. Independent Grok source review confirms the time
+source, shape, sensitivity indexing, projection subtraction and separate
+remainder. The 26 affected monomial controls pass with another 578,573 /
+1.375 (cumulative 1,831,143 / 4.21875, eighty executions). The separately
+admitted sixteen-mode regression passes with 837,921 / 0.25. The original
+Legendre-adapter allowance is unchanged. No physical time step is run.
+
+### Fixed retained-pulse time-remainder comparison
+
+After the local certificate and background-adapter reviews pass, evaluate
+one fixed retained background with zero departure coefficients and sixteen
+modes. Use the existing zero-case terminal geometry, with at most one
+explicit inward radius ulp to respect the exact finite profile endpoint.
+Compare alpha zero against the finite alpha already recorded in the same
+operator-comparison payload. Use the reconstructed incoming trace from that
+same background, `T_x=1` and `R_x=0`. These are two instantaneous operator
+references, not a reconstructed finite evolution or a new physical source.
+
+The shared allowance is **20,000,000 charged values / 120 CPU seconds** for
+one authentication pass and the two references. The geometric limit must
+recover zero departure rates and its analytic time flux within `2e-7`;
+that is a numerical acceptance threshold, not a uniform error enclosure.
+Keep the existing `2e-8` forward/adjoint and independent shape checks. Require
+the reported mass remainder identity discrepancy below `2e-10`. Report the
+actual finite-alpha remainder and both wall trace discrepancies without
+retuning them. Print compact values, input/producer hashes and execution
+counts; no raw file, grid scan or time step. On failed domain, budget or
+identity checks, report the consumed work and diagnose before another run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

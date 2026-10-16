@@ -4504,6 +4504,139 @@ full mass split, moving shape term, geometric-limit remainder and both
 incoming choices in the counterexample. A finite-alpha enrichment still needs the
 explicit `N_T` and a controlled remainder before a physical time step.
 
+#### Retained-background field jets and metric domain
+
+The [retained-data adapter](../src/recursive_horizons/nsc_atlas_cap_background_jets.py)
+keeps the original Hermite values and first two derivatives alongside the
+existing numerical `CharacteristicProfile`. The exact C2 model means the
+Hermite interpolant of those original binary values. Rounded `PPoly`
+coefficients can leave tiny jumps between stored pieces; their conversion
+and evaluation errors remain numerical errors. They are not additional
+surface sources and are not silently part of the exact-C2 certificate.
+
+Let `I1`, `I2` and `J2` be the existing knot-split integrals of `F'`, `F''`
+and `t F''` over `-1<=t<=1`, evaluated at `T+zt`. Let `J0`, `J1` integrate
+`F'''` and `t F'''`. With `gamma=1/z-A0/r`, the regular background fields are
+
+\[
+ f_0=\frac{z I_1}{r},\quad p_0=\frac{z I_2}{A_0},\quad
+ h_0=\frac{z(\gamma I_1+J_2)}{A_0}.
+\]
+
+Their time derivatives follow from the same moments:
+
+\[
+ f_{0,T}=\frac{z I_2}{r},\quad p_{0,T}=\frac{z J_0}{A_0},\quad
+ h_{0,T}=\frac{z(\gamma I_2+J_1)}{A_0}.
+\]
+
+The spatial derivatives can avoid a second centre cancellation,
+
+\[
+ f_{0,z}=A_0h_0/r,\quad
+ p_{0,z}=(I_2+zJ_1)/A_0+2rp_0,\quad
+ h_{0,z}=zJ_0/A_0+2r(f_0+h_0)-f_{0,z}.
+\]
+
+At the axis, `f_0=2F'(T)`, `f_0,T=p_0,z=2F''(T)` and the other reduced
+normal/time limits used here vanish. A merely C2 profile at an axis knot
+does not imply an even differentiable expansion of `Pi`; no such claim is
+needed for these finite reduced jets. For `z>.01`, the adapter uses the
+existing endpoint values and derivatives. Independent Grok derivation and
+source review confirm the formulas. Numerical coefficient/evaluation error,
+tiny stored knot jumps and the existing gamma-series arithmetic remain
+outside an interval error enclosure.
+
+Fourteen jet controls pass in fifteen executions, including the first
+roundoff-sensitive assertion corrected from exact equality to a declared
+`2e-14` tolerance. Total development uses **9,430 charged values / 0.34375
+CPU seconds**. Controls compare against 85-digit polynomial derivatives,
+exercise an interior C2 knot on both sides of the evaluation switch and at
+a tiny axis span, and check quiet limits and copied original inputs.
+
+For a local metric certificate, quintic Bernstein controls are formed in
+outward Arb arithmetic from the original Hermite values. On a label interval
+of width `h`, the first three controls are
+
+\[
+ b_0=F_0,\quad b_1=F_0+hF'_0/5,\quad
+ b_2=F_0+2hF'_0/5+h^2F''_0/20;
+\]
+
+the other three use the corresponding right-end expressions. First and
+second derivative controls are scaled successive differences. Their convex
+hulls bound the exact C2 profile and jets on every intersected input piece,
+including the certified quiet extension. Domain endpoints are checked in
+exact-binary arithmetic; an inward-rounded slice must be declared by the
+caller if its nominal endpoint rounded outside the supplied profile.
+
+On each existing cap interval, bound
+
+\[
+ b(r)=r^2P(f)/2+A_0(p^2+h^2)/4\le b_i.
+\]
+
+The positive radial solution obeys `n_r+a n=b`, `a>=0`, `n(0)=0`, hence
+`0<=n(r)<=integral b`. With `U_i=sum_(j<i) b_j Delta r_j`, the affine
+cumulative envelope gives
+
+\[
+ \sup_{[r_i,r_{i+1}]}\frac{n}{r}\le
+ \max\left(\frac{U_i}{r_i},
+           \frac{U_i+b_i(r_{i+1}-r_i)}{r_{i+1}}\right).
+\]
+
+For the first interval use `n/r<=b_0`. The comparison ratio is monotone,
+so its endpoint values suffice; there is no new sampling grid. The local
+metric floor is `A0(r_(i+1))-2 alpha sup(n/r)`. Every floor must be positive
+before radial integration. Failure of this sufficient bound does not prove
+a physical zero of `A`. Numerical interpolation and ODE errors are separate.
+Independent Grok derivation confirms this recurrence. Seven exact and
+manufactured certificate controls pass with **7,213 charged values /
+0.203125 CPU seconds**. Independent source review remains in progress.
+The implementation uses the original Bernstein controls, not rounded
+PPoly coefficients; it leaves the existing profile owner unchanged.
+
+#### Explicit-time radial sensitivity
+
+At fixed radius and departure coefficients the retained background supplies
+`f_T,p_T,h_T`. Linearizing the same radial mass equation gives
+
+\[
+ (n_T)_r=-a n_T+\frac{r^2P_f}{2}f_T
+                      +\frac A2(pp_T+hh_T),\qquad n_T(0)=0.
+\]
+
+There is no lapse derivative in this source. The lapse still enters the
+wall clock and Hamiltonian factor. At fixed `xi`, add `xi` times each
+background z derivative to the departure shape partials. Existing knot
+splits and the small-z evaluation switch are retained in the shared radial
+solver. Exact C2 matching cancels moving-knot boundary terms; the actual
+numerical interpolation error is not thereby certified away.
+
+The existing [polynomial adapter](../src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py)
+now has the optional `background` and `background_time` arguments for
+Legendre departures. The new sensitivity is a further column in the same
+forward/adjoint engine. Background time jets use 19-point split Gauss for
+their projection. `balance_defect` remains the actual mass-minus-weak-flux
+residual. `explicit_time_remainder` records the derived additional term;
+`remainder_identity_defect` checks their agreement. No correction has been
+installed to force either physical discrepancy to zero.
+
+The 26 monomial controls still pass after this change, using another
+578,573 charged values / 1.375 CPU seconds within their original allowance.
+Their cumulative record is now **1,831,143 / 4.21875**, eighty executions.
+The separately admitted unchanged sixteen-mode regression passes with
+**837,921 / 0.25**. Seven retained-background reference controls pass with **378,959 charged
+values / 1.0 CPU seconds**. They compare the same full polynomial field in
+both representations, including time and radius chain rules, and reproduce
+the exact quartic remainder and compatible limit. Quiet and underflow
+branches are checked separately. Completed Grok source review found no
+blocker in the time source, shape, indexing, projection subtraction or
+residual reporting; its scope excluded the separate metric certificate.
+The small-z split is shared as one constant. No physical evolution has
+been run.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -189,6 +189,32 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The retained-background field jets, metric certificate and explicit-time
+reference controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_background_jets.py tests/test_nsc_atlas_cap_background_bound.py tests/test_nsc_atlas_cap_background_reference.py -q -s
+```
+
+Fourteen jet controls pass in fifteen development executions, using 9,430
+charged values / 0.34375 CPU seconds of 300,000 / 20. Seven certificate
+controls use 7,213 / 0.203125 of 500,000 / 30. Seven reference controls use
+378,959 / 1.0 of 4,000,000 / 60. The [admission record](prior-art-and-open-claim.md#retained-background-jets-and-local-metric-domain)
+keeps these separate from historical controls. No scientific raw files are
+created by these tests. The fixed-profile certificate and two-reference
+commands are prepared for use after their source reviews:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_cap_background_domain.py
+python scripts/run_python.py scripts/check_nsc_atlas_cap_background_reference.py
+```
+
+The [fixed-input admission](prior-art-and-open-claim.md#fixed-retained-pulse-time-remainder-comparison)
+allows one authenticated certificate and then two instantaneous references
+under separate allowances. Both commands print compact values and hashes;
+they create no files, re-fit no source and run no physical time evolution.
+Their recorded outcomes belong in the finite-amplitude owner.
+
 The fixed background-profile projection diagnostic:
 
 ```sh
