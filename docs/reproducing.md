@@ -37,6 +37,12 @@ current files, registry entries and checker hashes are checked on every call.
 The shared synthetic-test budgets count only CPU time
 inside their tests, retaining cumulative point and active-CPU limits.
 
+When a publication replay fails on another platform, the checker reports
+the rejected numeric leaves or separates wall-coordinate drift from internal
+forcing-grid drift. These diagnostics read the failed comparison's operands;
+they do not rerun a producer or change acceptance. Investigate those values
+before modifying a replay allowance.
+
 ## Current work
 
 The discrete cap mass derivative and departure-flux ledger are implemented

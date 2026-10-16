@@ -1558,7 +1558,7 @@
     {
       "bytes": 2236767,
       "path": "docs/lab-snapshot.json",
-      "sha256": "9be1cee83a6dc25df9737138bfb3a166d0f5ada7e7e9f02ce459773b1da01be9"
+      "sha256": "e47f22afb507df143496f35c488edb59ef1c202674a24d971a211f702fe9f333"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 75559,
+      "bytes": 75900,
       "path": "docs/reproducing.md",
-      "sha256": "27ca24180287a35e1f3d90aa121b2dc38b99b3fb5a6892ea59814922b8cc0a52"
+      "sha256": "3efedc77a6761b8ca2dd82d2022679095c71935a947542c969174ac1e3852a3b"
     },
     {
       "bytes": 31710,
@@ -14866,9 +14866,9 @@
       "sha256": "a9464296b4900cc7b5282fc14b258c560ced11e16ccb62e633d4011374977cdb"
     },
     {
-      "bytes": 52979,
+      "bytes": 56476,
       "path": "scripts/check_publication.py",
-      "sha256": "5dd67649b50eb324612532d8234e63f492163d1085a9c5daf190b499b6852853"
+      "sha256": "728350580dfce9ab3383b33a94348baf1541c2143f9e60388a7f5dd4e9a6d897"
     },
     {
       "bytes": 4326,
@@ -20246,6 +20246,11 @@
       "sha256": "b28c7e2e26ce8b2e4113b2b4626c80c7f722d89b5745feabb5cc2c0e3cb76df4"
     },
     {
+      "bytes": 2176,
+      "path": "tests/test_publication_replay_diagnostics.py",
+      "sha256": "741c23b8a718f935515a784edfa550c29961a32f754385b27929a69d1bb20d1f"
+    },
+    {
       "bytes": 1599,
       "path": "tests/test_publication_versions.py",
       "sha256": "ef6419d48c8509866b7d8a2dd35afc9e4ba2c876c28833f347932d268fcf3e8b"
@@ -20401,7 +20406,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "9be1cee83a6dc25df9737138bfb3a166d0f5ada7e7e9f02ce459773b1da01be9",
+  "lab_snapshot_sha256": "e47f22afb507df143496f35c488edb59ef1c202674a24d971a211f702fe9f333",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

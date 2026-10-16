@@ -923,6 +923,60 @@ def check_scalar_boundary_evidence(errors: list[str]) -> None:
             errors.append(f"scalar boundary {comparison} evidence: {error}")
 
 
+def replay_failure_message(error: Exception) -> str:
+    """Expose bounded scientific operands from two known validation failures.
+
+    Read the failed frame only; do not rerun a producer or change acceptance.
+    All other exception frames and local variables remain unreported.
+    """
+    details = []
+    traceback = error.__traceback__
+    try:
+        while traceback is not None:
+            frame = traceback.tb_frame
+            filename = Path(frame.f_code.co_filename).name
+            values = frame.f_locals
+            if filename == "nsc_atlas_forcing_cache.py" and frame.f_code.co_name == "from_records":
+                import numpy as np
+                if {"row", "expected", "wall", "recorded_wall", "t"} <= set(values):
+                    difference = abs(np.asarray(values["row"]["U"])-values["expected"])
+                    index = int(np.argmax(difference))
+                    details.append(dict(kind="forcing_coordinates", t=values["t"],
+                        wall=format(values["wall"], ".17g"), saved_wall=format(values["recorded_wall"], ".17g"),
+                        wall_difference=format(abs(values["recorded_wall"]-values["wall"]), ".17g"),
+                        wall_allowance=format(frame.f_globals["WALL_COORDINATE_REPLAY_ATOL"], ".17g"),
+                        internal_grid_index=index, internal_grid_difference=format(float(difference[index]), ".17g"),
+                        internal_grid_allowance=format(8*np.finfo(float).eps, ".17g")))
+            elif filename == "record_nsc_atlas_coupled_evolution.py" and frame.f_code.co_name == "_equal":
+                plain = frame.f_globals["plain"]
+                comparator = frame.f_globals["previous"]._same_recomputed
+                leaves = []
+                def visit(a, b, path):
+                    if len(leaves) >= 3 or comparator(a, b):
+                        return
+                    if isinstance(a, dict) and isinstance(b, dict) and set(a)==set(b):
+                        for key in b:
+                            visit(a[key], b[key], path+"."+key)
+                            if len(leaves)>=3: break
+                    elif isinstance(a, list) and isinstance(b, list) and len(a)==len(b):
+                        for i, (left, right) in enumerate(zip(a,b)):
+                            visit(left, right, path+f"[{i}]")
+                            if len(leaves)>=3: break
+                    else:
+                        row = dict(path=path, saved_type=type(a).__name__, recomputed_type=type(b).__name__)
+                        if type(a) in (int,float,bool,str,type(None)) and type(b) in (int,float,bool,str,type(None)):
+                            row.update(saved=repr(a)[:120], recomputed=repr(b)[:120])
+                            if type(a) in (int,float) and type(b) in (int,float):
+                                row["absolute_difference"] = format(abs(a-b), ".17g")
+                        leaves.append(row)
+                visit(plain(values["actual"]), plain(values["expected"]), values["label"])
+                details.extend(leaves)
+            traceback = traceback.tb_next
+    except (KeyError, TypeError, ValueError, AttributeError, OverflowError) as diagnostic_error:
+        details.append(dict(diagnostic_unavailable=type(diagnostic_error).__name__))
+    return str(error)+(": "+json.dumps(details, sort_keys=True, allow_nan=False) if details else "")
+
+
 def check_scalar_input_evidence(errors: list[str]) -> None:
     """Authenticate measured lift/forcing inputs without physical replay."""
     from record_nsc_atlas_scalar_inputs import VARIATIONS, check
@@ -949,7 +1003,7 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
             import importlib
             importlib.import_module(module_name).check(ROOT / "results/development" / directory)
         except (OSError, ValueError, KeyError, TypeError) as error:
-            errors.append(f"{directory} evidence: {error}")
+            errors.append(f"{directory} evidence: {replay_failure_message(error)}")
 
 
 def check_nonlinear_rectangle_evidence(errors: list[str]) -> None:
@@ -976,7 +1030,7 @@ def check_compatible_evolution_evidence(errors: list[str]) -> None:
         from record_nsc_atlas_compatible_evolution import check, RELATIVE_OUTPUT
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
-        errors.append(f"compatible exterior/wall/cap evidence: {error}")
+        errors.append(f"compatible exterior/wall/cap evidence: {replay_failure_message(error)}")
 
 
 def check_background_evolution_evidence(errors: list[str]) -> None:
@@ -985,7 +1039,7 @@ def check_background_evolution_evidence(errors: list[str]) -> None:
         from record_nsc_atlas_background_evolution import check, RELATIVE_OUTPUT
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError) as error:
-        errors.append(f"characteristic-background exterior/wall/cap evidence: {error}")
+        errors.append(f"characteristic-background exterior/wall/cap evidence: {replay_failure_message(error)}")
 
 
 def check_ssprk3_refinement_evidence(errors: list[str]) -> None:
@@ -994,7 +1048,7 @@ def check_ssprk3_refinement_evidence(errors: list[str]) -> None:
         from record_nsc_atlas_ssprk3_refinement import check, RELATIVE_OUTPUT
         check(ROOT / RELATIVE_OUTPUT)
     except (OSError, ValueError, KeyError, TypeError, RuntimeError) as error:
-        errors.append(f"midpoint-complete SSPRK3 evidence: {error}")
+        errors.append(f"midpoint-complete SSPRK3 evidence: {replay_failure_message(error)}")
 
 
 def main() -> int:
