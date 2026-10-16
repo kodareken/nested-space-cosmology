@@ -1,11 +1,60 @@
 # Prior art and admission of new research
 
+## Actual scalar-step balance, 16 October 2026
+
+The saved-profile audit below exposes large cancelling terms. Its frozen
+rates and straight paths cannot identify the error of an accepted coupled
+step. The next calculation reuses the existing SSPRK2 update, conformal
+field map and original 513-node source/gauge cache. It changes no physical
+assumption or numerical evolution operator.
+
+From the same saved starting state at cut 82, compare one original
+256-grid interval with its two 512-grid halves, separately for the zero
+and finite 32-cell/256-step cases. This is two local experiments, reset to
+their saved initial states; it is not another trajectory campaign.
+Use exactly twelve coupled stage evaluations in total. Accepted endpoints
+need profile and frame evaluation, not another radial stage.
+
+For each accepted step retain canonical and invariant field increments,
+predictor and accepted geometry, and the exact decomposition into integrated
+exterior flux, integrated returning-cap flux, nonlinear frame remainder,
+reference-geometry remainder and background-chain remainder. The radius
+and clock evolved by the code are departures from the reference gauge:
+the accepted physical radius is not assumed equal to the trapezoid of
+the total radius rate. Retain that difference explicitly. Sum the two
+half-step ledgers before comparing them with the coarse ledger, then form
+finite-minus-zero comparisons. Check the independent scalar balance and
+every reconstructed endpoint.
+
+Manufactured controls have a shared **30-process-CPU-second/100,000-point**
+allowance. After those controls and independent review, the physical local
+diagnostic has **30 process CPU seconds and 250,000 charged points**,
+including hash authentication, reconstruction and all twelve stages.
+A standalone check may repeat this same local calculation. No full history,
+source solve, cache extension or altered profile is admitted. Preserve all
+existing domain, positive-metric, timelike-wall and finite-arithmetic checks;
+stop on the first failure with its stage and budget context. Diagnose any
+failure before designing another calculation.
+
+The decision is which terms carry the local one-step/two-half-step
+difference and how they cancel. A local result does not establish the
+propagated error over the retained window or justify removing a background
+term from the evolution.
+
 ## Saved-profile time-integration diagnosis, 16 October 2026
 
 The [diagnostic](../scripts/diagnose_nsc_atlas_background_time.py) is
 implemented and independently reviewed. Its 35 controls pass with 10,956
 points and 0.265625 process CPU seconds, plus the intentional three-point
-exhaustion check. The physical-data audit has not yet run.
+exhaustion check. The [completed audit](../results/development/nsc-atlas-background-time-audit-v1.json)
+uses 57,152 charged points and 1.0625 process CPU seconds. Its standalone
+check passes. It authenticates all 66 input bindings without a source solve
+or time evolution. The known reference-chain time difference reaches
+`1.24476e-4`, while the actual zero-case scalar time difference reaches
+`2.87645e-6`: substantial cancellation remains. At cut 82 the local paired
+rate change is carried mainly by the exterior derivative, but it does not
+explain the accumulated scalar difference. The following admission records
+the fixed scope chosen before the audit.
 
 The six-case result below removes dominant cap pulse smearing, but its
 paired wall-scalar time change is `5.71668e-6`, or `15.83%` of the fine

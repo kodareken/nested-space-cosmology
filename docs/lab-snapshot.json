@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "85495f7afe0c76e861a1afb74cfbec5879e79d9d",
+  "current_receipt_commit_parent": "894a79c7e1795edc7e8f966c12f930067333d962",
   "files": [
     {
       "bytes": 1506,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 8958,
-      "change": "Route frozen transport diagnosis and the verified characteristic-background cap operators; correct compatible-result anchors",
-      "changed_from_commit": "d6a71b26ae06647c0d2264cddadaba7998165947",
+      "bytes": 9085,
+      "change": "Record coupled characteristic-background result, manuscript and scalar-time diagnosis",
+      "changed_from_commit": "894a79c7e1795edc7e8f966c12f930067333d962",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "14231d04a20c20e637d0920481648cfba87000999f312ccf7eb74bcf40467cf1"
+      "sha256": "3d0e59d804c056d90aec725134288c2116e5958539b2cf9a5da4549a7bf7a96a"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 197282,
-      "change": "Route the verified coupled characteristic-background implementation and fixed six-case comparison",
-      "changed_from_commit": "85495f7afe0c76e861a1afb74cfbec5879e79d9d",
+      "bytes": 198065,
+      "change": "Record coupled characteristic-background result, manuscript and scalar-time diagnosis",
+      "changed_from_commit": "894a79c7e1795edc7e8f966c12f930067333d962",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f308aded5584a9fb50032fc00eecea5f2c649d720136f2077fb2c8e660dc2193"
+      "sha256": "eeed812301a2779454148189bd107c9e624db1098b4f3b9d481173c965517b5d"
     },
     {
       "bytes": 9543,
@@ -10426,15 +10426,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 51965,
-      "change": "Route frozen transport diagnosis and the verified characteristic-background cap operators; correct compatible-result anchors",
-      "changed_from_commit": "d6a71b26ae06647c0d2264cddadaba7998165947",
+      "bytes": 52245,
+      "change": "Record coupled characteristic-background result, manuscript and scalar-time diagnosis",
+      "changed_from_commit": "894a79c7e1795edc7e8f966c12f930067333d962",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "00e4d445a890dbd288440a777df35850cdeb69641cb8ea8ba7bf601c4dfb565a"
+      "sha256": "8a02de086a102891c991b81bbfe08a362e2e4e850a9ae8d489e57ccec4c294e0"
     },
     {
       "bytes": 30876,

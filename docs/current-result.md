@@ -2,6 +2,39 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Scalar time-contribution audit, 16 October 2026
+
+The [saved-profile audit](../results/development/nsc-atlas-background-time-audit-v1.json)
+completes with 57,152 charged points and 1.0625 process CPU seconds. It
+authenticates the six-case result and all 66 bound inputs, evaluates the
+reference chain on the existing 513-node cache, and reconstructs four
+frozen stages at cut 82. It performs no source integration or trajectory
+evolution. The independent repeat check passes.
+
+The known-background chain contribution changes by up to `1.24476e-4`
+between the 256/512 reference grids, while the actual zero-case scalar
+history changes by at most `2.87645e-6`. At cut 82 the former is
+`+2.29073e-5` and the latter `-9.02457e-7`. These terms substantially
+cancel with the evolving field; subtracting the known contribution alone
+is not a justified correction. Neither reference grid crosses a profile
+knot strictly inside a step, so crossing knots cannot explain this result.
+
+At cut 82, the finite-minus-zero temporal change in the **scalar rate per
+unit x** is `4.63520e-6`: exterior `Q_c` contributes `4.64186e-6` and
+returning-cap flux contributes `-6.65783e-9`. Exact chain/frame identities
+close within `2.84e-14`. A local straight-path profile comparison has a
+one-step defect near `-1.22e-5`, reducing to about a quarter with two
+halves; its finite-minus-zero refinement change is only `1.0121e-7`.
+These rates and prescribed paths do not explain the accumulated paired
+scalar history difference `5.71668e-6`.
+
+The next [accepted-step balance](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
+compares one actual step with two half steps from identical saved data.
+It separates exterior flux, cap return, frame conversion, reference
+geometry and background-chain contributions before any evolution method
+is changed. The [owner](nsc-atlas-finite-amplitude.md#isolating-the-scalar-time-contribution)
+defines those quantities and their finite scope.
+
 ## Characteristic-background coupled evolution, 16 October 2026
 
 The [six-case result](../results/development/nsc-atlas-background-evolution-v1/background.json)
@@ -74,10 +107,11 @@ responses does not remove these pointwise discrepancies.
 
 The [mathematical owner](nsc-atlas-finite-amplitude.md#carrying-a-characteristic-background-and-evolving-its-correction)
 and [reproduction commands](reproducing.md#current-work) specify the finite
-representation and its controls. The next connection is to separate the
+representation and its controls. The next connection at this checkpoint was to separate the
 remaining scalar time sensitivity from the exterior derivative/wall
 mismatch through the [bounded profile/flux diagnosis](prior-art-and-open-claim.md#saved-profile-time-integration-diagnosis-16-october-2026),
-using this saved state before designing a successor. Formation,
+using this saved state before designing a successor; the audit above
+records that outcome. Formation,
 central arrival, stability and a propagated finite-amplitude error enclosure
 remain outside this result.
 

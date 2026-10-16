@@ -1966,6 +1966,50 @@ two-half-step reduction. The [bounded audit](prior-art-and-open-claim.md#saved-p
 uses the existing reference cache and four frozen stages. No new physical
 evolution is required for that diagnosis.
 
+The completed audit uses 57,152 points and 1.0625 process CPU seconds.
+The reference-chain time difference peaks at `1.24476e-4`, versus the
+actual zero-case difference `2.87645e-6`. At cut 82 the paired rate change
+splits into exterior `4.64186e-6` and cap return `-6.65783e-9`, while
+the independent identities close within `2.84e-14`. This demonstrates
+cancellation but does not attribute the full-history error. The
+[result](current-result.md#scalar-time-contribution-audit-16-october-2026)
+retains the distinction between rates, local path defects and accumulated
+field differences.
+
+For the next actual-step comparison, let angle brackets denote the
+two-stage trapezoidal increment and define
+
+$$
+\chi_{\rm RK}=\chi_n+\langle J_\chi\rangle,\qquad
+R_{\rm RK}=R_n+\langle R_x\rangle,\qquad
+C_\alpha(R,\chi)=\frac{R}{k}\sinh(k\chi/R),\quad
+k=\sqrt{\alpha/6},\quad C_0=\chi.
+$$
+
+The accepted primitive is `chi_1=chi_RK+R_B`. The physical accepted
+radius `R_1` includes the exact reference-gauge value at the endpoint;
+since the code evolves departures, it need not equal `R_RK`. The
+following five terms give the exact invariant scalar increment:
+
+$$
+\begin{aligned}
+c_1-c_n={}&\langle Q_c\rangle+
+\left\langle\frac{C_-}{2x_s}\right\rangle+
+\mathcal R_{\rm frame}+\mathcal R_{\rm geometry}+\mathcal R_{\rm background},\\
+\mathcal R_{\rm frame}={}&C_\alpha(R_{\rm RK},\chi_{\rm RK})-c_n-\langle J_c\rangle,\\
+\mathcal R_{\rm geometry}={}&C_\alpha(R_1,\chi_{\rm RK})-C_\alpha(R_{\rm RK},\chi_{\rm RK}),\\
+\mathcal R_{\rm background}={}&C_\alpha(R_1,\chi_{\rm RK}+\mathcal R_B)-C_\alpha(R_1,\chi_{\rm RK}).
+\end{aligned}
+$$
+
+Both frame and geometry terms vanish at zero amplitude. Clock and radius
+reference-increment defects are retained separately as diagnostics; their
+effect on `B_1` already belongs to the background term. Each half-step
+has its own accepted geometry and ledger. Adding the two half-step
+ledgers before subtraction makes the local comparison exact without
+asserting a propagated error estimate. The [admission](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
+fixes cut 82, both amplitudes, twelve stages and the existing input cache.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -72,6 +72,12 @@ seconds/100,000 points. Creation requires a new output path. Checking
 repeats the same bounded diagnostic and excludes elapsed CPU time from
 the numerical equality comparison.
 
+The [saved audit](../results/development/nsc-atlas-background-time-audit-v1.json)
+completes with 57,152 points and 1.0625 CPU seconds; its standalone check
+passes. It exposes substantial cancellation and does not isolate the
+accumulated scalar time error. The next [local accepted-step comparison](prior-art-and-open-claim.md#actual-scalar-step-balance-16-october-2026)
+uses identical saved starting states and the existing source/gauge cache.
+
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
 without replaying its source or time evolution. Its 25 controls exercise
