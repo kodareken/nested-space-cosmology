@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 208064,
+      "bytes": 208097,
       "path": "docs/active-code-map.md",
-      "sha256": "2fb65037b01bc0ab33054c91d82635454de7fc67796b78dc5ca419aa99b536f7"
+      "sha256": "72316cb0f4f1d5ee972f8e6505d30a0acb6198295efa0795050176e106d88082"
     },
     {
       "bytes": 95327,
@@ -1558,7 +1558,7 @@
     {
       "bytes": 2236324,
       "path": "docs/lab-snapshot.json",
-      "sha256": "f8098e0940f608f0d7909f48495dcff81d8808fda19191fa07b5d4d4189463a6"
+      "sha256": "a50c7da258eea20deaee92015062b56fba7d918606ac47ef3cf32cc33eb94de7"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 141419,
+      "bytes": 142201,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "3069d738c150934766d5af42ea4b30c6689ffc6a4d0eceeffca7c4273d4038bf"
+      "sha256": "c82a6e9d10f43c2204bd894ad6c70bda51dede951aefec39137359f86a28abd1"
     },
     {
       "bytes": 8895,
@@ -2201,9 +2201,9 @@
       "sha256": "7e7c50e31cf42ae37ee780d56873aa013596d70d1e1c3ab8f138112d3dd4b4ed"
     },
     {
-      "bytes": 207283,
+      "bytes": 208621,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "a57448620218f0576a5d61d0f431432bbc9e18c420c413dee4bee24d9a57f44e"
+      "sha256": "7d839ffcef802732dd7ccbffaebd3a842975a0b5e29e49ba2137350894ae8b2c"
     },
     {
       "bytes": 6705,
@@ -14576,9 +14576,9 @@
       "sha256": "b8cdaeac870a832d859825c108a12e65db80100f159f229baec4c528e396014a"
     },
     {
-      "bytes": 11768,
+      "bytes": 12305,
       "path": "scripts/analyze_nsc_atlas_cap_mass_balance.py",
-      "sha256": "e16622ca5fb0e1a19295db4a4cf8ac50de2ef98ccdf3199282a6e40970a3c5cc"
+      "sha256": "99c8ac39a488739e7d0fe7fdd1f44fb95579178e9fb654b05aa6a334167cd8aa"
     },
     {
       "bytes": 21158,
@@ -16441,9 +16441,9 @@
       "sha256": "e15805c7073bb54e30ce5bf8b065b44020b28d795807fdbe54257f42fe40016d"
     },
     {
-      "bytes": 15051,
+      "bytes": 16081,
       "path": "src/recursive_horizons/nsc_atlas_cap_mass_tangent.py",
-      "sha256": "570e3e1f24efd5f79f51db4a8beb107969d855d72f4f2fdbfa0091a6e3475756"
+      "sha256": "1764f3b6b9b3a58db870db6ae5a4a0d12ebeaa6427564aabd28bf59e57c80a24"
     },
     {
       "bytes": 18183,
@@ -18361,9 +18361,9 @@
       "sha256": "f59ff1dfa7af52e16eb2ad29510970c153390c022cdb61deef0cd02272bd3620"
     },
     {
-      "bytes": 8145,
+      "bytes": 8203,
       "path": "tests/test_nsc_atlas_cap_mass_balance.py",
-      "sha256": "3799788dfd6be535a7c2aa63423da1af19aafd2434801c20fefe39cdb4e59a1c"
+      "sha256": "1e1ed8be19bd829b4fbcf1b22a4bfd6157e4fe8a4c93d791905e505f8bc542a5"
     },
     {
       "bytes": 6413,
@@ -18376,9 +18376,9 @@
       "sha256": "caebaa65379a419f1cacd33a2b82564b0adfb899d07a6e65d09a2601071e8277"
     },
     {
-      "bytes": 7616,
+      "bytes": 8661,
       "path": "tests/test_nsc_atlas_cap_mass_tangent.py",
-      "sha256": "c49d22638b1d46edbb3fb7ea60a7ff8ad6d06400c69298418e06cebfc1f16ebc"
+      "sha256": "0ed6826a5d303f8a04098c887bf74829993b271b67ab81ead4f77ade23bca217"
     },
     {
       "bytes": 9821,
@@ -20396,7 +20396,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "f8098e0940f608f0d7909f48495dcff81d8808fda19191fa07b5d4d4189463a6",
+  "lab_snapshot_sha256": "a50c7da258eea20deaee92015062b56fba7d918606ac47ef3cf32cc33eb94de7",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

@@ -44,6 +44,25 @@ or tolerance. A single diagnostic repeat is restricted to that first case,
 Its purpose is to recover the missing failure quantities; this is not a new
 four-case result or authorization for another trajectory.
 
+That repeat, frozen at `ffcdf61`, used **886,949 points / 2.671875 CPU
+seconds** and recovered the cause. Only forward-versus-reverse contraction
+exceeded the bound: `5.40387e-13` versus `5.68434e-14`. The mass-ledger
+difference was `4.16334e-17`, telescoping `2.77556e-17`, face decomposition
+`2.33103e-18`, and primal-face difference `8.27181e-25`. The original bound
+scaled by the small final terms, omitting cancellation within 128 panels.
+The correction retains absolute contraction work before cancellation and
+uses a path-count rounding bound, described in the mathematical owner.
+No mass derivative, source, transport, wall equation or other tolerance changes.
+An independent Decimal cancellation control also rejects an injected error.
+The 55 current controls pass; all executions so far charge **155,213 points /
+2.9375 active CPU seconds**. After independent review and a new source
+freeze, resume the fixed four-case creation with the first failed attempt's
+886,949 points / 2.734375 CPU seconds charged against its original
+12,000,000-point / 90-second allowance. The separate one-case diagnosis
+keeps its own declared receipt. Grok confirmed the accumulation bound; its
+review removed the arbitrary unit floor and added a nontrivial attenuation
+to the independent cancellation control. No raw result has yet been accepted.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 **Outcome:** the [completed calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)

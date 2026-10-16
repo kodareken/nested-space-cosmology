@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "bc701626c08404c6ab4440a9919a1a166cbfe863",
+  "current_receipt_commit_parent": "ffcdf61d48183c6ad2cbd6e3e1f22d9aa14a944d",
   "files": [
     {
       "bytes": 1953,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 208064,
+      "bytes": 208097,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "bc701626c08404c6ab4440a9919a1a166cbfe863",
+      "changed_from_commit": "ffcdf61d48183c6ad2cbd6e3e1f22d9aa14a944d",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "2fb65037b01bc0ab33054c91d82635454de7fc67796b78dc5ca419aa99b536f7"
+      "sha256": "72316cb0f4f1d5ee972f8e6505d30a0acb6198295efa0795050176e106d88082"
     },
     {
       "bytes": 9543,

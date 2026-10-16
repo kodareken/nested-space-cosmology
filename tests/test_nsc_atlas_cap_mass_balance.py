@@ -31,7 +31,8 @@ def install(monkeypatch):
         Nt = R*R+3*T*T
         D = Nr*direction["R"]+Nt*direction["T"]+Q*.001-P*.002
         budget.check(260)
-        return dict(forward=D,reverse=D,N_R=Nr,N_T=Nt,Ip_weights=np.full(64,Q),Iq_weights=np.full(64,P))
+        return dict(forward=D,reverse=D,N_R=Nr,N_T=Nt,Ip_weights=np.full(64,Q),Iq_weights=np.full(64,P),
+                    contraction_roundoff_allowance=1e-12)
     def ledger(m, rhs, tan, *, R_x, T_x, budget):
         radius,clock = tan["N_R"]*R_x,tan["N_T"]*T_x
         interior = tan["forward"]-radius-clock

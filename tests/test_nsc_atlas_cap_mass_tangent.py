@@ -153,3 +153,26 @@ def test_exact_potential_formula_switch_stops(monkeypatch, budget, sign):
     monkeypatch.setattr(model, "_total", lambda *a: {"f":f})
     with pytest.raises(ValueError, match="potential formula switch"):
         model._integrands(None, None, None, 0, None, 6., budget)
+
+
+def test_contraction_bound_accounts_for_panel_cancellation(budget):
+    from decimal import Decimal, localcontext
+    seed = np.ones(3)
+    tape = [dict(attenuation=a,local=np.array(row)) for a,row in
+            ((.75,(1e8,.001,-1e8)),(.5,(-.5e8,.001,.5e8)))]
+    reverse,info = model._reverse_tape(tape,seed,budget)
+    work,bound = info["absolute_work"],info["roundoff_allowance"]
+    forward = 0.
+    for row in tape: forward = row["attenuation"]*forward+float(row["local"]@seed)
+    contracted = float(reverse@seed)
+    with localcontext() as ctx:
+        ctx.prec=60
+        exact=Decimal(0)
+        for row in tape:
+            exact=Decimal.from_float(row["attenuation"])*exact+sum(Decimal.from_float(float(v)) for v in row["local"])
+    assert abs(forward-contracted) > 256*np.finfo(float).eps
+    assert abs(forward-float(exact)) <= bound
+    assert abs(contracted-float(exact)) <= bound
+    assert abs(forward-contracted) <= bound < 1e-4
+    assert abs((forward+1e-3)-contracted) > bound
+    assert work == pytest.approx(2e8+.0015)

@@ -55,10 +55,17 @@ def balance_result(metric, rhs, tangent, target, older, direction, *, budget):
     # Face splitting is checked before contraction; scale it by its own fluxes.
     flux_scale = max(1., float(np.max(abs(rhs["p_flux"]))), float(np.max(abs(rhs["q_flux"]))))
     face_rounding = 256*np.finfo(float).eps*flux_scale
-    if any(abs(v) > rounding for v in defects.values()) or ledger["maximum_face_split_defect"] > face_rounding:
+    contraction_rounding = tangent["contraction_roundoff_allowance"]
+    ratio = abs(defects["forward_reverse"])/contraction_rounding if contraction_rounding else (
+        0. if defects["forward_reverse"]==0 else None)
+    if (abs(defects["forward_reverse"]) > contraction_rounding
+            or any(abs(v)>rounding for k,v in defects.items() if k!="forward_reverse")
+            or ledger["maximum_face_split_defect"] > face_rounding):
         error = ValueError("discrete mass ledger identity failed")
         error.mass_identity_failure = _plain(dict(defects=defects, rounding_allowance=rounding,
-            face_rounding_allowance=face_rounding, ledger=ledger, tangent=tangent))
+            face_rounding_allowance=face_rounding, contraction_roundoff_allowance=contraction_rounding,
+            contraction_roundoff_ratio=ratio,
+            ledger=ledger, tangent=tangent))
         raise error
     R, alpha, wall = metric["radius"], metric["alpha"], metric["wall"]
     fields = background_cap_profile(metric, np.array([R]), budget=budget)
@@ -84,7 +91,8 @@ def balance_result(metric, rhs, tangent, target, older, direction, *, budget):
     before = older["widths"][-1]
     budget.check(80)
     return dict(direction=direction, tangent=tangent, ledger=ledger,
-        checks=dict(defects=defects, rounding_allowance=rounding, face_rounding_allowance=face_rounding),
+        checks=dict(defects=defects, rounding_allowance=rounding, face_rounding_allowance=face_rounding,
+            contraction_roundoff_allowance=contraction_rounding, contraction_roundoff_ratio=ratio),
         radial_density=rho, flux_left=J, flux_imposed=Ji, flux_change=Ji-J,
         B_mass=balance, actual_B_mass=alpha*balance, B_mass_imposed=D-Rx*rho-Tx*Ji,
         B_mass_without_upwind=balance-ledger["interior_upwind"], radial=radial,

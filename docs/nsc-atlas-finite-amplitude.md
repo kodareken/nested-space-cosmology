@@ -2894,6 +2894,19 @@ different truncated expressions. At the quiet-profile boundary, the
 required zero value and first two jets make the first background
 derivatives continuous at positive radius; an axis sample remains excluded.
 
+Forward and reverse contraction use identical local gradient vectors. Their
+floating summation check retains the absolute work
+`W = sum_p attenuation_after_p * sum_j abs(local_gradient_pj * direction_j)`.
+With P panels and K components, set `k=4*(P+K)+32` and
+`gamma=k*eps/(1-k*eps)`. The allowance is
+`gamma*W/(1-gamma)`, where `eps` is binary64 spacing at one.
+This conservatively covers the two accumulation paths and rounding of the
+positive work sum. Scaling by the small final contraction instead failed
+on the terminal zero case because of intermediate cancellation. This is
+an arithmetic check of two contractions of the same stored tape, not an
+uncertainty estimate for the physical mass equation. Ledger, face-split
+and saved-state tolerances keep their separate scales.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

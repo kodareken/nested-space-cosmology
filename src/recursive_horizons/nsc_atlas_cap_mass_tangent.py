@@ -207,6 +207,30 @@ def _cuts(profile, T, R, faces, seed, budget):
     return ordered
 
 
+def _reverse_tape(tape, seed, budget):
+    """Contract the same local gradients and retain their absolute work.
+
+    A summation bound uses the terms before cancellation, not the final mass
+    rate. The path count covers both contraction orders and this positive
+    work sum; eps (twice unit roundoff) and an extra denominator cover its
+    own rounding. This bounds contraction arithmetic, not model error.
+    """
+    count = len(seed)
+    reverse = np.zeros(count); weight = 1.; work = 0.
+    for panel in reversed(tape):
+        reverse += weight*panel["local"]
+        work += weight*float(np.sum(abs(panel["local"]*seed)))
+        weight *= panel["attenuation"]
+        budget.check(4*count)
+    k = 4*(len(tape)+count)+32
+    gamma = k*np.finfo(float).eps/(1-k*np.finfo(float).eps)
+    allowance = gamma*work/(1-gamma)
+    if not np.isfinite(work) or not np.isfinite(allowance):
+        raise ValueError("nonfinite mass contraction work")
+    return reverse, dict(absolute_work=work, roundoff_allowance=allowance,
+                         path_operations=k, gamma=gamma)
+
+
 def mass_tangent(metric, direction, *, budget):
     """Rebuild/check primal masses; return one-sided component weights and tangent.
 
@@ -266,11 +290,7 @@ def mass_tangent(metric, direction, *, budget):
         N = next_N
         if rtag[0] == "cell": face_mass[rtag[1]] = N
         budget.check(count)
-    reverse = np.zeros(count); weight = 1.
-    for panel in reversed(tape):
-        reverse += weight*panel["local"]
-        weight *= panel["attenuation"]
-        budget.check(count)
+    reverse, contraction = _reverse_tape(tape, seed, budget)
     if not np.all(np.isfinite(reverse)) or not np.isfinite(tangent):
         raise ValueError("nonfinite mass tangent")
     defects = abs(face_mass-np.asarray(metric["n_faces"]))
@@ -279,6 +299,7 @@ def mass_tangent(metric, direction, *, budget):
     return dict(N=N, N_R=float(reverse[0]), N_T=float(reverse[1]),
                 Ip_weights=reverse[2:2+n], Iq_weights=reverse[2+n:],
                 forward=float(tangent), reverse=float(reverse@seed),
+                **{"contraction_"+k:v for k,v in contraction.items()},
                 primal_face_defect=float(np.max(defects)),
                 primal_faces=face_mass, limiter_branches=branches,
                 panels=[{k: v for k, v in panel.items() if k != "local"} for panel in tape],
