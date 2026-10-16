@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 201457,
+      "bytes": 202306,
       "path": "docs/active-code-map.md",
-      "sha256": "313fc8c14c8e6ecf44f8edde38248e7787fc74c53f54bcb8cb60ce718622fc97"
+      "sha256": "03a02c05976065837bf3bf4a9c3504bbff212b1869995aceadea0f6d8083cdba"
     },
     {
       "bytes": 95327,
@@ -1558,7 +1558,7 @@
     {
       "bytes": 2231800,
       "path": "docs/lab-snapshot.json",
-      "sha256": "5a106ef4323c4280724bd29249647e0f06e37bcef58d22bdfebcb7ca30fb3c1b"
+      "sha256": "a0087a9b437dfc83ad5e85ecfedd78da3d6d5ff48da33f7b134da6be2fdeec62"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 117303,
+      "bytes": 118690,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "6a51a665d2d8f79ce03059d96a1f1ed8127962447a74b25f5748ca1e28f823fb"
+      "sha256": "0128e3664a02b071a7b41d41d46d0ef43cf8ecbdcb050a4f139f8023799648f2"
     },
     {
       "bytes": 8895,
@@ -2196,9 +2196,9 @@
       "sha256": "2980a527708e22c30927d4c0f9d6872670320dcfc529b3e938ec5af0a522805a"
     },
     {
-      "bytes": 170354,
+      "bytes": 175022,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "a4f17d05310ca7e9de051e76e7dd7fc7da819714b032d0f01f7307643d549cd9"
+      "sha256": "72e14e232e5c6a9479a25c6ebb0ea3094c725901f35329c9c3be7a202f6c3526"
     },
     {
       "bytes": 6705,
@@ -2211,9 +2211,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 60126,
+      "bytes": 61873,
       "path": "docs/reproducing.md",
-      "sha256": "bdc89f2c14630907983f662f3906f1a495feea338f75c1ab226745c5ffc91c2a"
+      "sha256": "9b618bf2b310df8b1af34b41d0aa2523e89067fd2a25078a2963f11fdbd0fa04"
     },
     {
       "bytes": 31710,
@@ -14516,6 +14516,11 @@
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
     },
     {
+      "bytes": 19493,
+      "path": "scripts/analyze_nsc_atlas_spatial_refinement.py",
+      "sha256": "1a90dcf150521d85d58be87ee202dbdcc71ae498ae6da04312caefcf432e344a"
+    },
+    {
       "bytes": 2158,
       "path": "scripts/archive_paper_edition.py",
       "sha256": "e93d147804b7b3edcf85635add3384ff0e1199f9f672843846053ddbf6cd37d6"
@@ -16014,6 +16019,11 @@
       "bytes": 19085,
       "path": "scripts/record_nsc_atlas_source_mass.py",
       "sha256": "f953443914148147ec836cdbeabaf27e6e97555b450ab62263698f18716c88bc"
+    },
+    {
+      "bytes": 20693,
+      "path": "scripts/record_nsc_atlas_spatial_refinement.py",
+      "sha256": "679ceb0f76df95f438de4396a6c64a8743bc584795ce13374d9ffb5239c4fcd9"
     },
     {
       "bytes": 22946,
@@ -18034,6 +18044,11 @@
       "bytes": 1625,
       "path": "tests/conftest.py",
       "sha256": "4beed60a5f74531137cf7acc32ec4ce39adf0b9060c23d679c0d5baacc2b28c6"
+    },
+    {
+      "bytes": 16314,
+      "path": "tests/test_analyze_nsc_atlas_spatial_refinement.py",
+      "sha256": "4126ea70af520d0a468f0cc2dd2ef9160d4c1df688628259830b3930708ea358"
     },
     {
       "bytes": 6503,
@@ -20071,6 +20086,11 @@
       "sha256": "760ef121ed7eb69ea9c81a46c834de03d0965dbde6a8b52ff97a85836e640518"
     },
     {
+      "bytes": 14676,
+      "path": "tests/test_record_nsc_atlas_spatial_refinement.py",
+      "sha256": "7528535e1849b49882eadfcac7c1c3b5960746b6a2e82920bbeaf299b5d314bf"
+    },
+    {
       "bytes": 16918,
       "path": "tests/test_record_nsc_atlas_ssprk3_evolution.py",
       "sha256": "584dbff95a6b58a67025070efc21691316d105cadd07ef986e4bf3e00d5bdabe"
@@ -20121,7 +20141,7 @@
       "sha256": "c64cdfcf34e80a78a0cc59423028407fefee1815087d1ff717110a8bf76bbb9f"
     }
   ],
-  "lab_snapshot_sha256": "5a106ef4323c4280724bd29249647e0f06e37bcef58d22bdfebcb7ca30fb3c1b",
+  "lab_snapshot_sha256": "a0087a9b437dfc83ad5e85ecfedd78da3d6d5ff48da33f7b134da6be2fdeec62",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

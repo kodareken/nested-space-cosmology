@@ -2376,6 +2376,34 @@ derivative and bulk-transport accuracy therefore precede interpretation
 as an actual wall or junction defect. The general identities above
 retain the nonzero outgoing-source contribution throughout.
 
+#### Separating spatial evolution and diagnostic width
+
+The [fixed-input spatial comparison](prior-art-and-open-claim.md#fixed-input-spatial-refinement-16-october-2026)
+changes the exterior and cap grids from 32 to 64 cells at the same 512
+SSPRK3 steps. The source, analytic reference gauge, computational profile
+and physical model remain identical. Compare exterior values at common
+`eta=j/32`, and sum adjacent total physical cap integrals when restricting
+the fine grid. These are common normalized coordinates; the evolved cap
+radii need not be identical.
+
+For a constraint diagnostic `D_h` and saved exterior solution `X_h`,
+retain the separate differences
+
+$$
+D_{1/32}(\mathcal R X_{1/64})-D_{1/32}(X_{1/32}),\qquad
+\mathcal R D_{1/64}(X_{1/64})-D_{1/32}(\mathcal R X_{1/64}).
+$$
+
+Here restriction `R` selects common nodes, with source and wall endpoints
+retained. The first difference changes the evolved data at fixed
+diagnostic width; the second changes diagnostic width on one evolved
+history. At the wall, the stride-two fine-grid estimate has the same
+width as the stride-one coarse-grid estimate. Retain the native fine-grid
+estimate separately. Subtract inherited outgoing-source constraints only
+after assembling the physical radius and actual source jets. Neither
+difference supplies a continuum error bound, and neither assumes a zero
+incoming constraint at the wall.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

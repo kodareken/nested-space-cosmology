@@ -1,5 +1,36 @@
 # Prior art and admission of new research
 
+## Fixed-input spatial refinement, 16 October 2026
+
+The completed wall audit leaves a spatially unresolved curvature estimate.
+Another first-derivative balance on the same saved grid could avoid an
+explicit second derivative, but would still share its evolution error.
+Obtain independent spatial data before interpreting the wall constraint.
+
+| Item | Fixed spatial comparison |
+| --- | --- |
+| Inputs and model | Hash-authenticate the completed 32-cell/512-step record, its manifest and all 86 bound inputs. Reuse its 1,025 exact source/gauge cache rows and original computational profile inputs. Hold the action, amplitudes, source's 129 Hermite knots, profile's 65 knots, physical window, gauge and boundary laws fixed. No source solve, cache reconstruction, profile-stage extraction or old trajectory replay. |
+| New cases | Zero and original finite amplitude at 64 exterior and cap cells, each with the same 512 SSPRK3 steps and cached explicit midpoints. Retain 129 accepted cuts: 1,024 steps and 3,074 stages including two final reconstructions. Existing operators support this grid without modification. |
+| Comparisons | Common saved time and exterior eta coordinates; sum adjacent total physical cap integrals at common normalized radial cells. Retain raw and finite-minus-zero wall geometry, clocks and scalar histories, with their full spatial differences and peak locations. Physical cap radii can differ and are identified as such. |
+| Constraint controls | Retain native 129/65-cut diagnostics and a 32-node-interval restriction of the 64-cell exterior. Compare the restricted diagnostic with the old 32-cell result using identical derivative widths, then compare native and restricted derivatives on the new solution. Separate inherited `r_source E_source/r` from the outgoing residual. Retain bottom-origin, wall-origin and separator masks. Incoming constraints are not presumed zero at a sourced wall. |
+| Wall curvature | Compare three- and five-point one-sided estimates on the new native grid and its every-other-node restriction. The latter uses the same physical eta widths as the old 32-cell stencil. Compare weighted wall values at identical saved cuts; no new birth-transport interpolation is needed to test their spatial stability. |
+| Other diagnostics | Preserve the own-trace zero-cap comparison, outgoing cap signal, quiet scalar controls, profile-domain margins, final wall kinematic defects and constructed flux identities. The known profile-support defect is not corrected within this comparison. |
+| Allowance | One creation has a shared 450 process CPU seconds/80,000,000-point ceiling, including input authentication, unchanged-profile construction, both trajectories, diagnostics and creation validation. The prior pair's 30.83 million trajectory points and cap-panel growth suggest 45--65 million points and 250--350 CPU seconds, not an execution guarantee. One standalone check has 60 CPU seconds/8,000,000 points and no trajectory. Focused new controls share 60 CPU seconds/2,000,000 points. |
+| Verification and stop | Independent restriction/derivative examples, raw-to-physical reconstruction of all saved states, two final stages, exact cache/time/grid preservation, zero and known-limit checks, changed-input/output rejection and shared-budget accounting. Stop at the first domain, nonfinite, metric, wall, Courant `.4`, consistency or budget failure and preserve an ignored `.build` receipt. No automatic retry or resolution increase. |
+| Decision | Determine whether the field and incoming-constraint differences decrease under actual spatial refinement and whether wall curvature becomes consistent at equal widths. If not, identify the remaining spatial operator, source regularity or cap/interface mismatch before changing one of them. Two grids do not establish an order, a continuum limit or a propagated error enclosure. |
+
+Implementation and independent source review are complete. The 24 recorder
+controls pass on their first run with 21,311 points and 2.171875 CPU
+seconds. The 24 diagnostic controls pass with aggregate 943,303 points
+and 0.75 CPU seconds, including an isolated rerun after correcting an
+expected-array shape in the quartic test and the final 129-cut/64-versus-32
+orchestration control. The latter stubs repeated summaries and profile
+work while exercising actual restrictions, comparisons and wall curvature;
+it is not a physical evolution. Combined measured control work is
+964,614 points and 2.921875 CPU seconds. Intentional exhaustion controls
+remain distinct from physical work. New sources are frozen before the
+evolutions; existing results and their bound producers remain unchanged.
+
 ## Incoming wall curvature and transported constraint, 16 October 2026
 
 The preceding saved-data audit finds a much larger incoming constraint on
