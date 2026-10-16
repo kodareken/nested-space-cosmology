@@ -59,8 +59,10 @@ regular centre and fixed central proper clock. Its mass agrees with the
 independent wall transport, and inward null integration gives a central
 arrival correction at fixed exterior input label. The next-order scalar
 equation now supplies a computed exterior correction with separately
-measured forcing-cache, spatial-grid and ODE sensitivities. Its central
-reconstruction and finite-amplitude remainder remain open.
+measured forcing-cache, spatial-grid and ODE sensitivities. Reflected cap
+transport and the observer-clock pullback now reconstruct the cubic central
+scalar coefficient at five interior arrival times, with separate radial
+and incoming-ray comparisons. The finite-amplitude remainder remains open.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1452,6 +1454,100 @@ preparation. Sampled refinement differences are not uniform bounds.
 The central readout additionally requires reflected cap forcing and the
 observer-clock pullback; no finite amplitude or remainder is fixed here.
 
+### 13.15. Reflected cap transport gives the central scalar correction
+
+<!-- nsc-claim:atlas-central-scalar -->
+
+Evidence: [central derivation](../docs/nsc-atlas-central-scalar-response.md),
+[radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json)
+and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json).
+
+Use the same Jordan central proper time and put
+$u=T-\operatorname{atanh}r$, $q=T+\operatorname{atanh}r$.
+The leading reduced field is $c_0=f(q)-f(u)$. Unlike the outgoing wall
+ray, an incoming ray to the centre can contain both profile terms. Its
+metric and forcing therefore use the full reflected field.
+
+Let $a(q)$ be the outgoing label of the wall event with incoming label
+$q$, and write $J(q)=\widetilde c_{1,u}|_W$. The wall value in central-clock
+null coordinates is
+
+$$
+H(q)=y_W(V(q))-C(q)f'(q),\qquad C=\Delta C_{\mathrm{fixed}\,V}.
+$$
+
+The forced cap equation is $\widetilde c_{1,uq}=-K_1c_0$. Differentiating
+the wall value gives $\widetilde c_{1,q}|_W=H'-a'J$; integrating inward
+and imposing regular reflection at $u=q$ then yields
+
+$$
+p_{1,C}(T)=2H'(T)-2a'(T)J(T)
+-\int_0^{x(T)}W_1(T-\operatorname{atanh}r,r)
+ [f(T)-f(T-2\operatorname{atanh}r)]\,dr,
+$$
+$$
+W_1=\frac{2\nu_E}{r^3}-\frac{p^2}{3}
+-\frac{p_T^2}{6(1-r^2)}+\frac{(1-r^2)p_r^2}{6}.
+$$
+
+Here $x(T)$ is the radius of the wall event whose incoming label is $T$.
+The factor two follows from regular reflection. The wall derivative uses
+$y_{W,s}=V_{0,s}\,dy_W/dV$ and the differentiated optical constraint for
+$C_s$. These include the arrival-rate and arrival-shift contributions at
+fixed central time; adding another shift would count that pullback twice.
+The cap's cubic frame term cancels its central lapse pullback. This last
+cancellation is an algebraic check, not a second evolved solution.
+
+The formal observable is
+
+$$
+\frac{\ell\phi_C(T)}{\varepsilon}
+=p_0(T)+\alpha p_{1,C}(T)+O(\alpha^2),\qquad p_0=2f'(T).
+$$
+
+Five cuts lie strictly inside the retained arrival interval. With incoming
+radial and ray orders both 32, they give:
+
+| Central time $T/\ell$ | Leading $p_0$ | Cubic coefficient $p_{1,C}$ |
+| --- | ---: | ---: |
+| $-0.54363418$ | $0$ | $3.49\times10^{-137}$ |
+| $-0.46546305$ | $42.21372894$ | $3395.219$ |
+| $-0.42507962$ | $-0.265835912$ | $-34413.869$ |
+| $-0.38358521$ | $-40.14663419$ | $4369.585$ |
+| $-0.29640937$ | $0.00127167605$ | $1454.355$ |
+
+The 16/32 radial comparison changes the coefficient by at most
+$1.098\times10^{-5}$; the independent 16/32 incoming-ray comparison
+changes it by $5.285\times10^{-5}$. Passing the existing exterior
+cache, grid and ODE comparisons through the same cap algebra changes it
+by $1.155\times10^{-4}$, $1.667\times10^{-4}$ and
+$5.958\times10^{-8}$ respectively. These are separate sampled
+sensitivities, not a combined uncertainty enclosure. The leading field
+uses 129 nodes and the reference geometry 257 knots. Compatible saved
+cap and wall data are reused; no new wall, cap-clock or exterior evolution
+is performed. The radial pair takes 27.9375 process-CPU seconds and the
+ray successor 50.046875 seconds, each within its own 120-second and
+30-million-kernel budget.
+
+The quiet sample remains below $3.49\times10^{-137}$. Positive-radius
+centre samples retain the potential separately from its analytic
+$K_1=O(r^2)$ limit. The fine radial travel integral reproduces the previous
+cap calculation within $1.43\times10^{-14}$. Manufactured controls check
+the optical derivative, integration sign, reflection factor and clock
+conversion independently of this physical run.
+
+The coefficient is large for this preparation, particularly near the
+leading field's zero crossing. Its size neither selects a finite amplitude
+nor bounds the omitted term. The [exact nonlinear equations](../docs/nsc-atlas-finite-amplitude.md)
+now specify the next connection. The same action fixes the canonical
+Einstein potential and wall tension as
+$\widehat V_\pm=3h_\pm^2\cosh^4(\Psi/\sqrt6)$ and
+$\sigma_E=\sigma\cosh^3(\Psi/\sqrt6)$.
+An exact source-leg constraint admits a nonzero small-amplitude interval
+with positive radius and conformal factor. Extending that control through
+the bulk, moving interface and regular centre, with a quantitative
+remainder for this observable, remains open.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -1731,7 +1827,7 @@ The next admissible calculations therefore have concrete decisions:
 
 | Missing connection | Finite decision | What it would unlock |
 | --- | --- | --- |
-| Formal sourced geometry to a controlled finite-amplitude response | With the quadratic cap/wall/exterior geometry and null clocks supplied, what scalar correction follows from the perturbed wave equation and a stated continuation of the preparation? | A corrected detector signal and a finite-amplitude validity estimate |
+| Formal sourced response to finite-amplitude control | With quadratic geometry and the cubic central coefficient supplied, do the exact bulk/interface equations admit a nonzero amplitude interval and a controlled remainder? | A finite-amplitude prediction for the interior observer |
 | Preparation-restricted observer inference | Does the source reconstructed from a measured trace satisfy an independently justified preparation law in each candidate? | A discriminating response-range test or an explicit equivalence class |
 | Alternative coupling or source | Does a fixed minimal-coupling or sourced model leave a distinguishable tail? | A comparison of interior response mechanisms |
 | Physical regional Hamiltonian | Does a chosen matched field yield the required reduction and initial covariance? | Memory with an identified geometric exterior |
@@ -1779,7 +1875,9 @@ exterior clock correction. Radial cap reconstruction now also fixes the
 central proper clock and a corrected null-arrival map, with independent
 cap-mass transport and numerical controls. The formal exterior scalar
 correction is now propagated with independent numerical comparisons.
-Central reconstruction and the finite-amplitude remainder remain to be supplied.
+Reflected cap transport now also reconstructs its central coefficient at
+five fixed proper times. Exact nonlinear source, bulk and wall equations
+identify the remaining finite-amplitude existence and remainder problem.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1812,6 +1910,7 @@ and renders their relationships without launching a new physics calculation.
 | Moving wall and exterior clock | [Mass paths, displacement and clock](../docs/nsc-atlas-wall-evolution.md); [field](../results/development/nsc-atlas-wall-evolution-v1/field/response.json), [radial](../results/development/nsc-atlas-wall-evolution-v1/radial/response.json) and [clock-time](../results/development/nsc-atlas-wall-evolution-v1/time/response.json) comparisons |
 | Smooth cap and central null clock | [Regular centre, metric and arrival map](../docs/nsc-atlas-cap-response.md); [field](../results/development/nsc-atlas-cap-response-v1/field/response.json), [radial](../results/development/nsc-atlas-cap-response-v1/radial/response.json) and [further ray](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json) comparisons |
 | Exterior cubic scalar correction | [Conservative evolution](../docs/nsc-atlas-scalar-evolution.md); [clock lift](../results/development/nsc-atlas-lift-clock-v1/clock.json), [forcing cache](../results/development/nsc-atlas-forcing-cache-v1/cache.json) and [propagated response](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json) |
+| Central cubic scalar correction | [Reflected transport and clock pullback](../docs/nsc-atlas-central-scalar-response.md); [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json) and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json) |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 

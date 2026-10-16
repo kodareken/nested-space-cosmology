@@ -54,8 +54,13 @@ now evaluates the cap's outgoing backscatter and its displaced-wall boundary
 input, with separate field and quadrature refinements. A clock-resolved
 boundary and cached forcing now supply the [propagated exterior scalar
 correction](docs/nsc-atlas-scalar-evolution.md), with separate cache, grid
-and ODE controls. Its central reconstruction and finite-amplitude control
-remain open.
+and ODE controls. The [central reconstruction](docs/nsc-atlas-central-scalar-response.md)
+now evaluates the formal cubic scalar coefficient at five interior arrival
+cuts, with separate incoming radial/ray refinements and inherited exterior
+sensitivities. These are finite-domain perturbative coefficients. The
+[exact nonlinear equations](docs/nsc-atlas-finite-amplitude.md) specify the
+same model's source, smooth evolution and material interface; a full
+finite-amplitude solution and remainder estimate remain open.
 Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,
 feedback and memory results supply reusable mathematics in their own domains.
@@ -77,6 +82,11 @@ expansion and recycling remain research questions.
 - [Retained-wedge field, moving wall and exterior clock](docs/nsc-atlas-wall-evolution.md)
 - [Smooth cap and corrected central null clock](docs/nsc-atlas-cap-response.md)
 - [Scalar backscatter and moving-wall boundary input](docs/nsc-atlas-scalar-metric-response.md)
+- [Propagated exterior scalar correction](docs/nsc-atlas-scalar-evolution.md)
+- [Central scalar reconstruction](docs/nsc-atlas-central-scalar-response.md),
+  [radial comparison](results/development/nsc-atlas-central-scalar-v1/central.json)
+  and [incoming-ray comparison](results/development/nsc-atlas-central-ray-v1/ray.json)
+- [Exact nonlinear model and finite-amplitude gap](docs/nsc-atlas-finite-amplitude.md)
 - [Preparation certificate and retained geometry](docs/nsc-atlas-field-preparation.md)
 - [Paper guide and historical editions](docs/papers.md)
 - [Scientific strands and owners](docs/research-index.md)

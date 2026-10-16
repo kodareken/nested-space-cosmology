@@ -25,15 +25,20 @@ The [retained-wedge calculation](nsc-atlas-wall-evolution.md) now computes
 the formal wall displacement and exterior clock correction. The
 [smooth-cap calculation](nsc-atlas-cap-response.md) now computes the interior
 metric and central null-arrival clock at fixed proper wall time and at fixed
-exterior label. The higher-order scalar signal and finite-amplitude control
-remain open.
+exterior label. The [exterior scalar evolution](nsc-atlas-scalar-evolution.md)
+and [central reconstruction](nsc-atlas-central-scalar-response.md) now
+evaluate the formal cubic correction, including five interior central
+arrival cuts and separate numerical sensitivities. The
+[finite-amplitude owner](nsc-atlas-finite-amplitude.md) supplies exact
+nonlinear equations; full coupled existence and a uniform remainder remain open.
 
 The [scalar-metric continuation](nsc-atlas-scalar-metric-response.md) now
 specifies the next inhomogeneous transmission problem. Its fixed-clock
 readout, source pullback and cap scattering term are derived. Five
 [boundary comparisons](current-result.md#scalar-backscatter-boundary-16-october-2026)
-now evaluate the outgoing correction and displaced exterior wall derivative;
-the interpolant and propagated scalar evolution remain to be evaluated.
+evaluate the outgoing correction and displaced exterior wall derivative.
+The clock-resolved lift and forcing cache now supply the propagated exterior
+correction and its central reconstruction.
 
 Preserved owner routes from the pre-reassembly index, updated to root paths. Dated current or working labels in these entries describe their historical strand, not the publication catalog. The living manuscript is [the main paper](../paper/nested-space-cosmology.md). Discovery and verification boundaries are recorded in [the inventory](research-inventory.md) and [reassembly](repository-consolidation.md).
 
@@ -41,10 +46,11 @@ Preserved owner routes from the pre-reassembly index, updated to root paths. Dat
 |---|---|
 | Profile moment and refined boundary input | [Pre-arrival mass and local lift](nsc-atlas-profile-moment.md); independent radial/moment comparison and fixed-per-cell Hermite interpolation. The [current result](current-result.md#profile-moment-and-local-lift-16-october-2026) records the numerical accuracy. |
 | Conservative scalar propagation | [Evolution and forcing cache](nsc-atlas-scalar-evolution.md); computed exterior cubic coefficient with separate cache, grid and ODE comparisons in the [current result](current-result.md#exterior-scalar-correction-16-october-2026). |
-| Central scalar reconstruction | [Incoming transport and regular reflection](nsc-atlas-central-scalar-response.md); the exterior wall trace, first-jet clock derivative and reflected incoming forcing determine the formal fixed-clock central coefficient. |
+| Central scalar reconstruction | [Incoming transport and regular reflection](nsc-atlas-central-scalar-response.md), [radial record](../results/development/nsc-atlas-central-scalar-v1/central.json) and [ray record](../results/development/nsc-atlas-central-ray-v1/ray.json); computed formal fixed-clock coefficient at five interior cuts, with separate incoming radial/ray and exterior cache/grid/ODE sensitivities. |
+| Finite-amplitude continuation | [Exact conformal source, smooth equations and wall laws](nsc-atlas-finite-amplitude.md); the source-leg continuation argument does not supply a full cap-wall-exterior existence or remainder estimate. |
 | Scalar evolution inputs | [Boundary lift and cumulative exterior forcing](nsc-atlas-scalar-forcing.md); analytic first-jet wall derivatives, exact polynomial lift and one-pass radial constraints. See the [current result](current-result.md) for measured interpolation and quadrature sensitivity. |
-| Scalar response on the computed geometry | [Equations and transmission](nsc-atlas-scalar-metric-response.md), [boundary adapter](../src/recursive_horizons/nsc_atlas_scalar_boundary.py), [five comparison records](current-result.md#scalar-backscatter-boundary-16-october-2026); computed outgoing forcing and wall derivative, with the interpolant and waveform still open. |
-| Smooth cap metric and central null clock | [Derivation](nsc-atlas-cap-response.md), [regular cap field](../src/recursive_horizons/nsc_atlas_cap_field.py), [metric and clock solver](../src/recursive_horizons/nsc_atlas_cap_response.py), [comparison recorder](../scripts/record_nsc_atlas_cap_response.py), [current result](current-result.md#smooth-cap-and-central-arrival-clock-15-october-2026); computed formal coefficients with ten declared comparisons, an independent cap-mass path and separate clock conventions. The higher-order scalar amplitude is not computed. |
+| Scalar response on the computed geometry | [Equations and transmission](nsc-atlas-scalar-metric-response.md), [boundary adapter](../src/recursive_horizons/nsc_atlas_scalar_boundary.py), [five comparison records](current-result.md#scalar-backscatter-boundary-16-october-2026); computed outgoing forcing and wall derivative supply the later lift, exterior propagation and central reconstruction above. |
+| Smooth cap metric and central null clock | [Derivation](nsc-atlas-cap-response.md), [regular cap field](../src/recursive_horizons/nsc_atlas_cap_field.py), [metric and clock solver](../src/recursive_horizons/nsc_atlas_cap_response.py), [comparison recorder](../scripts/record_nsc_atlas_cap_response.py), [current result](current-result.md#smooth-cap-and-central-arrival-clock-15-october-2026); computed formal coefficients with ten declared comparisons, an independent cap-mass path and separate clock conventions, supplying the later scalar correction above. |
 | Retained-wedge field, moving wall and exterior clock | [Derivation](nsc-atlas-wall-evolution.md), [field evaluator](../src/recursive_horizons/nsc_atlas_wedge_field.py), [wall solver](../src/recursive_horizons/nsc_atlas_wall_evolution.py), [comparison recorder](../scripts/record_nsc_atlas_wall_evolution.py), [independent rectangle overlap](../results/development/nsc-atlas-wall-overlap-v1/response.json); computed formal displacement and exterior clock coefficients with seven independent numerical refinements. |
 | Smooth exterior metric and next characteristic leg | [Bulk derivation](nsc-atlas-bulk-response.md), [current numerical result](current-result.md#smooth-exterior-metric-response-15-october-2026), [comparison producer](../scripts/record_nsc_atlas_bulk_response.py); formal radius/lapse evolution and independent integral constraints on the initial rectangle. |
 | Cap mass and shared wall displacement | [Two-sided derivation](nsc-atlas-cap-wall-response.md), [record](../results/development/nsc-atlas-cap-wall-response-v1/cap-wall.json), [model specification](../results/development/nsc-atlas-cap-wall-response-v1/model-specification.json); formal boundary response with fixed action and quiet corner. |

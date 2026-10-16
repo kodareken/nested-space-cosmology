@@ -88,6 +88,34 @@ retained interior arrays, without replaying propagation. The
 [result](current-result.md#exterior-scalar-correction-16-october-2026) records
 separate sensitivities and the limit of the formal coefficient.
 
+The central reconstruction reuses the earlier cap clock and current
+exterior/wall records, and compares new reflected incoming-ray integrals
+at radial orders 16/32 with ray order 16:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_central_scalar.py --output .build/central-scalar-review
+python scripts/run_python.py scripts/record_nsc_atlas_central_scalar.py --check --output results/development/nsc-atlas-central-scalar-v1
+```
+
+The five common interior arrival cuts and one leading-field preparation
+share 120 process-CPU seconds and 30 million kernels. It performs no new
+wall, cap-clock or exterior evolution. The check authenticates saved inputs,
+quadrature inventory and reconstruction algebra without repeating incoming
+integration. The [central result](current-result.md#central-scalar-coefficient-16-october-2026)
+retains all terms, the quiet control and separate numerical sensitivities.
+Its independent incoming-ray successor retains that saved radial-32/ray-16
+case and computes only radial-32/ray-32 at the same five cuts:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_central_ray.py --output .build/central-ray-review
+python scripts/run_python.py scripts/record_nsc_atlas_central_ray.py --check --output results/development/nsc-atlas-central-ray-v1
+```
+
+One fresh leading preparation and five incoming integrals share a new
+120-process-CPU-second, 30-million-kernel budget. Prior costs are recorded
+separately. Its check authenticates the reused coarse side and new
+reconstruction algebra without physical replay.
+
 The [scalar-input successor](nsc-atlas-scalar-forcing.md) compares a 9/17-knot
 Hermite boundary lift against 16 withheld queries, or cumulative exterior
 forcing with radial orders 2/4 at nine times:

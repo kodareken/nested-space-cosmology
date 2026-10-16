@@ -15,12 +15,19 @@ The current working manuscript carries the prepared field through the
 Independent radial and timelike mass paths check this quadratic geometry.
 The central arrival map now includes both travel through the changed cap
 and the moved wall event at a fixed exterior label. The higher-order scalar
-amplitude and finite-amplitude control are the next dynamical connection.
+calculation uses that same source and clock convention.
 Section 13.13 now derives and evaluates the cap's outgoing scalar backscatter
 and its exterior wall derivative, with five numerical comparisons. This
 boundary input is used by Section 13.14, which now computes the exterior
 scalar correction with separate forcing-cache, spatial and ODE comparisons.
-The central reconstruction and finite-amplitude remainder remain open.
+The [central reconstruction](nsc-atlas-central-scalar-response.md) now
+evaluates the formal cubic coefficient at five interior arrival cuts. Its
+[radial](../results/development/nsc-atlas-central-scalar-v1/central.json) and
+[ray](../results/development/nsc-atlas-central-ray-v1/ray.json) comparisons
+retain separate incoming-quadrature and exterior cache/grid/ODE sensitivities.
+The [exact nonlinear model](nsc-atlas-finite-amplitude.md) specifies the
+source, smooth equations and material interface. A full finite-amplitude
+solution and uniform remainder are not established by these coefficients.
 
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.
@@ -51,8 +58,8 @@ The [source-leg mass successor](nsc-atlas-source-mass.md) now supplies
 the mixed-radius connection on that same initial surface. The geometric
 mass has a negative constant quadratic coefficient after the compact
 trace, checked through full frame conversion and improved-stress transport.
-The paper distinguishes this local initial-data result from bulk evolution,
-asymptotic energy and the still-open dynamical wall response.
+The paper distinguishes this local initial-data result from asymptotic
+energy and from the subsequent bulk and wall-response calculations.
 The [normal-force check](nsc-atlas-scalar-normal-force.md) now adds zero
 regular normal-stress jump for the same conformal probe. It supplies a
 necessary mean-curvature condition for a later sourced wall, with bulk

@@ -77,6 +77,24 @@ integral, every central contribution and total coefficient. This separate
 ray comparison retains the same physical inputs; unresolved drift or a
 budget failure requires diagnosis before another resolution increase.
 
+**Incoming-ray outcome:** the new radial-32/ray-32 side takes 50.046875
+process-CPU seconds and 26,350,673 scalar kernels. The maximum central
+coefficient change is $5.28497\times10^{-5}$, with separate optical-time,
+forcing and travel-integral changes $1.33819\times10^{-6}$,
+$3.60495\times10^{-7}$ and $5.20715\times10^{-10}$. Quiet recovery
+persists. The saved coarse side and its previous cost remain explicit.
+The [record](../results/development/nsc-atlas-central-ray-v1/ray.json)
+completes the two admitted incoming quadrature comparisons; no further
+resolution increase is required to report these finite sensitivities.
+
+The next mathematical connection is [finite-amplitude control](nsc-atlas-finite-amplitude.md).
+Its independently reviewed exact action reduction supplies the nonlinear
+source, bulk and wall equations and a source-only positivity argument.
+Analytic investigation of the coupled interface/centre estimate is useful
+before another physical calculation. A source-leg bound or small truncated
+coefficient does not establish that full-domain estimate. No nonlinear
+physical run or larger numerical budget is admitted by this paragraph.
+
 ## Conservative scalar evolution admission, 16 October 2026
 
 The [evolution connection](nsc-atlas-scalar-evolution.md) reuses the already

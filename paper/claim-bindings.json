@@ -153,6 +153,11 @@
       "section": "13.14",
       "status": "measured",
       "owner": "docs/nsc-atlas-scalar-evolution.md"
+    },
+    "atlas-central-scalar": {
+      "section": "13.15",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-central-scalar-response.md"
     }
   },
   "findings": [
@@ -395,6 +400,14 @@
       "note": "docs/nsc-atlas-scalar-evolution.md",
       "record": "results/development/nsc-atlas-scalar-evolution-v1/evolution.json",
       "paper_section": "13.14"
+    },
+    {
+      "id": "atlas-central-scalar",
+      "status": "measured",
+      "summary": "The exterior correction, observer-clock pullback and full reflected cap forcing determine the formal cubic central Jordan scalar coefficient at five interior arrival times. Separate incoming radial and ray 16/32 comparisons and propagated exterior sensitivities retain their finite sampled scope. The exact nonlinear source, bulk and wall laws identify the remaining finite-amplitude existence and remainder problem.",
+      "note": "docs/nsc-atlas-central-scalar-response.md",
+      "record": "results/development/nsc-atlas-central-ray-v1/ray.json",
+      "paper_section": "13.15"
     }
   ]
 }

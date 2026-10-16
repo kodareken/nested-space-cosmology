@@ -2,6 +2,60 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Central scalar coefficient, 16 October 2026
+
+The [central reconstruction](nsc-atlas-central-scalar-response.md) now
+connects the exterior correction to the interior observer. It uses the
+exterior wall derivative, current clock pullback, outgoing cap response
+and reflected incoming forcing. The
+[first comparison](../results/development/nsc-atlas-central-scalar-v1/central.json)
+holds ray order 16 fixed and varies incoming radial order 16/32 at five
+arrival labels strictly inside the finite window.
+
+The fixed-central-clock field is
+$\ell\phi_C/\varepsilon=p_0+\alpha p_{1,C}+O(\alpha^2)$.
+At radial and ray orders both 32 the retained coefficients are:
+
+| Central time $T/\ell$ | $p_0$ | $p_{1,C}$ |
+| --- | ---: | ---: |
+| -0.54363418 | 0 | $3.49\times10^{-137}$ |
+| -0.46546305 | 42.21372894 | 3395.219 |
+| -0.42507962 | -0.265835912 | -34413.869 |
+| -0.38358521 | -40.14663419 | 4369.585 |
+| -0.29640937 | 0.00127167605 | 1454.355 |
+
+The maximum radial change in $p_{1,C}$ is $1.09781\times10^{-5}$.
+Propagating the existing exterior cache/grid/ODE comparisons through the
+same cap algebra changes it by at most $1.15477\times10^{-4}$,
+$1.66666\times10^{-4}$ and $5.95797\times10^{-8}$, respectively. These
+are separate sampled sensitivities, not a total uncertainty enclosure.
+The independent [incoming-ray 16/32 comparison](../results/development/nsc-atlas-central-ray-v1/ray.json)
+changes the central coefficient by at most $5.28497\times10^{-5}$,
+the optical time integral by $1.33819\times10^{-6}$ and the reflected
+forcing integral by $3.60495\times10^{-7}$. It reuses the saved coarse
+case and computes five new rays with one leading-field preparation,
+taking 50.046875 process-CPU seconds and 26,350,673 scalar kernels.
+
+One leading-field preparation and ten incoming rays take 27.9375
+process-CPU seconds and 14,498,108 scalar kernels. No wall, cap-clock or
+exterior correction is evolved again. The fine travel integral reproduces
+the earlier cap result within $1.43\times10^{-14}$; fixed-material-time
+arrival agrees within $2.85\times10^{-14}$. Quiet recovery is below
+$3.49\times10^{-137}$. Two positive-radius samples on each ray retain
+the computed centre-near potential separately from its analytic zero
+at the centre. The frame cancellation closes below $9.10\times10^{-13}$
+as an algebraic identity; it is not a second independently evolved solution.
+
+The large cubic coefficient is a result of this preparation and geometry.
+In particular, a leading field near zero does not make its absolute
+correction small. No finite $\alpha$ or uniform relative-error claim is
+selected from this table. The nonlinear amplitude interval and remainder
+need their own calculation. The [exact nonlinear owner](nsc-atlas-finite-amplitude.md)
+derives the source constraint, smooth bulk equations and transformed wall
+laws from the same action. A source-only continuation bound keeps radius,
+slope and conformal factor positive for sufficiently small nonzero
+amplitude. The coupled bulk/interface/centre remainder remains unresolved.
+
 ## Exterior scalar correction, 16 October 2026
 
 The [first propagated correction](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json)
