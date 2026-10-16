@@ -1569,6 +1569,189 @@ absolute defects about `8.72` and `9.84` on 16 and 32 cells. Resolving
 this cancellation and local value/gradient compatibility is necessary
 before interpreting the small finite-minus-zero scalar response.
 
+#### Reduced canonical field and an exact incoming-wave control
+
+An equivalent continuum system exposes that cancellation directly. Define
+the reduced **canonical** field and its two first derivatives by
+
+$$
+\chi=rf,\qquad p=r\Pi,\qquad q=\chi_r=f+r\Phi.
+$$
+
+Here $q$ is not $Q=\Phi/r$. At finite amplitude $\chi$ also differs
+from the earlier $c=ru$: with $a=\sqrt{\alpha/6}$,
+$\chi=r\operatorname{arsinh}(ac/r)/a$, continued to $c$ at $a=0$.
+The scalar equations give, without a new field assumption,
+
+$$
+\chi_T=Bp,\qquad
+p_T=(Bq)_r-B_r f-r e^\delta U_\alpha(f),\qquad
+q_T=(Bp)_r.
+$$
+
+The two radial metric constraints cancel their kinetic terms in
+$B_r=e^\delta(A_r+A\delta_r)$, leaving the useful identity
+
+$$
+\boxed{B_r=e^\delta\left(\frac{2m}{r^2}-rP\right).}
+$$
+
+For $m=r^3/2+\alpha n$ and $P=3+\alpha P_1$, the combined source in
+the $p$ equation can therefore be evaluated as
+
+$$
+B_r f+r e^\delta U_\alpha
+=e^\delta\left[r(U_\alpha-2f)
++\alpha\left(\frac{2n}{r^2}-rP_1\right)f\right].
+$$
+
+Both bracketed terms vanish at zero amplitude. In that limit
+$B=1-r^2$, $U_0=2f$ and the outgoing variable $d=p-q$ obeys
+
+$$
+\boxed{d_T+(Bd)_r=0,\qquad d_W=R w_- - f_W.}
+$$
+
+Thus a compatible reconstruction of $f$ and preservation of zero outgoing
+data are distinct controls. The latter requires the numerical evolution
+and its boundary flux to preserve this homogeneous equation; enforcing a
+primitive identity alone does not establish it.
+
+Regular-axis data have $\chi$ and $p$ odd, with $\chi(0)=p(0)=0$,
+and $q$ even, with $q(0)=f_C$. Consequently the reduced characteristics
+reflect with opposite signs: $p-q=-(p+q)$ at the axis. For a moving wall,
+
+$$
+\frac{d\chi_W}{dT}=B_Wp_W+R_Tq_W,\qquad
+p_W+q_W=R w_++f_W.
+$$
+
+Integrating $q_T=(Bp)_r$ shows that
+$\chi_W-\int_0^R q\,dr$ is constant when the regular axis and this
+same wall law hold. A discrete analogue must use consistent wall fluxes
+and time updates. It must also test propagation against an independent
+solution, rather than count an imposed reconstruction identity as
+evolution accuracy.
+
+Such a solution is available before central arrival. For a compact
+profile $F(\zeta)$, with $\zeta=T+\operatorname{atanh}r$ and support
+above the tested times, set $\chi=F(\zeta)$. Then
+
+$$
+f=\frac F r,\quad \Pi=\frac{F'}{(1-r^2)r},\quad
+\Phi=\frac{F'}{(1-r^2)r}-\frac F{r^2},\quad
+p=q=\frac{F'}{1-r^2},\quad
+w_+=\frac{2F'}{(1-r^2)r}-\frac F{r^2}.
+$$
+
+The central neighbourhood is exactly quiet, so these expressions need
+no division at the axis. For cell faces $a<b$, write
+$F_a=F(T+\operatorname{atanh}a)$ and likewise for $F_b$. Exact ordinary
+radial means of the reduced variables are
+
+$$
+\langle p\rangle_{dr}=\langle q\rangle_{dr}
+=\frac{F_b-F_a}{b-a}.
+$$
+
+The original weighted variables have independent targets
+
+$$
+\langle Q\rangle_{r\,dr}
+=\frac{f(b)-f(a)}{(b^2-a^2)/2},\qquad
+\langle\Pi\rangle_{r^2dr}
+=\frac{bF_b-aF_a-\int_a^b F(T+\operatorname{atanh}r)\,dr}
+{(b^3-a^3)/3}.
+$$
+
+For example, $R(T)=.45+.5T$ on $0\le T\le.2$ is strictly timelike,
+and the compact $C^5$ profile $F=.01(1-z^2)^6$ for $|z|<1$, zero
+otherwise, with $z=(\zeta-.65)/.10$, is initially quiet and cannot
+reach the centre during this test. Its known wall value, incoming
+characteristic, cell means and time-dependent profile separately test
+transmission, compatibility and propagation. The successor's manufactured
+controls now include this independent propagation comparison. Its prepared
+physical-source comparison remains pending; these identities do not alter
+the retained five-case result or resolve its measured errors.
+
+#### Conservative reduced variables and exact vacuum departures
+
+The [reduced-cap operator](../src/recursive_horizons/nsc_atlas_reduced_cap.py)
+stores the physical cell integrals `Ip=integral(p dr)` and
+`Iq=integral(q dr)`. On the moving grid `r=R(x)y`, their balances are
+
+$$
+\partial_x I_p=[T_xBq+R_xy p]_{\rm faces}
+-T_x\int\left(B_r f+r e^\delta U_\alpha\right)dr,
+\qquad
+\partial_x I_q=[T_xBp+R_xy q]_{\rm faces}.
+$$
+
+There are no volume-dilution terms for these actual integrals. The regular
+axis has zero `Iq` flux. Consequently `chi_W=sum(Iq)` evolves by the same
+wall flux used for transmission. The field is the primitive of the
+reconstructed `q`, starting from `chi(0)=0`. Away from the first cell,
+both reduced characteristics use the same limited linear reconstruction.
+The first cell uses odd `p=r(P0+P2*r^2)` and even `q=Q0+Q2*r^2`, with
+coefficients preserving its integrals and regular limits. The radial
+constraints evaluate this field, rather than a separate cell value, at
+their quadrature nodes. The exact within-cell lapse integral and bounded
+Gauss mass integration retain the zero-amplitude metric analytically.
+
+The [coupled successor](../src/recursive_horizons/nsc_atlas_compatible_evolution.py)
+therefore has no independent scalar wall state. It converts
+`chi_W` to `c_W=R*sinh(a*chi_W/R)/a`, with its continuous `a=0` limit,
+before applying the unchanged hybrid map. The resulting incoming
+characteristic determines the cap face flux. The converted conservative
+`c_x` is checked independently against the hybrid `c_s/x_s`. Its
+numerical one-sided exterior jet remains a separately reported residual.
+
+For the exterior, let `V=(r_v,L_v,0)` be the exact Schwarzschild fields in
+the same `Ubar,x` coordinates. With `a_h=.8`, they satisfy
+
+$$
+r_v=a_h\left[1+W_0\left(-\frac{(1-\bar U/(4a_h))
+(1-x/a_h)e^{x/a_h}}{e}\right)\right],
+\qquad
+C_v=\frac{x}{r_v}e^{(x-r_v)/a_h},\qquad L_v=\log C_v.
+$$
+
+Here `W0` is the principal Lambert function; this is unrelated to the
+moving wall label `W(x)`. Write
+
+$$
+X=V+X_0(x)-V(0,x)+Z,\qquad Z(0,x)=0.
+$$
+
+The [departure-prefix operator](../src/recursive_horizons/nsc_atlas_vacuum_departure.py)
+differentiates `V` analytically and only differences `Z`. Its radial
+prefix is the same nonlinear equation rearranged as
+
+$$
+r_x=\frac{r_0r_{0x}-[x-r_v r_{vx}]
+-\int_0^{\bar U}(C-C_v)/4\,d\bar U'}{r}.
+$$
+
+Likewise, with `F=2*r_Ubar*r_x/r^2+C/(2*r^2)-alpha*f_Ubar*f_x`,
+it evaluates `L_x=L_vx+L_0x+integral(F-F_v)`. The canonical scalar
+prefix remains the full equation. Stable difference formulas avoid
+cancellation between almost equal background terms. The source's values
+and first derivatives remain the original supplied data. Evolve
+
+$$
+Z_x\big|_\eta=Q-V_x-[X_0'-V_x(0,x)]
++\eta\frac{W_x}{W}Z_\eta.
+$$
+
+Wall radius, lapse and clock variables also store departures from their
+reference trajectories. Fixed-step SSPRK2 therefore preserves the moving
+vacuum to roundoff rather than repeatedly integrating its discretization
+error. The removed background quadrature errors are retained separately.
+Independent pure constraints still require derivatives of saved fields;
+report both ordinary finite differences and analytic vacuum jets plus
+finite differences of the departures. Neither diagnostic substitutes the
+mixed evolution equations for the derivatives it is testing.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -8,6 +8,42 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The compatible successor evolves exact-vacuum geometric departures and
+conserved cap integrals. Its single common scalar wall value comes from
+the cap gradient primitive. Run its manufactured and analytic controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_vacuum_departure.py tests/test_nsc_atlas_reduced_cap.py tests/test_nsc_atlas_compatible_evolution.py tests/test_nsc_atlas_departure_diagnostics.py -q
+```
+
+The 94 controls include actual incoming-wave propagation, moving vacuum
+preservation, finite-amplitude wall conversion and independent pure-null
+constraint violations. Each regional/control suite shares its declared
+30-CPU-second/20,000-point budget. The
+[owner](nsc-atlas-finite-amplitude.md#conservative-reduced-variables-and-exact-vacuum-departures)
+specifies the integral weights, regular-axis parity and background
+subtraction. These controls do not replay the prepared physical source.
+
+The [successor recorder](../scripts/record_nsc_atlas_compatible_evolution.py)
+authenticates and reuses the first coupled run's source and reference caches.
+Its five-case comparison has the same grids, time steps and amplitude, with
+one shared 180-CPU-second/8,000,000-point allowance including inherited
+authentication and final checks. A new run requires a fresh directory:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_record_nsc_atlas_compatible_evolution.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_compatible_evolution.py --output .build/compatible-evolution-review
+python scripts/run_python.py scripts/record_nsc_atlas_compatible_evolution.py --check --output .build/compatible-evolution-review
+```
+
+Checking reconstructs raw-to-physical saved fields, final cap constraints,
+wall/prefix stages and independent diagnostics. It performs no source,
+reference or time evolution. The raw finite-difference and analytic-vacuum
+departure diagnostics remain distinct. Fine cap integrals are restricted
+by summing adjacent cells. The first failure is saved under the ignored
+`.build/compatible-evolution-failures` area with no completed result
+directory, automatic retry or change of numerical settings.
+
 The simultaneous exterior, wall and polar-cap stage uses a source snapshot,
 ordered exterior integrals, the constrained regular cap and the existing
 hybrid wall law. Its fixed reference wall label evolves the actual wall

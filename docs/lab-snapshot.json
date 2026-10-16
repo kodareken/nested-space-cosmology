@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
+  "current_receipt_commit_parent": "34dcb24cfe376eeb2055705438fd3501c584a6c2",
   "files": [
     {
       "bytes": 1506,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 194781,
-      "change": "Explicit successor for the first coupled exterior-wall-cap numerical window and its measured compatibility errors; original import fields preserved",
-      "changed_from_commit": "c59ab899a55a0cc35b65bc438273c7189cd495c2",
+      "bytes": 195475,
+      "change": "Explicit successor for compatible reduced-cap and vacuum-departure operators; original import fields preserved",
+      "changed_from_commit": "34dcb24cfe376eeb2055705438fd3501c584a6c2",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "e0bc7af50fa5ee799647d3209ab92169476720c58f51bd20ced9b49e30dc269a"
+      "sha256": "f8e05bbe2996f73a0eed0a87626f7173231db9fdca1897dcc71d8d96fc77dac5"
     },
     {
       "bytes": 9543,

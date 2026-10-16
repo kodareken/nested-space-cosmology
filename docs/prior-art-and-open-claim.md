@@ -1,5 +1,76 @@
 # Prior art and admission of new research
 
+## Compatible reduced cap and vacuum departures, 16 October 2026
+
+The [first coupled window](current-result.md#first-coupled-exterior-wall-and-cap-window-16-october-2026)
+locates two numerical errors: a quiet vacuum layer beside the wall and a
+cap field/gradient mismatch that corrupts the leading outgoing-wave
+cancellation. The successor keeps the original action, source, amplitude,
+incoming interval and wall-label gauge. It changes the numerical variables
+and integrates known background terms analytically.
+
+For the exterior, write the physical fields as exact Schwarzschild fields,
+the unchanged source departure, and evolved spatial departures. Differentiate
+the vacuum analytically and integrate the nonlinear prefix differences.
+Evolve wall departures in radius, lapse and clocks. This preserves the exact
+vacuum during time integration, while the original source and finite
+responses remain dynamical. Retain raw independently differenced constraints
+and the finite-difference residual of the exact background separately.
+
+For the cap, use the canonical reduced field `chi=r*f`, `p=r*Pi` and
+`q=chi_r=f+r*Phi`. Their exact equations are
+`p_T=(B*q)_r-B_r*f-r*exp(delta)*U_alpha` and `q_T=(B*p)_r`.
+The radial constraints give `B_r=exp(delta)*(2*m/r^2-r*P)`.
+At zero amplitude, `m=r^3/2`, `P=3` and `U_0=2*f`, so the reaction
+vanishes identically and the outgoing combination `p-q` obeys a homogeneous
+transport equation. Reconstruct the field and its potential from the same
+conservative gradient, with the regular centre and common wall value.
+The canonical reduced field differs from the conformal `c` at finite
+amplitude; the existing exact conversion and hybrid wall law remain in use.
+
+First implement and independently verify these regional operators and
+their common stage. Manufactured identities, regular-axis limits, analytic
+incoming waves and exact vacuum controls have an aggregate ceiling of
+30 process CPU seconds and 20,000 charged points per operator test suite.
+Check source preservation, moving-grid fluxes, the actual wall-value chain
+rule, and nonzero manufactured departures. Exact preservation of an imposed
+identity alone is insufficient: compare propagated fields and outgoing
+characteristics with independent analytic solutions. Preserve the first
+run and its bound producers. No new physical trajectory is admitted by
+these implementation tests; its fixed comparison and cumulative allowance
+will be recorded after the operators and boundary data are checked.
+
+Stop or revise a discrete representation when its axis, boundary data count
+or conservation identities fail. The next decision is whether these
+equivalent equations remove the diagnosed numerical errors with a measured
+refinement improvement. Increasing the grid alone is not the proposed fix.
+
+The four new operator suites now pass together: **94 controls** cover the
+vacuum prefixes, reduced cap, coupled stage and independent departure
+diagnostics. The manufactured cap propagation reduces its primitive error
+from `.00311851` to `.00142199` on 16 and 32 cells. Its outgoing integral
+defect is at most `2.53e-19`; its actual wall time-integration error,
+`6.69e-6`, is retained separately. These are manufactured controls rather
+than a new result for the prepared physical source. They admit the following
+fixed successor comparison once the recorder's authentication controls pass.
+
+The recorder's 30 synthetic checks now pass, including raw-to-physical
+reconstruction, modified-data rejection, fixed-cache use and cumulative
+creation/authentication limits. The bounded physical comparison below is
+ready; no prepared-source trajectory was used as an implementation test.
+
+| Item | Fixed compatible-evolution comparison |
+| --- | --- |
+| Inputs | Authenticate the saved first coupled record and reuse its 513 exact-index source and reference-gauge rows. No new source integration, reference quadrature, interpolation choice, amplitude or preparation. |
+| Domain | The identical original `.4<=x<=x_last`, `0<=Ubar<=W_ref(x)` and `0<=r<=R(x)` window, quiet corner and clock origins. |
+| State | Exact-vacuum exterior departures and four wall geometry/clock departures; cap `Ip,Iq` physical integrals. The common scalar wall value is derived from `sum(Iq)` and converted between canonical and conformal fields by the same action. |
+| Cases | Zero and existing nonzero amplitude on 16 and 32 cells, each with 256 steps, plus the nonzero 32-cell case with 512 steps. Retain 129 accepted slices per case. Use the same first-order exterior upwinding, prefix order two, cap quadrature order four and fixed SSPRK2. The cap characteristic reconstruction and exact vacuum prefixes are the declared changes. |
+| Cumulative budget | One shared 180-process-CPU-second and 8,000,000-point allowance, including authentication of the parent, every stage, diagnostics and creation authentication. No budget reset or uncharged replacement source. |
+| Independent checks | Preserve raw saved-field pure constraints and add analytic-vacuum-plus-differenced-departure constraints. Retain source curvature defects, numerical wall-jet mismatch, final independent radial constraints, paired spatial and separate temporal comparisons, and the original rectangle overlap. Compare the predecessor's wall and exterior histories at identical coordinates. |
+| Cap controls | Measure the actual outgoing reduced characteristic and independently tested propagation. Label primitive and global field-jump identities as consequences of the representation. Restrict fine conserved integrals by summing adjacent cells; do not average them as point values. |
+| Stop | Same exterior tube (`.2<=r<=.8`, `-2<=log C<=2`, `-4<=c<=4`), positive cap `A,B` and hybrid incoming sum, timelike wall, maximum stage Courant `.4`, finite arithmetic and cumulative limits. Preserve the first failure and state; no retry, source replacement, enlarged tube or adaptive step. |
+| Decision | Determine whether the vacuum layer and leading outgoing-wave error are removed in the coupled calculation, and whether the finite response improves under the declared spatial/time comparisons. A failed or unresolved comparison produces a diagnosis. A successful comparison supplies the next central-arrival-domain construction; it is not a uniform error enclosure, stability proof or observation of nature. |
+
 ## Coupled characteristic exterior and polar cap, 16 October 2026
 
 The completed rectangle supplies an independent overlap test for the next
