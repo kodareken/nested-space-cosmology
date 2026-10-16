@@ -511,7 +511,15 @@ def check_manifest(errors: list[str]) -> None:
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("retained result receipts: " + str(error))
     local_outputs = {relative for relative in outputs if (ROOT / relative).is_file()}
-    if result_files != local_outputs | development_outputs | receipt_outputs:
+    current_outputs = set()
+    component_output = "results/development/nsc-atlas-lift-components-v1.json"
+    try:
+        from assess_nsc_atlas_lift_components import check as check_components
+        check_components(ROOT / component_output)
+        current_outputs.add(component_output)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f"scalar lift component evidence: {error}")
+    if result_files != local_outputs | development_outputs | receipt_outputs | current_outputs:
         errors.append("tracked NSC result files differ from authenticated local/archived closure")
 
 
@@ -931,11 +939,6 @@ def check_scalar_input_evidence(errors: list[str]) -> None:
             importlib.import_module(module_name).check(ROOT / "results/development" / directory)
         except (OSError, ValueError, KeyError, TypeError) as error:
             errors.append(f"{directory} evidence: {error}")
-    try:
-        from assess_nsc_atlas_lift_components import check as check_components
-        check_components(ROOT / "results/development/nsc-atlas-lift-components-v1.json")
-    except (OSError, ValueError, KeyError, TypeError) as error:
-        errors.append(f"scalar lift component evidence: {error}")
 
 
 def main() -> int:

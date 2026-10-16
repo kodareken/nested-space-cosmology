@@ -95,6 +95,46 @@ before another physical calculation. A source-leg bound or small truncated
 coefficient does not establish that full-domain estimate. No nonlinear
 physical run or larger numerical budget is admitted by this paragraph.
 
+**Reference-collar outcome:** the exact normal-geodesic and Jacobi equations
+give positive lapse and bounded scalar coefficients on compatible patches
+of half-width $\ell/20$ about the original wall interval. Rational
+inequalities close the reference scalar energy estimate with coefficient
+$119/8$. Its outer flux remains explicit, and homogeneous transmission is
+required even when the field represents a residual. This is an analytic
+reference result, not a new physical evolution or a sourced-metric bound.
+
+The next bounded analytic tasks are to close the first-commuted collar
+energy using those constants and to derive a forced regular-centre
+readout estimate for the same reference cap. Keep the same action, source
+regularity and finite domain. Retain supplied outer traces, source norms
+and patch compatibility; no whole-domain inverse follows from omitting
+them. Independent derivations and exact arithmetic are sufficient for this
+step. Any supporting algebraic check has a 30-process-CPU-second ceiling;
+no physical solve or source refinement is included. A derivative loss or
+unprovided boundary datum redirects the estimate at that specific term.
+
+**Scalar-estimate and constraint outcome:** independent derivations close
+the first-commuted reference collar energy with coefficient $1549/8$,
+and give both a characteristic and an energy-trace estimate at the regular
+centre. Initial energy, forcing and outer incoming traces remain explicit.
+The exact bulk equations propagate $rE_U$ along constant-$U$ rays and
+$rE_V$ along constant-$V$ rays. Their wall audit identifies the remaining
+incoming constraint mode and the independent normal-force equation that
+removes it when full Israel and scalar matching are imposed. This is an
+analytic identity, not a solved nonlinear interface evolution. The next
+step selects a noncircular independent boundary system and compatible
+metric estimates under the same finite analytic scope; no physical run is
+admitted by these results.
+
+**Boundary-selection outcome:** independently imposing the incoming
+exterior null constraint, temporal junction and normal force makes the
+angular mismatch obey a homogeneous first-order equation. Initial angular
+matching therefore propagates, and the cap's incoming constraint vanishes.
+The derivation retains residuals until this conclusion; it does not use
+the constraint-dependent temporal shortcut. This fixes a consistent
+constraint prescription for sufficiently regular solutions. Construction
+and bounds for the coupled boundary solution map remain open.
+
 ## Conservative scalar evolution admission, 16 October 2026
 
 The [evolution connection](nsc-atlas-scalar-evolution.md) reuses the already

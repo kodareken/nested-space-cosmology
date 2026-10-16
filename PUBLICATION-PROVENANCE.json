@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 207956,
+      "bytes": 209908,
       "path": "docs/current-result.md",
-      "sha256": "5148536201bfa1b6b5f1e0ae55d998de3611ea4cb110dac910b25fa312db0255"
+      "sha256": "99b91935d66e7dd910826f6d5f34721ef32bae0d6cc8e535a66081bc25ea4ac7"
     },
     {
       "bytes": 2029,
@@ -1606,9 +1606,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 22623,
+      "bytes": 40460,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "ea4f94780b58674bf47204a3dc5a102a10532a4ed1fd03ad0d2db5ad8b12d3b1"
+      "sha256": "ca44894c7c9daa52398e2209c1f40bc326bdf554fb21296732545a67145d6311"
     },
     {
       "bytes": 8895,
@@ -2176,9 +2176,9 @@
       "sha256": "78af40bbb54e6f33251cb2b9b8aee6b67c7dc20566c0ea1cf76375ec579ec896"
     },
     {
-      "bytes": 99215,
+      "bytes": 101768,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "418fcd78be43a068ec6c3b386339dbc1185ff65954e061d582bfe5523adc8fb9"
+      "sha256": "4bc1d2de2ca29c10c3bf3f91ffced3f2ae833d2f6ecdec712adb221ba2513e41"
     },
     {
       "bytes": 6705,
@@ -2283,7 +2283,7 @@
     {
       "bytes": 14278,
       "path": "paper/build-manifest.json",
-      "sha256": "8473ce4a032bc1e555535a9d9537f1141efe361a5cef1beab6f22bc4052515e6"
+      "sha256": "77eb70a839d5e55560cd0feab1d2d3ec6de01b7f875440bc7b544f6be35d4f9d"
     },
     {
       "bytes": 3206,
@@ -2516,14 +2516,14 @@
       "sha256": "89e29981cdaebf1479f4452b5343e2e115316ffc8af08e517cdeda20a579f62b"
     },
     {
-      "bytes": 97457,
+      "bytes": 97462,
       "path": "paper/nested-space-cosmology.md",
-      "sha256": "a44c1a7be78da220d68a87bf6d00ad13a45f72d7099fe4ea522e53367b62fddb"
+      "sha256": "b839d8da30f76d2bca4183ce96aaa8e2eff1103c9a39ce3af8fbfde986673fbd"
     },
     {
-      "bytes": 2196978,
+      "bytes": 2201572,
       "path": "paper/nested-space-cosmology.pdf",
-      "sha256": "7f4827e02026483158c9da57065e88e0a1a247e84fd7986845e40b7fd272cf2f"
+      "sha256": "47e6640f3b8b3ed2a4fb6cccf8b002961dcffe72ff97f4a107bbc364c0fef0c2"
     },
     {
       "bytes": 1521,
@@ -14666,9 +14666,9 @@
       "sha256": "ce27cd3220cf862868b6813007175700601d3001e4835eb51a865f8195785f48"
     },
     {
-      "bytes": 49860,
+      "bytes": 49992,
       "path": "scripts/check_publication.py",
-      "sha256": "f93ca385d1e3f156b43a58b8ca74a55dd4a14d9c61921ad18893d1b57dc0f597"
+      "sha256": "437b3d007440de19fabc9ac5b770fbc694a5b027d1162674022a90ed3d6ea197"
     },
     {
       "bytes": 13188,

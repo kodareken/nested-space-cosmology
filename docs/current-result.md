@@ -2,6 +2,39 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Reference scalar bounds and constraint transport, 16 October 2026
+
+The [nonlinear owner](nsc-atlas-finite-amplitude.md#a-bounded-vacuum-reference-collar)
+now supplies explicit reference-geometry bounds on a normal collar of
+half-width $\ell/20$ over $0.45\le R/\ell\le0.55$. Its lapse stays
+above $2/3$, and its one-sided coefficient derivatives have rational
+bounds. These close the scalar energy inequality with amplification
+coefficient $119/8$, retaining the outer-boundary flux and the prescribed
+forcing norm. Homogeneous value and normal-derivative transmission cancel
+the internal wall flux. Independent derivations check the bounds and signs;
+no field evolution or fitting enters this result.
+
+Commuting once with wall time closes a second energy inequality, with
+coefficient $1549/8$ and both forcing norms explicit. A separate regular
+cap strip gives an exact incoming-characteristic formula for the central
+field error and a first-commuted energy trace bound. These estimates use
+compatible initial and outer data; the outer traces are not new sources.
+
+Direct differentiation also gives
+$\partial_V(rE_U)=\partial_U(rE_V)=0$ for the null Einstein-constraint
+residuals. It proves their propagation in each smooth region. At the wall,
+the full junction laws transfer the tangential residual, while an
+independent normal-force condition removes the remaining incoming
+constraint mode. The earlier temporal-junction shortcut already assumes
+the constraints and cannot supply their boundary closure circularly.
+
+A noncircular boundary choice now imposes the incoming exterior constraint,
+temporal junction and normal force independently. It propagates initial
+angular matching and forces the cap's incoming constraint to vanish. This
+is a consistency implication for a regular solution. Constructing that
+coupled solution map and bounding its metric, field and residual remain
+the next connection to a nonzero nonlinear amplitude interval.
+
 ## Central scalar coefficient, 16 October 2026
 
 The [central reconstruction](nsc-atlas-central-scalar-response.md) now

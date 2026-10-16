@@ -1463,7 +1463,7 @@ Evidence: [central derivation](../docs/nsc-atlas-central-scalar-response.md),
 and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json).
 
 Write the dimensionless Jordan central proper time as $T=\tau_C/\ell$ and put
-$u=T-\operatorname{atanh}r$, $q=T+\operatorname{atanh}r$.
+$u=T-\mathrm{atanh}\,r$, $q=T+\mathrm{atanh}\,r$.
 The leading reduced field is $c_0=f(q)-f(u)$. Unlike the outgoing wall
 ray, an incoming ray to the centre can contain both profile terms. Its
 metric and forcing therefore use the full reflected field.
@@ -1481,9 +1481,10 @@ the wall value gives $c_{N,q}|_W=H'-a'J$; integrating inward
 and imposing regular reflection at $u=q$ then yields
 
 $$
-p_{1,C}(T)=2H'(T)-2a'(T)J(T)
--\int_0^{x(T)}W_1(T-\operatorname{atanh}r,r)
- [f(T)-f(T-2\operatorname{atanh}r)]\,dr,
+p_{1,C}(T)=2H'(T)-2a'(T)J(T)-I_C(T),
+\qquad
+I_C(T)=\int_0^{x(T)}W_1(T-\mathrm{atanh}\,r,r)
+ [f(T)-f(T-2\mathrm{atanh}\,r)]\,dr,
 $$
 $$
 W_1=\frac{2\nu_E}{r^3}-\frac{p^2}{3}
