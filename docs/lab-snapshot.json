@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "0dd8fdc2f8f81c4f54cc526cbb2094818ced27a6",
+  "current_receipt_commit_parent": "93f5d5c26d64be813eb713c36257b82147e325ac",
   "files": [
     {
       "bytes": 1506,
@@ -43,9 +43,9 @@
       "sha256": "b8b23786f64a2bfd95a5a52244d88f20751339eb58bd6b619552ac5b63bd8235"
     },
     {
-      "bytes": 10088,
+      "bytes": 10462,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "aca0eb796e8f4f2dcd380f3ad8914f73f3d32d8b",
+      "changed_from_commit": "93f5d5c26d64be813eb713c36257b82147e325ac",
       "import_bytes": 51895,
       "import_sha256": "e6954d5eea961d304af897d242bac1f356c7f876104a5df9357b2727b2395c2b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -53,7 +53,7 @@
       "original_path": "lab/README.md",
       "original_sha256": "ba8d6866094e754c2e68b8a778282a3f67e7e275f27b4e5fc9765764f8b14c4e",
       "path": "README.md",
-      "sha256": "5110488ed1e5cbf880a8c44503ed90312817475419b7f4b541f26946b3cd014c"
+      "sha256": "7cc20c2943f565864a2c19b3ceede26e31243d184b43c98c78a388e4835b566d"
     },
     {
       "bytes": 781931,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 203270,
+      "bytes": 204112,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "0dd8fdc2f8f81c4f54cc526cbb2094818ced27a6",
+      "changed_from_commit": "93f5d5c26d64be813eb713c36257b82147e325ac",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9d99e394ca7c3c82792d62c361f28f6a2bdaceae64a940ebd02b536b26554b97"
+      "sha256": "53d7a44ab05a377c247f4598a60eb44348ddc4bbd5298854538485b30abe3d7d"
     },
     {
       "bytes": 9543,

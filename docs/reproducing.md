@@ -23,7 +23,17 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_departure_gradient.p
 
 All 89 controls pass before physical creation, reporting 2,047,112 points
 and 3.84375 process CPU seconds across their admitted shared allowances.
-The numerical comparison uses a fresh output directory, 64 exterior/cap
+The [completed comparison](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+uses 55,398,966 total points/256.25 process CPU seconds. Its one standalone
+check passes with 4,040,624 points; the [manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json)
+binds 104 paths. To authenticate the retained result:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_operator_comparison.py --output results/development/nsc-atlas-operator-comparison-v1 --check
+```
+
+A fresh reproduction uses a new output directory without `--check`.
+The numerical comparison uses 64 exterior/cap
 cells, 512 time steps and both original amplitudes. It shares 450 CPU
 seconds/80 million points including creation validation; its standalone
 check has 60 CPU seconds/eight million points and no trajectory replay.

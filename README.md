@@ -77,7 +77,11 @@ interpretation. The [fixed-input 32/64-cell comparison](docs/current-result.md#f
 now finds a paired wall-scalar spatial difference of `0.77%` of its finer
 response peak and geometry/clock differences below `0.072%`. Constraint
 residuals decrease under actual spatial refinement; wall curvature remains
-sensitive. Spatial accuracy, profile support and a complete error
+sensitive. The [same-grid quadratic-derivative comparison](docs/current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+reduces final wall kinematic defects about 21--33 times with a `0.52%`
+paired wall-scalar method difference. Constraint RMS decreases, but the
+largest near-wall incoming residual rises slightly and independent wall
+curvature remains unresolved. Boundary accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently

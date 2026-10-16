@@ -2,6 +2,18 @@
 
 ## Fixed-grid exterior-operator comparison, 16 October 2026
 
+**Outcome:** the [completed pair](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+and creation validation pass on the first attempt with 55,398,966 total
+points and 256.25 process CPU seconds. One standalone check passes with
+4,040,624 points and no trajectory. Final finite kinematic defects shrink
+about 21--33 times, and paired wall-scalar method sensitivity is 0.524076%
+of the new peak. Incoming-constraint RMS decreases, but its maximum at
+`eta=63/64` rises slightly; native wall-curvature peaks worsen while
+wider estimates improve. The measured next question is the near-wall
+discrete closure, using saved arrays before another evolution. Cap
+constraints cannot yet be inferred from these unresolved second jets.
+The fixed admission and implementation controls are retained below.
+
 This comparison may execute after the derivative, coupled-stage and callback
 driver controls below pass and their independent review is resolved. It tests
 whether the improved exterior derivative reduces the measured errors with

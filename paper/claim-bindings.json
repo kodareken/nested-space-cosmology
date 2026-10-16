@@ -168,6 +168,11 @@
       "section": "13.17",
       "status": "measured",
       "owner": "docs/nsc-atlas-finite-amplitude.md"
+    },
+    "atlas-operator-comparison": {
+      "section": "13.18",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-finite-amplitude.md"
     }
   },
   "findings": [
@@ -434,6 +439,14 @@
       "note": "docs/nsc-atlas-finite-amplitude.md",
       "record": "results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json",
       "paper_section": "13.17"
+    },
+    {
+      "id": "atlas-operator-comparison",
+      "status": "measured",
+      "summary": "At fixed 64-cell/512-step resolution and unchanged physical and computational inputs, one quadratic exterior departure derivative supplies both radial first jets and moving-grid transport. Average constraint residuals and final wall kinematic mismatches decrease; the maximum incoming constraint and independent native wall-curvature estimates increase. The paired wall-scalar method change is 0.524 percent of its new peak. This mixed numerical sensitivity does not establish local accuracy, a junction failure, a converged spacetime or a finite-amplitude error enclosure.",
+      "note": "docs/nsc-atlas-finite-amplitude.md",
+      "record": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+      "paper_section": "13.18"
     }
   ]
 }

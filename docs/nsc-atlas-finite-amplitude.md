@@ -2482,6 +2482,26 @@ The [operator controls](prior-art-and-open-claim.md#second-order-exterior-depart
 therefore test known inflow solutions, finite amplification and complete
 stage equivalence before a separately specified physical comparison.
 
+The [completed same-grid comparison](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+reduces the final radius, lapse and scalar kinematic defects by about
+21--33 times. The paired wall-scalar response changes by `0.524076%`
+of its new peak; paired wall geometry and clock changes are below
+`0.017798%`. At identical diagnostic widths, incoming-constraint RMS
+decreases from `6.20959e-5` to `2.24521e-5`, and the source-subtracted
+outgoing maximum from `4.93833e-3` to `3.21118e-3`.
+
+This is a mixed accuracy result. The incoming maximum rises slightly
+from `3.53518e-4` to `3.64417e-4`, at the last interior eta node.
+Native weighted wall-curvature peaks increase, and varying the one-sided
+width changes them by up to `1.80909e-4` or `3.02654e-4`. Thus improved
+first-jet compatibility does not yet supply a resolved second jet.
+The near-wall closure and independent curvature must be examined before
+another physical run or a continuum junction conclusion. Cap spatial
+sensitivity, profile support and source curvature sampling remain separate
+issues. In particular, the general J/O relations above retain the cap
+constraints; a future cap check must measure its temporal mass residual
+instead of substituting the desired flux law into the acceleration.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

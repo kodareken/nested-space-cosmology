@@ -2,6 +2,100 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed-grid exterior-operator comparison, 16 October 2026
+
+The [completed comparison](../results/development/nsc-atlas-operator-comparison-v1/operator.json)
+changes only the exterior departure derivative at the retained **64 exterior
+and cap cells / 512 SSPRK3 steps**. The quadratic reconstruction supplies
+both transverse prefix jets and moving-grid transport. The same physical
+equations, amplitudes, source, computational profile and exact cache remain
+fixed. The reference case carries the normalized field with zero gravitational
+backreaction; the finite case includes its backreaction.
+
+The correction substantially reduces the final finite wall kinematic
+defects, while leaving the paired wall observations close:
+
+| Quantity | Previous derivative | Quadratic derivative |
+| --- | ---: | ---: |
+| Final radius kinematic defect | `-1.54418e-4` | `4.70092e-6` |
+| Final log-lapse kinematic defect | `3.75664e-3` | `-1.74363e-4` |
+| Final scalar kinematic defect | `-6.02063e-5` | `2.84633e-6` |
+| Incoming constraint maximum | `3.53518e-4` | `3.64417e-4` |
+| Incoming constraint RMS | `6.20959e-5` | `2.24521e-5` |
+| Source-subtracted outgoing maximum | `4.93833e-3` | `3.21118e-3` |
+| Source-subtracted outgoing RMS | `1.14164e-3` | `2.98901e-4` |
+
+The constraint rows use identical saved coordinates and diagnostic widths.
+The smaller RMS does not conceal the slightly larger incoming maximum:
+it is `3.64416949e-4` at `x=0.44011535250180545`, `eta=63/64`,
+in the wall-origin region. The bottom-origin incoming maximum decreases
+from `1.87592e-6` to `6.43295e-7`. The 129/65-cut outgoing diagnostic
+sensitivity remains `1.46488e-3`, with RMS `3.08681e-4`; pure incoming
+constraints on common nodes are unchanged by time subsampling.
+
+For the finite-minus-reference wall response:
+
+| Wall quantity | New response peak | Method difference | Difference / new peak |
+| --- | ---: | ---: | ---: |
+| Radius | `7.6718430e-4` | `1.3653671e-7` | `0.017797%` |
+| Log lapse | `6.4871398e-3` | `8.5191846e-7` | `0.013132%` |
+| Cap clock | `1.2803123e-3` | `1.1855462e-7` | `0.009260%` |
+| Wall proper clock | `1.1977898e-4` | `9.5853724e-9` | `0.008003%` |
+| Normalized scalar | `3.4725715e-5` | `1.8198897e-7` | `0.524076%` |
+
+All paired wall method differences peak at the last cut. Raw reference
+and finite wall-scalar changes are larger, `7.01724e-6` and `6.83525e-6`;
+much of that change is common to the pair. The full exterior response is
+more sensitive: paired log-lapse and scalar method differences reach
+`3.83563%` and `1.98226%` of their respective new peaks. Small wall
+differences therefore do not certify the complete state.
+
+Independent wall curvature remains unresolved. The native three- and
+five-point weighted incoming peaks increase from `2.40506e-4` and
+`2.21621e-4` to `3.30267e-4` and `3.82613e-4`. On the same new
+history, widening those stencils changes their values by up to
+`1.80909e-4` and `3.02654e-4`. The stride-two peaks are `2.79637e-4`
+and `2.20476e-4`. These are independent derivatives of saved fields;
+neither the desired wall rate nor a prescribed acceleration supplies them.
+Improved first-derivative compatibility does not resolve this curvature.
+
+The direct same-grid paired cap `Iq` method difference is `2.92853e-6`,
+or `0.012886%` of the new `0.0227267` peak. These are total physical
+cell integrals at the same normalized cells; the evolved physical radii
+can differ. The finite outgoing cap trace peaks at `6.75014247e-4`,
+close to the previous `6.75005166e-4`; its reference value remains zero.
+The cap's larger 32/64-cell sensitivity is not removed by this exterior
+operator change. The own-trace reference-cap comparison remains limited
+by interpolation: linear/PCHIP maxima are `9.46097e-4`/`8.91649e-4`,
+with interpolation sensitivity `1.35891e-3`.
+
+Quiet-profile leakage also remains: reference wall and exterior scalar
+maxima before the declared source front are `1.23389e-9` and
+`2.90295e-9`, and cap integral maxima are `3.34092e-7`. Centre values
+are still pre-arrival leakage, not a post-arrival observer signal. The
+minimum profile-domain margin is zero for the reference and `0.00237955`
+for the finite case. Reference geometric constraints remain near roundoff.
+Constructed common-wall flux defects are at most `1.60e-16`; they check
+the coupling identity, not physical accuracy.
+
+The [admitted creation](prior-art-and-open-claim.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+passes on its first attempt with **55,398,966 total points / 256.25 process
+CPU seconds**, including **4,040,624** validation points. The calculation
+uses 51,358,342 points, of which 3,931,997 are saved diagnostics. One
+standalone check passes with 4,040,624 points and no trajectory replay.
+The two runs use 3,074 stages, 1,024 steps and maximum Courant
+`0.12285685855585847`. No source/cache reconstruction or old evolution
+occurs. The [manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json)
+binds 104 source/input/control paths; baseline arrays are referenced.
+
+The result supports the common higher-order derivative for reducing the
+measured kinematic defect and bulk RMS. It does not establish a spatial
+order, propagated error enclosure or complete cap-wall-exterior junction.
+Inspect the remaining near-wall spatial residual and boundary closure in
+the saved arrays before another evolution. A separate cap temporal-mass
+consistency test must retain actual cap constraints rather than setting
+them to zero when interpreting the junction identities.
+
 ## Fixed-input spatial refinement, 16 October 2026
 
 The [completed spatial comparison](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json)

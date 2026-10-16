@@ -48,6 +48,13 @@ difference ratio, small geometry changes and earlier extrapolant agreement
 do not establish convergence order or resolve the remaining spatial,
 constraint and computational-support defects.
 
+Section 13.18 adds the [same-grid exterior-operator comparison](current-result.md#fixed-grid-exterior-operator-comparison-16-october-2026).
+One quadratic departure derivative drives both radial field reconstruction
+and moving-grid transport. Final kinematic defects decrease substantially
+and paired wall responses remain close, while the independent near-wall
+curvature remains unresolved. The comparison keeps this distinction visible
+in the numerical table and links the matching source and evidence records.
+
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.
 Spherical symmetry supplies the first tractable charts; it does not assert global

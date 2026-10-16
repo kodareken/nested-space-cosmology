@@ -70,6 +70,11 @@ refinements, but scalar time sensitivity and pointwise constraint defects
 remain unresolved. A fixed-input SSPRK3 comparison reduces the scalar's
 256/512-step change to 1.68% of the fine paired peak, while exposing the
 role of computational profile-knot phase in temporal quadrature.
+A subsequent comparison at fixed resolution changes the exterior departure
+derivative. It reduces the root-mean-square incoming constraint and the final
+wall kinematic mismatch, while slightly increasing the maximum incoming
+constraint and worsening independent native wall-curvature estimates.
+The paired wall scalar changes by 0.524% of its new peak.
 This is a finite numerical comparison, not a converged
 spacetime or a finite-amplitude remainder bound.
 A separate finite spherical field model demonstrates regional transfer,
@@ -1750,6 +1755,72 @@ Their manifest binds 86 inputs and producers. A separate authentication
 uses 1,418,330 points, reconstructs midpoint data and two final stages,
 and replays no source integration or trajectory.
 
+### 13.18. A common exterior derivative and a mixed accuracy result
+
+<!-- nsc-claim:atlas-operator-comparison -->
+
+Evidence: [fixed-input spatial comparison](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json),
+[same-grid operator comparison](../results/development/nsc-atlas-operator-comparison-v1/operator.json)
+and [source-bound manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json).
+The [common-derivative construction](../docs/nsc-atlas-finite-amplitude.md#a-common-second-order-departure-derivative)
+specifies the discrete change and its limited consistency and stability controls.
+
+The preceding 32/64-cell comparison at 512 SSPRK3 steps changes the paired
+wall scalar by at most $2.69431\times10^{-7}$, or 0.775% of the fine
+peak. This does not resolve the whole field: adjacent-summed cap integrals
+still differ by about 7% of the corresponding old 32-cell paired peak,
+and their physical radial cells move differently. The successor holds
+64 cells, 512 steps, both amplitudes, source data, reference gauge and
+computational cap profile fixed. It replaces the first-order exterior
+departure derivative with a quadratic stencil. One derivative supplies
+both the radial first jets and transport on the moving coordinate grid.
+No boundary derivative is replaced by a value demanded by the wall law.
+
+The independent constraints use saved field differences and analytic vacuum
+jets, rather than the evolution stencil. Write
+$E_a=r_{aa}-L_a r_a+r\Psi_a^2/2$ for $a=\bar U,x$.
+The outgoing diagnostic retains the actual source curvature through
+$\mathcal R_x=E_x-r_{\rm src}E_{x,\rm src}/r$.
+All entries below concern the finite-amplitude history on the same 8,001
+interior diagnostic points.
+
+| Diagnostic | First-order derivative | Quadratic derivative |
+| --- | ---: | ---: |
+| Maximum absolute $E_{\bar U}$ | $3.53518\times10^{-4}$ | $3.64417\times10^{-4}$ |
+| Root-mean-square $E_{\bar U}$ | $6.20959\times10^{-5}$ | $2.24521\times10^{-5}$ |
+| Maximum absolute $\mathcal R_x$ | $4.93833\times10^{-3}$ | $3.21118\times10^{-3}$ |
+| Root-mean-square $\mathcal R_x$ | $1.14164\times10^{-3}$ | $2.98901\times10^{-4}$ |
+
+At the final wall event, the kinematic mismatches in $(r,L,c)$ change from
+$(-1.54418\times10^{-4},3.75664\times10^{-3},-6.02063\times10^{-5})$
+to $(4.70092\times10^{-6},-1.74363\times10^{-4},2.84633\times10^{-6})$.
+The maximum method change in the paired wall scalar is
+$1.81989\times10^{-7}$, or 0.524% of its new peak
+$3.47257\times10^{-5}$. Paired geometry and clock changes are each
+below 0.018% of their respective new peaks. These are sensitivities to
+the chosen derivative, not bounds on the continuum solution.
+
+The improved average residual and wall slopes do not settle wall curvature.
+Independent three- and five-point native-width estimates of the wall
+$E_{\bar U}$ peak increase from $4.87\times10^{-4}$ and
+$4.49\times10^{-4}$ to $6.67\times10^{-4}$ and
+$7.73\times10^{-4}$. Their maxima of the native-minus-double-width
+differences are $3.58\times10^{-4}$ and $6.06\times10^{-4}$.
+The source Hermite curvature remains a one-sided trace at saved knots;
+its nonzero constraint is retained, not replaced by the source ODE target.
+The cap's characteristic-pullback discrepancy remains comparable to its
+interpolation sensitivity, and pre-support cap-integral leakage remains
+about $3.34\times10^{-7}$. The wall responses are comparatively stable
+under this method change, while local derivative accuracy remains unresolved.
+Neither a junction failure nor a converged coupled spacetime follows.
+Central arrival and a uniform finite-amplitude remainder remain open.
+
+The two new histories and authentication use 256.25 process-CPU seconds
+and 55,398,966 charged points within 450 seconds and 80 million points.
+The manifest binds 104 files. Separate authentication uses 4,040,624 points
+and reconstructs saved fields, diagnostics and two final stages without
+source integration or trajectory replay.
+
 ### 14. A separate finite model with geometric feedback
 
 <!-- nsc-claim:finite-transfer-memory -->
@@ -2087,8 +2158,12 @@ converged-solution claim. With the source and spatial operators fixed,
 SSPRK3 temporal refinement reduces the paired scalar change to 1.68%
 of its fine peak; computational profile-knot phase prevents interpreting
 a single difference quotient as an observed order. Spatial constraints
-and the profile's support defect remain separate. The finite-amplitude existence and remainder
-problem remains open.
+and the profile's support defect remain separate. A fixed-resolution change
+to a common quadratic exterior derivative reduces average constraint
+residuals and the final wall kinematic mismatch; its paired scalar change
+is 0.524% of the new peak. The slightly larger incoming-constraint maximum
+and worse, width-sensitive wall-curvature estimates keep local accuracy
+unresolved. The finite-amplitude existence and remainder problem remains open.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -2124,6 +2199,7 @@ and renders their relationships without launching a new physics calculation.
 | Central cubic scalar correction | [Reflected transport and clock pullback](../docs/nsc-atlas-central-scalar-response.md); [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json) and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json) |
 | Nonlinear coupled pre-arrival window | [Exact model and characteristic background](../docs/nsc-atlas-finite-amplitude.md); [six-case result](../results/development/nsc-atlas-background-evolution-v1/background.json) and [manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json); scalar time sensitivity and pointwise constraints remain unresolved |
 | Fixed-input SSPRK3 temporal refinement | [Profile-knot and chain identities](../docs/nsc-atlas-finite-amplitude.md); [128/256 histories](../results/development/nsc-atlas-ssprk3-evolution-v1/ssprk3.json), [512 comparison](../results/development/nsc-atlas-ssprk3-refinement-v1/refinement.json) and [manifest](../results/development/nsc-atlas-ssprk3-refinement-v1/manifest.json); finite temporal differences, without an error enclosure |
+| Same-grid exterior derivative comparison | [Common derivative and independent diagnostics](../docs/nsc-atlas-finite-amplitude.md#a-common-second-order-departure-derivative); [64-cell baseline](../results/development/nsc-atlas-spatial-refinement-v1/spatial.json), [operator comparison](../results/development/nsc-atlas-operator-comparison-v1/operator.json) and [manifest](../results/development/nsc-atlas-operator-comparison-v1/manifest.json); smaller average residuals and wall kinematic mismatch, with unresolved constraint maxima and wall curvature |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 
