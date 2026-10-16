@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+  "current_receipt_commit_parent": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 215079,
-      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
-      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+      "bytes": 215677,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "3e0b9f7d5741e33c3ebdfc96bf2db6ab36592b2c6f94a6cef42d0439d5cd494d"
+      "sha256": "ecfe28884701ec88751ad1a80d6847a5ddbdee57f10e6a700f5157b52b9fe89e"
     },
     {
       "bytes": 9543,
@@ -10299,6 +10299,14 @@
       "original_sha256": "49c587d3f6fd63b0a45b058771a1d5fa265d4855e7c4d1de32010d2b127a6819",
       "path": "docs/claim-ledger.md",
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
+    },
+    {
+      "bytes": 298709,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "docs/current-result.md",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "0253d12229fed042360bf609ed6a99ec88927c3065a75e3fcfca1f62ef1a4a52"
     },
     {
       "bytes": 18915,
@@ -10378,6 +10386,14 @@
       "original_path": "lab/docs/nsc-atlas-field-transfer.md",
       "path": "docs/nsc-atlas-field-transfer.md",
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
+    },
+    {
+      "bytes": 206320,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "docs/nsc-atlas-finite-amplitude.md",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "2f32a70337edb55bdd07a003433479353b775273d96d5984f2088437bff51890"
     },
     {
       "bytes": 8895,
@@ -11378,10 +11394,26 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
+      "bytes": 252883,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "docs/prior-art-and-open-claim.md",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "4ed4cd7d8624a6de2ce88f16169e4c02e5bc2abba0078395021b6cc800b43ee4"
+    },
+    {
       "bytes": 6705,
       "path": "docs/receipt-rebinding-20261014.md",
       "retention_reason": "Authorized prepared-history receipt metadata verification",
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
+    },
+    {
+      "bytes": 89890,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "docs/reproducing.md",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "f47adb3c3b428c39a92d79d9381f8e8c12316b38919ad07dd1d1054efb1e23a2"
     },
     {
       "bytes": 18356,
@@ -32164,12 +32196,20 @@
       "sha256": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81"
     },
     {
-      "bytes": 11059,
-      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
-      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+      "bytes": 3088,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "src/recursive_horizons/nsc_atlas_cap_polynomial_basis.py",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "16857a7cca0e2112f0f3fd98e9c42568b442429f8ed044e1dcb78e07538503b4"
+    },
+    {
+      "bytes": 12446,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
       "path": "src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py",
       "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
-      "sha256": "b7f05a51313ac3014b18a5dcd67b58c8dddb213bae8a2fc037d555201c8bcaab"
+      "sha256": "2cff6a901a4e1c1b0073bc3636d30d495e992ddf9daf89f751e6573dffb5e8b2"
     },
     {
       "bytes": 6049,
@@ -32212,12 +32252,12 @@
       "sha256": "d812471107802c3926a567f252208b79c14ac29a02c3f01e2b96610edc2c6bf9"
     },
     {
-      "bytes": 13278,
-      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
-      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+      "bytes": 13283,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
       "path": "src/recursive_horizons/nsc_atlas_cap_variational_reference.py",
       "retention_reason": "Primitive-conforming finite-backreaction mass gradients, metric domain bound and manufactured controls.",
-      "sha256": "1b8b1d0daa252b1b1965bcf2a4c4cb03450ca7fe67ba991cd2be723c6f4f24bf"
+      "sha256": "0779ff9783932b2335b9dc09bb64a218daad6b694393d82cfc97f62ce8888f93"
     },
     {
       "bytes": 16914,
@@ -35531,6 +35571,14 @@
       "sha256": "f940b6f8c2ed8b3d0e7071e951567702ab45efddbb0f8ade7d839b65922b9982"
     },
     {
+      "bytes": 4615,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "tests/test_nsc_atlas_cap_legendre_reference.py",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "f93cbf38c74094d5c503e71c287301a61531634b98a054f2f2ede2cff5738b89"
+    },
+    {
       "bytes": 7378,
       "change": "Reference lapse and transport channels with endpoint identities; original import records preserved.",
       "changed_from_commit": "38eb600356cd5bceb4686a3f50797ab358e28c24",
@@ -35547,12 +35595,20 @@
       "sha256": "9010cb3a0fca83aaebff47609201e84236f6fd8620e424675dd47dde27997059"
     },
     {
-      "bytes": 13960,
-      "change": "Implement the regular polynomial cap reference with independent shape and actual interface diagnostics.",
-      "changed_from_commit": "3c94322a3a05fb33add775e58d6ad096e22a3fa4",
+      "bytes": 5277,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
+      "path": "tests/test_nsc_atlas_cap_polynomial_basis.py",
+      "retention_reason": "Conditioned regular cap basis and its independent verification controls",
+      "sha256": "65df1cfc9842454d43699cea71e58d03fcc925b966f683e345e5e8ef7c9481bb"
+    },
+    {
+      "bytes": 15250,
+      "change": "Add checked odd-Legendre cap coordinates, basis invariance and independent review evidence.",
+      "changed_from_commit": "a36f16ae5c3a366e442eb2a5ecc80cef63e70ee5",
       "path": "tests/test_nsc_atlas_cap_polynomial_reference.py",
       "retention_reason": "Shared-engine regular polynomial mass gradients, radius sensitivity and hybrid boundary diagnostics.",
-      "sha256": "65d5ad28c8c1bebc1a3cb45a028bdee3d063af1c5ac883ea008f639eb6dd3d5c"
+      "sha256": "69e9b10c37291bca7c6ec82bb2db510e293dd05601de2e52eb464118d18291ce"
     },
     {
       "bytes": 7887,

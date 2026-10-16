@@ -2,6 +2,22 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Conditioned moving-cap representation, 16 October 2026
+
+The [orthogonal extension](nsc-atlas-finite-amplitude.md#orthogonal-regular-cap-coordinates)
+represents the same regular polynomial fields with odd Legendre modes. Its
+mass matrix has condition number 21 at sixteen modes. The same three-mode
+field gives matching mass, gradients, rates and interface discrepancies in
+both representations after changing coefficient coordinates.
+
+Twelve basis controls and five numerical adapter controls pass. The fixed
+sixteen-mode manufactured case has gradient discrepancy `1.66228e-13`,
+independent shape discrepancy `4.02076e-19` and weak mass residual
+`-1.28312e-20`. The zero-alpha case recovers its exact quadratic mass.
+This provides a usable representation for a later prepared-pulse calculation;
+it does not establish field truncation, material transmission or an evolved
+physical configuration. No raw dataset or observational prediction is added.
+
 ## Numerical moving-cap reference, 16 October 2026
 
 The [polynomial adapter](../src/recursive_horizons/nsc_atlas_cap_polynomial_reference.py)
@@ -11,7 +27,7 @@ shape agreement is `1.37469e-15`, gradient agreement `2.91746e-14`, and
 the weak moving mass-balance residual `7.05545e-17`. The exact-model metric
 lower bound is `0.7861214361263889`.
 
-All 24 new controls and 32 affected P1/projection controls pass. The separate
+All 26 monomial-reference controls and 32 affected P1/projection controls pass. The separate
 normal-trace discrepancy is `-0.0876791`, with scalar-tangent discrepancy
 `-0.0560200` against the actual hybrid interface. Its mass-rate discrepancy
 is `-0.000880323`, accounted for by the flux and moving-density trace gaps.

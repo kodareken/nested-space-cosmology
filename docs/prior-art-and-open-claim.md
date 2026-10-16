@@ -588,8 +588,8 @@ Separate shape integration, certified global slopes and explicit momentum,
 normal and scalar-tangent discrepancies address these risks. No retained
 state, new waveform, mesh scan or time trajectory is admitted.
 
-**Manufactured outcome:** all 24 new controls pass in 28 executions, using
-**673,997 charged values / 1.515625 active CPU seconds**. The separate extraction regression
+**Manufactured outcome:** all 26 monomial-reference controls pass in 54 executions, using
+**1,252,570 charged values / 2.84375 active CPU seconds**. The separate extraction regression
 uses **490,356 / 1.15625** for 19 P1 controls and **4,620 / 0.5** for 13
 projection controls, within their separate new allowances. P1 values remain
 unchanged. No existing budget is silently reset.
@@ -608,8 +608,75 @@ One additional check constructs local exterior jets and calls the existing
 hybrid boundary helper to verify the actual transmitted pair and rates.
 Grok confirms the shape equation and global slope bound mathematically.
 The delegated extraction terminated without changing its owned file; the
-root completed the extraction and ran the regressions. A fresh Grok source
-review is in progress. No physical coupled trajectory has been run.
+root completed the extraction and ran the regressions. Completed Grok source
+review of `a36f16a` found no unresolved correctness blocker. The subsequent
+26-control run adds 578,573 charged values / 1.328125 CPU seconds for the
+review follow-ups and monomial regression. No physical coupled trajectory
+has been run.
+
+### Conditioned regular cap basis
+
+The numerical three-mode reference verifies the equations but cannot yet
+represent a resolved prepared pulse. Before increasing its field dimension,
+replace the monomial coordinates with odd Legendre polynomials on `xi in
+[0,1]`. This is a basis change in the same regular polynomial space; the
+action, field, source, clocks and wall laws stay fixed. Derive the mass and
+stiffness matrices, wall/centre evaluation and dilation operator together.
+
+Evaluate `P_(2j+1)(xi)/xi` and its derivative in `xi^2` by a stable recurrence,
+so the normal field retains its centre cancellation. Prove the global
+derivative bound from the Legendre equation and derivative expansion, then
+reuse the existing radial metric inequality with these actual bounds.
+The old P1 projection constant remains inapplicable.
+
+Basis-only exact algebra and arithmetic controls share **100,000 charged
+values / 20 active CPU seconds**. Admit at most sixteen odd modes. Compare
+the matrices against exact integration for three modes; check the centre,
+wall, dilation and slope-bound identities; compare one fixed sixteen-mode
+evaluation with high-precision polynomial values and derivatives at five
+declared points. This is a basis arithmetic check, with no cap radial solve,
+physical samples, mesh scan or time evolution. Stop on failed identities,
+unresolved cancellation or lost precision before integrating the new basis
+with the cap solver. Grok independently checks the derivation.
+
+**Basis outcome:** twelve controls pass in thirteen executions with
+**34,140 charged values / 1.390625 active CPU seconds**. The fixed sixteen-mode check differs from
+85-digit values by at most `1.95399e-14` in the reported raw basis quantities.
+Its diagonal Gram matrix has exact condition number 21. No radial solve is
+included in those controls.
+
+### Orthogonal-basis cap integration
+
+Extend the existing polynomial adapter with an explicit Legendre option;
+preserve its monomial default. Transform the derivative bound, centre clock,
+Gram pairing, wall evaluation and dilation operator consistently. Reuse the
+same radial sensitivity engine and shape equation. No second gravitational
+implementation is introduced.
+
+Orthogonal-adapter controls have **2,500,000 charged values / 60 active CPU
+seconds**. Compare one fixed three-mode field in both bases at nonzero alpha;
+then check one fixed sixteen-mode profile at zero and nonzero alpha, with
+exact quadratic gradients for the former and independent forward/adjoint
+and shape checks for the latter. These are manufactured operator checks,
+not an evolving pulse or a mesh scan. Test known zero limits and reject
+unsupported basis/count inputs. Existing monomial regressions use their
+remaining numerical-reference allowance above, without resetting it.
+
+The completed Grok source review of `a36f16a` found no unresolved correctness
+blocker. Follow up its useful checks here: make `dZ/dx` explicit in the output
+name, exercise the actual timelike `T_x B` threshold, check both Gram solves
+against high precision, and force the residual-rejection branch. An
+orthogonal basis removes monomial conditioning growth; it does not itself
+bound field truncation or close material transmission.
+
+**Adapter outcome:** five controls pass with **1,835,038 charged values /
+0.6875 active CPU seconds**. The same three-mode field agrees in both bases.
+The fixed sixteen-mode profile recovers the exact quadratic limit and
+passes independent finite-alpha gradient and shape checks; the condition
+number is 21. No physical trajectory or truncation claim is made. Grok
+confirms the basis mathematics. Completed independent Grok source review
+found no correctness defect in the extension. It read the basis controls
+but did not execute tests or re-read the shared radial solver body.
 
 ## Discrete cap mass balance, 16 October 2026
 

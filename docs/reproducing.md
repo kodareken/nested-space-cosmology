@@ -189,14 +189,26 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The orthogonal basis and its shared cap adapter:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_polynomial_basis.py tests/test_nsc_atlas_cap_legendre_reference.py -q -s
+```
+
+Twelve basis controls pass in thirteen development executions, using 34,140
+charged values / 1.390625 CPU seconds. Five adapter controls use 1,835,038 /
+0.6875 and compare the same field across bases, the exact quadratic limit
+and one fixed sixteen-mode nonlinear reference. The [separate allowances](prior-art-and-open-claim.md#orthogonal-basis-cap-integration)
+do not admit a grid scan or physical time evolution.
+
 The numerical odd-polynomial reference and affected common-engine checks:
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_variational_reference.py tests/test_nsc_atlas_cap_projection_bound.py tests/test_nsc_atlas_cap_polynomial_reference.py -q -s
 ```
 
-All 56 controls pass. New polynomial development uses 673,997 charged values /
-1.515625 active CPU seconds across 28 executions; the separately admitted extraction regressions
+All 58 controls pass. Monomial-reference development uses 1,252,570 charged values /
+2.84375 active CPU seconds across 54 executions; the separately admitted extraction regressions
 use 490,356 / 1.15625 for P1 and 4,620 / 0.5 for its projection bound.
 The [record](prior-art-and-open-claim.md#numerical-regular-polynomial-cap-reference)
 keeps those allowances separate from earlier development. One moving-domain

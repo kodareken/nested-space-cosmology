@@ -54,7 +54,7 @@ def _metric_floor_from_slopes(Z, lc, lk, al, *, scope):
     if not np.isfinite(down) or down <= 0:
         raise ValueError("positive metric margin is not representable")
     return dict(A_lower=dict(mantissa=str(mantissa), exponent=int(exponent)),
-                A_lower_float_down=down, precision_bits=160,
+                A_lower_float_down=down, precision_bits=ctx.prec,
                 scope=scope)
 
 

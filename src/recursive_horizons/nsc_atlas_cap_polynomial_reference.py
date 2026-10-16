@@ -12,6 +12,7 @@ from .nsc_atlas_background_cap import _budget
 from .nsc_atlas_cap_geometric_reference import _positive_gap
 from .nsc_atlas_cap_radial_reference import reference_potential
 from .nsc_atlas_polar_cap import _scalar, _vector
+from .nsc_atlas_cap_polynomial_basis import odd_legendre_operators, odd_legendre_values
 
 
 SHAPE_ABSOLUTE_TOLERANCE = 2e-8
@@ -19,10 +20,11 @@ SHAPE_ABSOLUTE_TOLERANCE = 2e-8
 
 def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
                              alpha, T_x, radius_rate, incoming_w_plus, budget,
-                             rtol=2e-11, atol=2e-13):
-    """One RHS for 1..3 odd monomials in xi=z/Z; no integration in time.
+                             rtol=2e-11, atol=2e-13, basis='monomial'):
+    """One RHS for regular odd polynomials in xi=z/Z; no time integration.
 
     radius_rate is dR/dx; T_x converts cap time to that same wall label.
+    Use 1..3 monomials or 1..16 Legendre modes in the same field space.
     All numerical discrepancy thresholds concern these dimensionless inputs;
     they are acceptance checks, not uniform numerical error enclosures.
     """
@@ -35,8 +37,11 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
     rx = _scalar(radius_rate,'radius_rate')
     incoming = _scalar(incoming_w_plus,'incoming_w_plus')
     rtol,atol = _scalar(rtol,'rtol',positive=True),_scalar(atol,'atol',positive=True)
-    if not 1 <= len(chi) <= 3 or k.shape != chi.shape:
-        raise ValueError('reference requires one to three matching odd-mode coefficients')
+    if basis not in ('monomial','legendre'):
+        raise ValueError('basis must be monomial or legendre')
+    maximum = 3 if basis == 'monomial' else 16
+    if not 1 <= len(chi) <= maximum or k.shape != chi.shape:
+        raise ValueError('reference requires matching coefficients within its declared mode count')
     if rtol < 64*np.finfo(float).eps:
         raise ValueError('requested radial tolerance is below the reference floating-point domain')
     if alpha > 0 and np.sqrt(alpha/6) == 0:
@@ -44,17 +49,27 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
     before = budget.evaluations
     count = len(chi)
     powers = np.arange(1,2*count,2,dtype=float)
+    if basis == 'legendre':
+        operators = odd_legendre_operators(count,Z,budget=budget)
+        slope_bounds = operators['derivative_bound_xi']
+        dilation = operators['dilation']
+        centre_weights = operators['centre_derivative_xi']
+        gram = operators['gram']
+    else:
+        slope_bounds = powers
+        dilation = np.diag(powers)
+        centre_weights = np.eye(1,count).ravel()
+        gram = Z/(powers[:,None]+powers[None,:]+1)
     budget.check(256*count+256)
     with ctx.workprec(160):
         zb,al = radial._exact_ball(Z),radial._exact_ball(alpha)
-        lc = sum(int(p)*abs(radial._exact_ball(v)) for p,v in zip(powers,chi))/zb
-        lk = sum(int(p)*abs(radial._exact_ball(v)) for p,v in zip(powers,k))/zb
+        lc = sum(int(p)*abs(radial._exact_ball(v)) for p,v in zip(slope_bounds,chi))/zb
+        lk = sum(int(p)*abs(radial._exact_ball(v)) for p,v in zip(slope_bounds,k))/zb
         certificate = radial._metric_floor_from_slopes(
             zb,lc,lk,al,scope='exact radial solution for declared odd polynomials; numerical ODE error excluded')
     R,A0R = float(np.tanh(Z)),float(1/np.cosh(Z)**2)
     if not 0 < R < 1 or not A0R > 0:
         raise ValueError('wall radius is not representable inside 0<R<1')
-    gram = Z/(powers[:,None]+powers[None,:]+1)
     condition = float(np.linalg.cond(gram))
     if not np.isfinite(condition) or condition*np.finfo(float).eps > 1e-9:
         raise ValueError('polynomial Gram conditioning is outside the reference domain')
@@ -64,10 +79,17 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
         r,A0 = float(np.tanh(z)),float(1/np.cosh(z)**2)
         if xi == 0:
             return r,A0,np.zeros(count),np.zeros(count),np.zeros(count)
-        base = xi**(powers-1)/Z
-        fb = base*z/r
-        pb = xi**powers/A0
-        hb = base*((powers-1)+z*_positive_gap(z))/A0
+        if basis == 'legendre':
+            values = odd_legendre_values(count,xi,budget=budget)
+            Q,Qt = values['quotient'],values['quotient_derivative_t']
+            fb = Q*z/(Z*r)
+            pb = values['value']/A0
+            hb = (2*xi*xi*Qt+z*_positive_gap(z)*Q)/(Z*A0)
+        else:
+            base = xi**(powers-1)/Z
+            fb = base*z/r
+            pb = xi**powers/A0
+            hb = base*((powers-1)+z*_positive_gap(z))/A0
         return r,A0,fb,pb,hb
 
     def coefficients(cell,xi,mass):
@@ -102,7 +124,7 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
 
     try:
         with np.errstate(over='raise',invalid='raise',divide='raise'):
-            centre_f = float(chi[0]/Z)
+            centre_f = float(centre_weights@chi/Z)
             cq = np.sqrt(alpha/6)*centre_f
             delta0 = -float(np.log1p(2*np.sinh(cq/2)**2))
             reference = radial._radial_variations(
@@ -119,7 +141,8 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
             B = A*scale
             if not abs(rx) < tx*B:
                 raise ValueError('prescribed wall speed is not timelike')
-            shape_from_dilation = A0R*rho-(gc@(powers*chi)+gk@(powers*k))/Z
+            dilation_chi,dilation_k = dilation@chi,dilation@k
+            shape_from_dilation = A0R*rho-(gc@dilation_chi+gk@dilation_k)/Z
             shape_discrepancy = shape-shape_from_dilation
             if abs(shape_discrepancy) > SHAPE_ABSOLUTE_TOLERANCE:
                 raise ValueError('independent radial shape and dilation identity disagree')
@@ -138,8 +161,8 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
             drive = B*R*incoming
             fixed_k_rate = gram_solve(-2*scale*gc+drive-wall_velocity)
             zx = rx/A0R
-            chi_rate = tx*V+zx*powers*chi/Z
-            k_rate = tx*fixed_k_rate+zx*powers*k/Z
+            chi_rate = tx*V+zx*dilation_chi/Z
+            k_rate = tx*fixed_k_rate+zx*dilation_k/Z
             mass_rate = float(gc@chi_rate+gk@k_rate+shape*zx)
             weak_flux = wall_velocity*(drive-wall_velocity)/(2*scale)
             moving_density = rx*rho
@@ -159,11 +182,13 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
             density_gap = A*(p*p+h*h-p_interface*p_interface-h_interface*h_interface)/4
             flux_gap = weak_flux-interface_flux
             result = dict(
-                Z=Z,chi_coefficients=chi,density_coefficients=k,powers=powers,
-                alpha=alpha,T_x=tx,radius=R,radius_rate=rx,geometric_radius_rate=zx,
+                Z=Z,chi_coefficients=chi,density_coefficients=k,powers=powers,basis=basis,
+                alpha=alpha,T_x=tx,radius=R,radius_rate=rx,Z_rate=zx,
                 mass=mass,lapse=lapse,
                 gradient=dict(chi=gc.copy(),canonical_density=gk.copy(),Z=shape),
-                adjoint_gradient=reference['adjoint_gradient'].copy(),
+                adjoint_gradient=dict(chi=reference['adjoint_gradient'][:count].copy(),
+                                      canonical_density=reference['adjoint_gradient'][count:2*count].copy(),
+                                      Z=float(reference['adjoint_gradient'][-1])),
                 gradient_discrepancy=reference['gradient_discrepancy'],
                 shape_from_dilation=float(shape_from_dilation),shape_discrepancy=float(shape_discrepancy),
                 shape_absolute_tolerance=SHAPE_ABSOLUTE_TOLERANCE,
@@ -183,7 +208,7 @@ def polynomial_cap_reference(Z, chi_coefficients, density_coefficients, *,
                           weak_scalar_tangent_discrepancy=scalar_tangent-weak_tangent,
                           scalar_tangent=scalar_tangent,transmitted_scalar_tangent=transmitted_tangent,
                           scalar_tangent_discrepancy=scalar_tangent-transmitted_tangent),
-                centre=dict(f=centre_f,Pi=float(k[0]/Z),Phi=0.,delta=delta0),
+                centre=dict(f=centre_f,Pi=float(centre_weights@k/Z),Phi=0.,delta=delta0),
                 metric_certificate=certificate,sampled_minimum_A=reference['sampled_minimum_A'],
                 gram_condition=condition,gram_normalized_residual=max(normalized_residuals),
                 requested_tolerances=dict(rtol=rtol,atol=atol),adjoint_order=reference['adjoint_order'],

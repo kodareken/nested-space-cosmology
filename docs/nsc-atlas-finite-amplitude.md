@@ -4061,9 +4061,10 @@ the reconstructed one follows `chi_z`. The wall scalar rate combines the
 weak velocity with the exact reconstructed coordinate transport. Equality
 to the material-interface scalar rate still requires a trace-consistency
 check. The previous P1 projection constant does not apply to this new
-space. Nonlinear radial gradients, numerical conditioning, truncation error,
-trace bounds and a coupled physical evolution remain to be implemented and
-checked before this reference replaces any production update.
+space. The numerical reference below supplies radial gradients and
+conditioning checks. Field truncation, numerical error enclosures, trace
+bounds and a coupled physical evolution remain to be established before
+this reference replaces any production update.
 
 Independent Grok review confirms the finite-alpha shape argument, inherited
 clock, weak pairing and non-affine quadratic limit. It also identifies the
@@ -4132,8 +4133,8 @@ The [new adapter](../src/recursive_horizons/nsc_atlas_cap_polynomial_reference.p
 uses the same radial gradient engine as the P1 reference.
 It checks the independently integrated shape against dilation, the forward
 gradients against attenuation-weighted quadrature, and the Gram solves by
-their conditioning and residual. Its one-RHS domain is one to three odd
-modes with a positive metric certificate and a prescribed timelike wall
+their conditioning and residual. Its monomial one-RHS domain is one to three
+odd modes with a positive metric certificate and a prescribed timelike wall
 speed. Requested ODE tolerances and these acceptance checks are not uniform
 numerical error enclosures. The scalar tangent is compared with both the
 weak characteristic pair and the actual hybrid-interface pair.
@@ -4175,8 +4176,9 @@ incoming data are a manufactured calculation, not the retained physical
 cap. In particular, the tiny mass-balance residual does not erase the
 boundary discrepancies or supply material transmission.
 
-All [24 new controls](../tests/test_nsc_atlas_cap_polynomial_reference.py)
-pass in 28 executions with **673,997 charged values / 1.515625 active CPU seconds**. They
+All [26 monomial-reference controls](../tests/test_nsc_atlas_cap_polynomial_reference.py)
+pass in 54 development executions with **1,252,570 charged values /
+2.84375 active CPU seconds**. They
 include the independent radius/coefficient direction, quadratic limit,
 centre and lapse integral, global metric bound, high-precision Gram solve,
 timelike motion of both signs, quiet data and rejection of jointly corrupted
@@ -4184,13 +4186,117 @@ forward/adjoint shape values before the weak solve. The one-mode finite-alpha
 case agrees with the existing P1 reference. The common-engine extraction also
 passes all 19 P1 controls with unchanged reported values and all 13 P1
 projection controls. Independent Grok derivation confirms the shape ODE and
-the use of global polynomial slope bounds; source review is pending.
+the use of global polynomial slope bounds. Completed Grok source review of
+`a36f16a` confirms the common engine and two-trace hybrid comparison. Its
+additional checks now exercise the actual `T_x B` timelike threshold, both
+Gram solves at high precision, and rejection of a corrupted solve. The
+output names `Z_rate=dZ/dx` explicitly and presents both gradients with the
+same component names. No numerical mass result changed in that follow-up.
 The interface check adds an exact two-trace scalar identity and checks the
 mass-rate discrepancy against its independent flux/density decomposition.
 A separate local-jet construction calls the existing `hybrid_wall_boundary()`
 and recovers the reported incoming/outgoing pair, radius/clock rates and
 transmitted scalar tangent. It is a local interface check, not an exterior
 source history or a solved coupled evolution.
+
+#### Orthogonal regular cap coordinates
+
+The [basis component](../src/recursive_horizons/nsc_atlas_cap_polynomial_basis.py)
+uses the complete odd Legendre tower `P_1(xi),P_3(xi),...,P_(2m-1)(xi)`,
+normalized by `P_p(1)=1`. It spans the same regular polynomials as the
+monomial reference. No physical field or boundary law changes. Orthogonality
+on `[-1,1]` and evenness of the products give
+
+$$
+M_{ij}=\frac{Z\delta_{ij}}{2p_i+1},\qquad
+K_{ij}=\frac{\min(p_i,p_j)[\min(p_i,p_j)+1]}{2Z}.
+$$
+
+The wall value vector is still `e=ones`. Define wall and centre derivatives
+`t_j=P'_pj(1)=p_j(p_j+1)/2`, `s_j=P'_pj(0)`. The coefficient dilation
+operator is upper triangular:
+
+$$
+E_{ij}=\begin{cases}p_i&i=j,\\2p_i+1&i<j,\\0&i>j.\end{cases}
+$$
+
+Indeed `xi P'_p=p P_p+sum_(lower odd j)(2j+1)P_j`. In this basis
+
+$$
+E^TM+ME=Zee^T-M,\qquad E^TK+KE=K+tt^T/Z,
+\qquad e^TE=t^T,\quad s^TE=s^T.
+$$
+
+The transposes matter: `E` is not diagonal or symmetric. The centre field
+and momentum are `(s dot c)/Z` and `(s dot d)/Z`, respectively. Consequently
+pure coordinate dilation preserves the inherited centre clock, while the
+same shape and weak-flux identities remain valid. A skipped mode would
+break closure under dilation; the API uses the complete tower.
+
+For stable evaluation at the centre let `t=xi^2`, `U_j=P_(2j)(xi)` and
+`Q_j=P_(2j+1)(xi)/xi`. Starting with `U_0=Q_0=1`, use
+
+$$
+U_j=\frac{(4j-1)tQ_{j-1}-(2j-1)U_{j-1}}{2j},\qquad
+Q_j=\frac{(4j+1)U_j-2jQ_{j-1}}{2j+1}.
+$$
+
+Differentiate this recurrence in `t`, retaining the product term
+`(t Q)_t=Q+t Q_t`. Then `P=xi Q`, `P'_xi=Q+2t Q_t`, and
+
+$$
+f_j=\frac{zQ_j}{Zr},\quad p_j^{\rm basis}=\frac{\xi Q_j}{A_0},\quad
+h_j=\frac{2t(Q_j)_t+z\gamma(z)Q_j}{ZA_0}.
+$$
+
+This avoids subtracting the finite centre values of `q` and `f`.
+The global slope certificate follows directly from the Legendre equation:
+
+$$
+\frac{d}{dx}\{(1-x^2)(P'_n)^2+n(n+1)P_n^2\}=2x(P'_n)^2\ge0.
+$$
+
+At `x=1` the expression is `n(n+1)`, so `|P_n|<=1` on `[0,1]` for
+`n>=1`; `P_0=1` separately. The derivative expansion in lower opposite-parity
+Legendre polynomials gives `|P'_n|<=n(n+1)/2`. Thus the correct bound here
+is `L_chi=sum_j |c_j| p_j(p_j+1)/(2Z)` and likewise for `k`. The same
+radial metric inequality applies to these global bounds, with outward
+arithmetic. This is not a field-truncation or wall-projection error bound.
+
+`polynomial_cap_reference(..., basis="legendre")` now supports one to
+sixteen odd modes. The default remains the one-to-three-mode monomial
+reference. The Legendre Gram condition is exactly `(4m-1)/3`, hence 21 at
+sixteen modes. The radial engine, independent shape equation, incoming
+condition and explicit hybrid trace discrepancies are shared by both bases.
+Both forward and adjoint outputs name their `chi`, `canonical_density` and
+`Z` components; `Z_rate` is the geometric coordinate rate, while
+`radius_rate` remains the areal-radius rate.
+
+Twelve [basis controls](../tests/test_nsc_atlas_cap_polynomial_basis.py) pass
+in thirteen executions, with **34,140 charged values / 1.390625 active CPU
+seconds**. Exact integrations check the matrices, transpose identities,
+centre and wall functionals. Five fixed-point evaluations of sixteen modes
+agree with 85-digit arithmetic to a maximum raw difference of `1.95399e-14`.
+The normal basis is also checked near the centre using its uncancelled
+high-precision expression.
+
+Five [adapter controls](../tests/test_nsc_atlas_cap_legendre_reference.py)
+pass with **1,835,038 charged values / 0.6875 active CPU seconds**. The same
+three-mode field, represented in the two bases, gives matching mass,
+gradients, rates and wall discrepancies after the explicit change of basis.
+One fixed sixteen-mode manufactured profile recovers the quadratic mass at
+alpha zero. At `alpha=.002`, its mass is `1.6825374175116823e-7`, gradient
+discrepancy `1.66228e-13`, shape discrepancy `4.02076e-19` and weak moving
+mass residual `-1.28312e-20`. These are operator controls; no prepared pulse
+or coupled evolution has been calculated in this representation.
+
+Independent Grok derivation confirms the complete-tower condition,
+transpose conventions, centre clock, stable recurrence and derivative bound.
+Completed independent Grok source review found no correctness defect in
+the extension, including dilation orientation, centre weights, normal-field
+cancellation and the global slope certificate. The reviewer did not execute
+tests or re-read the shared radial solver body; the controls above supply
+execution evidence.
 
 ### Central clock in general null labels
 

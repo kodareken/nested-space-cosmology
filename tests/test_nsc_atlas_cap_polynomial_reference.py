@@ -113,6 +113,13 @@ def test_inherited_clock_and_gram_solution_have_independent_checks(budget):
         transported = data['radius_rate']/(1/np.cosh(data['Z'])**2)*np.array([1,3,5])*data['chi_coefficients']/data['Z']
         np.testing.assert_allclose(row['rates']['chi'],
                                    data['T_x']*np.array(list(velocity),dtype=float)+transported,atol=1e-11,rtol=0)
+        forcing = -2*mp.exp(mp.mpf(row['lapse']))*mp.matrix(row['gradient']['chi'].tolist())
+        drive = mp.mpf(row['wall']['B'])*mp.mpf(row['radius'])*mp.mpf(data['incoming_w_plus'])
+        forcing += mp.matrix([drive-sum(velocity)]*3)
+        density_rate = mp.lu_solve(M,forcing)
+        transported_k = data['radius_rate']/(1/np.cosh(data['Z'])**2)*np.array([1,3,5])*data['density_coefficients']/data['Z']
+        np.testing.assert_allclose(row['rates']['canonical_density'],
+                                   data['T_x']*np.array(list(density_rate),dtype=float)+transported_k,atol=1e-11,rtol=0)
     # Separate lapse integral evaluates the original polynomial expressions,
     # with no call into the field evaluator or radial solution.
     nodes,weights = np.polynomial.legendre.leggauss(40)
@@ -271,9 +278,24 @@ def test_invalid_inputs_reject_before_radial_solve(changes,budget,monkeypatch):
         evaluate(budget,**changes)
 
 
-def test_nontimelike_wall_is_rejected(budget):
-    with pytest.raises(ValueError,match='not timelike'):
-        evaluate(budget,radius_rate=1.)
+@pytest.mark.parametrize('speed,accepted',[(.54,True),(.60,False)])
+def test_timelike_gate_uses_the_actual_clock_and_metric(speed,accepted,budget):
+    # Both rates are below T_x=.7 and below 1. Only T_x*B distinguishes them.
+    if accepted:
+        row = evaluate(budget,radius_rate=speed)
+        assert speed < row['T_x']*row['wall']['B']
+        assert row['Z_rate'] == pytest.approx(speed/(1/np.cosh(row['Z'])**2))
+    else:
+        with pytest.raises(ValueError,match='not timelike'):
+            evaluate(budget,radius_rate=speed)
+
+
+def test_gram_residual_guard_rejects_a_wrong_solution(budget,monkeypatch):
+    def corrupted(matrix,rhs):
+        return np.ones_like(rhs)
+    monkeypatch.setattr(model.np.linalg,'solve',corrupted)
+    with pytest.raises(ValueError,match='Gram solve residual'):
+        evaluate(budget)
 
 
 def test_shared_budget_stops_before_radial_solve(budget,monkeypatch):
