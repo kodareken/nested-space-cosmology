@@ -2295,6 +2295,48 @@ printed clock-rate difference was corrected from the stored operands to
 `2.14395e-11`; its assumption that the queried piece is the first onset
 piece is not used. The audit records the actual interval index and inputs.
 
+**Audit outcome:** the frozen `ac3d84d` calculation uses 1,710,662 values /
+2.46875 CPU seconds and no time steps. The actual piece is interval 88,
+after the special onset interval 87. Retained-minus-dense F' is
+`1.88328538e-9`; dense-minus-equation F' is `-3.06454081e-14`. The split
+identity and dense-value reconstruction are exactly zero in this evaluation.
+The original preparation and common-stage outputs reproduce v1. This points
+to the ordinary quintic history interpolation, not the ODE's local dense
+derivative, as the measured contribution at this point.
+
+### Degree-seven interior-jet enrichment, 17 October 2026
+
+For a quintic endpoint Hermite interpolant the degree-six remainder is a
+multiple of `(q-a)^3(q-b)^3`. Its first derivative vanishes at the midpoint;
+the previous midpoint-only comparison can miss its leading derivative error.
+Check this identity and the following enrichment exactly, using no physical
+field queries and at most **20 process-CPU seconds** for the two symbolic
+controls.
+
+For xi=(q-a)/h and psi=xi^3*(1-xi)^3, add
+`psi*(A+B*(xi-eta))` to the ordinary quintic. At an interior label eta,
+`A=DeltaF/psi(eta)` and
+`B=(h*DeltaFprime-psi_prime(eta)*A)/psi(eta)` preserve both endpoint
+value/first/second jets and match the supplied interior value/first jet.
+At the midpoint this is `64*psi*(DeltaF+h*DeltaFprime*(xi-1/2))`.
+It reproduces every polynomial through degree seven. Preserve the special
+quartic-onset piece; no physical source, coupling or knot grid is changed.
+Store the actual binary interior query label so original-input certificates
+and runtime interpolation constrain the same mathematical point.
+
+The implementation must carry optional interior jets through the profile,
+retained input identity and both original-input metric certificates. Existing
+degree-seven moments and six-point background projection can be reused;
+the quintic total-field transfer must reject enriched input explicitly.
+Keep the existing constructor's default behavior and historical evidence.
+Numerical controls and the first enriched physical comparison require their
+specific budget and decision after this algebra and consumer review.
+
+**Exact outcome:** both new symbolic controls pass with zero physical field
+samples / 0.125 CPU seconds. The degree-six derivative blind spot and the
+general interior-label degree-seven reconstruction are verified independently
+of the production interpolation code.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

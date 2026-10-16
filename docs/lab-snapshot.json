@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
+  "current_receipt_commit_parent": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
   "files": [
     {
       "bytes": 3120,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 322206,
-      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
-      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
+      "bytes": 322818,
+      "change": "Separate interpolation error from the prepared dense derivative and prove a preserving enrichment.",
+      "changed_from_commit": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "21061cf50aa5645e2c2c1b4a99ff0fff44d1a89ec1c0e114291619b6410fb39f"
+      "sha256": "86f5b71df5ec37e461120da0543b86dab836b63a7e2579d8cdd5dd1bb0106d70"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 318637,
-      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
-      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
+      "bytes": 320329,
+      "change": "Separate interpolation error from the prepared dense derivative and prove a preserving enrichment.",
+      "changed_from_commit": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ce7256bcba52c52c0c0f9a4f2de82296d074e6a0208fdac66302f2a3ef9c5602"
+      "sha256": "1becf6f5e2d96501022448b2248dbcd01ca2b6fb0fb05a2a76b893cbe5486507"
     },
     {
       "bytes": 8895,
@@ -11402,12 +11402,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 354182,
-      "change": "Locate the leading history-transfer mismatch and prepare its local derivative split.",
-      "changed_from_commit": "f154ecc4758183cef22bb16aaaa439b33861f0dc",
+      "bytes": 356617,
+      "change": "Separate interpolation error from the prepared dense derivative and prove a preserving enrichment.",
+      "changed_from_commit": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "9cbcb9d81657a99c5edfbed2e40adeaa714d33a031bc1d18d4a15562b9789252"
+      "sha256": "666e4e16c163b55385da832aaef6f504cca7c4dd6be4f66d9ef577a5b47fbaaf"
     },
     {
       "bytes": 6705,
@@ -29615,6 +29615,14 @@
       "sha256": "66cad433395f2d5712b76976c3c35322eec7027b2707b84abcc37e11545a8138"
     },
     {
+      "bytes": 16564,
+      "change": "Separate interpolation error from the prepared dense derivative and prove a preserving enrichment.",
+      "changed_from_commit": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
+      "path": "results/summaries/nsc-atlas-prepared-endpoint-connection-v2.json",
+      "retention_reason": "Local derivative attribution and exact enrichment identities.",
+      "sha256": "3b21323be110a24184b72351ab28399a308cbf7170e30f1f50380da40127c565"
+    },
+    {
       "bytes": 2672,
       "change": "Preserve the first physical history transfer and use the exact causal quiet branch.",
       "changed_from_commit": "881bf06bf00916125a7dbb9d9875175f4dfb2fc2",
@@ -36292,12 +36300,12 @@
       "sha256": "0f4cb74ce36ea6909b75cbbc3b602a5fc03545a3521ce00271b67f2fab6ffab5"
     },
     {
-      "bytes": 2796,
-      "change": "Derive the history interpolation onset obstruction and the unique first-piece correction.",
-      "changed_from_commit": "cbb772e82b09bea9ce1f00040dd93458d6a4ca67",
+      "bytes": 4080,
+      "change": "Separate interpolation error from the prepared dense derivative and prove a preserving enrichment.",
+      "changed_from_commit": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
       "path": "tests/test_nsc_atlas_history_onset.py",
       "retention_reason": "Exact controls for preserving source onset order and coefficient in the retained history.",
-      "sha256": "e1059d65864d621ca64e083112454c2681241a13b3a6fef01240cfffb96dd152"
+      "sha256": "a6019f9384324596b3e09b6a52296439b93686fb78d949e741a021e74d743a13"
     },
     {
       "bytes": 3882,

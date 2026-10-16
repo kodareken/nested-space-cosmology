@@ -135,6 +135,15 @@ incoming boundary-force identity explains the cap momentum rate to
 2.5625 CPU seconds, without an evolution or grid scan. This locates a
 transfer contribution; it does not reconstruct the missing evolved state.
 
+The [dense-polynomial split](../results/summaries/nsc-atlas-prepared-endpoint-connection-v2.json)
+then attributes `1.88329e-9` of the local F' difference to ordinary quintic
+history interpolation, versus `3.06454e-14` to the dense/equation derivative
+comparison (1,710,662 values / 2.46875 CPU seconds). The queried piece is
+after the special onset piece. Exact controls now show both why midpoint
+derivative checks can miss this error and how an interior value/first-jet
+degree-seven correction preserves all endpoint jets. That representation
+must next be carried consistently through its input certificates.
+
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass
 residuals that remain when the fixed cap is connected to the material wall.

@@ -1,0 +1,296 @@
+{
+  "cap_c_rate": 0.0034354750114350217,
+  "cap_departure_rate_L2": {
+    "canonical_density": 6.528942991569738e-07,
+    "chi": 7.926699784070018e-17
+  },
+  "cap_rate_minus_retained_rate": 4.425279587216835e-15,
+  "cap_wall": {
+    "A": 0.7738240496273096,
+    "B": 0.7738240496273096,
+    "f": 4.1973778172926056e-07,
+    "h_trace": 0.0012356199870060085,
+    "h_weak": 0.0012356151216879837,
+    "incoming_discrepancy": 1.023028609655613e-08,
+    "momentum_discrepancy": -2.7150590803382002e-15,
+    "normal_discrepancy": 4.865318024762505e-09,
+    "p_trace": 0.0012360397247877378,
+    "p_weak": 0.0012360397247904529,
+    "polynomial_density_discrepancy": 0.0,
+    "polynomial_slope_discrepancy": 0.0,
+    "polynomial_value_discrepancy": 0.0,
+    "q_trace": 0.0012360397247877378,
+    "velocity": 0.0009564772653375734,
+    "velocity_discrepancy": 2.100858549625162e-15
+  },
+  "clock": {
+    "V": -2.4889677533993657,
+    "V_x": 3.4894796635230065,
+    "history_label": -0.5040932351269474,
+    "history_label_rate": 3.5917999684243895,
+    "label_difference": 2.5424107263916085e-14,
+    "prepared_label": -0.5040932351269728,
+    "prepared_label_rate": 3.59179996840295,
+    "quiet_reflected_label": -1.5386057080168727,
+    "radius": 0.4755795941508535,
+    "reference_T": 0.0451097586174858,
+    "wall_U_difference": 1.554312234475219e-14,
+    "x": 0.42292305857246026
+  },
+  "common_wall": {
+    "L": -0.18316466000945092,
+    "T": 0.0451097586174858,
+    "c": 1.9961872388458127e-07,
+    "r": 0.4755795941508535,
+    "s": 0.027668675724551308
+  },
+  "dense_audit": {
+    "dense_coefficients": [
+      -2.8586069535781383e-09,
+      2.8586069535781383e-09,
+      8.384280180538569e-09,
+      -5.525674952639234e-09,
+      -2.4806367774844957e-09,
+      -1.864093317459486e-10,
+      5.049389068599564e-12
+    ],
+    "dense_first_q": 0.0009564753819630304,
+    "dense_initial": 0.0,
+    "dense_interval": [
+      0.25,
+      0.2596020372690678
+    ],
+    "dense_minus_rhs_first_q": -3.064540808617178e-14,
+    "dense_value_identity": 0.0,
+    "first_split_identity": 0.0,
+    "history_input": {
+      "first": [
+        2.353068961456781e-05,
+        0.0050978214170715325
+      ],
+      "labels": [
+        -0.5046835280136289,
+        -0.5034630313030964
+      ],
+      "second": [
+        0.29352250524006573,
+        10.300749528827282
+      ],
+      "values": [
+        1.413268822640753e-09,
+        1.8795768802811738e-06
+      ]
+    },
+    "history_interval": 88,
+    "history_power_coefficients": [
+      0.0,
+      0.0,
+      -10839132.718948483,
+      415579.7568646886,
+      405.94403564073565,
+      0.14676125262003287,
+      2.353068961456781e-05,
+      1.413268822640753e-09
+    ],
+    "onset_interval": 87,
+    "polynomial": {
+      "first": -9.114852152290719e-09,
+      "second": -1.3650089063896933e-05,
+      "value": -4.860152692981592e-12
+    },
+    "retained_minus_dense_first_q": 1.8832853805085537e-09,
+    "rk_source_sha256": "17c8ee8629a0aacab9cbafbd9294ff05c16a18e86ff0f683fff2d97154a89ebf",
+    "scipy_version": "1.17.1",
+    "scope": "analytic derivative of the numerical dense polynomial; not a replacement physical field jet"
+  },
+  "density_rate_minus_boundary_force_L2": 4.039724358920191e-13,
+  "execution": {
+    "charged_values": 1710662,
+    "cpu_seconds": 2.46875,
+    "raw_history_saved": false,
+    "retries": 0,
+    "source_integrations": 1,
+    "time_steps": 0
+  },
+  "exterior_departure_max": 4.802919525073015e-12,
+  "field": {
+    "derivative_conventions": "profile derivatives use q; material rates use x; J*V_x uses the prepared zero chi_U wall condition",
+    "direct_profiles": {
+      "f": [
+        1.9961277893876632e-07,
+        1.9961277896325803e-07
+      ],
+      "f_prime": [
+        0.0009564753819936758,
+        0.0009564753820813633
+      ]
+    },
+    "interior_values_sha256": "814d68ec503a88f0c0329a19b651e336351a2a4371af5cfd0003adfc9ff1cd43",
+    "prepared_wall_material_rate": 0.003435468246823084,
+    "prepared_wall_value": 1.9961277893876632e-07,
+    "retained_material_rate": 0.0034354750114305964,
+    "retained_minus_prepared_rate": 6.764607512598636e-09,
+    "retained_profiles": {
+      "F": [
+        1.9961872386026372e-07,
+        1.9961872388458127e-07
+      ],
+      "F_prime": [
+        0.0009564772652484109,
+        0.0009564772653354724
+      ],
+      "F_second": [
+        3.424372533512058,
+        3.4243725337179054
+      ],
+      "F_third": [
+        8096.5838513366625,
+        8096.58385157072
+      ]
+    },
+    "source_value_identity": 0.0
+  },
+  "hybrid_c_rate": 0.0034354682500503456,
+  "incoming_boundary_force_L2": 6.528938954968909e-07,
+  "input": {
+    "path": "results/summaries/nsc-atlas-fixed-history-onset-v1.json",
+    "sha256": "704029b7fe2574f2ba71757a9b43f3bc7a40a6d654786d459e293133cc83ad87"
+  },
+  "limits": {
+    "charged_values": 10000000,
+    "cpu_seconds": 60.0
+  },
+  "numerical_error_enclosure": false,
+  "original_input": {
+    "path": "results/development/nsc-atlas-coupled-evolution-v1/coupled.json",
+    "sha256": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86"
+  },
+  "prefix_derivative_coordinate": "x (the common stage names this null coordinate V)",
+  "prefix_outgoing": {
+    "c_V": 0.0034354682500503456,
+    "log_C_V": 1.0493584618165726,
+    "r_V": 0.7650967196685159
+  },
+  "preparation": {
+    "charged_values": 976388,
+    "clock_offset": -1.0664592301893958,
+    "field_nodes": 257,
+    "geometry_knots": 257,
+    "input_sha256": "a8dcfb845ab24cf1c97392d5156081517d4685587a4448f7a6a47ec8e8076066"
+  },
+  "prepared_minus_prefix_rate": -3.227261773791623e-12,
+  "prepared_reference": {
+    "path": "results/summaries/nsc-atlas-prepared-history-v2.json",
+    "sha256": "b0a25098c9c4f6900b40ab50895506ad294a1caa2ca98a479abad1ec1348ac3e"
+  },
+  "projected_gradient_discrepancy": {
+    "canonical_density_rate_L2": 3.997260246271424e-13,
+    "canonical_density_rate_infinity": 2.1063282443097065e-08,
+    "chi_rate_L2": 7.96570174199833e-17,
+    "chi_rate_infinity": 6.043252543362133e-12,
+    "scope": "forward minus adjoint rates on the same numerical metric; not an error enclosure",
+    "wall_velocity": 2.096568610091214e-15
+  },
+  "residual": {
+    "canonical_wall_flux": 6.7613846762424856e-09,
+    "conformal_wall_flux": 6.761384676104432e-09,
+    "conformal_wall_flux_factored": 6.761384676077414e-09,
+    "physical_temporal_mass_actual": -0.0,
+    "physical_temporal_mass_matched": 0.0,
+    "scalar_channel_identity_defect": 4.55788098045294e-19,
+    "scalar_incoming_channel": 1.4217137014160268e-08,
+    "scalar_tangent": 1.4217146318724894e-08,
+    "scalar_tangent_factored": 1.4217146318377799e-08,
+    "scalar_velocity_channel": 9.304108837221342e-15,
+    "strong_minus_weak_outgoing": -1.0230297514149249e-08,
+    "temporal_mass_actual": -1.4858463834187956e-12,
+    "temporal_mass_matched": 3.1436580158172766e-13,
+    "weak_flux_actual": -1.800519669924717e-12,
+    "weak_flux_matched": -3.07484924193691e-16
+  },
+  "schema": "nsc-atlas-prepared-endpoint-connection-v2",
+  "scope": "one alpha-zero reference event from prepared leading fields and zero cap departures; not the evolved finite-alpha state",
+  "source_bindings": {
+    "pyproject.toml": "4bdbbb3921ed04f4add7eb1630a07ed49eab6b0f3ece2137ee06a88382aa755a",
+    "scripts/analyze_nsc_atlas_operator_comparison.py": "17c3e27bbc891c41bfc2f12519053b11c59f916e65e138a264433cc0aec19e1c",
+    "scripts/analyze_nsc_atlas_spatial_refinement.py": "1a90dcf150521d85d58be87ee202dbdcc71ae498ae6da04312caefcf432e344a",
+    "scripts/check_nsc_atlas_prepared_endpoint_connection.py": "0a7d4f0d086d1d479e83fe0ff1929eb4c66e2d2ab26623d8c6ad3eb83303a1e2",
+    "scripts/check_nsc_atlas_prepared_history.py": "f9555c6dd4cce0422a49ec6d0bc1fc51b6925f0e7c282f42c373200533b546be",
+    "scripts/diagnose_nsc_atlas_background_step.py": "3a20311c2c346720417b1a028f85c121f6b32002944ebba8b51da74ef08fa86b",
+    "scripts/diagnose_nsc_atlas_background_time.py": "2af55adc8444c37824e87bfd20bd0a548f5878899c3f0e4354e63bff70e14e9c",
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+    "scripts/diagnose_nsc_atlas_compatible_transport.py": "063f73745addb59eaa518c5ae6ef9e1e5a3e19873dfb015d9818fff9bbb1f29a",
+    "scripts/diagnose_nsc_atlas_ssprk3_step.py": "f5d7edf55cfd9979a2c60eed359770f1186ae9b2fb4dfb963efbf547286e2c7e",
+    "scripts/record_nsc_atlas_background_evolution.py": "1667bf1aa8a8a8fdbb8d4860369ccdb1080d39afe366cf96287c3e1f9c7d03e1",
+    "scripts/record_nsc_atlas_compatible_evolution.py": "35443dfe0fec7acb396107f0cefdc13b32f53f4e0948b212e76537874b54f4c9",
+    "scripts/record_nsc_atlas_coupled_evolution.py": "8d8303f01585997c1a9f42f33259dfc299951d3bf5e7cc70a94d67987f081919",
+    "scripts/record_nsc_atlas_nonlinear_rectangle.py": "1ca50b5f0da6f401cd244f1749fa5175fb38da2ea2497799500cbfd9cbb9d647",
+    "scripts/record_nsc_atlas_operator_comparison.py": "4231a0db2ca44c7402b11e06dcb8c4e354292f798fa1b7350c19aea1ad6106e9",
+    "scripts/record_nsc_atlas_spatial_refinement.py": "d519bfbdc2a607f2eb7c5199bd52e8c7b4400d320cb8f0883e50ba3289a79ea8",
+    "scripts/record_nsc_atlas_ssprk3_evolution.py": "118e02bdf46e5ae2763bc6fdfb7885533325ab133932110bfeaa31193bb397f8",
+    "scripts/record_nsc_atlas_ssprk3_refinement.py": "83947ed2cb7ce74a22f9aabd4f9191b43f3cc1086a877c345394581ddab1393d",
+    "scripts/run_nsc_atlas_fixed_onset.py": "74a6e22d65ee4d17e1c369e72053c17d655c1908b42761aca9a1efd18fe1c8b7",
+    "scripts/run_python.py": "6a02fd2f1b5c0f6f12af8dadaad14c0a337fca8c0673784169f041821912d210",
+    "scripts/validation_source_successors.py": "6ed04648bb81bf1e62427415f3a7f4033d2eb26d6749d5f3f3d5bbd14d35cbad",
+    "src/recursive_horizons/nsc_atlas_background_cap.py": "df34fdee624eb58d466b778e8f05ee74241922e43f5b60d619c0a8c557f6ceed",
+    "src/recursive_horizons/nsc_atlas_background_evolution.py": "7b7d5db8e790354c0bf7069f983eb4851390b1cbfaa3a56a10de97033e1059b9",
+    "src/recursive_horizons/nsc_atlas_background_profile.py": "b143425a13458fce5b2663bfd94775b5575dbe7681c998a9e3ad850812f372fa",
+    "src/recursive_horizons/nsc_atlas_background_ssprk3.py": "dcc3ecc2023679be3a837e807de58548cb1b6b51bc3e7419e1cba1b8caee8362",
+    "src/recursive_horizons/nsc_atlas_cap_background_bound.py": "d85155d2550916af7022ac379f388a47208ce21d7af931ece96d7a8f628d5770",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "3631c15a6cdcefb28977c3b3fc1001c928038fc580862096050aacf15c394fec",
+    "src/recursive_horizons/nsc_atlas_cap_field.py": "3e5c10e5e1096a2c1079d00ca8d31ff4678044d324404117d225ccd1f3815d31",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py": "048cdbee78b7be34b6ffac4b04019078f7f044a13a918d25472c7ad4d850d5ae",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py": "9373d3d293e5b22ca05a3a11c4e5e3645d97da100d915713c5513a6236a22b6f",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py": "b46a1549b69dcc64b5018e43c005441ade48c4c0552e3ad5235b68e4f6ed8300",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py": "5596db3d0bd312fee6b7d52827793b08c1384fb665d35773a55c9024c9d2b252",
+    "src/recursive_horizons/nsc_atlas_cap_geometric_reference.py": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81",
+    "src/recursive_horizons/nsc_atlas_cap_linear_bound.py": "0d75c29860dc55c9a83e06f6cf46a8f3116527ec6a1cf42eb3eb53e4e59fd6af",
+    "src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py": "e0c26ea5417fb46b1e971e9b4ac5c0122aae400104551516488d321e9272a579",
+    "src/recursive_horizons/nsc_atlas_cap_polynomial_basis.py": "16857a7cca0e2112f0f3fd98e9c42568b442429f8ed044e1dcb78e07538503b4",
+    "src/recursive_horizons/nsc_atlas_cap_radial_reference.py": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab",
+    "src/recursive_horizons/nsc_atlas_cap_variational_reference.py": "0779ff9783932b2335b9dc09bb64a218daad6b694393d82cfc97f62ce8888f93",
+    "src/recursive_horizons/nsc_atlas_causal_observers.py": "740e701b2df732ab16047c98b96fbc9df86ae19093099526cc38219d9cf7e9f5",
+    "src/recursive_horizons/nsc_atlas_causal_reference.py": "46cc893ad9c729aba85b80c18c0af6c89fc96166ba3e5ede692c1e17aeaee43b",
+    "src/recursive_horizons/nsc_atlas_characteristic_background.py": "059fd502b8aa596b68fddcfe7212b41c62d854cfff45bf8f4b0c341db37030cf",
+    "src/recursive_horizons/nsc_atlas_characteristic_cell.py": "71745e4fc58ab722a91d47c1fba90344fce786b2dc3ded6063d7dceb8784f135",
+    "src/recursive_horizons/nsc_atlas_characteristic_initialization.py": "28cc68e51253c645e197d050f30420cfaeaf746d5922c0fa132a67e91e63793d",
+    "src/recursive_horizons/nsc_atlas_characteristic_trace.py": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47",
+    "src/recursive_horizons/nsc_atlas_compatible_evolution.py": "82f8f127f2b401b1234dfe7ceecddee011cf907c34fd87c06cbb64c20ddd9385",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_coupled_diagnostics.py": "9bb5d343683d2d8028d0796a18a5fd12ec677f5ec373e678675e6f56fdbddee6",
+    "src/recursive_horizons/nsc_atlas_coupled_evolution.py": "08746ab7c4aa71b543be5e1aca469e1fa43795277cfdce8102161b738d64423b",
+    "src/recursive_horizons/nsc_atlas_departure_diagnostics.py": "98a99baeb613738612b8dd26d68edbbeb6be1f514c835bcca3929e868cc687b3",
+    "src/recursive_horizons/nsc_atlas_departure_gradient.py": "e82312750bc71ee31dd7342f72125a89f5ba3d7cbb5cb63c610b971b1cd01452",
+    "src/recursive_horizons/nsc_atlas_exterior_characteristic_slice.py": "905f820fc7240b272dab9a3766708e3ff471d4210d408d5300f5eea0d983d766",
+    "src/recursive_horizons/nsc_atlas_field_preparation.py": "ada56a8d02d430e733fc25807308b0dd836d2b9bfb3870341bc03e574f34db83",
+    "src/recursive_horizons/nsc_atlas_field_transfer.py": "5ffe6d779dd5e0d9b57fe3506a44b5e1a4ad091fbd0c215de5d52f7bc767331d",
+    "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py": "4d6c95571b042b36668f355dcb3a859b533919e03ac27845b52220fdffab8105",
+    "src/recursive_horizons/nsc_atlas_fixed_cap_time.py": "301ae4afdcc5019fda2faf9efaae40319676564860df321a1ae428fa8ba8fc82",
+    "src/recursive_horizons/nsc_atlas_gradient_evolution.py": "f007f4842d3b6f2490559e6035d6b5859d8848e477d39b8e77731a0e136d445d",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+    "src/recursive_horizons/nsc_atlas_nonlinear_bulk.py": "5ed3d18a642b562528c397526f85e92272784915bdb3a289cf9e8fa5d32c1b42",
+    "src/recursive_horizons/nsc_atlas_nonlinear_rectangle.py": "0cf41411da3be90a1f0f030581adc4ce1da672e2d638d9d6f91f6bf4c4013824",
+    "src/recursive_horizons/nsc_atlas_nonlinear_source.py": "9a5922f9fbc856a4fb6e0c1c1f6a28a40e3034656de81db88d6cc8b917def72c",
+    "src/recursive_horizons/nsc_atlas_polar_cap.py": "17a9bece68716d2c80711bbdef3fc340d36f11edb6fa2f233806b39332603617",
+    "src/recursive_horizons/nsc_atlas_prepared_response.py": "70b28d793f572556e3ada8bfaf74a98926f93402d7c15cf987f61b50396ab8e0",
+    "src/recursive_horizons/nsc_atlas_reduced_cap.py": "ed474652def7f60db02a14e5147a08b14b43963ef756ad4c3de3ad4800d698e9",
+    "src/recursive_horizons/nsc_atlas_reference_wall_gauge.py": "e905f2b6e888d53ee2d539920d09d037eb6bb074a60717932cfead12c87b3113",
+    "src/recursive_horizons/nsc_atlas_refined_cache.py": "6a5e01fbccbd5f333d5a327c4ef8952cb5a21adf8675a02c088d10e3429a7c4c",
+    "src/recursive_horizons/nsc_atlas_stage_ssprk3.py": "aab87a8bc67a9b69391a425a5893c9c07e73eedde668d1a2cdff4eb971cdcbc0",
+    "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157",
+    "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
+    "src/recursive_horizons/nsc_atlas_wedge_field.py": "6c1486750bd2d244b71f5cf7770ed5a43adfdb3b525561d116dd33f890e88a23",
+    "src/recursive_horizons/nsc_frozen_sources.py": "473120bfe00230d1d25cf8a4942edfed0891dc8cc58ca7276dc26419bf721ac9",
+    "src/recursive_horizons/nsc_source_binding_graph.py": "0c378dd30c500e93cf2050f44793333380875094008ae2b95c2f180a31907374"
+  },
+  "source_commit": "ac3d84d2f49186663f482bb95ea74fb1ee94e55e",
+  "status": "completed_reference_comparison",
+  "wall_rates": {
+    "L": -0.23972138944815446,
+    "T": 2.106207629033655,
+    "c": 0.0034354682500503456,
+    "r": 1.1495870801626467,
+    "s": 1.3133740104123532
+  }
+}

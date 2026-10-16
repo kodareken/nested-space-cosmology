@@ -6596,6 +6596,37 @@ retained polynomial from differentiation of the prepared dense output and
 the prepared equation-derived first jet. The earlier midpoint comparison
 does not bound discrepancies everywhere within an interval.
 
+The [local dense-polynomial audit](../results/summaries/nsc-atlas-prepared-endpoint-connection-v2.json)
+isolates that difference without changing any equation. At history interval
+88 (the special onset piece is 87), retained-minus-dense F' is
+`1.88328538e-9`, while dense-minus-equation F' is `-3.06454081e-14`.
+The two differences sum exactly to the observed derivative gap. The
+analytic nested-polynomial value agrees exactly with the installed dense
+evaluator. This audit uses 1,710,662 values / 2.46875 CPU seconds and records
+only the relevant small dense/history polynomials, their source identity
+and existing endpoint summaries.
+
+For an ordinary quintic Hermite piece the leading degree-six remainder is
+proportional to `(q-a)^3(q-b)^3`. Its derivative is zero at the midpoint,
+which explains why midpoint-only derivative comparisons can miss it.
+A degree-seven correction can retain the original endpoint jets while
+matching an additional interior value and first derivative. With
+`xi=(q-a)/h`, `psi=xi^3(1-xi)^3` and interior coordinate eta, use
+
+\[
+ H_7=H_5+\psi[A+B(\xi-\eta)],\quad
+ A=\frac{\Delta F}{\psi(\eta)},\quad
+ B=\frac{h\Delta F'-\psi'(\eta)A}{\psi(\eta)}.
+\]
+
+It leaves both endpoint jets through second order unchanged and reproduces
+degree-six and degree-seven remainder terms exactly. Two independent
+symbolic controls pass with zero physical field samples / 0.125 CPU seconds.
+The actual binary interior label must be retained, rather than silently
+replaced by an unrepresentable exact midpoint. Implementation must carry
+these inputs into every certificate; the special quartic-onset piece stays
+separate. No physical evolution with this enrichment has been run.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

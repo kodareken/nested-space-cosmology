@@ -64,3 +64,31 @@ def test_compact_source_coefficient_under_arrival_clock():
     wall=(1-zeta*zeta)**4+e5*x**5
     arrival=qv*x+q2*x*x+q3*x**3
     assert s.limit(wall/arrival**4,x,0)==16*(4/(dv*qv))**4
+
+
+def test_quintic_midpoint_derivative_can_hide_the_leading_error():
+    x=s.symbols('x');remainder=x**3*(x-1)**3
+    assert all(s.diff(remainder,x,j).subs(x,edge)==0 for j in range(3) for edge in (0,1))
+    assert s.diff(remainder,x).subs(x,s.Rational(1,2))==0
+    assert s.diff(remainder,x).subs(x,s.Rational(1,4))!=0
+    # x^6 minus this remainder is exactly its endpoint-jet quintic.
+    assert s.degree(s.expand(x**6-remainder),x)==5
+
+
+def test_interior_value_and_first_jet_enrichment_preserves_endpoint_jets():
+    x=s.symbols('x');psi=x**3*(1-x)**3
+    eta=s.Rational(3,7);a,b=s.symbols('a b')
+    # Two extra degrees remove the full degree-six/seven remainder.
+    error=psi*(a+b*x)
+    dv=error.subs(x,eta);dx=s.diff(error,x).subs(x,eta)
+    ca=dv/psi.subs(x,eta)
+    cb=(dx-s.diff(psi,x).subs(x,eta)*ca)/psi.subs(x,eta)
+    correction=s.expand(psi*(ca+cb*(x-eta)))
+    assert s.expand(correction-error)==0
+    assert all(s.diff(correction,x,j).subs(x,edge)==0 for j in range(3) for edge in (0,1))
+    assert correction.subs(x,eta)==dv
+    assert s.diff(correction,x).subs(x,eta)==dx
+    dm,dp,h=s.symbols('dm dp h')
+    midpoint=64*psi*(dm+h*dp*(x-s.Rational(1,2)))
+    assert midpoint.subs(x,s.Rational(1,2))==dm
+    assert s.diff(midpoint,x).subs(x,s.Rational(1,2))==h*dp
