@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "c94326067c34bc8d197bcf4063599d4d6813cd4c",
+  "current_receipt_commit_parent": "f7f850fdaf2dc2a31094feeff7231d65e6d4a52f",
   "files": [
     {
       "bytes": 2218,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 208447,
-      "change": "Exact shadow-radial mass/transport decomposition and bounded symbolic verification; original import records preserved.",
-      "changed_from_commit": "c94326067c34bc8d197bcf4063599d4d6813cd4c",
+      "bytes": 208931,
+      "change": "Field transport derivatives and midpoint replay conditioning; original import records preserved.",
+      "changed_from_commit": "f7f850fdaf2dc2a31094feeff7231d65e6d4a52f",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "12de16b5c64b86b6f65be5fad94eead7e992b7565b5aa5c3968dbeae8aa74fec"
+      "sha256": "f7687dfbbed9a815a27a9d77d6e3b759e235f68a102e3b5da5d8671fe8142087"
     },
     {
       "bytes": 9543,
@@ -32142,6 +32142,12 @@
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
     },
     {
+      "bytes": 6787,
+      "path": "src/recursive_horizons/nsc_atlas_cap_transport_fields.py",
+      "retention_reason": "Read-only cap transport field jets and manufactured controls for the existing mass-balance comparison.",
+      "sha256": "b7191d243b4938c5f760ddcdefcb05a87ea26fdc998bff1016f2a0ac7495cfd5"
+    },
+    {
       "bytes": 16914,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "7cf71fb46c5381cb4d3bb734b06c54db5f765abb",
@@ -35419,6 +35425,12 @@
       "path": "tests/test_nsc_atlas_cap_mass_transport_identity.py",
       "retention_reason": "Exact algebra controls for the current cap mass/transport bridge; no retained physical replay.",
       "sha256": "7f602605059b35cf73387ad4ee82d020f2fa2b9ba27897d865bc184f6345896e"
+    },
+    {
+      "bytes": 9665,
+      "path": "tests/test_nsc_atlas_cap_transport_fields.py",
+      "retention_reason": "Read-only cap transport field jets and manufactured controls for the existing mass-balance comparison.",
+      "sha256": "1b6f9ba2e537f337aa0a4d8f3d753036bf984ced13027e4cdee39b36752bf8eb"
     },
     {
       "bytes": 9130,

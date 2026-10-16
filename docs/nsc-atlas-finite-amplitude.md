@@ -3041,6 +3041,25 @@ An independent Grok derivation agrees with the corrected full-direction
 formula; its initial split into profile time and other state changes is
 absorbed into the full fixed-radius derivative above.
 
+`CapTransportFields` in the [field adapter](../src/recursive_horizons/nsc_atlas_cap_transport_fields.py)
+implements the field inputs to this identity. Its first tangent column
+contracts `(R_x,T_x,Ip_x,Iq_x)` at fixed physical radius; its second varies
+only the query radius. The common backward direction selects the same
+limiter branch as the mass tangent. A query names its owner cell, including
+at a shared face, so the material trace derivative is explicitly
+`X_x+v_j*X_r`. The adapter returns `f,Pi,Phi,a,b` and both derivatives,
+plus the implemented `Pdiff` and `Pdiff_f`. It freezes the profile and
+reconstruction inputs, and charges the caller's existing budget.
+
+The [23 manufactured controls](../tests/test_nsc_atlas_cap_transport_fields.py)
+cover regular polynomial coefficients, nonconstant field derivatives,
+upstream moments, first-cell regularity, limiter openings, both material
+face traces, profile endpoints, input immutability and budget rejection.
+Axis jets and exact queries at `r=0.01` or the potential formula threshold
+are excluded. The interface inventory and one-sided switch limits required
+by the shadow integration are separate work; this adapter does not silently
+select those limits or integrate a new metric.
+
 No value of these new channels has been calculated for the retained cap.
 Their evaluator needs controlled exact-flow approximation, positive `A^E`
 and finite lapse on its declared domain, full reconstructed field jets,

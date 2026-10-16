@@ -164,8 +164,8 @@
     "scripts/record_nsc_atlas_ssprk3_refinement.py": {
       "classification": "validation-only",
       "original_sha256": "2e6cfa1d66b7524057a09eb2eb4f2481c51d56a9f9d042074d022c080d12b7c4",
-      "reason": "Explicit saved-source authentication accepts only reviewed exact successors; current creation hashes and all retained scientific/data comparisons remain unchanged.",
-      "successor_sha256": "32835928a0bd77afdfc37be0d60ad588118303eef9d6183ec660d0127ca926fe"
+      "reason": "Forward transient operand-conditioned departure diagnostic allowances through midpoint-complete validation; generating equations, retained data and original pins are unchanged.",
+      "successor_sha256": "9f2c968cb02a24cf21ad1ca8ebc7650d45f702d323630be38ef87c7eaeb82bc6"
     },
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py": {
       "classification": "validation-only",
@@ -308,8 +308,8 @@
     "tests/test_record_nsc_atlas_ssprk3_refinement.py": {
       "classification": "test-only",
       "original_sha256": "4d2377607dd726ff37733d9d855561f85e7881cf1451292cd22821e44dcfe124",
-      "reason": "Reviewed replay-policy regression, explicit authentication fixture, or lazy cumulative test-budget fixture only; no retained scientific data or sampled solution changed.",
-      "successor_sha256": "227fc58621529ab46595b38c972c8b7f21e3a8be00222eaf6bd7b9056fe7fdd5"
+      "reason": "Forward transient operand-conditioned departure diagnostic allowances through midpoint-complete validation; generating equations, retained data and original pins are unchanged.",
+      "successor_sha256": "93051c38205909af3b9419d61e3248851bf59e741f4c8ae3a38dffee9a41efbe"
     }
   }
 }

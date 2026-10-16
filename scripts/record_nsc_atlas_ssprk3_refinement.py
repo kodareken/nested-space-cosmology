@@ -10,6 +10,7 @@ import time
 import uuid
 
 import numpy as np
+from recursive_horizons.nsc_atlas_validation import collect_departure_replay
 from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_ssprk3_evolution as previous
@@ -125,13 +126,16 @@ def profile_intervals(case,profile,budget):
         interpretation="saved-interval knot brackets, not internal-stage paths or causal attribution"))
 
 
-def diagnostics(record,parent,background,base,profile,budget):
+def diagnostics(record,parent,background,base,profile,budget, *, replay_allowances=None):
     current,histories,caps,controls=[],[],[],[]
     for case in record["cases"]:
         full,departure=_histories(base,case,budget)
         coarse,departure_coarse=_histories(base,case,budget,2)
         histories.append(dict(raw129=compact_history(full),departure129=compact_history(departure),
             raw65=compact_history(coarse),departure65=compact_history(departure_coarse)))
+        collect_departure_replay(replay_allowances, len(histories)-1,
+            base["initial_data"][case["amplitude"]]["snapshot_rows"], case["alpha"],
+            departure129=departure, departure65=departure_coarse)
         table=tables(case,base["initial_data"][case["amplitude"]]["snapshot_rows"],budget)
         current.append(table)
         caps.append(cap_history(case,profile,budget))
@@ -325,7 +329,9 @@ def validate_record(record,budget=None,*,require_creation=True):
             _real(execution["max_courant"],"Courant",high=.4)
             end+=charge
         before=budget.evaluations
-        _equal(record["diagnostics"],diagnostics(record,parent,background,base,profile,budget),"diagnostics")
+        replay_allowances = {}
+        rebuilt = diagnostics(record,parent,background,base,profile,budget,replay_allowances=replay_allowances)
+        _equal(record["diagnostics"],rebuilt,"diagnostics",roundoff=replay_allowances)
         diagnostic_charges=budget.evaluations-before
         expected=dict(initial_evaluations=initial,evaluations=end+diagnostic_charges,
             inherited_authentication_evaluations=auth_charges,cache_evaluations=cache_charges,

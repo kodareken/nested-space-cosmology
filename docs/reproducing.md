@@ -28,6 +28,8 @@ Only `E_Ubar`, `E_x` and their numeric summary leaves receive those additional
 operand-dependent allowances. Mass, source constraints, counts, masks and
 other diagnostics keep their existing checks. The eight-unit elementary-function
 assumption is a replay policy, not a certified SciPy accuracy bound.
+The compatible, background, SSPRK3 and midpoint-complete validators all
+forward these transient bounds to their departure-history comparisons.
 Profile-fit replay similarly propagates rounding through its polynomial basis
 conversion and differentiated residuals. Adaptive inverse iterations and their
 work totals are checked for internal consistency and algorithmic bounds in each
@@ -71,6 +73,19 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_transport_i
 These controls share 20 active process-CPU seconds and take no numerical
 field samples. They do not evaluate a retained cap or authorize a new
 trajectory. The numerical shadow-flow/error evaluator is still to be built.
+
+The read-only field adapter supplies fixed-radius and radial derivatives
+of the same reconstructed fields, with explicit owner-cell traces:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_transport_fields.py -q -s
+```
+
+Its 23 manufactured controls pass. Development and the final suite together
+used 11,632 charged values / 0.21875 active CPU seconds of the cumulative
+200,000-point / 20-second allowance. No retained cap or radial solve is used.
+The adapter excludes axis jets and exact formula-switch queries; the later
+shadow evaluator still needs interface limits and controlled radial flow.
 
 The discrete cap mass derivative and departure-flux ledger are implemented
 in a diagnostic companion to the unchanged producer. Run their controls with:

@@ -67,7 +67,7 @@ def synthetic(budget):
     def no_evolution(*args,**kwargs):
         raise AssertionError("authentication must not replay a trajectory")
     patch.setattr(tool,"evolve_background_ssprk3",no_evolution)
-    def diagnostic(record,parent,background,base,profile,shared):
+    def diagnostic(record,parent,background,base,profile,shared, *, replay_allowances=None):
         shared.check(7)
         return dict(cap=[c["snapshots"][-1]["physical"]["cap"] for c in record["cases"]])
     patch.setattr(tool,"diagnostics",diagnostic)
@@ -110,6 +110,24 @@ def test_saved_reconstruction_cache_and_two_final_stages_share_budget(synthetic,
     assert result["source_integrations"]==result["time_evolutions"]==0
     assert all(b is budget for b in synthetic["loads"]+synthetic["stages"])
     assert all(b is budget for _,b in synthetic["cache_calls"])
+
+
+def test_validation_forwards_transient_diagnostic_allowances(synthetic,budget,monkeypatch):
+    original = tool.diagnostics
+    def conditioned(*args, replay_allowances=None):
+        assert replay_allowances is not None
+        rebuilt = copy.deepcopy(original(*args))
+        values = np.asarray(rebuilt["cap"][0]["Ip"], dtype=float)
+        values[0] += 5e-11
+        rebuilt["cap"][0]["Ip"] = values
+        replay_allowances[("cap",0,"Ip")] = np.full(values.shape,1e-10)
+        return rebuilt
+    monkeypatch.setattr(tool,"diagnostics",conditioned)
+    record = copy.deepcopy(synthetic["record"])
+    before = copy.deepcopy(record)
+    result = tool.validate_record(record,budget,require_creation=False)
+    assert result["time_evolutions"] == 0
+    assert record == before
 
 
 @pytest.mark.parametrize("replay_cost",(3,19))

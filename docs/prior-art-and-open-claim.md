@@ -34,6 +34,33 @@ producer's attenuation in an exact-flow error sum, and circular verification
 of the quadrature derivative. Exact omission controls address these before
 any further physical run.
 
+The next implementation component is a read-only field-jet adapter for this
+identity. It reuses the existing branch-selected reconstruction and actual
+background/potential partials. Two tangent columns carry the full stored
+direction at fixed physical radius and the radial query derivative. Callers
+specify the owner cell for every query and trace; no side is inferred at an
+interface. Axis jets and samples exactly on either implementation switch
+remain outside this component's domain.
+
+Manufactured controls are admitted under one cumulative 200,000-point,
+20-active-CPU-second allowance. They cover regular polynomial oracles,
+simultaneous radius/clock/moment motion, one-sided limiter openings,
+material trace derivatives, source-domain guards, immutable input data and
+budget failures. No retained cap or shadow radial solve is admitted by
+these controls. Failure stops the component for diagnosis before any
+larger calculation. The main risks are confusing fixed-radius and material
+derivatives, silently selecting a trace side, and replacing the implemented
+small-radius or potential formula with a different expression.
+
+**Field-adapter outcome:** 23 manufactured controls pass. All development
+executions plus the final suite use 11,632 charged values / 0.21875 active
+CPU seconds. Independent Grok source review found no blocking defect in
+the two columns, branch selection, domain guards or copied inputs. Both
+field columns have nonconstant independent difference controls; coefficient
+jets have regular polynomial oracles. This component supplies field inputs
+only. The retained-state shadow flow, switch/interface inventory and error
+decomposition have not been evaluated.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

@@ -83,6 +83,16 @@ Grok independently checked the corrected full-direction formula. The new
 channels have not been evaluated on the retained state. This supplies the
 mathematical connection for a bounded evaluator, not a corrected evolution.
 
+The [read-only field adapter](../src/recursive_horizons/nsc_atlas_cap_transport_fields.py)
+now supplies the full fixed-radius directional derivative and a separate
+radial derivative of the existing reconstruction. It keeps owner-cell traces
+explicit, copies its inputs, and uses the implemented potential derivative.
+Its 23 manufactured controls pass, including moving-face chain rules and
+independent nonconstant field differences. Cumulative development uses
+11,632 charged values / 0.21875 active CPU seconds. Grok's independent source
+review found no blocking defect. This implements one input to the comparison;
+the shadow radial flow and complete interface terms remain to be evaluated.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 The [saved summary](../results/summaries/nsc-atlas-cap-mass-direction-v1.json)
