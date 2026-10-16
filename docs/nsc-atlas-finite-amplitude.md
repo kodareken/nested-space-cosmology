@@ -3569,6 +3569,88 @@ a compatible-gradient construction and geometric energy control as the next
 implementation route. They do not supply a new evolved history, a nonlinear
 stability theorem, or finite-amplitude cap-wall closure.
 
+#### Regular-centre fixed-cap mass-gradient control
+
+The [geometric reference component](../src/recursive_horizons/nsc_atlas_cap_geometric_reference.py)
+constructs one instantaneous weak RHS at `alpha=0`, fixed `0<R<1` and
+`delta=0`. It uses continuous piecewise linear `chi(z),u(z)` on
+`0=z_0<...<z_N=atanh(R)`, with `chi_0=u_0=0`. Here `u=chi_T` and
+`v=chi_z`; the first element therefore has `chi=c z`, `u=d z`, giving
+the exact centre limits `f(0)=c`, `Pi(0)=d`, `Phi(0)=0`. It supplies the
+regular-centre reference missing from the constant-cell control above.
+
+For an element of length `h`, use the exact matrices
+
+$$
+M_e=\frac h6\begin{pmatrix}2&1\\1&2\end{pmatrix},\qquad
+K_e=\frac1h\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
+$$
+
+Assemble them and eliminate the fixed centre degree of freedom. With
+`e` selecting the wall, `kappa=A0(R)/R`, set `S=K-kappa e e^T`. The mass
+and weak equations with the existing incoming `w_plus=Pi+Phi` are
+
+$$
+N_h=\frac14(u^TMu+\chi^TS\chi),\qquad
+\chi_T=u,\qquad
+M u_T=-S\chi+e\{A_0(R)R w_+-u_W\}.
+$$
+
+The boundary conversion is
+`v_hat=A0(R)(R w_plus+chi_W/R)-u_W`. In the usual weak wave equation
+`M u_T=-K chi+e v_hat`, its scalar term is precisely the wall subtraction
+already included in `S`. The same scalar enters the field and mass equations.
+Multiply both rates by the supplied positive `T_x` to obtain x-clock rates.
+
+The mass is positive definite. The trace inequality
+`chi_W^2 <= z_W integral chi_z^2 dz` and
+
+$$
+\gamma=\frac1{z_W}-\frac{A_0(R)}R>0
+$$
+
+give coercivity factor `beta=z_W gamma`. Positivity follows from
+`R-(1-R^2)atanh(R)>0`: it vanishes at zero and its derivative is
+`2R atanh(R)>0`. In particular,
+
+$$
+N_h\ge\frac14u^TMu+\frac\beta4\int_0^{z_W}\chi_z^2dz,\qquad
+\chi^TS\chi=\sum_e h_e\left(\chi_{z,e}-\frac{\chi_W}{z_W}\right)^2
++\gamma\chi_W^2.
+$$
+
+The implementation uses the latter expression and its gradient, avoiding
+subtraction of nearly equal energies at small radius. It evaluates
+`gamma=1/z-2/sinh(2z)` through the positive sinh remainder for `2z<=1`.
+The first omitted series contribution is below `2.4e-22` relative to its
+leading term in real arithmetic; floating-point evaluation is checked
+separately against high precision and is not covered by that tail bound.
+
+Differentiating the quadratic mass against the weak RHS gives
+
+$$
+\boxed{\dot N_h=\frac{T_x}{2}u_W(d-u_W),\qquad
+d=A_0(R)R w_+.}
+$$
+
+This is the physical mass flux evaluated with `u_W,v_hat,f_W`. Completing
+the square proves `dot N_h <= T_x d^2/8`; homogeneous incoming data give
+`dot N_h=-T_x u_W^2/2`. These are exact semidiscrete statements for this
+fixed-radius reference. The last-element derivative need not equal `v_hat`.
+Both that discrepancy and its converted incoming-characteristic residual
+are returned, separately from the mass/weak-flux balance residual.
+
+The [24 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) include
+an exact time-linear wave on two prescribed meshes, independent dense
+element matrices, direct integration of the original radial mass density,
+symbolic centre limits, the completed-square bound, small-radius arithmetic,
+quiet data, input immutability and rejected data/budget cases. Development
+uses **4,888 charged coefficient/manufactured values / 0.203125 active CPU
+seconds** in 45 test executions. No saved field, radial ODE or physical time
+evolution is evaluated. The production cap is unchanged. Moving radius,
+finite backreaction and the background/departure decomposition remain
+outside this reference component.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

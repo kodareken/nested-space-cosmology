@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f3c29220f346dce3c759922fbcf6b24da522813a",
+  "current_receipt_commit_parent": "c33361e0dad330ef5a03346e960a42ed10be9928",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 212133,
-      "change": "Derive and verify the constrained cap mass gradient and geometric energy compatibility identities.",
-      "changed_from_commit": "f3c29220f346dce3c759922fbcf6b24da522813a",
+      "bytes": 212671,
+      "change": "Add the fixed-radius zero-backreaction weak reference with positive mass and incoming-wall flux control.",
+      "changed_from_commit": "c33361e0dad330ef5a03346e960a42ed10be9928",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "afa9e1f697dcf89b50d69e94a9b0bbd597f0b1f8c035249aab879daf3b384cd8"
+      "sha256": "38babacb6e08f7ec0d7a007d346333553d115ebdc0577af6540fc52525ea7eed"
     },
     {
       "bytes": 9543,
@@ -32156,6 +32156,14 @@
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
     },
     {
+      "bytes": 6502,
+      "change": "Add the fixed-radius zero-backreaction weak reference with positive mass and incoming-wall flux control.",
+      "changed_from_commit": "c33361e0dad330ef5a03346e960a42ed10be9928",
+      "path": "src/recursive_horizons/nsc_atlas_cap_geometric_reference.py",
+      "retention_reason": "Regular-centre geometric mass-gradient reference and independent manufactured controls.",
+      "sha256": "e693bd2dfaeb27814643f42bb162bee52789f5bb412fdfe31e7cf95792ee84ff"
+    },
+    {
       "bytes": 9241,
       "path": "src/recursive_horizons/nsc_atlas_cap_radial_comparison.py",
       "retention_reason": "Native and smooth-reference radial map comparison with manufactured mathematical controls.",
@@ -35475,6 +35483,14 @@
       "path": "tests/test_nsc_atlas_cap_flux_projection_identity.py",
       "retention_reason": "Exact controls for the cap mass adjoint, flux projection and geometric energy boundaries.",
       "sha256": "458e91da68f89b0889f8af6accda762f1cf0d01b391b03e2e9370aa98a6f5631"
+    },
+    {
+      "bytes": 8516,
+      "change": "Add the fixed-radius zero-backreaction weak reference with positive mass and incoming-wall flux control.",
+      "changed_from_commit": "c33361e0dad330ef5a03346e960a42ed10be9928",
+      "path": "tests/test_nsc_atlas_cap_geometric_reference.py",
+      "retention_reason": "Regular-centre geometric mass-gradient reference and independent manufactured controls.",
+      "sha256": "f345bdfc6039818ff54edc92d00d313aa42f6477910b2a57603457d09904b1f1"
     },
     {
       "bytes": 3449,

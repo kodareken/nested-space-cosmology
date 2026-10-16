@@ -189,6 +189,20 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The regular-centre fixed-radius reference implements one zero-backreaction
+weak RHS and its mass/physical-boundary balance:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_geometric_reference.py -q -s
+```
+
+Twenty-four controls pass, including independent element matrices, direct
+radial density integration, exact incoming data, symbolic regularity and
+small-radius arithmetic. Cumulative development uses 4,888 charged values /
+0.203125 active CPU seconds in 45 executions, within 200,000 / 20. The
+component exposes the weak-versus-reconstructed wall discrepancy. It runs no
+retained data, radial ODE or physical time evolution.
+
 The mass-gradient and geometric-energy identities use no numerical fields,
 reference solves or retained states:
 

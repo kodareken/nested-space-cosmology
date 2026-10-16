@@ -337,6 +337,42 @@ The next compute admission must specify that construction and its controls
 before any retained-field comparison or evolution. The previous physical
 candidate, wall law and observed transport defect remain unchanged.
 
+### Regular-centre geometric mass control
+
+The next component is a fixed-radius, zero-backreaction control of the
+derived mass-gradient route. Use continuous piecewise linear `chi,u` in
+`z=atanh(r)`, with `chi(0)=u(0)=0`, exact element mass/stiffness integrals,
+and the same incoming `w_plus=Pi+Phi` at the wall. The mathematical inputs
+are the established energy/mass identity, polynomial integration, a symmetric
+weak derivative, the trace inequality and a finite tridiagonal solve.
+
+At a declared `0<R<1`, implement one instantaneous weak RHS and its mass
+gradient, physical boundary flux, regular centre limits and boundary trace
+discrepancy. Include the wall quadratic term in the stiffness; derive its
+positivity and incoming-flux estimate. Distinguish the weak boundary flux
+from the reconstructed last-element derivative. This component is a reference
+control in the existing package, not a second cap evolution or a replacement
+for the retained background/departure producer.
+
+Manufactured controls may use at most **200,000 coefficient evaluations /
+20 active CPU seconds**, with two to seven fixed nodes. Check exact linear
+travelling-in-time data, independent element integrals and matrix gradients,
+the mass/flux identity, centre regularity, nonzero boundary discrepancy,
+small-radius arithmetic, immutable inputs and invalid/budget cases. No saved
+field, radial ODE, time integrator, mesh scan or physical fit is admitted.
+If the identity or regularity fails, diagnose it before another construction.
+A pass supplies a regular reference and a specific finite-backreaction
+extension question; it does not establish that extension or the evolving wall.
+
+**Outcome:** the [regular reference](nsc-atlas-finite-amplitude.md#regular-centre-fixed-cap-mass-gradient-control)
+has an exact positive quadratic mass, the required weak incoming flux and
+an explicit completed-square input bound. Twenty-four controls pass in 45
+development executions: **4,888 charged coefficient/manufactured values /
+0.203125 active CPU seconds**. The reconstructed boundary derivative is
+reported separately. Grok independently confirmed the weak equations,
+incoming conversion, positivity and centre limits. Source review follows;
+no physical trajectory or nonzero-backreaction extension has been run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

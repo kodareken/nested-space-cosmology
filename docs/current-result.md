@@ -2,6 +2,27 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Regular-centre mass-gradient reference, 16 October 2026
+
+The [new fixed-cap component](../src/recursive_horizons/nsc_atlas_cap_geometric_reference.py)
+implements one zero-backreaction weak field RHS with a regular centre and
+the original incoming wall characteristic. Its mass is positive definite;
+the [exact derivation](nsc-atlas-finite-amplitude.md#regular-centre-fixed-cap-mass-gradient-control)
+shows that its derivative equals the physical weak wall flux. Homogeneous
+incoming data give a nonpositive mass derivative, and arbitrary incoming
+data have an explicit quadratic flux bound.
+
+The component reports the difference between the weak wall derivative and
+the last-element reconstructed derivative. This distinction is needed for
+the later boundary-consistency check. It evaluates no moving wall or
+finite-backreaction trajectory and does not replace the production cap.
+
+All [24 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) pass,
+including direct integration of the original radial density and independent
+matrix gradients. Development uses **4,888 charged coefficient/manufactured
+values / 0.203125 active CPU seconds** across 45 executions, within the
+200,000-value / 20-second allowance. No physical payload is generated.
+
 ## Mass-gradient and geometric energy identities, 16 October 2026
 
 The [new exact derivation](nsc-atlas-finite-amplitude.md#variational-mass-response-and-flux-projection)
