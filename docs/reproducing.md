@@ -8,6 +8,28 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [same-grid exterior-operator comparison](prior-art-and-open-claim.md#fixed-grid-exterior-operator-comparison-16-october-2026)
+uses the [quadratic derivative](../src/recursive_horizons/nsc_atlas_departure_gradient.py),
+[explicit coupled stage](../src/recursive_horizons/nsc_atlas_gradient_evolution.py)
+and [callback SSPRK3 driver](../src/recursive_horizons/nsc_atlas_stage_ssprk3.py).
+Its [recorder](../scripts/record_nsc_atlas_operator_comparison.py) and
+[analyzer](../scripts/analyze_nsc_atlas_operator_comparison.py) reuse the
+authenticated 64-cell baseline and unchanged source/gauge cache. Focused
+controls are:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_departure_gradient.py tests/test_nsc_atlas_gradient_evolution.py tests/test_nsc_atlas_stage_ssprk3.py tests/test_record_nsc_atlas_operator_comparison.py tests/test_analyze_nsc_atlas_operator_comparison.py -q
+```
+
+All 89 controls pass before physical creation, reporting 2,047,112 points
+and 3.84375 process CPU seconds across their admitted shared allowances.
+The numerical comparison uses a fresh output directory, 64 exterior/cap
+cells, 512 time steps and both original amplitudes. It shares 450 CPU
+seconds/80 million points including creation validation; its standalone
+check has 60 CPU seconds/eight million points and no trajectory replay.
+Old baseline arrays are referenced rather than duplicated. Same-grid cap
+comparisons retain total physical cell integrals without adjacent summation.
+
 The [completed fixed-input spatial comparison](current-result.md#fixed-input-spatial-refinement-16-october-2026)
 uses the [recorder](../scripts/record_nsc_atlas_spatial_refinement.py) and
 [saved-state analyzer](../scripts/analyze_nsc_atlas_spatial_refinement.py).

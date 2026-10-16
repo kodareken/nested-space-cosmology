@@ -1,5 +1,84 @@
 # Prior art and admission of new research
 
+## Fixed-grid exterior-operator comparison, 16 October 2026
+
+This comparison may execute after the derivative, coupled-stage and callback
+driver controls below pass and their independent review is resolved. It tests
+whether the improved exterior derivative reduces the measured errors with
+the physical candidate and both spatial grids held fixed.
+
+| Item | Fixed same-grid comparison |
+| --- | --- |
+| Inputs | Authenticate the completed 64-cell spatial payload, its manifest and all 92 bound paths. Read its bound 32-cell ancestor only for the unchanged 1,025-row cache and computational profile. Reuse the original 513-row source/gauge arrays for saved-history diagnostics. No old trajectory, source solve, cache reconstruction or profile-stage extraction. |
+| Changed connection | Use the new common quadratic departure gradient in both prefix jets and ALE rates through the explicit stage/SSPRK3 callbacks. All physical equation helpers, source's 129 Hermite knots, profile's 65 knots, amplitudes, cap discretization and wall laws stay fixed. |
+| New cases | One zero and one original finite-amplitude window, each at 64 exterior/cap cells and 512 SSPRK3 steps, with the retained exact midpoint keys and 129 saved cuts. Two final reconstructions are included. No 128-cell case or profile repair. |
+| Measurements | Compare raw zero, raw finite and finite-minus-zero fields, wall observables and total cap integrals directly at the same saved coordinates. Cap radii can differ; no adjacent-cell summation or interpolation is needed between the two 64-cell methods. Reuse old native-64 constraint grids and independent wall estimates; compute new 129/65-cut constraints and three-/five-point wall estimates at strides one/two. Retain the actual inherited outgoing-source constraint, quiet scalar values, outgoing cap trace, profile margins, wall kinematic defects and common-wall flux identities. |
+| Allowance | One creation shares 450 process CPU seconds/80,000,000 points, including the two evolutions and creation validation. One standalone check has 60 CPU seconds/8,000,000 points without time evolution. Recorder controls share 30 CPU seconds/1,000,000 points; analyzer controls have a separate 30 CPU seconds/1,000,000 points. The previous 60.09-million-point creation leaves allowance for the new charged derivative while this comparison reuses old diagnostic arrays. Stage totals are measured anew. |
+| Verification | Preserve exact caches, coordinates and model; reconstruct saved physical arrays from raw states; recompute two final stages and diagnostics without replaying either trajectory. Controls check changed-input rejection, the actual new stage callback, raw/paired same-grid differences, and equal-width constraint/wall comparisons. Freeze producers before creation. |
+| Stop and decision | Stop at the first domain, nonfinite, metric, wall, Courant `.4`, reconstruction or budget failure, with an ignored failure receipt and no retry. If constraints improve while wall observations remain stable, investigate the remaining cap/interface or source/profile accuracy using the measured results. If they worsen or oscillate, diagnose the new closure before another run. A method comparison supplies sensitivity, not a convergence order, continuum limit or complete junction certificate. |
+
+Implementation and independent source/control review pass before creation.
+The 24 recorder controls use 26,027 shared points/2.125 CPU seconds;
+the seven analyzer controls use 587,907 points/0.4375 CPU seconds.
+Both pass on their first attempts without evaluating retained physical
+histories. Together with the operator and coupled-stage suites below,
+89 controls pass, reporting 2,047,112 aggregate points and 3.84375 CPU
+seconds. Producers and controls are frozen for the admitted comparison.
+
+## Second-order exterior departure operator, 16 October 2026
+
+The 32/64-cell comparison improves constraints at equal diagnostic width;
+the remaining finite wall kinematic defects approximately halve. The
+existing exterior derivative is first order and supplies both the prefix
+jets and moving-grid rate. Improve that numerical connection with the
+physical source, cap laws and computational profile held fixed.
+
+For `h=1/N` and negative grid velocity, differentiate departures by
+`G_i=(-3Z_i+4Z_(i+1)-Z_(i+2))/(2h)` through `i=N-2`,
+`G_(N-1)=(Z_N-Z_(N-2))/(2h)`, and
+`G_N=(3Z_N-4Z_(N-1)+Z_(N-2))/(2h)`. These are derivatives of local
+quadratic interpolants. Use the same `G` in the transverse prefix jets
+and the ALE term. The physical wall value supplies inflow; no prescribed
+wall acceleration or required derivative replaces the reconstructed jet.
+
+| Item | Fixed operator development and controls |
+| --- | --- |
+| Reuse and missing connection | Reuse the exact vacuum, departure prefixes, cap metric/RHS, hybrid wall equations and SSPRK3 coefficients. A new explicit stage core accepts the departure-gradient function; a callback SSPRK3 driver supplies it at every stage and final diagnostic. Frozen stage/driver bytes remain replay inputs. |
+| Alternatives | Refactoring frozen owners would invalidate retained bindings. Calling the old stage then replacing rates leaves dependent prefix, wall and cap quantities inconsistent unless the full stage is repeated. The selected explicit callbacks copy only coupling/time orchestration, keep the physical equation owners shared, and become the extension point for subsequent operators. |
+| Fixed scope | At least four exterior cells, bounded by existing solver limits; uniform closed eta grid, positive `W,W_x`, source departure exactly zero. Preserve source/cache coordinates, cap representation, wall normalization, primitive conservation and all model parameters. No physical evolution or input regeneration is admitted by these controls. |
+| Derivative controls | Constant/linear/quadratic exactness, analytic vacuum preservation, endpoint orientation, invalid/nonfinite shapes, shared-budget exhaustion, and smooth manufactured inflow/advection at fixed negative velocity and the actual `a(eta)=eta*b` grid flow. Compare 16/32/64 cells with prescribed analytic inflow and bounded SSPRK3 steps. Include a finite homogeneous amplification check; it is not a coupled PDE stability proof. |
+| Stage and driver controls | First-order callback reproduces the complete frozen stage to arithmetic precision; the selected gradient reaches both prefix and ALE consumers. Independent active-scalar common-wall-flux identities, all three stages plus final callback, exact midpoint keys, unchanged snapshots, and failure/count/budget propagation. |
+| Allowance | Derivative and manufactured-advection controls share 45 CPU seconds/1,500,000 points. Stage/driver controls share 30 CPU seconds/300,000 points. No prepared source solve, saved physical diagnostic replay or coupled research trajectory. Every attempted control is counted; an unexpected failure is diagnosed before rerunning its affected scope. |
+| Decision and failure forecast | An inflow instability or nondecreasing smooth advection error redirects the boundary stencil. A failed first-order equivalence or common-wall identity redirects the adapter before numerical research. Excessive new derivative sensitivity requires a measured local comparison before any full window. Passing controls permits designing a separately recorded fixed-grid operator comparison; it does not establish a continuum solution or inherit a stability theorem from the previous stencil. |
+
+The unchanged profile's prefront leakage and the source's curvature-trace
+convention remain separate work. This development does not silently fix
+either one.
+
+The derivative's 21 focused controls pass on their first run, using
+1,405,762 ordinary points plus a deliberately exhausted five-point attempt,
+1,405,767 counted points in total and 0.78125 process CPU seconds. On
+16/32/64 cells the smooth constant-speed maximum errors are
+`0.0248193 / 0.00766079 / 0.00241073`, versus the first-order
+`0.145860 / 0.076993 / 0.039708`. The corresponding variable-speed
+errors are `0.0325281 / 0.00953550 / 0.00298090`, versus
+`0.136196 / 0.074108 / 0.038693`. Refinement ratios exceed three for
+these smooth examples; they are not an asserted coupled convergence order.
+At 64 cells the wall-jet errors also decrease, although the quadratic
+wall jet is worse at 16 cells. Finite homogeneous tests at Courant numbers
+at most 0.2991 have maximum measured L2 gains below 1.15, approaching one
+on the finer grids. These tests use three selected initial shapes and do
+not establish a uniform norm bound or nonsmooth-front convergence.
+
+The stage and callback-driver suites also pass on their first run:
+37 controls, 27,411 aggregate points and 0.5 process CPU seconds.
+Supplying the first-order callback reproduces every inherited stage field
+and all three old SSPRK3 stages exactly. Active canonical/conformal wall
+flux checks pass; the one reconstructed gradient reaches both consumers.
+Nonlinear and nonautonomous manufactured time-step ratios approach eight,
+consistent with the retained third-order time scheme on those examples.
+No coupled research window is part of these controls.
+
 ## Fixed-input spatial refinement, 16 October 2026
 
 **Outcome:** the [two new evolutions](current-result.md#fixed-input-spatial-refinement-16-october-2026)

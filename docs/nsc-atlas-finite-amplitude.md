@@ -2439,6 +2439,49 @@ wall derivative into a diagnostic would not test this correction. The
 existing frozen operator and comparisons remain the baseline; no further
 grid doubling or changed profile is selected by this result alone.
 
+#### A common second-order departure derivative
+
+Let `Z` be a field departure on `eta_i=i h`, `h=1/N`, including its
+physical source and wall endpoints. The source departure is zero by
+construction; the wall departure comes from the cap primitive and evolved
+wall geometry. Quadratic interpolation gives the candidate derivative
+
+$$
+G_i=\frac{-3Z_i+4Z_{i+1}-Z_{i+2}}{2h}\quad(0\le i\le N-2),\qquad
+G_{N-1}=\frac{Z_N-Z_{N-2}}{2h},\qquad
+G_N=\frac{3Z_N-4Z_{N-1}+Z_{N-2}}{2h}.
+$$
+
+These rows differentiate every quadratic exactly. For a sufficiently
+smooth field their leading errors are `-h^2 Z'''/3`, `+h^2 Z'''/6`
+and `-h^2 Z'''/3`, respectively. The centered penultimate row uses the
+supplied wall value, without a ghost field outside the declared region.
+The wall row reconstructs the gradient independently of the wall equation.
+
+The same `G` enters both the prefix jets `delta X_Ubar=G/W` and the
+moving-grid contribution `eta W_x G/W`. Replacing only one of these would
+change their common discrete field interpretation. In particular, a desired
+wall-compatibility derivative is not supplied as the reconstructed value.
+The exact vacuum derivative remains analytic and is added separately.
+
+For the isolated homogeneous-inflow equation `Z_x=a(eta) G`, with positive
+`a` and only interior values evolved, the matrix is upper block triangular.
+Its first diagonal blocks are `-3a_i/(2h)`; its last block is
+
+$$
+\frac1h\begin{pmatrix}-3a/2&2a\\-b/2&0\end{pmatrix},
+\qquad a=a_{N-2}>0,\quad b=a_{N-1}>0.
+$$
+
+Its trace is negative and determinant `ab/h^2` positive. At constant speed
+the two eigenvalues are `a(-3 +/- i sqrt(7))/(4h)`. This excludes a
+positive-real eigenmode in that isolated matrix. It does not bound
+nonnormal transient amplification, establish the explicit time step's
+stability, or prove stability of the coupled cap, wall and exterior.
+The [operator controls](prior-art-and-open-claim.md#second-order-exterior-departure-operator-16-october-2026)
+therefore test known inflow solutions, finite amplification and complete
+stage equivalence before a separately specified physical comparison.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap
