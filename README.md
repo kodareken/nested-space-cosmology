@@ -60,12 +60,14 @@ cuts, with separate incoming radial/ray refinements and inherited exterior
 sensitivities. These are finite-domain perturbative coefficients. The
 [exact nonlinear equations](docs/nsc-atlas-finite-amplitude.md) specify the
 same model's source, smooth evolution and material interface. The
-[compatible coupled window](docs/current-result.md#compatible-coupled-evolution-16-october-2026)
-now evolves the exterior, moving wall and regular cap together, preserving
-the exact vacuum and eliminating the zero-amplitude outgoing-wave error.
-Spatial and time comparisons retain a nonzero geometric and scalar response.
-An exact incoming-characteristic comparison identifies cap pulse spreading
-and its gravitational source as the next numerical correction. A controlled
+[characteristic-background coupled window](docs/current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+evolves the exterior, moving wall and regular cap together, preserving
+the exact vacuum and carrying the leading cap pulse analytically. An
+independent incoming-characteristic comparison reduces the 32-cell pulse
+discrepancy from about `0.38` to below `0.0009`. Paired spatial changes in
+wall geometry and clocks are below `0.063%` of their finite response peaks.
+Scalar time sensitivity and exterior constraint residuals remain the next
+accuracy connections. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently
 justified source restriction or a source-linked additional channel. Finite transfer,

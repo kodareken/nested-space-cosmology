@@ -126,9 +126,12 @@ control; the common evolution uses the full active exterior up to the
 actual wall. The [compatible five-case successor](current-result.md#compatible-coupled-evolution-16-october-2026)
 completes that finite window with exact-vacuum departures and one cap scalar
 primitive. It removes the quiet geometric layer and zero-amplitude outgoing
-wave error. The finite response remains nonzero; the next accuracy
-connection is incoming cap characteristic transport and its gravitational
-source, identified through a direct saved-wave propagation comparison. Coupled
+wave error. The [six-case characteristic-background successor](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+now carries the incoming pulse analytically while evolving its correction.
+Its independent 32-cell incoming pullback discrepancy falls from `0.38`
+to below `0.0009`; paired wall geometry and clock responses change by less
+than `0.063%` under spatial refinement. Scalar time sensitivity and
+exterior constraint/wall-slope residuals remain unresolved. Coupled
 well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.
 

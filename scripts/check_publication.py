@@ -968,6 +968,15 @@ def check_compatible_evolution_evidence(errors: list[str]) -> None:
         errors.append(f"compatible exterior/wall/cap evidence: {error}")
 
 
+def check_background_evolution_evidence(errors: list[str]) -> None:
+    """Authenticate the six background cases without source or time replay."""
+    try:
+        from record_nsc_atlas_background_evolution import check, RELATIVE_OUTPUT
+        check(ROOT / RELATIVE_OUTPUT)
+    except (OSError, ValueError, KeyError, TypeError) as error:
+        errors.append(f"characteristic-background exterior/wall/cap evidence: {error}")
+
+
 def main() -> int:
     errors: list[str] = []
     files = public_files()
@@ -1016,6 +1025,7 @@ def main() -> int:
     check_nonlinear_rectangle_evidence(errors)
     check_coupled_evolution_evidence(errors)
     check_compatible_evolution_evidence(errors)
+    check_background_evolution_evidence(errors)
     check_provenance(errors, files)
     if errors:
         for error in errors:

@@ -1,0 +1,73 @@
+{
+  "comparison": {
+    "alpha": 0.00012983127142551443,
+    "cap_case": "zero / 32 cells / 256 steps",
+    "grids": [
+      {
+        "cells": 16,
+        "steps": 256
+      },
+      {
+        "cells": 32,
+        "steps": 256
+      },
+      {
+        "cells": 32,
+        "steps": 512
+      }
+    ],
+    "incoming": "PCHIP of new zero32/256 retained wall c versus T+atanh(R); quiet reflected branch",
+    "max_abs_new_cap_minus_incoming": 0.0002428350983887384,
+    "max_abs_old_cap_minus_new_incoming": 0.3820944637715614,
+    "max_abs_paired_c_spatial": 4.1804079133761496e-07,
+    "max_abs_paired_c_time": 5.716676572453672e-06,
+    "scope": "saved finite-window diagnostic; no error-bound or central-arrival claim"
+  },
+  "execution": {
+    "arithmetic_points": 36051,
+    "cpu_limit_seconds": 30,
+    "cpu_seconds": 1.15625,
+    "point_count_scope": "array operands and interpolation query points; excludes file bytes and rendering pixels",
+    "point_limit": 100000,
+    "recursive_scientific_authentications": 0,
+    "renders": 1,
+    "source_integrations": 0,
+    "time_evolutions": 0
+  },
+  "inputs": {
+    "results/development/nsc-atlas-background-evolution-v1/background.json": {
+      "bytes": 15257295,
+      "sha256": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca"
+    },
+    "results/development/nsc-atlas-background-evolution-v1/manifest.json": {
+      "bytes": 8508,
+      "sha256": "b9a657079dbef081d9a343e1814a6f8271582bb9370443dbfd91305401c4584c"
+    },
+    "results/development/nsc-atlas-compatible-evolution-v1/compatible.json": {
+      "bytes": 13200327,
+      "sha256": "a7e27b25ce171951415f97b64e055fd93062e3c21cd709c19c99c7543167c434"
+    },
+    "results/development/nsc-atlas-compatible-evolution-v1/manifest.json": {
+      "bytes": 6593,
+      "sha256": "7a8b5b6215dacb7a554c2c9b60e14f698217d944859604312775b9aeb48d3ff7"
+    }
+  },
+  "outputs": {
+    "docs/figures/nsc-atlas-background-evolution.png": {
+      "bytes": 327218,
+      "sha256": "b466692a612df205cb6298d194fb26ca086f6eddb393eb4e44b1a53578c17f2d"
+    }
+  },
+  "producer": {
+    "scripts/plot_nsc_atlas_background_evolution.py": {
+      "bytes": 11467,
+      "sha256": "93220659fb4f4fa464096f2b76970a76431daa9353caf3608b4ae4aa7b5488de"
+    }
+  },
+  "runtime": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.1",
+    "scipy": "1.17.1"
+  },
+  "schema": "nsc-atlas-background-evolution-figure-v1"
+}

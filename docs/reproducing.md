@@ -8,7 +8,7 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
-The next cap representation carries an exact characteristic background and
+The current cap representation carries an exact characteristic background and
 evolves departures. Run its 72 manufactured, endpoint and independent radial controls:
 
 ```sh
@@ -35,7 +35,7 @@ paired comparisons, shared accounting, immutable output and failed-attempt recei
 python scripts/run_python.py -m pytest tests/test_record_nsc_atlas_background_evolution.py -q
 ```
 
-The first physical comparison has a shared allowance of 600 CPU seconds and
+The completed [first physical comparison](current-result.md#characteristic-background-coupled-evolution-16-october-2026) uses 228.9375 CPU seconds and 43,551,872 points. Its shared allowance is 600 CPU seconds and
 100 million evaluated points, including authentication. It reuses the bound
 source cache and extracts the computational profile once. Its [calculation
 record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026)
@@ -46,6 +46,31 @@ fixes six cases and stopping conditions. Creation uses a new output directory;
 python scripts/run_python.py scripts/record_nsc_atlas_background_evolution.py --output results/development/nsc-atlas-background-evolution-v1
 python scripts/run_python.py scripts/record_nsc_atlas_background_evolution.py --output results/development/nsc-atlas-background-evolution-v1 --check
 ```
+
+The [four-panel comparison](figures/nsc-atlas-background-evolution.png) is
+drawn only from saved arrays and authenticated input hashes. Its original
+render uses 1.15625 CPU seconds and 36,051 arithmetic points. To reproduce
+it into a fresh local output (the renderer never overwrites an existing file):
+
+```sh
+python scripts/run_python.py scripts/plot_nsc_atlas_background_evolution.py --output .build/nsc-atlas-background-evolution.png
+```
+
+The [scalar-time diagnostic](../scripts/diagnose_nsc_atlas_background_time.py)
+uses the retained reference profile and four frozen stages. Its 35 controls
+exercise independent quadrature and chain identities, hash-only input
+authentication and one shared allowance. It performs no time evolution:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_background_time.py -q
+python scripts/run_python.py scripts/diagnose_nsc_atlas_background_time.py --output results/development/nsc-atlas-background-time-audit-v1.json
+python scripts/run_python.py scripts/diagnose_nsc_atlas_background_time.py --output results/development/nsc-atlas-background-time-audit-v1.json --check
+```
+
+Each audit has 30 CPU seconds/150,000 points; controls have 30 CPU
+seconds/100,000 points. Creation requires a new output path. Checking
+repeats the same bounded diagnostic and excludes elapsed CPU time from
+the numerical equality comparison.
 
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)

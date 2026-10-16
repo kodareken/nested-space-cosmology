@@ -158,6 +158,11 @@
       "section": "13.15",
       "status": "measured",
       "owner": "docs/nsc-atlas-central-scalar-response.md"
+    },
+    "atlas-nonlinear-background": {
+      "section": "13.16",
+      "status": "measured",
+      "owner": "docs/nsc-atlas-finite-amplitude.md"
     }
   },
   "findings": [
@@ -408,6 +413,14 @@
       "note": "docs/nsc-atlas-central-scalar-response.md",
       "record": "results/development/nsc-atlas-central-ray-v1/ray.json",
       "paper_section": "13.15"
+    },
+    {
+      "id": "atlas-nonlinear-background",
+      "status": "measured",
+      "summary": "Six nonlinear cap, wall and exterior evolutions complete the original pre-arrival window at zero and one source-bound finite amplitude. A characteristic background reduces leading cap transport error; separate spatial and temporal comparisons resolve integrated geometry and clock responses within those tests. Scalar time sensitivity and independent exterior constraint and wall-slope defects remain unresolved. No converged spacetime, central-arrival waveform or finite-amplitude error enclosure is claimed.",
+      "note": "docs/nsc-atlas-finite-amplitude.md",
+      "record": "results/development/nsc-atlas-background-evolution-v1/background.json",
+      "paper_section": "13.16"
     }
   ]
 }

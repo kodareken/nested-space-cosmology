@@ -1,6 +1,76 @@
 # Prior art and admission of new research
 
+## Saved-profile time-integration diagnosis, 16 October 2026
+
+The [diagnostic](../scripts/diagnose_nsc_atlas_background_time.py) is
+implemented and independently reviewed. Its 35 controls pass with 10,956
+points and 0.265625 process CPU seconds, plus the intentional three-point
+exhaustion check. The physical-data audit has not yet run.
+
+The six-case result below removes dominant cap pulse smearing, but its
+paired wall-scalar time change is `5.71668e-6`, or `15.83%` of the fine
+peak. Radial quadrature is much smaller. The missing connection is to
+separate integration of the known profile from changes in the physical
+exterior/cap wall flux before selecting another temporal method.
+
+Write the canonical wall primitive as `chi=B(T,R)+Z`, where `B=chi0`
+and `Z=sum(departure Iq)`. The existing stage gives
+`Z_x=J_chi-B_x`, with `B_x=T_x*(1-R^2)*p0+R_x*q0`. Therefore one
+SSPRK2 step satisfies
+
+$$
+\chi_{n+1}-\chi_n=\tfrac h2(J_{\chi,n}+J_{\chi,*})
++B_{n+1}-B_n-\tfrac h2(B_{x,n}+B_{x,*}).
+$$
+
+The last three terms are the known-profile chain quadrature contribution.
+They are not automatically an error in the method or the cause of the
+observed scalar difference. The conformal wall rate also has the exact
+split `J_c=Q_c+C_minus/(2*x_s)` from the existing hybrid junction map.
+These identities supply the independent algebraic controls.
+
+After manufactured controls and review, admit one saved-data audit with
+**30 process CPU seconds and 150,000 charged points** for the whole audit:
+
+- Authenticate the six-case payload, manifest and all 66 source/input
+  bindings by hashes. Reuse the bound profile and original 513-node input
+  cache; do not recursively replay scientific authentication or solve a source.
+- On all 513 reference-gauge rows, evaluate `B,B_x` and compare exact
+  `B(x)-B(x0)` with cumulative trapezoids on the existing 256/512 grids.
+  Compare their difference at the 129 saved cuts with the observed zero
+  scalar time difference. Separate signed contributions of steps crossing
+  profile knots and steps wholly within a polynomial piece.
+- Reconstruct exactly four frozen stages at saved cut 82: zero/finite
+  amplitude, 32 cells, 256/512 steps. Retain `B_x`, `J_chi`, exterior `Q_c`,
+  outgoing cap contribution, and the exact chain/split residuals. No stage
+  advances the stored state.
+- At each frozen `T,R,T_x,R_x`, evaluate the profile along the linear
+  clock/radius path over one original 256-step interval and its two halves.
+  Use analytic endpoint primitives and derivatives to measure local
+  trapezoid defects and identify profile-knot crossings. This prescribed
+  linear path is not the actual accelerated SSPRK2 trajectory.
+- Preserve profile coverage, finite arithmetic, all existing stage domains
+  and the shared budget. Stop on the first failure and diagnose it before
+  any new calculation. No extrapolation, replacement source, time-cache
+  extension, physical time evolution or automatic retry is admitted.
+
+Manufactured polynomial, knot-partition, chain/split and accounting controls
+have a separate 30-CPU-second/100,000-point allowance. A recorded check may
+repeat this same bounded audit, never the trajectories. The decision is
+whether known-profile integration can generate the observed scale, or
+whether exterior scalar jets and wall coupling require the next correction;
+the audit must preserve any unresolved cancellation or ambiguity.
+
 ## Coupled characteristic-background comparison, 16 October 2026
+
+**Outcome:** all six fixed cases and creation authentication completed in
+228.9375 process CPU seconds with 43,551,872 charged points. The
+[saved result](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+removes the large incoming cap transport error and substantially improves
+paired wall geometry/clock agreement. Scalar time sensitivity and exterior
+pointwise constraints remain unresolved. No source integration or change
+of physical preparation was used. The fixed admission below records the
+conditions chosen before that comparison.
 
 The new profile, radial cap, input adapter and common stage have passed
 72 manufactured/independent controls, including exact endpoint coverage.

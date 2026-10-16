@@ -2,6 +2,93 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Characteristic-background coupled evolution, 16 October 2026
+
+The [six-case result](../results/development/nsc-atlas-background-evolution-v1/background.json)
+carries the leading incoming cap pulse analytically and evolves its nonlinear
+correction. It completes the original finite window with the same source,
+action, amplitude, exterior scheme and wall equations. Each amplitude uses
+16 cells/256 steps, 32 cells/256 steps and 32 cells/512 steps, with 129 saved
+slices. Creation and authentication use **228.9375 process CPU seconds and
+43,551,872 charged points**, within 600 seconds and 100 million points.
+The [manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json)
+binds 66 inputs and producers. A separate check passes with 2,543,684 points
+and no source integration or time evolution.
+
+The computational profile uses 65 alternating cuts of the previous zero
+wall history, including its same-stage first jets. At the 64 withheld cuts,
+maximum value and first-jet discrepancies are `1.80780e-5` and `0.0143944`.
+This interpolation check does not certify a physical second derivative.
+Every new run retains incoming corrections and actual total cap integrals;
+the chosen background does not prescribe its wall field.
+
+The independent incoming-characteristic pullback uses each **new run's own
+wall trace**. The 32-cell zero-cap primitive discrepancy falls from the old
+`0.380945` to `0.000890490` with linear interpolation, and from `0.381936`
+to `0.000836671` with PCHIP. The 16-cell values are `0.000846978` and
+`0.000794313`. Linear/PCHIP sensitivity remains about `0.00133263`, so the
+remaining discrepancy is at the comparison's interpolation scale. This
+removes the previously dominant pulse smearing; it is not a uniform error
+bound. Zero-case outgoing `p-q` remains exactly zero. The 32-cell centre's
+spurious pre-arrival field is below `3.9e-15`.
+
+The following comparisons use the same normalized coordinates and actual
+finite-minus-zero wall histories. Spatial differences compare 16/32 cells
+at 256 steps; temporal differences compare 256/512 steps at 32 cells.
+
+| Quantity | Fine 512-step endpoint response | Maximum paired spatial difference | Maximum paired temporal difference |
+| --- | ---: | ---: | ---: |
+| Radius `r` | `-7.67297268e-4` | `1.57483785e-7` | `7.56645924e-9` |
+| Log lapse `L` | `-6.48536095e-3` | `1.92144883e-6` | `5.58556171e-8` |
+| Central coordinate clock `T` | `-1.27927929e-3` | `8.00326246e-7` | `1.10008798e-8` |
+| Wall proper clock `s` | `-1.19741764e-4` | `4.54211264e-8` | `6.59243229e-10` |
+| Wall scalar `c` | `2.94166892e-5` | `4.18040791e-7` | `5.71667657e-6` |
+
+For the geometry and clocks, spatial changes are below `0.063%` of the
+fine response peaks, and temporal changes below `0.001%`. The scalar
+temporal change is **15.83%** of its fine peak `3.61049e-5`, near
+`x=0.45221363`, despite its much smaller endpoint difference `7.41827e-8`.
+The scalar history is therefore not time-resolved at the response scale.
+Restricting total physical cap integrals by cell sums gives paired spatial
+maxima `0.00305406`/`0.00305443` for `Ip`/`Iq`, with temporal maxima about
+`5.48e-6`. The spatial changes are about `4.335%` of the appropriately
+restricted fine cap signal; the temporal changes are about `0.0124%` of
+the native fine-time cap signal. Shared background errors can cancel in
+paired comparisons.
+
+The three frozen cap order-4/8 comparisons change the wall mass coefficient
+by at most `3.00472e-8`, lapse by `2.28539e-11` and `A` by `1.42055e-11`.
+They do not explain the much larger scalar time sensitivity. The finite
+outgoing `p-q` peak changes from `0.000704216` to `0.000666438` under spatial
+refinement. Its maximum history difference is `8.26875e-5`, or `12.41%`
+of the fine peak, so its propagation remains a separate accuracy question.
+
+Exterior constraints and boundary slopes remain unresolved. The 129-cut
+departure residual maxima `E_Ubar/E_x` are `0.000787998/0.0131191` on
+16 cells, `0.000562398/0.00891121` on 32 cells, and
+`0.000548374/0.00878344` with 512 steps. The source-array `E_x` defect
+remains `0.00130298`. Final 32-cell wall kinematic defects in `r,L,c`
+are approximately `-0.0003125,0.007739,-0.000119`, although constructed
+scalar flux identities are near roundoff. Agreement of integrated wall
+responses does not remove these pointwise discrepancies.
+
+The [mathematical owner](nsc-atlas-finite-amplitude.md#carrying-a-characteristic-background-and-evolving-its-correction)
+and [reproduction commands](reproducing.md#current-work) specify the finite
+representation and its controls. The next connection is to separate the
+remaining scalar time sensitivity from the exterior derivative/wall
+mismatch through the [bounded profile/flux diagnosis](prior-art-and-open-claim.md#saved-profile-time-integration-diagnosis-16-october-2026),
+using this saved state before designing a successor. Formation,
+central arrival, stability and a propagated finite-amplitude error enclosure
+remain outside this result.
+
+![Saved finite-window pulse transport and paired wall responses](figures/nsc-atlas-background-evolution.png)
+
+The figure's [producer](../scripts/plot_nsc_atlas_background_evolution.py)
+uses saved arrays only; its [manifest](figures/nsc-atlas-background-evolution.manifest.json)
+binds both input records and the output. The incoming cap curve is PCHIP
+pullback of the new zero-case wall trace; the older cap curve supplies a
+visual comparison on the same final radius and clock.
+
 ## Compatible transport audit, 16 October 2026
 
 The [saved-state audit](../results/development/nsc-atlas-compatible-transport-audit-v1.json)

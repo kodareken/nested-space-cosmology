@@ -1923,8 +1923,48 @@ these four operators, including actual moving-vacuum steps, an active
 finite-amplitude background with nonzero incoming correction and the
 regular-axis and radial-integration checks above. Exact terminal-label
 evaluation passes, while a one-ulp excursion outside the profile is rejected.
-The first physical
-comparison is specified in the [calculation record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026).
+The [first physical comparison](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+now completes all six cases in the [calculation record](prior-art-and-open-claim.md#coupled-characteristic-background-comparison-16-october-2026).
+Creation and authentication use 228.9375 process CPU seconds and
+43,551,872 charged points. The independent zero-cap pullback reduces the
+32-cell primitive discrepancy from about `0.38` to below `0.0009`;
+remaining linear/PCHIP interpolation sensitivity is `0.00133`. This
+demonstrates removal of the dominant incoming-pulse smearing in this window.
+Geometry/clock paired spatial changes are below `0.063%` of response peaks,
+but the scalar paired time change is `15.83%` of its fine peak. The three
+frozen radial order-4/8 controls change `n_wall` by at most `3.00472e-8`
+and `delta_wall` by `2.28539e-11`. Pointwise exterior constraints and
+wall-slope matching still need resolution. The saved comparisons do not
+provide an error enclosure or a new physical preparation mechanism.
+
+#### Isolating the scalar time contribution
+
+For the canonical wall primitive, write `chi=B(T,R)+Z`, where `B` is
+the analytic background value and `Z` is the sum of departure `Iq`.
+The cap flux gives `Z_x=J_chi-B_x`, with
+`B_x=T_x*(1-R^2)*p0+R_x*q0`. Consequently, an SSPRK2 update gives
+
+$$
+\chi_{n+1}-\chi_n=\frac h2(J_{\chi,n}+J_{\chi,*})+\mathcal R_B,
+\qquad
+\mathcal R_B=B_{n+1}-B_n-\frac h2(B_{x,n}+B_{x,*}).
+$$
+
+`B_{n+1}` is evaluated at the accepted geometry, not an average of the
+two stage background values. The conformal junction map separately gives
+`J_c=Q_c+C_minus/(2*x_s)`. Thus the known-profile chain contribution can
+be separated from the exterior and returning-cap rate components.
+Neither identity identifies the observed error by itself.
+
+The [saved-data diagnostic](../scripts/diagnose_nsc_atlas_background_time.py)
+and [35 controls](../tests/test_diagnose_nsc_atlas_background_time.py)
+implement these identities, signed polynomial quadrature oracles and
+strict profile-knot partitioning. Controls use 10,956 points and 0.265625
+process CPU seconds, plus a three-point intentional exhaustion control;
+an independent 18-point cubic check confirms the sign and factor-four
+two-half-step reduction. The [bounded audit](prior-art-and-open-claim.md#saved-profile-time-integration-diagnosis-16-october-2026)
+uses the existing reference cache and four frozen stages. No new physical
+evolution is required for that diagnosis.
 
 ### Central clock in general null labels
 

@@ -29,6 +29,16 @@ The [exact nonlinear model](nsc-atlas-finite-amplitude.md) specifies the
 source, smooth equations and material interface. A full finite-amplitude
 solution and uniform remainder are not established by these coefficients.
 
+The [characteristic-background coupled window](current-result.md#characteristic-background-coupled-evolution-16-october-2026)
+now supplies six finite-amplitude numerical histories with a common moving
+wall and cap. Carrying the known incoming pulse analytically removes the
+dominant cap transport error. Paired wall geometry and clock responses
+agree closely under the declared spatial/time refinements, while the
+scalar time sensitivity, cap outgoing response and exterior equation
+residuals remain explicit. The [comparison figure](figures/nsc-atlas-background-evolution.png)
+and saved fields connect this numerical advance to the manuscript without
+claiming a uniform error enclosure or central-arrival solution.
+
 Regions, boundaries and fields define possible nested geometries. Attachment and
 initial state then determine what an interior observer can access and measure.
 Spherical symmetry supplies the first tractable charts; it does not assert global

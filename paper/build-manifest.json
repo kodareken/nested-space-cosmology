@@ -1,12 +1,20 @@
 {
-  "bytes": 2201572,
+  "bytes": 2536849,
   "metadata": "paper/metadata.json",
-  "metadata_sha256": "5b018594148289fa35ba3cac62d6a4ed1e50cb3c316322f6cbbeaed82a916f8a",
+  "metadata_sha256": "8bce782f03bee97928bc8ceb8e80b36001ac2307cf29b6fe82d21bfb9caea6e7",
   "output": "paper/nested-space-cosmology.pdf",
-  "pages": 33,
-  "pdf_sha256": "47e6640f3b8b3ed2a4fb6cccf8b002961dcffe72ff97f4a107bbc364c0fef0c2",
+  "pages": 35,
+  "pdf_sha256": "9c47619ec21a1861efff12d8369a8a6ceea68fd18cc99176f55e052117abdd32",
   "schema": "NSC-PAPER-BUILD-v1",
   "scientific_build_inputs": [
+    {
+      "path": "docs/figures/nsc-atlas-background-evolution.manifest.json",
+      "sha256": "adf942fe2dc2a38276c47ae39c34d3d171db3e0f980f628bdbe104b8f7ae5681"
+    },
+    {
+      "path": "docs/figures/nsc-atlas-background-evolution.png",
+      "sha256": "b466692a612df205cb6298d194fb26ca086f6eddb393eb4e44b1a53578c17f2d"
+    },
     {
       "path": "paper/figures/geometry-overview.json",
       "sha256": "c5449f0b723b5bc6b31e75d7a59e806adb1eb5e56161f6551948d4be76c11339"
@@ -26,6 +34,14 @@
     {
       "path": "paper/nested-quality-evidence/snapshot.json",
       "sha256": "879dc7508f4cf6f2b19aa15f39891ad189e4846edde9a6d0079a2dbbfb66cc2f"
+    },
+    {
+      "path": "results/development/nsc-atlas-background-evolution-v1/background.json",
+      "sha256": "4c98aea3b71f911522f45ca092bca183effec1f5a5c0faf53b79513a746b66ca"
+    },
+    {
+      "path": "results/development/nsc-atlas-background-evolution-v1/manifest.json",
+      "sha256": "b9a657079dbef081d9a343e1814a6f8271582bb9370443dbfd91305401c4584c"
     },
     {
       "path": "results/development/nsc-atlas-bulk-response-v1/derivative/response.json",
@@ -110,6 +126,10 @@
     {
       "path": "results/development/nsc-atlas-characteristic-initialization-v1/initialization.json",
       "sha256": "ca5abcf0c235b315006d91c57b9d1f2974d26a4fb49c971e668c07fedf66c578"
+    },
+    {
+      "path": "results/development/nsc-atlas-compatible-evolution-v1/compatible.json",
+      "sha256": "a7e27b25ce171951415f97b64e055fd93062e3c21cd709c19c99c7543167c434"
     },
     {
       "path": "results/development/nsc-atlas-forcing-cache-v1/cache.json",
@@ -321,6 +341,6 @@
     }
   ],
   "source": "paper/nested-space-cosmology.md",
-  "source_sha256": "b839d8da30f76d2bca4183ce96aaa8e2eff1103c9a39ce3af8fbfde986673fbd",
-  "version": "working-2026-10-16.2"
+  "source_sha256": "dc07cbcc8920b357efc532ad7bec5dd38fb9c7947eab117b548f18923f3d3562",
+  "version": "working-2026-10-16.3"
 }

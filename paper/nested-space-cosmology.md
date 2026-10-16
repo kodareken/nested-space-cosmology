@@ -62,7 +62,13 @@ equation now supplies a computed exterior correction with separately
 measured forcing-cache, spatial-grid and ODE sensitivities. Reflected cap
 transport and the observer-clock pullback now reconstruct the cubic central
 scalar coefficient at five interior arrival times, with separate radial
-and incoming-ray comparisons. The finite-amplitude remainder remains open.
+and incoming-ray comparisons. A six-case nonlinear calculation now completes
+the original pre-arrival window with a common cap, wall and exterior.
+Carrying the incoming cap pulse analytically substantially reduces its
+transport error. Geometry and clock responses change little under the tested
+refinements, but scalar time sensitivity and pointwise constraint defects
+remain unresolved. This is a finite numerical comparison, not a converged
+spacetime or a finite-amplitude remainder bound.
 A separate finite spherical field model demonstrates regional transfer,
 geometric feedback and reduced memory, without identifying its mode-space
 complement with a parent universe.
@@ -1552,7 +1558,108 @@ $$
 An exact source-leg constraint admits a nonzero small-amplitude interval
 with positive radius and conformal factor. Extending that control through
 the bulk, moving interface and regular centre, with a quantitative
-remainder for this observable, remains open.
+remainder for this observable, remains open. The following calculation tests
+the coupled equations on the original window without assuming that estimate.
+
+### 13.16. A nonlinear coupled window and its unresolved accuracy
+
+<!-- nsc-claim:atlas-nonlinear-background -->
+
+Evidence: [six-case evolution](../results/development/nsc-atlas-background-evolution-v1/background.json),
+[source and runtime manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json),
+[preceding transport comparison](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
+and [figure record](../docs/figures/nsc-atlas-background-evolution.manifest.json).
+The [finite-amplitude owner](../docs/nsc-atlas-finite-amplitude.md#carrying-a-characteristic-background-and-evolving-its-correction)
+specifies the equations, gauge, source and discrete representation.
+
+The original compact preparation now drives a simultaneous cap, moving wall
+and exterior calculation at $\alpha=0.00012983127142551443$ and at its
+normalized zero-amplitude limit. The source label spans
+$0.4\leq x\leq0.4815042083$, corresponding to reference wall radii
+$0.45\leq R\leq0.55$. This window ends before the signal reaches the
+centre. The action, source, wall tension and reference gauge are held fixed;
+the amplitude is selected by the source-only bound, not an observed output.
+Each amplitude uses 16 cells with 256 steps, 32 cells with 256 steps and
+32 cells with 512 steps, retaining 129 common history cuts.
+
+The cap carries a reflected characteristic background
+
+$$
+\chi_{\mathrm{can},0}(T,r)=F_{\mathrm{bg}}(T+\operatorname{atanh}r)
+           -F_{\mathrm{bg}}(T-\operatorname{atanh}r),
+$$
+
+and evolves corrections to its conservative cell integrals. Here
+$\chi_{\mathrm{can}}=r\Psi/\sqrt{\alpha}$ is the normalized canonical reduced field;
+the transmitted invariant field $c$ differs from it at finite amplitude.
+One cap primitive determines the common wall field. The full incoming
+correction remains evolved, and total fields, including all cross terms,
+source the cap metric. The $C^2$ quintic profile uses 65 alternating cuts
+of the previous zero-case wall history and its first jets. The 64 withheld
+cuts give maximum value and first-jet discrepancies $1.808\times10^{-5}$
+and $0.01439$. Interpolation curvature is a computational choice, not an
+independent physical second derivative.
+
+An independent characteristic pullback from each new zero-case wall trace
+tests cap propagation. Its 32-cell primitive discrepancy falls from
+$0.380945$ to $0.000890490$ with linear interpolation, or from
+$0.381936$ to $0.000836671$ with PCHIP. The remaining discrepancy is
+comparable to the $0.00133$ interpolation sensitivity. Zero-case outgoing
+$p-q$ remains exactly zero, and its spurious pre-arrival centre field is
+below $3.9\times10^{-15}$. These checks distinguish accurate incoming
+transport from an identity imposed by the cap primitive.
+
+![Nonlinear coupled window: cap transport and paired wall responses](../docs/figures/nsc-atlas-background-evolution.png)
+
+*Figure 10. Saved finite-window comparisons. A: the previous and current
+zero-case cap primitives, with an independent incoming characteristic
+pullback from the new wall trace. B and C: finite-minus-zero wall radius
+and scalar histories. D: absolute spatial and temporal changes of the
+paired scalar response. The comparisons neither bound the continuum error
+nor extend to central arrival.*
+
+Define each response as the finite-minus-zero history at the same source
+label. In the table, spatial differences compare 16/32 cells at 256 steps;
+temporal differences compare 256/512 steps at 32 cells. Endpoint values use
+the 32-cell, 512-step pair. Here $L=\log C$, $T$ is the central coordinate
+clock, $s$ is Einstein proper wall time and $c$ is the normalized invariant
+wall scalar.
+
+| Quantity | Endpoint response | Maximum spatial difference | Maximum temporal difference |
+| --- | ---: | ---: | ---: |
+| Radius $r$ | $-7.67297\times10^{-4}$ | $1.57484\times10^{-7}$ | $7.56646\times10^{-9}$ |
+| Log lapse $L$ | $-6.48536\times10^{-3}$ | $1.92145\times10^{-6}$ | $5.58556\times10^{-8}$ |
+| Central clock $T$ | $-1.27928\times10^{-3}$ | $8.00326\times10^{-7}$ | $1.10009\times10^{-8}$ |
+| Wall clock $s$ | $-1.19742\times10^{-4}$ | $4.54211\times10^{-8}$ | $6.59243\times10^{-10}$ |
+| Wall scalar $c$ | $2.94167\times10^{-5}$ | $4.18041\times10^{-7}$ | $5.71668\times10^{-6}$ |
+
+Geometry and clock spatial differences are below 0.063% of their fine
+response peaks, and time differences below 0.001%. The scalar time
+difference is instead 15.83% of its fine peak $3.61049\times10^{-5}$.
+Its small endpoint time difference, $7.42\times10^{-8}$, therefore does
+not characterize the history. The finite outgoing characteristic also
+changes by 12.41% of its fine peak under spatial refinement. Frozen
+cap radial order-4/8 comparisons change the wall mass coefficient by at
+most $3.00\times10^{-8}$ and the lapse by $2.29\times10^{-11}$; this
+quadrature sensitivity does not explain the scalar time difference.
+
+Independent exterior constraint maxima $(E_{\bar U},E_x)$ decrease from
+$(7.88\times10^{-4},0.01312)$ to
+$(5.48\times10^{-4},0.008783)$, but remain nonzero. The source-array
+$E_x$ defect remains $0.001303$, and final 32-cell, 256-step wall kinematic defects in
+$(r,L,c)$ are approximately $(-0.0003125,0.007739,-0.000119)$.
+Constructed scalar flux agreement near roundoff does not remove these
+independent derivative defects. Thus the integrated geometric responses
+are reproducible within the tested comparisons, while scalar time
+resolution, exterior constraints and wall slopes still require correction.
+
+Creation and authentication use 228.9375 process-CPU seconds and
+43,551,872 charged points within a shared 600-second, 100-million-point
+allowance. The manifest binds 66 inputs and producers. Authentication
+reconstructs saved diagnostics without source integration or time
+evolution. No continuum error enclosure, converged nonlinear spacetime,
+central-arrival waveform, formation mechanism or stability result follows
+from this window.
 
 ### 14. A separate finite model with geometric feedback
 
@@ -1849,7 +1956,7 @@ geometric route can proceed under its own assumptions.
 
 ![Research prerequisites and the questions they unlock](../results/development/nsc-cosmological-atlas-v7/research-dependencies.png)
 
-*Figure 10. Research dependencies, distinct from spacetime causal arrows.
+*Figure 11. Research dependencies, distinct from spacetime causal arrows.
 The [v8 programme record](../results/development/nsc-cosmological-atlas-v8/programme.json)
 names prerequisites, decisions, budgets and stop conditions for eight themes.
 Each calculation retains its own domain; arrows do not declare questions solved.*
@@ -1882,8 +1989,13 @@ central proper clock and a corrected null-arrival map, with independent
 cap-mass transport and numerical controls. The formal exterior scalar
 correction is now propagated with independent numerical comparisons.
 Reflected cap transport now also reconstructs its central coefficient at
-five fixed proper times. Exact nonlinear source, bulk and wall equations
-identify the remaining finite-amplitude existence and remainder problem.
+five fixed proper times. A nonlinear cap, wall and exterior calculation
+now also completes the original pre-arrival window. Its six-case comparison
+substantially reduces leading cap transport error and resolves integrated
+geometry and clock changes within the tested refinements. Scalar time
+sensitivity and independent constraint and wall-slope defects prevent a
+converged-solution claim. The finite-amplitude existence and remainder
+problem remains open.
 The remaining work is to connect those statements physically where their
 domains presently differ.
 
@@ -1917,6 +2029,7 @@ and renders their relationships without launching a new physics calculation.
 | Smooth cap and central null clock | [Regular centre, metric and arrival map](../docs/nsc-atlas-cap-response.md); [field](../results/development/nsc-atlas-cap-response-v1/field/response.json), [radial](../results/development/nsc-atlas-cap-response-v1/radial/response.json) and [further ray](../results/development/nsc-atlas-cap-response-v1/ray_fine/response.json) comparisons |
 | Exterior cubic scalar correction | [Conservative evolution](../docs/nsc-atlas-scalar-evolution.md); [clock lift](../results/development/nsc-atlas-lift-clock-v1/clock.json), [forcing cache](../results/development/nsc-atlas-forcing-cache-v1/cache.json) and [propagated response](../results/development/nsc-atlas-scalar-evolution-v1/evolution.json) |
 | Central cubic scalar correction | [Reflected transport and clock pullback](../docs/nsc-atlas-central-scalar-response.md); [radial comparison](../results/development/nsc-atlas-central-scalar-v1/central.json) and [incoming-ray comparison](../results/development/nsc-atlas-central-ray-v1/ray.json) |
+| Nonlinear coupled pre-arrival window | [Exact model and characteristic background](../docs/nsc-atlas-finite-amplitude.md); [six-case result](../results/development/nsc-atlas-background-evolution-v1/background.json) and [manifest](../results/development/nsc-atlas-background-evolution-v1/manifest.json); scalar time sensitivity and pointwise constraints remain unresolved |
 | Finite spherical transfer, feedback and memory | [Companion](finite-regeneration/main.tex); [frozen build/evidence](finite-regeneration-manifest.json) |
 | Foundation boundary, spectral and source constructions | [Archived v0.26.0](archive/foundation-v0.26.0/paper/nested-space-cosmology.md); [research inventory](../docs/research-inventory.md) |
 
