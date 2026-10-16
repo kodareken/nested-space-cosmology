@@ -20,6 +20,18 @@ trajectory or a changed physical wall law.
 | Allowance | One creation including validation has 60 process CPU seconds/4,000,000 points. One standalone check has 30 CPU seconds/2,000,000 points. Static accounting from the prior metric implementation estimates fewer than one million points per analysis; this is not a measured guarantee. Freeze producers and controls before creation. |
 | Decision and stop | A stable instantaneous residual comparable with the saved-history discrepancy redirects to the cap's discrete mass/energy balance. A small instantaneous residual redirects to time integration or saved-history differentiation. Material width/order/branch sensitivity leaves attribution unresolved and ends this probe set. Stop on the first invalid input/domain, nonfinite field, failed reconstruction or budget exhaustion with an ignored diagnostic receipt. No new evolution or wall law follows from this calculation alone. |
 
+The [analyzer](../scripts/analyze_nsc_atlas_cap_mass_direction.py) and
+[recorder](../scripts/diagnose_nsc_atlas_cap_mass_direction.py) pass independent
+source review. All 26 controls pass before creation. The first control run
+stopped after six passes at a synthetic bridge discrepancy of `5.55112e-17`
+against an unscaled `5e-17` threshold. Replacing that sub-epsilon cutoff
+with a rounding allowance scaled to the operands corrected the control;
+the numerical implementation was unchanged. The affected orchestration
+test and remaining unexecuted controls then passed. Across both attempts,
+the shared allowance records **171,957 points / 1.34375 process CPU seconds**,
+including exhausted child attempts. No retained physical calculation was
+part of the controls. Producers and controls are frozen before creation.
+
 ## Selected cap mass and wall-curve audit, 16 October 2026
 
 **Outcome:** the [completed audit](current-result.md#selected-cap-mass-and-wall-curve-audit-16-october-2026)
