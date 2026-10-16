@@ -2,6 +2,42 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Regional equations and mixed-chart closure, 16 October 2026
+
+The [normalized bulk operator](../src/recursive_horizons/nsc_atlas_nonlinear_bulk.py)
+now evaluates the exact mixed metric and scalar equations with a continuous
+zero-amplitude limit. It keeps the potential increment separately and
+distinguishes mass rates on the null-constraint surface from derivatives of
+arbitrary input jets. Independent canonical-field differentiation and exact
+vacuum checks include the trapped Schwarzschild region used by this model.
+
+The [regular cap derivation](nsc-atlas-finite-amplitude.md#regular-polar-areal-cap)
+supplies mass and lapse through radial constraints, with Jordan central
+proper time fixing the lapse constant. Radius-squared variables and a
+regular mass-density integral remove explicit division by the axis radius;
+the inherited pulse fronts still require their stated piecewise regularity.
+The same owner now specifies every source first jet through the exact
+source ODE and three mixed transport equations, with the original quiet
+corner fixing their constants.
+
+A [mixed-chart wall construction](nsc-atlas-finite-amplitude.md#closing-a-polar-cap-against-the-null-exterior)
+joins that polar cap to the null exterior. Angular matching solves the
+velocity, and transmission supplies exactly one incoming cap scalar
+characteristic. The cap wall lapse comes from the interior, so it is not
+independently prescribed a second time. On the branch `A_cap>0,H>0`, the
+exterior acceleration equation and cap constraints imply the remaining
+wall laws and incoming exterior constraint. This implication has two
+independent derivations and stays regular at the zero of `beta_plus`.
+
+The [hybrid boundary helper](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
+implements this map. The combined bulk, hybrid and existing boundary/clock
+controls pass 102 tests in 0.734375 process CPU seconds, with independent
+mathematical and code review. These developments specify a coherent coupled
+system and its pointwise operators. Exact source integration, the characteristic
+interior update, regular cap march and moving interface must still be
+assembled into a trajectory. No finite-amplitude spacetime or uniform
+remainder estimate is claimed by these algebraic controls.
+
 ## Exact boundary and central-clock helpers, 16 October 2026
 
 The [implemented boundary operator](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)

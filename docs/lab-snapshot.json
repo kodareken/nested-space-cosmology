@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "2199bc5df89021c3e19955eccd3a8cc0a19c1b08",
+  "current_receipt_commit_parent": "36d2316c47f705061a3c5e847c3a39d1c44b3174",
   "files": [
     {
       "bytes": 1506,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 192141,
-      "change": "Explicit successor for exact nonlinear boundary and observer-clock helper routing; original import fields preserved",
-      "changed_from_commit": "2199bc5df89021c3e19955eccd3a8cc0a19c1b08",
+      "bytes": 192417,
+      "change": "Explicit successor for normalized regional equations and mixed-chart wall closure; original import fields preserved",
+      "changed_from_commit": "36d2316c47f705061a3c5e847c3a39d1c44b3174",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "00e444dbfc8438155436121960fd50c0697369ed18c94bebe510871586b698ff"
+      "sha256": "a14417eb750b3deb47b8647b772e1f16609a2d7b9ff5d709366687d10062677d"
     },
     {
       "bytes": 9543,
@@ -10426,15 +10426,15 @@
       "sha256": "870bac904d641a4ad1cfb96643faf1640f08bc4a82922ddb3561d8635b31db69"
     },
     {
-      "bytes": 50502,
-      "change": "Explicit successor for propagated exterior and reconstructed central scalar response; original import fields preserved",
-      "changed_from_commit": "ea0fd5bdc2000dd859101761d38c2219218e51c2",
+      "bytes": 50768,
+      "change": "Explicit successor for normalized regional equations and mixed-chart wall closure; original import fields preserved",
+      "changed_from_commit": "36d2316c47f705061a3c5e847c3a39d1c44b3174",
       "import_bytes": 8633,
       "import_sha256": "c5aa2e431322c1c3c94dbf2db2d155f584307e259d14070f57c18409a219ddc3",
       "migration_disposition": "active_owner",
       "original_path": "lab/docs/nsc-cosmological-atlas.md",
       "path": "docs/nsc-cosmological-atlas.md",
-      "sha256": "a4fc45d8ab9f383567ccda5b03356c322bb36faab8445958b832eb2ad2099378"
+      "sha256": "d0a72c951a0256630ddbdbb5f79d1c24f8a769b28f789e235e8f675f28c67df3"
     },
     {
       "bytes": 30876,

@@ -109,10 +109,13 @@ error enclosure or a selected physical amplitude.
 
 The [finite-amplitude continuation](nsc-atlas-finite-amplitude.md) now
 specifies the exact smooth equations, material interface and anchored source
-family for the same action. It supplies a source-leg continuation argument;
-well-posedness of the full moving-wall problem and a central-readout remainder
-estimate remain the next mathematical connection. Formation and stability
-also remain open.
+family for the same action. Its normalized bulk operator and mixed-chart wall
+map connect a regular polar cap to the null exterior, with the cap lapse fixed
+by the central clock. The wall construction has a noncircular constraint
+implication on its positive-radius, untrapped-cap branch. Complete source
+first jets and regular cap equations now specify the regional input; their
+coupled evolution, well-posedness and a central-readout remainder remain to
+be established. Formation and stability also remain open.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)

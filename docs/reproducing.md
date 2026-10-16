@@ -8,6 +8,23 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [normalized bulk operator](../src/recursive_horizons/nsc_atlas_nonlinear_bulk.py)
+and [hybrid wall map](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
+connect the exact regional equations to a cap whose lapse is determined by
+its central clock. Their [owner](nsc-atlas-finite-amplitude.md) derives the
+regular axis system and identifies the source, moving-grid and constraint
+requirements for a coupled evolution. Run the independent canonical-action,
+vacuum, coordinate and mixed-chart controls together:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_nonlinear_bulk.py tests/test_nsc_atlas_nonlinear_boundary.py tests/test_nsc_atlas_hybrid_boundary.py -q
+```
+
+These pointwise helpers do not evolve a spacetime. In particular, bulk mass
+rates labelled `on_constraints` require the null constraints; first jets
+alone cannot measure those residuals. The hybrid map requires a constrained
+untrapped cap and a positive incoming radial sum `H`.
+
 The [exact boundary and central-clock helpers](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
 evaluate the same-action nonlinear matching algebra without evolving a
 spacetime. Their [owning derivation](nsc-atlas-finite-amplitude.md)

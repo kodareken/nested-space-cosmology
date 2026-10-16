@@ -105,6 +105,184 @@ $$
 This reduces to the previously used $-\alpha p_0^2/12$ anchor. It is not
 a free lapse function or additional source.
 
+### Normalized positive-radius bulk operator
+
+The invariant field $c=\chi/\varepsilon$ retains the prepared scalar
+information at zero amplitude. For $r,C>0$, put
+
+$$
+u=c/r,\quad u_a=(c_a-u r_a)/r,\quad
+q=\alpha u^2/6,\quad D=1+q,\quad
+P=3h^2D^2,\quad \sigma_{ab}=\alpha u_a u_b/D.
+$$
+
+Here $\Psi=\sqrt6\operatorname{asinh}(\sqrt\alpha u/\sqrt6)$,
+so $\Psi_a\Psi_b=\sigma_{ab}$. The exact mixed system becomes
+
+$$
+r_{UV}=-r_Ur_V/r-C/(4r)+CrP/4,\qquad
+(\log C)_{UV}=2r_Ur_V/r^2+C/(2r^2)-\sigma_{UV},
+$$
+$$
+c_{UV}=-Kc,\qquad
+K=\frac{Cm}{2r^3}-\frac{CP}{12}-\frac{\sigma_{UV}}6,\qquad
+m=\frac r2\left(1+\frac{4r_Ur_V}{C}\right).
+$$
+
+An independent canonical-field chain rule gives
+
+$$
+u_{UV}=-\frac{r_Uu_V+r_Vu_U}{r}
+-\frac{CPu}{6}+\frac{\alpha u\,u_Uu_V}{6D};
+$$
+
+differentiating $c=ru$ recovers the displayed reduced-field equation.
+No expression divides by $\sqrt\alpha$. For numerical evaluation, form
+$\Delta P=3h^2q(2+q)$ directly and use
+
+$$
+K=\frac{r_Ur_V+C(1-h^2r^2)/4}{r^2}
+-\frac{C\Delta P}{12}-\frac{\sigma_{UV}}6.
+$$
+
+This exposes the vacuum cap cancellation and avoids obtaining the potential
+increment by subtracting nearly equal values. It does not regularize arbitrary
+first jets at the axis; the positive-radius operator excludes $r=0$.
+
+First jets determine the right sides of the null constraints, but cannot
+measure their residuals $E_U,E_V$, which contain pure second derivatives.
+The often used mass rates
+
+$$
+M_U=\frac{r^2P}{2}r_U-\frac{r^2r_V}{C}\sigma_{UU},\qquad
+M_V=\frac{r^2P}{2}r_V-\frac{r^2r_U}{C}\sigma_{VV}
+$$
+
+are derivatives of the geometric mass only on the constraint surface.
+Direct differentiation using the mixed equation gives instead
+
+$$
+m_U=M_U+\frac{2rr_V}{C}E_U,\qquad
+m_V=M_V+\frac{2rr_U}{C}E_V.
+$$
+
+The [bulk implementation](../src/recursive_horizons/nsc_atlas_nonlinear_bulk.py)
+keeps these qualifications explicit in its outputs. Its finite first-jet
+evaluation supplies the regional equations, not a spacetime trajectory or
+a freely selectable mass history.
+
+### Regular polar-areal cap
+
+Inside an untrapped cap, use the Einstein metric
+
+$$
+ds_E^2/\ell^2=-Ae^{2\delta}dT^2+A^{-1}dr^2+r^2d\Omega^2,
+\qquad A=1-2m/r>0.
+$$
+
+The time $T$ is Jordan central proper time, anchored at the same quiet
+event. Define $f=\Psi/\sqrt\alpha$, with its continuous normalized limit,
+$\Phi=f_r$, $\Pi=e^{-\delta}f_T/A$ and $B=Ae^\delta$. With
+$q_f=\sqrt{\alpha/6}\,f$ and $\operatorname{sinhc}(q)=\sinh(q)/q$
+continued to one at zero, the potential and normalized derivative are
+
+$$
+P=3\cosh^4q_f,\qquad
+U_\alpha(f)=P_{,\Psi}/\sqrt\alpha
+=2f\operatorname{sinhc}(q_f)\cosh^3q_f.
+$$
+
+In particular $U_0=2f$; the normalized scalar still evolves when its
+gravitating amplitude vanishes. The scalar system and radial constraints are
+
+$$
+f_T=B\Pi,\qquad \Phi_T=(B\Pi)_r,\qquad
+\Pi_T=\frac1{r^2}(r^2B\Phi)_r-e^\delta U_\alpha(f),
+$$
+$$
+m_r=\frac{r^2P}{2}+\frac{\alpha r^2A}{4}(\Pi^2+\Phi^2),\qquad
+\delta_r=\frac{\alpha r}{2}(\Pi^2+\Phi^2),
+$$
+$$
+m(T,0)=0,\qquad \delta(T,0)=-\log\cosh q_f(T,0).
+$$
+
+These constraints supply the cap wall metric from its field and central
+clock. For example, with $W=\Pi^2+\Phi^2$ and
+$I(r)=\int_0^r\alpha sW(s)/2\,ds$, the mass has the radial representation
+
+$$
+m(r)=e^{-I(r)}\int_0^r e^{I(s)}s^2
+\left(\frac{P(s)}2+\frac{\alpha W(s)}4\right)ds,
+\qquad \delta(r)=\delta(0)+I(r).
+$$
+
+The omitted temporal Einstein equation is a consistency check, not another
+free evolution law. Differentiating the radial mass constraint and using
+the scalar equations gives
+
+$$
+\partial_r\mathcal E_m=-\delta_r\mathcal E_m,\qquad
+\mathcal E_m=m_T-\frac{\alpha r^2A^2e^\delta}{2}\Pi\Phi.
+$$
+
+Regularity makes $\mathcal E_m(0)=0$, hence it vanishes throughout the cap.
+The remaining angular equation follows from the Einstein identity and the
+scalar equation in a sufficiently regular solution. Also
+$(\Phi-f_r)_T=0$, so compatible initial scalar derivatives stay compatible.
+
+To evaluate the axis without dividing by its radius, use
+$\rho=r^2$, $Q=\Phi/r$ and $\mu=m/r^3$, all continued by regular even
+profiles. Then
+
+$$
+f_T=B\Pi,\qquad Q_T=2(B\Pi)_\rho,\qquad
+\Pi_T=3BQ+2\rho(BQ)_\rho-e^\delta U_\alpha(f),
+$$
+$$
+A=1-2\rho\mu,\qquad
+3\mu+2\rho\mu_\rho=\frac P2+
+\frac{\alpha A}{4}(\Pi^2+\rho Q^2),\qquad
+\delta_\rho=\frac\alpha4(\Pi^2+\rho Q^2),
+$$
+$$
+\mu_0=\frac{P_0}{6}+\frac{\alpha\Pi_0^2}{12},\qquad
+B_0=e^{\delta_0},\qquad
+(\Pi_T)_0=3B_0Q_0-e^{\delta_0}U_\alpha(f_0).
+$$
+
+The radial integral supplies $\mu$ away from the axis and this limit
+supplies its centre value. The $Q$ equation uses the regular derivative
+$(B\Pi)_\rho$, not a separately prescribed centre waveform. The central
+Jordan scalar is $p_{J,C}=f_0\operatorname{tanhc}(q_{f,0})$, where
+$\operatorname{tanhc}(q)=\tanh(q)/q$ has the continuous value one.
+For implementation, the same mass integral has an explicit regular form.
+Writing $W_\rho=\Pi^2+\rho Q^2$ and
+$\gamma(\rho)=\alpha\int_0^\rho W_\xi\,d\xi/4$ gives
+
+$$
+\mu(\rho)=e^{-\gamma(\rho)}\int_0^1 t^2e^{\gamma(t^2\rho)}
+\left[\frac P2+\frac{\alpha W_\rho}{4}\right]_{t^2\rho}dt,
+\qquad B_\rho=e^\delta(\mu-P/2).
+$$
+
+The last identity follows by cancellation in the radial constraints and
+avoids differentiating sampled metric values. Likewise,
+
+$$
+\frac{P-3}{\alpha}=\frac{f^2}{2}\operatorname{sinhc}^2q_f
+\left(\cosh^2q_f+1\right)
+$$
+
+has a continuous value at zero amplitude and avoids subtracting two vacuum
+potentials. The finite domain must retain $A>0$ and regular profiles. The
+owned pulse is $C^3$ with piecewise bounded fourth derivatives: use the
+equations piecewise or weakly at its fronts, and retain the weighted
+$\rho Q_\rho$ term instead of assuming $Q_\rho$ alone is bounded there.
+The characteristic speeds in $\rho$ degenerate at the axis; these identities
+do not establish uniform Cartesian hyperbolicity. A stable discretization
+and its error estimate remain to be constructed.
+
 ## Exact material interface
 
 Keep the same signed normal from cap to exterior. Write
@@ -377,6 +555,67 @@ value determine the transverse expansion through
 $(r_U)_V=-r_Ur_V/r-C/(4r)$; the mass then follows from its geometric
 definition. The specified source continuation, quiet data, corner and
 wall branch identify the exact family whose construction is still needed.
+
+### Completing the source first jets
+
+The exact source ODE also supplies all first jets required to start the
+mixed regional system. In the original affine coordinate $x$, let
+$C_0=C_{J,0}=-3.2/U_0>0$, and temporarily rescale
+$\bar U=C_0U$. The Einstein lapse on that source is then $C=\mathcal F$.
+With $g=g_{\rm src}$, the known longitudinal traces are
+
+$$
+r=\sqrt{r_J^2-\alpha g^2/6},\qquad
+r_x=\frac{r_Jr_J'-\alpha gg'/6}{r},\qquad
+c=g,\quad c_x=g',\quad
+\mathcal F=\frac{r^2}{r_J^2},\quad
+L_x=2r_x/r-2r_J'/r_J.
+$$
+
+Introduce $a=r_{\bar U}$, $b_c=c_{\bar U}$ and
+$\lambda=L_{\bar U}$; $b_c$ is unrelated to the wall parameter $b=2$.
+The mixed exterior equations give three ordinary differential equations:
+
+$$
+a'=-ar_x/r-\mathcal F/(4r),\qquad
+b_c'=-K g,\qquad
+\lambda'=2ar_x/r^2+\mathcal F/(2r^2)
+-\frac{\alpha u_{\bar U}u_x}{D},
+$$
+$$
+u_{\bar U}=(b_c-u a)/r,\qquad u_x=(g'-u r_x)/r,\qquad
+K=\frac{ar_x+\mathcal F/4}{r^2}
+-\frac{\alpha u_{\bar U}u_x}{6D}.
+$$
+
+All three corner values follow from the same quiet Schwarzschild corner:
+
+$$
+a(x_a)=\frac{0.8/x_a-1}{4},\qquad b_c(x_a)=0,\qquad
+\lambda(x_a)=-\left(\frac1{0.8}+\frac1{x_a}\right)a(x_a).
+$$
+
+Multiplying these transverse derivatives by $C_0$ restores the original
+$U$ derivatives. The change from $V$ to $x$ has a Jacobian depending only
+on $x$, so it introduces no additional transverse lapse term. The geometric
+mass follows from these data; neither a mass function nor another scalar
+history is free.
+
+For stable evaluation near zero amplitude, the source radius can instead
+be integrated through $r_J=x+\alpha h$, $r_J'=1+\alpha w$ with
+$h'=w$ and
+
+$$
+w'=\frac{gg''-2(g')^2}{6r_J}
++\frac{gg'(1+\alpha w)}{3r_J^2}.
+$$
+
+At positive amplitude these are exact scaled changes. At zero amplitude
+they give the quadratic sensitivity without subtracting two nearby radii.
+The existing analytic source interface returns $p=g/x,p',p''$; recover
+$g=xp$, $g'=p+xp'$ and $g''=2p'+xp''$, rather than differentiating stored
+samples. This specifies the source integration and its controls; a bounded
+implementation and numerical source comparison remain to be supplied.
 
 ### What a source-leg bound establishes
 
@@ -713,6 +952,115 @@ axis already fixes their gauge. In that gauge the cap wall lapse and
 `Gamma` must come from compatible regional evolution. Prescribing wall
 lapses instead requires an observer-clock conversion; the two gauge
 choices cannot be imposed independently on the same null labels.
+
+### Closing a polar cap against the null exterior
+
+The regular polar cap removes that competing lapse prescription. At the
+wall its field and radial constraints supply $A_-,\delta_-$ and the
+outgoing canonical combination $w_-=\Pi-\Phi$. Keep only the exterior
+null lapse trace $C_{W,+}(s)>0$ and its compatible derivative
+$\Gamma_+=d_s\log C_{W,+}$ as gauge input. It agrees with the reference
+gauge on the quiet initial interval; the source $V$ labels and existing
+bottom $U$ labels stay anchored. The remaining relabelling of wall-born
+$U$ coordinates realizes this exterior gauge.
+
+The exterior outgoing derivatives give $R_+=2\dot V_+r_{V,+}$ and
+$C_+=2\dot V_+c_{V,+}$ as above. Set
+
+$$
+H=R_++Sr,\qquad A_->0,\qquad H>0.
+$$
+
+The polar cap has $\beta_-^2-v^2=A_-$ and $\beta_->0$.
+Angular matching therefore solves the wall velocity algebraically:
+
+$$
+\boxed{v=\frac{H^2-A_-}{2H},\qquad
+\beta_-=\frac{H^2+A_-}{2H},\qquad
+\beta_+=R_+-v.}
+$$
+
+In particular $v+\beta_-=H$ and $\beta_--v=A_-/H$; no division
+by $v$ or the sign-changing $\beta_+$ occurs. The common field value
+is $c=r f\operatorname{sinhc}(q_f)$. With $u=c/r$ and $D$ as before,
+transmission gives
+
+$$
+C_- = \frac{A_-}{H}\left(r\sqrt D\,w_--u\right),\qquad
+w_+=\Pi+\Phi=\frac{C_+/H-u}{r\sqrt D}.
+$$
+
+Only $w_+$ is incoming to the cap. From these two combinations recover
+$\Pi=(w_++w_-)/2$, $\Phi=(w_+-w_-)/2$, then use
+$c_s=(C_++C_-)/2$ and $n c=(C_+-C_-)/2$ in the same normal-force
+formula for $\overline K_\tau,K_{\tau,\pm}$.
+The wall evolution and exterior incoming derivatives are
+
+$$
+r_s=v,\qquad T_s=\frac{\beta_-}{A_-e^{\delta_-}},\qquad
+\eta_{+,s}=K_{\tau,+}-\frac{2\dot V_+L_{V,+}-\Gamma_+}{2},
+$$
+$$
+2\dot U_+r_{U,+}=v-\beta_+,\qquad
+2\dot U_+c_{U,+}=C_-,\qquad
+\dot U_+L_{U,+}=\Gamma_+-\dot V_+L_{V,+}.
+$$
+
+The existing positive exterior null rates evolve $U,V$. The cap wall
+lapse is reconstructed from its regular interior and central clock,
+not prescribed again. The common scalar value is a compatibility condition:
+
+$$
+f_s=\beta_-\Pi+v\Phi
+=\frac{c_s-uv}{r\sqrt D}.
+$$
+
+Thus its transport preserves $c=r f\operatorname{sinhc}(q_f)$ from
+the common quiet anchor. Adding an independent Dirichlet waveform for
+$f$ would overdetermine the single incoming scalar channel. An expanding
+wall admits new fixed-radius worldlines: their scalar value is initialized
+from this transported common wall value. Combining its tangent derivative
+with $f_T=B\Pi$ preserves $\Phi=f_r$ there. This derived value is needed
+alongside the incoming characteristic, but is not a second free source.
+At zero wall speed no new fixed-radius worldline enters the cap.
+
+This mixed-chart prescription has a noncircular constraint implication.
+The actual cap normal acceleration, computed from its metric and the
+wall curve, is
+
+$$
+K_{\tau,-}^{\rm actual}
+=\frac{v_s+A_{-,r}/2}{\beta_-}
++\beta_-\delta_{-,r}+\alpha r v\Pi\Phi.
+$$
+
+Let $d=K_{\tau,-}^{\rm actual}-K_{\tau,-}^{\rm predicted}$, where
+the prediction is the normal-force expression used above. The exterior
+rapidity equation imposes its predicted acceleration, while the cap
+constraints follow from radial reconstruction. With the exterior outgoing
+constraint zero by exact source transport, the earlier residual identities
+have $\mathcal A_\Sigma=0$, $\mathcal T_\Sigma=-d$,
+$\mathcal F_\Sigma=Sd$ and $J_-=0$. They give separately
+
+$$
+J_+=-vd,\qquad J_+=\beta_-d.
+$$
+
+Consequently $Hd=0$, hence $d=J_+=0$ on this branch. Both remaining
+wall laws and the incoming exterior constraint follow without assuming
+that incoming constraint first. This is an implication for a sufficiently
+regular solution; it does not establish solvability or stability of a
+discrete coupled iteration.
+
+The [hybrid boundary helper](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
+implements this map using the constrained cap metric and its outgoing
+scalar characteristic. The regional update must use the same stage fields
+for radial reconstruction and wall motion. On a moving cap grid it must
+also include the coordinate advection: for $y=r/r_W(T)$,
+$\partial_T|_y=\partial_T|_r+y(r_W)_T\partial_r$.
+After the final exterior source label $V=V_b$, the central readout follows the
+terminal inward ray $dr/dT=-B$ within the determined domain; no extra
+incoming waveform is supplied to complete that ray.
 
 ### Central clock in general null labels
 

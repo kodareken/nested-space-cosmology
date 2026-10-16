@@ -1,5 +1,49 @@
 # Prior art and admission of new research
 
+## Exact regional operators, 16 October 2026
+
+The [finite-amplitude owner](nsc-atlas-finite-amplitude.md) supplies the
+Einstein-frame action, mixed equations and null constraints. Connect the
+implemented wall traces to regional evolution by implementing the normalized
+positive-radius bulk operator and deriving a regular polar-areal cap system.
+Keep the same fixed cap/exterior potentials, source and material wall. The
+bulk helper accepts finite first jets with positive radius and lapse; it
+does not reconstruct missing pure second derivatives or solve a gauge.
+Return constraint-surface mass rates with their residual qualification.
+Preserve the continuous zero-amplitude scalar limit and evaluate the
+potential increment without subtracting nearly equal vacuum terms.
+
+Independent canonical-field conversion, exact vacuum geometries, constraint
+residuals and coordinate rescalings supply the controls. Each test has a
+30-process-CPU-second ceiling. No physical evolution, amplitude choice or
+new source record is admitted here. The cap derivation must identify regular
+axis variables, the central clock, incoming characteristic data and its
+conversion to the existing wall map before implementation. An inconsistency
+in constraints, characteristic count or gauge is resolved in that connection
+before a coupled physical run is designed.
+
+The independently checked polar-cap connection now provides that boundary
+count: reconstruct the cap lapse from the central clock, prescribe only
+the compatible exterior lapse trace, and require `A_cap>0` and
+`H=R_plus+S*r>0`. Angular matching determines the wall speed; one incoming
+cap scalar characteristic completes transmission. Implement this mixed-chart
+boundary map alongside the existing two-null-chart map. Check its vacuum
+branch, canonical Lorentz-frame transmission, common field derivative,
+exterior coordinate rescaling and the noncircular constraint implication.
+The same 30-process-CPU-second test ceiling and no-physical-evolution scope
+apply. The actual cap fields and their radial constraint reconstruction
+remain caller inputs, not extra freely chosen boundary functions.
+
+**Implementation outcome:** 38 bulk controls and 32 hybrid-wall controls,
+together with the 32 existing boundary/clock controls, pass in one combined
+run: 102 tests, 0.57 seconds of pytest-reported duration and 0.734375 process
+CPU seconds. Independent review checks the equations, implementation,
+trapped Schwarzschild signs, canonical boosts and constraint qualification.
+No physical evolution is run. The next executable connection is exact
+source initialization and a characteristic update inside the existing
+rectangle, followed by wall-born cells and the regular cap march; it uses
+the same source and model, with its own finite run budget.
+
 ## Exact boundary-operator implementation, 16 October 2026
 
 The [finite-amplitude owner](nsc-atlas-finite-amplitude.md) supplies the
