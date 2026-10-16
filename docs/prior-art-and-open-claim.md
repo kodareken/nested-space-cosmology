@@ -1468,6 +1468,74 @@ or bound a finite-amplitude trajectory.
 Independent Grok review confirms these displayed identities and the
 continuous-residual estimate under the same prescribed-input assumptions.
 
+### Fixed-coefficient time update and continuous reconstruction
+
+The common stage has a different state from the historical `Ip/Iq`
+integrator. Reuse its exact-time validator, state-combination operation and
+SSPRK(3,3) coefficients in a small adapter for the fixed cap coefficients.
+Keep the authenticated historical producers intact. Supply one additional
+RHS evaluation at the accepted endpoint, then reconstruct the continuous
+cubic Hermite path and evaluate its derivative minus the same stage RHS.
+An interior residual is a declared-point diagnostic; the previous linear
+energy estimate requires a bound throughout the interval and identical
+prescribed geometry/input. Finite coupling needs its own combined estimate.
+
+Admit **3,000,000 charged values / 60 active CPU seconds** for known cubic
+and exponential ODE controls, endpoint-slope and callback-failure checks,
+and one manufactured nonzero common step with its midpoint residual.
+The manufactured source is `c=(x-0.4)^3` with its analytic derivative,
+`alpha=0.002`, four exterior cells, one odd-quintic cap cell and one
+`h=1/1024` step. This is an integration control, not the retained physical
+preparation, a resolution selection, a scan or a physical prediction.
+Keep all stage arrays in memory. Record accounting and any failure before
+designing a follow-up. Independent Grok review checks time weights, endpoint
+slopes, the continuous derivative and the limits of the residual claim.
+
+The physical-source constructor will separately reuse the original 129
+Hermite knots, not interpolate the 1025-row evaluation cache. Before
+advancing a quiet state to the source front, check the complete saved
+source, including gravitational interpolation, rather than only its
+analytically masked scalar. That input audit does not yet admit a retained
+physical trajectory.
+
+Admit one fixed-input quiet-front audit, with **50,000 charged values / 20
+CPU seconds**: authenticate the existing 104 source bindings, reconstruct
+only the original finite-amplitude 129-knot `SourceSnapshot`, inspect the
+exact binary Hermite coefficients of the intervals up to the lower scalar
+front, and query the last pre-front knot, the midpoint from it to the front,
+and the front. Evaluate the reference wall at the knot and front. An exact
+polynomial check supplies the independent radial-interpolation control.
+Keep source curvature residuals and any nonzero pre-front gravitational
+data visible. Save only a compact summary and source hashes. No source ODE,
+profile fit, spatial mesh selection or physical trajectory is authorized
+by this audit; a nonzero result redirects the starting-data choice.
+
+The first audit stopped at the independent polynomial comparison, before
+wall evaluation: a result-relative tolerance is unsuitable when the Hermite
+polynomial cancels nearly to zero. Its precise CPU consumption was not
+printed; the enforced upper bounds are **12,423 charged values / 20 CPU
+seconds**. Retain that failed attempt in the final compact receipt. One
+corrected comparison uses `128*eps` times the absolute polynomial-coefficient
+scale for each derivative, with **37,577 values / 20 CPU seconds** remaining
+for the completion. Thus the two-attempt ceilings are 50,000 values / 40 CPU
+seconds. The source coefficients, knots and queries do not change.
+
+**Time-control outcome:** four controls pass with 267,485 values / 0.28125
+active CPU seconds. Grok source review finds no adapter bug and requests
+derived-scalar and physical-residual coverage. One focused repeat adds the
+moving-trace derivative/difference comparison, conformal scalar residual
+and physical temporal mass identities; it passes with 263,520 / 0.25.
+Total **531,005 / 0.53125**, with no retained physical trajectory.
+
+**Source-audit outcome:** completion passes with **13,260 values / 2.34375
+CPU seconds**, so total work including the failed-attempt upper bound is
+at most 25,683 values / 22.34375 CPU seconds. The crossing Hermite interval
+is nonzero before the analytically masked scalar starts. Its actual
+constraint residual and the earlier quiet value/first-jet knot are recorded
+in the [scientific owner](nsc-atlas-finite-amplitude.md#retained-source-at-the-first-scalar-front).
+Grok review confirms the polynomial and interpretation; transverse source
+splines remain outside this audit.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

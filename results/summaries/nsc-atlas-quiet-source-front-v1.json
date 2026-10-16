@@ -1,0 +1,173 @@
+{
+  "alpha": 0.00012983127142551443,
+  "crossing_interval": {
+    "index": 35,
+    "left": 0.42228630694544744,
+    "right": 0.42292305857246026
+  },
+  "exact_polynomial_evaluation_defects": [
+    {
+      "h": 0.0,
+      "h_x": 0.0,
+      "h_xx": 0.0
+    },
+    {
+      "h": -1.5777218104420236e-30,
+      "h_x": 1.2924697071141057e-26,
+      "h_xx": -8.271806125530277e-25
+    },
+    {
+      "h": 0.0,
+      "h_x": 3.0292258760486853e-26,
+      "h_xx": 0.0
+    }
+  ],
+  "exact_polynomial_evaluation_tolerances": {
+    "h": 6.232258179212643e-27,
+    "h_x": 2.45907448334148e-23,
+    "h_xx": 6.224953522417879e-20
+  },
+  "exact_radial_polynomial_audit": {
+    "crossing_coefficients": [
+      "0",
+      "0",
+      "37252854887072302634106508001/348449143727040986586495598010130648530944",
+      "-39154408066274405925852435169/348449143727040986586495598010130648530944"
+    ],
+    "intervals": 36,
+    "nonzero_interval_indices": [
+      35
+    ],
+    "zero_on_entire_pre_front_interval": false
+  },
+  "execution": {
+    "charged_values": 13260,
+    "cpu_seconds": 2.34375,
+    "gauge_queries": 2,
+    "source_integrations": 0,
+    "source_queries": 3,
+    "time_steps": 0
+  },
+  "front": 0.42269179059454887,
+  "input": {
+    "authenticated_input_files": 104,
+    "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+    "operator_sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09",
+    "path": "results/development/nsc-atlas-coupled-evolution-v1/coupled.json",
+    "sha256": "3ab2662b932e503f471206fd77f9e4895d1967b1dcacbdf2d92aa048c37fee86"
+  },
+  "knots": 129,
+  "limits": {
+    "charged_values": 37577,
+    "cpu_seconds": 20.0,
+    "cumulative_charged_values_upper_bound": 50000,
+    "cumulative_cpu_seconds_upper_bound": 40.0
+  },
+  "prior_attempt": {
+    "actual_cpu_unrecorded": true,
+    "charged_values_upper_bound": 12423,
+    "cpu_seconds_upper_bound": 20.0,
+    "outcome": "stopped at exact-polynomial comparison using result-relative tolerance",
+    "source_integrations": 0,
+    "time_steps": 0
+  },
+  "reference_wall": {
+    "T": [
+      0.04377128443765652,
+      0.044623011279717725
+    ],
+    "T_x": [
+      2.0978725928863615,
+      2.1031731930298525
+    ],
+    "W": [
+      0.2582378274655064,
+      0.2590722753364373
+    ],
+    "W_x": [
+      2.05150148862572,
+      2.0643292120061068
+    ],
+    "r": [
+      0.4748482346624701,
+      0.4753138162777697
+    ],
+    "r_x_total": [
+      1.14757303951258,
+      1.1488539817994254
+    ],
+    "s": [
+      0.026834395534829546,
+      0.027365200237106202
+    ],
+    "x": [
+      0.42228630694544744,
+      0.42269179059454887
+    ]
+  },
+  "schema": "nsc-atlas-quiet-source-front-v1",
+  "scope": "same retained source; exact scalar quietness and binary radial polynomial check; no source-error enclosure or trajectory",
+  "source_bindings": {
+    "scripts/check_nsc_atlas_quiet_source_front.py": "ecf8bdedae17d7816708debcb8c400af94e3a8bf4f6ca27ff32a514fa677d1e5",
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+    "src/recursive_horizons/nsc_atlas_characteristic_trace.py": "d171b49036555ef8fedad072b0bf9c5550508ba7183fb3e03cc64de600819a47",
+    "src/recursive_horizons/nsc_atlas_reference_wall_gauge.py": "e905f2b6e888d53ee2d539920d09d037eb6bb074a60717932cfead12c87b3113"
+  },
+  "source_samples": {
+    "c": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "c_x": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "h": [
+      0.0,
+      7.211325587716302e-15,
+      1.433684912015276e-14
+    ],
+    "h_x": [
+      0.0,
+      5.3247709946766365e-11,
+      -8.464169193503768e-13
+    ],
+    "h_xx": [
+      5.273634514740415e-07,
+      -2.087425525606566e-09,
+      -5.315383025252546e-07
+    ],
+    "r": [
+      0.42228630694544744,
+      0.42248904876999815,
+      0.42269179059454887
+    ],
+    "r_x": [
+      1.0,
+      1.0000000000000069,
+      0.9999999999999999
+    ],
+    "r_xx": [
+      6.846851463133793e-11,
+      -2.709277179422644e-13,
+      -6.90103555838494e-11
+    ],
+    "source_constraint": [
+      6.846851463133793e-11,
+      -2.709277179422644e-13,
+      -6.90103555838494e-11
+    ],
+    "source_h_xx_defect": [
+      5.273634514740415e-07,
+      -2.087425525606566e-09,
+      -5.315383025252546e-07
+    ],
+    "x": [
+      0.42228630694544744,
+      0.42248904876999815,
+      0.42269179059454887
+    ]
+  }
+}

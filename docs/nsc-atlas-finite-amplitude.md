@@ -5550,6 +5550,91 @@ estimates. The error estimate uses the dissipative pairing directly; it
 does not need a separate Lipschitz or generator-norm bound for this linear,
 prescribed-geometry problem.
 
+### Fixed-coefficient time step and continuous reconstruction
+
+The [time adapter](../src/recursive_horizons/nsc_atlas_fixed_cap_time.py)
+uses the existing SSPRK(3,3) coefficients and exact-time/combination helpers.
+Stages run at left, right predictor, and midpoint. A fourth evaluation at
+the accepted right state supplies its own slope. Historical `Ip/Iq`
+drivers remain unchanged. There is no retry, hidden source change, or cap
+Courant assertion inferred from the exterior speed.
+
+For accepted endpoints and slopes, put `h=x_R-x_L`, `t=(x-x_L)/h`,
+`d=y_R-y_L`. The continuous path and its residual are
+
+\[
+y_h=y_L+htF_L+t^2a+t^3b,\qquad
+a=3d-h(2F_L+F_R),\quad b=-2d+h(F_L+F_R),
+\]
+\[
+y_h'=F_L+(t/h)(2a+3tb),\qquad
+\mathcal R(x)=y_h'(x)-F(x,y_h(x)).
+\]
+
+`fixed_time_residual` makes an independent stage call on this path. It
+returns each component in its own derivative units, with physical stage
+diagnostics. A selected-point residual is not a uniform bound; the preceding
+linear estimate requires control throughout the interval with identical
+prescribed inputs. The coupled finite-amplitude estimate remains open.
+
+The derived wall scalar needs a separate derivative. With `a=sqrt(alpha/6)`,
+`u(f)=sinh(a*f)/a` and `chi_W=R*f`, its moving-trace chain rule is
+
+\[
+c_W'=\cosh(af)\chi_W'+[u-f\cosh(af)]R',\qquad
+\chi_W'=e^T c_{\rm coeff}'+\phi_z(Z)^Tc_{\rm coeff}\,R'/(1-R^2).
+\]
+
+Zero-amplitude limits are continuous. This distinguishes the dense path's
+derivative from the stage's actual scalar derivative and the hybrid target.
+
+Four [controls](../tests/test_nsc_atlas_fixed_cap_time.py) pass, plus one
+focused extension: **531,005 charged values / 0.53125 active CPU seconds**
+over five executions. Known cubic and exponential solutions check time
+integration and the continuous derivative. Failure/mutation controls preserve
+the accepted input and count attempted calls. One manufactured cubic-source,
+finite-amplitude step produces nonzero cap and exterior states and a finite
+midpoint residual. It checks `K=-W_x J`, `E_c=R sqrt(D) E_f`, physical temporal
+mass factors, and the derived scalar tangent against an independent centred
+difference. This source is not the retained physical preparation. Grok review
+finds no adapter defect; its request for derived-scalar and physical-residual
+coverage motivated the focused extension.
+
+### Retained source at the first scalar front
+
+The [quiet-front audit](../scripts/check_nsc_atlas_quiet_source_front.py)
+authenticates the retained source and reconstructs its original **129**
+Hermite knots from `exact_rows[::2]`. It never refits the 1025-row evaluation
+cache or integrates another source. Its [compact receipt](../results/summaries/nsc-atlas-quiet-source-front-v1.json)
+records exact binary-input polynomial coefficients and three source queries.
+
+The first 35 radial-correction polynomials are identically zero. Interval
+35, from `x=0.42228630694544744` to `0.42292305857246026`, straddles the
+scalar front `x=0.42269179059454887`. Its nonzero Hermite polynomial starts
+before that front. At the front, `c=c_x=0` exactly, but
+`h=1.433684912015276e-14`, `h_x=-8.464169193503768e-13`, and the actual
+source constraint is `-6.90103555838494e-11`. A source radius rounded to
+its vacuum value does not erase this curvature residual.
+
+At the last pre-front knot, `h=h_x=0` and the reference wall has
+`R=0.4748482346624701`, `T=0.04377128443765652`. At the scalar front its
+reference values would be `R=0.4753138162777697`, `T=0.044623011279717725`.
+Vacuum transport to the scalar front therefore does not reproduce the full
+retained source. The earlier knot supplies a common value/first-jet candidate
+for a numerical start, but its right-sided source curvature already has
+residual `6.846851463133793e-11`. The source interpolation defect belongs
+in the subsequent error account. This is not a constraint-compatible
+continuum evolution. Grok review confirms the polynomial, source residual,
+and distinction between the source label and wall radius. Transverse source
+splines were not audited here; they are not inputs to `departure_slice`.
+
+Completion uses **13,260 values / 2.34375 CPU seconds**. The first attempt
+stopped at an unsuitable result-relative polynomial comparison; its recorded
+upper-bound cost is 12,423 values / 20 CPU seconds (actual CPU was not printed).
+The corrected comparison uses the absolute coefficient scale under
+cancellation. Source coefficients and queries are unchanged. Neither
+attempt integrated a source or evolved a physical state.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

@@ -325,6 +325,25 @@ the frozen generator, an energy-norm time bound and the moving-cut energy
 identity. These commands do not run a physical trajectory or a grid scan.
 No unchanged suite repeat is required for the next connection.
 
+The fixed-coefficient time adapter and original-source quiet-front audit:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_fixed_cap_time.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_quiet_source_front.py
+```
+
+The four time controls and one focused extension use 531,005 values /
+0.53125 active CPU seconds in development. They include one manufactured
+nonzero coupled step and an independently evaluated dense-path residual.
+The source command prints a compact audit, authenticating the original
+129-knot Hermite input without another source integration. Its saved
+[receipt](../results/summaries/nsc-atlas-quiet-source-front-v1.json) records
+the completed run and the first failed comparison's upper-bound cost.
+The [owner](nsc-atlas-finite-amplitude.md#retained-source-at-the-first-scalar-front)
+explains why the earlier quiet knot, rather than the scalar front, supplies
+the candidate numerical starting values. No full retained trajectory or
+uniform time-error bound is produced by either command.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

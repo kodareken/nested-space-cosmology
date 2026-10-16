@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+  "current_receipt_commit_parent": "5633042aa2eebea12e5227416234ace318933678",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 221098,
-      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
-      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "bytes": 221696,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "6cd38989c616110165696ce293e400a5c03b45937d77980a2a0c0aed22674ee6"
+      "sha256": "66db0baee6f47280e4a391c91118c50bd3e9c97f33ed6adaaf7e25167853c928"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 311730,
-      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
-      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "bytes": 312938,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "cf2812fe342f8403df48fbb7dbcdc9f95d7f75ecdcbf4746eca2d1ebe288bf44"
+      "sha256": "aa07f18779fd951cd066f1683dfac72d6af27562ddd6da94b286eb90237aab4e"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 267114,
-      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
-      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "bytes": 271636,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "435e60e451bec0ce8ff6a07d483c3e4ddbcccc6d38f4468499104660190f629f"
+      "sha256": "3713f67152cbac0d1d282c3596b6ce41b4a710147e302735a6af11160e353a31"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 302662,
-      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
-      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "bytes": 306975,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "52f23cdf842bbac9b8dfdea6243c32fef2141506dd5618bd620da05989b42abd"
+      "sha256": "46d8fc2e0ce45c295ac9b3cc593817647069cdb36bc772d9531b955a6e98e9b0"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 101849,
-      "change": "Join the actual exterior prefix to the fixed cap and derive frozen/moving linear energy estimates.",
-      "changed_from_commit": "28b678c792150b7f4ae1756041f9ef05ce5eb1c6",
+      "bytes": 102887,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d84c0d93c766f21aaaf810bea8796bc1538916c795affc99c2d4dc2f8fcf1a6f"
+      "sha256": "73d6381277ca0b8da67bf5f0f50e01cab5e1f14c523a011d21725f3a03e426a7"
     },
     {
       "bytes": 18356,
@@ -29567,6 +29567,14 @@
       "sha256": "f11b8b7408700d96d7e219e049d970a320f2f645f3448b2c8eee133a7c513ca7"
     },
     {
+      "bytes": 4429,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "path": "results/summaries/nsc-atlas-quiet-source-front-v1.json",
+      "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
+      "sha256": "656b489f65623303cf4b18891b7bb496a5dc00678fe60bfc77c00861abb32316"
+    },
+    {
       "bytes": 899,
       "change": "explicit successor after consolidation; original import fields preserved",
       "changed_from_commit": "ea5e334ce025c10df89d61c470082bedf0fbb07a",
@@ -29634,6 +29642,14 @@
       "path": "scripts/check_nsc_atlas_cap_profile_projection.py",
       "retention_reason": "Fixed source-profile projection diagnosis and exact retained-background mass connection",
       "sha256": "6ea75e024593da8dfc24fac9f4c37870754a1c03e7b9a8d7ad47fef702f9637b"
+    },
+    {
+      "bytes": 5981,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "path": "scripts/check_nsc_atlas_quiet_source_front.py",
+      "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
+      "sha256": "ecf8bdedae17d7816708debcb8c400af94e3a8bf4f6ca27ff32a514fa677d1e5"
     },
     {
       "bytes": 2304,
@@ -32481,6 +32497,14 @@
       "path": "src/recursive_horizons/nsc_atlas_fixed_cap_stage.py",
       "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
       "sha256": "8af4033a8d5526386d051c1a2d2047f2fb028d5ba149aeb25a62bf16cd06af4a"
+    },
+    {
+      "bytes": 5782,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "path": "src/recursive_horizons/nsc_atlas_fixed_cap_time.py",
+      "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
+      "sha256": "124b370c7fc0652f020cbfed2926925a17053f8dca0680046388d285161e725f"
     },
     {
       "bytes": 13914,
@@ -36010,6 +36034,14 @@
       "path": "tests/test_nsc_atlas_fixed_cap_stage.py",
       "retention_reason": "Common fixed-cap/exterior stage and independently verified energy/time estimates",
       "sha256": "59e437f3dfed4a9274e76a16c72a80b80c54e592dc328fbbe2556f31587e78e9"
+    },
+    {
+      "bytes": 8629,
+      "change": "Explicit successor for fixed-cap time update and retained-source starting-data audit.",
+      "changed_from_commit": "5633042aa2eebea12e5227416234ace318933678",
+      "path": "tests/test_nsc_atlas_fixed_cap_time.py",
+      "retention_reason": "Fixed-cap time integration controls, original-source audit and their scientific owners.",
+      "sha256": "0f4cb74ce36ea6909b75cbbc3b602a5fc03545a3521ce00271b67f2fab6ffab5"
     },
     {
       "bytes": 5871,

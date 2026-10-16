@@ -41,6 +41,24 @@ matrix controls pass with 76,000 algebra values / 7.984375 active CPU seconds.
 Finite coupling, exterior feedback and spatial errors still need bounds
 before a physical interval is certified.
 
+The [fixed-coefficient time adapter](nsc-atlas-finite-amplitude.md#fixed-coefficient-time-step-and-continuous-reconstruction)
+now performs one common SSPRK3 update and evaluates a continuous Hermite
+residual. Four controls and a focused scalar/mass extension pass with
+531,005 values / 0.53125 active CPU seconds. The nonzero coupled update
+uses a manufactured cubic source; it is an integration control rather
+than a retained physical trajectory. Grok source review confirms the
+adapter and identifies the derived wall scalar as a separate check,
+now included through its moving-trace derivative.
+
+The [retained-source audit](nsc-atlas-finite-amplitude.md#retained-source-at-the-first-scalar-front)
+finds a gravitational Hermite tail before the analytically quiet scalar
+front, where the source constraint is `-6.90104e-11`. The preceding knot
+at `x=0.42228630694544744` has quiet values and first jets, with reference
+wall `R=0.4748482346624701`, but its right-sided curvature residual must
+still be retained. Grok review confirms that distinction. The compact
+receipt preserves the failed cancellation-sensitive comparison and its
+corrected completion; no physical source or trajectory was recalculated.
+
 ## Fixed-space mass-gradient implementation, 16 October 2026
 
 The [local mass adapter](nsc-atlas-finite-amplitude.md#metric-domain-for-fixed-local-total-fields)
