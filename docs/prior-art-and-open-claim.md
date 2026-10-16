@@ -1,5 +1,49 @@
 # Prior art and admission of new research
 
+## Incoming wall curvature and transported constraint, 16 October 2026
+
+The preceding saved-data audit finds a much larger incoming constraint on
+wall-origin stencils than on bottom-origin stencils. Its missing boundary
+datum is the wall's pure transverse curvature. Calculate that datum from
+saved departures, without inserting the hybrid solver's prescribed wall
+curvature or assuming a zero constraint.
+
+| Item | Fixed wall diagnostic |
+| --- | --- |
+| Inputs | Hash-authenticate the 512-step refinement record and its 86 bound paths, plus the saved constraint-transport audit and its producer/control bindings. Use the original two amplitudes, 129 cuts and 32-cell eta grid. No inherited scientific validator or source/cache/profile/stage/trajectory replay. |
+| Wall reconstruction | Evaluate the existing analytic Schwarzschild vacuum interface only at the 129 reference wall coordinates `(W(x),x)`, sharing these queries between amplitudes. Recover endpoint departures from physical wall values minus vacuum values and the source offset. Interior departures are already stored. |
+| Independent derivatives | Add analytic vacuum first/second jets to one-sided derivatives of departures, with `d_Ubar=d_eta/W`. Compare four specified stencils: three-point first/four-point second derivatives, and five-point first/second derivatives, each at eta strides one and two. Form `E_Ubar,W=r_Ubar_Ubar-L_Ubar*r_Ubar+alpha*r*u_Ubar^2/(2D)` and its separate terms. No prescribed acceleration or wall rate enters. |
+| Transport | Tabulate `B(W(x))=r_W E_Ubar,W`. Interpolate it piecewise linearly to each wall-origin interior `Ubar`, using 129 wall samples or the 65 alternating samples. An interpolation bracket may use only cuts at or before the observation cut. Keep unsupported points explicit and compare only common supported points; no extrapolation or future wall datum. |
+| Independent subsets | Retain all wall-origin stencils, and separately those whose three-point eta stencil is disjoint from the union of all four boundary stencils. The latter boundary union starts at eta index 24 of 32. Report overlapping-stencil results separately, because shared field samples can correlate derivative errors. |
+| Comparisons | Keep raw interior `r E_Ubar`, transported wall prediction and signed remainder. Vary the wall derivative stencil with interpolation held fixed, and vary interpolation sampling with the wall stencil held fixed. Retain maxima, RMS and locations. These are diagnostic sensitivities, not evolution refinements or an error enclosure. |
+| Allowance | Creation and one standalone check each use at most 30 process CPU seconds and 2,000,000 arithmetic points, including authentication and the 129 analytic vacuum evaluations. Focused controls share 30 CPU seconds and 200,000 points. No numerical source or time evolution. |
+| Checks and stop | Independent polynomial derivative oracles, nonzero transported boundary data, interpolation causality/coverage, disjoint-stencil masks and changed-input/budget controls. Stop on first inconsistent reconstruction, domain/nonfinite failure, invalid bracket or exhaustion; preserve an ignored `.build` receipt. Output is creation-only. |
+| Decision | Determine whether an independently measured wall datum accounts for the interior incoming constraint, and whether that conclusion survives derivative/interpolation changes away from overlapping stencils. If it does, evaluate its inherited outgoing-source contribution and the corresponding cap/junction residuals. Nonzero wall constraint alone is not a junction failure: with zero cap constraints the smooth identities give `J_+=(A_-/H^2)O_+`. If transport fails, diagnose spatial derivatives or mixed transport before changing the physical model. |
+
+**Outcome:** the [saved wall audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+completes with 1,391,719 points and 1.046875 CPU seconds; its one
+independent standalone check passes with the same point count. Each uses
+129 analytic vacuum evaluations and no source, cache, profile, stage or
+trajectory replay. All 19 focused controls pass on their first run with
+71,773 points and 0.0625 CPU seconds. Producer and controls remain frozen.
+
+All 916 wall-origin points have causal interpolation brackets at both
+samplings. On the 162 disjoint-stencil points, raw weighted incoming
+constraint RMS is `7.16444e-5`; every wall-subtracted alternative increases
+it, to `8.14450e-5`--`1.38386e-4`. Spatial-stencil changes in transported
+wall data reach `1.08923e-4`--`2.67968e-4`, whereas 65/129 interpolation
+changes reach only `2.53441e-6`--`3.86554e-6`. The disjoint subset covers
+only `x=0.45157688..0.48086746`, `eta=0.53125..0.6875`, excluding the
+earlier near-wall maximum. Zero controls remain at about `1e-12`.
+
+The wall datum is not spatially resolved by this comparison and does not
+reliably account for interior transport. An aggregate improvement on
+overlapping stencils cannot settle that result. The next calculation
+addresses spatial differentiation or bulk transport before a geometric
+junction-acceleration interpretation. The conditional outgoing-source
+baseline above still requires control of the actual cap constraints and
+acceleration.
+
 ## Saved constraint transport and sampling, 16 October 2026
 
 The 512-step comparison reduces temporal scalar sensitivity while leaving

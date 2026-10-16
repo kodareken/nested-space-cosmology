@@ -71,8 +71,10 @@ retain close agreement for geometry and clocks and reduce the paired scalar
 time difference to `1.68%` of its finer response peak. The
 [constraint-origin audit](docs/current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
 separates inherited source residuals and localizes the larger incoming
-constraint to wall-origin stencils, selecting an independent wall-curvature
-calculation next. Spatial accuracy, profile support and a complete error
+constraint to wall-origin stencils. The [wall-curvature calculation](docs/current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+finds that spatial-stencil sensitivity prevents a reliable wall-transport
+interpretation, selecting spatial and bulk-transport accuracy next.
+Spatial accuracy, profile support and a complete error
 estimate remain questions. A controlled
 finite-amplitude solution through the central arrival remains open.
 Comparing geometries still needs an independently

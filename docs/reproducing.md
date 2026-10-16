@@ -8,6 +8,27 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [incoming wall-constraint audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+uses pinned histories, four one-sided spatial stencils and causal birth
+interpolation. Authenticate the completed [record](../results/development/nsc-atlas-wall-constraint-audit-v1.json)
+without replaying its source or trajectory:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_diagnose_nsc_atlas_wall_constraint.py -q
+python scripts/run_python.py scripts/diagnose_nsc_atlas_wall_constraint.py --output results/development/nsc-atlas-wall-constraint-audit-v1.json --check
+```
+
+Creation requires a fresh output path; it never replaces the completed
+record. Creation and standalone checking each have a shared allowance of
+30 CPU seconds and 2,000,000 points. Creation uses 1,391,719 points and
+1.046875 CPU seconds; one independent check passes with the same point
+count. Both use 129 analytic vacuum evaluations and no source, profile,
+cache, coupled-stage or time-evolution replay. The 19 controls share
+30 CPU seconds/200,000 points and pass with 71,773 points and 0.0625 CPU
+seconds. All four wall subtractions worsen the disjoint-subset RMS;
+spatial/transport accuracy remains unresolved, with no junction-failure
+or error-enclosure claim.
+
 The [constraint transport audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
 uses only pinned saved arrays, separating the inherited source residual,
 diagnostic time-stencil sensitivity and incoming-characteristic origin:

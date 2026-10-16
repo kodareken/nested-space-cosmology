@@ -135,9 +135,11 @@ retain close geometry and clock agreement and reduce the scalar time
 difference to `1.68%` of the fine response peak. The
 [saved constraint audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
 separates source inheritance and diagnostic sampling; the incoming residual
-is largest in wall-origin stencils. An independent wall-curvature and
-birth-transport diagnostic is the next connection before changing the
-evolution. Profile support and exterior constraint/wall-slope residuals
+is largest in wall-origin stencils. The [independent wall-curvature audit](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+finds strong spatial-stencil sensitivity and no reliable explanation of
+the disjoint interior subset by transported wall data. Spatial derivative
+and bulk-transport accuracy are the next connection before interpreting
+a junction defect. Profile support and exterior constraint/wall-slope residuals
 remain unresolved. Coupled
 well-posedness and a central-readout remainder remain open.
 Formation and stability also remain open.

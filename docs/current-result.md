@@ -2,6 +2,49 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Incoming wall curvature and transported constraint, 16 October 2026
+
+The [wall-curvature audit](../results/development/nsc-atlas-wall-constraint-audit-v1.json)
+tests whether an independently estimated incoming wall constraint accounts
+for the retained interior residual. It uses analytic vacuum jets and
+one-sided derivatives of the saved departures: three- and five-point
+stencils, each at spatial strides one and two. The weighted wall value
+`B=r_wall E_Ubar_wall` is transported from its causal birth bracket with
+piecewise-linear interpolation on 129 and 65 saved wall cuts. No future
+wall value or extrapolation supplies a missing bracket.
+
+Both birth samplings support all **916 wall-origin points**. Of these,
+**162** have interior spatial stencils disjoint from the wall-stencil
+envelope. This late subset spans `x=0.45157688..0.48086746` and
+`eta=0.53125..0.6875`; disjoint samples do not establish independent
+numerical errors. For the finite case, using the 129-cut birth history:
+
+| Quantity on the 162-point disjoint subset | RMS |
+| --- | ---: |
+| Unsubtracted `r E_Ubar` | `7.16444e-5` |
+| After three-point, stride-one wall subtraction | `9.56064e-5` |
+| After three-point, stride-two wall subtraction | `1.37911e-4` |
+| After five-point, stride-one wall subtraction | `8.14450e-5` |
+| After five-point, stride-two wall subtraction | `1.38386e-4` |
+
+All four subtractions worsen the disjoint RMS; the 65-cut birth history
+does not change that conclusion. Relative to the three-point, stride-one
+baseline, changing the spatial wall stencil changes transported `B` by
+maxima `1.09e-4..2.68e-4` on this subset. Changing only the birth
+interpolation sampling gives much smaller maxima `2.53e-6..3.87e-6`.
+Thus the saved wall estimate does not provide a resolved explanation of
+the interior constraint. This does not establish a junction failure:
+spatial differentiation and transport accuracy remain unresolved, and
+the outgoing source constraint is not assumed zero.
+
+Creation uses **1,391,719 charged points and 1.046875 process CPU seconds**
+within 30 CPU seconds and 2,000,000 points. One independent standalone
+check passes with the same point count. Each performs 129 analytic vacuum
+evaluations, with no source, profile, cache, coupled-stage or time-evolution
+replay. All 19 focused controls pass with aggregate 71,773 points and
+0.0625 CPU seconds. The pinned result is 12,343,277 bytes; its SHA256 is
+`0cea406caa7c66d9b19c9693cf8b2f7bf6c09927c8b20dbd4447f8a1301131c8`.
+
 ## Saved constraint transport and sampling, 16 October 2026
 
 The [saved-data audit](../results/development/nsc-atlas-constraint-transport-audit-v1.json)
@@ -48,11 +91,11 @@ because its spatial stencil is unchanged. The zero-amplitude case has
 zero inherited source constraint, with raw maxima `1.08440e-10` for
 `E_x` and `4.66452e-12` for `E_Ubar`.
 
-The next missing datum is an independent incoming wall constraint from
-one-sided derivatives of the saved departures and analytic vacuum jets.
-Its stencil sensitivity and transport into the wall-origin region must
-be separated before changing the wall or bulk evolution. The existing
-first-jet compatibility defect cannot substitute for this curvature.
+This audit motivated the independent incoming wall-curvature calculation
+reported above, using one-sided derivatives of the saved departures and
+analytic vacuum jets. Its stencil sensitivity and transport into the
+wall-origin region remain distinct from the existing first-jet
+compatibility defect.
 
 ## Midpoint-complete SSPRK3 comparison, 16 October 2026
 

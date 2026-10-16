@@ -1262,9 +1262,9 @@ with $f_T=B\Pi$ preserves $\Phi=f_r$ there. This derived value is needed
 alongside the incoming characteristic, but is not a second free source.
 At zero wall speed no new fixed-radius worldline enters the cap.
 
-This mixed-chart prescription has a noncircular constraint implication.
-The actual cap normal acceleration, computed from its metric and the
-wall curve, is
+This mixed-chart prescription has a conditional constraint implication.
+When the temporal cap mass law holds as well as the radial constraints,
+the cap normal acceleration computed from its metric and wall curve is
 
 $$
 K_{\tau,-}^{\rm actual}
@@ -1274,8 +1274,9 @@ $$
 
 Let $d=K_{\tau,-}^{\rm actual}-K_{\tau,-}^{\rm predicted}$, where
 the prediction is the normal-force expression used above. The exterior
-rapidity equation imposes its predicted acceleration, while the cap
-constraints follow from radial reconstruction. With the exterior outgoing
+rapidity equation imposes its predicted acceleration. Assume the cap
+constraints hold, including temporal mass consistency beyond radial
+reconstruction alone. With the exterior outgoing
 constraint zero by exact source transport, the earlier residual identities
 have $\mathcal A_\Sigma=0$, $\mathcal T_\Sigma=-d$,
 $\mathcal F_\Sigma=Sd$ and $J_-=0$. They give separately
@@ -1289,6 +1290,64 @@ wall laws and the incoming exterior constraint follow without assuming
 that incoming constraint first. This is an implication for a sufficiently
 regular solution; it does not establish solvability or stability of a
 discrete coupled iteration.
+
+The zero-outgoing-constraint assumption matters for a source interpolant.
+Retain the weighted null residuals
+`J_+=Ubar_s^2 E_Ubar,+`, `O_+=x_s^2 E_x,+`,
+`J_-=Q+_s^2 E_Q+,-` and `O_-=Q-_s^2 E_Q-,-`. Under the same smooth
+mixed equations, common induced metric and scalar transmission, the
+general residual identities are
+
+$$
+\mathcal A_{\Sigma,s}
+=v\mathcal T_\Sigma-(J_++J_--O_+-O_-),
+$$
+$$
+J_--J_++O_--O_+
+=-\frac r2\mathcal F_\Sigma
++\left(\overline K_\tau+\frac{\overline\beta}{r}\right)
+ \mathcal A_\Sigma+\overline\beta\mathcal T_\Sigma.
+$$
+
+If actual angular matching holds, exterior acceleration equals its
+prescription, and `d=K_tau,-^actual-K_tau,-^predicted`, then
+`T_Sigma=-d` and `F_Sigma=S d`. The identities give
+
+$$
+J_+=O_-+\frac{\beta_--v}{2}d,\qquad
+J_-=O_+-\frac H2d.
+$$
+
+Since `beta_-^2-v^2=A_-` and `H=beta_-+v`, equivalently
+
+$$
+d=\frac{2(O_+-J_-)}H,\qquad
+J_+=O_-+\frac{A_-}{H^2}(O_+-J_-).
+$$
+
+With vanishing cap constraints this reduces to `d=2O_+/H` and
+`J_+=(A_-/H^2)O_+`. The actual Hermite source has nonzero `O_+`.
+A nonzero incoming wall constraint alone therefore does not identify an
+additional junction failure. Its source contribution and any cap
+constraint contribution require evaluation with compatible actual
+geometry; these formulas do not presume a discrete solution satisfies
+their smooth hypotheses.
+
+For an independent acceleration measurement, the full polar metric gives
+
+$$
+K_{\tau,-}^{\rm geom}
+=\frac{v_s+A_{-,r}/2}{\beta_-}+\beta_-\delta_{-,r}
+ -\frac{v A_{-,T}}{A_-^2 e^{\delta_-}}.
+$$
+
+The earlier compact expression substitutes the temporal mass law. If
+`E_m=m_T-alpha*r^2*A_-^2*exp(delta_-)*Pi*Phi/2`, the difference between
+the geometric expression and that substituted expression is
+`2v E_m/(r*A_-^2*exp(delta_-))`. Radial reconstruction alone cannot
+measure this temporal residual. An independent junction test needs the
+actual acceleration and fixed-radius mass derivative, with their errors,
+rather than substituting the desired mass law.
 
 The [hybrid boundary helper](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
 implements this map using the constrained cap metric and its outgoing
@@ -2249,6 +2308,73 @@ and separator-crossing sets. The 129/65 comparison uses the same eta
 stencil, so equality of `E_Ubar` at matching cuts is an indexing control,
 not spatial convergence. General wall constraint identities must also
 retain the outgoing source residual rather than assume it vanishes.
+
+#### Independent incoming wall curvature
+
+The [saved audit](current-result.md#saved-constraint-transport-and-sampling-16-october-2026)
+finds an incoming constraint maximum `5.54765e-4` on wholly wall-origin
+stencils, compared with `1.15980e-5` on wholly bottom-origin stencils.
+An independent wall datum can be reconstructed without the hybrid wall
+rates. At the wall, recover each departure from
+`Z_W=X_W-X_vac(W,x)-source_offset`. The source offset is constant in
+`Ubar`; the analytic vacuum supplies its own first and second jets.
+
+Let `N=32`, `h=s/32` for stride `s=1` or `2`, and order the wall samples
+as `Z_N,Z_(N-s),...`. The baseline one-sided differences are
+
+$$
+D_1 Z=\frac{3Z_N-4Z_{N-s}+Z_{N-2s}}{2h},\qquad
+D_2 Z=\frac{2Z_N-5Z_{N-s}+4Z_{N-2s}-Z_{N-3s}}{h^2}.
+$$
+
+The five-point alternatives have coefficient rows
+`(25,-48,36,-16,3)/(12h)` for `D_1` and
+`(35,-104,114,-56,11)/(12h^2)` for `D_2`. Add `D_1 Z_X/W` to the vacuum
+first jets and `D_2 Z_r/W^2` to its pure transverse radius curvature.
+The actual saved `r_W,c_W` then give
+
+$$
+E_{\bar U,W}
+=r_{\bar U\bar U,W}-L_{\bar U,W}r_{\bar U,W}
+ +\frac{\alpha r_W}{2D_W}
+ \left(\frac{c_{\bar U,W}-(c_W/r_W)r_{\bar U,W}}{r_W}\right)^2.
+$$
+
+This uses measured spatial curvature. It neither inserts a prescribed
+extrinsic curvature nor infers it from first-jet tangential compatibility.
+The formal stencil orders require sufficient smoothness and are not
+assumed error estimates for these fields.
+
+The monotone saved labels `W(x_k)` directly tabulate
+`B(W(x_k))=r_W(x_k) E_Ubar,W(x_k)`. Thus no numerical inverse-gauge
+solve is needed to compare `r E_Ubar` with the boundary value at an
+interior `Ubar`. Piecewise-linear interpolation on 129 wall samples,
+compared with the 65 alternating samples, tests interpolation sampling
+separately from the four spatial derivative stencils. Both bracket ends
+must precede or equal the observation cut. Unsupported points remain
+masked; no future wall value or extrapolation supplies them.
+
+The widest boundary stencil reaches eta index 24. A disjoint interior
+three-point stencil therefore has centre index at most 22. Report these
+points separately from overlapping stencils: shared values can correlate
+derivative errors and make apparent transport agreement less informative.
+Even disjoint stencils share one numerical evolution. The
+[fixed diagnostic](prior-art-and-open-claim.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+tests the missing boundary connection; it does not prove continuous
+constraint propagation or the complete junction system.
+
+The [completed calculation](current-result.md#incoming-wall-curvature-and-transported-constraint-16-october-2026)
+supports all 916 wall-origin points at both interpolation samplings, but
+does not resolve this connection. On the 162 disjoint-stencil points,
+every wall subtraction increases the raw weighted-constraint RMS
+(`7.16444e-5` becomes `8.14450e-5`--`1.38386e-4`). Changing the wall
+derivative stencil changes its transported value by up to
+`1.08923e-4`--`2.67968e-4`, far more than the same-stencil interpolation
+change (`2.53441e-6`--`3.86554e-6`). These disjoint points occur only
+late in the window and exclude the earlier near-wall maximum. Spatial
+derivative and bulk-transport accuracy therefore precede interpretation
+as an actual wall or junction defect. The general identities above
+retain the nonzero outgoing-source contribution throughout.
 
 ### Central clock in general null labels
 
