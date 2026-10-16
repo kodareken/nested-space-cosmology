@@ -5004,9 +5004,64 @@ fixed basis, check its shape and weak flux, distinguish coefficients from
 moments, and establish the local quintic representation. Independent Grok
 review confirms the fixed-basis cancellation and initial C1 inclusion.
 
-The next implementation is the bounded local basis and exact initial-field
-transfer, followed by a numerical mass/gradient adapter on the fixed cut
-cell. Its state is the total coefficient pair `(c,d)` and the existing wall
+The [local basis](../src/recursive_horizons/nsc_atlas_cap_fixed_basis.py)
+and [initial transfer](../src/recursive_horizons/nsc_atlas_cap_fixed_transfer.py)
+now implement this representation. There are `4N-1` degrees of freedom per
+field for N cells: an odd quintic at the axis, shared node values/scaled
+slopes, and two bubbles on each subsequent cell. The zero-based axis cell
+has no bubbles. Exact rational mapped knots and shapes define the space;
+floating coefficient conversion has a separate value/first-derivative bound.
+The final support endpoint extends the last polynomial algebraically, and
+the physical wall initially cuts that cell in half. Source evaluation is
+restricted to the physical cap. No projected smoothing of the initial
+profile is performed.
+
+Six-point Gauss integration forms the degree-ten Gram integrals, with
+half-bandwidth five. Diagonal normalization, an eigenvalue condition check
+and banded Cholesky define the numerical solve. The last-cell wall fraction
+is restricted to `[1/4,3/4]`; numerical SPD/conditioning is checked for each
+requested matrix, not certified over an evolving interval. Thirteen
+[controls](../tests/test_nsc_atlas_cap_fixed_basis.py) pass, including exact
+independent Gram integration, piecewise initial transfer, original-input
+domain and axis-parity rejection, and a separate Bernstein/de Casteljau
+comparison, now including the physical axis/wall and a banded solve residual.
+Their combined receipt across fifteen executions is **197,250 charged values /
+0.28125 active CPU seconds**. Numerical evaluation error is not included in the
+coefficient-conversion bounds.
+
+The [single retained-input check](../scripts/check_nsc_atlas_cap_fixed_transfer.py)
+passes at the previously declared terminal slice `T=0.19784721605423244`,
+`Z=0.6183813135744635` (one inward ulp from the nominal wall coordinate).
+The mapped space has **65 cells / 259 coefficients per field**. Independent
+Bernstein/de Casteljau evaluation checks 1,568 exact equalities at 392
+locations; six rational interior points per cell establish **260 polynomial
+identities**, with separate axis and physical-wall points. The axis is quiet.
+At the wall `chi=-0.008774564904026498`, `k=chi_z=0.0005605323908308457`
+and `k_z=0.00011529693710923827`.
+
+| Channel | Largest sampled floating error | Coefficient-conversion bound in the exact basis |
+|---|---:|---:|
+| chi | `2.220446049250313e-16` | `3.2464582858306955e-17` |
+| k | `7.105427357601002e-15` | `1.6585454964236477e-15` |
+| chi_z | `7.016609515630989e-14` | `1.3035828315671948e-14` |
+| k_z | `1.2505552149377763e-12` | `7.105849423871667e-13` |
+
+The differing columns measure differing errors: floating shape/evaluation
+roundoff is excluded from the coefficient-conversion bound. Sampled errors
+meet the predetermined `5e-12 * max(1, reference_peak)` channel tolerances;
+they are not uniform enclosures. The diagonal-scaled Gram condition is
+`30121278.38782701`, giving `condition*eps=6.688267359461932e-9`, below the
+`1e-8` limit. This relatively large condition requires continued solve/error
+control; it does not certify a moving interval. One transfer and Gram factor
+use **936,018 charged values / 2.484375 CPU seconds** of 3,000,000 / 30.
+The compact [receipt](../results/summaries/nsc-atlas-cap-fixed-transfer-v1.json)
+binds the input, original profile and producer sources. Independent Grok
+review confirms the transfer signs, original-input domain and exact
+comparison. There is no new raw dataset or numerical time evolution.
+
+The next step after the retained initial transfer check is a numerical
+mass/gradient adapter on the fixed cut cell. Its state is the total
+coefficient pair `(c,d)` and the existing wall
 and clock state; no translating affine field or new wavefront state is
 required. Gram conditioning and the endpoint-event window must be checked.
 The weak wall value `V_W` still needs comparison with the actual field trace

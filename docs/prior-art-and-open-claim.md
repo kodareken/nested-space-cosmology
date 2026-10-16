@@ -1001,6 +1001,97 @@ requires its existing regularity qualification. The [next core route](nsc-atlas-
 is a bounded local basis/initial transfer and mass-gradient adapter. No
 coupled physical evolution is claimed or admitted by these controls.
 
+### Local fixed-basis implementation and initial transfer
+
+Implement the selected total-field space with at most 128 fixed cells.
+Use C1 quintic endpoint Hermite functions plus two interior bubbles on
+ordinary cells, and an odd quintic on the axis cell. The three axis-cell
+degrees of freedom are its scaled axis derivative and the next node value
+and scaled derivative. Shared node slopes use a fixed neighboring cell
+scale. The ordering gives half-bandwidth five for the Gram matrix.
+
+Retain exact rational knot coordinates and polynomial shapes as the
+mathematical inputs. Map original binary Hermite labels at the selected T
+using exact differences. Put the final basis endpoint one equal interval
+beyond the wall, making the initial cut fraction one half. Form each initial
+chi/k polynomial from the original exact-binary Hermite data, using only
+source pieces that intersect the physical domain. The last polynomial
+extension defines basis support, not new source data. Check exact C1
+matching and axis parity before converting the initial degrees of freedom
+to floating values. Report conversion error separately from later numerical
+evaluation/ODE error. Preserve the existing source/profile implementations.
+
+For numerical operators, assemble the degree-ten Gram integral with six
+Gauss points per full or clipped cell, normalize its diagonal, and use
+banded Cholesky with a finite condition check. Keep the last-cell cut in
+`[1/4,3/4]`; reject rank/domain failures rather than remeshing implicitly.
+
+Basis and transfer controls have **2,000,000 charged values / 30 CPU
+seconds**. Check local endpoint identities, C1 continuity, axis parity,
+independent exact polynomial integrals, Gram solves, clipped-domain shape,
+exact source-polynomial transfer, quiet data, input immutability and domain
+rejection. Grok independently checks the construction and implementation.
+No retained-profile calculation or physical evolution is admitted by these
+manufactured controls; any later fixed-input check receives its own budget.
+
+**Initial control receipt:** all ten original implementation controls pass
+with **76,132 charged values / 0.03125 active CPU seconds**. The exact Gram
+comparison uses independent polynomial integration. Cell indices are zero
+based: cell 0 is the special axis cell, and only cells 1 through N-1 have
+bubbles. Thus N=1 has three degrees of freedom and N=2 has seven. Three
+additional focused controls check that bookkeeping and the independent
+Bernstein evaluator below. All three pass with another **49,308 charged
+values / 0.125 active CPU seconds**: the combined thirteen-control receipt
+is **125,440 values / 0.15625 active CPU seconds**, within the original budget.
+Independent Grok source review finds no blocking formula error. Its wall-trace
+and solve-residual suggestions add direct axis/wall comparisons and a banded
+backward-residual guard. The two affected controls pass with another 71,810
+values / 0.125 active CPU seconds, giving **197,250 values / 0.28125 active
+CPU seconds across fifteen executions of thirteen controls**. A reviewer's
+initial indexing objection was withdrawn after distinguishing cell and node
+numbering; its bubble shorthand was corrected against the exact reconstruction.
+
+### One retained fixed-basis transfer check
+
+Authenticate the existing operator payload and use its already selected
+terminal zero-case slice, including the previously declared one-ulp inward
+wall coordinate. Transfer its original binary Hermite data exactly into
+the local total-field space, then round coefficients once. Independently
+construct degree-five Bernstein controls from the original endpoint jets
+and evaluate them using exact de Casteljau arithmetic. On each physical
+piece, six distinct rational coordinates establish polynomial equality for
+chi, k and their first z derivatives. The cut-cell checks remain inside the
+wall; its extended basis support does not authorize source extrapolation.
+Compare the exact axis and physical-wall traces directly as well.
+
+This single calculation has **3,000,000 charged values / 30 CPU seconds**:
+one authentication, one transfer, one independent comparison and one
+clipped Gram factor. Record coefficient-conversion bounds, observed
+floating discrepancies and diagonal-scaled conditioning. The predetermined
+numerical consistency tolerance for each channel is
+`5e-12 * max(1, reference_peak)`; sampled floating agreement is not a uniform
+error enclosure. Gram admission retains `condition * eps <= 1e-8`.
+No radial solve, time evolution, resolution scan or source refit is admitted.
+Grok reviews the implementation and independent comparison. Failure reports
+its phase and consumed work before a new calculation is considered.
+
+Success establishes the retained initial representation, not a finite-alpha
+solution. Next design the fixed-space mass/gradient adapter and its metric
+domain estimate; the old original-target bound does not automatically cover
+rounded coefficients or future states. Preserve compact evidence and hashes.
+
+**Outcome:** one retained check passes with **936,018 charged values /
+2.484375 CPU seconds**, one transfer/factor and zero radial solves or time
+steps. There are 65 cells and 259 coefficients per field. All 260 polynomial
+identities are exact; direct axis/wall comparisons also pass. The largest
+sampled floating discrepancy is `1.2505552149377763e-12` in k_z, within the
+declared tolerance. The normalized Gram condition `30121278.38782701` passes
+its current-point limit but requires continued numerical accuracy checks.
+The [compact receipt](../results/summaries/nsc-atlas-cap-fixed-transfer-v1.json)
+retains all input/source hashes and conversion bounds. Independent Grok
+review finds no sign or domain blocker for this calculation. The result
+admits design of the metric-domain and mass-gradient adapter, not evolution.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

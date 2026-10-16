@@ -1,0 +1,97 @@
+{
+  "coefficient_conversion_bounds": {
+    "canonical_density": {
+      "first_derivative": 7.105849423871667e-13,
+      "scope": "only coefficient conversion in the exact rational basis; numerical evaluation error excluded",
+      "value": 1.6585454964236477e-15
+    },
+    "chi": {
+      "first_derivative": 1.3035828315671948e-14,
+      "scope": "only coefficient conversion in the exact rational basis; numerical evaluation error excluded",
+      "value": 3.2464582858306955e-17
+    }
+  },
+  "comparison": {
+    "boundary_targets": {
+      "axis": {
+        "canonical_density": 0,
+        "canonical_density_z": 0,
+        "chi": 0,
+        "chi_z": 0
+      },
+      "wall": {
+        "canonical_density": 0.0005605323908308457,
+        "canonical_density_z": 0.00011529693710923827,
+        "chi": -0.008774564904026498,
+        "chi_z": 0.0005605323908308457
+      }
+    },
+    "evaluation_points": 392,
+    "exact_point_equalities": 1568,
+    "exact_polynomial_identities": 260,
+    "maximum_absolute_error": {
+      "canonical_density": 7.105427357601002e-15,
+      "canonical_density_z": 1.2505552149377763e-12,
+      "chi": 2.220446049250313e-16,
+      "chi_z": 7.016609515630989e-14
+    },
+    "method": "six rational interior points per physical piece plus axis and wall; independent Bernstein Hermite evaluation",
+    "numerical_check_is_uniform_enclosure": false,
+    "numerical_tolerances": {
+      "canonical_density": 1.182666341928944e-10,
+      "canonical_density_z": 5.994416399015475e-9,
+      "chi": 5e-12,
+      "chi_z": 1.182666341928944e-10
+    },
+    "reference_peaks": {
+      "canonical_density": 23.653326838578877,
+      "canonical_density_z": 1198.883279803095,
+      "chi": 0.9953776300312596,
+      "chi_z": 23.653326838578877
+    }
+  },
+  "execution": {
+    "charged_values": 936018,
+    "cpu_seconds": 2.484375,
+    "gram_factors": 1,
+    "radial_solves": 0,
+    "time_steps": 0,
+    "trajectory_replays": 0,
+    "transfers": 1
+  },
+  "input": {
+    "authenticated_input_files": 104,
+    "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+    "path": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+    "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09"
+  },
+  "numerical_evaluation_enclosure": false,
+  "physical_evolution": false,
+  "representation": {
+    "cells": 65,
+    "condition_times_machine_epsilon": 6.688267359461932e-9,
+    "field_dimension": 259,
+    "initial_cut_fraction": 0.5,
+    "scaled_gram_condition": 30121278.38782701
+  },
+  "schema": "nsc-atlas-cap-fixed-transfer-v1",
+  "selection": {
+    "T": 0.19784721605423244,
+    "Z": 0.6183813135744635,
+    "alpha": 0.00012983127142551443,
+    "cut": 128,
+    "nominal_Z": 0.6183813135744636,
+    "nominal_radius": 0.55,
+    "profile_sha256": "04e10695afac696c4b0e2c178ccf17a19a04ce20706b60bdf86f6f44af38e0fe",
+    "radius": 0.55,
+    "scope": "retained zero-case initial total fields; recorded alpha is metadata only; no evolved finite state"
+  },
+  "source_bindings": {
+    "scripts/check_nsc_atlas_cap_background_domain.py": "0e62b62704a07fecdc5cd21f56977eb1d1cce348e7046ed1703a2529ee712a5b",
+    "scripts/check_nsc_atlas_cap_fixed_transfer.py": "4af20d7d70e7fcb8353e5ab1bb0e15205aa49f496590286d39127e8892a56e20",
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py": "e94d366b34f4d4cd2b3ff4836491b8f197bcb4b0cf8eefbf7f5b2f3673d7c2c2",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_transfer.py": "51a6fecb8ca2f4bcbd190e9d3ff944029cd0c7f2fba294dce549d68a396c8c20"
+  }
+}

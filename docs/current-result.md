@@ -2,6 +2,24 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Exact retained-pulse local transfer, 16 October 2026
+
+The [fixed physical-coordinate implementation](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)
+retains the supplied pulse exactly as piecewise polynomials: 65 cells and
+259 coefficients per field. Independent Bernstein/de Casteljau evaluation
+confirms all 260 field/first-derivative polynomial identities, with direct
+axis and physical-wall comparisons. Thirteen implementation controls pass.
+
+One authenticated retained-input check uses 936,018 charged values /
+2.484375 CPU seconds. Its largest sampled floating discrepancy is
+`1.25056e-12` in the derivative of canonical density. The diagonal-scaled
+Gram condition is `3.01213e7`, below the declared limit but large enough
+that numerical accuracy needs explicit attention. Compact [evidence and
+hashes](../results/summaries/nsc-atlas-cap-fixed-transfer-v1.json) are saved.
+No field history, radial solve or time step is generated. A metric bound
+for the rounded total coefficients and the mass-gradient adapter are next;
+the former bound on the original interpolant does not certify them.
+
 ## Fixed physical-coordinate bulk route, 16 October 2026
 
 The [fixed local-space derivation](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)
@@ -13,8 +31,8 @@ without a moving-background term or coefficient dilation.
 Four exact controls pass, including an independently integrated mass and
 local quintic reconstruction. Independent Grok review confirms the algebra.
 A C1 quintic space on the mapped input knots can retain both initial fields
-exactly, subject to the stated axis regularity. This is the next bulk
-implementation route. Wall-trace agreement, conditioning, error control
+exactly, subject to the stated axis regularity. Its initial implementation
+and retained-input check are recorded above. Dynamical wall-trace agreement, error control
 and a coupled finite-alpha evolution remain required. The internal-front
 stage below is a compatibility reference; the retained C2 pulse needs no
 new nonzero derivative front.

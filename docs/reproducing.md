@@ -203,6 +203,28 @@ owner](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)
 records why this is the next bulk route and which numerical/physical checks
 remain. No field samples, time stepping or raw files are produced.
 
+The fixed local basis, exact initial transfer and independent comparison:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_fixed_basis.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_cap_fixed_transfer.py
+```
+
+The thirteen basis/transfer controls use 197,250 charged values / 0.28125
+active CPU seconds across fifteen development executions, within 2,000,000 / 30.
+The second command is a separately admitted single retained-input check
+with 3,000,000 values / 30 CPU seconds. It authenticates the existing payload,
+transfers the original exact-binary Hermite data, checks the polynomial
+identities through independent Bernstein/de Casteljau evaluation, and
+factors one clipped Gram matrix. It prints compact hashes and scalar
+evidence without generating raw arrays. It performs no radial solve or
+time evolution. The [calculation record](prior-art-and-open-claim.md#one-retained-fixed-basis-transfer-check)
+separates coefficient rounding, sampled numerical consistency and the
+remaining error analysis.
+The retained check passes once with 936,018 charged values / 2.484375 CPU
+seconds. Its [compact receipt](../results/summaries/nsc-atlas-cap-fixed-transfer-v1.json)
+records exact identity counts, sampled errors and the scaled Gram condition.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

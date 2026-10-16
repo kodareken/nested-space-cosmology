@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "03dc4ab66e56a256ad9a91ece0fa637aaffa4a9c",
+  "current_receipt_commit_parent": "4cc7de422823197470e68e0268036eac499096c1",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 218456,
-      "change": "Derive internal wavefront evolution and the fixed physical-coordinate mass-compatible bulk route.",
-      "changed_from_commit": "03dc4ab66e56a256ad9a91ece0fa637aaffa4a9c",
+      "bytes": 218692,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a529beb883c4892187d238925182b95563c049f11bd4633fa34d8c374789bcd4"
+      "sha256": "52a1bb5b4cc89ae338c57c69893a3fb88d979aa5fe177f14ed7975d8bc9ae38b"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 305592,
-      "change": "Derive internal wavefront evolution and the fixed physical-coordinate mass-compatible bulk route.",
-      "changed_from_commit": "03dc4ab66e56a256ad9a91ece0fa637aaffa4a9c",
+      "bytes": 306736,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "dd31f7e6ad817ab165a0b61ab7d58ac75da1be81818fc1fa7c2c1edbafa41893"
+      "sha256": "d142b362c5cb8a4a4a7af0c1312eae14bbce65dfc9a24a6388bcede1c89cd07f"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 240331,
-      "change": "Derive internal wavefront evolution and the fixed physical-coordinate mass-compatible bulk route.",
-      "changed_from_commit": "03dc4ab66e56a256ad9a91ece0fa637aaffa4a9c",
+      "bytes": 243806,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "da084be8c739251102961bb053364505e636033940bf29776358e8449831668e"
+      "sha256": "07bcc921a672dd08632042df71e727337b8e68bd9ee71e877099e8567a59eefc"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 273166,
-      "change": "Derive internal wavefront evolution and the fixed physical-coordinate mass-compatible bulk route.",
-      "changed_from_commit": "03dc4ab66e56a256ad9a91ece0fa637aaffa4a9c",
+      "bytes": 279016,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7486b27f87573b0c673be5825d46cc424e0ada4d6b0aa54a211af65e682505c8"
+      "sha256": "7ce1a8035702947bd2c0f4e7e85c58ec54af36c5850f67ffadde54bc2d10d6ef"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 95477,
-      "change": "Derive internal wavefront evolution and the fixed physical-coordinate mass-compatible bulk route.",
-      "changed_from_commit": "03dc4ab66e56a256ad9a91ece0fa637aaffa4a9c",
+      "bytes": 96759,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "667ce8be944cddc9770e5527cd33ee6d8cbe06356c9acbb8f5b626ff35c824f6"
+      "sha256": "36a616c2874d4adff05136959a0f8153909b20d82d9eb819d31d115737a493ab"
     },
     {
       "bytes": 18356,
@@ -29513,6 +29513,14 @@
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
     },
     {
+      "bytes": 3815,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "path": "results/summaries/nsc-atlas-cap-fixed-transfer-v1.json",
+      "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
+      "sha256": "cda0497249aca729832740158e264415d12a7a78361416c71c0681dd8f7af59b"
+    },
+    {
       "bytes": 182893,
       "change": "Register completed discrete mass ledger summary in publication inventory",
       "changed_from_commit": "27026bb8dddba15192f25affbffce396d242a945",
@@ -29562,6 +29570,14 @@
       "path": "scripts/check_nsc_atlas_cap_background_reference.py",
       "retention_reason": "Retained-background metric domain and explicit-time mass reference",
       "sha256": "b4500e686114c905dd9360224807d02c9e1881bdb4534b042dd7f5116699e7d8"
+    },
+    {
+      "bytes": 7677,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "path": "scripts/check_nsc_atlas_cap_fixed_transfer.py",
+      "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
+      "sha256": "4af20d7d70e7fcb8353e5ab1bb0e15205aa49f496590286d39127e8892a56e20"
     },
     {
       "bytes": 2815,
@@ -32226,6 +32242,22 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_background_jets.py",
       "retention_reason": "Retained-background metric domain and explicit-time mass reference",
       "sha256": "f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852"
+    },
+    {
+      "bytes": 8908,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "path": "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py",
+      "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
+      "sha256": "e94d366b34f4d4cd2b3ff4836491b8f197bcb4b0cf8eefbf7f5b2f3673d7c2c2"
+    },
+    {
+      "bytes": 7147,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "path": "src/recursive_horizons/nsc_atlas_cap_fixed_transfer.py",
+      "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
+      "sha256": "51a6fecb8ca2f4bcbd190e9d3ff944029cd0c7f2fba294dce549d68a396c8c20"
     },
     {
       "bytes": 6920,
@@ -35643,6 +35675,14 @@
       "path": "tests/test_nsc_atlas_cap_dilation_identity.py",
       "retention_reason": "Exact regular-centre and moving-domain mass identities for odd polynomial fields.",
       "sha256": "2eb9d4965aad3ac276960164bf0d1bba0791ca5626ee01b7d1fd14512004877e"
+    },
+    {
+      "bytes": 11104,
+      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
+      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "path": "tests/test_nsc_atlas_cap_fixed_basis.py",
+      "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
+      "sha256": "fe5494184bb9d4c2f3f6e8ab6a0ae3ea9bbf70d11dd26efcf898c769d73e1517"
     },
     {
       "bytes": 3676,
