@@ -32,6 +32,18 @@ need a separate argument about the two implemented formulas. The current
 active CPU seconds, below the cumulative control allowance. The analyzer
 and recorder receive a final independent source review before creation.
 
+The review found no demonstrated blocker; its unread summary layout,
+SHA256 and budget implementation were checked directly. Sources were
+frozen at `bc70162`. The first physical attempt stopped in the zero case,
+order four, at the ledger identity check: **886,949 points / 2.734375 CPU
+seconds**, one metric, RHS, tangent and ledger, no accepted result. The
+failure receipt recorded the phase but omitted the failed scalar identities.
+Add those quantities to failure receipts without changing any mathematics
+or tolerance. A single diagnostic repeat is restricted to that first case,
+2,000,000 points / 15 CPU seconds, with a guard against a second metric.
+Its purpose is to recover the missing failure quantities; this is not a new
+four-case result or authorization for another trajectory.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 **Outcome:** the [completed calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)

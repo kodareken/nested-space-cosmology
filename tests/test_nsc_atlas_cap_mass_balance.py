@@ -86,6 +86,9 @@ def test_identity_failure_stops_at_first_case(monkeypatch,budget):
         calc.analyze(*data,budget)
     assert [len(v) for v in seen.values()] == [1,1,1]
     assert caught.value.cap_mass_balance_failure["phase"]["name"] == "departure flux ledger"
+    evidence = caught.value.cap_mass_balance_failure["identity_failure"]
+    assert abs(evidence["defects"]["derivative_ledger"]) == pytest.approx(.1)
+    assert evidence["rounding_allowance"] < 1e-12
 
 
 @pytest.mark.parametrize("difference,accepted", [(1e-14,True),(.01,False)])

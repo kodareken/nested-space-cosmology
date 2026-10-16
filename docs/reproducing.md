@@ -48,8 +48,9 @@ python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_derivatives
 
 The [mathematical owner](nsc-atlas-finite-amplitude.md#discrete-mass-derivative-and-departure-flux-balance)
 states the branch-specific derivative and telescoping identity. The controls
-have passed; they do not yet represent a calculation on the retained terminal
-state or a resolution of its mass defect.
+have passed. The first retained-state attempt stopped at the zero/order-four
+ledger identity, with no accepted result; see the
+[diagnosis scope](prior-art-and-open-claim.md#discrete-cap-mass-balance-16-october-2026).
 
 The [first prediction-register entry](prediction-register.md#nsc-p001--perturbative-cap-and-moving-wall)
 binds the closed perturbative cap–wall relation and four computed

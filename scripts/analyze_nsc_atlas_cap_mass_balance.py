@@ -56,7 +56,10 @@ def balance_result(metric, rhs, tangent, target, older, direction, *, budget):
     flux_scale = max(1., float(np.max(abs(rhs["p_flux"]))), float(np.max(abs(rhs["q_flux"]))))
     face_rounding = 256*np.finfo(float).eps*flux_scale
     if any(abs(v) > rounding for v in defects.values()) or ledger["maximum_face_split_defect"] > face_rounding:
-        raise ValueError("discrete mass ledger identity failed")
+        error = ValueError("discrete mass ledger identity failed")
+        error.mass_identity_failure = _plain(dict(defects=defects, rounding_allowance=rounding,
+            face_rounding_allowance=face_rounding, ledger=ledger, tangent=tangent))
+        raise error
     R, alpha, wall = metric["radius"], metric["alpha"], metric["wall"]
     fields = background_cap_profile(metric, np.array([R]), budget=budget)
     Pi, Phi = (float(fields[k][0]) for k in ("Pi", "Phi"))
@@ -174,5 +177,6 @@ def analyze(current, cap_audit, cache, prior_summary, budget):
             execution=dict(EXPECTED_CALLS, charges=charges), evaluated_points=budget.evaluations-start,
             limitations="one common backward branch; fixed profile/state; order difference is not an error bound"))
     except Exception as error:
-        error.cap_mass_balance_failure = _plain(dict(phase=phase, counts=counts, evaluated_points=budget.evaluations-start))
+        error.cap_mass_balance_failure = _plain(dict(phase=phase, counts=counts, evaluated_points=budget.evaluations-start,
+            identity_failure=getattr(error,"mass_identity_failure",None)))
         raise
