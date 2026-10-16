@@ -881,6 +881,126 @@ source. Independent Grok review confirms the full mass derivative, positive
 interface sign, H1 obstruction and distinction from the unchanged C2
 background. It corrects the earlier smooth-pairing-only enrichment proposal.
 
+### Internal wavefront evolution and mass compatibility
+
+Derive the missing internal-interface law from the existing scalar equations,
+with continuous scalar, mass and lapse and no singular scalar source. At
+`r_j(T)`, use the actual `B=A exp(delta)` and right-minus-left jumps. Check
+the Rankine-Hugoniot residuals against the existing density/flux contribution
+`v[rho]+T_x[J]`. This must distinguish satisfying the scalar equations from
+merely cancelling one mass residual. A nonzero derivative jump at the
+reference background speed need not be a solution at finite coupling.
+
+Use exact algebra to check the general residual identity, both characteristic
+orientations and a mass-cancelling but scalar-incompatible counterexample.
+Then construct the exact geometric-limit evolution of the previous ramp
+initial datum with zero initial velocity: it splits into two fronts. Verify
+continuity, both weak scalar equations and the full cap mass, including
+its wall term and moving-wall derivative, on the interval before either
+front reaches the axis or wall. This is a manufactured geometric-limit
+control, not a new source for the retained physical candidate.
+
+Allowance: **50,000 charged algebra values / 20 CPU seconds**, no field
+samples, radial integration, grid scan or numerical time stepping. A failed
+identity is diagnosed before further computation. Independent Grok review
+checks the nonlinear interface derivation and its finite-domain assumptions.
+The actual finite-alpha field evolution and material-wall transmission
+remain required before claiming a coupled physical configuration.
+
+**Interface-algebra outcome:** five controls pass across six executions,
+using 36,000 charged algebra values / 0.390625 CPU seconds. One initial
+comparison was a structural equality of factored/expanded expressions;
+its corrected difference vanishes on the focused repeat. The two-front
+solution obeys both jump equations, the full geometric cap mass and its
+moving-wall derivative. A separate counterexample proves that mass
+cancellation alone does not enforce scalar compatibility. Independent Grok
+review confirms the scalar jump and mass pairing, with the explicit
+qualification that `B=A0` can occur exceptionally at finite alpha.
+
+### Characteristic interface position and amplitude
+
+The internal jump law must also advance its amplitude. Derive it from the
+existing reduced scalar equations `p_T=(Bq)_r-S`, `q_T=(Bp)_r`, where
+`p=r Pi`, `q=chi_r` and the source is continuous across a source-free front.
+The radial constraints give a continuous `B_r` even when the derivative
+fields jump. With orientation `sigma=+1` for the outgoing `p-q` front and
+`-1` for the incoming `p+q` front, test the proposed laws
+`r_T=sigma B`, `j_T=-sigma B_r j`.
+
+Add a bounded stage component in the existing package using the same
+normalized potential, constrained mass and inherited lapse. It supplies
+position/amplitude rates and the physical jump polarization, not a separate
+metric or an evolved cap. Use independent radial-constraint cancellation,
+the exact geometric-limit characteristic and amplitude, orientation/clock
+controls, quiet limits and invalid-domain rejection. Keep each front
+strictly between axis and wall; collisions and endpoint interactions remain
+separate boundary calculations.
+
+Stage controls have **50,000 charged values / 15 CPU seconds**. No radial
+solve, grid search or numerical trajectory is admitted. Independent Grok
+mathematical and source reviews precede adopting this component. The field
+solution must supply its metric trace; this interface ODE alone does not
+replace the bulk scalar evolution or material-wall transmission.
+
+**Amplitude-stage outcome:** five stage controls pass across six executions
+with 404 charged values / 0.015625 CPU seconds. The initial run used 340
+values with CPU time below timer resolution; the focused guard repeat used
+64 / 0.015625 after scalar-real orientation validation was tightened.
+Independent Grok mathematical review confirms both amplitude orientations,
+the cancellation giving continuous `B_r`, the actual physical jump factors
+and the exact geometric curves. There is no extra `B_T` in the rate, and
+`j B` is not generally constant in a time-dependent metric. The common
+bulk still has to maintain the complementary-family continuity. Source
+review finds no implementation blocker. The suggested time-dependent
+`j B` invariant in that review is excluded by the mathematical derivation;
+the code does not use it. No coupled time trajectory has been run.
+
+### Fixed physical-coordinate field space
+
+The route review separates the original smooth pulse from the manufactured
+wavefront problem. Its C2 input has zero derivative jumps; the source-free
+front amplitude law preserves zero. Building more front machinery cannot
+by itself fix the original bulk projection remainder.
+
+Compare moving tangent enrichment, total fields on a fixed local polynomial
+space in physical z, and a full nonlinear characteristic integral solver.
+The next core candidate is the fixed local space: represent total chi and k,
+not a moving background plus departures. Use the existing profile-derived
+knots once, and a C1 quintic element space that can represent both initial
+quintic chi and quartic C1 k exactly. Keep the wall within one cut cell for
+the first finite patch and require a nonsingular active Gram matrix.
+This avoids adding front state or a new physical preparation, and reuses
+the constrained mass/gradient and wall laws. The direct characteristic
+route remains an alternative if the local-space compatibility fails.
+
+First verify the exact shape and weak mass identity for functions fixed in
+physical z, including a non-dilation-closed test space. Here `N_Z=A0 rho_W`
+has no coefficient-advection term. The Gram matrix depends on the clipped
+domain, but field coefficient rates are not derivatives of the moments
+`M d`; inserting their `M_Z d` term would be a different update. Check both
+statements against an independently integrated cap mass. Also establish
+exact C1 quintic reconstruction of arbitrary local quintics and the
+quartic initial momentum. Respect axis parity and avoid interface/basis
+birth events; strong wall traces and field error remain separate checks.
+
+These exact controls have **60,000 charged algebra values / 20 CPU seconds**,
+zero field samples or numerical evolution. Independent Grok review checks
+the fixed-basis derivation. Only a successful identity and representation
+check admits design of the numerical local-space adapter; this record does
+not admit a grid scan or a coupled physical trajectory.
+
+**Fixed-space outcome:** all four controls pass once with 20,000 charged
+algebra values / 0.265625 CPU seconds. The independently integrated mass
+obeys `N_Z=A0 rho_W` without dilation, the weak coefficient rates give the
+same wall flux, and an incorrect moment-derivative insertion produces
+`-Z_x k_W^2/2`. The Hermite-plus-two-bubbles form exactly spans each local
+quintic, including quartic C1 initial momentum. Independent Grok review
+confirms the algebra and local initial representation. Axis parity must
+be enforced separately; a merely C2 profile with an axis exactly at a knot
+requires its existing regularity qualification. The [next core route](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)
+is a bounded local basis/initial transfer and mass-gradient adapter. No
+coupled physical evolution is claimed or admitted by these controls.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

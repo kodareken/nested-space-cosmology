@@ -2,6 +2,40 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed physical-coordinate bulk route, 16 October 2026
+
+The [fixed local-space derivation](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)
+removes both representation remainders: total fields use basis functions
+fixed in physical z, while the wall clips the domain. The exact mass shape
+is `N_Z=A0 rho_W`; the weak coefficient rates then give the wall mass law
+without a moving-background term or coefficient dilation.
+
+Four exact controls pass, including an independently integrated mass and
+local quintic reconstruction. Independent Grok review confirms the algebra.
+A C1 quintic space on the mapped input knots can retain both initial fields
+exactly, subject to the stated axis regularity. This is the next bulk
+implementation route. Wall-trace agreement, conditioning, error control
+and a coupled finite-alpha evolution remain required. The internal-front
+stage below is a compatibility reference; the retained C2 pulse needs no
+new nonzero derivative front.
+
+## Internal wavefront evolution, 16 October 2026
+
+The [derived internal-interface law](nsc-atlas-finite-amplitude.md#internal-wavefront-compatibility-and-evolution)
+now ties a derivative front to the actual cap metric: `r_T=sigma B` and
+`j_T=-sigma B_r j`. The scalar jump equations cancel the interface mass
+contribution. Cancelling mass alone is insufficient, as an exact
+counterexample shows. A bounded stage component supplies both rates using
+the same mass, potential and inherited lapse.
+
+An exact geometric-limit ramp evolves into two fronts and conserves the
+full cap mass on the interval before boundary contact. Its moving-wall
+shape identity also holds. Five algebra controls and five stage controls
+pass; independent Grok mathematical review confirms the amplitude law.
+Independent source review finds no implementation blocker.
+The common finite-alpha bulk evolution and material-wall coupling remain
+required. No new grid scan, raw data or observational prediction is added.
+
 ## Moving enrichment regularity, 16 October 2026
 
 An [exact C2 counterexample](nsc-atlas-finite-amplitude.md#tangent-enrichment-and-its-moving-knot-obstruction)

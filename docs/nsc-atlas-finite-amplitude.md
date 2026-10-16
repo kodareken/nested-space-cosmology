@@ -4786,6 +4786,234 @@ The next implementation choice must preserve the required regularity or
 include derived internal-interface terms and error control. No enriched
 physical solver is installed by this diagnosis.
 
+#### Internal wavefront compatibility and evolution
+
+A moving reconstruction kink is not automatically a solution of the scalar
+equations. On a finite patch take finitely many isolated internal fronts,
+one-sided regular field limits, continuous `f,n,delta`, a single smooth
+potential, `A>0`, and the common centre clock. Require `Phi=f_r`, the scalar
+equations on every open piece, and no singular scalar source on a front.
+Collisions, axis arrival and material-wall intersection end this patch.
+These are internal scalar fronts, not additional material walls.
+
+For a front `r_j(T)` with speed `s`, distributional differentiation gives
+
+\[
+ E_\Pi=s[\Pi]+B[\Phi]=0,\qquad
+ E_\Phi=s[\Phi]+B[\Pi]=0,\qquad B=Ae^\delta.
+\]
+
+Brackets mean right minus left. The second condition also follows from
+continuity of `f` along the front and `f_T=B Pi`. A nonzero derivative jump
+requires `s=+B` with `[Phi]=-[Pi]`, or `s=-B` with `[Phi]=[Pi]`.
+The background knot speed `+/-A0` is generally different at finite coupling.
+The original C2 background has no such derivative jump and remains valid
+as a represented background. Adding a lower-regularity primitive direction
+and leaving its kink at the background speed need not obey these equations.
+
+With `P=Pdiff`, the actual density and mass flux are
+
+\[
+ \rho=\frac{r^2P}{2}+\frac{Ar^2}{4}(\Pi^2+\Phi^2),\qquad
+ J=\frac{ABr^2}{2}\Pi\Phi.
+\]
+
+Continuity of `f` makes the potential contribution continuous. Direct
+algebra, using arithmetic averages of the two traces, gives
+
+\[
+ \boxed{s[\rho]+[J]=\frac{Ar^2}{2}
+       \{\operatorname{avg}(\Pi)E_\Pi+
+          \operatorname{avg}(\Phi)E_\Phi\}.}
+\]
+
+Thus the two scalar jump equations cancel the Reynolds mass contribution.
+The converse is false: the stationary traces `Pi_L=-u`, `Pi_R=u`,
+`Phi_L=Phi_R=0` have zero density and flux jumps but `E_Phi=2 B u`.
+Mass conservation alone does not specify a permissible field update.
+In a label x use `v=r_j,x`, `T_x>0` and residuals
+`v[Pi]+T_x B[Phi]`, `v[Phi]+T_x B[Pi]`; the left side is then
+`v[rho]+T_x[J]`. This is precisely the interface term in the existing
+weighted cap-transport identity.
+
+For piecewise fields satisfying the bulk equations and these jump laws,
+the existing product identity gives `(n_T-J)_r+a(n_T-J)=0` on open pieces
+and `[n_T-J]=0` at fronts. Regular-centre data therefore imply `n_T=J`
+throughout the patch. This is a conditional continuum conservation result;
+it does not prove that a chosen finite field approximation meets its premises.
+
+The interface amplitude also has an evolution law. Use the already defined
+reduced fields `p=r Pi`, `q=chi_r=f+r Phi` and source
+`S=B_r f+r exp(delta) U`. The radial constraints cancel their kinetic terms:
+
+\[
+ B_r=e^\delta\left(-2r+\frac{2\alpha n}{r^2}-\alpha rP\right).
+\]
+
+This derivative and `S` are continuous across the front under the stated
+hypotheses. Set `w_sigma=p-sigma q`, where `sigma=+1` denotes the outgoing
+family and `sigma=-1` the incoming family. On each side,
+
+\[
+ (\partial_T+\sigma B\partial_r)w_\sigma
+       =-\sigma B_r w_\sigma-S.
+\]
+
+Subtract the traces along the same front. For `j=[w_sigma]`,
+
+\[
+ \boxed{r_{j,T}=\sigma B,\qquad j_T=-\sigma B_rj,\qquad
+ [\Pi]=\frac{j}{2r_j},\quad [\Phi]=-\sigma\frac{j}{2r_j}.}
+\]
+
+No separate lapse or time normalization enters. In the exterior label,
+both rates are multiplied by the inherited `T_x`. The common bulk solution
+still has to supply `f,n,delta` at the moving front and maintain zero
+jump in the complementary characteristic family. The amplitude law contains
+no extra `B_T` term. It does not imply `j B` is constant when `B` depends
+on time; the geometric closed form below uses the static geometric metric.
+
+The [wavefront stage](../src/recursive_horizons/nsc_atlas_cap_wavefront.py)
+implements these rates using the existing normalized potential and the
+supplied constrained mass/lapse. It rejects an axis or wall event, a
+nonpositive metric, invalid orientation/clock and nonfinite arithmetic.
+Its pointwise metric check is not a domain certificate. Five independent
+[stage controls](../tests/test_nsc_atlas_cap_wavefront.py) pass across six
+executions with **404 charged values / 0.015625 CPU seconds**. The initial
+five-control run used 340 values with CPU time below timer resolution;
+a focused guard repeat used 64 / 0.015625 after enforcing scalar-real
+orientation inputs, including complex and nonscalar rejection. They compare
+the exact geometric characteristic
+and amplitude, independently reconstruct `B_r` from both radial constraints,
+and check orientation, clock scaling, zero jump and domain rejection.
+Independent Grok mathematical review confirms the characteristic
+orientation, amplitude law, constraint cancellation and geometric curves.
+Independent source review finds no implementation blocker. Its suggested
+`j B` invariant is not used: the mathematical review and equation above
+require the explicit time-dependence qualification.
+
+For the geometric limit, the independent exact curves are
+
+\[
+ r_j(T)=\tanh(z_0+\sigma t),\qquad
+ j(T)=j_0\frac{\cosh^2(z_0+\sigma t)}{\cosh^2z_0},\quad t=T-T_0.
+\]
+
+There is also a complete manufactured finite-interval scalar control.
+The previous ramp initial datum `chi=6q0(z-ell0)_+`, `k=0` evolves as
+
+\[
+ \chi(t,z)=3q_0\{(z-\ell_0-t)_++(z-\ell_0+t)_+\},\qquad
+ k=\chi_t,\qquad 0<t<\min(\ell_0,Z-\ell_0).
+\]
+
+It splits into two compatible fronts, with speeds `+/-1` in z. On the three
+open pieces the scalar equations hold; both jump equations hold at each
+front. With `L=Z-ell0` and `beta=A0(R)/R`, direct piecewise integration gives
+
+\[
+ N=9q_0^2L-9\beta q_0^2L^2,
+\]
+
+independent of t. Its wall velocity field `k_W` is zero and the compatible
+incoming drive is `C=6q0(1-beta L)`, so the wall flux vanishes. If the wall
+moves while remaining outside the fronts, using `beta_Z=-2A0-beta^2`
+gives `N_Z=A0(R)rho_W` and hence `N_x=R_x rho_W`. This specifies the
+manufactured boundary input; it does not replace the retained source or
+establish its material-wall transmission.
+
+Five [exact controls](../tests/test_nsc_atlas_cap_wavefront_identity.py)
+pass across six executions, using **36,000 charged algebra values /
+0.390625 CPU seconds**, with zero field samples or numerical time steps.
+One initial assertion compared factored and expanded forms structurally;
+the corrected difference simplifies exactly to zero on the focused repeat.
+The next coupled construction must evolve the bulk fields and supply their
+metric traces to this interface law, with a controlled residual/error account.
+A front RHS alone is not an evolved finite-alpha cap-wall configuration.
+
+#### Fixed physical-coordinate bulk space
+
+The route review identifies the restriction that made the preceding
+construction difficult: the leading pulse was prescribed as a translating
+affine offset, while the finite correction lived in a small global space.
+Adding moving time tangents created extra regularity/interface work. The
+original C2 pulse has no derivative jumps, and the source-free front law
+preserves `j=0`; further front machinery alone does not repair its bulk
+projection error.
+
+Three paths were compared: moving tangent enrichment, a fixed local space
+for the total fields, and a direct nonlinear characteristic integral solver.
+The next bulk candidate is the **fixed physical-coordinate local space**.
+It reuses the mass functional, radial metric, common clock and wall source.
+The characteristic solver remains an alternative if that representation
+fails. The internal-front result above remains a compatibility reference,
+not an instruction to add artificial fronts to the smooth pulse.
+
+Take basis functions `phi_i(z)` independent of time and wall radius, with
+fixed physical knots. Represent total fields `chi=phi^T c`, `k=phi^T d`.
+Restrict the first interval to the required axis parity/regularity subspace;
+`phi_i(0)=0` alone is insufficient to preserve higher regular axis jets.
+For the first patch, keep `Z=atanh(R)` strictly inside a single last cell
+and retain a fixed active set with a positive, controlled Gram matrix.
+No basis birth, knot crossing or extrapolated physical data is part of this
+patch. A polynomial extension used to define basis support beyond the wall
+is not an additional physical exterior state.
+
+With `M(Z)=integral_0^Z phi phi^T dz`, `e=phi(Z)` and the same constrained
+mass `N(Z,c,d)`, freezing coefficients freezes the fields at each physical z.
+Consequently
+
+\[
+ N_Z=A_0(R)\rho_W,\qquad M_Z=ee^T.
+\]
+
+There is no explicit background-time derivative or basis dilation term.
+For `mu=exp(delta_W)`, `C=B_W R w_in`, define
+
+\[
+ V=2\mu M^{-1}g_d,\quad V_W=e^TV,\qquad
+ c_x=T_xV,\quad d_x=T_xM^{-1}\{-2\mu g_c+e(C-V_W)\}.
+\]
+
+The chain rule and symmetric Gram matrix give
+
+\[
+ \boxed{N_x=T_x\frac{V_W(C-V_W)}{2\mu}+R_x\rho_W.}
+\]
+
+These are field coefficient rates. If the unknowns were moments `M d`,
+their derivative would instead include `M_Z d Z_x`. Inserting that moment
+term into the coefficient rates changes the update. The exact quadratic
+control shows the spurious mass contribution `-Z_x k_W^2/2` from adding
+`-M^-1 M_Z d Z_x` to `d_x`.
+
+At one initial T, the union of mapped original profile knots partitions
+`chi0=F(T+z)-F(T-z)` into quintics and `k0=F'(T+z)-F'(T-z)` into quartics.
+They are respectively C2 and C1, and thus belong to the common C1 quintic
+local space. A cubic endpoint Hermite interpolant plus
+`xi^2(1-xi)^2*(a+b xi)` represents every quintic exactly. This retains the
+local initial profile without its inaccurate global sixteen-mode projection.
+Exact inclusion in an axis-parity subspace additionally requires compatible
+initial axis jets, for example a quiet axis or an axis away from a profile
+knot. The merely C2 axis-knot case needs its separate regularity treatment.
+
+Four [exact controls](../tests/test_nsc_atlas_cap_fixed_space_identity.py)
+pass with **20,000 charged algebra values / 0.265625 CPU seconds**. They
+independently integrate the cap mass for a deliberately non-dilation-closed
+fixed basis, check its shape and weak flux, distinguish coefficients from
+moments, and establish the local quintic representation. Independent Grok
+review confirms the fixed-basis cancellation and initial C1 inclusion.
+
+The next implementation is the bounded local basis and exact initial-field
+transfer, followed by a numerical mass/gradient adapter on the fixed cut
+cell. Its state is the total coefficient pair `(c,d)` and the existing wall
+and clock state; no translating affine field or new wavefront state is
+required. Gram conditioning and the endpoint-event window must be checked.
+The weak wall value `V_W` still needs comparison with the actual field trace
+`B_W k_W/A0(R)`, and field residuals need an error estimate. This identity
+removes two representation remainders; it does not yet establish an evolved
+finite-alpha solution, its material-wall junctions, or its truncation error.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

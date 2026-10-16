@@ -189,6 +189,38 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The fixed physical-coordinate mass and initial-representation identities:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_fixed_space_identity.py -q -s
+```
+
+Four controls pass once with 20,000 charged algebra values / 0.265625 CPU
+seconds of 60,000 / 20. They integrate the quadratic cap mass independently,
+check a basis not closed under dilation, distinguish coefficient and moment
+rates, and reconstruct an arbitrary local quintic exactly. The [fixed-space
+owner](nsc-atlas-finite-amplitude.md#fixed-physical-coordinate-bulk-space)
+records why this is the next bulk route and which numerical/physical checks
+remain. No field samples, time stepping or raw files are produced.
+
+The internal wavefront identities and bounded position/amplitude stage:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_wavefront_identity.py tests/test_nsc_atlas_cap_wavefront.py -q -s
+```
+
+Five exact identities pass across six development executions, using 36,000
+charged algebra values / 0.390625 CPU seconds of 50,000 / 20. The first
+factored-versus-expanded assertion was corrected and rerun in isolation.
+Five stage controls pass across six executions with 404 charged values /
+0.015625 CPU seconds of 50,000 / 15; the focused repeat checks scalar-real
+orientation rejection. No radial solve or numerical
+time trajectory is run. The [owner](nsc-atlas-finite-amplitude.md#internal-wavefront-compatibility-and-evolution)
+states the exact two-front interval, source-free interface hypotheses and
+the distinction between this stage and a coupled cap evolution. A full
+algebra-suite repeat exceeds its remaining original development allowance
+and needs its own justified reproduction account.
+
 The moving tangent-enrichment regularity control:
 
 ```sh
