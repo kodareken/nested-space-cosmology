@@ -2778,6 +2778,122 @@ boundary flux, interior flux and reaction contributions. This result
 does not assign the discrepancy to a particular coupling term or establish
 a physical junction failure. Further grid scans are not the next step.
 
+#### Discrete mass derivative and departure-flux balance
+
+The [diagnostic companion](../src/recursive_horizons/nsc_atlas_cap_mass_tangent.py)
+differentiates the implemented mass-edge quadrature. It leaves the retained
+metric and transport producers unchanged. At this stage its manufactured
+controls pass; the four retained terminal cases have not been evaluated.
+
+On panel j, with half-width h and Gauss weights omega, the edge recurrence is
+
+$$
+N_{j+1}=e^{-A_j}N_j+S_j,\qquad
+S_j=h_j\sum_k\omega_k e^{G_{jk}-A_j}b_{jk},
+$$
+$$
+a=\alpha r(\Pi^2+\Phi^2)/2,\qquad
+b=r^2P_{\rm diff}/2+r^2(1-r^2)(\Pi^2+\Phi^2)/4.
+$$
+
+Here A is the producer's edge partial-Gauss integral; G is its interpolated
+primitive, evaluated at the edge quadrature nodes. Both are differentiated,
+including their field samples, moving positions and half-width. Interior
+target masses do not feed the final edge mass. A forward tangent and a
+reverse sweep with weights `lambda_j=exp(-A_j)*lambda_(j+1)`, terminal weight
+one, give separate contractions of the same local differentials. The
+companion first checks every reconstructed primal face mass against the
+unchanged producer.
+
+One common physical direction selects the branch for negative parameter
+increments before any component weight is taken. Zero minmod output can
+open onto a nonzero slope derivative when both zero secants have compatible
+directional rates. At a coincident cut, retain its preimages and order them
+by their backward velocities; a born panel contributes
+`width_rate*(b-a*N)`. Its regular-axis contribution vanishes because
+`b-a*N` tends to zero there. Unresolved coincident-cut ordering is reported,
+rather than silently dropping the panel. These are branch component weights,
+not an assertion of an unrestricted Jacobian at a limiter tie.
+
+Let `w_i^p` and `w_i^q` be the resulting derivatives with respect to the
+departure integrals. The unchanged cap RHS is
+`Ip_x[i]=Fp[i+1]-Fp[i]-T_x*reaction[i]` and
+`Iq_x[i]=Fq[i+1]-Fq[i]`. A finite telescoping sum gives
+
+$$
+\begin{aligned}
+D_xN={}&N_RR_x+N_TT_x+w^p_{n-1}F^p_n+w^q_{n-1}F^q_n
+-w^p_0F^p_0-w^q_0F^q_0\\
+&+\sum_{j=1}^{n-1}\left[(w^p_{j-1}-w^p_j)F^p_j
++(w^q_{j-1}-w^q_j)F^q_j\right]
+-T_x\sum_iw^p_i\,\mathrm{reaction}_i .
+\end{aligned}
+$$
+
+These are departure fluxes. The analytic background motion is already
+present in N_R and N_T; adding its integral rates again would double-count
+it. Only the centre q-flux is assigned zero. The centre p-flux remains in
+the identity even though the reduced p field vanishes on the axis.
+
+For characteristic speeds `v_+=-T_x*B-R_x*y` and
+`v_-=T_x*B-R_x*y`, define each field jump as right minus left and
+`Delta w=w_left-w_right`. The interior upwind contribution is exactly
+
+$$
+\sum_{j,\,\pm}\frac{|v_\pm|}{4}
+(\Delta w^p_j\pm\Delta w^q_j)[p\pm q]_j .
+$$
+
+The rest is the central face contribution, including the metric change
+acting on the known background. This upwind work need not be negative for
+the nonlinear mass functional. At fixed state, metric and clock/wall rates,
+the incoming trace sensitivity is
+
+$$
+\frac{\partial(D_xN)}{\partial w_+}
+=(w^p_{n-1}+w^q_{n-1})\,R(T_xB_W+R_x)/2.
+$$
+
+The ledger must telescope and agree with the tangent before its total is
+compared with `R_x*rho_n+T_x*J`. Large cancelling channels alone do not
+identify a faulty equation. Attribution needs a matching mathematical
+counterpart for the proposed term and an accounted-for complementary residual.
+
+The [integrand derivatives](../src/recursive_horizons/nsc_atlas_cap_mass_derivatives.py)
+also retain the producer's small-radius formulas. For `d=atanh(r)`, its
+split integrals I1, I2 and Iw integrate F', F'' and z F'' on `[-1,1]`.
+Their derivatives use the three moments `J_k=integral z^k F''' dz`:
+
+$$
+(I_{1,T},I_{1,d})=(I_2,I_w),\quad
+(I_{2,T},I_{2,d})=(J_0,J_1),\quad
+(I_{w,T},I_{w,d})=(J_1,J_2).
+$$
+
+C2 matching cancels internal moving-knot terms, despite possible jumps in
+F'''. The actual truncated radial coefficient in Phi is differentiated as
+written; it is not substituted for the derivative of `atanh(r)/r`.
+Similarly, for `z=sqrt(alpha/6)*f`, `s=1+z^2/6+z^4/120`, and `c=cosh(z)`,
+the potential's small-z branch has derivative
+
+$$
+\partial_fP_{\rm diff}
+=f s\left[(c^2+1)(1+z^2/2+z^4/24)+z s c\sinh z\right].
+$$
+
+Replacing this by the exact-hyperbolic shortcut changes its rational z^6
+coefficient from `37/45` to `33/40` after division by f. The production
+difference is below ordinary binary64 rounding, so this distinction has
+an exact symbolic control as well as high-precision branch comparisons.
+The zero-alpha limit remains `Pdiff=f^2`, `Pdiff_f=2*f`.
+
+The tangent's admitted domain excludes a quadrature sample exactly on
+`r=0.01` or `abs(sqrt(alpha/6)*f)=1e-4`, where the implemented formulas
+switch. This conservative restriction avoids assuming a derivative across
+different truncated expressions. At the quiet-profile boundary, the
+required zero value and first two jets make the first background
+derivatives continuous at positive radius; an axis sample remains excluded.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

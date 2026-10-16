@@ -1,5 +1,37 @@
 # Prior art and admission of new research
 
+## Discrete cap mass balance, 16 October 2026
+
+Implementation is in progress. The completed directional check below leaves
+the cap mass functional and its discrete transport as the unresolved connection.
+Differentiate the implemented radial quadrature, then use finite-volume
+summation by parts to separate its terms. The mathematical inputs are the
+chain rule, polynomial integration and a finite telescoping sum; the physical
+candidate, preparation and wall law stay those of the existing calculation.
+
+| Item | Fixed discrete balance calculation |
+| --- | --- |
+| Inputs and domain | The same authenticated terminal cut 128, two amplitudes, 64 departure cells, fixed stored profile and orders four/eight. Reuse the cap-consistency input reader and stored hybrid clock/wall rates. No profile fitting, new trajectory, grid scan or physical source. |
+| Derivative | Reconstruct four base metrics and four frozen cap RHS vectors. A diagnostic companion in the existing package reconstructs the mass-edge recurrence, checks its primal face masses against the unchanged producer, and differentiates its actual quadrature, small-radius formulas and potential polynomial. Select a common backward-direction limiter and moving-cut branch before component weights. Include any born zero-width panel; an unresolved branch or domain condition stops that case. |
+| Balance | Compare a forward tangent with reverse contraction, then telescope the departure fluxes. Retain geometry/background, both endpoints, interior faces and reaction separately; only the centre q-flux vanishes. Split interior central and upwind work, without assuming the latter has a sign. Compare the total with the same moving-wall mass target and with the already saved directional estimates. Large cancelling terms do not individually identify a faulty equation. |
+| Controls | Exact polynomial mass and summation-by-parts oracles, smooth manufactured differences, C2 knot crossings, quiet extension, actual small-radius/potential derivatives, limiter openings from zero, moving-cut collisions, nonzero centre p-flux, incoming-wall sensitivity, immutable inputs and budget failures. These controls share at most 1,000,000 charged points and 30 active process-CPU seconds; no retained physical calculation is a control. |
+| Physical allowance | After controls and independent review, freeze producer/control sources. One creation including validation is limited to 12,000,000 charged points and 90 process-CPU seconds; one standalone check to 6,000,000 points and 45 seconds. Charge field samples and derivative components, not just the four case count. Four edge tapes have at most 6,192 primary/edge field sites at the present panel bound; full gradient components and original metric/RHS work are additional charges. Raw data stays in ignored local storage with a tracked compact summary and hashes. |
+| Decision | A failed primal, tangent/reverse or telescoping identity identifies an implementation error and stops the physical evaluation. A verified ledger must account for the total mass defect; attribute a term only against its own mathematical counterpart. Unresolved cancellation, branch sensitivity or budget exhaustion produces a diagnosis, not another scan or an altered wall law. |
+
+Independent Grok reviews confirmed the edge recurrence and the background
+moment derivatives. Review corrections retain one-sided limiter openings,
+distinguish a positive profile margin from a boundary-limited zero case,
+and distinguish term size from attribution of the complete defect.
+
+Both orientations of a born panel are now controlled, including a sliver
+owned by the cell to the left of the original face. Exact integration
+samples at either the small-radius or potential formula threshold are
+excluded conservatively; selecting an infinitesimal branch there would
+need a separate argument about the two implemented formulas. The current
+54 controls pass in 55 executions with 62,213 charged points / 1.578125
+active CPU seconds, below the cumulative control allowance. The analyzer
+and recorder receive a final independent source review before creation.
+
 ## Terminal cap mass-functional derivative, 16 October 2026
 
 **Outcome:** the [completed calculation](current-result.md#terminal-cap-mass-functional-derivative-16-october-2026)

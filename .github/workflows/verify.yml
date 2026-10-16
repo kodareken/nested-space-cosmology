@@ -20,7 +20,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 60
+    # Windows needs about 48 minutes for the full suite plus the paper check.
+    timeout-minutes: 90
     env:
       OPENBLAS_NUM_THREADS: "1"
       OMP_NUM_THREADS: "1"

@@ -3,12 +3,12 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "88fe7b1094eed8a190a03425e4496536cd49f64c",
+  "current_receipt_commit_parent": "587251da603f73d241128836183a42d3b213f531",
   "files": [
     {
-      "bytes": 1875,
+      "bytes": 1953,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "changed_from_commit": "587251da603f73d241128836183a42d3b213f531",
       "import_bytes": 366,
       "import_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
       "migration_disposition": "folded_into_current_root_owner",
@@ -16,7 +16,7 @@
       "original_path": "lab/.github/workflows/verify.yml",
       "original_sha256": "4151c9055d72fb4693e6322d798a54ada84515b9ba73cb514fe7eddcea95fd7b",
       "path": ".github/workflows/verify.yml",
-      "sha256": "0e3e49f2e638dcd6e957d7e446bda23f38fe5bb4858ba2f22ba547e275642e8f"
+      "sha256": "42731180804c5c5d08b3b9f11d16e1a643339d0004f4d3d4c3be0c2f1711961c"
     },
     {
       "bytes": 9326,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 207105,
+      "bytes": 207951,
       "change": "Current mathematical and reproducibility updates; original import fields preserved",
-      "changed_from_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
+      "changed_from_commit": "587251da603f73d241128836183a42d3b213f531",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "faff361c1bf8117fdb9c9bd3ce1e29b2e0f995c1de59c2425d7b29a6fec2a788"
+      "sha256": "60ec69d478bf82513934775e91030a56405804121b51477779dd290c8263c9c7"
     },
     {
       "bytes": 9543,

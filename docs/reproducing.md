@@ -39,6 +39,18 @@ inside their tests, retaining cumulative point and active-CPU limits.
 
 ## Current work
 
+The discrete cap mass derivative is under implementation in a diagnostic
+companion to the unchanged producer. Run its manufactured controls with:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_mass_derivatives.py tests/test_nsc_atlas_cap_mass_tangent.py tests/test_nsc_atlas_cap_mass_balance.py -q -s
+```
+
+The [mathematical owner](nsc-atlas-finite-amplitude.md#discrete-mass-derivative-and-departure-flux-balance)
+states the branch-specific derivative and telescoping identity. The controls
+have passed; they do not yet represent a calculation on the retained terminal
+state or a resolution of its mass defect.
+
 The [first prediction-register entry](prediction-register.md#nsc-p001--perturbative-cap-and-moving-wall)
 binds the closed perturbative cap–wall relation and four computed
 coefficients to their original evidence. Authenticate its projections without
