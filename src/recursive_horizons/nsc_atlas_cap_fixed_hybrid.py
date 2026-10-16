@@ -16,7 +16,8 @@ from .nsc_atlas_background_cap import _budget
 
 
 def fixed_cap_hybrid_reference(basis,chi,canonical_density,Z,*,alpha,exterior_wall,
-                               C_wall,eta_plus,eta_plus_x,budget,rtol=2e-13,atol=2e-15):
+                               C_wall,eta_plus,eta_plus_x,budget,rtol=2e-13,atol=2e-15,
+                               background=None,background_time=None):
     """Derive the three cap boundary inputs from one exterior/hybrid event.
 
     exterior_wall receives immutable {r,c} and returns r_V,c_V,log_C_V.
@@ -56,7 +57,8 @@ def fixed_cap_hybrid_reference(basis,chi,canonical_density,Z,*,alpha,exterior_wa
         return dict(T_x=rates['T'],radius_rate=rates['r'],incoming_w_plus=float(hybrid['w_plus']))
 
     cap=fixed_cap_reference(basis,chi,canonical_density,Z,alpha=alpha,wall_coupler=couple,
-                            budget=budget,rtol=rtol,atol=atol)
+                            budget=budget,rtol=rtol,atol=atol,
+                            background=background,background_time=background_time)
     hybrid=connection['hybrid'];rates=connection['wall_rates'];wall=cap['wall']
     R=cap['radius'];tx,rx=rates['T'],rates['r'];mu=float(np.exp(cap['lapse']))
     cap_f_x=(tx*wall['velocity']+rx*wall['h_trace'])/R

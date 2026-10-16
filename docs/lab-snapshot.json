@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "812545897d7b2a89ead9b15ca0287815103e17b2",
+  "current_receipt_commit_parent": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 223038,
-      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
-      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "bytes": 223768,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "9c7c410acb7df150b6e1e7a9e1100890ad7ead60728e51848da59861ceba6f7c"
+      "sha256": "315edef062a8b913fd232fd6aafffa7871f4edc7f30fbf9467a6ccbd90e318a8"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 315321,
-      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
-      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "bytes": 315873,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "4242213c6c3a502cc938ea9f6d21a038614afc26a1ed35fe2a5f641178dc4179"
+      "sha256": "7f32a566535b805945a757d9881f359fcfab55494dea2ae1032ed9fcdd4937ad"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 291243,
-      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
-      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "bytes": 295813,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d3f0c56a54a6aab8d925a467ce7621275f18c6da223d23dff2dcf277c3f63b94"
+      "sha256": "ce09c8f60f88c6e8916d4830aa749ce9270d106e1b439fb84be9fbd9ef449beb"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 315995,
-      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
-      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "bytes": 318794,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "94c967311a30bb86a85cf86e12b97c02e3bec2f667aff9046c6950ff00ed885a"
+      "sha256": "c6755e0ca3dff90dcb60976490ff9a42a65e58ff9493e156cbac253278046168"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 104215,
-      "change": "Implement finite-coupling characteristic transport and the common-value hybrid wall port.",
-      "changed_from_commit": "812545897d7b2a89ead9b15ca0287815103e17b2",
+      "bytes": 105046,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "fee28817089d0df43b8bf79cce55a0e616b32b009b8b4d8ddc291136b4a7a4c7"
+      "sha256": "3dfd3bab21e4aaa94ad89e367b230bad561d3643f31021ac9c4f7c94a8307d5c"
     },
     {
       "bytes": 18356,
@@ -32340,28 +32340,28 @@
       "sha256": "048cdbee78b7be34b6ffac4b04019078f7f044a13a918d25472c7ad4d850d5ae"
     },
     {
-      "bytes": 4863,
-      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
-      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "bytes": 9699,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py",
       "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
-      "sha256": "16df667ecad5ba64434f249205f2a3257674d601a387e01a69c9318250b84f18"
+      "sha256": "cae5451450c268f37235e7894f6f03e225f0f7589c41cb291dcde9ac8e231f38"
     },
     {
-      "bytes": 5137,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 5289,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py",
       "retention_reason": "Fixed cap instantaneous material-wall coupling and independent controls",
-      "sha256": "3b794b499afa67d101d20ba1669a2f11ddcc501866aa7780e2151554f3c5a8ec"
+      "sha256": "1159d3244334cbd470c0a2ea88cc7d375fe4d680f8900c47b606d44ecfbd47b4"
     },
     {
-      "bytes": 13031,
-      "change": "Connect the fixed cap to actual hybrid wall inputs and retain scalar and temporal mass residuals.",
-      "changed_from_commit": "17e6b90b556a4cfa2337291f0d0d4e787bf8c6e7",
+      "bytes": 18487,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "e125c43c4f6bf19693ebcd87370816f78ab80dffbaa9dcba84014c6f575832c2"
+      "sha256": "4183241015129542fd5c86a9429a76054866151183a9e5178deea6724907c3e3"
     },
     {
       "bytes": 7147,
@@ -36082,6 +36082,14 @@
       "original_path": "lab/tests/test_nsc_atlas_field_transfer.py",
       "path": "tests/test_nsc_atlas_field_transfer.py",
       "sha256": "1238ec27efeeba6106a3b638fc799ba88ac82a62f2d8acbbee64feb40658118d"
+    },
+    {
+      "bytes": 7309,
+      "change": "Retain incoming history in the existing fixed-cap mass calculation, with explicit time sensitivity and actual remainder.",
+      "changed_from_commit": "ad81bd7de9d94b535cd19daa89d1248687182f7b",
+      "path": "tests/test_nsc_atlas_fixed_background_reference.py",
+      "retention_reason": "Independent controls for retained incoming history and the fixed-cap mass derivative.",
+      "sha256": "60086386ea1f1468758421f97fb98435e6cbec17574fd0928b7c839b3034901c"
     },
     {
       "bytes": 6484,

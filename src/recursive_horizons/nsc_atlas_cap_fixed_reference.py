@@ -1,7 +1,8 @@
 """One constrained mass/gradient reference in the fixed physical cap space.
 
-Reuses the radial forward/adjoint engine. Total fields are fixed physical
-polynomials; the wall only clips their domain. No time trajectory is solved.
+Reuses the radial forward/adjoint engine. An optional retained incoming
+history carries the background while fixed polynomials describe departures.
+The wall clips their domain. No time trajectory is solved.
 """
 from fractions import Fraction as Q
 from collections.abc import Mapping
@@ -9,10 +10,12 @@ from types import MappingProxyType
 
 import numpy as np
 from numpy.polynomial.polynomial import polyval
+from numpy.polynomial.legendre import leggauss
 
 from .nsc_atlas_background_cap import _budget
 from .nsc_atlas_cap_fixed_basis import FixedCapBasis,exact_number
-from .nsc_atlas_cap_fixed_bound import fixed_metric_bound
+from .nsc_atlas_cap_fixed_bound import fixed_metric_bound,fixed_background_metric_bound
+from .nsc_atlas_cap_background_jets import RetainedCapBackground,SMALL_Z
 from .nsc_atlas_cap_geometric_reference import _positive_gap
 from .nsc_atlas_cap_radial_reference import reference_potential
 from .nsc_atlas_cap_variational_reference import _radial_variations,GRADIENT_ABSOLUTE_TOLERANCE
@@ -72,8 +75,40 @@ class _Fields:
                     fb=fb,pb=pb,hb=hb,f=float(f),p=k/A0,h=float(h),chi=chi,k=k,chi_z=chi_z)
 
 
+def _background_partition(basis,Z,T,background):
+    """Existing history knots and formula switch in fixed local coordinates."""
+    knots=tuple(Q(float(v)) for v in background.inputs['labels']);time=Q(T)
+    events={Q(SMALL_Z),*(v-time for v in knots),*(time-v for v in knots)}
+    breaks=[0.];owners=[]
+    for cell in range(basis.cells):
+        lo,top=basis.exact_knots[cell:cell+2];width=top-lo;hi=min(top,Z)
+        ends=sorted(v for v in events if lo<v<hi)+[hi]
+        for end in ends:
+            value=cell+float((end-lo)/width)
+            if value<=breaks[-1]:
+                raise ValueError('background integration panel is unresolved in fixed coordinates')
+            breaks.append(value);owners.append(cell)
+    return np.array(breaks),np.array(owners,dtype=int)
+
+
+def _background_time_projection(basis,fields,gram,breaks,owners,background,T,budget):
+    # Each knot-split product has degree <=9: six Gauss points suffice in
+    # real arithmetic. Evaluation and Gram rounding remain numerical errors.
+    nodes,weights=leggauss(6);loads=np.zeros((2,basis.dimension))
+    for panel,cell in enumerate(owners):
+        left,right=breaks[panel:panel+2];half=(right-left)/2
+        for point,weight in zip(left+half*(nodes+1),weights):
+            xi=float(point-cell);row=basis.values(int(cell),xi,budget=budget)
+            z=fields.left[cell]+fields.width[cell]*xi
+            jet=background.reduced_jets(T,z,budget=budget)
+            loads[:,row['indices']]+=half*fields.width[cell]*weight*np.array([jet['k'],jet['k_T']])[:,None]*row['value']
+            budget.check(8*len(row['indices']))
+    return tuple(gram.solve(load,budget=budget) for load in loads)
+
+
 def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_rate=None,
-                        incoming_w_plus=None,budget,rtol=2e-13,atol=2e-15,wall_coupler=None):
+                        incoming_w_plus=None,budget,rtol=2e-13,atol=2e-15,wall_coupler=None,
+                        background=None,background_time=None):
     """One instantaneous radial solve and weak coefficient RHS.
 
     The metric certificate covers exact rational shapes and binary inputs.
@@ -82,6 +117,8 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
     A wall_coupler receives one immutable scalar metric/trace packet after
     the radial solve. It supplies T_x, radius_rate and incoming_w_plus from
     the same junction, instead of independently supplied diagnostic rates.
+    With a retained background, coefficients are departures. Its explicit
+    time gradient and the actual affine mass remainder remain in the result.
     """
     budget=_budget(budget);before=budget.evaluations
     if not isinstance(basis,FixedCapBasis): raise ValueError('require a fixed local basis')
@@ -90,6 +127,12 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         raise ValueError('fixed coefficient dimensions differ')
     Z=exact_number(Z,'wall coordinate')
     alpha=_scalar(alpha,'alpha',nonnegative=True)
+    if background is not None:
+        if not isinstance(background,RetainedCapBackground):
+            raise ValueError('fixed cap requires original retained background data')
+        time=_scalar(background_time,'background time')
+    elif background_time is not None:
+        raise ValueError('background time requires a retained background')
     if wall_coupler is None:
         tx=_scalar(T_x,'T_x',positive=True)
         rx=_scalar(radius_rate,'radius rate');incoming=_scalar(incoming_w_plus,'incoming wall field')
@@ -101,7 +144,8 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         raise ValueError('fixed reference radial tolerances outside the numerical domain')
     if alpha>0 and np.sqrt(alpha/6)==0:
         raise ValueError('fixed reference alpha scale underflows')
-    certificate=fixed_metric_bound(basis,c,d,Z,alpha=alpha,budget=budget)
+    certificate=(fixed_metric_bound(basis,c,d,Z,alpha=alpha,budget=budget) if background is None else
+        fixed_background_metric_bound(basis,c,d,Z,background=background,T=time,alpha=alpha,budget=budget))
     gram=basis.gram(Z,budget=budget)
     count=basis.dimension
     cut=float((Z-basis.exact_knots[-2])/(basis.exact_knots[-1]-basis.exact_knots[-2]))
@@ -110,15 +154,37 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
     breaks=np.arange(basis.cells+1,dtype=float)
     breaks[-1]=basis.cells-1+cut
     fields=_Fields(basis,c,d,budget)
+    owners=np.arange(basis.cells)
+    if background is not None:
+        breaks,owners=_background_partition(basis,Z,time,background)
+        a_h,b_h=_background_time_projection(basis,fields,gram,breaks,owners,background,time,budget)
+    nonzero_total_seen=False
 
-    def coefficients(cell,point,mass):
-        if not 0<=cell<basis.cells or not breaks[cell]<=point<=breaks[cell+1]:
-            raise ValueError('fixed radial evaluation escaped its physical cell')
-        xi=point-cell
-        if point==breaks[cell+1]: xi=cut if cell==basis.cells-1 else 1.
+    def total_fields(cell,xi):
+        nonlocal nonzero_total_seen
         row=fields.evaluate(cell,xi,budget)
+        if background is not None:
+            bg=background.reduced_jets(time,row['z'],budget=budget)
+            for key in ('f','p','h','chi','k','chi_z'): row[key]+=bg[key]
+            row['background']=bg
+        nonzero_total_seen |= any(row[key]!=0 for key in ('f','p','h'))
+        return row
+
+    def coefficients(panel,point,mass):
+        if not 0<=panel<len(owners):
+            raise ValueError('fixed radial evaluation escaped its physical cell')
+        left,right=breaks[panel:panel+2]
+        # A Runge--Kutta endpoint formed as t+c*h can round one ulp past
+        # its declared panel. Restore that endpoint, without extrapolation.
+        if not np.nextafter(left,-np.inf)<=point<=np.nextafter(right,np.inf):
+            raise ValueError('fixed radial evaluation escaped its physical cell')
+        point=min(right,max(left,point))
+        cell=int(owners[panel])
+        xi=point-cell
+        if point==breaks[-1]: xi=cut
+        row=total_fields(cell,xi)
         r,A0=row['r'],row['A0'];jacobian=fields.width[cell]*A0
-        partials=np.zeros(2*count);budget.check(2*count+48)
+        partials=np.zeros(2*count+(background is not None));budget.check(len(partials)+48)
         if r==0: return r,jacobian,1.,0.,0.,partials
         f,p,h=row['f'],row['p'],row['h']
         potential=reference_potential(np.array([f]),alpha,budget=budget)
@@ -131,21 +197,30 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
         idx=row['indices']
         partials[idx]=r*r*U*row['fb']/2+A*h*row['hb']/2
         partials[count+idx]=A*p*row['pb']/2
+        if background is not None:
+            bg=row['background']
+            partials[-1]=r*r*U*bg['f_T']/2+A*(p*bg['p_T']+h*bg['h_T'])/2
         return r,jacobian,A,a,rho,partials
 
     try:
         with np.errstate(over='raise',invalid='raise',divide='raise'):
             centre_f=float(c[0]/fields.width[0]);centre_pi=float(d[0]/fields.width[0])
+            if background is not None:
+                axis=background.reduced_jets(time,0.,budget=budget)
+                centre_f+=axis['f'];centre_pi+=axis['f_T']
             q=np.sqrt(alpha/6)*centre_f
             centre_lapse=-float(np.log1p(2*np.sinh(q/2)**2))
             reference=_radial_variations(breaks,coefficients,centre_lapse=centre_lapse,
-                derivative_count=2*count,nonzero_field=bool(np.any(c) or np.any(d)),
+                derivative_count=2*count+(background is not None),
+                nonzero_field=bool(np.any(c) or np.any(d)) if background is None else False,
                 budget=budget,rtol=rtol,atol=atol)
             mass,lapse=reference['mass'],reference['lapse']
-            gc,gd=reference['gradient'][:count],reference['gradient'][count:]
-            wall=fields.evaluate(basis.cells-1,cut,budget)
+            if mass==0 and nonzero_total_seen: raise ValueError('positive total background mass is unresolved')
+            gc,gd=reference['gradient'][:count],reference['gradient'][count:2*count]
+            explicit_time=float(reference['gradient'][-1]) if background is not None else 0.
+            wall=total_fields(basis.cells-1,cut)
             R,A0=wall['r'],wall['A0']
-            _,_,A,_,rho,_=coefficients(basis.cells-1,breaks[-1],mass)
+            _,_,A,_,rho,_=coefficients(len(owners)-1,breaks[-1],mass)
             mu=float(np.exp(lapse));B=A*mu
             if wall_coupler is not None:
                 packet=MappingProxyType(dict(radius=R,f=wall['f'],p=wall['p'],h=wall['h'],
@@ -159,19 +234,24 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
             if not abs(rx)<tx*B: raise ValueError('fixed cap wall speed is not timelike')
             V=2*mu*gram.solve(gd,budget=budget)
             idx=gram.wall['indices'];e=gram.wall['value']
-            vw=float(e@V[idx]);drive=B*R*incoming
+            if background is not None: V-=a_h
+            vw=float(e@V[idx])
+            if background is not None: vw+=wall['background']['k']
+            drive=B*R*incoming
             force=-2*mu*gc.copy();force[idx]+=e*(drive-vw)
-            c_rate=tx*V;d_rate=tx*gram.solve(force,budget=budget)
+            density_rate=gram.solve(force,budget=budget)
+            if background is not None: density_rate-=b_h
+            c_rate=tx*V;d_rate=tx*density_rate
             # Propagate the independent gradient comparison through the
             # actual Gram solves; a small unscaled gradient gap can amplify.
             gradient_gap=reference['gradient']-reference['adjoint_gradient']
-            velocity_gap=2*mu*gram.solve(gradient_gap[count:],budget=budget)
+            velocity_gap=2*mu*gram.solve(gradient_gap[count:2*count],budget=budget)
             wall_velocity_gap=float(e@velocity_gap[idx])
             force_gap=-2*mu*gradient_gap[:count].copy()
             force_gap[idx]-=e*wall_velocity_gap
             density_rate_gap=tx*gram.solve(force_gap,budget=budget)
             weak_flux=vw*(drive-vw)/(2*mu)
-            mass_rate=float(gc@c_rate+gd@d_rate+rx*rho)
+            mass_rate=float(tx*explicit_time+gc@c_rate+gd@d_rate+rx*rho)
             expected=tx*weak_flux+rx*rho
             pweak=vw/B;hweak=R*incoming-pweak
             budget.check(80*count+128)
@@ -179,7 +259,7 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
                 T_x=tx,radius_rate=rx,dimension=count,cells=basis.cells,
                 gradient=dict(chi=gc.copy(),canonical_density=gd.copy()),
                 adjoint_gradient=dict(chi=reference['adjoint_gradient'][:count],
-                                      canonical_density=reference['adjoint_gradient'][count:]),
+                                      canonical_density=reference['adjoint_gradient'][count:2*count]),
                 gradient_discrepancy=reference['gradient_discrepancy'],
                 gradient_absolute_tolerance=GRADIENT_ABSOLUTE_TOLERANCE,
                 projected_gradient_discrepancy=dict(
@@ -197,9 +277,9 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
                     velocity_discrepancy=float(vw-B*wall['p']),momentum_discrepancy=float(wall['p']-pweak),
                     normal_discrepancy=float(wall['h']-hweak),
                     incoming_discrepancy=float((wall['p']+wall['h'])/R-incoming),
-                    polynomial_value_discrepancy=float(wall['chi']-e@c[idx]),
-                    polynomial_density_discrepancy=float(wall['k']-e@d[idx]),
-                    polynomial_slope_discrepancy=float(wall['chi_z']-gram.wall['first']@c[idx])),
+                    polynomial_value_discrepancy=float(wall['chi']-(wall['background']['chi'] if background is not None else 0.)-e@c[idx]),
+                    polynomial_density_discrepancy=float(wall['k']-(wall['background']['k'] if background is not None else 0.)-e@d[idx]),
+                    polynomial_slope_discrepancy=float(wall['chi_z']-(wall['background']['chi_z'] if background is not None else 0.)-gram.wall['first']@c[idx])),
                 wall_coordinate_roundoff=float(Q(wall['z'])-Z),
                 centre=dict(f=centre_f,Pi=centre_pi,Phi=0.,delta=centre_lapse),
                 metric_certificate=certificate,scaled_gram_condition=gram.condition,
@@ -207,6 +287,16 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
                 requested_tolerances=dict(rtol=rtol,atol=atol),adjoint_order=reference['adjoint_order'],
                 coefficient_evaluations=budget.evaluations-before,numerical_error_enclosure=False,
                 domain='one fixed-physical-space constrained mass and weak RHS; no time evolution')
+            if background is not None:
+                wall_gap=float(wall['background']['k']-e@a_h[idx])
+                remainder=float(explicit_time-gc@a_h-gd@b_h-wall_gap*(drive-vw)/(2*mu))
+                result['gradient']['T']=explicit_time
+                result['adjoint_gradient']['T']=float(reference['adjoint_gradient'][-1])
+                result['background']=dict(time=time,radial_intervals=len(owners),
+                    projected_time_chi=a_h,projected_time_density=b_h,wall_time_projection_gap=wall_gap)
+                result['explicit_time_remainder']=remainder
+                result['remainder_identity_defect']=float(result['weak_balance_defect']-tx*remainder)
+                result['domain']='one retained-history plus fixed-departure constrained mass and weak RHS; no time evolution'
     except (FloatingPointError,np.linalg.LinAlgError) as error:
         raise ValueError('unresolved fixed cap arithmetic') from error
     def finite(value):

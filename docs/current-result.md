@@ -32,10 +32,16 @@ now implement both generated field families and the common-value hybrid
 connection. Six controls pass in seven executions with 27,948 values /
 0.234375 active CPU seconds, including independent 70-digit polar-equation
 and 80-digit frame arithmetic. Their mass outputs are targets, not a
-computed mass-balance result. The next connection is the incoming-history
-representation and its explicit-time constrained mass derivative. The
-failed runtime attempt is retained; no scan, source solve or trajectory
-retry has been run.
+computed mass-balance result. The [incoming-history extension](nsc-atlas-finite-amplitude.md#incoming-history-with-fixed-departures-and-an-actual-mass-derivative)
+now calculates that derivative through the same radial constraint, keeping
+the affine remainder. Four new controls and six existing controls pass in
+15 development executions: 4,569,376 values / 5.28125 active CPU seconds.
+The independent incoming quartic mass formula agrees; its common-wall
+scalar-flux discrepancy is `1.35278e-13` and actual temporal mass discrepancy
+`-8.81777e-18`. This is a manufactured zero-coupling event. Connecting the
+prepared physical history and evolving its finite-coupling departures
+remain next. The failed runtime attempt is retained; no scan, source solve
+or trajectory retry has been run.
 
 Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
 and independent Grok review identify the scalar tangent and temporal mass

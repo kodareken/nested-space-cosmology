@@ -6055,8 +6055,8 @@ metric/domain/budget rejection. No source, radial ODE or physical time
 evolution is run. Independent Grok derivation confirms the continuum
 signs, characteristic directions and nonlinear wall conversion.
 
-The next connection is the incoming-history field representation and its
-actual constrained mass derivative. The existing characteristic profile
+The following section supplies the incoming-history field representation
+and its actual constrained mass derivative. The existing characteristic profile
 and regular background jets supply the reference history; finite-alpha
 departures must retain the generated outgoing field and explicit-time
 mass contribution. A common numerical history and boundary flux are still
@@ -6072,6 +6072,97 @@ self-consistent derivatives of its declared C2 Hermite representation.
 The original background/profile adapter made its second jets by a declared
 gradient of supplied first jets. Those two numerical derivative meanings
 must remain distinct when forming the history and its error account.
+
+### Incoming history with fixed departures and an actual mass derivative
+
+The [fixed-space radial adapter](../src/recursive_horizons/nsc_atlas_cap_fixed_reference.py)
+now accepts the existing `RetainedCapBackground`, with fixed physical C1
+quintic departures:
+
+\[
+ \chi=\chi_0(T,z)+\varphi(z)^Tc,\qquad
+ k=k_0(T,z)+\varphi(z)^Td,\qquad z=\operatorname{atanh}r.
+\]
+
+Here \(k_0=\partial_T\chi_0\). The incoming front stays in the background
+representation. Only its time derivatives are projected when forming the
+departure rates. The radial forward sensitivity and independent adjoint
+use the same total fields and inherited centre lapse. Alongside \(g_c,g_d\),
+they calculate \(N_T\) at fixed coefficients and fixed physical radius.
+This derivative is calculated from the radial constraint, not assigned
+the wall-flux target.
+
+Let \(a_h=M^{-1}\int\varphi k_0\,dz\),
+\(b_h=M^{-1}\int\varphi\partial_Tk_0\,dz\),
+\(e=\varphi(Z)\), \(a_W=k_0(T,Z)\), \(\mu=e^{\delta_W}\), and
+\(C=BRw_+\). The implemented rates and total wall velocity are
+
+\[
+ v=2\mu M^{-1}g_d-a_h,\quad V_W=a_W+e^Tv,\quad
+ w=M^{-1}[-2\mu g_c+e(C-V_W)]-b_h,
+ \qquad c_x=T_xv,\quad d_x=T_xw.
+\]
+
+The actual derivative and its retained remainder obey
+
+\[
+ \begin{aligned}
+ N_x&=T_xN_T+g_c^Tc_x+g_d^Td_x+R_x\rho_W\\
+ &=T_x\left[\frac{V_W(C-V_W)}{2\mu}+\mathcal R\right]+R_x\rho_W,\\
+ \mathcal R&=N_T-g_c^Ta_h-g_d^Tb_h
+ -\frac{(a_W-e^Ta_h)(C-V_W)}{2\mu}.
+ \end{aligned}
+\]
+
+Symmetry of the same Gram solve cancels the two bulk products. Neither
+completeness of the departure space nor vanishing remainder is assumed.
+The inherited central lapse affects the wall rate through mu; it does not
+add a term to the constrained mass sensitivity because only the integrated
+radial lapse difference enters the zero-centre-mass solution. Moving C2
+history knots have continuous radial source, so their Leibniz jump is zero.
+The wall endpoint contributes \(R_x\rho_W\). These are first variations;
+the coefficient rate itself is not differentiated a second time.
+
+The [metric certificate](../src/recursive_horizons/nsc_atlas_cap_fixed_bound.py)
+combines original Hermite control hulls and exact fixed-cell polynomial
+hulls over their existing rational cuts. Centre slope bounds remove the
+apparent inverse-radius singularities. The radial source envelope supplies
+an all-radius lower bound for A. Numerical interpolation, ODE and time
+evolution errors remain outside that certificate. Radial integration and
+six-point polynomial projection additionally split at the existing
+small-z formula switch; no resolution scan is used. A solver endpoint
+rounded at most one ULP beyond its panel is restored to that endpoint;
+larger excursions fail.
+
+Four [new controls](../tests/test_nsc_atlas_fixed_background_reference.py)
+and six existing fixed-reference controls pass in 15 development executions,
+using **4,569,376 charged values / 5.28125 active CPU seconds**. They include
+identical total-polynomial versus background/departure calculations, an
+independent clock difference for N_T, a nonrepresentable incoming quartic
+front, a nonzero finite-coupling remainder, quiet/cancelling fields and
+domain rejection. Grok independently verifies the affine mass identity
+and the combined certificate's hull/envelope construction. Its axis
+conditions are enforced by `FixedCapBasis`: the first knot is zero and
+the first cell is odd.
+
+For the quartic control \(F=(\lambda-1/2)_+^4/64\), \(T=1/8,Z=1/2\),
+the computed mass is `1.268548382311671e-10` and explicit time derivative
+`7.05434095864415e-9`, agreeing with the preceding independent formulas.
+The common hybrid's conformal scalar-flux discrepancy is `1.35278e-13`;
+its **actual** temporal mass discrepancy is `-8.81777e-18`. This is one
+manufactured zero-coupling event. Departure rates are checked in the
+physical Gram norm and at the wall, since raw coefficients amplify
+quadrature error in a clipped basis. A separately rounded cancelling field
+may leave mass below numerical resolution; negative/unresolved mass is
+rejected rather than declared a physical zero.
+
+The [hybrid adapter](../src/recursive_horizons/nsc_atlas_cap_fixed_hybrid.py)
+passes these total fields through its existing common-value wall callback.
+No prepared physical source or finite-time trajectory has been replayed.
+The next connection is to supply the incoming history through the existing
+prepared-field interface, distinguish its continuum second jet from its
+numerical interpolation derivative, and keep the finite-coupling departure
+and time-remainder checks in that common evolution.
 
 ### Central clock in general null labels
 

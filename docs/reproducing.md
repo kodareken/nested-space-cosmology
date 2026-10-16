@@ -359,6 +359,23 @@ and incoming-cap controls use 38,000 / 1.28125. The six finite-coupling
 characteristic/port controls pass in seven executions using 27,948 /
 0.234375, including the affected port repeat after stable frame evaluation.
 None replays fields.
+
+The incoming-history extension of the same fixed radial mass adapter:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_fixed_background_reference.py -q -s
+```
+
+The four controls check total-field equivalence, independent explicit-time
+mass sensitivity, the incoming quartic mass and common-wall flux, the
+finite-coupling remainder, quiet/cancelling fields and domain rejection.
+Including one execution of the six existing fixed-reference controls and
+targeted repairs, development used 4,569,376 values / 5.28125 active CPU
+seconds. The [owner](nsc-atlas-finite-amplitude.md#incoming-history-with-fixed-departures-and-an-actual-mass-derivative)
+keeps numerical resolution distinct from the exact-input metric bound.
+This command uses manufactured histories, without a physical source or
+time-trajectory replay.
+
 The numerical attempt was produced with
 `python scripts/run_python.py scripts/run_nsc_atlas_fixed_onset.py --output results/summaries/nsc-atlas-fixed-onset-v1.json`.
 It stopped at the 180-second CPU check after 341/371 steps. Preserve that

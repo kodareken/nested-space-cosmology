@@ -1683,6 +1683,49 @@ existing hybrid is unchanged. The next connection is the retained incoming
 history and its explicit-time constrained mass derivative, without a
 source refit or scan.
 
+### Retained incoming history in the fixed physical cap space
+
+Extend `fixed_cap_reference()` with the existing `RetainedCapBackground`.
+Keep the fixed C1 quintic basis for departures and retain the background
+primitive and density directly. Reuse the radial forward/adjoint engine,
+including an explicit-time sensitivity channel, and the established affine
+mass remainder. The wall callback receives total fields. Preserve the
+existing no-background path and the actual inherited central lapse.
+
+The all-radius certificate combines the original Hermite control hulls with
+the exact fixed-cell polynomial hulls on the union of their existing cuts.
+Whole-cell bounds on subpanels are conservative; no subdivision search or
+resolution campaign is admitted. Radial integration and background-time
+projection split at existing fixed cells, mapped history knots and the
+small-z formula switch. The C2 background leaves the radial source
+continuous across its moving knots; no added tangent basis is introduced.
+
+Controls share **6,000,000 charged values / 60 active CPU seconds**. Compare
+an affine polynomial history with the identical total fixed polynomial,
+check the explicit-time gradient independently, retain a nonrepresentable
+incoming quartic front without projection, check the actual remainder and
+wall trace, recover quiet/cancelling fields, and reject unresolved domain,
+metric or budget conditions. Include the existing fixed-reference controls
+once to cover the unchanged path. Independent Grok reviews the certificate
+composition and mass derivative. No retained source solve or trajectory is
+part of these controls; any failed identity is diagnosed before a rerun.
+
+**Outcome:** all four new and six existing controls pass across 15
+development executions, with **4,569,376 values / 5.28125 active CPU
+seconds**. The first execution uses 629,879 new-control values plus
+3,020,160 existing-control values (1.28125 + 2.4375 CPU seconds). Three
+failures identify a one-ULP Runge--Kutta endpoint overrun. After restoring
+only such endpoints, the three targeted controls use 441,108 / 0.796875;
+one passes. The remaining checks diagnose coefficient amplification in
+the clipped basis and a cancellation below mass resolution. Physical
+Gram/wall norms and explicit unresolved-mass handling give the final two
+passes with 478,229 / 0.765625. No equation, mesh, radial tolerance or source
+is tuned. The [owner](nsc-atlas-finite-amplitude.md#incoming-history-with-fixed-departures-and-an-actual-mass-derivative)
+records the calculated incoming mass, actual wall residuals and nonzero
+finite-coupling remainder. Grok independently confirms the mass identity;
+the metric bound covers exact input interpolants, excluding numerical
+evaluation and evolution errors. No physical source replay occurs.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

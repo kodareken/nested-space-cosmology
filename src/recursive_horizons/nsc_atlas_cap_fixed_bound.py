@@ -11,7 +11,8 @@ import numpy as np
 from flint import arb,ctx,fmpq
 
 from .nsc_atlas_background_cap import _budget
-from .nsc_atlas_cap_background_bound import _envelope_step
+from .nsc_atlas_cap_background_bound import _envelope_step, _hermite_controls, _piece_ranges
+from .nsc_atlas_cap_background_jets import RetainedCapBackground
 from .nsc_atlas_cap_fixed_basis import FixedCapBasis,exact_number
 from .nsc_atlas_polar_cap import _scalar,_vector
 
@@ -96,5 +97,77 @@ def fixed_metric_bound(basis,chi,canonical_density,Z,*,alpha,budget):
             interval_count=basis.cells,wall_cut_fraction=float(cut),
             coefficient_evaluations=budget.evaluations-before,
             scope='exact rational fixed shapes with binary coefficient inputs; floating field evaluation, radial ODE and evolution errors excluded')
+    budget.check()
+    return result
+
+
+def fixed_background_metric_bound(basis,chi,canonical_density,Z,*,background,T,alpha,budget):
+    """Exact-C2 history plus fixed departures; existing-cut envelope only."""
+    budget=_budget(budget);before=budget.evaluations
+    if not isinstance(basis,FixedCapBasis) or not isinstance(background,RetainedCapBackground):
+        raise ValueError('require fixed basis and original retained Hermite background')
+    chi=_vector(chi,'chi');density=_vector(canonical_density,'canonical density')
+    if chi.shape!=(basis.dimension,) or density.shape!=chi.shape:
+        raise ValueError('fixed background coefficient dimensions differ')
+    Z=exact_number(Z,'wall coordinate');T=Q(_scalar(T,'background time'))
+    cut=(Z-basis.exact_knots[-2])/(basis.exact_knots[-1]-basis.exact_knots[-2])
+    if not Q(1,4)<=cut<=Q(3,4): raise ValueError('fixed background wall cut leaves [1/4,3/4]')
+    alpha=_scalar(alpha,'alpha',nonnegative=True)
+    data=background.inputs;labels=tuple(Q(float(v)) for v in data['labels'])
+    if T+Z>labels[-1] or (not background.profile.quiet_extension and T-Z<labels[0]):
+        raise ValueError('exact slice exits the supplied Hermite domain')
+    exact=(tuple(Q(float(v)) for v in chi),tuple(Q(float(v)) for v in density))
+    budget.check(96*(len(labels)-1)+64*basis.dimension)
+    with ctx.workprec(160):
+        tb,zb,al=_ball(T),_ball(Z),_ball(alpha)
+        if not 0<zb.tanh()<1: raise ValueError('background metric interval is unresolved')
+        knots=list(map(_ball,labels))
+        v,d,s=([_ball(x) for x in data[k]] for k in ('values','first','second'))
+        controls=[_hermite_controls(v[i],d[i],s[i],v[i+1],d[i+1],s[i+1],knots[i+1]-knots[i])
+                  for i in range(len(knots)-1)]
+        mapped=sorted({z for label in labels for z in (label-T,T-label) if 0<z<Z})
+        U=arb(0);floors=[];panels=0
+        for cell in range(basis.cells):
+            lo,hi=basis.exact_knots[cell:cell+2];width=hi-lo;hi=min(hi,Z)
+            top=(hi-lo)/width;idx=basis.indices(cell);shapes=basis.exact_shapes(cell)
+            pieces=[tuple(sum(row[j]*coeff[int(i)] for j,i in enumerate(idx)) for row in shapes)
+                    for coeff in exact]
+            derivatives=[tuple(j*poly[j]/width for j in range(1,len(poly))) for poly in pieces]
+            cb,kb=(_hull(poly,top) for poly in pieces)
+            lc,lk=(_hull(poly,top) for poly in derivatives)
+            cuts=[lo,*(z for z in mapped if lo<z<hi),hi]
+            for left,right in zip(cuts[:-1],cuts[1:]):
+                lob,hib=_ball(left),_ball(right);rl,rh=lob.tanh(),hib.tanh()
+                Ahi,Alo=1/hib.cosh()**2,1/lob.cosh()**2
+                plus=_piece_ranges(knots,controls,tb+lob,tb+hib,budget)
+                minus=_piece_ranges(knots,controls,tb-hib,tb-lob,budget)
+                Lchi=(plus[1]+minus[1]+lc).upper()
+                if left==0:
+                    Lk=(plus[2]+minus[2]+lk).upper()
+                    fmax=(Lchi*hib/rh.lower()).upper()
+                    pmax=(Lk*hib/Ahi.lower()).upper()
+                else:
+                    fmax=((plus[0]+minus[0]+cb)/rl.lower()).upper()
+                    pmax=((plus[1]+minus[1]+kb)/Ahi.lower()).upper()
+                hmax=(Lchi/Ahi.lower()+fmax).upper()
+                argument=(al/6).sqrt()*fmax
+                if not argument<=100: raise ValueError('fixed background potential bound leaves domain')
+                potential=(fmax*fmax if al==0 or fmax==0 else
+                           fmax*fmax*(argument.sinh()/argument)**2*(argument.cosh()**2+1)/2)
+                source=(rh*rh*potential/2+Alo*(pmax*pmax+hmax*hmax)/4).upper()
+                U,ratio=_envelope_step(U,source,rl,rh)
+                floor=(Ahi-2*al*ratio).lower();budget.check(1024);panels+=1
+                if not floor.is_finite() or not floor>0:
+                    raise ValueError('sufficient fixed background metric bound is not positive')
+                floors.append(floor)
+        lower=min(floors);mantissa,exponent=lower.man_exp()
+        down=float(np.nextafter(float(lower),-np.inf))
+        upper=0. if U==0 else float(np.nextafter(float(U.upper()),np.inf))
+        if not np.isfinite(down) or down<=0 or not np.isfinite(upper):
+            raise ValueError('fixed background metric certificate is not representable')
+        result=dict(A_lower=dict(mantissa=str(mantissa),exponent=int(exponent)),
+            A_lower_float_down=down,mass_upper=upper,precision_bits=ctx.prec,interval_count=panels,
+            coefficient_evaluations=budget.evaluations-before,
+            scope='exact C2 Hermite background plus rational fixed shapes and binary departures; numerical interpolation, ODE and evolution errors excluded')
     budget.check()
     return result
