@@ -10,7 +10,7 @@ import time
 import uuid
 
 import numpy as np
-from recursive_horizons.nsc_atlas_validation import collect_departure_replay
+from recursive_horizons.nsc_atlas_validation import collect_departure_replay, profile_interval_replay_equal
 from validation_source_successors import verify_saved_bindings, verify_saved_source
 
 import record_nsc_atlas_ssprk3_evolution as previous
@@ -331,7 +331,11 @@ def validate_record(record,budget=None,*,require_creation=True):
         before=budget.evaluations
         replay_allowances = {}
         rebuilt = diagnostics(record,parent,background,base,profile,budget,replay_allowances=replay_allowances)
-        _equal(record["diagnostics"],rebuilt,"diagnostics",roundoff=replay_allowances)
+        saved_diagnostics = record["diagnostics"]
+        profile_interval_replay_equal(saved_diagnostics["profile_intervals"],saved_diagnostics["profile_knots"],
+                                      rebuilt["profile_intervals"],rebuilt["profile_knots"])
+        _equal({k:v for k,v in saved_diagnostics.items() if k!="profile_intervals"},
+               {k:v for k,v in rebuilt.items() if k!="profile_intervals"},"diagnostics",roundoff=replay_allowances)
         diagnostic_charges=budget.evaluations-before
         expected=dict(initial_evaluations=initial,evaluations=end+diagnostic_charges,
             inherited_authentication_evaluations=auth_charges,cache_evaluations=cache_charges,

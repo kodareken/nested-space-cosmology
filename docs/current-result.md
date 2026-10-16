@@ -113,8 +113,16 @@ calculation for the unchanged producer. Its ten controls pass with 9,356
 charged values / 0.03125 active CPU seconds. The field adapter now supplies
 named limits on both sides of `r=0.01` and the regular axis coefficients;
 all 27 field controls pass, with cumulative 18,526 values / 0.609375 seconds.
-Full cap composition, interface bookkeeping and a controlled retained-state
-error comparison are still outstanding.
+The [cap composer](../src/recursive_horizons/nsc_atlas_cap_radial_comparison.py)
+now compares the native and reference affine maps, including moving endpoints
+and reference pieces born at the fixed formula switch. Its local-error sum
+and derivative independently reproduce the differences of the final masses
+and rates. Seven manufactured controls pass; cumulative development uses
+472,439 charged values / 6.625 active CPU seconds. Grok reviewed the
+composition and arithmetic allowance. These are checks on computed maps,
+not an integration-error enclosure. Native switch-domain exclusions remain
+explicit. The reference lapse, field-residual and jump integrals, and a
+controlled retained-state error comparison remain outstanding.
 
 ## Terminal cap mass-functional derivative, 16 October 2026
 

@@ -252,6 +252,77 @@ def collect_departure_replay(allowances, case_index, source, alpha, **histories)
             allowances[("histories", case_index, name, *path)] = bound
 
 
+def profile_interval_replay_equal(saved, saved_knots, rebuilt, rebuilt_knots):
+    """Authenticate diagnostic brackets at rounded profile-knot coincidences.
+
+    Each integer array must exactly match searchsorted on its own saved
+    floating operands. Alternate brackets are allowed only across one common
+    knot, with both queries at that knot within sixteen binary64 units. This
+    is twice the endpoint replay policy, not an interpolation or field error.
+    Crossing counts are derived from those same authenticated brackets. No
+    integer tolerance, mutation of records, or change to profile evaluation.
+    """
+    eps = np.finfo(float).eps
+    keys = {"x", "q", "left_knot_index", "right_knot_index",
+            "strictly_interior_knots_per_saved_interval", "interpretation"}
+
+    def floats(values):
+        a = np.asarray(values)
+        if (a.ndim != 1 or not len(a) or a.dtype.kind != "f"
+                or any(type(v) is not float for v in np.asarray(values, dtype=object))
+                or not np.all(np.isfinite(a)) or np.any(np.diff(a) <= 0)):
+            raise ValueError("profile interval replay requires finite increasing float coordinates")
+        return a
+
+    def allowance(a, b):
+        return 16*eps*np.maximum(1., np.maximum(abs(a), abs(b)))
+
+    ka, kb = floats(saved_knots), floats(rebuilt_knots)
+    if ka.shape != kb.shape or np.any(abs(ka-kb) > allowance(ka, kb)):
+        raise ValueError("profile interval replay knot coordinates differ")
+    if not isinstance(saved, list) or not isinstance(rebuilt, list) or len(saved) != len(rebuilt):
+        raise ValueError("profile interval replay case inventory differs")
+    for a, b in zip(saved, rebuilt):
+        if not isinstance(a, dict) or not isinstance(b, dict) or set(a) != keys or set(b) != keys:
+            raise ValueError("profile interval replay row inventory differs")
+        qa, qb = floats(a["q"]), floats(b["q"])
+        xa, xb = floats(a["x"]), floats(b["x"])
+        if (qa.shape != qb.shape or xa.shape != qa.shape or xb.shape != qb.shape
+                or not np.array_equal(xa, xb) or a["interpretation"] != b["interpretation"]
+                or not isinstance(a["interpretation"], str)
+                or np.any(abs(qa-qb) > allowance(qa, qb))):
+            raise ValueError("profile interval replay query or metadata differs")
+        brackets = []
+        for row, q, knots in ((a, qa, ka), (b, qb, kb)):
+            left = np.searchsorted(knots, q, side="right")-1
+            right = np.searchsorted(knots, q, side="left")
+            crossed = np.maximum(0, right[1:]-left[:-1]-1)
+            for key, expected in (("left_knot_index", left), ("right_knot_index", right),
+                    ("strictly_interior_knots_per_saved_interval", crossed)):
+                values = row[key]
+                if (not isinstance(values, list) or any(type(v) is not int for v in values)
+                        or np.asarray(values).shape != expected.shape or not np.array_equal(values, expected)):
+                    raise ValueError("profile interval replay integer is inconsistent with its operands: "+key)
+            brackets.append((left, right))
+        for side in (0, 1):
+            ia, ib = brackets[0][side], brackets[1][side]
+            changed = ia != ib
+            j = np.maximum(ia, ib) if side == 0 else np.minimum(ia, ib)
+            j = j[changed]
+            if (np.any(abs(ia-ib) > 1) or np.any(j < 0) or np.any(j >= len(ka))):
+                raise ValueError("profile interval replay bracket change is not adjacent")
+            if (np.any(abs(qa[changed]-ka[j]) > allowance(qa[changed], ka[j]))
+                    or np.any(abs(qb[changed]-kb[j]) > allowance(qb[changed], kb[j]))):
+                raise ValueError("profile interval replay bracket change is away from its knot")
+            for q, knots in ((qa[changed], ka), (qb[changed], kb)):
+                for offset in (-1, 1):
+                    neighbor = j+offset
+                    inside = (neighbor >= 0) & (neighbor < len(knots))
+                    if np.any(abs(q[inside]-knots[neighbor[inside]]) <=
+                              allowance(q[inside], knots[neighbor[inside]])):
+                        raise ValueError("profile interval replay has more than one possible knot")
+
+
 def background_profile_roundoff_tolerances(inputs):
     """Condition the retained C2 profile's arithmetic, not its fit error.
 

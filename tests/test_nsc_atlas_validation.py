@@ -221,3 +221,66 @@ def test_transverse_hermite_value_and_derivative_roundoff_is_propagated():
             changes.append(float(np.max(error)))
     assert max(changes) > 0
     assert np.all(limits["r_Ubar_x"] > 8*np.finfo(float).eps*abs(base["r_Ubar_x"]))
+
+
+def _interval_diagnostic(q, knots):
+    q, knots = np.asarray(q), np.asarray(knots)
+    left = np.searchsorted(knots, q, side='right')-1
+    right = np.searchsorted(knots, q, side='left')
+    return dict(x=np.linspace(.4,.5,len(q)).tolist(),q=q.tolist(),
+        left_knot_index=left.tolist(),right_knot_index=right.tolist(),
+        strictly_interior_knots_per_saved_interval=np.maximum(0,right[1:]-left[:-1]-1).tolist(),
+        interpretation='saved-interval knot brackets')
+
+
+@pytest.mark.parametrize('toward', [-np.inf,np.inf])
+def test_profile_bracket_replay_accepts_consistent_one_ulp_ties(toward):
+    import copy
+    from recursive_horizons.nsc_atlas_validation import profile_interval_replay_equal
+    knots = [0.,.25,.5,.75,1.]
+    queries = [0.,.25,.6,.75,1.]
+    saved = [_interval_diagnostic(queries,knots)]
+    shifted = np.nextafter(queries,toward).tolist()
+    rebuilt = [_interval_diagnostic(shifted,knots)]
+    before = copy.deepcopy((saved,rebuilt))
+    profile_interval_replay_equal(saved,knots,rebuilt,knots)
+    # A rebuilt knot can move instead of the query; counts must move with it.
+    moved_knots = np.nextafter(knots,toward).tolist()
+    profile_interval_replay_equal(saved,knots,[_interval_diagnostic(queries,moved_knots)],moved_knots)
+    assert (saved,rebuilt) == before
+
+
+@pytest.mark.parametrize('key', ['left_knot_index','right_knot_index',
+                                'strictly_interior_knots_per_saved_interval'])
+def test_profile_bracket_replay_rejects_unjustified_integer_changes(key):
+    import copy
+    from recursive_horizons.nsc_atlas_validation import profile_interval_replay_equal
+    knots = [0.,.25,.5,.75,1.]
+    saved = [_interval_diagnostic([.1,.3,.6,.9],knots)]
+    changed = copy.deepcopy(saved)
+    changed[0][key][1] += 1
+    with pytest.raises(ValueError,match='integer is inconsistent'):
+        profile_interval_replay_equal(saved,knots,changed,knots)
+    changed[0][key][1] = float(saved[0][key][1])
+    with pytest.raises(ValueError,match='integer is inconsistent'):
+        profile_interval_replay_equal(saved,knots,changed,knots)
+
+
+def test_profile_bracket_replay_rejects_coordinate_drift_and_multiple_knot_crossings():
+    from recursive_horizons.nsc_atlas_validation import profile_interval_replay_equal
+    knots = [0.,.25,.5,.75,1.]
+    saved = [_interval_diagnostic([.1,.3,.6,.9],knots)]
+    with pytest.raises(ValueError,match='query or metadata'):
+        profile_interval_replay_equal(saved,knots,[_interval_diagnostic([.1,.30000001,.6,.9],knots)],knots)
+    with pytest.raises(ValueError,match='knot coordinates'):
+        profile_interval_replay_equal(saved,knots,saved,[0.,.25000001,.5,.75,1.])
+    close_knots = [0.,.5,float(np.nextafter(.5,np.inf)),1.]
+    a = [_interval_diagnostic([.1,np.nextafter(.5,-np.inf),.9],close_knots)]
+    b = [_interval_diagnostic([.1,np.nextafter(close_knots[2],np.inf),.9],close_knots)]
+    with pytest.raises(ValueError,match='not adjacent'):
+        profile_interval_replay_equal(a,close_knots,b,close_knots)
+    with pytest.raises(ValueError,match='more than one possible knot'):
+        profile_interval_replay_equal(a,close_knots,[_interval_diagnostic([.1,.5,.9],close_knots)],close_knots)
+    for invalid in ([.1,np.nan,.6,.9],[.1,.3,.2,.9]):
+        with pytest.raises(ValueError,match='finite increasing'):
+            profile_interval_replay_equal(saved,knots,[_interval_diagnostic(invalid,knots)],knots)

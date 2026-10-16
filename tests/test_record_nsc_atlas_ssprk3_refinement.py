@@ -69,7 +69,10 @@ def synthetic(budget):
     patch.setattr(tool,"evolve_background_ssprk3",no_evolution)
     def diagnostic(record,parent,background,base,profile,shared, *, replay_allowances=None):
         shared.check(7)
-        return dict(cap=[c["snapshots"][-1]["physical"]["cap"] for c in record["cases"]])
+        return dict(cap=[c["snapshots"][-1]["physical"]["cap"] for c in record["cases"]],
+            profile_knots=[0.,1.5],profile_intervals=[dict(x=[.4,.5],q=[0.,1.],
+                left_knot_index=[0,0],right_knot_index=[0,1],
+                strictly_interior_knots_per_saved_interval=[0],interpretation="manufactured brackets")])
     patch.setattr(tool,"diagnostics",diagnostic)
     rows=[]; saved_end=14
     for label,n,steps in cases:

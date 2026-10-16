@@ -3240,6 +3240,32 @@ the fixed centre endpoint of the affine map. Both switch traces have
 independent cubic-profile controls, and the reference can pass a native
 potential threshold without creating an artificial interface.
 
+The [cap composer](../src/recursive_horizons/nsc_atlas_cap_radial_comparison.py)
+preserves the original quadrature partition for each native map. Reference
+maps additionally split at `r=0.01`, ordered by `(r,-r_x)` along the backward
+ray. This retains zero-width pieces that open under endpoint motion. Each
+reference piece inherits its native owner; no cell face lies inside that
+native panel. A native born panel exactly at a formula switch remains outside
+the original tangent's domain and is rejected, not assigned a new branch.
+
+For consecutive maps, composition is `S=S2*S1`, `T=S2*T1+T2`, with the
+full product rule for both derivatives. The local differences use the native
+entering mass and rate, while the backward weighting uses the reference maps
+and their derivatives. Thus the reported error derivative is constructed from
+local map differences; subtracting the two final derivatives is an independent
+algebra check. Positive absolute recurrences retain cancellation work. With
+`p` native panels, `k=32*p+64` exceeds the operation count along each expanded
+product path; `gamma=k*eps/(1-k*eps)` gives the recurrence comparison allowance
+`gamma*absolute_work/(1-gamma)`. This allowance treats the computed maps as
+inputs. Coefficient evaluation and radial integration errors are separate.
+
+Seven manufactured controls include an exact zero-coupling constant-field
+mass, independent fixed-radius variation on a nonconstant cap, moving faces
+at the fixed switch, and a two-sided born map. They test the local-error
+channel only. The complete balance still needs the reference lapse, bulk
+field residuals, interface flux/density terms and controlled integration error.
+No retained-state comparison or corrected evolution follows from these tests.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

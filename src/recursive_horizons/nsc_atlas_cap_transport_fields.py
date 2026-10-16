@@ -8,7 +8,7 @@ import copy
 import numpy as np
 
 from .nsc_atlas_background_cap import _budget
-from .nsc_atlas_cap_mass_tangent import _Jet, _reconstruction, _total, _departure
+from .nsc_atlas_cap_mass_tangent import _Jet, _reconstruction, _total, _departure, _cuts
 from .nsc_atlas_cap_mass_derivatives import potential_partial, background_partials
 from .nsc_atlas_cap_radial_reference import reference_potential
 from .nsc_atlas_characteristic_background import CharacteristicProfile, MAX_POINTS, SMALL_RADIUS
@@ -69,6 +69,7 @@ class CapTransportFields:
         self._T = _Jet(_scalar(metric["T"], "T"), np.array([tx, 0.]))
         self._alpha = alpha
         self._profile = copy.deepcopy(metric["profile"])
+        self._y_faces = y.copy()
         self._faces = radius*y
         if not np.array_equal(self._faces, metric["r_faces"]):
             raise ValueError("metric faces differ from the declared radius and grid")
@@ -94,6 +95,27 @@ class CapTransportFields:
                 raise ValueError("transport reconstruction differs from retained primal: "+key)
         self.limiter_branches = {k: tuple(v) for k,v in branches.items()}
         budget.check(12*n+2)
+
+    def native_panels(self, *, budget):
+        """Frozen native partition, including backward-born panels and owners."""
+        if budget is not self._budget:
+            raise ValueError("transport queries require the same caller budget")
+        R,T = _Jet(self._R.v,np.array([1.,0.])),_Jet(self._T.v,np.array([0.,1.]))
+        seed = np.array([self._R.d[0],self._T.d[0]])
+        faces = R*self._y_faces
+        events = _cuts(self._profile,T,R,faces,seed,budget)
+        panels=[]
+        for (left,ltag),(right,rtag) in zip(events[:-1],events[1:]):
+            mid=(left+right)/2
+            key=(float(mid.v),-float(mid.d@seed))
+            owner=sum((float(faces.v[i]),-float(faces.d[i]@seed)) <= key
+                      for i in range(len(faces.v)))-1
+            owner=min(max(owner,0),len(faces.v)-2)
+            panels.append(dict(left=float(left.v),right=float(right.v),
+                left_rate=float(left.d@seed),right_rate=float(right.d@seed),
+                owner=owner,left_tag=ltag,right_tag=rtag,born=bool(left.v==right.v)))
+        budget.check(4*len(panels))
+        return panels
 
     def sample(self, cell, radii, *, budget):
         """Return f/Pi/Phi, a/b, their x/r jets, Pdiff and its actual derivative."""

@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "d8d084111120658d6e814fd8823a14bdcb565e47",
+  "current_receipt_commit_parent": "8b7ea21308e7e90f3df97c49e6527777c772f0ec",
   "files": [
     {
       "bytes": 2218,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 209500,
-      "change": "Smooth-potential radial reference and explicit endpoint limits; original import records preserved.",
-      "changed_from_commit": "d8d084111120658d6e814fd8823a14bdcb565e47",
+      "bytes": 209875,
+      "change": "Cap radial composition and conditioned profile bracket replay; original import records preserved.",
+      "changed_from_commit": "8b7ea21308e7e90f3df97c49e6527777c772f0ec",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "a69477a5801708655778c587007dcc7b7be5441300b4deec5bb9545825a55830"
+      "sha256": "d3ac65d352496e7cab3ff5375dc1ded8258987aa1143d0bc68db9a3f8b699af8"
     },
     {
       "bytes": 9543,
@@ -32142,18 +32142,24 @@
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
     },
     {
+      "bytes": 9241,
+      "path": "src/recursive_horizons/nsc_atlas_cap_radial_comparison.py",
+      "retention_reason": "Native and smooth-reference radial map comparison with manufactured mathematical controls.",
+      "sha256": "d1b5aafdc9de16bc1e3e1c39d46b620c7eb6c4b183c9a8117bacee81efef9d38"
+    },
+    {
       "bytes": 7002,
       "path": "src/recursive_horizons/nsc_atlas_cap_radial_reference.py",
       "retention_reason": "Smooth-potential diagnostic reference, moving affine radial maps and independent manufactured controls.",
       "sha256": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab"
     },
     {
-      "bytes": 9960,
-      "change": "Smooth-potential radial reference and explicit endpoint limits; original import records preserved.",
-      "changed_from_commit": "d8d084111120658d6e814fd8823a14bdcb565e47",
+      "bytes": 11109,
+      "change": "Cap radial composition and conditioned profile bracket replay; original import records preserved.",
+      "changed_from_commit": "8b7ea21308e7e90f3df97c49e6527777c772f0ec",
       "path": "src/recursive_horizons/nsc_atlas_cap_transport_fields.py",
       "retention_reason": "Read-only cap transport field jets and manufactured controls for the existing mass-balance comparison.",
-      "sha256": "c6d035a71015f5dee128ec5f50418482c0239291c3e41362dea67eaf1248cd45"
+      "sha256": "bc78c5410e0badecf78527a71af55e25c1031ab2c859a49dc1112279de683576"
     },
     {
       "bytes": 16914,
@@ -35441,6 +35447,12 @@
       "path": "tests/test_nsc_atlas_cap_mass_transport_identity.py",
       "retention_reason": "Exact algebra controls for the current cap mass/transport bridge; no retained physical replay.",
       "sha256": "819b100664e96b50a18da9ba23abdf7ae0f125120371a36a2e84e729a5f2a593"
+    },
+    {
+      "bytes": 7653,
+      "path": "tests/test_nsc_atlas_cap_radial_comparison.py",
+      "retention_reason": "Native and smooth-reference radial map comparison with manufactured mathematical controls.",
+      "sha256": "9a66af467f168e4dbb4c1edce2954fe7033a6c6e50e0d8995f114ee28846996b"
     },
     {
       "bytes": 8078,

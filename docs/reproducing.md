@@ -30,6 +30,14 @@ other diagnostics keep their existing checks. The eight-unit elementary-function
 assumption is a replay policy, not a certified SciPy accuracy bound.
 The compatible, background, SSPRK3 and midpoint-complete validators all
 forward these transient bounds to their departure-history comparisons.
+Midpoint profile brackets are checked against their own floating query and
+knot coordinates. A changed integer bracket must be adjacent and correspond
+to one unique common knot within sixteen epsilon units of both coordinates;
+crossing counts must exactly follow those brackets. Saved-cut coordinates
+and metadata remain exact. This handles a one-ULP knot-side difference seen
+in GitHub's PDF authentication, without a general integer tolerance or any
+change to saved data. The standalone midpoint check passes with 1,418,330
+charged points, two final radial stages and no source solve or evolution.
 Profile-fit replay similarly propagates rounding through its polynomial basis
 conversion and differentiated residuals. Adaptive inverse iterations and their
 work totals are checked for internal consistency and algorithmic bounds in each
@@ -76,7 +84,7 @@ These controls share 20 active process-CPU seconds and take no numerical
 field samples. They do not evaluate a retained cap or authorize a new
 trajectory. The numerical shadow-flow/error evaluator is still to be built.
 Its selected reference uses the smooth analytic potential; the affine panel
-component is now implemented, while full cap composition is still pending.
+component and cap composition are now implemented for manufactured controls.
 
 ```sh
 python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_radial_reference.py -q -s
@@ -102,8 +110,23 @@ Its 27 manufactured controls pass. Cumulative development uses
 200,000-point / 20-second allowance. No retained cap or radial solve is used.
 Native samples exclude axis jets and exact formula-switch queries. Reference
 samples provide explicitly named small-radius limits, and a separate method
-returns regular axis coefficients without claiming axis field jets. Full cap
-composition still needs interface bookkeeping and an integration-error estimate.
+returns regular axis coefficients without claiming axis field jets.
+
+The cap composer retains the producer's native panels and splits only the
+reference at the fixed formula switch. Local map errors and their derivatives
+are summed independently of the final mass/rate subtraction:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_radial_comparison.py -q -s
+```
+
+Seven controls check an exact constant-field cap, a nonconstant reference
+against independent fixed-radius variation, moving switch coincidences,
+frozen partitions and invalid native evidence. Cumulative development uses
+472,439 charged values / 6.625 active CPU seconds of the 1,000,000-point /
+40-second allowance. A native born panel exactly on a formula switch remains
+outside the existing tangent's domain. No retained cap has been evaluated;
+the lapse, residual/jump integrals and integration-error control remain open.
 
 The interface algebra uses no numerical fields or root search:
 

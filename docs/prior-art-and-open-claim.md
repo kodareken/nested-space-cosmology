@@ -115,6 +115,34 @@ allows 16 eps relative roundoff in `a_r(0)` reconstructed from the spline.
 Both switch traces have independent 60-digit cubic-profile checks. No cap
 composition or retained-state comparison has been run.
 
+The next component composes the native and smooth-reference affine maps
+over the same frozen cap partition. Reuse the native cut selector, preserve
+its backward owner choices, and split only the reference at the fixed
+small-radius formula switch. Keep any first-order born pieces. Construct
+the error derivative from local map differences, numerical entering masses
+and independently accumulated reference attenuation; the difference of the
+two final mass derivatives is a check only.
+
+Manufactured cap controls share 1,000,000 charged points / 40 active CPU
+seconds. They compare native primal/tangent results with the existing
+producer, use an exact zero-coupling constant-field mass, check moving
+interfaces and switch coincidences, and compare reference composition with
+independent fixed-radius variation. No retained terminal cap, source fit,
+trajectory or grid scan is admitted here. Failed ownership, telescoping,
+primal/tangent comparison or an unresolved endpoint stops the component.
+
+**Composition outcome:** seven manufactured controls pass. Cumulative
+development uses 472,439 charged values / 6.625 active CPU seconds, including
+the first failed assertion and its focused correction. That assertion tried
+to resolve an order-eight map error already at roundoff; the nonconstant
+control now uses order four to exercise a nonzero error derivative. No
+equation or comparison tolerance was changed. Grok independently confirmed
+the affine chain rule, local-error derivative and downstream weighting.
+The recurrence bound treats the computed maps as inputs; reference integration
+and coefficient errors remain outside it. Native born panels exactly on a
+formula switch retain the existing tangent's rejection, while reference-only
+born pieces have named side limits. No retained cap or new evolution was run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

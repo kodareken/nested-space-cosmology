@@ -2,10 +2,10 @@
   "origin_commit": "fc7170922ec1e2d9ccec59357f3c68e6a577fb3d",
   "resolver_bindings": {
     "scripts/validation_source_successors.py": "e656ed75556510a84a572d7320c18da8a2232a7d23d1ea918d75ea95f5e46bb4",
-    "src/recursive_horizons/nsc_atlas_validation.py": "de742eed9e749c6b82a2651ff79516620d4d4b1c630bcd7f87cf5cdbf5bdee7d",
+    "src/recursive_horizons/nsc_atlas_validation.py": "7142f8753c9cf4d6c2c6d5a389016d8c6a08e4505ddcfc5d9b8ab5f2f7d69e31",
     "tests/control_budget.py": "cff1ab82ee0dc7de0387e61f66e0eeb5e60353643503ab87fbedeb281f7d0ef9",
     "tests/test_control_budget.py": "3cb6d2749fa98fe21eaea6e4d0cb201dcec84e1dff272ef043f1f3753c4a379d",
-    "tests/test_nsc_atlas_validation.py": "8741ff96f86018727b9b752cd86c2dbf67a3b5e20ff25d72d31ce3e7e76cea00",
+    "tests/test_nsc_atlas_validation.py": "9503c6082794cd564ae5ae9b2fcfb87bd115532b2c64017f463deac7e2c056d1",
     "tests/test_validation_source_successors.py": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
   },
   "schema": "nsc-validation-source-successors-v1",
@@ -164,8 +164,8 @@
     "scripts/record_nsc_atlas_ssprk3_refinement.py": {
       "classification": "validation-only",
       "original_sha256": "2e6cfa1d66b7524057a09eb2eb4f2481c51d56a9f9d042074d022c080d12b7c4",
-      "reason": "Forward transient operand-conditioned departure diagnostic allowances through midpoint-complete validation; generating equations, retained data and original pins are unchanged.",
-      "successor_sha256": "9f2c968cb02a24cf21ad1ca8ebc7650d45f702d323630be38ef87c7eaeb82bc6"
+      "reason": "Validate rounded profile-knot brackets from their own coordinates and forward operand-conditioned departure allowances; generating equations, retained data and original pins are unchanged.",
+      "successor_sha256": "83947ed2cb7ce74a22f9aabd4f9191b43f3cc1086a877c345394581ddab1393d"
     },
     "src/recursive_horizons/nsc_atlas_characteristic_trace.py": {
       "classification": "validation-only",
@@ -308,8 +308,8 @@
     "tests/test_record_nsc_atlas_ssprk3_refinement.py": {
       "classification": "test-only",
       "original_sha256": "4d2377607dd726ff37733d9d855561f85e7881cf1451292cd22821e44dcfe124",
-      "reason": "Forward transient operand-conditioned departure diagnostic allowances through midpoint-complete validation; generating equations, retained data and original pins are unchanged.",
-      "successor_sha256": "93051c38205909af3b9419d61e3248851bf59e741f4c8ae3a38dffee9a41efbe"
+      "reason": "Validate rounded profile-knot brackets from their own coordinates and forward operand-conditioned departure allowances; generating equations, retained data and original pins are unchanged.",
+      "successor_sha256": "7d4bc1aa6961c6668da9ba66167500b061f8b91dcb0de114ce7edd5894e60d24"
     }
   }
 }
