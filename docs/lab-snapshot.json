@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4f615d5ef80a332ba6a6df02ab1b86c064c2eed9",
+  "current_receipt_commit_parent": "d8d084111120658d6e814fd8823a14bdcb565e47",
   "files": [
     {
       "bytes": 2218,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 208931,
-      "change": "Field transport derivatives and midpoint replay conditioning; original import records preserved.",
-      "changed_from_commit": "f7f850fdaf2dc2a31094feeff7231d65e6d4a52f",
+      "bytes": 209500,
+      "change": "Smooth-potential radial reference and explicit endpoint limits; original import records preserved.",
+      "changed_from_commit": "d8d084111120658d6e814fd8823a14bdcb565e47",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "f7687dfbbed9a815a27a9d77d6e3b759e235f68a102e3b5da5d8671fe8142087"
+      "sha256": "a69477a5801708655778c587007dcc7b7be5441300b4deec5bb9545825a55830"
     },
     {
       "bytes": 9543,
@@ -32142,10 +32142,18 @@
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
     },
     {
-      "bytes": 6787,
+      "bytes": 7002,
+      "path": "src/recursive_horizons/nsc_atlas_cap_radial_reference.py",
+      "retention_reason": "Smooth-potential diagnostic reference, moving affine radial maps and independent manufactured controls.",
+      "sha256": "fdf3a9dc430709e2a29f944e5bba6c417f96fd75104d67ff3de1263d4ec9f5ab"
+    },
+    {
+      "bytes": 9960,
+      "change": "Smooth-potential radial reference and explicit endpoint limits; original import records preserved.",
+      "changed_from_commit": "d8d084111120658d6e814fd8823a14bdcb565e47",
       "path": "src/recursive_horizons/nsc_atlas_cap_transport_fields.py",
       "retention_reason": "Read-only cap transport field jets and manufactured controls for the existing mass-balance comparison.",
-      "sha256": "b7191d243b4938c5f760ddcdefcb05a87ea26fdc998bff1016f2a0ac7495cfd5"
+      "sha256": "c6d035a71015f5dee128ec5f50418482c0239291c3e41362dea67eaf1248cd45"
     },
     {
       "bytes": 16914,
@@ -35427,16 +35435,26 @@
       "sha256": "f940b6f8c2ed8b3d0e7071e951567702ab45efddbb0f8ade7d839b65922b9982"
     },
     {
-      "bytes": 4765,
+      "bytes": 4851,
+      "change": "Smooth-potential radial reference and explicit endpoint limits; original import records preserved.",
+      "changed_from_commit": "d8d084111120658d6e814fd8823a14bdcb565e47",
       "path": "tests/test_nsc_atlas_cap_mass_transport_identity.py",
       "retention_reason": "Exact algebra controls for the current cap mass/transport bridge; no retained physical replay.",
-      "sha256": "7f602605059b35cf73387ad4ee82d020f2fa2b9ba27897d865bc184f6345896e"
+      "sha256": "819b100664e96b50a18da9ba23abdf7ae0f125120371a36a2e84e729a5f2a593"
     },
     {
-      "bytes": 9665,
+      "bytes": 8078,
+      "path": "tests/test_nsc_atlas_cap_radial_reference.py",
+      "retention_reason": "Smooth-potential diagnostic reference, moving affine radial maps and independent manufactured controls.",
+      "sha256": "c3f8b5ab81d77b75aa421eab83ddda71db29f53ea0f2fa4f4f70777fce5c3665"
+    },
+    {
+      "bytes": 12106,
+      "change": "Smooth-potential radial reference and explicit endpoint limits; original import records preserved.",
+      "changed_from_commit": "d8d084111120658d6e814fd8823a14bdcb565e47",
       "path": "tests/test_nsc_atlas_cap_transport_fields.py",
       "retention_reason": "Read-only cap transport field jets and manufactured controls for the existing mass-balance comparison.",
-      "sha256": "1b6f9ba2e537f337aa0a4d8f3d753036bf984ced13027e4cdee39b36752bf8eb"
+      "sha256": "a2c7ba9933270d3d0cefb74863d607dfe57045c625874d5f151603ae3afed7a4"
     },
     {
       "bytes": 9130,

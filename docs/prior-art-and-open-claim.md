@@ -77,6 +77,44 @@ misstated the small-radius leading order and treated sub-roundoff gaps as
 zero; direct series algebra corrected both, and the follow-up review agreed.
 There is no retained-state root inventory or shadow-flow result yet.
 
+**Selected reference, after rethinking:** a literal integration of the
+producer's truncated potential requires threshold-root isolation. Simply
+dropping its tiny jumps would instead need bounds on root velocities,
+including nearly tangent crossings. Use the smooth analytic potential of
+the declared model for the reference radial flow, while leaving every native
+quadrature node and its actual branch derivative unchanged. The panel error
+then includes both radial quadrature and potential implementation error;
+an explicit `R_x*(b_star-b_Q)` wall term keeps the balance exact. This avoids
+root-location state and does not change the candidate or its evolution.
+The literal-branch interface identities above remain valid comparisons,
+but a potential-root inventory is no longer on the selected execution path.
+
+The full-direction identity and field adapter are complete. Active work is
+the smooth-potential reference and affine radial panel map; next are cap
+interface limits, composition and independent error estimates. This component
+uses one caller-owned budget and returns only its map, derivative and work
+count. Exact polynomial/constant-coefficient solutions, independent fixed-r
+variation, moving endpoints and born-panel controls are admitted under a
+cumulative 200,000-point / 20-active-CPU-second allowance. No retained cap,
+trajectory, root search or parameter scan is included. A failed map identity,
+unresolved interface or exhausted allowance stops the comparison locally.
+
+**Reference component outcome:** ten manufactured controls pass, using
+9,356 charged values / 0.03125 active CPU seconds across their development
+executions. The wall-conversion control was extended to independent native
+and reference densities; its full run and corrected symbolic-form assertion
+use 1.0 additional active CPU second, with zero field samples. Grok source
+review found no concrete blocker in the potential tails or moving map.
+
+The existing field-adapter allowance also covers the reference's named
+small-radius limits and regular axis coefficients. All 27 current controls
+pass across the complete run and one corrected axis-roundoff assertion.
+Cumulative field-adapter development is 18,526 charged values / 0.609375
+active CPU seconds. The axis check keeps five exact zero coefficients and
+allows 16 eps relative roundoff in `a_r(0)` reconstructed from the spline.
+Both switch traces have independent 60-digit cubic-profile checks. No cap
+composition or retained-state comparison has been run.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

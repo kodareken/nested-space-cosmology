@@ -3071,6 +3071,10 @@ algebraic comparison, not a validated replacement evolution.
 
 #### Interfaces of the reconstructed radial comparison
 
+The literal-potential comparison below is mathematically valid, but its
+threshold-root inventory is not required by the selected smooth-potential
+reference described after these interface identities.
+
 The departure scalar is continuous at every cell face. In an ordinary cell,
 `q=qc+qs*r` has mean `Iq/(b-a)` and `qc=Iq/(b-a)-qs*(a+b)/2`, so its
 primitive increases by exactly `Iq`. Both traces of `f=chi/r` therefore
@@ -3138,7 +3142,103 @@ manufactured mass. They pass with zero field samples and 1.71875 active CPU
 seconds. No threshold roots or shadow solution have been computed for the
 retained cap. The current field adapter intentionally rejects exact switch
 queries; branch-limit evaluation and root completeness are still required
-by the numerical comparison.
+by the literal-branch comparison. The selected reference below removes its
+potential-root requirement explicitly.
+
+#### Selected smooth-potential radial reference
+
+Use the smooth potential already specified by the model,
+
+$$
+P_*(f)=\frac{f^2}{2}\left(\frac{\sinh q}{q}\right)^2
+(\cosh^2q+1),\qquad U_*=2f\frac{\sinh q}{q}\cosh^3q,
+\qquad q=\sqrt{\alpha/6}\,f,
+$$
+
+with the continuous `q=0` limits. The implemented `P_Q` is still used at
+every native quadrature node and differentiated on its selected branch.
+Define the reference by `n^E_r+a*n^E=b_*`, with the same reconstructed
+fields, `a`, and centre lapse as before; only replace the potential inside
+`b_*`. Write `E=N^Q-n^E(R)`. Now
+
+$$
+\rho^E-\rho^Q=aE+(b_*-b_Q),
+$$
+$$
+\boxed{\begin{aligned}
+\mathcal B^Q_{\rm mass}={}&\dot E
+ +R_x\bigl(a(R)E+(b_*-b_Q)_W\bigr)+T_x(J^E_W-J^Q_W)\\
+&+\sum\int W\frac{r^2}{2}
+ [U_*\mathcal R_f^x+A^E(\Pi\mathcal R_\Pi^x+\Phi\mathcal R_\Phi^x)]\,dr\\
+&-\sum_jW_j\bigl(v_j[\rho^E]_j+T_x[J^E]_j\bigr).
+\end{aligned}}
+$$
+
+Use `U_*` in both the local residuals and this bulk expression. The jump
+sum uses the reference density `[b_*]-n^E[a]`. Potential thresholds are
+absent from the reference; cell/profile interfaces and the fixed small-radius
+switch remain. The exact panel-error sum and its derivative are unchanged
+after replacing `L_j^E` by the smooth reference map. Consequently `dot E`
+contains **both quadrature and potential implementation error**, with no
+additional interior integral of `b_*-b_Q`. Counting that difference again
+would double-count it. The wall conversion above still requires its one
+explicit value, `r^2*(P_*-P_Q)/2`.
+
+This is a diagnostic reference, not a change to the retained equations,
+source or evolution. It avoids locating discontinuities introduced only by
+the potential's numerical approximation. Native nodes exactly on that
+branch threshold still require their previously declared branch guard.
+The tiny gap can be evaluated from the positive sinh-series remainder,
+without subtracting almost equal potentials. Grok independently confirmed
+the revised balance, the wall-term sign and the absence of another bulk term.
+
+For a smooth panel with moving endpoints `l(x),h(x)`, let `L=h-l` and
+`r=l+u*L`, `0<=u<=1`. Its affine map is `n_out=S*n_in+T`. With
+`A=L*a`, `B=L*b_*`, differentiate the map in this fixed panel coordinate:
+
+$$
+\begin{aligned}
+S_u&=-AS,& T_u&=B-AT,\\
+\dot S_u&=-A\dot S-\dot A S,&
+\dot T_u&=\dot B-\dot A T-A\dot T,\\
+\dot A&=\dot L a+L(a_x+\dot r a_r),&
+\dot B&=\dot L b_*+L((b_*)_x+\dot r(b_*)_r).
+\end{aligned}
+$$
+
+The initial map is `(S,T,dot S,dot T)=(1,0,0,0)`. At a born panel
+`L=0` on an admissible backward ray, the derivative is
+`dot S=-dot L*a`, `dot T=dot L*b_*`; its value remains the identity map.
+An independent check integrates the fixed-radius variation
+`nu_r+a*nu=(b_*)_x-a_x*n`, starting at
+`nu(l)=dot n_in-rho(l)*dot l`, and converts back at the right endpoint by
+`dot n_out=nu(h)+rho(h)*dot h`. Agreement with that check and manufactured
+exact maps tests endpoint motion separately from the panel-coordinate flow.
+
+The [reference component](../src/recursive_horizons/nsc_atlas_cap_radial_reference.py)
+implements these four map equations. The caller supplies one smooth piece's
+six coefficients `(a,b_*,a_x,(b_*)_x,a_r,(b_*)_r)` and its endpoint limits;
+the component does not discover interfaces or select their owners. It uses
+the same cumulative budget for callback work and map evolution. Requested
+ODE tolerances and solver completion are not a uniform error enclosure.
+
+Its potential gap uses positive series terms through `q^10`. The next tail
+is bounded in real arithmetic by `|q|^12/13!/(1-q^2/210)`, and its
+`q*d/dq` derivative by `12*|q|^12/13!/(1-q^2/180)`. Propagating these
+positive tails through `D` and `2D+qD'` gives the returned series bounds.
+Floating-point evaluation and the reference integration errors remain
+separate; these series bounds alone do not certify either.
+
+The adapter's `reference_sample()` uses this smooth potential. At `r=0.01`
+it requires `small_radius_side="left"` or `"right"`, independent of the
+explicit cell owner. The left trace reuses the polynomial-moment branch;
+the right evaluates the ordinary formulas at the same radius, without a
+displaced sample. `reference_axis_coefficients()` returns the regular limits
+`a=b=a_x=b_x=b_r=0`, `a_r=alpha*Pi(0)^2/2`. No radial derivative of `Pi`
+at an axis profile knot is asserted. These coefficient limits suffice at
+the fixed centre endpoint of the affine map. Both switch traces have
+independent cubic-profile controls, and the reference can pass a native
+potential threshold without creating an artificial interface.
 
 ### Central clock in general null labels
 

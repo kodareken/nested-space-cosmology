@@ -46,14 +46,15 @@ def test_full_parameter_direction_identity_without_imposing_field_equations():
 
 
 def test_shadow_wall_conversion_retains_radius_and_flux_differences():
-    a,b,ne,error,dne,derror,rx,tx,je,jq = s.symbols("a b ne e dne de Rx Tx JE JQ")
+    a,b,bq,ne,error,dne,derror,rx,tx,je,jq = s.symbols("a b bq ne e dne de Rx Tx JE JQ")
     nq = ne+error
-    rhoe, rhoq = b-a*ne, b-a*nq
+    rhoe, rhoq = b-a*ne, bq-a*nq
     # dne denotes the fixed-radius derivative; the edge has speed Rx.
     direct = dne+rx*rhoe+derror-rx*rhoq-tx*jq
-    channels = derror+rx*a*error+tx*(je-jq)+(dne-tx*je)
+    channels = derror+rx*(a*error+b-bq)+tx*(je-jq)+(dne-tx*je)
     assert s.expand(direct-channels) == 0
     assert s.expand(direct-(channels-rx*a*error)) == rx*a*error
+    assert s.expand(direct-(channels-rx*(b-bq))) == s.expand(rx*(b-bq))
 
 
 def test_panel_error_sum_and_derivative_include_entering_mass_and_attenuation():

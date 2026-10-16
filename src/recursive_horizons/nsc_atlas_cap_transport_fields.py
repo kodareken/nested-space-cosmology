@@ -8,11 +8,32 @@ import copy
 import numpy as np
 
 from .nsc_atlas_background_cap import _budget
-from .nsc_atlas_cap_mass_tangent import _Jet, _reconstruction, _total
-from .nsc_atlas_cap_mass_derivatives import potential_partial
-from .nsc_atlas_characteristic_background import CharacteristicProfile, MAX_POINTS
+from .nsc_atlas_cap_mass_tangent import _Jet, _reconstruction, _total, _departure
+from .nsc_atlas_cap_mass_derivatives import potential_partial, background_partials
+from .nsc_atlas_cap_radial_reference import reference_potential
+from .nsc_atlas_characteristic_background import CharacteristicProfile, MAX_POINTS, SMALL_RADIUS
 from .nsc_atlas_polar_cap import _scalar, _vector
 from .nsc_atlas_reduced_cap import _inputs, _reconstruct
+
+
+def _switch_trace(profile, T, rec, cell, z, side, budget):
+    """Named limits at the fixed small-radius switch, without a displaced query."""
+    if side == "left":
+        base = background_partials(profile,float(T.v),z.v,budget=budget)
+    else:
+        r = z.v; A=1-r*r; d=np.arctanh(r)
+        jets = profile._evaluate(float(T.v)+np.array([-1.,1.])[:,None]*d,budget)
+        fm,fp = jets['F']; pm,pp = jets['F_prime']; sm,sp = jets['F_second']
+        f=(fp-fm)/r; Pi=(pp-pm)/(r*A); q=(pp+pm)/A; Phi=(q-f)/r
+        base=dict(f=f,Pi=Pi,Phi=Phi,f_T=(pp-pm)/r,f_r=Phi,
+            Pi_T=(sp-sm)/(r*A),Pi_r=(sp+sm)/(r*A*A)-Pi*(1-3*r*r)/(r*A),
+            Phi_T=(sp+sm)/(A*r)-(pp-pm)/(r*r),
+            Phi_r=(sp-sm)/(r*A*A)+2*q/A-2*Phi/r)
+        budget.check(10*r.size)
+    departure = _departure(rec,cell,z)
+    budget.check(3*z.v.size*T.d.size)
+    return {key:_Jet(base[key],base[key+'_T'][:,None]*T.d+base[key+'_r'][:,None]*z.d)+departure[key]
+            for key in ('f','Pi','Phi')}
 
 
 class CapTransportFields:
@@ -23,7 +44,9 @@ class CapTransportFields:
     in query radii. At a cell face the caller names the owner explicitly.
     Owner-cell partials are algebraic trace jets; the material derivative is
     X_x + v*X_r, not X_x alone. A separate interface inventory is required for
-    integrating them. Axis jets and exact implementation switches are excluded.
+    integrating them. Native samples exclude axis jets and exact switches.
+    Reference samples provide named small-radius limits, and a separate
+    method supplies regular axis coefficients without asserting axis jets.
 
     Construction charges the reused two-column reconstruction plus 12*n+2
     primal/domain checks. Each query charges all reused background/potential
@@ -74,6 +97,35 @@ class CapTransportFields:
 
     def sample(self, cell, radii, *, budget):
         """Return f/Pi/Phi, a/b, their x/r jets, Pdiff and its actual derivative."""
+        return self._sample(cell,radii,budget=budget,reference=False,small_radius_side=None)
+
+    def reference_sample(self, cell, radii, *, budget, small_radius_side=None):
+        """Smooth-potential coefficients with named limits at r=0.01.
+
+        Potential thresholds have no reference interface. At the small-radius
+        switch the caller must name 'left' (series) or 'right' (ordinary);
+        the query must then consist only of that exact radius. Cell ownership
+        is still explicit and independent of this background formula side.
+        """
+        return self._sample(cell,radii,budget=budget,reference=True,small_radius_side=small_radius_side)
+
+    def reference_axis_coefficients(self, *, budget):
+        """Regular coefficient limits at the fixed origin; no axis field jets.
+
+        a=O(r), b=O(r^2), a_r(0)=alpha*Pi(0)^2/2. These six limits are
+        sufficient for the affine panel at its fixed centre endpoint.
+        """
+        if budget is not self._budget:
+            raise ValueError("transport queries require the same caller budget")
+        jet = self._profile.jet(float(self._T.v),budget=budget)
+        pi = float(2*jet['F_second']+self._rec['P0'].v)
+        ar = self._alpha*pi*pi/2
+        if not np.isfinite(ar):
+            raise ValueError("nonfinite reference axis coefficient")
+        budget.check(8)
+        return dict(a=0.,b=0.,a_x=0.,b_x=0.,a_r=ar,b_r=0.)
+
+    def _sample(self, cell, radii, *, budget, reference, small_radius_side):
         if budget is not self._budget:
             raise ValueError("transport queries require the same caller budget")
         budget.check()
@@ -84,6 +136,9 @@ class CapTransportFields:
         if (not 1 <= len(r) <= MAX_POINTS or np.any(r <= 0)
                 or np.any(r < self._faces[cell]) or np.any(r > self._faces[cell+1])):
             raise ValueError("query at most 513 positive radii in the owner cell")
+        if small_radius_side is not None and (
+                small_radius_side not in ('left','right') or np.any(r != SMALL_RADIUS)):
+            raise ValueError("named small-radius side requires only exact switch radii")
         labels = self._T.v+np.array([-1.,1.])[:,None]*np.arctanh(r)
         self._profile._domain(labels)
         tx = float(self._T.d[0])
@@ -95,11 +150,13 @@ class CapTransportFields:
         z = _Jet(r, np.column_stack((np.zeros(len(r)), np.ones(len(r)))))
         try:
             with np.errstate(over="raise", divide="raise", invalid="raise"):
-                fields = _total(self._profile, self._T, self._rec, int(cell), z, budget)
+                fields = (_total(self._profile,self._T,self._rec,int(cell),z,budget)
+                    if small_radius_side is None else
+                    _switch_trace(self._profile,self._T,self._rec,int(cell),z,small_radius_side,budget))
                 f = fields["f"]
-                if np.any(abs(np.sqrt(self._alpha/6)*f.v) == 1e-4):
+                if not reference and np.any(abs(np.sqrt(self._alpha/6)*f.v) == 1e-4):
                     raise ValueError("transport query lies on the potential formula switch")
-                potential = potential_partial(f.v, self._alpha, budget=budget)
+                potential = (reference_potential if reference else potential_partial)(f.v,self._alpha,budget=budget)
                 pdiff = _Jet(potential["Pdiff"], potential["Pdiff_f"][:,None]*f.d)
                 energy = fields["Pi"]**2+fields["Phi"]**2
                 fields["a"] = self._alpha*z*energy/2

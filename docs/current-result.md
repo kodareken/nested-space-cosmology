@@ -99,8 +99,22 @@ nonzero formula-switch jumps. Three exact controls pass with zero field
 samples / 1.71875 active CPU seconds. The small-radius jump starts at
 `(12/13)*r^11`; the potential value gap starts at `f^2*q^6/2520`.
 The corrected orders and root-speed rules received independent Grok review.
-Root completeness and branch-limit evaluation remain the next numerical
-requirements; small jumps alone do not bound their moving contributions.
+For a literal integration of the truncated potential, root completeness and
+branch limits would be required; small jumps alone do not bound their motion.
+
+The [selected smooth-potential reference](nsc-atlas-finite-amplitude.md#selected-smooth-potential-radial-reference)
+avoids that threshold-root inventory. It uses the model's analytic potential
+and retains the native approximation in the panel error and one explicit
+wall correction. The new [reference component](../src/recursive_horizons/nsc_atlas_cap_radial_reference.py)
+evaluates that small gap without cancellation and integrates each moving
+affine radial map with its full derivative. Exact manufactured maps and a
+separate fixed-radius variation check the implementation. This is a reference
+calculation for the unchanged producer. Its ten controls pass with 9,356
+charged values / 0.03125 active CPU seconds. The field adapter now supplies
+named limits on both sides of `r=0.01` and the regular axis coefficients;
+all 27 field controls pass, with cumulative 18,526 values / 0.609375 seconds.
+Full cap composition, interface bookkeeping and a controlled retained-state
+error comparison are still outstanding.
 
 ## Terminal cap mass-functional derivative, 16 October 2026
 

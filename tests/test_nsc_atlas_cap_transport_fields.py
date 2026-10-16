@@ -1,6 +1,7 @@
 """Manufactured fixed-radius/material jets; no retained cap or radial solve."""
 import copy
 
+import mpmath as mp
 import numpy as np
 import pytest
 
@@ -197,3 +198,52 @@ def test_same_budget_and_exhaustion_are_enforced(budget):
             view.sample(0,[.05],budget=budget)
     finally:
         budget.maximum_evaluations=previous
+
+
+def test_reference_potential_has_no_native_threshold_interface(budget):
+    faces=.5*np.linspace(0,1,5)
+    base=context(budget,R=.5,alpha=6.,state=dict(Ip=np.zeros(4),Iq=1e-4*np.diff(faces)))
+    view=CapTransportFields(base,direction(),budget=budget)
+    with pytest.raises(ValueError,match='potential formula switch'):
+        view.sample(0,[.05],budget=budget)
+    row=view.reference_sample(0,[.05],budget=budget)
+    assert np.isfinite(row['b']).all()
+    np.testing.assert_array_equal(row['implementation_gap'],0.)
+
+
+@pytest.mark.parametrize('side',['left','right'])
+def test_named_switch_limits_against_independent_cubic_profile_formulas(side,budget):
+    T,r=.1,.01
+    view=CapTransportFields(context(budget,T=T,source=profile(False)),direction(T=.3),budget=budget)
+    row=view.reference_sample(0,[r],budget=budget,small_radius_side=side)
+    with mp.workdps(60):
+        def field(key,t,z):
+            d=mp.atanh(z); A=1-z*z
+            first=6*t*t+2*d*d
+            f=d*first/z
+            pi=12*t*d/(z*A)
+            if side=='left':
+                coefficient=sum(mp.mpf(2*k)/(2*k+1)*z**(2*k-1) for k in range(1,6))
+                phi=coefficient*first+4*d*d/(z*A)
+            else:
+                phi=(6*(t*t+d*d)/A-f)/z
+            return {'f':f,'Pi':pi,'Phi':phi}[key]
+        for key in ('f','Pi','Phi'):
+            t,z=mp.mpf(T),mp.mpf(r)
+            expected={key:field(key,t,z),key+'_x':mp.mpf(.3)*mp.diff(lambda v:field(key,v,z),t),
+                      key+'_r':mp.diff(lambda v:field(key,t,v),z)}
+            for name,value in expected.items():
+                np.testing.assert_allclose(row[name],float(value),rtol=2e-9,atol=3e-11)
+
+
+def test_reference_axis_limits_and_explicit_switch_query_rules(budget):
+    base=context(budget,source=profile(False),alpha=.02)
+    view=CapTransportFields(base,direction(T=.3),budget=budget)
+    result=view.reference_axis_coefficients(budget=budget)
+    assert {k:v for k,v in result.items() if k!='a_r'}==dict(a=0.,b=0.,a_x=0.,b_x=0.,b_r=0.)
+    np.testing.assert_allclose(result['a_r'],.02*(12*.1)**2/2,rtol=16*np.finfo(float).eps,atol=0.)
+    for radius,side in ((.01,None),(.02,'left'),(.01,'unknown')):
+        with pytest.raises(ValueError):
+            view.reference_sample(0,[radius],budget=budget,small_radius_side=side)
+    with pytest.raises(ValueError,match='same caller budget'):
+        view.reference_axis_coefficients(budget=Budget())
