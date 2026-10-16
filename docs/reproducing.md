@@ -279,6 +279,24 @@ records mass, lapse, weak balance, actual wall differences and propagated
 gradient comparison. The script now uses the admitted 30,000,000 / 120
 allowance. No further replay is required for this recorded result.
 
+The moving-material-wall connection has exact algebra controls and a
+separate initial-event audit:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_hybrid_compatibility.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_cap_initial_junction.py
+```
+
+The six controls use 40,000 algebra values / 0.484375 active CPU seconds
+across their original executions. They distinguish weak, actual and matched
+wall traces and include the physical mass dictionary. The audit uses 2,180
+values / 2.1875 CPU seconds of 10,000 / 15. It authenticates the retained
+input and cap receipt, records the terminal common-data differences, and
+checks the existing quiet junction algebra. It runs no radial/prefix solve
+or time step. The [compact audit](../results/summaries/nsc-atlas-cap-initial-junction-v1.json)
+is saved; these commands are reproduction entry points, not an instruction
+to repeat completed calculations before the next connection.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

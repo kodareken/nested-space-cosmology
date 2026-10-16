@@ -5252,6 +5252,93 @@ admissible material-wall initial data and common wall/exterior evolution
 must still be constructed. A time interval, scalar residual estimate and
 numerical error enclosure do not follow from this instantaneous result.
 
+#### Connecting the fixed cap to a moving material wall
+
+The fixed cap's canonical primitive is `chi=r*f`; the exterior invariant
+field is `c=r*f*sinhc(q_f)`. Their common value is a junction condition.
+Consider an instant where that value and the induced metric agree. Write
+the actual reduced cap traces as `p=r*Pi`, `h=r*Phi`, and its mass-gradient
+pair as
+
+\[
+ P=V_W/B,\qquad Q=R w_+-P,\qquad
+ d_p=p-P,\quad d_h=h-Q,\quad B=Ae^\delta.
+\]
+
+The existing hybrid supplies `w_+` from the outgoing exterior data and
+uses the cap's actual `w_-=(p-h)/R`. Its matched derivatives are therefore
+
+\[
+ p_m=P+\frac{d_p-d_h}{2},\qquad
+ h_m=Q-\frac{d_p-d_h}{2}.
+\]
+
+With the hybrid's actual velocity and boost, `H=beta+v>0`,
+`beta-v=A/H`, and `T_s=beta/B`, differentiating the cap trace along the
+moving wall gives `f_s^cap=(beta*P+v*h)/R`. The hybrid instead transports
+`f_s^hybrid=(beta*p_m+v*h_m)/R`. Thus
+
+\[
+ \boxed{f_s^{cap}-f_s^{hybrid}
+       =\frac{-A d_p/H+H d_h}{2R}.}
+\]
+
+Since `du/df=sqrt(D)` for `u=f*sinhc(q_f)`, the cap-minus-exterior
+invariant-field rate discrepancy at a common value is
+`sqrt(D)*(-A*d_p/H+H*d_h)/2`. A prior value mismatch needs its own record;
+this identity does not assume it away after evolution starts.
+
+Subtract the same moving-domain density from the mass rate and divide by
+`T_s`. The weak temporal law uses `A^2*exp(delta)*P*Q/2`, while the actual
+field product uses `A^2*exp(delta)*p*h/2`. Their residual is
+
+\[
+ \boxed{E_N=-\frac{A^2e^\delta}{2}
+                   (P d_h+Q d_p+d_p d_h).}
+\]
+
+Relative to the hybrid's matched product, put `a=(d_p-d_h)/2`; the residual
+is `A^2*exp(delta)*(a*(P-Q)+a^2)/2`. These are distinct comparisons.
+Here `N` is the rescaled mass. The metric identity
+`1-2m/r=1-r^2-2alpha*N/r` gives `m=r^3/2+alpha*N`, so the physical temporal
+Einstein residual is `E_m=alpha*E_N` at fixed radius. On a moving wall,
+`m_s=(3R^2/2+alpha*rho)*v+alpha*T_s*N_T`; removing only `alpha*rho*v`
+would retain a spurious vacuum contribution. At zero amplitude the
+normalized scalar still propagates while its mass backreaction vanishes.
+The cap's own weak balance can vanish while either physical discrepancy
+is nonzero. Sending the weak outgoing combination `(P-Q)/R` instead makes
+the hybrid pair `(P,Q)`, but the moving primitive still has discrepancy
+`v*d_h/R`. That substitution alone does not close the common scalar value.
+
+Six [exact controls](../tests/test_nsc_atlas_cap_hybrid_compatibility.py)
+pass with **40,000 charged algebra values / 0.484375 active CPU seconds**.
+They differentiate the moving trace, apply the nonlinear frame derivative,
+separate actual and matched mass products, and exhibit a counterexample
+with zero weak balance but nonzero scalar/mass residuals. This identifies
+the quantities that a coupled stage must preserve or bound. It does not
+replace the actual traces, add a physical source or prescribe wall motion.
+Grok independently confirms the trace residuals. Its normalization question
+is resolved by the metric identity above. Admissible initial junction data
+are checked separately before any common update.
+
+The [initial-event audit](../results/summaries/nsc-atlas-cap-initial-junction-v1.json)
+finds that the retained terminal cap and exterior are not a shared event.
+Its invariant scalar differs from the stored zero-case exterior by
+`-1.339906988e-5`; the finite-case exterior also has a different radius and
+canonical time. Combining these records would change the common data.
+The quiet corner already present in the source/gauge cache does pass:
+`x=.4,R=.45,T=0`, zero scalar and all quiet departures, with material rates
+`R_x=1.084575413,T_x=1.840737097`. The largest algebraic junction residual
+is `9.325873407e-15`. This one audit costs 2,180 charged values / 2.1875 CPU
+seconds, with no radial or prefix solve and no time step.
+
+The current coupled implementation obtains the exterior endpoint scalar
+from the cap at every stage; it does not evolve an independent wall scalar.
+The fixed-space connection should retain that common-value elimination and
+report the derived tangent residual, together with the temporal mass
+residual. Its finite-dimensional field evolution remains an approximation
+until the residual and error over a nonzero interval are bounded.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

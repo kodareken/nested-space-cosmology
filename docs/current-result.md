@@ -2,6 +2,24 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed cap and moving-wall connection, 16 October 2026
+
+Six exact [compatibility controls](nsc-atlas-finite-amplitude.md#connecting-the-fixed-cap-to-a-moving-material-wall)
+and independent Grok review identify the scalar tangent and temporal mass
+residuals that remain when the fixed cap is connected to the material wall.
+Weak mass balance alone does not make those residuals vanish. The physical
+mass dictionary is `m=r^3/2+alpha*N`, including the moving vacuum density.
+All six controls pass using 40,000 charged values / 0.484375 active CPU seconds.
+
+The [initial-event audit](../results/summaries/nsc-atlas-cap-initial-junction-v1.json)
+shows why the retained terminal reference cannot be relabelled as coupled
+initial data: the stored exterior's scalar value differs, and its finite
+case also has a different radius and time. The existing quiet corner does
+pass the common-value, source, incoming-jet and gauge-rate checks, with
+largest residual `9.32587e-15`. Its derived rates are `R_x=1.084575413`
+and `T_x=1.840737097`. The next common evolution starts there. No terminal
+data are overwritten and no new time trajectory or prediction is claimed.
+
 ## Fixed-space mass-gradient implementation, 16 October 2026
 
 The [local mass adapter](nsc-atlas-finite-amplitude.md#metric-domain-for-fixed-local-total-fields)

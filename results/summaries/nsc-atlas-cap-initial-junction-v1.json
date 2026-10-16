@@ -1,0 +1,104 @@
+{
+  "cap_reference": {
+    "path": "results/summaries/nsc-atlas-cap-fixed-reference-v1.json",
+    "sha256": "f77b78a4d3668b09ba35cbef729266d63605ab77126c9dde1ffab64fc4539b5e"
+  },
+  "execution": {
+    "charged_values": 2180,
+    "cpu_seconds": 2.1875,
+    "prefix_solves": 0,
+    "quiet_hybrid_calls": 2,
+    "radial_solves": 0,
+    "terminal_comparisons": 2,
+    "time_steps": 0
+  },
+  "input": {
+    "authenticated_input_files": 104,
+    "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+    "path": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+    "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09"
+  },
+  "limits": {
+    "charged_values": 10000,
+    "cpu_seconds": 15
+  },
+  "quiet_corner": {
+    "alpha": 0.00012983127142551443,
+    "common_data_match": true,
+    "finite_time_solution": false,
+    "radius": 0.45,
+    "rates": {
+      "L": -0.01588685056978889,
+      "T": 1.8407370967270975,
+      "c": 0,
+      "r": 1.084575412964102,
+      "s": 1.1077863244982293
+    },
+    "residuals": {
+      "finite_initial_L": 0,
+      "finite_initial_T": 0,
+      "finite_initial_r": 0,
+      "finite_initial_s": 0,
+      "gauge_L": -1.942890293094024e-16,
+      "gauge_boost": 0,
+      "gauge_r": 5.551115123125783e-17,
+      "incoming_lapse_jet": 6.772360450213455e-15,
+      "incoming_r_jet": -2.7755575615628914e-17,
+      "incoming_scalar": 0,
+      "incoming_scalar_jet": 0,
+      "rate_L": 9.325873406851315e-15,
+      "rate_T": 0,
+      "rate_r": 2.220446049250313e-16,
+      "rate_s": 0,
+      "scalar_rate": 0,
+      "source_log_C": 0,
+      "source_log_C_x": 0,
+      "source_r": 0,
+      "source_r_x": 0,
+      "zero_initial_L": 0,
+      "zero_initial_T": 0,
+      "zero_initial_r": 0,
+      "zero_initial_s": 0
+    },
+    "x": 0.4
+  },
+  "schema": "nsc-atlas-cap-initial-junction-v1",
+  "scope": "necessary common-data audit and quiet vacuum junction; no evolved nonzero scalar state",
+  "source_bindings": {
+    "scripts/check_nsc_atlas_cap_initial_junction.py": "250fa95e489a0215f784994614b069d0b7518e12f3805cf742bbefc94d0fe61c",
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+    "src/recursive_horizons/nsc_atlas_nonlinear_boundary.py": "4f636558926405a0bbd51f2080bd9be7e832ea82dfe007ccdf9104e9dfd2d541",
+    "src/recursive_horizons/nsc_atlas_vacuum_departure.py": "45ed0edcc19b5d9a73904bd8b862d42223a6ddc0703b948b47cd8a44d399f157"
+  },
+  "terminal_cap": {
+    "T": 0.19784721605423244,
+    "alpha": 0.00012983127142551443,
+    "f": -0.015953754370957272,
+    "invariant_scalar": -0.008774564912080805,
+    "radius": 0.5499999999999999
+  },
+  "terminal_comparisons": [
+    {
+      "amplitude": "zero",
+      "cap_minus_stored": {
+        "alpha": 0.00012983127142551443,
+        "canonical_time": 0,
+        "invariant_scalar": -0.000013399069882409631,
+        "radius": -1.1102230246251565e-16
+      },
+      "common_data_match": false,
+      "x": 0.4815042082576364
+    },
+    {
+      "amplitude": "finite",
+      "cap_minus_stored": {
+        "alpha": 0,
+        "canonical_time": 0.001280312329779626,
+        "invariant_scalar": -0.00004181379753424516,
+        "radius": 0.0007671842997167833
+      },
+      "common_data_match": false,
+      "x": 0.4815042082576364
+    }
+  ]
+}

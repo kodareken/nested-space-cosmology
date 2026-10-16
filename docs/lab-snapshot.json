@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
+  "current_receipt_commit_parent": "8f6c73cda90ad32afa584040df3bee9d81284552",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 219653,
-      "change": "Implement fixed-space mass gradients and diagnose the retained adjoint work limit.",
-      "changed_from_commit": "985941ab77aecb1992ceebab6f7f2249d0a23b9d",
+      "bytes": 220218,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "e858c57c359aeaced4fa1f5fbb2b982de4b23a747735dbe34d31b481fdeb17d5"
+      "sha256": "5ef1c1e318c19796db8c3e83f45c05014209991b9aa59993282f762fbd0d7fb8"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 309080,
-      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
-      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
+      "bytes": 310239,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "70f87d25e0a133537c2e776d94ad70ef1565a2752897237fd250df5f3dba4b5b"
+      "sha256": "0315156ff7bca39b3acbac196fdf6b78301d261ece406ee055d068db8f421959"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 253646,
-      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
-      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
+      "bytes": 257903,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "42c2072670405257e343b8a0c623c3709a9acd3ab978cadc41e595d8cf94aa5c"
+      "sha256": "ac2887db54aafe696bb5ad5cab77fbb8b5d07fe9009651f316b6c88b3a3a7b82"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 290533,
-      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
-      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
+      "bytes": 295264,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "40786860e15967a1ed027d6bed559bd6facedd0e1af2e18c6c6034c8503dc7a7"
+      "sha256": "3b9069d0ce448818bb61bc24d2b4f5db0fd5ded86f744af0558ba6defe1e8ec0"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 99549,
-      "change": "Complete the bounded retained fixed-space reference and record its mass and wall agreement.",
-      "changed_from_commit": "e5d7cb55c35844bae20d0af73eee0aac85cdb5d6",
+      "bytes": 100509,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "414e09837a659109ad491d47e23bcaf72854c30ea615cc9abd0c65df619e6b3c"
+      "sha256": "a9e5b4dd604d11c393cb7d9a7e001b74a12a0d47a810c12f8f4cdfed1cfce28b"
     },
     {
       "bytes": 18356,
@@ -29537,6 +29537,14 @@
       "sha256": "cda0497249aca729832740158e264415d12a7a78361416c71c0681dd8f7af59b"
     },
     {
+      "bytes": 3361,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "path": "results/summaries/nsc-atlas-cap-initial-junction-v1.json",
+      "retention_reason": "Fixed cap moving-wall compatibility and initial junction evidence",
+      "sha256": "d4db00aee3be296a31f1a383d959e7e6fcbdc678b1f8fbfe606a5d848fbc8e45"
+    },
+    {
       "bytes": 182893,
       "change": "Register completed discrete mass ledger summary in publication inventory",
       "changed_from_commit": "27026bb8dddba15192f25affbffce396d242a945",
@@ -29610,6 +29618,14 @@
       "path": "scripts/check_nsc_atlas_cap_fixed_transfer.py",
       "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
       "sha256": "4af20d7d70e7fcb8353e5ab1bb0e15205aa49f496590286d39127e8892a56e20"
+    },
+    {
+      "bytes": 6403,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "path": "scripts/check_nsc_atlas_cap_initial_junction.py",
+      "retention_reason": "Fixed cap moving-wall compatibility and initial junction evidence",
+      "sha256": "250fa95e489a0215f784994614b069d0b7518e12f3805cf742bbefc94d0fe61c"
     },
     {
       "bytes": 2815,
@@ -35771,6 +35787,14 @@
       "path": "tests/test_nsc_atlas_cap_geometric_reference.py",
       "retention_reason": "Regular-centre geometric mass-gradient reference and independent manufactured controls.",
       "sha256": "e2eca38434c88d0ed02d848ec1a8dd33d2ab09444dab1de37b4972c1d4ccc570"
+    },
+    {
+      "bytes": 4436,
+      "change": "Derive moving hybrid residuals and authenticate the compatible quiet initial event.",
+      "changed_from_commit": "8f6c73cda90ad32afa584040df3bee9d81284552",
+      "path": "tests/test_nsc_atlas_cap_hybrid_compatibility.py",
+      "retention_reason": "Fixed cap moving-wall compatibility and initial junction evidence",
+      "sha256": "2ee164b5aebfacc6f06c7954a92598d18993fba115126776db9b030375eac1e3"
     },
     {
       "bytes": 3449,

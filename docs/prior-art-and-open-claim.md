@@ -1272,6 +1272,82 @@ histories. It does not establish a material-wall evolution or numerical
 error enclosure. The next connection is admissible initial junction data
 and a common finite wall/exterior/field update using the existing candidate.
 
+### Fixed-space cap and moving hybrid compatibility
+
+Before replacing the cap inside the existing coupled stage, derive the
+interface residuals of that replacement. The canonical primitive is
+`chi=r*f`; the exterior invariant field is instead `c=r*f*sinhc(q_f)`.
+Assume their values match at the instant under study. Let p,h denote the
+actual reduced cap traces, P=V_W/B the mass-gradient momentum, and
+Q=R*w_plus-P its weak normal trace. The old hybrid uses the actual outgoing
+combination `(p-h)/R` and the exterior-determined incoming characteristic.
+Its matched Pi,Phi need not equal either pair away from zero trace gaps.
+
+Derive independently the transported common-field discrepancy and the
+fixed-radius temporal mass discrepancy, retaining the actual wall boost,
+frame factor and radial density. Also check what changes if a weak outgoing
+combination is supplied instead. Do not identify weak mass closure with
+material-wall closure or silently replace the actual normal derivative.
+
+Exact symbolic controls have **40,000 charged algebra values / 20 active
+CPU seconds**, zero field samples, radial solves or time steps. They check
+the moving trace chain rule, exterior frame conversion, strong and matched
+mass products, and a counterexample to sufficiency of weak balance alone.
+Grok independently checks these residuals and maps the existing initial
+junction/source/gauge requirements. The result selects the next coupled
+connection; it does not authorize a prescribed-wall substitute or a scan.
+
+**Exact outcome:** five controls pass with **36,000 charged algebra values /
+0.296875 active CPU seconds**, without field samples or numerical evolution.
+For `dp=p-P, dh=h-Q` and the actual outgoing characteristic, the canonical
+scalar tangent discrepancy is `(-A*dp/H+H*dh)/(2R)`. The rescaled fixed-radius
+mass discrepancy is `-A^2*exp(delta)*(P*dh+Q*dp+dp*dh)/2`. Sending a weak
+outgoing pair instead leaves the moving primitive discrepancy `v*dh/R`.
+The exact counterexample shows why weak balance by itself cannot prove
+material-wall compatibility. Grok independently confirms the trace formulas
+and identifies the mass normalization that must accompany them. The metric
+identity gives `m=r^3/2+alpha*N`, hence the physical residual is `alpha*E_N`;
+on a moving wall its vacuum density `3R^2/2` must also be subtracted. The
+remaining 4,000 algebra values cover that normalization control only.
+
+That sixth control passes with **4,000 values / 0.1875 active CPU seconds**.
+All six controls together use **40,000 / 0.484375**, exhausting the original
+algebra allowance without a repeated suite. The physical and rescaled mass
+residuals now have an explicit common dictionary, including the moving
+vacuum contribution.
+
+### Fixed cap initial junction audit
+
+The retained cap reference used a zero-case profile at finite amplitude,
+with diagnostic `T_x=1,R_x=0`. Check its common value against the existing
+stored terminal walls before trying a coupled step. Authenticate the
+existing payload and its bindings, and bind the completed compact cap
+receipt. Transform its canonical field by `c=R*f*sinhc(sqrt(alpha/6)*f)`;
+compare radius, time, amplitude and scalar value separately. A discrepancy
+is recorded, not removed by choosing a new exterior endpoint.
+
+Use at most **10,000 charged values / 15 CPU seconds**, one authentication,
+two terminal comparisons, and the existing quiet source/gauge corner as a
+separate possible launch event. No field projection, radial solve, prefix
+solve, time step or grid scan is included. If the terminal values differ,
+do not call the hybrid on a fabricated common event. The quiet corner may
+be checked algebraically against the vacuum junction using its stored
+source/gauge row; this establishes initial compatibility only, not a
+nonzero-time finite-amplitude solution. Save scalar differences and hashes.
+
+**Outcome:** one audit passes with **2,180 charged values / 2.1875 CPU
+seconds**. Neither terminal wall supplies the cap's common data. Relative
+to the stored zero case, its invariant scalar differs by `-1.339906988e-5`
+and the amplitude is different. Relative to the stored finite case,
+radius differs by `7.671842997e-4`, canonical time by `1.280312330e-3`, and
+invariant scalar by `-4.181379753e-5`. No terminal hybrid is evaluated.
+The existing quiet corner at `x=.4,R=.45,T=0` passes its source, shared
+value, incoming jets and gauge-rate checks; the largest residual is
+`9.325873407e-15`. Its material rates are `R_x=1.084575413` and
+`T_x=1.840737097`. The [compact audit](../results/summaries/nsc-atlas-cap-initial-junction-v1.json)
+binds all inputs. The next finite window starts from this quiet event,
+using one common field value and explicit scalar/mass residuals.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
