@@ -189,6 +189,29 @@ Actual input and producer hashes remain exact. Numerical replay uses absolute
 on the saved detailed data. Adaptive ODE counts are bounded work receipts;
 the two-metric/two-RHS/two-tangent/four-balance inventory remains exact.
 
+The moving-cap reference identity and its timelike counterexample are exact:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_moving_projection_identity.py -q -s
+```
+
+Seven controls pass using no field samples, radial solve or physical
+evolution. The [record](prior-art-and-open-claim.md#moving-cap-geometric-transport-identity)
+documents the measured algebra cost. These controls expose the additional
+mass term in a proposed coordinate-advection rule; no solver is replaced.
+
+The exact wall-momentum projection bound uses no radial ODE or retained data:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_projection_bound.py -q -s
+```
+
+Thirteen controls check the interpolation constant, mass-matrix margins,
+constraint derivatives, affine-element normal-field bounds and independent
+high-precision enclosure values. The [development receipt](prior-art-and-open-claim.md#exact-galerkin-wall-momentum-projection-bound)
+records 8,872 charged values and the incomplete CPU receipt. Numerical radial
+error and normal-trace compatibility remain separate from this bound.
+
 The finite-backreaction fixed-cap reference evaluates radial mass gradients
 and one weak RHS on manufactured primitive-conforming fields:
 

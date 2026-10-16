@@ -3799,6 +3799,183 @@ checking the wall lapse and rate normalization independently corrects that
 prototype. The cumulative control receipt includes those earlier executions;
 no physical evolution was performed with the incorrect clock.
 
+#### Exact wall-momentum projection bound
+
+The [projection-bound component](../src/recursive_horizons/nsc_atlas_cap_projection_bound.py)
+bounds one of the preceding trace differences without integrating a radial
+ODE. Inputs define exact binary nodal values and the same continuous P1
+fields. The result concerns the exact constrained radial solution and exact
+mass gradient. Numerical integration, quadrature and linear-solve errors
+must be added separately.
+
+Write `beta=B/A0`, `g=beta k=Bp`. The momentum mass gradient gives
+`M V=load(g)`, so `V` is the centre-zero L2 projection of `g`. If `I_h g`
+is its nodal interpolant, the free-node residual satisfies
+
+$$
+M(V-I_hg)=\operatorname{load}(g-I_hg).
+$$
+
+For every free hat function let `ell_i=integral phi_i dz`. The mass matrix
+has `M_ii-sum_(j!=i)|M_ij| >= ell_i/3`; the eliminated centre makes the
+first row stricter. At a maximum component of `V-I_hg`, this gives the
+factor-three infinity-norm bound. Piecewise interpolation then gives
+
+$$
+|V_W-B_Wp_W|\le\frac38\max_e h_e^2\sup_e|g_{zz}|,
+\qquad
+|\widehat p_W-p_W|\le
+\frac{3\max_e h_e^2\sup_e|g_{zz}|}{8\eta e^{\delta_0}},
+$$
+
+where `eta>0` is the preceding metric certificate and
+`B_W>=eta exp(delta0)`. Element derivatives are one-sided at internal nodes;
+interpolation uses each open element, not derivatives across the jumps.
+The centre limit is regular.
+
+The radial constraints simplify the required derivatives:
+
+$$
+\begin{aligned}
+\beta_z&=\alpha e^\delta C,
+& C&=2n/r^2-rP-4n/A_0,\\
+\beta_{zz}&=\alpha A_0e^\delta(aC+C_r),\\
+C_r&=2\rho/r^2-4n/r^3-P-rU\Phi-4\rho/A_0-8rn/A_0^2.
+\end{aligned}
+$$
+
+Since `k` is affine on each element,
+`g_zz=beta_zz k+2 beta_z k_z`. Also
+`|Pi|<=L_k Z/(R A0(R))`. For affine `chi=a_e z+b_e`,
+
+$$
+\Phi=a_e K(r)-b_e/r^2,\qquad
+K(r)=\frac{r/A_0-\operatorname{atanh}r}{r^2}
+=r\int_0^1\frac{2t^2}{(1-r^2t^2)^2}\,dt.
+$$
+
+This kernel is positive and increasing on `0<r<1`. Each element has
+`|Phi|<=|a_e| K(r_hi)+|b_e|/r_lo^2`; omit the second term on the first
+element, where the intercept is exactly zero. Take the smaller of this
+elementwise maximum and the earlier global bound. This sharpens the
+estimate without changing the mesh or fields.
+
+Let `Q=Pi_max^2+Phi_max^2`, `C_b=P(F)/2+Q/4`, `nu=C_b/3`.
+The independent positive-metric certificate implies
+`0<=rho<=C_b r^2`, hence `0<=n/r^3<=nu`. With `A_R=A0(R)`, define
+
+$$
+\begin{aligned}
+C_*&=R(2\nu+P(F)+4\nu R^2/A_R),\\
+C_{r,*}&=2C_b+4\nu+P(F)+RU(F)\Phi_{\max}
+             +4R^2C_b/A_R+8\nu R^4/A_R^2,\\
+a_*&=\alpha RQ/2,\qquad \delta_* =\delta_0+\alpha R^2Q/4,\\
+\beta_1&=\alpha e^{\delta_*}C_*,\qquad
+\beta_2=\alpha e^{\delta_*}(a_*C_*+C_{r,*}),\\
+g_2&=\beta_2 L_k Z+2\beta_1L_k.
+\end{aligned}
+$$
+
+These bound `|C|`, `|C_r|`, `a`, `delta`, the two beta derivatives and
+`|g_zz|`, respectively. Arb at 160 bits supplies exact dyadic outward
+endpoints and directed floating-point display values. The bound vanishes
+exactly at alpha zero or zero momentum. It fails explicitly if the metric
+floor or finite bounds cannot be resolved.
+
+For the same manufactured state the momentum projection bound is
+`0.0005850596031365239`; the previous global Phi estimate gave
+`0.021594667452231934`. Both exceed the observed momentum difference
+`2.06194e-7`. This is a conservative exact-model bound, not an enclosure of
+that numerical measurement or of the independent normal-trace discrepancy.
+Thirteen [controls](../tests/test_nsc_atlas_cap_projection_bound.py) pass.
+Grok independently checked the projection constant, constrained derivative
+identities, centre limit and global norm estimate. Its source review also
+confirmed the elementwise sharpening and directed endpoints. No physical trajectory,
+new raw dataset or observational prediction is generated.
+
+#### Moving-mesh projection remainder
+
+The fixed-cap identity does not automatically extend to a moving wall.
+Consider its exact zero-alpha reference with `z_i=xi_i Z(T)`,
+`nu=Z_T/Z`, `w(z)=nu z` and centre-zero P1 coefficients `chi,k`. Then
+`M=Z M_0`, `K=K_0/Z`, `b=A0(R)/R=2/sinh(2Z)` and `S=K-b ee^T`.
+Define the coordinate-advection matrix and its projected primitive rate by
+
+$$
+C_{ij}=\int_0^Z\varphi_i w\,\partial_z\varphi_j\,dz,
+\qquad a=M^{-1}C\chi.
+$$
+
+A natural proposed extension of the fixed-cap equations is
+
+$$
+\dot\chi=k+a,\qquad
+M\dot k=-S\chi+e(d-k_W)+Ck,\qquad d=A_0(R)Rw_+.
+$$
+
+Here dots use the cap time `T`; this is a candidate numerical rule only.
+Integration by parts and differentiation of the geometric wall coefficient
+give
+
+$$
+C+C^T=Z_Tee^T-\nu M,\quad
+\dot M=\nu M,\quad \dot K=-\nu K,\quad
+\dot b=-Z_T(2A_0(R)+b^2).
+$$
+
+Let `s_W=chi_z|W` be the last reconstructed slope. Direct differentiation
+of `N=(k^T M k+chi^T S chi)/4` gives the exact identity
+
+$$
+\begin{aligned}
+\dot N&=J_{\rm weak}+R_T\rho_W+\mathcal E_{\rm move},\\
+J_{\rm weak}&=\tfrac12 k_W(d-k_W),\\
+R_T\rho_W&=Z_T\left\{\tfrac12 A_0(R)\chi_W^2
+              +\tfrac14[k_W^2+(s_W-b\chi_W)^2]\right\},\\
+\mathcal E_{\rm move}
+ &=\tfrac12\chi^TKa-\tfrac\nu4\chi^TK\chi
+   -\tfrac{Z_T}4s_W^2
+   +\tfrac12 b\chi_W(Z_Ts_W-a_W).
+\end{aligned}
+$$
+
+The kinetic mesh terms cancel to the correct boundary density. The primitive
+projection leaves the displayed remainder. It vanishes for a globally
+affine primitive because `a=nu chi`; it need not vanish for a kinked P1
+primitive. The fixed-cap flux is still the weak flux: a disagreement between
+the reconstructed normal derivative and the incoming condition is a separate
+term, not part of this identity.
+
+An exact counterexample uses nodes `(0,1/2,1)`, primitive `(0,gamma,0)`,
+zero momentum and `d=-2 gamma`. The incoming condition then agrees with the
+actual boundary derivative at this instant. Direct element integration gives
+
+$$
+M=\begin{pmatrix}1/3&1/12\\1/12&1/6\end{pmatrix},\quad
+K=\begin{pmatrix}4&-2\\-2&2\end{pmatrix},\quad
+C=Z_T\begin{pmatrix}-1/6&1/3\\-5/12&5/12\end{pmatrix}.
+$$
+
+Consequently `a=Z_T gamma (1/7,-18/7)`,
+`N_T=13 Z_T gamma^2/7`, while `J_weak=0` and
+`R_T rho_W=Z_T gamma^2`. The remainder is therefore
+`6 Z_T gamma^2/7`. For the timelike expanding speed `Z_T=1/2`, it is
+`3 gamma^2/7`; contraction reverses its sign and a static wall removes it.
+The construction permits arbitrarily small nonzero gamma.
+
+Seven [exact controls](../tests/test_nsc_atlas_cap_moving_projection_identity.py)
+check the element identity, geometric derivative, full mass derivative,
+affine limit and the counterexample at positive, negative and zero speed.
+This rejects a direct projected-advection extension as an exactly
+mass-compatible moving-cap scheme. The next construction must derive its
+mesh terms and physical boundary trace together, or retain and bound their
+remainder. Subtracting this defect to enforce the desired mass balance would
+not establish the field equations. No production evolution is changed.
+
+Independent Grok derivation confirms the matrix shape identities, kinetic
+cancellation, full remainder and hand-computed `6/7` coefficient per unit
+wall speed. The timelike examples above use half that speed.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

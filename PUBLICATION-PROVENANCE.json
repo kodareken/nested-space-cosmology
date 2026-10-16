@@ -1491,9 +1491,9 @@
       "sha256": "34da96c09ffae9273d6c0edf363504f469bb029c5d76ce82ca18c476778e15f3"
     },
     {
-      "bytes": 213232,
+      "bytes": 214092,
       "path": "docs/active-code-map.md",
-      "sha256": "373bc33e8309920c53f4bba120150394fd4b04a1d85e5ab89ed117afdb386b39"
+      "sha256": "dae9ff0c2fd94674217042180feba92eb5f793e9de4fb8e849c9d87117c3c907"
     },
     {
       "bytes": 95327,
@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 293782,
+      "bytes": 295683,
       "path": "docs/current-result.md",
-      "sha256": "0efb586d6d14fbf8c2c92b07900c08f110f542e1b6521b7d7f78b2be750b1ba9"
+      "sha256": "aeeedbfe3e8f2ff4bff37bfecbb5c0df64b3d7c9bde33edbc00cf79dd92630db"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2245139,
+      "bytes": 2246514,
       "path": "docs/lab-snapshot.json",
-      "sha256": "9b868e8a7ed9a94c6acea9c67a7b44c7afa11125a5e9e6092f1c810b5275624f"
+      "sha256": "fc90a2a14090148b2c9be787d61a64101978fbb2e2f2441fe8ba5d8c031a1745"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 184309,
+      "bytes": 191328,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "7c5c38907ed798915f316be29034c2a97fe5656a2a9edbde6288c8ffacbbb2e9"
+      "sha256": "25a559addc3e2df5df52b54037cf7b588e033ffaf38e8661a8290795e086ecf6"
     },
     {
       "bytes": 8895,
@@ -2201,9 +2201,9 @@
       "sha256": "7e7c50e31cf42ae37ee780d56873aa013596d70d1e1c3ab8f138112d3dd4b4ed"
     },
     {
-      "bytes": 237373,
+      "bytes": 242588,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "ac4ca0cf523231debc060b08d542e4ee3001d4291168adc95e4b74fd6d64e26f"
+      "sha256": "747a68b1c03f9969aaa03e09844bc3451dcf62d94218e2ea6123da2e737f2491"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 86954,
+      "bytes": 88065,
       "path": "docs/reproducing.md",
-      "sha256": "cb0ecb8370adbfe32e03127f61d69da82abe2440e72d0d002037fbc4568be86d"
+      "sha256": "6b8270320d4ab9b7d2b1ae4cb2058714e32b75f1e85b43ffdd8d26e0ebf3335b"
     },
     {
       "bytes": 31710,
@@ -16466,6 +16466,11 @@
       "sha256": "1764f3b6b9b3a58db870db6ae5a4a0d12ebeaa6427564aabd28bf59e57c80a24"
     },
     {
+      "bytes": 6049,
+      "path": "src/recursive_horizons/nsc_atlas_cap_projection_bound.py",
+      "sha256": "3e5ee47eb44686789a55e970c97c47f809dced6d812761d5cb44200667d88e5f"
+    },
+    {
       "bytes": 9241,
       "path": "src/recursive_horizons/nsc_atlas_cap_radial_comparison.py",
       "sha256": "d1b5aafdc9de16bc1e3e1c39d46b620c7eb6c4b183c9a8117bacee81efef9d38"
@@ -18454,6 +18459,16 @@
       "bytes": 7378,
       "path": "tests/test_nsc_atlas_cap_mass_transport_identity.py",
       "sha256": "5c6e1cacc51eed140ea7c7a30e38607529867e9d3572afdfd2373c9513b0a8df"
+    },
+    {
+      "bytes": 3991,
+      "path": "tests/test_nsc_atlas_cap_moving_projection_identity.py",
+      "sha256": "9010cb3a0fca83aaebff47609201e84236f6fd8620e424675dd47dde27997059"
+    },
+    {
+      "bytes": 7887,
+      "path": "tests/test_nsc_atlas_cap_projection_bound.py",
+      "sha256": "32e46bc87019554c50f7519edaee17c482ddb4395697b44e969c8266127faa0e"
     },
     {
       "bytes": 7653,
@@ -20506,7 +20521,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "9b868e8a7ed9a94c6acea9c67a7b44c7afa11125a5e9e6092f1c810b5275624f",
+  "lab_snapshot_sha256": "fc90a2a14090148b2c9be787d61a64101978fbb2e2f2441fe8ba5d8c031a1745",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

@@ -2,6 +2,38 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Moving-mesh mass compatibility, 16 October 2026
+
+An [exact moving-domain calculation](nsc-atlas-finite-amplitude.md#moving-mesh-projection-remainder)
+shows why the fixed-cap scheme cannot simply acquire projected coordinate
+advection. Its mass derivative contains an additional primitive-projection
+term. A two-element counterexample with timelike wall speed gives the exact
+remainder `3 gamma^2/7` at arbitrary primitive amplitude gamma, even with
+compatible incoming data at that instant. The affine and static limits
+recover zero remainder; contraction reverses its sign.
+
+Seven symbolic controls pass. This identifies a numerical compatibility
+requirement for the next moving-cap construction, not a failure of the
+physical geometry. The proposed update is not installed in the production
+solver. No physical simulation or large result payload is produced.
+
+## Wall-momentum projection bound, 16 October 2026
+
+The [new bound](nsc-atlas-finite-amplitude.md#exact-wall-momentum-projection-bound)
+controls the difference between the exact Galerkin wall momentum and the
+reconstructed momentum at a fixed cap state. It follows from the mass
+matrix, interpolation error and the same radial constraints, evaluated with
+outward Arb bounds. No radial solve or mesh scan is required.
+
+The manufactured bound is `0.0005850596031365239`, compared with the
+previous numerical momentum difference of `2.06194e-7`. Thirteen controls
+pass, and independent Grok derivation confirms the projection constant and
+constraint identities. This controls the exact spatial projection only;
+radial/gradient numerical errors, the normal-field boundary difference and
+wall motion are not included. The [calculation record](prior-art-and-open-claim.md#exact-galerkin-wall-momentum-projection-bound)
+retains the development counts and the one missing CPU receipt. No new
+physical prediction or large result file is added.
+
 ## Finite-backreaction mass-gradient reference, 16 October 2026
 
 The [nonlinear reference](../src/recursive_horizons/nsc_atlas_cap_variational_reference.py)

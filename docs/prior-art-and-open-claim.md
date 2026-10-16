@@ -425,9 +425,91 @@ The completed mathematical review confirms the equations and bound, and
 identifies a missing inherited centre-clock constant in the first prototype.
 The lapse now starts at `-log cosh(sqrt(alpha/6) f_C)`; an independent lapse
 integral and rate-normalization control would reject the former choice.
-The mass functional itself is unchanged. Source review remains in progress.
+The mass functional itself is unchanged. Completed Grok source review found
+no unresolved blocker in this fixed-radius reference. Its unread boundaries
+were the unchanged metric helper after the lapse edit, the background-cap
+owner and the shared-budget test; it did not execute tests.
 All earlier prototype work is included in the cumulative receipt; no retained
 field or physical time evolution has been evaluated.
+
+### Exact Galerkin wall-momentum projection bound
+
+Use the finite-cap variational derivative to identify `V` as the continuous
+linear L2 projection of `g=Bp` in the geometric coordinate. Bound its wall
+trace by the interpolation remainder and the strictly dominant rows of the
+centre-reduced mass matrix. Differentiate `B/A0` with the same mass and lapse
+constraints, retaining the inherited centre lapse. Use explicit field norm
+bounds and Arb arithmetic to enclose the resulting spatial projection error.
+
+This bound covers the exact Galerkin operator at the declared fixed state;
+numerical radial/gradient errors, the normal-wall discrepancy and moving
+geometry remain separate. It must vanish exactly at alpha zero and when the
+momentum field vanishes. Reuse the sufficient positive-metric certificate,
+and stop if its hypotheses or the resulting finite enclosures are unresolved.
+
+Exact algebra and manufactured enclosure controls may use **100,000 charged
+coefficient values / 20 active CPU seconds**, with no radial solve, retained
+data, evolution or mesh scan. Check the local interpolation constant,
+centre/interior/wall matrix margins, constrained derivatives of `B/A0`,
+independent high-precision enclosure values, zero limits, invalid inputs and
+budget stops. A bound too broad for a later physical calculation is reported
+as such; it does not justify replacing the missing numerical error enclosure.
+
+**Outcome:** thirteen controls pass. The exact manufactured momentum bound
+is `0.0005850596031365239`, sharpened from `0.021594667452231934` by using
+each affine element's own normal-field bound. No mesh or physical input was
+changed. Independent Grok derivation confirms the projection constant and
+constraint-based norm estimate. One symbolic test initially used an
+indefinite logarithmic primitive with the wrong complex branch for the real
+interval; checking the real primitive by its derivative and centre value
+resolves that test without changing the bound.
+
+Development has 27 test executions and 8,872 charged values. Recovered CPU
+receipts total 1.53125 seconds; one intervening single-test output was not
+retained across context transfer, so its CPU time is unavailable. The final
+focused replay passes with 16 values / 0.25 seconds. Do not represent the
+partial CPU sum as the full development cost. This calculation stops at
+the exact spatial projection bound; radial numerical error, normal trace
+compatibility and moving-radius transport remain separate work.
+
+Completed Grok source review found no correctness blocker, including the
+elementwise Phi sharpening and directed endpoints. It reused the previously
+reviewed metric/input helpers and did not rederive the factor three; the
+separate mathematical review covers that factor. The high-precision test
+checks evaluation of the proved formula, not a sampled field maximum.
+
+### Moving-cap geometric transport identity
+
+Use the exact zero-alpha conforming mass functional to test the next proposed
+connection: a uniformly moving geometric mesh with L2-projected coordinate
+advection. Keep the original incoming boundary law and inherited clocks.
+Derive the matrix shape derivative and compare it with the physical Reynolds
+wall-density term, including the explicit geometric wall potential. This
+tests a proposed discretization, not the physical nested configuration.
+
+Exact symbolic controls have **20 active CPU seconds**, no field samples,
+radial solves, mesh scans or evolution. Use a general element matrix identity,
+a globally affine primitive and one fixed two-element kinked primitive.
+Check both wall-speed signs and the static limit. If projection leaves a
+nonzero transport remainder, retain it and redirect the construction; do
+not subtract it by imposing the desired mass law. Grok independently derives
+the same moving-domain comparison. Finite-alpha motion requires its own
+shape derivative after this reference is understood.
+
+**Outcome:** seven exact controls pass in ten executions with zero field
+samples. The first suite measured 0.578125 test-body CPU seconds (shared
+matrix-fixture construction was outside that timer); the three final
+timelike-speed controls measured 0.265625 seconds with fixture construction
+included. Their pytest wall times were 1.30 and 0.79 seconds. The timer now
+includes shared algebra setup. The [derived remainder](nsc-atlas-finite-amplitude.md#moving-mesh-projection-remainder)
+is nonzero: for the fixed two-element primitive of amplitude gamma and
+timelike `Z_T=1/2`, it is exactly `3 gamma^2/7`. The incoming boundary data
+can match the reconstructed derivative at that instant, so that discrepancy
+does not explain this counterexample. The proposed projected-advection rule
+is not adopted. No finite-alpha solve or physical trajectory was run.
+Completed independent Grok derivation confirms the full remainder and exact
+two-element coefficient. The next connection is the moving-domain mass shape
+derivative and a slope-compatible transport rule, not another grid scan.
 
 ## Discrete cap mass balance, 16 October 2026
 

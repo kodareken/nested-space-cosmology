@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
+  "current_receipt_commit_parent": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 213232,
-      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
-      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
+      "bytes": 214092,
+      "change": "Bound exact cap wall-momentum projection and identify the moving-mesh mass remainder.",
+      "changed_from_commit": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "373bc33e8309920c53f4bba120150394fd4b04a1d85e5ab89ed117afdb386b39"
+      "sha256": "dae9ff0c2fd94674217042180feba92eb5f793e9de4fb8e849c9d87117c3c907"
     },
     {
       "bytes": 9543,
@@ -32164,6 +32164,14 @@
       "sha256": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81"
     },
     {
+      "bytes": 6049,
+      "change": "Bound exact cap wall-momentum projection and identify the moving-mesh mass remainder.",
+      "changed_from_commit": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
+      "path": "src/recursive_horizons/nsc_atlas_cap_projection_bound.py",
+      "retention_reason": "Exact-model cap projection bounds and moving-domain compatibility controls.",
+      "sha256": "3e5ee47eb44686789a55e970c97c47f809dced6d812761d5cb44200667d88e5f"
+    },
+    {
       "bytes": 9241,
       "path": "src/recursive_horizons/nsc_atlas_cap_radial_comparison.py",
       "retention_reason": "Native and smooth-reference radial map comparison with manufactured mathematical controls.",
@@ -35513,6 +35521,22 @@
       "path": "tests/test_nsc_atlas_cap_mass_transport_identity.py",
       "retention_reason": "Exact algebra controls for the current cap mass/transport bridge; no retained physical replay.",
       "sha256": "5c6e1cacc51eed140ea7c7a30e38607529867e9d3572afdfd2373c9513b0a8df"
+    },
+    {
+      "bytes": 3991,
+      "change": "Bound exact cap wall-momentum projection and identify the moving-mesh mass remainder.",
+      "changed_from_commit": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
+      "path": "tests/test_nsc_atlas_cap_moving_projection_identity.py",
+      "retention_reason": "Exact-model cap projection bounds and moving-domain compatibility controls.",
+      "sha256": "9010cb3a0fca83aaebff47609201e84236f6fd8620e424675dd47dde27997059"
+    },
+    {
+      "bytes": 7887,
+      "change": "Bound exact cap wall-momentum projection and identify the moving-mesh mass remainder.",
+      "changed_from_commit": "d98735d4bd1aa5e595672b52656b1f9239bb3e62",
+      "path": "tests/test_nsc_atlas_cap_projection_bound.py",
+      "retention_reason": "Exact-model cap projection bounds and moving-domain compatibility controls.",
+      "sha256": "32e46bc87019554c50f7519edaee17c482ddb4395697b44e969c8266127faa0e"
     },
     {
       "bytes": 7653,
