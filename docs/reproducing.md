@@ -201,8 +201,8 @@ charged values / 0.34375 CPU seconds of 300,000 / 20. Seven certificate
 controls use 7,213 / 0.203125 of 500,000 / 30. Seven reference controls use
 378,959 / 1.0 of 4,000,000 / 60. The [admission record](prior-art-and-open-claim.md#retained-background-jets-and-local-metric-domain)
 keeps these separate from historical controls. No scientific raw files are
-created by these tests. The fixed-profile certificate and two-reference
-commands are prepared for use after their source reviews:
+created by these tests. After independent source review, the fixed-profile
+certificate and two-reference commands have each run once:
 
 ```sh
 python scripts/run_python.py scripts/check_nsc_atlas_cap_background_domain.py
@@ -213,7 +213,12 @@ The [fixed-input admission](prior-art-and-open-claim.md#fixed-retained-pulse-tim
 allows one authenticated certificate and then two instantaneous references
 under separate allowances. Both commands print compact values and hashes;
 they create no files, re-fit no source and run no physical time evolution.
-Their recorded outcomes belong in the finite-amplitude owner.
+The certificate uses 78,388 charged values / 2.15625 CPU seconds of
+100,000 / 10; the two references use 15,264,426 / 7.984375 of
+20,000,000 / 120. The [recorded outcomes](nsc-atlas-finite-amplitude.md#fixed-retained-pulse-mass-remainder-diagnosis)
+include the exact-input metric floor and the finite coupling remainder.
+A full repeat would exceed the remaining original allowances; a justified
+reproduction receives its own bounded work account.
 
 The fixed background-profile projection diagnostic:
 

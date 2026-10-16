@@ -1521,9 +1521,9 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 301564,
+      "bytes": 302743,
       "path": "docs/current-result.md",
-      "sha256": "eeb0b0b00e984e248dd068901e8ae011ebc74979ac5d048afc1fac641a8bad16"
+      "sha256": "bbadbfb394c2abd1e80e6f473d0719161ad499bab225de8c9cb09d1e26cbf681"
     },
     {
       "bytes": 2481,
@@ -1556,9 +1556,9 @@
       "sha256": "497c0afa94c99a02630ef0bd11fe043c25981d29e6c74240c57ebd4e50f1ad7d"
     },
     {
-      "bytes": 2256406,
+      "bytes": 2256382,
       "path": "docs/lab-snapshot.json",
-      "sha256": "4ed81c37bafd8181ba586f266d989f4aa360b16457801303f31dd9070ab2d1d2"
+      "sha256": "efe8233b09e618678ae341effbbb6addea88a41b7c0212473cb0a3fd9f410ee4"
     },
     {
       "bytes": 4997,
@@ -1626,9 +1626,9 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 221233,
+      "bytes": 225672,
       "path": "docs/nsc-atlas-finite-amplitude.md",
-      "sha256": "50cd94c95eb12ca32181e6855a78d50c5598fc7d094428d5c2b4b20ae32027c4"
+      "sha256": "e758ec75e669da91709896a378eb0a85ea022304deec45f1e2044806ce641229"
     },
     {
       "bytes": 8895,
@@ -2201,9 +2201,9 @@
       "sha256": "7e7c50e31cf42ae37ee780d56873aa013596d70d1e1c3ab8f138112d3dd4b4ed"
     },
     {
-      "bytes": 262172,
+      "bytes": 263251,
       "path": "docs/prior-art-and-open-claim.md",
-      "sha256": "f08d8810979690d33776b42538b3476d37108cf8f67e51319f9e62c6e36c3c82"
+      "sha256": "b602635f3093832012e2badfca07d23722387df87920e9e7323c6916219b8524"
     },
     {
       "bytes": 6705,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 92730,
+      "bytes": 93119,
       "path": "docs/reproducing.md",
-      "sha256": "b3e4d90decfb1e14283b745bb69a82739032b9eadcdf840b99f7ecdd64e0f6f2"
+      "sha256": "268b51bd82ed098c44f57d629373a6dd968bb95d9d9a10bfb6b58182b87c74c9"
     },
     {
       "bytes": 31710,
@@ -20606,7 +20606,7 @@
       "sha256": "a33d2e9b81d051b4b42b2ef66f58f9a76a60d36a08f82d5b17abcda396ee0795"
     }
   ],
-  "lab_snapshot_sha256": "4ed81c37bafd8181ba586f266d989f4aa360b16457801303f31dd9070ab2d1d2",
+  "lab_snapshot_sha256": "efe8233b09e618678ae341effbbb6addea88a41b7c0212473cb0a3fd9f410ee4",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-16.5",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

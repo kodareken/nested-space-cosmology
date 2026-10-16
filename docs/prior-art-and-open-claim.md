@@ -774,7 +774,10 @@ assertion exposed ordinary coefficient-conversion rounding; the explicit
 Seven local-certificate controls pass with 7,213 / 0.203125. The delegated
 certificate implementation run ended without edits or a final report;
 the parent implemented the independently derived recurrence. Mathematical
-review is complete; certificate source review remains in progress.
+and source reviews are complete. The fixed-profile certificate passes with
+78,388 charged values / 2.15625 CPU seconds, giving the outward metric lower
+bound `0.6843674647287019` on 65 existing intervals. No radial solve or time
+step is used for this certificate.
 
 ### Explicit-time retained-background radial reference
 
@@ -825,6 +828,19 @@ actual finite-alpha remainder and both wall trace discrepancies without
 retuning them. Print compact values, input/producer hashes and execution
 counts; no raw file, grid scan or time step. On failed domain, budget or
 identity checks, report the consumed work and diagnose before another run.
+
+**Fixed-input outcome:** both references complete within their shared
+allowance: 15,264,426 charged values / 7.984375 CPU seconds. Alpha zero
+recovers the retained pulse with maximum departure rate `5.50e-10` and
+weak mass discrepancy `-1.39928e-10`. At the recorded finite alpha, the
+weak discrepancy is `-0.02337491766289285`; the explicit-time remainder
+accounts for it to `3.44e-15`. The actual hybrid mass discrepancy is
+`-0.023386447174947225`, and the normal trace gap is `-0.00258401679`.
+Forward/adjoint and independent shape checks pass in both cases. The
+[scientific receipt](nsc-atlas-finite-amplitude.md#fixed-retained-pulse-mass-remainder-diagnosis)
+retains values, input/producer hashes and the one-ulp domain adjustment.
+No scan, time step or raw output file is generated. This diagnoses the
+stated affine coupling; a compatible evolving construction remains open.
 
 ## Discrete cap mass balance, 16 October 2026
 

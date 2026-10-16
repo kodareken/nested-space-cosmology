@@ -2,6 +2,25 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Fixed retained-pulse coupling diagnosis, 16 October 2026
+
+The [two fixed references](nsc-atlas-finite-amplitude.md#fixed-retained-pulse-mass-remainder-diagnosis)
+recover the original pulse at zero coupling: maximum departure rate
+`5.50e-10`, weak mass discrepancy `-1.39928e-10`. At the recorded finite
+coupling, the weak mass discrepancy is `-0.02337491766289285`. The derived
+explicit-time background remainder accounts for it to `3.44e-15`, while
+independent radial gradient and shape checks pass. This locates a
+compatibility problem in the stated background/departure coupling.
+The hybrid wall trace discrepancy remains separately visible.
+
+The independently reviewed exact-input metric certificate passes with
+`A >= 0.6843674647287019`. One certificate and two instantaneous radial
+references use 78,388 / 2.15625 and 15,264,426 / 7.984375 charged values /
+CPU seconds under their separate allowances. Compact values and hashes
+are retained in the owner. No scan or time evolution is run. The next
+connection is a derived conservative coupling for the retained background;
+these results do not establish a finite evolving cap-wall solution.
+
 ## Retained-background time sensitivity, 16 October 2026
 
 The [existing cap reference](nsc-atlas-finite-amplitude.md#explicit-time-radial-sensitivity)
@@ -19,8 +38,8 @@ and accounting.
 
 A [local exact-C2 metric certificate](nsc-atlas-finite-amplitude.md#retained-background-field-jets-and-metric-domain)
 uses original Hermite inputs and cumulative source bounds over the existing
-profile intervals. Seven certificate controls pass; source review precedes
-the fixed-profile use. Numerical interpolation, radial error and the
+profile intervals. Seven certificate controls and independent source
+review pass; the fixed-profile result is recorded above. Numerical interpolation, radial error and the
 physical evolution remain separate questions. No time step or new
 observational prediction has been produced.
 

@@ -4593,7 +4593,8 @@ before radial integration. Failure of this sufficient bound does not prove
 a physical zero of `A`. Numerical interpolation and ODE errors are separate.
 Independent Grok derivation confirms this recurrence. Seven exact and
 manufactured certificate controls pass with **7,213 charged values /
-0.203125 CPU seconds**. Independent source review remains in progress.
+0.203125 CPU seconds**. Independent Grok source review is complete and
+confirms the outward certificate for the exact C2 input model.
 The implementation uses the original Bernstein controls, not rounded
 PPoly coefficients; it leaves the existing profile owner unchanged.
 
@@ -4636,6 +4637,76 @@ blocker in the time source, shape, indexing, projection subtraction or
 residual reporting; its scope excluded the separate metric certificate.
 The small-z split is shared as one constant. No physical evolution has
 been run.
+
+#### Fixed retained-pulse mass-remainder diagnosis
+
+Both reviewed commands have now run once at source commit `0b8d0af`.
+They authenticate 104 existing input bindings and retain the zero-case
+terminal cut 128, `T=0.19784721605423244`, nominal `R=0.55` and
+`Z=0.6183813135744636`. The exact binary profile endpoint requires one
+inward ulp, giving `Z=0.6183813135744635`; its floating radius is still
+`0.55`. Sixteen departure coefficients in each field are zero. The incoming
+trace is reconstructed from this same background:
+`w_plus=0.03192911946666193`, with `T_x=1` and `R_x=0`.
+This is a fixed background reference, not the evolved finite-alpha state.
+
+The standalone metric certificate passes on the 65 existing intervals:
+**`A >= 0.6843674647287019`**, downward rounded from the Arb lower point
+`1000204170236996926071558525507717990167727106073 * 2^-160`.
+The outward mass upper bound is `27.578152340162468`. This use consumes
+**78,388 charged values / 2.15625 CPU seconds** of its 100,000 / 10 allowance,
+with no radial solve. The bound concerns the exact C2 Hermite model;
+numerical field and ODE errors still require separate control.
+
+The two instantaneous radial references give:
+
+| Quantity | Geometric limit, alpha = 0 | Recorded alpha = 0.00012983127142551443 |
+| --- | ---: | ---: |
+| Mass N | 17.749674162944892 | 17.633757131127027 |
+| Wall lapse delta | 0 | 0.013422275586898612 |
+| Explicit time derivative N_T | 3.2756321491130675e-6 | -0.11724584063509795 |
+| Weak wall flux | 3.275828645292163e-6 | -8.288200105688344e-6 |
+| Mass-minus-weak-flux discrepancy | -1.3992838745002594e-10 | -0.02337491766289285 |
+| Derived explicit-time remainder | -1.3992495356829338e-10 | -0.02337491766289628 |
+| Difference from remainder identity | -3.4338817325643006e-15 | 3.4312830354821244e-15 |
+| Maximum absolute departure rate | 5.495621735462919e-10 | 0.5179424833694384 |
+| Forward/adjoint discrepancy | 5.014653083783901e-10 | 4.453792540933671e-10 |
+| Independent shape discrepancy | 4.736468941395674e-10 | 4.1815267664191327e-10 |
+| Actual hybrid interface mass discrepancy | -1.3994665943215884e-10 | -0.023386447174947225 |
+| Wall normal discrepancy | -4.708303191769403e-12 | -0.002584016790169539 |
+| Wall scalar-tangent discrepancy | -5.970983256442519e-12 | -0.0032816426664835363 |
+
+The zero-coupling reference recovers the retained pulse and its flux within
+the declared numerical acceptance thresholds. At finite coupling, the
+explicit-time remainder accounts for the weak mass discrepancy to
+`3.44e-15`. This identifies a compatibility failure of the stated affine
+background subtraction. Passing the radial gradient and shape comparisons
+does not remove it. The separately reported hybrid trace gaps also remain.
+The next construction must derive a compatible projection or variational
+coupling from the field equations; subtracting the measured discrepancy
+from an output would not supply that construction.
+
+The two references consume **15,264,426 charged values / 7.984375 CPU
+seconds** of 20,000,000 / 120, with zero time steps or trajectory replays.
+All asserted checks pass. The internal coefficient-evaluation counts are
+7,620,464 and 7,643,936, with 6,787 and 6,811 field sites respectively.
+These are numerical consistency results, not uniform error enclosures or
+a finite evolving cap-wall solution. No observational prediction is added.
+
+The compact commands print their receipts and create no raw files. Their
+inputs and producers are bound by SHA256:
+
+| Input or producer | SHA256 |
+| --- | --- |
+| Existing operator payload | `312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09` |
+| Input manifest | `9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd` |
+| Original profile arrays | `04e10695afac696c4b0e2c178ccf17a19a04ce20706b60bdf86f6f44af38e0fe` |
+| Domain command | `0e62b62704a07fecdc5cd21f56977eb1d1cce348e7046ed1703a2529ee712a5b` |
+| Two-reference command | `b4500e686114c905dd9360224807d02c9e1881bdb4534b042dd7f5116699e7d8` |
+| Background bound | `cd3013306825187e2c7b9336a56990183eb6dbc1383fad2146f0bb4fe49f3948` |
+| Background jets | `f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852` |
+| Polynomial reference | `35d7273d3ffda6ecb441b0280c07dbd794992950ba609674bd2be1e280b3fb0e` |
+| Shared radial engine | `0779ff9783932b2335b9dc09bb64a218daad6b694393d82cfc97f62ce8888f93` |
 
 ### Central clock in general null labels
 
