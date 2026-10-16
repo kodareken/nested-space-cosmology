@@ -607,6 +607,146 @@ independent boundary choice was imposed. It proves this implication for
 solutions of that system, not that its boundary equations are solvable,
 complete or possess a bounded coupled solution map.
 
+### An explicit outgoing-to-incoming wall map
+
+The [boundary and clock helpers](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
+implement the following algebra; their
+[independent controls](../tests/test_nsc_atlas_nonlinear_boundary.py)
+exercise the vacuum limit, canonical wall action and coordinate changes.
+
+There is also a pointwise map that imposes angular, temporal and normal
+matching independently at every wall time. It is distinct from the
+preceding choice that imposes an incoming constraint and propagates the
+angular match. Keep `r` as the common Einstein radius, `c` as the invariant
+normalized field and `s` as Einstein proper wall time. Define the weighted
+outgoing traces
+
+$$
+R_+=v+\beta_+=2\dot V_+r_{V,+},\qquad
+R_-=v-\beta_-=2\dot Q_-r_{Q_-,-},
+$$
+$$
+C_+=c_s+n c=2\dot V_+c_{V,+},\qquad
+C_-=c_s-n c=2\dot Q_-c_{Q_-,-}.
+$$
+
+The notation `C_+,C_-` in this paragraph denotes scalar traces, not metric
+lapses. Put
+
+$$
+u=c/r,\qquad D=1+\alpha u^2/6,\qquad
+\mathcal F=D^{-1},\qquad S=bD^{3/2}.
+$$
+
+Angular Israel and homogeneous reduced-field transmission give
+
+$$
+v=\frac{R_++R_-+Sr}{2},\qquad
+\overline\beta=\frac{R_+-R_-}{2},\qquad
+\beta_+=\overline\beta-Sr/2,\quad
+\beta_-=\overline\beta+Sr/2,
+$$
+$$
+c_s=\frac{C_++C_-}{2},\qquad n c=\frac{C_+-C_-}{2}.
+$$
+
+The exact canonical derivatives, evaluated by their continuous normalized
+form even at zero amplitude, are
+
+$$
+\frac{\Psi_s}{\sqrt\alpha}=\frac{c_s-uv}{r\sqrt D},\qquad
+\frac{N_\pm}{\sqrt\alpha}=\frac{n c-u\beta_\pm}{r\sqrt D}.
+$$
+
+The scalar jump follows directly from the angular jump:
+$[N]=\sqrt\alpha\,uS/\sqrt D=2S_{,\Psi}$.
+Moreover $S_{,\Psi}/S=z/2$, and normal force determines the mean
+normal acceleration without dividing by either signed `beta`:
+
+$$
+\overline K_\tau=
+\frac{3(h_+^2-h_-^2)\sqrt D}{2b}
+-\frac{\alpha u(n c-u\overline\beta)}{2rD}
+-\frac{2\overline\beta}{r},\qquad
+K_{\tau,+}=\overline K_\tau-S/2,\quad
+K_{\tau,-}=\overline K_\tau+S/2.
+$$
+
+Here the model remains `b=2,h_+=0,h_-=1`. The incoming radius and scalar
+traces are
+
+$$
+2\dot U_+r_{U,+}=R_-+Sr,\qquad
+2\dot Q_+r_{Q_+,-}=R_++Sr,
+$$
+$$
+2\dot U_+c_{U,+}=C_-,\qquad
+2\dot Q_+c_{Q_+,-}=C_+.
+$$
+
+For compatible positive wall lapses `C_W,+,C_W,-`, parameterize the
+future null rates on each side by
+$\dot U=C_W^{-1/2}e^{-\eta}$ and
+$\dot V=C_W^{-1/2}e^{\eta}$, using `Q_-,Q_+` on the cap.
+Let $L=\log C$, $\Gamma_\pm=(\log C_{W,\pm})_s$,
+$\ell_+=2\dot V_+L_{V,+}$ and
+$\ell_-=2\dot Q_-L_{Q_-,-}$. Then
+
+$$
+2\dot U_+L_{U,+}=2\Gamma_+-\ell_+,\qquad
+2\dot Q_+L_{Q_+,-}=2\Gamma_--\ell_-,
+$$
+$$
+nL_+=\ell_+-\Gamma_+,\qquad nL_-=\Gamma_--\ell_-,\qquad
+\eta_{\pm,s}=K_{\tau,\pm}-\tfrac12 nL_\pm.
+$$
+
+These formulas supply six incoming first derivatives and the common
+radius, field, embedding and rapidity rates. Their denominators are
+positive radius, lapse and null rates. They are smooth at `alpha=0` and
+at the reference zero of `beta_plus`. They are an algebraic boundary
+operator, not a construction of the regional evolution or its gauge.
+Compatible corner data and the same physical source remain required.
+
+In particular, fixing both cap null labels to Jordan proper time at the
+axis already fixes their gauge. In that gauge the cap wall lapse and
+`Gamma` must come from compatible regional evolution. Prescribing wall
+lapses instead requires an observer-clock conversion; the two gauge
+choices cannot be imposed independently on the same null labels.
+
+### Central clock in general null labels
+
+The observer conversion can be explicit. Parameterize the regular cap
+axis by `lambda`, with positive rates
+$d_-=dQ_-/d\lambda$ and $d_+=dQ_+/d\lambda$. Regularity gives
+
+$$
+d_-r_{Q_-}+d_+r_{Q_+}=0,\qquad
+-4r_{Q_-}r_{Q_+}/C=1,\qquad
+d_-c_{Q_-}+d_+c_{Q_+}=0.
+$$
+
+Consequently the Jordan central clock and scalar readout obey
+
+$$
+\boxed{\frac{dT_J}{d\lambda}
+=\sqrt{C d_-d_++\frac{2\alpha}{3}(d_+c_{Q_+})^2},\qquad
+p_{J,C}=\frac{2d_+c_{Q_+}}{dT_J/d\lambda}.}
+$$
+$$
+\mathcal F_C=\frac{C d_-d_+}{(dT_J/d\lambda)^2}.
+$$
+
+These follow from `u_C=2 d_+ c_Qplus/sqrt(C d_- d_+)` and
+`dT_J/dlambda=sqrt(C d_- d_+/F_C)`. Both physical outputs are invariant
+under constant rescalings of either null coordinate. For a diagonal axis
+`d_-=d_+=1`, the clock rate is
+$\sqrt{C+2\alpha c_{Q_+}^2/3}$; the earlier anchored-gauge readout
+`p_J,C=2 c_Qplus` follows when this rate is one. In another gauge, fix
+`T_J` at the same quiet event and integrate its derived rate rather than
+imposing a second clock normalization. This conversion assumes a regular
+axis and does not by itself construct one.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

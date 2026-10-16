@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "ea0fd5bdc2000dd859101761d38c2219218e51c2",
+  "current_receipt_commit_parent": "2199bc5df89021c3e19955eccd3a8cc0a19c1b08",
   "files": [
     {
       "bytes": 1506,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 191927,
-      "change": "Explicit successor for propagated exterior and reconstructed central scalar response; original import fields preserved",
-      "changed_from_commit": "ea0fd5bdc2000dd859101761d38c2219218e51c2",
+      "bytes": 192141,
+      "change": "Explicit successor for exact nonlinear boundary and observer-clock helper routing; original import fields preserved",
+      "changed_from_commit": "2199bc5df89021c3e19955eccd3a8cc0a19c1b08",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "1db91dd40ed338f2387f06e44071aef84df3d9dd6eda597562ed665483ae8ab0"
+      "sha256": "00e444dbfc8438155436121960fd50c0697369ed18c94bebe510871586b698ff"
     },
     {
       "bytes": 9543,

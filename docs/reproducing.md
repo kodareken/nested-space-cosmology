@@ -8,6 +8,19 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [exact boundary and central-clock helpers](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
+evaluate the same-action nonlinear matching algebra without evolving a
+spacetime. Their [owning derivation](nsc-atlas-finite-amplitude.md)
+specifies compatible gauge inputs and the remaining coupled problem.
+Run their independent vacuum, canonical-action and coordinate controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_nonlinear_boundary.py -q
+```
+
+These tests create no physical evolution record and select no amplitude
+interval for the full model.
+
 The [profile-moment successor](nsc-atlas-profile-moment.md) compares the
 pre-arrival mass identity against the original radial evaluator, then
 compares local lifts on 16/32 active cells with 40 withheld queries:

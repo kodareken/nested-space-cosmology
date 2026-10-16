@@ -1,5 +1,38 @@
 # Prior art and admission of new research
 
+## Exact boundary-operator implementation, 16 October 2026
+
+The [finite-amplitude owner](nsc-atlas-finite-amplitude.md) supplies the
+same-action scalar, Israel and normal-force laws. The next implementation
+is their pointwise outgoing-to-incoming trace map, with fixed `b=2`,
+`h_minus=1`, `h_plus=0`. Use the invariant normalized field `c`, so all
+algebra has a regular `alpha=0` limit and never divides by `beta_plus`.
+The helper accepts compatible positive wall lapse traces and their
+derivatives; it does not independently choose a second central-clock gauge.
+A separate regular-centre readout converts arbitrary positive null-label
+rates to Jordan proper time and the physical normalized scalar.
+
+Add these pure helpers and independent tests to the existing package.
+Check exact vacuum recovery, the reference zero of `beta_plus`, canonical
+scalar and force identities at nonzero amplitude, null-coordinate
+rescaling, central-clock conversion and malformed domains. Each test has
+a 30-process-CPU-second ceiling. The domain is finite real input with
+positive Einstein radius and lapse, nonnegative amplitude parameter and
+compatible timelike rates; the coupled caller owns the physical domain
+and chart compatibility. No PDE solve, physical amplitude selection,
+new preparation or evolution record is included. An inconsistency in
+frame, orientation, gauge or matching is resolved in the specific identity
+before using this map as a nonlinear boundary solver.
+
+**Implementation outcome:** the pure boundary and central-clock helpers
+pass 32 independent controls in 0.28 seconds of pytest-reported duration.
+They retain normalized scalar information at zero amplitude, handle the
+reference zero of `beta_plus`, and recover canonical-action matching and
+observer quantities under coordinate changes. No physical solve or
+evolution record is produced. The next implementation connection is
+compatible regional gauge and bulk evolution with regular central data;
+the pointwise operator does not supply that coupled solution map.
+
 ## Central scalar reconstruction admission, 16 October 2026
 
 The existing central-clock cap equation and regular reflection determine

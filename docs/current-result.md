@@ -2,6 +2,28 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Exact boundary and central-clock helpers, 16 October 2026
+
+The [implemented boundary operator](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
+now converts outgoing radial, scalar and lapse derivatives into the six
+incoming derivatives and wall state rates. It imposes the same action's
+angular and temporal jumps, scalar transmission and normal force. Its
+normalized field formulation remains regular at zero amplitude, zero
+radial speed and the reference zero of `beta_plus`.
+
+A companion centre helper converts regular null-coordinate data to Jordan
+proper-clock rate and the normalized central scalar. Both outputs respect
+null-coordinate rescaling, and the clock is anchored by the caller at the
+same quiet event. The [independent controls](../tests/test_nsc_atlas_nonlinear_boundary.py)
+pass 32 tests, including canonical-action identities at nonzero amplitude,
+vacuum recovery and observer conversion. No field or spacetime evolution
+is run by these helpers.
+
+Compatible regional lapse evolution and a regular central solution remain
+inputs to connect. This implements the boundary algebra needed for the
+coupled solver; it does not yet provide a nonlinear trajectory or its
+amplitude/error interval.
+
 ## Reference scalar bounds and constraint transport, 16 October 2026
 
 The [nonlinear owner](nsc-atlas-finite-amplitude.md#a-bounded-vacuum-reference-collar)
