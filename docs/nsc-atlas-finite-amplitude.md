@@ -2069,8 +2069,89 @@ SSPRK2 extrapolant by at most `5.60381e-8`. Agreement between those
 approximations does not certify their common limit or uniform error.
 The finite constraint residuals persist. A small pre-support scalar is
 also present in both amplitudes and decreases with time resolution.
-The actual source/profile regularity and stage sampling must be inspected
-before extending the cache or assuming third-order convergence.
+The actual source/profile regularity and stage sampling determine which
+time comparisons are useful; a formal method order is insufficient.
+
+#### Computational support and profile-knot sampling
+
+The retained computational profile supplies a concrete pre-support defect.
+Its knot 17 lies at reference `x=0.4216495553`, before the physical source
+front `x=0.4226917906`, and has `F=F'=0` but `F''=0.1045440553`.
+Knot 16 has all three zero jets. If their label spacing is `d` and
+`t=(zeta-zeta_16)/d`, the unique quintic on that interval is
+
+$$
+F(\zeta)=\frac{F''(\zeta_{17})d^2}{2}\,t^3(1-t)^2.
+$$
+
+Its nonzero interior follows directly from the six endpoint constraints.
+The estimated curvature borrows information from the later nonzero knot,
+although the physical source `c,c_x` are exactly zero before its front.
+At saved cut 35 the wall background is `7.63534e-6`; the evolved departure
+nearly cancels it, leaving `-3.17616e-7` at 128 steps and `-1.98830e-8`
+at 256 steps. The fine cap's two adjacent incoming integrals are about
+`-1.57101e-7` and `1.39906e-7`. Pre-support outgoing `Ip-Iq`, outgoing
+wall characteristic and central field are zero in all four histories.
+This is an auxiliary-profile cancellation error, not a physical precursor.
+Respecting the known support in a future profile construction is a separate
+correction; it must not be mixed into the present fixed-profile time test.
+
+The late paired discrepancy has a different location. Define from the
+saved physical wall values
+
+$$
+e_i=(c_{\alpha,256,i}-c_{0,256,i})
+ -(c_{\alpha,128,i}-c_{0,128,i}),\qquad
+q_i=T_{\alpha,128,i}+\operatorname{atanh}r_{\alpha,128,i}.
+$$
+
+Let `I_i=1` when a retained profile label lies strictly between
+`q_(i-1)` and `q_i`. Exactly 45 intervals satisfy this endpoint-bracket
+test, and
+
+$$
+\frac{\sum_i I_i(e_i-e_{i-1})^2}{\sum_i(e_i-e_{i-1})^2}
+=0.999885990677127.
+$$
+
+The 5% and 95% cumulative quantiles of `sum(e_i^2)` are cuts 89 and 98.
+These are reproducible saved-array associations, not recovered internal
+stage histories. Limiter branch disagreements peak elsewhere.
+
+There is an exact quadrature reason to retain the crossing phase. For a
+local cubic kink `B(x)=A*(x-x_*)_+^3/6`, write `theta=(x_*-x_0)/h`.
+For `0<=theta<=1`, direct integration gives the SSPRK3/Simpson chain defect
+
+$$
+\begin{aligned}
+R_B&=B(x_0+h)-B(x_0)
+ -\frac h6\{B'(x_0)+4B'(x_0+h/2)+B'(x_0+h)\}\\
+&=\frac{Ah^3}{12}(1-2\theta)
+   \min(\theta,1-\theta)^2.
+\end{aligned}
+$$
+
+For `theta<=1/2`, expansion gives `theta^2*(1-2*theta)`; for
+`theta>=1/2`, it gives `(1-theta)^2*(1-2*theta)`. A cubic kink aligned
+with an endpoint or the midpoint has zero defect. An interior kink has
+a phase-dependent cubic defect, whose sign can change on refinement.
+Its largest magnitude is `abs(A)*h^3/324`, at phases `1/3` and `2/3`.
+For a monotone smooth wall label `zeta(x)`, a jump of `F'''` contributes
+this local leading term with `A=[F''']*zeta_x^3`; the remaining terms
+depend on the smooth profile and trajectory. The full coupled stages
+need not follow that prescribed trajectory, so this identity alone does
+not assign the entire scalar error.
+
+On the zero reference the knots align with step boundaries. Evaluating
+`B=F(T+atanh r)-F(T-atanh r)` and its analytic first jet on the original
+513 gauge rows gives cumulative Simpson defects `2.06210e-6` and
+`1.28889e-7` at 128/256 steps. Their difference follows the actual zero
+wall time difference with correlation `0.997555` and maximum residual
+`2.23903e-7`. The saved-data analysis uses 727,310 charged arithmetic
+points and 0.921875 CPU seconds, with no coupled stage or source solve.
+The finite trajectory shifts knots into the step interiors. The admitted
+[512-step comparison](prior-art-and-open-claim.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+tests its remaining temporal sensitivity while preserving that profile.
 
 ### Central clock in general null labels
 

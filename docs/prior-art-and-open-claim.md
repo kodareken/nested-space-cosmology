@@ -1,5 +1,41 @@
 # Prior art and admission of new research
 
+## Midpoint-complete SSPRK3 comparison, 16 October 2026
+
+The saved four-case histories localize 90% of the squared paired scalar
+time difference to cuts 89--98. On the zero reference, direct Simpson
+quadrature of the known background chain has defects `2.06210e-6` and
+`1.28889e-7` at 128/256 steps; their difference closely follows the
+actual zero-wall time difference. Along the finite histories, profile
+knots lie inside 45 coarse intervals, which contain 99.9886% of the
+squared increments of the paired scalar time difference. This is
+saved-data localization, not a causal isolation or an assumed smooth
+convergence order. It motivates one additional time resolution with the
+profile and every spatial/physical input held fixed.
+
+| Item | Fixed midpoint-complete comparison |
+| --- | --- |
+| Borrowed operators | Existing SSPRK3 coupled operator, the same 129-knot `SourceSnapshot`, and the analytic reference-wall gauge with fixed Gauss quadrature. No field sample is differentiated to obtain a jet. |
+| Missing connection | The 513-row cache lacks the midpoint values needed for 512 SSPRK3 steps. Evaluate the existing source interface there; do not change its source ODE solution or interpolation. Evaluate the reference gauge directly at those labels. |
+| Cache | Interleave the original 513 coordinates, preserved exactly, with their 512 explicit midpoints. For each amplitude reconstruct the same source snapshot from the saved 257 exact rows restricted to the original 129 knots; require its values and jets at all old coordinates to match every original cache row. Sample only the new midpoints afterward. The scalar preparation remains analytic; source geometry/transverse jets retain their existing Hermite approximation and residuals. |
+| Gauge control | Preserve all original gauge rows. Compute the 512 new rows at order 64 and independently at order 32, charging every query, inversion and quadrature node. Compare all physical values/jets to absolute tolerance `5e-12`; iteration counts need not agree. Check clock orientation, normalization and original inverse-residual bounds. These differences are a quadrature sensitivity check, not an enclosure. |
+| Cases and domain | Exactly two new cases: zero and the original finite amplitude, 32 cells/512 steps over the original interval; 129 saved slices, 1,024 steps and 3,074 stages including two final reconstructions. Reuse the original computational profile without support edits. |
+| Comparison | Raw and paired 256/512 histories, with the retained 128-step differences and the old SSPRK2 extrapolant kept distinct. Locate maxima and inspect profile-crossing intervals. Retain constraints, wall compatibility, outgoing cap signal, quiet controls and own-trace cap pullback. A small final endpoint difference cannot stand in for the history maximum. |
+| Shared creation allowance | 300 process CPU seconds and 50,000,000 points for authentication, new cache and both gauge orders, profile construction, both trajectories, diagnostics and validation together. Source-snapshot construction and old/new queries charge 2,314 points before later validation. No new source ODE integration or old trajectory replay. |
+| Authentication | Verify preserved old keys/rows and reproduce the midpoint cache with the same source interface and both gauge quadratures; reconstruct all saved physical views, two final stages and diagnostics. One standalone check has 60 CPU seconds/5,000,000 points and performs no trajectory. Producer/operator inputs and original results remain frozen. |
+| Controls and stop | New cache/recorder controls have one shared 60-CPU-second/2,000,000-point allowance. Include exact-key preservation, independent scalar/source-jet and gauge identities, mismatched old rows, bad midpoints, output tampering and budget failures. The first domain, arithmetic, profile, metric, wall, Courant `.4`, comparison-tolerance or budget failure stops the calculation with an ignored `.build` receipt; no automatic retry. |
+| Decision | Determine the remaining scalar time sensitivity on the finer grid and whether its response can be separated from spatial constraints. A poor comparison prompts a profile-aware temporal discretization question, not an automatic larger grid. The confirmed early profile-support defect stays a separate representation correction. |
+
+The cache and recorder implementations have passed 36 focused controls and
+independent review. Combined control work uses 540,731 points and 2.890625
+process CPU seconds, plus an intentional 513-point exhaustion attempt.
+This includes the isolated correction of a test-fixture alias. Controls
+include actual analytic compact-scalar jets, manufactured
+source curvature, independent gauge mass/clock identities, exact old-row
+preservation, paired-history indexing, tampering and shared-budget checks.
+The producer and its 86 input/source bindings are frozen for one admitted
+physical comparison. No new source integration is involved.
+
 ## Fixed-input SSPRK3 coupled window, 16 October 2026
 
 **Outcome:** the [four-case comparison](current-result.md#fixed-input-ssprk3-coupled-window-16-october-2026)

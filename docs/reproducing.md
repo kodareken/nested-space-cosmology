@@ -137,6 +137,24 @@ constraint histories and pre-support controls. The old SSPRK2 paired
 histories supply the pointwise comparison `(4*paired_512-paired_256)/3`;
 compare this array with the new paired 256-step history without a solve.
 
+The [midpoint-complete comparison](prior-art-and-open-claim.md#midpoint-complete-ssprk3-comparison-16-october-2026)
+adds only the missing cache labels and two 512-step cases. The original
+source snapshot, profile and spatial operators stay fixed. Its 17 cache
+and 19 recorder controls pass with 540,731 points and 2.890625 CPU seconds,
+plus an intentional 513-point exhaustion attempt:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_refined_cache.py tests/test_record_nsc_atlas_ssprk3_refinement.py -q
+python scripts/run_python.py scripts/record_nsc_atlas_ssprk3_refinement.py --output results/development/nsc-atlas-ssprk3-refinement-v1
+python scripts/run_python.py scripts/record_nsc_atlas_ssprk3_refinement.py --output results/development/nsc-atlas-ssprk3-refinement-v1 --check
+```
+
+Creation shares 300 CPU seconds/50 million points across cache evaluation,
+gauge-order comparison, evolution and validation. A standalone check has
+60 CPU seconds/5 million points; it reproduces the midpoint cache and two
+final radial stages, with no trajectory or source-ODE replay. The 86
+input/source bindings remain frozen. Creation requires a new directory.
+
 The [compatible transport audit](../scripts/diagnose_nsc_atlas_compatible_transport.py)
 uses the fixed [compatible result](../results/development/nsc-atlas-compatible-evolution-v1/compatible.json)
 without replaying its source or time evolution. Its 25 controls exercise

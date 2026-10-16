@@ -45,11 +45,15 @@ The own-trace zero-cap comparison remains at its interpolation scale
 (linear discrepancy `8.89651e-4`, PCHIP `8.36309e-4`). Spatial residuals
 and the scalar's temporal sensitivity remain distinct numerical questions.
 
-The next decision uses saved histories and the actual source/profile
-regularity to locate that sensitivity. A finer SSPRK3 run would require
-additional exact source/gauge midpoint data; the original 513-row cache
-does not supply them. Neither a cache extension nor another evolution
-is implied by the present comparison.
+The [saved-data localization and quadrature identity](nsc-atlas-finite-amplitude.md#computational-support-and-profile-knot-sampling)
+now identify the computational profile as a specific temporal issue:
+99.9886% of squared increments of the paired time discrepancy occur on
+intervals bracketing its knots. The zero-reference chain quadrature also
+tracks most of the zero-wall discrepancy. These findings motivate the
+admitted [512-step comparison](prior-art-and-open-claim.md#midpoint-complete-ssprk3-comparison-16-october-2026),
+which requires new midpoint evaluations of the same source and reference
+gauge interfaces. Its implementation is in preparation; the source and
+computational profile remain fixed for that comparison.
 
 ## Local SSPRK3 comparison, 16 October 2026
 
