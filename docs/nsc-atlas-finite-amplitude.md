@@ -5069,6 +5069,99 @@ The weak wall value `V_W` still needs comparison with the actual field trace
 removes two representation remainders; it does not yet establish an evolved
 finite-alpha solution, its material-wall junctions, or its truncation error.
 
+#### Metric domain for fixed local total fields
+
+The [local certificate](../src/recursive_horizons/nsc_atlas_cap_fixed_bound.py)
+interprets the supplied floating coefficient pair as exact binary numbers
+in the rational fixed basis. It reconstructs the degree-five local powers
+exactly. For `P(xi)=sum a_k xi^k`, the Bernstein controls on `[0,c]` are
+
+\[
+ b_j=\sum_{k=0}^j a_k c^k\frac{\binom jk}{\binom nk},\qquad n\ge\deg P.
+\]
+
+The maximum absolute control encloses the polynomial. Derivative controls
+include the physical cell width. Only the final cell is clipped; no extra
+partition or point scan enters the estimate. In the axis cell, chi and k
+vanish, so bounds `L_chi,L_k` on their derivatives imply
+`|f|<=L_chi*z_hi/tanh(z_hi)` and `|p|<=L_k*z_hi/A0(z_hi)`. Elsewhere the
+local value hulls and positive left radius bound these quotients. In every
+cell `|h|<=L_chi/A0(z_hi)+|f|`. The potential is bounded at the resulting
+nonnegative upper bound for `|f|`.
+
+Write the constrained radial equation as
+
+\[
+ n_r+a n=b,\quad
+ a=\frac{\alpha(p^2+h^2)}{2r}\ge0,\quad
+ b=\frac{r^2P(f)}2+\frac{A_0(p^2+h^2)}4\ge0.
+\]
+
+Starting with zero axis mass gives `0<=n<=U=integral b_bound dr`. On each
+cell, the cumulative envelope is affine in r, so its ratio U/r takes its
+largest value at an endpoint (or equals the source bound on the first
+cell). Outward Arb arithmetic then gives `A>=A0-2*alpha*U/r` throughout
+the physical interval. Failure to find a positive bound is inconclusive
+about the actual metric sign.
+
+Five [controls](../tests/test_nsc_atlas_cap_fixed_bound.py) pass with
+**17,600 charged values**; active CPU time is below the reported timer
+granularity. They independently expand the Bernstein polynomial, recover
+the quiet geometric floor, compare the integrated alpha=0 linear-field
+mass with the source envelope, check clipping and reject invalid input.
+This certifies the exact declared field/constraint model only. Floating
+evaluation, numerical radial error and evolved states remain outside it.
+Independent Grok source review confirms the exact cut, hull, axis and
+cumulative-envelope arguments. One retained application at the recorded
+`alpha=0.00012983127142551443` certifies
+
+\[
+ A(r)\ge0.6870371535642128\quad(0\le r\le R),\qquad
+ n(R)\le21.971840781627296,
+ \quad R=\tanh Z\simeq0.55.
+\]
+
+Here Z is the stored exact-binary wall coordinate of the retained check.
+This is a bound for the rounded coefficient pair in the exact rational
+basis, not a reuse of the original-input certificate. One authentication,
+regenerated transfer and certificate use **278,272 charged values /
+2.296875 CPU seconds** of 1,000,000 / 15. The certificate itself charges
+83,136 values at 160-bit Arb precision. There is no radial solve, Gram
+factor, new partition or time step. The compact [receipt](../results/summaries/nsc-atlas-cap-fixed-domain-v1.json)
+preserves the dyadic lower bound, source hashes and scope.
+
+For the numerical mass adapter, the existing forward/adjoint radial engine
+can retain the fixed local coefficient pair. On a cell write
+`z=z_left+h*xi`; an element-index coordinate gives a Jacobian `h*A0`
+to the radial equation. The last element ends at its physical cut fraction.
+For each supported basis function the coefficient partials use
+`f_i=phi_i/r`, `p_i=phi_i/A0`, and
+`h_i=(phi_i,z-A0*phi_i/r)/A0`. Near the axis the stable equivalent is
+
+\[
+ h_i=\frac{\phi_{i,z}-\phi_i/z+
+                  (1/z-2/\sinh(2z))\phi_i}{A_0}.
+\]
+
+In the odd axis cell `phi_i=a1*xi+a3*xi^3+a5*xi^5`, the first difference
+is `(2*a3*xi^2+4*a5*xi^4)/h`, avoiding subtraction of equal centre limits.
+At fixed running mass, the local derivative sources are
+
+\[
+ s_{c_i}=\frac{r^2P_f f_i}{2}+\frac{A h h_i}{2},\qquad
+ s_{d_i}=\frac{A p p_i}{2}.
+\]
+
+These sources enter the existing `G_r=s-a*G` engine and its independently
+weighted adjoint quadrature. Only six basis functions contribute on an
+ordinary cell, although the global sensitivity vector has `2*(4N-1)`
+entries. Retain that existing engine first; a sparse replacement needs its
+own demonstrated necessity. The physical shape derivative remains the
+boundary value `N_Z=A0*rho_W`, and the already derived weak rates use the
+banded Gram factor. No background-time or dilation term is introduced.
+This specifies the next adapter connection; its numerical implementation,
+checks, solve-error estimate and finite wall coupling remain outstanding.
+
 ### Central clock in general null labels
 
 The observer conversion can be explicit. Parameterize the regular cap

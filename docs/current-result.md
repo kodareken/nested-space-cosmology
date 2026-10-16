@@ -17,8 +17,18 @@ Gram condition is `3.01213e7`, below the declared limit but large enough
 that numerical accuracy needs explicit attention. Compact [evidence and
 hashes](../results/summaries/nsc-atlas-cap-fixed-transfer-v1.json) are saved.
 No field history, radial solve or time step is generated. A metric bound
-for the rounded total coefficients and the mass-gradient adapter are next;
-the former bound on the original interpolant does not certify them.
+for the rounded total coefficients now passes as recorded below; the
+mass-gradient adapter is next.
+
+The [fixed-field metric certificate](nsc-atlas-finite-amplitude.md#metric-domain-for-fixed-local-total-fields)
+gives **`A>=0.6870371535642128`** throughout the cap at the recorded finite
+coupling. Its mass upper bound is `21.971840781627296`. This uses the actual
+binary coefficient inputs in the exact rational basis, rather than borrowing
+the original interpolant's certificate. Five controls and independent Grok
+source review pass. One authenticated transfer/certificate uses 278,272
+charged values / 2.296875 CPU seconds; compact [evidence](../results/summaries/nsc-atlas-cap-fixed-domain-v1.json)
+binds the inputs and sources. Floating field evaluation, radial numerical
+error and finite evolution remain separate requirements.
 
 ## Fixed physical-coordinate bulk route, 16 October 2026
 

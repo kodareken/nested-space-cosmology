@@ -1092,6 +1092,53 @@ retains all input/source hashes and conversion bounds. Independent Grok
 review finds no sign or domain blocker for this calculation. The result
 admits design of the metric-domain and mass-gradient adapter, not evolution.
 
+### Fixed local-field metric-domain certificate
+
+Bound the exact rational local polynomials whose degrees of freedom are
+the supplied binary floating coefficients. Use Bernstein control hulls on
+each existing physical cell, clipping only the final cell at the current
+wall. The axis cell is odd, so derivative bounds control chi/r and k/A0
+without division by zero. On later cells bound chi, k and chi_z locally.
+Use the existing nonnegative potential and cumulative radial source
+envelope for `n_r+a*n=b`: `0<=n<=U`, hence `A>=A0-2*alpha*U/r`.
+The calculation certifies these exact fields; it excludes floating field
+evaluation, radial ODE error and future evolved states.
+
+Manufactured controls have **500,000 charged values / 20 active CPU
+seconds**. Independently check exact power-to-Bernstein identities, clipped
+domains, the geometric-limit metric floor, an analytically integrated
+linear-field mass below the envelope, input immutability and invalid-domain
+rejection. Independent Grok review examines the certificate mathematics
+and the later adapter design. Failure of a sufficient bound leaves the
+physical metric sign undecided. No retained-input certificate, radial solve,
+new partition, grid scan or time evolution is admitted by these controls.
+
+**Initial controls:** all five pass with **17,600 charged values**; active
+CPU time is below the reported timer granularity (0.0 seconds). The exact
+Bernstein expansion is checked independently; the alpha=0 linear-field
+mass follows from its integrated energy identity. Source review and the
+single retained-input certificate remain pending.
+
+After source review, one retained application has **1,000,000 charged
+values / 15 CPU seconds**. Authenticate the same saved terminal slice,
+regenerate its exact transfer once (full coefficient arrays are not saved),
+and certify the resulting binary coefficients at the recorded finite alpha.
+There is one certificate, no Gram factor, comparison replay, radial solve
+or time step. Bind input/source hashes in a compact receipt. A failed
+positivity bound reports the phase/work and stops; it does not trigger a
+subdivision scan. Success permits the numerical mass-adapter design to use
+this declared initial state; numerical evaluation errors remain separate.
+
+**Retained outcome:** independent Grok source review finds no blocker.
+The single application passes with **278,272 charged values / 2.296875 CPU
+seconds**, including one regenerated transfer. Its 65-cell certificate
+gives `A>=0.6870371535642128` and `n(R)<=21.971840781627296` for the exact
+rational-basis fields with binary coefficient inputs. The certificate itself
+uses 83,136 values. The [compact receipt](../results/summaries/nsc-atlas-cap-fixed-domain-v1.json)
+binds sources and the retained selection. There is no radial solve or time
+evolution. Numerical field evaluation and ODE errors still need control in
+the mass adapter.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)

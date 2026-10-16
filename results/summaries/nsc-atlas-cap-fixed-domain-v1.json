@@ -1,0 +1,56 @@
+{
+  "certificate": {
+    "A_lower": {
+      "exponent": -160,
+      "mantissa": "1004105924841260103296136748499536124033371182715"
+    },
+    "A_lower_float_down": 0.6870371535642128,
+    "coefficient_evaluations": 83136,
+    "interval_count": 65,
+    "mass_upper": 21.971840781627296,
+    "precision_bits": 160,
+    "scope": "exact rational fixed shapes with binary coefficient inputs; floating field evaluation, radial ODE and evolution errors excluded",
+    "wall_cut_fraction": 0.5
+  },
+  "execution": {
+    "certificates": 1,
+    "charged_values": 278272,
+    "cpu_seconds": 2.296875,
+    "gram_factors": 0,
+    "radial_solves": 0,
+    "time_steps": 0,
+    "transfers": 1
+  },
+  "input": {
+    "authenticated_input_files": 104,
+    "manifest_sha256": "9bdf673c83cc0992f9484a3c0f014337e65cdeb0470d953bc0204028676ec1cd",
+    "path": "results/development/nsc-atlas-operator-comparison-v1/operator.json",
+    "sha256": "312bc770f7baf63b2aff3d02c26642b32db212febdd34a7e3e6f40fded539d09"
+  },
+  "representation": {
+    "cells": 65,
+    "field_dimension": 259
+  },
+  "schema": "nsc-atlas-cap-fixed-domain-v1",
+  "selection": {
+    "T": 0.19784721605423244,
+    "Z": 0.6183813135744635,
+    "alpha": 0.00012983127142551443,
+    "cut": 128,
+    "nominal_Z": 0.6183813135744636,
+    "nominal_radius": 0.55,
+    "profile_sha256": "04e10695afac696c4b0e2c178ccf17a19a04ce20706b60bdf86f6f44af38e0fe",
+    "radius": 0.55,
+    "scope": "rounded fixed-basis transfer of retained zero-case fields at recorded finite alpha; initial constraint domain, no evolved finite state"
+  },
+  "source_bindings": {
+    "scripts/check_nsc_atlas_cap_background_domain.py": "0e62b62704a07fecdc5cd21f56977eb1d1cce348e7046ed1703a2529ee712a5b",
+    "scripts/check_nsc_atlas_cap_fixed_domain.py": "44a67722bff5e827a26762265fe4a0cf9b1a8e29afad97f4995f5bc2a65ee4a0",
+    "scripts/diagnose_nsc_atlas_boundary_rows.py": "1022ff1d299242b184956edfe3b42e1093ef05a0d821f3072aa8685635719f45",
+    "src/recursive_horizons/nsc_atlas_cap_background_bound.py": "cd3013306825187e2c7b9336a56990183eb6dbc1383fad2146f0bb4fe49f3948",
+    "src/recursive_horizons/nsc_atlas_cap_background_jets.py": "f50ec70168f482dc8efaac8cde4a185650170390c26237fb1421fa1c94f39852",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py": "e94d366b34f4d4cd2b3ff4836491b8f197bcb4b0cf8eefbf7f5b2f3673d7c2c2",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py": "16df667ecad5ba64434f249205f2a3257674d601a387e01a69c9318250b84f18",
+    "src/recursive_horizons/nsc_atlas_cap_fixed_transfer.py": "51a6fecb8ca2f4bcbd190e9d3ff944029cd0c7f2fba294dce549d68a396c8c20"
+  }
+}

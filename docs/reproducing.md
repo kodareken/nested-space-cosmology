@@ -225,6 +225,29 @@ The retained check passes once with 936,018 charged values / 2.484375 CPU
 seconds. Its [compact receipt](../results/summaries/nsc-atlas-cap-fixed-transfer-v1.json)
 records exact identity counts, sampled errors and the scaled Gram condition.
 
+The fixed-field metric-domain controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cap_fixed_bound.py -q -s
+```
+
+Five controls pass with 17,600 charged values of 500,000 / 20 active CPU
+seconds; measured active time is below the reported timer granularity.
+They check the exact Bernstein expansion and source envelope on existing
+cells. This command does not run a retained-input certificate or radial ODE.
+
+The separately admitted retained application:
+
+```sh
+python scripts/run_python.py scripts/check_nsc_atlas_cap_fixed_domain.py
+```
+
+It passes once with 278,272 charged values / 2.296875 CPU seconds of
+1,000,000 / 15. Its compact [receipt](../results/summaries/nsc-atlas-cap-fixed-domain-v1.json)
+records the positive metric floor for the rounded coefficients. This
+regenerates the initial transfer and performs one certificate, without
+rerunning the polynomial comparison, Gram factor or a radial integration.
+
 The internal wavefront identities and bounded position/amplitude stage:
 
 ```sh

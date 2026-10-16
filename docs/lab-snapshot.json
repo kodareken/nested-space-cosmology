@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4cc7de422823197470e68e0268036eac499096c1",
+  "current_receipt_commit_parent": "1826cd9c37582768236c38285a6605fea00e31b6",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 218692,
-      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
-      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "bytes": 219103,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "52a1bb5b4cc89ae338c57c69893a3fb88d979aa5fe177f14ed7975d8bc9ae38b"
+      "sha256": "5217a38a6a01b44ed629b1b75ec47f263562ac3aeee9a7e75616e1d979997692"
     },
     {
       "bytes": 9543,
@@ -10301,12 +10301,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 306736,
-      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
-      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "bytes": 307428,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "d142b362c5cb8a4a4a7af0c1312eae14bbce65dfc9a24a6388bcede1c89cd07f"
+      "sha256": "41ca7d5cc1f99702ade7f07c93b3f4dc6a694d91cc2bd8eda37df7d898a94725"
     },
     {
       "bytes": 18915,
@@ -10388,12 +10388,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 243806,
-      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
-      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "bytes": 248207,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "07bcc921a672dd08632042df71e727337b8e68bd9ee71e877099e8567a59eefc"
+      "sha256": "802b10f168fa2ab58308d265e81ea5af7842576d365e4290070db0b3f563a416"
     },
     {
       "bytes": 8895,
@@ -11394,12 +11394,12 @@
       "sha256": "6af6228ffcd469670d6eba75a74dad06ab631ce347a07cb722c885c73f0543e4"
     },
     {
-      "bytes": 279016,
-      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
-      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "bytes": 281916,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7ce1a8035702947bd2c0f4e7e85c58ec54af36c5850f67ffadde54bc2d10d6ef"
+      "sha256": "bada048a4384b6d9f178471d3f67731221601bb881757c47dc3b767655d72101"
     },
     {
       "bytes": 6705,
@@ -11408,12 +11408,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 96759,
-      "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
-      "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
+      "bytes": 97701,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "36a616c2874d4adff05136959a0f8153909b20d82d9eb819d31d115737a493ab"
+      "sha256": "fd68131b03a8b6662924858020e57b9650dff338ba1b61ee0a8a1e56dd58672c"
     },
     {
       "bytes": 18356,
@@ -29513,6 +29513,14 @@
       "sha256": "3333db75d63d6305dd5605838354c7df0832740814109b5ab4c2b0b46328d75c"
     },
     {
+      "bytes": 2605,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "path": "results/summaries/nsc-atlas-cap-fixed-domain-v1.json",
+      "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
+      "sha256": "233b309e5343d2f62403671dc7a9a00592332f1f345d3b6a3ec523e701e7f530"
+    },
+    {
       "bytes": 3815,
       "change": "Implement the local fixed-field basis and independently verify exact retained-pulse transfer.",
       "changed_from_commit": "4cc7de422823197470e68e0268036eac499096c1",
@@ -29570,6 +29578,14 @@
       "path": "scripts/check_nsc_atlas_cap_background_reference.py",
       "retention_reason": "Retained-background metric domain and explicit-time mass reference",
       "sha256": "b4500e686114c905dd9360224807d02c9e1881bdb4534b042dd7f5116699e7d8"
+    },
+    {
+      "bytes": 2738,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "path": "scripts/check_nsc_atlas_cap_fixed_domain.py",
+      "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
+      "sha256": "44a67722bff5e827a26762265fe4a0cf9b1a8e29afad97f4995f5bc2a65ee4a0"
     },
     {
       "bytes": 7677,
@@ -32250,6 +32266,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_basis.py",
       "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
       "sha256": "e94d366b34f4d4cd2b3ff4836491b8f197bcb4b0cf8eefbf7f5b2f3673d7c2c2"
+    },
+    {
+      "bytes": 4863,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "path": "src/recursive_horizons/nsc_atlas_cap_fixed_bound.py",
+      "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
+      "sha256": "16df667ecad5ba64434f249205f2a3257674d601a387e01a69c9318250b84f18"
     },
     {
       "bytes": 7147,
@@ -35683,6 +35707,14 @@
       "path": "tests/test_nsc_atlas_cap_fixed_basis.py",
       "retention_reason": "Fixed physical-coordinate basis, exact retained initial transfer and compact independent evidence",
       "sha256": "fe5494184bb9d4c2f3f6e8ab6a0ae3ea9bbf70d11dd26efcf898c769d73e1517"
+    },
+    {
+      "bytes": 4304,
+      "change": "Certify the metric domain of the retained total fields in the exact fixed local basis.",
+      "changed_from_commit": "1826cd9c37582768236c38285a6605fea00e31b6",
+      "path": "tests/test_nsc_atlas_cap_fixed_bound.py",
+      "retention_reason": "Fixed local total-field metric certificate and compact retained-state evidence",
+      "sha256": "b2fcf4d6b7d737719e99f7fc8e0ba1bba4ef10e2534e4ae1d22ddfa58f09311f"
     },
     {
       "bytes": 3676,
