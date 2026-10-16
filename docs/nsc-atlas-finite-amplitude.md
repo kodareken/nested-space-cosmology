@@ -171,6 +171,53 @@ keeps these qualifications explicit in its outputs. Its finite first-jet
 evaluation supplies the regional equations, not a spacetime trajectory or
 a freely selectable mass history.
 
+### Bounded characteristic cell
+
+A local cell evolves $X=(r,L,c)$, $L=\log C$, from three known corners.
+Let `SE` advance the first null coordinate by $\Delta U>0$, and `NW`
+advance the second by $\Delta V>0$, relative to `SW`. With unknown
+$z=X_{NE}$, the implicit-midpoint equation is
+
+$$
+\mathcal R(z)=z-X_{NW}-X_{SE}+X_{SW}
+-\Delta U\Delta V\,\mathcal B(X_m,X_{U,m},X_{V,m})=0,
+$$
+$$
+X_m=\frac{z+X_{NW}+X_{SE}+X_{SW}}4,\qquad
+X_{U,m}=\frac{z+X_{SE}-X_{NW}-X_{SW}}{2\Delta U},\qquad
+X_{V,m}=\frac{z+X_{NW}-X_{SE}-X_{SW}}{2\Delta V}.
+$$
+
+Here $\mathcal B$ is the three-component mixed bulk operator, with
+$C_m=e^{L_m}$. The cell coordinates may be the source's affine null
+coordinates below; they need not be the original $U,V$ labels.
+
+The [cell implementation](../src/recursive_horizons/nsc_atlas_characteristic_cell.py)
+uses a bounded damped Newton iteration and the analytic directional
+derivative of these formulas. Each variation in the unknown gives
+$dX_m=dz/4$, $dX_{U,m}=dz/(2\Delta U)$ and
+$dX_{V,m}=dz/(2\Delta V)$, followed by the same normalized field and
+potential chain rules. Its error scales are fixed from the supplied corners
+and reference scales; a growing iterate cannot enlarge its own tolerance.
+A declared compact state tube, positive radius and representable positive
+lapse are checked at corners, midpoint and candidate endpoint.
+
+The default limits are twelve Newton updates and eight trial step lengths
+per update, with separately counted operator and Jacobian evaluations and
+a shared finite CPU budget. Failure reports the iterate and residual
+diagnosis; it does not silently change cell size, amplitude or corner data.
+The final residual and correction control the local algebraic solve. They
+do not themselves certify Einstein constraints, regional convergence or a
+continuum error bound.
+
+Minkowski geometry with constant canonical scalar gives an exact affine
+control. Curved analytic Schwarzschild and zero-amplitude cap corners give
+an independent local refinement test: balanced halving reduces the local
+midpoint defect and one-cell endpoint error at fourth order before
+roundoff. A complete smooth grid has second-order accuracy; the local
+order is not a fourth-order regional claim. A later prepared-source march
+must also measure propagated constraints and cumulative error.
+
 ### Regular polar-areal cap
 
 Inside an untrapped cap, use the Einstein metric
@@ -560,8 +607,9 @@ wall branch identify the exact family whose construction is still needed.
 
 The exact source ODE also supplies all first jets required to start the
 mixed regional system. In the original affine coordinate $x$, let
-$C_0=C_{J,0}=-3.2/U_0>0$, and temporarily rescale
-$\bar U=C_0U$. The Einstein lapse on that source is then $C=\mathcal F$.
+$C_0=C_{J,0}=-3.2/U_0>0$, and temporarily use
+$\bar U=C_0(U-U_0)$. The source is at $\bar U=0$ and its Einstein
+lapse is $C=\mathcal F$.
 With $g=g_{\rm src}$, the known longitudinal traces are
 
 $$
@@ -614,8 +662,14 @@ At positive amplitude these are exact scaled changes. At zero amplitude
 they give the quadratic sensitivity without subtracting two nearby radii.
 The existing analytic source interface returns $p=g/x,p',p''$; recover
 $g=xp$, $g'=p+xp'$ and $g''=2p'+xp''$, rather than differentiating stored
-samples. This specifies the source integration and its controls; a bounded
-implementation and numerical source comparison remain to be supplied.
+samples. The [exact source implementation](../src/recursive_horizons/nsc_atlas_nonlinear_source.py)
+integrates this system with bounded DOP853 steps, split at the two support
+endpoints. It supplies bounded dense first-jet queries and the exact quiet
+bottom in the same shifted affine coordinates. For small-amplitude lapse
+arithmetic it uses $L=\log(1-\alpha p_J^2/6)$ through `log1p` and
+$L_x=-\alpha p_J(p_J)_x/(3\mathcal F)$, where $p_J=g/r_J$.
+The analytical null-constraint outputs check frame consistency; they are
+not an independent enclosure of the numerical ODE defect.
 
 ### What a source-leg bound establishes
 
@@ -653,7 +707,7 @@ The vector ODE is locally Lipschitz for positive radius;
 these bounds keep its solution in a bounded nonsingular region, so the
 usual finite-interval ODE continuation applies. Finite profile derivatives
 make these conditions nonempty for sufficiently small positive `alpha`.
-No numerical values for the constants or interval are asserted here.
+The owned compact profile gives explicit constants below.
 
 The same ODE permits a source-only remainder estimate. On a specified
 nonsingular tube, the exact vector field and its derivatives have finite
@@ -663,6 +717,83 @@ estimate then bounds the source radius/slope error with an explicit tube
 constant. Numerical approximations to `h` would add their own enclosed
 error. This argument concerns the initial leg only: it proves neither a
 two-sided evolved solution nor a central-waveform remainder.
+
+### Continuous bounds for the prescribed source
+
+For the unchanged compact profile $g=B(z(x))$, where
+$B(z)=(1-z^2)^4$ on $|z|<1$ and zero elsewhere, direct differentiation gives
+
+$$
+BB_z=-8z(1-z^2)^7,\qquad
+BB_{zz}-2B_z^2=-8(1-z^2)^6(1+9z^2).
+$$
+
+Their absolute maxima on $[-1,1]$ are
+
+$$
+A_1=\frac8{\sqrt{15}}\left(\frac{14}{15}\right)^7,\qquad
+A_2=\frac{80}{7}\left(\frac{20}{21}\right)^6,
+$$
+
+attained at $z^2=1/15$ and $z^2=1/21$, respectively. These are continuous
+polynomial bounds, not maxima estimated from a sampling grid.
+Put $a=0.8$, $\Delta=|U_0|(V_b-V_a)>0$, $x_b=x_{\rm last}$, and
+
+$$
+Z_1=\frac{4x_b e^{x_b/a}}{a^2\Delta},\qquad
+Z_2=\frac{4e^{x_b/a}(1+x_b/a)}{a^2\Delta}.
+$$
+
+Both $z_x$ and $z_{xx}$ are positive and increasing on the source leg,
+so these endpoint values bound them on the compact support. The chain
+rule therefore supplies
+
+$$
+M_0=1,\qquad M_1\le A_1Z_1,\qquad
+M_2\le A_2Z_1^2+A_1Z_2.
+$$
+
+The zero extension contributes no extra first or second derivative at the
+support endpoints. With $r_{\min}=1/5$, $v_{\max}=3/2$ and
+$\mathcal F_{\min}=1/2$, define
+
+$$
+\overline L=\frac56(A_2Z_1^2+A_1Z_2)+\frac{25}{2}A_1Z_1,
+\qquad L_x=x_b-0.4.
+$$
+
+The original validated interval has $0<L_x<3/20$. Thus the radius
+condition is weaker than the slope condition, and the strict source-only
+threshold is
+
+$$
+0\le\alpha<\alpha_*=
+\min\left\{\frac1{2\overline L L_x},\frac3{25}\right\}.
+$$
+
+The deterministic initialization control $\alpha_{\rm test}=\alpha_*/2$
+has $|r_J'-1|\le1/4$, $|r_J-x|\le L_x/8$ and
+$\mathcal F\ge3/4$ from the same bootstrap argument. These bounds choose
+the test using only its prescribed source and interval. Evaluation with
+numerical reference coordinates inherits their numerical accuracy; it is
+not an interval-arithmetic certificate for the geometric quadrature.
+Neither this threshold nor a successful source integration establishes a
+finite-amplitude interval for the evolved cap and wall.
+
+The initialization control evaluates $\alpha_*=2.5966254285102885\times10^{-4}$
+and $\alpha_{\rm test}=1.2983127142551443\times10^{-4}$ from the existing
+order-64 reference geometry. Its shared-budget comparison tightens relative
+and absolute ODE tolerances from $(2\times10^{-10},10^{-12})$ to
+$(2\times10^{-12},10^{-14})$ at 33 source cuts. The maximum changes are
+$1.44\times10^{-14}$ in Einstein radius, $9.82\times10^{-13}$ in its
+longitudinal derivative, $4.72\times10^{-15}$ in its transverse derivative,
+$4.02\times10^{-14}$ in $c_{\bar U}$ and $1.71\times10^{-13}$ in geometric
+mass. The scaled Jordan slope response changes by $7.56\times10^{-9}$.
+The two solves use 828 and 1,200 RHS evaluations; geometry, validation and
+queries bring the shared count to 3,063. Their analytical constraint
+consistency residual is below $1.06\times10^{-15}$. These are source-only
+numerical controls with inherited geometric accuracy, not a rigorous ODE
+error enclosure or a propagated spacetime result.
 
 ## Exact constraint transport and boundary input
 

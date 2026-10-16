@@ -2,6 +2,37 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Exact source initialization and characteristic cells, 16 October 2026
+
+The [source integrator](../src/recursive_horizons/nsc_atlas_nonlinear_source.py)
+now constructs the same model's finite-amplitude initial leg and all its
+first jets, with the original quiet bottom and corner. Continuous polynomial
+profile bounds select the initialization control
+$\alpha=1.2983127142551443\times10^{-4}$, half the source-only continuation
+threshold. Tightening both ODE tolerances changes the sampled Einstein
+radius by at most $1.44\times10^{-14}$ and geometric mass by
+$1.71\times10^{-13}$, using 3,063 shared reference/profile evaluations.
+The [38 source controls](../tests/test_nsc_atlas_nonlinear_source.py) pass in
+1.71875 process CPU seconds. They include independent vacuum field
+integrals, quadratic source moments, frame identities and corner matching.
+
+The [cell solver](../src/recursive_horizons/nsc_atlas_characteristic_cell.py)
+now advances the nonlinear mixed equations through one implicit-midpoint
+characteristic cell. Its analytic Jacobian, fixed error scales, compact
+state bounds and finite iteration limits make convergence or failure
+explicit. The [35 controls](../tests/test_nsc_atlas_characteristic_cell.py)
+pass in 0.59375 process CPU seconds. Exact-corner Schwarzschild and cap
+tests approach the derived fourth-order local error under balanced cell
+halving. This is compatible with second-order accuracy for a complete
+smooth grid; no regional order has yet been measured.
+
+These implementations preserve the source and governing equations. The
+source threshold applies to initialization, and its algebraic constraint
+identities are not an ODE error enclosure. The next calculation assembles
+these cells into the original prepared-source rectangle and measures its
+propagated constraints and refinement. The moving wall, regular cap and
+full observer signal remain downstream of that regional step.
+
 ## Regional equations and mixed-chart closure, 16 October 2026
 
 The [normalized bulk operator](../src/recursive_horizons/nsc_atlas_nonlinear_bulk.py)

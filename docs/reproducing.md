@@ -8,6 +8,24 @@ stack includes python-flint 0.9.0 and Numba 0.68.0.
 
 ## Current work
 
+The [exact source integrator](../src/recursive_horizons/nsc_atlas_nonlinear_source.py)
+retains the original compact preparation and quiet corner. Its amplitude
+control comes from a continuous source-only bound. The
+[characteristic-cell solver](../src/recursive_horizons/nsc_atlas_characteristic_cell.py)
+advances one positive-radius mixed cell with a bounded Newton iteration.
+Their independent controls run without a prepared-source regional march:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_nonlinear_source.py tests/test_nsc_atlas_characteristic_cell.py -q -s
+```
+
+The source tolerance test prints its bounded comparison receipt. Source
+queries retain the shared CPU/evaluation budget and reject extrapolation.
+Cell diagnostics report the nonlinear residual, correction and iteration
+counts; they do not certify the regional Einstein constraints or continuum
+error. Both implementations and their physical domains are specified in
+the [same nonlinear owner](nsc-atlas-finite-amplitude.md).
+
 The [normalized bulk operator](../src/recursive_horizons/nsc_atlas_nonlinear_bulk.py)
 and [hybrid wall map](../src/recursive_horizons/nsc_atlas_nonlinear_boundary.py)
 connect the exact regional equations to a cap whose lapse is determined by

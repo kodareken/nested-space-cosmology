@@ -112,10 +112,12 @@ specifies the exact smooth equations, material interface and anchored source
 family for the same action. Its normalized bulk operator and mixed-chart wall
 map connect a regular polar cap to the null exterior, with the cap lapse fixed
 by the central clock. The wall construction has a noncircular constraint
-implication on its positive-radius, untrapped-cap branch. Complete source
-first jets and regular cap equations now specify the regional input; their
-coupled evolution, well-posedness and a central-readout remainder remain to
-be established. Formation and stability also remain open.
+implication on its positive-radius, untrapped-cap branch. An exact-model
+source integrator and bounded characteristic-cell solver now implement the
+regional starting pieces, with source-only amplitude bounds and independent
+analytic controls. Their regional assembly, regular cap march, coupled
+well-posedness and a central-readout remainder remain to be established.
+Formation and stability also remain open.
 
 The common `model_specification()` interface in
 [`nsc_cosmological_atlas`](../src/recursive_horizons/nsc_cosmological_atlas.py)

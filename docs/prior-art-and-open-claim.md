@@ -1,5 +1,47 @@
 # Prior art and admission of new research
 
+## Exact source and characteristic-cell implementation, 16 October 2026
+
+Use the [source first-jet system](nsc-atlas-finite-amplitude.md#completing-the-source-first-jets)
+and the implemented normalized mixed operator to construct the first
+nonlinear characteristic input. Preserve the original `C3` reduced-field
+pulse, source geometry, quiet Schwarzschild bottom and corner mass. Integrate
+the scaled Jordan radius changes and the three transverse jets in the affine
+source gauge; compute profile derivatives analytically. A bounded dense
+evaluation supplies first jets without differencing saved samples.
+
+For initialization controls, use the continuous profile derivative bounds
+and source-only continuation threshold derived in the owner, with
+`r_min=1/5`, `v_max=3/2`, `F_min=1/2`. The deterministic nonzero test value
+is half that threshold. It selects an initial-leg test, not a full-spacetime
+amplitude range or a physical calibration. Check zero-amplitude recovery,
+the transformed null constraint, quiet intervals, corner mass, source
+orientation, bounded interpolation and numerical refinement. Each test has
+30 process CPU seconds; each source construction has at most 20,000 counted
+reference/profile evaluations, including its initialization when applicable.
+No new physical trajectory record is implied by a passing unit control.
+
+Implement a local implicit-midpoint characteristic cell using the same bulk
+operator. Its nonlinear iteration has an explicit finite count, positive
+radius/lapse guards and a residual check. Independent Minkowski and analytic
+vacuum cell refinements precede any prepared-source regional march. A failed
+iteration or non-refining result is diagnosed before changing resolution.
+The first prepared-source regional calculation requires its own specified
+finite rectangle and shared budget. Wall-born cells, the cap and the central
+readout remain the intended continuation of this same solver.
+
+**Implementation outcome:** 38 source controls pass in 1.71875 process CPU
+seconds, and 35 local-cell controls pass in 0.59375 process CPU seconds.
+Independent reviews confirm both implementations and their source-gauge
+connection. The source's half-threshold control is
+`alpha=0.00012983127142551443`; its two-tolerance comparison uses 3,063
+shared evaluations including geometry and queries. Its maximum radius and
+mass changes are `1.44e-14` and `1.71e-13`. These changes measure tolerance
+sensitivity, while the reported analytical constraint residual checks the
+frame identity. Curved exact-corner cell errors approach the expected
+quartic local scaling under two balanced halvings. No prepared-source
+regional march or full-spacetime amplitude bound is supplied by these tests.
+
 ## Exact regional operators, 16 October 2026
 
 The [finite-amplitude owner](nsc-atlas-finite-amplitude.md) supplies the
