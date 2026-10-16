@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "59b2434cf88011d3f317a7a173d4f518dc5abed3",
+  "current_receipt_commit_parent": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
   "files": [
     {
       "bytes": 2338,
@@ -10253,9 +10253,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 212671,
-      "change": "Reject unresolved positive mass or trace coercivity underflow in the regular geometric control.",
-      "changed_from_commit": "59b2434cf88011d3f317a7a173d4f518dc5abed3",
+      "bytes": 213232,
+      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
+      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10263,7 +10263,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "d1035ab4fc85a86d5f906cc18728022b586d69f84839c54e199bcd5825cbc044"
+      "sha256": "373bc33e8309920c53f4bba120150394fd4b04a1d85e5ab89ed117afdb386b39"
     },
     {
       "bytes": 9543,
@@ -32156,12 +32156,12 @@
       "sha256": "7a4a5b0e17d691b053252340383a2f1d75c1f316e061026f82a1f6abeb66c00c"
     },
     {
-      "bytes": 6706,
-      "change": "Reject unresolved positive mass or trace coercivity underflow in the regular geometric control.",
-      "changed_from_commit": "59b2434cf88011d3f317a7a173d4f518dc5abed3",
+      "bytes": 6920,
+      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
+      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
       "path": "src/recursive_horizons/nsc_atlas_cap_geometric_reference.py",
       "retention_reason": "Regular-centre geometric mass-gradient reference and independent manufactured controls.",
-      "sha256": "57c2a87b9d65394506fb63837959d2d400940a1fe2e0a5c6e2059f061df214b7"
+      "sha256": "905f292558173d6cd015c484ec30fdc9e59b38d748077047df850d1e5d404b81"
     },
     {
       "bytes": 9241,
@@ -32194,6 +32194,14 @@
       "path": "src/recursive_horizons/nsc_atlas_cap_transport_reference.py",
       "retention_reason": "Smooth reference mass/lapse/residual integration and independent manufactured integral controls.",
       "sha256": "d812471107802c3926a567f252208b79c14ac29a02c3f01e2b96610edc2c6bf9"
+    },
+    {
+      "bytes": 11775,
+      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
+      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
+      "path": "src/recursive_horizons/nsc_atlas_cap_variational_reference.py",
+      "retention_reason": "Primitive-conforming finite-backreaction mass gradients, metric domain bound and manufactured controls.",
+      "sha256": "c08b59c21f74ead66b809c50c97029e5e6600a43e3d15708bb51ca19907121a7"
     },
     {
       "bytes": 16914,
@@ -35485,12 +35493,12 @@
       "sha256": "458e91da68f89b0889f8af6accda762f1cf0d01b391b03e2e9370aa98a6f5631"
     },
     {
-      "bytes": 8894,
-      "change": "Reject unresolved positive mass or trace coercivity underflow in the regular geometric control.",
-      "changed_from_commit": "59b2434cf88011d3f317a7a173d4f518dc5abed3",
+      "bytes": 9262,
+      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
+      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
       "path": "tests/test_nsc_atlas_cap_geometric_reference.py",
       "retention_reason": "Regular-centre geometric mass-gradient reference and independent manufactured controls.",
-      "sha256": "73d8077f2c27b63bff82edef87662049a930288d72dbf610450fe27bba782572"
+      "sha256": "e2eca38434c88d0ed02d848ec1a8dd33d2ab09444dab1de37b4972c1d4ccc570"
     },
     {
       "bytes": 3449,
@@ -35539,6 +35547,14 @@
       "path": "tests/test_nsc_atlas_cap_transport_reference.py",
       "retention_reason": "Smooth reference mass/lapse/residual integration and independent manufactured integral controls.",
       "sha256": "fb1aa307069848464ce714e308ccc1ff2f4cde4215386f36e45e1fdf3f2999ea"
+    },
+    {
+      "bytes": 9413,
+      "change": "Extend the fixed-cap variational reference with inherited lapse, independent gradients and an all-radius metric bound.",
+      "changed_from_commit": "8030ea3f490e151d4534fd5a2079895fa8dedf94",
+      "path": "tests/test_nsc_atlas_cap_variational_reference.py",
+      "retention_reason": "Primitive-conforming finite-backreaction mass gradients, metric domain bound and manufactured controls.",
+      "sha256": "bf3bb294302c42f645bb172bc1f89d8515b37025fbb7cd685fa465480ddf88b3"
     },
     {
       "bytes": 9130,

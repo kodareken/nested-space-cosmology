@@ -76,6 +76,9 @@ def test_independent_dense_element_matrices_and_mass_gradient(budget):
     np.testing.assert_allclose(row['rates']['velocity'][1:], .7*acceleration, rtol=1e-14, atol=1e-15)
     assert abs(row['balance_defect']) < 2e-17
     assert row['linear_solve_defect'] < 2e-16
+    assert row['centre']['f'] == pytest.approx(chi[1]/z[1])
+    assert row['centre']['Pi'] == pytest.approx(u[1]/z[1])
+    assert abs(row['centre']['f']-chi[-1]/z[-1]) > .1
     # Weak wall flux is exposed separately from the reconstructed derivative.
     assert abs(row['wall']['incoming_discrepancy']) > .1
     assert row['wall']['incoming_discrepancy'] == pytest.approx(
@@ -164,6 +167,8 @@ def test_small_radius_linear_shape_retains_mass_without_catastrophic_subtraction
     expected = c*c*z[-1]**3/6  # leading term; next relative term is O(z^2)
     assert row['mass'] == pytest.approx(expected, rel=5e-16, abs=0.)
     assert row['mass'] > 0
+    assert row['wall']['reconstructed_incoming'] == pytest.approx(2*c*z[-1]/3,rel=5e-16,abs=0.)
+    assert row['wall']['derivative_discrepancy'] == pytest.approx(2*c*z[-1]**2/3,rel=5e-16,abs=0.)
 
 
 @pytest.mark.parametrize('data', [

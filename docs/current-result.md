@@ -2,6 +2,33 @@
 
 Current presentation, 16 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Finite-backreaction mass-gradient reference, 16 October 2026
+
+The [nonlinear reference](../src/recursive_horizons/nsc_atlas_cap_variational_reference.py)
+now computes the same constrained mass and its derivatives for regular
+primitive-conforming fields at nonnegative alpha. An Arb certificate bounds
+the exact metric factor over the fixed cap before integration. Forward
+radial sensitivities are checked by separate attenuation-weighted gradient
+quadrature before constructing the weak field RHS.
+
+On the nonconstant manufactured case at `alpha=.002`, the metric lower bound
+is `0.7837849351318801`; gradient agreement is `3.75699e-13` and the
+absolute mass/weak-flux residual is `7.80626e-18`. The reconstructed-versus-weak wall
+momentum discrepancy is `-2.06194e-7`, and the normal-variable discrepancy
+is `-0.320591157262`. These explicit differences remain part of the result;
+the manufactured field is not the retained physical cap or a closed wall.
+
+All [19 controls](../tests/test_nsc_atlas_cap_variational_reference.py) pass,
+including zero-alpha recovery, an independent mass-direction comparison,
+two fixed radial tolerances, the inherited centre-clock normalization and
+rejection of a corrupted forward gradient. Grok confirmed the mathematical
+extension and caught the initial lapse normalization; the corrected rates
+now pass an independent wall-lapse integral check.
+Cumulative development is **1,704,332 charged values / 3.859375 active CPU
+seconds** in 71 executions, within 2 million / 60. The [derivation and scope](nsc-atlas-finite-amplitude.md#finite-backreaction-fixed-cap-variational-reference)
+distinguish the all-radius exact-model bound from the numerical ODE error.
+No physical trajectory, grid scan or new prediction is generated.
+
 ## Regular-centre mass-gradient reference, 16 October 2026
 
 The [new fixed-cap component](../src/recursive_horizons/nsc_atlas_cap_geometric_reference.py)
@@ -19,8 +46,8 @@ finite-backreaction trajectory and does not replace the production cap.
 
 All [26 controls](../tests/test_nsc_atlas_cap_geometric_reference.py) pass,
 including direct integration of the original radial density and independent
-matrix gradients. Development uses **7,744 charged coefficient/manufactured
-values / 0.359375 active CPU seconds** across 71 executions, within the
+matrix gradients. Development uses **10,600 charged coefficient/manufactured
+values / 0.53125 active CPU seconds** across 97 executions, within the
 200,000-value / 20-second allowance. No physical payload is generated.
 
 ## Mass-gradient and geometric energy identities, 16 October 2026

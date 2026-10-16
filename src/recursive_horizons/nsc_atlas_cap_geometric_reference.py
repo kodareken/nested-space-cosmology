@@ -99,7 +99,10 @@ def geometric_cap_reference(z_nodes, chi, velocity, *, T_x, incoming_w_plus, bud
                               +gradient_velocity@velocity_rate[1:])
             flux = velocity[-1]*(drive-velocity[-1])/2
             weak_v = A*(R*incoming+chi[-1]/R)-velocity[-1]
-            trace_incoming = (velocity[-1]+slope[-1])/(A*R)-chi[-1]/R**2
+            # stiffness[-1]=slope[-1]-A*chi_W/R is already evaluated
+            # without the small-radius cancellation of two O(1/R) terms.
+            derivative_discrepancy = velocity[-1]+stiffness[-1]-drive
+            trace_incoming = (velocity[-1]+stiffness[-1])/(A*R)
             result = dict(
                 alpha=0., radius=R, radius_rate=0., centre_lapse=0., T_x=tx,
                 z_nodes=z, chi=chi, velocity=velocity,
@@ -115,10 +118,10 @@ def geometric_cap_reference(z_nodes, chi, velocity, *, T_x, incoming_w_plus, bud
                 centre=dict(f=float(chi[1]/z[1]), Pi=float(velocity[1]/z[1]), Phi=0.),
                 wall=dict(A=A, f=float(chi[-1]/R), u=float(velocity[-1]),
                           weak_v=float(weak_v), reconstructed_v=float(slope[-1]),
-                          derivative_discrepancy=float(slope[-1]-weak_v),
+                          derivative_discrepancy=float(derivative_discrepancy),
                           incoming_w_plus=incoming,
                           reconstructed_incoming=float(trace_incoming),
-                          incoming_discrepancy=float(trace_incoming-incoming)),
+                          incoming_discrepancy=float(derivative_discrepancy/(A*R))),
                 coefficient_evaluations=budget.evaluations-before,
                 domain="zero backreaction, fixed radius, one instantaneous weak RHS",
             )

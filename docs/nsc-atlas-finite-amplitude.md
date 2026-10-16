@@ -3645,11 +3645,159 @@ an exact time-linear wave on two prescribed meshes, independent dense
 element matrices, direct integration of the original radial mass density,
 symbolic centre limits, the completed-square bound, small-radius arithmetic,
 quiet data, input immutability and rejected data/budget cases. Development
-uses **7,744 charged coefficient/manufactured values / 0.359375 active CPU
-seconds** in 71 test executions. No saved field, radial ODE or physical time
+uses **10,600 charged coefficient/manufactured values / 0.53125 active CPU
+seconds** in 97 test executions. No saved field, radial ODE or physical time
 evolution is evaluated. The production cap is unchanged. Moving radius,
 finite backreaction and the background/departure decomposition remain
 outside this reference component.
+
+Grok's source review confirms the element indexing, gap remainder, mass
+gradient, regular limits and weak wall flux. Its small-radius boundary
+observation is addressed by evaluating `v_trace-A0 chi_W/R` through the
+stable wall stiffness action. Both the incoming residual and derivative
+discrepancy now retain their small nonzero limits without subtracting two
+large inverse-radius terms. The kinked-field control also distinguishes the
+true centre slope from the wall secant.
+
+#### Finite-backreaction fixed-cap variational reference
+
+The [variational component](../src/recursive_horizons/nsc_atlas_cap_variational_reference.py)
+extends this reference to nonnegative alpha with the same smooth potential
+and radial constraints. All radii and fields use the existing dimensionless
+normalization; `N=n(R)` is the normalized cap mass, whose contribution to
+the physical mass function is `alpha N`. Radius and alpha are held fixed
+through this calculation.
+
+Keep continuous linear `chi,k` in `z=atanh(r)`, with centre values zero, and
+define `k=A0 p`. At nonzero alpha `k` is not the scalar time derivative.
+The exact primitive supplies
+
+$$
+r=\tanh z,\quad A_0=\operatorname{sech}^2z,\qquad
+f=\chi/r,\quad p=k/A_0,\quad q=\chi_z/A_0,\quad h=q-f.
+$$
+
+For one affine element `chi=a_e z+b_e`, the stable identity
+`h=a_e z gamma(z)/A0-b_e/r`, with `gamma=1/z-A0/r`, reuses the positive
+gap above. On the first element `b_e=0`; the centre limits are
+`f=chi_z`, `Pi=k_z`, `Phi=0`. The radial mass, lapse and mass-sensitivity
+RHS values all vanish at the centre. Each element retains its own
+one-sided derivative at a shared node.
+
+The inherited centre clock is
+`delta(0)=-log cosh(sqrt(alpha/6) f(0))`, not zero when alpha and the
+central scalar are nonzero. The mass and its nodal sensitivities have zero
+central data; the lapse starts from this field-dependent value. The mass
+functional is independent of that integration constant, but the field rates
+and physical flux use its value through `exp(delta_W)`.
+
+For a free coefficient `theta` of either field, the exact sensitivity obeys
+
+$$
+\begin{aligned}
+n_z&=A_0\rho,\qquad \delta_z=A_0a,\\
+(G_\theta)_z&=A_0(-aG_\theta+s_\theta),\qquad G_\theta(0)=0,\\
+s_\theta&=\frac{r^2U}{2}f_\theta
++\frac A2\{p p_\theta+h(q_\theta-f_\theta)\}.
+\end{aligned}
+$$
+
+Here `a=alpha(p^2+h^2)/(2r)`, `rho=r^2P/2+A(p^2+h^2)/4`,
+`A=A0-2alpha n/r`, and `U=P_f`. The `-aG` term differentiates the mass
+inside the metric. A second route computes
+
+$$
+G_\theta(R)=\int_0^{z_W}A_0(z)
+ e^{\delta(z)-\delta_W}s_\theta(z)dz.
+$$
+
+This attenuation-weighted quadrature reads the forward mass and lapse but
+does not read the forward sensitivity components. It is an independent
+gradient calculation on that reference metric, not an independent metric
+solution. The component stops before constructing a weak RHS if their
+absolute discrepancy exceeds the admitted `2e-8` threshold. A deliberate
+corruption of the forward sensitivities is rejected by this check.
+
+An all-radius metric bound is available before integration. For exact
+declared nodal data let `L_chi,L_k` bound the absolute element slopes,
+`Z=z_W`, and set
+
+$$
+F=L_\chi Z/R,\quad p_{\max}=L_k Z/A_0(R),\quad
+h_{\max}=L_\chi/A_0(R)+F,\quad
+b_{\max}=\frac{R^2P(F)}2+\frac{p_{\max}^2+h_{\max}^2}{4}.
+$$
+
+The potential is even and increasing with `|f|`, and `z/r` increases with
+radius, so these bound the declared fields. Writing `n_r+a n=b` gives
+`a>=0`, `0<=b<=b_max`, and hence
+`0<=n(r)<=integral_0^r b(s)ds<=r b_max`. Therefore
+
+$$
+\boxed{A(r)\ge A_0(R)-2\alpha b_{\max}\quad(0\le r\le R).}
+$$
+
+Arb evaluates this sufficient bound at 160 bits from exact binary nodal
+inputs. The result includes an exact dyadic lower endpoint and a downward
+rounded display value. An unresolved or nonpositive bound stops the
+reference; failure of this sufficient test does not disprove the geometry.
+The certificate concerns the exact radial solution for the fixed declared
+fields. It is not an enclosure of the numerical radial integration or a
+time-dependent validity interval.
+
+Let `g_chi,g_k` be the mass gradients, `M` the same free-node element mass
+matrix and `c=exp(delta_W)`. Define
+
+$$
+V=2cM^{-1}g_k,\qquad
+\chi_T=V,\qquad
+k_T=M^{-1}\{-2cg_\chi+e(B_WRw_+-V_W)\}.
+$$
+
+Symmetry of `M` cancels the interior pairings, leaving
+
+$$
+\boxed{N_x=\frac{T_x}{2c}V_W(B_WRw_+-V_W)
+\le\frac{T_x}{8c}(B_WRw_+)^2.}
+$$
+
+This is the physical **weak** wall flux with
+`p_hat=V_W/B_W`, `q_hat=f_W+R w_plus-p_hat`. The weak form follows by
+integrating the continuum mass-gradient equations: the reaction tail
+contributes the volume reaction, and the wall term contributes the same
+incoming condition. The factor `c` depends on the state; this skew-gradient
+identity alone is not a claim about a canonical Poisson bracket.
+
+The component returns both weak traces and the reconstructed `p,q`, with
+their discrepancies evaluated without avoidable `q-f` cancellation. In the
+single nonconstant manufactured case at `alpha=.002`, the certified lower
+metric value is `0.7837849351318801`. The gradient routes differ by
+`3.75699e-13`, and the mass/weak-flux algebra by `7.80626e-18`. Nevertheless,
+the wall momentum discrepancy is `-2.06194e-7` and the normal-variable
+discrepancy is `-0.320591157262`. Those are properties of the prescribed
+manufactured field and incoming data, not measurements of the retained
+physical cap. They show why a small mass-balance residual cannot replace
+the separate boundary-consistency check.
+
+All [19 controls](../tests/test_nsc_atlas_cap_variational_reference.py) pass.
+They include recovery of the exact zero-alpha element functional, a mass
+direction checked from perturbed inputs, two fixed ODE tolerances, independent
+gradient quadrature, the inherited centre clock and an independent lapse
+integral, weak flux conversion, quiet data, exact binary bound
+handling, rejected domains/budgets and the corrupted-gradient negative
+control. Cumulative development uses **1,704,332 coefficient/derivative
+values / 3.859375 active CPU seconds** in 71 executions. Requested tolerances,
+observed gradient agreement and paired-run changes are not uniform error
+enclosures. This supplies one regular nonlinear weak RHS on a fixed cap;
+moving-radius evolution, strong trace compatibility and a coupled physical
+cap-wall-exterior trajectory remain open.
+
+Independent Grok review confirms the sensitivity equation, weak form and
+all-radius bound. It caught an initial zero-centre-lapse initialization that
+the mass checks alone could not detect. Restoring the original clock and
+checking the wall lapse and rate normalization independently corrects that
+prototype. The cumulative control receipt includes those earlier executions;
+no physical evolution was performed with the incorrect clock.
 
 ### Central clock in general null labels
 

@@ -366,12 +366,68 @@ extension question; it does not establish that extension or the evolving wall.
 
 **Outcome:** the [regular reference](nsc-atlas-finite-amplitude.md#regular-centre-fixed-cap-mass-gradient-control)
 has an exact positive quadratic mass, the required weak incoming flux and
-an explicit completed-square input bound. Twenty-six controls pass in 71
-development executions: **7,744 charged coefficient/manufactured values /
-0.359375 active CPU seconds**. The reconstructed boundary derivative is
+an explicit completed-square input bound. Twenty-six controls pass in 97
+development executions: **10,600 charged coefficient/manufactured values /
+0.53125 active CPU seconds**. The reconstructed boundary derivative is
 reported separately. Grok independently confirmed the weak equations,
-incoming conversion, positivity and centre limits. Source review follows;
-no physical trajectory or nonzero-backreaction extension has been run.
+incoming conversion, positivity and centre limits. The completed source
+review confirms element indexing, gradient pairing, gap remainder and weak
+flux handling. Its small-radius boundary concern is corrected using the
+stable wall stiffness action, with a tiny-radius incoming-residual check;
+the centre is also checked on kinked data. No physical trajectory is run.
+
+### Fixed-cap finite-backreaction mass gradient
+
+Extend the regular geometric reference to the same smooth conformal potential
+and exact radial constraints at nonnegative alpha. The field representation
+is continuous linear `chi,k` in `z=atanh(r)`, with centre values zero and
+`k=A0 p`; at nonzero alpha, `k` is not the scalar time derivative. The exact
+primitive supplies `f=chi/r`, `q=chi_z/A0`, and `p=k/A0`. Reuse the positive
+geometric gap for the regular first-element formulas.
+
+Differentiate the radial mass equation with respect to all free nodal
+coefficients, holding radius and alpha fixed. Check those derivatives by
+independent attenuation-weighted quadrature, and recover the existing exact
+quadratic reference at alpha zero. Construct one weak RHS from the resulting
+gradient and the original incoming wall condition. Report the difference
+between weak and reconstructed momentum and normal derivatives at the wall.
+An algebraic mass balance alone does not establish boundary consistency.
+
+Before radial integration, bound the exact metric factor over the whole
+declared interval using the linear field slope bounds and the positive
+affine mass equation. Evaluate the sufficient bound with Arb at 160 bits,
+using exact binary input values and an exact dyadic lower endpoint. A failed
+sufficient bound stops this reference; it does not prove the geometry invalid.
+This bound covers the exact radial solution for the declared fields, not
+the numerical ODE error or a subsequent time evolution.
+
+Manufactured controls share **2,000,000 charged coefficient/derivative values
+/ 60 active CPU seconds**. Use two to seven fixed nodes, alpha zero and a
+declared small nonzero alpha, quiet data and regular nonconstant fields.
+Two fixed radial tolerances and independent 32-node per-element gradient
+quadrature check the calculation; no retained state, mesh scan or physical
+history is involved. Require zero-alpha mass/gradient recovery within `2e-9`,
+nonzero-alpha forward/adjoint gradient agreement and tolerance change within
+`2e-8`, and mass/weak-flux algebra within `1e-10` for these manufactured
+scales. Include a directional mass check, exact centre limits, potential and
+unit conventions, immutable inputs, rejected bound/domain cases, and shared
+budget exhaustion. No physical trajectory or change to the coupled wall law
+is admitted. A failure produces a specific diagnosis before more computation.
+
+**Manufactured outcome:** all 19 controls pass in 71 development executions,
+using **1,704,332 coefficient/derivative values / 3.859375 active CPU seconds**.
+The finite-alpha gradient routes differ by `3.75699e-13`; the absolute weak mass-flux
+residual is `7.80626e-18`. The exact-model metric certificate has lower value
+`0.7837849351318801` for that prescribed case. Independent momentum and normal
+wall discrepancies remain nonzero and are reported in the [owner](nsc-atlas-finite-amplitude.md#finite-backreaction-fixed-cap-variational-reference).
+The component rejects a deliberately corrupted gradient before the weak RHS.
+The completed mathematical review confirms the equations and bound, and
+identifies a missing inherited centre-clock constant in the first prototype.
+The lapse now starts at `-log cosh(sqrt(alpha/6) f_C)`; an independent lapse
+integral and rate-normalization control would reject the former choice.
+The mass functional itself is unchanged. Source review remains in progress.
+All earlier prototype work is included in the cumulative receipt; no retained
+field or physical time evolution has been evaluated.
 
 ## Discrete cap mass balance, 16 October 2026
 
