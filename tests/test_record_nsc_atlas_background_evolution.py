@@ -48,6 +48,77 @@ def test_profile_training_and_withheld_are_separate():
         tool.fit_profile(inputs,budget)
 
 
+def test_profile_replay_conditions_quintic_cancellation_without_changing_inputs(monkeypatch):
+    from recursive_horizons.nsc_atlas_validation import background_profile_roundoff_tolerances
+    inputs = profile_inputs()
+    # A smooth post-front cubic with a scale large enough that differentiated
+    # polynomial cancellation exceeds a result-relative residual tolerance.
+    for group in ("walls","wall_rates"):
+        inputs["table"][group]["c"] = (4096*np.asarray(inputs["table"][group]["c"])).tolist()
+    inputs["table_sha256"] = tool.digest(tool.encoded(inputs["table"]))
+    original_inputs = tool.encoded(inputs)
+    budget = tool.Budget(maximum_evaluations=100000,cpu_seconds=30.)
+    _, expected = tool.fit_profile(inputs,budget)
+    constructor = CharacteristicProfile.__init__
+    def shifted_coefficients(self,*args,**kwargs):
+        constructor(self,*args,**kwargs)
+        coefficients = self._spline.c
+        # Independent power-polynomial representation perturbation. Keep
+        # zero coefficients zero, so the certified quiet branch is unchanged.
+        active = coefficients != 0
+        direction = np.where(np.indices(coefficients.shape).sum(axis=0)%2,np.inf,-np.inf)
+        coefficients[active] = np.nextafter(coefficients[active],direction[active])
+        self._derivatives = [self._spline.derivative(order) for order in range(1,6)]
+    monkeypatch.setattr(CharacteristicProfile,"__init__",shifted_coefficients)
+    _, replay = tool.fit_profile(inputs,budget)
+    defect = abs(replay["diagnostics"]["max_abs_knot_second_defect"]-
+                 expected["diagnostics"]["max_abs_knot_second_defect"])
+    allowance = background_profile_roundoff_tolerances(inputs)
+    assert defect > 2e-13
+    assert defect <= allowance["diagnostics.max_abs_knot_second_defect"]
+    tool.profile_replay_equal(replay,expected,inputs)
+    assert tool.encoded(inputs) == original_inputs
+    corrupt = copy.deepcopy(replay)
+    corrupt["diagnostics"]["max_abs_knot_second_defect"] += .01
+    with pytest.raises(ValueError,match=r"knot_second_defect.*max_abs_difference=.*allowance="):
+        tool.profile_replay_equal(corrupt,expected,inputs)
+
+
+def test_profile_replay_propagates_one_ulp_label_change_through_gradient(monkeypatch):
+    inputs = profile_inputs()
+    # Put the derived labels in the same binade as atanh(R), so addition
+    # retains the one-ULP libm perturbation rather than rounding it away.
+    inputs["table"]["walls"]["T"] = (np.asarray(inputs["table"]["walls"]["T"])-.5).tolist()
+    inputs["table_sha256"] = tool.digest(tool.encoded(inputs["table"]))
+    budget = tool.Budget(maximum_evaluations=100000,cpu_seconds=30.)
+    _, expected = tool.fit_profile(inputs,budget)
+    atanh = np.arctanh
+    monkeypatch.setattr(np,"arctanh",lambda value:np.nextafter(atanh(value),np.inf))
+    _, replay = tool.fit_profile(inputs,budget)
+    assert replay["labels"] != expected["labels"]
+    assert replay["values"] == expected["values"]
+    tool.profile_replay_equal(replay,expected,inputs)
+
+
+@pytest.mark.parametrize("field",("copied_value","index","quiet","withheld","nonfinite"))
+def test_profile_replay_preserves_exact_data_and_rejects_material_changes(field):
+    inputs = profile_inputs()
+    _, expected = tool.fit_profile(inputs,tool.Budget(maximum_evaluations=100000,cpu_seconds=30.))
+    changed = copy.deepcopy(expected)
+    if field == "copied_value":
+        changed["values"][30] = float(np.nextafter(changed["values"][30],np.inf))
+    elif field == "index":
+        changed["withheld"]["indices"][0] = 1.0
+    elif field == "quiet":
+        changed["diagnostics"]["quiet_anchor"]["first"] = 1e-30
+    elif field == "withheld":
+        changed["withheld"]["first_difference"][30] += 1e-4
+    else:
+        changed["second"][30] = float("nan")
+    with pytest.raises(ValueError,match="profile replay"):
+        tool.profile_replay_equal(changed,expected,inputs)
+
+
 def test_physical_view_uses_total_profile_and_finite_frame():
     budget=tool.Budget(maximum_evaluations=100000,cpu_seconds=30.)
     labels=np.array([0.,.5,1.5])

@@ -246,7 +246,7 @@ def audit(root=ROOT,*,budget=None):
     own={name:digest((Path(root)/name).read_bytes()) for name in OWN_SOURCES}
     start=budget.evaluations
     profile,summary=phase("retained profile fit",lambda: producer.fit_profile(record["profile_inputs"],budget))
-    producer._equal(summary,record["profile"],"retained computational profile")
+    producer.profile_replay_equal(summary,record["profile"],record["profile_inputs"])
     profile_count=budget.evaluations-start
     start=budget.evaluations
     reference=phase("reference profile chain",lambda: reference_chain(profile,base["gauge"]["rows"],

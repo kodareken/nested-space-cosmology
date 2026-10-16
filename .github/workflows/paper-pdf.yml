@@ -63,7 +63,6 @@ jobs:
           python scripts/check_publication.py
           python scripts/check_claim_bindings.py
       - name: Compare two clean builds with the tracked PDF
-        if: ${{ !cancelled() }}
         run: python scripts/build_paper.py --check
       - name: Preserve failed build diagnostics
         if: failure()

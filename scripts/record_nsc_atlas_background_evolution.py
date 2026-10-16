@@ -25,6 +25,7 @@ from recursive_horizons.nsc_atlas_background_evolution import background_stage, 
 from recursive_horizons.nsc_atlas_background_cap import background_cap_metric
 from recursive_horizons.nsc_atlas_reduced_cap import _reconstruct, _wall_conversion
 from recursive_horizons.nsc_atlas_vacuum_departure import vacuum_slice
+from recursive_horizons.nsc_atlas_validation import background_profile_roundoff_tolerances
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = "nsc-atlas-background-evolution-v1"
@@ -149,6 +150,41 @@ def fit_profile(inputs,budget):
         value_statistics=statistics(value_error),first_statistics=statistics(slope_error),
         interpretation="withheld supplied values/first jets; second jets are computational interpolation curvature")
     return built["profile"],plain(summary)
+
+
+def profile_replay_equal(actual, expected, inputs):
+    """Check reconstructed profile arithmetic with term-conditioned radii."""
+    # Small isolated recorder fixtures may replace the complete fitter.
+    if "labels" not in expected:
+        return _equal(actual, expected, "profile fit and withheld values")
+    allowances = background_profile_roundoff_tolerances(inputs)
+
+    def compare(a, b, path=""):
+        label = "profile replay "+path
+        if isinstance(b,dict):
+            if not isinstance(a,dict) or set(a)!=set(b):
+                raise ValueError(label+" inventory mismatch")
+            for key in b:
+                compare(a[key],b[key],path+"."+key if path else key)
+        elif path in allowances:
+            aa,bb = np.asarray(a),np.asarray(b)
+            if (aa.dtype.kind not in "iuf" or aa.shape!=bb.shape
+                    or any(isinstance(v,(bool,np.bool_)) for v in np.asarray(a,dtype=object).flat)
+                    or not np.all(np.isfinite(aa)) or not np.all(np.isfinite(bb))):
+                raise ValueError(label+" shape/type/nonfinite mismatch")
+            allowance = np.broadcast_to(2e-13+2e-12*abs(bb)+allowances[path],bb.shape)
+            difference = abs(aa-bb)
+            if np.any(difference>allowance):
+                worst = int(np.argmax(difference/allowance))
+                raise ValueError(label+f" mismatch; max_abs_difference={float(np.max(difference)):.17g}; "
+                    f"worst_index={worst}; difference={float(difference.flat[worst]):.17g}; "
+                    f"allowance={float(allowance.flat[worst]):.17g}")
+        elif path=="values" or path.startswith("diagnostics.quiet_anchor") or path=="withheld.indices":
+            if encoded(a)!=encoded(b):
+                raise ValueError(label+" exact copied value/anchor/index mismatch")
+        else:
+            _equal(a,b,label)
+    compare(actual,expected)
 
 
 def physical_view(state,x,source,gauge,eta,alpha,profile,budget):
@@ -372,7 +408,7 @@ def validate_record(record,budget=None,*,require_creation=True):
         before=budget.evaluations
         profile,profile_summary=fit_profile(record["profile_inputs"],budget)
         profile_charges=budget.evaluations-before
-        _equal(record["profile"],profile_summary,"profile fit and withheld values")
+        profile_replay_equal(record["profile"],profile_summary,record["profile_inputs"])
         if len(record["cases"])!=6:
             raise ValueError("all six ordered cases required")
         x=np.asarray(base["gauge"]["rows"]["x"])

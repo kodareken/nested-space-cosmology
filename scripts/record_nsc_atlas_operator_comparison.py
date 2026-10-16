@@ -42,6 +42,7 @@ SOURCES = tuple(dict.fromkeys((*previous.SOURCES,INPUT,previous.RELATIVE_OUTPUT+
     "tests/test_nsc_atlas_stage_ssprk3.py",
     "scripts/analyze_nsc_atlas_operator_comparison.py","tests/test_analyze_nsc_atlas_operator_comparison.py",
     "scripts/record_nsc_atlas_operator_comparison.py","tests/test_record_nsc_atlas_operator_comparison.py")))
+profile_replay_equal = previous.profile_replay_equal
 Budget = previous.Budget
 plain,encoded,digest = previous.plain,previous.encoded,previous.digest
 runtime_versions = previous.runtime_versions
@@ -125,7 +126,7 @@ def calculate(budget=None):
         before = budget.evaluations
         profile,summary = fit_profile(parent["profile_inputs"],budget)
         profile_charges = budget.evaluations-before
-        _equal(summary,parent["profile"],"unchanged profile")
+        profile_replay_equal(summary,parent["profile"],parent["profile_inputs"])
         record = dict(schema=SCHEMA,status=STATUS,scope=SCOPE,settings=SETTINGS,runtime=runtime_versions(),
             parent_input=identity,cache_identity=cache_identity(ancestor),geometry=parent["geometry"],
             profile_inputs=parent["profile_inputs"],profile=summary,cases=[],uniform_error_enclosure=False)
@@ -186,8 +187,8 @@ def validate_record(record,budget=None,*,require_creation=True):
         before = budget.evaluations
         profile,summary = fit_profile(record["profile_inputs"],budget)
         profile_charges = budget.evaluations-before
-        _equal(record["profile"],summary,"profile reconstruction")
-        _equal(summary,parent["profile"],"unchanged profile")
+        profile_replay_equal(record["profile"],summary,record["profile_inputs"])
+        profile_replay_equal(summary,parent["profile"],parent["profile_inputs"])
         if len(record["cases"]) != len(CASES):
             raise ValueError("both ordered operator-comparison cases required")
         cache = ancestor["cache"]

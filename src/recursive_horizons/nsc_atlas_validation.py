@@ -1,4 +1,5 @@
 """Floating replay allowances; never scientific error or source tolerances."""
+import math
 import numpy as np
 from .nsc_atlas_field_preparation import radius_product
 
@@ -94,6 +95,101 @@ class _Roundoff:
         if np.any(denominator <= 0):
             raise ValueError("source replay logarithm is not defined")
         return self.rounded(np.log1p(self.value), self.error/denominator)
+
+
+def background_profile_roundoff_tolerances(inputs):
+    """Condition the retained C2 profile's arithmetic, not its fit error.
+
+    Labels and first jets use the saved wall values/rates. Computational
+    curvature uses the stated nonuniform three-point gradient. For each
+    quintic, Bernstein coefficients are converted to normalized power
+    coefficients; value/first/second evaluation then exposes the actual
+    1/d and 1/d^2 cancellation amplification. Eight rounding units per
+    operation cover alternate binary64 evaluation paths. Two such radii
+    compare independently rebuilt summaries. No data or interpolant changes.
+    """
+    table = inputs["table"]
+    walls, rates = table["walls"], table["wall_rates"]
+    r = np.asarray(walls["r"], dtype=float)
+    T = np.asarray(walls["T"], dtype=float)
+    c = np.asarray(walls["c"], dtype=float)
+    if (r.shape != (129,) or T.shape != r.shape or c.shape != r.shape
+            or np.any(r <= 0) or np.any(r >= 1)):
+        raise ValueError("profile replay requires the retained 129 wall rows")
+    eps = np.finfo(float).eps
+    distance = np.arctanh(r)
+    labels = _Roundoff(T)+_Roundoff(distance, 8*eps*abs(distance))
+    arrival = _Roundoff(rates["T"])+_Roundoff(rates["r"])/(1-_Roundoff(r)*r)
+    first = _Roundoff(rates["c"])/arrival
+
+    def take(value, index):
+        return _Roundoff(value.value[index], np.broadcast_to(value.error, value.value.shape)[index])
+
+    knots, slopes = take(labels, slice(None, None, 2)), take(first, slice(None, None, 2))
+    if np.any(np.diff(knots.value) <= 0):
+        raise ValueError("profile replay labels must increase")
+    curvature = []
+    for i in range(len(knots.value)):
+        j = min(max(i-1, 0), len(knots.value)-3)
+        h0, h1 = take(knots,j+1)-take(knots,j), take(knots,j+2)-take(knots,j+1)
+        if i == 0:
+            weights = (-(2*h0+h1)/(h0*(h0+h1)), (h0+h1)/(h0*h1), -h0/(h1*(h0+h1)))
+        elif i == len(knots.value)-1:
+            weights = (h1/(h0*(h0+h1)), -(h0+h1)/(h0*h1), (h0+2*h1)/(h1*(h0+h1)))
+        else:
+            weights = (-h1/(h0*(h0+h1)), (h1-h0)/(h0*h1), h0/(h1*(h0+h1)))
+        curvature.append(sum(w*take(slopes,j+k) for k,w in enumerate(weights)))
+    second = _Roundoff([v.value for v in curvature], [v.error for v in curvature])
+    values = _Roundoff(c[::2])
+
+    def evaluation_errors(queries):
+        index = np.clip(np.searchsorted(knots.value, queries.value, side="right")-1, 0, 63)
+        d = take(knots,index+1)-take(knots,index)
+        t = (queries-take(knots,index))/d
+        y0,y1 = take(values,index),take(values,index+1)
+        f0,f1 = take(slopes,index),take(slopes,index+1)
+        s0,s1 = take(second,index),take(second,index+1)
+        # Degree-5 Bernstein data fixed by endpoint values and first two jets.
+        b = [y0, y0+d*f0/5, y0+2*d*f0/5+d*d*s0/20,
+             y1-2*d*f1/5+d*d*s1/20, y1-d*f1/5, y1]
+        a = [math.comb(5,k)*sum((-1)**(k-j)*math.comb(k,j)*b[j]
+             for j in range(k+1)) for k in range(6)]
+        result = []
+        for order in range(3):
+            value = _Roundoff(np.zeros_like(queries.value))
+            for k in range(5,order-1,-1):
+                value = value*t+a[k]*(math.factorial(k)//math.factorial(k-order))
+            for _ in range(order):
+                value = value/d
+            result.append(value.error)
+        return result
+
+    knot_errors = evaluation_errors(knots)
+    withheld_errors = evaluation_errors(take(labels,slice(1,None,2)))
+    value_error = 2*withheld_errors[0]
+    first_error = 2*(withheld_errors[1]+first.error[1::2])
+    material = slopes*take(arrival,slice(None,None,2))-_Roundoff(np.asarray(rates["c"])[::2])
+    spacing = take(knots,slice(1,None))-take(knots,slice(None,-1))
+    result = {
+        "labels": 2*knots.error, "label_range": 2*knots.error[[0,-1]],
+        "arrival_rate": 2*arrival.error[::2], "first": 2*slopes.error,
+        "second": 2*second.error,
+        "diagnostics.no_return_margin": float(2*knots.error[0]),
+        "diagnostics.minimum_arrival_rate": float(2*np.max(arrival.error[::2])),
+        "diagnostics.minimum_label_spacing": float(2*np.max(spacing.error)),
+        "diagnostics.max_abs_material_chain_defect": float(2*np.max(material.error)),
+        "diagnostics.max_abs_knot_value_defect": float(2*np.max(knot_errors[0])),
+        "diagnostics.max_abs_knot_first_defect": float(2*np.max(knot_errors[1]+slopes.error)),
+        "diagnostics.max_abs_knot_second_defect": float(2*np.max(knot_errors[2]+second.error)),
+        "withheld.labels": 2*labels.error[1::2],
+        "withheld.value_difference": value_error, "withheld.first_difference": first_error,
+    }
+    for name,error in (("value",value_error),("first",first_error)):
+        result["withheld."+name+"_statistics.maximum_absolute"] = float(np.max(error))
+        result["withheld."+name+"_statistics.rms"] = float(np.sqrt(np.mean(error*error)))
+    if any(not np.all(np.isfinite(v)) or np.any(np.asarray(v)<0) for v in result.values()):
+        raise ValueError("nonfinite profile replay conditioning")
+    return result
 
 
 def _hermite_roundoff_tolerances(x, knots, *, slope_errors=None):

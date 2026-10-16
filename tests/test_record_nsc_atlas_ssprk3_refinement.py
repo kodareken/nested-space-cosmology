@@ -50,7 +50,7 @@ def synthetic(budget):
     def validate(value,base,shared):
         cache_calls.append(("check",shared)); shared.check(11)
         tool._equal(value,cache,"manufactured cache")
-        return dict(validation_evaluations=11)
+        return dict(validation_evaluations=11,saved_cache_evaluations=11)
     patch.setattr(tool,"make_refined_cache",make)
     patch.setattr(tool,"validate_refined_cache",validate)
     profile=CharacteristicProfile([0.,1.5],[0.,0.],[0.,0.],[0.,0.])
@@ -110,6 +110,44 @@ def test_saved_reconstruction_cache_and_two_final_stages_share_budget(synthetic,
     assert result["source_integrations"]==result["time_evolutions"]==0
     assert all(b is budget for b in synthetic["loads"]+synthetic["stages"])
     assert all(b is budget for _,b in synthetic["cache_calls"])
+
+
+@pytest.mark.parametrize("replay_cost",(3,19))
+def test_adaptive_replay_cost_does_not_replace_historical_receipts(synthetic,budget,monkeypatch,replay_cost):
+    record=copy.deepcopy(synthetic["record"])
+    original=tool.validate_record(record,budget,require_creation=False)
+    old_auth=original["authentication_evaluations"]
+    record["creation_execution"]=dict(calculation_evaluations=record["execution"]["evaluations"],
+        validation_evaluations=old_auth,total_evaluations=record["execution"]["evaluations"]+old_auth,
+        cpu_seconds=1.)
+    frozen=copy.deepcopy(record)
+    def replay(cache,base,shared):
+        shared.check(replay_cost)
+        tool._equal(cache,synthetic["cache"],"manufactured cache")
+        return dict(validation_evaluations=replay_cost,saved_cache_evaluations=11)
+    monkeypatch.setattr(tool,"validate_refined_cache",replay)
+    before,started=budget.evaluations,budget.started
+    result=tool.validate_record(record,budget)
+    assert result["authentication_evaluations"]==budget.evaluations-before==old_auth+replay_cost-11
+    assert result["historical_equivalent_authentication_evaluations"]==old_auth
+    assert result["cache_replay_evaluations"]==replay_cost and result["saved_cache_evaluations"]==11
+    assert budget.started==started and record==frozen
+    changed=copy.deepcopy(record)
+    changed["creation_execution"]["validation_evaluations"]+=1
+    changed["creation_execution"]["total_evaluations"]+=1
+    with pytest.raises(ValueError,match="creation accounting"):
+        tool.validate_record(changed,budget)
+
+
+def test_replay_receipt_must_match_actual_charges(synthetic,budget,monkeypatch):
+    def dishonest(cache,base,shared):
+        shared.check(7)
+        return dict(validation_evaluations=6,saved_cache_evaluations=11)
+    monkeypatch.setattr(tool,"validate_refined_cache",dishonest)
+    before=budget.evaluations
+    with pytest.raises(ValueError,match="cache saved/replay accounting"):
+        tool.validate_record(copy.deepcopy(synthetic["record"]),budget,require_creation=False)
+    assert budget.evaluations-before==7
 
 
 def test_calculation_uses_original_nodes_and_only_new_midpoints(synthetic,budget,monkeypatch):

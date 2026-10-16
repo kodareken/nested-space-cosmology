@@ -48,6 +48,7 @@ SOURCES = tuple(dict.fromkeys((*previous.SOURCES,
     previous.RELATIVE_OUTPUT+"/background.json", previous.RELATIVE_OUTPUT+"/manifest.json",
     *local.SOURCES, LOCAL_INPUT,
     "scripts/record_nsc_atlas_ssprk3_evolution.py", "tests/test_record_nsc_atlas_ssprk3_evolution.py")))
+profile_replay_equal = previous.profile_replay_equal
 Budget = previous.Budget
 plain, encoded, digest = previous.plain, previous.encoded, previous.digest
 statistics, runtime_versions = previous.statistics, previous.runtime_versions
@@ -161,7 +162,7 @@ def calculate(budget=None):
         start=budget.evaluations
         profile,summary=fit_profile(parent["profile_inputs"],budget)
         profile_charges=budget.evaluations-start
-        _equal(summary,parent["profile"],"bound computational profile")
+        profile_replay_equal(summary,parent["profile"],parent["profile_inputs"])
         x=_array(base["gauge"]["rows"]["x"],(513,),"cache coordinates")
         record=dict(schema=SCHEMA,status=STATUS,scope=SCOPE,settings=SETTINGS,
             runtime=runtime_versions(),parent_input=identity,geometry=base["geometry"],
@@ -225,7 +226,7 @@ def validate_record(record,budget=None,*,require_creation=True):
         before=budget.evaluations
         profile,summary=fit_profile(record["profile_inputs"],budget)
         profile_charges=budget.evaluations-before
-        _equal(record["profile"],summary,"profile fit and withheld values")
+        profile_replay_equal(record["profile"],summary,record["profile_inputs"])
         _equal(record["profile"],parent["profile"],"bound computational profile")
         if len(record["cases"])!=len(CASES):
             raise ValueError("all four ordered SSPRK3 cases required")

@@ -10,6 +10,8 @@ import recursive_horizons.nsc_atlas_refined_cache as tool
 from recursive_horizons.nsc_atlas_characteristic_trace import SourceSnapshot
 from recursive_horizons.nsc_atlas_reference_wall_gauge import ReferenceWallGauge
 
+_REAL_GAUGE_WORK=tool._gauge_work
+
 GEOMETRY=dict(U0=-.32130105902052203,Ua=-.2992702973503126,
     Ub=-.2747468030926288,Va=-2.565695357068247,Vb=-2.262011613052105,
     order=64,support_V=[-2.489774421064211,-2.3379325490561405],
@@ -71,6 +73,13 @@ def synthetic(budget):
                 maximum_inverse_residual=0.,maximum_inverse_iterations=8,quadrature_nodes=0)
     patch.setattr(tool,"SourceSnapshot",Snapshot)
     patch.setattr(tool,"ReferenceWallGauge",Gauge)
+    # This manufactured Gauge performs no inverse or quadrature. Its own tiny
+    # query receipt is checked here; real inverse-work envelopes have dedicated
+    # controls below, rather than pretending the fake incurred physical work.
+    def fake_work(summary,order,midpoint_rows=None):
+        assert summary["evaluations"]==513 and summary["quadrature_nodes"]==0
+        assert summary["maximum_inverse_iterations"]==8
+    patch.setattr(tool,"_gauge_work",fake_work)
     x=np.linspace(.4,GEOMETRY["x_last"],513)
     base=dict(geometry=GEOMETRY,gauge=dict(rows=tool._plain(simple_gauge(x))),
         initial_data={label:dict(alpha=alpha,exact_rows=tool._plain(simple_source(x[::2],alpha)),
@@ -334,3 +343,87 @@ def test_source_curvature_cancellation_and_summary_use_term_conditioning(alpha,b
     replay["diagnostics"]["source"]["finite"]["maximum_midpoint_curvature_defect"]=1e-6
     assert not tool._same_replayed(replay,summary,limits)
     budget.check(100*x.size)
+
+
+def _adaptive_receipt(iterations):
+    orders={}
+    for order in (64,32):
+        nodes=order*(1+512*(iterations-1))
+        orders[str(order)]=dict(quadrature_order=order,evaluations=3+512+nodes,
+            quadrature_nodes=nodes,query_points=512,cache_hits=0,inverse_calls=512,
+            maximum_inverse_iterations=iterations,maximum_inverse_residual=0.,
+            endpoint_integral_defect=0.,scope="manufactured stopping receipt")
+    gauge=sum(row["evaluations"] for row in orders.values())
+    row_iterations=np.zeros(1025);row_iterations[1::2]=iterations
+    return dict(gauge_rows=dict(inverse_iterations=row_iterations.tolist(),inverse_residual=[0.]*1025),
+        execution=dict(evaluations=2314+gauge+123,source_snapshot_points=2314,
+            gauge_evaluations=gauge,adapter_evaluations=123,gauge_orders=orders,
+            source_integrations=0,regional_marches=0,time_evolutions=0))
+
+
+def test_adaptive_stopping_replay_retains_historical_counts_and_actual_cost(budget,monkeypatch):
+    monkeypatch.setattr(tool,"_gauge_work",_REAL_GAUGE_WORK)
+    saved,fresh=_adaptive_receipt(7),_adaptive_receipt(8)
+    original=copy.deepcopy(saved)
+    tool._execution_replay(saved,fresh)
+    assert saved==original
+    assert saved["execution"]["evaluations"]!=fresh["execution"]["evaluations"]
+    a=dict(x=[.4,.44,.48],inverse_iterations=[0,7.,0])
+    b=dict(x=[.4,.44,.48],inverse_iterations=[0,8.,0])
+    tool._replay_rows(a,b,"gauge control",gauge=True,budget=budget)
+    old={"inverse_iterations":[0,0]}
+    copied={"inverse_iterations":[0,8.,0]}
+    assert tool._same_copied_rows(copied,old)
+    copied["inverse_iterations"][0]=1
+    assert not tool._same_copied_rows(copied,old)
+    budget.check(8*512)
+
+
+@pytest.mark.parametrize("field,value",(("maximum_inverse_iterations",33),
+    ("query_points",513),("inverse_calls",511),("cache_hits",1),
+    ("quadrature_nodes",65),("evaluations",True),("maximum_inverse_residual",4e-13)))
+def test_adaptive_gauge_work_bounds_remain_strict(field,value,budget):
+    receipt=_adaptive_receipt(7)
+    summary=receipt["execution"]["gauge_orders"]["64"]
+    summary[field]=value
+    with pytest.raises(ValueError,match="gauge"):
+        _REAL_GAUGE_WORK(summary,64)
+    budget.check(16)
+
+
+def test_adaptive_receipt_arithmetic_and_fixed_fields_cannot_change(budget,monkeypatch):
+    monkeypatch.setattr(tool,"_gauge_work",_REAL_GAUGE_WORK)
+    saved,fresh=_adaptive_receipt(7),_adaptive_receipt(8)
+    damaged=copy.deepcopy(saved);damaged["execution"]["evaluations"]+=1
+    with pytest.raises(ValueError,match="total evaluations"):
+        tool._execution_replay(damaged,fresh)
+    damaged=copy.deepcopy(fresh);damaged["execution"]["adapter_evaluations"]+=1
+    damaged["execution"]["evaluations"]+=1
+    with pytest.raises(ValueError,match="fixed execution"):
+        tool._execution_replay(saved,damaged)
+    damaged=copy.deepcopy(saved);damaged["gauge_rows"]["inverse_iterations"][1]=8.
+    with pytest.raises(ValueError,match="midpoint stopping data"):
+        tool._execution_replay(damaged,fresh)
+    with pytest.raises(ValueError,match="stopping counts"):
+        tool._replay_rows(dict(x=[.4],inverse_iterations=[33.]),
+            dict(x=[.4],inverse_iterations=[8.]),"gauge control",gauge=True,budget=budget)
+    budget.check(12*512)
+
+
+def test_inverse_residual_maxima_follow_bounded_stopping_receipts(budget,monkeypatch):
+    monkeypatch.setattr(tool,"_gauge_work",_REAL_GAUGE_WORK)
+    saved,fresh=_adaptive_receipt(7),_adaptive_receipt(8)
+    for cache,residual in ((saved,0.),(fresh,2.5e-13)):
+        cache["gauge_rows"]["inverse_residual"][1::2]=[residual]*512
+        for summary in cache["execution"]["gauge_orders"].values():
+            summary["maximum_inverse_residual"]=residual
+        cache["diagnostics"]=dict(midpoint_gauge={str(order):dict(inverse_residual=residual) for order in (64,32)},
+            original_gauge=dict(inverse_residual=0.),combined_gauge=dict(inverse_residual=residual),
+            gauge64_minus32_maximum_absolute=dict(inverse_residual=0.))
+    tool._execution_replay(saved,fresh)
+    assert tool._same_replayed(saved["diagnostics"],fresh["diagnostics"],tool._STOPPING_DIAGNOSTIC_ALLOWANCES)
+    damaged=copy.deepcopy(fresh)
+    damaged["diagnostics"]["midpoint_gauge"]["32"]["inverse_residual"]=3.5e-13
+    with pytest.raises(ValueError,match="stopping diagnostic"):
+        tool._execution_replay(saved,damaged)
+    budget.check(8*512)

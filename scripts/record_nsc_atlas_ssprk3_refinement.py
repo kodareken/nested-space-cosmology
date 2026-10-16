@@ -40,6 +40,7 @@ SETTINGS = dict(input=INPUT,cases=[dict(amplitude=a,cells=n,steps=k) for a,n,k i
 SOURCES = tuple(dict.fromkeys((*previous.SOURCES,INPUT,previous.RELATIVE_OUTPUT+"/manifest.json",
     "src/recursive_horizons/nsc_atlas_refined_cache.py","tests/test_nsc_atlas_refined_cache.py",
     "scripts/record_nsc_atlas_ssprk3_refinement.py","tests/test_record_nsc_atlas_ssprk3_refinement.py")))
+profile_replay_equal = previous.profile_replay_equal
 Budget,shared_budget = previous.Budget,previous.shared_budget
 plain,encoded,digest = previous.plain,previous.encoded,previous.digest
 runtime_versions,statistics = previous.runtime_versions,previous.statistics
@@ -197,7 +198,7 @@ def calculate(budget=None):
         before=budget.evaluations
         profile,summary=fit_profile(parent["profile_inputs"],budget)
         profile_charges=budget.evaluations-before
-        _equal(summary,parent["profile"],"unchanged profile")
+        profile_replay_equal(summary,parent["profile"],parent["profile_inputs"])
         record=dict(schema=SCHEMA,status=STATUS,scope=SCOPE,settings=SETTINGS,runtime=runtime_versions(),
             parent_input=identity,geometry=base["geometry"],cache=cache,
             profile_inputs=parent["profile_inputs"],profile=summary,cases=[],uniform_error_enclosure=False)
@@ -255,14 +256,23 @@ def validate_record(record,budget=None,*,require_creation=True):
         _equal(record["parent_input"],identity,"parent input")
         _equal(record["geometry"],base["geometry"],"geometry")
         before=budget.evaluations
-        validate_refined_cache(record["cache"],base,budget)
-        cache_charges=budget.evaluations-before
+        cache_auth=validate_refined_cache(record["cache"],base,budget)
+        replay_cache_charges=budget.evaluations-before
+        cache_charges=cache_auth["saved_cache_evaluations"]
+        _count(cache_charges,50000000,"saved cache charges")
+        _count(cache_auth["validation_evaluations"],50000000,"cache replay charges")
+        if (cache_auth["validation_evaluations"]!=replay_cache_charges
+                or cache_charges!=record["cache"]["execution"]["evaluations"]):
+            raise ValueError("cache saved/replay accounting mismatch")
+        # An adaptive inverse may take different valid iteration counts on a
+        # different platform. Historical totals retain its authenticated saved
+        # cost; the live Budget has already charged all actual replay work.
         _equal(record["profile_inputs"],parent["profile_inputs"],"profile inputs")
         before=budget.evaluations
         profile,summary=fit_profile(record["profile_inputs"],budget)
         profile_charges=budget.evaluations-before
-        _equal(record["profile"],summary,"profile reconstruction")
-        _equal(summary,parent["profile"],"unchanged profile")
+        profile_replay_equal(record["profile"],summary,record["profile_inputs"])
+        profile_replay_equal(summary,parent["profile"],parent["profile_inputs"])
         if len(record["cases"])!=len(CASES):
             raise ValueError("both ordered refinement cases required")
         x=_array(record["cache"]["x_nodes"],(1025,),"refined cache coordinates")
@@ -328,16 +338,19 @@ def validate_record(record,budget=None,*,require_creation=True):
         _real(record["execution"]["cpu_seconds"],"calculation CPU",high=300.)
         budget.check()
         charges=budget.evaluations-start
+        historical_charges=charges-replay_cache_charges+cache_charges
         if require_creation:
             creation=record["creation_execution"]
             _equal({k:v for k,v in creation.items() if k!="cpu_seconds"},
-                dict(calculation_evaluations=record["execution"]["evaluations"],validation_evaluations=charges,
-                    total_evaluations=record["execution"]["evaluations"]+charges),"creation accounting")
+                dict(calculation_evaluations=record["execution"]["evaluations"],validation_evaluations=historical_charges,
+                    total_evaluations=record["execution"]["evaluations"]+historical_charges),"creation accounting")
             _count(creation["total_evaluations"],50000000,"creation points")
             _real(creation["cpu_seconds"],"creation CPU",low=record["execution"]["cpu_seconds"],high=300.)
     except (KeyError,TypeError,IndexError,OverflowError) as error:
         raise ValueError("incomplete refinement record") from error
     return dict(authentication_evaluations=budget.evaluations-start,source_integrations=0,time_evolutions=0,
+        cache_replay_evaluations=replay_cache_charges,saved_cache_evaluations=cache_charges,
+        historical_equivalent_authentication_evaluations=historical_charges,
         midpoint_cache_reconstructions=1,gauge_quadrature_orders=[64,32],current_final_radial_stages=len(CASES),
         unsaved_stage_point_totals_independently_recomputed=False)
 

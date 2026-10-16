@@ -195,7 +195,7 @@ def audit(root=ROOT, *, budget=None):
         bindings = {name:digest((Path(root)/name).read_bytes()) for name in SOURCES}
         before = budget.evaluations
         profile, summary = producer.fit_profile(record["profile_inputs"], budget)
-        producer._equal(summary, record["profile"], "retained computational profile")
+        producer.profile_replay_equal(summary, record["profile"], record["profile_inputs"])
         profile_points = budget.evaluations-before
         gauge = base["gauge"]["rows"]
         x = np.asarray(gauge["x"], dtype=float)

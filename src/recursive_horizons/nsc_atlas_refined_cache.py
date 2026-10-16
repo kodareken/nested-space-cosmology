@@ -82,7 +82,8 @@ def _replay_rows(actual,expected,label,*,geometry=None,alpha=0.,source_knots=Non
 
     The source-frame allowance propagates null-label roundoff into scalar jets
     and cancellation residuals such as h_xx-Q; it is not a source error bound.
-    Coordinates and iteration counts stay exact. These comparisons do not add
+    Coordinates stay exact. Fresh adaptive stopping counts may differ within
+    the original inverse bounds; copied historical counts stay exact. These comparisons do not add
     scientific queries; when replacing an existing comparison its charges are
     retained. The caller's CPU clock covers every comparison.
     """
@@ -96,7 +97,11 @@ def _replay_rows(actual,expected,label,*,geometry=None,alpha=0.,source_knots=Non
             budget.check(b.size)
         if a.shape!=b.shape or not np.all(np.isfinite(a)) or not np.all(np.isfinite(b)):
             raise ValueError(label+" differs: "+key)
-        if key in {"x","inverse_iterations"}:
+        if key=="inverse_iterations" and gauge:
+            same=bool(np.all(a==np.floor(a)) and np.all(b==np.floor(b))
+                and np.all((a>=0)&(a<=32)) and np.all((b>=0)&(b<=32))
+                and all(type(x) is type(y) for x,y in zip(_plain(actual[key]),_plain(expected[key]))))
+        elif key in {"x","inverse_iterations"}:
             same=np.array_equal(a.view(np.uint64),b.view(np.uint64))
             if key=="inverse_iterations":
                 same=bool(same and all(type(x) is type(y) for x,y in zip(_plain(actual[key]),_plain(expected[key]))))
@@ -107,7 +112,9 @@ def _replay_rows(actual,expected,label,*,geometry=None,alpha=0.,source_knots=Non
                 quiet=(b==0)&(conditioned[key]==0)
                 same=bool(same and np.all(a[quiet]==0))
         if not same:
-            if key in {"x","inverse_iterations"}:
+            if key=="inverse_iterations" and gauge:
+                detail=" (integer stopping counts must retain types and stay within 0..32)"
+            elif key in {"x","inverse_iterations"}:
                 detail=" (exact coordinate/count comparison)"
             else:
                 allowance=np.broadcast_to(atol+2e-12*abs(b),b.shape)
@@ -164,6 +171,98 @@ def _same_copied_rows(actual,original):
     copied={key:actual[key][::2] for key in original}
     return json.dumps(copied,sort_keys=True,separators=(",",":"),allow_nan=False)==json.dumps(
         _plain(original),sort_keys=True,separators=(",",":"),allow_nan=False)
+
+
+_ADAPTIVE_GAUGE_FIELDS=frozenset({"evaluations","quadrature_nodes","maximum_inverse_iterations",
+                                "maximum_inverse_residual"})
+_STOPPING_DIAGNOSTIC_ALLOWANCES=dict(
+    midpoint_gauge={str(order):{"inverse_residual":INVERSE_TOLERANCE} for order in (64,32)},
+    combined_gauge={"inverse_residual":INVERSE_TOLERANCE},
+    gauge64_minus32_maximum_absolute={"inverse_residual":2*INVERSE_TOLERANCE})
+
+
+def _gauge_work(summary,order,midpoint_rows=None):
+    """Check a historical or fresh inverse-work receipt on its own terms.
+
+    Brent's stopping iteration can change under roundoff. Each of the 512
+    midpoint inversions still converges within 32 iterations and may request
+    at most one fresh integral per iteration plus a returned-root evaluation.
+    Each integral costs exactly `order` nodes; construction adds one endpoint
+    integral and three fixed checks. These are work ceilings, not error bounds.
+    """
+    for key in ("quadrature_order","evaluations","quadrature_nodes","query_points",
+                "cache_hits","inverse_calls","maximum_inverse_iterations"):
+        if type(summary.get(key)) is not int or summary[key]<0:
+            raise ValueError("gauge work receipt requires exact nonnegative integer "+key)
+    if (summary["quadrature_order"]!=order or summary["query_points"]!=512
+            or summary["cache_hits"]!=0 or summary["inverse_calls"]!=512
+            or not 1<=summary["maximum_inverse_iterations"]<=32):
+        raise ValueError("gauge work receipt violates fixed queries or inverse bounds")
+    nodes=summary["quadrature_nodes"]
+    maximum=order*(1+512*(summary["maximum_inverse_iterations"]+1))
+    if nodes%order or not order*513<=nodes<=maximum:
+        raise ValueError("gauge quadrature work exceeds its bounded inverse envelope")
+    if summary["evaluations"]!=3+summary["query_points"]+nodes:
+        raise ValueError("gauge evaluations do not equal checks, queries and quadrature nodes")
+    for key in ("maximum_inverse_residual","endpoint_integral_defect"):
+        if not math.isfinite(summary[key]) or abs(summary[key])>INVERSE_TOLERANCE:
+            raise ValueError("gauge receipt inverse residual exceeds its original tolerance")
+    if summary["maximum_inverse_residual"]<0:
+        raise ValueError("gauge maximum inverse residual must be nonnegative")
+    if midpoint_rows is not None:
+        iterations=np.asarray(midpoint_rows["inverse_iterations"],dtype=float)
+        residual=np.asarray(midpoint_rows["inverse_residual"],dtype=float)
+        if (iterations.shape!=(512,) or residual.shape!=(512,)
+                or not np.all(np.isfinite(iterations)) or not np.all(np.isfinite(residual))
+                or np.any(iterations!=np.floor(iterations)) or np.any(iterations<1)
+                or np.any(iterations>32) or np.max(abs(residual))>INVERSE_TOLERANCE
+                or summary["maximum_inverse_iterations"]!=int(np.max(iterations))
+                or summary["maximum_inverse_residual"]!=float(np.max(abs(residual)))):
+            raise ValueError("gauge receipt does not match its retained midpoint stopping data")
+
+
+def _execution_replay(saved,reconstructed):
+    """Keep historical accounting exact internally; fresh work is independent."""
+    fixed=[]
+    for cache in (saved,reconstructed):
+        execution=cache["execution"]
+        for key in ("evaluations","source_snapshot_points","gauge_evaluations","adapter_evaluations"):
+            if type(execution.get(key)) is not int or execution[key]<0:
+                raise ValueError("cache execution requires exact nonnegative integer "+key)
+        if execution["source_snapshot_points"]!=2314:
+            raise ValueError("cache source snapshot accounting changed")
+        summaries=execution["gauge_orders"]
+        if set(summaries)!={"64","32"}:
+            raise ValueError("cache gauge-order receipt inventory changed")
+        midpoint={key:np.asarray(value)[1::2] for key,value in cache["gauge_rows"].items()}
+        for order in (64,32):
+            _gauge_work(summaries[str(order)],order,midpoint if order==64 else None)
+        if "diagnostics" in cache:
+            diagnostic=cache["diagnostics"]
+            for order in (64,32):
+                if diagnostic["midpoint_gauge"][str(order)]["inverse_residual"]!=summaries[str(order)]["maximum_inverse_residual"]:
+                    raise ValueError("gauge stopping diagnostic does not match its receipt")
+            original=diagnostic["original_gauge"]["inverse_residual"]
+            if not 0<=original<=INVERSE_TOLERANCE or diagnostic["combined_gauge"]["inverse_residual"]!=max(
+                    original,summaries["64"]["maximum_inverse_residual"]):
+                raise ValueError("combined gauge stopping diagnostic is inconsistent")
+            difference=diagnostic["gauge64_minus32_maximum_absolute"]["inverse_residual"]
+            if not 0<=difference<=2*INVERSE_TOLERANCE:
+                raise ValueError("gauge stopping comparison exceeds its residual envelope")
+        if execution["gauge_evaluations"]!=sum(s["evaluations"] for s in summaries.values()):
+            raise ValueError("cache gauge evaluation total is inconsistent")
+        if execution["evaluations"]!=sum(execution[key] for key in
+                ("source_snapshot_points","gauge_evaluations","adapter_evaluations")):
+            raise ValueError("cache total evaluations are inconsistent")
+        comparable={key:value for key,value in execution.items()
+                    if key not in {"evaluations","gauge_evaluations","gauge_orders"}}
+        comparable["gauge_orders"]={label:{key:value for key,value in summary.items()
+            if key not in _ADAPTIVE_GAUGE_FIELDS} for label,summary in summaries.items()}
+        fixed.append(comparable)
+    residual_allowance={"gauge_orders":{str(order):{"endpoint_integral_defect":2*INVERSE_TOLERANCE}
+                                        for order in (64,32)}}
+    if not _same_replayed(fixed[0],fixed[1],residual_allowance):
+        raise ValueError("cache fixed execution declarations differ")
 
 
 def _midpoints(x,budget):
@@ -341,7 +440,8 @@ def validate_refined_cache(cache,base,budget):
         if not _same_copied_rows(table,old):
             raise ValueError("copied gauge rows differ")
         _replay_rows(table,reconstructed["gauge_rows"],"gauge replay",gauge=True)
-        keys=set(reconstructed)-{"x_nodes","source_rows","gauge_rows"}
+        _execution_replay(cache,reconstructed)
+        keys=set(reconstructed)-{"x_nodes","source_rows","gauge_rows","execution"}
         source_limits=_source_summary_allowances(reconstructed,base)
         for label,fields in source_limits["diagnostics"]["source"].items():
             for field,atol in fields.items():
@@ -351,11 +451,14 @@ def validate_refined_cache(cache,base,budget):
                     raise ValueError(f"source diagnostic {label}.{field} differs: "
                         f"difference={abs(actual-expected):.17g}, "
                         f"allowance={atol+2e-12*abs(expected):.17g}")
+        source_limits["diagnostics"].update(_STOPPING_DIAGNOSTIC_ALLOWANCES)
         if set(cache)!=set(reconstructed) or not _same_replayed(
                 {k:cache[k] for k in keys},{k:reconstructed[k] for k in keys},source_limits):
             raise ValueError("cache declarations or diagnostics differ")
     except (KeyError,TypeError,ValueError) as error:
         raise ValueError("refined cache differs from deterministic reconstruction: "+str(error)) from error
     budget.check()
-    return dict(validation_evaluations=budget.evaluations-start,source_integrations=0,
+    return dict(validation_evaluations=budget.evaluations-start,
+                saved_cache_evaluations=cache["execution"]["evaluations"],
+                replayed_cache_evaluations=reconstructed["execution"]["evaluations"],source_integrations=0,
                 regional_marches=0,time_evolutions=0)
