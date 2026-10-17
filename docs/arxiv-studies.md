@@ -32,6 +32,19 @@ Carolina Figueiredo, then a Princeton doctoral student, was named the inaugural 
 
 Then check the list below. Do not repeat a derivation this file already sources. The studies were opened while investigating the nested question. They are not proofs of one claim. Some supply a formula. Some are a clue. Some are a constraint. Some show that a local or infinite route does not answer the question. Record a new study in that same way.
 
+## Parent-side metric response, 17 October 2026
+
+[Brown--York, gr-qc/9209012v1](https://arxiv.org/abs/gr-qc/9209012): read
+the arXiv TeX source, Section III equations (3.14)--(3.19) and Section VI
+equations (6.2)--(6.20). The Hamilton--Jacobi boundary stress, flat
+subtraction, proper-time energy and area pressure supply the method used
+in the [whole-body parent reduction](schur-memory.md#whole-body-gravitational-reduction-at-the-parent-end).
+Direct tube-curvature and energy-derivative calculations check its use on
+the owned quiet Schwarzschild end. This is borrowed gravitational boundary
+mathematics; neither a new common-parent solution nor a cosmological vacuum
+term follows from citing it. Remaining sections and a global interior
+on-shell action are not audited.
+
 ## Formation and metric regularity, 17 October 2026
 
 The [same-family diagnostic](nsc-atlas-finite-amplitude.md#formation-diagnostic-from-the-quiet-sphere-and-material-wall)

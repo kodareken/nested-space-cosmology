@@ -46,6 +46,23 @@ It records three quadrature methods at that same domain, their differences,
 and the conditional parent-volume test. Its geometric density and pressure
 fail the vacuum relation; the trace coefficient is not an observed Lambda.
 
+The [parent-side metric calculation](schur-memory.md#whole-body-gravitational-reduction-at-the-parent-end)
+reuses the quiet body's mass and the same outer cut:
+
+```sh
+python scripts/run_python.py scripts/record_nsc_atlas_gravitational_reduction.py --output .build/nsc-atlas-gravitational-reduction-reproduced.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_gravitational_reduction.py -q
+```
+
+Its [summary](../results/summaries/nsc-atlas-gravitational-reduction-v1.json)
+contains the boundary energy, surface pressure, exact action identities and
+source hashes. Numerical tube values can be compared within `1e-12` relative
+tolerance; the exact symbolic checks are zero. This is a 30-CPU-second
+algebraic/reference calculation without field evolution. The coefficients
+multiplying number density are recorded without inventing that density.
+There is no complete parent solution or physical error estimate for the
+omitted interactions.
+
 The one-stage compiled-coefficient diagnostic also reports reconstructed
 cap-rate Galerkin norms in the model's `dz` measure and physical wall traces.
 Those norms are invariant under a consistent basis rescaling; they are not

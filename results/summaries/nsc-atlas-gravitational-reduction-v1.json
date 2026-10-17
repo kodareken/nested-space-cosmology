@@ -1,0 +1,64 @@
+{
+  "cpu_seconds_limit": 30,
+  "domain": "Quiet right Schwarzschild tube; leading dilute conserved-body response to a retained parent metric.",
+  "exact_zero_checks": {
+    "homogeneous_action": {
+      "extensive_vacuum_defect": "0",
+      "fixed_pressure": "0",
+      "pressure_plus_dE": "0"
+    },
+    "tube": {
+      "adm_series": "0",
+      "energy_forms": "0",
+      "fixed_mass_work": "0",
+      "mass_work": "0",
+      "pressure_forms": "0",
+      "recovered_mass": "0"
+    }
+  },
+  "leading_parent_source": {
+    "action": "-sum_i M_i integral d_tau_i, in G=c=1 units",
+    "conserved_homogeneous_energy": "sum_i M_i, independent of physical volume",
+    "generated_volume_lambda_ell2_at_this_order": 0,
+    "lambda_trace_ell2_coefficient_of_n_ell3": 2.5132741228718345,
+    "p_geom": "0",
+    "physical_number_density_n_ell3": null,
+    "population_or_common_parent_constructed": false,
+    "rho_geom": "n*M for identical bodies",
+    "vacuum_form_defect_ell2_coefficient_of_n_ell3": 10.053096491487338
+  },
+  "physical_time_steps": 0,
+  "reading": "Section III equations 3.14-3.19; Section VI equations 6.2-6.20; independently checked tube curvatures, derivatives and homogeneous action",
+  "reference": {
+    "mass_over_ell": 0.4,
+    "tube_radius_over_ell": 4.0
+  },
+  "reproduce": "python scripts/run_python.py scripts/record_nsc_atlas_gravitational_reduction.py --output .build/nsc-atlas-gravitational-reduction-reproduced.json",
+  "schema": "nsc-atlas-gravitational-reduction-v1",
+  "source": "https://arxiv.org/abs/gr-qc/9209012",
+  "source_sha256": {
+    "scripts/record_nsc_atlas_gravitational_reduction.py": "5eb2b581e24e5d53293c8b9b5b333aec8b33847dfd730d9f9816ac08d59f29e3",
+    "src/recursive_horizons/nsc_atlas_connection_slice.py": "ef7870830057258c762d6679168e03c34bcd24ab300e29f803aae9ea1828b832",
+    "src/recursive_horizons/nsc_atlas_gravitational_reduction.py": "df44258ae9687fb4007e62d7e35dc191f03ff98707112604fe9513cb736efc2e",
+    "src/recursive_horizons/nsc_atlas_moving_boundaries.py": "8972afa8872021e91191b7b5e1244b17463ee99b7c35860ff6e1a9aec5eb8a20",
+    "tests/test_nsc_atlas_gravitational_reduction.py": "4377012ac1241797cdafb945ded7c7c04ab6c3d1188a01ea2932faafa082c962"
+  },
+  "tube": {
+    "adm_mass_over_ell": 0.4,
+    "energy_over_ell": 0.4222912360003365,
+    "extrinsic_tensor_residuals_times_ell": {
+      "angular_minus_surface_pressure": -4.2012834183813297e-19,
+      "time_time_plus_surface_density": 0.0
+    },
+    "proper_lapse_factor": 0.8944271909999159,
+    "surface_energy_density_times_ell": 0.002100304301057491,
+    "surface_pressure_times_ell": 6.197682356059393e-05
+  },
+  "uncertainty_scope": "Exact leading identities and floating reference evaluation; no total physical or observational error bound.",
+  "unresolved": [
+    "Compatible parent geometry, physical population and parent observer domain",
+    "Finite-size, tidal, mutual-interaction and velocity corrections",
+    "Further physical parent-metric functional, state and conserved exchange needed for a nonzero vacuum term"
+  ],
+  "vacuum_energy_condition": "dE/dV=E/V, hence E=rho_Lambda*V with constant rho_Lambda for a conserved homogeneous sector"
+}

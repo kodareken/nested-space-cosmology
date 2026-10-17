@@ -760,6 +760,109 @@ metric and a physically selected clock/domain, then calculate its observable
 response without prescribing the desired expansion beforehand. Implementing
 the dust reference would not resolve that missing connection.
 
+### Whole-body gravitational reduction at the parent end
+
+The next finite calculation varies the metric on a static tube in the
+already specified right Schwarzschild end. It eliminates the whole quiet
+cap--wall--bridge body as seen by a parent observer. This is a different
+retained region from the cap-centre scalar reduction above. The same source
+has $M/\ell=0.4$ and the existing outer cut is $R/\ell=4$; no physical
+population density or parent expansion is supplied. Scalar preparation and
+P001's finite-amplitude trajectories are unchanged.
+
+Use the Einstein--Hilbert action with its GHY term and a Minkowski boundary
+subtraction, with energy conjugate to **proper boundary time**.
+[Brown--York, gr-qc/9209012v1](https://arxiv.org/abs/gr-qc/9209012),
+Section III, equations (3.14)--(3.19), and Section VI, equations
+(6.2)--(6.20), supply the boundary variational method. Their two-sphere
+extrinsic-curvature sign differs from the positive outward convention used
+here; the resulting energy and surface pressure agree. The formulas below
+are checked directly from the extrinsic curvature and by differentiating
+the energy, rather than accepted from the citation alone. The remaining
+paper is not audited.
+
+In $G=c=1$ units, with $f=1-2M/R>0$ and normal
+$n=\sqrt f\,\partial_R$, the tube's mixed extrinsic curvature is
+
+$$
+K^a{}_b=\operatorname{diag}\left(
+\frac{M}{R^2\sqrt f},\frac{\sqrt f}{R},\frac{\sqrt f}{R}\right).
+$$
+
+Subtract the flat tube with $K_0^a{}_b=\operatorname{diag}(0,1/R,1/R)$.
+The boundary response
+$\tau^a{}_b=-[K^a{}_b-K\delta^a{}_b-(K_0^a{}_b-K_0\delta^a{}_b)]/(8\pi)$
+then has $\tau^a{}_b=\operatorname{diag}(-\varepsilon,P,P)$, where
+
+$$
+E(R)=4\pi R^2\varepsilon=R(1-\sqrt f),\qquad
+P=\frac1{8\pi R}\left(\frac{1-M/R}{\sqrt f}-1\right).
+$$
+
+These obey
+
+$$
+dE=-P\,d(4\pi R^2)+\frac{dM}{\sqrt f},\qquad
+M=E-\frac{E^2}{2R},\qquad
+E=M+\frac{M^2}{2R}+O(M^3/R^2).
+$$
+
+At the declared cut, $E/\ell=0.4222912360003365$ and
+$P\ell=0.0000619768235605939$. These are a finite-tube gravitational energy
+and **surface** pressure. The mass monopole retained by the far parent is
+the ADM limit $M/\ell=0.4$. Neither $P$ nor $E(R)-M$ is a four-dimensional
+vacuum density. In SI units, $M$ in these equations means $GM_{\rm SI}/c^2$;
+the physical tube energy and surface pressure are their displayed geometric
+values multiplied by $c^4/G$.
+
+For well separated, slowly moving, conserved quiet bodies, matching this
+monopole gives the leading covariant parent action
+$S_{\rm bodies}=-\sum_i M_i\int d\tau_i$. This is a long-wavelength
+approximation, not a constructed common-parent solution. In a comoving
+homogeneous domain with proper volume $V=a^3V_c$ and lapse $N$, it is
+$S=-\int dt\,N E(V)$ with $E=\sum_iM_i$. Lapse and spatial-scale variations
+give the geometric energy and pressure densities
+
+$$
+\rho_g=E/V,\qquad p_g=-\partial E/\partial V=0.
+$$
+
+Thus the leading mass-monopole source is pressureless. Its trace projection
+is nonzero, $\Lambda_{\rm tr}=2\pi\rho_g$, while its vacuum-form defect is
+$8\pi(\rho_g+p_g)=8\pi\rho_g$. For identical reference bodies, writing the
+unsupplied physical number density as $n$, these coefficients are
+$\Lambda_{\rm tr}\ell^2=2.5132741228718345\,(n\ell^3)$ and
+$8\pi(\rho_g+p_g)\ell^2=10.053096491487338\,(n\ell^3)$.
+There is no generated volume-Lambda term at this leading conserved-monopole
+order. A dust trace is not identified with one.
+
+For a general conserved homogeneous energy functional, vacuum form instead
+requires $\partial E/\partial V=E/V$, hence $E=\rho_\Lambda V$ with
+constant $\rho_\Lambda$. This derivative must come from varying the physical
+metric-dependent action. Setting $\sum_iM_i\propto a^3$ by hand makes the
+density constant but does not supply that variation: with zero mechanical
+pressure the source is $Q=\dot E/V$ in
+$\dot\rho+3H\rho=Q$. The exchanging sector must also be included.
+
+This settles the leading parent mass response without selecting a desired
+expansion. It does not settle tidal, mutual-interaction, velocity or
+finite-size terms. The small quantities $M/d$, body size over separation,
+body size over parent curvature scale, and squared velocity describe the
+approximation; no numerical remainder bound or allowed population is proved.
+A nonzero cosmological vacuum term needs further physical dependence of the
+reduced action on the parent metric, with its state and energy exchange.
+The body's expanding interior alone does not specify that functional.
+
+The finite budget is 30 CPU seconds for exact identities and one reference
+evaluation, with independent boundary-tensor, energy-derivative, unit and
+homogeneous-action checks. No evolution or spatial-resolution scan is part
+of this calculation.
+The [calculator](../src/recursive_horizons/nsc_atlas_gravitational_reduction.py),
+[five checks](../tests/test_nsc_atlas_gravitational_reduction.py) and
+[compact result](../results/summaries/nsc-atlas-gravitational-reduction-v1.json)
+record that finite calculation. The reference evaluation uses about 0.74 CPU
+seconds; all exact identities and the focused tests pass.
+
 ### A distance observable for the Lambda target
 
 The quiet reference cap supplies one immediate observer prediction. With

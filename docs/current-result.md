@@ -4,6 +4,19 @@ Current presentation, 17 October 2026: [the living atlas manuscript](../paper/ne
 
 ## First Step 7 vacuum projection, 17 October 2026
 
+The [whole-body parent metric response](schur-memory.md#whole-body-gravitational-reduction-at-the-parent-end)
+now distinguishes the quiet body's gravitational source from the earlier
+cap-centre scalar elimination. At the existing right-end cut `R/ell=4`, its
+proper-time boundary energy is `E/ell=0.4222912360003365`, with ADM mass
+`M/ell=0.4`. Independent tube-curvature and energy-derivative calculations
+agree. Matching conserved, dilute, slowly moving bodies to a parent gives
+the leading action `-sum M_i integral d_tau_i`: its homogeneous stress has
+`p=0`, so it generates no volume-Lambda term at that order. Its nonzero
+dust trace and positive **surface** pressure are distinct quantities.
+A physical population, the parent solution and further metric-dependent
+interaction/state terms remain needed; the expanding child volume does
+not by itself specify a cosmological vacuum source.
+
 The first [supernova distance-shape comparison](schur-memory.md#a-distance-observable-for-the-lambda-target)
 now gives a direct observer constraint. The exact quiet cap predicts
 `Delta=0` after eliminating the common magnitude/distance scale. A fixed
