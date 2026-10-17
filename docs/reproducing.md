@@ -171,6 +171,11 @@ python scripts/run_python.py scripts/check_nsc_atlas_source_remainder_bound.py -
 It bounds four [source-geometry remainders](nsc-atlas-finite-amplitude.md#quadratic-remainders-of-the-original-source-geometry)
 without source integration, field evaluation or pointwise h0 reconstruction.
 The coupled radius and clock remainder remains separate.
+The [first source remainder receipt](../results/summaries/nsc-atlas-source-remainder-bound-v1.json)
+uses producer `7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b`, completing
+3,584 values with CPU below timer resolution. The independent rational
+product audit uses 1,024 values / 0.109375 CPU seconds; constants,
+rounding, alpha powers, displays and provenance all pass.
 
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic

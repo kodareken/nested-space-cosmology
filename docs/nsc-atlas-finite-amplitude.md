@@ -12298,10 +12298,112 @@ need not be reset to zero there.
 receipt and rounds the positive rational outputs upward to 2^-128. Ten
 controls pass in one execution (6,656 charged values / 0.40625 active CPU
 seconds). Two independent Grok formula reviews accept the constants and
-source-only interpretation. The implementation review and original
-application remain to be completed after source freeze. These source
-remainders are inputs to the coupled geometric comparison, not that
-comparison's conclusion.
+source-only interpretation. The implementation review accepts the inherited
+floors, rational constants, input authentication and source-only scope.
+
+The single application at producer
+`7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b` uses 3,584 charged values,
+with active CPU below timer resolution. Uniform outward bounds are:
+
+| Source slot | Quadratic coefficient | Remainder at alpha_max |
+| --- | ---: | ---: |
+| r-x | 4.126e-23 | 6.955e-31 |
+| log C | 1.027e-24 | 1.731e-32 |
+| (log C)_x | 3.889e-20 | 6.555e-28 |
+| r*r_x-x | 1.566e-19 | 2.639e-27 |
+
+The exact statement subtracts each first coefficient above and bounds the
+residual by alpha squared times the recorded constant. All values are
+dimensionless on the original source cell. The
+[7,593-byte certificate](../results/summaries/nsc-atlas-source-remainder-bound-v1.json)
+binds 22 producer files and two inputs. SHA256 is
+`56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721`.
+An independent rational product audit verifies every comparison constant,
+ceiling round, alpha power, display and binding in 1,024 charged values /
+0.109375 CPU seconds. No source query/integration, field evolution, time
+step, scan, retry or raw history occurs. These source remainders are inputs
+to the coupled geometric comparison, not that comparison's conclusion.
+
+### Exact canonical wall map for the nonlinear geometric comparison
+
+The wall force can now be written entirely in the retained canonical
+variables, removing the normal trace nc as an unspecified input. This is
+an algebraic reduction of the existing wall port. It introduces no new
+boundary condition. At the wall put
+
+\[
+ f=X/R,\quad z_q=\alpha f^2/6,\quad c_q=\cosh\sqrt{z_q},\quad
+ s_q=\operatorname{sinhc}\sqrt{z_q},\quad u=fs_q,\quad S_w=2c_q^3,
+\]
+\[
+ A_0=1-R^2,\quad A=A_0-2\alpha N/R,\quad \mu=e^{\alpha D},
+\]
+\[
+ U_+=\sqrt{W_x/C},\quad V_+=(W_xC)^{-1/2},\quad
+ H=2V_+q_r+S_wR,\quad g_A=A/H,\quad
+ \overline\beta=(2V_+q_r+g_A)/2.
+\]
+
+Here `q_r=r_x|wall`, `q_L=L_x|wall`, `L=log C`, and `Q=X_x|wall`.
+The branch definitions are `Cplus=2Vplus*c_x` and `Cminus=2Uplus*c_U`.
+With `b_f=u-c_q*f`, the exact differential of `c=r*u` gives
+`c_x=c_q Q+b_f q_r`, `c_U=c_q P+b_f p_r`. The canonical transmission laws
+supply
+
+\[
+ P_W=(g_AE^-/A_0+J)/(2U_+),\quad
+ p_{r,W}=(S_wR-g_A)/(2U_+),\quad J=-S_wR b_f/c_q.
+\]
+
+Substitution cancels the two S_w R terms in Cminus:
+
+\[
+ C_-=g_A(c_qE^-/A_0-b_f),\quad
+ C_+=2V_+(c_qQ+b_fq_r).
+\]
+
+Consequently `nc=(Cplus-Cminus)/2` obeys the exact identity
+
+\[
+ nc-u\overline\beta
+   =c_q\left(V_+Q-\frac{g_AE^-}{2A_0}-f\overline\beta\right).
+\]
+
+The force law with the already fixed `b=2,h_plus=0,h_minus=1` becomes
+
+\[
+ K_+=-\frac{3c_q}{4}
+ -\frac{\alpha f s_q}{2Rc_q}
+       \left(V_+Q-\frac{g_AE^-}{2A_0}-f\overline\beta\right)
+ -\frac{2\overline\beta}{R}-c_q^3.
+\]
+
+All signs come from the actual transmission/force laws, not their absolute
+majorants. The remaining wall outputs are
+
+\[
+ p_{r,W}=\frac{S_wR-g_A}{2U_+},\quad
+ p_{L,W}=\frac{q_L-2K_+/V_+-W_{xx}/W_x}{W_x},\quad
+ T_x=\frac{H+g_A}{2A\mu V_+}.
+\]
+
+The coefficient of q_L is one in p_L; it is two in the total wall rate
+`(Lwall)_x=q_L+W_x*p_L`. The fixed boost term is `-Wxx/Wx^2` in p_L.
+In the exterior, with no cap potential imported,
+
+\[
+ r_{Ux}=-rK,\quad L_{Ux}=2K-\alpha f_U f_x,\quad
+ K=(r_Ur_x+C/4)/r^2,\quad f=X/r.
+\]
+
+Root derivation and independent Grok branch/sign review agree on these
+maps. The even functions c_q and s_q have regular alpha-zero limits.
+At alpha zero, the wall's scalar, N and D state partials vanish; their
+leading contribution is the explicit alpha derivative. This permits a
+second directional derivative bound along finite state segments using
+the completed first-difference certificates. The interval Hessian bounds
+and their assembly with the geometric comparison are still to be proved
+and evaluated; the reduction alone is not a quadratic wall certificate.
 
 ## Missing full-domain estimate
 

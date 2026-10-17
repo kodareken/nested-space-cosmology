@@ -3337,7 +3337,19 @@ explicit source-only output scope address these connections.
 **Implementation controls:** ten tests pass in one execution, 6,656 charged
 values / 0.40625 active CPU seconds. Both formula reviews accept the
 original quiet-source identities and positive constants. Implementation
-review is in progress; no original application has run.
+review accepts the authenticated inputs, inherited floors and rounding.
+
+**Original application:** frozen producer
+`7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b` succeeds once with 3,584
+charged values and active CPU below timer resolution. The
+[7,593-byte receipt](../results/summaries/nsc-atlas-source-remainder-bound-v1.json)
+retains all four quadratic source bounds, 22 source bindings and two input
+hashes. The independent 1,024-value / 0.109375-CPU-second product audit
+checks exact constants, ceiling rounds, alpha powers, displays and hashes.
+No source integration, field evaluation, scan, retry or raw history occurs.
+The coupled bulk/wall remainder is a separate comparison; its exact
+canonical wall map has now been reduced and independently checked for
+branch labels and signs, before any interval-Hessian calculation.
 
 ## Normalized radial cap comparison, 17 October 2026
 

@@ -2,6 +2,28 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Quadratic source remainder bounds, 17 October 2026
+
+The four [source-geometry remainders](nsc-atlas-finite-amplitude.md#quadratic-remainders-of-the-original-source-geometry)
+are now bounded uniformly on the original onset and coupling interval.
+After subtracting the first response, the radius-source remainder is at
+most 6.955e-31 at alpha_max; the mass-product source remainder is at most
+2.639e-27. The [compact certificate](../results/summaries/nsc-atlas-source-remainder-bound-v1.json)
+retains exact quadratic coefficients for these and both lapse slots.
+All quantities are dimensionless and concern source data, not final wall
+or observer errors.
+
+Producer `7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b` uses 3,584 charged
+values with CPU below timer resolution. Ten controls, the independent
+rational audit and Grok formula/code reviews pass. The 7,593-byte record
+binds 22 source files and two inputs, with no source solve or raw history.
+
+The exact [canonical wall-force map](nsc-atlas-finite-amplitude.md#exact-canonical-wall-map-for-the-nonlinear-geometric-comparison)
+now eliminates the normal-trace placeholder and fixes its branch signs.
+Next is the nonlinear bulk/wall remainder bound assembled with the existing
+positive geometric comparison. The complete radius/clock error estimate
+and numerical finite-amplitude sign threshold remain unfinished.
+
 ## Radial cap remainder bounds, 17 October 2026
 
 The [common-collar radial comparison](nsc-atlas-finite-amplitude.md#normalized-radial-cap-departure-and-vacuum-subtracted-residuals)

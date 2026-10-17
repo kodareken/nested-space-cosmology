@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "8286c070d1f42405a3cc5103285349874065b5d2",
+  "current_receipt_commit_parent": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 237828,
-      "change": "Bound four quadratic source-geometry remainders using the original certified Jordan/frame tube.",
-      "changed_from_commit": "8286c070d1f42405a3cc5103285349874065b5d2",
+      "bytes": 237914,
+      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
+      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "706aa2b00d6de98312b3c5e4dd45cfa0c96e99eb49f4770cb59e5fb94107f34d"
+      "sha256": "763a51f140d950220b1b562b0b5d1c67d85909ef35c976e2951a447cda9b2978"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 349232,
-      "change": "Record the certified radial cap comparison and independent positive-product audit.",
-      "changed_from_commit": "d5b7794f40884d5506c639622a3e71a5a4c13660",
+      "bytes": 350597,
+      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
+      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "931b9c21a30bb5775961ae943a862e549b30c496f4e4e0bd6dbd2ccddfb035bf"
+      "sha256": "fe54d13db799e9428c8c1c4896b99a343689d3bf3d85c5927cf671f893ffb119"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 561774,
-      "change": "Bound four quadratic source-geometry remainders using the original certified Jordan/frame tube.",
-      "changed_from_commit": "8286c070d1f42405a3cc5103285349874065b5d2",
+      "bytes": 565453,
+      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
+      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "09254fdfda2fd745d83f97c2819707db3d365a494bb52c1e5f47978d35a8317d"
+      "sha256": "21bbb9176e7bb043ca8637b23e3e3afdca55aac0cfdeaf577178fbe5fca1bce1"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "03fdd1b3c7e3aa0efbcf52ce0b01ed51e52c6eb3373f73cbf89650fa3c09a3aa"
     },
     {
-      "bytes": 431593,
-      "change": "Bound four quadratic source-geometry remainders using the original certified Jordan/frame tube.",
-      "changed_from_commit": "8286c070d1f42405a3cc5103285349874065b5d2",
+      "bytes": 432364,
+      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
+      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "0a75595fc2871efc0615a625207bf7b97a579c592334b9934819e214509f7d95"
+      "sha256": "d98003d0e46b7fae51c1855befebc13edb3f58ae41a50799072b92f6e914242d"
     },
     {
       "bytes": 6705,
@@ -11432,12 +11432,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 134516,
-      "change": "Bound four quadratic source-geometry remainders using the original certified Jordan/frame tube.",
-      "changed_from_commit": "8286c070d1f42405a3cc5103285349874065b5d2",
+      "bytes": 134881,
+      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
+      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e3afb632637bb03e17db6024910e7ccd8aba41e0058b159da86324e816735162"
+      "sha256": "f0c68d25b4cf6698189a06def1a516e45074400f0d6dc279a23db9ce72d3fc14"
     },
     {
       "bytes": 18356,
@@ -29818,6 +29818,14 @@
       "path": "results/summaries/nsc-atlas-source-forcing-bound-v1.json",
       "retention_reason": "Certified actual source forcing over the original cell and coupling interval.",
       "sha256": "2ccf4ad7326291b79500f4d78a0f858907a80901c74b771f8b22fd8cb735c611"
+    },
+    {
+      "bytes": 7593,
+      "change": "Record certified quadratic source remainders and the exact canonical wall-force reduction.",
+      "changed_from_commit": "7aa098a4dec0fbdc0ac08fb43f3cc86d462ac57b",
+      "path": "results/summaries/nsc-atlas-source-remainder-bound-v1.json",
+      "retention_reason": "Compact quadratic source remainder certificate with authenticated regeneration inputs.",
+      "sha256": "56d8c15170909d2e8fdd65e96bcfcc9fe2f082b733deb58bf706fbd3b38be721"
     },
     {
       "bytes": 899,
