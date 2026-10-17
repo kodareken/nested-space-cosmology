@@ -9174,8 +9174,9 @@ prepared linear probe, not the zero scalar. In the certified quiet core
 the scalar readout is identically zero for every admitted alpha.
 
 Independent Grok review confirms the moving-limit and inverse-entry
-identities below. Its proposed weak-norm remainder still requires the
-explicit common-domain comparison identified at the end of this subsection.
+identities below. A common physical-cap domain is supplied further below;
+the weak-norm remainder still requires parameter quotient estimates for
+its coupled field, wall and clock operators.
 
 Write `Z=(y,p,q)` and use subscripts 1 and 2 for first and second alpha
 derivatives at fixed native coordinates. For the smooth normalized mixed
@@ -9340,11 +9341,13 @@ the fixed-native-point derivatives used in the earlier integral formulas.
 These transport-coefficient terms belong in the bounded linear inverse
 needed for the quotient estimate. Nor may a comparison split evaluate
 `Z(alpha+h)` at a point of the alpha-domain lying outside its own domain.
-A quiet patch and positive-width charts are a candidate way to avoid that
-problem, but their complete coverage and the coupled inverse estimate
-have not yet been supplied. The initial quiet patch must have genuinely
-zero source throughout its characteristic past; a nonzero normalized
-probe cannot be called alpha-independent there without a separate argument.
+A quiet patch and positive-width native charts are a candidate way to
+avoid that problem. Their complete native coverage has not been supplied.
+The separate whole-cap identification below uses the already constructed
+polar chart instead. Neither identification supplies the coupled quotient
+estimate by itself. A quiet patch must have genuinely zero source
+throughout its characteristic past; a nonzero normalized probe cannot be
+called alpha-independent there without a separate argument.
 
 If those estimates yield a uniform second-variation bound M2 for an
 identified wall or clock observable O in a stated comparison norm, then
@@ -9358,6 +9361,308 @@ O_1 with an older saved perturbative coefficient additionally requires
 matching its exact source, gauge and data. Beyond x_R the present receipt
 ceases to apply; its positive travel margin does not imply that the core
 immediately stops being quiet there.
+
+#### A common comparison domain for complete cap slices
+
+The existing polar cap gives a full physical-domain comparison without
+normalizing a zero-width native corner. Use the original exterior source
+label `x in [x_L,x_R]` as common time label. For each admitted alpha the
+onset theorem supplies its central wall clock T_alpha(x), Einstein areal
+wall radius R_alpha(x), and all polar cap slices enclosed by that wall.
+Choose one fixed positive radius r_c within the certified quiet core,
+with `r_c<r_star<R_min`.
+
+Write `T=T_alpha(x)`, `R=R_alpha(x)`, and `L_c=R-r_c`. The map
+
+\[
+ \mathcal P_\alpha(x,\eta)
+       =(T_\alpha(x),\ r_c+\eta L_c(x)),\qquad
+ (x,\eta)\in[x_L,x_R]\times[0,1],
+\]
+
+sends the fixed rectangle into that solution's own polar cap. Its Jacobian
+is
+
+\[
+ \frac{\partial(T,r)}{\partial(x,\eta)}
+  =\begin{pmatrix}\nu&0\\ \eta R_x&L_c\end{pmatrix},
+ \qquad \nu=T_x,\qquad \det=\nu L_c>0.
+\]
+
+The previously bounded wall rates give
+`0<T_s,min/x_s,max<=nu<=T_s,max/x_s,min<infinity`. Also
+`L_c>=R_min-r_c>0`, including at x_L. Thus the map is one-to-one and onto
+the physical collar `r_c<=r<=R_alpha(T)` for
+`T_0<=T<=T_alpha(x_R)`. The common initial anchor has
+`T_alpha(x_L)=T_0` and `R_alpha(x_L)=R_0`. Its final proper time need
+not agree between amplitudes. S_max is only an upper bound for the time
+to reach x_R and is not used as a common endpoint.
+
+This covers old and wall-born radii on every slice. On the expanding
+branch the old radii lie at
+`0<=eta<=(R_0-r_c)/L_c`; the remaining eta interval consists of radii
+enclosed after the initial slice. At x_L the whole rectangle's spatial
+edge is the already present cap collar, not a collapsed new-radius strip.
+The region `r<r_c` is the known regular quiet de Sitter core. Consequently
+no unsettled field region is omitted from the complete cap. The inner
+edge r_c supplies the trace of that same quiet solution, not a second
+independent boundary preparation.
+
+For a polar scalar z, put `zhat=z composed with P_alpha` and define
+`a_c=eta*R_x/L_c`, `D_x=partial_x-a_c partial_eta`. The exact spatial
+chain rules are
+
+\[
+ (z_r)\circ\mathcal P_\alpha=L_c^{-1}\partial_\eta\widehat z,
+ \qquad
+ (z_T)\circ\mathcal P_\alpha=\nu^{-1}D_x\widehat z.
+\]
+
+First jets and metric components require the Jacobian as well as value
+composition. For example, a polar covector `omega_T dT+omega_r dr` has
+comparison components
+
+\[
+ \Omega_x=\nu\omega_T+\eta R_x\omega_r,
+ \qquad \Omega_\eta=L_c\omega_r,
+\]
+
+where the polar coefficients on the right are evaluated at P_alpha.
+The quotient metric `-A exp(2 delta) dT^2+dr^2/A` becomes
+
+\[
+ g_{xx}=-\widehat A e^{2\widehat\delta}\nu^2
+                  +\widehat A^{-1}\eta^2R_x^2,
+ \qquad g_{x\eta}=\widehat A^{-1}\eta R_xL_c,
+ \qquad g_{\eta\eta}=\widehat A^{-1}L_c^2.
+\]
+
+The angular coefficient remains `(r_c+eta L_c)^2`. Merely evaluating
+the old metric coefficients at the new points would miss these factors.
+For the normalized canonical scalar, the existing polar definitions give
+
+\[
+ \widehat\Phi=L_c^{-1}\partial_\eta\widehat f,
+ \qquad
+ \widehat\Pi=(\widehat A e^{\widehat\delta}\nu)^{-1}
+                      D_x\widehat f.
+\]
+
+If native null fields are required, the established radius flow
+`Phi_alpha(T,r)` maps these polar points into the same solution's native
+coordinates. Compose a native scalar with `Phi_alpha composed with
+P_alpha`; native null covectors require that additional Jacobian.
+Outside, the established fixed-W gauge already has the common domain
+`x_L<=x<=x_R`, `0<=Ubar<=W(x)`. Its lapse coefficient also transforms:
+if `Ubar=phi(u)` and `k=phi'(u)>0`, then `C_bar=C_native/k`.
+It is not a scalar pullback of the native lapse.
+
+Conditional on parameter derivatives, the new chart terms are explicit:
+
+\[
+ \widehat z_1=z_1+z_T T_1+\eta z_r R_1,
+ \qquad (L_c)_1=R_1,\quad \nu_1=\partial_xT_1,
+ \quad (a_c)_1=\frac{\eta\partial_xR_1}{L_c}
+                              -a_c\frac{R_1}{L_c}.
+\]
+
+Here z_1 on the right holds the physical polar coordinates fixed. For the
+physical derivatives viewed as comparison functions,
+
+\[
+ \partial_\alpha\widehat{z_r}
+    =L_c^{-1}\partial_\eta\widehat z_1
+                      -\frac{R_1}{L_c^2}\partial_\eta\widehat z,
+\]
+\[
+ \partial_\alpha\widehat{z_T}
+    =\nu^{-1}[D_x\widehat z_1-(a_c)_1\partial_\eta\widehat z]
+                         -\frac{\nu_1}{\nu^2}D_x\widehat z.
+\]
+
+Independent Grok review confirms complete cap coverage and the spatial
+Jacobian identities. This settles where the families can be compared.
+It does not establish T_1, R_1, derivatives of the radius flow, or a
+bounded inverse for all the transformed cap and exterior equations.
+Those clock and wall variations must be solved with the field variations;
+they cannot be supplied as independent data. Even in the quiet core the
+metric expressed in the source clock x contains nu, although its metric
+in central proper time is the unchanged de Sitter metric. A Taylor
+remainder still requires the coupled parameter estimate.
+
+#### A first-variation inverse on a full positive-width prefix
+
+There is a bounded linear inverse on an already valid positive-width
+comparison patch. This result keeps the entire interval `0<=eta<=1`,
+including the wall at eta=1. It assumes the patch and compatible varied
+data have been supplied; it does not yet construct parameter derivatives
+of the nonlinear family or cover the complete physical cap.
+The supplied varied jets are continuous, and the varied lower field values
+are C1 with the differentiated lower-data tangent identity.
+
+Fix a background solution and the preceding chart
+`U=ell(v)+eta*w(v)`, with `0<w_min<=w<=w_max`. The background first jets
+are C2. The wall rates and inverse rates are bounded. Let h bound the
+proper wall duration and the native incoming characteristic durations,
+enlarging constants by the fixed rate bounds where needed. Incoming data
+are taken at their actual base entry: the wall, the old bottom, or the
+spacelike lower curve. The exterior characteristic source is tangent to
+incoming transport and supplies no additional incoming datum.
+
+Use the fixed background weight
+
+\[
+ \omega(v,\eta)=\exp\{\lambda[u_W(v_0)-U(v,\eta)]\},\qquad
+ D\omega=0.
+\]
+
+For a wall displacement bound k_max, require
+`lambda*k_max*h<=log(2)`. The wall weights then lie in `[1/2,2]`.
+The outgoing primitive on the whole prefix has the exact estimate
+
+\[
+ \left\|\int_0^\eta w(v) f(v,t)\,dt\right\|_\omega
+       \le\frac{\|f\|_\omega}{\lambda}.
+\]
+
+No spatial subinterval is discarded to obtain this gain. Along incoming
+characteristics the weight is constant, so their integrations supply h
+without an additional growing weight factor.
+
+**Wall and chart conversion.** Let V denote a first variation of the
+physical wall state at fixed proper time. At a fixed native v its horizontal
+wall displacement is
+
+\[
+ (U_W)_1=\delta u_W-(a/b)\delta v_W.
+\]
+
+Consequently the physical outgoing trace variation is
+
+\[
+ (q_W)_1=\widehat q_1|_W+
+                  [q_v+(a/b)q_u]_W\,\delta v_W.
+\]
+
+Absorb the known second term into the wall-state matrix of the linearized
+ODE. Convert its algebraic incoming trace to the fixed-v chart by
+subtracting `(p_W)_v*delta v_W`. These conversions use the background
+derivatives once; adding another independent wall-shape term would count
+them twice. The resulting ODE has continuous bounded coefficients,
+
+\[
+ V_s=\mathcal A(s)V+\mathcal B(s)\widehat q_1|_W+f_Y(s).
+\]
+
+Both sides' outgoing traces enter these block matrices. For equal initial
+data its propagator gives a bound `h H` from the weighted outgoing trace
+to V. H is fixed using a preliminary upper bound on h and the wall-weight
+factor 2; it is independent of lambda. The same ODE bounds V_s, which
+controls the chart coefficient d_1. In particular,
+
+\[
+ \|d_1\|_\infty\le C_d
+       (\|V\|_\infty+\|\widehat q_1|_W\|_\infty)+D_d.
+\]
+
+Here D_d contains only supplied varied lower-curve and gauge data.
+The constant C_d includes the positive width and null-rate bounds.
+No independently prescribed derivative of the moving wall is used.
+
+**Ordered linear map.** First integrate the outgoing equation with the
+trial field and wall variations. Solve the linear wall ODE with that
+outgoing result. Then integrate the incoming equation along base D
+characteristics, using the new wall trace and its new d_1, and reconstruct
+the field from `yhat_1,eta=w phat_1+w_1 phat`. At a fixed point all these
+operations use the same wall variation.
+
+For differences of two trials with identical data, let
+`R,P,Q` be the weighted norms of their field, incoming-jet and outgoing-jet
+variations, and let `V` also denote the norm of the wall-state difference.
+Put `Z=R+P+Q`. A prime below denotes the new linear-map output, not a
+spatial derivative. With block norm constants that include both regions,
+
+\[
+ Q'\le a_\lambda Z+b_\lambda V,\qquad a_\lambda=L_F/\lambda,
+ \qquad V'\le hH Q',
+\]
+\[
+ P'\le hA Z+G(h)Q',\qquad
+ G(h)=g+heH+hB_\lambda(1+hH),
+\]
+\[
+ R'\le c_\lambda P'+d_\lambda hH Q',\qquad c_\lambda=1/\lambda.
+\]
+
+The incoming boundary operator supplies g and e. The bulk linearization
+supplies A. B_lambda bounds the weighted `d_1 phat_eta` term after using
+the varied wall ODE. If C_w bounds the unknown wall contribution to w_1,
+the remaining shape constants can be taken as
+
+\[
+ b_\lambda=\frac{C_w\|\widehat F\|_\omega}{\lambda w_{\min}},
+ \qquad d_\lambda=\frac{C_w\|\widehat p\|_\omega}{\lambda w_{\min}}.
+\]
+
+Known lower-curve variations enter the affine data, not these homogeneous
+bounds. Weighted background norms may grow with lambda. They are finite
+and are fixed before h; their growth is not suppressed by assuming the
+whole prefix is short.
+
+For `N=Z+kappa*V`, the displayed inequalities imply
+
+\[
+ N'\le h(1+c_\lambda)A Z
+                +K(h)(a_\lambda Z+b_\lambda V),
+\]
+\[
+ K(h)=(1+c_\lambda)G(h)+1+d_\lambda hH+\kappa hH.
+\]
+
+For lambda at least one, put `K_0=2g+1`, so `K(0)<=K_0`.
+Choose lambda with `a_lambda*K_0<=1/8`. Next choose
+`kappa>=max(1,8*K_0*b_lambda)`. Finally choose positive h so that
+`K(h)<=2*K_0`, `h*(1+c_lambda)*A<=1/4`, the wall-weight restriction
+and the patch's rate and entry conditions hold. This order is noncircular:
+all constants in the last choice are already finite. It yields
+
+\[
+ N'\le\tfrac12 Z+\tfrac14\kappa V\le\tfrac12N.
+\]
+
+The affine map T is therefore a contraction on continuous weighted fields
+and continuous wall variations with the compatible initial traces. Choose
+one continuous extension B of those traces within this affine class and
+set `S=norm(T(B))_N+norm(B)_N/2`. Then its unique fixed point has
+`N<=2 S`. This definition does not assume that the zero tuple satisfies
+inhomogeneous initial data. S includes the compatible inflow, varied lower
+data and explicit parameter forcing, and can depend strongly on the chosen
+weights. This is a finite analytic estimate, not an evaluated physical
+error constant.
+
+Primitive compatibility follows at the fixed point. Differentiating the
+field reconstruction weakly and using the two pulled-back mixed equations
+gives
+
+\[
+ \partial_\eta[\widehat y_{1,v}-\widehat q_1
+                    -U_v\widehat p_1-U_{1,v}\widehat p]=0,
+\]
+
+because `w*d_1+w_1*d-U_{1,v}=0`. The varied lower-data tangent identity
+sets the bracket to zero. Thus the reconstructed field has the intended
+first jets. The differentiated signed wall tangent identities propagate
+its common wall values from the compatible corner. The map need not
+assume that derivatives of a nonlinear clipped extension exist.
+
+Independent Grok review confirms the full-prefix estimate, the trace
+conversions and the order lambda, then kappa, then h. It does not bound
+the spatial derivative of the first variation or prove parameter
+difference-quotient convergence. The second wall variation still needs
+`grad(q_1)`. The complete physical-cap rectangle above has additional
+clock and radial Jacobian coefficients; this native-patch inverse does
+not automatically bound its coupled operator. That operator connection
+and the first-spatial-variation estimate remain separate requirements.
 
 ## Missing full-domain estimate
 

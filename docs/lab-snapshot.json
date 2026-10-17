@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+  "current_receipt_commit_parent": "8b1815d77101cb02dcfe0c3c03dd43e2bb0a5eae",
   "files": [
     {
       "bytes": 3120,
@@ -10261,9 +10261,9 @@
       "sha256": "5d191ee413ab9542fa51c960a5053dd87b888c8ff531cb8b8dd32bbe07104814"
     },
     {
-      "bytes": 231822,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 232409,
+      "change": "Define the complete physical-cap comparison and the full-prefix local first-variation inverse, with the coupled remainder estimate still open.",
+      "changed_from_commit": "8b1815d77101cb02dcfe0c3c03dd43e2bb0a5eae",
       "import_bytes": 185245,
       "import_sha256": "9ef5415a6507f88fe6dd578d5e2029eaae8186a33bc81e9f2b01f41f3457eb57",
       "migration_disposition": "active_owner",
@@ -10271,7 +10271,7 @@
       "original_path": "lab/docs/active-code-map.md",
       "original_sha256": "aefd84fec4f0f71e04e7a17e60130c592d3c13c49ad9d8e8fa96e65a8d90e40b",
       "path": "docs/active-code-map.md",
-      "sha256": "7aa4d0a5661a48b2da5f770933c6b64024cde7b02d7c529e4933864b6b5d4c86"
+      "sha256": "6a89d15f386a0bcce04b272a295acca9e25bb4e7953d1fa3e1cccf91c2ecb027"
     },
     {
       "bytes": 9543,
@@ -10309,12 +10309,12 @@
       "sha256": "0a83b8b0e90003423134f3be3ecbdaef6eaa70f4167e990b57f5165c233c003d"
     },
     {
-      "bytes": 334898,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 336045,
+      "change": "Define the complete physical-cap comparison and the full-prefix local first-variation inverse, with the coupled remainder estimate still open.",
+      "changed_from_commit": "8b1815d77101cb02dcfe0c3c03dd43e2bb0a5eae",
       "path": "docs/current-result.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "7f02dda8e921292dcbee2a435278dc8fe64cff9933fefba0cf5bb72cc7f1a528"
+      "sha256": "2e5d5e89f442024afa26f4f98af397175f870ba221694e92e3e88ca322e99aad"
     },
     {
       "bytes": 18915,
@@ -10396,12 +10396,12 @@
       "sha256": "00e27e45af23438646f09f611abbd8cb0b86dcd056e9b3196f98b23ba339d219"
     },
     {
-      "bytes": 442270,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 454484,
+      "change": "Define the complete physical-cap comparison and the full-prefix local first-variation inverse, with the coupled remainder estimate still open.",
+      "changed_from_commit": "8b1815d77101cb02dcfe0c3c03dd43e2bb0a5eae",
       "path": "docs/nsc-atlas-finite-amplitude.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "e606c59fe9b88bb9e823fd58debcf2a5ada6bcb058ec5dba7e97aeb3a22cadb1"
+      "sha256": "258a19d59e2b6b3ce2229906c73919e6a7d99eb63b9893bea6338bf3a3c9d5f0"
     },
     {
       "bytes": 8895,
@@ -11418,12 +11418,12 @@
       "sha256": "030a949d41fa5f9fe7a465e1f055761b981b87f0dab2998711ad99fee487479c"
     },
     {
-      "bytes": 397604,
-      "change": "Establish finite-cell continuation, integrate the onset theorem into the living manuscript, and retain the next parameter-variation identities.",
-      "changed_from_commit": "4a933663b73e24a906591e8039c440ca0b9bdcc1",
+      "bytes": 398920,
+      "change": "Define the complete physical-cap comparison and the full-prefix local first-variation inverse, with the coupled remainder estimate still open.",
+      "changed_from_commit": "8b1815d77101cb02dcfe0c3c03dd43e2bb0a5eae",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "5cb899a4780540086b037616d75b2c04894dfa685bb192459297deebe7b193ca"
+      "sha256": "13869566ec4c326f24c2161b82f922cab978e69a0eda8830eccfd3651cc5dc36"
     },
     {
       "bytes": 6705,

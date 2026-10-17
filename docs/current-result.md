@@ -28,9 +28,26 @@ The next [parameter-variation identities](nsc-atlas-finite-amplitude.md#paramete
 retain both moving-limit terms, inverse wall-entry derivatives and the
 moving wall trace through second order. They specify the equations needed
 for a wall/clock Taylor estimate. Convergence of parameter difference
-quotients on valid common patches remains to be established; the clipped
-extension used for existence cannot simply be differentiated twice. No
-remainder constant or new physical trajectory is claimed by those identities.
+quotients remains to be established; the clipped extension used for
+existence cannot simply be differentiated twice.
+
+A [common complete-cap rectangle](nsc-atlas-finite-amplitude.md#a-common-comparison-domain-for-complete-cap-slices)
+now uses the original source label and the radial interval from a fixed
+quiet-core radius to each solution's own wall. Its width stays positive
+at the initial event, and it contains both old and wall-born radii. The
+owner retains the actual clock and radial Jacobians for fields, first
+derivatives and metric components. No common proper-time endpoint is assumed.
+
+The [full-prefix local linear inverse](nsc-atlas-finite-amplitude.md#a-first-variation-inverse-on-a-full-positive-width-prefix)
+also closes on a valid positive-width native patch. Choosing the spatial
+weight, then the wall norm scale, then a short time gives contraction at
+most one half and a finite data-to-solution bound. Independent Grok review
+confirms the trace conversion and primitive/entry compatibility. This
+retains the entire source-to-wall prefix. It does not yet give a coupled
+inverse on the complete-cap rectangle or the spatial derivative needed
+by the second variation. The next connection is the cap radial response
+and the wall/clock operator in those comparison coordinates. No numerical
+Taylor constant or new physical trajectory has been claimed.
 
 ## Fixed cap and moving-wall connection, 16 October 2026
 

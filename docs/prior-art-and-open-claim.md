@@ -2976,6 +2976,25 @@ calculation. The onset core remains exactly quiet throughout the certified
 cell; its strict travel margin does not assert immediate central arrival
 just beyond the endpoint. A central waveform requires a later-domain argument.
 
+The [whole-cap comparison](nsc-atlas-finite-amplitude.md#a-common-comparison-domain-for-complete-cap-slices)
+is now supplied by the already proved polar chart. The fixed source label
+is common; the final proper time is not. The positive interval from a
+fixed quiet radius to the actual wall covers all old and newly enclosed
+radii. Independent Grok review confirms its coverage and Jacobian rules.
+The [local first-variation inverse](nsc-atlas-finite-amplitude.md#a-first-variation-inverse-on-a-full-positive-width-prefix)
+retains the full spatial prefix and also passes review, including primitive
+and entry compatibility. Its constants are selected in the order spatial
+weight, wall norm scale, then time. A spatially truncated argument and a
+parameter theorem inferred from smooth coefficients alone were not adopted.
+
+The remaining analytic bridge is the actual coupled operator on the complete
+comparison domain. Derive its fixed-W wall/clock equations and the cap's
+radial mass/lapse variation with the radius-dependent vacuum term retained.
+Separate Grok reviews check the boundary and characteristic dependencies
+and the radial Volterra estimate. These are exact continuum rewritings and
+conditional linear equations; no new grid, physical evaluation or numerical
+Taylor constant is admitted at this stage.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
