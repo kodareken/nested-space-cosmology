@@ -2712,7 +2712,13 @@ evaluations, 151 accepted radial steps and the unchanged gradient guard.
 Mass differed by `2.66e-15`, lapse by `8.67e-19`, and flux by `3.75e-12`.
 The strict coefficient-rate comparison (`atol=1e-10, rtol=1e-11`) failed:
 maximum differences were `8.04e-9` for cap chi and `8.15e-8` for canonical
-density. The accelerator therefore remains optional; no trajectory equivalence
+density. The reconstructed rate differences in the model's `dz` Galerkin norm
+are `6.33e-13` for chi and `2.47e-11` for canonical density, against reference
+norms `0.02071195` and `1.47646770`. The scaled Gram condition is `4.70e6`.
+The added norm report uses 8.40625 CPU seconds and 9,709,459 charged values
+including preparation and all three stage evaluations. This diagnoses the
+coordinate dependence of the coefficient comparison; it does not certify a
+complete trajectory. The accelerator therefore remains optional; no trajectory equivalence
 or live-run speedup is claimed. The batch API uses Numba `prange` for independent
 nodes, but the physical stage comparison uses the scalar compiled callback.
 

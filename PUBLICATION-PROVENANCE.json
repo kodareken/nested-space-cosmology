@@ -1558,7 +1558,7 @@
     {
       "bytes": 2357910,
       "path": "docs/lab-snapshot.json",
-      "sha256": "416f14efcac2ad254d6556f94f74fa6cd6fa110d680fdb808ea5510c72a590b4"
+      "sha256": "45267f8edf7f0351d0f03b07f572ca79c1dd8aa0bd950ae47c25e734dd2579f8"
     },
     {
       "bytes": 4997,
@@ -2216,9 +2216,9 @@
       "sha256": "f5472c5ae0d54768b0e0b4b077b7763485cb074940506c6107515d433979bd48"
     },
     {
-      "bytes": 154011,
+      "bytes": 154481,
       "path": "docs/reproducing.md",
-      "sha256": "8d6cbfe485ccc9d0abc71d47f5b5b053d1ceb15b90d3f72fa77f95c358fbc4ea"
+      "sha256": "4756256e12cb7550b566e2cb191ef856369ec416a34edb21fe35b9cde2a118b7"
     },
     {
       "bytes": 31710,
@@ -21526,7 +21526,7 @@
       "sha256": "d536acd8859beed92f4cefe3dc6b5b191d8395d0938767d5f856a97313036aab"
     }
   ],
-  "lab_snapshot_sha256": "416f14efcac2ad254d6556f94f74fa6cd6fa110d680fdb808ea5510c72a590b4",
+  "lab_snapshot_sha256": "45267f8edf7f0351d0f03b07f572ca79c1dd8aa0bd950ae47c25e734dd2579f8",
   "lineage_scope": "Original release lineage; current contents are enumerated by included_paths.",
   "manuscript_revision": "2026-10-17.4",
   "nsc3_introduced_commit": "3490f19164eb9303915db41b8c90eca0f40a836e",

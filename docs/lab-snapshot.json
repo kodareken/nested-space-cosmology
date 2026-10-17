@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
+  "current_receipt_commit_parent": "daa55899c262a666d82be7727d083c9036fe54ed",
   "files": [
     {
       "bytes": 3120,
@@ -11440,12 +11440,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 154011,
+      "bytes": 154481,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
+      "changed_from_commit": "daa55899c262a666d82be7727d083c9036fe54ed",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "8d6cbfe485ccc9d0abc71d47f5b5b053d1ceb15b90d3f72fa77f95c358fbc4ea"
+      "sha256": "4756256e12cb7550b566e2cb191ef856369ec416a34edb21fe35b9cde2a118b7"
     },
     {
       "bytes": 18356,
