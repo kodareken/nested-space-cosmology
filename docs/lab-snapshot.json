@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "f225e2770ab725f6e1b5738a1ef34068a17dd74c",
+  "current_receipt_commit_parent": "b7c909c98c5cb269d51dd6638a619e89723dab1e",
   "files": [
     {
       "bytes": 3120,
@@ -11426,12 +11426,12 @@
       "sha256": "d7da68c1871e82705db2d558e02ce4f75074754674ea4efdf769344b1c140b15"
     },
     {
-      "bytes": 475218,
+      "bytes": 475399,
       "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "f225e2770ab725f6e1b5738a1ef34068a17dd74c",
+      "changed_from_commit": "b7c909c98c5cb269d51dd6638a619e89723dab1e",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "27b756af6c8f743e313caf7db1ce0e97685928956435e2b41ef6f0f18273765a"
+      "sha256": "441f90dc5fe5fe1503e2a84a3ef4dc05f4339b6eda3d7cf838284baa1791b556"
     },
     {
       "bytes": 6705,

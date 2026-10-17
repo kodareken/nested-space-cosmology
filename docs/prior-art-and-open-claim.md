@@ -28,8 +28,10 @@ Nineteen bookkeeping and runner controls pass without a physical solve.
 They cover counter preservation, unchanged numerical settings, wrong or
 expired targets, repeat rejection and failed-write rollback. The remote
 callback/frame mechanism was checked separately on an isolated sleeping
-Python process. Independent Grok review is pending before applying the
-amendments to the physical jobs. Fresh reproductions use the runner's
+Python process. Independent Grok review found no blocker in the CPU-only
+semantics, counter preservation, frame/provenance checks, rollback or clean
+replay. Each application still requires its durable receipt and the target's
+`cpu_allowance_amended` event before it counts as applied. Fresh reproductions use the runner's
 `--extended-cpu-allowance` option; the unextended default remains available.
 
 **Later v3 radial stop:** the coarse successor passes the earlier stopping
