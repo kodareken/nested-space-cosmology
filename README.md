@@ -19,7 +19,11 @@ now constructs a compatible sourced cap, material wall and exterior on the
 declared original source cell, uniformly for a nonzero amplitude range. It
 combines local evolution, clock construction and the certified departure
 bounds. The regular core stays quiet on this interval; central arrival and
-observational predictions remain subsequent work.
+observational predictions remain subsequent work. The
+[uniform remainder and frame conversion](docs/nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison)
+now prove negative sourced corrections to the material wall radius and
+centre-anchored clock at the original onset endpoint, throughout the
+admitted positive-amplitude range.
 
 The current geometric route reaches a sourced interior connection, a causal map,
 a calibration waveform and a [computed response to independent exterior data](docs/nsc-atlas-prepared-response.md).

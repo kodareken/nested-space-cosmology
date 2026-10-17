@@ -12686,8 +12686,21 @@ for `C(q)=cosh(sqrt(q))` give the uniform half-Hessian bound
        +{r_{\max}C_{\max}Q_2\over4}.
 \]
 
-Taylor expansion of this algebraic map about the alpha-zero state and
-subtraction of the first continuum response therefore yield
+For a fixed target alpha, the affine segment is explicitly
+
+\[
+ y(\theta)=\left(\theta,
+ R_0+\theta\frac{R_\alpha-R_0}{\alpha},
+ X_0+\theta\frac{X_\alpha-X_0}{\alpha}\right),\quad0\le\theta\le\alpha.
+\]
+
+Its directions are actual secants, bounded by C_R and C_X, and already
+include all higher responses. The linear Taylor term is exactly
+`R_alpha-R0+alpha*X0^2/(12R0)`. Subtracting the first continuum response
+leaves the Einstein-radius remainder with coefficient one. Multiplying
+that remainder by another cosh factor is unnecessary: all nonlinear
+variation is already included in this secant Hessian. Taylor subtraction
+gives
 
 \[
  |R_J(\alpha)-R_0-\alpha R_{J,1}|\le
@@ -12714,15 +12727,64 @@ signed first-coefficient conversion. Six independent controls pass across two ta
 canonical and invariant variables, check the symbolic alpha-zero Hessian,
 compare a finite-alpha signed-direction box with the interval-jet map,
 recover the quiet-source limit, and check the signed event shift and rejection of a lost radius floor. Grok's
-mathematical review accepts the full-segment formula. Implementation review
-and the original numerical application precede any Jordan sign claim.
+mathematical and implementation reviews accept the full-segment formula,
+actual-secant interpretation and retained event shift.
+
+### Certified Jordan-radius endpoint comparison
+
+The [material-radius certificate](../results/summaries/nsc-atlas-jordan-radius-bound-v1.json)
+uses the same original cell and `0<alpha<=alpha_max` as the Einstein
+comparison. The signed conversion gives the first fixed-label Jordan
+radius coefficient in
+
+\[
+ [-9.518246744633201\times10^{-15},
+  -7.591995929467907\times10^{-16}].
+\]
+
+The frame half-Hessian is at most `1.6045008951343312e-23`. Adding it to
+the existing Einstein-radius coefficient bounds the material-radius
+remainder by
+
+\[
+ |R_J(\alpha)-R_0-\alpha R_{J,1}|\le
+       \alpha^2(6.067430611284943\times10^{-17}).
+\]
+
+The ratio `alpha_max*C_J2/(-R_J1_upper)` is below `1.038e-5`. Therefore
+`R_J(alpha,xi_b)-R_J(0,xi_b)<0` throughout the admitted positive-amplitude
+interval. At alpha_max, its outward shift interval is
+`[-1.2357670993332457e-18,-9.856682568226137e-20]`, with an absolute
+quadratic remainder below `1.0227357534777469e-24`. These are dimensionless
+quantities. The conformal factor has a strictly positive certified floor;
+its downward display is `0.9999999999999999`. The quiet-centre-anchored
+clock bound and its endpoint sign are unchanged, with the slicing
+convention stated above.
+
+Producer `d897d7969b7238d71c03948bdc83da5fa3f24779` completes one
+application with 7,680 values / 0.03125 process-CPU seconds. The 21,512-byte
+receipt binds 28 source files and thirteen input hashes; its SHA-256 is
+`2a4aa2c18664e175ea9bf94f21bf0a0c881e9c41bce14780f4fef06930d5be0b`.
+The independent 2,048-value / 0.109375-CPU-second audit passes. In addition
+to exact interval products, alpha powers, signs, displays and provenance,
+it bounds the cosh ceiling by a separate rational positive-series tail:
+for `q=alpha_max*fstar^2/6<56`,
+
+\[
+ \cosh\sqrt q\le1+q/2+q^2/24+\frac{q^3}{720(1-q/56)}.
+\]
+
+No source evaluation, field evolution, integration, scan or raw history
+is produced. The result concerns a sourced correction on an expanding
+reference wall and the prescribed characteristic preparation. It does not
+supply a physical emitter, a later central signal, formation or evaporation.
 
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,
 its departure bounds and an explicit uniform quadratic amplitude remainder.
-The fixed-label radius and anchored-clock endpoint signs above hold on the
-entire admitted positive-amplitude range. The remaining full-domain problem concerns later
+The fixed-label Einstein and Jordan radius signs and anchored-clock sign
+above hold on the entire admitted positive-amplitude range. The remaining full-domain problem concerns later
 central arrival and a controlled approximation or perturbative remainder
 for that observable. The quiet-core restriction is no longer sufficient
 once the signal reaches the centre. In particular, the following remain

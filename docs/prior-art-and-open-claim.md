@@ -3350,6 +3350,19 @@ the invariant-field square-root map would give a different sign and is not
 substituted. Grok's mathematical review accepts the full-segment bound
 and retained event shift. Original evaluation awaits source review/freeze.
 
+**Original outcome:** producer `d897d7969b7238d71c03948bdc83da5fa3f24779`
+completes one application in 7,680 values / 0.03125 CPU seconds. The
+[21,512-byte receipt](../results/summaries/nsc-atlas-jordan-radius-bound-v1.json)
+certifies the negative Jordan-radius correction throughout the original
+positive-alpha interval. It binds 28 source files and thirteen input hashes.
+The independent audit uses 2,048 values / 0.109375 CPU seconds and passes,
+including a separate rational-series bound for cosh, signed event-shift
+products, powers, endpoint inequalities, displays and provenance. Both
+Grok reviews accept the actual-secant Taylor formula. The Einstein remainder
+enters with coefficient one at the expansion base; it is not multiplied by
+a second frame factor. Full details and observer scope are in the
+[material-radius result](nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison).
+
 ### Full onset geometric remainder comparison, 17 October 2026
 
 The source, scalar and normalized cap certificates now provide all finite

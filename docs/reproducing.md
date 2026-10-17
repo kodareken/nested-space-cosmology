@@ -224,6 +224,14 @@ its output path must be new and its producer committed. The
 keeps the canonical scalar, invariant Jordan trace, source-label event shift
 and clock interpretation explicit. No source or field integration is involved.
 
+The [first material-radius receipt](../results/summaries/nsc-atlas-jordan-radius-bound-v1.json)
+uses producer `d897d7969b7238d71c03948bdc83da5fa3f24779`: 7,680 values /
+0.03125 CPU seconds in one application. The independent rational audit uses
+2,048 values / 0.109375 CPU seconds and passes, including a positive-series
+cosh enclosure independent of Arb. The material-radius sign is strict on
+the entire admitted positive-amplitude interval; the clock receipt is
+retained unchanged with its original slicing and quiet-centre anchor.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

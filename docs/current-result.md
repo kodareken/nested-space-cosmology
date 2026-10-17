@@ -2,6 +2,30 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Finite-amplitude material-radius sign, 17 October 2026
+
+The [exact Jordan conversion](nsc-atlas-finite-amplitude.md#certified-jordan-radius-endpoint-comparison)
+now proves that the material wall's areal radius is below its vacuum
+reference at the fixed right source endpoint for every admitted
+`0 < alpha <= 4789928473501569/36893488147419103232`.
+At the maximum amplitude its dimensionless shift lies in
+`[-1.2357670993332457e-18, -9.856682568226137e-20]`. The quadratic remainder
+is at most `1.0227357534777469e-24`, below `1.038e-5` of the smallest
+certified first-response magnitude. The centre-anchored clock estimate
+and negative sign remain unchanged on the same Einstein-polar slicing.
+
+The conversion keeps the canonical scalar distinct from the invariant
+Jordan trace and retains the signed source-label event shift. It uses the
+same exact family and preparation. This is a relative correction on an
+expanding reference wall, with no later central-arrival or evaporation claim.
+
+The [21,512-byte receipt](../results/summaries/nsc-atlas-jordan-radius-bound-v1.json)
+binds producer `d897d7969b7238d71c03948bdc83da5fa3f24779`, 28 source files
+and thirteen input hashes. One application uses 7,680 values / 0.03125 CPU
+seconds. Six controls pass, both Grok reviews accept the secant formula,
+and the independent 2,048-value / 0.109375-CPU-second rational audit passes.
+No source/field calculation, integration, scan or raw history is added.
+
 ## Finite-amplitude radius and clock signs, 17 October 2026
 
 The [complete onset remainder](nsc-atlas-finite-amplitude.md#certified-finite-amplitude-endpoint-signs)
