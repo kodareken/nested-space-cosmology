@@ -1,7 +1,7 @@
-"""A scale-free distance contrast for the existing quiet de Sitter cap.
+"""Observer distances and a scale-free contrast on specified atlas candidates.
 
-This is a fixed linear statistic on standardized apparent magnitudes, not a
-cosmological parameter fit or the nonzero-source P001 forward model.
+The quiet-cap statistic and finite radial light-cone calculation retain their
+distinct inputs. Neither fits cosmological parameters or evolves P001.
 """
 import math
 
@@ -10,6 +10,105 @@ from scipy.linalg import cho_factor, cho_solve, solve
 
 LOW_BAND = (.025, .075)
 HIGH_BAND = (.15, .25)
+_LIGHTCONE_ORDERS = (32, 64)
+
+
+def _positive_metric_sample(metric, time, position):
+    time, position = np.broadcast_arrays(np.asarray(time, dtype=float),
+                                         np.asarray(position, dtype=float))
+    values = metric(time, position)
+    radius = np.broadcast_to(np.asarray(values['radius'], dtype=float), time.shape)
+    radial_scale = np.broadcast_to(np.asarray(values['Q'], dtype=float), time.shape)
+    if (not np.isfinite(radius).all() or not np.isfinite(radial_scale).all()
+            or np.any(radius <= 0) or np.any(radial_scale <= 0)):
+        raise ValueError('metric radius and Q must be finite and positive')
+    return radius, radial_scale
+
+
+def radial_conformal_lightcone(metric, time_nodes, *, reception_time, reception_x,
+                               lookbacks, direction, quadrature_order=32):
+    """Redshift and area distance on ds^2=(r Q)^2(-dt^2+dx^2)+r^2 dOmega^2.
+
+    Fixed-x emitters and the receiver are normal worldlines
+    u=(1/(r Q)) partial_t. They need not be geodesic, and the redshift is not
+    a Hubble constant. Propagation is transparent geometric optics with photon
+    number conserved. The kernel does not wrap x or assume a spatial topology.
+
+    A past-directed radial ray has dx/dt=-direction. Normalize its observed
+    frequency magnitude to one: dt/d lambda=-N_o/N^2, where lambda increases
+    into the past, so d lambda/d chi=N^2/N_o. Thus
+    1+z=N_o/N_e. Radial screen shear vanishes. The areal radius solves the
+    radial Jacobi equation, and the vertex condition D(0)=0, dD/d chi(0)=N_o
+    gives D_A=r_o r_e integral_0^chi d lambda/r^2. Etherington then gives
+    D_L=(1+z)^2 D_A. Gauss orders 32 and 64 are one consistency pair; their
+    difference does not bound a saved interpolant or a field evolution.
+    """
+    nodes = np.asarray(time_nodes, dtype=float)
+    samples = np.asarray(lookbacks, dtype=float).reshape(-1)
+    if isinstance(direction, bool) or isinstance(quadrature_order, bool):
+        raise ValueError('direction must be +1 or -1 and quadrature order 32 or 64')
+    if direction not in (1, -1) or quadrature_order not in _LIGHTCONE_ORDERS:
+        raise ValueError('direction must be +1 or -1 and quadrature order 32 or 64')
+    direction, quadrature_order = int(direction), int(quadrature_order)
+    if (nodes.ndim != 1 or nodes.size < 2 or np.any(np.diff(nodes) <= 0)
+            or not np.isfinite(nodes).all()):
+        raise ValueError('time nodes must be finite and strictly increasing')
+    if samples.size == 0 or not np.isfinite(samples).all() or np.any(samples < 0):
+        raise ValueError('lookbacks must be finite and nonnegative')
+    reception_time = float(reception_time)
+    reception_x = float(reception_x)
+    if not np.isfinite(reception_time) or not np.isfinite(reception_x):
+        raise ValueError('reception event must be finite')
+    if reception_time < nodes[0] or reception_time > nodes[-1] or reception_time-float(np.max(samples)) < nodes[0]:
+        raise ValueError('light cone leaves the recorded time interval')
+    direction = int(direction)
+    stations = np.unique(np.concatenate((
+        [0.], samples, reception_time-nodes[(nodes > reception_time-np.max(samples)) & (nodes < reception_time)])))
+    abscissa, weights = np.polynomial.legendre.leggauss(quadrature_order)
+    panels = []
+    for left, right in zip(stations[:-1], stations[1:]):
+        if right <= left:
+            panels.append((right, np.empty(0), np.empty(0)))
+            continue
+        local = .5*(left+right)+.5*(right-left)*abscissa
+        panels.append((right, local, .5*(right-left)*weights))
+    query = np.concatenate([local for _, local, _ in panels] + [stations])
+    radius, radial_scale = _positive_metric_sample(
+        metric, reception_time-query, reception_x+direction*query)
+    lapse = radius*radial_scale
+    cursor = 0
+    panel_integrals = []
+    for _, local, local_weights in panels:
+        count = local.size
+        if count == 0:
+            panel_integrals.append(0.)
+        else:
+            panel_integrals.append(float(local_weights @ radial_scale[cursor:cursor+count]**2))
+        cursor += count
+    prefix = np.cumsum([0., *panel_integrals])
+    endpoint = {float(mark): index for index, mark in enumerate(stations)}
+    observer_lapse = float(lapse[cursor])  # stations[0] = 0
+    rows = []
+    for lookback in samples:
+        index = endpoint[float(lookback)]
+        emission_lapse = float(lapse[cursor+index])
+        integral = float(prefix[index])
+        one_plus = observer_lapse/emission_lapse
+        radius_observer = float(radius[cursor])
+        radius_emission = float(radius[cursor+index])
+        area = radius_observer*radius_emission/observer_lapse*integral
+        rows.append({
+            'observer_lapse': observer_lapse,
+            'emission_lapse': emission_lapse,
+            'redshift': one_plus-1.,
+            'angular_diameter_distance': area,
+            'luminosity_distance': one_plus**2*area,
+            'coordinate_lookback': float(lookback),
+            'direction': direction,
+            'emission_time': reception_time-float(lookback),
+            'emission_x': reception_x+direction*float(lookback),
+        })
+    return rows
 
 
 def quiet_cap_distance_shape(z_hd, z_hel):

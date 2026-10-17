@@ -2814,6 +2814,21 @@ radial boost, pure-trace singular curvature, units and the zero-mass limit.
 `schwarzschild_normal_weyl(.4, 1.5)` returns the regular exterior tensor in
 inverse-length-squared units. The conditional leading double-layer argument
 is in the Schur owner; these tests do not implement a full quadratic junction.
+
+The finite causal light-cone and radar comparison reuses the same cached
+metric with its saved rates:
+
+```text
+python scripts/run_python.py scripts/measure_nsc_conformal_lightcone.py --restore-geometry --geometry .build/data/nsc-spherical-conformal-episode-v2.npz --output .build/conformal-lightcone.json
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_cosmological_distance.py tests/test_nsc_conformal_lightcone.py -q
+```
+
+The method uses reception `T=0.3,x=1`, the three predeclared ray lengths and
+both radial directions. Radar return trips remain within `T>=0.05`.
+Fixed-coordinate normal probes can be accelerated; their redshift is not
+a cosmological Hubble inference. The eleven controls include a separate
+Jacobi ODE and exact flat/de-Sitter optical and radar limits. New output
+paths are required, and full data remain in the ignored input cache.
 It evaluates one frozen state, takes no time steps, and retains the existing
 60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
 or a change in the physical model from this benchmark.

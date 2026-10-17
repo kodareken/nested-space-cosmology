@@ -1,5 +1,44 @@
 # Prior art and admission of new research
 
+## Causal distance and clock comparison, 17 October 2026
+
+The missing observer reduction cannot be supplied by a scalar volume average
+alone. Considered routes were a new common-parent field construction, more
+precision on the completed averages, or a causal observable in the existing
+recorded geometry. Choose the last for the next finite calculation: it
+produces actual redshift, focusing and clock distances without another
+gravitational evolution. The two action choices remain alternatives;
+unifying them is not a prerequisite for this candidate's own forward map.
+
+Reuse the authenticated conformal episode, its four stored cases and saved
+first rates. Fix reception at `T=0.3,x=1` and coordinate ray lookbacks
+`0.025,0.075,0.125`, both radial directions. The observer, emitters and ideal
+reflectors follow the existing fixed-coordinate normal worldlines; they may
+be accelerated. Test light propagates transparently in geometric optics
+with photon number conserved. These are specified probes, not a claim about
+cosmological matter or a measured Hubble rate.
+
+For `N=r*Q`, radial null paths obey `dx/dT=+/-1`. Derive redshift and the
+angular Jacobi distance directly, including normalization at the finite
+nonzero observer radius. Compare the luminosity distance with the radar
+distance from the observer's round-trip proper clock. The longest radar
+trip begins at `T=0.05`, so all paths remain inside the stored interval;
+no source or metric extrapolation is admitted. Use the previously fixed
+initial observer-sphere ruler for dimensionless lengths, and retain the
+unit-independent luminosity/radar ratio.
+
+Use the existing cubic Hermite interpolation with saved rates and the
+owned Fourier spatial representation. Gauss orders 32/64 split on the
+stored time panels provide one integration consistency comparison. Check
+Minkowski and flat-de-Sitter annuli, a separate Sachs ODE, and length units.
+The shared calculation limit is **60 CPU seconds / 90 million charged
+Fourier-coefficient values**, zero field solves and zero evolution steps.
+Freeze the method before applying it. Stop on source-hash/domain failure
+or a dimensionless integration discrepancy above `1e-10`; keep failures.
+Differences between stored cases and quadrature orders are indicators,
+not bounds on interpolation, model or observational uncertainty. This is
+a finite causal probe and does not complete the cosmological forward model.
+
 ## Common-action wall transfer, 17 October 2026
 
 One bounded symbolic check addresses the missing physical connection between

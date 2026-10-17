@@ -306,6 +306,65 @@ the actual common-parent/transition geometry and its observer reduction;
 the present periodic spherical realization supplies neither by repetition.
 No additional precision campaign is opened here.
 
+### Causal radial distances and the observer's clock
+
+An averaged scalar coefficient is not yet a distance an observer measures.
+The next finite calculation uses actual null paths in the recorded conformal
+metric, keeping the existing observer $x_o=1$ and reception $T_o=0.3$.
+Normal test emitters and reflectors stay at fixed coordinate positions;
+their worldlines may be accelerated. Transparent geometric optics and
+photon-number conservation define the light protocol. They are probes,
+not an assumed cosmological matter congruence.
+
+With $N=rQ$, the past ray is $T=T_o-\chi$, $x=x_o+\eta\chi$, $\eta=\pm1$.
+The null Hamiltonian makes the radial covariant momentum $p_T$ constant.
+Frequency measured by a normal observer is $|p_T|/N$, hence
+
+$$
+1+z=\frac{N_o}{N_e}.
+$$
+
+Radial screen shear vanishes. The warped-sphere curvature gives
+$R_{kk}=-2r_{\lambda\lambda}/r$, so $r$ itself solves the scalar Jacobi
+equation. Normalize the past affine parameter by observed frequency
+magnitude one. Then $d\lambda/d\chi=N^2/N_o$, and the vertex conditions
+$D_A(0)=0$, $D_{A,\lambda}(0)=1$ give
+
+$$
+D_A=\frac{r_or_e}{N_o}\int_0^\chi
+Q(T_o-s,x_o+\eta s)^2\,ds,
+\qquad D_L=(1+z)^2D_A.
+$$
+
+The factor $r_o$ matters: this observer has finite nonzero areal radius.
+The observer can also send an ideal pulse, reflect it at $x_o+\eta\chi$
+and receive it at $T_o$. Its radar distance follows from its own proper
+round-trip clock,
+
+$$
+D_{\rm radar}=\frac12\int_{T_o-2\chi}^{T_o}N(T,x_o)\,dT.
+$$
+
+The ratio $D_L/D_{\rm radar}$ needs no choice of length units. Fix
+$\chi=0.025,0.075,0.125$ in both directions before evaluating this ratio.
+The longest radar trip starts at $T=0.05$, inside the archived interval.
+Use the four existing metric cases, their real Fourier spatial fields and
+cubic Hermite interpolation with the saved time derivatives. No source
+or geometry is evolved, and no waveform samples are differentiated.
+
+The [existing distance calculator](../src/recursive_horizons/nsc_atlas_cosmological_distance.py)
+now supplies the radial cone. Its controls recover Minkowski annular
+distances, the off-centre flat-de-Sitter law, and a separately integrated
+Sachs equation. The [saved-geometry reader](../scripts/measure_nsc_conformal_lightcone.py)
+also checks the Fourier/Hermite representation and the proper radar clock;
+for de Sitter its exact radar distance is
+$\log(1+2H\chi)/(2H)$ when the reception scale factor is one.
+The [admission](prior-art-and-open-claim.md#causal-distance-and-clock-comparison-17-october-2026)
+fixes the finite domain, probes, compute ceiling and 32/64-point consistency
+pair. Their differences do not bound geometry interpolation or model error.
+This supplies a causal observer map for this separate candidate; it does
+not supply the missing common parent, a full sky or a cosmological Lambda.
+
 ### The wall connection between the two action choices
 
 The inherited-law programme needs a physical relation between the Einstein

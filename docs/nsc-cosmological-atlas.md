@@ -52,6 +52,15 @@ time-symmetric vacuum connector cannot supply the desired vacuum relation.
 This finite calculation
 does not require reopening the cap solver or running a cutoff scan.
 
+The isolated-slice and saved evolving-geometry scalar-average probes are now
+closed at their recorded scopes. The next finite observer calculation follows
+actual radial light paths in the saved conformal candidate and compares
+luminosity distance with the original observer's radar clock distance.
+This tests a causal distance map that a scalar average alone does not fix.
+The Einstein and Weyl-squared constructions remain separate candidates;
+their full unification is not a prerequisite for either one's conditional
+forward observations. P001's original fine evolution remains active.
+
 ## Working geometric hypothesis: inheritance through resolution
 
 Douglas's current proposal is that a region's approximately spherical geometry
