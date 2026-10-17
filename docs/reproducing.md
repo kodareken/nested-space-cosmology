@@ -649,6 +649,35 @@ authenticate; a 512-value rational audit verifies the displays, reported
 ceilings and source/frame continuation margins. Grok independently confirms
 the equations and outward rounding.
 
+The fixed conditional coupled-tube check uses the authenticated source,
+gauge and initial certificates above:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_coupled_tube_bound.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_coupled_tube_bound.py --output results/summaries/nsc-atlas-coupled-tube-bound-v1.json
+```
+
+The four controls pass with 26,192 charged values and active CPU below timer
+resolution. A prior control invocation's output was unavailable after
+context transfer; its cache retained no failed nodes. Conservatively charge
+that invocation's full 40,000-value / 20-second allowance in the development
+ledger, for at most 66,192 values / 20 seconds across both invocations.
+The physical application is separate: one fixed box evaluation, 8,192
+charged values within 20,000 values / 10 CPU seconds, with committed producer
+sources and a new output path. There is no source solve, trajectory or box
+search. The receipt explicitly distinguishes a conditional a priori bound
+from construction of a smooth solution.
+
+The conditional first-derivative closure has separate symbolic controls:
+
+```sh
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_derivative_closure.py -q -s
+```
+
+All three pass with 24,000 values / 0.328125 active CPU seconds. They verify
+the quotient/kernel differentiation, cap commutators and radial time
+variation; they do not evaluate physical coefficients or construct a solution.
+
 The coupled comparison controls are:
 
 ```sh

@@ -7722,6 +7722,270 @@ reported ceilings, input identity and strict source/frame margins. These
 are now concrete forcing inputs; a sourced cap-wall-exterior tube and its
 local construction/continuation are still required.
 
+### A fixed conditional coupled tube
+
+The exact initial anchor and actual source forcing permit a direct comparison
+with the vacuum geometry, rather than a residual comparison with the saved
+numerical trajectory. Suppose a smooth, compatible solution exists on the
+original cell, on the exact gauge above, with the quiet initial data just
+established. The following bounds are a conditional a priori estimate for
+that solution. They do not construct it.
+
+Use the three integrated transverse-jet departures and the clock departure,
+the cap suprema of `E_plus,E_minus,chi`, and three separate pointwise exterior
+jet bounds. The fixed box is
+
+| Quantity | Assumed upper bound |
+| --- | --- |
+| `J_r,J_L,abs(delta T)` | `1e-6` each |
+| `J_X,abs(X_U)` | `1e-7` each |
+| `abs(E_plus)` | `0.004` |
+| `abs(E_minus)` | `1e-8` |
+| `abs(chi)` | `1e-5` |
+| `abs(delta r_U)` | `1e-5` |
+| `abs(delta L_U)` | `0.001` |
+
+Also require `abs(r_x)<=1.01`. All comparisons use the same exact W(x).
+The canonical scalar and its derivatives vanish in the vacuum reference,
+so the scalar mixed source is bounded by `k*abs(X)`, and the lapse kinetic
+source by `alpha*abs(f_U*f_x)`. There is no reference scalar derivative
+multiplied by a transport-coefficient difference in this comparison.
+The earlier prefix identities bound radius, log lapse, longitudinal jets
+and both the integrated and pointwise kernel differences from this box.
+
+The inner cap edge is the original first positive knot
+`z_star=2308242254218069/4503599627370496`. A lower enclosure of
+`tanh(z_star)` is used in radial denominators and interval lengths.
+For `p=(E_plus+E_minus)/(2*A0)` and `h=(E_plus-E_minus)/(2*A0)-f`,
+the constrained mass satisfies
+
+\[
+ N_r+a_cN=b_c,\quad
+ a_c=\frac{\alpha(p^2+h^2)}{2r},\quad
+ b_c=\frac{r^2P}{2}+\frac{A_0(p^2+h^2)}4,\quad
+ \delta_r=a_c.
+\]
+
+Both coefficients are nonnegative. With zero inner anchors,
+`0<=N<=width*sup(b_c)` and `0<=delta<=width*sup(a_c)`.
+The potential and regular reaction quotient are bounded using
+`sinhc(z)<=cosh(z)` and `(sinhc(z)-1)/z^2<=cosh(z)/6`.
+These give bounds on A, mu, beta, beta_z and the actual cap reaction S.
+The alpha-zero limits are included without dividing an interval by alpha.
+
+The quiet-core assertion is checked against inward travel:
+
+\[
+ (x_1-x_0)T_x^*\beta^*
+ <\operatorname{atanh}(R_{\min})-z_*.
+\]
+
+The initial cap is quiet. This inequality prevents any wall signal from
+reaching the core during the cell. The incoming `E_minus` trace at that
+core edge is zero; vanishing of the other trace there follows from
+nonarrival and is not an additional imposed boundary condition. The wall
+itself may already carry a signal.
+
+The incoming cap wall trace and outgoing exterior scalar jet are
+
+\[
+ E^+_W=\frac{A_0}{H}(2V_+Q+J),\qquad
+ P_W=\frac{AE^-/(HA_0)+J}{2U_+},\qquad
+ J=S_wR\left(f-\frac{\tanh(\sqrt{\alpha/6}f)}{\sqrt{\alpha/6}}\right).
+\]
+
+The continuous zero-alpha limit is understood. In particular,
+`abs(J)<=S_w*R*alpha*abs(f)^3/18`. Finite differences of the radius,
+lapse and clock wall maps retain changes in every reciprocal denominator.
+The curvature bound includes the full `-2*beta_bar/R` contribution.
+The cap wall's upper `A0` bound uses its sourced minimum radius, not the
+reference minimum radius. Lower bounds for A, H, expansion and both
+characteristic gaps are checked separately.
+
+Let `B_r,B_L,B_T` be these wall-map difference bounds, `P_W^*` the
+scalar wall-jet bound, `K_I,K_S` the integrated and pointwise kernel
+difference bounds, `e_r=s_r+J_r`, and `X^*=s_X+J_X`. Put
+`q=alpha*F_U^*F_x^*` and `dt=x1-x0`. The exterior and clock images are
+
+\[
+\begin{aligned}
+ J_r'&=dt(W_x^*B_r+r^*K_I+kW^*e_r),\\
+ J_L'&=dt(W_x^*B_L+2K_I+W^*q),\\
+ J_X'&=dt(W_x^*P_W^*+kW^*X^*),\qquad
+ |\Delta T|'=dt B_T,\\
+ |\Delta r_U|'&=B_r+dt(r^*K_S+ke_r),\\
+ |\Delta L_U|'&=B_L+dt(2K_S+q),\qquad
+ |P|'=P_W^*+dt kX^*.
+\end{aligned}
+\]
+
+Primes in this display denote bounds returned by one box evaluation, not
+derivatives. The integrated equations retain the complete wall history on
+the growing exterior interval. The pointwise equations separately include
+jets entering through the wall. Neither norm replaces the other.
+With `gamma>=abs(beta_z)` and `S^*>=abs(S)`, the cap images are
+
+\[
+\begin{aligned}
+ E_+'&=(E_W^+)^*+dt T_x^*(\gamma E_+^*+A_0^*S^*),\\
+ E_-'&=dt T_x^*(\gamma E_-^*+A_0^*S^*),\\
+ \chi'&=X^*+dt T_x^*\beta^*(E_+^*+E_-^*)/2.
+\end{aligned}
+\]
+
+The last formula allows a fixed-r point to enter through the expanding
+wall; it uses its last boundary value followed by its actual time evolution.
+The [interval implementation](../src/recursive_horizons/nsc_atlas_coupled_tube_bound.py)
+evaluates these ten components once at 160 bits, uniformly over the admitted
+coupling interval. The [bounded runner](../scripts/check_nsc_atlas_coupled_tube_bound.py)
+authenticates the source, gauge, initial and original collar inputs.
+Four [independent controls](../tests/test_nsc_atlas_coupled_tube_bound.py)
+check hyperbolic majorants, the curvature coefficient, finite mass/lapse
+cross terms and a synthetic envelope. Strict improvement, if obtained,
+still needs a smooth local construction and derivative continuation to
+establish a sourced spacetime throughout the cell.
+
+### Conditional first-derivative continuation
+
+There is a derivative estimate beyond the ten-component tube. Assume the
+same smooth compatible solution and positive margins, with finite second
+source jets and the required fixed-gauge derivatives. The prescribed source
+is C3, including its support endpoints; no discontinuous front is introduced.
+The following argument bounds first derivatives of the evolved jets without
+assuming an incoming Einstein U constraint at the wall.
+
+Write `B_s=r_src*r_x,src`, `p_r=r_U`, `p_L=L_U`, `P=X_U` and `Q=X_x`.
+Differentiate the radius and scalar prefixes at fixed U:
+
+\[
+ r_{xx}=\frac{B_s'-\int_0^U CL_x/4\,du-r_x^2}{r},\qquad
+ K_x=\frac{-rKr_x+p_r r_{xx}+CL_x/4}{r^2}-\frac{2Kr_x}{r},
+\]
+\[
+ Q_x=Q_{\rm src}'-\int_0^U(K_xX+KQ)\,du.
+\]
+
+Every right-hand side is bounded by the existing tube and source derivatives.
+In particular, no cap E derivative enters these longitudinal second jets.
+The canonical identities
+
+\[
+ (f_U)_x=(f_x)_U=-\frac{f_Ur_x+f_xp_r}{r},\qquad
+ f_{xx}=\frac{Q_x-2r_xf_x-fr_{xx}}{r}
+\]
+
+then bound
+`L_xx=L_src,xx+integral(2*K_x-alpha*((f_U)_x*f_x+f_U*f_xx)) dU`.
+This uses actual derivatives of the analytic source, not differences of
+stored samples.
+
+For a wall trace, `d_x y_W=y_x+W_x*y_U`. Consequently the derivative of
+`Phi=E_plus,W`, whose arguments are `R,L_W,X_W,r_x,W,Q_W` and the prescribed
+gauge, is bounded by these longitudinal jets and the tube's transverse
+jets. Here `r_x,W` and `Q_W` denote wall traces, not extra derivatives.
+For example, `d_x(r_x|W)=r_xx+W_x*(-r*K)` and
+`d_x(Q|W)=Q_x-W_x*K*X`. The incoming map Phi has no N, delta or E-minus
+argument, so this step does not presuppose cap derivative control.
+
+In the cap let `D_plus=partial_z E_plus`, `D_minus=partial_z E_minus`,
+`A0=1-r^2` and `r_z=A0`. Primitive compatibility gives
+
+\[
+ f_z=\frac{(E^+-E^-)/2-A_0f}{r}.
+\]
+
+Set `D=2*N/r^2-r*Ppotential-4*N/A0`. Then
+`beta_zz=alpha*mu*(A0*a_c*D+D_z)`, with
+
+\[
+ D_z=\frac{2A_0N_r}{r^2}-\frac{4A_0N}{r^3}
+       -A_0P-rP_f f_z-4N_r-\frac{8rN}{A_0}.
+\]
+
+Likewise differentiating
+`S=alpha*mu*(r*Uquot+(2*N/r^2-r*Ppotential)*f)` uses only
+`N_r`, `delta_r=a_c`, `f_z` and smooth potential derivatives on a compact
+field interval. Thus `beta_zz` and `(A0*S)_z` are bounded without D-plus or
+D-minus. The commuted transport equations are exactly
+
+\[
+\begin{aligned}
+ (\partial_T-\beta\partial_z)D_+
+   &=2\beta_zD_++\beta_{zz}E^+-(A_0S)_z,\\
+ (\partial_T+\beta\partial_z)D_-
+   &=-2\beta_zD_--\beta_{zz}E^--(A_0S)_z.
+\end{aligned}
+\]
+
+The incoming outer trace follows from differentiating Phi along the wall:
+
+\[
+ (D_+)_W=\frac{\Phi_x-T_x(\beta_zE^+-A_0S)}{T_x\beta+Z_x}.
+\]
+
+Its denominator is a previously checked characteristic gap. The incoming
+inner D-minus trace vanishes in the quiet core. Initial data are quiet;
+compatibility at the initial wall and core corners is still required.
+With `gamma>=abs(beta_z)`, a finite forcing bound F and a finite incoming/
+initial derivative bound G0, characteristic integration gives
+
+\[
+ \max(\|D_+\|_\infty,\|D_-\|_\infty)
+ \le (G_0+\Delta T F)e^{2\gamma\Delta T}.
+\]
+
+For points born through the expanding wall the incoming trace above supplies
+the starting value. The primitive identity is preserved by the two cap
+transport equations and common scalar wall law; it is not a second arbitrary
+boundary condition. It also yields `chi_zz=(D_plus-D_minus)/2`.
+
+Cap time derivatives now follow from the uncommuted equations. To bound
+wall derivatives of the radial metric, differentiate its constrained ODE:
+
+\[
+ (N_T)_r+a_cN_T
+ =\frac{r^2P_f f_T}{2}+\frac A4\partial_T(p^2+h^2),\qquad
+ (\delta_T)_r=\frac{\alpha}{2r}\partial_T(p^2+h^2).
+\]
+
+The quiet anchors are zero. The bounded cap first jets bound both integrals;
+total wall derivatives are `d_x N_W=T_x*N_T+R_x*N_r` and similarly for
+delta. This argument does not assume the temporal mass equation in order
+to derive its own derivative bounds.
+
+Finally put `a=partial_U p_r`, `b=partial_U p_L`, `c=partial_U P`.
+Define the already bounded quantity
+`F_K=(-p_r*r*K+C*p_L/4)/r^2-2*K*p_r/r`. Then
+
+\[
+ K_U=\frac{r_x}{r^2}a+F_K,\qquad
+ a_x=-p_rK-rK_U,\qquad c_x=-XK_U-KP,
+\]
+\[
+ b_x=2K_U-\alpha\left[
+ \frac{c-2p_rf_U-fa}{r}f_x
+ -f_U\frac{f_Ur_x+f_xp_r}{r}\right].
+\]
+
+This is a triangular linear ODE system for a, c and b along fixed-U
+segments. A segment starts at the initial bottom or at its wall entry.
+At wall entry, each jet has boundary value
+`partial_U p_y=(d_x(p_y|W)-(p_y)_x)/W_x`. The preceding cap and longitudinal
+estimates bound these differentiated wall maps, including the curvature
+and prescribed boost derivatives. Positive W_x prevents division by zero.
+No null constraint is substituted to close this last system.
+
+These formulas give finite conditional first-derivative bounds on the
+compact tube. They do not construct a differentiable solution, prove a
+local iteration converges, or independently propagate every constraint.
+Those remain requirements for applying a continuation theorem to obtain
+the common sourced spacetime. This derivative argument introduces no new
+physical data, trajectory, grid or numerical scan. Three independent
+[symbolic controls](../tests/test_nsc_atlas_derivative_closure.py) differentiate
+the canonical quotients and kernel, commute the cap transport equations,
+and differentiate the radial metric constraint. They pass with 24,000
+charged values / 0.328125 active CPU seconds.
+
 ## Missing full-domain estimate
 
 A justified finite-amplitude spacetime interval needs a quantitatively

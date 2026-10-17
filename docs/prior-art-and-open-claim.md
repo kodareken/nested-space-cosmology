@@ -2768,6 +2768,59 @@ retains 19 producer hashes. A separate 512-value rational audit verifies
 the displays, ceilings, input hash and continuation margins. No source
 query, integration, root search, time step or retry was performed.
 
+### One conditional coupled tube image, 17 October 2026
+
+The exact initial event, reference gauge and actual source forcing are now
+certified. Evaluate a single predeclared continuum bootstrap box on the same
+cell and coupling interval. The fixed bounds are `J_r,J_L,abs(deltaT)<=1e-6`,
+`J_X<=1e-7`, cap `abs(E_plus)<=0.004`, `abs(E_minus)<=1e-8`,
+`abs(chi)<=1e-5`, pointwise exterior `abs(delta r_U)<=1e-5`,
+`abs(delta L_U)<=0.001`, `abs(X_U)<=1e-7`, and `abs(r_x)<=1.01`.
+The core edge is the original first positive cap knot. There is no search
+over boxes, source parameters, grids or time intervals.
+
+Use the existing mixed-norm equations, explicit finite differences of the
+wall maps and the cap radial constraints. Keep the sourced wall radius in
+the A0 upper bound and the complete `-2*beta_bar/R` curvature contribution.
+Check both characteristic margins, cap A, wall H, expansion, the longitudinal
+derivative bound and inward travel to the quiet core. The physical application
+has **20,000 charged values / 10 process-CPU seconds**, with a fixed charge
+of 8,192 for one 160-bit interval evaluation. Authenticate the three compact
+certificates and original collar metadata. Save all image components, margins,
+coefficient bounds and hashes, including an unclosed result. Stop before
+designing any replacement if an image or positivity check fails.
+
+Four independent potential, zero/finite-coupling wall and manufactured
+envelope controls have **40,000 values / 20 active CPU seconds**. No waveform,
+source integration, numerical root, trajectory or refinement is admitted.
+Grok reviews the inequalities and implementation. The three likely failures
+are omitting a wall coefficient, substituting an L1 norm for a pointwise jet,
+or reading strict bootstrap improvement as existence. Direct wall controls,
+separate suprema and an explicit conditional result address them. A local
+construction and derivative/continuation estimate remain required even if
+every component improves strictly.
+
+The first control invocation's output was unavailable after context transfer;
+the pytest cache recorded its nodes without a failure. One bounded repeat
+to recover an authoritative result passes all four controls with 26,192
+values and active CPU below timer resolution. Charging the unavailable
+invocation at its entire allowance gives a conservative cumulative upper
+limit of 66,192 values / 20 active CPU seconds. This does not repeat or
+admit a physical application.
+
+The derivative-continuation follow-up is analytic: differentiate the exterior
+prefixes, cap transport, radial constraints and wall traces within the same
+positive tube. A separate Grok reviewer checks the dependency order. Three
+symbolic controls have a shared **30,000-value / 20 active CPU-second**
+allowance (8,000 values each). They independently differentiate the canonical
+quotients/kernel, commute the cap PDE, and differentiate its radial metric
+constraint. No physical coefficient evaluation or trajectory is added.
+An unresolved derivative cycle or use of an unproved incoming constraint
+stops the proposed continuation argument before an existence claim.
+All three symbolic controls pass with 24,000 values / 0.328125 active CPU
+seconds. The transverse-jet system closes as a triangular linear ODE without
+substituting an incoming null constraint.
+
 ## Discrete cap mass balance, 16 October 2026
 
 **Outcome:** the [completed ledger](current-result.md#discrete-cap-mass-balance-16-october-2026)
