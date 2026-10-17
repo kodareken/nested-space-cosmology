@@ -2668,13 +2668,32 @@ is migrated by this launcher change. Normal installations use their activated
 interpreter. Root `scripts/lab.py` remains a launcher for the same root package.
 
 The Ryzen 9 6900HX has 8 physical cores and 16 logical processors. Measure
-useful throughput before increasing concurrency. The current endpoint solver
-has three independent processes, each measured near one busy core; its adaptive
+useful throughput before increasing concurrency. The v4 endpoint solver
+started three independent processes, each measured near one busy core; its adaptive
 time/radial chain is serial and does not currently call Numba. Installed Numba
 alone does not parallelize that chain. Compile independent kernels or batches
 only after profiling and same-state numerical comparison, retaining ordered
 reductions, tolerances and guards. Keep the total worker allocation appropriate
 to the host rather than assigning all eight cores to every simultaneous run.
+
+The optional compiled coefficient callback is now available through
+`coupled_fixed_stage(..., compiled_coefficients=True)`. The default and live
+v4 jobs retain the reference implementation. On the authenticated coarse v3
+saved stage, the reference took 2.125 CPU seconds and the warm compiled call
+0.59375 seconds (about 3.6 times faster). Both used 65 panels, 2647 function
+evaluations, 151 accepted radial steps and the unchanged gradient guard.
+Mass agreed exactly, lapse differed by `8.67e-19`, and the flux by `6.12e-12`.
+The strict coefficient-rate comparison (`atol=1e-10, rtol=1e-11`) failed:
+maximum differences were `1.70e-8` for cap chi and `5.24e-7` for canonical
+density. The accelerator therefore remains optional; no trajectory equivalence
+or live-run speedup is claimed. The batch API uses Numba `prange` for independent
+nodes, but the physical stage comparison uses the scalar compiled callback.
+
+Reproduce that performance check with
+`python scripts/run_python.py scripts/diagnose_nsc_atlas_endpoint_radial.py --receipt results/summaries/nsc-atlas-fixed-endpoint-level0-v3.json --compare-compiled-coefficients --output .build/p001-compiled-stage-comparison.json`.
+It evaluates one frozen state, takes no time steps, and retains the existing
+60 CPU-second / 40-million-value limit. Do not infer a new grid calculation
+or a change in the physical model from this benchmark.
 
 ## Scope
 

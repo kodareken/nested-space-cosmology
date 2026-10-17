@@ -81,3 +81,27 @@ def test_panel_polynomial_rule_must_be_shared():
     assert compare(data)['radial_accuracy']['background_panel_sides'] is True
     data[1]['radial_accuracy']['background_panel_sides']=False
     with pytest.raises(ValueError,match='confirmed radial accuracy'):compare(data)
+
+
+def test_known_final_serializer_failure_preserves_endpoint_and_marks_missing_ledger():
+    data=records();coarse=data[0]
+    coarse.update(status='stopped',source_commit='ae2675980de38f547efa6b4fb1afbd2d12eee62e',
+        failure=dict(phase='endpoint summary',
+            reason="dict() got multiple values for keyword argument 'state_corrected'"),
+        schedule=dict(accepted_step_budget=1024),integrated_defect={})
+    coarse['execution']['accepted_steps']=1024
+    coarse['samples'][-1].update(coarse['endpoint'])
+    del coarse['transport_comparison']
+    before=copy.deepcopy(data)
+    result=compare(data)
+    assert data==before
+    assert result['all_endpoints_completed'] is True
+    assert result['summary_coverage'][0]['original_receipt_status']=='stopped'
+    assert result['accumulated_transport_gaps']['mass_endpoint']['values']==[None,.5,.25]
+    assert result['accumulated_transport_gaps']['mass_endpoint']['strictly_decreasing'] is None
+    assert result['requested_mass_and_flux_contraction'] is True
+    coarse['execution']['accepted_steps']=1023
+    with pytest.raises(ValueError,match='complete'):compare(data)
+    coarse['execution']['accepted_steps']=1024
+    coarse['failure']['reason']='a physical constraint failed'
+    with pytest.raises(ValueError,match='complete'):compare(data)

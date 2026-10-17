@@ -16,6 +16,25 @@ endpoint evolutions continue unchanged.
 
 ## Full P001 endpoint evolution in progress, 17 October 2026
 
+The [coarse v4 evolution](../results/summaries/nsc-atlas-fixed-endpoint-level0-v4.json)
+has reached the original endpoint `x=0.4815042082576364` in all **1024**
+scheduled steps, using 11879.375 process-CPU seconds. Its Jordan wall radius
+is `0.5492322036563843 ell`, or **5492.322036563843 m** at the predeclared
+fiducial `ell=10000 m`. This is one grid value; the three-grid range is pending.
+Its all-stage mass-gap maxima are `0.0023283253412652548` (actual trace) and
+`0.0014913147832141275` (matched trace), and its wall-flux maximum is
+`2.240453033467581`. These are residuals, not declared acceptable errors.
+
+The evolution completed before a duplicate `state_corrected` keyword stopped
+the final auxiliary report assembly. The original receipt retains that
+failure, its complete endpoint, nine samples, residual maxima, history hash
+and trapezoidal defect integrals. The SSPRK3 accumulated-transport summary
+and final-state hash were not written. They cannot be recovered from nine
+samples and are left unavailable. The comparison recognizes this specific
+post-evolution failure without changing the saved receipt or relaxing any
+physical test. The runner's serialization is corrected, with a metadata-only
+repair available for the two continuing jobs. No evolution replay is needed.
+
 Opening-phase robustness work is paused. The current calculation targets
 the original P001 endpoint on three fixed cap/exterior meshes, with the
 same amplitude and preparation. The first

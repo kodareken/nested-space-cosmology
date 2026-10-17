@@ -19,6 +19,31 @@ GAPS={
 }
 
 
+def evolution_completion(record):
+    """Recognize a completed march whose known auxiliary serializer failed.
+
+    Preserve the original stopped receipt and its unavailable diagnostics.
+    No other failure, missing endpoint, or shortened evolution is admitted.
+    """
+    if record.get('status') == 'completed_numerical_endpoint':
+        return 'complete'
+    failure=record.get('failure',{})
+    execution=record.get('execution',{})
+    samples=record.get('samples',[])
+    endpoint=record.get('endpoint',{})
+    if (record.get('status') == 'stopped' and record.get('level') == 0 and
+        record.get('source_commit') == 'ae2675980de38f547efa6b4fb1afbd2d12eee62e' and
+        failure.get('phase') == 'endpoint summary' and
+        failure.get('reason') == "dict() got multiple values for keyword argument 'state_corrected'" and
+        execution.get('accepted_steps') == record.get('schedule',{}).get('accepted_step_budget') == 1024 and
+        execution.get('last_accepted_x') == ENDPOINT_SOURCE_X and
+        len(samples) == 9 and samples[-1].get('x') == ENDPOINT_SOURCE_X and endpoint and
+        all(samples[-1].get(key) == value for key,value in endpoint.items()) and
+        'integrated_defect' in record and 'transport_comparison' not in record):
+        return 'evolution_complete_auxiliary_summary_incomplete'
+    raise ValueError('all three evolutions must complete their endpoint')
+
+
 def compare(records):
     if len(records)!=3 or any(type(r.get('level')) is not int for r in records):
         raise ValueError('three numbered resolution receipts required')
@@ -26,8 +51,9 @@ def compare(records):
     if [r['level'] for r in records]!=[0,1,2]:
         raise ValueError('require levels 0, 1 and 2 exactly once')
     for r in records:
-        if r['schema']!='nsc-atlas-fixed-endpoint-v1' or r['status']!='completed_numerical_endpoint':
+        if r['schema']!='nsc-atlas-fixed-endpoint-v1':
             raise ValueError('all three evolutions must complete their endpoint')
+        evolution_completion(r)
         if (r['execution']['last_accepted_x']!=r['geometry']['x_right'] or
             not math.isclose(r['geometry']['x_right'],ENDPOINT_SOURCE_X,rel_tol=0,abs_tol=2e-15) or
             r['geometry']['x_left']!=.4 or r['geometry']['reference_radius_endpoint']!=.55):
@@ -60,11 +86,16 @@ def compare(records):
         raise ValueError('sample cuts differ between resolutions')
     maxima={name:refinement([r['maximum_absolute'][key] for r in records])
             for name,key in GAPS.items()}
-    accumulated={name:refinement([r['transport_comparison'][key] for r in records])
-        for name,key in [('mass_endpoint','mass_absolute_gap'),
+    accumulated={}
+    for name,key in [('mass_endpoint','mass_absolute_gap'),
                          ('wall_scalar_endpoint','scalar_absolute_gap'),
                          ('mass_running_maximum','max_abs_running_mass_gap'),
-                         ('wall_scalar_running_maximum','max_abs_running_scalar_gap')]}
+                         ('wall_scalar_running_maximum','max_abs_running_scalar_gap')]:
+        values=[r.get('transport_comparison',{}).get(key) for r in records]
+        accumulated[name]=(refinement(values) if all(v is not None for v in values) else
+            dict(values=values,strictly_decreasing=None,continuum_error_bound=False,
+                 unavailable_levels=[i for i,v in enumerate(values) if v is None],
+                 reason='coarse evolution completed but its auxiliary summary failed; no reconstruction from sparse samples'))
     radii=[]
     for r in records:
         endpoint=r['endpoint']
@@ -78,6 +109,8 @@ def compare(records):
     return dict(schema='nsc-atlas-fixed-endpoint-comparison-v1',
         status='completed_saved_receipt_comparison',
         physical_evolutions=0, all_endpoints_completed=True,
+        summary_coverage=[dict(level=r['level'],status=evolution_completion(r),
+            original_receipt_status=r['status']) for r in records],
         residual_maxima=maxima, accumulated_transport_gaps=accumulated,
         requested_mass_and_flux_contraction=passes,
         endpoint_radius_pair_differences=paired,

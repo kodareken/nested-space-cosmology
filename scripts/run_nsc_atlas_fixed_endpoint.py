@@ -380,6 +380,18 @@ class TransportComparison:
                          state_corrected=False)
 
 
+def transport_summary(transport):
+    """Serialize the diagnostic without duplicating fields in its final row."""
+    return dict(
+        quadrature='SSPRK3 weights 1/6, 1/6, 2/3 on left, right-predictor and midpoint stages; accepted endpoint has zero weight',
+        mass_definition='M_E=R_E**3/2+alpha*normalized_mass',
+        matched_rate='1.5*R^2*r_x+alpha*(moving_density+T_x*A^2*exp(lapse)/2*R^2*Pi*Phi)',
+        scalar='physical shared c compared with the integral of the hybrid wall c rate',
+        **transport.last,
+        max_abs_running_mass_gap=transport.max_abs_mass_gap,
+        max_abs_running_scalar_gap=transport.max_abs_scalar_gap)
+
+
 def assert_summary(value, path='report'):
     if isinstance(value, np.ndarray):
         raise ValueError('raw array in '+path)
@@ -782,14 +794,7 @@ def main():
             signed=trapezoid.signed, absolute=trapezoid.absolute,
             weak_balance_included=False,
             note='sampled defect integral, not an error enclosure')
-        report['transport_comparison'] = dict(
-            quadrature='SSPRK3 weights 1/6, 1/6, 2/3 on left, right-predictor and midpoint stages; accepted endpoint has zero weight',
-            mass_definition='M_E=R_E**3/2+alpha*normalized_mass',
-            matched_rate='1.5*R^2*r_x+alpha*(moving_density+T_x*A^2*exp(lapse)/2*R^2*Pi*Phi)',
-            scalar='physical shared c compared with the integral of the hybrid wall c rate',
-            state_corrected=False, **transport.last,
-            max_abs_running_mass_gap=transport.max_abs_mass_gap,
-            max_abs_running_scalar_gap=transport.max_abs_scalar_gap)
+        report['transport_comparison'] = transport_summary(transport)
         report['endpoint_state_sha256'] = digest_state(state)
         budget.check()
         report['status'] = 'completed_numerical_endpoint'
