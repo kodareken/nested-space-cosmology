@@ -148,6 +148,11 @@ It evaluates positive algebraic cap bounds without radial integration,
 source queries or field evolution. Its [mathematical scope](nsc-atlas-finite-amplitude.md#normalized-radial-cap-departure-and-vacuum-subtracted-residuals)
 distinguishes normalized N/D differences and actual-radius vacuum-subtracted
 residuals from the complete geometric Taylor remainder.
+The [first radial receipt](../results/summaries/nsc-atlas-cap-departure-bound-v1.json)
+uses producer `d5b7794f40884d5506c639622a3e71a5a4c13660`, completing
+7,680 values / 0.015625 CPU seconds. The independent positive-product
+audit uses 2,048 values / 0.09375 CPU seconds. Exact inequalities,
+rounding, alpha powers and provenance all pass.
 
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic

@@ -2,6 +2,29 @@
 
 Current presentation, 17 October 2026: [the living atlas manuscript](../paper/nested-space-cosmology.md) and [overview](../paper/figures/geometry-overview.png). Dated entries below preserve their original numerical domains and chronology. Former current-paper labels describe those historical editions; [the catalog](../paper/catalog.json) owns publication status.
 
+## Radial cap remainder bounds, 17 October 2026
+
+The [common-collar radial comparison](nsc-atlas-finite-amplitude.md#normalized-radial-cap-departure-and-vacuum-subtracted-residuals)
+now supplies uniform differences of normalized cap mass N and lapse D,
+including the changing radial measure and the finite-alpha attenuation.
+At alpha_max the direct second-order residual is at most 1.092e-21 for
+mass excess above `r_alpha^3/2`, and 5.796e-21 for the lapse. The
+[compact certificate](../results/summaries/nsc-atlas-cap-departure-bound-v1.json)
+retains the exact coefficients and alpha powers. These are dimensionless
+bounds on the original onset at common eta; they do not yet bound the
+full radius, clock or total-mass Taylor remainder.
+
+Frozen producer `d5b7794f40884d5506c639622a3e71a5a4c13660` completes
+one algebraic application with 7,680 charged values / 0.015625 CPU seconds.
+Ten controls, the independent positive-product audit and Grok reviews pass.
+The 10,888-byte record binds 26 producer files and seven inputs. No source
+or field query, radial solve, scan or raw history was generated.
+
+The remaining geometric error comparison needs the source's quadratic
+remainders and the nonlinear bulk/wall maps. Those are the next mathematical
+connections; the existing negative first radius and clock coefficients
+have not yet acquired a numerical finite-amplitude sign threshold.
+
 ## Uniform canonical scalar amplitude bounds, 17 October 2026
 
 The [mixed-equation and moving-collar comparison](nsc-atlas-finite-amplitude.md#amplitude-proportional-canonical-scalar-departure)

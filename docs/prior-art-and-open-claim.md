@@ -3339,8 +3339,20 @@ the exact constraint control and explicit output scope address these.
 
 **Implementation controls:** ten tests pass in one execution, 6,144 charged
 values / 0.625 active CPU seconds. The algebra and interpretation reviews
-accept the formulas, including the explicit normalized N/D ceilings. No
-original-data application has run; implementation review is in progress.
+accept the formulas, including the explicit normalized N/D ceilings. The
+implementation review accepts the rounding, retained attenuation and scope.
+
+**Original application:** producer
+`d5b7794f40884d5506c639622a3e71a5a4c13660` succeeds once with 7,680
+charged values / 0.015625 CPU seconds. The
+[10,888-byte receipt](../results/summaries/nsc-atlas-cap-departure-bound-v1.json)
+gives normalized N/D differences and direct alpha-squared residuals for
+cap lapse and mass/A after removing vacuum at the actual radius. It binds
+26 source files and seven inputs. The independent positive-product audit
+uses 2,048 values / 0.09375 CPU seconds and verifies exact inequalities,
+rounding, alpha powers, displays and all hashes. No source query, radial
+integration, field evolution, scan, retry or raw history occurred. The
+full geometric remainder is still separate from these radial residuals.
 
 ## Canonical scalar amplitude comparison, 17 October 2026
 

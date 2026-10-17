@@ -12151,8 +12151,35 @@ clock. Those remain in the full geometric remainder calculation.
 the original tube and scalar receipts. Ten independent controls pass in
 one execution, 6,144 charged values / 0.625 active CPU seconds. Grok's
 algebra and interpretation reviews accept the formulas with the explicit
-normalized-ceiling justification above. The implementation review and
-original-data application remain to be completed after source freeze.
+normalized-ceiling justification above. The implementation review accepts
+the positive rounding, radial products, attenuation and output scope.
+
+The single application at frozen producer
+`d5b7794f40884d5506c639622a3e71a5a4c13660` uses 7,680 charged values /
+0.015625 CPU seconds. Its uniform coefficients obey
+`CN<=6.473e-14` and `CD<=3.439e-13`; thus the normalized differences at
+alpha_max are at most `8.404e-18` and `4.464e-17`. The direct residuals are:
+
+| Common-collar residual | Upper bound at alpha_max |
+| --- | ---: |
+| `abs(m-r_alpha^3/2-alpha*N0)` | 1.092e-21 |
+| `abs(delta-alpha*D0)` | 5.796e-21 |
+| `abs(exp(delta)-1-alpha*D0)` | 5.840e-21 |
+| `abs(A-(1-r_alpha^2)+2alpha*N0/r0)` | 4.624e-21 |
+
+All values are dimensionless and cover the original onset and full admitted
+coupling interval with their corresponding alpha or alpha-squared factors.
+The [10,888-byte certificate](../results/summaries/nsc-atlas-cap-departure-bound-v1.json)
+retains 26 producer bindings, seven input hashes, the small comparison table
+and regeneration command. SHA256 is
+`61190f1d3029ccda920c0a6783d9e9d682408e43a3078a816672a182502e44d2`.
+An independent positive-product audit reconstructs the bound from value /
+difference pairs, rather than calling the production function. It checks
+all exact rational inequalities and rounding, the retained attenuation,
+alpha powers, displays and provenance in 2,048 charged values / 0.09375
+CPU seconds. No source/field query, radial integration, evolution, scan,
+retry or raw history occurs. The next inputs are explicit quadratic source
+remainders and the nonlinear geometric wall/bulk remainder comparison.
 
 ## Missing full-domain estimate
 
