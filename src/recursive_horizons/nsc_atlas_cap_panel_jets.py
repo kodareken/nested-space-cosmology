@@ -7,6 +7,15 @@ uses that panel's polynomial limit, including its Runge--Kutta endpoints.
 import numpy as np
 
 
+def _quiet_indices(profile,indices):
+    onset=profile.onset
+    if onset is not None and onset['index']>=1:
+        # The radial partition deliberately merges the certified zero prefix.
+        # All those finite pieces and the quiet extension have the same limit.
+        return np.where(indices<onset['index'],-1,indices)
+    return indices
+
+
 def history_piece_indices(profile, labels, *, budget):
     labels=np.asarray(labels,dtype=float)
     if labels.shape!=(2,) or not np.all(np.isfinite(labels)):
@@ -14,7 +23,7 @@ def history_piece_indices(profile, labels, *, budget):
     profile._domain(labels)
     budget.check(2)
     indices=np.searchsorted(profile._labels,labels,side='right')-1
-    return np.minimum(indices,len(profile._labels)-2).astype(int)
+    return _quiet_indices(profile,np.minimum(indices,len(profile._labels)-2).astype(int))
 
 
 def panel_profile_jet(profile, labels, indices, *, budget):
@@ -27,13 +36,17 @@ def panel_profile_jet(profile, labels, indices, *, budget):
     knots=profile._labels
     if np.any(selected < -1) or np.any(selected > len(knots)-2):
         raise ValueError('history-piece index outside the finite profile')
+    selected=_quiet_indices(profile,selected)
     result=profile.jet(labels,budget=budget)
     objects=(profile._spline,*profile._derivatives[:3])
     for j,(expected,found) in enumerate(zip(selected,actual)):
         expected,found=int(expected),int(found)
         if expected==found:
             continue
-        if abs(expected-found)!=1:
+        onset=profile.onset
+        quiet_onset=(onset is not None and onset['index']>=1 and
+                     {expected,found}=={-1,onset['index']})
+        if not quiet_onset and abs(expected-found)!=1:
             raise ValueError('ambiguous history-piece ownership at radial endpoint')
         knot=knots[max(expected,found)]
         tolerance=64*np.spacing(max(1.,abs(float(labels[j])),abs(float(knot))))

@@ -140,8 +140,12 @@ def fixed_derived_residual(residual,row,*,basis,budget,background=None):
         raise ValueError('derived residual requires the stage background')
     clock_chi=0.
     if background is not None:
-        clock_chi=background.reduced_jets(cap['background']['time'],cap['wall_coordinate'],
-                                         budget=budget)['k']*dt
+        if 'wall_time_chi' in cap['background']:
+            # Reuse this stage's actual one-sided wall trace at a history knot.
+            clock_chi=cap['background']['wall_time_chi']*dt
+        else:
+            clock_chi=background.reduced_jets(cap['background']['time'],cap['wall_coordinate'],
+                                             budget=budget)['k']*dt
     field_chi=float(local['value']@dc[local['indices']])
     radial_chi=cap['wall']['q_trace']*dr
     f=cap['wall']['f'];q=np.sqrt(cap['alpha']/6)*f

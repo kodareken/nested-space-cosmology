@@ -257,7 +257,7 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
             if mass==0 and nonzero_total_seen: raise ValueError('positive total background mass is unresolved')
             gc,gd=reference['gradient'][:count],reference['gradient'][count:2*count]
             explicit_time=float(reference['gradient'][-1]) if background is not None else 0.
-            wall=total_fields(basis.cells-1,cut)
+            wall=total_fields(basis.cells-1,cut,None if panel_indices is None else panel_indices[-1])
             R,A0=wall['r'],wall['A0']
             _,_,A,_,rho,_=coefficients(len(owners)-1,breaks[-1],mass)
             mu=float(np.exp(lapse));B=A*mu
@@ -333,6 +333,9 @@ def fixed_cap_reference(basis,chi,canonical_density,Z,*,alpha,T_x=None,radius_ra
                 result['adjoint_gradient']['T']=float(reference['adjoint_gradient'][-1])
                 result['background']=dict(time=time,radial_intervals=len(owners),
                     projected_time_chi=a_h,projected_time_density=b_h,wall_time_projection_gap=wall_gap)
+                if panel_indices is not None:
+                    result['background']['wall_time_chi']=float(wall['background']['k'])
+                    result['background']['wall_polynomial_indices']=panel_indices[-1].copy()
                 result['explicit_time_remainder']=remainder
                 result['remainder_identity_defect']=float(result['weak_balance_defect']-tx*remainder)
                 result['domain']='one retained-history plus fixed-departure constrained mass and weak RHS; no time evolution'

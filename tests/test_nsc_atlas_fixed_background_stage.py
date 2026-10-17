@@ -79,6 +79,7 @@ def test_coupled_panel_polynomials_preserve_manufactured_history(budget,monkeypa
     assert seen==[]
     sided=coupled_fixed_stage(state,background=bg,background_panel_sides=True,**kw)
     assert len(seen)>0
+    assert 'wall_time_chi' in sided['connection']['cap']['background']
     for name in ('mass','lapse'):
         assert sided['connection']['cap'][name]==pytest.approx(
             ordinary['connection']['cap'][name],rel=0,abs=2e-11)
@@ -92,6 +93,16 @@ def test_coupled_panel_polynomials_preserve_manufactured_history(budget,monkeypa
         gap=sided['rates']['cap'][name]-ordinary['rates']['cap'][name]
         assert np.sqrt(gram.squared_norm(gap,budget=budget))<2e-9
         assert abs(gram.wall['value']@gap[gram.wall['indices']])<2e-9
+    residual={group:{name:np.zeros_like(value) for name,value in entries.items()}
+              for group,entries in state.items()}
+    residual['wall']['T']=1.
+    def forbidden(*args,**kwargs):
+        raise AssertionError('clock residual must reuse the selected wall trace')
+    monkeypatch.setattr(bg,'reduced_jets',forbidden)
+    derived=fixed_derived_residual(residual,sided,basis=kw['basis'],budget=budget,background=bg)
+    cap=sided['connection']['cap']
+    expected=np.cosh(np.sqrt(cap['alpha']/6)*cap['wall']['f'])*cap['background']['wall_time_chi']
+    assert derived['clock_wall_c']==pytest.approx(expected,rel=0,abs=1e-15)
 
 
 def test_total_polynomial_and_independent_common_mass_direction(budget):

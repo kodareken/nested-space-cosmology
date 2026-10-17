@@ -100,6 +100,19 @@ state**. These checks use `background_panel_sides=True` through the actual
 coupled interface; the earlier coordinate-shift diagnostic remains separate.
 Both must pass before the predeclared full v4 successors start.
 
+The first public-interface confirmations stop before the active radial
+panels: the selector treated the many intentionally merged, identical quiet
+pieces as different owners. Retain both stopped confirmation receipts.
+The corrected selector treats the certified zero prefix as one owner,
+including its one-sided connection to the onset polynomial. Independent
+Grok review identifies the same omission and confirms the endpoint mechanism.
+It also identifies the wall trace and derived clock residual as consumers
+of the same selected polynomial; both now reuse that wall-side value.
+The centre is still in the certified quiet domain on this no-return interval;
+no post-arrival central knot claim is added. After the quiet-prefix and
+coupled-clock controls pass, admit one corrected 32/64-point confirmation
+per saved state under the same 60-second / 40-million-value limits.
+
 Douglas has prioritized the full finite-amplitude evolution and a physically
 scaled P001 observable. Opening-phase robustness work is paused. Reuse the
 existing constrained fixed-cap mass/gradient calculation, simultaneous

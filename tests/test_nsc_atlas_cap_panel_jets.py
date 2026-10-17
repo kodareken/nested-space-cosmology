@@ -56,3 +56,17 @@ def test_quiet_left_limit_and_original_finite_domain():
             panel_profile_jet(p,[0.,1.01],[-1,0],budget=budget)
         with pytest.raises(ValueError,match='quiet extension'):
             panel_profile_jet(profile(),[-1.,.3],[-1,1],budget=budget)
+
+
+def test_certified_zero_prefix_can_span_omitted_quiet_knots():
+    with CONTROLS.active() as budget:
+        p=CharacteristicProfile([0.,1.,2.,3.],[0.,0.,0.,1.],[0.,0.,0.,4.],
+            [0.,0.,0.,12.],onset=dict(index=2,quartic_coefficient=1.))
+        indices=history_piece_indices(p,[-.5,.5],budget=budget)
+        np.testing.assert_array_equal(indices,[-1,-1])
+        zero=panel_profile_jet(p,[.25,1.75],indices,budget=budget)
+        assert all(np.all(row==0.) for row in zero.values())
+        endpoint=panel_profile_jet(p,[2.,2.3],[-1,2],budget=budget)
+        assert all(row[0]==0. for row in endpoint.values())
+        with pytest.raises(ValueError,match='resolved knot'):
+            panel_profile_jet(p,[2.1,2.3],[-1,2],budget=budget)
