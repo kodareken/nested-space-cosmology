@@ -76,6 +76,19 @@ mass/flux gaps, and source or time error masking spatial convergence.
 Each has a directly recorded diagnostic. A failed full-endpoint run is
 retained as such and does not extend the shorter onset theorem.
 
+**First execution:** source commit `1791242` starts the 2/32 evolution.
+The 4/64 and 8/128 receipts stop before accepting a step (5.15625 and
+5.1875 process-CPU seconds). Their first radial partition contains the
+old quiet-history domain endpoint within an unresolved floating-point
+distance of the wall. The extension and both adjoining history pieces
+are the same certified zero polynomial, so this is a redundant formula
+split. Omitting that split preserves the integrand, constrained equations,
+source and domain guards. All 24 focused partition/background/runner/frame
+controls pass. Admit one successor execution at each stopped resolution,
+with the same budgets and inputs, preserving both first receipts. The
+coarse run can continue: it uses the same equations and tolerances with
+an extra smooth quadrature split, whose source version remains recorded.
+
 ## Independent preparation perturbations on the onset cell, 17 October 2026
 
 **Paused before the control run:** Douglas's next priority is three fixed

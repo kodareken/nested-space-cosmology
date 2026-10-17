@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
+  "current_receipt_commit_parent": "17912421fcd3e89101b23fc248c2f91de6253489",
   "files": [
     {
       "bytes": 3120,
@@ -11426,12 +11426,12 @@
       "sha256": "56c00d6541b6f324fd7ee324ad470106c1221d55f18da3a33106b3798337df32"
     },
     {
-      "bytes": 458512,
-      "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet.",
-      "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
+      "bytes": 459375,
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
       "path": "docs/prior-art-and-open-claim.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "b3360e5527bf849ffef2ac4d965172b252be1d297607f9b99b4e9b1c2a053cb5"
+      "sha256": "cccae49837a28b928bdbed55b85563c50b9c9e87e0679a4e60896430fc7fc65e"
     },
     {
       "bytes": 6705,
@@ -29679,6 +29679,22 @@
       "sha256": "192caf213cd4b67961f815203687a87748a9668c4a97d2d77f9ee2f5d78a8dab"
     },
     {
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level1-v1.json",
+      "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
+      "bytes": 14679,
+      "sha256": "e8935932d306716261d1af25871db757cb52df30d71c7adf98dfb99f568ff1bb",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split."
+    },
+    {
+      "path": "results/summaries/nsc-atlas-fixed-endpoint-level2-v1.json",
+      "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
+      "bytes": 14872,
+      "sha256": "baf09f4a3cef350f60515de2fcc8efcaf269e706aa124a9990ce9f4e4c21aef0",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split."
+    },
+    {
       "bytes": 28312,
       "change": "Record the completed enriched cap-wall interval, measured residual channels and compact final state.",
       "changed_from_commit": "42c774118a0e2f8b0724d6ba6311e5c499693bbb",
@@ -32848,12 +32864,12 @@
       "sha256": "b46a1549b69dcc64b5018e43c005441ade48c4c0552e3ad5235b68e4f6ed8300"
     },
     {
-      "bytes": 18917,
-      "change": "Coalesce only exact zero-prefix radial integration cuts; preserve all certificate inputs and cuts.",
-      "changed_from_commit": "534c714b6a677763c225937e8eb1363c8740902c",
+      "bytes": 19438,
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split.",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
       "path": "src/recursive_horizons/nsc_atlas_cap_fixed_reference.py",
       "retention_reason": "Fixed local mass-gradient adapter, stable physical norm and independent controls",
-      "sha256": "5596db3d0bd312fee6b7d52827793b08c1384fb665d35773a55c9024c9d2b252"
+      "sha256": "839eabd1abf2dc4a46373f510d43966daa78a4bb6b05470504e8cb8a0f1a788b"
     },
     {
       "bytes": 7466,
@@ -36797,6 +36813,14 @@
       "sha256": "53c9c9f141766d60096b567f4637f14249f6b5a756d632bee7b4b8a1a46e9dd5",
       "changed_from_commit": "231a68bd55d6e6eb7391d7c1166cf88bda777c26",
       "change": "Prepare three full-endpoint runs and independent transport/observable diagnostics; no endpoint result claimed yet."
+    },
+    {
+      "path": "tests/test_nsc_atlas_fixed_quiet_partition.py",
+      "retention_reason": "P001 endpoint execution or independent quiet-partition control.",
+      "bytes": 1427,
+      "sha256": "b1b725a55cbae4653e1a5693f0128d4734f307498074df709d2f1d4ada1cd43f",
+      "changed_from_commit": "17912421fcd3e89101b23fc248c2f91de6253489",
+      "change": "Preserve stopped endpoint runs and remove a redundant certified-zero quadrature split."
     },
     {
       "path": "tests/test_nsc_atlas_formation_diagnostic.py",

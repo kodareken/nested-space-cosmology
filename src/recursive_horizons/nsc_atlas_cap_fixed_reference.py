@@ -80,11 +80,18 @@ def _background_partition(basis,Z,T,background):
 
     The onset constructor proves all preceding pieces identically zero.
     Their interior knots need not split numerical integration. Preserve the
-    domain endpoint and onset; the metric certificate retains every cut.
+    onset; a certified zero extension also removes the redundant quiet
+    domain endpoint. The metric certificate retains every cut.
     """
     labels=background.inputs['labels'];onset=background.onset
-    if onset is not None and onset['index']>1:
-        labels=np.r_[labels[:1],labels[onset['index']:]]
+    if onset is not None and onset['index']>=1:
+        # The certified quiet extension and every pre-onset piece are the
+        # same zero polynomial. Their domain endpoint is not a formula
+        # break. Keeping it can create a one-ulp panel at the initial wall
+        # that collapses when represented as cell_index + local_coordinate.
+        # Actual history-domain checks remain in the field and metric owners.
+        labels=(labels[onset['index']:] if background.profile.quiet_extension
+                else np.r_[labels[:1],labels[onset['index']:]])
     knots=tuple(Q(float(v)) for v in labels);time=Q(T)
     events={Q(SMALL_Z),*(v-time for v in knots),*(time-v for v in knots)}
     breaks=[0.];owners=[]
