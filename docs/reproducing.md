@@ -208,6 +208,22 @@ passes. Both fixed-label endpoint signs hold throughout the admitted
 positive-amplitude range; all nine uniform remainder coefficients are
 retained with the exact inputs and source bindings.
 
+The material-radius conversion keeps the same original inputs and evaluates
+one positive half-Hessian bound for the exact canonical-to-Jordan frame map:
+
+```powershell
+python scripts/run_python.py -m pytest tests/test_nsc_atlas_jordan_radius_bound.py -q -s
+python scripts/run_python.py scripts/check_nsc_atlas_jordan_radius_bound.py --output <new-output-path>
+```
+
+The six manufactured controls use 15,872 values / 0.3125 active CPU seconds
+across the initial five-test execution and the added radius-floor guard.
+The admitted original application has a 12,288-value / 10-CPU-second ceiling;
+its output path must be new and its producer committed. The
+[frame owner](nsc-atlas-finite-amplitude.md#jordan-material-radius-and-the-retained-clock-convention)
+keeps the canonical scalar, invariant Jordan trace, source-label event shift
+and clock interpretation explicit. No source or field integration is involved.
+
 Saved evidence bytes, input identities, array shapes, discrete counts and
 symbolic identities retain exact checks. Recomputed floating-point arithmetic
 uses the numerical allowance of its validator. The clock boundary checker

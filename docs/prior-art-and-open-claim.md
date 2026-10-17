@@ -3301,6 +3301,55 @@ of the existing second-amplitude theorem will identify the smallest
 unevaluated bound needed for a numerical remainder constant. It admits
 no new physical, symbolic or numerical execution.
 
+### Jordan material-radius comparison, 17 October 2026
+
+The finite-onset Einstein-radius and anchored-clock signs are now certified.
+The candidate action and constant material-wall tension are specified in the
+Jordan frame. Connect the existing result to that areal radius using the
+exact canonical map `R_J=R_E*cosh(sqrt(alpha/6)*X/R_E)`. Here X is the
+normalized canonical scalar; the invariant Jordan trace c is different at
+finite alpha. Keep the same source labels, centre clock, source/action,
+original cell and amplitude interval.
+
+Use the existing first-difference coefficients of R_E and X and the positive
+radius floor to bound the frame map's half second derivative on its straight
+comparison segment. Add this coefficient to the certified Einstein-radius
+quadratic remainder. At alpha zero the state partials are `dR_J/dR_E=1`
+and `dR_J/dX=0`, so no second scalar response is needed. Obtain the first
+fixed-label Jordan coefficient as `rho_proper_time+2*a*v*d*eta` with all
+saved signed interval factors retained. The anchored T coordinate uses
+the existing Einstein-polar slicing and is physical central proper time
+on the quiet core; it is not a newly diagonalized Jordan radial coordinate
+system, wall proper time or central arrival.
+
+Admit one 160-bit algebraic application after producer freeze: at most
+12,288 charged values / 10 process-CPU seconds, no field/source query,
+integration, grid, scan or retry. Manufactured controls share 16,384 values /
+20 active CPU seconds. Check the exact canonical/invariant identity,
+independent symbolic first/second derivatives, signed direction boxes,
+zero-source limit, finite-alpha Hessian domination and positive/domain guards.
+A separate 2,048-value / 10-CPU-second audit authenticates the fixed inputs,
+frame coefficient, powers, strict signs and displays. Save compact bounds
+and hashes only. Stop on loss of a positive radius or conformal floor,
+incompatible input references, failed controls, or budget exhaustion.
+
+The three likely failure modes are confusing canonical f with invariant
+c/R, dropping the signed source-label event shift, and identifying the
+wall-assigned T coordinate with a directly received central signal. Exact
+frame identities, signed interval arithmetic and explicit observer scope
+address these. A nonnegative Jordan correction from an independently
+controlled solution of the same model at a certified amplitude would
+contradict a strict-sign result if one is obtained. Source selection and
+comparison to a distinct physical geometry remain separate tasks.
+
+**Initial controls:** six tests pass across two targeted executions, using
+15,872 values / 0.3125 active CPU seconds cumulatively. The added radius-floor
+guard rejects zero before evaluating the frame map. The independent symbolic canonical map has positive quartic
+coefficient `X^4/(864 R^3)` in its half second derivative at alpha zero;
+the invariant-field square-root map would give a different sign and is not
+substituted. Grok's mathematical review accepts the full-segment bound
+and retained event shift. Original evaluation awaits source review/freeze.
+
 ### Full onset geometric remainder comparison, 17 October 2026
 
 The source, scalar and normalized cap certificates now provide all finite

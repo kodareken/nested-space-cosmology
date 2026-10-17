@@ -12632,6 +12632,91 @@ controls and both Grok implementation reviews pass. The stopped v1 receipt
 and its diagnosis remain available. No source query, integration, field
 evolution, time step, grid scan or raw history is generated.
 
+### Jordan material radius and the retained clock convention
+
+The scalar variable in the completed remainder comparison is canonical:
+`f=X/R_E`. The invariant Jordan trace is
+`c=R_E*f*sinhc(sqrt(alpha/6)*f)`. Consequently the exact frame conversion is
+
+\[
+ R_J^2=R_E^2+\alpha c^2/6,\qquad
+ R_J=R_E\cosh\!\left(\sqrt{\alpha/6}\,X/R_E\right),\qquad
+ \mathcal F=\operatorname{sech}^2\!\left(\sqrt{\alpha/6}\,X/R_E\right)>0.
+\]
+
+Replacing canonical f by c/R_E inside the hyperbolic expression would
+change the nonlinear theory. In particular, `sqrt(1+alpha*f^2/6)` is not
+the canonical frame factor. At alpha zero, the partial derivatives of
+`R_J(R_E,X,alpha)` with respect to R_E and X are one and zero; its explicit
+alpha derivative is `X0^2/(12R0)`. The fixed-label first coefficient is
+
+\[
+ R_{J,1}|_\xi=\rho+2avd\eta,\qquad d=v-\beta_+.
+\]
+
+All factors use the existing first-response certificate. The eta interval
+contains both signs and is retained in the interval product. This adds the
+source-label event shift to the Jordan proper-wall-time coefficient rho.
+
+For the same straight segment used above, let rmin,rmax bound R_E, let
+Xmax bound |X|, and let C_R,C_X bound the respective first differences
+divided by alpha. Define
+
+\[
+ f_*={X_{\max}\over r_{\min}},\quad
+ D_1={C_X\over r_{\min}}+{X_{\max}C_R\over r_{\min}^2},\quad
+ D_2={2X_{\max}C_R^2\over r_{\min}^3}
+                         +{2C_XC_R\over r_{\min}^2}.
+\]
+
+These bound f,f',f'' on the segment even though R_E''=X''=0. For
+`q=alpha*f^2/6`, positive bounds are
+
+\[
+ Q_1=f_*^2/6+\alpha_{\max}f_*D_1/3,\qquad
+ Q_2=2f_*D_1/3+\alpha_{\max}(D_1^2+f_*D_2)/3.
+\]
+
+Put `Cmax=cosh(sqrt(alpha_max/6)*fstar)`. The positive derivative hulls
+for `C(q)=cosh(sqrt(q))` give the uniform half-Hessian bound
+
+\[
+ H_J={C_R C_{\max}Q_1\over2}
+       +{r_{\max}C_{\max}Q_1^2\over24}
+       +{r_{\max}C_{\max}Q_2\over4}.
+\]
+
+Taylor expansion of this algebraic map about the alpha-zero state and
+subtraction of the first continuum response therefore yield
+
+\[
+ |R_J(\alpha)-R_0-\alpha R_{J,1}|\le
+       \alpha^2(C_{E,2}+H_J).
+\]
+
+Only the alpha-zero state derivatives enter the remainder's linear part;
+there is no need to bound a second scalar response. The conformal floor
+is `1/Cmax^2`. The bound uses the whole finite-alpha segment, rather than
+an alpha-zero Hessian or an interval width divided by alpha.
+
+The T coordinate is kept on the same Einstein-polar slicing. Its quiet-core
+anchor equals physical Jordan central proper time since the centre field
+is zero here. Assigning T to a wall event does not make it wall proper time
+or a received central signal. No new diagonal Jordan radial slicing is
+introduced. Thus the existing anchored-clock coefficient and remainder
+stay valid with this explicit convention. The source label identifies a
+characteristic from the prescribed initial null data; a physical emitter
+and a remote-clock measurement protocol are still separate inputs.
+
+`nsc_atlas_jordan_radius_bound.py` implements the positive frame bound and
+signed first-coefficient conversion. Six independent controls pass across two targeted executions, totaling
+15,872 charged values / 0.3125 active CPU seconds. They distinguish the
+canonical and invariant variables, check the symbolic alpha-zero Hessian,
+compare a finite-alpha signed-direction box with the interval-jet map,
+recover the quiet-source limit, and check the signed event shift and rejection of a lost radius floor. Grok's
+mathematical review accepts the full-segment formula. Implementation review
+and the original numerical application precede any Jordan sign claim.
+
 ## Missing full-domain estimate
 
 The finite-cell argument above establishes the sourced onset solution,
