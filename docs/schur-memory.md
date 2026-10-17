@@ -622,8 +622,23 @@ Thus the four tangential components have vacuum form and the normal component
 contains the room curvature action. The same $\alpha_{\rm GB}=1015/144$ lies
 at the five-dimensional EGB critical point: with
 $\Lambda_0=-108/1015$, $\alpha_{\rm GB}\Lambda_0=-3/4$ and the vacuum
-discriminant vanishes. Kinetic and characteristic conclusions must therefore
-use the actual two-sheet background. Bulk-source microphysics and full
+discriminant vanishes. The archived
+[kinetic and interface records](https://doi.org/10.5281/zenodo.23090015),
+authenticated by the [result manifest](../results/manifest.json), already
+test this actual background. `NSC-1-S-ONE-GAUSS-BONNET-KINETIC-RANK`
+reports numerical time-principal rank 5 out of 10 on $y=0$ at six radial
+samples, against rank 10 for its GR controls and the tested $y=1$ points.
+This is a sampled numerical rank result, not a complete characteristic theorem.
+`NSC-1-S-ONE-INDUCED-INTERFACE-RANK` restores time-principal rank 10 by adding
+the local induced Einstein block; it does not establish kinetic signs or
+fix the relative bulk/interface normalization. The subsequent
+`NSC-1-S-ONE-INTERFACE-CHARACTERISTIC-SCAN` finds no tested positive
+normalization with real roots in all sampled directions on its 401-point
+normalization grid. That scan does not exclude every positive normalization.
+The coupled off-diagonal field and full curved spectral response remain
+untested there. Reuse these records before designing any new kinetic
+calculation. A vacuum-form background coefficient alone does not establish
+a physical four-dimensional Lambda. Bulk-source microphysics and full
 stability remain open.
 
 The expanding-child Ricci sign selects positive $\Lambda_{\rm effective}$

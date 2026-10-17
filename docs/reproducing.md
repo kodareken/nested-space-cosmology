@@ -19,6 +19,13 @@ It records three quadrature methods at that same domain, their differences,
 and the conditional parent-volume test. Its geometric density and pressure
 fail the vacuum relation; the trace coefficient is not an observed Lambda.
 
+The one-stage compiled-coefficient diagnostic also reports reconstructed
+cap-rate Galerkin norms in the model's `dz` measure and physical wall traces.
+Those norms are invariant under a consistent basis rescaling; they are not
+proper-volume energy norms or a trajectory error bound. The original
+coefficient-rate comparison remains visible with its original tolerance.
+The diagnostic does not change the backend used by the running endpoints.
+
 There is one package, `nested-space-cosmology`, importing `recursive_horizons`
 from root `src`. Use the pinned versions in [pyproject.toml](../pyproject.toml).
 Scientific conclusions retain the domains in their owning notes.

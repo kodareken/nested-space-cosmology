@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import time
 
@@ -51,6 +52,53 @@ def panel_step_options(span, options, fraction):
         if 'first_step' in options:
             options['first_step']=min(options['first_step'],options['max_step'])
     return options
+
+
+_WALL_TRACES=('f','p_trace','h_trace','q_trace','velocity','A','B')
+
+
+def _safe_ratio(difference, reference):
+    if reference==0.:
+        return None
+    return difference/abs(reference)
+
+
+def physical_field_comparison(basis,reference,other,budget):
+    """Galerkin L2 of one frozen stage's cap rates, plus wall-trace differences.
+
+    ``squared_norm`` integrates the reconstructed field against the model's
+    physical-z coordinate measure dz, not proper volume or energy. Diagonal Gram scaling
+    stays inside that integral, so a coefficient infinity norm is not reused
+    as a physical difference. This reports one stage. It does not decide
+    equivalence and it does not replace the coordinate-rate gate.
+    """
+    left,right=reference['connection']['cap'],other['connection']['cap']
+    gram=basis.gram(left['wall_coordinate'],budget=budget)
+    def galerkin(coefficients):
+        return math.sqrt(gram.squared_norm(np.asarray(coefficients,dtype=float),budget=budget))
+    fields={}
+    for key in ('chi','canonical_density'):
+        original=np.asarray(reference['rates']['cap'][key],dtype=float)
+        delta=original-np.asarray(other['rates']['cap'][key],dtype=float)
+        reference_norm=galerkin(original)
+        difference=galerkin(delta)
+        fields[key]=dict(reference_galerkin_L2=reference_norm,difference_galerkin_L2=difference,
+                         difference_over_reference=_safe_ratio(difference,reference_norm),
+                         coordinate_infinity=float(np.max(np.abs(delta))))
+    traces={}
+    for key in _WALL_TRACES:
+        value=float(left['wall'][key]);delta=abs(value-float(right['wall'][key]))
+        traces[key]=dict(reference=value,absolute_difference=delta,
+                         difference_over_reference=_safe_ratio(delta,value))
+    flux=None
+    if 'residual' in reference['connection'] and 'residual' in other['connection']:
+        flux=abs(float(reference['connection']['residual']['conformal_wall_flux'])
+                 -float(other['connection']['residual']['conformal_wall_flux']))
+    return dict(gram_condition=float(gram.condition),
+                wall_coordinate_absolute_difference=abs(float(left['wall_coordinate'])
+                                                        -float(right['wall_coordinate'])),
+                cap_rate_fields=fields,wall_traces=traces,conformal_wall_flux_absolute_difference=flux,
+                scope='one frozen stage; Galerkin L2 of reconstructed cap rates on the reference wall Gram; not trajectory equivalence and not a coordinate-rate gate')
 
 
 def read_seed(receipt,root=endpoint.ROOT):
@@ -227,12 +275,18 @@ def main(argv=None):
                 scalars={key:abs(a['connection']['cap'][key]-b['connection']['cap'][key])
                          for key in ('mass','lapse')}
                 passed=passed and all(value<=1e-11 for value in scalars.values())
-                comparison.append(dict(cases=[0,j],passed=bool(passed),maximum_rate_differences=rates,
-                                       scalar_differences=scalars))
+                item=dict(cases=[0,j],passed=bool(passed),maximum_rate_differences=rates,
+                          scalar_differences=scalars,
+                          coordinate_gate='strict coefficient infinity norm and mass/lapse; unchanged')
+                try:
+                    item['physical_field_comparison']=physical_field_comparison(basis,a,b,budget)
+                except (ValueError,RuntimeError,FloatingPointError,OverflowError) as error:
+                    item['physical_field_comparison']=dict(status='unavailable',reason=str(error))
+                comparison.append(item)
             report['compiled_equivalence']=dict(rate_atol=1e-10,rate_rtol=1e-11,
                 mass_lapse_atol=1e-11,comparisons=comparison,
                 passed=all(item['passed'] for item in comparison),
-                scope='one frozen stage; no trajectory equivalence or speedup inferred')
+                scope='one frozen stage; coordinate-rate failure stays visible; Galerkin fields are not a trajectory equivalence or a replacement gate')
         report['status']='completed_one_stage_comparison'
     except (ValueError,RuntimeError,FloatingPointError,OverflowError) as error:
         report.update(status='stopped',reason=str(error))

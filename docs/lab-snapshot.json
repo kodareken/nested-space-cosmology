@@ -3,7 +3,7 @@
   "cleanup_date": "2026-10-13",
   "cleanup_parent_commit": "01686bc877534f4144b922fa4d9d5e49b7b24b6c",
   "cleanup_step": "manifests and citations",
-  "current_receipt_commit_parent": "9b7c120f5a1a7ad5e6037264504d4a78f8f3a7f8",
+  "current_receipt_commit_parent": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
   "files": [
     {
       "bytes": 3120,
@@ -11440,12 +11440,12 @@
       "sha256": "162e118152d9c6620c0a98e36132ce79333f831ee82993873f7c217bc5459aef"
     },
     {
-      "bytes": 153568,
+      "bytes": 154011,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "e1c2027356fee463632f7f7dba23256cd782b7ce",
+      "changed_from_commit": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
       "path": "docs/reproducing.md",
       "retention_reason": "Conditioned regular cap basis and its independent verification controls",
-      "sha256": "ddf76b436170f410c1324405b8e6151f282bee56e759c56f09dfbf4ed59a1b8f"
+      "sha256": "8d6cbfe485ccc9d0abc71d47f5b5b053d1ceb15b90d3f72fa77f95c358fbc4ea"
     },
     {
       "bytes": 18356,
@@ -11459,12 +11459,12 @@
       "sha256": "44f7364cfbe098e08d6e8fd1fcb755c839fd3413994a8cba93b1b249b2dc0bed"
     },
     {
-      "bytes": 34136,
+      "bytes": 35187,
       "change": "Update the active atlas calculations, manuscript and their checked evidence.",
-      "changed_from_commit": "9b7c120f5a1a7ad5e6037264504d4a78f8f3a7f8",
+      "changed_from_commit": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
       "path": "docs/schur-memory.md",
       "retention_reason": "P001 endpoint continuation, focused numerical controls or compact evidence.",
-      "sha256": "8cfa491c35d48b23dd38977864be66e61775305668cf687d895e1a6ae17488df"
+      "sha256": "fcd1d6a4d9154041e6bedf2232f37b983465fc8b07c61b43aaba8a4dbedb28c1"
     },
     {
       "bytes": 537091,
@@ -32729,12 +32729,12 @@
       "sha256": "3199e75b13cbb5e37afa1e55c88b7fda9ec06ad6e3c4ee20f406950d46a25648"
     },
     {
-      "bytes": 14252,
-      "change": "Update P001 endpoint calculations and independently checked compact evidence.",
-      "changed_from_commit": "0e4e32f236261681abace2a28e0ec610643c1099",
+      "bytes": 17320,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
       "path": "scripts/diagnose_nsc_atlas_endpoint_radial.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "f2233eb4ad25df8b80a4889312cae3c12447b887e3aa4986166218f3d1af5704"
+      "sha256": "59934676a1174543f3e811aa1d7d2ab198f9ca726e7615659c8f5332dee9275d"
     },
     {
       "bytes": 4707,
@@ -37150,12 +37150,12 @@
       "sha256": "7bb566a35b8e8aad4f5f0e18151d433d8b1e5b75c04f954accc7af119a91882d"
     },
     {
-      "bytes": 2545,
-      "change": "Check one-sided radial endpoint effects and retain Grok register tolerance fixes.",
-      "changed_from_commit": "253f675672747c43690335a4c8c54ca25a1e6f04",
+      "bytes": 6823,
+      "change": "Update the active atlas calculations, manuscript and their checked evidence.",
+      "changed_from_commit": "56d26ca658b0900bc61ccd303b97d9c3285eb7e0",
       "path": "tests/test_nsc_atlas_endpoint_radial_diagnostic.py",
       "retention_reason": "Full P001 evolution, retained failure evidence and bounded radial diagnosis.",
-      "sha256": "3f698dbd1d032a4b9f8c11fc191455fc80681be7a64ecc38080f45ae4beb2d96"
+      "sha256": "f600350ee40dfa3e793c556e1d11343a98e019c61169cab7f1847d8d982f8b08"
     },
     {
       "bytes": 1407,
